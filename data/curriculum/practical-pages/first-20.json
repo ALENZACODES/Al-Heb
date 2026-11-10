@@ -1,0 +1,6528 @@
+{
+  "schema": "alef-practical-pages/3",
+  "compatibleWith": "alef-practical-units/2",
+  "generated": "2026-11-10",
+  "proofread": false,
+  "nativeReview": "required",
+  "note": "The first 20 pages of the Practical course, written in full. Every Hebrew line is copied by id from data/corpus/phrasebook.json, data/audio/manifest*.json or data/curriculum/dialogues.json. Page fields extend the v2 page shape; v2 readers can ignore the new ones. בְּעֶזְרַת הַשֵּׁם on pu-politeness-p05 (politeness-21) is held for John (keep or drop); this lane did not decide.",
+  "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+  ],
+  "pages": [
+    {
+      "id": "pu-greetings-p01",
+      "title": "Hello and Goodbye",
+      "order": 1,
+      "kind": "learn",
+      "can": "Say hello and goodbye to anyone.",
+      "grammarNote": "One word, two jobs. שָׁלוֹם means peace, and Israelis use it both to greet and to leave. לְהִתְרָאוֹת is only for leaving: see you later. הֵי is casual, for friends.",
+      "grammar": {
+        "point": "One word, two jobs",
+        "body": "שָׁלוֹם means peace, and Israelis use it both to greet and to leave. לְהִתְרָאוֹת is only for leaving: see you later. הֵי is casual, for friends.",
+        "examples": [
+          {
+            "itemId": "greetings-01",
+            "he": "שָׁלוֹם",
+            "en": "hello / goodbye / peace"
+          },
+          {
+            "itemId": "greetings-20",
+            "he": "לְהִתְרָאוֹת",
+            "en": "see you (later)"
+          }
+        ]
+      },
+      "items": [
+        {
+          "id": "greetings-01",
+          "source": "data/corpus/phrasebook.json",
+          "he": "שָׁלוֹם",
+          "en": "hello / goodbye / peace",
+          "translit": "shalom",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "word",
+            "id": "greetings-01"
+          },
+          "audio": {
+            "clipId": "greetings-01",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        },
+        {
+          "id": "greetings-20",
+          "source": "data/corpus/phrasebook.json",
+          "he": "לְהִתְרָאוֹת",
+          "en": "see you (later)",
+          "translit": "lehitra'ot",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "word",
+            "id": "greetings-20"
+          },
+          "audio": {
+            "clipId": "greetings-20",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        },
+        {
+          "id": "greetings-02",
+          "source": "data/corpus/phrasebook.json",
+          "he": "הֵי",
+          "en": "hi",
+          "translit": "hey",
+          "review": "native-speaker-needed: slang/register and spelling",
+          "listen": {
+            "kind": "word",
+            "id": "greetings-02"
+          },
+          "audio": {
+            "clipId": "greetings-02",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          },
+          "register": "slang"
+        }
+      ],
+      "srsQueue": [
+        {
+          "position": 1,
+          "kind": "word",
+          "id": "greetings-01",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 2,
+          "kind": "word",
+          "id": "greetings-20",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 3,
+          "kind": "word",
+          "id": "greetings-02",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        }
+      ],
+      "listenIds": [
+        "greetings-01",
+        "greetings-20",
+        "greetings-02"
+      ],
+      "listen": [
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "word",
+            "id": "greetings-01"
+          },
+          "answer": "greetings-01",
+          "options": [
+            "greetings-20",
+            "greetings-02",
+            "greetings-01"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "word",
+            "id": "greetings-20"
+          },
+          "answer": "greetings-20",
+          "options": [
+            "greetings-01",
+            "greetings-02",
+            "greetings-20"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "word",
+            "id": "greetings-02"
+          },
+          "answer": "greetings-02",
+          "options": [
+            "greetings-01",
+            "greetings-20",
+            "greetings-02"
+          ]
+        }
+      ],
+      "speak": [
+        {
+          "prompt": "You walk into a shop. Greet the seller.",
+          "answer": "greetings-01",
+          "he": "שָׁלוֹם",
+          "translit": "shalom",
+          "en": "hello / goodbye / peace",
+          "audio": {
+            "clipId": "greetings-01",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        },
+        {
+          "prompt": "You leave a friend's flat. Say see you.",
+          "answer": "greetings-20",
+          "he": "לְהִתְרָאוֹת",
+          "translit": "lehitra'ot",
+          "en": "see you (later)",
+          "audio": {
+            "clipId": "greetings-20",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        }
+      ],
+      "reviewDays": [
+        1,
+        3,
+        7,
+        14,
+        30
+      ],
+      "reviewOf": []
+    },
+    {
+      "id": "pu-greetings-p02",
+      "title": "Good Morning to Good Night",
+      "order": 2,
+      "kind": "grammar",
+      "can": "Greet people at any time of day.",
+      "grammarNote": "The adjective comes after the noun and matches it. In Hebrew the describing word follows the noun: בֹּקֶר טוֹב is morning good. It also matches the noun: צָהֳרַיִם is a plural form, so it takes טוֹבִים, not טוֹב.",
+      "grammar": {
+        "point": "The adjective comes after the noun and matches it",
+        "body": "In Hebrew the describing word follows the noun: בֹּקֶר טוֹב is morning good. It also matches the noun: צָהֳרַיִם is a plural form, so it takes טוֹבִים, not טוֹב.",
+        "examples": [
+          {
+            "itemId": "greetings-03",
+            "he": "בֹּקֶר טוֹב",
+            "en": "good morning"
+          },
+          {
+            "itemId": "greetings-04",
+            "he": "צָהֳרַיִם טוֹבִים",
+            "en": "good afternoon"
+          }
+        ]
+      },
+      "items": [
+        {
+          "id": "greetings-03",
+          "source": "data/corpus/phrasebook.json",
+          "he": "בֹּקֶר טוֹב",
+          "en": "good morning",
+          "translit": "boker tov",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "line",
+            "id": "greetings-03"
+          },
+          "audio": {
+            "clipId": "greetings-03",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        },
+        {
+          "id": "greetings-04",
+          "source": "data/corpus/phrasebook.json",
+          "he": "צָהֳרַיִם טוֹבִים",
+          "en": "good afternoon",
+          "translit": "tsohorayim tovim",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "line",
+            "id": "greetings-04"
+          },
+          "audio": {
+            "clipId": "greetings-04",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        },
+        {
+          "id": "greetings-05",
+          "source": "data/corpus/phrasebook.json",
+          "he": "עֶרֶב טוֹב",
+          "en": "good evening",
+          "translit": "erev tov",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "line",
+            "id": "greetings-05"
+          },
+          "audio": {
+            "clipId": "greetings-05",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        },
+        {
+          "id": "greetings-06",
+          "source": "data/corpus/phrasebook.json",
+          "he": "לַיְלָה טוֹב",
+          "en": "good night",
+          "translit": "layla tov",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "line",
+            "id": "greetings-06"
+          },
+          "audio": {
+            "clipId": "greetings-06",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        },
+        {
+          "id": "greetings-21",
+          "source": "data/corpus/phrasebook.json",
+          "he": "יוֹם נָעִים",
+          "en": "have a nice day",
+          "translit": "yom naim",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "line",
+            "id": "greetings-21"
+          },
+          "audio": {
+            "clipId": "greetings-21",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        }
+      ],
+      "srsQueue": [
+        {
+          "position": 1,
+          "kind": "line",
+          "id": "greetings-03",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 2,
+          "kind": "line",
+          "id": "greetings-04",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 3,
+          "kind": "line",
+          "id": "greetings-05",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 4,
+          "kind": "line",
+          "id": "greetings-06",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 5,
+          "kind": "line",
+          "id": "greetings-21",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 6,
+          "kind": "word",
+          "id": "greetings-01",
+          "source": "review",
+          "srsKind": "word",
+          "band": "review"
+        }
+      ],
+      "listenIds": [
+        "greetings-03",
+        "greetings-04",
+        "greetings-05",
+        "greetings-06",
+        "greetings-21"
+      ],
+      "listen": [
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "line",
+            "id": "greetings-03"
+          },
+          "answer": "greetings-03",
+          "options": [
+            "greetings-04",
+            "greetings-05",
+            "greetings-03"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "line",
+            "id": "greetings-04"
+          },
+          "answer": "greetings-04",
+          "options": [
+            "greetings-03",
+            "greetings-05",
+            "greetings-04"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "line",
+            "id": "greetings-05"
+          },
+          "answer": "greetings-05",
+          "options": [
+            "greetings-03",
+            "greetings-04",
+            "greetings-05"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "line",
+            "id": "greetings-06"
+          },
+          "answer": "greetings-06",
+          "options": [
+            "greetings-03",
+            "greetings-04",
+            "greetings-06"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "line",
+            "id": "greetings-21"
+          },
+          "answer": "greetings-21",
+          "options": [
+            "greetings-03",
+            "greetings-04",
+            "greetings-21"
+          ]
+        }
+      ],
+      "speak": [
+        {
+          "prompt": "It is 8 in the morning. Greet your neighbour.",
+          "answer": "greetings-03",
+          "he": "בֹּקֶר טוֹב",
+          "translit": "boker tov",
+          "en": "good morning",
+          "audio": {
+            "clipId": "greetings-03",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        },
+        {
+          "prompt": "You say goodnight to your host.",
+          "answer": "greetings-06",
+          "he": "לַיְלָה טוֹב",
+          "translit": "layla tov",
+          "en": "good night",
+          "audio": {
+            "clipId": "greetings-06",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        }
+      ],
+      "reviewDays": [
+        1,
+        3,
+        7,
+        14,
+        30
+      ],
+      "reviewOf": [
+        "greetings-01"
+      ]
+    },
+    {
+      "id": "pu-greetings-p03",
+      "title": "How Are You?",
+      "order": 3,
+      "kind": "grammar",
+      "can": "Ask how someone is, to a man or to a woman.",
+      "grammarNote": "Your: an ending that changes for a man or a woman. מַה שְׁלוֹמְךָ? asks a man; מַה שְׁלוֹמֵךְ? asks a woman. The ending ךָ means your (to a man) and ךְ means your (to a woman). מָה נִשְׁמָע? works for anyone, so it is the safe choice when you are not sure.",
+      "grammar": {
+        "point": "Your: an ending that changes for a man or a woman",
+        "body": "מַה שְׁלוֹמְךָ? asks a man; מַה שְׁלוֹמֵךְ? asks a woman. The ending ךָ means your (to a man) and ךְ means your (to a woman). מָה נִשְׁמָע? works for anyone, so it is the safe choice when you are not sure.",
+        "examples": [
+          {
+            "itemId": "greetings-11-m",
+            "he": "מַה שְׁלוֹמְךָ?",
+            "en": "how are you?"
+          },
+          {
+            "itemId": "greetings-11-f",
+            "he": "מַה שְׁלוֹמֵךְ?",
+            "en": "how are you?"
+          }
+        ]
+      },
+      "items": [
+        {
+          "id": "greetings-11-m",
+          "source": "data/audio/manifest.json",
+          "he": "מַה שְׁלוֹמְךָ?",
+          "en": "how are you?",
+          "translit": "ma shlomcha?",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "line",
+            "id": "greetings-11-m"
+          },
+          "audio": {
+            "clipId": "greetings-11-m",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          },
+          "translitSource": "phrasebook",
+          "form": "to or by a man"
+        },
+        {
+          "id": "greetings-11-f",
+          "source": "data/audio/manifest.json",
+          "he": "מַה שְׁלוֹמֵךְ?",
+          "en": "how are you?",
+          "translit": "ma shlomech?",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "line",
+            "id": "greetings-11-f"
+          },
+          "audio": {
+            "clipId": "greetings-11-f",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          },
+          "translitSource": "spoken style written for this page; native check",
+          "form": "to or by a woman"
+        },
+        {
+          "id": "greetings-12",
+          "source": "data/corpus/phrasebook.json",
+          "he": "מָה נִשְׁמָע?",
+          "en": "what's up? (lit. what is heard?)",
+          "translit": "ma nishma?",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "line",
+            "id": "greetings-12"
+          },
+          "audio": {
+            "clipId": "greetings-12",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        },
+        {
+          "id": "greetings-13",
+          "source": "data/corpus/phrasebook.json",
+          "he": "מָה קוֹרֶה?",
+          "en": "what's happening?",
+          "translit": "ma kore?",
+          "review": "native-speaker-needed: slang/register and spelling",
+          "listen": {
+            "kind": "line",
+            "id": "greetings-13"
+          },
+          "audio": {
+            "clipId": "greetings-13",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          },
+          "register": "slang"
+        }
+      ],
+      "srsQueue": [
+        {
+          "position": 1,
+          "kind": "line",
+          "id": "greetings-11-m",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 2,
+          "kind": "line",
+          "id": "greetings-11-f",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 3,
+          "kind": "line",
+          "id": "greetings-12",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 4,
+          "kind": "line",
+          "id": "greetings-13",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 5,
+          "kind": "line",
+          "id": "greetings-03",
+          "source": "review",
+          "srsKind": "prayerLine",
+          "band": "review"
+        },
+        {
+          "position": 6,
+          "kind": "word",
+          "id": "greetings-20",
+          "source": "review",
+          "srsKind": "word",
+          "band": "review"
+        }
+      ],
+      "listenIds": [
+        "greetings-11-m",
+        "greetings-11-f",
+        "greetings-12",
+        "greetings-13"
+      ],
+      "listen": [
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "line",
+            "id": "greetings-11-m"
+          },
+          "answer": "greetings-11-m",
+          "options": [
+            "greetings-11-f",
+            "greetings-12",
+            "greetings-11-m"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "line",
+            "id": "greetings-11-f"
+          },
+          "answer": "greetings-11-f",
+          "options": [
+            "greetings-11-m",
+            "greetings-12",
+            "greetings-11-f"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "line",
+            "id": "greetings-12"
+          },
+          "answer": "greetings-12",
+          "options": [
+            "greetings-11-m",
+            "greetings-11-f",
+            "greetings-12"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "line",
+            "id": "greetings-13"
+          },
+          "answer": "greetings-13",
+          "options": [
+            "greetings-11-m",
+            "greetings-11-f",
+            "greetings-13"
+          ]
+        }
+      ],
+      "speak": [
+        {
+          "prompt": "Ask Dana how she is.",
+          "answer": "greetings-11-f",
+          "he": "מַה שְׁלוֹמֵךְ?",
+          "translit": "ma shlomech?",
+          "en": "how are you?",
+          "audio": {
+            "clipId": "greetings-11-f",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        },
+        {
+          "prompt": "Ask Yossi how he is.",
+          "answer": "greetings-11-m",
+          "he": "מַה שְׁלוֹמְךָ?",
+          "translit": "ma shlomcha?",
+          "en": "how are you?",
+          "audio": {
+            "clipId": "greetings-11-m",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        },
+        {
+          "prompt": "Ask a group what's up.",
+          "answer": "greetings-12",
+          "he": "מָה נִשְׁמָע?",
+          "translit": "ma nishma?",
+          "en": "what's up? (lit. what is heard?)",
+          "audio": {
+            "clipId": "greetings-12",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        }
+      ],
+      "reviewDays": [
+        1,
+        3,
+        7,
+        14,
+        30
+      ],
+      "reviewOf": [
+        "greetings-03",
+        "greetings-20"
+      ]
+    },
+    {
+      "id": "pu-greetings-p04",
+      "title": "Fine, Thanks",
+      "order": 4,
+      "kind": "learn",
+      "can": "Answer how you are, from great to so-so.",
+      "grammarNote": "לֹא in front of a word makes it negative. לֹא רַע is not bad. Put לֹא before a word and you say the opposite. בְּסֵדֶר is the everyday all-purpose answer: fine, OK, all right.",
+      "grammar": {
+        "point": "לֹא in front of a word makes it negative",
+        "body": "לֹא רַע is not bad. Put לֹא before a word and you say the opposite. בְּסֵדֶר is the everyday all-purpose answer: fine, OK, all right.",
+        "examples": [
+          {
+            "itemId": "greetings-17",
+            "he": "לֹא רַע",
+            "en": "not bad"
+          },
+          {
+            "itemId": "greetings-15",
+            "he": "בְּסֵדֶר",
+            "en": "OK / fine / alright"
+          }
+        ]
+      },
+      "items": [
+        {
+          "id": "greetings-14",
+          "source": "data/corpus/phrasebook.json",
+          "he": "הַכֹּל בְּסֵדֶר",
+          "en": "everything is OK",
+          "translit": "hakol beseder",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "line",
+            "id": "greetings-14"
+          },
+          "audio": {
+            "clipId": "greetings-14",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        },
+        {
+          "id": "greetings-15",
+          "source": "data/corpus/phrasebook.json",
+          "he": "בְּסֵדֶר",
+          "en": "OK / fine / alright",
+          "translit": "beseder",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "word",
+            "id": "greetings-15"
+          },
+          "audio": {
+            "clipId": "greetings-15",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        },
+        {
+          "id": "greetings-16",
+          "source": "data/corpus/phrasebook.json",
+          "he": "מְצֻיָּן",
+          "en": "excellent",
+          "translit": "metsuyan",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "word",
+            "id": "greetings-16"
+          },
+          "audio": {
+            "clipId": "greetings-16",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        },
+        {
+          "id": "greetings-17",
+          "source": "data/corpus/phrasebook.json",
+          "he": "לֹא רַע",
+          "en": "not bad",
+          "translit": "lo ra",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "line",
+            "id": "greetings-17"
+          },
+          "audio": {
+            "clipId": "greetings-17",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        },
+        {
+          "id": "greetings-18",
+          "source": "data/corpus/phrasebook.json",
+          "he": "כָּכָה כָּכָה",
+          "en": "so-so",
+          "translit": "kacha kacha",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "line",
+            "id": "greetings-18"
+          },
+          "audio": {
+            "clipId": "greetings-18",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        }
+      ],
+      "srsQueue": [
+        {
+          "position": 1,
+          "kind": "line",
+          "id": "greetings-14",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 2,
+          "kind": "word",
+          "id": "greetings-15",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 3,
+          "kind": "word",
+          "id": "greetings-16",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 4,
+          "kind": "line",
+          "id": "greetings-17",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 5,
+          "kind": "line",
+          "id": "greetings-18",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 6,
+          "kind": "line",
+          "id": "greetings-12",
+          "source": "review",
+          "srsKind": "prayerLine",
+          "band": "review"
+        },
+        {
+          "position": 7,
+          "kind": "line",
+          "id": "greetings-11-m",
+          "source": "review",
+          "srsKind": "prayerLine",
+          "band": "review"
+        }
+      ],
+      "listenIds": [
+        "greetings-14",
+        "greetings-15",
+        "greetings-16",
+        "greetings-17",
+        "greetings-18"
+      ],
+      "listen": [
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "line",
+            "id": "greetings-14"
+          },
+          "answer": "greetings-14",
+          "options": [
+            "greetings-15",
+            "greetings-16",
+            "greetings-14"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "word",
+            "id": "greetings-15"
+          },
+          "answer": "greetings-15",
+          "options": [
+            "greetings-14",
+            "greetings-16",
+            "greetings-15"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "word",
+            "id": "greetings-16"
+          },
+          "answer": "greetings-16",
+          "options": [
+            "greetings-14",
+            "greetings-15",
+            "greetings-16"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "line",
+            "id": "greetings-17"
+          },
+          "answer": "greetings-17",
+          "options": [
+            "greetings-14",
+            "greetings-15",
+            "greetings-17"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "line",
+            "id": "greetings-18"
+          },
+          "answer": "greetings-18",
+          "options": [
+            "greetings-14",
+            "greetings-15",
+            "greetings-18"
+          ]
+        }
+      ],
+      "speak": [
+        {
+          "prompt": "Someone asks how you are. Everything is fine.",
+          "answer": "greetings-14",
+          "he": "הַכֹּל בְּסֵדֶר",
+          "translit": "hakol beseder",
+          "en": "everything is OK",
+          "audio": {
+            "clipId": "greetings-14",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        },
+        {
+          "prompt": "Your day was only so-so.",
+          "answer": "greetings-18",
+          "he": "כָּכָה כָּכָה",
+          "translit": "kacha kacha",
+          "en": "so-so",
+          "audio": {
+            "clipId": "greetings-18",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        }
+      ],
+      "reviewDays": [
+        1,
+        3,
+        7,
+        14,
+        30
+      ],
+      "reviewOf": [
+        "greetings-12",
+        "greetings-11-m"
+      ]
+    },
+    {
+      "id": "pu-greetings-p05",
+      "title": "Nice to Meet You",
+      "order": 5,
+      "kind": "dialogue",
+      "can": "Meet someone new and welcome a guest.",
+      "grammarNote": "Welcome has three forms. בָּרוּךְ הַבָּא welcomes a man, בְּרוּכָה הַבָּאָה a woman, and בְּרוּכִים הַבָּאִים a group. הַ at the start of a word means the.",
+      "grammar": {
+        "point": "Welcome has three forms",
+        "body": "בָּרוּךְ הַבָּא welcomes a man, בְּרוּכָה הַבָּאָה a woman, and בְּרוּכִים הַבָּאִים a group. הַ at the start of a word means the.",
+        "examples": [
+          {
+            "itemId": "greetings-22-m",
+            "he": "בָּרוּךְ הַבָּא",
+            "en": "welcome (to one person)"
+          },
+          {
+            "itemId": "greetings-22-f",
+            "he": "בְּרוּכָה הַבָּאָה",
+            "en": "welcome (to one person)"
+          },
+          {
+            "itemId": "greetings-23",
+            "he": "בְּרוּכִים הַבָּאִים",
+            "en": "welcome (to several people)"
+          }
+        ]
+      },
+      "items": [
+        {
+          "id": "d-smalltalk-l1",
+          "source": "data/curriculum/dialogues.json",
+          "he": "הַיי, מָה נִשְׁמָע?",
+          "en": "Hi, how's it going?",
+          "translit": "hai, ma nishma?",
+          "review": "native-speaker-needed: dialogue line",
+          "listen": {
+            "kind": "line",
+            "id": "d-smalltalk-l1"
+          },
+          "audio": {
+            "clipId": "d-smalltalk-l1",
+            "status": "gap",
+            "voices": []
+          },
+          "speaker": "Yossi (man)"
+        },
+        {
+          "id": "d-smalltalk-l2",
+          "source": "data/curriculum/dialogues.json",
+          "he": "הַכֹּל בְּסֵדֶר, תּוֹדָה. וְאַתָּה?",
+          "en": "All fine, thanks. And you?",
+          "translit": "hakol beseder, toda. ve'ata?",
+          "review": "native-speaker-needed: dialogue line",
+          "listen": {
+            "kind": "line",
+            "id": "d-smalltalk-l2"
+          },
+          "audio": {
+            "clipId": "d-smalltalk-l2",
+            "status": "gap",
+            "voices": []
+          },
+          "speaker": "Maya (woman)"
+        },
+        {
+          "id": "greetings-19",
+          "source": "data/corpus/phrasebook.json",
+          "he": "נָעִים מְאֹד",
+          "en": "nice to meet you",
+          "translit": "naim meod",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "line",
+            "id": "greetings-19"
+          },
+          "audio": {
+            "clipId": "greetings-19",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        },
+        {
+          "id": "greetings-22-m",
+          "source": "data/audio/manifest.json",
+          "he": "בָּרוּךְ הַבָּא",
+          "en": "welcome (to one person)",
+          "translit": "baruch haba",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "line",
+            "id": "greetings-22-m"
+          },
+          "audio": {
+            "clipId": "greetings-22-m",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          },
+          "translitSource": "phrasebook",
+          "form": "to or by a man"
+        },
+        {
+          "id": "greetings-22-f",
+          "source": "data/audio/manifest.json",
+          "he": "בְּרוּכָה הַבָּאָה",
+          "en": "welcome (to one person)",
+          "translit": "brucha haba'a",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "line",
+            "id": "greetings-22-f"
+          },
+          "audio": {
+            "clipId": "greetings-22-f",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          },
+          "translitSource": "spoken style written for this page; native check",
+          "form": "to or by a woman"
+        },
+        {
+          "id": "greetings-23",
+          "source": "data/corpus/phrasebook.json",
+          "he": "בְּרוּכִים הַבָּאִים",
+          "en": "welcome (to several people)",
+          "translit": "brukhim haba'im",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "line",
+            "id": "greetings-23"
+          },
+          "audio": {
+            "clipId": "greetings-23",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        }
+      ],
+      "srsQueue": [
+        {
+          "position": 1,
+          "kind": "line",
+          "id": "d-smalltalk-l1",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 2,
+          "kind": "line",
+          "id": "d-smalltalk-l2",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 3,
+          "kind": "line",
+          "id": "greetings-19",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 4,
+          "kind": "line",
+          "id": "greetings-22-m",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 5,
+          "kind": "line",
+          "id": "greetings-22-f",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 6,
+          "kind": "line",
+          "id": "greetings-23",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 7,
+          "kind": "line",
+          "id": "greetings-14",
+          "source": "review",
+          "srsKind": "prayerLine",
+          "band": "review"
+        },
+        {
+          "position": 8,
+          "kind": "line",
+          "id": "greetings-12",
+          "source": "review",
+          "srsKind": "prayerLine",
+          "band": "review"
+        }
+      ],
+      "listenIds": [
+        "d-smalltalk-l1",
+        "d-smalltalk-l2",
+        "greetings-19",
+        "greetings-22-m",
+        "greetings-22-f",
+        "greetings-23"
+      ],
+      "listen": [
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "line",
+            "id": "greetings-19"
+          },
+          "answer": "greetings-19",
+          "options": [
+            "d-smalltalk-l1",
+            "d-smalltalk-l2",
+            "greetings-19"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "line",
+            "id": "greetings-22-m"
+          },
+          "answer": "greetings-22-m",
+          "options": [
+            "d-smalltalk-l1",
+            "d-smalltalk-l2",
+            "greetings-22-m"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "line",
+            "id": "greetings-22-f"
+          },
+          "answer": "greetings-22-f",
+          "options": [
+            "d-smalltalk-l1",
+            "d-smalltalk-l2",
+            "greetings-22-f"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "line",
+            "id": "greetings-23"
+          },
+          "answer": "greetings-23",
+          "options": [
+            "d-smalltalk-l1",
+            "d-smalltalk-l2",
+            "greetings-23"
+          ]
+        }
+      ],
+      "speak": [
+        {
+          "prompt": "Welcome Noa to your home.",
+          "answer": "greetings-22-f",
+          "he": "בְּרוּכָה הַבָּאָה",
+          "translit": "brucha haba'a",
+          "en": "welcome (to one person)",
+          "audio": {
+            "clipId": "greetings-22-f",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        },
+        {
+          "prompt": "You have just met someone. Say nice to meet you.",
+          "answer": "greetings-19",
+          "he": "נָעִים מְאֹד",
+          "translit": "naim meod",
+          "en": "nice to meet you",
+          "audio": {
+            "clipId": "greetings-19",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        }
+      ],
+      "reviewDays": [
+        1,
+        3,
+        7,
+        14,
+        30
+      ],
+      "reviewOf": [
+        "greetings-14",
+        "greetings-12"
+      ],
+      "dialogue": {
+        "id": "d-smalltalk",
+        "setting": "Two people meet at a party and chat.",
+        "lines": [
+          "d-smalltalk-l1",
+          "d-smalltalk-l2"
+        ]
+      }
+    },
+    {
+      "id": "pu-greetings-p06",
+      "title": "Shabbat and Holiday Greetings",
+      "order": 6,
+      "kind": "learn",
+      "can": "Use the right greeting on Shabbat and holidays.",
+      "grammarNote": "Masculine and feminine nouns. Every noun is masculine or feminine, and its adjective follows. שָׁבוּעַ (week) is masculine: שָׁבוּעַ טוֹב. שָׁנָה (year) is feminine: שָׁנָה טוֹבָה. Many feminine nouns end in ה.",
+      "grammar": {
+        "point": "Masculine and feminine nouns",
+        "body": "Every noun is masculine or feminine, and its adjective follows. שָׁבוּעַ (week) is masculine: שָׁבוּעַ טוֹב. שָׁנָה (year) is feminine: שָׁנָה טוֹבָה. Many feminine nouns end in ה.",
+        "examples": [
+          {
+            "itemId": "greetings-08",
+            "he": "שָׁבוּעַ טוֹב",
+            "en": "good week"
+          },
+          {
+            "itemId": "greetings-10",
+            "he": "שָׁנָה טוֹבָה",
+            "en": "happy new year (Rosh Hashana greeting)"
+          }
+        ]
+      },
+      "items": [
+        {
+          "id": "greetings-07",
+          "source": "data/corpus/phrasebook.json",
+          "he": "שַׁבָּת שָׁלוֹם",
+          "en": "peaceful Sabbath (greeting from Friday afternoon to Saturday)",
+          "translit": "shabbat shalom",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "line",
+            "id": "greetings-07"
+          },
+          "audio": {
+            "clipId": "greetings-07",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        },
+        {
+          "id": "greetings-08",
+          "source": "data/corpus/phrasebook.json",
+          "he": "שָׁבוּעַ טוֹב",
+          "en": "good week",
+          "translit": "shavua tov",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "line",
+            "id": "greetings-08"
+          },
+          "audio": {
+            "clipId": "greetings-08",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        },
+        {
+          "id": "greetings-09",
+          "source": "data/corpus/phrasebook.json",
+          "he": "חַג שָׂמֵחַ",
+          "en": "happy holiday",
+          "translit": "chag sameach",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "line",
+            "id": "greetings-09"
+          },
+          "audio": {
+            "clipId": "greetings-09",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        },
+        {
+          "id": "greetings-10",
+          "source": "data/corpus/phrasebook.json",
+          "he": "שָׁנָה טוֹבָה",
+          "en": "happy new year (Rosh Hashana greeting)",
+          "translit": "shana tova",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "line",
+            "id": "greetings-10"
+          },
+          "audio": {
+            "clipId": "greetings-10",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        }
+      ],
+      "srsQueue": [
+        {
+          "position": 1,
+          "kind": "line",
+          "id": "greetings-07",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 2,
+          "kind": "line",
+          "id": "greetings-08",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 3,
+          "kind": "line",
+          "id": "greetings-09",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 4,
+          "kind": "line",
+          "id": "greetings-10",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 5,
+          "kind": "line",
+          "id": "greetings-03",
+          "source": "review",
+          "srsKind": "prayerLine",
+          "band": "review"
+        },
+        {
+          "position": 6,
+          "kind": "line",
+          "id": "greetings-19",
+          "source": "review",
+          "srsKind": "prayerLine",
+          "band": "review"
+        }
+      ],
+      "listenIds": [
+        "greetings-07",
+        "greetings-08",
+        "greetings-09",
+        "greetings-10"
+      ],
+      "listen": [
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "line",
+            "id": "greetings-07"
+          },
+          "answer": "greetings-07",
+          "options": [
+            "greetings-08",
+            "greetings-09",
+            "greetings-07"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "line",
+            "id": "greetings-08"
+          },
+          "answer": "greetings-08",
+          "options": [
+            "greetings-07",
+            "greetings-09",
+            "greetings-08"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "line",
+            "id": "greetings-09"
+          },
+          "answer": "greetings-09",
+          "options": [
+            "greetings-07",
+            "greetings-08",
+            "greetings-09"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "line",
+            "id": "greetings-10"
+          },
+          "answer": "greetings-10",
+          "options": [
+            "greetings-07",
+            "greetings-08",
+            "greetings-10"
+          ]
+        }
+      ],
+      "speak": [
+        {
+          "prompt": "It is Friday afternoon. Greet the people at the bakery.",
+          "answer": "greetings-07",
+          "he": "שַׁבָּת שָׁלוֹם",
+          "translit": "shabbat shalom",
+          "en": "peaceful Sabbath (greeting from Friday afternoon to Saturday)",
+          "audio": {
+            "clipId": "greetings-07",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        },
+        {
+          "prompt": "Shabbat has just ended on Saturday night.",
+          "answer": "greetings-08",
+          "he": "שָׁבוּעַ טוֹב",
+          "translit": "shavua tov",
+          "en": "good week",
+          "audio": {
+            "clipId": "greetings-08",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        }
+      ],
+      "reviewDays": [
+        1,
+        3,
+        7,
+        14,
+        30
+      ],
+      "reviewOf": [
+        "greetings-03",
+        "greetings-19"
+      ],
+      "culture": "Shabbat shalom is said from Friday afternoon through Shabbat. Shavua tov is said once Shabbat ends on Saturday night. Shana tova belongs to Rosh Hashana."
+    },
+    {
+      "id": "pu-greetings-p07",
+      "title": "Good Wishes and Unit Review",
+      "order": 7,
+      "kind": "review",
+      "can": "Wish someone luck, health and a safe trip, then review the unit.",
+      "grammarNote": "Telling someone to do something: man or woman. תִּשְׁמֹר עַל עַצְמְךָ is said to a man; תִּשְׁמְרִי עַל עַצְמֵךְ to a woman. The woman's form adds י to the verb and the your-ending changes to ךְ, as on page 3.",
+      "grammar": {
+        "point": "Telling someone to do something: man or woman",
+        "body": "תִּשְׁמֹר עַל עַצְמְךָ is said to a man; תִּשְׁמְרִי עַל עַצְמֵךְ to a woman. The woman's form adds י to the verb and the your-ending changes to ךְ, as on page 3.",
+        "examples": [
+          {
+            "itemId": "greetings-27-m",
+            "he": "תִּשְׁמֹר עַל עַצְמְךָ",
+            "en": "take care of yourself"
+          },
+          {
+            "itemId": "greetings-27-f",
+            "he": "תִּשְׁמְרִי עַל עַצְמֵךְ",
+            "en": "take care of yourself"
+          }
+        ]
+      },
+      "items": [
+        {
+          "id": "greetings-24",
+          "source": "data/corpus/phrasebook.json",
+          "he": "מַזָּל טוֹב",
+          "en": "congratulations / good luck",
+          "translit": "mazal tov",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "line",
+            "id": "greetings-24"
+          },
+          "audio": {
+            "clipId": "greetings-24",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        },
+        {
+          "id": "greetings-25",
+          "source": "data/corpus/phrasebook.json",
+          "he": "בְּהַצְלָחָה",
+          "en": "good luck / all the best",
+          "translit": "behatslacha",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "word",
+            "id": "greetings-25"
+          },
+          "audio": {
+            "clipId": "greetings-25",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        },
+        {
+          "id": "greetings-26",
+          "source": "data/corpus/phrasebook.json",
+          "he": "לִבְרִיאוּת",
+          "en": "bless you (after a sneeze) / to your health",
+          "translit": "livri'ut",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "word",
+            "id": "greetings-26"
+          },
+          "audio": {
+            "clipId": "greetings-26",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        },
+        {
+          "id": "greetings-27-m",
+          "source": "data/audio/manifest.json",
+          "he": "תִּשְׁמֹר עַל עַצְמְךָ",
+          "en": "take care of yourself",
+          "translit": "tishmor al atsmecha",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "line",
+            "id": "greetings-27-m"
+          },
+          "audio": {
+            "clipId": "greetings-27-m",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          },
+          "translitSource": "phrasebook",
+          "form": "to or by a man"
+        },
+        {
+          "id": "greetings-27-f",
+          "source": "data/audio/manifest.json",
+          "he": "תִּשְׁמְרִי עַל עַצְמֵךְ",
+          "en": "take care of yourself",
+          "translit": "tishmeri al atsmech",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "line",
+            "id": "greetings-27-f"
+          },
+          "audio": {
+            "clipId": "greetings-27-f",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          },
+          "translitSource": "spoken style written for this page; native check",
+          "form": "to or by a woman"
+        }
+      ],
+      "srsQueue": [
+        {
+          "position": 1,
+          "kind": "line",
+          "id": "greetings-24",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 2,
+          "kind": "word",
+          "id": "greetings-25",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 3,
+          "kind": "word",
+          "id": "greetings-26",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 4,
+          "kind": "line",
+          "id": "greetings-27-m",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 5,
+          "kind": "line",
+          "id": "greetings-27-f",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 6,
+          "kind": "word",
+          "id": "greetings-01",
+          "source": "review",
+          "srsKind": "word",
+          "band": "review"
+        },
+        {
+          "position": 7,
+          "kind": "line",
+          "id": "greetings-03",
+          "source": "review",
+          "srsKind": "prayerLine",
+          "band": "review"
+        },
+        {
+          "position": 8,
+          "kind": "line",
+          "id": "greetings-11-f",
+          "source": "review",
+          "srsKind": "prayerLine",
+          "band": "review"
+        },
+        {
+          "position": 9,
+          "kind": "line",
+          "id": "greetings-14",
+          "source": "review",
+          "srsKind": "prayerLine",
+          "band": "review"
+        },
+        {
+          "position": 10,
+          "kind": "line",
+          "id": "greetings-22-m",
+          "source": "review",
+          "srsKind": "prayerLine",
+          "band": "review"
+        },
+        {
+          "position": 11,
+          "kind": "line",
+          "id": "greetings-07",
+          "source": "review",
+          "srsKind": "prayerLine",
+          "band": "review"
+        }
+      ],
+      "listenIds": [
+        "greetings-24",
+        "greetings-25",
+        "greetings-26",
+        "greetings-27-m",
+        "greetings-27-f"
+      ],
+      "listen": [
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "line",
+            "id": "greetings-24"
+          },
+          "answer": "greetings-24",
+          "options": [
+            "greetings-25",
+            "greetings-26",
+            "greetings-24"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "word",
+            "id": "greetings-25"
+          },
+          "answer": "greetings-25",
+          "options": [
+            "greetings-24",
+            "greetings-26",
+            "greetings-25"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "word",
+            "id": "greetings-26"
+          },
+          "answer": "greetings-26",
+          "options": [
+            "greetings-24",
+            "greetings-25",
+            "greetings-26"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "line",
+            "id": "greetings-27-m"
+          },
+          "answer": "greetings-27-m",
+          "options": [
+            "greetings-24",
+            "greetings-25",
+            "greetings-27-m"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "line",
+            "id": "greetings-27-f"
+          },
+          "answer": "greetings-27-f",
+          "options": [
+            "greetings-24",
+            "greetings-25",
+            "greetings-27-f"
+          ]
+        }
+      ],
+      "speak": [
+        {
+          "prompt": "Your friend has a job interview. Wish her luck.",
+          "answer": "greetings-25",
+          "he": "בְּהַצְלָחָה",
+          "translit": "behatslacha",
+          "en": "good luck / all the best",
+          "audio": {
+            "clipId": "greetings-25",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        },
+        {
+          "prompt": "Someone sneezes.",
+          "answer": "greetings-26",
+          "he": "לִבְרִיאוּת",
+          "translit": "livri'ut",
+          "en": "bless you (after a sneeze) / to your health",
+          "audio": {
+            "clipId": "greetings-26",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        },
+        {
+          "prompt": "Your sister is leaving on a trip.",
+          "answer": "greetings-27-f",
+          "he": "תִּשְׁמְרִי עַל עַצְמֵךְ",
+          "translit": "tishmeri al atsmech",
+          "en": "take care of yourself",
+          "audio": {
+            "clipId": "greetings-27-f",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        }
+      ],
+      "reviewDays": [
+        1,
+        3,
+        7,
+        14,
+        30
+      ],
+      "reviewOf": [
+        "greetings-01",
+        "greetings-03",
+        "greetings-11-f",
+        "greetings-14",
+        "greetings-22-m",
+        "greetings-07"
+      ]
+    },
+    {
+      "id": "pu-politeness-p01",
+      "title": "Thank You and Please",
+      "order": 1,
+      "kind": "learn",
+      "can": "Thank people and answer their thanks.",
+      "grammarNote": "בְּבַקָּשָׁה does two jobs. בְּבַקָּשָׁה means please when you ask, and you're welcome when someone thanks you. אֵין means there is no: אֵין בְּעָיָה is there is no problem.",
+      "grammar": {
+        "point": "בְּבַקָּשָׁה does two jobs",
+        "body": "בְּבַקָּשָׁה means please when you ask, and you're welcome when someone thanks you. אֵין means there is no: אֵין בְּעָיָה is there is no problem.",
+        "examples": [
+          {
+            "itemId": "politeness-03",
+            "he": "בְּבַקָּשָׁה",
+            "en": "please / you're welcome"
+          },
+          {
+            "itemId": "politeness-04",
+            "he": "אֵין בְּעָיָה",
+            "en": "no problem"
+          }
+        ]
+      },
+      "items": [
+        {
+          "id": "politeness-01",
+          "source": "data/corpus/phrasebook.json",
+          "he": "תּוֹדָה",
+          "en": "thank you",
+          "translit": "toda",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "word",
+            "id": "politeness-01"
+          },
+          "audio": {
+            "clipId": "politeness-01",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        },
+        {
+          "id": "politeness-02",
+          "source": "data/corpus/phrasebook.json",
+          "he": "תּוֹדָה רַבָּה",
+          "en": "thank you very much",
+          "translit": "toda raba",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "line",
+            "id": "politeness-02"
+          },
+          "audio": {
+            "clipId": "politeness-02",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        },
+        {
+          "id": "politeness-03",
+          "source": "data/corpus/phrasebook.json",
+          "he": "בְּבַקָּשָׁה",
+          "en": "please / you're welcome",
+          "translit": "bevakasha",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "word",
+            "id": "politeness-03"
+          },
+          "audio": {
+            "clipId": "politeness-03",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        },
+        {
+          "id": "politeness-05",
+          "source": "data/corpus/phrasebook.json",
+          "he": "אֵין בַּעַד מָה",
+          "en": "you're welcome (lit. nothing for what)",
+          "translit": "ein ba'ad ma",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "line",
+            "id": "politeness-05"
+          },
+          "audio": {
+            "clipId": "politeness-05",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          },
+          "register": "formal"
+        },
+        {
+          "id": "politeness-04",
+          "source": "data/corpus/phrasebook.json",
+          "he": "אֵין בְּעָיָה",
+          "en": "no problem",
+          "translit": "ein be'aya",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "line",
+            "id": "politeness-04"
+          },
+          "audio": {
+            "clipId": "politeness-04",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        }
+      ],
+      "srsQueue": [
+        {
+          "position": 1,
+          "kind": "word",
+          "id": "politeness-01",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 2,
+          "kind": "line",
+          "id": "politeness-02",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 3,
+          "kind": "word",
+          "id": "politeness-03",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 4,
+          "kind": "line",
+          "id": "politeness-05",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 5,
+          "kind": "line",
+          "id": "politeness-04",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 6,
+          "kind": "word",
+          "id": "greetings-01",
+          "source": "review",
+          "srsKind": "word",
+          "band": "review"
+        },
+        {
+          "position": 7,
+          "kind": "word",
+          "id": "greetings-15",
+          "source": "review",
+          "srsKind": "word",
+          "band": "review"
+        }
+      ],
+      "listenIds": [
+        "politeness-01",
+        "politeness-02",
+        "politeness-03",
+        "politeness-05",
+        "politeness-04"
+      ],
+      "listen": [
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "word",
+            "id": "politeness-01"
+          },
+          "answer": "politeness-01",
+          "options": [
+            "politeness-02",
+            "politeness-03",
+            "politeness-01"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "line",
+            "id": "politeness-02"
+          },
+          "answer": "politeness-02",
+          "options": [
+            "politeness-01",
+            "politeness-03",
+            "politeness-02"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "word",
+            "id": "politeness-03"
+          },
+          "answer": "politeness-03",
+          "options": [
+            "politeness-01",
+            "politeness-02",
+            "politeness-03"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "line",
+            "id": "politeness-05"
+          },
+          "answer": "politeness-05",
+          "options": [
+            "politeness-01",
+            "politeness-02",
+            "politeness-05"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "line",
+            "id": "politeness-04"
+          },
+          "answer": "politeness-04",
+          "options": [
+            "politeness-01",
+            "politeness-02",
+            "politeness-04"
+          ]
+        }
+      ],
+      "speak": [
+        {
+          "prompt": "The waiter brings your coffee.",
+          "answer": "politeness-01",
+          "he": "תּוֹדָה",
+          "translit": "toda",
+          "en": "thank you",
+          "audio": {
+            "clipId": "politeness-01",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        },
+        {
+          "prompt": "Someone thanks you for holding the door.",
+          "answer": "politeness-03",
+          "he": "בְּבַקָּשָׁה",
+          "translit": "bevakasha",
+          "en": "please / you're welcome",
+          "audio": {
+            "clipId": "politeness-03",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        }
+      ],
+      "reviewDays": [
+        1,
+        3,
+        7,
+        14,
+        30
+      ],
+      "reviewOf": [
+        "greetings-01",
+        "greetings-15"
+      ]
+    },
+    {
+      "id": "pu-politeness-p02",
+      "title": "Sorry and Excuse Me",
+      "order": 2,
+      "kind": "grammar",
+      "can": "Apologise, get past someone, and ask for a moment.",
+      "grammarNote": "Present-tense words change with who is speaking. A man says אֲנִי מִצְטַעֵר; a woman says אֲנִי מִצְטַעֶרֶת. The woman's form ends in עֶרֶת. סְלִיחָה is the same for everyone and covers excuse me and sorry.",
+      "grammar": {
+        "point": "Present-tense words change with who is speaking",
+        "body": "A man says אֲנִי מִצְטַעֵר; a woman says אֲנִי מִצְטַעֶרֶת. The woman's form ends in עֶרֶת. סְלִיחָה is the same for everyone and covers excuse me and sorry.",
+        "examples": [
+          {
+            "itemId": "politeness-07-m",
+            "he": "אֲנִי מִצְטַעֵר",
+            "en": "I'm sorry"
+          },
+          {
+            "itemId": "politeness-07-f",
+            "he": "אֲנִי מִצְטַעֶרֶת",
+            "en": "I'm sorry"
+          }
+        ]
+      },
+      "items": [
+        {
+          "id": "politeness-06",
+          "source": "data/corpus/phrasebook.json",
+          "he": "סְלִיחָה",
+          "en": "excuse me / sorry",
+          "translit": "slicha",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "word",
+            "id": "politeness-06"
+          },
+          "audio": {
+            "clipId": "politeness-06",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        },
+        {
+          "id": "politeness-07-m",
+          "source": "data/audio/manifest.json",
+          "he": "אֲנִי מִצְטַעֵר",
+          "en": "I'm sorry",
+          "translit": "ani mitsta'er",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "line",
+            "id": "politeness-07-m"
+          },
+          "audio": {
+            "clipId": "politeness-07-m",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          },
+          "translitSource": "phrasebook",
+          "form": "to or by a man"
+        },
+        {
+          "id": "politeness-07-f",
+          "source": "data/audio/manifest.json",
+          "he": "אֲנִי מִצְטַעֶרֶת",
+          "en": "I'm sorry",
+          "translit": "ani mitsta'eret",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "line",
+            "id": "politeness-07-f"
+          },
+          "audio": {
+            "clipId": "politeness-07-f",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          },
+          "translitSource": "spoken style written for this page; native check",
+          "form": "to or by a woman"
+        },
+        {
+          "id": "politeness-20",
+          "source": "data/corpus/phrasebook.json",
+          "he": "רֶגַע",
+          "en": "one moment",
+          "translit": "rega",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "word",
+            "id": "politeness-20"
+          },
+          "audio": {
+            "clipId": "politeness-20",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        }
+      ],
+      "srsQueue": [
+        {
+          "position": 1,
+          "kind": "word",
+          "id": "politeness-06",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 2,
+          "kind": "line",
+          "id": "politeness-07-m",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 3,
+          "kind": "line",
+          "id": "politeness-07-f",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 4,
+          "kind": "word",
+          "id": "politeness-20",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 5,
+          "kind": "word",
+          "id": "politeness-01",
+          "source": "review",
+          "srsKind": "word",
+          "band": "review"
+        },
+        {
+          "position": 6,
+          "kind": "word",
+          "id": "politeness-03",
+          "source": "review",
+          "srsKind": "word",
+          "band": "review"
+        }
+      ],
+      "listenIds": [
+        "politeness-06",
+        "politeness-07-m",
+        "politeness-07-f",
+        "politeness-20"
+      ],
+      "listen": [
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "word",
+            "id": "politeness-06"
+          },
+          "answer": "politeness-06",
+          "options": [
+            "politeness-07-m",
+            "politeness-07-f",
+            "politeness-06"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "line",
+            "id": "politeness-07-m"
+          },
+          "answer": "politeness-07-m",
+          "options": [
+            "politeness-06",
+            "politeness-07-f",
+            "politeness-07-m"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "line",
+            "id": "politeness-07-f"
+          },
+          "answer": "politeness-07-f",
+          "options": [
+            "politeness-06",
+            "politeness-07-m",
+            "politeness-07-f"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "word",
+            "id": "politeness-20"
+          },
+          "answer": "politeness-20",
+          "options": [
+            "politeness-06",
+            "politeness-07-m",
+            "politeness-20"
+          ]
+        }
+      ],
+      "speak": [
+        {
+          "prompt": "You bump into someone on the bus.",
+          "answer": "politeness-06",
+          "he": "סְלִיחָה",
+          "translit": "slicha",
+          "en": "excuse me / sorry",
+          "audio": {
+            "clipId": "politeness-06",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        },
+        {
+          "prompt": "You are a woman and you are late. Say you are sorry.",
+          "answer": "politeness-07-f",
+          "he": "אֲנִי מִצְטַעֶרֶת",
+          "translit": "ani mitsta'eret",
+          "en": "I'm sorry",
+          "audio": {
+            "clipId": "politeness-07-f",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        },
+        {
+          "prompt": "Ask the clerk to wait one moment.",
+          "answer": "politeness-20",
+          "he": "רֶגַע",
+          "translit": "rega",
+          "en": "one moment",
+          "audio": {
+            "clipId": "politeness-20",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        }
+      ],
+      "reviewDays": [
+        1,
+        3,
+        7,
+        14,
+        30
+      ],
+      "reviewOf": [
+        "politeness-01",
+        "politeness-03"
+      ]
+    },
+    {
+      "id": "pu-politeness-p03",
+      "title": "Yes, No and Maybe",
+      "order": 3,
+      "kind": "learn",
+      "can": "Answer yes, no, maybe and of course.",
+      "grammarNote": "לֹא is both no and not. On its own לֹא answers no. Before a word it means not, as in לֹא רַע. יִהְיֶה בְּסֵדֶר uses the future of to be: it will be.",
+      "grammar": {
+        "point": "לֹא is both no and not",
+        "body": "On its own לֹא answers no. Before a word it means not, as in לֹא רַע. יִהְיֶה בְּסֵדֶר uses the future of to be: it will be.",
+        "examples": [
+          {
+            "itemId": "politeness-09",
+            "he": "לֹא",
+            "en": "no"
+          },
+          {
+            "itemId": "politeness-22",
+            "he": "יִהְיֶה בְּסֵדֶר",
+            "en": "it'll be OK"
+          }
+        ]
+      },
+      "items": [
+        {
+          "id": "politeness-08",
+          "source": "data/corpus/phrasebook.json",
+          "he": "כֵּן",
+          "en": "yes",
+          "translit": "ken",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "word",
+            "id": "politeness-08"
+          },
+          "audio": {
+            "clipId": "politeness-08",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        },
+        {
+          "id": "politeness-09",
+          "source": "data/corpus/phrasebook.json",
+          "he": "לֹא",
+          "en": "no",
+          "translit": "lo",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "word",
+            "id": "politeness-09"
+          },
+          "audio": {
+            "clipId": "politeness-09",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        },
+        {
+          "id": "politeness-10",
+          "source": "data/corpus/phrasebook.json",
+          "he": "אוּלַי",
+          "en": "maybe",
+          "translit": "ulai",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "word",
+            "id": "politeness-10"
+          },
+          "audio": {
+            "clipId": "politeness-10",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        },
+        {
+          "id": "politeness-11",
+          "source": "data/corpus/phrasebook.json",
+          "he": "בְּטַח",
+          "en": "sure / of course",
+          "translit": "betach",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "word",
+            "id": "politeness-11"
+          },
+          "audio": {
+            "clipId": "politeness-11",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        },
+        {
+          "id": "politeness-22",
+          "source": "data/corpus/phrasebook.json",
+          "he": "יִהְיֶה בְּסֵדֶר",
+          "en": "it'll be OK",
+          "translit": "yihye beseder",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "line",
+            "id": "politeness-22"
+          },
+          "audio": {
+            "clipId": "politeness-22",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        }
+      ],
+      "srsQueue": [
+        {
+          "position": 1,
+          "kind": "word",
+          "id": "politeness-08",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 2,
+          "kind": "word",
+          "id": "politeness-09",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 3,
+          "kind": "word",
+          "id": "politeness-10",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 4,
+          "kind": "word",
+          "id": "politeness-11",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 5,
+          "kind": "line",
+          "id": "politeness-22",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 6,
+          "kind": "line",
+          "id": "greetings-17",
+          "source": "review",
+          "srsKind": "prayerLine",
+          "band": "review"
+        },
+        {
+          "position": 7,
+          "kind": "word",
+          "id": "politeness-06",
+          "source": "review",
+          "srsKind": "word",
+          "band": "review"
+        }
+      ],
+      "listenIds": [
+        "politeness-08",
+        "politeness-09",
+        "politeness-10",
+        "politeness-11",
+        "politeness-22"
+      ],
+      "listen": [
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "word",
+            "id": "politeness-08"
+          },
+          "answer": "politeness-08",
+          "options": [
+            "politeness-09",
+            "politeness-10",
+            "politeness-08"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "word",
+            "id": "politeness-09"
+          },
+          "answer": "politeness-09",
+          "options": [
+            "politeness-08",
+            "politeness-10",
+            "politeness-09"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "word",
+            "id": "politeness-10"
+          },
+          "answer": "politeness-10",
+          "options": [
+            "politeness-08",
+            "politeness-09",
+            "politeness-10"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "word",
+            "id": "politeness-11"
+          },
+          "answer": "politeness-11",
+          "options": [
+            "politeness-08",
+            "politeness-09",
+            "politeness-11"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "line",
+            "id": "politeness-22"
+          },
+          "answer": "politeness-22",
+          "options": [
+            "politeness-08",
+            "politeness-09",
+            "politeness-22"
+          ]
+        }
+      ],
+      "speak": [
+        {
+          "prompt": "Do you want sugar? Yes.",
+          "answer": "politeness-08",
+          "he": "כֵּן",
+          "translit": "ken",
+          "en": "yes",
+          "audio": {
+            "clipId": "politeness-08",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        },
+        {
+          "prompt": "Are you coming tomorrow? Maybe.",
+          "answer": "politeness-10",
+          "he": "אוּלַי",
+          "translit": "ulai",
+          "en": "maybe",
+          "audio": {
+            "clipId": "politeness-10",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        },
+        {
+          "prompt": "Calm a worried friend.",
+          "answer": "politeness-22",
+          "he": "יִהְיֶה בְּסֵדֶר",
+          "translit": "yihye beseder",
+          "en": "it'll be OK",
+          "audio": {
+            "clipId": "politeness-22",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        }
+      ],
+      "reviewDays": [
+        1,
+        3,
+        7,
+        14,
+        30
+      ],
+      "reviewOf": [
+        "greetings-17",
+        "politeness-06"
+      ]
+    },
+    {
+      "id": "pu-politeness-p04",
+      "title": "Street Hebrew",
+      "order": 4,
+      "kind": "listen",
+      "can": "Recognise the slang you will hear every day.",
+      "grammarNote": "Register: words for friends, not for the bank. These are casual. Use them with friends, not in an office or with an older stranger. חֲבָל עַל הַזְּמַן literally says a waste of time but means awesome.",
+      "grammar": {
+        "point": "Register: words for friends, not for the bank",
+        "body": "These are casual. Use them with friends, not in an office or with an older stranger. חֲבָל עַל הַזְּמַן literally says a waste of time but means awesome.",
+        "examples": [
+          {
+            "itemId": "politeness-17",
+            "he": "חֲבָל עַל הַזְּמַן",
+            "en": "awesome (lit. a waste of the time)"
+          }
+        ]
+      },
+      "items": [
+        {
+          "id": "politeness-12",
+          "source": "data/corpus/phrasebook.json",
+          "he": "סַבָּבָה",
+          "en": "cool / great / fine by me",
+          "translit": "sababa",
+          "review": "native-speaker-needed: slang/register and spelling",
+          "listen": {
+            "kind": "word",
+            "id": "politeness-12"
+          },
+          "audio": {
+            "clipId": "politeness-12",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          },
+          "register": "slang"
+        },
+        {
+          "id": "politeness-13",
+          "source": "data/corpus/phrasebook.json",
+          "he": "יַאלְלָה",
+          "en": "come on / let's go / OK then",
+          "translit": "yalla",
+          "review": "native-speaker-needed: slang/register and spelling",
+          "listen": {
+            "kind": "word",
+            "id": "politeness-13"
+          },
+          "audio": {
+            "clipId": "politeness-13",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          },
+          "register": "slang"
+        },
+        {
+          "id": "politeness-14",
+          "source": "data/corpus/phrasebook.json",
+          "he": "וָואלָה",
+          "en": "really? / wow / honestly",
+          "translit": "wallah",
+          "review": "native-speaker-needed: slang/register and spelling",
+          "listen": {
+            "kind": "word",
+            "id": "politeness-14"
+          },
+          "audio": {
+            "clipId": "politeness-14",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          },
+          "register": "slang"
+        },
+        {
+          "id": "politeness-15",
+          "source": "data/corpus/phrasebook.json",
+          "he": "אַחִי",
+          "en": "my brother (bro)",
+          "translit": "achi",
+          "review": "native-speaker-needed: slang/register and spelling",
+          "listen": {
+            "kind": "word",
+            "id": "politeness-15"
+          },
+          "audio": {
+            "clipId": "politeness-15",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          },
+          "register": "slang"
+        },
+        {
+          "id": "politeness-16",
+          "source": "data/corpus/phrasebook.json",
+          "he": "יוֹפִי",
+          "en": "great / nice",
+          "translit": "yofi",
+          "review": "native-speaker-needed: slang/register and spelling",
+          "listen": {
+            "kind": "word",
+            "id": "politeness-16"
+          },
+          "audio": {
+            "clipId": "politeness-16",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          },
+          "register": "slang"
+        },
+        {
+          "id": "politeness-17",
+          "source": "data/corpus/phrasebook.json",
+          "he": "חֲבָל עַל הַזְּמַן",
+          "en": "awesome (lit. a waste of the time)",
+          "translit": "chaval al hazman",
+          "review": "native-speaker-needed: slang/register and spelling",
+          "listen": {
+            "kind": "line",
+            "id": "politeness-17"
+          },
+          "audio": {
+            "clipId": "politeness-17",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          },
+          "register": "slang"
+        },
+        {
+          "id": "politeness-18",
+          "source": "data/corpus/phrasebook.json",
+          "he": "מָה פִּתְאוֹם?",
+          "en": "no way! / what do you mean?",
+          "translit": "ma pitom?",
+          "review": "native-speaker-needed: slang/register and spelling",
+          "listen": {
+            "kind": "line",
+            "id": "politeness-18"
+          },
+          "audio": {
+            "clipId": "politeness-18",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          },
+          "register": "slang"
+        }
+      ],
+      "srsQueue": [
+        {
+          "position": 1,
+          "kind": "word",
+          "id": "politeness-12",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 2,
+          "kind": "word",
+          "id": "politeness-13",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 3,
+          "kind": "word",
+          "id": "politeness-14",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 4,
+          "kind": "word",
+          "id": "politeness-15",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 5,
+          "kind": "word",
+          "id": "politeness-16",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 6,
+          "kind": "line",
+          "id": "politeness-17",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 7,
+          "kind": "line",
+          "id": "politeness-18",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 8,
+          "kind": "word",
+          "id": "politeness-08",
+          "source": "review",
+          "srsKind": "word",
+          "band": "review"
+        },
+        {
+          "position": 9,
+          "kind": "line",
+          "id": "politeness-04",
+          "source": "review",
+          "srsKind": "prayerLine",
+          "band": "review"
+        }
+      ],
+      "listenIds": [
+        "politeness-12",
+        "politeness-13",
+        "politeness-14",
+        "politeness-15",
+        "politeness-16",
+        "politeness-17",
+        "politeness-18"
+      ],
+      "listen": [
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "word",
+            "id": "politeness-12"
+          },
+          "answer": "politeness-12",
+          "options": [
+            "politeness-13",
+            "politeness-14",
+            "politeness-12"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "word",
+            "id": "politeness-13"
+          },
+          "answer": "politeness-13",
+          "options": [
+            "politeness-12",
+            "politeness-14",
+            "politeness-13"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "word",
+            "id": "politeness-14"
+          },
+          "answer": "politeness-14",
+          "options": [
+            "politeness-12",
+            "politeness-13",
+            "politeness-14"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "word",
+            "id": "politeness-15"
+          },
+          "answer": "politeness-15",
+          "options": [
+            "politeness-12",
+            "politeness-13",
+            "politeness-15"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "word",
+            "id": "politeness-16"
+          },
+          "answer": "politeness-16",
+          "options": [
+            "politeness-12",
+            "politeness-13",
+            "politeness-16"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "line",
+            "id": "politeness-17"
+          },
+          "answer": "politeness-17",
+          "options": [
+            "politeness-12",
+            "politeness-13",
+            "politeness-17"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "line",
+            "id": "politeness-18"
+          },
+          "answer": "politeness-18",
+          "options": [
+            "politeness-12",
+            "politeness-13",
+            "politeness-18"
+          ]
+        }
+      ],
+      "speak": [
+        {
+          "prompt": "A friend suggests pizza. Say cool.",
+          "answer": "politeness-12",
+          "he": "סַבָּבָה",
+          "translit": "sababa",
+          "en": "cool / great / fine by me",
+          "audio": {
+            "clipId": "politeness-12",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        },
+        {
+          "prompt": "Time to go. Say let's go.",
+          "answer": "politeness-13",
+          "he": "יַאלְלָה",
+          "translit": "yalla",
+          "en": "come on / let's go / OK then",
+          "audio": {
+            "clipId": "politeness-13",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        }
+      ],
+      "reviewDays": [
+        1,
+        3,
+        7,
+        14,
+        30
+      ],
+      "reviewOf": [
+        "politeness-08",
+        "politeness-04"
+      ]
+    },
+    {
+      "id": "pu-politeness-p05",
+      "title": "Enough, It Will Be Fine, and Unit Review",
+      "order": 5,
+      "kind": "review",
+      "can": "Set a limit, reassure someone, and review the unit.",
+      "grammarNote": "הַשֵּׁם: the everyday way to say God. בְּעֶזְרַת הַשֵּׁם means with God's help. הַשֵּׁם (the Name) is how Hebrew speakers refer to God in daily speech without saying a divine name.",
+      "grammar": {
+        "point": "הַשֵּׁם: the everyday way to say God",
+        "body": "בְּעֶזְרַת הַשֵּׁם means with God's help. הַשֵּׁם (the Name) is how Hebrew speakers refer to God in daily speech without saying a divine name.",
+        "examples": [
+          {
+            "itemId": "politeness-21",
+            "he": "בְּעֶזְרַת הַשֵּׁם",
+            "en": "God willing"
+          }
+        ]
+      },
+      "items": [
+        {
+          "id": "politeness-19",
+          "source": "data/corpus/phrasebook.json",
+          "he": "דַּי",
+          "en": "enough / stop it",
+          "translit": "dai",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "word",
+            "id": "politeness-19"
+          },
+          "audio": {
+            "clipId": "politeness-19",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        },
+        {
+          "id": "politeness-21",
+          "source": "data/corpus/phrasebook.json",
+          "he": "בְּעֶזְרַת הַשֵּׁם",
+          "en": "God willing",
+          "translit": "be'ezrat hashem",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "line",
+            "id": "politeness-21"
+          },
+          "audio": {
+            "clipId": "politeness-21",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          },
+          "heldForJohn": true
+        }
+      ],
+      "srsQueue": [
+        {
+          "position": 1,
+          "kind": "word",
+          "id": "politeness-19",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 2,
+          "kind": "line",
+          "id": "politeness-21",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 3,
+          "kind": "word",
+          "id": "politeness-01",
+          "source": "review",
+          "srsKind": "word",
+          "band": "review"
+        },
+        {
+          "position": 4,
+          "kind": "word",
+          "id": "politeness-03",
+          "source": "review",
+          "srsKind": "word",
+          "band": "review"
+        },
+        {
+          "position": 5,
+          "kind": "word",
+          "id": "politeness-06",
+          "source": "review",
+          "srsKind": "word",
+          "band": "review"
+        },
+        {
+          "position": 6,
+          "kind": "line",
+          "id": "politeness-07-m",
+          "source": "review",
+          "srsKind": "prayerLine",
+          "band": "review"
+        },
+        {
+          "position": 7,
+          "kind": "word",
+          "id": "politeness-10",
+          "source": "review",
+          "srsKind": "word",
+          "band": "review"
+        },
+        {
+          "position": 8,
+          "kind": "word",
+          "id": "politeness-12",
+          "source": "review",
+          "srsKind": "word",
+          "band": "review"
+        }
+      ],
+      "listenIds": [
+        "politeness-19",
+        "politeness-21"
+      ],
+      "listen": [
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "word",
+            "id": "politeness-19"
+          },
+          "answer": "politeness-19",
+          "options": [
+            "politeness-21",
+            "politeness-19"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "line",
+            "id": "politeness-21"
+          },
+          "answer": "politeness-21",
+          "options": [
+            "politeness-19",
+            "politeness-21"
+          ]
+        }
+      ],
+      "speak": [
+        {
+          "prompt": "Your child keeps tickling you. Say enough.",
+          "answer": "politeness-19",
+          "he": "דַּי",
+          "translit": "dai",
+          "en": "enough / stop it",
+          "audio": {
+            "clipId": "politeness-19",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        }
+      ],
+      "reviewDays": [
+        1,
+        3,
+        7,
+        14,
+        30
+      ],
+      "reviewOf": [
+        "politeness-01",
+        "politeness-03",
+        "politeness-06",
+        "politeness-07-m",
+        "politeness-10",
+        "politeness-12"
+      ],
+      "heldForJohn": [
+        "politeness-21"
+      ]
+    },
+    {
+      "id": "pu-fillers-p01",
+      "title": "So, Well, But",
+      "order": 1,
+      "kind": "learn",
+      "can": "Use the small words that hold a conversation together.",
+      "grammarNote": "Little words, big effect. אָז (so) and טוֹב (OK, well) start a new thought. נוּ pushes someone to go on. כְּלוֹמַר is formal: you will read it more than hear it.",
+      "grammar": {
+        "point": "Little words, big effect",
+        "body": "אָז (so) and טוֹב (OK, well) start a new thought. נוּ pushes someone to go on. כְּלוֹמַר is formal: you will read it more than hear it.",
+        "examples": [
+          {
+            "itemId": "fillers-01",
+            "he": "אָז",
+            "en": "so"
+          },
+          {
+            "itemId": "fillers-11",
+            "he": "כְּלוֹמַר",
+            "en": "that is / I mean"
+          }
+        ]
+      },
+      "items": [
+        {
+          "id": "fillers-01",
+          "source": "data/corpus/phrasebook.json",
+          "he": "אָז",
+          "en": "so",
+          "translit": "az",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "word",
+            "id": "fillers-01"
+          },
+          "audio": {
+            "clipId": "fillers-01",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        },
+        {
+          "id": "fillers-02",
+          "source": "data/corpus/phrasebook.json",
+          "he": "נוּ",
+          "en": "well? / come on",
+          "translit": "nu",
+          "review": "native-speaker-needed: slang/register and spelling",
+          "listen": {
+            "kind": "word",
+            "id": "fillers-02"
+          },
+          "audio": {
+            "clipId": "fillers-02",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          },
+          "register": "slang"
+        },
+        {
+          "id": "fillers-03",
+          "source": "data/corpus/phrasebook.json",
+          "he": "טוֹב",
+          "en": "OK / well / good",
+          "translit": "tov",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "word",
+            "id": "fillers-03"
+          },
+          "audio": {
+            "clipId": "fillers-03",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        },
+        {
+          "id": "fillers-12",
+          "source": "data/corpus/phrasebook.json",
+          "he": "אֲבָל",
+          "en": "but",
+          "translit": "aval",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "word",
+            "id": "fillers-12"
+          },
+          "audio": {
+            "clipId": "fillers-12",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        },
+        {
+          "id": "fillers-10",
+          "source": "data/corpus/phrasebook.json",
+          "he": "בְּעֶצֶם",
+          "en": "actually / in fact",
+          "translit": "be'etsem",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "word",
+            "id": "fillers-10"
+          },
+          "audio": {
+            "clipId": "fillers-10",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        },
+        {
+          "id": "fillers-11",
+          "source": "data/corpus/phrasebook.json",
+          "he": "כְּלוֹמַר",
+          "en": "that is / I mean",
+          "translit": "klomar",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "word",
+            "id": "fillers-11"
+          },
+          "audio": {
+            "clipId": "fillers-11",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          },
+          "register": "formal"
+        }
+      ],
+      "srsQueue": [
+        {
+          "position": 1,
+          "kind": "word",
+          "id": "fillers-01",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 2,
+          "kind": "word",
+          "id": "fillers-02",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 3,
+          "kind": "word",
+          "id": "fillers-03",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 4,
+          "kind": "word",
+          "id": "fillers-12",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 5,
+          "kind": "word",
+          "id": "fillers-10",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 6,
+          "kind": "word",
+          "id": "fillers-11",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 7,
+          "kind": "word",
+          "id": "politeness-13",
+          "source": "review",
+          "srsKind": "word",
+          "band": "review"
+        },
+        {
+          "position": 8,
+          "kind": "word",
+          "id": "greetings-15",
+          "source": "review",
+          "srsKind": "word",
+          "band": "review"
+        }
+      ],
+      "listenIds": [
+        "fillers-01",
+        "fillers-02",
+        "fillers-03",
+        "fillers-12",
+        "fillers-10",
+        "fillers-11"
+      ],
+      "listen": [
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "word",
+            "id": "fillers-01"
+          },
+          "answer": "fillers-01",
+          "options": [
+            "fillers-02",
+            "fillers-03",
+            "fillers-01"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "word",
+            "id": "fillers-02"
+          },
+          "answer": "fillers-02",
+          "options": [
+            "fillers-01",
+            "fillers-03",
+            "fillers-02"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "word",
+            "id": "fillers-03"
+          },
+          "answer": "fillers-03",
+          "options": [
+            "fillers-01",
+            "fillers-02",
+            "fillers-03"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "word",
+            "id": "fillers-12"
+          },
+          "answer": "fillers-12",
+          "options": [
+            "fillers-01",
+            "fillers-02",
+            "fillers-12"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "word",
+            "id": "fillers-10"
+          },
+          "answer": "fillers-10",
+          "options": [
+            "fillers-01",
+            "fillers-02",
+            "fillers-10"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "word",
+            "id": "fillers-11"
+          },
+          "answer": "fillers-11",
+          "options": [
+            "fillers-01",
+            "fillers-02",
+            "fillers-11"
+          ]
+        }
+      ],
+      "speak": [
+        {
+          "prompt": "You want to change the subject. Start with so.",
+          "answer": "fillers-01",
+          "he": "אָז",
+          "translit": "az",
+          "en": "so",
+          "audio": {
+            "clipId": "fillers-01",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        },
+        {
+          "prompt": "Your friend stops mid-story. Push them on.",
+          "answer": "fillers-02",
+          "he": "נוּ",
+          "translit": "nu",
+          "en": "well? / come on",
+          "audio": {
+            "clipId": "fillers-02",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        }
+      ],
+      "reviewDays": [
+        1,
+        3,
+        7,
+        14,
+        30
+      ],
+      "reviewOf": [
+        "politeness-13",
+        "greetings-15"
+      ]
+    },
+    {
+      "id": "pu-fillers-p02",
+      "title": "Right, Really, Just",
+      "order": 2,
+      "kind": "learn",
+      "can": "Agree, doubt and soften what you say.",
+      "grammarNote": "A question mark is a tone of voice. בֶּאֱמֶת means truly; said with a rising voice, בֶּאֱמֶת? means really? Hebrew often makes a question by tone alone, with no word order change.",
+      "grammar": {
+        "point": "A question mark is a tone of voice",
+        "body": "בֶּאֱמֶת means truly; said with a rising voice, בֶּאֱמֶת? means really? Hebrew often makes a question by tone alone, with no word order change.",
+        "examples": [
+          {
+            "itemId": "fillers-06",
+            "he": "בֶּאֱמֶת?",
+            "en": "really?"
+          },
+          {
+            "itemId": "fillers-04",
+            "he": "נָכוֹן",
+            "en": "right / correct"
+          }
+        ]
+      },
+      "items": [
+        {
+          "id": "fillers-04",
+          "source": "data/corpus/phrasebook.json",
+          "he": "נָכוֹן",
+          "en": "right / correct",
+          "translit": "nachon",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "word",
+            "id": "fillers-04"
+          },
+          "audio": {
+            "clipId": "fillers-04",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        },
+        {
+          "id": "fillers-05",
+          "source": "data/corpus/phrasebook.json",
+          "he": "לֹא נָכוֹן",
+          "en": "not right / wrong",
+          "translit": "lo nachon",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "line",
+            "id": "fillers-05"
+          },
+          "audio": {
+            "clipId": "fillers-05",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        },
+        {
+          "id": "fillers-06",
+          "source": "data/corpus/phrasebook.json",
+          "he": "בֶּאֱמֶת?",
+          "en": "really?",
+          "translit": "be'emet?",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "word",
+            "id": "fillers-06"
+          },
+          "audio": {
+            "clipId": "fillers-06",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        },
+        {
+          "id": "fillers-07",
+          "source": "data/corpus/phrasebook.json",
+          "he": "מַמָּשׁ",
+          "en": "really / truly / very",
+          "translit": "mamash",
+          "review": "native-speaker-needed: slang/register and spelling",
+          "listen": {
+            "kind": "word",
+            "id": "fillers-07"
+          },
+          "audio": {
+            "clipId": "fillers-07",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          },
+          "register": "slang"
+        },
+        {
+          "id": "fillers-08",
+          "source": "data/corpus/phrasebook.json",
+          "he": "פָּשׁוּט",
+          "en": "simply / just",
+          "translit": "pashut",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "word",
+            "id": "fillers-08"
+          },
+          "audio": {
+            "clipId": "fillers-08",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        },
+        {
+          "id": "fillers-09",
+          "source": "data/corpus/phrasebook.json",
+          "he": "סְתָם",
+          "en": "just (because) / for no reason",
+          "translit": "stam",
+          "review": "native-speaker-needed: slang/register and spelling",
+          "listen": {
+            "kind": "word",
+            "id": "fillers-09"
+          },
+          "audio": {
+            "clipId": "fillers-09",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          },
+          "register": "slang"
+        }
+      ],
+      "srsQueue": [
+        {
+          "position": 1,
+          "kind": "word",
+          "id": "fillers-04",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 2,
+          "kind": "line",
+          "id": "fillers-05",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 3,
+          "kind": "word",
+          "id": "fillers-06",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 4,
+          "kind": "word",
+          "id": "fillers-07",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 5,
+          "kind": "word",
+          "id": "fillers-08",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 6,
+          "kind": "word",
+          "id": "fillers-09",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 7,
+          "kind": "word",
+          "id": "fillers-01",
+          "source": "review",
+          "srsKind": "word",
+          "band": "review"
+        },
+        {
+          "position": 8,
+          "kind": "word",
+          "id": "politeness-14",
+          "source": "review",
+          "srsKind": "word",
+          "band": "review"
+        }
+      ],
+      "listenIds": [
+        "fillers-04",
+        "fillers-05",
+        "fillers-06",
+        "fillers-07",
+        "fillers-08",
+        "fillers-09"
+      ],
+      "listen": [
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "word",
+            "id": "fillers-04"
+          },
+          "answer": "fillers-04",
+          "options": [
+            "fillers-05",
+            "fillers-06",
+            "fillers-04"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "line",
+            "id": "fillers-05"
+          },
+          "answer": "fillers-05",
+          "options": [
+            "fillers-04",
+            "fillers-06",
+            "fillers-05"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "word",
+            "id": "fillers-06"
+          },
+          "answer": "fillers-06",
+          "options": [
+            "fillers-04",
+            "fillers-05",
+            "fillers-06"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "word",
+            "id": "fillers-07"
+          },
+          "answer": "fillers-07",
+          "options": [
+            "fillers-04",
+            "fillers-05",
+            "fillers-07"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "word",
+            "id": "fillers-08"
+          },
+          "answer": "fillers-08",
+          "options": [
+            "fillers-04",
+            "fillers-05",
+            "fillers-08"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "word",
+            "id": "fillers-09"
+          },
+          "answer": "fillers-09",
+          "options": [
+            "fillers-04",
+            "fillers-05",
+            "fillers-09"
+          ]
+        }
+      ],
+      "speak": [
+        {
+          "prompt": "Someone tells surprising news.",
+          "answer": "fillers-06",
+          "he": "בֶּאֱמֶת?",
+          "translit": "be'emet?",
+          "en": "really?",
+          "audio": {
+            "clipId": "fillers-06",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        },
+        {
+          "prompt": "Agree with what was said.",
+          "answer": "fillers-04",
+          "he": "נָכוֹן",
+          "translit": "nachon",
+          "en": "right / correct",
+          "audio": {
+            "clipId": "fillers-04",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        }
+      ],
+      "reviewDays": [
+        1,
+        3,
+        7,
+        14,
+        30
+      ],
+      "reviewOf": [
+        "fillers-01",
+        "politeness-14"
+      ]
+    },
+    {
+      "id": "pu-fillers-p03",
+      "title": "I Don't Understand",
+      "order": 3,
+      "kind": "grammar",
+      "can": "Say you understand, don't understand, or don't know.",
+      "grammarNote": "Present-tense verbs: a man's form and a woman's form. A man says אֲנִי מֵבִין; a woman says אֲנִי מְבִינָה. A man says אֲנִי לֹא יוֹדֵעַ; a woman says אֲנִי לֹא יוֹדַעַת. Choose the form that matches you, the speaker.",
+      "grammar": {
+        "point": "Present-tense verbs: a man's form and a woman's form",
+        "body": "A man says אֲנִי מֵבִין; a woman says אֲנִי מְבִינָה. A man says אֲנִי לֹא יוֹדֵעַ; a woman says אֲנִי לֹא יוֹדַעַת. Choose the form that matches you, the speaker.",
+        "examples": [
+          {
+            "itemId": "fillers-15-m",
+            "he": "אֲנִי מֵבִין",
+            "en": "I understand"
+          },
+          {
+            "itemId": "fillers-15-f",
+            "he": "אֲנִי מְבִינָה",
+            "en": "I understand"
+          },
+          {
+            "itemId": "fillers-13-m",
+            "he": "אֲנִי לֹא יוֹדֵעַ",
+            "en": "I don't know"
+          },
+          {
+            "itemId": "fillers-13-f",
+            "he": "אֲנִי לֹא יוֹדַעַת",
+            "en": "I don't know"
+          }
+        ]
+      },
+      "items": [
+        {
+          "id": "fillers-14-m",
+          "source": "data/audio/manifest.json",
+          "he": "אֲנִי לֹא מֵבִין",
+          "en": "I don't understand",
+          "translit": "ani lo mevin",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "line",
+            "id": "fillers-14-m"
+          },
+          "audio": {
+            "clipId": "fillers-14-m",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          },
+          "translitSource": "phrasebook",
+          "form": "to or by a man"
+        },
+        {
+          "id": "fillers-14-f",
+          "source": "data/audio/manifest.json",
+          "he": "אֲנִי לֹא מְבִינָה",
+          "en": "I don't understand",
+          "translit": "ani lo mevina",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "line",
+            "id": "fillers-14-f"
+          },
+          "audio": {
+            "clipId": "fillers-14-f",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          },
+          "translitSource": "spoken style written for this page; native check",
+          "form": "to or by a woman"
+        },
+        {
+          "id": "fillers-15-m",
+          "source": "data/audio/manifest.json",
+          "he": "אֲנִי מֵבִין",
+          "en": "I understand",
+          "translit": "ani mevin",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "line",
+            "id": "fillers-15-m"
+          },
+          "audio": {
+            "clipId": "fillers-15-m",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          },
+          "translitSource": "phrasebook",
+          "form": "to or by a man"
+        },
+        {
+          "id": "fillers-15-f",
+          "source": "data/audio/manifest.json",
+          "he": "אֲנִי מְבִינָה",
+          "en": "I understand",
+          "translit": "ani mevina",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "line",
+            "id": "fillers-15-f"
+          },
+          "audio": {
+            "clipId": "fillers-15-f",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          },
+          "translitSource": "spoken style written for this page; native check",
+          "form": "to or by a woman"
+        },
+        {
+          "id": "fillers-13-m",
+          "source": "data/audio/manifest.json",
+          "he": "אֲנִי לֹא יוֹדֵעַ",
+          "en": "I don't know",
+          "translit": "ani lo yode'a",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "line",
+            "id": "fillers-13-m"
+          },
+          "audio": {
+            "clipId": "fillers-13-m",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          },
+          "translitSource": "phrasebook",
+          "form": "to or by a man"
+        },
+        {
+          "id": "fillers-13-f",
+          "source": "data/audio/manifest.json",
+          "he": "אֲנִי לֹא יוֹדַעַת",
+          "en": "I don't know",
+          "translit": "ani lo yoda'at",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "line",
+            "id": "fillers-13-f"
+          },
+          "audio": {
+            "clipId": "fillers-13-f",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          },
+          "translitSource": "spoken style written for this page; native check",
+          "form": "to or by a woman"
+        }
+      ],
+      "srsQueue": [
+        {
+          "position": 1,
+          "kind": "line",
+          "id": "fillers-14-m",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 2,
+          "kind": "line",
+          "id": "fillers-14-f",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 3,
+          "kind": "line",
+          "id": "fillers-15-m",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 4,
+          "kind": "line",
+          "id": "fillers-15-f",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 5,
+          "kind": "line",
+          "id": "fillers-13-m",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 6,
+          "kind": "line",
+          "id": "fillers-13-f",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 7,
+          "kind": "line",
+          "id": "politeness-07-f",
+          "source": "review",
+          "srsKind": "prayerLine",
+          "band": "review"
+        },
+        {
+          "position": 8,
+          "kind": "word",
+          "id": "fillers-04",
+          "source": "review",
+          "srsKind": "word",
+          "band": "review"
+        }
+      ],
+      "listenIds": [
+        "fillers-14-m",
+        "fillers-14-f",
+        "fillers-15-m",
+        "fillers-15-f",
+        "fillers-13-m",
+        "fillers-13-f"
+      ],
+      "listen": [
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "line",
+            "id": "fillers-14-m"
+          },
+          "answer": "fillers-14-m",
+          "options": [
+            "fillers-14-f",
+            "fillers-15-m",
+            "fillers-14-m"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "line",
+            "id": "fillers-14-f"
+          },
+          "answer": "fillers-14-f",
+          "options": [
+            "fillers-14-m",
+            "fillers-15-m",
+            "fillers-14-f"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "line",
+            "id": "fillers-15-m"
+          },
+          "answer": "fillers-15-m",
+          "options": [
+            "fillers-14-m",
+            "fillers-14-f",
+            "fillers-15-m"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "line",
+            "id": "fillers-15-f"
+          },
+          "answer": "fillers-15-f",
+          "options": [
+            "fillers-14-m",
+            "fillers-14-f",
+            "fillers-15-f"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "line",
+            "id": "fillers-13-m"
+          },
+          "answer": "fillers-13-m",
+          "options": [
+            "fillers-14-m",
+            "fillers-14-f",
+            "fillers-13-m"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "line",
+            "id": "fillers-13-f"
+          },
+          "answer": "fillers-13-f",
+          "options": [
+            "fillers-14-m",
+            "fillers-14-f",
+            "fillers-13-f"
+          ]
+        }
+      ],
+      "speak": [
+        {
+          "prompt": "You are a man and lost in the conversation.",
+          "answer": "fillers-14-m",
+          "he": "אֲנִי לֹא מֵבִין",
+          "translit": "ani lo mevin",
+          "en": "I don't understand",
+          "audio": {
+            "clipId": "fillers-14-m",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        },
+        {
+          "prompt": "You are a woman and you don't know the answer.",
+          "answer": "fillers-13-f",
+          "he": "אֲנִי לֹא יוֹדַעַת",
+          "translit": "ani lo yoda'at",
+          "en": "I don't know",
+          "audio": {
+            "clipId": "fillers-13-f",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        }
+      ],
+      "reviewDays": [
+        1,
+        3,
+        7,
+        14,
+        30
+      ],
+      "reviewOf": [
+        "politeness-07-f",
+        "fillers-04"
+      ]
+    },
+    {
+      "id": "pu-fillers-p04",
+      "title": "Do You Speak English?",
+      "order": 4,
+      "kind": "grammar",
+      "can": "Ask a man or a woman if they speak English.",
+      "grammarNote": "You: אַתָּה to a man, אַתְּ to a woman. The word for you changes too, and the verb follows it: אַתָּה מְדַבֵּר to a man, אַתְּ מְדַבֶּרֶת to a woman.",
+      "grammar": {
+        "point": "You: אַתָּה to a man, אַתְּ to a woman",
+        "body": "The word for you changes too, and the verb follows it: אַתָּה מְדַבֵּר to a man, אַתְּ מְדַבֶּרֶת to a woman.",
+        "examples": [
+          {
+            "itemId": "fillers-16-m",
+            "he": "אַתָּה מְדַבֵּר אַנְגְּלִית?",
+            "en": "do you speak English?"
+          },
+          {
+            "itemId": "fillers-16-f",
+            "he": "אַתְּ מְדַבֶּרֶת אַנְגְּלִית?",
+            "en": "do you speak English?"
+          }
+        ]
+      },
+      "items": [
+        {
+          "id": "fillers-16-m",
+          "source": "data/audio/manifest.json",
+          "he": "אַתָּה מְדַבֵּר אַנְגְּלִית?",
+          "en": "do you speak English?",
+          "translit": "ata medaber anglit?",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "line",
+            "id": "fillers-16-m"
+          },
+          "audio": {
+            "clipId": "fillers-16-m",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          },
+          "translitSource": "phrasebook",
+          "form": "to or by a man"
+        },
+        {
+          "id": "fillers-16-f",
+          "source": "data/audio/manifest.json",
+          "he": "אַתְּ מְדַבֶּרֶת אַנְגְּלִית?",
+          "en": "do you speak English?",
+          "translit": "at medaberet anglit?",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "line",
+            "id": "fillers-16-f"
+          },
+          "audio": {
+            "clipId": "fillers-16-f",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          },
+          "translitSource": "spoken style written for this page; native check",
+          "form": "to or by a woman"
+        },
+        {
+          "id": "fillers-17-m",
+          "source": "data/audio/manifest.json",
+          "he": "אֲנִי לֹא מְדַבֵּר עִבְרִית טוֹב",
+          "en": "I don't speak Hebrew well",
+          "translit": "ani lo medaber ivrit tov",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "line",
+            "id": "fillers-17-m"
+          },
+          "audio": {
+            "clipId": "fillers-17-m",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          },
+          "translitSource": "phrasebook",
+          "form": "to or by a man"
+        },
+        {
+          "id": "fillers-17-f",
+          "source": "data/audio/manifest.json",
+          "he": "אֲנִי לֹא מְדַבֶּרֶת עִבְרִית טוֹב",
+          "en": "I don't speak Hebrew well",
+          "translit": "ani lo medaberet ivrit tov",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "line",
+            "id": "fillers-17-f"
+          },
+          "audio": {
+            "clipId": "fillers-17-f",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          },
+          "translitSource": "spoken style written for this page; native check",
+          "form": "to or by a woman"
+        }
+      ],
+      "srsQueue": [
+        {
+          "position": 1,
+          "kind": "line",
+          "id": "fillers-16-m",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 2,
+          "kind": "line",
+          "id": "fillers-16-f",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 3,
+          "kind": "line",
+          "id": "fillers-17-m",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 4,
+          "kind": "line",
+          "id": "fillers-17-f",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 5,
+          "kind": "line",
+          "id": "fillers-14-m",
+          "source": "review",
+          "srsKind": "prayerLine",
+          "band": "review"
+        },
+        {
+          "position": 6,
+          "kind": "line",
+          "id": "greetings-11-f",
+          "source": "review",
+          "srsKind": "prayerLine",
+          "band": "review"
+        }
+      ],
+      "listenIds": [
+        "fillers-16-m",
+        "fillers-16-f",
+        "fillers-17-m",
+        "fillers-17-f"
+      ],
+      "listen": [
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "line",
+            "id": "fillers-16-m"
+          },
+          "answer": "fillers-16-m",
+          "options": [
+            "fillers-16-f",
+            "fillers-17-m",
+            "fillers-16-m"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "line",
+            "id": "fillers-16-f"
+          },
+          "answer": "fillers-16-f",
+          "options": [
+            "fillers-16-m",
+            "fillers-17-m",
+            "fillers-16-f"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "line",
+            "id": "fillers-17-m"
+          },
+          "answer": "fillers-17-m",
+          "options": [
+            "fillers-16-m",
+            "fillers-16-f",
+            "fillers-17-m"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "line",
+            "id": "fillers-17-f"
+          },
+          "answer": "fillers-17-f",
+          "options": [
+            "fillers-16-m",
+            "fillers-16-f",
+            "fillers-17-f"
+          ]
+        }
+      ],
+      "speak": [
+        {
+          "prompt": "Ask the woman at the counter if she speaks English.",
+          "answer": "fillers-16-f",
+          "he": "אַתְּ מְדַבֶּרֶת אַנְגְּלִית?",
+          "translit": "at medaberet anglit?",
+          "en": "do you speak English?",
+          "audio": {
+            "clipId": "fillers-16-f",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        },
+        {
+          "prompt": "You are a man. Say your Hebrew is not good.",
+          "answer": "fillers-17-m",
+          "he": "אֲנִי לֹא מְדַבֵּר עִבְרִית טוֹב",
+          "translit": "ani lo medaber ivrit tov",
+          "en": "I don't speak Hebrew well",
+          "audio": {
+            "clipId": "fillers-17-m",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        }
+      ],
+      "reviewDays": [
+        1,
+        3,
+        7,
+        14,
+        30
+      ],
+      "reviewOf": [
+        "fillers-14-m",
+        "greetings-11-f"
+      ]
+    },
+    {
+      "id": "pu-fillers-p05",
+      "title": "Slower, Please",
+      "order": 5,
+      "kind": "speak",
+      "can": "Ask someone to slow down, repeat or write it.",
+      "grammarNote": "אֶפְשָׁר + to-verb: a polite request with no gender. אֶפְשָׁר means it is possible. Add a verb that starts with לְ or לִ (to speak, to write) and you have a polite request that is the same for everyone: אֶפְשָׁר לְדַבֵּר לְאַט?",
+      "grammar": {
+        "point": "אֶפְשָׁר + to-verb: a polite request with no gender",
+        "body": "אֶפְשָׁר means it is possible. Add a verb that starts with לְ or לִ (to speak, to write) and you have a polite request that is the same for everyone: אֶפְשָׁר לְדַבֵּר לְאַט?",
+        "examples": [
+          {
+            "itemId": "fillers-18",
+            "he": "אֶפְשָׁר לְדַבֵּר לְאַט?",
+            "en": "can you speak slowly?"
+          },
+          {
+            "itemId": "fillers-23",
+            "he": "אֶפְשָׁר לִכְתֹּב אֶת זֶה?",
+            "en": "can you write that down?"
+          }
+        ]
+      },
+      "items": [
+        {
+          "id": "fillers-18",
+          "source": "data/corpus/phrasebook.json",
+          "he": "אֶפְשָׁר לְדַבֵּר לְאַט?",
+          "en": "can you speak slowly?",
+          "translit": "efshar ledaber le'at?",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "line",
+            "id": "fillers-18"
+          },
+          "audio": {
+            "clipId": "fillers-18",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        },
+        {
+          "id": "fillers-19",
+          "source": "data/corpus/phrasebook.json",
+          "he": "אֶפְשָׁר לַחֲזֹר עַל זֶה?",
+          "en": "can you repeat that?",
+          "translit": "efshar lachazor al ze?",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "line",
+            "id": "fillers-19"
+          },
+          "audio": {
+            "clipId": "fillers-19",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        },
+        {
+          "id": "fillers-23",
+          "source": "data/corpus/phrasebook.json",
+          "he": "אֶפְשָׁר לִכְתֹּב אֶת זֶה?",
+          "en": "can you write that down?",
+          "translit": "efshar lichtov et ze?",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "line",
+            "id": "fillers-23"
+          },
+          "audio": {
+            "clipId": "fillers-23",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        }
+      ],
+      "srsQueue": [
+        {
+          "position": 1,
+          "kind": "line",
+          "id": "fillers-18",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 2,
+          "kind": "line",
+          "id": "fillers-19",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 3,
+          "kind": "line",
+          "id": "fillers-23",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 4,
+          "kind": "line",
+          "id": "fillers-16-m",
+          "source": "review",
+          "srsKind": "prayerLine",
+          "band": "review"
+        },
+        {
+          "position": 5,
+          "kind": "word",
+          "id": "politeness-03",
+          "source": "review",
+          "srsKind": "word",
+          "band": "review"
+        }
+      ],
+      "listenIds": [
+        "fillers-18",
+        "fillers-19",
+        "fillers-23"
+      ],
+      "listen": [
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "line",
+            "id": "fillers-18"
+          },
+          "answer": "fillers-18",
+          "options": [
+            "fillers-19",
+            "fillers-23",
+            "fillers-18"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "line",
+            "id": "fillers-19"
+          },
+          "answer": "fillers-19",
+          "options": [
+            "fillers-18",
+            "fillers-23",
+            "fillers-19"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "line",
+            "id": "fillers-23"
+          },
+          "answer": "fillers-23",
+          "options": [
+            "fillers-18",
+            "fillers-19",
+            "fillers-23"
+          ]
+        }
+      ],
+      "speak": [
+        {
+          "prompt": "The driver talks too fast.",
+          "answer": "fillers-18",
+          "he": "אֶפְשָׁר לְדַבֵּר לְאַט?",
+          "translit": "efshar ledaber le'at?",
+          "en": "can you speak slowly?",
+          "audio": {
+            "clipId": "fillers-18",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        },
+        {
+          "prompt": "You didn't catch the address.",
+          "answer": "fillers-19",
+          "he": "אֶפְשָׁר לַחֲזֹר עַל זֶה?",
+          "translit": "efshar lachazor al ze?",
+          "en": "can you repeat that?",
+          "audio": {
+            "clipId": "fillers-19",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        },
+        {
+          "prompt": "Ask the clerk to write the number down.",
+          "answer": "fillers-23",
+          "he": "אֶפְשָׁר לִכְתֹּב אֶת זֶה?",
+          "translit": "efshar lichtov et ze?",
+          "en": "can you write that down?",
+          "audio": {
+            "clipId": "fillers-23",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        }
+      ],
+      "reviewDays": [
+        1,
+        3,
+        7,
+        14,
+        30
+      ],
+      "reviewOf": [
+        "fillers-16-m",
+        "politeness-03"
+      ]
+    },
+    {
+      "id": "pu-fillers-p06",
+      "title": "What Does It Mean? and Unit Review",
+      "order": 6,
+      "kind": "review",
+      "can": "Ask what something is and how to say it, then review the unit.",
+      "grammarNote": "אוֹמְרִים: what people say. אֵיךְ אוֹמְרִים literally asks how do they say. The plural verb with no named person means people in general.",
+      "grammar": {
+        "point": "אוֹמְרִים: what people say",
+        "body": "אֵיךְ אוֹמְרִים literally asks how do they say. The plural verb with no named person means people in general.",
+        "examples": [
+          {
+            "itemId": "fillers-22",
+            "he": "אֵיךְ אוֹמְרִים ... בְּעִבְרִית?",
+            "en": "how do you say ... in Hebrew?"
+          }
+        ]
+      },
+      "items": [
+        {
+          "id": "fillers-20",
+          "source": "data/corpus/phrasebook.json",
+          "he": "מָה זֶה?",
+          "en": "what is this?",
+          "translit": "ma ze?",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "line",
+            "id": "fillers-20"
+          },
+          "audio": {
+            "clipId": "fillers-20",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        },
+        {
+          "id": "fillers-21",
+          "source": "data/corpus/phrasebook.json",
+          "he": "מָה זֶה אוֹמֵר?",
+          "en": "what does that mean?",
+          "translit": "ma ze omer?",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "line",
+            "id": "fillers-21"
+          },
+          "audio": {
+            "clipId": "fillers-21",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        },
+        {
+          "id": "fillers-22",
+          "source": "data/corpus/phrasebook.json",
+          "he": "אֵיךְ אוֹמְרִים ... בְּעִבְרִית?",
+          "en": "how do you say ... in Hebrew?",
+          "translit": "eich omrim ... be'ivrit?",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "line",
+            "id": "fillers-22"
+          },
+          "audio": {
+            "clipId": "fillers-22",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        }
+      ],
+      "srsQueue": [
+        {
+          "position": 1,
+          "kind": "line",
+          "id": "fillers-20",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 2,
+          "kind": "line",
+          "id": "fillers-21",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 3,
+          "kind": "line",
+          "id": "fillers-22",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 4,
+          "kind": "word",
+          "id": "fillers-01",
+          "source": "review",
+          "srsKind": "word",
+          "band": "review"
+        },
+        {
+          "position": 5,
+          "kind": "word",
+          "id": "fillers-06",
+          "source": "review",
+          "srsKind": "word",
+          "band": "review"
+        },
+        {
+          "position": 6,
+          "kind": "line",
+          "id": "fillers-14-f",
+          "source": "review",
+          "srsKind": "prayerLine",
+          "band": "review"
+        },
+        {
+          "position": 7,
+          "kind": "line",
+          "id": "fillers-16-f",
+          "source": "review",
+          "srsKind": "prayerLine",
+          "band": "review"
+        },
+        {
+          "position": 8,
+          "kind": "line",
+          "id": "fillers-18",
+          "source": "review",
+          "srsKind": "prayerLine",
+          "band": "review"
+        },
+        {
+          "position": 9,
+          "kind": "word",
+          "id": "fillers-04",
+          "source": "review",
+          "srsKind": "word",
+          "band": "review"
+        }
+      ],
+      "listenIds": [
+        "fillers-20",
+        "fillers-21",
+        "fillers-22"
+      ],
+      "listen": [
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "line",
+            "id": "fillers-20"
+          },
+          "answer": "fillers-20",
+          "options": [
+            "fillers-21",
+            "fillers-22",
+            "fillers-20"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "line",
+            "id": "fillers-21"
+          },
+          "answer": "fillers-21",
+          "options": [
+            "fillers-20",
+            "fillers-22",
+            "fillers-21"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "line",
+            "id": "fillers-22"
+          },
+          "answer": "fillers-22",
+          "options": [
+            "fillers-20",
+            "fillers-21",
+            "fillers-22"
+          ]
+        }
+      ],
+      "speak": [
+        {
+          "prompt": "Point at a fruit at the market.",
+          "answer": "fillers-20",
+          "he": "מָה זֶה?",
+          "translit": "ma ze?",
+          "en": "what is this?",
+          "audio": {
+            "clipId": "fillers-20",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        },
+        {
+          "prompt": "Ask how to say a word in Hebrew.",
+          "answer": "fillers-22",
+          "he": "אֵיךְ אוֹמְרִים ... בְּעִבְרִית?",
+          "translit": "eich omrim ... be'ivrit?",
+          "en": "how do you say ... in Hebrew?",
+          "audio": {
+            "clipId": "fillers-22",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        }
+      ],
+      "reviewDays": [
+        1,
+        3,
+        7,
+        14,
+        30
+      ],
+      "reviewOf": [
+        "fillers-01",
+        "fillers-06",
+        "fillers-14-f",
+        "fillers-16-f",
+        "fillers-18",
+        "fillers-04"
+      ]
+    },
+    {
+      "id": "pu-numbers-p01",
+      "title": "One to Five",
+      "order": 1,
+      "kind": "grammar",
+      "can": "Count to five and know which form to use.",
+      "grammarNote": "Two sets of numbers. Hebrew numbers come in two sets. When you count aloud, read a phone number or tell the time, use the short set: אַחַת, שְׁתַּיִם, שָׁלוֹשׁ. With a masculine noun the other set is used: שְׁלוֹשָׁה. Start with the counting set; you will meet the other with nouns in the shop unit.",
+      "grammar": {
+        "point": "Two sets of numbers",
+        "body": "Hebrew numbers come in two sets. When you count aloud, read a phone number or tell the time, use the short set: אַחַת, שְׁתַּיִם, שָׁלוֹשׁ. With a masculine noun the other set is used: שְׁלוֹשָׁה. Start with the counting set; you will meet the other with nouns in the shop unit.",
+        "examples": [
+          {
+            "itemId": "numbers-03-f",
+            "he": "שָׁלוֹשׁ",
+            "en": "three (3)"
+          },
+          {
+            "itemId": "numbers-03-m",
+            "he": "שְׁלוֹשָׁה",
+            "en": "three (3)"
+          }
+        ]
+      },
+      "items": [
+        {
+          "id": "numbers-01-f",
+          "source": "data/audio/manifest-kind-word.json",
+          "he": "אַחַת",
+          "en": "one (1)",
+          "translit": "achat",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "word",
+            "id": "numbers-01-f"
+          },
+          "audio": {
+            "clipId": "numbers-01-f",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          },
+          "translitSource": "spoken style written for this page; native check",
+          "form": "to or by a woman"
+        },
+        {
+          "id": "numbers-01-m",
+          "source": "data/audio/manifest-kind-word.json",
+          "he": "אֶחָד",
+          "en": "one (1)",
+          "translit": "echad",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "word",
+            "id": "numbers-01-m"
+          },
+          "audio": {
+            "clipId": "numbers-01-m",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          },
+          "translitSource": "phrasebook",
+          "form": "to or by a man"
+        },
+        {
+          "id": "numbers-02-f",
+          "source": "data/audio/manifest-kind-word.json",
+          "he": "שְׁתַּיִם",
+          "en": "two (2)",
+          "translit": "shtayim",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "word",
+            "id": "numbers-02-f"
+          },
+          "audio": {
+            "clipId": "numbers-02-f",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          },
+          "translitSource": "spoken style written for this page; native check",
+          "form": "to or by a woman"
+        },
+        {
+          "id": "numbers-02-m",
+          "source": "data/audio/manifest-kind-word.json",
+          "he": "שְׁנַיִם",
+          "en": "two (2)",
+          "translit": "shnayim",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "word",
+            "id": "numbers-02-m"
+          },
+          "audio": {
+            "clipId": "numbers-02-m",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          },
+          "translitSource": "phrasebook",
+          "form": "to or by a man"
+        },
+        {
+          "id": "numbers-03-f",
+          "source": "data/audio/manifest-kind-word.json",
+          "he": "שָׁלוֹשׁ",
+          "en": "three (3)",
+          "translit": "shalosh",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "word",
+            "id": "numbers-03-f"
+          },
+          "audio": {
+            "clipId": "numbers-03-f",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          },
+          "translitSource": "spoken style written for this page; native check",
+          "form": "to or by a woman"
+        },
+        {
+          "id": "numbers-03-m",
+          "source": "data/audio/manifest-kind-word.json",
+          "he": "שְׁלוֹשָׁה",
+          "en": "three (3)",
+          "translit": "shlosha",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "word",
+            "id": "numbers-03-m"
+          },
+          "audio": {
+            "clipId": "numbers-03-m",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          },
+          "translitSource": "phrasebook",
+          "form": "to or by a man"
+        },
+        {
+          "id": "numbers-04-f",
+          "source": "data/audio/manifest-kind-word.json",
+          "he": "אַרְבַּע",
+          "en": "four (4)",
+          "translit": "arba",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "word",
+            "id": "numbers-04-f"
+          },
+          "audio": {
+            "clipId": "numbers-04-f",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          },
+          "translitSource": "spoken style written for this page; native check",
+          "form": "to or by a woman"
+        },
+        {
+          "id": "numbers-04-m",
+          "source": "data/audio/manifest-kind-word.json",
+          "he": "אַרְבָּעָה",
+          "en": "four (4)",
+          "translit": "arba'a",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "word",
+            "id": "numbers-04-m"
+          },
+          "audio": {
+            "clipId": "numbers-04-m",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          },
+          "translitSource": "phrasebook",
+          "form": "to or by a man"
+        },
+        {
+          "id": "numbers-05-f",
+          "source": "data/audio/manifest-kind-word.json",
+          "he": "חָמֵשׁ",
+          "en": "five (5)",
+          "translit": "chamesh",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "word",
+            "id": "numbers-05-f"
+          },
+          "audio": {
+            "clipId": "numbers-05-f",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          },
+          "translitSource": "spoken style written for this page; native check",
+          "form": "to or by a woman"
+        },
+        {
+          "id": "numbers-05-m",
+          "source": "data/audio/manifest-kind-word.json",
+          "he": "חֲמִשָּׁה",
+          "en": "five (5)",
+          "translit": "chamisha",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "word",
+            "id": "numbers-05-m"
+          },
+          "audio": {
+            "clipId": "numbers-05-m",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          },
+          "translitSource": "phrasebook",
+          "form": "to or by a man"
+        }
+      ],
+      "srsQueue": [
+        {
+          "position": 1,
+          "kind": "word",
+          "id": "numbers-01-f",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 2,
+          "kind": "word",
+          "id": "numbers-01-m",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 3,
+          "kind": "word",
+          "id": "numbers-02-f",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 4,
+          "kind": "word",
+          "id": "numbers-02-m",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 5,
+          "kind": "word",
+          "id": "numbers-03-f",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 6,
+          "kind": "word",
+          "id": "numbers-03-m",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 7,
+          "kind": "word",
+          "id": "numbers-04-f",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 8,
+          "kind": "word",
+          "id": "numbers-04-m",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 9,
+          "kind": "word",
+          "id": "numbers-05-f",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 10,
+          "kind": "word",
+          "id": "numbers-05-m",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 11,
+          "kind": "line",
+          "id": "fillers-19",
+          "source": "review",
+          "srsKind": "prayerLine",
+          "band": "review"
+        },
+        {
+          "position": 12,
+          "kind": "word",
+          "id": "politeness-01",
+          "source": "review",
+          "srsKind": "word",
+          "band": "review"
+        }
+      ],
+      "listenIds": [
+        "numbers-01-f",
+        "numbers-01-m",
+        "numbers-02-f",
+        "numbers-02-m",
+        "numbers-03-f",
+        "numbers-03-m",
+        "numbers-04-f",
+        "numbers-04-m",
+        "numbers-05-f",
+        "numbers-05-m"
+      ],
+      "listen": [
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "word",
+            "id": "numbers-01-f"
+          },
+          "answer": "numbers-01-f",
+          "options": [
+            "numbers-01-m",
+            "numbers-02-f",
+            "numbers-01-f"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "word",
+            "id": "numbers-01-m"
+          },
+          "answer": "numbers-01-m",
+          "options": [
+            "numbers-01-f",
+            "numbers-02-f",
+            "numbers-01-m"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "word",
+            "id": "numbers-02-f"
+          },
+          "answer": "numbers-02-f",
+          "options": [
+            "numbers-01-f",
+            "numbers-01-m",
+            "numbers-02-f"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "word",
+            "id": "numbers-02-m"
+          },
+          "answer": "numbers-02-m",
+          "options": [
+            "numbers-01-f",
+            "numbers-01-m",
+            "numbers-02-m"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "word",
+            "id": "numbers-03-f"
+          },
+          "answer": "numbers-03-f",
+          "options": [
+            "numbers-01-f",
+            "numbers-01-m",
+            "numbers-03-f"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "word",
+            "id": "numbers-03-m"
+          },
+          "answer": "numbers-03-m",
+          "options": [
+            "numbers-01-f",
+            "numbers-01-m",
+            "numbers-03-m"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "word",
+            "id": "numbers-04-f"
+          },
+          "answer": "numbers-04-f",
+          "options": [
+            "numbers-01-f",
+            "numbers-01-m",
+            "numbers-04-f"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "word",
+            "id": "numbers-04-m"
+          },
+          "answer": "numbers-04-m",
+          "options": [
+            "numbers-01-f",
+            "numbers-01-m",
+            "numbers-04-m"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "word",
+            "id": "numbers-05-f"
+          },
+          "answer": "numbers-05-f",
+          "options": [
+            "numbers-01-f",
+            "numbers-01-m",
+            "numbers-05-f"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "word",
+            "id": "numbers-05-m"
+          },
+          "answer": "numbers-05-m",
+          "options": [
+            "numbers-01-f",
+            "numbers-01-m",
+            "numbers-05-m"
+          ]
+        }
+      ],
+      "speak": [
+        {
+          "prompt": "Count from one to three.",
+          "answer": "numbers-03-f",
+          "he": "שָׁלוֹשׁ",
+          "translit": "shalosh",
+          "en": "three (3)",
+          "audio": {
+            "clipId": "numbers-03-f",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        },
+        {
+          "prompt": "Say the number five, counting aloud.",
+          "answer": "numbers-05-f",
+          "he": "חָמֵשׁ",
+          "translit": "chamesh",
+          "en": "five (5)",
+          "audio": {
+            "clipId": "numbers-05-f",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        }
+      ],
+      "reviewDays": [
+        1,
+        3,
+        7,
+        14,
+        30
+      ],
+      "reviewOf": [
+        "fillers-19",
+        "politeness-01"
+      ]
+    },
+    {
+      "id": "pu-numbers-p02",
+      "title": "Six to Ten",
+      "order": 2,
+      "kind": "learn",
+      "can": "Count to ten and say a phone number.",
+      "grammarNote": "The counting set is usually the shorter word. In the pairs on this page the counting form is the shorter one: שֵׁשׁ and שִׁשָּׁה, עֶשֶׂר and עֲשָׂרָה. Phone numbers are read digit by digit in the counting set.",
+      "grammar": {
+        "point": "The counting set is usually the shorter word",
+        "body": "In the pairs on this page the counting form is the shorter one: שֵׁשׁ and שִׁשָּׁה, עֶשֶׂר and עֲשָׂרָה. Phone numbers are read digit by digit in the counting set.",
+        "examples": [
+          {
+            "itemId": "numbers-06-f",
+            "he": "שֵׁשׁ",
+            "en": "six (6)"
+          },
+          {
+            "itemId": "numbers-10-f",
+            "he": "עֶשֶׂר",
+            "en": "ten (10)"
+          }
+        ]
+      },
+      "items": [
+        {
+          "id": "numbers-06-f",
+          "source": "data/audio/manifest-kind-word.json",
+          "he": "שֵׁשׁ",
+          "en": "six (6)",
+          "translit": "shesh",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "word",
+            "id": "numbers-06-f"
+          },
+          "audio": {
+            "clipId": "numbers-06-f",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          },
+          "translitSource": "spoken style written for this page; native check",
+          "form": "to or by a woman"
+        },
+        {
+          "id": "numbers-06-m",
+          "source": "data/audio/manifest-kind-word.json",
+          "he": "שִׁשָּׁה",
+          "en": "six (6)",
+          "translit": "shisha",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "word",
+            "id": "numbers-06-m"
+          },
+          "audio": {
+            "clipId": "numbers-06-m",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          },
+          "translitSource": "phrasebook",
+          "form": "to or by a man"
+        },
+        {
+          "id": "numbers-07-f",
+          "source": "data/audio/manifest-kind-word.json",
+          "he": "שֶׁבַע",
+          "en": "seven (7)",
+          "translit": "sheva",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "word",
+            "id": "numbers-07-f"
+          },
+          "audio": {
+            "clipId": "numbers-07-f",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          },
+          "translitSource": "spoken style written for this page; native check",
+          "form": "to or by a woman"
+        },
+        {
+          "id": "numbers-07-m",
+          "source": "data/audio/manifest-kind-word.json",
+          "he": "שִׁבְעָה",
+          "en": "seven (7)",
+          "translit": "shiv'a",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "word",
+            "id": "numbers-07-m"
+          },
+          "audio": {
+            "clipId": "numbers-07-m",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          },
+          "translitSource": "phrasebook",
+          "form": "to or by a man"
+        },
+        {
+          "id": "numbers-08-f",
+          "source": "data/audio/manifest-kind-word.json",
+          "he": "שְׁמוֹנֶה",
+          "en": "eight (8)",
+          "translit": "shmone",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "word",
+            "id": "numbers-08-f"
+          },
+          "audio": {
+            "clipId": "numbers-08-f",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          },
+          "translitSource": "spoken style written for this page; native check",
+          "form": "to or by a woman"
+        },
+        {
+          "id": "numbers-08-m",
+          "source": "data/audio/manifest-kind-word.json",
+          "he": "שְׁמוֹנָה",
+          "en": "eight (8)",
+          "translit": "shmona",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "word",
+            "id": "numbers-08-m"
+          },
+          "audio": {
+            "clipId": "numbers-08-m",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          },
+          "translitSource": "phrasebook",
+          "form": "to or by a man"
+        },
+        {
+          "id": "numbers-09-f",
+          "source": "data/audio/manifest-kind-word.json",
+          "he": "תֵּשַׁע",
+          "en": "nine (9)",
+          "translit": "tesha",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "word",
+            "id": "numbers-09-f"
+          },
+          "audio": {
+            "clipId": "numbers-09-f",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          },
+          "translitSource": "spoken style written for this page; native check",
+          "form": "to or by a woman"
+        },
+        {
+          "id": "numbers-09-m",
+          "source": "data/audio/manifest-kind-word.json",
+          "he": "תִּשְׁעָה",
+          "en": "nine (9)",
+          "translit": "tish'a",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "word",
+            "id": "numbers-09-m"
+          },
+          "audio": {
+            "clipId": "numbers-09-m",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          },
+          "translitSource": "phrasebook",
+          "form": "to or by a man"
+        },
+        {
+          "id": "numbers-10-f",
+          "source": "data/audio/manifest-kind-word.json",
+          "he": "עֶשֶׂר",
+          "en": "ten (10)",
+          "translit": "eser",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "word",
+            "id": "numbers-10-f"
+          },
+          "audio": {
+            "clipId": "numbers-10-f",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          },
+          "translitSource": "spoken style written for this page; native check",
+          "form": "to or by a woman"
+        },
+        {
+          "id": "numbers-10-m",
+          "source": "data/audio/manifest-kind-word.json",
+          "he": "עֲשָׂרָה",
+          "en": "ten (10)",
+          "translit": "asara",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "word",
+            "id": "numbers-10-m"
+          },
+          "audio": {
+            "clipId": "numbers-10-m",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          },
+          "translitSource": "phrasebook",
+          "form": "to or by a man"
+        }
+      ],
+      "srsQueue": [
+        {
+          "position": 1,
+          "kind": "word",
+          "id": "numbers-06-f",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 2,
+          "kind": "word",
+          "id": "numbers-06-m",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 3,
+          "kind": "word",
+          "id": "numbers-07-f",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 4,
+          "kind": "word",
+          "id": "numbers-07-m",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 5,
+          "kind": "word",
+          "id": "numbers-08-f",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 6,
+          "kind": "word",
+          "id": "numbers-08-m",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 7,
+          "kind": "word",
+          "id": "numbers-09-f",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 8,
+          "kind": "word",
+          "id": "numbers-09-m",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 9,
+          "kind": "word",
+          "id": "numbers-10-f",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 10,
+          "kind": "word",
+          "id": "numbers-10-m",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 11,
+          "kind": "word",
+          "id": "numbers-03-f",
+          "source": "review",
+          "srsKind": "word",
+          "band": "review"
+        },
+        {
+          "position": 12,
+          "kind": "word",
+          "id": "numbers-01-f",
+          "source": "review",
+          "srsKind": "word",
+          "band": "review"
+        },
+        {
+          "position": 13,
+          "kind": "word",
+          "id": "numbers-05-f",
+          "source": "review",
+          "srsKind": "word",
+          "band": "review"
+        }
+      ],
+      "listenIds": [
+        "numbers-06-f",
+        "numbers-06-m",
+        "numbers-07-f",
+        "numbers-07-m",
+        "numbers-08-f",
+        "numbers-08-m",
+        "numbers-09-f",
+        "numbers-09-m",
+        "numbers-10-f",
+        "numbers-10-m"
+      ],
+      "listen": [
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "word",
+            "id": "numbers-06-f"
+          },
+          "answer": "numbers-06-f",
+          "options": [
+            "numbers-06-m",
+            "numbers-07-f",
+            "numbers-06-f"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "word",
+            "id": "numbers-06-m"
+          },
+          "answer": "numbers-06-m",
+          "options": [
+            "numbers-06-f",
+            "numbers-07-f",
+            "numbers-06-m"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "word",
+            "id": "numbers-07-f"
+          },
+          "answer": "numbers-07-f",
+          "options": [
+            "numbers-06-f",
+            "numbers-06-m",
+            "numbers-07-f"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "word",
+            "id": "numbers-07-m"
+          },
+          "answer": "numbers-07-m",
+          "options": [
+            "numbers-06-f",
+            "numbers-06-m",
+            "numbers-07-m"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "word",
+            "id": "numbers-08-f"
+          },
+          "answer": "numbers-08-f",
+          "options": [
+            "numbers-06-f",
+            "numbers-06-m",
+            "numbers-08-f"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "word",
+            "id": "numbers-08-m"
+          },
+          "answer": "numbers-08-m",
+          "options": [
+            "numbers-06-f",
+            "numbers-06-m",
+            "numbers-08-m"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "word",
+            "id": "numbers-09-f"
+          },
+          "answer": "numbers-09-f",
+          "options": [
+            "numbers-06-f",
+            "numbers-06-m",
+            "numbers-09-f"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "word",
+            "id": "numbers-09-m"
+          },
+          "answer": "numbers-09-m",
+          "options": [
+            "numbers-06-f",
+            "numbers-06-m",
+            "numbers-09-m"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "word",
+            "id": "numbers-10-f"
+          },
+          "answer": "numbers-10-f",
+          "options": [
+            "numbers-06-f",
+            "numbers-06-m",
+            "numbers-10-f"
+          ]
+        },
+        {
+          "type": "pick-meaning",
+          "clip": {
+            "kind": "word",
+            "id": "numbers-10-m"
+          },
+          "answer": "numbers-10-m",
+          "options": [
+            "numbers-06-f",
+            "numbers-06-m",
+            "numbers-10-m"
+          ]
+        }
+      ],
+      "speak": [
+        {
+          "prompt": "Say the number seven, counting aloud.",
+          "answer": "numbers-07-f",
+          "he": "שֶׁבַע",
+          "translit": "sheva",
+          "en": "seven (7)",
+          "audio": {
+            "clipId": "numbers-07-f",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        },
+        {
+          "prompt": "Count from eight to ten.",
+          "answer": "numbers-10-f",
+          "he": "עֶשֶׂר",
+          "translit": "eser",
+          "en": "ten (10)",
+          "audio": {
+            "clipId": "numbers-10-f",
+            "status": "tts",
+            "voices": [
+              "f",
+              "m"
+            ],
+            "tradition": "israeli"
+          }
+        }
+      ],
+      "reviewDays": [
+        1,
+        3,
+        7,
+        14,
+        30
+      ],
+      "reviewOf": [
+        "numbers-03-f",
+        "numbers-01-f",
+        "numbers-05-f"
+      ]
+    }
+  ]
+}

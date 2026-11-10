@@ -177,15 +177,70 @@ def fold_mater(s: str) -> str:
     return s.replace("ו", "").replace("י", "").replace(" ", "")
 
 
+# Counting and masculine number words, 0-100, for STT that returns digits (Claude PRACTICAL-FIXES-r1).
+_ONES_M = ["אפס", "אחד", "שניים", "שלושה", "ארבעה", "חמישה", "שישה", "שבעה", "שמונה", "תשעה"]
+_ONES_F = ["אפס", "אחת", "שתיים", "שלוש", "ארבע", "חמש", "שש", "שבע", "שמונה", "תשע"]
+_TENS = {10: "עשר", 20: "עשרים", 30: "שלושים", 40: "ארבעים", 50: "חמישים", 60: "שישים", 70: "שבעים", 80: "שמונים", 90: "תשעים", 100: "מאה"}
+# 10-19
+_TEENS_M = ["עשרה", "אחד עשר", "שניים עשר", "שלושה עשר", "ארבעה עשר", "חמישה עשר", "שישה עשר", "שבעה עשר", "שמונה עשר", "תשעה עשר"]
+_TEENS_F = ["עשר", "אחת עשרה", "שתים עשרה", "שלוש עשרה", "ארבע עשרה", "חמש עשרה", "שש עשרה", "שבע עשרה", "שמונה עשרה", "תשע עשרה"]
+
+
+def hebrew_number(n: int, feminine: bool = False) -> str:
+    if n < 0 or n > 100:
+        return str(n)
+    ones = _ONES_F if feminine else _ONES_M
+    teens = _TEENS_F if feminine else _TEENS_M
+    if n < 10:
+        return ones[n]
+    if n < 20:
+        return teens[n - 10]
+    if n == 100:
+        return "מאה"
+    ten, rem = divmod(n, 10)
+    head = _TENS[ten * 10]
+    if rem == 0:
+        return head
+    return head + " ו" + ones[rem]
+
+
+def expand_digits(text: str) -> list[str]:
+    """Return the original plus copies with each run of digits written as Hebrew number words."""
+    raw = text or ""
+    if not re.search(r"\d", raw):
+        return [raw]
+    out = [raw]
+    def sub(fem):
+        return re.sub(r"\d+", lambda m: hebrew_number(int(m.group(0)), feminine=fem), raw)
+    out.append(sub(False))
+    out.append(sub(True))
+    # unique
+    seen = []
+    for s in out:
+        if s not in seen:
+            seen.append(s)
+    return seen
+
+
+def compact_letters(text: str) -> str:
+    """Letters only: nikkud, spaces, maqaf and hyphen gone (word-boundary STT misses)."""
+    return re.sub(r"[\s\-־]", "", strip_nikkud(text or ""))
+
+
 def stt_close(ref: str, hyp: str) -> bool:
     if not hyp:
         return False
-    if wer(ref, hyp) == 0 or letter_wer(ref, hyp) == 0:
-        return True
-    if letter_wer(ref, hyp) <= 0.15:
-        return True
-    if fold_mater(ref) == fold_mater(hyp) and fold_mater(ref):
-        return True
+    candidates = expand_digits(hyp)
+    for h in candidates:
+        if wer(ref, h) == 0 or letter_wer(ref, h) == 0:
+            return True
+        if letter_wer(ref, h) <= 0.15:
+            return True
+        if fold_mater(ref) == fold_mater(h) and fold_mater(ref):
+            return True
+        # same letters once spaces/hyphens are ignored
+        if compact_letters(ref) and compact_letters(ref) == compact_letters(h):
+            return True
     return False
 
 

@@ -1,0 +1,63 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "alef-practical-pages/3",
+ "title": "Practical page (v3, extends the v2 page shape)",
+ "description": "A page in data/curriculum/practical/<unit>.json (v2) or data/curriculum/practical-pages/first-20.json (v3). Every v2 field keeps its meaning. Fields marked v3 are optional, so a v2 reader still works on a v3 page.",
+ "type": "object",
+ "required": ["id", "title", "order", "grammarNote", "items", "srsQueue", "listenIds"],
+ "properties": {
+  "id": { "type": "string", "pattern": "^pu-[a-z-]+-p[0-9]{2}$" },
+  "title": { "type": "string", "minLength": 1 },
+  "order": { "type": "integer", "minimum": 1 },
+  "grammarNote": { "type": "string", "description": "v2: one plain-English note shown on the page. In v3 it is the grammar point and body joined." },
+  "speakSet": { "type": "string", "description": "v2: id of a set in data/speak/sets." },
+  "items": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/item" } },
+  "srsQueue": { "type": "array", "items": { "$ref": "#/$defs/srsEntry" } },
+  "listenIds": { "type": "array", "items": { "type": "string" } },
+  "kind": { "enum": ["learn", "grammar", "dialogue", "listen", "speak", "review", "check"], "description": "v3" },
+  "can": { "type": "string", "description": "v3: the can-do line, starting with a verb." },
+  "grammar": {
+   "description": "v3: one grammar point, with examples taken from this page's items.",
+   "type": "object",
+   "required": ["point", "body", "examples"],
+   "properties": {
+    "point": { "type": "string" },
+    "body": { "type": "string", "description": "Hebrew in the body must be a substring of an item on this page or an earlier page." },
+    "examples": { "type": "array", "minItems": 1, "items": { "type": "object", "required": ["itemId", "he", "en"],
+      "properties": { "itemId": { "type": "string" }, "he": { "type": "string" }, "en": { "type": "string" } } } }
+   }
+  },
+  "culture": { "type": "string", "description": "v3: optional culture note." },
+  "dialogue": { "type": "object", "description": "v3", "required": ["id", "setting", "lines"],
+   "properties": { "id": { "type": "string" }, "setting": { "type": "string" }, "lines": { "type": "array", "items": { "type": "string" } } } },
+  "listen": { "type": "array", "description": "v3: hear a clip, pick the meaning.", "items": { "type": "object",
+    "required": ["type", "clip", "answer", "options"],
+    "properties": { "type": { "const": "pick-meaning" }, "clip": { "$ref": "#/$defs/clip" }, "answer": { "type": "string" },
+      "options": { "type": "array", "minItems": 1, "items": { "type": "string" } } } } },
+  "speak": { "type": "array", "description": "v3: a situation, the line to say, and the clip to compare with.", "items": { "type": "object",
+    "required": ["prompt", "answer", "he", "translit", "en", "audio"],
+    "properties": { "prompt": { "type": "string" }, "answer": { "type": "string" }, "he": { "type": "string" },
+      "translit": { "type": "string" }, "en": { "type": "string" }, "audio": { "$ref": "#/$defs/audio" } } } },
+  "reviewDays": { "type": "array", "items": { "type": "integer", "minimum": 1 }, "description": "v3: review intervals in days." },
+  "reviewOf": { "type": "array", "items": { "type": "string" }, "description": "v3: earlier item ids queued on this page." }
+ },
+ "$defs": {
+  "clip": { "type": "object", "required": ["kind", "id"], "properties": { "kind": { "enum": ["word", "line"] }, "id": { "type": "string" } } },
+  "audio": { "type": "object", "required": ["clipId", "status", "voices"],
+   "properties": { "clipId": { "type": "string" }, "status": { "type": "string", "description": "tts, recorded, or gap" },
+     "voices": { "type": "array", "items": { "enum": ["m", "f"] } }, "tradition": { "type": "string" } } },
+  "item": { "type": "object", "required": ["id", "source", "he", "en", "translit", "listen"],
+   "properties": {
+    "id": { "type": "string" }, "source": { "type": "string" }, "he": { "type": "string" }, "en": { "type": "string" },
+    "translit": { "type": "string" }, "review": { "type": "string" }, "listen": { "$ref": "#/$defs/clip" },
+    "audio": { "$ref": "#/$defs/audio", "description": "v3" },
+    "form": { "type": "string", "description": "v3: to or by a man / to or by a woman" },
+    "register": { "type": "string", "description": "v3: slang or formal, copied from the phrasebook" },
+    "speaker": { "type": "string", "description": "v3: dialogue speaker" },
+    "translitSource": { "type": "string", "description": "v3: where the transliteration came from when the item is not a phrasebook row" }
+   } },
+  "srsEntry": { "type": "object", "required": ["position", "kind", "id", "source", "srsKind", "band"],
+   "properties": { "position": { "type": "integer" }, "kind": { "enum": ["word", "line"] }, "id": { "type": "string" },
+     "source": { "enum": ["item", "review"] }, "srsKind": { "enum": ["word", "prayerLine"] }, "band": { "enum": ["core", "review"] } } }
+ }
+}

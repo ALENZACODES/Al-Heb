@@ -207,7 +207,8 @@
  "goals": [
   "Read the first paragraph of Aleinu at the speed it is said",
   "Find the words where many congregations bow",
-  "Say the closing 'ein od' line from memory"
+  "Say the closing 'ein od' line from memory",
+  "Know that the wording here follows Edot HaMizrach; some Ashkenazi books word the bowing line differently"
  ],
  "estMinutes": 30,
  "prerequisites": [

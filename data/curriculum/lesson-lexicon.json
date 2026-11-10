@@ -21,6 +21,30 @@
    "he": "קוּרְס",
    "en": "a course (a class or series of classes)",
    "reason": "An academic course is קוּרְס. Lesson I-37 had been using קוֹרֵס, which means 'is collapsing'."
+  },
+  {
+   "id": "lex-miluim",
+   "he": "מִלּוּאִים",
+   "en": "reserve duty (IDF)",
+   "reason": "Israeli Hebrew sense used in lesson I-18; the generated lexicon had no reserve-duty entry."
+  },
+  {
+   "id": "lex-gmar",
+   "he": "גְּמַר חֲתִימָה טוֹבָה",
+   "en": "a good final sealing (Yom Kippur greeting)",
+   "reason": "The usual Yom Kippur greeting, distinct from שָׁנָה טוֹבָה on Rosh Hashana."
+  },
+  {
+   "id": "lex-kasher",
+   "he": "חַג כָּשֵׁר וְשָׂמֵחַ",
+   "en": "a kosher and happy holiday (Pesach greeting)",
+   "reason": "The common Pesach greeting; חַג שָׂמֵחַ alone is also used."
+  },
+  {
+   "id": "lex-tishmeri",
+   "he": "תִּשְׁמְרִי עַל עַצְמֵךְ",
+   "en": "take care of yourself (said to a woman)",
+   "reason": "Feminine counterpart of תִּשְׁמֹר עַל עַצְמְךָ."
   }
  ]
 }

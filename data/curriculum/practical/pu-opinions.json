@@ -1,0 +1,264 @@
+{
+ "id": "pu-opinions",
+ "title": "Opinions and preferences",
+ "level": "L2",
+ "status": "built-draft",
+ "proofread": false,
+ "nativeReview": true,
+ "lessons": [
+  {
+   "id": "il21",
+   "title": "Opinions and preferences",
+   "track": "israel",
+   "wordCount": 5
+  }
+ ],
+ "speakSets": [
+  "speak-survival-small-talk-1"
+ ],
+ "grammarNote": "il21 already stores אֲנִי חוֹשֵׁב שֶׁ..., לְדַעְתִּי, אֲנִי מַעֲדִיף, מַסְכִּים and לֹא מַסְכִּים. These notes only name forms already in that lesson.",
+ "items": [
+  {
+   "id": "il21-w1",
+   "source": "data/curriculum/lessons.json#il21.words[0]",
+   "he": "אֲנִי חוֹשֵׁב שֶׁ...",
+   "en": "I think that...",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il21-w1"
+   }
+  },
+  {
+   "id": "il21-w2",
+   "source": "data/curriculum/lessons.json#il21.words[1]",
+   "he": "לְדַעְתִּי",
+   "en": "in my opinion",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il21-w2"
+   }
+  },
+  {
+   "id": "il21-w3",
+   "source": "data/curriculum/lessons.json#il21.words[2]",
+   "he": "אֲנִי מַעֲדִיף",
+   "en": "I prefer (m.)",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il21-w3"
+   }
+  },
+  {
+   "id": "il21-w4",
+   "source": "data/curriculum/lessons.json#il21.words[3]",
+   "he": "מַסְכִּים",
+   "en": "I agree (m.)",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il21-w4"
+   }
+  },
+  {
+   "id": "il21-w5",
+   "source": "data/curriculum/lessons.json#il21.words[4]",
+   "he": "לֹא מַסְכִּים",
+   "en": "I disagree (m.)",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il21-w5"
+   }
+  }
+ ],
+ "srsQueue": [
+  {
+   "position": 1,
+   "kind": "word",
+   "id": "il21-w1",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 2,
+   "kind": "word",
+   "id": "il21-w2",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 3,
+   "kind": "word",
+   "id": "il21-w3",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 4,
+   "kind": "word",
+   "id": "il21-w4",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 5,
+   "kind": "word",
+   "id": "il21-w5",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  }
+ ],
+ "listenDrills": [
+  {
+   "goal": "Hear the sourced lines and words already in the audio manifest.",
+   "items": [
+    "il21-w1",
+    "il21-w2",
+    "il21-w3",
+    "il21-w4",
+    "il21-w5"
+   ],
+   "source": "audio manifest, phrasebook and lesson-word ids"
+  }
+ ],
+ "speakDrills": [
+  {
+   "goal": "Repeat the existing set data/speak/sets/speak-survival-small-talk-1.json.",
+   "set": "speak-survival-small-talk-1",
+   "note": "That set is machine-built and also unverified."
+  }
+ ],
+ "pages": [
+  {
+   "id": "pu-opinions-p01",
+   "title": "I think that...",
+   "order": 1,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json. First line: אֲנִי חוֹשֵׁב שֶׁ.... il21 already stores אֲנִי חוֹשֵׁב שֶׁ.",
+   "items": [
+    {
+     "id": "il21-w1",
+     "source": "data/curriculum/lessons.json#il21.words[0]",
+     "he": "אֲנִי חוֹשֵׁב שֶׁ...",
+     "en": "I think that...",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il21-w1"
+     }
+    },
+    {
+     "id": "il21-w2",
+     "source": "data/curriculum/lessons.json#il21.words[1]",
+     "he": "לְדַעְתִּי",
+     "en": "in my opinion",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il21-w2"
+     }
+    },
+    {
+     "id": "il21-w3",
+     "source": "data/curriculum/lessons.json#il21.words[2]",
+     "he": "אֲנִי מַעֲדִיף",
+     "en": "I prefer (m.)",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il21-w3"
+     }
+    },
+    {
+     "id": "il21-w4",
+     "source": "data/curriculum/lessons.json#il21.words[3]",
+     "he": "מַסְכִּים",
+     "en": "I agree (m.)",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il21-w4"
+     }
+    },
+    {
+     "id": "il21-w5",
+     "source": "data/curriculum/lessons.json#il21.words[4]",
+     "he": "לֹא מַסְכִּים",
+     "en": "I disagree (m.)",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il21-w5"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "il21-w1",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "il21-w2",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "il21-w3",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "il21-w4",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "il21-w5",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "il21-w1",
+    "il21-w2",
+    "il21-w3",
+    "il21-w4",
+    "il21-w5"
+   ],
+   "speakSet": "speak-survival-small-talk-1"
+  }
+ ]
+}

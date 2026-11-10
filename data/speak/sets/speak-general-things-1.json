@@ -50,7 +50,7 @@
    "translit": "kar",
    "en": "cushion",
    "kind": "word",
-   "audioId": "he9d6c9ab",
+   "audioId": "soundgap-kaf-qof-2-a",
    "source": "data/vocab/words.json"
   },
   {
@@ -95,7 +95,7 @@
    "translit": "rov",
    "en": "majority",
    "kind": "word",
-   "audioId": null,
+   "audioId": "tug-majority_minority-1",
    "source": "data/vocab/words.json"
   },
   {
@@ -104,7 +104,7 @@
    "translit": "shor",
    "en": "ox",
    "kind": "word",
-   "audioId": "h26f014a5",
+   "audioId": "soundgap-tsadi-1-b",
    "source": "data/vocab/words.json"
   },
   {

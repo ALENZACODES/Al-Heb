@@ -104,7 +104,7 @@
    "translit": "tikvah",
    "en": "hope",
    "kind": "word",
-   "audioId": null,
+   "audioId": "tug-hope_despair-1",
    "source": "data/vocab/words.json"
   },
   {
@@ -113,7 +113,7 @@
    "translit": "tzorekh",
    "en": "need, necessity, requirement",
    "kind": "word",
-   "audioId": null,
+   "audioId": "ha57a2fee",
    "source": "data/vocab/words.json"
   }
  ]

@@ -50,7 +50,7 @@
    "translit": "divuach",
    "en": "a news report",
    "kind": "word",
-   "audioId": null,
+   "audioId": "hb7990b70",
    "source": "data/vocab/words.json"
   },
   {
@@ -77,7 +77,7 @@
    "translit": "radyo",
    "en": "radio",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h84b0f0c7",
    "source": "data/vocab/words.json"
   },
   {
@@ -86,7 +86,7 @@
    "translit": "natun",
    "en": "datum, data",
    "kind": "word",
-   "audioId": null,
+   "audioId": "he6ac4494",
    "source": "data/vocab/words.json"
   },
   {
@@ -113,7 +113,7 @@
    "translit": "girsah",
    "en": "version, variant, reading",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h96056f0f",
    "source": "data/vocab/words.json"
   }
  ]

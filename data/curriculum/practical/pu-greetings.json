@@ -1,0 +1,1477 @@
+{
+ "id": "pu-greetings",
+ "title": "Greetings and courtesy",
+ "level": "L0",
+ "status": "built-draft",
+ "proofread": false,
+ "nativeReview": true,
+ "lessons": [
+  {
+   "id": "il01",
+   "title": "Hello, thanks, sorry",
+   "track": "israel",
+   "wordCount": 7
+  }
+ ],
+ "phrasebookSituation": "greetings",
+ "speakSets": [
+  "speak-survival-greetings-1"
+ ],
+ "grammarNote": "Everyday hellos and goodbyes already in the phrasebook: שָׁלוֹם, time-of-day greetings, and לְהִתְרָאוֹת. How-are-you uses מַה שְׁלוֹמְךָ (to a man on greetings-11). These notes only name forms already in the sources.",
+ "items": [
+  {
+   "id": "greetings-01",
+   "source": "data/corpus/phrasebook.json",
+   "he": "שָׁלוֹם",
+   "en": "hello / goodbye / peace",
+   "translit": "shalom",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "greetings-01"
+   }
+  },
+  {
+   "id": "greetings-02",
+   "source": "data/corpus/phrasebook.json",
+   "he": "הֵי",
+   "en": "hi",
+   "translit": "hey",
+   "review": "native-speaker-needed: slang/register and spelling",
+   "listen": {
+    "kind": "word",
+    "id": "greetings-02"
+   }
+  },
+  {
+   "id": "greetings-03",
+   "source": "data/corpus/phrasebook.json",
+   "he": "בֹּקֶר טוֹב",
+   "en": "good morning",
+   "translit": "boker tov",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "greetings-03"
+   }
+  },
+  {
+   "id": "greetings-04",
+   "source": "data/corpus/phrasebook.json",
+   "he": "צָהֳרַיִם טוֹבִים",
+   "en": "good afternoon",
+   "translit": "tsohorayim tovim",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "greetings-04"
+   }
+  },
+  {
+   "id": "greetings-05",
+   "source": "data/corpus/phrasebook.json",
+   "he": "עֶרֶב טוֹב",
+   "en": "good evening",
+   "translit": "erev tov",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "greetings-05"
+   }
+  },
+  {
+   "id": "greetings-06",
+   "source": "data/corpus/phrasebook.json",
+   "he": "לַיְלָה טוֹב",
+   "en": "good night",
+   "translit": "layla tov",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "greetings-06"
+   }
+  },
+  {
+   "id": "greetings-07",
+   "source": "data/corpus/phrasebook.json",
+   "he": "שַׁבָּת שָׁלוֹם",
+   "en": "peaceful Sabbath (greeting from Friday afternoon to Saturday)",
+   "translit": "shabbat shalom",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "greetings-07"
+   }
+  },
+  {
+   "id": "greetings-08",
+   "source": "data/corpus/phrasebook.json",
+   "he": "שָׁבוּעַ טוֹב",
+   "en": "good week",
+   "translit": "shavua tov",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "greetings-08"
+   }
+  },
+  {
+   "id": "greetings-09",
+   "source": "data/corpus/phrasebook.json",
+   "he": "חַג שָׂמֵחַ",
+   "en": "happy holiday",
+   "translit": "chag sameach",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "greetings-09"
+   }
+  },
+  {
+   "id": "greetings-10",
+   "source": "data/corpus/phrasebook.json",
+   "he": "שָׁנָה טוֹבָה",
+   "en": "happy new year (Rosh Hashana greeting)",
+   "translit": "shana tova",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "greetings-10"
+   }
+  },
+  {
+   "id": "greetings-11",
+   "source": "data/corpus/phrasebook.json",
+   "he": "מַה שְׁלוֹמְךָ?",
+   "en": "how are you?",
+   "translit": "ma shlomcha?",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "greetings-11"
+   }
+  },
+  {
+   "id": "greetings-12",
+   "source": "data/corpus/phrasebook.json",
+   "he": "מָה נִשְׁמָע?",
+   "en": "what's up? (lit. what is heard?)",
+   "translit": "ma nishma?",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "greetings-12"
+   }
+  },
+  {
+   "id": "greetings-13",
+   "source": "data/corpus/phrasebook.json",
+   "he": "מָה קוֹרֶה?",
+   "en": "what's happening?",
+   "translit": "ma kore?",
+   "review": "native-speaker-needed: slang/register and spelling",
+   "listen": {
+    "kind": "line",
+    "id": "greetings-13"
+   }
+  },
+  {
+   "id": "greetings-14",
+   "source": "data/corpus/phrasebook.json",
+   "he": "הַכֹּל בְּסֵדֶר",
+   "en": "everything is OK",
+   "translit": "hakol beseder",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "greetings-14"
+   }
+  },
+  {
+   "id": "greetings-15",
+   "source": "data/corpus/phrasebook.json",
+   "he": "בְּסֵדֶר",
+   "en": "OK / fine / alright",
+   "translit": "beseder",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "greetings-15"
+   }
+  },
+  {
+   "id": "greetings-16",
+   "source": "data/corpus/phrasebook.json",
+   "he": "מְצֻיָּן",
+   "en": "excellent",
+   "translit": "metsuyan",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "greetings-16"
+   }
+  },
+  {
+   "id": "greetings-17",
+   "source": "data/corpus/phrasebook.json",
+   "he": "לֹא רַע",
+   "en": "not bad",
+   "translit": "lo ra",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "greetings-17"
+   }
+  },
+  {
+   "id": "greetings-18",
+   "source": "data/corpus/phrasebook.json",
+   "he": "כָּכָה כָּכָה",
+   "en": "so-so",
+   "translit": "kacha kacha",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "greetings-18"
+   }
+  },
+  {
+   "id": "greetings-19",
+   "source": "data/corpus/phrasebook.json",
+   "he": "נָעִים מְאֹד",
+   "en": "nice to meet you",
+   "translit": "naim meod",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "greetings-19"
+   }
+  },
+  {
+   "id": "greetings-20",
+   "source": "data/corpus/phrasebook.json",
+   "he": "לְהִתְרָאוֹת",
+   "en": "see you (later)",
+   "translit": "lehitra'ot",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "greetings-20"
+   }
+  },
+  {
+   "id": "greetings-21",
+   "source": "data/corpus/phrasebook.json",
+   "he": "יוֹם נָעִים",
+   "en": "have a nice day",
+   "translit": "yom naim",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "greetings-21"
+   }
+  },
+  {
+   "id": "greetings-22",
+   "source": "data/corpus/phrasebook.json",
+   "he": "בָּרוּךְ הַבָּא",
+   "en": "welcome (to one person)",
+   "translit": "baruch haba",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "greetings-22"
+   }
+  },
+  {
+   "id": "greetings-23",
+   "source": "data/corpus/phrasebook.json",
+   "he": "בְּרוּכִים הַבָּאִים",
+   "en": "welcome (to several people)",
+   "translit": "brukhim haba'im",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "greetings-23"
+   }
+  },
+  {
+   "id": "greetings-24",
+   "source": "data/corpus/phrasebook.json",
+   "he": "מַזָּל טוֹב",
+   "en": "congratulations / good luck",
+   "translit": "mazal tov",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "greetings-24"
+   }
+  },
+  {
+   "id": "greetings-25",
+   "source": "data/corpus/phrasebook.json",
+   "he": "בְּהַצְלָחָה",
+   "en": "good luck / all the best",
+   "translit": "behatslacha",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "greetings-25"
+   }
+  },
+  {
+   "id": "greetings-26",
+   "source": "data/corpus/phrasebook.json",
+   "he": "לִבְרִיאוּת",
+   "en": "bless you (after a sneeze) / to your health",
+   "translit": "livri'ut",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "greetings-26"
+   }
+  },
+  {
+   "id": "greetings-27",
+   "source": "data/corpus/phrasebook.json",
+   "he": "תִּשְׁמֹר עַל עַצְמְךָ",
+   "en": "take care of yourself",
+   "translit": "tishmor al atsmecha",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "greetings-27"
+   }
+  },
+  {
+   "id": "il01-w2",
+   "source": "data/curriculum/lessons.json#il01.words[1]",
+   "he": "תּוֹדָה",
+   "en": "thanks",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il01-w2"
+   }
+  },
+  {
+   "id": "il01-w3",
+   "source": "data/curriculum/lessons.json#il01.words[2]",
+   "he": "בְּבַקָּשָׁה",
+   "en": "please; you're welcome",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il01-w3"
+   }
+  },
+  {
+   "id": "il01-w4",
+   "source": "data/curriculum/lessons.json#il01.words[3]",
+   "he": "סְלִיחָה",
+   "en": "excuse me; sorry",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il01-w4"
+   }
+  },
+  {
+   "id": "il01-w5",
+   "source": "data/curriculum/lessons.json#il01.words[4]",
+   "he": "כֵּן",
+   "en": "yes",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il01-w5"
+   }
+  },
+  {
+   "id": "il01-w6",
+   "source": "data/curriculum/lessons.json#il01.words[5]",
+   "he": "לֹא",
+   "en": "no",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il01-w6"
+   }
+  }
+ ],
+ "srsQueue": [
+  {
+   "position": 1,
+   "kind": "word",
+   "id": "greetings-01",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 2,
+   "kind": "word",
+   "id": "greetings-02",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 3,
+   "kind": "line",
+   "id": "greetings-03",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 4,
+   "kind": "line",
+   "id": "greetings-04",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 5,
+   "kind": "line",
+   "id": "greetings-05",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 6,
+   "kind": "line",
+   "id": "greetings-06",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 7,
+   "kind": "line",
+   "id": "greetings-07",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 8,
+   "kind": "line",
+   "id": "greetings-08",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 9,
+   "kind": "line",
+   "id": "greetings-09",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 10,
+   "kind": "line",
+   "id": "greetings-10",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 11,
+   "kind": "line",
+   "id": "greetings-11",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 12,
+   "kind": "line",
+   "id": "greetings-12",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 13,
+   "kind": "line",
+   "id": "greetings-13",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  },
+  {
+   "position": 14,
+   "kind": "line",
+   "id": "greetings-14",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  },
+  {
+   "position": 15,
+   "kind": "word",
+   "id": "greetings-15",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 16,
+   "kind": "word",
+   "id": "greetings-16",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 17,
+   "kind": "line",
+   "id": "greetings-17",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  },
+  {
+   "position": 18,
+   "kind": "line",
+   "id": "greetings-18",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  },
+  {
+   "position": 19,
+   "kind": "line",
+   "id": "greetings-19",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  },
+  {
+   "position": 20,
+   "kind": "word",
+   "id": "greetings-20",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 21,
+   "kind": "line",
+   "id": "greetings-21",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  },
+  {
+   "position": 22,
+   "kind": "line",
+   "id": "greetings-22",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  },
+  {
+   "position": 23,
+   "kind": "line",
+   "id": "greetings-23",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  },
+  {
+   "position": 24,
+   "kind": "line",
+   "id": "greetings-24",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  },
+  {
+   "position": 25,
+   "kind": "word",
+   "id": "greetings-25",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 26,
+   "kind": "word",
+   "id": "greetings-26",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 27,
+   "kind": "line",
+   "id": "greetings-27",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  },
+  {
+   "position": 28,
+   "kind": "word",
+   "id": "il01-w2",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 29,
+   "kind": "word",
+   "id": "il01-w3",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 30,
+   "kind": "word",
+   "id": "il01-w4",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 31,
+   "kind": "word",
+   "id": "il01-w5",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 32,
+   "kind": "word",
+   "id": "il01-w6",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  }
+ ],
+ "listenDrills": [
+  {
+   "goal": "Hear the sourced lines and words already in the audio manifest.",
+   "items": [
+    "greetings-01",
+    "greetings-02",
+    "greetings-03",
+    "greetings-04",
+    "greetings-05",
+    "greetings-06",
+    "greetings-07",
+    "greetings-08",
+    "greetings-09",
+    "greetings-10",
+    "greetings-11",
+    "greetings-12",
+    "greetings-13",
+    "greetings-14",
+    "greetings-15",
+    "greetings-16",
+    "greetings-17",
+    "greetings-18",
+    "greetings-19",
+    "greetings-20",
+    "greetings-21",
+    "greetings-22",
+    "greetings-23",
+    "greetings-24",
+    "greetings-25",
+    "greetings-26",
+    "greetings-27",
+    "il01-w2",
+    "il01-w3",
+    "il01-w4",
+    "il01-w5",
+    "il01-w6"
+   ],
+   "source": "audio manifest, phrasebook and lesson-word ids"
+  }
+ ],
+ "speakDrills": [
+  {
+   "goal": "Repeat the existing set data/speak/sets/speak-survival-greetings-1.json.",
+   "set": "speak-survival-greetings-1",
+   "note": "That set is machine-built and also unverified."
+  }
+ ],
+ "pages": [
+  {
+   "id": "pu-greetings-p01",
+   "title": "Hello / goodbye / peace",
+   "order": 1,
+   "grammarNote": "This page uses only Hebrew already stored in data/corpus/phrasebook.json. First line: שָׁלוֹם. Everyday hellos and goodbyes already in the phrasebook: שָׁלוֹם, time-of-day greetings, and לְהִתְרָאוֹת.",
+   "items": [
+    {
+     "id": "greetings-01",
+     "source": "data/corpus/phrasebook.json",
+     "he": "שָׁלוֹם",
+     "en": "hello / goodbye / peace",
+     "translit": "shalom",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "greetings-01"
+     }
+    },
+    {
+     "id": "greetings-02",
+     "source": "data/corpus/phrasebook.json",
+     "he": "הֵי",
+     "en": "hi",
+     "translit": "hey",
+     "review": "native-speaker-needed: slang/register and spelling",
+     "listen": {
+      "kind": "word",
+      "id": "greetings-02"
+     }
+    },
+    {
+     "id": "greetings-03",
+     "source": "data/corpus/phrasebook.json",
+     "he": "בֹּקֶר טוֹב",
+     "en": "good morning",
+     "translit": "boker tov",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "greetings-03"
+     }
+    },
+    {
+     "id": "greetings-04",
+     "source": "data/corpus/phrasebook.json",
+     "he": "צָהֳרַיִם טוֹבִים",
+     "en": "good afternoon",
+     "translit": "tsohorayim tovim",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "greetings-04"
+     }
+    },
+    {
+     "id": "greetings-05",
+     "source": "data/corpus/phrasebook.json",
+     "he": "עֶרֶב טוֹב",
+     "en": "good evening",
+     "translit": "erev tov",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "greetings-05"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "greetings-01",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "greetings-02",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "line",
+     "id": "greetings-03",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "line",
+     "id": "greetings-04",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "line",
+     "id": "greetings-05",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "greetings-01",
+    "greetings-02",
+    "greetings-03",
+    "greetings-04",
+    "greetings-05"
+   ],
+   "speakSet": "speak-survival-greetings-1"
+  },
+  {
+   "id": "pu-greetings-p02",
+   "title": "Good night",
+   "order": 2,
+   "grammarNote": "This page uses only Hebrew already stored in data/corpus/phrasebook.json. First line: לַיְלָה טוֹב. Everyday hellos and goodbyes already in the phrasebook: שָׁלוֹם, time-of-day greetings, and לְהִתְרָאוֹת.",
+   "items": [
+    {
+     "id": "greetings-06",
+     "source": "data/corpus/phrasebook.json",
+     "he": "לַיְלָה טוֹב",
+     "en": "good night",
+     "translit": "layla tov",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "greetings-06"
+     }
+    },
+    {
+     "id": "greetings-07",
+     "source": "data/corpus/phrasebook.json",
+     "he": "שַׁבָּת שָׁלוֹם",
+     "en": "peaceful Sabbath (greeting from Friday afternoon to Saturday)",
+     "translit": "shabbat shalom",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "greetings-07"
+     }
+    },
+    {
+     "id": "greetings-08",
+     "source": "data/corpus/phrasebook.json",
+     "he": "שָׁבוּעַ טוֹב",
+     "en": "good week",
+     "translit": "shavua tov",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "greetings-08"
+     }
+    },
+    {
+     "id": "greetings-09",
+     "source": "data/corpus/phrasebook.json",
+     "he": "חַג שָׂמֵחַ",
+     "en": "happy holiday",
+     "translit": "chag sameach",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "greetings-09"
+     }
+    },
+    {
+     "id": "greetings-10",
+     "source": "data/corpus/phrasebook.json",
+     "he": "שָׁנָה טוֹבָה",
+     "en": "happy new year (Rosh Hashana greeting)",
+     "translit": "shana tova",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "greetings-10"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "greetings-06",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "greetings-07",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "line",
+     "id": "greetings-08",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "line",
+     "id": "greetings-09",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "line",
+     "id": "greetings-10",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "greetings-06",
+    "greetings-07",
+    "greetings-08",
+    "greetings-09",
+    "greetings-10"
+   ],
+   "speakSet": "speak-survival-greetings-1"
+  },
+  {
+   "id": "pu-greetings-p03",
+   "title": "How are you?",
+   "order": 3,
+   "grammarNote": "This page uses only Hebrew already stored in data/corpus/phrasebook.json. First line: מַה שְׁלוֹמְךָ?. Everyday hellos and goodbyes already in the phrasebook: שָׁלוֹם, time-of-day greetings, and לְהִתְרָאוֹת.",
+   "items": [
+    {
+     "id": "greetings-11",
+     "source": "data/corpus/phrasebook.json",
+     "he": "מַה שְׁלוֹמְךָ?",
+     "en": "how are you?",
+     "translit": "ma shlomcha?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "greetings-11"
+     }
+    },
+    {
+     "id": "greetings-12",
+     "source": "data/corpus/phrasebook.json",
+     "he": "מָה נִשְׁמָע?",
+     "en": "what's up? (lit. what is heard?)",
+     "translit": "ma nishma?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "greetings-12"
+     }
+    },
+    {
+     "id": "greetings-13",
+     "source": "data/corpus/phrasebook.json",
+     "he": "מָה קוֹרֶה?",
+     "en": "what's happening?",
+     "translit": "ma kore?",
+     "review": "native-speaker-needed: slang/register and spelling",
+     "listen": {
+      "kind": "line",
+      "id": "greetings-13"
+     }
+    },
+    {
+     "id": "greetings-14",
+     "source": "data/corpus/phrasebook.json",
+     "he": "הַכֹּל בְּסֵדֶר",
+     "en": "everything is OK",
+     "translit": "hakol beseder",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "greetings-14"
+     }
+    },
+    {
+     "id": "greetings-15",
+     "source": "data/corpus/phrasebook.json",
+     "he": "בְּסֵדֶר",
+     "en": "OK / fine / alright",
+     "translit": "beseder",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "greetings-15"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "greetings-11",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "greetings-12",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "line",
+     "id": "greetings-13",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "line",
+     "id": "greetings-14",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "greetings-15",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "greetings-11",
+    "greetings-12",
+    "greetings-13",
+    "greetings-14",
+    "greetings-15"
+   ],
+   "speakSet": "speak-survival-greetings-1"
+  },
+  {
+   "id": "pu-greetings-p04",
+   "title": "Excellent",
+   "order": 4,
+   "grammarNote": "This page uses only Hebrew already stored in data/corpus/phrasebook.json. First line: מְצֻיָּן. Everyday hellos and goodbyes already in the phrasebook: שָׁלוֹם, time-of-day greetings, and לְהִתְרָאוֹת.",
+   "items": [
+    {
+     "id": "greetings-16",
+     "source": "data/corpus/phrasebook.json",
+     "he": "מְצֻיָּן",
+     "en": "excellent",
+     "translit": "metsuyan",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "greetings-16"
+     }
+    },
+    {
+     "id": "greetings-17",
+     "source": "data/corpus/phrasebook.json",
+     "he": "לֹא רַע",
+     "en": "not bad",
+     "translit": "lo ra",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "greetings-17"
+     }
+    },
+    {
+     "id": "greetings-18",
+     "source": "data/corpus/phrasebook.json",
+     "he": "כָּכָה כָּכָה",
+     "en": "so-so",
+     "translit": "kacha kacha",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "greetings-18"
+     }
+    },
+    {
+     "id": "greetings-19",
+     "source": "data/corpus/phrasebook.json",
+     "he": "נָעִים מְאֹד",
+     "en": "nice to meet you",
+     "translit": "naim meod",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "greetings-19"
+     }
+    },
+    {
+     "id": "greetings-20",
+     "source": "data/corpus/phrasebook.json",
+     "he": "לְהִתְרָאוֹת",
+     "en": "see you (later)",
+     "translit": "lehitra'ot",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "greetings-20"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "greetings-16",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "greetings-17",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "line",
+     "id": "greetings-18",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "line",
+     "id": "greetings-19",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "greetings-20",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "greetings-16",
+    "greetings-17",
+    "greetings-18",
+    "greetings-19",
+    "greetings-20"
+   ],
+   "speakSet": "speak-survival-greetings-1"
+  },
+  {
+   "id": "pu-greetings-p05",
+   "title": "Have a nice day",
+   "order": 5,
+   "grammarNote": "This page uses only Hebrew already stored in data/corpus/phrasebook.json. First line: יוֹם נָעִים. Everyday hellos and goodbyes already in the phrasebook: שָׁלוֹם, time-of-day greetings, and לְהִתְרָאוֹת.",
+   "items": [
+    {
+     "id": "greetings-21",
+     "source": "data/corpus/phrasebook.json",
+     "he": "יוֹם נָעִים",
+     "en": "have a nice day",
+     "translit": "yom naim",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "greetings-21"
+     }
+    },
+    {
+     "id": "greetings-22",
+     "source": "data/corpus/phrasebook.json",
+     "he": "בָּרוּךְ הַבָּא",
+     "en": "welcome (to one person)",
+     "translit": "baruch haba",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "greetings-22"
+     }
+    },
+    {
+     "id": "greetings-23",
+     "source": "data/corpus/phrasebook.json",
+     "he": "בְּרוּכִים הַבָּאִים",
+     "en": "welcome (to several people)",
+     "translit": "brukhim haba'im",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "greetings-23"
+     }
+    },
+    {
+     "id": "greetings-24",
+     "source": "data/corpus/phrasebook.json",
+     "he": "מַזָּל טוֹב",
+     "en": "congratulations / good luck",
+     "translit": "mazal tov",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "greetings-24"
+     }
+    },
+    {
+     "id": "greetings-25",
+     "source": "data/corpus/phrasebook.json",
+     "he": "בְּהַצְלָחָה",
+     "en": "good luck / all the best",
+     "translit": "behatslacha",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "greetings-25"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "greetings-21",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "greetings-22",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "line",
+     "id": "greetings-23",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "line",
+     "id": "greetings-24",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "greetings-25",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "greetings-21",
+    "greetings-22",
+    "greetings-23",
+    "greetings-24",
+    "greetings-25"
+   ],
+   "speakSet": "speak-survival-greetings-1"
+  },
+  {
+   "id": "pu-greetings-p06",
+   "title": "Bless you (after a sneeze) / to your health",
+   "order": 6,
+   "grammarNote": "This page uses only Hebrew already stored in data/corpus/phrasebook.json, data/curriculum/lessons.json. First line: לִבְרִיאוּת. Everyday hellos and goodbyes already in the phrasebook: שָׁלוֹם, time-of-day greetings, and לְהִתְרָאוֹת.",
+   "items": [
+    {
+     "id": "greetings-26",
+     "source": "data/corpus/phrasebook.json",
+     "he": "לִבְרִיאוּת",
+     "en": "bless you (after a sneeze) / to your health",
+     "translit": "livri'ut",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "greetings-26"
+     }
+    },
+    {
+     "id": "greetings-27",
+     "source": "data/corpus/phrasebook.json",
+     "he": "תִּשְׁמֹר עַל עַצְמְךָ",
+     "en": "take care of yourself",
+     "translit": "tishmor al atsmecha",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "greetings-27"
+     }
+    },
+    {
+     "id": "il01-w2",
+     "source": "data/curriculum/lessons.json#il01.words[1]",
+     "he": "תּוֹדָה",
+     "en": "thanks",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il01-w2"
+     }
+    },
+    {
+     "id": "il01-w3",
+     "source": "data/curriculum/lessons.json#il01.words[2]",
+     "he": "בְּבַקָּשָׁה",
+     "en": "please; you're welcome",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il01-w3"
+     }
+    },
+    {
+     "id": "il01-w4",
+     "source": "data/curriculum/lessons.json#il01.words[3]",
+     "he": "סְלִיחָה",
+     "en": "excuse me; sorry",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il01-w4"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "greetings-26",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "greetings-27",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "il01-w2",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "il01-w3",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "il01-w4",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "greetings-26",
+    "greetings-27",
+    "il01-w2",
+    "il01-w3",
+    "il01-w4"
+   ],
+   "speakSet": "speak-survival-greetings-1"
+  },
+  {
+   "id": "pu-greetings-p07",
+   "title": "Yes",
+   "order": 7,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json. First line: כֵּן. Everyday hellos and goodbyes already in the phrasebook: שָׁלוֹם, time-of-day greetings, and לְהִתְרָאוֹת.",
+   "items": [
+    {
+     "id": "il01-w5",
+     "source": "data/curriculum/lessons.json#il01.words[4]",
+     "he": "כֵּן",
+     "en": "yes",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il01-w5"
+     }
+    },
+    {
+     "id": "il01-w6",
+     "source": "data/curriculum/lessons.json#il01.words[5]",
+     "he": "לֹא",
+     "en": "no",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il01-w6"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "il01-w5",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "il01-w6",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "il01-w5",
+    "il01-w6"
+   ],
+   "speakSet": "speak-survival-greetings-1"
+  }
+ ]
+}

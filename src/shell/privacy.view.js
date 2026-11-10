@@ -113,6 +113,8 @@ export const STORE_KEYS = [
   ['curriculum.progress', 'Completed lessons', 'src/curriculum/dom.js'],
   ['srs.cards', 'Review cards for lessons', 'src/curriculum/dom.js'],
   ['srs.vocab', 'Review cards for vocabulary', 'src/vocab/themes.view.js'],
+  ['srs.practical', 'Review cards for practical conversation units', 'src/curriculum/practical.view.js'],
+  ['practical.progress', 'Which practical pages you have finished on this device', 'src/curriculum/practical-progress.js'],
   ['streak', 'Study streak', 'src/curriculum/dom.js'],
   ['lesson.resume.v1', 'Where you stopped in a lesson: the part you were on and the quick-check answers you already gave, so the lesson opens in the same place', 'src/curriculum/chunks.js'],
   ['curriculum.hints.suppressed', 'Hints you dismissed', 'src/curriculum/hints.js'],

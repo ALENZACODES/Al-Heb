@@ -18,7 +18,8 @@ const SKIP = (rel) => rel.startsWith('assets/img/') || rel.startsWith('assets/im
   || rel.split('/').includes('tools')
   || (rel.startsWith('data/images/') && rel !== 'data/images/approvals.json' && rel !== 'data/images/word-cues.json' /* read live by the image resolver */) || rel === 'data/corpus/source-snapshot.json' || rel === 'data/audio/tts-prices.json'
   || rel.startsWith('data/tts/') /* respelling files for the offline TTS factory: build-time inputs, never fetched by the app */
-  || /^data\/audio\/manifest-words-[a-z]+\.json$/.test(rel); /* lazy per-tradition word shards: fetched after first paint, runtime-cached by sw.js */ /* tts-prices: build-time cost plan input */ // build-time inputs, not fetched by the app
+  || /^data\/audio\/manifest-words-[a-z]+\.json$/.test(rel)
+  || rel === 'data/curriculum/practical/gcloud-results.json' || rel.endsWith('/_gcloud-checkpoint.json'); /* lazy per-tradition word shards: fetched after first paint, runtime-cached by sw.js */ /* tts-prices: build-time cost plan input */ // build-time inputs, not fetched by the app
 // ON-DEMAND (not installed up front): data that only preview routes read, plus the audio manifest (every clip is still "missing", so it
 // buys nothing offline). sw.js already stale-while-revalidates every same-origin non-media GET into the runtime cache, so these files
 // are cached the first time a learner opens the page that needs them, or all at once from "Use Aleph offline" -> Download everything
@@ -36,7 +37,7 @@ export const FIRST_DAY_LETTERS = ['shin', 'bet', 'lamed', 'vav', 'mem', 'he', 't
 const KEEP_DATA = new Set(['data/pronunciation/consonants.json', 'data/pronunciation/niqqud.json', 'data/calendar/locations.json', 'data/audio/equivalence.json',
   ...FIRST_DAY_LETTERS.map((id) => `assets/letters/morph/${id}.svg`)]);
 const ON_DEMAND_PREFIXES = ['data/vocab/', 'data/roots/', 'data/knownwords/', 'data/nikkudfade/', 'data/gender/', 'data/pronunciation/', 'data/speak/', 'data/israel/', 'data/calendar/', 'data/festivals/', 'data/torahread/', 'data/corpus/torah/', 'data/typing/',
-  'data/traditions/', 'data/trope-trainer/', 'data/listen/', 'data/grammar/', 'data/wordtrace/', 'data/corpus/reader/', 'data/corpus/trope/', 'data/curriculum/lessons-intermediate/',
+  'data/traditions/', 'data/trope-trainer/', 'data/listen/', 'data/grammar/', 'data/wordtrace/', 'data/corpus/reader/', 'data/corpus/trope/', 'data/curriculum/lessons-intermediate/', 'data/curriculum/practical/',
   'data/curriculum/practical-pages/', // Practical course outline and written pages: not read at first install
   'assets/screens/', 'assets/screenshots/', 'assets/letters/morph/',
   // Large image sets: runtime-cached on first view (and listed for "Download everything"), never installed up front (fix #4 / R39).
@@ -57,7 +58,9 @@ const ON_DEMAND_PREFIXES = ['data/vocab/', 'data/roots/', 'data/knownwords/', 'd
   'src/library/', 'data/library/',
   // Letter videos (about 70 KB each) and their list: streamed when watched, runtime-cached.
   'assets/videos/', 'data/videos/'];
-const ON_DEMAND_FILES = new Set(['data/audio/manifest.json', 'data/audio/manifest-kind-word.json', 'data/audio/manifest-torah.json', 'data/audio/manifest-torah-he.json', 'src/shell/torah-he-index.js', 'data/curriculum/intermediate-index.json', 'data/curriculum/intermediate-image-slots.json', 'data/curriculum/class-track.json',
+const ON_DEMAND_FILES = new Set(['data/audio/manifest.json', 'data/audio/manifest-kind-word.json', 'data/audio/manifest-torah.json', 'data/audio/manifest-torah-he.json', 'src/shell/torah-he-index.js', 'data/curriculum/intermediate-index.json', 'data/curriculum/intermediate-image-slots.json', 'data/curriculum/class-track.json', 'data/curriculum/practical-units.json', 'data/curriculum/lesson-lexicon.json',
+  // Word-builder bank (63 KB): fetched when the builder first opens, runtime-cached (keeps first install under 3.95 MiB after Hallel and festival Kiddush landed in the installed registry).
+  'data/builder_words.json',
   // Non-v0 data (the integration test's must-install list is the v0 offline contract; these are fetched on first use, then runtime-cached).
   'data/audio/english-glosses.json',
   // Word Finder bank (51 KB): preview-game data, fetched when the game first opens, runtime-cached by sw.js (keeps first install under 3.95 MiB).
@@ -76,6 +79,7 @@ const ON_DEMAND_FILES = new Set(['data/audio/manifest.json', 'data/audio/manifes
   // Intermediate lessons view (optional preview route /intermediate, 30 KB): route code only, loaded lazily on first open and runtime-cached; its adapter and data stay as they were.
   'src/curriculum/intermediate.view.js',
   // Israel units (preview route /israel-units): view, model and data are loaded on first open and runtime-cached.
+  'src/curriculum/practical.view.js', 'src/curriculum/practical-progress.js',
   'src/curriculum/israel-units.view.js', 'src/curriculum/israel-units.js', 'data/curriculum/israel-units.json',
   // Speak screen engine (preview route /speak, 58 KB): imported only by speak.view.js, which the router loads lazily; fetched on first open and runtime-cached (keeps first install under 3.95 MiB after the tracing pointer fix).
   'src/speak/speak.js',

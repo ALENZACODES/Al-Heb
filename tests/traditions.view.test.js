@@ -59,13 +59,13 @@ test('compare: three settings shown, current setting marked, honest "No audio ye
   assert.match(text(root), /your setting/);
 });
 
-test('compare: Hebrew is dir=rtl lang=he; options include all 70 texts and 10 words', async () => {
+test('compare: Hebrew is dir=rtl lang=he; options include all registry texts and 10 words', async () => {
   const { root } = await open();
   const heEls = all(root, (x) => /\bhe\b|he-big|he-lines/.test(x.getAttribute('class') ?? ''));
   assert.ok(heEls.length > 0);
   for (const el of heEls) { assert.equal(el.getAttribute('dir'), 'rtl'); assert.equal(el.getAttribute('lang'), 'he'); }
   const opts = byTag(root, 'option');
-  assert.equal(opts.length, 70 + 10);
+  assert.equal(opts.length, 88 + 10);
   const sel = byTag(root, 'select')[0];
   assert.ok(sel.getAttribute('id'));
   assert.ok(all(root, (x) => x.tagName === 'LABEL' && x.getAttribute('for') === sel.getAttribute('id')).length === 1, 'select has a label');

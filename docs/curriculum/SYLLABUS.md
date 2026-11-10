@@ -187,12 +187,14 @@ Goals are copied word for word from the data. They are draft goals: no Hebrew te
   - Greet people with shavua tov after Havdalah
 - **I-07** Hallel refrains: the lines the congregation sings back (30 min)
   - Sing back 'ki l'olam chasdo' and 'halleluyah' at the right moments
-  - Recognise the Psalm 118 lines that are sung responsively
-  - Know that the full Hallel is not in ALEF yet; follow it in your congregation's siddur
+  - Recognise the Psalm 118 lines that are sung responsively, from the Hallel verses now in ALEF
+  - Know that the rest of Hallel (all of Psalms 113-118, half-Hallel cuts, and the customary repetitions) is not in ALEF yet; this lesson uses selected refrain verses only
+  - Know that these refrains are sung on festivals, Rosh Chodesh and Hanukkah; I-29, I-30 and I-32 sit on those days
 - **I-08** Aleinu: the closing prayer and where to bow (30 min)
   - Read the first paragraph of Aleinu at the speed it is said
   - Find the words where many congregations bow
   - Say the closing 'ein od' line from memory
+  - Know that the wording here follows Edot HaMizrach; some Ashkenazi books word the bowing line differently
 - **I-09** Adon Olam: the closing hymn line by line (30 min)
   - Sing the first and last verses of Adon Olam from the page without stopping
   - Recognise the three-tense line 'hayah, hoveh, yihyeh'
@@ -200,7 +202,7 @@ Goals are copied word for word from the data. They are draft goals: no Hebrew te
 - **I-10** Mi Shebeirach, healing and thanksgiving: the blessings said for people (35 min)
   - Recognise the opening of Mi Shebeirach and answer it
   - Answer Birkat Hagomel with the congregation's response
-  - Answer Shehecheyanu with Amen, and the Priestly Blessing with Amen or Ken yehi ratzon
+  - Answer Shehecheyanu with Amen, and answer the Priestly Blessing said by the leader with 'Ken yehi ratzon' (when kohanim bless, the answer is Amen)
 - **I-26** The full Torah service in order: ark, reading, lifting, returning (45 min)
   - Name the twelve moments of a Shabbat-morning Torah service in order
   - Join the lines the congregation sings: Ein Kamocha, Gadlu, Lecha Adonai, Etz Chaim
@@ -211,24 +213,26 @@ Goals are copied word for word from the data. They are draft goals: no Hebrew te
   - Recognise the three closing verses of the Amidah in order
 - **I-28** Yom Kippur: the Shema line said aloud and the words of the day (30 min)
   - Know the one day a year when 'Baruch shem' is said aloud and answer it
-  - Recognise the Yom Kippur words: fast, atonement, shofar, forgiveness
-  - Say 'a good year' and ask and give forgiveness politely
+  - Recognise the Yom Kippur words: fast, atonement, shofar at the close, forgiveness
+  - Greet people with 'gmar chatimah tovah' on Yom Kippur (not only 'shanah tovah', which belongs to Rosh Hashana and the days around it)
+  - Know that Kol Nidrei and most of the Yom Kippur liturgy are not in ALEF yet
 - **I-29** Pesach: the seder blessings and the words of the festival (30 min)
   - Say the wine blessing and the Shehecheyanu that open the seder
-  - Find 'the exodus from Egypt' in the Kiddush text
-  - Wish 'chag sameach', and know that the Haggadah is not in ALEF yet
+  - Recognise the Pesach insert and the close of the festival Kiddush, including 'a remembrance of the exodus from Egypt' and 'who makes Israel and the seasons holy'
+  - Wish people 'chag kasher vesameach' or 'chag sameach', and know which seder texts ALEF still does not hold
 - **I-30** Sukkot: sukkah words and the blessings that carry over (25 min)
   - Greet people with chag sameach and recognise the word sukkah
-  - Say Shehecheyanu and the wine blessing at the sukkah
-  - Know that the lulav blessing and Hallel are not in ALEF yet
+  - Say Shehecheyanu, the wine blessing, the Sukkot Kiddush insert, and the blessing to dwell in the sukkah
+  - Know that the lulav blessing, Hoshanot, and the rest of Hallel are not in ALEF yet
 - **I-31** Purim: the miracle blessing and the words of the day (25 min)
-  - Say the blessing for miracles used on Purim and Hanukkah
+  - Say the blessing for miracles, whose wording is shared by Purim and Hanukkah (ALEF stores that wording with the Hanukkah source)
   - Greet and toast in Hebrew
   - Know that the Megillah reading is not in ALEF yet
 - **I-32** Hanukkah: the three blessings, Hanerot Halalu and Maoz Tzur (35 min)
   - Say the candle-lighting blessing and answer Amen
   - Follow the order of blessings on the first night
   - Read the first lines of Hanerot Halalu and Maoz Tzur
+  - Know that the candle blessing here follows Edot HaMizrach, 'ner Chanukah'; Ashkenaz often says 'ner shel Chanukah'
 - **I-33** Birkat Hamazon openings: Zimun, the first blessing and Shir Hamaalot (30 min)
   - Lead or answer the Zimun invitation
   - Read the first blessing of Birkat Hamazon
@@ -418,8 +422,8 @@ Goals are copied word for word from the data. They are draft goals: no Hebrew te
   - Send and ask for a message or picture
   - Ask for someone's profile and say 'one moment'
   - Know the word for password and keep it private
-- **I-50** Holiday greetings by festival: who says what, and when (25 min)
-  - Choose the right greeting for Shabbat, a holiday, the new year and after Shabbat
+- **I-50** Holiday greetings by festival, plus everyday wishes (25 min)
+  - Choose the right greeting for Shabbat, a festival, Rosh Hashana, Yom Kippur and after Shabbat
   - Know which greetings are for a person and which are for a time
-  - Reply naturally and keep the register neutral
+  - Reply naturally; when a greeting is gendered, use the form that matches the person you are speaking to
 

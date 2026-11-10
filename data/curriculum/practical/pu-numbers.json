@@ -1,0 +1,1567 @@
+{
+ "id": "pu-numbers",
+ "title": "Numbers, prices and shekels",
+ "level": "L0",
+ "status": "built-draft",
+ "proofread": false,
+ "nativeReview": true,
+ "lessons": [
+  {
+   "id": "il04",
+   "title": "Numbers 1-10",
+   "track": "israel",
+   "wordCount": 10
+  },
+  {
+   "id": "il05",
+   "title": "Numbers 11-100 and shekel prices",
+   "track": "israel",
+   "wordCount": 5
+  }
+ ],
+ "phrasebookSituation": "numbers",
+ "speakSets": [
+  "speak-time-numbers-2"
+ ],
+ "grammarNote": "Cardinal numbers and שֶׁקֶל already appear in the phrasebook and in il04–il05. These notes only name forms already in those sources.",
+ "items": [
+  {
+   "id": "numbers-01",
+   "source": "data/corpus/phrasebook.json",
+   "he": "אֶחָד",
+   "en": "one (1)",
+   "translit": "echad",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "numbers-01"
+   }
+  },
+  {
+   "id": "numbers-02",
+   "source": "data/corpus/phrasebook.json",
+   "he": "שְׁנַיִם",
+   "en": "two (2)",
+   "translit": "shnayim",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "numbers-02"
+   }
+  },
+  {
+   "id": "numbers-03",
+   "source": "data/corpus/phrasebook.json",
+   "he": "שְׁלוֹשָׁה",
+   "en": "three (3)",
+   "translit": "shlosha",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "numbers-03"
+   }
+  },
+  {
+   "id": "numbers-04",
+   "source": "data/corpus/phrasebook.json",
+   "he": "אַרְבָּעָה",
+   "en": "four (4)",
+   "translit": "arba'a",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "numbers-04"
+   }
+  },
+  {
+   "id": "numbers-05",
+   "source": "data/corpus/phrasebook.json",
+   "he": "חֲמִשָּׁה",
+   "en": "five (5)",
+   "translit": "chamisha",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "numbers-05"
+   }
+  },
+  {
+   "id": "numbers-06",
+   "source": "data/corpus/phrasebook.json",
+   "he": "שִׁשָּׁה",
+   "en": "six (6)",
+   "translit": "shisha",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "numbers-06"
+   }
+  },
+  {
+   "id": "numbers-07",
+   "source": "data/corpus/phrasebook.json",
+   "he": "שִׁבְעָה",
+   "en": "seven (7)",
+   "translit": "shiv'a",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "numbers-07"
+   }
+  },
+  {
+   "id": "numbers-08",
+   "source": "data/corpus/phrasebook.json",
+   "he": "שְׁמוֹנָה",
+   "en": "eight (8)",
+   "translit": "shmona",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "numbers-08"
+   }
+  },
+  {
+   "id": "numbers-09",
+   "source": "data/corpus/phrasebook.json",
+   "he": "תִּשְׁעָה",
+   "en": "nine (9)",
+   "translit": "tish'a",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "numbers-09"
+   }
+  },
+  {
+   "id": "numbers-10",
+   "source": "data/corpus/phrasebook.json",
+   "he": "עֲשָׂרָה",
+   "en": "ten (10)",
+   "translit": "asara",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "numbers-10"
+   }
+  },
+  {
+   "id": "numbers-11",
+   "source": "data/corpus/phrasebook.json",
+   "he": "עֶשְׂרִים",
+   "en": "twenty (20)",
+   "translit": "esrim",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "numbers-11"
+   }
+  },
+  {
+   "id": "numbers-12",
+   "source": "data/corpus/phrasebook.json",
+   "he": "שְׁלוֹשִׁים",
+   "en": "thirty (30)",
+   "translit": "shloshim",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "numbers-12"
+   }
+  },
+  {
+   "id": "numbers-13",
+   "source": "data/corpus/phrasebook.json",
+   "he": "חֲמִשִּׁים",
+   "en": "fifty (50)",
+   "translit": "chamishim",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "numbers-13"
+   }
+  },
+  {
+   "id": "numbers-14",
+   "source": "data/corpus/phrasebook.json",
+   "he": "מֵאָה",
+   "en": "one hundred (100)",
+   "translit": "me'a",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "numbers-14"
+   }
+  },
+  {
+   "id": "numbers-15",
+   "source": "data/corpus/phrasebook.json",
+   "he": "אֶלֶף",
+   "en": "one thousand (1000)",
+   "translit": "elef",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "numbers-15"
+   }
+  },
+  {
+   "id": "numbers-16",
+   "source": "data/corpus/phrasebook.json",
+   "he": "מָה הַשָּׁעָה?",
+   "en": "what time is it?",
+   "translit": "ma hasha'a?",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "numbers-16"
+   }
+  },
+  {
+   "id": "numbers-17",
+   "source": "data/corpus/phrasebook.json",
+   "he": "הַשָּׁעָה שָׁלוֹשׁ",
+   "en": "it's three o'clock",
+   "translit": "hasha'a shalosh",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "numbers-17"
+   }
+  },
+  {
+   "id": "numbers-18",
+   "source": "data/corpus/phrasebook.json",
+   "he": "חֲצִי",
+   "en": "half",
+   "translit": "chetsi",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "numbers-18"
+   }
+  },
+  {
+   "id": "numbers-19",
+   "source": "data/corpus/phrasebook.json",
+   "he": "רֶבַע",
+   "en": "quarter",
+   "translit": "reva",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "numbers-19"
+   }
+  },
+  {
+   "id": "numbers-20",
+   "source": "data/corpus/phrasebook.json",
+   "he": "הַיּוֹם",
+   "en": "today",
+   "translit": "hayom",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "numbers-20"
+   }
+  },
+  {
+   "id": "numbers-21",
+   "source": "data/corpus/phrasebook.json",
+   "he": "מָחָר",
+   "en": "tomorrow",
+   "translit": "machar",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "numbers-21"
+   }
+  },
+  {
+   "id": "numbers-22",
+   "source": "data/corpus/phrasebook.json",
+   "he": "אֶתְמוֹל",
+   "en": "yesterday",
+   "translit": "etmol",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "numbers-22"
+   }
+  },
+  {
+   "id": "il04-w1",
+   "source": "data/curriculum/lessons.json#il04.words[0]",
+   "he": "אַחַת",
+   "en": "one (f., counting)",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il04-w1"
+   }
+  },
+  {
+   "id": "il04-w2",
+   "source": "data/curriculum/lessons.json#il04.words[1]",
+   "he": "שְׁתַּיִם",
+   "en": "two (f.)",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il04-w2"
+   }
+  },
+  {
+   "id": "il04-w3",
+   "source": "data/curriculum/lessons.json#il04.words[2]",
+   "he": "שָׁלוֹשׁ",
+   "en": "three (f.)",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il04-w3"
+   }
+  },
+  {
+   "id": "il04-w4",
+   "source": "data/curriculum/lessons.json#il04.words[3]",
+   "he": "אַרְבַּע",
+   "en": "four (f.)",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il04-w4"
+   }
+  },
+  {
+   "id": "il04-w5",
+   "source": "data/curriculum/lessons.json#il04.words[4]",
+   "he": "חָמֵשׁ",
+   "en": "five (f.)",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il04-w5"
+   }
+  },
+  {
+   "id": "il04-w6",
+   "source": "data/curriculum/lessons.json#il04.words[5]",
+   "he": "שֵׁשׁ",
+   "en": "six",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il04-w6"
+   }
+  },
+  {
+   "id": "il04-w7",
+   "source": "data/curriculum/lessons.json#il04.words[6]",
+   "he": "שֶׁבַע",
+   "en": "seven (f.)",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il04-w7"
+   }
+  },
+  {
+   "id": "il04-w8",
+   "source": "data/curriculum/lessons.json#il04.words[7]",
+   "he": "שְׁמוֹנֶה",
+   "en": "eight",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il04-w8"
+   }
+  },
+  {
+   "id": "il04-w9",
+   "source": "data/curriculum/lessons.json#il04.words[8]",
+   "he": "תֵּשַׁע",
+   "en": "nine (f.)",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il04-w9"
+   }
+  },
+  {
+   "id": "il04-w10",
+   "source": "data/curriculum/lessons.json#il04.words[9]",
+   "he": "עֶשֶׂר",
+   "en": "ten (f.)",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il04-w10"
+   }
+  },
+  {
+   "id": "il05-w4",
+   "source": "data/curriculum/lessons.json#il05.words[3]",
+   "he": "שֶׁקֶל",
+   "en": "shekel",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il05-w4"
+   }
+  },
+  {
+   "id": "il05-w5",
+   "source": "data/curriculum/lessons.json#il05.words[4]",
+   "he": "כַּמָּה",
+   "en": "how much",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il05-w5"
+   }
+  }
+ ],
+ "srsQueue": [
+  {
+   "position": 1,
+   "kind": "word",
+   "id": "numbers-01",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 2,
+   "kind": "word",
+   "id": "numbers-02",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 3,
+   "kind": "word",
+   "id": "numbers-03",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 4,
+   "kind": "word",
+   "id": "numbers-04",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 5,
+   "kind": "word",
+   "id": "numbers-05",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 6,
+   "kind": "word",
+   "id": "numbers-06",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 7,
+   "kind": "word",
+   "id": "numbers-07",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 8,
+   "kind": "word",
+   "id": "numbers-08",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 9,
+   "kind": "word",
+   "id": "numbers-09",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 10,
+   "kind": "word",
+   "id": "numbers-10",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 11,
+   "kind": "word",
+   "id": "numbers-11",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 12,
+   "kind": "word",
+   "id": "numbers-12",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 13,
+   "kind": "word",
+   "id": "numbers-13",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 14,
+   "kind": "word",
+   "id": "numbers-14",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 15,
+   "kind": "word",
+   "id": "numbers-15",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 16,
+   "kind": "line",
+   "id": "numbers-16",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  },
+  {
+   "position": 17,
+   "kind": "line",
+   "id": "numbers-17",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  },
+  {
+   "position": 18,
+   "kind": "word",
+   "id": "numbers-18",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 19,
+   "kind": "word",
+   "id": "numbers-19",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 20,
+   "kind": "word",
+   "id": "numbers-20",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 21,
+   "kind": "word",
+   "id": "numbers-21",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 22,
+   "kind": "word",
+   "id": "numbers-22",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 23,
+   "kind": "word",
+   "id": "il04-w1",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 24,
+   "kind": "word",
+   "id": "il04-w2",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 25,
+   "kind": "word",
+   "id": "il04-w3",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 26,
+   "kind": "word",
+   "id": "il04-w4",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 27,
+   "kind": "word",
+   "id": "il04-w5",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 28,
+   "kind": "word",
+   "id": "il04-w6",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 29,
+   "kind": "word",
+   "id": "il04-w7",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 30,
+   "kind": "word",
+   "id": "il04-w8",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 31,
+   "kind": "word",
+   "id": "il04-w9",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 32,
+   "kind": "word",
+   "id": "il04-w10",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 33,
+   "kind": "word",
+   "id": "il05-w4",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 34,
+   "kind": "word",
+   "id": "il05-w5",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  }
+ ],
+ "listenDrills": [
+  {
+   "goal": "Hear the sourced lines and words already in the audio manifest.",
+   "items": [
+    "numbers-01",
+    "numbers-02",
+    "numbers-03",
+    "numbers-04",
+    "numbers-05",
+    "numbers-06",
+    "numbers-07",
+    "numbers-08",
+    "numbers-09",
+    "numbers-10",
+    "numbers-11",
+    "numbers-12",
+    "numbers-13",
+    "numbers-14",
+    "numbers-15",
+    "numbers-16",
+    "numbers-17",
+    "numbers-18",
+    "numbers-19",
+    "numbers-20",
+    "numbers-21",
+    "numbers-22",
+    "il04-w1",
+    "il04-w2",
+    "il04-w3",
+    "il04-w4",
+    "il04-w5",
+    "il04-w6",
+    "il04-w7",
+    "il04-w8",
+    "il04-w9",
+    "il04-w10",
+    "il05-w4",
+    "il05-w5"
+   ],
+   "source": "audio manifest, phrasebook and lesson-word ids"
+  }
+ ],
+ "speakDrills": [
+  {
+   "goal": "Repeat the existing set data/speak/sets/speak-time-numbers-2.json.",
+   "set": "speak-time-numbers-2",
+   "note": "That set is machine-built and also unverified."
+  }
+ ],
+ "pages": [
+  {
+   "id": "pu-numbers-p01",
+   "title": "One (1)",
+   "order": 1,
+   "grammarNote": "This page uses only Hebrew already stored in data/corpus/phrasebook.json. First line: אֶחָד. Cardinal numbers and שֶׁקֶל already appear in the phrasebook and in il04–il05.",
+   "items": [
+    {
+     "id": "numbers-01",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֶחָד",
+     "en": "one (1)",
+     "translit": "echad",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "numbers-01"
+     }
+    },
+    {
+     "id": "numbers-02",
+     "source": "data/corpus/phrasebook.json",
+     "he": "שְׁנַיִם",
+     "en": "two (2)",
+     "translit": "shnayim",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "numbers-02"
+     }
+    },
+    {
+     "id": "numbers-03",
+     "source": "data/corpus/phrasebook.json",
+     "he": "שְׁלוֹשָׁה",
+     "en": "three (3)",
+     "translit": "shlosha",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "numbers-03"
+     }
+    },
+    {
+     "id": "numbers-04",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אַרְבָּעָה",
+     "en": "four (4)",
+     "translit": "arba'a",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "numbers-04"
+     }
+    },
+    {
+     "id": "numbers-05",
+     "source": "data/corpus/phrasebook.json",
+     "he": "חֲמִשָּׁה",
+     "en": "five (5)",
+     "translit": "chamisha",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "numbers-05"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "numbers-01",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "numbers-02",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "numbers-03",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "numbers-04",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "numbers-05",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "numbers-01",
+    "numbers-02",
+    "numbers-03",
+    "numbers-04",
+    "numbers-05"
+   ],
+   "speakSet": "speak-time-numbers-2"
+  },
+  {
+   "id": "pu-numbers-p02",
+   "title": "Six (6)",
+   "order": 2,
+   "grammarNote": "This page uses only Hebrew already stored in data/corpus/phrasebook.json. First line: שִׁשָּׁה. Cardinal numbers and שֶׁקֶל already appear in the phrasebook and in il04–il05.",
+   "items": [
+    {
+     "id": "numbers-06",
+     "source": "data/corpus/phrasebook.json",
+     "he": "שִׁשָּׁה",
+     "en": "six (6)",
+     "translit": "shisha",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "numbers-06"
+     }
+    },
+    {
+     "id": "numbers-07",
+     "source": "data/corpus/phrasebook.json",
+     "he": "שִׁבְעָה",
+     "en": "seven (7)",
+     "translit": "shiv'a",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "numbers-07"
+     }
+    },
+    {
+     "id": "numbers-08",
+     "source": "data/corpus/phrasebook.json",
+     "he": "שְׁמוֹנָה",
+     "en": "eight (8)",
+     "translit": "shmona",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "numbers-08"
+     }
+    },
+    {
+     "id": "numbers-09",
+     "source": "data/corpus/phrasebook.json",
+     "he": "תִּשְׁעָה",
+     "en": "nine (9)",
+     "translit": "tish'a",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "numbers-09"
+     }
+    },
+    {
+     "id": "numbers-10",
+     "source": "data/corpus/phrasebook.json",
+     "he": "עֲשָׂרָה",
+     "en": "ten (10)",
+     "translit": "asara",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "numbers-10"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "numbers-06",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "numbers-07",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "numbers-08",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "numbers-09",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "numbers-10",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "numbers-06",
+    "numbers-07",
+    "numbers-08",
+    "numbers-09",
+    "numbers-10"
+   ],
+   "speakSet": "speak-time-numbers-2"
+  },
+  {
+   "id": "pu-numbers-p03",
+   "title": "Twenty (20)",
+   "order": 3,
+   "grammarNote": "This page uses only Hebrew already stored in data/corpus/phrasebook.json. First line: עֶשְׂרִים. Cardinal numbers and שֶׁקֶל already appear in the phrasebook and in il04–il05.",
+   "items": [
+    {
+     "id": "numbers-11",
+     "source": "data/corpus/phrasebook.json",
+     "he": "עֶשְׂרִים",
+     "en": "twenty (20)",
+     "translit": "esrim",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "numbers-11"
+     }
+    },
+    {
+     "id": "numbers-12",
+     "source": "data/corpus/phrasebook.json",
+     "he": "שְׁלוֹשִׁים",
+     "en": "thirty (30)",
+     "translit": "shloshim",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "numbers-12"
+     }
+    },
+    {
+     "id": "numbers-13",
+     "source": "data/corpus/phrasebook.json",
+     "he": "חֲמִשִּׁים",
+     "en": "fifty (50)",
+     "translit": "chamishim",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "numbers-13"
+     }
+    },
+    {
+     "id": "numbers-14",
+     "source": "data/corpus/phrasebook.json",
+     "he": "מֵאָה",
+     "en": "one hundred (100)",
+     "translit": "me'a",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "numbers-14"
+     }
+    },
+    {
+     "id": "numbers-15",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֶלֶף",
+     "en": "one thousand (1000)",
+     "translit": "elef",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "numbers-15"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "numbers-11",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "numbers-12",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "numbers-13",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "numbers-14",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "numbers-15",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "numbers-11",
+    "numbers-12",
+    "numbers-13",
+    "numbers-14",
+    "numbers-15"
+   ],
+   "speakSet": "speak-time-numbers-2"
+  },
+  {
+   "id": "pu-numbers-p04",
+   "title": "What time is it?",
+   "order": 4,
+   "grammarNote": "This page uses only Hebrew already stored in data/corpus/phrasebook.json. First line: מָה הַשָּׁעָה?. Cardinal numbers and שֶׁקֶל already appear in the phrasebook and in il04–il05.",
+   "items": [
+    {
+     "id": "numbers-16",
+     "source": "data/corpus/phrasebook.json",
+     "he": "מָה הַשָּׁעָה?",
+     "en": "what time is it?",
+     "translit": "ma hasha'a?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "numbers-16"
+     }
+    },
+    {
+     "id": "numbers-17",
+     "source": "data/corpus/phrasebook.json",
+     "he": "הַשָּׁעָה שָׁלוֹשׁ",
+     "en": "it's three o'clock",
+     "translit": "hasha'a shalosh",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "numbers-17"
+     }
+    },
+    {
+     "id": "numbers-18",
+     "source": "data/corpus/phrasebook.json",
+     "he": "חֲצִי",
+     "en": "half",
+     "translit": "chetsi",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "numbers-18"
+     }
+    },
+    {
+     "id": "numbers-19",
+     "source": "data/corpus/phrasebook.json",
+     "he": "רֶבַע",
+     "en": "quarter",
+     "translit": "reva",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "numbers-19"
+     }
+    },
+    {
+     "id": "numbers-20",
+     "source": "data/corpus/phrasebook.json",
+     "he": "הַיּוֹם",
+     "en": "today",
+     "translit": "hayom",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "numbers-20"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "numbers-16",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "numbers-17",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "numbers-18",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "numbers-19",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "numbers-20",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "numbers-16",
+    "numbers-17",
+    "numbers-18",
+    "numbers-19",
+    "numbers-20"
+   ],
+   "speakSet": "speak-time-numbers-2"
+  },
+  {
+   "id": "pu-numbers-p05",
+   "title": "Tomorrow",
+   "order": 5,
+   "grammarNote": "This page uses only Hebrew already stored in data/corpus/phrasebook.json, data/curriculum/lessons.json. First line: מָחָר. Cardinal numbers and שֶׁקֶל already appear in the phrasebook and in il04–il05.",
+   "items": [
+    {
+     "id": "numbers-21",
+     "source": "data/corpus/phrasebook.json",
+     "he": "מָחָר",
+     "en": "tomorrow",
+     "translit": "machar",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "numbers-21"
+     }
+    },
+    {
+     "id": "numbers-22",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֶתְמוֹל",
+     "en": "yesterday",
+     "translit": "etmol",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "numbers-22"
+     }
+    },
+    {
+     "id": "il04-w1",
+     "source": "data/curriculum/lessons.json#il04.words[0]",
+     "he": "אַחַת",
+     "en": "one (f., counting)",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il04-w1"
+     }
+    },
+    {
+     "id": "il04-w2",
+     "source": "data/curriculum/lessons.json#il04.words[1]",
+     "he": "שְׁתַּיִם",
+     "en": "two (f.)",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il04-w2"
+     }
+    },
+    {
+     "id": "il04-w3",
+     "source": "data/curriculum/lessons.json#il04.words[2]",
+     "he": "שָׁלוֹשׁ",
+     "en": "three (f.)",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il04-w3"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "numbers-21",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "numbers-22",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "il04-w1",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "il04-w2",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "il04-w3",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "numbers-21",
+    "numbers-22",
+    "il04-w1",
+    "il04-w2",
+    "il04-w3"
+   ],
+   "speakSet": "speak-time-numbers-2"
+  },
+  {
+   "id": "pu-numbers-p06",
+   "title": "Four (f.)",
+   "order": 6,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json. First line: אַרְבַּע. Cardinal numbers and שֶׁקֶל already appear in the phrasebook and in il04–il05.",
+   "items": [
+    {
+     "id": "il04-w4",
+     "source": "data/curriculum/lessons.json#il04.words[3]",
+     "he": "אַרְבַּע",
+     "en": "four (f.)",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il04-w4"
+     }
+    },
+    {
+     "id": "il04-w5",
+     "source": "data/curriculum/lessons.json#il04.words[4]",
+     "he": "חָמֵשׁ",
+     "en": "five (f.)",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il04-w5"
+     }
+    },
+    {
+     "id": "il04-w6",
+     "source": "data/curriculum/lessons.json#il04.words[5]",
+     "he": "שֵׁשׁ",
+     "en": "six",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il04-w6"
+     }
+    },
+    {
+     "id": "il04-w7",
+     "source": "data/curriculum/lessons.json#il04.words[6]",
+     "he": "שֶׁבַע",
+     "en": "seven (f.)",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il04-w7"
+     }
+    },
+    {
+     "id": "il04-w8",
+     "source": "data/curriculum/lessons.json#il04.words[7]",
+     "he": "שְׁמוֹנֶה",
+     "en": "eight",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il04-w8"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "il04-w4",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "il04-w5",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "il04-w6",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "il04-w7",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "il04-w8",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "il04-w4",
+    "il04-w5",
+    "il04-w6",
+    "il04-w7",
+    "il04-w8"
+   ],
+   "speakSet": "speak-time-numbers-2"
+  },
+  {
+   "id": "pu-numbers-p07",
+   "title": "Nine (f.)",
+   "order": 7,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json. First line: תֵּשַׁע. Cardinal numbers and שֶׁקֶל already appear in the phrasebook and in il04–il05.",
+   "items": [
+    {
+     "id": "il04-w9",
+     "source": "data/curriculum/lessons.json#il04.words[8]",
+     "he": "תֵּשַׁע",
+     "en": "nine (f.)",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il04-w9"
+     }
+    },
+    {
+     "id": "il04-w10",
+     "source": "data/curriculum/lessons.json#il04.words[9]",
+     "he": "עֶשֶׂר",
+     "en": "ten (f.)",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il04-w10"
+     }
+    },
+    {
+     "id": "il05-w4",
+     "source": "data/curriculum/lessons.json#il05.words[3]",
+     "he": "שֶׁקֶל",
+     "en": "shekel",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il05-w4"
+     }
+    },
+    {
+     "id": "il05-w5",
+     "source": "data/curriculum/lessons.json#il05.words[4]",
+     "he": "כַּמָּה",
+     "en": "how much",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il05-w5"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "il04-w9",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "il04-w10",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "il05-w4",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "il05-w5",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "il04-w9",
+    "il04-w10",
+    "il05-w4",
+    "il05-w5"
+   ],
+   "speakSet": "speak-time-numbers-2"
+  }
+ ]
+}

@@ -12,3 +12,6 @@ data/images/review/
 tools/torah/snapshot/
 audio/_review/
 .env
+
+# local Google Cloud test checkpoint (contains no secrets, but is a run artifact)
+data/curriculum/practical/_gcloud-checkpoint.json

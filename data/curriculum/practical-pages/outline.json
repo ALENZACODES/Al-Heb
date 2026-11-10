@@ -2,7 +2,7 @@
  "schema": "alef-practical-outline/1",
  "compatibleWith": "alef-practical-units/2",
  "generated": "2026-11-10",
- "note": "The planned page outline for the Practical course. Unit ids match data/curriculum/practical-units.json. Pages marked written are in data/curriculum/practical-pages/written.json.",
+ "note": "The planned page outline for the Practical course. Unit ids match data/curriculum/practical-units.json. Pages marked written are in data/curriculum/practical-pages/written.json. pu-army (I-18 army slang) is outlined so every Israel-track lesson has a home, but it is held off the live Practical set until John decides. #/israel-units is not removed until John approves a single-course merge.",
  "levels": {
   "L0": "First words",
   "L1": "Getting around",
@@ -1930,6 +1930,8 @@
    "dialogue": null,
    "file": "data/curriculum/practical/pu-army.json",
    "route": "#/practical/pu-army",
+   "heldForJohn": true,
+   "live": false,
    "pages": [
     {
      "id": "pu-army-p01",

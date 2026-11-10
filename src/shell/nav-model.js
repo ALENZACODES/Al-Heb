@@ -15,7 +15,7 @@ export const SECTIONS = [
 export const SECTION_ROUTES = {
   learn: ['home', 'firstday', 'firstwin', 'wordfinder', 'learn', 'letters', 'atlas', 'letter', 'sounds', 'rules', 'rules-page', 'loanwords', 'loanword', 'spotit', 'checkpoint',
     'ladder', 'fade', 'fadeline', 'scaffold', 'gender', 'roles', 'firstday-ladder', 'vocab', 'vocab-themes', 'sprint', 'wordtrace', 'dialogues', 'dialogue', 'phrases', 'phrase',
-    'israel', 'israelsec', 'intermediate', 'intermediatelesson', 'israelunits', 'israelunit', 'grammar', 'grammartopic', 'typing', 'classtrack', 'classtrackweek', 'classtrackmode',
+    'israel', 'israelsec', 'israelunits', 'israelunit', 'intermediate', 'intermediatelesson', 'practical', 'practicalunit', 'practicalpage', 'grammar', 'grammartopic', 'typing', 'classtrack', 'classtrackweek', 'classtrackmode',
     'soundgap', 'vowelboard', 'niqquddial', 'dottile', 'syllablechips', 'nikkud-fade', 'roots', 'gender-drill', 'scheduler', 'known-words',
     // Brain Lab (daily drills) and the Library (articles, letter videos), with their detail pages
     'lab', 'labgame', 'library', 'libraryarticle',
@@ -35,8 +35,8 @@ export const ROUTE_SECTION = Object.fromEntries(Object.entries(SECTION_ROUTES).f
 
 /** Parameterised routes are reached through a static parent page (a list, or a link from it). */
 export const PARENT = {
-  letter: 'letters', loanword: 'loanwords', spotit: 'learn', dialogue: 'dialogues', phrase: 'phrases', fadeline: 'fade', israelsec: 'israel',
-  classtrackweek: 'classtrack', classtrackmode: 'classtrack', festival: 'festivals', 'rules-page': 'rules', intermediatelesson: 'intermediate', israelunit: 'israelunits',
+  letter: 'letters', loanword: 'loanwords', spotit: 'learn', dialogue: 'dialogues', phrase: 'phrases', fadeline: 'fade', israelsec: 'israel', israelunit: 'israelunits',
+  classtrackweek: 'classtrack', classtrackmode: 'classtrack', festival: 'festivals', 'rules-page': 'rules', intermediatelesson: 'intermediate', practicalunit: 'practical', practicalpage: 'practical',
   grammartopic: 'grammar', labgame: 'lab', libraryarticle: 'library', text: 'read', torahreadsec: 'torahread', book: 'books', day: 'calendar', synagogue: 'synagogues',
 };
 

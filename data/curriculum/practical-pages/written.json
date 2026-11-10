@@ -4,7 +4,7 @@
  "generated": "2026-11-10",
  "proofread": false,
  "nativeReview": "required",
- "note": "The written pages of the Practical course, in course order. Every Hebrew line is copied by id from data/corpus/phrasebook.json, data/audio/manifest*.json, data/curriculum/lessons.json or data/curriculum/dialogues.json. Page fields extend the v2 page shape; v2 readers can ignore the new ones.",
+ "note": "The written pages of the Practical course, in course order. Every Hebrew line is copied by id from data/corpus/phrasebook.json, data/audio/manifest*.json, data/curriculum/lessons.json or data/curriculum/dialogues.json. Page fields extend the v2 page shape; v2 readers can ignore the new ones. בְּעֶזְרַת הַשֵּׁם on pu-politeness-p05 (politeness-21) is held for John (keep or drop); this lane did not decide.",
  "reviewDays": [
   1,
   3,
@@ -3449,7 +3449,8 @@
        "m"
       ],
       "tradition": "israeli"
-     }
+     },
+     "heldForJohn": true
     }
    ],
    "srsQueue": [
@@ -3580,6 +3581,9 @@
     "politeness-07-m",
     "politeness-10",
     "politeness-12"
+   ],
+   "heldForJohn": [
+    "politeness-21"
    ]
   },
   {

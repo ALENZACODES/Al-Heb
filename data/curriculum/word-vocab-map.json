@@ -2,9 +2,9 @@
   "schema": "alef.word-vocab-map/1",
   "rule": "exact pointed-Hebrew (NFC) match, unique vocab entry only; no fuzzy matching",
   "counts": {
-    "lessonWords": 940,
+    "lessonWords": 944,
     "mapped": 647,
-    "unmatched": 260,
+    "unmatched": 264,
     "ambiguous": 33
   },
   "map": {
@@ -836,6 +836,7 @@
     "I-28:5",
     "I-28:8",
     "I-28:9",
+    "I-28:13",
     "I-29:6",
     "I-29:7",
     "I-29:8",
@@ -843,6 +844,7 @@
     "I-29:10",
     "I-29:11",
     "I-29:12",
+    "I-29:13",
     "I-30:4",
     "I-30:5",
     "I-30:6",
@@ -916,7 +918,9 @@
     "I-47:3",
     "I-49:9",
     "I-49:10",
-    "I-50:6"
+    "I-50:6",
+    "I-50:13",
+    "I-50:14"
   ],
   "ambiguous": [
     {

@@ -79,7 +79,7 @@ const ON_DEMAND_FILES = new Set(['data/audio/manifest.json', 'data/audio/manifes
   // Intermediate lessons view (optional preview route /intermediate, 30 KB): route code only, loaded lazily on first open and runtime-cached; its adapter and data stay as they were.
   'src/curriculum/intermediate.view.js',
   // Israel units (preview route /israel-units): view, model and data are loaded on first open and runtime-cached.
-  'src/curriculum/practical.view.js', 'src/curriculum/practical-progress.js',
+  'src/curriculum/practical.view.js', 'src/curriculum/practical-progress.js', 'src/curriculum/practical-written.js',
   'src/curriculum/israel-units.view.js', 'src/curriculum/israel-units.js', 'data/curriculum/israel-units.json',
   // Speak screen engine (preview route /speak, 58 KB): imported only by speak.view.js, which the router loads lazily; fetched on first open and runtime-cached (keeps first install under 3.95 MiB after the tracing pointer fix).
   'src/speak/speak.js',

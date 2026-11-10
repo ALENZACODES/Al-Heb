@@ -163,3 +163,12 @@ test("outline covers every Israel-track lesson (il01-il24 and the Israel I- less
   const missing = lessons.filter((l) => l.track === "israel" && !covered.has(l.id)).map((l) => l.id);
   assert.deepEqual(missing, []);
 });
+
+test("holds stay in place: politeness-21 held for John, pu-army off the live set", () => {
+  const p05 = pages.pages.find((p) => p.id === "pu-politeness-p05");
+  assert.deepEqual(p05.heldForJohn, ["politeness-21"]);
+  assert.equal(p05.items.find((it) => it.id === "politeness-21").heldForJohn, true);
+  const army = outline.units.find((u) => u.id === "pu-army");
+  assert.equal(army.live, false);
+  assert.equal(army.heldForJohn, true);
+});

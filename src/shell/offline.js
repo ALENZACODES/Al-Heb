@@ -81,7 +81,7 @@ export const ON_DEMAND_GROUPS = Object.freeze([
   { id: "od-vocab-code", label: "Vocabulary browser (preview-route code)", test: /^src\/vocab\//, approxMB: 0.06 },
   { id: "od-speak-code", label: "Say it page (preview-route code)", test: /^src\/speak\/speak\.js$/, approxMB: 0.06 },
   { id: "od-music", label: "Game music player, Songs page and English read-aloud", test: /^src\/(audio\/(synth-music|sting)|shell\/speak-english|listen\/songs\.view)\.js$/, approxMB: 0.04 },
-  { id: "od-day-code", label: "Calendar day pages, add-to-calendar box, morning screen, intermediate lessons, practical units and Israel units (preview-route code)", test: /^(src\/curriculum\/(day\.view|calendar\.day|calendar\.addpanel|calendar\.quickadd|intermediate\.view|practical\.view|practical-progress|israel-units|israel-units\.view)\.js|src\/morning\/morning\.view\.js)$/, approxMB: 0.11 },
+  { id: "od-day-code", label: "Calendar day pages, add-to-calendar box, morning screen, intermediate lessons, practical units and Israel units (preview-route code)", test: /^(src\/curriculum\/(day\.view|calendar\.day|calendar\.addpanel|calendar\.quickadd|intermediate\.view|practical\.view|practical-progress|practical-written|israel-units|israel-units\.view)\.js|src\/morning\/morning\.view\.js)$/, approxMB: 0.11 },
 ]);
 /** Group a list of ALEF_ON_DEMAND paths into optional-download entries ({id,label,urls,approxMB}); empty groups are dropped. */
 export function onDemandGroups(onDemand = []) {

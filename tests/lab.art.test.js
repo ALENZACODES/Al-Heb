@@ -1,11 +1,12 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { existsSync, statSync } from 'node:fs';
-import { GAMES } from '../src/lab/lab.core.js';
+import { GAMES, STUDIO_GAMES } from '../src/lab/lab.core.js';
+const DRAWN = GAMES.filter((g) => g.pack !== 'studio'); // the 3D Studio games have a cover and a win picture, no board picture
 import { artPath, artImg, NEW_BEST_ART, WORKOUT_DONE_ART, ART_DIR } from '../src/lab/lab.art.js';
 
-test('every drill has a cover, a board mat and a win picture on disk', () => {
-  for (const g of GAMES) for (const kind of ['cover', 'play', 'win']) {
+test('every classic and synagogue-and-Israel game has a cover, a board picture and a win picture on disk', () => {
+  for (const g of DRAWN) for (const kind of ['cover', 'play', 'win']) {
     const p = artPath(g.id, kind);
     assert.ok(p && p.startsWith(ART_DIR + '/'), `${g.id} ${kind}`);
     assert.ok(existsSync(p) && statSync(p).size > 1000, `missing ${p}`);
@@ -33,8 +34,8 @@ test('pictures are decorative and remove themselves when they fail to load', () 
 
 import { matKind, playArtPath, coverArtPath, applyMat, COVER_3D } from '../src/lab/lab.art.js';
 
-test('every drill has a mat plan, and every planned picture is on disk', () => {
-  for (const g of GAMES) {
+test('every classic and synagogue-and-Israel game has a mat plan, and every planned picture is on disk', () => {
+  for (const g of DRAWN) {
     assert.ok(['mat', 'tileback', 'figure', 'own'].includes(matKind(g.id)), g.id);
     assert.ok(existsSync(playArtPath(g.id)), playArtPath(g.id));
     assert.ok(existsSync(coverArtPath(g.id)), coverArtPath(g.id));
@@ -92,6 +93,39 @@ test('applyBackground sets the picture only after it loads, never on error; toke
   applyBackground(bad, 'y.webp', { ImageCtor: Img }); made[1].onerror(); assert.equal(bad.style.backgroundImage, undefined);
   assert.equal(applyBackground(null, 'x.webp', { ImageCtor: Img }), false);
   for (const g of GAMES) { const p = tokenArtPath(g.id); if (p) assert.ok(existsSync(p), p); }
+  for (const g of STUDIO_GAMES) { assert.equal(matKind(g.id), null, 'no board picture for the 3D Studio'); for (const k of ['cover', 'win']) assert.ok(existsSync(artPath(g.id, k)), artPath(g.id, k)); }
   assert.equal(GAMES.filter((g) => tokenArtPath(g.id)).length, 16);
   assert.ok(existsSync(HERO_ART));
+});
+
+// ---- 3D Studio art
+import { STUDIO_ART_DIR } from '../src/lab/lab.art.js';
+
+test('studio art paths are on-demand webp files named per game, and unknown ids return null', () => {
+  for (const g of STUDIO_GAMES) {
+    const p = artPath(g.id, 'cover');
+    assert.equal(p, `${STUDIO_ART_DIR}/LAB_v3_${g.id}_cover.webp`);
+    assert.ok(artPath(g.id, 'win').endsWith(`LAB_v3_${g.id}_win.webp`));
+  }
+  assert.equal(artPath('wordburst', 'nope'), null);
+  assert.equal(artPath('not-a-game', 'cover'), null);
+  assert.equal(artImg(null, 'x'), null);
+});
+
+test('artImg marks pictures decorative and removes them if they fail to load', () => {
+  const calls = [];
+  const fake = (tag, attrs) => {
+    assert.equal(tag, 'img');
+    const el = { tag, ...attrs, listeners: {} };
+    el.addEventListener = (ev, fn) => { el.listeners[ev] = fn; calls.push(ev); };
+    el.remove = () => { el.removed = true; };
+    return el;
+  };
+  const img = artImg(fake, 'data/images/brain-lab-studio-2026-11-10/LAB_v3_wordburst_cover.webp', 'cover');
+  assert.equal(img.alt, '');
+  assert.equal(img['aria-hidden'], 'true');
+  assert.equal(img.loading, 'lazy');
+  assert.match(img.class, /lab-art/);
+  img.listeners.error();
+  assert.equal(img.removed, true);
 });

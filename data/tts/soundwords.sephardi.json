@@ -80,17 +80,17 @@
   }
  },
  "summary": {
-  "items": 4115,
+  "items": 4123,
   "byConfidence": {
-   "high": 865,
-   "medium": 2713,
+   "high": 869,
+   "medium": 2717,
    "low": 503,
    "unvoiced": 34
   },
   "byFlag": {
-   "final-stress-assumed": 2426,
-   "pharyngeal-merged": 1173,
-   "mobile-shva": 1172,
+   "final-stress-assumed": 2429,
+   "pharyngeal-merged": 1175,
+   "mobile-shva": 1173,
    "stress-from-small-list": 509,
    "maqaf-compound": 220,
    "aramaic": 197,
@@ -185,8 +185,8 @@
     "unvoiced": 1
    },
    "vocab-extra": {
-    "high": 21,
-    "medium": 13,
+    "high": 25,
+    "medium": 17,
     "low": 1,
     "unvoiced": 0
    }
@@ -4307,6 +4307,14 @@
   {"id":"leshev-basukkah-w9","kind":"word","group":"prayer-word","voices":["m","f"],"he":"בְּמִצְוֹתָיו","soundtext":"be-mits-vo-táv","confidence":"low","flags":["final-stress-assumed","mobile-shva","vav-cholam-consonantal"]},
   {"id":"leshev-basukkah-w10","kind":"word","group":"prayer-word","voices":["m","f"],"he":"וְצִוָּנוּ","soundtext":"ve-tsi-va-nú","confidence":"medium","flags":["final-stress-assumed","mobile-shva","vav-dagesh-consonantal"]},
   {"id":"leshev-basukkah-w11","kind":"word","group":"prayer-word","voices":["m","f"],"he":"לֵישֵׁב","soundtext":"le-shév","confidence":"medium","flags":["final-stress-assumed"]},
-  {"id":"leshev-basukkah-w12","kind":"word","group":"prayer-word","voices":["m","f"],"he":"בַּסֻּכָּה׃","soundtext":"ba-su-ká","confidence":"medium","flags":["final-stress-assumed"]}
+  {"id":"leshev-basukkah-w12","kind":"word","group":"prayer-word","voices":["m","f"],"he":"בַּסֻּכָּה׃","soundtext":"ba-su-ká","confidence":"medium","flags":["final-stress-assumed"]},
+  {"id":"h1f02450d","kind":"word","group":"vocab-extra","voices":["m","f"],"he":"מִיץ","soundtext":"míts","confidence":"high","flags":[]},
+  {"id":"hd2715ab4","kind":"word","group":"vocab-extra","voices":["m","f"],"he":"גְּלִידָה","soundtext":"gue-lí-da","confidence":"medium","flags":["mobile-shva"]},
+  {"id":"h6cc8112a","kind":"word","group":"vocab-extra","voices":["m","f"],"he":"שׁוֹקוֹלָד","soundtext":"sho-ko-lád","confidence":"high","flags":[]},
+  {"id":"h1efbc546","kind":"word","group":"vocab-extra","voices":["m","f"],"he":"מָרָק","soundtext":"ma-rák","confidence":"high","flags":[]},
+  {"id":"h08c16650","kind":"word","group":"vocab-extra","voices":["m","f"],"he":"כָּרִיךְ","soundtext":"ka-ríj","confidence":"medium","flags":["final-stress-assumed"]},
+  {"id":"h8417ff6d","kind":"word","group":"vocab-extra","voices":["m","f"],"he":"לִימוֹנָדָה","soundtext":"li-mo-ná-da","confidence":"high","flags":[]},
+  {"id":"h95d4df2c","kind":"word","group":"vocab-extra","voices":["m","f"],"he":"חַלָּה","soundtext":"ja-lá","confidence":"medium","flags":["final-stress-assumed","pharyngeal-merged"]},
+  {"id":"h0b5f5c41","kind":"word","group":"vocab-extra","voices":["m","f"],"he":"תִּשְׁעִים","soundtext":"tish-ím","confidence":"medium","flags":["final-stress-assumed","pharyngeal-merged"]}
  ]
 }

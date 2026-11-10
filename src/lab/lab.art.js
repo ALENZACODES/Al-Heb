@@ -1,17 +1,24 @@
-// Brain Lab artwork (2026-11-10 pack in data/images/brain-lab-2026-11-10). Purely decorative: every picture has empty alt
-// text, is hidden from screen readers, loads lazily and removes itself if it fails, so a missing file or an offline
-// device never changes what a drill does. Board mats (the *_play files) are not used behind the tiles yet.
-import { GAME_IDS } from './lab.core.js';
+// Brain Lab artwork. Purely decorative: every picture has empty alt text, is hidden from screen readers, loads lazily and
+// removes itself if it fails, so a missing file or an offline device never changes what a game does. Classic and new games:
+// data/images/brain-lab-2026-11-10 (LAB_v2_*). 3D Studio games: data/images/brain-lab-studio-2026-11-10 (LAB_v3_*).
+// Both folders are fetched on demand, not in the first-install precache.
+import { GAME_IDS, gameById } from './lab.core.js';
 
 export const ART_DIR = 'data/images/brain-lab-2026-11-10';
+export const CLASSIC_ART_DIR = ART_DIR;
+export const STUDIO_ART_DIR = 'data/images/brain-lab-studio-2026-11-10';
+const isStudio = (gameId) => gameById(gameId)?.pack === 'studio';
 const KINDS = new Set(['cover', 'play', 'win']);
 
 /** Repo-relative path of one drill's picture, or null for an unknown drill or kind. */
 export function artPath(gameId, kind) {
   if (!GAME_IDS.includes(gameId) || !KINDS.has(kind)) return null;
-  return `${ART_DIR}/LAB_v2_${gameId}_${kind}.webp`;
+  return isStudio(gameId) ? `${STUDIO_ART_DIR}/LAB_v3_${gameId}_${kind}.webp` : `${ART_DIR}/LAB_v2_${gameId}_${kind}.webp`;
 }
 export const NEW_BEST_ART = `${ART_DIR}/LAB_v2_new_best.webp`;
+export const NEW_BEST_STUDIO_ART = `${STUDIO_ART_DIR}/LAB_v3_new_best.webp`;
+/** The new-best picture for a game: the gold rosette, or the 3D star for a 3D Studio game. */
+export const newBestArt = (gameId) => (isStudio(gameId) ? NEW_BEST_STUDIO_ART : NEW_BEST_ART);
 export const WORKOUT_DONE_ART = `${ART_DIR}/LAB_v2_workout_done.webp`;
 
 /** A decorative <img>, or null when there is no path or no DOM. */

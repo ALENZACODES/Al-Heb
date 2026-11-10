@@ -104,7 +104,8 @@
 "id": "h83f51398",
 "he": "אַרְבָּעִים",
 "tr": "arba'im",
-"en": "forty"
+"en": "forty",
+"clip": "h83f51398"
 },
 {
 "value": 50,
@@ -119,14 +120,16 @@
 "id": "h2c308e65",
 "he": "שִׁבְעִים",
 "tr": "shiv'im",
-"en": "seventy"
+"en": "seventy",
+"clip": "h2c308e65"
 },
 {
 "value": 90,
 "id": "h0b5f5c41",
 "he": "תִּשְׁעִים",
 "tr": "tish'im",
-"en": "ninety"
+"en": "ninety",
+"clip": "h0b5f5c41"
 },
 {
 "value": 100,

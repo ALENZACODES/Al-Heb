@@ -1,10 +1,10 @@
 # Brain Lab
 
-Brain Lab (`#/lab`) is ALEF's brain-training page: sixteen 45-second games that each train one skill and teach one piece of Hebrew. Every game adjusts its level as you play (two right in a row moves you up, a miss moves you down), scores speed and accuracy, and feeds one of five skill scores. Scores compare you only with your own past games. Each day, Today's Workout picks three games from three different skills.
+Brain Lab (`#/lab`) is ALEF's brain-training page: twenty-seven games in three packs, each training one skill and teaching one piece of Hebrew. The page lists them in this order: Hebrew for Synagogue and Israel (six games, 45 seconds), 3D Studio (eleven games, 75 seconds, with combo points for right answers in a row) and the ten classic Quick Drills (45 seconds), grouped by skill. Every game adjusts its level as you play (two right in a row moves you up, a miss moves you down), scores speed and accuracy, and feeds one of five skill scores. Scores compare you only with your own past games. Each day, Today's Workout picks three games from three different skills, from the classic and synagogue-and-Israel packs.
 
 Calm mode and Settings > No time limits both take the clocks away: rounds wait for you and a game ends after ten rounds.
 
-## The Sixteen Games
+## The Games
 
 | Game | Skill | What it teaches | Hebrew comes from | Added |
 |---|---|---|---|---|
@@ -25,7 +25,25 @@ Calm mode and Settings > No time limits both take the clocks away: rounds wait f
 | **Café Order** | Memory | Ordering food and drink | `data/lab/words.json` café, from the dictionary | Nov 10 |
 | **Prayer Chain** | Memory | The order of the words in the blessings and prayers | `data/corpus/registry.json` | Nov 10 |
 
-Every game's rules live in `src/lab/lab.core.js` as plain functions with tests. The first ten games draw in `src/lab/lab.games.js`, the six added on November 10 in `src/lab/lab.games2.js`, and the page is `src/lab/lab.view.js`.
+### 3D Studio (added November 10, 75 seconds each)
+
+| Game | Skill | What the learner does |
+|---|---|---|
+| Word Burst | Attention | Finds every copy of the target Hebrew word |
+| Migration Birds | Speed | Taps the bird with the highest Hebrew number as the flock speeds up |
+| Star Search | Attention | Spots the odd star out: a different letter, vowel or shape |
+| Root Forge | Problem Solving | Builds the word that matches a three-letter root and a meaning |
+| Letter Sequence | Problem Solving | Taps the letter that comes next in an alef-bet pattern |
+| Speed Match | Flexibility | Says whether a letter or syllable is the same as the last one; the rule can change |
+| Letter Span | Memory | Taps flashed letters back in order |
+| Vowel Storm | Speed | Taps every falling syllable with the target vowel sound |
+| Tile Turn | Flexibility | Names a letter tile turned in space |
+| Path Word | Problem Solving | Traces a path through neighbouring tiles to spell a real word |
+| Echo Hunt | Attention | Hears a recorded word and taps it; with sound off, reads its sound instead |
+
+The studio games live in `src/lab/lab.studio.js`, with a 3D layer (`src/lab/lab.fx3d.js`) loaded only when one opens. Their covers are in `data/images/brain-lab-studio-2026-11-10`. Every studio game fills the "Hebrew You Met" list on its results card, like the other packs.
+
+Every game's rules live in `src/lab/lab.core.js` as plain functions with tests. The first ten games draw in `src/lab/lab.games.js`, the six synagogue-and-Israel games in `src/lab/lab.games2.js`, the studio games in `src/lab/lab.studio.js`, and the page is `src/lab/lab.view.js`.
 
 ## How Each New Game Grows With the Learner
 
@@ -44,7 +62,8 @@ Every game's rules live in `src/lab/lab.core.js` as plain functions with tests. 
 
 ## Pictures
 
-- **Drawn and showing** (`data/images/brain-lab-2026-11-10`, wired in `src/lab/lab.art.js`): a cover, an in-game picture and a results picture for all sixteen games, the new-best rosette and the workout-done picture. Board pictures sit behind the board with an opaque backing under every tile, so text never sits on a picture. Four new games place their picture themselves, where its order put it: the Sound Twins card face, the Vowel Rain sky, the Taxi Turns road and the Café Order counter.
+- **Drawn and showing** (`data/images/brain-lab-2026-11-10`, wired in `src/lab/lab.art.js`): a cover, an in-game picture and a results picture for the sixteen classic and synagogue-and-Israel games, the new-best rosette and the workout-done picture. Board pictures sit behind the board with an opaque backing under every tile, so text never sits on a picture. Four new games place their picture themselves, where its order put it: the Sound Twins card face, the Vowel Rain sky, the Taxi Turns road and the Café Order counter.
+- **Drawn and showing** (`data/images/brain-lab-studio-2026-11-10`): a cover for each studio game and the studio new-best picture. Some covers draw Hebrew letters into the picture, which the house style avoids; that is for the images lane to redraw.
 - **Drawn and showing** (`data/images/commercial-2026-11-10`): the Brain Lab hero at the top of the page and the round tokens of the first ten games, laid over the letter disc once they load.
 - **Still on order** ([`docs/images/BRAIN-LAB-NEW-GAMES-ORDERS-2026-11-10.md`](../images/BRAIN-LAB-NEW-GAMES-ORDERS-2026-11-10.md)): the six new games' tokens, the seventeen café menu pictures, the raindrop and the taxi. These go through the shared image resolver: each shows once it is ingested and approved, and nothing is fetched before that. Until then a new game's token is its letter on a green-and-gold disc.
 - Every picture is decorative, loads lazily, and changes nothing if it fails (offline, save-data) or under high contrast and forced colours. When a results picture is missing or fails, Rimon from his own sprite sheets stands in.
@@ -53,7 +72,9 @@ Review rounds for this work, with scores and what would raise them: [`BRAIN-LAB-
 
 ## Spoken Hebrew
 
-Every Brain Lab game can now say its Hebrew in the learner's chosen voice (Ari or Noa): café orders and taxi directions as they appear, letter names in Middle Letter and on the results list, both letter sounds after a Sound Twins answer while learning, each caught syllable in Vowel Rain (kamatz and tzere syllables play the recorded syllable that sounds the same), holy-day names in Calendar Puzzle where recorded, and every item on the "Hebrew You Met" list that has a recording. A letter sound or syllable plays only where the learner's tradition says it the Israeli way. Ten café words and the number 90 were recorded only in the large dictionary list; their rows now travel in `data/lab/words.json` (`extraClips`).
+Every Brain Lab game can now say its Hebrew in the learner's chosen voice (Ari or Noa): café orders and taxi directions as they appear, letter names in Middle Letter and on the results list, both letter sounds after a Sound Twins answer while learning, each caught syllable in Vowel Rain (kamatz and tzere syllables play the recorded syllable that sounds the same), holy-day names in Calendar Puzzle where recorded, and every item on the "Hebrew You Met" list that has a recording. A letter sound or syllable plays only where the learner's tradition says it the Israeli way. Ten café words and the number 90 were recorded only in the large dictionary list; their rows now travel in `data/lab/words.json` (`extraClips`). Holy-day names in Calendar Puzzle now have their own recordings.
+
+**Held recordings.** 35 recordings failed at least two of three independent transcription checks. Brain Lab does not play them (`data/lab/clip-holds.json`, read by `src/lab/lab.holds.js`) and shows the written sound instead until a person has listened. The files stay in the app for other screens.
 
 What is still missing, and what to record first: [`docs/audio/BRAIN-LAB-AUDIO-2026-11-10.md`](../audio/BRAIN-LAB-AUDIO-2026-11-10.md) (one row per item in the CSV beside it; rebuild with `node tools/lab/build-audio-manifest.mjs`).
 
@@ -65,5 +86,5 @@ Brain Lab tells the companion what is happening (`alef:rimon` with `{ action, mo
 
 - `node tools/lab/build-lab-words.mjs` rebuilds `data/lab/words.json` from the dictionary, the clip list and the sound tables. Run it after any of those change; a test fails if the file drifts from a fresh build.
 - `node --test tests/lab.core.test.js tests/lab.games2.test.js tests/warm-routes.test.js` checks the rules, the data against its sources, and that tapping at random scores at chance in every new game.
-- `node --test tests/lab.browser.test.js` (browser tier, about 5 minutes) plays all sixteen games to their results card in Chromium.
-- Brain Lab's code and data are not in the first install; the shell keeps them on the device once per build (`src/shell/warm-routes.js`, about 420 KB).
+- `node --test tests/lab.browser.test.js` (browser tier, about 5 minutes) plays all twenty-seven games to their results card in Chromium (about 10 minutes).
+- Brain Lab's code and data are not in the first install; the shell keeps them on the device once per build (`src/shell/warm-routes.js`, about 525 KB).

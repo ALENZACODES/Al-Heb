@@ -1,0 +1,19 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-hebrew",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "israeli",
+ "inputText": "יוֹם הַשּׁוֹאָה",
+ "inputSha256": "39bc88bbdbc495d0fd5155027d03c50a1a65298fd450503ad7a8541e943df5a3",
+ "ingestedAt": "2026-11-10T08:48:17.993Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-10T08:48:17.993Z",
+ "redistributionCleared": false,
+ "spokenText": "יוֹם הַשּׁוֹאָה",
+ "normalized": true,
+ "speakingRate": 1,
+ "batch": "brain-lab-holy-days-2026-11-10",
+ "metadataStripped": true
+}

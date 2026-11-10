@@ -17,33 +17,70 @@ export const SKILLS = Object.freeze([
   { id: 'problem', name: 'Problem Solving', he: 'פְּתִירָה', blurb: 'Letter values and letter patterns' },
 ]);
 
-export const GAMES = Object.freeze([
-  { id: 'hunt', title: 'Letter Hunt', titleHe: 'צַיַּד אוֹתִיּוֹת', skill: 'attention', blurb: 'Tap every copy of the target letter. Look-alikes are hiding in the grid.' },
-  { id: 'matrix', title: 'Letter Matrix', titleHe: 'מַטְרִיצָה', skill: 'memory', blurb: 'Letters flash on the grid, then hide. Tap every place the target letter was.' },
-  { id: 'soundmatch', title: 'Sound Match', titleHe: 'הַתְאָמַת צְלִיל', skill: 'speed', blurb: 'Hear a syllable and tap the one you heard, before time runs out.' },
-  { id: 'siddurflash', title: 'Siddur Flash', titleHe: 'סִדּוּר בָּזָק', skill: 'speed', blurb: 'Prayer words flash one at a time. Tap the moment your word appears.' },
-  { id: 'switch', title: 'Rule Switch', titleHe: 'הַחְלָפַת כְּלָל', skill: 'flexibility', blurb: 'The question keeps changing: does it have a dot, or is it an end-of-word letter?' },
-  { id: 'gematria', title: 'Gematria', titleHe: 'גִּימַטְרִיָּה', skill: 'problem', blurb: 'Every letter is a number. Tap letters that add up to the target.' },
-  { id: 'countup', title: 'Count Up', titleHe: 'סְפִירָה', skill: 'speed', blurb: 'Hebrew number words, shuffled. Tap them from smallest to largest.' },
-  { id: 'numberear', title: 'Number Ear', titleHe: 'אֹזֶן לְמִסְפָּרִים', skill: 'attention', blurb: 'Hear or read a Hebrew number and tap the matching digits.' },
-  { id: 'calendar', title: 'Calendar Puzzle', titleHe: 'חִידַת לוּחַ', skill: 'memory', blurb: 'Hebrew months and holy days: which day falls when?' },
-  { id: 'pattern', title: 'Letter Pattern', titleHe: 'תַּבְנִית', skill: 'problem', blurb: 'Three letters, in order. Tap every word that carries them.' },
+export const CLASSIC_GAMES = Object.freeze([
+  { id: 'hunt', title: 'Letter Hunt', titleHe: 'צַיַּד אוֹתִיּוֹת', skill: 'attention', pack: 'classic', seconds: SESSION_SECONDS, blurb: 'Tap every copy of the target letter. Look-alikes are hiding in the grid.' },
+  { id: 'matrix', title: 'Letter Matrix', titleHe: 'מַטְרִיצָה', skill: 'memory', pack: 'classic', seconds: SESSION_SECONDS, blurb: 'Letters flash on the grid, then hide. Tap every place the target letter was.' },
+  { id: 'soundmatch', title: 'Sound Match', titleHe: 'הַתְאָמַת צְלִיל', skill: 'speed', pack: 'classic', seconds: SESSION_SECONDS, blurb: 'Hear a syllable and tap the one you heard, before time runs out.' },
+  { id: 'siddurflash', title: 'Siddur Flash', titleHe: 'סִדּוּר בָּזָק', skill: 'speed', pack: 'classic', seconds: SESSION_SECONDS, blurb: 'Prayer words flash one at a time. Tap the moment your word appears.' },
+  { id: 'switch', title: 'Rule Switch', titleHe: 'הַחְלָפַת כְּלָל', skill: 'flexibility', pack: 'classic', seconds: SESSION_SECONDS, blurb: 'The question keeps changing: does it have a dot, or is it an end-of-word letter?' },
+  { id: 'gematria', title: 'Gematria', titleHe: 'גִּימַטְרִיָּה', skill: 'problem', pack: 'classic', seconds: SESSION_SECONDS, blurb: 'Every letter is a number. Tap letters that add up to the target.' },
+  { id: 'countup', title: 'Count Up', titleHe: 'סְפִירָה', skill: 'speed', pack: 'classic', seconds: SESSION_SECONDS, blurb: 'Hebrew number words, shuffled. Tap them from smallest to largest.' },
+  { id: 'numberear', title: 'Number Ear', titleHe: 'אֹזֶן לְמִסְפָּרִים', skill: 'attention', pack: 'classic', seconds: SESSION_SECONDS, blurb: 'Hear or read a Hebrew number and tap the matching digits.' },
+  { id: 'calendar', title: 'Calendar Puzzle', titleHe: 'חִידַת לוּחַ', skill: 'memory', pack: 'classic', seconds: SESSION_SECONDS, blurb: 'Hebrew months and holy days: which day falls when?' },
+  { id: 'pattern', title: 'Letter Pattern', titleHe: 'תַּבְנִית', skill: 'problem', pack: 'classic', seconds: SESSION_SECONDS, blurb: 'Three letters, in order. Tap every word that carries them.' },
+]);
+
+/** 75-second Lumosity-style 3D studio games (2026-11-10). */
+export const STUDIO_SECONDS = 75;
+export const STUDIO_GAMES = Object.freeze([
+  { id: 'wordburst', title: 'Word Burst', titleHe: 'פְּרִיצַת מִלָּה', skill: 'attention', pack: 'studio', seconds: STUDIO_SECONDS, blurb: 'Find every copy of the target Hebrew word. The right tile bursts.' },
+  { id: 'migration', title: 'Migration Birds', titleHe: 'צִפּוֹרֵי נְדִידָה', skill: 'speed', pack: 'studio', seconds: STUDIO_SECONDS, blurb: 'A flock flies past. Tap the bird with the highest Hebrew number, before they speed up.' },
+  { id: 'starsearch', title: 'Star Search', titleHe: 'חִפּוּשׂ כּוֹכָבִים', skill: 'attention', pack: 'studio', seconds: STUDIO_SECONDS, blurb: 'Spot the odd star out: a different letter, vowel or shape.' },
+  { id: 'rootforge', title: 'Root Forge', titleHe: 'בִּנְיַן שֹׁרֶשׁ', skill: 'problem', pack: 'studio', seconds: STUDIO_SECONDS, blurb: 'A three-letter root and a meaning. Build the matching word from letter tiles.' },
+  { id: 'letterseq', title: 'Letter Sequence', titleHe: 'סֵדֶר הָאוֹתִיּוֹת', skill: 'problem', pack: 'studio', seconds: STUDIO_SECONDS, blurb: 'A pattern in the alef-bet. Tap the letter that comes next.' },
+  { id: 'speedmatch', title: 'Speed Match', titleHe: 'הַתְאָמָה מְהִירָה', skill: 'flexibility', pack: 'studio', seconds: STUDIO_SECONDS, blurb: 'A new letter or syllable appears. Is it the same as the last one? The rule can change.' },
+  { id: 'letterspan', title: 'Letter Span', titleHe: 'זִכְרוֹן רֶצֶף', skill: 'memory', pack: 'studio', seconds: STUDIO_SECONDS, blurb: 'Letters flash, then hide. Tap them back in the same order.' },
+  { id: 'vowelrain', title: 'Vowel Storm', titleHe: 'סַעֲרַת נִקּוּד', skill: 'speed', pack: 'studio', seconds: STUDIO_SECONDS, blurb: 'Syllables tumble through a 3D sky. Tap every one that carries the target vowel sound.' },
+  { id: 'tileturn', title: 'Tile Turn', titleHe: 'סִבּוּב אוֹת', skill: 'flexibility', pack: 'studio', seconds: STUDIO_SECONDS, blurb: 'A letter tile is turned in space. Tap the letter it really is.' },
+  { id: 'pathword', title: 'Path Word', titleHe: 'נְתִיב מִלָּה', skill: 'problem', pack: 'studio', seconds: STUDIO_SECONDS, blurb: 'Trace a path through neighbouring tiles to spell a real Hebrew word.' },
+  { id: 'echo', title: 'Echo Hunt', titleHe: 'צַיַּד הֵד', skill: 'attention', pack: 'studio', seconds: STUDIO_SECONDS, listening: true, blurb: 'Listen to a recorded Hebrew word and tap the one you heard. With sound off, read its sound instead.' },
+]);
+
+/** Six games for the Hebrew a beginner needs in synagogue and in Israel (added 2026-11-10), 45 seconds each. */
+export const LIFE_GAMES = Object.freeze([
   // Added 2026-11-10: six games that each teach one thing a beginner needs in synagogue or in Israel.
-  { id: 'twins', title: 'Sound Twins', titleHe: 'תְּאוֹמֵי צְלִיל', skill: 'speed', added: '2026-11-10', teaches: 'Letters that look different but sound the same',
+  { id: 'twins', title: 'Sound Twins', titleHe: 'תְּאוֹמֵי צְלִיל', skill: 'speed', pack: 'life', seconds: SESSION_SECONDS, added: '2026-11-10', teaches: 'Letters that look different but sound the same',
     blurb: 'Letters flash one at a time. Does this one make the same sound as the one before? Watch for twins like ט and תּ.' },
-  { id: 'rain', title: 'Vowel Rain', titleHe: 'גֶּשֶׁם תְּנוּעוֹת', skill: 'speed', added: '2026-11-10', teaches: 'Reading the vowel signs fast',
+  { id: 'rain', title: 'Vowel Rain', titleHe: 'גֶּשֶׁם תְּנוּעוֹת', skill: 'speed', pack: 'life', seconds: SESSION_SECONDS, added: '2026-11-10', teaches: 'Reading the vowel signs fast',
     blurb: 'Syllables fall from the sky. Tap the vowel sound before each one lands.' },
-  { id: 'middle', title: 'Middle Letter', titleHe: 'הָאוֹת בָּאֶמְצַע', skill: 'attention', added: '2026-11-10', teaches: 'Telling look-alike letters apart in a crowd',
+  { id: 'middle', title: 'Middle Letter', titleHe: 'הָאוֹת בָּאֶמְצַע', skill: 'attention', pack: 'life', seconds: SESSION_SECONDS, added: '2026-11-10', teaches: 'Telling look-alike letters apart in a crowd',
     blurb: 'A row of letters. Name only the one in the middle, even when its neighbours try to trick you.' },
-  { id: 'taxi', title: 'Taxi Turns', titleHe: 'יָמִינָה אוֹ שְׂמֹאלָה', skill: 'flexibility', added: '2026-11-10', teaches: 'Right, left and straight on, for taxis and directions in Israel',
+  { id: 'taxi', title: 'Taxi Turns', titleHe: 'יָמִינָה אוֹ שְׂמֹאלָה', skill: 'flexibility', pack: 'life', seconds: SESSION_SECONDS, added: '2026-11-10', teaches: 'Right, left and straight on, for taxis and directions in Israel',
     blurb: 'Tell the driver where to go. Follow the Hebrew word, or the side of the road the sign is on, as the rule changes.' },
-  { id: 'cafe', title: 'Café Order', titleHe: 'בֵּית קָפֶה', skill: 'memory', added: '2026-11-10', teaches: 'Ordering food and drink in Hebrew',
+  { id: 'cafe', title: 'Café Order', titleHe: 'בֵּית קָפֶה', skill: 'memory', pack: 'life', seconds: SESSION_SECONDS, added: '2026-11-10', teaches: 'Ordering food and drink in Hebrew',
     blurb: 'Noa and Ari order in Hebrew. Remember the order, then bring it from the menu in the same order.' },
-  { id: 'chain', title: 'Prayer Chain', titleHe: 'שַׁרְשֶׁרֶת תְּפִלָּה', skill: 'memory', added: '2026-11-10', teaches: 'The order of the words in the blessings and prayers',
+  { id: 'chain', title: 'Prayer Chain', titleHe: 'שַׁרְשֶׁרֶת תְּפִלָּה', skill: 'memory', pack: 'life', seconds: SESSION_SECONDS, added: '2026-11-10', teaches: 'The order of the words in the blessings and prayers',
     blurb: 'A blessing starts. Tap its next words in order, the way the congregation says them.' },
 ]);
+
+export const GAMES = Object.freeze([...CLASSIC_GAMES, ...LIFE_GAMES, ...STUDIO_GAMES]);
+/** Today's workout draws from the 45-second games (the classic drills and the synagogue-and-Israel games), so its length stays about three minutes. */
+export const WORKOUT_GAMES = Object.freeze([...CLASSIC_GAMES, ...LIFE_GAMES]);
 export const GAME_IDS = Object.freeze(GAMES.map((g) => g.id));
 export const gameById = (id) => GAMES.find((g) => g.id === id) || null;
+/** Studio combo bonus: from three right in a row, 5 points per step of the run (capped at 8 steps) times a level factor. */
+export function comboBonus(run, level = 1) {
+  if (!Number.isFinite(run) || run < 3) return 0;
+  const steps = Math.min(8, run - 2);
+  return steps * 5 * (1 + Math.floor(Math.max(1, level) / 4));
+}
+/** HUD label for a run: empty below three, then ×3, ×4 ... with a flame from eight. */
+export const comboLabel = (run) => (run >= 3 ? `${run >= 8 ? '🔥 ' : ''}Combo ×${run}` : '');
+/** Session length for one drill; classic games stay at 45 seconds, studio games at 75. */
+export function sessionSeconds(gameId) {
+  const n = gameById(gameId)?.seconds;
+  return Number.isFinite(n) && n > 0 ? n : SESSION_SECONDS;
+}
 /** A game shows a "New" mark until it has been played once. */
 export const isNewGame = (g, state) => !!g?.added && !readState(state).games[g.id];
 /**
@@ -51,7 +88,8 @@ export const isNewGame = (g, state) => !!g?.added && !readState(state).games[g.i
  * Real type, so it reads at 56 px and needs no download.
  */
 export const GLYPHS = Object.freeze({ hunt: 'צ', matrix: 'מ', soundmatch: 'בָּ', siddurflash: 'שׁ', switch: 'כּ', gematria: 'א', countup: 'ג', numberear: 'ה', calendar: 'ל', pattern: 'כתב',
-  twins: 'טת', rain: 'אֻ', middle: 'בכב', taxi: '⇄', cafe: 'קָפֶה', chain: 'בָּרוּךְ' });
+  twins: 'טת', rain: 'אֻ', middle: 'בכב', taxi: '⇄', cafe: 'קָפֶה', chain: 'בָּרוּךְ',
+  wordburst: 'מִלָּה', migration: 'י״ב', starsearch: '★', rootforge: 'שׁרשׁ', letterseq: 'אבג', speedmatch: '=', letterspan: 'אבגד', vowelrain: 'אִ', tileturn: '↻', pathword: 'נתיב', echo: '♪' });
 
 /** Small seeded generator (mulberry32) so a day's workout and test runs are repeatable. */
 export function seeded(seed) {
@@ -73,7 +111,8 @@ export function dayKey(d = new Date()) { return `${d.getFullYear()}-${String(d.g
 export function dailyWorkout(day, state = emptyState()) {
   const rnd = seeded('workout:' + day);
   const lastPlayed = (id) => state.games[id]?.history?.at(-1)?.d || '';
-  const order = shuffle(GAMES, rnd).sort((a, b) => (lastPlayed(a.id) < lastPlayed(b.id) ? -1 : lastPlayed(a.id) > lastPlayed(b.id) ? 1 : 0));
+  // Today's three stay on the original 45-second set, so the workout length does not jump.
+  const order = shuffle(WORKOUT_GAMES, rnd).sort((a, b) => (lastPlayed(a.id) < lastPlayed(b.id) ? -1 : lastPlayed(a.id) > lastPlayed(b.id) ? 1 : 0));
   const out = [], used = new Set();
   for (const g of order) { if (used.has(g.skill)) continue; out.push(g.id); used.add(g.skill); if (out.length === 3) break; }
   return out;

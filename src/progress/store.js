@@ -86,10 +86,10 @@ export function progressFileName(now = Date.now()) { return `alef-progress-${new
 export function inspectProgressBackup(input) {
   let obj;
   try { obj = typeof input === 'string' ? JSON.parse(input) : input; } catch { return { ok: false, error: 'This file is not valid JSON.' }; }
-  if (!obj || typeof obj !== 'object' || Array.isArray(obj)) return { ok: false, error: 'This is not an Aleph progress file.' };
-  if (obj.app !== 'alef' || obj.kind !== PROGRESS_BACKUP_KIND) return { ok: false, error: obj.app === 'alef' && obj.data && !obj.kind ? 'This is a whole-app backup. Restore it from Settings instead.' : 'This is not an Aleph progress file.' };
+  if (!obj || typeof obj !== 'object' || Array.isArray(obj)) return { ok: false, error: 'This is not an ALEF progress file.' };
+  if (obj.app !== 'alef' || obj.kind !== PROGRESS_BACKUP_KIND) return { ok: false, error: obj.app === 'alef' && obj.data && !obj.kind ? 'This is a whole-app backup. Restore it from Settings instead.' : 'This is not an ALEF progress file.' };
   if (!Number.isInteger(obj.schema) || obj.schema < 1) return { ok: false, error: 'The progress file has no version number.' };
-  if (obj.schema > PROGRESS_BACKUP_SCHEMA) return { ok: false, error: `This progress file is from a newer Aleph (version ${obj.schema}). Update the app first.` };
+  if (obj.schema > PROGRESS_BACKUP_SCHEMA) return { ok: false, error: `This progress file is from a newer ALEF (version ${obj.schema}). Update the app first.` };
   if (!obj.data || typeof obj.data !== 'object' || Array.isArray(obj.data)) return { ok: false, error: 'The progress file has no data block.' };
   if (typeof obj.checksum !== 'string') return { ok: false, error: 'The progress file has no checksum.' };
   if (dataChecksum(obj.data) !== obj.checksum) return { ok: false, error: 'The checksum does not match: the file was changed or cut short after it was saved. Nothing was imported.' };

@@ -259,7 +259,7 @@ test('readNowSummary: fresh learner has every row at zero, with the measurement 
   assert.deepEqual(rows.filter((r) => r.measured === 'self').map((r) => r.id), ['timedread', 'firstday']);
   assert.match(rows[0].value, /^0 of 27 letters, 0 of 15 signs$/);
   assert.match(rows.find((r) => r.id === 'vocab').value, /none started/); assert.match(rows.find((r) => r.id === 'timedread').value, /none yet/);
-  assert.match(rows.find((r) => r.id === 'siddur').value, /^0% of the lines Aleph holds$/); assert.match(rows.find((r) => r.id === 'firstday').value, /not started/);
+  assert.match(rows.find((r) => r.id === 'siddur').value, /^0% of the lines ALEF holds$/); assert.match(rows.find((r) => r.id === 'firstday').value, /not started/);
   assert.ok(!rows.some((r) => /fluen(t|cy) (score|rating)/i.test(r.value)));
 });
 test('readNowSummary: every source feeds its row', () => {

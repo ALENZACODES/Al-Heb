@@ -221,7 +221,7 @@ test("banner: hidden until an update exists, shows message, Reload applies with 
   let flushed = 0; const remove = U.mountUpdateBanner(h, { document: doc, beforeReload: [() => flushed++] });
   const bar = byId(doc.body, "alef-update-banner"); assert.equal(bar.hidden, true); assert.equal(bar.attrs.role, "status");
   const wk = f.worker(); f.foundUpdate(wk); wk.set("installed");
-  assert.equal(bar.hidden, false); assert.match(bar.text, /new version of Aleph is ready/); assert.match(bar.text, /progress is already saved/);
+  assert.equal(bar.hidden, false); assert.match(bar.text, /new version of ALEF is ready/); assert.match(bar.text, /progress is already saved/);
   await byId(doc.body, "alef-update-later").click(); assert.equal(bar.hidden, true);
   bar.hidden = false; await byId(doc.body, "alef-update-reload").click(); assert.equal(flushed, 1); assert.deepEqual(wk.messages, [U.SKIP_WAITING_MESSAGE]);
   remove(); assert.equal(bar.removed, true);

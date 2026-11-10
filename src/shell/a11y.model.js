@@ -33,8 +33,8 @@ export const CONTROLS = [
     help: 'Adds space between letters of English text; Hebrew text is not changed.' },
   { key: 'lineLength', group: 'seeing', type: 'enum', label: 'Line length', options: { normal: 'Normal', narrow: 'Shorter lines' },
     help: 'Makes lines of text narrower so they are shorter to read across.' },
-  { key: 'readFont', group: 'seeing', type: 'enum', label: 'Reading font', options: { default: 'Aleph\'s font', clear: 'A clearer system font' },
-    help: 'Switches between Aleph\'s own font and a plain font already on your device (nothing is downloaded).' },
+  { key: 'readFont', group: 'seeing', type: 'enum', label: 'Reading font', options: { default: 'ALEF\'s font', clear: 'A clearer system font' },
+    help: 'Switches between ALEF\'s own font and a plain font already on your device (nothing is downloaded).' },
   // Colour and contrast
   { key: 'theme', group: 'colour', type: 'enum', label: 'Colour theme',
     options: { auto: 'Follow my device', light: 'Light', dark: 'Dark', contrast: 'High contrast, black on white', 'contrast-dark': 'High contrast, white on black' },

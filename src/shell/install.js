@@ -78,8 +78,8 @@ export function installStatus(p) {
 
 /** Steps for the iOS card. Wording matches Apple's published flow (iOS 16.4 and later); not verified on a device here. */
 export const IOS_STEPS = Object.freeze([
-  "Open Aleph in Safari.",
+  "Open ALEF in Safari.",
   "Tap the Share button (the square with an arrow) at the bottom of the screen, or at the top on an iPad.",
   "Scroll down and tap \"Add to Home Screen\".",
-  "Tap \"Add\". Then open Aleph from the new icon on your Home Screen.",
+  "Tap \"Add\". Then open ALEF from the new icon on your Home Screen.",
 ]);

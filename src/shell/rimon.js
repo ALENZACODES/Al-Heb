@@ -50,9 +50,11 @@ export function mountRimon({store,doc=document}={}) {
   const next=doc.createElement('a');next.className='rimon-next';next.textContent='Next lesson →';next.hidden=true;
   const dismiss=doc.createElement('button');dismiss.type='button';dismiss.className='rimon-dismiss';dismiss.textContent='×';dismiss.setAttribute('aria-label','Hide Rimon');
   const restore=doc.createElement('button');restore.type='button';restore.className='rimon-restore';restore.textContent='Show Rimon';restore.hidden=true;
-  host.append(sprite,caption,next,dismiss);doc.body.append(host,restore);
+  // A still (src/shell/rimon-stage.js) sits over the sprite: for a moment (a pose) or for the whole page (Rimon dressed for the screen).
+  const still=doc.createElement('img');still.className='rimon-still';still.alt='';still.setAttribute('aria-hidden','true');still.decoding='async';still.hidden=true;
+  host.append(sprite,still,caption,next,dismiss);doc.body.append(host,restore);
   const media=globalThis.matchMedia?.('(prefers-reduced-motion: reduce)');
-  const animator=createAnimator(),loaded=new Map(),base=new URL('../../assets/img/rimon/',import.meta.url);
+  const animator=createAnimator(),loaded=new Map(),base=new URL('../../assets/img/rimon/web/',import.meta.url); // light WebP copies (about 100 KB a sheet, not 1 MB); originals stay in assets/img/rimon/
   let inlineVisible=true,observer;
   let alive=true,hidden=false,requestId=0,lastActivity=Date.now(),yawned=false,thought=false,nextBlink=Date.now()+4000,lastPaint='',idleSince=Date.now();
   try{hidden=store?.get('rimon.dismissed',false)===true;}catch{}
@@ -60,23 +62,40 @@ export function mountRimon({store,doc=document}={}) {
   const speech=mountSpeechBubble(host,{doc,streak:()=>{try{const r=store?.get?.('streak');return r?projectStreak(r,new Date()):null;}catch{return null;}}});
   function remember(){try{store?.set('rimon.dismissed',hidden);}catch{}}
   function load(name){
-    if(!loaded.has(name)) loaded.set(name,new Promise(resolve=>{const image=new Image();image.onload=()=>resolve(true);image.onerror=()=>resolve(false);image.src=new URL(name+'.png',base).href;}));
+    if(!loaded.has(name)) loaded.set(name,new Promise(resolve=>{const image=new Image();image.onload=()=>resolve(true);image.onerror=()=>resolve(false);image.src=new URL(name+'.webp',base).href;}));
     return loaded.get(name);
   }
   function paint(){
     const action=animator.action,frame=animator.frame,key=action+':'+frame;
     if(key===lastPaint) return;lastPaint=key;
     const sheet=action==='idle'?'blink':action;
-    sprite.style.backgroundImage=`url("${new URL(sheet+'.png',base).href}")`;
+    sprite.style.backgroundImage=`url("${new URL(sheet+'.webp',base).href}")`;
     sprite.style.backgroundPosition=`${(frame%4)*100/3}% ${Math.floor(frame/4)*50}%`;
     if(host.dataset.action!==action) speech.say(action);
     host.dataset.action=action;host.dataset.frame=String(frame);sprite.dataset.action=action;sprite.dataset.frame=String(frame);
     caption.textContent=ACTIONS[action]?.label || 'Ready to learn';
     sprite.setAttribute('aria-label',`Rimon: ${caption.textContent}`);
   }
+  let pageStill=null,posing=false,poseTimer=0,liftTimer=0;
+  function applyStill(src){
+    if(src){if(still.getAttribute('src')!==src)still.src=src;still.hidden=false;host.classList.add('rimon-has-still');}
+    else{still.hidden=true;host.classList.remove('rimon-has-still');}
+  }
+  /** Show a still: ms > 0 for a moment, then back to the page still (or the sprite); ms 0 sets the page still (null clears it). */
+  function showStill(src,{ms=0,line=null}={}){
+    if(!alive||hidden)return false;
+    clearTimeout(liftTimer);
+    if(ms>0){clearTimeout(poseTimer);posing=true;applyStill(src);if(src)peekSoon();poseTimer=setTimeout(()=>{posing=false;applyStill(pageStill);},ms);}
+    else{pageStill=src||null;if(!posing)applyStill(pageStill);}
+    if(line)speech.line(line);
+    return true;
+  }
+  function clearPose(){if(!posing)return;clearTimeout(poseTimer);posing=false;applyStill(pageStill);}
   async function play(name){
     if(!ACTIONS[name] || hidden || !alive) return;
     if(name!=='blink'&&name!=='yawn'&&name!=='thinking'&&typeof peekSoon==='function')peekSoon();
+    // Dressed for the page: step out of the still while a reaction plays, so the move is seen.
+    if(pageStill&&!posing&&!media?.matches&&ACTIONS[name].priority>0){applyStill(null);clearTimeout(liftTimer);liftTimer=setTimeout(()=>{if(!posing)applyStill(pageStill);},actionDuration(name));}
     if(media?.matches){speech.say(name);return;}
     const id=requestId;
     if(await load(name) && alive && id===requestId && !hidden && !media?.matches){animator.request(name,Date.now());paint();}
@@ -112,7 +131,7 @@ export function mountRimon({store,doc=document}={}) {
   const ready=()=>{
     // a page greeting: he waves from where he is; when already peeking he stays down so the new page is clear
     const wasPeeking=host.classList.contains('rimon-peek');
-    next.hidden=true;observer?.disconnect();inlineVisible=true;place();reset();activity();play('wave');
+    next.hidden=true;observer?.disconnect();inlineVisible=true;clearTimeout(poseTimer);clearTimeout(liftTimer);posing=false;pageStill=null;applyStill(null);place();reset();activity();play('wave');
     if(wasPeeking&&phone()&&host.classList.contains('rimon-corner')){clearTimeout(peekTimer);host.classList.add('rimon-peek');}
     const hero=doc.querySelector('.show-hero-text');
     if(hero && typeof IntersectionObserver==='function'){
@@ -136,5 +155,5 @@ export function mountRimon({store,doc=document}={}) {
     else if(now>=nextBlink){nextBlink=now+6000;play('blink');}
   },32);
   const readyPromise=load('blink').then(ok=>{if(!alive)return false;if(!ok){sprite.style.backgroundImage=`url("${new URL('../../assets/img/gen/MASCOT_rimon.800.webp',import.meta.url).href}")`;sprite.style.backgroundSize='contain';clearInterval(timer);return false;}reduce();place();play('wave');return true;});
-  return {element:host,play,ready:readyPromise,destroy(){speech.destroy();observer?.disconnect();offStore?.();alive=false;requestId++;clearInterval(timer);clearTimeout(peekTimer);doc.defaultView?.removeEventListener?.('hashchange',onRoute);host.remove();restore.remove();doc.removeEventListener('alef:rimon',event);doc.removeEventListener('alef:ready',ready);doc.removeEventListener('pointerdown',activity);doc.removeEventListener('keydown',activity);media?.removeEventListener('change',reduce);}};
+  return {element:host,play,showStill,clearPose,get pageStill(){return pageStill;},ready:readyPromise,destroy(){speech.destroy();observer?.disconnect();offStore?.();alive=false;requestId++;clearInterval(timer);clearTimeout(peekTimer);clearTimeout(poseTimer);clearTimeout(liftTimer);doc.defaultView?.removeEventListener?.('hashchange',onRoute);host.remove();restore.remove();doc.removeEventListener('alef:rimon',event);doc.removeEventListener('alef:ready',ready);doc.removeEventListener('pointerdown',activity);doc.removeEventListener('keydown',activity);media?.removeEventListener('change',reduce);}};
 }

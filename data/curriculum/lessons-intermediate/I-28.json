@@ -3,7 +3,7 @@
  "track": "read",
  "level": "intermediate",
  "unit": "synagogue",
- "title": "Yom Kippur: the few lines the corpus holds and the words around them",
+ "title": "Yom Kippur: the Shema line said aloud and the words of the day",
  "status": "draft",
  "proofread": false,
  "needsNativeReview": true,
@@ -303,7 +303,7 @@
   {
    "id": "I-28-e09",
    "type": "respond",
-   "cue": "Someone you wronged asks for forgiveness. Ask 'excuse me / sorry' back politely.",
+   "cue": "Before Yom Kippur, ask someone you may have wronged to forgive you. Say 'sorry, forgive me'.",
    "answer": {
     "he": "סְלִיחָה",
     "en": "Excuse me / sorry (forgive me)"

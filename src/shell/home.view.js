@@ -84,6 +84,9 @@ export function mount(root, ctx) {
       firstday, onboarding, placement, hasRoute: ctx.hasRoute, daysAway: daysAway({ last: st.rawStreak?.last, cards: st.cards }), reviewedToday: reviewedToday(st.cards), dailyGoal: goalNow, speak, typing, compare,
       });
       renderRest(today.firstRun);
+      // Streak flame under the title (Duolingo-style), only when there is a streak and the learner has not hidden streaks.
+      header.querySelector?.('.alef-streak-flame')?.remove?.();
+      if (streakVisible(ctx) && today.streak.count > 0) header.append(h('p', { class: 'alef-streak-flame', 'data-streak-slot': 'home' }, h('span', { class: 'alef-flame', 'aria-hidden': 'true' }, '🔥'), h('strong', {}, `${today.streak.count}-day streak`), today.streak.activeToday ? ' · today counts' : ' · keep it lit today'));
       // A returning learner sees their next step first: the Today card moves up under the title, and the hero's
       // "Start your first 10 minutes" (already done) gives way to it. A first visit keeps the showcase on top.
       if (!today.firstRun) {

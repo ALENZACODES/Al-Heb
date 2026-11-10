@@ -61,7 +61,7 @@ function hub(wrap, arts) {
   const rest = arts.filter((a) => !listed.has(a.id));
   wrap.replaceChildren(
     h('h1', { id: 'view-title', tabindex: '-1' }, 'Library ', heSpan('סִפְרִיָּה', 'he')),
-    h('p', { class: 'lib-sub' }, 'Short reads on Jewish life, written for adults starting out. Each one teaches a few Hebrew words and ends with something to try in Aleph.'),
+    h('p', { class: 'lib-sub' }, 'Short reads on Jewish life, written for adults starting out. Each one teaches a few Hebrew words and ends with something to try in ALEF.'),
     h('a', { class: 'lib-feature', href: '#/library/letter-videos' }, h('span', { 'aria-hidden': 'true', style: 'font-size:2rem' }, '▶'), h('span', {}, h('b', {}, 'Letter Videos'), 'Watch each letter drawn stroke by stroke, then hear its name and sound.')),
     ...GROUPS.map((g) => h('section', { class: 'lib-group' }, h('h2', {}, g.title), h('ul', { class: 'lib-list' }, ...g.ids.map((id) => byId.get(id)).filter(Boolean).map(card)))),
     rest.length ? h('section', { class: 'lib-group' }, h('h2', {}, 'More'), h('ul', { class: 'lib-list' }, ...rest.map(card))) : '');

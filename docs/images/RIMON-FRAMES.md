@@ -1,5 +1,7 @@
 # Rimon frames: the mascot as a flip-book
 
+Superseded for new work: the twelve animated sheets (docs/images/rimon-animation.md) are what the app plays, and the 200 stills in docs/images/RIMON-STILLS.md are the next pictures to make. This page is kept as the record of the earlier flip-book plan.
+
 Order sheet: `docs/images/rimon-frames.csv` (19 frames, 256 x 256 PNG with transparency). Nothing has been drawn yet; the helper below renders nothing until frames exist.
 
 | Action | Frames | Files |

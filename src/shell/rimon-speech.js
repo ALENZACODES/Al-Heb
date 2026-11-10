@@ -61,13 +61,17 @@ export function mountSpeechBubble(host,{doc=document,now=()=>new Date(),streak=n
   const schedule=createSpeechSchedule({greet:(t)=>greetingFor(new Date(t)),followUp:()=>{const st=streak?.();if(!st||!st.count)return null;return st.activeToday?doneLine(st.count):streakLine(st.count);}});let message=null,expires=0,friday=isFriday(now()),key='';
   function pair(line,cls){
     const group=doc.createElement('span');group.className=cls;
-    const he=doc.createElement('span');he.className='rimon-bubble-he';he.lang='he';he.dir='rtl';he.textContent=line.he;
     const en=doc.createElement('span');en.className='rimon-bubble-en';en.lang='en';en.dir='ltr';en.textContent=line.en;
+    if(!line.he){group.append(en);return group;}
+    const he=doc.createElement('span');he.className='rimon-bubble-he';he.lang='he';he.dir='rtl';he.textContent=line.he;
     group.append(he,en);return group;
   }
   function position(){
     if(bubble.hidden)return;
     const rect=host.getBoundingClientRect(),width=bubble.offsetWidth,height=bubble.offsetHeight;
+    // Phones: sit just above Rimon at the right edge (compact), never across the middle of the screen where lessons and tracing are.
+    if(innerWidth<=600){bubble.classList.add('rimon-bubble-phone');bubble.style.left=Math.max(8,innerWidth-width-8)+'px';bubble.style.top=Math.max(8,rect.top-height-8)+'px';return;}
+    bubble.classList.remove('rimon-bubble-phone');
     bubble.style.left=Math.max(8,Math.min(innerWidth-width-8,rect.left-width-10))+'px';
     const safeBottom=innerWidth<=600?80:8;
     const top=Math.max(8,Math.min(innerHeight-height-safeBottom,rect.top+12));
@@ -81,15 +85,20 @@ export function mountSpeechBubble(host,{doc=document,now=()=>new Date(),streak=n
     const nextKey=(friday?'friday':'')+'|'+(message?.en||'')+'|'+host.hidden;
     if(nextKey!==key){
       key=nextKey;bubble.replaceChildren();
-      if(friday)bubble.append(pair(SHABBAT,'rimon-shabbat'));
+      if(friday&&message?.he!==SHABBAT.he)bubble.append(pair(SHABBAT,'rimon-shabbat'));
       if(message)bubble.append(pair(message,'rimon-encouragement'));
-      bubble.hidden=host.hidden || (!friday&&!message);
+      bubble.hidden=host.hidden || (!friday&&!message) || ((globalThis.innerWidth||1024)<=600 && !!doc.querySelector?.('.alef-trace .stage, .alef-quiz, .fd-sheet'));
       if(!bubble.hidden){bubble.classList.remove('is-popping');void bubble.offsetWidth;bubble.classList.add('is-popping');}
     }
     position();
   }
   function say(action){
     schedule.reaction(action);
+  }
+  /** Say one line now (a still's line from src/shell/rimon-stage.js); it stays as long as a scheduled message. */
+  function line(l){
+    if(!l||!l.en)return;
+    message=l;expires=now().getTime()+Math.max(6500,l.en.length*160);render();
   }
   // Any tap, key or scroll also clears a visible bubble, so it never sits on top of a button the learner wants.
   const activity=(e)=>{schedule.activity(now().getTime());if(message && e && e.type!=='pointermove'){message=null;render();}};
@@ -99,5 +108,5 @@ export function mountSpeechBubble(host,{doc=document,now=()=>new Date(),streak=n
   const visibility=()=>render();doc.addEventListener('visibilitychange',visibility);
   globalThis.addEventListener('resize',position);globalThis.addEventListener('scroll',position,{passive:true,capture:true});
   render();
-  return {say,refresh:render,element:bubble,destroy(){clearInterval(interval);bubble.remove();for(const event of activityEvents)doc.removeEventListener(event,activity,true);doc.removeEventListener('visibilitychange',visibility);globalThis.removeEventListener('resize',position);globalThis.removeEventListener('scroll',position,true);}};
+  return {say,line,refresh:render,element:bubble,destroy(){clearInterval(interval);bubble.remove();for(const event of activityEvents)doc.removeEventListener(event,activity,true);doc.removeEventListener('visibilitychange',visibility);globalThis.removeEventListener('resize',position);globalThis.removeEventListener('scroll',position,true);}};
 }

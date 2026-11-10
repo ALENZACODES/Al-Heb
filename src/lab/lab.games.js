@@ -2,7 +2,7 @@
 // and resolves {ok, ms, par}. The runner in lab.view.js owns the clock, the difficulty staircase and the score.
 // All Hebrew here comes from Aleph's own data files: letters, syllable recordings, the prayer corpus, the number words in
 // the dictionary, the holiday table and the word families. Nothing is typed in by hand.
-import { randInt, shuffle, sample, choices, gematriaPuzzle, hasPattern, consonants, lineWords, hasDivineName } from './lab.core.js';
+import { randInt, shuffle, sample, choices, gematriaPuzzle, hasPattern, consonants, lineWords, hasDivineName, NOT_A_GAME } from './lab.core.js';
 import { HOLIDAY_DEFS, HEBREW_MONTH_NAMES, hebrewNumeral } from '../curriculum/calendar.js';
 
 const url = (p) => new URL(`../../${p}`, import.meta.url);
@@ -49,7 +49,7 @@ const hunt = {
     const fill = Array.from({ length: n - targets }, () => (level >= 3 && twins.length && env.rnd() < 0.5 ? twins[randInt(env.rnd, twins.length)] : others[randInt(env.rnd, others.length)]));
     const board = shuffle([...Array(targets).fill(target), ...fill], env.rnd);
     let found = 0;
-    env.met?.({ he: target.he, en: target.name });
+    env.met?.({ he: target.he, en: target.name, clip: { kind: 'letter', id: target.id } });
     return new Promise((resolve) => {
       const t0 = env.now();
       env.prompt(env.h('span', {}, 'Find every ', big(env, target.he, 'lab-inline'), ` ${target.name}`));
@@ -79,7 +79,7 @@ const matrix = {
     const spots = sample([...Array(n).keys()], shown, env.rnd);
     const at = new Map(spots.map((s, k) => [s, k < targets ? target : (level >= 5 && twins.length && env.rnd() < 0.5 ? twins[randInt(env.rnd, twins.length)] : others[randInt(env.rnd, others.length)])]));
     let found = 0, open = false, t0 = 0;
-    env.met?.({ he: target.he, en: target.name });
+    env.met?.({ he: target.he, en: target.name, clip: { kind: 'letter', id: target.id } });
     return new Promise((resolve) => {
       env.prompt('Remember the letters…'); env.rimon?.('thinking');
       const g = grid(env, n, side, (i, b) => { const l = at.get(i); if (l) b.append(big(env, l.he, 'lab-glyph')); b.setAttribute('aria-label', l ? l.name : 'empty'); b.disabled = true; }, (i, b) => {
@@ -88,8 +88,6 @@ const matrix = {
         if (l && l.id === target.id) { b.disabled = true; b.replaceChildren(big(env, l.he, 'lab-glyph')); mark(b, true); found++; if (found === targets) resolve({ ok: true, ms: env.now() - t0, par: 1400 * targets }); }
         else { mark(b, false); for (const [k, v] of at) if (v.id === target.id) { g.cells[k].replaceChildren(big(env, v.he, 'lab-glyph')); g.cells[k].classList.add('is-reveal'); } resolve({ ok: false, ms: env.now() - t0 }); }
       }, 'Memory grid');
-      const back = env.artSrc?.('LAB_v2_matrix_play', 200); // the ordered tile back, once approved
-      if (back) g.el.style.setProperty('--lab-back', `url("${back}")`);
       env.board.replaceChildren(g.el);
       env.later(() => {
         for (const c of g.cells) { c.replaceChildren(); c.disabled = false; c.setAttribute('aria-label', 'hidden'); c.classList.add('is-hidden'); }
@@ -119,7 +117,7 @@ const soundmatch = {
       const finish = (r) => { if (!done) { done = true; resolve(r); } };
       const again = env.h('button', { type: 'button', class: 'btn secondary lab-hear', onclick: () => env.playClip('syllable', target.id, target.he) }, '▶ Hear it again');
       const readIt = () => env.prompt(env.h('span', {}, 'Tap the syllable that says ', env.h('b', { class: 'lab-say' }, `"${target.tr}"`)));
-      if (env.hasClip('syllable', target.id)) { env.prompt(env.h('span', {}, env.img?.('id', 'LAB_v2_soundmatch_play', 'lab-side-pic', 200), 'Tap the syllable you heard. ', again)); env.playClip('syllable', target.id, target.he).then((ok) => { if (!ok) readIt(); }); }
+      if (env.hasClip('syllable', target.id)) { env.prompt(env.h('span', {}, 'Tap the syllable you heard. ', again)); env.playClip('syllable', target.id, target.he).then((ok) => { if (!ok) readIt(); }); }
       else readIt();
       const g = grid(env, opts.length, opts.length <= 4 ? 2 : 3, (i, b) => { b.append(big(env, opts[i].he, 'lab-glyph')); b.setAttribute('aria-label', opts[i].tr); }, (i, b) => {
         const ok = opts[i].id === target.id; mark(b, ok);
@@ -136,7 +134,7 @@ const soundmatch = {
 const siddurflash = {
   load: (env) => once('siddurlines', async () => {
     const reg = await getJSON(env, 'data/corpus/registry.json');
-    return reg.entries.filter((e) => (e.category === 'siddur' || e.category === 'torah') && e.he).map((e) => ({ id: e.id, title: e.title, words: lineWords(e.he) })).filter((e) => e.words.length >= 3);
+    return reg.entries.filter((e) => (e.category === 'siddur' || e.category === 'torah') && e.he && !NOT_A_GAME.has(e.id)).map((e) => ({ id: e.id, title: e.title, words: lineWords(e.he) })).filter((e) => e.words.length >= 3);
   }),
   trial(env, level) {
     const lines = env.data;
@@ -154,7 +152,6 @@ const siddurflash = {
       let shownAt = null, hiddenAt = null, done = false, idx = -1;
       const finish = (r) => { if (!done) { done = true; resolve(r); } };
       const word = env.h('div', { class: 'lab-flash', 'aria-live': 'off' });
-      env.backdrop?.(word, 'LAB_v2_siddurflash_play', 700);
       const now = env.h('button', { type: 'button', class: 'btn lab-now', onclick: () => {
         const t = env.now();
         if (idx === targetIndex) finish({ ok: true, ms: t - shownAt, par: step });
@@ -205,7 +202,6 @@ const ruleswitch = {
       const pick = (yes, b) => { const ok = yes === answer; mark(b, ok); if (!ok) env.say(`${item.name}: ${answer ? 'yes' : 'no'}.`); finish({ ok, ms: env.now() - t0, par: 1100 }); };
       env.prompt(env.h('span', { class: `lab-rule ${RULES[rule].cls}` }, RULES[rule].q));
       const card = env.h('div', { class: `lab-card ${RULES[rule].cls}` }, big(env, item.he, 'lab-glyph lab-huge'));
-      env.backdrop?.(card, 'LAB_v2_switch_play', 500);
       const no = env.h('button', { type: 'button', class: 'btn secondary lab-yn', onclick: () => pick(false, no) }, 'No');
       const yes = env.h('button', { type: 'button', class: 'btn lab-yn', onclick: () => pick(true, yes) }, 'Yes');
       env.board.replaceChildren(card, env.h('div', { class: 'lab-row' }, no, yes));
@@ -241,7 +237,7 @@ const gematria = {
           resolve({ ok: false, ms: env.now() - t0 });
         }
       }, 'Letter tiles');
-      env.board.replaceChildren(g.el, env.h('div', { class: 'lab-row' }, env.img?.('id', 'LAB_v2_gematria_play', 'lab-side-pic', 220), total));
+      env.board.replaceChildren(g.el, total);
     });
   },
 };
@@ -287,7 +283,7 @@ const numberear = {
       let done = false; const t0 = env.now();
       const finish = (r) => { if (!done) { done = true; resolve(r); } };
       const readIt = () => env.prompt(env.h('span', {}, 'Which number is ', big(env, target.he, 'lab-inline'), '?'));
-      if (env.hasClip('word', target.clip || target.id)) { env.prompt(env.h('span', {}, env.img?.('id', 'LAB_v2_numberear_play', 'lab-side-pic', 200), 'Tap the number you heard. ', env.h('button', { type: 'button', class: 'btn secondary lab-hear', onclick: () => env.sayWord(target) }, '▶ Again'))); env.sayWord(target).then((ok) => { if (!ok) readIt(); }); }
+      if (env.hasClip('word', target.clip || target.id)) { env.prompt(env.h('span', {}, 'Tap the number you heard. ', env.h('button', { type: 'button', class: 'btn secondary lab-hear', onclick: () => env.sayWord(target) }, '▶ Again'))); env.sayWord(target).then((ok) => { if (!ok) readIt(); }); }
       else readIt();
       const g = grid(env, opts.length, opts.length <= 4 ? 2 : 3, (i, b) => { b.append(env.h('span', { class: 'lab-digit' }, String(opts[i].value))); }, (i, b) => {
         const ok = opts[i].value === target.value; mark(b, ok);
@@ -306,7 +302,12 @@ const shortName = (d) => d.en.replace(/\s*\(.*\)$/, '');
 const dateEn = (d) => `${d.day} ${monthOf(d).en}`;
 const dateHe = (d) => `${hebrewNumeral(d.day)} ${monthOf(d).he}`;
 const calendar = {
-  load: async () => HOLIDAY_DEFS.slice(),
+  // The holy days, with the recorded name of each one that has a recording (data/lab/words.json holyDays).
+  load: (env) => once('calendardays', async () => {
+    let clips = {};
+    try { clips = Object.fromEntries(((await getJSON(env, 'data/lab/words.json')).holyDays || []).map((d) => [d.id, d.clip])); } catch { /* names stay silent */ }
+    return HOLIDAY_DEFS.map((d) => ({ ...d, clip: clips[d.id] || null }));
+  }),
   trial(env, level) {
     const days = env.data;
     const d = days[randInt(env.rnd, days.length)];
@@ -314,7 +315,7 @@ const calendar = {
     const kind = level <= 2 ? 'which' : level <= 5 ? (env.rnd() < 0.5 ? 'which' : 'when') : (env.rnd() < 0.5 ? 'when' : 'whenHe');
     const opts = choices(d, days, n, env.rnd, (a, b) => a.id === b.id || (a.month === b.month && a.day === b.day));
     const limit = Math.max(3200, 9500 - level * 480);
-    env.met?.({ he: d.he, en: `${shortName(d)}: ${dateEn(d)}` });
+    env.met?.({ he: d.he, en: `${shortName(d)}: ${dateEn(d)}`, clip: d.clip });
     return new Promise((resolve) => {
       let done = false; const t0 = env.now();
       const finish = (r) => { if (!done) { done = true; resolve(r); } };
@@ -328,6 +329,7 @@ const calendar = {
       }, (i, b) => {
         const ok = opts[i].id === d.id; mark(b, ok);
         env.say(`${shortName(d)}: ${dateEn(d)}.`);
+        if (d.clip && env.hasClip(d.clip.kind, d.clip.id)) env.playClip(d.clip.kind, d.clip.id, d.he); // hear the day's Hebrew name
         finish({ ok, ms: env.now() - t0, par: 2500 });
       }, 'Answers');
       env.board.replaceChildren(g.el);

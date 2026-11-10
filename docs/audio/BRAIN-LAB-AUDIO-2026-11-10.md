@@ -1,0 +1,51 @@
+# Brain Lab Audio Manifest (2026-11-10)
+
+Every Hebrew item a Brain Lab game shows, checked against the recordings the games can play. Built by `node tools/lab/build-audio-manifest.mjs` from the game data; the full list (one row per item, with word id, Hebrew with nikud, English, both voices and the existing clip) is [`BRAIN-LAB-AUDIO-2026-11-10.csv`](BRAIN-LAB-AUDIO-2026-11-10.csv).
+
+**Voices:** Israeli man (Ari, `m`) and Israeli woman (Noa, `f`), the same voices as the rest of the app. The Sephardi and Ashkenazi settings play the Israeli clips (owner decisions, 2026-11-07), so they need nothing of their own except where the tradition says the item differently; those rows say so in the `traditions` column. **Recorded** means a clip of exactly that pointed text exists in both voices and the game can play it.
+
+| Game | Items | Recorded | Record first (1) | Next (2) | Later (3) |
+|---|---|---|---|---|---|
+| Calendar Puzzle | 27 | 4 | 10 | 0 | 13 |
+| Prayer Chain, Siddur Flash | 41 | 37 | 1 | 3 | 0 |
+| Count Up, Number Ear | 18 | 17 | 0 | 1 | 0 |
+| Letter Pattern | 929 | 309 | 0 | 125 | 495 |
+| Sound Twins | 32 | 26 | 0 | 0 | 6 |
+| Vowel Rain | 73 | 51 | 0 | 0 | 22 |
+| Café Order | 29 | 29 | 0 | 0 | 0 |
+| Letter Hunt, Letter Matrix, Middle Letter, Gematria | 27 | 27 | 0 | 0 | 0 |
+| Sound Match, Vowel Rain | 110 | 110 | 0 | 0 | 0 |
+| Taxi Turns | 5 | 5 | 0 | 0 | 0 |
+
+Priority 1: a game plays it, or asks for it by sound, and beginners meet it first. Priority 2: a game plays it but higher up, or shows it silently to beginners. Priority 3: everything else.
+
+## Record First
+
+| Game | Id | Hebrew | English | Ari (m) | Noa (f) | Traditions |
+|---|---|---|---|---|---|---|
+| Calendar Puzzle | `rosh-hashanah` | רֹאשׁ הַשָּׁנָה | Rosh Hashanah | missing | missing | Israeli clip for all three settings |
+| Calendar Puzzle | `yom-kippur` | יוֹם כִּפּוּר | Yom Kippur | missing | missing | Israeli clip for all three settings |
+| Calendar Puzzle | `sukkot` | סֻכּוֹת | Sukkot | missing | missing | Israeli clip for all three settings |
+| Calendar Puzzle | `shemini-atzeret` | שְׁמִינִי עֲצֶרֶת וְשִׂמְחַת תּוֹרָה | Shemini Atzeret / Simchat Torah | missing | missing | Israeli clip for all three settings |
+| Calendar Puzzle | `tu-bishvat` | טוּ בִּשְׁבָט | Tu BiShvat | missing | missing | Israeli clip for all three settings |
+| Calendar Puzzle | `yom-hashoah` | יוֹם הַשּׁוֹאָה | Yom HaShoah (Holocaust Remembrance Day) | missing | missing | Israeli clip for all three settings |
+| Calendar Puzzle | `yom-hazikaron` | יוֹם הַזִּכָּרוֹן | Yom HaZikaron (Israel Memorial Day) | missing | missing | Israeli clip for all three settings |
+| Calendar Puzzle | `yom-haatzmaut` | יוֹם הָעַצְמָאוּת | Yom HaAtzmaut (Israel Independence Day) | missing | missing | Israeli clip for all three settings |
+| Calendar Puzzle | `shavuot` | שָׁבוּעוֹת | Shavuot | missing | missing | Israeli clip for all three settings |
+| Calendar Puzzle | `tisha-bav` | תִּשְׁעָה בְּאָב | Tisha B'Av | missing | missing | Israeli clip for all three settings |
+| Prayer Chain, Siddur Flash | `torah-barchu` | בָּרְכוּ אֶת יְהוָה הַמְּבֹרָךְ׃ | Barchu (call to the Torah blessing) | missing | missing | Israeli clip (prayer voice); the divine name is spoken as Adonai |
+
+## Next
+
+| Game | Id | Hebrew | English | Ari (m) | Noa (f) | Traditions |
+|---|---|---|---|---|---|---|
+| Count Up, Number Ear | `h0b5f5c41` | תִּשְׁעִים | 90 (ninety) | dictionary list only | dictionary list only | Israeli clip for all three settings |
+| Prayer Chain, Siddur Flash | `hagomel` | בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם הַגּוֹמֵל לְחַיָּבִים טוֹבוֹת שֶׁגְּמָלַנִי כָּל טוֹב׃ | Birkat Hagomel (after recovery or safe travel) and the congregation's response | missing | missing | Israeli clip (prayer voice); the divine name is spoken as Adonai |
+| Prayer Chain, Siddur Flash | `sim-shalom` | שִׂים שָׁלוֹם טוֹבָה וּבְרָכָה חֵן וָחֶסֶד וְרַחֲמִים עָלֵינוּ וְעַל כָּל־יִשְׂרָאֵל עַמֶּךָ בָּרְכֵנוּ אָבִינוּ כֻּלָּנוּ כְּאֶחָד בְּאוֹר פָּנֶיךָ כִּי בְאוֹר פָּנֶיךָ נָתַתָּ לָּנוּ יְהוָה אֱלֹהֵינוּ תּוֹרַת חַיִּים וְאַהֲבַת חֶסֶד וּצְדָקָה וּבְרָכָה וְרַחֲמִים וְחַיִּים וְשָׁלוֹם וְטוֹב בְּעֵינֶיךָ לְבָרֵךְ אֶת עַמְּךָ יִשְׂרָאֵל בְּכָל־עֵת וּבְכָל־שָׁעָה בִּשְׁלוֹמֶךָ׃ | Sim shalom (peace blessing of the morning Amidah) | missing | missing | Israeli clip (prayer voice); the divine name is spoken as Adonai |
+| Prayer Chain, Siddur Flash | `haftarah-after` | בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם צוּר כָּל־הָעוֹלָמִים צַדִּיק בְּכָל־הַדּוֹרוֹת הָאֵל הַנֶּאֱמָן הָאֹמֵר וְעֹשֶׂה הַמְדַבֵּר וּמְקַיֵּם שֶׁכָּל־דְּבָרָיו אֱמֶת וָצֶדֶק נֶאֱמָן אַתָּה הוּא יְהוָה אֱלֹהֵינוּ וְנֶאֱמָנִים דְּבָרֶיךָ וְדָבָר אֶחָד מִדְּבָרֶיךָ אָחוֹר לֹא יָשׁוּב רֵיקָם כִּי אֵל מֶלֶךְ נֶאֱמָן וְרַחֲמָן אָתָּה בָּרוּךְ אַתָּה יְהוָה הָאֵל הַנֶּאֱמָן בְּכָל־דְּבָרָיו׃ | Haftarah blessings after the reading (Shabbat) | missing | missing | Israeli clip (prayer voice); the divine name is spoken as Adonai |
+
+Letter Pattern adds 125 beginner words at priority 2 and 495 more at priority 3; the game does not speak yet, so they are listed only in the CSV.
+
+## For the Ashkenazi and Sephardi Settings
+
+28 items are said differently in a tradition (for example kamatz is "o" in Ashkenazi, and Chet and Ayin are their own sounds in Sephardi). Those settings do not play the Israeli clip for them; recording them in the Ashkenazi or Sephardi way would let them be heard there. They are the rows whose `traditions` column says "own clip needed".

@@ -296,3 +296,61 @@ body.ob-player main { max-inline-size: var(--measure-app); margin-inline: auto; 
 .alef-summary .rimon-inline { --rimon-size: 132px; position: relative; z-index: 1; }
 .alef-summary .fd-flame { color: inherit; }
 :root:not([data-theme="light"]):not([data-theme^="contrast"]) .alef-celebrate-cheer { color: var(--gold-400); }
+
+/* ---------- 12. Round 3: the path reads as stops, not a stack of cards ---------- */
+/* Only the next lesson is a card. Finished and locked lessons are round stops on the dotted trail with their title beside them;
+   a locked stop shows a lock and no dead Start button (the button stays in the page, disabled, for screen readers). */
+.alef-lesson:not(.alef-lesson-available) { background: transparent; border-color: transparent; box-shadow: none; }
+.alef-lesson:not(.alef-lesson-available) .alef-level { display: none; }
+.alef-lesson-locked .alef-btn[disabled] { display: none; }
+.alef-lesson-locked > strong { color: var(--muted); font-weight: var(--fw-medium); }
+.alef-lesson::before { inline-size: 3.2rem; block-size: 3.2rem; inset-inline-start: .4rem; }
+.alef-lesson { padding-inline-start: 4.4rem; min-block-size: 4rem; }
+.alef-lesson-list::before { inset-inline-start: 2rem; }
+:root .alef-lesson-done::before {
+  content: ""; background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2313301a' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'><path d='M5 12.5l4.5 4.5L19 7.5'/></svg>") center / 52% no-repeat, var(--gold-500);
+  box-shadow: inset 0 -5px 0 #a97b25;
+}
+:root .alef-lesson-available::before {
+  background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='%23fff8e6' d='M12 2.8l2.7 5.6 6.1.8-4.5 4.2 1.1 6.1L12 16.6l-5.4 2.9 1.1-6.1-4.5-4.2 6.1-.8z'/></svg>") center / 55% no-repeat, var(--gold-500);
+  box-shadow: inset 0 -5px 0 #a97b25, 0 0 0 6px rgba(217, 164, 65, .3);
+}
+:root:not([data-theme="light"]):not([data-theme^="contrast"]) .alef-lesson-locked::before {
+  background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%237f9a7f' stroke-width='2.4' stroke-linecap='round'><rect x='5.5' y='11' width='13' height='9' rx='2'/><path d='M8.5 11V8a3.5 3.5 0 0 1 7 0v3'/></svg>") center / 46% no-repeat, #24402b;
+  border: 0; box-shadow: inset 0 -5px 0 rgba(0, 0, 0, .35);
+}
+:root[data-theme="light"] .alef-lesson-locked::before {
+  background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23857f70' stroke-width='2.4' stroke-linecap='round'><rect x='5.5' y='11' width='13' height='9' rx='2'/><path d='M8.5 11V8a3.5 3.5 0 0 1 7 0v3'/></svg>") center / 46% no-repeat, #d9d4c7;
+}
+@media (forced-colors: active) { .alef-lesson::before { forced-color-adjust: none; border: 2px solid CanvasText; } }
+
+/* setup: room under the last option for the two pinned buttons (Continue and the quick start) */
+body.ob-player main { padding-block-end: calc(12rem + env(safe-area-inset-bottom)); scroll-padding-block-end: 12rem; }
+html:has(body.ob-player) { scroll-padding-block-end: 12rem; }
+.alef-lesson-done, .alef-lesson-available { cursor: pointer; }
+
+/* ---------- 13. Opening prayer: the Hebrew in gold leaf (real text, never an image) ----------
+   The prayer lines stay live text in Frank Ruhl Libre, so every letter and vowel mark is exact and can be read aloud by a screen
+   reader. The gold is a gradient clipped to the letters; it brightens once as the page opens (dawn), then a slow sheen of light
+   crosses the words every 9 s. Reduced motion and calm mode: steady gold, no sheen (the global rules in app.css stop animations).
+   Forced colours and old browsers: plain gold-coloured text (the color line below is the fallback). Contrast: the darkest stop
+   (#d9a441) is 6.3:1 on the house green #16301c and 4.5:1 on the lighter centre #1f4a2a. */
+.prayer-veil { background: radial-gradient(120% 80% at 50% 38%, #1f4a2a 0%, #16301c 55%, #0d1f12 100%); }
+.prayer-he {
+  color: #e8c97a;
+  background: linear-gradient(100deg, #d9a441 0%, #f3dfa6 22%, #e0b052 38%, #fff4d0 50%, #e0b052 62%, #f3dfa6 78%, #d9a441 100%);
+  background-size: 250% 100%; background-position: 100% 0;
+  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 0 rgba(217, 164, 65, 0));
+  animation: prayer-gold-dawn 2.6s var(--ease-out) .25s both, prayer-gold-sheen 9s ease-in-out 3s infinite;
+}
+.prayer-tr { color: #e8c97a; }
+@keyframes prayer-gold-dawn {
+  from { filter: drop-shadow(0 0 0 rgba(217, 164, 65, 0)) brightness(.7); opacity: .4; }
+  60% { filter: drop-shadow(0 0 18px rgba(243, 223, 166, .55)) brightness(1.15); opacity: 1; }
+  to { filter: drop-shadow(0 0 10px rgba(217, 164, 65, .35)) brightness(1); opacity: 1; }
+}
+@keyframes prayer-gold-sheen { 0%, 20% { background-position: 100% 0; } 70%, 100% { background-position: 0% 0; } }
+@media (prefers-reduced-motion: reduce) { .prayer-he { animation: none !important; filter: drop-shadow(0 0 8px rgba(217, 164, 65, .3)); background-position: 50% 0; } }
+:root[data-calm] .prayer-he { animation: none !important; background-position: 50% 0; }
+@media (forced-colors: active) { .prayer-he { -webkit-text-fill-color: CanvasText; background: none; filter: none; } }

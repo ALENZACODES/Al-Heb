@@ -121,9 +121,15 @@ export function mount(root, ctx) {
     if (s.kind === 'vowel') nodes.push(el('p', { class: 'fd-say' }, el('strong', {}, V?.name || s.vowel), ': ', vowelSound(V, tradition).en, ` (${LABELS[tradition]} sound)`));
     if (s.kind === 'syllable' || s.kind === 'word') nodes.push(el('p', { class: 'fd-say' }, el('strong', {}, respell(s.he, tradition) || s.id), s.en ? `, "${s.en}"` : '', ` (how it sounds in English letters, ${LABELS[tradition]} style)`));
     const hook = s.kind === 'letter' ? { kind: 'letter', id: s.letter } : s.kind === 'vowel' ? { kind: 'vowel', id: s.vowel } : { kind: 'word', id: `firstday-${s.id}` };
-    const row = el('p', { class: 'row fd-tools' }, listen(hook));
-    if (s.kind === 'letter') row.append(' ', el('a', { class: 'btn secondary', href: `#/letters/${s.letter}`, id: 'fd-trace' }, 'Trace it'));
-    nodes.push(row, el('p', { class: 'fd-action' }, s.action));
+    try {
+      const doc = root?.ownerDocument || globalThis.document;
+      const buddy = rimonInline({ action: s.kind === 'letter' ? 'wave' : 'point', size: 104, label: 'Rimon', doc }).el;
+      buddy.classList?.add?.('fd-learn-rimon');
+      nodes.push(buddy);
+    } catch { /* test DOMs and missing document: the letter still renders without the drawing */ }
+    const tools = el('div', { class: 'fd-foot-tools' }, listen(hook));
+    if (s.kind === 'letter') tools.append(el('a', { class: 'btn secondary', href: `#/letters/${s.letter}`, id: 'fd-trace' }, 'Trace it'));
+    // Instruction, Hear it and Trace it all live in the footer so Continue cannot cover them.
     // memory hooks and explanations stay behind "Why?"
     const why = [];
     // the chain is the one story for a letter that has an entry; the old story prints only once the chain is known to lack it (upgradeCard adds it if the file arrives later without the letter)
@@ -134,7 +140,7 @@ export function mount(root, ctx) {
     if (s.kind === 'letter' && ctx?.hasRoute?.('learn') !== false) why.push(el('p', { class: 'fd-spot' }, 'Optional: ', el('a', { class: 'btn secondary', href: `#/learn?spotit=${s.letter}` }, `Spot It: ${L?.name || s.letter}`)));
     if (why.length) nodes.push(el('details', { class: 'fd-why' }, el('summary', {}, 'Why?'), ...why));
     body.replaceChildren(...nodes);
-    footSet(el('button', { class: 'btn fd-cta', type: 'button', id: 'fd-continue', onclick: () => { if (!qs.length) { win(s); return; } stage = 'q'; answered = { qi: 0 }; sel = null; verdict = null; say(''); renderStep(); focusFirst(); } }, qs.length ? 'Continue' : 'Next'));
+    footSet(el('p', { class: 'fd-action fd-foot-action' }, s.action), tools, el('button', { class: 'btn fd-cta', type: 'button', id: 'fd-continue', onclick: () => { if (!qs.length) { win(s); return; } stage = 'q'; answered = { qi: 0 }; sel = null; verdict = null; say(''); renderStep(); focusFirst(); } }, qs.length ? 'Continue' : 'Next'));
   }
 
   function renderQuestion(s, i, stepLabel, qs, qi) {

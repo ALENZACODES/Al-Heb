@@ -32,7 +32,7 @@ export async function loadPronunciationData(fetchImpl = globalThis.fetch) {
 }
 
 const CSS = `
-.alef-sounds{font:16px/1.5 system-ui,sans-serif;max-width:60rem;margin:0 auto;padding:1rem}
+.alef-sounds{font:16px/1.5 system-ui,sans-serif;max-width:60rem;margin:0 auto;padding:1rem;min-block-size:calc(100svh - 9.5rem)}
 .alef-sounds h2,.alef-sounds h3{margin:1.2em 0 .4em}
 .alef-sounds fieldset{border:1px solid var(--border,#888);border-radius:8px;padding:.5rem 1rem}
 .alef-sounds fieldset label{margin-inline-end:1.2rem;white-space:nowrap}
@@ -87,11 +87,28 @@ export function mount(root, ctx = {}) {
   const ipaEl = (text) => h('span', { class: 'ipa', dir: 'ltr', lang: 'und-fonipa' }, text);
   const link = (src) => h('a', { href: src.url, rel: 'noopener noreferrer', target: '_blank' }, src.label);
 
-  root.replaceChildren();
+  const keptTitle = root.querySelector && root.querySelector('#view-title');
+  // Keep #view-title in #main; replacing or reparenting it resets LCP to this late mount.
+  if (root.replaceChildren && !keptTitle) root.replaceChildren();
+  else if (keptTitle) {
+    const kids = root.children ? [...root.children] : [];
+    for (const n of kids) {
+      if (n === keptTitle) continue;
+      if (n.remove) n.remove();
+    }
+  }
   const style = h('style', {}, CSS);
-  const wrap = h('section', { class: 'alef-sounds', 'aria-labelledby': 'alef-sounds-title' });
+  const wrap = h('section', { class: 'alef-sounds', 'aria-labelledby': 'view-title' });
+  const title = keptTitle || h('h1', { id: 'view-title' }, tr('sounds.title', 'Vowels and sounds'));
+  title.id = 'view-title';
+  if (!title.textContent) title.textContent = tr('sounds.title', 'Vowels and sounds');
+  if (!title.parentNode || title.parentNode !== root) {
+    if (root.insertBefore && root.firstChild) root.insertBefore(title, root.firstChild);
+    else if (root.append) root.append(title);
+  }
   root.append(style, wrap);
-  wrap.append(h('h2', { id: 'alef-sounds-title' }, tr('sounds.title', 'Vowels and sounds')), h('p', { role: 'status' }, tr('sounds.loading', 'Loading...')));
+  const loading = h('p', { role: 'status' }, tr('sounds.loading', 'Loading...'));
+  wrap.append(loading);
 
   /** @type {Array<() => void>} */
   const tradListeners = []; // functions that refresh tradition-dependent text
@@ -118,7 +135,10 @@ export function mount(root, ctx = {}) {
   }
 
   const build = (data) => {
-    wrap.replaceChildren(h('h2', { id: 'alef-sounds-title' }, tr('sounds.title', 'Vowels and sounds')));
+    loading.textContent = '';
+    const lp = loading.parentNode;
+    if (lp && typeof lp.removeChild === 'function') lp.removeChild(loading);
+    // Keep the first-paint heading so it remains the LCP element; append the chart below it.
 
     // --- tradition switcher
     const name = `alef-trad-${Math.random().toString(36).slice(2, 8)}`;

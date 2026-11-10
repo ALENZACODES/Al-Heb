@@ -14,26 +14,39 @@ import { DRILLS as FIRST_TEN } from './lab.games.js';
 import { NEW_DRILLS } from './lab.games2.js';
 
 const DRILLS = Object.freeze({ ...FIRST_TEN, ...NEW_DRILLS });
-/** Games whose ordered in-game picture is a mat behind the whole board (the others place theirs inside the round). */
-const BOARD_MATS = new Set(['hunt', 'countup', 'calendar', 'pattern']);
-/** Pictures ordered for Brain Lab (docs/lab/GRAPHICS-ORDER.md and the commercial orders): shown only once ingested and approved. */
+/** Pictures ordered for Brain Lab (docs/images/BRAIN-LAB-NEW-GAMES-ORDERS-2026-11-10.md and the first ten games' orders): shown only once ingested and approved. */
 const art = (ctx, id, cls, width) => { try { return ctx.img?.(h, { kind: 'id', id, class: cls, width, decorative: true }) || null; } catch { return null; } };
 /** The round token beside a game: its approved picture, or its letter on a green-and-gold disc. */
 const token = (ctx, g) => {
   const glyph = GLYPHS[g.id] || 'א', letters = glyph.replace(/[\u0591-\u05C7]/g, '').length;
-  return art(ctx, `LAB_v2_${g.id}`, 'lab-token', 112) || h('span', { class: `lab-token lab-token-glyph${letters >= 5 ? ' is-longer' : letters >= 3 ? ' is-long' : ''}`, 'aria-hidden': 'true' }, heSpan(glyph, 'he'));
+  const approved = art(ctx, `LAB_v2_${g.id}`, 'lab-token', 112);
+  if (approved) return approved;
+  const disc = h('span', { class: `lab-token lab-token-glyph${letters >= 5 ? ' is-longer' : letters >= 3 ? ' is-long' : ''}`, 'aria-hidden': 'true' }, heSpan(glyph, 'he'));
+  applyBackground(disc, tokenArtPath(g.id), { cls: 'has-pic' }); // the drawn token covers the letter once it has loaded
+  return disc;
 };
 /** Rimon reacts to a Brain Lab moment; the companion decides whether it shows (dismissed, reduced motion). */
 const rimon = (action, moment, game) => { try { signalRimon(action, { moment: `lab.${moment}`, game }); } catch { /* optional */ } };
+/**
+ * Rimon on the results card, drawn from his own sprite sheets (the light copies the companion plays, assets/img/rimon/web/<action>.webp,
+ * 4 x 3 frames): one still frame at the height of the gesture. Shown when a game has no results picture, or when it fails to load.
+ */
+const RIMON_POSE = { highfive: ['highfive', 7, 'Rimon gives you a high five'], laugh: ['laugh', 7, 'Rimon laughs with joy'], wink: ['wink', 6, 'Rimon winks: well played'], nervous: ['nervous', 5, 'Rimon: you can do it'] };
+const rimonStill = (pose) => {
+  const [sheet, frame, label] = RIMON_POSE[pose] || RIMON_POSE.wink;
+  return h('span', { class: 'lab-rimon', role: 'img', 'aria-label': label,
+    style: `background-image:url("assets/img/rimon/web/${sheet}.webp");background-position:${(frame % 4) * 100 / 3}% ${Math.floor(frame / 4) * 50}%` });
+};
+let wavedThisVisit = false; // Rimon waves when Brain Lab first opens, not every time you come back to the list
 const tradOf = (ctx) => normTradition(typeof ctx.settings?.get === 'function' ? ctx.settings.get('congregation') : ctx.settings?.congregation);
-import { artPath, artImg, NEW_BEST_ART, WORKOUT_DONE_ART, applyMat, matKind, playArtPath, coverArtPath } from './lab.art.js';
+import { artPath, artImg, NEW_BEST_ART, WORKOUT_DONE_ART, applyMat, matKind, playArtPath, coverArtPath, applyBackground, tokenArtPath, HERO_ART } from './lab.art.js';
 
 const SKILL_COLOR = { speed: '#c9952c', memory: '#2f6b4f', attention: '#8a6d1f', flexibility: '#3d7457', problem: '#8a5f1c' };
 // Text on a skill chip: dark on the light gold, cream on the rest (every pair at least 4.5:1).
 const SKILL_INK = { speed: '#163527' };
 
 const CSS = `
-.lab{max-inline-size:44rem;margin-inline:auto;--lab-accent:var(--accent,#1e4634);--lab-gold:#8a6d1f}
+.lab{max-inline-size:44rem;margin-inline:auto;--lab-accent:var(--accent,#1e4634);--lab-gold:#75591a}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]):not([data-theme="contrast"]) .lab{--lab-gold:#e2cd8f}}
 :root[data-theme="dark"] .lab,:root[data-theme="contrast-dark"] .lab{--lab-gold:#e2cd8f}
 /* Light "paper" tiles keep dark ink in every theme; text straight on the page card follows the theme. */
@@ -61,7 +74,7 @@ const CSS = `
 .lab-plan .name{font-weight:700}.lab-plan .skill{font-size:.8rem;opacity:.85}
 .lab-go{display:inline-flex;min-block-size:52px;align-items:center;justify-content:center;padding:.6rem 1.4rem;border-radius:999px;background:#e9c46a;color:#163527;font-weight:800;text-decoration:none;border:0;box-shadow:0 3px 0 #b38a2e;font-size:1.05rem}
 .lab-go:focus-visible{outline:3px solid #fffaf0;outline-offset:3px}
-.lab-skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(9.5rem,1fr));gap:.6rem;margin:1.2rem 0}
+.lab-skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(7.6rem,1fr));gap:.6rem;margin:1.2rem 0}
 .lab-skill{background:var(--card,#fffdf6);border:1px solid var(--border,#e2d6b8);border-radius:14px;padding:.5rem .7rem;border-block-start:5px solid var(--sk)}
 .lab-skill b{display:block;font-size:1.4rem;line-height:1.1;color:var(--fg,#1b2a20)}
 .lab-skill small{color:var(--muted,#5d6b60);display:block;font-size:.8rem;line-height:1.3}
@@ -128,6 +141,13 @@ const CSS = `
 .lab-token-glyph.is-long .he{font-size:.95rem}.lab-token-glyph.is-longer .he{font-size:.78rem}
 .lab-game{flex-direction:row;align-items:flex-start;gap:.75rem}
 .lab-game .body{display:flex;flex-direction:column;gap:.2rem;min-inline-size:0;flex:1}
+.lab-fresh{margin:0 0 1rem}
+.lab-fresh h2{font-size:1.05rem;margin:0 0 .4rem}
+.lab-fresh-row{display:flex;gap:.6rem;overflow-x:auto;padding-block-end:.4rem;scroll-snap-type:x mandatory}
+@media (min-width:48rem){.lab-fresh-row{flex-wrap:wrap;overflow:visible}.lab-fresh-card{flex:1 1 9rem!important}}
+.lab-fresh-card{flex:0 0 9.5rem;scroll-snap-align:start;display:flex;flex-direction:column;align-items:center;gap:.3rem;text-align:center;background:var(--card,#fffdf6);border:1px solid var(--border,#e2d6b8);border-radius:14px;padding:.7rem .5rem;text-decoration:none;color:inherit;min-block-size:48px}
+.lab-fresh-card .t{font-weight:800}
+.lab-fresh-card .lab-teaches{font-size:.78rem;line-height:1.3}
 .lab-new{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;background:#a8442f;color:#fffaf0;border-radius:99px;padding:.05rem .5rem;margin-inline-start:.35rem;vertical-align:middle}
 .lab-teaches{font-size:.85rem;color:var(--lab-accent);font-weight:600}
 .lab-group{margin:1rem 0 .3rem;font-size:1.05rem;display:flex;align-items:center;gap:.5rem}
@@ -136,6 +156,7 @@ const CSS = `
 /* intro and results */
 .lab-cover{display:block;inline-size:100%;block-size:auto;aspect-ratio:2/1;object-fit:cover;border-radius:14px}
 .lab-win-art{display:block;inline-size:180px;block-size:180px;margin:0 auto;object-fit:contain}
+.lab-rimon{display:block;inline-size:116px;block-size:116px;margin:0 auto -.5rem;background-size:400% 300%;background-repeat:no-repeat}
 .lab-stars{font-size:2rem;letter-spacing:.2rem;color:var(--lab-gold);margin:0}
 .lab-met{list-style:none;padding:0;margin:.6rem 0;display:grid;gap:.4rem;text-align:start}
 .lab-met li{display:flex;align-items:center;gap:.6rem;background:#fffaf0;border:1px solid #e2d6b8;border-radius:12px;padding:.4rem .7rem}
@@ -146,15 +167,16 @@ const CSS = `
 .lab-twin-stage{display:flex;align-items:center;justify-content:center;gap:1.2rem;min-block-size:9rem}
 .lab-twin{min-inline-size:8rem;min-block-size:8rem;display:grid;place-items:center;background:#fffaf0;border:3px solid #d4a647;border-radius:22px;box-shadow:0 4px 0 #d9cba5;transform:scale(.94);transition:transform .16s ease}
 .lab-twin.is-in{transform:scale(1)}
-.lab-twin-before{opacity:.45;min-inline-size:3rem;text-align:center}
+.lab-twin-before{min-inline-size:3rem;text-align:center;color:#5d6b60}
+.lab-twin-before:not(:empty){border:2px dashed #d9cba5;border-radius:14px;padding:.2rem .5rem;background:#fffaf0}
 /* Vowel Rain */
-.lab-sky{position:relative;inline-size:min(100%,22rem);block-size:13rem;border-radius:18px;background:linear-gradient(#e9f0ea,#fffaf0);border:2px solid #d9cba5;overflow:hidden;--lab-fall:10.4rem}
+.lab-sky{position:relative;inline-size:min(100%,22rem);block-size:clamp(9rem,32vh,13rem);border-radius:18px;background:linear-gradient(#e9f0ea,#fffaf0);border:2px solid #d9cba5;overflow:hidden}
 .lab-drop{position:absolute;inset-inline-start:50%;inset-block-start:.3rem;translate:-50% 0;min-inline-size:4.2rem;min-block-size:4.2rem;display:grid;place-items:center;background:#fffaf0;border:3px solid #2f6b4f;border-radius:50% 50% 50% 50%/60% 60% 40% 40%;box-shadow:0 3px 0 #1e4634}
 .lab-drop.is-caught{border-color:#d4a647;background:#f6e6b8;transition:none!important}
 .lab-drop.is-missed{border-color:#a8442f;background:#f6d6cf}
 .lab-ground{position:absolute;inset-inline:0;inset-block-end:0;block-size:.8rem;background:#6b7f3a}
-.lab-vowels{flex-wrap:wrap;gap:.5rem}
-.lab-vowel{min-inline-size:3.6rem;min-block-size:3.6rem;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:1.3rem;line-height:1.1}
+.lab-vowels{flex-wrap:nowrap;gap:.35rem}
+.lab-vowel{min-inline-size:3rem;min-block-size:3.4rem;padding-inline:.2rem;flex:1 1 0;max-inline-size:4rem;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:1.3rem;line-height:1.1}
 .lab-vowel-hint{font-size:1.35rem;font-weight:400;line-height:1.2}
 /* Middle Letter */
 .lab-flank{display:flex;gap:.15rem;justify-content:center;background:#fffaf0;border:2px solid #d9cba5;border-radius:16px;padding:.4rem .8rem}
@@ -197,10 +219,15 @@ const CSS = `
 .lab-has-art{background-size:cover;background-position:center}
 .lab-board.lab-has-art{border-radius:14px;padding:.6rem}
 .lab-side-pic{inline-size:56px;block-size:56px;object-fit:contain;vertical-align:middle}
-.lab-grid .lab-cell.is-hidden{background-image:var(--lab-back,none);background-size:cover}
+@media (min-width:0){.lab-art.hero{aspect-ratio:3/1;inline-size:100%;object-fit:cover;object-position:center 50%;border-radius:16px;margin-block:0 .8rem}}
+.lab-token-glyph.has-pic{background-size:116%;background-position:center;border-color:transparent;box-shadow:none}.lab-token-glyph.has-pic .he{visibility:hidden}
+.lab-road.lab-has-art{background-size:cover;background-position:center bottom}
+.lab-sky.lab-has-art{background-size:cover;background-position:center bottom}.lab-sky.lab-has-art .lab-ground{display:none}
+.lab-twin.lab-has-art{border-color:transparent;box-shadow:none;background-size:cover}
+.lab-cafe.lab-has-art{background-size:cover;background-position:center bottom;border-radius:14px;padding:.6rem .5rem 1.4rem;color:#1b2a20}.lab-cafe.lab-has-art .lab-who{color:#1e4634}
 .lab-drop.lab-has-art,.lab-cab.lab-has-art{background-size:contain;background-repeat:no-repeat;background-color:transparent;border-color:transparent;box-shadow:none}
-@media (prefers-contrast:more),(forced-colors:active){.lab-has-art,.lab-grid .lab-cell.is-hidden{background-image:none!important}}
-:root[data-theme^="contrast"] .lab-has-art,:root[data-theme^="contrast"] .lab-grid .lab-cell.is-hidden{background-image:none!important}
+@media (prefers-contrast:more),(forced-colors:active){.lab-has-art,.lab-token-glyph.has-pic{background-image:none!important}.lab-token-glyph.has-pic .he{visibility:visible}}
+:root[data-theme^="contrast"] .lab-has-art,:root[data-theme^="contrast"] .lab-token-glyph.has-pic{background-image:none!important}:root[data-theme^="contrast"] .lab-token-glyph.has-pic .he{visibility:visible}
 @keyframes lab-shake{25%{transform:translateX(-4px)}75%{transform:translateX(4px)}}
 @media (prefers-reduced-motion:reduce){.lab-cell,.lab-time>span,.lab-twin,.lab-cab{transition:none!important}.lab-cell.is-wrong{animation:none}}
 `;
@@ -230,6 +257,7 @@ function hub(root, ctx) {
   const plan = dailyWorkout(today, st), prog = workoutProgress(st, today, plan), streak = workoutStreak(st, today);
   const next = plan.find((id) => !prog.done.includes(id));
   const overall = overallScore(st);
+  const newOnes = GAMES.filter((g) => isNewGame(g, st));
   const tile = (g) => {
     const gs = st.games[g.id];
     return h('a', { class: 'lab-game', href: `#/lab/${g.id}`, style: `--sk:${SKILL_COLOR[g.skill]}` }, token(ctx, g),
@@ -240,9 +268,12 @@ function hub(root, ctx) {
         gs ? spark(gs.history.map((x) => x.s)) : null));
   };
   const wrap = h('div', { class: 'lab' },
-    (prog.complete && art(ctx, 'LAB_v2_workout_done', 'lab-hero-art', 1200)) || art(ctx, 'LAB_v2_hero', 'lab-hero-art', 1200),
+    prog.complete ? null : artImg(h, HERO_ART, 'hero'),
     h('h1', { id: 'view-title', tabindex: '-1' }, 'Brain Lab ', heSpan('מַעְבָּדָה', 'he')),
     h('p', { class: 'lab-sub' }, 'Short, fast games that train your Hebrew eyes, ears and memory. Each one takes 45 seconds and gets harder as you get better.'),
+    newOnes.length ? h('section', { class: 'lab-fresh', 'aria-labelledby': 'lab-fresh-h' },
+      h('h2', { id: 'lab-fresh-h' }, newOnes.length === 1 ? 'A New Game to Try' : `${newOnes.length} New Games to Try`),
+      h('div', { class: 'lab-fresh-row' }, ...newOnes.map((g) => h('a', { class: 'lab-fresh-card', href: `#/lab/${g.id}` }, token(ctx, g), h('span', { class: 't' }, g.title), h('span', { class: 'lab-teaches' }, g.teaches))))) : null,
     h('section', { class: 'lab-hero', 'aria-labelledby': 'lab-today' },
       h('h2', { id: 'lab-today' }, prog.complete ? 'Today’s workout is done' : 'Today’s Workout'),
       prog.complete ? artImg(h, WORKOUT_DONE_ART, 'done') : null,
@@ -265,7 +296,7 @@ function hub(root, ctx) {
       h('h3', { class: 'lab-group', style: `--sk:${SKILL_COLOR[s.id]}` }, s.name, ' ', heSpan(s.he, 'he lab-val')),
       h('div', { class: 'lab-games' }, ...GAMES.filter((g) => g.skill === s.id).map(tile))]));
   root.replaceChildren(wrap);
-  rimon('wave', 'hub');
+  if (!wavedThisVisit) { wavedThisVisit = true; rimon('wave', 'hub'); }
   return () => {};
 }
 
@@ -299,7 +330,6 @@ function drill(root, ctx, id) {
     const start = h('button', { type: 'button', class: 'lab-go', onclick: () => countdown() }, 'Start');
     wrap.replaceChildren(back,
       h('div', { class: 'lab-play lab-intro' },
-        art(ctx, `LAB_v2_${id}_cover`, 'lab-cover', 900),
         h('h1', { id: 'view-title', tabindex: '-1' }, game.title, ' ', heSpan(game.titleHe, 'he')),
         artImg(h, coverArtPath(id), 'cover'),
         h('p', {}, h('span', { class: 'lab-lvl', style: `background:${SKILL_COLOR[game.skill]};color:${SKILL_INK[game.skill] || '#fffaf0'}` }, skillOf(game.skill).name), workout && pos >= 0 ? `  Workout game ${pos + 1} of 3` : ''),
@@ -357,6 +387,9 @@ function drill(root, ctx, id) {
       tradition: tradOf(ctx), calm: calm || reduceMotion,
       // An approved picture from the shared image resolver, or null (the game then shows text only).
       img: (kind, imgId, cls, width) => { try { return ctx.img?.(h, { kind, id: imgId, class: cls, width, decorative: true }) || null; } catch { return null; } },
+      // The game's own drawn picture (data/images/brain-lab-2026-11-10) behind one element: the card face, the sky, the road,
+      // the counter. Shown once loaded; the element keeps its plain look until then or if it fails.
+      playArt: (el) => { if (matKind(id) === 'own') applyBackground(el, playArtPath(id)); return el; },
       // The file of an approved picture, for a board backdrop (CSS background); null when it is not in the app yet.
       artSrc: (imgId, width) => { try { return ctx.images?.resolve?.('id', imgId, { width })?.src || null; } catch { return null; } },
       backdrop: (el, imgId, width = 900) => { const src = env.artSrc(imgId, width); if (src && el) { el.style.backgroundImage = `url("${src}")`; el.classList.add('lab-has-art'); } return el; },
@@ -377,7 +410,6 @@ function drill(root, ctx, id) {
       playClip: (kind, cid, text) => (audioOn ? playRecordedClip(ctx, kind, cid, { text }) : Promise.resolve(false)),
       sayWord: (w) => (audioOn && (w?.clip || w?.id) ? playRecordedClip(ctx, 'word', w.clip || w.id, { text: w.he }) : Promise.resolve(false)),
     };
-    if (BOARD_MATS.has(id)) env.backdrop(board, `LAB_v2_${id}_play`, 900);
     const t0 = Date.now(), total = SESSION_SECONDS * 1000;
     const clock = setInterval(() => {
       if (calm) { timeBar.style.transform = `scaleX(${1 - trials.length / CALM_ROUNDS})`; return; }
@@ -425,7 +457,12 @@ function drill(root, ctx, id) {
     const plan = dailyWorkout(day, st), prog = workoutProgress(st, day, plan);
     const nextId = workout ? plan.find((g) => !prog.done.includes(g)) : null;
     const stars = starsFor(sum);
-    rimon(workout && prog.complete ? 'laugh' : isBest && sum.score > 0 ? 'highfive' : stars >= 2 ? 'wink' : 'nervous', workout && prog.complete ? 'workout-done' : 'results', id);
+    // One picture: the game's drawn results picture (the rosette for a new best), or Rimon if there is none or it fails to load.
+    const pose = workout && prog.complete ? 'laugh' : isBest && sum.score > 0 ? 'highfive' : stars >= 2 ? 'wink' : 'nervous';
+    rimon(pose, workout && prog.complete ? 'workout-done' : 'results', id);
+    const win = artImg(h, isBest && sum.score > 0 ? NEW_BEST_ART : artPath(id, 'win'), 'win');
+    const winSlot = h('div', { class: 'lab-win-slot' }, win || rimonStill(pose));
+    if (win) win.addEventListener?.('error', () => winSlot.append(rimonStill(pose)), { once: true });
     const audioOn = !isAudioFree(ctx);
     const listen = (it) => (audioOn && it.clip && hasRecordedClip(ctx, it.clip.kind, it.clip.id)
       ? h('button', { type: 'button', class: 'btn secondary', 'aria-label': `Hear ${it.en}`, onclick: () => playRecordedClip(ctx, it.clip.kind, it.clip.id, { text: it.he }) }, '▶') : null);
@@ -433,19 +470,18 @@ function drill(root, ctx, id) {
     const primary = nextId ? h('a', { class: 'lab-go', href: `#/lab/${nextId}?workout=1` }, `Next: ${gameById(nextId).title}`)
       : h('a', { class: 'lab-go', href: '#/lab' }, workout && prog.complete ? 'Workout done: see your skills' : 'Back to Brain Lab');
     wrap.replaceChildren(back, h('div', { class: 'lab-play lab-results' },
-      art(ctx, `LAB_v2_${id}_win`, 'lab-win-art', 360),
+      winSlot,
       h('h1', { id: 'view-title', tabindex: '-1' }, game.title),
-      artImg(h, isBest && sum.score > 0 ? NEW_BEST_ART : artPath(id, 'win'), 'win'),
       h('p', { class: 'lab-stars', role: 'img', 'aria-label': `${stars} of 3 stars` }, '★'.repeat(stars) + '☆'.repeat(3 - stars)),
       h('p', { class: 'score' }, String(sum.score)),
-      h('p', {}, isBest && sum.score > 0 && prevGame ? art(ctx, 'LAB_v2_new_best', 'lab-side-pic', 200) : null, isBest && sum.score > 0 ? (prevGame ? 'A new best score!' : 'Your first score in this game.') : `Best: ${prevGame?.best ?? sum.score}`),
+      h('p', {}, isBest && sum.score > 0 ? (prevGame ? 'A new best score!' : 'Your first score in this game.') : `Best: ${prevGame?.best ?? sum.score}`),
+      h('div', { class: 'lab-actions' }, primary, again),
       h('div', { class: 'lab-stats' },
         h('div', {}, h('b', {}, `${sum.accuracy}%`), 'right'),
         h('div', {}, h('b', {}, String(sum.maxLevel)), 'top level'),
         h('div', {}, h('b', {}, sum.avgMs == null ? '–' : `${(sum.avgMs / 1000).toFixed(1)}s`), 'per answer'),
         h('div', {}, h('b', {}, `${sum.correct}/${sum.trials}`), 'rounds')),
       h('p', { class: 'lab-note' }, comparison(prevGame?.history, sum)),
-      h('div', { class: 'lab-actions' }, primary, again),
       metList.length ? h('section', { 'aria-labelledby': 'lab-met-h' },
         h('h2', { id: 'lab-met-h', class: 'lab-group', style: `--sk:${SKILL_COLOR[game.skill]}` }, 'Hebrew You Met'),
         h('ul', { class: 'lab-met' }, ...metList.map((it) => h('li', {}, heSpan(it.he, 'he'), h('span', { class: 'en' }, it.en), listen(it))))) : null));

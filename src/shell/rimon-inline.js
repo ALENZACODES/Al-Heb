@@ -53,6 +53,14 @@ export function rimonInline({ action = 'wave', size = 112, loop = false, idle = 
     timer = setTimeout(step, frameDuration(cur, 0));
   }
   show(cur, 0);
+  // A sheet that fails to load (offline before it was cached, a blocked file) must never leave an empty box: fall back to the
+  // single Rimon picture, still, and stop the frame timer.
+  const fallback = () => {
+    stopped = true; clearTimeout(timer);
+    el.setAttribute('data-fallback', '1');
+    el.setAttribute('style', `--rimon-size:${size}px;background-image:url("${new URL('../../assets/img/gen/MASCOT_rimon.800.webp', import.meta.url).href}");background-size:contain;background-position:center`);
+  };
+  try { if (typeof globalThis.Image === 'function') { const probe = new globalThis.Image(); probe.onerror = fallback; probe.src = sheetUrl(cur); } } catch { /* no image loader: keep the sheet */ }
   // Start once he is on the page (the caller appends him right after this returns).
   if (!isStill()) setTimeout(() => { if (!gone()) play(action); }, 30);
   return { el, play, stop() { stopped = true; clearTimeout(timer); } };

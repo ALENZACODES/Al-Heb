@@ -82,7 +82,7 @@ export function mount(root, ctx) {
   };
   const backBtn = (onclick, label = 'Back') => h('button', { type: 'button', class: 'ob-back', id: 'ob-back', 'aria-label': label, onclick }, h('span', { 'aria-hidden': 'true' }, '‹'));
   const setTop = (node) => topSlot.replaceChildren(...(node ? [node] : []));
-  const rimon = (line, action = 'wave') => rimonSays(line, { action, ariaHidden: true }).el;
+  const rimon = (line, action = 'wave') => rimonSays(line, { action, size: 168, ariaHidden: true }).el;
 
   const radio = (name, value, label, desc, checked, onchange, lead = null) => {
     const id = `ob-${name}-${value}`;

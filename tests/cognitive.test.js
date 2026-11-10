@@ -165,7 +165,12 @@ test("motion audit: animations match the reviewed inventory, loops are slow, and
     // moments (under two cycles per second); the reduced-motion block and the global calm rule switch all of them off
     'rimon-burst', 'rimon-bounce', 'rimon-crash', 'rimon-peek-in', 'rimon-gold-pulse',
     // round 2: the "Today counts" toast drops in once (0.42 s) and leaves after about 4 s; reduced motion and calm switch it off
-    'stat-toast-in'];
+    'stat-toast-in',
+    // opening prayer in gold leaf: the letters brighten once (2.6 s) and a sheen of light crosses them every 9 s (background position
+    // only, no flashing: brightness peaks once and settles); reduced motion and calm mode keep steady gold
+    'prayer-gold-dawn', 'prayer-gold-sheen',
+    // Retention reward panel (src/retention/retention.css): the XP chip pops once (0.25 s) and the confetti falls once (1.6 s), never looping; reduced motion and calm mode switch both off and hide the confetti
+    'ret-pop', 'ret-fall'];
   assert.deepEqual(frames.sort(), reviewed.sort(), 'new animations require a motion review');
   for (const animation of anims) {
     if (!/\binfinite\b/.test(animation)) continue;

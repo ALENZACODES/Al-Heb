@@ -41,6 +41,7 @@ decision, so the More sheet stays short and the first session stays coherent (we
 | `read-my-way` | keep | Tradition-aware reading. |
 | `rules` | keep | Pronunciation rules reference. |
 | `intermediate` | keep | After r10. |
+| `israelunits` | keep | The Israel track as practical units (grammar notes, spaced unit review, listening and speaking); draft notes, no new Hebrew. |
 | `grammar` | keep | Reference notes. |
 | `compare` | keep | Target for `record-compare`. |
 | `vocab-themes` | keep | Theme packs (shared audio button). |
@@ -178,6 +179,8 @@ Home shows a backup reminder after three finished lessons (`docs/progress/BACKUP
 | `barter` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
 | `submarinesonar` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
 | `rhymelab` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
+| `league` | keep | Weekly practice league (pretend players, said so on the page); reached from the top bar. Preview until owner review and native review of the tier names. |
+| `shop` | keep | Streak-freeze shop, streak repair, heart refill and the retention switches; reached from the top bar. Preview until owner review. |
 | `bumperverbs` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
 | `bumpercar` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
 | `traintrack` | keep | Game; reached from the `games` hub. Preview until native review of its words. |

@@ -54,6 +54,8 @@ const ON_DEMAND_PREFIXES = ['data/vocab/', 'data/roots/', 'data/knownwords/', 'd
   'src/service/',
   // Brain Lab: drill code and its two small lists, fetched when the Lab first opens, runtime-cached.
   'src/lab/', 'data/lab/',
+  // Retention (streak freezes, XP, gems, hearts, practice league, reminders): loaded after first paint by boot-hooks.js armRetention, runtime-cached.
+  'src/retention/',
   // Library: the article view and the articles, fetched when the Library first opens, runtime-cached.
   'src/library/', 'data/library/',
   // Letter videos (about 70 KB each) and their list: streamed when watched, runtime-cached.
@@ -81,6 +83,10 @@ const ON_DEMAND_FILES = new Set([
   'src/curriculum/calendar.addpanel.js', 'src/curriculum/calendar.quickadd.js' /* calendar quick-add box: loaded when the Calendar opens */,
   // Intermediate lessons view (optional preview route /intermediate, 30 KB): route code only, loaded lazily on first open and runtime-cached; its adapter and data stay as they were.
   'src/curriculum/intermediate.view.js',
+  // Israel units (preview route /israel-units): view, model and data are loaded on first open and runtime-cached.
+  'src/curriculum/israel-units.view.js', 'src/curriculum/israel-units.js', 'data/curriculum/israel-units.json',
+  // Learn map sub-screens: dynamically imported by learn.view.js when their query is opened; the map itself uses the slim lessons-index and stays installed.
+  'src/curriculum/review.view.js', 'src/curriculum/loanwords.view.js', 'src/curriculum/spotit.view.js', 'src/curriculum/checkpoint.view.js', 'src/curriculum/dialogues.view.js', 'src/curriculum/ladder.view.js', 'src/curriculum/fade.view.js', 'src/curriculum/gender.view.js', 'src/curriculum/scaffold.view.js',
   // Speak screen engine (preview route /speak, 58 KB): imported only by speak.view.js, which the router loads lazily; fetched on first open and runtime-cached (keeps first install under 3.95 MiB after the tracing pointer fix).
   'src/speak/speak.js',
   // Torah reader view: route code only (the router loads views lazily; its model/loader files stay installed), fetched when the reader first opens, runtime-cached by sw.js (keeps first install under 3.95 MiB after the full-Torah reader landed).

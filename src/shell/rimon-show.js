@@ -1,8 +1,9 @@
 // showRimon(situation): the one shared hook for putting a Rimon still on screen.
 // The Rimon lane (feature/rimon-stills-2026-11-10) owns the stills and the placement map
 // (docs/images/rimon-placements.md); this file only gives every screen the same fail-safe call.
-// Rules: never throws, never shows a broken image, does nothing when no still loads, and has no
+// Rules: never throws, never shows a broken image, falls back to the in-app drawings when no still loads, and has no
 // entrance motion under prefers-reduced-motion or calm mode. Stills load on demand (never precached).
+import { rimonInline } from './rimon-inline.js';
 export const RIMON_DIR = 'data/images/rimon/';
 /** Situation -> preferred still ids (first that loads wins). Mirrors the lane's placement map. */
 export const SITUATIONS = Object.freeze({
@@ -45,7 +46,10 @@ export function registerRimonProvider(fn) {
 export function rimonCandidates(situation, { rotate = true } = {}) {
   // Rimon's stage (src/shell/rimon-stage.js) answers first when it is running: it knows the 200-still map, quiet days
   // (Yom HaShoah, Yom HaZikaron, Tisha B'Av), prayer and Torah screens, and Hide Rimon. [] from it means "no Rimon now".
-  try { const s = globalThis.alefRimonStage?.urlsForSituation?.(situation); if (Array.isArray(s)) return s.filter((u) => typeof u === 'string'); } catch { /* fall back to the map below */ }
+  try {
+    const staged = globalThis.alefRimonStage?.urlsForSituation?.(situation);
+    if (Array.isArray(staged)) return staged.filter((u) => typeof u === 'string');
+  } catch { /* fall back to the map below */ }
   for (const p of providers) {
     try { const r = p(situation); if (Array.isArray(r) && r.length) return r.filter((u) => typeof u === 'string'); } catch { /* fall through */ }
   }
@@ -71,6 +75,10 @@ export function showRimon(situation, opts = {}) {
     const win = opts.win || globalThis;
     if (!doc?.createElement || !doc.body) return null;
     if (opts.settings?.get?.('rimonOff') === true) return null;
+    try {
+      const store = opts.store || opts.settings?.store || globalThis.alef?.store;
+      if (store?.get?.('rimon.dismissed', false) === true) return null;
+    } catch { /* keep going */ }
     const urls = rimonCandidates(situation);
     if (!urls.length) return null;
     const calm = opts.settings?.get?.('calmMode') === true;
@@ -87,7 +95,27 @@ export function showRimon(situation, opts = {}) {
     const remove = () => { try { (holder || img).remove(); } catch { /* gone */ } };
     img.hidden = true;
     img.addEventListener('load', () => { img.hidden = false; });
-    img.addEventListener('error', () => { i += 1; if (i < urls.length) img.src = urls[i]; else remove(); });
+    img.addEventListener('error', () => {
+      i += 1;
+      if (i < urls.length) { img.src = urls[i]; return; }
+      // Stills live on the feature branch and load on demand. Until they arrive, use the twelve in-app drawings so a correct answer still gets a Rimon.
+      if (floating && doc === globalThis.document) {
+        try {
+          const action = (situation === 'wrong' || situation === 'error' || situation === 'offline') ? 'sad'
+            : situation === 'streak' || situation === 'award' ? 'stretch'
+            : situation === 'hint' || situation === 'loading' ? 'thinking'
+            : situation === 'welcome' || situation === 'onboarding' || situation === 'welcome-back' ? 'wave'
+            : 'bounce';
+          const size = opts.size === 'huge' ? 190 : opts.size === 'small' ? 88 : 148;
+          img.remove();
+          const buddy = rimonInline({ action, size, label: 'Rimon', doc });
+          holder.append(buddy.el);
+          holder.classList.add('alef-rimon-spot-inline');
+          return;
+        } catch { /* fall through and remove */ }
+      }
+      remove();
+    });
     img.src = urls[0];
     if (floating) {
       holder.className = 'alef-rimon-spot';

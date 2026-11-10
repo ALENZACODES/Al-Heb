@@ -3,10 +3,10 @@
 // and the Identity Test from GAMES-START-HERE.md holds: tapping at random, or always the same button, scores at chance.
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { readFileSync, existsSync } from 'node:fs';
 import {
   GAMES, GLYPHS, seeded, sameSound, twinsNext, twinsBack, rainPool, rainKeys, rainFallMs, middleTrial, taxiTrial, cafeOrder, cafeSize,
-  chainTrial, lineWords, bare, hasDivineName, normTradition, starsFor, uniqueMet, isNewGame, recordSession, emptyState, MAX_LEVEL,
+  chainTrial, lineWords, bare, hasDivineName, NOT_A_GAME, normTradition, starsFor, uniqueMet, isNewGame, recordSession, emptyState, MAX_LEVEL,
 } from '../src/lab/lab.core.js';
 import { build, firstSound, vowelOf, CAFE_IDS } from '../tools/lab/build-lab-words.mjs';
 import { NEW_DRILLS } from '../src/lab/lab.games2.js';
@@ -34,7 +34,7 @@ test('data/lab/words.json is exactly what tools/lab/build-lab-words.mjs builds f
 
 test('café and direction words match the dictionary, and every linked recording says exactly that Hebrew in both voices', () => {
   const dict = new Map(json('data/vocab/words.json').words.map((w) => [w.id, w]));
-  const man = [...json('data/audio/manifest.json'), ...json('data/audio/manifest-kind-word.json'), ...json('data/audio/manifest-words-israeli.json')];
+  const man = [...json('data/audio/manifest.json'), ...json('data/audio/manifest-kind-word.json'), ...json('data/audio/manifest-words-israeli.json'), ...W.extraClips];
   for (const it of [...W.cafe, ...W.directions]) {
     const w = dict.get(it.id); assert.ok(w, it.id);
     assert.equal(it.he, w.he); assert.equal(it.tr, w.translit); assert.ok(w.en.startsWith(it.en), `${it.en} is the start of "${w.en}"`);
@@ -65,6 +65,7 @@ test('Sound Twins: which letters share a sound follows each tradition (from data
   assert.ok(same('ח', 'כ', 'israeli') && same('ח', 'כ', 'ashkenazi') && !same('ח', 'כ', 'sephardi'), 'Chet and Khaf merge, except in Sephardi');
   assert.ok(same('א', 'ע', 'israeli') && same('א', 'ע', 'ashkenazi') && !same('א', 'ע', 'sephardi'), 'Aleph and Ayin merge, except in Sephardi');
   assert.ok(same('ת', 'ס', 'ashkenazi') && !same('ת', 'ס', 'israeli'), 'Tav without its dot says s only in Ashkenazi');
+  assert.equal(card('ת').names?.ashkenazi, 'Sav', 'and there it is called Sav');
   assert.equal(normTradition('ashkenazi'), 'ashkenazi'); assert.equal(normTradition(undefined), 'israeli'); assert.equal(normTradition('x'), 'israeli');
 });
 
@@ -101,6 +102,7 @@ test('Vowel Rain: each drop has one sound per tradition, new signs arrive by lev
   const syl = new Map(json('data/lab/syllables.json').syllables.map((s) => [s.id, s]));
   for (const v of W.vowels.filter((x) => x.syllable)) assert.equal(syl.get(v.syllable).he.normalize('NFC'), v.he, v.syllable);
   assert.ok(W.vowels.filter((x) => x.syllable).length >= 100);
+  assert.ok(W.vowels.filter((x) => x.sign.startsWith('chataf')).every((v) => ['alef', 'he', 'chet', 'ayin'].includes(v.letter)), 'chataf vowels only under the throat letters');
   // Identity: a random tap is right about one time in five
   const rnd = seeded('rain'); let hits = 0; const N = 4000;
   for (let i = 0; i < N; i++) { const pool = rainPool(W.vowels, 1 + (i % 12), 'israeli'); const d = pool[Math.floor(rnd() * pool.length)]; const keys = rainKeys(W.vowels, 'israeli'); if (keys[Math.floor(rnd() * keys.length)] === d.sound.israeli) hits++; }
@@ -165,8 +167,10 @@ test('Café Order: order size grows with level, every ordered thing is on the me
 });
 
 test('Prayer Chain: real prayer words in order; the divine name is filled in, never a choice; a distractor never reads as the answer', () => {
-  const lines = json('data/corpus/registry.json').entries.filter((e) => e.category === 'siddur' && e.he).map((e) => ({ id: e.id, title: e.title, en: e.english, words: lineWords(e.he) })).filter((e) => e.words.length >= 5);
+  assert.ok(NOT_A_GAME.has('kaddish-1'), "Mourner's Kaddish is never a game");
+  const lines = json('data/corpus/registry.json').entries.filter((e) => e.category === 'siddur' && e.he && !NOT_A_GAME.has(e.id)).map((e) => ({ id: e.id, title: e.title, en: e.english, words: lineWords(e.he) })).filter((e) => e.words.length >= 5);
   assert.ok(lines.length >= 30);
+  for (const f of ['src/lab/lab.games.js', 'src/lab/lab.games2.js']) assert.match(readFileSync(f, 'utf8'), /!NOT_A_GAME\.has\(e\.id\)/, `${f} leaves those prayers out`);
   let fixedSeen = 0;
   for (let level = 1; level <= MAX_LEVEL; level++) for (let i = 0; i < 60; i++) {
     const t = chainTrial(lines, level, seeded(`chain${level}:${i}`));
@@ -196,13 +200,35 @@ test('results: stars, and the "Hebrew you met" list keeps the newest distinct wo
   assert.equal(uniqueMet(Array.from({ length: 20 }, (_, i) => ({ he: String(i) })), 8).length, 8);
 });
 
-test('the Brain Lab page wires the new games: No time limits stops the clock, Rimon reacts, pictures appear only once approved', () => {
+test('the Brain Lab page wires the new games: No time limits stops the clock, Rimon reacts, pictures come from the drawn pack or wait for approval', () => {
   const v = readFileSync('src/lab/lab.view.js', 'utf8');
   assert.match(v, /untimedOn\(ctx\)/, 'Settings > No time limits works in Brain Lab, as it does in Word Sprint');
   assert.match(v, /signalRimon\(/);
-  assert.match(v, /LAB_v2_\$\{id\}_cover/); assert.match(v, /LAB_v2_\$\{id\}_win/); assert.match(v, /LAB_v2_\$\{g\.id\}/); assert.match(v, /'LAB_v2_hero'/);
-  assert.match(v, /ctx\.img\?\.\(h, \{ kind: 'id'/, 'art goes through the shared image resolver (approved pictures only)');
+  assert.match(v, /artImg\(h, coverArtPath\(id\), 'cover'\)/, 'covers come from the drawn Brain Lab pack');
+  assert.match(v, /win \|\| rimonStill\(pose\)/, 'results show the drawn picture, or Rimon from his own sprite sheets');
+  assert.match(v, /applyBackground\(disc, tokenArtPath\(g\.id\)/, 'drawn tokens cover the letter disc once loaded');
+  assert.match(v, /art\(ctx, `LAB_v2_\$\{g\.id\}`/, 'tokens still ordered go through the shared image resolver (approved pictures only)');
   assert.match(v, /shortcutsOn\(ctx\)/, 'letter keys respect the single-key shortcut setting');
+  assert.doesNotMatch(v, /--lab-back/, 'no second tile-back rule that would hide the drawn one');
   const g2 = readFileSync('src/lab/lab.games2.js', 'utf8');
   assert.match(g2, /if \(!env\.calm\)/, 'the vowel drop does not move in calm mode or with reduced motion');
+  for (const what of ['card', 'sky', 'road']) assert.match(g2, new RegExp(`env\\.playArt\\?\\.\\(${what}\\)`), `${what}: the game places its own drawn picture`);
+});
+
+test('audio: every word a Brain Lab game says can be played, in both Israeli voices, from a clip of exactly that Hebrew', async () => {
+  const { csvText, build: buildAudio } = await import('../tools/lab/build-audio-manifest.mjs');
+  const rows = [...json('data/audio/manifest.json'), ...json('data/audio/manifest-kind-word.json'), ...json('data/audio/manifest-words-israeli.json'), ...W.extraClips]
+    .filter((r) => r.tradition === 'israeli' && r.status !== 'missing');
+  const has = (kind, id, v, text) => rows.some((r) => r.kind === kind && r.id === id && r.voice === v && (text == null || r.text === text));
+  for (const r of W.extraClips) assert.ok(existsSync(r.path), r.path);
+  for (const it of [...W.cafe, ...W.directions]) for (const v of ['m', 'f']) assert.ok(it.clip && has(it.clip.kind, it.clip.id, v, it.he), `${it.en} ${v}`);
+  for (const c of W.cards) for (const v of ['m', 'f']) assert.ok(c.clip && has('letter', c.clip, v), `${c.name} sound ${v}`);
+  const syl = new Map(json('data/lab/syllables.json').syllables.map((x) => [x.id, x]));
+  for (const d of W.vowels.filter((x) => x.sayAs)) { const st = syl.get(d.sayAs); assert.ok(st && st.letter === d.letter && st.vowel === d.sound.israeli, `${d.he} as ${d.sayAs}`); }
+  assert.ok(W.vowels.every((d) => d.syllable || d.sayAs), 'every vowel drop can be heard in Israeli Hebrew');
+  for (const d of W.holyDays) for (const v of ['m', 'f']) assert.ok(has(d.clip.kind, d.clip.id, v), d.id);
+  assert.equal(readFileSync('docs/audio/BRAIN-LAB-AUDIO-2026-11-10.csv', 'utf8'), csvText(buildAudio()), 'the audio manifest is fresh: node tools/lab/build-audio-manifest.mjs');
+  const g2 = readFileSync('src/lab/lab.games2.js', 'utf8');
+  assert.match(g2, /audio\?\.extend\?\.\(w\.extraClips/, 'the dictionary-only recordings are handed to the player');
+  assert.match(g2, /x\.sound\[trad\] === x\.sound\.israeli/, 'a letter sound plays only where the tradition says it the Israeli way');
 });

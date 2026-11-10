@@ -125,3 +125,23 @@ test('the flame card lights live when the record changes and calls back once', a
   listener('streak', v2({ count: 1, best: 1, last: today, todaySeconds: 320 }));
   assert.equal(lit, 1, 'only the moment it lights');
 });
+
+// ---------- round 3 ----------
+test('path: only the next lesson is a card; finished, next and locked stops have their own marks; no dead Start button on locked stops', () => {
+  const css = read('assets/css/polish.css');
+  assert.match(css, /\.alef-lesson:not\(\.alef-lesson-available\) \{ background: transparent;/);
+  assert.match(css, /\.alef-lesson-locked \.alef-btn\[disabled\] \{ display: none; \}/);
+  for (const k of ['alef-lesson-done::before', 'alef-lesson-available::before', 'alef-lesson-locked::before']) assert.ok(css.includes(k), k);
+});
+test('Rimon in the page falls back to the single picture when a sheet cannot load', () => {
+  const saved = globalThis.Image;
+  let probe = null;
+  globalThis.Image = function () { probe = this; };
+  try {
+    const r = rimonInline({ action: 'wave', size: 80 });
+    assert.ok(probe && /wave\.webp$/.test(probe.src));
+    probe.onerror();
+    assert.equal(r.el.attrs['data-fallback'], '1');
+    assert.match(r.el.attrs.style, /MASCOT_rimon\.800\.webp/);
+  } finally { globalThis.Image = saved; }
+});

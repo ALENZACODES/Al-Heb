@@ -15,10 +15,12 @@ export const SECTIONS = [
 export const SECTION_ROUTES = {
   learn: ['home', 'firstday', 'firstwin', 'wordfinder', 'learn', 'letters', 'atlas', 'letter', 'sounds', 'rules', 'rules-page', 'loanwords', 'loanword', 'spotit', 'checkpoint',
     'ladder', 'fade', 'fadeline', 'scaffold', 'gender', 'roles', 'firstday-ladder', 'vocab', 'vocab-themes', 'sprint', 'wordtrace', 'dialogues', 'dialogue', 'phrases', 'phrase',
-    'israel', 'israelsec', 'intermediate', 'intermediatelesson', 'grammar', 'grammartopic', 'typing', 'classtrack', 'classtrackweek', 'classtrackmode',
+    'israel', 'israelsec', 'intermediate', 'intermediatelesson', 'israelunits', 'israelunit', 'grammar', 'grammartopic', 'typing', 'classtrack', 'classtrackweek', 'classtrackmode',
     'soundgap', 'vowelboard', 'niqquddial', 'dottile', 'syllablechips', 'nikkud-fade', 'roots', 'gender-drill', 'scheduler', 'known-words',
     // Brain Lab (daily drills) and the Library (articles, letter videos), with their detail pages
     'lab', 'labgame', 'library', 'libraryarticle',
+    // Retention: weekly practice league and the streak-freeze shop
+    'league', 'shop',
     // games hub and every game (owner 'games'), arcade included
     'games', 'letterchomp', 'fallingletters', 'lettertwins', 'soundsnap', 'lookalikes', 'alefbetrun', 'finalfive', 'letterdrop', 'vowelstack', 'syllablesnake', 'wordbuilder', 'meltdown', 'flapvowel', 'bingoletters', 'wordsearch', 'minicross', 'wordmaze', 'scramble', 'bubbleword', 'trueornot', 'lettercrush', 'lettersudoku', 'quizladder', 'speedtype', 'gendersplit', 'pluralpop', 'sentencetrain', 'noahseven', 'tenwords', 'mitzvot613',
     'tugowar', 'vowelcatcher', 'pinball', 'prefixblast', 'memorypalace', 'shabbatrush', 'typewriter', 'petclinic', 'trainswitch', 'weatherstudio',
@@ -36,7 +38,7 @@ export const ROUTE_SECTION = Object.fromEntries(Object.entries(SECTION_ROUTES).f
 /** Parameterised routes are reached through a static parent page (a list, or a link from it). */
 export const PARENT = {
   letter: 'letters', loanword: 'loanwords', spotit: 'learn', dialogue: 'dialogues', phrase: 'phrases', fadeline: 'fade', israelsec: 'israel',
-  classtrackweek: 'classtrack', classtrackmode: 'classtrack', festival: 'festivals', 'rules-page': 'rules', intermediatelesson: 'intermediate',
+  classtrackweek: 'classtrack', classtrackmode: 'classtrack', festival: 'festivals', 'rules-page': 'rules', intermediatelesson: 'intermediate', israelunit: 'israelunits',
   grammartopic: 'grammar', labgame: 'lab', libraryarticle: 'library', text: 'read', torahreadsec: 'torahread', book: 'books', day: 'calendar', synagogue: 'synagogues',
 };
 

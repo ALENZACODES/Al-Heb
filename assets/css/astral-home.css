@@ -27,6 +27,7 @@
 }
 .prayer-words {
   position: relative; z-index: 1; width: min(100%, 44rem); opacity: 0;
+  min-block-size: 11rem;
   transform: translateY(8px); transition: opacity .24s ease, transform .24s ease;
 }
 .prayer-veil[data-prayer-ready="1"] .prayer-words { opacity: 1; transform: none; }

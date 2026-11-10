@@ -204,8 +204,11 @@ async function show(match, ctxBase, { quiet = false } = {}) {
   if (!quiet) { lastMatch = match; lastCtx = ctxBase; touched = false; touchedOutsideField = false; fieldEdited = false; if (lastHashShown != null) scrollKeeper?.leave(lastHashShown); }
   const live = document.getElementById('announcer');
   if (!route) {
-    root.replaceChildren(h('section', { class: 'card' }, h('h1', { id: 'view-title', tabindex: '-1' }, t('notfound.title')), h('p', { class: 'mono' }, path), h('a', { class: 'btn', href: '#/' }, t('nav.home'))));
-    renderNav(null); document.title = `${t('notfound.title')} - Aleph`; return finish();
+    const updating = h('p', { class: 'muted', role: 'status' });
+    root.replaceChildren(h('section', { class: 'card' }, h('h1', { id: 'view-title', tabindex: '-1' }, t('notfound.title')), h('p', { class: 'mono' }, path), updating, h('a', { class: 'btn', href: '#/' }, t('nav.home'))));
+    renderNav(null); document.title = `${t('notfound.title')} - Aleph`;
+    updateForMissingPage(path, () => { updating.textContent = t('notfound.updating'); });
+    return finish();
   }
   if (route.name === 'home' && !settings.get('onboarded')) { ctxBase.route('/welcome'); return; }
   renderNav(route.name);
@@ -222,7 +225,8 @@ async function show(match, ctxBase, { quiet = false } = {}) {
   try { mod = await loadRouteModule(route); }
   catch (err) {
     if (token !== navToken) return;
-    unavailableCard(root, { title: route.title, t, module: route.module, error: err?.message, kind: 'error' });
+    // Offline and the screen's code is not on this device yet (an on-demand page never opened online): say that, not "did not load".
+    unavailableCard(root, { title: route.title, t, module: route.module, error: err?.message, kind: globalThis.navigator?.onLine === false ? 'offline' : 'error' });
     root.removeAttribute('aria-busy'); return finish();
   }
   if (token !== navToken) return;
@@ -350,6 +354,28 @@ async function boot() {
   if (swc) { try { swc.register('sw.js').catch((e) => console.warn('service worker not registered', e)); } catch (e) { console.warn('service worker not registered', e); } }
   // Always: the storage notice (private mode, quota) matters most where there is no service worker; the update banner is inert there.
   import('./shell/update.js').then((m) => { window.alef.update = m.startUpdateBanner().handle; }).catch(() => {});
+  // Brain Lab is a v0 page whose files are on demand: keep them on the device once per build (src/shell/warm-routes.js).
+  if (swc && available.has('lab')) shownFirst.then(() => afterPaint(() => import('./shell/warm-routes.js').then((m) => m.warmFiles(m.LAB_FILES)).then((r) => { document.body.dataset.labWarm = r; }))).catch(() => {});
+}
+
+/**
+ * The address is not a page in this build. It may be a page a newer build has (Nov 9: the newer Games page linked to Brain Lab for
+ * learners still running the build before it). If an update is waiting, or turns up within a few seconds, apply it now: nothing is in
+ * progress on this screen, and the reload opens the same address in the new build. It cannot loop: after the reload no update is
+ * waiting, so an address the new build lacks too just shows "Page not found". Nothing is stored.
+ */
+let missingPageStop = () => {};
+function updateForMissingPage(path, onUpdating) {
+  missingPageStop(); missingPageStop = () => {};
+  const handleNow = () => window.alef?.update;
+  const waitHandle = async () => { for (let i = 0; i < 20 && !handleNow(); i++) await new Promise((r) => setTimeout(r, 250)); return handleNow(); };
+  import('./shell/update.js').then(async (m) => {
+    const handle = await waitHandle();
+    if (!handle || location.hash.split('?')[0] !== '#' + path) return; // the learner has moved on
+    missingPageStop = m.updateForMissingPage(handle, { onUpdating });
+    const stopOnLeave = () => { window.removeEventListener('hashchange', stopOnLeave); missingPageStop(); };
+    window.addEventListener('hashchange', stopOnLeave);
+  }).catch(() => {});
 }
 
 window.addEventListener('error', (e) => { document.body.dataset.lastError = e.message; });

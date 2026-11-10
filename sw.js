@@ -164,3 +164,44 @@ self.addEventListener('fetch', (event) => {
     return hit || (await net) || (await caches.match('offline.html')) || Response.error();
   })());
 });
+
+/* ---- Rimon reminders (src/retention/notify.js). No push server: the page leaves a plan in Cache Storage and, on installed
+   Chromium, Periodic Background Sync wakes this worker to read it. The browser decides how often (possibly never).
+   Nothing is ever shown from Friday 18:00 to Saturday 21:00 local, inside a quiet range of the plan, or after a session today. ---- */
+const RIMON_CACHE = 'alef-retention';
+const rimonPlanUrl = () => new URL('__alef/rimon-plan.json', self.registration.scope).href;
+const RIMON_WINDOW_MS = 6 * 3600 * 1000;
+function rimonShabbat(ms) { const d = new Date(ms), w = d.getDay(), m = d.getHours() * 60 + d.getMinutes(); return (w === 5 && m >= 1080) || (w === 6 && m < 1260); }
+function rimonSameDay(a, b) { const x = new Date(a), y = new Date(b); return x.getFullYear() === y.getFullYear() && x.getMonth() === y.getMonth() && x.getDate() === y.getDate(); }
+/** The plan entry that may be shown at `now`, or null. Pure (tests/retention/sw.test.js). */
+function rimonDue(plan, now) {
+  if (!plan || plan.v !== 1 || !Array.isArray(plan.entries) || rimonShabbat(now)) return null;
+  const h = new Date(now).getHours(); if (h < 8 || h >= 21) return null;
+  if (plan.lastSessionAt && rimonSameDay(plan.lastSessionAt, now)) return null;
+  if ((plan.quiet || []).some((q) => now >= q[0] && now < q[1])) return null;
+  if ((plan.shown || []).some((s) => rimonSameDay(s.at, now))) return null;
+  return plan.entries.find((e) => e && now >= e.fireAt && now < e.fireAt + RIMON_WINDOW_MS) || null;
+}
+self.rimonDue = rimonDue;
+async function rimonCheck() {
+  try {
+    if (!self.registration || (self.Notification && self.Notification.permission !== 'granted')) return;
+    const RIMON_PLAN = rimonPlanUrl(); const cache = await caches.open(RIMON_CACHE); const hit = await cache.match(RIMON_PLAN); if (!hit) return;
+    const plan = await hit.json(); const now = Date.now(); const e = rimonDue(plan, now); if (!e) return;
+    await self.registration.showNotification(e.title || 'Rimon', { body: e.body, tag: 'alef-rimon', icon: 'assets/icons/icon-192.png', lang: 'en', renotify: false, data: { route: e.route || '#/', id: e.id } });
+    plan.entries = plan.entries.filter((x) => x !== e); plan.shown = [...(plan.shown || []), { id: e.id, at: now }].slice(-10);
+    await cache.put(RIMON_PLAN, new Response(JSON.stringify(plan), { headers: { 'content-type': 'application/json' } }));
+  } catch { /* reminders are best effort */ }
+}
+self.addEventListener('periodicsync', (event) => { if (event.tag === 'alef-rimon') event.waitUntil(rimonCheck()); });
+// A tap on any ALEF notification: close it, focus an open ALEF window (or open one) and go to the route it carries.
+self.addEventListener('notificationclick', (event) => {
+  const route = (event.notification && event.notification.data && event.notification.data.route) || '#/';
+  event.notification.close();
+  event.waitUntil((async () => {
+    const target = new URL(self.registration.scope).href + (String(route).startsWith('#') ? route : '#/');
+    const wins = await self.clients.matchAll({ type: 'window', includeUncontrolled: true });
+    for (const w of wins) { if (w.url.startsWith(self.registration.scope)) { try { await w.focus(); if (w.navigate) await w.navigate(target); } catch { /* focus is best effort */ } return; } }
+    try { await self.clients.openWindow(target); } catch { /* blocked */ }
+  })());
+});

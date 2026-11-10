@@ -176,15 +176,21 @@ function wireChrome() {
 // WCAG 2.4.11: on phones the bottom nav is position:fixed; keep the keyboard-focused control above it.
 document.addEventListener('focusin', (e) => {
   const nav = document.querySelector('.site-nav'); const el = e.target;
-  if (!nav || !(el instanceof Element) || el.closest('.site-nav') || getComputedStyle(nav).position !== 'fixed') return;
+  if (!nav || !(el instanceof Element) || el.closest('.site-nav')) return;
+  const ns = getComputedStyle(nav);
+  // A hidden bar (full-screen setup and lesson players hide it) has no top edge: measuring it scrolled the page down on every tap of an answer.
+  if (ns.position !== 'fixed' || ns.display === 'none' || ns.visibility === 'hidden') return;
   requestAnimationFrame(() => {
     if (document.activeElement !== el) return;
-    const over = el.getBoundingClientRect().bottom - nav.getBoundingClientRect().top;
+    const navBox = nav.getBoundingClientRect();
+    if (!navBox.height) return;
+    const over = el.getBoundingClientRect().bottom - navBox.top;
     if (over > 0) window.scrollBy({ top: over + 8, behavior: 'instant' });
   });
 });
 
 let unmount = () => {};
+let statbar = null; // header streak and daily-goal chips (src/shell/statbar.js), loaded after the first page paints
 let navToken = 0;
 let heldFocusId = '';
 let navFocusOwed = false; // a real navigation has begun but its heading has not been focused yet (a quiet re-render that supersedes it must still do that)
@@ -213,6 +219,7 @@ async function show(match, ctxBase, { quiet = false } = {}) {
   }
   if (route.name === 'home' && !settings.get('onboarded')) { ctxBase.route('/welcome'); return; }
   renderNav(route.name);
+  try { statbar?.refresh(); } catch { /* the bar is decoration */ }
   document.title = route.name === 'home' ? 'ALEF' : `${titleCase(route.title)} - ALEF`;
   const ctx = { ...ctxBase, params, query, path, routeName: route.name };
   // U-24: never a blank page while a view module loads — a named skeleton
@@ -352,6 +359,7 @@ async function boot() {
   }
   import('./shell/boot-hooks.js').then((m) => m.armReminders(ctxBase)).catch(() => {});
   import('./morning/boot.js').then((m) => m.startMorning({ store, audio })).catch(() => {});
+  shownFirst.then(() => import('./shell/statbar.js')).then((m) => { statbar = m.mountStatbar({ store, settings }); }).catch(() => {});
   scheduleManifest(audio);
   startShardLoading(audio);
   const swc = swContainer();

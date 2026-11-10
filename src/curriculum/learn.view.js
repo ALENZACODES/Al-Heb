@@ -25,6 +25,7 @@ import { mountFade } from "./fade.view.js";
 import { mountGender } from "./gender.view.js";
 import { mountScaffold } from "./scaffold.view.js";
 import { streakVisible } from "../shell/comfort.js";
+import { DAILY_GOAL_KEY, normalizeDailyGoal } from "../home/today.js";
 
 export function mount(root, ctx) {
   const q = ctx?.query || {};
@@ -127,7 +128,9 @@ function mountMap(root, ctx) {
       : doneCount === 0 ? "Let's start! " + goalMinutes + " minutes counts for today. The whole first lesson takes about " + next.estMinutes + ", and you can stop and come back."
       : streak > 1 && !st.streak.activeToday ? `${streak} days in a row! One lesson keeps it going.`
       : "Ready for the next one? You're doing great.";
-    const goal = st?.streak?.goal || 300, secs = Math.min(goal, st?.streak?.todaySeconds || 0);
+    // the ring is the learner's own daily goal (chosen at setup, the same number the header shows); the streak still counts a day at 5 minutes
+    let goalSec = 0; try { const g = ctx?.store?.get?.(DAILY_GOAL_KEY); if (g != null) goalSec = normalizeDailyGoal(g) * 60; } catch { /* no store: the streak goal */ }
+    const goal = goalSec || st?.streak?.goal || 300, secs = Math.min(goal, st?.streak?.todaySeconds || 0);
     const goalPct = Math.round((secs / goal) * 100), mins = Math.floor(secs / 60), goalMin = Math.round(goal / 60);
     const ring = el("div", { class: "alef-goal-ring", style: `--p:${goalPct}`, role: "img", "aria-label": goalPct >= 100 ? "Daily goal reached" : `Today: ${mins} of ${goalMin} minutes` },
       el("span", {}, goalPct >= 100 ? "✓" : `${mins}/${goalMin}`), el("small", {}, goalPct >= 100 ? "Goal!" : "min today"));

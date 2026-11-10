@@ -1740,6 +1740,33 @@
    "topic": "Transportation",
    "priority": 1800,
    "reason": "basic noun missing from the pool; unpointed in Wiktionary"
+  },
+  {
+   "lemma": "מפה",
+   "pos": "noun",
+   "pointed": "מַפָּה",
+   "gloss": "a map",
+   "topic": "Places / Travel",
+   "priority": 800,
+   "reason": "The noun 'map' (מַפָּה) was missing from the pool; only the verbs מִפָּה / מֻפָּה 'to map' were present. Lesson I-40 needs the noun."
+  },
+  {
+   "lemma": "מטען",
+   "pos": "noun",
+   "pointed": "מַטְעֵן",
+   "gloss": "a charger (for a phone or battery)",
+   "topic": "Electronics",
+   "priority": 2000,
+   "reason": "An electrical charger (מַטְעֵן) was missing; only מִטְעָן 'cargo' was present. Lesson I-16 needs the charger."
+  },
+  {
+   "lemma": "קורס",
+   "pos": "noun",
+   "pointed": "קוּרְס",
+   "gloss": "a course (a class or series of classes)",
+   "topic": "Education",
+   "priority": 1500,
+   "reason": "The academic noun קוּרְס was missing; קוֹרֵס 'is collapsing' is a different word. Lesson I-37 needs the noun."
   }
  ],
  "extraForms": {

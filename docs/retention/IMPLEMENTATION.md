@@ -19,7 +19,7 @@ Nothing here has been tried with real learners, and no retention numbers are pro
 
 - No reminder, no streak loss and no league result or reset from Friday 18:00 to Saturday 21:00 local time, or from 18:00 on the eve of Yom Tov to 21:00 on the day.
 - The app's existing quiet helper (`quietHours` in `src/shell/notify.js`, candle lighting to havdalah when a city is set) is reused; the wider of the two windows wins.
-- Streak: a missed Friday or Saturday (and a Yom Tov day and its eve) never breaks a streak and never costs a freeze. A missed Friday would be lost at midnight, which is inside the window, so Friday is covered too. Switch: `STREAK.shabbatCoversFriday` in `src/retention/streak.js`.
+- Streak: a missed Friday or Saturday (and a Yom Tov day and its eve) never breaks a streak and never costs a freeze. A missed Friday would be lost at midnight, which is inside the window, so Friday is covered too. The owner confirmed this on 2026-11-10: Friday is a free streak day. Switch: `STREAK.shabbatCoversFriday` in `src/retention/streak.js`.
 - No reminder line names the day of rest. The Sunday greeting is sent after it ends.
 
 ### What a Reminder Can and Cannot Do

@@ -20,7 +20,7 @@ decision, so the More sheet stays short and the first session stays coherent (we
 | `fade` | keep | Fade-out recall; target for `nikkud-fade`. |
 | `wordtrace` | keep | Extends letter tracing (a v0 page). |
 | `israel` | keep | Israel goal path. |
-| `israelunits` | keep | Unit-by-unit Israel track; listed next to `israel` and `intermediate`. |
+| `israelunits` | hide | Merged into the live Practical course; old #/israel-units routes redirect there. |
 | `traditions` | keep | Target for `traditions-guide` and `traditions-hear`. |
 | `traditions-guide` | merge | Into `traditions` (already a tab there). |
 | `traditions-hear` | merge | Into `traditions` (already a tab there); no recorded audio yet. |
@@ -42,7 +42,7 @@ decision, so the More sheet stays short and the first session stays coherent (we
 | `read-my-way` | keep | Tradition-aware reading. |
 | `rules` | keep | Pronunciation rules reference. |
 | `intermediate` | keep | After r10. |
-| `israelunits` | keep | The Israel track as practical units (grammar notes, spaced unit review, listening and speaking); draft notes, no new Hebrew. |
+| `israelunits` | hide | Merged into the live Practical course; old #/israel-units routes redirect there. |
 | `practical` | keep | Babbel-style conversation units behind Practical; draft, needs native review; not a 126th lesson. |
 | `grammar` | keep | Reference notes. |
 | `compare` | keep | Target for `record-compare`. |

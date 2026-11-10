@@ -2,7 +2,7 @@
  "schema": "alef-practical-outline/1",
  "compatibleWith": "alef-practical-units/2",
  "generated": "2026-11-10",
- "note": "The planned page outline for the Practical course. Unit ids match data/curriculum/practical-units.json. Pages marked written are in data/curriculum/practical-pages/written.json. pu-army (I-18 army slang) is outlined so every Israel-track lesson has a home, but it is held off the live Practical set until John decides. #/israel-units is not removed until John approves a single-course merge.",
+ "note": "The planned page outline for the Practical course, now the single Israel course. Unit ids match data/curriculum/practical-units.json. Pages marked written are in data/curriculum/practical-pages/written.json. pu-army (I-18, family-friendly sourced slang) is on the live set. #/israel-units redirects to #/practical.",
  "levels": {
   "L0": "First words",
   "L1": "Getting around",
@@ -28,7 +28,7 @@
  "totals": {
   "units": 37,
   "pages": 189,
-  "written": 101
+  "written": 189
  },
  "units": [
   {
@@ -1110,7 +1110,7 @@
      "order": 1,
      "kind": "learn",
      "title": "At Reception",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-hotel/pu-hotel-p01"
     },
     {
@@ -1118,7 +1118,7 @@
      "order": 2,
      "kind": "dialogue",
      "title": "Checking In",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-hotel/pu-hotel-p02"
     },
     {
@@ -1126,7 +1126,7 @@
      "order": 3,
      "kind": "grammar",
      "title": "I Have, You Have: יֵשׁ לִי",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-hotel/pu-hotel-p03"
     },
     {
@@ -1134,7 +1134,7 @@
      "order": 4,
      "kind": "speak",
      "title": "Ask for Something in the Room",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-hotel/pu-hotel-p04"
     },
     {
@@ -1142,7 +1142,7 @@
      "order": 5,
      "kind": "review",
      "title": "Unit Review",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-hotel/pu-hotel-p05"
     }
    ]
@@ -1165,7 +1165,7 @@
      "order": 1,
      "kind": "learn",
      "title": "Buying a SIM",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-phone/pu-phone-p01"
     },
     {
@@ -1173,7 +1173,7 @@
      "order": 2,
      "kind": "learn",
      "title": "On the Phone",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-phone/pu-phone-p02"
     },
     {
@@ -1181,7 +1181,7 @@
      "order": 3,
      "kind": "speak",
      "title": "Leave a Message",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-phone/pu-phone-p03"
     },
     {
@@ -1189,7 +1189,7 @@
      "order": 4,
      "kind": "review",
      "title": "Unit Review",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-phone/pu-phone-p04"
     }
    ]
@@ -1211,7 +1211,7 @@
      "order": 1,
      "kind": "learn",
      "title": "Rooms and Rent",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-apartment/pu-apartment-p01"
     },
     {
@@ -1219,7 +1219,7 @@
      "order": 2,
      "kind": "grammar",
      "title": "Is There...? יֵשׁ and אֵין",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-apartment/pu-apartment-p02"
     },
     {
@@ -1227,7 +1227,7 @@
      "order": 3,
      "kind": "speak",
      "title": "Questions for the Owner",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-apartment/pu-apartment-p03"
     },
     {
@@ -1235,7 +1235,7 @@
      "order": 4,
      "kind": "review",
      "title": "Unit Review",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-apartment/pu-apartment-p04"
     }
    ]
@@ -1257,7 +1257,7 @@
      "order": 1,
      "kind": "learn",
      "title": "When Are You Free?",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-plans/pu-plans-p01"
     },
     {
@@ -1265,7 +1265,7 @@
      "order": 2,
      "kind": "grammar",
      "title": "Want To: רוֹצֶה Plus a Verb",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-plans/pu-plans-p02"
     },
     {
@@ -1273,7 +1273,7 @@
      "order": 3,
      "kind": "speak",
      "title": "Suggest a Plan",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-plans/pu-plans-p03"
     },
     {
@@ -1281,7 +1281,7 @@
      "order": 4,
      "kind": "review",
      "title": "Unit Review",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-plans/pu-plans-p04"
     }
    ]
@@ -1303,7 +1303,7 @@
      "order": 1,
      "kind": "learn",
      "title": "I Like, I Don't Like",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-opinions/pu-opinions-p01"
     },
     {
@@ -1311,7 +1311,7 @@
      "order": 2,
      "kind": "grammar",
      "title": "I Think That: שֶׁ",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-opinions/pu-opinions-p02"
     },
     {
@@ -1319,7 +1319,7 @@
      "order": 3,
      "kind": "speak",
      "title": "Give Your Opinion",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-opinions/pu-opinions-p03"
     },
     {
@@ -1327,7 +1327,7 @@
      "order": 4,
      "kind": "review",
      "title": "Unit Review",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-opinions/pu-opinions-p04"
     }
    ]
@@ -1349,7 +1349,7 @@
      "order": 1,
      "kind": "learn",
      "title": "Signs and Roads",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-driving/pu-driving-p01"
     },
     {
@@ -1357,7 +1357,7 @@
      "order": 2,
      "kind": "learn",
      "title": "Parking and Fuel",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-driving/pu-driving-p02"
     },
     {
@@ -1365,7 +1365,7 @@
      "order": 3,
      "kind": "speak",
      "title": "Ask a Driver",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-driving/pu-driving-p03"
     },
     {
@@ -1373,7 +1373,7 @@
      "order": 4,
      "kind": "review",
      "title": "Unit Review",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-driving/pu-driving-p04"
     }
    ]
@@ -1395,7 +1395,7 @@
      "order": 1,
      "kind": "learn",
      "title": "On the Trail",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-hiking/pu-hiking-p01"
     },
     {
@@ -1403,7 +1403,7 @@
      "order": 2,
      "kind": "learn",
      "title": "Water and Safety",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-hiking/pu-hiking-p02"
     },
     {
@@ -1411,7 +1411,7 @@
      "order": 3,
      "kind": "speak",
      "title": "Ask About the Trail",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-hiking/pu-hiking-p03"
     },
     {
@@ -1419,7 +1419,7 @@
      "order": 4,
      "kind": "review",
      "title": "Unit Review",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-hiking/pu-hiking-p04"
     }
    ]
@@ -1441,7 +1441,7 @@
      "order": 1,
      "kind": "learn",
      "title": "Sun and Sea",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-beach/pu-beach-p01"
     },
     {
@@ -1449,7 +1449,7 @@
      "order": 2,
      "kind": "speak",
      "title": "At the Beach Kiosk",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-beach/pu-beach-p02"
     },
     {
@@ -1457,7 +1457,7 @@
      "order": 3,
      "kind": "review",
      "title": "Unit Review",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-beach/pu-beach-p03"
     }
    ]
@@ -1480,7 +1480,7 @@
      "order": 1,
      "kind": "learn",
      "title": "Sound Less Like an Outsider",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-decide/pu-decide-p01"
     },
     {
@@ -1488,7 +1488,7 @@
      "order": 2,
      "kind": "dialogue",
      "title": "A Longer Conversation",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-decide/pu-decide-p02"
     },
     {
@@ -1496,7 +1496,7 @@
      "order": 3,
      "kind": "speak",
      "title": "Your Turn",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-decide/pu-decide-p03"
     },
     {
@@ -1504,7 +1504,7 @@
      "order": 4,
      "kind": "check",
      "title": "Level 2 Check",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-decide/pu-decide-p04"
     }
    ]
@@ -1527,7 +1527,7 @@
      "order": 1,
      "kind": "learn",
      "title": "At the Office",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-work/pu-work-p01"
     },
     {
@@ -1535,7 +1535,7 @@
      "order": 2,
      "kind": "grammar",
      "title": "Requests at Work",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-work/pu-work-p02"
     },
     {
@@ -1543,7 +1543,7 @@
      "order": 3,
      "kind": "learn",
      "title": "Meetings and Email",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-work/pu-work-p03"
     },
     {
@@ -1551,7 +1551,7 @@
      "order": 4,
      "kind": "speak",
      "title": "Introduce Your Job",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-work/pu-work-p04"
     },
     {
@@ -1559,7 +1559,7 @@
      "order": 5,
      "kind": "review",
      "title": "Unit Review",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-work/pu-work-p05"
     }
    ]
@@ -1583,7 +1583,7 @@
      "order": 1,
      "kind": "learn",
      "title": "It Hurts Here",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-health/pu-health-p01"
     },
     {
@@ -1591,7 +1591,7 @@
      "order": 2,
      "kind": "grammar",
      "title": "My Head Hurts: כּוֹאֵב לִי",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-health/pu-health-p02"
     },
     {
@@ -1599,7 +1599,7 @@
      "order": 3,
      "kind": "learn",
      "title": "At the Clinic",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-health/pu-health-p03"
     },
     {
@@ -1607,7 +1607,7 @@
      "order": 4,
      "kind": "learn",
      "title": "At the Pharmacy",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-health/pu-health-p04"
     },
     {
@@ -1615,7 +1615,7 @@
      "order": 5,
      "kind": "listen",
      "title": "Hear the Instructions",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-health/pu-health-p05"
     },
     {
@@ -1623,7 +1623,7 @@
      "order": 6,
      "kind": "speak",
      "title": "Describe What Hurts",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-health/pu-health-p06"
     },
     {
@@ -1631,7 +1631,7 @@
      "order": 7,
      "kind": "review",
      "title": "Unit Review",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-health/pu-health-p07"
     }
    ]
@@ -1654,7 +1654,7 @@
      "order": 1,
      "kind": "learn",
      "title": "At the Bank",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-bank/pu-bank-p01"
     },
     {
@@ -1662,7 +1662,7 @@
      "order": 2,
      "kind": "learn",
      "title": "Filling In a Form",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-bank/pu-bank-p02"
     },
     {
@@ -1670,7 +1670,7 @@
      "order": 3,
      "kind": "grammar",
      "title": "Must and Need: צָרִיךְ",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-bank/pu-bank-p03"
     },
     {
@@ -1678,7 +1678,7 @@
      "order": 4,
      "kind": "speak",
      "title": "Ask at the Counter",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-bank/pu-bank-p04"
     },
     {
@@ -1686,7 +1686,7 @@
      "order": 5,
      "kind": "review",
      "title": "Unit Review",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-bank/pu-bank-p05"
     }
    ]
@@ -1708,7 +1708,7 @@
      "order": 1,
      "kind": "learn",
      "title": "Sending a Parcel",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-post/pu-post-p01"
     },
     {
@@ -1716,7 +1716,7 @@
      "order": 2,
      "kind": "learn",
      "title": "Collecting a Parcel",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-post/pu-post-p02"
     },
     {
@@ -1724,7 +1724,7 @@
      "order": 3,
      "kind": "speak",
      "title": "Ask Where Your Parcel Is",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-post/pu-post-p03"
     },
     {
@@ -1732,7 +1732,7 @@
      "order": 4,
      "kind": "review",
      "title": "Unit Review",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-post/pu-post-p04"
     }
    ]
@@ -1755,7 +1755,7 @@
      "order": 1,
      "kind": "learn",
      "title": "Help!",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-emergencies/pu-emergencies-p01"
     },
     {
@@ -1763,7 +1763,7 @@
      "order": 2,
      "kind": "learn",
      "title": "Calling an Ambulance or the Police",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-emergencies/pu-emergencies-p02"
     },
     {
@@ -1771,7 +1771,7 @@
      "order": 3,
      "kind": "grammar",
      "title": "Commands: Come, Call, Wait",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-emergencies/pu-emergencies-p03"
     },
     {
@@ -1779,7 +1779,7 @@
      "order": 4,
      "kind": "listen",
      "title": "Hear the Instructions",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-emergencies/pu-emergencies-p04"
     },
     {
@@ -1787,7 +1787,7 @@
      "order": 5,
      "kind": "speak",
      "title": "Say What Happened",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-emergencies/pu-emergencies-p05"
     },
     {
@@ -1795,7 +1795,7 @@
      "order": 6,
      "kind": "review",
      "title": "Unit Review",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-emergencies/pu-emergencies-p06"
     }
    ]
@@ -1817,7 +1817,7 @@
      "order": 1,
      "kind": "learn",
      "title": "The Order",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-delivery/pu-delivery-p01"
     },
     {
@@ -1825,7 +1825,7 @@
      "order": 2,
      "kind": "learn",
      "title": "The Address",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-delivery/pu-delivery-p02"
     },
     {
@@ -1833,7 +1833,7 @@
      "order": 3,
      "kind": "speak",
      "title": "Call the Courier",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-delivery/pu-delivery-p03"
     },
     {
@@ -1841,7 +1841,7 @@
      "order": 4,
      "kind": "review",
      "title": "Unit Review",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-delivery/pu-delivery-p04"
     }
    ]
@@ -1863,7 +1863,7 @@
      "order": 1,
      "kind": "learn",
      "title": "Short Messages",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-social/pu-social-p01"
     },
     {
@@ -1871,7 +1871,7 @@
      "order": 2,
      "kind": "grammar",
      "title": "Future Tense: I Will",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-social/pu-social-p02"
     },
     {
@@ -1879,7 +1879,7 @@
      "order": 3,
      "kind": "speak",
      "title": "Reply to a Friend",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-social/pu-social-p03"
     },
     {
@@ -1887,7 +1887,7 @@
      "order": 4,
      "kind": "review",
      "title": "Unit Review",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-social/pu-social-p04"
     }
    ]
@@ -1903,15 +1903,14 @@
    "dialogue": null,
    "file": "data/curriculum/practical/pu-army.json",
    "route": "#/practical/pu-army",
-   "heldForJohn": true,
-   "live": false,
+   "live": true,
    "pages": [
     {
      "id": "pu-army-p01",
      "order": 1,
      "kind": "learn",
      "title": "Words From the Army",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-army/pu-army-p01"
     },
     {
@@ -1919,7 +1918,7 @@
      "order": 2,
      "kind": "listen",
      "title": "Hear It in Conversation",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-army/pu-army-p02"
     },
     {
@@ -1927,7 +1926,7 @@
      "order": 3,
      "kind": "review",
      "title": "Unit Review",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-army/pu-army-p03"
     }
    ]
@@ -1949,7 +1948,7 @@
      "order": 1,
      "kind": "learn",
      "title": "Headline Words",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-news/pu-news-p01"
     },
     {
@@ -1957,7 +1956,7 @@
      "order": 2,
      "kind": "grammar",
      "title": "Reading Without Vowel Marks",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-news/pu-news-p02"
     },
     {
@@ -1965,7 +1964,7 @@
      "order": 3,
      "kind": "learn",
      "title": "One Short Story",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-news/pu-news-p03"
     },
     {
@@ -1973,7 +1972,7 @@
      "order": 4,
      "kind": "check",
      "title": "Level 3 Check",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-news/pu-news-p04"
     }
    ]
@@ -1995,7 +1994,7 @@
      "order": 1,
      "kind": "learn",
      "title": "The Invitation",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-shabbat/pu-shabbat-p01"
     },
     {
@@ -2003,7 +2002,7 @@
      "order": 2,
      "kind": "learn",
      "title": "At the Table",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-shabbat/pu-shabbat-p02"
     },
     {
@@ -2011,7 +2010,7 @@
      "order": 3,
      "kind": "grammar",
      "title": "Polite Requests at a Meal",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-shabbat/pu-shabbat-p03"
     },
     {
@@ -2019,7 +2018,7 @@
      "order": 4,
      "kind": "speak",
      "title": "Thank Your Hosts",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-shabbat/pu-shabbat-p04"
     },
     {
@@ -2027,7 +2026,7 @@
      "order": 5,
      "kind": "review",
      "title": "Unit Review",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-shabbat/pu-shabbat-p05"
     }
    ]
@@ -2049,7 +2048,7 @@
      "order": 1,
      "kind": "learn",
      "title": "The Year at a Glance",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-holidays/pu-holidays-p01"
     },
     {
@@ -2057,7 +2056,7 @@
      "order": 2,
      "kind": "learn",
      "title": "Greetings for Each Holiday",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-holidays/pu-holidays-p02"
     },
     {
@@ -2065,7 +2064,7 @@
      "order": 3,
      "kind": "listen",
      "title": "Hear the Greeting",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-holidays/pu-holidays-p03"
     },
     {
@@ -2073,7 +2072,7 @@
      "order": 4,
      "kind": "speak",
      "title": "Wish Someone Well",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-holidays/pu-holidays-p04"
     },
     {
@@ -2081,7 +2080,7 @@
      "order": 5,
      "kind": "check",
      "title": "Final Check",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-holidays/pu-holidays-p05"
     }
    ]

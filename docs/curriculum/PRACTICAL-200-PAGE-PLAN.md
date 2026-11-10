@@ -1,28 +1,26 @@
 # Practical Hebrew: The 189-Page Plan
 
-Lane C, round 3. This plan turns the Israel track into a structured conversation course of 189 pages in 36 units: one real
+Lane C, round 3. This plan turns the Israel track into a structured conversation course of 189 pages in 37 units: one real
 situation per unit, one clear grammar point per grammar page, spaced review on every page, and listening and speaking drills.
-The first 101 pages (levels 0 and 1, and the first six units of level 2) are written in full, and they show in the live `#/practical` course. The model is the way Babbel builds a course; the Hebrew is ALEF's own.
+All 189 pages are written in full and show in the live `#/practical` course, which is now the single Israel course. The model is the way Babbel builds a course; the Hebrew is ALEF's own.
 
 - Outline data: `data/curriculum/practical-pages/outline.json` (every unit and page id, kind, title, status and route)
-- Written pages (101): `data/curriculum/practical-pages/written.json`, readable copy in `docs/curriculum/PRACTICAL-WRITTEN-PAGES.md`
+- Written pages (189): `data/curriculum/practical-pages/written.json`, readable copy in `docs/curriculum/PRACTICAL-WRITTEN-PAGES.md`
 - Page schema: `data/curriculum/practical-pages/page.schema.json` (v3, a superset of the v2 page)
 - Tests: `tests/curriculum.practical-pages.test.js` (10 tests)
 - Builder: the page builder script kept with the lane's working files; it reads only repo data
 
 ## One Course, Not Two
 
-There are two drafts of this idea on GitHub. `feature/lesson-integrity-2026-11-10` has the Practical course: route `#/practical`,
-33 units and 162 pages in `data/curriculum/practical/<unit>.json`, with a working view, progress and a clip map. This branch has
-`#/israel-units`, 13 units built from whole lessons. They should not both ship. The plan:
+`#/practical` is the single Israel course. `#/israel-units` and `#/israel-units/:id` stay registered so old bookmarks and search
+are not dead links, and they redirect into Practical (a mapped unit when the old id is known). The preview nav hides the duplicate
+entry. `israelUnits.v1` review dates are not migrated.
 
 1. **`#/practical` is the home.** Its unit ids, file layout and v2 page shape stay. Every page id in this plan uses its pattern
    (`pu-<unit>-pNN`), and the written pages replace the matching v2 pages one for one.
-2. **`#/israel-units` retires when the branches merge.** Its grammar points move into the grammar pages listed below. The route
-   then redirects to `#/practical`, and `israelUnits.v1` progress is dropped (it only records review dates). It stays until then
-   so the branch keeps a working Israel course on its own.
+2. **`#/israel-units` redirects to `#/practical`.** Grammar points from the old preview live in the written grammar pages below.
 3. **Every Israel-track lesson has a unit.** il16 and il19 sit in the live units `pu-verbs-now` and `pu-past`, il23 and il24 in
-   `pu-decide`, and I-18 in `pu-army` (outlined, held off the live set). An earlier draft of this plan used its own ids
+   `pu-decide`, and I-18 in `pu-army` (live, family-friendly sourced slang; weapon vocabulary is left off the live pages). An earlier draft of this plan used its own ids
    (`pu-verbs`, `pu-conversation`); round 9 renamed them to the live ids so their written pages can show. The test fails if any
    Israel-track lesson is left out, or if an outline unit has no live unit.
 
@@ -436,13 +434,10 @@ Found while writing; nothing changed in the sources:
 
 ## For John
 
-1. **Which branch owns Practical.** The recommendation is the Practical branch's route and files, with this branch's 20 pages and
-   outline merged in, and `#/israel-units` retired. Nothing merges without you.
-2. **בְּעֶזְרַת הַשֵּׁם on `pu-politeness-p05`.** The page explains that הַשֵּׁם (the Name) is how speakers refer to God in
-   daily speech without saying a divine name. It contains no divine name, but it is a decision about how God is spoken of, so it
-   is held for you. Delete the page's grammar block to drop it.
-3. **The eight divine-name holds from round 1 are unchanged** (see `docs/review/LESSON-INTEGRITY-2026-11-10.md`).
-4. **L4 (Shabbat and holidays)** sits at the end of the Israel course. Another option is to link it to the synagogue track.
+1. **One Israel course.** `#/practical` is the live course. `#/israel-units` redirects there. Nothing merges to main without you.
+2. **בְּעֶזְרַת הַשֵּׁם on `pu-politeness-p05` is shown** as a set phrase (decision of 10 November 2026). Speech follows the existing divine-name rule in `src/shell/names.js` and stays fail-closed if a name is flagged. `speechSafeText` currently accepts this phrase unchanged.
+3. **The eight divine-name holds from round 1 stay held** (see `docs/review/LESSON-INTEGRITY-2026-11-10.md`). They are not practised on live pages. Festival greetings גְּמַר חֲתִימָה טוֹבָה and חַג כָּשֵׁר וְשָׂמֵחַ are shown.
+4. **L4 (Shabbat and holidays)** stays at the end of the Israel course. `pu-army` is on the live set, after social and before news.
 5. **Native review** of the 30 pages, the 30 written transliterations, and the items above, before any page leaves draft.
 
 ## What Is Left

@@ -16,7 +16,7 @@
     "m": "audio/m/israeli/book/book50-p01.mp3"
    },
    "illustration": "a river path lined with eucalyptus, mist",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -30,7 +30,7 @@
     "m": "audio/m/israeli/book/book50-p02.mp3"
    },
    "illustration": "a woman jogging, red-faced, headphones",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -44,7 +44,7 @@
     "m": "audio/m/israeli/book/book50-p03.mp3"
    },
    "illustration": "a running app showing day 4",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -58,7 +58,7 @@
     "m": "audio/m/israeli/book/book50-p04.mp3"
    },
    "illustration": "lean runners streaming past, a kid on a scooter too",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -72,7 +72,7 @@
     "m": "audio/m/israeli/book/book50-p05.mp3"
    },
    "illustration": "an old man in a headband gliding by",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -86,7 +86,7 @@
     "m": "audio/m/israeli/book/book50-p06.mp3"
    },
    "illustration": "bent over, hands on knees",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -100,7 +100,7 @@
     "m": "audio/m/israeli/book/book50-p07.mp3"
    },
    "illustration": "one more step, jaw set",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -114,7 +114,7 @@
     "m": "audio/m/israeli/book/book50-p08.mp3"
    },
    "illustration": "ducks paddling alongside her",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -128,7 +128,7 @@
     "m": "audio/m/israeli/book/book50-p09.mp3"
    },
    "illustration": "the old man stretching on a footbridge",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -142,7 +142,7 @@
     "m": "audio/m/israeli/book/book50-p10.mp3"
    },
    "illustration": "his kind look",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -156,7 +156,7 @@
     "m": "audio/m/israeli/book/book50-p11.mp3"
    },
    "illustration": "her gasping answer",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -170,7 +170,7 @@
     "m": "audio/m/israeli/book/book50-p12.mp3"
    },
    "illustration": "the two walking off the bridge together, sun up",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   }
  ]

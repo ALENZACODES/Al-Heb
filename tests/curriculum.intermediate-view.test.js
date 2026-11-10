@@ -271,7 +271,7 @@ test("the G-d setting reaches lesson English in the player", async () => {
 test("counter stays at the lesson size when a miss is requeued; belt wording is plain on a fresh profile", async () => {
   const l = byId["I-01"];
   const { root } = await mountLessonAt(memStore(), "I-01");
-  assert.match(root.text, /Finish the beginner assessment \(lesson r51\) first/);
+  assert.match(root.text, /Finish the beginner check \(lesson r51\) first/);
   assert.doesNotMatch(root.text, /belt/i);
   await byId_(root, "alef-int-start").click();
   await waitFor(() => section(root));

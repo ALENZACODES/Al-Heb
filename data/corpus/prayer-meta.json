@@ -38,8 +38,8 @@
      "note": ""
     },
     "reform": {
-     "use": "unknown",
-     "note": ""
+     "use": "as-written",
+     "note": "Often said by the rabbi to close the service; many congregations answer each line 'ken yehi ratzon' (may it be so)."
     },
     "note": ""
    },
@@ -675,15 +675,15 @@
    "denominations": {
     "orthodox": {
      "use": "as-written",
-     "note": ""
+     "note": "The text here is Edot HaMizrach. Ashkenazi books read 'va'anachnu kor'im umishtachavim umodim' (bend the knees at kor'im, bow at mishtachavim); some Ashkenazi books leave out or bracket 'shehem mishtachavim lahevel varik'."
     },
     "conservative": {
      "use": "varies",
-     "note": "Wording of the \"he has not made us like the nations\" lines varies in some Conservative books."
+     "note": "Many Conservative books leave out the line 'shehem mishtachavim lahevel varik' (they bow to vanity and emptiness) and offer other wording for 'shelo asanu kegoyei ha'aratzot'."
     },
     "reform": {
      "use": "varies",
-     "note": "Reform and Reconstructionist books usually change or omit the \"has not made us like the nations\" lines. Unverified."
+     "note": "Reform books do not print 'shehem mishtachavim lahevel varik' and offer an alternative to the 'has not made us like the nations' lines; the bowing line reads 'va'anachnu kor'im umishtachavim umodim'."
     },
     "note": ""
    },
@@ -770,8 +770,8 @@
      "note": "Aramaic text; same words in the three movements. Who says it (mourners only, or the whole room) varies by community."
     },
     "reform": {
-     "use": "as-written",
-     "note": "Aramaic text; same words in the three movements. Who says it (mourners only, or the whole room) varies by community."
+     "use": "varies",
+     "note": "Aramaic text; same words in the three movements. Who says it (mourners only, or the whole room) varies by community. Reform books add 'v'al kol yoshvei tevel' (and for all who dwell on earth) to the last line."
     },
     "note": ""
    },
@@ -1556,8 +1556,8 @@
      "note": ""
     },
     "reform": {
-     "use": "as-written",
-     "note": ""
+     "use": "varies",
+     "note": "Reform books add 'v'al kol yoshvei tevel' (and for all who dwell on earth) to the last line."
     },
     "note": ""
    },

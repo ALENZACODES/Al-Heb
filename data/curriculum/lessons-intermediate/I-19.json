@@ -24,7 +24,7 @@
   },
   {
    "he": "שָׁבוּעַ טוֹב",
-   "en": "good week",
+   "en": "a good week (said once Shabbat ends)",
    "translit": null,
    "pronunciation": {
     "israeli": "shavu'a tov"
@@ -374,8 +374,8 @@
     },
     {
      "speaker": "a",
-     "he": "שָׁבוּעַ טוֹב!",
-     "en": "A good week!"
+     "he": "שַׁבָּת שָׁלוֹם!",
+     "en": "Shabbat shalom!"
     }
    ],
    "task": "Say the guest's goodbye, then answer as the host."

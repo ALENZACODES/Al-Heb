@@ -206,7 +206,7 @@
  "goals": [
   "Greet people with chag sameach and recognise the word sukkah",
   "Say Shehecheyanu, the wine blessing, the Sukkot Kiddush insert, and the blessing to dwell in the sukkah",
-  "Know that the lulav blessing, Hoshanot, and the unsourced remainder of Hallel are still not in the corpus (g-hallel)"
+  "Know that the lulav blessing, Hoshanot, and the rest of Hallel are not in ALEF yet"
  ],
  "estMinutes": 25,
  "prerequisites": [

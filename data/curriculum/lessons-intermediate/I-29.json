@@ -3,7 +3,7 @@
  "track": "read",
  "level": "intermediate",
  "unit": "synagogue",
- "title": "Pesach: the seder blessings the corpus holds",
+ "title": "Pesach: the seder blessings and the words of the festival",
  "status": "draft",
  "proofread": false,
  "needsNativeReview": true,
@@ -222,7 +222,7 @@
  "goals": [
   "Say the wine blessing and the Shehecheyanu that open the seder",
   "Recognise the Pesach insert and the close of the festival Kiddush, including 'a remembrance of the exodus from Egypt' and 'who makes Israel and the seasons holy'",
-  "Wish people 'chag kasher vesameach' or 'chag sameach', and know which seder texts the corpus still does not hold"
+  "Wish people 'chag kasher vesameach' or 'chag sameach', and know which seder texts ALEF still does not hold"
  ],
  "estMinutes": 30,
  "prerequisites": [

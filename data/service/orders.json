@@ -11,6 +11,7 @@
     { "id": "lecha-dodi-1", "moment": "Welcoming Shabbat", "anchor": "shabbat-evening" },
     { "id": "torah-barchu", "moment": "The call to prayer (Barchu)", "anchor": "shema-and-blessings" },
     { "id": "shema-1", "moment": "The Shema", "anchor": "shema-and-blessings" },
+    { "id": "shema-2", "moment": "Quiet line after the Shema", "anchor": "shema-and-blessings" },
     { "id": "vahavta-full", "moment": "V'ahavta", "anchor": "shema-and-blessings" },
     { "id": "mi-chamocha-1", "moment": "Mi Chamocha", "anchor": "shema-and-blessings" },
     { "id": "amidah-lips", "moment": "The Amidah begins", "anchor": "amidah" },

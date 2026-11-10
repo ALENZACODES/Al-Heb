@@ -195,7 +195,7 @@
    ],
    "goals": [
     "Hear the whole Priestly Blessing (Numbers 6:24-26)",
-    "Spot the letters you already know (Shin, Lamed, Mem, Vav) in the three lines",
+    "Spot the letters you already know (Shin, Bet, Lamed, Vav and final Mem) in the three lines",
     "Understand this is the page-1 text you will fully decode by lesson 27"
    ],
    "estMinutes": 15,
@@ -374,7 +374,7 @@
     },
     {
      "he": "לָךְ",
-     "en": "to you",
+     "en": "to you (f.)",
      "translit": null
     },
     {
@@ -447,7 +447,7 @@
     },
     {
      "he": "אָנִי",
-     "en": "I",
+     "en": "I (verse-end form)",
      "translit": null
     },
     {
@@ -522,19 +522,19 @@
     },
     {
      "he": "לְךָ",
-     "en": "to you",
+     "en": "to you (m.)",
      "translit": null
     },
     {
      "he": "וְאָנִי",
-     "en": "and I",
+     "en": "and I (verse-end form)",
      "translit": null
     }
    ],
    "prayerLines": [],
    "goals": [
     "Read a shva at the start of a word as a quick 'e'",
-    "Start applying the shva rules (lane 3 drills)"
+    "Start applying the shva rules in the practice drills"
    ],
    "estMinutes": 25,
    "prerequisites": [
@@ -562,7 +562,7 @@
     },
     {
      "he": "וְיִשְׁמְרֶךָ",
-     "en": "and keep you",
+     "en": "and may He keep you",
      "translit": null
     }
    ],
@@ -718,7 +718,7 @@
    ],
    "prayerLines": [],
    "goals": [
-    "Ayin: silent in Ashkenazi, silent or a glottal stop in Israeli; Sephardi data lists a throat sound [ʕ] but the app's English line says silent"
+    "Ayin: silent in Ashkenazi reading and in most Israeli speech (sometimes a light catch in the throat); many Sephardi and Mizrahi readers sound it deep in the throat"
    ],
    "estMinutes": 20,
    "prerequisites": [
@@ -995,7 +995,7 @@
     },
     {
      "he": "וְיָשֵׂם",
-     "en": "and grant",
+     "en": "and may He grant",
      "translit": null
     },
     {
@@ -1108,7 +1108,7 @@
     },
     {
      "he": "תִּשְׁמְעוּ",
-     "en": "you will hear",
+     "en": "you (pl.) will hear",
      "translit": null
     },
     {
@@ -1300,7 +1300,7 @@
    "prayerLines": [],
    "goals": [
     "Know that the written Name is read aloud as Adonai in prayer",
-    "Recognise abbreviation marks in a siddur (no example word is in this lesson yet)"
+    "Recognise abbreviation marks (geresh and gershayim) in a siddur"
    ],
    "estMinutes": 20,
    "prerequisites": [
@@ -1578,7 +1578,7 @@
    "words": [
     {
      "he": "בּוֹרֵא",
-     "en": "creator",
+     "en": "who creates",
      "translit": null
     },
     {
@@ -1709,12 +1709,12 @@
     },
     {
      "he": "לַאֲדוֹן",
-     "en": "to the Lord",
+     "en": "to the Master (of)",
      "translit": null
     },
     {
      "he": "הַכֹּל",
-     "en": "the all",
+     "en": "all; everything",
      "translit": null
     }
    ],
@@ -1784,7 +1784,7 @@
     },
     {
      "he": "עוֹלָם",
-     "en": "the world",
+     "en": "world; eternity",
      "translit": null
     },
     {
@@ -1892,7 +1892,7 @@
    ],
    "goals": [
     "Read the five lines in the target time",
-    "Record words per minute; see belts.json"
+    "Record your words per minute and compare it with the grey-belt target"
    ],
    "estMinutes": 20,
    "prerequisites": [
@@ -1919,7 +1919,7 @@
     "bless-formula-1"
    ],
    "goals": [
-    "Read at the grey-belt proposed rate without errors"
+    "Read at the grey-belt target speed without errors"
    ],
    "estMinutes": 20,
    "prerequisites": [
@@ -1957,7 +1957,7 @@
    "id": "r51",
    "track": "read",
    "level": "grey",
-   "title": "Grey-belt assessment",
+   "title": "Grey-belt check",
    "letters": [],
    "vowels": [],
    "words": [
@@ -1974,7 +1974,7 @@
     "adon-olam-1"
    ],
    "goals": [
-    "Pass the grey-belt gate in belts.json"
+    "Pass the grey-belt check: read a siddur page inside the time limit"
    ],
    "estMinutes": 30,
    "prerequisites": [
@@ -2274,7 +2274,7 @@
     },
     {
      "he": "חֶשְׁבּוֹן",
-     "en": "the bill",
+     "en": "bill; check",
      "translit": null
     }
    ],
@@ -2811,7 +2811,7 @@
     },
     {
      "he": "תַּגִּידוּ בְּאַנְגְּלִית",
-     "en": "say it in English",
+     "en": "say it in English (to more than one person)",
      "translit": null
     },
     {
@@ -3031,13 +3031,13 @@
     },
     {
      "he": "מַה שְׁלוֹמְךָ",
-     "en": "how are you (stress on last syllable)",
+     "en": "how are you (to a man; stress on the last syllable)",
      "translit": null
     }
    ],
    "prayerLines": [],
    "goals": [
-    "Run the lane 3 foreigner-marker drills for resh, chet and stress"
+    "Practise the three sounds that mark a foreign accent: resh, chet and word stress"
    ],
    "estMinutes": 30,
    "prerequisites": [
@@ -3059,7 +3059,7 @@
     },
     {
      "he": "תַּסְבִּיר לִי",
-     "en": "explain it to me",
+     "en": "explain it to me (to a man)",
      "translit": null
     },
     {
@@ -3756,7 +3756,7 @@
     {
      "id": "I-02-e06",
      "type": "produce",
-     "en": "the great, the mighty and the awesome",
+     "en": "the great, mighty and awesome God",
      "options": [
       "הָאֵל הַגָּדוֹל הַגִּבּוֹר וְהַנּוֹרָא",
       "מֶלֶךְ עוֹזֵר וּמוֹשִׁיעַ וּמָגֵן",
@@ -4415,7 +4415,7 @@
     },
     {
      "he": "עָלֵינוּ",
-     "en": "it is upon us",
+     "en": "upon us",
      "translit": null,
      "pronunciation": {
       "israeli": "aleinu",
@@ -5607,8 +5607,8 @@
    ],
    "goals": [
     "Sing back 'ki l'olam chasdo' and 'halleluyah' at the right moments",
-    "Recognise the Psalm 118 lines that are sung responsively, from the Hallel verses now in the corpus",
-    "Know that the full Hallel (all of Psalms 113-118, half-Hallel cuts, and the customary repetitions) is still a corpus gap (g-hallel); this lesson uses selected refrain verses only",
+    "Recognise the Psalm 118 lines that are sung responsively, from the Hallel verses now in ALEF",
+    "Know that the rest of Hallel (all of Psalms 113-118, half-Hallel cuts, and the customary repetitions) is not in ALEF yet; this lesson uses selected refrain verses only",
     "Know that these refrains are sung on festivals, Rosh Chodesh and Hanukkah; I-29, I-30 and I-32 sit on those days"
    ],
    "estMinutes": 30,
@@ -6015,7 +6015,7 @@
     {
      "id": "I-08-e04",
      "type": "respond",
-     "cue": "Many congregations bow at the words 'va'anachnu'. Say the phrase that begins the bow.",
+     "cue": "This siddur's line (Sephardi wording) is 'va'anachnu mishtachavim'. Ashkenazi and Reform siddurim say 'va'anachnu kor'im umishtachavim umodim': bend the knees at kor'im, bow at mishtachavim, stand up straight at lifnei melech. Say the line as printed here.",
      "answer": {
       "he": "וַאֲנַחְנוּ מִשְׁתַּחֲוִים לִפְנֵי מֶלֶךְ מַלְכֵי הַמְּלָכִים הַקָּדוֹשׁ בָּרוּךְ הוּא",
       "en": "And we bow before the King of kings of kings, the Holy One, blessed is he."
@@ -6756,7 +6756,7 @@
    "goals": [
     "Recognise the opening of Mi Shebeirach and answer it",
     "Answer Birkat Hagomel with the congregation's response",
-    "Answer Shehecheyanu and the Priestly Blessing with Amen"
+    "Answer Shehecheyanu with Amen, and the Priestly Blessing with Amen or Ken yehi ratzon"
    ],
    "estMinutes": 35,
    "prerequisites": [
@@ -6822,7 +6822,7 @@
     {
      "id": "I-10-e08",
      "type": "respond",
-     "cue": "Someone who recovered or travelled safely says Hagomel. Answer with the congregation's line.",
+     "cue": "Someone who recovered or travelled safely says Hagomel. Answer with the congregation's line (said to a man; to a woman it is shegmalekh ... yigmalekh).",
      "answer": {
       "he": "מִי שֶׁגְּמָלְךָ טוֹב הוּא יִגְמָלְךָ כָּל־טוֹב סֶלָה",
       "en": "May the one who bestowed good on you bestow every good on you. Selah."
@@ -6872,10 +6872,10 @@
     {
      "id": "I-10-e13",
      "type": "respond",
-     "cue": "The leader says each line of the Priestly Blessing; answer after the first.",
+     "cue": "When the leader (not kohanim) says the Priestly Blessing, many congregations answer each line with 'Ken yehi ratzon'. Answer after the first line. (When kohanim bless, the answer is Amen.)",
      "answer": {
-      "he": "אָמֵן",
-      "en": "Amen"
+      "he": "כֵּן יְהִי רָצוֹן",
+      "en": "May it be so (God's will)."
      },
      "prompt": {
       "he": "יְבָרֶכְךָ יְהוָה וְיִשְׁמְרֶךָ",
@@ -6885,10 +6885,10 @@
     {
      "id": "I-10-e14",
      "type": "respond",
-     "cue": "After the third line of the Priestly Blessing.",
+     "cue": "After the third line, said by the leader. Answer.",
      "answer": {
-      "he": "אָמֵן",
-      "en": "Amen"
+      "he": "כֵּן יְהִי רָצוֹן",
+      "en": "May it be so (God's will)."
      },
      "prompt": {
       "he": "יִשָּׂא יְהוָה פָּנָיו אֵלֶיךָ וְיָשֵׂם לְךָ שָׁלוֹם",
@@ -8531,7 +8531,7 @@
     },
     {
      "he": "יָשָׁר",
-     "en": "right, straight",
+     "en": "straight (ahead)",
      "translit": null,
      "pronunciation": {
       "israeli": "yashar"
@@ -8955,7 +8955,7 @@
     },
     {
      "he": "הוֹדָעָה",
-     "en": "notice",
+     "en": "message, notice",
      "translit": null,
      "pronunciation": {
       "israeli": "hoda'ah"
@@ -10087,7 +10087,7 @@
     },
     {
      "he": "שָׁבוּעַ טוֹב",
-     "en": "good week",
+     "en": "a good week (said once Shabbat ends)",
      "translit": null,
      "pronunciation": {
       "israeli": "shavu'a tov"
@@ -10437,8 +10437,8 @@
       },
       {
        "speaker": "a",
-       "he": "שָׁבוּעַ טוֹב!",
-       "en": "A good week!"
+       "he": "שַׁבָּת שָׁלוֹם!",
+       "en": "Shabbat shalom!"
       }
      ],
      "task": "Say the guest's goodbye, then answer as the host."
@@ -11090,7 +11090,7 @@
       {
        "speaker": "b",
        "he": "חֲתִימָה",
-       "en": "The passport, please. Signature here."
+       "en": "Signature (here)."
       }
      ],
      "task": "Say the customer's lines."
@@ -11885,7 +11885,7 @@
       {
        "speaker": "a",
        "he": "יוֹם נָעִים",
-       "en": "Thanks, have a nice day."
+       "en": "Have a nice day."
       },
       {
        "speaker": "b",
@@ -13512,7 +13512,7 @@
    "track": "read",
    "level": "intermediate",
    "unit": "synagogue",
-   "title": "Yom Kippur: the few lines the corpus holds and the words around them",
+   "title": "Yom Kippur: the Shema line said aloud and the words of the day",
    "status": "draft",
    "proofread": false,
    "needsNativeReview": true,
@@ -13826,7 +13826,7 @@
     {
      "id": "I-28-e09",
      "type": "respond",
-     "cue": "Someone you wronged asks for forgiveness. Ask 'excuse me / sorry' back politely.",
+     "cue": "Before Yom Kippur, ask someone you may have wronged to forgive you. Say 'sorry, forgive me'.",
      "answer": {
       "he": "סְלִיחָה",
       "en": "Excuse me / sorry (forgive me)"
@@ -13901,7 +13901,7 @@
    "track": "read",
    "level": "intermediate",
    "unit": "synagogue",
-   "title": "Pesach: the seder blessings the corpus holds",
+   "title": "Pesach: the seder blessings and the words of the festival",
    "status": "draft",
    "proofread": false,
    "needsNativeReview": true,
@@ -14120,7 +14120,7 @@
    "goals": [
     "Say the wine blessing and the Shehecheyanu that open the seder",
     "Recognise the Pesach insert and the close of the festival Kiddush, including 'a remembrance of the exodus from Egypt' and 'who makes Israel and the seasons holy'",
-    "Wish people 'chag kasher vesameach' or 'chag sameach', and know which seder texts the corpus still does not hold"
+    "Wish people 'chag kasher vesameach' or 'chag sameach', and know which seder texts ALEF still does not hold"
    ],
    "estMinutes": 30,
    "prerequisites": [
@@ -14514,7 +14514,7 @@
    "goals": [
     "Greet people with chag sameach and recognise the word sukkah",
     "Say Shehecheyanu, the wine blessing, the Sukkot Kiddush insert, and the blessing to dwell in the sukkah",
-    "Know that the lulav blessing, Hoshanot, and the unsourced remainder of Hallel are still not in the corpus (g-hallel)"
+    "Know that the lulav blessing, Hoshanot, and the rest of Hallel are not in ALEF yet"
    ],
    "estMinutes": 25,
    "prerequisites": [
@@ -14856,9 +14856,9 @@
     "shehecheyanu"
    ],
    "goals": [
-    "Say the blessing for miracles, whose wording is shared by Purim and Hanukkah (the corpus stores that wording under the Hanukkah source)",
+    "Say the blessing for miracles, whose wording is shared by Purim and Hanukkah (ALEF stores that wording with the Hanukkah source)",
     "Greet and toast in Hebrew",
-    "Know that the Megillah itself is not in the corpus"
+    "Know that the Megillah reading is not in ALEF yet"
    ],
    "estMinutes": 25,
    "prerequisites": [
@@ -15304,7 +15304,7 @@
     {
      "id": "I-32-e08",
      "type": "respond",
-     "cue": "On the first night only the third blessing follows. Answer.",
+     "cue": "On the first night only, a third blessing (Shehecheyanu) follows. Answer.",
      "answer": {
       "he": "אָמֵן",
       "en": "Amen"
@@ -15399,7 +15399,7 @@
    "words": [
     {
      "he": "רַבּוֹתַי נְבָרֵךְ",
-     "en": "gentlemen, let us bless",
+     "en": "friends, let us bless (literally \"my masters\")",
      "translit": null,
      "pronunciation": {
       "israeli": "rabotai nevarekh",
@@ -15620,14 +15620,14 @@
     {
      "id": "I-33-e01",
      "type": "respond",
-     "cue": "The leader invites: 'Rabotai nevarech'. Answer with the line that follows.",
+     "cue": "The leader invites: 'Rabotai nevarech' (many Reform and egalitarian tables say 'Chaverai nevarech'). Answer with the line that follows.",
      "answer": {
       "he": "יְהִי שֵׁם יְהוָה מְבֹרָךְ מֵעַתָּה וְעַד־עוֹלָם",
       "en": "May the name of the LORD be blessed from now and for ever."
      },
      "prompt": {
       "he": "רַבּוֹתַי נְבָרֵךְ",
-      "en": "Gentlemen, let us bless."
+      "en": "Friends, let us bless."
      }
     },
     {
@@ -15640,7 +15640,7 @@
      "id": "I-33-e03",
      "type": "fade",
      "line": "zimun-opening",
-     "en": "Gentlemen, let us bless."
+     "en": "Friends, let us bless."
     },
     {
      "id": "I-33-e04",
@@ -15681,14 +15681,10 @@
     {
      "id": "I-33-e09",
      "type": "respond",
-     "cue": "The first blessing ends 'ki l'olam chasdo'. Answer.",
+     "cue": "The first blessing closes 'Baruch atah Adonai, hazan et hakol'. Answer.",
      "answer": {
       "he": "אָמֵן",
       "en": "Amen"
-     },
-     "prompt": {
-      "he": "כִּי לְעוֹלָם חַסְדּוֹ",
-      "en": "for his kindness is for ever"
      }
     },
     {
@@ -15952,7 +15948,7 @@
    "goals": [
     "Say Hagomel after a safe journey and answer the congregation's reply",
     "Wish a traveller peace in Hebrew",
-    "Know that Tefillat HaDerekh is not yet in the corpus"
+    "Know that Tefillat HaDerekh (the traveller's prayer) is not in ALEF yet"
    ],
    "estMinutes": 25,
    "prerequisites": [
@@ -15978,7 +15974,7 @@
     {
      "id": "I-34-e02",
      "type": "respond",
-     "cue": "A traveller says Hagomel. Answer with the congregation's line.",
+     "cue": "A traveller says Hagomel. Answer with the congregation's line (said to a man; to a woman it is shegmalekh ... yigmalekh).",
      "answer": {
       "he": "מִי שֶׁגְּמָלְךָ טוֹב הוּא יִגְמָלְךָ כָּל־טוֹב סֶלָה",
       "en": "May the one who bestowed good on you bestow every good on you. Selah."
@@ -16069,7 +16065,7 @@
     {
      "id": "I-34-e12",
      "type": "respond",
-     "cue": "A friend says 'may it be so'. Reply with the wish.",
+     "cue": "A friend wishes you a safe trip home. Answer 'may it be so'.",
      "answer": {
       "he": "כֵּן יְהִי רָצוֹן",
       "en": "So may it be his will"
@@ -16574,7 +16570,7 @@
     },
     {
      "he": "הוֹדָעָה",
-     "en": "notice",
+     "en": "message, notice",
      "translit": null,
      "pronunciation": {
       "israeli": "hoda'ah"
@@ -17619,7 +17615,7 @@
     },
     {
      "he": "יָשָׁר",
-     "en": "right, straight",
+     "en": "straight (ahead)",
      "translit": null,
      "pronunciation": {
       "israeli": "yashar"
@@ -17756,7 +17752,7 @@
       {
        "speaker": "b",
        "he": "לֵךְ יָשָׁר, זֶה עַל יַד הַבַּיִת.",
-       "en": "Go straight, it's next to the building."
+       "en": "Go straight, it's next to the house."
       }
      ],
      "task": "Ask and repeat the directions."
@@ -18618,7 +18614,7 @@
      }
     },
     {
-     "he": "בֵּן כַּמָּה?",
+     "he": "בֶּן כַּמָּה?",
      "en": "how old (lit. son of how much)?",
      "translit": null,
      "pronunciation": {
@@ -18627,7 +18623,7 @@
      "source": {
       "file": "composed",
       "tokens": [
-       "בֵּן",
+       "בֶּן",
        "כַּמָּה"
       ]
      }
@@ -18746,7 +18742,7 @@
       },
       {
        "speaker": "a",
-       "he": "חֲמוּדִים!",
+       "he": "חָמוּד!",
        "en": "Cute!"
       }
      ],
@@ -19686,7 +19682,7 @@
       },
       {
        "speaker": "a",
-       "he": "קוֹמָה שְׁנַיִם.",
+       "he": "קוֹמָה שְׁתַּיִם.",
        "en": "Floor two."
       }
      ],
@@ -20812,7 +20808,7 @@
    "words": [
     {
      "he": "הוֹדָעָה",
-     "en": "notice",
+     "en": "message, notice",
      "translit": null,
      "pronunciation": {
       "israeli": "hoda'ah"

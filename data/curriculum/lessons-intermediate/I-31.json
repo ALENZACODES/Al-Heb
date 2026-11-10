@@ -181,9 +181,9 @@
   "shehecheyanu"
  ],
  "goals": [
-  "Say the blessing for miracles, whose wording is shared by Purim and Hanukkah (the corpus stores that wording under the Hanukkah source)",
+  "Say the blessing for miracles, whose wording is shared by Purim and Hanukkah (ALEF stores that wording with the Hanukkah source)",
   "Greet and toast in Hebrew",
-  "Know that the Megillah itself is not in the corpus"
+  "Know that the Megillah reading is not in ALEF yet"
  ],
  "estMinutes": 25,
  "prerequisites": [

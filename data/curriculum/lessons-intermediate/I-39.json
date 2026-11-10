@@ -120,7 +120,7 @@
   },
   {
    "he": "יָשָׁר",
-   "en": "right, straight",
+   "en": "straight (ahead)",
    "translit": null,
    "pronunciation": {
     "israeli": "yashar"
@@ -257,7 +257,7 @@
     {
      "speaker": "b",
      "he": "לֵךְ יָשָׁר, זֶה עַל יַד הַבַּיִת.",
-     "en": "Go straight, it's next to the building."
+     "en": "Go straight, it's next to the house."
     }
    ],
    "task": "Ask and repeat the directions."

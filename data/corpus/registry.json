@@ -1239,7 +1239,7 @@
    "category": "siddur",
    "level": "intro-3",
    "language": "hebrew",
-   "he": "וַיְהִי בִּנְסֹעַ הָאָרֹן וַיֹאמֶר מֹשֶׁה קוּמָה יְהוָה וְיָפֻצוּ אֹיְבֶיךָ וְיָנֻסוּ מְשַׂנְאֶיךָ מִפָּנֶיךָ׃ כִּי מִצִּיּוֹן תֵּצֵא תוֹרָה וּדְבַר יְהוָה מִירוּשָׁלָםִ׃ בָּרוּךְ שֶׁנָּתַן תּוֹרָה לְעַמּוֹ יִשְׂרָאֵל בִּקְדֻשָּׁתוֹ׃",
+   "he": "וַיְהִי בִּנְסֹעַ הָאָרֹן וַיֹּאמֶר מֹשֶׁה קוּמָה יְהוָה וְיָפֻצוּ אֹיְבֶיךָ וְיָנֻסוּ מְשַׂנְאֶיךָ מִפָּנֶיךָ׃ כִּי מִצִּיּוֹן תֵּצֵא תוֹרָה וּדְבַר יְהוָה מִירוּשָׁלָםִ׃ בָּרוּךְ שֶׁנָּתַן תּוֹרָה לְעַמּוֹ יִשְׂרָאֵל בִּקְדֻשָּׁתוֹ׃",
    "lines": 1,
    "english": "And it was, when the ark set out, Moses said: Arise, LORD, and let your enemies be scattered, and let those who hate you flee before you. For from Zion will go forth Torah, and the word of the LORD from Jerusalem. Blessed is the one who gave the Torah to his people Israel in his holiness.",
    "englishSource": "original-gloss",
@@ -1259,11 +1259,11 @@
     "corrections": [
      [
       "וַיּאמֶר",
-      "וַיֹאמֶר"
+      "וַיֹּאמֶר"
      ],
      [
-      "משֶׁה",
-      "מֹשֶׁה"
+      "משֶׁה",
+      "מֹשֶׁה"
      ]
     ]
    },
@@ -1715,7 +1715,7 @@
    "language": "hebrew",
    "he": "רַבּוֹתַי נְבָרֵךְ׃\nיְהִי שֵׁם יְהוָה מְבֹרָךְ מֵעַתָּה וְעַד־עוֹלָם׃",
    "lines": 2,
-   "english": "Gentlemen, let us bless.\nMay the name of the LORD be blessed from now and for ever.",
+   "english": "Friends, let us bless.\nMay the name of the LORD be blessed from now and for ever.",
    "englishSource": "original-gloss",
    "englishLicense": "original (project-owned)",
    "source": "The Metsudah siddur, 1981 via Sefaria: Siddur Sefard, Birchat HaMazon, Birchat HaMazon",
@@ -1731,7 +1731,7 @@
    "snapshotId": "zimun-opening",
    "transforms": {},
    "nusach": "Ashkenaz (Metsudah)",
-   "notes": "The invitation said by the leader of the meal, then the group repeats the response. The longer form with \"Eloheinu\" is said with ten or more; not included here."
+   "notes": "The invitation said by the leader of the meal, then the group repeats the response. The longer form with \"Eloheinu\" is said with ten or more; not included here. Rabotai is literally \"my masters\"; many Reform and egalitarian tables say chaverai (\"my friends\") instead."
   },
   {
    "id": "haftarah-before",
@@ -2026,7 +2026,7 @@
    "language": "hebrew",
    "he": "הַנֵּרוֹת הַלָּלוּ אֲנַחְנוּ מַדְלִיקִין עַל הַנִּסִּים וְעַל הַתְּשׁוּעוֹת וְעַל הַנִּפְלָאוֹת שֶׁעָשִׂיתָ לַאֲבוֹתֵינוּ עַל יְדֵי כֹּהֲנֶיךָ הַקְּדוֹשִׁים וְכָל־שְׁמוֹנַת יְמֵי חֲנֻכָּה הַנֵּרוֹת הַלָּלוּ קֹדֶשׁ וְאֵין לָנוּ רְשׁוּת לְהִשְׁתַּמֵּשׁ בָּהֶם אֶלָּא לִרְאוֹתָם בִּלְבָד כְּדֵי לְהוֹדוֹת לִשְׁמֶךָ עַל נִסֶּיךָ נִפְלְאוֹתֶיךָ וִישׁוּעוֹתֶיךָ׃",
    "lines": 1,
-   "english": "We light these lights for the miracles, the deliverances, and the wonders that you did for our ancestors through your holy priests. Throughout the eight days of Hanukkah these lights are holy, and we may not use them, only look at them, in order to thank and praise your name for your miracles, your wonders and your salvations.",
+   "english": "We light these lights for the miracles, the deliverances, and the wonders that you did for our ancestors through your holy priests. Throughout the eight days of Hanukkah these lights are holy, and we may not use them, only look at them, in order to give thanks to your name for your miracles, your wonders and your salvations.",
    "englishSource": "original-gloss",
    "englishLicense": "original (project-owned)",
    "source": "Shaliehsaboo Edition via Sefaria: Siddur Edot HaMizrach, Hanukkah, Menorah Lighting",
@@ -2041,7 +2041,8 @@
    "traditionNeutral": true,
    "snapshotId": "hanerot-halalu",
    "transforms": {},
-   "nusach": "Edot HaMizrach (Shaliehsaboo edition)"
+   "nusach": "Edot HaMizrach (Shaliehsaboo edition)",
+   "notes": "Ashkenazi books read lehodot ulehallel leshimkha hagadol (\"to thank and to praise your great name\") and add bayamim hahem bazman hazeh after la'avoteinu."
   },
   {
    "id": "maoz-tzur-1",

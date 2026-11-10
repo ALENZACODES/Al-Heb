@@ -286,7 +286,7 @@
   {
    "id": "I-32-e08",
    "type": "respond",
-   "cue": "On the first night only the third blessing follows. Answer.",
+   "cue": "On the first night only, a third blessing (Shehecheyanu) follows. Answer.",
    "answer": {
     "he": "אָמֵן",
     "en": "Amen"

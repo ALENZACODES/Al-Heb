@@ -24,7 +24,13 @@ export const INDEX_URL = "data/curriculum/practical/index.json";
 export const RESULTS_URL = "data/curriculum/practical/gcloud-results.json";
 export const CLIP_MAP_URL = "data/curriculum/practical/clip-map.json";
 export const COVERS_URL = "data/curriculum/practical/covers.json";
-export const DRAFT_TEXT = "Practical conversation pages. This is not a new lesson track and it does not change the 125 lessons.";
+export const DRAFT_TEXT = "Short practice pages for real situations. They add practice to your lessons and do not change them. A native speaker has not checked them yet.";
+/** Sentences of a draft note that describe where the data came from, not the Hebrew. Learners never see them. */
+const FILE_TALK = /\b[a-z]+(?:-[a-z]+)*-\d{2}\b|data\/|\.json|stored in|already in the sources|only name forms|copied from|phrasebook|first line:/i;
+/** A draft grammar note with its file-talk sentences removed ("" if nothing is left). */
+export function cleanNote(note) {
+  return String(note || "").split(/(?<=[.!?])\s+/).filter((sentence) => sentence && !FILE_TALK.test(sentence)).join(" ").trim();
+}
 
 const RATINGS = [[1, "Again"], [2, "Hard"], [3, "Good"], [4, "Easy"]];
 
@@ -235,7 +241,7 @@ function renderUnit(root, ctx, index, unit, { covers, progress, results } = {}) 
       ring(progressFraction(doneN, pages.length), `${doneN} of ${pages.length} pages done`),
       el("span", { class: "muted" }, `${doneN} of ${pages.length} pages done`),
       el("p", { class: "muted" }, DRAFT_TEXT),
-      unit.grammarNote ? el("p", { "data-grammar": "true" }, unit.grammarNote) : null,
+      cleanNote(unit.grammarNote) ? el("p", { "data-grammar": "true" }, cleanNote(unit.grammarNote)) : null,
       unit.note ? el("p", { class: "muted", "data-unit-note": "true" }, unit.note) : null,
       el("h2", {}, "Pages"),
       el("ol", { class: "alef-practical-pages" },
@@ -266,7 +272,7 @@ function grammarBlock(page, unit) {
       el("ul", {}, ...page.grammar.examples.map((e) => el("li", { "data-example": e.itemId },
         heText(e.he, "alef-he"), " ", el("span", { class: "muted" }, e.en)))));
   }
-  const note = page.grammarNote || unit.grammarNote || "";
+  const note = cleanNote(page.grammarNote) || cleanNote(unit.grammarNote);
   return note ? el("section", {}, el("h2", {}, "Grammar note"), el("p", { "data-grammar": "true" }, note)) : null;
 }
 

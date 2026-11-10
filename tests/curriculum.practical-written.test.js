@@ -79,3 +79,16 @@ test("with 'I do not use audio' on, the pick-the-meaning round is left out and r
   assert.match(root.textContent, /מַה שְׁלוֹמֵךְ\?/);
   if (typeof un === "function") un();
 });
+
+test("draft pages never show learners notes about data files, item ids or sources", async () => {
+  const { cleanNote, DRAFT_TEXT } = await import("../src/curriculum/practical.view.js");
+  assert.equal(cleanNote("This page uses only Hebrew already stored in data/corpus/phrasebook.json. First line: שָׁלוֹם."), "");
+  assert.equal(cleanNote("Wants use רוֹצֶה / רוֹצָה. These notes only name forms already in the sources."), "Wants use רוֹצֶה / רוֹצָה.");
+  for (const row of index.units) {
+    const u = read(row.file);
+    for (const n of [u.grammarNote, ...u.pages.map((p) => p.grammarNote)]) {
+      assert.doesNotMatch(cleanNote(n), /data\/|\.json|phrasebook|[a-z]+-\d{2}\b/i, `${row.id}: ${cleanNote(n).slice(0, 80)}`);
+    }
+  }
+  assert.doesNotMatch(DRAFT_TEXT, /track|125|lesson track/);
+});

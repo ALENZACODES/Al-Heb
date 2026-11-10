@@ -237,3 +237,14 @@ demand, and the grammar notes say they are not yet reviewed by a teacher.
 ### Score
 
 **88 / 100** (estimate). See [`BRANCH-REVIEW-2026-11-10-R3.md`](BRANCH-REVIEW-2026-11-10-R3.md).
+
+## Round 5 (Review Round 4 of 5)
+
+Built:
+- **Merge.** The feature branch is merged into this branch, so one green lesson branch carries both the live Practical course and
+  the liturgy fixes.
+- **Written pages in the live view.** The 30 written pages now show in `#/practical`.
+- **Learner copy.** File-talk is stripped from the draft pages' grammar notes, and the intro line is plainer.
+- **Tests.** Seven new tests, two of them rendering real pages.
+
+Review: [`BRANCH-REVIEW-2026-11-10-R4.md`](BRANCH-REVIEW-2026-11-10-R4.md). **90 / 100** (estimate).

@@ -59,15 +59,23 @@ export function mountRimon({store,doc=document}={}) {
   host.hidden=hidden;restore.hidden=!hidden;
   const speech=mountSpeechBubble(host,{doc,streak:()=>{try{const r=store?.get?.('streak');return r?projectStreak(r,new Date()):null;}catch{return null;}}});
   function remember(){try{store?.set('rimon.dismissed',hidden);}catch{}}
+  const format=new Map();
+  function sheetUrl(name){return new URL(name+'.'+(format.get(name)||'webp'),base).href;}
   function load(name){
-    if(!loaded.has(name)) loaded.set(name,new Promise(resolve=>{const image=new Image();image.onload=()=>resolve(true);image.onerror=()=>resolve(false);image.src=new URL(name+'.png',base).href;}));
+    if(!loaded.has(name)) loaded.set(name,new Promise(resolve=>{
+      const image=new Image();
+      const ok=ext=>{format.set(name,ext);resolve(true);};
+      image.onload=()=>ok('webp');
+      image.onerror=()=>{image.onload=()=>ok('png');image.onerror=()=>resolve(false);image.src=new URL(name+'.png',base).href;};
+      image.src=new URL(name+'.webp',base).href;
+    }));
     return loaded.get(name);
   }
   function paint(){
     const action=animator.action,frame=animator.frame,key=action+':'+frame;
     if(key===lastPaint) return;lastPaint=key;
     const sheet=action==='idle'?'blink':action;
-    sprite.style.backgroundImage=`url("${new URL(sheet+'.png',base).href}")`;
+    sprite.style.backgroundImage=`url("${sheetUrl(sheet)}")`;
     sprite.style.backgroundPosition=`${(frame%4)*100/3}% ${Math.floor(frame/4)*50}%`;
     if(host.dataset.action!==action) speech.say(action);
     host.dataset.action=action;host.dataset.frame=String(frame);sprite.dataset.action=action;sprite.dataset.frame=String(frame);
@@ -135,6 +143,6 @@ export function mountRimon({store,doc=document}={}) {
     else if(!thought && now-lastActivity>=25000){thought=true;play('thinking');}
     else if(now>=nextBlink){nextBlink=now+6000;play('blink');}
   },32);
-  const readyPromise=load('blink').then(ok=>{if(!alive)return false;if(!ok){sprite.style.backgroundImage=`url("${new URL('../../assets/img/gen/MASCOT_rimon.800.webp',import.meta.url).href}")`;sprite.style.backgroundSize='contain';clearInterval(timer);return false;}reduce();place();play('wave');return true;});
+  const readyPromise=load('blink').then(ok=>{if(!alive)return false;if(!ok){sprite.style.backgroundImage=`url("${new URL('../../assets/img/gen/MASCOT_rimon.800.webp',import.meta.url).href}")`;sprite.style.backgroundSize='contain';clearInterval(timer);return false;}reduce();place();const greet=()=>{if(alive&&!hidden)play('wave');};const win=doc.defaultView;if(win?.requestIdleCallback)win.requestIdleCallback(greet,{timeout:2000});else win?.setTimeout(greet,400);return true;});
   return {element:host,play,ready:readyPromise,destroy(){speech.destroy();observer?.disconnect();offStore?.();alive=false;requestId++;clearInterval(timer);clearTimeout(peekTimer);doc.defaultView?.removeEventListener?.('hashchange',onRoute);host.remove();restore.remove();doc.removeEventListener('alef:rimon',event);doc.removeEventListener('alef:ready',ready);doc.removeEventListener('pointerdown',activity);doc.removeEventListener('keydown',activity);media?.removeEventListener('change',reduce);}};
 }

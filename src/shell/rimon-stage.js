@@ -114,11 +114,19 @@ export function mountRimonStage({ store, companion = null, doc = globalThis.docu
   }
 
   /** Load a still; resolves to the URL to show (a cut-out copy for the cream-background drawings) or null when it fails. */
+  /** Offline, a still is asked for only when a copy is already kept on the device: no request that can only fail. */
+  async function reachable(src) {
+    try {
+      if (win?.navigator?.onLine !== false) return true;
+      const store2 = win?.caches || globalThis.caches;
+      return !!(store2 && await store2.match(new URL(src, doc?.baseURI || win?.location?.href).href));
+    } catch { return false; }
+  }
   function preload(src) {
-    if (!images.has(src)) images.set(src, (loadImage ? Promise.resolve(loadImage(src)) : new Promise((resolve) => {
+    if (!images.has(src)) images.set(src, (loadImage ? Promise.resolve(loadImage(src)) : reachable(src).then((ok) => (ok ? new Promise((resolve) => {
       const Img = win?.Image; if (typeof Img !== 'function') { resolve(false); return; }
       const im = new Img(); im.decoding = 'async'; im.onload = () => resolve(im); im.onerror = () => resolve(false); im.src = src;
-    })).then((r) => (r === true ? src : typeof r === 'string' ? r : r ? cutout(r, src) : null)).then((u) => { if (u) ready2.set(src, u); return u; }).catch(() => null));
+    }) : 'later'))).then((r) => { if (r === 'later') { images.delete(src); return null; } return r === true ? src : typeof r === 'string' ? r : r ? cutout(r, src) : null; }).then((u) => { if (u) ready2.set(src, u); return u; }).catch(() => null));
     return images.get(src);
   }
   /**

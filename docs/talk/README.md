@@ -4,7 +4,10 @@ Talk (`#/talk`) turns a short everyday line from English into Hebrew or from Heb
 
 ## What It Is
 
-Talk is a phrase memory with sentence patterns on top. It is not a general translator. It knows travel, shop, table, emergency and synagogue talk, and it says so on the screen. When it has no line it says "ALEF does not have that line yet" and offers the nearest stored lines. It never makes up a sentence.
+Talk answers in two steps.
+
+1. **Stored lines first.** A phrase memory with sentence patterns on top. It knows travel, shop, table, emergency and synagogue talk. Its wording is fixed and its gender and number forms are right, so it is trusted over anything else.
+2. **A language pack for the rest.** Two small translation models, one for each direction, that run in the browser on the learner's device. They are not part of the first install. The learner adds a pack on the Talk screen; after that it works offline. Without a pack, a line the stored lines do not hold is refused as before, and the screen offers the pack.
 
 Every answer carries a label that says how it was made.
 
@@ -12,11 +15,29 @@ Every answer carries a label that says how it was made.
 |---|---|
 | A stored line | An exact line from the stored sentence pairs. |
 | Built from a sentence pattern | A stored frame such as "Where is …?" with a known noun, place, name or number slotted in. |
-| The closest stored line | A stored line that differs from the request only by small words such as "here" or "very". The matched line is shown. |
+| The closest stored line | A stored line that differs from the request only by small words such as "here" or "very". The matched line is shown. Only used when the pack is not on the device. |
 | A single word | One noun from the Talk list, or one dictionary word. |
-| Word by word | Hebrew read one word at a time from the dictionary. Shown as a gist, not as a sentence. |
+| Word by word | Hebrew read one word at a time from the dictionary. Shown as a gist, not as a sentence. Only used when the pack is not on the device. |
+| Translated on this device | A line from the language pack. The note under it says it is not from a checked line. |
 
-A line that differs from a stored line by a real word is refused, not matched. "I don't eat fish" is not answered with the stored "I don't eat meat".
+A line that differs from a stored line by a real word is never matched to it. "I don't eat fish" is not answered with the stored "I don't eat meat".
+
+## The Language Packs
+
+| Pack | Download | Model | Licence |
+|---|---|---|---|
+| Hebrew to English | 77.2 MiB | OPUS-MT Tatoeba heb-eng, `opus-2021-02-19` | Apache-2.0 |
+| English to Hebrew | 78.6 MiB | OPUS-MT en-he, `Helsinki-NLP/opus-mt-en-he` | Apache-2.0 |
+| Runtime, shared by both | 14.2 MiB | onnxruntime-web 1.31.1, WebAssembly build | MIT |
+
+- **Where they live.** `assets/vendor/_nmt/` and `assets/vendor/_ort/`, files of the site itself. Nothing is fetched from another address, and the site's content policy is unchanged.
+- **Not in the first install.** `tools/build-precache.mjs` skips `assets/vendor/`. The first install is still under 3.95 MiB. `tests/talk.nmt.test.js` checks both.
+- **Download.** On request only, in parts of at most 16 MiB. The screen shows the size before the download, a progress bar and megabytes during it, and a line about Wi-Fi. On mobile data or with data saving on, the first press only warns and the second press downloads. A stopped download carries on from the parts that arrived.
+- **Checked.** Every part is checked against the size and SHA-256 in `assets/vendor/_nmt/manifest.json` before it is kept.
+- **Kept.** In its own cache, `alef-talk-pack-v1`, which an app update does not clear. `sw.js` serves these files from that cache and never copies them into the per-version cache. "Remove The Packs From This Device" on the Talk screen deletes them.
+- **Where it runs.** In a worker, so the page stays responsive, on WebAssembly with one thread. A line takes about 0.3 to 0.6 seconds on the desktop used for testing. It has not been timed on a phone.
+- **Size.** The stock export of these models is about 143 MiB a direction at 8 bits because the 60,000-row word table is stored three times. `tools/talk/nmt/export.py` stores it once, with one scale per row, and splits the model into three graphs. On the held-out file the 8-bit packs score within one point of the full-precision models (greedy decoding, first-choice wording: 69.8 against 70.0 Hebrew to English, 79.9 against 80.8 English to Hebrew).
+- **Synagogue words.** `data/talk/terms.json` lists words the packs get wrong (כיפה as "dome", קידוש as "sanctification") with the wrong renderings, found by `tools/talk/nmt/terms.mjs`. A rendering is replaced only when the source line holds the word and the output holds that exact rendering. Words with a second everyday meaning are left out.
 
 ## Where The Lines Come From
 
@@ -50,11 +71,16 @@ A misheard word that is itself a real word is a different request. It is transla
 
 | File | Role |
 |---|---|
-| `src/talk/engine.js` | The engine. Pure functions. |
-| `src/talk/data.js` | Loads the files above and builds the engine. |
+| `src/talk/engine.js` | The stored-line engine. Pure functions. |
+| `src/talk/hybrid.js` | Stored lines first, the pack for the rest. |
+| `src/talk/nmt/tokenizer.js`, `decode.js`, `runtime.js` | Splitting a line into word pieces, the beam search, and the three graphs put together. The same code runs in the browser and in the Node scoring tool. |
+| `src/talk/nmt/pack.js`, `client.js`, `worker.js` | Download, checking and keeping of the pack files; the page's side; the worker. |
+| `src/talk/nmt/postedit.js` | What is done to a pack line before it is shown: the Name, the term list, stray dashes. |
+| `src/talk/data.js` | Loads the stored lines and builds the engine. |
 | `src/talk/speech.js` | Listening through the browser's own speech recognition. |
 | `src/talk/talk.model.js` | Settings, history, the sacred-Name hold, scoring helpers. |
 | `src/talk/talk.view.js` | The screen. |
+| `tools/talk/nmt/` | `export.py` builds a pack from a checkpoint, `pack.mjs` splits it and writes the manifest, `terms.mjs` builds the term list, `score.mjs` scores a held-out file, `e2e-talk.mjs` runs the screen in a real browser. |
 
 ## Listening And Voice
 
@@ -68,7 +94,11 @@ Hebrew "I" forms change with the speaker (a man says צריך, a woman צריכ�
 
 ## The Sacred Name
 
-A line that holds the four-letter Name, in Hebrew or in English letters, is held. It is not translated, not reworded, not read aloud and not saved to history.
+A line that holds the four-letter Name, in Hebrew or in English letters, is held. It is not translated, not reworded, not sent to the pack, not read aloud and not saved to history. Where the line is shown back, the Name is shown as ה׳.
+
+If a pack ever writes the Name in a translation, it is shown as ה׳ (with its prefix kept: לה׳), and a line that shows ה׳ is never handed to a voice. `src/talk/nmt/postedit.js`; `tests/talk.nmt.test.js`.
+
+Whether a held line should instead be translated with ה׳ in place of the Name is the owner's decision and is not built.
 
 ## Stored On The Device
 
@@ -76,16 +106,44 @@ A line that holds the four-letter Name, in Hebrew or in English letters, is held
 
 ## Scores
 
-`tests/talk.engine.test.js` scores the engine on four files. An exact match after normalizing scores 1; otherwise the score is 1 minus the word error rate against the reference; a refusal scores 0. A correct answer worded differently from the reference loses points.
+### The Held-Out File
+
+`tests/fixtures/talk.heldout.json` holds 240 lines, 120 each way, over travel, food, shopping, health, hotel, small talk and synagogue life. It was written before a model was chosen. No line is a stored line, none is in an older test file, and none was used to change the packs, the stored lines or the patterns. (26 lines of the first draft turned out to be stored lines or in older files; they were replaced with new lines before the final run.) The term list was built after a first look at the results and changed the score by a tenth of a point.
+
+Two scores are given, because they answer different questions.
+
+- **First-choice wording.** The house score against one reference: 1 for an exact match after normalizing, otherwise 1 minus the word error rate. A correct answer worded differently loses points ("Where's the elevator?" against "Where is the elevator?" scores 0.75).
+- **Accepted wordings.** The best house score over the reference and the other correct wordings written with it (up to about ten a line), with English contractions opened. The other wordings were written before any output was seen and none was added afterwards.
+
+Shipped code and shipped packs, WebAssembly, beam of 2 (`node tools/talk/nmt/score.mjs tests/fixtures/talk.heldout.json`):
+
+| What answers | First-choice wording | Accepted wordings | Refused |
+|---|---|---|---|
+| Stored lines only (no pack on the device) | 5.0 | 5.5 | 224 of 240 |
+| Stored lines first, then the pack (what the screen does) | 77.3 | 94.4 | 0 |
+| The pack alone | 77.0 | 94.4 | 0 |
+
+| Direction, stored lines then pack | First-choice wording | Accepted wordings |
+|---|---|---|
+| English to Hebrew (120) | 84.7 | 97.9 |
+| Hebrew to English (120) | 69.9 | 90.8 |
+
+Against the bar of 92: the accepted-wordings score is above it, the first-choice score is not, and Hebrew to English is below it on both counts taken alone. Which of the two scores the bar means is the reviewer's call.
+
+Read line by line by the builder (not a native speaker), about 11 of the 240 lines came out with a wrong meaning, 8 of them Hebrew to English: "These shoes are too small for me" became "I don't have any of those shoes", הכדור (the pill) became "ball", חצי קילו became "a pound", החשבון (the bill) became "the math", חלות לשבת became "Saturday nights", שנה טובה ומתוקה became "Happy New Year, sweetheart". English to Hebrew: "services" (prayers) became שירותים, and "the Torah portion of the week" was put word for word. The recorded lines are in `tests/fixtures/talk.heldout.results.json`.
+
+Not measured: real speech, a phone, and a native speaker's judgment of any line.
+
+### The Older Files (Stored Lines Only)
+
+`tests/talk.engine.test.js` scores the stored-line engine alone on four files.
 
 | File | Lines | Score | Refused | What it shows |
 |---|---|---|---|---|
-| `tests/fixtures/talk.utterances.json` | 100 | 96.3 | 0 | The pack was written with these lines in view. A regression check. |
-| `tests/fixtures/talk.fresh.json` | 60 | 95.5 | 1 | Written after round 1. It scored 69.6 then and has since been used to widen the pack. A regression check. |
-| `tests/fixtures/talk.fresh2.json` | 75 | 88.4 | 7 | Written during round 2. It scored 62.7 when first run and was then used to add patterns. A regression check. |
-| `tests/fixtures/talk.fresh3.json` | 40 | 74.4 | 10 | Written at the end of round 2. No line from it was added. This is the honest number for everyday lines near the pack's topics. It gave no wrong answer after two refusals were added. |
-
-On open conversation outside these topics the engine will mostly refuse. All scores were taken on typed text. Nothing here has been tested with real speech in a browser.
+| `tests/fixtures/talk.utterances.json` | 100 | 96.3 | 0 | The pack of stored lines was written with these lines in view. A regression check. |
+| `tests/fixtures/talk.fresh.json` | 60 | 95.5 | 1 | Written after round 1 and since used to widen the stored lines. A regression check. |
+| `tests/fixtures/talk.fresh2.json` | 75 | 88.4 | 7 | Written during round 2 and then used to add patterns. A regression check. |
+| `tests/fixtures/talk.fresh3.json` | 40 | 74.4 | 10 | Written at the end of round 2. No line from it was added. |
 
 ## Scoring The Shipped Engine From A Speech Review
 
@@ -101,6 +159,8 @@ Each line of `transcripts.jsonl` is `{"id": "...", "direction": "he-en", "text":
 
 ## Not Built
 
-- A small translation model that runs in the browser. It would lift the score on new sentences. It needs a model of a workable size hosted with the site and a test in real browsers first.
-- Past and future sentences, and anything said about a third person ("The children are hungry").
+- WebGPU. The packs run on WebAssembly. A WebGPU path would need full-precision copies of the models (about twice the download) and a test on real devices; it was not built or tested.
+- A test on a phone: speed, memory with both packs loaded, and what the browser does with a 90 MB cache when space runs low.
+- A native speaker's check of the stored lines, the term list and the held-out references.
+- Speaker forms for pack lines. A pack line comes out as said by and to a man unless the English says otherwise; the screen says so.
 - Playing the recorded phrasebook clips for stored lines. Today every line uses the device voice.

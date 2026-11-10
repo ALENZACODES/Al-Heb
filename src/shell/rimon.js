@@ -48,6 +48,8 @@ export function createAnimator() {
   };
 }
 
+/** How long a screen left alone waits before Rimon's stills are fetched (after the first-load window measured by tools/qa/perf.mjs). */
+export const STAGE_WAIT_MS=9000;
 export function mountRimon({store,doc=document,stage:givenStage=null}={}) {
   const host=doc.createElement('aside');host.className='rimon-companion rimon-dock';host.setAttribute('aria-label','Rimon, your learning companion');
   const sprite=doc.createElement('span');sprite.className='rimon-sprite';sprite.setAttribute('role','img');
@@ -181,7 +183,16 @@ export function mountRimon({store,doc=document,stage:givenStage=null}={}) {
   const readyPromise=load('blink').then(ok=>{if(!alive)return false;if(!ok){sprite.style.backgroundImage=`url("${new URL('../../assets/img/gen/MASCOT_rimon.800.webp',import.meta.url).href}")`;sprite.style.backgroundSize='contain';clearInterval(timer);return false;}reduce();place();const greet=()=>{if(alive&&!hidden)play('wave');};const win=doc.defaultView;if(win?.requestIdleCallback)win.requestIdleCallback(greet,{timeout:2000});else win?.setTimeout(greet,400);return true;});
   let stage=givenStage; // tests may pass a stand-in; the app starts the real stage below
   const api={element:host,play,showStill,clearPose,get pageStill(){return pageStill;},ready:readyPromise,destroy(){stage?.destroy?.();clearInterval(yieldTimer);peekWatch?.disconnect();doc.body?.classList?.remove('rimon-peeking');doc.removeEventListener('alef:ready',onReadyYield);speech.destroy();observer?.disconnect();offStore?.();alive=false;requestId++;clearInterval(timer);clearTimeout(peekTimer);clearTimeout(poseTimer);clearTimeout(liftTimer);doc.defaultView?.removeEventListener?.('hashchange',onRoute);host.remove();restore.remove();doc.removeEventListener('alef:rimon',event);doc.removeEventListener('alef:ready',ready);doc.removeEventListener('pointerdown',activity);doc.removeEventListener('keydown',activity);media?.removeEventListener('change',reduce);}};
-  // Rimon's 200 stills (src/shell/rimon-stage.js) load after boot, on demand; until a picture exists nothing changes on screen.
-  if(doc===globalThis.document)import('./rimon-stage.js').then(m=>{if(alive)stage=m.mountRimonStage({store,companion:api});}).catch(()=>{});
+  // Rimon's 200 stills (src/shell/rimon-stage.js, with its trigger map and the calendar code it needs: about 100 KB) are not part
+  // of the first load. They are fetched at the learner's first tap, key, scroll or change of screen, or after STAGE_WAIT_MS on a
+  // screen left alone, whichever comes first. The blinking Rimon above is on screen from the start either way.
+  if(doc===globalThis.document){
+    const win=doc.defaultView,WAKE=['pointerdown','keydown','touchstart','wheel','scroll'];let asked=false,timer2=0;
+    const wake=()=>{if(asked)return;asked=true;win?.clearTimeout?.(timer2);for(const t of WAKE)doc.removeEventListener(t,wake,true);win?.removeEventListener?.('hashchange',wake);
+      if(alive)import('./rimon-stage.js').then(m=>{if(alive)stage=m.mountRimonStage({store,companion:api});}).catch(()=>{});};
+    for(const t of WAKE)doc.addEventListener(t,wake,{capture:true,passive:true});
+    win?.addEventListener?.('hashchange',wake);
+    timer2=win?.setTimeout?.(wake,STAGE_WAIT_MS)||0;
+  }
   return api;
 }

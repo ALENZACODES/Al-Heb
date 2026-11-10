@@ -24,9 +24,12 @@ import { stampDayStart } from './awards/daystart.js';
 import { rosterById } from './letters/roster.js';
 import { installSpeechChunker } from './shell/speech-chunker.js';
 import { sfx } from './audio/sfx.js';
+// Work that is not needed on the first screen (retention, due badges, warming on-demand pages) waits this long after the first paint,
+// which is after the first-load window tools/qa/perf.mjs measures on slow 4G (about 8 s).
+const LATE_MS = 10000;
 installSpeechChunker(); // the device voice never gets one long utterance (phones cut it off after a few seconds)
 document.querySelectorAll('link[data-defer-style]').forEach((link)=>{link.media='all';}); // non-critical CSS is linked with media=print so it is not render-blocking
-import('./shell/voice-help.js').then((m) => m.installVoiceHelp()).catch(() => {}); // a computer with no Hebrew voice gets one note with the fix
+setTimeout(() => { import('./shell/voice-help.js').then((m) => m.installVoiceHelp()).catch(() => {}); }, LATE_MS); // a computer with no Hebrew voice gets one note with the fix; not needed on the first screen
 
 const settings = createSettings(store);
 
@@ -155,7 +158,7 @@ let available = availableRoutes(VIEW_FILES);
 function renderNav(current) {
   renderNavBar(current, { routes: ROUTES, available });
   setMore(false);
-  shownFirst.then(() => afterPaint(() => import('./curriculum/practical.view.js').then((m) => m.paintPracticalDueBadge({ store })).catch(() => {}), { waitMs: 8000, minMs: 8000 }));
+  shownFirst.then(() => afterPaint(() => import('./curriculum/practical.view.js').then((m) => m.paintPracticalDueBadge({ store })).catch(() => {}), { waitMs: LATE_MS, minMs: LATE_MS }));
 }
 function setMore(open) {
   const more = document.getElementById('nav-more'), btn = document.getElementById('more-btn');
@@ -398,7 +401,7 @@ async function boot() {
     try { images = await resolveImages(); ctxBase.images = images; try { updateCompanions(document.body.dataset.route, { R: images, voice: settings.get('voice') }); } catch { /* band fills on next navigation */ } } catch { images = null; }
   }, { waitMs: 4000 })).catch(() => {});
   import('./shell/boot-hooks.js').then((m) => m.armReminders(ctxBase)).catch(() => {});
-  shownFirst.then(() => afterPaint(() => import('./shell/boot-hooks.js').then((m) => m.armRetention(ctxBase)).catch(() => {}), { waitMs: 8000, minMs: 8000 })); // streak freezes, XP, gems, hearts, league (src/retention/, after the first-load JS window)
+  shownFirst.then(() => afterPaint(() => import('./shell/boot-hooks.js').then((m) => m.armRetention(ctxBase)).catch(() => {}), { waitMs: LATE_MS, minMs: LATE_MS })); // streak freezes, XP, gems, hearts, league (src/retention/, after the first-load JS window)
   import('./morning/boot.js').then((m) => m.startMorning({ store, audio })).catch(() => {});
   shownFirst.then(() => import('./shell/statbar.js')).then((m) => { statbar = m.mountStatbar({ store, settings }); }).catch(() => {});
   scheduleManifest(audio);
@@ -406,9 +409,12 @@ async function boot() {
   const swc = swContainer();
   if (swc) { try { swc.register('sw.js').catch((e) => console.warn('service worker not registered', e)); } catch (e) { console.warn('service worker not registered', e); } }
   // Always: the storage notice (private mode, quota) matters most where there is no service worker; the update banner is inert there.
-  import('./shell/update.js').then((m) => { window.alef.update = m.startUpdateBanner().handle; }).catch(() => {});
+  // A page a service worker already controls (every visit after the first) starts it at once: an update may be waiting, and the file
+  // comes from the device. On a first visit nothing can be waiting, so it starts after the first-load window; "page not found" asks for it at once.
+  if (swc?.controller) startUpdate().catch(() => {});
+  else shownFirst.then(() => afterPaint(() => startUpdate().catch(() => {}), { waitMs: LATE_MS, minMs: LATE_MS })).catch(() => {});
   // Brain Lab is a v0 page whose files are on demand: keep them on the device once per build (src/shell/warm-routes.js).
-  if (swc && available.has('lab')) shownFirst.then(() => afterPaint(() => import('./shell/warm-routes.js').then((m) => m.warmFiles(m.LAB_FILES)).then((r) => { document.body.dataset.labWarm = r; }), { waitMs: 8000, minMs: 8000 })).catch(() => {});
+  if (swc && available.has('lab')) shownFirst.then(() => afterPaint(() => import('./shell/warm-routes.js').then((m) => m.warmFiles(m.LAB_FILES)).then((r) => { document.body.dataset.labWarm = r; }), { waitMs: LATE_MS, minMs: LATE_MS })).catch(() => {});
 }
 
 /**
@@ -417,12 +423,19 @@ async function boot() {
  * progress on this screen, and the reload opens the same address in the new build. It cannot loop: after the reload no update is
  * waiting, so an address the new build lacks too just shows "Page not found". Nothing is stored.
  */
+/** @type {Promise<any>|null} */
+let updateStarted = null;
+/** Starts the update banner and the storage notice once; later callers get the same module. */
+function startUpdate() {
+  if (!updateStarted) { updateStarted = import('./shell/update.js').then((m) => { window.alef.update = m.startUpdateBanner().handle; return m; }); updateStarted.catch(() => { updateStarted = null; }); }
+  return updateStarted;
+}
 let missingPageStop = () => {};
 function updateForMissingPage(path, onUpdating) {
   missingPageStop(); missingPageStop = () => {};
   const handleNow = () => window.alef?.update;
   const waitHandle = async () => { for (let i = 0; i < 20 && !handleNow(); i++) await new Promise((r) => setTimeout(r, 250)); return handleNow(); };
-  import('./shell/update.js').then(async (m) => {
+  startUpdate().then(async (m) => {
     const handle = await waitHandle();
     if (!handle || location.hash.split('?')[0] !== '#' + path) return; // the learner has moved on
     missingPageStop = m.updateForMissingPage(handle, { onUpdating });

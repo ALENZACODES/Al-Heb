@@ -149,3 +149,35 @@ The guard list of real words (`data/camera/real-neighbours.json`, 3,264 words, C
 ## Examples
 
 `docs/photo/camera-examples/` holds three before and after pairs (optical store, bakery, exit) saved from the app's own path in headless Chromium. The files carry no metadata.
+
+## A Pole In Front Of The Sign, And The Language Pack (2026-11-10)
+
+Two changes on branch `claude/fable-big-fixes-2026-11-10`. Both run in the browser; nothing new is sent anywhere.
+
+### A Pole Or Post Across The Lettering
+
+- `findOccluders` (`src/camera/camera-model.js`) looks for an upright bar: columns that keep one flat colour from the top of the picture to the bottom, in a colour that is not the sign's background, with lettering on both sides. Only bars between 1.5% and 22% of the picture's width count.
+- The reader is given a copy of the photo with the bar painted in the sign's background colour, so the bar is not read as ink. The photo the learner sees keeps the bar.
+- A line that touches a bar is marked. A clean-looking piece of such a line is no longer translated as if it were the whole line, and such a line is never translated word for word or sent to the language pack.
+- `completeAcrossGap` completes the line from the word list when exactly one listed phrase begins with the piece before the bar and ends with the piece after it, at least three letters and six in ten of the phrase were read, and no more letters are missing than the bar could hide.
+
+Computer-made images, headless desktop Chromium (`tools/camera-translate/e2e-batch.mjs`; sets from `make_signs.py --hard-dir` and `--review-dir`):
+
+| Set | Lines with the right English, before | After | Wrong English drawn, before | After |
+|---|---|---|---|---|
+| Pole condition only, both sets (76 lines) | 34 | 57 | 8 | 1 |
+| Review set, all twelve conditions (576 lines) | 539 (93.6%) | 558 (96.9%) | 7 | 1 |
+| Hard set, all seven conditions (185 lines) | 168 | 172 | 2 | 1 |
+
+The one wrong drawing left under the pole is "Hummus" where the sign says "Hummus 18": the word is right and the price, half hidden, is left off. Still failing under the pole: lines where the reader misreads a letter that is not beside the bar, lines of two or three letters, and words that are not in the list.
+
+Limits: the bar must be upright and fairly even in colour, and it must run the full height of the picture. A slanted pole, a hand, a leaf or a shadow is not handled. No real photograph was used.
+
+### Lines Outside The Sign List
+
+When the Hebrew to English language pack is already on the device (the learner adds it on the Talk screen), a line the sign list and the phrasebook do not hold is translated as a whole line by the pack, not word for word. The Camera screen never downloads the pack itself; it says whether the pack is there and links to Talk.
+
+A line is sent only when it has two to twelve words, was read with a confidence of 75 or more, holds no reader noise, is not behind a bar and does not hold the Name (`lineForPack`). One word on its own stays with the dictionary, which knows when a spelling has two meanings and then draws nothing. A pack line is labelled "Translated on this device by the language pack, not from a checked list. Check it before you rely on it."
+
+Checked in a real browser under the site's content policy with `node tools/talk/nmt/e2e-talk.mjs camera <images>`: "חנות נעליים" is drawn as "Shoes Shop" and "לימון גדול" as "Big Lemon"; a listed sign still comes from the list. This path has no scored set yet: every phrase in the existing sets is in the list, so they do not exercise it. The review's 66 for translation was measured on its own images, which have not been run through this path.
+

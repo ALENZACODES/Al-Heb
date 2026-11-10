@@ -2,18 +2,29 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import {
-  GAMES, SKILLS, MAX_LEVEL, dailyWorkout, step, trialPoints, startLevel, summarize, recordSession, emptyState, readState,
-  workoutProgress, workoutStreak, skillScore, overallScore, comparison, seeded, consonants, hasPattern, gematriaPuzzle, choices, lineWords,
+  GAMES, CLASSIC_GAMES, STUDIO_GAMES, CLAUDE_GAMES, SKILLS, MAX_LEVEL, STUDIO_SECONDS, dailyWorkout, step, trialPoints, startLevel, summarize, recordSession, emptyState, readState,
+  workoutProgress, workoutStreak, skillScore, overallScore, comparison, seeded, consonants, hasPattern, gematriaPuzzle, choices, lineWords, sessionSeconds,
 } from '../src/lab/lab.core.js';
 import { DRILLS, _test } from '../src/lab/lab.games.js';
 import { HOLIDAY_DEFS } from '../src/curriculum/calendar.js';
 
 const json = (p) => JSON.parse(readFileSync(p, 'utf8'));
 
-test('ten drills, every skill has at least one, every drill has code', () => {
-  assert.equal(GAMES.length, 10);
-  for (const s of SKILLS) assert.ok(GAMES.some((g) => g.skill === s.id), s.id);
-  for (const g of GAMES) assert.equal(typeof DRILLS[g.id]?.trial, 'function', g.id);
+test('classic pack stays ten drills; studio adds ten more; every drill has code', () => {
+  assert.equal(CLASSIC_GAMES.length, 10);
+  assert.equal(STUDIO_GAMES.length, 10);
+  assert.equal(CLAUDE_GAMES.length, 0);
+  assert.equal(GAMES.length, 20);
+  for (const s of SKILLS) {
+    assert.ok(CLASSIC_GAMES.some((g) => g.skill === s.id), s.id);
+    assert.ok(STUDIO_GAMES.some((g) => g.skill === s.id), `studio ${s.id}`);
+  }
+  for (const g of GAMES) {
+    assert.equal(typeof DRILLS[g.id]?.trial, 'function', g.id);
+    assert.ok(['classic', 'studio', 'claude'].includes(g.pack), g.id);
+  }
+  for (const g of CLASSIC_GAMES) assert.equal(sessionSeconds(g.id), 45);
+  for (const g of STUDIO_GAMES) assert.equal(sessionSeconds(g.id), STUDIO_SECONDS);
 });
 
 test('daily workout: three drills, three different skills, same all day, changes across days', () => {
@@ -22,6 +33,8 @@ test('daily workout: three drills, three different skills, same all day, changes
   assert.equal(new Set(a.map((id) => GAMES.find((g) => g.id === id).skill)).size, 3);
   const week = new Set(['2026-11-09', '2026-11-10', '2026-11-11', '2026-11-12'].map((d) => dailyWorkout(d).join()));
   assert.ok(week.size > 1);
+  const classicIds = new Set(CLASSIC_GAMES.map((g) => g.id));
+  for (const id of dailyWorkout('2026-11-10')) assert.ok(classicIds.has(id), id);
 });
 
 test('staircase: two right goes up, a miss goes down, bounded', () => {

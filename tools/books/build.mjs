@@ -61,20 +61,26 @@ for (const b of books) {
   out(`data/books/${b.id}.json`, JSON.stringify(json, null, 1) + '\n');
 }
 
-// index.json: keep books 1 to 5 as they are, replace or append 6 to 62.
+// index.json: keep the existing shelf order; update books 6 to 62 in place;
+// append only ids that are not already listed (do not sort by number).
 const indexPath = resolve(ROOT, 'data/books/index.json');
 const index = JSON.parse(readFileSync(indexPath, 'utf8'));
-const kept = index.books.filter((e) => !books.some((b) => b.id === e.id));
-for (const b of books) {
+const byId = new Map(books.map((b) => {
   const pictured = b.pages.filter((p) => p.hasImg).length;
   const voiced = b.pages.filter((p) => p.hasAudio).length;
-  kept.push({
+  return [b.id, {
     id: b.id, titleHe: b.titleHe, titleTranslit: b.titleTranslit, titleEn: b.titleEn,
     level: BAND_LEVEL[b.band], pageCount: 12,
     hasImages: pictured === 12, hasAudio: voiced === 12, picturedPages: pictured, audioPages: voiced,
-  });
+  }];
+}));
+const seen = new Set();
+const kept = [];
+for (const e of index.books) {
+  if (byId.has(e.id)) { kept.push(byId.get(e.id)); seen.add(e.id); }
+  else kept.push(e);
 }
-kept.sort((a, b) => Number(a.id.replace('book', '')) - Number(b.id.replace('book', '')));
+for (const b of books) if (!seen.has(b.id)) kept.push(byId.get(b.id));
 out('data/books/index.json', JSON.stringify({ ...index, books: kept }, null, 1) + '\n');
 
 // Compendium: every page in Hebrew, phonetic English and English.

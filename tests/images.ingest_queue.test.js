@@ -39,8 +39,9 @@ test('specFor pins the four specs and refuses anything else', () => {
   assert.equal(specFor('assets/img/calendar/markers/candles.png').alpha, true);
   assert.equal(specFor('assets/img/rimon/frames/idle-01.png').width, 256);
   assert.deepEqual(specFor('assets/books/book17/BOOK17_p01.jpg'), { format: 'jpeg', width: 1659, height: 948, alpha: false, quality: 85, kind: 'book page' });
-  assert.deepEqual(specFor('data/images/rimon/rimon-007.webp'), { format: 'webp', width: 512, height: 512, alpha: true, quality: 88, kind: 'still' });
+  assert.deepEqual(specFor('data/images/rimon/v2/rimon-007-starting-line.webp'), { format: 'webp', width: 512, height: 512, alpha: true, quality: 88, kind: 'still' });
   assert.equal(specFor('data/images/rimon/rimon-7.webp'), null);
+  assert.equal(specFor('data/images/rimon/rimon-007.webp'), null, 'the drawn set is never an ingest target');
   assert.equal(specFor('assets/img/other.png'), null);
   assert.equal(specFor('../etc/passwd'), null);
 });
@@ -150,22 +151,22 @@ test('run: resizes to spec, strips metadata, flags, rejects bad aspect, dry-run 
   fs.rmSync(root, { recursive: true, force: true });
 });
 
-test('Rimon stills: rimon-007.png becomes a 512 x 512 WebP with transparency, and present.json lists it', { skip: engine ? false : 'no Pillow and no ffmpeg on this machine' }, async () => {
+test('Rimon stills: rimon-007-starting-line.png becomes a 512 x 512 WebP with transparency, and present.json lists it', { skip: engine ? false : 'no Pillow and no ffmpeg on this machine' }, async () => {
   const root = tmpRoot();
   const drop = path.join(root, 'drop'); fs.mkdirSync(drop);
-  fs.writeFileSync(path.join(drop, 'rimon-007.png'), png(96, 96, { alpha: true, text: 'made somewhere' }));
-  fs.writeFileSync(path.join(drop, 'Rimon-012 (1).png'), png(64, 64, { alpha: true }));
+  fs.writeFileSync(path.join(drop, 'rimon-007-starting-line.png'), png(96, 96, { alpha: true, text: 'made somewhere' }));
+  fs.writeFileSync(path.join(drop, 'Rimon-012-first-correct-gasp (1).png'), png(64, 64, { alpha: true }));
   const t = loadTargets(root);
-  assert.equal(matchName('rimon-007.png', t).path, 'data/images/rimon/rimon-007.webp');
+  assert.equal(matchName('rimon-007-starting-line.png', t).path, 'data/images/rimon/v2/rimon-007-starting-line.webp');
   const rep = await run({ inputs: [drop], root, dryRun: false, replace: false, crop: false, engine: 'auto', quiet: true });
   assert.equal(rep.summary.failed, 0, JSON.stringify(rep.rows.map((r) => r.note)));
   assert.equal(rep.summary.written, 2);
-  const out = path.join(root, 'data/images/rimon/rimon-007.webp');
+  const out = path.join(root, 'data/images/rimon/v2/rimon-007-starting-line.webp');
   const b = fs.readFileSync(out);
   assert.equal(b.toString('latin1', 0, 4), 'RIFF'); assert.equal(b.toString('latin1', 8, 12), 'WEBP');
   assert.deepEqual(scanFile(out, {}).findings, []);
   const present = JSON.parse(fs.readFileSync(path.join(root, 'data/images/rimon/present.json'), 'utf8'));
-  assert.deepEqual(present.ids, [7, 12]);
+  assert.deepEqual(present.ids, ['a007', 'a012']);
   assert.equal(rep.summary.rimonPresent, 2);
   fs.rmSync(root, { recursive: true, force: true });
 });

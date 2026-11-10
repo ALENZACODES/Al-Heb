@@ -71,8 +71,8 @@ export const ON_DEMAND_GROUPS = Object.freeze([
   { id: "od-service", label: "Follow the Service", test: /^src\/service\//, approxMB: 0.1 },
   { id: "od-awards", label: "Awards gallery and certificate", test: /^src\/awards\/(?:gallery\.view|proof-font|certificate|icons)\.js$/, approxMB: 0.11 },
   { id: "od-torahreader", label: "Torah reader page and its Hebrew recording index", test: /^src\/(torahreader\/torahreader\.view|shell\/torah-he-index)\.js$/, approxMB: 0.05 },
-  { id: "od-preview-pages", label: "Class track, pronunciation comparison, Sound like a local, the calendar and the privacy screen (route code)", test: /^src\/(classtrack\/classtrack|pronunciation\/compare|israel\/israel|curriculum\/calendar|shell\/privacy)\.view\.js$/, approxMB: 0.05 },
-  { id: "od-rimon", label: "Rimon's stills (code, styles and light WebP sheets)", test: /^(src\/shell\/(rimon-(stage|triggers|stills\.generated|model)|mascot)\.js|assets\/css\/rimon-stills\.css|assets\/img\/rimon\/web\/)/, approxMB: 1.6 },
+  { id: "od-preview-pages", label: "Class track, pronunciation comparison, Sound like a local, the calendar, the privacy screen, Sounds, Scan a photo and Word Sprint (route code)", test: /^src\/(classtrack\/classtrack|pronunciation\/compare|israel\/israel|curriculum\/calendar|shell\/privacy|photo\/scan|pronunciation\/sounds|sprint\/sprint)\.view\.js$/, approxMB: 0.08 },
+  { id: "od-rimon", label: "Rimon's stills (code, styles and light WebP sheets)", test: /^(src\/shell\/(rimon-(stage|triggers|stills\.generated|model)|mascot)\.js|assets\/css\/rimon-stills.css|assets\/img\/rimon\/web\/)/, approxMB: 1.6 },
   { id: "od-images", label: "Picture approvals and word cues", test: /^data\/images\//, approxMB: 0.20 },
   { id: "od-letters", label: "Letter art concepts and keyboard layout", test: /^data\/letters\//, approxMB: 0.08 },
   { id: "od-home", label: "Home prayers and morning verses", test: /^(data\/homepage\/|data\/morning-verses\.json)/, approxMB: 0.09 },
@@ -82,7 +82,8 @@ export const ON_DEMAND_GROUPS = Object.freeze([
   { id: "od-vocab-code", label: "Vocabulary browser (preview-route code)", test: /^src\/vocab\//, approxMB: 0.06 },
   { id: "od-speak-code", label: "Say it page (preview-route code)", test: /^src\/speak\/speak\.js$/, approxMB: 0.06 },
   { id: "od-music", label: "Game music player, Songs page and English read-aloud", test: /^src\/(audio\/(synth-music|sting)|shell\/speak-english|listen\/songs\.view)\.js$/, approxMB: 0.04 },
-  { id: "od-day-code", label: "Calendar day pages, add-to-calendar box, morning screen and intermediate lessons (preview-route code)", test: /^(src\/curriculum\/(day\.view|calendar\.day|calendar\.addpanel|calendar\.quickadd|intermediate\.view)\.js|src\/morning\/morning\.view\.js)$/, approxMB: 0.09 },
+  { id: "od-day-code", label: "Calendar day pages, add-to-calendar box, morning screen, intermediate lessons and Israel units (preview-route code)", test: /^(src\/curriculum\/(day\.view|calendar\.day|calendar\.addpanel|calendar\.quickadd|intermediate\.view|israel-units\.view|israel-units)\.js|src\/morning\/morning\.view\.js)$/, approxMB: 0.09 },
+  { id: "od-learn-practice", label: "Learn practice screens (review, loanwords, drills and dialogues)", test: /^src\/curriculum\/(review|loanwords|spotit|checkpoint|dialogues|ladder|fade|gender|scaffold)\.view\.js$/, approxMB: 0.07 },
 ]);
 /** Group a list of ALEF_ON_DEMAND paths into optional-download entries ({id,label,urls,approxMB}); empty groups are dropped. */
 export function onDemandGroups(onDemand = []) {

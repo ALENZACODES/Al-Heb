@@ -455,12 +455,18 @@ export const STILLS = Object.freeze([
 ]);
 
 const pad3 = (n) => String(n).padStart(3, '0');
-export const pathOf = (n) => `data/images/rimon/rimon-${pad3(n)}.webp`;
+/**
+ * Catalogue stills: runtime id 'a007'; file data/images/rimon/v2/rimon-007-<slug>.webp (the folder the catalogue is being
+ * drawn into on feature/rimon-stills-2026-11-10). Plain numbers at the top of data/images/rimon belong to the drawn set in art-map.mjs.
+ */
+export const fileId = (n) => `a${pad3(n)}`;
+export const fileStem = (n) => `v2/rimon-${pad3(n)}-${STILLS[n - 1].slug}`;
+export const pathOf = (n) => `data/images/rimon/${fileStem(n)}.webp`;
 
 /** The full prompt for one still, ready to paste. */
 export function promptFor(s) {
   const parts = [
-    `Draw still #${pad3(s.n)} of Rimon, the pomegranate mascot of the Aleph Hebrew course. Match the reference picture (${REFERENCE}) exactly: same character, same colours, same flat style.`,
+    `Draw still ${fileId(s.n)} of Rimon, the pomegranate mascot of the Aleph Hebrew course. Match the reference picture (${REFERENCE}) exactly: same character, same colours, same flat style.`,
     `CHARACTER: ${CHARACTER}`,
     `STYLE: ${STYLE}`,
     `THIS STILL: ${s.pose}`,

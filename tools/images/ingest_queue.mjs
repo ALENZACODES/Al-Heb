@@ -11,7 +11,7 @@
 //      unique across the sheets (env.png, idle-01.png) prefix it with a folder of the target path and two underscores:
 //      letterchomp__env.png, rimon__idle-01.png, markers__festival.png. Browser suffixes " (1)" / " - Copy" are ignored.
 //   2. by CSV: --map FILE.csv with a header `file,path` (file = name or path of the dropped file, path = target path).
-// Rimon stills (docs/images/rimon-stills.csv) are named by number: rimon-007.png -> data/images/rimon/rimon-007.webp
+// Rimon stills (docs/images/rimon-stills.csv) are named as in the sheet: rimon-007-starting-line.png -> data/images/rimon/v2/rimon-007-starting-line.webp
 // (512 x 512 WebP with transparency). After any still is written, data/images/rimon/present.json is rewritten so the
 // app starts showing it (tools/images/rimon/build.mjs writePresent).
 // Everything else is reported as UNMATCHED and never used. Two files for one target = CONFLICT, neither is written.
@@ -48,7 +48,7 @@ export function specFor(target) {
   if (/^assets\/games\/arcade\/(cast|letters)\/[a-z0-9-]+\.png$/.test(target)) return { format: 'png', width: 256, height: 256, alpha: true, kind: 'sprite' };
   if (/^assets\/img\/calendar\/markers\/[a-z0-9-]+\.png$/.test(target)) return { format: 'png', width: 256, height: 256, alpha: true, kind: 'sprite' };
   if (/^assets\/img\/rimon\/frames\/[a-z]+-\d\d\.png$/.test(target)) return { format: 'png', width: 256, height: 256, alpha: true, kind: 'sprite' };
-  if (/^data\/images\/rimon\/rimon-\d{3}\.webp$/.test(target)) return { format: 'webp', width: 512, height: 512, alpha: true, quality: 88, kind: 'still' };
+  if (/^data\/images\/rimon\/v2\/rimon-\d{3}-[a-z0-9-]+\.webp$/.test(target)) return { format: 'webp', width: 512, height: 512, alpha: true, quality: 88, kind: 'still' };
   return null;
 }
 

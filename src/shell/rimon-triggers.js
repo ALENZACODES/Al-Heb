@@ -6,22 +6,24 @@
 // from tools/images/rimon/stills.mjs).
 //
 // A still appears only once its file exists and its number is listed in data/images/rimon/present.json (the image
-// ingest writes that list). Until then every trigger answers null and Rimon behaves exactly as he did before.
+// ingest writes that list). Until then every trigger answers null and Rimon behaves exactly as before.
 //
 // Surfaces (how a still is shown):
-//   pose  - Rimon in the corner (or the Home hero) shows the still for `ms`, then goes back to what he was doing
-//   page  - Rimon in the corner wears the still for the whole page (he is "dressed" for that screen)
+//   pose  - Rimon in the corner (or the Home hero) shows the still for `ms`, then goes back to the animation
+//   page  - Rimon in the corner wears the still for the whole page (dressed for that screen)
 //   hero  - a large Rimon inside the page, under the heading or in a [data-rimon-slot] the view provides
 //   swap  - an existing picture of Rimon in a view (img[data-rimon-still]) is replaced by the still
 //   toast - a small card with the still and one line, at the bottom of the screen, gone after a few seconds
 import { holidaysBetween, roshChodeshInHebrewYear, toHebrew, parseISO, weekday, candleLighting, havdalah } from '../curriculum/calendar.js';
-import { STILL_IDS } from './rimon-stills.generated.js';
+import { STILL_IDS, STILL_FILES } from './rimon-stills.generated.js';
 
 export const STILL_DIR = 'data/images/rimon';
 export const PRESENT_URL = 'data/images/rimon/present.json';
 export const STILL_COUNT = 200;
-/** data/images/rimon/rimon-007.webp for 7. */
-export const stillPath = (id) => `${STILL_DIR}/rimon-${String(id).padStart(3, '0')}.webp`;
+/** Still ids are file stems: '023' and '025b' (drawn set, tools/images/rimon/art-map.mjs) or 'a023' (the 200-still catalogue). */
+export const STILL_ID = /^a?\d{3}[a-z]?$/;
+/** 'a007' -> data/images/rimon/v2/rimon-007-starting-line.webp (catalogue); '023' -> data/images/rimon/rimon-023.webp (drawn set). */
+export const stillPath = (id, files = STILL_FILES) => `${STILL_DIR}/${(id.startsWith('a') && files[id]) || `rimon-${id}`}.webp`;
 
 // ---------------------------------------------------------------- respect rules
 /**
@@ -532,8 +534,8 @@ export function pickStill(trigger, { present, now = new Date(), counters = null,
   return null;
 }
 
-/** Normalise data/images/rimon/present.json -> Set of still numbers. Anything malformed counts as "no stills". */
+/** Normalise data/images/rimon/present.json -> Set of still ids. Anything malformed counts as "no stills". */
 export function presentSet(json) {
   const ids = Array.isArray(json?.ids) ? json.ids : [];
-  return new Set(ids.filter((n) => Number.isInteger(n) && n >= 1 && n <= STILL_COUNT));
+  return new Set(ids.filter((id) => typeof id === 'string' && STILL_ID.test(id)));
 }

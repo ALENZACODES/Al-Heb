@@ -81,6 +81,10 @@ const ON_DEMAND_FILES = new Set([
   'src/curriculum/calendar.addpanel.js', 'src/curriculum/calendar.quickadd.js' /* calendar quick-add box: loaded when the Calendar opens */,
   // Intermediate lessons view (optional preview route /intermediate, 30 KB): route code only, loaded lazily on first open and runtime-cached; its adapter and data stay as they were.
   'src/curriculum/intermediate.view.js',
+  // Israel units (preview route /israel-units): view, model and data are loaded on first open and runtime-cached.
+  'src/curriculum/israel-units.view.js', 'src/curriculum/israel-units.js', 'data/curriculum/israel-units.json',
+  // Learn map sub-screens: dynamically imported by learn.view.js when their query is opened; the map itself uses the slim lessons-index and stays installed.
+  'src/curriculum/review.view.js', 'src/curriculum/loanwords.view.js', 'src/curriculum/spotit.view.js', 'src/curriculum/checkpoint.view.js', 'src/curriculum/dialogues.view.js', 'src/curriculum/ladder.view.js', 'src/curriculum/fade.view.js', 'src/curriculum/gender.view.js', 'src/curriculum/scaffold.view.js',
   // Speak screen engine (preview route /speak, 58 KB): imported only by speak.view.js, which the router loads lazily; fetched on first open and runtime-cached (keeps first install under 3.95 MiB after the tracing pointer fix).
   'src/speak/speak.js',
   // Torah reader view: route code only (the router loads views lazily; its model/loader files stay installed), fetched when the reader first opens, runtime-cached by sw.js (keeps first install under 3.95 MiB after the full-Torah reader landed).
@@ -106,6 +110,8 @@ const ON_DEMAND_FILES = new Set([
   // Sound like a local (#/israel) and Common phrases (#/phrases). Fetched on first open and runtime-cached; moved here when the
   // first-minute pass added the design tokens, the polish layer, the header stat bar and Rimon in the page (keeps first install under 3.95 MiB).
   'src/firstday/minuteone.view.js', 'src/israel/israel.view.js', 'src/phrases/phrases.view.js',
+  // Scan a photo, Sounds and Word Sprint (preview routes): view code only, fetched on first open (keeps first install under 3.95 MiB with the launch branch).
+  'src/photo/scan.view.js', 'src/pronunciation/sounds.view.js', 'src/sprint/sprint.view.js',
   // Cursive display font: only fetched when the cursive script setting is on (font-display: swap falls back otherwise).
   'assets/fonts/web/gveret-levin.woff2']);
 export const isOnDemand = (rel) => !KEEP_DATA.has(rel) && (ON_DEMAND_FILES.has(rel) || /^data\/curriculum\/resource-concepts-/.test(rel) || ON_DEMAND_PREFIXES.some((p) => rel.startsWith(p)));

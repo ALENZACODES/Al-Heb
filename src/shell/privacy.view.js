@@ -32,7 +32,7 @@ export const STORE_KEYS = [
   ['home.builder.v1', 'Built word ids, timestamps and points', 'src/home/builder-model.js'],
   ['games.homebuilder.v1', 'Home word builder game results', 'src/home/builder-model.js'],
   ['rimon.dismissed', 'Whether you hid Rimon; included in your backup', 'src/shell/rimon.js'],
-  ['rimon.seen.v1', 'Rimon: which one-time moments he has already shown (first answer, streak milestones, daily greetings) and the day you last visited, so he does not repeat himself', 'src/shell/rimon-stage.js'],
+  ['rimon.seen.v1', 'Rimon: which one-time moments have already been shown (first answer, streak milestones, daily greetings) and the day you last visited, so nothing repeats', 'src/shell/rimon-stage.js'],
 
   ['firstwin.v1', 'First ten minutes: your answers (motivation, level, minutes a day) and the promise date', 'src/firstday/minuteone.model.js'],
   ['firstday.builder.v1', 'Word builder: which words you have built (their ids), how many builds, and when the last one was', 'src/firstday/minuteone.model.js'],
@@ -124,6 +124,7 @@ export const STORE_KEYS = [
   ['curriculum.loanwords', 'Loanword practice', 'src/curriculum/actions.js'],
   ['curriculum.scaffold', 'Read-without-Latin progress', 'src/curriculum/scaffold.js'],
   ['intermediate.v1', 'Intermediate lessons progress', 'src/curriculum/intermediate.view.js'],
+  ['israelUnits.v1', 'Israel unit review schedule (when each unit review was done)', 'src/curriculum/israel-units.js'],
   ['service.prefs', 'Follow-the-service choices (order, tradition, whether to show transliteration)', 'src/service/service.view.js'],
   ['progress.milestones.v1', 'Which progress milestones you have reached, and when', 'src/progress/store.js'],
   ['__meta', 'Storage format version number only (no learner data; left out of backups)', 'src/store.js'],

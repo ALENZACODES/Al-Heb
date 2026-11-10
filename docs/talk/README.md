@@ -22,7 +22,7 @@ A line that differs from a stored line by a real word is refused, not matched. "
 
 | File | Use |
 |---|---|
-| `data/talk/pack.json` | 317 sentence pairs with their English wordings, 258 nouns with gender and plural where needed, 56 describing words in their four forms, 62 to-forms, 24 places, 40 names and the numbers 0 to 100. Written for this project. Not yet checked by a native speaker. |
+| `data/talk/pack.json` | 322 sentence pairs with their English wordings, 265 nouns with gender and plural where needed, 62 describing words in their four forms, 62 to-forms, 24 places, 40 names and the numbers 0 to 100. Written for this project. Not yet checked by a native speaker. |
 | `data/corpus/phrasebook.json` | The 204 phrasebook lines. |
 | `data/curriculum/dialogues.json`, `data/israel/scenarios.json` | Dialogue lines and the natural option of each scene. |
 | `data/vocab/index.json` | The dictionary index. Fetched only when a line needs it. Only a word's first meaning is used, only for nouns inside a pattern or for a single word, and the answer is always marked low. Dictionary glosses are never strung into a sentence. |
@@ -38,6 +38,7 @@ A line that differs from a stored line by a real word is refused, not matched. "
 - Describing words that follow the noun or the speaker ("The room is very dirty", "I am tired", "The soup was cold").
 - Clock times with half and quarter past, and when things start and end ("The service starts at nine").
 - I live in, I work in, I am a number of years old, we are from.
+- Not wanting or needing, a thing that does not work, where a thing is ("The prayer book is on the chair"), which, our and this, colours.
 - A describing word beside a noun ("cold water", "a bigger room"), my, another, per night, and someone else wanting or needing ("The children want ice cream").
 
 ## Lines As They Are Heard
@@ -64,7 +65,7 @@ A misheard word that is itself a real word is a different request. It is transla
 
 Listening uses the browser's speech recognition. ALEF uploads nothing itself. Some browsers send the sound to the browser maker to turn it into text; the screen says this beside the buttons, and the privacy page lists it. Browsers without speech recognition get typing only, with a sentence that says so. Typing works offline once the screen has been opened.
 
-When the Hebrew answer is word for word a phrasebook line that has a clip in the audio manifest, that clip plays and is labelled as what it is. Every other answer is read by the device voice and labelled as the device voice. Speaking the translation in the learner's own voice is not built. The screen calls it a future feature.
+When the Hebrew answer is word for word a phrasebook line that has a clip in the audio manifest, that clip plays and is labelled as what it is (seen working in headless Chrome for "Good morning"; not checked by ear). Every other answer is read by the device voice and labelled as the device voice. Speaking the translation in the learner's own voice is not built. The screen calls it a future feature.
 
 ## Who Is Speaking
 
@@ -80,18 +81,19 @@ A line that holds the four-letter Name, in Hebrew or in English letters, is held
 
 ## Scores
 
-`tests/talk.engine.test.js` scores the engine on six files. An exact match after normalizing scores 1; otherwise the score is 1 minus the word error rate against the reference; a refusal scores 0. A correct answer worded differently from the reference loses points.
+`tests/talk.engine.test.js` scores the engine on seven files. An exact match after normalizing scores 1; otherwise the score is 1 minus the word error rate against the reference; a refusal scores 0. A correct answer worded differently from the reference loses points.
 
 | File | Lines | Score | Refused | What it shows |
 |---|---|---|---|---|
 | `tests/fixtures/talk.utterances.json` | 100 | 96.3 | 0 | The pack was written with these lines in view. A regression check. |
 | `tests/fixtures/talk.fresh.json` | 60 | 95.5 | 1 | Written after round 1. It scored 69.6 then and has since been used to widen the pack. A regression check. |
 | `tests/fixtures/talk.fresh2.json` | 75 | 88.4 | 7 | Written during round 2. It scored 62.7 when first run and was then used to add patterns. A regression check. |
-| `tests/fixtures/talk.fresh3.json` | 40 | 91.9 | 3 | Written at the end of round 2. It scored 74.4 then. A regression check. |
-| `tests/fixtures/talk.fresh4.json` | 40 | 95.1 | 0 | Written at the end of round 3. It scored 60.3 then; its refusals guided the round 4 frames. A regression check. |
-| `tests/fixtures/talk.fresh5.json` | 40 | 48.5 | 17 | Written at the end of round 4. It scored 47.5 when first run. No line or frame was added for it. This is the honest number for a new everyday line. |
+| `tests/fixtures/talk.fresh3.json` | 40 | 94.4 | 2 | Written at the end of round 2. It scored 74.4 then. A regression check. |
+| `tests/fixtures/talk.fresh4.json` | 40 | 97.6 | 0 | Written at the end of round 3. It scored 60.3 then. A regression check. |
+| `tests/fixtures/talk.fresh5.json` | 40 | 95.2 | 0 | Written at the end of round 4. It scored 47.5 then; its refusals guided the round 5 frames. A regression check. |
+| `tests/fixtures/talk.fresh6.json` | 40 | 49.2 | 19 | Written at the end of round 5. It scored 48.5 when first run. No line or frame was added for it. This is the honest number for a new everyday line. |
 
-The held-out files scored 69.6, 62.7, 74.4, 60.3 and 47.5 when first run, whatever the earlier files had reached by then. Widening the stored lines and frames lifts the files it was done against and does not lift the next new file. A new everyday line has roughly an even chance of being answered. On open conversation outside these topics the engine will mostly refuse. All scores were taken on typed text. Nothing here has been tested with real speech in a browser.
+The held-out files scored 69.6, 62.7, 74.4, 60.3, 47.5 and 48.5 when first run, whatever the earlier files had reached by then. Widening the stored lines and frames lifts the files it was done against and does not lift the next new file. A new everyday line has roughly an even chance of being answered. On open conversation outside these topics the engine will mostly refuse. All scores were taken on typed text. Nothing here has been tested with real speech in a browser.
 
 ## Scoring The Shipped Engine From A Speech Review
 
@@ -110,4 +112,8 @@ Each line of `transcripts.jsonl` is `{"id": "...", "direction": "he-en", "text":
 - A small translation model that runs in the browser. It would lift the score on new sentences. It needs a model of a workable size hosted with the site and a test in real browsers first.
 - Past and future sentences, and anything said about a third person ("The children are hungry").
 - Clips for the Talk pack's own lines. Only phrasebook lines that already have a clip play one (93 of the 204 today).
-- "Doesn't work", "our", "on Friday", "I don't need", "is on the chair", colours: the round 4 held-out file lists what is still refused.
+- "Two more chairs", "take me to", "I'm waiting for", "where does this bus go", "do you sell", "the rabbi's sermon": the round 5 held-out file lists what is still refused.
+
+## How Hebrew Is Shown
+
+Phrasebook lines are stored with vowel marks and spelled for them. They are shown as stored, because taking the marks off leaves a spelling nobody writes ("בקר" for "בוקר"). Every other answer is in everyday spelling without marks.

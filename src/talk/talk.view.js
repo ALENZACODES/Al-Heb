@@ -129,7 +129,6 @@ export function mount(root, ctx = {}) {
   const toggles = h('div', { class: 'talk-toggles' },
     check('talk-speak', 'Read each translation aloud', settings.autoSpeak, (v) => { settings = { ...settings, autoSpeak: v }; }),
     check('talk-face', 'Show it upside down for the person facing me', settings.faceToFace, (v) => { settings = { ...settings, faceToFace: v }; }),
-    check('talk-nikkud', 'Show Hebrew vowel marks where ALEF has them', settings.nikkud, (v) => { settings = { ...settings, nikkud: v }; }),
     h('label', { for: 'talk-speaker' }, 'Hebrew “I” forms: ', who),
     h('p', { class: 'muted talk-small' }, VOICE_KEEP));
 
@@ -153,7 +152,9 @@ export function mount(root, ctx = {}) {
     paneThem.hidden = !settings.faceToFace;
   }
 
-  const shownHebrew = (r) => (settings.nikkud && r.pointed ? r.pointed : stripNikkud(r.translation));
+  // A phrasebook line is stored with vowel marks and spelled for them ("בֹּקֶר"); taking the marks off would leave a spelling nobody writes
+  // ("בקר" for "בוקר"), so it is shown as stored. Every other answer is in everyday spelling without marks.
+  const shownHebrew = (r) => r.pointed || stripNikkud(r.translation);
   const setText = (el, text) => { const he = hasHebrew(text); el.textContent = text; el.dir = he ? 'rtl' : 'ltr'; el.lang = he ? 'he' : 'en'; };
 
   function lineButton(item, label, direction = 'en-he') {

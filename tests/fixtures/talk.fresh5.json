@@ -1,6 +1,6 @@
 {
  "schema": "alef-talk-utterances/1",
- "note": "40 everyday lines written at the end of round 4, after every engine and pack change of that round. It scored 47.5 when first run, with 17 of 40 refused. One fault it exposed was then fixed (a Hebrew question came back as a statement); no line or frame was added for it. The reference is one acceptable answer.",
+ "note": "40 everyday lines written at the end of round 4, after every engine and pack change of that round. It scored 47.5 when first run, with 17 of 40 refused. One fault it exposed was then fixed (a Hebrew question came back as a statement); no line or frame was added for it in that round. In round 5 its refusals guided new frames and three of its lines were stored, so it is now a regression check. The reference is one acceptable answer.",
  "samples": [
   {
    "id": "m-en-01",

@@ -268,7 +268,8 @@ test('describing words beside a noun, comparatives, my, another, per night, some
     ['Can I have another towel?', 'אפשר עוד מגבת?'],
     ['How much is the room per night?', 'כמה עולה החדר ללילה?'],
     ['Where is my room?', 'איפה החדר שלי?'],
-    ['My wife is tired', 'האישה שלי עייפה'],
+    ['My wife is tired', 'אשתי עייפה'],
+    ['My husband is sick', 'בעלי חולה'],
     ['We are from Canada', 'אנחנו מקנדה'],
     ['The children want ice cream', 'הילדים רוצים גלידה'],
     ['My daughter needs a doctor', 'הבת שלי צריכה רופא'],
@@ -286,6 +287,36 @@ test('describing words beside a noun, comparatives, my, another, per night, some
     ['הילדים רוצים גלידה', 'The children want ice cream'],
     ['נתראה ביום ראשון', 'See you on Sunday'],
     ['מים קרים, בבקשה', 'Cold water, please'],
+  ];
+  for (const [src, want] of back) assert.equal(en(src).translation, want, src);
+});
+
+test('round 5 frames: not wanting, not working, where a thing is, which, our and this, colours', () => {
+  const cases = [
+    ["I don't need a receipt", 'אני לא צריך קבלה'],
+    ["I don't want to pay", 'אני לא רוצה לשלם'],
+    ["The shower doesn't work", 'המקלחת לא עובדת'],
+    ['The elevator is not working', 'המעלית לא עובדת'],
+    ['Our room is not ready', 'החדר שלנו לא מוכן'],
+    ['The prayer book is on the chair', 'הסידור על הכיסא'],
+    ['Which platform?', 'איזה רציף?'],
+    ['This bus goes to Haifa', 'האוטובוס הזה נוסע לחיפה'],
+    ['Is it open on Friday?', 'זה פתוח ביום שישי?'],
+    ['Two glasses of red wine, please', 'שתי כוסות יין אדום, בבקשה'],
+    ["I'm looking for a gift for my mother", 'אני מחפש מתנה לאמא שלי'],
+    ['The fish is very fresh', 'הדג טרי מאוד'],
+    ["I don't eat fish", 'אני לא אוכל דגים'],
+    ['I have a headache', 'יש לי כאב ראש'],
+  ];
+  for (const [src, want] of cases) assert.equal(he(src).translation, want, src);
+  const back = [
+    ['המקלחת לא עובדת', "The shower doesn't work"],
+    ['החדר שלנו לא מוכן', 'Our room is not ready'],
+    ['אני לא צריך קבלה', "I don't need a receipt"],
+    ['בעלי חולה', 'My husband is sick'],
+    ['הסידור על הכיסא', 'The prayer book is on the chair'],
+    ['כואב לי הראש', 'I have a headache'],
+    ['יש לי כאב ראש', 'I have a headache'],
   ];
   for (const [src, want] of back) assert.equal(en(src).translation, want, src);
 });
@@ -398,10 +429,17 @@ test('score: the round 3 end set, since used to guide new frames (a regression c
   assert.ok(r.score >= 93, `score ${r.score.toFixed(2)}`);
 });
 
-test('score: 40 held-out lines written at the end of round 4 (the honest number; must not fall)', () => {
+test('score: the round 4 end set, since used to guide new frames (a regression check)', () => {
   const r = score('tests/fixtures/talk.fresh5.json');
   assert.equal(r.n, 40);
-  assert.ok(r.score >= 47, `score ${r.score.toFixed(2)}`);
+  assert.ok(r.score >= 93, `score ${r.score.toFixed(2)}`);
   assert.equal(en('הרב כאן היום?').translation, 'Is the rabbi here today?', 'a question stays a question');
   assert.equal(en('הרב כאן היום').translation, 'The rabbi is here today');
+});
+
+test('score: 40 held-out lines written at the end of round 5 (the honest number; must not fall)', () => {
+  const r = score('tests/fixtures/talk.fresh6.json');
+  assert.equal(r.n, 40);
+  assert.ok(r.score >= 48, `score ${r.score.toFixed(2)}`);
+  assert.equal(en('אני רוצה כוס יין לבן').translation, 'I want a glass of white wine');
 });

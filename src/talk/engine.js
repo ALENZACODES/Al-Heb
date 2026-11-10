@@ -198,9 +198,10 @@ export function createEngine(data) {
   /** @type {Map<string, {en:string, definite:boolean, kind:string}>} */ const nounHe = new Map();
   for (const n of pack.nouns || []) {
     const def = n.def || 'ה' + n.he;
-    for (const e of n.en) if (!nounEn.has(e)) nounEn.set(e, { en: n.en[0], he: n.he, def, kind: 'noun', g: n.g || 'm', pl: n.pl || '' });
-    if (!nounHe.has(n.he)) nounHe.set(n.he, { en: n.en[0], definite: n.he === def, kind: 'noun' });
-    if (!nounHe.has(def)) nounHe.set(def, { en: n.en[0], definite: true, kind: 'noun' });
+    const kind = n.own ? 'own' : 'noun';
+    for (const e of n.en) if (!nounEn.has(e)) nounEn.set(e, { en: n.en[0], he: n.he, def, kind, g: n.g || 'm', pl: n.pl || '', food: n.food || '' });
+    if (!nounHe.has(n.he)) nounHe.set(n.he, { en: n.en[0], definite: n.he === def, kind });
+    if (!nounHe.has(def)) nounHe.set(def, { en: n.en[0], definite: true, kind });
     if (n.pl && !nounHe.has(n.pl)) nounHe.set(n.pl, { en: pluralEn(n.en[0]), definite: false, kind: 'noun' });
   }
   for (const pl of pack.places || []) {
@@ -276,9 +277,13 @@ export function createEngine(data) {
   function np(text, deep = false) {
     let t = String(text || '').trim();
     if (!t) return null;
+    const whole0 = nounEn.get(t);
+    if (whole0 && whole0.kind === 'own') return { he: whole0.he, def: whole0.he, definite: true, from: 'table', kind: 'own', g: whole0.g || 'm' }; // "my husband": already says whose
     let definite = false; let mine = false;
-    const m = /^(the|a|an|some|any|my) (.+)$/.exec(t);
-    if (m) { definite = m[1] === 'the' || m[1] === 'my'; mine = m[1] === 'my'; t = m[2]; }
+    const m = /^(the|a|an|some|any|my|our|this|that) (.+)$/.exec(t);
+    if (m) { definite = !/^(?:a|an|some|any)$/.test(m[1]); mine = definite && m[1] !== 'the'; t = m[2]; }
+    // what follows the noun: "my" שלי, "our" שלנו, "this" הזה in the noun's gender
+    const owner = (g) => (!m ? '' : m[1] === 'my' ? ' שלי' : m[1] === 'our' ? ' שלנו' : m[1] === 'this' || m[1] === 'that' ? (g === 'f' ? ' הזאת' : String(g).startsWith('p') ? ' האלה' : ' הזה') : '');
     let hit = nounEn.get(t) || (definite ? nounEn.get('the ' + t) : null);
     /** @type {'table'|'dictionary'} */ let from = 'table';
     if (!hit && !t.includes(' ')) {
@@ -288,6 +293,16 @@ export function createEngine(data) {
     if (!hit && !m) {
       // "three tickets", "two beers", "one night", "20 shekels": the noun must have a stored plural
       const c = /^(\S+) (.+)$/.exec(t); const N = c ? numEn.get(c[1]) : null;
+      const cc = N && N.n >= 2 ? /^(bottles|glasses|cups|plates|bowls) of (.+)$/.exec(c[2]) : null;
+      if (cc) {
+        // "two glasses of red wine"
+        const box = nounEn.get(cc[1] === 'glasses' ? 'glass' : cc[1].replace(/s$/, '')); const inside = np(cc[2]);
+        if (box && box.pl && inside && !inside.definite) {
+          const fem = box.g === 'f';
+          const he = `${N.n === 2 ? (fem ? 'שתי' : 'שני') : (fem ? N.count : N.m)} ${box.pl} ${inside.he}`;
+          return { he, def: he, definite: false, from: inside.from, kind: 'count', g: fem ? 'pf' : 'p' };
+        }
+      }
       if (N && N.n >= 1) {
         const sing = nounEn.get(c[2].replace(/s$/, '')) || nounEn.get(c[2].replace(/es$/, '')) || (c[2] === 'people' ? nounEn.get('person') : null);
         const whole = nounEn.get(c[2]);
@@ -323,13 +338,18 @@ export function createEngine(data) {
       }
       // "a bottle of water", "a cup of coffee"
       if ((c = /^(bottle|glass|cup|plate|bowl) of (.+)$/.exec(t))) {
-        const b = np(c[2], true);
+        const b = np(c[2]);
         if (b && !b.definite) { const he = `${CONTAINER.get(c[1])} ${b.he}`; return { he, def: he, definite: false, from: b.from, kind: 'noun', g: c[1] === 'bottle' ? 'm' : 'f' }; }
       }
       // "a table for six", "a room for two"
       if ((c = /^(.+) for (\w+)(?: people)?$/.exec(t))) {
         const a = np(lead + c[1], true); const N = numEn.get(c[2]);
         if (a && N && N.n >= 1) { const tail = ` ל${N.n === 2 ? 'שניים' : N.m}`; return { ...a, he: a.he + tail, def: a.def + tail, kind: 'noun' }; }
+      }
+      // "a gift for my mother"
+      if ((c = /^(.+) for (.+)$/.exec(t))) {
+        const a = np(lead + c[1], true); const b = np(c[2], true);
+        if (a && b && b.from === 'table' && b.definite) { const tail = ' ' + withPrep(b, 'ל'); return { ...a, he: a.he + tail, def: a.def + tail, kind: 'noun' }; }
       }
       // "a bus to Tel Aviv", "a ticket to Eilat", "a taxi to the airport"
       if ((c = /^(.+) to (.+)$/.exec(t))) {
@@ -353,7 +373,7 @@ export function createEngine(data) {
       return null;
     }
     if (hit.kind === 'place') return { he: hit.he, def: hit.he, definite: true, from, kind: 'place', g: '' };
-    const def = mine ? `${hit.def} שלי` : hit.def;
+    const def = mine ? `${hit.def}${owner(from === 'table' ? hit.g || 'm' : 'm')}` : hit.def;
     return { he: definite ? def : hit.he, def, definite, from, kind: hit.kind, g: from === 'table' ? (hit.g || 'm') : '' };
   }
   /** Attach a one-letter preposition (ל, ב, מ): the article ה folds into it. */
@@ -365,7 +385,7 @@ export function createEngine(data) {
     const t = normHe(heText);
     if (!t) return null;
     const hit = nounHe.get(t);
-    if (hit) return { en: hit.kind === 'place' ? hit.en : (hit.definite ? 'the ' + hit.en : hit.en), bare: hit.en, definite: hit.definite, from: 'table', kind: hit.kind };
+    if (hit) return { en: hit.kind !== 'noun' ? hit.en : (hit.definite ? 'the ' + hit.en : hit.en), bare: hit.en, definite: hit.definite, from: 'table', kind: hit.kind };
     const parts = t.split(' ');
     for (let k = Math.min(3, parts.length - 1); k >= 1; k--) {
       const N = numHe.get(parts.slice(0, k).join(' '));
@@ -382,6 +402,10 @@ export function createEngine(data) {
       const rest = enOf(parts.slice(1).join(' '));
       if (rest) { const one = !MASS.has(rest.bare) && !/s$/.test(rest.bare) && rest.kind === 'noun'; const b = `${one ? 'another' : 'more'} ${rest.bare}`; return { ...rest, en: b, bare: b, kind: 'count' }; }
     }
+    if (parts.length >= 2 && ['שלנו', 'הזה', 'הזאת', 'האלה'].includes(parts[parts.length - 1])) {
+      const rest = enOf(parts.slice(0, -1).join(' ')); const w = parts[parts.length - 1] === 'שלנו' ? 'our' : parts[parts.length - 1] === 'האלה' ? 'these' : 'this';
+      if (rest && rest.definite && rest.kind === 'noun') return { ...rest, en: `${w} ${rest.bare}`, bare: `${w} ${rest.bare}` };
+    }
     if (parts.length >= 2 && parts[parts.length - 1] === 'שלי') { const rest = enOf(parts.slice(0, -1).join(' ')); if (rest && rest.definite && rest.kind === 'noun') return { ...rest, en: `my ${rest.bare}`, bare: `my ${rest.bare}` }; }
     if (parts.length >= 2 && PER_HE.has(parts[parts.length - 1])) { const rest = enOf(parts.slice(0, -1).join(' ')); if (rest) { const tail = ` per ${PER_HE.get(parts[parts.length - 1])}`; return { ...rest, en: rest.en + tail, bare: rest.bare + tail }; } }
     if (parts.length >= 2) {
@@ -392,7 +416,9 @@ export function createEngine(data) {
         const rest = enOf(parts.slice(0, more ? -2 : -1).join(' '));
         if (rest && rest.from === 'table' && rest.kind === 'noun') {
           const word = more ? (compOf.get(adj.en[0]) || `more ${adj.en[0]}`) : adj.en[0];
-          const b = `${word} ${rest.bare}`;
+          // "כוס יין לבן" is a glass of white wine: the describing word belongs to what is inside
+          const of = / of /.test(rest.bare) ? rest.bare.lastIndexOf(' of ') + 4 : 0;
+          const b = `${rest.bare.slice(0, of)}${word} ${rest.bare.slice(of)}`;
           return { ...rest, en: rest.definite ? `the ${b}` : b, bare: b };
         }
       }
@@ -508,7 +534,7 @@ export function createEngine(data) {
     if ((m = /^see you at (.+)$/.exec(q))) { const t = clock(m[1]); if (t) return { he: `נתראה ב${t}`, from: 'table' }; }
     // agreement with a stored noun's gender (dictionary nouns have no stored gender, so these frames need a noun from the Talk list)
     const byG = (n, mas, fem, plu, pluF = plu) => (n.g === 'f' ? fem : n.g === 'pf' ? pluF : n.g === 'p' ? plu : mas);
-    const listed = (text) => { const n = np(/^(?:the|my) /.test(text) ? text : 'the ' + text); return n && n.from === 'table' && n.kind === 'noun' && n.g ? n : null; };
+    const listed = (text) => { const n = np(/^(?:the|my|our|this|that) /.test(text) ? text : 'the ' + text) || np(text); return n && n.from === 'table' && (n.kind === 'noun' || n.kind === 'own') && n.definite && n.g ? n : null; };
     const forN = (w) => { const N = numEn.get(w); return N && N.n >= 1 ? (N.n === 2 ? 'שניים' : N.m) : null; };
     if ((m = /^we have a (?:reservation|booking) for (\w+)(?: people)?$/.exec(q))) { const x = forN(m[1]); if (x) return { he: `יש לנו הזמנה ל${x}`, from: 'table' }; }
     if ((m = /^(?:a )?table for (\w+)(?: people)?$/.exec(q))) { const x = forN(m[1]); if (x) return { he: `שולחן ל${x}`, from: 'table' }; }
@@ -527,7 +553,9 @@ export function createEngine(data) {
       const sj = subject(subjText); const a = adjEn.get(adjWord);
       if (!sj || !a) return null;
       const past = verb === 'was' || verb === 'were';
-      const tail = `${degree === 'too' ? ' מדי' : degree ? ' מאוד' : ''}${when === 'today' ? ' היום' : when === 'now' ? ' עכשיו' : ''}${ask ? '?' : ''}`;
+      const day = when && /^on /.test(when) ? dayEn.get(when.slice(3)) : '';
+      if (when && /^on /.test(when) && !day) return null;
+      const tail = `${degree === 'too' ? ' מדי' : degree ? ' מאוד' : ''}${when === 'today' ? ' היום' : when === 'now' ? ' עכשיו' : day ? ' ב' + day : ''}${ask ? '?' : ''}`;
       const line = (g, subj) => {
         const was = !past ? '' : sj.who === 'i' ? 'הייתי ' : sj.who === 'we' ? 'היינו ' : g === 'f' ? 'הייתה ' : g.startsWith('p') ? 'היו ' : 'היה ';
         return `${subj} ${was}${not ? 'לא ' : ''}${adjFor(a, g)}${tail}`;
@@ -538,8 +566,25 @@ export function createEngine(data) {
       if (sj.who === 'you') out.toF = line('f', 'את');
       return out;
     };
-    if ((m = /^(is|are|was|were|am) (.+?) (not )?(?:(very|really|so|too) )?(\w+)(?: (today|now))?$/.exec(q))) { const r = described(m[2], m[1], m[3], m[4], m[5], m[6], true); if (r) return r; }
-    if ((m = /^(.+?) (is|are|was|were|am) (not )?(?:(very|really|so|too) )?(\w+)(?: (today|now))?$/.exec(q))) { const r = described(m[1], m[2], m[3], m[4], m[5], m[6], false); if (r) return r; }
+    if ((m = /^i do not (want|need) (to )?(.+)$/.exec(q))) {
+      const v = m[2] ? vp(m[3]) : null; const n = m[2] ? null : np(m[3]);
+      if (v || n) { const rest = v ? v.he : obj(n); const from = v ? v.from : lvl(n); return m[1] === 'want' ? { he: `אני לא רוצה ${rest}`, from } : { he: `אני לא צריך ${rest}`, f: `אני לא צריכה ${rest}`, from }; }
+    }
+    if ((m = /^(.+) (does not work|do not work|is not working|are not working|works|is working)$/.exec(q))) {
+      const sj = listed(m[1]);
+      if (sj) return { he: `${sj.he} ${/not/.test(m[2]) ? 'לא ' : ''}${byG(sj, 'עובד', 'עובדת', 'עובדים', 'עובדות')}`, from: 'table' };
+    }
+    if ((m = /^(.+) (?:is|are) (on|next to|near|behind|in front of|under) (.+)$/.exec(q))) {
+      const sj = listed(m[1]); const n = np(m[3]);
+      if (sj && n && n.from === 'table') {
+        const where = m[2] === 'under' ? 'מתחת ' + withPrep(n, 'ל') : `${{ on: 'על', 'next to': 'ליד', near: 'ליד', behind: 'מאחורי', 'in front of': 'מול' }[m[2]]} ${n.he}`;
+        return { he: `${sj.he} ${where}`, from: 'table' };
+      }
+    }
+    if ((m = /^which (.+)$/.exec(q))) { const n = np(m[1]); if (n && n.from === 'table' && n.kind === 'noun' && !n.definite) return { he: `${n.g === 'f' ? 'איזו' : String(n.g).startsWith('p') ? 'אילו' : 'איזה'} ${n.he}?`, from: 'table' }; }
+    if ((m = /^(.+) (?:goes|go) to (.+)$/.exec(q))) { const sj = listed(m[1]); const n = np(m[2]); if (sj && n && n.from === 'table') return { he: `${sj.he} ${byG(sj, 'נוסע', 'נוסעת', 'נוסעים', 'נוסעות')} ${withPrep(n, 'ל')}`, from: 'table' }; }
+    if ((m = /^(is|are|was|were|am) (.+?) (not )?(?:(very|really|so|too) )?(\w+)(?: (today|now|on \w+))?$/.exec(q))) { const r = described(m[2], m[1], m[3], m[4], m[5], m[6], true); if (r) return r; }
+    if ((m = /^(.+?) (is|are|was|were|am) (not )?(?:(very|really|so|too) )?(\w+)(?: (today|now|on \w+))?$/.exec(q))) { const r = described(m[1], m[2], m[3], m[4], m[5], m[6], false); if (r) return r; }
     if ((m = /^we are from (.+)$/.exec(q))) { const n = np(m[1]); if (n && n.kind === 'place') return { he: `אנחנו מ${n.he}`, from: 'table' }; }
     if ((m = /^is (.+) in (english|hebrew)$/.exec(q))) { const n = listed(m[1]); if (n) return { he: `${n.he} ב${LANGS.get(m[2])}?`, from: 'table' }; }
     if ((m = /^see you on (\w+)$/.exec(q)) && dayEn.has(m[1])) return { he: `נתראה ב${dayEn.get(m[1])}`, from: 'table' };
@@ -587,7 +632,7 @@ export function createEngine(data) {
       const n = np(m[2]);
       if (n) return m[1] === 'need' ? { he: `אני צריך להגיע ${withPrep(n, 'ל')}`, f: `אני צריכה להגיע ${withPrep(n, 'ל')}`, from: lvl(n) } : { he: `אני רוצה להגיע ${withPrep(n, 'ל')}`, from: lvl(n) };
     }
-    if ((m = /^i do not eat (.+)$/.exec(q))) { const n = np(m[1]); if (n) return { he: `אני לא אוכל ${n.he}`, f: `אני לא אוכלת ${n.he}`, from: lvl(n) }; }
+    if ((m = /^i do not eat (.+)$/.exec(q))) { const n = np(m[1]); const x = n ? (nounEn.get(m[1])?.food || n.he) : ''; if (n) return { he: `אני לא אוכל ${x}`, f: `אני לא אוכלת ${x}`, from: lvl(n) }; }
     if ((m = /^i do not drink (.+)$/.exec(q))) { const n = np(m[1]); if (n) return { he: `אני לא שותה ${n.he}`, from: lvl(n) }; }
     // tickets (a masculine noun, so the number form is known)
     const tickets = (w) => { const n = numEn.get(w); if (!n || n.n < 1) return null; return n.n === 1 ? 'כרטיס אחד' : `${n.mConstruct || n.m} כרטיסים`; };
@@ -604,7 +649,7 @@ export function createEngine(data) {
       if (t && (!m[2] || to)) return { he: t + (to ? ' ' + withPrep(to, 'ל') : ''), from: 'table' };
     }
     if ((m = /^how many (.+)$/.exec(q))) { const n = np(m[1]); if (n) return { he: `כמה ${n.he}?`, from: lvl(n) }; }
-    if ((m = /^i am allergic to (.+)$/.exec(q))) { const n = np(m[1]); if (n) return { he: `יש לי אלרגיה ${withPrep(n, 'ל')}`, from: lvl(n) }; }
+    if ((m = /^i am allergic to (.+)$/.exec(q))) { const n = np(m[1]); const food = nounEn.get(m[1])?.food; if (n) return { he: `יש לי אלרגיה ${food ? 'ל' + food : withPrep(n, 'ל')}`, from: lvl(n) }; }
     if ((m = /^where is (?:the )?(?:nearest|closest) (.+)$/.exec(q)) || (m = /^where is (an? .+) (?:near here|nearby|around here)$/.exec(q))) { const n = np(m[1].replace(/^an? /, '')); if (n) return { he: `איפה יש ${n.kind === 'place' ? n.he : np(m[1].replace(/^(?:an?|the) /, '')).he} באזור?`, from: lvl(n) }; }
     if ((m = /^i (?:have )?lost (.+)$/.exec(q))) { const n = np(m[1]); if (n && n.definite) return { he: `איבדתי את ${n.he}`, from: lvl(n) }; }
     if ((m = /^where (?:is|are) (.+)$/.exec(q))) { const n = np(m[1]); if (n) return { he: `איפה ${n.he}?`, from: lvl(n) }; }
@@ -657,6 +702,17 @@ export function createEngine(data) {
     const the = (x) => enOf(x);
     const afterPrep = (x) => enOf('ה' + x) || enOf(x);
     if ((m = /^זה עלה (.+)$/.exec(q))) { const n = enOf(m[1]); if (n && /shekel|dollar/.test(n.bare)) return { en: `It cost ${n.en}`, from: 'table' }; }
+    if ((m = /^אני לא רוצה (.+)$/.exec(q))) { const v = /^ל/.test(m[1]) ? vpHe(m[1]) : null; const n = v ? null : enOf(m[1].replace(/^את /, '')); if (v) return { en: `I don't want to ${v.en}`, from: v.from }; if (n) return { en: `I don't want ${a(n)}`, from: n.from }; }
+    if ((m = /^אני לא (?:צריך|צריכה) (.+)$/.exec(q))) { const v = /^ל/.test(m[1]) ? vpHe(m[1]) : null; const n = v ? null : enOf(m[1].replace(/^את /, '')); if (v) return { en: `I don't need to ${v.en}`, from: v.from }; if (n) return { en: `I don't need ${a(n)}`, from: n.from }; }
+    if ((m = /^(.+?) (לא )?(עובד|עובדת|עובדים|עובדות)$/.exec(q)) && !/^(?:אני|אנחנו|אתה|את|הוא|היא)$/.test(m[1])) {
+      const sj = enOf(m[1]); const plural = /ים$|ות$/.test(m[3]);
+      if (sj && sj.definite && sj.from === 'table') return { en: `${cap(sj.en)} ${m[2] ? (plural ? "don't work" : "doesn't work") : (plural ? 'work' : 'works')}`, from: 'table' };
+    }
+    if ((m = /^(.+?) (על|ליד|מאחורי|מול) (.+)$/.exec(q))) {
+      const sj = enOf(m[1]); const n = enOf(m[3]);
+      if (sj && n && sj.definite && sj.from === 'table' && n.from === 'table') return { en: `${cap(sj.en)} is ${{ 'על': 'on', 'ליד': 'next to', 'מאחורי': 'behind', 'מול': 'in front of' }[m[2]]} ${n.definite || n.kind !== 'noun' ? n.en : withArticle(n.en)}`, from: 'table' };
+    }
+    if ((m = /^(?:איזה|איזו|אילו) (.+)$/.exec(q))) { const n = enOf(m[1]); if (n && n.from === 'table' && !n.definite) return { en: `Which ${n.bare}?`, from: 'table' }; }
     if ((m = /^אנחנו מ(.+)$/.exec(q))) { const n = enOf(m[1]); if (n && n.kind === 'place') return { en: `We are from ${n.en}`, from: 'table' }; }
     if ((m = /^נתראה ב(יום \S+|שבת)$/.exec(q)) && dayHe.has(m[1])) return { en: `See you on ${dayHe.get(m[1])}`, from: 'table' };
     if ((m = /^(.+?) (רוצה|רוצים|רוצות|צריך|צריכה|צריכים|צריכות) (.+)$/.exec(q)) && !/^(?:אני|אנחנו|אתה|את|אתם|הוא|היא|הם)$/.test(m[1])) {
@@ -901,7 +957,7 @@ export function createEngine(data) {
         if (p.other) variants.push({ label: 'Feminine form', text: please(p.other) });
         /** @type {TalkResult} */
         const r = { ok: true, direction, source, translation: please(main), method, confidence, matched: brief(p), variants };
-        if (p.pointed && main === p.he && please(main) === main) r.pointed = p.pointed;
+        if (p.pointed && main === p.he) r.pointed = please(p.pointed);
         if (note) r.note = note;
         return r;
       };
@@ -912,7 +968,7 @@ export function createEngine(data) {
         // matched with "please" and the articles set aside: a "please" the speaker did not say is taken back out
         const r = fromPair(loose, 'phrase', 'high');
         const strip = (t) => (asked ? t : t.replace(/, בבקשה(\??)$/, '$1'));
-        return { ...r, translation: strip(r.translation), variants: (r.variants || []).map((v) => ({ ...v, text: strip(v.text) })) };
+        return { ...r, translation: strip(r.translation), ...(r.pointed ? { pointed: strip(r.pointed) } : {}), variants: (r.variants || []).map((v) => ({ ...v, text: strip(v.text) })) };
       }
       const pat = patternEnHe(bare);
       if (pat) {

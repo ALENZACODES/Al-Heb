@@ -148,3 +148,9 @@ node tools/talk/translate.mjs --jsonl < transcripts.jsonl > results.jsonl
 ```
 
 Expect a lower headline number than the server pipeline on open lines, because the shipped engine refuses what it does not know. Please report refusals separately from wrong answers.
+
+## Round 5 Addendum
+
+The round 5 list reports 40,000 lines scored and one new example, extra-021 "I have a headache" (reference יש לי כאב ראש), listed under service errors. The stored line now uses the reference wording, and כואב לי הראש is still understood in the other direction. The other examples are unchanged and score as before: 83.8 with 5 refusals over the 37 lines.
+
+The run is still against `b0fe32d71`. See the round 4 addendum for how to score the shipped engine. `docs/talk/HANDOFF.md` gives the state of the branch.

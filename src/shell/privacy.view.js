@@ -139,7 +139,7 @@ export const STORE_KEYS = [
   ['timedread.v1', 'Timed read-aloud results', 'src/progress/model.js'],
   ['speak.v1', 'Say-it results (not recordings)', 'src/speak/model.js'],
   ['talk.history', 'The text of your last Talk lines and their translations (no sound)', 'src/talk/talk.model.js'],
-  ['talk.settings', 'Talk choices: direction, read aloud, vowel marks, who is speaking', 'src/talk/talk.model.js'],
+  ['talk.settings', 'Talk choices: direction, read aloud, facing view, who is speaking', 'src/talk/talk.model.js'],
   ['sprint.last', 'Last word sprint', 'src/sprint/model.js'],
   ['typing.v1', 'Typing practice results', 'src/typing/typing.js'],
   ['trope.v1', 'Chanting-mark trainer results', 'src/trope/trope.view.js'],

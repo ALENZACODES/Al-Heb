@@ -1,0 +1,246 @@
+{
+ "schema": "alef-talk-utterances/1",
+ "note": "40 everyday lines written at the end of round 5, after every engine and pack change of that round. It scored 48.5 when first run, with 19 of 40 refused. Two faults it exposed were then fixed (a describing word attached to the glass and not the wine, and phrasebook lines shown in a spelling nobody writes); no line or frame was added for it. The reference is one acceptable answer.",
+ "samples": [
+  {
+   "id": "n-en-01",
+   "direction": "en-he",
+   "source": "Where can I get a taxi?",
+   "reference": "איפה אפשר למצוא מונית?"
+  },
+  {
+   "id": "n-en-02",
+   "direction": "en-he",
+   "source": "The key doesn't work.",
+   "reference": "המפתח לא עובד."
+  },
+  {
+   "id": "n-en-03",
+   "direction": "en-he",
+   "source": "Do you have a table for five?",
+   "reference": "יש לכם שולחן לחמישה?"
+  },
+  {
+   "id": "n-en-04",
+   "direction": "en-he",
+   "source": "I'd like a glass of white wine.",
+   "reference": "אני רוצה כוס יין לבן."
+  },
+  {
+   "id": "n-en-05",
+   "direction": "en-he",
+   "source": "Is the pharmacy open on Saturday?",
+   "reference": "בית המרקחת פתוח בשבת?"
+  },
+  {
+   "id": "n-en-06",
+   "direction": "en-he",
+   "source": "My daughter is hungry.",
+   "reference": "הבת שלי רעבה."
+  },
+  {
+   "id": "n-en-07",
+   "direction": "en-he",
+   "source": "How much is this shirt?",
+   "reference": "כמה עולה החולצה הזאת?"
+  },
+  {
+   "id": "n-en-08",
+   "direction": "en-he",
+   "source": "We need two more chairs.",
+   "reference": "אנחנו צריכים עוד שני כיסאות."
+  },
+  {
+   "id": "n-en-09",
+   "direction": "en-he",
+   "source": "Can you take me to the hotel?",
+   "reference": "אפשר לקחת אותי למלון?"
+  },
+  {
+   "id": "n-en-10",
+   "direction": "en-he",
+   "source": "What time is checkout tomorrow?",
+   "reference": "מתי הצ'ק-אאוט מחר?"
+  },
+  {
+   "id": "n-en-11",
+   "direction": "en-he",
+   "source": "Is there a bank near here?",
+   "reference": "יש כאן בנק?"
+  },
+  {
+   "id": "n-en-12",
+   "direction": "en-he",
+   "source": "I think I'm lost.",
+   "reference": "אני חושב שהלכתי לאיבוד."
+  },
+  {
+   "id": "n-en-13",
+   "direction": "en-he",
+   "source": "The soup is not hot.",
+   "reference": "המרק לא חם."
+  },
+  {
+   "id": "n-en-14",
+   "direction": "en-he",
+   "source": "Could we have the bill, please?",
+   "reference": "אפשר את החשבון, בבקשה?"
+  },
+  {
+   "id": "n-en-15",
+   "direction": "en-he",
+   "source": "I'm waiting for my friend.",
+   "reference": "אני מחכה לחבר שלי."
+  },
+  {
+   "id": "n-en-16",
+   "direction": "en-he",
+   "source": "Where does this bus go?",
+   "reference": "לאן האוטובוס הזה נוסע?"
+  },
+  {
+   "id": "n-en-17",
+   "direction": "en-he",
+   "source": "It's too far to walk.",
+   "reference": "זה רחוק מדי ללכת ברגל."
+  },
+  {
+   "id": "n-en-18",
+   "direction": "en-he",
+   "source": "Do you sell stamps?",
+   "reference": "אתם מוכרים בולים?"
+  },
+  {
+   "id": "n-en-19",
+   "direction": "en-he",
+   "source": "The line is very long.",
+   "reference": "התור ארוך מאוד."
+  },
+  {
+   "id": "n-en-20",
+   "direction": "en-he",
+   "source": "Happy birthday to you!",
+   "reference": "יום הולדת שמח!"
+  },
+  {
+   "id": "n-en-21",
+   "direction": "en-he",
+   "source": "Is this the train to Haifa?",
+   "reference": "זאת הרכבת לחיפה?"
+  },
+  {
+   "id": "n-en-22",
+   "direction": "en-he",
+   "source": "I want to light candles.",
+   "reference": "אני רוצה להדליק נרות."
+  },
+  {
+   "id": "n-en-23",
+   "direction": "en-he",
+   "source": "Where is the women's section?",
+   "reference": "איפה עזרת הנשים?"
+  },
+  {
+   "id": "n-en-24",
+   "direction": "en-he",
+   "source": "The rabbi's sermon was interesting.",
+   "reference": "הדרשה של הרב הייתה מעניינת."
+  },
+  {
+   "id": "n-en-25",
+   "direction": "en-he",
+   "source": "Eight thirty tomorrow morning.",
+   "reference": "מחר בבוקר בשמונה וחצי."
+  },
+  {
+   "id": "n-he-26",
+   "direction": "he-en",
+   "source": "המפתח לא עובד.",
+   "reference": "The key doesn't work."
+  },
+  {
+   "id": "n-he-27",
+   "direction": "he-en",
+   "source": "יש לכם שולחן לחמישה?",
+   "reference": "Do you have a table for five?"
+  },
+  {
+   "id": "n-he-28",
+   "direction": "he-en",
+   "source": "אני רוצה כוס יין לבן.",
+   "reference": "I want a glass of white wine."
+  },
+  {
+   "id": "n-he-29",
+   "direction": "he-en",
+   "source": "הבת שלי רעבה.",
+   "reference": "My daughter is hungry."
+  },
+  {
+   "id": "n-he-30",
+   "direction": "he-en",
+   "source": "כמה עולה החולצה הזאת?",
+   "reference": "How much is this shirt?"
+  },
+  {
+   "id": "n-he-31",
+   "direction": "he-en",
+   "source": "יש כאן בנק?",
+   "reference": "Is there a bank here?"
+  },
+  {
+   "id": "n-he-32",
+   "direction": "he-en",
+   "source": "המרק לא חם.",
+   "reference": "The soup is not hot."
+  },
+  {
+   "id": "n-he-33",
+   "direction": "he-en",
+   "source": "התור ארוך מאוד.",
+   "reference": "The line is very long."
+  },
+  {
+   "id": "n-he-34",
+   "direction": "he-en",
+   "source": "אני רוצה להדליק נרות.",
+   "reference": "I want to light candles."
+  },
+  {
+   "id": "n-he-35",
+   "direction": "he-en",
+   "source": "לאן האוטובוס הזה נוסע?",
+   "reference": "Where does this bus go?"
+  },
+  {
+   "id": "n-he-36",
+   "direction": "he-en",
+   "source": "אתם מוכרים בולים?",
+   "reference": "Do you sell stamps?"
+  },
+  {
+   "id": "n-he-37",
+   "direction": "he-en",
+   "source": "אני מחכה לחבר שלי.",
+   "reference": "I'm waiting for my friend."
+  },
+  {
+   "id": "n-he-38",
+   "direction": "he-en",
+   "source": "אפשר לקחת אותי למלון?",
+   "reference": "Can you take me to the hotel?"
+  },
+  {
+   "id": "n-he-39",
+   "direction": "he-en",
+   "source": "זאת הרכבת לחיפה?",
+   "reference": "Is this the train to Haifa?"
+  },
+  {
+   "id": "n-he-40",
+   "direction": "he-en",
+   "source": "מתי הצ'ק-אאוט מחר?",
+   "reference": "What time is checkout tomorrow?"
+  }
+ ]
+}

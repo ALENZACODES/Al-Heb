@@ -6,13 +6,13 @@ Reading this table: "required" counts the clips the app can ask for (optional wh
 
 Status labels (the same table the app shows, src/shell/audio-labels.js): recorded = "Recorded by a human reader"; tts = "Israeli voice"; missing = "No audio yet".
 
-**Overall: 22270 of 24476 required clips exist (91.0%); Recorded by a human reader: 0; Israeli voice: 20455; No audio yet: 2206.**
+**Overall: 22286 of 25758 required clips exist (86.5%); Recorded by a human reader: 0; Israeli voice: 20471; No audio yet: 3472.**
 
 ## By talent and group
 
 ### Ashkenazi reader (woman)  (voice=f, tradition=ashkenazi)
 
-Required 3485; have 3108; missing 377.
+Required 3698; have 3110; missing 588.
 
 | group | required | recorded | tts | via equivalent | missing | optional (missing/total) | who can supply |
 |---|---:|---:|---:|---:|---:|---:|---|
@@ -23,17 +23,17 @@ Required 3485; have 3108; missing 377.
 | letter-variant-sound | 4 | 0 | 0 | 0 | 4 | 0/0 | human only |
 | niqqud | 15 | 0 | 0 | 0 | 15 | 0/0 | human only |
 | syllable | 110 | 0 | 0 | 0 | 110 | 0/0 | human only |
-| lesson-word | 416 | 0 | 416 | 0 | 0 | 0/0 | human only |
-| prayer-line | 129 | 0 | 129 | 0 | 0 | 0/0 | human only |
-| prayer-word | 1723 | 0 | 1723 | 0 | 0 | 0/0 | human only |
-| prayer-whole | 0 | 0 | 0 | 0 | 0 | 18/18 | human only |
+| lesson-word | 418 | 0 | 418 | 0 | 0 | 0/0 | human only |
+| prayer-line | 152 | 0 | 129 | 0 | 23 | 0/0 | human only |
+| prayer-word | 1911 | 0 | 1723 | 0 | 188 | 0/0 | human only |
+| prayer-whole | 0 | 0 | 0 | 0 | 0 | 21/21 | human only |
 | vocab-word | 1000 | 0 | 840 | 0 | 160 | 0/0 | human only |
 | vocab-alias | 0 | 0 | 0 | 0 | 0 | 0/0 | human only |
 | vocab-extra | 35 | 0 | 0 | 0 | 35 | 0/0 | human only |
 
 ### Ashkenazi reader (man)  (voice=m, tradition=ashkenazi)
 
-Required 3485; have 2270; missing 1215.
+Required 3698; have 2272; missing 1426.
 
 | group | required | recorded | tts | via equivalent | missing | optional (missing/total) | who can supply |
 |---|---:|---:|---:|---:|---:|---:|---|
@@ -44,17 +44,17 @@ Required 3485; have 2270; missing 1215.
 | letter-variant-sound | 4 | 0 | 0 | 0 | 4 | 0/0 | human only |
 | niqqud | 15 | 0 | 0 | 0 | 15 | 0/0 | human only |
 | syllable | 110 | 0 | 0 | 0 | 110 | 0/0 | human only |
-| lesson-word | 416 | 0 | 415 | 0 | 1 | 0/0 | human only |
-| prayer-line | 129 | 0 | 129 | 0 | 0 | 0/0 | human only |
-| prayer-word | 1723 | 0 | 1723 | 0 | 0 | 0/0 | human only |
-| prayer-whole | 0 | 0 | 0 | 0 | 0 | 18/18 | human only |
+| lesson-word | 418 | 0 | 417 | 0 | 1 | 0/0 | human only |
+| prayer-line | 152 | 0 | 129 | 0 | 23 | 0/0 | human only |
+| prayer-word | 1911 | 0 | 1723 | 0 | 188 | 0/0 | human only |
+| prayer-whole | 0 | 0 | 0 | 0 | 0 | 21/21 | human only |
 | vocab-word | 1000 | 0 | 3 | 0 | 997 | 0/0 | human only |
 | vocab-alias | 0 | 0 | 0 | 0 | 0 | 0/0 | human only |
 | vocab-extra | 35 | 0 | 0 | 0 | 35 | 0/0 | human only |
 
 ### Noa (woman), Israeli  (voice=f, tradition=israeli)
 
-Required 5268; have 4961; missing 307.
+Required 5483; have 4965; missing 518.
 
 | group | required | recorded | tts | via equivalent | missing | optional (missing/total) | who can supply |
 |---|---:|---:|---:|---:|---:|---:|---|
@@ -66,11 +66,11 @@ Required 5268; have 4961; missing 307.
 | niqqud | 15 | 0 | 15 | 0 | 0 | 0/0 | human only |
 | syllable | 110 | 0 | 110 | 0 | 0 | 0/0 | human only |
 | anchor-word | 27 | 0 | 27 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
-| lesson-word | 940 | 0 | 940 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
+| lesson-word | 944 | 0 | 944 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
 | phrasebook | 250 | 0 | 250 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
-| prayer-line | 129 | 0 | 129 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
-| prayer-word | 1723 | 0 | 1723 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
-| prayer-whole | 0 | 0 | 0 | 0 | 0 | 0/18 | human or TTS (TTS unvetted) |
+| prayer-line | 152 | 0 | 129 | 0 | 23 | 0/0 | human or TTS (TTS unvetted) |
+| prayer-word | 1911 | 0 | 1723 | 0 | 188 | 0/0 | human or TTS (TTS unvetted) |
+| prayer-whole | 0 | 0 | 0 | 0 | 0 | 3/21 | human or TTS (TTS unvetted) |
 | sound | 27 | 0 | 27 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
 | name | 27 | 0 | 27 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
 | explain-en | 27 | 0 | 27 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
@@ -83,7 +83,7 @@ Required 5268; have 4961; missing 307.
 
 ### Ari (man), Israeli  (voice=m, tradition=israeli)
 
-Required 5268; have 4961; missing 307.
+Required 5483; have 4965; missing 518.
 
 | group | required | recorded | tts | via equivalent | missing | optional (missing/total) | who can supply |
 |---|---:|---:|---:|---:|---:|---:|---|
@@ -95,11 +95,11 @@ Required 5268; have 4961; missing 307.
 | niqqud | 15 | 0 | 15 | 0 | 0 | 0/0 | human only |
 | syllable | 110 | 0 | 110 | 0 | 0 | 0/0 | human only |
 | anchor-word | 27 | 0 | 27 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
-| lesson-word | 940 | 0 | 940 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
+| lesson-word | 944 | 0 | 944 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
 | phrasebook | 250 | 0 | 250 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
-| prayer-line | 129 | 0 | 129 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
-| prayer-word | 1723 | 0 | 1723 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
-| prayer-whole | 0 | 0 | 0 | 0 | 0 | 0/18 | human or TTS (TTS unvetted) |
+| prayer-line | 152 | 0 | 129 | 0 | 23 | 0/0 | human or TTS (TTS unvetted) |
+| prayer-word | 1911 | 0 | 1723 | 0 | 188 | 0/0 | human or TTS (TTS unvetted) |
+| prayer-whole | 0 | 0 | 0 | 0 | 0 | 3/21 | human or TTS (TTS unvetted) |
 | sound | 27 | 0 | 27 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
 | name | 27 | 0 | 27 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
 | explain-en | 27 | 0 | 27 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
@@ -112,7 +112,7 @@ Required 5268; have 4961; missing 307.
 
 ### Sephardi-values reader (woman), pending decision  (voice=f, tradition=sephardi)
 
-Required 3485; have 3485; missing 0.
+Required 3698; have 3487; missing 211.
 
 | group | required | recorded | tts | via equivalent | missing | optional (missing/total) | who can supply |
 |---|---:|---:|---:|---:|---:|---:|---|
@@ -123,17 +123,17 @@ Required 3485; have 3485; missing 0.
 | letter-variant-sound | 4 | 0 | 0 | 4 | 0 | 0/0 | human only |
 | niqqud | 15 | 0 | 0 | 15 | 0 | 0/0 | human only |
 | syllable | 110 | 0 | 0 | 110 | 0 | 0/0 | human only |
-| lesson-word | 416 | 0 | 416 | 0 | 0 | 0/0 | human only |
-| prayer-line | 129 | 0 | 129 | 0 | 0 | 0/0 | human only |
-| prayer-word | 1723 | 0 | 1723 | 0 | 0 | 0/0 | human only |
-| prayer-whole | 0 | 0 | 0 | 0 | 0 | 0/18 | human only |
+| lesson-word | 418 | 0 | 418 | 0 | 0 | 0/0 | human only |
+| prayer-line | 152 | 0 | 129 | 0 | 23 | 0/0 | human only |
+| prayer-word | 1911 | 0 | 1723 | 0 | 188 | 0/0 | human only |
+| prayer-whole | 0 | 0 | 0 | 0 | 0 | 3/21 | human only |
 | vocab-word | 1000 | 0 | 619 | 381 | 0 | 0/0 | human only |
 | vocab-alias | 0 | 0 | 0 | 0 | 0 | 0/0 | human only |
 | vocab-extra | 35 | 0 | 0 | 35 | 0 | 0/0 | human only |
 
 ### Sephardi-values reader (man), pending decision  (voice=m, tradition=sephardi)
 
-Required 3485; have 3485; missing 0.
+Required 3698; have 3487; missing 211.
 
 | group | required | recorded | tts | via equivalent | missing | optional (missing/total) | who can supply |
 |---|---:|---:|---:|---:|---:|---:|---|
@@ -144,10 +144,10 @@ Required 3485; have 3485; missing 0.
 | letter-variant-sound | 4 | 0 | 0 | 4 | 0 | 0/0 | human only |
 | niqqud | 15 | 0 | 0 | 15 | 0 | 0/0 | human only |
 | syllable | 110 | 0 | 0 | 110 | 0 | 0/0 | human only |
-| lesson-word | 416 | 0 | 416 | 0 | 0 | 0/0 | human only |
-| prayer-line | 129 | 0 | 129 | 0 | 0 | 0/0 | human only |
-| prayer-word | 1723 | 0 | 1723 | 0 | 0 | 0/0 | human only |
-| prayer-whole | 0 | 0 | 0 | 0 | 0 | 0/18 | human only |
+| lesson-word | 418 | 0 | 418 | 0 | 0 | 0/0 | human only |
+| prayer-line | 152 | 0 | 129 | 0 | 23 | 0/0 | human only |
+| prayer-word | 1911 | 0 | 1723 | 0 | 188 | 0/0 | human only |
+| prayer-whole | 0 | 0 | 0 | 0 | 0 | 3/21 | human only |
 | vocab-word | 1000 | 0 | 0 | 1000 | 0 | 0/0 | human only |
 | vocab-alias | 0 | 0 | 0 | 0 | 0 | 0/0 | human only |
 | vocab-extra | 35 | 0 | 0 | 35 | 0 | 0/0 | human only |

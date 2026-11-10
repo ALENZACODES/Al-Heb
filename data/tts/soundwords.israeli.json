@@ -92,23 +92,23 @@
   }
  },
  "summary": {
-  "items": 5675,
+  "items": 5679,
   "byConfidence": {
    "high": 1670,
-   "medium": 3358,
+   "medium": 3362,
    "low": 551,
    "unvoiced": 96
   },
   "byFlag": {
-   "final-stress-assumed": 3317,
-   "mobile-shva": 1531,
+   "final-stress-assumed": 3321,
+   "mobile-shva": 1533,
    "stress-from-small-list": 493,
    "possible-segolate": 205,
    "aramaic": 197,
    "shva-heuristic-L3": 186,
    "maqaf-compound": 177,
    "kamatz-katan-list": 120,
-   "furtive-stress-own-rule": 103,
+   "furtive-stress-own-rule": 104,
    "unpointed": 69,
    "alef-vav-mater-repaired": 63,
    "non-hebrew-token": 54,
@@ -213,7 +213,7 @@
    },
    "lesson-word": {
     "high": 293,
-    "medium": 596,
+    "medium": 600,
     "low": 47,
     "unvoiced": 4
    },
@@ -2511,6 +2511,10 @@
   {"id":"tug-heavy_light_fpl-2","kind":"word","group":"screen-word","voices":["m","f"],"he":"קַלּוֹת","soundtext":"ka-lót","confidence":"medium","flags":["final-stress-assumed"]},
   {"id":"tug-strong_weak_fpl-1","kind":"word","group":"screen-word","voices":["m","f"],"he":"חֲזָקוֹת","soundtext":"ja-za-kót","confidence":"medium","flags":["final-stress-assumed"]},
   {"id":"tug-strong_weak_fpl-2","kind":"word","group":"screen-word","voices":["m","f"],"he":"חַלָּשׁוֹת","soundtext":"ja-la-shót","confidence":"medium","flags":["final-stress-assumed"]},
+  {"id":"i-28-w13","kind":"word","group":"lesson-word","voices":["m","f"],"he":"רַחֲמִים","soundtext":"ra-ja-mím","confidence":"medium","flags":["final-stress-assumed"]},
+  {"id":"i-29-w13","kind":"word","group":"lesson-word","voices":["m","f"],"he":"חַג כָּשֵׁר וְשָׂמֵחַ","soundtext":"jág ka-shér ve-sa-mé-aj","confidence":"medium","flags":["final-stress-assumed","furtive-stress-own-rule","mobile-shva"]},
+  {"id":"i-50-w13","kind":"word","group":"lesson-word","voices":["m","f"],"he":"יוֹם נָעִים","soundtext":"yóm na-ím","confidence":"medium","flags":["final-stress-assumed"]},
+  {"id":"i-50-w14","kind":"word","group":"lesson-word","voices":["m","f"],"he":"סְלִיחָה","soundtext":"se-li-já","confidence":"medium","flags":["final-stress-assumed","mobile-shva"]},
   {"id":"bless-priestly-1-w1","kind":"word","group":"prayer-word","voices":["m","f"],"he":"יְבָרֶכְךָ","soundtext":"ye-va-rej-já","confidence":"medium","flags":["final-stress-assumed","mobile-shva"]},
   {"id":"bless-priestly-1-w2","kind":"word","group":"prayer-word","voices":["m","f"],"he":"אֲדֹנָי","soundtext":"a-do-nái","confidence":"medium","flags":["stress-from-small-list"]},
   {"id":"bless-priestly-1-w3","kind":"word","group":"prayer-word","voices":["m","f"],"he":"וְיִשְׁמְרֶךָ׃","soundtext":"ve-yish-me-re-já","confidence":"medium","flags":["final-stress-assumed","mobile-shva"]},

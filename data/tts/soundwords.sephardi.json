@@ -80,24 +80,24 @@
   }
  },
  "summary": {
-  "items": 3884,
+  "items": 3886,
   "byConfidence": {
    "high": 839,
-   "medium": 2539,
+   "medium": 2541,
    "low": 472,
    "unvoiced": 34
   },
   "byFlag": {
-   "final-stress-assumed": 2263,
-   "mobile-shva": 1093,
-   "pharyngeal-merged": 1085,
+   "final-stress-assumed": 2265,
+   "mobile-shva": 1094,
+   "pharyngeal-merged": 1087,
    "stress-from-small-list": 450,
    "aramaic": 197,
    "maqaf-compound": 176,
    "shva-heuristic-L3": 165,
    "possible-segolate": 145,
    "kamatz-katan-list": 119,
-   "furtive-stress-own-rule": 57,
+   "furtive-stress-own-rule": 58,
    "alef-vav-mater-repaired": 48,
    "unpointed": 34,
    "vav-dagesh-consonantal": 21,
@@ -162,7 +162,7 @@
    },
    "lesson-word": {
     "high": 69,
-    "medium": 322,
+    "medium": 324,
     "low": 21,
     "unvoiced": 4
    },
@@ -990,6 +990,8 @@
   {"id":"i-35-w10","kind":"word","group":"lesson-word","voices":["m","f"],"he":"בֵּרַךְ","soundtext":"be-ráj","confidence":"medium","flags":["final-stress-assumed"]},
   {"id":"i-35-w11","kind":"word","group":"lesson-word","voices":["m","f"],"he":"וַיְקַדְּשֵׁהוּ","soundtext":"vai-ka-de-she-hú","confidence":"medium","flags":["final-stress-assumed","mobile-shva"]},
   {"id":"i-35-w12","kind":"word","group":"lesson-word","voices":["m","f"],"he":"שַׁבָּת","soundtext":"sha-bát","confidence":"medium","flags":["stress-from-small-list"]},
+  {"id":"i-28-w13","kind":"word","group":"lesson-word","voices":["m","f"],"he":"רַחֲמִים","soundtext":"ra-ja-mím","confidence":"medium","flags":["final-stress-assumed","pharyngeal-merged"]},
+  {"id":"i-29-w13","kind":"word","group":"lesson-word","voices":["m","f"],"he":"חַג כָּשֵׁר וְשָׂמֵחַ","soundtext":"jág ka-shér ve-sa-mé-aj","confidence":"medium","flags":["final-stress-assumed","furtive-stress-own-rule","mobile-shva","pharyngeal-merged"]},
   {"id":"bless-priestly-1-w1","kind":"word","group":"prayer-word","voices":["m","f"],"he":"יְבָרֶכְךָ","soundtext":"ye-va-rej-já","confidence":"medium","flags":["final-stress-assumed","mobile-shva"]},
   {"id":"bless-priestly-1-w2","kind":"word","group":"prayer-word","voices":["m","f"],"he":"אֲדֹנָי","soundtext":"a-do-nái","confidence":"medium","flags":["stress-from-small-list"]},
   {"id":"bless-priestly-1-w3","kind":"word","group":"prayer-word","voices":["m","f"],"he":"וְיִשְׁמְרֶךָ׃","soundtext":"ve-yish-me-re-já","confidence":"medium","flags":["final-stress-assumed","mobile-shva"]},

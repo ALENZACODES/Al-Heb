@@ -76,16 +76,16 @@
   }
  },
  "summary": {
-  "items": 3884,
+  "items": 3886,
   "byConfidence": {
    "high": 539,
-   "medium": 2963,
+   "medium": 2965,
    "low": 348,
    "unvoiced": 34
   },
   "byFlag": {
-   "ashk-penultimate-default": 2749,
-   "mobile-shva": 1093,
+   "ashk-penultimate-default": 2751,
+   "mobile-shva": 1094,
    "ashk-final-kamatz-reduced": 582,
    "ashk-final-fallback": 441,
    "stress-from-small-list": 437,
@@ -157,7 +157,7 @@
    },
    "lesson-word": {
     "high": 42,
-    "medium": 361,
+    "medium": 363,
     "low": 9,
     "unvoiced": 4
    },
@@ -985,6 +985,8 @@
   {"id":"i-35-w10","kind":"word","group":"lesson-word","voices":["m","f"],"he":"בֵּרַךְ","soundtext":"béi-raj","confidence":"medium","flags":["ashk-penultimate-default"]},
   {"id":"i-35-w11","kind":"word","group":"lesson-word","voices":["m","f"],"he":"וַיְקַדְּשֵׁהוּ","soundtext":"vai-ka-de-shéi-hu","confidence":"medium","flags":["ashk-penultimate-default","mobile-shva"]},
   {"id":"i-35-w12","kind":"word","group":"lesson-word","voices":["m","f"],"he":"שַׁבָּת","soundtext":"shá-bos","confidence":"medium","flags":["stress-from-small-list"]},
+  {"id":"i-28-w13","kind":"word","group":"lesson-word","voices":["m","f"],"he":"רַחֲמִים","soundtext":"rá-ja-mim","confidence":"medium","flags":["ashk-penultimate-default"]},
+  {"id":"i-29-w13","kind":"word","group":"lesson-word","voices":["m","f"],"he":"חַג כָּשֵׁר וְשָׂמֵחַ","soundtext":"jág kó-sheir ve-so-méi-aj","confidence":"medium","flags":["ashk-penultimate-default","mobile-shva"]},
   {"id":"bless-priestly-1-w1","kind":"word","group":"prayer-word","voices":["m","f"],"he":"יְבָרֶכְךָ","soundtext":"ye-vo-réj-jo","confidence":"medium","flags":["ashk-penultimate-default","mobile-shva"]},
   {"id":"bless-priestly-1-w2","kind":"word","group":"prayer-word","voices":["m","f"],"he":"אֲדֹנָי","soundtext":"a-doi-nói","confidence":"medium","flags":["stress-from-small-list"]},
   {"id":"bless-priestly-1-w3","kind":"word","group":"prayer-word","voices":["m","f"],"he":"וְיִשְׁמְרֶךָ׃","soundtext":"ve-yish-me-ré-jo","confidence":"medium","flags":["ashk-penultimate-default","mobile-shva"]},

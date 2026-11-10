@@ -158,7 +158,7 @@
      "mark": false
     }
    ],
-   "audioId": "h5e4080cc"
+   "audioId": "soundgap-vav-bet-1-b"
   },
   {
    "id": "bet-vet:hfaefa59a",
@@ -405,7 +405,7 @@
      "mark": false
     }
    ],
-   "audioId": "yigdal-w82"
+   "audioId": "soundgap-vav-bet-1-a"
   },
   {
    "id": "bet-vet:h821319f2",
@@ -426,7 +426,7 @@
      "mark": true
     }
    ],
-   "audioId": "h821319f2"
+   "audioId": "soundgap-alef-ayin-3-a"
   },
   {
    "id": "bet-vet:h1b96f9f4",
@@ -1344,7 +1344,7 @@
      "mark": false
     }
    ],
-   "audioId": null,
+   "audioId": "tug-majority_minority-1",
    "pair": "pair-kamatz-h8dcac995-h15263a4c",
    "other": {
     "id": "kamatz:h8dcac995",
@@ -1402,7 +1402,7 @@
      "mark": false
     }
    ],
-   "audioId": null,
+   "audioId": "tug-holy_everyday-2",
    "pair": "pair-kamatz-h58023e1f-h9b85bdc8",
    "other": {
     "id": "kamatz:h58023e1f",
@@ -1576,7 +1576,7 @@
      "mark": false
     }
    ],
-   "audioId": null,
+   "audioId": "hd6b91f27",
    "pair": "pair-kamatz-h39e7c9e0-hd6b91f27",
    "other": {
     "id": "kamatz:h39e7c9e0",
@@ -1634,7 +1634,7 @@
      "mark": false
     }
    ],
-   "audioId": null,
+   "audioId": "tug-wealth_poverty-2",
    "pair": "pair-kamatz-hfdd2f995-h415db6f0",
    "other": {
     "id": "kamatz:hfdd2f995",
@@ -2304,7 +2304,7 @@
      "mark": false
     }
    ],
-   "audioId": "aleinu-1-w18"
+   "audioId": "soundgap-samekh-sin-1-b"
   },
   {
    "id": "kamatz:h8e3e6f50",
@@ -2585,7 +2585,7 @@
      "mark": false
     }
    ],
-   "audioId": "aleinu-1-w18",
+   "audioId": "soundgap-samekh-sin-1-b",
    "pair": "pair-shin-sin-h39d32f55-h8e3fbf43",
    "other": {
     "id": "shin-sin:h8e3fbf43",
@@ -2614,7 +2614,7 @@
      "mark": false
     }
    ],
-   "audioId": "h8e3fbf43",
+   "audioId": "soundgap-samekh-sin-2-b",
    "pair": "pair-shin-sin-h39d32f55-h8e3fbf43",
    "other": {
     "id": "shin-sin:h39d32f55",

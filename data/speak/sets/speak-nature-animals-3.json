@@ -41,7 +41,7 @@
    "translit": "kor",
    "en": "cold, coldness",
    "kind": "word",
-   "audioId": null,
+   "audioId": "tug-heat_cold_noun-2",
    "source": "data/vocab/words.json"
   },
   {
@@ -95,7 +95,7 @@
    "translit": "ken",
    "en": "nest (bird-built structure)",
    "kind": "word",
-   "audioId": null,
+   "audioId": "soundgap-kaf-qof-0-b",
    "source": "data/vocab/words.json"
   },
   {

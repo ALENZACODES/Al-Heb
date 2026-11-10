@@ -114,3 +114,20 @@ test('number recordings: each linked clip says exactly the same Hebrew, in both 
     for (const v of ['m', 'f']) assert.ok(words.some((r) => r.id === n.clip && r.voice === v && r.tradition === 'israeli' && r.status !== 'missing' && r.text === n.he), `${n.value} ${v}`);
   }
 });
+
+test('readState: a partial, older or broken saved record can never stop the Brain Lab page from drawing', () => {
+  const st = readState({ games: { hunt: { best: 40 }, matrix: { history: null }, gematria: 'x', pattern: { history: [null, { s: 12, d: '2026-11-09' }], best: 'NaN' } }, workouts: { '2026-11-09': {}, '2026-11-08': { done: 'hunt' }, '2026-11-07': null } });
+  assert.deepEqual(st.games.hunt, { best: 40, plays: 0, lastMax: 1, history: [] });
+  assert.deepEqual(st.games.matrix.history, []);
+  assert.equal(st.games.gematria, undefined, 'a non-object record is dropped');
+  assert.deepEqual(st.games.pattern.history, [{ s: 12, d: '2026-11-09' }]);
+  assert.equal(st.games.pattern.best, 0); assert.equal(st.games.pattern.plays, 1);
+  for (const d of ['2026-11-09', '2026-11-08', '2026-11-07']) assert.deepEqual(st.workouts[d].done, [], d);
+  // everything the hub draws from that record works
+  for (const s of SKILLS) assert.doesNotThrow(() => skillScore(st, s.id));
+  assert.doesNotThrow(() => overallScore(st));
+  assert.doesNotThrow(() => workoutStreak(st, '2026-11-09'));
+  assert.doesNotThrow(() => dailyWorkout('2026-11-09', st));
+  assert.doesNotThrow(() => recordSession(st, 'hunt', summarize([{ ok: true, ms: 800, level: 1, pts: 15 }]), '2026-11-09'));
+  for (const junk of [null, 'oops', 7, [], { games: [], workouts: [] }]) assert.deepEqual(readState(junk), { games: {}, workouts: {} }, JSON.stringify(junk));
+});

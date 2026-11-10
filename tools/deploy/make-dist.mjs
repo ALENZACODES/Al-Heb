@@ -53,6 +53,7 @@ const OFL_TEXTS = /^assets\/fonts\/[^/]+-OFL\.txt$/; // font licences must trave
 const NEVER = (rel) => rel.split('/').some((p) => p === 'node_modules' || p === '__pycache__' || p === '.git' || p === '.DS_Store')
   || /\.(py|md|csv)$/i.test(rel) && !rel.startsWith('assets/vendor/') || /\.test\.js$/.test(rel) || rel.startsWith('assets/images/')
   || /(^|\/)\.?(ingest-report|INGEST-REPORT)[^/]*$/i.test(rel) // ingest reports never ship
+  || rel.startsWith('data/images/rimon/legacy/') // archived Rimon stills: kept in the repo, never shown
   || rel.startsWith('audio/') && !/\.(mp3|m4a|ogg)$/i.test(rel); // clip sidecars (*.meta.json: batch label, input hash, dates) stay in the repo
 
 function walk(dir, root = ROOT, out = []) {

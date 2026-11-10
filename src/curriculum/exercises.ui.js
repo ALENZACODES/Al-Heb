@@ -39,6 +39,8 @@ export function summaryNode(d) {
       flame.hidden = false; flame.removeAttribute?.("hidden");
     }).catch(() => {});
   }
+  const remindSlot = el("div", { class: "alef-remind-slot" });
+  if (d.ctx) import("../shell/reminder-ask.js").then((m) => m.offerReminders(remindSlot, d.ctx)).catch(() => {});
   return el("div", { class: "alef-summary" },
     party,
     el("p", { class: "alef-celebrate-cheer" }, cheer),
@@ -53,6 +55,7 @@ export function summaryNode(d) {
     d.missedLabels.length ? el("div", {}, el("p", {}, "To review:"), el("ul", { "data-list": "review" }, ...d.missedLabels.map((t) => el("li", {}, t)))) : el("p", {}, "Nothing to review."),
     d.skippedN ? el("p", { class: "muted", "data-skipped": String(d.skippedN) }, plain("skippedNote", { n: d.skippedN })) : null,
     el("p", { class: "muted" }, d.cardsUpdated ? `${d.cardsUpdated} review card${d.cardsUpdated === 1 ? "" : "s"} updated.` : "No review cards needed updating."),
+    remindSlot,
     el("div", { class: "row alef-summary-actions" }, next, d.dueCount === 0 ? null : el("a", { class: next ? "btn secondary" : "btn", href: "#/learn?review=1" }, "Review now"), ...(d.extraLinks || [])));
 }
 

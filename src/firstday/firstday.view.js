@@ -256,6 +256,8 @@ export function mount(root, ctx) {
         el('p', {}, el('a', { href: '#/' }, 'Back to Home'))));
     footSet(el('a', { class: 'btn fd-cta', id: 'fd-next-lesson', href: nextLesson ? `#/learn?lesson=${nextLesson.id}` : '#/learn' }, nextLesson ? `Continue: ${nextLesson.title}` : 'All lessons'));
     if (!practice) { try { celebrate(); } catch { /* decoration only */ } }
+    // After the first win (never on first load): offer Rimon's reminders once.
+    if (!practice) { const slot = body.querySelector?.('.fd-done'); if (slot) import('../shell/reminder-ask.js').then((m) => m.offerReminders(slot, ctx)).catch(() => {}); }
   }
   function celebrate() {
     const doc = globalThis.document; if (!doc?.createElement || !doc.body) return;

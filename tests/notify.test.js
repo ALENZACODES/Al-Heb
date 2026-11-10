@@ -56,9 +56,9 @@ test("requestPermission(): unsupported without Notification; otherwise returns w
 
 test("normalizePrefs: defaults, clamping, de-duplicated sorted days, unknown keys dropped", () => {
   const d = N.normalizePrefs(null);
-  assert.deepEqual(d, { v: 1, enabled: false, hour: 19, minute: 0, days: [0, 1, 2, 3, 4], shabbatQuiet: true, yomTovQuiet: true });
+  assert.deepEqual(d, { v: 1, enabled: false, hour: 19, minute: 0, days: [0, 1, 2, 3, 4], shabbatQuiet: true, yomTovQuiet: true, quietFrom: 22, quietTo: 7, perWeek: 5 });
   const p = N.normalizePrefs({ enabled: true, hour: 25, minute: 7, days: [6, 6, 2, 9, -1, "x"], shabbatQuiet: false, junk: 1 });
-  assert.deepEqual(p, { v: 1, enabled: true, hour: 19, minute: 7, days: [2, 6], shabbatQuiet: false, yomTovQuiet: true });
+  assert.deepEqual(p, { v: 1, enabled: true, hour: 19, minute: 7, days: [2, 6], shabbatQuiet: false, yomTovQuiet: true, quietFrom: 22, quietTo: 7, perWeek: 5 });
   assert.deepEqual(N.normalizePrefs({ days: [] }).days, []);
   assert.equal(N.normalizePrefs("nonsense").enabled, false);
 });
@@ -99,7 +99,7 @@ test("scheduleStudyReminder: fires at the chosen time via the injected show(), t
   assert.equal(shown.length, 0);
   t.advanceTo(local(2026, 11, 4, 9, 0));
   assert.equal(shown.length, 1);
-  assert.equal(shown[0].title, "Aleph: a few minutes of Hebrew");
+  assert.equal(shown[0].title, "ALEF: a few minutes of Hebrew");
   assert.equal(shown[0].o.route, "#/learn");
   assert.deepEqual(fired, [local(2026, 11, 4, 9, 0)]);
   assert.equal(N.status().next.getTime(), local(2026, 11, 5, 9, 0), "re-armed for Thursday");
@@ -346,8 +346,10 @@ test("card: Allow button requests permission on click only, then enables and sch
   unmount();
   assert.equal(N.status().scheduled, 1);
   t.advanceTo(local(2026, 11, 8, 7, 15));
+  await waitFor(() => F.made.length === 1); // Rimon's line is picked at fire time (async: reads progress and the send log)
   assert.equal(F.made.length, 1, "fired via the page constructor (no service worker in the fake)");
-  assert.equal(F.made[0].title, "Aleph: a few minutes of Hebrew");
+  const R = await import("../src/shell/rimon-reminders.js");
+  assert.ok(R.LINES.some((l) => l.title === F.made[0].title), `a Rimon line: ${F.made[0].title}`);
 });
 
 test("card: test-notification button shows one immediately; denied permission is explained", async () => {
@@ -355,7 +357,8 @@ test("card: test-notification button shows one immediately; denied permission is
   const { root, unmount } = await boot({ "notify.prefs": { enabled: true, hour: 9, minute: 0, days: [1] } }, { Notification: F });
   byId(root, "nt-test").fire("click");
   await waitFor(() => F.made.length === 1);
-  assert.equal(F.made[0].title, "Aleph test reminder"); assert.equal(F.made[0].options.tag, "alef-test");
+  const R = await import("../src/shell/rimon-reminders.js");
+  assert.ok(R.LINES.some((l) => l.title === F.made[0].title), "the test shows one of Rimon's lines"); assert.equal(F.made[0].options.tag, "alef-test");
   assert.match(statusText(root), /Test notification sent/);
   unmount();
   const d = await boot({}, { Notification: fakeNotification("denied") });

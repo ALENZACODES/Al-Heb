@@ -340,6 +340,8 @@ async function boot() {
   const ctxBase = { settings, store, audio, sfx: lessonSfx, route: (p) => { scrollKeeper?.markForward(); router.go(p); }, t, installPrompt, hasRoute: (name) => available.has(name), images, img: (hh, spec) => (images ? imgEl(hh, { R: images, ...spec }) : null) };
   router = createRouter((m) => { show(m, ctxBase); });
   window.alef = { settings, store, audio, router }; // debugging handle
+  // Rimon's study reminders: armed at boot only when the learner turned them on (src/shell/notify.js; nothing is asked here).
+  Promise.resolve().then(() => store.get('notify.prefs')).then((p) => { if (p && p.enabled === true) return import('./shell/notify.js').then((m) => m.armFromPrefs(ctxBase)); }).catch(() => {});
   router.start();
   if (firstIsHome) {
     // Deferring the optional resolver avoids blocking the hero and the first

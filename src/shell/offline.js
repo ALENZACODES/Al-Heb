@@ -56,7 +56,7 @@ export const ON_DEMAND_GROUPS = Object.freeze([
   { id: "od-vocab", label: "Vocabulary data and theme packs", test: /^data\/vocab\//, approxMB: 5.9 },
   { id: "od-audio-index", label: "Audio clip list (core)", test: /^data\/audio\//, approxMB: 2.6 },
   { id: "od-pronunciation", label: "Sounds and pronunciation data", test: /^data\/pronunciation\//, approxMB: 0.8 },
-  { id: "od-speak", label: "Speaking, Israel dialogues, listening, typing, word tracing", test: /^(data\/(speak|israel|listen|typing|wordtrace)\/|src\/(wordtrace|typing)\/)/, approxMB: 0.5 },
+  { id: "od-speak", label: "Speaking, Israel dialogues, everyday phrases, listening, typing, word tracing", test: /^(data\/(speak|israel|listen|typing|wordtrace)\/|src\/(wordtrace|typing)\/|src\/israel\/israel\.view\.js$|src\/phrases\/phrases\.view\.js$)/, approxMB: 0.53 },
   { id: "od-reading", label: "Reading, festivals, calendar, grammar and pronunciation-style data", test: /^data\/((corpus|torahread|festivals|calendar|grammar|traditions|trope-trainer)\/|torah-quotes\.json$)/, approxMB: 0.5 },
   { id: "od-intermediate", label: "Intermediate lessons and class track", test: /^data\/curriculum\//, approxMB: 0.6 },
   { id: "od-letter-pictures", label: "Letter memory pictures (the rest of the alphabet)", test: /^assets\/letters\/morph\//, approxMB: 0.09 },
@@ -68,15 +68,15 @@ export const ON_DEMAND_GROUPS = Object.freeze([
   { id: "od-library", label: "Library articles", test: /^(src\/library|data\/library)\//, approxMB: 0.07 },
   { id: "od-videos", label: "Letter videos", test: /^(assets\/videos|data\/videos)\//, approxMB: 2 },
   { id: "od-lab", label: "Brain Lab", test: /^(src\/lab|data\/lab)\//, approxMB: 0.06 },
-  { id: "od-rimon", label: "Rimon's stills (code and styles)", test: /^(src\/shell\/(rimon-(stage|triggers|stills\.generated|model)|mascot)\.js|assets\/css\/rimon-stills\.css)$/, approxMB: 0.08 },
   { id: "od-service", label: "Follow the Service", test: /^src\/service\//, approxMB: 0.1 },
   { id: "od-awards", label: "Awards gallery and certificate", test: /^src\/awards\/(?:gallery\.view|proof-font|certificate|icons)\.js$/, approxMB: 0.11 },
   { id: "od-torahreader", label: "Torah reader page and its Hebrew recording index", test: /^src\/(torahreader\/torahreader\.view|shell\/torah-he-index)\.js$/, approxMB: 0.05 },
-  { id: "od-preview-pages", label: "Class track and pronunciation comparison (preview-route code)", test: /^src\/(classtrack\/classtrack|pronunciation\/compare)\.view\.js$/, approxMB: 0.03 },
+  { id: "od-preview-pages", label: "Class track, pronunciation comparison, Sound like a local, the calendar and the privacy screen (route code)", test: /^src\/(classtrack\/classtrack|pronunciation\/compare|israel\/israel|curriculum\/calendar|shell\/privacy)\.view\.js$/, approxMB: 0.05 },
+  { id: "od-rimon", label: "Rimon's stills (code and styles)", test: /^(src\/shell\/(rimon-(stage|triggers|stills\.generated|model)|mascot)\.js|assets\/css\/rimon-stills\.css)$/, approxMB: 0.08 },
   { id: "od-images", label: "Picture approvals and word cues", test: /^data\/images\//, approxMB: 0.20 },
   { id: "od-letters", label: "Letter art concepts and keyboard layout", test: /^data\/letters\//, approxMB: 0.08 },
   { id: "od-home", label: "Home prayers and morning verses", test: /^(data\/homepage\/|data\/morning-verses\.json)/, approxMB: 0.09 },
-  { id: "od-firstday", label: "First-day minute-one data and the word builder list", test: /^data\/firstday\//, approxMB: 0.17 },
+  { id: "od-firstday", label: "First-day minute-one data and the word builder", test: /^(data\/firstday\/|src\/firstday\/minuteone\.view\.js$)/, approxMB: 0.2 },
   { id: "od-fonts", label: "Cursive display font (used only with the cursive script setting)", test: /^assets\/fonts\//, approxMB: 0.03 },
   { id: "od-traditions-code", label: "Traditions pages (preview-route code)", test: /^src\/traditions\//, approxMB: 0.04 },
   { id: "od-vocab-code", label: "Vocabulary browser (preview-route code)", test: /^src\/vocab\//, approxMB: 0.06 },
@@ -260,7 +260,7 @@ export async function storageHealth(env = {}) {
   const overall = [level(originRatio), local.level].sort((a, b) => rank[b] - rank[a])[0];
   const exportRoute = env.hasRoute ? (env.hasRoute("settings") ? "#/settings" : null) : "#/settings";
   const advice = [];
-  if (local.level === "warn" || local.level === "critical") advice.push(`Saved progress and settings use about ${Math.round(local.ratio * 100)}% of the space this browser gives the site for them. Download a backup${exportRoute ? " from Settings" : ""} and tell whoever looks after Aleph; saving may start failing near the limit.`);
+  if (local.level === "warn" || local.level === "critical") advice.push(`Saved progress and settings use about ${Math.round(local.ratio * 100)}% of the space this browser gives the site for them. Download a backup${exportRoute ? " from Settings" : ""} and tell whoever looks after ALEF; saving may start failing near the limit.`);
   if (level(originRatio) === "warn" || level(originRatio) === "critical") advice.push("The browser says this site uses most of its allowed storage (mostly offline copies). Clearing the offline copies is safe; progress is kept separately.");
   if (st.supported && st.persisted === false) advice.push("Progress is not protected from automatic browser clean-up. Use \"Protect my progress\", and keep a backup file.");
   return { persist: { supported: st.supported, persisted: st.persisted }, origin: { usage: st.usage, quota: st.quota, ratio: originRatio, level: level(originRatio) }, local, level: overall, exportRoute, advice };

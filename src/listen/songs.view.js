@@ -65,7 +65,7 @@ export function mount(root, ctx = {}) {
   });
   root.replaceChildren(h('div', { class: 'songs' },
     h('h1', { id: 'view-title', tabindex: '-1' }, 'Songs'),
-    h('p', {}, 'Songs made for Aleph. Press play to listen; nothing starts by itself. If a lesson voice plays, the song pauses.'),
+    h('p', {}, 'Songs made for ALEF. Press play to listen; nothing starts by itself. If a lesson voice plays, the song pauses.'),
     status,
     ...songs,
     h('p', {}, h('a', { href: '#/games' }, 'Play a game with music'))));

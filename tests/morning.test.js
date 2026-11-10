@@ -141,6 +141,7 @@ test("not on a counted route -> no accrual; counted-route patterns", () => {
   d.eng.interact(t0); for (let i = 1; i <= 120; i++) { d.eng.interact(t0 + i * 1000); d.eng.tick(t0 + i * 1000); }
   assert.equal(d.eng.seconds(), 0);
   assert.ok(isCountedRoute("#/learn?review=1") && isCountedRoute("#/read/shema") && isCountedRoute("#/ladder"));
+  assert.ok(isCountedRoute("#/firstday") && isCountedRoute("#/firstday?part=preview") && isCountedRoute("#/placement"), "the first lesson and the placement check count toward the day");
   assert.ok(!isCountedRoute("#/") && !isCountedRoute("#/settings") && !isCountedRoute("#/progress") && !isCountedRoute("#/morning") && !isCountedRoute("#/calendar"));
 });
 test("seconds persist every 10 s, on hide, and survive a reload the same day", () => {

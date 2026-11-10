@@ -151,6 +151,7 @@ main .alef-trace .notice, main .alef-atlas .warn { color: #1b1b1f; }
 @media (max-width: 719.98px) {
   main .alef-trace > div:has(> .stage) { display: flex; flex-direction: column; }
   main .alef-trace > div:has(> .stage) > * { order: 20; margin-block: 0 .6rem; }
+  main .alef-trace > div:has(> .stage) > .alef-letter-title { order: 0; }
   main .alef-trace > div:has(> .stage) > .tabs { order: 1; }
   main .alef-trace > div:has(> .stage) > .grid { order: 2; display: flex !important; flex-wrap: nowrap; overflow-x: auto; scroll-snap-type: x proximity; gap: .4rem; padding-block-end: .35rem; -webkit-overflow-scrolling: touch; }
   main .alef-trace > div:has(> .stage) > .grid > button { flex: 0 0 max(3rem, var(--tap, 48px)); min-block-size: var(--tap, 48px); scroll-snap-align: center; }
@@ -472,3 +473,8 @@ details.draft-flag { background: none; border: 0; padding: 0; font-weight: inher
 
 /* Brand bar and green-and-gold accents, light theme only (minified to keep the first install under budget) */
 .site-header{background:#123d2a;border-block-end:2px solid #c9a227;min-block-size:3rem}.site-header .brand{color:#f0d488;font-weight:700;letter-spacing:.02em;text-decoration:none;font-size:1.15rem}.site-header .brand .he{color:#f0d488;font-size:1.2em;margin-inline-start:.3em}.site-header .brand:focus-visible{outline:3px solid #f0d488;outline-offset:3px}:root[data-theme="light"] .site-nav{background:#fbf6e8;border-block-end:2px solid #e6d39a}:root[data-theme="light"] .site-nav a[aria-current="page"]{background:#123d2a;color:#f0d488;box-shadow:inset 0 -3px 0 #c9a227}:root[data-theme="light"] main h1::after{content:"";display:block;inline-size:3.2rem;block-size:4px;border-radius:4px;margin-block-start:.35rem;background:linear-gradient(90deg,#c9a227,#e9c25a)}:root[data-theme="light"] .btn.secondary{border-color:#c9a227;color:#123d2a;background:#fffaf0}@media (prefers-color-scheme:light){:root:not([data-theme]) .site-nav{background:#fbf6e8;border-block-end:2px solid #e6d39a}:root:not([data-theme]) .site-nav a[aria-current="page"]{background:#123d2a;color:#f0d488;box-shadow:inset 0 -3px 0 #c9a227}:root:not([data-theme]) main h1::after{content:"";display:block;inline-size:3.2rem;block-size:4px;border-radius:4px;margin-block-start:.35rem;background:linear-gradient(90deg,#c9a227,#e9c25a)}:root:not([data-theme]) .btn.secondary{border-color:#c9a227;color:#123d2a;background:#fffaf0}}
+/* Welcome quick start (first-minute redesign): big Rimon, one big button. */
+.ob-quick{display:grid;justify-items:center;gap:.6rem;text-align:center;margin:0 0 1.4rem;padding:1rem .75rem 1.2rem;border-radius:20px;background:radial-gradient(circle at 50% 30%,rgba(233,194,90,.28),transparent 70%)}
+.ob-quick-hi{font-size:1.3rem;font-weight:800;line-height:1.3;margin:0}
+.ob-quick-go{min-block-size:56px;min-inline-size:min(80vw,320px);font-size:1.2rem;font-weight:800;letter-spacing:.02em;background:#e9c25a;border-color:#e9c25a;color:#123d2a;box-shadow:0 4px 0 #a07c18}
+.ob-quick-go:active{transform:translateY(3px);box-shadow:0 1px 0 #a07c18}

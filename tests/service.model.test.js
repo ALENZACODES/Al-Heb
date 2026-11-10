@@ -52,7 +52,7 @@ test('coverage reuses progress decode: fresh learner 0%, all lessons done is hig
   const lines = gradeLines([{ id: 'x', he: 'א\nב\nג' }], known).map((l) => ({ ...l, entryId: 'shema-1' }));
   const c = M.coverage({ items: [{ id: 'shema-1', moment: 'm' }], gaps: [] }, lines, known);
   assert.equal(c.pct, 33);
-  assert.match(M.coverageSentence('Friday evening', c), /1 of the 3 lines Aleph holds/);
+  assert.match(M.coverageSentence('Friday evening', c), /1 of the 3 lines ALEF holds/);
 });
 
 test('wording: plain ready-to-read note; congregation note; copyright line kept for the credits page', () => {

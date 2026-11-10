@@ -246,7 +246,7 @@
   {
    "id": "I-08-e04",
    "type": "respond",
-   "cue": "Many congregations bow at the words 'va'anachnu'. Say the phrase that begins the bow.",
+   "cue": "This siddur's line (Sephardi wording) is 'va'anachnu mishtachavim'. Ashkenazi and Reform siddurim say 'va'anachnu kor'im umishtachavim umodim': bend the knees at kor'im, bow at mishtachavim, stand up straight at lifnei melech. Say the line as printed here.",
    "answer": {
     "he": "וַאֲנַחְנוּ מִשְׁתַּחֲוִים לִפְנֵי מֶלֶךְ מַלְכֵי הַמְּלָכִים הַקָּדוֹשׁ בָּרוּךְ הוּא",
     "en": "And we bow before the King of kings of kings, the Holy One, blessed is he."

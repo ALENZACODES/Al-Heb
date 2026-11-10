@@ -55,14 +55,14 @@ jobs:
           mkdir -p docs/torah/audio-verification/fix
           python tools/torah/audio/fix_shard.py --list tools/torah/audio/fix-list.txt --shard ${{ matrix.shard }} --of 20 \
             --model phoneme-ct2 --log docs/torah/audio-verification/fix/fix-${{ matrix.shard }}.jsonl
-      - name: Push to john/torah-fix-${{ matrix.shard }}
+      - name: Push to john/torah-fix-r${{ github.run_number }}-${{ matrix.shard }}
         if: always()
         run: |
           git config user.name "John Khan"
           git config user.email "johnnykhan1@gmail.com"
           f=docs/torah/audio-verification/fix/fix-${{ matrix.shard }}.jsonl
           [ -f "$f" ] || exit 0
-          git checkout -q -B john/torah-fix-${{ matrix.shard }}
+          git checkout -q -B john/torah-fix-r${{ github.run_number }}-${{ matrix.shard }}
           git add "$f" audio/*/israeli/line/torah-*.mp3
           git commit -q -m "Torah audio fix: slice ${{ matrix.shard }} ($(wc -l < "$f") clips reviewed)"
-          git push -q --force origin HEAD:refs/heads/john/torah-fix-${{ matrix.shard }}
+          git push -q --force origin HEAD:refs/heads/john/torah-fix-r${{ github.run_number }}-${{ matrix.shard }}

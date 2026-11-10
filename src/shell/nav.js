@@ -17,7 +17,8 @@ export function renderNav(current, { routes, available }) {
   nav.replaceChildren(...list.map(({ section, route }) => {
     const he = section.heKey ? tHe(section.heKey) : '';
     return h('li', {}, h('a', { href: '#' + route.pattern, 'data-section': section.id, 'aria-current': st.tab === section.id ? st.level : null },
-      h('span', {}, t(section.labelKey)), he ? heSpan(he, 'he nav-he') : null));
+      h('span', { class: `nav-ico nav-ico-${section.id}`, 'aria-hidden': 'true' }), // drawn in CSS (assets/css/polish.css), so the tab reads the same with icons off
+      h('span', { class: 'nav-label' }, t(section.labelKey)), he ? heSpan(he, 'he nav-he') : null));
   }));
   const n = renderMenu(more, { routes, available, current });
   btn.hidden = n === 0;

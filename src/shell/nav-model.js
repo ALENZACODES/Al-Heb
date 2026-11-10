@@ -7,7 +7,7 @@ export const SECTIONS = [
   { id: 'learn',    labelKey: 'nav.section.learn',    descKey: 'nav.section.learn.desc',    heKey: 'nav.learn', primary: ['learn'] },
   { id: 'read',     labelKey: 'nav.section.read',     descKey: 'nav.section.read.desc',     heKey: 'nav.read',  primary: ['read'] },
   { id: 'speak',    labelKey: 'nav.section.speak',    descKey: 'nav.section.speak.desc',    primary: ['speak', 'listen', 'compare', 'tradition-quiz'] },
-  { id: 'progress', labelKey: 'nav.section.progress', descKey: 'nav.section.progress.desc', primary: ['progress', 'calendar'] },
+  { id: 'progress', labelKey: 'nav.section.progress', descKey: 'nav.section.progress.desc', heKey: 'nav.progress', primary: ['progress', 'calendar'] },
   { id: 'more',     labelKey: 'nav.section.more',     descKey: 'nav.section.more.desc',     heKey: null, primary: [] },
 ];
 

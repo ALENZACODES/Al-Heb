@@ -54,7 +54,7 @@ export function mountRimon({store,doc=document}={}) {
   const still=doc.createElement('img');still.className='rimon-still';still.alt='';still.setAttribute('aria-hidden','true');still.decoding='async';still.hidden=true;
   host.append(sprite,still,caption,next,dismiss);doc.body.append(host,restore);
   const media=globalThis.matchMedia?.('(prefers-reduced-motion: reduce)');
-  const animator=createAnimator(),loaded=new Map(),base=new URL('../../assets/img/rimon/',import.meta.url);
+  const animator=createAnimator(),loaded=new Map(),base=new URL('../../assets/img/rimon/web/',import.meta.url); // light WebP copies (about 100 KB a sheet, not 1 MB); originals stay in assets/img/rimon/
   let inlineVisible=true,observer;
   let alive=true,hidden=false,requestId=0,lastActivity=Date.now(),yawned=false,thought=false,nextBlink=Date.now()+4000,lastPaint='',idleSince=Date.now();
   try{hidden=store?.get('rimon.dismissed',false)===true;}catch{}
@@ -62,14 +62,14 @@ export function mountRimon({store,doc=document}={}) {
   const speech=mountSpeechBubble(host,{doc,streak:()=>{try{const r=store?.get?.('streak');return r?projectStreak(r,new Date()):null;}catch{return null;}}});
   function remember(){try{store?.set('rimon.dismissed',hidden);}catch{}}
   function load(name){
-    if(!loaded.has(name)) loaded.set(name,new Promise(resolve=>{const image=new Image();image.onload=()=>resolve(true);image.onerror=()=>resolve(false);image.src=new URL(name+'.png',base).href;}));
+    if(!loaded.has(name)) loaded.set(name,new Promise(resolve=>{const image=new Image();image.onload=()=>resolve(true);image.onerror=()=>resolve(false);image.src=new URL(name+'.webp',base).href;}));
     return loaded.get(name);
   }
   function paint(){
     const action=animator.action,frame=animator.frame,key=action+':'+frame;
     if(key===lastPaint) return;lastPaint=key;
     const sheet=action==='idle'?'blink':action;
-    sprite.style.backgroundImage=`url("${new URL(sheet+'.png',base).href}")`;
+    sprite.style.backgroundImage=`url("${new URL(sheet+'.webp',base).href}")`;
     sprite.style.backgroundPosition=`${(frame%4)*100/3}% ${Math.floor(frame/4)*50}%`;
     if(host.dataset.action!==action) speech.say(action);
     host.dataset.action=action;host.dataset.frame=String(frame);sprite.dataset.action=action;sprite.dataset.frame=String(frame);

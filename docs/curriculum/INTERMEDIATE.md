@@ -116,8 +116,8 @@ Same schema, same sourcing rule, same checks. 10 more synagogue lessons (I-26..I
 |---|---|---|---|
 | I-26 | synagogue | The full Torah service in order: ark, reading, lifting, returning | I-03 |
 | I-27 | synagogue | Shabbat-morning Amidah responses: Kedushah, Sim Shalom, closing verses | I-02 |
-| I-28 | synagogue | Yom Kippur: the few lines the corpus holds and the words around them | I-01 |
-| I-29 | synagogue | Pesach: the seder blessings the corpus holds | I-05 |
+| I-28 | synagogue | Yom Kippur: the Shema line said aloud and the words of the day | I-01 |
+| I-29 | synagogue | Pesach: the seder blessings and the words of the festival | I-05 |
 | I-30 | synagogue | Sukkot: sukkah words and the blessings that carry over | I-29 |
 | I-31 | synagogue | Purim: the miracle blessing and the words of the day | I-29 |
 | I-32 | synagogue | Hanukkah: the three blessings, Hanerot Halalu and Maoz Tzur | I-05 |

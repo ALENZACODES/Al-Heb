@@ -179,6 +179,8 @@ Home shows a backup reminder after three finished lessons (`docs/progress/BACKUP
 | `barter` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
 | `submarinesonar` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
 | `rhymelab` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
+| `league` | keep | Weekly practice league (pretend players, said so on the page); reached from the top bar. Preview until owner review and native review of the tier names. |
+| `shop` | keep | Streak-freeze shop, streak repair, heart refill and the retention switches; reached from the top bar. Preview until owner review. |
 | `bumperverbs` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
 | `bumpercar` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
 | `traintrack` | keep | Game; reached from the `games` hub. Preview until native review of its words. |

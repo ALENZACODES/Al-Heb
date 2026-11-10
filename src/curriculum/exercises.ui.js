@@ -27,7 +27,7 @@ export function summaryNode(d) {
   const next = d.nextHref ? el("a", { class: "btn alef-next-primary", href: d.nextHref }, d.nextLabel || "Next lesson") : null;
   // Celebration first: Rimon, confetti (still for reduced motion) and a cheer that matches the score.
   try { globalThis.document?.dispatchEvent?.(new CustomEvent("alef:rimon", { detail: { action: st.accuracy >= 0.8 ? "highfive" : "bounce" } })); } catch { /* the cheer is optional */ }
-  try { globalThis.document?.dispatchEvent?.(new CustomEvent("alef:celebrate", { detail: { kind: "lesson", accuracy: st.accuracy } })); } catch { /* the sting is optional (src/audio/sting.js) */ }
+  try { globalThis.document?.dispatchEvent?.(new CustomEvent("alef:celebrate", { detail: { kind: "lesson", accuracy: st.accuracy, ms: d.ms } })); } catch { /* the sting is optional (src/audio/sting.js) */ }
   // Rimon in the page plays his move (high five for a strong lesson); the streak flame follows the shared record and lights live.
   let rimon = null; try { rimon = rimonInline({ action: st.accuracy >= 0.8 ? "highfive" : "bounce", size: 132, label: "Rimon cheers" }); } catch { rimon = null; }
   const store = d.store ?? d.ctx?.store ?? globalThis.alef?.store ?? null;
@@ -101,7 +101,7 @@ export function mountQuiz(host, { questions, ctx, onFinish, now = () => Date.now
     function submit(i) {
         if (answered) return; answered = true;
         const ok = i === q.answerIndex; n++;
-        session.answer(ok); signalRimon(ok ? 'correct' : 'wrong'); streak = ok ? streak + 1 : 0; fireFeedback(ctx, ok); saveProgress();
+        session.answer(ok); signalRimon(ok ? 'correct' : 'wrong', { source: 'lesson', questionId: q.id, retry }); streak = ok ? streak + 1 : 0; fireFeedback(ctx, ok); saveProgress();
         opts.forEach((b, k) => { b.disabled = true; b.setAttribute("disabled", ""); if (k === q.answerIndex) b.setAttribute("data-state", "right"); else if (k === i) b.setAttribute("data-state", "wrong");
           // a label that replaces the glyph also replaces the mark the style adds (right or wrong): say it in words
           if (q.options[k].label) b.setAttribute("aria-label", q.options[k].label + (k === q.answerIndex ? " This was the right answer." : k === i ? " Your choice, not the answer." : "")); });

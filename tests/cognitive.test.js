@@ -175,7 +175,9 @@ test("motion audit: animations match the reviewed inventory, loops are slow, and
     'lab-fly', 'lab-fall', 'lab-flipin', 'lab-pop',
     // Combo meter pop and floating +points (src/lab/lab.view.js, 2026-11-10): both one-shot, under 0.75 s, no flashing.
     // Reduced motion switches them off. The on-demand 3D particle field in lab.fx3d.js is canvas-only and has no keyframes.
-    'lab-combo-pop', 'lab-float-up'];
+    'lab-combo-pop', 'lab-float-up',
+    // Retention reward panel (src/retention/retention.css): the XP chip pops once (0.25 s) and the confetti falls once (1.6 s), never looping; reduced motion and calm mode switch both off and hide the confetti
+    'ret-pop', 'ret-fall'];
   assert.deepEqual(frames.sort(), reviewed.sort(), 'new animations require a motion review');
   for (const animation of anims) {
     if (!/\binfinite\b/.test(animation)) continue;

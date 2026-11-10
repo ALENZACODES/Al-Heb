@@ -220,6 +220,7 @@ export function mountReview(root, ctx, { lessonId } = {}) {
         return;
       }
       stats[n]++; pos++;
+      try { globalThis.document?.dispatchEvent?.(new CustomEvent("alef:review-rated", { detail: { rating: n } })); } catch { /* optional: hearts and XP listen for this (src/retention/) */ }
       // Interference hint only after the learner's own miss (rating Again), at most once per error kind per session.
       let panel = null;
       if (n === 1) {

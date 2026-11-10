@@ -91,6 +91,11 @@ export function mountSpeechBubble(host,{doc=document,now=()=>new Date(),streak=n
   function say(action){
     schedule.reaction(action);
   }
+  /** Say one line now (a still's line from src/shell/rimon-stage.js); it stays as long as a scheduled message. */
+  function line(l){
+    if(!l||!l.en)return;
+    message=l;expires=now().getTime()+Math.max(6500,l.en.length*160);render();
+  }
   // Any tap, key or scroll also clears a visible bubble, so it never sits on top of a button the learner wants.
   const activity=(e)=>{schedule.activity(now().getTime());if(message && e && e.type!=='pointermove'){message=null;render();}};
   const activityEvents=['pointerdown','pointermove','keydown','touchstart','scroll'];
@@ -99,5 +104,5 @@ export function mountSpeechBubble(host,{doc=document,now=()=>new Date(),streak=n
   const visibility=()=>render();doc.addEventListener('visibilitychange',visibility);
   globalThis.addEventListener('resize',position);globalThis.addEventListener('scroll',position,{passive:true,capture:true});
   render();
-  return {say,refresh:render,element:bubble,destroy(){clearInterval(interval);bubble.remove();for(const event of activityEvents)doc.removeEventListener(event,activity,true);doc.removeEventListener('visibilitychange',visibility);globalThis.removeEventListener('resize',position);globalThis.removeEventListener('scroll',position,true);}};
+  return {say,line,refresh:render,element:bubble,destroy(){clearInterval(interval);bubble.remove();for(const event of activityEvents)doc.removeEventListener(event,activity,true);doc.removeEventListener('visibilitychange',visibility);globalThis.removeEventListener('resize',position);globalThis.removeEventListener('scroll',position,true);}};
 }

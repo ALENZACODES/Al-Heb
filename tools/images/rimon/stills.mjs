@@ -1,0 +1,478 @@
+// The 200 Rimon stills: what each drawing shows, where it appears and the exact image prompt.
+// Source of truth for docs/images/RIMON-STILLS.md, docs/images/rimon-stills.csv / .json and
+// src/shell/rimon-stills.generated.js. Edit here, then run: node tools/images/rimon/build.mjs
+//
+// The behaviour (what makes a still appear) lives in src/shell/rimon-triggers.js; TRIGGER_DOCS below describes it
+// in plain words for the catalogue, and tests/shell.rimon-stills.test.js keeps the two in step.
+
+/** Colours sampled from assets/img/gen/MASCOT_rimon.800.webp (the reference picture). */
+export const PALETTE = Object.freeze({
+  body: '#DA2933', crown: '#D59E31', leaves: '#908B2A', sash: '#0A567C', cheeks: '#E95F67', face: '#633839', cream: '#FAF2E0',
+});
+
+export const REFERENCE = 'assets/img/gen/MASCOT_rimon.800.webp';
+export const FRAMING_REFERENCE = 'assets/img/rimon/wave.png (any one cell)';
+
+/** Who Rimon is. Identical in every prompt. */
+export const CHARACTER = [
+  'Rimon is a cheerful pomegranate.',
+  `Body: one round ball, very slightly wider at the bottom, flat pomegranate red ${PALETTE.body}, no seeds showing, no shine, no texture.`,
+  `Crown: a short gold ${PALETTE.crown} crown-shaped calyx sitting on top of his head, five rounded points, the middle point tallest.`,
+  `Leaves: two olive-green ${PALETTE.leaves} almond-shaped leaves tucked behind the crown, one angled out to each side.`,
+  `Face, in the upper half of the body: two small round dark maroon ${PALETTE.face} dot eyes set wide apart, a small thin curved maroon smile between them and a little lower, and two soft pink ${PALETTE.cheeks} oval cheeks just below and outside the eyes.`,
+  `Sash: a deep blue ${PALETTE.sash} band wrapped around the middle of his body, tied at the front in a small knot with two short pointed tails hanging down.`,
+  'Limbs: thin red stick arms ending in small rounded mitten hands with four short fingers; two short red legs with small rounded feet; arms, legs and feet are the same red as the body.',
+  'He has no nose, no ears, no hair, no teeth and no clothes other than the sash and the props named below.',
+].join(' ');
+
+export const STYLE = [
+  'Flat 2D vector illustration exactly like the reference: solid flat colour fills, no outlines or strokes, no gradients, no highlights, no gloss, no texture, no grain, no 3D, no drop shadow, clean crisp edges.',
+  'Expressions change only through the eyes (dots, happy upside-down arcs, closed curved lines, wide circles, a wink), small maroon eyebrow strokes only when this still asks for them, the mouth (small smile, open smile in dark maroon with a pink tongue, small round o, gentle frown) and the cheeks.',
+  `Props use the same flat style and a small palette: the colours above plus cream ${PALETTE.cream}, white, warm brown #8A5A2B, soft grey #9AA3A0, sky blue #7FB8D6, dark green #1E4634 and gold.`,
+].join(' ');
+
+export const FRAMING = [
+  'Square canvas, 1024 x 1024 pixels, fully transparent background (alpha).',
+  'Rimon alone, full body, facing the viewer or turned a little to one side, centred left to right.',
+  'Without props he is about 80% of the canvas tall: the top of the crown about 8% below the top edge and the soles of his feet about 10% above the bottom edge, the same size and place in every still, so one still can replace another without a jump. Sitting or lying poses rest their lowest point on that same line.',
+  'Props stay completely inside the canvas with a small margin; if a prop needs room, make Rimon a little smaller (never under 65% of the canvas height) and keep his feet on the same line.',
+  'No scenery, no floor or ground line, no cast shadow, no vignette, no border or frame, no sparkles or glow unless this still names them.',
+].join(' ');
+
+export const NEVER = [
+  'No text of any kind: no letters in any alphabet (no Hebrew, no English), no numbers, no logos, no watermark, no signature. Anything that could carry writing (a sign, card, page, screen, flag, tile, badge, map or tablet) stays blank.',
+  'Do not redesign Rimon: keep the round red body, the five-point gold crown, the two olive leaves, the dot eyes, the pink cheeks, the blue knotted sash and the thin red limbs exactly as in the reference.',
+  'No other characters, no people.',
+].join(' ');
+
+/** Extra rules added to every festival, Shabbat and synagogue still. */
+export const RESPECT = 'Respect: Rimon never wears a prayer shawl, tefillin or a kippah, never holds a Torah scroll or a prayer book, and nothing in the picture shows the divine name or any Hebrew writing.';
+
+/** Groups, in catalogue order. */
+export const GROUPS = Object.freeze([
+  ['onboarding', 'Onboarding and the first minutes'],
+  ['lessons', 'Lessons, answers and lesson complete'],
+  ['streak', 'Streaks and the daily goal'],
+  ['idle', 'Idle moments and breaks'],
+  ['greetings', 'Greetings on Home'],
+  ['shabbat', 'Shabbat'],
+  ['festivals', 'Festivals and special days'],
+  ['lab', 'Brain Lab'],
+  ['books', 'Little books, library and listening'],
+  ['awards', 'Awards, progress and milestones'],
+  ['reminders', 'Reminders and planning'],
+  ['screens', 'Errors, offline, loading and other screens'],
+]);
+
+/** Where each trigger shows Rimon and what makes it fire, in plain words. */
+export const TRIGGER_DOCS = Object.freeze({
+  'onboarding.letters': ['Welcome (first run), step 1: "Do you know any letters?"', 'The step is on screen (slot in src/onboarding/firstrun.view.js).'],
+  'onboarding.congregation': ['Welcome (first run), step 2: community and pronunciation', 'The step is on screen.'],
+  'onboarding.minutes': ['Welcome (first run), step 3: minutes a day', 'The step is on screen.'],
+  'onboarding.plan': ['Welcome (first run), step 4: your plan', 'The step is on screen.'],
+  'greet.first': ['Home, Rimon in the hero box', 'The very first time Home opens (once ever).'],
+  'first.return': ['Home, Rimon in the hero box', 'The first visit on a later day than the first visit (once ever).'],
+  'firstday.start': ['Your First 10 Minutes (#/firstday): Rimon in the corner', 'The screen opens.'],
+  'firstday.ladder': ['Pointed to Unpointed Ladder (#/firstday/ladder): Rimon in the corner', 'The screen opens.'],
+  'firstwin.builder': ['Build Your First Hebrew Word (#/firstwin): the Rimon picture in the builder', 'The builder is shown.'],
+  'placement.start': ['Placement Check (#/placement): Rimon in the corner', 'The screen opens.'],
+  'install.page': ['Install Aleph (#/install): Rimon in the corner', 'The screen opens.'],
+  'first.correct': ['Any lesson or game: Rimon in the corner', 'The first right answer of a new learner (no lesson finished yet; once ever).'],
+  'first.mistake': ['Any lesson or game: Rimon in the corner', 'The first wrong answer of a new learner (once ever).'],
+  'first.lesson': ['Lesson finished card: the Rimon picture above the score', 'The first lesson a learner ever finishes (once ever).'],
+  'first.badge': ['Any screen: card at the bottom', 'The first badge ever lands in Awards (once ever).'],
+  'first.book': ['Little books: card at the bottom', 'The first little book is finished (once ever).'],
+  'first.lab': ['Brain Lab: card at the bottom', 'The first Brain Lab drill is finished (once ever).'],
+
+  'answer.correct': ['Lessons, games, Word Finder and the Home word builder: Rimon in the corner', 'A right answer (a different drawing each time).'],
+  'answer.correct.streak3': ['Lessons and games: Rimon in the corner', 'Third right answer in a row (and every third after).'],
+  'answer.correct.streak5': ['Lessons and games: Rimon in the corner', 'Fifth right answer in a row (and every fifth after).'],
+  'answer.correct.streak10': ['Lessons and games: Rimon in the corner', 'Ten right answers in a row (and every tenth after).'],
+  'answer.comeback': ['Lessons and games: Rimon in the corner', 'A right answer straight after a wrong one.'],
+  'answer.wrong': ['Lessons, games and the Home word builder: Rimon in the corner', 'A wrong answer (a different drawing each time).'],
+  'answer.wrong.repeat': ['Lessons and games: Rimon in the corner, with a tip', 'Second wrong answer in a row.'],
+  'answer.wrong.many': ['Lessons and games: Rimon in the corner, with a calming line', 'Third wrong answer in a row, or more.'],
+  'game.timelow': ['Arcade games: Rimon in the corner', 'Ten seconds left on the game clock.'],
+  'game.end.good': ['Games, end of round: Rimon in the corner', 'A round ends with one star.'],
+  'lesson.next': ['Lesson saved: Rimon in the corner, next to the Next Lesson link', 'A lesson is saved and the next one is ready.'],
+  'learn.continue.first': ['Learn (#/learn), Continue card: the Rimon picture', 'No lesson done yet.'],
+  'learn.continue.next': ['Learn (#/learn), Continue card: the Rimon picture', 'Lessons in progress (one drawing per day).'],
+  'learn.continue.streak': ['Learn (#/learn), Continue card: the Rimon picture', 'A streak is going and today is not done yet.'],
+  'learn.continue.alldone': ['Learn (#/learn), Continue card: the Rimon picture', 'Every lesson in the track is done.'],
+  'lesson.complete.perfect': ['Lesson finished card: the Rimon picture above the score', 'First-try accuracy 90% or more.'],
+  'lesson.complete.great': ['Lesson finished card: the Rimon picture above the score', 'First-try accuracy 70% to 89%.'],
+  'lesson.complete.done': ['Lesson finished card: the Rimon picture above the score', 'First-try accuracy under 70%.'],
+  'checkpoint.home': ['Look-Alike Checkpoint (#/checkpoint): Rimon in the corner', 'The screen opens.'],
+  'review.home': ['How Reviews Could Be Spaced (#/scheduler): Rimon in the corner', 'The screen opens.'],
+
+  'streak.day.1': ['Any screen: card at the bottom', 'The streak reaches 1 day (once ever).'],
+  'streak.day.3': ['Any screen: card at the bottom', 'The streak reaches 3 days (once ever).'],
+  'streak.day.7': ['Any screen: card at the bottom', 'The streak reaches 7 days (once ever).'],
+  'streak.day.14': ['Any screen: card at the bottom', 'The streak reaches 14 days (once ever).'],
+  'streak.day.30': ['Any screen: card at the bottom', 'The streak reaches 30 days (once ever).'],
+  'streak.day.50': ['Any screen: card at the bottom', 'The streak reaches 50 days (once ever).'],
+  'streak.day.100': ['Any screen: card at the bottom', 'The streak reaches 100 days (once ever).'],
+  'streak.day.365': ['Any screen: card at the bottom', 'The streak reaches 365 days (once ever).'],
+  'streak.atrisk': ['Home, Rimon in the hero box', 'After 6 pm, a streak is going, today is not done and it is not a rest day (once a day).'],
+  'streak.saved': ['Any screen: card at the bottom', 'Today is completed after 8 pm, saving the streak (once a day).'],
+  'streak.lost': ['Home, Rimon in the hero box', 'The streak broke (best was 2 or more); first Home visit of the day.'],
+  'streak.restart': ['Any screen: card at the bottom', 'Day one of a new streak after a broken one (once a day).'],
+  'streak.rest': ['Home, Rimon in the hero box', 'A rest day the learner declared (not Shabbat or a festival).'],
+  'goal.reached': ['Any screen: card at the bottom', 'The daily goal (five minutes) is reached (once a day).'],
+
+  'idle.fidget': ['Any screen with Rimon in the corner', 'No tap or key for 45 seconds; again every 40 seconds, at most three times.'],
+  'idle.sleep': ['Any screen with Rimon in the corner', 'No tap or key for 3 minutes.'],
+  'idle.water': ['Any screen: card at the bottom', 'Half an hour of active study in one sitting.'],
+  'idle.break': ['Any screen: card at the bottom', 'An hour of active study in one sitting.'],
+  'idle.snack': ['Any screen: card at the bottom', 'An hour and a half of active study in one sitting.'],
+
+  'greet.morning': ['Home, Rimon in the hero box', 'First Home visit of the day, 5 am to 11 am.'],
+  'greet.day': ['Home, Rimon in the hero box', 'First Home visit of the day, 11 am to 5 pm.'],
+  'greet.evening': ['Home, Rimon in the hero box', 'First Home visit of the day, 5 pm to 10 pm.'],
+  'greet.night': ['Home, Rimon in the hero box', 'First Home visit of the day, 10 pm to 5 am.'],
+  'greet.back': ['Home, Rimon in the hero box', 'Back after 7 or more days away.'],
+  'greet.week': ['Home, Rimon in the hero box', 'First Home visit on a Sunday morning.'],
+
+  'shabbat.erev': ['Home (greeting) and Calendar: Rimon in the hero box or corner', 'Friday from 10 am until candle lighting (the learner\'s location, or 6 pm without one).'],
+  'shabbat.evening': ['Home (greeting) and Calendar', 'Friday after candle lighting.'],
+  'shabbat.day': ['Home (greeting), Calendar and Saturday day pages', 'Saturday until havdalah (or 8 pm without a location).'],
+  'shabbat.havdalah': ['Home (greeting) and Calendar', 'Saturday after havdalah.'],
+  'shabbat.shavuatov': ['Home (greeting)', 'Saturday after havdalah, from 9 pm.'],
+  'shabbat.rest': ['Progress (#/progress): Rimon in the corner', 'Opened on Shabbat (the streak rests).'],
+
+  'holiday.rosh-hashanah': ['Home (greeting), Calendar, This Week in the Jewish Year, the festival page and the day page', 'Rosh Hashanah.'],
+  'holiday.yom-kippur': ['Home (greeting), Calendar, festival and day pages', 'Yom Kippur (calm drawings only: no food, no party).'],
+  'holiday.sukkot': ['Home (greeting), Calendar, festival and day pages', 'Sukkot (one drawing per day of the festival).'],
+  'holiday.shemini-atzeret': ['Home (greeting), Calendar, festival and day pages', 'Shemini Atzeret.'],
+  'holiday.simchat-torah': ['Home (greeting), Calendar, festival and day pages', 'Simchat Torah.'],
+  'holiday.hanukkah': ['Home (greeting), Calendar, festival and day pages', 'Hanukkah (one drawing per day across the eight days).'],
+  'holiday.tu-bishvat': ['Home (greeting), Calendar, festival and day pages', 'Tu BiShvat.'],
+  'holiday.purim': ['Home (greeting), Calendar, festival and day pages', 'Purim.'],
+  'holiday.pesach': ['Home (greeting), Calendar, festival and day pages', 'Pesach (one drawing per day of the festival).'],
+  'holiday.yom-haatzmaut': ['Home (greeting), Calendar, festival and day pages', 'Yom HaAtzmaut.'],
+  'holiday.shavuot': ['Home (greeting), Calendar, festival and day pages', 'Shavuot.'],
+  'holiday.rosh-chodesh': ['Home (greeting), Calendar and day pages', 'Rosh Chodesh (the new month).'],
+  'holiday.erev-festival': ['Home (greeting) and Calendar', 'The day before a major festival.'],
+  'holiday.lag-baomer': ['Home (greeting), Calendar and day pages', 'Lag BaOmer (18 Iyar).'],
+  'holiday.tu-bav': ['Home (greeting), Calendar and day pages', "Tu B'Av (15 Av)."],
+
+  'lab.home': ['Brain Lab (#/lab): Rimon in the corner', 'The Lab opens (one drawing per day).'],
+  'lab.drill.hunt': ['Brain Lab drill: Letter Hunt (#/lab/hunt)', 'The drill opens.'],
+  'lab.drill.matrix': ['Brain Lab drill: Memory Matrix (#/lab/matrix)', 'The drill opens.'],
+  'lab.drill.soundmatch': ['Brain Lab drill: Sound Match (#/lab/soundmatch)', 'The drill opens.'],
+  'lab.drill.siddurflash': ['Brain Lab drill: Siddur Flash (#/lab/siddurflash)', 'The drill opens.'],
+  'lab.drill.switch': ['Brain Lab drill: Rule Switch (#/lab/switch)', 'The drill opens.'],
+  'lab.drill.gematria': ['Brain Lab drill: Gematria (#/lab/gematria)', 'The drill opens.'],
+  'lab.drill.countup': ['Brain Lab drill: Count Up (#/lab/countup)', 'The drill opens.'],
+  'lab.drill.numberear': ['Brain Lab drill: Number Ear (#/lab/numberear)', 'The drill opens.'],
+  'lab.drill.calendar': ['Brain Lab drill: Calendar (#/lab/calendar)', 'The drill opens.'],
+  'lab.drill.pattern': ['Brain Lab drill: Pattern (#/lab/pattern)', 'The drill opens.'],
+  'lab.result.best': ['Brain Lab: card at the bottom', 'A drill ends with a new personal best.'],
+  'lab.result.good': ['Brain Lab: Rimon in the corner', 'A drill ends (no new best).'],
+  'lab.levelup': ['Brain Lab: Rimon in the corner', 'A drill ends at a higher level than last time.'],
+  'lab.workout.done': ['Brain Lab: card at the bottom', "The day's three-drill workout is complete (once a day)."],
+  'lab.streak': ['Brain Lab: card at the bottom', 'The daily workout is done 3, 7, 14 or 30 days in a row.'],
+
+  'books.shelf': ['Little Books shelf (#/books): Rimon in the corner', 'The shelf opens (one drawing per day).'],
+  'book.finished': ['Little books: card at the bottom', 'A book is finished.'],
+  'books.milestone': ['Little books: card at the bottom', '5, 10, 25 and all 57 books finished.'],
+  'library.home': ['Library (#/library): Rimon in the corner', 'The Library opens.'],
+  'songs.home': ['Songs (#/songs): Rimon in the corner', 'The screen opens.'],
+  'listen.home': ['Listen and Pick (#/listen): Rimon in the corner', 'The screen opens.'],
+  'phrases.home': ['Common Phrases (#/phrases): Rimon in the corner', 'The screen opens.'],
+  'dialogues.home': ['Israel Dialogues (#/dialogues): Rimon in the corner', 'The screen opens.'],
+  'israel.home': ['Sound Like a Local (#/israel): Rimon in the corner', 'The screen opens.'],
+
+  'awards.gallery': ['Awards (#/awards): Rimon in the corner', 'Opened with at least one badge.'],
+  'awards.empty': ['Awards (#/awards): Rimon in the corner', 'Opened with no badges yet.'],
+  'award.new': ['Any screen: card at the bottom', 'A new badge lands (not the first).'],
+  'progress.home': ['Progress (#/progress): Rimon in the corner', 'The screen opens (one drawing per day).'],
+  'share.home': ['Share My Progress (#/share): Rimon in the corner', 'The screen opens.'],
+  'daily.home': ['Daily Goal and Quests (#/daily): Rimon in the corner', 'The screen opens.'],
+  'lessons.10': ['Any screen: card at the bottom', '10 lessons finished (once ever).'],
+  'lessons.25': ['Any screen: card at the bottom', '25 lessons finished (once ever).'],
+  'lessons.50': ['Any screen: card at the bottom', '50 lessons finished (once ever).'],
+  'lessons.100': ['Any screen: card at the bottom', '100 lessons finished (once ever).'],
+
+  'reminder.streak': ['Streak reminder banner (any screen, at most once a day): the Rimon picture', 'A streak is going and today is not done yet.'],
+  'reminders.page': ['Study Reminders (#/reminders): Rimon in the corner', 'The screen opens.'],
+  'classtrack.home': ['My Study Plan (#/classtrack): Rimon in the corner', 'The screen opens.'],
+  'calendar.home': ['Calendar (#/calendar): Rimon in the corner', 'An ordinary day (festivals and Shabbat use their own drawings).'],
+
+  'error.notfound': ['Page Not Found: large Rimon under the heading', 'A link leads nowhere.'],
+  'error.view': ['A screen that failed to load: large Rimon under the heading', 'The error card is shown.'],
+  'offline.lost': ['Any screen: card at the bottom', 'The connection drops.'],
+  'offline.back': ['Any screen: card at the bottom', 'The connection comes back.'],
+  'offline.page': ['Use Aleph Offline (#/offline): Rimon in the corner', 'The screen opens.'],
+  'loading.slow': ['Any screen while it loads: Rimon under the loading bars', 'A screen takes longer than 0.7 seconds to load.'],
+  'settings.home': ['Settings (#/settings): Rimon in the corner', 'The screen opens.'],
+  'help.home': ['Help (#/help) and How This Works (#/how): Rimon in the corner', 'The screen opens.'],
+  'about.home': ['About (#/about): Rimon in the corner', 'The screen opens.'],
+  'search.home': ['Search (#/search): Rimon in the corner', 'The screen opens.'],
+  'letters.home': ['Letters (#/letters) and Letter Atlas: Rimon in the corner', 'The screen opens.'],
+  'typing.home': ['Typing Practice (#/typing): Rimon in the corner', 'The screen opens.'],
+  'scan.home': ['Scan (#/scan): Rimon in the corner', 'The screen opens.'],
+  'games.hub': ['Games (#/games): the Rimon picture at the top of the hub', 'The hub opens.'],
+  'synagogues.home': ['Reform Synagogues in Canada (#/synagogues): Rimon in the corner', 'The screen opens.'],
+  'grammar.home': ['Grammar Notes (#/grammar): Rimon in the corner', 'The screen opens.'],
+  'roots.home': ['Roots and Verb Families (#/roots): Rimon in the corner', 'The screen opens.'],
+  'vocab.home': ['Vocabulary (#/vocab) and its themes: Rimon in the corner', 'The screen opens.'],
+  'speak.home': ['Say It (#/speak): Rimon in the corner', 'The screen opens.'],
+  'traditions.home': ['Traditions (#/traditions) and its guide pages: Rimon in the corner', 'The screen opens.'],
+});
+
+const S = (n, group, trigger, slug, pose, props = '', extra = {}) => ({ n, group, trigger, slug, pose, props, ...extra });
+const R = { respect: true };
+
+/**
+ * The stills. `pose`: body and face; `props`: what he holds (blank where writing could go).
+ * Numbers are fixed once published: a still keeps its number and file name for good.
+ */
+export const STILLS = Object.freeze([
+  // ---------------------------------------------------------------- onboarding and the first minutes
+  S(1, 'onboarding', 'greet.first', 'hello-arms-wide', 'Standing, both arms flung wide open in welcome, leaning a little toward the viewer, one foot lifted. Eyes happy arcs, big open smile, cheeks extra pink.'),
+  S(2, 'onboarding', 'first.return', 'came-back-run', 'Running toward the viewer with both arms open for a hug, one foot off the ground, two short cream motion lines behind him. Wide delighted eyes, big open smile.'),
+  S(3, 'onboarding', 'onboarding.letters', 'curious-letter-tile', 'Holding a tile up above head height with both hands, head tilted with curiosity. One small raised maroon eyebrow stroke, small smile.', 'A blank cream square tile with rounded corners and a thin gold edge.'),
+  S(4, 'onboarding', 'onboarding.congregation', 'listening-cupped-hand', 'Leaning a little to one side, one mitten hand cupped beside his head next to a leaf as if listening, eyes closed in two curved lines, gentle smile.', 'Three small gold curved sound arcs beside the cupped hand.'),
+  S(5, 'onboarding', 'onboarding.minutes', 'small-hourglass', 'Holding a small hourglass in front of his sash with both hands and showing it to the viewer, calm encouraging smile.', 'A small hourglass with a gold frame and cream sand, half run through.'),
+  S(6, 'onboarding', 'onboarding.plan', 'plan-map', 'Holding a half-unrolled paper map in one hand and pointing at it with the other, confident smile.', 'A cream paper map with a dotted gold path that links three small red dots; no writing.'),
+  S(7, 'onboarding', 'firstday.start', 'starting-line', 'Crouched in a sprinter\'s ready pose, one knee bent, one hand touching the line, looking ahead with a determined little smile and small set eyebrows.', 'A short gold line under his front foot, only as wide as he is.'),
+  S(8, 'onboarding', 'firstday.ladder', 'ladder-climb', 'Climbing a short step ladder, one foot on the second rung, one hand on the rail, looking back at the viewer with an encouraging smile.', 'A small warm-brown wooden ladder with four rungs.'),
+  S(9, 'onboarding', 'firstwin.builder', 'tiles-together', 'Pushing two tiles together in front of him, one tile in each hand meeting in the middle, concentrating, a pink tongue tip poking out of the corner of his mouth.', 'Two blank cream square tiles with rounded corners and thin gold edges.'),
+  S(10, 'onboarding', 'placement.start', 'magnifying-glass', 'Holding a magnifying glass up to one eye (that eye looks big through the lens), other hand on his hip, friendly curious smile.', 'A round magnifying glass with a gold rim and a warm-brown handle.'),
+  S(11, 'onboarding', 'install.page', 'hop-out-of-phone', 'Hopping out of a large phone standing upright beside him, one foot still inside the screen, waving at the viewer with a big smile.', 'A phone shaped like a rounded rectangle, dark green frame, blank cream screen.'),
+  S(12, 'onboarding', 'first.correct', 'first-correct-gasp', 'Both mitten hands pressed to his cheeks, eyes wide circles, mouth a big delighted round o.', 'A few small gold and red confetti pieces popping around his crown.'),
+  S(13, 'onboarding', 'first.mistake', 'first-mistake-shrug', 'A gentle shrug with both palms up, head tilted, warm reassuring smile, one eye half closed as if saying "it\'s fine".'),
+  S(14, 'onboarding', 'first.lesson', 'first-lesson-jump', 'Jumping high with both fists in the air and feet tucked under him, eyes squeezed shut with joy, wide open smile.', 'Gold and red confetti pieces around him.'),
+  S(15, 'onboarding', 'first.badge', 'first-badge-surprise', 'Holding a badge up toward the viewer with both hands, eyes wide, mouth a delighted round o.', 'A shiny round gold badge with a blank face and two short ribbon tails, one olive green and one blue.'),
+  S(16, 'onboarding', 'first.book', 'first-book-hug', 'Hugging a closed book to his chest with both arms, eyes closed in happy arcs, blissful smile.', 'A small book with a dark green cover and cream page edges, blank cover; two small pink hearts floating above.'),
+  S(17, 'onboarding', 'first.lab', 'goggles-thumbs-up', 'Giving a big thumbs up with one hand, other hand on his hip, proud grin.', 'Small round safety goggles with gold frames and sky-blue lenses pushed up onto his head just under the crown.'),
+
+  // ---------------------------------------------------------------- lessons and answers
+  S(18, 'lessons', 'answer.correct', 'thumbs-up', 'One arm giving a thumbs up toward the viewer, the other hand on his hip, big open smile, eyes happy arcs.'),
+  S(19, 'lessons', 'answer.correct', 'fist-pump', 'Pumping one fist down and in ("yes!"), knees a little bent, eyes closed in happy arcs, open smile.'),
+  S(20, 'lessons', 'answer.correct', 'hop-arms-up', 'A little hop with both arms raised high and both feet just off the ground, open smile.'),
+  S(21, 'lessons', 'answer.correct', 'clapping', 'Clapping his mitten hands together in front of his sash, eyes happy arcs, open smile.', 'Two short cream motion arcs beside the hands.'),
+  S(22, 'lessons', 'answer.correct', 'proud-hands-on-hips', 'Hands on hips, standing tall with his chin up, satisfied closed smile, eyes happy arcs.'),
+  S(23, 'lessons', 'answer.correct', 'twirl', 'Mid-spin on one foot with both arms out, the sash tails swinging out to one side, big smile.', 'One cream swirl line around his feet.'),
+  S(24, 'lessons', 'answer.correct', 'double-thumbs-up', 'Leaning toward the viewer giving two thumbs up, wide open smile, eyes bright dots.'),
+  S(25, 'lessons', 'answer.correct', 'dance-step', 'A happy dance step: one knee raised, arms bent and swinging, eyes happy arcs.', 'Two small gold music notes beside him.'),
+  S(26, 'lessons', 'answer.correct.streak3', 'wink-point', 'Winking (one eye a curved line, the other a dot) and pointing at the viewer with one finger, a sly pleased smile.'),
+  S(27, 'lessons', 'answer.correct.streak5', 'high-five', 'Reaching one open palm toward the viewer for a high five (the hand drawn a little larger, close to the viewer), big open smile.'),
+  S(28, 'lessons', 'answer.correct.streak10', 'on-a-roll', 'Curled into a ball rolling forward, arms and legs tucked in, crown and leaves still on top and tilted with the roll, grinning.', 'Three cream motion lines behind him and a small cream dust puff.'),
+  S(29, 'lessons', 'answer.comeback', 'flex', 'Flexing one thin arm to show a small round muscle bump and pointing at it with the other hand, proud determined smile, small set eyebrows.'),
+  S(30, 'lessons', 'answer.wrong', 'oops', 'One mitten hand over his mouth, eyes wide, leaning back a little, amused rather than upset.'),
+  S(31, 'lessons', 'answer.wrong', 'almost-tilt', 'Head tilted, one hand raised with the palm open as if saying "almost", soft encouraging smile.'),
+  S(32, 'lessons', 'answer.wrong', 'crown-scratch', 'Scratching the side of his crown with one finger, eyes looking up, mouth a small sideways line, puzzled.'),
+  S(33, 'lessons', 'answer.wrong', 'so-close-pinch', 'Holding up a thumb and finger pinched almost together ("so close"), one eye squinting, playful grimace.'),
+  S(34, 'lessons', 'answer.wrong', 'sheepish-grin', 'One hand behind his head, sheepish grin, eyes happy arcs.', 'One cream sweat drop beside his head.'),
+  S(35, 'lessons', 'answer.wrong', 'its-okay', 'Both palms facing down and pressing gently ("it\'s okay"), eyes gently closed, calm peaceful smile.'),
+  S(36, 'lessons', 'answer.wrong.repeat', 'idea-bulb', 'Holding up a lightbulb in one hand and raising the index finger of the other hand as if he has an idea, bright eyes, open smile.', 'A small round lightbulb, pale gold glass, gold base, two short gold rays.'),
+  S(37, 'lessons', 'answer.wrong.many', 'calm-tea', 'Sitting cross-legged and holding a small glass of tea out toward the viewer, kind calm smile, eyes soft.', 'A small clear glass with amber tea and a gold rim.'),
+  S(38, 'lessons', 'game.timelow', 'nervous-nibble', 'Nibbling his fingertips with both hands at his mouth, eyes wide, small worried maroon eyebrows tilted up.', 'One cream sweat drop.'),
+  S(39, 'lessons', 'game.end.good', 'belly-laugh', 'Laughing, both hands on his belly, leaning back, eyes squeezed into happy arcs, mouth wide open.'),
+  S(40, 'lessons', 'lesson.next', 'onward-point', 'Mid-step, one arm fully extended pointing forward to the right, the other hand making a "come on" wave, eager open smile.'),
+  S(41, 'lessons', 'learn.continue.first', 'backpack-on', 'Putting on a small backpack: one strap already on his shoulder, reaching back for the other, excited open smile.', 'A small olive-green backpack with a gold buckle.'),
+  S(42, 'lessons', 'learn.continue.next', 'come-on-wave', 'One hand beckoning "come on", the other on his hip, cheerful smile, leaning forward.'),
+  S(43, 'lessons', 'learn.continue.next', 'jog-in-place', 'Jogging in place, arms bent at his sides, one knee up, energetic smile.'),
+  S(44, 'lessons', 'learn.continue.streak', 'hourglass-nudge', 'Holding a small hourglass in one hand and pointing at it with the other, eyebrows raised, friendly hurry-up smile.', 'A small gold hourglass with only a little cream sand left on top.'),
+  S(45, 'lessons', 'learn.continue.alldone', 'graduate', 'Standing proudly holding a rolled diploma, a graduation cap perched on top of his crown (the crown points still visible below it), beaming.', 'A small dark green mortarboard cap with a gold tassel; a rolled cream diploma tied with a blue ribbon.'),
+  S(46, 'lessons', 'lesson.complete.perfect', 'confetti-dance', 'Dancing with both arms up and one foot kicked out, eyes happy arcs, wide open smile.', 'Gold, red and cream confetti pieces around him.'),
+  S(47, 'lessons', 'lesson.complete.perfect', 'star-overhead', 'Holding a big gold five-pointed star high over his head with both arms, beaming.', 'A big flat gold star.'),
+  S(48, 'lessons', 'lesson.complete.great', 'thumb-and-star', 'Thumbs up with one hand and a small gold star held in the other, big smile.', 'A small flat gold star.'),
+  S(49, 'lessons', 'lesson.complete.great', 'skip', 'Skipping happily with one leg up and arms swinging, open smile.'),
+  S(50, 'lessons', 'lesson.complete.done', 'pennant', 'Standing proud, holding a small pennant flag on a stick, gentle proud smile.', 'A small triangular olive-green pennant on a warm-brown stick, blank.'),
+  S(51, 'lessons', 'lesson.complete.done', 'phew', 'Wiping his brow with the back of one hand, relieved smile, eyes closed.'),
+  S(52, 'lessons', 'checkpoint.home', 'compare-tiles', 'Holding two tiles side by side and squinting from one to the other, comparing, mouth a small o.', 'Two blank cream square tiles with gold edges.'),
+  S(53, 'lessons', 'review.home', 'flashcards', 'Holding a fanned stack of cards and picking one out with the other hand, thoughtful smile.', 'A fan of blank cream cards with gold edges.'),
+
+  // ---------------------------------------------------------------- streak and daily goal (a sprout that grows into a tree)
+  S(54, 'streak', 'streak.day.1', 'sprout-pot', 'Holding a small pot in both hands and looking down at the sprout with a loving smile.', 'A small terracotta pot with a tiny green sprout of two leaves.'),
+  S(55, 'streak', 'streak.day.3', 'watering-sprout', 'Watering the sprout pot that stands beside him with a small watering can, happy smile.', 'The same small terracotta pot and sprout; a small gold watering can; three sky-blue drops.'),
+  S(56, 'streak', 'streak.day.7', 'gold-medal', 'Standing proud with his chest out, one hand touching a medal that hangs over his sash, big smile.', 'A gold medal on a blue ribbon.'),
+  S(57, 'streak', 'streak.day.14', 'sapling', 'Carrying a potted pomegranate sapling in both arms, beaming.', 'A terracotta pot with a young pomegranate sapling: thin brown trunk, a few green leaves, one tiny red flower.'),
+  S(58, 'streak', 'streak.day.30', 'trophy-overhead', 'Holding a trophy cup high over his head with both arms, eyes happy arcs, wide open smile.', 'A gold trophy cup with two handles, blank.'),
+  S(59, 'streak', 'streak.day.50', 'gold-cape', 'A heroic pose with fists on hips, a short cape fluttering behind him, confident grin.', 'A short gold cape tied at the top of his body.'),
+  S(60, 'streak', 'streak.day.100', 'podium-fireworks', 'Standing on a podium block with both arms raised, eyes happy arcs, wide open smile.', 'A dark green podium block with a blank front; small flat gold and red firework bursts around him.'),
+  S(61, 'streak', 'streak.day.365', 'pomegranate-tree', 'Standing beside a small pomegranate tree with one hand on its trunk and the other waving, proud smile.', 'A small round pomegranate tree a little taller than him, green leaves and five red pomegranates (plain fruit, no faces).'),
+  S(62, 'streak', 'streak.atrisk', 'hourglass-low', 'Holding a small hourglass up and looking at the viewer, worried eyebrows, biting his lip.', 'A small gold hourglass with the cream sand almost run out.'),
+  S(63, 'streak', 'streak.saved', 'brow-wipe-relief', 'Wiping his brow with a big relieved smile, eyes closed.', 'One cream sweat drop flying off.'),
+  S(64, 'streak', 'streak.lost', 'drooping-sprout', 'Sitting with his legs out in front, holding the sprout pot in his lap, a small sad but hopeful smile.', 'The small terracotta pot with a drooping sprout.'),
+  S(65, 'streak', 'streak.restart', 'tighten-sash', 'Pulling the knot of his blue sash tighter with both hands, determined eyes with small set eyebrows, firm smile.'),
+  S(66, 'streak', 'streak.rest', 'cozy-blanket', 'Sitting wrapped in a cozy blanket, holding a cup in both hands, eyes closed, content smile.', 'A cream blanket around his shoulders (crown, leaves and face still showing); a small dark green cup with two thin cream steam curls.'),
+  S(67, 'streak', 'goal.reached', 'laurel-wreath', 'Holding a laurel wreath up with both hands, triumphant open smile.', 'A gold laurel wreath ring.'),
+
+  // ---------------------------------------------------------------- idle and breaks
+  S(68, 'idle', 'idle.fidget', 'reading', 'Standing and reading a small open book held in both hands, engrossed, small smile.', 'A small open book with blank cream pages and a dark green cover.'),
+  S(69, 'idle', 'idle.fidget', 'sipping-tea', 'Sipping from a small glass held in both hands, eyes closed contentedly.', 'A small clear glass with amber tea and a gold rim.'),
+  S(70, 'idle', 'idle.fidget', 'juggling-seeds', 'Juggling three seeds, eyes following them, pink tongue tip out in concentration.', 'Three small red oval pomegranate seeds in the air.'),
+  S(71, 'idle', 'idle.fidget', 'whistling', 'Whistling with his mouth a small round o, hands clasped behind his back, eyes looking up.', 'Two small gold music notes.'),
+  S(72, 'idle', 'idle.fidget', 'peeking', 'Leaning to the viewer\'s left with one hand shading his eyes, looking curiously off to the side.'),
+  S(73, 'idle', 'idle.fidget', 'side-step', 'A little side-step dance, both hands waving at shoulder height, eyes happy arcs.'),
+  S(74, 'idle', 'idle.fidget', 'butterfly', 'Looking cross-eyed with delight at a butterfly resting on his raised fingertip.', 'A small sky-blue butterfly.'),
+  S(75, 'idle', 'idle.fidget', 'polish-crown', 'Polishing one point of his gold crown with a cloth, eyes closed, proud little smile.', 'A small cream cloth.'),
+  S(76, 'idle', 'idle.sleep', 'asleep-standing', 'Asleep on his feet: body tilted, eyes closed lines, mouth slightly open, arms dangling.', 'One small cream bubble near his mouth; no letters.'),
+  S(77, 'idle', 'idle.water', 'water-bottle', 'Drinking from a water bottle tipped up with one hand, the other hand on his hip.', 'A small sky-blue water bottle.'),
+  S(78, 'idle', 'idle.break', 'side-stretch', 'Stretching with both arms overhead and leaning to one side, eyes closed, mouth a small o.'),
+  S(79, 'idle', 'idle.snack', 'offer-seeds', 'Holding out a small bowl toward the viewer, offering it, kind smile.', 'A small cream bowl full of red pomegranate seeds.'),
+
+  // ---------------------------------------------------------------- greetings on Home
+  S(80, 'greetings', 'greet.morning', 'sunrise-stretch', 'Stretching both arms up high, eyes closed, a big morning smile.', 'A small flat gold half-sun rising beside his feet.'),
+  S(81, 'greetings', 'greet.morning', 'morning-tea', 'Holding a glass of tea, one eye still sleepy and half closed, the other open, cheerful smile.', 'A small clear glass with amber tea.'),
+  S(82, 'greetings', 'greet.day', 'wave-hello', 'A classic hello wave: one arm raised high and waving, the other at his side, bright open smile.'),
+  S(83, 'greetings', 'greet.evening', 'lantern', 'Holding up a small lantern with a warm light, gentle smile.', 'A small brass lantern with a flat gold flame shape inside.'),
+  S(84, 'greetings', 'greet.night', 'nightcap-moon', 'Hugging a crescent-moon pillow, sleepy smile, eyes half closed.', 'A dark green nightcap with a gold pompom perched on the side of his crown (crown points still visible); a cream crescent-moon pillow.'),
+  S(85, 'greetings', 'greet.night', 'blanket-wave', 'Half tucked into a blanket up to his sash, waving sleepily, eyes half closed.', 'A cream blanket.'),
+  S(86, 'greetings', 'greet.back', 'bouquet', 'Running in and holding a small bouquet out toward the viewer, delighted smile.', 'A small bouquet of red, gold and cream flowers.'),
+  S(87, 'greetings', 'greet.week', 'new-week-backpack', 'Stepping forward with a folded map in one hand, fresh energetic smile.', 'A small olive-green backpack on his back; a folded cream map with no writing.'),
+
+  // ---------------------------------------------------------------- Shabbat (respect: nothing is lit, cooked, written or switched on by Rimon on Shabbat)
+  S(88, 'shabbat', 'shabbat.erev', 'carrying-candlesticks', 'Carrying two candlesticks carefully, one in each hand, focused happy smile.', 'Two silver candlesticks with white candles, not lit.', R),
+  S(89, 'shabbat', 'shabbat.erev', 'carrying-challah', 'Carrying a braided challah on a board in both hands, proud smile.', 'A golden-brown braided challah on a small wooden board.', R),
+  S(90, 'shabbat', 'shabbat.evening', 'beside-candles', 'Standing beside two lit Shabbat candles with his hands folded, eyes softly closed, peaceful smile.', 'Two silver candlesticks with lit white candles (flat gold flames) on a small stand covered with a cream cloth.', R),
+  S(91, 'shabbat', 'shabbat.evening', 'kiddush-cup', 'Raising a small cup with one hand, the other hand resting on his chest, warm smile.', 'A small silver kiddush cup with deep red grape juice.', R),
+  S(92, 'shabbat', 'shabbat.day', 'cushion-reading', 'Lounging back on a big cushion reading a small book, one leg crossed over the other, relaxed smile.', 'A big cream cushion; a small book with a blank dark green cover.', R),
+  S(93, 'shabbat', 'shabbat.day', 'shabbat-stroll', 'Strolling slowly with his hands clasped behind his back, eyes closed contentedly, small smile.', '', R),
+  S(94, 'shabbat', 'shabbat.day', 'singing', 'Singing with his eyes closed and swaying, one hand raised, mouth open in song.', 'Three small gold music notes.', R),
+  S(95, 'shabbat', 'shabbat.havdalah', 'havdalah', 'Holding a lit braided candle in one hand and a small spice box in the other, soft smile.', 'A braided havdalah candle of blue and white wax with several wicks joined in one flat gold flame; a small silver spice tower.', R),
+  S(96, 'shabbat', 'shabbat.shavuatov', 'shavua-tov-wave', 'Waving cheerfully with a fresh smile.', 'A few small gold stars around his head (night has fallen).', R),
+  S(97, 'shabbat', 'shabbat.rest', 'shabbat-nap', 'Napping on a cushion under a small blanket, eyes closed, gentle smile.', 'A cream cushion; a dark green blanket with a gold border.', R),
+
+  // ---------------------------------------------------------------- festivals and special days
+  S(98, 'festivals', 'holiday.rosh-hashanah', 'apple-and-honey', 'Holding an apple slice over a honey pot, a drop of honey falling, delighted smile.', 'A red apple slice; a small gold honey pot with a wooden dipper.', R),
+  S(99, 'festivals', 'holiday.rosh-hashanah', 'shofar', 'Blowing a shofar held with both hands, cheeks puffed out, eyes closed.', 'A curved natural ram\'s horn shofar, cream at the mouthpiece fading to warm brown.', R),
+  S(100, 'festivals', 'holiday.rosh-hashanah', 'round-challah', 'Holding a round spiral challah with both hands, beaming.', 'A round golden-brown spiral challah with a few raisins.', R),
+  S(101, 'festivals', 'holiday.rosh-hashanah', 'pomegranate-pride', 'Pointing proudly at himself with his thumb while holding up a half pomegranate in the other hand, cheeky grin.', 'A half pomegranate showing red seeds (plain fruit, no face).', R),
+  S(102, 'festivals', 'holiday.yom-kippur', 'quiet-reflection', 'Standing quietly with his hands folded in front, eyes gently closed, a calm small smile. Calm and still.', 'No food, no drink, no props.', R),
+  S(103, 'festivals', 'holiday.yom-kippur', 'gentle-bow', 'A gentle bow with one hand on his chest, eyes closed, serene.', 'No food, no drink, no props.', R),
+  S(104, 'festivals', 'holiday.sukkot', 'lulav-etrog', 'Holding a lulav upright in one hand and an etrog in the other, proud smile.', 'A lulav: a tall closed green palm frond bound with myrtle and willow sprigs; an etrog: a yellow citron.', R),
+  S(105, 'festivals', 'holiday.sukkot', 'in-the-sukkah', 'Sitting inside a small sukkah and waving out at the viewer, happy.', 'A small sukkah: three walls of light wood slats, a roof of leafy green branches, red and gold fruit decorations hanging down; no writing.', R),
+  S(106, 'festivals', 'holiday.sukkot', 'paper-chain', 'On tiptoe hanging a paper chain decoration up high with both hands.', 'A paper chain of cream, gold and red loops.', R),
+  S(107, 'festivals', 'holiday.shemini-atzeret', 'rain-umbrella', 'Holding a small umbrella and smiling up at a few falling raindrops.', 'A small sky-blue umbrella; five sky-blue raindrops.', R),
+  S(108, 'festivals', 'holiday.simchat-torah', 'flag-dance', 'Dancing joyfully while waving a small flag on a stick, one foot kicked up.', 'A small cream flag with a gold border on a warm-brown stick with a small red apple on its tip; no writing.', R),
+  S(109, 'festivals', 'holiday.simchat-torah', 'circle-dance', 'Dancing with both arms raised high, one foot kicking, eyes closed in joy.', 'Cream motion lines curving around him as if he is turning in a circle.', R),
+  S(110, 'festivals', 'holiday.hanukkah', 'hanukkah-lights', 'Standing beside a Hanukkah lamp and gazing at the lights with wonder, hands clasped.', 'A gold chanukiah on a small stand: eight candles in a straight row at one height plus one raised helper candle, nine candles in all, every one lit with a flat gold flame.', R),
+  S(111, 'festivals', 'holiday.hanukkah', 'dreidel', 'Crouching and spinning a dreidel on a plate with a flick of his fingers, excited eyes.', 'A gold dreidel with plain faces (no letters or symbols) on a small cream plate; a short cream spin line.', R),
+  S(112, 'festivals', 'holiday.hanukkah', 'sufganiyah', 'Holding a round jelly doughnut up in both hands, about to take a bite, delighted.', 'A round golden doughnut dusted with white powdered sugar, red jam peeking out.', R),
+  S(113, 'festivals', 'holiday.hanukkah', 'latkes', 'Holding out a plate of latkes, delighted smile.', 'A cream plate with three golden potato latkes and a small spoonful of applesauce.', R),
+  S(114, 'festivals', 'holiday.tu-bishvat', 'planting', 'Kneeling and patting the soil around a newly planted sapling with both hands, happy.', 'A small mound of warm-brown soil; a young sapling with a few green leaves; a small gold trowel lying beside it.', R),
+  S(115, 'festivals', 'holiday.tu-bishvat', 'seven-species', 'Carrying a basket in both arms, proud smile.', 'A woven warm-brown basket with wheat and barley stalks, a bunch of grapes, figs, olives, dates and one pomegranate (plain fruit, no face).', R),
+  S(116, 'festivals', 'holiday.purim', 'purim-mask', 'Holding a mask on a stick up to his eyes, grinning below it.', 'A cream and gold eye mask on a gold stick; a tiny striped party hat tilted on the side of his crown (crown still visible).', R),
+  S(117, 'festivals', 'holiday.purim', 'grogger', 'Spinning a noisemaker high over his head, mouth open in a cheer.', 'A wooden grogger (ratchet noisemaker) in warm brown and red; three cream motion lines.', R),
+  S(118, 'festivals', 'holiday.purim', 'gift-basket', 'Holding a small gift basket out toward the viewer, generous smile.', 'A small basket with fruit and wrapped treats tied with a blue ribbon (mishloach manot).', R),
+  S(119, 'festivals', 'holiday.purim', 'hamantash', 'Taking a happy bite of a triangular cookie, eyes closed with pleasure.', 'A triangular hamantash cookie with dark filling.', R),
+  S(120, 'festivals', 'holiday.pesach', 'matzah', 'Holding a square sheet of matzah up with both hands and looking at it with interest.', 'A square sheet of matzah, pale beige with rows of small dots and a few browned spots.', R),
+  S(121, 'festivals', 'holiday.pesach', 'seder-plate', 'Standing beside a seder plate and pointing at it, explaining with a smile.', 'A round seder plate on a small stand with the six traditional seder foods in small bowls in a circle; no writing.', R),
+  S(122, 'festivals', 'holiday.pesach', 'four-questions', 'Raising one hand high like a pupil with a question, eager curious face, mouth a small o.', '', R),
+  S(123, 'festivals', 'holiday.pesach', 'afikoman', 'Turning to look back over his shoulder with a mischievous grin, hiding a wrapped bundle behind his back.', 'A small cream napkin bundle (the afikoman).', R),
+  S(124, 'festivals', 'holiday.yom-haatzmaut', 'israeli-flag', 'Waving a small flag on a stick, big proud smile.', 'A small Israeli flag: white with two horizontal blue stripes and a blue six-pointed star in the middle, on a warm-brown stick.', R),
+  S(125, 'festivals', 'holiday.yom-haatzmaut', 'balloons', 'Holding a bunch of balloons, his feet lifting just off the ground, delighted.', 'Five blue and white balloons on cream strings.', R),
+  S(126, 'festivals', 'holiday.yom-haatzmaut', 'mangal', 'Standing at a small barbecue holding tongs, cheerful.', 'A small charcoal grill (mangal) with vegetable skewers; gold tongs; two thin soft grey smoke curls.', R),
+  S(127, 'festivals', 'holiday.shavuot', 'first-fruits', 'Carrying a basket of first fruits in both arms, proud smile.', 'A woven basket with figs, grapes, pomegranates (plain fruit, no faces) and wheat stalks, a few white flowers on top.', R),
+  S(128, 'festivals', 'holiday.shavuot', 'cheesecake', 'Holding a plate with a slice of cheesecake and a fork, about to taste it, delighted.', 'A cream plate, a slice of cheesecake, a small gold fork.', R),
+  S(129, 'festivals', 'holiday.shavuot', 'tablets', 'Standing respectfully beside two stone tablets, one hand gesturing toward them, calm smile.', 'Two pale grey stone tablets with rounded tops, side by side, completely blank (no letters, no numerals, no marks).', R),
+  S(130, 'festivals', 'holiday.rosh-chodesh', 'new-moon', 'Holding up a crescent moon cutout in one hand and looking at it fondly.', 'A cream crescent moon shape.', R),
+  S(131, 'festivals', 'holiday.erev-festival', 'flowers-for-the-table', 'Carrying a vase of fresh flowers in both arms, getting ready, happy.', 'A small cream vase with red, gold and white flowers.', R),
+  S(132, 'festivals', 'holiday.lag-baomer', 'toy-bow', 'Aiming a toy bow up at the sky, one eye closed, playful grin.', 'A small toy bow in warm brown with a suction-cup arrow.', R),
+  S(133, 'festivals', 'holiday.lag-baomer', 'campfire', 'Sitting at a safe distance from a small campfire, holding a stick with a foil-wrapped potato over it, happy.', 'A small campfire with flat red and gold flames on a few logs; a foil-wrapped potato in soft grey.', R),
+  S(134, 'festivals', 'holiday.tu-bav', 'heart-balloon', 'Holding a heart-shaped balloon and a small bunch of grapes, sweet smile.', 'A red heart-shaped balloon on a cream string; a small bunch of green grapes.', R),
+
+  // ---------------------------------------------------------------- Brain Lab
+  S(135, 'lab', 'lab.home', 'lab-goggles-clipboard', 'Holding a clipboard and tapping it with a finger, confident smile.', 'Small round safety goggles with gold frames and sky-blue lenses over his eyes (his dot eyes visible through the lenses); a blank cream clipboard.'),
+  S(136, 'lab', 'lab.home', 'bubbling-flask', 'Holding up a round flask and looking at it with delight.', 'A round glass flask with bubbling sky-blue liquid and a few cream bubbles above it.'),
+  S(137, 'lab', 'lab.drill.hunt', 'binoculars', 'Peering through binoculars held in both hands, mouth a small o.', 'Small gold binoculars.'),
+  S(138, 'lab', 'lab.drill.matrix', 'flip-tile', 'Flipping over one tile from a short row of three, the other hand on his chin, thinking.', 'Three blank tiles: two dark green tile backs and one cream tile face, blank.'),
+  S(139, 'lab', 'lab.drill.soundmatch', 'headphones-listen', 'Wearing big headphones, eyes closed, listening and nodding.', 'Big olive-green headphones over the top of his head, behind the crown.'),
+  S(140, 'lab', 'lab.drill.siddurflash', 'quick-read-stopwatch', 'Holding a stopwatch in one hand, eyes wide and alert, the other hand raised and ready.', 'A gold stopwatch with a blank face (just two hands, no numerals). No book.'),
+  S(141, 'lab', 'lab.drill.switch', 'lever', 'Pulling a big lever with both hands, playful grin.', 'A small dark green box with a lever and a round gold handle.'),
+  S(142, 'lab', 'lab.drill.gematria', 'abacus', 'Sliding beads on an abacus with one finger, focused, pink tongue tip out.', 'A small wooden abacus with red and gold beads; no numerals.'),
+  S(143, 'lab', 'lab.drill.countup', 'counting-fingers', 'Counting on his fingers: one hand held up with three fingers raised, eyes looking up, thinking.'),
+  S(144, 'lab', 'lab.drill.numberear', 'bell-ear', 'Cupping one hand beside his head toward a ringing bell, listening closely.', 'A small gold hand bell ringing beside him with two short gold sound arcs.'),
+  S(145, 'lab', 'lab.drill.calendar', 'calendar-page', 'Holding up a big calendar page and pointing at one square, smiling.', 'A cream calendar page with a grid of empty squares and two gold rings at the top; one square circled in red; no numerals.'),
+  S(146, 'lab', 'lab.drill.pattern', 'shape-pattern', 'Holding a gold triangle, about to place it at the end of a row of shapes floating beside him, thoughtful.', 'A floating row: red circle, gold triangle, blue square, then a gap; a gold triangle in his hand.'),
+  S(147, 'lab', 'lab.result.best', 'medal-high', 'Holding a medal high with one arm, beaming, eyes happy arcs.', 'A gold medal on an olive-green ribbon; a few gold confetti pieces.'),
+  S(148, 'lab', 'lab.result.good', 'clipboard-thumbs-up', 'Nodding with a clipboard tucked under one arm, thumbs up with the other hand.', 'A blank cream clipboard.'),
+  S(149, 'lab', 'lab.levelup', 'step-up', 'Stepping up onto the higher of two blocks with one fist raised, determined smile.', 'Two dark green blocks forming a small two-step stair.'),
+  S(150, 'lab', 'lab.workout.done', 'sweatband-flex', 'Flexing both arms like a strongman, proud grin.', 'A sky-blue sweatband around his head just under the crown; one cream sweat drop.'),
+  S(151, 'lab', 'lab.streak', 'towel-jog', 'Jogging with a small towel over one shoulder, energetic smile.', 'A small cream towel.'),
+
+  // ---------------------------------------------------------------- little books, library and listening
+  S(152, 'books', 'books.shelf', 'armful-of-books', 'Carrying an armful of small books stacked up to his eyes, peeking over the top with a smile.', 'Five small books with blank dark green, red and gold covers.'),
+  S(153, 'books', 'books.shelf', 'reading-on-books', 'Sitting on a stack of books and reading one, legs dangling.', 'A stack of four small closed books (blank covers) to sit on; a small open book with blank pages.'),
+  S(154, 'books', 'book.finished', 'closing-book', 'Closing a book with both hands, satisfied closed-eye smile.', 'A small book with a blank dark green cover.'),
+  S(155, 'books', 'book.finished', 'book-held-high', 'Holding a closed book high over his head, triumphant smile.', 'A small book with a blank red cover.'),
+  S(156, 'books', 'books.milestone', 'tower-of-books', 'Standing on top of a tall stack of books and waving.', 'A tall stack of about eight small books with blank covers in dark green, red and gold.'),
+  S(157, 'books', 'library.home', 'library-cart', 'Pushing a small library cart, cheerful.', 'A small warm-brown wooden cart with two shelves of books with blank spines.'),
+  S(158, 'books', 'songs.home', 'tambourine', 'Dancing and shaking a tambourine held up high, eyes happy arcs.', 'A round tambourine with a cream skin and small gold jingles.'),
+  S(159, 'books', 'listen.home', 'headphones-sway', 'Swaying to music with headphones on, eyes closed, happy.', 'Olive-green headphones over the top of his head behind the crown; two small gold music notes.'),
+  S(160, 'books', 'phrases.home', 'phrasebook', 'Holding a small open phrasebook and pointing at a page, mouth open mid-word.', 'A small open book with blank pages.'),
+  S(161, 'books', 'dialogues.home', 'rega-gesture', 'Making the Israeli "wait a moment" hand gesture: fingertips pinched together pointing up, hand raised, cheeky grin.'),
+  S(162, 'books', 'israel.home', 'sunhat-falafel', 'Holding a falafel pita and grinning, ready for the beach.', 'A small straw sun hat tilted on the side of his crown (crown still visible); small dark sunglasses; a pita with falafel balls and green salad.'),
+
+  // ---------------------------------------------------------------- awards, progress and milestones
+  S(163, 'awards', 'awards.gallery', 'trophy-chest-high', 'Holding a trophy cup proudly at chest height, beaming.', 'A gold trophy cup, blank.'),
+  S(164, 'awards', 'awards.empty', 'polish-pedestal', 'Polishing an empty pedestal with a cloth, hopeful smile.', 'A small dark green pedestal, empty on top; a cream cloth.'),
+  S(165, 'awards', 'award.new', 'badge-up', 'Holding a badge up high with one hand, big proud smile.', 'A shiny round gold badge with a blank face and two short ribbon tails, one red and one blue.'),
+  S(166, 'awards', 'award.new', 'pin-badge', 'Pinning a badge onto his blue sash, looking down at it proudly.', 'A round gold badge with a blank face.'),
+  S(167, 'awards', 'progress.home', 'bar-chart', 'Standing beside a small bar chart and pointing at the tallest bar, pleased smile.', 'Three rising blank bars, red, gold and dark green, on a cream base; no numbers.'),
+  S(168, 'awards', 'progress.home', 'height-chart', 'Standing tall on tiptoe beside a measuring stick, checking how much he has grown, proud smile.', 'A cream measuring stick with plain gold tick marks and no numbers.'),
+  S(169, 'awards', 'share.home', 'envelope', 'Handing a sealed envelope toward the viewer with both hands, warm smile.', 'A cream envelope with a small red heart seal.'),
+  S(170, 'awards', 'daily.home', 'treasure-map', 'Holding open a treasure map and pointing at the mark on it, adventurous smile.', 'A cream map with a dotted path and a small red star mark; no writing.'),
+  S(171, 'awards', 'lessons.10', 'block-tower-three', 'Placing the third block on a small tower of blocks, careful, tongue tip out.', 'Three blank cream blocks with gold edges.'),
+  S(172, 'awards', 'lessons.25', 'block-tower-six', 'Standing beside a taller tower of six blocks with one hand on it, proud.', 'Six blank cream blocks with gold edges stacked into a tower as tall as he is.'),
+  S(173, 'awards', 'lessons.50', 'on-the-tower', 'Standing on top of a tower of blocks and waving.', 'A tower of blank cream blocks with gold edges.'),
+  S(174, 'awards', 'lessons.100', 'keystone-arch', 'Placing the last top block on a small arch made of blocks, triumphant.', 'A small arch of blank cream blocks with gold edges; the top block in his hands.'),
+
+  // ---------------------------------------------------------------- reminders and planning
+  S(175, 'reminders', 'reminder.streak', 'tap-hourglass', 'Holding a small hourglass and tapping it gently with one finger, friendly smile.', 'A small gold hourglass with cream sand.'),
+  S(176, 'reminders', 'reminder.streak', 'lean-in-wave', 'Leaning in from the left side and waving hello with a sheepish smile, full body still in the picture.'),
+  S(177, 'reminders', 'reminders.page', 'alarm-clock', 'Holding up an alarm clock, smiling.', 'A round gold alarm clock with two bells on top and a blank cream face with only two hands, no numerals.'),
+  S(178, 'reminders', 'classtrack.home', 'checklist', 'Holding a clipboard with a checklist, satisfied smile.', 'A cream clipboard with three gold check marks and blank lines; a small pencil tucked into his sash.'),
+  S(179, 'reminders', 'calendar.home', 'big-calendar', 'Holding up a big calendar page with both hands, peeking around its side with a smile.', 'A cream calendar page with a grid of empty squares and two gold rings at the top; no numerals.'),
+
+  // ---------------------------------------------------------------- errors, offline, loading and other screens
+  S(180, 'screens', 'error.notfound', 'map-upside-down', 'Holding a paper map upside down and scratching his crown, confused, mouth a small sideways line.', 'A cream map with a dotted path, no writing.'),
+  S(181, 'screens', 'error.notfound', 'flashlight', 'Shining a flashlight off to one side and peering after it, curious.', 'A small dark green flashlight with a pale gold beam.'),
+  S(182, 'screens', 'error.view', 'toolbox', 'Holding a wrench in one hand and a small toolbox in the other, determined smile, a small soft grey smudge on one cheek.', 'A gold wrench; a small red toolbox.'),
+  S(183, 'screens', 'offline.lost', 'unplugged', 'Holding up the end of an unplugged cable and shrugging, sheepish smile.', 'A dark green cable with a cream plug.'),
+  S(184, 'screens', 'offline.back', 'plugged-in', 'Pushing a plug into a socket with a cheer, one fist up.', 'A dark green cable with a cream plug going into a small cream socket block.'),
+  S(185, 'screens', 'offline.page', 'packing-suitcase', 'Packing small books into an open suitcase, cheerful.', 'A small dark green suitcase with gold clasps; two small books with blank covers.'),
+  S(186, 'screens', 'loading.slow', 'patient-hourglass', 'Tapping one foot, patient smile, looking at a small hourglass in his hand.', 'A small gold hourglass with cream sand running.'),
+  S(187, 'screens', 'settings.home', 'gear-wrench', 'Turning a big gear with a wrench, focused, pink tongue tip out.', 'A big gold gear; a soft grey wrench.'),
+  S(188, 'screens', 'help.home', 'lifebuoy', 'Holding a lifebuoy ring out toward the viewer, friendly helpful smile.', 'A red and cream lifebuoy ring.'),
+  S(189, 'screens', 'about.home', 'nice-to-meet-you', 'A slight bow with one hand on his chest and the other open toward the viewer, warm smile.'),
+  S(190, 'screens', 'search.home', 'peek-in-box', 'Lifting the lid of a box and peeking inside, curious.', 'A small cream box with a gold lid.'),
+  S(191, 'screens', 'letters.home', 'tile-weightlifter', 'Holding a big tile overhead with both arms like a weightlifter, grinning.', 'A big blank cream square tile with rounded corners and a gold edge.'),
+  S(192, 'screens', 'typing.home', 'typing', 'Sitting with a small keyboard on his knees and typing, focused, pink tongue tip out.', 'A small dark green keyboard with blank cream keys.'),
+  S(193, 'screens', 'scan.home', 'camera', 'Holding a small camera up to one eye and taking a picture, the other eye closed.', 'A small cream camera with a dark lens.'),
+  S(194, 'screens', 'games.hub', 'game-controller', 'Holding a game controller with both hands, thumbs on the buttons, excited.', 'A dark green game controller with gold buttons.'),
+  S(195, 'screens', 'synagogues.home', 'map-pin', 'Holding a big map pin in one hand and waving with the other, friendly.', 'A big red map pin with a cream dot.', R),
+  S(196, 'screens', 'grammar.home', 'puzzle-pieces', 'Fitting two puzzle pieces together in front of him, satisfied smile.', 'One gold and one dark green puzzle piece.'),
+  S(197, 'screens', 'roots.home', 'root-sprout', 'Watering a sprout in a clear pot that shows its roots, happy.', 'A clear glass pot with soil and white roots visible, a green sprout on top; a small gold watering can.'),
+  S(198, 'screens', 'vocab.home', 'big-dictionary', 'Carrying a big thick book in both arms, straining playfully, small sweat drop.', 'A big thick book with a blank dark green cover and gold page edges.'),
+  S(199, 'screens', 'speak.home', 'microphone', 'Holding a small microphone and speaking into it, mouth open, other hand out.', 'A small soft grey microphone.'),
+  S(200, 'screens', 'traditions.home', 'three-voices', 'Listening with a cupped hand and a smile to three speech bubbles floating beside him.', 'Three blank speech-bubble shapes, red, gold and blue.'),
+]);
+
+const pad3 = (n) => String(n).padStart(3, '0');
+/**
+ * Catalogue stills: runtime id 'a007'; file data/images/rimon/v2/rimon-007-<slug>.webp (the folder the catalogue is being
+ * drawn into on feature/rimon-stills-2026-11-10). Plain numbers at the top of data/images/rimon belong to the drawn set in art-map.mjs.
+ */
+export const fileId = (n) => `a${pad3(n)}`;
+export const fileStem = (n) => `v2/rimon-${pad3(n)}-${STILLS[n - 1].slug}`;
+export const pathOf = (n) => `data/images/rimon/${fileStem(n)}.webp`;
+
+/** The full prompt for one still, ready to paste. */
+export function promptFor(s) {
+  const parts = [
+    `Draw still ${fileId(s.n)} of Rimon, the pomegranate mascot of the Aleph Hebrew course. Match the reference picture (${REFERENCE}) exactly: same character, same colours, same flat style.`,
+    `CHARACTER: ${CHARACTER}`,
+    `STYLE: ${STYLE}`,
+    `THIS STILL: ${s.pose}`,
+    `PROPS: ${s.props || 'None.'}`,
+  ];
+  if (s.respect) parts.push(RESPECT);
+  parts.push(`FRAMING AND OUTPUT: ${FRAMING}`, `NEVER: ${NEVER}`);
+  return parts.join('\n');
+}

@@ -133,7 +133,12 @@ self.addEventListener('fetch', (event) => {
   const req = event.request;
   if (req.method !== 'GET') return;
   const url = new URL(req.url);
-  if (url.origin !== self.location.origin) return;
+  // Talk language pack files kept on the device, when the packs come from a pack host (data/talk/pack-host.json): serve the kept copy.
+  // Nothing else from another address is ever touched here.
+  if (url.origin !== self.location.origin) {
+    if (/\/_(nmt|ort)\//.test(url.pathname)) event.respondWith((async () => (await caches.match(req.url)) || fetch(req))());
+    return;
+  }
   if (req.headers.has('range')) {
     if (!AUDIO.test(url.pathname)) return; // other media: the network handles Range as before
     event.respondWith((async () => {

@@ -1,6 +1,6 @@
 // @ts-check
 // Talk translation pack: the page's side. One shared instance serves the Talk screen and the Camera Translator.
-import { loadManifest, packFiles, packState, downloadPack, removePacks, hasGraphics, PACK_CACHE, NMT_BASE } from './pack.js';
+import { loadManifest, packFiles, packState, downloadPack, removePacks, hasGraphics, PACK_CACHE, NMT_BASE, ORT_LOCAL } from './pack.js';
 
 /** Longest line handed to the pack; longer text is cut at a sentence end by the caller. */
 export const MAX_LINE = 400;
@@ -62,8 +62,9 @@ export function createPackClient(cfg = {}) {
           const st = await packState(m, direction, { ...env, gpu: await graphics() });
           if (!st.ready) return false;
           const all = packFiles(m, direction, { gpu: st.gpu });
-          const files = all.map((f) => ({ ...f, path: f.key.startsWith(NMT_BASE) ? f.key.slice(NMT_BASE.length).replace(/\?.*$/, '') : f.key }));
-          sent[direction] = { direction, pack: m.packs[direction], files, gpu: st.gpu, version: m.version, slowMs: /** @type {any} */ (globalThis).__alefGpuSlowMs || 0, cache: PACK_CACHE, ortBase: new URL(m.runtime.base, NMT_BASE).href };
+          const from = m.base || NMT_BASE;
+          const files = all.map((f) => ({ ...f, path: f.key.startsWith(from) ? f.key.slice(from.length).replace(/\?.*$/, '') : f.key }));
+          sent[direction] = { direction, pack: m.packs[direction], files, gpu: st.gpu, version: m.version, slowMs: /** @type {any} */ (globalThis).__alefGpuSlowMs || 0, cache: PACK_CACHE, ortBase: ORT_LOCAL };
           const done = await ask({ ...sent[direction], type: 'load' });
           engines[direction] = done.info || null;
           loaded.add(direction);

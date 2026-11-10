@@ -226,3 +226,16 @@ test('the graphics-card graphs, run on the processor: they read their weights fr
     for (const p of manifest.packs[d].probe) assert.equal(await rt.translate(p.text, { beams: 2 }), p.expect, p.text);
   }
 });
+
+test('a deploy built without the packs leaves out pack data only; the pack host is named once, allowed for reading data, never for scripts', async () => {
+  const { isPackData } = await import('../tools/deploy/make-dist.mjs');
+  for (const f of ['assets/vendor/_nmt/manifest.json', 'assets/vendor/_nmt/he-en/table.p0.bin', 'assets/vendor/_ort/ort-wasm-simd-threaded.wasm', 'assets/vendor/_ort/ort-wasm-simd-threaded.asyncify.p1.bin']) assert.equal(isPackData(f), true, f);
+  for (const f of ['assets/vendor/_ort/ort.wasm.min.mjs', 'assets/vendor/_ort/ort.webgpu.min.mjs', 'assets/vendor/_tesseract/heb.traineddata', 'src/talk/nmt/pack.js', 'data/talk/pack-host.json']) assert.equal(isPackData(f), false, f);
+  const hosts = json('data/talk/pack-host.json').hosts;
+  assert.equal(hosts.length, 1); assert.match(hosts[0], /^https:\/\/alenzacodes\.github\.io\/alef-packs\/_nmt\/$/);
+  const csp = /Content-Security-Policy:\s*(.+)/.exec(readFileSync(join(root, '_headers'), 'utf8'))[1];
+  assert.match(/connect-src ([^;]*)/.exec(csp)[1], /https:\/\/alenzacodes\.github\.io/);
+  assert.match(csp, /script-src 'self' 'wasm-unsafe-eval';/, 'scripts still come from the site only');
+  const files = packFiles({ ...manifest, base: hosts[0] }, 'he-en');
+  for (const f of files) assert.equal(f.key.startsWith(hosts[0].replace('_nmt/', '')), !/\.mjs$/.test(f.key), f.key);
+});

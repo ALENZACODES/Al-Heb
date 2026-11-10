@@ -81,12 +81,17 @@ export function listShipFiles({ img = false } = {}) {
   return [...set].filter((r) => !NEVER(r)).sort();
 }
 
-export function makeDist({ out = 'dist', img = false } = {}) {
+/** With the packs left out, these are not copied: the pack parts and lists, and the runtime's WebAssembly. The runtime's code stays. */
+export const isPackData = (rel) => rel.startsWith('assets/vendor/_nmt/') || (rel.startsWith('assets/vendor/_ort/') && /\.(wasm|bin)$/.test(rel));
+
+export function makeDist({ out = 'dist', img = false, packs = process.env.ALEF_PACKS === 'remote' ? 'remote' : 'local' } = {}) {
   const dist = join(ROOT, out);
   if (!dist.startsWith(ROOT + sep) || dist === ROOT) throw new Error('--out must be a folder inside the repo');
   rmSync(dist, { recursive: true, force: true });
   mkdirSync(dist, { recursive: true });
-  const files = listShipFiles({ img }).filter((r) => r !== 'precache-manifest.js');
+  // packs: 'remote' builds a copy of the site without the Talk language packs (about 185 MiB lighter); the app then fetches them
+  // from the pack host named in data/talk/pack-host.json. Set by --packs-remote or ALEF_PACKS=remote.
+  const files = listShipFiles({ img }).filter((r) => r !== 'precache-manifest.js').filter((r) => packs !== 'remote' || !isPackData(r));
   for (const rel of files) { mkdirSync(dirname(join(dist, rel)), { recursive: true }); copyFileSync(join(ROOT, rel), join(dist, rel)); }
   const m = computeManifest(dist); // same rules, applied to what actually ships
   writeFileSync(join(dist, 'precache-manifest.js'), manifestText(m, 'tools/deploy/make-dist.mjs'));

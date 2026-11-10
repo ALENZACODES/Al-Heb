@@ -6,6 +6,9 @@
 
 export const PACK_CACHE = 'alef-talk-pack-v1';
 export const NMT_BASE = new URL('../../../assets/vendor/_nmt/', import.meta.url).href;
+/** The runtime's code files always come from the site itself, wherever the data files come from. */
+export const ORT_LOCAL = new URL('../_ort/', NMT_BASE).href;
+export const HOSTS_FILE = new URL('../../../data/talk/pack-host.json', import.meta.url).href;
 export const DIRECTIONS = Object.freeze(['he-en', 'en-he']);
 export const DIRECTION_LABEL = Object.freeze({ 'he-en': 'Hebrew to English', 'en-he': 'English to Hebrew' });
 
@@ -22,34 +25,49 @@ export const megabytes = (bytes) => Math.max(1, Math.round(bytes / 1048576));
  * @returns {{key:string, url:string, bytes:number, sha256:string}[]}
  */
 export function packFiles(manifest, direction, opts = {}) {
-  const base = (typeof opts === 'string' ? opts : opts.base) || NMT_BASE;
+  const base = (typeof opts === 'string' ? opts : opts.base) || manifest?.base || NMT_BASE;
   const gpu = typeof opts === 'object' && !!opts.gpu && !!manifest?.gpuRuntime && !!manifest?.packs?.[direction]?.gpu?.length;
   const pack = manifest?.packs?.[direction];
   if (!pack) return [];
   const out = [];
   const runtime = gpu ? manifest.gpuRuntime : manifest.runtime;
   const rt = new URL(runtime.base, base).href;
-  for (const f of runtime.files) out.push({ key: rt + f.path, url: versioned(rt + f.path, f.sha256), bytes: f.bytes, sha256: f.sha256 });
+  // code (.mjs) from the site itself; the WebAssembly, like every other data file, from wherever the packs are
+  for (const f of runtime.files) { const at = (/\.mjs$/.test(f.path) && base !== NMT_BASE ? ORT_LOCAL : rt) + f.path; out.push({ key: at, url: versioned(at, f.sha256), bytes: f.bytes, sha256: f.sha256 }); }
   for (const f of [...pack.files, ...(gpu ? pack.gpu : [])]) for (const p of f.parts) { const u = versioned(base + p.path, p.sha256); out.push({ key: u, url: u, bytes: p.bytes, sha256: p.sha256 }); }
   return out;
 }
 
-/** @param {{caches?:any, fetch?:any}} [env] */
+/**
+ * The pack list. The site's own copy is tried first. A copy of the site built without the packs has none, and then the hosts
+ * named in data/talk/pack-host.json are tried in order. The list remembers where it came from (`base`), and every pack part is
+ * fetched from there. Offline, the copy saved with the pack is used.
+ * @param {{caches?:any, fetch?:any}} [env]
+ */
 export async function loadManifest(env = {}) {
   const cachesApi = env.caches ?? globalThis.caches; const fetchImpl = env.fetch ?? globalThis.fetch;
-  const url = NMT_BASE + 'manifest.json';
-  try {
-    const res = await fetchImpl(url, { cache: 'no-cache' });
+  const tryBase = async (base, opts) => {
+    const url = base + 'manifest.json';
+    const res = await fetchImpl(url, opts);
     if (!res.ok) throw new Error(String(res.status));
     const copy = res.clone();
     const m = await res.json();
+    if (!m || !m.packs) throw new Error('not a pack list');
     try { await (await cachesApi.open(PACK_CACHE)).put(url, copy); } catch { /* no cache storage: the pack cannot be kept, state() will say so */ }
-    return m;
-  } catch (e) {
-    const hit = cachesApi ? await (await cachesApi.open(PACK_CACHE)).match(url) : null; // offline: the copy saved with the pack
-    if (hit) return hit.json();
-    throw e;
+    return Object.assign(m, { base });
+  };
+  let hosts = [];
+  try { return await tryBase(NMT_BASE, { cache: 'no-cache' }); } catch { /* not carried by this copy of the site, or offline */ }
+  try { const r = await fetchImpl(HOSTS_FILE); if (r.ok) hosts = ((await r.json()).hosts || []).filter((h) => /^https?:\/\/.+\/$/.test(h)); } catch { /* offline */ }
+  // From another address the request must stay a plain one (no cache directive: that adds a header the host would have to approve first).
+  for (const h of hosts) { try { return await tryBase(h, { mode: 'cors' }); } catch { /* next host */ } }
+  // offline: the list saved with the pack, from wherever it came
+  if (cachesApi) {
+    const cache = await cachesApi.open(PACK_CACHE);
+    for (const base of [NMT_BASE, ...hosts]) { const hit = await cache.match(base + 'manifest.json'); if (hit) return Object.assign(await hit.json(), { base }); }
+    for (const req of await cache.keys()) if (/\/manifest\.json$/.test(req.url)) { const hit = await cache.match(req); if (hit) return Object.assign(await hit.json(), { base: req.url.replace(/manifest\.json$/, '') }); }
   }
+  throw new Error('no pack list');
 }
 
 /** A kept file is good when it carries the hash the manifest names. */
@@ -99,7 +117,9 @@ export async function downloadPack(manifest, direction, opts = {}) {
   let have = 0;
   for (const f of files) {
     if (await kept(cache, f)) { have += f.bytes; opts.onProgress?.(have, total); continue; }
-    const res = await fetchImpl(f.url, { cache: 'no-store', signal: opts.signal });
+    // every address carries the file's hash, so a stale copy cannot be served; a cache directive is kept off requests to another address
+    const own = f.url.startsWith(new URL(NMT_BASE).origin + '/');
+    const res = await fetchImpl(f.url, own ? { cache: 'no-store', signal: opts.signal } : { mode: 'cors', signal: opts.signal });
     if (!res.ok) throw new Error(`fetch ${res.status}`);
     const chunks = []; let got = 0;
     if (res.body && typeof res.body.getReader === 'function') {
@@ -122,7 +142,7 @@ export async function downloadPack(manifest, direction, opts = {}) {
 /** Drops kept files the current manifest no longer names (an older pack version). */
 async function prune(manifest, cachesApi) {
   try {
-    const keep = new Set([NMT_BASE + 'manifest.json']);
+    const keep = new Set([(manifest.base || NMT_BASE) + 'manifest.json']);
     for (const d of Object.keys(manifest.packs || {})) for (const gpu of [false, true]) for (const f of packFiles(manifest, d, { gpu })) keep.add(f.key);
     const cache = await cachesApi.open(PACK_CACHE);
     // engine-<direction>.json is the remembered outcome of the graphics-card check (src/talk/nmt/worker.js); it carries the pack version

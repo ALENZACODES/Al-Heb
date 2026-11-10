@@ -8,12 +8,14 @@
 #  - script-src 'wasm-unsafe-eval': the vendored Tesseract OCR core (assets/vendor/_tesseract) is WebAssembly.
 #  - worker-src blob: and img-src/media-src blob: data: : OCR worker, photo canvas, picked photos.
 #  - connect-src also allows http://127.0.0.1:* and http://localhost:* : the optional "local translation helper" on the learner's own computer.
+#  - connect-src https://alenzacodes.github.io : the pack host (data/talk/pack-host.json), the project's own static file host. Only data files are
+#    read from it (Talk language pack parts, each checked against a SHA-256); no script is ever loaded from it (script-src stays 'self').
 #  - No third-party origin is allowed: an earlier online vowel service and a cloud-vision adapter named third-party
 #    hosts in src/photo/engines/web.js; both were removed 2026-11-07 (fix #16) because this CSP blocked them and
 #    the vowel service publishes no terms. The app sends recognised text nowhere except the learner's own loopback helper.
 
 /*
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' blob:; font-src 'self'; connect-src 'self' http://127.0.0.1:* http://localhost:*; worker-src 'self' blob:; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' blob:; font-src 'self'; connect-src 'self' http://127.0.0.1:* http://localhost:* https://alenzacodes.github.io; worker-src 'self' blob:; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'
   X-Content-Type-Options: nosniff
   Referrer-Policy: no-referrer
   Permissions-Policy: camera=(self), geolocation=(self), microphone=(self), payment=(), usb=(), bluetooth=(), serial=(), interest-cohort=()

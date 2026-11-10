@@ -41,3 +41,15 @@ test('e2e #/talk with a (software) graphics adapter: the larger runtime and the 
   assert.match(r.results[0].translation, /dog/i);
   assert.match(r.speed, /ms a line on the graphics chip, \d+ ms a line on the processor\. In use: the processor\./);
 });
+
+test('e2e #/talk on a copy of the site built without the packs: they are pulled from the pack host, kept, and found again after a reload', { skip: !runTalk, timeout: 400000 }, async () => {
+  const { mkdtempSync } = await import('node:fs'); const { tmpdir } = await import('node:os'); const { spawnSync } = await import('node:child_process');
+  const dir = mkdtempSync(join(tmpdir(), 'alef-packs-'));
+  assert.equal(spawnSync('node', ['tools/talk/nmt/export-host.mjs', dir], { cwd: root }).status, 0);
+  const r = await runTalk({ direction: 'he-en', packHost: dir });
+  assert.ok(r.fromHost >= 9, `${r.fromHost} files came from the pack host`);
+  assert.deepEqual(r.externalOrigins, [new URL(r.hostBase).origin], 'the pack host is the only other address contacted');
+  assert.deepEqual(r.posts, []);
+  assert.match(r.packNote, /is ready\. It works offline/);
+  assert.match(r.results[0].translation, /dog/i); assert.equal(r.refetched, 0); assert.equal(r.again.translation, r.results[0].translation);
+});

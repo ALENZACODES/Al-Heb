@@ -50,6 +50,16 @@ The encoder and decoder can run on the device's graphics card. The word table st
 - **What was tested.** Headless Chromium with a software adapter, under the site's content policy: the files load, the answers match, a line is answered on the card when the slow adapter is accepted for the test, and the slow adapter is otherwise turned down (about 20 seconds a line against half a second on the processor). `tests/talk.nmt.browser.test.js`; the graphs also run on the processor in `tests/talk.nmt.test.js`.
 - **What was not tested.** Any real graphics card. Whether it is faster than the processor for lines this short is not known; small models often are not. "Check Translation Speed" on the Talk screen times both ways on the device and says which is in use.
 
+## The Pack Host (A Second Repository)
+
+The packs are in this repository and also in `ALENZACODES/alef-packs`, which holds nothing else (198 MiB: the two packs and the runtime's WebAssembly).
+
+- A copy of the site that carries the packs uses its own. Nothing changes for it.
+- A copy built without them (`node tools/deploy/build_site.mjs --packs-remote`, or `ALEF_PACKS=remote`) is about 185 MiB lighter. On it the app finds no pack list of its own and reads the one at the address in `data/talk/pack-host.json`, then fetches every pack part from there.
+- Only data comes from the pack host: pack parts and WebAssembly, each checked against its SHA-256. Code always comes from the site itself. The content policy allows the host for reading data (`connect-src`) and nothing else.
+- To refresh the pack host after a pack changes: `node tools/talk/nmt/export-host.mjs <fresh clone of alef-packs>`, commit, push.
+- Tested in a real browser against a stand-in host serving that exact folder (`tests/talk.nmt.browser.test.js`). Not tested against the live GitHub Pages address, which does not exist until Pages is turned on for `alef-packs`.
+
 ## Where The Lines Come From
 
 | File | Use |

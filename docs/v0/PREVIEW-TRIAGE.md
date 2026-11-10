@@ -20,6 +20,7 @@ decision, so the More sheet stays short and the first session stays coherent (we
 | `fade` | keep | Fade-out recall; target for `nikkud-fade`. |
 | `wordtrace` | keep | Extends letter tracing (a v0 page). |
 | `israel` | keep | Israel goal path. |
+| `israelunits` | keep | Unit-by-unit Israel track; listed next to `israel` and `intermediate`. |
 | `traditions` | keep | Target for `traditions-guide` and `traditions-hear`. |
 | `traditions-guide` | merge | Into `traditions` (already a tab there). |
 | `traditions-hear` | merge | Into `traditions` (already a tab there); no recorded audio yet. |

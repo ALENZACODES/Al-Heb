@@ -10,13 +10,13 @@ Counts are required clips only (optional whole-prayer reads and aliases excluded
 
 | tradition | voice | P1 letters+finals | P2 vowels+syllables | P3 core prayers | P4 words | priority total | est. donor hours (priority) | all required clips | est. donor hours (all) |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| israeli | f | 27 | 125 | 41 | 500 | 693 | 3.9 to 5.8 | 5483 | 30.5 to 45.7 |
-| israeli | m | 27 | 125 | 41 | 500 | 693 | 3.9 to 5.8 | 5483 | 30.5 to 45.7 |
-| ashkenazi | f | 27 | 125 | 41 | 500 | 693 | 3.9 to 5.8 | 3698 | 20.5 to 30.8 |
-| ashkenazi | m | 27 | 125 | 41 | 500 | 693 | 3.9 to 5.8 | 3698 | 20.5 to 30.8 |
-| sephardi | f | 27 | 125 | 41 | 500 | 693 | 3.9 to 5.8 | 3698 | 20.5 to 30.8 |
-| sephardi | m | 27 | 125 | 41 | 500 | 693 | 3.9 to 5.8 | 3698 | 20.5 to 30.8 |
-| **all** | | | | | | **4158** | **23.1 to 34.6** | **25758** | **143.1 to 214.7** |
+| israeli | f | 27 | 125 | 41 | 500 | 693 | 3.9 to 5.8 | 5144 | 28.6 to 42.9 |
+| israeli | m | 27 | 125 | 41 | 500 | 693 | 3.9 to 5.8 | 5144 | 28.6 to 42.9 |
+| ashkenazi | f | 27 | 125 | 41 | 500 | 693 | 3.9 to 5.8 | 3360 | 18.7 to 28.0 |
+| ashkenazi | m | 27 | 125 | 41 | 500 | 693 | 3.9 to 5.8 | 3360 | 18.7 to 28.0 |
+| sephardi | f | 27 | 125 | 41 | 500 | 693 | 3.9 to 5.8 | 3360 | 18.7 to 28.0 |
+| sephardi | m | 27 | 125 | 41 | 500 | 693 | 3.9 to 5.8 | 3360 | 18.7 to 28.0 |
+| **all** | | | | | | **4158** | **23.1 to 34.6** | **23728** | **131.8 to 197.7** |
 
 ## Notes and honest caveats
 
@@ -24,9 +24,9 @@ Counts are required clips only (optional whole-prayer reads and aliases excluded
 - P2: all niqqud clips plus every syllable drill in the manifest. The manifest has 110 syllables per voice, not ~120, so the count is 110.
 - P3: prayer LINES whose id matches the core list in `CORE_PRAYER_RE` (Modeh Ani, Shema and V'ahavta lines, blessing formula, Torah-reading blessings, Kiddush wine, bread, candles, Shehecheyanu and a few others). This is a draft choice by the tool author, not a rabbinic or product decision; the research target was about 60 lines.
 - P4: the manifest does not contain 500 of the 500 most frequent Hebrew words. Words are ranked by frequency rank in data/vocab/words.json where the spelling matches, then by how often the word occurs in the manifest; the top 500 distinct pointed words are taken (each recorded once per voice and tradition). How many of those are inside the true frequency top 500:
-  - israeli: 3289 distinct pointed words in the manifest; picked 500; 500 of them match the vocabulary list; 500 are inside the frequency top 500.
-  - sephardi: 2217 distinct pointed words in the manifest; picked 500; 500 of them match the vocabulary list; 500 are inside the frequency top 500.
-  - ashkenazi: 2217 distinct pointed words in the manifest; picked 500; 500 of them match the vocabulary list; 500 are inside the frequency top 500.
+  - israeli: 3149 distinct pointed words in the manifest; picked 500; 500 of them match the vocabulary list; 500 are inside the frequency top 500.
+  - sephardi: 2075 distinct pointed words in the manifest; picked 500; 500 of them match the vocabulary list; 500 are inside the frequency top 500.
+  - ashkenazi: 2075 distinct pointed words in the manifest; picked 500; 500 of them match the vocabulary list; 500 are inside the frequency top 500.
 - Words in P4 appear once; other manifest ids with the same pointed text are left as long tail (an equivalence rule or a re-slice could reuse the recording; not decided).
 - Sephardi: listed for completeness, but no Sephardi kit exists until someone with authority decides which Israeli clips may stand in (see docs/voices/kit/README.md). Do not schedule Sephardi donors yet.
 - Transliteration comes from data/vocab/words.json for matched words (modern Israeli style, even in the Ashkenazi list), from the clip id for letter names (e.g. `kaf final`), and from the manifest IPA for vowels and syllables; empty otherwise. It is a prompt for the director, not a pronunciation authority.

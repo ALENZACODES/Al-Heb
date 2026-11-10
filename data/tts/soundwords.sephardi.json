@@ -90,7 +90,7 @@
   "byFlag": {
    "final-stress-assumed": 2426,
    "pharyngeal-merged": 1173,
-   "mobile-shva": 1171,
+   "mobile-shva": 1172,
    "stress-from-small-list": 509,
    "maqaf-compound": 220,
    "aramaic": 197,
@@ -1031,8 +1031,8 @@
   {"id":"i-35-w10","kind":"word","group":"lesson-word","voices":["m","f"],"he":"בֵּרַךְ","soundtext":"be-ráj","confidence":"medium","flags":["final-stress-assumed"]},
   {"id":"i-35-w11","kind":"word","group":"lesson-word","voices":["m","f"],"he":"וַיְקַדְּשֵׁהוּ","soundtext":"vai-ka-de-she-hú","confidence":"medium","flags":["final-stress-assumed","mobile-shva"]},
   {"id":"i-35-w12","kind":"word","group":"lesson-word","voices":["m","f"],"he":"שַׁבָּת","soundtext":"sha-bát","confidence":"medium","flags":["stress-from-small-list"]},
-  {"id":"i-28-w13","kind":"word","group":"lesson-word","voices":["m","f"],"he":"רַחֲמִים","soundtext":"ra-ja-mím","confidence":"medium","flags":["final-stress-assumed","pharyngeal-merged"]},
   {"id":"i-29-w13","kind":"word","group":"lesson-word","voices":["m","f"],"he":"חַג כָּשֵׁר וְשָׂמֵחַ","soundtext":"jág ka-shér ve-sa-mé-aj","confidence":"medium","flags":["final-stress-assumed","furtive-stress-own-rule","mobile-shva","pharyngeal-merged"]},
+  {"id":"i-28-w13","kind":"word","group":"lesson-word","voices":["m","f"],"he":"גְּמַר חֲתִימָה טוֹבָה","soundtext":"gue-már ja-ti-má to-vá","confidence":"medium","flags":["final-stress-assumed","mobile-shva","pharyngeal-merged"]},
   {"id":"bless-priestly-1-w1","kind":"word","group":"prayer-word","voices":["m","f"],"he":"יְבָרֶכְךָ","soundtext":"ye-va-rej-já","confidence":"medium","flags":["final-stress-assumed","mobile-shva"]},
   {"id":"bless-priestly-1-w2","kind":"word","group":"prayer-word","voices":["m","f"],"he":"אֲדֹנָי","soundtext":"a-do-nái","confidence":"medium","flags":["stress-from-small-list"]},
   {"id":"bless-priestly-1-w3","kind":"word","group":"prayer-word","voices":["m","f"],"he":"וְיִשְׁמְרֶךָ׃","soundtext":"ve-yish-me-re-já","confidence":"medium","flags":["final-stress-assumed","mobile-shva"]},

@@ -45,6 +45,28 @@ export function editDistance(a, b) {
   return prev[b.length];
 }
 
+/**
+ * How far a reading is from a listed phrase IF the only things that went wrong are the things a hidden or damaged letter
+ * causes: a letter of the phrase missing from the reading; a thin stroke (yod, vav, final nun) read where a letter was
+ * hidden, or added; one look-alike letter for another. Any other difference makes the phrase impossible (Infinity).
+ * This is what keeps "flower shop" from being guessed as "bookshop".
+ */
+export function hiddenLetterDistance(reading, phrase) {
+  const THIN = 'יון'; const INF = 1e9;
+  let prev = Array.from({ length: phrase.length + 1 }, (_, j) => j);            // phrase letters missing from the reading
+  for (let i = 1; i <= reading.length; i++) {
+    const r = reading[i - 1]; const extra = THIN.includes(r) ? 1 : INF;
+    const cur = [Math.min(INF, prev[0] + extra)];
+    for (let j = 1; j <= phrase.length; j++) {
+      const p = phrase[j - 1];
+      const sub = r === p ? 0 : (THIN.includes(r) || ALIKE.has(r + p)) ? 1 : INF;
+      cur.push(Math.min(INF, prev[j - 1] + sub, prev[j] + extra, cur[j - 1] + 1));
+    }
+    prev = cur;
+  }
+  return prev[phrase.length] >= INF ? Infinity : prev[phrase.length];
+}
+
 /** Number of differing letters when a and b have the same length, else Infinity. */
 function substitutions(a, b) {
   if (a.length !== b.length) return Infinity;
@@ -77,10 +99,17 @@ function oneLetterAddedOrRemoved(a, b) {
   return false;
 }
 
-/** English glosses in English order: a describing word that follows its noun in Hebrew ("price new") goes before it. */
+/**
+ * English glosses in English order. Hebrew puts a describing word after its noun ("price new") and the kind of place before
+ * what it is for ("store optics"); English does the opposite. Only words marked `describes` or `head` in the word list move.
+ */
 function englishOrder(segs) {
   const en = segs.map((s) => s.en);
-  for (let i = 0; i + 1 < segs.length; i++) if (segs[i].kind === 'word' && !segs[i].describes && segs[i + 1].describes) { [en[i], en[i + 1]] = [en[i + 1], en[i]]; i++; }
+  for (let i = 0; i + 1 < segs.length; i++) {
+    const a = segs[i]; const b = segs[i + 1];
+    if (a.kind !== 'word' || b.kind !== 'word') continue;
+    if ((!a.describes && b.describes) || (a.head && !b.describes && !b.head)) { [en[i], en[i + 1]] = [en[i + 1], en[i]]; i++; }
+  }
   return en;
 }
 
@@ -174,7 +203,10 @@ export function createGlossary(data, { phrasebook = [] } = {}) {
     return { hits: steps(t).find((h) => h.length) || [], short: n < 4, real: realWords.has(t) };
   });
   const options = (c) => (c ? (c.exact ? [c.exact] : c.hits) : []);
-  const phraseFit = (h, prevs, nexts) => prevs.some((p) => entries.has(`${p} ${h}`)) || nexts.some((x) => entries.has(`${h} ${x}`));
+  const isName = (w) => [...entries.keys()].some((k) => entries.get(k).name && (k === w || k.split(' ')[0] === w || k.split(' ').pop() === w));
+  // "Fits a listed phrase": a listed phrase with the word beside it, or a street/boulevard/square word beside a listed place name.
+  const phraseFit = (h, prevs, nexts) => prevs.some((p) => entries.has(`${p} ${h}`)) || nexts.some((x) => entries.has(`${h} ${x}`))
+    || (patterns.has(h) && nexts.some(isName)) || (isName(h) && prevs.some((p) => patterns.has(p)));
   const looseFit = (h, prevs, nexts) => (patterns.has(h) && nexts.some((x) => vocabSet.has(x))) || prevs.some((p) => patterns.has(p))
     || (describes(h) && prevs.some((p) => vocabSet.has(p) && !describes(p))) || nexts.some((x) => describes(x) && !describes(h));
   /** Resolve every token to a listed word where the rules allow. Returns {toks, usedNear}. */
@@ -217,7 +249,7 @@ export function createGlossary(data, { phrasebook = [] } = {}) {
     for (const t of targets) {
       const limit = Math.max(1, Math.floor(t.joined.length / 4));
       if (Math.abs(t.joined.length - letters.length) > limit) continue;
-      const d = editDistance(letters, t.joined);
+      const d = hiddenLetterDistance(letters, t.joined);
       if (d > limit) continue;
       if (d < bestD) { second = bestD; bestD = d; best = t; } else if (d < second && t.en !== best.en) second = d;
     }
@@ -235,7 +267,7 @@ export function createGlossary(data, { phrasebook = [] } = {}) {
       let hit = null; let n = Math.min(maxLen, toks.length - i);
       for (; n > 0; n--) { hit = entries.get(toks.slice(i, i + n).join(' ')); if (hit) break; }
       if (!hit) return asPhrase || closestPhrase(raw) || none;
-      segs.push({ he: hit.he, en: hit.en, pointed: hit.pointed || null, translit: hit.translit || null, kind: 'word', describes: !!hit.describes });
+      segs.push({ he: hit.he, en: hit.en, pointed: hit.pointed || null, translit: hit.translit || null, kind: 'word', describes: !!hit.describes, head: !!hit.head });
       i += n;
     }
     if (!segs.some((x) => x.kind === 'word')) return none;
@@ -257,7 +289,7 @@ export function createGlossary(data, { phrasebook = [] } = {}) {
     return translateTokens(hebrewTokens(text));
   }
   /** One listed word (single-word entries only), or null. */
-  const entry = (tok) => { const e = entries.get(tok); return e ? { he: e.he, en: e.en, pointed: e.pointed || null, translit: e.translit || null, describes: !!e.describes } : null; };
+  const entry = (tok) => { const e = entries.get(tok); return e ? { he: e.he, en: e.en, pointed: e.pointed || null, translit: e.translit || null, describes: !!e.describes, head: !!e.head } : null; };
   /** Longest listed phrase starting at toks[i]: {n, entry} or null. */
   const longest = (toks, i) => {
     for (let n = Math.min(maxLen, toks.length - i); n > 0; n--) { const e = entry(toks.slice(i, i + n).join(' ')); if (e) return { n, entry: e }; }
@@ -288,7 +320,7 @@ export function createDictionary(index) {
     // Signs and menus name things: nouns and describing words come before verbs, then the more frequent word first.
     for (const list of by.values()) list.sort((a, b) => (a.verb - b.verb) || (a.rank - b.rank));
   }
-  const senses = (key) => (by.get(key) || []).slice(0, 3).map(({ he, en, translit, pos }) => ({ he, en, translit, pos }));
+  const senses = (key, max = 3) => (by.get(key) || []).slice(0, max).map(({ he, en, translit, pos }) => ({ he, en, translit, pos }));
   return { size: by.size, senses };
 }
 
@@ -305,7 +337,7 @@ export function wordBreakdown(he, glossary, dictionary) {
     const word = toks[i];
     if (NUM_RE.test(word) || LATIN_RE.test(word)) { out.push({ word, kind: 'number', senses: [] }); i++; continue; }
     const listed = glossary?.longest?.(toks, i);          // a listed phrase ("kosher restaurant") stays together
-    if (listed) { out.push({ word: toks.slice(i, i + listed.n).join(' '), kind: 'sign-list', senses: [{ he: listed.entry.pointed || listed.entry.he, en: listed.entry.en, translit: listed.entry.translit, pos: listed.entry.describes ? 'adj' : 'noun' }] }); i += listed.n; continue; }
+    if (listed) { out.push({ word: toks.slice(i, i + listed.n).join(' '), kind: 'sign-list', senses: [{ he: listed.entry.pointed || listed.entry.he, en: listed.entry.en, translit: listed.entry.translit, pos: listed.entry.describes ? 'adj' : 'noun', head: listed.entry.head }] }); i += listed.n; continue; }
     i++;
     const exact = dictionary?.senses(word) || [];
     if (exact.length) { out.push({ word, kind: 'dictionary', senses: exact }); continue; }
@@ -386,7 +418,8 @@ export function shortGloss(en) {
 /**
  * Last resort for a line the word list and phrasebook cannot translate: every word looked up as written in the sign list or
  * the app dictionary, glosses joined in the order read. Returns null unless EVERY word is found exactly (no prefix, plural or
- * joined-form guesses are drawn on a photo). Always labelled word-for-word.
+ * joined-form guesses are drawn on a photo) and has a single naming meaning. Always labelled word-for-word.
+ * Measured by hiding each listed entry in turn (tools/camera-translate/leave-one-out.mjs).
  */
 export function wordForWord(he, glossary, dictionary) {
   const words = wordBreakdown(he, glossary, dictionary);
@@ -395,14 +428,22 @@ export function wordForWord(he, glossary, dictionary) {
   for (const w of words) {
     if (w.kind === 'number') { parts.push({ en: w.word, he: w.word, translit: w.word }); continue; }
     if (w.kind !== 'sign-list' && w.kind !== 'dictionary') return null;
-    if (w.kind === 'dictionary' && ([...w.word].length < 2 || !['noun', 'adj', 'adv', 'num', 'intj'].includes(w.senses[0].pos))) return null;   // no grammar words: their glosses are descriptions, not translations
-    const en = w.kind === 'sign-list' ? w.senses[0].en : shortGloss(w.senses[0].en);
+    let sense = w.senses[0];
+    if (w.kind === 'dictionary') {
+      // Only a spelling with ONE naming or describing meaning is drawn. A spelling that can be two different things (salt or
+      // sailor, market or calf) is left for the Word By Word panel, where both can be shown. Verb readings are ignored: signs
+      // name things. No grammar words: their glosses are descriptions, not translations.
+      const usable = (dictionary?.senses(w.word, 99) || w.senses).filter((x) => ['noun', 'adj', 'adv', 'num', 'intj'].includes(x.pos));
+      if ([...w.word].length < 2 || usable.length !== 1) return null;
+      sense = usable[0];
+    }
+    const en = w.kind === 'sign-list' ? sense.en : shortGloss(sense.en);
     if (!en) return null;
-    parts.push({ en, he: w.senses[0].he, translit: w.senses[0].translit, pos: w.senses[0].pos || null });
+    parts.push({ en, he: sense.he, translit: sense.translit, pos: sense.pos || null, head: !!sense.head });
   }
   // Hebrew puts a describing word after its noun ("price new"); English puts it before. Only the English order changes.
   const english = parts.map((x) => x.en);
-  for (let i = 0; i + 1 < parts.length; i++) if (parts[i].pos === 'noun' && parts[i + 1].pos === 'adj') { [english[i], english[i + 1]] = [english[i + 1], english[i]]; i++; }
+  for (let i = 0; i + 1 < parts.length; i++) if ((parts[i].pos === 'noun' && parts[i + 1].pos === 'adj') || (parts[i].head && parts[i + 1].pos === 'noun' && !parts[i + 1].head)) { [english[i], english[i + 1]] = [english[i + 1], english[i]]; i++; }
   return { en: english.join(' '), pointed: parts.map((x) => x.he).join(' '),
     translit: parts.every((x) => x.translit) ? parts.map((x) => x.translit).join(' ') : null };
 }

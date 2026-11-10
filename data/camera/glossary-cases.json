@@ -139,8 +139,9 @@
   },
   {
    "he": "Menu / הפריט",
-   "en": "Menu",
-   "status": "near"
+   "en": null,
+   "status": "none",
+   "why": "the Hebrew as read is a real word (the item), so it is not corrected"
   },
   {
    "he": "OPEN 24",
@@ -278,9 +279,9 @@
   },
   {
    "he": "רחבת אוטובוס",
-   "en": "Bus Stop",
-   "status": "near",
-   "why": "no single word fits, but the whole line is clearly closest to one listed phrase"
+   "en": null,
+   "status": "none",
+   "why": "both words are real Hebrew words (a plaza, a bus): a line made only of real words is never turned into a listed phrase"
   },
   {
    "he": "ו קפה",
@@ -355,6 +356,43 @@
    "en": null,
    "status": "none",
    "why": "a real word (horse) is not a price"
+  },
+  {
+   "he": "שכנה",
+   "en": null,
+   "status": "none",
+   "why": "a real word (a neighbour) one letter from \"danger\": never corrected on its own"
+  },
+  {
+   "he": "דחיפה ביבר",
+   "en": null,
+   "status": "none"
+  },
+  {
+   "he": "אין יציאה",
+   "en": "No Exit",
+   "status": "full"
+  },
+  {
+   "he": "אין חניה",
+   "en": "No Parking",
+   "status": "full"
+  },
+  {
+   "he": "חנות פרחים",
+   "en": null,
+   "status": "none"
+  },
+  {
+   "he": "חנות דגים",
+   "en": "Fish Store",
+   "status": "full",
+   "why": "the kind of place comes last in English"
+  },
+  {
+   "he": "בית",
+   "en": "House",
+   "status": "full"
   }
  ]
 }

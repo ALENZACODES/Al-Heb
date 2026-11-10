@@ -1,10 +1,10 @@
 # Camera Translator (`#/camera`): What It Is, What Was Reused, What Was Measured
 
-Last updated 2026-11-10 (fifth pass).
+Last updated 2026-11-10 (sixth pass).
 
 ## In One Paragraph
 
-A learner photographs a Hebrew sign or menu and sees the English drawn over the Hebrew on the photo itself, can switch between the photo as taken and the translated photo, and can tap any line to hear the Hebrew and see how to say it, with word-by-word help one button deeper. **Everything runs in the browser. There is no server and nothing is uploaded** (owner decision, 2026-11-10). Reading uses the app's existing in-browser Hebrew reader. Translation uses a 156-entry sign word list, then the app phrasebook, then the app dictionary word for word.
+A learner photographs a Hebrew sign or menu and sees the English drawn over the Hebrew on the photo itself, can switch between the photo as taken and the translated photo, and can tap any line to hear the Hebrew and see how to say it, with word-by-word help one button deeper. **Everything runs in the browser. There is no server and nothing is uploaded** (owner decision, 2026-11-10). Reading uses the app's existing in-browser Hebrew reader. Translation uses a 159-entry sign word list, then the app phrasebook, then the app dictionary word for word.
 
 ## How A Photo Is Handled
 
@@ -43,7 +43,7 @@ Found by GitHub code search across the ALENZACODES account on 2026-11-10 (defaul
 ## Files
 
 App (loaded only when `#/camera` opens; nothing in the first-install precache):
-`src/camera/camera.view.js`, `camera-model.js`, `camera-client.js`, `on-device.js`; `data/camera/sign-glossary.json`, `glossary-cases.json`, `sample-sign.jpg`.
+`src/camera/camera.view.js`, `camera-model.js`, `camera-client.js`, `on-device.js`; `data/camera/sign-glossary.json`, `real-neighbours.json`, `glossary-cases.json`, `sample-sign.jpg`.
 
 Offline test rig (never called by the app): `tools/camera-translate/`. It holds the 20 test signs and their generator (plus the wear and hard variants), the measuring scripts, and a FastAPI service with Tesseract and Google Cloud adapters that was built before the no-server decision. The service is not deployed and the app has no code that can reach one. The Google adapters have never been run against Google.
 
@@ -59,27 +59,41 @@ Every number below is on **computer-made sign images**, in headless desktop Chro
 |---|---|---|---|---|---|---|
 | Stored 20 signs | 20 | 28 | 1.9% | 25 | 27 (96.4%) | 0 |
 | Wear: clean, noise, blur, 4-degree tilt, perspective, low contrast | 120 | 168 | 1.9% | 150 | 162 (96.4%) | 0 |
-| Hard: dark, bright, a pole in front, tight crop, 8-degree tilt, bilingual, vowel-pointed | 133 | 185 | 5.9% | 137 | 169 (91.4%) | 2 |
-| Review phrases: the 48 sign phrases named in the two review files, each under twelve conditions | 576 | 576 | 4.4% | 495 | 545 (94.6%) | 7 |
-| All four | 849 | 957 | | 807 | 903 (94.4%) | 9 |
+| Hard: dark, bright, a pole in front, tight crop, 8-degree tilt, bilingual, vowel-pointed | 133 | 185 | 5.8% | 137 | 168 (90.8%) | 2 |
+| Review phrases: the 48 sign phrases named in the two review files, each under twelve conditions | 576 | 576 | 4.5% | 495 | 539 (93.6%) | 7 |
+| All four | 849 | 957 | | 807 | 896 (93.6%) | 9 |
 
-The same figures split by whether something is in front of the sign:
+Split by whether something is in front of the sign:
 
 | | Lines | Right English | Wrong English drawn |
 |---|---|---|---|
-| Every condition except the pole | 881 | 863 (98.0%) | 1 |
-| A pole hiding about 7% of the sign's width | 76 | 40 (52.6%) | 8 |
+| Every condition except the pole | 881 | 862 (97.8%) | 1 |
+| A pole hiding about 7% of the sign's width | 76 | 34 (44.7%) | 8 |
 
 How to read this:
 
-- **A partly hidden sign is the unsolved case.** About half of those lines are recovered. The 8 wrong drawings there are translations of the part that could be read ("Store" for a shoe shop sign, "Forbidden 2" where the pole was read as a digit). They are right for what was read and wrong for the sign.
-- The one wrong drawing elsewhere is a tight crop that the reader turned into a different real word that the phrasebook holds.
-- One sign in the first three sets (`shoe-shop`) is kept outside the word list on purpose and is never translated: 13 of the 381 lines in those sets.
-- The review-phrases set uses phrases chosen by the review, not by the builder, but every one of them is now in the word list, and the images are the builder's renderings, not the review's.
-- None of this measures how many real-world signs the word list covers.
+- **These totals are 7 lines lower than the fifth pass (903, 94.4%), on purpose.** The sixth pass made guessing stricter (next section). Six of the seven lost lines are hidden-sign guesses.
+- **A partly hidden sign is the unsolved case.** The 8 wrong drawings there are translations of the part that could be read ("Store" for a shoe shop sign, "House 2" where the pole was read as a digit).
+- One sign in the first three sets (`shoe-shop`) is kept outside the word list on purpose: 13 of the 381 lines in those sets.
+- Every phrase in the review-phrases set is in the word list, and all images are the builder's renderings.
 - Mean time per image was 0.2 to 0.3 s on this desktop, after the reader had loaded. Phone speed was not measured.
 
-What this pass changed, on the wear and hard sets: lines read exactly went from 132 to 150 of 168 and from 119 to 137 of 185; lines with the right English from 159 to 162 and from 162 to 169. The gain came from reading at a second, letter-height-matched size (the first size alone was also changed from 1800 to 1200 pixels after a sweep: character error 4.0% at 1800, 2.7% at 1200, 3.0% at 900, 3.1% at 600 on the wear set).
+### A Sign That Is Not In The Word List
+
+The four image sets only use listed phrases, so they say nothing about the commonest real case: a sign the list does not have. `node tools/camera-translate/leave-one-out.mjs --list` hides each listed entry in turn (with any longer phrase containing it), translates the line with what is left, and compares the result with the hidden entry's own English. Perfect reading is assumed; place names are skipped.
+
+| | Same English | Close | Different English | Nothing drawn |
+|---|---|---|---|---|
+| Fifth pass rules | 49 | 2 | 40 | 58 |
+| Now (152 entries) | 47 | 4 | 22 | 79 |
+
+Before, "different" included plainly wrong answers: Parking for Store, Window for Hotel, Pita for Pizza, Tomorrow for Price, Calf for Market, Gene for Garden. Now the 22 are near-synonyms from the dictionary (Peril for Danger, Poultry for Chicken, Coffee House for Coffee Shop) with a few sense misses left (Urgent for Push, Origin for Exit, Floor for Cashier). Three changes did this:
+
+1. **A much larger list of real words that are never "corrected"**: 3,264 word forms (was 375), built from the app dictionary, its example sentences and the 50,000-form frequency list the vocabulary was already built from. It is in its own file, `data/camera/real-neighbours.json`, because it is derived from share-alike data.
+2. **Word-for-word English is drawn only for a spelling with one naming meaning.** A spelling that can be salt or sailor, market or calf, is left for the Word By Word panel, which shows both.
+3. **Whole-phrase guessing accepts only what a hidden letter can cause**: a missing letter, a thin stroke where a letter was, or one look-alike letter. "Flower shop" used to be guessed as "Bookshop"; now it is not. On 20,000 random pairs of real words it makes 0 guesses (1 before).
+
+Two productive words were added so unseen signs compose: "No" (`אין`, giving No Exit, No Parking) and "House" (`בית`). A kind-of-place word now goes last in English (Fish Store, not Store Fish).
 
 ### Review Rows (Text Level)
 
@@ -87,10 +101,10 @@ The two review files list example failures with the reader's raw output. Those r
 
 | Fixture | Rows | Right English before | Wrong before | Right now | Wrong now | Left untranslated now |
 |---|---|---|---|---|---|---|
-| First file (cloud reader) | 80 | 15 | 12 | 45 | 4 | 31 |
-| Second file (on-device reader, 50,000 runs, mean 71.41) | 88 | 33 | 2 | 50 | 1 | 37 |
+| First file (cloud reader) | 80 | 15 | 12 | 39 | 4 | 37 |
+| Second file (on-device reader, 50,000 runs, mean 71.41) | 88 | 33 | 2 | 43 | 1 | 44 |
 
-"Before" for the first file is the rules as reviewed; for the second file it is the rules of the previous push. Every source phrase in both files now translates when read correctly (80 of 80 and 88 of 88). The wrong rows are a different real listed word or a wrong digit returned by the reader. Most rows left untranslated are readings such as a single letter, an empty string or noise, where nothing can be recovered after the reader.
+"Before" for the first file is the rules as reviewed; for the second file it is the rules of the previous push. Every source phrase in both files now translates when read correctly (80 of 80 and 88 of 88). The "right now" figures were 45 and 50 before the sixth pass: readings that are themselves real words (the word for a neighbour where the sign said danger, a postman for post office) are no longer corrected, because on a real sign they are more likely to be what the sign says. The wrong rows are a different real listed word or a wrong digit returned by the reader. Most rows left untranslated are readings such as a single letter, an empty string or noise, where nothing can be recovered after the reader.
 
 ### Offline Test Rig (Tesseract On A Server, Word List Only)
 
@@ -111,22 +125,22 @@ The two review files list example failures with the reader's raw output. Those r
 
 ## Word List
 
-156 entries. 51 take their vowel pointing and Latin spelling from the app dictionary (`checked: app-dictionary`; a unit test keeps them identical). The other 105 were written for this project and have not been checked by a native speaker. Of the first 87 entries, 59 words were compared with the dictionary earlier: 46 identical, 12 differ only because the sign uses a joined, command or "the" form, 1 was corrected.
+159 entries. 53 take their vowel pointing and Latin spelling from the app dictionary (`checked: app-dictionary`; a unit test keeps them identical). The other 106 were written for this project and have not been checked by a native speaker. Of the first 87 entries, 59 words were compared with the dictionary earlier: 46 identical, 12 differ only because the sign uses a joined, command or "the" form, 1 was corrected.
 
-`realNeighbours` (375 words) is built by `tools/camera-translate/build_real_neighbours.py` from the dictionary and phrasebook: real words that sit one letter, or two look-alike letters, from a listed word. A unit test runs all 5,184 single dictionary words through the translator and requires that none is "corrected".
+The guard list of real words (`data/camera/real-neighbours.json`, 3,264 words, CC BY-SA 4.0) is built by `tools/camera-translate/build_real_neighbours.py --download`, which checks the frequency list against the SHA-256 already pinned in `data/vocab/sources.lock.json`. `--check` runs in the tests without the network. A unit test runs all 5,184 single dictionary words through the translator and requires that none is "corrected".
 
-## Checks That Ran (2026-11-10, Fifth Pass)
+## Checks That Ran (2026-11-10, Sixth Pass)
 
-- `node --test tests/camera.model.test.js`: 18 passed.
+- `node --test tests/camera.model.test.js`: 19 passed.
 - `node --test tests/camera.browser.test.js`: 5 passed, in headless Chromium with the `_headers` Content-Security-Policy on the page. Every test asserts no policy violations, no request other than GET, and no address contacted other than the app's own.
 - `python3 -m pytest tools/camera-translate/tests -q`: 20 passed.
-- `npm test` (the full unit tier): 3,328 passed, 0 failed, 10 skipped.
+- `npm test` (the full unit tier): 3,329 passed, 0 failed, 10 skipped.
 
 ## Not Done, Not Measured
 
 - No real photograph and no phone has been through this.
 - The Hebrew voice is the device's own; nothing was recorded for sign words, and playback was not verified by ear.
-- The 105 project-written word-list entries are unchecked.
+- The 106 project-written word-list entries are unchecked.
 - A sign that is partly hidden is the weakest case measured (13 of 28).
 - The review's own images have not been run through the app path from here; only its listed reader outputs have.
 - Coverage of real-world signs by the word list is unknown.

@@ -4,7 +4,8 @@
 
 - `tests/signs/`: the 20 computer-made test signs, their ground truth and the saved results; `tests/make_signs.py` regenerates them (`--wear-dir DIR` writes the 120 wear variants, `--hard-dir DIR` the 133 harder ones, `--review-dir DIR` the 576 images of the review files' own phrases).
 - `e2e-camera.mjs`, `e2e-batch.mjs`: drive the real screen and the real in-browser reader in headless Chromium, under the site security policy.
-- `build_real_neighbours.py`: rebuilds the guard list in the sign word list after the list is edited.
+- `build_real_neighbours.py --download`: rebuilds `data/camera/real-neighbours.json` (real words never to be "corrected") after the sign list is edited; `--check` verifies it without the network.
+- `leave-one-out.mjs`: what a sign gets when it is NOT in the word list (each entry hidden in turn).
 - `translate-cli.mjs`: runs the app's own word-list rules from the command line; `camera_translate/hebrew.py` calls it, so the rig has no second copy of the rules. Needs Node.
 - `eval.py`: a second measuring stick using Tesseract on this machine.
 - `camera_translate/app.py` and the rest: a FastAPI service built before the no-server decision (Tesseract or Google Cloud reading, Pillow/OpenCV overlay). It is not deployed and the app has no code that can call it. Its Google adapters have never been run against Google. The sections below describe that service as built.

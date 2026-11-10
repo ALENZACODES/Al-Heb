@@ -9,7 +9,7 @@
   "linesReadExactly": 150,
   "linesTranslatedEndToEnd": 162,
   "wrongEnglishDrawn": 0,
-  "meanMs": 264
+  "meanMs": 278
  },
  "byWear": {
   "clean": {
@@ -19,7 +19,7 @@
    "linesReadExactly": 25,
    "linesTranslatedEndToEnd": 27,
    "wrongEnglishDrawn": 0,
-   "meanMs": 303
+   "meanMs": 322
   },
   "noise": {
    "images": 20,
@@ -28,7 +28,7 @@
    "linesReadExactly": 25,
    "linesTranslatedEndToEnd": 27,
    "wrongEnglishDrawn": 0,
-   "meanMs": 268
+   "meanMs": 277
   },
   "blur": {
    "images": 20,
@@ -37,7 +37,7 @@
    "linesReadExactly": 27,
    "linesTranslatedEndToEnd": 27,
    "wrongEnglishDrawn": 0,
-   "meanMs": 247
+   "meanMs": 261
   },
   "rotate": {
    "images": 20,
@@ -46,7 +46,7 @@
    "linesReadExactly": 26,
    "linesTranslatedEndToEnd": 27,
    "wrongEnglishDrawn": 0,
-   "meanMs": 271
+   "meanMs": 285
   },
   "perspective": {
    "images": 20,
@@ -55,7 +55,7 @@
    "linesReadExactly": 23,
    "linesTranslatedEndToEnd": 27,
    "wrongEnglishDrawn": 0,
-   "meanMs": 253
+   "meanMs": 274
   },
   "lowcontrast": {
    "images": 20,
@@ -64,7 +64,7 @@
    "linesReadExactly": 24,
    "linesTranslatedEndToEnd": 27,
    "wrongEnglishDrawn": 0,
-   "meanMs": 243
+   "meanMs": 247
   }
  },
  "rows": [
@@ -72,7 +72,7 @@
    "id": "optical-store__clean",
    "variant": "clean",
    "cer": 0,
-   "ms": 705,
+   "ms": 732,
    "levelled": 0,
    "read": [
     "חנות אופטיקה"
@@ -86,7 +86,7 @@
    "id": "optical-store__noise",
    "variant": "noise",
    "cer": 0,
-   "ms": 187,
+   "ms": 182,
    "levelled": 0,
    "read": [
     "חנות אופטיקה"
@@ -100,7 +100,7 @@
    "id": "optical-store__blur",
    "variant": "blur",
    "cer": 0,
-   "ms": 190,
+   "ms": 237,
    "levelled": 0,
    "read": [
     "חנות אופטיקה"
@@ -114,7 +114,7 @@
    "id": "optical-store__rotate",
    "variant": "rotate",
    "cer": 0,
-   "ms": 231,
+   "ms": 233,
    "levelled": -3.9,
    "read": [
     "חנות אופטיקה"
@@ -128,7 +128,7 @@
    "id": "optical-store__perspective",
    "variant": "perspective",
    "cer": 0,
-   "ms": 222,
+   "ms": 279,
    "levelled": 0,
    "read": [
     "חנות אופטיקה"
@@ -142,7 +142,7 @@
    "id": "optical-store__lowcontrast",
    "variant": "lowcontrast",
    "cer": 0,
-   "ms": 213,
+   "ms": 165,
    "levelled": 0,
    "read": [
     "חנות אופטיקה"
@@ -156,7 +156,7 @@
    "id": "bakery__clean",
    "variant": "clean",
    "cer": 0,
-   "ms": 255,
+   "ms": 247,
    "levelled": 0,
    "read": [
     "מאפייה"
@@ -170,7 +170,7 @@
    "id": "bakery__noise",
    "variant": "noise",
    "cer": 0,
-   "ms": 335,
+   "ms": 222,
    "levelled": 0,
    "read": [
     "מאפייה"
@@ -184,7 +184,7 @@
    "id": "bakery__blur",
    "variant": "blur",
    "cer": 0,
-   "ms": 273,
+   "ms": 216,
    "levelled": 0,
    "read": [
     "מאפייה"
@@ -198,7 +198,7 @@
    "id": "bakery__rotate",
    "variant": "rotate",
    "cer": 0,
-   "ms": 275,
+   "ms": 236,
    "levelled": 4,
    "read": [
     "מאפייה"
@@ -212,7 +212,7 @@
    "id": "bakery__perspective",
    "variant": "perspective",
    "cer": 0,
-   "ms": 253,
+   "ms": 275,
    "levelled": -1.4,
    "read": [
     "מאפייה"
@@ -226,7 +226,7 @@
    "id": "bakery__lowcontrast",
    "variant": "lowcontrast",
    "cer": 0,
-   "ms": 232,
+   "ms": 222,
    "levelled": 0,
    "read": [
     "מאפייה"
@@ -240,7 +240,7 @@
    "id": "pharmacy__clean",
    "variant": "clean",
    "cer": 0,
-   "ms": 159,
+   "ms": 189,
    "levelled": 0,
    "read": [
     "בית מרקחת"
@@ -254,7 +254,7 @@
    "id": "pharmacy__noise",
    "variant": "noise",
    "cer": 0,
-   "ms": 176,
+   "ms": 210,
    "levelled": 0,
    "read": [
     "בית מרקחת"
@@ -268,7 +268,7 @@
    "id": "pharmacy__blur",
    "variant": "blur",
    "cer": 0,
-   "ms": 158,
+   "ms": 245,
    "levelled": 0,
    "read": [
     "בית מרקחת"
@@ -282,7 +282,7 @@
    "id": "pharmacy__rotate",
    "variant": "rotate",
    "cer": 0,
-   "ms": 167,
+   "ms": 242,
    "levelled": -4,
    "read": [
     "בית מרקחת"
@@ -296,7 +296,7 @@
    "id": "pharmacy__perspective",
    "variant": "perspective",
    "cer": 0,
-   "ms": 232,
+   "ms": 187,
    "levelled": -1.1,
    "read": [
     "בית מרקחת"
@@ -310,7 +310,7 @@
    "id": "pharmacy__lowcontrast",
    "variant": "lowcontrast",
    "cer": 0,
-   "ms": 229,
+   "ms": 169,
    "levelled": 0,
    "read": [
     "בית מרקחת"
@@ -324,7 +324,7 @@
    "id": "exit__clean",
    "variant": "clean",
    "cer": 0,
-   "ms": 465,
+   "ms": 353,
    "levelled": 0,
    "read": [
     "יציאה"
@@ -338,7 +338,7 @@
    "id": "exit__noise",
    "variant": "noise",
    "cer": 0,
-   "ms": 470,
+   "ms": 413,
    "levelled": 0,
    "read": [
     "יציאה"
@@ -352,7 +352,7 @@
    "id": "exit__blur",
    "variant": "blur",
    "cer": 0,
-   "ms": 201,
+   "ms": 233,
    "levelled": 0,
    "read": [
     "יציאה"
@@ -366,7 +366,7 @@
    "id": "exit__rotate",
    "variant": "rotate",
    "cer": 0,
-   "ms": 384,
+   "ms": 414,
    "levelled": -4,
    "read": [
     "יציאה"
@@ -380,7 +380,7 @@
    "id": "exit__perspective",
    "variant": "perspective",
    "cer": 0,
-   "ms": 250,
+   "ms": 274,
    "levelled": -1.1,
    "read": [
     "יציאה"
@@ -394,7 +394,7 @@
    "id": "exit__lowcontrast",
    "variant": "lowcontrast",
    "cer": 0,
-   "ms": 228,
+   "ms": 251,
    "levelled": 0,
    "read": [
     "יציאה"
@@ -408,7 +408,7 @@
    "id": "closed__clean",
    "variant": "clean",
    "cer": 0,
-   "ms": 190,
+   "ms": 295,
    "levelled": 0,
    "read": [
     "סגור"
@@ -422,7 +422,7 @@
    "id": "closed__noise",
    "variant": "noise",
    "cer": 0,
-   "ms": 245,
+   "ms": 253,
    "levelled": 0,
    "read": [
     "סגור"
@@ -436,7 +436,7 @@
    "id": "closed__blur",
    "variant": "blur",
    "cer": 0,
-   "ms": 227,
+   "ms": 262,
    "levelled": 0,
    "read": [
     "סגור"
@@ -450,7 +450,7 @@
    "id": "closed__rotate",
    "variant": "rotate",
    "cer": 0,
-   "ms": 221,
+   "ms": 267,
    "levelled": 4.4,
    "read": [
     "סגור"
@@ -464,7 +464,7 @@
    "id": "closed__perspective",
    "variant": "perspective",
    "cer": 0,
-   "ms": 229,
+   "ms": 266,
    "levelled": 0,
    "read": [
     "סגור"
@@ -478,7 +478,7 @@
    "id": "closed__lowcontrast",
    "variant": "lowcontrast",
    "cer": 0,
-   "ms": 222,
+   "ms": 257,
    "levelled": 0,
    "read": [
     "סגור"
@@ -492,7 +492,7 @@
    "id": "shoe-shop__clean",
    "variant": "clean",
    "cer": 0,
-   "ms": 267,
+   "ms": 231,
    "levelled": 0,
    "read": [
     "חנות נעליים"
@@ -506,7 +506,7 @@
    "id": "shoe-shop__noise",
    "variant": "noise",
    "cer": 0,
-   "ms": 238,
+   "ms": 298,
    "levelled": 0,
    "read": [
     "חנות נעליים"
@@ -520,7 +520,7 @@
    "id": "shoe-shop__blur",
    "variant": "blur",
    "cer": 0,
-   "ms": 219,
+   "ms": 249,
    "levelled": 0,
    "read": [
     "חנות נעליים"
@@ -534,7 +534,7 @@
    "id": "shoe-shop__rotate",
    "variant": "rotate",
    "cer": 0,
-   "ms": 186,
+   "ms": 233,
    "levelled": 4.1,
    "read": [
     "חנות נעליים"
@@ -548,7 +548,7 @@
    "id": "shoe-shop__perspective",
    "variant": "perspective",
    "cer": 0,
-   "ms": 294,
+   "ms": 351,
    "levelled": 0,
    "read": [
     "חנות נעליים"
@@ -562,7 +562,7 @@
    "id": "shoe-shop__lowcontrast",
    "variant": "lowcontrast",
    "cer": 0,
-   "ms": 224,
+   "ms": 219,
    "levelled": 0,
    "read": [
     "חנות נעליים"
@@ -576,7 +576,7 @@
    "id": "new-price__clean",
    "variant": "clean",
    "cer": 0.1429,
-   "ms": 327,
+   "ms": 349,
    "levelled": 0,
    "read": [
     "מחיר חדשו"
@@ -590,7 +590,7 @@
    "id": "new-price__noise",
    "variant": "noise",
    "cer": 0.1429,
-   "ms": 287,
+   "ms": 354,
    "levelled": 0,
    "read": [
     "מחיר חדשו"
@@ -604,7 +604,7 @@
    "id": "new-price__blur",
    "variant": "blur",
    "cer": 0,
-   "ms": 345,
+   "ms": 341,
    "levelled": 0,
    "read": [
     "מחיר חדש"
@@ -618,7 +618,7 @@
    "id": "new-price__rotate",
    "variant": "rotate",
    "cer": 0,
-   "ms": 273,
+   "ms": 315,
    "levelled": 4,
    "read": [
     "מחיר חדש"
@@ -632,7 +632,7 @@
    "id": "new-price__perspective",
    "variant": "perspective",
    "cer": 0.1429,
-   "ms": 289,
+   "ms": 361,
    "levelled": -0.9,
    "read": [
     "מחיר חדשו"
@@ -646,7 +646,7 @@
    "id": "new-price__lowcontrast",
    "variant": "lowcontrast",
    "cer": 0.1429,
-   "ms": 292,
+   "ms": 313,
    "levelled": 0,
    "read": [
     "מחיר חדשו"
@@ -660,7 +660,7 @@
    "id": "no-entry__clean",
    "variant": "clean",
    "cer": 0,
-   "ms": 292,
+   "ms": 301,
    "levelled": 0,
    "read": [
     "אין כניסה"
@@ -674,7 +674,7 @@
    "id": "no-entry__noise",
    "variant": "noise",
    "cer": 0,
-   "ms": 327,
+   "ms": 355,
    "levelled": 0,
    "read": [
     "אין כניסה"
@@ -688,7 +688,7 @@
    "id": "no-entry__blur",
    "variant": "blur",
    "cer": 0,
-   "ms": 224,
+   "ms": 189,
    "levelled": 0,
    "read": [
     "אין כניסה"
@@ -702,7 +702,7 @@
    "id": "no-entry__rotate",
    "variant": "rotate",
    "cer": 0,
-   "ms": 357,
+   "ms": 426,
    "levelled": 4,
    "read": [
     "אין כניסה"
@@ -716,7 +716,7 @@
    "id": "no-entry__perspective",
    "variant": "perspective",
    "cer": 0.125,
-   "ms": 213,
+   "ms": 223,
    "levelled": -1.1,
    "read": [
     "אין בניסה"
@@ -730,7 +730,7 @@
    "id": "no-entry__lowcontrast",
    "variant": "lowcontrast",
    "cer": 0,
-   "ms": 176,
+   "ms": 181,
    "levelled": 0,
    "read": [
     "אין כניסה"
@@ -744,7 +744,7 @@
    "id": "restrooms__clean",
    "variant": "clean",
    "cer": 0,
-   "ms": 195,
+   "ms": 186,
    "levelled": 0,
    "read": [
     "שירותים"
@@ -758,7 +758,7 @@
    "id": "restrooms__noise",
    "variant": "noise",
    "cer": 0,
-   "ms": 194,
+   "ms": 189,
    "levelled": 0,
    "read": [
     "שירותים"
@@ -772,7 +772,7 @@
    "id": "restrooms__blur",
    "variant": "blur",
    "cer": 0,
-   "ms": 183,
+   "ms": 180,
    "levelled": 0,
    "read": [
     "שירותים"
@@ -800,7 +800,7 @@
    "id": "restrooms__perspective",
    "variant": "perspective",
    "cer": 0,
-   "ms": 184,
+   "ms": 219,
    "levelled": -1.2,
    "read": [
     "שירותים"
@@ -814,7 +814,7 @@
    "id": "restrooms__lowcontrast",
    "variant": "lowcontrast",
    "cer": 0,
-   "ms": 202,
+   "ms": 199,
    "levelled": 0,
    "read": [
     "שירותים"
@@ -828,7 +828,7 @@
    "id": "herzl-street__clean",
    "variant": "clean",
    "cer": 0,
-   "ms": 188,
+   "ms": 176,
    "levelled": 0,
    "read": [
     "רחוב הרצל"
@@ -842,7 +842,7 @@
    "id": "herzl-street__noise",
    "variant": "noise",
    "cer": 0,
-   "ms": 182,
+   "ms": 220,
    "levelled": 0,
    "read": [
     "רחוב הרצל"
@@ -856,7 +856,7 @@
    "id": "herzl-street__blur",
    "variant": "blur",
    "cer": 0,
-   "ms": 194,
+   "ms": 270,
    "levelled": 0,
    "read": [
     "רחוב הרצל"
@@ -870,7 +870,7 @@
    "id": "herzl-street__rotate",
    "variant": "rotate",
    "cer": 0,
-   "ms": 180,
+   "ms": 212,
    "levelled": 4.1,
    "read": [
     "רחוב הרצל"
@@ -884,7 +884,7 @@
    "id": "herzl-street__perspective",
    "variant": "perspective",
    "cer": 0,
-   "ms": 169,
+   "ms": 264,
    "levelled": -0.9,
    "read": [
     "רחוב הרצל"
@@ -898,7 +898,7 @@
    "id": "herzl-street__lowcontrast",
    "variant": "lowcontrast",
    "cer": 0,
-   "ms": 178,
+   "ms": 220,
    "levelled": 0,
    "read": [
     "רחוב הרצל"
@@ -912,7 +912,7 @@
    "id": "ben-yehuda-blvd__clean",
    "variant": "clean",
    "cer": 0,
-   "ms": 243,
+   "ms": 338,
    "levelled": 0,
    "read": [
     "שדרות בן יהודה"
@@ -926,7 +926,7 @@
    "id": "ben-yehuda-blvd__noise",
    "variant": "noise",
    "cer": 0,
-   "ms": 199,
+   "ms": 159,
    "levelled": 0,
    "read": [
     "שדרות בן יהודה"
@@ -940,7 +940,7 @@
    "id": "ben-yehuda-blvd__blur",
    "variant": "blur",
    "cer": 0,
-   "ms": 181,
+   "ms": 173,
    "levelled": 0,
    "read": [
     "שדרות בן יהודה"
@@ -954,7 +954,7 @@
    "id": "ben-yehuda-blvd__rotate",
    "variant": "rotate",
    "cer": 0,
-   "ms": 251,
+   "ms": 255,
    "levelled": 4,
    "read": [
     "שדרות בן יהודה"
@@ -968,7 +968,7 @@
    "id": "ben-yehuda-blvd__perspective",
    "variant": "perspective",
    "cer": 0,
-   "ms": 149,
+   "ms": 169,
    "levelled": 0,
    "read": [
     "שדרות בן יהודה"
@@ -982,7 +982,7 @@
    "id": "ben-yehuda-blvd__lowcontrast",
    "variant": "lowcontrast",
    "cer": 0,
-   "ms": 175,
+   "ms": 169,
    "levelled": 0,
    "read": [
     "שדרות בן יהודה"
@@ -1010,7 +1010,7 @@
    "id": "dizengoff-square__noise",
    "variant": "noise",
    "cer": 0.1818,
-   "ms": 198,
+   "ms": 189,
    "levelled": 0,
    "read": [
     "ביבר דיזנגוף"
@@ -1024,7 +1024,7 @@
    "id": "dizengoff-square__blur",
    "variant": "blur",
    "cer": 0,
-   "ms": 256,
+   "ms": 255,
    "levelled": 0,
    "read": [
     "כיכר דיזנגוף"
@@ -1038,7 +1038,7 @@
    "id": "dizengoff-square__rotate",
    "variant": "rotate",
    "cer": 0.1818,
-   "ms": 198,
+   "ms": 165,
    "levelled": -4.1,
    "read": [
     "ביבר דיזנגוף"
@@ -1052,7 +1052,7 @@
    "id": "dizengoff-square__perspective",
    "variant": "perspective",
    "cer": 0.1818,
-   "ms": 213,
+   "ms": 191,
    "levelled": -0.8,
    "read": [
     "ביבר דיזנגוף"
@@ -1066,7 +1066,7 @@
    "id": "dizengoff-square__lowcontrast",
    "variant": "lowcontrast",
    "cer": 0.1818,
-   "ms": 162,
+   "ms": 156,
    "levelled": 0,
    "read": [
     "ביבר דיזנגוף"
@@ -1080,7 +1080,7 @@
    "id": "bus-stop__clean",
    "variant": "clean",
    "cer": 0,
-   "ms": 241,
+   "ms": 294,
    "levelled": 0,
    "read": [
     "תחנת אוטובוס"
@@ -1094,7 +1094,7 @@
    "id": "bus-stop__noise",
    "variant": "noise",
    "cer": 0,
-   "ms": 263,
+   "ms": 269,
    "levelled": 0,
    "read": [
     "תחנת אוטובוס"
@@ -1108,7 +1108,7 @@
    "id": "bus-stop__blur",
    "variant": "blur",
    "cer": 0,
-   "ms": 161,
+   "ms": 220,
    "levelled": 0,
    "read": [
     "תחנת אוטובוס"
@@ -1122,7 +1122,7 @@
    "id": "bus-stop__rotate",
    "variant": "rotate",
    "cer": 0,
-   "ms": 303,
+   "ms": 323,
    "levelled": 4,
    "read": [
     "תחנת אוטובוס"
@@ -1136,7 +1136,7 @@
    "id": "bus-stop__perspective",
    "variant": "perspective",
    "cer": 0,
-   "ms": 247,
+   "ms": 314,
    "levelled": 0,
    "read": [
     "תחנת אוטובוס"
@@ -1150,7 +1150,7 @@
    "id": "bus-stop__lowcontrast",
    "variant": "lowcontrast",
    "cer": 0,
-   "ms": 263,
+   "ms": 309,
    "levelled": 0,
    "read": [
     "תחנת אוטובוס"
@@ -1164,7 +1164,7 @@
    "id": "synagogue__clean",
    "variant": "clean",
    "cer": 0,
-   "ms": 185,
+   "ms": 224,
    "levelled": 0,
    "read": [
     "בית כנסת"
@@ -1178,7 +1178,7 @@
    "id": "synagogue__noise",
    "variant": "noise",
    "cer": 0,
-   "ms": 198,
+   "ms": 214,
    "levelled": 0,
    "read": [
     "בית כנסת"
@@ -1192,7 +1192,7 @@
    "id": "synagogue__blur",
    "variant": "blur",
    "cer": 0,
-   "ms": 205,
+   "ms": 199,
    "levelled": 0,
    "read": [
     "בית כנסת"
@@ -1206,7 +1206,7 @@
    "id": "synagogue__rotate",
    "variant": "rotate",
    "cer": 0,
-   "ms": 186,
+   "ms": 194,
    "levelled": -4.1,
    "read": [
     "בית כנסת"
@@ -1220,7 +1220,7 @@
    "id": "synagogue__perspective",
    "variant": "perspective",
    "cer": 0,
-   "ms": 184,
+   "ms": 186,
    "levelled": 0,
    "read": [
     "בית כנסת"
@@ -1234,7 +1234,7 @@
    "id": "synagogue__lowcontrast",
    "variant": "lowcontrast",
    "cer": 0,
-   "ms": 194,
+   "ms": 175,
    "levelled": 0,
    "read": [
     "בית כנסת"
@@ -1248,7 +1248,7 @@
    "id": "menu-drinks__clean",
    "variant": "clean",
    "cer": 0,
-   "ms": 253,
+   "ms": 260,
    "levelled": 0,
    "read": [
     "תפריט",
@@ -1266,7 +1266,7 @@
    "id": "menu-drinks__noise",
    "variant": "noise",
    "cer": 0,
-   "ms": 264,
+   "ms": 238,
    "levelled": 0,
    "read": [
     "תפריט",
@@ -1284,7 +1284,7 @@
    "id": "menu-drinks__blur",
    "variant": "blur",
    "cer": 0.1429,
-   "ms": 415,
+   "ms": 398,
    "levelled": 0,
    "read": [
     "תפריט",
@@ -1302,7 +1302,7 @@
    "id": "menu-drinks__rotate",
    "variant": "rotate",
    "cer": 0,
-   "ms": 293,
+   "ms": 249,
    "levelled": 4.3,
    "read": [
     "תפריט",
@@ -1320,7 +1320,7 @@
    "id": "menu-drinks__perspective",
    "variant": "perspective",
    "cer": 0,
-   "ms": 267,
+   "ms": 301,
    "levelled": -1.1,
    "read": [
     "תפריט",
@@ -1338,7 +1338,7 @@
    "id": "menu-drinks__lowcontrast",
    "variant": "lowcontrast",
    "cer": 0,
-   "ms": 236,
+   "ms": 245,
    "levelled": 0,
    "read": [
     "תפריט",
@@ -1356,7 +1356,7 @@
    "id": "menu-food__clean",
    "variant": "clean",
    "cer": 0,
-   "ms": 544,
+   "ms": 676,
    "levelled": 0,
    "read": [
     "חומוס 18",
@@ -1374,7 +1374,7 @@
    "id": "menu-food__noise",
    "variant": "noise",
    "cer": 0,
-   "ms": 307,
+   "ms": 386,
    "levelled": 0,
    "read": [
     "חומוס 18",
@@ -1392,7 +1392,7 @@
    "id": "menu-food__blur",
    "variant": "blur",
    "cer": 0,
-   "ms": 329,
+   "ms": 348,
    "levelled": 0,
    "read": [
     "חומוס 18",
@@ -1410,7 +1410,7 @@
    "id": "menu-food__rotate",
    "variant": "rotate",
    "cer": 0,
-   "ms": 551,
+   "ms": 573,
    "levelled": -4,
    "read": [
     "חומוס 18",
@@ -1428,7 +1428,7 @@
    "id": "menu-food__perspective",
    "variant": "perspective",
    "cer": 0,
-   "ms": 312,
+   "ms": 328,
    "levelled": -1.4,
    "read": [
     "חומוס 18",
@@ -1446,7 +1446,7 @@
    "id": "menu-food__lowcontrast",
    "variant": "lowcontrast",
    "cer": 0,
-   "ms": 317,
+   "ms": 337,
    "levelled": 0,
    "read": [
     "חומוס 18",
@@ -1464,7 +1464,7 @@
    "id": "menu-courses__clean",
    "variant": "clean",
    "cer": 0,
-   "ms": 297,
+   "ms": 286,
    "levelled": 0,
    "read": [
     "מנה ראשונה",
@@ -1482,7 +1482,7 @@
    "id": "menu-courses__noise",
    "variant": "noise",
    "cer": 0,
-   "ms": 332,
+   "ms": 313,
    "levelled": 0,
    "read": [
     "מנה ראשונה",
@@ -1500,7 +1500,7 @@
    "id": "menu-courses__blur",
    "variant": "blur",
    "cer": 0,
-   "ms": 292,
+   "ms": 324,
    "levelled": 0,
    "read": [
     "מנה ראשונה",
@@ -1518,7 +1518,7 @@
    "id": "menu-courses__rotate",
    "variant": "rotate",
    "cer": 0,
-   "ms": 308,
+   "ms": 299,
    "levelled": 4,
    "read": [
     "מנה ראשונה",
@@ -1536,7 +1536,7 @@
    "id": "menu-courses__perspective",
    "variant": "perspective",
    "cer": 0,
-   "ms": 313,
+   "ms": 316,
    "levelled": 0,
    "read": [
     "מנה ראשונה",
@@ -1554,7 +1554,7 @@
    "id": "menu-courses__lowcontrast",
    "variant": "lowcontrast",
    "cer": 0,
-   "ms": 265,
+   "ms": 315,
    "levelled": 0,
    "read": [
     "מנה ראשונה",
@@ -1572,7 +1572,7 @@
    "id": "kosher-restaurant__clean",
    "variant": "clean",
    "cer": 0.05,
-   "ms": 401,
+   "ms": 417,
    "levelled": 0,
    "read": [
     "מסעדה כשרה",
@@ -1588,7 +1588,7 @@
    "id": "kosher-restaurant__noise",
    "variant": "noise",
    "cer": 0.05,
-   "ms": 386,
+   "ms": 432,
    "levelled": 0,
    "read": [
     "מסעדה כבשרה",
@@ -1604,7 +1604,7 @@
    "id": "kosher-restaurant__blur",
    "variant": "blur",
    "cer": 0,
-   "ms": 402,
+   "ms": 390,
    "levelled": 0,
    "read": [
     "מסעדה כשרה",
@@ -1620,7 +1620,7 @@
    "id": "kosher-restaurant__rotate",
    "variant": "rotate",
    "cer": 0.05,
-   "ms": 417,
+   "ms": 426,
    "levelled": -3.9,
    "read": [
     "מסעדה כשרה",
@@ -1636,7 +1636,7 @@
    "id": "kosher-restaurant__perspective",
    "variant": "perspective",
    "cer": 0.1,
-   "ms": 462,
+   "ms": 380,
    "levelled": -1,
    "read": [
     "מסעדה בשרה",
@@ -1652,7 +1652,7 @@
    "id": "kosher-restaurant__lowcontrast",
    "variant": "lowcontrast",
    "cer": 0.1,
-   "ms": 524,
+   "ms": 510,
    "levelled": 0,
    "read": [
     "מסעדה בשרה",
@@ -1668,7 +1668,7 @@
    "id": "no-smoking__clean",
    "variant": "clean",
    "cer": 0,
-   "ms": 287,
+   "ms": 331,
    "levelled": 0,
    "read": [
     "אסור לעשן"
@@ -1682,7 +1682,7 @@
    "id": "no-smoking__noise",
    "variant": "noise",
    "cer": 0,
-   "ms": 296,
+   "ms": 364,
    "levelled": 0,
    "read": [
     "אסור לעשן"
@@ -1696,7 +1696,7 @@
    "id": "no-smoking__blur",
    "variant": "blur",
    "cer": 0,
-   "ms": 202,
+   "ms": 206,
    "levelled": 0,
    "read": [
     "אסור לעשן"
@@ -1710,7 +1710,7 @@
    "id": "no-smoking__rotate",
    "variant": "rotate",
    "cer": 0,
-   "ms": 191,
+   "ms": 174,
    "levelled": 4,
    "read": [
     "אסור לעשן"
@@ -1724,7 +1724,7 @@
    "id": "no-smoking__perspective",
    "variant": "perspective",
    "cer": 0,
-   "ms": 268,
+   "ms": 302,
    "levelled": 0,
    "read": [
     "אסור לעשן"
@@ -1738,7 +1738,7 @@
    "id": "no-smoking__lowcontrast",
    "variant": "lowcontrast",
    "cer": 0,
-   "ms": 186,
+   "ms": 213,
    "levelled": 0,
    "read": [
     "אסור לעשן"
@@ -1752,7 +1752,7 @@
    "id": "caution-stairs__clean",
    "variant": "clean",
    "cer": 0,
-   "ms": 289,
+   "ms": 292,
    "levelled": 0,
    "read": [
     "זהירות",
@@ -1768,7 +1768,7 @@
    "id": "caution-stairs__noise",
    "variant": "noise",
    "cer": 0,
-   "ms": 281,
+   "ms": 286,
    "levelled": 0,
    "read": [
     "זהירות",
@@ -1784,7 +1784,7 @@
    "id": "caution-stairs__blur",
    "variant": "blur",
    "cer": 0,
-   "ms": 286,
+   "ms": 292,
    "levelled": 0,
    "read": [
     "זהירות",
@@ -1800,7 +1800,7 @@
    "id": "caution-stairs__rotate",
    "variant": "rotate",
    "cer": 0,
-   "ms": 282,
+   "ms": 298,
    "levelled": 3.8,
    "read": [
     "זהירות",
@@ -1816,7 +1816,7 @@
    "id": "caution-stairs__perspective",
    "variant": "perspective",
    "cer": 0,
-   "ms": 315,
+   "ms": 286,
    "levelled": 0,
    "read": [
     "זהירות",
@@ -1832,7 +1832,7 @@
    "id": "caution-stairs__lowcontrast",
    "variant": "lowcontrast",
    "cer": 0,
-   "ms": 335,
+   "ms": 312,
    "levelled": 0,
    "read": [
     "זהירות",

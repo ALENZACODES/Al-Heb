@@ -4,7 +4,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, existsSync, readdirSync } from 'node:fs';
 import { containsSacredName, tokens, hebrewTokens, isJunkToken, lineHadNoise, editDistance, createGlossary, regionsFromBoxes, percentBox, sourceLabel, createDictionary, wordBreakdown, wordForWord, shortGloss,
-  PREFIX_MEANING, LOOK_ALIKE, twoLookAlikes, repairNumber, readerImage, otsuThreshold, boxOnOriginal,
+  PREFIX_MEANING, LOOK_ALIKE, twoLookAlikes, repairNumber, hiddenLetterDistance, readerImage, otsuThreshold, boxOnOriginal,
   fitText, wrapWords, chooseAlignment, groupBlocks, boxColours, contrastRatio, HELD_NOTE } from '../src/camera/camera-model.js';
 import { loadGlossaryData, loadPhrasebook, loadDictionaryIndex } from '../src/camera/camera-client.js';
 import { mergeReadings, LETTER_HEIGHT, READER_TARGET_SIDE } from '../src/camera/on-device.js';
@@ -14,6 +14,8 @@ import { isOnDemand, computeManifest } from '../tools/build-precache.mjs';
 
 const read = (p) => readFileSync(new URL(`../${p}`, import.meta.url), 'utf8');
 const glossaryData = JSON.parse(read('data/camera/sign-glossary.json'));
+const guardFile = JSON.parse(read('data/camera/real-neighbours.json'));
+glossaryData.realNeighbours = guardFile.words;      // the app loads the two files together (camera-client.js)
 const phrasebook = JSON.parse(read('data/corpus/phrasebook.json')).entries;
 const glossary = createGlossary(glossaryData);
 const withPhrases = createGlossary(glossaryData, { phrasebook });
@@ -29,7 +31,7 @@ test('camera: the word list agrees with the shared cases (the same file the offl
 
 test('camera: word list data is well formed, never holds the name, and its dictionary-sourced entries still match the dictionary', () => {
   const keys = glossaryData.entries.map((e) => e.he);
-  assert.equal(new Set(keys).size, keys.length); assert.ok(keys.length >= 150);
+  assert.equal(new Set(keys).size, keys.length); assert.ok(keys.length >= 159);
   const idx = JSON.parse(read('data/vocab/index.json')); const f = (n) => idx.fields.indexOf(n);
   const dict = new Set(idx.rows.map((r) => `${r[f('heUnpointed')]}|${r[f('he')]}|${r[f('translit')]}`));
   let sourced = 0;
@@ -42,8 +44,10 @@ test('camera: word list data is well formed, never holds the name, and its dicti
   assert.ok(sourced >= 50);
   const vocab = new Set(keys.flatMap((k) => k.split(' ')));
   for (const v of glossaryData.variants) assert.ok(vocab.has(v.of), `variant ${v.he} points at a listed word`);
-  assert.ok(glossaryData.realNeighbours.length > 300 && glossaryData.realNeighbours.includes('איפה'));
-  for (const w of glossaryData.realNeighbours) assert.ok(!vocab.has(w), `${w} is listed, so it cannot also be a guard word`);
+  assert.ok(guardFile.words.length > 3000 && guardFile.words.includes('איפה') && guardFile.words.includes('מלון') === false, 'the guard list holds real words that are not listed');
+  assert.match(guardFile.licence, /CC BY-SA 4\.0/); assert.ok(guardFile.frequencyListSha256, 'built with the frequency list, not from repo data alone');
+  for (const w of guardFile.words) assert.ok(!vocab.has(w), `${w} is listed, so it cannot also be a guard word`);
+  assert.ok(!('realNeighbours' in JSON.parse(read('data/camera/sign-glossary.json'))), 'share-alike words stay out of the project-owned word list file');
   assert.equal(read('data/camera/sign-glossary.json'), read('tools/camera-translate/camera_translate/sign-glossary.json'), 'offline test rig copy of the word list is out of date');
 });
 
@@ -67,8 +71,13 @@ test('camera: reader noise, split lines and hidden letters', () => {
   assert.deepEqual(hebrewTokens('חנות אופטיקה 6ז0ז5 |08ו001'), ['חנות', 'אופטיקה']);
   assert.equal(lineHadNoise('חנות :21'), true); assert.equal(lineHadNoise('חנות אופטיקה'), false); assert.equal(lineHadNoise('יציאה / )+ואת'), false, 'what follows the slash is the other language');
   assert.equal(editDistance('ביתמקחת', 'ביתמרקחת'), 1); assert.equal(editDistance('', 'אב'), 2);
+  assert.equal(hiddenLetterDistance('ביתמקחת', 'ביתמרקחת'), 1, 'one letter of the phrase hidden');
+  assert.equal(hiddenLetterDistance('ברוייםהבאים', 'ברוכיםהבאים'), 1, 'a thin stroke read where a letter was hidden');
+  assert.equal(hiddenLetterDistance('חנותפרחים', 'חנותספרים'), Infinity, 'a flower shop is not a bookshop: a full letter that is not in the phrase rules it out');
+  assert.equal(hiddenLetterDistance('יציאה', 'יציאה'), 0);
+  assert.equal(glossary.translate('חנות פרחים').en, null); assert.equal(glossary.translate('חנות דגים').en, 'Fish Store'); assert.equal(glossary.translate('אין חניה').en, 'No Parking');
   for (const [he, en, status] of [['כיכר דיזנגוף / 50816 806ת6לום', 'Dizengoff Square', 'full'], ['בית מ קחת', 'Pharmacy', 'near'], ['שדרות 1 יהודה', 'Ben Yehuda Boulevard', 'near'],
-    ['אי כניסה', 'No Entry', 'near'], ['ברובים הגאים', 'Welcome', 'near'], ['תה סו', 'Tea 10', 'near'], ['קפה סוס', null, 'none'], ['ו קפה', null, 'none'], ['מכונית', null, 'none'], ['מ גות', null, 'none']]) {
+    ['אי כניסה', 'No Entry', 'near'], ['ברובים הגאים', 'Welcome', 'near'], ['תה סו', 'Tea 10', 'near'], ['קפה סוס', null, 'none'], ['מכונית', null, 'none'], ['מ גות', null, 'none']]) {
     const r = glossary.translate(he); assert.deepEqual([r.en, r.status], [en, status], he);
   }
   const regs = regionsFromBoxes([{ text: 'יציאה', x: 300, y: 10, w: 100, h: 40, conf: 95 }, { text: '/', x: 270, y: 10, w: 12, h: 40, conf: 90 }, { text: '%|א]', x: 150, y: 10, w: 100, h: 40, conf: 20 }], glossary);
@@ -101,12 +110,12 @@ test('camera: whole-phrase guessing stays rare on real text (5,000 random pairs 
 });
 
 test('camera: a real word is never "corrected" into a listed word (checked against every word in the app dictionary)', () => {
-  for (const real of ['איפה', 'אזור']) assert.equal(glossary.translate(real).en, null, real);
+  for (const real of ['איפה', 'אזור', 'שכנה', 'דוור', 'פלפל', 'מהיר']) assert.equal(glossary.translate(real).en, null, real);
   assert.deepEqual([glossary.translate('אזור לעשן').en, glossary.translate('אזור לעשן').status], ['No Smoking', 'near'], 'unless the result is a listed phrase with the word beside it');
   const idx = JSON.parse(read('data/vocab/index.json')); const k = idx.fields.indexOf('heUnpointed');
   const corrected = [];
   for (const r of idx.rows) { const w = r[k]; if (!w || w.includes(' ')) continue; if (glossary.translate(w).status === 'near') corrected.push(w); }
-  assert.deepEqual(corrected, [], 'run python3 tools/camera-translate/build_real_neighbours.py after editing the word list');
+  assert.deepEqual(corrected, [], 'run python3 tools/camera-translate/build_real_neighbours.py --download after editing the word list');
 });
 
 test('camera: the app phrasebook translates whole lines the word list cannot, and an exact phrase beats a guess', () => {
@@ -124,9 +133,11 @@ test('camera: the app phrasebook translates whole lines the word list cannot, an
 });
 
 test('camera: review rows (text level): right answers do not fall, wrong answers stay rare, every source phrase translates', () => {
-  // Measured 2026-11-10. First review file (cloud reader), 80 rows: 15 right and 12 wrong as reviewed; 45 right, 4 wrong now.
-  // Second review file (on-device reader), 88 rows: 33 right and 2 wrong on the rules of the previous push; 50 right, 1 wrong now.
-  for (const [file, n, minRight, maxWrong] of [['review-r1-fails.json', 80, 45, 4], ['review-r2-fails.json', 88, 50, 1]]) {
+  // Measured 2026-11-10. First review file (cloud reader), 80 rows: 15 right and 12 wrong as reviewed; 39 right, 4 wrong now.
+  // Second review file (on-device reader), 88 rows: 33 right and 2 wrong at first; 43 right, 1 wrong now.
+  // Both were higher (45 and 50) before the guard list grew from 375 to 3,264 real words: readings that are themselves real
+  // words (a neighbour for danger, a postman for post office) are no longer "corrected". That was a deliberate trade.
+  for (const [file, n, minRight, maxWrong] of [['review-r1-fails.json', 80, 39, 4], ['review-r2-fails.json', 88, 43, 1]]) {
     const { items } = JSON.parse(read(`tools/camera-translate/tests/fixtures/${file}`));
     assert.equal(items.length, n);
     let ok = 0; let wrong = 0; let source = 0;
@@ -185,6 +196,9 @@ test('camera: word-for-word English is drawn only when every word is found as wr
   assert.deepEqual(wordForWord('מחיר חדש 15', none, dict), { en: 'New Price 15', pointed: 'מְחִיר חָדָשׁ 15', translit: 'mechir chadash 15' }, 'noun then describing word: English order is swapped');
   assert.equal(wordForWord('חדש מחיר', none, dict).en, 'New Price', 'any other order is left as read');
   assert.equal(wordForWord('ספר גדול', glossary, dict).en, 'Big Book', 'a listed describing word after a dictionary noun is swapped too');
+  const two = createDictionary({ fields: ['he', 'heUnpointed', 'en', 'pos', 'frequencyRank', 'translit'], rows: [['מֶלַח', 'מלח', 'salt', 'noun', 9, 'melach'], ['מַלָּח', 'מלח', 'sailor', 'noun', 50, 'malach'], ['דָּג', 'דג', 'fish', 'noun', 5, 'dag'], ['דָּג', 'דג', 'to fish', 'verb', 9, 'dag']] });
+  assert.equal(wordForWord('מלח', none, two), null, 'salt or sailor: a spelling with two naming meanings is not drawn');
+  assert.equal(wordForWord('דג', none, two).en, 'Fish', 'a verb reading does not make a noun ambiguous');
   assert.equal(wordForWord('מחיר ספרים', none, dict), null, 'a plural is only a possibility, so nothing is drawn');
   assert.equal(wordForWord('מחיר זזז', none, dict), null); assert.equal(wordForWord('12', none, dict), null); assert.equal(wordForWord('ארוך', none, dict), null);
   assert.equal(wordForWord(`מחיר ${NAME_SKELETON}`, none, dict), null);
@@ -192,6 +206,19 @@ test('camera: word-for-word English is drawn only when every word is found as wr
   assert.equal(shortGloss('(marks a definite direct object; not translated)'), null);
   const gram = createDictionary({ fields: ['he', 'heUnpointed', 'en', 'pos', 'frequencyRank', 'translit'], rows: [['הֲ', 'ה', 'interrogative particle', 'particle', 3, 'ha'], ['שֶׁל', 'של', 'of', 'prep', 5, 'shel']] });
   assert.equal(wordForWord('ה 12', none, gram), null); assert.equal(wordForWord('של', none, gram), null, 'grammar words are never drawn word for word'); assert.equal(shortGloss(''), null);
+});
+
+test('camera: a sign that is not in the word list (each entry hidden in turn) is rarely given a different meaning', async () => {
+  const { leaveOneOut } = await import('../tools/camera-translate/leave-one-out.mjs');
+  const r = leaveOneOut();
+  // Measured 2026-11-10 over 152 entries: 47 the same English, 4 close, 22 different, 79 nothing drawn. "Different" is mostly a
+  // near-synonym (Peril for Danger). Before the guard list grew and word-for-word was limited to single-meaning spellings:
+  // 49 the same, 40 different, including Parking for Store, Window for Hotel and Calf for Market.
+  assert.ok(r.total >= 150);
+  assert.ok(r.different <= 24, `${r.different} hidden entries came back with different English`);
+  assert.ok(r.same >= 44, `only ${r.same} hidden entries came back the same`);
+  const got = Object.fromEntries(r.rows.map((x) => [x.he, x.got]));
+  for (const [he, never] of [['חנות', 'Parking'], ['מלון', 'Window'], ['שוק', 'Calf'], ['חלב', 'Chelev'], ['פיצה', 'Pita'], ['מחיר', 'Tomorrow'], ['גן', 'Gene']]) assert.notEqual(got[he], never, `${he} must not become ${never}`);
 });
 
 test('camera: reading preparation makes letters dark on light and maps a levelled box back onto the photo', () => {
@@ -237,11 +264,12 @@ test('camera: sign colours are read from the picture (white letters on blue stay
   assert.deepEqual(boxColours(new Uint8ClampedArray(W * H * 4).fill(240), W, H, { x: 30, y: 20, w: 60, h: 20 }).fg, [17, 17, 17]);
 });
 
-test('camera: no server. The code can only GET three of the app\'s own data files, stores nothing, and has no address to send to', async () => {
+test('camera: no server. The code can only GET four of the app\'s own data files, stores nothing, and has no address to send to', async () => {
   const seen = [];
-  const fake = async (url, init) => { seen.push({ url: String(url), init }); return { ok: true, json: async () => ({ entries: [] }) }; };
-  await loadGlossaryData(fake); await loadPhrasebook(fake); await loadDictionaryIndex(fake);
-  assert.deepEqual(seen.map((s) => s.url.split('/data/')[1]), ['camera/sign-glossary.json', 'corpus/phrasebook.json', 'vocab/index.json']);
+  const fake = async (url, init) => { seen.push({ url: String(url), init }); return { ok: true, json: async () => ({ entries: [], words: ['x'] }) }; };
+  assert.deepEqual((await loadGlossaryData(fake)).realNeighbours, ['x']); await loadPhrasebook(fake); await loadDictionaryIndex(fake);
+  await assert.rejects(loadGlossaryData(async (url) => ({ ok: !String(url).includes('real-neighbours'), json: async () => ({}) })), /word list missing/, 'no guard list, no guessing');
+  assert.deepEqual(seen.map((s) => s.url.split('/data/')[1]), ['camera/sign-glossary.json', 'camera/real-neighbours.json', 'corpus/phrasebook.json', 'vocab/index.json']);
   assert.ok(seen.every((s) => s.init === undefined), 'plain GET requests with no body and no options');
   assert.deepEqual(await loadPhrasebook(async () => { throw new Error('offline'); }), []);
   assert.ok(!existsSync(new URL('../data/camera/config.json', import.meta.url)), 'there is no service address file');
@@ -263,7 +291,7 @@ test('camera: route is registered, lazy, and kept out of the first-install preca
   const route = ROUTES.find((r) => r.name === 'camera');
   assert.deepEqual([route.pattern, route.module, route.title], ['/camera', '../camera/camera.view.js', 'Camera Translator']);
   assert.equal(matchRoute('#/camera').route.name, 'camera');
-  for (const f of ['src/camera/camera.view.js', 'src/camera/camera-model.js', 'src/camera/camera-client.js', 'src/camera/on-device.js', 'data/camera/sign-glossary.json']) {
+  for (const f of ['src/camera/camera.view.js', 'src/camera/camera-model.js', 'src/camera/camera-client.js', 'src/camera/on-device.js', 'data/camera/sign-glossary.json', 'data/camera/real-neighbours.json']) {
     assert.ok(existsSync(new URL(`../${f}`, import.meta.url)), f); assert.ok(isOnDemand(f), `${f} must be on demand`);
   }
   const m = computeManifest();

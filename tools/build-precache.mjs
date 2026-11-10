@@ -86,12 +86,19 @@ const ON_DEMAND_FILES = new Set(['data/audio/manifest.json', 'data/audio/manifes
   'src/audio/synth-music.js',
   // Songs page and the celebration sting: loaded on first open / first lesson finished with music on, then runtime-cached.
   'src/listen/songs.view.js', 'src/audio/sting.js',
+  // Optional 'Sound like a local' view (18 KB): loaded when #/israel first opens, runtime-cached.
+  // Restores 0.05 MiB of first-install headroom after the Brain Lab warm-up landed on a tighter main.
+  'src/israel/israel.view.js',
+  // Calendar view (30 KB): loaded when #/calendar first opens, runtime-cached. Keeps first-install headroom for the overnight feedback layer.
+  'src/curriculum/calendar.view.js',
   // English read-aloud helper (~4 KB): imported when "Hear ... in English" is first pressed, then runtime-cached.
   'src/shell/speak-english.js',
   // Preview-route view code only (their models and data stay as they were): the word builder (#/firstwin, its data was already on demand),
   // Sound like a local (#/israel) and Common phrases (#/phrases). Fetched on first open and runtime-cached; moved here when the
   // first-minute pass added the design tokens, the polish layer, the header stat bar and Rimon in the page (keeps first install under 3.95 MiB).
   'src/firstday/minuteone.view.js', 'src/israel/israel.view.js', 'src/phrases/phrases.view.js',
+  // Scan a photo, Sounds and Word Sprint (preview routes): view code only, fetched on first open (keeps first install under 3.95 MiB with the launch branch).
+  'src/photo/scan.view.js', 'src/pronunciation/sounds.view.js', 'src/sprint/sprint.view.js',
   // Cursive display font: only fetched when the cursive script setting is on (font-display: swap falls back otherwise).
   'assets/fonts/web/gveret-levin.woff2']);
 export const isOnDemand = (rel) => !KEEP_DATA.has(rel) && (ON_DEMAND_FILES.has(rel) || /^data\/curriculum\/resource-concepts-/.test(rel) || ON_DEMAND_PREFIXES.some((p) => rel.startsWith(p)));

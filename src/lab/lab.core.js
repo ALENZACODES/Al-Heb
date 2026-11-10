@@ -88,10 +88,24 @@ export function summarize(trials) {
 }
 
 export function emptyState() { return { games: {}, workouts: {} }; }
-/** Defensive read of the stored record. */
+const isObj = (v) => !!v && typeof v === 'object' && !Array.isArray(v);
+const num = (v, d) => (Number.isFinite(v) ? v : d);
+/**
+ * Defensive read of the stored record. Every game record comes back with a history array and numbers for best, plays and
+ * lastMax, and every workout day with a done array, so a partial, older or hand-edited record cannot break the Brain Lab page
+ * (a game record without its history used to stop the whole page from drawing).
+ */
 export function readState(raw) {
-  const s = raw && typeof raw === 'object' ? raw : {};
-  return { games: s.games && typeof s.games === 'object' ? s.games : {}, workouts: s.workouts && typeof s.workouts === 'object' ? s.workouts : {} };
+  const s = isObj(raw) ? raw : {};
+  const games = {};
+  for (const [id, g] of Object.entries(isObj(s.games) ? s.games : {})) {
+    if (!isObj(g)) continue;
+    const history = Array.isArray(g.history) ? g.history.filter(isObj) : [];
+    games[id] = { ...g, best: num(g.best, 0), plays: num(g.plays, history.length), lastMax: num(g.lastMax, 1), history };
+  }
+  const workouts = {};
+  for (const [day, w] of Object.entries(isObj(s.workouts) ? s.workouts : {})) workouts[day] = { ...(isObj(w) ? w : {}), done: Array.isArray(w?.done) ? w.done.filter((x) => typeof x === 'string') : [] };
+  return { games, workouts };
 }
 
 /** Pure: state after a finished session. Keeps the last 30 sessions per game. */

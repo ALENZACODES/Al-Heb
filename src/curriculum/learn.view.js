@@ -123,8 +123,9 @@ function mountMap(root, ctx) {
     const pct = total ? Math.round((doneCount / total) * 100) : 0;
     const pic = el("img", { class: "alef-continue-rimon", alt: "", width: "96", height: "96", src: new URL("../../assets/img/gen/MASCOT_rimon.800.webp", import.meta.url).href });
     const streak = st?.streak?.count || 0;
+    const goalMinutes = Math.round((st?.streak?.goal || 300) / 60);
     const say = !next ? "You finished every lesson in this track. Amazing!"
-      : doneCount === 0 ? "Let's start! Your first lesson takes about " + next.estMinutes + " minutes."
+      : doneCount === 0 ? "Let's start! " + goalMinutes + " minutes counts for today. The whole first lesson takes about " + next.estMinutes + ", and you can stop and come back."
       : streak > 1 && !st.streak.activeToday ? `${streak} days in a row! One lesson keeps it going.`
       : "Ready for the next one? You're doing great.";
     // the ring is the learner's own daily goal (chosen at setup, the same number the header shows); the streak still counts a day at 5 minutes

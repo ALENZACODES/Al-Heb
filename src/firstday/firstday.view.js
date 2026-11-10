@@ -17,7 +17,8 @@ import { migrateProgress, winStep, recordAnswer, stepQuestions, stepIndex, onram
 import { loadMemoryChain, entryFor, buildMemoryCard } from '../letters/memorycard.js';
 import { vowelSound, respell, congregationOf, audioNote, saySound, playLine, audioSupport, LABELS } from '../pronunciation/forTradition.js';
 import { isAudioFree } from '../shell/audiofree.js';
-import { soundOn } from '../curriculum/exercises.session.js';
+import { soundOn, hapticsOn } from '../curriculum/exercises.session.js';
+import { showRimon } from '../shell/rimon-show.js';
 import { rimonInline } from '../shell/rimon-inline.js';
 import { streakVisible } from '../shell/comfort.js';
 
@@ -86,7 +87,7 @@ export function mount(root, ctx) {
     meter.setAttribute('aria-valuenow', String(pct)); meter.setAttribute('aria-valuetext', label);
   };
   const footSet = (...kids) => { foot.className = 'fd-foot'; foot.replaceChildren(...kids.filter(Boolean)); };
-  const chime = (ok) => { try { if (soundOn(ctx)) ctx.sfx.play(ok ? 'success' : 'miss'); } catch { /* sound is never the only cue */ } };
+  const chime = (ok) => { try { if (soundOn(ctx)) ctx.sfx.play(ok ? 'success' : 'miss'); } catch { /* sound is never the only cue */ } try { if (hapticsOn(ctx)) globalThis.navigator.vibrate(ok ? [12] : [30, 40, 30]); } catch { /* optional */ } showRimon(ok ? 'correct' : 'wrong', { settings: ctx?.settings, ms: 1800 }); };
   const kicker = (txt) => el('p', { class: 'fd-kicker' }, txt);
   const KIND_LABEL = { letter: 'New letter', vowel: 'New vowel mark', syllable: 'Read a syllable', word: 'Read a word' };
 
@@ -281,6 +282,8 @@ export function mount(root, ctx) {
         el('p', {}, el('a', { href: '#/' }, 'Back to Home'))));
     footSet(el('a', { class: 'btn fd-cta', id: 'fd-next-lesson', href: nextLesson ? `#/learn?lesson=${nextLesson.id}` : '#/learn' }, nextLesson ? `Continue: ${nextLesson.title}` : 'All lessons'));
     if (!practice) { try { celebrate(); } catch { /* decoration only */ } }
+    // After the first win (never on first load): offer Rimon's reminders once.
+    if (!practice) { const slot = body.querySelector?.('.fd-done'); if (slot) import('../shell/reminder-ask.js').then((m) => m.offerReminders(slot, ctx)).catch(() => {}); }
   }
   function celebrate() {
     const doc = globalThis.document; if (!doc?.createElement || !doc.body) return;

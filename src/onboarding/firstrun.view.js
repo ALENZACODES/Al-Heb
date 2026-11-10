@@ -142,7 +142,7 @@ export function mount(root, ctx) {
       pageBox('daily', dailyFs),
       next,
       h('div', { class: 'ob-foot' },
-        h('div', { class: 'ob-foot-page', 'data-page': 'level' }, levelNext, rec ? h('button', { type: 'button', class: 'btn secondary', onclick: () => go('plan') }, 'Keep my current starting point') : null),
+        h('div', { class: 'ob-foot-page', 'data-page': 'level' }, levelNext, rec ? h('button', { type: 'button', class: 'btn secondary', onclick: () => go('plan') }, 'Keep my current starting point') : h('button', { type: 'button', class: 'btn secondary ob-quick-go', id: 'ob-quick-start', onclick: () => quickStart() }, 'New to Hebrew? Start now')),
         h('div', { class: 'ob-foot-page', 'data-page': 'goal' }, goalNext),
         h('div', { class: 'ob-foot-page', 'data-page': 'daily' }, h('button', { type: 'submit', class: 'btn ob-cta', id: 'ob-letters-continue' }, 'Continue'))));
     const showPage = (name) => {
@@ -182,6 +182,17 @@ export function mount(root, ctx) {
       page = 'level';
       go(israelNow ? 'plan' : 'congregation');
     };
+    // Quick start (launch branch, Nov 10 2026): a brand-new learner is one tap from the first letter. Pronunciation and the week plan
+    // keep their defaults (Sephardi reading, Israeli voices) and stay in Settings. Offered under Continue on the first question.
+    function quickStart() {
+      rec = answerLetters(rec, 'none', nowISO());
+      if (DAILY_GOALS.includes(daily)) { rec = { ...rec, minutesPerDay: daily }; try { store.set(DAILY_GOAL_KEY, daily); } catch { /* best effort */ } }
+      save();
+      try { settings.set({ onboarded: true, goal }); } catch { /* settings may be read-only in tests */ }
+      say('Saved. Your first letter is next.');
+      const href = startHref().slice(1); // '#/firstday' -> route path
+      if (typeof ctx.route === 'function') ctx.route(href); else { try { globalThis.location.hash = startHref(); } catch { /* tests */ } }
+    }
     body.replaceChildren(h('p', { class: 'ob-lede' }, 'Let’s find a comfortable place to begin. Tell us what you can read now, then choose what you want to learn.'), form,
       h('p', { class: 'muted ob-fine' }, 'Your answer is saved only on this device. ', h('a', { href: '#/how' }, 'How this works'), '. ', h('a', { href: '#/accessibility', id: 'ob-a11y-link' }, 'Accessibility options'), '.'));
     showPage(page);

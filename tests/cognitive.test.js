@@ -152,7 +152,7 @@ test("motion audit: animations match the reviewed inventory, loops are slow, and
     // first-lesson player (assets/css/player.css): one-shot, never looping; the global reduced-motion and calm rules switch them off
     'fd-rise', 'fd-pop', 'fd-fall',
     // Learn continue card and lesson-finished celebration (assets/css/learn.css): Rimon bobs every 3.2 s, the next stop pulses every 2 s, the confetti and hop play once; reduced motion and calm mode switch all of them off
-    'alef-continue-bob', 'alef-pulse', 'alef-burst', 'alef-hop',
+    'alef-continue-bob', 'alef-pulse', 'alef-burst', 'alef-hop', 'alef-rimon-burst',
     // Brain Lab (src/lab/lab.view.js): a 0.3 s one-shot shake on a wrong tile, never looping; reduced motion switches it off
     'lab-shake',
     // First-minute pass (assets/css/polish.css, 2026-11-10), reviewed: the welcome page slides in once (0.22 s), Rimon's bubble pops in

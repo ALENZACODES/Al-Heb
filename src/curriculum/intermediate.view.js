@@ -362,7 +362,7 @@ function mountLesson(root, ctx, id) {
       const nextL = listIntermediate()[listIntermediate().findIndex((l) => l.id === lesson.id) + 1];
       const words = (e) => (e.type === "recall" ? e.he : e.type === "produce" ? e.options[e.answer] : null);
       const good = exs.filter((e) => results[e.id] && words(e)).map((e) => words(e));
-      body.replaceChildren(summaryNode({ title: all ? "Lesson finished" : "Round finished", countText: `${right} of ${exs.length} marked as known.`, stats: { ...st2, accuracy: st2.answered ? st2.right / st2.answered : null },
+      body.replaceChildren(summaryNode({ ctx, title: all ? "Lesson finished" : "Round finished", countText: `${right} of ${exs.length} marked as known.`, stats: { ...st2, accuracy: st2.answered ? st2.right / st2.answered : null },
         ms: Date.now() - t0, goodLabels: [...new Set(good)], missedLabels: missed.map(exLabel), skippedN: skipped.length, cardsUpdated,
         nextHref: nextL ? `#/intermediate/${nextL.id}` : null, nextLabel: "Next lesson",
         extraLinks: [el("a", { class: "btn secondary", href: "#/intermediate" }, "All intermediate lessons")] }));

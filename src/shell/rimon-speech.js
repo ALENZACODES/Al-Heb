@@ -68,6 +68,9 @@ export function mountSpeechBubble(host,{doc=document,now=()=>new Date(),streak=n
   function position(){
     if(bubble.hidden)return;
     const rect=host.getBoundingClientRect(),width=bubble.offsetWidth,height=bubble.offsetHeight;
+    // Phones: sit just above Rimon at the right edge (compact), never across the middle of the screen where lessons and tracing are.
+    if(innerWidth<=600){bubble.classList.add('rimon-bubble-phone');bubble.style.left=Math.max(8,innerWidth-width-8)+'px';bubble.style.top=Math.max(8,rect.top-height-8)+'px';return;}
+    bubble.classList.remove('rimon-bubble-phone');
     bubble.style.left=Math.max(8,Math.min(innerWidth-width-8,rect.left-width-10))+'px';
     const safeBottom=innerWidth<=600?80:8;
     const top=Math.max(8,Math.min(innerHeight-height-safeBottom,rect.top+12));
@@ -83,7 +86,7 @@ export function mountSpeechBubble(host,{doc=document,now=()=>new Date(),streak=n
       key=nextKey;bubble.replaceChildren();
       if(friday)bubble.append(pair(SHABBAT,'rimon-shabbat'));
       if(message)bubble.append(pair(message,'rimon-encouragement'));
-      bubble.hidden=host.hidden || (!friday&&!message);
+      bubble.hidden=host.hidden || (!friday&&!message) || ((globalThis.innerWidth||1024)<=600 && !!doc.querySelector?.('.alef-trace .stage, .alef-quiz, .fd-sheet'));
       if(!bubble.hidden){bubble.classList.remove('is-popping');void bubble.offsetWidth;bubble.classList.add('is-popping');}
     }
     position();

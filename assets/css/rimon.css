@@ -36,3 +36,30 @@
 .rimon-corner{transition:transform .35s ease}
 @media(max-width:600px){.rimon-corner.rimon-peek{transform:translateY(calc(100% - 1px));cursor:pointer}.rimon-corner.rimon-peek .rimon-dismiss{visibility:hidden}}
 @media(prefers-reduced-motion:reduce){.rimon-corner{transition:none}}
+
+/* showRimon(situation) — shared, fail-safe Rimon stills (src/shell/rimon-show.js). Big and bold by default. */
+.alef-rimon{display:block;inline-size:100%;block-size:auto;max-inline-size:100%;pointer-events:none;user-select:none}
+.alef-rimon[hidden]{display:none}
+.alef-rimon-spot{position:fixed;z-index:60;inset-inline-end:max(.5rem,env(safe-area-inset-right));inset-block-end:calc(84px + env(safe-area-inset-bottom));inline-size:min(42vw,190px);pointer-events:none;filter:drop-shadow(0 10px 18px rgba(18,61,42,.35))}
+.alef-rimon-slot{display:grid;place-items:center;margin-inline:auto}
+.alef-rimon-slot:empty,.alef-rimon-slot:has(> .alef-rimon[hidden]){display:none}
+.alef-rimon-slot-big{inline-size:min(56vw,220px)}
+.alef-rimon-slot-huge{inline-size:min(78vw,320px)}
+.alef-rimon-slot-small{inline-size:96px}
+.alef-rimon-burst{animation:alef-rimon-burst .55s cubic-bezier(.2,1.6,.4,1) both}
+@keyframes alef-rimon-burst{0%{opacity:0;transform:translateY(40%) scale(.35) rotate(-14deg)}60%{opacity:1;transform:translateY(-6%) scale(1.12) rotate(4deg)}100%{transform:none}}
+@media (prefers-reduced-motion:reduce){.alef-rimon-burst{animation:none}}
+
+/* Answer band: Duolingo-style colour strip after every lesson answer (visual only; the written verdict stays the real cue). */
+.alef-answer-band{position:fixed;z-index:59;inset-inline:0;inset-block-end:calc(64px + env(safe-area-inset-bottom));padding:.85rem 1.1rem;font-weight:800;font-size:1.15rem;display:flex;align-items:center;gap:.6rem;pointer-events:none;transform:translateY(120%);opacity:0;transition:transform .18s ease-out,opacity .18s}
+.alef-answer-band.is-on{transform:none;opacity:1}
+.alef-answer-band.is-ok{background:#d7f5dc;color:#0d3b1a;border-block-start:4px solid #1d7a38}
+.alef-answer-band.is-no{background:#fde2e1;color:#5a0f0f;border-block-start:4px solid #a31d1d}
+.alef-answer-band b{display:inline-grid;place-items:center;inline-size:2rem;block-size:2rem;border-radius:50%;background:currentColor}
+.alef-answer-band b span{color:#fff}
+@media (min-width:900px){.alef-answer-band{inset-block-end:0}}
+@media (prefers-reduced-motion:reduce){.alef-answer-band{transition:none}}
+@media (forced-colors:active){.alef-answer-band{border:2px solid CanvasText}}
+/* Phone bubble: compact, above Rimon at the right edge; the tail points down at Rimon. */
+.rimon-bubble.rimon-bubble-phone{max-inline-size:min(60vw,210px);padding:.35rem .6rem;font-size:.85rem}
+.rimon-bubble.rimon-bubble-phone::after,.rimon-bubble.rimon-bubble-phone::before{display:none}

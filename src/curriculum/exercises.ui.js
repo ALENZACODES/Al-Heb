@@ -30,13 +30,16 @@ export function summaryNode(d) {
   try { globalThis.document?.dispatchEvent?.(new CustomEvent("alef:celebrate", { detail: { kind: "lesson", accuracy: st.accuracy } })); } catch { /* the sting is optional (src/audio/sting.js) */ }
   // Rimon in the page plays his move (high five for a strong lesson); the streak flame follows the shared record and lights live.
   let rimon = null; try { rimon = rimonInline({ action: st.accuracy >= 0.8 ? "highfive" : "bounce", size: 132, label: "Rimon cheers" }); } catch { rimon = null; }
-  const store = d.store ?? globalThis.alef?.store ?? null;
+  const store = d.store ?? d.ctx?.store ?? globalThis.alef?.store ?? null;
   let flame = null;
-  if (store && d.showStreak !== false) { try { flame = flameCard({ make: el, store, onLit: () => { try { if (d.sfx?.play) d.sfx.play("streak"); } catch { /* sound is never the only cue */ } rimon?.play?.("stretch"); } }); } catch { flame = null; } }
+  if (store && d.showStreak !== false && d.ctx?.settings?.get?.("showStreak") !== false && d.ctx?.settings?.get?.("calmMode") !== true) { try { flame = flameCard({ make: el, store, onLit: () => { try { const fx = d.sfx || d.ctx?.sfx; if (fx?.play) fx.play("streak"); } catch { /* sound is never the only cue */ } rimon?.play?.("stretch"); } }); } catch { flame = null; } }
   const cheer = st.accuracy >= 0.9 ? "Perfect lesson! Rimon is dancing." : st.accuracy >= 0.7 ? "Great job! Keep it going." : "You finished! Every lesson counts.";
   const party = el("div", { class: "alef-celebrate", "aria-hidden": "true" },
     ...Array.from({ length: 18 }, (_, i) => el("i", { style: `--i:${i}` })),
     rimon ? rimon.el : el("img", { class: "alef-celebrate-rimon", alt: "", width: "120", height: "120", src: new URL("../../assets/img/gen/MASCOT_rimon.800.webp", import.meta.url).href }));
+  // The streak flame is the live card above (src/shell/flame.js); the launch branch's text flame is folded into it.
+  const remindSlot = el("div", { class: "alef-remind-slot" });
+  if (d.ctx) import("../shell/reminder-ask.js").then((m) => m.offerReminders(remindSlot, d.ctx)).catch(() => {});
   return el("div", { class: "alef-summary" },
     party,
     el("p", { class: "alef-celebrate-cheer" }, cheer),
@@ -51,6 +54,7 @@ export function summaryNode(d) {
     d.missedLabels.length ? el("div", {}, el("p", {}, "To review:"), el("ul", { "data-list": "review" }, ...d.missedLabels.map((t) => el("li", {}, t)))) : el("p", {}, "Nothing to review."),
     d.skippedN ? el("p", { class: "muted", "data-skipped": String(d.skippedN) }, plain("skippedNote", { n: d.skippedN })) : null,
     el("p", { class: "muted" }, d.cardsUpdated ? `${d.cardsUpdated} review card${d.cardsUpdated === 1 ? "" : "s"} updated.` : "No review cards needed updating."),
+    remindSlot,
     el("div", { class: "row alef-summary-actions" }, next, d.dueCount === 0 ? null : el("a", { class: next ? "btn secondary" : "btn", href: "#/learn?review=1" }, "Review now"), ...(d.extraLinks || [])));
 }
 

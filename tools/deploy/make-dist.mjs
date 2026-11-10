@@ -20,6 +20,8 @@ export const LIMITS = { maxFileBytes: 25 * 1024 * 1024 }; // developers.cloudfla
 export const EXTRAS = [
   ['sw.js', 'service worker'],
   ['_headers', 'Cloudflare Pages headers'],
+  ['robots.txt', 'search crawler rules'],
+  ['sitemap.xml', 'search sitemap for the app shell'],
   ['_redirects', 'Cloudflare Pages redirects (only if the file exists)'],
   ['assets/vendor', 'vendored Tesseract OCR (lazy, runtime-cached; includes licence texts)'],
   ['assets/workbook', 'printable workbook PDFs + manifest (linked from the app, downloaded on demand)'],
@@ -34,6 +36,7 @@ export const EXTRAS = [
   ['data/audio/manifest-torah.json', 'lazy full-Torah recording list; ship even when both languages exceed the precache size limit'],
   ['data/audio/manifest-torah-he.json', 'lazy index of the Hebrew Torah verse recordings (src/shell/torah-he-index.js)'],
   ['assets/img', 'illustrations: only shipped with --with-img (16 MiB of placeholders); the two hero files named literally in src/ ship always via their own entries below'],
+  ['assets/img/social-preview.png', 'Open Graph and Twitter link-preview image'],
   ['assets/img/gen/HERO_tree_of_life_realistic.webp', 'home astral-tree hero, named literally in src/shell/astral-tree.js (fix #11); runtime-cached on first view, not precached'],
   ['assets/img/gen/HERO_home_tree.webp', 'Welcome hero, named literally in src/shell/home-hero.js (fix #11); runtime-cached on first view, not precached'],
   ['assets/img/rimon', 'Rimon animation sheets, loaded by the mascot on every route'],

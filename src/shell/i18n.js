@@ -40,7 +40,10 @@ export const en = {
   'unavailable.body': 'This part of Aleph is not ready yet. Nothing is broken. Please check back later.',
   'error.title': 'This screen did not load',
   'error.body': 'Sorry about that. Try reloading the page, or go back to Home.',
+  'offline.title': 'Needs a connection the first time',
+  'offline.body': 'This screen is not saved on this device yet. Connect to the internet and open it once. After that it works offline too.',
   'notfound.title': 'Page not found',
+  'notfound.updating': 'A newer version has this page. Updating now…',
   'about.title': 'About Aleph',
   'how.title': 'How this works',
   'welcome.title': 'Welcome to Aleph',
@@ -54,8 +57,8 @@ export const en = {
 };
 /** Hebrew UI labels. FLAGGED: machine-assisted drafts, need native-speaker review. */
 export const he = {
-  'nav.home': 'בית', 'nav.learn': 'לימוד', 'nav.progress': 'התקדמות', 'nav.letters': 'אותיות', 'nav.sounds': 'צלילים',
-  'nav.read': 'קריאה', 'nav.scan': 'סריקה', 'nav.calendar': 'לוח שנה', 'nav.settings': 'הגדרות', 'nav.about': 'אודות', 'nav.help': 'עזרה', 'nav.workbook': 'חוברת',
+  'nav.home': 'בית', 'nav.learn': 'לימוד', 'nav.letters': 'אותיות', 'nav.sounds': 'צלילים',
+  'nav.read': 'קריאה', 'nav.progress': 'התקדמות', 'nav.scan': 'סריקה', 'nav.calendar': 'לוח שנה', 'nav.settings': 'הגדרות', 'nav.about': 'אודות', 'nav.help': 'עזרה', 'nav.workbook': 'חוברת',
   // DRAFT, unreviewed machine-assisted labels for the new Learn sub-screens:
   'nav.loanwords': 'מילים שאפשר לקרוא', 'nav.checkpoint': 'בדיקת אותיות דומות', 'nav.dialogues': 'שיחות בישראל',
   'app.name': 'אלף',

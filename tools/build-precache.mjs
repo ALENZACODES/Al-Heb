@@ -89,6 +89,8 @@ const ON_DEMAND_FILES = new Set(['data/audio/manifest.json', 'data/audio/manifes
   // Optional 'Sound like a local' view (18 KB): loaded when #/israel first opens, runtime-cached.
   // Restores 0.05 MiB of first-install headroom after the Brain Lab warm-up landed on a tighter main.
   'src/israel/israel.view.js',
+  // Calendar view (30 KB): loaded when #/calendar first opens, runtime-cached. Keeps first-install headroom for the overnight feedback layer.
+  'src/curriculum/calendar.view.js',
   // English read-aloud helper (~4 KB): imported when "Hear ... in English" is first pressed, then runtime-cached.
   'src/shell/speak-english.js',
   // Cursive display font: only fetched when the cursive script setting is on (font-display: swap falls back otherwise).

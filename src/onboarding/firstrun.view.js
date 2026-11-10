@@ -15,6 +15,7 @@ import { DAILY_GOAL_KEY, DAILY_GOALS, FIRSTDAY_PROGRESS_KEY as FIRSTDAY_KEY } fr
 import { PROGRESS_KEY } from '../curriculum/dom.js';
 import { audioSupport } from '../pronunciation/forTradition.js';
 import { isAudioFree } from '../shell/audiofree.js';
+import { rimonSlot } from '../shell/rimon-show.js';
 
 export const DRAFT_NOTE = 'Draft: no learner has tried this plan yet. The minutes are goals, not measurements. The plan has one lesson a day and starts with the lesson shown on Home. It updates as you finish lessons.';
 
@@ -97,7 +98,22 @@ export function mount(root, ctx) {
       say(`Saved. Your starting point is ${answerById(picked).start === '/placement' ? 'the placement check' : 'your first 10 minutes'}.${israelNow ? ' Israeli pronunciation is set; change it in Settings.' : ''}`);
       go(israelNow ? 'plan' : 'congregation');
     };
-    body.replaceChildren(h('p', {}, 'Let’s find a comfortable place to begin. Tell us what you can read now, then choose what you want to learn.'), form, h('p', { class: 'muted' }, 'Your answer is saved only on this device. ', h('a', { href: '#/how' }, 'How this works'), '. ', h('a', { href: '#/accessibility', id: 'ob-a11y-link' }, 'Accessibility options'), '.'));
+    // Quick start (first-minute redesign, Nov 10 2026): a new learner is one tap from the first letter. Pronunciation and the
+    // week plan keep their defaults (Sephardi reading, Israeli voices) and stay in Settings; the full form below is unchanged.
+    const quickStart = () => {
+      rec = answerLetters(rec, 'none', nowISO());
+      save();
+      try { settings.set({ onboarded: true, goal }); } catch { /* settings may be read-only in tests */ }
+      say('Saved. Your first letter is next.');
+      const href = startHref().slice(1); // '#/firstday' -> route path
+      if (typeof ctx.route === 'function') ctx.route(href); else { try { globalThis.location.hash = startHref(); } catch { /* tests */ } }
+    };
+    const quick = rec ? null : h('section', { class: 'ob-quick', 'aria-labelledby': 'ob-quick-h' },
+      rimonSlot('welcome', { size: 'huge', settings }),
+      h('p', { class: 'ob-quick-hi', id: 'ob-quick-h' }, 'Shalom! I’m Rimon. Your first Hebrew letter is one tap away.'),
+      h('button', { type: 'button', class: 'btn ob-quick-go', id: 'ob-quick-start', onclick: quickStart }, 'Start from zero'),
+      h('p', { class: 'muted small' }, 'Already read some Hebrew? Answer the two questions below instead.'));
+    body.replaceChildren(...[quick].filter(Boolean), h('p', {}, 'Let’s find a comfortable place to begin. Tell us what you can read now, then choose what you want to learn.'), form, h('p', { class: 'muted' }, 'Your answer is saved only on this device. ', h('a', { href: '#/how' }, 'How this works'), '. ', h('a', { href: '#/accessibility', id: 'ob-a11y-link' }, 'Accessibility options'), '.'));
   }
 
   // ---- Stage 2 ----

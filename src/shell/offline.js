@@ -71,7 +71,7 @@ export const ON_DEMAND_GROUPS = Object.freeze([
   { id: "od-service", label: "Follow the Service", test: /^src\/service\//, approxMB: 0.1 },
   { id: "od-awards", label: "Awards gallery and certificate", test: /^src\/awards\/(?:gallery\.view|proof-font|certificate|icons)\.js$/, approxMB: 0.11 },
   { id: "od-torahreader", label: "Torah reader page and its Hebrew recording index", test: /^src\/(torahreader\/torahreader\.view|shell\/torah-he-index)\.js$/, approxMB: 0.05 },
-  { id: "od-preview-pages", label: "Class track, pronunciation comparison and Sound like a local (preview-route code)", test: /^src\/(classtrack\/classtrack|pronunciation\/compare|israel\/israel)\.view\.js$/, approxMB: 0.05 },
+  { id: "od-preview-pages", label: "Class track, pronunciation comparison, Sound like a local and the calendar (route code)", test: /^src\/(classtrack\/classtrack|pronunciation\/compare|israel\/israel|curriculum\/calendar)\.view\.js$/, approxMB: 0.05 },
   { id: "od-images", label: "Picture approvals and word cues", test: /^data\/images\//, approxMB: 0.20 },
   { id: "od-letters", label: "Letter art concepts and keyboard layout", test: /^data\/letters\//, approxMB: 0.08 },
   { id: "od-home", label: "Home prayers and morning verses", test: /^(data\/homepage\/|data\/morning-verses\.json)/, approxMB: 0.09 },

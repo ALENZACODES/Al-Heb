@@ -1,13 +1,25 @@
 {
  "status": "tts",
  "source": "paid-cloud",
- "engine": "google-cloud-tts",
+ "engine": "stitched-from-word-clips",
  "voiceId": "he-IL-Wavenet-A",
  "tradition": "israeli",
  "inputText": "יְהֵא שְׁלָמָא רַבָּא מִן־שְׁמַיָּא וְחַיִּים עָלֵינוּ וְעַל־כָּל־יִשְׂרָאֵל וְאִמְרוּ אָמֵן׃",
  "inputSha256": "0dd28e93e9d70ca96497a9c12bb3812e6f8d8acb9e68c78f3f1be0d8b7ddba35",
  "ingestedAt": null,
  "licence": "customer-owned",
- "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
- "inputTextKind": "hebrew"
+ "note": "Joined from word clips; flagged words replaced by fresh takes that both reviewers heard best (tools/audio/asr-check/take-scores.jsonl, rebuild-both-log.jsonl).",
+ "inputTextKind": "hebrew",
+ "stitchedFromText": "יְהֵא שְׁלָמָא רַבָּא מִן־שְׁמַיָּא וְחַיִּים עָלֵינוּ וְעַל־כָּל־יִשְׂרָאֵל וְאִמְרוּ אָמֵן׃",
+ "stitchedFrom": [
+  "audio/f/israeli/word/brich-shmei-w104.mp3",
+  "audio/f/israeli/word/kaddish-1-w50.mp3",
+  "audio/f/israeli/word/kaddish-1-w23.mp3",
+  "audio/f/israeli/word/kaddish-1-w52.mp3",
+  "audio/f/israeli/word/kaddish-1-w53.mp3",
+  "audio/f/israeli/word/aleinu-1-w1.mp3",
+  "audio/f/israeli/word/kaddish-1-w55.mp3",
+  "audio/f/israeli/word/kaddish-1-w19.mp3",
+  "audio/f/israeli/word/haftarah-after-w143.mp3"
+ ]
 }

@@ -28,13 +28,14 @@ def fold(ipa):
 _model = None
 
 
-def hear(path, model_dir):
+def hear(path, model_dir, max_tokens=None):
     global _model
     if _model is None:
         from faster_whisper import WhisperModel
         _model = WhisperModel(model_dir, device='cpu', compute_type='int8', cpu_threads=os.cpu_count() or 2)
     segs, _ = _model.transcribe(L.load(path), language='he', task='transcribe', beam_size=1, best_of=1, temperature=0,
-                                condition_on_previous_text=False, vad_filter=False, suppress_tokens=[], without_timestamps=True)
+                                condition_on_previous_text=False, vad_filter=False, suppress_tokens=[], without_timestamps=True,
+                                **({'max_new_tokens': max_tokens} if max_tokens else {}))
     raw = ' '.join(s.text.strip() for s in segs)
     for a, b in [('dZ', 'dʒ'), ('tS', 'tʃ'), ('S', 'ʃ'), ('Z', 'ʒ'), ('q', 'ʔ'), ("'", 'ˈ'), ('r', 'ʁ'), ('x', 'χ'), ('g', 'ɡ')]:
         raw = raw.replace(a, b)

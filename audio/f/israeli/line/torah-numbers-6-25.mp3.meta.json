@@ -9,7 +9,7 @@
   "audio/f/israeli/word/adon-olam-1-w69.mp3",
   "audio/f/israeli/word/bless-priestly-2-w3.mp3",
   "audio/f/israeli/word/bless-priestly-2-w4.mp3",
-  "audio/f/israeli/word/bless-priestly-2-w5.mp3"
+  "audio-takes/f/w75b43bf36e-p.mp3"
  ],
- "note": "Joined from its word clips because the whole-sentence render misread words; the joined version had fewer misheard words in the speech-to-text check (docs/audio/ASR-LINES-FIX.md)."
+ "note": "Joined from word clips; flagged words replaced by fresh takes that both reviewers heard best (tools/audio/asr-check/take-scores.jsonl, rebuild-both-log.jsonl)."
 }

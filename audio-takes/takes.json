@@ -1,0 +1,3341 @@
+[
+{
+"voice": "f",
+"word": "אֲבוּדָה",
+"take": "s",
+"text": "אֲבוּדָה",
+"rate": 0.85,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/wf827932653-s.mp3"
+},
+{
+"voice": "f",
+"word": "אֲשֶׁר־בָּהּ",
+"take": "p",
+"text": "אֲשֶׁר־בָּהּ",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w3ad5bb3a88-p.mp3"
+},
+{
+"voice": "f",
+"word": "אֲשֶׁר־צִוָּה",
+"take": "s",
+"text": "אֲשֶׁר־צִוָּה",
+"rate": 0.85,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w93d1e4c3b1-s.mp3"
+},
+{
+"voice": "f",
+"word": "אִתָּךְ",
+"take": "p",
+"text": "אִתָּךְ",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/wc1a1310784-p.mp3"
+},
+{
+"voice": "f",
+"word": "אֶל",
+"take": "m",
+"text": "אֶל.",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/wfb25148d42-m.mp3"
+},
+{
+"voice": "f",
+"word": "אֶלְעָזָר",
+"take": "p",
+"text": "אֶלְעָזָר",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w5e8e026e0a-p.mp3"
+},
+{
+"voice": "f",
+"word": "אֶל־אַנְשֵׁי",
+"take": "m",
+"text": "אֶל אַנְשֵׁי.",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w986f061c06-m.mp3"
+},
+{
+"voice": "f",
+"word": "אֶל־מֹשֶׁה",
+"take": "p",
+"text": "אֶל־מֹשֶׁה",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/wda5c963f22-p.mp3"
+},
+{
+"voice": "f",
+"word": "אֶעֱשֶׂה",
+"take": "u",
+"text": "אעשה",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/wc42d693185-u.mp3"
+},
+{
+"voice": "f",
+"word": "אֶקַּח",
+"take": "p",
+"text": "אֶקַּח",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w591069c2b5-p.mp3"
+},
+{
+"voice": "f",
+"word": "אֶת־הַבַּיִת",
+"take": "p",
+"text": "אֶת־הַבַּיִת",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w98ad5141bc-p.mp3"
+},
+{
+"voice": "f",
+"word": "אֶת־הַכֶּסֶף",
+"take": "s",
+"text": "אֶת־הַכֶּסֶף",
+"rate": 0.85,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w68868b8552-s.mp3"
+},
+{
+"voice": "f",
+"word": "אֶת־הָאֱמֹרִי",
+"take": "p",
+"text": "אֶת־הָאֱמֹרִי",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/wfaa25d488e-p.mp3"
+},
+{
+"voice": "f",
+"word": "אֶת־הָאֲבָנִים",
+"take": "p",
+"text": "אֶת־הָאֲבָנִים",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w33c2320af2-p.mp3"
+},
+{
+"voice": "f",
+"word": "אֶת־מֹשֶׁה",
+"take": "p",
+"text": "אֶת־מֹשֶׁה",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/wba6e971ca0-p.mp3"
+},
+{
+"voice": "f",
+"word": "אֶת־צִידֹן",
+"take": "p",
+"text": "אֶת־צִידֹן",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w91482440b4-p.mp3"
+},
+{
+"voice": "f",
+"word": "אַנְגְּלִית",
+"take": "p",
+"text": "אַנְגְּלִית",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w4623b47b53-p.mp3"
+},
+{
+"voice": "f",
+"word": "אַשְׁרַאי",
+"take": "p",
+"text": "אַשְׁרַאי",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/wb633d91b95-p.mp3"
+},
+{
+"voice": "f",
+"word": "אַתְּ",
+"take": "p",
+"text": "אַתְּ",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w2a68fecafb-p.mp3"
+},
+{
+"voice": "f",
+"word": "אָבַד",
+"take": "p",
+"text": "אָבַד",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/wf0a0511f01-p.mp3"
+},
+{
+"voice": "f",
+"word": "אָבוּד",
+"take": "p",
+"text": "אָבוּד",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/we748ba140f-p.mp3"
+},
+{
+"voice": "f",
+"word": "אָז",
+"take": "p",
+"text": "אָז",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w7bd5849fe2-p.mp3"
+},
+{
+"voice": "f",
+"word": "אָלֶרְגִּית",
+"take": "p",
+"text": "אָלֶרְגִּית",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w8f1d546404-p.mp3"
+},
+{
+"voice": "f",
+"word": "אֹתְךָ",
+"take": "p",
+"text": "אֹתְךָ",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w09b3df2793-p.mp3"
+},
+{
+"voice": "f",
+"word": "אוֹמְרִים",
+"take": "p",
+"text": "אוֹמְרִים",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/we7e96b5b35-p.mp3"
+},
+{
+"voice": "f",
+"word": "אוֹמֵר",
+"take": "u",
+"text": "אומר",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w1106bc5e75-u.mp3"
+},
+{
+"voice": "f",
+"word": "בְּכַרְטִיס",
+"take": "p",
+"text": "בְּכַרְטִיס",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w4e9c4bf8e1-p.mp3"
+},
+{
+"voice": "f",
+"word": "בְּעִבְרִית",
+"take": "m",
+"text": "בְּעִבְרִית.",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w2404946f22-m.mp3"
+},
+{
+"voice": "f",
+"word": "בְּעֶזְרַת",
+"take": "u",
+"text": "בעזרת",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/wf5646411ee-u.mp3"
+},
+{
+"voice": "f",
+"word": "בְּרֹב",
+"take": "p",
+"text": "בְּרֹב",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w7fa3fd728a-p.mp3"
+},
+{
+"voice": "f",
+"word": "בְּרוּכִים",
+"take": "p",
+"text": "בְּרוּכִים",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/wf897245537-p.mp3"
+},
+{
+"voice": "f",
+"word": "בְּרוּכָה",
+"take": "p",
+"text": "בְּרוּכָה",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w9d2e2b2341-p.mp3"
+},
+{
+"voice": "f",
+"word": "בִּנְסֹעַ",
+"take": "p",
+"text": "בִּנְסֹעַ",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/wfe3f04e813-p.mp3"
+},
+{
+"voice": "f",
+"word": "בֵּאלָהָא",
+"take": "p",
+"text": "בֵּאלָהָא",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/wa2e87bd45a-p.mp3"
+},
+{
+"voice": "f",
+"word": "בֶּן",
+"take": "p",
+"text": "בֶּן",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/wc657335ea1-p.mp3"
+},
+{
+"voice": "f",
+"word": "בֶּן־מְנַשֶּׁה",
+"take": "p",
+"text": "בֶּן־מְנַשֶּׁה",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w78bcfe9cda-p.mp3"
+},
+{
+"voice": "f",
+"word": "בַּטֶּלֶפוֹן",
+"take": "p",
+"text": "בַּטֶּלֶפוֹן",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w44d7abb86e-p.mp3"
+},
+{
+"voice": "f",
+"word": "בַדֶּרֶךְ",
+"take": "u",
+"text": "בדרך",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w922dfe8fa7-u.mp3"
+},
+{
+"voice": "f",
+"word": "בָּרָא",
+"take": "p",
+"text": "בָּרָא",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/wea9377de8e-p.mp3"
+},
+{
+"voice": "f",
+"word": "גִּלְעָדָה",
+"take": "p",
+"text": "גִּלְעָדָה",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w7a55d7fe96-p.mp3"
+},
+{
+"voice": "f",
+"word": "גַם־אָנֹכִי",
+"take": "p",
+"text": "גַם־אָנֹכִי",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w0c2717cc53-p.mp3"
+},
+{
+"voice": "f",
+"word": "דָּוִד",
+"take": "p",
+"text": "דָּוִד",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/wb21d893f3f-p.mp3"
+},
+{
+"voice": "f",
+"word": "הִקְצוֹת",
+"take": "p",
+"text": "הִקְצוֹת",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/wcef456f0ac-p.mp3"
+},
+{
+"voice": "f",
+"word": "הַאִם",
+"take": "p",
+"text": "הַאִם",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w17b8407f24-p.mp3"
+},
+{
+"voice": "f",
+"word": "הַבָּא",
+"take": "s",
+"text": "הַבָּא",
+"rate": 0.85,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/wa194689d7e-s.mp3"
+},
+{
+"voice": "f",
+"word": "הַבָּאָה",
+"take": "u",
+"text": "הבאה",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w3f0b1fb63b-u.mp3"
+},
+{
+"voice": "f",
+"word": "הַזְּמַן",
+"take": "u",
+"text": "הזמן",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w98faead851-u.mp3"
+},
+{
+"voice": "f",
+"word": "הַחֶשְׁבּוֹן",
+"take": "p",
+"text": "הַחֶשְׁבּוֹן",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w80ad41eed4-p.mp3"
+},
+{
+"voice": "f",
+"word": "הַחוֹלִים",
+"take": "u",
+"text": "החולים",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w43fa4fe0cc-u.mp3"
+},
+{
+"voice": "f",
+"word": "הַטֶּלֶפוֹן",
+"take": "p",
+"text": "הַטֶּלֶפוֹן",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/wd28f86b743-p.mp3"
+},
+{
+"voice": "f",
+"word": "הַיֹּבֵל",
+"take": "p",
+"text": "הַיֹּבֵל",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w04f5136e2e-p.mp3"
+},
+{
+"voice": "f",
+"word": "הַכֹּהֵן",
+"take": "p",
+"text": "הַכֹּהֵן",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/wad204f82c7-p.mp3"
+},
+{
+"voice": "f",
+"word": "הַמְּחִיר",
+"take": "u",
+"text": "המחיר",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w8d1fcfaa33-u.mp3"
+},
+{
+"voice": "f",
+"word": "הַמִּדָּה",
+"take": "p",
+"text": "הַמִּדָּה",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w3c02921f18-p.mp3"
+},
+{
+"voice": "f",
+"word": "הַמִּרְקַחַת",
+"take": "p",
+"text": "הַמִּרְקַחַת",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w52cdc943bd-p.mp3"
+},
+{
+"voice": "f",
+"word": "הַמֶּרְכָּזִית",
+"take": "u",
+"text": "המרכזית",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w80e6c8c444-u.mp3"
+},
+{
+"voice": "f",
+"word": "הַמַּפָּה",
+"take": "p",
+"text": "הַמַּפָּה",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w6a5a938702-p.mp3"
+},
+{
+"voice": "f",
+"word": "הַמַּצָּב",
+"take": "p",
+"text": "הַמַּצָּב",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/wbe6654200e-p.mp3"
+},
+{
+"voice": "f",
+"word": "הַמָּלוֹן",
+"take": "u",
+"text": "המלון",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w505b19904d-u.mp3"
+},
+{
+"voice": "f",
+"word": "הַנֶּגַע",
+"take": "s",
+"text": "הַנֶּגַע",
+"rate": 0.85,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/wda69229697-s.mp3"
+},
+{
+"voice": "f",
+"word": "הַנּוֹתָרֹת",
+"take": "p",
+"text": "הַנּוֹתָרֹת",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w6de4d43fbe-p.mp3"
+},
+{
+"voice": "f",
+"word": "הַפַּעַם",
+"take": "p",
+"text": "הַפַּעַם",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w0baed793a2-p.mp3"
+},
+{
+"voice": "f",
+"word": "הַצָּבָא",
+"take": "u",
+"text": "הצבא",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w1d028e8696-u.mp3"
+},
+{
+"voice": "f",
+"word": "הַשֵּׁם",
+"take": "p",
+"text": "הַשֵּׁם",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w572247f8af-p.mp3"
+},
+{
+"voice": "f",
+"word": "הַשֵּׁרוּתִים",
+"take": "u",
+"text": "השרותים",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w8e64018c32-u.mp3"
+},
+{
+"voice": "f",
+"word": "הַשָּׁנִים",
+"take": "u",
+"text": "השנים",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w3a0f4f0505-u.mp3"
+},
+{
+"voice": "f",
+"word": "הַשָּׁעָה",
+"take": "s",
+"text": "הַשָּׁעָה",
+"rate": 0.85,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/wd773866b12-s.mp3"
+},
+{
+"voice": "f",
+"word": "הַתְּעוּפָה",
+"take": "p",
+"text": "הַתְּעוּפָה",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w1bfab63a51-p.mp3"
+},
+{
+"voice": "f",
+"word": "הַתַּחֲנָה",
+"take": "p",
+"text": "הַתַּחֲנָה",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w7692b3baf2-p.mp3"
+},
+{
+"voice": "f",
+"word": "הַתַּפְרִיט",
+"take": "p",
+"text": "הַתַּפְרִיט",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/wd6d995d8dd-p.mp3"
+},
+{
+"voice": "f",
+"word": "הָעֲבוֹדָה",
+"take": "p",
+"text": "הָעֲבוֹדָה",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w07fa3b7f92-p.mp3"
+},
+{
+"voice": "f",
+"word": "הָעוֹלָם",
+"take": "s",
+"text": "הָעוֹלָם",
+"rate": 0.85,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/wd33f194ec9-s.mp3"
+},
+{
+"voice": "f",
+"word": "הָרִאשׁוֹנָה",
+"take": "u",
+"text": "הראשונה",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w4235e3ebe3-u.mp3"
+},
+{
+"voice": "f",
+"word": "הָרַכֶּבֶת",
+"take": "s",
+"text": "הָרַכֶּבֶת",
+"rate": 0.85,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/wfdc6463740-s.mp3"
+},
+{
+"voice": "f",
+"word": "הוֹלֵךְ",
+"take": "u",
+"text": "הולך",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w682f19f6ed-u.mp3"
+},
+{
+"voice": "f",
+"word": "וְאִם־אַחַר",
+"take": "s",
+"text": "וְאִם־אַחַר",
+"rate": 0.85,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/wf6cffd0a74-s.mp3"
+},
+{
+"voice": "f",
+"word": "וְאִם־יָשׁוּב",
+"take": "p",
+"text": "וְאִם־יָשׁוּב",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w6e5ea191eb-p.mp3"
+},
+{
+"voice": "f",
+"word": "וְאֵת",
+"take": "p",
+"text": "וְאֵת",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/wd4d1ee8c48-p.mp3"
+},
+{
+"voice": "f",
+"word": "וְאַחֲרֵי",
+"take": "s",
+"text": "וְאַחֲרֵי",
+"rate": 0.85,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w2c4a4eb5a1-s.mp3"
+},
+{
+"voice": "f",
+"word": "וְחִשַּׁב־לוֹ",
+"take": "u",
+"text": "וחשבלו",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/wefb3471b91-u.mp3"
+},
+{
+"voice": "f",
+"word": "וְיִתְנַשֵּׂא",
+"take": "p",
+"text": "וְיִתְנַשֵּׂא",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w972c1d4233-p.mp3"
+},
+{
+"voice": "f",
+"word": "וְיִתְרוֹמַם",
+"take": "p",
+"text": "וְיִתְרוֹמַם",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/wb8d3a8d4f3-p.mp3"
+},
+{
+"voice": "f",
+"word": "וְלֹא",
+"take": "s",
+"text": "וְלֹא",
+"rate": 0.85,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w32cc9f679b-s.mp3"
+},
+{
+"voice": "f",
+"word": "וְנִגְרַע",
+"take": "p",
+"text": "וְנִגְרַע",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w72afecfb30-p.mp3"
+},
+{
+"voice": "f",
+"word": "וְעַתָּה",
+"take": "p",
+"text": "וְעַתָּה",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w061da8d6d0-p.mp3"
+},
+{
+"voice": "f",
+"word": "וְשָׁלוֹם",
+"take": "p",
+"text": "וְשָׁלוֹם",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w98f04cd139-p.mp3"
+},
+{
+"voice": "f",
+"word": "וְתוֹרֹתָי",
+"take": "p",
+"text": "וְתוֹרֹתָי",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w94ceecd34d-p.mp3"
+},
+{
+"voice": "f",
+"word": "וִיחֻנֶּךָּ",
+"take": "p",
+"text": "וִיחֻנֶּךָּ",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w75b43bf36e-p.mp3"
+},
+{
+"voice": "f",
+"word": "וַאֲנַחְנוּ",
+"take": "s",
+"text": "וַאֲנַחְנוּ",
+"rate": 0.85,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w6a53e26435-s.mp3"
+},
+{
+"voice": "f",
+"word": "וַיִּפְרֹץ",
+"take": "p",
+"text": "וַיִּפְרֹץ",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/wa4941ccdb4-p.mp3"
+},
+{
+"voice": "f",
+"word": "וַיֵּלְכוּ",
+"take": "s",
+"text": "וַיֵּלְכוּ",
+"rate": 0.85,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/we5b9c8ceb7-s.mp3"
+},
+{
+"voice": "f",
+"word": "וַיֹּאמֶר",
+"take": "p",
+"text": "וַיֹּאמֶר",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w6186ac78d4-p.mp3"
+},
+{
+"voice": "f",
+"word": "וַיּוֹרֶשׁ",
+"take": "s",
+"text": "וַיּוֹרֶשׁ",
+"rate": 0.85,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w400a1ead4c-s.mp3"
+},
+{
+"voice": "f",
+"word": "וּכְנַעַן",
+"take": "p",
+"text": "וּכְנַעַן",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w24c5944919-p.mp3"
+},
+{
+"voice": "f",
+"word": "וּפָרַח",
+"take": "u",
+"text": "ופרח",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/wa23305c01b-u.mp3"
+},
+{
+"voice": "f",
+"word": "חֲבָל",
+"take": "p",
+"text": "חֲבָל",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w823774bcb5-p.mp3"
+},
+{
+"voice": "f",
+"word": "חִלֵּץ",
+"take": "u",
+"text": "חלץ",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/wd4c965c7bb-u.mp3"
+},
+{
+"voice": "f",
+"word": "חֵת",
+"take": "p",
+"text": "חֵת",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w2a4f7f72cb-p.mp3"
+},
+{
+"voice": "f",
+"word": "חֻקַּת",
+"take": "p",
+"text": "חֻקַּת",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/wc7f4a24b1d-p.mp3"
+},
+{
+"voice": "f",
+"word": "טִבְעוֹנִי",
+"take": "u",
+"text": "טבעוני",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/wb014de396c-u.mp3"
+},
+{
+"voice": "f",
+"word": "טִבְעוֹנִית",
+"take": "p",
+"text": "טִבְעוֹנִית",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w5c1c13cec1-p.mp3"
+},
+{
+"voice": "f",
+"word": "יַעֲלֶה",
+"take": "p",
+"text": "יַעֲלֶה",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/wa386743874-p.mp3"
+},
+{
+"voice": "f",
+"word": "יַקְדִּישׁ",
+"take": "s",
+"text": "יַקְדִּישׁ",
+"rate": 0.85,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/wca8efc1ebc-s.mp3"
+},
+{
+"voice": "f",
+"word": "יָהּ",
+"take": "p",
+"text": "יָהּ",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w78a4c4dcbc-p.mp3"
+},
+{
+"voice": "f",
+"word": "יוֹדַעַת",
+"take": "s",
+"text": "יוֹדַעַת",
+"rate": 0.85,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w69e1e7ad8b-s.mp3"
+},
+{
+"voice": "f",
+"word": "כְּאֵב",
+"take": "p",
+"text": "כְּאֵב",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w4f9f10fda8-p.mp3"
+},
+{
+"voice": "f",
+"word": "כְּמֹשֶׁה",
+"take": "p",
+"text": "כְּמֹשֶׁה",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w119e4fb122-p.mp3"
+},
+{
+"voice": "f",
+"word": "כָּל",
+"take": "p",
+"text": "כָּל",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w562a0efd96-p.mp3"
+},
+{
+"voice": "f",
+"word": "לְ",
+"take": "p",
+"text": "לְ",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w2b2db0d987-p.mp3"
+},
+{
+"voice": "f",
+"word": "לְאַמְבּוּלַנְס",
+"take": "u",
+"text": "לאמבולנס",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w7443087c42-u.mp3"
+},
+{
+"voice": "f",
+"word": "לְבֵיתִי",
+"take": "m",
+"text": "לְבֵיתִי.",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w69fc1ba61f-m.mp3"
+},
+{
+"voice": "f",
+"word": "לְהַרְאוֹת",
+"take": "p",
+"text": "לְהַרְאוֹת",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/wa6ebf32faa-p.mp3"
+},
+{
+"voice": "f",
+"word": "לְכִי",
+"take": "p",
+"text": "לְכִי",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w7c7ff854ee-p.mp3"
+},
+{
+"voice": "f",
+"word": "לְפָנַי",
+"take": "s",
+"text": "לְפָנַי",
+"rate": 0.85,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w9462e1aabf-s.mp3"
+},
+{
+"voice": "f",
+"word": "לְרַגְלִי",
+"take": "p",
+"text": "לְרַגְלִי",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w6fe1f2b089-p.mp3"
+},
+{
+"voice": "f",
+"word": "לְשַׁלֵּם",
+"take": "p",
+"text": "לְשַׁלֵּם",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/wf400b075da-p.mp3"
+},
+{
+"voice": "f",
+"word": "לִמְדֹּד",
+"take": "p",
+"text": "לִמְדֹּד",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w9f22c20968-p.mp3"
+},
+{
+"voice": "f",
+"word": "לִרְאוֹת",
+"take": "p",
+"text": "לִרְאוֹת",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w0c9397349d-p.mp3"
+},
+{
+"voice": "f",
+"word": "לִשְׁנַיִם",
+"take": "p",
+"text": "לִשְׁנַיִם",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w47bc89a991-p.mp3"
+},
+{
+"voice": "f",
+"word": "לִשְׂדֵה",
+"take": "p",
+"text": "לִשְׂדֵה",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w2e8f55e12b-p.mp3"
+},
+{
+"voice": "f",
+"word": "לֶאֱכֹל",
+"take": "p",
+"text": "לֶאֱכֹל",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w4e167cb4d3-p.mp3"
+},
+{
+"voice": "f",
+"word": "לַחֲזֹר",
+"take": "p",
+"text": "לַחֲזֹר",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/wf78ab71557-p.mp3"
+},
+{
+"voice": "f",
+"word": "לַמִּלְחָמָה",
+"take": "p",
+"text": "לַמִּלְחָמָה",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w60a29c092a-p.mp3"
+},
+{
+"voice": "f",
+"word": "לַמִּשְׁטָרָה",
+"take": "p",
+"text": "לַמִּשְׁטָרָה",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/wed485ecc74-p.mp3"
+},
+{
+"voice": "f",
+"word": "לַתַּחֲנָה",
+"take": "m",
+"text": "לַתַּחֲנָה.",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/wff26c8d8d5-m.mp3"
+},
+{
+"voice": "f",
+"word": "לָכֶם",
+"take": "p",
+"text": "לָכֶם",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/wea1f329d89-p.mp3"
+},
+{
+"voice": "f",
+"word": "לָרֹב",
+"take": "s",
+"text": "לָרֹב",
+"rate": 0.85,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w25791ebd3f-s.mp3"
+},
+{
+"voice": "f",
+"word": "לוֹקֵחַ",
+"take": "p",
+"text": "לוֹקֵחַ",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/wa1d9c51a29-p.mp3"
+},
+{
+"voice": "f",
+"word": "מְבִינָה",
+"take": "p",
+"text": "מְבִינָה",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w111747114a-p.mp3"
+},
+{
+"voice": "f",
+"word": "מְדַבֵּר",
+"take": "u",
+"text": "מדבר",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w73b0f26ad2-u.mp3"
+},
+{
+"voice": "f",
+"word": "מְדַבֶּרֶת",
+"take": "p",
+"text": "מְדַבֶּרֶת",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/wc7005e943c-p.mp3"
+},
+{
+"voice": "f",
+"word": "מִדָּה",
+"take": "u",
+"text": "מדה",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w3d3ac0bd39-u.mp3"
+},
+{
+"voice": "f",
+"word": "מִסְתַּכֵּל",
+"take": "p",
+"text": "מִסְתַּכֵּל",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/wef3b5cbdd6-p.mp3"
+},
+{
+"voice": "f",
+"word": "מִסְתַּכֶּלֶת",
+"take": "m",
+"text": "מִסְתַּכֶּלֶת.",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/wb602fa55a9-m.mp3"
+},
+{
+"voice": "f",
+"word": "מִצְטַעֵר",
+"take": "p",
+"text": "מִצְטַעֵר",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w7061c33dc7-p.mp3"
+},
+{
+"voice": "f",
+"word": "מִקָּנָדָה",
+"take": "p",
+"text": "מִקָּנָדָה",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w21578084cc-p.mp3"
+},
+{
+"voice": "f",
+"word": "מִשְׁתַּחֲוִים",
+"take": "s",
+"text": "מִשְׁתַּחֲוִים",
+"rate": 0.85,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w5b2965cf93-s.mp3"
+},
+{
+"voice": "f",
+"word": "מֵאֵיפֹה",
+"take": "p",
+"text": "מֵאֵיפֹה",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/wa4b0399196-p.mp3"
+},
+{
+"voice": "f",
+"word": "מֵאַנְתֶּם",
+"take": "s",
+"text": "מֵאַנְתֶּם",
+"rate": 0.85,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w40245a9146-s.mp3"
+},
+{
+"voice": "f",
+"word": "מֵבִין",
+"take": "p",
+"text": "מֵבִין",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w830c626c8e-p.mp3"
+},
+{
+"voice": "f",
+"word": "מֵעֶרְכֶּךָ",
+"take": "p",
+"text": "מֵעֶרְכֶּךָ",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w75dc4b39c4-p.mp3"
+},
+{
+"voice": "f",
+"word": "מַגִּיעִים",
+"take": "u",
+"text": "מגיעים",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w39618229c4-u.mp3"
+},
+{
+"voice": "f",
+"word": "מַרְגִּישָׁה",
+"take": "m",
+"text": "מַרְגִּישָׁה.",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/wbb884db292-m.mp3"
+},
+{
+"voice": "f",
+"word": "מַרְגִּישׁ",
+"take": "p",
+"text": "מַרְגִּישׁ",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/wa33095ba53-p.mp3"
+},
+{
+"voice": "f",
+"word": "מָכִיר",
+"take": "p",
+"text": "מָכִיר",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/wb3295c6d07-p.mp3"
+},
+{
+"voice": "f",
+"word": "נִשְׁמָע",
+"take": "u",
+"text": "נשמע",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w9ef89a18d9-u.mp3"
+},
+{
+"voice": "f",
+"word": "נַעֲנָע",
+"take": "p",
+"text": "נַעֲנָע",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w46f8d321c3-p.mp3"
+},
+{
+"voice": "f",
+"word": "נָעִימָה",
+"take": "p",
+"text": "נָעִימָה",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w2ddc8c71fd-p.mp3"
+},
+{
+"voice": "f",
+"word": "סוֹגְרִים",
+"take": "p",
+"text": "סוֹגְרִים",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/wbfe922211b-p.mp3"
+},
+{
+"voice": "f",
+"word": "עִם",
+"take": "u",
+"text": "עם",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w8843197d1d-u.mp3"
+},
+{
+"voice": "f",
+"word": "עַד־אָנָה",
+"take": "s",
+"text": "עַד־אָנָה",
+"rate": 0.85,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w44de749391-s.mp3"
+},
+{
+"voice": "f",
+"word": "עַל־פִּי",
+"take": "u",
+"text": "עלפי",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/wb8ab3e4d8e-u.mp3"
+},
+{
+"voice": "f",
+"word": "עַצְמְךָ",
+"take": "u",
+"text": "עצמך",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w5877fbbfd4-u.mp3"
+},
+{
+"voice": "f",
+"word": "עֻזּוֹ",
+"take": "p",
+"text": "עֻזּוֹ",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/wb4e1122808-p.mp3"
+},
+{
+"voice": "f",
+"word": "עוֹלֶה",
+"take": "p",
+"text": "עוֹלֶה",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w6d53feda63-p.mp3"
+},
+{
+"voice": "f",
+"word": "פְּנִי",
+"take": "p",
+"text": "פְּנִי",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w2882b0853b-p.mp3"
+},
+{
+"voice": "f",
+"word": "פִּתְאוֹם",
+"take": "u",
+"text": "פתאום",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w8cef3d7b2e-u.mp3"
+},
+{
+"voice": "f",
+"word": "צְרִיכָה",
+"take": "p",
+"text": "צְרִיכָה",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w1ac64a5736-p.mp3"
+},
+{
+"voice": "f",
+"word": "צָהֳרַיִם",
+"take": "p",
+"text": "צָהֳרַיִם",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w3607ebed62-p.mp3"
+},
+{
+"voice": "f",
+"word": "צָמֵא",
+"take": "p",
+"text": "צָמֵא",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/wde4504c83a-p.mp3"
+},
+{
+"voice": "f",
+"word": "קָדוֹשׁ",
+"take": "s",
+"text": "קָדוֹשׁ",
+"rate": 0.85,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/wacfd920d6a-s.mp3"
+},
+{
+"voice": "f",
+"word": "קָפֶה",
+"take": "m",
+"text": "קָפֶה.",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w878319b989-m.mp3"
+},
+{
+"voice": "f",
+"word": "קוֹרְאִים",
+"take": "m",
+"text": "קוֹרְאִים.",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/wf37bf87724-m.mp3"
+},
+{
+"voice": "f",
+"word": "קוֹרֶה",
+"take": "u",
+"text": "קורה",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w8adb5953fc-u.mp3"
+},
+{
+"voice": "f",
+"word": "רֵאשִׁית",
+"take": "s",
+"text": "רֵאשִׁית",
+"rate": 0.85,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w5cf932c2d6-s.mp3"
+},
+{
+"voice": "f",
+"word": "רוֹצֶה",
+"take": "p",
+"text": "רוֹצֶה",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/wcabf086f38-p.mp3"
+},
+{
+"voice": "f",
+"word": "שְּׁמֵךְ",
+"take": "p",
+"text": "שְּׁמֵךְ",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w4df3bace6e-p.mp3"
+},
+{
+"voice": "f",
+"word": "שְׁלוֹמְךָ",
+"take": "p",
+"text": "שְׁלוֹמְךָ",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w275a4d2fe9-p.mp3"
+},
+{
+"voice": "f",
+"word": "שְׁלוֹמֵךְ",
+"take": "p",
+"text": "שְׁלוֹמֵךְ",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w225bbef4a2-p.mp3"
+},
+{
+"voice": "f",
+"word": "שְׁנַת",
+"take": "p",
+"text": "שְׁנַת",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w8624a99d03-p.mp3"
+},
+{
+"voice": "f",
+"word": "שִּׁמְךָ",
+"take": "p",
+"text": "שִּׁמְךָ",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w2627eaa51e-p.mp3"
+},
+{
+"voice": "f",
+"word": "שִׁמְךָ",
+"take": "p",
+"text": "שִׁמְךָ",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w6020b83d41-p.mp3"
+},
+{
+"voice": "f",
+"word": "שֶׁלְּךָ",
+"take": "p",
+"text": "שֶׁלְּךָ",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/wabc4478aab-p.mp3"
+},
+{
+"voice": "f",
+"word": "שָׁחוֹר",
+"take": "s",
+"text": "שָׁחוֹר",
+"rate": 0.85,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w37f66fc2d1-s.mp3"
+},
+{
+"voice": "f",
+"word": "שָׂדֵהוּ",
+"take": "p",
+"text": "שָׂדֵהוּ",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w4e3f10ba00-p.mp3"
+},
+{
+"voice": "f",
+"word": "תִּקְרְאִי",
+"take": "p",
+"text": "תִּקְרְאִי",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w29f38d87be-p.mp3"
+},
+{
+"voice": "f",
+"word": "תִּקְרָא",
+"take": "p",
+"text": "תִּקְרָא",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w1781798de3-p.mp3"
+},
+{
+"voice": "f",
+"word": "תִּשְׁמְרִי",
+"take": "p",
+"text": "תִּשְׁמְרִי",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w701d06d9e4-p.mp3"
+},
+{
+"voice": "f",
+"word": "תִּשְׁמֹר",
+"take": "p",
+"text": "תִּשְׁמֹר",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w7d69e0a198-p.mp3"
+},
+{
+"voice": "f",
+"word": "תַּחֲנַת",
+"take": "p",
+"text": "תַּחֲנַת",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w6efe311d76-p.mp3"
+},
+{
+"voice": "f",
+"word": "תַּיֶּרֶת",
+"take": "p",
+"text": "תַּיֶּרֶת",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w2c9a815229-p.mp3"
+},
+{
+"voice": "f",
+"word": "תַּיָּר",
+"take": "p",
+"text": "תַּיָּר",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-A",
+"file": "audio-takes/f/w0035391983-p.mp3"
+},
+{
+"voice": "m",
+"word": "אֱלָהָא",
+"take": "p",
+"text": "אֱלָהָא",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w99f7415481-p.mp3"
+},
+{
+"voice": "m",
+"word": "אֲבוּדָה",
+"take": "p",
+"text": "אֲבוּדָה",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/wf827932653-p.mp3"
+},
+{
+"voice": "m",
+"word": "אֲשֶׁר־הָיָה",
+"take": "p",
+"text": "אֲשֶׁר־הָיָה",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/wd8836798e0-p.mp3"
+},
+{
+"voice": "m",
+"word": "אֲשֶׁר־צִוָּה",
+"take": "s",
+"text": "אֲשֶׁר־צִוָּה",
+"rate": 0.85,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w93d1e4c3b1-s.mp3"
+},
+{
+"voice": "m",
+"word": "אִתְּךָ",
+"take": "u",
+"text": "אתך",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w0acde7787b-u.mp3"
+},
+{
+"voice": "m",
+"word": "אִתָּךְ",
+"take": "p",
+"text": "אִתָּךְ",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/wc1a1310784-p.mp3"
+},
+{
+"voice": "m",
+"word": "אֶלְעָזָר",
+"take": "p",
+"text": "אֶלְעָזָר",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w5e8e026e0a-p.mp3"
+},
+{
+"voice": "m",
+"word": "אֶל־אַנְשֵׁי",
+"take": "m",
+"text": "אֶל אַנְשֵׁי.",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w986f061c06-m.mp3"
+},
+{
+"voice": "m",
+"word": "אֶל־מֹשֶׁה",
+"take": "p",
+"text": "אֶל־מֹשֶׁה",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/wda5c963f22-p.mp3"
+},
+{
+"voice": "m",
+"word": "אֶקַּח",
+"take": "u",
+"text": "אקח",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w591069c2b5-u.mp3"
+},
+{
+"voice": "m",
+"word": "אֶת",
+"take": "p",
+"text": "אֶת",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/wf0d6430aeb-p.mp3"
+},
+{
+"voice": "m",
+"word": "אֶת־הַבַּיִת",
+"take": "p",
+"text": "אֶת־הַבַּיִת",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w98ad5141bc-p.mp3"
+},
+{
+"voice": "m",
+"word": "אֶת־הַכֶּסֶף",
+"take": "p",
+"text": "אֶת־הַכֶּסֶף",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w68868b8552-p.mp3"
+},
+{
+"voice": "m",
+"word": "אֶת־הָאֱמֹרִי",
+"take": "s",
+"text": "אֶת־הָאֱמֹרִי",
+"rate": 0.85,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/wfaa25d488e-s.mp3"
+},
+{
+"voice": "m",
+"word": "אֶת־הָאֲבָנִים",
+"take": "p",
+"text": "אֶת־הָאֲבָנִים",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w33c2320af2-p.mp3"
+},
+{
+"voice": "m",
+"word": "אֶת־מֹשֶׁה",
+"take": "p",
+"text": "אֶת־מֹשֶׁה",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/wba6e971ca0-p.mp3"
+},
+{
+"voice": "m",
+"word": "אֶת־צִידֹן",
+"take": "u",
+"text": "אתצידן",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w91482440b4-u.mp3"
+},
+{
+"voice": "m",
+"word": "אַנְגְּלִית",
+"take": "m",
+"text": "אַנְגְּלִית.",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w4623b47b53-m.mp3"
+},
+{
+"voice": "m",
+"word": "אַשְׁרֵי",
+"take": "p",
+"text": "אַשְׁרֵי",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w36467b9f56-p.mp3"
+},
+{
+"voice": "m",
+"word": "אַשְׁרַאי",
+"take": "p",
+"text": "אַשְׁרַאי",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/wb633d91b95-p.mp3"
+},
+{
+"voice": "m",
+"word": "אַתְּ",
+"take": "u",
+"text": "את",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w2a68fecafb-u.mp3"
+},
+{
+"voice": "m",
+"word": "אַתָּה",
+"take": "m",
+"text": "אַתָּה.",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w3d58260c9a-m.mp3"
+},
+{
+"voice": "m",
+"word": "אָבוּד",
+"take": "u",
+"text": "אבוד",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/we748ba140f-u.mp3"
+},
+{
+"voice": "m",
+"word": "אָלֶרְגִּית",
+"take": "p",
+"text": "אָלֶרְגִּית",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w8f1d546404-p.mp3"
+},
+{
+"voice": "m",
+"word": "אָתָּה",
+"take": "u",
+"text": "אתה",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w64a390cff8-u.mp3"
+},
+{
+"voice": "m",
+"word": "אֹתְךָ",
+"take": "p",
+"text": "אֹתְךָ",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w09b3df2793-p.mp3"
+},
+{
+"voice": "m",
+"word": "אוֹמְרִים",
+"take": "p",
+"text": "אוֹמְרִים",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/we7e96b5b35-p.mp3"
+},
+{
+"voice": "m",
+"word": "אוֹמֵר",
+"take": "u",
+"text": "אומר",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w1106bc5e75-u.mp3"
+},
+{
+"voice": "m",
+"word": "בְּכַרְטִיס",
+"take": "u",
+"text": "בכרטיס",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w4e9c4bf8e1-u.mp3"
+},
+{
+"voice": "m",
+"word": "בְּכֹרוֹ",
+"take": "p",
+"text": "בְּכֹרוֹ",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w88bb998aed-p.mp3"
+},
+{
+"voice": "m",
+"word": "בְּעִבְרִית",
+"take": "u",
+"text": "בעברית",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w2404946f22-u.mp3"
+},
+{
+"voice": "m",
+"word": "בְּעֵינֶיךָ",
+"take": "s",
+"text": "בְּעֵינֶיךָ",
+"rate": 0.85,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w22bb2efae4-s.mp3"
+},
+{
+"voice": "m",
+"word": "בְּעֶזְרַת",
+"take": "m",
+"text": "בְּעֶזְרַת.",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/wf5646411ee-m.mp3"
+},
+{
+"voice": "m",
+"word": "בְּרוּכִים",
+"take": "p",
+"text": "בְּרוּכִים",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/wf897245537-p.mp3"
+},
+{
+"voice": "m",
+"word": "בְּרוּכָה",
+"take": "u",
+"text": "ברוכה",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w9d2e2b2341-u.mp3"
+},
+{
+"voice": "m",
+"word": "בֶּן",
+"take": "p",
+"text": "בֶּן",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/wc657335ea1-p.mp3"
+},
+{
+"voice": "m",
+"word": "בֶּן־מְנַשֶּׁה",
+"take": "p",
+"text": "בֶּן־מְנַשֶּׁה",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w78bcfe9cda-p.mp3"
+},
+{
+"voice": "m",
+"word": "בַּטֶּלֶפוֹן",
+"take": "p",
+"text": "בַּטֶּלֶפוֹן",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w44d7abb86e-p.mp3"
+},
+{
+"voice": "m",
+"word": "בַגּוֹיִם",
+"take": "p",
+"text": "בַגּוֹיִם",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w5c521c3cba-p.mp3"
+},
+{
+"voice": "m",
+"word": "בָּרָא",
+"take": "p",
+"text": "בָּרָא",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/wea9377de8e-p.mp3"
+},
+{
+"voice": "m",
+"word": "בָּרוּךְ",
+"take": "p",
+"text": "בָּרוּךְ",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w81c2fc3ec1-p.mp3"
+},
+{
+"voice": "m",
+"word": "גִּלְעָדָה",
+"take": "p",
+"text": "גִּלְעָדָה",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w7a55d7fe96-p.mp3"
+},
+{
+"voice": "m",
+"word": "גַם־אָנֹכִי",
+"take": "p",
+"text": "גַם־אָנֹכִי",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w0c2717cc53-p.mp3"
+},
+{
+"voice": "m",
+"word": "דְּשַׁלִּיט",
+"take": "u",
+"text": "דשליט",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w3a50515b52-u.mp3"
+},
+{
+"voice": "m",
+"word": "דְכָל",
+"take": "p",
+"text": "דְכָל",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w82983fb156-p.mp3"
+},
+{
+"voice": "m",
+"word": "דִשְׁמַיָּא",
+"take": "p",
+"text": "דִשְׁמַיָּא",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w4f082f41c5-p.mp3"
+},
+{
+"voice": "m",
+"word": "דָּתוֹ",
+"take": "p",
+"text": "דָּתוֹ",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w2447f89e62-p.mp3"
+},
+{
+"voice": "m",
+"word": "הִוא",
+"take": "p",
+"text": "הִוא",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w06af0eebce-p.mp3"
+},
+{
+"voice": "m",
+"word": "הִקְצוֹת",
+"take": "p",
+"text": "הִקְצוֹת",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/wcef456f0ac-p.mp3"
+},
+{
+"voice": "m",
+"word": "הַאִם",
+"take": "p",
+"text": "הַאִם",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w17b8407f24-p.mp3"
+},
+{
+"voice": "m",
+"word": "הַבָּא",
+"take": "p",
+"text": "הַבָּא",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/wa194689d7e-p.mp3"
+},
+{
+"voice": "m",
+"word": "הַבָּאִים",
+"take": "p",
+"text": "הַבָּאִים",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w945af5d75e-p.mp3"
+},
+{
+"voice": "m",
+"word": "הַבָּאָה",
+"take": "s",
+"text": "הַבָּאָה",
+"rate": 0.85,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w3f0b1fb63b-s.mp3"
+},
+{
+"voice": "m",
+"word": "הַזְּמַן",
+"take": "s",
+"text": "הַזְּמַן",
+"rate": 0.85,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w98faead851-s.mp3"
+},
+{
+"voice": "m",
+"word": "הַחֶשְׁבּוֹן",
+"take": "p",
+"text": "הַחֶשְׁבּוֹן",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w80ad41eed4-p.mp3"
+},
+{
+"voice": "m",
+"word": "הַחוֹלִים",
+"take": "p",
+"text": "הַחוֹלִים",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w43fa4fe0cc-p.mp3"
+},
+{
+"voice": "m",
+"word": "הַטֶּלֶפוֹן",
+"take": "p",
+"text": "הַטֶּלֶפוֹן",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/wd28f86b743-p.mp3"
+},
+{
+"voice": "m",
+"word": "הַיֹּבֵל",
+"take": "p",
+"text": "הַיֹּבֵל",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w04f5136e2e-p.mp3"
+},
+{
+"voice": "m",
+"word": "הַכֹּהֵן",
+"take": "p",
+"text": "הַכֹּהֵן",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/wad204f82c7-p.mp3"
+},
+{
+"voice": "m",
+"word": "הַמְּחִיר",
+"take": "p",
+"text": "הַמְּחִיר",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w8d1fcfaa33-p.mp3"
+},
+{
+"voice": "m",
+"word": "הַמִּדָּה",
+"take": "p",
+"text": "הַמִּדָּה",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w3c02921f18-p.mp3"
+},
+{
+"voice": "m",
+"word": "הַמִּרְקַחַת",
+"take": "p",
+"text": "הַמִּרְקַחַת",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w52cdc943bd-p.mp3"
+},
+{
+"voice": "m",
+"word": "הַמֶּרְכָּזִית",
+"take": "p",
+"text": "הַמֶּרְכָּזִית",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w80e6c8c444-p.mp3"
+},
+{
+"voice": "m",
+"word": "הַמַּפָּה",
+"take": "s",
+"text": "הַמַּפָּה",
+"rate": 0.85,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w6a5a938702-s.mp3"
+},
+{
+"voice": "m",
+"word": "הַמַּצָּב",
+"take": "u",
+"text": "המצב",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/wbe6654200e-u.mp3"
+},
+{
+"voice": "m",
+"word": "הַמָּלוֹן",
+"take": "p",
+"text": "הַמָּלוֹן",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w505b19904d-p.mp3"
+},
+{
+"voice": "m",
+"word": "הַנְּסִיעָה",
+"take": "s",
+"text": "הַנְּסִיעָה",
+"rate": 0.85,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/wde3f04433d-s.mp3"
+},
+{
+"voice": "m",
+"word": "הַנֶּגַע",
+"take": "s",
+"text": "הַנֶּגַע",
+"rate": 0.85,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/wda69229697-s.mp3"
+},
+{
+"voice": "m",
+"word": "הַנּוֹתָרֹת",
+"take": "p",
+"text": "הַנּוֹתָרֹת",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w6de4d43fbe-p.mp3"
+},
+{
+"voice": "m",
+"word": "הַפַּעַם",
+"take": "s",
+"text": "הַפַּעַם",
+"rate": 0.85,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w0baed793a2-s.mp3"
+},
+{
+"voice": "m",
+"word": "הַצָּבָא",
+"take": "p",
+"text": "הַצָּבָא",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w1d028e8696-p.mp3"
+},
+{
+"voice": "m",
+"word": "הַשֵּׁם",
+"take": "u",
+"text": "השם",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w572247f8af-u.mp3"
+},
+{
+"voice": "m",
+"word": "הַשֵּׁרוּתִים",
+"take": "p",
+"text": "הַשֵּׁרוּתִים",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w8e64018c32-p.mp3"
+},
+{
+"voice": "m",
+"word": "הַשָּׁעָה",
+"take": "u",
+"text": "השעה",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/wd773866b12-u.mp3"
+},
+{
+"voice": "m",
+"word": "הַתְּעוּפָה",
+"take": "u",
+"text": "התעופה",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w1bfab63a51-u.mp3"
+},
+{
+"voice": "m",
+"word": "הַתַּפְרִיט",
+"take": "u",
+"text": "התפריט",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/wd6d995d8dd-u.mp3"
+},
+{
+"voice": "m",
+"word": "הָאוֹטוֹבּוּס",
+"take": "m",
+"text": "הָאוֹטוֹבּוּס.",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w81b539b2e2-m.mp3"
+},
+{
+"voice": "m",
+"word": "הָרִאשׁוֹנָה",
+"take": "s",
+"text": "הָרִאשׁוֹנָה",
+"rate": 0.85,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w4235e3ebe3-s.mp3"
+},
+{
+"voice": "m",
+"word": "הָרַכֶּבֶת",
+"take": "s",
+"text": "הָרַכֶּבֶת",
+"rate": 0.85,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/wfdc6463740-s.mp3"
+},
+{
+"voice": "m",
+"word": "הוֹלֵךְ",
+"take": "p",
+"text": "הוֹלֵךְ",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w682f19f6ed-p.mp3"
+},
+{
+"voice": "m",
+"word": "וְאִם",
+"take": "p",
+"text": "וְאִם",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w92f2f815b3-p.mp3"
+},
+{
+"voice": "m",
+"word": "וְאִם־אַחַר",
+"take": "u",
+"text": "ואםאחר",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/wf6cffd0a74-u.mp3"
+},
+{
+"voice": "m",
+"word": "וְאִם־יָשׁוּב",
+"take": "s",
+"text": "וְאִם־יָשׁוּב",
+"rate": 0.85,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w6e5ea191eb-s.mp3"
+},
+{
+"voice": "m",
+"word": "וְאֵת",
+"take": "p",
+"text": "וְאֵת",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/wd4d1ee8c48-p.mp3"
+},
+{
+"voice": "m",
+"word": "וְאֶת",
+"take": "u",
+"text": "ואת",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/wf4517ffabe-u.mp3"
+},
+{
+"voice": "m",
+"word": "וְאֶת־חֵת",
+"take": "p",
+"text": "וְאֶת־חֵת",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/we4c605b985-p.mp3"
+},
+{
+"voice": "m",
+"word": "וְחִשַּׁב",
+"take": "s",
+"text": "וְחִשַּׁב",
+"rate": 0.85,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/wa02b93662b-s.mp3"
+},
+{
+"voice": "m",
+"word": "וְחִשַּׁב־לוֹ",
+"take": "p",
+"text": "וְחִשַּׁב־לוֹ",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/wefb3471b91-p.mp3"
+},
+{
+"voice": "m",
+"word": "וְנִגְרַע",
+"take": "p",
+"text": "וְנִגְרַע",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w72afecfb30-p.mp3"
+},
+{
+"voice": "m",
+"word": "וְעַתָּה",
+"take": "p",
+"text": "וְעַתָּה",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w061da8d6d0-p.mp3"
+},
+{
+"voice": "m",
+"word": "וְשָׁלוֹם",
+"take": "p",
+"text": "וְשָׁלוֹם",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w98f04cd139-p.mp3"
+},
+{
+"voice": "m",
+"word": "וְתוֹרֹתָי",
+"take": "p",
+"text": "וְתוֹרֹתָי",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w94ceecd34d-p.mp3"
+},
+{
+"voice": "m",
+"word": "וַיִּפְרֹץ",
+"take": "p",
+"text": "וַיִּפְרֹץ",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/wa4941ccdb4-p.mp3"
+},
+{
+"voice": "m",
+"word": "וַיֵּלְכוּ",
+"take": "s",
+"text": "וַיֵּלְכוּ",
+"rate": 0.85,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/we5b9c8ceb7-s.mp3"
+},
+{
+"voice": "m",
+"word": "וַיָּנַח",
+"take": "m",
+"text": "וַיָּנַח.",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w82fb117bad-m.mp3"
+},
+{
+"voice": "m",
+"word": "וַיֹּאמֶר",
+"take": "p",
+"text": "וַיֹּאמֶר",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w6186ac78d4-p.mp3"
+},
+{
+"voice": "m",
+"word": "וַיּוֹרֶשׁ",
+"take": "p",
+"text": "וַיּוֹרֶשׁ",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w400a1ead4c-p.mp3"
+},
+{
+"voice": "m",
+"word": "וּלְמִנְטַר",
+"take": "p",
+"text": "וּלְמִנְטַר",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w10a82aa67a-p.mp3"
+},
+{
+"voice": "m",
+"word": "וּפָרַח",
+"take": "p",
+"text": "וּפָרַח",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/wa23305c01b-p.mp3"
+},
+{
+"voice": "m",
+"word": "חֲבָל",
+"take": "p",
+"text": "חֲבָל",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w823774bcb5-p.mp3"
+},
+{
+"voice": "m",
+"word": "חִלֵּץ",
+"take": "p",
+"text": "חִלֵּץ",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/wd4c965c7bb-p.mp3"
+},
+{
+"voice": "m",
+"word": "חֻקַּת",
+"take": "u",
+"text": "חקת",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/wc7f4a24b1d-u.mp3"
+},
+{
+"voice": "m",
+"word": "טִבְעוֹנִי",
+"take": "u",
+"text": "טבעוני",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/wb014de396c-u.mp3"
+},
+{
+"voice": "m",
+"word": "טִבְעוֹנִית",
+"take": "p",
+"text": "טִבְעוֹנִית",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w5c1c13cec1-p.mp3"
+},
+{
+"voice": "m",
+"word": "יַעֲלֶה",
+"take": "p",
+"text": "יַעֲלֶה",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/wa386743874-p.mp3"
+},
+{
+"voice": "m",
+"word": "יַקְדִּישׁ",
+"take": "u",
+"text": "יקדיש",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/wca8efc1ebc-u.mp3"
+},
+{
+"voice": "m",
+"word": "יָהּ",
+"take": "m",
+"text": "יָהּ.",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w78a4c4dcbc-m.mp3"
+},
+{
+"voice": "m",
+"word": "יָתִי",
+"take": "p",
+"text": "יָתִי",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w5af6e89822-p.mp3"
+},
+{
+"voice": "m",
+"word": "יוֹדֵעַ",
+"take": "s",
+"text": "יוֹדֵעַ",
+"rate": 0.85,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w506c68f134-s.mp3"
+},
+{
+"voice": "m",
+"word": "יוֹדַעַת",
+"take": "u",
+"text": "יודעת",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w69e1e7ad8b-u.mp3"
+},
+{
+"voice": "m",
+"word": "כִּי",
+"take": "m",
+"text": "כִּי.",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/we568f5ff00-m.mp3"
+},
+{
+"voice": "m",
+"word": "כָּל",
+"take": "s",
+"text": "כָּל",
+"rate": 0.85,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w562a0efd96-s.mp3"
+},
+{
+"voice": "m",
+"word": "לְ",
+"take": "u",
+"text": "ל",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w2b2db0d987-u.mp3"
+},
+{
+"voice": "m",
+"word": "לְאַמְבּוּלַנְס",
+"take": "u",
+"text": "לאמבולנס",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w7443087c42-u.mp3"
+},
+{
+"voice": "m",
+"word": "לְבֵיתִי",
+"take": "u",
+"text": "לביתי",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w69fc1ba61f-u.mp3"
+},
+{
+"voice": "m",
+"word": "לְהַרְאוֹת",
+"take": "u",
+"text": "להראות",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/wa6ebf32faa-u.mp3"
+},
+{
+"voice": "m",
+"word": "לְכִי",
+"take": "p",
+"text": "לְכִי",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w7c7ff854ee-p.mp3"
+},
+{
+"voice": "m",
+"word": "לְמִרְחַם",
+"take": "p",
+"text": "לְמִרְחַם",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w604e762b91-p.mp3"
+},
+{
+"voice": "m",
+"word": "לְעוֹלָמִים",
+"take": "p",
+"text": "לְעוֹלָמִים",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w2428c74ce8-p.mp3"
+},
+{
+"voice": "m",
+"word": "לְפָנַי",
+"take": "p",
+"text": "לְפָנַי",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w9462e1aabf-p.mp3"
+},
+{
+"voice": "m",
+"word": "לְרַגְלִי",
+"take": "p",
+"text": "לְרַגְלִי",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w6fe1f2b089-p.mp3"
+},
+{
+"voice": "m",
+"word": "לְשַׁלֵּם",
+"take": "p",
+"text": "לְשַׁלֵּם",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/wf400b075da-p.mp3"
+},
+{
+"voice": "m",
+"word": "לִמְדֹּד",
+"take": "p",
+"text": "לִמְדֹּד",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w9f22c20968-p.mp3"
+},
+{
+"voice": "m",
+"word": "לִרְאוֹת",
+"take": "p",
+"text": "לִרְאוֹת",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w0c9397349d-p.mp3"
+},
+{
+"voice": "m",
+"word": "לִשְׁנַיִם",
+"take": "p",
+"text": "לִשְׁנַיִם",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w47bc89a991-p.mp3"
+},
+{
+"voice": "m",
+"word": "לִשְׂדֵה",
+"take": "p",
+"text": "לִשְׂדֵה",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w2e8f55e12b-p.mp3"
+},
+{
+"voice": "m",
+"word": "לֶאֱכֹל",
+"take": "p",
+"text": "לֶאֱכֹל",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w4e167cb4d3-p.mp3"
+},
+{
+"voice": "m",
+"word": "לַהֲדֹם",
+"take": "s",
+"text": "לַהֲדֹם",
+"rate": 0.85,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w18d146c050-s.mp3"
+},
+{
+"voice": "m",
+"word": "לַחֲזֹר",
+"take": "p",
+"text": "לַחֲזֹר",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/wf78ab71557-p.mp3"
+},
+{
+"voice": "m",
+"word": "לַמִּלְחָמָה",
+"take": "p",
+"text": "לַמִּלְחָמָה",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w60a29c092a-p.mp3"
+},
+{
+"voice": "m",
+"word": "לַמִּשְׁטָרָה",
+"take": "u",
+"text": "למשטרה",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/wed485ecc74-u.mp3"
+},
+{
+"voice": "m",
+"word": "לַתַּחֲנָה",
+"take": "p",
+"text": "לַתַּחֲנָה",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/wff26c8d8d5-p.mp3"
+},
+{
+"voice": "m",
+"word": "לָכֶם",
+"take": "s",
+"text": "לָכֶם",
+"rate": 0.85,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/wea1f329d89-s.mp3"
+},
+{
+"voice": "m",
+"word": "לָרֹב",
+"take": "p",
+"text": "לָרֹב",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w25791ebd3f-p.mp3"
+},
+{
+"voice": "m",
+"word": "לוֹקֵחַ",
+"take": "s",
+"text": "לוֹקֵחַ",
+"rate": 0.85,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/wa1d9c51a29-s.mp3"
+},
+{
+"voice": "m",
+"word": "מְבִינָה",
+"take": "p",
+"text": "מְבִינָה",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w111747114a-p.mp3"
+},
+{
+"voice": "m",
+"word": "מְדַבֵּר",
+"take": "u",
+"text": "מדבר",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w73b0f26ad2-u.mp3"
+},
+{
+"voice": "m",
+"word": "מְדַבֶּרֶת",
+"take": "u",
+"text": "מדברת",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/wc7005e943c-u.mp3"
+},
+{
+"voice": "m",
+"word": "מְזוּזֹת",
+"take": "p",
+"text": "מְזוּזֹת",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/wd4ceb3a569-p.mp3"
+},
+{
+"voice": "m",
+"word": "מְעַט",
+"take": "p",
+"text": "מְעַט",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w416c8ab5fd-p.mp3"
+},
+{
+"voice": "m",
+"word": "מִסְתַּכֵּל",
+"take": "s",
+"text": "מִסְתַּכֵּל",
+"rate": 0.85,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/wef3b5cbdd6-s.mp3"
+},
+{
+"voice": "m",
+"word": "מִסְתַּכֶּלֶת",
+"take": "p",
+"text": "מִסְתַּכֶּלֶת",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/wb602fa55a9-p.mp3"
+},
+{
+"voice": "m",
+"word": "מִצְטַעֵר",
+"take": "u",
+"text": "מצטער",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w7061c33dc7-u.mp3"
+},
+{
+"voice": "m",
+"word": "מִצְטַעֶרֶת",
+"take": "m",
+"text": "מִצְטַעֶרֶת.",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/wd8a9c4674e-m.mp3"
+},
+{
+"voice": "m",
+"word": "מִקָּנָדָה",
+"take": "p",
+"text": "מִקָּנָדָה",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w21578084cc-p.mp3"
+},
+{
+"voice": "m",
+"word": "מֵאֵיפֹה",
+"take": "s",
+"text": "מֵאֵיפֹה",
+"rate": 0.85,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/wa4b0399196-s.mp3"
+},
+{
+"voice": "m",
+"word": "מֵאַנְתֶּם",
+"take": "p",
+"text": "מֵאַנְתֶּם",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w40245a9146-p.mp3"
+},
+{
+"voice": "m",
+"word": "מֵבִין",
+"take": "p",
+"text": "מֵבִין",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w830c626c8e-p.mp3"
+},
+{
+"voice": "m",
+"word": "מֵעֶרְכֶּךָ",
+"take": "s",
+"text": "מֵעֶרְכֶּךָ",
+"rate": 0.85,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w75dc4b39c4-s.mp3"
+},
+{
+"voice": "m",
+"word": "מַגִּיעִים",
+"take": "u",
+"text": "מגיעים",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w39618229c4-u.mp3"
+},
+{
+"voice": "m",
+"word": "מַרְגִּישָׁה",
+"take": "u",
+"text": "מרגישה",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/wbb884db292-u.mp3"
+},
+{
+"voice": "m",
+"word": "מַרְגִּישׁ",
+"take": "p",
+"text": "מַרְגִּישׁ",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/wa33095ba53-p.mp3"
+},
+{
+"voice": "m",
+"word": "מָכִיר",
+"take": "u",
+"text": "מכיר",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/wb3295c6d07-u.mp3"
+},
+{
+"voice": "m",
+"word": "מוֹדִים",
+"take": "p",
+"text": "מוֹדִים",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w4e078d05ba-p.mp3"
+},
+{
+"voice": "m",
+"word": "נִשְׁמָע",
+"take": "p",
+"text": "נִשְׁמָע",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w9ef89a18d9-p.mp3"
+},
+{
+"voice": "m",
+"word": "נַעֲנָע",
+"take": "s",
+"text": "נַעֲנָע",
+"rate": 0.85,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w46f8d321c3-s.mp3"
+},
+{
+"voice": "m",
+"word": "נָעִימָה",
+"take": "m",
+"text": "נָעִימָה.",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w2ddc8c71fd-m.mp3"
+},
+{
+"voice": "m",
+"word": "סוֹגְרִים",
+"take": "u",
+"text": "סוגרים",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/wbfe922211b-u.mp3"
+},
+{
+"voice": "m",
+"word": "עִצְרִי",
+"take": "u",
+"text": "עצרי",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w5a80ac6b90-u.mp3"
+},
+{
+"voice": "m",
+"word": "עַד־אָנָה",
+"take": "s",
+"text": "עַד־אָנָה",
+"rate": 0.85,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w44de749391-s.mp3"
+},
+{
+"voice": "m",
+"word": "עַל־פִּי",
+"take": "p",
+"text": "עַל־פִּי",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/wb8ab3e4d8e-p.mp3"
+},
+{
+"voice": "m",
+"word": "עַמָּךְ",
+"take": "s",
+"text": "עַמָּךְ",
+"rate": 0.85,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w1a3d847cb3-s.mp3"
+},
+{
+"voice": "m",
+"word": "עַצְמְךָ",
+"take": "m",
+"text": "עַצְמְךָ.",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w5877fbbfd4-m.mp3"
+},
+{
+"voice": "m",
+"word": "עַצְמֵךְ",
+"take": "p",
+"text": "עַצְמֵךְ",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w4309a3a6d6-p.mp3"
+},
+{
+"voice": "m",
+"word": "עוֹלֶה",
+"take": "s",
+"text": "עוֹלֶה",
+"rate": 0.85,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w6d53feda63-s.mp3"
+},
+{
+"voice": "m",
+"word": "עוֹשָׂה",
+"take": "m",
+"text": "עוֹשָׂה.",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w12d99f6c5f-m.mp3"
+},
+{
+"voice": "m",
+"word": "פְּנִי",
+"take": "p",
+"text": "פְּנִי",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w2882b0853b-p.mp3"
+},
+{
+"voice": "m",
+"word": "צְמֵאָה",
+"take": "p",
+"text": "צְמֵאָה",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w551d48f84b-p.mp3"
+},
+{
+"voice": "m",
+"word": "צְרִיכָה",
+"take": "p",
+"text": "צְרִיכָה",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w1ac64a5736-p.mp3"
+},
+{
+"voice": "m",
+"word": "צָמֵא",
+"take": "p",
+"text": "צָמֵא",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/wde4504c83a-p.mp3"
+},
+{
+"voice": "m",
+"word": "קָפֶה",
+"take": "p",
+"text": "קָפֶה",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w878319b989-p.mp3"
+},
+{
+"voice": "m",
+"word": "קוֹרְאִים",
+"take": "p",
+"text": "קוֹרְאִים",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/wf37bf87724-p.mp3"
+},
+{
+"voice": "m",
+"word": "קוֹרֶה",
+"take": "u",
+"text": "קורה",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w8adb5953fc-u.mp3"
+},
+{
+"voice": "m",
+"word": "רוֹצֶה",
+"take": "m",
+"text": "רוֹצֶה.",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/wcabf086f38-m.mp3"
+},
+{
+"voice": "m",
+"word": "שְּׁמֵךְ",
+"take": "p",
+"text": "שְּׁמֵךְ",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w4df3bace6e-p.mp3"
+},
+{
+"voice": "m",
+"word": "שְׁלוֹמְךָ",
+"take": "m",
+"text": "שְׁלוֹמְךָ.",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w275a4d2fe9-m.mp3"
+},
+{
+"voice": "m",
+"word": "שְׁלוֹמֵךְ",
+"take": "p",
+"text": "שְׁלוֹמֵךְ",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w225bbef4a2-p.mp3"
+},
+{
+"voice": "m",
+"word": "שְׁנַת",
+"take": "p",
+"text": "שְׁנַת",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w8624a99d03-p.mp3"
+},
+{
+"voice": "m",
+"word": "שִּׁמְךָ",
+"take": "p",
+"text": "שִּׁמְךָ",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w2627eaa51e-p.mp3"
+},
+{
+"voice": "m",
+"word": "שֶׁלְּךָ",
+"take": "p",
+"text": "שֶׁלְּךָ",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/wabc4478aab-p.mp3"
+},
+{
+"voice": "m",
+"word": "שֶׁלִּי",
+"take": "m",
+"text": "שֶׁלִּי.",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w37a17d09d0-m.mp3"
+},
+{
+"voice": "m",
+"word": "שָׁחוֹר",
+"take": "s",
+"text": "שָׁחוֹר",
+"rate": 0.85,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w37f66fc2d1-s.mp3"
+},
+{
+"voice": "m",
+"word": "תִּקְרְאִי",
+"take": "p",
+"text": "תִּקְרְאִי",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w29f38d87be-p.mp3"
+},
+{
+"voice": "m",
+"word": "תִּקְרָא",
+"take": "p",
+"text": "תִּקְרָא",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w1781798de3-p.mp3"
+},
+{
+"voice": "m",
+"word": "תִּשְׁמְרִי",
+"take": "p",
+"text": "תִּשְׁמְרִי",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w701d06d9e4-p.mp3"
+},
+{
+"voice": "m",
+"word": "תִּשְׁמֹר",
+"take": "p",
+"text": "תִּשְׁמֹר",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w7d69e0a198-p.mp3"
+},
+{
+"voice": "m",
+"word": "תַּחֲנַת",
+"take": "p",
+"text": "תַּחֲנַת",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w6efe311d76-p.mp3"
+},
+{
+"voice": "m",
+"word": "תַּיֶּרֶת",
+"take": "s",
+"text": "תַּיֶּרֶת",
+"rate": 0.85,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w2c9a815229-s.mp3"
+},
+{
+"voice": "m",
+"word": "תַּיָּר",
+"take": "p",
+"text": "תַּיָּר",
+"rate": 1.0,
+"engine": "he-IL-Wavenet-B",
+"file": "audio-takes/m/w0035391983-p.mp3"
+}
+]

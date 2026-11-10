@@ -4,17 +4,17 @@ Every sentence and prayer clip was checked by two different machine reviewers: a
 
 | status | clips |
 |---|---|
-| clean (both) | 627 |
-| one reviewer flags it: listen | 79 |
-| both flag it, on different words: listen | 26 |
+| clean (both) | 639 |
+| one reviewer flags it: listen | 68 |
+| both flag it, on different words: listen | 25 |
 | both flag the same word: re-record | 8 |
 
 | clip | status | sounds matched | weak by sound | wrong by word model |
 |---|---|---|---|---|
 | `audio/f/israeli/line/ashrei-145-1-3-l2.mp3` | both flag the same word: re-record | 82% | אֲבָרֲכֶךָּ | אֲבָרֲכֶךָּ וַאֲהַלְלָה שִׁמְךָ |
 | `audio/f/israeli/line/torah-numbers-32-39.mp3` | both flag the same word: re-record | 88% | וַיֵּלְכוּ | וַיֵּלְכוּ מָכִיר וַיִּלְכְּדֻהָ |
-| `audio/m/israeli/line/brich-shmei.mp3` | both flag the same word: re-record | 89% | צַדִּיקַיָּא לְמִרְחַם עָלַי וּלְמִנְטַר יָתִי אֶלָּא בֵּאלָהָא דִשְׁמַיָּא דְּהוּא אֱלָהָא דְכָל וּלְחַיִּין | דְּשַׁלִּיט דְקֻדְשָׁא בְּרִיךְ דְּסָגִידְנָא קַמֵּהּ אֱלָהִין סָמִיכְנָא דְּהוּא בֵּהּ אֲנָא מִשְׁאֲלִין דְכָל עַמָּךְ |
-| `audio/m/israeli/prayer/brich-shmei.mp3` | both flag the same word: re-record | 89% | צַדִּיקַיָּא לְמִרְחַם עָלַי וּלְמִנְטַר יָתִי אֶלָּא בֵּאלָהָא דִשְׁמַיָּא דְּהוּא אֱלָהָא דְכָל וּלְחַיִּין | דְּשַׁלִּיט דְקֻדְשָׁא בְּרִיךְ דְּסָגִידְנָא קַמֵּהּ אֱלָהִין סָמִיכְנָא דְּהוּא בֵּהּ אֲנָא מִשְׁאֲלִין דְכָל עַמָּךְ |
+| `audio/m/israeli/line/brich-shmei.mp3` | both flag the same word: re-record | 89% | צַדִּיקַיָּא עִדָּן וְעִדָּן לָא דְּתִפְתַּח לִבָּאי בְּאוֹרַיְתָא וְתַשְׁלִים מִשְׁאֲלִין דְכָל וּלְחַיִּין | דְּהוּא וּמַסְגֵּא בֵּהּ אֲנָא מִשְׁאֲלִין דְכָל עַמָּךְ |
+| `audio/m/israeli/prayer/brich-shmei.mp3` | both flag the same word: re-record | 89% | צַדִּיקַיָּא עִדָּן וְעִדָּן לָא דְּתִפְתַּח לִבָּאי בְּאוֹרַיְתָא וְתַשְׁלִים מִשְׁאֲלִין דְכָל וּלְחַיִּין | דְּהוּא וּמַסְגֵּא בֵּהּ אֲנָא מִשְׁאֲלִין דְכָל עַמָּךְ |
 | `audio/f/israeli/prayer/kaddish-1.mp3` | both flag the same word: re-record | 90% | כִרְעוּתֵהּ וְיִתְרוֹמַם וְיִתְנַשֵּׂא וְיִתְהַדָּר וְיִתְעַלֶּה וְאִמְרוּ | וְאִמְרוּ שְׁמַיָּא יִשְׂרָאֵל |
 | `audio/f/israeli/prayer/ashrei-145-1-3.mp3` | both flag the same word: re-record | 92% | אֲבָרֲכֶךָּ | וַאֲבָרֲכָה אֲבָרֲכֶךָּ וַאֲהַלְלָה שִׁמְךָ |
 | `audio/f/israeli/line/torah-leviticus-14-43.mp3` | both flag the same word: re-record | 93% | אַחַר | יָשׁוּב אַחַר וְאַחֲרֵי וְאַחֲרֵי |
@@ -22,20 +22,19 @@ Every sentence and prayer clip was checked by two different machine reviewers: a
 | `audio/f/israeli/prayer/torah-bless-1.mp3` | both flag it, on different words: listen | 80% | הָעוֹלָם | מִכָּל |
 | `audio/f/israeli/line/torah-genesis-10-15.mp3` | both flag it, on different words: listen | 83% | חֵת | בְּכֹרוֹ |
 | `audio/m/israeli/line/torah-genesis-10-15.mp3` | both flag it, on different words: listen | 88% | אֶת | וּכְנַעַן וְאֶת |
+| `audio/f/israeli/prayer/vahavta-full.mp3` | both flag it, on different words: listen | 89% | וּקְשַׁרְתָּם לְאוֹת עַל יָדֶךָ | מְצַוְּךָ |
 | `audio/m/israeli/prayer/vahavta-full.mp3` | both flag it, on different words: listen | 89% | אֲדֹנָי וּכְתַבְתָּם עַל מְזוּזֹת | מְצַוְּךָ |
-| `audio/f/israeli/prayer/vahavta-full.mp3` | both flag it, on different words: listen | 90% | וּבְקוּמֶךָ וּקְשַׁרְתָּם לְאוֹת עַל יָדֶךָ | מְצַוְּךָ |
 | `audio/f/israeli/line/kaddish-1-l2.mp3` | both flag it, on different words: listen | 90% | כִרְעוּתֵהּ | יִשְׂרָאֵל |
 | `audio/f/israeli/prayer/yigdal.mp3` | both flag it, on different words: listen | 91% | הִנּוֹ לֹא יַחֲלִיף הָאֵל וְלֹא יָמִיר דָּתוֹ מֵתִים יְחַיֶּה אֵל בְּרֹב חַסְדּוֹ בָּרוּךְ עֲדֵי עַד שֵׁם תְּהִלָּתוֹ | כְּמֹשֶׁה עוֹד |
-| `audio/m/israeli/prayer/kiddush-zachor.mp3` | both flag it, on different words: listen | 91% | אֲדֹנָי וַיָּנַח בַּיּוֹם הַשְּׁבִיעִי עַל כֵּן בֵּרַךְ | בָּם |
-| `audio/f/israeli/line/brich-shmei.mp3` | both flag it, on different words: listen | 92% | בְּטִיבוּ צַדִּיקַיָּא הוּא וּנְבִיאוֹהִי יַקִּירָא וּלְחַיִּין | יִשְׂרָאֵל וְיַת יִשְׂרָאֵל בֵּאלָהָא דְּהוּא אֱלָהָא וּמַסְגֵּא מִשְׁאֲלִין יִשְׂרָאֵל |
-| `audio/f/israeli/prayer/brich-shmei.mp3` | both flag it, on different words: listen | 92% | בְּטִיבוּ צַדִּיקַיָּא הוּא וּנְבִיאוֹהִי יַקִּירָא וּלְחַיִּין | יִשְׂרָאֵל וְיַת יִשְׂרָאֵל בֵּאלָהָא דְּהוּא אֱלָהָא וּמַסְגֵּא מִשְׁאֲלִין יִשְׂרָאֵל |
+| `audio/f/israeli/line/brich-shmei.mp3` | both flag it, on different words: listen | 92% | בְּטִיבוּ צַדִּיקַיָּא הוּא וּנְבִיאוֹהִי אֲנָא וּלְחַיִּין | יִשְׂרָאֵל וְיַת יִשְׂרָאֵל דְּהוּא וּמַסְגֵּא מִשְׁאֲלִין יִשְׂרָאֵל |
+| `audio/f/israeli/prayer/brich-shmei.mp3` | both flag it, on different words: listen | 92% | בְּטִיבוּ צַדִּיקַיָּא הוּא וּנְבִיאוֹהִי אֲנָא וּלְחַיִּין | יִשְׂרָאֵל וְיַת יִשְׂרָאֵל דְּהוּא וּמַסְגֵּא מִשְׁאֲלִין יִשְׂרָאֵל |
 | `audio/m/israeli/prayer/kaddish-1.mp3` | both flag it, on different words: listen | 93% | כִרְעוּתֵהּ וְיִתְעַלֶּה | שְׁמַיָּא |
 | `audio/m/israeli/prayer/shema-vahavta.mp3` | both flag it, on different words: listen | 93% | וּקְשַׁרְתָּם | מְצַוְּךָ |
 | `audio/m/israeli/line/havdalah-opening.mp3` | both flag it, on different words: listen | 93% | אֲדֹנָי צְבָאוֹת אַשְׁרֵי אָדָם | הוֹשִׁיעָה |
-| `audio/m/israeli/line/kiddush-shabbat-eve.mp3` | both flag it, on different words: listen | 93% | קָדְשְׁךָ אֲדֹנָי | מִכָּל |
 | `audio/m/israeli/prayer/havdalah-opening.mp3` | both flag it, on different words: listen | 93% | אֲדֹנָי צְבָאוֹת אַשְׁרֵי אָדָם | הוֹשִׁיעָה |
-| `audio/m/israeli/prayer/kiddush-shabbat-eve.mp3` | both flag it, on different words: listen | 93% | קָדְשְׁךָ אֲדֹנָי | מִכָּל |
 | `audio/m/israeli/prayer/yigdal.mp3` | both flag it, on different words: listen | 94% | הִנּוֹ לֹא יַחֲלִיף הָאֵל וְלֹא יָמִיר דָּתוֹ לְעוֹלָמִים | כְּמֹשֶׁה עוֹד |
+| `audio/m/israeli/line/kiddush-shabbat-eve.mp3` | both flag it, on different words: listen | 94% | אֲדֹנָי | מִכָּל |
+| `audio/m/israeli/prayer/kiddush-shabbat-eve.mp3` | both flag it, on different words: listen | 94% | אֲדֹנָי | מִכָּל |
 | `audio/f/israeli/prayer/shema-vahavta.mp3` | both flag it, on different words: listen | 94% | וּבְשָׁכְבְּךָ | מְצַוְּךָ |
 | `audio/f/israeli/prayer/yehalelu.mp3` | both flag it, on different words: listen | 95% | כִּי | יָהּ |
 | `audio/f/israeli/line/havdalah-opening.mp3` | both flag it, on different words: listen | 95% | אֲדֹנָי צְבָאוֹת | הוֹשִׁיעָה |
@@ -45,42 +44,31 @@ Every sentence and prayer clip was checked by two different machine reviewers: a
 | `audio/m/israeli/line/amidah-elohai-netzor.mp3` | both flag it, on different words: listen | 96% | עֲשֵׂה | הוֹשִׁיעָה |
 | `audio/m/israeli/prayer/amidah-elohai-netzor.mp3` | both flag it, on different words: listen | 96% | עֲשֵׂה | הוֹשִׁיעָה |
 | `audio/m/israeli/prayer/haftarah-after.mp3` | both flag it, on different words: listen | 96% | אָתָּה בָּרוּךְ אַתָּה וְלֹא אֲנַחְנוּ מוֹדִים | דָּוִד |
-| `audio/f/israeli/line/cafe-06.mp3` | one reviewer flags it: listen | 63% | קָפֶה |  |
 | `audio/f/israeli/line/cafe-03-f.mp3` | one reviewer flags it: listen | 67% | קָפֶה |  |
 | `audio/m/israeli/line/cafe-03-f.mp3` | one reviewer flags it: listen | 67% | קָפֶה |  |
-| `audio/m/israeli/line/cafe-26.mp3` | one reviewer flags it: listen | 67% | בְּבַקָּשָׁה |  |
-| `audio/m/israeli/line/cafe-08.mp3` | one reviewer flags it: listen | 71% | עִם |  |
-| `audio/m/israeli/line/cafe-01.mp3` | one reviewer flags it: listen | 73% | שֻׁלְחָן |  |
-| `audio/f/israeli/line/cafe-01.mp3` | one reviewer flags it: listen | 73% | שֻׁלְחָן |  |
-| `audio/f/israeli/line/small-talk-03-m.mp3` | one reviewer flags it: listen | 78% | אַתָּה |  |
-| `audio/f/israeli/line/cafe-08.mp3` | one reviewer flags it: listen | 82% | עִם |  |
-| `audio/f/israeli/line/bless-priestly-2.mp3` | one reviewer flags it: listen | 84% | וִיחֻנֶּךָּ |  |
-| `audio/f/israeli/line/torah-numbers-6-25.mp3` | one reviewer flags it: listen | 84% | וִיחֻנֶּךָּ |  |
-| `audio/f/israeli/prayer/bless-priestly-2.mp3` | one reviewer flags it: listen | 84% | וִיחֻנֶּךָּ |  |
-| `audio/f/israeli/line/cafe-03-m.mp3` | one reviewer flags it: listen | 86% | קָפֶה |  |
-| `audio/f/israeli/line/kaddish-1-l6.mp3` | one reviewer flags it: listen | 87% |  | שְׁלָמָא |
-| `audio/m/israeli/line/torah-numbers-6-24.mp3` | one reviewer flags it: listen | 88% |  | יְבָרֶכְךָ יְהוָה וְיִשְׁמְרֶךָ |
 | `audio/m/israeli/line/torah-numbers-32-39.mp3` | one reviewer flags it: listen | 88% |  | בְּנֵי מָכִיר גִּלְעָדָה וַיִּלְכְּדֻהָ |
 | `audio/f/israeli/line/yigdal-l7.mp3` | one reviewer flags it: listen | 89% |  | כְּמֹשֶׁה |
-| `audio/f/israeli/line/aleinu-1.mp3` | one reviewer flags it: listen | 89% | אֶל וַאֲנַחְנוּ מִשְׁתַּחֲוִים לִפְנֵי מֶלֶךְ מַלְכֵי עֻזּוֹ כִּי אֲדֹנָי הוּא הָאֱלֹהִים בַּשָּׁמַיִם מִמַּעַל |  |
-| `audio/f/israeli/prayer/aleinu-1.mp3` | one reviewer flags it: listen | 89% | אֶל וַאֲנַחְנוּ מִשְׁתַּחֲוִים לִפְנֵי מֶלֶךְ מַלְכֵי עֻזּוֹ כִּי אֲדֹנָי הוּא הָאֱלֹהִים בַּשָּׁמַיִם מִמַּעַל |  |
 | `audio/f/israeli/line/sim-shalom-l1.mp3` | one reviewer flags it: listen | 90% | כָּל וּבְרָכָה וְרַחֲמִים וְחַיִּים וְשָׁלוֹם |  |
+| `audio/f/israeli/line/aleinu-1.mp3` | one reviewer flags it: listen | 90% | וּמִתְפַּלְּלִים אֶל אֵל לֹא יוֹשִׁיעַ וַאֲנַחְנוּ מִשְׁתַּחֲוִים כַּכָּתוּב בַּתּוֹרָה וְיָדַעְתָּ הַיּוֹם |  |
+| `audio/f/israeli/prayer/aleinu-1.mp3` | one reviewer flags it: listen | 90% | וּמִתְפַּלְּלִים אֶל אֵל לֹא יוֹשִׁיעַ וַאֲנַחְנוּ מִשְׁתַּחֲוִים כַּכָּתוּב בַּתּוֹרָה וְיָדַעְתָּ הַיּוֹם |  |
 | `audio/m/israeli/line/kaddish-1-l4.mp3` | one reviewer flags it: listen | 90% |  | דְקוּדְשָׁא בְּרִיךְ |
 | `audio/f/israeli/prayer/sim-shalom.mp3` | one reviewer flags it: listen | 91% | כָּל וּבְרָכָה וְרַחֲמִים וְחַיִּים וְשָׁלוֹם |  |
 | `audio/f/israeli/line/kiddush-shabbat-eve.mp3` | one reviewer flags it: listen | 91% | כִּי בָנוּ בָחַרְתָּ וְאוֹתָנוּ קִדַּשְׁתָּ |  |
 | `audio/f/israeli/prayer/kiddush-shabbat-eve.mp3` | one reviewer flags it: listen | 91% | כִּי בָנוּ בָחַרְתָּ וְאוֹתָנוּ קִדַּשְׁתָּ |  |
 | `audio/m/israeli/prayer/vahavta-2.mp3` | one reviewer flags it: listen | 91% |  | מְצַוְּךָ |
+| `audio/f/israeli/prayer/vahavta-2.mp3` | one reviewer flags it: listen | 91% |  | מְצַוְּךָ |
 | `audio/m/israeli/line/sim-shalom-l1.mp3` | one reviewer flags it: listen | 92% | כָּל וְשָׁלוֹם וְטוֹב בְּעֵינֶיךָ לְבָרֵךְ אֶת |  |
 | `audio/m/israeli/line/bless-priestly-1.mp3` | one reviewer flags it: listen | 92% |  | יְבָרֶכְךָ |
+| `audio/m/israeli/line/torah-numbers-6-24.mp3` | one reviewer flags it: listen | 92% |  | יְבָרֶכְךָ |
 | `audio/m/israeli/prayer/bless-priestly-1.mp3` | one reviewer flags it: listen | 92% |  | יְבָרֶכְךָ |
 | `audio/f/israeli/prayer/shir-hamaalot.mp3` | one reviewer flags it: listen | 92% | אָז אָז הַזֹּרְעִים בְּדִמְעָה בְּרִנָּה |  |
 | `audio/m/israeli/line/kaddish-1-l2.mp3` | one reviewer flags it: listen | 92% | כִרְעוּתֵהּ |  |
-| `audio/f/israeli/prayer/vahavta-2.mp3` | one reviewer flags it: listen | 92% |  | מְצַוְּךָ בַדֶּרֶךְ |
 | `audio/f/israeli/prayer/haftarah-after.mp3` | one reviewer flags it: listen | 92% | אָחוֹר לֹא יָשׁוּב רֵיקָם כִּי אֵל מֶלֶךְ וּבְמַלְכוּת בֵּית עַל הַתּוֹרָה וְעַל הָעֲבוֹדָה וְעַל הַנְּבִיאִים וְעַל יוֹם הַשַּׁבָּת |  |
 | `audio/m/israeli/prayer/sim-shalom.mp3` | one reviewer flags it: listen | 93% | כָּל וְשָׁלוֹם וְטוֹב בְּעֵינֶיךָ לְבָרֵךְ אֶת |  |
 | `audio/m/israeli/line/torah-leviticus-27-18.mp3` | one reviewer flags it: listen | 93% |  | וְאִם אַחַר וְחִשַּׁב מֵעֶרְכֶּךָ |
 | `audio/f/israeli/line/haftarah-after-l3.mp3` | one reviewer flags it: listen | 93% | נֵרוֹ אֲדֹנָי מָגֵן דָּוִד |  |
 | `audio/m/israeli/line/torah-genesis-30-30.mp3` | one reviewer flags it: listen | 93% |  | מְעַט וַיְבָרֶךְ |
+| `audio/m/israeli/prayer/kiddush-zachor.mp3` | one reviewer flags it: listen | 93% | אֶת הַיָּם וְאֶת כָּל אֲשֶׁר בָּם וַיָּנַח |  |
 | `audio/m/israeli/prayer/shir-hamaalot.mp3` | one reviewer flags it: listen | 93% | בַגּוֹיִם הַזֹּרְעִים |  |
 | `audio/f/israeli/line/torah-exodus-16-28.mp3` | one reviewer flags it: listen | 94% |  | מֵאַנְתֶּם לִשְׁמֹר |
 | `audio/m/israeli/line/kedushah-yimloch.mp3` | one reviewer flags it: listen | 94% |  | יָהּ |
@@ -108,11 +96,11 @@ Every sentence and prayer clip was checked by two different machine reviewers: a
 | `audio/m/israeli/line/kaddish-1-l6.mp3` | one reviewer flags it: listen | 96% |  | כָּל |
 | `audio/f/israeli/line/vayehi-binsoa.mp3` | one reviewer flags it: listen | 97% |  | בִּנְסֹעַ |
 | `audio/f/israeli/prayer/vayehi-binsoa.mp3` | one reviewer flags it: listen | 97% |  | בִּנְסֹעַ |
-| `audio/m/israeli/line/haftarah-after-l1.mp3` | one reviewer flags it: listen | 97% | כִּי אֵל מֶלֶךְ |  |
 | `audio/f/israeli/line/haftarah-after-l1.mp3` | one reviewer flags it: listen | 97% | כִּי אֵל מֶלֶךְ |  |
 | `audio/m/israeli/prayer/yehalelu.mp3` | one reviewer flags it: listen | 97% |  | יָהּ |
 | `audio/m/israeli/line/aleinu-1.mp3` | one reviewer flags it: listen | 97% | עֻזּוֹ אֲדֹנָי |  |
 | `audio/m/israeli/prayer/aleinu-1.mp3` | one reviewer flags it: listen | 97% | עֻזּוֹ אֲדֹנָי |  |
+| `audio/f/israeli/line/kaddish-1-l6.mp3` | one reviewer flags it: listen | 97% |  | שְׁמַיָּא |
 | `audio/f/israeli/line/kiddush-veshamru-l2.mp3` | one reviewer flags it: listen | 97% | הִוא |  |
 | `audio/m/israeli/line/lecha-hashem.mp3` | one reviewer flags it: listen | 98% |  | לַהֲדֹם |
 | `audio/m/israeli/line/yehalelu-l2.mp3` | one reviewer flags it: listen | 98% |  | יָהּ |
@@ -403,6 +391,7 @@ Every sentence and prayer clip was checked by two different machine reviewers: a
 | `audio/f/israeli/line/amidah-yihyu.mp3` | clean (both) | 95% |  |  |
 | `audio/f/israeli/prayer/amidah-yihyu.mp3` | clean (both) | 95% |  |  |
 | `audio/f/israeli/line/fillers-17-m.mp3` | clean (both) | 95% |  |  |
+| `audio/m/israeli/line/cafe-08.mp3` | clean (both) | 95% |  |  |
 | `audio/m/israeli/line/fillers-17-m.mp3` | clean (both) | 95% |  |  |
 | `audio/f/israeli/line/havdalah-spices.mp3` | clean (both) | 95% |  |  |
 | `audio/f/israeli/prayer/havdalah-spices.mp3` | clean (both) | 95% |  |  |
@@ -473,9 +462,12 @@ Every sentence and prayer clip was checked by two different machine reviewers: a
 | `audio/m/israeli/line/vahavta-full-l1.mp3` | clean (both) | 96% |  |  |
 | `audio/m/israeli/prayer/lecha-dodi-1.mp3` | clean (both) | 96% |  |  |
 | `audio/m/israeli/prayer/vahavta-1.mp3` | clean (both) | 96% |  |  |
+| `audio/f/israeli/line/bless-priestly-2.mp3` | clean (both) | 97% |  |  |
 | `audio/f/israeli/line/fillers-22.mp3` | clean (both) | 97% |  |  |
 | `audio/f/israeli/line/kiddush-gen-2-1-3-l2.mp3` | clean (both) | 97% |  |  |
+| `audio/f/israeli/line/torah-numbers-6-25.mp3` | clean (both) | 97% |  |  |
 | `audio/f/israeli/line/yigdal-l13.mp3` | clean (both) | 97% |  |  |
+| `audio/f/israeli/prayer/bless-priestly-2.mp3` | clean (both) | 97% |  |  |
 | `audio/m/israeli/line/fillers-22.mp3` | clean (both) | 97% |  |  |
 | `audio/m/israeli/line/help-04-f.mp3` | clean (both) | 97% |  |  |
 | `audio/m/israeli/line/kiddush-veshamru-l1.mp3` | clean (both) | 97% |  |  |
@@ -495,6 +487,7 @@ Every sentence and prayer clip was checked by two different machine reviewers: a
 | `audio/f/israeli/line/shir-hamaalot-l1.mp3` | clean (both) | 97% |  |  |
 | `audio/f/israeli/line/taxi-14.mp3` | clean (both) | 97% |  |  |
 | `audio/f/israeli/prayer/candle-shabbat.mp3` | clean (both) | 97% |  |  |
+| `audio/m/israeli/line/cafe-26.mp3` | clean (both) | 97% |  |  |
 | `audio/m/israeli/line/candle-shabbat.mp3` | clean (both) | 97% |  |  |
 | `audio/m/israeli/line/shir-hamaalot-l1.mp3` | clean (both) | 97% |  |  |
 | `audio/m/israeli/line/small-talk-14-m.mp3` | clean (both) | 97% |  |  |
@@ -541,10 +534,12 @@ Every sentence and prayer clip was checked by two different machine reviewers: a
 | `audio/m/israeli/line/yigdal-l10.mp3` | clean (both) | 98% |  |  |
 | `audio/m/israeli/line/yigdal-l9.mp3` | clean (both) | 98% |  |  |
 | `audio/m/israeli/prayer/havdalah-hamavdil.mp3` | clean (both) | 98% |  |  |
+| `audio/f/israeli/line/cafe-01.mp3` | clean (both) | 98% |  |  |
 | `audio/f/israeli/line/fillers-17-f.mp3` | clean (both) | 98% |  |  |
 | `audio/f/israeli/line/hashivenu.mp3` | clean (both) | 98% |  |  |
 | `audio/f/israeli/prayer/hashivenu.mp3` | clean (both) | 98% |  |  |
 | `audio/m/israeli/line/birkat-hamazon-1.mp3` | clean (both) | 98% |  |  |
+| `audio/m/israeli/line/cafe-01.mp3` | clean (both) | 98% |  |  |
 | `audio/m/israeli/prayer/birkat-hamazon-1.mp3` | clean (both) | 98% |  |  |
 | `audio/f/israeli/line/kedushah-baruch.mp3` | clean (both) | 98% |  |  |
 | `audio/f/israeli/line/shehecheyanu.mp3` | clean (both) | 98% |  |  |
@@ -580,6 +575,7 @@ Every sentence and prayer clip was checked by two different machine reviewers: a
 | `audio/f/israeli/prayer/ashrei-145-16.mp3` | clean (both) | 98% |  |  |
 | `audio/m/israeli/line/adon-olam-1-l4.mp3` | clean (both) | 98% |  |  |
 | `audio/m/israeli/line/ashrei-145-16.mp3` | clean (both) | 98% |  |  |
+| `audio/m/israeli/line/haftarah-after-l1.mp3` | clean (both) | 98% |  |  |
 | `audio/m/israeli/prayer/ashrei-145-16.mp3` | clean (both) | 98% |  |  |
 | `audio/f/israeli/line/adon-olam-1-l7.mp3` | clean (both) | 99% |  |  |
 | `audio/f/israeli/line/bless-priestly-3.mp3` | clean (both) | 99% |  |  |
@@ -633,7 +629,10 @@ Every sentence and prayer clip was checked by two different machine reviewers: a
 | `audio/f/israeli/prayer/torah-bless-2.mp3` | clean (both) | 100% |  |  |
 | `audio/f/israeli/line/adon-olam-1-l6.mp3` | clean (both) | 100% |  |  |
 | `audio/f/israeli/line/avot-closing.mp3` | clean (both) | 100% |  |  |
+| `audio/f/israeli/line/cafe-03-m.mp3` | clean (both) | 100% |  |  |
+| `audio/f/israeli/line/cafe-06.mp3` | clean (both) | 100% |  |  |
 | `audio/f/israeli/line/cafe-07.mp3` | clean (both) | 100% |  |  |
+| `audio/f/israeli/line/cafe-08.mp3` | clean (both) | 100% |  |  |
 | `audio/f/israeli/line/cafe-22-f.mp3` | clean (both) | 100% |  |  |
 | `audio/f/israeli/line/cafe-22-m.mp3` | clean (both) | 100% |  |  |
 | `audio/f/israeli/line/cafe-23-f.mp3` | clean (both) | 100% |  |  |
@@ -672,6 +671,7 @@ Every sentence and prayer clip was checked by two different machine reviewers: a
 | `audio/f/israeli/line/shop-13.mp3` | clean (both) | 100% |  |  |
 | `audio/f/israeli/line/small-talk-02.mp3` | clean (both) | 100% |  |  |
 | `audio/f/israeli/line/small-talk-03-f.mp3` | clean (both) | 100% |  |  |
+| `audio/f/israeli/line/small-talk-03-m.mp3` | clean (both) | 100% |  |  |
 | `audio/f/israeli/line/small-talk-08-f.mp3` | clean (both) | 100% |  |  |
 | `audio/f/israeli/line/small-talk-08-m.mp3` | clean (both) | 100% |  |  |
 | `audio/f/israeli/line/small-talk-11-m.mp3` | clean (both) | 100% |  |  |

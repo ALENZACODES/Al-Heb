@@ -9,7 +9,7 @@
   "linesReadExactly": 23,
   "linesTranslatedEndToEnd": 27,
   "wrongEnglishDrawn": 0,
-  "meanMs": 277
+  "meanMs": 336
  },
  "byWear": {
   "clean": {
@@ -19,7 +19,7 @@
    "linesReadExactly": 13,
    "linesTranslatedEndToEnd": 16,
    "wrongEnglishDrawn": 0,
-   "meanMs": 301
+   "meanMs": 358
   },
   "noise": {
    "images": 2,
@@ -28,7 +28,7 @@
    "linesReadExactly": 2,
    "linesTranslatedEndToEnd": 2,
    "wrongEnglishDrawn": 0,
-   "meanMs": 197
+   "meanMs": 228
   },
   "blur": {
    "images": 2,
@@ -37,7 +37,7 @@
    "linesReadExactly": 4,
    "linesTranslatedEndToEnd": 4,
    "wrongEnglishDrawn": 0,
-   "meanMs": 232
+   "meanMs": 247
   },
   "perspective": {
    "images": 1,
@@ -46,7 +46,7 @@
    "linesReadExactly": 1,
    "linesTranslatedEndToEnd": 1,
    "wrongEnglishDrawn": 0,
-   "meanMs": 198
+   "meanMs": 305
   },
   "rotate": {
    "images": 2,
@@ -55,7 +55,7 @@
    "linesReadExactly": 2,
    "linesTranslatedEndToEnd": 3,
    "wrongEnglishDrawn": 0,
-   "meanMs": 259
+   "meanMs": 367
   },
   "lowcontrast": {
    "images": 1,
@@ -64,7 +64,7 @@
    "linesReadExactly": 1,
    "linesTranslatedEndToEnd": 1,
    "wrongEnglishDrawn": 0,
-   "meanMs": 352
+   "meanMs": 437
   }
  },
  "rows": [
@@ -72,7 +72,7 @@
    "id": "optical-store",
    "variant": "clean",
    "cer": 0,
-   "ms": 681,
+   "ms": 706,
    "levelled": 0,
    "read": [
     "חנות אופטיקה"
@@ -86,7 +86,7 @@
    "id": "bakery",
    "variant": "clean",
    "cer": 0,
-   "ms": 180,
+   "ms": 225,
    "levelled": 0,
    "read": [
     "מאפייה"
@@ -100,7 +100,7 @@
    "id": "pharmacy",
    "variant": "clean",
    "cer": 0,
-   "ms": 208,
+   "ms": 416,
    "levelled": 0,
    "read": [
     "בית מרקחת"
@@ -114,7 +114,7 @@
    "id": "exit",
    "variant": "clean",
    "cer": 0,
-   "ms": 198,
+   "ms": 206,
    "levelled": 0,
    "read": [
     "יציאה"
@@ -128,7 +128,7 @@
    "id": "closed",
    "variant": "clean",
    "cer": 0,
-   "ms": 218,
+   "ms": 237,
    "levelled": 0,
    "read": [
     "סגור"
@@ -142,7 +142,7 @@
    "id": "shoe-shop",
    "variant": "clean",
    "cer": 0,
-   "ms": 242,
+   "ms": 302,
    "levelled": 0,
    "read": [
     "חנות נעליים"
@@ -156,7 +156,7 @@
    "id": "new-price",
    "variant": "clean",
    "cer": 0.1429,
-   "ms": 364,
+   "ms": 454,
    "levelled": 0,
    "read": [
     "מחיר חדשו"
@@ -170,7 +170,7 @@
    "id": "no-entry",
    "variant": "noise",
    "cer": 0,
-   "ms": 224,
+   "ms": 267,
    "levelled": 0,
    "read": [
     "אין כניסה"
@@ -184,7 +184,7 @@
    "id": "restrooms",
    "variant": "blur",
    "cer": 0,
-   "ms": 223,
+   "ms": 227,
    "levelled": 0,
    "read": [
     "שירותים"
@@ -198,7 +198,7 @@
    "id": "herzl-street",
    "variant": "clean",
    "cer": 0,
-   "ms": 201,
+   "ms": 236,
    "levelled": 0,
    "read": [
     "רחוב הרצל"
@@ -212,7 +212,7 @@
    "id": "ben-yehuda-blvd",
    "variant": "perspective",
    "cer": 0,
-   "ms": 198,
+   "ms": 305,
    "levelled": 0,
    "read": [
     "שדרות בן יהודה"
@@ -226,7 +226,7 @@
    "id": "dizengoff-square",
    "variant": "rotate",
    "cer": 0.1818,
-   "ms": 310,
+   "ms": 426,
    "levelled": 4,
    "read": [
     "ביבר דיזנגוף"
@@ -240,7 +240,7 @@
    "id": "bus-stop",
    "variant": "clean",
    "cer": 0.0909,
-   "ms": 333,
+   "ms": 381,
    "levelled": 0,
    "read": [
     "תחנת אוטובוט"
@@ -254,7 +254,7 @@
    "id": "synagogue",
    "variant": "noise",
    "cer": 0,
-   "ms": 170,
+   "ms": 188,
    "levelled": 0,
    "read": [
     "בית כנסת"
@@ -268,7 +268,7 @@
    "id": "menu-drinks",
    "variant": "clean",
    "cer": 0,
-   "ms": 212,
+   "ms": 199,
    "levelled": 0,
    "read": [
     "תפריט",
@@ -286,7 +286,7 @@
    "id": "menu-food",
    "variant": "clean",
    "cer": 0,
-   "ms": 257,
+   "ms": 347,
    "levelled": 0,
    "read": [
     "חומוס 18",
@@ -304,7 +304,7 @@
    "id": "menu-courses",
    "variant": "blur",
    "cer": 0,
-   "ms": 240,
+   "ms": 267,
    "levelled": 0,
    "read": [
     "מנה ראשונה",
@@ -322,7 +322,7 @@
    "id": "kosher-restaurant",
    "variant": "clean",
    "cer": 0.1,
-   "ms": 519,
+   "ms": 586,
    "levelled": 0,
    "read": [
     "מסעדה בשרה",
@@ -338,7 +338,7 @@
    "id": "no-smoking",
    "variant": "lowcontrast",
    "cer": 0,
-   "ms": 352,
+   "ms": 437,
    "levelled": 0,
    "read": [
     "אסור לעשן"
@@ -352,7 +352,7 @@
    "id": "caution-stairs",
    "variant": "rotate",
    "cer": 0,
-   "ms": 208,
+   "ms": 308,
    "levelled": -4.2,
    "read": [
     "זהירות",

@@ -9,6 +9,7 @@ import { isHebrew } from '../photo/hebrew.js';
 
 const FONT_STACK = '"Alef", "Heebo", system-ui, -apple-system, "Segoe UI", sans-serif';
 export const READER_TARGET_SIDE = 1800;   // small photos are enlarged for the reader, up to 3x
+export const READER_MARGIN = 0.04;        // white frame added around the picture for the reader, as a share of its longer side
 
 const rgb = (c) => `rgb(${c.map((v) => Math.round(v)).join(',')})`;
 
@@ -60,6 +61,7 @@ export const READING_PASSES = [['binary', 6], ['binary', 11]];   // a third, gre
 export async function readSign(levelled, eng, { doc, readerMode, passes = READING_PASSES } = {}) {
   const scale = Math.min(3, Math.max(1, READER_TARGET_SIDE / Math.max(levelled.width, levelled.height)));
   const prepared = new Map();
+  const pad = Math.round(Math.max(levelled.width, levelled.height) * scale * READER_MARGIN);   // the reader misses letters that touch the edge
   const prepare = async (mode) => {
     if (prepared.has(mode)) return prepared.get(mode);
     const big = Object.assign(doc.createElement('canvas'), { width: Math.round(levelled.width * scale), height: Math.round(levelled.height * scale) });
@@ -69,7 +71,12 @@ export async function readSign(levelled, eng, { doc, readerMode, passes = READIN
     const id = g.getImageData(0, 0, big.width, big.height);
     readerImage(id, mode);
     g.putImageData(id, 0, 0);
-    const png = await toBlob(big, 'image/png'); prepared.set(mode, png); return png;
+    const framed = Object.assign(doc.createElement('canvas'), { width: big.width + 2 * pad, height: big.height + 2 * pad });
+    const f = framed.getContext('2d');
+    const corner = id.data[0];                       // after readerImage the background is the light side
+    f.fillStyle = mode === 'binary' ? '#fff' : `rgb(${corner},${corner},${corner})`; f.fillRect(0, 0, framed.width, framed.height);
+    f.drawImage(big, pad, pad);
+    const png = await toBlob(framed, 'image/png'); prepared.set(mode, png); return png;
   };
   let best = []; let bestScore = -1;
   for (const [mode, psm] of (readerMode ? passes.filter((p) => p[0] === readerMode) : passes)) {
@@ -80,7 +87,7 @@ export async function readSign(levelled, eng, { doc, readerMode, passes = READIN
     if (score > bestScore) { best = words; bestScore = score; }
     if (letters && heb.every((w) => (w.conf ?? 0) >= 88)) break;      // already a confident reading: skip the remaining passes
   }
-  return best.map((w) => ({ ...w, x: w.x / scale, y: w.y / scale, w: w.w / scale, h: w.h / scale }));
+  return best.map((w) => ({ ...w, x: (w.x - pad) / scale, y: (w.y - pad) / scale, w: w.w / scale, h: w.h / scale }));
 }
 
 /**

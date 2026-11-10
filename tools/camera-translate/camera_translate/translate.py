@@ -29,8 +29,7 @@ class GlossaryTranslator:
 
     def translate(self, lines: list[str]) -> list[dict]:
         out = []
-        for line in lines:
-            r = self.glossary.translate(line)
+        for r in self.glossary.translate_many(list(lines)):
             source = None if not r['en'] else ('word-list-near' if r['status'] == 'near' else self.source)
             out.append({'en': r['en'], 'source': source, 'translit': r['translit'], 'pointed': r['pointed']})
         return out

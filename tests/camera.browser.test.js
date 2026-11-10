@@ -51,3 +51,11 @@ test('e2e #/camera: lines outside the sign list: the app dictionary translates w
   assert.match(shoes.detail, /No English is available for this line here/); assert.doesNotMatch(shoes.detail, /null|undefined/);
   assert.equal(shoes.words.length, 2); assert.match(shoes.words[0], /chanut: Store/);
 });
+
+test('e2e #/camera: on a bilingual sign only the Hebrew half is replaced', { skip: !runCamera || !existsSync(fixture('bilingual-exit.jpg')) }, async () => {
+  const r = await runCamera({ image: fixture('bilingual-exit.jpg') }); clean(r);
+  assert.deepEqual(r.lines, ['1. Exit']);
+  assert.equal(r.hits.length, 1);
+  assert.ok(parseFloat(r.hits[0].width) < 45, `the tap target covers the Hebrew word only, not the whole line (${r.hits[0].width})`);
+  assert.ok(parseFloat(r.hits[0].left) > 45, 'and it sits on the right, where the Hebrew is');
+});

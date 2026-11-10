@@ -149,6 +149,7 @@ export function mount(root, ctx = {}) {
       say ? h('p', {}, h('strong', {}, 'Sounds like: '), say) : h('p', { class: 'muted' }, 'This line has no vowel points and is not in the built-in word list, so a reliable way to say it cannot be shown.'),
       r.en ? h('p', {}, h('strong', {}, 'English: '), r.en) : h('p', {}, 'No English is available for this line here.'),
       r.en ? h('p', { class: 'muted' }, sourceLabel(r.translationSource)) : null,
+      r.partial ? h('p', { class: 'muted camera-partial' }, 'Part of this line could not be read, so the English may be incomplete.') : null,
       h('div', { class: 'row' }, h('button', { type: 'button', class: 'btn', onclick: hear }, 'Hear The Hebrew'),
         h('button', { type: 'button', class: 'btn secondary camera-words-btn', onclick: (e) => showWords(r, e.currentTarget) }, 'Word By Word')),
       audioNote, wordsBox].filter(Boolean));

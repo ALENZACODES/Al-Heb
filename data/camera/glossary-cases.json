@@ -230,6 +230,131 @@
    "he": "קפה חם 12",
    "en": "Hot Coffee 12",
    "status": "full"
+  },
+  {
+   "he": "כיכר דיזנגוף / 50816 806ת6לום",
+   "en": "Dizengoff Square",
+   "status": "full",
+   "why": "the part after the slash is the other language, misread"
+  },
+  {
+   "he": "חנות אופטיקה 6ז0ז5 |08ו001",
+   "en": "Optical Store",
+   "status": "full",
+   "why": "letters mixed with digits or symbols are reader noise"
+  },
+  {
+   "he": "משיכה ווג\\₪",
+   "en": "Pull",
+   "status": "full"
+  },
+  {
+   "he": "מחיר מיוחד",
+   "en": "Special Price",
+   "status": "full"
+  },
+  {
+   "he": "מחיר מלוחד",
+   "en": "Special Price",
+   "status": "near"
+  },
+  {
+   "he": "+ית חולים",
+   "en": "Hospital",
+   "status": "near",
+   "why": "a short piece is completed only when the result is a listed phrase"
+  },
+  {
+   "he": "אי כניסה",
+   "en": "No Entry",
+   "status": "near",
+   "why": "never the opposite meaning: the short word is completed to the listed phrase, not dropped"
+  },
+  {
+   "he": "ברובים הגאים",
+   "en": "Welcome",
+   "status": "near",
+   "why": "two misread words that together form a listed phrase"
+  },
+  {
+   "he": "רחבת אוטובוס",
+   "en": "Bus Stop",
+   "status": "near",
+   "why": "no single word fits, but the whole line is clearly closest to one listed phrase"
+  },
+  {
+   "he": "ו קפה",
+   "en": null,
+   "status": "none",
+   "why": "a stray letter is not dropped: part of the sign may be missing"
+  },
+  {
+   "he": "מסעדה 05",
+   "en": "Restaurant",
+   "status": "full",
+   "why": "a number starting with zero is reader noise"
+  },
+  {
+   "he": "בית מ קחת",
+   "en": "Pharmacy",
+   "status": "near",
+   "why": "a letter hidden: the line is clearly closest to one listed phrase"
+  },
+  {
+   "he": "רח ב הרצל",
+   "en": "Herzl Street",
+   "status": "near"
+  },
+  {
+   "he": "שדרות 1 יהודה",
+   "en": "Ben Yehuda Boulevard",
+   "status": "near"
+  },
+  {
+   "he": "פלא יל 22",
+   "en": "Falafel 22",
+   "status": "near"
+  },
+  {
+   "he": "חנות :2",
+   "en": "Store",
+   "status": "full",
+   "why": "a digit with punctuation stuck to it is noise"
+  },
+  {
+   "he": "מ גות",
+   "en": null,
+   "status": "none",
+   "why": "too much of the word is missing"
+  },
+  {
+   "he": "מכונית",
+   "en": null,
+   "status": "none",
+   "why": "a real word (car) alone on a line is never turned into a listed one"
+  },
+  {
+   "he": "פלפל",
+   "en": null,
+   "status": "none",
+   "why": "a real word (pepper)"
+  },
+  {
+   "he": "תה סו",
+   "en": "Tea 10",
+   "status": "near",
+   "why": "a price read entirely as look-alike letters, right after a listed word"
+  },
+  {
+   "he": "סו",
+   "en": null,
+   "status": "none"
+  },
+  {
+   "he": "קפה סוס",
+   "en": null,
+   "status": "none",
+   "why": "a real word (horse) is not a price"
   }
  ]
 }

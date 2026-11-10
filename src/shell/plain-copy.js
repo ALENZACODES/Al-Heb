@@ -12,7 +12,7 @@ export const PLAIN = Object.freeze({
   wipeHelp: 'This deletes your progress, review cards, streaks and settings from this device. It cannot be undone, so download a backup first. Tick the box below to remove the offline copy of the app too. Type {word} to turn on the button.',
   restoreWarn: 'Restoring replaces the progress and settings on this device. Not sure? Press Cancel, then download a backup of what is here now.',
   lessonDraft: 'This is a draft. A native Hebrew speaker has not checked the meanings or vowel marks yet.',
-  hooksNote: 'Memory hooks for this course. They are drafts. The stories help you remember. They are not history.',
+  hooksNote: 'Memory hooks: little stories to help you remember. They are not history.',
   quickCheckMany: 'Quick check: {n} questions. Finish them to complete the lesson. Your place is saved.',
   exDraft: 'This exercise is a draft. A native Hebrew speaker has not checked it, and no learners have tried it.',
   closingPerfect: 'You got every answer on the first try. Review again in a day or two to see what stuck.',

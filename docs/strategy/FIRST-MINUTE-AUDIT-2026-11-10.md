@@ -94,6 +94,8 @@ Weaknesses found, and what was done:
 | 6 | The Learn card's Rimon was a still picture while every other screen had the animated Rimon | review | Fixed: he waves (first lesson) or points to the next one |
 | 7 | No browser test drove the new setup | review | Fixed: tests/firstminute.browser.test.js |
 
+After the fixes the gate passes: keyboard walk with no failures, axe and 200% zoom on 15 routes in light and dark with 0 findings, colour pairs as in the baseline. Not this lane's code, found on the way: `/calendar` has 12 axe label-in-name findings ("Download file" buttons whose spoken name omits those words, and day links), which `tests/a11y.fixes.test.js` reports once axe-core is installed in `tools/a11y`.
+
 The plan from here (each item says what done looks like):
 
 1. **Real phone and screen reader (owner or tester, about 30 minutes).** Done when: setup, the first lesson and Learn are walked once on an iPhone with VoiceOver and once on Android with TalkBack, and anything found is fixed. Nothing else on this list replaces it.

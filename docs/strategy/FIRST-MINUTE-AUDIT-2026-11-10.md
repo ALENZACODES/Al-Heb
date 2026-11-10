@@ -50,6 +50,14 @@ Not fixed here, for later rounds: the opening prayer appears before the welcome 
 
 - התקדמות (Progress) as the tab's Hebrew label.
 
+## Round 2 (2026-11-10, about 2 AM)
+
+- Every lesson summary now ends like the first lesson: Rimon plays his high five in the page and the streak flame card fills toward 5 minutes and lights live (src/shell/flame.js, shared).
+- A one-time "Today counts" toast appears wherever the learner is when the day lights.
+- Merged `overnight/launch-ready-2026-11-10` into this branch: its one-tap quick start sits under Continue on the first question; its text flame on the lesson summary is folded into the live flame card; three more preview views load on first open to keep the first install under budget.
+- Locked path stops and the cheer line are readable on dark green.
+- Branch review round 1: [BRANCH-REVIEW-R1-2026-11-10.md](BRANCH-REVIEW-R1-2026-11-10.md).
+
 ## Score
 
-72/100 for this round (first minute, look and consistency against Duolingo). What would raise it: the path as true round stops with a tap-to-open card; a lesson-complete screen for every lesson (not just the first) with Rimon and the flame; Rimon's move set used across Home, Progress and Brain Lab; a real-phone and screen-reader pass; streak-freeze and badge moments shown at the moment they happen.
+Round 2: 82/100. Round 1: 72/100 for this round (first minute, look and consistency against Duolingo). What would raise it: the path as true round stops with a tap-to-open card; a lesson-complete screen for every lesson (not just the first) with Rimon and the flame; Rimon's move set used across Home, Progress and Brain Lab; a real-phone and screen-reader pass; streak-freeze and badge moments shown at the moment they happen.

@@ -163,7 +163,9 @@ test("motion audit: animations match the reviewed inventory, loops are slow, and
     'rimon-toast-in',
     // Rimon big moments (assets/css/rimon.css, feature/rimon-stills): one-shot entrances of 0.5 to 0.6 s and a 1.1 s gold pulse on streak
     // moments (under two cycles per second); the reduced-motion block and the global calm rule switch all of them off
-    'rimon-burst', 'rimon-bounce', 'rimon-crash', 'rimon-peek-in', 'rimon-gold-pulse'];
+    'rimon-burst', 'rimon-bounce', 'rimon-crash', 'rimon-peek-in', 'rimon-gold-pulse',
+    // round 2: the "Today counts" toast drops in once (0.42 s) and leaves after about 4 s; reduced motion and calm switch it off
+    'stat-toast-in'];
   assert.deepEqual(frames.sort(), reviewed.sort(), 'new animations require a motion review');
   for (const animation of anims) {
     if (!/\binfinite\b/.test(animation)) continue;

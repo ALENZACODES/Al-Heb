@@ -140,13 +140,12 @@ export function mount(root, ctx) {
       if (real && page !== 'daily') { nextPage(); return; }
       submit();
     } },
-      pageBox('level', rec ? null : h('p', { class: 'ob-quick' }, h('button', { type: 'button', class: 'btn ob-quick-go', id: 'ob-quick-start', onclick: () => quickStart() }, 'New to Hebrew? Start your first letter now'), h('span', { class: 'muted small block' }, 'Skips the questions. Change anything later in Settings.')),
-        levelFs, h('p', { class: 'muted' }, 'Not sure? Choose “Starting from zero” for a gentle introduction.')),
+      pageBox('level', levelFs, h('p', { class: 'muted' }, 'Not sure? Choose “Starting from zero” for a gentle introduction. Or skip the questions with “Start now” under Continue.')),
       pageBox('goal', goalFs),
       pageBox('daily', dailyFs),
       next,
       h('div', { class: 'ob-foot' },
-        h('div', { class: 'ob-foot-page', 'data-page': 'level' }, levelNext, rec ? h('button', { type: 'button', class: 'btn secondary', onclick: () => go('plan') }, 'Keep my current starting point') : null),
+        h('div', { class: 'ob-foot-page', 'data-page': 'level' }, levelNext, rec ? h('button', { type: 'button', class: 'btn secondary', onclick: () => go('plan') }, 'Keep my current starting point') : h('button', { type: 'button', class: 'btn secondary ob-quick-go', id: 'ob-quick-start', onclick: () => quickStart() }, 'New to Hebrew? Start now')),
         h('div', { class: 'ob-foot-page', 'data-page': 'goal' }, goalNext),
         h('div', { class: 'ob-foot-page', 'data-page': 'daily' }, h('button', { type: 'submit', class: 'btn ob-cta', id: 'ob-letters-continue' }, 'Continue'))));
     const showPage = (name) => {
@@ -186,10 +185,11 @@ export function mount(root, ctx) {
       page = 'level';
       go(israelNow ? 'plan' : 'congregation');
     };
-    // Quick start (first-minute redesign, Nov 10 2026): a new learner can skip the three questions and the plan and be one tap
-    // from the first letter. Pronunciation, goal and daily goal keep their defaults and stay in Settings.
+    // Quick start (launch branch, Nov 10 2026): a brand-new learner is one tap from the first letter. Pronunciation and the week plan
+    // keep their defaults (Sephardi reading, Israeli voices) and stay in Settings. Offered under Continue on the first question.
     function quickStart() {
       rec = answerLetters(rec, 'none', nowISO());
+      if (DAILY_GOALS.includes(daily)) { rec = { ...rec, minutesPerDay: daily }; try { store.set(DAILY_GOAL_KEY, daily); } catch { /* best effort */ } }
       save();
       try { settings.set({ onboarded: true, goal }); } catch { /* settings may be read-only in tests */ }
       say('Saved. Your first letter is next.');

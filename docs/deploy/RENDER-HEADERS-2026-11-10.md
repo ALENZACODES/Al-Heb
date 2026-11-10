@@ -18,3 +18,5 @@ Copy each header onto path `/*`:
 Also set `Content-Type: application/manifest+json` and `Cache-Control: no-cache` for `/manifest.webmanifest`, and `Cache-Control: no-cache` for `/`, `/index.html`, `/sw.js` and `/precache-manifest.js`.
 
 The CSP matches `_headers`. It allows the learner's optional local translation helper on loopback and the vendored Tesseract worker. No third-party origins.
+
+A machine-readable `headers` block, still a proposal only, is in [`render.yaml.headers-proposal.yaml`](render.yaml.headers-proposal.yaml). It is not a root Blueprint and will not change the live Render service.

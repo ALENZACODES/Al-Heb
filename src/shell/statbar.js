@@ -60,7 +60,17 @@ export function mountStatbar({ store, settings, doc = globalThis.document, now =
     streakChip.classList.toggle('is-lit', m.lit); streakChip.classList.toggle('is-rest', m.rest && !m.lit);
     goalChip.classList.toggle('is-met', m.met);
     goalChip.style.setProperty('--p', String(m.pct));
-    if (grew) { streakChip.classList.remove('is-pop'); void streakChip.offsetWidth; streakChip.classList.add('is-pop'); }
+    if (grew) { streakChip.classList.remove('is-pop'); void streakChip.offsetWidth; streakChip.classList.add('is-pop'); dayLit(m.count); }
+  }
+  // The moment today starts to count, wherever the learner is: a short toast with the flame (a lesson summary shows its own flame
+  // card instead, so the toast stays quiet there). Calm mode never gets here (statbarWanted).
+  function dayLit(count) {
+    if (doc.querySelector?.('.fd-flame')) return;
+    const toast = h('div', { class: 'stat-toast', role: 'status' }, h('span', { class: 'stat-flame', 'aria-hidden': 'true' }),
+      h('span', {}, h('strong', {}, count === 1 ? 'Day 1 of your streak!' : `${count} days in a row!`), ' Today counts.'));
+    doc.body.append(toast);
+    import('../audio/sfx.js').then((m) => { if (settings.get('soundEffects') !== false && settings.get('audioFree') !== true) m.sfx.play('streak'); }).catch(() => {});
+    setTimeout(() => toast.remove(), 4200);
   }
   const off = store?.subscribe?.((key) => { if (key === STREAK_KEY || key === DAILY_GOAL_KEY || key === 'settings') refresh(); });
   const timer = setInterval(refresh, 30000); // the engine saves seconds every 10 s; the minute count follows within half a minute

@@ -487,6 +487,20 @@ html:has(body.ob-player) { scroll-padding-block-end: 12rem; }
    line, so cards in a row line up. */
 .wf-game-grid > li { display: flex; }
 .wf-game-grid .wf-level-tile { display: flex; flex-direction: column; align-items: flex-start; inline-size: 100%; }
-.wf-game-grid .wf-level-tile > .wf-game-thumb { inline-size: 100%; block-size: auto; aspect-ratio: 16 / 9; object-fit: cover; object-position: 50% 50%; }
+.wf-game-grid .wf-level-tile > .wf-game-thumb { inline-size: 100%; block-size: auto; aspect-ratio: 16 / 9; object-fit: contain; object-position: 50% 50%; background: #f4ecdc; } /* whole scene visible */
 .wf-game-grid .wf-level-tile > .alef-medal:last-child { margin: auto 0 0; padding-block-start: .5rem; box-sizing: content-box; box-shadow: none; filter: drop-shadow(0 2px 4px #0b1a1240); }
 .wf-game-grid .wf-level-tile > .wf-arcade-thumb { object-fit: contain; background: #f4ecdc; } /* 8:3 arcade scenes: show the whole scene, letterboxed on paper */
+
+/* ---------- 12. Destination icons: Home lists and the More menu (2026-11-10 13:40) ----------
+   Every destination row has one icon of one size: its gold coin, or for a game its own scene in the same round frame. */
+.alef-game-pic { border-radius: 50%; object-fit: cover; aspect-ratio: 1 / 1; box-shadow: 0 0 0 2px #d9a441, 0 2px 6px #0b1a1240; background: #f4ecdc; }
+.show-tile > .alef-medal, .tile > .alef-medal { inline-size: 3.5rem; block-size: 3.5rem; flex: none; }
+.tiles .tile > .alef-medal { inline-size: 40px; block-size: 40px; margin: 0 auto .35rem; }
+#nav-more .menu-link.has-ico { display: grid; grid-template-columns: 32px 1fr; column-gap: .65rem; align-items: center; align-content: center; }
+#nav-more .menu-link.has-ico > .alef-medal { grid-row: 1; inline-size: 32px; block-size: 32px; margin: 0; align-self: center; }
+#nav-more .menu-link.has-ico:has(> .menu-desc) > .alef-medal { grid-row: 1 / span 2; }
+#nav-more .menu-link.has-ico > .menu-label, #nav-more .menu-link.has-ico > .menu-desc { grid-column: 2; }
+/* game cards (Games, Brain Lab): the scene is the main picture again; one 16:9 box, whole scene visible */
+.lab-game.has-cover { flex-direction: column; align-items: stretch; }
+.lab-game.has-cover > .lab-art.studio-cover { inline-size: 100%; block-size: auto; aspect-ratio: 16 / 9; object-fit: contain; background: #f4ecdc; border-radius: 12px; margin: 0 0 .3rem; }
+.lab-game.has-cover > .alef-coin { margin: 0 0 .3rem; }

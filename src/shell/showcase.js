@@ -3,7 +3,7 @@ import { uiEnglish, MORNING_TITLE } from './names.js';
 // The first-screen showcase: Tree of Knowledge hero + a tile for every major
 // destination, shown on Welcome (first run) and Home. Pure presentation —
 // every tile links to an existing route; counts are the app's real numbers.
-import { h, heSpan, medalFor } from './ui.js';
+import { h, heSpan, destIcon } from './ui.js';
 import { astralTreeNode } from './astral-tree.js';
 import { builderNode } from '../home/builder.js';
 
@@ -58,7 +58,7 @@ export function showcaseNode(ctx) {
   const has = (name) => { if (name === 'books') return true; try { return ctx?.hasRoute ? !!ctx.hasRoute(name) : true; } catch { return true; } };
   const tiles = TILES.filter(([name]) => has(name)).map(([name, href, title, he, hook]) =>
     h('li', {}, h('a', { class: 'show-tile', href },
-      medalFor(name, 56),
+      destIcon(name, 56),
       h('span', { class: 'show-tile-title' }, uiEnglish(ctx, title), ' ', heSpan(he)),
       h('span', { class: 'show-tile-hook' }, hook))));
   const mascotBox = h('div', { class: 'show-mascot-box' });

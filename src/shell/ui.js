@@ -44,8 +44,7 @@ export const MEDAL_FOR = Object.freeze({
   ask: ['home', 'ask'], talk: ['home', 'talk'], camera: ['home', 'camera'], light: ['home', 'light'],
   games: ['home', 'games'], books: ['home', 'books'], lab: ['home', 'lab'], learn: ['home', 'learn'],
   speak: ['home', 'speak'], firstday: ['home', 'firstday'], morning: ['home', 'firstday'],
-  wordfinder: ['home', 'vocab'], sprint: ['home', 'vocab'], traditions: ['home', 'sounds'],
-  torahreader: ['home', 'read'], 'listen-shelf': ['home', 'sounds'],
+  wordfinder: ['home', 'vocab'],
   tugowar: ['word', 'tugowar'], vowelcatcher: ['word', 'vowelcatcher'], pinball: ['word', 'pinball'],
   prefixblast: ['word', 'prefixblast'], memorypalace: ['word', 'memorypalace'],
   archbuilder: ['word', 'archbuilder'], barter: ['word', 'barter'], bumperverbs: ['word', 'bumperverbs'],
@@ -55,7 +54,28 @@ export const MEDAL_FOR = Object.freeze({
   shabbatrush: ['word', 'shabbatrush'], shadowcraft: ['word', 'shadowcraft'], shuktaxi: ['word', 'shuktaxi'],
   submarinesonar: ['word', 'submarinesonar'], trainswitch: ['word', 'trainswitch'], typewriter: ['word', 'typewriter'],
   weatherstudio: ['word', 'weatherstudio'],
+  sprint: ['home', 'sprint'], traditions: ['home', 'traditions'], 'traditions-guide': ['home', 'traditions'], 'traditions-hear': ['home', 'traditions'],
+  'tradition-quiz': ['home', 'traditions'], compare: ['home', 'traditions'], 'read-my-way': ['home', 'traditions'],
+  morning: ['home', 'morning'], torahreader: ['home', 'torahreader'], torahread: ['home', 'torahreader'], service: ['home', 'read'],
+  'listen-shelf': ['home', 'listen'], listen: ['home', 'listen'], songs: ['home', 'listen'],
+  settings: ['home', 'settings'], help: ['home', 'help'], how: ['home', 'help'], about: ['home', 'help'], accessibility: ['home', 'help'],
+  library: ['home', 'books'], festivals: ['home', 'calendar'], atlas: ['home', 'letters'], search: ['home', 'scan'],
+  awards: ['home', 'progress'], daily: ['home', 'progress'], firstwin: ['home', 'firstday'],
 });
+/** Games shown by their own scene picture in lists (owner, 2026-11-10: game pictures over gold icons). assets/img/game-thumbs/<id>.160.webp. */
+export const GAME_PICS = new Set(('alefbetrun archbuilder barter bingoletters bubbleword bumperverbs ciphergrid fallingletters finalfive flapvowel gendersplit karaokebeat lasermaze letterbridge '
+  + 'letterchomp lettercrush letterdrop lettersudoku lettertwins lookalikes meltdown memorypalace minicross mitzvot613 museumcurator noahseven petclinic pinball pluralpop prefixblast quizladder '
+  + 'rentalagent rhymelab roottree scramble sentencetrain shabbatrush shadowcraft shuktaxi soundsnap speedtype submarinesonar syllablesnake tenwords trainswitch trueornot tugowar typewriter '
+  + 'vowelcatcher vowelstack weatherstudio wordbuilder wordfinder wordmaze wordsearch').split(' '));
+/** Icon for a destination in a list: a game's own scene (round, the same size as a coin), else its gold coin, else the coin of
+ *  `section` (learn, read, speak, progress or more) so no entry is left without one. Lazy; a missing scene falls back to the coin. */
+export function destIcon(name, z = 48, section = null) {
+  const coinFor = () => medalFor(name, z) || (section ? medal('home', ['learn', 'read', 'speak', 'progress'].includes(section) ? section : 'more', z) : null);
+  if (!GAME_PICS.has(name)) return coinFor();
+  return h('img', { class: 'alef-medal alef-game-pic', src: `assets/img/game-thumbs/${name}.160.webp`, width: z, height: z, alt: '', loading: 'lazy', decoding: 'async',
+    onerror: (e) => { const c = coinFor(); if (c) e.target.replaceWith(c); else e.target.remove(); } });
+}
+
 /** Decorative gold coin for a route name, or null if we have no emblem yet. */
 export function medalFor(name, z = 48) {
   const pair = MEDAL_FOR[name];

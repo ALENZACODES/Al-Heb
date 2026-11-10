@@ -321,13 +321,17 @@ function hub(root, ctx) {
   const newOnes = GAMES.filter((g) => isNewGame(g, st));
   const tile = (g) => {
     const gs = st.games[g.id];
-    return h('a', { class: `lab-game${g.pack === 'studio' ? ' is-studio' : ''}`, href: `#/lab/${g.id}`, style: `--sk:${SKILL_COLOR[g.skill]}` },
-      g.pack === 'studio' ? artImg(h, artPath(g.id, 'cover'), 'studio-cover') : coin(GLYPH[g.id] || GLYPHS[g.id] || 'א', 56),
+    // every game card leads with its own cover picture (owner, 2026-11-10: pictures over gold icons); the coin only if the picture fails
+    const pic = artImg(h, g.pack === 'studio' ? artPath(g.id, 'cover') : coverArtPath(g.id), 'studio-cover');
+    const card = h('a', { class: `lab-game has-cover${g.pack === 'studio' ? ' is-studio' : ''}`, href: `#/lab/${g.id}`, style: `--sk:${SKILL_COLOR[g.skill]}` },
+      pic || coin(GLYPH[g.id] || GLYPHS[g.id] || 'א', 56),
       h('span', { class: 'body' },
         h('span', { class: 't' }, g.title, ' ', heSpan(g.titleHe, 'he'), isNewGame(g, st) ? h('span', { class: 'lab-new' }, 'New') : null),
         g.teaches ? h('span', { class: 'lab-teaches' }, g.teaches) : null,
         h('span', { class: 'm' }, gs ? `Best ${gs.best} · level ${gs.lastMax}` : g.blurb),
         gs ? spark(gs.history.map((x) => x.s)) : null));
+    pic?.addEventListener?.('error', () => card.prepend?.(coin(GLYPH[g.id] || GLYPHS[g.id] || 'א', 56)), { once: true });
+    return card;
   };
   const pack = (cls, title, tag, lead, list, bySkill = false) => list.length ? h('section', { class: `lab-pack ${cls}`, 'aria-labelledby': `${cls}-h` },
     h('h2', { id: `${cls}-h`, class: 'lab-pack-h' }, title, ' ', h('span', { class: 'lab-pack-tag' }, tag)),
@@ -349,7 +353,7 @@ function hub(root, ctx) {
       h('ol', { class: 'lab-plan' }, ...plan.map((id, i) => {
         const g = gameById(id), done = prog.done.includes(id);
         return h('li', { class: done ? 'done' : '' }, h('span', { class: 'dot', 'aria-hidden': 'true' }, done ? '✓' : String(i + 1)),
-          coin(GLYPH[g.id] || GLYPHS[g.id] || 'א', 40), h('span', {}, h('span', { class: 'name' }, g.title), h('br'), h('span', { class: 'skill' }, skillOf(g.skill).name)),
+          token(ctx, g), h('span', {}, h('span', { class: 'name' }, g.title), h('br'), h('span', { class: 'skill' }, skillOf(g.skill).name)),
           done ? h('span', { class: 'visually-hidden' }, ' (done)') : null);
       })),
       prog.complete ? h('a', { class: 'lab-go', href: `#/lab/${plan[0]}` }, 'Play again') : h('a', { class: 'lab-go', href: `#/lab/${next}?workout=1` }, prog.done.length ? 'Continue workout' : 'Start workout')),

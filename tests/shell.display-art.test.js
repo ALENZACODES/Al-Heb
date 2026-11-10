@@ -15,7 +15,7 @@ const read = (p) => readFileSync(join(root, p), 'utf8');
 const SIZES = [112, 160, 224, 320];
 const NEW_HOME = ['talk', 'camera', 'light', 'games', 'books', 'lab', 'learn', 'speak', 'firstday'];
 
-test('every showcase destination that has a medal mapping renders a gold coin', () => {
+test('every showcase destination renders a gold coin or its game picture', async () => {
   const node = showcaseNode({ hasRoute: () => true, routeName: 'home' });
   const tiles = node.queryAll('a.show-tile');
   assert.ok(tiles.length >= 10, 'destination tiles are present');
@@ -24,11 +24,12 @@ test('every showcase destination that has a medal mapping renders a gold coin', 
     const medals = tile.queryAll('img.alef-medal');
     if (medals.length) {
       withMedal += 1;
-      assert.match(medals[0].attrs.src, /assets\/img\/icons\/ICON_.*\.112\.webp/);
+      assert.match(medals[0].attrs.src, /assets\/img\/(icons\/ICON_.*\.112|game-thumbs\/\w+\.160)\.webp/);
       assert.equal(medals[0].attrs.loading, 'lazy');
     }
   }
-  const expected = TILES.filter(([name]) => MEDAL_FOR[name]).length;
+  const { GAME_PICS } = await import('../src/shell/ui.js');
+  const expected = TILES.filter(([name]) => MEDAL_FOR[name] || GAME_PICS.has(name)).length;
   assert.equal(withMedal, expected);
   assert.ok(withMedal >= 15, 'almost every showcase tile now has a coin');
 });
@@ -63,7 +64,7 @@ test('Talk, Camera and Light mount a gold coin and an in-page Rimon helper', () 
     assert.match(src, /rimonSays\(/);
     assert.doesNotMatch(src, /\bAI\b|ChatGPT|Claude|language model/i);
   }
-  assert.match(read('src/shell/home.view.js'), /medalFor\(r\.name/);
+  assert.match(read('src/shell/home.view.js'), /destIcon\(r\.name/);
 });
 
 test('Talk, Camera and Welcome have Rimon page triggers that resolve a still', () => {
@@ -137,6 +138,21 @@ test('badge sizing: awards are fixed squares over the inline aspect-ratio, coins
   assert.match(css, /\.wf-game-grid \.wf-level-tile > \.wf-game-thumb \{[^}]*aspect-ratio: 16 \/ 9;/);
   const lab = read('src/lab/lab.view.js');
   assert.doesNotMatch(lab, /coin\(GLYPH\[g\.id\] \|\| 'א'/, 'no game falls back to a placeholder alef while GLYPHS has its own');
-  assert.match(read('src/games/games.view.js'), /id === 'wordfinder' \? medal\('home', 'vocab', 56\)/);
-  assert.ok(existsSync(join(root, 'assets/img/icons/ICON_home_vocab.112.webp')));
+
+});
+
+test('game cards lead with their own scene; coins only as a fallback; every destination row has an icon', async () => {
+  const games = read('src/games/games.view.js');
+  assert.doesNotMatch(games, /a\.prepend\(medal\(/, 'no coin is prepended to a game card');
+  assert.match(games, /else a\.append\(medal\('word', id, 56\)\); \/\/ last resort/);
+  const lab = read('src/lab/lab.view.js');
+  assert.match(lab, /coverArtPath\(g\.id\)/); assert.match(lab, /token\(ctx, g\), h\('span', \{\}, h\('span', \{ class: 'name' \}/);
+  const { GAME_PICS, destIcon, MEDAL_FOR } = await import('../src/shell/ui.js');
+  for (const id of GAME_PICS) assert.ok(existsSync(join(root, `assets/img/game-thumbs/${id}.160.webp`)), id);
+  const pic = destIcon('tugowar', 56);
+  assert.match(pic.attrs.src, /game-thumbs\/tugowar\.160\.webp$/); assert.equal(pic.attrs.loading, 'lazy');
+  for (const [name] of TILES) assert.ok(GAME_PICS.has(name) || MEDAL_FOR[name], 'Home destination without an icon: ' + name);
+  for (const [, [g, id]] of Object.entries(MEDAL_FOR)) assert.ok(existsSync(join(root, `assets/img/icons/ICON_${g}_${id}.112.webp`)), `ICON_${g}_${id}`);
+  assert.ok(destIcon('no-such-page', 32, 'speak'), 'a menu row without its own coin gets its section coin');
+  assert.match(read('src/shell/menu.js'), /destIcon\(r\.name, 32, sectionOf\(r\.name\)\)/);
 });

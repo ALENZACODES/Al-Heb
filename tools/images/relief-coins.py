@@ -147,7 +147,75 @@ def more():
     return relief(r, g)
 
 
-EMBLEMS = dict(talk=talk, camera=camera, light=light, games=games, books=books, lab=lab, learn=learn, speak=speak, firstday=firstday, more=more)
+def sprint():
+    r, d = canvas(); g, gd = canvas()
+    d.polygon([(560, 280), (380, 540), (500, 540), (440, 760), (660, 470), (530, 470), (600, 280)], fill=255)  # lightning bolt
+    for i, y in enumerate((420, 520, 620)): d.rounded_rectangle([270 + i * 10, y, 360, y + 24], 12, fill=255)  # speed lines
+    gd.line([(560, 300), (420, 520)], fill=255, width=10)
+    return relief(r, g)
+
+
+def traditions():
+    r, d = canvas(); g, gd = canvas()
+    for x in (330, 512, 694):  # three bells, one per tradition
+        d.pieslice([x - 85, 360, x + 85, 560], 180, 360, fill=255); d.rounded_rectangle([x - 85, 455, x + 85, 600], 30, fill=255)
+        d.ellipse([x - 24, 600, x + 24, 648], fill=255)
+        gd.arc([x - 55, 395, x + 55, 520], 200, 340, fill=255, width=12)
+    return relief(r, g)
+
+
+def morning():
+    r, d = canvas(); g, gd = canvas()
+    d.ellipse([402, 372, 622, 592], fill=255)  # full sun
+    for k in range(12):
+        a = np.deg2rad(k * 30); c, s_ = np.cos(a), np.sin(a)
+        d.line([(512 + 140 * c, 482 + 140 * s_), (512 + 200 * c, 482 + 200 * s_)], fill=255, width=26)
+    d.rounded_rectangle([300, 700, 724, 738], 19, fill=255)
+    gd.ellipse([440, 410, 584, 554], outline=255, width=12)
+    return relief(r, g)
+
+
+def torahreader():
+    r, d = canvas(); g, gd = canvas()
+    d.rounded_rectangle([300, 320, 390, 720], 40, fill=255); d.rounded_rectangle([634, 320, 724, 720], 40, fill=255)  # two rollers
+    d.rectangle([370, 380, 654, 660], fill=255)  # the open sheet
+    for x in (345, 679):
+        d.rounded_rectangle([x - 12, 270, x + 12, 330], 8, fill=255); d.rounded_rectangle([x - 12, 710, x + 12, 770], 8, fill=255)
+    for y in (430, 480, 530, 580): gd.line([(420, y), (604, y)], fill=255, width=10)  # lines, not letters
+    gd.line([(390, 380), (390, 660)], fill=255, width=10); gd.line([(634, 380), (634, 660)], fill=255, width=10)
+    return relief(r, g)
+
+
+def listen():
+    r, d = canvas(); g, gd = canvas()
+    d.arc([320, 300, 704, 684], 180, 360, fill=255, width=46)  # headphones
+    d.rounded_rectangle([290, 480, 410, 680], 46, fill=255); d.rounded_rectangle([614, 480, 734, 680], 46, fill=255)
+    gd.rounded_rectangle([318, 510, 382, 650], 28, outline=255, width=10); gd.rounded_rectangle([642, 510, 706, 650], 28, outline=255, width=10)
+    return relief(r, g)
+
+
+def settings():
+    r, d = canvas(); g, gd = canvas()
+    for k in range(8):
+        a = np.deg2rad(k * 45); c, s_ = np.cos(a), np.sin(a)
+        d.line([(512 + 120 * c, 512 + 120 * s_), (512 + 225 * c, 512 + 225 * s_)], fill=255, width=86)
+    d.ellipse([322, 322, 702, 702], fill=255)
+    gd.ellipse([442, 442, 582, 582], fill=255)
+    return relief(r, g)
+
+
+def helpring():
+    r, d = canvas(); g, gd = canvas()
+    d.ellipse([312, 312, 712, 712], fill=255)  # a lifebuoy, no letters
+    gd.ellipse([412, 412, 612, 612], fill=255)
+    for a0 in (45, 135, 225, 315):
+        a = np.deg2rad(a0); c, s_ = np.cos(a), np.sin(a)
+        gd.line([(512 + 105 * c, 512 + 105 * s_), (512 + 195 * c, 512 + 195 * s_)], fill=255, width=30)
+    return relief(r, g)
+
+
+EMBLEMS = dict(talk=talk, camera=camera, light=light, games=games, books=books, lab=lab, learn=learn, speak=speak, firstday=firstday, more=more,
+               sprint=sprint, traditions=traditions, morning=morning, torahreader=torahreader, listen=listen, settings=settings, help=helpring)
 
 
 def main():

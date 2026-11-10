@@ -37,9 +37,10 @@ def torah_he(cid):
     return _TORAH[cid]
 
 
-def transcribe(path):
+def transcribe(path, max_tokens=300):
     m = L.model()
-    segs, _ = m.transcribe(L.load(path), language='he', beam_size=1, condition_on_previous_text=False, vad_filter=False)
+    segs, _ = m.transcribe(L.load(path), language='he', beam_size=1, condition_on_previous_text=False, vad_filter=False,
+                          temperature=0, max_new_tokens=max_tokens)   # a cap so a looping transcription cannot run for minutes
     return ' '.join(s.text.strip() for s in segs)
 
 

@@ -151,3 +151,13 @@ test('status: rest on Saturday, at risk in the evening, done after a lesson', ()
   assert.equal(streakStatus(streakRec({ last: '2026-11-10' }), r, T('2026-11-10T19:00')).state, 'done');
   assert.equal(streakStatus({}, r, T('2026-11-10T19:00')).state, 'new');
 });
+test('week strip: a bought freeze shows as its own state, Shabbat as rest, never as a failure', async () => {
+  const { weekDots, freezeNoteSeen } = await import('../../src/retention/streak.js');
+  const sun = T('2026-11-15T10:00');
+  const a = applyRollover(streakRec({ last: '2026-11-10', doneDates: ['2026-11-09', '2026-11-10'] }), ret({ freezes: { held: 2, evaluatedThrough: '2026-11-10' } }), sun);
+  assert.deepEqual(a.ret.freezes.used, ['2026-11-11', '2026-11-12']);
+  const dots = weekDots(a.streak, a.ret, sun);
+  assert.deepEqual(dots.map((d) => d.state), ['done', 'done', 'freeze', 'freeze', 'rest', 'rest', 'today']);
+  assert.equal(dots[2].label, 'Wednesday: covered by a streak freeze'); assert.equal(dots[5].label, 'Saturday: rest day');
+  assert.equal(freezeNoteSeen(a.ret).freezes.unseen, false); assert.equal(a.ret.freezes.unseen, true);
+});

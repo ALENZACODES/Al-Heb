@@ -53,6 +53,8 @@ Small additions to existing files:
 | `src/shell/router.js`, `nav.strings.js`, `nav-model.js`, `views.generated.js` | Routes `/league` and `/shop` (preview tier) |
 | `src/curriculum/exercises.ui.js` | The answer event carries the question id and whether it is a retry; the end-card event carries the lesson time |
 | `src/curriculum/review.view.js` | Sends `alef:review-rated` after a card is rated |
+| `src/curriculum/lesson.view.js`, `lesson.parts.js` | `?quick=1` opens the short-parts player; it sends `alef:lesson-part` when a part changes |
+| `src/shell/rimon.js`, `rimon-speech.js` | Rimon's bubble can say a line sent with the event (`detail.say`) |
 | `src/games/engine.js`, `src/games/arcade.js` | Send `alef:game-finished` with the stars |
 | `sw.js` | `periodicsync` reminder check and a `notificationclick` handler |
 | `src/shell/privacy.view.js`, `src/shell/offline.js` | The new storage key and the on-demand group are listed for the learner |
@@ -105,14 +107,19 @@ The lane rules win over the spec where they disagree.
 
 ## Not Built
 
-- The "3-minute lesson" button and `?quick=1` lesson mode.
-- Rimon's new speech-bubble lines (welcome back, one more heart, moving up). Rimon animates for each moment; the bubble text needs a small change in `src/shell/rimon-speech.js`.
-- The seven-state streak card and the snowflake in the week strip. The streak line is shown inside the daily-goal card instead.
+- A full seven-state streak card. The streak line, the seven-day strip (with a snowflake for a day a freeze covered) and the freeze and repair links are in the daily-goal card on Home.
 - Settings-page controls. The switches are on `#/shop` and the goal picker is in the goal card.
-- The iPhone calendar-file fallback for reminders.
-- Situational lines S02, S05, S07 and S08 are in the catalogue but nothing sends them yet. S01, S03, S04, S06 and S09 are wired.
-- Automated browser tests for these screens. The screens were checked by hand in Chrome at 360 px (top bar, goal ring, shop purchase, league table, reward panel, zero-hearts gate, reduced motion, calm mode); the reward panel was driven with the app's own events, not a full lesson click-through.
+- Situational lines S05 and S08 are in the catalogue but nothing sends them. S05 (a Friday streak nudge) has no use while Friday is a free day; S08 (hearts full) would have to be sent on a day the learner already studied, which the "never after a session today" rule forbids. S01, S02, S03, S04, S06, S07 and S09 are wired.
 - Real leagues with other learners. That needs accounts, a server and a privacy review.
+
+## Added in the Second Pass
+
+- **3-minute lesson.** The Home goal card has a "3-minute lesson" button that opens the learner's next lesson with `?quick=1`, which uses the app's existing short-parts player. After four parts in one sitting a "Three Minutes Done" card pays 10 XP, counts the day for the streak and offers "Keep going" or "Done for today"; the lesson's place is already saved by the player. A lesson of four parts or fewer simply ends with its normal end card. The number of parts is `QUICK_PARTS` in `boot.js`.
+- **Rimon's bubble lines** for welcome back, goal reached, one more heart, moving up, the holiday greeting and the after-Shabbat greeting (`LINES` in `rimon.js`; the shell's Rimon shows a line sent as `detail.say`).
+- **Seven-day strip** in the goal card (`weekDots` in `streak.js`).
+- **Calendar fallback.** "Add a daily reminder to my calendar" on `#/shop`, and on iPhone in a browser tab the opt-in card offers it together with "How to add" to the Home Screen. The file repeats Sunday to Thursday at the learner's usual time, never Friday or Saturday (`reminderICS` in `notify.js`).
+- **Situational lines S02 and S07** (the day after Yom Tov; Thursday when the move-up line is within 30 XP).
+- **Browser tests**: `tests/retention/retention.browser.test.js` (advisory tier, like the repo's other browser tests). They pass locally in headless Chrome at 320, 360 and 390 px. A real 3-minute lesson was also walked by hand from the Home button to the end card: the reward panel and the reminder opt-in card appeared and XP, gems and the streak were saved.
 
 ## Hebrew
 

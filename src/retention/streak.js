@@ -2,7 +2,7 @@
 // Retention layer over the ONE streak engine (src/curriculum/streak.js, store key "streak"). This file never keeps its
 // own day count. It adds: streak freezes bought with gems, a repair window after a break, free rest days for Shabbat
 // and Yom Tov, a travel day of grace, and milestone celebrations. Pure: every function takes `now`.
-import { normalizeRecord, toStored, projectStreak, rollover, withDeclaredRest, completeDay, isRestDay, STREAK_V } from '../curriculum/streak.js';
+import { normalizeRecord, toStored, projectStreak, rollover, withDeclaredRest, completeDay, isRestDay, weekStrip, STREAK_V } from '../curriculum/streak.js';
 import { clone, CAPS } from './state.js';
 import { dayKey, addDaysISO, weekdayOf, daysBetween, localAt } from './clock.js';
 import { earn, spend, PRICES } from './gems.js';
@@ -159,3 +159,26 @@ export function streakLine(st) {
     default: return 'Finish one quick lesson to start a streak.';
   }
 }
+
+const WEEKDAY = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+/**
+ * Seven days ending today for the streak strip, oldest first. state: 'done' | 'freeze' (covered by a bought freeze) |
+ * 'travel' | 'rest' (Shabbat, Yom Tov or a declared rest day) | 'today' | 'open'. A covered day is never drawn as a failure.
+ * @returns {Array<{date:string, weekday:number, state:string, label:string}>} label = full words for screen readers
+ */
+export function weekDots(streakRaw, ret, now = Date.now()) {
+  const mode = normalizeRecord(streakRaw).mode, today = dayKey(now);
+  return weekStrip(streakRaw, now).map((d) => {
+    let state = d.state === 'frozen' ? 'rest' : d.state;
+    if (d.state !== 'done') {
+      if (ret.freezes.used.includes(d.date)) state = 'freeze';
+      else if (ret.travelCovered.includes(d.date)) state = 'travel';
+      else if (d.date !== today && isFreeRestDay(d.date, mode)) state = 'rest';
+      else if (d.date === today && isRestDay(d.date, mode)) state = 'rest';
+    }
+    const what = { done: 'done', freeze: 'covered by a streak freeze', travel: 'travel day', rest: 'rest day', today: 'today, not done yet', open: 'no lesson' }[state];
+    return { date: d.date, weekday: d.weekday, state, label: `${WEEKDAY[d.weekday]}: ${what}` };
+  });
+}
+/** The learner has seen the "a freeze covered a day" note. */
+export function freezeNoteSeen(ret) { if (!ret.freezes.unseen) return ret; const r = clone(ret); r.freezes.unseen = false; return r; }

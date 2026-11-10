@@ -27,7 +27,7 @@ export function sizeQuickCheck(questions, lesson) {
 }
 export function mountLesson(root, ctx, lessonId) {
   // Short sessions and calm mode: the lesson comes in small parts (lesson.parts.js)
-  if (chunkedLessons(ctx) && byId[lessonId]) return mountChunkedLesson(root, ctx, lessonId);
+  if ((chunkedLessons(ctx) || ctx?.query?.quick === "1") && byId[lessonId]) return mountChunkedLesson(root, ctx, lessonId); // ?quick=1: the 3-minute lesson uses the same short parts
   let alive = true, offQuiz = () => {};
   const wrap = el("article", { class: "alef-lesson-page", "aria-labelledby": "view-title" });
   root.append(wrap);

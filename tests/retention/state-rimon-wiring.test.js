@@ -105,3 +105,14 @@ test('service worker: the reminder check is silent on Shabbat, at night, in a qu
   assert.equal(due(p({ entries: [{ ...e, fireAt: T('2026-11-16T20:30') }] }), T('2026-11-16T21:10')), null, 'night');
   assert.match(readFileSync('sw.js', 'utf8'), /addEventListener\('notificationclick'/);
 });
+test('Rimon has a bubble line for every line a situation asks for; the 3-minute lesson is wired', async () => {
+  const { LINES } = await import('../../src/retention/rimon.js');
+  for (const [name, s] of Object.entries(SITUATIONS)) if (s.line) { assert.ok(LINES[s.line], `${name}: ${s.line}`); assert.ok(LINES[s.line].he && LINES[s.line].en); }
+  assert.match(readFileSync('src/shell/rimon.js', 'utf8'), /speech\.sayLine\(say\)/);
+  const doc = new EventTarget(), said = []; doc.addEventListener('alef:rimon', (e) => said.push(e.detail.say?.en || null));
+  showRimon('welcome_back', {}, doc, { setTimeout: (fn) => { fn(); return 1; }, clearTimeout() {} });
+  assert.deepEqual(said, ['WELCOME BACK!', null], 'the line is sent once, with the first action');
+  assert.match(readFileSync('src/curriculum/lesson.view.js', 'utf8'), /ctx\?\.query\?\.quick === "1"/);
+  assert.match(readFileSync('src/curriculum/lesson.parts.js', 'utf8'), /alef:lesson-part/);
+  assert.match(readFileSync('src/retention/ui.js', 'utf8'), /&quick=1/);
+});

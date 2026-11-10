@@ -8,6 +8,7 @@ import { STREAK, buyFreeze, repairOffer, repairStreak, streakLine } from './stre
 import { HEARTS, refillByGems, nextHeartInMs } from './hearts.js';
 import { setReminders } from './notify.js';
 import { showRimon } from './rimon.js';
+import { downloadReminder } from './ui.js';
 
 const DAY = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 export function mount(root, ctx) {
@@ -60,7 +61,8 @@ export function mount(root, ctx) {
             const p = await R.turnOnReminders(rec.notify.tone); if (p !== 'granted') status.textContent = p === 'unsupported' ? 'This browser cannot show reminders. On iPhone, add ALEF to your Home Screen first.' : 'Reminders are blocked in this browser. You can allow them in the browser settings.';
           }),
           rec.notify.optedIn ? sw('Playful Rimon (for adults)', rec.notify.tone === 'playful', () => { R.update((r) => setReminders(r, true, r.notify.tone === 'playful' ? 'kind' : 'playful')); R.rearm(); }) : null),
-        h('p', { class: 'muted' }, 'Reminders only arrive while ALEF is open on this device, or on Android with ALEF installed. Never on Shabbat or holidays.')));
+        h('p', { class: 'muted' }, 'Reminders only arrive while ALEF is open on this device, or on Android with ALEF installed. Never on Shabbat or holidays. For a reminder that always arrives, add one to your calendar.'),
+        h('button', { type: 'button', class: 'btn secondary', 'data-act': 'calendar', onclick: async () => { status.textContent = (await downloadReminder(R)) ? 'Calendar reminder downloaded: Sunday to Thursday, at the time you usually study.' : 'This browser could not make the calendar file.'; } }, 'Add a daily reminder to my calendar')));
   }
   root.replaceChildren(h('div', { class: 'stack ret-shop alef-retention' }, h('h1', { id: 'view-title', tabindex: '-1' }, 'Shop'), status, body));
   const on = () => { try { draw(); } catch { /* keep the last drawing */ } };

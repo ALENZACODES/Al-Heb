@@ -65,6 +65,19 @@
 .ret-table th[scope="row"] { white-space: nowrap; }
 .ret-table td:first-child { inline-size: 2rem; }
 
+.ret-strip { list-style: none; display: flex; gap: .3rem; margin: .7rem 0 0; padding: 0; }
+.ret-dot { flex: 1; max-inline-size: 2.6rem; display: flex; flex-direction: column; align-items: center; gap: .1rem; font-size: .8rem; color: var(--muted); }
+.ret-dot-mark { inline-size: 1.9rem; block-size: 1.9rem; border-radius: 50%; border: 2px solid var(--border); display: grid; place-items: center; font-size: 1rem; color: var(--fg); }
+.ret-dot.is-done .ret-dot-mark { background: #2f8f5b; border-color: #2f8f5b; color: #fff; }
+.ret-dot.is-freeze .ret-dot-mark { background: #d8ecf7; border-color: #6aa7c7; color: #134a66; }
+.ret-dot.is-travel .ret-dot-mark, .ret-dot.is-rest .ret-dot-mark { border-style: dashed; border-color: #c9a227; }
+.ret-dot.is-today .ret-dot-mark { border-color: #c9a227; border-width: 3px; }
+.ret-goal-actions { flex-wrap: wrap; gap: .5rem; margin-block-start: .7rem; }
+.ret-quick-done { margin-block: .8rem; }
+.ret-quick-done h2 { margin: 0 0 .4rem; color: #f7ecc9; font-size: 1.2rem; }
+.ret-quick-done .row { justify-content: center; flex-wrap: wrap; gap: .5rem; margin-block-start: .5rem; }
+.ret-quick-done .btn.secondary { color: #f7ecc9; border-color: #c9a227; }
+
 @media (prefers-reduced-motion: reduce) {
   .alef-retention, .alef-retention * { animation: none !important; transition: none !important; }
   .ret-confetti { display: none; }

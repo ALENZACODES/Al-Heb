@@ -1,0 +1,117 @@
+// Retention screens in a real browser (headless Chromium via Playwright; skipped when Playwright is missing, like the other browser tests).
+// Lesson events are sent the way the app sends them (alef:rimon, alef:celebrate, alef:review-rated, alef:lesson-part); a full lesson click-through is not done here.
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { createRequire } from 'node:module';
+import { existsSync } from 'node:fs';
+import { createAppServer } from '../../tools/serve.mjs';
+const require = createRequire(import.meta.url);
+let chromium = null;
+for (const p of ['playwright', '/opt/npm-tools/node_modules/playwright', '/usr/lib/node_modules/playwright']) { try { ({ chromium } = require(p)); break; } catch { /* next */ } }
+const launch = async () => { try { return await chromium.launch(); } catch { return chromium.launch({ executablePath: ['/usr/bin/google-chrome', '/usr/bin/chromium'].find(existsSync), args: ['--no-sandbox'] }); } };
+
+const day = (off = 0) => { const d = new Date(Date.now() + off * 86400000); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`; };
+const ret = (o = {}) => ({ v: 1, installId: 'browser-test', createdAt: day(-9), lessonsFinished: 6, goal: 20, gems: { balance: 450, ledger: [], paidMilestones: [], goalPaidDay: null },
+  hearts: { enabled: null, n: 3, lastRefillAt: Date.now(), lost: [] }, league: { tier: 2, weekXp: 40, joined: true }, ...o });
+const streak = { v: 2, count: 4, best: 6, last: day(-1), frozenDates: [], doneDates: [day(-1)], freeze: false, mode: 'reform' };
+const stored = (page, key) => page.evaluate((k) => JSON.parse(localStorage.getItem(k)), key);
+const noSideScroll = (page) => page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1);
+
+async function open(browser, base, seed, opts = {}) {
+  const ctx = await browser.newContext({ viewport: { width: opts.width || 360, height: 780 }, serviceWorkers: 'block', reducedMotion: opts.reducedMotion });
+  const page = await ctx.newPage(); const errors = []; page.on('pageerror', (e) => errors.push(e.message));
+  await ctx.addInitScript((s) => { for (const [k, v] of Object.entries(s)) if (localStorage.getItem(k) == null) localStorage.setItem(k, JSON.stringify(v)); }, { 'alef:settings': { onboarded: true }, ...seed });
+  const go = async (hash, sel) => { await page.goto(base + hash); await page.waitForSelector(sel, { timeout: 20000, state: 'attached' }); };
+  return { page, errors, go, close: () => ctx.close() };
+}
+async function withApp(fn) {
+  const srv = createAppServer(); await new Promise((r) => srv.listen(0, '127.0.0.1', r));
+  const browser = await launch();
+  try { await fn(browser, `http://127.0.0.1:${srv.address().port}/`); } finally { await browser.close(); srv.close(); }
+}
+
+test('top bar, daily-goal ring, shop purchase and league table at 320, 360 and 390 px', { skip: !chromium, timeout: 180000 }, async () => {
+  await withApp(async (browser, base) => {
+    for (const width of [320, 360, 390]) {
+      const a = await open(browser, base, { 'alef:retention.v1': ret(), 'alef:streak': streak }, { width });
+      await a.go('#/', '.ret-goal');
+      await a.page.waitForSelector('.ret-bar .ret-chip', { state: 'attached' });
+      const chips = await a.page.$$eval('.ret-bar .ret-chip', (n) => n.map((x) => x.getAttribute('aria-label')));
+      assert.deepEqual(chips.slice(0, 3), ['4-day streak. Open the shop.', '450 gems. Open the shop.', '3 of 5 hearts. Open the shop.']);
+      assert.equal(await a.page.$eval('.ret-goal-text', (n) => n.textContent), '0 of 20 XP today.');
+      assert.equal(await a.page.$$eval('.ret-strip .ret-dot', (n) => n.length), 7);
+      assert.ok(await noSideScroll(a.page), `home ${width}`);
+      if (width === 360) {
+        await a.page.waitForFunction(() => /quick=1/.test(document.querySelector('.ret-quick')?.getAttribute('href') || ''), null, { timeout: 15000 });
+        await a.go('#/shop', '[data-buy="freeze"]');
+        await a.page.click('[data-buy="freeze"]');
+        assert.equal((await stored(a.page, 'alef:retention.v1')).freezes?.held ?? 0, 0, 'nothing is bought before the question is answered');
+        await a.page.click('[data-act="confirm"]');
+        await a.page.waitForFunction(() => /Freeze ready/.test(document.querySelector('.ret-shop-status')?.textContent || ''));
+        const r = await stored(a.page, 'alef:retention.v1');
+        assert.deepEqual([r.gems.balance, r.freezes.held], [250, 1]);
+      }
+      await a.go('#/shop', '.ret-shop'); assert.ok(await noSideScroll(a.page), `shop ${width}`);
+      await a.go('#/league', '.ret-table tbody tr');
+      assert.equal(await a.page.$$eval('.ret-table tbody tr', (n) => n.length), 30);
+      assert.ok(await a.page.evaluate(() => { const line = document.querySelector('.ret-honest'), table = document.querySelector('.ret-table'); return /pretend/.test(line.textContent) && !!(line.compareDocumentPosition(table) & 4); }), 'the honesty line comes before the table');
+      assert.match(await a.page.$eval('.ret-table .is-you', (n) => n.textContent), /You/);
+      assert.ok(await noSideScroll(a.page), `league ${width}`);
+      assert.deepEqual(a.errors, []);
+      await a.close();
+    }
+  });
+});
+
+test('lesson events: hearts, combo, one reward panel, streak day; the 3-minute stop; review wins a heart back', { skip: !chromium, timeout: 180000 }, async () => {
+  await withApp(async (browser, base) => {
+    const a = await open(browser, base, { 'alef:retention.v1': ret(), 'alef:streak': streak });
+    await a.go('#/learn?lesson=r01', 'body[data-ready="1"]');
+    await a.page.waitForSelector('.ret-bar .ret-chip', { state: 'attached' });
+    await a.page.evaluate(() => {
+      const send = (name, detail) => document.dispatchEvent(new CustomEvent(name, { detail }));
+      for (let i = 0; i < 5; i++) send('alef:rimon', { action: 'correct', source: 'lesson', questionId: 'q' + i });
+      send('alef:rimon', { action: 'wrong', source: 'lesson', questionId: 'qx' });
+      send('alef:rimon', { action: 'wrong', source: 'lesson', questionId: 'qx', retry: true });
+      const card = document.createElement('div'); card.className = 'alef-summary';
+      const cheer = document.createElement('p'); cheer.className = 'alef-celebrate-cheer'; card.append(cheer); document.getElementById('main').append(card);
+      send('alef:celebrate', { kind: 'lesson', accuracy: 0.95, ms: 61234 });
+      send('alef:celebrate', { kind: 'lesson', accuracy: 0.95, ms: 61234 });
+    });
+    await a.page.waitForSelector('.ret-reward');
+    assert.equal(await a.page.$$eval('.ret-reward', (n) => n.length), 1, 'a second end-card event pays nothing');
+    assert.match(await a.page.$eval('.ret-xp-chip', (n) => n.textContent), /^\+17 XP$/);
+    const r = await stored(a.page, 'alef:retention.v1'), s = await stored(a.page, 'alef:streak');
+    assert.deepEqual([r.xp.total, r.hearts.n, r.lessonsFinished, s.count], [17, 2, 7, 5]);
+    // 3-minute lesson: the fourth part of one sitting is the stopping point
+    await a.go('#/learn?lesson=r02&quick=1', 'body[data-ready="1"]');
+    await a.page.waitForTimeout(800);
+    await a.page.evaluate(() => { for (let i = 1; i <= 4; i++) document.dispatchEvent(new CustomEvent('alef:lesson-part', { detail: { lessonId: 'r02', part: i, of: 9 } })); });
+    await a.page.waitForSelector('.ret-quick-done');
+    assert.equal((await stored(a.page, 'alef:retention.v1')).xp.total, 27);
+    // review: five rated cards win a heart back
+    await a.go('#/learn?review=1', 'body[data-ready="1"]');
+    await a.page.evaluate(() => { for (let i = 0; i < 5; i++) document.dispatchEvent(new CustomEvent('alef:review-rated', { detail: { rating: 3 } })); });
+    assert.equal((await stored(a.page, 'alef:retention.v1')).hearts.n, 3);
+    assert.deepEqual(a.errors, []);
+    await a.close();
+  });
+});
+
+test('zero hearts gates a new lesson but not review; reduced motion runs no animation; calm mode hides it all', { skip: !chromium, timeout: 180000 }, async () => {
+  await withApp(async (browser, base) => {
+    const empty = { 'alef:retention.v1': ret({ hearts: { enabled: null, n: 0, lastRefillAt: Date.now(), lost: [] } }) };
+    const a = await open(browser, base, empty, { reducedMotion: 'reduce' });
+    await a.go('#/learn?lesson=r02', '.ret-hearts-out');
+    assert.match(await a.page.$eval('.ret-hearts-out', (n) => n.textContent), /Practise to earn a heart/);
+    await a.go('#/learn?review=1', 'body[data-ready="1"]'); await a.page.waitForTimeout(800);
+    assert.equal(await a.page.$('.ret-hearts-out'), null, 'review is always open');
+    await a.go('#/', '.ret-goal');
+    assert.equal(await a.page.evaluate(() => [...document.querySelectorAll('.alef-retention, .alef-retention *')].reduce((n, el) => n + el.getAnimations().length, 0)), 0);
+    assert.deepEqual(a.errors, []); await a.close();
+    const c = await open(browser, base, { 'alef:settings': { onboarded: true, calmMode: true }, 'alef:retention.v1': ret() });
+    await c.go('#/', 'body[data-ready="1"]'); await c.page.waitForSelector('.ret-bar', { state: 'attached' });
+    assert.deepEqual(await c.page.evaluate(() => [document.querySelector('.ret-bar').hidden, !!document.querySelector('.ret-goal')]), [true, false]);
+    await c.close();
+  });
+});

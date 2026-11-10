@@ -9,6 +9,7 @@ import { isQuiet, isRestQuiet, quietRanges, restNow } from '../../src/retention/
 import { MESSAGES, byTier } from '../../src/retention/messages.js';
 import { NOTIFY, logSession, typicalMinute, daysAway, tierFor, pickMessage, nextFire, plan, mayShow, recordSent, shouldAsk, answerAsk, setReminders, planFile, createScheduler } from '../../src/retention/notify.js';
 
+const dayOf = (ms) => { const d = new Date(ms); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`; };
 const sess = (...starts) => starts.map((s) => ({ s: T(s), e: T(s) + 600000 }));
 const opted = (o = {}) => { const r = defaults(T('2026-11-01T10:00'), 'install-1'); r.notify.optedIn = true; r.lessonsFinished = 4; Object.assign(r, o); return r; };
 
@@ -171,4 +172,24 @@ test('the plan file for the service worker carries quiet ranges that include Sha
   const file = planFile(r, plan(r, {}, now), now);
   assert.equal(file.v, 1); assert.equal(file.lastSessionAt, T('2026-11-12T19:05'));
   assert.ok(file.quiet.some(([s, e]) => s <= T('2026-11-13T18:00') && e >= T('2026-11-14T21:00')));
+});
+test('situational lines: the day after Yom Tov, and Thursday when the move-up line is close', () => {
+  const all = [...yomTovDates('2027-01-01', '2027-12-31', 'reform')];
+  const yt = all.find((d) => [1, 2, 3].includes(weekdayOf(d)) && !all.includes(addDaysISO(d, 1)));
+  const r = opted({ sessions: [{ s: localAt(addDaysISO(yt, -2), 19 * 60), e: localAt(addDaysISO(yt, -2), 19 * 60 + 10) }] });
+  const p = plan(r, { count: 0 }, localAt(addDaysISO(yt, 1), 9 * 60));
+  assert.equal(p[0].id, 'S02'); assert.equal(dayOf(p[0].fireAt), addDaysISO(yt, 1));
+  const wed = opted({ sessions: sess('2026-11-11T19:00') });
+  const near = plan(wed, { count: 0 }, T('2026-11-12T09:00'), { toPromote: 12 });
+  assert.equal(near[0].id, 'S07'); assert.equal(near[0].route, '#/league');
+  assert.match(plan(wed, { count: 0 }, T('2026-11-12T09:00'), { toPromote: 80 })[0].id, /^E/);
+});
+test('calendar fallback: one daily event at the usual time, Sunday to Thursday only', async () => {
+  const { reminderICS } = await import('../../src/retention/notify.js');
+  const { parseICS } = await import('../../src/curriculum/reminders.ics.js');
+  const r = opted({ sessions: sess('2026-11-07T19:05', '2026-11-08T19:20', '2026-11-09T19:10') });
+  const text = reminderICS(r, T('2026-11-10T12:00'));
+  assert.match(text, /DTSTART:20261110T191500\r\n/); assert.match(text, /RRULE:FREQ=DAILY;BYDAY=SU,MO,TU,WE,TH\r\n/);
+  assert.doesNotMatch(text, /BYDAY=[^\r]*(FR|SA)/); assert.ok(text.endsWith('END:VCALENDAR\r\n'));
+  assert.equal(parseICS(text).events.length, 1);
 });

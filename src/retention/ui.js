@@ -5,8 +5,8 @@ import { h, countUp, confetti, reducedMotion } from './dom.js';
 import { goalProgress, GOALS, setGoal } from './xp.js';
 import { CURRENCY, gemsText, PRICES } from './gems.js';
 import { HEARTS, REFILL_ROUTE, nextHeartInMs, refillByGems, heartCount } from './hearts.js';
-import { streakLine, repairOffer } from './streak.js';
-import { shouldAsk, answerAsk } from './notify.js';
+import { streakLine, repairOffer, STREAK } from './streak.js';
+import { shouldAsk, answerAsk, reminderICS } from './notify.js';
 import { showRimon } from './rimon.js';
 
 const RING_R = 26, RING_C = 2 * Math.PI * RING_R;
@@ -53,13 +53,40 @@ export function goalRingNode(R) {
         h('div', {}, h('h2', { id: 'ret-goal-h' }, 'Daily Goal'),
           h('p', { class: 'ret-goal-text' }, p.done ? `Goal reached: ${p.xp} of ${p.goal} XP today.` : `${p.xp} of ${p.goal} XP today.`),
           R.streakShown() ? h('p', { class: 'muted' }, streakLine(st)) : null)),
+      R.streakShown() ? stripNode(R) : null,
+      h('div', { class: 'row ret-goal-actions' }, quick,
+        st.repair ? h('a', { class: 'btn secondary', href: '#/shop' }, `Repair your ${st.repair.prev}-day streak`) : null,
+        R.streakShown() && !st.repair && rec.freezes.held < STREAK.freezeMax && rec.gems.balance >= PRICES.freeze ? h('a', { class: 'btn secondary', href: '#/shop' }, 'Get a streak freeze') : null),
       picker);
+    if (st.state === 'freeze-used') R.freezeNoteShown();
   };
+  // The low-friction start: the learner's next lesson in short parts. The link is filled in once the lesson list has loaded.
+  const quick = h('a', { class: 'btn ret-quick', href: '#/learn', 'aria-label': 'Start a three-minute lesson' }, '3-minute lesson');
+  nextLessonId(R.ctx).then((id) => { if (id) quick.setAttribute('href', `#/learn?lesson=${encodeURIComponent(id)}&quick=1`); }).catch(() => {});
   const on = () => { if (wrap.isConnected) { try { draw(); } catch { /* keep the last drawing */ } } else document.removeEventListener('alef:retention', on); };
   document.addEventListener('alef:retention', on);
   draw();
   return wrap;
 }
+
+const DAY_INITIAL = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
+const DOT_MARK = { done: '\u2713', freeze: '\u2744', travel: '\u2708', rest: '\u2022', today: '', open: '' };
+/** Seven-day strip: a tick for a done day, a snowflake for a day a freeze covered. Every day also has its words for screen readers. */
+function stripNode(R) {
+  return h('ol', { class: 'ret-strip', 'aria-label': 'Your last seven days' }, ...R.weekDots().map((d) => h('li', { class: `ret-dot is-${d.state}`, 'aria-label': d.label },
+    h('span', { class: 'ret-dot-mark', 'aria-hidden': 'true' }, DOT_MARK[d.state]), h('span', { class: 'ret-dot-day', 'aria-hidden': 'true' }, DAY_INITIAL[d.weekday]))));
+}
+/** The learner's next lesson id, from the same lesson list and progress the Learn screen uses. */
+async function nextLessonId(ctx) {
+  const [cur, act, nx] = await Promise.all([import('../curriculum/lessons.js'), import('../curriculum/state.js'), import('../home/nextlesson.js')]);
+  const st = await act.loadState(ctx);
+  return nx.nextLesson({ lessons: cur.lessons, done: Object.keys(st.completed || {}), goal: ctx.settings?.get?.('goal'), available: cur.available })?.id || null;
+}
+/** Download a daily calendar reminder (the fallback where a closed app cannot be reminded). */
+export async function downloadReminder(R) {
+  try { const { downloadICS } = await import('../curriculum/reminders.ics.js'); return downloadICS(reminderICS(R.get()), 'alef-rimon-reminder.ics'); } catch { return false; }
+}
+const onIphoneTab = (g = globalThis) => { try { const n = g.navigator, ua = String(n?.userAgent || ''); const ios = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && (n?.maxTouchPoints || 0) > 1); return ios && !(n?.standalone === true || g.matchMedia?.('(display-mode: standalone)')?.matches); } catch { return false; } };
 
 // ---------- out of hearts ----------
 const hm = (ms) => { const m = Math.ceil(ms / 60000); return `${Math.floor(m / 60)} h ${m % 60} min`; };
@@ -95,6 +122,14 @@ export function routeShown(R, g = globalThis, gate = false) {
 
 // ---------- end-of-lesson reward ----------
 function optInCard(R) {
+  if (onIphoneTab()) {
+    const card = h('section', { class: 'card ret-optin', 'aria-labelledby': 'ret-optin-h' }, h('h3', { id: 'ret-optin-h' }, 'Want a nudge from Rimon?'),
+      h('p', {}, 'On iPhone, add ALEF to your Home Screen to get reminders, or add a daily reminder to your calendar.'),
+      h('div', { class: 'row' }, h('a', { class: 'btn', href: '#/install' }, 'How to add'),
+        h('button', { type: 'button', class: 'btn secondary', onclick: async () => { await downloadReminder(R); R.update((r) => answerAsk(r, 'later')); } }, 'Add to calendar'),
+        h('button', { type: 'button', class: 'btn secondary', onclick: () => { R.update((r) => answerAsk(r, 'later')); card.remove(); } }, 'Not now')));
+    return card;
+  }
   const tone = (v, label, checked) => h('label', { class: 'ret-radio' }, h('input', { type: 'radio', name: 'ret-tone', value: v, checked }), ' ', label);
   const status = h('p', { role: 'status', class: 'muted' });
   const card = h('section', { class: 'card ret-optin', 'aria-labelledby': 'ret-optin-h' },
@@ -150,5 +185,23 @@ export function showReward(R, out, g = globalThis) {
     if (out.streak.grew) g.setTimeout(() => showRimon(out.streak.milestone ? 'streak_milestone' : 'streak_extended'), out.goalCrossed ? 3200 : 1200);
   };
   place();
+}
+/** The 3-minute lesson's stopping point: a small reward card at the top of the lesson. The lesson's place is already saved. */
+export function showQuickDone(R, out, g = globalThis) {
+  const doc = g.document, page = doc.querySelector('.alef-chunked') || doc.getElementById('main');
+  if (!page || out.calm || page.querySelector('.ret-quick-done')) return;
+  const total = h('strong', { class: 'ret-total' }, String(out.todayBefore));
+  const card = h('section', { class: 'ret-reward ret-quick-done alef-retention', 'aria-labelledby': 'ret-quick-h' },
+    out.goalCrossed || out.streak.milestone ? confetti() : null,
+    h('h2', { id: 'ret-quick-h', tabindex: '-1' }, 'Three Minutes Done'),
+    h('p', { class: 'ret-xp-chip' }, `+${out.xp} XP`),
+    h('p', { class: 'ret-today' }, total, ` of ${out.goal} XP today`),
+    h('p', { role: 'status' }, `${out.streak.grew ? `${out.streak.count}-day streak! ` : ''}${out.goalCrossed ? 'Daily goal reached! ' : ''}${out.gems ? `+${gemsText(out.gems)}. ` : ''}Your place is saved.`),
+    h('div', { class: 'row' }, h('button', { type: 'button', class: 'btn', onclick: () => card.remove() }, 'Keep going'), h('a', { class: 'btn secondary', href: '#/' }, 'Done for today')));
+  const title = page.querySelector('#view-title');
+  if (title?.parentNode) title.parentNode.insertBefore(card, title.nextSibling); else page.prepend(card);
+  countUp(total, out.todayBefore, out.todayAfter, 600, g);
+  try { card.scrollIntoView({ block: 'nearest' }); } catch { /* optional */ }
+  g.setTimeout(() => showRimon(out.goalCrossed ? 'daily_goal' : out.streak.grew ? (out.streak.milestone ? 'streak_milestone' : 'streak_extended') : 'xp_payout'), 600);
 }
 export { reducedMotion, heartCount, repairOffer, CURRENCY };

@@ -6,10 +6,10 @@ import { projectStreak, normalizeRecord } from '../curriculum/streak.js';
 import { calmOn, streakVisible } from '../shell/comfort.js';
 import { load, save, RETENTION_KEY } from './state.js';
 import { dayKey, deviceZone, localAt, addDaysISO } from './clock.js';
-import { applyRollover, completeLessonDay, afterDayCompleted, streakStatus } from './streak.js';
+import { applyRollover, completeLessonDay, afterDayCompleted, streakStatus, weekDots, freezeNoteSeen } from './streak.js';
 import { award, lessonPayout, todayXp, XP } from './xp.js';
 import { heartsOn, loseHeart, practiceCard, refillByTime, startLesson, canStartLesson, isLessonHash, heartCount } from './hearts.js';
-import { settle, leagueOn } from './leagues.js';
+import { settle, leagueOn, leagueView } from './leagues.js';
 import { logSession, createScheduler, readShown, recordSent, registerPeriodicSync, daysAway } from './notify.js';
 import { restNow } from './quiet.js';
 import { showRimon } from './rimon.js';
@@ -22,6 +22,8 @@ export function retention(ctx, g = globalThis) {
   if (api) return api;
   const store = ctx.store, doc = g.document;
   const combo = { run: 0, max: 0 };
+  const QUICK_PARTS = 4; // parts of a lesson (about three minutes) that make one quick session
+  const quick = { hash: null, parts: 0 }; let lastFinish = { hash: '', at: 0 }, freezeNoteShown = false;
   let lessonHash = null, lastTouch = 0, quietOpt = { loc: null, mode: 'reform' }, scheduler = null, muteStreakSub = false, lastCount = 0, seq = 0;
   const now = () => Date.now();
   const get = () => refillByTime(load(store, now()), now());
@@ -47,8 +49,10 @@ export function retention(ctx, g = globalThis) {
 
   /** A lesson's end card appeared. Returns what to show, or null when this finish was already paid. */
   function lessonFinished(detail = {}) {
-    const t = now(), rec = load(store, t), before = streakRaw();
-    const awardId = `lesson|${g.location?.hash || ''}|${detail.ms ?? ''}|${dayKey(t)}`;
+    const t = now(), rec = load(store, t), before = streakRaw(), here = g.location?.hash || '';
+    if (!detail.quick && lastFinish.hash === here && t - lastFinish.at < 30000) return null; // the same end card drawn again
+    if (!detail.quick) lastFinish = { hash: here, at: t };
+    const awardId = detail.quick ? `quick|${detail.lessonId}|${dayKey(t)}` : `lesson|${here}|${detail.ms ?? ''}|${dayKey(t)}`;
     const todayBefore = todayXp(rec, t);
     const pay = lessonPayout(rec, { awardId, accuracy: Number(detail.accuracy) || 0, maxCombo: combo.max, now: t });
     if (pay.duplicate) return null;
@@ -56,10 +60,20 @@ export function retention(ctx, g = globalThis) {
     muteStreakSub = true; try { store.set(STREAK_KEY, after); } finally { muteStreakSub = false; }
     const st = afterDayCompleted(before, after, pay.rec, t);
     const saved = update(() => logSession(startLesson(st.rec), t));
-    lastTouch = t; lastCount = st.count; combo.run = 0; combo.max = 0; lessonHash = null;
+    lastTouch = t; lastCount = st.count; combo.run = 0; combo.max = 0; if (!detail.quick) lessonHash = null;
     scheduler?.arm();
     return { xp: pay.xp, parts: pay.parts, gems: pay.gems + st.gems, goalCrossed: pay.goalCrossed, first: pay.first, todayBefore, todayAfter: todayXp(saved, t), goal: saved.goal,
       streak: { count: st.count, grew: st.grew, milestone: st.milestone }, heartsEmpty: heartsOn(saved, { calm: calm() }) && heartCount(saved, t) <= 0, calm: calm() };
+  }
+  /** The 3-minute lesson (?quick=1): after four parts in one sitting the day counts and XP is paid; the lesson's place is already saved. */
+  function partShown(detail = {}) {
+    const hash = g.location?.hash || '';
+    if (!/[?&]quick=1/.test(hash) || calm()) return null;
+    if (quick.hash !== hash) { quick.hash = hash; quick.parts = 0; }
+    quick.parts += 1;
+    if (quick.parts !== QUICK_PARTS || detail.part >= detail.of - 1) return null; // the last part leads to the lesson's own end card
+    const out = lessonFinished({ quick: true, lessonId: detail.lessonId || hash, accuracy: 0 });
+    return out ? { ...out, quick: true } : null;
   }
   function answered(detail = {}) {
     const hash = g.location?.hash || '';
@@ -107,6 +121,7 @@ export function retention(ctx, g = globalThis) {
   /** A page was shown. Gate a NEW lesson at zero hearts; a lesson already under way is never interrupted. */
   function routeShown() {
     const hash = g.location?.hash || '';
+    if (freezeNoteShown) { freezeNoteShown = false; update((r) => freezeNoteSeen(r)); }
     if (!isLessonHash(hash)) { lessonHash = null; return { gate: false }; }
     if (hash === lessonHash) return { gate: false };
     const rec = get();
@@ -125,7 +140,7 @@ export function retention(ctx, g = globalThis) {
         load: () => load(store, now()), save: (fn) => save(store, fn, now()),
         streak: () => projectStreak(streakRaw(), now()),
         show: (title, body, o) => N.showNow(title, body, o),
-        opt: () => ({ ...quietOpt, calm: calm(), leagueDone: (() => { const r = load(store, now()); return r.league.joined && r.league.settled === r.league.weekId; })() }),
+        opt: () => { const r = load(store, now()), on = leagueOn(r, { calm: calm() }); return { ...quietOpt, calm: calm(), leagueDone: on && r.league.joined && r.league.settled === r.league.weekId, toPromote: on && r.league.joined ? leagueView(r, now()).toPromote : 0 }; },
         g,
       });
       scheduler.arm();
@@ -142,7 +157,7 @@ export function retention(ctx, g = globalThis) {
     return p;
   }
 
-  api = { get, update, streakRaw, calm, rollover, lessonFinished, answered, reviewRated, gameFinished, streakChanged, routeShown, armNotifications, turnOnReminders,
+  api = { get, update, streakRaw, calm, rollover, lessonFinished, partShown, weekDots: () => weekDots(streakRaw(), get(), now()), freezeNoteShown: () => { freezeNoteShown = true; }, answered, reviewRated, gameFinished, streakChanged, routeShown, armNotifications, turnOnReminders,
     status: () => streakStatus(streakRaw(), get(), now()), streakShown: () => streakVisible(ctx), heartsShown: () => heartsOn(get(), { calm: calm() }), leagueShown: () => leagueOn(get(), { calm: calm() }),
     setStreak: (v) => { muteStreakSub = true; try { store.set(STREAK_KEY, v); } finally { muteStreakSub = false; } lastCount = projectStreak(v, now()).count; emit(); },
     rearm: () => scheduler?.arm(), quietOpt: () => quietOpt, say, ctx };
@@ -163,6 +178,7 @@ export async function armRetention(ctx, g = globalThis) {
   doc.addEventListener('alef:ready', onReady);
   doc.addEventListener('alef:celebrate', safe((e) => { if (e.detail?.kind !== 'lesson') return; const out = R.lessonFinished(e.detail); if (out) UI.showReward(R, out, g); }));
   doc.addEventListener('alef:rimon', safe((e) => { const d = e.detail || {}; if (!d.retention && (d.action === 'correct' || d.action === 'wrong')) R.answered(d); }));
+  doc.addEventListener('alef:lesson-part', safe((e) => { const out = R.partShown(e.detail || {}); if (out) UI.showQuickDone(R, out, g); }));
   doc.addEventListener('alef:review-rated', safe((e) => R.reviewRated(e.detail || {})));
   doc.addEventListener('alef:game-finished', safe((e) => R.gameFinished(e.detail || {})));
   doc.addEventListener('visibilitychange', safe(() => { if (!doc.hidden) { R.rollover(); R.rearm(); } }));

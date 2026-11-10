@@ -25,7 +25,8 @@ export function build() {
   const byText = new Map(); for (const r of rows) { const k = `${key(r.text)}|${r.voice}`; if (!byText.has(k)) byText.set(k, `${r.kind}:${r.id}`); }
   const dict = J('data/vocab/clip-lookup.json').clips;
   const W0 = J('data/lab/words.json');
-  const listed = new Set((W0.extraClips || []).map((r) => `${r.kind}|${r.id}|${r.voice}`)); // dictionary files Brain Lab now hands the player
+  const listed = new Set([...(W0.extraClips || []).map((r) => `${r.kind}|${r.id}|${r.voice}`), // dictionary files Brain Lab now hands the player
+    ...(W0.familyClips || []).filter((x) => x[1] === 'd').flatMap((x) => ['m', 'f'].map((v) => `word|dict-${x[2]}|${v}`))]);
   const status = (he, kind, id) => Object.fromEntries(['m', 'f'].map((v) => {
     if (kind && id && byId.has(`${kind}|${id}|${v}`)) return [v, { s: 'recorded', clip: `${kind}:${id}` }];
     const t = byText.get(`${key(he)}|${v}`); if (t) return [v, { s: 'recorded', clip: t }];
@@ -72,7 +73,7 @@ export function build() {
     const root = consonants(f.root); if (root.length !== 3) continue;
     for (const w of f.words || []) {
       if (!w.he || seen.has(w.he) || hasDivineName(w.he)) continue; seen.add(w.he);
-      add({ game: 'Letter Pattern', what: 'word', id: w.id || '', he: w.he, tr: w.translit || '', en: String(w.en).split(/[;,]/)[0], tier: w.level === 'A1' || w.level === 'A2' ? 1 : 2, spoken: 'not played yet: would play when tapped', trad: 'Israeli clip for all three settings', inRoot: hasPattern(w.he, root) });
+      add({ game: 'Letter Pattern', what: 'word', id: w.id || '', he: w.he, tr: w.translit || '', en: String(w.en).split(/[;,]/)[0], tier: w.level === 'A1' || w.level === 'A2' ? 1 : 2, spoken: 'when a right word is tapped; listen button on results', trad: 'Israeli clip for all three settings', inRoot: hasPattern(w.he, root) });
     }
   }
   // Priority: 1 = a game plays it (or asks for it by sound) and it cannot be heard yet; 2 = beginner words the game shows silently;
@@ -109,10 +110,12 @@ export function writeMd(rows) {
   for (const g of games) { const r = rows.filter((x) => x.game === g); L.push(`| ${g} | ${r.length} | ${r.filter((x) => x.priority === 0).length} | ${r.filter((x) => x.priority === 1).length} | ${r.filter((x) => x.priority === 2).length} | ${r.filter((x) => x.priority === 3).length} |`); }
   L.push('', 'Priority 1: a game plays it, or asks for it by sound, and beginners meet it first. Priority 2: a game plays it but higher up, or shows it silently to beginners. Priority 3: everything else.', '');
   const table = (list) => { L.push('| Game | Id | Hebrew | English | Ari (m) | Noa (f) | Traditions |', '|---|---|---|---|---|---|---|'); for (const r of list) L.push(`| ${r.game} | \`${r.id}\` | ${r.he} | ${r.en} | ${r.m} | ${r.f} | ${r.trad} |`); L.push(''); };
-  L.push('## Record First', ''); if (by(1).length) table(by(1)); else L.push('Nothing: every item a game plays to beginners can be heard.', '');
+  L.push('## Record First', ''); const first = by(1).filter((r) => r.game !== 'Letter Pattern'); if (first.length) table(first); else L.push('Nothing: every item a game plays to beginners can be heard.', '');
   const next = by(2).filter((r) => r.game !== 'Letter Pattern');
+  const lpFirst = by(1).filter((r) => r.game === 'Letter Pattern');
+  if (lpFirst.length) { L.push(`### Letter Pattern beginner words (${lpFirst.length})`, ''); table(lpFirst); }
   L.push('## Next', ''); table(next);
-  L.push(`Letter Pattern adds ${by(2).filter((r) => r.game === 'Letter Pattern').length} beginner words at priority 2 and ${by(3).filter((r) => r.game === 'Letter Pattern').length} more at priority 3; the game does not speak yet, so they are listed only in the CSV.`, '');
+  L.push(`Letter Pattern words without a recording are listed only in the CSV: ${rows.filter((r) => r.game === 'Letter Pattern' && r.priority === 1).length} beginner words (level A1 or A2, priority 1), ${by(2).filter((r) => r.game === 'Letter Pattern').length} at priority 2.`, '');
   const ash = rows.filter((r) => /Ashkenazi[^.]*own (Ashkenazi )?clip needed|own clip needed/.test(r.trad));
   L.push('## For the Ashkenazi and Sephardi Settings', '', `${ash.length} items are said differently in a tradition (for example kamatz is "o" in Ashkenazi, and Chet and Ayin are their own sounds in Sephardi). Those settings do not play the Israeli clip for them; recording them in the Ashkenazi or Sephardi way would let them be heard there. They are the rows whose \`traditions\` column says "own clip needed".`, '');
   writeFileSync(join(ROOT, OUT + '.md'), L.join('\n'));

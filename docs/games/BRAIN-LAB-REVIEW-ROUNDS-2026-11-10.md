@@ -20,3 +20,27 @@ Seven rounds on the night of November 10. Each round was scored 0 to 100 against
 4. **Ten café words are silent** (cake, juice, ice cream, chocolate, soup, apple, orange, sandwich, lemonade, challah): their only recordings are in the 1.2 MB dictionary list, which Brain Lab does not load. Recording them into the word list, the same way as the other café words, would let every order be heard.
 5. **A real phone:** everything here was checked in headless Chromium at 360, 390 and 1280 px; nothing was tried on an iPhone or with a screen reader.
 6. **Rimon stills:** map the Brain Lab moments to stills 146 to 160 once the stills branch lands (table at the end of the picture order).
+
+## Review of the Integration Branch at `8102de32` (Review Round 2 of 5, 3:45 AM)
+
+Checked by running the branch: the Brain Lab unit tests, axe (WCAG A and AA) in light and dark, screenshots of the new games, and the audio files each game requests in Chromium.
+
+**Score for Brain Lab on `8102de32`: 78/100.** It carries this lane's round 1 (`e97de3f5`) and the drawn art, but none of the later rounds, so:
+
+1. **Taxi Turns and Vowel Rain look broken:** the board-mat backing paints the road and the sky warm white, so the sign floats on a blank panel and the lanes disappear. Fixed here: those games place their own picture (`own` in `lab.art.js`).
+2. **Contrast:** the Hebrew skill names under All Games are 4.27:1 in light mode, and the Sound Twins "Different" button is 2.16:1 in dark mode (gold on the warm-white mat backing). Fixed here.
+3. **Silent games:** Sound Twins plays nothing; ten café words, Letter Pattern, letter names and Vowel Rain's kamatz and tzere syllables are silent. Fixed here (see below).
+4. **Vowel Rain wraps its fifth button onto a second row** on a 360 px phone, below the fold. Fixed here.
+5. **Rimon covers Play again on the results card;** Rimon waves on every return to the list; there is no New Games strip. Fixed here.
+6. **Content:** Mourner's Kaddish is played as a game, and chataf vowels fall under letters that never take them. Fixed here.
+7. **No browser test** of the sixteen games. Added here (`tests/lab.browser.test.js`).
+
+Merging this branch (`claude/brain-lab-games-2026-11-10`) into the integration branch brings all seven, and conflicts only in the generated `precache-manifest.js`.
+
+## Round 8 (after the review): Letter Pattern Speaks
+
+| Round | Commit | Score | What changed | What would raise it |
+|---|---|---|---|---|
+| 8 | this push | 96 | Merged `8102de32`. Letter Pattern says each right word (830 words have a recording; 518 of them were only in the dictionary list and are handed to the player by the game); prayer lines on the results list; contrast of Prayer Chain choices on the mat in dark mode. 1,109 of the 1,291 Hebrew items in Brain Lab can be heard (was 615). | Record Barchu and the ten holy-day names; the 23 pictures still on order; a real phone and a screen reader. |
+
+The data Brain Lab fetches once per build grew to about 470 KB (the test budget moved from 450 to 500 KB for the Letter Pattern recordings list).

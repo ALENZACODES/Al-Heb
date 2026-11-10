@@ -264,7 +264,7 @@ const chain = {
           said.append(env.h('span', { class: 'lab-link is-name', title: 'The divine name, filled in for you' }, t.steps[k].word)); k++;
         }
         if (k >= t.steps.length) {
-          env.met({ he: [...t.given, ...t.steps.map((s) => s.word)].join(' '), en: title });
+          env.met({ he: [...t.given, ...t.steps.map((s) => s.word)].join(' '), en: title, clip: { kind: 'line', id: t.line.id } });
           if (level <= 3 && env.hasClip('line', t.line.id) && t.line.words.length <= 14) env.playClip('line', t.line.id, '');
           finish({ ok: true, ms: env.now() - t0, par: 2000 * t.steps.length + 800 }); return;
         }
@@ -281,7 +281,7 @@ const chain = {
               mark(b, false);
               for (const s of t.steps.slice(k)) said.append(env.h('span', { class: 'lab-link is-reveal' }, s.word));
               env.say(`The next word was ${step.word}.`);
-              env.met({ he: [...t.given, ...t.steps.map((s) => s.word)].join(' '), en: title });
+              env.met({ he: [...t.given, ...t.steps.map((s) => s.word)].join(' '), en: title, clip: { kind: 'line', id: t.line.id } });
               finish({ ok: false, ms: env.now() - t0 });
             }
           } }, env.heSpan(w, 'he lab-word'), say ? env.h('span', { class: 'lab-val', lang: 'en', dir: 'ltr' }, say) : null);

@@ -79,7 +79,7 @@ Rules: reading never throws; unknown fields are kept; a broken value is copied o
 | Freeze price, heart refill price, repair price per day | `PRICES` in `gems.js` |
 | Gems earned | `EARN` in `gems.js`; streak milestone gems in `STREAK.milestoneGems` |
 | The currency's name (for example "Seeds") | `CURRENCY` in `gems.js` |
-| Milestones, freezes held, repair window and limits, travel grace, Friday rule | `STREAK` in `streak.js` |
+| Milestones, freezes held, repair window and limits, whether a repair counts today, travel grace, Friday rule | `STREAK` in `streak.js` |
 | XP per action, combo, daily caps | `XP` in `xp.js` |
 | Daily goal choices | `GOALS` in `xp.js` and `GOAL_CHOICES` in `state.js` |
 | Heart count, refill time, practice round size, unlock point | `HEARTS` in `hearts.js` |
@@ -162,6 +162,12 @@ The app's 25 badges (`src/awards/`) already include the streak medallions, and t
 - Fixed the word "null" printed on the Shop, in the goal card and in the quests card (see `REVIEW-ROUND-5.md`).
 - `OWNER-CHECKLIST.md`: a twenty-minute walk on a real phone for everything the automated checks could not reach.
 - `REVIEW-ROUND-5.md` checks the work against the lane's rules one by one and lists what five rounds did not cover.
+
+## Added in the Eighth Pass
+
+- **Owner switch for repairs.** `STREAK.repairCountsToday` in `streak.js` (off). Turn it on and buying a repair also counts today, so the streak cannot break again that night; the shop's line changes to match.
+- The three cases that had only been checked by hand (goal picker focus, a finished lesson staying open at zero hearts, a new lesson gated) are now a browser test. Only the axe scan is still run by hand.
+- Measured in Chrome on this machine: the retention code is 18 files, about 135 KB unminified, fetched after first paint; every button and link on Home, Shop and League is at least 44 px and has a name.
 
 ## Hebrew
 

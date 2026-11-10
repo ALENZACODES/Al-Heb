@@ -218,3 +218,30 @@ test('Home after a week away shows the welcome card; on Monday it shows last wee
     await a.close();
   });
 });
+
+test('by hand until now: the goal picker keeps focus and stays open by keyboard; a finished lesson stays open at zero hearts while a new one is gated', { skip: !chromium, timeout: 240000 }, async () => {
+  await withApp(async (browser, base) => {
+    const a = await open(browser, base, { 'alef:retention.v1': ret() });
+    await a.go('#/', '.ret-goal');
+    await a.page.keyboard.press('Escape'); await a.page.waitForTimeout(400); await a.page.evaluate(() => document.querySelectorAll('[class*="veil"]').forEach((v) => v.remove())); // the opening prayer, when shown, takes the keys first
+    await a.page.focus('.ret-goal-pick summary'); await a.page.keyboard.press('Enter');
+    await a.page.focus('[data-goal="30"]'); await a.page.keyboard.press('Enter'); await a.page.waitForTimeout(300);
+    assert.deepEqual(await a.page.evaluate(() => [JSON.parse(localStorage.getItem('alef:retention.v1')).goal, document.activeElement.getAttribute('data-goal'), document.activeElement.getAttribute('aria-pressed'), document.querySelector('.ret-goal-pick').open, document.querySelector('.ret-goal-text').textContent]),
+      [30, '30', 'true', true, '0 of 30 XP today.']);
+    await a.close();
+
+    const b = await open(browser, base, { 'alef:retention.v1': { v: 1, installId: 'gate', lessonsFinished: 0 } });
+    await b.go('#/learn?lesson=r01&quick=1', '.alef-chunked #alef-part-title');
+    for (let i = 0; i < 90 && !(await b.page.$('.alef-summary')); i++) {
+      await b.page.evaluate(() => { const vis = (x) => x && !x.hidden && !x.disabled && x.offsetParent !== null; const opt = [...document.querySelectorAll('.alef-chunked .alef-int-opt')].find(vis); if (opt) return opt.click();
+        const main = [...document.querySelectorAll('.alef-chunked button.btn:not(.secondary)')].filter((x) => vis(x) && !/Listen|Hear/.test(x.textContent)); main[main.length - 1]?.click(); });
+      await b.page.waitForTimeout(150);
+    }
+    assert.ok(!!(await b.page.$('.alef-summary')), 'the first lesson was finished by clicking through it');
+    await b.page.evaluate(() => { const r = JSON.parse(localStorage.getItem('alef:retention.v1')); r.lessonsFinished = 5; r.hearts = { enabled: null, n: 0, lastRefillAt: Date.now(), lost: [] }; localStorage.setItem('alef:retention.v1', JSON.stringify(r)); });
+    const at = async (hash) => { await b.page.goto(base + '#/'); await b.page.goto(base + hash); await b.page.reload(); await b.page.waitForSelector('body[data-ready="1"]'); await b.page.waitForTimeout(1500); return b.page.evaluate(() => [!!document.querySelector('.ret-hearts-out'), !!document.querySelector('.alef-lesson-page')]); };
+    assert.deepEqual(await at('#/learn?lesson=r01'), [false, true], 'the finished lesson opens');
+    assert.deepEqual(await at('#/learn?lesson=r02'), [true, false], 'a new lesson is gated');
+    assert.deepEqual(b.errors, []); await b.close();
+  });
+});

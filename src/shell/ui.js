@@ -29,3 +29,6 @@ export function unavailableCard(root, { title, t, module, error, kind = 'unavail
 }
 
 export { audioAccess, audioButton, deviceVoiceState, DEVICE_LABEL, NO_AUDIO } from './audio-access.js';
+
+// Gold medallion icon, lazy (assets/img/ is never precached); decorative, hides itself if missing.
+export const medal = (g, id, z = 48, b = `assets/img/icons/ICON_${g}_${id}`) => h('img', { class: 'alef-medal', src: b + '.128.webp', srcset: `${b}.128.webp 128w,${b}.256.webp 256w`, sizes: z + 'px', width: z, height: z, alt: '', loading: 'lazy', decoding: 'async', onerror: (e) => e.target.remove() });

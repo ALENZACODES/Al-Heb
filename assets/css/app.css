@@ -510,3 +510,5 @@ details.draft-flag { background: none; border: 0; padding: 0; font-weight: inher
 .alef-plan-link { font-size: .8rem; line-height: 1.3; max-inline-size: 16rem; }
 .alef-first-glyph { display: block; font-family: var(--font-he); font-size: 6rem; line-height: 1.1; min-block-size: 10rem; inline-size: 100%; }
 .letter-meta { font-size: .8rem; line-height: 1.25; max-inline-size: 12rem; }
+.alef-medal{display:block;flex:none;border-radius:50%;margin:0 auto .4rem;box-shadow:0 2px 6px #0b1a1240}
+@media (forced-colors:active){.alef-medal{display:none}}

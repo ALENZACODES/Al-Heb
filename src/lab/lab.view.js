@@ -1,5 +1,5 @@
 // Brain Lab (#/lab, #/lab/:game). Daily three-drill workout, sixteen short timed drills that adjust to you, five skill scores.
-import { h, heSpan } from '../shell/ui.js';
+import { h, heSpan, medal } from '../shell/ui.js';
 import { isAudioFree } from '../shell/audiofree.js';
 import { untimedOn, shortcutsOn } from '../shell/motor.js';
 import { signalRimon } from '../shell/rimon-events.js';
@@ -262,7 +262,7 @@ function hub(root, ctx) {
   const newOnes = GAMES.filter((g) => isNewGame(g, st));
   const tile = (g) => {
     const gs = st.games[g.id];
-    return h('a', { class: 'lab-game', href: `#/lab/${g.id}`, style: `--sk:${SKILL_COLOR[g.skill]}` }, token(ctx, g),
+    return h('a', { class: 'lab-game', href: `#/lab/${g.id}`, style: `--sk:${SKILL_COLOR[g.skill]}` }, medal('lab', g.id, 56) || token(ctx, g),
       h('span', { class: 'body' },
         h('span', { class: 't' }, g.title, ' ', heSpan(g.titleHe, 'he'), isNewGame(g, st) ? h('span', { class: 'lab-new' }, 'New') : null),
         g.teaches ? h('span', { class: 'lab-teaches' }, g.teaches) : null,
@@ -282,7 +282,8 @@ function hub(root, ctx) {
       h('p', {}, prog.complete ? `Well done. Come back tomorrow for a new mix.${streak > 1 ? ` ${streak} days in a row.` : ''}` : `Three games, about three minutes. ${prog.done.length} of 3 done.${streak > 0 ? ` Streak: ${streak} ${streak === 1 ? 'day' : 'days'}.` : ''}`),
       h('ol', { class: 'lab-plan' }, ...plan.map((id, i) => {
         const g = gameById(id), done = prog.done.includes(id);
-        return h('li', { class: done ? 'done' : '' }, h('span', { class: 'dot', 'aria-hidden': 'true' }, done ? '✓' : String(i + 1)), token(ctx, g),
+        return h('li', { class: done ? 'done' : '' }, h('span', { class: 'dot', 'aria-hidden': 'true' }, done ? '✓' : String(i + 1)),
+          medal('lab', g.id, 40) || token(ctx, g),
           h('span', {}, h('span', { class: 'name' }, g.title), h('br'), h('span', { class: 'skill' }, skillOf(g.skill).name)),
           done ? h('span', { class: 'visually-hidden' }, ' (done)') : null);
       })),

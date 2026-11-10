@@ -30,3 +30,14 @@ Use these in place of the first versions when ingesting. The originals stay in t
 | `STREAK_v2_lamp_lit_r2.webp` | `STREAK_v2_lamp_lit.webp` | Removed about 6,800 stray magenta pixels around the lamp |
 
 The empty states keep every subject inside the central 80%, so the app can still crop them to a circle. The manifest rows above keep the original order text. The r2 files are delivery fixes against those same orders.
+
+## Third pass (r3), 2026-11-10
+`ONB_v2_letters_r3.webp` replaces `ONB_v2_letters_r2.webp` when ingesting. The r2 file stays on disk. Noa now stands behind the middle stepping stone, so she has a ground line; she is the same on-model bust, unflipped. Rimon, the tree and the three stones are unchanged. Metadata stripped.
+
+## New-games rest (2026-11-10)
+
+The last pictures from `docs/images/BRAIN-LAB-NEW-GAMES-ORDERS-2026-11-10.md` (the six new Brain Lab games): 6 round tokens, 17 café menu pictures, `LAB_v2_rain_drop` and `LAB_v2_taxi_cab`. All 1024×1024 WebP, metadata stripped. Tokens match the existing ten (cream field, deep-green disc, thin gold ring, no wreath, no text). The raindrop and taxi have real alpha. Menu pictures follow the Block J word-picture style. Nothing here overwrites an existing file.
+
+Contact sheets: `docs/images/brain-lab-new-games-contact.jpg`, `brain-lab-new-games-contact-tokens.jpg`, `brain-lab-new-games-contact-menu.jpg`. Manifest rows to append before ingest: `brain-lab-new-games-rest.manifest-rows.csv`.
+
+The six tokens are also wired on `feature/brain-lab-graphics-2026-11-10` (`tokenArtPath` in `src/lab/lab.art.js`). The café menu pictures, the raindrop and the taxi cab show through the shared image resolver once they are ingested and approved. The six games already work without them.

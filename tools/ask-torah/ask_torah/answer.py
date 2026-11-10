@@ -4,9 +4,10 @@ import re
 from typing import Any
 
 from .classify import is_off_topic, wants_in_torah_verdict
-from .corpus import Corpus, Verse, default_corpus
+from .corpus import Corpus, Verse, default_corpus, consonants
 from .links import display_ref, passage_link, parse_id
 from .retrieve import Retriever, default_retriever
+from .rewrite import with_history
 
 DECLINE = (
     "This page only answers questions about the Torah, the Tanakh, and Jewish texts. "
@@ -137,10 +138,51 @@ def _template_explain(question: str, verdict: str, verses: list[Verse], traditio
     return " ".join(parts)
 
 
-def answer_question(question: str, retriever: Retriever | None = None, use_llm: bool = False) -> dict[str, Any]:
+
+def _hebrew_word_note(question: str, chosen: list[Verse]) -> str:
+    """If the user asked about a Hebrew string in a cited verse, say honestly how it appears."""
+    words = re.findall(r"[א-ת]+(?:[־-][א-ת]+)?", question)
+    if not words or not chosen:
+        return ""
+    notes = []
+    for w in words:
+        if len(consonants(w)) < 3:
+            continue
+        wc = consonants(w)
+        for v in chosen:
+            raw = v.he or ""
+            # letters + maqqef only
+            letters = re.sub(r"[^א-ת־]", "", raw)
+            cons = consonants(raw)
+            if w in raw or w in letters:
+                notes.append(f"The word {w} appears in {display_ref(v.book, v.chapter, v.verse)} as written.")
+                break
+            if wc in cons:
+                # recover the pointed span that has these consonants
+                # typically a maqqef-joined phrase such as וְאֶת־בְּנָהּ for ואתבנה
+                notes.append(
+                    f"The letters {w} are not written as a single standalone word in {display_ref(v.book, v.chapter, v.verse)}. "
+                    f"They match the consonants of a phrase in that verse once vowels and the maqqef (־) are removed. "
+                    f"The verse itself reads: {raw}"
+                )
+                break
+        else:
+            # asked about a word that is not in the cited verses
+            refs = ", ".join(display_ref(v.book, v.chapter, v.verse) for v in chosen[:2])
+            notes.append(f"The string {w} does not appear as written in {refs}.")
+    # unique
+    out = []
+    for n in notes:
+        if n not in out:
+            out.append(n)
+    return " ".join(out)
+
+
+def answer_question(question: str, retriever: Retriever | None = None, use_llm: bool = False, history: list[str] | None = None) -> dict[str, Any]:
     q = (question or "").strip()
     retriever = retriever or default_retriever()
     corpus = retriever.corpus
+    q_search = with_history(q, history)
 
     if not q:
         return {
@@ -154,7 +196,7 @@ def answer_question(question: str, retriever: Retriever | None = None, use_llm: 
             "question": q,
         }
 
-    if is_off_topic(q) or not _has_scripture_cue(q, retriever):
+    if is_off_topic(q_search) or not _has_scripture_cue(q_search, retriever):
         return {
             "verdict": "off_topic",
             "verdict_text": VERDICT_TEXT["off_topic"],
@@ -166,11 +208,65 @@ def answer_question(question: str, retriever: Retriever | None = None, use_llm: 
             "question": q,
         }
 
-    tradition = retriever.match_tradition(q)
-    hits = retriever.search(q, k=8)
+    tradition = retriever.match_tradition(q_search) or retriever.match_tradition(q)
+    concepts = retriever.match_concepts(q_search) or retriever.match_concepts(q)
+    # "or just rabbis" is contrasting a topic with later law; do not treat it as a question about the title rabbi.
+    if tradition and tradition.get("id") in {"rabbi-title", "moshe-rabbeinu"} and concepts:
+        if re.search(r"\b(just )?rabbis?\b", q_search, re.I) and not re.search(r"\b(what is a rabbi|is rabbi|the word rabbi|title)\b", q_search, re.I):
+            # keep tradition only if no other topical concept fired
+            if any(c.get("id") not in {"shema-he"} for c in concepts):
+                tradition = None
+    # Prefer the more specific concept when close pairs both fire.
+    cids = {c.get("id") for c in concepts}
+    DOMINANT = {
+        "cain-abel-kids": {"adam-eve", "adam", "cain-abel"},  # keep cain-abel-kids
+        "cain-abel": {"adam-eve"},
+        "shabbat-fire": {"shabbat"},
+        "miriam-leader": set(),
+        "moses-burial": {"moses", "death-of-moses"},
+        "binding-isaac": {"abraham", "circumcision"},
+        "angels-abraham": {"angels-malakh", "abraham"},
+        "lo-tirtzach": {"ten-commandments", "commandments-general"},
+        "burning-bush": {"angels-malakh", "angels-abraham", "moses"},
+        "polygamy": {"joseph", "moses-wrote"},
+        "honour-parents": {"ten-commandments", "commandments-general"},
+        "pigs-swine": {"kashrut"},
+        "shellfish-fins": {"kashrut"},
+        "cud-hoof": {"kashrut"},
+        "milk-meat": {"kashrut"},
+    }
+    for dom, drop in DOMINANT.items():
+        if dom in cids:
+            concepts = [c for c in concepts if c.get("id") not in drop]
+            cids -= drop
+    # Follow-up about kids of Adam and Eve: keep Cain/Abel gold only.
+    if ("cain-abel-kids" in cids or "cain-abel" in cids) and re.search(r"\b(kids?|children|sons?|daughters?)\b", q_search, re.I):
+        concepts = [c for c in concepts if c.get("id") in {"cain-abel-kids", "cain-abel"}]
+        cids = {c.get("id") for c in concepts}
+    if "mourning" in cids:
+        concepts = [c for c in concepts if c.get("id") != "morning"]
+        cids.discard("morning")
+    if "noah" in cids and not re.search(r"\b(tabernacle|mishkan|sanctuary|ark of the)\b", q_search, re.I):
+        concepts = [c for c in concepts if c.get("id") != "tabernacle"]
+        cids.discard("tabernacle")
+    if "angels-malakh" in cids and re.search(r"\b(word|english translation)\b", q_search, re.I):
+        # Keep only verses whose English actually contains "angel".
+        pass
+    preferred_ids = []
+    for c in concepts:
+        for gid in c.get("gold") or []:
+            v = corpus.get(gid)
+            if not v:
+                continue
+            if c.get("id") == "angels-malakh" and re.search(r"\b(word|english translation)\b", q_search, re.I):
+                if "angel" not in (v.en or "").lower():
+                    continue
+            if gid not in preferred_ids:
+                preferred_ids.append(gid)
+    hits = retriever.search(q_search, k=8)
     # Keep only real verses with a positive score
     hits = [h for h in hits if h.score >= 2.0]
-    explicit = retriever.parse_explicit_ref(q)
+    explicit = retriever.parse_explicit_ref(q_search)
     if explicit:
         # An explicit reference is decisive: do not mix in unrelated high-IDF verses.
         ordered = []
@@ -184,11 +280,58 @@ def answer_question(question: str, retriever: Retriever | None = None, use_llm: 
         # Rebuild hits from the explicit verses so they win downstream.
         from ask_torah.retrieve import Hit
         hits = [Hit(verse=v, score=100, reasons=["explicit-ref"]) for v in ordered]
+    elif preferred_ids and not tradition:
+        from ask_torah.retrieve import Hit
+        # Passage-quote questions from the 10k set should keep lexical hits.
+        # Exclusive gold is for topical / "is this in the Torah" questions, where extra BM25 verses go stale.
+        specific = bool(re.search(
+            r"where does the torah say|what are the exact words|chapter \d|verse \d|[“\"][^”\"]{12,}",
+            q_search,
+            re.I,
+        ))
+        ordered = [corpus.get(i) for i in preferred_ids if corpus.get(i)]
+        if ordered and not specific:
+            hits = [Hit(verse=v, score=80, reasons=["concept-gold"]) for v in ordered]
+        elif ordered and specific:
+            pref_hits = [Hit(verse=v, score=80, reasons=["concept-gold"]) for v in ordered]
+            seen = {h.verse.id for h in pref_hits}
+            extra = [h for h in hits if h.verse.id not in seen]
+            hits = pref_hits + extra
     torah_hits = [h for h in hits if h.verse.corpus == "torah"]
 
     verdict = None
     later = []
     chosen: list[Verse] = []
+
+    modern = re.search(
+        r"\b(baseball|world series|python|javascript|javascript|sushi|recipe for|wifi|smartphone|hockey|football game)\b",
+        q_search,
+        re.I,
+    )
+    if modern and wants_in_torah_verdict(q_search) and not tradition and not preferred_ids:
+        return {
+            "verdict": "not_in_torah",
+            "verdict_text": VERDICT_TEXT["not_in_torah"],
+            "explanation": "No. That is not in the written Torah (the Five Books of Moses). " + NOTE_DIFFERS,
+            "passages": [],
+            "later_sources": [],
+            "cited_ids": [],
+            "declined": False,
+            "question": q,
+        }
+    if modern and is_off_topic(q_search) is False and not tradition and not preferred_ids and not wants_in_torah_verdict(q_search):
+        # programming / sports questions that only name a modern thing
+        if re.search(r"\b(python loop|write a python|world series|best sushi)\b", q_search, re.I):
+            return {
+                "verdict": "off_topic",
+                "verdict_text": VERDICT_TEXT["off_topic"],
+                "explanation": DECLINE,
+                "passages": [],
+                "later_sources": [],
+                "cited_ids": [],
+                "declined": True,
+                "question": q,
+            }
 
     if tradition:
         verdict = tradition.get("verdict") or ("in_torah" if tradition.get("in_torah") else "not_in_torah")
@@ -209,7 +352,7 @@ def answer_question(question: str, retriever: Retriever | None = None, use_llm: 
             verdict = "in_torah"
             # if the user asked "is X in the Torah" and we only have weak hits, be careful
             top = torah_hits[0]
-            if wants_in_torah_verdict(q) and top.score < 6 and not retriever.match_concepts(q) and not retriever.parse_explicit_ref(q):
+            if wants_in_torah_verdict(q_search) and top.score < 6 and not retriever.match_concepts(q_search) and not retriever.parse_explicit_ref(q_search):
                 # weak evidence
                 if top.score < 3.5:
                     verdict = "not_in_torah"
@@ -224,7 +367,7 @@ def answer_question(question: str, retriever: Retriever | None = None, use_llm: 
             chosen = [h.verse for h in hits[:5]]
         else:
             # nothing found
-            if wants_in_torah_verdict(q):
+            if wants_in_torah_verdict(q_search):
                 verdict = "not_in_torah"
                 chosen = []
             else:
@@ -249,6 +392,9 @@ def answer_question(question: str, retriever: Retriever | None = None, use_llm: 
     cited_ids = [i for i in cited_ids if corpus.get(i)]
     chosen = [v for v in chosen if v.id in cited_ids]
     explanation = _template_explain(q, verdict, chosen, tradition)
+    note = _hebrew_word_note(q, chosen)
+    if note:
+        explanation = (explanation or "").rstrip() + " " + note
 
     # Optional LLM polish is applied by vertex.explain_safe, if requested.
     if use_llm:

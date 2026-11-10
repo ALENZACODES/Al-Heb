@@ -5,7 +5,9 @@ import json
 import os
 from pathlib import Path
 
-from .config import EMBED_MODEL, EMBED_RATE_PER_1K_CHARS, FLASH_MODEL, FLASH_RATES, VERTEX_ENV
+LAST_ERROR = ""
+
+from .config import EMBED_MODEL, EMBED_RATE_PER_1K_CHARS, FLASH_LITE_RATES, FLASH_MODEL, FLASH_RATES, VERTEX_ENV
 from .spend import can_spend, record, remaining
 
 
@@ -52,12 +54,15 @@ def _generate(prompt: str, model: str | None = None, max_tokens: int = 1024, tem
         )
         with urllib.request.urlopen(req, timeout=60) as resp:
             data = json.loads(resp.read().decode("utf-8"))
-    except Exception:
+    except Exception as e:
+        global LAST_ERROR
+        LAST_ERROR = f"{type(e).__name__}: {e}"
         return None
     text = "".join(p.get("text") or "" for p in (data.get("candidates") or [{}])[0].get("content", {}).get("parts") or [])
     usage = data.get("usageMetadata") or {}
     tin, tout = int(usage.get("promptTokenCount") or 0), int(usage.get("candidatesTokenCount") or 0)
-    usd = tin * FLASH_RATES["in"] / 1e6 + tout * FLASH_RATES["out"] / 1e6
+    rates = FLASH_LITE_RATES if "lite" in (model or "").lower() else FLASH_RATES
+    usd = tin * rates["in"] / 1e6 + tout * rates["out"] / 1e6
     record("generate", model, usd, tin, tout, note=note)
     return text.strip() or None
 

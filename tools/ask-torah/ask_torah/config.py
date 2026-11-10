@@ -18,9 +18,12 @@ VERTEX_ENV = Path(os.environ.get("ASK_TORAH_VERTEX_ENV", "/workspace/shared/secr
 # Lane cap is US$40; stop new paid calls at $36 so we cannot overshoot.
 SPEND_STOP_USD = float(os.environ.get("ASK_TORAH_SPEND_STOP", "36"))
 SPEND_CAP_USD = float(os.environ.get("ASK_TORAH_SPEND_CAP", "40"))
-FLASH_MODEL = os.environ.get("ASK_TORAH_FLASH_MODEL", "gemini-2.5-flash")
+FLASH_MODEL = os.environ.get("ASK_TORAH_FLASH_MODEL", "gemini-3.5-flash-lite")
 EMBED_MODEL = os.environ.get("ASK_TORAH_EMBED_MODEL", "text-embedding-004")
 # Published Vertex list prices (USD / 1M tokens), used only for the spend ledger.
-FLASH_RATES = {"in": 0.30, "out": 2.50}
+# Ledger rates for gemini-3.5-flash / flash-lite (USD / 1M tokens). Lite is cheaper;
+# we book flash-lite at the flash list of $0.25 / $1.50 when noted as lite, else $1.50 / $9.00.
+FLASH_RATES = {"in": 1.50, "out": 9.00}
+FLASH_LITE_RATES = {"in": 0.25, "out": 1.50}
 EMBED_RATE_PER_1K_CHARS = 0.000025
 SEFARIA_BASE = "https://www.sefaria.org"

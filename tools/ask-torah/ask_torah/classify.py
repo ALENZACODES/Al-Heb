@@ -9,7 +9,10 @@ IN_TORAH_PAT = re.compile(
     r"parasha|parsha|parashat|parashah|mitzvah|mitzvot|commandment|shabbat|sabbath|kosher|kashrut|"
     r"pesach|passover|shema|rabbi|moses|abraham|israelite|judaism|hebrew bible|"
     r"mishnah|talmud|halakhah|halacha|tefillin|mezuzah|sukkot|yom kippur|hanukkah|purim|"
-    r"adam and eve|noah|the flood|golden calf|ten commandments)\b",
+    r"adam and eve|noah|the flood|golden calf|ten commandments|"
+    r"chumash|pentateuch|five books|shemot|devarim|vayikra|bamidbar|bereshit|"
+    r"kashrut|tefillin|tzitzit|messiah|mashiach|shabbos|olam haba|malachim|"
+    r"satan|sheol|afterlife)\b",
     re.I,
 )
 IS_X_IN = re.compile(
@@ -18,7 +21,7 @@ IS_X_IN = re.compile(
 )
 OFF_TOPIC_STRONG = re.compile(
     r"\b(weather|forecast|stock market|stock price|crypto|bitcoin|nft|"
-    r"recipe for|sourdough|how do i bake|python function|javascript|debug this|"
+    r"recipe for|sourdough|how do i bake|python function|python loop|write a python|javascript|debug this|"
     r"world series|super bowl|premier league|hockey game|basketball|offside|"
     r"movie tickets|netflix|celebrity|reset my email|password|"
     r"capital of france|best pizza|best restaurants|toyota|used car|"
@@ -26,7 +29,7 @@ OFF_TOPIC_STRONG = re.compile(
     r"calculus|algebra homework|programming interview|quantum entanglement|"
     r"wifi|dishwasher|lawnmower|snowblower|vacuum|toaster|ukulele|guitar|"
     r"compound interest|credit scores?|running shoes|5k training|"
-    r"not about religion|current events|near me|"
+    r"not about religion|none of this is about religion|indoor plants|current events|near me|"
     r"how do i handle|look it up)\b",
     re.I,
 )

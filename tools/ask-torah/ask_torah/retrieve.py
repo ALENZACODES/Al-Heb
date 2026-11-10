@@ -60,15 +60,25 @@ class Retriever:
         self.N = n
         self.avg_len = sum(len(v.en_tokens) + len(v.he_tokens) for v in self.corpus.verses) / max(n, 1)
         # concept term -> concept
-        self.concept_by_term: list[tuple[str, dict]] = []
+        self.concept_by_term: list[tuple[str, dict, str]] = []
         for c in self.concepts:
             for t in c.get("terms") or []:
-                self.concept_by_term.append((norm_en(t), c))
+                nt = norm_en(t)
+                if nt:
+                    self.concept_by_term.append((nt, c, "en"))
+                he = consonants(t)
+                if he and len(he) >= 2:
+                    self.concept_by_term.append((he, c, "he"))
         self.concept_by_term.sort(key=lambda x: len(x[0]), reverse=True)
-        self.trad_by_term: list[tuple[str, dict]] = []
+        self.trad_by_term: list[tuple[str, dict, str]] = []
         for it in self.tradition:
             for t in it.get("terms") or []:
-                self.trad_by_term.append((norm_en(t), it))
+                nt = norm_en(t)
+                if nt:
+                    self.trad_by_term.append((nt, it, "en"))
+                he = consonants(t)
+                if he and len(he) >= 2:
+                    self.trad_by_term.append((he, it, "he"))
         self.trad_by_term.sort(key=lambda x: len(x[0]), reverse=True)
         # parasha names
         self.parasha_by_term = {}
@@ -106,8 +116,17 @@ class Retriever:
     def match_tradition(self, question: str) -> dict | None:
         q = norm_en(question)
         q_cons = consonants(question)
-        for term, it in self.trad_by_term:
-            if term and (re.search(rf"\b{re.escape(term)}\b", q) or term == q):
+        q_he = consonants(question)
+        for item in self.trad_by_term:
+            term, it = item[0], item[1]
+            kind = item[2] if len(item) > 2 else "en"
+            if not term:
+                continue
+            if kind == "he":
+                if term in q_he:
+                    return it
+                continue
+            if re.search(rf"\b{re.escape(term)}\b", q) or term == q:
                 return it
             if term.startswith("is ") and term in q:
                 return it
@@ -121,10 +140,18 @@ class Retriever:
     def match_concepts(self, question: str) -> list[dict]:
         q = norm_en(question)
         out, seen = [], set()
-        for term, c in self.concept_by_term:
+        q_he = consonants(question)
+        for item in self.concept_by_term:
+            term, c = item[0], item[1]
+            kind = item[2] if len(item) > 2 else "en"
             if not term or c["id"] in seen:
                 continue
-            if re.search(rf"\b{re.escape(term)}\b", q) or term in q and len(term) > 12:
+            if kind == "he":
+                if term in q_he:
+                    out.append(c)
+                    seen.add(c["id"])
+                continue
+            if re.search(rf"\b{re.escape(term)}\b", q) or (term in q and len(term) > 12):
                 out.append(c)
                 seen.add(c["id"])
         return out

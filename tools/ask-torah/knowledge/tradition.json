@@ -735,6 +735,360 @@
         }
       ],
       "related_torah": []
+    },
+    {
+      "id": "afterlife-olam-haba",
+      "terms": [
+        "afterlife",
+        "olam haba",
+        "world to come",
+        "heaven and hell",
+        "what happens after you die",
+        "resurrection",
+        "do animals go to heaven",
+        "sheol"
+      ],
+      "in_torah": false,
+      "in_tanakh": true,
+      "verdict": "not_in_torah",
+      "explanation": "The Torah does not teach a developed afterlife, a heaven-and-hell judgement, or 'olam haba' (the world to come). Those ideas are later. The Torah does mention Sheol, the nether-world, as the place of the dead (for example in Jacob's grief and in the Korah story). Resurrection of the dead is a later teaching, stated in the Mishnah, not in the Five Books.",
+      "later": [
+        {
+          "corpus": "mishnah",
+          "work": "mishnah_sanhedrin",
+          "ref": "Mishnah Sanhedrin 10:1",
+          "book": "mishnah_sanhedrin",
+          "chapter": 10,
+          "verse": 1,
+          "note": "Later rabbinic teaching on a share in the world to come and, in related discussion, resurrection."
+        }
+      ],
+      "related_torah": [
+        "genesis.37.35",
+        "numbers.16.33",
+        "deuteronomy.32.22"
+      ]
+    },
+    {
+      "id": "messiah-future-king",
+      "terms": [
+        "messiah",
+        "the messiah",
+        "mashiach",
+        "moshiach",
+        "future king",
+        "is there a messiah in the pentateuch",
+        "messiah in the torah"
+      ],
+      "in_torah": false,
+      "in_tanakh": true,
+      "verdict": "not_in_torah",
+      "explanation": "The later idea of the Messiah as a future saving king is not named in the Torah. In the Torah, mashiach (anointed) is used for a priest who is anointed, not for a coming king. Some later readers take Balaam's words about a star out of Jacob (Numbers 24:17) as messianic; the verse itself does not use the title Messiah. The hope for a future anointed king is developed in the Prophets and later tradition.",
+      "later": [
+        {
+          "corpus": "tanakh",
+          "work": "isaiah",
+          "ref": "Isaiah 11:1-4 (Prophets, not the Torah)",
+          "book": "isaiah",
+          "chapter": 11,
+          "verse": 1,
+          "note": "A later prophetic passage often read as messianic. It is not in the Five Books."
+        }
+      ],
+      "related_torah": [
+        "leviticus.4.3",
+        "numbers.24.17"
+      ]
+    },
+    {
+      "id": "satan-figure",
+      "terms": [
+        "the satan",
+        "ha-satan",
+        "satan",
+        "the devil",
+        "lucifer",
+        "snake in eden supposed to be satan",
+        "serpent satan"
+      ],
+      "in_torah": false,
+      "in_tanakh": true,
+      "verdict": "not_in_torah",
+      "explanation": "The figure called 'the Satan' (the accuser) is not in the Torah. That figure appears later, in books such as Job and Zechariah. The serpent in the Garden of Eden is never called Satan in the Torah text; later tradition sometimes identifies them. 'Lucifer' as a name is a later Latin reading of a passage in Isaiah, not a Torah verse.",
+      "later": [
+        {
+          "corpus": "tanakh",
+          "work": "job",
+          "ref": "Job 1:6-12",
+          "book": "job",
+          "chapter": 1,
+          "verse": 6,
+          "note": "The accuser (ha-satan) appears in Job, in the Writings, not in the Torah."
+        },
+        {
+          "corpus": "tanakh",
+          "work": "zechariah",
+          "ref": "Zechariah 3:1-2",
+          "book": "zechariah",
+          "chapter": 3,
+          "verse": 1,
+          "note": "The accuser appears in Zechariah, in the Prophets."
+        }
+      ],
+      "related_torah": [
+        "genesis.3.1",
+        "genesis.3.13"
+      ]
+    },
+    {
+      "id": "jerusalem-name",
+      "terms": [
+        "jerusalem",
+        "is jerusalem even named",
+        "is jerusalem named in the torah"
+      ],
+      "in_torah": false,
+      "in_tanakh": true,
+      "verdict": "not_in_torah",
+      "explanation": "The name Jerusalem does not appear in the Torah. Places later linked with it do appear: Salem, whose king Melchizedek blesses Abram, and the land of Moriah, where Abraham binds Isaac. The city name Jerusalem is used in later books of the Tanakh, beginning with the Prophets.",
+      "later": [
+        {
+          "corpus": "tanakh",
+          "work": "joshua",
+          "ref": "Joshua 10:1",
+          "book": "joshua",
+          "chapter": 10,
+          "verse": 1,
+          "note": "The name Jerusalem is used in Joshua, which is in the Prophets, not the Torah."
+        }
+      ],
+      "related_torah": [
+        "genesis.14.18",
+        "genesis.22.2"
+      ]
+    },
+    {
+      "id": "lilith",
+      "terms": [
+        "lilith",
+        "adams first wife"
+      ],
+      "in_torah": false,
+      "in_tanakh": true,
+      "verdict": "not_in_torah",
+      "explanation": "Lilith is not in the Torah, and the Torah never describes a first wife of Adam besides the woman later named Eve. A word sometimes translated 'lilith' appears in Isaiah, in the Prophets, as a desert creature, not as Adam's wife. The story of Lilith as Adam's first wife is later midrash.",
+      "later": [
+        {
+          "corpus": "tanakh",
+          "work": "isaiah",
+          "ref": "Isaiah 34:14",
+          "book": "isaiah",
+          "chapter": 34,
+          "verse": 14,
+          "note": "A later prophetic verse; it is not in the Torah and does not tell the midrashic Lilith story."
+        }
+      ],
+      "related_torah": [
+        "genesis.2.22",
+        "genesis.3.20"
+      ]
+    },
+    {
+      "id": "reincarnation-gilgul",
+      "terms": [
+        "reincarnation",
+        "gilgul"
+      ],
+      "in_torah": false,
+      "in_tanakh": false,
+      "verdict": "not_in_torah",
+      "explanation": "Reincarnation, or gilgul, is not taught in the Torah. It appears in later mystical teaching, not in the Five Books.",
+      "later": [
+        {
+          "corpus": "tradition",
+          "work": "later_mystical",
+          "ref": "later mystical tradition",
+          "note": "Gilgul is a later kabbalistic idea, not a Torah verse."
+        }
+      ],
+      "related_torah": []
+    },
+    {
+      "id": "original-sin",
+      "terms": [
+        "original sin"
+      ],
+      "in_torah": false,
+      "in_tanakh": false,
+      "verdict": "not_in_torah",
+      "explanation": "Original sin as a inherited fallen nature is a later Christian teaching, not a Torah term. The Torah does tell of the first man and woman eating from the tree and being sent from the garden, and of human wrongdoing, but it does not set out the later doctrine called original sin.",
+      "later": [
+        {
+          "corpus": "tradition",
+          "work": "later_christian",
+          "ref": "later Christian theology (not a Torah source)",
+          "note": "The doctrine is later and is not a Jewish Torah teaching."
+        }
+      ],
+      "related_torah": [
+        "genesis.3.6",
+        "genesis.3.23"
+      ]
+    },
+    {
+      "id": "trinity",
+      "terms": [
+        "the trinity",
+        "trinity"
+      ],
+      "in_torah": false,
+      "in_tanakh": false,
+      "verdict": "not_in_torah",
+      "explanation": "The Trinity is a later Christian doctrine. It is not in the Torah. The Torah's central statement about God in the Shema is that the LORD is one.",
+      "later": [
+        {
+          "corpus": "tradition",
+          "work": "later_christian",
+          "ref": "later Christian theology (not a Torah source)",
+          "note": "The Trinity is not a teaching of the Torah."
+        }
+      ],
+      "related_torah": [
+        "deuteronomy.6.4"
+      ]
+    },
+    {
+      "id": "jesus-name",
+      "terms": [
+        "jesus",
+        "is jesus mentioned"
+      ],
+      "in_torah": false,
+      "in_tanakh": false,
+      "verdict": "not_in_torah",
+      "explanation": "Jesus is not mentioned in the Torah. The Five Books were written about events long before the first century. Later Christian readers have seen hints of him in various verses; those readings are later, not what the Torah text names.",
+      "later": [
+        {
+          "corpus": "tradition",
+          "work": "later_christian",
+          "ref": "later Christian interpretation (not a Torah source)",
+          "note": "The name and story of Jesus are not in the Torah."
+        }
+      ],
+      "related_torah": []
+    },
+    {
+      "id": "milk-and-meat",
+      "terms": [
+        "milk and meat",
+        "milk+meat",
+        "meat and milk",
+        "meat and dairy",
+        "seethe a kid",
+        "boil a kid in its mother's milk"
+      ],
+      "in_torah": true,
+      "in_tanakh": true,
+      "verdict": "in_torah",
+      "explanation": "The Torah three times says: you shall not seethe (boil) a kid in its mother's milk. That is a written Torah command. The later, broader rule of not eating any meat with any dairy, and of separate dishes, is how later Jewish law applies those verses. The full kitchen separation is later; the kid-in-milk prohibition is in the Torah.",
+      "later": [
+        {
+          "corpus": "mishnah",
+          "work": "mishnah_chullin",
+          "ref": "Mishnah Chullin 8:1-4 (later law on meat and milk)",
+          "book": "mishnah_chullin",
+          "chapter": 8,
+          "verse": 1,
+          "note": "Later rabbinic development of the Torah's kid-in-milk verses."
+        }
+      ],
+      "related_torah": [
+        "exodus.23.19",
+        "exodus.34.26",
+        "deuteronomy.14.21"
+      ]
+    },
+    {
+      "id": "shabbat-fire-work",
+      "terms": [
+        "can i cook on shabbat",
+        "kindle a fire",
+        "cook on it",
+        "drive on shabbat",
+        "can i drive"
+      ],
+      "in_torah": true,
+      "in_tanakh": true,
+      "verdict": "in_torah",
+      "explanation": "The Torah commands rest on the Sabbath and forbids work. It also says you shall kindle no fire in your dwellings on the Sabbath day, and it speaks of not cooking the manna on the Sabbath. Driving a car is not named, because it is a later technology; later law treats it as a question of work and fire. The written commands are rest, no work, and no kindling fire.",
+      "later": [
+        {
+          "corpus": "mishnah",
+          "work": "mishnah_shabbat",
+          "ref": "Mishnah Shabbat 7:2",
+          "book": "mishnah_shabbat",
+          "chapter": 7,
+          "verse": 2,
+          "note": "Later list of categories of work on Shabbat."
+        }
+      ],
+      "related_torah": [
+        "exodus.20.8",
+        "exodus.16.23",
+        "exodus.35.3",
+        "deuteronomy.5.12"
+      ]
+    },
+    {
+      "id": "shavuot-giving",
+      "terms": [
+        "when we got the torah",
+        "giving of the torah on shavuot",
+        "shavuot is that when we got the torah"
+      ],
+      "in_torah": true,
+      "in_tanakh": true,
+      "verdict": "in_torah",
+      "explanation": "The Torah does command the Feast of Weeks (Shavuot), a harvest festival of first fruits, counted seven weeks from the omer. The written Torah does not itself say that the Torah was given on that day. Linking Shavuot with the giving of the Torah at Sinai is later tradition. The festival is in the Torah; that historical association is later.",
+      "later": [
+        {
+          "corpus": "tradition",
+          "work": "later_tradition",
+          "ref": "later tradition linking Shavuot with the giving of the Torah",
+          "note": "The identification of Shavuot as the anniversary of Sinai is post-biblical."
+        }
+      ],
+      "related_torah": [
+        "exodus.34.22",
+        "leviticus.23.15",
+        "leviticus.23.16",
+        "deuteronomy.16.10"
+      ]
+    },
+    {
+      "id": "angels-abraham",
+      "terms": [
+        "did angels visit abraham",
+        "angels visit abraham",
+        "three men abraham"
+      ],
+      "in_torah": true,
+      "in_tanakh": true,
+      "verdict": "in_torah",
+      "explanation": "Genesis 18 says three men stood by Abraham and he hosted them; the chapter does not call those visitors angels. Genesis 19 then calls the visitors who went on to Sodom 'the two angels'. The visit itself is in the written Torah. Identifying Abraham's three guests as angels is a traditional reading of those chapters, not a word the Torah uses in Genesis 18.",
+      "later": [
+        {
+          "corpus": "tradition",
+          "work": "later_tradition",
+          "ref": "traditional identification of Abraham's three visitors as angels",
+          "note": "Genesis 18 uses 'men'; later tradition commonly calls them angels."
+        }
+      ],
+      "related_torah": [
+        "genesis.18.1",
+        "genesis.18.2",
+        "genesis.19.1"
+      ]
     }
   ]
 }

@@ -164,6 +164,28 @@ def hard_set():
             yield sid, 'nikkud', lines, cv2.imencode('.jpg', nik, [cv2.IMWRITE_JPEG_QUALITY, 88])[1].tobytes()
 
 
+def review_set():
+    """Every distinct sign phrase named in the two review files (tests/fixtures/review-r*-fails.json), in rotating fonts and
+    colours, under all eleven conditions plus clean. The phrases were chosen by the review, not by the builder of the word list."""
+    global rng, np_rng
+    rng = random.Random(4242); np_rng = np.random.default_rng(4242)
+    pairs = {}
+    for name in ('review-r1-fails.json', 'review-r2-fails.json'):
+        for it in json.load(open(HERE / 'fixtures' / name, encoding='utf-8'))['items']:
+            pairs.setdefault(it['he'], it['en'])
+    styles = [('heebo', 84, WHITE, BLUE), ('alef-bold', 88, DARK, YELLOW), ('noto-sans', 84, WHITE, GREEN), ('frank-ruhl', 90, DARK, CREAM),
+              ('heebo', 84, RED, WHITE), ('alef-bold', 84, WHITE, (110, 20, 30)), ('alef', 84, DARK, (235, 235, 235))]
+    conditions = {'clean': lambda a: a, **{k: v for k, v in VARIANTS.items() if k != 'clean'}, **HARD}
+    for n, (he, en) in enumerate(sorted(pairs.items())):
+        font, size, fg, bg = styles[n % len(styles)]
+        base = render([he], font, size, fg, bg, 'center', 600)
+        lines = [{'he': he, 'en': en}]
+        for name, fn in conditions.items():
+            yield f'p{n:02d}', name, lines, cv2.imencode('.jpg', fn(base.copy()), [cv2.IMWRITE_JPEG_QUALITY, 88])[1].tobytes()
+        both = render([f'{he} / {en}'], font, int(size * 0.7), fg, bg, 'center', 600)
+        yield f'p{n:02d}', 'bilingual', lines, cv2.imencode('.jpg', both, [cv2.IMWRITE_JPEG_QUALITY, 88])[1].tobytes()
+
+
 def write_set_dir(out, gen):
     out = Path(out); out.mkdir(parents=True, exist_ok=True)
     items = []
@@ -195,5 +217,7 @@ if __name__ == '__main__':
         write_wear_dir(sys.argv[2])
     elif len(sys.argv) == 3 and sys.argv[1] == '--hard-dir':
         write_set_dir(sys.argv[2], hard_set)
+    elif len(sys.argv) == 3 and sys.argv[1] == '--review-dir':
+        write_set_dir(sys.argv[2], review_set)
     else:
         main()

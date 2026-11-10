@@ -8,7 +8,7 @@ import { regionsFromBoxes, chooseAlignment, fitText, boxColours, readerImage, wo
 import { isHebrew } from '../photo/hebrew.js';
 
 const FONT_STACK = '"Alef", "Heebo", system-ui, -apple-system, "Segoe UI", sans-serif';
-export const READER_TARGET_SIDE = 1800;   // small photos are enlarged for the reader, up to 3x
+export const READER_TARGET_SIDE = 1200;   // first reading: the photo's long side is brought to this (never more than 3x)
 export const READER_MARGIN = 0.04;        // white frame added around the picture for the reader, as a share of its longer side
 
 const rgb = (c) => `rgb(${c.map((v) => Math.round(v)).join(',')})`;
@@ -54,40 +54,105 @@ export function drawOverlay(canvas, regions) {
 
 const toBlob = (canvas, type, q) => new Promise((res) => canvas.toBlob(res, type, q));
 
-/** The passes tried, in order, until one reading is confident: [picture preparation, page mode]. */
-export const READING_PASSES = [['binary', 6], ['binary', 11]];   // a third, grey pass was measured and did not help (docs/photo/CAMERA-TRANSLATE.md)
+/** Page modes tried at the first size: one block of text, then scattered text. The more confident reading is kept. */
+export const PAGE_MODES = [6, 11];
+export const LETTER_HEIGHT = 44;          // the reader does best when letters are about this many pixels tall
 
-/** Read the levelled photo: enlarged if small, letters made dark on light, several passes tried, the most confident reading kept. */
-export async function readSign(levelled, eng, { doc, readerMode, passes = READING_PASSES } = {}) {
-  const scale = Math.min(3, Math.max(1, READER_TARGET_SIDE / Math.max(levelled.width, levelled.height)));
-  const prepared = new Map();
-  const pad = Math.round(Math.max(levelled.width, levelled.height) * scale * READER_MARGIN);   // the reader misses letters that touch the edge
-  const prepare = async (mode) => {
-    if (prepared.has(mode)) return prepared.get(mode);
-    const big = Object.assign(doc.createElement('canvas'), { width: Math.round(levelled.width * scale), height: Math.round(levelled.height * scale) });
+/**
+ * Read the levelled photo. Returns one or two readings of the whole picture, each a list of word boxes in photo pixels:
+ *   1. at a standard size (long side READER_TARGET_SIDE, never more than 3x), trying each page mode;
+ *   2. again at the size that makes the letters about LETTER_HEIGHT pixels tall, when that is a clearly different size.
+ * The reader makes different mistakes at different letter sizes; translateOnDevice keeps, line by line, the reading that
+ * the word list recognises.
+ */
+export async function readSign(levelled, eng, { doc, readerMode = 'binary', pageModes = PAGE_MODES, targetSide = READER_TARGET_SIDE, secondSize = true } = {}) {
+  const long = Math.max(levelled.width, levelled.height);
+  const readAt = async (scale, psms) => {
+    const pad = Math.round(long * scale * READER_MARGIN);   // the reader misses letters that touch the edge
+    const big = Object.assign(doc.createElement('canvas'), { width: Math.max(8, Math.round(levelled.width * scale)), height: Math.max(8, Math.round(levelled.height * scale)) });
     const g = big.getContext('2d', { willReadFrequently: true });
     g.imageSmoothingEnabled = true; g.imageSmoothingQuality = 'high';
     g.drawImage(levelled, 0, 0, big.width, big.height);
     const id = g.getImageData(0, 0, big.width, big.height);
-    readerImage(id, mode);
+    readerImage(id, readerMode);
     g.putImageData(id, 0, 0);
     const framed = Object.assign(doc.createElement('canvas'), { width: big.width + 2 * pad, height: big.height + 2 * pad });
     const f = framed.getContext('2d');
     const corner = id.data[0];                       // after readerImage the background is the light side
-    f.fillStyle = mode === 'binary' ? '#fff' : `rgb(${corner},${corner},${corner})`; f.fillRect(0, 0, framed.width, framed.height);
+    f.fillStyle = readerMode === 'binary' ? '#fff' : `rgb(${corner},${corner},${corner})`; f.fillRect(0, 0, framed.width, framed.height);
     f.drawImage(big, pad, pad);
-    const png = await toBlob(framed, 'image/png'); prepared.set(mode, png); return png;
+    const png = await toBlob(framed, 'image/png');
+    let best = null;
+    for (const psm of psms) {
+      const words = (await eng.ocr(png, { mode: 'sign', psm })).filter((w) => !(w.conf < 0));
+      const heb = words.filter((w) => isHebrew(w.text));
+      const letters = heb.reduce((a, w) => a + [...w.text].length, 0);
+      const score = heb.reduce((a, w) => a + (w.conf ?? 0) * [...w.text].length, 0);
+      if (!best || score > best.score) best = { words, score, psm, scale, pad };
+      if (letters && heb.every((w) => (w.conf ?? 0) >= 88)) break;      // already a confident reading: skip the other page mode
+    }
+    best.letterHeight = median(best.words.filter((w) => isHebrew(w.text) && [...w.text].length > 1).map((w) => w.h));   // in enlarged pixels
+    best.words = best.words.map((w) => ({ ...w, x: (w.x - pad) / scale, y: (w.y - pad) / scale, w: w.w / scale, h: w.h / scale }));
+    return best;
   };
-  let best = []; let bestScore = -1;
-  for (const [mode, psm] of (readerMode ? passes.filter((p) => p[0] === readerMode) : passes)) {
-    const words = (await eng.ocr(await prepare(mode), { mode: 'sign', psm })).filter((w) => !(w.conf < 0));
-    const heb = words.filter((w) => isHebrew(w.text));
-    const letters = heb.reduce((a, w) => a + [...w.text].length, 0);
-    const score = heb.reduce((a, w) => a + (w.conf ?? 0) * [...w.text].length, 0);
-    if (score > bestScore) { best = words; bestScore = score; }
-    if (letters && heb.every((w) => (w.conf ?? 0) >= 88)) break;      // already a confident reading: skip the remaining passes
+  const first = await readAt(Math.min(3, targetSide / long), pageModes);
+  const out = [first];
+  if (secondSize && first.letterHeight) {
+    const scale = Math.min(4, Math.max(0.2, first.scale * (LETTER_HEIGHT / first.letterHeight)));
+    if (Math.abs(scale / first.scale - 1) > 0.25 && long * scale >= 160) out.push(await readAt(scale, [first.psm]));
   }
-  return best.map((w) => ({ ...w, x: (w.x - pad) / scale, y: (w.y - pad) / scale, w: w.w / scale, h: w.h / scale }));
+  return out;
+}
+const median = (a) => { if (!a.length) return 0; const s = [...a].sort((x, y) => x - y); return s[s.length >> 1]; };
+
+/**
+ * Two readings of the same photo -> one list of lines. Lines are paired by where they sit. For each pair the reading the
+ * word list recognises outright wins; then a closest match; then the more confident reading. Lines only one reading found
+ * are kept from the first.
+ */
+export function mergeReadings(a, b) {
+  const rank = (r) => (r.held ? 3 : !r.en ? 0 : r.translationSource === 'word-list-near' ? 1 : 2);
+  const overlap = (p, q) => { const top = Math.max(p.y, q.y); const bot = Math.min(p.y + p.h, q.y + q.h); return Math.max(0, bot - top) / Math.max(1, Math.min(p.h, q.h)); };
+  const used = new Set();
+  const out = a.map((ra) => {
+    let match = null; let bestOv = 0.5;
+    b.forEach((rb, i) => { if (used.has(i)) return; const ov = overlap(ra.box, rb.box); if (ov > bestOv) { bestOv = ov; match = i; } });
+    if (match === null) return ra;
+    used.add(match); const rb = b[match];
+    if (rank(rb) > rank(ra)) return rb;
+    if (rank(rb) === rank(ra) && rank(ra) === 0 && (rb.conf ?? 0) > (ra.conf ?? 0)) return rb;
+    return ra;
+  });
+  return out.map((r, i) => ({ ...r, id: `r${i + 1}` }));
+}
+
+/**
+ * One more look at each line that is still untranslated: the line is cut out on its own, brought to the letter height the
+ * reader likes, and read as a single line. The new reading replaces the old one only if the word list recognises it.
+ */
+export async function retryLines(levelled, eng, regions, glossary, doc) {
+  for (let i = 0; i < regions.length; i++) {
+    const r = regions[i];
+    if (r.held || r.en) continue;
+    const padX = r.box.h * 0.6; const padY = r.box.h * 0.35;
+    const x = Math.max(0, r.box.x - padX); const y = Math.max(0, r.box.y - padY);
+    const w = Math.min(levelled.width - x, r.box.w + 2 * padX); const h = Math.min(levelled.height - y, r.box.h + 2 * padY);
+    if (w < 8 || h < 8) continue;
+    const scale = Math.min(4, Math.max(0.2, LETTER_HEIGHT / Math.max(4, r.box.h)));
+    const cut = Object.assign(doc.createElement('canvas'), { width: Math.max(8, Math.round(w * scale)), height: Math.max(8, Math.round(h * scale)) });
+    const g = cut.getContext('2d', { willReadFrequently: true });
+    g.imageSmoothingEnabled = true; g.imageSmoothingQuality = 'high';
+    g.drawImage(levelled, x, y, w, h, 0, 0, cut.width, cut.height);
+    const id = g.getImageData(0, 0, cut.width, cut.height); readerImage(id, 'binary'); g.putImageData(id, 0, 0);
+    const pad = Math.round(cut.height * 0.5);
+    const framed = Object.assign(doc.createElement('canvas'), { width: cut.width + 2 * pad, height: cut.height + 2 * pad });
+    const f = framed.getContext('2d'); f.fillStyle = '#fff'; f.fillRect(0, 0, framed.width, framed.height); f.drawImage(cut, pad, pad);
+    let words;
+    try { words = (await eng.ocr(await toBlob(framed, 'image/png'), { mode: 'sign', psm: 7 })).filter((wd) => !(wd.conf < 0)); } catch { continue; }
+    const again = regionsFromBoxes(words.map((wd) => ({ ...wd, x: (wd.x - pad) / scale + x, y: (wd.y - pad) / scale + y, w: wd.w / scale, h: wd.h / scale })), glossary);
+    const better = again.find((a) => a.en && !a.held);
+    if (better && again.length === 1) regions[i] = { ...better, id: r.id };
+  }
 }
 
 /**
@@ -96,7 +161,7 @@ export async function readSign(levelled, eng, { doc, readerMode, passes = READIN
  *   `engine` is injectable for tests; `dictionaryLoader` is called at most once, and only if a line is still untranslated.
  * @returns {Promise<{width:number,height:number,regions:object[],blob:Blob|null,notices:string[],engine:object,levelled:{applied:boolean,angle:number},dictionary:object|null}>}
  */
-export async function translateOnDevice(photo, { glossary, dictionaryLoader, onProgress, doc = globalThis.document, engine, readerMode } = {}) {
+export async function translateOnDevice(photo, { glossary, dictionaryLoader, onProgress, doc = globalThis.document, engine, readerMode, targetSide, secondSize, lineRetry = true } = {}) {
   let eng = engine;
   if (!eng) {
     const { createBrowserTesseract } = await import('../photo/engines/tesseract-browser.js');
@@ -111,13 +176,15 @@ export async function translateOnDevice(photo, { glossary, dictionaryLoader, onP
   const sk = deskew(id);                                   // level a tilted sign before reading it
   if (sk.applied) g.putImageData(id, 0, 0);
   const levelled = { applied: !!sk.applied, angle: sk.applied ? sk.angle : 0 };
-  const boxes = await readSign(canvas, eng, { doc, readerMode });
-  const regions = regionsFromBoxes(boxes, glossary);
+  const readings = await readSign(canvas, eng, { doc, readerMode, targetSide, secondSize });
+  const perReading = readings.map((r) => regionsFromBoxes(r.words, glossary));
+  const regions = perReading.length > 1 ? mergeReadings(perReading[0], perReading[1]) : perReading[0];
+  if (lineRetry) await retryLines(canvas, eng, regions, glossary, doc);
   let dictionary = null;
   if (dictionaryLoader && regions.some((r) => !r.held && !r.en)) {
     try { dictionary = await dictionaryLoader(); } catch { dictionary = null; }
     if (dictionary) for (const r of regions) {
-      if (r.held || r.en) continue;
+      if (r.held || r.en || r.partial) continue;      // a partly read line is never translated word for word
       const w = wordForWord(r.he, glossary, dictionary);
       if (w) Object.assign(r, { en: w.en, translationSource: 'word-for-word', translit: r.translit || w.translit, pointed: r.pointed || w.pointed });
     }

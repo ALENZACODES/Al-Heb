@@ -4,22 +4,22 @@
  "reader": "in-browser reader, mode binary",
  "total": {
   "images": 20,
-  "cerPooled": 0.029,
+  "cerPooled": 0.0193,
   "lines": 28,
-  "linesReadExactly": 23,
+  "linesReadExactly": 25,
   "linesTranslatedEndToEnd": 27,
   "wrongEnglishDrawn": 0,
-  "meanMs": 336
+  "meanMs": 298
  },
  "byWear": {
   "clean": {
    "images": 12,
-   "cerPooled": 0.0325,
+   "cerPooled": 0.0163,
    "lines": 17,
-   "linesReadExactly": 13,
+   "linesReadExactly": 15,
    "linesTranslatedEndToEnd": 16,
    "wrongEnglishDrawn": 0,
-   "meanMs": 358
+   "meanMs": 325
   },
   "noise": {
    "images": 2,
@@ -28,7 +28,7 @@
    "linesReadExactly": 2,
    "linesTranslatedEndToEnd": 2,
    "wrongEnglishDrawn": 0,
-   "meanMs": 228
+   "meanMs": 304
   },
   "blur": {
    "images": 2,
@@ -37,7 +37,7 @@
    "linesReadExactly": 4,
    "linesTranslatedEndToEnd": 4,
    "wrongEnglishDrawn": 0,
-   "meanMs": 247
+   "meanMs": 265
   },
   "perspective": {
    "images": 1,
@@ -46,7 +46,7 @@
    "linesReadExactly": 1,
    "linesTranslatedEndToEnd": 1,
    "wrongEnglishDrawn": 0,
-   "meanMs": 305
+   "meanMs": 200
   },
   "rotate": {
    "images": 2,
@@ -55,7 +55,7 @@
    "linesReadExactly": 2,
    "linesTranslatedEndToEnd": 3,
    "wrongEnglishDrawn": 0,
-   "meanMs": 367
+   "meanMs": 273
   },
   "lowcontrast": {
    "images": 1,
@@ -64,7 +64,7 @@
    "linesReadExactly": 1,
    "linesTranslatedEndToEnd": 1,
    "wrongEnglishDrawn": 0,
-   "meanMs": 437
+   "meanMs": 182
   }
  },
  "rows": [
@@ -72,7 +72,7 @@
    "id": "optical-store",
    "variant": "clean",
    "cer": 0,
-   "ms": 706,
+   "ms": 586,
    "levelled": 0,
    "read": [
     "חנות אופטיקה"
@@ -86,7 +86,7 @@
    "id": "bakery",
    "variant": "clean",
    "cer": 0,
-   "ms": 225,
+   "ms": 215,
    "levelled": 0,
    "read": [
     "מאפייה"
@@ -100,7 +100,7 @@
    "id": "pharmacy",
    "variant": "clean",
    "cer": 0,
-   "ms": 416,
+   "ms": 209,
    "levelled": 0,
    "read": [
     "בית מרקחת"
@@ -114,7 +114,7 @@
    "id": "exit",
    "variant": "clean",
    "cer": 0,
-   "ms": 206,
+   "ms": 342,
    "levelled": 0,
    "read": [
     "יציאה"
@@ -128,7 +128,7 @@
    "id": "closed",
    "variant": "clean",
    "cer": 0,
-   "ms": 237,
+   "ms": 209,
    "levelled": 0,
    "read": [
     "סגור"
@@ -142,7 +142,7 @@
    "id": "shoe-shop",
    "variant": "clean",
    "cer": 0,
-   "ms": 302,
+   "ms": 235,
    "levelled": 0,
    "read": [
     "חנות נעליים"
@@ -156,7 +156,7 @@
    "id": "new-price",
    "variant": "clean",
    "cer": 0.1429,
-   "ms": 454,
+   "ms": 378,
    "levelled": 0,
    "read": [
     "מחיר חדשו"
@@ -170,7 +170,7 @@
    "id": "no-entry",
    "variant": "noise",
    "cer": 0,
-   "ms": 267,
+   "ms": 393,
    "levelled": 0,
    "read": [
     "אין כניסה"
@@ -184,7 +184,7 @@
    "id": "restrooms",
    "variant": "blur",
    "cer": 0,
-   "ms": 227,
+   "ms": 214,
    "levelled": 0,
    "read": [
     "שירותים"
@@ -198,7 +198,7 @@
    "id": "herzl-street",
    "variant": "clean",
    "cer": 0,
-   "ms": 236,
+   "ms": 174,
    "levelled": 0,
    "read": [
     "רחוב הרצל"
@@ -212,7 +212,7 @@
    "id": "ben-yehuda-blvd",
    "variant": "perspective",
    "cer": 0,
-   "ms": 305,
+   "ms": 200,
    "levelled": 0,
    "read": [
     "שדרות בן יהודה"
@@ -226,7 +226,7 @@
    "id": "dizengoff-square",
    "variant": "rotate",
    "cer": 0.1818,
-   "ms": 426,
+   "ms": 258,
    "levelled": 4,
    "read": [
     "ביבר דיזנגוף"
@@ -239,11 +239,11 @@
   {
    "id": "bus-stop",
    "variant": "clean",
-   "cer": 0.0909,
-   "ms": 381,
+   "cer": 0,
+   "ms": 295,
    "levelled": 0,
    "read": [
-    "תחנת אוטובוט"
+    "תחנת אוטובוס"
    ],
    "english": [
     "Bus Stop"
@@ -254,7 +254,7 @@
    "id": "synagogue",
    "variant": "noise",
    "cer": 0,
-   "ms": 188,
+   "ms": 214,
    "levelled": 0,
    "read": [
     "בית כנסת"
@@ -268,7 +268,7 @@
    "id": "menu-drinks",
    "variant": "clean",
    "cer": 0,
-   "ms": 199,
+   "ms": 272,
    "levelled": 0,
    "read": [
     "תפריט",
@@ -286,7 +286,7 @@
    "id": "menu-food",
    "variant": "clean",
    "cer": 0,
-   "ms": 347,
+   "ms": 547,
    "levelled": 0,
    "read": [
     "חומוס 18",
@@ -304,7 +304,7 @@
    "id": "menu-courses",
    "variant": "blur",
    "cer": 0,
-   "ms": 267,
+   "ms": 315,
    "levelled": 0,
    "read": [
     "מנה ראשונה",
@@ -321,11 +321,11 @@
   {
    "id": "kosher-restaurant",
    "variant": "clean",
-   "cer": 0.1,
-   "ms": 586,
+   "cer": 0.05,
+   "ms": 439,
    "levelled": 0,
    "read": [
-    "מסעדה בשרה",
+    "מסעדה כשרה",
     "ברובים הבאים"
    ],
    "english": [
@@ -338,7 +338,7 @@
    "id": "no-smoking",
    "variant": "lowcontrast",
    "cer": 0,
-   "ms": 437,
+   "ms": 182,
    "levelled": 0,
    "read": [
     "אסור לעשן"
@@ -352,7 +352,7 @@
    "id": "caution-stairs",
    "variant": "rotate",
    "cer": 0,
-   "ms": 308,
+   "ms": 288,
    "levelled": -4.2,
    "read": [
     "זהירות",

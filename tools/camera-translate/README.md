@@ -2,7 +2,7 @@
 
 **The app does not use anything in this folder at run time.** The Camera Translator (`#/camera`) runs entirely in the browser, with no server and no upload (owner decision, 2026-11-10). This folder is what measures it:
 
-- `tests/signs/`: the 20 computer-made test signs, their ground truth and the saved results; `tests/make_signs.py` regenerates them (`--wear-dir DIR` writes the 120 wear variants, `--hard-dir DIR` the 133 harder ones).
+- `tests/signs/`: the 20 computer-made test signs, their ground truth and the saved results; `tests/make_signs.py` regenerates them (`--wear-dir DIR` writes the 120 wear variants, `--hard-dir DIR` the 133 harder ones, `--review-dir DIR` the 576 images of the review files' own phrases).
 - `e2e-camera.mjs`, `e2e-batch.mjs`: drive the real screen and the real in-browser reader in headless Chromium, under the site security policy.
 - `build_real_neighbours.py`: rebuilds the guard list in the sign word list after the list is edited.
 - `translate-cli.mjs`: runs the app's own word-list rules from the command line; `camera_translate/hebrew.py` calls it, so the rig has no second copy of the rules. Needs Node.

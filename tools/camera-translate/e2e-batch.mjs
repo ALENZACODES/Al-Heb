@@ -15,7 +15,7 @@ function editDistance(a, b) {
   return prev[b.length];
 }
 
-export async function runBatch(dir, { mode } = {}) {
+export async function runBatch(dir, { mode, side, noRetry } = {}) {
   dir = resolve(dir);
   const gt = JSON.parse(readFileSync(join(dir, 'ground-truth.json'), 'utf8'));
   const { server, browser, page, base, errors, posts, reqs } = await openApp();
@@ -25,16 +25,16 @@ export async function runBatch(dir, { mode } = {}) {
     await page.goto(`${base}/#/camera`, { waitUntil: 'load' });
     await page.waitForSelector('.camera-tr[data-mode]');
     for (const it of gt.items) {
-      const res = await page.evaluate(async ({ file, mode }) => {
+      const res = await page.evaluate(async ({ file, mode, side, noRetry }) => {
         const m = await import('/src/camera/on-device.js'); const c = await import('/src/camera/camera-client.js'); const mod = await import('/src/camera/camera-model.js');
         const w = globalThis; w.__g ||= mod.createGlossary(await c.loadGlossaryData(), { phrasebook: await c.loadPhrasebook() });
         const blob = await (await fetch(`/__signs__/${encodeURIComponent(file)}`)).blob();
         const t0 = performance.now();
-        const r = await m.translateOnDevice(blob, { glossary: w.__g, engine: w.__eng, readerMode: mode,
+        const r = await m.translateOnDevice(blob, { glossary: w.__g, engine: w.__eng, readerMode: mode, targetSide: side, lineRetry: !noRetry,
           dictionaryLoader: async () => (w.__d ||= mod.createDictionary(await c.loadDictionaryIndex())) });
         w.__eng = r.engine;
         return { ms: Math.round(performance.now() - t0), levelled: r.levelled, regions: r.regions.map((x) => ({ he: x.he, en: x.en, src: x.translationSource, drawn: x.drawn })) };
-      }, { file: it.file, mode });
+      }, { file: it.file, mode, side, noRetry });
       const ref = it.lines.map((l) => normHe(l.he)).join(''); const hyp = res.regions.map((r) => normHe(r.he)).join('');
       const e = editDistance(hyp, ref);
       const hypLines = new Set(res.regions.map((r) => normHe(r.he))); const hypEn = new Set(res.regions.filter((r) => r.en).map((r) => normEn(r.en)));
@@ -59,7 +59,8 @@ export async function runBatch(dir, { mode } = {}) {
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   const args = process.argv.slice(2); const out = args.includes('--out') ? args[args.indexOf('--out') + 1] : null; const mode = args.includes('--mode') ? args[args.indexOf('--mode') + 1] : undefined;
-  const r = await runBatch(args[0], { mode });
+  const side = args.includes('--side') ? Number(args[args.indexOf('--side') + 1]) : undefined;
+  const r = await runBatch(args[0], { mode, side, noRetry: args.includes('--no-retry') });
   if (out) writeFileSync(out, JSON.stringify(r, null, 1));
   console.log(JSON.stringify({ reader: r.reader, total: r.total, byWear: r.byWear, pageErrors: r.pageErrors, nonGetRequests: r.nonGetRequests, otherOrigins: r.otherOrigins }, null, 1));
   for (const row of r.rows) if (row.wrong.length) console.log('WRONG', row.id, row.variant, row.wrong.join('; '));

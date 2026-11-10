@@ -7,6 +7,7 @@ import { containsSacredName, tokens, hebrewTokens, isJunkToken, lineHadNoise, ed
   PREFIX_MEANING, LOOK_ALIKE, twoLookAlikes, repairNumber, readerImage, otsuThreshold, boxOnOriginal,
   fitText, wrapWords, chooseAlignment, groupBlocks, boxColours, contrastRatio, HELD_NOTE } from '../src/camera/camera-model.js';
 import { loadGlossaryData, loadPhrasebook, loadDictionaryIndex } from '../src/camera/camera-client.js';
+import { mergeReadings, LETTER_HEIGHT, READER_TARGET_SIDE } from '../src/camera/on-device.js';
 import { NAME_SKELETON } from '../src/shell/names.js';
 import { ROUTES, matchRoute } from '../src/shell/router.js';
 import { isOnDemand, computeManifest } from '../tools/build-precache.mjs';
@@ -75,6 +76,30 @@ test('camera: reader noise, split lines and hidden letters', () => {
   assert.equal(regionsFromBoxes([{ text: 'חנות', x: 300, y: 10, w: 100, h: 40 }, { text: ':21', x: 200, y: 10, w: 50, h: 40 }], glossary)[0].partial, true);
 });
 
+test('camera: two readings of one photo are merged line by line, and the word list decides', () => {
+  const line = (he, y, conf) => regionsFromBoxes([{ text: he, x: 100, y, w: 200, h: 40, conf }], glossary)[0];
+  const first = [line('ביבך', 10, 80), line('יציאה', 100, 70), line('נעליים', 200, 60), line('סגור', 300, 90)];
+  const second = [line('כיכר', 12, 60), line('יציאת', 98, 95), line('נעלייס', 204, 85)];
+  const merged = mergeReadings(first, second);
+  assert.deepEqual(merged.map((r) => r.en), ['Square', 'Exit', null, 'Closed']);
+  assert.equal(merged[0].he, 'כיכר', 'a reading the list recognises beats one it does not, whatever the confidence');
+  assert.equal(merged[1].he, 'יציאה', 'an exact match is not replaced by another reading');
+  assert.equal(merged[2].he, 'נעלייס', 'when neither is recognised the more confident reading is kept');
+  assert.equal(merged[3].he, 'סגור', 'a line only the first reading found is kept');
+  assert.deepEqual(merged.map((r) => r.id), ['r1', 'r2', 'r3', 'r4']);
+  assert.ok(LETTER_HEIGHT >= 30 && LETTER_HEIGHT <= 60 && READER_TARGET_SIDE === 1200);
+});
+
+test('camera: whole-phrase guessing stays rare on real text (5,000 random pairs of dictionary words)', () => {
+  const idx = JSON.parse(read('data/vocab/index.json')); const k = idx.fields.indexOf('heUnpointed');
+  const words = [...new Set(idx.rows.map((r) => r[k]).filter((w) => w && !w.includes(' ') && w.length >= 2))];
+  let seed = 7; const rnd = () => { seed = (seed * 1103515245 + 12345) % 2147483648; return seed / 2147483648; };
+  let guesses = 0;
+  for (let i = 0; i < 5000; i++) { const r = glossary.translate(`${words[Math.floor(rnd() * words.length)]} ${words[Math.floor(rnd() * words.length)]}`); if (r.status === 'near') guesses++; }
+  // Measured 2026-11-10 on 20,000 pairs: 5 guesses with the limit of a quarter of the letters rounded down; 53 when rounded up, which is why it is rounded down.
+  assert.ok(guesses <= 3, `${guesses} of 5000 random real two-word lines were guessed as a listed phrase`);
+});
+
 test('camera: a real word is never "corrected" into a listed word (checked against every word in the app dictionary)', () => {
   for (const real of ['איפה', 'אזור']) assert.equal(glossary.translate(real).en, null, real);
   assert.deepEqual([glossary.translate('אזור לעשן').en, glossary.translate('אזור לעשן').status], ['No Smoking', 'near'], 'unless the result is a listed phrase with the word beside it');
@@ -90,6 +115,10 @@ test('camera: the app phrasebook translates whole lines the word list cannot, an
   assert.equal(withPhrases.translate('איפה התחנה').from, 'phrasebook');
   assert.equal(withPhrases.translate('יציאה').from, undefined, 'the sign list answers first');
   assert.equal(glossary.translate('תודה רבה').en, null);
+  // With the phrasebook loaded (as the app always has it): listed sign words must still take part in whole-phrase matching,
+  // and no phrasebook line may ever be turned into a guess.
+  assert.deepEqual([withPhrases.translate('בית מ יקחת').en, withPhrases.translate('ברוי ים הבאים').en], ['Pharmacy', 'Welcome']);
+  for (const e of phrasebook) assert.notEqual(withPhrases.translate(e.he).status, 'near', e.he);
   const regs = regionsFromBoxes([{ text: 'רבה', x: 10, y: 10, w: 60, h: 30 }, { text: 'תודה', x: 80, y: 10, w: 80, h: 30 }], withPhrases);
   assert.deepEqual([regs[0].en, regs[0].translationSource], ['Thank you very much', 'phrasebook']);
 });

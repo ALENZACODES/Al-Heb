@@ -57,7 +57,7 @@ export async function mount(root, ctx) {
     grid.append(cardFor(openBook));
     wrap.append(grid);
   }
-  const LEVEL_ORDER = ["Beginner 1", "Beginner 2", "Beginner 3", "Grade 1"];
+  const LEVEL_ORDER = ["Beginner 1", "Beginner 2", "Beginner 3", "Advanced", "Grade 1"];
   const groups = new Map();
   for (const b of data.books) { const k = b.level || "More books"; if (!groups.has(k)) groups.set(k, []); groups.get(k).push(b); }
   const keys = [...groups.keys()].sort((a, b) => {

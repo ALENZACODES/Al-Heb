@@ -1,0 +1,177 @@
+{
+ "id": "book63",
+ "titleHe": "הַסִּפּוּר שֶׁל מֹשֶׁה",
+ "titleTranslit": "Ha-Sippur shel Moshe",
+ "titleEn": "The Story of Moses",
+ "level": "Advanced",
+ "pages": [
+  {
+   "n": 1,
+   "he": "לִפְנֵי הַרְבֵּה שָׁנִים, בְּנֵי יִשְׂרָאֵל גָּרוּ בְּמִצְרַיִם. פַּרְעֹה, מֶלֶךְ מִצְרַיִם, הִכְרִיחַ אוֹתָם לַעֲבֹד קָשֶׁה מְאוֹד וְלִבְנוֹת לוֹ עָרִים מִלְּבֵנִים. הַשֶּׁמֶשׁ הָיְתָה חַמָּה, וְהָעֲבוֹדָה לֹא נִגְמְרָה אַף פַּעַם. אֲבָל גַּם בַּיָּמִים הַקָּשִׁים, הָאֲנָשִׁים עָזְרוּ זֶה לָזֶה וְלֹא הִפְסִיקוּ לְקַוּוֹת לְחֵרוּת.",
+   "translit": "Lifnei harbeh shanim, b'nei Yisrael garu b'Mitzrayim. Par'oh, melech Mitzrayim, hichri'ach otam la'avod kasheh me'od v'livnot lo arim mi-l'venim. Ha-shemesh haytah chamah, v'ha-avodah lo nigmerah af pa'am. Aval gam ba-yamim ha-kashim, ha-anashim azru zeh la-zeh v'lo hifsiku l'kavot l'cherut.",
+   "en": "Many years ago, the Children of Israel lived in Egypt. Pharaoh, the king of Egypt, forced them to work very hard and build cities of bricks for him. The sun was hot, and the work never ended. But even on the hard days, the people helped one another and never stopped hoping for freedom.",
+   "img": "assets/books/book63/BOOK63_p01.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book63-p01.mp3",
+    "m": "audio/m/israeli/book/book63-p01.mp3"
+   },
+   "illustration": "Hebrew families building bricks in the sun, helping one another",
+   "hasImg": true,
+   "hasAudio": false
+  },
+  {
+   "n": 2,
+   "he": "פַּרְעֹה פָּחַד שֶׁבְּנֵי יִשְׂרָאֵל יִהְיוּ רַבִּים וַחֲזָקִים מִדַּי, וְלָכֵן נָתַן פְּקֻדָּה רָעָה וְלֹא הוֹגֶנֶת נֶגֶד הַבָּנִים הַקְּטַנִּים שֶׁל הָעִבְרִים. אֲבָל שְׁתֵּי מְיַלְּדוֹת אַמִּיצוֹת, שִׁפְרָה וּפוּעָה, אָמְרוּ \"לֹא\" לַמֶּלֶךְ וְשָׁמְרוּ עַל כָּל תִּינוֹק. בְּאוֹתוֹ זְמַן, אִשָּׁה בְּשֵׁם יוֹכֶבֶד יָלְדָה בֵּן. הִיא רָאֲתָה שֶׁהוּא טוֹב, וְהִסְתִּירָה אוֹתוֹ בַּבַּיִת שְׁלוֹשָׁה חֳדָשִׁים.",
+   "translit": "Par'oh pachad she-b'nei Yisrael yihyu rabim va-chazakim midai, v'lachen natan p'kudah ra'ah v'lo hogenet neged ha-banim ha-k'tanim shel ha-Ivrim. Aval sh'tei m'yaldot amitzot, Shifrah u-Pu'ah, amru \"lo\" la-melech v'shamru al kol tinok. B'oto z'man, ishah b'shem Yocheved yaldah ben. Hi ra'atah she-hu tov, v'histirah oto ba-bayit shloshah chodashim.",
+   "en": "Pharaoh was afraid that the Children of Israel would become too many and too strong, so he gave a bad and unfair order against the little boys of the Hebrews. But two brave midwives, Shifrah and Puah, said \"no\" to the king and protected every baby. At that time, a woman named Yocheved gave birth to a son. She saw that he was good, and she hid him at home for three months.",
+   "img": "assets/books/book63/BOOK63_p02.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book63-p02.mp3",
+    "m": "audio/m/israeli/book/book63-p02.mp3"
+   },
+   "illustration": "Yocheved hiding baby Moses, with Shifrah, Puah and young Miriam",
+   "hasImg": true,
+   "hasAudio": false
+  },
+  {
+   "n": 3,
+   "he": "כַּאֲשֶׁר כְּבָר לֹא יָכְלָה לְהַסְתִּיר אוֹתוֹ, יוֹכֶבֶד קָלְעָה תֵּבָה קְטַנָּה מִגֹּמֶא וּמָרְחָה אוֹתָהּ בְּזֶפֶת, כְּדֵי שֶׁהַמַּיִם לֹא יִכָּנְסוּ. בַּעֲדִינוּת הִיא שָׂמָה אֶת הַתִּינוֹק בַּתֵּבָה וְהִנִּיחָה אוֹתָהּ בֵּין הַקָּנִים, עַל שְׂפַת הַיְאוֹר. מִרְיָם, אֲחוֹתוֹ הַגְּדוֹלָה, עָמְדָה מֵרָחוֹק וְלֹא הוֹרִידָה מִמֶּנּוּ אֶת הָעֵינַיִם. הִיא רָצְתָה לָדַעַת מָה יִקְרֶה לְאָחִיהָ הַקָּטָן.",
+   "translit": "Ka'asher k'var lo yachlah l'hastir oto, Yocheved kal'ah tevah k'tanah mi-gome u-marchah otah b'zefet, k'dei she-ha-mayim lo yikansu. Ba-adinut hi samah et ha-tinok ba-tevah v'hinichah otah bein ha-kanim, al s'fat ha-y'or. Miryam, achoto ha-g'dolah, amdah me-rachok v'lo horidah mimenu et ha-einayim. Hi ratztah lada'at mah yikreh l'achiha ha-katan.",
+   "en": "When she could no longer hide him, Yocheved wove a small basket from papyrus reeds and coated it with tar, so that the water would not get in. Gently, she placed the baby in the basket and set it among the reeds at the edge of the Nile. Miriam, his big sister, stood far away and did not take her eyes off him. She wanted to know what would happen to her little brother.",
+   "img": "assets/books/book63/BOOK63_p03.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book63-p03.mp3",
+    "m": "audio/m/israeli/book/book63-p03.mp3"
+   },
+   "illustration": "Yocheved placing the basket among the Nile reeds, Miriam watching",
+   "hasImg": true,
+   "hasAudio": false
+  },
+  {
+   "n": 4,
+   "he": "בַּת פַּרְעֹה יָרְדָה אֶל הַיְאוֹר עִם הַנְּעָרוֹת שֶׁלָּהּ. פִּתְאוֹם הִיא רָאֲתָה תֵּבָה קְטַנָּה צָפָה בֵּין הַקָּנִים, וְשָׁלְחָה אֶת אַחַת הַנְּעָרוֹת לְהָבִיא אוֹתָהּ. כְּשֶׁפָּתְחָה אֶת הַתֵּבָה, רָאֲתָה יֶלֶד קָטָן שֶׁבּוֹכֶה. לִבָּהּ הִתְמַלֵּא רַחֲמִים, וְהִיא אָמְרָה בְּשֶׁקֶט: \"זֶה אֶחָד מִיַּלְדֵי הָעִבְרִים.\"",
+   "translit": "Bat Par'oh yardah el ha-y'or im ha-n'arot shelah. Pit'om hi ra'atah tevah k'tanah tzafah bein ha-kanim, v'shalchah et achat ha-n'arot l'havi otah. K'she-patchah et ha-tevah, ra'atah yeled katan she-bocheh. Libah hitmale rachamim, v'hi amrah b'sheket: \"Zeh echad mi-yaldei ha-Ivrim.\"",
+   "en": "Pharaoh's daughter went down to the Nile with her maidens. Suddenly she saw a small basket floating among the reeds, and she sent one of the maidens to bring it. When she opened the basket, she saw a little boy who was crying. Her heart filled with compassion, and she said quietly, \"This is one of the Hebrew children.\"",
+   "img": "assets/books/book63/BOOK63_p04.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book63-p04.mp3",
+    "m": "audio/m/israeli/book/book63-p04.mp3"
+   },
+   "illustration": "Pharaoh's daughter finding baby Moses in the basket at the Nile",
+   "hasImg": true,
+   "hasAudio": false
+  },
+  {
+   "n": 5,
+   "he": "מִרְיָם לֹא פָּחֲדָה. הִיא רָצָה אֶל בַּת פַּרְעֹה וְשָׁאֲלָה: \"הַאִם לִקְרֹא לָךְ אִשָּׁה עִבְרִיָּה שֶׁתֵּינִיק אֶת הַיֶּלֶד?\" בַּת פַּרְעֹה עָנְתָה: \"לְכִי.\" וּמִרְיָם הֵבִיאָה... אֶת אִמָּא שֶׁלָּהּ, יוֹכֶבֶד! כָּךְ חָזַר הַתִּינוֹק לִזְרוֹעוֹת אִמּוֹ. כְּשֶׁגָּדַל, קָרְאָה לוֹ בַּת פַּרְעֹה מֹשֶׁה, כִּי אָמְרָה: \"מִן הַמַּיִם מְשִׁיתִהוּ.\"",
+   "translit": "Miryam lo pachadah. Hi ratzah el bat Par'oh v'sha'alah: \"Ha'im likro lach ishah Ivriyah she-teinik et ha-yeled?\" Bat Par'oh antah: \"L'chi.\" U-Miryam hevi'ah... et ima shelah, Yocheved! Kach chazar ha-tinok lizro'ot imo. K'she-gadal, kar'ah lo bat Par'oh Moshe, ki amrah: \"Min ha-mayim m'shitihu.\"",
+   "en": "Miriam was not afraid. She ran to Pharaoh's daughter and asked, \"Shall I call a Hebrew woman for you to nurse the child?\" Pharaoh's daughter answered, \"Go.\" And Miriam brought... her own mother, Yocheved! And so the baby came back into his mother's arms. When he grew older, Pharaoh's daughter named him Moses, because she said, \"I drew him out of the water.\"",
+   "img": "assets/books/book63/BOOK63_p05.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book63-p05.mp3",
+    "m": "audio/m/israeli/book/book63-p05.mp3"
+   },
+   "illustration": "Miriam bringing Yocheved; baby Moses returned to his mother's arms",
+   "hasImg": true,
+   "hasAudio": false
+  },
+  {
+   "n": 6,
+   "he": "מֹשֶׁה גָּדַל בָּאַרְמוֹן שֶׁל פַּרְעֹה, אֲבָל הוּא לֹא שָׁכַח מֵאַיִן בָּא. יוֹם אֶחָד יָצָא אֶל אֶחָיו וְרָאָה כַּמָּה קָשָׁה הָעֲבוֹדָה שֶׁלָּהֶם. כְּשֶׁרָאָה נוֹגֵשׂ מִצְרִי צוֹעֵק עַל עוֹבֵד עִבְרִי זָקֵן וּמַכְבִּיד עָלָיו עוֹד וָעוֹד, מֹשֶׁה לֹא יָכֹל לַעֲמֹד מִן הַצַּד, וְקָם לְהָגֵן עָלָיו. כְּשֶׁפַּרְעֹה שָׁמַע עַל כָּךְ, הוּא כָּעַס מְאוֹד, וּמֹשֶׁה בָּרַח לְאֶרֶץ רְחוֹקָה בְּשֵׁם מִדְיָן.",
+   "translit": "Moshe gadal ba-armon shel Par'oh, aval hu lo shachach me-ayin ba. Yom echad yatza el echav v'ra'ah kamah kashah ha-avodah shelahem. K'she-ra'ah noges Mitzri tzo'ek al oved Ivri zaken u-machbid alav od va-od, Moshe lo yachol la'amod min ha-tzad, v'kam l'hagen alav. K'she-Par'oh shama al kach, hu ka'as me'od, u-Moshe barach l'eretz r'chokah b'shem Midyan.",
+   "en": "Moses grew up in Pharaoh's palace, but he did not forget where he came from. One day he went out to his brothers and saw how hard their work was. When he saw an Egyptian overseer shouting at an old Hebrew worker and piling more and more onto him, Moses could not stand to the side, and he rose up to protect him. When Pharaoh heard about it, he was very angry, and Moses fled to a faraway land called Midian.",
+   "img": "assets/books/book63/BOOK63_p06.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book63-p06.mp3",
+    "m": "audio/m/israeli/book/book63-p06.mp3"
+   },
+   "illustration": "Young Moses stepping in to protect an old worker from an overseer",
+   "hasImg": true,
+   "hasAudio": false
+  },
+  {
+   "n": 7,
+   "he": "בְּמִדְיָן יָשַׁב מֹשֶׁה לָנוּחַ לְיַד בְּאֵר. שֶׁבַע אֲחָיוֹת בָּאוּ לְהַשְׁקוֹת אֶת הַצֹּאן שֶׁל אֲבִיהֶן, יִתְרוֹ, אֲבָל כַּמָּה רוֹעִים גַּסִּים נִסּוּ לְגָרֵשׁ אוֹתָן מִשָּׁם. שׁוּב מֹשֶׁה קָם לַעֲזֹר: הוּא עָמַד לְצִדָּן וְהִשְׁקָה אִתָּן אֶת כָּל הַצֹּאן. מֹשֶׁה נִשְׁאַר בְּמִדְיָן, הִתְחַתֵּן עִם צִפּוֹרָה, אַחַת הָאֲחָיוֹת, וְהָיָה לְרוֹעֵה צֹאן.",
+   "translit": "B'Midyan yashav Moshe lanu'ach l'yad be'er. Sheva achayot ba'u l'hashkot et ha-tzon shel avihen, Yitro, aval kamah ro'im gasim nisu l'garesh otan mi-sham. Shuv Moshe kam la'azor: hu amad l'tzidan v'hishkah itan et kol ha-tzon. Moshe nishar b'Midyan, hitchaten im Tzipporah, achat ha-achayot, v'hayah l'ro'eh tzon.",
+   "en": "In Midian, Moses sat down to rest beside a well. Seven sisters came to water their father Jethro's flock, but some rude shepherds tried to chase them away. Once again Moses rose to help: he stood by their side and watered the whole flock with them. Moses stayed in Midian, married Zipporah, one of the sisters, and became a shepherd.",
+   "img": "assets/books/book63/BOOK63_p07.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book63-p07.mp3",
+    "m": "audio/m/israeli/book/book63-p07.mp3"
+   },
+   "illustration": "Moses and Zipporah watering the flock at a Midian well",
+   "hasImg": true,
+   "hasAudio": false
+  },
+  {
+   "n": 8,
+   "he": "יוֹם אֶחָד, כְּשֶׁמֹּשֶׁה רָעָה אֶת הַצֹּאן לְיַד הַר גָּבוֹהַּ, הוּא רָאָה דָּבָר מַפְלִיא: סְנֶה בּוֹעֵר בָּאֵשׁ, וְהַסְּנֶה אֵינֶנּוּ אֻכָּל. מִתּוֹךְ הָאֵשׁ נִשְׁמַע קוֹל אֱלֹהִים: \"מֹשֶׁה, מֹשֶׁה!\" וּמֹשֶׁה עָנָה: \"הִנֵּנִי.\" \"שַׁל נְעָלֶיךָ מֵעַל רַגְלֶיךָ, כִּי הַמָּקוֹם הַזֶּה קָדוֹשׁ. לֵךְ אֶל פַּרְעֹה וְהוֹצֵא אֶת עַמִּי מִמִּצְרַיִם.\" מֹשֶׁה דָּאַג שֶׁהוּא לֹא יוֹדֵעַ לְדַבֵּר יָפֶה, אֲבָל קִבֵּל הַבְטָחָה: אַהֲרֹן אָחִיו יַעֲזֹר לוֹ.",
+   "translit": "Yom echad, k'she-Moshe ra'ah et ha-tzon l'yad har gavo'ah, hu ra'ah davar mafli: s'neh bo'er ba-esh, v'ha-s'neh einenu ukal. Mi-toch ha-esh nishma kol Elohim: \"Moshe, Moshe!\" U-Moshe anah: \"Hineni.\" \"Shal n'alecha me-al raglecha, ki ha-makom ha-zeh kadosh. Lech el Par'oh v'hotze et ami mi-Mitzrayim.\" Moshe da'ag she-hu lo yode'a l'daber yafeh, aval kibel havtachah: Aharon achiv ya'azor lo.",
+   "en": "One day, while Moses was shepherding the flock near a tall mountain, he saw something amazing: a bush burning with fire, yet the bush was not burned up. From inside the fire came the voice of God: \"Moses, Moses!\" And Moses answered, \"Here I am.\" \"Take your sandals off your feet, for this place is holy. Go to Pharaoh and bring my people out of Egypt.\" Moses worried that he did not know how to speak well, but he received a promise: Aaron, his brother, would help him.",
+   "img": "assets/books/book63/BOOK63_p08.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book63-p08.mp3",
+    "m": "audio/m/israeli/book/book63-p08.mp3"
+   },
+   "illustration": "Moses kneeling barefoot before the burning bush",
+   "hasImg": true,
+   "hasAudio": false
+  },
+  {
+   "n": 9,
+   "he": "מֹשֶׁה וְאַהֲרֹן נִכְנְסוּ יַחַד לָאַרְמוֹן וְעָמְדוּ לִפְנֵי פַּרְעֹה. בְּקוֹל אַמִּיץ וּבָרוּר אָמְרוּ: \"כֹּה אָמַר אֱלֹהִים: שַׁלַּח אֶת עַמִּי!\" פַּרְעֹה שִׁלֵּב אֶת זְרוֹעוֹתָיו, קִמֵּט אֶת מִצְחוֹ וְרָטַן: \"לֹא! אֲנִי לֹא אֲשַׁלֵּחַ אֶת הָעָם.\" אֲבָל מֹשֶׁה וְאַהֲרֹן לֹא וִתְּרוּ, וְחָזְרוּ אֵלָיו שׁוּב וָשׁוּב.",
+   "translit": "Moshe v'Aharon nichn'su yachad la-armon v'amdu lifnei Par'oh. B'kol amitz u-varur amru: \"Koh amar Elohim: Shalach et ami!\" Par'oh shilev et z'ro'otav, kimet et mitzcho v'ratan: \"Lo! Ani lo ashale'ach et ha-am.\" Aval Moshe v'Aharon lo vitru, v'chazru elav shuv va-shuv.",
+   "en": "Moses and Aaron went into the palace together and stood before Pharaoh. In a brave, clear voice they said, \"Thus says God: Let my people go!\" Pharaoh folded his arms, wrinkled his forehead and grumbled, \"No! I will not let the people go.\" But Moses and Aaron did not give up, and they came back to him again and again.",
+   "img": "assets/books/book63/BOOK63_p09.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book63-p09.mp3",
+    "m": "audio/m/israeli/book/book63-p09.mp3"
+   },
+   "illustration": "Moses and Aaron standing before handsome Pharaoh in the palace",
+   "hasImg": true,
+   "hasAudio": false
+  },
+  {
+   "n": 10,
+   "he": "אָז הִתְחִילוּ הַמַּכּוֹת. הַמַּיִם בַּיְאוֹר הָפְכוּ לַאֲדֻמִּים, צְפַרְדְּעִים קָפְצוּ לְכָל מָקוֹם, אֲפִלּוּ לְתוֹךְ הַמִּטָּה שֶׁל פַּרְעֹה, וְחֹשֶׁךְ גָּדוֹל כִּסָּה אֶת כָּל מִצְרַיִם. מַכָּה אַחֲרֵי מַכָּה, וְלֵב פַּרְעֹה נִשְׁאַר קָשֶׁה. רַק אַחֲרֵי עֶשֶׂר מַכּוֹת אָמַר סוֹף סוֹף: \"לְכוּ!\" בְּנֵי יִשְׂרָאֵל יָצְאוּ בְּחִפָּזוֹן כָּל כָּךְ גָּדוֹל, שֶׁהַבָּצֵק שֶׁלָּהֶם לֹא הִסְפִּיק לִתְפֹּחַ. וְכָךְ נוֹלְדָה הַמַּצָּה.",
+   "translit": "Az hitchilu ha-makot. Ha-mayim ba-y'or hafchu la-adumim, tz'farde'im kaftzu l'chol makom, afilu l'toch ha-mitah shel Par'oh, v'choshech gadol kisah et kol Mitzrayim. Makah acharei makah, v'lev Par'oh nishar kasheh. Rak acharei eser makot amar sof sof: \"L'chu!\" B'nei Yisrael yatz'u b'chipazon kol kach gadol, she-ha-batzek shelahem lo hispik litpo'ach. V'chach noldah ha-matzah.",
+   "en": "Then the plagues began. The water in the Nile turned red, frogs hopped everywhere, even into Pharaoh's bed, and a great darkness covered all of Egypt. Plague after plague, Pharaoh's heart stayed hard. Only after ten plagues did he finally say, \"Go!\" The Children of Israel left in such a great hurry that their dough had no time to rise. And that is how matzah was born.",
+   "img": "assets/books/book63/BOOK63_p10.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book63-p10.mp3",
+    "m": "audio/m/israeli/book/book63-p10.mp3"
+   },
+   "illustration": "Frogs in Pharaoh's bedroom, and families leaving with unleavened dough",
+   "hasImg": true,
+   "hasAudio": false
+  },
+  {
+   "n": 11,
+   "he": "בְּנֵי יִשְׂרָאֵל הִגִּיעוּ עַד יַם סוּף, וּפִתְאוֹם שָׁמְעוּ מֵאֲחוֹרֵיהֶם אֶת הַמֶּרְכָּבוֹת שֶׁל פַּרְעֹה. הָאֲנָשִׁים פָּחֲדוּ, אֲבָל מֹשֶׁה אָמַר: \"אַל תִּירָאוּ!\" הוּא נָטָה אֶת יָדוֹ עַל הַיָּם, וֶאֱלֹהִים שָׁלַח רוּחַ קָדִים חֲזָקָה כָּל הַלַּיְלָה. הַמַּיִם נִבְקְעוּ וְעָמְדוּ כְּמוֹ חוֹמָה מִיָּמִין וּמִשְּׂמֹאל, וּבְנֵי יִשְׂרָאֵל עָבְרוּ בְּשָׁלוֹם בַּיַּבָּשָׁה בְּתוֹךְ הַיָּם. פַּרְעֹה וְכָל חֵילוֹ רָדְפוּ אַחֲרֵיהֶם אֶל תּוֹךְ הַיָּם. אָז אָמַר אֱלֹהִים לְמֹשֶׁה: \"נְטֵה אֶת יָדְךָ עַל הַיָּם, וְיָשֻׁבוּ הַמַּיִם עַל מִצְרַיִם.\" מֹשֶׁה נָטָה אֶת יָדוֹ, וְלִפְנוֹת בֹּקֶר חָזַר הַיָּם לִמְקוֹמוֹ. הַגַּלִּים כִּסּוּ אֶת הַמֶּרְכָּבוֹת וְאֶת הַפָּרָשִׁים, וּפַרְעֹה וְכָל חֵילוֹ טָבְעוּ בַּיָּם. לֹא נִשְׁאַר בָּהֶם עַד אֶחָד.",
+   "translit": "B'nei Yisrael higi'u ad Yam Suf, u-fit'om sham'u me-achoreihem et ha-merkavot shel Par'oh. Ha-anashim pachadu, aval Moshe amar: \"Al tira'u!\" Hu natah et yado al ha-yam, v'Elohim shalach ru'ach kadim chazakah kol ha-laylah. Ha-mayim nivk'u v'amdu k'mo chomah mi-yamin u-mi-s'mol, u-v'nei Yisrael avru b'shalom ba-yabashah b'toch ha-yam. Par'oh v'chol cheilo radfu achareihem el toch ha-yam. Az amar Elohim l'Moshe: \"N'teh et yad'cha al ha-yam, v'yashuvu ha-mayim al Mitzrayim.\" Moshe natah et yado, v'lifnot boker chazar ha-yam lim'komo. Ha-galim kisu et ha-merkavot v'et ha-parashim, u-Far'oh v'chol cheilo tav'u ba-yam. Lo nishar bahem ad echad.",
+   "en": "The Children of Israel reached the Sea of Reeds, and suddenly they heard Pharaoh's chariots behind them. The people were afraid, but Moses said, \"Do not be afraid!\" He stretched out his hand over the sea, and God sent a strong east wind all night long. The waters split apart and stood like a wall on the right and on the left, and the Children of Israel crossed safely on dry land through the middle of the sea. Pharaoh and his whole army chased after them into the sea. Then God said to Moses, \"Stretch out your hand over the sea, and let the waters come back over Egypt.\" Moses stretched out his hand, and at dawn the sea returned to its place. The waves covered the chariots and the horsemen, and Pharaoh and his whole army sank in the sea. Not one of them remained.",
+   "img": "assets/books/book63/BOOK63_p11.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book63-p11.mp3",
+    "m": "audio/m/israeli/book/book63-p11.mp3"
+   },
+   "illustration": "Moses stretching his hand as the sea walls fall; Israel safe on the shore",
+   "hasImg": true,
+   "hasAudio": false
+  },
+  {
+   "n": 12,
+   "he": "עַל הַחוֹף הַשֵּׁנִי, מִרְיָם הַנְּבִיאָה לָקְחָה תֹּף בְּיָדָהּ, וְכָל הַנָּשִׁים יָצְאוּ אַחֲרֶיהָ בְּתֻפִּים וּבִמְחוֹלוֹת. מִרְיָם שָׁרָה שִׁיר תּוֹדָה אֶל אֱלֹהִים, וְהַיְלָדִים מָחֲאוּ כַּפַּיִם, הַזְּקֵנִים חִיְּכוּ, וְכֻלָּם רָקְדוּ יַחַד, סוֹף סוֹף בְּנֵי חוֹרִין. עַד הַיּוֹם, בְּכָל פֶּסַח, אֲנַחְנוּ מְסַפְּרִים אֶת הַסִּפּוּר הַזֶּה וְזוֹכְרִים: חֵרוּת שַׁיֶּכֶת לְכֻלָּם, וְכָל אֶחָד וְאַחַת יְכוֹלִים לִהְיוֹת אַמִּיצִים כְּמוֹ מִרְיָם וּמֹשֶׁה.",
+   "translit": "Al ha-chof ha-sheni, Miryam ha-n'vi'ah lak'chah tof b'yadah, v'chol ha-nashim yatz'u achareha b'tupim u-vi-m'cholot. Miryam sharah shir todah el Elohim, v'ha-y'ladim mach'u kapayim, ha-z'kenim chiyechu, v'chulam rakdu yachad, sof sof b'nei chorin. Ad ha-yom, b'chol Pesach, anachnu m'sap'rim et ha-sippur ha-zeh v'zochrim: cherut shayechet l'chulam, v'chol echad v'achat y'cholim lihyot amitzim k'mo Miryam u-Moshe.",
+   "en": "On the far shore, Miriam the prophet took a drum in her hand, and all the women went out after her with drums and dancing. Miriam sang a song of thanks to God. The children clapped their hands, the elders smiled, and everyone danced together, free at last. To this day, every Passover, we tell this story and remember: freedom belongs to everyone, and every one of us can be as brave as Miriam and Moses.",
+   "img": "assets/books/book63/BOOK63_p12.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book63-p12.mp3",
+    "m": "audio/m/israeli/book/book63-p12.mp3"
+   },
+   "illustration": "Miriam leading the women in dance and song on the far shore",
+   "hasImg": true,
+   "hasAudio": false
+  }
+ ]
+}

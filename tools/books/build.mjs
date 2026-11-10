@@ -10,8 +10,8 @@ import { fileURLToPath } from 'node:url';
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const SRC = resolve(ROOT, 'tools/books/source/books-6-62.txt');
 const CHECK = process.argv.includes('--check');
-const BAND_LEVEL = { A: 'Beginner 1', B: 'Beginner 2', C: 'Beginner 3' };
-const BAND_WORDS = { A: '2 to 3 words a page', B: '3 to 5 words a page', C: '4 to 6 words a page, sometimes two short sentences' };
+const BAND_LEVEL = { A: 'Beginner 1', B: 'Beginner 2', C: 'Beginner 3', D: 'Advanced' };
+const BAND_WORDS = { A: '2 to 3 words a page', B: '3 to 5 words a page', C: '4 to 6 words a page, sometimes two short sentences', D: 'long sentences, 4 to 10 a page' };
 
 const pad = (n) => String(n).padStart(2, '0');
 const books = [];

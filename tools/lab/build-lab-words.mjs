@@ -95,13 +95,15 @@ export function build() {
 
   const word = (id) => { const w = dict.get(id); if (!w) throw new Error(`dictionary id ${id} not found`); return w; };
 
-  // A menu picture: the word's own picture when the image index already has one ordered (kind 'word'), otherwise the Brain Lab
-  // menu picture ordered in docs/images/BRAIN-LAB-NEW-GAMES-ORDERS-2026-11-10.md (kind 'id', LAB_v2_menu_<name>).
+  // A menu picture: the word's own picture when the image index already has one ordered (kind 'word') whose alt matches this
+  // English gloss; otherwise the Brain Lab menu picture (kind 'id', LAB_v2_menu_<name>). A mismatched alt (wrong word) is ignored.
   const wordPics = readJSON('data/img/index.json').w || {};
   const cafe = [];
   for (const [tier, ids] of Object.entries(CAFE_IDS)) for (const id of ids) {
     const w = word(id), en = shortGloss(w.en);
-    cafe.push({ id, he: w.he, tr: w.translit, en, tier: +tier, ...(clipFor(w.he) ? { clip: clipFor(w.he) } : {}), ...(wordPics[id] ? {} : { pic: `LAB_v2_menu_${en.toLowerCase().replace(/[^a-z]+/g, '-').replace(/^-|-$/g, '')}` }) });
+    const own = wordPics[id];
+    const ownMatches = Array.isArray(own) && String(own[3] || '').toLowerCase() === en.toLowerCase();
+    cafe.push({ id, he: w.he, tr: w.translit, en, tier: +tier, ...(clipFor(w.he) ? { clip: clipFor(w.he) } : {}), ...(ownMatches ? {} : { pic: `LAB_v2_menu_${en.toLowerCase().replace(/[^a-z]+/g, '-').replace(/^-|-$/g, '')}` }) });
   }
   const directions = DIRECTION_IDS.map(({ id, dir, tier }) => { const w = word(id); return { id, he: w.he, tr: w.translit, en: shortGloss(w.en), dir, tier, ...(clipFor(w.he) ? { clip: clipFor(w.he) } : {}) }; });
 

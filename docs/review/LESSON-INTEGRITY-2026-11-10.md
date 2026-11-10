@@ -134,7 +134,8 @@ None of these was changed. Each needs a decision; a recommendation is given wher
    vocabulary record `pe9c62881` with its own audio, so it belongs to the vocabulary lane; Adon Olam `אִישָׁן` (registry) vs `אִישַׁן`
    (I-09 word and exercise); I-22 `מָה כְּתֹבֶת?` should be `מָה הַכְּתֹבֶת?`, but `הַכְּתֹבֶת` is not attested in the data.
 5. **Content gaps a rabbi will notice**: the Yom Kippur greetings ("g'mar chatimah tovah", which the day page has, and "tzom kal") are not in
-   I-28 or I-50; I-31 (Purim) uses the Hagomel line only to spot a word; r34 says it teaches abbreviation marks but has no example word.
+   I-28 or I-50 (adding them was tried: `גְּמַר` is in no vocabulary or corpus source the lessons may draw on, so the
+   no-invented-Hebrew test rightly refused it; it needs a sourced entry first); I-31 (Purim) uses the Hagomel line only to spot a word; r34 says it teaches abbreviation marks but has no example word.
 6. **Lesson titles are sentence case** ("Shin and Bet: your first two letters"); the house rule is Title Case. Left for the copy lane.
 7. **Branch name.** This work sits on the lane branch the brief named, which does not follow the `john/<topic>-<date>` pattern in
    `CONTRIBUTING.md`; `sh tools/git/branch-cleanup.sh --apply` renames it when the work is merged.

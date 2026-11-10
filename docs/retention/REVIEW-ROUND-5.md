@@ -44,7 +44,7 @@ These are the honest limits of everything above.
 | B | The browser waking the service worker in the background was never observed; only the worker's check was run. | An installed Android phone left alone for a few days |
 | C | No real learner. Every number (prices, XP, pacing of the pretend league, when things unlock) is a design guess. | Use, then tuning from the table in `IMPLEMENTATION.md` |
 | D | Fifteen Hebrew strings are unreviewed; two league tier names need the rabbi's view. | `HEBREW-REVIEW.md` |
-| E | Product decisions left to the owner: two daily goals on Home (minutes and XP); Friday as a free streak day; whether a repair should also count today; promoting `/league` and `/shop` out of preview. | A yes or no on each |
+| E | Product decisions left to the owner: two daily goals on Home (minutes and XP); whether a repair should also count today; promoting `/league` and `/shop` out of preview. Decided on 2026-11-10: Friday stays a free streak day. | A yes or no on each of the three |
 | F | No screen-reader session (VoiceOver or TalkBack). axe and the keyboard walk passed, which is not the same thing. | A blind or screen-reader user |
 | G | First install is about 1 KB under its limit. | Not caused by retention; the next lane to touch an installed file will meet it |
 | H | No badges for league results, daily goals or quests. | Medallion pictures |

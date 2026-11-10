@@ -19,6 +19,7 @@ export const STREAK = Object.freeze({
   repairCountsToday: false,
   // Owner rule: no streak is lost between Friday 18:00 and Saturday 21:00. A missed Friday would be lost at midnight,
   // inside that window, so Friday and Saturday (and Yom Tov with its eve) never count as missed days.
+  // Confirmed by the owner on 2026-11-10: Friday is a free streak day.
   shabbatCoversFriday: true,
   atRiskFromMinute: 18 * 60,
   maxScanDays: 45,

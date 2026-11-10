@@ -8,12 +8,12 @@ export const MESSAGES = Object.freeze({
   winner: {he:'אַלּוּפִים! אַלּוּפִים!', en:'WINNER WINNER!'},
   tired: {he:'עֲיֵפִים? חִזְרוּ מָחָר!', en:'TIRED? COME BACK TOMORROW!'},
   star: {he:'כּוֹכְבֵי־עַל!!', en:'SUPERSTAR!!'},
-  again: {he:'נַסּוּ שׁוּב, אֲנִי יוֹדֵעַ שֶׁאַתֶּם יְכוֹלִים!!', en:'TRY AGAIN, I KNOW YOU GOT THIS!!'},
+  again: {he:'נַסּוּ שׁוּב — אַתֶּם יְכוֹלִים!!', en:'TRY AGAIN — YOU GOT THIS!!'},
   fruit: {he:'אִכְלוּ רִמּוֹן וְחִזְרוּ!!', en:'HAVE A POMEGRANATE AND COME BACK!!'},
 });
 export const SHABBAT = Object.freeze({he:'שַׁבָּת שָׁלוֹם!',en:'SHABBAT SHALOM!'});
 export const SHALOM = Object.freeze({he:'שָׁלוֹם!',en:'Hello!'});
-/** Rimon's first line of the visit: by time of day, then a streak line when there is a streak to keep. */
+/** First line of the visit from Rimon: by time of day, then a streak line when there is a streak to keep. */
 export const GREETINGS = Object.freeze({
   morning: {he:'בֹּקֶר טוֹב!',en:'Good morning!'},
   day: SHALOM,

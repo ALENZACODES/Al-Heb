@@ -1,0 +1,246 @@
+{
+ "schema": "alef-talk-utterances/1",
+ "note": "40 everyday lines written at the end of round 2, after every engine and pack change of that round. It scored 76.5 when first run. Two wrong answers it exposed were then fixed by making the engine refuse (a to-form that cannot take a thing, and word-by-word reading from the big dictionary), and one agreement slip was corrected; no line from this file was added to the pack. The reference is one acceptable answer.",
+ "samples": [
+  {
+   "id": "h-en-01",
+   "direction": "en-he",
+   "source": "Where is the elevator?",
+   "reference": "איפה המעלית?"
+  },
+  {
+   "id": "h-en-02",
+   "direction": "en-he",
+   "source": "I need a towel, please.",
+   "reference": "אני צריך מגבת, בבקשה."
+  },
+  {
+   "id": "h-en-03",
+   "direction": "en-he",
+   "source": "Can I sit here?",
+   "reference": "אפשר לשבת כאן?"
+  },
+  {
+   "id": "h-en-04",
+   "direction": "en-he",
+   "source": "We want to order now.",
+   "reference": "אנחנו רוצים להזמין עכשיו."
+  },
+  {
+   "id": "h-en-05",
+   "direction": "en-he",
+   "source": "Is the pool open?",
+   "reference": "הבריכה פתוחה?"
+  },
+  {
+   "id": "h-en-06",
+   "direction": "en-he",
+   "source": "How much are the shoes?",
+   "reference": "כמה עולות הנעליים?"
+  },
+  {
+   "id": "h-en-07",
+   "direction": "en-he",
+   "source": "A cup of tea with lemon, please.",
+   "reference": "כוס תה עם לימון, בבקשה."
+  },
+  {
+   "id": "h-en-08",
+   "direction": "en-he",
+   "source": "I want to buy a gift.",
+   "reference": "אני רוצה לקנות מתנה."
+  },
+  {
+   "id": "h-en-09",
+   "direction": "en-he",
+   "source": "Is there a doctor here?",
+   "reference": "יש כאן רופא?"
+  },
+  {
+   "id": "h-en-10",
+   "direction": "en-he",
+   "source": "Turn right at the corner.",
+   "reference": "פנה ימינה בפינה."
+  },
+  {
+   "id": "h-en-11",
+   "direction": "en-he",
+   "source": "What time does the bank open?",
+   "reference": "מתי הבנק נפתח?"
+  },
+  {
+   "id": "h-en-12",
+   "direction": "en-he",
+   "source": "Four tickets, please.",
+   "reference": "ארבעה כרטיסים, בבקשה."
+  },
+  {
+   "id": "h-en-13",
+   "direction": "en-he",
+   "source": "Do you have a menu in English?",
+   "reference": "יש לכם תפריט באנגלית?"
+  },
+  {
+   "id": "h-en-14",
+   "direction": "en-he",
+   "source": "I am looking for my friend.",
+   "reference": "אני מחפש את החבר שלי."
+  },
+  {
+   "id": "h-en-15",
+   "direction": "en-he",
+   "source": "The door is closed.",
+   "reference": "הדלת סגורה."
+  },
+  {
+   "id": "h-en-16",
+   "direction": "en-he",
+   "source": "Can I leave my suitcase here?",
+   "reference": "אפשר להשאיר כאן את המזוודה?"
+  },
+  {
+   "id": "h-en-17",
+   "direction": "en-he",
+   "source": "It's raining.",
+   "reference": "יורד גשם."
+  },
+  {
+   "id": "h-en-18",
+   "direction": "en-he",
+   "source": "How old are you?",
+   "reference": "בן כמה אתה?"
+  },
+  {
+   "id": "h-en-19",
+   "direction": "en-he",
+   "source": "Where can I park?",
+   "reference": "איפה אפשר לחנות?"
+  },
+  {
+   "id": "h-en-20",
+   "direction": "en-he",
+   "source": "Thank you for the meal.",
+   "reference": "תודה על הארוחה."
+  },
+  {
+   "id": "h-en-21",
+   "direction": "en-he",
+   "source": "I have two children.",
+   "reference": "יש לי שני ילדים."
+  },
+  {
+   "id": "h-en-22",
+   "direction": "en-he",
+   "source": "Is it safe to swim here?",
+   "reference": "בטוח לשחות כאן?"
+  },
+  {
+   "id": "h-en-23",
+   "direction": "en-he",
+   "source": "Please wait for me.",
+   "reference": "חכה לי, בבקשה."
+  },
+  {
+   "id": "h-en-24",
+   "direction": "en-he",
+   "source": "I want to go home.",
+   "reference": "אני רוצה ללכת הביתה."
+  },
+  {
+   "id": "h-en-25",
+   "direction": "en-he",
+   "source": "Sixty shekels.",
+   "reference": "שישים שקלים."
+  },
+  {
+   "id": "h-he-26",
+   "direction": "he-en",
+   "source": "איפה המעלית?",
+   "reference": "Where is the elevator?"
+  },
+  {
+   "id": "h-he-27",
+   "direction": "he-en",
+   "source": "אפשר לשבת כאן?",
+   "reference": "Can I sit here?"
+  },
+  {
+   "id": "h-he-28",
+   "direction": "he-en",
+   "source": "אני רוצה לקנות כרטיס.",
+   "reference": "I want to buy a ticket."
+  },
+  {
+   "id": "h-he-29",
+   "direction": "he-en",
+   "source": "הבנק סגור.",
+   "reference": "The bank is closed."
+  },
+  {
+   "id": "h-he-30",
+   "direction": "he-en",
+   "source": "כוס מים, בבקשה.",
+   "reference": "A glass of water, please."
+  },
+  {
+   "id": "h-he-31",
+   "direction": "he-en",
+   "source": "אנחנו צריכים שני חדרים.",
+   "reference": "We need two rooms."
+  },
+  {
+   "id": "h-he-32",
+   "direction": "he-en",
+   "source": "יש לכם וויי-פיי?",
+   "reference": "Do you have wifi?"
+  },
+  {
+   "id": "h-he-33",
+   "direction": "he-en",
+   "source": "כמה עולה הקפה?",
+   "reference": "How much is the coffee?"
+  },
+  {
+   "id": "h-he-34",
+   "direction": "he-en",
+   "source": "אני לא אוכלת בשר.",
+   "reference": "I don't eat meat."
+  },
+  {
+   "id": "h-he-35",
+   "direction": "he-en",
+   "source": "פנה ימינה אחרי הגשר.",
+   "reference": "Turn right after the bridge."
+  },
+  {
+   "id": "h-he-36",
+   "direction": "he-en",
+   "source": "מתי ארוחת הבוקר?",
+   "reference": "What time is breakfast?"
+  },
+  {
+   "id": "h-he-37",
+   "direction": "he-en",
+   "source": "יש לי שאלה.",
+   "reference": "I have a question."
+  },
+  {
+   "id": "h-he-38",
+   "direction": "he-en",
+   "source": "הילדים רעבים.",
+   "reference": "The children are hungry."
+  },
+  {
+   "id": "h-he-39",
+   "direction": "he-en",
+   "source": "אני גר בטורונטו.",
+   "reference": "I live in Toronto."
+  },
+  {
+   "id": "h-he-40",
+   "direction": "he-en",
+   "source": "תן לי רגע.",
+   "reference": "Give me a moment."
+  }
+ ]
+}

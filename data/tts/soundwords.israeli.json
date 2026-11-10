@@ -92,27 +92,27 @@
   }
  },
  "summary": {
-  "items": 5908,
+  "items": 5929,
   "byConfidence": {
-   "high": 1703,
-   "medium": 3527,
+   "high": 1711,
+   "medium": 3540,
    "low": 582,
    "unvoiced": 96
   },
   "byFlag": {
-   "final-stress-assumed": 3481,
-   "mobile-shva": 1612,
-   "stress-from-small-list": 552,
+   "final-stress-assumed": 3493,
+   "mobile-shva": 1615,
+   "stress-from-small-list": 553,
    "possible-segolate": 222,
    "maqaf-compound": 221,
    "aramaic": 197,
    "shva-heuristic-L3": 196,
    "kamatz-katan-list": 131,
    "furtive-stress-own-rule": 104,
-   "alef-vav-mater-repaired": 72,
+   "alef-vav-mater-repaired": 73,
    "unpointed": 69,
    "non-hebrew-token": 54,
-   "words-ipa-colloquial-shva-drop": 53,
+   "words-ipa-colloquial-shva-drop": 54,
    "vav-dagesh-consonantal": 32,
    "no-vowel-derived": 27,
    "vav-cholam-consonantal": 24,
@@ -224,8 +224,8 @@
     "unvoiced": 0
    },
    "screen-word": {
-    "high": 115,
-    "medium": 413,
+    "high": 116,
+    "medium": 422,
     "low": 13,
     "unvoiced": 0
    },
@@ -248,8 +248,8 @@
     "unvoiced": 1
    },
    "vocab-extra": {
-    "high": 23,
-    "medium": 11,
+    "high": 30,
+    "medium": 15,
     "low": 1,
     "unvoiced": 0
    }
@@ -2556,6 +2556,16 @@
   {"id":"i-28-w13","kind":"word","group":"lesson-word","voices":["m","f"],"he":"גְּמַר חֲתִימָה טוֹבָה","soundtext":"gue-már ja-ti-má to-vá","confidence":"medium","flags":["final-stress-assumed","mobile-shva"]},
   {"id":"i-50-w13","kind":"word","group":"lesson-word","voices":["m","f"],"he":"גְּמַר חֲתִימָה טוֹבָה","soundtext":"gue-már ja-ti-má to-vá","confidence":"medium","flags":["final-stress-assumed","mobile-shva"]},
   {"id":"i-50-w14","kind":"word","group":"lesson-word","voices":["m","f"],"he":"תִּשְׁמְרִי עַל עַצְמֵךְ","soundtext":"tish-me-rí ál ats-méj","confidence":"medium","flags":["final-stress-assumed","mobile-shva"]},
+  {"id":"calendar-rosh-hashanah","kind":"word","group":"screen-word","voices":["m","f"],"he":"רֹאשׁ הַשָּׁנָה","soundtext":"rósh ha-sha-ná","confidence":"medium","flags":["final-stress-assumed"]},
+  {"id":"calendar-yom-kippur","kind":"word","group":"screen-word","voices":["m","f"],"he":"יוֹם כִּפּוּר","soundtext":"yóm ki-púr","confidence":"high","flags":[]},
+  {"id":"calendar-sukkot","kind":"word","group":"screen-word","voices":["m","f"],"he":"סֻכּוֹת","soundtext":"su-kót","confidence":"medium","flags":["final-stress-assumed"]},
+  {"id":"calendar-shemini-atzeret","kind":"word","group":"screen-word","voices":["m","f"],"he":"שְׁמִינִי עֲצֶרֶת וְשִׂמְחַת תּוֹרָה","soundtext":"she-mi-ní a-tse-rét ve-sim-ját to-rá","confidence":"medium","flags":["final-stress-assumed","mobile-shva","stress-from-small-list"]},
+  {"id":"calendar-tu-bishvat","kind":"word","group":"screen-word","voices":["m","f"],"he":"טוּ בִּשְׁבָט","soundtext":"tú bish-vát","confidence":"medium","flags":["final-stress-assumed"]},
+  {"id":"calendar-yom-hashoah","kind":"word","group":"screen-word","voices":["m","f"],"he":"יוֹם הַשּׁוֹאָה","soundtext":"yóm ha-sho-á","confidence":"medium","flags":["final-stress-assumed"]},
+  {"id":"calendar-yom-hazikaron","kind":"word","group":"screen-word","voices":["m","f"],"he":"יוֹם הַזִּכָּרוֹן","soundtext":"yóm ha-zi-ka-rón","confidence":"medium","flags":["final-stress-assumed"]},
+  {"id":"calendar-yom-haatzmaut","kind":"word","group":"screen-word","voices":["m","f"],"he":"יוֹם הָעַצְמָאוּת","soundtext":"yóm ha-ats-ma-út","confidence":"medium","flags":["alef-vav-mater-repaired","final-stress-assumed"]},
+  {"id":"calendar-shavuot","kind":"word","group":"screen-word","voices":["m","f"],"he":"שָׁבוּעוֹת","soundtext":"sha-vu-ót","confidence":"medium","flags":["final-stress-assumed"]},
+  {"id":"calendar-tisha-bav","kind":"word","group":"screen-word","voices":["m","f"],"he":"תִּשְׁעָה בְּאָב","soundtext":"tish-á be-áv","confidence":"medium","flags":["final-stress-assumed","mobile-shva"]},
   {"id":"bless-priestly-1-w1","kind":"word","group":"prayer-word","voices":["m","f"],"he":"יְבָרֶכְךָ","soundtext":"ye-va-rej-já","confidence":"medium","flags":["final-stress-assumed","mobile-shva"]},
   {"id":"bless-priestly-1-w2","kind":"word","group":"prayer-word","voices":["m","f"],"he":"אֲדֹנָי","soundtext":"a-do-nái","confidence":"medium","flags":["stress-from-small-list"]},
   {"id":"bless-priestly-1-w3","kind":"word","group":"prayer-word","voices":["m","f"],"he":"וְיִשְׁמְרֶךָ׃","soundtext":"ve-yish-me-re-já","confidence":"medium","flags":["final-stress-assumed","mobile-shva"]},
@@ -6163,6 +6173,17 @@
   {"id":"leshev-basukkah-w9","kind":"word","group":"prayer-word","voices":["m","f"],"he":"בְּמִצְוֹתָיו","soundtext":"be-mits-vo-táv","confidence":"low","flags":["final-stress-assumed","mobile-shva","vav-cholam-consonantal"]},
   {"id":"leshev-basukkah-w10","kind":"word","group":"prayer-word","voices":["m","f"],"he":"וְצִוָּנוּ","soundtext":"ve-tsi-va-nú","confidence":"medium","flags":["final-stress-assumed","mobile-shva","vav-dagesh-consonantal"]},
   {"id":"leshev-basukkah-w11","kind":"word","group":"prayer-word","voices":["m","f"],"he":"לֵישֵׁב","soundtext":"le-shév","confidence":"medium","flags":["final-stress-assumed"]},
-  {"id":"leshev-basukkah-w12","kind":"word","group":"prayer-word","voices":["m","f"],"he":"בַּסֻּכָּה׃","soundtext":"ba-su-ká","confidence":"medium","flags":["final-stress-assumed"]}
+  {"id":"leshev-basukkah-w12","kind":"word","group":"prayer-word","voices":["m","f"],"he":"בַּסֻּכָּה׃","soundtext":"ba-su-ká","confidence":"medium","flags":["final-stress-assumed"]},
+  {"id":"ha664d093","kind":"word","group":"vocab-extra","voices":["m","f"],"he":"עוּגָה","soundtext":"u-gá","confidence":"high","flags":[]},
+  {"id":"h1f02450d","kind":"word","group":"vocab-extra","voices":["m","f"],"he":"מִיץ","soundtext":"míts","confidence":"high","flags":[]},
+  {"id":"hd2715ab4","kind":"word","group":"vocab-extra","voices":["m","f"],"he":"גְּלִידָה","soundtext":"gue-lí-da","confidence":"medium","flags":["mobile-shva","words-ipa-colloquial-shva-drop"]},
+  {"id":"h6cc8112a","kind":"word","group":"vocab-extra","voices":["m","f"],"he":"שׁוֹקוֹלָד","soundtext":"sho-ko-lád","confidence":"high","flags":[]},
+  {"id":"h1efbc546","kind":"word","group":"vocab-extra","voices":["m","f"],"he":"מָרָק","soundtext":"ma-rák","confidence":"high","flags":[]},
+  {"id":"hbb1dc7a2","kind":"word","group":"vocab-extra","voices":["m","f"],"he":"תַּפּוּחַ","soundtext":"ta-pú-aj","confidence":"high","flags":[]},
+  {"id":"hec23eb47","kind":"word","group":"vocab-extra","voices":["m","f"],"he":"תַּפּוּז","soundtext":"ta-púz","confidence":"high","flags":[]},
+  {"id":"h08c16650","kind":"word","group":"vocab-extra","voices":["m","f"],"he":"כָּרִיךְ","soundtext":"ka-ríj","confidence":"medium","flags":["final-stress-assumed"]},
+  {"id":"h8417ff6d","kind":"word","group":"vocab-extra","voices":["m","f"],"he":"לִימוֹנָדָה","soundtext":"li-mo-ná-da","confidence":"high","flags":[]},
+  {"id":"h95d4df2c","kind":"word","group":"vocab-extra","voices":["m","f"],"he":"חַלָּה","soundtext":"ja-lá","confidence":"medium","flags":["final-stress-assumed"]},
+  {"id":"h0b5f5c41","kind":"word","group":"vocab-extra","voices":["m","f"],"he":"תִּשְׁעִים","soundtext":"tish-ím","confidence":"medium","flags":["final-stress-assumed"]}
  ]
 }

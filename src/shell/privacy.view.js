@@ -4,23 +4,25 @@ import { h } from './ui.js';
 
 /** Every network request Aleph's own code can make. `sendsUserData` is true only when something the learner typed, scanned or spoke leaves the device. */
 export const FLOWS = [
-  { id: 'own-site', what: 'Pages, scripts, fonts, lesson and corpus data files, and audio files if they exist', to: 'The site that serves Aleph (fetch of relative URLs, plus the service worker in sw.js)', sendsUserData: false, when: 'Whenever the app loads or updates. The request carries no progress or settings.', files: ['sw.js', 'src/app.js'] },
+  { id: 'own-site', what: 'Pages, scripts, fonts, lesson and corpus data files, and audio files if they exist', to: 'The site that serves ALEF (fetch of relative URLs, plus the service worker in sw.js)', sendsUserData: false, when: 'Whenever the app loads or updates. The request carries no progress or settings.', files: ['sw.js', 'src/app.js'] },
   { id: 'local-helper', what: 'Recognised Hebrew text to translate (and the photo itself only if you also choose the local OCR option)', to: 'A helper program on your own computer (loopback address only: 127.0.0.1, localhost or [::1])', sendsUserData: false, when: 'Only if you enter a helper address on the Scan screen. Addresses that are not loopback are refused. It leaves your browser but not your machine.', files: ['src/photo/engines/local-server.js', 'src/photo/scan.view.js'] },
-  { id: 'speech-recognition', what: 'Your voice, if the browser\'s speech recogniser is used on the Say it screen', to: 'Decided by your browser, not by Aleph. Some browsers send the audio to the browser maker\'s servers.', sendsUserData: true, when: 'Only after you press the button. Aleph does not upload audio itself. The Permissions-Policy header in _headers sets microphone=(self), which does not block the recogniser on Aleph\'s own address; read in the file, not tested live.', files: ['src/speak/recognizer.js', 'src/speak/model.js', '_headers'] },
+  { id: 'speech-recognition', what: 'Your voice, if the browser\'s speech recogniser is used on the Say it screen or the Talk screen', to: 'Decided by your browser, not by ALEF. Some browsers send the audio to the browser maker\'s servers.', sendsUserData: true, when: 'Only after you press the button. ALEF does not upload audio itself. The Permissions-Policy header in _headers sets microphone=(self), which does not block the recogniser on ALEF\'s own address; read in the file, not tested live.', files: ['src/speak/recognizer.js', 'src/speak/model.js', 'src/talk/speech.js', '_headers'] },
 ];
 
 /** Things the code does on your device only. */
 export const LOCAL_ONLY = [
   'Your progress, settings, review cards and streaks are saved in your browser, on this device (see the table below). There is no account, and no profile is kept on a server.',
-  'Reading text from a photo happens in your browser. The first time, it downloads about 5 MB of reading data from the Aleph site and keeps it for later.',
-  'Spoken audio uses your browser\'s built-in speech voice, or a short synthetic clip that is one of Aleph\'s own files. Aleph sends no text to any server for this. Which voice is used, and whether a particular voice runs on your device or online, is decided by your browser and device, and Aleph cannot tell which.',
-  'Record and compare asks your browser for microphone permission only when you press Record. The recording is kept in the page\'s memory as a temporary in-browser file so you can play it back. Aleph does not save it to storage, does not upload it and does not send it anywhere; it is dropped when you press Next or leave the screen. Only counts of your "heard a difference" answers are saved. On the hosted site the Permissions-Policy header in _headers sets microphone=(self), so a browser following it allows the microphone for Aleph\'s own address only and no embedded or third-party content; this was read in the file, not tested live.',
+  'Reading text from a photo happens in your browser. The first time, it downloads about 5 MB of reading data from the ALEF site and keeps it for later.',
+  'Spoken audio uses your browser\'s built-in speech voice, or a short synthetic clip that is one of ALEF\'s own files. ALEF sends no text to any server for this. Which voice is used, and whether a particular voice runs on your device or online, is decided by your browser and device, and ALEF cannot tell which.',
+  'Record and compare asks your browser for microphone permission only when you press Record. The recording is kept in the page\'s memory as a temporary in-browser file so you can play it back. ALEF does not save it to storage, does not upload it and does not send it anywhere; it is dropped when you press Next or leave the screen. Only counts of your "heard a difference" answers are saved. On the hosted site the Permissions-Policy header in _headers sets microphone=(self), so a browser following it allows the microphone for ALEF\'s own address only and no embedded or third-party content; this was read in the file, not tested live.',
   'Your gender setting for Hebrew forms (optional) and your word-roots, vowel-fade and gender-drill counts are saved in the settings and keys listed below. They are used on your device only.',
   'Your location is read only when you press the button in Settings. The latitude and longitude are saved in your settings and used on your device for candle-lighting times. Nothing in the code sends them anywhere. You can type numbers instead, or clear them.',
   'Reminders: the app shows notifications while it is open or via the service worker only after you allow them. No push server is configured (the push key is empty in src/shell/notify.js), so nothing is pushed to you from a server.',
   'Calendar and progress files are made in your browser and handed to you as downloads. The Teacher screen can copy a code to your clipboard when you press its button.',
-  'A service worker (sw.js) keeps an offline copy of the app in the browser\'s Cache Storage, in caches named alef-shell-<version>, alef-data-<version> and alef-runtime-v1 (audio clips). They hold Aleph\'s own files only.',
-  'On the Scan screen, "Take or choose a photo" is the browser\'s own file picker, which on a phone can open the camera. Aleph itself never calls the camera API and reads the chosen photo in your browser. The Permissions-Policy header in _headers also allows camera=(self); read in the file, not tested on a device.',
+  'A service worker (sw.js) keeps an offline copy of the app in the browser\'s Cache Storage, in caches named alef-shell-<version>, alef-data-<version>, alef-runtime-v1 (audio clips) and alef-music-v1 (music). Those four hold ALEF\'s own files only. A fifth cache, alef-retention, holds a short on-device plan of which Rimon reminders were already shown and when; it is not sent anywhere. In Settings, “Delete all my data” removes alef-retention, alef-data and alef-music. The shell and runtime caches stay, so the installed app can still open offline, unless you also tick “Also remove the offline copy of the app”.',
+  'The Camera Translator reads and translates your photo in your browser and draws the English on it there. It has no server: no photo or text is sent anywhere. The photo is redrawn first, which drops its location and camera details, and it is not kept: it is gone when you leave the screen unless you press Save.',
+  'On the Scan screen, "Take or choose a photo" is the browser\'s own file picker, which on a phone can open the camera. ALEF itself never calls the camera API and reads the chosen photo in your browser. The Permissions-Policy header in _headers also allows camera=(self); read in the file, not tested on a device.',
+  'On the Light screen, after you press the control that uses the phone flash, ALEF may ask the browser for the camera so it can turn on the torch (the LED flash). A hidden video element keeps the track alive; the picture is not shown to you, is not saved and is not sent anywhere. The camera is released when you turn the flash off or leave the screen. The torch stays off during Shabbat and festival quiet hours, and when reduced motion or calm mode is on.',
 ];
 
 /** localStorage keys (all written with the prefix "alef:"). `file` is one source file that defines or uses the key. */
@@ -32,6 +34,7 @@ export const STORE_KEYS = [
   ['home.builder.v1', 'Built word ids, timestamps and points', 'src/home/builder-model.js'],
   ['games.homebuilder.v1', 'Home word builder game results', 'src/home/builder-model.js'],
   ['rimon.dismissed', 'Whether you hid Rimon; included in your backup', 'src/shell/rimon.js'],
+  ['rimon.seen.v1', 'Rimon: which one-time moments have already been shown (first answer, streak milestones, daily greetings) and the day you last visited, so nothing repeats', 'src/shell/rimon-stage.js'],
 
   ['firstwin.v1', 'First ten minutes: your answers (motivation, level, minutes a day) and the promise date', 'src/firstday/minuteone.model.js'],
   ['firstday.builder.v1', 'Word builder: which words you have built (their ids), how many builds, and when the last one was', 'src/firstday/minuteone.model.js'],
@@ -90,6 +93,7 @@ export const STORE_KEYS = [
   ['games.sentencetrain.v1', 'Game: best score, plays, stars per level, badges and daily challenge results', 'src/games/sentencetrain.view.js'],
   ['games.shadowcraft.v1', 'Game: best score, plays, stars per level, badges and daily challenge results', 'src/games/shadowcraft.view.js'],
   ['games.shuktaxi.v1', 'Game: best score, plays, stars per level, badges and daily challenge results', 'src/games/shuktaxi.view.js'],
+  ['retention.v1', 'Streak freezes, XP, daily goal, gems, hearts, practice league results, the times you usually study (last 60 sessions) and your Rimon reminder choices', 'src/retention/state.js'],
   ['lab.v1', 'Brain Lab: best score, level reached and the last 30 scores per drill, and which drills you finished each day (two weeks)', 'src/lab/lab.core.js'],
   ['games.soundsnap.v1', 'Game: best score, plays, stars per level, badges and daily challenge results', 'src/games/soundsnap.view.js'],
   ['games.speedtype.v1', 'Game: best score, plays, stars per level, badges and daily challenge results', 'src/games/speedtype.view.js'],
@@ -141,6 +145,8 @@ export const STORE_KEYS = [
   ['listen.v1', 'Listen-and-pick and read-and-match tallies', 'src/listen/listen.view.js'],
   ['timedread.v1', 'Timed read-aloud results', 'src/progress/model.js'],
   ['speak.v1', 'Say-it results (not recordings)', 'src/speak/model.js'],
+  ['talk.history', 'The text of your last Talk lines and their translations (no sound)', 'src/talk/talk.model.js'],
+  ['talk.settings', 'Talk choices: direction, read aloud, vowel marks, who is speaking', 'src/talk/talk.model.js'],
   ['sprint.last', 'Last word sprint', 'src/sprint/model.js'],
   ['typing.v1', 'Typing practice results', 'src/typing/typing.js'],
   ['trope.v1', 'Chanting-mark trainer results', 'src/trope/trope.view.js'],
@@ -159,6 +165,8 @@ export const STORE_KEYS = [
   ['loops.v1', 'Daily goal in points, which days you practiced and what you did each day (counts only), your repair days, whether quests are shown, and your badges (which you earned and on what date, as counts only)', 'preview/loops/store.js'],
   ['morning.prefs', 'Morning verse preferences', 'src/morning/plan.js'],
   ['notify.prefs', 'Reminder time and on/off', 'src/shell/boot-hooks.js'],
+  ['notify.log', 'When the last few reminders were shown and which line (for the daily and weekly cap)', 'src/shell/rimon-reminders.js'],
+  ['notify.asked', 'Whether you answered the one-time reminder question after your first win', 'src/shell/reminder-ask.js'],
   ['calendar.prefs', 'Calendar preferences', 'src/shell/notify.js'],
   ['alef:calendar.art', 'Whether the optional calendar artwork files exist on the server (true or false per file), so the calendar asks once per browser session. Kept in sessionStorage under this exact name, gone when the tab closes; holds nothing about you', 'src/curriculum/calendar.markers.js'],
   ['install.v1', 'Install prompt state', 'src/shell/install.js'],
@@ -180,18 +188,18 @@ export function mount(root, ctx) {
   const offDevice = FLOWS.filter((f) => f.sendsUserData);
   root.replaceChildren(h('article', { class: 'stack' },
     h('header', { class: 'card' }, h('h1', { id: 'view-title', tabindex: '-1' }, t('nav.privacy', 'Privacy')),
-      h('p', { class: 'draft-flag', role: 'note' }, 'This is a plain summary of what this version of Aleph does with your data. It was written by reading the app\'s code. It is not legal advice. If you were given a different version, ask the person who gave it to you.'),
-      h('p', {}, 'Short version: Aleph has no account, no analytics and no advertising code (searched for in the source). By default your progress stays in your browser. One optional feature can send something off your device and is described below: your browser\'s own speech recognition on the Say it screen. Online vowel points are not offered on the Scan screen in this build.')),
+      h('p', { class: 'draft-flag', role: 'note' }, 'This is a plain summary of what this version of ALEF does with your data. It was written by reading the app\'s code. It is not legal advice. If you were given a different version, ask the person who gave it to you.'),
+      h('p', {}, 'Short version: ALEF has no account, no analytics and no advertising code (searched for in the source). By default your progress stays in your browser. One optional feature can send something off your device and is described below: your browser\'s own speech recognition on the Say it screen or the Talk screen. Online vowel points are not offered on the Scan screen in this build.')),
     sec('flows', 'What can leave your device',
-      h('p', {}, `${offDevice.length} of the ${FLOWS.length} kinds of network request below can carry something you typed, scanned or said. Everything else only fetches Aleph's own files.`),
+      h('p', {}, `${offDevice.length} of the ${FLOWS.length} kinds of network request below can carry something you typed, scanned or said. Everything else only fetches ALEF's own files.`),
       h('ul', {}, ...FLOWS.map((f) => h('li', { id: `flow-${f.id}`, 'data-sends-user-data': String(f.sendsUserData) },
         h('strong', {}, f.what), h('span', { class: 'block' }, h('span', { class: 'muted' }, 'Goes to: '), f.to), h('span', { class: 'block' }, h('span', { class: 'muted' }, 'When: '), f.when))))),
     sec('local', 'What stays on your device', h('ul', {}, ...LOCAL_ONLY.map((x) => h('li', {}, x)))),
     sec('not', 'What was searched for and not found',
-      h('p', {}, 'The source was searched for analytics or tracking libraries, cookies, beacons, push subscriptions with a live key, camera or microphone uploads by Aleph itself, and any request that sends progress or settings anywhere. None was found in this build. The Vision OCR adapter in src/photo/engines/web.js exists as code but nothing in the app creates it. This is a code reading, not a network capture on a live site.'),
-      h('p', {}, 'Your browser, your device vendor and the site\'s host can still log ordinary things such as your IP address when the app loads. Aleph cannot see or control that.')),
+      h('p', {}, 'The source was searched for analytics or tracking libraries, cookies, beacons, push subscriptions with a live key, camera or microphone uploads by ALEF itself, and any request that sends progress or settings anywhere. None was found in this build. The Light screen may use the camera API on the device to drive the phone torch; nothing from that stream is uploaded. The Vision OCR adapter in src/photo/engines/web.js exists as code but nothing in the app creates it. This is a code reading, not a network capture on a live site.'),
+      h('p', {}, 'Your browser, your device vendor and the site\'s host can still log ordinary things such as your IP address when the app loads. ALEF cannot see or control that.')),
     sec('keys', 'What is stored in your browser',
-      h('p', {}, 'Stored in localStorage on this device (one row, the scroll position, uses sessionStorage as it says). Each key below is saved with the prefix "alef:", except the three rows that say they use an exact name. Aleph uses no IndexedDB and no cookies; the only other place it keeps data is the browser\'s Cache Storage, which holds copies of Aleph\'s own files (and audio files, if any) and no progress or settings. If localStorage is unavailable (for example private browsing), the app keeps this data in memory only and it is lost when you close the tab. Review cards, progress and settings contain what you did in the app, not your name or account.'),
+      h('p', {}, 'Stored in localStorage on this device (one row, the scroll position, uses sessionStorage as it says). Each key below is saved with the prefix "alef:", except the three rows that say they use an exact name. ALEF uses no IndexedDB and no cookies. The browser\'s Cache Storage holds copies of ALEF\'s own files (and audio or music files, if any). The alef-retention cache also holds which Rimon reminders were already shown and when; that is not progress or settings, it is not sent anywhere, and it is removed when you delete all your data. If localStorage is unavailable (for example private browsing), the app keeps this data in memory only and it is lost when you close the tab. Review cards, progress and settings contain what you did in the app, not your name or account.'),
       table('Stored keys', ['Key', 'What it holds', 'Source file'], STORE_KEYS)),
     sec('control', 'Export and delete your data',
       h('ul', {},

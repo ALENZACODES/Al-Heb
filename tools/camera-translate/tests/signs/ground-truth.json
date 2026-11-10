@@ -1,0 +1,360 @@
+{
+ "synthetic": true,
+ "note": "Rendered text with simulated wear. NOT photographs. Do not quote results as real-photo accuracy.",
+ "seed": 2026,
+ "count": 20,
+ "items": [
+  {
+   "id": "optical-store",
+   "file": "optical-store.jpg",
+   "kind": "shop",
+   "variant": "clean",
+   "font": "heebo",
+   "weight": 600,
+   "align": "center",
+   "lines": [
+    {
+     "he": "חנות אופטיקה",
+     "en": "Optical Store"
+    }
+   ],
+   "synthetic": true
+  },
+  {
+   "id": "bakery",
+   "file": "bakery.jpg",
+   "kind": "shop",
+   "variant": "clean",
+   "font": "alef-bold",
+   "weight": null,
+   "align": "center",
+   "lines": [
+    {
+     "he": "מאפייה",
+     "en": "Bakery"
+    }
+   ],
+   "synthetic": true
+  },
+  {
+   "id": "pharmacy",
+   "file": "pharmacy.jpg",
+   "kind": "shop",
+   "variant": "clean",
+   "font": "noto-sans",
+   "weight": 600,
+   "align": "center",
+   "lines": [
+    {
+     "he": "בית מרקחת",
+     "en": "Pharmacy"
+    }
+   ],
+   "synthetic": true
+  },
+  {
+   "id": "exit",
+   "file": "exit.jpg",
+   "kind": "door",
+   "variant": "clean",
+   "font": "alef-bold",
+   "weight": null,
+   "align": "center",
+   "lines": [
+    {
+     "he": "יציאה",
+     "en": "Exit"
+    }
+   ],
+   "synthetic": true
+  },
+  {
+   "id": "closed",
+   "file": "closed.jpg",
+   "kind": "door",
+   "variant": "clean",
+   "font": "heebo",
+   "weight": 600,
+   "align": "center",
+   "lines": [
+    {
+     "he": "סגור",
+     "en": "Closed"
+    }
+   ],
+   "synthetic": true
+  },
+  {
+   "id": "shoe-shop",
+   "file": "shoe-shop.jpg",
+   "kind": "shop",
+   "variant": "clean",
+   "font": "alef-bold",
+   "weight": null,
+   "align": "center",
+   "lines": [
+    {
+     "he": "חנות נעליים",
+     "en": "Shoe Shop"
+    }
+   ],
+   "synthetic": true
+  },
+  {
+   "id": "new-price",
+   "file": "new-price.jpg",
+   "kind": "shop",
+   "variant": "clean",
+   "font": "heebo",
+   "weight": 600,
+   "align": "center",
+   "lines": [
+    {
+     "he": "מחיר חדש",
+     "en": "New Price"
+    }
+   ],
+   "synthetic": true
+  },
+  {
+   "id": "no-entry",
+   "file": "no-entry.jpg",
+   "kind": "door",
+   "variant": "noise",
+   "font": "alef-bold",
+   "weight": null,
+   "align": "center",
+   "lines": [
+    {
+     "he": "אין כניסה",
+     "en": "No Entry"
+    }
+   ],
+   "synthetic": true
+  },
+  {
+   "id": "restrooms",
+   "file": "restrooms.jpg",
+   "kind": "door",
+   "variant": "blur",
+   "font": "noto-sans",
+   "weight": 600,
+   "align": "center",
+   "lines": [
+    {
+     "he": "שירותים",
+     "en": "Restrooms"
+    }
+   ],
+   "synthetic": true
+  },
+  {
+   "id": "herzl-street",
+   "file": "herzl-street.jpg",
+   "kind": "street",
+   "variant": "clean",
+   "font": "alef-bold",
+   "weight": null,
+   "align": "center",
+   "lines": [
+    {
+     "he": "רחוב הרצל",
+     "en": "Herzl Street"
+    }
+   ],
+   "synthetic": true
+  },
+  {
+   "id": "ben-yehuda-blvd",
+   "file": "ben-yehuda-blvd.jpg",
+   "kind": "street",
+   "variant": "perspective",
+   "font": "heebo",
+   "weight": 600,
+   "align": "center",
+   "lines": [
+    {
+     "he": "שדרות בן יהודה",
+     "en": "Ben Yehuda Boulevard"
+    }
+   ],
+   "synthetic": true
+  },
+  {
+   "id": "dizengoff-square",
+   "file": "dizengoff-square.jpg",
+   "kind": "street",
+   "variant": "rotate",
+   "font": "alef-bold",
+   "weight": null,
+   "align": "center",
+   "lines": [
+    {
+     "he": "כיכר דיזנגוף",
+     "en": "Dizengoff Square"
+    }
+   ],
+   "synthetic": true
+  },
+  {
+   "id": "bus-stop",
+   "file": "bus-stop.jpg",
+   "kind": "street",
+   "variant": "clean",
+   "font": "noto-sans",
+   "weight": 300,
+   "align": "center",
+   "lines": [
+    {
+     "he": "תחנת אוטובוס",
+     "en": "Bus Stop"
+    }
+   ],
+   "synthetic": true
+  },
+  {
+   "id": "synagogue",
+   "file": "synagogue.jpg",
+   "kind": "street",
+   "variant": "noise",
+   "font": "frank-ruhl",
+   "weight": 600,
+   "align": "center",
+   "lines": [
+    {
+     "he": "בית כנסת",
+     "en": "Synagogue"
+    }
+   ],
+   "synthetic": true
+  },
+  {
+   "id": "menu-drinks",
+   "file": "menu-drinks.jpg",
+   "kind": "menu",
+   "variant": "clean",
+   "font": "alef",
+   "weight": null,
+   "align": "right",
+   "lines": [
+    {
+     "he": "תפריט",
+     "en": "Menu"
+    },
+    {
+     "he": "קפה 12",
+     "en": "Coffee 12"
+    },
+    {
+     "he": "תה 10",
+     "en": "Tea 10"
+    }
+   ],
+   "synthetic": true
+  },
+  {
+   "id": "menu-food",
+   "file": "menu-food.jpg",
+   "kind": "menu",
+   "variant": "clean",
+   "font": "heebo",
+   "weight": 600,
+   "align": "right",
+   "lines": [
+    {
+     "he": "חומוס 18",
+     "en": "Hummus 18"
+    },
+    {
+     "he": "פלאפל 22",
+     "en": "Falafel 22"
+    },
+    {
+     "he": "סלט 25",
+     "en": "Salad 25"
+    }
+   ],
+   "synthetic": true
+  },
+  {
+   "id": "menu-courses",
+   "file": "menu-courses.jpg",
+   "kind": "menu",
+   "variant": "blur",
+   "font": "frank-ruhl",
+   "weight": 600,
+   "align": "right",
+   "lines": [
+    {
+     "he": "מנה ראשונה",
+     "en": "Starter"
+    },
+    {
+     "he": "מרק",
+     "en": "Soup"
+    },
+    {
+     "he": "קינוחים",
+     "en": "Desserts"
+    }
+   ],
+   "synthetic": true
+  },
+  {
+   "id": "kosher-restaurant",
+   "file": "kosher-restaurant.jpg",
+   "kind": "shop",
+   "variant": "clean",
+   "font": "alef-bold",
+   "weight": null,
+   "align": "center",
+   "lines": [
+    {
+     "he": "מסעדה כשרה",
+     "en": "Kosher Restaurant"
+    },
+    {
+     "he": "ברוכים הבאים",
+     "en": "Welcome"
+    }
+   ],
+   "synthetic": true
+  },
+  {
+   "id": "no-smoking",
+   "file": "no-smoking.jpg",
+   "kind": "door",
+   "variant": "lowcontrast",
+   "font": "heebo",
+   "weight": 600,
+   "align": "center",
+   "lines": [
+    {
+     "he": "אסור לעשן",
+     "en": "No Smoking"
+    }
+   ],
+   "synthetic": true
+  },
+  {
+   "id": "caution-stairs",
+   "file": "caution-stairs.jpg",
+   "kind": "door",
+   "variant": "rotate",
+   "font": "alef-bold",
+   "weight": null,
+   "align": "center",
+   "lines": [
+    {
+     "he": "זהירות",
+     "en": "Caution"
+    },
+    {
+     "he": "מדרגות",
+     "en": "Stairs"
+    }
+   ],
+   "synthetic": true
+  }
+ ]
+}

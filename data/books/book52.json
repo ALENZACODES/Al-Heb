@@ -16,7 +16,7 @@
     "m": "audio/m/israeli/book/book52-p01.mp3"
    },
    "illustration": "a black-and-white photo on wet pavement",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -30,7 +30,7 @@
     "m": "audio/m/israeli/book/book52-p02.mp3"
    },
    "illustration": "the photo close up: a young couple by the sea, 1950s clothes",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -44,7 +44,7 @@
     "m": "audio/m/israeli/book/book52-p03.mp3"
    },
    "illustration": "the couple laughing, a lifeguard tower behind",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -58,7 +58,7 @@
     "m": "audio/m/israeli/book/book52-p04.mp3"
    },
    "illustration": "pencil writing on the back",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -72,7 +72,7 @@
     "m": "audio/m/israeli/book/book52-p05.mp3"
    },
    "illustration": "the woman turning the photo over and over",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -86,7 +86,7 @@
     "m": "audio/m/israeli/book/book52-p06.mp3"
    },
    "illustration": "a post: does anyone know these people?",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -100,7 +100,7 @@
     "m": "audio/m/israeli/book/book52-p07.mp3"
    },
    "illustration": "share counts climbing",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -114,7 +114,7 @@
     "m": "audio/m/israeli/book/book52-p08.mp3"
    },
    "illustration": "a notification: that's my grandmother",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -128,7 +128,7 @@
     "m": "audio/m/israeli/book/book52-p09.mp3"
    },
    "illustration": "a man's message with a heart",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -142,7 +142,7 @@
     "m": "audio/m/israeli/book/book52-p10.mp3"
    },
    "illustration": "Yael and a man her age at a table, the photo between them",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -156,7 +156,7 @@
     "m": "audio/m/israeli/book/book52-p11.mp3"
    },
    "illustration": "the grandson speaking, eyes bright",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -170,8 +170,9 @@
     "m": "audio/m/israeli/book/book52-p12.mp3"
    },
    "illustration": "the photo in a frame on a shelf beside a newer one of the grandson and Yael",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   }
- ]
+ ],
+ "hasImages": true
 }

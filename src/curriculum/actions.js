@@ -9,10 +9,15 @@ import { nextFadeLevel } from "./fade.js";
 import { memoryCardsFor, ensureMemoryCards } from "../letters/memory.core.js";
 import { loadContent } from "./content.js";
 export { loadState };
-import { available } from './lessons.js';
-function pointToNext(lesson, completed) {
+async function pointToNext(lesson, completed) {
+  const { available } = await import('./lessons.js');
   const next = available(Object.keys(completed), lesson.track)[0];
   signalRimon('lesson', { nextHref: next ? '#/learn?lesson=' + encodeURIComponent(next.id) : '#/learn' });
+}
+async function fullLesson(lesson) {
+  if (lesson && Array.isArray(lesson.words)) return lesson;
+  const { byId } = await import('./lessons.js');
+  return byId[lesson?.id] || lesson;
 }
 
 /**
@@ -39,9 +44,10 @@ async function planCompletion(ctx, lesson, now, applyOutcomes) {
  * (A store that has fallen back to memory still accepts the writes; that is disclosed by the storage notice, not an error.)
  */
 export async function completeLesson(ctx, lesson, now = Date.now()) {
-  const { added, completed, writes } = await planCompletion(ctx, lesson, now);
+  const full = await fullLesson(lesson);
+  const { added, completed, writes } = await planCompletion(ctx, full, now);
   await storeWriteAll(ctx, writes);
-  pointToNext(lesson, completed);
+  pointToNext(full, completed);
   return { added, completed };
 }
 

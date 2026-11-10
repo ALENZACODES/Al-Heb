@@ -35,7 +35,7 @@ test('no route is unreachable: static routes are in the menu or search; paramete
     for (const r of ROUTES) {
       if (!av.has(r.name)) continue;
       if (isStatic(r)) { assert.ok(search.has(r.name), `${r.name} not searchable`); assert.ok(menu.has(r.name) || r.name === 'welcome' || PREVIEW_HIDDEN.has(r.name), `${r.name} not in the menu`); }
-      else { const p = PARENT[r.name]; assert.ok(p, `${r.name} has no parent`); assert.ok(isStatic(ROUTES.find((x) => x.name === p))); assert.ok(!av.has(p) || (search.has(p) && menu.has(p)), `${r.name} parent ${p} unreachable`); }
+      else { const p = PARENT[r.name]; assert.ok(p, `${r.name} has no parent`); assert.ok(isStatic(ROUTES.find((x) => x.name === p))); assert.ok(!av.has(p) || (search.has(p) && (menu.has(p) || PREVIEW_HIDDEN.has(p))), `${r.name} parent ${p} unreachable`); }
     }
   }
 });

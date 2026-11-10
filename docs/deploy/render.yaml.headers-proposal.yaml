@@ -1,0 +1,99 @@
+# PROPOSAL ONLY — not a live Render Blueprint.
+#
+# Do not copy this file to the repository root and do not apply it to the live
+# Render static site (alef-review.onrender.com) until John approves a deploy.
+# Committing this path cannot change the live service.
+#
+# The repo `_headers` file is Cloudflare Pages format, so Render ignores it.
+# When approved, paste these headers into the Render static-site dashboard, or
+# drop this `headers` block into a root render.yaml under the static service.
+#
+# Companion notes: docs/deploy/RENDER-HEADERS-2026-11-10.md
+# The CSP matches `_headers`. It allows the learner's optional local translation
+# helper on loopback and the vendored Tesseract worker. No third-party origins.
+
+# headers:
+#   - path: /*
+#     name: Content-Security-Policy
+#     value: >-
+#       default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline';
+#       img-src 'self' data: blob:; media-src 'self' blob:; font-src 'self';
+#       connect-src 'self' http://127.0.0.1:* http://localhost:*; worker-src 'self' blob:;
+#       manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'
+#   - path: /*
+#     name: X-Content-Type-Options
+#     value: nosniff
+#   - path: /*
+#     name: Referrer-Policy
+#     value: no-referrer
+#   - path: /*
+#     name: Permissions-Policy
+#     value: camera=(self), geolocation=(self), microphone=(self), payment=(), usb=(), bluetooth=(), serial=(), interest-cohort=()
+#   - path: /*
+#     name: X-Frame-Options
+#     value: DENY
+#   - path: /*
+#     name: Cross-Origin-Opener-Policy
+#     value: same-origin
+#   - path: /manifest.webmanifest
+#     name: Content-Type
+#     value: application/manifest+json
+#   - path: /manifest.webmanifest
+#     name: Cache-Control
+#     value: no-cache
+#   - path: /
+#     name: Cache-Control
+#     value: no-cache
+#   - path: /index.html
+#     name: Cache-Control
+#     value: no-cache
+#   - path: /sw.js
+#     name: Cache-Control
+#     value: no-cache
+#   - path: /precache-manifest.js
+#     name: Cache-Control
+#     value: no-cache
+
+services:
+  - type: web
+    name: alef-review
+    runtime: static
+    # buildCommand / staticPublishPath intentionally omitted — this file must
+    # not be usable as a drop-in Blueprint.
+    headers:
+      - path: /*
+        name: Content-Security-Policy
+        value: "default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' blob:; font-src 'self'; connect-src 'self' http://127.0.0.1:* http://localhost:*; worker-src 'self' blob:; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'"
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+      - path: /*
+        name: Referrer-Policy
+        value: no-referrer
+      - path: /*
+        name: Permissions-Policy
+        value: "camera=(self), geolocation=(self), microphone=(self), payment=(), usb=(), bluetooth=(), serial=(), interest-cohort=()"
+      - path: /*
+        name: X-Frame-Options
+        value: DENY
+      - path: /*
+        name: Cross-Origin-Opener-Policy
+        value: same-origin
+      - path: /manifest.webmanifest
+        name: Content-Type
+        value: application/manifest+json
+      - path: /manifest.webmanifest
+        name: Cache-Control
+        value: no-cache
+      - path: /
+        name: Cache-Control
+        value: no-cache
+      - path: /index.html
+        name: Cache-Control
+        value: no-cache
+      - path: /sw.js
+        name: Cache-Control
+        value: no-cache
+      - path: /precache-manifest.js
+        name: Cache-Control
+        value: no-cache

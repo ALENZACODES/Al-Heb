@@ -1,4 +1,5 @@
 /** One lesson: its letters, vowels, words and prayer lines, with audio, completion and links to review. */
+import { streakVisible } from "../shell/comfort.js";
 import { lessons, byId } from "./lessons.js";
 import { el, heText, tr, replaceKeepingFocus, levelLabel } from "./dom.js";
 import { loadContent, vowelEnglish } from "./content.js";
@@ -27,7 +28,7 @@ export function sizeQuickCheck(questions, lesson) {
 }
 export function mountLesson(root, ctx, lessonId) {
   // Short sessions and calm mode: the lesson comes in small parts (lesson.parts.js)
-  if (chunkedLessons(ctx) && byId[lessonId]) return mountChunkedLesson(root, ctx, lessonId);
+  if ((chunkedLessons(ctx) || ctx?.query?.quick === "1") && byId[lessonId]) return mountChunkedLesson(root, ctx, lessonId); // ?quick=1: the 3-minute lesson uses the same short parts
   let alive = true, offQuiz = () => {};
   const wrap = el("article", { class: "alef-lesson-page", "aria-labelledby": "view-title" });
   root.append(wrap);
@@ -146,7 +147,7 @@ export function mountLesson(root, ctx, lessonId) {
         let dueCount; try { dueCount = dueCards(Object.values((await loadState(ctx)).cards), Date.now()).length; } catch { dueCount = undefined; } // hide "Review now" when nothing is due
         if (!alive) return;
         const label = (id) => { const q = questions.find((x) => x.id === id); return q ? `${q.promptHe ? q.promptHe + " " : ""}${q.options[q.answerIndex].text}` : id; };
-        quizHost.replaceChildren(summaryNode({ title: "Lesson complete", countText: `${stats.right} of ${stats.answered} right first time.`, stats, ms,
+        quizHost.replaceChildren(summaryNode({ ctx, store: ctx?.store, sfx: ctx?.sfx, showStreak: streakVisible(ctx), title: "Lesson complete", countText: `${stats.right} of ${stats.answered} right first time.`, stats, ms,
           goodLabels: Object.keys(results).filter((id) => results[id]).map(label), missedLabels: stats.missed.map(label), skippedN: stats.skipped.length, cardsUpdated: updated, dueCount,
           nextHref: next ? `#/learn?lesson=${next.id}` : "#/learn", nextLabel: next ? "Next lesson" : "All lessons",
           extraLinks: [el("a", { class: "btn secondary", href: `#/learn?lesson=${lesson.id}&review=1` }, "Review these cards")] }));

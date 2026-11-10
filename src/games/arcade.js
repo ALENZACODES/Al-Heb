@@ -278,6 +278,7 @@ export async function createArcade(root, ctx, spec) {
           next ? h('a', { class: 'btn secondary', href: `#/${next.id}` }, `Next: ${next.title}`) : null,
           h('a', { class: 'btn secondary', href: '#/games' }, 'All games'))));
       reactRimon(streakNew.length ? 'stretch' : stars >= 2 ? 'highfive' : stars ? 'laugh' : 'sad');
+      try { globalThis.document?.dispatchEvent?.(new CustomEvent('alef:game-finished', { detail: { stars } })); } catch { /* optional: XP listens for this (src/retention/) */ }
       renderLevels(); renderStreak();
       status.textContent = `${why} ${score} points, ${stars} of 3 stars.`;
       try { results.querySelector('h2')?.focus?.(); } catch { /* no focus in small DOM */ }

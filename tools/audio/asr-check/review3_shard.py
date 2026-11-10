@@ -59,7 +59,10 @@ def main():
     ap.add_argument('--of', type=int, default=1)
     ap.add_argument('--out', required=True)
     ap.add_argument('--probe', action='store_true', help='one request only, to see whether the API is enabled')
+    ap.add_argument('--engine', default='google', choices=['google', 'whisper'], help='whisper: OpenAI Whisper large-v3, free, on the runner')
     a = ap.parse_args()
+    if a.engine == 'whisper':
+        return whisper_main(a)
     k = key()
     if not k:
         sys.exit('voice key not found')
@@ -96,6 +99,27 @@ def main():
             out.write(json.dumps({'file': c, 'text': t, 'heard': heard, 'acc': round(acc, 3), 'issues': [x['say'] for x in iss]}, ensure_ascii=False) + '\n')
         out.flush(); n += len(chunk)
         print(f'{n}/{len(todo)} clips', flush=True)
+
+
+def whisper_main(a):
+    from faster_whisper import WhisperModel
+    m = WhisperModel('large-v3', device='cpu', compute_type='int8', cpu_threads=os.cpu_count() or 2)
+    todo = [l.strip() for l in open(a.list, encoding='utf-8') if l.strip()][a.shard::a.of]
+    done = {json.loads(l)['file'] for l in open(a.out, encoding='utf-8')} if os.path.exists(a.out) else set()
+    out = open(a.out, 'a', encoding='utf-8')
+    for n, c in enumerate(todo, 1):
+        if c in done:
+            continue
+        t = text_of(c)
+        x = pcm(os.path.join(ROOT, c)).astype(np.float32) / 32768
+        segs, _ = m.transcribe(x, language='he', beam_size=1, temperature=0, condition_on_previous_text=False,
+                               vad_filter=False, max_new_tokens=300)
+        heard = ' '.join(s.text.strip() for s in segs)
+        acc, iss, nw = S.compare(t, heard)
+        out.write(json.dumps({'file': c, 'text': t, 'heard': heard, 'acc': round(acc, 3), 'issues': [i['say'] for i in iss], 'engine': 'whisper-large-v3'}, ensure_ascii=False) + '\n')
+        out.flush()
+        if n % 25 == 0:
+            print(f'{n}/{len(todo)}', flush=True)
 
 
 if __name__ == '__main__':

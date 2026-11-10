@@ -176,7 +176,7 @@ test("day view: Shabbat Hanukkah in Toronto renders both sections, key words tab
   for (const n of root.find((x) => x.attrs.lang === "he")) assert.equal(n.attrs.dir, "rtl");
   assert.ok(root.find((n) => n.tag === "table" && /alef-day-words/.test(n.className)).length === 2);
   assert.deepEqual(root.find((n) => n.attrs["data-marker"]).map((n) => n.attrs["data-marker"]), ["festival-minor", "shabbat", "havdalah"]);
-  assert.equal(globalThis.document.title, "Saturday 5 December 2026 - Aleph");
+  assert.equal(globalThis.document.title, "Saturday 5 December 2026 - ALEF");
   un(); assert.equal(root.children.length, 0);
 });
 
@@ -185,7 +185,7 @@ test("day view: no city asks for one and invents no time; a bad date gets a plai
   const un = mount(root, { params: { date: "2026-12-04" }, store: memStore(), hasRoute: () => false, dayData });
   await waitFor(() => /Friday, the eve of Shabbat/.test(root.text), { message: "day view never rendered" });
   assert.match(root.text, /Choose a city on the Calendar screen/); assert.doesNotMatch(root.text, /16:23/);
-  assert.match(root.text, /None of these texts is in Aleph yet/);
+  assert.match(root.text, /None of these texts is in ALEF yet/);
   un();
   const bad = new Node_("div");
   const un2 = mount(bad, { params: { date: "2026-02-30" }, dayData });

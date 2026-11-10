@@ -1,14 +1,14 @@
-// The Aleph opening: a real, deeply weathered Tree of Life at olive harvest.
+// The Aleph opening: the Tree of Life at first light (heaven-sent home hero).
 // Original, text-free artwork; all Hebrew, prayers and controls remain live DOM.
 // Motion is limited to CSS atmosphere and gentle compositor-friendly parallax.
 import { h } from './ui.js';
 
-export const ANCIENT_TREE_SRC = 'assets/img/gen/HERO_olive_harvest_astral.1600.webp';
-export const ANCIENT_TREE_MOBILE_SRC = 'assets/img/gen/HERO_olive_harvest_astral.900.webp';
+export const ANCIENT_TREE_SRC = 'assets/img/gen/HERO_home_heaven.1536x1024.webp';
+export const ANCIENT_TREE_MOBILE_SRC = 'assets/img/gen/HERO_home_heaven.1024x1536.webp';
 export const ANCIENT_TREE_DESCRIPTION =
-  'An enormous ancient olive tree with weathered twisting roots at sunset, ripe olives, ' +
-  'hand-thrown clay harvest vessels, a shofar resting on stone, an oil lamp and pomegranates ' +
-  'beneath a star-filled sky. Light spreads over distant Jerusalem hills.';
+  'An ancient olive tree on a Jerusalem hillside at first light, its canopy opening into a ' +
+  'soft column of golden light, a basket of pomegranates on a low stone wall, and a calm ' +
+  'deep-green sky. There is no writing in the picture.';
 
 const mounted = new Set();
 let observer = null;

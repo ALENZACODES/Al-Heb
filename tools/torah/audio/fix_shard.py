@@ -22,6 +22,17 @@ NIQQUD = re.compile('[\u0591-\u05C7]')
 
 def candidates(v, text, rnd):
     """(name, voice, text to speak, speaking rate)"""
+    if rnd == 5:   # one take only: the kind that fixed most in rounds 3 and 4
+        apart = ', '.join(text.replace('.', '').split()) + '.'
+        return [('wavenet-apart', VOICES[v]['wavenet'], apart, 0.9)]
+    if rnd == 4:
+        apart = ', '.join(text.replace('.', '').split()) + '.'
+        return [('wavenet-apart-0.8', VOICES[v]['wavenet'], apart, 0.8), ('standard-apart', STANDARD[v], apart, 0.9),
+                ('wavenet-apart-plain', VOICES[v]['wavenet'], NIQQUD.sub('', apart), 0.9), ('chirp-apart-0.75', VOICES[v]['chirp'], apart, 0.75)]
+    if rnd == 3:
+        apart = ', '.join(text.replace('.', '').split()) + '.'
+        return [('wavenet-apart', VOICES[v]['wavenet'], apart, 0.9), ('chirp-apart', VOICES[v]['chirp'], apart, 0.9),
+                ('wavenet-0.75', VOICES[v]['wavenet'], text, 0.75), ('chirp-0.75', VOICES[v]['chirp'], text, 0.75)]
     if rnd == 1:
         return [(n, voice, text, 1.0) for n, voice in VOICES[v].items()]
     return [('wavenet-slow', VOICES[v]['wavenet'], text, 0.85), ('chirp-slow', VOICES[v]['chirp'], text, 0.85),

@@ -1,4 +1,4 @@
-export const SPRITE = 'assets/img/rimon/rimon-sprite.png';
+export const SPRITE = 'assets/img/rimon/web/rimon-sprite.webp'; // light WebP; the original PNG stays at assets/img/rimon/rimon-sprite.png
 export const FRAMES = Object.freeze(['open','half-closed','closed','wink-left','wink-right','yawn','stretch','laugh-one','laugh-two','bounce','sad','thinking','point','wave-in','wave-out','breathe']);
 export const SEQUENCES = Object.freeze({
   wave: { frames:[13,14,13,14,13,0], hold:180 },

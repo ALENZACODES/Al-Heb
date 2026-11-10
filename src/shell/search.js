@@ -17,6 +17,7 @@ const tokens = (q) => norm(q).split(' ').filter(Boolean);
  *  it, not only the page that happens to be named it. */
 const FEATURE_WORDS = {
   scan: 'camera photo picture photograph menu sign ocr printed page',
+  camera: 'camera translate translator translation photo picture sign menu street shop english',
   read: 'prayers prayer siddur blessings bless synagogue service',
   speak: 'say pronounce pronunciation microphone aloud practice speaking',
   phrases: 'sayings sentences everyday expressions',

@@ -47,10 +47,12 @@ test('synthetic clips have files and explicit provenance; none is a human record
     assert.ok(e.source === 'outside-synthetic' || e.source === 'paid-cloud' || /^tts[:-]/.test(e.source), `${e.path} source ${e.source}`);
     assert.notEqual(e.synth?.reviewed, true, `${e.path} claims a review that has not happened`);
     if (e.status === 'synthetic-unreviewed') {
-      // Ingested clips only: outside-synthetic (outside generator), tts-respelled (Sephardi/Ashkenazi pre-existing game audio,
-      // Latin sound word spoken) and tts-hebrew (Israeli pre-existing game audio, pointed Hebrew spoken — fix #23: the 17
-      // tts-hebrew rows are the same ingest class as the tts-respelled rows, Israeli tradition; tools/tts/lib.mjs SOURCES).
-      assert.ok(['outside-synthetic', 'tts-respelled', 'tts-hebrew'].includes(e.source), e.path);
+      // Ingested clips: outside-synthetic, tts-respelled, tts-hebrew (tools/tts/lib.mjs SOURCES), and the two admitted
+      // own-tradition sources in src/audio/player.js ACCENT_SOURCES (tts-respelled-israeli-voice, tts-respelled-tempo-capped).
+      assert.ok(
+        e.source === 'outside-synthetic' || e.source === 'tts-respelled' || e.source === 'tts-hebrew' || e.source === 'tts-respelled-israeli-voice' || e.source === 'tts-respelled-tempo-capped',
+        e.path,
+      );
       assert.notEqual(e.synth?.reviewed, true, e.path);
     }
     assert.equal(fs.existsSync(new URL('../' + e.path, import.meta.url)), true, e.path);
@@ -175,7 +177,7 @@ test('vocab ids: every mapped or Listen-pool vocab id has a word entry for every
   const ids = new Set([...Object.values(map), ...buildPool(words, cfg).map((w) => w.id)]);
   for (const id of ids) for (const t of ['israeli', 'sephardi', 'ashkenazi']) for (const v of ['m', 'f']) assert.ok(have.has(`${v}|${t}|${id}`), `${v}/${t}/${id}`);
   assert.ok(manifest.filter((x) => x.group === 'vocab-alias').every((e) => /^word\/[a-z0-9._-]+-w\d+$/.test(e.aliasOf)));
-  assert.ok(manifest.filter((x) => x.group === 'vocab-alias' || x.group === 'vocab-extra').every((e) => e.status === 'missing' || e.status === 'recorded' || e.status === 'tts'));
+  assert.ok(manifest.filter((x) => x.group === 'vocab-alias' || x.group === 'vocab-extra').every((e) => e.status === 'missing' || e.status === 'recorded' || e.status === 'tts' || e.status === 'synthetic-unreviewed'));
 });
 
 test('manifest serialization preserves every field and stays deterministic without indentation overhead', () => {

@@ -49,6 +49,7 @@ export function mount(root, ctx = {}) {
   if (forced?.demo) wrap.append(el('p', { class: 'photo-demo-banner', role: 'status' }, 'demo engine: no real OCR installed. The cards below are canned sample text, not read from your photo.'));
   wrap.append(el('p', { class: 'photo-accuracy', role: 'note', style: 'border-left:4px solid #b26a00;padding:0.4em 0.8em;background:rgba(178,106,0,0.10)' }, ACCURACY_NOTICE));
   wrap.append(el('p', { class: 'photo-scope' }, 'Printed text only. Handwriting is not supported.'));
+  wrap.append(el('p', { class: 'photo-camera-link' }, 'Want the English drawn on a photo of a sign or menu? ', el('a', { href: '#/camera' }, 'Open the Camera Translator'), '.'));
   if (!forced) wrap.append(el('p', { class: 'photo-privacy' }, 'The photo is read on this device (first use downloads about 5 MB of OCR data, then it is cached). It is not uploaded. Accuracy on real photos has not been measured yet: check what was read against the page.'));
   // No online vowelizer in this build: unpointed text stays as read on this device (prayer lines that match the
   // built-in texts still show their stored pointing).

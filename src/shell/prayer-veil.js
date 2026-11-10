@@ -17,7 +17,7 @@ export const MODEH_ANI = Object.freeze({
   he: 'מוֹדֶה אֲנִי לְפָנֶיךָ מֶלֶךְ חַי וְקַיָּם, שֶׁהֶחֱזַרְתָּ בִּי נִשְׁמָתִי בְּחֶמְלָה. רַבָּה אֱמוּנָתֶךָ',
   tr: 'Modeh ani lefanecha, Melech chai vekayam, shehechezarta bi nishmati bechemla. Raba emunatecha.',
   en: 'I thank You, living and eternal King, for returning my soul to me with compassion. Great is Your faithfulness.',
-  source: 'Traditional Modeh Ani — exact wording supplied in the Aleph homepage brief; edition collation pending.'
+  source: 'Traditional Modeh Ani — exact wording supplied in the ALEF homepage brief; edition collation pending.'
 });
 const LAST_KEY = 'alef:opening-prayer:last:v1';
 const VISIT_KEY = 'alef:opening-prayer:seen:v1';

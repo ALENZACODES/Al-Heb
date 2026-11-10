@@ -32,7 +32,7 @@ export async function loadPronunciationData(fetchImpl = globalThis.fetch) {
 }
 
 const CSS = `
-.alef-sounds{font:16px/1.5 system-ui,sans-serif;max-width:60rem;margin:0 auto;padding:1rem}
+.alef-sounds{font:16px/1.5 system-ui,sans-serif;max-width:60rem;margin:0 auto;padding:1rem;min-block-size:calc(100svh - 9.5rem)}
 .alef-sounds h2,.alef-sounds h3{margin:1.2em 0 .4em}
 .alef-sounds fieldset{border:1px solid var(--border,#888);border-radius:8px;padding:.5rem 1rem}
 .alef-sounds fieldset label{margin-inline-end:1.2rem;white-space:nowrap}
@@ -49,6 +49,7 @@ const CSS = `
 .alef-sounds th,.alef-sounds td{border-bottom:1px solid var(--border,#888)6;padding:.3rem .5rem;text-align:start;vertical-align:top}
 .alef-sounds .current{font-weight:600}
 .alef-sounds details{border:1px solid var(--border,#888)6;border-radius:8px;padding:.4rem .8rem;margin:.4rem 0}
+.alef-sounds .trad-note{font-size:.95rem;line-height:1.4;max-width:40rem}
 `;
 
 /**
@@ -87,11 +88,29 @@ export function mount(root, ctx = {}) {
   const ipaEl = (text) => h('span', { class: 'ipa', dir: 'ltr', lang: 'und-fonipa' }, text);
   const link = (src) => h('a', { href: src.url, rel: 'noopener noreferrer', target: '_blank' }, src.label);
 
-  root.replaceChildren();
+  const keptTitle = root.querySelector && root.querySelector('#view-title');
+  // Keep #view-title in #main; replacing or reparenting it resets LCP to this late mount.
+  if (root.replaceChildren && !keptTitle) root.replaceChildren();
+  else if (keptTitle) {
+    const kids = root.children ? [...root.children] : [];
+    for (const n of kids) {
+      if (n === keptTitle) continue;
+      if (n.remove) n.remove();
+      else if ((n.parentNode || n.parent) && (n.parentNode || n.parent).removeChild) (n.parentNode || n.parent).removeChild(n);
+    }
+  }
   const style = h('style', {}, CSS);
-  const wrap = h('section', { class: 'alef-sounds', 'aria-labelledby': 'alef-sounds-title' });
+  const wrap = h('section', { class: 'alef-sounds', 'aria-labelledby': 'view-title' });
+  const title = keptTitle || h('h1', { id: 'view-title' }, tr('sounds.title', 'Vowels and sounds'));
+  title.id = 'view-title';
+  if (!title.textContent) title.textContent = tr('sounds.title', 'Vowels and sounds');
+  if (!title.parentNode || title.parentNode !== root) {
+    if (root.insertBefore && root.firstChild) root.insertBefore(title, root.firstChild);
+    else if (root.append) root.append(title);
+  }
   root.append(style, wrap);
-  wrap.append(h('h2', { id: 'alef-sounds-title' }, tr('sounds.title', 'Vowels and sounds')), h('p', { role: 'status' }, tr('sounds.loading', 'Loading...')));
+  const loading = h('p', { role: 'status' }, tr('sounds.loading', 'Loading...'));
+  wrap.append(loading);
 
   /** @type {Array<() => void>} */
   const tradListeners = []; // functions that refresh tradition-dependent text
@@ -118,7 +137,10 @@ export function mount(root, ctx = {}) {
   }
 
   const build = (data) => {
-    wrap.replaceChildren(h('h2', { id: 'alef-sounds-title' }, tr('sounds.title', 'Vowels and sounds')));
+    loading.textContent = '';
+    const lp = loading.parentNode || loading.parent;
+    if (lp) { if (typeof lp.removeChild === 'function') lp.removeChild(loading); else if (Array.isArray(lp.children)) lp.children = lp.children.filter((c) => c !== loading); }
+    // Keep the first-paint heading so it remains the LCP element; append the chart below it.
 
     // --- tradition switcher
     const name = `alef-trad-${Math.random().toString(36).slice(2, 8)}`;
@@ -144,7 +166,7 @@ export function mount(root, ctx = {}) {
     live.textContent = NOTES[tradition];
 
     // --- vowel chart
-    wrap.append(h('h3', {}, tr('sounds.chart', 'Vowel chart')), h('p', {}, isAudioFree(ctx) ? 'The sounds below follow the tradition you picked.' : tr('sounds.chart.hint', 'Tap a sign to hear it. The sounds below follow the tradition you picked.')));
+    wrap.append(h('h2', {}, tr('sounds.chart', 'Vowel chart')), h('p', {}, isAudioFree(ctx) ? 'The sounds below follow the tradition you picked.' : tr('sounds.chart.hint', 'Tap a sign to hear it. The sounds below follow the tradition you picked.')));
     const grid = h('ul', { class: 'vowel-grid' });
     for (const rec of data.niqqud.records) {
       const info = h('p', {});
@@ -190,11 +212,11 @@ export function mount(root, ctx = {}) {
     };
     tradListeners.push(crow);
     crow();
-    wrap.append(h('h3', {}, 'Letters whose sound depends on a dot or the tradition'), h('div', { class: 'table-wrap', tabindex: '0', role: 'region', 'aria-label': 'Letter sounds (scrolls sideways)' }, h('table', {}, h('thead', {}, h('tr', {}, h('th', { scope: 'col' }, 'Letter'), h('th', { scope: 'col' }, 'IPA'), h('th', { scope: 'col' }, 'Sounds like'))), tbody)));
+    wrap.append(h('h2', {}, 'Letters whose sound depends on a dot or the tradition'), h('div', { class: 'table-wrap', tabindex: '0', role: 'region', 'aria-label': 'Letter sounds (scrolls sideways)' }, h('table', {}, h('thead', {}, h('tr', {}, h('th', { scope: 'col' }, 'Letter'), h('th', { scope: 'col' }, 'IPA'), h('th', { scope: 'col' }, 'Sounds like'))), tbody)));
 
     // --- every letter and vowel, described in words (no audio needed)
     const wordsBox = h('div', { id: 'sounds-in-words' });
-    wrap.append(h('h3', {}, 'How each sound is said, in words'),
+    wrap.append(h('h2', {}, 'How each sound is said, in words'),
       h('p', {}, isAudioFree(ctx) ? 'You chose "I do not use audio", so the Tap-to-hear parts are left out and the sounds are written here.' : 'For when you cannot or do not want to listen: each letter and vowel described in words, with a comparison to English.'), wordsBox);
     let sdata = null;
     const fillWords = () => {
@@ -209,13 +231,13 @@ export function mount(root, ctx = {}) {
     (ctx.soundTextData ? Promise.resolve(ctx.soundTextData) : loadSoundTextData()).then((sd) => { sdata = sd; fillWords(); }).catch(() => {});
 
     // --- it's easy
-    wrap.append(h('h3', {}, "Why this is easier than it looks"));
+    wrap.append(h('h2', {}, "Why this is easier than it looks"));
     const facts = h('ul', {});
     for (const f of data.easy.facts) facts.append(h('li', {}, f.text, ' ', h('small', {}, '(', link(f.source), ')'), f.note ? h('small', {}, ` ${f.note}`) : ''));
     wrap.append(facts);
 
     // --- drills
-    wrap.append(h('h3', {}, tr('sounds.drills', 'Sound like a local: drills')));
+    wrap.append(h('h2', {}, tr('sounds.drills', 'Sound like a local: drills')));
     const dl = h('ol', {});
     for (const d of data.drills.drills) {
       const det = h('details', {}, h('summary', {}, d.title, d.verified === false ? h('span', { class: 'badge' }, 'unverified') : ''),
@@ -233,7 +255,7 @@ export function mount(root, ctx = {}) {
     wrap.append(dl);
 
     // --- switch cards + pairs
-    wrap.append(h('h3', {}, 'Switching between Ashkenazi and Sephardi: five changes'));
+    wrap.append(h('h2', {}, 'Switching between Ashkenazi and Sephardi: five changes'));
     const cards = h('ol', {});
     for (const c of data.drills.switchCards) cards.append(h('li', {}, h('strong', {}, c.title), ': ', c.rule));
     wrap.append(cards, h('p', {}, data.drills.switchConsistency.text));
@@ -247,7 +269,7 @@ export function mount(root, ctx = {}) {
     };
     tradListeners.push(prow);
     prow();
-    wrap.append(h('h3', {}, 'Same word, two traditions'), h('div', { class: 'table-wrap', tabindex: '0', role: 'region', 'aria-label': 'Same word in two traditions (scrolls sideways)' }, h('table', {}, h('thead', {}, h('tr', {}, ['Hebrew', 'Israeli / Sephardi', 'Ashkenazi', 'Meaning'].map((x) => h('th', { scope: 'col' }, x)))), pbody)));
+    wrap.append(h('h2', {}, 'Same word, two traditions'), h('div', { class: 'table-wrap', tabindex: '0', role: 'region', 'aria-label': 'Same word in two traditions (scrolls sideways)' }, h('table', {}, h('thead', {}, h('tr', {}, ['Hebrew', 'Israeli / Sephardi', 'Ashkenazi', 'Meaning'].map((x) => h('th', { scope: 'col' }, x)))), pbody)));
   };
 
   const dataPromise = ctx.pronunciationData ? Promise.resolve(ctx.pronunciationData) : loadPronunciationData();

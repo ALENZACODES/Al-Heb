@@ -70,7 +70,7 @@ const rep = verifyAll();
 test('corpus: every registry record passes the hard checks', () => {
   const bad = rep.records.filter((r) => r.hard.length).map((r) => r.id + ': ' + r.hard.map((i) => i.code).join(','));
   assert.deepEqual(bad, []);
-  assert.equal(rep.summary.records, 70);
+  assert.equal(rep.summary.records, 88);
 });
 
 test('corpus: every record re-derives from the committed snapshot (equal or clip)', () => {
@@ -78,8 +78,8 @@ test('corpus: every record re-derives from the committed snapshot (equal or clip
   assert.deepEqual(bad, []);
 });
 
-test('corpus: licence listing matches LICENSES.md expectations (42 Sefaria-labelled Hebrew records, 9 Metsudah)', () => {
-  assert.equal(rep.summary.licenceUnverified, 42);
+test('corpus: licence listing matches LICENSES.md expectations (49 Sefaria-labelled Hebrew records, 9 Metsudah (42 plus 7 festival Kiddush / leshev records added 2026-11-10))', () => {
+  assert.equal(rep.summary.licenceUnverified, 49);
   assert.equal(rep.summary.metsudah, 9);
   for (const r of rep.records.filter((x) => x.licenceUnverified)) assert.match(r.sourceUrl, /^https:\/\/www\.sefaria\.org\//, r.id);
   for (const r of rep.records.filter((x) => x.metsudah)) assert.equal(r.license, 'CC-BY', r.id);

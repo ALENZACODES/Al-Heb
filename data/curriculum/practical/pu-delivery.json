@@ -1,0 +1,584 @@
+{
+ "id": "pu-delivery",
+ "title": "Ordering delivery",
+ "level": "L3",
+ "status": "built-draft",
+ "proofread": false,
+ "nativeReview": true,
+ "lessons": [
+  {
+   "id": "I-45",
+   "title": "Ordering delivery: pizza, address, floor and the courier",
+   "track": "israel",
+   "wordCount": 12
+  }
+ ],
+ "speakSets": [
+  "speak-food-drink-1"
+ ],
+ "grammarNote": "I-45 already stores מִשְׁלוֹחַ, הַזְמָנָה, שָׁלִיחַ, כְּתֹבֶת and קוֹמָה. These notes only name forms already in that lesson.",
+ "items": [
+  {
+   "id": "i-45-w1",
+   "source": "data/curriculum/lessons.json#I-45.words[0]",
+   "he": "מִשְׁלוֹחַ",
+   "en": "delivery, shipment",
+   "translit": "mishloach",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-45-w1"
+   }
+  },
+  {
+   "id": "i-45-w2",
+   "source": "data/curriculum/lessons.json#I-45.words[1]",
+   "he": "הַזְמָנָה",
+   "en": "order, invitation",
+   "translit": "hazmanah",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-45-w2"
+   }
+  },
+  {
+   "id": "i-45-w3",
+   "source": "data/curriculum/lessons.json#I-45.words[2]",
+   "he": "שָׁלִיחַ",
+   "en": "courier",
+   "translit": "shaliach",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-45-w3"
+   }
+  },
+  {
+   "id": "i-45-w4",
+   "source": "data/curriculum/lessons.json#I-45.words[3]",
+   "he": "פִּיצָה",
+   "en": "pizza",
+   "translit": "pitzah",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-45-w4"
+   }
+  },
+  {
+   "id": "i-45-w5",
+   "source": "data/curriculum/lessons.json#I-45.words[4]",
+   "he": "כְּתֹבֶת",
+   "en": "address",
+   "translit": "ketovet",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-45-w5"
+   }
+  },
+  {
+   "id": "i-45-w6",
+   "source": "data/curriculum/lessons.json#I-45.words[5]",
+   "he": "קוֹמָה",
+   "en": "story, floor",
+   "translit": "komah",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-45-w6"
+   }
+  },
+  {
+   "id": "i-45-w7",
+   "source": "data/curriculum/lessons.json#I-45.words[6]",
+   "he": "דֶּלֶת",
+   "en": "door",
+   "translit": "delet",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-45-w7"
+   }
+  },
+  {
+   "id": "i-45-w8",
+   "source": "data/curriculum/lessons.json#I-45.words[7]",
+   "he": "סָלָט",
+   "en": "salad",
+   "translit": "salat",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-45-w8"
+   }
+  },
+  {
+   "id": "i-45-w9",
+   "source": "data/curriculum/lessons.json#I-45.words[8]",
+   "he": "מַיִם",
+   "en": "water",
+   "translit": "mayim",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-45-w9"
+   }
+  },
+  {
+   "id": "i-45-w10",
+   "source": "data/curriculum/lessons.json#I-45.words[9]",
+   "he": "כַּמָּה זְמַן",
+   "en": "how long",
+   "translit": "kamah zeman",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-45-w10"
+   }
+  },
+  {
+   "id": "i-45-w11",
+   "source": "data/curriculum/lessons.json#I-45.words[10]",
+   "he": "טָעִים",
+   "en": "tasty",
+   "translit": "ta'im",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-45-w11"
+   }
+  },
+  {
+   "id": "i-45-w12",
+   "source": "data/curriculum/lessons.json#I-45.words[11]",
+   "he": "תּוֹדָה",
+   "en": "thanks",
+   "translit": "todah",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-45-w12"
+   }
+  }
+ ],
+ "srsQueue": [
+  {
+   "position": 1,
+   "kind": "word",
+   "id": "i-45-w1",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 2,
+   "kind": "word",
+   "id": "i-45-w2",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 3,
+   "kind": "word",
+   "id": "i-45-w3",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 4,
+   "kind": "word",
+   "id": "i-45-w4",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 5,
+   "kind": "word",
+   "id": "i-45-w5",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 6,
+   "kind": "word",
+   "id": "i-45-w6",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 7,
+   "kind": "word",
+   "id": "i-45-w7",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 8,
+   "kind": "word",
+   "id": "i-45-w8",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 9,
+   "kind": "word",
+   "id": "i-45-w9",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 10,
+   "kind": "word",
+   "id": "i-45-w10",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 11,
+   "kind": "word",
+   "id": "i-45-w11",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 12,
+   "kind": "word",
+   "id": "i-45-w12",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  }
+ ],
+ "listenDrills": [
+  {
+   "goal": "Hear the sourced lines and words already in the audio manifest.",
+   "items": [
+    "i-45-w1",
+    "i-45-w2",
+    "i-45-w3",
+    "i-45-w4",
+    "i-45-w5",
+    "i-45-w6",
+    "i-45-w7",
+    "i-45-w8",
+    "i-45-w9",
+    "i-45-w10",
+    "i-45-w11",
+    "i-45-w12"
+   ],
+   "source": "audio manifest, phrasebook and lesson-word ids"
+  }
+ ],
+ "speakDrills": [
+  {
+   "goal": "Repeat the existing set data/speak/sets/speak-food-drink-1.json.",
+   "set": "speak-food-drink-1",
+   "note": "That set is machine-built and also unverified."
+  }
+ ],
+ "pages": [
+  {
+   "id": "pu-delivery-p01",
+   "title": "Delivery, shipment",
+   "order": 1,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json. First line: מִשְׁלוֹחַ. I-45 already stores מִשְׁלוֹחַ, הַזְמָנָה, שָׁלִיחַ, כְּתֹבֶת and קוֹמָה.",
+   "items": [
+    {
+     "id": "i-45-w1",
+     "source": "data/curriculum/lessons.json#I-45.words[0]",
+     "he": "מִשְׁלוֹחַ",
+     "en": "delivery, shipment",
+     "translit": "mishloach",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-45-w1"
+     }
+    },
+    {
+     "id": "i-45-w2",
+     "source": "data/curriculum/lessons.json#I-45.words[1]",
+     "he": "הַזְמָנָה",
+     "en": "order, invitation",
+     "translit": "hazmanah",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-45-w2"
+     }
+    },
+    {
+     "id": "i-45-w3",
+     "source": "data/curriculum/lessons.json#I-45.words[2]",
+     "he": "שָׁלִיחַ",
+     "en": "courier",
+     "translit": "shaliach",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-45-w3"
+     }
+    },
+    {
+     "id": "i-45-w4",
+     "source": "data/curriculum/lessons.json#I-45.words[3]",
+     "he": "פִּיצָה",
+     "en": "pizza",
+     "translit": "pitzah",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-45-w4"
+     }
+    },
+    {
+     "id": "i-45-w5",
+     "source": "data/curriculum/lessons.json#I-45.words[4]",
+     "he": "כְּתֹבֶת",
+     "en": "address",
+     "translit": "ketovet",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-45-w5"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-45-w1",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-45-w2",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-45-w3",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-45-w4",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "i-45-w5",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "i-45-w1",
+    "i-45-w2",
+    "i-45-w3",
+    "i-45-w4",
+    "i-45-w5"
+   ],
+   "speakSet": "speak-food-drink-1"
+  },
+  {
+   "id": "pu-delivery-p02",
+   "title": "Story, floor",
+   "order": 2,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json. First line: קוֹמָה. I-45 already stores מִשְׁלוֹחַ, הַזְמָנָה, שָׁלִיחַ, כְּתֹבֶת and קוֹמָה.",
+   "items": [
+    {
+     "id": "i-45-w6",
+     "source": "data/curriculum/lessons.json#I-45.words[5]",
+     "he": "קוֹמָה",
+     "en": "story, floor",
+     "translit": "komah",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-45-w6"
+     }
+    },
+    {
+     "id": "i-45-w7",
+     "source": "data/curriculum/lessons.json#I-45.words[6]",
+     "he": "דֶּלֶת",
+     "en": "door",
+     "translit": "delet",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-45-w7"
+     }
+    },
+    {
+     "id": "i-45-w8",
+     "source": "data/curriculum/lessons.json#I-45.words[7]",
+     "he": "סָלָט",
+     "en": "salad",
+     "translit": "salat",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-45-w8"
+     }
+    },
+    {
+     "id": "i-45-w9",
+     "source": "data/curriculum/lessons.json#I-45.words[8]",
+     "he": "מַיִם",
+     "en": "water",
+     "translit": "mayim",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-45-w9"
+     }
+    },
+    {
+     "id": "i-45-w10",
+     "source": "data/curriculum/lessons.json#I-45.words[9]",
+     "he": "כַּמָּה זְמַן",
+     "en": "how long",
+     "translit": "kamah zeman",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-45-w10"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-45-w6",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-45-w7",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-45-w8",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-45-w9",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "i-45-w10",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "i-45-w6",
+    "i-45-w7",
+    "i-45-w8",
+    "i-45-w9",
+    "i-45-w10"
+   ],
+   "speakSet": "speak-food-drink-1"
+  },
+  {
+   "id": "pu-delivery-p03",
+   "title": "Tasty",
+   "order": 3,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json. First line: טָעִים. I-45 already stores מִשְׁלוֹחַ, הַזְמָנָה, שָׁלִיחַ, כְּתֹבֶת and קוֹמָה.",
+   "items": [
+    {
+     "id": "i-45-w11",
+     "source": "data/curriculum/lessons.json#I-45.words[10]",
+     "he": "טָעִים",
+     "en": "tasty",
+     "translit": "ta'im",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-45-w11"
+     }
+    },
+    {
+     "id": "i-45-w12",
+     "source": "data/curriculum/lessons.json#I-45.words[11]",
+     "he": "תּוֹדָה",
+     "en": "thanks",
+     "translit": "todah",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-45-w12"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-45-w11",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-45-w12",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "i-45-w11",
+    "i-45-w12"
+   ],
+   "speakSet": "speak-food-drink-1"
+  }
+ ]
+}

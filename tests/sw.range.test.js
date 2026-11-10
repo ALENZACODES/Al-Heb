@@ -197,3 +197,25 @@ test('a cached clip is revalidated once in the background while online; differen
   const w3 = boot(); w3.store.set('alef-runtime-v1', w.store.get('alef-runtime-v1'));
   await w3.get(CLIP, { range: 'bytes=0-' }); assert.equal(w3.netCalls.length, 0);
 });
+
+test('music (audio/music/*.mp3, up to 5.1 MB) is cached in its own cache past the clip cap, plays offline, and word clips never push it out', async () => {
+  const SONG = 'https://alef.test/audio/music/cantor-strings-a.mp3';
+  const big = 5120209; // the largest original bed
+  assert.ok(big > MAX_CLIP_BYTES);
+  const w = boot({ fetchImpl: host(big) });
+  const first = await w.get(SONG, { range: 'bytes=0-' });
+  assert.equal(first.response.status, 206, 'first play streams from the network');
+  const music = await w.caches.open('alef-music-v1');
+  assert.equal((await music.match(SONG))?.status, 200, 'then the whole file is kept in alef-music-v1');
+  assert.equal(await (await w.caches.open('alef-runtime-v1')).match(SONG), undefined, 'not in the word-clip cache');
+  const plain = boot({ fetchImpl: async () => new Response(BYTES, { status: 200, headers: { 'content-length': String(big) } }) });
+  await plain.get(SONG); // "Download music" in the offline card fetches without Range
+  assert.equal((await (await plain.caches.open('alef-music-v1')).match(SONG))?.status, 200);
+  const rt = await w.caches.open('alef-runtime-v1');
+  for (let i = 0; i < MAX_CLIPS + 5; i++) await rt.put(`https://alef.test/audio/w${i}.mp3`, new Response('x'));
+  await w.get(CLIP, { range: 'bytes=0-' });
+  assert.equal((await music.match(SONG))?.status, 200, 'still there after the clip cache trimmed');
+  const offline = boot(); await (await offline.caches.open('alef-music-v1')).put(SONG, new Response(BYTES, { status: 200, headers: { 'content-type': 'audio/mpeg' } }));
+  const r = await offline.get(SONG, { range: 'bytes=0-' });
+  assert.equal(r.response.status, 206, 'offline: answered from alef-music-v1');
+});

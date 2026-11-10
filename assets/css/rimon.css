@@ -29,10 +29,68 @@
 @media(max-width:600px){.rimon-bubble{padding:10px 12px}.rimon-bubble-he{font-size:21px}.rimon-bubble-en{font-size:11px}}
 @media(prefers-reduced-motion:reduce){.rimon-bubble.is-popping{animation:none!important}}
 @media(max-width:600px){.rimon-bubble{width:min(168px,calc(100vw - 100px));padding:8px 10px;border-radius:16px}.rimon-bubble-he{font-size:18px}.rimon-bubble-en{font-size:11px;margin-top:2px}}
-/* Phones: a smaller Rimon, so he does not sit on top of answer buttons at the right edge. */
+/* Phones: a smaller Rimon, so the companion does not sit on top of answer buttons at the right edge. */
 @media(max-width:600px){.rimon-corner{width:58px}.rimon-corner .rimon-dismiss{width:48px;height:48px;font-size:18px;right:-14px;top:-16px}}
 
-/* Phones: Rimon peeks over the bottom bar between moments, so lesson text and answer buttons stay clear. */
+/* Phones: between moments Rimon ducks behind the bottom bar so only the crown and the top of the head show (about 18 px), keeping buttons near the bar clear. */
 .rimon-corner{transition:transform .35s ease}
-@media(max-width:600px){.rimon-corner.rimon-peek{transform:translateY(62%);cursor:pointer}.rimon-corner.rimon-peek .rimon-dismiss{visibility:hidden}}
+@media(max-width:600px){.rimon-corner.rimon-peek{transform:translateY(calc(100% - 1px));cursor:pointer}.rimon-corner.rimon-peek .rimon-dismiss{visibility:hidden}}
 @media(prefers-reduced-motion:reduce){.rimon-corner{transition:none}}
+
+/* showRimon(situation) — shared, fail-safe Rimon stills (src/shell/rimon-show.js). Big and bold by default. */
+.alef-rimon{display:block;inline-size:100%;block-size:auto;max-inline-size:100%;pointer-events:none;user-select:none}
+.alef-rimon[hidden]{display:none}
+.alef-rimon-spot{position:fixed;z-index:60;inset-inline-end:max(.5rem,env(safe-area-inset-right));inset-block-end:calc(168px + env(safe-area-inset-bottom));inline-size:min(42vw,190px);pointer-events:none;filter:drop-shadow(0 10px 18px rgba(18,61,42,.35))}
+.alef-rimon-slot{display:grid;place-items:center;margin-inline:auto}
+.alef-rimon-slot:empty,.alef-rimon-slot:has(> .alef-rimon[hidden]){display:none}
+.alef-rimon-slot-big{inline-size:min(56vw,220px)}
+.alef-rimon-slot-huge{inline-size:min(78vw,320px)}
+.alef-rimon-slot-small{inline-size:96px}
+.alef-rimon-burst{animation:alef-rimon-burst .55s cubic-bezier(.2,1.6,.4,1) both}
+@keyframes alef-rimon-burst{0%{opacity:0;transform:translateY(40%) scale(.35) rotate(-14deg)}60%{opacity:1;transform:translateY(-6%) scale(1.12) rotate(4deg)}100%{transform:none}}
+@media (prefers-reduced-motion:reduce){.alef-rimon-burst{animation:none}}
+
+/* Answer band: Duolingo-style colour strip after every lesson answer (visual only; the written verdict stays the real cue). */
+.alef-answer-band{position:fixed;z-index:59;inset-inline:0;inset-block-end:calc(64px + env(safe-area-inset-bottom));padding:.85rem 1.1rem;font-weight:800;font-size:1.15rem;display:flex;align-items:center;gap:.6rem;pointer-events:none;transform:translateY(120%);opacity:0;transition:transform .18s ease-out,opacity .18s}
+.alef-answer-band.is-on{transform:none;opacity:1}
+.alef-answer-band.is-ok{background:#d7f5dc;color:#0d3b1a;border-block-start:4px solid #1d7a38}
+.alef-answer-band.is-no{background:#fde2e1;color:#5a0f0f;border-block-start:4px solid #a31d1d}
+.alef-answer-band b{display:inline-grid;place-items:center;inline-size:2rem;block-size:2rem;border-radius:50%;background:currentColor}
+.alef-answer-band b span{color:#fff}
+@media (min-width:900px){.alef-answer-band{inset-block-end:0}}
+@media (prefers-reduced-motion:reduce){.alef-answer-band{transition:none}}
+@media (forced-colors:active){.alef-answer-band{border:2px solid CanvasText}}
+/* Phone bubble: compact, above Rimon at the right edge; the tail points down at Rimon. */
+.rimon-bubble.rimon-bubble-phone{max-inline-size:min(60vw,210px);padding:.35rem .6rem;font-size:.85rem}
+.rimon-bubble.rimon-bubble-phone::after,.rimon-bubble.rimon-bubble-phone::before{display:none}
+/* Quiet: prayer, Torah and service screens, and days of mourning and remembrance (QUIET_DAYS, QUIET_ROUTES in rimon-triggers.js). */
+body[data-rimon-quiet] .rimon-companion,body[data-rimon-quiet] .rimon-restore,body[data-rimon-quiet] .rimon-bubble,body[data-rimon-quiet] .rimon-toast,body[data-rimon-quiet] .rimon-hero{display:none!important}
+body[data-rimon-quiet=day] img[data-rimon-still]{visibility:hidden}
+
+/* Bold "big moment" stills (data/images/rimon). Decoration only; hidden when the image is missing. */
+.rimon-moment{position:fixed;z-index:34;pointer-events:none;margin:0;inset:auto -4% -6% auto;width:min(42vw,280px);aspect-ratio:1;overflow:visible}
+.rimon-moment[hidden]{display:none!important}
+.rimon-moment-img{display:block;width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 8px 18px #10281833)}
+.rimon-moment.is-burst{animation:rimon-burst .55s cubic-bezier(.15,1.15,.35,1) both}
+.rimon-moment.is-bounce{animation:rimon-bounce .6s cubic-bezier(.2,1.3,.4,1) both}
+@keyframes rimon-burst{from{opacity:0;transform:scale(.35) translate(28%,22%)}to{opacity:1;transform:scale(1) translate(0,0)}}
+@keyframes rimon-bounce{0%{opacity:0;transform:scale(.7) translateY(18%)}45%{opacity:1;transform:scale(1.08) translateY(-6%)}70%{transform:scale(.96) translateY(3%)}100%{transform:scale(1) translateY(0)}}
+@media(max-width:600px){.rimon-moment{width:min(52vw,200px);right:-6%;bottom:calc(64px + env(safe-area-inset-bottom))}}
+@media(prefers-reduced-motion:reduce){.rimon-moment.is-burst,.rimon-moment.is-bounce{animation:none!important;transform:none!important}}
+
+/* On-demand flip-books (data/images/rimon/anim). Loaded only when a moment plays. */
+.rimon-moment-flip{display:block;width:100%;height:100%;background-repeat:no-repeat;background-position:0 0;pointer-events:none}
+.rimon-moment-flip[hidden]{display:none!important}
+.rimon-moment.is-crash{animation:rimon-crash .5s cubic-bezier(.15,1.4,.35,1) both}
+.rimon-moment.is-peek{animation:rimon-peek-in .55s cubic-bezier(.2,1.15,.35,1) both}
+@keyframes rimon-crash{0%{opacity:0;transform:scale(.2) translate(70%,40%) rotate(-8deg)}55%{opacity:1;transform:scale(1.12) translate(-4%,-6%) rotate(2deg)}75%{transform:scale(.96) translate(2%,2%) rotate(-1deg)}100%{transform:scale(1) translate(0,0) rotate(0)}}
+@keyframes rimon-peek-in{0%{opacity:0;transform:translate(55%,10%) rotate(6deg)}60%{opacity:1;transform:translate(-4%,-2%) rotate(-2deg)}100%{transform:translate(0,0) rotate(0)}}
+/* Streak energy: a gold pulse around Rimon, not a flame and not a slogan. */
+.rimon-moment.is-streak-glow .rimon-moment-img,
+.rimon-moment.is-streak-glow .rimon-moment-flip{filter:drop-shadow(0 0 10px #e0b44a88) drop-shadow(0 8px 18px #10281833);animation:rimon-gold-pulse 1.1s ease-in-out infinite}
+@keyframes rimon-gold-pulse{50%{filter:drop-shadow(0 0 18px #f0c85ccc) drop-shadow(0 8px 18px #10281833)}}
+@media(prefers-reduced-motion:reduce){
+  .rimon-moment.is-crash,.rimon-moment.is-peek{animation:none!important;transform:none!important}
+  .rimon-moment.is-streak-glow .rimon-moment-img,
+  .rimon-moment.is-streak-glow .rimon-moment-flip{animation:none!important}
+}

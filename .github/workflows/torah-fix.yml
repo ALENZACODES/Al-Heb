@@ -1,0 +1,78 @@
+name: torah-fix
+# Re-record and re-check the Torah verse clips listed in tools/torah/audio/fix-list.txt (the ones the torah-check flagged).
+# Two candidates per clip (Chirp 3 HD in the clip's own voice, Israeli WaveNet), kept only when both reviewers agree it is better.
+# Needs the repository secret GOOGLE_TTS_API_KEY. Runs when fix-list.txt changes on main, or by hand.
+# Results: one branch per slice, john/torah-fix-<n> (changed clips + docs/torah/audio-verification/fix/fix-<n>.jsonl).
+on:
+  push:
+    branches: [main]
+    paths: ['tools/torah/audio/fix-list.txt']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: torah-fix
+  cancel-in-progress: false
+jobs:
+  model:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    steps:
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
+        with: { python-version: '3.12' }
+      - name: Convert the pinned sound model
+        run: |
+          pip install -q torch --index-url https://download.pytorch.org/whl/cpu
+          pip install -q transformers ctranslate2==4.8.5
+          ct2-transformers-converter --model renikud/whisper-he-ipa --revision e709a907f8e0e6ebcb83340b8563818dd1bc3bee \
+            --output_dir phoneme-ct2 --quantization int8 --copy_files tokenizer.json preprocessor_config.json
+      - uses: actions/upload-artifact@v4
+        with: { name: phoneme-ct2-fix, path: phoneme-ct2, retention-days: 3 }
+  fix:
+    needs: model
+    runs-on: ubuntu-24.04
+    timeout-minutes: 340
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix:
+        shard: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]
+    env:
+      LANG: C.UTF-8
+      GOOGLE_TTS_API_KEY: ${{ secrets.GOOGLE_TTS_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
+        with: { python-version: '3.12' }
+      - uses: actions/download-artifact@v4
+        with: { name: phoneme-ct2-fix, path: phoneme-ct2 }
+      - name: Tools
+        run: |
+          sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg
+          pip install -q faster-whisper phonikud
+      - name: Fix slice ${{ matrix.shard }} of 20
+        run: |
+          mkdir -p docs/torah/audio-verification/fix
+          python tools/torah/audio/fix_shard.py --list tools/torah/audio/fix-list.txt --shard ${{ matrix.shard }} --of 20 --round 5 \
+            --model phoneme-ct2 --log docs/torah/audio-verification/fix/fix-r${{ github.run_number }}-${{ matrix.shard }}.jsonl
+      - name: Push to john/torah-fix-r${{ github.run_number }}-${{ matrix.shard }}
+        if: always()
+        run: |
+          git config user.name "John Khan"
+          git config user.email "johnnykhan1@gmail.com"
+          f=docs/torah/audio-verification/fix/fix-r${{ github.run_number }}-${{ matrix.shard }}.jsonl
+          [ -f "$f" ] || exit 0
+          b=john/torah-fix-r${{ github.run_number }}-${{ matrix.shard }}
+          mkdir -p /tmp/keep && cp "$f" /tmp/keep/log.jsonl
+          changed=$(git diff --name-only -- 'audio/*/israeli/line/*.mp3' 'audio/*/israeli/prayer/*.mp3')
+          for c in $changed; do mkdir -p "/tmp/keep/$(dirname "$c")"; cp "$c" "/tmp/keep/$c"; done
+          # a brand-new repository holding only the log and the replaced clips, so the push carries nothing else
+          auth=$(git config --get http.https://github.com/.extraheader)
+          rm -rf /tmp/out && mkdir -p /tmp/out && cp -r /tmp/keep/. /tmp/out/ && cd /tmp/out
+          mkdir -p "$(dirname "$f")" && mv log.jsonl "$f"
+          git init -q && git checkout -q -b "$b"
+          git config user.name "John Khan" && git config user.email "johnnykhan1@gmail.com"
+          git add -A
+          git commit -q -m "Torah audio fix: slice ${{ matrix.shard }} ($(wc -l < "$f") clips reviewed, $(echo $changed | wc -w) replaced)"
+          du -sh .git
+          for i in 1 2 3 4 5; do git -c http.https://github.com/.extraheader="$auth" push -q --force "https://github.com/${{ github.repository }}.git" HEAD:refs/heads/$b && break; sleep $((i*20)); done

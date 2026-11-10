@@ -96,6 +96,22 @@
     {
       "path": "docs/test/LINK-CHECK-2026-11-07.md",
       "reason": "Link-check report: lists third-party terms-of-service URLs it checked; the URLs are facts about the links, not notes about how the app was made."
+    },
+    {
+      "path": "tools/curriculum/gcloud_practical_test.py",
+      "reason": "Cloud speech-test tool: writes into the shared lane hub, whose folder and file names are outside this repo and not ours to rename."
+    },
+    {
+      "path": "tools/curriculum/gcloud_tradition_styles_test.py",
+      "reason": "Cloud tradition-styles test tool: writes into the shared lane hub, whose folder and file names are outside this repo."
+    },
+    {
+      "path": "tools/curriculum/tradition_aware_listen.py",
+      "reason": "Tradition listen tool: reads and writes the shared lane hub, whose folder names are outside this repo."
+    },
+    {
+      "path": "tools/curriculum/write_practical_fails.py",
+      "reason": "Writes the fails packet into the shared lane hub; the packet addresses the lane by its hub name."
     }
   ]
 }

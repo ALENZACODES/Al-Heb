@@ -1,13 +1,19 @@
 {
  "status": "tts",
  "source": "paid-cloud",
- "engine": "google-cloud-tts",
+ "engine": "stitched-from-word-clips",
  "voiceId": "he-IL-Wavenet-A",
  "tradition": "israeli",
  "inputText": "אֲנִי רוֹצֶה קָפֶה",
  "inputSha256": "702a7a370296f318631e1d3bf0df49bc54ad62c69230e15a6f73618d65e3c203",
  "ingestedAt": null,
  "licence": "customer-owned",
- "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
- "inputTextKind": "hebrew"
+ "note": "Joined from word clips; flagged words replaced by fresh takes that both reviewers heard best (tools/audio/asr-check/take-scores.jsonl, rebuild-both-log.jsonl).",
+ "inputTextKind": "hebrew",
+ "stitchedFromText": "אֲנִי רוֹצֶה קָפֶה",
+ "stitchedFrom": [
+  "audio/f/israeli/word/h103e7d27.mp3",
+  "audio-takes/f/wcabf086f38-p.mp3",
+  "audio-takes/f/w878319b989-m.mp3"
+ ]
 }

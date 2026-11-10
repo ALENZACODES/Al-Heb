@@ -1,0 +1,398 @@
+{
+ "note": "Shared cases: the Python and the JavaScript word-list translators must agree on these.",
+ "cases": [
+  {
+   "he": "חנות אופטיקה",
+   "en": "Optical Store",
+   "status": "full"
+  },
+  {
+   "he": "מאפייה",
+   "en": "Bakery",
+   "status": "full"
+  },
+  {
+   "he": "בית מרקחת",
+   "en": "Pharmacy",
+   "status": "full"
+  },
+  {
+   "he": "יציאה",
+   "en": "Exit",
+   "status": "full"
+  },
+  {
+   "he": "סגור",
+   "en": "Closed",
+   "status": "full"
+  },
+  {
+   "he": "רחוב הרצל",
+   "en": "Herzl Street",
+   "status": "full"
+  },
+  {
+   "he": "שדרות בן יהודה",
+   "en": "Ben Yehuda Boulevard",
+   "status": "full"
+  },
+  {
+   "he": "קפה 12",
+   "en": "Coffee 12",
+   "status": "full"
+  },
+  {
+   "he": "חומוס 18.50",
+   "en": "Hummus 18.50",
+   "status": "full"
+  },
+  {
+   "he": "בֵּית כְּנֶסֶת",
+   "en": "Synagogue",
+   "status": "full"
+  },
+  {
+   "he": "סגור!",
+   "en": "Closed",
+   "status": "full"
+  },
+  {
+   "he": "חנות נעליים",
+   "en": null,
+   "status": "none"
+  },
+  {
+   "he": "רחוב ויצמן",
+   "en": null,
+   "status": "none"
+  },
+  {
+   "he": "כניסה יציאה",
+   "en": "Entrance Exit",
+   "status": "full"
+  },
+  {
+   "he": "",
+   "en": null,
+   "status": "none"
+  },
+  {
+   "he": "ביכר דיזנגוף",
+   "en": "Dizengoff Square",
+   "status": "near"
+  },
+  {
+   "he": "מסעדה בשרה",
+   "en": "Kosher Restaurant",
+   "status": "near",
+   "why": "two listed words are one letter away; only one of them forms a listed phrase with the word beside it"
+  },
+  {
+   "he": "בשר",
+   "en": "Meat",
+   "status": "full"
+  },
+  {
+   "he": "אבג",
+   "en": null,
+   "status": "none"
+  },
+  {
+   "he": "בשרה",
+   "en": null,
+   "status": "none",
+   "why": "two listed words are one letter away and nothing beside it decides"
+  },
+  {
+   "he": "חנות ספרים",
+   "en": "Bookshop",
+   "status": "full"
+  },
+  {
+   "he": "חנויות אופטיקה",
+   "en": "Optical Store",
+   "status": "near",
+   "why": "listed other form (plural)"
+  },
+  {
+   "he": "ספריה",
+   "en": "Library",
+   "status": "full",
+   "why": "listed spelling"
+  },
+  {
+   "he": "השירותים",
+   "en": "Restrooms",
+   "status": "full",
+   "why": "\"the\" joined to a listed word"
+  },
+  {
+   "he": "Bus Stop / תחנת אוטובוס Bus Stop / תחנת אוטובוס",
+   "en": "Bus Stop",
+   "status": "full",
+   "why": "bilingual line read twice"
+  },
+  {
+   "he": "פתוח 24 שעות Open 24 Hours",
+   "en": "Open 24 Hours",
+   "status": "full"
+  },
+  {
+   "he": "Menu / הפריט",
+   "en": null,
+   "status": "none",
+   "why": "the Hebrew as read is a real word (the item), so it is not corrected"
+  },
+  {
+   "he": "OPEN 24",
+   "en": null,
+   "status": "none",
+   "why": "no Hebrew on the line"
+  },
+  {
+   "he": "12",
+   "en": null,
+   "status": "none"
+  },
+  {
+   "he": "יהורות",
+   "en": null,
+   "status": "none",
+   "why": "two letters away from a listed word: never guessed"
+  },
+  {
+   "he": "מסעדה בְּשֵׁרָה",
+   "en": "Kosher Restaurant",
+   "status": "near"
+  },
+  {
+   "he": "טופרמרקט",
+   "en": "Supermarket",
+   "status": "near"
+  },
+  {
+   "he": "בית קפה",
+   "en": "Coffee Shop",
+   "status": "full"
+  },
+  {
+   "he": "איפה",
+   "en": null,
+   "status": "none",
+   "why": "a real word one letter from a listed place name: never corrected"
+  },
+  {
+   "he": "אזור לעשן",
+   "en": "No Smoking",
+   "status": "near",
+   "why": "a real word, but the corrected word forms a listed phrase with the next word"
+  },
+  {
+   "he": "אזור",
+   "en": null,
+   "status": "none"
+  },
+  {
+   "he": "ביבר דיזנגוף",
+   "en": "Dizengoff Square",
+   "status": "near",
+   "why": "two letters different, both the look-alike pair bet/kaf"
+  },
+  {
+   "he": "קפה 2ו",
+   "en": "Coffee 12",
+   "status": "near",
+   "why": "the digit 1 read as the letter vav"
+  },
+  {
+   "he": "מזדגות",
+   "en": null,
+   "status": "none",
+   "why": "two letters different but not both look-alike pairs"
+  },
+  {
+   "he": "מחיר חדש",
+   "en": "New Price",
+   "status": "full",
+   "why": "a describing word follows its noun in Hebrew and comes before it in English"
+  },
+  {
+   "he": "קפה חם",
+   "en": "Hot Coffee",
+   "status": "full"
+  },
+  {
+   "he": "פתוח היום",
+   "en": "Open Today",
+   "status": "full",
+   "why": "no swap when the describing word comes first"
+  },
+  {
+   "he": "קפה חם 12",
+   "en": "Hot Coffee 12",
+   "status": "full"
+  },
+  {
+   "he": "כיכר דיזנגוף / 50816 806ת6לום",
+   "en": "Dizengoff Square",
+   "status": "full",
+   "why": "the part after the slash is the other language, misread"
+  },
+  {
+   "he": "חנות אופטיקה 6ז0ז5 |08ו001",
+   "en": "Optical Store",
+   "status": "full",
+   "why": "letters mixed with digits or symbols are reader noise"
+  },
+  {
+   "he": "משיכה ווג\\₪",
+   "en": "Pull",
+   "status": "full"
+  },
+  {
+   "he": "מחיר מיוחד",
+   "en": "Special Price",
+   "status": "full"
+  },
+  {
+   "he": "מחיר מלוחד",
+   "en": "Special Price",
+   "status": "near"
+  },
+  {
+   "he": "+ית חולים",
+   "en": "Hospital",
+   "status": "near",
+   "why": "a short piece is completed only when the result is a listed phrase"
+  },
+  {
+   "he": "אי כניסה",
+   "en": "No Entry",
+   "status": "near",
+   "why": "never the opposite meaning: the short word is completed to the listed phrase, not dropped"
+  },
+  {
+   "he": "ברובים הגאים",
+   "en": "Welcome",
+   "status": "near",
+   "why": "two misread words that together form a listed phrase"
+  },
+  {
+   "he": "רחבת אוטובוס",
+   "en": null,
+   "status": "none",
+   "why": "both words are real Hebrew words (a plaza, a bus): a line made only of real words is never turned into a listed phrase"
+  },
+  {
+   "he": "ו קפה",
+   "en": null,
+   "status": "none",
+   "why": "a stray letter is not dropped: part of the sign may be missing"
+  },
+  {
+   "he": "מסעדה 05",
+   "en": "Restaurant",
+   "status": "full",
+   "why": "a number starting with zero is reader noise"
+  },
+  {
+   "he": "בית מ קחת",
+   "en": "Pharmacy",
+   "status": "near",
+   "why": "a letter hidden: the line is clearly closest to one listed phrase"
+  },
+  {
+   "he": "רח ב הרצל",
+   "en": "Herzl Street",
+   "status": "near"
+  },
+  {
+   "he": "שדרות 1 יהודה",
+   "en": "Ben Yehuda Boulevard",
+   "status": "near"
+  },
+  {
+   "he": "פלא יל 22",
+   "en": "Falafel 22",
+   "status": "near"
+  },
+  {
+   "he": "חנות :2",
+   "en": "Store",
+   "status": "full",
+   "why": "a digit with punctuation stuck to it is noise"
+  },
+  {
+   "he": "מ גות",
+   "en": null,
+   "status": "none",
+   "why": "too much of the word is missing"
+  },
+  {
+   "he": "מכונית",
+   "en": null,
+   "status": "none",
+   "why": "a real word (car) alone on a line is never turned into a listed one"
+  },
+  {
+   "he": "פלפל",
+   "en": null,
+   "status": "none",
+   "why": "a real word (pepper)"
+  },
+  {
+   "he": "תה סו",
+   "en": "Tea 10",
+   "status": "near",
+   "why": "a price read entirely as look-alike letters, right after a listed word"
+  },
+  {
+   "he": "סו",
+   "en": null,
+   "status": "none"
+  },
+  {
+   "he": "קפה סוס",
+   "en": null,
+   "status": "none",
+   "why": "a real word (horse) is not a price"
+  },
+  {
+   "he": "שכנה",
+   "en": null,
+   "status": "none",
+   "why": "a real word (a neighbour) one letter from \"danger\": never corrected on its own"
+  },
+  {
+   "he": "דחיפה ביבר",
+   "en": null,
+   "status": "none"
+  },
+  {
+   "he": "אין יציאה",
+   "en": "No Exit",
+   "status": "full"
+  },
+  {
+   "he": "אין חניה",
+   "en": "No Parking",
+   "status": "full"
+  },
+  {
+   "he": "חנות פרחים",
+   "en": null,
+   "status": "none"
+  },
+  {
+   "he": "חנות דגים",
+   "en": "Fish Store",
+   "status": "full",
+   "why": "the kind of place comes last in English"
+  },
+  {
+   "he": "בית",
+   "en": "House",
+   "status": "full"
+  }
+ ]
+}

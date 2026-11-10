@@ -42,7 +42,7 @@ export function updateCompanions(routeName, { R = null, voice = 'f' } = {}) {
   slot.style.alignItems = 'center';
   slot.style.gap = '0.55rem';
   slot.style.padding = '0.5rem 1rem 0';
-  slot.style.background = '#F6F1E7';
+  // Colours come from the theme (assets/css/polish.css .companions), so the band matches the page in dark green and in light.
   const pose = poseForRoute(routeName);
   const order = teacherOrder(voice);
   const kids = [];
@@ -58,7 +58,6 @@ export function updateCompanions(routeName, { R = null, voice = 'f' } = {}) {
     }
   }
   const names = h('span', { class: 'comp-names' }, `${order.map((w) => NAMES[w]).join(' and ')} — your teachers`);
-  names.style.color = '#1E4634';
   kids.push(names);
   slot.replaceChildren(...kids);
 }

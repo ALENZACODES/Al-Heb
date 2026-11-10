@@ -1,0 +1,584 @@
+{
+ "id": "pu-beach",
+ "title": "At the beach",
+ "level": "L2",
+ "status": "built-draft",
+ "proofread": false,
+ "nativeReview": true,
+ "lessons": [
+  {
+   "id": "I-41",
+   "title": "Beach: sea, sand, towel and swimming",
+   "track": "israel",
+   "wordCount": 12
+  }
+ ],
+ "speakSets": [
+  "speak-nature-animals-2"
+ ],
+ "grammarNote": "I-41 already stores חוֹף, יָם, חוֹל, גַּל, מַגֶּבֶת, כּוֹבַע, בֶּגֶד and סַכָּנָה. These notes only name forms already in that lesson.",
+ "items": [
+  {
+   "id": "i-41-w1",
+   "source": "data/curriculum/lessons.json#I-41.words[0]",
+   "he": "חוֹף",
+   "en": "beach",
+   "translit": "chof",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-41-w1"
+   }
+  },
+  {
+   "id": "i-41-w2",
+   "source": "data/curriculum/lessons.json#I-41.words[1]",
+   "he": "יָם",
+   "en": "sea",
+   "translit": "yam",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-41-w2"
+   }
+  },
+  {
+   "id": "i-41-w3",
+   "source": "data/curriculum/lessons.json#I-41.words[2]",
+   "he": "חוֹל",
+   "en": "sand",
+   "translit": "chol",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-41-w3"
+   }
+  },
+  {
+   "id": "i-41-w4",
+   "source": "data/curriculum/lessons.json#I-41.words[3]",
+   "he": "גַּל",
+   "en": "wave",
+   "translit": "gal",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-41-w4"
+   }
+  },
+  {
+   "id": "i-41-w5",
+   "source": "data/curriculum/lessons.json#I-41.words[4]",
+   "he": "מַגֶּבֶת",
+   "en": "towel",
+   "translit": "magevet",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-41-w5"
+   }
+  },
+  {
+   "id": "i-41-w6",
+   "source": "data/curriculum/lessons.json#I-41.words[5]",
+   "he": "שֶׁמֶשׁ",
+   "en": "sun",
+   "translit": "shemesh",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-41-w6"
+   }
+  },
+  {
+   "id": "i-41-w7",
+   "source": "data/curriculum/lessons.json#I-41.words[6]",
+   "he": "מַיִם",
+   "en": "water",
+   "translit": "mayim",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-41-w7"
+   }
+  },
+  {
+   "id": "i-41-w8",
+   "source": "data/curriculum/lessons.json#I-41.words[7]",
+   "he": "חַם",
+   "en": "hot",
+   "translit": "cham",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-41-w8"
+   }
+  },
+  {
+   "id": "i-41-w9",
+   "source": "data/curriculum/lessons.json#I-41.words[8]",
+   "he": "קַר",
+   "en": "cold",
+   "translit": "kar",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-41-w9"
+   }
+  },
+  {
+   "id": "i-41-w10",
+   "source": "data/curriculum/lessons.json#I-41.words[9]",
+   "he": "כּוֹבַע",
+   "en": "hat",
+   "translit": "kova",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-41-w10"
+   }
+  },
+  {
+   "id": "i-41-w11",
+   "source": "data/curriculum/lessons.json#I-41.words[10]",
+   "he": "בֶּגֶד",
+   "en": "garment",
+   "translit": "beged",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-41-w11"
+   }
+  },
+  {
+   "id": "i-41-w12",
+   "source": "data/curriculum/lessons.json#I-41.words[11]",
+   "he": "סַכָּנָה",
+   "en": "danger",
+   "translit": "sakanah",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-41-w12"
+   }
+  }
+ ],
+ "srsQueue": [
+  {
+   "position": 1,
+   "kind": "word",
+   "id": "i-41-w1",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 2,
+   "kind": "word",
+   "id": "i-41-w2",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 3,
+   "kind": "word",
+   "id": "i-41-w3",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 4,
+   "kind": "word",
+   "id": "i-41-w4",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 5,
+   "kind": "word",
+   "id": "i-41-w5",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 6,
+   "kind": "word",
+   "id": "i-41-w6",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 7,
+   "kind": "word",
+   "id": "i-41-w7",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 8,
+   "kind": "word",
+   "id": "i-41-w8",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 9,
+   "kind": "word",
+   "id": "i-41-w9",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 10,
+   "kind": "word",
+   "id": "i-41-w10",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 11,
+   "kind": "word",
+   "id": "i-41-w11",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 12,
+   "kind": "word",
+   "id": "i-41-w12",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  }
+ ],
+ "listenDrills": [
+  {
+   "goal": "Hear the sourced lines and words already in the audio manifest.",
+   "items": [
+    "i-41-w1",
+    "i-41-w2",
+    "i-41-w3",
+    "i-41-w4",
+    "i-41-w5",
+    "i-41-w6",
+    "i-41-w7",
+    "i-41-w8",
+    "i-41-w9",
+    "i-41-w10",
+    "i-41-w11",
+    "i-41-w12"
+   ],
+   "source": "audio manifest, phrasebook and lesson-word ids"
+  }
+ ],
+ "speakDrills": [
+  {
+   "goal": "Repeat the existing set data/speak/sets/speak-nature-animals-2.json.",
+   "set": "speak-nature-animals-2",
+   "note": "That set is machine-built and also unverified."
+  }
+ ],
+ "pages": [
+  {
+   "id": "pu-beach-p01",
+   "title": "Beach",
+   "order": 1,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json. First line: חוֹף. I-41 already stores חוֹף, יָם, חוֹל, גַּל, מַגֶּבֶת, כּוֹבַע, בֶּגֶד and סַכָּנָה.",
+   "items": [
+    {
+     "id": "i-41-w1",
+     "source": "data/curriculum/lessons.json#I-41.words[0]",
+     "he": "חוֹף",
+     "en": "beach",
+     "translit": "chof",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-41-w1"
+     }
+    },
+    {
+     "id": "i-41-w2",
+     "source": "data/curriculum/lessons.json#I-41.words[1]",
+     "he": "יָם",
+     "en": "sea",
+     "translit": "yam",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-41-w2"
+     }
+    },
+    {
+     "id": "i-41-w3",
+     "source": "data/curriculum/lessons.json#I-41.words[2]",
+     "he": "חוֹל",
+     "en": "sand",
+     "translit": "chol",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-41-w3"
+     }
+    },
+    {
+     "id": "i-41-w4",
+     "source": "data/curriculum/lessons.json#I-41.words[3]",
+     "he": "גַּל",
+     "en": "wave",
+     "translit": "gal",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-41-w4"
+     }
+    },
+    {
+     "id": "i-41-w5",
+     "source": "data/curriculum/lessons.json#I-41.words[4]",
+     "he": "מַגֶּבֶת",
+     "en": "towel",
+     "translit": "magevet",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-41-w5"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-41-w1",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-41-w2",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-41-w3",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-41-w4",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "i-41-w5",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "i-41-w1",
+    "i-41-w2",
+    "i-41-w3",
+    "i-41-w4",
+    "i-41-w5"
+   ],
+   "speakSet": "speak-nature-animals-2"
+  },
+  {
+   "id": "pu-beach-p02",
+   "title": "Sun",
+   "order": 2,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json. First line: שֶׁמֶשׁ. I-41 already stores חוֹף, יָם, חוֹל, גַּל, מַגֶּבֶת, כּוֹבַע, בֶּגֶד and סַכָּנָה.",
+   "items": [
+    {
+     "id": "i-41-w6",
+     "source": "data/curriculum/lessons.json#I-41.words[5]",
+     "he": "שֶׁמֶשׁ",
+     "en": "sun",
+     "translit": "shemesh",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-41-w6"
+     }
+    },
+    {
+     "id": "i-41-w7",
+     "source": "data/curriculum/lessons.json#I-41.words[6]",
+     "he": "מַיִם",
+     "en": "water",
+     "translit": "mayim",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-41-w7"
+     }
+    },
+    {
+     "id": "i-41-w8",
+     "source": "data/curriculum/lessons.json#I-41.words[7]",
+     "he": "חַם",
+     "en": "hot",
+     "translit": "cham",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-41-w8"
+     }
+    },
+    {
+     "id": "i-41-w9",
+     "source": "data/curriculum/lessons.json#I-41.words[8]",
+     "he": "קַר",
+     "en": "cold",
+     "translit": "kar",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-41-w9"
+     }
+    },
+    {
+     "id": "i-41-w10",
+     "source": "data/curriculum/lessons.json#I-41.words[9]",
+     "he": "כּוֹבַע",
+     "en": "hat",
+     "translit": "kova",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-41-w10"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-41-w6",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-41-w7",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-41-w8",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-41-w9",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "i-41-w10",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "i-41-w6",
+    "i-41-w7",
+    "i-41-w8",
+    "i-41-w9",
+    "i-41-w10"
+   ],
+   "speakSet": "speak-nature-animals-2"
+  },
+  {
+   "id": "pu-beach-p03",
+   "title": "Garment",
+   "order": 3,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json. First line: בֶּגֶד. I-41 already stores חוֹף, יָם, חוֹל, גַּל, מַגֶּבֶת, כּוֹבַע, בֶּגֶד and סַכָּנָה.",
+   "items": [
+    {
+     "id": "i-41-w11",
+     "source": "data/curriculum/lessons.json#I-41.words[10]",
+     "he": "בֶּגֶד",
+     "en": "garment",
+     "translit": "beged",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-41-w11"
+     }
+    },
+    {
+     "id": "i-41-w12",
+     "source": "data/curriculum/lessons.json#I-41.words[11]",
+     "he": "סַכָּנָה",
+     "en": "danger",
+     "translit": "sakanah",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-41-w12"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-41-w11",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-41-w12",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "i-41-w11",
+    "i-41-w12"
+   ],
+   "speakSet": "speak-nature-animals-2"
+  }
+ ]
+}

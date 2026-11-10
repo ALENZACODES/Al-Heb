@@ -22,7 +22,7 @@ export const SYNTH_STYLES = [
   { id: 'syn_shuk', level: 1.6, title: 'Shuk Groove', role: 'Market rhythm', bpm: 100, root: 52, scale: FREYGISH, prog: [0, 0, 6, 0, 3, 3, 6, 0],
     pad: 'reed', bass: 'pluck', lead: 'oud', arp: null, swing: 0.05,
     drums: { doum: 'x.....x...x.....', tek: '..x.x...x.x.x.x.', hat: '' } },
-  { id: 'syn_pixel', level: 1.1, title: 'Pixel Aleph', role: 'Chiptune', bpm: 132, root: 57, scale: MAJOR, prog: [0, 4, 5, 3],
+  { id: 'syn_pixel', level: 1.1, title: 'Pixel ALEF', role: 'Chiptune', bpm: 132, root: 57, scale: MAJOR, prog: [0, 4, 5, 3],
     pad: null, bass: 'chipbass', lead: 'square', arp: 'chiparp', swing: 0,
     drums: { kick: 'x...x...x...x...', snare: '....x.......x...', hat: 'x.x.x.x.x.x.x.x.' } },
   { id: 'syn_jerusalem', level: 1, title: 'Jerusalem Dawn', role: 'Ambient', bpm: 64, root: 50, scale: PENTA, prog: [0, 3, 4, 2],
@@ -288,16 +288,32 @@ export function createSynthTrack(style) {
   return node;
 }
 
+/** Skip digital silence left at the ends by an MP3 decoder so loopStart/loopEnd sit on audio, not padding.
+ *  Cap the trim at 80 ms so a quiet pickup or ring-out in a carefully cut loop is not eaten. */
+function paddingBounds(buf, thresh = 1e-4, capS = 0.08) {
+  const n = buf.length, ch = buf.numberOfChannels, sr = buf.sampleRate;
+  const cap = Math.max(0, Math.min(n, Math.round(capS * sr)));
+  const peak = (i) => { let m = 0; for (let c = 0; c < ch; c++) { const v = Math.abs(buf.getChannelData(c)[i]); if (v > m) m = v; } return m; };
+  let a = 0, b = n - 1;
+  while (a < b && a < cap && peak(a) < thresh) a += 1;
+  while (b > a && (n - 1 - b) < cap && peak(b) < thresh) b -= 1;
+  return { loopStart: a / sr, loopEnd: (b + 1) / sr, dur: (b + 1 - a) / sr };
+}
+
 /** A file loop played sample-exact from a decoded buffer; falls back to an <audio> element if decoding fails. */
 export function createGaplessTrack(url, makeElement = (u) => new globalThis.Audio(u)) {
   const hub = eventHub();
   let ctx = null, gain = null, buf = null, src = null, startedAt = 0, offset = 0, vol = 0.22, fallback = null, loading = null;
+  let loopStart = 0, loopDur = 0;
   const node = baseNode(hub);
   Object.defineProperty(node, 'volume', { get: () => vol, set: (v) => { vol = v; if (fallback) fallback.volume = v; if (gain && ctx) gain.gain.setTargetAtTime(node.paused ? 0 : vol, ctx.currentTime, 0.08); } });
   async function load() {
     const res = await fetch(url); if (!res.ok) throw new Error('HTTP ' + res.status);
     const data = await res.arrayBuffer();
     buf = await new Promise((ok, no) => { const p = ctx.decodeAudioData(data, ok, no); if (p && p.then) p.then(ok, no); });
+    const pad = paddingBounds(buf);
+    loopStart = pad.loopStart;
+    loopDur = pad.dur || buf.duration;
   }
   function useFallback() {
     fallback = makeElement(url); fallback.loop = true; fallback.volume = vol;
@@ -314,8 +330,11 @@ export function createGaplessTrack(url, makeElement = (u) => new globalThis.Audi
     if (!node.paused) return undefined;
     node.paused = false;
     gain = ctx.createGain(); gain.gain.value = 0; gain.connect(ctx.destination);
-    src = ctx.createBufferSource(); src.buffer = buf; src.loop = true; src.connect(gain);
-    src.start(0, offset % buf.duration); startedAt = ctx.currentTime - offset;
+    src = ctx.createBufferSource(); src.buffer = buf; src.loop = true;
+    src.loopStart = loopStart; src.loopEnd = loopStart + loopDur;
+    src.connect(gain);
+    const pos = loopStart + (loopDur ? (offset % loopDur) : 0);
+    src.start(0, pos); startedAt = ctx.currentTime - offset;
     gain.gain.linearRampToValueAtTime(vol, ctx.currentTime + 0.6);
     hub.fire('playing');
     return undefined;
@@ -325,7 +344,7 @@ export function createGaplessTrack(url, makeElement = (u) => new globalThis.Audi
     if (node.paused) return;
     node.paused = true;
     if (ctx && src && buf) {
-      offset = (ctx.currentTime - startedAt) % buf.duration;
+      offset = loopDur ? (ctx.currentTime - startedAt) % loopDur : 0;
       const s = src, g = gain; src = null; gain = null;
       g.gain.setTargetAtTime(0, ctx.currentTime, 0.08);
       setTimeout(() => { try { s.stop(); s.disconnect(); g.disconnect(); } catch { /* gone */ } }, 500);

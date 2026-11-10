@@ -376,7 +376,7 @@ export function coverageMarkdown(phrases) {
   const lines = [];
   lines.push('# Phrase batch 1 audio coverage');
   lines.push('');
-  lines.push('Denominator: **' + n + '** phrases in this batch. This is a first set from records already in Aleph. It is not every Hebrew phrase.');
+  lines.push('Denominator: **' + n + '** phrases in this batch. This is a first set from records already in ALEF. It is not every Hebrew phrase.');
   lines.push('');
   lines.push('A numerator counts a phrase when the grammatical form for that gender (or the one shared form) has a catalogue row with that form’s own id, the same pointed text, that tradition, and that narrator voice. A different id, even with the same spelling, is not counted. A separate slow recording is not counted as the normal clip.');
   lines.push('');

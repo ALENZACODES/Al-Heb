@@ -1,0 +1,28 @@
+/* Rimon's stills (src/shell/rimon-stage.js loads this once a still exists; docs/images/RIMON-STILLS.md): a drawing over
+   the sprite, a large Rimon in the page, or a card at the bottom. Sized like the sprite cells so a still replaces a frame
+   without a jump. One Rimon on screen at a time. */
+.rimon-still{position:absolute;left:0;top:0;width:100%;aspect-ratio:1;height:auto;object-fit:contain;pointer-events:none;transform-origin:50% 90%}
+.rimon-still[hidden]{display:none!important}
+.rimon-has-still .rimon-sprite{visibility:hidden}
+.rimon-has-still .rimon-still{animation:rimon-breathe 4s ease-in-out infinite}
+.rimon-static .rimon-still{animation:none!important}
+@media(prefers-reduced-motion:reduce){.rimon-still{animation:none!important}}
+/* One Rimon on screen: a large one in the page sends the corner one away. */
+body[data-rimon-hero] .rimon-companion.rimon-corner,body[data-rimon-hero] .rimon-bubble,body[data-rimon-hero] .rimon-restore,
+body[data-rimon-inpage] .rimon-companion.rimon-corner,body[data-rimon-inpage] .rimon-bubble,body[data-rimon-inpage] .rimon-restore{display:none!important}
+body[data-rimon-toast] .rimon-companion,body[data-rimon-toast] .rimon-bubble{visibility:hidden}
+.rimon-hero{display:flex;flex-direction:column;align-items:center;gap:.6rem;margin:.6rem auto 1.1rem;max-inline-size:30rem;text-align:center}
+.rimon-hero img{inline-size:min(200px,50vw);block-size:auto;aspect-ratio:1;object-fit:contain}
+.rimon-hero-line{position:relative;margin:0;padding:.65rem 1rem;border:2px solid #d4a647;border-radius:18px;background:#fffbed;color:#243c2c;font:600 .95rem/1.45 system-ui,sans-serif;box-shadow:0 4px 14px #10281820}
+.rimon-hero-line::before{content:'';position:absolute;top:-9px;left:calc(50% - 7px);width:14px;height:14px;background:#fffbed;border-top:2px solid #d4a647;border-left:2px solid #d4a647;transform:rotate(45deg)}
+.rimon-hero-he,.rimon-toast-he{display:block;font-family:'Frank Ruhl Libre',serif;font-weight:700;font-size:1.25em;line-height:1.35}
+.rimon-loading img{inline-size:min(140px,36vw)}
+[data-rimon-slot]:empty{display:none}
+.rimon-toast{position:fixed;inset-inline-start:1rem;inset-block-end:1rem;z-index:40;display:flex;align-items:center;gap:.7rem;box-sizing:border-box;max-inline-size:min(26rem,calc(100vw - 2rem));padding:.5rem .6rem .5rem .5rem;border:2px solid #d4a647;border-radius:18px;background:#fffbed;color:#243c2c;box-shadow:0 6px 22px #10281833;animation:rimon-toast-in .3s ease-out both}
+.rimon-toast img{inline-size:72px;block-size:72px;flex:none;object-fit:contain}
+.rimon-toast-line{margin:0;flex:1;font:700 .95rem/1.4 system-ui,sans-serif}
+.rimon-toast-x{flex:none;inline-size:44px;block-size:44px;border-radius:50%;border:1px solid #d9cba5;background:transparent;color:inherit;font-size:20px;cursor:pointer}
+.rimon-toast-x:focus-visible{outline:3px solid #1e4634;outline-offset:2px}
+@keyframes rimon-toast-in{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@media(max-width:600px){.rimon-toast{inset-inline:.6rem;inset-block-end:calc(84px + env(safe-area-inset-bottom));max-inline-size:none}.rimon-toast img{inline-size:60px;block-size:60px}}
+@media(prefers-reduced-motion:reduce){.rimon-toast{animation:none}}

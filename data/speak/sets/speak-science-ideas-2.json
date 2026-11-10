@@ -30,9 +30,9 @@
    "id": "hc7778ee0",
    "he": "רֻפָּא",
    "translit": "rupa",
-   "en": "to be restored (of art)",
+   "en": "to be healed, to be cured",
    "kind": "word",
-   "audioId": null,
+   "audioId": "hc7778ee0",
    "source": "data/vocab/words.json"
   },
   {
@@ -41,7 +41,7 @@
    "translit": "chiber",
    "en": "to connect, attach, join (two things, or one thing to another)",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h4ad9dacd",
    "source": "data/vocab/words.json"
   },
   {
@@ -77,7 +77,7 @@
    "translit": "sevivah",
    "en": "Surroundings, environs, area, vicinity",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h59dac508",
    "source": "data/vocab/words.json"
   },
   {
@@ -95,7 +95,7 @@
    "translit": "ma'arekhet",
    "en": "set",
    "kind": "word",
-   "audioId": null,
+   "audioId": "hc5937bb8",
    "source": "data/vocab/words.json"
   },
   {
@@ -113,7 +113,7 @@
    "translit": "teguvah",
    "en": "response, reaction, reply",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h970ac8ad",
    "source": "data/vocab/words.json"
   }
  ]

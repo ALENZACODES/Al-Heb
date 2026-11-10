@@ -1,0 +1,150 @@
+{"id": "u001", "question": "whats the deal with moruning in the torah?? like when someone dies", "history": [], "tags": "mourning,john"}
+{"id": "u002", "question": "sorry i meant mourning, not morning — where does it talk about grieving", "history": [], "tags": "mourning,john,typo"}
+{"id": "u003", "question": "gods comandments, the main ones, where r they", "history": [], "tags": "commandments,john,typo"}
+{"id": "u004", "question": "like what is evle according to the 5 books", "history": [], "tags": "evil,john,typo"}
+{"id": "u005", "question": "is evill even mentioned or is that a later thing", "history": [], "tags": "evil,john,typo"}
+{"id": "u006", "question": "addam and ev — are they in chumash or just sunday school", "history": [], "tags": "adam-eve,john,typo"}
+{"id": "u007", "question": "ok but like who was eve actually, the first woman right?", "history": [], "tags": "adam-eve,john"}
+{"id": "u008", "question": "what even is a rabbi??", "history": [], "tags": "rabbi,john"}
+{"id": "u009", "question": "is rabbi in torah tho or did they make that up later", "history": [], "tags": "rabbi,john"}
+{"id": "u010", "question": "wait is the word rabbi anywhere in the five books", "history": [], "tags": "rabbi,john"}
+{"id": "u011", "question": "what about their kids then", "history": ["addam and ev — are they in chumash or just sunday school"], "tags": "adam-eve,followup"}
+{"id": "u012", "question": "and after she died, did he mourn?", "history": ["whats the deal with moruning in the torah?? like when someone dies", "tell me about Sarah"], "tags": "mourning,followup"}
+{"id": "u013", "question": "so then what is a rebbe, is that in the chumash too", "history": ["what even is a rabbi??"], "tags": "rabbi,followup"}
+{"id": "u014", "question": "ok so where does it actually say i cant eat that", "history": ["why is bacon not kosher"], "tags": "kashrut,followup"}
+{"id": "u015", "question": "can i cook on it or no", "history": ["what does the torah say about shabbat"], "tags": "shabbat,followup"}
+{"id": "u016", "question": "why cant i eat bacon lol where does it SAY that", "history": [], "tags": "kashrut"}
+{"id": "u017", "question": "casherut — pigs, shellfish, is that in the 5 books or just rabbis", "history": [], "tags": "kashrut,typo"}
+{"id": "u018", "question": "milk and meat together, is that a torah thing or later", "history": [], "tags": "kashrut"}
+{"id": "u019", "question": "shabbos — can i drive?? where in the five books", "history": [], "tags": "shabbat"}
+{"id": "u020", "question": "whats the actual shabbat commandment, not the later rules", "history": [], "tags": "shabbat"}
+{"id": "u021", "question": "saturday rest, is that genesis or the 10 comandments or both", "history": [], "tags": "shabbat,typo"}
+{"id": "u022", "question": "is it kosher to eat camel? i think the torah mentions this", "history": [], "tags": "kashrut"}
+{"id": "u023", "question": "do u have to have split hooves AND chew cud? where", "history": [], "tags": "kashrut"}
+{"id": "u024", "question": "does the torah talk about the afterlife or olam haba", "history": [], "tags": "afterlife"}
+{"id": "u025", "question": "is heaven and hell in the chumash or is that later", "history": [], "tags": "afterlife"}
+{"id": "u026", "question": "what happens after you die according to the five books", "history": [], "tags": "afterlife"}
+{"id": "u027", "question": "is resurrection in the torah??", "history": [], "tags": "afterlife"}
+{"id": "u028", "question": "sheol — is that in the torah or only psalms/job", "history": [], "tags": "afterlife"}
+{"id": "u029", "question": "angels in the torah? like actual malachim?", "history": [], "tags": "angels"}
+{"id": "u030", "question": "did angels visit abraham or is that midrash", "history": [], "tags": "angels"}
+{"id": "u031", "question": "the angel in the burning bush wait was it an angel or god", "history": [], "tags": "angels"}
+{"id": "u032", "question": "is the messiah in the torah or only later prophets", "history": [], "tags": "messiah"}
+{"id": "u033", "question": "does chumash mention mashiach as a future king", "history": [], "tags": "messiah"}
+{"id": "u034", "question": "a star out of jacob — is that the messiah or are people reading that in", "history": [], "tags": "messiah"}
+{"id": "u035", "question": "what about the satan, is he in the 5 books", "history": [], "tags": "satan"}
+{"id": "u036", "question": "is the snake in eden supposed to be satan?? does it say that", "history": [], "tags": "satan"}
+{"id": "u037", "question": "the devil / ha-satan — torah or job", "history": [], "tags": "satan"}
+{"id": "u038", "question": "lucifer in the torah??", "history": [], "tags": "satan"}
+{"id": "u039", "question": "what does the torah actually say about women, not later commentators", "history": [], "tags": "women"}
+{"id": "u040", "question": "are there any women prophets or leaders in the five books", "history": [], "tags": "women"}
+{"id": "u041", "question": "miriam — is she in the torah, what did she do", "history": [], "tags": "women"}
+{"id": "u042", "question": "why are the inheritance laws for daughters in the torah (zelophehad?)", "history": [], "tags": "women"}
+{"id": "u043", "question": "teffilin — is that word in the torah or just 'frontlets'", "history": [], "tags": "tefillin,typo"}
+{"id": "u044", "question": "tffilin, the black boxes, does chumash describe the boxes or just the command", "history": [], "tags": "tefillin,typo"}
+{"id": "u045", "question": "sign upon thy hand, between the eyes — where is that", "history": [], "tags": "tefillin"}
+{"id": "u046", "question": "is mezuzah the little case in the torah or just the doorposts command", "history": [], "tags": "mezuzah"}
+{"id": "u047", "question": "שמע ישראל — where is this and what does it say", "history": [], "tags": "shema,hebrew"}
+{"id": "u048", "question": "מה זה כשרות בתורה", "history": [], "tags": "kashrut,hebrew"}
+{"id": "u049", "question": "is רבי in the chumash", "history": [], "tags": "rabbi,hebrew"}
+{"id": "u050", "question": "whats בראשית about, first parsha", "history": [], "tags": "parasha,hebrew"}
+{"id": "u051", "question": "האם יש שבת בתורה", "history": [], "tags": "shabbat,hebrew"}
+{"id": "u052", "question": "ציצית — is tzitzit in the 5 books", "history": [], "tags": "tzitzit,hebrew"}
+{"id": "u053", "question": "עשרת הדיברות typo wait the ten words, where", "history": [], "tags": "commandments,hebrew"}
+{"id": "u054", "question": "בראשית ברא אלהים — which verse is that", "history": [], "tags": "hebrew"}
+{"id": "u055", "question": "ואהבת לרעך כמוך is that in torah", "history": [], "tags": "hebrew"}
+{"id": "u056", "question": "parashat נח, the flood one, what happens", "history": [], "tags": "parasha,hebrew"}
+{"id": "u057", "question": "is hanukkah in the torah??? my uncle says everything is", "history": [], "tags": "hanukkah"}
+{"id": "u058", "question": "purim — five books or esther", "history": [], "tags": "purim"}
+{"id": "u059", "question": "rosh hashanah, is that the actual name in chumash", "history": [], "tags": "rosh-hashanah"}
+{"id": "u060", "question": "yom kippur, the day of atonement, where", "history": [], "tags": "yom-kippur"}
+{"id": "u061", "question": "sukkot booths, is that commanded", "history": [], "tags": "sukkot"}
+{"id": "u062", "question": "simchat torah, dancing with the scrolls, is that biblical", "history": [], "tags": "simchat-torah"}
+{"id": "u063", "question": "tisha bav fasting — torah or later", "history": [], "tags": "tisha-bav"}
+{"id": "u064", "question": "passover / pesach, the lamb, where does it describe it", "history": [], "tags": "passover"}
+{"id": "u065", "question": "shavuot, is that when we got the torah according to the text itself", "history": [], "tags": "shavuot"}
+{"id": "u066", "question": "kol nidrei — is that a torah text", "history": [], "tags": "kol-nidrei"}
+{"id": "u067", "question": "the golden caff, when moses comes down, where is that story", "history": [], "tags": "golden-calf,typo"}
+{"id": "u068", "question": "noahs ark, rainbow, is that genesis", "history": [], "tags": "noah"}
+{"id": "u069", "question": "did god really ask abraham to sacrifice isaac or is that not in the five books", "history": [], "tags": "akedah"}
+{"id": "u070", "question": "the sea splitting, yam suf, where", "history": [], "tags": "exodus"}
+{"id": "u071", "question": "tower of babel — torah yes?", "history": [], "tags": "babel"}
+{"id": "u072", "question": "joseph and the funky coat, is that in genesis or musical only", "history": [], "tags": "joseph"}
+{"id": "u073", "question": "burning bush, which book", "history": [], "tags": "moses"}
+{"id": "u074", "question": "ten plagues list, are they all in shemot", "history": [], "tags": "plagues"}
+{"id": "u075", "question": "who is korach and what happened", "history": [], "tags": "korah"}
+{"id": "u076", "question": "balaam and the talking donkey... is that actually in the torah", "history": [], "tags": "balaam"}
+{"id": "u077", "question": "the red heifer / red cow, i keep hearing about it, where", "history": [], "tags": "red-heifer"}
+{"id": "u078", "question": "moses death, does the torah say who buried him", "history": [], "tags": "moses"}
+{"id": "u079", "question": "is lilith in the torah, adams first wife or whatever", "history": [], "tags": "lilith"}
+{"id": "u080", "question": "reincarnation / gilgul, is that in the five books", "history": [], "tags": "reincarnation"}
+{"id": "u081", "question": "kabbalah, sefirot, is any of that in chumash", "history": [], "tags": "kabbalah"}
+{"id": "u082", "question": "is the talmud part of the torah", "history": [], "tags": "talmud"}
+{"id": "u083", "question": "do you need a minyan of 10, is that written in the 5 books", "history": [], "tags": "minyan"}
+{"id": "u084", "question": "bar mitzvah at 13, torah or later", "history": [], "tags": "bar-mitzvah"}
+{"id": "u085", "question": "kippah / yarmulke required in the torah?", "history": [], "tags": "kippah"}
+{"id": "u086", "question": "star of david — biblical?", "history": [], "tags": "star-of-david"}
+{"id": "u087", "question": "is the siddur / amidah in the torah", "history": [], "tags": "siddur"}
+{"id": "u088", "question": "synagogue, is that a torah institution", "history": [], "tags": "synagogue"}
+{"id": "u089", "question": "hasidism, the baal shem tov, any of that in tanakh let alone torah", "history": [], "tags": "hasidism"}
+{"id": "u090", "question": "dreidel on chanukah, biblical?? obviously wait is it", "history": [], "tags": "dreidel"}
+{"id": "u091", "question": "david and goliath — is that in the five books", "history": [], "tags": "tanakh"}
+{"id": "u092", "question": "the lord is my shepherd, psalm 23, is that torah", "history": [], "tags": "tanakh"}
+{"id": "u093", "question": "jonah and the whale, chumash or later book", "history": [], "tags": "tanakh"}
+{"id": "u094", "question": "esther and haman, in the torah?", "history": [], "tags": "tanakh"}
+{"id": "u095", "question": "is the book of job in the torah", "history": [], "tags": "tanakh"}
+{"id": "u096", "question": "elijah the prophet, five books or kings", "history": [], "tags": "tanakh"}
+{"id": "u097", "question": "is jerusalem even named in the torah", "history": [], "tags": "jerusalem"}
+{"id": "u098", "question": "ruth and boaz, torah or writings", "history": [], "tags": "tanakh"}
+{"id": "u099", "question": "love your neighbor, is that leviticus, ppl always quote it", "history": [], "tags": "laws"}
+{"id": "u100", "question": "eye for an eye — does it actually say that, where", "history": [], "tags": "laws"}
+{"id": "u101", "question": "justice justice shalt thou pursue, where is that", "history": [], "tags": "laws"}
+{"id": "u102", "question": "tzedakah / open your hand to the poor, where", "history": [], "tags": "tzedakah"}
+{"id": "u103", "question": "the stranger, treat them like, where does it say", "history": [], "tags": "stranger"}
+{"id": "u104", "question": "honour your parents, which of the 10", "history": [], "tags": "laws"}
+{"id": "u105", "question": "is slavery in the torah and what does it say, honestly", "history": [], "tags": "laws"}
+{"id": "u106", "question": "polygamy, did the torah allow more than one wife", "history": [], "tags": "laws"}
+{"id": "u107", "question": "witchcraft / a witch, does exodus really say that", "history": [], "tags": "laws"}
+{"id": "u108", "question": "cities of refuge, what are those", "history": [], "tags": "laws"}
+{"id": "u109", "question": "shatnez, linen and wool, is that a real torah law", "history": [], "tags": "laws"}
+{"id": "u110", "question": "jubilee year, 50th year, where", "history": [], "tags": "laws"}
+{"id": "u111", "question": "brit milah 8th day, where commanded", "history": [], "tags": "laws"}
+{"id": "u112", "question": "niddah / family purity, is the basic idea in the torah", "history": [], "tags": "laws"}
+{"id": "u113", "question": "is god a man or a woman in the torah, or neither", "history": [], "tags": "theology"}
+{"id": "u114", "question": "does the torah say israel is chosen, where", "history": [], "tags": "theology"}
+{"id": "u115", "question": "the nephilim / giants, genesis 6, what does it actually say", "history": [], "tags": "theology"}
+{"id": "u116", "question": "who wrote the torah, does the text say moses wrote it", "history": [], "tags": "theology"}
+{"id": "u117", "question": "is original sin a torah idea", "history": [], "tags": "theology"}
+{"id": "u118", "question": "the trinity, is that in the Hebrew bible's first five books", "history": [], "tags": "theology"}
+{"id": "u119", "question": "is jesus mentioned in the torah", "history": [], "tags": "theology"}
+{"id": "u120", "question": "does the torah mention prayer, like people praying", "history": [], "tags": "prayer"}
+{"id": "u121", "question": "ya but the boxes themselves", "history": ["sign upon thy hand, between the eyes — where is that"], "tags": "tefillin,followup"}
+{"id": "u122", "question": "and milk+meat?? my grandma was strict about that", "history": ["casherut — pigs, shellfish, is that in the 5 books or just rabbis"], "tags": "kashrut,followup"}
+{"id": "u123", "question": "so is that a no", "history": ["does the torah talk about the afterlife or olam haba"], "tags": "afterlife,followup"}
+{"id": "u124", "question": "then where DID the title come from", "history": ["is rabbi in torah tho or did they make that up later"], "tags": "rabbi,followup"}
+{"id": "u125", "question": "ok name one woman who leads something", "history": ["what does the torah actually say about women, not later commentators"], "tags": "women,followup"}
+{"id": "u126", "question": "btw is amalek in the 5 books and what r we supposed to do", "history": [], "tags": "amalek"}
+{"id": "u127", "question": "chosen people thing feels messy, what does the text say exactly", "history": [], "tags": "theology"}
+{"id": "u128", "question": "is the word 'angel' in english translations of genesis", "history": [], "tags": "angels"}
+{"id": "u129", "question": "frontlets vs tefillin im confused which is biblical", "history": [], "tags": "tefillin"}
+{"id": "u130", "question": "do animals go to heaven, does torah say anything about afterlife for people even", "history": [], "tags": "afterlife"}
+{"id": "u131", "question": "whats a good recipe for challah, not the blessing, the baking", "history": [], "tags": "off-topic"}
+{"id": "u132", "question": "who won the world series and also is baseball in the torah (spoiler no but im asking about the game)", "history": [], "tags": "off-topic"}
+{"id": "u133", "question": "can you help me write a python loop, this isnt a torah question", "history": [], "tags": "off-topic"}
+{"id": "u134", "question": "weather in tel aviv tomorrow", "history": [], "tags": "off-topic"}
+{"id": "u135", "question": "best sushi near me", "history": [], "tags": "off-topic"}
+{"id": "u136", "question": "i heard 'let there be light' — exact ref pls", "history": [], "tags": "creation"}
+{"id": "u137", "question": "in the beginning, first line, hebrew + english", "history": [], "tags": "creation"}
+{"id": "u138", "question": "is the shema only deut 6 or also the other paragraphs", "history": [], "tags": "shema"}
+{"id": "u139", "question": "priestly blessing, yevarechecha, numbers right?", "history": [], "tags": "priestly-blessing"}
+{"id": "u140", "question": "nazirite, no wine no haircut, where are the rules", "history": [], "tags": "nazir"}
+{"id": "u141", "question": "did pharaohs heart get hardened, is that in shemot", "history": [], "tags": "pharaoh"}
+{"id": "u142", "question": "manna, what was it, what does the text say not legends", "history": [], "tags": "manna"}
+{"id": "u143", "question": "the spies, 12 guys, caleb and joshua, which book", "history": [], "tags": "spies"}
+{"id": "u144", "question": "water from a rock, merivah, why was moses punished", "history": [], "tags": "meribah"}
+{"id": "u145", "question": "is 'an eye for an eye' literal money or what, just quote it first", "history": [], "tags": "laws"}
+{"id": "u146", "question": "g-d's name, the four letters, i dont want it voiced, but is the name written in the torah", "history": [], "tags": "name"}
+{"id": "u147", "question": "how many times is egypt mentioned, actually just tell me a verse where they leave egypt", "history": [], "tags": "exodus"}
+{"id": "u148", "question": "is 'thou shalt not kill' or 'not murder', the commandment, where", "history": [], "tags": "commandments"}
+{"id": "u149", "question": "sodom and gomorrah, what does genesis actually say happened", "history": [], "tags": "sodom"}
+{"id": "u150", "question": "if someone asks 'is there a messiah in the pentateuch' how would you answer plainly", "history": [], "tags": "messiah"}

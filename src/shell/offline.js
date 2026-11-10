@@ -6,6 +6,7 @@
 // from the install-time precache, or "alef-runtime-v1" from runtime caching). It does NOT prove the feature works offline end to end:
 // no browser has been run in airplane mode for this module. Audio clips are not part of any group (no recorded teacher; the few synthetic word clips are fetched when played and not tested offline).
 import { requestPersistence, storageStatus } from "./backup.js";
+import { MUSIC_BASE, MUSIC_TRACKS, ORIGINAL_MUSIC_TRACKS, ORIGINAL_SONG_TRACKS, playableFile } from "../listen/catalog.js";
 
 export const PRECACHE_URL = "precache-manifest.js";
 /** Approximate Web Storage limit in UTF-16 code units per origin: browsers differ (about 5 million characters in Chromium and Firefox, about 5 MB in Safari); used only for a warning. */
@@ -19,7 +20,7 @@ export const GROUPS = Object.freeze([
   { id: "lessons", label: "Lessons, review and Israel dialogues", test: /^(src\/curriculum\/|data\/curriculum\/|data\/speak\/|src\/israel\/|data\/israel\/|src\/firstday\/|data\/firstday\/|src\/placement\/|data\/placement\/|src\/speak\/|src\/listen\/|data\/listen\/|src\/typing\/|data\/typing\/|src\/trope\/|data\/trope-trainer\/|src\/home\/)/, route: "#/learn" },
   { id: "letters", label: "Letters and tracing", test: /^(src\/letters\/|data\/letters\/|assets\/letters\/|src\/wordtrace\/|data\/wordtrace\/)/, route: "#/letters" },
   { id: "pronunciation", label: "Sounds and pronunciation", test: /^(src\/pronunciation\/|data\/pronunciation\/)/, route: "#/sounds" },
-  { id: "reading", label: "Reading, Torah and prayer", test: /^(src\/corpus\/|data\/corpus\/|src\/torahread\/|data\/torahread\/|src\/torahreader\/|src\/festivals\/|data\/festivals\/|src\/grammar\/|data\/grammar\/|src\/service\/|src\/morning\/|data\/morning-verses\.json|data\/torah-quotes\.json|data\/service\/|src\/timedread\/|data\/timedread\/)/, route: "#/read" },
+  { id: "reading", label: "Reading, Torah and prayer", test: /^(src\/corpus\/|data\/corpus\/|src\/torahread\/|data\/torahread\/|src\/torahreader\/|src\/ask\/|src\/festivals\/|data\/festivals\/|src\/grammar\/|data\/grammar\/|src\/service\/|src\/morning\/|data\/morning-verses\.json|data\/torah-quotes\.json|data\/service\/|src\/timedread\/|data\/timedread\/)/, route: "#/read" },
   { id: "vocab", label: "Vocabulary and Word Sprint", test: /^(src\/vocab\/|data\/vocab\/|src\/sprint\/|data\/sprint\/)/, route: "#/vocab", needs: ["vocab-packs"] },
   { id: "photo", label: "Scan a photo", test: /^(src\/photo\/|data\/photo\/)/, route: "#/scan", needs: ["ocr"] },
   { id: "progress", label: "Progress, class track and sharing", test: /^(src\/progress\/|data\/progress\/|src\/awards\/|src\/classtrack\/|data\/classtrack\/|src\/teacher\/|src\/traditions\/|data\/traditions\/)/, route: "#/progress" },
@@ -27,6 +28,7 @@ export const GROUPS = Object.freeze([
   { id: "phrases", label: "Common phrases and sentences", test: /^(src\/phrases\/|data\/phrases\/)/, route: "#/phrases" },
   { id: "games", label: "Hebrew games", test: /^src\/games\//, route: "#/learn" },
   { id: "books", label: "Little Books (read-aloud stories)", test: /^(src\/books\/|data\/books\/)/, route: "#/books" },
+  { id: "light", label: "Star of David light", test: /^(src\/light\/|assets\/light\/|assets\/css\/light\.css$)/, route: "#/light" },
   { id: "shell", label: "App shell, settings and install", test: /^(index\.html|offline\.html|manifest\.webmanifest|src\/(app|store)\.js|src\/shell\/|src\/motion\/|src\/img\/|data\/img\/|data\/images\/|data\/legal\/|src\/audio\/|data\/audio\/|src\/onboarding\/|data\/onboarding\/|assets\/)/, route: "#/" },
 ]);
 export const groupOf = (path) => GROUPS.find((g) => g.test.test(path))?.id || "other";
@@ -37,6 +39,9 @@ export function optionalGroups(tradition = "sephardi") {
   return [
     { id: "audio-shard", label: `Word audio list (${t})`, urls: [`data/audio/manifest-words-${t}.json`], approxMB: 0.9 },
     { id: "vocab-packs", label: "Vocabulary lists (5,000 words)", urls: [500, 1000, 2000, 5000].map((n) => `data/vocab/packs/vocab5k-tier-${n}.json`), approxMB: 0.95 },
+    // Music is optional, so it is never part of "ready": these let a learner take it offline on purpose (sw.js keeps it in alef-music-v1).
+    { id: "music-beds", label: "Game music (optional)", urls: [...MUSIC_TRACKS, ...ORIGINAL_MUSIC_TRACKS].map((m) => MUSIC_BASE + playableFile(m.file)), approxMB: 27.4 },
+    { id: "songs", label: "Songs (optional)", urls: ORIGINAL_SONG_TRACKS.map((m) => MUSIC_BASE + m.file), approxMB: 8.3 },
     { id: "ocr", label: "Photo reader (text recognition)", urls: ["assets/vendor/_tesseract/tesseract.esm.min.js", "assets/vendor/_tesseract/worker.min.js", "assets/vendor/_tesseract/tesseract-core-simd-lstm.wasm.js", "assets/vendor/_tesseract/heb.traineddata"], approxMB: 5.0 },
   ];
 }
@@ -52,32 +57,39 @@ export const ON_DEMAND_GROUPS = Object.freeze([
   { id: "od-vocab", label: "Vocabulary data and theme packs", test: /^data\/vocab\//, approxMB: 5.9 },
   { id: "od-audio-index", label: "Audio clip list (core)", test: /^data\/audio\//, approxMB: 2.6 },
   { id: "od-pronunciation", label: "Sounds and pronunciation data", test: /^data\/pronunciation\//, approxMB: 0.8 },
-  { id: "od-speak", label: "Speaking, Israel dialogues, listening, typing, word tracing", test: /^(data\/(speak|israel|listen|typing|wordtrace)\/|src\/(wordtrace|typing)\/)/, approxMB: 0.5 },
+  { id: "od-speak", label: "Speaking, Israel dialogues, everyday phrases, listening, typing, word tracing", test: /^(data\/(speak|israel|listen|typing|wordtrace)\/|src\/(wordtrace|typing)\/|src\/israel\/israel\.view\.js$|src\/phrases\/phrases\.view\.js$)/, approxMB: 0.53 },
   { id: "od-reading", label: "Reading, festivals, calendar, grammar and pronunciation-style data", test: /^data\/((corpus|torahread|festivals|calendar|grammar|traditions|trope-trainer)\/|torah-quotes\.json$)/, approxMB: 0.5 },
   { id: "od-intermediate", label: "Intermediate lessons and class track", test: /^data\/curriculum\//, approxMB: 0.6 },
   { id: "od-letter-pictures", label: "Letter memory pictures (the rest of the alphabet)", test: /^assets\/letters\/morph\//, approxMB: 0.09 },
   { id: "od-screens", label: "Install-prompt screenshots", test: /^assets\/screen(s|shots)\//, approxMB: 0.5 },
   { id: "od-pictures", label: "Book, story and speaking-practice pictures", test: /^assets\/(game-art|letter-cartoons|books|speak-hold|speak-candidates)\//, approxMB: 123.45 },
   { id: "od-games", label: "Games (preview-game code, word data and arcade art)", test: /^(src\/games\/|data\/games\/|assets\/games\/)/, approxMB: 1.4 },
+  { id: "od-camera", label: "Camera Translator (code and sign word list)", test: /^(src\/camera|data\/camera)\//, approxMB: 0.07 },
   { id: "od-books", label: "Little books (code and book texts)", test: /^(src\/books|data\/books)\//, approxMB: 0.04 },
   { id: "od-synagogues", label: "Reform Synagogues in Canada", test: /^(src\/synagogues|data\/synagogues|assets\/synagogues)\//, approxMB: 14 },
   { id: "od-library", label: "Library articles", test: /^(src\/library|data\/library)\//, approxMB: 0.07 },
   { id: "od-videos", label: "Letter videos", test: /^(assets\/videos|data\/videos)\//, approxMB: 2 },
   { id: "od-lab", label: "Brain Lab", test: /^(src\/lab|data\/lab)\//, approxMB: 0.06 },
+  { id: "od-retention", label: "Streak, gems, hearts and practice league", test: /^src\/retention\//, approxMB: 0.1 },
   { id: "od-service", label: "Follow the Service", test: /^src\/service\//, approxMB: 0.1 },
   { id: "od-awards", label: "Awards gallery and certificate", test: /^src\/awards\/(?:gallery\.view|proof-font|certificate|icons)\.js$/, approxMB: 0.11 },
   { id: "od-torahreader", label: "Torah reader page and its Hebrew recording index", test: /^src\/(torahreader\/torahreader\.view|shell\/torah-he-index)\.js$/, approxMB: 0.05 },
-  { id: "od-preview-pages", label: "Class track and pronunciation comparison (preview-route code)", test: /^src\/(classtrack\/classtrack|pronunciation\/compare)\.view\.js$/, approxMB: 0.03 },
+  { id: "od-preview-pages", label: "Class track, pronunciation comparison, Sound like a local, the calendar, the privacy screen, Sounds, Scan a photo and Word Sprint (route code)", test: /^src\/(classtrack\/classtrack|pronunciation\/compare|israel\/israel|curriculum\/calendar|shell\/privacy|photo\/scan|pronunciation\/sounds|sprint\/sprint)\.view\.js$/, approxMB: 0.08 },
+  { id: "od-rimon", label: "Rimon's stills (code, styles and light WebP sheets)", test: /^(src\/shell\/(rimon-(stage|triggers|stills\.generated|model)|mascot)\.js|assets\/css\/rimon-stills.css|assets\/img\/rimon\/web\/)/, approxMB: 1.6 },
   { id: "od-images", label: "Picture approvals and word cues", test: /^data\/images\//, approxMB: 0.20 },
   { id: "od-letters", label: "Letter art concepts and keyboard layout", test: /^data\/letters\//, approxMB: 0.08 },
   { id: "od-home", label: "Home prayers and morning verses", test: /^(data\/homepage\/|data\/morning-verses\.json)/, approxMB: 0.09 },
-  { id: "od-firstday", label: "First-day minute-one data and the word builder list", test: /^data\/firstday\//, approxMB: 0.17 },
+  { id: "od-ask", label: "Ask the Torah: the checked answers", test: /^(data\/ask\/|src\/ask\/)/, approxMB: 2.8 },
+  { id: "od-firstday", label: "First-day minute-one data and the word builder", test: /^(data\/firstday\/|src\/firstday\/minuteone\.view\.js$|data\/builder_words\.json$)/, approxMB: 0.2 },
   { id: "od-fonts", label: "Cursive display font (used only with the cursive script setting)", test: /^assets\/fonts\//, approxMB: 0.03 },
   { id: "od-traditions-code", label: "Traditions pages (preview-route code)", test: /^src\/traditions\//, approxMB: 0.04 },
   { id: "od-vocab-code", label: "Vocabulary browser (preview-route code)", test: /^src\/vocab\//, approxMB: 0.06 },
+  { id: "od-talk", label: "Talk page and its stored lines", test: /^(src\/talk\/|data\/talk\/)/, approxMB: 0.12 },
   { id: "od-speak-code", label: "Say it page (preview-route code)", test: /^src\/speak\/speak\.js$/, approxMB: 0.06 },
-  { id: "od-music", label: "Game music player and English read-aloud", test: /^src\/(audio\/synth-music|shell\/speak-english)\.js$/, approxMB: 0.03 },
-  { id: "od-day-code", label: "Calendar day pages, add-to-calendar box, morning screen and intermediate lessons (preview-route code)", test: /^(src\/curriculum\/(day\.view|calendar\.day|calendar\.addpanel|calendar\.quickadd|intermediate\.view)\.js|src\/morning\/morning\.view\.js)$/, approxMB: 0.09 },
+  { id: "od-music", label: "Game music player, Songs page and English read-aloud", test: /^src\/(audio\/(synth-music|sting)|shell\/speak-english|listen\/songs\.view)\.js$/, approxMB: 0.04 },
+  { id: "od-day-code", label: "Calendar day pages, add-to-calendar box, morning screen, intermediate lessons, practical units and Israel units (preview-route code)", test: /^(src\/curriculum\/(day\.view|calendar\.day|calendar\.addpanel|calendar\.quickadd|intermediate\.view|practical\.view|practical-progress|practical-written|israel-units|israel-units\.view)\.js|src\/morning\/morning\.view\.js)$/, approxMB: 0.11 },
+  { id: "od-learn-practice", label: "Learn practice screens (review, loanwords, drills and dialogues)", test: /^src\/curriculum\/(review|loanwords|spotit|checkpoint|dialogues|ladder|fade|gender|scaffold)\.view\.js$/, approxMB: 0.07 },
+  { id: "od-light", label: "Star of David light (page, style and printable stencil)", test: /^(src\/light\/|assets\/light\/|assets\/css\/light\.css$)/, approxMB: 0.02 },
 ]);
 /** Group a list of ALEF_ON_DEMAND paths into optional-download entries ({id,label,urls,approxMB}); empty groups are dropped. */
 export function onDemandGroups(onDemand = []) {
@@ -255,7 +267,7 @@ export async function storageHealth(env = {}) {
   const overall = [level(originRatio), local.level].sort((a, b) => rank[b] - rank[a])[0];
   const exportRoute = env.hasRoute ? (env.hasRoute("settings") ? "#/settings" : null) : "#/settings";
   const advice = [];
-  if (local.level === "warn" || local.level === "critical") advice.push(`Saved progress and settings use about ${Math.round(local.ratio * 100)}% of the space this browser gives the site for them. Download a backup${exportRoute ? " from Settings" : ""} and tell whoever looks after Aleph; saving may start failing near the limit.`);
+  if (local.level === "warn" || local.level === "critical") advice.push(`Saved progress and settings use about ${Math.round(local.ratio * 100)}% of the space this browser gives the site for them. Download a backup${exportRoute ? " from Settings" : ""} and tell whoever looks after ALEF; saving may start failing near the limit.`);
   if (level(originRatio) === "warn" || level(originRatio) === "critical") advice.push("The browser says this site uses most of its allowed storage (mostly offline copies). Clearing the offline copies is safe; progress is kept separately.");
   if (st.supported && st.persisted === false) advice.push("Progress is not protected from automatic browser clean-up. Use \"Protect my progress\", and keep a backup file.");
   return { persist: { supported: st.supported, persisted: st.persisted }, origin: { usage: st.usage, quota: st.quota, ratio: originRatio, level: level(originRatio) }, local, level: overall, exportRoute, advice };

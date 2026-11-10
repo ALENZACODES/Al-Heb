@@ -26,7 +26,7 @@ export function mount(root, ctx) {
     const t = timeTotals(lessons, completed), b = budget(t, DEFAULT_RANGE, perWeek), pct = t.totalMinutes ? Math.round((t.doneMinutes / t.totalMinutes) * 100) : 0;
     const meter = el('progress', { id: 'tb-meter', max: '100', value: String(pct), 'aria-label': `Lesson time completed: ${pct} percent` }, `${pct}%`);
     body.replaceChildren(
-      el('h2', {}, 'What Aleph contains'),
+      el('h2', {}, 'What ALEF contains'),
       el('p', {}, `${t.lessons} lessons, about ${b.lessonHours} hours of estimated lesson time.`),
       el('h2', {}, 'Your lesson time so far'), el('p', {}, el('label', { for: 'tb-meter' }, `${t.doneLessons} of ${t.lessons} lessons completed, about ${b.doneHours} of ${b.lessonHours} hours (${pct}%): `), meter),
       el('h2', {}, `Against a planning range of ${DEFAULT_RANGE.low} to ${DEFAULT_RANGE.high} hours`),

@@ -88,7 +88,7 @@ export function mount(root, ctx) {
       st = normalizeState(await storeGet(ctx, STORE_KEY, null));
       reached = lessonReached(await storeGet(ctx, 'curriculum.progress', null));
       if (alive) startRound();
-    } catch { if (alive) body.replaceChildren(el('p', { role: 'alert' }, 'The word set could not be loaded. If you are offline, open this page once while online, or use "Use Aleph offline" in the More menu to download everything. Nothing was lost.')); }
+    } catch { if (alive) body.replaceChildren(el('p', { role: 'alert' }, 'The word set could not be loaded. If you are offline, open this page once while online, or use "Use ALEF offline" in the More menu to download everything. Nothing was lost.')); }
   })();
   return () => { alive = false; wrap.children = []; if (typeof wrap.remove === 'function') wrap.remove(); else root.replaceChildren?.(); };
 }

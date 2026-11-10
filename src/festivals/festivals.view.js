@@ -14,7 +14,7 @@ import { loadJSON } from "../curriculum/data.js";
 import { CAL_PREFS_KEY } from "../curriculum/calendar.locations.js";
 import { weekCard, linksFor, shabbatReady, packById, PACK_OF } from "./model.js";
 
-export const DRAFT_NOTICE = "Draft. Nobody has proofread these words or lines. Words come from Aleph's vocabulary list and lines are copied from its own texts; whether a word means the same in the festival or in a line was not checked.";
+export const DRAFT_NOTICE = "Draft. Nobody has proofread these words or lines. Words come from ALEF's vocabulary list and lines are copied from its own texts; whether a word means the same in the festival or in a line was not checked.";
 export const CALC_NOTE = "Dates and times are calculated, not authoritative. Check with your community.";
 const CSS = `
 .fv{display:grid;gap:var(--gap,1rem);max-inline-size:40rem;margin-inline:auto;overflow-wrap:anywhere}
@@ -25,6 +25,7 @@ const CSS = `
 .fv ul.fv-plain{list-style:none;padding:0;display:grid;gap:.5rem}
 .fv .he{font-size:1.7rem;line-height:1.6;unicode-bidi:isolate}
 .fv .fv-muted{font-size:.9rem;color:var(--muted,#555)}
+.fv .fv-lede{font-size:1.05rem;margin-block:.4rem .8rem}
 .fv .btn{min-block-size:var(--tap,48px);display:inline-flex;align-items:center}
 .fv a:focus-visible,.fv button:focus-visible{outline:3px solid var(--focus,currentColor);outline-offset:2px}
 .fv .fv-line{border-inline-start:4px solid var(--border,#999);padding-inline-start:.6rem;margin-block:.3rem}
@@ -35,14 +36,18 @@ const dayName = (iso) => DAY_WORDS[new Date(iso + "T12:00:00Z").getUTCDay()];
 
 async function loadAll(ctx) {
   const inj = ctx?.festivalsData;
-  const [vocab, links, shabbat, registry, lessons] = await Promise.all([
+  const [vocab, links, shabbat, registry, lessons, library] = await Promise.all([
     inj?.vocab || loadJSON("data/festivals/vocab.json"),
     inj?.links || loadJSON("data/festivals/links.json"),
     inj?.shabbat || loadJSON("data/festivals/shabbat-ready.json"),
     inj?.registry || loadJSON("data/corpus/registry.json").then((r) => r.entries),
     inj?.lessons ? Promise.resolve(inj.lessons) : loadJSON("data/curriculum/lessons.json").then((l) => l.lessons.map((x) => [x.id, x.title])).catch(() => []),
+    inj?.library ? Promise.resolve(inj.library) : loadJSON("data/library/articles.json").then((l) => l.articles).catch(() => []),
   ]);
-  return { vocab, links, shabbat, registry, registryById: new Map(registry.map((e) => [e.id, e])), registryTitles: new Map(registry.map((e) => [e.id, e.title])), lessonTitles: new Map(lessons) };
+  // Library articles by holiday (articles list the calendar days they cover); Shemini Atzeret's pack shares the Sukkot article.
+  const articles = new Map();
+  for (const a of library || []) for (const d of a.dayIds || []) { if (!articles.has(d)) articles.set(d, []); articles.get(d).push({ id: a.id, title: a.title }); }
+  return { vocab, links, shabbat, registry, registryById: new Map(registry.map((e) => [e.id, e])), registryTitles: new Map(registry.map((e) => [e.id, e.title])), lessonTitles: new Map(lessons), articles };
 }
 
 const calPrefsOf = (ctx) => { try { return ctx?.store?.get?.(CAL_PREFS_KEY, null) ?? null; } catch { return null; } };
@@ -94,16 +99,17 @@ const nameOf = (id) => FEST_NAMES[id] || id;
 function packView(ctx, D, pack) {
   const parts = [
     ctx.img?.(h, { kind: 'festival', id: pack.id, class: 'fv-pic', width: 900 }),
-    h("p", { class: "fv-muted" }, `${pl(pack.size, "word", "words")} from Aleph's vocabulary list; ${pack.withLine} with a reading line copied from Aleph's texts. ${pack.short ? `Short by ${pack.short}: the list has no entry for the terms below.` : ""}`),
+    h("p", { class: "fv-lede" }, `Words to know for ${nameOf(pack.id)}${pack.withLine ? `, with lines where they appear in the prayers and readings` : ""}.`),
+    ...(D.articles?.get(pack.id) || []).filter(() => hasRoute(ctx)("libraryarticle")).map((a) => h("p", {}, h("a", { class: "btn secondary", href: `#/library/${a.id}` }, `Read: ${a.title}`))),
     h("ul", { class: "fv-plain", "data-part": "words" }, ...pack.words.map((w) => h("li", { class: "fv-card", "data-word": w.id },
       h("div", {}, heSpan(w.he), " ", h("strong", {}, uiEnglish(ctx, w.en)), h("span", { class: "fv-muted" }, ` (${w.translit}, ${w.pos})`)),
       w.senseNote ? h("p", { class: "fv-muted" }, w.senseNote) : null,
-      w.line ? h("div", { class: "fv-line" }, h("div", {}, heSpan(w.line.he)), h("div", { class: "fv-muted" }, `From ${w.line.title}. `, hasRoute(ctx)("text") && w.line.source === "registry" && D.registryById.has(w.line.id) ? h("a", { href: `#/read/${w.line.id}` }, "Open the text") : null)) : h("p", { class: "fv-muted" }, "No reading line in Aleph's texts yet.")))),
+      w.line ? h("div", { class: "fv-line" }, h("div", {}, heSpan(w.line.he)), h("div", { class: "fv-muted" }, `From ${w.line.title}. `, hasRoute(ctx)("text") && w.line.source === "registry" && D.registryById.has(w.line.id) ? h("a", { href: `#/read/${w.line.id}` }, "Open the text") : null)) : null))),
   ];
-  if (pack.gaps.length) parts.push(h("section", { class: "fv-card", "data-part": "gaps" }, h("h2", {}, "Not in Aleph's vocabulary yet"), h("p", {}, pack.gaps.map((g) => g.en).join("; ") + "."), ...pack.notes.map((n) => h("p", { class: "fv-muted" }, n))));
+  if (pack.gaps.length) parts.push(h("section", { class: "fv-card", "data-part": "gaps" }, h("h2", {}, "Not in ALEF's vocabulary yet"), h("p", {}, pack.gaps.map((g) => g.en).join("; ") + "."), ...pack.notes.map((n) => h("p", { class: "fv-muted" }, n))));
   else if (pack.notes.length) parts.push(...pack.notes.map((n) => h("p", { class: "fv-muted" }, n)));
   const lk = linkList(linksFor(D.links.festivals?.[pack.id], { hasRoute: hasRoute(ctx), registryTitles: D.registryTitles, lessonTitles: D.lessonTitles }));
-  if (lk) parts.push(h("section", { class: "fv-card", "data-part": "links" }, h("h2", {}, "In Aleph"), lk));
+  if (lk) parts.push(h("section", { class: "fv-card", "data-part": "links" }, h("h2", {}, "In ALEF"), lk));
   return parts;
 }
 
@@ -129,7 +135,7 @@ async function readyView(ctx, D) {
         p.decodable === null ? "Coverage unknown." : p.decodable ? "You have been taught every letter and sign in it." : `${p.full} of ${pl(p.lines, "line", "lines")} use only what you have been taught${p.almost ? `; ${p.almost} more ${p.almost === 1 ? "is" : "are"} one step away` : ""}.`),
       hasRoute(ctx)("text") ? h("a", { class: "btn secondary", href: p.href }, "Open and read it") : null))),
   ];
-  if (r.skipped.length) parts.push(h("section", { class: "fv-card", "data-part": "skipped" }, h("h2", {}, "Not in Aleph yet"), h("ul", {}, ...r.skipped.map((s) => h("li", {}, `${s.label}: ${s.reason}.`)))));
+  if (r.skipped.length) parts.push(h("section", { class: "fv-card", "data-part": "skipped" }, h("h2", {}, "Not in ALEF yet"), h("ul", {}, ...r.skipped.map((s) => h("li", {}, `${s.label}: ${s.reason}.`)))));
   return parts;
 }
 

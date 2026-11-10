@@ -14,7 +14,7 @@
    "rarely-used",
    "unknown"
   ],
-  "service": "Computed from torah-service-guide.json: shabbat-morning/<section id> or an otherOccasions id (shabbat-evening, havdalah, hanukkah, meals). An empty list means the prayer is not placed in the guide (for example Modeh Ani is said at home)."
+  "service": "Computed from torah-service-guide.json: shabbat-morning/<section id> or an otherOccasions id (shabbat-evening, havdalah, hanukkah, meals, festivals). An empty list means the prayer is not placed in the guide (for example Modeh Ani is said at home)."
  },
  "entries": {
   "bless-priestly-1": {
@@ -38,8 +38,8 @@
      "note": ""
     },
     "reform": {
-     "use": "unknown",
-     "note": ""
+     "use": "as-written",
+     "note": "Often said by the rabbi to close the service; many congregations answer each line 'ken yehi ratzon' (may it be so)."
     },
     "note": ""
    },
@@ -675,15 +675,15 @@
    "denominations": {
     "orthodox": {
      "use": "as-written",
-     "note": ""
+     "note": "The text here is Edot HaMizrach. Ashkenazi books read 'va'anachnu kor'im umishtachavim umodim' (bend the knees at kor'im, bow at mishtachavim); some Ashkenazi books leave out or bracket 'shehem mishtachavim lahevel varik'."
     },
     "conservative": {
      "use": "varies",
-     "note": "Wording of the \"he has not made us like the nations\" lines varies in some Conservative books."
+     "note": "Many Conservative books leave out the line 'shehem mishtachavim lahevel varik' (they bow to vanity and emptiness) and offer other wording for 'shelo asanu kegoyei ha'aratzot'."
     },
     "reform": {
      "use": "varies",
-     "note": "Reform and Reconstructionist books usually change or omit the \"has not made us like the nations\" lines. Unverified."
+     "note": "Reform books do not print 'shehem mishtachavim lahevel varik' and offer an alternative to the 'has not made us like the nations' lines; the bowing line reads 'va'anachnu kor'im umishtachavim umodim'."
     },
     "note": ""
    },
@@ -770,8 +770,8 @@
      "note": "Aramaic text; same words in the three movements. Who says it (mourners only, or the whole room) varies by community."
     },
     "reform": {
-     "use": "as-written",
-     "note": "Aramaic text; same words in the three movements. Who says it (mourners only, or the whole room) varies by community."
+     "use": "varies",
+     "note": "Aramaic text; same words in the three movements. Who says it (mourners only, or the whole room) varies by community. Reform books add 'v'al kol yoshvei tevel' (and for all who dwell on earth) to the last line."
     },
     "note": ""
    },
@@ -1556,8 +1556,8 @@
      "note": ""
     },
     "reform": {
-     "use": "as-written",
-     "note": ""
+     "use": "varies",
+     "note": "Reform books add 'v'al kol yoshvei tevel' (and for all who dwell on earth) to the last line."
     },
     "note": ""
    },
@@ -2059,6 +2059,552 @@
     "note": ""
    },
    "whatItSays": "Rock of my salvation, it is fitting to praise you; restore my house of prayer and I will bring a thanksgiving offering.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "hallel-113-1": {
+   "service": [
+    "festivals"
+   ],
+   "occasions": [
+    "festival",
+    "hanukkah",
+    "rosh-chodesh"
+   ],
+   "whereInService": "Opening verse of Hallel, said on festivals, Rosh Chodesh and Hanukkah",
+   "delivery": "chanted",
+   "leaderOrCongregation": "congregation",
+   "denominations": {
+    "orthodox": {
+     "use": "as-written",
+     "note": "The Hebrew is the psalm text (UXLC). Communities differ on when full or half Hallel is said, and on the tunes; the words of these verses are shared."
+    },
+    "conservative": {
+     "use": "as-written",
+     "note": "The Hebrew is the psalm text (UXLC). Communities differ on when full or half Hallel is said, and on the tunes; the words of these verses are shared."
+    },
+    "reform": {
+     "use": "as-written",
+     "note": "The Hebrew is the psalm text (UXLC). Communities differ on when full or half Hallel is said, and on the tunes; the words of these verses are shared."
+    },
+    "note": ""
+   },
+   "whatItSays": "Praise the LORD: servants of the LORD, praise the name of the LORD.",
+   "note": "Only Psalm 113:1 is in the registry; the rest of the psalm is still a gap.",
+   "clergyReviewed": false
+  },
+  "hallel-115-1": {
+   "service": [
+    "festivals"
+   ],
+   "occasions": [
+    "festival",
+    "hanukkah"
+   ],
+   "whereInService": "Hallel, Psalm 115:1 (omitted in half Hallel)",
+   "delivery": "chanted",
+   "leaderOrCongregation": "congregation",
+   "denominations": {
+    "orthodox": {
+     "use": "as-written",
+     "note": "The Hebrew is the psalm text (UXLC). Communities differ on when full or half Hallel is said, and on the tunes; the words of these verses are shared."
+    },
+    "conservative": {
+     "use": "as-written",
+     "note": "The Hebrew is the psalm text (UXLC). Communities differ on when full or half Hallel is said, and on the tunes; the words of these verses are shared."
+    },
+    "reform": {
+     "use": "as-written",
+     "note": "The Hebrew is the psalm text (UXLC). Communities differ on when full or half Hallel is said, and on the tunes; the words of these verses are shared."
+    },
+    "note": ""
+   },
+   "whatItSays": "Not to us, LORD, not to us, but to your name give glory.",
+   "note": "This verse is not said in half Hallel (Rosh Chodesh and the later days of Pesach in many communities).",
+   "clergyReviewed": false
+  },
+  "hallel-116-13": {
+   "service": [
+    "festivals",
+    "havdalah"
+   ],
+   "occasions": [
+    "festival",
+    "hanukkah",
+    "havdalah"
+   ],
+   "whereInService": "Hallel, Psalm 116:13; also in the opening verses of Havdalah",
+   "delivery": "chanted",
+   "leaderOrCongregation": "congregation",
+   "denominations": {
+    "orthodox": {
+     "use": "as-written",
+     "note": "The Hebrew is the psalm text (UXLC). Communities differ on when full or half Hallel is said, and on the tunes; the words of these verses are shared."
+    },
+    "conservative": {
+     "use": "as-written",
+     "note": "The Hebrew is the psalm text (UXLC). Communities differ on when full or half Hallel is said, and on the tunes; the words of these verses are shared."
+    },
+    "reform": {
+     "use": "as-written",
+     "note": "The Hebrew is the psalm text (UXLC). Communities differ on when full or half Hallel is said, and on the tunes; the words of these verses are shared."
+    },
+    "note": ""
+   },
+   "whatItSays": "I will lift the cup of salvation and call on the name of the LORD.",
+   "note": "The same verse appears in havdalah-opening.",
+   "clergyReviewed": false
+  },
+  "hallel-117": {
+   "service": [
+    "festivals"
+   ],
+   "occasions": [
+    "festival",
+    "hanukkah",
+    "rosh-chodesh"
+   ],
+   "whereInService": "Hallel, the whole of Psalm 117",
+   "delivery": "chanted",
+   "leaderOrCongregation": "congregation",
+   "denominations": {
+    "orthodox": {
+     "use": "as-written",
+     "note": "The Hebrew is the psalm text (UXLC). Communities differ on when full or half Hallel is said, and on the tunes; the words of these verses are shared. \"All nations\" is the biblical address to the peoples, not a slur."
+    },
+    "conservative": {
+     "use": "as-written",
+     "note": "The Hebrew is the psalm text (UXLC). Communities differ on when full or half Hallel is said, and on the tunes; the words of these verses are shared. \"All nations\" is the biblical address to the peoples, not a slur."
+    },
+    "reform": {
+     "use": "as-written",
+     "note": "The Hebrew is the psalm text (UXLC). Communities differ on when full or half Hallel is said, and on the tunes; the words of these verses are shared. \"All nations\" is the biblical address to the peoples, not a slur."
+    },
+    "note": ""
+   },
+   "whatItSays": "Praise the LORD, all nations; his kindness has been mighty over us. Halleluyah.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "hallel-118-1-4": {
+   "service": [
+    "festivals"
+   ],
+   "occasions": [
+    "festival",
+    "hanukkah",
+    "rosh-chodesh"
+   ],
+   "whereInService": "Hallel, the responsive opening of Psalm 118",
+   "delivery": "chanted",
+   "leaderOrCongregation": "leader calls, congregation answers with the refrain",
+   "denominations": {
+    "orthodox": {
+     "use": "as-written",
+     "note": "The Hebrew is the psalm text (UXLC). Communities differ on when full or half Hallel is said, and on the tunes; the words of these verses are shared."
+    },
+    "conservative": {
+     "use": "as-written",
+     "note": "The Hebrew is the psalm text (UXLC). Communities differ on when full or half Hallel is said, and on the tunes; the words of these verses are shared."
+    },
+    "reform": {
+     "use": "as-written",
+     "note": "The Hebrew is the psalm text (UXLC). Communities differ on when full or half Hallel is said, and on the tunes; the words of these verses are shared."
+    },
+    "note": ""
+   },
+   "whatItSays": "Give thanks to the LORD, for he is good; his kindness is for ever. Israel, the house of Aaron, and those who fear the LORD each take up the refrain.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "hallel-118-5": {
+   "service": [
+    "festivals"
+   ],
+   "occasions": [
+    "festival",
+    "hanukkah",
+    "rosh-chodesh"
+   ],
+   "whereInService": "Hallel, Psalm 118:5",
+   "delivery": "chanted",
+   "leaderOrCongregation": "congregation",
+   "denominations": {
+    "orthodox": {
+     "use": "as-written",
+     "note": "The Hebrew is the psalm text (UXLC). Communities differ on when full or half Hallel is said, and on the tunes; the words of these verses are shared."
+    },
+    "conservative": {
+     "use": "as-written",
+     "note": "The Hebrew is the psalm text (UXLC). Communities differ on when full or half Hallel is said, and on the tunes; the words of these verses are shared."
+    },
+    "reform": {
+     "use": "as-written",
+     "note": "The Hebrew is the psalm text (UXLC). Communities differ on when full or half Hallel is said, and on the tunes; the words of these verses are shared."
+    },
+    "note": ""
+   },
+   "whatItSays": "From the narrow place I called on the LORD; he answered me in the broad place.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "hallel-118-6": {
+   "service": [
+    "festivals"
+   ],
+   "occasions": [
+    "festival",
+    "hanukkah",
+    "rosh-chodesh"
+   ],
+   "whereInService": "Hallel, Psalm 118:6",
+   "delivery": "chanted",
+   "leaderOrCongregation": "congregation",
+   "denominations": {
+    "orthodox": {
+     "use": "as-written",
+     "note": "The Hebrew is the psalm text (UXLC). Communities differ on when full or half Hallel is said, and on the tunes; the words of these verses are shared."
+    },
+    "conservative": {
+     "use": "as-written",
+     "note": "The Hebrew is the psalm text (UXLC). Communities differ on when full or half Hallel is said, and on the tunes; the words of these verses are shared."
+    },
+    "reform": {
+     "use": "as-written",
+     "note": "The Hebrew is the psalm text (UXLC). Communities differ on when full or half Hallel is said, and on the tunes; the words of these verses are shared."
+    },
+    "note": ""
+   },
+   "whatItSays": "The LORD is with me; I will not fear. What can a person do to me?",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "hallel-118-24": {
+   "service": [
+    "festivals"
+   ],
+   "occasions": [
+    "festival",
+    "hanukkah",
+    "rosh-chodesh"
+   ],
+   "whereInService": "Hallel, Psalm 118:24",
+   "delivery": "chanted",
+   "leaderOrCongregation": "congregation",
+   "denominations": {
+    "orthodox": {
+     "use": "as-written",
+     "note": "The Hebrew is the psalm text (UXLC). Communities differ on when full or half Hallel is said, and on the tunes; the words of these verses are shared."
+    },
+    "conservative": {
+     "use": "as-written",
+     "note": "The Hebrew is the psalm text (UXLC). Communities differ on when full or half Hallel is said, and on the tunes; the words of these verses are shared."
+    },
+    "reform": {
+     "use": "as-written",
+     "note": "The Hebrew is the psalm text (UXLC). Communities differ on when full or half Hallel is said, and on the tunes; the words of these verses are shared."
+    },
+    "note": ""
+   },
+   "whatItSays": "This is the day the LORD made; let us exult and rejoice in it.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "hallel-118-25": {
+   "service": [
+    "festivals"
+   ],
+   "occasions": [
+    "festival",
+    "hanukkah",
+    "rosh-chodesh"
+   ],
+   "whereInService": "Hallel, Psalm 118:25, often sung responsively",
+   "delivery": "chanted",
+   "leaderOrCongregation": "leader and congregation, often call and response",
+   "denominations": {
+    "orthodox": {
+     "use": "as-written",
+     "note": "The Hebrew is the psalm text (UXLC). Communities differ on when full or half Hallel is said, and on the tunes; the words of these verses are shared."
+    },
+    "conservative": {
+     "use": "as-written",
+     "note": "The Hebrew is the psalm text (UXLC). Communities differ on when full or half Hallel is said, and on the tunes; the words of these verses are shared."
+    },
+    "reform": {
+     "use": "as-written",
+     "note": "The Hebrew is the psalm text (UXLC). Communities differ on when full or half Hallel is said, and on the tunes; the words of these verses are shared."
+    },
+    "note": ""
+   },
+   "whatItSays": "Please, LORD, save us; please, LORD, make us succeed.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "hallel-118-28": {
+   "service": [
+    "festivals"
+   ],
+   "occasions": [
+    "festival",
+    "hanukkah",
+    "rosh-chodesh"
+   ],
+   "whereInService": "Hallel, Psalm 118:28",
+   "delivery": "chanted",
+   "leaderOrCongregation": "congregation",
+   "denominations": {
+    "orthodox": {
+     "use": "as-written",
+     "note": "The Hebrew is the psalm text (UXLC). Communities differ on when full or half Hallel is said, and on the tunes; the words of these verses are shared."
+    },
+    "conservative": {
+     "use": "as-written",
+     "note": "The Hebrew is the psalm text (UXLC). Communities differ on when full or half Hallel is said, and on the tunes; the words of these verses are shared."
+    },
+    "reform": {
+     "use": "as-written",
+     "note": "The Hebrew is the psalm text (UXLC). Communities differ on when full or half Hallel is said, and on the tunes; the words of these verses are shared."
+    },
+    "note": ""
+   },
+   "whatItSays": "You are my God, and I will thank you; my God, I will exalt you.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "kiddush-festival-day-verses": {
+   "service": [
+    "festivals"
+   ],
+   "occasions": [
+    "festival"
+   ],
+   "whereInService": "Daytime Kiddush on a festival, after the wine blessing",
+   "delivery": "chanted",
+   "leaderOrCongregation": "one person leads, all answer amen",
+   "denominations": {
+    "orthodox": {
+     "use": "as-written",
+     "note": "Leviticus 23:4 and 23:44; the verses are shared. Some books add further lines."
+    },
+    "conservative": {
+     "use": "as-written",
+     "note": "Leviticus 23:4 and 23:44; the verses are shared. Some books add further lines."
+    },
+    "reform": {
+     "use": "as-written",
+     "note": "Leviticus 23:4 and 23:44; the verses are shared. Some books add further lines."
+    },
+    "note": ""
+   },
+   "whatItSays": "These are the appointed times of the LORD, holy convocations, which you shall proclaim in their season. And Moses declared the appointed times of the LORD to the children of Israel.",
+   "note": "These two verses are not a contiguous range in the Torah.",
+   "clergyReviewed": false
+  },
+  "kiddush-festival-eve-open": {
+   "service": [
+    "festivals"
+   ],
+   "occasions": [
+    "festival"
+   ],
+   "whereInService": "Festival evening Kiddush, the opening of the sanctification, after the wine blessing",
+   "delivery": "chanted",
+   "leaderOrCongregation": "one person leads, all answer amen",
+   "denominations": {
+    "orthodox": {
+     "use": "as-written",
+     "note": "The weekday (non-Shabbat) form is shown. When a festival falls on Friday night, communities also say the parenthetical Shabbat words, which are not in this record. Wording is from a Sefard book; Ashkenaz is very close."
+    },
+    "conservative": {
+     "use": "as-written",
+     "note": "The weekday (non-Shabbat) form is shown. When a festival falls on Friday night, communities also say the parenthetical Shabbat words, which are not in this record. Wording is from a Sefard book; Ashkenaz is very close."
+    },
+    "reform": {
+     "use": "as-written",
+     "note": "The weekday (non-Shabbat) form is shown. When a festival falls on Friday night, communities also say the parenthetical Shabbat words, which are not in this record. Wording is from a Sefard book; Ashkenaz is very close."
+    },
+    "note": ""
+   },
+   "whatItSays": "God chose us, made us holy with his commandments, and gave us appointed times for gladness. The line ends mid-phrase and is followed by the insert for the day.",
+   "note": "Pair with the festival insert and kiddush-festival-eve-close. Not the Friday-night Shabbat Kiddush.",
+   "clergyReviewed": false
+  },
+  "kiddush-festival-pesach": {
+   "service": [
+    "festivals"
+   ],
+   "occasions": [
+    "festival",
+    "pesach"
+   ],
+   "whereInService": "Festival evening Kiddush on Pesach, the insert naming the day",
+   "delivery": "chanted",
+   "leaderOrCongregation": "one person leads, all answer amen",
+   "denominations": {
+    "orthodox": {
+     "use": "as-written",
+     "note": "Same insert in the common Orthodox, Conservative and many Reform books: the Festival of Matzot, the time of our freedom."
+    },
+    "conservative": {
+     "use": "as-written",
+     "note": "Same insert in the common Orthodox, Conservative and many Reform books: the Festival of Matzot, the time of our freedom."
+    },
+    "reform": {
+     "use": "as-written",
+     "note": "Same insert in the common Orthodox, Conservative and many Reform books: the Festival of Matzot, the time of our freedom."
+    },
+    "note": ""
+   },
+   "whatItSays": "This Festival of Matzot, the time of our freedom.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "kiddush-festival-shavuot": {
+   "service": [
+    "festivals"
+   ],
+   "occasions": [
+    "festival",
+    "shavuot"
+   ],
+   "whereInService": "Festival evening Kiddush on Shavuot, the insert naming the day",
+   "delivery": "chanted",
+   "leaderOrCongregation": "one person leads, all answer amen",
+   "denominations": {
+    "orthodox": {
+     "use": "as-written",
+     "note": "The wording is shared; the source print has a likely extra yod in \"torateinu\" and a missing dagesh, kept as fetched. Confirm the local book."
+    },
+    "conservative": {
+     "use": "as-written",
+     "note": "The wording is shared; the source print has a likely extra yod in \"torateinu\" and a missing dagesh, kept as fetched. Confirm the local book."
+    },
+    "reform": {
+     "use": "as-written",
+     "note": "The wording is shared; the source print has a likely extra yod in \"torateinu\" and a missing dagesh, kept as fetched. Confirm the local book."
+    },
+    "note": ""
+   },
+   "whatItSays": "This Festival of Shavuot, the time of the giving of our Torah.",
+   "note": "See the registry notes for two source-print oddities that were not silently corrected.",
+   "clergyReviewed": false
+  },
+  "kiddush-festival-sukkot": {
+   "service": [
+    "festivals"
+   ],
+   "occasions": [
+    "festival",
+    "sukkot"
+   ],
+   "whereInService": "Festival evening Kiddush on Sukkot, the insert naming the day",
+   "delivery": "chanted",
+   "leaderOrCongregation": "one person leads, all answer amen",
+   "denominations": {
+    "orthodox": {
+     "use": "as-written",
+     "note": "Same insert in the common books: the Festival of Sukkot, the time of our gladness."
+    },
+    "conservative": {
+     "use": "as-written",
+     "note": "Same insert in the common books: the Festival of Sukkot, the time of our gladness."
+    },
+    "reform": {
+     "use": "as-written",
+     "note": "Same insert in the common books: the Festival of Sukkot, the time of our gladness."
+    },
+    "note": ""
+   },
+   "whatItSays": "This Festival of Sukkot, the time of our gladness.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "kiddush-festival-shemini": {
+   "service": [
+    "festivals"
+   ],
+   "occasions": [
+    "festival",
+    "shemini-atzeret"
+   ],
+   "whereInService": "Festival evening Kiddush on Shemini Atzeret (and Simchat Torah), the insert naming the day",
+   "delivery": "chanted",
+   "leaderOrCongregation": "one person leads, all answer amen",
+   "denominations": {
+    "orthodox": {
+     "use": "as-written",
+     "note": "Wording varies slightly (\"this festival of Shemini Atzeret\" versus \"Shemini Atzeret this festival\"). The source wording is shown."
+    },
+    "conservative": {
+     "use": "as-written",
+     "note": "Wording varies slightly (\"this festival of Shemini Atzeret\" versus \"Shemini Atzeret this festival\"). The source wording is shown."
+    },
+    "reform": {
+     "use": "as-written",
+     "note": "Wording varies slightly (\"this festival of Shemini Atzeret\" versus \"Shemini Atzeret this festival\"). The source wording is shown."
+    },
+    "note": ""
+   },
+   "whatItSays": "This Festival of Shemini Atzeret, the time of our gladness.",
+   "note": "",
+   "clergyReviewed": false
+  },
+  "kiddush-festival-eve-close": {
+   "service": [
+    "festivals"
+   ],
+   "occasions": [
+    "festival"
+   ],
+   "whereInService": "Festival evening Kiddush, the close of the sanctification",
+   "delivery": "chanted",
+   "leaderOrCongregation": "one person leads, all answer amen",
+   "denominations": {
+    "orthodox": {
+     "use": "as-written",
+     "note": "The weekday close ends \"who makes Israel and the seasons holy\". When a festival falls on Friday night, the Shabbat words are also said; they are not in this record."
+    },
+    "conservative": {
+     "use": "as-written",
+     "note": "The weekday close ends \"who makes Israel and the seasons holy\". When a festival falls on Friday night, the Shabbat words are also said; they are not in this record."
+    },
+    "reform": {
+     "use": "as-written",
+     "note": "The weekday close ends \"who makes Israel and the seasons holy\". When a festival falls on Friday night, the Shabbat words are also said; they are not in this record."
+    },
+    "note": ""
+   },
+   "whatItSays": "A holy convocation, a remembrance of the exodus from Egypt. God chose us and gave us the holy appointed times. Blessed is the one who makes Israel and the seasons holy.",
+   "note": "Not the Shabbat close \"who makes the Shabbat holy\".",
+   "clergyReviewed": false
+  },
+  "leshev-basukkah": {
+   "service": [
+    "festivals"
+   ],
+   "occasions": [
+    "sukkot"
+   ],
+   "whereInService": "In the sukkah, usually after Kiddush or after hamotzi when there is no Kiddush",
+   "delivery": "recited",
+   "leaderOrCongregation": "anyone eating in the sukkah",
+   "denominations": {
+    "orthodox": {
+     "use": "as-written",
+     "note": "The Hebrew of the blessing is shared. Customs differ on which meals and which days of Sukkot it is said, and whether it is said in the rain or in a sukkah in the synagogue."
+    },
+    "conservative": {
+     "use": "as-written",
+     "note": "The Hebrew of the blessing is shared. Customs differ on which meals and which days of Sukkot it is said, and whether it is said in the rain or in a sukkah in the synagogue."
+    },
+    "reform": {
+     "use": "as-written",
+     "note": "The Hebrew of the blessing is shared. Customs differ on which meals and which days of Sukkot it is said, and whether it is said in the rain or in a sukkah in the synagogue."
+    },
+    "note": ""
+   },
+   "whatItSays": "Blessing: God commanded us to dwell in the sukkah.",
    "note": "",
    "clergyReviewed": false
   }

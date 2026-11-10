@@ -208,7 +208,7 @@
  "goals": [
   "Recognise the opening of Mi Shebeirach and answer it",
   "Answer Birkat Hagomel with the congregation's response",
-  "Answer Shehecheyanu and the Priestly Blessing with Amen"
+  "Answer Shehecheyanu with Amen, and answer the Priestly Blessing said by the leader with 'Ken yehi ratzon' (when kohanim bless, the answer is Amen)"
  ],
  "estMinutes": 35,
  "prerequisites": [
@@ -274,7 +274,7 @@
   {
    "id": "I-10-e08",
    "type": "respond",
-   "cue": "Someone who recovered or travelled safely says Hagomel. Answer with the congregation's line.",
+   "cue": "Someone who recovered or travelled safely says Hagomel. Answer with the congregation's line (said to a man; to a woman it is shegmalekh ... yigmalekh).",
    "answer": {
     "he": "מִי שֶׁגְּמָלְךָ טוֹב הוּא יִגְמָלְךָ כָּל־טוֹב סֶלָה",
     "en": "May the one who bestowed good on you bestow every good on you. Selah."
@@ -324,10 +324,10 @@
   {
    "id": "I-10-e13",
    "type": "respond",
-   "cue": "The leader says each line of the Priestly Blessing; answer after the first.",
+   "cue": "When the leader (not kohanim) says the Priestly Blessing, many congregations answer each line with 'Ken yehi ratzon'. Answer after the first line. (When kohanim bless, the answer is Amen.)",
    "answer": {
-    "he": "אָמֵן",
-    "en": "Amen"
+    "he": "כֵּן יְהִי רָצוֹן",
+    "en": "May it be so (God's will)."
    },
    "prompt": {
     "he": "יְבָרֶכְךָ יְהוָה וְיִשְׁמְרֶךָ",
@@ -337,10 +337,10 @@
   {
    "id": "I-10-e14",
    "type": "respond",
-   "cue": "After the third line of the Priestly Blessing.",
+   "cue": "After the third line, said by the leader. Answer.",
    "answer": {
-    "he": "אָמֵן",
-    "en": "Amen"
+    "he": "כֵּן יְהִי רָצוֹן",
+    "en": "May it be so (God's will)."
    },
    "prompt": {
     "he": "יִשָּׂא יְהוָה פָּנָיו אֵלֶיךָ וְיָשֵׂם לְךָ שָׁלוֹם",

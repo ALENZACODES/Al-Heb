@@ -53,7 +53,7 @@ test('respellLines: three settings; israeli and sephardi identical; ashkenazi di
   assert.throws(() => respellLines(e.he, 'yemenite'), RangeError);
 });
 
-test('compareWords aligns word-for-word with the Hebrew for all 70 registry texts (no fallback needed)', () => {
+test('compareWords aligns word-for-word with the Hebrew for all registry texts (no fallback needed)', () => {
   for (const e of registry.entries) {
     const rows = compareWords(e.he);
     const heWords = textLines(e.he).flatMap(wordsOf);

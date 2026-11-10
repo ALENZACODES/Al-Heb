@@ -16,7 +16,7 @@
     "m": "audio/m/israeli/book/book40-p01.mp3"
    },
    "illustration": "a hand pulling an envelope from a dented mailbox",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -30,7 +30,7 @@
     "m": "audio/m/israeli/book/book40-p02.mp3"
    },
    "illustration": "a cream envelope with a handwritten address",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -44,7 +44,7 @@
     "m": "audio/m/israeli/book/book40-p03.mp3"
    },
    "illustration": "a woman turning it over, no return address",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -58,7 +58,7 @@
     "m": "audio/m/israeli/book/book40-p04.mp3"
    },
    "illustration": "her puzzled face",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -72,7 +72,7 @@
     "m": "audio/m/israeli/book/book40-p05.mp3"
    },
    "illustration": "tearing the envelope carefully",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -86,7 +86,7 @@
     "m": "audio/m/israeli/book/book40-p06.mp3"
    },
    "illustration": "looping blue ink on the page",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -100,7 +100,7 @@
     "m": "audio/m/israeli/book/book40-p07.mp3"
    },
    "illustration": "the letter unfolded in her hands, its lines soft pencil strokes, no readable words",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -114,7 +114,7 @@
     "m": "audio/m/israeli/book/book40-p08.mp3"
    },
    "illustration": "the woman sitting down on the stairs",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -128,7 +128,7 @@
     "m": "audio/m/israeli/book/book40-p09.mp3"
    },
    "illustration": "a photo of an old man tucked in the fold",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -142,7 +142,7 @@
     "m": "audio/m/israeli/book/book40-p10.mp3"
    },
    "illustration": "a date at the top, a year back",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -156,7 +156,7 @@
     "m": "audio/m/israeli/book/book40-p11.mp3"
    },
    "illustration": "the words on the envelope flap",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -170,8 +170,9 @@
     "m": "audio/m/israeli/book/book40-p12.mp3"
    },
    "illustration": "the woman on the stairs, letter to her chest, eyes shining",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   }
- ]
+ ],
+ "hasImages": true
 }

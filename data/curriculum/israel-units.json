@@ -1,0 +1,513 @@
+{
+ "schema": "alef-israel-units/1",
+ "status": "draft-not-native-reviewed",
+ "note": "Practical units for the Israel track, in the style of a structured conversation course: each unit groups existing lessons by the situation they prepare for (core = beginner il lessons, more = the B1 lessons that open after the capstone), with short grammar notes, a spaced unit review, and listening and speaking drills built from the lessons' own words, clips and exercises. Every Hebrew example is a verbatim string from that unit's own lessons (tests/curriculum.israel-units.test.js checks it); no Hebrew was written for this file. Grammar notes are original English and have not been reviewed by a native speaker or teacher.",
+ "reviewDays": [
+  1,
+  3,
+  7,
+  14,
+  30
+ ],
+ "units": [
+  {
+   "id": "u01",
+   "title": "Hello and Introductions",
+   "can": "Greet, thank, say sorry, and say who you are and where you are from",
+   "core": [
+    "il01",
+    "il03"
+   ],
+   "more": [
+    "I-25"
+   ],
+   "grammar": [
+    {
+     "point": "No word for 'am' or 'is' in the present: Hebrew just puts the two parts side by side.",
+     "examples": [
+      {
+       "he": "אֲנִי מִקָּנָדָה",
+       "en": "I'm from Canada (literally: I from-Canada)"
+      }
+     ]
+    },
+    {
+     "point": "'You' changes for a man and a woman, and so does the question that uses it.",
+     "examples": [
+      {
+       "he": "מַה שְׁמֶךָ",
+       "en": "what is your name (to a man)"
+      },
+      {
+       "he": "מַה שְׁמֵךְ",
+       "en": "what is your name (to a woman)"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u02",
+   "title": "Sound Like a Local",
+   "can": "Use the small words Israelis fill a conversation with, and put the stress where they do",
+   "core": [
+    "il02",
+    "il13",
+    "il23"
+   ],
+   "more": [],
+   "grammar": [
+    {
+     "point": "Most Hebrew words are stressed on the last syllable; English speakers tend to stress too early.",
+     "examples": [
+      {
+       "he": "מַה שְׁלוֹמְךָ",
+       "en": "how are you (to a man): shlom-KHA"
+      }
+     ]
+    },
+    {
+     "point": "Fillers carry the tone of a whole sentence; 'nu' can mean 'well?', 'so?' or 'come on'.",
+     "examples": [
+      {
+       "he": "נוּ",
+       "en": "well? so?"
+      },
+      {
+       "he": "בְּסֵדֶר",
+       "en": "OK; all right"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u03",
+   "title": "Numbers and Prices",
+   "can": "Count, understand a price in shekels and ask how much",
+   "core": [
+    "il04",
+    "il05"
+   ],
+   "more": [],
+   "grammar": [
+    {
+     "point": "When you simply count (one, two, three) Israelis use the feminine forms.",
+     "examples": [
+      {
+       "he": "אַחַת",
+       "en": "one (counting)"
+      },
+      {
+       "he": "שְׁתַּיִם",
+       "en": "two"
+      },
+      {
+       "he": "שָׁלוֹשׁ",
+       "en": "three"
+      }
+     ]
+    },
+    {
+     "point": "'Kama' asks both 'how much' and 'how many'.",
+     "examples": [
+      {
+       "he": "כַּמָּה",
+       "en": "how much; how many"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u04",
+   "title": "Cafe and Ordering Food",
+   "can": "Order a coffee the way you like it, eat in or take away, and ask for the bill",
+   "core": [
+    "il06",
+    "il07"
+   ],
+   "more": [
+    "I-13",
+    "I-45"
+   ],
+   "grammar": [
+    {
+     "point": "'Efshar' plus a verb in the 'to ...' form is the polite way to ask for something.",
+     "examples": [
+      {
+       "he": "אֶפְשָׁר לְהַזְמִין?",
+       "en": "can I order?"
+      }
+     ]
+    },
+    {
+     "point": "'Bli' means 'without' and goes straight before the noun.",
+     "examples": [
+      {
+       "he": "בְּלִי חָלָב",
+       "en": "without milk"
+      }
+     ]
+    },
+    {
+     "point": "The verb follows the speaker: a man says rotzeh, a woman says rotzah.",
+     "examples": [
+      {
+       "he": "אֲנִי רוֹצֶה קָפֶה",
+       "en": "I would like a coffee (said by a man)"
+      },
+      {
+       "he": "אֲנִי רוֹצָה קָפֶה",
+       "en": "I would like a coffee (said by a woman)"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u05",
+   "title": "Shopping and Paying",
+   "can": "Ask if something is there, ask the price, bargain a little and pay",
+   "core": [
+    "il08",
+    "il09"
+   ],
+   "more": [
+    "I-12",
+    "I-43"
+   ],
+   "grammar": [
+    {
+     "point": "'Yesh' (there is) and 'ein' (there isn't) never change, whatever follows them.",
+     "examples": [
+      {
+       "he": "יֵשׁ",
+       "en": "there is"
+      },
+      {
+       "he": "אֵין",
+       "en": "there isn't"
+      },
+      {
+       "he": "יֵשׁ הַנָּחָה?",
+       "en": "is there a discount?"
+      }
+     ]
+    },
+    {
+     "point": "'How much does it cost' is literally 'how much does this go up'.",
+     "examples": [
+      {
+       "he": "כַּמָּה זֶה עוֹלֶה?",
+       "en": "how much does it cost?"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u06",
+   "title": "Getting Around",
+   "can": "Take a bus, train or taxi, ask the way and follow directions",
+   "core": [
+    "il10",
+    "il11"
+   ],
+   "more": [
+    "I-11",
+    "I-15",
+    "I-23",
+    "I-39"
+   ],
+   "grammar": [
+    {
+     "point": "An ending -ah on a place word can mean 'towards': right becomes 'to the right'.",
+     "examples": [
+      {
+       "he": "יָמִינָה",
+       "en": "to the right"
+      },
+      {
+       "he": "שְׂמֹאלָה",
+       "en": "to the left"
+      }
+     ]
+    },
+    {
+     "point": "Commands change for a woman.",
+     "examples": [
+      {
+       "he": "לֵךְ יָשָׁר",
+       "en": "go straight (to a man)"
+      },
+      {
+       "he": "לְכִי יָשָׁר",
+       "en": "go straight (to a woman)"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u07",
+   "title": "Time, Plans and the Phone",
+   "can": "Say when, make a plan, and arrange or move a meeting by phone or message",
+   "core": [
+    "il12",
+    "il20",
+    "il22"
+   ],
+   "more": [
+    "I-16",
+    "I-49"
+   ],
+   "grammar": [
+    {
+     "point": "The future for 'I' starts with e- (or a- before some letters).",
+     "examples": [
+      {
+       "he": "אֲנִי אֵלֵךְ",
+       "en": "I will go"
+      },
+      {
+       "he": "אֲנִי אֹכַל",
+       "en": "I will eat"
+      }
+     ]
+    },
+    {
+     "point": "Days of the week are mostly numbered: Sunday is 'the first day'; Saturday is Shabbat.",
+     "examples": [
+      {
+       "he": "יוֹם רִאשׁוֹן",
+       "en": "Sunday (first day)"
+      },
+      {
+       "he": "שַׁבָּת",
+       "en": "Saturday; Sabbath"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u08",
+   "title": "Verbs: Now and Yesterday",
+   "can": "Say what you do now and what you did yesterday",
+   "core": [
+    "il16",
+    "il19"
+   ],
+   "more": [],
+   "grammar": [
+    {
+     "point": "Present tense works like an adjective: it changes for man, woman and plural, not for I, you or he.",
+     "examples": [
+      {
+       "he": "אֲנִי הוֹלֵךְ",
+       "en": "I go (said by a man)"
+      },
+      {
+       "he": "אֲנִי מְדַבֵּר",
+       "en": "I speak (said by a man)"
+      }
+     ]
+    },
+    {
+     "point": "Past tense marks the person on the end of the verb: -ti is 'I'.",
+     "examples": [
+      {
+       "he": "הָלַכְתִּי",
+       "en": "I went"
+      },
+      {
+       "he": "אָכַלְתִּי",
+       "en": "I ate"
+      },
+      {
+       "he": "רָאִיתִי",
+       "en": "I saw"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u09",
+   "title": "People, Family and Opinions",
+   "can": "Talk about your family, ask about someone's children and say what you think",
+   "core": [
+    "il14",
+    "il21"
+   ],
+   "more": [
+    "I-42",
+    "I-38"
+   ],
+   "grammar": [
+    {
+     "point": "'I have' is 'yesh li': there is to me.",
+     "examples": [
+      {
+       "he": "יֵשׁ לִי יֶלֶד אֶחָד",
+       "en": "I have one boy"
+      }
+     ]
+    },
+    {
+     "point": "Age is asked as 'son of how much' or 'daughter of how much'.",
+     "examples": [
+      {
+       "he": "בֶּן כַּמָּה אַתָּה?",
+       "en": "how old are you? (to a man)"
+      },
+      {
+       "he": "בַּת כַּמָּה אַתְּ?",
+       "en": "how old are you? (to a woman)"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u10",
+   "title": "Health, Help and Emergencies",
+   "can": "Say what hurts, get medicine, see a doctor and call for help",
+   "core": [
+    "il18"
+   ],
+   "more": [
+    "I-14",
+    "I-20",
+    "I-46"
+   ],
+   "grammar": [
+    {
+     "point": "Symptoms use 'yesh li', I have.",
+     "examples": [
+      {
+       "he": "יֵשׁ לִי חֹם",
+       "en": "I have a fever"
+      },
+      {
+       "he": "יֵשׁ לִי כְּאֵב רֹאשׁ",
+       "en": "I have a headache"
+      }
+     ]
+    },
+    {
+     "point": "'It hurts me' puts the person after the verb.",
+     "examples": [
+      {
+       "he": "כּוֹאֵב לִי כָּאן",
+       "en": "it hurts me here"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u11",
+   "title": "Home, Work and Study",
+   "can": "Book a room, rent and fix an apartment, handle the bank and post office, and talk about work and study",
+   "core": [
+    "il17"
+   ],
+   "more": [
+    "I-17",
+    "I-44",
+    "I-21",
+    "I-22",
+    "I-48",
+    "I-36",
+    "I-37"
+   ],
+   "grammar": [
+    {
+     "point": "'Ani mechapes' (I'm looking for) takes the thing straight after it, with no 'for'.",
+     "examples": [
+      {
+       "he": "אֲנִי מְחַפֵּשׂ דִּירָה",
+       "en": "I'm looking for an apartment"
+      }
+     ]
+    },
+    {
+     "point": "'Rotzeh' (want) plus a 'to ...' verb says what you want to do.",
+     "examples": [
+      {
+       "he": "אֲנִי רוֹצֶה לִמְשֹׁךְ כֶּסֶף",
+       "en": "I want to withdraw money (said by a man)"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u12",
+   "title": "Israeli Life: Weather, Outings and Holidays",
+   "can": "Talk about the weather, go out, accept a Shabbat invitation and give the right holiday greeting",
+   "core": [
+    "il15"
+   ],
+   "more": [
+    "I-24",
+    "I-40",
+    "I-41",
+    "I-18",
+    "I-19",
+    "I-47",
+    "I-50"
+   ],
+   "grammar": [
+    {
+     "point": "How you feel uses 'to me': 'kar li' is 'I'm cold'; without 'li' it describes the day.",
+     "examples": [
+      {
+       "he": "קַר לִי",
+       "en": "I'm cold"
+      },
+      {
+       "he": "חַם הַיּוֹם",
+       "en": "it's hot today"
+      }
+     ]
+    },
+    {
+     "point": "Greetings belong to a time: Shabbat shalom until Shabbat ends, then shavua tov.",
+     "examples": [
+      {
+       "he": "שַׁבָּת שָׁלוֹם",
+       "en": "Shabbat shalom"
+      },
+      {
+       "he": "שָׁבוּעַ טוֹב",
+       "en": "a good week"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u13",
+   "title": "Capstone Conversation",
+   "can": "Hold a five-minute conversation: greet, buy something, ask the way and make a plan",
+   "core": [
+    "il24"
+   ],
+   "more": [],
+   "grammar": [
+    {
+     "point": "Everything so far in one talk; when you are stuck, ask for it again instead of switching to English.",
+     "examples": [
+      {
+       "he": "תַּסְבִּיר לִי",
+       "en": "explain it to me (to a man)"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

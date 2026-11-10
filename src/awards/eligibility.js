@@ -213,7 +213,7 @@ export function masterySlots() {
     state: 'locked',
     stateText: 'Locked',
     category: 'mastery-layout',
-    requirement: `${finish.label} opens once Aleph has a proper reading check, which is still being built. Visits and practice games do not count toward it.`,
+    requirement: `${finish.label} opens once ALEF has a proper reading check, which is still being built. Visits and practice games do not count toward it.`,
   }));
 }
 
@@ -344,7 +344,7 @@ export function completionText(decision) {
   if (decision && decision.required > 0 && decision.satisfied === decision.required) {
     return `Locked. Objective answers are recorded for all ${need} proposed items. The criteria are still awaiting review, so this badge stays locked and no certificate is issued. Visits and lesson ticks do not unlock it.`;
   }
-  return `Locked. Answers so far: ${n} of ${need}. This badge opens once Aleph has a proper reading check, which is still being built. Visits, games, lesson ticks and self-marked reading do not count toward it.`;
+  return `Locked. Answers so far: ${n} of ${need}. This badge opens once ALEF has a proper reading check, which is still being built. Visits, games, lesson ticks and self-marked reading do not count toward it.`;
 }
 
 export function badgeRows(record, games, decision) {

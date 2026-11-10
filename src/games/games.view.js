@@ -1,10 +1,11 @@
 // Games hub (#/games): every game in one place. Until this page existed the
 // home page linked only five of the twenty-five games and the rest were
 // reachable solely by typing their address (owner report, Nov 7 2026).
-import { h, heSpan } from '../shell/ui.js';
+import { h, heSpan, medal } from '../shell/ui.js';
 import { LEVEL_DESCRIPTIONS } from './wordfinder.model.js';
 import { loadGameImages, imgOf, GAME_ENV } from './engine.js';
 import { ARCADE_GAMES } from './arcade.catalog.js';
+import { rimonInline } from '../shell/rimon-inline.js';
 import { gameOfTheDay, dayKey, ARCADE_KEY } from './arcade.model.js';
 
 /** Hub id -> GAME_ENV key, for the games whose backdrop key differs from the route id. */
@@ -90,9 +91,9 @@ export function mount(root, ctx) {
           h('span', { class: 'show-tile-title' }, title, ' ', heSpan('מִשְׂחָק')),
           h('span', { class: 'show-tile-hook' }, hook),
           id === 'wordfinder' ? h('span', { class: 'wf-try-first' }, 'Start with five words →') : null);
-        if (envId) thumbs.push({ a, envId });
+        if (envId) { thumbs.push({ a, envId }); a.append(medal('word', id, 56)); }
         else if (ARCADE_GAMES.some((game) => game.id === id)) {
-          a.prepend(h('img', { class: 'wf-game-thumb', src: `assets/games/arcade/${id}/env.png`, alt: '', width: 1024, height: 1024, loading: 'lazy', decoding: 'async' }));
+          a.prepend(medal('arcade', id, 96));
         }
         return h('li', {}, a);
       })));
@@ -113,10 +114,8 @@ export function mount(root, ctx) {
       const im = imgOf(R, 'id', envId);
       if (im?.src) a.prepend(h('img', { class: 'wf-game-thumb', src: im.src, alt: '', width: im.width, height: im.height, loading: 'lazy' }));
     }
-    const mascot = imgOf(R, 'id', 'MASCOT_rimon');
-    if (mascot?.src) article.insertBefore(
-      h('img', { class: 'wf-hub-mascot', src: mascot.src, alt: mascot.alt, width: mascot.width, height: mascot.height }),
-      article.children[1] || null);
+    // the same animated Rimon as setup, Learn and the lesson summary (one Rimon system); the corner Rimon steps aside while he is here
+    try { const r = rimonInline({ action: 'wave', size: 88, label: 'Rimon waving' }); r.el.classList?.add?.('wf-hub-mascot'); article.insertBefore(r.el, article.children[1] || null); r.play('wave'); } catch { /* the picture is optional */ }
   }).catch(() => {});
   return () => {};
 }

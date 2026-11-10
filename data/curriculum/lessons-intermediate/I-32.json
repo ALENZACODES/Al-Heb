@@ -209,7 +209,8 @@
  "goals": [
   "Say the candle-lighting blessing and answer Amen",
   "Follow the order of blessings on the first night",
-  "Read the first lines of Hanerot Halalu and Maoz Tzur"
+  "Read the first lines of Hanerot Halalu and Maoz Tzur",
+  "Know that the candle blessing here follows Edot HaMizrach, 'ner Chanukah'; Ashkenaz often says 'ner shel Chanukah'"
  ],
  "estMinutes": 35,
  "prerequisites": [
@@ -248,7 +249,7 @@
   {
    "id": "I-32-e04",
    "type": "respond",
-   "cue": "The first blessing ends 'ner Chanukah'. Answer.",
+   "cue": "The first blessing ends 'ner Chanukah' (Edot HaMizrach wording; Ashkenaz often says 'ner shel Chanukah'). Answer.",
    "answer": {
     "he": "אָמֵן",
     "en": "Amen"
@@ -286,7 +287,7 @@
   {
    "id": "I-32-e08",
    "type": "respond",
-   "cue": "On the first night only the third blessing follows. Answer.",
+   "cue": "On the first night only, a third blessing (Shehecheyanu) follows. Answer.",
    "answer": {
     "he": "אָמֵן",
     "en": "Amen"

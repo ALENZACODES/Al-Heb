@@ -1,0 +1,611 @@
+{
+ "schema": "alef-practical-hidden/1",
+ "generated": "2026-11-10",
+ "note": "Practical items whose clip failed the speech check (text to speech, then speech to text). Every source line was re-read and is kept; the item stays off learner pages until a person listens to its clip. The view applies this list even when the untracked check results file is absent. Remove a key only after a human listen-check.",
+ "count": 67,
+ "items": [
+  {
+   "key": "pu-apartment|i-17-w14",
+   "unit": "pu-apartment",
+   "item": "i-17-w14",
+   "he": "אוֹר",
+   "source": "data/curriculum/lessons.json#I-17.words[13]",
+   "cause": "short-word",
+   "verdict": "keep source; hidden until a person listens to the clip"
+  },
+  {
+   "key": "pu-apartment|i-17-w4",
+   "unit": "pu-apartment",
+   "item": "i-17-w4",
+   "he": "קוֹמָה",
+   "source": "data/curriculum/lessons.json#I-17.words[3]",
+   "cause": "short-word",
+   "verdict": "keep source; hidden until a person listens to the clip"
+  },
+  {
+   "key": "pu-bank|i-21-w12",
+   "unit": "pu-bank",
+   "item": "i-21-w12",
+   "he": "רִבִּית",
+   "source": "data/curriculum/lessons.json#I-21.words[11]",
+   "cause": "near-miss",
+   "verdict": "keep source; hidden until a person listens to the clip"
+  },
+  {
+   "key": "pu-bank|i-21-w13",
+   "unit": "pu-bank",
+   "item": "i-21-w13",
+   "he": "פָּתוּחַ",
+   "source": "data/curriculum/lessons.json#I-21.words[12]",
+   "cause": "short-word",
+   "verdict": "keep source; hidden until a person listens to the clip"
+  },
+  {
+   "key": "pu-bank|i-48-w5",
+   "unit": "pu-bank",
+   "item": "i-48-w5",
+   "he": "כְּתֹבֶת",
+   "source": "data/curriculum/lessons.json#I-48.words[4]",
+   "cause": "short-word",
+   "verdict": "keep source; hidden until a person listens to the clip"
+  },
+  {
+   "key": "pu-cafe|cafe-08",
+   "unit": "pu-cafe",
+   "item": "cafe-08",
+   "he": "תֵּה עִם נַעֲנָע",
+   "source": "data/corpus/phrasebook.json",
+   "cause": "multi-word",
+   "verdict": "keep source; hidden until a person listens to the clip"
+  },
+  {
+   "key": "pu-cafe|cafe-21",
+   "unit": "pu-cafe",
+   "item": "cafe-21",
+   "he": "טָעִים מְאֹד",
+   "source": "data/corpus/phrasebook.json",
+   "cause": "letter-error",
+   "verdict": "keep source; hidden until a person listens to the clip"
+  },
+  {
+   "key": "pu-cafe|cafe-22",
+   "unit": "pu-cafe",
+   "item": "cafe-22",
+   "he": "אֲנִי צִמְחוֹנִי",
+   "source": "data/corpus/phrasebook.json",
+   "cause": "multi-word",
+   "verdict": "keep source; hidden until a person listens to the clip"
+  },
+  {
+   "key": "pu-cafe|i-13-w13",
+   "unit": "pu-cafe",
+   "item": "i-13-w13",
+   "he": "צִמְחוֹנִי",
+   "source": "data/curriculum/lessons.json#I-13.words[12]",
+   "cause": "short-word",
+   "verdict": "keep source; hidden until a person listens to the clip"
+  },
+  {
+   "key": "pu-cafe|i-13-w14",
+   "unit": "pu-cafe",
+   "item": "i-13-w14",
+   "he": "צִמְחוֹנִית",
+   "source": "data/curriculum/lessons.json#I-13.words[13]",
+   "cause": "short-word",
+   "verdict": "keep source; hidden until a person listens to the clip"
+  },
+  {
+   "key": "pu-cafe|il07-w2",
+   "unit": "pu-cafe",
+   "item": "il07-w2",
+   "he": "לֶחֶם",
+   "source": "data/curriculum/lessons.json#il07.words[1]",
+   "cause": "short-word",
+   "verdict": "keep source; hidden until a person listens to the clip"
+  },
+  {
+   "key": "pu-cafe|il07-w3",
+   "unit": "pu-cafe",
+   "item": "il07-w3",
+   "he": "גְּבִינָה",
+   "source": "data/curriculum/lessons.json#il07.words[2]",
+   "cause": "short-word",
+   "verdict": "keep source; hidden until a person listens to the clip"
+  },
+  {
+   "key": "pu-cafe|il07-w6",
+   "unit": "pu-cafe",
+   "item": "il07-w6",
+   "he": "תֵּה",
+   "source": "data/curriculum/lessons.json#il07.words[5]",
+   "cause": "short-word",
+   "verdict": "keep source; hidden until a person listens to the clip"
+  },
+  {
+   "key": "pu-decide|il24-w3",
+   "unit": "pu-decide",
+   "item": "il24-w3",
+   "he": "בּוֹא נַחֲלִיט",
+   "source": "data/curriculum/lessons.json#il24.words[2]",
+   "cause": "letter-error",
+   "verdict": "keep source; hidden until a person listens to the clip"
+  },
+  {
+   "key": "pu-delivery|i-45-w5",
+   "unit": "pu-delivery",
+   "item": "i-45-w5",
+   "he": "כְּתֹבֶת",
+   "source": "data/curriculum/lessons.json#I-45.words[4]",
+   "cause": "short-word",
+   "verdict": "keep source; hidden until a person listens to the clip"
+  },
+  {
+   "key": "pu-delivery|i-45-w6",
+   "unit": "pu-delivery",
+   "item": "i-45-w6",
+   "he": "קוֹמָה",
+   "source": "data/curriculum/lessons.json#I-45.words[5]",
+   "cause": "short-word",
+   "verdict": "keep source; hidden until a person listens to the clip"
+  },
+  {
+   "key": "pu-directions|directions-06",
+   "unit": "pu-directions",
+   "item": "directions-06",
+   "he": "שְׂמֹאלָה",
+   "source": "data/corpus/phrasebook.json",
+   "cause": "near-miss",
+   "verdict": "keep source; hidden until a person listens to the clip"
+  },
+  {
+   "key": "pu-directions|directions-11",
+   "unit": "pu-directions",
+   "item": "directions-11",
+   "he": "עַל יַד",
+   "source": "data/corpus/phrasebook.json",
+   "cause": "multi-word",
+   "verdict": "keep source; hidden until a person listens to the clip"
+  },
+  {
+   "key": "pu-driving|i-39-w3",
+   "unit": "pu-driving",
+   "item": "i-39-w3",
+   "he": "תַּמְרוּר",
+   "source": "data/curriculum/lessons.json#I-39.words[2]",
+   "cause": "short-word",
+   "verdict": "keep source; hidden until a person listens to the clip"
+  },
+  {
+   "key": "pu-emergencies|i-46-w10",
+   "unit": "pu-emergencies",
+   "item": "i-46-w10",
+   "he": "אָבַד לִי",
+   "source": "data/curriculum/lessons.json#I-46.words[9]",
+   "cause": "letter-error",
+   "verdict": "keep source; hidden until a person listens to the clip"
+  },
+  {
+   "key": "pu-family|i-42-w11",
+   "unit": "pu-family",
+   "item": "i-42-w11",
+   "he": "בֶּן כַּמָּה?",
+   "source": "data/curriculum/lessons.json#I-42.words[10]",
+   "cause": "multi-word",
+   "verdict": "keep source; hidden until a person listens to the clip"
+  },
+  {
+   "key": "pu-family|i-42-w6",
+   "unit": "pu-family",
+   "item": "i-42-w6",
+   "he": "מוֹרָה",
+   "source": "data/curriculum/lessons.json#I-42.words[5]",
+   "cause": "short-word",
+   "verdict": "keep source; hidden until a person listens to the clip"
+  },
+  {
+   "key": "pu-fillers|fillers-22",
+   "unit": "pu-fillers",
+   "item": "fillers-22",
+   "he": "אֵיךְ אוֹמְרִים ... בְּעִבְרִית?",
+   "source": "data/corpus/phrasebook.json",
+   "cause": "template",
+   "verdict": "keep source; hidden until a person listens to the clip"
+  },
+  {
+   "key": "pu-greetings|greetings-17",
+   "unit": "pu-greetings",
+   "item": "greetings-17",
+   "he": "לֹא רַע",
+   "source": "data/corpus/phrasebook.json",
+   "cause": "multi-word",
+   "verdict": "keep source; hidden until a person listens to the clip"
+  },
+  {
+   "key": "pu-health|i-20-w3",
+   "unit": "pu-health",
+   "item": "i-20-w3",
+   "he": "רוֹפְאָה",
+   "source": "data/curriculum/lessons.json#I-20.words[2]",
+   "cause": "short-word",
+   "verdict": "keep source; hidden until a person listens to the clip"
+  },
+  {
+   "key": "pu-health|i-20-w5",
+   "unit": "pu-health",
+   "item": "i-20-w5",
+   "he": "תּוֹר",
+   "source": "data/curriculum/lessons.json#I-20.words[4]",
+   "cause": "short-word",
+   "verdict": "keep source; hidden until a person listens to the clip"
+  },
+  {
+   "key": "pu-health|il18-w4",
+   "unit": "pu-health",
+   "item": "il18-w4",
+   "he": "רוֹפֵא",
+   "source": "data/curriculum/lessons.json#il18.words[3]",
+   "cause": "near-miss",
+   "verdict": "keep source; hidden until a person listens to the clip"
+  },
+  {
+   "key": "pu-home|i-44-w1",
+   "unit": "pu-home",
+   "item": "i-44-w1",
+   "he": "שָׁבוּר",
+   "source": "data/curriculum/lessons.json#I-44.words[0]",
+   "cause": "near-miss",
+   "verdict": "keep source; hidden until a person listens to the clip"
+  },
+  {
+   "key": "pu-home|i-44-w10",
+   "unit": "pu-home",
+   "item": "i-44-w10",
+   "he": "דָּחוּף",
+   "source": "data/curriculum/lessons.json#I-44.words[9]",
+   "cause": "short-word",
+   "verdict": "keep source; hidden until a person listens to the clip"
+  },
+  {
+   "key": "pu-home|i-44-w12",
+   "unit": "pu-home",
+   "item": "i-44-w12",
+   "he": "תּוֹר",
+   "source": "data/curriculum/lessons.json#I-44.words[11]",
+   "cause": "short-word",
+   "verdict": "keep source; hidden until a person listens to the clip"
+  },
+  {
+   "key": "pu-introducing|il03-w3",
+   "unit": "pu-introducing",
+   "item": "il03-w3",
+   "he": "מַה שְׁמֵךְ",
+   "source": "data/curriculum/lessons.json#il03.words[2]",
+   "cause": "letter-error",
+   "verdict": "keep source; hidden until a person listens to the clip"
+  },
+  {
+   "key": "pu-news|i-47-w11",
+   "unit": "pu-news",
+   "item": "i-47-w11",
+   "he": "אֵין",
+   "source": "data/curriculum/lessons.json#I-47.words[10]",
+   "cause": "short-word",
+   "verdict": "keep source; hidden until a person listens to the clip"
+  },
+  {
+   "key": "pu-news|i-47-w7",
+   "unit": "pu-news",
+   "item": "i-47-w7",
+   "he": "רִבִּית",
+   "source": "data/curriculum/lessons.json#I-47.words[6]",
+   "cause": "short-word",
+   "verdict": "keep source; hidden until a person listens to the clip"
+  },
+  {
+   "key": "pu-numbers|numbers-01",
+   "unit": "pu-numbers",
+   "item": "numbers-01",
+   "he": "אֶחָד",
+   "source": "data/corpus/phrasebook.json",
+   "cause": "near-miss",
+   "verdict": "keep source; hidden until a person listens to the clip"
+  },
+  {
+   "key": "pu-numbers|numbers-04",
+   "unit": "pu-numbers",
+   "item": "numbers-04",
+   "he": "אַרְבָּעָה",
+   "source": "data/corpus/phrasebook.json",
+   "cause": "near-miss",
+   "verdict": "keep source; hidden until a person listens to the clip"
+  },
+  {
+   "key": "pu-numbers|numbers-07",
+   "unit": "pu-numbers",
+   "item": "numbers-07",
+   "he": "שִׁבְעָה",
+   "source": "data/corpus/phrasebook.json",
+   "cause": "near-miss",
+   "verdict": "keep source; hidden until a person listens to the clip"
+  },
+  {
+   "key": "pu-numbers|numbers-09",
+   "unit": "pu-numbers",
+   "item": "numbers-09",
+   "he": "תִּשְׁעָה",
+   "source": "data/corpus/phrasebook.json",
+   "cause": "near-miss",
+   "verdict": "keep source; hidden until a person listens to the clip"
+  },
+  {
+   "key": "pu-numbers|numbers-16",
+   "unit": "pu-numbers",
+   "item": "numbers-16",
+   "he": "מָה הַשָּׁעָה?",
+   "source": "data/corpus/phrasebook.json",
+   "cause": "multi-word",
+   "verdict": "keep source; hidden until a person listens to the clip"
+  },
+  {
+   "key": "pu-phone|i-16-w12",
+   "unit": "pu-phone",
+   "item": "i-16-w12",
+   "he": "הַלּוֹ?",
+   "source": "data/curriculum/lessons.json#I-16.words[11]",
+   "cause": "short-word",
+   "verdict": "keep source; hidden until a person listens to the clip"
+  },
+  {
+   "key": "pu-phone|i-16-w8",
+   "unit": "pu-phone",
+   "item": "i-16-w8",
+   "he": "מַטְעֵן",
+   "source": "data/curriculum/lessons.json#I-16.words[7]",
+   "cause": "short-word",
+   "verdict": "keep source; hidden until a person listens to the clip"
+  },
+  {
+   "key": "pu-phone|il22-w1",
+   "unit": "pu-phone",
+   "item": "il22-w1",
+   "he": "הַלּוֹ",
+   "source": "data/curriculum/lessons.json#il22.words[0]",
+   "cause": "short-word",
+   "verdict": "keep source; hidden until a person listens to the clip"
+  },
+  {
+   "key": "pu-post|i-22-w10",
+   "unit": "pu-post",
+   "item": "i-22-w10",
+   "he": "כְּתֹבֶת",
+   "source": "data/curriculum/lessons.json#I-22.words[9]",
+   "cause": "short-word",
+   "verdict": "keep source; hidden until a person listens to the clip"
+  },
+  {
+   "key": "pu-post|i-22-w11",
+   "unit": "pu-post",
+   "item": "i-22-w11",
+   "he": "מַעֲטָפָה",
+   "source": "data/curriculum/lessons.json#I-22.words[10]",
+   "cause": "short-word",
+   "verdict": "keep source; hidden until a person listens to the clip"
+  },
+  {
+   "key": "pu-post|i-22-w8",
+   "unit": "pu-post",
+   "item": "i-22-w8",
+   "he": "תּוֹר",
+   "source": "data/curriculum/lessons.json#I-22.words[7]",
+   "cause": "short-word",
+   "verdict": "keep source; hidden until a person listens to the clip"
+  },
+  {
+   "key": "pu-restaurant|d-restaurant-l5",
+   "unit": "pu-restaurant",
+   "item": "d-restaurant-l5",
+   "he": "וְלִשְׁתּוֹת?",
+   "source": "data/curriculum/dialogues.json#d-restaurant",
+   "cause": "short-word",
+   "verdict": "keep source; hidden until a person listens to the clip"
+  },
+  {
+   "key": "pu-shabbat|i-19-w11",
+   "unit": "pu-shabbat",
+   "item": "i-19-w11",
+   "he": "טָעִים מְאֹד",
+   "source": "data/curriculum/lessons.json#I-19.words[10]",
+   "cause": "letter-error",
+   "verdict": "keep source; hidden until a person listens to the clip"
+  },
+  {
+   "key": "pu-shabbat|i-19-w7",
+   "unit": "pu-shabbat",
+   "item": "i-19-w7",
+   "he": "יַיִן",
+   "source": "data/curriculum/lessons.json#I-19.words[6]",
+   "cause": "short-word",
+   "verdict": "keep source; hidden until a person listens to the clip"
+  },
+  {
+   "key": "pu-shop|i-12-w8",
+   "unit": "pu-shop",
+   "item": "i-12-w8",
+   "he": "טָרִי",
+   "source": "data/curriculum/lessons.json#I-12.words[7]",
+   "cause": "short-word",
+   "verdict": "keep source; hidden until a person listens to the clip"
+  },
+  {
+   "key": "pu-shop|shop-04",
+   "unit": "pu-shop",
+   "item": "shop-04",
+   "he": "זֶה זוֹל",
+   "source": "data/corpus/phrasebook.json",
+   "cause": "letter-error",
+   "verdict": "keep source; hidden until a person listens to the clip"
+  },
+  {
+   "key": "pu-shop|shop-05",
+   "unit": "pu-shop",
+   "item": "shop-05",
+   "he": "יֵשׁ הַנָּחָה?",
+   "source": "data/corpus/phrasebook.json",
+   "cause": "multi-word",
+   "verdict": "keep source; hidden until a person listens to the clip"
+  },
+  {
+   "key": "pu-shop|shop-10",
+   "unit": "pu-shop",
+   "item": "shop-10",
+   "he": "מָה הַמִּדָּה?",
+   "source": "data/corpus/phrasebook.json",
+   "cause": "letter-error",
+   "verdict": "keep source; hidden until a person listens to the clip"
+  },
+  {
+   "key": "pu-shop|shop-11",
+   "unit": "pu-shop",
+   "item": "shop-11",
+   "he": "יֵשׁ מִדָּה גְּדוֹלָה יוֹתֵר?",
+   "source": "data/corpus/phrasebook.json",
+   "cause": "letter-error",
+   "verdict": "keep source; hidden until a person listens to the clip"
+  },
+  {
+   "key": "pu-shop|shop-16",
+   "unit": "pu-shop",
+   "item": "shop-16",
+   "he": "פָּתוּחַ",
+   "source": "data/corpus/phrasebook.json",
+   "cause": "short-word",
+   "verdict": "keep source; hidden until a person listens to the clip"
+  },
+  {
+   "key": "pu-small-talk|i-25-w10",
+   "unit": "pu-small-talk",
+   "item": "i-25-w10",
+   "he": "עִבְרִית",
+   "source": "data/curriculum/lessons.json#I-25.words[9]",
+   "cause": "short-word",
+   "verdict": "keep source; hidden until a person listens to the clip"
+  },
+  {
+   "key": "pu-small-talk|i-36-w6",
+   "unit": "pu-small-talk",
+   "item": "i-36-w6",
+   "he": "מַעֲסִיק",
+   "source": "data/curriculum/lessons.json#I-36.words[5]",
+   "cause": "short-word",
+   "verdict": "keep source; hidden until a person listens to the clip"
+  },
+  {
+   "key": "pu-small-talk|i-36-w7",
+   "unit": "pu-small-talk",
+   "item": "i-36-w7",
+   "he": "רֵאָיוֹן",
+   "source": "data/curriculum/lessons.json#I-36.words[6]",
+   "cause": "short-word",
+   "verdict": "keep source; hidden until a person listens to the clip"
+  },
+  {
+   "key": "pu-small-talk|il13-w5",
+   "unit": "pu-small-talk",
+   "item": "il13-w5",
+   "he": "לֹא רַע",
+   "source": "data/curriculum/lessons.json#il13.words[4]",
+   "cause": "multi-word",
+   "verdict": "keep source; hidden until a person listens to the clip"
+  },
+  {
+   "key": "pu-small-talk|small-talk-10",
+   "unit": "pu-small-talk",
+   "item": "small-talk-10",
+   "he": "אֲנִי צָמֵא",
+   "source": "data/corpus/phrasebook.json",
+   "cause": "near-miss",
+   "verdict": "keep source; hidden until a person listens to the clip"
+  },
+  {
+   "key": "pu-small-talk|small-talk-13",
+   "unit": "pu-small-talk",
+   "item": "small-talk-13",
+   "he": "קַר לִי",
+   "source": "data/corpus/phrasebook.json",
+   "cause": "letter-error",
+   "verdict": "keep source; hidden until a person listens to the clip"
+  },
+  {
+   "key": "pu-social|i-49-w3",
+   "unit": "pu-social",
+   "item": "i-49-w3",
+   "he": "פְּרוֹפִיל",
+   "source": "data/curriculum/lessons.json#I-49.words[2]",
+   "cause": "short-word",
+   "verdict": "keep source; hidden until a person listens to the clip"
+  },
+  {
+   "key": "pu-transport|d-taxi-l3",
+   "unit": "pu-transport",
+   "item": "d-taxi-l3",
+   "he": "עִם מוֹנֶה, בְּבַקָּשָׁה.",
+   "source": "data/curriculum/dialogues.json#d-taxi",
+   "cause": "letter-error",
+   "verdict": "keep source; hidden until a person listens to the clip"
+  },
+  {
+   "key": "pu-transport|i-11-w9",
+   "unit": "pu-transport",
+   "item": "i-11-w9",
+   "he": "יוֹרֵד",
+   "source": "data/curriculum/lessons.json#I-11.words[8]",
+   "cause": "short-word",
+   "verdict": "keep source; hidden until a person listens to the clip"
+  },
+  {
+   "key": "pu-transport|taxi-05",
+   "unit": "pu-transport",
+   "item": "taxi-05",
+   "he": "לַמָּלוֹן",
+   "source": "data/corpus/phrasebook.json",
+   "cause": "short-word",
+   "verdict": "keep source; hidden until a person listens to the clip"
+  },
+  {
+   "key": "pu-transport|taxi-06",
+   "unit": "pu-transport",
+   "item": "taxi-06",
+   "he": "לַכּוֹתֶל",
+   "source": "data/corpus/phrasebook.json",
+   "cause": "short-word",
+   "verdict": "keep source; hidden until a person listens to the clip"
+  },
+  {
+   "key": "pu-weather|i-24-w11",
+   "unit": "pu-weather",
+   "item": "i-24-w11",
+   "he": "חֹרֶף",
+   "source": "data/curriculum/lessons.json#I-24.words[10]",
+   "cause": "short-word",
+   "verdict": "keep source; hidden until a person listens to the clip"
+  },
+  {
+   "key": "pu-weather|i-24-w9",
+   "unit": "pu-weather",
+   "item": "i-24-w9",
+   "he": "לַח",
+   "source": "data/curriculum/lessons.json#I-24.words[8]",
+   "cause": "near-miss",
+   "verdict": "keep source; hidden until a person listens to the clip"
+  },
+  {
+   "key": "pu-work|i-37-w9",
+   "unit": "pu-work",
+   "item": "i-37-w9",
+   "he": "קוּרְס",
+   "source": "data/curriculum/lessons.json#I-37.words[8]",
+   "cause": "short-word",
+   "verdict": "keep source; hidden until a person listens to the clip"
+  }
+ ]
+}

@@ -150,7 +150,7 @@ export function mount(root, ctx) {
       cardBlock("morning", g, slot === "morning", "alef-prompt-m"),
       el("section", { "aria-labelledby": "alef-shabbat-h" },
         el("h2", { id: "alef-shabbat-h" }, tr(ctx, "cal.candles", "Shabbat candle lighting")),
-        el("p", { class: "alef-parsha" }, sp ? ["Torah portion this Shabbat (", isoDate(nextSat), "): ", el("strong", {}, el("a", { href: "#/torahread", "aria-label": `Read about the Torah portion ${sp.en}` }, sp.en)), " ", heText(sp.he), " ", el("span", { class: "muted" }, "(The full portion text is not in Aleph yet; the link opens the Torah reading page.)")] : `Shabbat ${isoDate(nextSat)}: no regular Torah portion (festival Shabbat).`),
+        el("p", { class: "alef-parsha" }, sp ? ["Torah portion this Shabbat (", isoDate(nextSat), "): ", el("strong", {}, el("a", { href: "#/torahread", "aria-label": `Read about the Torah portion ${sp.en}` }, sp.en)), " ", heText(sp.he), " ", el("span", { class: "muted" }, "(The full portion text is not in ALEF yet; the link opens the Torah reading page.)")] : `Shabbat ${isoDate(nextSat)}: no regular Torah portion (festival Shabbat).`),
         timesBlock(g, l)),
       el("section", { "aria-labelledby": "alef-up-h" },
         el("h2", { id: "alef-up-h" }, tr(ctx, "cal.upcoming", "Coming up")),
@@ -162,11 +162,10 @@ export function mount(root, ctx) {
 
   // ---------- grid ----------
   function dayLabel(c, marks = []) {
-    // WCAG 2.5.3: the visible text (day, Hebrew day, label) must appear unbroken in the name, so it closes the name
+    // spoken name of a day cell; the visible parts are aria-hidden and this rides in a visually hidden span, so there is no aria-label for the visible text to mismatch (WCAG 2.5.3)
     const shown = c.label || (c.isFriday ? "Candles" : "");
-    const vis = [String(c.g.d), c.hebrew.day === 1 ? `${c.hebrew.dayHe} ${c.hebrew.monthHe}` : c.hebrew.dayHe, shown].filter(Boolean).join("");
     const extra = marks.map((m) => m.label).filter((l) => !shown.includes(l));
-    return `${WEEKDAYS_EN[c.weekday]} ${c.g.d} ${MONTHS_EN[c.g.m - 1]} ${c.g.y}, ${c.hebrew.label}` + (shown ? `, ${shown}` : "") + (extra.length ? `, ${extra.join(", ")}` : "") + `, ${vis}`;
+    return `${WEEKDAYS_EN[c.weekday]} ${c.g.d} ${MONTHS_EN[c.g.m - 1]} ${c.g.y}, ${c.hebrew.label}` + (shown ? `, ${shown}` : "") + (extra.length ? `, ${extra.join(", ")}` : "");
   }
 
   function renderGrid() {
@@ -203,15 +202,16 @@ export function mount(root, ctx) {
         const important = isImportant(marks);
         const cls = ["alef-cal-day", c.inMonth ? "" : "out", c.isShabbat ? "shabbat" : "", c.holidays.some((x) => x.kind === "major" || x.kind === "minor") ? "holiday" : "", c.holidays.some((x) => x.kind === "fast") ? "fast" : "", c.holidays.some((x) => x.kind === "modern") ? "remembrance" : "", c.iso === todayISO ? "today" : "", important ? "linked" : ""].filter(Boolean).join(" ");
         const inner = [
-          el("span", { class: "g" }, String(c.g.d)),
-          el("span", { class: "h", lang: "he", dir: "rtl" }, c.hebrew.day === 1 ? `${c.hebrew.dayHe} ${c.hebrew.monthHe}` : c.hebrew.dayHe),
-          el("span", { class: "l" }, c.label || (c.isFriday ? "Candles" : "")),
-          marks.length ? el("span", { class: "m" }, ...marks.map((m) => markerChip(m, { compact: true, el }))) : null,
+          el("span", { class: "visually-hidden" }, dayLabel(c, marks) + (important ? ", opens the day page" : "")),
+          el("span", { class: "g", "aria-hidden": "true" }, String(c.g.d)),
+          el("span", { class: "h", lang: "he", dir: "rtl", "aria-hidden": "true" }, c.hebrew.day === 1 ? `${c.hebrew.dayHe} ${c.hebrew.monthHe}` : c.hebrew.dayHe),
+          el("span", { class: "l", "aria-hidden": "true" }, c.label || (c.isFriday ? "Candles" : "")),
+          marks.length ? el("span", { class: "m", "aria-hidden": "true" }, ...marks.map((m) => markerChip(m, { compact: true, el }))) : null,
         ];
         // a marked day opens its page; an ordinary day shows the short detail panel below the grid
         const cell = important
-          ? el("a", { class: cls, href: `#/day/${c.iso}`, "aria-label": dayLabel(c, marks) + ", opens the day page", "data-date": c.iso, "aria-current": c.iso === todayISO ? "date" : null }, ...inner)
-          : el("button", { type: "button", class: cls, "aria-pressed": String(c.iso === sel), "aria-label": dayLabel(c, marks), "data-date": c.iso, "aria-current": c.iso === todayISO ? "date" : null,
+          ? el("a", { class: cls, href: `#/day/${c.iso}`, "data-date": c.iso, "aria-current": c.iso === todayISO ? "date" : null }, ...inner)
+          : el("button", { type: "button", class: cls, "aria-pressed": String(c.iso === sel), "data-date": c.iso, "aria-current": c.iso === todayISO ? "date" : null,
             onclick: () => { selected = c.iso; renderGrid(); } }, ...inner);
         return el("td", {}, cell);
       })))));
@@ -232,7 +232,7 @@ export function mount(root, ctx) {
       el("h3", {}, `${d.weekdayName} ${d.iso}`),
       el("p", {}, d.hebrew.label, " ", heText(`${d.hebrew.dayHe} ${d.hebrew.monthHe} ${d.hebrew.yearHe}`)),
     ];
-    if (d.parsha) kids.push(el("p", {}, "Torah portion: ", el("strong", {}, el("a", { href: "#/torahread", "aria-label": `Read about the Torah portion ${d.parsha.en}` }, d.parsha.en)), " ", heText(d.parsha.he), " ", el("span", { class: "muted" }, "(Full text not in Aleph yet.)")));
+    if (d.parsha) kids.push(el("p", {}, "Torah portion: ", el("strong", {}, el("a", { href: "#/torahread", "aria-label": `Read about the Torah portion ${d.parsha.en}` }, d.parsha.en)), " ", heText(d.parsha.he), " ", el("span", { class: "muted" }, "(Full text not in ALEF yet.)")));
     else if (weekday(g) === 6) kids.push(el("p", {}, "No regular Torah portion this Shabbat (festival)."));
     for (const h of d.holidays) kids.push(el("p", {}, el("strong", {}, h.en), " ", heText(h.he), h.days > 1 ? ` (day ${h.dayIndex} of ${h.days})` : ""));
     for (const h of d.eveOf) kids.push(el("p", {}, `Begins at sundown this evening: ${h.en}.`));

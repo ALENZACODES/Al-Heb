@@ -40,10 +40,22 @@ test('privacy audit: Permissions-Policy statements on the page match _headers', 
   for (const m of page.matchAll(/camera=(\([^)]*\))/g)) assert.equal(m[1], cam);
 });
 
-test('privacy audit: cache names on the page are the ones sw.js opens, and no camera API is called', () => {
+test('privacy audit: cache names on the page are the ones sw.js opens, and only the Light screen calls the camera API', () => {
   const sw = read('sw.js');
-  assert.match(sw, /`alef-shell-\$\{VERSION\}`/); assert.match(sw, /`alef-data-\$\{VERSION\}`/); assert.match(sw, /'alef-runtime-v1'/);
+  assert.match(sw, /`alef-shell-\$\{VERSION\}`/); assert.match(sw, /`alef-data-\$\{VERSION\}`/); assert.match(sw, /'alef-runtime-v1'/); assert.match(sw, /'alef-music-v1'/); assert.match(sw, /'alef-retention'/);
   const page = privacy.LOCAL_ONLY.join('\n');
-  for (const n of ['alef-shell-<version>', 'alef-data-<version>', 'alef-runtime-v1']) assert.ok(page.includes(n), n);
-  for (const p of files) assert.doesNotMatch(read(p).replace(/\/\/.*$/gm, ''), /video\s*:\s*(true|\{)/, `${p} requests video`);
+  for (const n of ['alef-shell-<version>', 'alef-data-<version>', 'alef-runtime-v1', 'alef-music-v1', 'alef-retention']) assert.ok(page.includes(n), n);
+  const cameraCallers = new Set(['src/light/light.view.js']);
+  for (const p of files) {
+    const src = read(p).replace(/\/\/.*$/gm, '');
+    const requestsVideo = /video\s*:\s*(true|\{)/.test(src);
+    if (cameraCallers.has(p)) {
+      assert.ok(requestsVideo, `${p} should request the camera for the torch`);
+    } else {
+      assert.ok(!requestsVideo, `${p} requests video`);
+    }
+  }
+  assert.match(page, /Light screen/);
+  assert.match(page, /torch/);
+  assert.match(page, /not sent anywhere/);
 });

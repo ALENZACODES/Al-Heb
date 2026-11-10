@@ -1,0 +1,9 @@
+# Camera translator service. Python 3.11+.
+fastapi>=0.115,<1
+uvicorn>=0.30,<1
+pillow>=10.4
+opencv-python-headless>=4.10
+numpy>=1.26
+# Cloud path (optional: without these and without credentials the service uses Tesseract + the built-in word list)
+google-cloud-vision>=3.7,<4
+google-cloud-translate>=3.15,<4

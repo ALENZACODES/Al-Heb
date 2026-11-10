@@ -1,4 +1,5 @@
 /** One lesson: its letters, vowels, words and prayer lines, with audio, completion and links to review. */
+import { streakVisible } from "../shell/comfort.js";
 import { lessons, byId } from "./lessons.js";
 import { el, heText, tr, replaceKeepingFocus, levelLabel } from "./dom.js";
 import { loadContent, vowelEnglish } from "./content.js";
@@ -27,7 +28,7 @@ export function sizeQuickCheck(questions, lesson) {
 }
 export function mountLesson(root, ctx, lessonId) {
   // Short sessions and calm mode: the lesson comes in small parts (lesson.parts.js)
-  if (chunkedLessons(ctx) && byId[lessonId]) return mountChunkedLesson(root, ctx, lessonId);
+  if ((chunkedLessons(ctx) || ctx?.query?.quick === "1") && byId[lessonId]) return mountChunkedLesson(root, ctx, lessonId); // ?quick=1: the 3-minute lesson uses the same short parts
   let alive = true, offQuiz = () => {};
   const wrap = el("article", { class: "alef-lesson-page", "aria-labelledby": "view-title" });
   root.append(wrap);
@@ -55,9 +56,9 @@ export function mountLesson(root, ctx, lessonId) {
     const section = (id, title, ...kids) => el("section", { class: "card", "aria-labelledby": id }, el("h2", { id }, title), ...kids);
     const parts = [
       ctx.img?.(el, { kind: 'lesson', id: lesson.id, class: 'l-scene', width: 900 }),
-      el("p", { class: "muted alef-meta" }, `${levelLabel(lesson.level)} · about ${lesson.estMinutes} min (an estimate — lessons have not been timed on a learner yet) · ${lesson.track === "read" ? "Read the prayer book" : "Speak in Israel"}`),
-      el("details", { class: "draft-flag alef-draft" }, el("summary", {}, "About this lesson"),
-        el("p", {}, plain("lessonDraft")),
+      el("p", { class: "muted alef-meta" }, `${levelLabel(lesson.level)} · about ${lesson.estMinutes} min · ${lesson.track === "read" ? "Read the prayer book" : "Speak in Israel"}`),
+      el("details", { class: "draft-flag alef-draft" }, el("summary", {}, "About This Lesson"),
+        // review status is stated once, on the credits page
         el("h2", { id: "l-goals", class: "alef-draft-h" }, tr(ctx, "lesson.goals", "Goals")), el("ul", {}, ...lesson.goals.map((g) => el("li", {}, g)))),
       unmet.length ? el("p", { class: "alef-locked", role: "note" }, `Locked: finish ${unmet.map((p) => byId[p]?.title || p).join(", ")} first. You can still look around.`) : null,
       lesson.onramp && !isDone ? el("p", { class: "card alef-onramp", role: "note" }, el("strong", {}, "Short steps: "), `${lesson.steps?.length || 5} steps, about 2 minutes each. `,
@@ -146,7 +147,7 @@ export function mountLesson(root, ctx, lessonId) {
         let dueCount; try { dueCount = dueCards(Object.values((await loadState(ctx)).cards), Date.now()).length; } catch { dueCount = undefined; } // hide "Review now" when nothing is due
         if (!alive) return;
         const label = (id) => { const q = questions.find((x) => x.id === id); return q ? `${q.promptHe ? q.promptHe + " " : ""}${q.options[q.answerIndex].text}` : id; };
-        quizHost.replaceChildren(summaryNode({ title: "Lesson complete", countText: `${stats.right} of ${stats.answered} right first time.`, stats, ms,
+        quizHost.replaceChildren(summaryNode({ ctx, store: ctx?.store, sfx: ctx?.sfx, showStreak: streakVisible(ctx), title: "Lesson complete", countText: `${stats.right} of ${stats.answered} right first time.`, stats, ms,
           goodLabels: Object.keys(results).filter((id) => results[id]).map(label), missedLabels: stats.missed.map(label), skippedN: stats.skipped.length, cardsUpdated: updated, dueCount,
           nextHref: next ? `#/learn?lesson=${next.id}` : "#/learn", nextLabel: next ? "Next lesson" : "All lessons",
           extraLinks: [el("a", { class: "btn secondary", href: `#/learn?lesson=${lesson.id}&review=1` }, "Review these cards")] }));
@@ -162,8 +163,9 @@ export function mountLesson(root, ctx, lessonId) {
       // after the next frame, so the card's final height is in the layout; scrolling in the same task stopped about 300 px short (the page grew after the target was fixed)
       if (typeof requestAnimationFrame === "function") requestAnimationFrame(bring); else bring();
     } }, isDone ? "Check again" : carried ? "Continue quick check" : "Start quick check");
-    // The primary action sits in the sticky action bar (same one exercises use), so it is reachable without scrolling the whole lesson.
-    const actions = el("div", { class: "row alef-actions alef-actionbar" }, startBtn);
+    // The start button sits in the page, after the letters it checks: a sticky bar here covered the letter cards before
+    // the learner had read them. Inside the quick check, Continue/Undo/Skip keep the sticky action bar.
+    const actions = el("div", { class: "row alef-actions alef-start-row" }, startBtn);
     const more = el("div", { class: "row alef-actions" },
       el("a", { class: "btn secondary", href: `#/learn?lesson=${lesson.id}&review=1` }, "Review these cards"),
       el("a", { class: "btn secondary", href: "#/learn" }, "All lessons"));

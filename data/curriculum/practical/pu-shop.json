@@ -1,0 +1,2359 @@
+{
+ "id": "pu-shop",
+ "title": "Shopping and paying",
+ "level": "L1",
+ "status": "built-draft",
+ "proofread": false,
+ "nativeReview": true,
+ "lessons": [
+  {
+   "id": "il08",
+   "title": "Shop: asking and paying",
+   "track": "israel",
+   "wordCount": 6
+  },
+  {
+   "id": "il09",
+   "title": "Paying, change and bags",
+   "track": "israel",
+   "wordCount": 5
+  },
+  {
+   "id": "I-12",
+   "title": "Shuk bargaining: prices, discounts and 'I'll take it'",
+   "track": "israel",
+   "wordCount": 15
+  },
+  {
+   "id": "I-43",
+   "title": "Supermarket: aisles, prices, bags and the checkout",
+   "track": "israel",
+   "wordCount": 11
+  }
+ ],
+ "phrasebookSituation": "shop",
+ "speakSets": [
+  "speak-survival-shop-1"
+ ],
+ "grammarNote": "Price questions use כַּמָּה זֶה עוֹלֶה or מָה הַמְּחִיר. אֶפְשָׁר + infinitive makes a polite request. These notes only name forms already in the sources.",
+ "items": [
+  {
+   "id": "shop-01",
+   "source": "data/corpus/phrasebook.json",
+   "he": "כַּמָּה זֶה עוֹלֶה?",
+   "en": "how much does it cost?",
+   "translit": "kama ze ole?",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "shop-01"
+   }
+  },
+  {
+   "id": "shop-02",
+   "source": "data/corpus/phrasebook.json",
+   "he": "מָה הַמְּחִיר?",
+   "en": "what is the price?",
+   "translit": "ma hamechir?",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "shop-02"
+   }
+  },
+  {
+   "id": "shop-03",
+   "source": "data/corpus/phrasebook.json",
+   "he": "זֶה יָקָר",
+   "en": "it's expensive",
+   "translit": "ze yakar",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "shop-03"
+   }
+  },
+  {
+   "id": "shop-04",
+   "source": "data/corpus/phrasebook.json",
+   "he": "זֶה זוֹל",
+   "en": "it's cheap",
+   "translit": "ze zol",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "shop-04"
+   }
+  },
+  {
+   "id": "shop-05",
+   "source": "data/corpus/phrasebook.json",
+   "he": "יֵשׁ הַנָּחָה?",
+   "en": "is there a discount?",
+   "translit": "yesh hanacha?",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "shop-05"
+   }
+  },
+  {
+   "id": "shop-06",
+   "source": "data/corpus/phrasebook.json",
+   "he": "אֲנִי רַק מִסְתַּכֵּל",
+   "en": "I'm just looking",
+   "translit": "ani rak mistakel",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "shop-06"
+   }
+  },
+  {
+   "id": "shop-07",
+   "source": "data/corpus/phrasebook.json",
+   "he": "אֶקַּח אֶת זֶה",
+   "en": "I'll take this",
+   "translit": "ekach et ze",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "shop-07"
+   }
+  },
+  {
+   "id": "shop-08",
+   "source": "data/corpus/phrasebook.json",
+   "he": "יֵשׁ לָכֶם ...?",
+   "en": "do you have ...?",
+   "translit": "yesh lachem ...?",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "shop-08"
+   }
+  },
+  {
+   "id": "shop-09",
+   "source": "data/corpus/phrasebook.json",
+   "he": "אֶפְשָׁר לִמְדֹּד?",
+   "en": "can I try it on?",
+   "translit": "efshar limdod?",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "shop-09"
+   }
+  },
+  {
+   "id": "shop-10",
+   "source": "data/corpus/phrasebook.json",
+   "he": "מָה הַמִּדָּה?",
+   "en": "what size?",
+   "translit": "ma hamida?",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "shop-10"
+   }
+  },
+  {
+   "id": "shop-11",
+   "source": "data/corpus/phrasebook.json",
+   "he": "יֵשׁ מִדָּה גְּדוֹלָה יוֹתֵר?",
+   "en": "is there a bigger size?",
+   "translit": "yesh mida gdola yoter?",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "shop-11"
+   }
+  },
+  {
+   "id": "shop-12",
+   "source": "data/corpus/phrasebook.json",
+   "he": "מְזֻמָּן",
+   "en": "cash",
+   "translit": "mezuman",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "shop-12"
+   }
+  },
+  {
+   "id": "shop-13",
+   "source": "data/corpus/phrasebook.json",
+   "he": "כַּרְטִיס אַשְׁרַאי",
+   "en": "credit card",
+   "translit": "kartis ashrai",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "shop-13"
+   }
+  },
+  {
+   "id": "shop-14",
+   "source": "data/corpus/phrasebook.json",
+   "he": "אֶפְשָׁר קַבָּלָה?",
+   "en": "can I have a receipt?",
+   "translit": "efshar kabala?",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "shop-14"
+   }
+  },
+  {
+   "id": "shop-15",
+   "source": "data/corpus/phrasebook.json",
+   "he": "אֶפְשָׁר שַׂקִּית?",
+   "en": "can I have a bag?",
+   "translit": "efshar sakit?",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "shop-15"
+   }
+  },
+  {
+   "id": "shop-16",
+   "source": "data/corpus/phrasebook.json",
+   "he": "פָּתוּחַ",
+   "en": "open",
+   "translit": "patuach",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "shop-16"
+   }
+  },
+  {
+   "id": "shop-17",
+   "source": "data/corpus/phrasebook.json",
+   "he": "סָגוּר",
+   "en": "closed",
+   "translit": "sagur",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "shop-17"
+   }
+  },
+  {
+   "id": "shop-18",
+   "source": "data/corpus/phrasebook.json",
+   "he": "מָתַי אַתֶּם סוֹגְרִים?",
+   "en": "when do you close?",
+   "translit": "matai atem sogrim?",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "shop-18"
+   }
+  },
+  {
+   "id": "shop-19",
+   "source": "data/corpus/phrasebook.json",
+   "he": "שֶׁקֶל",
+   "en": "shekel (Israeli currency)",
+   "translit": "shekel",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "shop-19"
+   }
+  },
+  {
+   "id": "shop-20",
+   "source": "data/corpus/phrasebook.json",
+   "he": "אֵיפֹה הַשֵּׁרוּתִים?",
+   "en": "where is the restroom?",
+   "translit": "eifo hasherutim?",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "shop-20"
+   }
+  },
+  {
+   "id": "il08-w1",
+   "source": "data/curriculum/lessons.json#il08.words[0]",
+   "he": "כַּמָּה זֶה עוֹלֶה",
+   "en": "how much does this cost",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il08-w1"
+   }
+  },
+  {
+   "id": "il08-w2",
+   "source": "data/curriculum/lessons.json#il08.words[1]",
+   "he": "יָקָר",
+   "en": "expensive",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il08-w2"
+   }
+  },
+  {
+   "id": "il08-w3",
+   "source": "data/curriculum/lessons.json#il08.words[2]",
+   "he": "זוֹל",
+   "en": "cheap",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il08-w3"
+   }
+  },
+  {
+   "id": "il08-w4",
+   "source": "data/curriculum/lessons.json#il08.words[3]",
+   "he": "אֲנִי רוֹצֶה",
+   "en": "I want (m.)",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il08-w4"
+   }
+  },
+  {
+   "id": "il08-w5",
+   "source": "data/curriculum/lessons.json#il08.words[4]",
+   "he": "יֵשׁ",
+   "en": "there is",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il08-w5"
+   }
+  },
+  {
+   "id": "il08-w6",
+   "source": "data/curriculum/lessons.json#il08.words[5]",
+   "he": "אֵין",
+   "en": "there isn't",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il08-w6"
+   }
+  },
+  {
+   "id": "il09-w3",
+   "source": "data/curriculum/lessons.json#il09.words[2]",
+   "he": "עוֹדֶף",
+   "en": "change",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il09-w3"
+   }
+  },
+  {
+   "id": "il09-w4",
+   "source": "data/curriculum/lessons.json#il09.words[3]",
+   "he": "שַׂקִּית",
+   "en": "bag",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il09-w4"
+   }
+  },
+  {
+   "id": "il09-w5",
+   "source": "data/curriculum/lessons.json#il09.words[4]",
+   "he": "קַבָּלָה",
+   "en": "receipt",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il09-w5"
+   }
+  },
+  {
+   "id": "i-12-w1",
+   "source": "data/curriculum/lessons.json#I-12.words[0]",
+   "he": "שׁוּק",
+   "en": "market",
+   "translit": "shuk",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-12-w1"
+   }
+  },
+  {
+   "id": "i-12-w7",
+   "source": "data/curriculum/lessons.json#I-12.words[6]",
+   "he": "חֲצִי",
+   "en": "half",
+   "translit": "chatzi",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-12-w7"
+   }
+  },
+  {
+   "id": "i-12-w8",
+   "source": "data/curriculum/lessons.json#I-12.words[7]",
+   "he": "טָרִי",
+   "en": "fresh",
+   "translit": "tari",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-12-w8"
+   }
+  },
+  {
+   "id": "i-12-w9",
+   "source": "data/curriculum/lessons.json#I-12.words[8]",
+   "he": "עַגְבָנִיָּה",
+   "en": "tomato",
+   "translit": "agvaniyah",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-12-w9"
+   }
+  },
+  {
+   "id": "i-12-w10",
+   "source": "data/curriculum/lessons.json#I-12.words[9]",
+   "he": "מְלָפְפוֹן",
+   "en": "cucumber",
+   "translit": "melafefon",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-12-w10"
+   }
+  },
+  {
+   "id": "i-12-w11",
+   "source": "data/curriculum/lessons.json#I-12.words[10]",
+   "he": "גְּבִינָה",
+   "en": "cheese",
+   "translit": "gevinah",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-12-w11"
+   }
+  },
+  {
+   "id": "i-12-w12",
+   "source": "data/curriculum/lessons.json#I-12.words[11]",
+   "he": "זֵיתִים",
+   "en": "olives",
+   "translit": "zeitim",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-12-w12"
+   }
+  },
+  {
+   "id": "i-43-w1",
+   "source": "data/curriculum/lessons.json#I-43.words[0]",
+   "he": "קְנִיּוֹת",
+   "en": "shopping",
+   "translit": "keniyot",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-43-w1"
+   }
+  },
+  {
+   "id": "i-43-w2",
+   "source": "data/curriculum/lessons.json#I-43.words[1]",
+   "he": "עֲגָלָה",
+   "en": "cart",
+   "translit": "agalah",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-43-w2"
+   }
+  },
+  {
+   "id": "i-43-w3",
+   "source": "data/curriculum/lessons.json#I-43.words[2]",
+   "he": "חָלָב",
+   "en": "milk",
+   "translit": "chalav",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-43-w3"
+   }
+  },
+  {
+   "id": "i-43-w4",
+   "source": "data/curriculum/lessons.json#I-43.words[3]",
+   "he": "בֵּיצִים",
+   "en": "eggs",
+   "translit": "beitzim",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-43-w4"
+   }
+  },
+  {
+   "id": "i-43-w5",
+   "source": "data/curriculum/lessons.json#I-43.words[4]",
+   "he": "לֶחֶם",
+   "en": "bread",
+   "translit": "lechem",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-43-w5"
+   }
+  },
+  {
+   "id": "i-43-w6",
+   "source": "data/curriculum/lessons.json#I-43.words[5]",
+   "he": "פֵּרוֹת",
+   "en": "fruit",
+   "translit": "perot",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-43-w6"
+   }
+  },
+  {
+   "id": "i-43-w7",
+   "source": "data/curriculum/lessons.json#I-43.words[6]",
+   "he": "מְחִיר",
+   "en": "price",
+   "translit": "mechir",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-43-w7"
+   }
+  },
+  {
+   "id": "i-43-w11",
+   "source": "data/curriculum/lessons.json#I-43.words[10]",
+   "he": "הַנָּחָה",
+   "en": "discount",
+   "translit": "hanachah",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-43-w11"
+   }
+  },
+  {
+   "id": "d-shop-l1",
+   "source": "data/curriculum/dialogues.json#d-shop",
+   "he": "שָׁלוֹם. אֲנִי יָכוֹל לַעֲזֹר?",
+   "en": "Hello. Can I help?",
+   "translit": "shalom. ani yachol la'azor?",
+   "review": "needs-native-review: dialogue line, not native-checked",
+   "listen": {
+    "kind": "line",
+    "id": "d-shop-l1"
+   },
+   "speaker": "a"
+  },
+  {
+   "id": "d-shop-l2",
+   "source": "data/curriculum/dialogues.json#d-shop",
+   "he": "כַּמָּה הַחֻלְצָה הַזֹּאת?",
+   "en": "How much is this shirt?",
+   "translit": "kama hachultsa hazot?",
+   "review": "needs-native-review: dialogue line, not native-checked",
+   "listen": {
+    "kind": "line",
+    "id": "d-shop-l2"
+   },
+   "speaker": "b"
+  },
+  {
+   "id": "d-shop-l3",
+   "source": "data/curriculum/dialogues.json#d-shop",
+   "he": "מֵאָה וַעֲשָׂרָה שְׁקָלִים.",
+   "en": "A hundred and ten shekels.",
+   "translit": "me'a va'asara shekalim.",
+   "review": "needs-native-review: dialogue line, not native-checked",
+   "listen": {
+    "kind": "line",
+    "id": "d-shop-l3"
+   },
+   "speaker": "a"
+  },
+  {
+   "id": "d-shop-l4",
+   "source": "data/curriculum/dialogues.json#d-shop",
+   "he": "יֵשׁ מִדָּה קְטַנָּה?",
+   "en": "Do you have a small size?",
+   "translit": "yesh mida ktana?",
+   "review": "needs-native-review: dialogue line, not native-checked",
+   "listen": {
+    "kind": "line",
+    "id": "d-shop-l4"
+   },
+   "speaker": "b"
+  },
+  {
+   "id": "d-shop-l5",
+   "source": "data/curriculum/dialogues.json#d-shop",
+   "he": "כֵּן, רֶגַע. הִנֵּה.",
+   "en": "Yes, one moment. Here.",
+   "translit": "ken, rega. hine.",
+   "review": "needs-native-review: dialogue line, not native-checked",
+   "listen": {
+    "kind": "line",
+    "id": "d-shop-l5"
+   },
+   "speaker": "a"
+  },
+  {
+   "id": "d-shop-l7",
+   "source": "data/curriculum/dialogues.json#d-shop",
+   "he": "בֶּטַח. חֲדַר הַלְבָּשָׁה שָׁם.",
+   "en": "Of course. The fitting room is there.",
+   "translit": "betach. chadar halbasha sham.",
+   "review": "needs-native-review: dialogue line, not native-checked",
+   "listen": {
+    "kind": "line",
+    "id": "d-shop-l7"
+   },
+   "speaker": "a"
+  },
+  {
+   "id": "d-shop-l8",
+   "source": "data/curriculum/dialogues.json#d-shop",
+   "he": "אֲנִי לוֹקַחַת אֶת זֶה. בְּכַרְטִיס, בְּבַקָּשָׁה.",
+   "en": "I'll take it. By card, please.",
+   "translit": "ani lokachat et ze. bekartis, bevakasha.",
+   "review": "needs-native-review: dialogue line, not native-checked",
+   "listen": {
+    "kind": "line",
+    "id": "d-shop-l8"
+   },
+   "speaker": "b"
+  }
+ ],
+ "srsQueue": [
+  {
+   "position": 1,
+   "kind": "line",
+   "id": "shop-01",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 2,
+   "kind": "line",
+   "id": "shop-02",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 3,
+   "kind": "line",
+   "id": "shop-03",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 4,
+   "kind": "line",
+   "id": "shop-04",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 5,
+   "kind": "line",
+   "id": "shop-05",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 6,
+   "kind": "line",
+   "id": "shop-06",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 7,
+   "kind": "line",
+   "id": "shop-07",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 8,
+   "kind": "line",
+   "id": "shop-08",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 9,
+   "kind": "line",
+   "id": "shop-09",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 10,
+   "kind": "line",
+   "id": "shop-10",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 11,
+   "kind": "line",
+   "id": "shop-11",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 12,
+   "kind": "word",
+   "id": "shop-12",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 13,
+   "kind": "line",
+   "id": "shop-13",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  },
+  {
+   "position": 14,
+   "kind": "line",
+   "id": "shop-14",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  },
+  {
+   "position": 15,
+   "kind": "line",
+   "id": "shop-15",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  },
+  {
+   "position": 16,
+   "kind": "word",
+   "id": "shop-16",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 17,
+   "kind": "word",
+   "id": "shop-17",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 18,
+   "kind": "line",
+   "id": "shop-18",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  },
+  {
+   "position": 19,
+   "kind": "word",
+   "id": "shop-19",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 20,
+   "kind": "line",
+   "id": "shop-20",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  },
+  {
+   "position": 21,
+   "kind": "word",
+   "id": "il08-w1",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 22,
+   "kind": "word",
+   "id": "il08-w2",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 23,
+   "kind": "word",
+   "id": "il08-w3",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 24,
+   "kind": "word",
+   "id": "il08-w4",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 25,
+   "kind": "word",
+   "id": "il08-w5",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 26,
+   "kind": "word",
+   "id": "il08-w6",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 27,
+   "kind": "word",
+   "id": "il09-w3",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 28,
+   "kind": "word",
+   "id": "il09-w4",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 29,
+   "kind": "word",
+   "id": "il09-w5",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 30,
+   "kind": "word",
+   "id": "i-12-w1",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 31,
+   "kind": "word",
+   "id": "i-12-w7",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 32,
+   "kind": "word",
+   "id": "i-12-w8",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 33,
+   "kind": "word",
+   "id": "i-12-w9",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 34,
+   "kind": "word",
+   "id": "i-12-w10",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 35,
+   "kind": "word",
+   "id": "i-12-w11",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 36,
+   "kind": "word",
+   "id": "i-12-w12",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 37,
+   "kind": "word",
+   "id": "i-43-w1",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 38,
+   "kind": "word",
+   "id": "i-43-w2",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 39,
+   "kind": "word",
+   "id": "i-43-w3",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 40,
+   "kind": "word",
+   "id": "i-43-w4",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 41,
+   "kind": "word",
+   "id": "i-43-w5",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 42,
+   "kind": "word",
+   "id": "i-43-w6",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 43,
+   "kind": "word",
+   "id": "i-43-w7",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 44,
+   "kind": "word",
+   "id": "i-43-w11",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 45,
+   "kind": "line",
+   "id": "d-shop-l1",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  },
+  {
+   "position": 46,
+   "kind": "line",
+   "id": "d-shop-l2",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  },
+  {
+   "position": 47,
+   "kind": "line",
+   "id": "d-shop-l3",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  },
+  {
+   "position": 48,
+   "kind": "line",
+   "id": "d-shop-l4",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  },
+  {
+   "position": 49,
+   "kind": "line",
+   "id": "d-shop-l5",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  },
+  {
+   "position": 50,
+   "kind": "line",
+   "id": "d-shop-l7",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  },
+  {
+   "position": 51,
+   "kind": "line",
+   "id": "d-shop-l8",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  }
+ ],
+ "listenDrills": [
+  {
+   "goal": "Hear the sourced lines and words already in the audio manifest.",
+   "items": [
+    "shop-01",
+    "shop-02",
+    "shop-03",
+    "shop-04",
+    "shop-05",
+    "shop-06",
+    "shop-07",
+    "shop-08",
+    "shop-09",
+    "shop-10",
+    "shop-11",
+    "shop-12",
+    "shop-13",
+    "shop-14",
+    "shop-15",
+    "shop-16",
+    "shop-17",
+    "shop-18",
+    "shop-19",
+    "shop-20",
+    "il08-w1",
+    "il08-w2",
+    "il08-w3",
+    "il08-w4",
+    "il08-w5",
+    "il08-w6",
+    "il09-w3",
+    "il09-w4",
+    "il09-w5",
+    "i-12-w1",
+    "i-12-w7",
+    "i-12-w8",
+    "i-12-w9",
+    "i-12-w10",
+    "i-12-w11",
+    "i-12-w12",
+    "i-43-w1",
+    "i-43-w2",
+    "i-43-w3",
+    "i-43-w4",
+    "i-43-w5",
+    "i-43-w6",
+    "i-43-w7",
+    "i-43-w11",
+    "d-shop-l1",
+    "d-shop-l2",
+    "d-shop-l3",
+    "d-shop-l4",
+    "d-shop-l5",
+    "d-shop-l7",
+    "d-shop-l8"
+   ],
+   "source": "audio manifest, phrasebook and lesson-word ids"
+  }
+ ],
+ "speakDrills": [
+  {
+   "goal": "Repeat the existing set data/speak/sets/speak-survival-shop-1.json.",
+   "set": "speak-survival-shop-1",
+   "note": "That set is machine-built and also unverified."
+  }
+ ],
+ "pages": [
+  {
+   "id": "pu-shop-p01",
+   "title": "How much does it cost?",
+   "order": 1,
+   "grammarNote": "This page uses only Hebrew already stored in data/corpus/phrasebook.json. First line: כַּמָּה זֶה עוֹלֶה?. Price questions use כַּמָּה זֶה עוֹלֶה or מָה הַמְּחִיר.",
+   "items": [
+    {
+     "id": "shop-01",
+     "source": "data/corpus/phrasebook.json",
+     "he": "כַּמָּה זֶה עוֹלֶה?",
+     "en": "how much does it cost?",
+     "translit": "kama ze ole?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "shop-01"
+     }
+    },
+    {
+     "id": "shop-02",
+     "source": "data/corpus/phrasebook.json",
+     "he": "מָה הַמְּחִיר?",
+     "en": "what is the price?",
+     "translit": "ma hamechir?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "shop-02"
+     }
+    },
+    {
+     "id": "shop-03",
+     "source": "data/corpus/phrasebook.json",
+     "he": "זֶה יָקָר",
+     "en": "it's expensive",
+     "translit": "ze yakar",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "shop-03"
+     }
+    },
+    {
+     "id": "shop-04",
+     "source": "data/corpus/phrasebook.json",
+     "he": "זֶה זוֹל",
+     "en": "it's cheap",
+     "translit": "ze zol",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "shop-04"
+     }
+    },
+    {
+     "id": "shop-05",
+     "source": "data/corpus/phrasebook.json",
+     "he": "יֵשׁ הַנָּחָה?",
+     "en": "is there a discount?",
+     "translit": "yesh hanacha?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "shop-05"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "shop-01",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "shop-02",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "line",
+     "id": "shop-03",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "line",
+     "id": "shop-04",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "line",
+     "id": "shop-05",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "shop-01",
+    "shop-02",
+    "shop-03",
+    "shop-04",
+    "shop-05"
+   ],
+   "speakSet": "speak-survival-shop-1"
+  },
+  {
+   "id": "pu-shop-p02",
+   "title": "I'm just looking",
+   "order": 2,
+   "grammarNote": "This page uses only Hebrew already stored in data/corpus/phrasebook.json. First line: אֲנִי רַק מִסְתַּכֵּל. Price questions use כַּמָּה זֶה עוֹלֶה or מָה הַמְּחִיר.",
+   "items": [
+    {
+     "id": "shop-06",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֲנִי רַק מִסְתַּכֵּל",
+     "en": "I'm just looking",
+     "translit": "ani rak mistakel",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "shop-06"
+     }
+    },
+    {
+     "id": "shop-07",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֶקַּח אֶת זֶה",
+     "en": "I'll take this",
+     "translit": "ekach et ze",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "shop-07"
+     }
+    },
+    {
+     "id": "shop-08",
+     "source": "data/corpus/phrasebook.json",
+     "he": "יֵשׁ לָכֶם ...?",
+     "en": "do you have ...?",
+     "translit": "yesh lachem ...?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "shop-08"
+     }
+    },
+    {
+     "id": "shop-09",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֶפְשָׁר לִמְדֹּד?",
+     "en": "can I try it on?",
+     "translit": "efshar limdod?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "shop-09"
+     }
+    },
+    {
+     "id": "shop-10",
+     "source": "data/corpus/phrasebook.json",
+     "he": "מָה הַמִּדָּה?",
+     "en": "what size?",
+     "translit": "ma hamida?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "shop-10"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "shop-06",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "shop-07",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "line",
+     "id": "shop-08",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "line",
+     "id": "shop-09",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "line",
+     "id": "shop-10",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "shop-06",
+    "shop-07",
+    "shop-08",
+    "shop-09",
+    "shop-10"
+   ],
+   "speakSet": "speak-survival-shop-1"
+  },
+  {
+   "id": "pu-shop-p03",
+   "title": "Is there a bigger size?",
+   "order": 3,
+   "grammarNote": "This page uses only Hebrew already stored in data/corpus/phrasebook.json. First line: יֵשׁ מִדָּה גְּדוֹלָה יוֹתֵר?. Price questions use כַּמָּה זֶה עוֹלֶה or מָה הַמְּחִיר.",
+   "items": [
+    {
+     "id": "shop-11",
+     "source": "data/corpus/phrasebook.json",
+     "he": "יֵשׁ מִדָּה גְּדוֹלָה יוֹתֵר?",
+     "en": "is there a bigger size?",
+     "translit": "yesh mida gdola yoter?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "shop-11"
+     }
+    },
+    {
+     "id": "shop-12",
+     "source": "data/corpus/phrasebook.json",
+     "he": "מְזֻמָּן",
+     "en": "cash",
+     "translit": "mezuman",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "shop-12"
+     }
+    },
+    {
+     "id": "shop-13",
+     "source": "data/corpus/phrasebook.json",
+     "he": "כַּרְטִיס אַשְׁרַאי",
+     "en": "credit card",
+     "translit": "kartis ashrai",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "shop-13"
+     }
+    },
+    {
+     "id": "shop-14",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֶפְשָׁר קַבָּלָה?",
+     "en": "can I have a receipt?",
+     "translit": "efshar kabala?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "shop-14"
+     }
+    },
+    {
+     "id": "shop-15",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֶפְשָׁר שַׂקִּית?",
+     "en": "can I have a bag?",
+     "translit": "efshar sakit?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "shop-15"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "shop-11",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "shop-12",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "line",
+     "id": "shop-13",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "line",
+     "id": "shop-14",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "line",
+     "id": "shop-15",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "shop-11",
+    "shop-12",
+    "shop-13",
+    "shop-14",
+    "shop-15"
+   ],
+   "speakSet": "speak-survival-shop-1"
+  },
+  {
+   "id": "pu-shop-p04",
+   "title": "Open",
+   "order": 4,
+   "grammarNote": "This page uses only Hebrew already stored in data/corpus/phrasebook.json. First line: פָּתוּחַ. Price questions use כַּמָּה זֶה עוֹלֶה or מָה הַמְּחִיר.",
+   "items": [
+    {
+     "id": "shop-16",
+     "source": "data/corpus/phrasebook.json",
+     "he": "פָּתוּחַ",
+     "en": "open",
+     "translit": "patuach",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "shop-16"
+     }
+    },
+    {
+     "id": "shop-17",
+     "source": "data/corpus/phrasebook.json",
+     "he": "סָגוּר",
+     "en": "closed",
+     "translit": "sagur",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "shop-17"
+     }
+    },
+    {
+     "id": "shop-18",
+     "source": "data/corpus/phrasebook.json",
+     "he": "מָתַי אַתֶּם סוֹגְרִים?",
+     "en": "when do you close?",
+     "translit": "matai atem sogrim?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "shop-18"
+     }
+    },
+    {
+     "id": "shop-19",
+     "source": "data/corpus/phrasebook.json",
+     "he": "שֶׁקֶל",
+     "en": "shekel (Israeli currency)",
+     "translit": "shekel",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "shop-19"
+     }
+    },
+    {
+     "id": "shop-20",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֵיפֹה הַשֵּׁרוּתִים?",
+     "en": "where is the restroom?",
+     "translit": "eifo hasherutim?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "shop-20"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "shop-16",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "shop-17",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "line",
+     "id": "shop-18",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "shop-19",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "line",
+     "id": "shop-20",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "shop-16",
+    "shop-17",
+    "shop-18",
+    "shop-19",
+    "shop-20"
+   ],
+   "speakSet": "speak-survival-shop-1"
+  },
+  {
+   "id": "pu-shop-p05",
+   "title": "How much does this cost",
+   "order": 5,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json. First line: כַּמָּה זֶה עוֹלֶה. Price questions use כַּמָּה זֶה עוֹלֶה or מָה הַמְּחִיר.",
+   "items": [
+    {
+     "id": "il08-w1",
+     "source": "data/curriculum/lessons.json#il08.words[0]",
+     "he": "כַּמָּה זֶה עוֹלֶה",
+     "en": "how much does this cost",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il08-w1"
+     }
+    },
+    {
+     "id": "il08-w2",
+     "source": "data/curriculum/lessons.json#il08.words[1]",
+     "he": "יָקָר",
+     "en": "expensive",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il08-w2"
+     }
+    },
+    {
+     "id": "il08-w3",
+     "source": "data/curriculum/lessons.json#il08.words[2]",
+     "he": "זוֹל",
+     "en": "cheap",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il08-w3"
+     }
+    },
+    {
+     "id": "il08-w4",
+     "source": "data/curriculum/lessons.json#il08.words[3]",
+     "he": "אֲנִי רוֹצֶה",
+     "en": "I want (m.)",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il08-w4"
+     }
+    },
+    {
+     "id": "il08-w5",
+     "source": "data/curriculum/lessons.json#il08.words[4]",
+     "he": "יֵשׁ",
+     "en": "there is",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il08-w5"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "il08-w1",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "il08-w2",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "il08-w3",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "il08-w4",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "il08-w5",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "il08-w1",
+    "il08-w2",
+    "il08-w3",
+    "il08-w4",
+    "il08-w5"
+   ],
+   "speakSet": "speak-survival-shop-1"
+  },
+  {
+   "id": "pu-shop-p06",
+   "title": "There isn't",
+   "order": 6,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json. First line: אֵין. Price questions use כַּמָּה זֶה עוֹלֶה or מָה הַמְּחִיר.",
+   "items": [
+    {
+     "id": "il08-w6",
+     "source": "data/curriculum/lessons.json#il08.words[5]",
+     "he": "אֵין",
+     "en": "there isn't",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il08-w6"
+     }
+    },
+    {
+     "id": "il09-w3",
+     "source": "data/curriculum/lessons.json#il09.words[2]",
+     "he": "עוֹדֶף",
+     "en": "change",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il09-w3"
+     }
+    },
+    {
+     "id": "il09-w4",
+     "source": "data/curriculum/lessons.json#il09.words[3]",
+     "he": "שַׂקִּית",
+     "en": "bag",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il09-w4"
+     }
+    },
+    {
+     "id": "il09-w5",
+     "source": "data/curriculum/lessons.json#il09.words[4]",
+     "he": "קַבָּלָה",
+     "en": "receipt",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il09-w5"
+     }
+    },
+    {
+     "id": "i-12-w1",
+     "source": "data/curriculum/lessons.json#I-12.words[0]",
+     "he": "שׁוּק",
+     "en": "market",
+     "translit": "shuk",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-12-w1"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "il08-w6",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "il09-w3",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "il09-w4",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "il09-w5",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "i-12-w1",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "il08-w6",
+    "il09-w3",
+    "il09-w4",
+    "il09-w5",
+    "i-12-w1"
+   ],
+   "speakSet": "speak-survival-shop-1"
+  },
+  {
+   "id": "pu-shop-p07",
+   "title": "Half",
+   "order": 7,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json. First line: חֲצִי. Price questions use כַּמָּה זֶה עוֹלֶה or מָה הַמְּחִיר.",
+   "items": [
+    {
+     "id": "i-12-w7",
+     "source": "data/curriculum/lessons.json#I-12.words[6]",
+     "he": "חֲצִי",
+     "en": "half",
+     "translit": "chatzi",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-12-w7"
+     }
+    },
+    {
+     "id": "i-12-w8",
+     "source": "data/curriculum/lessons.json#I-12.words[7]",
+     "he": "טָרִי",
+     "en": "fresh",
+     "translit": "tari",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-12-w8"
+     }
+    },
+    {
+     "id": "i-12-w9",
+     "source": "data/curriculum/lessons.json#I-12.words[8]",
+     "he": "עַגְבָנִיָּה",
+     "en": "tomato",
+     "translit": "agvaniyah",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-12-w9"
+     }
+    },
+    {
+     "id": "i-12-w10",
+     "source": "data/curriculum/lessons.json#I-12.words[9]",
+     "he": "מְלָפְפוֹן",
+     "en": "cucumber",
+     "translit": "melafefon",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-12-w10"
+     }
+    },
+    {
+     "id": "i-12-w11",
+     "source": "data/curriculum/lessons.json#I-12.words[10]",
+     "he": "גְּבִינָה",
+     "en": "cheese",
+     "translit": "gevinah",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-12-w11"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-12-w7",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-12-w8",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-12-w9",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-12-w10",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "i-12-w11",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "i-12-w7",
+    "i-12-w8",
+    "i-12-w9",
+    "i-12-w10",
+    "i-12-w11"
+   ],
+   "speakSet": "speak-survival-shop-1"
+  },
+  {
+   "id": "pu-shop-p08",
+   "title": "Olives",
+   "order": 8,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json. First line: זֵיתִים. Price questions use כַּמָּה זֶה עוֹלֶה or מָה הַמְּחִיר.",
+   "items": [
+    {
+     "id": "i-12-w12",
+     "source": "data/curriculum/lessons.json#I-12.words[11]",
+     "he": "זֵיתִים",
+     "en": "olives",
+     "translit": "zeitim",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-12-w12"
+     }
+    },
+    {
+     "id": "i-43-w1",
+     "source": "data/curriculum/lessons.json#I-43.words[0]",
+     "he": "קְנִיּוֹת",
+     "en": "shopping",
+     "translit": "keniyot",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-43-w1"
+     }
+    },
+    {
+     "id": "i-43-w2",
+     "source": "data/curriculum/lessons.json#I-43.words[1]",
+     "he": "עֲגָלָה",
+     "en": "cart",
+     "translit": "agalah",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-43-w2"
+     }
+    },
+    {
+     "id": "i-43-w3",
+     "source": "data/curriculum/lessons.json#I-43.words[2]",
+     "he": "חָלָב",
+     "en": "milk",
+     "translit": "chalav",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-43-w3"
+     }
+    },
+    {
+     "id": "i-43-w4",
+     "source": "data/curriculum/lessons.json#I-43.words[3]",
+     "he": "בֵּיצִים",
+     "en": "eggs",
+     "translit": "beitzim",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-43-w4"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-12-w12",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-43-w1",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-43-w2",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-43-w3",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "i-43-w4",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "i-12-w12",
+    "i-43-w1",
+    "i-43-w2",
+    "i-43-w3",
+    "i-43-w4"
+   ],
+   "speakSet": "speak-survival-shop-1"
+  },
+  {
+   "id": "pu-shop-p09",
+   "title": "Bread",
+   "order": 9,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/dialogues.json, data/curriculum/lessons.json. First line: לֶחֶם. Price questions use כַּמָּה זֶה עוֹלֶה or מָה הַמְּחִיר.",
+   "items": [
+    {
+     "id": "i-43-w5",
+     "source": "data/curriculum/lessons.json#I-43.words[4]",
+     "he": "לֶחֶם",
+     "en": "bread",
+     "translit": "lechem",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-43-w5"
+     }
+    },
+    {
+     "id": "i-43-w6",
+     "source": "data/curriculum/lessons.json#I-43.words[5]",
+     "he": "פֵּרוֹת",
+     "en": "fruit",
+     "translit": "perot",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-43-w6"
+     }
+    },
+    {
+     "id": "i-43-w7",
+     "source": "data/curriculum/lessons.json#I-43.words[6]",
+     "he": "מְחִיר",
+     "en": "price",
+     "translit": "mechir",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-43-w7"
+     }
+    },
+    {
+     "id": "i-43-w11",
+     "source": "data/curriculum/lessons.json#I-43.words[10]",
+     "he": "הַנָּחָה",
+     "en": "discount",
+     "translit": "hanachah",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-43-w11"
+     }
+    },
+    {
+     "id": "d-shop-l1",
+     "source": "data/curriculum/dialogues.json#d-shop",
+     "he": "שָׁלוֹם. אֲנִי יָכוֹל לַעֲזֹר?",
+     "en": "Hello. Can I help?",
+     "translit": "shalom. ani yachol la'azor?",
+     "review": "needs-native-review: dialogue line, not native-checked",
+     "listen": {
+      "kind": "line",
+      "id": "d-shop-l1"
+     },
+     "speaker": "a"
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-43-w5",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-43-w6",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-43-w7",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-43-w11",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "line",
+     "id": "d-shop-l1",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "i-43-w5",
+    "i-43-w6",
+    "i-43-w7",
+    "i-43-w11",
+    "d-shop-l1"
+   ],
+   "speakSet": "speak-survival-shop-1"
+  },
+  {
+   "id": "pu-shop-p10",
+   "title": "How much is this shirt?",
+   "order": 10,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/dialogues.json. First line: כַּמָּה הַחֻלְצָה הַזֹּאת?. Price questions use כַּמָּה זֶה עוֹלֶה or מָה הַמְּחִיר.",
+   "items": [
+    {
+     "id": "d-shop-l2",
+     "source": "data/curriculum/dialogues.json#d-shop",
+     "he": "כַּמָּה הַחֻלְצָה הַזֹּאת?",
+     "en": "How much is this shirt?",
+     "translit": "kama hachultsa hazot?",
+     "review": "needs-native-review: dialogue line, not native-checked",
+     "listen": {
+      "kind": "line",
+      "id": "d-shop-l2"
+     },
+     "speaker": "b"
+    },
+    {
+     "id": "d-shop-l3",
+     "source": "data/curriculum/dialogues.json#d-shop",
+     "he": "מֵאָה וַעֲשָׂרָה שְׁקָלִים.",
+     "en": "A hundred and ten shekels.",
+     "translit": "me'a va'asara shekalim.",
+     "review": "needs-native-review: dialogue line, not native-checked",
+     "listen": {
+      "kind": "line",
+      "id": "d-shop-l3"
+     },
+     "speaker": "a"
+    },
+    {
+     "id": "d-shop-l4",
+     "source": "data/curriculum/dialogues.json#d-shop",
+     "he": "יֵשׁ מִדָּה קְטַנָּה?",
+     "en": "Do you have a small size?",
+     "translit": "yesh mida ktana?",
+     "review": "needs-native-review: dialogue line, not native-checked",
+     "listen": {
+      "kind": "line",
+      "id": "d-shop-l4"
+     },
+     "speaker": "b"
+    },
+    {
+     "id": "d-shop-l5",
+     "source": "data/curriculum/dialogues.json#d-shop",
+     "he": "כֵּן, רֶגַע. הִנֵּה.",
+     "en": "Yes, one moment. Here.",
+     "translit": "ken, rega. hine.",
+     "review": "needs-native-review: dialogue line, not native-checked",
+     "listen": {
+      "kind": "line",
+      "id": "d-shop-l5"
+     },
+     "speaker": "a"
+    },
+    {
+     "id": "d-shop-l7",
+     "source": "data/curriculum/dialogues.json#d-shop",
+     "he": "בֶּטַח. חֲדַר הַלְבָּשָׁה שָׁם.",
+     "en": "Of course. The fitting room is there.",
+     "translit": "betach. chadar halbasha sham.",
+     "review": "needs-native-review: dialogue line, not native-checked",
+     "listen": {
+      "kind": "line",
+      "id": "d-shop-l7"
+     },
+     "speaker": "a"
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "d-shop-l2",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "d-shop-l3",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "line",
+     "id": "d-shop-l4",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "line",
+     "id": "d-shop-l5",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "line",
+     "id": "d-shop-l7",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "d-shop-l2",
+    "d-shop-l3",
+    "d-shop-l4",
+    "d-shop-l5",
+    "d-shop-l7"
+   ],
+   "speakSet": "speak-survival-shop-1"
+  },
+  {
+   "id": "pu-shop-p11",
+   "title": "I'll take it. By card, please.",
+   "order": 11,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/dialogues.json. First line: אֲנִי לוֹקַחַת אֶת זֶה. בְּכַרְטִיס, בְּבַקָּשָׁה.. Price questions use כַּמָּה זֶה עוֹלֶה or מָה הַמְּחִיר.",
+   "items": [
+    {
+     "id": "d-shop-l8",
+     "source": "data/curriculum/dialogues.json#d-shop",
+     "he": "אֲנִי לוֹקַחַת אֶת זֶה. בְּכַרְטִיס, בְּבַקָּשָׁה.",
+     "en": "I'll take it. By card, please.",
+     "translit": "ani lokachat et ze. bekartis, bevakasha.",
+     "review": "needs-native-review: dialogue line, not native-checked",
+     "listen": {
+      "kind": "line",
+      "id": "d-shop-l8"
+     },
+     "speaker": "b"
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "d-shop-l8",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "d-shop-l8"
+   ],
+   "speakSet": "speak-survival-shop-1"
+  }
+ ]
+}

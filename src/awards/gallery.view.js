@@ -158,7 +158,7 @@ export async function mount(root, ctx) {
   let rubric = null;
   let rubricError = '';
   try { rubric = ctx?.rubric || await (ctx?.loadRubric ? ctx.loadRubric() : loadBeginnerRubric()); }
-  catch (e) { rubricError = 'The beginner checklist could not be read from this copy of Aleph. No certificate is issued.'; }
+  catch (e) { rubricError = 'The beginner checklist could not be read from this copy of ALEF. No certificate is issued.'; }
   if (!alive) return () => {};
   if (rubric && rubric.ok === false) rubricError = 'The beginner checklist did not match the shipped lessons. No certificate is issued.';
 
@@ -185,7 +185,7 @@ export async function mount(root, ctx) {
     onclick: async () => {
       const m = model();
       if (!shareOk.shareSheet || typeof shareNav.share !== 'function') {
-        status.textContent = 'Share is not available in this browser. Download the PDF and share the file yourself. Aleph does not send it.';
+        status.textContent = 'Share is not available in this browser. Download the PDF and share the file yourself. ALEF does not send it.';
         return;
       }
       try {
@@ -195,11 +195,11 @@ export async function mount(root, ctx) {
           try { file = new File([bytes], PDF_FILENAME, { type: 'application/pdf' }); } catch { file = null; }
         }
         if (file && typeof shareNav.canShare === 'function' && shareNav.canShare({ files: [file] })) {
-          await shareNav.share({ files: [file], title: 'Aleph sample certificate', text: shareText(m) });
-          status.textContent = 'The share sheet opened with the sample PDF. Aleph did not send email and did not upload the file itself.';
+          await shareNav.share({ files: [file], title: 'ALEF sample certificate', text: shareText(m) });
+          status.textContent = 'The share sheet opened with the sample PDF. ALEF did not send email and did not upload the file itself.';
           return;
         }
-        await shareNav.share({ title: 'Aleph sample certificate', text: shareText(m) });
+        await shareNav.share({ title: 'ALEF sample certificate', text: shareText(m) });
         status.textContent = 'The share sheet opened with text only. This browser did not take the PDF file. The text says Design proof.';
       } catch (e) {
         status.textContent = e && e.name === 'AbortError'
@@ -243,7 +243,7 @@ export async function mount(root, ctx) {
     onclick: () => {
       const fn = ctx?.print || globalThis.print;
       if (typeof fn !== 'function') { status.textContent = 'Printing is not available here. Download the PDF instead.'; return; }
-      try { fn(); status.textContent = 'The print dialog was requested. Choose Save as PDF there if you want a file. Aleph does not upload it.'; }
+      try { fn(); status.textContent = 'The print dialog was requested. Choose Save as PDF there if you want a file. ALEF does not upload it.'; }
       catch { status.textContent = 'Printing did not open. Download the PDF instead.'; }
     },
   }, 'Print or save as PDF');
@@ -365,7 +365,7 @@ export async function mount(root, ctx) {
         h('p', {}, row.detail)))))),
     h('section', { 'aria-labelledby': 'award-h-mastery' },
       h('h2', { id: 'award-h-mastery' }, 'Beginner checklist finishes'),
-      h('p', {}, 'Matte, polished and foil open once Aleph has a proper reading check, which is still being built. Games, visits and lesson ticks do not count toward them.'),
+      h('p', {}, 'Matte, polished and foil open once ALEF has a proper reading check, which is still being built. Games, visits and lesson ticks do not count toward them.'),
       h('ul', { class: 'aw-slots' }, ...masterySlots().map((slot) => h('li', {
         class: 'aw-slot', 'data-state': 'locked', 'data-finish': slot.finish, 'data-slot': slot.id,
       },
@@ -384,7 +384,7 @@ export async function mount(root, ctx) {
         h('label', { for: 'award-name' }, 'Name to show on the sample'),
         h('div', {}, input, ' ', saveName),
         h('div', { class: 'aw-actions' }, jump, printBtn, downloadBtn, shareBtn),
-        shareOk.shareSheet ? null : h('p', {}, 'Share is not available in this browser. Download the PDF and share the file yourself. Aleph does not send it.')),
+        shareOk.shareSheet ? null : h('p', {}, 'Share is not available in this browser. Download the PDF and share the file yourself. ALEF does not send it.')),
       certHost,
       h('details', { id: 'award-sample-notes', class: 'aw-noprint' },
         h('summary', {}, 'Record, storage, and what this sample is not'),

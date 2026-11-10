@@ -172,11 +172,18 @@
     ],
     "estMinutes": 30,
     "words": 11,
-    "exercises": 15,
+    "exercises": 16,
     "prayerLines": [
-     "birkat-hamazon-1",
-     "yehalelu",
-     "havdalah-opening"
+     "hallel-113-1",
+     "hallel-115-1",
+     "hallel-116-13",
+     "hallel-117",
+     "hallel-118-1-4",
+     "hallel-118-5",
+     "hallel-118-6",
+     "hallel-118-24",
+     "hallel-118-25",
+     "hallel-118-28"
     ]
    },
    {
@@ -295,13 +302,13 @@
     "unit": "synagogue",
     "track": "read",
     "level": "intermediate",
-    "title": "Yom Kippur: the few lines the corpus holds and the words around them",
+    "title": "Yom Kippur: the Shema line said aloud and the words of the day",
     "prerequisites": [
      "I-01"
     ],
     "estMinutes": 30,
-    "words": 12,
-    "exercises": 15,
+    "words": 13,
+    "exercises": 16,
     "prayerLines": [
      "shema-1",
      "shema-2",
@@ -317,16 +324,18 @@
     "unit": "synagogue",
     "track": "read",
     "level": "intermediate",
-    "title": "Pesach: the seder blessings the corpus holds",
+    "title": "Pesach: the seder blessings and the words of the festival",
     "prerequisites": [
      "I-05"
     ],
     "estMinutes": 30,
-    "words": 12,
-    "exercises": 14,
+    "words": 13,
+    "exercises": 17,
     "prayerLines": [
      "kiddush-wine-1",
-     "kiddush-shabbat-eve",
+     "kiddush-festival-eve-open",
+     "kiddush-festival-pesach",
+     "kiddush-festival-eve-close",
      "shehecheyanu",
      "mi-chamocha-1",
      "hamotzi"
@@ -344,13 +353,14 @@
     ],
     "estMinutes": 25,
     "words": 12,
-    "exercises": 14,
+    "exercises": 16,
     "prayerLines": [
      "shehecheyanu",
      "kiddush-wine-1",
-     "hamotzi",
-     "havdalah-opening",
-     "kiddush-veshamru"
+     "kiddush-festival-sukkot",
+     "kiddush-festival-eve-close",
+     "leshev-basukkah",
+     "hamotzi"
     ]
    },
    {
@@ -896,13 +906,13 @@
     "unit": "israel",
     "track": "israel",
     "level": "B1",
-    "title": "Holiday greetings by festival: who says what, and when",
+    "title": "Holiday greetings by festival, plus everyday wishes",
     "prerequisites": [
      "I-19"
     ],
     "estMinutes": 25,
-    "words": 12,
-    "exercises": 15,
+    "words": 14,
+    "exercises": 17,
     "prayerLines": []
    }
   ]
@@ -1051,11 +1061,18 @@
    ],
    "estMinutes": 30,
    "words": 11,
-   "exercises": 15,
+   "exercises": 16,
    "prayerLines": [
-    "birkat-hamazon-1",
-    "yehalelu",
-    "havdalah-opening"
+    "hallel-113-1",
+    "hallel-115-1",
+    "hallel-116-13",
+    "hallel-117",
+    "hallel-118-1-4",
+    "hallel-118-5",
+    "hallel-118-6",
+    "hallel-118-24",
+    "hallel-118-25",
+    "hallel-118-28"
    ]
   },
   {
@@ -1399,13 +1416,13 @@
    "unit": "synagogue",
    "track": "read",
    "level": "intermediate",
-   "title": "Yom Kippur: the few lines the corpus holds and the words around them",
+   "title": "Yom Kippur: the Shema line said aloud and the words of the day",
    "prerequisites": [
     "I-01"
    ],
    "estMinutes": 30,
-   "words": 12,
-   "exercises": 15,
+   "words": 13,
+   "exercises": 16,
    "prayerLines": [
     "shema-1",
     "shema-2",
@@ -1421,16 +1438,18 @@
    "unit": "synagogue",
    "track": "read",
    "level": "intermediate",
-   "title": "Pesach: the seder blessings the corpus holds",
+   "title": "Pesach: the seder blessings and the words of the festival",
    "prerequisites": [
     "I-05"
    ],
    "estMinutes": 30,
-   "words": 12,
-   "exercises": 14,
+   "words": 13,
+   "exercises": 17,
    "prayerLines": [
     "kiddush-wine-1",
-    "kiddush-shabbat-eve",
+    "kiddush-festival-eve-open",
+    "kiddush-festival-pesach",
+    "kiddush-festival-eve-close",
     "shehecheyanu",
     "mi-chamocha-1",
     "hamotzi"
@@ -1448,13 +1467,14 @@
    ],
    "estMinutes": 25,
    "words": 12,
-   "exercises": 14,
+   "exercises": 16,
    "prayerLines": [
     "shehecheyanu",
     "kiddush-wine-1",
-    "hamotzi",
-    "havdalah-opening",
-    "kiddush-veshamru"
+    "kiddush-festival-sukkot",
+    "kiddush-festival-eve-close",
+    "leshev-basukkah",
+    "hamotzi"
    ]
   },
   {
@@ -1472,8 +1492,7 @@
    "exercises": 14,
    "prayerLines": [
     "hanukkah-nissim",
-    "shehecheyanu",
-    "hagomel"
+    "shehecheyanu"
    ]
   },
   {
@@ -1773,13 +1792,13 @@
    "unit": "israel",
    "track": "israel",
    "level": "B1",
-   "title": "Holiday greetings by festival: who says what, and when",
+   "title": "Holiday greetings by festival, plus everyday wishes",
    "prerequisites": [
     "I-19"
    ],
    "estMinutes": 25,
-   "words": 12,
-   "exercises": 15,
+   "words": 14,
+   "exercises": 17,
    "prayerLines": []
   }
  ]

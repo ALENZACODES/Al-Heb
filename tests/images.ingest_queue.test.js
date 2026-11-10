@@ -39,13 +39,16 @@ test('specFor pins the four specs and refuses anything else', () => {
   assert.equal(specFor('assets/img/calendar/markers/candles.png').alpha, true);
   assert.equal(specFor('assets/img/rimon/frames/idle-01.png').width, 256);
   assert.deepEqual(specFor('assets/books/book17/BOOK17_p01.jpg'), { format: 'jpeg', width: 1659, height: 948, alpha: false, quality: 85, kind: 'book page' });
+  assert.deepEqual(specFor('data/images/rimon/v2/rimon-007-starting-line.webp'), { format: 'webp', width: 512, height: 512, alpha: true, quality: 88, kind: 'still' });
+  assert.equal(specFor('data/images/rimon/rimon-7.webp'), null);
+  assert.equal(specFor('data/images/rimon/rimon-007.webp'), null, 'the drawn set is never an ingest target');
   assert.equal(specFor('assets/img/other.png'), null);
   assert.equal(specFor('../etc/passwd'), null);
 });
 
 test('every path in every order sheet has a spec (loadTargets would throw otherwise)', () => {
   const t = loadTargets(REPO);
-  assert.equal(t.size, 67 + 13 + 19 + 684, `${t.size} targets`); // arcade + calendar + rimon + books
+  assert.equal(t.size, 67 + 13 + 19 + 684 + 200, `${t.size} targets`); // arcade + calendar + rimon frames + books + rimon stills
   for (const p of t.keys()) assert.ok(specFor(p), p);
 });
 
@@ -145,5 +148,28 @@ test('run: resizes to spec, strips metadata, flags, rejects bad aspect, dry-run 
   assert.equal(again.summary.written, 1);
   assert.deepEqual(again.rows.find((r) => r.name === 'BOOK17_p02.png').flags, ['cropped', 'upscaled']);
   assert.equal(again.stillMissing.includes('assets/books/book17/BOOK17_p02.jpg'), false);
+  fs.rmSync(root, { recursive: true, force: true });
+});
+
+test('Rimon stills: rimon-007-starting-line.png becomes a 512 x 512 WebP with transparency, and present.json lists it (held stills stay off the list)', { skip: engine ? false : 'no Pillow and no ffmpeg on this machine' }, async () => {
+  const root = tmpRoot();
+  const drop = path.join(root, 'drop'); fs.mkdirSync(drop);
+  fs.writeFileSync(path.join(drop, 'rimon-007-starting-line.png'), png(96, 96, { alpha: true, text: 'made somewhere' }));
+  fs.writeFileSync(path.join(drop, 'Rimon-012-first-correct-gasp (1).png'), png(64, 64, { alpha: true }));
+  fs.writeFileSync(path.join(drop, 'rimon-013-first-mistake-shrug.png'), png(64, 64, { alpha: true }));
+  const t = loadTargets(root);
+  assert.equal(matchName('rimon-007-starting-line.png', t).path, 'data/images/rimon/v2/rimon-007-starting-line.webp');
+  const rep = await run({ inputs: [drop], root, dryRun: false, replace: false, crop: false, engine: 'auto', quiet: true });
+  assert.equal(rep.summary.failed, 0, JSON.stringify(rep.rows.map((r) => r.note)));
+  assert.equal(rep.summary.written, 3);
+  const out = path.join(root, 'data/images/rimon/v2/rimon-007-starting-line.webp');
+  const b = fs.readFileSync(out);
+  assert.equal(b.toString('latin1', 0, 4), 'RIFF'); assert.equal(b.toString('latin1', 8, 12), 'WEBP');
+  assert.deepEqual(scanFile(out, {}).findings, []);
+  const present = JSON.parse(fs.readFileSync(path.join(root, 'data/images/rimon/present.json'), 'utf8'));
+  // a012 was redrawn and taken off HOLD (7389516ec). Held stills still stay off present.json; with HOLD empty, all three are listed.
+  assert.ok(fs.existsSync(path.join(root, 'data/images/rimon/v2/rimon-012-first-correct-gasp.webp')));
+  assert.deepEqual(present.ids, ['a007', 'a012', 'a013']);
+  assert.equal(rep.summary.rimonPresent, 3);
   fs.rmSync(root, { recursive: true, force: true });
 });

@@ -388,7 +388,7 @@
    "id": "h215beb3e",
    "he": "כסף",
    "pointed": "כֶּסֶף",
-   "en": "silver"
+   "en": "silver; money"
   },
   {
    "id": "h4b81aad7",
@@ -1618,6 +1618,41 @@
    "he": "ברוך אתה יהוה אלהינו מלך העולם בורא מאורי האש",
    "pointed": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם בּוֹרֵא מְאוֹרֵי הָאֵשׁ",
    "en": "Blessed are you, LORD our God, king of the world, who creates the lights of the fire."
+  },
+  {
+   "id": "kiddush-festival-pesach",
+   "title": "Festival Kiddush insert: Pesach",
+   "he": "חג המצות הזה זמן חרותנו",
+   "pointed": "חַג הַמַּצּוֹת הַזֶּה זְמַן חֵרוּתֵנוּ",
+   "en": "this Festival of Matzot, the time of our freedom"
+  },
+  {
+   "id": "kiddush-festival-shavuot",
+   "title": "Festival Kiddush insert: Shavuot",
+   "he": "חג השבועות הזה זמן מתן תורתינו",
+   "pointed": "חַג הַשָׁבוּעוֹת הַזֶּה זְמַן מַתַּן תּוֹרָתֵינוּ",
+   "en": "this Festival of Shavuot, the time of the giving of our Torah"
+  },
+  {
+   "id": "kiddush-festival-sukkot",
+   "title": "Festival Kiddush insert: Sukkot",
+   "he": "חג הסכות הזה זמן שמחתנו",
+   "pointed": "חַג הַסֻּכּוֹת הַזֶּה זְמַן שִׂמְחָתֵנוּ",
+   "en": "this Festival of Sukkot, the time of our gladness"
+  },
+  {
+   "id": "kiddush-festival-shemini",
+   "title": "Festival Kiddush insert: Shemini Atzeret",
+   "he": "שמיני עצרת החג הזה זמן שמחתנו",
+   "pointed": "שְׁמִינִי עֲצֶרֶת הַחַג הַזֶּה זְמַן שִׂמְחָתֵנוּ",
+   "en": "this Festival of Shemini Atzeret, the time of our gladness"
+  },
+  {
+   "id": "kiddush-festival-eve-close#2",
+   "title": "Festival evening Kiddush: close (weekday form)",
+   "he": "ברוך אתה יהוה מקדש ישראל והזמנים",
+   "pointed": "בָּרוּךְ אַתָּה יְהוָה מְקַדֵּשׁ יִשְׂרָאֵל וְהַזְּמַנִּים",
+   "en": "From: Festival evening Kiddush: close (weekday form)"
   }
  ]
 }

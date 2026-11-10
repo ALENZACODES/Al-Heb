@@ -107,15 +107,15 @@
    }
   },
   {
-   "he": "קוֹרֵס",
-   "en": "course",
+   "he": "קוּרְס",
+   "en": "a course (a class)",
    "translit": null,
    "pronunciation": {
-    "israeli": "kores"
+    "israeli": "kurs"
    },
    "source": {
-    "file": "data/vocab/words.json",
-    "id": "h130a0158#forms.present"
+    "file": "data/curriculum/lesson-lexicon.json",
+    "id": "lex-kurs"
    }
   },
   {
@@ -203,8 +203,8 @@
   {
    "id": "I-37-e02",
    "type": "gender",
-   "m": "אֲנִי רוֹצֶה קוֹרֵס",
-   "f": "אֲנִי רוֹצָה קוֹרֵס",
+   "m": "אֲנִי רוֹצֶה קוּרְס",
+   "f": "אֲנִי רוֹצָה קוּרְס",
    "en": "I want a course"
   },
   {

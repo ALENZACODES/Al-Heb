@@ -1,0 +1,1163 @@
+{
+ "id": "pu-emergencies",
+ "title": "Emergencies and calling for help",
+ "level": "L3",
+ "status": "built-draft",
+ "proofread": false,
+ "nativeReview": true,
+ "lessons": [
+  {
+   "id": "I-46",
+   "title": "Emergencies: police, ambulance, fire and calling for help",
+   "track": "israel",
+   "wordCount": 12
+  },
+  {
+   "id": "il18",
+   "title": "Help, health and not understanding",
+   "track": "israel",
+   "wordCount": 6
+  }
+ ],
+ "phrasebookSituation": "help",
+ "speakSets": [
+  "speak-survival-help-1"
+ ],
+ "grammarNote": "The help phrasebook and I-46 already store עֶזְרָה, מִשְׁטָרָה, אַמְבּוּלַנְס and אָבַד לִי. These notes only name forms already in those sources.",
+ "items": [
+  {
+   "id": "help-01",
+   "source": "data/corpus/phrasebook.json",
+   "he": "עֶזְרָה!",
+   "en": "help!",
+   "translit": "ezra!",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "help-01"
+   }
+  },
+  {
+   "id": "help-02",
+   "source": "data/corpus/phrasebook.json",
+   "he": "אֲנִי צָרִיךְ רוֹפֵא",
+   "en": "I need a doctor",
+   "translit": "ani tsarich rofe",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "help-02"
+   }
+  },
+  {
+   "id": "help-03",
+   "source": "data/corpus/phrasebook.json",
+   "he": "תִּקְרָא לַמִּשְׁטָרָה",
+   "en": "call the police",
+   "translit": "tikra lamishtara",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "help-03"
+   }
+  },
+  {
+   "id": "help-04",
+   "source": "data/corpus/phrasebook.json",
+   "he": "תִּקְרָא לְאַמְבּוּלַנְס",
+   "en": "call an ambulance",
+   "translit": "tikra le'ambulans",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "help-04"
+   }
+  },
+  {
+   "id": "help-05",
+   "source": "data/corpus/phrasebook.json",
+   "he": "אָבַד לִי הַדַּרְכּוֹן",
+   "en": "I lost my passport",
+   "translit": "avad li hadarkon",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "help-05"
+   }
+  },
+  {
+   "id": "help-06",
+   "source": "data/corpus/phrasebook.json",
+   "he": "אָבַד לִי הַטֶּלֶפוֹן",
+   "en": "I lost my phone",
+   "translit": "avad li hatelefon",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "help-06"
+   }
+  },
+  {
+   "id": "help-07",
+   "source": "data/corpus/phrasebook.json",
+   "he": "אֲנִי לֹא מַרְגִּישׁ טוֹב",
+   "en": "I don't feel well",
+   "translit": "ani lo margish tov",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "help-07"
+   }
+  },
+  {
+   "id": "help-08",
+   "source": "data/corpus/phrasebook.json",
+   "he": "יֵשׁ לִי כְּאֵב רֹאשׁ",
+   "en": "I have a headache",
+   "translit": "yesh li ke'ev rosh",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "help-08"
+   }
+  },
+  {
+   "id": "help-09",
+   "source": "data/corpus/phrasebook.json",
+   "he": "אֶפְשָׁר לְהִשְׁתַּמֵּשׁ בַּטֶּלֶפוֹן שֶׁלְּךָ?",
+   "en": "can I use your phone?",
+   "translit": "efshar lehishtamesh batelefon shelcha?",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "help-09"
+   }
+  },
+  {
+   "id": "i-46-w1",
+   "source": "data/curriculum/lessons.json#I-46.words[0]",
+   "he": "חֵרוּם",
+   "en": "emergency",
+   "translit": "cherum",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-46-w1"
+   }
+  },
+  {
+   "id": "i-46-w2",
+   "source": "data/curriculum/lessons.json#I-46.words[1]",
+   "he": "מִשְׁטָרָה",
+   "en": "police",
+   "translit": "mishtarah",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-46-w2"
+   }
+  },
+  {
+   "id": "i-46-w3",
+   "source": "data/curriculum/lessons.json#I-46.words[2]",
+   "he": "אַמְבּוּלַנְס",
+   "en": "ambulance",
+   "translit": "ambulans",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-46-w3"
+   }
+  },
+  {
+   "id": "i-46-w4",
+   "source": "data/curriculum/lessons.json#I-46.words[3]",
+   "he": "סַכָּנָה",
+   "en": "danger",
+   "translit": "sakanah",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-46-w4"
+   }
+  },
+  {
+   "id": "i-46-w5",
+   "source": "data/curriculum/lessons.json#I-46.words[4]",
+   "he": "דָּחוּף",
+   "en": "urgent",
+   "translit": "dachuf",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-46-w5"
+   }
+  },
+  {
+   "id": "i-46-w6",
+   "source": "data/curriculum/lessons.json#I-46.words[5]",
+   "he": "שְׂרֵפָה",
+   "en": "fire",
+   "translit": "serefah",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-46-w6"
+   }
+  },
+  {
+   "id": "i-46-w7",
+   "source": "data/curriculum/lessons.json#I-46.words[6]",
+   "he": "גַּנָּב",
+   "en": "thief",
+   "translit": "ganav",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-46-w7"
+   }
+  },
+  {
+   "id": "i-46-w9",
+   "source": "data/curriculum/lessons.json#I-46.words[8]",
+   "he": "רוֹפֵא",
+   "en": "medical doctor, physician",
+   "translit": "rofe",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-46-w9"
+   }
+  },
+  {
+   "id": "i-46-w10",
+   "source": "data/curriculum/lessons.json#I-46.words[9]",
+   "he": "אָבַד לִי",
+   "en": "I lost",
+   "translit": "avad li",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-46-w10"
+   }
+  },
+  {
+   "id": "i-46-w11",
+   "source": "data/curriculum/lessons.json#I-46.words[10]",
+   "he": "הַדַּרְכּוֹן",
+   "en": "the passport",
+   "translit": "hadarkon",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-46-w11"
+   }
+  },
+  {
+   "id": "i-46-w12",
+   "source": "data/curriculum/lessons.json#I-46.words[11]",
+   "he": "טֶלֶפוֹן",
+   "en": "phone",
+   "translit": "telefon",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-46-w12"
+   }
+  },
+  {
+   "id": "il18-w1",
+   "source": "data/curriculum/lessons.json#il18.words[0]",
+   "he": "אֲנִי לֹא מֵבִין",
+   "en": "I don't understand (m.)",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il18-w1"
+   }
+  },
+  {
+   "id": "il18-w2",
+   "source": "data/curriculum/lessons.json#il18.words[1]",
+   "he": "אֶפְשָׁר לְדַבֵּר לְאַט",
+   "en": "can you speak slowly",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il18-w2"
+   }
+  },
+  {
+   "id": "il18-w3",
+   "source": "data/curriculum/lessons.json#il18.words[2]",
+   "he": "תַּגִּידוּ בְּאַנְגְּלִית",
+   "en": "say it in English (to more than one person)",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il18-w3"
+   }
+  },
+  {
+   "id": "il18-w5",
+   "source": "data/curriculum/lessons.json#il18.words[4]",
+   "he": "בֵּית מֶרְקַחַת",
+   "en": "pharmacy",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il18-w5"
+   }
+  },
+  {
+   "id": "il18-w6",
+   "source": "data/curriculum/lessons.json#il18.words[5]",
+   "he": "עֶזְרָה",
+   "en": "help",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il18-w6"
+   }
+  }
+ ],
+ "srsQueue": [
+  {
+   "position": 1,
+   "kind": "line",
+   "id": "help-01",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 2,
+   "kind": "line",
+   "id": "help-02",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 3,
+   "kind": "line",
+   "id": "help-03",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 4,
+   "kind": "line",
+   "id": "help-04",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 5,
+   "kind": "line",
+   "id": "help-05",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 6,
+   "kind": "line",
+   "id": "help-06",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 7,
+   "kind": "line",
+   "id": "help-07",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 8,
+   "kind": "line",
+   "id": "help-08",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 9,
+   "kind": "line",
+   "id": "help-09",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 10,
+   "kind": "word",
+   "id": "i-46-w1",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 11,
+   "kind": "word",
+   "id": "i-46-w2",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 12,
+   "kind": "word",
+   "id": "i-46-w3",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 13,
+   "kind": "word",
+   "id": "i-46-w4",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 14,
+   "kind": "word",
+   "id": "i-46-w5",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 15,
+   "kind": "word",
+   "id": "i-46-w6",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 16,
+   "kind": "word",
+   "id": "i-46-w7",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 17,
+   "kind": "word",
+   "id": "i-46-w9",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 18,
+   "kind": "word",
+   "id": "i-46-w10",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 19,
+   "kind": "word",
+   "id": "i-46-w11",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 20,
+   "kind": "word",
+   "id": "i-46-w12",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 21,
+   "kind": "word",
+   "id": "il18-w1",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 22,
+   "kind": "word",
+   "id": "il18-w2",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 23,
+   "kind": "word",
+   "id": "il18-w3",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 24,
+   "kind": "word",
+   "id": "il18-w5",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 25,
+   "kind": "word",
+   "id": "il18-w6",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  }
+ ],
+ "listenDrills": [
+  {
+   "goal": "Hear the sourced lines and words already in the audio manifest.",
+   "items": [
+    "help-01",
+    "help-02",
+    "help-03",
+    "help-04",
+    "help-05",
+    "help-06",
+    "help-07",
+    "help-08",
+    "help-09",
+    "i-46-w1",
+    "i-46-w2",
+    "i-46-w3",
+    "i-46-w4",
+    "i-46-w5",
+    "i-46-w6",
+    "i-46-w7",
+    "i-46-w9",
+    "i-46-w10",
+    "i-46-w11",
+    "i-46-w12",
+    "il18-w1",
+    "il18-w2",
+    "il18-w3",
+    "il18-w5",
+    "il18-w6"
+   ],
+   "source": "audio manifest, phrasebook and lesson-word ids"
+  }
+ ],
+ "speakDrills": [
+  {
+   "goal": "Repeat the existing set data/speak/sets/speak-survival-help-1.json.",
+   "set": "speak-survival-help-1",
+   "note": "That set is machine-built and also unverified."
+  }
+ ],
+ "pages": [
+  {
+   "id": "pu-emergencies-p01",
+   "title": "Help!",
+   "order": 1,
+   "grammarNote": "This page uses only Hebrew already stored in data/corpus/phrasebook.json. First line: עֶזְרָה!. The help phrasebook and I-46 already store עֶזְרָה, מִשְׁטָרָה, אַמְבּוּלַנְס and אָבַד לִי.",
+   "items": [
+    {
+     "id": "help-01",
+     "source": "data/corpus/phrasebook.json",
+     "he": "עֶזְרָה!",
+     "en": "help!",
+     "translit": "ezra!",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "help-01"
+     }
+    },
+    {
+     "id": "help-02",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֲנִי צָרִיךְ רוֹפֵא",
+     "en": "I need a doctor",
+     "translit": "ani tsarich rofe",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "help-02"
+     }
+    },
+    {
+     "id": "help-03",
+     "source": "data/corpus/phrasebook.json",
+     "he": "תִּקְרָא לַמִּשְׁטָרָה",
+     "en": "call the police",
+     "translit": "tikra lamishtara",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "help-03"
+     }
+    },
+    {
+     "id": "help-04",
+     "source": "data/corpus/phrasebook.json",
+     "he": "תִּקְרָא לְאַמְבּוּלַנְס",
+     "en": "call an ambulance",
+     "translit": "tikra le'ambulans",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "help-04"
+     }
+    },
+    {
+     "id": "help-05",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אָבַד לִי הַדַּרְכּוֹן",
+     "en": "I lost my passport",
+     "translit": "avad li hadarkon",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "help-05"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "help-01",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "help-02",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "line",
+     "id": "help-03",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "line",
+     "id": "help-04",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "line",
+     "id": "help-05",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "help-01",
+    "help-02",
+    "help-03",
+    "help-04",
+    "help-05"
+   ],
+   "speakSet": "speak-survival-help-1"
+  },
+  {
+   "id": "pu-emergencies-p02",
+   "title": "I lost my phone",
+   "order": 2,
+   "grammarNote": "This page uses only Hebrew already stored in data/corpus/phrasebook.json, data/curriculum/lessons.json. First line: אָבַד לִי הַטֶּלֶפוֹן. The help phrasebook and I-46 already store עֶזְרָה, מִשְׁטָרָה, אַמְבּוּלַנְס and אָבַד לִי.",
+   "items": [
+    {
+     "id": "help-06",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אָבַד לִי הַטֶּלֶפוֹן",
+     "en": "I lost my phone",
+     "translit": "avad li hatelefon",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "help-06"
+     }
+    },
+    {
+     "id": "help-07",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֲנִי לֹא מַרְגִּישׁ טוֹב",
+     "en": "I don't feel well",
+     "translit": "ani lo margish tov",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "help-07"
+     }
+    },
+    {
+     "id": "help-08",
+     "source": "data/corpus/phrasebook.json",
+     "he": "יֵשׁ לִי כְּאֵב רֹאשׁ",
+     "en": "I have a headache",
+     "translit": "yesh li ke'ev rosh",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "help-08"
+     }
+    },
+    {
+     "id": "help-09",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֶפְשָׁר לְהִשְׁתַּמֵּשׁ בַּטֶּלֶפוֹן שֶׁלְּךָ?",
+     "en": "can I use your phone?",
+     "translit": "efshar lehishtamesh batelefon shelcha?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "help-09"
+     }
+    },
+    {
+     "id": "i-46-w1",
+     "source": "data/curriculum/lessons.json#I-46.words[0]",
+     "he": "חֵרוּם",
+     "en": "emergency",
+     "translit": "cherum",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-46-w1"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "help-06",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "help-07",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "line",
+     "id": "help-08",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "line",
+     "id": "help-09",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "i-46-w1",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "help-06",
+    "help-07",
+    "help-08",
+    "help-09",
+    "i-46-w1"
+   ],
+   "speakSet": "speak-survival-help-1"
+  },
+  {
+   "id": "pu-emergencies-p03",
+   "title": "Police",
+   "order": 3,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json. First line: מִשְׁטָרָה. The help phrasebook and I-46 already store עֶזְרָה, מִשְׁטָרָה, אַמְבּוּלַנְס and אָבַד לִי.",
+   "items": [
+    {
+     "id": "i-46-w2",
+     "source": "data/curriculum/lessons.json#I-46.words[1]",
+     "he": "מִשְׁטָרָה",
+     "en": "police",
+     "translit": "mishtarah",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-46-w2"
+     }
+    },
+    {
+     "id": "i-46-w3",
+     "source": "data/curriculum/lessons.json#I-46.words[2]",
+     "he": "אַמְבּוּלַנְס",
+     "en": "ambulance",
+     "translit": "ambulans",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-46-w3"
+     }
+    },
+    {
+     "id": "i-46-w4",
+     "source": "data/curriculum/lessons.json#I-46.words[3]",
+     "he": "סַכָּנָה",
+     "en": "danger",
+     "translit": "sakanah",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-46-w4"
+     }
+    },
+    {
+     "id": "i-46-w5",
+     "source": "data/curriculum/lessons.json#I-46.words[4]",
+     "he": "דָּחוּף",
+     "en": "urgent",
+     "translit": "dachuf",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-46-w5"
+     }
+    },
+    {
+     "id": "i-46-w6",
+     "source": "data/curriculum/lessons.json#I-46.words[5]",
+     "he": "שְׂרֵפָה",
+     "en": "fire",
+     "translit": "serefah",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-46-w6"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-46-w2",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-46-w3",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-46-w4",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-46-w5",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "i-46-w6",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "i-46-w2",
+    "i-46-w3",
+    "i-46-w4",
+    "i-46-w5",
+    "i-46-w6"
+   ],
+   "speakSet": "speak-survival-help-1"
+  },
+  {
+   "id": "pu-emergencies-p04",
+   "title": "Thief",
+   "order": 4,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json. First line: גַּנָּב. The help phrasebook and I-46 already store עֶזְרָה, מִשְׁטָרָה, אַמְבּוּלַנְס and אָבַד לִי.",
+   "items": [
+    {
+     "id": "i-46-w7",
+     "source": "data/curriculum/lessons.json#I-46.words[6]",
+     "he": "גַּנָּב",
+     "en": "thief",
+     "translit": "ganav",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-46-w7"
+     }
+    },
+    {
+     "id": "i-46-w9",
+     "source": "data/curriculum/lessons.json#I-46.words[8]",
+     "he": "רוֹפֵא",
+     "en": "medical doctor, physician",
+     "translit": "rofe",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-46-w9"
+     }
+    },
+    {
+     "id": "i-46-w10",
+     "source": "data/curriculum/lessons.json#I-46.words[9]",
+     "he": "אָבַד לִי",
+     "en": "I lost",
+     "translit": "avad li",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-46-w10"
+     }
+    },
+    {
+     "id": "i-46-w11",
+     "source": "data/curriculum/lessons.json#I-46.words[10]",
+     "he": "הַדַּרְכּוֹן",
+     "en": "the passport",
+     "translit": "hadarkon",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-46-w11"
+     }
+    },
+    {
+     "id": "i-46-w12",
+     "source": "data/curriculum/lessons.json#I-46.words[11]",
+     "he": "טֶלֶפוֹן",
+     "en": "phone",
+     "translit": "telefon",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-46-w12"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-46-w7",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-46-w9",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-46-w10",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-46-w11",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "i-46-w12",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "i-46-w7",
+    "i-46-w9",
+    "i-46-w10",
+    "i-46-w11",
+    "i-46-w12"
+   ],
+   "speakSet": "speak-survival-help-1"
+  },
+  {
+   "id": "pu-emergencies-p05",
+   "title": "I don't understand (m.)",
+   "order": 5,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json. First line: אֲנִי לֹא מֵבִין. The help phrasebook and I-46 already store עֶזְרָה, מִשְׁטָרָה, אַמְבּוּלַנְס and אָבַד לִי.",
+   "items": [
+    {
+     "id": "il18-w1",
+     "source": "data/curriculum/lessons.json#il18.words[0]",
+     "he": "אֲנִי לֹא מֵבִין",
+     "en": "I don't understand (m.)",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il18-w1"
+     }
+    },
+    {
+     "id": "il18-w2",
+     "source": "data/curriculum/lessons.json#il18.words[1]",
+     "he": "אֶפְשָׁר לְדַבֵּר לְאַט",
+     "en": "can you speak slowly",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il18-w2"
+     }
+    },
+    {
+     "id": "il18-w3",
+     "source": "data/curriculum/lessons.json#il18.words[2]",
+     "he": "תַּגִּידוּ בְּאַנְגְּלִית",
+     "en": "say it in English (to more than one person)",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il18-w3"
+     }
+    },
+    {
+     "id": "il18-w5",
+     "source": "data/curriculum/lessons.json#il18.words[4]",
+     "he": "בֵּית מֶרְקַחַת",
+     "en": "pharmacy",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il18-w5"
+     }
+    },
+    {
+     "id": "il18-w6",
+     "source": "data/curriculum/lessons.json#il18.words[5]",
+     "he": "עֶזְרָה",
+     "en": "help",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il18-w6"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "il18-w1",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "il18-w2",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "il18-w3",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "il18-w5",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "il18-w6",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "il18-w1",
+    "il18-w2",
+    "il18-w3",
+    "il18-w5",
+    "il18-w6"
+   ],
+   "speakSet": "speak-survival-help-1"
+  }
+ ]
+}

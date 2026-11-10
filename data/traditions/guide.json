@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "draft": true,
-  "description": "'Which should I learn?' guide for an English-speaking learner in the US. Written to inform, not to rank traditions. The evidence on what American congregations actually do is thin: one published survey measured one or two words. Every entry says so and tells the learner to check their own congregation.",
-  "evidenceNote": "The only quantitative source read is Benor and Cohen's survey (BJPA). It asked which form of 'Festival of Booths' people use; 'soo-COAT' (Israeli) was chosen by 68% of Reform, 73% of Conservative, 70% of Modern Orthodox, 50% of Orthodox and 38% of Black Hat respondents, 'SUK-kiss' (Ashkenazic) by 34, 34, 47, 67 and 73% (people could pick both, so rows add to more than 100). Self-reported, snowball sample, not representative, one word. It tells you tendencies, not what your synagogue does.",
+  "description": "'Which should I learn?' guide for an English-speaking learner in the US or Canada. Written to inform, not to rank traditions. The evidence on what American congregations actually do is thin: one published survey measured one or two words. Every entry says so and tells the learner to check their own congregation.",
+  "evidenceNote": "The only quantitative source read is Benor and Cohen's survey (BJPA). It asked which form of 'Festival of Booths' people use; 'soo-COAT' (Israeli) was chosen by 68% of Reform, 73% of Conservative, 70% of Modern Orthodox, 50% of Orthodox and 38% of Black Hat respondents, 'SUK-kiss' (Ashkenazic) by 34, 34, 47, 67 and 73% (people could pick both, so rows add to more than 100). Self-reported, snowball sample, not representative, one word. It tells you tendencies, not what your synagogue does. The survey asked Jews in the United States; Canadian congregations were not measured.",
   "universalAdvice": [
     "Ask the people you will pray with. Listen to a service or a recording from your own congregation before you choose.",
     "Practice varies inside a single synagogue: the cantor, the rabbi, older members and the Torah reader may each say things differently.",
@@ -12,7 +12,7 @@
   "situations": [
     {
       "id": "us-reform",
-      "title": "A Reform synagogue in the US",
+      "title": "A Reform synagogue in the US or Canada",
       "tradition": "sephardi",
       "summary": "Most likely Israeli-based sounds, which the app calls the American-synagogue setting. Expect some Ashkenazi forms in familiar words and songs.",
       "caveats": [
@@ -28,7 +28,7 @@
     },
     {
       "id": "us-conservative",
-      "title": "A Conservative synagogue in the US",
+      "title": "A Conservative synagogue in the US or Canada",
       "tradition": "sephardi",
       "summary": "Again, Israeli-based sounds are the more common choice in the survey, with a large Ashkenazic minority. Congregations differ.",
       "caveats": [
@@ -43,7 +43,7 @@
     },
     {
       "id": "us-modern-orthodox",
-      "title": "A Modern Orthodox synagogue in the US",
+      "title": "A Modern Orthodox synagogue in the US or Canada",
       "tradition": "sephardi",
       "summary": "Mixed. The survey found both forms common (70% Israeli, 47% Ashkenazic for the one word). Listen first.",
       "caveats": [
@@ -58,7 +58,7 @@
     },
     {
       "id": "us-orthodox",
-      "title": "An Orthodox or Haredi synagogue in the US",
+      "title": "An Orthodox or Haredi synagogue in the US or Canada",
       "tradition": "ashkenazi",
       "summary": "Ashkenazi pronunciation is more common here than elsewhere in the survey, but not universal. Half of the Orthodox respondents also reported the Israeli form, so Israeli-style and Sephardi communities exist inside Orthodoxy too.",
       "caveats": [

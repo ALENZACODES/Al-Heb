@@ -7,7 +7,7 @@
 // in PR #20, commit 8f37d4ba, file docs/audio/PLAYBACK-CONTRACT.md, on
 // the games-enrich-2026-11-06 branch. This screen does not set playbackRate itself.
 import { fileLabel, traditionCaption } from '../shell/audio-labels.js';
-import { playbackTradition, isAccentClip } from '../audio/player.js';
+import { playbackTradition, isAccentClip, isPlayableOwnClip } from '../audio/player.js';
 import { t } from '../shell/i18n.js';
 
 export const VOICES = Object.freeze(['m', 'f']);
@@ -71,7 +71,7 @@ export function buildClipLookup(rows, fileExists = () => true) {
   }
   return {
     schema: 'alef-vocab-clip-lookup/1',
-    rule: 'Same pointed text, same voice, file present, status not missing. The slot is the tradition whose file the setting plays (src/audio/player.js): the setting\'s own slot when its source is an admitted accent provenance (ACCENT_SOURCES: an Israeli voice reading the tradition\'s respelling, or a tempo-capped older clip), otherwise the Israeli slot (PLAYBACK_TRADITION, owner decisions 2026-11-07); the clip is captioned with its real tradition. Anchor ids skipped. Lowest word id wins.',
+    rule: 'Same pointed text, same voice, file present, status not missing. The slot is the tradition whose file the setting plays (src/audio/player.js): the setting\'s own slot when that file is present (including the existing paid-cloud bank clips), otherwise the Israeli slot; the clip is captioned with its real tradition. Anchor ids skipped. Lowest word id wins.',
     clips,
   };
 }
@@ -100,9 +100,9 @@ export function alternateClip(lookup, text, voice, tradition) {
   if (!row) return null;
   const other = voice === 'm' ? 'f' : 'm';
   const played = playbackTradition(tradition, row[`${voice}|${tradition}`]);
-  // Slots whose files a setting plays: the other voice's own admitted clip of this setting first, then Israeli, then another
-  // tradition's admitted clips. A retired slot (an older respelled Sephardi/Ashkenazi file) is never offered.
-  const live = (slot) => row[slot] && (slot.endsWith('|israeli') || isAccentClip(row[slot]));
+  // Slots whose files a setting plays: the other voice's own present clip of this setting first, then Israeli, then another
+  // tradition's present clips.
+  const live = (slot) => row[slot] && (slot.endsWith('|israeli') || isPlayableOwnClip(row[slot]) || isAccentClip(row[slot]));
   const order = [`${other}|${tradition}`, `${voice}|israeli`, `${other}|israeli`,
     ...TRADITIONS.filter((t) => t !== tradition && t !== 'israeli').flatMap((t) => [`${voice}|${t}`, `${other}|${t}`])]
     .filter((slot) => slot !== `${voice}|${played}` && live(slot));

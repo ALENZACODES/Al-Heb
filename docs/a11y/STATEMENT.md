@@ -4,7 +4,7 @@ Preview, written 2026-11-04. This is a plain account of what the builders measur
 
 ## What this statement does not say
 
-- Aleph does not claim to meet WCAG, the ADA, EN 301 549 or any other standard or law. No outside accessibility audit has been done.
+- ALEF does not claim to meet WCAG, the ADA, EN 301 549 or any other standard or law. No outside accessibility audit has been done.
 - A check that found nothing means that check found nothing. It does not mean the screen works for you.
 
 ## What was checked, and how
@@ -38,12 +38,12 @@ Preview, written 2026-11-04. This is a plain account of what the builders measur
 - "I do not use audio" does not yet hide every optional play button (for example on the letter atlas, Torah reader, vocabulary and scan screens), and first-run setup does not ask about it; the written text is shown next to those buttons (docs/a11y/deaf-hoh.md).
 - Written descriptions of sounds are drafts that no Hebrew speaker has checked, and words cannot replace hearing a sound (docs/a11y/deaf-hoh.md).
 - Calm mode removes the Torah "read with me" timer (Previous word and Next word stay, so you move the highlight by hand), but does not change the letter-tracing layout or the letter atlas, which still show a lot at once. Pause and resume covers the lesson page and its quick check, not every practice screen (docs/a11y/COGNITIVE.md).
-- Audio: no recorded voices ship yet. The Hebrew clips use a synthetic voice, a man's and a woman's (the About page gives the count and what they cover). Other sound comes from your browser's speech voice, which Aleph cannot control or caption. The "I do not use audio" setting swaps listening questions for reading ones.
+- Audio: no recorded voices ship yet. The Hebrew clips use a synthetic voice, a man's and a woman's (the About page gives the count and what they cover). Other sound comes from your browser's speech voice, which ALEF cannot control or caption. The "I do not use audio" setting swaps listening questions for reading ones.
 - This list can be incomplete. Read docs/A11Y.md and the other files in docs/a11y/ for the measured details.
 
 ## How to report a barrier
 
-- Aleph has no feedback form and no published contact address yet, and none is invented here. Until one is added, tell the person who gave you Aleph or who runs the site where you opened it.
+- ALEF has no feedback form and no published contact address yet, and none is invented here. Until one is added, tell the person who gave you ALEF or who runs the site where you opened it.
 - Say which page, what you were trying to do, what got in the way, and what device, browser and assistive tools you use. You do not need to say why.
 
 ## Settings on the Accessibility screen (#/accessibility)
@@ -58,7 +58,7 @@ Preview, written 2026-11-04. This is a plain account of what the builders measur
 - Space between lines (`lineSpacing`): Adds space between lines of text.
 - Space between letters (`letterSpacing`): Adds space between letters of English text; Hebrew text is not changed.
 - Line length (`lineLength`): Makes lines of text narrower so they are shorter to read across.
-- Reading font (`readFont`): Switches between Aleph's own font and a plain font already on your device (nothing is downloaded).
+- Reading font (`readFont`): Switches between ALEF's own font and a plain font already on your device (nothing is downloaded).
 
 **Colour and contrast**
 

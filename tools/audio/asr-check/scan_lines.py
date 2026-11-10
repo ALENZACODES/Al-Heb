@@ -37,13 +37,28 @@ def torah_he(cid):
     return _TORAH[cid]
 
 
-def transcribe(path):
+def transcribe(path, max_tokens=300):
     m = L.model()
-    segs, _ = m.transcribe(L.load(path), language='he', beam_size=1, condition_on_previous_text=False, vad_filter=False)
+    segs, _ = m.transcribe(L.load(path), language='he', beam_size=1, condition_on_previous_text=False, vad_filter=False,
+                          temperature=0, max_new_tokens=max_tokens)   # a cap so a looping transcription cannot run for minutes
     return ' '.join(s.text.strip() for s in segs)
 
 
 ADONAI = {key(w) for w in ('אֲדֹנָי', 'אֲדֹנָי', 'יְהוָה', 'וַאדֹנָי', 'לַאדֹנָי', 'בַּאדֹנָי', 'כַּאדֹנָי', 'מֵאֲדֹנָי', 'הַשֵּׁם', 'יְהוָה', 'יְהוִה')}
+
+
+_ADN = None
+
+
+def is_name(expected, heard):
+    """The divine name read Adonai (with or without a one-letter prefix), heard as ה' / יי / השם / אדוני."""
+    e = L.NIQQUD.sub('', PUNCT.sub('', expected))
+    m = re.fullmatch('([ובלכמש]?)אדני', e)
+    if not m and key(expected) not in ADONAI:
+        return False
+    pre = m.group(1) if m else ''
+    h = re.sub(r"['׳]", '', heard)
+    return h.startswith(pre) and h[len(pre):] in ('ה', 'יי', 'השם', 'אדוני', 'אדני', 'אדונאי')
 
 
 def compare(expected, heard):
@@ -57,7 +72,8 @@ def compare(expected, heard):
             continue
         if tag == 'replace' and (a1 - a0) == (b1 - b0):
             for i, j in zip(range(a0, a1), range(b0, b1)):
-                s = 1.0 if (hw[j] in ('ה', 'יי', 'השם', 'אדוני', 'אדני', 'אדונאי') and key(ew[i]) in ADONAI) else L.score(ew[i], hw[j])
+                s = 1.0 if is_name(ew[i], hw[j]) else L.score(ew[i], hw[j])
+                s = 1.0 if s == 'digits' else (s or 0.0)   # a number written as digits cannot be checked by spelling
                 if s >= L.PASS:
                     ok += 1
                 else:
@@ -65,7 +81,8 @@ def compare(expected, heard):
             continue
         # unequal runs: compare the joined text so a split or merged word is not a fault
         a, b = ' '.join(ew[a0:a1]), ' '.join(hw[b0:b1])
-        if a and b and L.score(a.replace(' ', ''), b.replace(' ', '')) >= L.PASS:
+        js = L.score(a.replace(' ', ''), b.replace(' ', '')) if a and b else 0.0
+        if a and b and (js == 'digits' or re.search(r'\d', b) or (js or 0.0) >= L.PASS):
             ok += a1 - a0
             continue
         issues.append({'say': a or '(nothing)', 'heard': b or '(nothing)', 'score': 0.0})

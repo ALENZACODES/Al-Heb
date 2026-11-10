@@ -7,14 +7,15 @@
 //  - gender null: the learner's own grammatical gender for first-person Hebrew forms ('m', 'f' or 'both' = show both forms). Unset by
 //    default and never guessed: nothing may fall back to a masculine form. One shared value, read by the gender drill, the Israel view
 //    and the pair cards; adopted once from the old per-feature keys (see adoptLegacyGender).
-//  - script 'print', theme 'auto', lat/lon null (candle-lighting location is opt-in).
+//  - script 'print', theme 'dark' (the dark green and gold look, owner's order 2026-11-08: one look throughout the app; 'auto' still
+//    follows the device for anyone who picks it), lat/lon null (candle-lighting location is opt-in).
 export const DEFAULTS = Object.freeze({
   voice: 'f',
   congregation: 'sephardi',
   israelTrack: false,
   showUnapprovedImages: false,
   script: 'print',
-  theme: 'auto',
+  theme: 'dark',
   lat: null,
   lon: null,
   gender: null,        // null (not chosen) | 'm' | 'f' | 'both'; see the comment above
@@ -43,6 +44,9 @@ export const DEFAULTS = Object.freeze({
   keyShortcuts: true,   // false = the single-key shortcuts (1 to 4, S) are off
   clipRate: 'normal',  // 'normal' (1×) or 'slow' (0.7×) for the shared play control. Not a voice change.
   echoMode: false,     // true = after a letter, vowel, syllable or word plays, it plays again slowly and then leaves a silent turn for you to say it (src/audio/player.js echo)
+  // Optional game music bar (src/audio/music.js via src/app.js). Before these keys existed set() rejected every music field, so a
+  // learner's on/off, mute, volume and track were never saved. Off by default; the track is an id from GAME_TRACKS ('' = first).
+  gameMusic: false, gameMusicMuted: false, gameMusicVolume: 0.22, gameMusicTrack: '', gameMusicPicked: false,
 });
 export const ENUMS = Object.freeze({
   voice: ['m', 'f'],
@@ -60,7 +64,7 @@ export const ENUMS = Object.freeze({
 });
 export const GENDER_VALUES = Object.freeze(['m', 'f', 'both']);
 
-const BOOL_KEYS = new Set(['israelTrack', 'onboarded', 'browserVoiceAnyway', 'showUnapprovedImages', 'writeGodAsGd', 'haptics', 'soundEffects', 'calmMode', 'shortSession', 'showStreak', 'audioFree', 'veilOptOut', 'bottomActions', 'untimed', 'confirmAnswers', 'keyShortcuts', 'echoMode']);
+const BOOL_KEYS = new Set(['israelTrack', 'onboarded', 'browserVoiceAnyway', 'showUnapprovedImages', 'writeGodAsGd', 'haptics', 'soundEffects', 'calmMode', 'shortSession', 'showStreak', 'audioFree', 'veilOptOut', 'bottomActions', 'untimed', 'confirmAnswers', 'keyShortcuts', 'echoMode', 'gameMusic', 'gameMusicMuted', 'gameMusicPicked']);
 
 /** @param {string} key @param {any} v @returns {{ok:boolean,value?:any}} */
 export function validate(key, v) {
@@ -68,6 +72,8 @@ export function validate(key, v) {
   if (key in ENUMS) return ENUMS[/** @type {keyof typeof ENUMS} */ (key)].includes(v) ? { ok: true, value: v } : { ok: false };
   if (BOOL_KEYS.has(key)) return typeof v === 'boolean' ? { ok: true, value: v } : { ok: false };
   if (key === 'gender') return v === null || GENDER_VALUES.includes(v) ? { ok: true, value: v } : { ok: false };
+  if (key === 'gameMusicVolume') return typeof v === 'number' && v >= 0 && v <= 1 ? { ok: true, value: v } : { ok: false };
+  if (key === 'gameMusicTrack') return typeof v === 'string' && v.length <= 64 && /^[\w:-]*$/.test(v) ? { ok: true, value: v } : { ok: false };
   if (key === 'lat') return v === null || (typeof v === 'number' && v >= -90 && v <= 90) ? { ok: true, value: v } : { ok: false };
   if (key === 'lon') return v === null || (typeof v === 'number' && v >= -180 && v <= 180) ? { ok: true, value: v } : { ok: false };
   return { ok: false };

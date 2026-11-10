@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rimon Stills: Contact Sheet</title>
+<style>
+  :root{--g:#16301c;--g2:#1e4634;--gold:#d4a647;--cream:#fffbed;--ink:#243c2c;--muted:#5a6656}
+  *{box-sizing:border-box}
+  body{margin:0;font:15px/1.45 system-ui,sans-serif;background:#f6efe0;color:var(--ink)}
+  header{position:sticky;top:0;z-index:2;background:var(--g);color:#f5e6b8;padding:.8rem 1rem;display:flex;flex-wrap:wrap;gap:.6rem 1rem;align-items:center;border-bottom:3px solid var(--gold)}
+  header h1{margin:0;font-size:1.15rem;color:#f2d27c}
+  header .count{font-weight:700}
+  header input,header select{font:inherit;padding:.35rem .6rem;border-radius:999px;border:1px solid var(--gold);background:#fffaf0;color:var(--ink);min-height:36px}
+  header label{display:inline-flex;gap:.35rem;align-items:center;cursor:pointer}
+  main{padding:1rem;max-width:1400px;margin:auto}
+  h2{margin:1.6rem 0 .6rem;color:var(--g2);border-bottom:2px solid var(--gold);padding-bottom:.2rem}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:.8rem}
+  .card{background:var(--cream);border:1px solid #e2d6b8;border-radius:14px;padding:.6rem;display:flex;flex-direction:column;gap:.35rem}
+  .card.drawn{border-color:var(--gold);box-shadow:0 2px 0 var(--gold)}
+  .pic{position:relative;aspect-ratio:1;border-radius:10px;background:conic-gradient(#eee6d2 25%,#fbf6ea 0 50%,#eee6d2 0 75%,#fbf6ea 0) 0 0/20px 20px;overflow:hidden;display:grid;place-items:center}
+  .pic img{width:100%;height:100%;object-fit:contain}
+  .pic .ghost{opacity:.18;filter:grayscale(1)}
+  .pic .num{position:absolute;left:.4rem;top:.3rem;font-weight:800;color:var(--g2);background:#fffbedcc;border-radius:6px;padding:0 .3rem}
+  .guides .pic::before,.guides .pic::after{content:'';position:absolute;left:0;right:0;border-top:1px dashed #b0373b;pointer-events:none}
+  .guides .pic::before{top:8%}.guides .pic::after{bottom:10%}
+  .slug{font-weight:700}
+  .meta{font-size:.82rem;color:var(--muted)}
+  .meta code{font-size:.8rem;color:var(--g2)}
+  .say{font-size:.85rem;background:#fff;border:1px solid #e8dcc0;border-radius:8px;padding:.3rem .45rem}
+  .say [lang=he]{font-family:'Frank Ruhl Libre',serif;font-weight:700}
+  details{font-size:.82rem}
+  details pre{white-space:pre-wrap;font:12px/1.4 ui-monospace,monospace;background:#fff;border:1px solid #e8dcc0;border-radius:8px;padding:.4rem;max-height:16rem;overflow:auto}
+  button{font:inherit;min-height:36px;padding:.3rem .8rem;border-radius:999px;border:0;background:#e9c46a;color:var(--g);font-weight:700;cursor:pointer;box-shadow:0 2px 0 #b38a2e}
+  button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #1e4634;outline-offset:2px}
+  .strip{display:flex;flex-wrap:wrap;gap:4px;background:var(--g2);padding:.5rem;border-radius:12px}
+  .strip img{width:96px;height:96px;background:#fffbed;border-radius:6px;object-fit:contain}
+  .note{color:var(--muted);font-size:.9rem;max-width:60rem}
+  .empty{color:var(--muted)}
+</style>
+</head>
+<body>
+<header>
+  <h1>Rimon Stills</h1>
+  <span class="count" id="count">Loading…</span>
+  <input id="q" type="search" placeholder="Search number, slug, trigger, screen" aria-label="Search">
+  <select id="show" aria-label="Show">
+    <option value="all">All 200</option><option value="missing">Still to draw</option><option value="drawn">Drawn</option>
+  </select>
+  <label><input type="checkbox" id="guides"> Framing lines</label>
+</header>
+<main>
+  <p class="note">Every slot for Rimon's 200 stills, from <code>docs/images/rimon-stills.json</code>. A drawn still shows its picture from <code>data/images/rimon/</code> (listed in <code>present.json</code>); a slot still to draw shows the reference faded. Framing lines mark where the top of the crown (8%) and the feet (10%) should sit in every still. Copy a prompt, make the picture, save it as <code>rimon-NNN.png</code>, then run <code>node tools/images/ingest_queue.mjs &lt;folder&gt;</code>.</p>
+  <h2>Drawn So Far, Side by Side</h2>
+  <div class="strip" id="strip"><span class="empty">None yet.</span></div>
+  <div id="groups"></div>
+</main>
+<script type="module">
+const $ = (s) => document.querySelector(s);
+const pad = (n) => String(n).padStart(3, '0');
+const GROUPS = [['onboarding','Onboarding and the First Minutes'],['lessons','Lessons, Answers and Lesson Complete'],['streak','Streaks and the Daily Goal'],['idle','Idle Moments and Breaks'],['greetings','Greetings on Home'],['shabbat','Shabbat'],['festivals','Festivals and Special Days'],['lab','Brain Lab'],['books','Little Books, Library and Listening'],['awards','Awards, Progress and Milestones'],['reminders','Reminders and Planning'],['screens','Errors, Offline, Loading and Other Screens']];
+const el = (tag, attrs = {}, ...kids) => { const e = document.createElement(tag); for (const [k, v] of Object.entries(attrs)) { if (k === 'class') e.className = v; else if (k === 'text') e.textContent = v; else e.setAttribute(k, v); } for (const k of kids) if (k != null) e.append(k); return e; };
+let data = null, present = new Set();
+async function load() {
+  data = await (await fetch('./rimon-stills.json', { cache: 'no-cache' })).json();
+  try { present = new Set((await (await fetch('../../data/images/rimon/present.json', { cache: 'no-cache' })).json()).ids || []); } catch { present = new Set(); }
+  render();
+}
+function card(s) {
+  const drawn = present.has(s.id);
+  const img = drawn ? el('img', { src: `../../${s.path}`, alt: `Still ${pad(s.id)}: ${s.slug}` }) : el('img', { class: 'ghost', src: `../../${data.reference}`, alt: '' });
+  const copy = el('button', { type: 'button', text: 'Copy prompt' });
+  copy.addEventListener('click', async () => { try { await navigator.clipboard.writeText(s.prompt); copy.textContent = 'Copied'; } catch { copy.textContent = 'Select the text below'; } setTimeout(() => { copy.textContent = 'Copy prompt'; }, 1500); });
+  const say = s.line_en ? el('div', { class: 'say' }, s.line_he ? el('span', { lang: 'he', dir: 'rtl', text: s.line_he + ' ' }) : null, s.line_en) : null;
+  return el('article', { class: 'card' + (drawn ? ' drawn' : ''), 'data-id': String(s.id) },
+    el('div', { class: 'pic' }, img, el('span', { class: 'num', text: pad(s.id) })),
+    el('div', { class: 'slug', text: s.slug }),
+    el('div', { class: 'meta' }, el('code', { text: s.trigger }), ` · ${s.surface}`),
+    el('div', { class: 'meta', text: `${s.screen}. ${s.when}` }),
+    say,
+    el('details', {}, el('summary', { text: 'What Rimon does' }), el('p', { text: s.pose + (s.props ? ' Props: ' + s.props : '') })),
+    el('details', {}, el('summary', { text: 'Full prompt' }), el('pre', { text: s.prompt })),
+    copy);
+}
+function render() {
+  const q = $('#q').value.trim().toLowerCase(), show = $('#show').value;
+  const keep = (s) => (show === 'all' || (show === 'drawn') === present.has(s.id)) && (!q || [pad(s.id), s.slug, s.trigger, s.screen, s.when].join(' ').toLowerCase().includes(q));
+  const root = $('#groups'); root.replaceChildren();
+  for (const [g, title] of GROUPS) {
+    const list = data.stills.filter((s) => s.group === g && keep(s));
+    if (!list.length) continue;
+    root.append(el('h2', { text: `${title} (${list.length})` }), el('div', { class: 'grid' }, ...list.map(card)));
+  }
+  $('#count').textContent = `${present.size} of ${data.stills.length} drawn`;
+  const strip = $('#strip'); strip.replaceChildren();
+  const drawn = data.stills.filter((s) => present.has(s.id));
+  if (!drawn.length) strip.append(el('span', { class: 'empty', text: 'None yet.' }));
+  for (const s of drawn) strip.append(el('img', { src: `../../${s.path}`, alt: pad(s.id), title: `${pad(s.id)} ${s.slug}` }));
+}
+$('#q').addEventListener('input', () => data && render());
+$('#show').addEventListener('change', () => data && render());
+$('#guides').addEventListener('change', (e) => document.body.classList.toggle('guides', e.target.checked));
+load().catch((e) => { $('#count').textContent = 'Could not load the catalogue: ' + e.message + ' (open this page through npm run serve)'; });
+</script>
+</body>
+</html>

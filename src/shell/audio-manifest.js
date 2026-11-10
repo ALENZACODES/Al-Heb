@@ -45,9 +45,16 @@ export async function fetchAudioSummary(fetchFn, url = 'data/audio/summary.json'
   return t;
 }
 
-/** Run fn after the browser has had a chance to paint: next frame, then an idle slot (max waitMs), else a timeout. */
-export function afterPaint(fn, { win = globalThis, waitMs = 1500 } = {}) {
-  const idle = () => ('requestIdleCallback' in win ? win.requestIdleCallback(fn, { timeout: waitMs }) : win.setTimeout(fn, 0));
+/** Run fn after the browser has had a chance to paint: next frame, then an idle slot (max waitMs), else a timeout.
+ *  `minMs` is a floor after this call: even if the thread is idle at once, fn waits at least that long (so heavy
+ *  after-paint work can stay outside the first-load JS budget window). */
+export function afterPaint(fn, { win = globalThis, waitMs = 1500, minMs = 0 } = {}) {
+  const start = Date.now();
+  const run = () => {
+    const left = Math.max(0, minMs - (Date.now() - start));
+    if (left) win.setTimeout(fn, left); else fn();
+  };
+  const idle = () => ('requestIdleCallback' in win ? win.requestIdleCallback(run, { timeout: waitMs }) : win.setTimeout(run, 0));
   if (typeof win.requestAnimationFrame === 'function') win.requestAnimationFrame(() => win.setTimeout(idle, 0));
   else win.setTimeout(idle, 0);
 }

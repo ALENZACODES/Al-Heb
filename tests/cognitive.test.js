@@ -152,9 +152,37 @@ test("motion audit: animations match the reviewed inventory, loops are slow, and
     // first-lesson player (assets/css/player.css): one-shot, never looping; the global reduced-motion and calm rules switch them off
     'fd-rise', 'fd-pop', 'fd-fall',
     // Learn continue card and lesson-finished celebration (assets/css/learn.css): Rimon bobs every 3.2 s, the next stop pulses every 2 s, the confetti and hop play once; reduced motion and calm mode switch all of them off
-    'alef-continue-bob', 'alef-pulse', 'alef-burst', 'alef-hop',
+    'alef-continue-bob', 'alef-pulse', 'alef-burst', 'alef-hop', 'alef-rimon-burst',
     // Brain Lab (src/lab/lab.view.js): a 0.3 s one-shot shake on a wrong tile, never looping; reduced motion switches it off
-    'lab-shake'];
+    'lab-shake',
+    // First-minute pass (assets/css/polish.css, 2026-11-10), reviewed: the welcome page slides in once (0.22 s), Rimon's bubble pops in
+    // once (0.42 s), the first letter grows in once, the streak flame pops once when the day lights; the current lesson on the path
+    // rises 3 px every 2.4 s (transform only, no colour or brightness change). The global reduced-motion and calm rules switch all off.
+    'ob-page-in', 'rimon-say-in', 'fd-glyph-in', 'stat-pop', 'path-here',
+    // Rimon stills card (assets/css/rimon.css): a 0.3 s one-shot slide-in, never looping; reduced motion and calm mode switch it off
+    'rimon-toast-in',
+    // Rimon big moments (assets/css/rimon.css, feature/rimon-stills): one-shot entrances of 0.5 to 0.6 s and a 1.1 s gold pulse on streak
+    // moments (under two cycles per second); the reduced-motion block and the global calm rule switch all of them off
+    'rimon-burst', 'rimon-bounce', 'rimon-crash', 'rimon-peek-in', 'rimon-gold-pulse',
+    // round 2: the "Today counts" toast drops in once (0.42 s) and leaves after about 4 s; reduced motion and calm switch it off
+    'stat-toast-in',
+    // opening prayer in gold leaf: the letters brighten once (2.6 s) and a sheen of light crosses them every 9 s (background position
+    // only, no flashing: brightness peaks once and settles); reduced motion and calm mode keep steady gold
+    'prayer-gold-dawn', 'prayer-gold-sheen',
+    // Retention reward panel (src/retention/retention.css): the XP chip pops once (0.25 s) and the confetti falls once (1.6 s), never looping; reduced motion and calm mode switch both off and hide the confetti
+    'ret-pop', 'ret-fall',
+    // Star of David light (assets/css/light.css): the star and halo ease opacity and scale every 2.4 s while pulse is on
+    // (under two cycles per second). Animations exist only under prefers-reduced-motion: no-preference; the local reduce
+    // block and the global reduced-motion and calm rules switch both off. The phone torch flash is separately gated by
+    // reduced motion, calm mode and Shabbat/chag quiet in src/light/light.js.
+    'alef-light-breathe', 'alef-light-halo',
+    // Brain Lab 3D Studio (src/lab/lab.view.js, 2026-11-10): birds cross the sky once (lab-fly), syllables fall once (lab-fall),
+    // a card turns in once (lab-flipin, 0.35 s), and gold particles fade out once on a right answer (lab-pop, 0.45 s, no flashing).
+    // None loops; the global reduced-motion and calm-mode rules switch all four off, and the games show a still layout instead.
+    'lab-fly', 'lab-fall', 'lab-flipin', 'lab-pop',
+    // Combo meter pop and floating +points (src/lab/lab.view.js, 2026-11-10): both one-shot, under 0.75 s, no flashing.
+    // Reduced motion switches them off. The on-demand 3D particle field in lab.fx3d.js is canvas-only and has no keyframes.
+    'lab-combo-pop', 'lab-float-up'];
   assert.deepEqual(frames.sort(), reviewed.sort(), 'new animations require a motion review');
   for (const animation of anims) {
     if (!/\binfinite\b/.test(animation)) continue;

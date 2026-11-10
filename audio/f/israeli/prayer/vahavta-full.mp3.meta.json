@@ -8,7 +8,7 @@
  "inputSha256": "1609dbcbbdf886c3839fdf4bf49c403a4913535ffac15352d1704dfc18a196c3",
  "ingestedAt": null,
  "licence": "customer-owned",
- "note": "Joined from word clips; weak words swapped for the take the sound review heard best (docs/audio/PHONEME-REVIEW.md, tools/audio/asr-check/word-pick-log.jsonl).",
+ "note": "Joined from word clips; flagged words replaced by fresh takes that both reviewers heard best (tools/audio/asr-check/take-scores.jsonl, rebuild-both-log.jsonl).",
  "inputTextKind": "hebrew",
  "stitchedFromText": "וְאָהַבְתָּ אֵת אֲדֹנָי אֱלֹהֶיךָ בְּכָל־לְבָבְךָ וּבְכָל־נַפְשְׁךָ וּבְכָל־מְאֹדֶךָ׃ וְהָיוּ הַדְּבָרִים הָאֵלֶּה אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם עַל־לְבָבֶךָ׃ וְשִׁנַּנְתָּם לְבָנֶיךָ וְדִבַּרְתָּ בָּם בְּשִׁבְתְּךָ בְּבֵיתֶךָ וּבְלֶכְתְּךָ בַדֶּרֶךְ וּבְשָׁכְבְּךָ וּבְקוּמֶךָ׃ וּקְשַׁרְתָּם לְאוֹת עַל־יָדֶךָ וְהָיוּ לְטֹטָפֹת בֵּין עֵינֶיךָ׃ וּכְתַבְתָּם עַל־מְזוּזֹת בֵּיתֶךָ וּבִשְׁעָרֶיךָ׃",
  "stitchedFrom": [
@@ -34,7 +34,7 @@
   "audio/f/israeli/word/shema-vahavta-w26.mp3",
   "audio/f/israeli/word/shema-vahavta-w27.mp3",
   "audio/f/israeli/word/shema-vahavta-w28.mp3",
-  "audio/f/israeli/word/shema-vahavta-w29.mp3",
+  "audio-takes/f/w922dfe8fa7-u.mp3",
   "audio/f/israeli/word/shema-vahavta-w30.mp3",
   "audio/f/israeli/word/shema-vahavta-w31.mp3",
   "audio/f/israeli/word/shema-vahavta-w32.mp3",

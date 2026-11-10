@@ -1,0 +1,1036 @@
+{
+ "id": "pu-work",
+ "title": "Work, office and a course",
+ "level": "L3",
+ "status": "built-draft",
+ "proofread": false,
+ "nativeReview": true,
+ "lessons": [
+  {
+   "id": "I-36",
+   "title": "Work: office, meeting, boss and interview",
+   "track": "israel",
+   "wordCount": 12
+  },
+  {
+   "id": "I-37",
+   "title": "University: courses, lectures, exams and scholarships",
+   "track": "israel",
+   "wordCount": 12
+  }
+ ],
+ "speakSets": [
+  "speak-society-work-law-1"
+ ],
+ "grammarNote": "I-36 already stores office and meeting words; I-37 already stores קוּרְס (a course). These notes only name forms already in those lessons.",
+ "items": [
+  {
+   "id": "i-36-w1",
+   "source": "data/curriculum/lessons.json#I-36.words[0]",
+   "he": "עֲבוֹדָה",
+   "en": "work, job",
+   "translit": "avodah",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-36-w1"
+   }
+  },
+  {
+   "id": "i-36-w2",
+   "source": "data/curriculum/lessons.json#I-36.words[1]",
+   "he": "מִשְׂרָד",
+   "en": "office",
+   "translit": "misrad",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-36-w2"
+   }
+  },
+  {
+   "id": "i-36-w3",
+   "source": "data/curriculum/lessons.json#I-36.words[2]",
+   "he": "פְּגִישָׁה",
+   "en": "meeting, appointment",
+   "translit": "pegishah",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-36-w3"
+   }
+  },
+  {
+   "id": "i-36-w4",
+   "source": "data/curriculum/lessons.json#I-36.words[3]",
+   "he": "מְנַהֵל",
+   "en": "manager, boss",
+   "translit": "menahel",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-36-w4"
+   }
+  },
+  {
+   "id": "i-36-w5",
+   "source": "data/curriculum/lessons.json#I-36.words[4]",
+   "he": "לָקוֹחַ",
+   "en": "client",
+   "translit": "lakoach",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-36-w5"
+   }
+  },
+  {
+   "id": "i-36-w6",
+   "source": "data/curriculum/lessons.json#I-36.words[5]",
+   "he": "מַעֲסִיק",
+   "en": "employer",
+   "translit": "ma'asik",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-36-w6"
+   }
+  },
+  {
+   "id": "i-36-w7",
+   "source": "data/curriculum/lessons.json#I-36.words[6]",
+   "he": "רֵאָיוֹן",
+   "en": "interview",
+   "translit": "re'aivon",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-36-w7"
+   }
+  },
+  {
+   "id": "i-36-w8",
+   "source": "data/curriculum/lessons.json#I-36.words[7]",
+   "he": "הוֹדָעָה",
+   "en": "message, notice",
+   "translit": "hoda'ah",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-36-w8"
+   }
+  },
+  {
+   "id": "i-36-w9",
+   "source": "data/curriculum/lessons.json#I-36.words[8]",
+   "he": "מָחָר",
+   "en": "tomorrow",
+   "translit": "machar",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-36-w9"
+   }
+  },
+  {
+   "id": "i-36-w10",
+   "source": "data/curriculum/lessons.json#I-36.words[9]",
+   "he": "הַיּוֹם",
+   "en": "today",
+   "translit": "hayom",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-36-w10"
+   }
+  },
+  {
+   "id": "i-36-w11",
+   "source": "data/curriculum/lessons.json#I-36.words[10]",
+   "he": "עוֹבֵד",
+   "en": "working (m)",
+   "translit": "oved",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-36-w11"
+   }
+  },
+  {
+   "id": "i-36-w12",
+   "source": "data/curriculum/lessons.json#I-36.words[11]",
+   "he": "רֶגַע",
+   "en": "one moment",
+   "translit": "rega",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-36-w12"
+   }
+  },
+  {
+   "id": "i-37-w1",
+   "source": "data/curriculum/lessons.json#I-37.words[0]",
+   "he": "אוּנִיבֶרְסִיטָה",
+   "en": "university",
+   "translit": "universitah",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-37-w1"
+   }
+  },
+  {
+   "id": "i-37-w2",
+   "source": "data/curriculum/lessons.json#I-37.words[1]",
+   "he": "מוֹרֶה",
+   "en": "teacher (m)",
+   "translit": "moreh",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-37-w2"
+   }
+  },
+  {
+   "id": "i-37-w3",
+   "source": "data/curriculum/lessons.json#I-37.words[2]",
+   "he": "מְרַצֶּה",
+   "en": "lecturer; lecturing",
+   "translit": "meratzeh",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-37-w3"
+   }
+  },
+  {
+   "id": "i-37-w4",
+   "source": "data/curriculum/lessons.json#I-37.words[3]",
+   "he": "פְּרוֹפֶסוֹר",
+   "en": "professor",
+   "translit": "perofesor",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-37-w4"
+   }
+  },
+  {
+   "id": "i-37-w5",
+   "source": "data/curriculum/lessons.json#I-37.words[4]",
+   "he": "מִבְחָן",
+   "en": "test, exam",
+   "translit": "mivchan",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-37-w5"
+   }
+  },
+  {
+   "id": "i-37-w6",
+   "source": "data/curriculum/lessons.json#I-37.words[5]",
+   "he": "שִׁעוּר",
+   "en": "lesson, class",
+   "translit": "shi'ur",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-37-w6"
+   }
+  },
+  {
+   "id": "i-37-w7",
+   "source": "data/curriculum/lessons.json#I-37.words[6]",
+   "he": "סֵפֶר",
+   "en": "book",
+   "translit": "sefer",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-37-w7"
+   }
+  },
+  {
+   "id": "i-37-w8",
+   "source": "data/curriculum/lessons.json#I-37.words[7]",
+   "he": "מִלְגָּה",
+   "en": "scholarship",
+   "translit": "milgah",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-37-w8"
+   }
+  },
+  {
+   "id": "i-37-w9",
+   "source": "data/curriculum/lessons.json#I-37.words[8]",
+   "he": "קוּרְס",
+   "en": "a course (a class)",
+   "translit": "kurs",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-37-w9"
+   }
+  },
+  {
+   "id": "i-37-w12",
+   "source": "data/curriculum/lessons.json#I-37.words[11]",
+   "he": "חָבֵר",
+   "en": "friend (m)",
+   "translit": "chaver",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-37-w12"
+   }
+  }
+ ],
+ "srsQueue": [
+  {
+   "position": 1,
+   "kind": "word",
+   "id": "i-36-w1",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 2,
+   "kind": "word",
+   "id": "i-36-w2",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 3,
+   "kind": "word",
+   "id": "i-36-w3",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 4,
+   "kind": "word",
+   "id": "i-36-w4",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 5,
+   "kind": "word",
+   "id": "i-36-w5",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 6,
+   "kind": "word",
+   "id": "i-36-w6",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 7,
+   "kind": "word",
+   "id": "i-36-w7",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 8,
+   "kind": "word",
+   "id": "i-36-w8",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 9,
+   "kind": "word",
+   "id": "i-36-w9",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 10,
+   "kind": "word",
+   "id": "i-36-w10",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 11,
+   "kind": "word",
+   "id": "i-36-w11",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 12,
+   "kind": "word",
+   "id": "i-36-w12",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 13,
+   "kind": "word",
+   "id": "i-37-w1",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 14,
+   "kind": "word",
+   "id": "i-37-w2",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 15,
+   "kind": "word",
+   "id": "i-37-w3",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 16,
+   "kind": "word",
+   "id": "i-37-w4",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 17,
+   "kind": "word",
+   "id": "i-37-w5",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 18,
+   "kind": "word",
+   "id": "i-37-w6",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 19,
+   "kind": "word",
+   "id": "i-37-w7",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 20,
+   "kind": "word",
+   "id": "i-37-w8",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 21,
+   "kind": "word",
+   "id": "i-37-w9",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 22,
+   "kind": "word",
+   "id": "i-37-w12",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  }
+ ],
+ "listenDrills": [
+  {
+   "goal": "Hear the sourced lines and words already in the audio manifest.",
+   "items": [
+    "i-36-w1",
+    "i-36-w2",
+    "i-36-w3",
+    "i-36-w4",
+    "i-36-w5",
+    "i-36-w6",
+    "i-36-w7",
+    "i-36-w8",
+    "i-36-w9",
+    "i-36-w10",
+    "i-36-w11",
+    "i-36-w12",
+    "i-37-w1",
+    "i-37-w2",
+    "i-37-w3",
+    "i-37-w4",
+    "i-37-w5",
+    "i-37-w6",
+    "i-37-w7",
+    "i-37-w8",
+    "i-37-w9",
+    "i-37-w12"
+   ],
+   "source": "audio manifest, phrasebook and lesson-word ids"
+  }
+ ],
+ "speakDrills": [
+  {
+   "goal": "Repeat the existing set data/speak/sets/speak-society-work-law-1.json.",
+   "set": "speak-society-work-law-1",
+   "note": "That set is machine-built and also unverified."
+  }
+ ],
+ "pages": [
+  {
+   "id": "pu-work-p01",
+   "title": "Work, job",
+   "order": 1,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json. First line: עֲבוֹדָה. I-36 already stores office and meeting words; I-37 already stores קוּרְס (a course).",
+   "items": [
+    {
+     "id": "i-36-w1",
+     "source": "data/curriculum/lessons.json#I-36.words[0]",
+     "he": "עֲבוֹדָה",
+     "en": "work, job",
+     "translit": "avodah",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-36-w1"
+     }
+    },
+    {
+     "id": "i-36-w2",
+     "source": "data/curriculum/lessons.json#I-36.words[1]",
+     "he": "מִשְׂרָד",
+     "en": "office",
+     "translit": "misrad",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-36-w2"
+     }
+    },
+    {
+     "id": "i-36-w3",
+     "source": "data/curriculum/lessons.json#I-36.words[2]",
+     "he": "פְּגִישָׁה",
+     "en": "meeting, appointment",
+     "translit": "pegishah",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-36-w3"
+     }
+    },
+    {
+     "id": "i-36-w4",
+     "source": "data/curriculum/lessons.json#I-36.words[3]",
+     "he": "מְנַהֵל",
+     "en": "manager, boss",
+     "translit": "menahel",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-36-w4"
+     }
+    },
+    {
+     "id": "i-36-w5",
+     "source": "data/curriculum/lessons.json#I-36.words[4]",
+     "he": "לָקוֹחַ",
+     "en": "client",
+     "translit": "lakoach",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-36-w5"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-36-w1",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-36-w2",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-36-w3",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-36-w4",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "i-36-w5",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "i-36-w1",
+    "i-36-w2",
+    "i-36-w3",
+    "i-36-w4",
+    "i-36-w5"
+   ],
+   "speakSet": "speak-society-work-law-1"
+  },
+  {
+   "id": "pu-work-p02",
+   "title": "Employer",
+   "order": 2,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json. First line: מַעֲסִיק. I-36 already stores office and meeting words; I-37 already stores קוּרְס (a course).",
+   "items": [
+    {
+     "id": "i-36-w6",
+     "source": "data/curriculum/lessons.json#I-36.words[5]",
+     "he": "מַעֲסִיק",
+     "en": "employer",
+     "translit": "ma'asik",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-36-w6"
+     }
+    },
+    {
+     "id": "i-36-w7",
+     "source": "data/curriculum/lessons.json#I-36.words[6]",
+     "he": "רֵאָיוֹן",
+     "en": "interview",
+     "translit": "re'aivon",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-36-w7"
+     }
+    },
+    {
+     "id": "i-36-w8",
+     "source": "data/curriculum/lessons.json#I-36.words[7]",
+     "he": "הוֹדָעָה",
+     "en": "message, notice",
+     "translit": "hoda'ah",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-36-w8"
+     }
+    },
+    {
+     "id": "i-36-w9",
+     "source": "data/curriculum/lessons.json#I-36.words[8]",
+     "he": "מָחָר",
+     "en": "tomorrow",
+     "translit": "machar",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-36-w9"
+     }
+    },
+    {
+     "id": "i-36-w10",
+     "source": "data/curriculum/lessons.json#I-36.words[9]",
+     "he": "הַיּוֹם",
+     "en": "today",
+     "translit": "hayom",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-36-w10"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-36-w6",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-36-w7",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-36-w8",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-36-w9",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "i-36-w10",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "i-36-w6",
+    "i-36-w7",
+    "i-36-w8",
+    "i-36-w9",
+    "i-36-w10"
+   ],
+   "speakSet": "speak-society-work-law-1"
+  },
+  {
+   "id": "pu-work-p03",
+   "title": "Working (m)",
+   "order": 3,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json. First line: עוֹבֵד. I-36 already stores office and meeting words; I-37 already stores קוּרְס (a course).",
+   "items": [
+    {
+     "id": "i-36-w11",
+     "source": "data/curriculum/lessons.json#I-36.words[10]",
+     "he": "עוֹבֵד",
+     "en": "working (m)",
+     "translit": "oved",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-36-w11"
+     }
+    },
+    {
+     "id": "i-36-w12",
+     "source": "data/curriculum/lessons.json#I-36.words[11]",
+     "he": "רֶגַע",
+     "en": "one moment",
+     "translit": "rega",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-36-w12"
+     }
+    },
+    {
+     "id": "i-37-w1",
+     "source": "data/curriculum/lessons.json#I-37.words[0]",
+     "he": "אוּנִיבֶרְסִיטָה",
+     "en": "university",
+     "translit": "universitah",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-37-w1"
+     }
+    },
+    {
+     "id": "i-37-w2",
+     "source": "data/curriculum/lessons.json#I-37.words[1]",
+     "he": "מוֹרֶה",
+     "en": "teacher (m)",
+     "translit": "moreh",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-37-w2"
+     }
+    },
+    {
+     "id": "i-37-w3",
+     "source": "data/curriculum/lessons.json#I-37.words[2]",
+     "he": "מְרַצֶּה",
+     "en": "lecturer; lecturing",
+     "translit": "meratzeh",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-37-w3"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-36-w11",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-36-w12",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-37-w1",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-37-w2",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "i-37-w3",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "i-36-w11",
+    "i-36-w12",
+    "i-37-w1",
+    "i-37-w2",
+    "i-37-w3"
+   ],
+   "speakSet": "speak-society-work-law-1"
+  },
+  {
+   "id": "pu-work-p04",
+   "title": "Professor",
+   "order": 4,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json. First line: פְּרוֹפֶסוֹר. I-36 already stores office and meeting words; I-37 already stores קוּרְס (a course).",
+   "items": [
+    {
+     "id": "i-37-w4",
+     "source": "data/curriculum/lessons.json#I-37.words[3]",
+     "he": "פְּרוֹפֶסוֹר",
+     "en": "professor",
+     "translit": "perofesor",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-37-w4"
+     }
+    },
+    {
+     "id": "i-37-w5",
+     "source": "data/curriculum/lessons.json#I-37.words[4]",
+     "he": "מִבְחָן",
+     "en": "test, exam",
+     "translit": "mivchan",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-37-w5"
+     }
+    },
+    {
+     "id": "i-37-w6",
+     "source": "data/curriculum/lessons.json#I-37.words[5]",
+     "he": "שִׁעוּר",
+     "en": "lesson, class",
+     "translit": "shi'ur",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-37-w6"
+     }
+    },
+    {
+     "id": "i-37-w7",
+     "source": "data/curriculum/lessons.json#I-37.words[6]",
+     "he": "סֵפֶר",
+     "en": "book",
+     "translit": "sefer",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-37-w7"
+     }
+    },
+    {
+     "id": "i-37-w8",
+     "source": "data/curriculum/lessons.json#I-37.words[7]",
+     "he": "מִלְגָּה",
+     "en": "scholarship",
+     "translit": "milgah",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-37-w8"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-37-w4",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-37-w5",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-37-w6",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-37-w7",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "i-37-w8",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "i-37-w4",
+    "i-37-w5",
+    "i-37-w6",
+    "i-37-w7",
+    "i-37-w8"
+   ],
+   "speakSet": "speak-society-work-law-1"
+  },
+  {
+   "id": "pu-work-p05",
+   "title": "A course (a class)",
+   "order": 5,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json. First line: קוּרְס. I-36 already stores office and meeting words; I-37 already stores קוּרְס (a course).",
+   "items": [
+    {
+     "id": "i-37-w9",
+     "source": "data/curriculum/lessons.json#I-37.words[8]",
+     "he": "קוּרְס",
+     "en": "a course (a class)",
+     "translit": "kurs",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-37-w9"
+     }
+    },
+    {
+     "id": "i-37-w12",
+     "source": "data/curriculum/lessons.json#I-37.words[11]",
+     "he": "חָבֵר",
+     "en": "friend (m)",
+     "translit": "chaver",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-37-w12"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-37-w9",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-37-w12",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "i-37-w9",
+    "i-37-w12"
+   ],
+   "speakSet": "speak-society-work-law-1"
+  }
+ ]
+}

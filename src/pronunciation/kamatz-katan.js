@@ -30,6 +30,7 @@ const norm = (s) => stripTaamim(s).split(MARK.DAGESH).join('').split(MARK.MAQAF)
  */
 export const KAMATZ_KATAN_FORMS = [
   { he: 'קָדְשׁוֹ', reason: 'lesson r32 kamatz katan example: kodsho (kamatz = o, shva silent)', status: 'needs-native-review' },
+  { he: 'אָזְנַיִם', reason: 'kamatz katan + silent shva: oznayim in every tradition (was azenayim / ozenayim)', status: 'needs-native-review' },
 ];
 const FORMS = new Set(KAMATZ_KATAN_FORMS.map((e) => norm(e.he)));
 

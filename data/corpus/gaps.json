@@ -265,6 +265,39 @@
     "vezot-hatorah"
    ],
    "note": ""
+  },
+  {
+   "item": "Hallel, selected verses",
+   "status": "partial",
+   "ids": [
+    "hallel-113-1",
+    "hallel-115-1",
+    "hallel-116-13",
+    "hallel-117",
+    "hallel-118-1-4",
+    "hallel-118-5",
+    "hallel-118-6",
+    "hallel-118-24",
+    "hallel-118-25",
+    "hallel-118-28"
+   ],
+   "note": "Refrain and commonly taught verses only. Full Hallel remains g-hallel."
+  },
+  {
+   "item": "Kiddush, festival evening and day (weekday form)",
+   "status": "partial",
+   "ids": [
+    "kiddush-festival-eve-open",
+    "kiddush-festival-pesach",
+    "kiddush-festival-shavuot",
+    "kiddush-festival-sukkot",
+    "kiddush-festival-shemini",
+    "kiddush-festival-eve-close",
+    "kiddush-festival-day-verses",
+    "leshev-basukkah",
+    "kiddush-wine-1"
+   ],
+   "note": "Sefard / Torat Emet weekday form, plus UXLC Lev 23:4 and 23:44. Festival Amidah remains a gap."
   }
  ],
  "gaps": [
@@ -508,19 +541,41 @@
   },
   {
    "id": "g-festival-kiddush",
-   "name": "Kiddush and Amidah for festivals",
+   "name": "Festival Amidah and remaining festival Kiddush forms",
    "whereInService": "Festivals",
    "status": "sourceable-not-added",
-   "why": "Edot HaMizrach and Metsudah have festival Kiddush; not added.",
-   "relatedIds": []
+   "why": "Weekday festival-evening Kiddush (opening, the four festival inserts, and the close), the two daytime Leviticus verses, and leshev basukkah are now in the registry, from Sefaria Torat Emet 357 (Public Domain label) and UXLC Leviticus 23:4, 23:44. Still not added: the festival Amidah (including Yaaleh v'Yavo), the Friday-night (Shabbat-plus-festival) parenthetical form as a separate record, and yaknehaz when a festival starts on Saturday night.",
+   "relatedIds": [
+    "kiddush-festival-eve-open",
+    "kiddush-festival-pesach",
+    "kiddush-festival-shavuot",
+    "kiddush-festival-sukkot",
+    "kiddush-festival-shemini",
+    "kiddush-festival-eve-close",
+    "kiddush-festival-day-verses",
+    "leshev-basukkah",
+    "kiddush-wine-1",
+    "shehecheyanu"
+   ]
   },
   {
    "id": "g-hallel",
    "name": "Hallel (Psalms 113-118)",
    "whereInService": "Festivals, Rosh Chodesh, Hanukkah",
    "status": "sourceable-not-added",
-   "why": "UXLC verses available; not added.",
-   "relatedIds": []
+   "why": "Selected refrain verses of Hallel (Psalms 113:1, 115:1, 116:13, 117, 118:1-6, 118:24-25, 118:28) are now in the registry. The rest of Psalms 113-118, the half-Hallel cuts, and the customary repetitions are not. UXLC can still supply the missing verses.",
+   "relatedIds": [
+    "hallel-113-1",
+    "hallel-115-1",
+    "hallel-116-13",
+    "hallel-117",
+    "hallel-118-1-4",
+    "hallel-118-5",
+    "hallel-118-6",
+    "hallel-118-24",
+    "hallel-118-25",
+    "hallel-118-28"
+   ]
   },
   {
    "id": "g-bar-bat-mitzvah",

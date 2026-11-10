@@ -30,6 +30,8 @@ export const DEFAULT_PREFS = Object.freeze({
   days: Object.freeze([0, 1, 2, 3, 4]), // Sunday to Thursday. Friday and Saturday are off until the learner picks them: Shabbat quiet needs a city, so no default can be safe
   shabbatQuiet: true,
   yomTovQuiet: true,
+  quietFrom: 22, quietTo: 7, // night quiet hours (local), never a reminder in between
+  perWeek: 5,                // frequency cap; also one a day at most (src/shell/rimon-reminders.js)
 });
 
 /** Validate/merge stored preferences; unknown keys dropped; never throws. */
@@ -46,6 +48,9 @@ export function normalizePrefs(raw) {
     days,
     shabbatQuiet: typeof r.shabbatQuiet === "boolean" ? r.shabbatQuiet : d.shabbatQuiet,
     yomTovQuiet: typeof r.yomTovQuiet === "boolean" ? r.yomTovQuiet : d.yomTovQuiet,
+    quietFrom: int(r.quietFrom, 0, 23, d.quietFrom),
+    quietTo: int(r.quietTo, 0, 23, d.quietTo),
+    perWeek: int(r.perWeek, 1, 7, d.perWeek),
   };
 }
 
@@ -188,8 +193,14 @@ export function scheduleStudyReminder(p, opt = {}) {
     if (late < 0) return arm(); // woke early (long delay was clamped, or the clock moved)
     if (late <= LATE_GRACE_MS) {
       const when = entry.target;
-      Promise.resolve(show(opt.title ?? "Aleph: a few minutes of Hebrew", opt.body ?? "Only if you feel like it. Your lessons and review cards stay as they are.", { route: opt.route ?? "#/learn" })).catch(() => {});
-      try { opt.onFire?.(when); } catch { /* listener bug must not stop the chain */ }
+      // compose(when) picks Rimon's line at fire time and may return null to stay quiet (rest days, quiet hours, frequency cap).
+      let msg = null, skip = false;
+      if (typeof opt.compose === "function") { try { msg = opt.compose(when); } catch { msg = null; } skip = !msg; }
+      if (!skip) {
+        const txt = [opt.title ?? "ALEF: a few minutes of Hebrew", opt.body ?? "Only if you feel like it. Your lessons and review cards stay as they are."];
+        Promise.resolve(show(msg?.title ?? txt[0], msg?.body ?? txt[1], { route: opt.route ?? "#/learn" })).catch(() => {});
+        try { opt.onFire?.(when, msg); } catch { /* listener bug must not stop the chain */ }
+      }
     }
     arm(); // either fired, or missed (tab was frozen): move to the next occurrence, never fire late
   };
@@ -366,8 +377,38 @@ export async function armFromPrefs(ctx, opt = {}) {
     if (!prefs.enabled) return { ok: false, reason: "disabled", next: null, cancel() {} };
     const wantQuiet = prefs.shabbatQuiet || prefs.yomTovQuiet;
     const loc = wantQuiet ? await resolveQuietLocation(ctx) : null;
-    return scheduleStudyReminder(prefs, { ...opt, quiet: wantQuiet ? quietHours(loc, { shabbat: prefs.shabbatQuiet, yomTov: prefs.yomTovQuiet, observance: loc?.observance }) : undefined, route: "#/learn" });
+    const quiet = wantQuiet ? quietHours(loc, { shabbat: prefs.shabbatQuiet, yomTov: prefs.yomTovQuiet, observance: loc?.observance }) : undefined;
+    // Rimon's voice: the line is chosen when the reminder fires, from fresh progress, and may be skipped (src/shell/rimon-reminders.js).
+    const show = opt.show ?? (async (title, body, o) => {
+      const R = await import("./rimon-reminders.js");
+      const st = await reminderState(ctx, R);
+      const msg = R.composeReminder(opt.now ? opt.now() : new Date(), { ...st, restQuiet: quiet, rules: { quietFrom: prefs.quietFrom, quietTo: prefs.quietTo, perWeek: prefs.perWeek } });
+      if (!msg) return { ok: false, reason: "quiet" };
+      try { await ctx?.store?.set?.(R.REMINDER_LOG_KEY, [...(st.rawLog || []), { at: new Date().toISOString(), id: msg.id }].slice(-30)); } catch { /* best effort */ }
+      return showNow(msg.title, msg.body, { ...o, globalThis: opt.globalThis ?? globalThis });
+    });
+    return scheduleStudyReminder(prefs, { ...opt, show, quiet, route: "#/learn" });
   } catch (e) { return { ok: false, reason: String(e?.message || e), next: null, cancel() {} }; }
+}
+
+/** Progress snapshot for Rimon's reminder picker: streak, days away, days since the first lesson, and the send log. Never throws. */
+export async function reminderState(ctx, R) {
+  const out = { streak: {}, daysAway: 0, daysSinceStart: 99, log: [], recent: [], rawLog: [] };
+  try {
+    const raw = ctx?.store?.get ? await ctx.store.get(R?.REMINDER_LOG_KEY || "notify.log") : null;
+    const log = Array.isArray(raw) ? raw.filter((e) => e && typeof e.at === "string").slice(-30) : [];
+    out.rawLog = log; out.log = log.map((e) => e.at); out.recent = log.slice(-8).map((e) => e.id);
+  } catch { /* empty log */ }
+  try {
+    const S = await import("../curriculum/state.js");
+    const st = await S.loadState(ctx);
+    out.streak = st?.streak || {};
+    const T = await import("../home/today.js");
+    out.daysAway = T.daysAway ? T.daysAway({ last: st?.rawStreak?.last, cards: st?.cards }) : 0;
+    const firsts = Object.values(st?.completed || {}).map((v) => Date.parse(v?.at || v?.date || v)).filter(Number.isFinite);
+    if (firsts.length) out.daysSinceStart = Math.floor((Date.now() - Math.min(...firsts)) / 864e5);
+  } catch { /* progress optional: daily line */ }
+  return out;
 }
 
 // ---------- Web Push: documented path, no server yet ----------

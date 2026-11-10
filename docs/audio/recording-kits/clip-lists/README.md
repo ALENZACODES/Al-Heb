@@ -10,11 +10,11 @@ Reconciliation with `node tools/audio/coverage.mjs` (required clips, state missi
 
 | slot | listed | prayer words listed / missing | prayer lines listed / missing | lesson+vocab words listed / missing | coverage missing (all groups) |
 |---|---|---|---|---|---|
-| m-israeli | 307 | 0 / 0 | 0 / 0 | 307 / 307 | 307 |
-| m-sephardi | 0 | 0 / 0 | 0 / 0 | 0 / 0 | 0 |
-| m-ashkenazi | 700 | 0 / 0 | 0 / 0 | 700 / 998 | 1215 |
-| f-israeli | 307 | 0 / 0 | 0 / 0 | 307 / 307 | 307 |
-| f-sephardi | 0 | 0 / 0 | 0 / 0 | 0 / 0 | 0 |
-| f-ashkenazi | 160 | 0 / 0 | 0 / 0 | 160 / 160 | 377 |
+| m-israeli | 313 | 0 / 0 | 0 / 23 | 313 / 313 | 336 |
+| m-sephardi | 2 | 0 / 0 | 0 / 23 | 2 / 2 | 25 |
+| m-ashkenazi | 700 | 0 / 0 | 0 / 23 | 700 / 985 | 1225 |
+| f-israeli | 313 | 0 / 0 | 0 / 23 | 313 / 313 | 336 |
+| f-sephardi | 2 | 0 / 0 | 0 / 23 | 2 / 2 | 25 |
+| f-ashkenazi | 158 | 0 / 0 | 0 / 23 | 158 / 158 | 398 |
 
 Clips not listed (non-core prayer words and lines, lesson and vocabulary words beyond the cap, phrasebook, anchor and extra words, letters, vowel signs, syllables) are still missing and stay in the coverage report.

@@ -76,9 +76,8 @@ test('vowelSound / letterSound read the tradition from the pronunciation data', 
 
 test('audioNote never claims a non-Israeli voice', () => {
   assert.match(FT.audioNote('israeli'), /reads it in Israeli Hebrew/);
-  for (const t of ['ashkenazi']) { const n = FT.audioNote(t); assert.match(n, /Israeli Hebrew/); assert.match(n, /Ashkenazi way to say it is written in English letters/); assert.doesNotMatch(n, /Ashkenazi (voice|recording)/); }
-  // the Sephardi setting plays Israeli sound by rule (owner decision 2026-11-07): the note says so and claims no Sephardi voice
-  const sep = FT.audioNote('sephardi'); assert.match(sep, /in Israeli Hebrew\. The Sephardi way to say it is written in English letters/); assert.doesNotMatch(sep, /Sephardi voice|Sephardi recording exists/);
+  for (const t of ['ashkenazi']) { const n = FT.audioNote(t); assert.match(n, /Israeli clip/); assert.match(n, /Ashkenazi reading is shown in English letters/); assert.doesNotMatch(n, /Ashkenazi recording|certified Ashkenazi/); }
+  const sep = FT.audioNote('sephardi'); assert.match(sep, /Sephardi clip is in the audio bank/); assert.match(sep, /Israeli clip/); assert.doesNotMatch(sep, /Sephardi recording exists|certified Sephardi/);
   assert.equal(FT.audioNote('ashkenazi', { hasRecording: true }), '');
   assert.equal(FT.israeliOnly(), 'israeli');
 });
@@ -134,9 +133,8 @@ test('no pronunciation file calls settings.set("congregation", ...) with the wro
 
 test('audioSupport: never promises recorded or non-Israeli sound that does not exist', () => {
   assert.equal(FT.audioSupport('israeli').supported, 'device');
-  // Sephardi plays the Israeli clips by rule (owner decision 2026-11-07), so the Israeli device voice is no mismatch for it
   const sep = FT.audioSupport('sephardi');
-  assert.equal(sep.supported, 'device'); assert.match(sep.line, /Israeli Hebrew\. The Sephardi way to say it is written in English letters/);
+  assert.equal(sep.supported, 'device'); assert.match(sep.line, /Sephardi clip is in the audio bank/);
   for (const t of ['ashkenazi']) {
     const s = FT.audioSupport(t);
     assert.equal(s.supported, 'none'); assert.equal(s.deviceVoice, false); assert.match(s.line, /English letters/);

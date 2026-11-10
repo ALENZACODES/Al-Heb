@@ -20,6 +20,7 @@ decision, so the More sheet stays short and the first session stays coherent (we
 | `fade` | keep | Fade-out recall; target for `nikkud-fade`. |
 | `wordtrace` | keep | Extends letter tracing (a v0 page). |
 | `israel` | keep | Israel goal path. |
+| `israelunits` | keep | Unit-by-unit Israel track; listed next to `israel` and `intermediate`. |
 | `traditions` | keep | Target for `traditions-guide` and `traditions-hear`. |
 | `traditions-guide` | merge | Into `traditions` (already a tab there). |
 | `traditions-hear` | merge | Into `traditions` (already a tab there); no recorded audio yet. |
@@ -41,10 +42,13 @@ decision, so the More sheet stays short and the first session stays coherent (we
 | `read-my-way` | keep | Tradition-aware reading. |
 | `rules` | keep | Pronunciation rules reference. |
 | `intermediate` | keep | After r10. |
+| `israelunits` | keep | The Israel track as practical units (grammar notes, spaced unit review, listening and speaking); draft notes, no new Hebrew. |
+| `practical` | keep | Babbel-style conversation units behind Practical; draft, needs native review; not a 126th lesson. |
 | `grammar` | keep | Reference notes. |
 | `compare` | keep | Target for `record-compare`. |
 | `vocab-themes` | keep | Theme packs (shared audio button). |
 | `speak` | keep | Say it. |
+| `talk` | keep | Talk: short everyday lines between English and Hebrew, from stored lines on the device. Supports the Israel and synagogue goals. |
 | `sprint` | keep | Word Sprint. |
 | `gender` | merge | With `roles` and `gender-drill` into one gender page. |
 | `roles` | merge | Into the gender page. |
@@ -52,6 +56,7 @@ decision, so the More sheet stays short and the first session stays coherent (we
 | `sounds` | keep | Sound descriptions; also the silent-reading reference. |
 | `read` | keep | Reader; target for `timedread`. |
 | `scan` | keep | Scan a page. |
+| `camera` | keep | Camera Translator: English drawn over the Hebrew on a photo of a sign or menu. On the device only, no server; measured on computer-made images only (docs/photo/CAMERA-TRANSLATE.md). |
 | `calendar` | keep | Calendar. |
 | `accessibility` | keep | Has its own quick row in Settings (see SCOPE.md). |
 | `how` | keep | How this works; linked from the sound bar. |
@@ -62,6 +67,7 @@ decision, so the More sheet stays short and the first session stays coherent (we
 | `dottile` | hide | Same vowel signs as `vowelboard`; to be merged into it. |
 | `syllablechips` | keep | Linked from the silent-reading steps. |
 | `torahread` | keep | Target for `torahreader`. |
+| `ask` | keep | Ask the Torah: answers from the written text, with links into the reader. Static answers, no server; reached from each verse in the Torah reader, the Read page, More and the full Home. |
 | `torahreader` | hide | Second Torah screen; `torahread` covers the same need. |
 | `vocab` | keep | Vocabulary list and review (shared audio button). |
 | `nikkud-fade` | hide | Same idea as `fade`; to be merged into it. |
@@ -77,6 +83,7 @@ decision, so the More sheet stays short and the first session stays coherent (we
 | `phrases` | keep | Common phrases and sentences; supports the speaking goal. |
 | `books` | keep | The little-books shelf; listed in the Preview group so the books can be found. |
 | `listen-shelf` | keep | The Sacred Listen shelf; listed in the Preview group so the recordings can be found. |
+| `songs` | keep | The original songs with their words and the Hebrew sung in them. Not prayer audio; listed in the Preview group so the songs can be found. |
 | `synagogues` | keep | Reform synagogues in Canada: a directory with pictures, stories and contact details for 27 congregations. Not a lesson; stays preview until the facts are checked by the congregations. |
 | `games` | keep | The games hub; listed in the Preview group as the one door to all the games. |
 | `wordfinder` | keep | The first game; linked from Home and the showcase. |
@@ -119,6 +126,7 @@ decision, so the More sheet stays short and the first session stays coherent (we
 Home shows a backup reminder after three finished lessons (`docs/progress/BACKUP-REMINDER.md`).
 | `phrases` | keep | Phrase browser over existing records. |
 | `listen-shelf` | keep | Listening shelf; needs recordings. |
+| `songs` | keep | Original songs page; plays only when pressed, pauses for any lesson voice. |
 | `books` | keep | Little books shelf; readers are drafts until native review. |
 | `games` | keep | The games hub; every game is reached from here. |
 | `letterchomp` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
@@ -176,6 +184,8 @@ Home shows a backup reminder after three finished lessons (`docs/progress/BACKUP
 | `barter` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
 | `submarinesonar` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
 | `rhymelab` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
+| `league` | keep | Weekly practice league (pretend players, said so on the page); reached from the top bar. Preview until owner review and native review of the tier names. |
+| `shop` | keep | Streak-freeze shop, streak repair, heart refill and the retention switches; reached from the top bar. Preview until owner review. |
 | `bumperverbs` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
 | `bumpercar` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
 | `traintrack` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
@@ -183,3 +193,4 @@ Home shows a backup reminder after three finished lessons (`docs/progress/BACKUP
 | `karaoke` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
 | `cipher` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
 | `fleamarket` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
+| `light` | keep | Star of David light: on-screen glow, optional phone flash, and a printable stencil. Preview until a real-phone check. |

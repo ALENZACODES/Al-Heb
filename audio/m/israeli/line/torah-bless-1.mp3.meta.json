@@ -1,13 +1,34 @@
 {
  "status": "tts",
- "source": "paid-cloud",
- "engine": "google-cloud-tts",
- "voiceId": "he-IL-Wavenet-B",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Chirp3-HD-Charon",
  "tradition": "israeli",
  "inputText": "בָּרוּךְ אַתָּה אֲדֹנָי אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר בָּחַר בָּנוּ מִכָּל־הָעַמִּים וְנָתַן לָנוּ אֶת־תּוֹרָתוֹ בָּרוּךְ אַתָּה אֲדֹנָי נוֹתֵן הַתּוֹרָה׃",
  "inputSha256": "638b71c82b0a7370b20c3be2903c6f41fe068499a4890871634e933f1404f542",
- "ingestedAt": null,
+ "ingestedAt": "2026-11-11T23:41:48.509Z",
  "licence": "customer-owned",
- "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
- "inputTextKind": "hebrew"
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-11T23:41:48.509Z",
+ "redistributionCleared": false,
+ "spokenText": "בָּרוּךְ אַתָּה אֲדֹנָי אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר בָּחַר בָּנוּ מִכָּל הָעַמִּים וְנָתַן לָנוּ אֶת תּוֹרָתוֹ בָּרוּךְ אַתָּה אֲדֹנָי נוֹתֵן הַתּוֹרָה",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [
+   "אֱלֹהֵינוּ"
+  ],
+  "google": {
+   "heard": "ברוך אתה אדוני אלוהינו מלך העולם אשר בחר בנו מכל העמים ונתן לנו את תורתו ברוך אתה אדוני נותן התור",
+   "acc": 1.0,
+   "issues": []
+  },
+  "reviewersFailing": 1
+ },
+ "replaced": {
+  "voiceId": "he-IL-Wavenet-B",
+  "engine": "google-cloud-tts",
+  "renderedAt": null
+ }
 }

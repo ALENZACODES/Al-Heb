@@ -47,7 +47,7 @@ jobs:
         with: { name: phoneme-ct2, path: phoneme-ct2 }
       - name: Tools
         run: |
-          sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg
+          (sudo apt-get -qq update && sudo apt-get -qq install -y --no-install-recommends ffmpeg) || (pip install -q imageio-ffmpeg && sudo ln -sf "$(python -c 'import imageio_ffmpeg;print(imageio_ffmpeg.get_ffmpeg_exe())')" /usr/local/bin/ffmpeg)
           pip install -q faster-whisper phonikud
       - name: Check slice ${{ matrix.shard }} of 20
         run: |

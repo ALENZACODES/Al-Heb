@@ -22,6 +22,10 @@ NIQQUD = re.compile('[\u0591-\u05C7]')
 
 def candidates(v, text, rnd):
     """(name, voice, text to speak, speaking rate)"""
+    if rnd == 7:   # the four kinds that fixed most
+        apart = ', '.join(text.replace('.', '').split()) + '.'
+        return [('wavenet-apart', VOICES[v]['wavenet'], apart, 0.9), ('chirp-apart', VOICES[v]['chirp'], apart, 0.9),
+                ('wavenet', VOICES[v]['wavenet'], text, 1.0), ('chirp', VOICES[v]['chirp'], text, 1.0)]
     if rnd == 5:   # one take only: the kind that fixed most in rounds 3 and 4
         apart = ', '.join(text.replace('.', '').split()) + '.'
         return [('wavenet-apart', VOICES[v]['wavenet'], apart, 0.9)]

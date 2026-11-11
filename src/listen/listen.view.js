@@ -74,7 +74,7 @@ export function mount(root, ctx) {
     const nodes = [];
     if (silent) {
       nodes.push(el('p', { class: 'ls-note', role: 'note' }, AUDIO_FREE_NOTE),
-        el('p', {}, 'Instead of listening, you see the meaning and pick the written word. This practises telling look-alike words apart by their letters. ' + READ_ONLY_NOTE),
+        el('p', {}, 'Instead of listening, you see the meaning and pick the written word. This practices telling look-alike words apart by their letters. ' + READ_ONLY_NOTE),
         el('button', { class: 'btn', type: 'button', onclick: () => start('read', pool) }, 'Start read-and-match'));
     } else if (withAudio.length >= 4) {
       nodes.push(el('p', {}, `${withAudio.length} words have a clip for your ${LABELS[trad()]} setting${clipKinds(withAudio)}. You hear a word and pick how it is written. Browser speech is not used in this drill.`),

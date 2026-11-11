@@ -1,4 +1,5 @@
 import { reactRimon } from '../shell/rimon-events.js';
+import { bookFinisherScope } from '../lib/counts.js';
 // What may be shown as earned. Practice badges come from saved game sessions.
 // The beginner certificate uses the shipped review flag, which is not reviewed,
 // so certificateDecision does not issue. evaluateProposedCertificate is the pure
@@ -169,8 +170,8 @@ export const MILESTONE_BADGES = Object.freeze([
     category: 'milestones',
     section: 'mastery',
     name: 'Book Finisher',
-    requirement: `Any ${BOOK_FINISHER_TARGET} of the ${BOOK_SHELF_COUNT} little books are recorded as finished on this device: read to the last page, with the book's one story question answered.`,
-    lockedText: `Locked. Finish any ${BOOK_FINISHER_TARGET} of the ${BOOK_SHELF_COUNT} little books: read each to its last page and answer its one story question.`,
+    requirement: `Finish ${bookFinisherScope()}, recorded on this device.`,
+    lockedText: `Locked. Finish ${bookFinisherScope()}.`,
   },
   {
     id: 'early-bird',

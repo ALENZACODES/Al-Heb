@@ -299,7 +299,8 @@ async function show(match, ctxBase, { quiet = false } = {}) {
     // view adds content, loading-contract.js); drop everything else (M-09), so no stale heading or banner text from the
     // previous page reaches the new one.
     const held = (n) => n.id === 'view-title' || ['alef-first-glyph', 'alef-first-paint', 'alef-skeleton', 'alef-skeleton-note', 'alef-snapshot'].some((c) => n.classList?.contains(c));
-    clearView(root, [...root.children].filter((n) => (keepTitle || n.id !== 'view-title') && held(n)));
+    const keep = [...root.children].filter((n) => (keepTitle || n.id !== 'view-title') && held(n));
+    clearView(root, keep);
     const u = await mod.mount(root, ctx);
     loadHold?.viewMounted();
     // Superseded while mounting: this view's cleanup would never be registered (unmount now belongs to the newer navigation), so run it here.

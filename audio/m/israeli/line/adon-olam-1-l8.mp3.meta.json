@@ -1,0 +1,34 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Chirp3-HD-Charon",
+ "tradition": "israeli",
+ "inputText": "וְהוּא נִסִּי וּמָנוֹס לִי מְנָת כּוֹסִי בְּיוֹם אֶקְרָא׃",
+ "inputSha256": "c00fa832144a50bc3aa1ecaebabccf7e2c38f0627a9f75984196860a615e3160",
+ "ingestedAt": "2026-11-11T23:45:02.134Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-11T23:45:02.134Z",
+ "redistributionCleared": false,
+ "spokenText": "וְהוּא נִסִּי וּמָנוֹס לִי מְנָת כּוֹסִי בְּיוֹם אֶקְרָא",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [],
+  "google": {
+   "heard": "והוא נוסעים ומנוס לי מנות כוסי ביום אקרא",
+   "acc": 0.875,
+   "issues": [
+    "נִסִּי"
+   ]
+  },
+  "reviewersFailing": 1
+ },
+ "replaced": {
+  "voiceId": "he-IL-Wavenet-B",
+  "engine": "google-cloud-tts",
+  "renderedAt": null
+ }
+}

@@ -60,3 +60,6 @@ services:
       - path: /precache-manifest.js
         name: Cache-Control
         value: no-cache
+      - path: /media-hosts.js
+        name: Cache-Control
+        value: no-cache

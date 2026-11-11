@@ -19,6 +19,7 @@ export const LIMITS = { maxFileBytes: 25 * 1024 * 1024 }; // developers.cloudfla
 /** Runtime files that are not in the precache list but that the app or the host needs. Each is [path-or-dir, why]. */
 export const EXTRAS = [
   ['sw.js', 'service worker'],
+  ['media-hosts.js', 'audio folders served from the media repositories (sw.js imports it)'],
   ['404.html', 'self-contained not-found page for static hosts (not in the first-install precache)'],
   ['404.js', '404 page helper: maps an unknown path to a #/ route (not in the first-install precache)'],
   ['_headers', 'Cloudflare Pages headers'],

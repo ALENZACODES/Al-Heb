@@ -1,0 +1,29 @@
+{
+ "schema": "alef.media-hosts.v1",
+ "note": "Audio folders that are also served from the two media repositories on GitHub Pages. The service worker (sw.js, through the generated media-hosts.js) asks the media host for a clip in one of these folders first and falls back to this site's own copy, so a site that carries every clip (Render) and a slim site that carries none both work. The bytes must be identical on both sides: 'trees' records the folder contents the hosts were last synced to, and tests/media-hosts.test.js fails when a folder changes here without a new sync (node tools/deploy/media-hosts.mjs --sync <alef-packs clone> <alef-audio clone>). Set enabled to false to make every clip come from this site again.",
+ "enabled": true,
+ "hosts": [
+  {
+   "host": "https://alenzacodes.github.io/alef-packs/",
+   "repo": "ALENZACODES/alef-packs",
+   "prefixes": [
+    "audio/f/israeli/"
+   ]
+  },
+  {
+   "host": "https://alenzacodes.github.io/alef-audio/",
+   "repo": "ALENZACODES/alef-audio",
+   "prefixes": [
+    "audio/m/israeli/",
+    "audio/m/english/",
+    "audio/f/english/"
+   ]
+  }
+ ],
+ "trees": {
+  "audio/f/israeli/": "15449 files 331c062e72438d2b4159",
+  "audio/m/israeli/": "15449 files 237dcf7850cd0cc7ae65",
+  "audio/m/english/": "187 files 8ff7aff4e212af915d95",
+  "audio/f/english/": "187 files 8dccddc7350c773cecac"
+ }
+}

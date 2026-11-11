@@ -12,5 +12,7 @@
  "renderedAt": "2026-11-09T01:06:43.365Z",
  "redistributionCleared": false,
  "spokenText": "נָס",
- "normalized": true
+ "normalized": true,
+ "retake": "Re-recorded after the speech-to-text check: this take is the one the check heard correctly (tools/audio/asr-check/fix.py; every take tried is in fix-log.jsonl).",
+ "retakeAt": "2026-11-11"
 }

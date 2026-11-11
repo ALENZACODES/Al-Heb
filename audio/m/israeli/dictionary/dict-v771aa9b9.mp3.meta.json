@@ -2,7 +2,7 @@
  "status": "tts",
  "source": "tts:google",
  "engine": "google",
- "voiceId": "he-IL-Wavenet-B",
+ "voiceId": "he-IL-Chirp3-HD-Charon",
  "tradition": "israeli",
  "inputText": "צָפַר",
  "inputSha256": "e1ab319fdfc2d60833afd5175b0275ed8c9740ae20856acae0573d70d40258f4",
@@ -11,6 +11,8 @@
  "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
  "renderedAt": "2026-11-09T01:18:34.508Z",
  "redistributionCleared": false,
- "spokenText": "צָפַר",
- "normalized": true
+ "spokenText": "צפר",
+ "normalized": true,
+ "retake": "Re-recorded after the speech-to-text check: this take is the one the check heard correctly (tools/audio/asr-check/fix.py; every take tried is in fix-log.jsonl).",
+ "retakeAt": "2026-11-11"
 }

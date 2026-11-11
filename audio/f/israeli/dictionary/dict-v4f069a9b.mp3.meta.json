@@ -2,7 +2,7 @@
  "status": "tts",
  "source": "tts:google",
  "engine": "google",
- "voiceId": "he-IL-Wavenet-A",
+ "voiceId": "he-IL-Chirp3-HD-Kore",
  "tradition": "israeli",
  "inputText": "זֵד",
  "inputSha256": "a1744ed95af8ee98d758b364cdd7656f56420994e3fd6e117673fe2f0daf62e2",
@@ -11,6 +11,8 @@
  "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
  "renderedAt": "2026-11-09T01:32:24.165Z",
  "redistributionCleared": false,
- "spokenText": "זֵד",
- "normalized": true
+ "spokenText": "זד",
+ "normalized": true,
+ "retake": "Re-recorded after the speech-to-text check: this take is the one the check heard correctly (tools/audio/asr-check/fix.py; every take tried is in fix-log.jsonl).",
+ "retakeAt": "2026-11-11"
 }

@@ -2,7 +2,7 @@
  "status": "tts",
  "source": "tts:google",
  "engine": "google",
- "voiceId": "he-IL-Wavenet-A",
+ "voiceId": "he-IL-Chirp3-HD-Kore",
  "tradition": "israeli",
  "inputText": "סָכָל",
  "inputSha256": "a97a7a5e1cf154cdfc0b08725c6a3d5fc0cf7a6ae5196c4a78da435ecee485f0",
@@ -12,5 +12,7 @@
  "renderedAt": "2026-11-09T01:34:40.787Z",
  "redistributionCleared": false,
  "spokenText": "סָכָל",
- "normalized": true
+ "normalized": true,
+ "retake": "Re-recorded after the speech-to-text check: this take is the one the check heard correctly (tools/audio/asr-check/fix.py; every take tried is in fix-log.jsonl).",
+ "retakeAt": "2026-11-11"
 }

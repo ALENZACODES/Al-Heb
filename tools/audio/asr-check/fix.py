@@ -125,6 +125,40 @@ def collect(folder):
     print(f'collected {len(recs)} recordings: {kept} replaced, {human} no take passed, {refused} not answered by the voice service')
 
 
+RETAKE_NOTE = 'Re-recorded after the speech-to-text check: this take is the one the check heard correctly (tools/audio/asr-check/fix.py; every take tried is in fix-log.jsonl).'
+
+
+def sidecars(since=None, date=None):
+    """Bring the .mp3.meta.json note beside every re-recorded clip in line with the take that was kept (voice and spoken text).
+    A retake may use the other approved voice of the same speaker or the unpointed spelling, and the note must say what is in the file.
+    `since` (a line count of fix-log.jsonl) limits the dated stamp to the records of one round; older records get no date."""
+    paths = rows_by_file()
+    recs = L.jl_read(LOG)
+    latest = {}
+    for i, r in enumerate(recs):
+        if r.get('kept'):
+            latest[r['file']] = (i, r)
+    changed = 0
+    for f, (i, r) in sorted(latest.items()):
+        row = paths.get(f)
+        for p in (row['same_audio_paths'].split() if row else [f]):
+            meta_path = os.path.join(ROOT, p + '.meta.json')
+            if not os.path.exists(meta_path):
+                continue
+            meta = json.load(open(meta_path, encoding='utf-8'))
+            want = dict(meta)
+            want['voiceId'] = r.get('voice') or meta.get('voiceId')
+            want['spokenText'] = r.get('spoken') or meta.get('spokenText')
+            want['retake'] = RETAKE_NOTE
+            if date and since is not None and i >= since:
+                want['retakeAt'] = date
+            if want != meta:
+                with open(meta_path, 'w', encoding='utf-8', newline='\n') as out:
+                    out.write(json.dumps(want, ensure_ascii=False, indent=1) + '\n')
+                changed += 1
+    print(f'sidecar notes brought in line with the kept takes: {changed} changed, {len(latest)} re-recorded clips in the log')
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--execute', action='store_true')
@@ -136,9 +170,14 @@ def main():
     ap.add_argument('--skip-tried', action='store_true', help='leave out recordings an earlier run already tried with no take passing (they are in ASR-NEEDS-HUMAN.md); a run that the voice service did not answer does not count as tried')
     ap.add_argument('--log', help='write this run\'s log lines here instead of fix-log.jsonl (parallel runs; join them with --collect)')
     ap.add_argument('--collect', help='folder of slice logs from parallel runs: join them into fix-log.jsonl, save what each kept take was heard as, list what no take fixed')
+    ap.add_argument('--sidecars', action='store_true', help='rewrite the .mp3.meta.json note beside each re-recorded clip so it names the voice and text of the take that was kept')
+    ap.add_argument('--since', type=int, help='with --sidecars and --date: the fix-log.jsonl line count before the round being stamped')
+    ap.add_argument('--date', help='with --sidecars: the day of the round (YYYY-MM-DD)')
     a = ap.parse_args()
     if a.collect:
         return collect(a.collect)
+    if a.sidecars:
+        return sidecars(a.since, a.date)
     verdicts = set(a.verdicts.split(','))
     with open(os.path.join(ROOT, 'docs', 'audio', 'asr-check.csv'), encoding='utf-8') as f:
         rows = [r for r in csv.DictReader(f) if r['verdict'] in verdicts]

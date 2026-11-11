@@ -2,5 +2,8 @@
  "status": "synthetic-unreviewed",
  "source": "tts-hebrew",
  "reviewed": false,
- "note": "Existing synthetic clip from ELIGIBLE-EXISTING-GAME-AUDIO. textSource hebrew. No native review and no new synthesis."
+ "note": "Existing synthetic clip from ELIGIBLE-EXISTING-GAME-AUDIO. textSource hebrew. No native review and no new synthesis.",
+ "voiceId": "he-IL-Wavenet-A",
+ "spokenText": "אל",
+ "retake": "Re-recorded after the speech-to-text check: this take is the one the check heard correctly (tools/audio/asr-check/fix.py; every take tried is in fix-log.jsonl)."
 }

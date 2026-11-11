@@ -2,12 +2,14 @@
  "status": "tts",
  "source": "paid-cloud",
  "engine": "google-cloud-tts",
- "voiceId": "he-IL-Wavenet-A",
+ "voiceId": "he-IL-Wavenet-C",
  "tradition": "israeli",
  "inputText": "פֵא",
  "inputSha256": "62f4c233217670ad9c4a5e6273c1bfe5b6f966e555f6cead7e94fe89f8d44b99",
  "ingestedAt": null,
  "licence": "customer-owned",
  "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
- "inputTextKind": "hebrew"
+ "inputTextKind": "hebrew",
+ "spokenText": "פֵא",
+ "retake": "Re-recorded after the speech-to-text check: this take is the one the check heard correctly (tools/audio/asr-check/fix.py; every take tried is in fix-log.jsonl)."
 }

@@ -125,7 +125,7 @@ function mountMap(root, ctx) {
             // the button says so — the lesson itself is completed by its
             // quick check, after looking through it.
             state === "locked" ? el("p", { class: "alef-locked-note", hidden: "", role: "note" }, (() => { const need = l.prerequisites.filter((p) => !done.has(p)).map((p) => `“${lessons.find((x) => x.id === p)?.title || p}”`); return need.length ? `Opens after you finish ${need.join(" and ")}.` : "Opens after the lesson before it."; })()) : null,
-            state === "available" ? el("button", { type: "button", class: "alef-btn alef-btn-secondary", "aria-label": `Mark complete without studying it (test out): ${l.title}`,
+            state === "available" ? el("button", { type: "button", class: "alef-btn alef-btn-secondary", "aria-label": `${tr(ctx, "learn.markDone", "Test out")}: Mark complete without studying it: ${l.title}`,
               onclick: async function markDone() { try { await completeLesson(ctx, l); } catch (e) { if (alive) showSaveFailure(wrap, e, markDone); return; } await render(); if (alive) { h1.focus?.({ preventScroll: true }); refocusIfLost(wrap, "#view-title", h1); } } }, tr(ctx, "learn.markDone", "Test out")) : null);
         })),
       list.length > 8 ? el("p", {}, el("button", { type: "button", class: "btn secondary", id: "alef-show-all", "aria-pressed": String(showAll), onclick: () => { showAll = !showAll; render().then(() => { if (alive) wrap.querySelector?.("#alef-show-all")?.focus?.(); }); } }, showAll ? "Show fewer lessons" : `Show all ${list.length} lessons`)) : null);

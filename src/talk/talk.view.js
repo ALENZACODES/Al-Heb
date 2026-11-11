@@ -128,7 +128,7 @@ export function mount(root, ctx = {}) {
 
   const micEn = h('button', { type: 'button', class: 'btn', 'aria-pressed': 'false', onclick: () => toggleListen('en-he') }, 'Speak English');
   const micHe = h('button', { type: 'button', class: 'btn', 'aria-pressed': 'false', lang: 'he', dir: 'rtl', onclick: () => toggleListen('he-en') }, 'דַּבְּרוּ עִבְרִית');
-  micHe.setAttribute('aria-label', 'Speak Hebrew');
+  micHe.setAttribute('aria-label', 'דַּבְּרוּ עִבְרִית (Speak Hebrew)'); // the spoken name starts with the words on the button
   const mics = h('div', { class: 'talk-mics', hidden: !hearing }, micEn, micHe);
   const listenNote = h('p', { class: 'muted talk-small' }, hearing ? LISTEN_NOTE : NO_LISTEN);
   const err = h('p', { role: 'alert', hidden: true });

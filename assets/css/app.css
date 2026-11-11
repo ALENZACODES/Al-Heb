@@ -303,7 +303,7 @@ main :is(p, li, dd, td) > a:not(.btn):not(.skip-link) { padding-block: 10px; }
 /* Sources line under word meanings and example sentences (src/shell/sources.js): small, wraps, link keeps the 44px target from the rule above */
 .src-line { display: none !important; }
 .fine-print { margin: 2.5rem 0 .4rem; text-align: center; font-size: .75rem; line-height: 1.5; }
-.fine-print a { color: var(--muted); text-decoration: none; }
+.fine-print a { color: var(--muted); text-decoration: none; display: inline-flex; align-items: center; justify-content: center; min-block-size: 44px; min-inline-size: 44px; } /* small text, full-size tap area */
 .fine-print a:hover, .fine-print a:focus-visible { opacity: 1; text-decoration: underline; }
 /* Memory card (src/letters/memorycard.js): on phones it sits after the stage and its toggles, never above the tracing stage. */
 @media (max-width: 600px) { main .alef-trace > div:has(> .stage) > .mc { order: 8; } main .alef-trace > div:has(> .stage) > .mc[data-first] { order: 4; } main .alef-trace > div:has(> .stage) > .mc-fallback { order: 8; } }

@@ -374,7 +374,7 @@ export function mount(root, ctx) {
     const [index, covers, rawResults, clipMap, progress, written, hidden] = await Promise.all([
       loadIndex(),
       loadOptional(COVERS_URL),
-      loadOptional(RESULTS_URL),
+      Promise.resolve(null), // the full check results (RESULTS_URL) are not kept in the repo; the committed hide list below stands in for them, and asking for a file that is never there only logs a 404
       loadOptional(CLIP_MAP_URL),
       loadProgress(ctx),
       loadOptional(WRITTEN_URL),

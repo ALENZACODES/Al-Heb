@@ -7,10 +7,10 @@ const CSS = `
 #game-music{position:static;z-index:auto;clear:both;margin:1rem 0 0;padding:.45rem .7rem;font-size:.9rem;background:#123d2c;color:#f3e6bf;border:1px solid #b8962e;border-radius:16px;display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;scroll-margin-block:1rem}
 #game-music[hidden]{display:none}
 #game-music .gm-ico{font-size:1.1rem;line-height:1}
-#game-music button,#game-music select{min-block-size:40px;border-radius:999px;border:1px solid #b8962e;background:transparent;color:inherit;padding:.2rem .8rem;font:inherit;cursor:pointer}
+#game-music button,#game-music select{min-block-size:44px;border-radius:999px;border:1px solid #b8962e;background:transparent;color:inherit;padding:.2rem .8rem;font:inherit;cursor:pointer}
 #game-music button[aria-pressed="true"]{background:#d4af37;color:#123d2c;font-weight:700}
 #game-music select{background:#123d2c;max-inline-size:14rem}
-#game-music input[type="range"]{width:5.5rem;accent-color:#d4af37;min-block-size:40px}
+#game-music input[type="range"]{width:5.5rem;accent-color:#d4af37;min-block-size:44px}
 #game-music button:focus-visible,#game-music select:focus-visible,#game-music input:focus-visible{outline:3px solid #f3e6bf;outline-offset:2px}
 #game-music .status{flex-basis:100%;margin:0;font-size:.75rem;opacity:.8}
 #game-music .status:empty{display:none}

@@ -110,3 +110,16 @@ test('view: switching reading style changes the pairs offered; empty selection s
   assert.ok(btn(root, /^Kamatz/)); await btn(root, /^Kamatz/).click(); await tick();
   assert.match(root.textContent, /Pair 1 of 6/); un();
 });
+test('M-12: the page says why it gives no score, and the reason holds for the shipped pairs', async () => {
+  const V = await import('../src/recordcompare/recordcompare.view.js');
+  const root = new N('main'), { ctx } = mk(); const un = V.mount(root, ctx); await tick();
+  assert.match(root.textContent, /Why there is no score here/); assert.match(root.textContent, /Say it page/);
+  un();
+  // "in most of these pairs both words have the same letters": letters-only, as a recognizer writes them.
+  const { normalizeHe } = await import('../src/speak/model.js');
+  const all = DATA.contrasts.flatMap((c) => c.pairs);
+  const same = all.filter((p) => normalizeHe(p.a.he) === normalizeHe(p.b.he)).length;
+  assert.ok(same * 2 > all.length, `${same} of ${all.length} pairs share their letters`);
+  const other = new Set(DATA.contrasts.filter((c) => c.pairs.some((p) => normalizeHe(p.a.he) !== normalizeHe(p.b.he))).map((c) => c.id));
+  assert.deepEqual([...other].sort(), ['alef-ayin', 'het-khaf'], 'the rest differ only in letters a recognizer guesses by word frequency');
+});

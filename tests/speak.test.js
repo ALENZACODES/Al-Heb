@@ -268,7 +268,9 @@ test('start screen: draft flag, set select with label, mode radios (only self en
   assert.equal(radios.find((r) => r.attrs.value === 'self').attrs.checked, '');
   assert.equal(radios.find((r) => r.attrs.value === 'asr').attrs.disabled, '');
   assert.match(root.text, /not available in this browser/);
-  assert.match(root.text, /Speech recognition: not available/);
+  assert.match(root.text, /No score in this browser: it has no speech recognition \(Firefox, for example/);
+  assert.match(root.text, /There is no score for a self-check/);
+  assert.ok(!byId(root, 'speak-score-means'), 'no score explanation when nothing can be scored');
   assert.equal(root.find((n) => n.tag === 'div' && n.listeners.click).length, 0, 'no click handlers on non-buttons');
   assert.ok(root.find((n) => n.tag === 'input' && !root.find((l) => l.tag === 'label' && l.attrs.for === n.attrs.id).length).length === 0, 'every input has a label');
 });
@@ -307,7 +309,9 @@ test('self mode: listen plays the browser voice (labelled as such), I said it / 
   assert.doesNotMatch(root.text, /wrong|fail/i);
   byId(root, 'speak-finish').click();
   await waitFor(() => byId(root, 'speak-again'));
-  assert.match(root.text, /You tried 2 items/); assert.match(root.text, /1 said or matched, 0 close, 1 not yet, of 2 tried/);
+  assert.match(root.text, /You tried 2 items/); assert.match(byId(root, 'speak-round').text, /Marked by you, not scored: 1 said, 1 not yet\./);
+  assert.doesNotMatch(byId(root, 'speak-round').text, /%/, 'self-marks never get a percentage');
+  assert.match(byId(root, 'speak-all').text, /Marked by you, not scored: 1 said, 1 not yet\./);
   assert.match(root.text, /not that a teacher heard you/);
 });
 test('asr mode: match settles the item; a miss shows what was heard and offers self-judging; mic errors fall back', async () => {
@@ -594,7 +598,7 @@ test('read aloud with a recognizer: missed word underlined and listed, stored wi
   await waitFor(() => byId(root, 'read-next'));
   const miss = root.find((n) => n.className === 'w-miss'); assert.equal(miss.length, 1); assert.equal(miss[0].text, 'יְהוָה');
   assert.equal(root.find((n) => n.attrs['data-status'] === 'hit').length, 3);
-  assert.match(byId(root, 'read-verdict').text, /3 of 4 words matched/);
+  assert.match(byId(root, 'read-verdict').text, /Score 75%: 3 of 4 words recognized/);
   assert.equal(byId(root, 'read-missed').text.includes('יְהוָה'), true);
   assert.ok(byId(root, 'read-said') && byId(root, 'read-notyet'), 'self-judging offered after a miss');
   assert.match(byId(root, 'read-verdict').text, /unverified for Hebrew/);
@@ -801,4 +805,70 @@ test('divine name: a recognizer that wrote what it heard (Adonai) still matches 
   }
   assert.equal(M.compare('לַיהוָה', 'לאדוני').outcome, 'match', 'prefixed form');
   assert.equal(M.spokenPointed('אֶת יְהוָה'), 'אֶת אֲדֹנָי');
+});
+
+// ---- M-12: word-by-word scoring and the honest fallback ---------------------------------------------------------------
+test('M-12 asr: a near miss lists every word with its status in words, shows the score and says what it measures', async () => {
+  const set = setItems['speak-survival-greetings-1'];
+  const words = M.normalizeHe(set.items[0].he).split(' ');
+  const heard = words.length > 1 ? words.slice(0, -1).join(' ') : 'תודה';
+  const { Rec } = fakeRecognition([{ alternatives: [heard] }]);
+  const { root, store } = await boot({ Rec, query: { set: 'speak-survival-greetings-1' } });
+  assert.ok(byId(root, 'speak-score-means'), 'start screen explains the score');
+  assert.match(byId(root, 'speak-score-means').text, /not measure your accent/);
+  byId(root, 'speak-start').click();
+  await waitFor(() => byId(root, 'speak-mic'));
+  assert.equal(byId(root, 'speak-noscore'), undefined, 'no "no score" note when the recognizer is on');
+  byId(root, 'speak-mic').click();
+  await waitFor(() => byId(root, 'speak-next'));
+  const v = byId(root, 'speak-verdict').text;
+  assert.match(v, /Score \d+%: \d+ of \d+ words? recognized/);
+  assert.match(v, /does not measure your accent/);
+  const list = byId(root, 'speak-words');
+  assert.equal(list.children.length, words.length, 'one row per printed word');
+  for (const li of list.children) assert.match(li.text, / - (heard right|close|not heard)/);
+  assert.ok(list.children.some((li) => li.attrs['data-status'] === 'miss'));
+  const a = store.m['speak.v1'].attempts.at(-1);
+  assert.equal(a.mode, 'asr'); assert.equal(typeof a.score, 'number'); assert.ok(['close', 'miss'].includes(a.outcome));
+});
+test('M-12 no recognizer: the question says plainly there is no score, and no score appears anywhere', async () => {
+  const { root } = await boot({ query: { set: 'speak-survival-greetings-1' } });
+  byId(root, 'speak-start').click();
+  await waitFor(() => byId(root, 'speak-q'));
+  assert.match(byId(root, 'speak-noscore').text, /No score in this browser: it has no speech recognition/);
+  byId(root, 'speak-said').click();
+  await waitFor(() => byId(root, 'speak-next'));
+  assert.doesNotMatch(root.text, /Score \d+%/);
+  byId(root, 'speak-finish').click();
+  await waitFor(() => byId(root, 'speak-again'));
+  assert.doesNotMatch(root.text, /\d+%/, 'a self-check round shows no percentage');
+});
+test('M-12 recognizer refused at runtime: no score, self-check offered, and "Record myself instead" switches to recording', async () => {
+  const f = fakeRecorder();
+  const { Rec } = fakeRecognition([{ error: 'language-not-supported' }]);
+  const { root } = await boot({ Rec, MR: f.MR, getUserMedia: f.getUserMedia, URL: f.URL, BlobCtor: f.BlobCtor, query: { set: 'speak-survival-greetings-1' } });
+  byId(root, 'speak-start').click();
+  await waitFor(() => byId(root, 'speak-mic'));
+  byId(root, 'speak-mic').click();
+  await waitFor(() => byId(root, 'speak-record-instead'));
+  assert.match(byId(root, 'speak-verdict').text, /No score is possible here right now/);
+  assert.ok(byId(root, 'speak-said'));
+  byId(root, 'speak-record-instead').click();
+  await waitFor(() => byId(root, 'speak-record'));
+  assert.match(byId(root, 'speak-noscore').text, /You chose to check this yourself, so there is no score/);
+});
+test('M-12 record mode: after a take, "Play the model, then mine" plays the model voice next to the recording', async () => {
+  const f = fakeRecorder();
+  const { root, synth } = await boot({ MR: f.MR, getUserMedia: f.getUserMedia, URL: f.URL, BlobCtor: f.BlobCtor, query: { set: 'speak-survival-cafe-1' } });
+  byId(root, 'speak-start').click();
+  await waitFor(() => byId(root, 'speak-record'));
+  byId(root, 'speak-record').click();
+  await waitFor(() => /Stop recording/.test(byId(root, 'speak-record').text));
+  byId(root, 'speak-record').click();
+  await waitFor(() => byId(root, 'speak-model-then-mine'));
+  assert.match(byId(root, 'speak-verdict').text, /not a grade/);
+  assert.doesNotMatch(byId(root, 'speak-verdict').text, /Score/);
+  byId(root, 'speak-model-then-mine').click();
+  await waitFor(() => synth.spoken.length);
+  assert.equal(synth.spoken[0].lang, 'he-IL');
 });

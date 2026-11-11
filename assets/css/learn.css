@@ -215,3 +215,5 @@ main > section.card[aria-labelledby] .alef-item { row-gap: .1rem; }
 .alef-practical-list .alef-practical-ring svg { inline-size: 30px; block-size: 30px; }
 .alef-practical-row { align-items: flex-start; }
 .alef-practical-text .muted { font-size: 0.85rem; }
+/* Read: each doorway button sits on its own line with its sentence under it (the sentence used to start beside the button and wrap under it). */
+.crp-torahdoor > .btn { display: flex; inline-size: fit-content; max-inline-size: 100%; margin-block-end: .35rem; }

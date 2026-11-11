@@ -1,0 +1,27 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Chirp3-HD-Kore",
+ "tradition": "israeli",
+ "inputText": "הוֹדוּ לַאֲדֹנָי כִּי־טוֹב כִּי לְעוֹלָם חַסְדּוֹ׃",
+ "inputSha256": "27820478cad62c6f35da91c2e77c03912445c88ae645038ff2160e28d1746b1c",
+ "ingestedAt": "2026-11-11T23:14:31.252Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-11T23:14:31.252Z",
+ "redistributionCleared": false,
+ "spokenText": "הוֹדוּ לַאֲדֹנָי כִּי טוֹב כִּי לְעוֹלָם חַסְדּוֹ",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [],
+  "google": {
+   "heard": "הודו לאדוני כי טוב כי לעולם חסדו",
+   "acc": 1.0,
+   "issues": []
+  },
+  "reviewersFailing": 0
+ }
+}

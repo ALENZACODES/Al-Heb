@@ -116,12 +116,16 @@ def main():
     ap.add_argument('--limit', type=int)
     ap.add_argument('--report-only', action='store_true')
     ap.add_argument('--no-recheck', action='store_true', help='skip re-hearing flagged clips one at a time')
+    ap.add_argument('--shard', type=int, default=0, help='with --of: hear only this slice of the clips still to do (for parallel runs)')
+    ap.add_argument('--of', type=int, default=1)
+    ap.add_argument('--no-report', action='store_true', help='hear only; leave the report files alone (parallel runs write the report once, at the end)')
     a = ap.parse_args()
     kinds = a.kinds.split(',')
     all_jobs = jobs(kinds)
     if not a.report_only:
         done = {r['file'] for r in L.jl_read(RESULTS)}
-        todo = [j for j in all_jobs if j['file'] not in done][:a.limit]
+        todo = sorted((j for j in all_jobs if j['file'] not in done), key=lambda j: j['file'])
+        todo = [j for i, j in enumerate(todo) if i % a.of == a.shard][:a.limit]
         by_file = {j['file']: j for j in todo}
         t0 = time.time()
         short = [j['file'] for j in todo if j['kind'] in ('word', 'builder')]
@@ -142,6 +146,8 @@ def main():
             for j in again:
                 save({'file': j['file'], 'asr': L.hear(os.path.join(ROOT, j['file'])), 'mode': 'single'})
         del by_file
+    if a.no_report:
+        return
     count, redo = report(all_jobs)
     print(json.dumps({**count, 'redo_files': redo}))
 

@@ -18,6 +18,7 @@ import { RESUME_KEY, getResume, setResume, clearResume } from "./chunks.js";
 import { storeGet, storeSet, showSaveFailure } from "./dom.js";
 import { hookLine, hookNode } from "../letters/hookline.js";
 import { mountChunkedLesson } from "./lesson.parts.js";
+import { loadUnlocked, unlockLesson, stillLocked, doubleTap } from "./unlock.js";
 
 const A_ID = /^I-\d{2}$/;
 export const MAX_PER_STEP = 2;
@@ -48,7 +49,10 @@ export function mountLesson(root, ctx, lessonId) {
     const [c, st] = await Promise.all([loadContent(), loadState(ctx)]);
     if (!alive) return;
     const isDone = !!st.completed[lesson.id];
-    const unmet = lesson.prerequisites.filter((p) => !st.completed[p]);
+    // A lesson the learner opened early (double tap on the lesson list, or the Unlock button below) is not locked: see unlock.js.
+    const unlockedSet = await loadUnlocked(ctx);
+    if (!alive) return;
+    const unmet = stillLocked(lesson, st.completed, unlockedSet);
     const idx = lessons.findIndex((l) => l.id === lesson.id);
     const next = lessons.slice(idx + 1).find((l) => l.track === lesson.track);
     let resumeAll = await storeGet(ctx, RESUME_KEY, {}); // answers already given in an earlier visit, so a lesson can be paused and picked up again
@@ -60,7 +64,9 @@ export function mountLesson(root, ctx, lessonId) {
       el("details", { class: "draft-flag alef-draft" }, el("summary", {}, "About This Lesson"),
         // review status is stated once, on the credits page
         el("h2", { id: "l-goals", class: "alef-draft-h" }, tr(ctx, "lesson.goals", "Goals")), el("ul", {}, ...lesson.goals.map((g) => el("li", {}, g)))),
-      unmet.length ? el("p", { class: "alef-locked", role: "note" }, `Locked: finish ${unmet.map((p) => byId[p]?.title || p).join(", ")} first. You can still look around.`) : null,
+      unmet.length ? el("p", { class: "alef-locked", role: "note" }, `Locked: finish ${unmet.map((p) => byId[p]?.title || p).join(", ")} first. You can still look around, or double tap Unlock to take this lesson now. `,
+        (() => { const go = async () => { await unlockLesson(ctx, lesson.id); if (alive) { root.replaceChildren(); mountLesson(root, ctx, lessonId); } };
+          const b = el("button", { type: "button", class: "btn secondary", id: "alef-unlock", "aria-label": `Unlock ${lesson.title}. Press twice.`, onclick: doubleTap(go, () => { b.replaceChildren("Tap again to unlock"); }) }, "Unlock"); return b; })()) : null,
       lesson.onramp && !isDone ? el("p", { class: "card alef-onramp", role: "note" }, el("strong", {}, "Short steps: "), `${lesson.steps?.length || 5} steps, about 2 minutes each. `,
         el("a", { class: "btn", id: "alef-onramp-link", href: "#" + lesson.onramp }, "Start with one letter")) : null,
     ];

@@ -18,6 +18,7 @@ import { streakVisible } from "../shell/comfort.js";
 import { DAILY_GOAL_KEY, normalizeDailyGoal } from "../home/today.js";
 import { rimonInline } from "../shell/rimon-inline.js";
 import { firstHebrewLetter } from "../shell/ui.js";
+import { loadUnlocked, unlockLesson, doubleTap } from "./unlock.js";
 
 
 export function mount(root, ctx) {
@@ -68,6 +69,8 @@ function mountMap(root, ctx) {
     const st = await loadState(ctx);
     if (!alive) return;
     const done = new Set(Object.keys(st.completed));
+    const unlocked = await loadUnlocked(ctx); // lessons opened early with a double tap
+    if (!alive) return;
     const dueCount = due(Object.values(st.cards), Date.now()).length;
     const list = lessons.filter((l) => l.track === track);
     const doneInTrack = list.filter((l) => done.has(l.id)).length;
@@ -80,6 +83,7 @@ function mountMap(root, ctx) {
           el("button", { type: "button", class: "alef-tab", "aria-pressed": String(track === id), id: `alef-tab-${id}`,
             onclick: () => { track = id; render(); } }, label))),
       continueCard(list[firstOpen] && !done.has(list[firstOpen].id) ? list[firstOpen] : null, doneInTrack, list.length, st),
+      ctx?.hasRoute?.("curriculum") ? el("p", { class: "alef-plan-link" }, el("a", { href: "#/curriculum" }, "Curriculum"), ": the whole course in one order, every lesson and every Practical page, stage by stage.") : null,
       track === "read" && ctx?.hasRoute?.("classtrack") ? el("p", { class: "alef-plan-link" }, el("a", { href: "#/classtrack" }, "My study plan"), ": 10 weeks, 3 months, 6 months or a year, on your own dates, with help each week.") : null,
       ctx?.hasRoute?.("library") ? el("p", { class: "alef-plan-link" }, el("a", { href: "#/library" }, "Library"), ": short reads on Shabbat, the holidays and prayer, each with its Hebrew words.") : null,
       ctx?.hasRoute?.("lab") ? el("p", { class: "alef-plan-link" }, el("a", { href: "#/lab" }, "Brain Lab"), ": today’s three quick drills for your Hebrew eyes, ears and memory.") : null,
@@ -102,16 +106,20 @@ function mountMap(root, ctx) {
         track === "israel" ? el("a", { class: "btn secondary", href: "#/learn?dialogues=1" }, "Dialogues") : null)),
       el("ol", { class: "alef-lesson-list", "aria-label": track === "read" ? "Reading lessons" : "Israel lessons" },
         ...list.map((l, idx) => {
-          const ready = l.prerequisites.every((p) => done.has(p));
+          const ready = l.prerequisites.every((p) => done.has(p)) || unlocked.has(l.id);
           const isDone = done.has(l.id);
           const state = isDone ? "done" : ready ? "available" : "locked";
+          // Double tap a locked lesson to unlock it (owner, 2026-11-11: move freely from one lesson to another). The choice is kept.
+          const unlock = async () => { await unlockLesson(ctx, l.id); if (alive) ctx?.route?.(`/learn?lesson=${l.id}`); };
+          const showNote = (row) => { const note = row?.querySelector?.(".alef-locked-note"); if (note) { note.hidden = false; note.removeAttribute("hidden"); } };
+          const lockedTap = state === "locked" ? doubleTap(unlock, (e) => showNote(e?.currentTarget)) : null;
           return el("li", { class: `alef-lesson alef-lesson-${state}`, "data-lesson": l.id, "data-glyph": firstHebrewLetter(l.teaser || l.words?.[0]?.he), hidden: far(idx) ? "" : null,
             // a tap anywhere on an open stop opens it, like the round stops of a path (keyboard and screen readers use its Start or Review button)
             onclick: (e) => {
               if (e?.target?.closest?.("button, a, summary")) return;
               if (state !== "locked") { ctx?.route?.(`/learn?lesson=${l.id}`); return; }
-              // a locked stop says what opens it, instead of doing nothing
-              const note = e?.currentTarget?.querySelector?.(".alef-locked-note"); if (note) { note.hidden = !note.hidden; if (note.hidden) note.setAttribute("hidden", ""); else note.removeAttribute("hidden"); }
+              // a locked stop says what opens it on the first tap, and opens on the second
+              lockedTap(e);
             } },
             el("span", { class: "alef-level" }, levelLabel(l.level)), " ",
             el("strong", {}, l.title), " ",
@@ -124,7 +132,10 @@ function mountMap(root, ctx) {
             // U-13: completing a lesson without opening it is a test-out, and
             // the button says so — the lesson itself is completed by its
             // quick check, after looking through it.
-            state === "locked" ? el("p", { class: "alef-locked-note", hidden: "", role: "note" }, (() => { const need = l.prerequisites.filter((p) => !done.has(p)).map((p) => `“${lessons.find((x) => x.id === p)?.title || p}”`); return need.length ? `Opens after you finish ${need.join(" and ")}.` : "Opens after the lesson before it."; })()) : null,
+            // Keyboard and screen readers: the same two presses on a real button (the first says what opens the lesson, the second unlocks it).
+            state === "locked" ? (() => { let armed = false; const b = el("button", { type: "button", class: "alef-btn alef-btn-secondary alef-unlock", "aria-label": `Locked: ${l.title}. Press twice to unlock.`,
+              onclick: (e) => { if (armed) { unlock(); return; } armed = true; showNote(e?.currentTarget?.closest?.("li") || e?.currentTarget?.parent); b.replaceChildren("Press again to unlock"); } }, "Locked"); return b; })() : null,
+            state === "locked" ? el("p", { class: "alef-locked-note", hidden: "", role: "note" }, (() => { const need = l.prerequisites.filter((p) => !done.has(p)).map((p) => `“${lessons.find((x) => x.id === p)?.title || p}”`); return (need.length ? `Opens after you finish ${need.join(" and ")}.` : "Opens after the lesson before it.") + " Or double tap it to open it now."; })()) : null,
             state === "available" ? el("button", { type: "button", class: "alef-btn alef-btn-secondary", "aria-label": `${tr(ctx, "learn.markDone", "Test out")}: Mark complete without studying it: ${l.title}`,
               onclick: async function markDone() { try { await completeLesson(ctx, l); } catch (e) { if (alive) showSaveFailure(wrap, e, markDone); return; } await render(); if (alive) { h1.focus?.({ preventScroll: true }); refocusIfLost(wrap, "#view-title", h1); } } }, tr(ctx, "learn.markDone", "Test out")) : null);
         })),

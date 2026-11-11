@@ -126,6 +126,7 @@ export const STORE_KEYS = [
   ['curriculum.checkpoints', 'Checkpoint results', 'src/curriculum/actions.js'],
   ['curriculum.gender', 'Gender pair practice', 'src/curriculum/actions.js'],
   ['curriculum.ladder', 'Syllable ladder progress', 'src/curriculum/actions.js'],
+  ['curriculum.unlocked', 'Lessons you opened early with a double tap', 'src/curriculum/unlock.js'],
   ['curriculum.loanwords', 'Loanword practice', 'src/curriculum/actions.js'],
   ['curriculum.scaffold', 'Read-without-Latin progress', 'src/curriculum/scaffold.js'],
   ['intermediate.v1', 'Intermediate lessons progress', 'src/curriculum/intermediate.view.js'],

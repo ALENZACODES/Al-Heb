@@ -15,7 +15,7 @@ SUMMARY:Rosh Hashanah
 DESCRIPTION:Rosh Hashanah (רֹאשׁ הַשָּׁנָה)\, 2026-09-12 to 2
  026-09-13\; begins at sundown on 2026-09-11. Hebrew date of the first day:
   1 Tishrei 5787. Two days in traditional diaspora practice (1-2 Tishrei).
-CATEGORIES:ALEF\,holiday
+CATEGORIES:Aleph\,holiday
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -32,7 +32,7 @@ SUMMARY:Yom Kippur
 DESCRIPTION:Yom Kippur (יוֹם כִּפּוּר)\, 2026-09-21\; begins at
   sundown on 2026-09-20. Hebrew date of the first day: 10 Tishrei 5787. One
   day in every stream of Judaism (10 Tishrei).
-CATEGORIES:ALEF\,holiday
+CATEGORIES:Aleph\,holiday
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -50,7 +50,7 @@ DESCRIPTION:Sukkot (סֻכּוֹת)\, 2026-09-26 to 2026-10-02\; begins at
  sundown on 2026-09-25. Hebrew date of the first day: 15 Tishrei 5787. 7 da
  ys (15-21 Tishrei)\; first day is the full festival day under the one-day 
  convention.
-CATEGORIES:ALEF\,holiday
+CATEGORIES:Aleph\,holiday
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -68,7 +68,7 @@ DESCRIPTION:Shemini Atzeret (שְׁמִינִי עֲצֶרֶת)\, 2026-10-0
  3\; begins at sundown on 2026-10-02. Hebrew date of the first day: 22 Tish
  rei 5787. 22 Tishrei\; Simchat Torah follows on 23 Tishrei in traditional 
  diaspora practice.
-CATEGORIES:ALEF\,holiday
+CATEGORIES:Aleph\,holiday
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -85,7 +85,7 @@ SUMMARY:Simchat Torah
 DESCRIPTION:Simchat Torah (שִׂמְחַת תּוֹרָה)\, 2026-10-04\; 
  begins at sundown on 2026-10-03. Hebrew date of the first day: 23 Tishrei 
  5787.
-CATEGORIES:ALEF\,holiday
+CATEGORIES:Aleph\,holiday
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -102,7 +102,7 @@ SUMMARY:Rosh Chodesh Cheshvan
 DESCRIPTION:Rosh Chodesh Cheshvan (רֹאשׁ חֹדֶשׁ חֶשְׁוָן
  )\, 2026-10-11 to 2026-10-12\; begins at sundown on 2026-10-10. Hebrew dat
  e of the first day: 30 Tishrei 5787.
-CATEGORIES:ALEF\,roshchodesh
+CATEGORIES:Aleph\,roshchodesh
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -119,7 +119,7 @@ SUMMARY:Rosh Chodesh Kislev
 DESCRIPTION:Rosh Chodesh Kislev (רֹאשׁ חֹדֶשׁ כִּסְלֵו)\
  , 2026-11-10 to 2026-11-11\; begins at sundown on 2026-11-09. Hebrew date 
  of the first day: 30 Cheshvan 5787.
-CATEGORIES:ALEF\,roshchodesh
+CATEGORIES:Aleph\,roshchodesh
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -135,7 +135,7 @@ DTEND;VALUE=DATE:20261213
 SUMMARY:Hanukkah
 DESCRIPTION:Hanukkah (חֲנֻכָּה)\, 2026-12-05 to 2026-12-12\; begins
   at sundown on 2026-12-04. Hebrew date of the first day: 25 Kislev 5787.
-CATEGORIES:ALEF\,holiday
+CATEGORIES:Aleph\,holiday
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -152,7 +152,7 @@ SUMMARY:Rosh Chodesh Tevet
 DESCRIPTION:Rosh Chodesh Tevet (רֹאשׁ חֹדֶשׁ טֵבֵת)\, 2026-
  12-10 to 2026-12-11\; begins at sundown on 2026-12-09. Hebrew date of the 
  first day: 30 Kislev 5787.
-CATEGORIES:ALEF\,roshchodesh
+CATEGORIES:Aleph\,roshchodesh
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -169,7 +169,7 @@ SUMMARY:Rosh Chodesh Shevat
 DESCRIPTION:Rosh Chodesh Shevat (רֹאשׁ חֹדֶשׁ שְׁבָט)\, 20
  27-01-09\; begins at sundown on 2027-01-08. Hebrew date of the first day: 
  1 Shevat 5787.
-CATEGORIES:ALEF\,roshchodesh
+CATEGORIES:Aleph\,roshchodesh
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -185,7 +185,7 @@ DTEND;VALUE=DATE:20270124
 SUMMARY:Tu BiShvat
 DESCRIPTION:Tu BiShvat (טוּ בִּשְׁבָט)\, 2027-01-23\; begins at
   sundown on 2027-01-22. Hebrew date of the first day: 15 Shevat 5787.
-CATEGORIES:ALEF\,holiday
+CATEGORIES:Aleph\,holiday
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -202,7 +202,7 @@ SUMMARY:Rosh Chodesh Adar I
 DESCRIPTION:Rosh Chodesh Adar I (רֹאשׁ חֹדֶשׁ אֲדָר א׳)\,
   2027-02-07 to 2027-02-08\; begins at sundown on 2027-02-06. Hebrew date o
  f the first day: 30 Shevat 5787.
-CATEGORIES:ALEF\,roshchodesh
+CATEGORIES:Aleph\,roshchodesh
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -219,7 +219,7 @@ SUMMARY:Rosh Chodesh Adar II
 DESCRIPTION:Rosh Chodesh Adar II (רֹאשׁ חֹדֶשׁ אֲדָר ב׳)\
  , 2027-03-09 to 2027-03-10\; begins at sundown on 2027-03-08. Hebrew date 
  of the first day: 30 Adar I 5787.
-CATEGORIES:ALEF\,roshchodesh
+CATEGORIES:Aleph\,roshchodesh
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -236,7 +236,7 @@ SUMMARY:Purim
 DESCRIPTION:Purim (פּוּרִים)\, 2027-03-23\; begins at sundown on 20
  27-03-22. Hebrew date of the first day: 14 Adar II 5787. Celebrated in Ada
  r II in leap years.
-CATEGORIES:ALEF\,holiday
+CATEGORIES:Aleph\,holiday
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -253,7 +253,7 @@ SUMMARY:Rosh Chodesh Nisan
 DESCRIPTION:Rosh Chodesh Nisan (רֹאשׁ חֹדֶשׁ נִיסָן)\, 202
  7-04-08\; begins at sundown on 2027-04-07. Hebrew date of the first day: 1
   Nisan 5787.
-CATEGORIES:ALEF\,roshchodesh
+CATEGORIES:Aleph\,roshchodesh
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -270,7 +270,7 @@ SUMMARY:Pesach (Passover)
 DESCRIPTION:Pesach (Passover) (פֶּסַח)\, 2027-04-22 to 2027-04-29\; b
  egins at sundown on 2027-04-21. Hebrew date of the first day: 15 Nisan 578
  7. Eight days (15-22 Nisan) in traditional diaspora practice.
-CATEGORIES:ALEF\,holiday
+CATEGORIES:Aleph\,holiday
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -289,7 +289,7 @@ DESCRIPTION:Yom HaShoah (Holocaust Remembrance Day) (יוֹם הַשּׁ
   the first day: 27 Nisan 5787. 27 Nisan\; moved to Thursday if it falls on
   Friday and to Monday if it falls on Sunday (dates equal Hebcal for 5758-5
  900).
-CATEGORIES:ALEF\,holiday
+CATEGORIES:Aleph\,holiday
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -306,7 +306,7 @@ SUMMARY:Rosh Chodesh Iyar
 DESCRIPTION:Rosh Chodesh Iyar (רֹאשׁ חֹדֶשׁ אִיָּר)\, 2027
  -05-07 to 2027-05-08\; begins at sundown on 2027-05-06. Hebrew date of the
   first day: 30 Nisan 5787.
-CATEGORIES:ALEF\,roshchodesh
+CATEGORIES:Aleph\,roshchodesh
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -324,7 +324,7 @@ DESCRIPTION:Yom HaZikaron (Israel Memorial Day) (יוֹם הַזִּכָּ
  רוֹן)\, 2027-05-11\; begins at sundown on 2027-05-10. Hebrew date of t
  he first day: 4 Iyar 5787. The day before Yom HaAtzmaut\; shifts with it (
  dates equal Hebcal for 5758-5900).
-CATEGORIES:ALEF\,holiday
+CATEGORIES:Aleph\,holiday
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -343,7 +343,7 @@ DESCRIPTION:Yom HaAtzmaut (Israel Independence Day) (יוֹם הָעַצְ
  of the first day: 5 Iyar 5787. 5 Iyar\; moved to Thursday if it falls on F
  riday or Saturday\, and to Tuesday if it falls on Monday (dates equal Hebc
  al for 5758-5900).
-CATEGORIES:ALEF\,holiday
+CATEGORIES:Aleph\,holiday
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -360,7 +360,7 @@ SUMMARY:Rosh Chodesh Sivan
 DESCRIPTION:Rosh Chodesh Sivan (רֹאשׁ חֹדֶשׁ סִיוָן)\, 202
  7-06-06\; begins at sundown on 2027-06-05. Hebrew date of the first day: 1
   Sivan 5787.
-CATEGORIES:ALEF\,roshchodesh
+CATEGORIES:Aleph\,roshchodesh
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -377,7 +377,7 @@ SUMMARY:Shavuot
 DESCRIPTION:Shavuot (שָׁבוּעוֹת)\, 2027-06-11 to 2027-06-12\; beg
  ins at sundown on 2027-06-10. Hebrew date of the first day: 6 Sivan 5787. 
  Two days (6-7 Sivan) in traditional diaspora practice.
-CATEGORIES:ALEF\,holiday
+CATEGORIES:Aleph\,holiday
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -394,7 +394,7 @@ SUMMARY:Rosh Chodesh Tammuz
 DESCRIPTION:Rosh Chodesh Tammuz (רֹאשׁ חֹדֶשׁ תַּמּוּז)\
  , 2027-07-05 to 2027-07-06\; begins at sundown on 2027-07-04. Hebrew date 
  of the first day: 30 Sivan 5787.
-CATEGORIES:ALEF\,roshchodesh
+CATEGORIES:Aleph\,roshchodesh
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -410,7 +410,7 @@ DTEND;VALUE=DATE:20270805
 SUMMARY:Rosh Chodesh Av
 DESCRIPTION:Rosh Chodesh Av (רֹאשׁ חֹדֶשׁ אָב)\, 2027-08-04\;
   begins at sundown on 2027-08-03. Hebrew date of the first day: 1 Av 5787.
-CATEGORIES:ALEF\,roshchodesh
+CATEGORIES:Aleph\,roshchodesh
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -429,7 +429,7 @@ DESCRIPTION:Tisha B'Av (תִּשְׁעָה בְּאָב)\, 2027-08-12\; beg
  er observed on Shabbat: when 9 Av is Saturday the fast moves to 10 Av (Heb
  cal). Reform observance varies (reformjudaism.org: the Temple has no centr
  al religious role in liberal Judaism).
-CATEGORIES:ALEF\,holiday
+CATEGORIES:Aleph\,holiday
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -446,7 +446,7 @@ SUMMARY:Rosh Chodesh Elul
 DESCRIPTION:Rosh Chodesh Elul (רֹאשׁ חֹדֶשׁ אֱלוּל)\, 2027
  -09-02 to 2027-09-03\; begins at sundown on 2027-09-01. Hebrew date of the
   first day: 30 Av 5787.
-CATEGORIES:ALEF\,roshchodesh
+CATEGORIES:Aleph\,roshchodesh
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -463,7 +463,7 @@ SUMMARY:Rosh Hashanah
 DESCRIPTION:Rosh Hashanah (רֹאשׁ הַשָּׁנָה)\, 2027-10-02 to 2
  027-10-03\; begins at sundown on 2027-10-01. Hebrew date of the first day:
   1 Tishrei 5788. Two days in traditional diaspora practice (1-2 Tishrei).
-CATEGORIES:ALEF\,holiday
+CATEGORIES:Aleph\,holiday
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -480,7 +480,7 @@ SUMMARY:Yom Kippur
 DESCRIPTION:Yom Kippur (יוֹם כִּפּוּר)\, 2027-10-11\; begins at
   sundown on 2027-10-10. Hebrew date of the first day: 10 Tishrei 5788. One
   day in every stream of Judaism (10 Tishrei).
-CATEGORIES:ALEF\,holiday
+CATEGORIES:Aleph\,holiday
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -498,7 +498,7 @@ DESCRIPTION:Sukkot (סֻכּוֹת)\, 2027-10-16 to 2027-10-22\; begins at
  sundown on 2027-10-15. Hebrew date of the first day: 15 Tishrei 5788. 7 da
  ys (15-21 Tishrei)\; first day is the full festival day under the one-day 
  convention.
-CATEGORIES:ALEF\,holiday
+CATEGORIES:Aleph\,holiday
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -516,7 +516,7 @@ DESCRIPTION:Shemini Atzeret (שְׁמִינִי עֲצֶרֶת)\, 2027-10-2
  3\; begins at sundown on 2027-10-22. Hebrew date of the first day: 22 Tish
  rei 5788. 22 Tishrei\; Simchat Torah follows on 23 Tishrei in traditional 
  diaspora practice.
-CATEGORIES:ALEF\,holiday
+CATEGORIES:Aleph\,holiday
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -533,7 +533,7 @@ SUMMARY:Simchat Torah
 DESCRIPTION:Simchat Torah (שִׂמְחַת תּוֹרָה)\, 2027-10-24\; 
  begins at sundown on 2027-10-23. Hebrew date of the first day: 23 Tishrei 
  5788.
-CATEGORIES:ALEF\,holiday
+CATEGORIES:Aleph\,holiday
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -550,7 +550,7 @@ SUMMARY:Rosh Chodesh Cheshvan
 DESCRIPTION:Rosh Chodesh Cheshvan (רֹאשׁ חֹדֶשׁ חֶשְׁוָן
  )\, 2027-10-31 to 2027-11-01\; begins at sundown on 2027-10-30. Hebrew dat
  e of the first day: 30 Tishrei 5788.
-CATEGORIES:ALEF\,roshchodesh
+CATEGORIES:Aleph\,roshchodesh
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -567,7 +567,7 @@ SUMMARY:Rosh Chodesh Kislev
 DESCRIPTION:Rosh Chodesh Kislev (רֹאשׁ חֹדֶשׁ כִּסְלֵו)\
  , 2027-11-30 to 2027-12-01\; begins at sundown on 2027-11-29. Hebrew date 
  of the first day: 30 Cheshvan 5788.
-CATEGORIES:ALEF\,roshchodesh
+CATEGORIES:Aleph\,roshchodesh
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -583,7 +583,7 @@ DTEND;VALUE=DATE:20280102
 SUMMARY:Hanukkah
 DESCRIPTION:Hanukkah (חֲנֻכָּה)\, 2027-12-25 to 2028-01-01\; begins
   at sundown on 2027-12-24. Hebrew date of the first day: 25 Kislev 5788.
-CATEGORIES:ALEF\,holiday
+CATEGORIES:Aleph\,holiday
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -600,7 +600,7 @@ SUMMARY:Rosh Chodesh Tevet
 DESCRIPTION:Rosh Chodesh Tevet (רֹאשׁ חֹדֶשׁ טֵבֵת)\, 2027-
  12-30 to 2027-12-31\; begins at sundown on 2027-12-29. Hebrew date of the 
  first day: 30 Kislev 5788.
-CATEGORIES:ALEF\,roshchodesh
+CATEGORIES:Aleph\,roshchodesh
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -617,7 +617,7 @@ SUMMARY:Rosh Chodesh Shevat
 DESCRIPTION:Rosh Chodesh Shevat (רֹאשׁ חֹדֶשׁ שְׁבָט)\, 20
  28-01-29\; begins at sundown on 2028-01-28. Hebrew date of the first day: 
  1 Shevat 5788.
-CATEGORIES:ALEF\,roshchodesh
+CATEGORIES:Aleph\,roshchodesh
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -633,7 +633,7 @@ DTEND;VALUE=DATE:20280213
 SUMMARY:Tu BiShvat
 DESCRIPTION:Tu BiShvat (טוּ בִּשְׁבָט)\, 2028-02-12\; begins at
   sundown on 2028-02-11. Hebrew date of the first day: 15 Shevat 5788.
-CATEGORIES:ALEF\,holiday
+CATEGORIES:Aleph\,holiday
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -650,7 +650,7 @@ SUMMARY:Rosh Chodesh Adar
 DESCRIPTION:Rosh Chodesh Adar (רֹאשׁ חֹדֶשׁ אֲדָר)\, 2028-0
  2-27 to 2028-02-28\; begins at sundown on 2028-02-26. Hebrew date of the f
  irst day: 30 Shevat 5788.
-CATEGORIES:ALEF\,roshchodesh
+CATEGORIES:Aleph\,roshchodesh
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -667,7 +667,7 @@ SUMMARY:Purim
 DESCRIPTION:Purim (פּוּרִים)\, 2028-03-12\; begins at sundown on 20
  28-03-11. Hebrew date of the first day: 14 Adar 5788. Celebrated in Adar I
  I in leap years.
-CATEGORIES:ALEF\,holiday
+CATEGORIES:Aleph\,holiday
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -684,7 +684,7 @@ SUMMARY:Rosh Chodesh Nisan
 DESCRIPTION:Rosh Chodesh Nisan (רֹאשׁ חֹדֶשׁ נִיסָן)\, 202
  8-03-28\; begins at sundown on 2028-03-27. Hebrew date of the first day: 1
   Nisan 5788.
-CATEGORIES:ALEF\,roshchodesh
+CATEGORIES:Aleph\,roshchodesh
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -701,7 +701,7 @@ SUMMARY:Pesach (Passover)
 DESCRIPTION:Pesach (Passover) (פֶּסַח)\, 2028-04-11 to 2028-04-18\; b
  egins at sundown on 2028-04-10. Hebrew date of the first day: 15 Nisan 578
  8. Eight days (15-22 Nisan) in traditional diaspora practice.
-CATEGORIES:ALEF\,holiday
+CATEGORIES:Aleph\,holiday
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -720,7 +720,7 @@ DESCRIPTION:Yom HaShoah (Holocaust Remembrance Day) (יוֹם הַשּׁ
   the first day: 28 Nisan 5788. 27 Nisan\; moved to Thursday if it falls on
   Friday and to Monday if it falls on Sunday (dates equal Hebcal for 5758-5
  900).
-CATEGORIES:ALEF\,holiday
+CATEGORIES:Aleph\,holiday
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -737,7 +737,7 @@ SUMMARY:Rosh Chodesh Iyar
 DESCRIPTION:Rosh Chodesh Iyar (רֹאשׁ חֹדֶשׁ אִיָּר)\, 2028
  -04-26 to 2028-04-27\; begins at sundown on 2028-04-25. Hebrew date of the
   first day: 30 Nisan 5788.
-CATEGORIES:ALEF\,roshchodesh
+CATEGORIES:Aleph\,roshchodesh
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -755,7 +755,7 @@ DESCRIPTION:Yom HaZikaron (Israel Memorial Day) (יוֹם הַזִּכָּ
  רוֹן)\, 2028-05-01\; begins at sundown on 2028-04-30. Hebrew date of t
  he first day: 5 Iyar 5788. The day before Yom HaAtzmaut\; shifts with it (
  dates equal Hebcal for 5758-5900).
-CATEGORIES:ALEF\,holiday
+CATEGORIES:Aleph\,holiday
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -774,7 +774,7 @@ DESCRIPTION:Yom HaAtzmaut (Israel Independence Day) (יוֹם הָעַצְ
  of the first day: 6 Iyar 5788. 5 Iyar\; moved to Thursday if it falls on F
  riday or Saturday\, and to Tuesday if it falls on Monday (dates equal Hebc
  al for 5758-5900).
-CATEGORIES:ALEF\,holiday
+CATEGORIES:Aleph\,holiday
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -791,7 +791,7 @@ SUMMARY:Rosh Chodesh Sivan
 DESCRIPTION:Rosh Chodesh Sivan (רֹאשׁ חֹדֶשׁ סִיוָן)\, 202
  8-05-26\; begins at sundown on 2028-05-25. Hebrew date of the first day: 1
   Sivan 5788.
-CATEGORIES:ALEF\,roshchodesh
+CATEGORIES:Aleph\,roshchodesh
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -808,7 +808,7 @@ SUMMARY:Shavuot
 DESCRIPTION:Shavuot (שָׁבוּעוֹת)\, 2028-05-31 to 2028-06-01\; beg
  ins at sundown on 2028-05-30. Hebrew date of the first day: 6 Sivan 5788. 
  Two days (6-7 Sivan) in traditional diaspora practice.
-CATEGORIES:ALEF\,holiday
+CATEGORIES:Aleph\,holiday
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -825,7 +825,7 @@ SUMMARY:Rosh Chodesh Tammuz
 DESCRIPTION:Rosh Chodesh Tammuz (רֹאשׁ חֹדֶשׁ תַּמּוּז)\
  , 2028-06-24 to 2028-06-25\; begins at sundown on 2028-06-23. Hebrew date 
  of the first day: 30 Sivan 5788.
-CATEGORIES:ALEF\,roshchodesh
+CATEGORIES:Aleph\,roshchodesh
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -841,7 +841,7 @@ DTEND;VALUE=DATE:20280725
 SUMMARY:Rosh Chodesh Av
 DESCRIPTION:Rosh Chodesh Av (רֹאשׁ חֹדֶשׁ אָב)\, 2028-07-24\;
   begins at sundown on 2028-07-23. Hebrew date of the first day: 1 Av 5788.
-CATEGORIES:ALEF\,roshchodesh
+CATEGORIES:Aleph\,roshchodesh
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -860,7 +860,7 @@ DESCRIPTION:Tisha B'Av (תִּשְׁעָה בְּאָב)\, 2028-08-01\; beg
  er observed on Shabbat: when 9 Av is Saturday the fast moves to 10 Av (Heb
  cal). Reform observance varies (reformjudaism.org: the Temple has no centr
  al religious role in liberal Judaism).
-CATEGORIES:ALEF\,holiday
+CATEGORIES:Aleph\,holiday
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -877,7 +877,7 @@ SUMMARY:Rosh Chodesh Elul
 DESCRIPTION:Rosh Chodesh Elul (רֹאשׁ חֹדֶשׁ אֱלוּל)\, 2028
  -08-22 to 2028-08-23\; begins at sundown on 2028-08-21. Hebrew date of the
   first day: 30 Av 5788.
-CATEGORIES:ALEF\,roshchodesh
+CATEGORIES:Aleph\,roshchodesh
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -894,7 +894,7 @@ SUMMARY:Rosh Hashanah
 DESCRIPTION:Rosh Hashanah (רֹאשׁ הַשָּׁנָה)\, 2028-09-21 to 2
  028-09-22\; begins at sundown on 2028-09-20. Hebrew date of the first day:
   1 Tishrei 5789. Two days in traditional diaspora practice (1-2 Tishrei).
-CATEGORIES:ALEF\,holiday
+CATEGORIES:Aleph\,holiday
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -911,7 +911,7 @@ SUMMARY:Yom Kippur
 DESCRIPTION:Yom Kippur (יוֹם כִּפּוּר)\, 2028-09-30\; begins at
   sundown on 2028-09-29. Hebrew date of the first day: 10 Tishrei 5789. One
   day in every stream of Judaism (10 Tishrei).
-CATEGORIES:ALEF\,holiday
+CATEGORIES:Aleph\,holiday
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -929,7 +929,7 @@ DESCRIPTION:Sukkot (סֻכּוֹת)\, 2028-10-05 to 2028-10-11\; begins at
  sundown on 2028-10-04. Hebrew date of the first day: 15 Tishrei 5789. 7 da
  ys (15-21 Tishrei)\; first day is the full festival day under the one-day 
  convention.
-CATEGORIES:ALEF\,holiday
+CATEGORIES:Aleph\,holiday
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -947,7 +947,7 @@ DESCRIPTION:Shemini Atzeret (שְׁמִינִי עֲצֶרֶת)\, 2028-10-1
  2\; begins at sundown on 2028-10-11. Hebrew date of the first day: 22 Tish
  rei 5789. 22 Tishrei\; Simchat Torah follows on 23 Tishrei in traditional 
  diaspora practice.
-CATEGORIES:ALEF\,holiday
+CATEGORIES:Aleph\,holiday
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -964,7 +964,7 @@ SUMMARY:Simchat Torah
 DESCRIPTION:Simchat Torah (שִׂמְחַת תּוֹרָה)\, 2028-10-13\; 
  begins at sundown on 2028-10-12. Hebrew date of the first day: 23 Tishrei 
  5789.
-CATEGORIES:ALEF\,holiday
+CATEGORIES:Aleph\,holiday
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -981,7 +981,7 @@ SUMMARY:Rosh Chodesh Cheshvan
 DESCRIPTION:Rosh Chodesh Cheshvan (רֹאשׁ חֹדֶשׁ חֶשְׁוָן
  )\, 2028-10-20 to 2028-10-21\; begins at sundown on 2028-10-19. Hebrew dat
  e of the first day: 30 Tishrei 5789.
-CATEGORIES:ALEF\,roshchodesh
+CATEGORIES:Aleph\,roshchodesh
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -998,7 +998,7 @@ SUMMARY:Rosh Chodesh Kislev
 DESCRIPTION:Rosh Chodesh Kislev (רֹאשׁ חֹדֶשׁ כִּסְלֵו)\
  , 2028-11-19\; begins at sundown on 2028-11-18. Hebrew date of the first d
  ay: 1 Kislev 5789.
-CATEGORIES:ALEF\,roshchodesh
+CATEGORIES:Aleph\,roshchodesh
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -1014,7 +1014,7 @@ DTEND;VALUE=DATE:20281221
 SUMMARY:Hanukkah
 DESCRIPTION:Hanukkah (חֲנֻכָּה)\, 2028-12-13 to 2028-12-20\; begins
   at sundown on 2028-12-12. Hebrew date of the first day: 25 Kislev 5789.
-CATEGORIES:ALEF\,holiday
+CATEGORIES:Aleph\,holiday
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -1031,7 +1031,7 @@ SUMMARY:Rosh Chodesh Tevet
 DESCRIPTION:Rosh Chodesh Tevet (רֹאשׁ חֹדֶשׁ טֵבֵת)\, 2028-
  12-18 to 2028-12-19\; begins at sundown on 2028-12-17. Hebrew date of the 
  first day: 30 Kislev 5789.
-CATEGORIES:ALEF\,roshchodesh
+CATEGORIES:Aleph\,roshchodesh
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY

@@ -42,6 +42,7 @@ async function makeAudio() {
 }
 // The preview banner module loads only once a preview-tier route is shown (v0 routes never need it); afterwards it also clears a stale banner.
 let lastCtx = null, lastMatch = null, touched = false;
+let pictureMiss = null; // the page (router match) that asked for a picture before the picture list had loaded
 // Finer-grained than `touched`, for the late-manifest retry: a gesture outside a text field, or an edit to any field.
 let touchedOutsideField = false, fieldEdited = false;
 /** serviceWorker is read inside try: some browsers throw on the property itself (blocked storage / cookies), and boot must never depend on it. */
@@ -212,7 +213,7 @@ function firstPaintTitle(route, params) {
   }
   if (route?.name === 'learn') return 'Lessons';
   if (route?.name === 'sounds') return 'Vowels and sounds';
-  return route?.title ?? 'ALEF';
+  return route?.title ?? 'Aleph';
 }
 function firstPaintClass(route) {
   if (route?.name === 'learn') return 'alef-first-paint alef-learn-hero';
@@ -237,15 +238,19 @@ async function show(match, ctxBase, { quiet = false } = {}) {
   if (!route) {
     const updating = h('p', { class: 'muted', role: 'status' });
     root.replaceChildren(h('section', { class: 'card' }, h('h1', { id: 'view-title', tabindex: '-1' }, t('notfound.title')), h('p', { class: 'mono' }, path), updating, h('a', { class: 'btn', href: '#/' }, t('nav.home'))));
-    renderNav(null); document.title = `${t('notfound.title')} - ALEF`;
+    renderNav(null); document.title = `${t('notfound.title')} - Aleph`;
     updateForMissingPage(path, () => { updating.textContent = t('notfound.updating'); });
     return finish();
   }
   if (route.name === 'home' && !settings.get('onboarded')) { ctxBase.route('/welcome'); return; }
   renderNav(route.name);
   try { statbar?.refresh(); } catch { /* the bar is decoration */ }
-  document.title = route.name === 'home' ? 'ALEF' : `${titleCase(route.title)} - ALEF`;
+  document.title = route.name === 'home' ? 'Aleph' : `${titleCase(route.title)} - Aleph`;
   const ctx = { ...ctxBase, params, query, path, routeName: route.name };
+  // A page opened before the picture list has loaded draws without pictures. Note which page asked for one, so boot can
+  // redraw it once (quietly, and only if the learner has not touched it) when the list arrives.
+  { const base = ctxBase; Object.defineProperty(ctx, 'images', { enumerable: true, configurable: true, get() { if (!base.images) pictureMiss = match; return base.images; } });
+    const imgFn = ctxBase.img; ctx.img = (hh, spec) => { if (!base.images) pictureMiss = match; return imgFn(hh, spec); }; }
   // U-24: never a blank page while a view module loads — a named skeleton
   // stands in, replaced the moment the view mounts (or by the error card).
   // Keep a first-paint title on Learn, Letters and Sounds so LCP can be the heading, not a late view block.
@@ -298,10 +303,10 @@ async function show(match, ctxBase, { quiet = false } = {}) {
     console.error(`view ${route.name} failed`, err);
     unavailableCard(root, { title: route.title, t, module: route.module, error: err?.message, kind: 'error' });
   }
-  if (route.name === 'letter' && params?.id && token === navToken) { // "Letter Bet - ALEF" rather than a generic title; falls back to the id, then to the route title
+  if (route.name === 'letter' && params?.id && token === navToken) { // "Letter Bet - Aleph" rather than a generic title; falls back to the id, then to the route title
     let nm = '';
     try { const L = await (await fetch(new URL('../data/letters/letters.json', import.meta.url))).json(); nm = (Array.isArray(L) ? L : L.letters || []).find((x) => x.id === params.id)?.name || ''; } catch { /* keep the generic title */ }
-    if (token === navToken) document.title = `${route.title} ${nm || params.id.charAt(0).toUpperCase() + params.id.slice(1)} - ALEF`;
+    if (token === navToken) document.title = `${route.title} ${nm || params.id.charAt(0).toUpperCase() + params.id.slice(1)} - Aleph`;
   }
   // No preview note on pages: every page is presented as a finished part of Aleph.
   root.removeAttribute('aria-busy');
@@ -321,7 +326,7 @@ async function show(match, ctxBase, { quiet = false } = {}) {
     heldFocusId = '';
     if (!quiet) { live.textContent = document.title; if (scrollKeeper) scrollKeeper.arrive(location.hash); else window.scrollTo(0, 0); lastHashShown = location.hash; }
     document.body.dataset.route = route?.name ?? 'notfound';
-    try { updateCompanions(route?.name, { R: ctx.images, voice: ctx.settings?.get?.('voice') }); } catch (e) { console.warn('companions band failed', e); } // Ari and Noa on every screen; a band fault must not break the view
+    try { updateCompanions(route?.name, { R: ctxBase?.images, voice: ctxBase?.settings?.get?.('voice') }); } catch (e) { console.warn('companions band failed', e); } // Ari and Noa on every screen; a band fault must not break the view
     try { syncGameMusic(route, settings); } catch (e) { console.warn('game music bar failed', e); }
     document.body.dataset.ready = '1';
     document.dispatchEvent(new Event('alef:ready'));
@@ -403,6 +408,7 @@ async function boot() {
   // view has painted, load the resolver and fill the teacher band; the next navigation (or a quiet refresh) can draw pictures.
   shownFirst.then(() => afterPaint(async () => {
     try { images = await resolveImages(); ctxBase.images = images; try { updateCompanions(document.body.dataset.route, { R: images, voice: settings.get('voice') }); } catch { /* band fills on next navigation */ } } catch { images = null; }
+    if (images && pictureMiss) { const was = pictureMiss; pictureMiss = null; try { refreshWhenCalm(was); } catch { /* pictures arrive on the next page instead */ } }
   }, { waitMs: 4000 })).catch(() => {});
   import('./shell/boot-hooks.js').then((m) => m.armReminders(ctxBase)).catch(() => {});
   shownFirst.then(() => afterPaint(() => import('./shell/boot-hooks.js').then((m) => m.armRetention(ctxBase)).catch(() => {}), { waitMs: LATE_MS, minMs: LATE_MS })); // streak freezes, XP, gems, hearts, league (src/retention/, after the first-load JS window)
@@ -451,5 +457,5 @@ function updateForMissingPage(path, onUpdating) {
 window.addEventListener('error', (e) => { document.body.dataset.lastError = e.message; });
 boot().catch((e) => {
   console.error(e);
-  document.getElementById('main').textContent = 'ALEF could not start. Reload the page. If it keeps happening, try another browser.';
+  document.getElementById('main').textContent = 'Aleph could not start. Reload the page. If it keeps happening, try another browser.';
 });

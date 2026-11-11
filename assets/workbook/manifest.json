@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-05",
+ "generated": "2026-11-11",
  "status": "DRAFT: stroke order not reviewed by a native teacher",
  "fonts": "Frank Ruhl Libre, Gveret Levin (SIL OFL 1.1)",
  "files": [
@@ -24,7 +24,7 @@
     "confusables"
    ],
    "pdf": "alef-workbook-print-a4.pdf",
-   "bytes": 563899
+   "bytes": 564016
   },
   {
    "id": "alef-workbook-print-letter",
@@ -47,7 +47,7 @@
     "confusables"
    ],
    "pdf": "alef-workbook-print-letter.pdf",
-   "bytes": 563795
+   "bytes": 563923
   },
   {
    "id": "alef-workbook-cursive-a4",
@@ -71,7 +71,7 @@
     "confusables"
    ],
    "pdf": "alef-workbook-cursive-a4.pdf",
-   "bytes": 602653
+   "bytes": 602690
   },
   {
    "id": "alef-workbook-cursive-letter",
@@ -95,7 +95,7 @@
     "confusables"
    ],
    "pdf": "alef-workbook-cursive-letter.pdf",
-   "bytes": 603017
+   "bytes": 603061
   },
   {
    "id": "alef-workbook-print-a4-mnemonics",
@@ -118,7 +118,7 @@
     "confusables"
    ],
    "pdf": "alef-workbook-print-a4-mnemonics.pdf",
-   "bytes": 600227
+   "bytes": 600692
   },
   {
    "id": "alef-workbook-print-letter-mnemonics",
@@ -141,7 +141,7 @@
     "confusables"
    ],
    "pdf": "alef-workbook-print-letter-mnemonics.pdf",
-   "bytes": 600150
+   "bytes": 600627
   },
   {
    "id": "alef-workbook-cursive-a4-mnemonics",
@@ -165,7 +165,7 @@
     "confusables"
    ],
    "pdf": "alef-workbook-cursive-a4-mnemonics.pdf",
-   "bytes": 639474
+   "bytes": 639846
   },
   {
    "id": "alef-workbook-cursive-letter-mnemonics",
@@ -189,7 +189,7 @@
     "confusables"
    ],
    "pdf": "alef-workbook-cursive-letter-mnemonics.pdf",
-   "bytes": 639824
+   "bytes": 640218
   },
   {
    "id": "alef-firstday-a4",
@@ -207,7 +207,7 @@
     "ladder"
    ],
    "pdf": "alef-firstday-a4.pdf",
-   "bytes": 320588
+   "bytes": 320469
   },
   {
    "id": "alef-firstday-letter",
@@ -225,7 +225,7 @@
     "ladder"
    ],
    "pdf": "alef-firstday-letter.pdf",
-   "bytes": 318401
+   "bytes": 318271
   },
   {
    "id": "alef-cursive-words-a4",
@@ -252,7 +252,7 @@
     "letters"
    ],
    "pdf": "alef-cursive-words-a4.pdf",
-   "bytes": 648765
+   "bytes": 649124
   },
   {
    "id": "alef-cursive-words-letter",
@@ -279,7 +279,7 @@
     "letters"
    ],
    "pdf": "alef-cursive-words-letter.pdf",
-   "bytes": 648306
+   "bytes": 648653
   },
   {
    "id": "alef-niqqud-a4",
@@ -307,7 +307,7 @@
     "sign"
    ],
    "pdf": "alef-niqqud-a4.pdf",
-   "bytes": 533259
+   "bytes": 533265
   },
   {
    "id": "alef-niqqud-letter",
@@ -335,7 +335,7 @@
     "sign"
    ],
    "pdf": "alef-niqqud-letter.pdf",
-   "bytes": 532437
+   "bytes": 532445
   },
   {
    "id": "alef-readaloud-a4",
@@ -377,7 +377,7 @@
     "cheatsheet"
    ],
    "pdf": "alef-readaloud-a4.pdf",
-   "bytes": 238356
+   "bytes": 238879
   },
   {
    "id": "alef-readaloud-letter",
@@ -419,7 +419,7 @@
     "cheatsheet"
    ],
    "pdf": "alef-readaloud-letter.pdf",
-   "bytes": 237152
+   "bytes": 237602
   },
   {
    "id": "alef-flashcards-a4",
@@ -861,7 +861,7 @@
     "cards"
    ],
    "pdf": "alef-flashcards-a4.pdf",
-   "bytes": 1455227
+   "bytes": 1447916
   },
   {
    "id": "alef-flashcards-letter",
@@ -1303,7 +1303,7 @@
     "cards"
    ],
    "pdf": "alef-flashcards-letter.pdf",
-   "bytes": 1452786
+   "bytes": 1445071
   },
   {
    "id": "alef-flashcards-light-a4",
@@ -1409,7 +1409,7 @@
     "cards"
    ],
    "pdf": "alef-flashcards-light-a4.pdf",
-   "bytes": 328385
+   "bytes": 326431
   },
   {
    "id": "alef-flashcards-light-letter",
@@ -1515,7 +1515,7 @@
     "cards"
    ],
    "pdf": "alef-flashcards-light-letter.pdf",
-   "bytes": 327577
+   "bytes": 325548
   },
   {
    "id": "alef-flashcards-letters-a4",
@@ -1534,7 +1534,7 @@
     "letter-backs"
    ],
    "pdf": "alef-flashcards-letters-a4.pdf",
-   "bytes": 467273
+   "bytes": 467171
   },
   {
    "id": "alef-flashcards-letters-letter",
@@ -1553,7 +1553,7 @@
     "letter-backs"
    ],
    "pdf": "alef-flashcards-letters-letter.pdf",
-   "bytes": 480751
+   "bytes": 480663
   },
   {
    "id": "alef-memory-chain-a4",
@@ -1566,7 +1566,7 @@
     "poster"
    ],
    "pdf": "alef-memory-chain-a4.pdf",
-   "bytes": 334892
+   "bytes": 334333
   },
   {
    "id": "alef-memory-chain-letter",
@@ -1579,7 +1579,7 @@
     "poster"
    ],
    "pdf": "alef-memory-chain-letter.pdf",
-   "bytes": 339649
+   "bytes": 339095
   },
   {
    "id": "alef-answer-key-a4",
@@ -1602,7 +1602,7 @@
     "readaloud"
    ],
    "pdf": "alef-answer-key-a4.pdf",
-   "bytes": 221483
+   "bytes": 221730
   },
   {
    "id": "alef-answer-key-letter",
@@ -1625,7 +1625,7 @@
     "readaloud"
    ],
    "pdf": "alef-answer-key-letter.pdf",
-   "bytes": 221160
+   "bytes": 221474
   }
  ]
 }

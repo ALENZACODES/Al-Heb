@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// ALEF book builder: data -> print-ready HTML (book/out/alef-book.html) -> PDF via Playwright Chromium (two passes so the
+// Aleph book builder: data -> print-ready HTML (book/out/alef-book.html) -> PDF via Playwright Chromium (two passes so the
 // index/contents get real page numbers from the PDF's link destinations).
 //   node book/build.mjs                       # HTML only
 //   node book/build.mjs --pdf                 # HTML + book/out/alef-book-draft.pdf (with cover)
@@ -184,8 +184,8 @@ export function buildHtml(o, pages = {}) {
   const qrBox = (k, cls) => qr[k] ? `<div class="${cls}">${qr[k]}</div>` : '';
 
   const cover = o.print ? '' : `<section class="cover"><div class="art"><img src="${R.src('BRAND_cover_a')}" alt=""/></div>
-<div class="titles">${he('אָלֶף בֵּית', 'he-big')}<h1>ALEF</h1><p>Read Hebrew. Say it. Live it.</p>
-<p class="small" style="margin-top:3in">DRAFT PROOF &middot; not for sale</p></div></section>`;
+<div class="titles">${he('אָלֶף בֵּית', 'he-big')}<h1>Aleph</h1><p>Read Hebrew. Say it. Live it.</p>
+<p class="small" style="margin-top:6.2in">DRAFT PROOF &middot; not for sale</p></div></section>`;
 
   const prayerOpen = `<section class="chapter front-page"><h2>Prayer for the One Who Begins</h2>
 <p class="draft-flag">DRAFT &mdash; pending clergy/educator review</p>
@@ -220,7 +220,7 @@ ${toc('ch-blessing', 'The Priestly Blessing')}${ct?.weeks?.length ? toc('ch-clas
     'Shva, dagesh and stress (traditions page); the Shema in full.',
     'Torah service blessings; Shabbat and the table (Kiddush); then choose any unseen text.'];
   const classSection = ct?.weeks?.length ? `<section class="chapter" id="ch-class"><h2>How to use this book in a 10-week class</h2>
-<p>This page is for a teacher, a study group, or a learner who wants a calendar. The book is organised like a reference (all letters, then all vowels, then prayers), so the table below tells you where to look each week. It follows ALEF&rsquo;s draft ${ct.weeks.length}-week adult reading track (${ct.sessionMinutes ?? 60}-minute weekly session, data/curriculum/class-track.json), which has <b>not been reviewed by an educator</b>; adapt it to your group.</p>
+<p>This page is for a teacher, a study group, or a learner who wants a calendar. The book is organised like a reference (all letters, then all vowels, then prayers), so the table below tells you where to look each week. It follows Aleph&rsquo;s draft ${ct.weeks.length}-week adult reading track (${ct.sessionMinutes ?? 60}-minute weekly session, data/curriculum/class-track.json), which has <b>not been reviewed by an educator</b>; adapt it to your group.</p>
 <table class="grid classweeks"><thead><tr><th>Wk</th><th>Focus</th><th>New letters (book page)</th><th>Also in this book</th></tr></thead><tbody>
 ${ct.weeks.map((w, i) => `<tr><td>${w.week}</td><td>${esc(w.title)}</td><td>${(WEEK_LETTERS[i] || []).map((id) => { const L = LETTERS.find((x) => x.id === id); return `<a href="#letter-${id}" style="display:contents">${esc(L ? L.title : id)}&nbsp;<span class="pg">${pages['letter-' + id] ?? '&middot;&middot;&middot;'}</span></a>`; }).join(', ') || '&ndash;'}</td><td class="small">${esc(WEEK_BOOK[i] || '')}</td></tr>`).join('')}</tbody></table>
 <h3>A session in about an hour</h3>
@@ -369,7 +369,7 @@ ${wl.length ? `<p class="small"><b>Word list attribution.</b> Word ranking deriv
 ${attr.length ? `<h3>Text attributions (from the registry)</h3>${attr.map((a) => `<p class="small">${esc(a)}</p>`).join('')}` : ''}
 </section>`;
 
-  const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"/><title>ALEF - draft proof</title><style>${pageCss(o, tw, th, bleed)}\n${fontFaces(outDir)}\n${readFileSync(join(ROOT, 'book/style.css'), 'utf8')}\n${EX.css}\n${TORAH_PLATE_CSS}</style></head><body>
+  const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"/><title>Aleph - draft proof</title><style>${pageCss(o, tw, th, bleed)}\n${fontFaces(outDir)}\n${readFileSync(join(ROOT, 'book/style.css'), 'utf8')}\n${EX.css}\n${TORAH_PLATE_CSS}</style></head><body>
 ${cover}${prayerOpen}${blessingPage}${howTo}${classSection}${firstDayChapter(pages)}${babyStepsChapter(pages)}${memChainChapter(pages)}${tradPage}${EX.sounds}${alphabet}
 ${letterPages}
 ${remember}

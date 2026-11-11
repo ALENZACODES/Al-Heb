@@ -44,7 +44,7 @@ test('e2e #/camera: a tilted sign is straightened, and the tap targets follow th
 
 test('e2e #/camera: lines outside the sign list: the app dictionary translates word for word, or the line is left alone', { skip: !runCamera || !existsSync(fixture('outside-list-big-lemon.jpg')) }, async () => {
   const lemon = await runCamera({ image: fixture('outside-list-big-lemon.jpg') }); clean(lemon);
-  assert.deepEqual(lemon.lines, ['1. Big Lemon']); assert.match(lemon.detail, /Word for word from the ALEF dictionary/); assert.equal(lemon.dictionaryFetched, true);
+  assert.deepEqual(lemon.lines, ['1. Big Lemon']); assert.match(lemon.detail, /Word for word from the Aleph dictionary/); assert.equal(lemon.dictionaryFetched, true);
   const salt = await runCamera({ image: fixture('outside-list-salt.jpg') }); clean(salt);
   assert.deepEqual(salt.lines, ['1. Not translated'], 'salt or sailor: a spelling with two meanings is not drawn');
   assert.equal(salt.words.length, 1); assert.match(salt.words[0], /This spelling can also be/);

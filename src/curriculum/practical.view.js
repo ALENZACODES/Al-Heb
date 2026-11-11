@@ -147,12 +147,16 @@ function renderList(root, ctx, index, covers, progress, results, written) {
             const imgId = covers?.units?.[u.id]?.imageId;
             const pageCount = counts[u.id] || u.pageCount || 0;
             const doneN = [...done].filter((k) => k.startsWith(`${u.id}|`)).length;
+            // Every unit is the same card: a picture box of one size (a plain tile with the unit's first letter when
+            // no approved picture fits), then the progress ring, the title and the page count.
             return el("li", { "data-unit": u.id },
-              coverNode(ctx, imgId, u.title),
-              ring(progressFraction(doneN, pageCount), `${doneN} of ${pageCount} pages done`),
-              el("a", { href: unitHref(u.id) }, u.title),
-              " ",
-              el("span", { class: "muted" }, `${pageCount} page${pageCount === 1 ? "" : "s"}`));
+              el("span", { class: "alef-practical-thumb", "aria-hidden": "true" },
+                coverNode(ctx, imgId, u.title) || el("span", { class: "alef-practical-thumb-letter" }, String(u.title || "").trim().charAt(0).toUpperCase())),
+              el("span", { class: "alef-practical-row" },
+                ring(progressFraction(doneN, pageCount), `${doneN} of ${pageCount} pages done`),
+                el("span", { class: "alef-practical-text" },
+                  el("a", { href: unitHref(u.id) }, u.title),
+                  el("span", { class: "muted" }, `${pageCount} page${pageCount === 1 ? "" : "s"}`))));
           }))))));
 }
 

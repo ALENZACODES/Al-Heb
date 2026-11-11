@@ -74,7 +74,7 @@ test('launch: 404.html is a self-contained not-found page that can map a path to
   assert.ok(!/(?:href|src)="https?:/.test(off404), '404.html must not request an external URL (it may be served from a nested path)');
   assert.ok(!/<script(?![^>]*\bsrc=)[^>]*>/i.test(off404), '404.html must not use an inline script (CSP script-src is self only)');
   assert.match(off404, /Page not found/);
-  assert.match(off404, /Open ALEF/);
+  assert.match(off404, /Open Aleph/);
   assert.match(off404, /#\//);
   assert.match(off404, /Al-Heb/);
   assert.match(off404, /<html lang="en"/);

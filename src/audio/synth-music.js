@@ -22,7 +22,7 @@ export const SYNTH_STYLES = [
   { id: 'syn_shuk', level: 1.6, title: 'Shuk Groove', role: 'Market rhythm', bpm: 100, root: 52, scale: FREYGISH, prog: [0, 0, 6, 0, 3, 3, 6, 0],
     pad: 'reed', bass: 'pluck', lead: 'oud', arp: null, swing: 0.05,
     drums: { doum: 'x.....x...x.....', tek: '..x.x...x.x.x.x.', hat: '' } },
-  { id: 'syn_pixel', level: 1.1, title: 'Pixel ALEF', role: 'Chiptune', bpm: 132, root: 57, scale: MAJOR, prog: [0, 4, 5, 3],
+  { id: 'syn_pixel', level: 1.1, title: 'Pixel Aleph', role: 'Chiptune', bpm: 132, root: 57, scale: MAJOR, prog: [0, 4, 5, 3],
     pad: null, bass: 'chipbass', lead: 'square', arp: 'chiparp', swing: 0,
     drums: { kick: 'x...x...x...x...', snare: '....x.......x...', hat: 'x.x.x.x.x.x.x.x.' } },
   { id: 'syn_jerusalem', level: 1, title: 'Jerusalem Dawn', role: 'Ambient', bpm: 64, root: 50, scale: PENTA, prog: [0, 3, 4, 2],

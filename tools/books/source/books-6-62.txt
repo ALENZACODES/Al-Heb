@@ -1,4 +1,4 @@
-# ALEF little books 6 to 62: adult beginner readers.
+# Aleph little books 6 to 62: adult beginner readers.
 # Format: "## id | titleHe | titleTranslit | titleEn | band" then one page per line: "he | translit | en | illustration".
 # Bands: A = 2 to 3 words a page, B = 3 to 5, C = 4 to 6 (sometimes two short sentences).
 # All stories are original. Drafts: no native speaker has reviewed the Hebrew or the pointing.

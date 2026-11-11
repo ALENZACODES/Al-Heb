@@ -1,4 +1,4 @@
-/* ALEF service worker. Precache list comes from the generated precache-manifest.js
+/* Aleph service worker. Precache list comes from the generated precache-manifest.js
    (node tools/build-precache.mjs). Strategies:
    - navigation: network first, fall back to cached index.html, then offline.html
    - audio/images/fonts: cache first, filled at runtime (audio in alef-runtime-v1; the rest in the per-version alef-data-<version>, dropped on activate)
@@ -14,7 +14,7 @@
      a kept copy, else the network; the worker never stores them
    - everything else same-origin: stale-while-revalidate
    Lifecycle: a new worker installs its shell cache and then WAITS. It takes over only when the page posts {type:'SKIP_WAITING'}
-   (src/shell/update.js does that when the learner presses "Reload now" in the update banner) or when every ALEF tab is closed.
+   (src/shell/update.js does that when the learner presses "Reload now" in the update banner) or when every Aleph tab is closed.
    So a running page is never switched to a newer cache under it. activate still claims clients so the reload lands on the new worker. */
 importScripts('precache-manifest.js');
 const VERSION = self.ALEF_VERSION || 'dev';
@@ -118,7 +118,7 @@ self.addEventListener('activate', (event) => {
 
 const MEDIA = /\.(mp3|m4a|ogg|wav|png|jpe?g|webp|gif|svg|woff2?|ttf|otf)$/i;
 
-// Tapping a reminder opens (or focuses) ALEF at the reminder's route. Notifications are shown by the page (src/shell/notify.js).
+// Tapping a reminder opens (or focuses) Aleph at the reminder's route. Notifications are shown by the page (src/shell/notify.js).
 self.addEventListener('notificationclick', (event) => {
   const route = (event.notification && event.notification.data && event.notification.data.route) || '#/learn';
   event.notification.close();
@@ -219,7 +219,7 @@ async function rimonCheck() {
   } catch { /* reminders are best effort */ }
 }
 self.addEventListener('periodicsync', (event) => { if (event.tag === 'alef-rimon') event.waitUntil(rimonCheck()); });
-// A tap on any ALEF notification: close it, focus an open ALEF window (or open one) and go to the route it carries.
+// A tap on any Aleph notification: close it, focus an open Aleph window (or open one) and go to the route it carries.
 self.addEventListener('notificationclick', (event) => {
   const route = (event.notification && event.notification.data && event.notification.data.route) || '#/';
   event.notification.close();

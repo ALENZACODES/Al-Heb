@@ -85,7 +85,7 @@ def write_grouped(items, counts=None, spent=None, dest=OUT):
     lines = [
         "# Practical items that failed the Google Cloud test — grouped by cause",
         "",
-        "You are Claude, working on ALEF (repo ALENZACODES/Al-Heb), lane C curriculum.",
+        "You are Claude, working on Aleph (repo ALENZACODES/Al-Heb), lane C curriculum.",
         "Please propose exact fixes from Hebrew and English already in the item's source",
         "(`data/corpus/phrasebook.json`, `data/curriculum/lessons.json`, or `data/curriculum/dialogues.json`).",
         "Do not invent new Hebrew and treat it as verified. Do not voice or rewrite the divine Name.",

@@ -1,4 +1,4 @@
-/* ALEF design tokens: one scale for spacing, type, corners, depth and motion, shared by every screen.
+/* Aleph design tokens: one scale for spacing, type, corners, depth and motion, shared by every screen.
    Loaded first (after fonts), so app.css and the themed sheets can use them; assets/css/polish.css applies them
    to the shared pieces (buttons, cards, headings, header, tabs, the first-run screens and lesson finish).
    Colours: the dark green and gold brand (owner's order, 2026-11-08) plus the two feedback colours. */

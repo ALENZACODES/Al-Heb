@@ -79,16 +79,16 @@ export function mount(root, ctx) {
           sw('Practice league', rec.league.enabled !== false, () => R.update((r) => { r.league.enabled = r.league.enabled === false ? true : false; return r; })),
           sw('Rimon reminders', rec.notify.optedIn, async () => {
             if (rec.notify.optedIn) { R.update((r) => setReminders(r, false)); R.rearm(); return; }
-            const p = await R.turnOnReminders(rec.notify.tone); if (p !== 'granted') status.textContent = p === 'unsupported' ? 'This browser cannot show reminders. On iPhone, add ALEF to your Home Screen first.' : 'Reminders are blocked in this browser. You can allow them in the browser settings.';
+            const p = await R.turnOnReminders(rec.notify.tone); if (p !== 'granted') status.textContent = p === 'unsupported' ? 'This browser cannot show reminders. On iPhone, add Aleph to your Home Screen first.' : 'Reminders are blocked in this browser. You can allow them in the browser settings.';
           }),
           rec.notify.optedIn ? sw('Playful Rimon (for adults)', rec.notify.tone === 'playful', () => { R.update((r) => setReminders(r, true, r.notify.tone === 'playful' ? 'kind' : 'playful')); R.rearm(); }) : null),
-        h('p', { class: 'muted' }, 'Reminders only arrive while ALEF is open on this device, or on Android with ALEF installed. Never on Shabbat or holidays. For a reminder that always arrives, add one to your calendar.'),
+        h('p', { class: 'muted' }, 'Reminders only arrive while Aleph is open on this device, or on Android with Aleph installed. Never on Shabbat or holidays. For a reminder that always arrives, add one to your calendar.'),
         rec.notify.optedIn ? h('p', {}, `Rimon usually nudges around ${usualTimeText(rec)}, the time you tend to study.`) : null,
         rec.notify.optedIn ? h('button', { type: 'button', class: 'btn secondary', 'data-k': 'test', onclick: async () => {
           if (isRestQuiet(Date.now(), R.quietOpt())) { status.textContent = 'Reminders rest on Shabbat and holidays. Try again afterwards.'; return; }
           const N = await import('../shell/notify.js'), m = pickMessage({ tier: 'E', sent: R.get().notify.sent, installId: rec.installId, n: st.count });
           const res = await N.showNow('Rimon', m.body, { tag: 'alef-rimon-test', route: '#/shop' });
-          status.textContent = res.ok ? 'Test reminder sent. Look for it in your notifications.' : 'This browser did not show the reminder. Check that notifications are allowed for ALEF.';
+          status.textContent = res.ok ? 'Test reminder sent. Look for it in your notifications.' : 'This browser did not show the reminder. Check that notifications are allowed for Aleph.';
         } }, 'Send a test reminder') : null,
         h('button', { type: 'button', class: 'btn secondary', 'data-act': 'calendar', 'data-k': 'calendar', onclick: async () => { status.textContent = (await downloadReminder(R)) ? 'Calendar reminder downloaded: Sunday to Thursday, at the time you usually study.' : 'This browser could not make the calendar file.'; } }, 'Add a daily reminder to my calendar')));
     if (focusKey) body.querySelector(`[data-k="${focusKey}"]`)?.focus({ preventScroll: true });

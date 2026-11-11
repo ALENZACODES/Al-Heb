@@ -1,6 +1,6 @@
 # Rimon stills (feature/rimon-stills-2026-11-10)
 
-200 planned companion stills for Rimon, the frozen ALEF pomegranate mascot, at `data/images/rimon/rimon-###.webp` (512×512, clear background, metadata stripped).
+200 planned companion stills for Rimon, the frozen Aleph pomegranate mascot, at `data/images/rimon/rimon-###.webp` (512×512, clear background, metadata stripped).
 
 Catalogue, prompts and screen/trigger map: `docs/images/rimon-stills-catalogue.md`.
 Manifest with status, SHA-256 and QC notes: `data/images/rimon/manifest.csv`.

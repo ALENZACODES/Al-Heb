@@ -113,6 +113,20 @@ export function createMusicController({
     created.addEventListener?.('timeupdate', () => onTimeUpdate(created));
     return audio;
   }
+  // Browsers refuse sound before the first tap or key press (a learner who left music on yesterday opens a game today).
+  // The next tap or key press tries once more; nothing plays that the learner did not already ask for.
+  let waitingGesture = false;
+  function retryOnGesture() {
+    const doc = globalThis.document;
+    if (waitingGesture || !doc?.addEventListener) return;
+    waitingGesture = true;
+    const go = () => {
+      waitingGesture = false;
+      doc.removeEventListener('click', go, true); doc.removeEventListener('keyup', go, true);
+      if (phase === 'rejected' && allowed()) start();
+    };
+    doc.addEventListener('click', go, true); doc.addEventListener('keyup', go, true);
+  }
   function start() {
     if (!allowed()) { halt(sacred || quiet || !policy.allowsMusic() ? 'blocked' : (prefs.want ? 'paused' : 'off')); return false; }
     const node = ensure();
@@ -121,12 +135,14 @@ export function createMusicController({
     error = '';
     // 'starting' is set before play() because the element may fire 'playing' synchronously
     // inside play(); the event listener is what may then move the phase to 'playing'.
-    phase = 'starting';
+    // An element that is already sounding fires no second 'playing' event, so a route change must not leave the status at 'starting'.
+    const already = node.paused === false && Number(node.currentTime) > 0 && !node.ended;
+    phase = already ? 'playing' : 'starting';
     emit();
     try {
       const pending = node.play?.();
       if (pending && typeof pending.catch === 'function') {
-        pending.catch(() => { phase = 'rejected'; error = 'The browser refused the music.'; emit(); });
+        pending.catch(() => { phase = 'rejected'; error = 'The browser refused the music.'; emit(); retryOnGesture(); });
       }
     } catch {
       phase = 'rejected';
@@ -212,7 +228,7 @@ export function createMusicController({
  *  The original songs (vocals) are not game beds: sung words would sit between the Hebrew clips a game plays and stop-start on
  *  every clip. They live on the Songs page (#/songs, src/listen/songs.view.js). Group labels name no vendor or artist (credits: Terms page). */
 export const GAME_TRACKS = [
-  ...SYNTH_STYLE_LIST.map((st) => ({ id: st.id, file: `synth:${st.id}`, title: st.title, role: st.role, group: 'Made for ALEF' })),
+  ...SYNTH_STYLE_LIST.map((st) => ({ id: st.id, file: `synth:${st.id}`, title: st.title, role: st.role, group: 'Made for Aleph' })),
   ...MUSIC_TRACKS.map((t) => ({ ...t, group: 'Arcade loops' })),
   ...ORIGINAL_MUSIC_TRACKS.map((t) => ({ ...t, group: 'Original beds' })),
 ];

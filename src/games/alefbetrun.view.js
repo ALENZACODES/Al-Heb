@@ -12,8 +12,8 @@ const spec = {
   blurb: 'The letters are scattered. Tap them in order, alef to tav, as fast as you can. Each level gives you a longer run and a bigger board.',
   howTo: ['Tap the next letter in alphabetical order. The one you need is named at the top.', 'A wrong tap costs two points; the right one lights up.', 'Finish the run to score a time bonus: faster is more.', 'Level 5 is the whole alphabet with the final forms mixed in as distractors.'],
   levels: [
-    { name: 'ALEF to he', from: 0, to: 5, size: 3 },
-    { name: 'ALEF to yod', from: 0, to: 10, size: 4 },
+    { name: 'Aleph to he', from: 0, to: 5, size: 3 },
+    { name: 'Aleph to yod', from: 0, to: 10, size: 4 },
     { name: 'Kaf to tav', from: 10, to: 22, size: 4 },
     { name: 'The whole alphabet', from: 0, to: 22, size: 5 },
     { name: 'Alphabet plus finals', from: 0, to: 22, size: 6, finals: true },

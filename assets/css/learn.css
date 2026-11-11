@@ -201,3 +201,17 @@ main > section.card[aria-labelledby] .alef-item { row-gap: .1rem; }
 .alef-nav-due { display: inline-block; margin-inline-start: 0.35rem; padding: 0.05rem 0.4rem; border-radius: 999px; background: #8b1e1e; color: #fff; font-size: 0.75rem; font-weight: 600; vertical-align: middle; }
 .alef-practical-celebrate { text-align: center; margin: 1rem 0; }
 .alef-practical-celebrate img { width: 120px; height: 120px; }
+
+/* Practical index: one card per unit, all the same shape, on any width from a folded phone to a tablet. */
+.alef-practical-list { list-style: none; margin: 0 0 1.25rem; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 158px), 1fr)); gap: 0.75rem; }
+.alef-practical-list > li { display: flex; flex-direction: column; min-inline-size: 0; border: 1px solid color-mix(in srgb, currentColor 22%, transparent); border-radius: 14px; overflow: hidden; background: color-mix(in srgb, currentColor 5%, transparent); }
+.alef-practical-thumb { display: block; aspect-ratio: 4 / 3; background: #f4ecdc; overflow: hidden; }
+.alef-practical-list .alef-practical-cover { width: 100%; height: 100% !important; aspect-ratio: auto !important; max-height: none; object-fit: cover; border-radius: 0; margin: 0; display: block; }
+.alef-practical-thumb-letter { display: grid; place-items: center; block-size: 100%; font-size: 2.6rem; font-weight: 800; color: #123d2c; background: linear-gradient(135deg, #f4ecdc, #e6d39a); }
+.alef-practical-row { display: flex; align-items: center; gap: 0.5rem; padding: 0.55rem 0.6rem 0.65rem; min-inline-size: 0; }
+.alef-practical-row .alef-practical-ring { flex: none; margin: 0; }
+.alef-practical-text { display: flex; flex-direction: column; min-inline-size: 0; }
+.alef-practical-text a { display: block; min-block-size: 44px; padding-block: 0.3rem; overflow-wrap: break-word; hyphens: auto; line-height: 1.25; font-size: 0.95rem; }
+.alef-practical-list .alef-practical-ring svg { inline-size: 30px; block-size: 30px; }
+.alef-practical-row { align-items: flex-start; }
+.alef-practical-text .muted { font-size: 0.85rem; }

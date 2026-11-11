@@ -60,7 +60,7 @@ export function mount(root, ctx) {
   function supportLine() {
     const st = notify.status();
     if (!st.supported) {
-      if (st.ios && !st.standalone) return "This browser cannot show notifications here. On an iPhone or iPad, add ALEF to the Home Screen first (Share, then Add to Home Screen), then open it from there.";
+      if (st.ios && !st.standalone) return "This browser cannot show notifications here. On an iPhone or iPad, add Aleph to the Home Screen first (Share, then Add to Home Screen), then open it from there.";
       return "This browser does not support notifications. The calendar screen can export reminders to your phone's calendar instead.";
     }
     if (st.permission === "denied") return "Notifications are blocked for this site in the browser's settings. Allow them there, then come back.";
@@ -99,14 +99,14 @@ export function mount(root, ctx) {
       onchange: async (e) => { prefs = notify.normalizePrefs({ ...prefs, yomTovQuiet: e.target.checked }); await save(); await arm(); } });
     const quietNote = loc
       ? `Quiet from candle lighting to havdalah in ${loc.name} (${loc.candleMinutes} minutes before Friday sunset, until ${loc.havdalah?.mode === "minutes" ? `${loc.havdalah.minutes} minutes after Saturday sunset` : `the sun is ${loc.havdalah?.degrees ?? 8.5} degrees below the horizon on Saturday`}). Change the city on the Calendar screen.`
-      : "No city is set, so ALEF uses a wide safe window: no reminders from Friday noon until Saturday is over, on festival days, or from noon the day before one. Pick a city on the Calendar screen for exact candle-lighting and havdalah times.";
+      : "No city is set, so Aleph uses a wide safe window: no reminders from Friday noon until Saturday is over, on festival days, or from noon the day before one. Pick a city on the Calendar screen for exact candle-lighting and havdalah times.";
 
     const enable = el("input", { type: "checkbox", id: "nt-enabled", checked: prefs.enabled ? true : null, disabled: canUse ? null : true,
-      onchange: async (e) => { prefs = notify.normalizePrefs({ ...prefs, enabled: e.target.checked }); await save(); await arm(); say(prefs.enabled ? "Reminders on, while ALEF is open." : "Reminders off."); } });
+      onchange: async (e) => { prefs = notify.normalizePrefs({ ...prefs, enabled: e.target.checked }); await save(); await arm(); say(prefs.enabled ? "Reminders on, while Aleph is open." : "Reminders off."); } });
 
     const permBtn = el("button", { type: "button", class: "btn", id: "nt-allow", disabled: st.supported && st.permission === "default" ? null : true, onclick: async () => {
       const p = await notify.requestPermission();
-      if (p === "granted") { prefs = notify.normalizePrefs({ ...prefs, enabled: true }); await save(); say("Notifications allowed. Reminders are on while ALEF is open."); }
+      if (p === "granted") { prefs = notify.normalizePrefs({ ...prefs, enabled: true }); await save(); say("Notifications allowed. Reminders are on while Aleph is open."); }
       else say(p === "denied" ? "The browser refused. Notifications stay off." : `Notifications not enabled (permission: ${p}).`);
       await arm(); render();
     } }, "Allow notifications");
@@ -143,7 +143,7 @@ export function mount(root, ctx) {
     const st = notify.status();
     if (!st.supported || st.permission !== "granted") { n.textContent = "Reminders will start once notifications are allowed."; return; }
     const next = schedule?.ok ? schedule.next : null;
-    n.textContent = next ? `Next reminder: ${fmtWhen(next)} (if ALEF is still open then).` : (prefs.days.length ? "No reminder in the next two weeks (every chosen time falls in quiet hours)." : "No days chosen.");
+    n.textContent = next ? `Next reminder: ${fmtWhen(next)} (if Aleph is still open then).` : (prefs.days.length ? "No reminder in the next two weeks (every chosen time falls in quiet hours)." : "No days chosen.");
   }
 
   async function init() {

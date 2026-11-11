@@ -15,7 +15,7 @@
     "hash": "#/",
     "rendered": {
      "text": 355,
-     "h1": "ALEF אלף"
+     "h1": "Aleph אלף"
     },
     "axe": {
      "violations": [],
@@ -27,11 +27,11 @@
     "h1": [
      {
       "id": "view-title",
-      "text": "ALEF אלף"
+      "text": "Aleph אלף"
      }
     ],
     "headingSkips": [],
-    "pageTitle": "ALEF",
+    "pageTitle": "Aleph",
     "liveRegions": [],
     "dynamicNoLive": [],
     "hebrewIssues": [],
@@ -78,7 +78,7 @@
     "hash": "#/",
     "rendered": {
      "text": 355,
-     "h1": "ALEF אלף"
+     "h1": "Aleph אלף"
     },
     "axe": {
      "violations": [],
@@ -90,11 +90,11 @@
     "h1": [
      {
       "id": "view-title",
-      "text": "ALEF אלף"
+      "text": "Aleph אלף"
      }
     ],
     "headingSkips": [],
-    "pageTitle": "ALEF",
+    "pageTitle": "Aleph",
     "liveRegions": [],
     "dynamicNoLive": [],
     "hebrewIssues": [],
@@ -147,7 +147,7 @@
      }
     ],
     "headingSkips": [],
-    "pageTitle": "Learn - ALEF",
+    "pageTitle": "Learn - Aleph",
     "liveRegions": [
      {
       "sel": "p.alef-progress",
@@ -226,7 +226,7 @@
      }
     ],
     "headingSkips": [],
-    "pageTitle": "Learn - ALEF",
+    "pageTitle": "Learn - Aleph",
     "liveRegions": [
      {
       "sel": "p.alef-progress",
@@ -309,7 +309,7 @@
      }
     ],
     "headingSkips": [],
-    "pageTitle": "Letters - ALEF",
+    "pageTitle": "Letters - Aleph",
     "liveRegions": [
      {
       "sel": "div.feedback",
@@ -435,7 +435,7 @@
      }
     ],
     "headingSkips": [],
-    "pageTitle": "Letters - ALEF",
+    "pageTitle": "Letters - Aleph",
     "liveRegions": [
      {
       "sel": "div.feedback",
@@ -537,7 +537,7 @@
      }
     ],
     "headingSkips": [],
-    "pageTitle": "Letter atlas - ALEF",
+    "pageTitle": "Letter atlas - Aleph",
     "liveRegions": [
      {
       "sel": "div.status",
@@ -634,7 +634,7 @@
      }
     ],
     "headingSkips": [],
-    "pageTitle": "Letter atlas - ALEF",
+    "pageTitle": "Letter atlas - Aleph",
     "liveRegions": [
      {
       "sel": "div.status",
@@ -735,7 +735,7 @@
      }
     ],
     "headingSkips": [],
-    "pageTitle": "Letter Bet - ALEF",
+    "pageTitle": "Letter Bet - Aleph",
     "liveRegions": [
      {
       "sel": "div.feedback",
@@ -861,7 +861,7 @@
      }
     ],
     "headingSkips": [],
-    "pageTitle": "Letter Bet - ALEF",
+    "pageTitle": "Letter Bet - Aleph",
     "liveRegions": [
      {
       "sel": "div.feedback",
@@ -963,7 +963,7 @@
      }
     ],
     "headingSkips": [],
-    "pageTitle": "Progress - ALEF",
+    "pageTitle": "Progress - Aleph",
     "liveRegions": [
      {
       "sel": "p.muted",
@@ -1034,7 +1034,7 @@
      }
     ],
     "headingSkips": [],
-    "pageTitle": "Progress - ALEF",
+    "pageTitle": "Progress - Aleph",
     "liveRegions": [
      {
       "sel": "p.muted",
@@ -1095,7 +1095,7 @@
      }
     ],
     "headingSkips": [],
-    "pageTitle": "Your first 10 minutes - ALEF",
+    "pageTitle": "Your first 10 minutes - Aleph",
     "liveRegions": [
      {
       "sel": "div",
@@ -1167,7 +1167,7 @@
      }
     ],
     "headingSkips": [],
-    "pageTitle": "Your first 10 minutes - ALEF",
+    "pageTitle": "Your first 10 minutes - Aleph",
     "liveRegions": [
      {
       "sel": "p.mc-cap",
@@ -1225,7 +1225,7 @@
     "hash": "#/install",
     "rendered": {
      "text": 239,
-     "h1": "Install ALEF"
+     "h1": "Install Aleph"
     },
     "axe": {
      "violations": [],
@@ -1237,11 +1237,11 @@
     "h1": [
      {
       "id": "view-title",
-      "text": "Install ALEF"
+      "text": "Install Aleph"
      }
     ],
     "headingSkips": [],
-    "pageTitle": "Install ALEF - ALEF",
+    "pageTitle": "Install Aleph - Aleph",
     "liveRegions": [
      {
       "sel": "p",
@@ -1289,7 +1289,7 @@
     "hash": "#/install",
     "rendered": {
      "text": 239,
-     "h1": "Install ALEF"
+     "h1": "Install Aleph"
     },
     "axe": {
      "violations": [],
@@ -1301,11 +1301,11 @@
     "h1": [
      {
       "id": "view-title",
-      "text": "Install ALEF"
+      "text": "Install Aleph"
      }
     ],
     "headingSkips": [],
-    "pageTitle": "Install ALEF - ALEF",
+    "pageTitle": "Install Aleph - Aleph",
     "liveRegions": [
      {
       "sel": "p",
@@ -1359,7 +1359,7 @@
      }
     ],
     "headingSkips": [],
-    "pageTitle": "Credits and licences - ALEF",
+    "pageTitle": "Credits and licences - Aleph",
     "liveRegions": [],
     "dynamicNoLive": [],
     "hebrewIssues": [],
@@ -1441,7 +1441,7 @@
      }
     ],
     "headingSkips": [],
-    "pageTitle": "Credits and licences - ALEF",
+    "pageTitle": "Credits and licences - Aleph",
     "liveRegions": [],
     "dynamicNoLive": [],
     "hebrewIssues": [],
@@ -1542,7 +1542,7 @@
      }
     ],
     "headingSkips": [],
-    "pageTitle": "Privacy - ALEF",
+    "pageTitle": "Privacy - Aleph",
     "liveRegions": [],
     "dynamicNoLive": [],
     "hebrewIssues": [],
@@ -1633,7 +1633,7 @@
      }
     ],
     "headingSkips": [],
-    "pageTitle": "Privacy - ALEF",
+    "pageTitle": "Privacy - Aleph",
     "liveRegions": [],
     "dynamicNoLive": [],
     "hebrewIssues": [],
@@ -1669,7 +1669,7 @@
     "hash": "#/offline",
     "rendered": {
      "text": 2150,
-     "h1": "Use ALEF offline"
+     "h1": "Use Aleph offline"
     },
     "axe": {
      "violations": [],
@@ -1681,11 +1681,11 @@
     "h1": [
      {
       "id": "view-title",
-      "text": "Use ALEF offline"
+      "text": "Use Aleph offline"
      }
     ],
     "headingSkips": [],
-    "pageTitle": "Use ALEF offline - ALEF",
+    "pageTitle": "Use Aleph offline - Aleph",
     "liveRegions": [
      {
       "sel": "#of-status",
@@ -1735,7 +1735,7 @@
     "hash": "#/offline",
     "rendered": {
      "text": 2150,
-     "h1": "Use ALEF offline"
+     "h1": "Use Aleph offline"
     },
     "axe": {
      "violations": [],
@@ -1747,11 +1747,11 @@
     "h1": [
      {
       "id": "view-title",
-      "text": "Use ALEF offline"
+      "text": "Use Aleph offline"
      }
     ],
     "headingSkips": [],
-    "pageTitle": "Use ALEF offline - ALEF",
+    "pageTitle": "Use Aleph offline - Aleph",
     "liveRegions": [
      {
       "sel": "#of-status",
@@ -1807,7 +1807,7 @@
      }
     ],
     "headingSkips": [],
-    "pageTitle": "Settings - ALEF",
+    "pageTitle": "Settings - Aleph",
     "liveRegions": [
      {
       "sel": "#s-storage-notice",
@@ -1904,7 +1904,7 @@
      }
     ],
     "headingSkips": [],
-    "pageTitle": "Settings - ALEF",
+    "pageTitle": "Settings - Aleph",
     "liveRegions": [
      {
       "sel": "#s-storage-notice",
@@ -1979,11 +1979,11 @@
       "h1": [
        {
         "id": "view-title",
-        "text": "Welcome to ALEF אלף"
+        "text": "Welcome to Aleph אלף"
        }
       ],
       "headingSkips": [],
-      "pageTitle": "Welcome - ALEF",
+      "pageTitle": "Welcome - Aleph",
       "liveRegions": [
        {
         "sel": "#ob-status",
@@ -2019,7 +2019,7 @@
     "hash": "#/welcome",
     "rendered": {
      "text": 305,
-     "h1": "Welcome to ALEF אלף"
+     "h1": "Welcome to Aleph אלף"
     },
     "axe": {
      "violations": [],
@@ -2031,11 +2031,11 @@
     "h1": [
      {
       "id": "view-title",
-      "text": "Welcome to ALEF אלף"
+      "text": "Welcome to Aleph אלף"
      }
     ],
     "headingSkips": [],
-    "pageTitle": "Welcome - ALEF",
+    "pageTitle": "Welcome - Aleph",
     "liveRegions": [
      {
       "sel": "#ob-status",
@@ -2090,11 +2090,11 @@
       "h1": [
        {
         "id": "view-title",
-        "text": "Welcome to ALEF אלף"
+        "text": "Welcome to Aleph אלף"
        }
       ],
       "headingSkips": [],
-      "pageTitle": "Welcome - ALEF",
+      "pageTitle": "Welcome - Aleph",
       "liveRegions": [
        {
         "sel": "#ob-status",
@@ -2130,7 +2130,7 @@
     "hash": "#/welcome",
     "rendered": {
      "text": 305,
-     "h1": "Welcome to ALEF אלף"
+     "h1": "Welcome to Aleph אלף"
     },
     "axe": {
      "violations": [],
@@ -2142,11 +2142,11 @@
     "h1": [
      {
       "id": "view-title",
-      "text": "Welcome to ALEF אלף"
+      "text": "Welcome to Aleph אלף"
      }
     ],
     "headingSkips": [],
-    "pageTitle": "Welcome - ALEF",
+    "pageTitle": "Welcome - Aleph",
     "liveRegions": [
      {
       "sel": "#ob-status",
@@ -2203,7 +2203,7 @@
      }
     ],
     "headingSkips": [],
-    "pageTitle": "Search - ALEF",
+    "pageTitle": "Search - Aleph",
     "liveRegions": [
      {
       "sel": "#search-status",
@@ -2267,7 +2267,7 @@
      }
     ],
     "headingSkips": [],
-    "pageTitle": "Search - ALEF",
+    "pageTitle": "Search - Aleph",
     "liveRegions": [
      {
       "sel": "#search-status",
@@ -2305,7 +2305,7 @@
     "hash": "#/about",
     "rendered": {
      "text": 1053,
-     "h1": "About ALEF"
+     "h1": "About Aleph"
     },
     "axe": {
      "violations": [],
@@ -2317,11 +2317,11 @@
     "h1": [
      {
       "id": "view-title",
-      "text": "About ALEF"
+      "text": "About Aleph"
      }
     ],
     "headingSkips": [],
-    "pageTitle": "About - ALEF",
+    "pageTitle": "About - Aleph",
     "liveRegions": [],
     "dynamicNoLive": [],
     "hebrewIssues": [],
@@ -2364,7 +2364,7 @@
     "hash": "#/about",
     "rendered": {
      "text": 1053,
-     "h1": "About ALEF"
+     "h1": "About Aleph"
     },
     "axe": {
      "violations": [],
@@ -2376,11 +2376,11 @@
     "h1": [
      {
       "id": "view-title",
-      "text": "About ALEF"
+      "text": "About Aleph"
      }
     ],
     "headingSkips": [],
-    "pageTitle": "About - ALEF",
+    "pageTitle": "About - Aleph",
     "liveRegions": [],
     "dynamicNoLive": [],
     "hebrewIssues": [],

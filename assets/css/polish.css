@@ -1,4 +1,4 @@
-/* ALEF polish layer (first-minute pass, 2026-11-10). Loaded last. Applies the tokens in tokens.css to the shared pieces so
+/* Aleph polish layer (first-minute pass, 2026-11-10). Loaded last. Applies the tokens in tokens.css to the shared pieces so
    every screen feels like one app: buttons, cards, headings, the header with its streak and goal chips, the tab bar with
    icons, the first-run screens (body.ob-player), Rimon in the page, the lesson path and the lesson finish.
    Additive only: nothing here removes a feature; delete this file and its <link> to get the previous look back. */

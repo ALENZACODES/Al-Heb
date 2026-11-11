@@ -1,5 +1,5 @@
 // @ts-check
-// Rimon's reminders. Local only: there is no push server. A reminder can arrive (a) while ALEF is open, from a timer in
+// Rimon's reminders. Local only: there is no push server. A reminder can arrive (a) while Aleph is open, from a timer in
 // the page, or (b) on installed Chromium/Android, when the browser runs Periodic Background Sync and the service worker
 // reads the plan this file leaves in Cache Storage. Anywhere else a closed app gets no reminder; the screen says so.
 // Timing is personal: the half-hour of the day the learner usually studies, from the last 28 days on this device.
@@ -239,8 +239,8 @@ export function reminderICS(rec, now = Date.now()) {
   const end = min + 5, stamp = new Date(now).toISOString().replace(/[-:]/g, '').replace(/\.\d+Z$/, 'Z');
   return ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Aleph//Rimon reminder 1.0//EN', 'CALSCALE:GREGORIAN', 'METHOD:PUBLISH', 'BEGIN:VEVENT',
     `UID:rimon-daily-${rec.installId}@alef.local`, `DTSTAMP:${stamp}`, `DTSTART:${day}T${hhmm}`, `DTEND:${day}T${p2(Math.floor(end / 60))}${p2(end % 60)}00`,
-    'RRULE:FREQ=DAILY;BYDAY=SU,MO,TU,WE,TH', 'SUMMARY:ALEF: a 3-minute Hebrew lesson', 'DESCRIPTION:A short reminder from Rimon. Open ALEF for one quick lesson.', 'TRANSP:TRANSPARENT',
-    'BEGIN:VALARM', 'ACTION:DISPLAY', 'DESCRIPTION:ALEF: a 3-minute Hebrew lesson', 'TRIGGER:PT0S', 'END:VALARM', 'END:VEVENT', 'END:VCALENDAR'].join('\r\n') + '\r\n';
+    'RRULE:FREQ=DAILY;BYDAY=SU,MO,TU,WE,TH', 'SUMMARY:Aleph: a 3-minute Hebrew lesson', 'DESCRIPTION:A short reminder from Rimon. Open Aleph for one quick lesson.', 'TRANSP:TRANSPARENT',
+    'BEGIN:VALARM', 'ACTION:DISPLAY', 'DESCRIPTION:Aleph: a 3-minute Hebrew lesson', 'TRIGGER:PT0S', 'END:VALARM', 'END:VEVENT', 'END:VCALENDAR'].join('\r\n') + '\r\n';
 }
 /** "7:15 pm": the time Rimon usually nudges, for the shop screen. */
 export function usualTimeText(rec, now = Date.now()) { const m = clampDay(typicalMinute(rec.sessions, now)), h = Math.floor(m / 60); return `${((h + 11) % 12) + 1}:${p2(m % 60)} ${h < 12 ? 'am' : 'pm'}`; }

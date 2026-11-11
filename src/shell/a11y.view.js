@@ -51,7 +51,7 @@ export function mount(root, ctx) {
   root.replaceChildren(h('article', { class: 'stack' },
     h('header', { class: 'card' },
       h('h1', { id: 'view-title', tabindex: '-1' }, t('nav.accessibility', 'Accessibility')),
-      h('p', {}, 'Every setting that changes how ALEF looks, sounds or responds is on this page. Changes save at once, stay on this device and are included in your backup.'),
+      h('p', {}, 'Every setting that changes how Aleph looks, sounds or responds is on this page. Changes save at once, stay on this device and are included in your backup.'),
       h('p', {}, h('button', { type: 'button', class: 'btn secondary', id: 'a11y-jump', onclick: () => { const x = root.querySelector('#a11y-statement-h'); x?.setAttribute('tabindex', '-1'); x?.focus?.(); x?.scrollIntoView?.({ block: 'start' }); } }, 'Jump to the accessibility statement'), ' ', h('a', { href: '#/settings' }, 'All other settings'))),
     sec('start', 'Start here',
       h('p', {}, 'Pick the one that sounds closest. It only switches on the matching settings below. Nothing else is asked or saved, and you can change each setting yourself afterwards.'),

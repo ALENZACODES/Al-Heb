@@ -76,17 +76,17 @@ export function parseSummary(text) {
   let t = text.trim();
   if (!t) return { ok: false, error: 'Empty.' };
   if (t.length > MAX_SUMMARY_BYTES * 2) return { ok: false, error: 'Too large to be a progress summary.' };
-  if (HTMLISH.test(t)) return { ok: false, error: 'Looks like HTML, not an ALEF summary. Rejected.' };
+  if (HTMLISH.test(t)) return { ok: false, error: 'Looks like HTML, not an Aleph summary. Rejected.' };
   let json = t;
   if (t.startsWith(CODE_PREFIX)) {
     const body = t.slice(CODE_PREFIX.length).replace(/\s+/g, '');
     if (!/^[A-Za-z0-9_-]+$/.test(body)) return { ok: false, error: 'Code has characters that do not belong.' };
     try { json = unb64(body); } catch { return { ok: false, error: 'Code could not be decoded.' }; }
-    if (HTMLISH.test(json)) return { ok: false, error: 'Looks like HTML, not an ALEF summary. Rejected.' };
+    if (HTMLISH.test(json)) return { ok: false, error: 'Looks like HTML, not an Aleph summary. Rejected.' };
   }
   if (json.length > MAX_SUMMARY_BYTES) return { ok: false, error: 'Too large to be a progress summary.' };
   let v;
-  try { v = JSON.parse(json); } catch { return { ok: false, error: 'Not valid JSON or an ALEF code.' }; }
+  try { v = JSON.parse(json); } catch { return { ok: false, error: 'Not valid JSON or an Aleph code.' }; }
   return validateSummary(v);
 }
 

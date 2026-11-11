@@ -36,5 +36,5 @@ Needed in addition wherever example sentences are shown (suggested wording, not 
 - The Wiktionary licence page itself was not re-read (LICENSES.md marks it UNVERIFIED); the GFDL mention is unexamined.
 - Whether CC BY 2.0 FR example sentences may sit inside a data set distributed under CC BY-SA 4.0, and what the per-sentence author attribution must look like on a public page.
 - The licence of the 117 lesson-derived records (item 6).
-- Whether a bundle that merges this data with ALEF's own code, audio and book text becomes share-alike as a whole (LICENSES.md says to get an opinion before selling a mixed bundle; none was obtained).
+- Whether a bundle that merges this data with Aleph's own code, audio and book text becomes share-alike as a whole (LICENSES.md says to get an opinion before selling a mixed bundle; none was obtained).
 - Unreviewed pointing and glosses in the project-owned records: whether the project can license them at all.

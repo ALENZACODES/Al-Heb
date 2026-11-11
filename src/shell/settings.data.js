@@ -21,18 +21,18 @@ export function describePreview(preview) {
   if (n(d.removed)) parts.push(`${n(d.removed)} on this device but not in the backup will be removed`);
   if (n(d.unchanged)) parts.push(`${n(d.unchanged)} are already identical`);
   lines.push(parts.length ? parts.join('; ') + '.' : 'Nothing on this device would change.');
-  if (preview.migrated) lines.push('The backup is from an older version of ALEF and will be upgraded as it is restored.');
+  if (preview.migrated) lines.push('The backup is from an older version of Aleph and will be upgraded as it is restored.');
   return lines;
 }
 
 /** Message for a store that cannot keep data across reloads, or null when everything is fine. @param {{persistent:boolean,reason:string|null,newerSchema?:boolean}} s */
 export function storageNotice(s) {
   if (s?.persistent === false) {
-    if (s.reason === 'quota') return 'This device is out of storage space for ALEF. Your progress is being kept in memory only and will be lost when you close this tab. Download a backup now, free some space, then press "Try saving again".';
+    if (s.reason === 'quota') return 'This device is out of storage space for Aleph. Your progress is being kept in memory only and will be lost when you close this tab. Download a backup now, free some space, then press "Try saving again".';
     if (s.reason === 'error') return 'The browser refused to save your progress. It is kept in memory only and will be lost when you close this tab. Download a backup now.';
-    return 'This browser is not letting ALEF save anything (private browsing or blocked storage). The app works, but your progress is kept in memory only and will be lost when you close this tab. Download a backup before you leave.';
+    return 'This browser is not letting Aleph save anything (private browsing or blocked storage). The app works, but your progress is kept in memory only and will be lost when you close this tab. Download a backup before you leave.';
   }
-  if (s?.newerSchema) return 'Your saved data was written by a newer version of ALEF. It is read as it is and not upgraded or downgraded; update the app to be safe.';
+  if (s?.newerSchema) return 'Your saved data was written by a newer version of Aleph. It is read as it is and not upgraded or downgraded; update the app to be safe.';
   return null;
 }
 

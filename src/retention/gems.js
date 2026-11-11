@@ -1,5 +1,5 @@
 // @ts-check
-// Gems: ALEF's earned-only currency. They are never sold for money and there are no ads. Pure functions.
+// Gems: Aleph's earned-only currency. They are never sold for money and there are no ads. Pure functions.
 import { clone, CAPS } from './state.js';
 
 /** What the learner sees. Change the three words here to rename the currency everywhere (for example to "Seeds"). */

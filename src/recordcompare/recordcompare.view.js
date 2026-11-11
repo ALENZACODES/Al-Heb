@@ -112,7 +112,7 @@ export function mount(root, ctx) {
       data = inj.data || await loadJson('data/speak/minimal-pairs.json');
       st = normalizeState(await storeGet(ctx, STORE_KEY, null));
       if (alive) start();
-    } catch { if (alive) body.replaceChildren(el('p', { role: 'alert' }, 'The pair list could not be loaded. If you are offline, open this page once while online, or use "Use ALEF offline" in the More menu to download everything. Nothing was lost.')); }
+    } catch { if (alive) body.replaceChildren(el('p', { role: 'alert' }, 'The pair list could not be loaded. If you are offline, open this page once while online, or use "Use Aleph offline" in the More menu to download everything. Nothing was lost.')); }
   })();
   return () => { alive = false; try { audioEl?.pause?.(); } catch { /* ignore */ } dropTakes(); wrap.children = []; if (typeof wrap.remove === 'function') wrap.remove(); else root.replaceChildren?.(); };
 }

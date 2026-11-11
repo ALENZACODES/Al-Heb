@@ -1,4 +1,4 @@
-/* ALEF astral homepage: all motion is opacity/transform; no image or network media. */
+/* Aleph astral homepage: all motion is opacity/transform; no image or network media. */
 .prayer-veil {
   position: fixed; inset: 0; z-index: 9999; display: grid;
   place-items: center; overflow: hidden; isolation: isolate;
@@ -215,7 +215,7 @@
 }
 
 
-/* ALEF crafted entryways. Every photograph is a different framing of the
+/* Aleph crafted entryways. Every photograph is a different framing of the
    already-loaded, locally stored olive-harvest hero — no external image,
    generic icon library, hidden text, or new image download. */
 .show-portals {
@@ -428,3 +428,9 @@ main:has(.showcase) .show-hero-text { display:flex; gap:1rem; align-items:flex-s
 /* Opening-prayer gold leaf (.prayer-he, prayer-gold-dawn/sheen) lives in polish.css so the
    keyframe names stay unique. The mobile prayer-veil backdrop above stays here. */
 
+
+/* Folded phones (under 340px wide): the hero words get the full width and Rimon sits small above them. */
+@media (max-width: 340px) {
+  main:has(.showcase) .show-hero-text { flex-direction: column-reverse; gap: .4rem; }
+  .show-mascot-box { width: 3.5rem; height: 3.5rem; align-self: flex-end; }
+}

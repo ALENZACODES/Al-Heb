@@ -463,8 +463,8 @@ export function percentBox(box, width, height) {
 export function sourceLabel(src) {
   if (src === 'word-list') return 'From the built-in word list.';
   if (src === 'word-list-near') return 'Closest match in the built-in word list. A letter may have been misread, so check it.';
-  if (src === 'phrasebook') return 'From the ALEF phrasebook.';
-  if (src === 'word-for-word') return 'Word for word from the ALEF dictionary. The word order and the exact meaning can be off.';
+  if (src === 'phrasebook') return 'From the Aleph phrasebook.';
+  if (src === 'word-for-word') return 'Word for word from the Aleph dictionary. The word order and the exact meaning can be off.';
   if (src === 'language-pack') return 'Translated on this device by the language pack, not from a checked list. Check it before you rely on it.';
   return '';
 }

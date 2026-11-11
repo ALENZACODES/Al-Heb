@@ -35,6 +35,30 @@
    "pdf": "alef-firstday-letter.pdf"
   },
   {
+   "id": "alef-memory-chain-a4",
+   "kind": "memory-chain",
+   "script": "Memory chain poster (27 letters)",
+   "mnemonics": false,
+   "paper": "A4",
+   "pages": 1,
+   "pageKinds": [
+    "poster"
+   ],
+   "pdf": "alef-memory-chain-a4.pdf"
+  },
+  {
+   "id": "alef-memory-chain-letter",
+   "kind": "memory-chain",
+   "script": "Memory chain poster (27 letters)",
+   "mnemonics": false,
+   "paper": "US Letter",
+   "pages": 1,
+   "pageKinds": [
+    "poster"
+   ],
+   "pdf": "alef-memory-chain-letter.pdf"
+  },
+  {
    "id": "alef-cursive-words-a4",
    "kind": "cursive-words",
    "script": "Cursive words",
@@ -265,6 +289,42 @@
     "readaloud"
    ],
    "pdf": "alef-answer-key-letter.pdf"
+  },
+  {
+   "id": "alef-flashcards-letters-a4",
+   "kind": "flashcards-letters",
+   "script": "Letter flashcards (27 cards, memory chain)",
+   "mnemonics": false,
+   "paper": "A4",
+   "pages": 7,
+   "pageKinds": [
+    "front",
+    "letter-fronts",
+    "letter-backs",
+    "letter-fronts",
+    "letter-backs",
+    "letter-fronts",
+    "letter-backs"
+   ],
+   "pdf": "alef-flashcards-letters-a4.pdf"
+  },
+  {
+   "id": "alef-flashcards-letters-letter",
+   "kind": "flashcards-letters",
+   "script": "Letter flashcards (27 cards, memory chain)",
+   "mnemonics": false,
+   "paper": "US Letter",
+   "pages": 7,
+   "pageKinds": [
+    "front",
+    "letter-fronts",
+    "letter-backs",
+    "letter-fronts",
+    "letter-backs",
+    "letter-fronts",
+    "letter-backs"
+   ],
+   "pdf": "alef-flashcards-letters-letter.pdf"
   },
   {
    "id": "alef-flashcards-a4",
@@ -1357,66 +1417,6 @@
     "cards"
    ],
    "pdf": "alef-flashcards-light-letter.pdf"
-  },
-  {
-   "id": "alef-memory-chain-a4",
-   "kind": "memory-chain",
-   "script": "Memory chain poster (27 letters)",
-   "mnemonics": false,
-   "paper": "A4",
-   "pages": 1,
-   "pageKinds": [
-    "poster"
-   ],
-   "pdf": "alef-memory-chain-a4.pdf"
-  },
-  {
-   "id": "alef-memory-chain-letter",
-   "kind": "memory-chain",
-   "script": "Memory chain poster (27 letters)",
-   "mnemonics": false,
-   "paper": "US Letter",
-   "pages": 1,
-   "pageKinds": [
-    "poster"
-   ],
-   "pdf": "alef-memory-chain-letter.pdf"
-  },
-  {
-   "id": "alef-flashcards-letters-a4",
-   "kind": "flashcards-letters",
-   "script": "Letter flashcards (27 cards, memory chain)",
-   "mnemonics": false,
-   "paper": "A4",
-   "pages": 7,
-   "pageKinds": [
-    "front",
-    "letter-fronts",
-    "letter-backs",
-    "letter-fronts",
-    "letter-backs",
-    "letter-fronts",
-    "letter-backs"
-   ],
-   "pdf": "alef-flashcards-letters-a4.pdf"
-  },
-  {
-   "id": "alef-flashcards-letters-letter",
-   "kind": "flashcards-letters",
-   "script": "Letter flashcards (27 cards, memory chain)",
-   "mnemonics": false,
-   "paper": "US Letter",
-   "pages": 7,
-   "pageKinds": [
-    "front",
-    "letter-fronts",
-    "letter-backs",
-    "letter-fronts",
-    "letter-backs",
-    "letter-fronts",
-    "letter-backs"
-   ],
-   "pdf": "alef-flashcards-letters-letter.pdf"
   }
  ]
 }

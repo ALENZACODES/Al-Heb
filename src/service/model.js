@@ -75,7 +75,7 @@ export function coverage(order, gradedLines, known) {
 
 /** Plain-language sentence for a coverage result. */
 export function coverageSentence(title, c) {
-  return `${c.full} of the ${c.lines} lines ALEF holds for ${title.toLowerCase()} use only letters and signs you have learned (${c.pct}% ready to read).`;
+  return `${c.full} of the ${c.lines} lines Aleph holds for ${title.toLowerCase()} use only letters and signs you have learned (${c.pct}% ready to read).`;
 }
 
 /** Markers for a card: only those in data (each quoted from the guide). */
@@ -96,7 +96,7 @@ export function buildCards(orders, orderId, byId, tradition) {
     const markers = markersFor(orders, orderId, it.id);
     return {
       n: i + 1, of: o.items.length, id: it.id, moment: it.moment, title: e.title, ref: e.ref,
-      he: lines, tr, en, englishSource: e.englishSource === 'original-gloss' ? "ALEF's own plain gloss (project-owned, not reviewed)" : (e.englishSource ?? null), language: e.language,
+      he: lines, tr, en, englishSource: e.englishSource === 'original-gloss' ? "Aleph's own plain gloss (project-owned, not reviewed)" : (e.englishSource ?? null), language: e.language,
       markers, markerKnown: markers.length > 0,
     };
   });

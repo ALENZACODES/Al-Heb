@@ -36,8 +36,10 @@ let ALL = ROUTES.map((r) => ({ path: sampleFor(r), name: r.name, module: r.modul
 if (arg('--routes')) { const want = arg('--routes').split(','); ALL = want.map((p) => ALL.find((r) => r.path === p) || { path: p, name: 'custom', module: null, owner: '?' }); }
 else if (quick) { const keep = ['/', '/learn', '/typing']; ALL = keep.map((p) => ALL.find((r) => r.path === p)).filter(Boolean); }
 
-const VIEWPORTS = quick ? [{ id: '390', w: 390, h: 844 }] : [{ id: '320', w: 320, h: 640 }, { id: '390', w: 390, h: 844 }, { id: '1280', w: 1280, h: 800 }];
-const THEMES = quick ? ['light'] : ['light', 'dark'];
+// --viewports 280x653,717x512 swaps in other sizes (fold phones, tablets); --themes light keeps one colour scheme.
+const vpArg = arg('--viewports'); const themeArg = arg('--themes');
+const VIEWPORTS = vpArg ? vpArg.split(',').map((v) => { const [w, h] = v.split('x').map(Number); return { id: v, w, h }; }) : quick ? [{ id: '390', w: 390, h: 844 }] : [{ id: '320', w: 320, h: 640 }, { id: '390', w: 390, h: 844 }, { id: '1280', w: 1280, h: 800 }];
+const THEMES = themeArg ? themeArg.split(',') : quick ? ['light'] : ['light', 'dark'];
 
 const server = createAppServer({ root }); await new Promise((r) => server.listen(0, r));
 const base = `http://localhost:${server.address().port}/`;

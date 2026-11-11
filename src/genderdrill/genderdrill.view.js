@@ -41,7 +41,7 @@ export function mount(root, ctx) {
   function next() { idx += 1; picked = null; shown = false; other = false; renderItem(false); }
 
   function renderItem(needsChoice) {
-    if (needsChoice) { body.replaceChildren(el('p', {}, 'Choose above first. ALEF does not guess your gender, and it will not drill you in masculine forms by default.')); return; }
+    if (needsChoice) { body.replaceChildren(el('p', {}, 'Choose above first. Aleph does not guess your gender, and it will not drill you in masculine forms by default.')); return; }
     if (idx >= items.length) {
       body.replaceChildren(el('p', {}, `Round done. Checked questions, all time: ${prefs.right} right of ${prefs.asked}. "Say it" cards are not counted because you grade them yourself.`), btn('Another round', () => { round += 1; start(); }));
       return;
@@ -76,7 +76,7 @@ export function mount(root, ctx) {
       prefs = normalizePrefs(await storeGet(ctx, STORE_KEY, null), await storeGet(ctx, LEGACY_STORE_KEY, null));
       if (typeof ctx?.settings?.get === 'function') prefs = { ...prefs, speaker: learnerGender(ctx) }; // the shared setting is the only source (unset stays unset)
       if (alive) start();
-    } catch { if (alive) body.replaceChildren(el('p', { role: 'alert' }, 'The word list could not be loaded. If you are offline, open this page once while online, or use "Use ALEF offline" in the More menu to download everything. Nothing was lost.')); }
+    } catch { if (alive) body.replaceChildren(el('p', { role: 'alert' }, 'The word list could not be loaded. If you are offline, open this page once while online, or use "Use Aleph offline" in the More menu to download everything. Nothing was lost.')); }
   })();
   return () => { alive = false; wrap.children = []; if (typeof wrap.remove === 'function') wrap.remove(); else root.replaceChildren?.(); };
 }

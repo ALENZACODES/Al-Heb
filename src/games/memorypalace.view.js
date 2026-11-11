@@ -68,7 +68,7 @@ export function mount(root, ctx) {
       const active = phase === 'route' && route[index].id === s.id;
       const named = phase !== 'recall';
       return h('button', { type: 'button', class: 'palace-station' + (active ? ' palace-active' : ''),
-        'data-img-id': s.id, 'aria-label': named ? s.name : 'Picture station',
+        'data-img-id': s.id, ...(named && phase === 'study' ? {} : { 'aria-label': named ? s.name : 'Picture station' }),
         disabled: phase === 'route' || wrongThisStop.has(s.id), onclick: () => tap(s) },
         h('img', { src: s.image.src, alt: named ? s.image.alt : '', width: 140, height: 140 }),
         phase === 'study' ? h('span', {}, heSpan(s.he), ` ${s.name}${studied.has(s.id) ? ' ✓' : ''}`) : null);

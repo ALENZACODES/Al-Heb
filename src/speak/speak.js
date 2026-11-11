@@ -42,11 +42,11 @@ export function tabFromLocation(query, hash) {
   if (m) return norm(m[1]) || norm(new URLSearchParams(m[2] || '').get('tab')) || 'say';
   return 'say';
 }
-export const PRAYER_NOTE = 'Prayer text comes from ALEF\'s corpus (Sefaria, Metsudah siddur, CC-BY). It was compared with its source by a program and has not been proofread by a Hebrew educator.';
+export const PRAYER_NOTE = 'Prayer text comes from Aleph\'s corpus (Sefaria, Metsudah siddur, CC-BY). It was compared with its source by a program and has not been proofread by a Hebrew educator.';
 export const TRADITION_NOTE = 'The browser recognizer and the browser voice expect modern Israeli pronunciation. If you read in a Sephardi or Ashkenazi style, a "miss" may only mean the recognizer is used to another accent.';
 
 export const DRAFT = 'Draft, not yet reviewed: the words, their vowel points and transliterations were built by a program from the vocabulary list and no Hebrew teacher has checked them.';
-export const RECOGNIZER_NOTE = 'The speech check uses your browser\'s own recognizer set to Hebrew (he-IL). ALEF has not verified how well it hears Hebrew, so treat its verdict as a hint, not a grade. Your browser may send the audio to its maker\'s servers to do the recognition; ALEF itself sends nothing anywhere.';
+export const RECOGNIZER_NOTE = 'The speech check uses your browser\'s own recognizer set to Hebrew (he-IL). Aleph has not verified how well it hears Hebrew, so treat its verdict as a hint, not a grade. Your browser may send the audio to its maker\'s servers to do the recognition; Aleph itself sends nothing anywhere.';
 export const RECORD_NOTE = 'Recordings stay in this page\'s memory and are discarded when you leave; nothing is uploaded.';
 const MODE_LABEL = { asr: 'Let the browser listen and compare (speech recognition)', record: 'Record me and play it back; I judge it', self: 'No microphone: I just say whether I said it' };
 const CSS = `

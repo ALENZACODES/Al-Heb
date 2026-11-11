@@ -69,7 +69,7 @@ export function morningItems(fromISO, days, prefs, verses, { observant, mode = "
     const [y, m, d] = iso.split("-").map(Number), hh = Number(r.time.slice(0, 2)), mm = Number(r.time.slice(3));
     const v = verses && verses.length ? verseFor(verses, new Date(y, m - 1, d, 12)) : null;
     const text = notificationText(v, r.label);
-    out.push({ uid: `alef-morning-${iso}`, kind: "morning-verse", title: text.title, description: `${text.body}\nOpens ALEF at #/morning`, when: { type: "floating", y, m, d, hh, mm }, durationMin: 5, alarmMin: 0, label: r.label });
+    out.push({ uid: `alef-morning-${iso}`, kind: "morning-verse", title: text.title, description: `${text.body}\nOpens Aleph at #/morning`, when: { type: "floating", y, m, d, hh, mm }, durationMin: 5, alarmMin: 0, label: r.label });
   }
   return out;
 }

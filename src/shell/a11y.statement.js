@@ -9,7 +9,7 @@ export const STATEMENT = Object.freeze({
   status: 'Preview, written 2026-11-04. This is a plain account of what the builders measured. It is not a promise, not a legal document and not a conformance claim.',
   sections: [
     { id: 'claims', title: 'What this statement does not say', items: [
-      'ALEF does not claim to meet WCAG, the ADA, EN 301 549 or any other standard or law. No outside accessibility audit has been done.',
+      'Aleph does not claim to meet WCAG, the ADA, EN 301 549 or any other standard or law. No outside accessibility audit has been done.',
       'A check that found nothing means that check found nothing. It does not mean the screen works for you.',
     ] },
     { id: 'checked', title: 'What was checked, and how', items: [
@@ -40,11 +40,11 @@ export const STATEMENT = Object.freeze({
       '"I do not use audio" does not yet hide every optional play button (for example on the letter atlas, Torah reader, vocabulary and scan screens), and first-run setup does not ask about it; the written text is shown next to those buttons (docs/a11y/deaf-hoh.md).',
       'Written descriptions of sounds are drafts that no Hebrew speaker has checked, and words cannot replace hearing a sound (docs/a11y/deaf-hoh.md).',
       'Calm mode removes the Torah "read with me" timer (Previous word and Next word stay, so you move the highlight by hand), but does not change the letter-tracing layout or the letter atlas, which still show a lot at once. Pause and resume covers the lesson page and its quick check, not every practice screen (docs/a11y/COGNITIVE.md).',
-      'Audio: no recorded voices ship yet. The Hebrew clips use a synthetic voice, a man\'s and a woman\'s (the About page gives the count and what they cover). Other sound comes from your browser\'s speech voice, which ALEF cannot control or caption. The "I do not use audio" setting swaps listening questions for reading ones.',
+      'Audio: no recorded voices ship yet. The Hebrew clips use a synthetic voice, a man\'s and a woman\'s (the About page gives the count and what they cover). Other sound comes from your browser\'s speech voice, which Aleph cannot control or caption. The "I do not use audio" setting swaps listening questions for reading ones.',
       'This list can be incomplete. Read docs/A11Y.md and the other files in docs/a11y/ for the measured details.',
     ] },
     { id: 'report', title: 'How to report a barrier', items: [
-      'ALEF has no feedback form and no published contact address yet, and none is invented here. Until one is added, tell the person who gave you ALEF or who runs the site where you opened it.',
+      'Aleph has no feedback form and no published contact address yet, and none is invented here. Until one is added, tell the person who gave you Aleph or who runs the site where you opened it.',
       'Say which page, what you were trying to do, what got in the way, and what device, browser and assistive tools you use. You do not need to say why.',
     ] },
   ],

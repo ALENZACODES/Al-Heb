@@ -32,7 +32,7 @@ export function watchForUpdate(serviceWorker, registration, notify, reload) {
   const message = (event) => {
     if (event.data?.type !== 'UPDATE_BLOCKED' || !requested) return;
     requested = false;
-    offer('Close other ALEF tabs, then try Reload again. Your lesson has not been interrupted.');
+    offer('Close other Aleph tabs, then try Reload again. Your lesson has not been interrupted.');
   };
   serviceWorker.addEventListener('controllerchange', changed);
   serviceWorker.addEventListener('message', message);

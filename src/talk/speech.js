@@ -1,5 +1,5 @@
 // @ts-check
-// Talk: listening through the browser's own speech recognition (Web Speech API). ALEF has no speech service of its own
+// Talk: listening through the browser's own speech recognition (Web Speech API). Aleph has no speech service of its own
 // and uploads nothing itself. How the browser turns sound into text is the browser's business: some do it on the device,
 // some send the sound to the browser maker. The screen says so before the first use.
 // Not every browser has it (Firefox does not), and Hebrew is not offered everywhere: callers must handle `supported: false`

@@ -32,6 +32,8 @@ const style = `
 .ask-torah .ask-form { display: flex; gap: .5rem; position: sticky; bottom: 4.2rem; padding: .5rem 0; background: var(--bg); }
 .ask-torah .ask-form input { flex: 1; min-block-size: 48px; font: inherit; padding: 0 .9rem; border-radius: 14px; border: 2px solid var(--border); background: var(--card); color: var(--fg); }
 .ask-torah .ask-starters { list-style: none; padding: 0; margin: .4rem 0 0; display: flex; flex-wrap: wrap; gap: .5rem; }
+.ask-torah .ask-starters li { min-inline-size: 0; max-inline-size: 100%; }
+.ask-torah .ask-starters button { max-inline-size: 100%; white-space: normal; text-align: start; }
 .ask-torah .ask-starters button { font: inherit; font-size: .95rem; min-block-size: 44px; padding: .4rem .9rem; border-radius: 999px; cursor: pointer;
   border: 1.5px solid color-mix(in srgb, var(--accent) 60%, transparent); background: transparent; color: var(--fg); }
 .ask-torah .ask-starters button:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }

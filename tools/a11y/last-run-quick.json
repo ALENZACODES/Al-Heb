@@ -75,7 +75,7 @@
   {
    "name": "Tab order on a phone: skip link, brand, the v0 tab-bar links (Learn, Progress), More (the sheet items are not tabbable while closed)",
    "ok": true,
-   "detail": "Skip to main content | ALEF אלף | Learnלימוד | Progress | Moreעוד | Details | × | Learn your first letter: | Study goal: 5 min | Letters | WordsPreview | ReadPreview | Progress | More"
+   "detail": "Skip to main content | Aleph אלף | Learnלימוד | Progress | Moreעוד | Details | × | Learn your first letter: | Study goal: 5 min | Letters | WordsPreview | ReadPreview | Progress | More"
   },
   {
    "name": "focused nav link has a visible outline",

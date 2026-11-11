@@ -31,7 +31,7 @@ export function mount(root, ctx) {
   const now = ctx?.now || (() => Date.now());
   const own = I.captureInstallPrompt(g);
   const wrap = el("section", { class: "alef-install", "aria-labelledby": "view-title" });
-  const h1 = el("h1", { id: "view-title", tabindex: "-1" }, "Install ALEF");
+  const h1 = el("h1", { id: "view-title", tabindex: "-1" }, "Install Aleph");
   const body = el("div", { class: "in-body" });
   const status = el("p", { role: "status", "aria-live": "polite" });
   wrap.append(h1, body, status);
@@ -49,21 +49,21 @@ export function mount(root, ctx) {
     const st = I.installStatus({ platform: I.detectPlatform(g), canPrompt: canPrompt(), state, now: now(), force, installed: own.installed() });
     const kids = [];
     if (st.mode === "installed") {
-      kids.push(el("div", { class: "in-card", id: "in-installed" }, el("p", {}, "ALEF is installed on this device. You are all set."),
+      kids.push(el("div", { class: "in-card", id: "in-installed" }, el("p", {}, "Aleph is installed on this device. You are all set."),
         el("p", { class: "muted" }, "Installed apps open without the browser bars and can show study reminders on iPhone and iPad.")));
     } else if (!st.show) {
       kids.push(el("p", {}, "You chose not to install for now."),
         el("div", { class: "in-row" }, el("button", { type: "button", class: "btn secondary", id: "in-showagain", onclick: () => { force = true; render(); } }, "Show the install steps again")));
     } else {
       const card = el("div", { class: "in-card", id: "in-card", "data-mode": st.mode });
-      card.append(el("p", {}, "Add ALEF to your home screen. It opens like an app, works offline, and can remind you to study."));
+      card.append(el("p", {}, "Add Aleph to your home screen. It opens like an app, works offline, and can remind you to study."));
       if (st.mode === "prompt") {
         card.append(el("div", { class: "in-row" }, el("button", { type: "button", class: "btn", id: "in-install", onclick: async () => {
           const r = await doPrompt();
-          if (r === "accepted") { await I.markInstalled(ctx?.store, now()); state = await I.loadState(ctx?.store); status.textContent = "Installing. Open ALEF from your home screen or app list."; }
+          if (r === "accepted") { await I.markInstalled(ctx?.store, now()); state = await I.loadState(ctx?.store); status.textContent = "Installing. Open Aleph from your home screen or app list."; }
           else status.textContent = "Install cancelled. You can try again any time.";
           render();
-        } }, "Install ALEF")));
+        } }, "Install Aleph")));
       } else if (st.mode === "ios-safari" || st.mode === "ios-other") {
         if (st.mode === "ios-other") card.append(el("p", { class: "muted", id: "in-ios-other" }, "You seem to be in a browser other than Safari. The steps below are for Safari; other iPhone browsers may or may not offer \"Add to Home Screen\" in their share menu. If you do not see it, open this page in Safari."));
         card.append(el("ol", { id: "in-ios-steps" }, I.IOS_STEPS.map((s) => el("li", {}, s))));

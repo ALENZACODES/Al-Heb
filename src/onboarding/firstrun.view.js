@@ -48,7 +48,7 @@ export function mount(root, ctx) {
   let step = rec ? rec.step : 'letters';
   let page = 'level'; // Stage 1 page: level | goal | daily
   const nowISO = () => new Date(ctx?.clock?.now ? ctx.clock.now() : Date.now()).toISOString();
-  const h1 = h('h1', { id: 'view-title', tabindex: '-1', class: 'ob-title' }, t('welcome.title', 'Welcome to ALEF'), ' ', heSpan('אלף'));
+  const h1 = h('h1', { id: 'view-title', tabindex: '-1', class: 'ob-title' }, t('welcome.title', 'Welcome to Aleph'), ' ', heSpan('אלף'));
   const body = h('div', { class: 'ob-body' });
   const status = h('p', { role: 'status', 'aria-live': 'polite', class: 'muted ob-status', id: 'ob-status' });
   // Top bar: Back (or close on the plan), then the progress bar for the first run.

@@ -70,13 +70,13 @@ async function play(root, qs, pickRight) {
 }
 
 // ------------------------------------------------------------------------------------------------ C-01 pass mark
-test("pass mark: at least 70% right on the first try, rounded up; never passes an empty check; the rule is written out", () => {
+test("pass mark: about 70% right on the first try, rounded to the nearest question; never passes an empty check; the rule is written out", () => {
   assert.equal(P.PASS_SHARE, 0.7);
-  assert.deepEqual([1, 2, 3, 4, 5, 8, 10].map(P.passMark), [1, 2, 3, 3, 4, 6, 7]);
+  assert.deepEqual([1, 2, 3, 4, 5, 8, 10].map(P.passMark), [1, 1, 2, 3, 4, 6, 7]);
   assert.equal(P.passMark(0), 0);
-  assert.equal(P.passed(0, 3), false); assert.equal(P.passed(2, 3), false); assert.equal(P.passed(3, 3), true);
+  assert.equal(P.passed(0, 3), false); assert.equal(P.passed(1, 3), false); assert.equal(P.passed(2, 3), true);
   assert.equal(P.passed(7, 10), true); assert.equal(P.passed(6, 10), false); assert.equal(P.passed(0, 0), false);
-  assert.match(P.passRuleText(8), /at least 6 of 8 right on the first try \(70% or more\)/);
+  assert.match(P.passRuleText(8), /at least 6 of 8 right on the first try \(about 70%\)/);
   assert.match(P.passRuleText(8), /not marked done/); assert.match(P.passRuleText(8), /review cards are still updated/);
   assert.equal(S.passMark, P.passMark, "the lesson loop re-exports the same rule");
 });

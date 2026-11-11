@@ -23,7 +23,7 @@ export function mount(root, ctx) {
     h('section', { class: 'card', 'aria-labelledby': 'terms-recordings' },
       h('h2', { id: 'terms-recordings' }, 'Historic recordings (Sacred Listen)'),
       h('p', {}, 'These are real recordings, kept with their performers and licences. The playback copies were enhanced for clarity (gentle denoise, de-click and loudness levelling) from the originals, which are preserved unchanged; for CC BY-SA items the enhanced copy is an adaptation under the same licence.'),
-      h('ul', {}, ...LISTEN_ITEMS.map((r) => h('li', {}, `${r.title}: ${r.performer}. ${r.licence}. Source: ${r.source}.`)))),
+      h('ul', {}, ...LISTEN_ITEMS.map((r) => h('li', {}, `${r.title}: ${r.performer}. ${r.licence}. Source: ${r.source}${r.sourceTitle ? `, filed as "${r.sourceTitle}"` : ''}.`)))),
     h('section', { class: 'card', 'aria-labelledby': 'terms-texts' },
       h('h2', { id: 'terms-texts' }, 'Text sources'),
       h('ul', {},

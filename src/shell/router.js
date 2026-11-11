@@ -28,7 +28,7 @@ export const ROUTES = [
   { name: 'phrase', pattern: '/phrases/:id', module: '../phrases/phrases.view.js', title: 'Phrase', owner: 'phrases', optional: true, paramQuery: { id: 'id' } },
   { name: 'awards', pattern: '/awards', module: '../awards/gallery.view.js', title: 'Awards and certificate', owner: 'awards', optional: true, group: 'progress', quick: 'nav.route.awards' },
   { name: 'songs', pattern: '/songs', module: '../listen/songs.view.js', title: 'Songs', owner: 'listen', optional: true, group: 'learn', quick: 'nav.route.songs' },
-  { name: 'listen-shelf', pattern: '/listen/shelf', module: '../listen/shelf.view.js', title: 'Sacred listen', owner: 'listen', optional: true, group: 'learn', quick: 'nav.route.listen-shelf' },
+  { name: 'listen-shelf', pattern: '/listen/shelf', module: '../listen/shelf.view.js', title: 'Sacred Listen', owner: 'listen', optional: true, group: 'learn', quick: 'nav.route.listen-shelf' },
   { name: 'ladder',   pattern: '/ladder',        module: '../curriculum/learn.view.js', title: 'Syllable ladder',  owner: 'lane1', group: 'learn', quick: 'nav.ladder',   query: { ladder: '1' },      needs: 'curriculum/ladder.view.js' },
   { name: 'fade',     pattern: '/fade',          module: '../curriculum/learn.view.js', title: 'Fade-out recall',  owner: 'lane1', group: 'learn', quick: 'nav.fade',     query: { fade: '1' },        needs: 'curriculum/fade.view.js' },
   { name: 'fadeline', pattern: '/fade/:id',      module: '../curriculum/learn.view.js', title: 'Fade-out recall',  owner: 'lane1', paramQuery: { id: 'fade' },                                                       needs: 'curriculum/fade.view.js' },

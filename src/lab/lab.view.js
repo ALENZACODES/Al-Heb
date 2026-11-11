@@ -406,7 +406,7 @@ function drill(root, ctx, id) {
         h('h1', { id: 'view-title', tabindex: '-1' }, game.title, ' ', heSpan(game.titleHe, 'he')),
         artImg(h, coverArtPath(id), 'cover'),
         h('p', {}, h('span', { class: 'lab-lvl', style: `background:${SKILL_COLOR[game.skill]};color:${SKILL_INK[game.skill] || '#fffaf0'}` }, skillOf(game.skill).name), workout && pos >= 0 ? `  Workout game ${pos + 1} of 3` : ''),
-        game.teaches ? h('p', { class: 'lab-teaches' }, `You practise: ${game.teaches.charAt(0).toLowerCase()}${game.teaches.slice(1)}.`) : null,
+        game.teaches ? h('p', { class: 'lab-teaches' }, `You practice: ${game.teaches.charAt(0).toLowerCase()}${game.teaches.slice(1)}.`) : null,
         h('p', { class: 'how' }, game.blurb),
         h('p', { class: 'lab-note' }, `${noClock() ? 'Ten rounds, no clock (calm mode or No time limits is on).' : `${sessionSeconds(id)} seconds.`}${isStudio(id) ? ' Three right in a row starts a combo for bonus points.' : ''} Two right in a row takes you up a level; a miss takes you down one.${gs ? ` Your best: ${gs.best}. You start at level ${startLevel(gs)}.` : ''}`),
         h('div', { class: 'lab-actions' }, start)));

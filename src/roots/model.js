@@ -72,10 +72,10 @@ export function coverageText(c, browsable) {
     const withRoot = list.filter((v) => v && v.root).length;
     const leftOut = Number.isFinite(c.verbs) ? c.verbs - shown : null;
     explorer = leftOut > 0
-      ? ` This explorer shows ${withRoot} of ${shown} verbs you can open here (${leftOut} word-list verbs are not in this explorer).`
+      ? ` This explorer shows ${withRoot} of ${shown} verbs you can open here with a root listed (${leftOut} word-list verbs are not in this explorer, of the ${c.verbs} in the word list).`
       : ` This explorer shows the same ${shown} verbs (${withRoot} with a root listed).`;
   }
-  return `${wordList}${explorer} ${EXPLORER_VERB_RULE} A verb pattern is listed for ${c.verbsWithBinyan} verbs in the word list. ${c.familiesOf2Plus} groups of two or more words share root letters, and ${c.familiesOf3Plus} groups have three or more. ${c.familiesRuleChecked} groups pass a stricter check made by rules. A Hebrew reader has confirmed ${c.familiesVerified} groups. Verbs without a root are not grouped.`;
+  return `${wordList}${explorer} ${EXPLORER_VERB_RULE} A verb pattern is listed for ${c.verbsWithBinyan} of the same ${c.verbs} verbs in the word list. ${c.familiesOf2Plus} groups of two or more words share root letters, and ${c.familiesOf3Plus} groups have three or more. ${c.familiesRuleChecked} groups pass a stricter check made by rules. A Hebrew reader has confirmed ${c.familiesVerified} groups. Verbs without a root are not grouped.`;
 }
 
 /** Prompt wording: a claim of "root" only for a verified family; otherwise a statement about the word list. */

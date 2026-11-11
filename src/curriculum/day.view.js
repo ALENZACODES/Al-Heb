@@ -91,7 +91,7 @@ export function mount(root, ctx) {
     // Torah portion (Shabbat) and times
     if (p.parsha || p.noPortion) kids.push(el("section", { class: "alef-day-sec", "aria-labelledby": "alef-day-parsha" },
       el("h2", { id: "alef-day-parsha" }, "Torah portion"),
-      p.parsha ? el("p", {}, el("strong", {}, p.parsha.href ? el("a", { href: p.parsha.href, "aria-label": `Practise reading the Torah portion ${p.parsha.en}` }, p.parsha.en) : p.parsha.en), " ", heText(p.parsha.he), " ", el("span", { class: "muted" }, "(The full portion text is not in Aleph yet; the link opens the Torah reading practice.)"))
+      p.parsha ? el("p", {}, el("strong", {}, p.parsha.href ? el("a", { href: p.parsha.href, "aria-label": `Practice reading the Torah portion ${p.parsha.en}` }, p.parsha.en) : p.parsha.en), " ", heText(p.parsha.he), " ", el("span", { class: "muted" }, "(The full portion text is not in Aleph yet; the link opens the Torah reading practice.)"))
         : el("p", {}, p.noPortion)));
 
     if (p.times.length || p.needsLocation) {

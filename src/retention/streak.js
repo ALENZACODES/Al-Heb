@@ -2,11 +2,12 @@
 // Retention layer over the ONE streak engine (src/curriculum/streak.js, store key "streak"). This file never keeps its
 // own day count. It adds: streak freezes bought with gems, a repair window after a break, free rest days for Shabbat
 // and Yom Tov, a travel day of grace, and milestone celebrations. Pure: every function takes `now`.
-import { normalizeRecord, toStored, projectStreak, rollover, withDeclaredRest, completeDay, isRestDay, weekStrip, STREAK_V } from '../curriculum/streak.js';
+import { normalizeRecord, toStored, projectStreak, rollover, withDeclaredRest, completeDay, isRestDay, STREAK_V } from '../curriculum/streak.js';
 import { clone, CAPS } from './state.js';
-import { dayKey, addDaysISO, weekdayOf, daysBetween, localAt } from './clock.js';
+import { dayKey, addDaysISO, daysBetween, localAt } from './clock.js';
 import { earn, spend, PRICES } from './gems.js';
 import { restNow } from './quiet.js';
+import { repairOffer as liveRepairOffer, weekDays, isFreeRestDay as freeRestDay } from '../lib/counts.js';
 
 /** Tuning. */
 export const STREAK = Object.freeze({
@@ -27,9 +28,8 @@ export const STREAK = Object.freeze({
 
 /** A day that can never break a streak: Saturday, Yom Tov, and (by the rule above) Friday and the eve of Yom Tov. */
 export function isFreeRestDay(iso, mode = 'reform') {
-  if (isRestDay(iso, mode)) return true;
-  if (!STREAK.shabbatCoversFriday) return false;
-  return weekdayOf(iso) === 5 || isRestDay(addDaysISO(iso, 1), mode);
+  if (!STREAK.shabbatCoversFriday) return isRestDay(iso, mode);
+  return freeRestDay(iso, mode); // src/lib/counts.js: the same rule the week dots use
 }
 
 const maxISO = (a, b) => (!a ? b : !b ? a : a > b ? a : b);
@@ -91,7 +91,8 @@ export function buyFreeze(ret, now = Date.now()) {
   s.rec.freezes.held += 1; return { ok: true, rec: s.rec };
 }
 
-/** The open repair offer, or null. */
+/** The open repair offer, or null. A restore is free (PRICES.repairPerDay is 0): the app is free, and the Daily page and the shop
+ *  offer the same thing at the same price. Screens show it only while the streak is broken (src/lib/counts.js repairOffer). */
 export function repairOffer(ret, now = Date.now()) {
   const p = ret.repair; if (!p || now > p.until) return null;
   return { days: p.days, prev: p.prev, price: p.days.length * PRICES.repairPerDay, msLeft: p.until - now, hoursLeft: Math.max(1, Math.ceil((p.until - now) / 3600000)) };
@@ -104,7 +105,7 @@ export function repairOffer(ret, now = Date.now()) {
 export function repairStreak(streakRaw, ret, now = Date.now(), opt = {}) {
   const offer = repairOffer(ret, now);
   if (!offer) return { ok: false, reason: 'none', streak: streakRaw, rec: ret };
-  const s = spend(ret, offer.price, 'buy-repair', now);
+  const s = offer.price > 0 ? spend(ret, offer.price, 'buy-repair', now) : { ok: true, rec: clone(ret) }; // free: no ledger line
   if (!s.ok) return { ok: false, reason: 'balance', streak: streakRaw, rec: ret };
   let streak = normalizeRecord(streakRaw).v === STREAK_V ? streakRaw : rollover(streakRaw, now);
   for (const d of offer.days) streak = withDeclaredRest(streak, d, true);
@@ -144,7 +145,8 @@ export function streakStatus(streakRaw, ret, now = Date.now()) {
   const p = projectStreak(streakRaw, now), today = dayKey(now);
   const mode = normalizeRecord(streakRaw).mode, kind = restNow(now, { mode }) || (isRestDay(today, mode) ? (new Date(now).getDay() === 6 ? 'shabbat' : 'yomtov') : null);
   const restToday = p.restToday || !!kind; // from Friday 18:00, all Saturday, Yom Tov and its eve from 18:00: no streak pressure
-  const base = { count: p.count, best: p.best, held: ret.freezes.held, activeToday: p.activeToday, repair: repairOffer(ret, now), restKind: restToday ? kind || 'rest' : null };
+  const live = liveRepairOffer(ret, streakRaw, now); // offered only while the streak is actually broken, naming the streak it brings back
+  const base = { count: p.count, best: p.best, held: ret.freezes.held, activeToday: p.activeToday, repair: live ? repairOffer(ret, now) : null, restKind: restToday ? kind || 'rest' : null };
   let state = 'new';
   if (restToday && !p.activeToday) state = 'rest';
   else if (p.activeToday) state = 'done';
@@ -167,26 +169,12 @@ export function streakLine(st) {
   }
 }
 
-const WEEKDAY = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 /**
- * Seven days ending today for the streak strip, oldest first. state: 'done' | 'freeze' (covered by a bought freeze) |
- * 'travel' | 'rest' (Shabbat, Yom Tov or a declared rest day) | 'today' | 'open'. A covered day is never drawn as a failure.
+ * Seven days ending today for the streak strip, oldest first: src/lib/counts.js weekDays, the one week-dot model the Home strip,
+ * the Morning Verse and the header strip share. state: 'done' | 'freeze' | 'travel' | 'rest' | 'today' | 'open'.
  * @returns {Array<{date:string, weekday:number, state:string, label:string}>} label = full words for screen readers
  */
-export function weekDots(streakRaw, ret, now = Date.now()) {
-  const mode = normalizeRecord(streakRaw).mode, today = dayKey(now);
-  return weekStrip(streakRaw, now).map((d) => {
-    let state = d.state === 'frozen' ? 'rest' : d.state;
-    if (d.state !== 'done') {
-      if (ret.freezes.used.includes(d.date)) state = 'freeze';
-      else if (ret.travelCovered.includes(d.date)) state = 'travel';
-      else if (d.date !== today && isFreeRestDay(d.date, mode)) state = 'rest';
-      else if (d.date === today && isRestDay(d.date, mode)) state = 'rest';
-    }
-    const what = { done: 'done', freeze: 'covered by a streak freeze', travel: 'travel day', rest: 'rest day', today: 'today, not done yet', open: 'no lesson' }[state];
-    return { date: d.date, weekday: d.weekday, state, label: `${WEEKDAY[d.weekday]}: ${what}` };
-  });
-}
+export function weekDots(streakRaw, ret, now = Date.now(), extraRest) { return weekDays(streakRaw, ret, now, extraRest); }
 /** The learner has seen the "a freeze covered a day" note. */
 export function freezeNoteSeen(ret) { if (!ret.freezes.unseen && !ret.freezes.shownAt) return ret; const r = clone(ret); r.freezes.unseen = false; r.freezes.shownAt = 0; return r; }
 /** The note is on screen now. It stays for this visit and is retired at the next page or the next visit (also after the app was closed). */

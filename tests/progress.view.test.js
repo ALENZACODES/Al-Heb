@@ -27,7 +27,7 @@ test('siddur coverage line: fresh learner shows 0% for Shabbat morning (the serv
   const line = root.querySelector('.pg-siddur');
   assert.ok(line, 'line rendered');
   assert.equal(line.attrs['data-pct'], '0'); assert.equal(line.attrs['data-order'], 'shabbat-morning');
-  assert.match(line.textContent, /^Prayer book coverage: 0% of the phrases in Shabbat morning use signs you have practised/);
+  assert.match(line.textContent, /^Prayer book coverage: 0% of the phrases in Shabbat morning use signs you have practiced/);
   assert.equal(line.queryAll('a')[0].attrs.href, '#/service');
   assert.match(section(root, 'pg-h-read').textContent, /content coverage, not a reading assessment/);
 });
@@ -36,7 +36,7 @@ test('siddur coverage line follows the saved service choice and rises with compl
   const { root } = await show({ ...allRead(), 'service.prefs': { order: 'friday-night' } });
   const line = root.querySelector('.pg-siddur');
   assert.equal(line.attrs['data-order'], 'friday-night');
-  assert.match(line.textContent, /Prayer book coverage: \d+% of the phrases in Friday evening use signs you have practised/);
+  assert.match(line.textContent, /Prayer book coverage: \d+% of the phrases in Friday evening use signs you have practiced/);
   assert.ok(Number(line.attrs['data-pct']) > 0, 'all read lessons done: some lines decodable');
   const { root: r2 } = await show({ 'service.prefs': { order: 'weekday-morning' } }); // not a follow order: falls back to the default
   assert.equal(r2.querySelector('.pg-siddur').attrs['data-order'], 'shabbat-morning');
@@ -83,7 +83,7 @@ test('unified section comes first, has one row per source, marks self-reported r
   const { root } = await show({ ...allRead(), 'timedread.v1': { v: 1, reads: [read()] }, 'firstday.progress': { step: 3, readWords: ['shalom'], done: false } });
   const first = root.queryAll('section.card')[0];
   assert.equal(first.attrs['aria-labelledby'], 'pg-h-now');
-  assert.match(first.textContent, /^What have I practised\?/);
+  assert.match(first.textContent, /^What have I practiced\?/);
   const rows = first.queryAll('[data-now]');
   assert.deepEqual(rows.map((r) => r.attrs['data-now']), ['letters', 'lines', 'vocab', 'timedread', 'siddur', 'firstday']);
   assert.deepEqual(rows.map((r) => r.queryAll('a')[0].attrs.href), ['#/learn', '#/read', '#/vocab', '#/timedread', '#/service', '#/firstday']);
@@ -91,7 +91,7 @@ test('unified section comes first, has one row per source, marks self-reported r
   assert.match(rows[0].textContent, /27 of 27 letters, 15 of 15 signs/); assert.match(rows[3].textContent, /1 read of 1 text, about 90 clean words a minute/);
   assert.match(rows[5].textContent, /1 first-day word marked read; ladder 0 of 8/);
   assert.match(first.textContent, /None of it is a fluency score/);
-  assert.match(root.queryAll('section.card')[1].textContent, /^Lines and words using signs you have practised/);
+  assert.match(root.queryAll('section.card')[1].textContent, /^Lines and words using signs you have practiced/);
 });
 test('unified section hides the links of routes missing from this build and still renders every row', async () => {
   const { root } = await show({}, { routes: ['learn', 'read'] });

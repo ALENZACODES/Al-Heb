@@ -4,6 +4,7 @@
 // implies that a backup happened on its own: the only thing that counts as a backup is the learner downloading the file.
 // Pure helpers plus one small node builder (takes an `h` element factory). Store key: backup.reminder.v1
 //   { lastExportAt: ISO string|null, lastExportCompleted: number, snoozeUntil: ISO string|null }
+import { lessonsFinished } from '../lib/counts.js';
 
 export const REMINDER_KEY = 'backup.reminder.v1';
 /** Finished lessons before the first reminder. */
@@ -57,7 +58,7 @@ export function snoozed(record, now = Date.now()) {
 /** Finished-lesson count from the curriculum progress record ({completed: {[id]: ms}}). */
 export function completedCount(progress) {
   const c = progress && typeof progress === 'object' ? progress.completed : null;
-  return c && typeof c === 'object' ? Object.keys(c).length : 0;
+  return lessonsFinished(c); // src/lib/counts.js: the lessons-finished number every screen shows
 }
 
 /**

@@ -74,7 +74,7 @@ test('browser: the sound bar message stays readable (not squeezed to a few lette
   });
 });
 
-test('browser: Progress "What have I practised?" rows keep the label on whole words at 360px', { skip, timeout: 60000 }, async () => {
+test('browser: Progress "What have I practiced?" rows keep the label on whole words at 360px', { skip, timeout: 60000 }, async () => {
   await withApp(async ({ browser, base }) => {
     const { ctx, page } = await open(browser, base, '/progress', { width: 360, height: 640 });
     const r = await page.evaluate(() => { const s = document.querySelector('[data-now="letters"] > span'); const lh = parseFloat(getComputedStyle(s).lineHeight) || 24; return { w: s.getBoundingClientRect().width, h: s.getBoundingClientRect().height, lh }; });

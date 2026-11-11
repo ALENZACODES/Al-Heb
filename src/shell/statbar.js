@@ -4,26 +4,36 @@
 // Nothing here writes to the store. Hidden until setup is done, in calm mode, when the learner hides streaks in Settings,
 // and inside full-screen players (lesson, setup), where body classes hide the whole header.
 import { h } from './ui.js';
-import { projectStreak } from '../curriculum/streak.js';
+// The ONE header counter group (S-12, S-02): streak, minutes, gems and hearts, on every page, from src/lib/counts.js. The retention
+// module adds only the league cup beside it, so no counter is drawn twice and none waits for a late module.
 import { STREAK_KEY } from '../curriculum/dom.js';
-import { DAILY_GOAL_KEY, normalizeDailyGoal } from '../home/today.js';
+import { KEYS, streakNow, minutesGoal, gemsOf, heartsOf, gemsText, streakText } from '../lib/counts.js';
+const DAILY_GOAL_KEY = KEYS.dailyGoal;
 
 /**
  * @param {{streak?:any, dailyGoal?:any, now?:number|Date}} o
  * @returns {{count:number, lit:boolean, rest:boolean, todayMin:number, goalMin:number, pct:number, met:boolean, streakLabel:string, goalLabel:string}}
  */
 export function statModel({ streak = null, dailyGoal = null, now = Date.now() } = {}) {
-  let p;
-  try { p = projectStreak(streak, now); } catch { p = { count: 0, activeToday: false, restToday: false, todaySeconds: 0 }; }
-  const goalMin = normalizeDailyGoal(dailyGoal);
-  const todayMin = Math.max(0, Math.floor((p.todaySeconds || 0) / 60));
-  const pct = Math.max(0, Math.min(100, Math.round((todayMin / goalMin) * 100)));
-  const count = p.count || 0, lit = !!p.activeToday && count > 0, met = todayMin >= goalMin;
+  const p = streakNow(streak, now), mg = minutesGoal(streak, dailyGoal, now);
+  const goalMin = mg.goal, todayMin = mg.min, pct = mg.pct, met = mg.met;
+  const count = p.count, lit = p.activeToday && count > 0;
   // Each spoken name starts with the number the chip shows (WCAG 2.5.3 label in name): "0" -> "0-day streak...", "3/10" -> "3/10 minutes today...".
-  const streakLabel = count === 0 ? '0-day streak. Study 5 minutes today to start one.'
-    : `${count}-day streak${lit ? ', today counts' : p.restToday ? ', today is a rest day' : '. Study 5 minutes today to keep it'}.`;
-  const goalLabel = `${todayMin}/${goalMin} minutes today${met ? ', daily goal met' : ''}.`;
-  return { count, lit, rest: !!p.restToday, todayMin, goalMin, pct, met, streakLabel, goalLabel };
+  const streakLabel = count === 0 ? `${streakText(0)}. Study 5 minutes today to start one.`
+    : `${streakText(count)}${lit ? ', today counts' : p.restToday ? ', today is a rest day' : '. Study 5 minutes today to keep it'}.`;
+  const goalLabel = `${mg.short} minutes today${met ? ', daily goal met' : ''}.`;
+  return { count, lit, rest: p.restToday, todayMin, goalMin, pct, met, streakLabel, goalLabel };
+}
+/** Gems and hearts for the same bar (retention.v1). Shown once the learner has earned something, never in calm mode. */
+export function walletModel({ retention = null, now = Date.now() } = {}) {
+  const r = retention && typeof retention === 'object' ? retention : {};
+  const earned = (Number(r.xp?.total) || 0) > 0 || (Number(r.lessonsFinished) || 0) > 0 || gemsOf(r) > 0;
+  const gems = gemsOf(r), hearts = heartsOf(r, now);
+  return { show: earned, gems, gemsLabel: `${gemsText(gems)}. Open the shop.`, hearts: hearts.n, heartsMax: hearts.max, heartsOn: earned && hearts.on, heartsLabel: `${hearts.n} of ${hearts.max} hearts. Open the shop.` };
+}
+/** Whether the gems and hearts chips show. @param {any} settings */
+export function walletWanted(settings) {
+  try { return settings?.get?.('calmMode') !== true; } catch { return true; }
 }
 
 /** Whether the bar shows at all. @param {any} settings */
@@ -39,12 +49,23 @@ export function mountStatbar({ store, settings, doc = globalThis.document, now =
   const ringN = h('span', { class: 'stat-n' }, '0');
   const streakChip = h('a', { class: 'stat-chip stat-streak', href: '#/progress', id: 'stat-streak' }, h('span', { class: 'stat-flame', 'aria-hidden': 'true' }), flameN);
   const goalChip = h('a', { class: 'stat-chip stat-goal', href: '#/learn', id: 'stat-goal' }, h('span', { class: 'stat-ring', 'aria-hidden': 'true' }), ringN);
-  const bar = h('div', { class: 'statbar', role: 'group', 'aria-label': 'Today' }, streakChip, goalChip);
+  const gemsN = h('span', { class: 'stat-n' }, '0'), heartsN = h('span', { class: 'stat-n' }, '0');
+  const gemsChip = h('a', { class: 'stat-chip stat-gems', href: '#/shop', id: 'stat-gems', hidden: true }, h('span', { class: 'stat-gem', 'aria-hidden': 'true' }, '\u{1F48E}'), gemsN);
+  const heartsChip = h('a', { class: 'stat-chip stat-hearts', href: '#/shop', id: 'stat-hearts', hidden: true }, h('span', { class: 'stat-heart', 'aria-hidden': 'true' }, '\u2764\uFE0F'), heartsN);
+  const bar = h('div', { class: 'statbar', role: 'group', 'aria-label': 'Today: your streak, minutes, gems and hearts' }, streakChip, goalChip, gemsChip, heartsChip);
   header.append(bar);
   let last = '';
+  const hide = (el, on) => { el.hidden = !on; if (on) el.removeAttribute?.('hidden'); else el.setAttribute?.('hidden', ''); };
   function refresh() {
     const show = statbarWanted(settings);
-    bar.hidden = !show;
+    let ret = null; try { ret = store.get(KEYS.retention); } catch { /* none */ }
+    const w = walletModel({ retention: ret, now: now() }), wallet = walletWanted(settings) && w.show;
+    bar.hidden = !show && !wallet;
+    hide(streakChip, show); hide(goalChip, show); hide(gemsChip, wallet); hide(heartsChip, wallet && w.heartsOn);
+    if (wallet) {
+      gemsN.textContent = String(w.gems); gemsChip.setAttribute('aria-label', w.gemsLabel); gemsChip.setAttribute('title', w.gemsLabel);
+      heartsN.textContent = String(w.hearts); heartsChip.setAttribute('aria-label', w.heartsLabel); heartsChip.setAttribute('title', w.heartsLabel);
+    }
     if (!show) return;
     let streak = null, goal = null;
     try { streak = store.get(STREAK_KEY); } catch { /* none */ }
@@ -91,7 +112,7 @@ export function mountStatbar({ store, settings, doc = globalThis.document, now =
   }
   const off = store?.subscribe?.((key, value) => {
     if (key === 'awards.v1') { const ids = badgeIds(value); const fresh = ids.filter((id) => !knownBadges.has(id)); knownBadges = new Set(ids); if (fresh.length) badgeLanded(fresh); return; }
-    if (key === STREAK_KEY || key === DAILY_GOAL_KEY || key === 'settings') refresh();
+    if (key === STREAK_KEY || key === DAILY_GOAL_KEY || key === KEYS.retention || key === 'settings') refresh();
   });
   const timer = setInterval(refresh, 30000); // the engine saves seconds every 10 s; the minute count follows within half a minute
   refresh();

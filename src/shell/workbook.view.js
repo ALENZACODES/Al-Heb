@@ -1,4 +1,5 @@
 // Printable workbook page: links to the generated PDFs in assets/workbook/ (manifest.json lists them). Lane 7/2 produce the PDFs.
+import { count } from './plural.js';
 import { h } from './ui.js';
 
 const mb = (b) => (b / 1048576).toFixed(1) + ' MB';
@@ -12,7 +13,7 @@ export async function mount(root, ctx) {
   const list = files.length
     ? h('ul', { class: 'credits', 'aria-label': 'Workbook PDFs' }, ...files.map((f) => h('li', {},
         h('strong', {}, `${LABEL[f.script] ?? f.script}, ${f.paper}${f.mnemonics ? ', with memory hooks' : ''}`),
-        h('span', { class: 'block muted' }, `${f.pages} pages, ${mb(f.bytes)}`),
+        h('span', { class: 'block muted' }, `${count(f.pages, 'page')}, ${mb(f.bytes)}`),
         h('a', { class: 'btn', href: new URL('../../assets/workbook/' + f.pdf, import.meta.url).href, download: f.pdf, 'aria-label': `Download PDF: ${LABEL[f.script] ?? f.script} workbook, ${f.paper}${f.mnemonics ? ', with memory hooks' : ''}` }, 'Download PDF'))))
     : h('p', { class: 'muted', role: 'status' }, err ? `The workbook list could not be loaded. It may not be available offline: PDFs are not stored for offline use until you open them once.` : 'No workbook files are listed in this build.');
   root.replaceChildren(h('article', { class: 'stack' },

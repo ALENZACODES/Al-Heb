@@ -12,7 +12,7 @@ export function mount(root, ctx) {
       h('p', { class: 'muted' }, 'Short answers, in plain words. For the long version (the research and the fine print), see ', h('a', { href: '#/how' }, 'How this works'), '.')),
 
     sec('start', 'Where do I start?',
-      h('p', {}, 'Start with ', h('a', { href: '#/firstday' }, 'Your first 10 minutes'), ': one letter at a time until you have built a real word. You can do those steps again whenever you like. Practising never takes away a finished mark.'),
+      h('p', {}, 'Start with ', h('a', { href: '#/firstday' }, 'Your first 10 minutes'), ': one letter at a time until you have built a real word. You can do those steps again whenever you like. Practicing never takes away a finished mark.'),
       h('p', {}, 'Aleph has two paths. ', h('strong', {}, 'Read the prayer book'), ' teaches you to read Hebrew aloud, including prayers and Torah. ', h('strong', {}, 'Speak in Israel'), ' teaches everyday Hebrew for travel and conversation. You pick one in ', h('a', { href: '#/settings' }, 'Settings'), ' (your goal), and you can use both.'))
 
     , sec('sound', 'Why can I not hear some words?',

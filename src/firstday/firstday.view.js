@@ -271,7 +271,7 @@ export function mount(root, ctx) {
     body.replaceChildren(
       el('div', { class: 'fd-done' },
         cheer ? el('div', { class: 'fd-cheer' }, cheer.el) : el('div', { class: 'fd-medal', 'aria-hidden': 'true' }, el('span', {}, '✓')),
-        el('p', { class: 'fd-steplabel' }, practice ? 'Practice round finished. Your finished mark stays as it was — practising changes nothing you earned.' : `${onramp.steps.length} of ${onramp.steps.length} wins`),
+        el('p', { class: 'fd-steplabel' }, practice ? 'Practice round finished. Your finished mark stays as it was — practicing changes nothing you earned.' : `${onramp.steps.length} of ${onramp.steps.length} wins`),
         el('h2', { class: 'fd-done-title', 'data-case': 'keep' }, d.title || 'Done'),
         practice ? null : el('ul', { class: 'fd-stats', 'aria-label': 'This lesson' },
           stat(`${onramp.steps.length}/${onramp.steps.length}`, 'wins'),

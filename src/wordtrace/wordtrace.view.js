@@ -144,7 +144,7 @@ export function mount(root, ctx = {}) {
         h('button', { 'data-act': 'script-cursive', 'aria-pressed': S.script === 'cursive', onclick: () => { S.script = 'cursive'; S.phase = 'pick'; render(); } }, t('wt.cursive', 'Cursive'))),
       h('div', { class: 'row', role: 'group', 'aria-label': t('wt.level', 'Level') },
         ...LEVELS.map(lv => h('button', { 'data-level': lv.id, 'aria-pressed': S.level === lv.id, onclick: () => { S.level = lv.id; S.phase = 'pick'; render(); } }, t('wt.lv.' + lv.id, lv.label)))),
-      h('div', { class: 'row', role: 'group', 'aria-label': t('wt.how', 'How to practise') },
+      h('div', { class: 'row', role: 'group', 'aria-label': t('wt.how', 'How to practice') },
         h('button', { 'data-act': 'mode-draw', 'aria-pressed': S.mode === 'draw', onclick: () => { S.mode = 'draw'; render(); } }, t('wt.modeDraw', 'Draw with finger or pen')),
         h('button', { 'data-act': 'mode-step', 'aria-pressed': S.mode === 'step', onclick: () => { S.mode = 'step'; render(); } }, t('wt.modeStep', 'Walk me through it with buttons')),
         h('button', { 'data-act': 'strict', 'aria-pressed': S.strict, onclick: () => { S.strict = !S.strict; render(); } }, t('wt.strict', 'Strict'))),

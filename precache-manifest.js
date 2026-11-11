@@ -114,6 +114,8 @@ self.ALEF_PRECACHE = [
  "src/letters/trace.js",
  "src/letters/trace.view.js",
  "src/letters/tween.js",
+ "src/lib/counts.generated.js",
+ "src/lib/counts.js",
  "src/letters/typing.js",
  "src/listen/catalog.js",
  "src/listen/listen.view.js",

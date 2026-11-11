@@ -56,7 +56,7 @@ export function toJson(summary) { return JSON.stringify(summary, null, 1) + '\n'
 
 /** Plain-language description of what the export contains (shown before the learner shares). */
 export function describe(summary) {
-  const bits = [`${summary.lessons.length} completed lesson id${summary.lessons.length === 1 ? '' : 's'}`, `${summary.letters.length} letters and ${summary.signs.length} vowel signs you practised`,
+  const bits = [`${summary.lessons.length} completed lesson id${summary.lessons.length === 1 ? '' : 's'}`, `${summary.letters.length} letters and ${summary.signs.length} vowel signs you practiced`,
     `${summary.weak.length} weak spot${summary.weak.length === 1 ? '' : 's'} (letter pairs and signs you miss)`, `your class-track week (${summary.week})`, `today's date (${summary.date})`];
   if (summary.timed) bits.push(`${summary.timed.length} timed read result${summary.timed.length === 1 ? '' : 's'}`);
   bits.push(summary.name ? `the name you typed: ${summary.name}` : 'no name or email');

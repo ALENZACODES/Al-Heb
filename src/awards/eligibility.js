@@ -1,4 +1,5 @@
 import { reactRimon } from '../shell/rimon-events.js';
+import { bookFinisherScope } from '../lib/counts.js';
 // What may be shown as earned. Practice badges come from saved game sessions.
 // The beginner certificate uses the shipped review flag, which is not reviewed,
 // so certificateDecision does not issue. evaluateProposedCertificate is the pure
@@ -169,8 +170,8 @@ export const MILESTONE_BADGES = Object.freeze([
     category: 'milestones',
     section: 'mastery',
     name: 'Book Finisher',
-    requirement: 'All five story books are recorded as read to their last page on this device.',
-    lockedText: 'Locked. Read all five story books to their last page. The reader records each book you finish.',
+    requirement: `All of ${bookFinisherScope()} are recorded as read to their last page on this device.`,
+    lockedText: `Locked. Read ${bookFinisherScope()} to their last page. The reader records each book you finish.`,
   },
   {
     id: 'early-bird',
@@ -412,7 +413,7 @@ function earnedMilestoneDetail(badge, record) {
     return `Earned. Activity, not mastery. ${basis.count || 5} different historic recordings are recorded as played on this device.`;
   }
   if (badge.id === 'book-finisher') {
-    return 'Earned. Activity, not mastery. All five story books are recorded as read to their last page on this device.';
+    return `Earned. Activity, not mastery. All of ${bookFinisherScope()} are recorded as read to their last page on this device.`;
   }
   if (badge.id === 'early-bird' || badge.id === 'night-owl') {
     const when = Number.isInteger(basis.hour) && basis.hour >= 0 ? ` at ${basis.hour}:00 or within that hour` : '';

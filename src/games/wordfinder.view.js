@@ -2,6 +2,7 @@ import { signalRimon } from '../shell/rimon-events.js';
 // Hebrew Word Finder: day-zero word recognition with a real sourced lexicon.
 // One tap to hear, one tap to find. No timers, typing, lives or penalties.
 import { h, heSpan } from '../shell/ui.js';
+import { FIRST_WORDS } from '../lib/counts.js';
 import { speak, loadGameImages, envNode, GAME_ENV } from './engine.js';
 import { sfx } from '../audio/sfx.js';
 import { isAudioFree } from '../shell/audiofree.js';
@@ -30,7 +31,7 @@ export function mount(root, ctx) {
     h('p', { class: 'muted' }, 'Hebrew reads right to left ←. The dots help with sounds. Every word has an English meaning.'),
     progress, status, sound, stage, more,
     h('p', { class: 'muted wf-source' },
-      '240 words · 5 words per round')));
+      `${FIRST_WORDS} words · 5 words per round`)));
 
   // The treasure-map backdrop made for this game (approved art, decorative
   // only — never a word cue). A missing picture leaves the page as it was.
@@ -62,9 +63,9 @@ export function mount(root, ctx) {
   function updateProgress() {
     const count = found.found.length;
     progress.replaceChildren(
-      h('span', { class: 'wf-progress-label' }, count + ' / 240 words found on this device'),
-      h('span', { class: 'wf-track', role: 'progressbar', 'aria-label': 'Words found', 'aria-valuemin': '0', 'aria-valuemax': '240', 'aria-valuenow': String(count) },
-        h('span', { class: 'wf-track-fill', style: 'width:' + (100 * count / 240).toFixed(1) + '%' })));
+      h('span', { class: 'wf-progress-label' }, count + ' / ' + FIRST_WORDS + ' words found on this device'),
+      h('span', { class: 'wf-track', role: 'progressbar', 'aria-label': 'Words found', 'aria-valuemin': '0', 'aria-valuemax': String(FIRST_WORDS), 'aria-valuenow': String(count) },
+        h('span', { class: 'wf-track-fill', style: 'width:' + (100 * count / FIRST_WORDS).toFixed(1) + '%' })));
   }
   function englishReadAloud(word) {
     if (audioOff()) { sound.textContent = 'Audio is off in your Aleph settings.'; return; }
@@ -157,7 +158,7 @@ export function mount(root, ctx) {
   function menuNode() {
     const themes = [...new Set(bank.map((word) => word.theme))];
     const selected = topic;
-    const options = [[TOPIC_FIRST, 'My first 24 words'], [TOPIC_ALL, 'All 240 words'],
+    const options = [[TOPIC_FIRST, 'My first 24 words'], [TOPIC_ALL, `All ${FIRST_WORDS} words`],
       ...themes.map((theme) => [theme, theme])];
     return h('details', { class: 'wf-explore' },
       h('summary', {}, 'Explore more gentle word groups'),
@@ -178,7 +179,7 @@ export function mount(root, ctx) {
         h('p', { class: 'wf-finish-symbol', 'aria-hidden': 'true' }, '✦'),
         h('h2', {}, 'You found your Hebrew words!'),
         h('p', {}, names.join(' · ')),
-        h('p', {}, 'You can continue with five new words, or practise the same ones again.'),
+        h('p', {}, 'You can continue with five new words, or practice the same ones again.'),
         h('button', { type: 'button', class: 'btn wf-next', onclick: () => newRound() }, 'Find five more words'),
         h('a', { class: 'btn secondary', href: '#/games' }, 'See games for Levels 1–9')));
       return;

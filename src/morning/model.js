@@ -4,8 +4,9 @@
  */
 import { STREAK_KEY } from "../curriculum/dom.js";
 import { CAL_PREFS_KEY, normalizePrefs as normCal } from "../curriculum/calendar.locations.js";
-import { normalizeRecord, projectStreak, weekStrip, withSettings, toStored, rollover, clock, GOAL_SECONDS } from "../curriculum/streak.js";
+import { normalizeRecord, projectStreak, withSettings, toStored, rollover, clock, GOAL_SECONDS } from "../curriculum/streak.js";
 import { PREFS_KEY, normalizePrefs, observantOn, freezeOn, festivalMode, morningPresent, rescueState } from "./plan.js";
+import { weekDays, KEYS } from "../lib/counts.js";
 
 const PROGRESS_STATE_KEY = "progress.state";
 
@@ -33,7 +34,8 @@ export function createMorningModel(store, now = () => new Date()) {
       set(STREAK_KEY, rollover(rec, now(), api.extraRest()));
     },
     project: () => projectStreak(api.record(), now(), api.extraRest()),
-    strip: () => weekStrip(api.record(), now(), api.extraRest()),
+    /** The week dots: src/lib/counts.js weekDays, the same model as Home's strip (free rest days, freezes and travel days included). */
+    strip: () => weekDays(api.record(), get(KEYS.retention, null), now(), api.extraRest()).map((d) => ({ ...d, state: d.state === "freeze" || d.state === "travel" || d.state === "rest" ? "frozen" : d.state })),
     /** Engagement store adapter. */
     io: { load: () => api.record(), save: (r) => set(STREAK_KEY, toStored(normalizeRecord(r))) },
     markSeen() { const today = fmtDay(now()); return api.setPrefsRaw({ lastSeen: today }); },

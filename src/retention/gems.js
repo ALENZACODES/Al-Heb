@@ -4,7 +4,8 @@ import { clone, CAPS } from './state.js';
 
 /** What the learner sees. Change the three words here to rename the currency everywhere (for example to "Seeds"). */
 export const CURRENCY = Object.freeze({ one: 'gem', many: 'gems', title: 'Gems' });
-export const PRICES = Object.freeze({ freeze: 200, hearts: 350, repairPerDay: 150 });
+// A streak restore is free everywhere (M-14): the Daily page and the shop offer the same restore at the same price, nothing.
+export const PRICES = Object.freeze({ freeze: 200, hearts: 350, repairPerDay: 0 });
 export const EARN = Object.freeze({ goal: 10, accuracy: 2, first: 50, promote: 50, rank1: 100, top3: 100 });
 export const WHY = Object.freeze({
   goal: 'Daily goal', accuracy: 'Sharp lesson', first: 'First lesson', promote: 'Moved up a league', rank1: 'First place', top3: 'Top three',

@@ -1,0 +1,27 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "israeli",
+ "inputText": "חַג כָּשֵׁר וְשָׂמֵחַ",
+ "inputSha256": "453d67c10f8724b4e3aed7c397bb4d7c449b7fb481ab1dd546b580c2a91ae5de",
+ "ingestedAt": "2026-11-11T23:15:54.902Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-11T23:15:54.902Z",
+ "redistributionCleared": false,
+ "spokenText": "חַג כָּשֵׁר וְשָׂמֵחַ",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [],
+  "google": {
+   "heard": "חג כשר ושמח",
+   "acc": 1.0,
+   "issues": []
+  },
+  "reviewersFailing": 0
+ }
+}

@@ -46,8 +46,10 @@ const base = `http://localhost:${server.address().port}/`;
 const browser = await chromium.launch({ executablePath: process.env.QA_CHROME || undefined });
 
 async function newPage(vp, theme) {
-  const ctx = await browser.newContext({ viewport: { width: vp.w, height: vp.h }, colorScheme: theme, deviceScaleFactor: 1, hasTouch: vp.w < 600 });
+  const ctx = await browser.newContext({ viewport: { width: vp.w, height: vp.h }, colorScheme: theme, deviceScaleFactor: 1, hasTouch: vp.w < 600, reducedMotion: 'reduce' }); // reduced motion: with smooth scrolling a focused control is measured mid-scroll and reported as off-screen
   await ctx.addInitScript((t) => { if (!localStorage.getItem('alef:settings')) localStorage.setItem('alef:settings', JSON.stringify({ onboarded: true, theme: t })); }, theme);
+  // The once-a-day opening prayer is marked as already shown: it covers the page and holds keyboard focus, so a sweep taken under it measures the veil, not the screen.
+  await ctx.addInitScript(() => { try { const d = new Date(); localStorage.setItem('alef:opening-prayer:day:v1', `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`); } catch { /* storage off */ } });
   const page = await ctx.newPage();
   const log = { console: [], exceptions: [], failed: [] };
   page.on('console', (m) => { if (m.type() === 'error' && !/^Failed to load resource/.test(m.text())) log.console.push(m.text().slice(0, 240)); });

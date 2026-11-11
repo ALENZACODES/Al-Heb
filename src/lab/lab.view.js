@@ -226,7 +226,7 @@ const CSS = `
 .lab-has-art{background-size:cover;background-position:center}
 .lab-board.lab-has-art{border-radius:14px;padding:.6rem}
 .lab-side-pic{inline-size:56px;block-size:56px;object-fit:contain;vertical-align:middle}
-@media (min-width:0){.lab-art.hero{aspect-ratio:3/1;inline-size:100%;object-fit:cover;object-position:center 50%;border-radius:16px;margin-block:0 .8rem}}
+@media (min-width:0){.lab-art.hero{aspect-ratio:3/2;inline-size:100%;max-inline-size:21rem;object-fit:contain;border-radius:16px;margin-block:0 .8rem}}
 .lab-token-glyph.has-pic{background-size:116%;background-position:center;border-color:transparent;box-shadow:none}.lab-token-glyph.has-pic .he{visibility:hidden}
 .lab-road.lab-has-art{background-size:cover;background-position:center bottom}
 .lab-sky.lab-has-art{background-size:cover;background-position:center bottom}.lab-sky.lab-has-art .lab-ground{display:none}

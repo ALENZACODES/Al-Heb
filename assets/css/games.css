@@ -99,6 +99,7 @@ button.catcher-star { pointer-events: auto; background: transparent; border: 0; 
 /* Day-zero Word Finder: oversized targets, calm feedback, no time pressure. */
 .wf-game { background: #F6F1E7; color: #2B2B2B; }
 .wf-game .muted { color: #1E4634; }
+:root .card.wf-game .btn.secondary { color: #1E4634; border-color: #1E4634; background: transparent; } /* the card stays cream in dark mode, so the dark-mode gold text was too pale on it */
 .wf-eyebrow { font-weight: 800; letter-spacing: .14em; font-size: .72rem; color: #4c5c26; }
 .wf-game h1 { font-size: clamp(1.5rem, 5vw, 2.1rem); color: #1E4634; margin: .35rem 0 .55rem; }
 .wf-game h1 .he { font-size: .82em; }

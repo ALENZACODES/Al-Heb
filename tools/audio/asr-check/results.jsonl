@@ -7433,3 +7433,103 @@
 {"file": "audio/m/israeli/word/shop-19.mp3", "asr": "שקל", "mode": "single"}
 {"file": "audio/m/israeli/word/vahavta-2-w16.mp3", "asr": "בדרך", "mode": "single"}
 {"file": "audio/m/israeli/word/vayehi-binsoa-w2.mp3", "asr": "בנסוע", "mode": "single"}
+{"file": "audio/m/israeli/dictionary/dict-v905b1db4.mp3", "asr": "שנייה", "mode": "single"}
+{"file": "audio/f/israeli/dictionary/dict-v905b1db4.mp3", "asr": "שנייה", "mode": "single"}
+{"file": "audio/m/israeli/dictionary/dict-ve6f0ccc5.mp3", "asr": "פרק", "mode": "single"}
+{"file": "audio/f/israeli/dictionary/dict-ve6f0ccc5.mp3", "asr": "פרק", "mode": "single"}
+{"file": "audio/m/israeli/dictionary/dict-vda78eeac.mp3", "asr": "בעיני", "mode": "single"}
+{"file": "audio/f/israeli/dictionary/dict-vda78eeac.mp3", "asr": "בעיני", "mode": "single"}
+{"file": "audio/m/israeli/dictionary/dict-v040e9391.mp3", "asr": "היא מת.", "mode": "single"}
+{"file": "audio/f/israeli/dictionary/dict-v040e9391.mp3", "asr": "היא מת.", "mode": "single"}
+{"file": "audio/m/israeli/dictionary/dict-va68ecfe2.mp3", "asr": "נאס", "mode": "single"}
+{"file": "audio/f/israeli/dictionary/dict-va68ecfe2.mp3", "asr": "נאס", "mode": "single"}
+{"file": "audio/m/israeli/dictionary/dict-v8639c1e2.mp3", "asr": "שיער", "mode": "single"}
+{"file": "audio/f/israeli/dictionary/dict-v8639c1e2.mp3", "asr": "שיער", "mode": "single"}
+{"file": "audio/m/israeli/dictionary/dict-vc4b2b486.mp3", "asr": "כן.", "mode": "single"}
+{"file": "audio/f/israeli/dictionary/dict-vc4b2b486.mp3", "asr": "כה", "mode": "single"}
+{"file": "audio/m/israeli/dictionary/dict-v448e91b1.mp3", "asr": "לימד", "mode": "single"}
+{"file": "audio/f/israeli/dictionary/dict-v448e91b1.mp3", "asr": "לימד", "mode": "single"}
+{"file": "audio/m/israeli/dictionary/dict-v3b6df3f7.mp3", "asr": "נגע", "mode": "single"}
+{"file": "audio/f/israeli/dictionary/dict-v3b6df3f7.mp3", "asr": "נגע", "mode": "single"}
+{"file": "audio/m/israeli/dictionary/dict-ve664e4ff.mp3", "asr": "קיים", "mode": "single"}
+{"file": "audio/f/israeli/dictionary/dict-ve664e4ff.mp3", "asr": "קיים", "mode": "single"}
+{"file": "audio/m/israeli/dictionary/dict-v1672f7ae.mp3", "asr": "כלל", "mode": "single"}
+{"file": "audio/f/israeli/dictionary/dict-v1672f7ae.mp3", "asr": "כלל", "mode": "single"}
+{"file": "audio/m/israeli/dictionary/dict-v2aa32e77.mp3", "asr": "שילח", "mode": "single"}
+{"file": "audio/f/israeli/dictionary/dict-v2aa32e77.mp3", "asr": "שילח", "mode": "single"}
+{"file": "audio/m/israeli/dictionary/dict-v982e6537.mp3", "asr": "גב", "mode": "single"}
+{"file": "audio/f/israeli/dictionary/dict-v982e6537.mp3", "asr": "גב", "mode": "single"}
+{"file": "audio/m/israeli/dictionary/dict-v86a86065.mp3", "asr": "ייחד", "mode": "single"}
+{"file": "audio/f/israeli/dictionary/dict-v86a86065.mp3", "asr": "ייחד", "mode": "single"}
+{"file": "audio/m/israeli/dictionary/dict-v1af81d96.mp3", "asr": "מור", "mode": "single"}
+{"file": "audio/f/israeli/dictionary/dict-v1af81d96.mp3", "asr": "מור", "mode": "single"}
+{"file": "audio/m/israeli/dictionary/dict-vce8b490a.mp3", "asr": "העביר", "mode": "single"}
+{"file": "audio/f/israeli/dictionary/dict-vce8b490a.mp3", "asr": "העביר", "mode": "single"}
+{"file": "audio/m/israeli/dictionary/dict-v193e9449.mp3", "asr": "פיקד", "mode": "single"}
+{"file": "audio/f/israeli/dictionary/dict-v193e9449.mp3", "asr": "פיקד", "mode": "single"}
+{"file": "audio/m/israeli/dictionary/dict-vc4f6426e.mp3", "asr": "אפס", "mode": "single"}
+{"file": "audio/f/israeli/dictionary/dict-vc4f6426e.mp3", "asr": "אפס", "mode": "single"}
+{"file": "audio/m/israeli/dictionary/dict-v4e0fa1cb.mp3", "asr": "יום חמישי", "mode": "single"}
+{"file": "audio/f/israeli/dictionary/dict-v4e0fa1cb.mp3", "asr": "יום חמישי", "mode": "single"}
+{"file": "audio/m/israeli/dictionary/dict-v90caa792.mp3", "asr": "יום רביעי.", "mode": "single"}
+{"file": "audio/f/israeli/dictionary/dict-v90caa792.mp3", "asr": "יום רביעי", "mode": "single"}
+{"file": "audio/m/israeli/dictionary/dict-vb533dfe6.mp3", "asr": "יום שלישי.", "mode": "single"}
+{"file": "audio/f/israeli/dictionary/dict-vb533dfe6.mp3", "asr": "יום שלישי", "mode": "single"}
+{"file": "audio/m/israeli/dictionary/dict-vccb0ddef.mp3", "asr": "יום שני", "mode": "single"}
+{"file": "audio/f/israeli/dictionary/dict-vccb0ddef.mp3", "asr": "יום שני", "mode": "single"}
+{"file": "audio/m/israeli/dictionary/dict-v05926804.mp3", "asr": "רחץ", "mode": "single"}
+{"file": "audio/f/israeli/dictionary/dict-v05926804.mp3", "asr": "רחץ", "mode": "single"}
+{"file": "audio/m/israeli/dictionary/dict-vf930ab64.mp3", "asr": "זר", "mode": "single"}
+{"file": "audio/f/israeli/dictionary/dict-vf930ab64.mp3", "asr": "זר", "mode": "single"}
+{"file": "audio/m/israeli/dictionary/dict-v6fce5ceb.mp3", "asr": "אחז", "mode": "single"}
+{"file": "audio/f/israeli/dictionary/dict-v6fce5ceb.mp3", "asr": "אחז", "mode": "single"}
+{"file": "audio/m/israeli/dictionary/dict-vc1e9b345.mp3", "asr": "שרד", "mode": "single"}
+{"file": "audio/f/israeli/dictionary/dict-vc1e9b345.mp3", "asr": "שרד", "mode": "single"}
+{"file": "audio/m/israeli/dictionary/dict-v30126dc2.mp3", "asr": "איווט", "mode": "single"}
+{"file": "audio/f/israeli/dictionary/dict-v30126dc2.mp3", "asr": "איווט", "mode": "single"}
+{"file": "audio/m/israeli/dictionary/dict-v1475ec75.mp3", "asr": "שחט", "mode": "single"}
+{"file": "audio/f/israeli/dictionary/dict-v1475ec75.mp3", "asr": "שחט", "mode": "single"}
+{"file": "audio/m/israeli/dictionary/dict-v9305ab6d.mp3", "asr": "נפגש", "mode": "single"}
+{"file": "audio/f/israeli/dictionary/dict-v9305ab6d.mp3", "asr": "נפגש", "mode": "single"}
+{"file": "audio/m/israeli/dictionary/dict-v71147af5.mp3", "asr": "שימש", "mode": "single"}
+{"file": "audio/f/israeli/dictionary/dict-v71147af5.mp3", "asr": "שימש", "mode": "single"}
+{"file": "audio/m/israeli/dictionary/dict-v41ea478a.mp3", "asr": "עלה", "mode": "single"}
+{"file": "audio/f/israeli/dictionary/dict-v41ea478a.mp3", "asr": "עלה", "mode": "single"}
+{"file": "audio/m/israeli/dictionary/dict-v0ee81ea3.mp3", "asr": "טבע", "mode": "single"}
+{"file": "audio/f/israeli/dictionary/dict-v0ee81ea3.mp3", "asr": "טבע", "mode": "single"}
+{"file": "audio/m/israeli/dictionary/dict-va8da00f9.mp3", "asr": "ציווט", "mode": "single"}
+{"file": "audio/f/israeli/dictionary/dict-va8da00f9.mp3", "asr": "ציווט", "mode": "single"}
+{"file": "audio/m/israeli/dictionary/dict-v9ffccac4.mp3", "asr": "הרבה", "mode": "single"}
+{"file": "audio/f/israeli/dictionary/dict-v9ffccac4.mp3", "asr": "הרבה", "mode": "single"}
+{"file": "audio/m/israeli/dictionary/dict-va43128b0.mp3", "asr": "גיבה", "mode": "single"}
+{"file": "audio/f/israeli/dictionary/dict-va43128b0.mp3", "asr": "גיבה", "mode": "single"}
+{"file": "audio/m/israeli/dictionary/dict-v40c3c5e2.mp3", "asr": "נראה.", "mode": "single"}
+{"file": "audio/f/israeli/dictionary/dict-v40c3c5e2.mp3", "asr": "נראה", "mode": "single"}
+{"file": "audio/m/israeli/dictionary/dict-v8e9d4edd.mp3", "asr": "שחרר", "mode": "single"}
+{"file": "audio/f/israeli/dictionary/dict-v8e9d4edd.mp3", "asr": "שחרר", "mode": "single"}
+{"file": "audio/m/israeli/dictionary/dict-v8bc38793.mp3", "asr": "ספר", "mode": "single"}
+{"file": "audio/f/israeli/dictionary/dict-v8bc38793.mp3", "asr": "ספר", "mode": "single"}
+{"file": "audio/m/israeli/dictionary/dict-vafca0f04.mp3", "asr": "טעה.", "mode": "single"}
+{"file": "audio/f/israeli/dictionary/dict-vafca0f04.mp3", "asr": "טעה", "mode": "single"}
+{"file": "audio/m/israeli/dictionary/dict-v0c2fbcb8.mp3", "asr": "קפץ.", "mode": "single"}
+{"file": "audio/f/israeli/dictionary/dict-v0c2fbcb8.mp3", "asr": "קפץ", "mode": "single"}
+{"file": "audio/m/israeli/dictionary/dict-v54550d99.mp3", "asr": "אישה", "mode": "single"}
+{"file": "audio/f/israeli/dictionary/dict-v54550d99.mp3", "asr": "אישה", "mode": "single"}
+{"file": "audio/m/israeli/dictionary/dict-v0b1226df.mp3", "asr": "נישה", "mode": "single"}
+{"file": "audio/f/israeli/dictionary/dict-v0b1226df.mp3", "asr": "נישה", "mode": "single"}
+{"file": "audio/m/israeli/dictionary/dict-v6718262e.mp3", "asr": "שתק", "mode": "single"}
+{"file": "audio/f/israeli/dictionary/dict-v6718262e.mp3", "asr": "שתק", "mode": "single"}
+{"file": "audio/m/israeli/dictionary/dict-v65ca5446.mp3", "asr": "אשם", "mode": "single"}
+{"file": "audio/f/israeli/dictionary/dict-v65ca5446.mp3", "asr": "אשם", "mode": "single"}
+{"file": "audio/m/israeli/dictionary/dict-v2cd50463.mp3", "asr": "הסתובב", "mode": "single"}
+{"file": "audio/f/israeli/dictionary/dict-v2cd50463.mp3", "asr": "הסתובב!", "mode": "single"}
+{"file": "audio/m/israeli/dictionary/dict-v11122fe7.mp3", "asr": "פאן", "mode": "single"}
+{"file": "audio/f/israeli/dictionary/dict-v11122fe7.mp3", "asr": "פאן", "mode": "single"}
+{"file": "audio/m/israeli/dictionary/dict-vbc9fba37.mp3", "asr": "קבר", "mode": "single"}
+{"file": "audio/f/israeli/dictionary/dict-vbc9fba37.mp3", "asr": "קבר", "mode": "single"}
+{"file": "audio/m/israeli/dictionary/dict-v62a7510a.mp3", "asr": "הראה", "mode": "single"}
+{"file": "audio/f/israeli/dictionary/dict-v62a7510a.mp3", "asr": "הרע", "mode": "single"}
+{"file": "audio/m/israeli/dictionary/dict-v44b05aff.mp3", "asr": "זהב", "mode": "single"}
+{"file": "audio/f/israeli/dictionary/dict-v44b05aff.mp3", "asr": "זב", "mode": "single"}
+{"file": "audio/m/israeli/dictionary/dict-v7fc9cb38.mp3", "asr": "חזה", "mode": "single"}
+{"file": "audio/f/israeli/dictionary/dict-v7fc9cb38.mp3", "asr": "חזה", "mode": "single"}

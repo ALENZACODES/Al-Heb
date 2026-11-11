@@ -1,0 +1,77 @@
+name: dictionary-check
+# Speech-to-text check of the dictionary word clips (audio/<voice>/israeli/dictionary), which had never been through it.
+# Twenty runners each hear one slice with the Hebrew Whisper model (free, on the runner); one job then joins the results,
+# rewrites the report (docs/audio/ASR-CHECK.md, asr-check.csv, asr-redo-israeli.txt) and commits it to this branch.
+# Nothing in the app changes. Re-recording the clips that fail is a separate step: tools/audio/asr-check/fix.py.
+on:
+  push:
+    branches: ['audio/dictionary-check-*']
+    paths: ['tools/audio/asr-check/dictionary-queue.txt']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: dictionary-check-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  scan:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 240
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]
+    env:
+      LANG: C.UTF-8
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          sparse-checkout: |
+            tools/audio/asr-check
+            audio/INDEX.csv
+            audio/m/israeli/dictionary
+            audio/f/israeli/dictionary
+            data/vocab/audio-dictionary.json
+            data/builder_words.json
+          sparse-checkout-cone-mode: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
+        with: { python-version: '3.12' }
+      - run: sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg && pip install -q numpy faster-whisper
+      - name: Hear slice ${{ matrix.shard }} of 20
+        run: |
+          before=$(wc -l < tools/audio/asr-check/results.jsonl)
+          python tools/audio/asr-check/scan.py --kinds dictionary --shard ${{ matrix.shard }} --of 20 --no-report
+          tail -n +$((before + 1)) tools/audio/asr-check/results.jsonl > slice-${{ matrix.shard }}.jsonl
+          wc -l slice-${{ matrix.shard }}.jsonl
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        if: always()
+        with:
+          name: slice-${{ matrix.shard }}
+          path: slice-${{ matrix.shard }}.jsonl
+          if-no-files-found: ignore
+  report:
+    needs: scan
+    if: always()
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    env:
+      LANG: C.UTF-8
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
+        with: { python-version: '3.12' }
+      - run: pip install -q numpy
+      - uses: actions/download-artifact@v4
+        with: { path: slices, pattern: 'slice-*', merge-multiple: true }
+      - name: Join the slices and rewrite the report
+        run: |
+          ls slices 2>/dev/null | wc -l
+          cat slices/slice-*.jsonl >> tools/audio/asr-check/results.jsonl 2>/dev/null || true
+          python tools/audio/asr-check/scan.py --report-only | tee /tmp/summary.txt
+      - name: Commit the results
+        run: |
+          git config user.name "John Khan" && git config user.email "johnnykhan1@gmail.com"
+          git add tools/audio/asr-check/results.jsonl docs/audio/ASR-CHECK.md docs/audio/asr-check.csv docs/audio/asr-redo-israeli.txt
+          git diff --cached --quiet && exit 0
+          git commit -q -m "Dictionary clips: speech-to-text check results ($(tail -1 /tmp/summary.txt))"
+          for i in 1 2 3 4 5; do git pull -q --rebase origin "${GITHUB_REF_NAME}" && git push -q origin "HEAD:${GITHUB_REF_NAME}" && break; sleep $((i*15)); done

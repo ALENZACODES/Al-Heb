@@ -185,7 +185,7 @@ export function buildHtml(o, pages = {}) {
 
   const cover = o.print ? '' : `<section class="cover"><div class="art"><img src="${R.src('BRAND_cover_a')}" alt=""/></div>
 <div class="titles">${he('אָלֶף בֵּית', 'he-big')}<h1>Aleph</h1><p>Read Hebrew. Say it. Live it.</p>
-<p class="small" style="margin-top:3in">DRAFT PROOF &middot; not for sale</p></div></section>`;
+<p class="small" style="margin-top:6.2in">DRAFT PROOF &middot; not for sale</p></div></section>`;
 
   const prayerOpen = `<section class="chapter front-page"><h2>Prayer for the One Who Begins</h2>
 <p class="draft-flag">DRAFT &mdash; pending clergy/educator review</p>

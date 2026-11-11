@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-04",
+ "generated": "2026-11-11",
  "status": "DRAFT: stroke order not reviewed by a native teacher",
  "fonts": "Frank Ruhl Libre, Gveret Levin (SIL OFL 1.1)",
  "files": [
@@ -25,7 +25,7 @@
    ],
    "html": "html/alef-workbook-print-a4.html",
    "pdf": "alef-workbook-print-a4.pdf",
-   "bytes": 564173
+   "bytes": 564290
   },
   {
    "id": "alef-workbook-print-letter",
@@ -49,7 +49,7 @@
    ],
    "html": "html/alef-workbook-print-letter.html",
    "pdf": "alef-workbook-print-letter.pdf",
-   "bytes": 564069
+   "bytes": 564197
   },
   {
    "id": "alef-workbook-cursive-a4",
@@ -74,7 +74,7 @@
    ],
    "html": "html/alef-workbook-cursive-a4.html",
    "pdf": "alef-workbook-cursive-a4.pdf",
-   "bytes": 602935
+   "bytes": 602972
   },
   {
    "id": "alef-workbook-cursive-letter",
@@ -99,7 +99,7 @@
    ],
    "html": "html/alef-workbook-cursive-letter.html",
    "pdf": "alef-workbook-cursive-letter.pdf",
-   "bytes": 603299
+   "bytes": 603343
   },
   {
    "id": "alef-workbook-print-a4-mnemonics",
@@ -123,7 +123,7 @@
    ],
    "html": "html/alef-workbook-print-a4-mnemonics.html",
    "pdf": "alef-workbook-print-a4-mnemonics.pdf",
-   "bytes": 600501
+   "bytes": 600966
   },
   {
    "id": "alef-workbook-print-letter-mnemonics",
@@ -147,7 +147,7 @@
    ],
    "html": "html/alef-workbook-print-letter-mnemonics.html",
    "pdf": "alef-workbook-print-letter-mnemonics.pdf",
-   "bytes": 600424
+   "bytes": 600901
   },
   {
    "id": "alef-workbook-cursive-a4-mnemonics",
@@ -172,7 +172,7 @@
    ],
    "html": "html/alef-workbook-cursive-a4-mnemonics.html",
    "pdf": "alef-workbook-cursive-a4-mnemonics.pdf",
-   "bytes": 639756
+   "bytes": 640128
   },
   {
    "id": "alef-workbook-cursive-letter-mnemonics",
@@ -197,7 +197,7 @@
    ],
    "html": "html/alef-workbook-cursive-letter-mnemonics.html",
    "pdf": "alef-workbook-cursive-letter-mnemonics.pdf",
-   "bytes": 640106
+   "bytes": 640500
   }
  ]
 }

@@ -16,7 +16,7 @@ const CSS = `
 .lib-list{list-style:none;padding:0;display:grid;gap:.6rem}
 .lib-card{display:block;background:var(--card,#fffdf6);border:1px solid var(--border,#e2d6b8);border-inline-start:6px solid #d4a647;border-radius:14px;padding:.8rem .9rem;text-decoration:none;color:inherit}
 .lib-card:hover{box-shadow:0 3px 12px #1e46341f}
-.lib-card b{display:block;font-size:1.08rem;color:#1e4634}
+.lib-card b{display:block;font-size:1.08rem;color:inherit}
 .lib-card span{font-size:.92rem;color:var(--muted,#5d6b60)}
 .lib-art{font-size:1.06rem;line-height:1.65}
 .lib-art h2{font-size:1.2rem;color:#1e4634;margin-block:1.4rem .4rem}

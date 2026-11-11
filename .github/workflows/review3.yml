@@ -18,13 +18,16 @@ jobs:
     timeout-minutes: 15
     env:
       GOOGLE_TTS_API_KEY: ${{ secrets.GOOGLE_TTS_API_KEY }}
+      GOOGLE_STT_API_KEY: ${{ secrets.GOOGLE_STT_API_KEY }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
         with: { python-version: '3.12' }
       - run: sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg && pip install -q numpy
       - name: One request, to see whether Speech-to-Text is enabled
-        run: python tools/audio/asr-check/review3_shard.py --list tools/audio/asr-check/review3-list.txt --probe --out /tmp/probe.jsonl && cat /tmp/probe.jsonl
+        run: |
+          echo "separate Speech-to-Text key (GOOGLE_STT_API_KEY) set: $([ -n "$GOOGLE_STT_API_KEY" ] && echo yes || echo no)"
+          python tools/audio/asr-check/review3_shard.py --list tools/audio/asr-check/review3-list.txt --probe --out /tmp/probe.jsonl && cat /tmp/probe.jsonl
   review:
     needs: probe
     runs-on: ubuntu-24.04
@@ -36,6 +39,7 @@ jobs:
     env:
       LANG: C.UTF-8
       GOOGLE_TTS_API_KEY: ${{ secrets.GOOGLE_TTS_API_KEY }}
+      GOOGLE_STT_API_KEY: ${{ secrets.GOOGLE_STT_API_KEY }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0

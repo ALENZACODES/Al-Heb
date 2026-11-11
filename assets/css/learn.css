@@ -15,6 +15,9 @@
 .alef-items { list-style: none; margin: 0; padding: 0; display: grid; gap: .6rem; }
 .alef-item { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: .25rem .8rem; align-items: center; padding-block: .4rem; border-block-end: 1px solid var(--border); }
 .alef-item:last-child { border-block-end: 0; }
+/* A row that is text then a button (word groups, dialogues): the text takes the room, the button keeps its own width. On a 320px screen the button was squeezed to 39px. */
+.alef-item:has(> .alef-item-body + a.btn) { grid-template-columns: minmax(0, 1fr) auto; }
+.alef-item > .alef-item-body + a.btn { white-space: nowrap; }
 .alef-item-body { min-inline-size: 0; }
 .alef-item-actions { min-inline-size: 0; grid-column: 2; display: flex; flex-wrap: wrap; gap: .5rem; }
 .alef-he { font-family: var(--font-he); unicode-bidi: isolate; }

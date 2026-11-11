@@ -81,6 +81,8 @@ function audit({ phone }) {
     const seen = new Set();
     for (const e of document.querySelectorAll('a[href],button,input:not([type=hidden]),select,textarea,summary,[role=button],[role=tab],[role=switch],[role=checkbox],[role=radio],[role=menuitem],[tabindex]:not([tabindex="-1"])')) {
       if (!vis(e) || e.disabled || e.closest('svg')) continue;
+      // a control taken out of the tab order and hidden from sight (a file input opened by a real button) is not a tap target
+      if (e.getAttribute('tabindex') === '-1' && e.classList.contains('visually-hidden')) continue;
       const lbl = e.labels && e.labels[0]; let r = e.getBoundingClientRect();
       if (lbl) { const lr = lbl.getBoundingClientRect(); if (lr.width * lr.height > r.width * r.height) r = lr; }
       // inline links inside running text are exempt from the target-size guidance

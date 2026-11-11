@@ -63,7 +63,7 @@ def main():
     a = ap.parse_args()
     if a.engine == 'whisper':
         return whisper_main(a)
-    k = key()
+    k = os.environ.get('GOOGLE_STT_API_KEY', '').strip() or key()   # a separate Speech-to-Text key, if one is set
     if not k:
         sys.exit('voice key not found')
     todo = [l.strip() for l in open(a.list, encoding='utf-8') if l.strip()][a.shard::a.of]

@@ -104,7 +104,8 @@ test('the dark green and gold look is the default theme; the teachers band takes
 // ---------- round 2 ----------
 test('every lesson summary has Rimon in the page and the streak flame from the shared record', async () => {
   const UI = await import('../src/curriculum/exercises.ui.js');
-  const store = { get: (k) => (k === 'streak' ? v2({ todaySeconds: 120 }) : null), subscribe: () => () => {} };
+  // the summary reads the real clock, so the record is dated today, not the fixed test date
+  const store = { get: (k) => (k === 'streak' ? v2({ todayDate: dayKey(Date.now()), todaySeconds: 120 }) : null), subscribe: () => () => {} };
   const node = UI.summaryNode({ store, stats: { accuracy: 0.9, missed: [], skipped: [] }, ms: 60000, countText: 'x', goodLabels: [], missedLabels: [], skippedN: 0, cardsUpdated: 1 });
   const find = (n, pred) => (pred(n) ? n : (n.children || []).reduce((a, c) => a || (c.nodeType === 1 ? find(c, pred) : null), null));
   assert.ok(find(node, (n) => (n.className || '').includes('rimon-inline')), 'Rimon sprite, not a still image');

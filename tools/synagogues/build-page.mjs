@@ -10,7 +10,8 @@ const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replac
 export function buildPage() {
   const card = (c) => {
       const im = c.images[0];
-      const pic = im ? `<img src="../assets/synagogues/${esc(c.id)}/thumb/${esc(im.file)}" alt="${esc(im.alt)}" width="240" height="160" loading="lazy">` : '';
+      // no photo that verifies the congregation: a neutral card, never a stand-in picture (M-03)
+      const pic = im ? `<img src="../assets/synagogues/${esc(c.id)}/thumb/${esc(im.file)}" alt="${esc(im.alt)}" width="240" height="160" loading="lazy">` : '<span class="soon">Photo to come</span>';
       return `<li>\n<a href="../#/synagogues/${esc(c.id)}">${pic}<span class="name">${esc(c.name)}</span><span class="city">${esc(c.city)}</span></a>\n<p>${esc(c.summary)}</p>\n</li>`;
   };
   const current = D.congregations.filter((c) => c.status !== 'legacy');
@@ -44,6 +45,7 @@ li p{margin:.4rem .8rem .8rem;font-size:.92rem}
 .badge{font-size:.72rem;border:1px solid var(--line);border-radius:.4rem;padding:0 .35rem;margin-left:.3rem;color:var(--muted)}
 .open{display:inline-block;margin:.6rem 0;color:var(--accent);font-weight:650}
 .note{color:var(--muted);font-size:.9rem;margin-top:2rem}
+.soon{display:flex;align-items:center;justify-content:center;aspect-ratio:3/2;background:var(--bg);color:var(--muted);font-size:.95rem;border-bottom:1px solid var(--line)}
 </style>
 </head>
 <body>

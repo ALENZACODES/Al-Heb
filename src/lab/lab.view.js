@@ -4,7 +4,7 @@ import { isAudioFree } from '../shell/audiofree.js';
 import { untimedOn, shortcutsOn } from '../shell/motor.js';
 import { signalRimon } from '../shell/rimon-events.js';
 import { sfx } from '../audio/sfx.js';
-import { loadHolds, hasLabClip, playLabClip } from './lab.holds.js';
+import { loadHolds, hasLabClip, playLabClip, isHeldClip, HELD_LABEL } from './lab.holds.js';
 import {
   STORE_KEY, SESSION_SECONDS, SKILLS, GAMES, gameById, dayKey, dailyWorkout, step, trialPoints, startLevel, summarize,
   readState, recordSession, workoutProgress, workoutStreak, skillScore, overallScore, comparison, seeded,
@@ -406,7 +406,7 @@ function drill(root, ctx, id) {
         h('h1', { id: 'view-title', tabindex: '-1' }, game.title, ' ', heSpan(game.titleHe, 'he')),
         artImg(h, coverArtPath(id), 'cover'),
         h('p', {}, h('span', { class: 'lab-lvl', style: `background:${SKILL_COLOR[game.skill]};color:${SKILL_INK[game.skill] || '#fffaf0'}` }, skillOf(game.skill).name), workout && pos >= 0 ? `  Workout game ${pos + 1} of 3` : ''),
-        game.teaches ? h('p', { class: 'lab-teaches' }, `You practise: ${game.teaches.charAt(0).toLowerCase()}${game.teaches.slice(1)}.`) : null,
+        game.teaches ? h('p', { class: 'lab-teaches' }, `You practice: ${game.teaches.charAt(0).toLowerCase()}${game.teaches.slice(1)}.`) : null,
         h('p', { class: 'how' }, game.blurb),
         h('p', { class: 'lab-note' }, `${noClock() ? 'Ten rounds, no clock (calm mode or No time limits is on).' : `${sessionSeconds(id)} seconds.`}${isStudio(id) ? ' Three right in a row starts a combo for bonus points.' : ''} Two right in a row takes you up a level; a miss takes you down one.${gs ? ` Your best: ${gs.best}. You start at level ${startLevel(gs)}.` : ''}`),
         h('div', { class: 'lab-actions' }, start)));
@@ -441,10 +441,12 @@ function drill(root, ctx, id) {
     const trialBar = h('div', { class: 'lab-trialbar', hidden: true });
     const board = h('div', { class: 'lab-board' });
     const feedback = h('p', { class: 'lab-feedback', 'aria-live': 'polite' });
+    const heldNote = h('p', { class: 'muted small lab-held-note', hidden: true }, HELD_LABEL); // S-11: shown once a held clip falls back
+    const noteHeld = (kind, cid) => { try { if (heldNote.hidden && isHeldClip(ctx, held, kind, cid)) heldNote.hidden = false; } catch { /* the label is optional */ } };
     const figure = matKind(id) === 'figure' ? artImg(h, playArtPath(id), 'figure') : null;
     const playEl = h('div', { class: `lab-play${isStudio(id) ? ' lab-studio' : ''}` },
       h('div', { class: 'lab-hud' }, h('div', { class: 'lab-time', role: 'progressbar', 'aria-label': 'Time left', 'aria-valuemin': '0', 'aria-valuemax': String(sessionSeconds(id)) }, timeBar), lvlEl, runEl, h('span', {}, 'Score ', scoreEl)),
-      prompt, trialBar, board, feedback, figure);
+      prompt, trialBar, board, feedback, heldNote, figure);
     wrap.replaceChildren(back, playEl);
     applyMat(id, { board, root: wrap });
     // Keyboard, switch and screen-reader play: a new round replaces the board, which takes away the button that had focus,
@@ -505,9 +507,9 @@ function drill(root, ctx, id) {
         requestAnimationFrame(() => { trialBar.style.transition = `transform ${ms}ms linear`; trialBar.style.transform = 'scaleX(0)'; });
         roundLater(() => { feedback.textContent = 'Out of time.'; fn(); }, ms);
       },
-      hasClip: (kind, cid) => audioOn && hasLabClip(ctx, held, kind, cid),
-      playClip: (kind, cid, text) => (audioOn ? playLabClip(ctx, held, kind, cid, { text }) : Promise.resolve(false)),
-      sayWord: (w) => (audioOn && (w?.clip || w?.id) ? playLabClip(ctx, held, 'word', w.clip || w.id, { text: w.he }) : Promise.resolve(false)),
+      hasClip: (kind, cid) => { if (!audioOn) return false; const ok = hasLabClip(ctx, held, kind, cid); if (!ok) noteHeld(kind, cid); return ok; },
+      playClip: (kind, cid, text) => { if (!audioOn) return Promise.resolve(false); noteHeld(kind, cid); return playLabClip(ctx, held, kind, cid, { text }); },
+      sayWord: (w) => { if (!(audioOn && (w?.clip || w?.id))) return Promise.resolve(false); noteHeld('word', w.clip || w.id); return playLabClip(ctx, held, 'word', w.clip || w.id, { text: w.he }); },
     };
     const t0 = Date.now(), total = sessionSeconds(id) * 1000;
     const clock = setInterval(() => {
@@ -589,7 +591,8 @@ function drill(root, ctx, id) {
     if (win) win.addEventListener?.('error', () => winSlot.append(rimonStill(pose)), { once: true });
     const audioOn = !isAudioFree(ctx);
     const listen = (it) => (audioOn && it.clip && hasLabClip(ctx, heldRef, it.clip.kind, it.clip.id)
-      ? h('button', { type: 'button', class: 'btn secondary', 'aria-label': `Hear ${it.en}`, onclick: () => playLabClip(ctx, heldRef, it.clip.kind, it.clip.id, { text: it.he }) }, '▶') : null);
+      ? h('button', { type: 'button', class: 'btn secondary', 'aria-label': `Hear ${it.en}`, onclick: () => playLabClip(ctx, heldRef, it.clip.kind, it.clip.id, { text: it.he }) }, '▶')
+      : audioOn && it.clip && isHeldClip(ctx, heldRef, it.clip.kind, it.clip.id) ? h('span', { class: 'muted small lab-held-note' }, 'Held for re-recording') : null);
     const again = h('button', { type: 'button', class: 'btn secondary', onclick: () => intro() }, 'Play again');
     const primary = nextId ? h('a', { class: 'lab-go', href: `#/lab/${nextId}?workout=1` }, `Next: ${gameById(nextId).title}`)
       : h('a', { class: 'lab-go', href: '#/lab' }, workout && prog.complete ? 'Workout done: see your skills' : 'Back to Brain Lab');

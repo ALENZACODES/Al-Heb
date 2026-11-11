@@ -89,7 +89,7 @@ export function mount(root, ctx) {
     const mapBox = el("input", { type: "checkbox", id: "ty-map", checked: state.mapKeys ? true : null, onchange: async (e) => { state = { ...state, mapKeys: !!e.target.checked }; await persist(); say(state.mapKeys ? "Israeli key positions on: with an English keyboard, the keys type Hebrew letters in the typing box." : "Israeli key positions off."); } });
     body.replaceChildren(
       
-      el("p", {}, "Practise typing Hebrew letters. Use your device's Hebrew keyboard, the on-screen keys, or the Israeli key positions on an English keyboard."),
+      el("p", {}, "Practice typing Hebrew letters. Use your device's Hebrew keyboard, the on-screen keys, or the Israeli key positions on an English keyboard."),
       el("div", { class: "ty-grid", role: "group", "aria-label": "Choose a drill" }, DRILLS.map((d) => el("button", { type: "button", class: "btn", id: `ty-drill-${d.id}`, "data-drill": d.id, onclick: () => start(d.id) }, el("strong", {}, d.label), el("br"), el("span", { class: "muted" }, d.about)))),
       el("label", { class: "ty-check", for: "ty-map" }, mapBox, " Type Hebrew with the Israeli key positions on my English keyboard"),
       el("p", { class: "muted", id: "ty-map-note" }, "Only for keyboards set to English. On an Israeli keyboard, or with the Hebrew keyboard switched on, leave it off. The key positions are the ones shown on the on-screen keyboard."),

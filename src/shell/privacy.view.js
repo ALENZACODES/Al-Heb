@@ -175,7 +175,7 @@ export const STORE_KEYS = [
   ['alef.storage-notice.v1', 'Storage notice state and whether you dismissed it (saved under this exact name, without the "alef:" prefix)', 'src/shell/install-notice.js'],
   ['alef.scroll.v1', 'Scroll position per screen, so Back returns you to the same place. Unlike every other row it is kept in sessionStorage, not localStorage: it is tied to this browser tab and is gone when the tab closes. Each entry is named by the screen address, so a term typed on the Search screen can appear in an entry name (exact name, without the "alef:" prefix)', 'src/shell/scroll-restore.js'],
   ['awards.v1', 'Awards on this device: practice-game activity, the name typed for a certificate sample, and any objective assessment evidence stored later. Lesson completion is not copied here. There is no account.', 'src/awards/record.js'],
-  ['books.v1', 'Little-books reading place: the last page you reached in each book, and when you first reached its last page', 'src/books/book.view.js'],
+  ['books.v1', 'Little-books reading place: the last page you reached in each book, when you first reached its last page, and when you finished it (its one story question answered)', 'src/books/book.view.js'],
   ['books.finished.v1', 'Little books you have read to the last page, and when (drives the Finished mark on the shelf and the Book Finisher award)', 'src/books/book.view.js'],
 ];
 

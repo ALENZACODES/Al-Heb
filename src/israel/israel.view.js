@@ -80,7 +80,7 @@ export function mount(root, ctx = {}) {
     function overview() {
       const n = (a) => a.length;
       body.replaceChildren(
-        el("p", {}, "Textbook Hebrew is correct but not always what you hear. This section shows the same idea two ways, flags what gives learners away, and lets you practise choosing the natural reply."),
+        el("p", {}, "Textbook Hebrew is correct but not always what you hear. This section shows the same idea two ways, flags what gives learners away, and lets you practice choosing the natural reply."),
         el("ul", { class: "il-list" },
           ...[["ladder", "Register ladder", `${n(data.ladder.pairs)} textbook vs everyday pairs for greetings, cafes, markets, transport, directions, paying and phones.`],
             ["fillers", "Fillers and discourse words", `${n(data.fillers.fillers)} words like yalla, sababa and nu, with the register for each.`],

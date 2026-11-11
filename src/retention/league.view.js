@@ -5,6 +5,7 @@ import { retention } from './boot.js';
 import { HONESTY_LINE, LEAGUE, leagueView, timeLeftText, tierOf } from './leagues.js';
 import { gemsText } from './gems.js';
 import { showRimon } from './rimon.js';
+import { read as readCounts, lessonsFinished, count } from '../lib/counts.js';
 
 export function mount(root, ctx) {
   const R = retention(ctx);
@@ -14,7 +15,7 @@ export function mount(root, ctx) {
     const rec = R.get();
     if (R.calm()) { setKids(body, h('p', {}, 'Calm mode is on, so the practice league is resting.')); return; }
     if (rec.league.enabled === false) { setKids(body, h('p', {}, 'The practice league is off.'), h('button', { type: 'button', class: 'btn', onclick: () => R.update((r) => { r.league.enabled = true; return r; }) }, 'Show the practice league')); return; }
-    if (!R.leagueShown()) { setKids(body, h('p', {}, `Leagues open after ${LEAGUE.unlockLessons} lessons. You have finished ${rec.lessonsFinished}.`), h('a', { class: 'btn', href: '#/learn' }, 'Go to lessons')); return; }
+    if (!R.leagueShown()) { setKids(body, h('p', {}, `Leagues open after ${count(LEAGUE.unlockLessons, 'lesson')}. You have finished ${lessonsFinished(readCounts(ctx.store).completed)}.`), h('a', { class: 'btn', href: '#/learn' }, 'Go to lessons')); return; }
     const v = leagueView(rec), kids = [];
     kids.push(h('p', { class: 'ret-honest' }, HONESTY_LINE));
     if (v.resultUnseen && v.last) {

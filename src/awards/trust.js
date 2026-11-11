@@ -6,19 +6,19 @@ export const TRUST_LIMITS = Object.freeze([
     id: 'quick-check',
     path: 'src/curriculum/actions.js',
     symbol: 'saveQuickCheck',
-    limit: 'A quick check marks the lesson complete when the results object is non-empty. A wrong answer is stored as false and the lesson can still be marked complete.',
+    limit: 'A quick check marks the lesson complete only when at least 70% of its questions were right on the first try. The pass mark is the app’s own rule, and the questions have not been reviewed by a qualified Hebrew teacher.',
   },
   {
     id: 'mark-complete',
-    path: 'src/curriculum/learn.view.js',
-    symbol: 'completeLesson',
-    limit: 'The lesson list has a Mark complete control that writes curriculum.progress with no answers.',
+    path: 'src/curriculum/lesson.view.js',
+    symbol: 'testout',
+    limit: 'The lesson list’s Test out button opens a short test (the lesson’s quick check, same pass mark). Passing it marks the lesson complete without studying it.',
   },
   {
     id: 'intermediate',
     path: 'src/curriculum/intermediate.view.js',
     symbol: 'completeLesson',
-    limit: 'An intermediate lesson is marked complete when every exercise has a result, including results that are wrong.',
+    limit: 'An intermediate lesson is marked complete when every exercise has a result and at least 70% were right on the first try.',
   },
   {
     id: 'tracing',
@@ -64,4 +64,4 @@ export const TRUST_LIMITS = Object.freeze([
   },
 ]);
 
-export const EVIDENCE_SUMMARY = 'Lesson completion marks, the Mark complete control, quick-check results, self-reported hearing, tracing and reading, and points are not used. Streaks are used only for the daily and milestone medallions, never for a certificate. A lesson can be stored as complete after wrong answers, and several practice screens ask you to say that you heard or read something. A certificate needs objective checked answers and criteria that have been reviewed. Neither is in place, so nothing on this page is verified.';
+export const EVIDENCE_SUMMARY = 'Lesson completion marks, the Test out button, quick-check results, self-reported hearing, tracing and reading, and points are not used. Streaks are used only for the daily and milestone medallions, never for a certificate. A lesson now counts as complete only after a pass: at least 70% of its quick check right on the first try (Test out uses the same short test). That pass mark is the app’s own rule; the questions and the mark have not been reviewed by a qualified Hebrew teacher, and several practice screens still ask you to say that you heard or read something. A certificate needs objective checked answers and criteria that have been reviewed. The review is not done, so nothing on this page is a reviewed certificate.';

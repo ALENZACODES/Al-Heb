@@ -260,7 +260,7 @@ export function addressNotices(phrase) {
     if (!spelling) return [];
     return [{
       id: 'masculine-addressee',
-      text: `This stored line addresses a man. The phrasebook note says: "${note}" No complete pointed feminine line is stored, so that note is not a form to practise. Choosing a man or a woman as narrator does not change who is addressed. A native speaker has not checked this phrase.`,
+      text: `This stored line addresses a man. The phrasebook note says: "${note}" No complete pointed feminine line is stored, so that note is not a form to practice. Choosing a man or a woman as narrator does not change who is addressed. A native speaker has not checked this phrase.`,
     }];
   }
   if (!spelling) return [];

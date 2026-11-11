@@ -21,7 +21,9 @@ const unp = (s) => s.replace(/[֑-ׇ]/g, "");
 const HEB = /[א-ת]/;
 const tokensOf = (s) => norm(s).split(/[\s־]+/).map((t) => t.replace(/[,.?!:;"'()׃׀…]+/g, "")).filter(Boolean);
 
-const BEGINNER_READ = ["white", "red", "orange", "yellow", "green", "blue", "purple", "brown", "grey"];
+// Belt colours of the beginner reading lessons (Krav Maga style, data/curriculum/belts.json). Black belt (E1-E5) ranks are the
+// Intermediate reading lessons, which keep level "intermediate"; their rank comes from belts.json.
+const BEGINNER_READ = ["white", "yellow", "orange", "green", "blue", "brown"];
 const LEVELS = { read: new Set([...BEGINNER_READ, "intermediate"]), israel: new Set(["A1", "A2", "B1"]) };
 const TYPES = ["recall", "produce", "match", "order", "respond", "gender", "dialogue", "fade", "spot", "register"];
 // Lessons whose purpose is to listen/preview before the letters are taught: their prayer lines are exempt from the decodability check.
@@ -66,7 +68,7 @@ export async function runIntegrity(opts = {}) {
     if (!Array.isArray(l.goals) || !l.goals.length || l.goals.some((g) => typeof g !== "string" || !g.trim())) add(l.id, "goals missing or empty");
     if (!(l.estMinutes >= 5 && l.estMinutes <= 60)) add(l.id, `estMinutes ${l.estMinutes} not in 5..60`);
     if (!LEVELS[l.track]?.has(l.level)) add(l.id, `level "${l.level}" is not valid for track ${l.track}`);
-    if (l.level === "black") add(l.id, 'level "black" is a fluency target with no lessons in belts.json; it must not label a lesson');
+    if (l.level === "black") add(l.id, 'level "black" must not label a lesson: Black belt ranks (E1-E5) come from belts.json, and the lesson level stays "intermediate"');
     for (const k of ["letters", "vowels", "words", "prayerLines", "prerequisites"]) if (!Array.isArray(l[k])) add(l.id, `${k} must be an array`);
     if (l.track === "israel" && l.letters?.length) add(l.id, "israel lessons teach no letters");
   }
@@ -74,6 +76,15 @@ export async function runIntegrity(opts = {}) {
   for (const l of lessons) { const k = l.title.trim().toLowerCase(); if (titles.has(k)) add(l.id, `title duplicates ${titles.get(k)}`); else titles.set(k, l.id); }
   const beltIds = new Set(belts.belts.map((b) => b.id));
   for (const l of ids.r) if (l.level !== "intermediate" && !beltIds.has(l.level)) add(l.id, `level ${l.level} is not a belt`);
+  // Ranks: each a contiguous run in course order, together covering the ranked track once, in order; an r lesson's level is its rank's belt.
+  {
+    const { resolveRanks } = await import("../../src/curriculum/ranks.js");
+    let ranks = [];
+    try { ranks = resolveRanks(belts, lessons); } catch (e) { add("belts", String(e.message || e)); }
+    const order = lessons.filter((l) => l.track === (belts.track || "read")).map((l) => l.id), covered = ranks.flatMap((r) => r.lessons);
+    if (ranks.length && covered.join(" ") !== order.join(" ")) add("belts", "ranks must cover every lesson of the ranked track once, in course order");
+    for (const r of ranks) for (const id of r.lessons) { const l = byId.get(id); if (l && /^r\d{2}$/.test(id) && l.level !== r.belt) add(id, `level ${l.level} does not match its rank ${r.id} (${r.belt} belt)`); }
+  }
   { let last = -1; for (const l of lessons.filter((x) => x.track === "read")) { const i = BEGINNER_READ.indexOf(l.level); if (i < 0) { last = 99; continue; } if (i < last) add(l.id, `level ${l.level} goes back down the belt order`); last = i; } }
   for (const l of ids.I) {
     if (l.unit === "synagogue" && !(l.track === "read" && l.level === "intermediate")) add(l.id, "synagogue unit must be track read, level intermediate");

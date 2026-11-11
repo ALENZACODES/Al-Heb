@@ -1,4 +1,4 @@
-// Aleph Progress screen: what you can read now, today (streak, gentle goal, rest day), your path per goal, belts, weak spots.
+// Aleph Progress screen: what you can read now, today (streak, gentle goal, rest day), your path per goal, belts and ranks, weak spots.
 // Everything is computed offline from the store (see model.js). Nothing here is estimated: reading speed comes only from
 // the learner's own timed reads (#/timedread), which are self-reported, and is labelled so (see docs/progress/timed-read-spec.md).
 import { plain } from '../shell/plain-copy.js';
@@ -13,6 +13,8 @@ import { evaluateMilestones, milestoneRows } from './milestones.js';
 import { statModel } from '../shell/statbar.js';
 import { weekStripNode } from '../shell/weekstrip.js';
 import { DAILY_GOAL_KEY } from '../home/today.js';
+import { rankBadge } from '../curriculum/ranks.js';
+import { reviewsDue, wordsDue, SCOPE, LESSONS, count, KEYS } from '../lib/counts.js';
 
 const CSS = `
 .pg { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--gap, 1rem); max-inline-size: 100%; overflow-wrap: anywhere; }
@@ -53,7 +55,7 @@ const CSS = `
 @media (max-width: 480px) { .pg-now li { grid-template-columns: minmax(0, 1fr); } .pg-now .pg-now-v { grid-row: 2; } .pg-now .pg-now-d { grid-row: 3; } }
 `;
 
-const plural = (n, one, many) => `${n} ${n === 1 ? one : many}`;
+const plural = (n, one, many) => count(n, one, many); // the shared helper (src/shell/plural.js via src/lib/counts.js)
 
 
 export async function mount(root, ctx) {
@@ -100,7 +102,7 @@ export async function mount(root, ctx) {
     const hero = sm ? h('div', { class: 'pg-hero', role: 'group', 'aria-label': 'Streak and study time today' },
       showStreak ? h('div', { class: `pg-hero-flame${sm.lit ? ' is-lit' : ''}` }, h('span', { class: 'stat-flame', 'aria-hidden': 'true' }), h('strong', {}, String(sm.count)), h('span', {}, sm.count === 1 ? 'day streak' : 'day streak')) : null,
       h('div', { class: `pg-hero-goal${sm.met ? ' is-met' : ''}`, style: `--p:${sm.pct}` }, h('span', { class: 'pg-hero-ring', 'aria-hidden': 'true' }), h('strong', {}, `${sm.todayMin}/${sm.goalMin}`), h('span', {}, 'minutes today')),
-      showStreak ? (() => { try { return weekStripNode(store.get('streak'), { now: t, extraRest: s.rest }); } catch { return null; } })() : null) : null;
+      showStreak ? (() => { try { return weekStripNode(store.get('streak'), { now: t, extraRest: s.rest, ret: store.get(KEYS.retention) }); } catch { return null; } })() : null) : null;
     heroSlot.replaceChildren(...(hero ? [hero] : []));
     todaySection.replaceChildren(
       h('h2', { id: 'pg-h-today' }, 'Today'),
@@ -125,7 +127,7 @@ export async function mount(root, ctx) {
     // 1. what can I read now: one summary over every lane (letters, lines, vocabulary, timed reads, siddur, first day)
     const HREF_ROUTE = { '#/learn': 'learn', '#/read': 'read', '#/vocab': 'vocab', '#/timedread': 'timedread', '#/service': 'service', '#/firstday': 'firstday', '#/firstday/ladder': 'firstday-ladder' };
     const nowRows = readNowSummary(s, d, c);
-    sections.push(h('section', { class: 'card', 'aria-labelledby': 'pg-h-now' }, h('h2', { id: 'pg-h-now' }, 'What have I practised?'),
+    sections.push(h('section', { class: 'card', 'aria-labelledby': 'pg-h-now' }, h('h2', { id: 'pg-h-now' }, 'What have I practiced?'),
       h('p', { class: 'small muted' }, 'One view across the app. "Taught" rows come from lessons and tracing; "self-reported" rows are what you told the app about your own reading. None of it is a fluency score.'),
       h('ul', { class: 'pg-now' }, ...nowRows.map((row) => h('li', { 'data-now': row.id },
         h('span', {}, row.label, row.measured === 'self' ? h('span', { class: 'pg-self' }, 'self-reported') : null),
@@ -134,7 +136,7 @@ export async function mount(root, ctx) {
 
     // 2. lines and words in detail (the hook)
     const r = c.read, cnt = lessonCounts(s, d.lessons);
-    const readSec = h('section', { class: 'card', 'aria-labelledby': 'pg-h-read' }, h('h2', { id: 'pg-h-read' }, 'Lines and words using signs you have practised'));
+    const readSec = h('section', { class: 'card', 'aria-labelledby': 'pg-h-read' }, h('h2', { id: 'pg-h-read' }, 'Lines and words using signs you have practiced'));
     if (c.know.letters.size === 0) {
       readSec.append(h('p', {}, 'Finish your first lesson and this panel will list prayer lines and words using signs from that lesson.'), h('a', { class: 'btn', href: '#/learn' }, 'Start a lesson'));
     } else {
@@ -149,7 +151,7 @@ export async function mount(root, ctx) {
       if (almost.length) readSec.append(h('h3', {}, 'Almost: one sign away'), h('ul', {}, ...almost.map((l) => { const les = teacherLesson(l.missing[0], d.lessons, d.gates.nameLesson); return h('li', {}, heSpan(l.he, 'he pg-he'), h('span', { class: 'small' }, `${l.title}: needs ${l.missing[0] === '@name' ? 'the Name (read as Adonai)' : niceId(l.missing[0])}. `), les ? h('a', { href: `#/learn?lesson=${les}` }, `Learn it in lesson ${les}`) : null); })));
       if (r.unlockers.length) { const u = r.unlockers[0]; readSec.append(h('p', {}, `Next best sign to learn: ${u.id === '@name' ? 'the Name' : niceId(u.id)}. It opens ${plural(u.lines, 'more line', 'more lines')}.`)); }
       if (r.words.full.length) {
-        readSec.append(h('h3', {}, 'Words to practise'), h('ul', { class: 'pg-chips', 'aria-label': 'Sample words using practised signs' }, ...r.words.full.slice(0, 12).map((w) => h('li', {}, heSpan(w.he)))));
+        readSec.append(h('h3', {}, 'Words to practice'), h('ul', { class: 'pg-chips', 'aria-label': 'Sample words using practiced signs' }, ...r.words.full.slice(0, 12).map((w) => h('li', {}, heSpan(w.he)))));
         if (r.words.almost.length) readSec.append(h('p', { class: 'small muted' }, `${plural(r.words.almost.length, 'more word', 'more words')} ${r.words.almost.length === 1 ? 'is' : 'are'} one sign away.`));
       }
       if (goals.includes('israel') || goalSetting === 'both') readSec.append(h('p', { class: 'small' }, `Phrasebook: ${r.phraseFull.length} of ${r.phraseTotal} phrases readable now, ${r.phraseAlmost.length} one sign away.`));
@@ -157,7 +159,7 @@ export async function mount(root, ctx) {
     }
     const sc = siddurCoverage(s, d, c);
     if (sc) readSec.append(h('p', { class: 'pg-siddur', 'data-pct': String(sc.pct), 'data-order': sc.orderId },
-      `Prayer book coverage: ${sc.pct}% of the phrases in ${sc.title} use signs you have practised`, ' ', h('a', { href: '#/service' }, 'See the service')),
+      `Prayer book coverage: ${sc.pct}% of the phrases in ${sc.title} use signs you have practiced`, ' ', h('a', { href: '#/service' }, 'See the service')),
       h('p', { class: 'small muted' }, `${sc.full} of the ${sc.lines} lines Aleph holds for ${sc.title.toLowerCase()} use only letters and signs from your completed activities. This is content coverage, not a reading assessment; ${plural(sc.gaps, 'part', 'parts')} of a typical service ${sc.gaps === 1 ? 'is' : 'are'} not in Aleph yet.`));
     sections.push(readSec);
 
@@ -183,11 +185,12 @@ export async function mount(root, ctx) {
       const nextLesson = (d.lessons || []).filter((l) => l.track === track && !s.completed[l.id])
         .find((l) => (l.prerequisites || []).every((p) => s.completed[p]))
         || (d.lessons || []).find((l) => l.track === track && !s.completed[l.id]);
-      const dueCount = [...Object.values(s.cards || {}), ...Object.values(s.vocab || {})]
-        .filter((cd) => cd && typeof cd.due === 'number' && cd.due <= now()).length;
+      // src/lib/counts.js: lesson cards due are what "Review now" reviews (the number Home and Learn show); dictionary words due are their own line.
+      const dueCount = reviewsDue(s.cards, now()), wordsDueCount = wordsDue(s.vocab, now());
       const lines = [];
       if (nextLesson) lines.push(h('li', {}, 'Next lesson: ', h('a', { href: `#/learn?lesson=${nextLesson.id}` }, nextLesson.title), h('span', { class: 'small muted' }, ` (about ${nextLesson.estMinutes} min)`)));
       if (dueCount) lines.push(h('li', {}, `${plural(dueCount, 'review card is', 'review cards are')} due. `, h('a', { href: '#/learn?review=1' }, 'Review now')));
+      if (wordsDueCount && has('vocab')) lines.push(h('li', {}, `${plural(wordsDueCount, 'dictionary word is', 'dictionary words are')} due. `, h('a', { href: '#/vocab' }, 'Open the Dictionary')));
       const bookSlot = h('li', {}, 'Little books: ', h('a', { href: '#/books' }, 'pick one to read'));
       lines.push(bookSlot);
       const tomorrowSec = h('section', { class: 'card', 'aria-labelledby': 'pg-h-tomorrow' }, h('h2', { id: 'pg-h-tomorrow' }, 'Tomorrow'),
@@ -233,7 +236,7 @@ export async function mount(root, ctx) {
       const p = evaluatePath(g, d, c);
       sections.push(h('section', { class: 'card', 'aria-labelledby': 'pg-h-path-' + g },
         h('h2', { id: 'pg-h-path-' + g }, `Your path: ${p.title}`),
-        h('p', { class: 'muted' }, `${p.done} of ${p.total} milestones. Lessons done: ${g === 'read' ? `${cnt.read.done} of ${cnt.read.total} on the reading path` : `${cnt.israel.done} of ${cnt.israel.total} on the Israel path`}.`),
+        h('p', { class: 'muted' }, `${p.done} of ${p.total} ${SCOPE.pathMilestones}. Lessons done: ${g === 'read' ? `${cnt.read.done} of ${cnt.read.total} on the reading path` : `${cnt.israel.done} of ${cnt.israel.total} on the Israel path`}.`),
         h('progress', { max: String(p.total), value: String(p.done), 'aria-label': `${p.title}: milestones reached` }),
         h('ol', {}, ...p.items.map((m) => h('li', {}, h('span', { class: `pg-tag ${m.status}` }, m.status === 'done' ? 'Done' : m.status === 'next' ? 'Next' : 'Later'), m.label,
           m.status !== 'done' && m.measurable !== false && m.need > 1 ? h('span', { class: 'small muted' }, ` (${m.have} of ${m.need})`) : null,
@@ -241,17 +244,24 @@ export async function mount(root, ctx) {
           m.status === 'next' ? h('span', {}, ' ', h('a', { href: m.href }, 'Go')) : null)))));
     }
 
-    // 4. belts
+    // 4. belts and ranks (Krav Maga style: White P0 .. Black E5). Earned only by finishing lessons, in course order.
     const belts = evaluateBelts(d, c);
-    const stateText = { earned: 'Earned', ready: 'Ready: only a check the app cannot make is left', current: 'Working on', later: 'Later' };
-    const timedBelts = belts.filter((b) => b.gates.some((g) => g.kind === 'timedRead'));
-    sections.push(h('section', { class: 'card', 'aria-labelledby': 'pg-h-belts' }, h('h2', { id: 'pg-h-belts' }, 'Belts'),
-      h('p', { class: 'small muted' }, `Belts are Aleph's own levels, named after colours, like in martial arts. A belt means you have met every letter and vowel sign in its texts and finished its lessons.${timedBelts.length ? ` The ${timedBelts.map((b) => b.name).join(' and ')} belt${timedBelts.length === 1 ? '' : 's'} also ask for timed read-alouds, which you time and mark yourself (self-reported, not measured by the app).` : ''}`),
-      ...belts.map((b) => h('details', { open: b.state === 'current' ? true : null }, h('summary', {}, `${b.name} belt: ${stateText[b.state]}`),
-        h('p', { class: 'small' }, b.gate),
-        h('ul', {}, ...b.gates.map((g) => h('li', { class: 'small', 'data-gate': g.kind }, `${g.label}: `, g.measurable ? (g.done ? 'met' : `${g.have} of ${g.need}`) : 'cannot be checked in the app yet',
-          g.note && g.measurable ? h('span', { class: 'muted' }, ` (${g.note})`) : null,
-          g.kind === 'timedRead' && !g.done && has('timedread') ? h('span', {}, ' ', h('a', { href: '#/timedread' }, 'Time a read')) : null)))))));
+    const stateText = { earned: 'Earned', current: 'Working on', later: 'Later' };
+    const top = [...belts].reverse().find((b) => b.state === 'earned'), cur = belts.find((b) => b.state === 'current');
+    const timedRanks = belts.filter((b) => b.checks.some((g) => g.kind === 'timedRead'));
+    const check = (g) => h('li', { class: 'small', 'data-gate': g.kind }, `${g.label}: `, g.measurable ? (g.done ? 'met' : `${g.have} of ${g.need}`) : 'cannot be checked in the app yet',
+      g.note && g.measurable ? h('span', { class: 'muted' }, ` (${g.note})`) : null,
+      g.kind === 'timedRead' && !g.done && has('timedread') ? h('span', {}, ' ', h('a', { href: '#/timedread' }, 'Time a read')) : null);
+    sections.push(h('section', { class: 'card', 'aria-labelledby': 'pg-h-belts' }, h('h2', { id: 'pg-h-belts' }, 'Belts and ranks'),
+      h('p', { class: 'small muted' }, 'Krav Maga style belts on the Reading and prayer track: White, Yellow, Orange, Green, Blue, Brown and Black, each with rank patches P (Practitioner), G (Graduate) and E (Expert). Each rank is a run of lessons in course order, and you earn it only by finishing those lessons, one rank after another. These are Aleph\'s own ranks, not a Krav Maga or outside grade. The Israel track has no belts; it uses Stage 1 to 3.'),
+      h('p', { class: 'pg-rank-now', role: 'status' }, 'Your rank: ', top ? rankBadge(h, top) : 'none yet', cur ? h('span', {}, ' · next: ', rankBadge(h, cur), ` (${cur.doneCount} of ${cur.total} lessons)`) : h('span', {}, ' · every rank earned')),
+      timedRanks.length ? h('p', { class: 'small muted' }, `The ${timedRanks.map((b) => b.label).join(' and ')} skill checks include timed read-alouds, which you time and mark yourself (self-reported, not measured by the app). They do not earn or hold back a rank.`) : null,
+      h('ol', { class: 'pg-ranks' }, ...belts.map((b) => h('li', { 'data-rank': b.id, 'data-state': b.state },
+        h('details', { open: b.state === 'current' ? true : null }, h('summary', {}, rankBadge(h, b), `: ${stateText[b.state]}`, h('span', { class: 'small muted' }, ` (lessons ${b.range}, ${b.doneCount} of ${b.total} done)`)),
+          h('p', { class: 'small' }, b.gate),
+          h('ul', {}, ...b.gates.map(check)),
+          b.checks.length ? h('p', { class: 'small muted' }, 'Skill checks for this range (information only):') : null,
+          b.checks.length ? h('ul', {}, ...b.checks.map(check)) : null))))));
 
     // 5. weak spots: up to 10, merged across sources, each with a plain-English next step
     const weak = weakReport(s, d, c, { max: 10, has });
@@ -260,13 +270,13 @@ export async function mount(root, ctx) {
       weak.length ? h('ol', { class: 'pg-weak' }, ...weak.map((w) => h('li', { 'data-weak': w.subject },
         w.he ? heSpan(w.label, 'he pg-he') : h('strong', {}, w.label), h('br'), h('span', { class: 'small muted' }, w.detail + '.'), h('br'),
         h('span', { class: 'small' }, 'Do this next: ' + w.next + ' '), h('a', { class: 'btn secondary', href: w.href, 'aria-label': `Practice this: ${w.he ? 'the word' : w.label}` }, 'Practice this'))))
-        : h('p', {}, 'Nothing stands out yet. Spot It, tracing, speaking practice and review cards feed this list as you practise.')));
+        : h('p', {}, 'Nothing stands out yet. Spot It, tracing, speaking practice and review cards feed this list as you practice.')));
 
     // 6. numbers
     const k = c.know, bands = c.vocab, sp = c.spot, cp = c.cp, tr = timedReadSummary(c.timedRead);
     const row = (a, b) => [h('dt', {}, a), h('dd', {}, b)];
     sections.push(h('section', { class: 'card', 'aria-labelledby': 'pg-h-num' }, h('h2', { id: 'pg-h-num' }, 'Your numbers'),
-      h('p', { class: 'small muted' }, `Aleph has ${cnt.read.total + cnt.israel.total} lessons in all: ${cnt.read.total} on the reading path and ${cnt.israel.total} on the Israel path. Both counts below are right — one counts a single path, the other counts the whole course.`),
+      h('p', { class: 'small muted' }, `Aleph has ${cnt.read.total + cnt.israel.total} lessons in all: ${cnt.read.total} on the reading path and ${cnt.israel.total} on the Israel path. The ten-week study plan uses ${LESSONS.core} core reading lessons. Each count below says which set it counts.`),
       h('dl', {},
         ...row('Letters traced', `${k.traced.size} of ${ALL_LETTERS.length}`),
         ...row('Letters taught by lessons', `${k.taughtLetters.size} of ${ALL_LETTERS.length}`),

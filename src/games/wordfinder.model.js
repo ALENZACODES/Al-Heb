@@ -57,7 +57,7 @@ export const LEVEL_DESCRIPTIONS = Object.freeze([
   'Read short phrases and familiar patterns.',
   'Understand common words in context.',
   'Build sentences and respond with less help.',
-  'Practise everyday dialogues and listening.',
+  'Practice everyday dialogues and listening.',
   'Explore roots, patterns and tricky word forms.',
   'Stretch with fast, complex Hebrew challenges.',
 ]);

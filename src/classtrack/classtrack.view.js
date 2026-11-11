@@ -3,6 +3,7 @@
 // per-week handout. There is no teacher plan: Aleph is for learners studying on their own. No external dependencies.
 import { h, heSpan } from '../shell/ui.js';
 import { niceId } from '../progress/model.js';
+import { LESSONS, SCOPE } from '../lib/counts.js';
 import { loadClassTrack, readCompleted, weekStatus, currentWeekIndex, newInWeek, readAloudTexts, commonErrors, validate, DRAFT } from './model.js';
 
 const CSS = `
@@ -130,7 +131,7 @@ export function mount(root, ctx = {}) {
           h('h2', { id: 'ct-h-over' }, 'Learn to read the prayer book in ten steps, at your own pace'),
           h('p', {}, 'Each week gives a few letters and signs, a 10-minute warm-up, text to read aloud, homework in this app and a self-check. Go at your own pace: plan your dates below, and use the help box in each week when you get stuck. It is not a copy of any book or course.'),
           h('progress', { max: String(total), value: String(done), 'aria-label': 'Core lessons finished in the class track' }),
-          h('p', { class: 'small muted' }, `${done} of ${total} core lessons finished${cur === -1 ? '. All ten weeks are done.' : `. Next: week ${weeks[cur].week}.`}`)),
+          h('p', { class: 'small muted' }, `${done} of ${total} core lessons finished (${SCOPE.core}; ${LESSONS.all} ${SCOPE.all})${cur === -1 ? '. All ten weeks are done.' : `. Next: week ${weeks[cur].week}.`}`)),
         planCard(),
         h('ol', { class: 'ct-weeks', style: 'list-style:none;padding:0;display:grid;gap:.75rem' }, ...weeks.map((w, i) => {
           const s = weekStatus(w, completed), state = s.complete ? 'done' : i === cur ? 'next' : 'later';
@@ -207,7 +208,7 @@ export function mount(root, ctx = {}) {
       return h('section', { class: 'ct-help', 'aria-labelledby': `ct-help-${w.week}` },
         h('h3', { id: `ct-help-${w.week}` }, 'Need help this week?'),
         tips.length ? h('div', {}, h('p', { class: 'small' }, 'Watch out for:'), list(tips)) : null,
-        h('p', { class: 'small' }, 'Stuck on a letter? ', h('a', { href: '#/letters' }, 'Trace it and hear it'), '. Mixing two letters up? ', h('a', { href: '#/letters?tab=drill' }, 'Practise look-alikes'), '. Forgot a word? ', h('a', { href: '#/vocab' }, 'Look it up in the dictionary'), '.'),
+        h('p', { class: 'small' }, 'Stuck on a letter? ', h('a', { href: '#/letters' }, 'Trace it and hear it'), '. Mixing two letters up? ', h('a', { href: '#/letters?tab=drill' }, 'Practice look-alikes'), '. Forgot a word? ', h('a', { href: '#/vocab' }, 'Look it up in the dictionary'), '.'),
         h('p', { class: 'small' }, 'Take your time: redo a lesson as often as you like, and move to the next week only when the "Can you..." list feels easy.'));
     }
 

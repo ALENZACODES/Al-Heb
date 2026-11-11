@@ -2,6 +2,7 @@ import { signalRimon } from '../shell/rimon-events.js';
 // Hebrew Word Finder: day-zero word recognition with a real sourced lexicon.
 // One tap to hear, one tap to find. No timers, typing, lives or penalties.
 import { h, heSpan } from '../shell/ui.js';
+import { FIRST_WORDS } from '../lib/counts.js';
 import { speak, loadGameImages, envNode, GAME_ENV } from './engine.js';
 import { sfx } from '../audio/sfx.js';
 import { isAudioFree } from '../shell/audiofree.js';
@@ -15,7 +16,7 @@ export function mount(root, ctx) {
   let alive = true;
   let bank = [], found = { version: 1, found: [], rounds: 0 };
   let topic = TOPIC_FIRST, deck = [], index = 0, phase = 'loading';
-  let wrong = new Set(), hint = false, roundChoices = [];
+  let wrong = new Set(), hint = false, roundChoices = [], lastClean = true;
   const status = h('p', { class: 'wf-status', role: 'status', 'aria-live': 'polite' }, 'Getting your first words ready…');
   const sound = h('p', { class: 'wf-sound muted', role: 'status', 'aria-live': 'polite' });
   const progress = h('div', { class: 'wf-progress', role: 'group', 'aria-label': 'Your word-finding progress' });
@@ -30,7 +31,7 @@ export function mount(root, ctx) {
     h('p', { class: 'muted' }, 'Hebrew reads right to left ←. The dots help with sounds. Every word has an English meaning.'),
     progress, status, sound, stage, more,
     h('p', { class: 'muted wf-source' },
-      '240 words · 5 words per round')));
+      `${FIRST_WORDS} words · 5 words per round`)));
 
   // The treasure-map backdrop made for this game (approved art, decorative
   // only — never a word cue). A missing picture leaves the page as it was.
@@ -62,9 +63,9 @@ export function mount(root, ctx) {
   function updateProgress() {
     const count = found.found.length;
     progress.replaceChildren(
-      h('span', { class: 'wf-progress-label' }, count + ' / 240 words found on this device'),
-      h('span', { class: 'wf-track', role: 'progressbar', 'aria-label': 'Words found', 'aria-valuemin': '0', 'aria-valuemax': '240', 'aria-valuenow': String(count) },
-        h('span', { class: 'wf-track-fill', style: 'width:' + (100 * count / 240).toFixed(1) + '%' })));
+      h('span', { class: 'wf-progress-label' }, count + ' / ' + FIRST_WORDS + ' words found on this device'),
+      h('span', { class: 'wf-track', role: 'progressbar', 'aria-label': 'Words found', 'aria-valuemin': '0', 'aria-valuemax': String(FIRST_WORDS), 'aria-valuenow': String(count) },
+        h('span', { class: 'wf-track-fill', style: 'width:' + (100 * count / FIRST_WORDS).toFixed(1) + '%' })));
   }
   function englishReadAloud(word) {
     if (audioOff()) { sound.textContent = 'Audio is off in your Aleph settings.'; return; }
@@ -131,11 +132,14 @@ export function mount(root, ctx) {
       focusNextChoice();
       return;
     }
-    persist(target);
+    // C-01 (in miniature): only a clean find (no wrong pick first) is saved as found; after a miss the word comes back in a later round.
+    const clean = wrong.size === 0;
+    if (clean) persist(target);
+    lastClean = clean;
     signalRimon('correct');
     sfx.play('success');
     phase = 'found';
-    status.textContent = 'You found it! There is no penalty for trying.';
+    status.textContent = clean ? 'You found it on the first try! It counts as found.' : 'You found it. It does not count as found yet, because of the earlier pick: it will come back in a later round. There is no penalty for trying.';
     sound.textContent = '';
     paint();
     focusStage('button.wf-next');
@@ -157,7 +161,7 @@ export function mount(root, ctx) {
   function menuNode() {
     const themes = [...new Set(bank.map((word) => word.theme))];
     const selected = topic;
-    const options = [[TOPIC_FIRST, 'My first 24 words'], [TOPIC_ALL, 'All 240 words'],
+    const options = [[TOPIC_FIRST, 'My first 24 words'], [TOPIC_ALL, `All ${FIRST_WORDS} words`],
       ...themes.map((theme) => [theme, theme])];
     return h('details', { class: 'wf-explore' },
       h('summary', {}, 'Explore more gentle word groups'),
@@ -178,7 +182,7 @@ export function mount(root, ctx) {
         h('p', { class: 'wf-finish-symbol', 'aria-hidden': 'true' }, '✦'),
         h('h2', {}, 'You found your Hebrew words!'),
         h('p', {}, names.join(' · ')),
-        h('p', {}, 'You can continue with five new words, or practise the same ones again.'),
+        h('p', {}, 'You can continue with five new words, or practice the same ones again.'),
         h('button', { type: 'button', class: 'btn wf-next', onclick: () => newRound() }, 'Find five more words'),
         h('a', { class: 'btn secondary', href: '#/games' }, 'See games for Levels 1–9')));
       return;
@@ -212,9 +216,9 @@ export function mount(root, ctx) {
         h('button', { type: 'button', class: 'btn secondary wf-back', onclick: () => { phase = 'learn'; paint(); focusStage('button.wf-next'); } }, 'Look at the word again'));
     } else if (phase === 'found') {
       stage.replaceChildren(
-        wordCard(word, '✦ You found it!'),
+        wordCard(word, lastClean ? '✦ You found it!' : '✦ You found it (not counted yet)'),
         hearingButtons(word),
-        h('p', { class: 'wf-reassure' }, 'That is one more real word you can recognise.'),
+        h('p', { class: 'wf-reassure' }, lastClean ? 'That is one more real word you can recognise.' : 'Pick it first time in a later round and it counts as found.'),
         h('button', { type: 'button', class: 'btn wf-next', onclick: nextWord }, index + 1 === deck.length ? 'Finish this round ✓' : 'Next word →'));
     }
   }

@@ -16,6 +16,7 @@ import { wordAudioId } from "./progress.js";
 import { playButton } from "./audio-ui.js";
 import { saySound } from "../pronunciation/forTradition.js";
 import { hookLine, hookNode } from "../letters/hookline.js";
+import { passRuleText } from "./passmark.js";
 import { RESUME_KEY, planChunks, getResume, setResume, clearResume, statsFromResults } from "./chunks.js";
 
 const A_ID = /^I-\d{2}$/;
@@ -103,26 +104,40 @@ export function mountChunkedLesson(root, ctx, lessonId) {
       const pb = progressBar("Lesson parts");
       pb.update((cur + 1) / plan.length, `Part ${cur + 1} of ${plan.length}`);
       return [el("h2", { id: "alef-part-title", tabindex: "-1" }, `Part ${cur + 1} of ${plan.length}`),
-        el("p", { class: "muted" }, "Stop whenever you like. Your place is saved."), pb.node];
+        el("p", { class: "muted" }, "Stop whenever you like. Your place is saved."),
+        // C-01 / S-13: the pass rule is stated on the first part, before any question
+        cur === 0 && questions.length ? el("p", { class: "alef-check-rule", id: "alef-check-rule", role: "note" }, `This lesson has ${questions.length} question${questions.length === 1 ? "" : "s"} in its parts. ${passRuleText(questions.length)}`) : null, pb.node];
     }
 
     function drawSummary(updated, dueCount) {
       const stats = statsFromResults(results, qids);
       const label = (id) => { const q = questions.find((x) => x.id === id); return q ? `${q.promptHe ? q.promptHe + " " : ""}${q.options[q.answerIndex].text}` : id; };
-      replaceKeepingFocus(wrap, h1, summaryNode({ ctx, store: ctx?.store, sfx: ctx?.sfx, showStreak: streakVisible(ctx), title: "Lesson complete", countText: `${stats.right} of ${stats.answered} right on the first try.`, stats, ms: Date.now() - t0,
+      replaceKeepingFocus(wrap, h1, summaryNode({ ctx, store: ctx?.store, sfx: ctx?.sfx, showStreak: streakVisible(ctx), title: "Lesson complete", countText: `${stats.right} of ${questions.length} right on the first try.`, stats, ms: Date.now() - t0,
         goodLabels: Object.keys(results).filter((id) => results[id]).map(label), missedLabels: stats.missed.map(label), skippedN: stats.skipped.length, cardsUpdated: updated, dueCount,
         nextHref: next ? `#/learn?lesson=${next.id}` : "#/learn", nextLabel: next ? "Next lesson" : "All lessons",
         extraLinks: [el("a", { class: "btn secondary", href: `#/learn?lesson=${lesson.id}&review=1` }, "Review these cards")] }));
       wrap.querySelector?.("#alef-int-ex")?.focus?.();
     }
     async function finish(host) {
-      let updated;
-      try { ({ updated } = await saveQuickCheck(ctx, lesson, questions, results)); } catch (e) { if (alive) showSaveFailure(host, e, () => finish(host)); return; } // never say "Lesson complete" for a lesson that was not saved
+      let updated, saved;
+      try { saved = await saveQuickCheck(ctx, lesson, questions, results); ({ updated } = saved); } catch (e) { if (alive) showSaveFailure(host, e, () => finish(host)); return; } // never say "Lesson complete" for a lesson that was not saved
       resumeAll = clearResume(resumeAll, lesson.id); await storeSet(ctx, RESUME_KEY, resumeAll);
       if (!alive) return;
       let dueCount; try { dueCount = dueCards(Object.values((await loadState(ctx)).cards), Date.now()).length; } catch { dueCount = undefined; }
       if (!alive) return;
+      if (!saved.passed) return drawNotPassed(updated, saved);
       drawSummary(updated, dueCount);
+    }
+    // C-01: below the pass mark the lesson is not done and nothing is celebrated; "Try again" restarts at the first question part.
+    function drawNotPassed(updated, saved) {
+      const stats = statsFromResults(results, qids);
+      const label = (id) => { const q = questions.find((x) => x.id === id); return q ? `${q.promptHe ? q.promptHe + " " : ""}${q.options[q.answerIndex].text}` : id; };
+      const firstCheck = Math.max(0, plan.findIndex((p) => p.kind === "check"));
+      replaceKeepingFocus(wrap, h1, summaryNode({ passed: false, ctx, title: "Not passed yet — try again", countText: `${stats.right} of ${questions.length} right on the first try.`, stats, ms: Date.now() - t0,
+        need: saved.need, of: saved.of, wasDone: isDone, missedLabels: stats.missed.map(label), cardsUpdated: updated,
+        onRetry: async () => { results = {}; await persist({ results, replaceResults: true, chunk: firstCheck }); if (alive) goTo(firstCheck); }, retryLabel: "Try again",
+        extraLinks: [el("a", { class: "btn secondary", href: `#/learn?lesson=${lesson.id}&review=1` }, "Review these cards"), el("a", { class: "btn secondary", href: "#/learn" }, "All lessons")] }));
+      wrap.querySelector?.("#alef-int-ex")?.focus?.();
     }
 
     function draw() {

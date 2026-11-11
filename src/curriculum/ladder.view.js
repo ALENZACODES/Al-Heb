@@ -90,7 +90,7 @@ export function mountLadder(root, ctx, q = {}) {
         el("p", {}, `${st.answered} answered, ${st.missed.length} item${st.missed.length === 1 ? "" : "s"} missed (sent to your review queue), reached level ${st.best}. You resume at level ${st.cleared ? 1 : st.level}.`),
         st.cleared && verse ? el("div", { class: "card alef-unlock" }, el("p", {}, "Unlocked: the opening of the Priestly Blessing (", verse.ref, ")."), heText(verse.he, "alef-he alef-word-big"),
           el("p", { class: "muted" }, `Text status in the corpus: ${verse.status}${verse.proofread === false ? "; not proofread by a person" : ""}.`)) : null,
-        el("div", { class: "row" }, el("a", { class: "btn", href: "#/learn?ladder=1" }, "Practise again"), el("a", { class: "btn secondary", href: "#/learn?review=1" }, "Review now"), el("a", { class: "btn secondary", href: "#/learn" }, "All lessons")));
+        el("div", { class: "row" }, el("a", { class: "btn", href: "#/learn?ladder=1" }, "Practice again"), el("a", { class: "btn secondary", href: "#/learn?review=1" }, "Review now"), el("a", { class: "btn secondary", href: "#/learn" }, "All lessons")));
     }
     offKeys = onKeys((e) => {
       if (finished || !cur) return;

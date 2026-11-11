@@ -1,9 +1,10 @@
 // Aleph boot: wires store, settings, audio, router, and lazily mounted views.
+import './shell/null-guard.js'; // first: no view may print a literal "null"/"undefined" (M-02)
 import { watchTitleCase, titleCase } from './shell/title-case.js';
 import { store } from './store.js';
 import { createSettings } from './shell/settings.js';
 import { applyComfort, COMFORT_KEYS } from './shell/comfort.js';
-import { createRouter, ROUTES, loadRouteModule, availableRoutes } from './shell/router.js';
+import { createRouter, ROUTES, loadRouteModule, availableRoutes, clearView, announceTitle } from './shell/router.js';
 import { VIEW_FILES } from './shell/views.generated.js';
 import { renderNav as renderNavBar } from './shell/nav.js';
 import { t, tHe } from './shell/i18n.js';
@@ -12,6 +13,7 @@ import { createShardLoader, warmShardAfterInstall } from './shell/audio-shards.j
 import { isRealProgressWrite } from './shell/persist-gate.js';
 import { fetchFullManifest, fetchAudioSummary, afterPaint } from './shell/audio-manifest.js';
 import { h, heSpan, unavailableCard } from './shell/ui.js';
+import { holdMain, rememberPage, watchFallbackHeading } from './shell/loading-contract.js';
 import { loadImageResolver, img as imgEl } from './img/resolve.js';
 import { updateCompanions } from './shell/companions.js';
 import { applyMotor, MOTOR_KEYS } from './shell/motor.js';
@@ -221,12 +223,15 @@ function firstPaintClass(route) {
   return 'alef-first-paint';
 }
 
+let loadHold = null, shownPath = ''; // loading contract for the page being mounted; path of the page on screen (for its snapshot)
 async function show(match, ctxBase, { quiet = false } = {}) {
   const token = ++navToken;
   const root = document.getElementById('main');
   if (!quiet) navFocusOwed = true;
   if (quiet && root.contains(document.activeElement) && document.activeElement.id) heldFocusId = document.activeElement.id; // a quiet re-render must not drop focus the learner already has (kept across a quiet render that a second one supersedes)
   if (!quiet) { try { ctxBase?.audio?.stop?.(); } catch { /* nothing was playing */ } }
+  if (!quiet && shownPath) rememberPage(root, shownPath); // the page being left, for an instant paint on the next visit
+  loadHold?.release(); loadHold = null;
   try { unmount(); } catch (e) { console.warn('unmount failed', e); }
   unmount = () => {};
   const { route, params, query, path } = match;
@@ -235,6 +240,7 @@ async function show(match, ctxBase, { quiet = false } = {}) {
   // superseded before it rendered cannot file the previous page's scroll position under the wrong path.
   if (!quiet) { lastMatch = match; lastCtx = ctxBase; touched = false; touchedOutsideField = false; fieldEdited = false; if (lastHashShown != null) scrollKeeper?.leave(lastHashShown); }
   const live = document.getElementById('announcer');
+  if (!quiet) announceTitle(live, ''); // M-09: the previous page's title leaves the page text as soon as navigation starts
   if (!route) {
     const updating = h('p', { class: 'muted', role: 'status' });
     root.replaceChildren(h('section', { class: 'card' }, h('h1', { id: 'view-title', tabindex: '-1' }, t('notfound.title')), h('p', { class: 'mono' }, path), updating, h('a', { class: 'btn', href: '#/' }, t('nav.home'))));
@@ -254,8 +260,8 @@ async function show(match, ctxBase, { quiet = false } = {}) {
   // U-24: never a blank page while a view module loads — a named skeleton
   // stands in, replaced the moment the view mounts (or by the error card).
   // Keep a first-paint title on Learn, Letters and Sounds so LCP can be the heading, not a late view block.
+  const keepTitle = route.name === 'learn' || route.name === 'letter' || route.name === 'sounds';
   if (!quiet) {
-    const keepTitle = route.name === 'learn' || route.name === 'letter' || route.name === 'sounds';
     const existing = root.querySelector('#view-title');
     const glyph = root.querySelector('.alef-first-glyph');
     if (keepTitle) {
@@ -273,12 +279,9 @@ async function show(match, ctxBase, { quiet = false } = {}) {
     } else {
       root.replaceChildren();
     }
-    if (!root.querySelector('.alef-skeleton')) {
-      root.append(
-        h('div', { class: 'alef-skeleton', 'aria-hidden': 'true' },
-          h('div', { class: 'skel-bar skel-title' }), h('div', { class: 'skel-bar' }), h('div', { class: 'skel-bar short' })),
-        h('p', { class: 'muted alef-skeleton-note' }, `Loading ${route.title}…`));
-    }
+    // M-05 loading contract: a content-shaped placeholder (or, on a repeat visit, an inert snapshot of the page) until the view
+    // adds content; it comes back if the view empties the region while it waits for data. Never a blank main.
+    loadHold = holdMain(root, { title: route.title, path: keepTitle ? '' : path, keep: (n) => n.nodeType === 1 && (n.classList.contains('alef-first-paint') || n.classList.contains('alef-first-glyph')) });
   }
   root.setAttribute('aria-busy', 'true');
   let mod;
@@ -292,9 +295,14 @@ async function show(match, ctxBase, { quiet = false } = {}) {
   if (token !== navToken) return;
   try {
     if (typeof mod.mount !== 'function') throw new Error('module has no mount(root, ctx) export');
-    // Keep #view-title (already painted, often the LCP element) and only drop the skeleton.
-    for (const n of [...root.querySelectorAll('.alef-skeleton, .alef-skeleton-note')]) n.remove();
+    // Keep #view-title (already painted, often the LCP element) and lane 4's loading placeholder (it leaves as soon as the
+    // view adds content, loading-contract.js); drop everything else (M-09), so no stale heading or banner text from the
+    // previous page reaches the new one.
+    const held = (n) => n.id === 'view-title' || ['alef-first-glyph', 'alef-first-paint', 'alef-skeleton', 'alef-skeleton-note', 'alef-snapshot'].some((c) => n.classList?.contains(c));
+    const keep = [...root.children].filter((n) => (keepTitle || n.id !== 'view-title') && held(n));
+    clearView(root, keep);
     const u = await mod.mount(root, ctx);
+    loadHold?.viewMounted();
     // Superseded while mounting: this view's cleanup would never be registered (unmount now belongs to the newer navigation), so run it here.
     if (token !== navToken) { if (typeof u === 'function') { try { u(); } catch (e) { console.warn('unmount failed', e); } } return; }
     if (typeof u === 'function') unmount = u;
@@ -316,16 +324,23 @@ async function show(match, ctxBase, { quiet = false } = {}) {
     // Every screen needs a level-one heading and a focus target. Views should provide `<h1 id="view-title">`; if one does
     // not (some lane views still don't), add a visually hidden one from the route title so screen readers have a heading.
     if (!root.querySelector('h1')) {
-      root.prepend(h('h1', { id: 'view-title', class: 'visually-hidden', tabindex: '-1' }, route?.title ?? t('notfound.title')));
+      const fallback = h('h1', { id: 'view-title', class: 'visually-hidden', tabindex: '-1', 'data-fallback-title': '' }, route?.title ?? t('notfound.title'));
+      root.prepend(fallback);
+      watchFallbackHeading(root, fallback); // a view that draws its own heading later must not leave two level-one headings (M-08)
     }
+    // The first-paint title kept for Learn, a letter and Sounds steps aside the same way when the view draws its own heading
+    // (a lesson opened from Learn showed "Lessons" above the lesson's own title).
+    const firstPaint = root.querySelector('h1.alef-first-paint');
+    if (firstPaint && !quiet) watchFallbackHeading(root, firstPaint);
     // focus management on navigation: move focus to the view heading, announce title, reset scroll
     const hd = root.querySelector('#view-title, h1');
     if (hd && !firstShow && (!quiet || navFocusOwed)) { if (!hd.hasAttribute('tabindex')) hd.setAttribute('tabindex', '-1'); hd.focus({ preventScroll: true }); }
     firstShow = false; navFocusOwed = false;
     if (quiet && heldFocusId && (!document.activeElement || document.activeElement === document.body)) document.getElementById(heldFocusId)?.focus({ preventScroll: true });
     heldFocusId = '';
-    if (!quiet) { live.textContent = document.title; if (scrollKeeper) scrollKeeper.arrive(location.hash); else window.scrollTo(0, 0); lastHashShown = location.hash; }
+    if (!quiet) { announceTitle(live, document.title); if (scrollKeeper) scrollKeeper.arrive(location.hash); else window.scrollTo(0, 0); lastHashShown = location.hash; }
     document.body.dataset.route = route?.name ?? 'notfound';
+    if (!quiet) shownPath = route ? path : '';
     try { updateCompanions(route?.name, { R: ctxBase?.images, voice: ctxBase?.settings?.get?.('voice') }); } catch (e) { console.warn('companions band failed', e); } // Ari and Noa on every screen; a band fault must not break the view
     try { syncGameMusic(route, settings); } catch (e) { console.warn('game music bar failed', e); }
     document.body.dataset.ready = '1';
@@ -388,6 +403,7 @@ async function boot() {
   const savedRate = settings.get('clipRate') === 'slow' ? 'slow' : 'normal';
   for (const b of document.querySelectorAll('.sound-rate')) b.setAttribute('aria-pressed', String(b.getAttribute('data-rate') === savedRate));
   import('./shell/audio-access.js').then((m) => { soundBar = m.wireSoundBar(audio); }).catch(() => {});
+  import('./shell/play-state.js').then((m) => m.installPlayState({ audio })).catch(() => {}); // playing / finished / failed on every Listen and Play control (M-04)
   let router;
   let images = null;
   const resolveImages = () => loadImageResolver((u) => fetch(u).then((r) => {

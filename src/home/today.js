@@ -7,6 +7,8 @@ import { openStart } from '../placement/start.js';
 import { ROUTES } from '../shell/router.js';
 import { tierOf } from '../shell/nav-model.js';
 import { nextPerTrack } from './nextlesson.js';
+import { DAILY_GOALS, normalizeDailyGoal, reviewedToday as countReviewedToday, daysText } from '../lib/counts.js';
+export { DAILY_GOALS, normalizeDailyGoal };
 
 export const FIRSTDAY_PROGRESS_KEY = 'firstday.progress';
 export const ONBOARDING_KEY = 'onboarding.v1';
@@ -15,8 +17,6 @@ export const PLACEMENT_KEY = 'placement.v1';
  *  streak rule: the streak engine counts a day at a fixed 5 minutes (GOAL_SECONDS in src/curriculum/streak.js, also read by Progress, the
  *  morning card and the evening rescue), so this goal is a personal target only and is not passed to createEngagement. */
 export const DAILY_GOAL_KEY = 'onboarding.v1.dailyGoal';
-export const DAILY_GOALS = Object.freeze([5, 10, 15, 20, 30]);
-export const normalizeDailyGoal = (v) => (DAILY_GOALS.includes(v) ? v : 5); // 5 = GOAL_SECONDS (300 s), the current default
 /** Read-only practice keys: a non-empty record means the learner has tried it. Festivals keeps no store key, so it counts as untried. */
 export const PRACTICE_KEYS = Object.freeze({ speak: 'speak.v1', typing: 'typing.v1', compare: 'compare.v1' });
 const MORE = [['speak', '/speak', 'Say it'], ['typing', '/typing', 'Typing'], ['festivals', '/festivals', 'Festivals'], ['compare', '/compare', 'Compare pronunciations']];
@@ -37,10 +37,7 @@ export function daysAway({ last, cards, now = Date.now() } = {}) {
   return latest == null ? 0 : Math.max(0, localDay(now) - latest);
 }
 /** How many cards were rated today (local day). */
-export function reviewedToday(cards, now = Date.now()) {
-  const d = localDay(now);
-  return Object.values(cards || {}).filter((c) => c && Number.isFinite(c.lastReview) && localDay(c.lastReview) === d).length;
-}
+export function reviewedToday(cards, now = Date.now()) { return countReviewedToday(cards, now); } // src/lib/counts.js
 /** Label of the first-day button from the firstday.progress record: the very first step is named, later ones count the wins. */
 export function onrampLabel(fd) {
   const wins = Array.isArray(fd?.wins) ? fd.wins.length : 0;
@@ -114,7 +111,7 @@ export function renderToday(today, t, onGoal, opts = {}) {
   const calm = opts.calm === true, showStreak = opts.showStreak !== false && !calm;
   const dueText = today.due.count === 0 ? t('home.due.none') : t(today.due.count === 1 ? 'home.due.count.one' : 'home.due.count', { n: today.due.count });
   const RULE = plain('streakRule');
-  const days = (n) => `${n} day${n === 1 ? '' : 's'}`;
+  const days = daysText;
   const streakText = today.streak.count > 0
     ? [h('strong', {}, days(today.streak.count)), today.streak.activeToday ? ' and counting. Today\'s 5 minutes are done.' : today.streak.restToday ? '. Today is a rest day: your streak is safe, nothing is needed today.' : `. Please keep your streak going. You're doing awesome! Study for 5 minutes today to add a day. ${RULE}`]
     : today.streak.best > 0

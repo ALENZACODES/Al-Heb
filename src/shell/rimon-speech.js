@@ -1,3 +1,4 @@
+import { praiseLine } from './rimon-praise.js';
 // Encouragement is independent of animation, including reduced-motion mode.
 export const MESSAGES = Object.freeze({
   great: {he:'כָּל הַכָּבוֹד!', en:'GREAT JOB!'},
@@ -24,8 +25,9 @@ export function greetingFor(date){const h=date.getHours();return GREETINGS[h>=5&
 export function streakLine(count){return {he:'בּוֹאוּ נִלְמַד!',en:count===1?"LET'S MAKE IT 2 DAYS!":`KEEP YOUR ${count}-DAY STREAK GOING!`};}
 export function doneLine(count){return {he:'כָּל הַכָּבוֹד!',en:count>1?`${count} DAYS IN A ROW!`:'DONE FOR TODAY!'};}
 export const ENCOURAGEMENT_MS=5*60*1000, IDLE_BREAK_MS=15*60*1000, SESSION_BREAK_MS=60*60*1000;
-export function createSpeechSchedule({greet=null,followUp=null}={}){
-  let queued=null,started=null,lastActivity=0,next=0,count=0,breakCount=0,pending=null;
+export function createSpeechSchedule({greet=null,followUp=null,praise=null}={}){
+  // praise(group, n): a line from src/shell/rimon-praise.js in the learner's form; without it Rimon says only MESSAGES.
+  let queued=null,started=null,lastActivity=0,next=0,count=0,breakCount=0,pending=null,nudges=0,kind=0;
   const encouragement=['keep','great','awesome','super','star','practice','again','winner'];
   return {
     activity(time){lastActivity=time;},
@@ -36,9 +38,17 @@ export function createSpeechSchedule({greet=null,followUp=null}={}){
       if(queued&&time>=started+7000){const q=queued;queued=null;return q;}
       if(time<next)return null;
       next=time+ENCOURAGEMENT_MS;
-      if(time-lastActivity>=IDLE_BREAK_MS || time-started>=SESSION_BREAK_MS){pending=null;return MESSAGES[breakCount++%2?'fruit':'tired'];}
-      const choices=SPEECH[pending];pending=null;
-      return MESSAGES[choices?.[0] || encouragement[count++%encouragement.length]];
+      if(time-lastActivity>=IDLE_BREAK_MS || time-started>=SESSION_BREAK_MS){
+        pending=null;
+        if(!praise)return MESSAGES[breakCount++%2?'fruit':'tired'];
+        const b=breakCount++%3;return b===2?(praise('nudge',3)||MESSAGES.tired):MESSAGES[b?'fruit':'tired'];
+      }
+      const p=pending,choices=SPEECH[p];pending=null;
+      if(praise&&(p==='sad'||p==='nervous')){const l=praise('nudge',nudges++%3);if(l)return l;}
+      if(choices)return MESSAGES[choices[0]];
+      if(praise&&count%2){count++;const k=kind++,l=praise(k%2?'encourage':'praise',k>>1);if(l)return l;}
+      if(praise)return MESSAGES[encouragement[(count++>>1)%encouragement.length]];
+      return MESSAGES[encouragement[count++%encouragement.length]];
     }
   };
 }
@@ -54,16 +64,17 @@ export function createSpeechPicker(){
   return action=>{const choices=SPEECH[action];if(!choices)return null;const n=counts.get(action)||0;counts.set(action,n+1);return MESSAGES[choices[n%choices.length]];};
 }
 
-export function mountSpeechBubble(host,{doc=document,now=()=>new Date(),streak=null}={}){
+export function mountSpeechBubble(host,{doc=document,now=()=>new Date(),streak=null,gender=null}={}){
   const bubble=doc.createElement('div');bubble.className='rimon-bubble';bubble.hidden=true;
   bubble.setAttribute('role','status');bubble.setAttribute('aria-live','polite');bubble.setAttribute('aria-atomic','true');
   doc.body.append(bubble);
-  const schedule=createSpeechSchedule({greet:(t)=>greetingFor(new Date(t)),followUp:()=>{const st=streak?.();if(!st||!st.count)return null;return st.activeToday?doneLine(st.count):streakLine(st.count);}});let message=null,expires=0,friday=isFriday(now()),key='';
+  const schedule=createSpeechSchedule({praise:(g,n)=>praiseLine(g,n,gender?.()??null),greet:(t)=>greetingFor(new Date(t)),followUp:()=>{const st=streak?.();if(!st||!st.count)return null;return st.activeToday?doneLine(st.count):streakLine(st.count);}});let message=null,expires=0,friday=isFriday(now()),key='';
   function pair(line,cls){
     const group=doc.createElement('span');group.className=cls;
     const en=doc.createElement('span');en.className='rimon-bubble-en';en.lang='en';en.dir='ltr';en.textContent=line.en;
     if(!line.he){group.append(en);return group;}
     const he=doc.createElement('span');he.className='rimon-bubble-he';he.lang='he';he.dir='rtl';he.textContent=line.he;
+    if(line.say){const say=doc.createElement('span');say.className='rimon-bubble-say';say.lang='he-Latn';say.dir='ltr';say.textContent=line.say;group.append(he,say,en);return group;}
     group.append(he,en);return group;
   }
   function position(){

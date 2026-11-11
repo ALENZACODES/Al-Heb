@@ -51,6 +51,7 @@ export function createSession(items, o = {}) {
   const first = {};          // id -> boolean, first attempt only
   const skipped = new Set(); // ids dropped after a second skip (never answered)
   let resolved = 0, total = items.length, last = null, retried = 0, retriedRight = 0;
+  const length = items.length + (o.carry || []).length; // C-02: the lesson's fixed length (the denominator never moves)
   // carry: answers already given in an earlier visit ({ it, right }). They count as answered; a miss comes back once at the end, as it would have.
   for (const c of o.carry || []) { first[c.it.id] = !!c.right; resolved++; total++; if (!c.right && retry) { queue.push({ it: c.it, attempt: 2, skips: 0 }); total++; } }
   const api = {
@@ -88,7 +89,16 @@ export function createSession(items, o = {}) {
     },
     firstResults: () => ({ ...first }),
     skippedIds: () => [...skipped],
-    progress: () => ({ resolved, total, fraction: total ? resolved / total : 0 }),
+    /**
+     * resolved/total/fraction: every attempt, retries included (total grows by one per first-try miss; kept for older callers).
+     * length/position/retries: the honest counter (C-02). `length` is fixed; `position` is how many of those questions have had
+     * their first try (or were dropped after two skips); `retries` counts the repeat questions added so far, shown apart from
+     * the length ("1 retry so far"); `retriesLeft` is how many are still to come. `share` is position / length.
+     */
+    progress: () => {
+      const position = Object.keys(first).length + skipped.size, retries = total - length;
+      return { resolved, total, fraction: total ? resolved / total : 0, length, position, retries, retriesDone: retried, retriesLeft: Math.max(0, retries - retried), share: length ? Math.min(1, position / length) : 0 };
+    },
     stats() {
       const ids = Object.keys(first), right = ids.filter((k) => first[k]).length;
       return { answered: ids.length, right, missed: ids.filter((k) => !first[k]), skipped: [...skipped], retried, retriedRight,
@@ -97,6 +107,9 @@ export function createSession(items, o = {}) {
   };
   return api;
 }
+
+// pass mark (C-01): see passmark.js (kept apart so the store actions can use it without this module)
+export { PASS_SHARE, passMark, passed, passRuleText, retryText } from "./passmark.js";
 
 /** "m:ss" for a duration in ms. */
 export function fmtDuration(ms) { const s = Math.max(0, Math.round(ms / 1000)); return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`; }
@@ -127,7 +140,7 @@ export function fireFeedback(ctx, correct, win = globalThis) {
   const did = { haptic: false, sound: false };
   try { if (hapticsOn(ctx, win)) { win.navigator.vibrate(correct ? [12] : [30, 40, 30]); did.haptic = true; } } catch { /* ignore */ }
   try { if (soundOn(ctx)) { ctx.sfx.play(correct ? "correct" : "wrong"); did.sound = true; } } catch { /* ignore */ }
-  try { if (win?.document?.body && ctx?.settings?.get?.("calmMode") !== true) showAnswerBand(!!correct, { doc: win.document, win, settings: ctx?.settings }); } catch { /* ignore */ }
+  try { if (win?.document?.body && ctx?.settings?.get?.("calmMode") !== true) showAnswerBand(!!correct, { doc: win.document, win, settings: ctx?.settings, words: false }); } catch { /* ignore */ } // C-06: the screen writes the one verdict; the band is colour only
   return did;
 }
 

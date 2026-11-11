@@ -6,7 +6,7 @@ import { LEVEL_DESCRIPTIONS } from './wordfinder.model.js';
 import { loadGameImages, imgOf, GAME_ENV } from './engine.js';
 import { ARCADE_GAMES } from './arcade.catalog.js';
 import { rimonInline } from '../shell/rimon-inline.js';
-import { gameOfTheDay, dayKey, ARCADE_KEY } from './arcade.model.js';
+import { gameOfTheDay, dayKey, ARCADE_KEY, LEVELS as ARCADE_STEPS } from './arcade.model.js';
 
 /** Hub id -> GAME_ENV key, for the games whose backdrop key differs from the route id. */
 export const HUB_ENV_KEY = Object.freeze({
@@ -100,9 +100,9 @@ export function mount(root, ctx) {
   });
   const article = h('article', { class: 'card wf-games-hub' },
     h('h1', { id: 'view-title', tabindex: '-1' }, 'Hebrew Games ', heSpan('מִשְׂחָקִים')),
-    h('p', {}, 'Completely new to Hebrew? Start at Level 1. Every level is open; you can play at your pace.'),
+    h('p', {}, `${hubSummary(items)} Completely new to Hebrew? Start at Level 1. Every level is open; you can play at your pace.`),
     h('p', { class: 'wf-lab-link' }, h('a', { class: 'btn', href: '#/lab' }, 'Brain Lab'), ' Three 45-second drills a day that get harder as you improve, with a score for each skill.'),
-    arcadeCard(ctx),
+    arcadeCard(ctx, items.length),
     ...sections);
   root.replaceChildren(article);
   // Card thumbnails from each game's own backdrop art, plus Rimon the mascot
@@ -129,8 +129,16 @@ export function arcadeThumb(id, card) {
     onerror: (e) => { e.target.remove(); card?.append?.(medal('arcade', id, 56)); } }); // a coin only if the scene is missing
 }
 
+const NUM_WORDS = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'];
+const numWord = (n) => NUM_WORDS[n] || String(n);
+/** "55 games across 9 levels." — counted from the catalogue, never typed (M-08: the old typed count went stale). */
+export function hubSummary(items) {
+  const shown = items.filter((x) => LEVEL_BY_GAME[x.id] >= 1 && LEVEL_BY_GAME[x.id] <= LEVEL_DESCRIPTIONS.length);
+  const levels = new Set(shown.map((x) => LEVEL_BY_GAME[x.id])).size;
+  return `${shown.length} games across ${levels} levels.`;
+}
 /** The arcade strip: today's featured quick game, the learner's streak, and the count of arcade games. */
-function arcadeCard(ctx) {
+function arcadeCard(ctx, total = 0) {
   const today = gameOfTheDay(ARCADE_GAMES.map((x) => x.id), dayKey());
   const game = ARCADE_GAMES.find((x) => x.id === today) || ARCADE_GAMES[0];
   let arc = null; try { arc = ctx?.store?.get?.(ARCADE_KEY) || null; } catch { arc = null; }
@@ -138,5 +146,5 @@ function arcadeCard(ctx) {
   return h('section', { class: 'card wf-arcade-card', 'aria-labelledby': 'wf-arcade-h' },
     h('h2', { id: 'wf-arcade-h' }, 'Arcade · today\'s game'),
     h('p', {}, h('a', { class: 'btn', href: '#/' + game.id + '?daily=1' }, game.title, h('span', { style: 'margin-inline-start:.45em' }, heSpan(game.titleHe))), ' ', h('span', { class: 'muted' }, game.tag + '. Same board for everyone today; play it as the daily challenge.')),
-    h('p', { class: 'muted' }, streak ? `Your arcade streak: ${streak} day${streak === 1 ? '' : 's'}. Play any arcade game today to keep it.` : 'Play any arcade game today to start a streak. Thirty quick games, five levels each, badges for bests and perfect rounds.'));
+    h('p', { class: 'muted' }, streak ? `Your arcade streak: ${streak} day${streak === 1 ? '' : 's'}. Play any arcade game today to keep it.` : `Play any arcade game today to start a streak. ${ARCADE_GAMES.length}${total ? ` of the ${total}` : ''} games here are quick arcade games, each with ${numWord(ARCADE_STEPS.length)} rounds of difficulty, and badges for bests and perfect rounds.`));
 }

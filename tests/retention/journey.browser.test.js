@@ -38,7 +38,7 @@ test('ten days: first lesson, a freeze saves a missed day, a milestone, Shabbat 
     };
     const stray = (page) => page.evaluate(() => { const bad = [], w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT); for (let n = w.nextNode(); n; n = w.nextNode()) if (n.parentElement?.closest('.alef-retention, .ret-bar') && /^(null|undefined|NaN|false|true|\[object Object\])$/.test(n.textContent.trim())) bad.push(n.parentElement.className + ': ' + n.textContent); return bad; });
     const state = (page) => page.$eval('.ret-goal', (el) => el.getAttribute('data-state'));
-    const flame = (page) => page.$eval('.ret-flame .ret-num', (el) => el.textContent);
+    const flame = (page) => page.$eval('#stat-streak .stat-n', (el) => el.textContent);
 
     // Monday: the first lesson ever.
     let p = await lesson('2026-11-09T10:00', 'r01');

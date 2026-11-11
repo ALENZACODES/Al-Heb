@@ -4,6 +4,7 @@
 // has one for the badge id (BADGE_<id>); the temporary vector is the fallback
 // and stays wherever no approved picture resolves. Certificate artwork: none yet.
 import { h } from '../shell/ui.js';
+import { count, SCOPE } from '../lib/counts.js';
 import { GAME_STORE_KEYS } from './observe.js';
 import { ART_NOTE, renderMedallion } from './icons.js';
 import { loadBeginnerRubric } from './rubric.js';
@@ -290,7 +291,7 @@ export async function mount(root, ctx) {
     : h('div', {},
       h('p', {}, `Confirmed criteria: none. Proposed criteria: ${rubric.items.length} items from lessons ${rubric.lessonIds[0]}–${rubric.lessonIds[rubric.lessonIds.length - 1]}. Review status: ${rubric.reviewStatus}. These are not a passing score.`),
       h('p', {}, rubric.graphNote || ''),
-      h('p', {}, rubric.belt ? `White-belt sentence from the shipped belt file: ${rubric.belt.gate}` : ''),
+      h('p', {}, rubric.belt ? `Covers ${rubric.belt.name} (lessons ${rubric.belt.lessons}). White belt · P0 sentence from the shipped belt file: ${rubric.belt.gate}` : ''),
       ...['letter', 'vowel', 'word', 'line'].map((kind) => {
         const items = rubric.items.filter((it) => it.kind === kind);
         if (!items.length) return null;
@@ -313,6 +314,8 @@ export async function mount(root, ctx) {
     h('p', {}, 'Awards are decided on this device. They do not need a connection. ' + ART_NOTE),
     h('p', {}, 'These awards record activity, not mastery. Locked and earned are written in words, not by colour alone.'),
     h('p', { class: 'aw-note' }, EVIDENCE_SUMMARY),
+    // One labelled count (M-01): badges here, not the path milestones Progress counts.
+    h('p', { id: 'award-count', 'data-earned': String(rows.filter((r) => r.state === 'earned').length) }, `${count(rows.filter((r) => r.state === 'earned').length, 'badge')} earned. Counted: ${SCOPE.badges}.`),
     status,
     h('section', { 'aria-labelledby': 'award-h-badges' },
       h('h2', { id: 'award-h-badges' }, 'Activity'),

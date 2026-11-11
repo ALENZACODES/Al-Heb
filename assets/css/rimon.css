@@ -21,6 +21,7 @@
 .rimon-bubble::after{content:'';position:absolute;right:-9px;top:var(--rimon-tail-top,23px);width:14px;height:14px;background:#fffbed;border-top:2px solid #d4a647;border-right:2px solid #d4a647;transform:rotate(45deg)}
 .rimon-bubble-he{display:block;font-family:'Frank Ruhl Libre',serif;font-size:23px;font-weight:700;line-height:1.4;overflow-wrap:anywhere}
 .rimon-bubble-en{display:block;margin-top:5px;font:700 12px/1.45 system-ui;letter-spacing:.025em;overflow-wrap:anywhere}
+.rimon-bubble-say{display:block;margin-top:3px;font:italic 500 12px/1.4 system-ui;opacity:.85;overflow-wrap:anywhere}
 .rimon-shabbat,.rimon-encouragement{display:block}
 .rimon-shabbat + .rimon-encouragement{border-top:1px solid #dccfa8;margin-top:10px;padding-top:9px}
 .rimon-shabbat .rimon-bubble-he{color:#805b11}
@@ -94,3 +95,15 @@ body[data-rimon-quiet=day] img[data-rimon-still]{visibility:hidden}
   .rimon-moment.is-streak-glow .rimon-moment-img,
   .rimon-moment.is-streak-glow .rimon-moment-flip{animation:none!important}
 }
+
+/* S-03: one Rimon at a time, whole and clear of the controls.
+   The lesson's answer Rimon (.alef-rimon-spot) and the stage's moment Rimon (.rimon-moment) used to show together, stacked in
+   the bottom-right corner, the lower one cut off by the screen edge and by the answer band. Now the spot wins while it shows,
+   the moment Rimon sits fully on screen, and both stay above the answer band and the game music bar. */
+body:has(.alef-rimon-spot) .rimon-moment{visibility:hidden!important}
+.rimon-moment{inset:auto max(.5rem,env(safe-area-inset-right)) calc(1rem + env(safe-area-inset-bottom)) auto}
+@media(max-width:600px){.rimon-moment{right:max(.5rem,env(safe-area-inset-right));bottom:calc(76px + env(safe-area-inset-bottom))}}
+body:has(.alef-answer-band.is-on) .rimon-moment{bottom:calc(168px + env(safe-area-inset-bottom))}
+/* the corner Rimon is fixed bottom-right; the game music bar ends the page there, so the bar keeps that corner free */
+body:has(.rimon-corner:not(.rimon-yield)) #game-music{padding-inline-end:132px}
+@media(max-width:600px){body:has(.rimon-corner:not(.rimon-yield)) #game-music{padding-inline-end:84px}}

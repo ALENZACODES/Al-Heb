@@ -86,6 +86,8 @@ export function mount(root, ctx = {}) {
   /** Hebrew text: always rtl + lang=he. */
   const he = (text, cls = 'he') => h('span', { class: cls, dir: 'rtl', lang: 'he' }, text);
   const ipaEl = (text) => h('span', { class: 'ipa', dir: 'ltr', lang: 'und-fonipa' }, text);
+  /** "Not yet checked" mark for a value no teacher or reference has confirmed (the old bare badge ran into the title before it). */
+  const unchecked = () => h('span', { class: 'badge' }, 'Not yet checked');
   const link = (src) => h('a', { href: src.url, rel: 'noopener noreferrer', target: '_blank' }, src.label);
 
   const keptTitle = root.querySelector && root.querySelector('#view-title');
@@ -190,7 +192,7 @@ export function mount(root, ctx = {}) {
           const vi = h('span', {});
           const vr = () => {
             const d = describeSign(v, tradition, rec);
-            vi.replaceChildren(' ', d.inherited ? '' : [ipaEl(d.ipa), ' '], d.inherited ? '' : `(${d.english}) `, v.note ?? '', v.verified === false ? h('span', { class: 'badge' }, 'unverified') : '');
+            vi.replaceChildren(...[' ', d.inherited ? '' : [ipaEl(d.ipa), ' '], d.inherited ? '' : `(${d.english}) `, v.note ?? '', v.verified === false ? [' ', unchecked()] : ''].flat());
           };
           tradListeners.push(vr);
           vr();
@@ -201,6 +203,9 @@ export function mount(root, ctx = {}) {
       grid.append(li);
     }
     wrap.append(grid);
+    // M-07: the first tap used to wait for the recording list (and its vowel part) to download, and the clip arrived after the
+    // learner had given up. Ask for the list as soon as the chart is drawn, so the first tap plays at once.
+    if (!isAudioFree(ctx) && data.niqqud.records[0]) { try { ctx.audio?.ensureManifest?.(); ctx.audio?.status?.('vowel', data.niqqud.records[0].id); } catch { /* audio is best effort */ } }
 
     // --- consonants that change sound
     const tbody = h('tbody', {});
@@ -240,15 +245,15 @@ export function mount(root, ctx = {}) {
     wrap.append(h('h2', {}, tr('sounds.drills', 'Sound like a local: drills')));
     const dl = h('ol', {});
     for (const d of data.drills.drills) {
-      const det = h('details', {}, h('summary', {}, d.title, d.verified === false ? h('span', { class: 'badge' }, 'unverified') : ''),
+      const det = h('details', {}, h('summary', {}, d.title, d.verified === false ? [' ', unchecked()] : ''),
         h('p', {}, h('strong', {}, 'Outsider marker: '), d.marker),
         h('p', {}, h('strong', {}, 'Listen for: '), d.listenFor),
         h('p', {}, h('strong', {}, 'Try this: '), d.tryThis),
-        d.unverifiedReason ? h('p', {}, h('em', {}, d.unverifiedReason)) : '',
+        d.verified === false ? h('p', {}, h('em', {}, 'A teacher has not checked this tip yet. Treat it as a hint, not a rule.')) : '',
         h('ul', {}, d.examples.map((e) => h('li', {}, he(e.he, 'he-small'), ` ${e.translit} - ${e.gloss}`))),
         d.sources.length ? h('p', {}, h('small', {}, 'Sources: '), d.sources.map((x, i) => [i ? ', ' : '', link(x)])) : '');
       for (const x of d.unverifiedExtras ?? []) {
-        det.append(h('p', {}, h('span', { class: 'badge' }, 'unverified'), ' ', x.text), h('ul', {}, x.examples.map((e) => h('li', {}, he(e.he, 'he-small'), ` ${e.translit} - ${e.gloss}`))));
+        det.append(h('p', {}, unchecked(), ' ', x.text), h('ul', {}, x.examples.map((e) => h('li', {}, he(e.he, 'he-small'), ` ${e.translit} - ${e.gloss}`))));
       }
       dl.append(h('li', {}, det));
     }

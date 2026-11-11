@@ -1,6 +1,7 @@
 import { h } from './ui.js';
 import { readinessNode } from './readiness.js';
 import { audioTruthNode } from './audio-truth.js';
+import { buildStamp, BUILD, AUDIO_CATALOGUE, LESSONS, BOOKS, DICTIONARY, SCOPE, fmt } from '../lib/counts.js';
 
 export function mount(root, ctx) {
   root.replaceChildren(h('article', { class: 'stack' },
@@ -9,6 +10,9 @@ export function mount(root, ctx) {
       h('p', {}, 'Aleph is a Hebrew course with two goals. One is to read the Torah and prayers aloud in synagogue. The other is to get around in Israel and sound natural.'),
       h('p', {}, 'This is an early version. A Hebrew speaker or rabbi has not yet checked the Hebrew labels or the prayer text. ', h('a', { href: '#/how' }, 'How this works'), ' lists what is and is not finished.'),
       audioTruthNode(h, { id: 'about-audio-truth', fetchFn: ctx.readinessFetch }), // counts read from data/audio/summary.json
+      // Course totals and the audio catalogue from src/lib/counts.js (counted from the served data at build time), and the build stamp.
+      h('p', { id: 'about-counts' }, `The course: ${LESSONS.all} ${SCOPE.all} (${LESSONS.reading} reading, ${LESSONS.israel} Israel), ${fmt(BOOKS)} story books and a ${fmt(DICTIONARY.words)}-word dictionary. The audio catalogue lists ${fmt(AUDIO_CATALOGUE.total)} clips in its manifests, ${fmt(AUDIO_CATALOGUE.synthetic)} of them synthetic and ${fmt(AUDIO_CATALOGUE.recorded)} recorded.`),
+      h('p', { id: 'about-build', 'data-version': BUILD.version, 'data-built': BUILD.builtAt }, buildStamp()),
       h('p', {}, 'Made by John Khan. Aleph is \u00a9 2026 John Khan. All rights reserved.')),
     readinessNode(h, { open: true, fetchFn: ctx.readinessFetch }),
     h('section', { class: 'card', id: 'credits', 'aria-labelledby': 'cr-top' }, h('h2', { id: 'cr-top' }, 'Credits & licences'),

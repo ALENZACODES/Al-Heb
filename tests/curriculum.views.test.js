@@ -52,25 +52,48 @@ test("learn view: lists read lessons, locks unmet prerequisites, shows due count
   // Hebrew element is RTL
   const he = root.find((n) => n.attrs.lang === "he")[0];
   assert.equal(he.attrs.dir, "rtl");
-  // complete lesson r01 -> r02 becomes available, progress persisted
-  const mark = items[0].find((n) => n.tag === "button" && /Mark complete/.test(n.attrs["aria-label"] || ""))[0];
-  await mark.click(); await waitFor(() => { const li = root.find((n) => n.tag === "li" && n.attrs["data-lesson"]); return store.m["curriculum.progress"]?.completed?.r01 && /alef-lesson-available/.test(li[1].className) && /alef-lesson-done/.test(li[0].className); }, { message: "r01 completed and the list re-rendered" });
-  assert.ok(store.m["curriculum.progress"].completed.r01);
-  assert.equal(globalThis.document.activeElement?.attrs?.id, "view-title", "Mark complete returns focus to the lesson list heading");
-  const items2 = root.find((n) => n.tag === "li" && n.attrs["data-lesson"]);
+  // C-01: "Test out" is a real short test, not a free checkmark: it opens the test-out page and marks nothing done by itself
+  const testOut = items[0].find((n) => n.tag === "button" && /alef-testout/.test(n.className || ""))[0];
+  assert.ok(testOut, "an available lesson offers Test out");
+  assert.doesNotMatch(testOut.attrs["aria-label"], /Mark complete without studying/);
+  assert.match(testOut.attrs["aria-label"], /short test/);
+  await testOut.click();
+  assert.deepEqual(routed.splice(0), ["/learn?lesson=r01&testout=1"]);
+  assert.equal(store.m["curriculum.progress"]?.completed?.r01, undefined, "Test out alone completes nothing");
+  // finish r01 (as its quick check or test would) -> r02 becomes available
+  store.m["curriculum.progress"] = { completed: { r01: Date.now() } };
+  unmount();
+  const root2 = new Node_("div");
+  const unmount2 = mountLearn(root2, { store, route: (p) => routed.push(p), t: (k) => k, settings: {} });
+  await waitFor(() => { const li = root2.find((n) => n.tag === "li" && n.attrs["data-lesson"]); return li.length >= 40 && /alef-lesson-available/.test(li[1].className) && /alef-lesson-done/.test(li[0].className); }, { message: "r01 done and the list re-rendered" });
+  const items2 = root2.find((n) => n.tag === "li" && n.attrs["data-lesson"]);
   assert.match(items2[1].className, /alef-lesson-available/);
   assert.match(items2[0].className, /alef-lesson-done/);
   // start navigates
   await items2[1].find((n) => n.tag === "button")[0].click();
   assert.deepEqual(routed, ["/learn?lesson=r02"]);
   // tab switch
-  await root.find((n) => n.attrs.id === "alef-tab-israel")[0].click(); await waitFor(() => root.find((n) => n.tag === "li" && /^il/.test(n.attrs["data-lesson"] || "")).length >= 15, { message: "Israel tab lessons" });
-  assert.ok(root.find((n) => n.tag === "li" && /^il/.test(n.attrs["data-lesson"] || "")).length >= 15);
-  const levels = root.find((n) => /\balef-level\b/.test(n.className || ""));
+  await root2.find((n) => n.attrs.id === "alef-tab-israel")[0].click(); await waitFor(() => root2.find((n) => n.tag === "li" && /^il/.test(n.attrs["data-lesson"] || "")).length >= 15, { message: "Israel tab lessons" });
+  assert.ok(root2.find((n) => n.tag === "li" && /^il/.test(n.attrs["data-lesson"] || "")).length >= 15);
+  const levels = root2.find((n) => /\balef-level\b/.test(n.className || ""));
   assert.ok(levels.length >= 3, "israel lessons show a level chip");
   for (const n of levels) {
     assert.match(n.text, /^Stage [123]$/, `level chip should be a course-stage name, got ${JSON.stringify(n.text)}`);
   }
+  unmount2();
+});
+
+test("learn view: Krav Maga style rank strip and per-lesson rank chips, in text; earned only by finishing a rank's lessons", async () => {
+  const done = { r01: 1, r02: 1, r03: 1, r04: 1, r05: 1 };
+  const root = new Node_("div");
+  const unmount = mountLearn(root, { store: memStore({ "curriculum.progress": { completed: done } }), route: () => {}, t: (k) => k, settings: {} });
+  await waitFor(() => /Your rank:/.test(root.text), { message: "rank strip rendered" });
+  const strip = root.find((n) => /\balef-belt\b/.test(n.className || ""))[0];
+  assert.match(strip.text, /^Your rank: White belt · P0 · next: Yellow belt · P1 \(1 of 5 lessons done\)\./);
+  const chip = (id) => root.find((n) => n.tag === "li" && n.attrs["data-lesson"] === id)[0].find((n) => /\balef-level\b/.test(n.className || ""))[0];
+  assert.equal(chip("r01").text, "White belt · P0"); assert.equal(chip("r10").text, "Yellow belt · P2"); assert.equal(chip("r51").text, "Brown belt · G5");
+  const badge = chip("r10").find((n) => /\balef-rank\b/.test(n.className || ""))[0];
+  assert.equal(badge.attrs["data-belt"], "yellow"); assert.equal(badge.attrs["data-patch"], "P"); assert.match(badge.attrs.title, /Yellow belt, Practitioner 2: yellow P patch with 2 stripes/);
   unmount();
 });
 

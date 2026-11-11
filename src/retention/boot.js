@@ -16,6 +16,7 @@ import { showRimon } from './rimon.js';
 import { questProgress, questView, questsOn } from './quests.js';
 import { monthProgress, monthView } from './month.js';
 import { welcomeBack, isComebackDay, recapDue, recapSeen, lastWeek } from './recap.js';
+import { read as readCounts, xpToday, lessonsFinished, lessonsFinishedToday, weekDays } from '../lib/counts.js';
 
 const STREAK_KEY = 'streak';
 let api = null;
@@ -29,7 +30,10 @@ export function retention(ctx, g = globalThis) {
   const quick = { hash: null, parts: 0 }; let freezeNoteShown = false;
   let lessonHash = null, lastTouch = 0, quietOpt = { loc: null, mode: 'reform' }, scheduler = null, muteStreakSub = false, lastCount = 0, seq = 0;
   const now = () => Date.now();
-  const get = () => refillByTime(load(store, now()), now());
+  // lessonsFinished never reads lower than the lessons Learn and Progress count (src/lib/counts.js), so the unlock gates and
+  // every "lessons finished" line agree.
+  const synced = (r) => { const n = lessonsFinished(readCounts(store).completed); return n > r.lessonsFinished ? { ...r, lessonsFinished: n } : r; };
+  const get = () => refillByTime(synced(load(store, now())), now());
   const update = (fn) => { const r = save(store, fn, now()); emit(); return r; };
   const streakRaw = () => { try { return store.get(STREAK_KEY) ?? null; } catch { return null; } };
   const calm = () => calmOn(ctx);
@@ -38,9 +42,11 @@ export function retention(ctx, g = globalThis) {
   const opts = () => ({ calm: calm(), hash: g.location?.hash || '' });
   const later = (fn, ms) => g.setTimeout(() => { try { fn(); } catch { /* Rimon is optional */ } }, ms);
 
+  /** The counts the XP and lesson quests read (src/lib/counts.js): the same numbers Home's goal ring and Progress show. */
+  const live = (t = now()) => { const s = readCounts(store); return { xpToday: xpToday(load(store, t), t), lessonsToday: lessonsFinishedToday(s.completed, t) }; };
   /** Count progress on today's quests, save it, and say each finished quest once. */
   function questStep(amounts) {
-    const t = now(), cur = load(store, t), out = questProgress(cur, amounts, t, { calm: calm(), mode: quietOpt.mode });
+    const t = now(), cur = synced(load(store, t)), out = questProgress(cur, amounts, t, { calm: calm(), mode: quietOpt.mode, live: live(t) });
     if (out.rec !== cur) update(() => out.rec);
     for (const text of out.done) say(`Quest done: ${text}. +5 gems.`);
     if (out.chest) { say('All three quests done! +10 gems.'); later(() => showRimon('daily_goal'), 1500); }
@@ -151,6 +157,10 @@ export function retention(ctx, g = globalThis) {
   /** A page was shown. Gate a NEW lesson at zero hearts; a lesson already under way is never interrupted. */
   function routeShown() {
     const hash = g.location?.hash || '';
+    try { // settle the XP and lesson quests against today's counts, only when one is reached but not yet paid
+      const r = get(), lv = live();
+      if (questsOn(r, { calm: calm() }) && r.quests?.day === dayKey(now()) && r.quests.items.some((i) => !i.paid && ((i.id === 'xp' && lv.xpToday >= i.n) || (i.id === 'lesson' && lv.lessonsToday >= i.n)))) questStep({});
+    } catch { /* quests are optional */ }
     if (freezeNoteShown) { freezeNoteShown = false; update((r) => freezeNoteSeen(r)); }
     if (!isLessonHash(hash)) { lessonHash = null; return { gate: false }; }
     if (hash === lessonHash) return { gate: false };
@@ -187,14 +197,14 @@ export function retention(ctx, g = globalThis) {
     return p;
   }
 
-  api = { get, update, streakRaw, calm, rollover, lessonFinished, partShown, weekDots: () => weekDots(streakRaw(), get(), now()), freezeNoteShown: () => { if (!freezeNoteShown) { freezeNoteShown = true; save(store, (r) => markFreezeNote(r, now()), now()); } }, answered, reviewRated, gameFinished, streakChanged, routeShown, armNotifications, turnOnReminders,
+  api = { get, update, streakRaw, calm, rollover, lessonFinished, partShown, weekDots: () => weekDays(streakRaw(), get(), now(), readCounts(store).rest), freezeNoteShown: () => { if (!freezeNoteShown) { freezeNoteShown = true; save(store, (r) => markFreezeNote(r, now()), now()); } }, answered, reviewRated, gameFinished, streakChanged, routeShown, armNotifications, turnOnReminders,
     status: () => streakStatus(streakRaw(), get(), now()), streakShown: () => streakVisible(ctx), heartsShown: () => heartsOn(get(), { calm: calm() }), leagueShown: () => leagueOn(get(), { calm: calm() }),
     setStreak: (v) => { muteStreakSub = true; try { store.set(STREAK_KEY, v); } finally { muteStreakSub = false; } lastCount = projectStreak(v, now()).count; emit(); },
     rearm: () => scheduler?.arm(), quietOpt: () => quietOpt, say, ctx, revealed,
     comeback: () => { const r = get(); return isComebackDay(r, now()) && todayXp(r, now()) === 0 ? { days: r.comebackAway || 7 } : null; },
     recap: () => (recapDue(get(), now(), { calm: calm() }) ? lastWeek(get(), now()) : null), recapSeen: () => update((r) => recapSeen(r, now())),
     monthView: () => monthView(get(), now(), { calm: calm() }),
-    questView: () => questView(get(), now(), { calm: calm(), mode: quietOpt.mode }), questsShown: () => questsOn(get(), { calm: calm() }),
+    questView: () => questView(get(), now(), { calm: calm(), mode: quietOpt.mode, live: live() }), questsShown: () => questsOn(get(), { calm: calm() }),
     /** A lesson the learner has been let into (so a later redraw of the same page never gates it). */
     admit: (hash) => { lessonHash = hash; } };
   return api;

@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import fs from "node:fs";
-import { lessons, byId, topoOrder, available, prayerLineIds, belts } from "../src/curriculum/lessons.js";
+import { lessons, byId, topoOrder, available, prayerLineIds, belts, ranks } from "../src/curriculum/lessons.js";
 
 const LETTERS = "alef bet gimel dalet he vav zayin chet tet yod kaf lamed mem nun samekh ayin pe tsadi qof resh shin tav kaf-final mem-final nun-final pe-final tsadi-final".split(" ");
 const VOWELS = "kamatz patach tzere segol chirik cholam kubutz shuruk shva chataf-patach chataf-segol chataf-kamatz dagesh shin-dot sin-dot".split(" ");
@@ -91,19 +91,15 @@ test("israel track Hebrew words contain Hebrew and cap at B1", () => {
   }
 });
 
-test("levels are monotone along the read track and match belts.json", () => {
+test("levels are monotone along the read track and match the Krav Maga style ranks in belts.json", () => {
   const order = belts.belts.map((b) => b.id);
+  assert.deepEqual(order, ["white", "yellow", "orange", "green", "blue", "brown", "black"]);
   let last = -1;
   for (const l of lessons.filter((x) => x.track === "read" && x.level !== "intermediate")) { const i = order.indexOf(l.level); assert.ok(i >= last && i >= 0 && l.level !== "black", l.id); last = i; }
-  for (const l of lessons.filter((x) => /^I-\d{2}$/.test(x.id) && x.track === "read")) assert.equal(l.level, "intermediate", l.id); // "black" is a fluency target, not a lesson label
-  for (const b of belts.belts.filter((x) => x.lessons)) {
-    const [a, z] = b.lessons.split("-");
-    for (const l of lessons.filter((x) => x.track === "read")) {
-      const n = +l.id.slice(1);
-      if (n >= +a.slice(1) && n <= +z.slice(1)) assert.equal(l.level, b.id, l.id);
-    }
-  }
-  assert.equal(belts.belts.find((b) => b.id === "black").wpmTarget, 80);
+  for (const l of lessons.filter((x) => /^I-\d{2}$/.test(x.id) && x.track === "read")) assert.equal(l.level, "intermediate", l.id); // their Black belt rank comes from belts.json
+  for (const r of ranks) for (const id of r.lessons) if (/^r\d{2}$/.test(id)) assert.equal(byId[id].level, r.belt, id);
+  assert.equal(ranks.find((r) => r.id === "E5").wpmTarget, 80);
+  assert.equal(ranks.find((r) => r.id === "G5").wpmTarget, 70);
 });
 
 test("Priestly Blessing is the spine: lines appear in r05 (preview), r15, r25, r26, r27", () => {

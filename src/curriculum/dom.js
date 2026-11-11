@@ -82,8 +82,12 @@ export function replaceKeepingFocus(wrap, keep, ...nodes) {
   if (had && keep.focus) keep.focus({ preventScroll: true });
 }
 
-/** Learner-facing name of a lesson's level: belt colours get "belt"; israel-track codes map to course-stage names (not CEFR claims). */
-export function levelLabel(level) {
+/**
+ * Learner-facing name of a lesson's level. Pass the lesson's rank (src/curriculum/ranks.js) to get the Krav Maga style label,
+ * e.g. "Yellow belt · P2"; Israel-track codes map to course-stage names (not CEFR claims).
+ */
+export function levelLabel(level, rank) {
+  if (rank && rank.label) return rank.label;
   const L = String(level || "");
   const plain = { A1: "Stage 1", A2: "Stage 2", B1: "Stage 3", intermediate: "Intermediate" };
   return plain[L] || (L ? L[0].toUpperCase() + L.slice(1) + " belt" : "");

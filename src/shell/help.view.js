@@ -12,7 +12,7 @@ export function mount(root, ctx) {
       h('p', { class: 'muted' }, 'Short answers, in plain words. For the long version (the research and the fine print), see ', h('a', { href: '#/how' }, 'How this works'), '.')),
 
     sec('start', 'Where do I start?',
-      h('p', {}, 'Start with ', h('a', { href: '#/firstday' }, 'Your first 10 minutes'), ': one letter at a time until you have built a real word. You can do those steps again whenever you like. Practising never takes away a finished mark.'),
+      h('p', {}, 'Start with ', h('a', { href: '#/firstday' }, 'Your first 10 minutes'), ': one letter at a time until you have built a real word. You can do those steps again whenever you like. Practicing never takes away a finished mark.'),
       h('p', {}, 'Aleph has two paths. ', h('strong', {}, 'Read the prayer book'), ' teaches you to read Hebrew aloud, including prayers and Torah. ', h('strong', {}, 'Speak in Israel'), ' teaches everyday Hebrew for travel and conversation. You pick one in ', h('a', { href: '#/settings' }, 'Settings'), ' (your goal), and you can use both.'))
 
     , sec('sound', 'Why can I not hear some words?',
@@ -27,7 +27,7 @@ export function mount(root, ctx) {
       h('ul', {},
         li(h('strong', {}, 'Siddur:'), ' the Jewish prayer book. “Read the prayers” works through it line by line.'),
         li(h('strong', {}, 'Style (tradition):'), ' how Hebrew is pronounced in your community: Israeli, Sephardi or Ashkenazi. Aleph follows the one you choose, and labels any sound that only exists in Israeli style.'),
-        li(h('strong', {}, 'Belts:'), ' Aleph’s own levels, named after colours like in martial arts. A belt means you have met every letter and sign in its texts and finished its lessons. They are Aleph’s invention, not an outside qualification.'),
+        li(h('strong', {}, 'Belts and ranks:'), ' Krav Maga style belts on the Reading track: White, Yellow, Orange, Green, Blue, Brown and Black, with rank patches P (Practitioner), G (Graduate) and E (Expert), shown as text such as “Yellow belt · P2”. Each rank is the next run of lessons in course order, and you earn it only by finishing those lessons. They are Aleph’s own ranks, not a Krav Maga grade or an outside qualification. The Israel track uses Stage 1 to 3 instead.'),
         li(h('strong', {}, 'Parsha:'), ' the weekly Torah portion, named on the ', h('a', { href: '#/calendar' }, 'Calendar'), ' page.')))
 
     , sec('progress', 'Is my progress saved?',

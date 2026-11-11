@@ -140,7 +140,7 @@ export const SAMPLE_PAGE_NOTES = Object.freeze([
   'Approved artwork: 0. No image file has been accepted. The eggshell ground and the crimson seal are a temporary layout, not final art.',
   'The sheet is marked Design proof. That label does not mean a certificate was issued.',
   'Cert # is a sample internal reference built from the display name and the America/Toronto date of this preview. The same name and date share it. It is not unique, not checked, and not an accreditation number.',
-  'This sample does not say the named person can read Hebrew, finished the white-belt lessons, or passed a checked assessment. Saving or printing it does not store an earned certificate.',
+  'This sample does not say the named person can read Hebrew, finished the White belt · P0 and Yellow belt · P1 lessons, or passed a checked assessment. Saving or printing it does not store an earned certificate.',
   'The name is a label you typed. It is not a signature and not an account.',
   'No teacher, rabbi, or examiner has signed this sample. The seal is a temporary geometric drawing, not a seal of office.',
   'There is no verification website, and this sample has no code that could prove it.',

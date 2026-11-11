@@ -3,10 +3,16 @@
 // autoplays, nothing asks for permission. Draft, not tried with learners or on a device.
 import { h } from '../../src/shell/ui.js';
 import { streakVisible, quietNow } from '../../src/shell/comfort.js';
-import { GOALS, load, save, withGoal, withQuests } from './store.js';
-import { refresh, buildModel, describe, applyRepair, dayKey } from './sync.js';
+import { load, save, withQuests } from './store.js';
+import { refresh, buildModel, describe } from './sync.js';
 import { ringSVG } from './points.js';
 import { ensureStyle } from './celebrate.js';
+// The daily goal, the streak and its free restore, and the week's review cards are the app's own numbers from src/lib/counts.js
+// (the same values Home, the shop and Progress show). Only the calendar below counts activity points, and it says so.
+import { KEYS, XP_GOALS, xpGoal, streakNow, repairOffer, reviewCardsThisWeek, read as readCounts, daysText, SCOPE } from '../../src/lib/counts.js';
+import { save as saveRetention, load as loadRetention } from '../../src/retention/state.js';
+import { setGoal } from '../../src/retention/xp.js';
+import { repairStreak } from '../../src/retention/streak.js';
 
 export const CSS = `
 .lp { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--gap, 1rem); max-inline-size: 100%; overflow-wrap: anywhere; }
@@ -29,7 +35,6 @@ export const CSS = `
 .lp progress { inline-size: 6rem; block-size: .8rem; accent-color: var(--accent); }
 `;
 
-const plural = (n, one, many) => `${n} ${n === 1 ? one : many}`;
 
 export function mount(root, ctx) {
   const store = ctx && ctx.store;
@@ -47,20 +52,27 @@ export function mount(root, ctx) {
     const m = buildModel(rec, snap, now());
     const d = describe(m);
     const showRhythm = streakVisible(ctx);
+    const c = readCounts(store), t = now();
+    const xp = xpGoal(c.retention, t), st = streakNow(c.streak, t, c.rest), offer = repairOffer(c.retention, c.streak, t);
 
-    // goal
+    // goal: XP today against the daily XP goal, the same value and goal as Home's ring (src/lib/counts.js xpGoal)
     // the sentence beside the ring says the same, so a screen reader reads the ring once, as text
-    const ringHost = h('span', { 'aria-hidden': 'true' }); ringHost.innerHTML = ringSVG(m.points, m.goal);
+    const ringHost = h('span', { 'aria-hidden': 'true' }); ringHost.innerHTML = ringSVG(xp.xp, xp.goal).replace(/points today/, 'XP today');
     const goalCard = h('section', { class: 'card', 'aria-labelledby': 'lp-h-goal' }, h('h2', { id: 'lp-h-goal' }, 'Today'),
-      h('div', { class: 'lp-row' }, ringHost, h('div', {}, h('p', { id: 'lp-ring-text', style: 'font-weight:600;margin:0' }, m.ring.text), h('p', { style: 'margin:.25rem 0 0' }, m.goalLine))),
-      h('div', { class: 'lp-row', role: 'group', 'aria-label': 'Daily goal in points' }, ...GOALS.map((g) => h('button', { type: 'button', class: g === m.goal ? 'btn' : 'btn secondary', 'data-goal': String(g), 'aria-pressed': String(g === m.goal),
-        onclick: () => { save(store, withGoal(load(store), g)); status.textContent = `Daily goal set to ${g} points.`; render('lp-goal-' + g); }, id: 'lp-goal-' + g }, `${g} points`))));
+      h('div', { class: 'lp-row' }, ringHost, h('div', {}, h('p', { id: 'lp-ring-text', style: 'font-weight:600;margin:0', 'data-xp': String(xp.xp) }, xp.text), h('p', { style: 'margin:.25rem 0 0' }, xp.done ? 'Anything more is a bonus, never a requirement.' : `${xp.goal - xp.xp} XP to today's goal. One lesson is 10 XP. Any amount helps.`))),
+      h('div', { class: 'lp-row', role: 'group', 'aria-label': 'Daily XP goal' }, ...XP_GOALS.map((g) => h('button', { type: 'button', class: g === xp.goal ? 'btn' : 'btn secondary', 'data-goal': String(g), 'aria-pressed': String(g === xp.goal),
+        onclick: () => { saveRetention(store, (r) => setGoal(r, g), now()); status.textContent = `Daily goal set to ${g} XP.`; render('lp-goal-' + g); }, id: 'lp-goal-' + g }, `${g} XP`))));
 
-    // rhythm
-    const rh = m.rhythm;
-    const rhythmCard = showRhythm ? h('section', { class: 'card', 'aria-labelledby': 'lp-h-rhythm' }, h('h2', { id: 'lp-h-rhythm' }, 'Practice rhythm'),
-      h('p', {}, m.rhythmLine), h('p', { class: 'muted' }, `Best run: ${plural(rh.best, 'day', 'days')}. Every 5th practice day earns a rest day (up to 3 banked), used for you on a day off. No cost, no timer.`),
-      m.repair.length ? h('button', { type: 'button', class: 'btn', id: 'lp-repair', onclick: () => { save(store, applyRepair(load(store), snap, now())); status.textContent = 'Your earlier run is back. It was free, and you can do this any time.'; render('lp-h-rhythm'); } }, 'Bring my earlier run back (free)') : null) : null;
+    // streak: the one streak (the streak record), and the one restore rule: free, offered only while the streak is broken
+    const rhythmCard = showRhythm ? h('section', { class: 'card', 'aria-labelledby': 'lp-h-rhythm' }, h('h2', { id: 'lp-h-rhythm' }, 'Your streak'),
+      h('p', {}, st.count > 0 ? `${daysText(st.count)} in a row${st.activeToday ? ', including today' : st.restToday ? ' (resting today)' : ''}.` : st.best > 0 ? 'No streak running today. A new one starts the next time you study for 5 minutes.' : 'No streak yet. Five minutes of study starts one.'),
+      h('p', { class: 'muted' }, `Best streak: ${daysText(st.best)}. Friday, Shabbat and holidays never end it. A streak that stopped can be brought back for free for two days, here or in the shop.`),
+      offer ? h('button', { type: 'button', class: 'btn', id: 'lp-repair', onclick: () => {
+        const out = repairStreak(store.get(KEYS.streak), loadRetention(store, now()), now());
+        if (out.ok) { store.set(KEYS.streak, out.streak); saveRetention(store, () => out.rec, now()); status.textContent = `Your ${offer.prev}-day streak is back. It was free.`; }
+        else status.textContent = 'The restore window has closed.';
+        render('lp-h-rhythm');
+      } }, offer.text) : null) : null;
 
     // quests
     const questCard = h('section', { class: 'card', 'aria-labelledby': 'lp-h-quests' }, h('h2', { id: 'lp-h-quests' }, 'Small quests'),
@@ -70,7 +82,11 @@ export function mount(root, ctx) {
       h('button', { type: 'button', class: 'btn secondary', id: 'lp-quests-toggle', onclick: () => { save(store, withQuests(load(store), !m.quests)); status.textContent = m.quests ? 'Quests hidden.' : 'Quests shown.'; render('lp-quests-toggle'); } }, m.quests ? 'Hide quests' : 'Show quests'));
 
     // week
-    const weekCard = h('section', { class: 'card', 'aria-labelledby': 'lp-h-week' }, h('h2', { id: 'lp-h-week' }, 'Your week'), ...m.week.sentences.map((s) => h('p', {}, s)));
+    // review cards this week: src/lib/counts.js, the same floor Progress shows; the rest of the week line is activity points
+    const wkCards = reviewCardsThisWeek(c.cards, c.vocab, t);
+    const weekCard = h('section', { class: 'card', 'aria-labelledby': 'lp-h-week' }, h('h2', { id: 'lp-h-week' }, 'Your week'),
+      ...m.week.sentences.map((s) => h('p', {}, s.replace(/\b(\d+) review cards?\b/, wkCards === 1 ? '1 review card' : `${wkCards} review cards`).replace(/\bearned (\d+) points?\b/, (x, n) => `earned ${n} activity ${n === '1' ? 'point' : 'points'}`))),
+      h('p', { class: 'muted small' }, `Review cards: different cards reviewed in the last 7 days (a floor, the same count as Progress). Points here are ${SCOPE.activityPoints}.`));
 
     // progress + heatmap
     const cells = m.heat.flat().map((c) => (c ? h('span', { class: 'lp-cell', 'data-level': String(c.level), 'aria-hidden': 'true', title: `${c.iso}: ${c.points} points` }, String(c.level)) : h('span', { class: 'lp-cell', 'data-level': 'none', 'aria-hidden': 'true' })));
@@ -80,7 +96,7 @@ export function mount(root, ctx) {
       h('h3', { id: 'lp-h-heat' }, 'Calendar'),
       h('p', { id: 'lp-heat-text' }, d.heat),
       h('div', { class: 'lp-heat', 'aria-hidden': 'true', tabindex: '-1' }, ...cells),
-      h('p', { class: 'muted' }, 'Level 0 none, 1 some, 2 a practice day, 3 daily goal reached.'),
+      h('p', { class: 'muted' }, `Level 0 none, 1 some, 2 a practice day, 3 ${m.goal} or more activity points. The calendar counts ${SCOPE.activityPoints}.`),
       h('details', {}, h('summary', {}, 'Show the calendar as a table'),
         h('div', { class: 'table-wrap', role: 'region', 'aria-label': 'Points per week, newest first', tabindex: '0' }, h('table', {}, h('caption', {}, 'Points per week, newest first'), h('thead', {}, h('tr', {}, h('th', { scope: 'col' }, 'Week starting'), h('th', { scope: 'col' }, 'Points'), h('th', { scope: 'col' }, 'Practice days'), h('th', { scope: 'col' }, 'Each day (month-day: points)'))),
           h('tbody', {}, ...d.heatRows.map((r) => h('tr', {}, h('th', { scope: 'row' }, r.from), h('td', {}, String(r.points)), h('td', {}, String(r.days)), h('td', {}, r.detail))))))));

@@ -58,7 +58,7 @@ export function mountFade(root, ctx, which = "1", q = {}) {
       if (!alive) return;
       const moved = played === stored;
       const msg = correct
-        ? (moved ? `Recalled. Next review of this line is one stage more faded (level ${r.level} of ${MAX_FADE}).` : "Recalled. You practised a different stage than your saved one, so the saved level did not change.")
+        ? (moved ? `Recalled. Next review of this line is one stage more faded (level ${r.level} of ${MAX_FADE}).` : "Recalled. You practiced a different stage than your saved one, so the saved level did not change.")
         : (moved ? `Not this time. The line goes back one stage (level ${r.level}) and returns in your review queue.` : "Not this time. Your saved level stays; the line returns in your review queue.");
       state.result = el("div", { class: "alef-fade-result", role: "status", "aria-live": "polite" }, el("p", {}, msg), heText(restore(state.f), "alef-he alef-word-big"),
         src.english ? el("p", { class: "muted" }, src.english) : null, playButton(ctx, src.audioKind, which, "Listen to the line", el("span", {})),

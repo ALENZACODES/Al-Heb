@@ -90,11 +90,14 @@ test('sync: a free repair covers the gap and restores the earlier run', () => {
 test('page: shows goal ring text, rhythm, three quests, week sentences, stats, and a heatmap with a text alternative', () => {
   const store = memStore(); const root = new N('div');
   for (const [i, d] of ['2026-11-08', '2026-11-09', T].entries()) store.set('loops.v1', mergeDay(store.get('loops.v1', null), d, { lessons: ['L' + i] }));
+  // The goal is the app's XP goal (retention.v1, src/lib/counts.js): the same value Home's ring shows (C-03, M-01).
+  store.set('retention.v1', { xp: { total: 10, days: { [T]: 10 } }, goal: 20 });
+  store.set('streak', { v: 2, count: 3, best: 3, last: T, todayDate: T, todaySeconds: 300, frozenDates: [], doneDates: ['2026-11-08', '2026-11-09', T] });
   mount(root, ctxOf(store));
   assert.equal(root.querySelector('h1').attrs.id, 'view-title'); assert.equal(root.queryAll('h1').length, 1);
-  assert.match(root.querySelector('#lp-ring-text').textContent, /10 of 20 points today/);
+  assert.match(root.querySelector('#lp-ring-text').textContent, /^10 of 20 XP today\.$/);
   assert.equal(root.queryAll('[data-quest]').length, 3);
-  assert.match(root.textContent, /Practice rhythm/); assert.match(root.textContent, /Day 3 of your rhythm/);
+  assert.match(root.textContent, /Your streak/); assert.match(root.textContent, /3 days in a row, including today/);
   assert.match(root.querySelector('#lp-heat-text').textContent, /Last 26 weeks: 3 practice days/);
   const cells = root.queryAll('.lp-cell'); assert.ok(cells.length > 150); assert.ok(cells.every((c) => c.attrs['aria-hidden'] === 'true'));
   assert.equal(root.queryAll('table').length, 1); assert.ok(root.queryAll('th').length > 4);
@@ -106,25 +109,33 @@ test('page: goal buttons are real buttons with pressed state, change the goal, a
   const btns = root.queryAll('button[data-goal]'); assert.deepEqual(btns.map((b) => b.attrs['data-goal']), ['10', '20', '30', '50']);
   assert.equal(root.querySelector('#lp-goal-20').attrs['aria-pressed'], 'true');
   await root.querySelector('#lp-goal-30').click();
-  assert.equal(load(store).goal, 30); assert.equal(root.querySelector('#lp-goal-30').attrs['aria-pressed'], 'true');
-  assert.match(root.querySelector('[role="status"]').textContent, /Daily goal set to 30 points/);
+  assert.equal(store.get('retention.v1').goal, 30, 'the one daily XP goal Home uses'); assert.equal(root.querySelector('#lp-goal-30').attrs['aria-pressed'], 'true');
+  assert.match(root.querySelector('[role="status"]').textContent, /Daily goal set to 30 XP/);
 });
 test('page: quests can be hidden and shown again; calm mode hides the rhythm card but keeps the goal', async () => {
   const store = memStore(); const root = new N('div'); mount(root, ctxOf(store));
   await root.querySelector('#lp-quests-toggle').click(); assert.equal(root.queryAll('[data-quest]').length, 0); assert.match(root.textContent, /Quests are hidden/);
   await root.querySelector('#lp-quests-toggle').click(); assert.equal(root.queryAll('[data-quest]').length, 3);
-  const r2 = new N('div'); mount(r2, ctxOf(memStore(), { calmMode: true })); assert.doesNotMatch(r2.textContent, /Practice rhythm/); assert.match(r2.textContent, /points today/);
+  const r2 = new N('div'); mount(r2, ctxOf(memStore(), { calmMode: true })); assert.doesNotMatch(r2.textContent, /Your streak/); assert.match(r2.textContent, /XP today/);
 });
-test('page: the repair button appears only when a gap can be repaired, is free, and brings the run back', async () => {
-  const store = memStore(); let rec = null; for (const d of ['2026-11-01', '2026-11-02', '2026-11-03', T]) rec = mergeDay(rec, d, { lessons: ['L' + d] }); store.set('loops.v1', rec);
+test('page: the restore button appears only while the streak is broken, is free, names the streak, and brings it back (M-14)', async () => {
+  // The same restore as the shop (src/lib/counts.js repairOffer): free, and only while today's count is 0.
+  const store = memStore();
+  store.set('streak', { v: 2, count: 2, best: 2, last: '2026-11-07', todayDate: null, todaySeconds: 0, frozenDates: [], doneDates: ['2026-11-06', '2026-11-07'] });
+  store.set('retention.v1', { repair: { days: ['2026-11-08', '2026-11-09'], prev: 2, last: '2026-11-07', until: NOW + 3600000 }, gems: { balance: 0 } });
   const root = new N('div'); mount(root, ctxOf(store));
-  const b = root.querySelector('#lp-repair'); assert.ok(b); assert.match(b.textContent, /free/);
-  await b.click(); assert.equal(root.querySelector('#lp-repair'), null); assert.match(root.textContent, /Day 4 of your rhythm/);
+  const b = root.querySelector('#lp-repair'); assert.ok(b); assert.equal(b.textContent, 'Bring back your 2-day streak (free)');
+  await b.click(); assert.equal(root.querySelector('#lp-repair'), null); assert.match(root.textContent, /2 days in a row/);
   assert.match(root.querySelector('[role="status"]').textContent, /It was free/);
+  assert.equal(store.get('retention.v1').gems.balance, 0, 'nothing was spent');
+  // a running streak gets no restore offer, whatever the record holds
+  const s2 = memStore(); s2.set('streak', { v: 2, count: 1, best: 2, last: T, todayDate: T, todaySeconds: 300, frozenDates: [], doneDates: [T] });
+  s2.set('retention.v1', { repair: { days: ['2026-11-08'], prev: 2, last: '2026-11-07', until: NOW + 3600000 } });
+  const r2 = new N('div'); mount(r2, ctxOf(s2)); assert.equal(r2.querySelector('#lp-repair'), null);
 });
 test('page: an empty store renders a calm first screen without errors', () => {
   const root = new N('div'); assert.doesNotThrow(() => mount(root, ctxOf(memStore())));
-  assert.match(root.textContent, /0 of 20 points today/); assert.match(root.textContent, /starts with your first practice day/); assert.match(root.textContent, /No review answers yet/);
+  assert.match(root.textContent, /0 of 20 XP today/); assert.match(root.textContent, /No streak yet/); assert.match(root.textContent, /No review answers yet/);
   assert.doesNotThrow(() => mount(new N('div'), { store: null, settings: null }));
 });
 

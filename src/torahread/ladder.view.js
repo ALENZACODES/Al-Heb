@@ -42,7 +42,7 @@ export function renderLadder(host, env) {
       el('details', {}, el('summary', {}, 'Tips for reading without points'), el('ul', {}, ...course.ladder.tips.map((t) => el('li', {}, ...mixed(t))))));
 
     // picker
-    const sel = el('select', { id: 'trd-pick', 'aria-label': 'Choose a line to practise', onchange: (e) => { st.key = e.target.value; st.revealed.clear(); st.allShown = false; st.checked = false; render(); focusHeading(); } });
+    const sel = el('select', { id: 'trd-pick', 'aria-label': 'Choose a line to practice', onchange: (e) => { st.key = e.target.value; st.revealed.clear(); st.allShown = false; st.checked = false; render(); focusHeading(); } });
     for (const g of course.groups) {
       const og = el('optgroup', { label: g.title });
       for (const it of g.items) og.append(el('option', { value: it.key, selected: it.key === st.key ? '' : null }, `${it.title} (${it.ref})${mark(it.key)}`));

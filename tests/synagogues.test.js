@@ -56,7 +56,7 @@ test('pictures: every listed picture exists in full and thumbnail size, has alt 
       assert.ok(typeof im.alt === 'string' && im.alt.length > 10, `${c.id}/${im.file} alt`);
     }
   }
-  assert.equal(n, 51);
+  assert.equal(n, 46); // five photos that did not show the congregation were removed (audit M-03)
   for (const dir of readdirSync(join(root, 'assets/synagogues'))) {
     const c = D.congregations.find((x) => x.id === dir);
     assert.ok(c, `assets/synagogues/${dir} has no entry in the data file`);
@@ -91,7 +91,13 @@ test('directory: one tile per congregation, grouped by province west to east, wi
   assert.equal(hb.querySelector('a').getAttribute('href'), '#/synagogues/holy-blossom-toronto');
   const ks = tiles.find((t) => t.getAttribute('data-id') === 'iyr-ha-melech-kingston');
   assert.ok(ks.querySelector('img'));
-  assert.equal(tiles.filter((t) => t.querySelector('img')).length, 27);
+  assert.equal(tiles.filter((t) => t.querySelector('img')).length, 22);
+  // M-03: no stand-in photo where none verifies the congregation; a neutral 'Photo to come' card instead
+  for (const id of ['beth-chaverim-baycrest', 'city-shul-toronto', 'temple-beth-ora-edmonton', 'har-tikvah-brampton', 'or-hadash-newmarket']) {
+    const t = tiles.find((x) => x.getAttribute('data-id') === id);
+    assert.ok(t && !t.querySelector('img'), `${id} shows no photo`);
+    assert.match(t.textContent, /Photo to come/);
+  }
   assert.match(text, /Former Congregations/);
   assert.equal(r.queryAll('section[data-part="former"] li[data-id]').length, 2);
 });

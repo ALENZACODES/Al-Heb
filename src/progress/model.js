@@ -2,11 +2,12 @@
 // Aleph Progress: pure computations over a store snapshot. No DOM, no fetch, no clock (callers pass `now`).
 // Everything here is derived from data other lanes already write; nothing is estimated that was not measured.
 import { BASE_LETTER_IDS, FINAL_LETTER_IDS, MARK_IDS } from '../corpus/normalize.js';
-import { projectStreak } from '../curriculum/streak.js';
+import { streakNow, lessonsFinishedToday } from '../lib/counts.js';
 import { timedReadGate } from '../timedread/gate.js';
 import { cleanState as cleanTimedReads, median, cleanWpm, accuracy as readAccuracy } from '../timedread/model.js';
 import { coverage as siddurCoverageOf, FOLLOW_IDS, ORDER_IDS } from '../service/model.js';
 import { unpointedScore } from '../firstday/model.js';
+import { resolveRanks, rankStates } from '../curriculum/ranks.js';
 import { gradeLines, gradeWords, knownSet, entriesDecodable, wordsDecodable, unlockers, missingIn } from './decode.js';
 
 export const ALL_LETTERS = [...BASE_LETTER_IDS, ...FINAL_LETTER_IDS];
@@ -105,7 +106,7 @@ export function activityDays(s) {
  */
 export function streakInfo(s, now) {
   // v2 records belong to the engaged-time engine: one shared projection, the same one Home uses (src/curriculum/streak.js)
-  if (s.streak && s.streak.v === 2) { const p = projectStreak(s.streak, now, s.rest); return { count: p.count, best: p.best, activeToday: p.activeToday, restToday: p.restToday }; }
+  if (s.streak && s.streak.v === 2) { const p = streakNow(s.streak, now, s.rest); return { count: p.count, best: p.best, activeToday: p.activeToday, restToday: p.restToday }; } // src/lib/counts.js
   const act = activityDays(s), rest = new Set(s.rest);
   const today = dayKey(now);
   const activeToday = act.has(today), restToday = rest.has(today);
@@ -140,7 +141,7 @@ export function goalInfo(s, now, dflt = { kind: 'cards', target: 10 }) {
   const target = s.goal && Number.isInteger(s.goal.target) && s.goal.target > 0 ? s.goal.target : dflt.target;
   const reviewed = new Set();
   for (const [id, c] of [...Object.entries(s.cards), ...Object.entries(s.vocab)]) if (c && c.lastReview && dayKey(c.lastReview) === today) reviewed.add(id);
-  const lessonsToday = Object.values(s.completed).filter((t) => dayKey(Number(t)) === today).length;
+  const lessonsToday = lessonsFinishedToday(s.completed, now); // src/lib/counts.js: the number the lesson quest on Home reads
   const cards = reviewed.size;
   return { kind: 'cards', target, cards, lessonsToday, met: cards >= target || lessonsToday > 0 };
 }
@@ -376,19 +377,22 @@ export function evaluatePath(goalKey, d, c) {
   return { goal: goalKey, title: path.title, items, done: items.filter((i) => i.done).length, total: items.length };
 }
 
-/** Belts with Aleph-specific gates. state: earned | ready (only unmeasurable gates left) | current | later. */
+/**
+ * Krav Maga style ranks (data/curriculum/belts.json): White P0 .. Black E5, in course order on the reading track.
+ * A rank is EARNED only by finishing every one of its lessons, and only after every rank before it is earned.
+ * state: earned | current (the first rank not earned) | later. Skill checks from belt-gates.json (letters, signs, decoding,
+ * timed reads) are listed per rank for information; they never earn a rank and never hold one back.
+ */
 export function evaluateBelts(d, c) {
-  let currentSeen = false;
-  return d.belts.belts.map((b) => {
-    const ids = expandRange(b.lessons);
-    const gates = [];
-    if (ids.length) { const r = evaluate({ kind: 'lessonRange', ids }, c); gates.push({ label: `Lessons ${b.lessons}`, kind: 'lessonRange', ...r }); }
-    for (const g of d.gates.gates[b.id] || []) gates.push({ label: g.label, kind: g.kind, ...evaluate(g, c) });
-    const measurable = gates.filter((g) => g.measurable), unmeasured = gates.filter((g) => !g.measurable);
-    const allMet = measurable.length > 0 && measurable.every((g) => g.done);
-    const state = allMet && unmeasured.length === 0 ? 'earned' : allMet ? 'ready' : !currentSeen ? 'current' : 'later';
-    if (state === 'current' || state === 'ready') currentSeen = true;
-    return { id: b.id, name: b.name, gate: b.gate, speedNote: b.wpmTarget ? 'Speed target not measured here' : null, gates, state, metCount: measurable.filter((g) => g.done).length, measurableCount: measurable.length };
+  const ranks = rankStates(resolveRanks(d.belts, d.lessons), c.s.completed);
+  return ranks.map((r) => {
+    const checks = (d.gates.gates[r.id] || []).map((g) => ({ label: g.label, kind: g.kind, ...evaluate(g, c) }));
+    return {
+      id: r.id, belt: r.belt, beltName: r.beltName, patch: r.patch, stripes: r.stripes, name: r.label, label: r.label, a11y: r.a11y,
+      gate: r.gate, range: r.range, lessons: r.lessons, state: r.state, doneCount: r.doneCount, total: r.total,
+      gates: [{ label: `Lessons ${r.range}`, kind: 'lessonRange', done: r.doneCount === r.total, have: r.doneCount, need: r.total, measurable: true }],
+      checks,
+    };
   });
 }
 
@@ -467,7 +471,7 @@ export function readNowSummary(s, d, c) {
   const k = c.know, r = c.read, v = c.vocab, tr = timedReadSummary(c.timedRead), sc = siddurCoverage(s, d, c), fd = firstDayInfo(s, d);
   const rows = [
     { id: 'letters', label: 'Letters and signs met', value: `${k.letters.size} of ${ALL_LETTERS.length} letters, ${k.signs.size} of ${ALL_SIGNS.length} signs`, detail: 'From completed lessons and finished tracing.', href: '#/learn', have: k.letters.size + k.signs.size, need: ALL_LETTERS.length + ALL_SIGNS.length, measured: 'taught' },
-    { id: 'lines', label: 'Prayer and Torah lines using practised signs', value: `${r.linesFull.length} of ${r.lines.length} lines, ${r.words.full.length.toLocaleString('en-US')} words`, detail: `${r.linesAlmost.length} more ${r.linesAlmost.length === 1 ? 'line is' : 'lines are'} one sign away. Every letter and sign in them has been taught; this is not a fluency check.`, href: '#/read', have: r.linesFull.length, need: r.lines.length, measured: 'taught' },
+    { id: 'lines', label: 'Prayer and Torah lines using practiced signs', value: `${r.linesFull.length} of ${r.lines.length} lines, ${r.words.full.length.toLocaleString('en-US')} words`, detail: `${r.linesAlmost.length} more ${r.linesAlmost.length === 1 ? 'line is' : 'lines are'} one sign away. Every letter and sign in them has been taught; this is not a fluency check.`, href: '#/read', have: r.linesFull.length, need: r.lines.length, measured: 'taught' },
     { id: 'vocab', label: 'Vocabulary cards', value: v.started ? `${v.started} started, ${v.bands.reduce((n, b) => n + b.mature, 0)} mature${v.reached ? `, working in the first ${v.reached.toLocaleString('en-US')}` : ''}` : 'none started', detail: 'Cards you have reviewed at least once; mature means the scheduler expects you to keep them for 21 days or more.', href: '#/vocab', have: v.started, need: null, measured: 'taught' },
     { id: 'timedread', label: 'Timed read-alouds', value: tr.reads ? `${tr.reads} ${tr.reads === 1 ? 'read' : 'reads'} of ${tr.texts} ${tr.texts === 1 ? 'text' : 'texts'}${tr.best ? `, about ${tr.best.medianWpm} clean words a minute on ${tr.best.textId}` : ''}` : 'none yet', detail: 'Self-reported: you time the read and mark the words that tripped you; the app keeps only the clock.', href: '#/timedread', have: tr.reads, need: null, measured: 'self' },
   ];

@@ -1,6 +1,8 @@
 # Public crawlers may index the app shell. Lesson and letter pages use hash
 # addresses (#/learn, #/letters/alef), which search engines do not treat as
 # separate pages. A path-based route change is a later launch task.
+# sitemap.xml lists the main public pages by their hash address
+# (generated from the router: node tools/seo/build-sitemap.mjs).
 User-agent: *
 Allow: /
 Sitemap: https://alef-review.onrender.com/sitemap.xml

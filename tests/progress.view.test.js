@@ -27,7 +27,7 @@ test('siddur coverage line: fresh learner shows 0% for Shabbat morning (the serv
   const line = root.querySelector('.pg-siddur');
   assert.ok(line, 'line rendered');
   assert.equal(line.attrs['data-pct'], '0'); assert.equal(line.attrs['data-order'], 'shabbat-morning');
-  assert.match(line.textContent, /^Prayer book coverage: 0% of the phrases in Shabbat morning use signs you have practised/);
+  assert.match(line.textContent, /^Prayer book coverage: 0% of the phrases in Shabbat morning use signs you have practiced/);
   assert.equal(line.queryAll('a')[0].attrs.href, '#/service');
   assert.match(section(root, 'pg-h-read').textContent, /content coverage, not a reading assessment/);
 });
@@ -36,24 +36,29 @@ test('siddur coverage line follows the saved service choice and rises with compl
   const { root } = await show({ ...allRead(), 'service.prefs': { order: 'friday-night' } });
   const line = root.querySelector('.pg-siddur');
   assert.equal(line.attrs['data-order'], 'friday-night');
-  assert.match(line.textContent, /Prayer book coverage: \d+% of the phrases in Friday evening use signs you have practised/);
+  assert.match(line.textContent, /Prayer book coverage: \d+% of the phrases in Friday evening use signs you have practiced/);
   assert.ok(Number(line.attrs['data-pct']) > 0, 'all read lessons done: some lines decodable');
   const { root: r2 } = await show({ 'service.prefs': { order: 'weekday-morning' } }); // not a follow order: falls back to the default
   assert.equal(r2.querySelector('.pg-siddur').attrs['data-order'], 'shabbat-morning');
 });
 
-test('belts: grey shows its timed-read gate with the self-reported wording, a note and a link; earned once three reads qualify', async () => {
+test('belts and ranks: Krav Maga style ladder in text; earned only by lessons; timed-read skill checks are self-reported, with a link', async () => {
+  const { root: r0 } = await show();
+  const b0 = section(r0, 'pg-h-belts');
+  assert.match(b0.textContent, /Belts and ranks/); assert.match(b0.textContent, /Your rank: none yet · next: White belt · P0 \(0 of 4 lessons\)/);
+  assert.match(b0.textContent, /White belt · P0: Working on/); assert.match(b0.textContent, /Yellow belt · P2: Later/);
+  assert.equal(b0.queryAll('li[data-state]').length, 16);
+  const badge = b0.querySelector('.alef-rank'); assert.ok(badge.attrs.title && /White belt, Practitioner 0/.test(badge.attrs.title), 'accessible description, not colour alone');
   const { root } = await show(allRead());
   const belts = section(root, 'pg-h-belts');
-  assert.match(belts.textContent, /grey and black belts also ask for timed read-alouds, which you time and mark yourself \(self-reported, not measured by the app\)/i);
-  assert.doesNotMatch(belts.textContent, /only a timed read is left/);
+  assert.match(belts.textContent, /The Brown belt · G5 and Black belt · E5 skill checks include timed read-alouds, which you time and mark yourself \(self-reported, not measured by the app\)\. They do not earn or hold back a rank\./);
   const gate = belts.queryAll('[data-gate="timedRead"]')[0];
   assert.match(gate.textContent, /self-reported.*0 of 3 \(needs 3 timed reads of one text with 8\+ words\)/);
   assert.equal(gate.queryAll('a')[0].attrs.href, '#/timedread');
-  assert.match(belts.textContent, /Grey belt: Working on/);
+  assert.match(belts.textContent, /Brown belt · G5: Earned/); assert.match(belts.textContent, /Black belt · E5: Earned/, 'every reading lesson done earns every rank');
+  assert.match(belts.textContent, /every rank earned/);
   const { root: r2 } = await show({ ...allRead(), 'timedread.v1': { v: 1, reads: [read(), read(), read()] } });
   const b2 = section(r2, 'pg-h-belts');
-  assert.match(b2.textContent, /Grey belt: Earned/); assert.match(b2.textContent, /Black belt: Earned/);
   assert.equal(b2.queryAll('[data-gate="timedRead"] a').length, 0, 'no "Time a read" link once met');
 });
 
@@ -83,7 +88,7 @@ test('unified section comes first, has one row per source, marks self-reported r
   const { root } = await show({ ...allRead(), 'timedread.v1': { v: 1, reads: [read()] }, 'firstday.progress': { step: 3, readWords: ['shalom'], done: false } });
   const first = root.queryAll('section.card')[0];
   assert.equal(first.attrs['aria-labelledby'], 'pg-h-now');
-  assert.match(first.textContent, /^What have I practised\?/);
+  assert.match(first.textContent, /^What have I practiced\?/);
   const rows = first.queryAll('[data-now]');
   assert.deepEqual(rows.map((r) => r.attrs['data-now']), ['letters', 'lines', 'vocab', 'timedread', 'siddur', 'firstday']);
   assert.deepEqual(rows.map((r) => r.queryAll('a')[0].attrs.href), ['#/learn', '#/read', '#/vocab', '#/timedread', '#/service', '#/firstday']);
@@ -91,7 +96,7 @@ test('unified section comes first, has one row per source, marks self-reported r
   assert.match(rows[0].textContent, /27 of 27 letters, 15 of 15 signs/); assert.match(rows[3].textContent, /1 read of 1 text, about 90 clean words a minute/);
   assert.match(rows[5].textContent, /1 first-day word marked read; ladder 0 of 8/);
   assert.match(first.textContent, /None of it is a fluency score/);
-  assert.match(root.queryAll('section.card')[1].textContent, /^Lines and words using signs you have practised/);
+  assert.match(root.queryAll('section.card')[1].textContent, /^Lines and words using signs you have practiced/);
 });
 test('unified section hides the links of routes missing from this build and still renders every row', async () => {
   const { root } = await show({}, { routes: ['learn', 'read'] });
@@ -119,7 +124,7 @@ test('export button produces a progress file whose checksum verifies; import is 
   await bk2.querySelector('#pg-bk-go').click();
   assert.equal(s2.m['timedread.v1'].reads.length, 3);
   assert.match(r2.querySelector('#pg-bk-status').textContent, /Imported 4 saved items/);
-  assert.match(section(r2, 'pg-h-belts').textContent, /Grey belt: Earned/, 'screen rebuilt from the imported data');
+  assert.match(section(r2, 'pg-h-belts').textContent, /Brown belt · G5: Earned/, 'screen rebuilt from the imported data');
 });
 test('a tampered pasted file is refused with the checksum message and no confirm button appears', async () => {
   const { root, store } = await show();

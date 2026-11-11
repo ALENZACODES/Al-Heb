@@ -1,5 +1,5 @@
 /**
- * Vocabulary screen (#/vocab): browse the 5,000-word list by tier / topic / search, and review words with the app's SRS.
+ * Vocabulary screen (#/vocab): browse the dictionary list (totals from src/lib/counts.js) by tier / topic / search, and review words with the app's SRS.
  * Data is loaded lazily, one tier file at a time (data/vocab/packs/vocab5k-tier-<n>.json, see loader.js).
  * Review cards live in store key "srs.vocab" (ids "vocab:<id>") so they never appear in the lesson review queue.
  * The list is a machine-built DRAFT: no Hebrew educator has proofread it, and the screen says so.
@@ -18,6 +18,11 @@ import { TIER_LABEL, POS_LABEL, VOCAB_CARDS_KEY, stripPoints, addCards, cardId, 
 import { aliasHits, aliasNote } from './aliases.js';
 import { isFunction } from './vocab.js';
 import { plural } from '../shell/plural.js';
+import { DICTIONARY, fmt } from '../lib/counts.js';
+/** The browse total, the same number as the page title (src/lib/counts.js, counted from the served word packs). */
+export const ALL_WORDS_LABEL = `All ${fmt(DICTIONARY.words)} words`;
+/** What the title's number counts, said once on the page (M-01): entries, head-words, word forms, and what "Add" can add. */
+export const SCOPE_NOTE = `The list holds ${fmt(DICTIONARY.entries)} entries: ${fmt(DICTIONARY.words)} words, shown below, and ${fmt(DICTIONARY.forms)} word forms, shown when you tick "Show word forms". ${fmt(DICTIONARY.words - DICTIONARY.addable)} rare-sense words are left out of "Add all" (each card can still add its own word).`;
 import { NO_AUDIO, DEVICE_LABEL } from '../shell/audio-access.js';
 import { isAudioFree } from '../shell/audiofree.js';
 import { uiEnglish } from '../shell/names.js';
@@ -26,7 +31,7 @@ import { loadJson } from '../speak/loader.js';
 import { lookupClip, alternateClip, planIsExactFile, clipCaption, unavailableLine, CLIP_RATES, SPEED_BUTTONS, CHECKING } from './clips.js';
 
 /** Shown under the search box. The 5,000 glosses are not rewritten by this screen. */
-export const SENSE_NOTE = 'A greeting search such as hi or hello can lead with a word whose stored gloss is different. That lead is labelled, and the gloss on the card is not changed. An exact transliteration is labelled separately. For a short search, words that only contain those letters stay hidden until you ask for them. Glosses in the 5,000-word list are the stored sense, often only the first dictionary sense.';
+export const SENSE_NOTE = 'A greeting search such as hi or hello can lead with a word whose stored gloss is different. That lead is labelled, and the gloss on the card is not changed. An exact transliteration is labelled separately. For a short search, words that only contain those letters stay hidden until you ask for them. Glosses in the dictionary list are the stored sense, often only the first dictionary sense.';
 
 const PAGE = 40;          // cards rendered per page
 const ADD_LIMIT = 100;    // words added to reviews per click
@@ -115,7 +120,8 @@ export function mount(root, ctx) {
   const modeBrowse = el('button', { type: 'button', class: 'btn', 'aria-pressed': 'true', onclick: () => setMode('browse') }, 'Browse');
   const modeReview = el('button', { type: 'button', class: 'btn', 'aria-pressed': 'false', onclick: () => setMode('review') }, 'Review');
   const modes = el('div', { class: 'vc-modes', role: 'group', 'aria-label': 'Vocabulary mode' }, modeBrowse, modeReview);
-  wrap.append(h1, notice, modes, audioNote, body, footer);
+  const scopeNote = el('p', { class: 'muted small', id: 'vc-scope' }, SCOPE_NOTE);
+  wrap.append(h1, scopeNote, notice, modes, audioNote, body, footer);
   root.append(wrap);
 
   /** @type {Record<string, any>} */
@@ -251,7 +257,7 @@ export function mount(root, ctx) {
     if (e.isForm) {
       const base = known.get(e.formOf);
       out.push(el('p', { class: 'vc-meta' }, 'This is a form of another word: ',
-        base ? el('button', { type: 'button', class: 'btn secondary', 'aria-label': `Show the main word ${base.gloss}`, onclick: () => showWord(base) }, ...label(base)) : '(open "All 5,000 words" to see it).'));
+        base ? el('button', { type: 'button', class: 'btn secondary', 'aria-label': `Show the main word ${base.gloss}`, onclick: () => showWord(base) }, ...label(base)) : `(open "${ALL_WORDS_LABEL}" to see it).`));
     }
     if (Array.isArray(e.forms) && e.forms.length) {
       out.push(el('div', { class: 'vc-meta' }, el('span', {}, 'Forms (from Wiktionary, may be incomplete): '),
@@ -263,7 +269,7 @@ export function mount(root, ctx) {
       const seen = e.sameSpelling.map((id) => known.get(id)).filter(Boolean);
       const missing = e.sameSpelling.length - seen.length;
       out.push(el('p', { class: 'vc-meta' }, 'Also spelled the same: ', seen.map(label).join('; '),
-        missing ? `${seen.length ? '; ' : ''}${missing} more in other tiers (choose "All 5,000 words")` : '', '.'));
+        missing ? `${seen.length ? '; ' : ''}${missing} more in other tiers (choose "${ALL_WORDS_LABEL}")` : '', '.'));
     }
     return out;
   };
@@ -280,7 +286,7 @@ export function mount(root, ctx) {
   }
   function renderBrowse() {
     const my = ++gen;
-    const tierSel = el('select', { id: 'vc-tier' }, el('option', { value: 'all' }, 'All 5,000 words'), ...TIER_BANDS.map((t) => el('option', { value: String(t) }, TIER_LABEL[t])));
+    const tierSel = el('select', { id: 'vc-tier' }, el('option', { value: 'all' }, ALL_WORDS_LABEL), ...TIER_BANDS.map((t) => el('option', { value: String(t) }, TIER_LABEL[t])));
     tierSel.value = sel.tier;
     const topicSel = el('select', { id: 'vc-topic' }, el('option', { value: '' }, 'All topics'));
     const tagSel = el('select', { id: 'vc-tag' }, ...TAG_FILTERS.map(([v, l]) => el('option', { value: v }, l)));
@@ -360,7 +366,7 @@ export function mount(root, ctx) {
       let s = '';
       if (aliasN) s += `${aliasN} English greeting ${aliasN === 1 ? 'match' : 'matches'} (the stored gloss is not that English word). `;
       if (glossN) s += `${glossN} exact gloss ${glossN === 1 ? 'match' : 'matches'}. `;
-      else if (!aliasN) s += `No exact English gloss for “${q}” in the 5,000-word list. `;
+      else if (!aliasN) s += `No exact English gloss for “${q}” in the dictionary list. `;
       if (heN) s += `${heN} exact Hebrew ${heN === 1 ? 'match' : 'matches'}. `;
       if (tlN) s += `${tlN} transliteration ${tlN === 1 ? 'match' : 'matches'} (not an English gloss). `;
       if (relW) s += `${relW} related (those letters sit inside another word). `;

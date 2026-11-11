@@ -61,7 +61,7 @@ test('page: the catalogue is read on demand; if it cannot be read the page says 
   const root = new N('div'); const ctx = { ...ctxOf(seeded()), fetch: f }; delete ctx.badgeCatalog; mount(root, ctx); assert.match(root.textContent, /Loading badges/); await tick();
   assert.equal(asked, 1); assert.ok(root.querySelector('#lp-badges'));
   const bad = new N('div'); const c2 = { ...ctxOf(memStore()), fetch: async () => { throw new Error('offline'); } }; delete c2.badgeCatalog;
-  assert.doesNotThrow(() => mount(bad, c2)); await tick(); assert.match(bad.textContent, /could not be read right now/); assert.match(bad.textContent, /0 of 20 points today/, 'the rest of the page still works');
+  assert.doesNotThrow(() => mount(bad, c2)); await tick(); assert.match(bad.textContent, /could not be read right now/); assert.match(bad.textContent, /0 of 20 XP today/, 'the rest of the page still works');
   const c3 = { ...ctxOf(memStore()), fetch: async () => ({ ok: false }) }; delete c3.badgeCatalog; assert.equal(await V.loadCatalog(c3), null);
 });
 test('page: sharing is a plain-text summary in a read-only box with a copy button; nothing is uploaded', async () => {

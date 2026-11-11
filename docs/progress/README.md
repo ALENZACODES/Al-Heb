@@ -3,14 +3,14 @@
 Route `#/progress`, view `src/progress/progress.view.js`. Everything is computed offline from the store; no network, no estimates.
 
 ## Files
-- `src/progress/model.js` pure computations (streak, goal, SRS maturity, vocab band, Spot It, checkpoints, paths, belts, weak spots).
+- `src/progress/model.js` pure computations (streak, goal, SRS maturity, vocab band, Spot It, checkpoints, paths, belts and ranks, weak spots).
 - `src/progress/decode.js` "what can I read now": per word, which letters and signs are required; lines are graded full / almost (exactly one unknown) / no.
 - `src/progress/store.js` writes the only new state: `progress.state` = `{ rest: ["YYYY-MM-DD"...], goal: {kind:"cards", target} }` (max 90 rest days kept); also the progress-only export/import (see below).
 - `src/progress/weak.js` the weak-spot report (`weakReport`): up to 10 merged rows, each with a "Do this next" sentence and a `hasRoute`-guarded link.
 - `src/progress/weekly.js` the "This week" card (`weeklySummary`, `weeklySentences`) and the inline SVG sparkline (`sparklineSVG`).
 - `src/progress/milestones.js` personal milestones (`evaluateMilestones`, `updateMilestones`, `milestoneRows`); `store.js recordMilestones` persists them. Definitions: `data/progress/personal-milestones.json`.
-- `src/progress/data.js` loads lessons, belts, registry, phrasebook, `data/service/orders.json` (for the siddur coverage line) and the data files below. `mergeTimedReadGates()` replaces the `unmeasured` placeholders of the grey and black belts with the timed-read gates from `data/timedread/gates.json` (only `kind: timedRead` entries with a `minWpm`; other belts are never touched; nothing is mutated). If that file is missing, grey and black stay unmeasured.
-- `data/progress/milestones.json` goal paths and thresholds. `data/progress/belt-gates.json` Aleph belt gates. `data/timedread/gates.json` timed-read gates for grey and black (targets copy `belts.json` wpmTarget, Aleph proposals, unsourced). All are drafts, not expert-reviewed.
+- `src/progress/data.js` loads lessons, belts, registry, phrasebook, `data/service/orders.json` (for the siddur coverage line) and the data files below. `mergeTimedReadGates()` replaces the `unmeasured` placeholder skill checks of ranks G5 (Brown belt) and E5 (Black belt) with the timed-read checks from `data/timedread/gates.json` (only `kind: timedRead` entries with a `minWpm`; other ranks are never touched; nothing is mutated). If that file is missing, those checks stay unmeasured.
+- `data/progress/milestones.json` goal paths and thresholds. `data/progress/belt-gates.json` Aleph skill checks keyed by rank (P0..E5). `data/timedread/gates.json` timed-read checks for G5 and E5 (targets copy the rank's `wpmTarget` in `belts.json`, Aleph proposals, unsourced). All are drafts, not expert-reviewed.
 
 ## Where each number comes from (store keys, all written by other lanes)
 | Shown | Key | Rule |
@@ -53,6 +53,7 @@ Sources, all read-only: `letters.progress` (a letter finished but never without 
 `src/progress/store.js`: `exportProgress(store)` writes `{app:"alef", kind:"alef-progress", schema:1, exportedAt, keys, checksum, data}` with `data` holding only the keys Progress reads (`PROGRESS_KEYS` = `model.js KEYS`, so `settings` and other lanes' keys are never included). `checksum` = two FNV-1a 32-bit hashes over the canonical JSON of `data` (keys sorted at every level); it catches a cut-short or edited file, not a deliberate forgery. `inspectProgressBackup(text)` validates without writing; `importProgress(store, text, {mode})` writes only after every check passes: `replace` (default) sets every progress key from the file and removes progress keys absent from it, `merge` writes only the keys present. Keys outside `PROGRESS_KEYS` are ignored and reported. A whole-app backup pasted here is refused with a pointer to Settings. The screen's "Back up your progress" card has the export button (download link plus the text to copy), a file input, a paste box, the mode select and a confirm step.
 
 ## Honesty notes
-- A belt or "decodable" line means the learner has met every letter and sign in it. It does not mean they read it fluently or correctly aloud.
-- Belt gates are Aleph's own (belts.json: the verification sweep found the Aleph Champ ladder does not apply).
+- Belts and ranks are Krav Maga style (IKMF-style layout, `data/curriculum/belts.json`): White P0; Yellow P1-P2; Orange P3-P4; Green P5, G1; Blue G2-G3; Brown G4-G5; Black E1-E5. Each rank is a contiguous run of Reading-track lessons in course order (`src/curriculum/ranks.js`). A rank is earned only by finishing all its lessons, and only after every earlier rank is earned; the skill checks in `belt-gates.json` are shown for information and never earn or hold back a rank.
+- A "decodable" line means the learner has met every letter and sign in it. It does not mean they read it fluently or correctly aloud.
+- Ranks and skill checks are Aleph's own, not a Krav Maga grade (the verification sweep also found the Aleph Champ ladder does not apply).
 - The streak here is rest-aware and can differ from the plain streak lane 1 shows on Home.

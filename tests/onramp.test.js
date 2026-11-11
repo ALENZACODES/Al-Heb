@@ -109,7 +109,10 @@ test('flow: one screen per step, one letter first, the check opens Next, five wi
   assert.match(root.textContent, /Ashkenazi/);
   // app-style player: learn screen -> Continue -> each question on its own screen (pick a card, Check, then Continue / Got it)
   const byId = (id) => root.queryAll('button').find((b) => b.getAttribute('id') === id);
+  // C-01: r01 counts as done only on a pass (70% right on the first try), so pick the right card (the view builds its questions this way)
+  const flowQs = buildChoiceQuestions(r01, content, { seed: 1 + lessons.findIndex((l) => l.id === 'r01'), wordPool: lessons.filter((l) => !/^I-\d{2}$/.test(l.id)).flatMap((l) => l.words), tradition: 'ashkenazi' });
   for (let step = 1; step <= 5; step++) {
+    const stepQs = O.stepQuestions(onramp.steps[step - 1], flowQs); let qi = 0;
     await waitFor(() => new RegExp(`Step ${step} of 5`).test(root.textContent));
     await waitFor(() => byId('fd-continue'), { timeout: 4000, message: 'learn screen Continue' });
     await byId('fd-continue').click(); await tick(40);
@@ -121,7 +124,7 @@ test('flow: one screen per step, one letter first, the check opens Next, five wi
         assert.ok('disabled' in check.attrs, 'Check stays grey until a card is picked');
         const opts = root.queryAll('.fd-check button').filter((b) => !('disabled' in b.attrs));
         assert.ok(opts.length >= 2 && opts.length <= 3, 'a check has 2 or 3 choices');
-        await opts[0].click(); await tick(20);
+        await opts[stepQs[qi++].answerIndex].click(); await tick(20);
         assert.ok(!('disabled' in byId('fd-check').attrs), 'picking a card turns Check on');
         await byId('fd-check').click(); await tick(40);
       }

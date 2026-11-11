@@ -1,16 +1,17 @@
 import { reactRimon } from '../shell/rimon-events.js';
+import { bookFinisherScope } from '../lib/counts.js';
 // What may be shown as earned. Practice badges come from saved game sessions.
 // The beginner certificate uses the shipped review flag, which is not reviewed,
 // so certificateDecision does not issue. evaluateProposedCertificate is the pure
 // rule a later review can call. It does not read completion flags and it does not write.
 
 import { itemSatisfied } from './contract.js';
-import { observeBadgeEvidence, observeGames, observeStreak } from './observe.js';
+import { observeBadgeEvidence, observeGames, observeStreak, BOOK_FINISHER_TARGET, BOOK_SHELF_COUNT } from './observe.js';
 import { CRITERIA_REVIEWED, REVIEW_STATUS, RUBRIC_ID, deriveBeginnerRubric } from './rubric.js';
 import { cleanRecord, readAwards, toStored, writeAwards } from './record.js';
 import { lessons as shippedLessons, belts as shippedBelts } from '../curriculum/lessons.js';
 
-/** Ids of the shipped white-belt proposal. Not a reviewed standard. A shorter or edited list is not this candidate. */
+/** Ids of the shipped beginner proposal (White belt · P0 and Yellow belt · P1). Not a reviewed standard. A shorter or edited list is not this candidate. */
 export const CANONICAL_CANDIDATE_IDS = Object.freeze(
   deriveBeginnerRubric({ lessons: shippedLessons }, shippedBelts).items.map((it) => it.id),
 );
@@ -169,8 +170,8 @@ export const MILESTONE_BADGES = Object.freeze([
     category: 'milestones',
     section: 'mastery',
     name: 'Book Finisher',
-    requirement: 'All five story books are recorded as read to their last page on this device.',
-    lockedText: 'Locked. Read all five story books to their last page. The reader records each book you finish.',
+    requirement: `Finish ${bookFinisherScope()}, recorded on this device.`,
+    lockedText: `Locked. Finish ${bookFinisherScope()}.`,
   },
   {
     id: 'early-bird',
@@ -272,7 +273,7 @@ export function planMilestones(record, facts, games, now) {
   if ((f.wordCards || 0) >= 500) grant('word-collector', { kind: 'word-cards', count: f.wordCards });
   if ((f.prayerListens || 0) >= 10) grant('prayer-voice', { kind: 'prayer-listens', count: f.prayerListens });
   if ((f.shelfDistinct || 0) >= 5) grant('cantorial-fan', { kind: 'shelf-listens', count: f.shelfDistinct });
-  if (f.booksAllFive) grant('book-finisher', { kind: 'books-finished', count: f.booksFinished || 5 });
+  if (f.booksAllFive) grant('book-finisher', { kind: 'books-finished', count: f.booksFinished || BOOK_FINISHER_TARGET });
   const stamp = f.dayStart;
   if (stamp && typeof stamp.date === 'string' && Number.isFinite(stamp.firstAt)) {
     const dayCounted = (Array.isArray(f.doneDates) && f.doneDates.includes(stamp.date)) || f.last === stamp.date;
@@ -288,7 +289,7 @@ export function planMilestones(record, facts, games, now) {
 /**
  * Pure certificate rule. Does not write. The page does not call this to issue.
  * `confirmed` must be the boolean true. Omitted, null, and false do not issue.
- * `items` must be the shipped white-belt candidate, in order, with no holes and no substitutions.
+ * `items` must be the shipped beginner candidate (White belt · P0 and Yellow belt · P1), in order, with no holes and no substitutions.
  * A shorter, empty, or rewritten list is not that candidate. `CRITERIA_REVIEWED` stays false,
  * and `certificateDecision` always passes `confirmed: false`, so this does not unlock issuance.
  */
@@ -412,7 +413,7 @@ function earnedMilestoneDetail(badge, record) {
     return `Earned. Activity, not mastery. ${basis.count || 5} different historic recordings are recorded as played on this device.`;
   }
   if (badge.id === 'book-finisher') {
-    return 'Earned. Activity, not mastery. All five story books are recorded as read to their last page on this device.';
+    return `Earned. Activity, not mastery. ${basis.count || BOOK_FINISHER_TARGET} of the ${BOOK_SHELF_COUNT} little books are recorded as finished (last page and story question) on this device.`;
   }
   if (badge.id === 'early-bird' || badge.id === 'night-owl') {
     const when = Number.isInteger(basis.hour) && basis.hour >= 0 ? ` at ${basis.hour}:00 or within that hour` : '';

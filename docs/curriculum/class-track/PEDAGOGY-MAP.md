@@ -22,7 +22,7 @@
 | 9 | Shva, dagesh and stress rules; Shema in full | r29 r30 r31 r36 | r32 r33 |
 | 10 | Torah blessings, Friday-night wine blessing, a new siddur page | r38 r41 r50 | r37 r39 r40 |
 
-Belts: weeks 1-9 cross white -> red -> orange -> yellow -> green and start purple (belts.json ranges r01-r09 white, r10-r19 red, r20-r24 orange, r25-r27 yellow, r28-r31 green, r36-r41 purple). A 10-week pace skips r32-r35 (blue) and r42-r47 (brown), which Aleph puts before the grey siddur-page lessons; r50 is used as a "new page" finale. This compression is Aleph's choice, not from any source.
+Belts (Krav Maga style ranks, belts.json): weeks 1-9 cross White belt · P0 (r01-r04), Yellow belt · P1-P2 (r05-r14), Orange belt · P3-P4 (r15-r24), Green belt · P5 and G1 (r25-r31) and start Blue belt · G3 (r36-r41). A 10-week pace skips Blue belt · G2 (r32-r35) and Brown belt · G4 (r42-r47), which Aleph puts before the Brown belt · G5 siddur-page lessons; since ranks are earned only in order by finishing lessons, a 10-week learner does not earn G2 or later ranks; r50 is used as a "new page" finale. This compression is Aleph's choice, not from any source.
 
 ## Coverage gaps: Aleph vs a typical 10-session adult class
 1. **Weekly pacing**: Aleph is self-paced; had no week structure. Class track adds it (draft).

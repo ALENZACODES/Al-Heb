@@ -11,7 +11,7 @@ const RUNGS = [10, 20, 30, 50, 70, 100, 140, 180, 240, 300];
 const spec = {
   id: 'quizladder', title: 'Quiz Ladder', titleHe: 'סֻלָּם',
   blurb: 'Ari asks, you climb. Ten rungs, each worth more than the last. Two lifelines, two safe rungs, and the nerve to bank your points or risk them on the next question.',
-  howTo: ['Each rung is a question about a Hebrew word: its meaning, its sound or its first letter.', 'Pick one of four answers. Right climbs a rung; wrong drops you to the last safe rung (3 or 6).', 'Lifelines: Halve removes two wrong answers; Ask Noa plays the word (where a recording exists).', 'After any right answer you may Bank and stop. Reach rung 10 for the top prize.'],
+  howTo: ['Each rung is a question about a Hebrew word: its meaning, its sound or its first letter.', 'Pick one answer: three choices on level 1, four from level 2 on. Right climbs a rung; wrong drops you to the last safe rung (3 or 6).', 'Lifelines: Halve removes two wrong answers; Ask Noa plays the word (where a recording exists).', 'After any right answer you may Bank and stop. Reach rung 10 for the top prize.'],
   levels: [
     { name: 'Meanings', kinds: ['meaning'], options: 3 },
     { name: 'Meanings and sounds', kinds: ['meaning', 'sound'], options: 4 },
@@ -61,7 +61,7 @@ function setup(A) {
     tools.replaceChildren(
       A.h('button', { type: 'button', class: 'btn secondary', disabled: !halve || undefined, onclick: () => { halve = 0; const wrong = [...answers.querySelectorAll('button')].filter((b, i) => !current.isRight(current.opts[i])); for (const b of wrong.slice(0, 2)) b.disabled = true; tools.firstChild.disabled = true; } }, `Halve (${halve})`),
       A.h('button', { type: 'button', class: 'btn secondary', disabled: !ask || undefined, onclick: () => { ask = 0; A.sayWord(current.w); A.announce(A.hasWordClip(current.w) ? 'Noa reads the word.' : `No recording for this word. It sounds like "${current.w.translit}".`); tools.children[1].disabled = true; } }, `Ask Noa (${ask})`),
-      rung > 0 ? A.h('button', { type: 'button', class: 'btn', onclick: bank }, `Bank ${RUNGS[rung - 1]}`) : null);
+      ...(rung > 0 ? [A.h('button', { type: 'button', class: 'btn', onclick: bank }, `Bank ${RUNGS[rung - 1]}`)] : [])); // replaceChildren would print a literal 'null'
   };
   A.setLives(0);
   nextQ();

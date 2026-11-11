@@ -68,7 +68,7 @@ test('docs/A11Y.md says what automated checks cannot show', () => {
 
 test('lesson meta line uses the learner-facing level label, not a bare code', () => {
   const src = read('src/curriculum/lesson.view.js');
-  assert.match(src, /levelLabel\(lesson\.level\)/);
+  assert.match(src, /levelLabel\(lesson\.level, rankOf\.get\(lesson\.id\)\)/);
   assert.doesNotMatch(src, /\$\{lesson\.level\} ·/);
 });
 

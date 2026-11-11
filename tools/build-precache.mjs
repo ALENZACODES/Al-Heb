@@ -73,6 +73,8 @@ const ON_DEMAND_FILES = new Set([
   // and two older Rimon modules no screen imports (kept for reference and their tests).
   'src/shell/rimon-stage.js', 'src/shell/rimon-triggers.js', 'src/shell/rimon-stills.generated.js', 'assets/css/rimon-stills.css',
   'src/shell/rimon-model.js', 'src/shell/mascot.js',
+  // Shared playing / finished / failed state (src/app.js imports it after boot; runtime-cached).
+  'src/shell/play-state.js',
   'data/audio/manifest.json', 'data/audio/manifest-kind-word.json', 'data/audio/manifest-torah.json', 'data/audio/manifest-torah-he.json', 'src/shell/torah-he-index.js', 'data/curriculum/intermediate-index.json', 'data/curriculum/intermediate-image-slots.json', 'data/curriculum/class-track.json', 'data/curriculum/practical-units.json', 'data/curriculum/lesson-lexicon.json',
   // Word-builder bank (63 KB): fetched when the builder first opens, runtime-cached (keeps first install under 3.95 MiB after Hallel and festival Kiddush landed in the installed registry).
   'data/builder_words.json',
@@ -93,8 +95,13 @@ const ON_DEMAND_FILES = new Set([
   // Day page (preview route /day/<date>): its view and model are loaded lazily by the router when a day is opened, runtime-cached by sw.js; the markers module stays installed because the Calendar (v0) draws them. Morning screen view (optional route /morning): route code only, its verses/model files stay installed. Both moved here when the day pages landed (keeps first install under 3.95 MiB).
   'src/curriculum/day.view.js', 'src/curriculum/calendar.day.js', 'src/morning/morning.view.js',
   'src/curriculum/calendar.addpanel.js', 'src/curriculum/calendar.quickadd.js' /* calendar quick-add box: loaded when the Calendar opens */,
+  // Syllabus and Time budget (preview routes /syllabus and /time-budget): view code and their pure model, fetched on first open and runtime-cached
+  // (keeps first install under 3.95 MiB after the Krav Maga style ranks module landed; src/shell/offline.js already lists them in its "practice" group).
+  'src/coursemap/model.js', 'src/coursemap/syllabus.view.js', 'src/coursemap/timebudget.view.js',
   // Intermediate lessons view (optional preview route /intermediate, 30 KB): route code only, loaded lazily on first open and runtime-cached; its adapter and data stay as they were.
   'src/curriculum/intermediate.view.js',
+  // Timed read-aloud (optional preview route /timedread, 13 KB): view code only, fetched on first open and runtime-cached; its gates data stays installed. Moved when lessons gained a pass mark, test-out and one-feedback rendering (keeps first install under 3.95 MiB).
+  'src/timedread/timedread.view.js',
   // Israel units (preview route /israel-units): view, model and data are loaded on first open and runtime-cached.
   'src/curriculum/practical.view.js', 'src/curriculum/practical-progress.js', 'src/curriculum/practical-written.js',
   // Curriculum page (the whole course in one order): fetched when it is opened
@@ -182,6 +189,11 @@ export function writeViewList(root = repoRoot) {
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  // Course totals, audio catalogue counts and the build stamp first (src/lib/counts.generated.js, index.html meta), so the
+  // precache hash below covers them and every deploy that refreshes the precache list also refreshes the app's own figures.
+  const { writeCounts } = await import('./counts/build-counts.mjs');
+  const c = await writeCounts({ force: true }); // a new build time on every precache build: the stamp names this build
+  console.log(`src/lib/counts.generated.js: build ${c.build.version} ${c.build.builtAt}`);
   writeViewList();
   const m = computeManifest();
   const root = repoRoot;

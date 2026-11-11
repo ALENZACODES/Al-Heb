@@ -16,6 +16,7 @@ import { settingVoice, onKeys } from "./ex-ui.js";
 import { audioButton } from "../shell/audio-access.js";
 import * as A from "./intermediate-adapter.js";
 import { sequenceExercises, fairProduceOptions, createSession, feedbackText, fireFeedback } from "./exercises.session.js";
+import { passed as passedCheck, passMark, passRuleText } from "./passmark.js";
 import { progressBar, summaryNode } from "./exercises.ui.js";
 import { respell } from "../pronunciation/forTradition.js";
 import { uiEnglish } from "../shell/names.js";
@@ -41,7 +42,7 @@ const prereqName = (x) => {
   const t = byId[x]?.title;
   if (!t) return x;
   // The course's "belt" wording is not explained on these screens, so say it as a plain beginner lesson.
-  const plain = t.replace(/\b[A-Za-z]+[- ]belt\s*/i, "").trim();
+  const plain = t.replace(/\b[A-Za-z]+[- ]belt(?:\s*·\s*[PGE]\d)?\s*/i, "").trim(); // "Brown belt · G5 check" -> "check"
   return `the beginner ${plain ? plain.toLowerCase() : "lesson"} (lesson ${x})`;
 };
 const tradition = (ctx, lesson) => (lesson.track === "israel" ? "israeli" : ctx?.settings?.get?.("congregation") || "sephardi");
@@ -170,7 +171,7 @@ const R = {
   fade(env, ex, finish) {
     const r = env.corpus?.get(ex.line), text = r ? lineText(r, ex) : null;
     return revealable(env, ex, [el("p", {}, "Say this line from memory: ", el("strong", {}, G(env.ctx, ex.en))),
-      el("p", {}, el("a", { class: "btn secondary", href: A.exerciseRoute(ex) }, "Practise with fade-out screen"))],
+      el("p", {}, el("a", { class: "btn secondary", href: A.exerciseRoute(ex) }, "Practice with fade-out screen"))],
       [text ? heRow(env.ctx, env.lesson, env.note, text, { audio: { kind: "line", id: lineAudioId(r, ex) } }) : el("p", { class: "muted" }, `(${ex.line}: text not in the corpus build)`)], finish);
   },
   spot(env, ex, finish) {
@@ -274,7 +275,7 @@ function mountLesson(root, ctx, id) {
     const intro = () => [
       el("p", { class: "muted" }, `${lesson.unit ? lesson.unit + " · " : ""}about ${lesson.estMinutes} min (estimate) · ${lesson.track === "read" ? "Read the siddur" : "Speak in Israel"} · ${exs.length} exercises`),
       el("p", { class: "draft-flag", role: "note" }, DRAFT_TEXT),
-      exs.length ? null : el("p", { class: "alef-locked", role: "note" }, "This lesson has no exercises yet, so it cannot be completed."),
+      exs.length ? el("p", { class: "alef-check-rule", role: "note" }, passRuleText(exs.length)) : el("p", { class: "alef-locked", role: "note" }, "This lesson has no exercises yet, so it cannot be completed."),
       lesson.needsNativeReview ? el("p", { class: "draft-flag alef-needs-review", role: "note" }, REVIEW_FLAG) : null,
       unmet.length ? el("p", { class: "alef-locked", role: "note" }, `Finish ${unmet.map(prereqName).join(", ")} first. You can still look around.`) : null,
       exs.length ? el("p", {}, el("button", { type: "button", class: "btn secondary", "data-act": "jump-start", onclick: () => { const b = document.getElementById("alef-int-start"); b?.scrollIntoView?.({ block: "center" }); b?.focus?.(); } }, "Jump to the exercises")) : null,
@@ -285,7 +286,7 @@ function mountLesson(root, ctx, id) {
           el("div", { class: "alef-item-body" }, el("span", {}, G(ctx, w.en)), el("div", { class: "alef-pron muted", "data-pron": "1" }, pronLine(w, trad))),
           el("div", { class: "alef-item-actions" }, playBtn(ctx, "word", wordAudioId(lesson.id, i + 1), `Listen to ${G(ctx, w.en)}`, note, lesson)))))),
       note,
-      el("div", { class: "row alef-actions" }, el("button", { type: "button", class: "btn", id: "alef-int-start", disabled: exs.length ? null : "", onclick: () => { started = true; offKeys(); begin(); show(); } }, mine.done ? "Practise again" : Object.keys(results).length ? "Continue" : "Start exercises"),
+      el("div", { class: "row alef-actions" }, el("button", { type: "button", class: "btn", id: "alef-int-start", disabled: exs.length ? null : "", onclick: () => { started = true; offKeys(); begin(); show(); } }, mine.done ? "Practice again" : Object.keys(results).length ? "Continue" : "Start exercises"),
         el("a", { class: "btn secondary", href: "#/intermediate" }, "All intermediate lessons")),
     ].filter(Boolean); // replaceChildren turns a raw null into the text "null"
 
@@ -352,6 +353,17 @@ function mountLesson(root, ctx, id) {
       const st2 = session.stats(), skipped = session.skippedIds();
       const all = exs.length > 0 && Object.keys(results).length === exs.length;
       const right = exs.filter((e) => results[e.id]).length, missed = exs.filter((e) => results[e.id] === false);
+      const pass = all && passedCheck(right, exs.length); // C-01: every exercise answered is not enough; the first-try pass mark must be met
+      if (all && !pass) {
+        await persist({ score: right, total: exs.length });
+        if (!alive) return;
+        body.replaceChildren(summaryNode({ passed: false, ctx, title: "Not passed yet — try again", countText: `${right} of ${exs.length} right on the first try.`, stats: { ...st2, accuracy: st2.answered ? st2.right / st2.answered : null },
+          ms: Date.now() - t0, need: passMark(exs.length), of: exs.length, wasDone: !!mine.done, missedLabels: missed.map(exLabel), cardsUpdated,
+          onRetry: () => { started = true; offKeys(); begin(); show(); }, retryLabel: "Try again",
+          extraLinks: [el("a", { class: "btn secondary", href: "#/intermediate" }, "All intermediate lessons")] }));
+        body.querySelector?.("#alef-int-ex")?.focus?.();
+        return;
+      }
       if (all) {
         // Count the lesson in the shared progress first: if that cannot be saved, nothing here says "finished" (the exercise results stay, so the learner can try again).
         try { await completeLesson(ctx, lesson); } catch (e) { if (alive) showSaveFailure(body, e, summary); return; }

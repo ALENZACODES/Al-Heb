@@ -1,0 +1,4533 @@
+{
+ "schema": "alef-fill-list/1",
+ "mode": "new",
+ "estimate": {
+  "rows": 610,
+  "chars": 22638,
+  "ttsUsd": 0.68,
+  "sttUsd": 11.05,
+  "worstCaseUsd": 11.73
+ },
+ "rows": [
+  {
+   "path": "audio/m/israeli/line/hallel-113-1.mp3",
+   "text": "הַלְלוּ יָהּ הַלְלוּ עַבְדֵי אֲדֹנָי הַלְלוּ אֶת־שֵׁם אֲדֹנָי",
+   "voice": "m",
+   "family": "chirp",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/line/hallel-113-1.mp3",
+   "text": "הַלְלוּ יָהּ הַלְלוּ עַבְדֵי אֲדֹנָי הַלְלוּ אֶת־שֵׁם אֲדֹנָי",
+   "voice": "f",
+   "family": "chirp",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/line/hallel-115-1.mp3",
+   "text": "לֹא לָנוּ אֲדֹנָי לֹא לָנוּ כִּי־לְשִׁמְךָ תֵּן כָּבוֹד עַל־חַסְדְּךָ עַל־אֲמִתֶּךָ׃",
+   "voice": "m",
+   "family": "chirp",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/line/hallel-115-1.mp3",
+   "text": "לֹא לָנוּ אֲדֹנָי לֹא לָנוּ כִּי־לְשִׁמְךָ תֵּן כָּבוֹד עַל־חַסְדְּךָ עַל־אֲמִתֶּךָ׃",
+   "voice": "f",
+   "family": "chirp",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/line/hallel-116-13.mp3",
+   "text": "כּוֹס־יְשׁוּעוֹת אֶשָּׂא וּבְשֵׁם אֲדֹנָי אֶקְרָא׃",
+   "voice": "m",
+   "family": "chirp",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/line/hallel-116-13.mp3",
+   "text": "כּוֹס־יְשׁוּעוֹת אֶשָּׂא וּבְשֵׁם אֲדֹנָי אֶקְרָא׃",
+   "voice": "f",
+   "family": "chirp",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/line/hallel-118-1-4-l1.mp3",
+   "text": "הוֹדוּ לַאֲדֹנָי כִּי־טוֹב כִּי לְעוֹלָם חַסְדּוֹ׃",
+   "voice": "m",
+   "family": "chirp",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/line/hallel-118-1-4-l1.mp3",
+   "text": "הוֹדוּ לַאֲדֹנָי כִּי־טוֹב כִּי לְעוֹלָם חַסְדּוֹ׃",
+   "voice": "f",
+   "family": "chirp",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/line/hallel-118-1-4-l2.mp3",
+   "text": "יֹאמַר־נָא יִשְׂרָאֵל כִּי לְעוֹלָם חַסְדּוֹ׃",
+   "voice": "m",
+   "family": "chirp",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/line/hallel-118-1-4-l2.mp3",
+   "text": "יֹאמַר־נָא יִשְׂרָאֵל כִּי לְעוֹלָם חַסְדּוֹ׃",
+   "voice": "f",
+   "family": "chirp",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/line/hallel-118-1-4-l3.mp3",
+   "text": "יֹאמְרוּ־נָא בֵית־אַהֲרֹן כִּי לְעוֹלָם חַסְדּוֹ׃",
+   "voice": "m",
+   "family": "chirp",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/line/hallel-118-1-4-l3.mp3",
+   "text": "יֹאמְרוּ־נָא בֵית־אַהֲרֹן כִּי לְעוֹלָם חַסְדּוֹ׃",
+   "voice": "f",
+   "family": "chirp",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/line/hallel-118-1-4-l4.mp3",
+   "text": "יֹאמְרוּ־נָא יִרְאֵי אֲדֹנָי כִּי לְעוֹלָם חַסְדּוֹ׃",
+   "voice": "m",
+   "family": "chirp",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/line/hallel-118-1-4-l4.mp3",
+   "text": "יֹאמְרוּ־נָא יִרְאֵי אֲדֹנָי כִּי לְעוֹלָם חַסְדּוֹ׃",
+   "voice": "f",
+   "family": "chirp",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/line/hallel-118-5.mp3",
+   "text": "מִן־הַמֵּצַר קָרָאתִי יָּהּ עָנָנִי בַמֶּרְחָב יָהּ׃",
+   "voice": "m",
+   "family": "chirp",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/line/hallel-118-5.mp3",
+   "text": "מִן־הַמֵּצַר קָרָאתִי יָּהּ עָנָנִי בַמֶּרְחָב יָהּ׃",
+   "voice": "f",
+   "family": "chirp",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/line/hallel-118-6.mp3",
+   "text": "אֲדֹנָי לִי לֹא אִירָא מַה־יַּעֲשֶׂה לִי אָדָם׃",
+   "voice": "m",
+   "family": "chirp",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/line/hallel-118-6.mp3",
+   "text": "אֲדֹנָי לִי לֹא אִירָא מַה־יַּעֲשֶׂה לִי אָדָם׃",
+   "voice": "f",
+   "family": "chirp",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/line/hallel-118-24.mp3",
+   "text": "זֶה־הַיּוֹם עָשָׂה אֲדֹנָי נָגִילָה וְנִשְׂמְחָה בוֹ׃",
+   "voice": "m",
+   "family": "chirp",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/line/hallel-118-24.mp3",
+   "text": "זֶה־הַיּוֹם עָשָׂה אֲדֹנָי נָגִילָה וְנִשְׂמְחָה בוֹ׃",
+   "voice": "f",
+   "family": "chirp",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/line/hallel-118-25.mp3",
+   "text": "אָנָּא אֲדֹנָי הוֹשִׁיעָה נָּא אָנָּא אֲדֹנָי הַצְלִיחָה נָּא׃",
+   "voice": "m",
+   "family": "chirp",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/line/hallel-118-25.mp3",
+   "text": "אָנָּא אֲדֹנָי הוֹשִׁיעָה נָּא אָנָּא אֲדֹנָי הַצְלִיחָה נָּא׃",
+   "voice": "f",
+   "family": "chirp",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/line/hallel-118-28.mp3",
+   "text": "אֵלִי אַתָּה וְאוֹדֶךָּ אֱלֹהַי אֲרוֹמְמֶךָּ׃",
+   "voice": "m",
+   "family": "chirp",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/line/hallel-118-28.mp3",
+   "text": "אֵלִי אַתָּה וְאוֹדֶךָּ אֱלֹהַי אֲרוֹמְמֶךָּ׃",
+   "voice": "f",
+   "family": "chirp",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/line/kiddush-festival-day-verses-l1.mp3",
+   "text": "אֵלֶּה מוֹעֲדֵי אֲדֹנָי מִקְרָאֵי קֹדֶשׁ אֲשֶׁר־תִּקְרְאוּ אֹתָם בְּמוֹעֲדָם׃",
+   "voice": "m",
+   "family": "chirp",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/line/kiddush-festival-day-verses-l1.mp3",
+   "text": "אֵלֶּה מוֹעֲדֵי אֲדֹנָי מִקְרָאֵי קֹדֶשׁ אֲשֶׁר־תִּקְרְאוּ אֹתָם בְּמוֹעֲדָם׃",
+   "voice": "f",
+   "family": "chirp",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/line/kiddush-festival-day-verses-l2.mp3",
+   "text": "וַיְדַבֵּר מֹשֶׁה אֶת־מֹעֲדֵי אֲדֹנָי אֶל־בְּנֵי יִשְׂרָאֵל׃",
+   "voice": "m",
+   "family": "chirp",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/line/kiddush-festival-day-verses-l2.mp3",
+   "text": "וַיְדַבֵּר מֹשֶׁה אֶת־מֹעֲדֵי אֲדֹנָי אֶל־בְּנֵי יִשְׂרָאֵל׃",
+   "voice": "f",
+   "family": "chirp",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/line/kiddush-festival-eve-open.mp3",
+   "text": "בָּרוּךְ אַתָּה אֲדֹנָי אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר בָּחַר בָּנוּ מִכָּל עָם וְרוֹמְמָנוּ מִכָּל לָשׁוֹן וְקִדְּשָׁנוּ בְּמִצְוֹתָיו וַתִּתֶּן לָנוּ אֲדֹנָי אֱלֹהֵינוּ בְּאַהֲבָה מוֹעֲדִים לְשִׂמְחָה חַגִּים וּזְמַנִּים לְשָׂשׂוֹן אֶת יוֹם׃",
+   "voice": "m",
+   "family": "chirp",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/line/kiddush-festival-eve-open.mp3",
+   "text": "בָּרוּךְ אַתָּה אֲדֹנָי אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר בָּחַר בָּנוּ מִכָּל עָם וְרוֹמְמָנוּ מִכָּל לָשׁוֹן וְקִדְּשָׁנוּ בְּמִצְוֹתָיו וַתִּתֶּן לָנוּ אֲדֹנָי אֱלֹהֵינוּ בְּאַהֲבָה מוֹעֲדִים לְשִׂמְחָה חַגִּים וּזְמַנִּים לְשָׂשׂוֹן אֶת יוֹם׃",
+   "voice": "f",
+   "family": "chirp",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/line/kiddush-festival-pesach.mp3",
+   "text": "חַג הַמַּצּוֹת הַזֶּה זְמַן חֵרוּתֵנוּ׃",
+   "voice": "m",
+   "family": "chirp",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/line/kiddush-festival-pesach.mp3",
+   "text": "חַג הַמַּצּוֹת הַזֶּה זְמַן חֵרוּתֵנוּ׃",
+   "voice": "f",
+   "family": "chirp",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/line/kiddush-festival-shavuot.mp3",
+   "text": "חַג הַשָׁבוּעוֹת הַזֶּה זְמַן מַתַּן תּוֹרָתֵינוּ׃",
+   "voice": "m",
+   "family": "chirp",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/line/kiddush-festival-shavuot.mp3",
+   "text": "חַג הַשָׁבוּעוֹת הַזֶּה זְמַן מַתַּן תּוֹרָתֵינוּ׃",
+   "voice": "f",
+   "family": "chirp",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/line/kiddush-festival-sukkot.mp3",
+   "text": "חַג הַסֻּכּוֹת הַזֶּה זְמַן שִׂמְחָתֵנוּ׃",
+   "voice": "m",
+   "family": "chirp",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/line/kiddush-festival-sukkot.mp3",
+   "text": "חַג הַסֻּכּוֹת הַזֶּה זְמַן שִׂמְחָתֵנוּ׃",
+   "voice": "f",
+   "family": "chirp",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/line/kiddush-festival-shemini.mp3",
+   "text": "שְׁמִינִי עֲצֶרֶת הַחַג הַזֶּה זְמַן שִׂמְחָתֵנוּ׃",
+   "voice": "m",
+   "family": "chirp",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/line/kiddush-festival-shemini.mp3",
+   "text": "שְׁמִינִי עֲצֶרֶת הַחַג הַזֶּה זְמַן שִׂמְחָתֵנוּ׃",
+   "voice": "f",
+   "family": "chirp",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/line/kiddush-festival-eve-close.mp3",
+   "text": "מִקְרָא קֹדֶשׁ זֵכֶר לִיצִיאַת מִצְרָיִם כִּי בָנוּ בָחַרְתָּ וְאוֹתָנוּ קִדַּשְׁתָּ מִכָּל הָעַמִּים וּמוֹעֲדֵי קָדְשֶׁךָ בְּשִׂמְחָה וּבְשָׂשׂוֹן הִנְחַלְתָּנוּ׃ בָּרוּךְ אַתָּה אֲדֹנָי מְקַדֵּשׁ יִשְׂרָאֵל וְהַזְּמַנִּים׃",
+   "voice": "m",
+   "family": "chirp",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/line/kiddush-festival-eve-close.mp3",
+   "text": "מִקְרָא קֹדֶשׁ זֵכֶר לִיצִיאַת מִצְרָיִם כִּי בָנוּ בָחַרְתָּ וְאוֹתָנוּ קִדַּשְׁתָּ מִכָּל הָעַמִּים וּמוֹעֲדֵי קָדְשֶׁךָ בְּשִׂמְחָה וּבְשָׂשׂוֹן הִנְחַלְתָּנוּ׃ בָּרוּךְ אַתָּה אֲדֹנָי מְקַדֵּשׁ יִשְׂרָאֵל וְהַזְּמַנִּים׃",
+   "voice": "f",
+   "family": "chirp",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/line/leshev-basukkah.mp3",
+   "text": "בָּרוּךְ אַתָּה אֲדֹנָי אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ לֵישֵׁב בַּסֻּכָּה׃",
+   "voice": "m",
+   "family": "chirp",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/line/leshev-basukkah.mp3",
+   "text": "בָּרוּךְ אַתָּה אֲדֹנָי אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ לֵישֵׁב בַּסֻּכָּה׃",
+   "voice": "f",
+   "family": "chirp",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/i-16-w8.mp3",
+   "text": "מַטְעֵן",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/i-16-w8.mp3",
+   "text": "מַטְעֵן",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/i-37-w9.mp3",
+   "text": "קוּרְס",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/i-37-w9.mp3",
+   "text": "קוּרְס",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/i-40-w7.mp3",
+   "text": "מַפָּה",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/i-40-w7.mp3",
+   "text": "מַפָּה",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/i-29-w13.mp3",
+   "text": "חַג כָּשֵׁר וְשָׂמֵחַ",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/i-29-w13.mp3",
+   "text": "חַג כָּשֵׁר וְשָׂמֵחַ",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/i-28-w13.mp3",
+   "text": "גְּמַר חֲתִימָה טוֹבָה",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/i-28-w13.mp3",
+   "text": "גְּמַר חֲתִימָה טוֹבָה",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/i-50-w13.mp3",
+   "text": "גְּמַר חֲתִימָה טוֹבָה",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/i-50-w13.mp3",
+   "text": "גְּמַר חֲתִימָה טוֹבָה",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hfb0d9065.mp3",
+   "text": "שִׁחְרֵר",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hfb0d9065.mp3",
+   "text": "שִׁחְרֵר",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h4db3568c.mp3",
+   "text": "אֲתָר",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h4db3568c.mp3",
+   "text": "אֲתָר",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hb7990b70.mp3",
+   "text": "דִּוּוּחַ",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hb7990b70.mp3",
+   "text": "דִּוּוּחַ",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h0fab4286.mp3",
+   "text": "בָּרָא",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h0fab4286.mp3",
+   "text": "בָּרָא",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h43a01ea3.mp3",
+   "text": "קֶשֶׁר",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h43a01ea3.mp3",
+   "text": "קֶשֶׁר",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h936eb563.mp3",
+   "text": "קוּר",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h936eb563.mp3",
+   "text": "קוּר",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h74ad40bc.mp3",
+   "text": "מְקֻוָּן",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h74ad40bc.mp3",
+   "text": "מְקֻוָּן",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/he135bc1d.mp3",
+   "text": "הוּבַל",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/he135bc1d.mp3",
+   "text": "הוּבַל",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hafa7a910.mp3",
+   "text": "חָלִילָה",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hafa7a910.mp3",
+   "text": "חָלִילָה",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h7379c7dd.mp3",
+   "text": "אִלְמָלֵא",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h7379c7dd.mp3",
+   "text": "אִלְמָלֵא",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/ha4ca93de.mp3",
+   "text": "קְלִיק",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/ha4ca93de.mp3",
+   "text": "קְלִיק",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h860a365a.mp3",
+   "text": "צָעַן",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h860a365a.mp3",
+   "text": "צָעַן",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h5d939fef.mp3",
+   "text": "תָּמָר",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h5d939fef.mp3",
+   "text": "תָּמָר",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h5d4f3f0f.mp3",
+   "text": "גִּבָּה",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h5d4f3f0f.mp3",
+   "text": "גִּבָּה",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h4ba00366.mp3",
+   "text": "צוֹדֵק",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h4ba00366.mp3",
+   "text": "צוֹדֵק",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hd705975d.mp3",
+   "text": "שִׁמֵּשׁ",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hd705975d.mp3",
+   "text": "שִׁמֵּשׁ",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hebfb87c4.mp3",
+   "text": "תּוֹצֶרֶת",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hebfb87c4.mp3",
+   "text": "תּוֹצֶרֶת",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/he6ac4494.mp3",
+   "text": "נָתוּן",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/he6ac4494.mp3",
+   "text": "נָתוּן",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hc5937bb8.mp3",
+   "text": "מַעֲרֶכֶת",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hc5937bb8.mp3",
+   "text": "מַעֲרֶכֶת",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h233de924.mp3",
+   "text": "גֵּט",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h233de924.mp3",
+   "text": "גֵּט",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h15c23219.mp3",
+   "text": "צֵרֵף",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h15c23219.mp3",
+   "text": "צֵרֵף",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hbe880ec9.mp3",
+   "text": "מְדִינִיּוּת",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hbe880ec9.mp3",
+   "text": "מְדִינִיּוּת",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hb6aefc57.mp3",
+   "text": "מְתִים",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hb6aefc57.mp3",
+   "text": "מְתִים",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hda0b9196.mp3",
+   "text": "טֻפַּל",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hda0b9196.mp3",
+   "text": "טֻפַּל",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h0281d73f.mp3",
+   "text": "זָמִין",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h0281d73f.mp3",
+   "text": "זָמִין",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hf58920d0.mp3",
+   "text": "תׇּכְנָה",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hf58920d0.mp3",
+   "text": "תׇּכְנָה",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h227b21f0.mp3",
+   "text": "סִרְטוֹן",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h227b21f0.mp3",
+   "text": "סִרְטוֹן",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hd14b0bbb.mp3",
+   "text": "צִבּוּר",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hd14b0bbb.mp3",
+   "text": "צִבּוּר",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h74193a3e.mp3",
+   "text": "תְּרֵיסָר",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h74193a3e.mp3",
+   "text": "תְּרֵיסָר",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hc427d527.mp3",
+   "text": "עָשׂוֹר",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hc427d527.mp3",
+   "text": "עָשׂוֹר",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h919895fc.mp3",
+   "text": "פְּרִיט",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h919895fc.mp3",
+   "text": "פְּרִיט",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hcfe27ad5.mp3",
+   "text": "נֶאֱמַר",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hcfe27ad5.mp3",
+   "text": "נֶאֱמַר",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h5391ec99.mp3",
+   "text": "מְסֻמָּם",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h5391ec99.mp3",
+   "text": "מְסֻמָּם",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hb842b0f8.mp3",
+   "text": "אֻחַד",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hb842b0f8.mp3",
+   "text": "אֻחַד",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h72b7f908.mp3",
+   "text": "בֵּינְלְאֻמִּי",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h72b7f908.mp3",
+   "text": "בֵּינְלְאֻמִּי",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h2feb7406.mp3",
+   "text": "אָגַר",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h2feb7406.mp3",
+   "text": "אָגַר",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h4f745651.mp3",
+   "text": "הִרְחִיב",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h4f745651.mp3",
+   "text": "הִרְחִיב",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h6a12a53c.mp3",
+   "text": "פִּתּוּחַ",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h6a12a53c.mp3",
+   "text": "פִּתּוּחַ",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h6140d537.mp3",
+   "text": "דִּוֵּחַ",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h6140d537.mp3",
+   "text": "דִּוֵּחַ",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hd9836889.mp3",
+   "text": "דּוּכִיפַת",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hd9836889.mp3",
+   "text": "דּוּכִיפַת",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h719c9b27.mp3",
+   "text": "כִּנֵּס",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h719c9b27.mp3",
+   "text": "כִּנֵּס",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h7bd1602a.mp3",
+   "text": "הִצְבִּיעַ",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h7bd1602a.mp3",
+   "text": "הִצְבִּיעַ",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h7223443f.mp3",
+   "text": "חִנּוּךְ",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h7223443f.mp3",
+   "text": "חִנּוּךְ",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h8ef608b6.mp3",
+   "text": "פֻּרְסַם",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h8ef608b6.mp3",
+   "text": "פֻּרְסַם",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h25573d4f.mp3",
+   "text": "יָ־",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h25573d4f.mp3",
+   "text": "יָ־",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h77456bf4.mp3",
+   "text": "אֳנִי",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h77456bf4.mp3",
+   "text": "אֳנִי",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hb988a9d9.mp3",
+   "text": "בִּקֹּרֶת",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hb988a9d9.mp3",
+   "text": "בִּקֹּרֶת",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/ha7eab8ca.mp3",
+   "text": "אַרְטִיק",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/ha7eab8ca.mp3",
+   "text": "אַרְטִיק",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h203e7414.mp3",
+   "text": "קוֹד",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h203e7414.mp3",
+   "text": "קוֹד",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hfa13ea2e.mp3",
+   "text": "הֶרְאָה",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hfa13ea2e.mp3",
+   "text": "הֶרְאָה",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hd46969cd.mp3",
+   "text": "תִּיֵּק",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hd46969cd.mp3",
+   "text": "תִּיֵּק",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hcf90618e.mp3",
+   "text": "מַקְסִימוּם",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hcf90618e.mp3",
+   "text": "מַקְסִימוּם",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/haea0d75b.mp3",
+   "text": "פְּרוֹיֶקְט",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/haea0d75b.mp3",
+   "text": "פְּרוֹיֶקְט",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h9e029813.mp3",
+   "text": "אוֹתוֹ",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h9e029813.mp3",
+   "text": "אוֹתוֹ",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h96056f0f.mp3",
+   "text": "גִּרְסָה",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h96056f0f.mp3",
+   "text": "גִּרְסָה",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hd08aab08.mp3",
+   "text": "קֶטַע",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hd08aab08.mp3",
+   "text": "קֶטַע",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hd0021776.mp3",
+   "text": "סְפּוֹרְט",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hd0021776.mp3",
+   "text": "סְפּוֹרְט",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/ha63595c6.mp3",
+   "text": "בִּטְחוֹנִי",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/ha63595c6.mp3",
+   "text": "בִּטְחוֹנִי",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hd7dd8309.mp3",
+   "text": "פֶּלֶךְ",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hd7dd8309.mp3",
+   "text": "פֶּלֶךְ",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h32505b84.mp3",
+   "text": "רִשֵּׁת",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h32505b84.mp3",
+   "text": "רִשֵּׁת",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h4f2f5edc.mp3",
+   "text": "תִּכְנֵת",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h4f2f5edc.mp3",
+   "text": "תִּכְנֵת",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hb280f024.mp3",
+   "text": "עֵקֶב",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hb280f024.mp3",
+   "text": "עֵקֶב",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h7e2e9db1.mp3",
+   "text": "לְפִי",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h7e2e9db1.mp3",
+   "text": "לְפִי",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hb48f97c3.mp3",
+   "text": "גִּישָׁה",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hb48f97c3.mp3",
+   "text": "גִּישָׁה",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h0e09c8a2.mp3",
+   "text": "מַשְׁאָב",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h0e09c8a2.mp3",
+   "text": "מַשְׁאָב",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h42e1482f.mp3",
+   "text": "תִּקְשֹׁרֶת",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h42e1482f.mp3",
+   "text": "תִּקְשֹׁרֶת",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h58a19fb6.mp3",
+   "text": "הִשְׁתַּלֵּט",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h58a19fb6.mp3",
+   "text": "הִשְׁתַּלֵּט",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hb3d66f00.mp3",
+   "text": "מִדָּה",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hb3d66f00.mp3",
+   "text": "מִדָּה",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hc7778ee0.mp3",
+   "text": "רֻפָּא",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hc7778ee0.mp3",
+   "text": "רֻפָּא",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h184cbdd5.mp3",
+   "text": "הִדְרִיךְ",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h184cbdd5.mp3",
+   "text": "הִדְרִיךְ",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h3f9179f2.mp3",
+   "text": "חֲנוּת",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h3f9179f2.mp3",
+   "text": "חֲנוּת",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h8a7c3e61.mp3",
+   "text": "מַדְרִיךְ",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h8a7c3e61.mp3",
+   "text": "מַדְרִיךְ",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h25b7e24f.mp3",
+   "text": "חוּר",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h25b7e24f.mp3",
+   "text": "חוּר",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/he8661c37.mp3",
+   "text": "טֶקְסְט",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/he8661c37.mp3",
+   "text": "טֶקְסְט",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h6e681252.mp3",
+   "text": "חֻלְדָּה",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h6e681252.mp3",
+   "text": "חֻלְדָּה",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hfd00ec7c.mp3",
+   "text": "דֵּרֵג",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hfd00ec7c.mp3",
+   "text": "דֵּרֵג",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h3f8f9221.mp3",
+   "text": "בְּמֶשֶׁךְ",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h3f8f9221.mp3",
+   "text": "בְּמֶשֶׁךְ",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hc5d5122c.mp3",
+   "text": "קַנְיוֹן",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hc5d5122c.mp3",
+   "text": "קַנְיוֹן",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h4be2c65f.mp3",
+   "text": "הִתְחַשֵּׁב",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h4be2c65f.mp3",
+   "text": "הִתְחַשֵּׁב",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h8f45d216.mp3",
+   "text": "אִזֵּן",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h8f45d216.mp3",
+   "text": "אִזֵּן",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h7313f5f6.mp3",
+   "text": "נְסִבָּה",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h7313f5f6.mp3",
+   "text": "נְסִבָּה",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h3c72eb55.mp3",
+   "text": "עִקָּר",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h3c72eb55.mp3",
+   "text": "עִקָּר",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hfda50c16.mp3",
+   "text": "דְּמוּת",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hfda50c16.mp3",
+   "text": "דְּמוּת",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hba7c111d.mp3",
+   "text": "אֲגַף",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hba7c111d.mp3",
+   "text": "אֲגַף",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h8f6da72d.mp3",
+   "text": "גָּאוֹן",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h8f6da72d.mp3",
+   "text": "גָּאוֹן",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h4637aff9.mp3",
+   "text": "תֵּאוּר",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h4637aff9.mp3",
+   "text": "תֵּאוּר",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h4ad9dacd.mp3",
+   "text": "חִבֵּר",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h4ad9dacd.mp3",
+   "text": "חִבֵּר",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h119b3b73.mp3",
+   "text": "נָכַס",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h119b3b73.mp3",
+   "text": "נָכַס",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h49f93cb7.mp3",
+   "text": "חָלַב",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h49f93cb7.mp3",
+   "text": "חָלַב",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h54e53418.mp3",
+   "text": "גַּרְזֶן",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h54e53418.mp3",
+   "text": "גַּרְזֶן",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h47c0e192.mp3",
+   "text": "הִשְׁוָה",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h47c0e192.mp3",
+   "text": "הִשְׁוָה",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h3ad80b7c.mp3",
+   "text": "הֶעֱרִיךְ",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h3ad80b7c.mp3",
+   "text": "הֶעֱרִיךְ",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h9b67fb90.mp3",
+   "text": "סִפֵּק",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h9b67fb90.mp3",
+   "text": "סִפֵּק",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hbd47b203.mp3",
+   "text": "מָקוֹר",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hbd47b203.mp3",
+   "text": "מָקוֹר",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h4ef6dd4b.mp3",
+   "text": "יוֹצֵר",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h4ef6dd4b.mp3",
+   "text": "יוֹצֵר",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hd902ef05.mp3",
+   "text": "הִשְׁתַּנָּה",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hd902ef05.mp3",
+   "text": "הִשְׁתַּנָּה",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h00f4ae03.mp3",
+   "text": "מְכִירָה",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h00f4ae03.mp3",
+   "text": "מְכִירָה",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h486ab95f.mp3",
+   "text": "הִדְפִּיס",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h486ab95f.mp3",
+   "text": "הִדְפִּיס",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h70533e43.mp3",
+   "text": "לִמּוּד",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h70533e43.mp3",
+   "text": "לִמּוּד",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h130ebdf5.mp3",
+   "text": "גֶּזַע",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h130ebdf5.mp3",
+   "text": "גֶּזַע",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hf57a641f.mp3",
+   "text": "אַשְׁרַאי",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hf57a641f.mp3",
+   "text": "אַשְׁרַאי",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h71ce3a27.mp3",
+   "text": "הִצְטָרֵף",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h71ce3a27.mp3",
+   "text": "הִצְטָרֵף",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h850989af.mp3",
+   "text": "תְּנַאי",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h850989af.mp3",
+   "text": "תְּנַאי",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h527f40e7.mp3",
+   "text": "גָּלֶרְיָה",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h527f40e7.mp3",
+   "text": "גָּלֶרְיָה",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h77ef715a.mp3",
+   "text": "שִׁוֵּק",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h77ef715a.mp3",
+   "text": "שִׁוֵּק",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h6271d0d0.mp3",
+   "text": "סִפְרִיָּה",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h6271d0d0.mp3",
+   "text": "סִפְרִיָּה",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h0f3334d4.mp3",
+   "text": "סִדְרָה",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h0f3334d4.mp3",
+   "text": "סִדְרָה",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h42b69ebb.mp3",
+   "text": "מִזְרָקָה",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h42b69ebb.mp3",
+   "text": "מִזְרָקָה",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h377a39ff.mp3",
+   "text": "תַּעֲשִׂיָּה",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h377a39ff.mp3",
+   "text": "תַּעֲשִׂיָּה",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hc589f495.mp3",
+   "text": "אֲבִיזָר",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hc589f495.mp3",
+   "text": "אֲבִיזָר",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h45b4f1c4.mp3",
+   "text": "מֶלְצַרִית",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h45b4f1c4.mp3",
+   "text": "מֶלְצַרִית",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h2e14acd4.mp3",
+   "text": "נוֹשֵׂא",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h2e14acd4.mp3",
+   "text": "נוֹשֵׂא",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h1aae127f.mp3",
+   "text": "כַּסְפִּי",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h1aae127f.mp3",
+   "text": "כַּסְפִּי",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h5e953da4.mp3",
+   "text": "נַיָּד",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h5e953da4.mp3",
+   "text": "נַיָּד",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h437735c2.mp3",
+   "text": "מְסִבָּה",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h437735c2.mp3",
+   "text": "מְסִבָּה",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h232fbb43.mp3",
+   "text": "תַּשְׁלוּם",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h232fbb43.mp3",
+   "text": "תַּשְׁלוּם",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hd35cacd5.mp3",
+   "text": "חֲגוֹר",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hd35cacd5.mp3",
+   "text": "חֲגוֹר",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h4b5f6ac0.mp3",
+   "text": "הִתְנַהֵג",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h4b5f6ac0.mp3",
+   "text": "הִתְנַהֵג",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h489cb38a.mp3",
+   "text": "הוֹפָעָה",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h489cb38a.mp3",
+   "text": "הוֹפָעָה",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/had6e00f3.mp3",
+   "text": "חֶבְרָתִי",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/had6e00f3.mp3",
+   "text": "חֶבְרָתִי",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h63b9f4da.mp3",
+   "text": "צִטֵּט",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h63b9f4da.mp3",
+   "text": "צִטֵּט",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h70d95de1.mp3",
+   "text": "אוֹפְּצִיָה",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h70d95de1.mp3",
+   "text": "אוֹפְּצִיָה",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h1cb65f59.mp3",
+   "text": "חֲוָיָה",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h1cb65f59.mp3",
+   "text": "חֲוָיָה",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h0fcd7e94.mp3",
+   "text": "קִיֵּם",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h0fcd7e94.mp3",
+   "text": "קִיֵּם",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h3d5c4bc2.mp3",
+   "text": "הִקְלִיד",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h3d5c4bc2.mp3",
+   "text": "הִקְלִיד",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h63142367.mp3",
+   "text": "נְיָר",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h63142367.mp3",
+   "text": "נְיָר",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hd5606e09.mp3",
+   "text": "עִסּוּק",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hd5606e09.mp3",
+   "text": "עִסּוּק",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hb2dc0f86.mp3",
+   "text": "בָּנָנָה",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hb2dc0f86.mp3",
+   "text": "בָּנָנָה",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h9f380f93.mp3",
+   "text": "נוֹסָף",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h9f380f93.mp3",
+   "text": "נוֹסָף",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h33829f74.mp3",
+   "text": "שַׁי",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h33829f74.mp3",
+   "text": "שַׁי",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hade03809.mp3",
+   "text": "מַעֲמָד",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hade03809.mp3",
+   "text": "מַעֲמָד",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h348f2813.mp3",
+   "text": "צַו",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h348f2813.mp3",
+   "text": "צַו",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hb895fd84.mp3",
+   "text": "שֵׁמַע",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hb895fd84.mp3",
+   "text": "שֵׁמַע",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h0c806e7a.mp3",
+   "text": "נִתַּן",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h0c806e7a.mp3",
+   "text": "נִתַּן",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h127c6e1e.mp3",
+   "text": "נִתּוּחַ",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h127c6e1e.mp3",
+   "text": "נִתּוּחַ",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h32f3d29b.mp3",
+   "text": "כְּבִיסָה",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h32f3d29b.mp3",
+   "text": "כְּבִיסָה",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hdd29a7ac.mp3",
+   "text": "אֶפְשָׁרִי",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hdd29a7ac.mp3",
+   "text": "אֶפְשָׁרִי",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hd910551c.mp3",
+   "text": "עֲתִידִי",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hd910551c.mp3",
+   "text": "עֲתִידִי",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h11dfb04e.mp3",
+   "text": "וַעֲדָה",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h11dfb04e.mp3",
+   "text": "וַעֲדָה",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hd5aa14b4.mp3",
+   "text": "בְּעָיָתִי",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hd5aa14b4.mp3",
+   "text": "בְּעָיָתִי",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hd986c592.mp3",
+   "text": "הוֹאִיל",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hd986c592.mp3",
+   "text": "הוֹאִיל",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h592878b6.mp3",
+   "text": "נֵתַח",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h592878b6.mp3",
+   "text": "נֵתַח",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h685488f7.mp3",
+   "text": "אִזְכֵּר",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h685488f7.mp3",
+   "text": "אִזְכֵּר",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h14bd36cd.mp3",
+   "text": "אֶנֶרְגִּיָה",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h14bd36cd.mp3",
+   "text": "אֶנֶרְגִּיָה",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h3750a2fb.mp3",
+   "text": "לֵדָה",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h3750a2fb.mp3",
+   "text": "לֵדָה",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h41033021.mp3",
+   "text": "פּוֹפּוּלָרִי",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h41033021.mp3",
+   "text": "פּוֹפּוּלָרִי",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h2ca0fe16.mp3",
+   "text": "דֹּק",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h2ca0fe16.mp3",
+   "text": "דֹּק",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/he5db1f64.mp3",
+   "text": "מֶרְכָּזִי",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/he5db1f64.mp3",
+   "text": "מֶרְכָּזִי",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/ha7a49912.mp3",
+   "text": "מְקוֹרִי",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/ha7a49912.mp3",
+   "text": "מְקוֹרִי",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h84b0f0c7.mp3",
+   "text": "רַדְיוֹ",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h84b0f0c7.mp3",
+   "text": "רַדְיוֹ",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h1e9758c1.mp3",
+   "text": "עַצְמִי",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h1e9758c1.mp3",
+   "text": "עַצְמִי",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hd718ec6a.mp3",
+   "text": "מוֹעָצָה",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hd718ec6a.mp3",
+   "text": "מוֹעָצָה",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h8b685aaa.mp3",
+   "text": "דִּיּוּן",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h8b685aaa.mp3",
+   "text": "דִּיּוּן",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/haf8a82db.mp3",
+   "text": "אַרְכִיּוֹן",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/haf8a82db.mp3",
+   "text": "אַרְכִיּוֹן",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h55b74aa6.mp3",
+   "text": "מִנְזָר",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h55b74aa6.mp3",
+   "text": "מִנְזָר",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h3ea6da91.mp3",
+   "text": "הֵפֵר",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h3ea6da91.mp3",
+   "text": "הֵפֵר",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h2a6eb816.mp3",
+   "text": "חֶבְרָה",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h2a6eb816.mp3",
+   "text": "חֶבְרָה",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h28b95de6.mp3",
+   "text": "רִבְעוֹן",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h28b95de6.mp3",
+   "text": "רִבְעוֹן",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h6c58cdca.mp3",
+   "text": "בְּטִיחוּת",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h6c58cdca.mp3",
+   "text": "בְּטִיחוּת",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h9c37adc0.mp3",
+   "text": "יְדִידוּת",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h9c37adc0.mp3",
+   "text": "יְדִידוּת",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h6afa4c14.mp3",
+   "text": "סַחַר",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h6afa4c14.mp3",
+   "text": "סַחַר",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hbf0ed3dc.mp3",
+   "text": "תַּעֲמוּלָה",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hbf0ed3dc.mp3",
+   "text": "תַּעֲמוּלָה",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hee27c23a.mp3",
+   "text": "עִדְכֵּן",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hee27c23a.mp3",
+   "text": "עִדְכֵּן",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h62dfc3a4.mp3",
+   "text": "כִּיֵּף",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h62dfc3a4.mp3",
+   "text": "כִּיֵּף",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h5d811c71.mp3",
+   "text": "מְקוּבָּל",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h5d811c71.mp3",
+   "text": "מְקוּבָּל",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h9d3095d3.mp3",
+   "text": "מֶלַח",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h9d3095d3.mp3",
+   "text": "מֶלַח",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h3f14c01d.mp3",
+   "text": "גֵּרֵשׁ",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h3f14c01d.mp3",
+   "text": "גֵּרֵשׁ",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h252cc244.mp3",
+   "text": "מְסֻיָּם",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h252cc244.mp3",
+   "text": "מְסֻיָּם",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h39dc18bb.mp3",
+   "text": "סָלוֹן",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h39dc18bb.mp3",
+   "text": "סָלוֹן",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h2db1c317.mp3",
+   "text": "קִרְיָה",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h2db1c317.mp3",
+   "text": "קִרְיָה",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/he5c139b7.mp3",
+   "text": "קָצַר",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/he5c139b7.mp3",
+   "text": "קָצַר",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h027a2dd9.mp3",
+   "text": "מָסָךְ",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h027a2dd9.mp3",
+   "text": "מָסָךְ",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hebf46349.mp3",
+   "text": "מֻגְבָּל",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hebf46349.mp3",
+   "text": "מֻגְבָּל",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h0cd7e3aa.mp3",
+   "text": "פִּתְרוֹן",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h0cd7e3aa.mp3",
+   "text": "פִּתְרוֹן",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hda5ae776.mp3",
+   "text": "בְּמוֹ",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hda5ae776.mp3",
+   "text": "בְּמוֹ",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h1ef2097e.mp3",
+   "text": "כִּשָּׁרוֹן",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h1ef2097e.mp3",
+   "text": "כִּשָּׁרוֹן",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/had9e0315.mp3",
+   "text": "אֶלֶקְטְרוֹנִי",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/had9e0315.mp3",
+   "text": "אֶלֶקְטְרוֹנִי",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h34957165.mp3",
+   "text": "אִרְגּוּן",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h34957165.mp3",
+   "text": "אִרְגּוּן",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/he713474c.mp3",
+   "text": "בֵּינוֹנִי",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/he713474c.mp3",
+   "text": "בֵּינוֹנִי",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h89ceda41.mp3",
+   "text": "טֶכְנִי",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h89ceda41.mp3",
+   "text": "טֶכְנִי",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h79c20fdd.mp3",
+   "text": "הִקְלִיט",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h79c20fdd.mp3",
+   "text": "הִקְלִיט",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h61dec9cc.mp3",
+   "text": "וְעִידָה",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h61dec9cc.mp3",
+   "text": "וְעִידָה",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h59dac508.mp3",
+   "text": "סְבִיבָה",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h59dac508.mp3",
+   "text": "סְבִיבָה",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h7082d2f6.mp3",
+   "text": "מָחוֹז",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h7082d2f6.mp3",
+   "text": "מָחוֹז",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h6f520623.mp3",
+   "text": "תַּאֲרִיךְ",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h6f520623.mp3",
+   "text": "תַּאֲרִיךְ",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h2f5cc043.mp3",
+   "text": "סִגְנוֹן",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h2f5cc043.mp3",
+   "text": "סִגְנוֹן",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h55a2e7f1.mp3",
+   "text": "הִשְׁלִישׁ",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h55a2e7f1.mp3",
+   "text": "הִשְׁלִישׁ",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h61f0d2fb.mp3",
+   "text": "תָּקַע",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h61f0d2fb.mp3",
+   "text": "תָּקַע",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h9bb1d8c2.mp3",
+   "text": "תַּרְנְגוֹל",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h9bb1d8c2.mp3",
+   "text": "תַּרְנְגוֹל",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h4386c46a.mp3",
+   "text": "מִסְמָךְ",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h4386c46a.mp3",
+   "text": "מִסְמָךְ",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h953fff59.mp3",
+   "text": "פָּרַע",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h953fff59.mp3",
+   "text": "פָּרַע",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h00e8780c.mp3",
+   "text": "כָּתוּב",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h00e8780c.mp3",
+   "text": "כָּתוּב",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hf8685e54.mp3",
+   "text": "רְכִילוּת",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hf8685e54.mp3",
+   "text": "רְכִילוּת",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h6ae1a1d5.mp3",
+   "text": "אֵרֵחַ",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h6ae1a1d5.mp3",
+   "text": "אֵרֵחַ",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h27d035b5.mp3",
+   "text": "מֶרְכָּז",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h27d035b5.mp3",
+   "text": "מֶרְכָּז",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h8d72d084.mp3",
+   "text": "מִמֵּן",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h8d72d084.mp3",
+   "text": "מִמֵּן",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hbb3bc5fd.mp3",
+   "text": "דַּקָּה",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hbb3bc5fd.mp3",
+   "text": "דַּקָּה",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h97eb619a.mp3",
+   "text": "הוֹסִיף",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h97eb619a.mp3",
+   "text": "הוֹסִיף",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h0b1cfbd9.mp3",
+   "text": "שְׁלִישִׁי",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h0b1cfbd9.mp3",
+   "text": "שְׁלִישִׁי",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hcf419072.mp3",
+   "text": "אַרְגָּז",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hcf419072.mp3",
+   "text": "אַרְגָּז",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h8a62fb11.mp3",
+   "text": "עֲרִיכָה",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h8a62fb11.mp3",
+   "text": "עֲרִיכָה",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h4b6b232f.mp3",
+   "text": "כַּלְכָּלִי",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h4b6b232f.mp3",
+   "text": "כַּלְכָּלִי",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h1d63cb27.mp3",
+   "text": "שַׂחְקָן",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h1d63cb27.mp3",
+   "text": "שַׂחְקָן",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hb0880870.mp3",
+   "text": "שִׁירָה",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hb0880870.mp3",
+   "text": "שִׁירָה",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h1a49a011.mp3",
+   "text": "לַחְמָנִיָּה",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h1a49a011.mp3",
+   "text": "לַחְמָנִיָּה",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hc0cdd8d1.mp3",
+   "text": "הִגִּישׁ",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hc0cdd8d1.mp3",
+   "text": "הִגִּישׁ",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h89e2dc0a.mp3",
+   "text": "צָפָה",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h89e2dc0a.mp3",
+   "text": "צָפָה",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h2e7afc6f.mp3",
+   "text": "נִכְלַל",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h2e7afc6f.mp3",
+   "text": "נִכְלַל",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h623ae73e.mp3",
+   "text": "כְּאִלּוּ",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h623ae73e.mp3",
+   "text": "כְּאִלּוּ",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h836ce03d.mp3",
+   "text": "סִכּוּן",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h836ce03d.mp3",
+   "text": "סִכּוּן",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hf1b8cedf.mp3",
+   "text": "עֵנָב",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hf1b8cedf.mp3",
+   "text": "עֵנָב",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/he7a946d2.mp3",
+   "text": "חֲרֹשֶׁת",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/he7a946d2.mp3",
+   "text": "חֲרֹשֶׁת",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h8773ba5a.mp3",
+   "text": "מִסְחָרִי",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h8773ba5a.mp3",
+   "text": "מִסְחָרִי",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h569ba9f0.mp3",
+   "text": "פִּרְסוּם",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h569ba9f0.mp3",
+   "text": "פִּרְסוּם",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h77e249fd.mp3",
+   "text": "הִתְקַבֵּל",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h77e249fd.mp3",
+   "text": "הִתְקַבֵּל",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h896ec624.mp3",
+   "text": "גְּנָזִים",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h896ec624.mp3",
+   "text": "גְּנָזִים",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h5c0abbc6.mp3",
+   "text": "נִקּוּד",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h5c0abbc6.mp3",
+   "text": "נִקּוּד",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hd95adc7d.mp3",
+   "text": "מָגָזִין",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hd95adc7d.mp3",
+   "text": "מָגָזִין",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h3b306d6b.mp3",
+   "text": "פְלֶאשׁ",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h3b306d6b.mp3",
+   "text": "פְלֶאשׁ",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h9a3aad33.mp3",
+   "text": "צַעֲצוּעַ",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h9a3aad33.mp3",
+   "text": "צַעֲצוּעַ",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/habbc6722.mp3",
+   "text": "גּוֹלְף",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/habbc6722.mp3",
+   "text": "גּוֹלְף",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hcc846f14.mp3",
+   "text": "חַיָּט",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hcc846f14.mp3",
+   "text": "חַיָּט",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hd6b91f27.mp3",
+   "text": "עָז",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hd6b91f27.mp3",
+   "text": "עָז",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h84320245.mp3",
+   "text": "הוּרַד",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h84320245.mp3",
+   "text": "הוּרַד",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hb8258906.mp3",
+   "text": "הִנְדֵּס",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hb8258906.mp3",
+   "text": "הִנְדֵּס",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h6f8f17c8.mp3",
+   "text": "אַלְחוּטִי",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h6f8f17c8.mp3",
+   "text": "אַלְחוּטִי",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h90af1040.mp3",
+   "text": "רִשָּׁיוֹן",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h90af1040.mp3",
+   "text": "רִשָּׁיוֹן",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h41196f63.mp3",
+   "text": "אֲגַם",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h41196f63.mp3",
+   "text": "אֲגַם",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h81933231.mp3",
+   "text": "הֻשְׁעָה",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h81933231.mp3",
+   "text": "הֻשְׁעָה",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h5fa10d41.mp3",
+   "text": "הִתְאַמֵּן",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h5fa10d41.mp3",
+   "text": "הִתְאַמֵּן",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h63cd6410.mp3",
+   "text": "הִתְכַּתֵּב",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h63cd6410.mp3",
+   "text": "הִתְכַּתֵּב",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hcaeabcda.mp3",
+   "text": "הִזְדָּרֵז",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hcaeabcda.mp3",
+   "text": "הִזְדָּרֵז",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h1f115a5a.mp3",
+   "text": "אִבּוּד",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h1f115a5a.mp3",
+   "text": "אִבּוּד",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h8f740bcd.mp3",
+   "text": "תִּיֵּג",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h8f740bcd.mp3",
+   "text": "תִּיֵּג",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hdcd8fed1.mp3",
+   "text": "הִתְרוֹמֵם",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hdcd8fed1.mp3",
+   "text": "הִתְרוֹמֵם",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/he2a71178.mp3",
+   "text": "נוֹצַר",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/he2a71178.mp3",
+   "text": "נוֹצַר",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h277a746a.mp3",
+   "text": "פִּרְסֵם",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h277a746a.mp3",
+   "text": "פִּרְסֵם",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hb4fa99fd.mp3",
+   "text": "מַמְלָכָה",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hb4fa99fd.mp3",
+   "text": "מַמְלָכָה",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h6bc9b91c.mp3",
+   "text": "מַחְשָׁבָה",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h6bc9b91c.mp3",
+   "text": "מַחְשָׁבָה",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h2d2dc4db.mp3",
+   "text": "קֻפְסָה",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h2d2dc4db.mp3",
+   "text": "קֻפְסָה",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h96db6897.mp3",
+   "text": "נַעַל",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h96db6897.mp3",
+   "text": "נַעַל",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hf0cc7b05.mp3",
+   "text": "סִכּוּם",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hf0cc7b05.mp3",
+   "text": "סִכּוּם",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h83157e63.mp3",
+   "text": "הִתְכַּוֵּן",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h83157e63.mp3",
+   "text": "הִתְכַּוֵּן",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h102e6a05.mp3",
+   "text": "סוֹכְנוּת",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h102e6a05.mp3",
+   "text": "סוֹכְנוּת",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h91ed692a.mp3",
+   "text": "מַעֲרָבִי",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h91ed692a.mp3",
+   "text": "מַעֲרָבִי",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h500cfa93.mp3",
+   "text": "נִרְאָה",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h500cfa93.mp3",
+   "text": "נִרְאָה",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hf7e5d871.mp3",
+   "text": "נָמֵל",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hf7e5d871.mp3",
+   "text": "נָמֵל",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hceadb4e3.mp3",
+   "text": "אַלְבּוֹם",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hceadb4e3.mp3",
+   "text": "אַלְבּוֹם",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h0421698f.mp3",
+   "text": "אֲזוֹרִי",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h0421698f.mp3",
+   "text": "אֲזוֹרִי",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h77e589a2.mp3",
+   "text": "בְּרִיחַ",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h77e589a2.mp3",
+   "text": "בְּרִיחַ",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hb82aae1f.mp3",
+   "text": "מוֹסָד",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hb82aae1f.mp3",
+   "text": "מוֹסָד",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hbbccf123.mp3",
+   "text": "כָּפוּל",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hbbccf123.mp3",
+   "text": "כָּפוּל",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h7048ce18.mp3",
+   "text": "נַקְנִיקִיָּה",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h7048ce18.mp3",
+   "text": "נַקְנִיקִיָּה",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h899712a2.mp3",
+   "text": "הֶעֱבִיר",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h899712a2.mp3",
+   "text": "הֶעֱבִיר",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h0c003f64.mp3",
+   "text": "הֻכְרַח",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h0c003f64.mp3",
+   "text": "הֻכְרַח",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h92d6f08b.mp3",
+   "text": "עוֹנָה",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h92d6f08b.mp3",
+   "text": "עוֹנָה",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h76928365.mp3",
+   "text": "דַּפָּס",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h76928365.mp3",
+   "text": "דַּפָּס",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h6f5f6995.mp3",
+   "text": "יָעִיל",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h6f5f6995.mp3",
+   "text": "יָעִיל",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h3f6fad99.mp3",
+   "text": "הִתְבַּקֵּשׁ",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h3f6fad99.mp3",
+   "text": "הִתְבַּקֵּשׁ",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h7e873acc.mp3",
+   "text": "בְּחִירָה",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h7e873acc.mp3",
+   "text": "בְּחִירָה",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hcfd604ca.mp3",
+   "text": "אָבוּד",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hcfd604ca.mp3",
+   "text": "אָבוּד",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hd3b95011.mp3",
+   "text": "סִיּוּר",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hd3b95011.mp3",
+   "text": "סִיּוּר",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h2f67dd06.mp3",
+   "text": "תַּפְרִיט",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h2f67dd06.mp3",
+   "text": "תַּפְרִיט",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h321b69ed.mp3",
+   "text": "מַשְׁכַּנְתָּה",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h321b69ed.mp3",
+   "text": "מַשְׁכַּנְתָּה",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hbe53a0c5.mp3",
+   "text": "הַלְוַאי",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hbe53a0c5.mp3",
+   "text": "הַלְוַאי",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h4aa48d73.mp3",
+   "text": "תַּאֲגִיד",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h4aa48d73.mp3",
+   "text": "תַּאֲגִיד",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hfee17c02.mp3",
+   "text": "אַיִן",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hfee17c02.mp3",
+   "text": "אַיִן",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h2155fa8e.mp3",
+   "text": "רִיצָה",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h2155fa8e.mp3",
+   "text": "רִיצָה",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hc37fc45c.mp3",
+   "text": "לְדַעַת־",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hc37fc45c.mp3",
+   "text": "לְדַעַת־",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hc566720b.mp3",
+   "text": "גָּז",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hc566720b.mp3",
+   "text": "גָּז",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hf0323129.mp3",
+   "text": "אֻמָּנוּת",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hf0323129.mp3",
+   "text": "אֻמָּנוּת",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h0b507920.mp3",
+   "text": "שִׂיחַ",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h0b507920.mp3",
+   "text": "שִׂיחַ",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h2ae7caca.mp3",
+   "text": "הַחְלָטָה",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h2ae7caca.mp3",
+   "text": "הַחְלָטָה",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h619bd725.mp3",
+   "text": "עֲנָקִי",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h619bd725.mp3",
+   "text": "עֲנָקִי",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/ha17ab459.mp3",
+   "text": "חוּט",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/ha17ab459.mp3",
+   "text": "חוּט",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h389f0f18.mp3",
+   "text": "חֲלֻקָּה",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h389f0f18.mp3",
+   "text": "חֲלֻקָּה",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/h1f49bdd9.mp3",
+   "text": "לֶסְבִּית",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/h1f49bdd9.mp3",
+   "text": "לֶסְבִּית",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/m/israeli/word/hb3d76616.mp3",
+   "text": "הִתְנִיעַ",
+   "voice": "m",
+   "family": "wavenet",
+   "mode": "new"
+  },
+  {
+   "path": "audio/f/israeli/word/hb3d76616.mp3",
+   "text": "הִתְנִיעַ",
+   "voice": "f",
+   "family": "wavenet",
+   "mode": "new"
+  }
+ ],
+ "held": [
+  {
+   "path": "audio/m/israeli/line/hallel-117-l1.mp3",
+   "why": "held for a divine-name or wording decision (docs/sensitivity/OPEN.md, docs/review/JOHN-DECISIONS.md)"
+  },
+  {
+   "path": "audio/f/israeli/line/hallel-117-l1.mp3",
+   "why": "held for a divine-name or wording decision (docs/sensitivity/OPEN.md, docs/review/JOHN-DECISIONS.md)"
+  },
+  {
+   "path": "audio/m/israeli/line/hallel-117-l2.mp3",
+   "why": "held for a divine-name or wording decision (docs/sensitivity/OPEN.md, docs/review/JOHN-DECISIONS.md)"
+  },
+  {
+   "path": "audio/f/israeli/line/hallel-117-l2.mp3",
+   "why": "held for a divine-name or wording decision (docs/sensitivity/OPEN.md, docs/review/JOHN-DECISIONS.md)"
+  },
+  {
+   "path": "audio/m/israeli/word/h507d8c17.mp3",
+   "why": "pronunciation flag (docs/audio/NEXT-CLIPS-EXCLUDED.csv)"
+  },
+  {
+   "path": "audio/f/israeli/word/h507d8c17.mp3",
+   "why": "pronunciation flag (docs/audio/NEXT-CLIPS-EXCLUDED.csv)"
+  },
+  {
+   "path": "audio/m/israeli/word/h1f6da8d7.mp3",
+   "why": "pronunciation flag (docs/audio/NEXT-CLIPS-EXCLUDED.csv)"
+  },
+  {
+   "path": "audio/f/israeli/word/h1f6da8d7.mp3",
+   "why": "pronunciation flag (docs/audio/NEXT-CLIPS-EXCLUDED.csv)"
+  },
+  {
+   "path": "audio/m/israeli/word/h974f415a.mp3",
+   "why": "pronunciation flag (docs/audio/NEXT-CLIPS-EXCLUDED.csv)"
+  },
+  {
+   "path": "audio/f/israeli/word/h974f415a.mp3",
+   "why": "pronunciation flag (docs/audio/NEXT-CLIPS-EXCLUDED.csv)"
+  },
+  {
+   "path": "audio/m/israeli/word/h183695be.mp3",
+   "why": "pronunciation flag (docs/audio/NEXT-CLIPS-EXCLUDED.csv)"
+  },
+  {
+   "path": "audio/f/israeli/word/h183695be.mp3",
+   "why": "pronunciation flag (docs/audio/NEXT-CLIPS-EXCLUDED.csv)"
+  },
+  {
+   "path": "audio/m/israeli/word/pd7ec61e7.mp3",
+   "why": "pronunciation flag (docs/audio/NEXT-CLIPS-EXCLUDED.csv)"
+  },
+  {
+   "path": "audio/f/israeli/word/pd7ec61e7.mp3",
+   "why": "pronunciation flag (docs/audio/NEXT-CLIPS-EXCLUDED.csv)"
+  },
+  {
+   "path": "audio/m/israeli/word/h603f9849.mp3",
+   "why": "pronunciation flag (docs/audio/NEXT-CLIPS-EXCLUDED.csv)"
+  },
+  {
+   "path": "audio/f/israeli/word/h603f9849.mp3",
+   "why": "pronunciation flag (docs/audio/NEXT-CLIPS-EXCLUDED.csv)"
+  },
+  {
+   "path": "audio/m/israeli/word/h8fd77ea3.mp3",
+   "why": "pronunciation flag (docs/audio/NEXT-CLIPS-EXCLUDED.csv)"
+  },
+  {
+   "path": "audio/f/israeli/word/h8fd77ea3.mp3",
+   "why": "pronunciation flag (docs/audio/NEXT-CLIPS-EXCLUDED.csv)"
+  },
+  {
+   "path": "audio/m/israeli/word/h910acd3b.mp3",
+   "why": "pronunciation flag (docs/audio/NEXT-CLIPS-EXCLUDED.csv)"
+  },
+  {
+   "path": "audio/f/israeli/word/h910acd3b.mp3",
+   "why": "pronunciation flag (docs/audio/NEXT-CLIPS-EXCLUDED.csv)"
+  },
+  {
+   "path": "audio/m/israeli/word/h632445c3.mp3",
+   "why": "pronunciation flag (docs/audio/NEXT-CLIPS-EXCLUDED.csv)"
+  },
+  {
+   "path": "audio/f/israeli/word/h632445c3.mp3",
+   "why": "pronunciation flag (docs/audio/NEXT-CLIPS-EXCLUDED.csv)"
+  },
+  {
+   "path": "audio/m/israeli/word/hdabcbc2f.mp3",
+   "why": "pronunciation flag (docs/audio/NEXT-CLIPS-EXCLUDED.csv)"
+  },
+  {
+   "path": "audio/f/israeli/word/hdabcbc2f.mp3",
+   "why": "pronunciation flag (docs/audio/NEXT-CLIPS-EXCLUDED.csv)"
+  },
+  {
+   "path": "audio/m/israeli/word/h9fad90d1.mp3",
+   "why": "pronunciation flag (docs/audio/NEXT-CLIPS-EXCLUDED.csv)"
+  },
+  {
+   "path": "audio/f/israeli/word/h9fad90d1.mp3",
+   "why": "pronunciation flag (docs/audio/NEXT-CLIPS-EXCLUDED.csv)"
+  },
+  {
+   "path": "audio/m/israeli/word/h970ac8ad.mp3",
+   "why": "pronunciation flag (docs/audio/NEXT-CLIPS-EXCLUDED.csv)"
+  },
+  {
+   "path": "audio/f/israeli/word/h970ac8ad.mp3",
+   "why": "pronunciation flag (docs/audio/NEXT-CLIPS-EXCLUDED.csv)"
+  },
+  {
+   "path": "audio/m/israeli/word/h5c4d412f.mp3",
+   "why": "pronunciation flag (docs/audio/NEXT-CLIPS-EXCLUDED.csv)"
+  },
+  {
+   "path": "audio/f/israeli/word/h5c4d412f.mp3",
+   "why": "pronunciation flag (docs/audio/NEXT-CLIPS-EXCLUDED.csv)"
+  },
+  {
+   "path": "audio/m/israeli/word/hdc6ba42f.mp3",
+   "why": "pronunciation flag (docs/audio/NEXT-CLIPS-EXCLUDED.csv)"
+  },
+  {
+   "path": "audio/f/israeli/word/hdc6ba42f.mp3",
+   "why": "pronunciation flag (docs/audio/NEXT-CLIPS-EXCLUDED.csv)"
+  },
+  {
+   "path": "audio/m/israeli/word/h0ff20764.mp3",
+   "why": "pronunciation flag (docs/audio/NEXT-CLIPS-EXCLUDED.csv)"
+  },
+  {
+   "path": "audio/f/israeli/word/h0ff20764.mp3",
+   "why": "pronunciation flag (docs/audio/NEXT-CLIPS-EXCLUDED.csv)"
+  },
+  {
+   "path": "audio/m/israeli/word/h97e8fe6c.mp3",
+   "why": "pronunciation flag (docs/audio/NEXT-CLIPS-EXCLUDED.csv)"
+  },
+  {
+   "path": "audio/f/israeli/word/h97e8fe6c.mp3",
+   "why": "pronunciation flag (docs/audio/NEXT-CLIPS-EXCLUDED.csv)"
+  },
+  {
+   "path": "audio/m/israeli/word/p1a61d98f.mp3",
+   "why": "pronunciation flag (docs/audio/NEXT-CLIPS-EXCLUDED.csv)"
+  },
+  {
+   "path": "audio/f/israeli/word/p1a61d98f.mp3",
+   "why": "pronunciation flag (docs/audio/NEXT-CLIPS-EXCLUDED.csv)"
+  },
+  {
+   "path": "audio/m/israeli/word/h9135c53f.mp3",
+   "why": "pronunciation flag (docs/audio/NEXT-CLIPS-EXCLUDED.csv)"
+  },
+  {
+   "path": "audio/f/israeli/word/h9135c53f.mp3",
+   "why": "pronunciation flag (docs/audio/NEXT-CLIPS-EXCLUDED.csv)"
+  },
+  {
+   "path": "audio/m/israeli/word/p586200b8.mp3",
+   "why": "pronunciation flag (docs/audio/NEXT-CLIPS-EXCLUDED.csv)"
+  },
+  {
+   "path": "audio/f/israeli/word/p586200b8.mp3",
+   "why": "pronunciation flag (docs/audio/NEXT-CLIPS-EXCLUDED.csv)"
+  },
+  {
+   "path": "audio/m/israeli/word/ha57a2fee.mp3",
+   "why": "pronunciation flag (docs/audio/NEXT-CLIPS-EXCLUDED.csv)"
+  },
+  {
+   "path": "audio/f/israeli/word/ha57a2fee.mp3",
+   "why": "pronunciation flag (docs/audio/NEXT-CLIPS-EXCLUDED.csv)"
+  },
+  {
+   "path": "audio/m/israeli/word/p0abde638.mp3",
+   "why": "pronunciation flag (docs/audio/NEXT-CLIPS-EXCLUDED.csv)"
+  },
+  {
+   "path": "audio/f/israeli/word/p0abde638.mp3",
+   "why": "pronunciation flag (docs/audio/NEXT-CLIPS-EXCLUDED.csv)"
+  },
+  {
+   "path": "audio/m/israeli/word/hd34eb61d.mp3",
+   "why": "pronunciation flag (docs/audio/NEXT-CLIPS-EXCLUDED.csv)"
+  },
+  {
+   "path": "audio/f/israeli/word/hd34eb61d.mp3",
+   "why": "pronunciation flag (docs/audio/NEXT-CLIPS-EXCLUDED.csv)"
+  },
+  {
+   "path": "audio/m/israeli/word/h251d910b.mp3",
+   "why": "pronunciation flag (docs/audio/NEXT-CLIPS-EXCLUDED.csv)"
+  },
+  {
+   "path": "audio/f/israeli/word/h251d910b.mp3",
+   "why": "pronunciation flag (docs/audio/NEXT-CLIPS-EXCLUDED.csv)"
+  },
+  {
+   "path": "audio/m/israeli/word/h7e6e70d1.mp3",
+   "why": "pronunciation flag (docs/audio/NEXT-CLIPS-EXCLUDED.csv)"
+  },
+  {
+   "path": "audio/f/israeli/word/h7e6e70d1.mp3",
+   "why": "pronunciation flag (docs/audio/NEXT-CLIPS-EXCLUDED.csv)"
+  },
+  {
+   "path": "audio/m/israeli/word/h52696cec.mp3",
+   "why": "pronunciation flag (docs/audio/NEXT-CLIPS-EXCLUDED.csv)"
+  },
+  {
+   "path": "audio/f/israeli/word/h52696cec.mp3",
+   "why": "pronunciation flag (docs/audio/NEXT-CLIPS-EXCLUDED.csv)"
+  },
+  {
+   "path": "audio/m/israeli/word/h142beafd.mp3",
+   "why": "pronunciation flag (docs/audio/NEXT-CLIPS-EXCLUDED.csv)"
+  },
+  {
+   "path": "audio/f/israeli/word/h142beafd.mp3",
+   "why": "pronunciation flag (docs/audio/NEXT-CLIPS-EXCLUDED.csv)"
+  },
+  {
+   "path": "audio/m/israeli/word/hd8181d07.mp3",
+   "why": "pronunciation flag (docs/audio/NEXT-CLIPS-EXCLUDED.csv)"
+  },
+  {
+   "path": "audio/f/israeli/word/hd8181d07.mp3",
+   "why": "pronunciation flag (docs/audio/NEXT-CLIPS-EXCLUDED.csv)"
+  },
+  {
+   "path": "audio/m/israeli/word/he73379ab.mp3",
+   "why": "pronunciation flag (docs/audio/NEXT-CLIPS-EXCLUDED.csv)"
+  },
+  {
+   "path": "audio/f/israeli/word/he73379ab.mp3",
+   "why": "pronunciation flag (docs/audio/NEXT-CLIPS-EXCLUDED.csv)"
+  },
+  {
+   "path": "audio/m/israeli/word/h9343cbdb.mp3",
+   "why": "pronunciation flag (docs/audio/NEXT-CLIPS-EXCLUDED.csv)"
+  },
+  {
+   "path": "audio/f/israeli/word/h9343cbdb.mp3",
+   "why": "pronunciation flag (docs/audio/NEXT-CLIPS-EXCLUDED.csv)"
+  }
+ ]
+}

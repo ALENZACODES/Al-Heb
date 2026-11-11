@@ -91570,12 +91570,13 @@
     "kind": "word",
     "id": "hallel-113-1-w2",
     "text": "יָהּ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "yah",
     "english": "",
-    "aliasOf": "line/hallel-113-1"
+    "aliasOf": "line/hallel-113-1",
+    "copyOf": "word/havdalah-opening-w10"
   },
   {
     "path": "audio/f/israeli/word/hallel-113-1-w2.mp3",
@@ -91584,12 +91585,13 @@
     "kind": "word",
     "id": "hallel-113-1-w2",
     "text": "יָהּ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "yah",
     "english": "",
-    "aliasOf": "line/hallel-113-1"
+    "aliasOf": "line/hallel-113-1",
+    "copyOf": "word/havdalah-opening-w10"
   },
   {
     "path": "audio/m/israeli/word/hallel-113-1-w3.mp3",
@@ -91654,12 +91656,13 @@
     "kind": "word",
     "id": "hallel-113-1-w5",
     "text": "אֲדֹנָי",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "adonai",
     "english": "",
-    "aliasOf": "line/hallel-113-1"
+    "aliasOf": "line/hallel-113-1",
+    "copyOf": "word/r15-w2"
   },
   {
     "path": "audio/f/israeli/word/hallel-113-1-w5.mp3",
@@ -91668,12 +91671,13 @@
     "kind": "word",
     "id": "hallel-113-1-w5",
     "text": "אֲדֹנָי",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "adonai",
     "english": "",
-    "aliasOf": "line/hallel-113-1"
+    "aliasOf": "line/hallel-113-1",
+    "copyOf": "word/r15-w2"
   },
   {
     "path": "audio/m/israeli/word/hallel-113-1-w6.mp3",
@@ -91710,12 +91714,13 @@
     "kind": "word",
     "id": "hallel-113-1-w7",
     "text": "אֶת־שֵׁם",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "et-shem",
     "english": "",
-    "aliasOf": "line/hallel-113-1"
+    "aliasOf": "line/hallel-113-1",
+    "copyOf": "word/yehalelu-w2"
   },
   {
     "path": "audio/f/israeli/word/hallel-113-1-w7.mp3",
@@ -91724,12 +91729,13 @@
     "kind": "word",
     "id": "hallel-113-1-w7",
     "text": "אֶת־שֵׁם",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "et-shem",
     "english": "",
-    "aliasOf": "line/hallel-113-1"
+    "aliasOf": "line/hallel-113-1",
+    "copyOf": "word/yehalelu-w2"
   },
   {
     "path": "audio/m/israeli/word/hallel-113-1-w8.mp3",
@@ -91738,12 +91744,13 @@
     "kind": "word",
     "id": "hallel-113-1-w8",
     "text": "אֲדֹנָי",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "adonai",
     "english": "",
-    "aliasOf": "line/hallel-113-1"
+    "aliasOf": "line/hallel-113-1",
+    "copyOf": "word/r15-w2"
   },
   {
     "path": "audio/f/israeli/word/hallel-113-1-w8.mp3",
@@ -91752,12 +91759,13 @@
     "kind": "word",
     "id": "hallel-113-1-w8",
     "text": "אֲדֹנָי",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "adonai",
     "english": "",
-    "aliasOf": "line/hallel-113-1"
+    "aliasOf": "line/hallel-113-1",
+    "copyOf": "word/r15-w2"
   },
   {
     "path": "audio/m/israeli/word/hallel-115-1-w1.mp3",
@@ -91766,12 +91774,13 @@
     "kind": "word",
     "id": "hallel-115-1-w1",
     "text": "לֹא",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "lo",
     "english": "",
-    "aliasOf": "line/hallel-115-1"
+    "aliasOf": "line/hallel-115-1",
+    "copyOf": "word/r07-w4"
   },
   {
     "path": "audio/f/israeli/word/hallel-115-1-w1.mp3",
@@ -91780,12 +91789,13 @@
     "kind": "word",
     "id": "hallel-115-1-w1",
     "text": "לֹא",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "lo",
     "english": "",
-    "aliasOf": "line/hallel-115-1"
+    "aliasOf": "line/hallel-115-1",
+    "copyOf": "word/r07-w4"
   },
   {
     "path": "audio/m/israeli/word/hallel-115-1-w2.mp3",
@@ -91794,12 +91804,13 @@
     "kind": "word",
     "id": "hallel-115-1-w2",
     "text": "לָנוּ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "lanu",
     "english": "",
-    "aliasOf": "line/hallel-115-1"
+    "aliasOf": "line/hallel-115-1",
+    "copyOf": "word/torah-bless-1-w12"
   },
   {
     "path": "audio/f/israeli/word/hallel-115-1-w2.mp3",
@@ -91808,12 +91819,13 @@
     "kind": "word",
     "id": "hallel-115-1-w2",
     "text": "לָנוּ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "lanu",
     "english": "",
-    "aliasOf": "line/hallel-115-1"
+    "aliasOf": "line/hallel-115-1",
+    "copyOf": "word/torah-bless-1-w12"
   },
   {
     "path": "audio/m/israeli/word/hallel-115-1-w3.mp3",
@@ -91822,12 +91834,13 @@
     "kind": "word",
     "id": "hallel-115-1-w3",
     "text": "אֲדֹנָי",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "adonai",
     "english": "",
-    "aliasOf": "line/hallel-115-1"
+    "aliasOf": "line/hallel-115-1",
+    "copyOf": "word/r15-w2"
   },
   {
     "path": "audio/f/israeli/word/hallel-115-1-w3.mp3",
@@ -91836,12 +91849,13 @@
     "kind": "word",
     "id": "hallel-115-1-w3",
     "text": "אֲדֹנָי",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "adonai",
     "english": "",
-    "aliasOf": "line/hallel-115-1"
+    "aliasOf": "line/hallel-115-1",
+    "copyOf": "word/r15-w2"
   },
   {
     "path": "audio/m/israeli/word/hallel-115-1-w4.mp3",
@@ -91850,12 +91864,13 @@
     "kind": "word",
     "id": "hallel-115-1-w4",
     "text": "לֹא",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "lo",
     "english": "",
-    "aliasOf": "line/hallel-115-1"
+    "aliasOf": "line/hallel-115-1",
+    "copyOf": "word/r07-w4"
   },
   {
     "path": "audio/f/israeli/word/hallel-115-1-w4.mp3",
@@ -91864,12 +91879,13 @@
     "kind": "word",
     "id": "hallel-115-1-w4",
     "text": "לֹא",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "lo",
     "english": "",
-    "aliasOf": "line/hallel-115-1"
+    "aliasOf": "line/hallel-115-1",
+    "copyOf": "word/r07-w4"
   },
   {
     "path": "audio/m/israeli/word/hallel-115-1-w5.mp3",
@@ -91878,12 +91894,13 @@
     "kind": "word",
     "id": "hallel-115-1-w5",
     "text": "לָנוּ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "lanu",
     "english": "",
-    "aliasOf": "line/hallel-115-1"
+    "aliasOf": "line/hallel-115-1",
+    "copyOf": "word/torah-bless-1-w12"
   },
   {
     "path": "audio/f/israeli/word/hallel-115-1-w5.mp3",
@@ -91892,12 +91909,13 @@
     "kind": "word",
     "id": "hallel-115-1-w5",
     "text": "לָנוּ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "lanu",
     "english": "",
-    "aliasOf": "line/hallel-115-1"
+    "aliasOf": "line/hallel-115-1",
+    "copyOf": "word/torah-bless-1-w12"
   },
   {
     "path": "audio/m/israeli/word/hallel-115-1-w6.mp3",
@@ -91962,12 +91980,13 @@
     "kind": "word",
     "id": "hallel-115-1-w8",
     "text": "כָּבוֹד",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "kavod",
     "english": "",
-    "aliasOf": "line/hallel-115-1"
+    "aliasOf": "line/hallel-115-1",
+    "copyOf": "word/h9dcc35dc"
   },
   {
     "path": "audio/f/israeli/word/hallel-115-1-w8.mp3",
@@ -91976,12 +91995,13 @@
     "kind": "word",
     "id": "hallel-115-1-w8",
     "text": "כָּבוֹד",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "kavod",
     "english": "",
-    "aliasOf": "line/hallel-115-1"
+    "aliasOf": "line/hallel-115-1",
+    "copyOf": "word/h9dcc35dc"
   },
   {
     "path": "audio/m/israeli/word/hallel-115-1-w9.mp3",
@@ -92074,12 +92094,13 @@
     "kind": "word",
     "id": "hallel-116-13-w2",
     "text": "אֶשָּׂא",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "esa",
     "english": "",
-    "aliasOf": "line/hallel-116-13"
+    "aliasOf": "line/hallel-116-13",
+    "copyOf": "word/havdalah-opening-w57"
   },
   {
     "path": "audio/f/israeli/word/hallel-116-13-w2.mp3",
@@ -92088,12 +92109,13 @@
     "kind": "word",
     "id": "hallel-116-13-w2",
     "text": "אֶשָּׂא",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "esa",
     "english": "",
-    "aliasOf": "line/hallel-116-13"
+    "aliasOf": "line/hallel-116-13",
+    "copyOf": "word/havdalah-opening-w57"
   },
   {
     "path": "audio/m/israeli/word/hallel-116-13-w3.mp3",
@@ -92102,12 +92124,13 @@
     "kind": "word",
     "id": "hallel-116-13-w3",
     "text": "וּבְשֵׁם",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "uveshem",
     "english": "",
-    "aliasOf": "line/hallel-116-13"
+    "aliasOf": "line/hallel-116-13",
+    "copyOf": "word/havdalah-opening-w58"
   },
   {
     "path": "audio/f/israeli/word/hallel-116-13-w3.mp3",
@@ -92116,12 +92139,13 @@
     "kind": "word",
     "id": "hallel-116-13-w3",
     "text": "וּבְשֵׁם",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "uveshem",
     "english": "",
-    "aliasOf": "line/hallel-116-13"
+    "aliasOf": "line/hallel-116-13",
+    "copyOf": "word/havdalah-opening-w58"
   },
   {
     "path": "audio/m/israeli/word/hallel-116-13-w4.mp3",
@@ -92130,12 +92154,13 @@
     "kind": "word",
     "id": "hallel-116-13-w4",
     "text": "אֲדֹנָי",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "adonai",
     "english": "",
-    "aliasOf": "line/hallel-116-13"
+    "aliasOf": "line/hallel-116-13",
+    "copyOf": "word/r15-w2"
   },
   {
     "path": "audio/f/israeli/word/hallel-116-13-w4.mp3",
@@ -92144,12 +92169,13 @@
     "kind": "word",
     "id": "hallel-116-13-w4",
     "text": "אֲדֹנָי",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "adonai",
     "english": "",
-    "aliasOf": "line/hallel-116-13"
+    "aliasOf": "line/hallel-116-13",
+    "copyOf": "word/r15-w2"
   },
   {
     "path": "audio/m/israeli/word/hallel-116-13-w5.mp3",
@@ -92158,12 +92184,13 @@
     "kind": "word",
     "id": "hallel-116-13-w5",
     "text": "אֶקְרָא׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "ekra",
     "english": "",
-    "aliasOf": "line/hallel-116-13"
+    "aliasOf": "line/hallel-116-13",
+    "copyOf": "word/adon-olam-1-w59"
   },
   {
     "path": "audio/f/israeli/word/hallel-116-13-w5.mp3",
@@ -92172,12 +92199,13 @@
     "kind": "word",
     "id": "hallel-116-13-w5",
     "text": "אֶקְרָא׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "ekra",
     "english": "",
-    "aliasOf": "line/hallel-116-13"
+    "aliasOf": "line/hallel-116-13",
+    "copyOf": "word/adon-olam-1-w59"
   },
   {
     "path": "audio/m/israeli/word/hallel-117-w1.mp3",
@@ -92326,12 +92354,13 @@
     "kind": "word",
     "id": "hallel-117-w6",
     "text": "כִּי",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "ki",
     "english": "",
-    "aliasOf": "line/hallel-117-l1"
+    "aliasOf": "line/hallel-117-l1",
+    "copyOf": "word/r10-w1"
   },
   {
     "path": "audio/f/israeli/word/hallel-117-w6.mp3",
@@ -92340,12 +92369,13 @@
     "kind": "word",
     "id": "hallel-117-w6",
     "text": "כִּי",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "ki",
     "english": "",
-    "aliasOf": "line/hallel-117-l1"
+    "aliasOf": "line/hallel-117-l1",
+    "copyOf": "word/r10-w1"
   },
   {
     "path": "audio/m/israeli/word/hallel-117-w7.mp3",
@@ -92382,12 +92412,13 @@
     "kind": "word",
     "id": "hallel-117-w8",
     "text": "עָלֵינוּ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "aleinu",
     "english": "",
-    "aliasOf": "line/hallel-117-l1"
+    "aliasOf": "line/hallel-117-l1",
+    "copyOf": "word/r44-w1"
   },
   {
     "path": "audio/f/israeli/word/hallel-117-w8.mp3",
@@ -92396,12 +92427,13 @@
     "kind": "word",
     "id": "hallel-117-w8",
     "text": "עָלֵינוּ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "aleinu",
     "english": "",
-    "aliasOf": "line/hallel-117-l1"
+    "aliasOf": "line/hallel-117-l1",
+    "copyOf": "word/r44-w1"
   },
   {
     "path": "audio/m/israeli/word/hallel-117-w9.mp3",
@@ -92410,12 +92442,13 @@
     "kind": "word",
     "id": "hallel-117-w9",
     "text": "חַסְדּוֹ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "chasdo",
     "english": "",
-    "aliasOf": "line/hallel-117-l1"
+    "aliasOf": "line/hallel-117-l1",
+    "copyOf": "word/birkat-hamazon-1-w22"
   },
   {
     "path": "audio/f/israeli/word/hallel-117-w9.mp3",
@@ -92424,12 +92457,13 @@
     "kind": "word",
     "id": "hallel-117-w9",
     "text": "חַסְדּוֹ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "chasdo",
     "english": "",
-    "aliasOf": "line/hallel-117-l1"
+    "aliasOf": "line/hallel-117-l1",
+    "copyOf": "word/birkat-hamazon-1-w22"
   },
   {
     "path": "audio/m/israeli/word/hallel-117-w10.mp3",
@@ -92466,12 +92500,13 @@
     "kind": "word",
     "id": "hallel-117-w11",
     "text": "לְעוֹלָם",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "le'olam",
     "english": "",
-    "aliasOf": "line/hallel-117-l1"
+    "aliasOf": "line/hallel-117-l1",
+    "copyOf": "word/r36-w5"
   },
   {
     "path": "audio/f/israeli/word/hallel-117-w11.mp3",
@@ -92480,12 +92515,13 @@
     "kind": "word",
     "id": "hallel-117-w11",
     "text": "לְעוֹלָם",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "le'olam",
     "english": "",
-    "aliasOf": "line/hallel-117-l1"
+    "aliasOf": "line/hallel-117-l1",
+    "copyOf": "word/r36-w5"
   },
   {
     "path": "audio/m/israeli/word/hallel-117-w12.mp3",
@@ -92494,12 +92530,13 @@
     "kind": "word",
     "id": "hallel-117-w12",
     "text": "הַלְלוּ־יָהּ׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "halelu-yah",
     "english": "",
-    "aliasOf": "line/hallel-117-l1"
+    "aliasOf": "line/hallel-117-l1",
+    "copyOf": "word/i-07-w2"
   },
   {
     "path": "audio/f/israeli/word/hallel-117-w12.mp3",
@@ -92508,12 +92545,13 @@
     "kind": "word",
     "id": "hallel-117-w12",
     "text": "הַלְלוּ־יָהּ׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "halelu-yah",
     "english": "",
-    "aliasOf": "line/hallel-117-l1"
+    "aliasOf": "line/hallel-117-l1",
+    "copyOf": "word/i-07-w2"
   },
   {
     "path": "audio/m/israeli/word/hallel-118-1-4-w1.mp3",
@@ -92550,12 +92588,13 @@
     "kind": "word",
     "id": "hallel-118-1-4-w2",
     "text": "לַאֲדֹנָי",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "la'adonai",
     "english": "",
-    "aliasOf": "line/hallel-118-1-4-l1"
+    "aliasOf": "line/hallel-118-1-4-l1",
+    "copyOf": "word/gadlu-w2"
   },
   {
     "path": "audio/f/israeli/word/hallel-118-1-4-w2.mp3",
@@ -92564,12 +92603,13 @@
     "kind": "word",
     "id": "hallel-118-1-4-w2",
     "text": "לַאֲדֹנָי",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "la'adonai",
     "english": "",
-    "aliasOf": "line/hallel-118-1-4-l1"
+    "aliasOf": "line/hallel-118-1-4-l1",
+    "copyOf": "word/gadlu-w2"
   },
   {
     "path": "audio/m/israeli/word/hallel-118-1-4-w3.mp3",
@@ -92606,12 +92646,13 @@
     "kind": "word",
     "id": "hallel-118-1-4-w4",
     "text": "כִּי",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "ki",
     "english": "",
-    "aliasOf": "line/hallel-118-1-4-l1"
+    "aliasOf": "line/hallel-118-1-4-l1",
+    "copyOf": "word/r10-w1"
   },
   {
     "path": "audio/f/israeli/word/hallel-118-1-4-w4.mp3",
@@ -92620,12 +92661,13 @@
     "kind": "word",
     "id": "hallel-118-1-4-w4",
     "text": "כִּי",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "ki",
     "english": "",
-    "aliasOf": "line/hallel-118-1-4-l1"
+    "aliasOf": "line/hallel-118-1-4-l1",
+    "copyOf": "word/r10-w1"
   },
   {
     "path": "audio/m/israeli/word/hallel-118-1-4-w5.mp3",
@@ -92634,12 +92676,13 @@
     "kind": "word",
     "id": "hallel-118-1-4-w5",
     "text": "לְעוֹלָם",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "le'olam",
     "english": "",
-    "aliasOf": "line/hallel-118-1-4-l1"
+    "aliasOf": "line/hallel-118-1-4-l1",
+    "copyOf": "word/r36-w5"
   },
   {
     "path": "audio/f/israeli/word/hallel-118-1-4-w5.mp3",
@@ -92648,12 +92691,13 @@
     "kind": "word",
     "id": "hallel-118-1-4-w5",
     "text": "לְעוֹלָם",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "le'olam",
     "english": "",
-    "aliasOf": "line/hallel-118-1-4-l1"
+    "aliasOf": "line/hallel-118-1-4-l1",
+    "copyOf": "word/r36-w5"
   },
   {
     "path": "audio/m/israeli/word/hallel-118-1-4-w6.mp3",
@@ -92662,12 +92706,13 @@
     "kind": "word",
     "id": "hallel-118-1-4-w6",
     "text": "חַסְדּוֹ׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "chasdo",
     "english": "",
-    "aliasOf": "line/hallel-118-1-4-l1"
+    "aliasOf": "line/hallel-118-1-4-l1",
+    "copyOf": "word/birkat-hamazon-1-w22"
   },
   {
     "path": "audio/f/israeli/word/hallel-118-1-4-w6.mp3",
@@ -92676,12 +92721,13 @@
     "kind": "word",
     "id": "hallel-118-1-4-w6",
     "text": "חַסְדּוֹ׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "chasdo",
     "english": "",
-    "aliasOf": "line/hallel-118-1-4-l1"
+    "aliasOf": "line/hallel-118-1-4-l1",
+    "copyOf": "word/birkat-hamazon-1-w22"
   },
   {
     "path": "audio/m/israeli/word/hallel-118-1-4-w7.mp3",
@@ -92718,12 +92764,13 @@
     "kind": "word",
     "id": "hallel-118-1-4-w8",
     "text": "יִשְׂרָאֵל",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "yisra'el",
     "english": "",
-    "aliasOf": "line/hallel-118-1-4-l1"
+    "aliasOf": "line/hallel-118-1-4-l1",
+    "copyOf": "word/r20-w2"
   },
   {
     "path": "audio/f/israeli/word/hallel-118-1-4-w8.mp3",
@@ -92732,12 +92779,13 @@
     "kind": "word",
     "id": "hallel-118-1-4-w8",
     "text": "יִשְׂרָאֵל",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "yisra'el",
     "english": "",
-    "aliasOf": "line/hallel-118-1-4-l1"
+    "aliasOf": "line/hallel-118-1-4-l1",
+    "copyOf": "word/r20-w2"
   },
   {
     "path": "audio/m/israeli/word/hallel-118-1-4-w9.mp3",
@@ -92746,12 +92794,13 @@
     "kind": "word",
     "id": "hallel-118-1-4-w9",
     "text": "כִּי",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "ki",
     "english": "",
-    "aliasOf": "line/hallel-118-1-4-l1"
+    "aliasOf": "line/hallel-118-1-4-l1",
+    "copyOf": "word/r10-w1"
   },
   {
     "path": "audio/f/israeli/word/hallel-118-1-4-w9.mp3",
@@ -92760,12 +92809,13 @@
     "kind": "word",
     "id": "hallel-118-1-4-w9",
     "text": "כִּי",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "ki",
     "english": "",
-    "aliasOf": "line/hallel-118-1-4-l1"
+    "aliasOf": "line/hallel-118-1-4-l1",
+    "copyOf": "word/r10-w1"
   },
   {
     "path": "audio/m/israeli/word/hallel-118-1-4-w10.mp3",
@@ -92774,12 +92824,13 @@
     "kind": "word",
     "id": "hallel-118-1-4-w10",
     "text": "לְעוֹלָם",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "le'olam",
     "english": "",
-    "aliasOf": "line/hallel-118-1-4-l1"
+    "aliasOf": "line/hallel-118-1-4-l1",
+    "copyOf": "word/r36-w5"
   },
   {
     "path": "audio/f/israeli/word/hallel-118-1-4-w10.mp3",
@@ -92788,12 +92839,13 @@
     "kind": "word",
     "id": "hallel-118-1-4-w10",
     "text": "לְעוֹלָם",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "le'olam",
     "english": "",
-    "aliasOf": "line/hallel-118-1-4-l1"
+    "aliasOf": "line/hallel-118-1-4-l1",
+    "copyOf": "word/r36-w5"
   },
   {
     "path": "audio/m/israeli/word/hallel-118-1-4-w11.mp3",
@@ -92802,12 +92854,13 @@
     "kind": "word",
     "id": "hallel-118-1-4-w11",
     "text": "חַסְדּוֹ׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "chasdo",
     "english": "",
-    "aliasOf": "line/hallel-118-1-4-l1"
+    "aliasOf": "line/hallel-118-1-4-l1",
+    "copyOf": "word/birkat-hamazon-1-w22"
   },
   {
     "path": "audio/f/israeli/word/hallel-118-1-4-w11.mp3",
@@ -92816,12 +92869,13 @@
     "kind": "word",
     "id": "hallel-118-1-4-w11",
     "text": "חַסְדּוֹ׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "chasdo",
     "english": "",
-    "aliasOf": "line/hallel-118-1-4-l1"
+    "aliasOf": "line/hallel-118-1-4-l1",
+    "copyOf": "word/birkat-hamazon-1-w22"
   },
   {
     "path": "audio/m/israeli/word/hallel-118-1-4-w12.mp3",
@@ -92886,12 +92940,13 @@
     "kind": "word",
     "id": "hallel-118-1-4-w14",
     "text": "כִּי",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "ki",
     "english": "",
-    "aliasOf": "line/hallel-118-1-4-l1"
+    "aliasOf": "line/hallel-118-1-4-l1",
+    "copyOf": "word/r10-w1"
   },
   {
     "path": "audio/f/israeli/word/hallel-118-1-4-w14.mp3",
@@ -92900,12 +92955,13 @@
     "kind": "word",
     "id": "hallel-118-1-4-w14",
     "text": "כִּי",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "ki",
     "english": "",
-    "aliasOf": "line/hallel-118-1-4-l1"
+    "aliasOf": "line/hallel-118-1-4-l1",
+    "copyOf": "word/r10-w1"
   },
   {
     "path": "audio/m/israeli/word/hallel-118-1-4-w15.mp3",
@@ -92914,12 +92970,13 @@
     "kind": "word",
     "id": "hallel-118-1-4-w15",
     "text": "לְעוֹלָם",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "le'olam",
     "english": "",
-    "aliasOf": "line/hallel-118-1-4-l1"
+    "aliasOf": "line/hallel-118-1-4-l1",
+    "copyOf": "word/r36-w5"
   },
   {
     "path": "audio/f/israeli/word/hallel-118-1-4-w15.mp3",
@@ -92928,12 +92985,13 @@
     "kind": "word",
     "id": "hallel-118-1-4-w15",
     "text": "לְעוֹלָם",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "le'olam",
     "english": "",
-    "aliasOf": "line/hallel-118-1-4-l1"
+    "aliasOf": "line/hallel-118-1-4-l1",
+    "copyOf": "word/r36-w5"
   },
   {
     "path": "audio/m/israeli/word/hallel-118-1-4-w16.mp3",
@@ -92942,12 +93000,13 @@
     "kind": "word",
     "id": "hallel-118-1-4-w16",
     "text": "חַסְדּוֹ׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "chasdo",
     "english": "",
-    "aliasOf": "line/hallel-118-1-4-l1"
+    "aliasOf": "line/hallel-118-1-4-l1",
+    "copyOf": "word/birkat-hamazon-1-w22"
   },
   {
     "path": "audio/f/israeli/word/hallel-118-1-4-w16.mp3",
@@ -92956,12 +93015,13 @@
     "kind": "word",
     "id": "hallel-118-1-4-w16",
     "text": "חַסְדּוֹ׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "chasdo",
     "english": "",
-    "aliasOf": "line/hallel-118-1-4-l1"
+    "aliasOf": "line/hallel-118-1-4-l1",
+    "copyOf": "word/birkat-hamazon-1-w22"
   },
   {
     "path": "audio/m/israeli/word/hallel-118-1-4-w17.mp3",
@@ -93026,12 +93086,13 @@
     "kind": "word",
     "id": "hallel-118-1-4-w19",
     "text": "אֲדֹנָי",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "adonai",
     "english": "",
-    "aliasOf": "line/hallel-118-1-4-l1"
+    "aliasOf": "line/hallel-118-1-4-l1",
+    "copyOf": "word/r15-w2"
   },
   {
     "path": "audio/f/israeli/word/hallel-118-1-4-w19.mp3",
@@ -93040,12 +93101,13 @@
     "kind": "word",
     "id": "hallel-118-1-4-w19",
     "text": "אֲדֹנָי",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "adonai",
     "english": "",
-    "aliasOf": "line/hallel-118-1-4-l1"
+    "aliasOf": "line/hallel-118-1-4-l1",
+    "copyOf": "word/r15-w2"
   },
   {
     "path": "audio/m/israeli/word/hallel-118-1-4-w20.mp3",
@@ -93054,12 +93116,13 @@
     "kind": "word",
     "id": "hallel-118-1-4-w20",
     "text": "כִּי",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "ki",
     "english": "",
-    "aliasOf": "line/hallel-118-1-4-l1"
+    "aliasOf": "line/hallel-118-1-4-l1",
+    "copyOf": "word/r10-w1"
   },
   {
     "path": "audio/f/israeli/word/hallel-118-1-4-w20.mp3",
@@ -93068,12 +93131,13 @@
     "kind": "word",
     "id": "hallel-118-1-4-w20",
     "text": "כִּי",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "ki",
     "english": "",
-    "aliasOf": "line/hallel-118-1-4-l1"
+    "aliasOf": "line/hallel-118-1-4-l1",
+    "copyOf": "word/r10-w1"
   },
   {
     "path": "audio/m/israeli/word/hallel-118-1-4-w21.mp3",
@@ -93082,12 +93146,13 @@
     "kind": "word",
     "id": "hallel-118-1-4-w21",
     "text": "לְעוֹלָם",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "le'olam",
     "english": "",
-    "aliasOf": "line/hallel-118-1-4-l1"
+    "aliasOf": "line/hallel-118-1-4-l1",
+    "copyOf": "word/r36-w5"
   },
   {
     "path": "audio/f/israeli/word/hallel-118-1-4-w21.mp3",
@@ -93096,12 +93161,13 @@
     "kind": "word",
     "id": "hallel-118-1-4-w21",
     "text": "לְעוֹלָם",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "le'olam",
     "english": "",
-    "aliasOf": "line/hallel-118-1-4-l1"
+    "aliasOf": "line/hallel-118-1-4-l1",
+    "copyOf": "word/r36-w5"
   },
   {
     "path": "audio/m/israeli/word/hallel-118-1-4-w22.mp3",
@@ -93110,12 +93176,13 @@
     "kind": "word",
     "id": "hallel-118-1-4-w22",
     "text": "חַסְדּוֹ׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "chasdo",
     "english": "",
-    "aliasOf": "line/hallel-118-1-4-l1"
+    "aliasOf": "line/hallel-118-1-4-l1",
+    "copyOf": "word/birkat-hamazon-1-w22"
   },
   {
     "path": "audio/f/israeli/word/hallel-118-1-4-w22.mp3",
@@ -93124,12 +93191,13 @@
     "kind": "word",
     "id": "hallel-118-1-4-w22",
     "text": "חַסְדּוֹ׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "chasdo",
     "english": "",
-    "aliasOf": "line/hallel-118-1-4-l1"
+    "aliasOf": "line/hallel-118-1-4-l1",
+    "copyOf": "word/birkat-hamazon-1-w22"
   },
   {
     "path": "audio/m/israeli/word/hallel-118-5-w1.mp3",
@@ -93278,12 +93346,13 @@
     "kind": "word",
     "id": "hallel-118-5-w6",
     "text": "יָהּ׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "yah",
     "english": "",
-    "aliasOf": "line/hallel-118-5"
+    "aliasOf": "line/hallel-118-5",
+    "copyOf": "word/havdalah-opening-w10"
   },
   {
     "path": "audio/f/israeli/word/hallel-118-5-w6.mp3",
@@ -93292,12 +93361,13 @@
     "kind": "word",
     "id": "hallel-118-5-w6",
     "text": "יָהּ׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "yah",
     "english": "",
-    "aliasOf": "line/hallel-118-5"
+    "aliasOf": "line/hallel-118-5",
+    "copyOf": "word/havdalah-opening-w10"
   },
   {
     "path": "audio/m/israeli/word/hallel-118-6-w1.mp3",
@@ -93306,12 +93376,13 @@
     "kind": "word",
     "id": "hallel-118-6-w1",
     "text": "אֲדֹנָי",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "adonai",
     "english": "",
-    "aliasOf": "line/hallel-118-6"
+    "aliasOf": "line/hallel-118-6",
+    "copyOf": "word/r15-w2"
   },
   {
     "path": "audio/f/israeli/word/hallel-118-6-w1.mp3",
@@ -93320,12 +93391,13 @@
     "kind": "word",
     "id": "hallel-118-6-w1",
     "text": "אֲדֹנָי",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "adonai",
     "english": "",
-    "aliasOf": "line/hallel-118-6"
+    "aliasOf": "line/hallel-118-6",
+    "copyOf": "word/r15-w2"
   },
   {
     "path": "audio/m/israeli/word/hallel-118-6-w2.mp3",
@@ -93334,12 +93406,13 @@
     "kind": "word",
     "id": "hallel-118-6-w2",
     "text": "לִי",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "li",
     "english": "",
-    "aliasOf": "line/hallel-118-6"
+    "aliasOf": "line/hallel-118-6",
+    "copyOf": "word/r06-w2"
   },
   {
     "path": "audio/f/israeli/word/hallel-118-6-w2.mp3",
@@ -93348,12 +93421,13 @@
     "kind": "word",
     "id": "hallel-118-6-w2",
     "text": "לִי",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "li",
     "english": "",
-    "aliasOf": "line/hallel-118-6"
+    "aliasOf": "line/hallel-118-6",
+    "copyOf": "word/r06-w2"
   },
   {
     "path": "audio/m/israeli/word/hallel-118-6-w3.mp3",
@@ -93362,12 +93436,13 @@
     "kind": "word",
     "id": "hallel-118-6-w3",
     "text": "לֹא",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "lo",
     "english": "",
-    "aliasOf": "line/hallel-118-6"
+    "aliasOf": "line/hallel-118-6",
+    "copyOf": "word/r07-w4"
   },
   {
     "path": "audio/f/israeli/word/hallel-118-6-w3.mp3",
@@ -93376,12 +93451,13 @@
     "kind": "word",
     "id": "hallel-118-6-w3",
     "text": "לֹא",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "lo",
     "english": "",
-    "aliasOf": "line/hallel-118-6"
+    "aliasOf": "line/hallel-118-6",
+    "copyOf": "word/r07-w4"
   },
   {
     "path": "audio/m/israeli/word/hallel-118-6-w4.mp3",
@@ -93390,12 +93466,13 @@
     "kind": "word",
     "id": "hallel-118-6-w4",
     "text": "אִירָא",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "ira",
     "english": "",
-    "aliasOf": "line/hallel-118-6"
+    "aliasOf": "line/hallel-118-6",
+    "copyOf": "word/adon-olam-1-w72"
   },
   {
     "path": "audio/f/israeli/word/hallel-118-6-w4.mp3",
@@ -93404,12 +93481,13 @@
     "kind": "word",
     "id": "hallel-118-6-w4",
     "text": "אִירָא",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "ira",
     "english": "",
-    "aliasOf": "line/hallel-118-6"
+    "aliasOf": "line/hallel-118-6",
+    "copyOf": "word/adon-olam-1-w72"
   },
   {
     "path": "audio/m/israeli/word/hallel-118-6-w5.mp3",
@@ -93446,12 +93524,13 @@
     "kind": "word",
     "id": "hallel-118-6-w6",
     "text": "לִי",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "li",
     "english": "",
-    "aliasOf": "line/hallel-118-6"
+    "aliasOf": "line/hallel-118-6",
+    "copyOf": "word/r06-w2"
   },
   {
     "path": "audio/f/israeli/word/hallel-118-6-w6.mp3",
@@ -93460,12 +93539,13 @@
     "kind": "word",
     "id": "hallel-118-6-w6",
     "text": "לִי",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "li",
     "english": "",
-    "aliasOf": "line/hallel-118-6"
+    "aliasOf": "line/hallel-118-6",
+    "copyOf": "word/r06-w2"
   },
   {
     "path": "audio/m/israeli/word/hallel-118-6-w7.mp3",
@@ -93474,12 +93554,13 @@
     "kind": "word",
     "id": "hallel-118-6-w7",
     "text": "אָדָם׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "adam",
     "english": "",
-    "aliasOf": "line/hallel-118-6"
+    "aliasOf": "line/hallel-118-6",
+    "copyOf": "word/havdalah-opening-w37"
   },
   {
     "path": "audio/f/israeli/word/hallel-118-6-w7.mp3",
@@ -93488,12 +93569,13 @@
     "kind": "word",
     "id": "hallel-118-6-w7",
     "text": "אָדָם׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "adam",
     "english": "",
-    "aliasOf": "line/hallel-118-6"
+    "aliasOf": "line/hallel-118-6",
+    "copyOf": "word/havdalah-opening-w37"
   },
   {
     "path": "audio/m/israeli/word/hallel-118-24-w1.mp3",
@@ -93530,12 +93612,13 @@
     "kind": "word",
     "id": "hallel-118-24-w2",
     "text": "עָשָׂה",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "asah",
     "english": "",
-    "aliasOf": "line/hallel-118-24"
+    "aliasOf": "line/hallel-118-24",
+    "copyOf": "word/kiddush-gen-2-1-3-w11"
   },
   {
     "path": "audio/f/israeli/word/hallel-118-24-w2.mp3",
@@ -93544,12 +93627,13 @@
     "kind": "word",
     "id": "hallel-118-24-w2",
     "text": "עָשָׂה",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "asah",
     "english": "",
-    "aliasOf": "line/hallel-118-24"
+    "aliasOf": "line/hallel-118-24",
+    "copyOf": "word/kiddush-gen-2-1-3-w11"
   },
   {
     "path": "audio/m/israeli/word/hallel-118-24-w3.mp3",
@@ -93558,12 +93642,13 @@
     "kind": "word",
     "id": "hallel-118-24-w3",
     "text": "אֲדֹנָי",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "adonai",
     "english": "",
-    "aliasOf": "line/hallel-118-24"
+    "aliasOf": "line/hallel-118-24",
+    "copyOf": "word/r15-w2"
   },
   {
     "path": "audio/f/israeli/word/hallel-118-24-w3.mp3",
@@ -93572,12 +93657,13 @@
     "kind": "word",
     "id": "hallel-118-24-w3",
     "text": "אֲדֹנָי",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "adonai",
     "english": "",
-    "aliasOf": "line/hallel-118-24"
+    "aliasOf": "line/hallel-118-24",
+    "copyOf": "word/r15-w2"
   },
   {
     "path": "audio/m/israeli/word/hallel-118-24-w4.mp3",
@@ -93642,12 +93728,13 @@
     "kind": "word",
     "id": "hallel-118-24-w6",
     "text": "בוֹ׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "vo",
     "english": "",
-    "aliasOf": "line/hallel-118-24"
+    "aliasOf": "line/hallel-118-24",
+    "copyOf": "word/kiddush-gen-2-1-3-w25"
   },
   {
     "path": "audio/f/israeli/word/hallel-118-24-w6.mp3",
@@ -93656,12 +93743,13 @@
     "kind": "word",
     "id": "hallel-118-24-w6",
     "text": "בוֹ׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "vo",
     "english": "",
-    "aliasOf": "line/hallel-118-24"
+    "aliasOf": "line/hallel-118-24",
+    "copyOf": "word/kiddush-gen-2-1-3-w25"
   },
   {
     "path": "audio/m/israeli/word/hallel-118-25-w1.mp3",
@@ -93670,12 +93758,13 @@
     "kind": "word",
     "id": "hallel-118-25-w1",
     "text": "אָנָּא",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "ana",
     "english": "",
-    "aliasOf": "line/hallel-118-25"
+    "aliasOf": "line/hallel-118-25",
+    "copyOf": "word/hd4c8080b"
   },
   {
     "path": "audio/f/israeli/word/hallel-118-25-w1.mp3",
@@ -93684,12 +93773,13 @@
     "kind": "word",
     "id": "hallel-118-25-w1",
     "text": "אָנָּא",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "ana",
     "english": "",
-    "aliasOf": "line/hallel-118-25"
+    "aliasOf": "line/hallel-118-25",
+    "copyOf": "word/hd4c8080b"
   },
   {
     "path": "audio/m/israeli/word/hallel-118-25-w2.mp3",
@@ -93698,12 +93788,13 @@
     "kind": "word",
     "id": "hallel-118-25-w2",
     "text": "אֲדֹנָי",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "adonai",
     "english": "",
-    "aliasOf": "line/hallel-118-25"
+    "aliasOf": "line/hallel-118-25",
+    "copyOf": "word/r15-w2"
   },
   {
     "path": "audio/f/israeli/word/hallel-118-25-w2.mp3",
@@ -93712,12 +93803,13 @@
     "kind": "word",
     "id": "hallel-118-25-w2",
     "text": "אֲדֹנָי",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "adonai",
     "english": "",
-    "aliasOf": "line/hallel-118-25"
+    "aliasOf": "line/hallel-118-25",
+    "copyOf": "word/r15-w2"
   },
   {
     "path": "audio/m/israeli/word/hallel-118-25-w3.mp3",
@@ -93726,12 +93818,13 @@
     "kind": "word",
     "id": "hallel-118-25-w3",
     "text": "הוֹשִׁיעָה",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "hoshi'ah",
     "english": "",
-    "aliasOf": "line/hallel-118-25"
+    "aliasOf": "line/hallel-118-25",
+    "copyOf": "word/i-30-w11"
   },
   {
     "path": "audio/f/israeli/word/hallel-118-25-w3.mp3",
@@ -93740,12 +93833,13 @@
     "kind": "word",
     "id": "hallel-118-25-w3",
     "text": "הוֹשִׁיעָה",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "hoshi'ah",
     "english": "",
-    "aliasOf": "line/hallel-118-25"
+    "aliasOf": "line/hallel-118-25",
+    "copyOf": "word/i-30-w11"
   },
   {
     "path": "audio/m/israeli/word/hallel-118-25-w4.mp3",
@@ -93782,12 +93876,13 @@
     "kind": "word",
     "id": "hallel-118-25-w5",
     "text": "אָנָּא",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "ana",
     "english": "",
-    "aliasOf": "line/hallel-118-25"
+    "aliasOf": "line/hallel-118-25",
+    "copyOf": "word/hd4c8080b"
   },
   {
     "path": "audio/f/israeli/word/hallel-118-25-w5.mp3",
@@ -93796,12 +93891,13 @@
     "kind": "word",
     "id": "hallel-118-25-w5",
     "text": "אָנָּא",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "ana",
     "english": "",
-    "aliasOf": "line/hallel-118-25"
+    "aliasOf": "line/hallel-118-25",
+    "copyOf": "word/hd4c8080b"
   },
   {
     "path": "audio/m/israeli/word/hallel-118-25-w6.mp3",
@@ -93810,12 +93906,13 @@
     "kind": "word",
     "id": "hallel-118-25-w6",
     "text": "אֲדֹנָי",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "adonai",
     "english": "",
-    "aliasOf": "line/hallel-118-25"
+    "aliasOf": "line/hallel-118-25",
+    "copyOf": "word/r15-w2"
   },
   {
     "path": "audio/f/israeli/word/hallel-118-25-w6.mp3",
@@ -93824,12 +93921,13 @@
     "kind": "word",
     "id": "hallel-118-25-w6",
     "text": "אֲדֹנָי",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "adonai",
     "english": "",
-    "aliasOf": "line/hallel-118-25"
+    "aliasOf": "line/hallel-118-25",
+    "copyOf": "word/r15-w2"
   },
   {
     "path": "audio/m/israeli/word/hallel-118-25-w7.mp3",
@@ -93894,12 +93992,13 @@
     "kind": "word",
     "id": "hallel-118-28-w1",
     "text": "אֵלִי",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "eli",
     "english": "",
-    "aliasOf": "line/hallel-118-28"
+    "aliasOf": "line/hallel-118-28",
+    "copyOf": "word/adon-olam-1-w45"
   },
   {
     "path": "audio/f/israeli/word/hallel-118-28-w1.mp3",
@@ -93908,12 +94007,13 @@
     "kind": "word",
     "id": "hallel-118-28-w1",
     "text": "אֵלִי",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "eli",
     "english": "",
-    "aliasOf": "line/hallel-118-28"
+    "aliasOf": "line/hallel-118-28",
+    "copyOf": "word/adon-olam-1-w45"
   },
   {
     "path": "audio/m/israeli/word/hallel-118-28-w2.mp3",
@@ -93922,12 +94022,13 @@
     "kind": "word",
     "id": "hallel-118-28-w2",
     "text": "אַתָּה",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "atah",
     "english": "",
-    "aliasOf": "line/hallel-118-28"
+    "aliasOf": "line/hallel-118-28",
+    "copyOf": "word/r10-w3"
   },
   {
     "path": "audio/f/israeli/word/hallel-118-28-w2.mp3",
@@ -93936,12 +94037,13 @@
     "kind": "word",
     "id": "hallel-118-28-w2",
     "text": "אַתָּה",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "atah",
     "english": "",
-    "aliasOf": "line/hallel-118-28"
+    "aliasOf": "line/hallel-118-28",
+    "copyOf": "word/r10-w3"
   },
   {
     "path": "audio/m/israeli/word/hallel-118-28-w3.mp3",
@@ -93978,12 +94080,13 @@
     "kind": "word",
     "id": "hallel-118-28-w4",
     "text": "אֱלֹהַי",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "elohai",
     "english": "",
-    "aliasOf": "line/hallel-118-28"
+    "aliasOf": "line/hallel-118-28",
+    "copyOf": "word/amidah-elohai-netzor-w1"
   },
   {
     "path": "audio/f/israeli/word/hallel-118-28-w4.mp3",
@@ -93992,12 +94095,13 @@
     "kind": "word",
     "id": "hallel-118-28-w4",
     "text": "אֱלֹהַי",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "elohai",
     "english": "",
-    "aliasOf": "line/hallel-118-28"
+    "aliasOf": "line/hallel-118-28",
+    "copyOf": "word/amidah-elohai-netzor-w1"
   },
   {
     "path": "audio/m/israeli/word/hallel-118-28-w5.mp3",
@@ -94090,12 +94194,13 @@
     "kind": "word",
     "id": "kiddush-festival-day-verses-w3",
     "text": "אֲדֹנָי",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "adonai",
     "english": "",
-    "aliasOf": "line/kiddush-festival-day-verses-l1"
+    "aliasOf": "line/kiddush-festival-day-verses-l1",
+    "copyOf": "word/r15-w2"
   },
   {
     "path": "audio/f/israeli/word/kiddush-festival-day-verses-w3.mp3",
@@ -94104,12 +94209,13 @@
     "kind": "word",
     "id": "kiddush-festival-day-verses-w3",
     "text": "אֲדֹנָי",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "adonai",
     "english": "",
-    "aliasOf": "line/kiddush-festival-day-verses-l1"
+    "aliasOf": "line/kiddush-festival-day-verses-l1",
+    "copyOf": "word/r15-w2"
   },
   {
     "path": "audio/m/israeli/word/kiddush-festival-day-verses-w4.mp3",
@@ -94146,12 +94252,13 @@
     "kind": "word",
     "id": "kiddush-festival-day-verses-w5",
     "text": "קֹדֶשׁ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "kodesh",
     "english": "",
-    "aliasOf": "line/kiddush-festival-day-verses-l1"
+    "aliasOf": "line/kiddush-festival-day-verses-l1",
+    "copyOf": "word/i-06-w7"
   },
   {
     "path": "audio/f/israeli/word/kiddush-festival-day-verses-w5.mp3",
@@ -94160,12 +94267,13 @@
     "kind": "word",
     "id": "kiddush-festival-day-verses-w5",
     "text": "קֹדֶשׁ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "kodesh",
     "english": "",
-    "aliasOf": "line/kiddush-festival-day-verses-l1"
+    "aliasOf": "line/kiddush-festival-day-verses-l1",
+    "copyOf": "word/i-06-w7"
   },
   {
     "path": "audio/m/israeli/word/kiddush-festival-day-verses-w6.mp3",
@@ -94286,12 +94394,13 @@
     "kind": "word",
     "id": "kiddush-festival-day-verses-w10",
     "text": "מֹשֶׁה",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "mosheh",
     "english": "",
-    "aliasOf": "line/kiddush-festival-day-verses-l1"
+    "aliasOf": "line/kiddush-festival-day-verses-l1",
+    "copyOf": "word/vayehi-binsoa-w5"
   },
   {
     "path": "audio/f/israeli/word/kiddush-festival-day-verses-w10.mp3",
@@ -94300,12 +94409,13 @@
     "kind": "word",
     "id": "kiddush-festival-day-verses-w10",
     "text": "מֹשֶׁה",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "mosheh",
     "english": "",
-    "aliasOf": "line/kiddush-festival-day-verses-l1"
+    "aliasOf": "line/kiddush-festival-day-verses-l1",
+    "copyOf": "word/vayehi-binsoa-w5"
   },
   {
     "path": "audio/m/israeli/word/kiddush-festival-day-verses-w11.mp3",
@@ -94342,12 +94452,13 @@
     "kind": "word",
     "id": "kiddush-festival-day-verses-w12",
     "text": "אֲדֹנָי",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "adonai",
     "english": "",
-    "aliasOf": "line/kiddush-festival-day-verses-l1"
+    "aliasOf": "line/kiddush-festival-day-verses-l1",
+    "copyOf": "word/r15-w2"
   },
   {
     "path": "audio/f/israeli/word/kiddush-festival-day-verses-w12.mp3",
@@ -94356,12 +94467,13 @@
     "kind": "word",
     "id": "kiddush-festival-day-verses-w12",
     "text": "אֲדֹנָי",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "adonai",
     "english": "",
-    "aliasOf": "line/kiddush-festival-day-verses-l1"
+    "aliasOf": "line/kiddush-festival-day-verses-l1",
+    "copyOf": "word/r15-w2"
   },
   {
     "path": "audio/m/israeli/word/kiddush-festival-day-verses-w13.mp3",
@@ -94398,12 +94510,13 @@
     "kind": "word",
     "id": "kiddush-festival-day-verses-w14",
     "text": "יִשְׂרָאֵל׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "yisra'el",
     "english": "",
-    "aliasOf": "line/kiddush-festival-day-verses-l1"
+    "aliasOf": "line/kiddush-festival-day-verses-l1",
+    "copyOf": "word/r20-w2"
   },
   {
     "path": "audio/f/israeli/word/kiddush-festival-day-verses-w14.mp3",
@@ -94412,12 +94525,13 @@
     "kind": "word",
     "id": "kiddush-festival-day-verses-w14",
     "text": "יִשְׂרָאֵל׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "yisra'el",
     "english": "",
-    "aliasOf": "line/kiddush-festival-day-verses-l1"
+    "aliasOf": "line/kiddush-festival-day-verses-l1",
+    "copyOf": "word/r20-w2"
   },
   {
     "path": "audio/m/israeli/word/kiddush-festival-eve-open-w1.mp3",
@@ -94426,12 +94540,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-open-w1",
     "text": "בָּרוּךְ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "barukh",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-open"
+    "aliasOf": "line/kiddush-festival-eve-open",
+    "copyOf": "word/r28-w1"
   },
   {
     "path": "audio/f/israeli/word/kiddush-festival-eve-open-w1.mp3",
@@ -94440,12 +94555,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-open-w1",
     "text": "בָּרוּךְ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "barukh",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-open"
+    "aliasOf": "line/kiddush-festival-eve-open",
+    "copyOf": "word/r28-w1"
   },
   {
     "path": "audio/m/israeli/word/kiddush-festival-eve-open-w2.mp3",
@@ -94454,12 +94570,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-open-w2",
     "text": "אַתָּה",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "atah",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-open"
+    "aliasOf": "line/kiddush-festival-eve-open",
+    "copyOf": "word/r10-w3"
   },
   {
     "path": "audio/f/israeli/word/kiddush-festival-eve-open-w2.mp3",
@@ -94468,12 +94585,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-open-w2",
     "text": "אַתָּה",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "atah",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-open"
+    "aliasOf": "line/kiddush-festival-eve-open",
+    "copyOf": "word/r10-w3"
   },
   {
     "path": "audio/m/israeli/word/kiddush-festival-eve-open-w3.mp3",
@@ -94482,12 +94600,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-open-w3",
     "text": "אֲדֹנָי",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "adonai",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-open"
+    "aliasOf": "line/kiddush-festival-eve-open",
+    "copyOf": "word/r15-w2"
   },
   {
     "path": "audio/f/israeli/word/kiddush-festival-eve-open-w3.mp3",
@@ -94496,12 +94615,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-open-w3",
     "text": "אֲדֹנָי",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "adonai",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-open"
+    "aliasOf": "line/kiddush-festival-eve-open",
+    "copyOf": "word/r15-w2"
   },
   {
     "path": "audio/m/israeli/word/kiddush-festival-eve-open-w4.mp3",
@@ -94510,12 +94630,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-open-w4",
     "text": "אֱלֹהֵינוּ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "eloheinu",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-open"
+    "aliasOf": "line/kiddush-festival-eve-open",
+    "copyOf": "word/r22-w3"
   },
   {
     "path": "audio/f/israeli/word/kiddush-festival-eve-open-w4.mp3",
@@ -94524,12 +94645,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-open-w4",
     "text": "אֱלֹהֵינוּ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "eloheinu",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-open"
+    "aliasOf": "line/kiddush-festival-eve-open",
+    "copyOf": "word/r22-w3"
   },
   {
     "path": "audio/m/israeli/word/kiddush-festival-eve-open-w5.mp3",
@@ -94538,12 +94660,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-open-w5",
     "text": "מֶלֶךְ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "melekh",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-open"
+    "aliasOf": "line/kiddush-festival-eve-open",
+    "copyOf": "word/r11-w2"
   },
   {
     "path": "audio/f/israeli/word/kiddush-festival-eve-open-w5.mp3",
@@ -94552,12 +94675,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-open-w5",
     "text": "מֶלֶךְ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "melekh",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-open"
+    "aliasOf": "line/kiddush-festival-eve-open",
+    "copyOf": "word/r11-w2"
   },
   {
     "path": "audio/m/israeli/word/kiddush-festival-eve-open-w6.mp3",
@@ -94566,12 +94690,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-open-w6",
     "text": "הָעוֹלָם",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "ha'olam",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-open"
+    "aliasOf": "line/kiddush-festival-eve-open",
+    "copyOf": "word/r28-w5"
   },
   {
     "path": "audio/f/israeli/word/kiddush-festival-eve-open-w6.mp3",
@@ -94580,12 +94705,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-open-w6",
     "text": "הָעוֹלָם",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "ha'olam",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-open"
+    "aliasOf": "line/kiddush-festival-eve-open",
+    "copyOf": "word/r28-w5"
   },
   {
     "path": "audio/m/israeli/word/kiddush-festival-eve-open-w7.mp3",
@@ -94594,12 +94720,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-open-w7",
     "text": "אֲשֶׁר",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "asher",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-open"
+    "aliasOf": "line/kiddush-festival-eve-open",
+    "copyOf": "word/vahavta-2-w4"
   },
   {
     "path": "audio/f/israeli/word/kiddush-festival-eve-open-w7.mp3",
@@ -94608,12 +94735,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-open-w7",
     "text": "אֲשֶׁר",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "asher",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-open"
+    "aliasOf": "line/kiddush-festival-eve-open",
+    "copyOf": "word/vahavta-2-w4"
   },
   {
     "path": "audio/m/israeli/word/kiddush-festival-eve-open-w8.mp3",
@@ -94622,12 +94750,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-open-w8",
     "text": "בָּחַר",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "bachar",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-open"
+    "aliasOf": "line/kiddush-festival-eve-open",
+    "copyOf": "word/r38-w2"
   },
   {
     "path": "audio/f/israeli/word/kiddush-festival-eve-open-w8.mp3",
@@ -94636,12 +94765,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-open-w8",
     "text": "בָּחַר",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "bachar",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-open"
+    "aliasOf": "line/kiddush-festival-eve-open",
+    "copyOf": "word/r38-w2"
   },
   {
     "path": "audio/m/israeli/word/kiddush-festival-eve-open-w9.mp3",
@@ -94650,12 +94780,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-open-w9",
     "text": "בָּנוּ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "banu",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-open"
+    "aliasOf": "line/kiddush-festival-eve-open",
+    "copyOf": "word/torah-bless-1-w9"
   },
   {
     "path": "audio/f/israeli/word/kiddush-festival-eve-open-w9.mp3",
@@ -94664,12 +94795,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-open-w9",
     "text": "בָּנוּ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "banu",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-open"
+    "aliasOf": "line/kiddush-festival-eve-open",
+    "copyOf": "word/torah-bless-1-w9"
   },
   {
     "path": "audio/m/israeli/word/kiddush-festival-eve-open-w10.mp3",
@@ -94678,12 +94810,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-open-w10",
     "text": "מִכָּל",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "mikol",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-open"
+    "aliasOf": "line/kiddush-festival-eve-open",
+    "copyOf": "word/kiddush-shabbat-eve-w34"
   },
   {
     "path": "audio/f/israeli/word/kiddush-festival-eve-open-w10.mp3",
@@ -94692,12 +94825,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-open-w10",
     "text": "מִכָּל",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "mikol",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-open"
+    "aliasOf": "line/kiddush-festival-eve-open",
+    "copyOf": "word/kiddush-shabbat-eve-w34"
   },
   {
     "path": "audio/m/israeli/word/kiddush-festival-eve-open-w11.mp3",
@@ -94762,12 +94896,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-open-w13",
     "text": "מִכָּל",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "mikol",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-open"
+    "aliasOf": "line/kiddush-festival-eve-open",
+    "copyOf": "word/kiddush-shabbat-eve-w34"
   },
   {
     "path": "audio/f/israeli/word/kiddush-festival-eve-open-w13.mp3",
@@ -94776,12 +94911,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-open-w13",
     "text": "מִכָּל",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "mikol",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-open"
+    "aliasOf": "line/kiddush-festival-eve-open",
+    "copyOf": "word/kiddush-shabbat-eve-w34"
   },
   {
     "path": "audio/m/israeli/word/kiddush-festival-eve-open-w14.mp3",
@@ -94790,12 +94926,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-open-w14",
     "text": "לָשׁוֹן",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "lashon",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-open"
+    "aliasOf": "line/kiddush-festival-eve-open",
+    "copyOf": "word/he0949da8"
   },
   {
     "path": "audio/f/israeli/word/kiddush-festival-eve-open-w14.mp3",
@@ -94804,12 +94941,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-open-w14",
     "text": "לָשׁוֹן",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "lashon",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-open"
+    "aliasOf": "line/kiddush-festival-eve-open",
+    "copyOf": "word/he0949da8"
   },
   {
     "path": "audio/m/israeli/word/kiddush-festival-eve-open-w15.mp3",
@@ -94846,12 +94984,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-open-w16",
     "text": "בְּמִצְוֹתָיו",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "bemitzvotav",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-open"
+    "aliasOf": "line/kiddush-festival-eve-open",
+    "copyOf": "word/i-30-w9"
   },
   {
     "path": "audio/f/israeli/word/kiddush-festival-eve-open-w16.mp3",
@@ -94860,12 +94999,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-open-w16",
     "text": "בְּמִצְוֹתָיו",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "bemitzvotav",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-open"
+    "aliasOf": "line/kiddush-festival-eve-open",
+    "copyOf": "word/i-30-w9"
   },
   {
     "path": "audio/m/israeli/word/kiddush-festival-eve-open-w17.mp3",
@@ -94902,12 +95042,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-open-w18",
     "text": "לָנוּ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "lanu",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-open"
+    "aliasOf": "line/kiddush-festival-eve-open",
+    "copyOf": "word/torah-bless-1-w12"
   },
   {
     "path": "audio/f/israeli/word/kiddush-festival-eve-open-w18.mp3",
@@ -94916,12 +95057,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-open-w18",
     "text": "לָנוּ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "lanu",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-open"
+    "aliasOf": "line/kiddush-festival-eve-open",
+    "copyOf": "word/torah-bless-1-w12"
   },
   {
     "path": "audio/m/israeli/word/kiddush-festival-eve-open-w19.mp3",
@@ -94930,12 +95072,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-open-w19",
     "text": "אֲדֹנָי",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "adonai",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-open"
+    "aliasOf": "line/kiddush-festival-eve-open",
+    "copyOf": "word/r15-w2"
   },
   {
     "path": "audio/f/israeli/word/kiddush-festival-eve-open-w19.mp3",
@@ -94944,12 +95087,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-open-w19",
     "text": "אֲדֹנָי",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "adonai",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-open"
+    "aliasOf": "line/kiddush-festival-eve-open",
+    "copyOf": "word/r15-w2"
   },
   {
     "path": "audio/m/israeli/word/kiddush-festival-eve-open-w20.mp3",
@@ -94958,12 +95102,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-open-w20",
     "text": "אֱלֹהֵינוּ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "eloheinu",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-open"
+    "aliasOf": "line/kiddush-festival-eve-open",
+    "copyOf": "word/r22-w3"
   },
   {
     "path": "audio/f/israeli/word/kiddush-festival-eve-open-w20.mp3",
@@ -94972,12 +95117,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-open-w20",
     "text": "אֱלֹהֵינוּ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "eloheinu",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-open"
+    "aliasOf": "line/kiddush-festival-eve-open",
+    "copyOf": "word/r22-w3"
   },
   {
     "path": "audio/m/israeli/word/kiddush-festival-eve-open-w21.mp3",
@@ -94986,12 +95132,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-open-w21",
     "text": "בְּאַהֲבָה",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "be'ahavah",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-open"
+    "aliasOf": "line/kiddush-festival-eve-open",
+    "copyOf": "word/avot-1-w33"
   },
   {
     "path": "audio/f/israeli/word/kiddush-festival-eve-open-w21.mp3",
@@ -95000,12 +95147,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-open-w21",
     "text": "בְּאַהֲבָה",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "be'ahavah",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-open"
+    "aliasOf": "line/kiddush-festival-eve-open",
+    "copyOf": "word/avot-1-w33"
   },
   {
     "path": "audio/m/israeli/word/kiddush-festival-eve-open-w22.mp3",
@@ -95154,12 +95302,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-open-w27",
     "text": "אֶת",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "et",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-open"
+    "aliasOf": "line/kiddush-festival-eve-open",
+    "copyOf": "word/r11-w1"
   },
   {
     "path": "audio/f/israeli/word/kiddush-festival-eve-open-w27.mp3",
@@ -95168,12 +95317,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-open-w27",
     "text": "אֶת",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "et",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-open"
+    "aliasOf": "line/kiddush-festival-eve-open",
+    "copyOf": "word/r11-w1"
   },
   {
     "path": "audio/m/israeli/word/kiddush-festival-eve-open-w28.mp3",
@@ -95182,12 +95332,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-open-w28",
     "text": "יוֹם׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "yom",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-open"
+    "aliasOf": "line/kiddush-festival-eve-open",
+    "copyOf": "word/kiddush-shabbat-eve-w22"
   },
   {
     "path": "audio/f/israeli/word/kiddush-festival-eve-open-w28.mp3",
@@ -95196,12 +95347,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-open-w28",
     "text": "יוֹם׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "yom",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-open"
+    "aliasOf": "line/kiddush-festival-eve-open",
+    "copyOf": "word/kiddush-shabbat-eve-w22"
   },
   {
     "path": "audio/m/israeli/word/kiddush-festival-pesach-w1.mp3",
@@ -95210,12 +95362,13 @@
     "kind": "word",
     "id": "kiddush-festival-pesach-w1",
     "text": "חַג",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "chag",
     "english": "",
-    "aliasOf": "line/kiddush-festival-pesach"
+    "aliasOf": "line/kiddush-festival-pesach",
+    "copyOf": "word/i-30-w2"
   },
   {
     "path": "audio/f/israeli/word/kiddush-festival-pesach-w1.mp3",
@@ -95224,12 +95377,13 @@
     "kind": "word",
     "id": "kiddush-festival-pesach-w1",
     "text": "חַג",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "chag",
     "english": "",
-    "aliasOf": "line/kiddush-festival-pesach"
+    "aliasOf": "line/kiddush-festival-pesach",
+    "copyOf": "word/i-30-w2"
   },
   {
     "path": "audio/m/israeli/word/kiddush-festival-pesach-w2.mp3",
@@ -95266,12 +95420,13 @@
     "kind": "word",
     "id": "kiddush-festival-pesach-w3",
     "text": "הַזֶּה",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "hazeh",
     "english": "",
-    "aliasOf": "line/kiddush-festival-pesach"
+    "aliasOf": "line/kiddush-festival-pesach",
+    "copyOf": "word/haftarah-after-w113"
   },
   {
     "path": "audio/f/israeli/word/kiddush-festival-pesach-w3.mp3",
@@ -95280,12 +95435,13 @@
     "kind": "word",
     "id": "kiddush-festival-pesach-w3",
     "text": "הַזֶּה",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "hazeh",
     "english": "",
-    "aliasOf": "line/kiddush-festival-pesach"
+    "aliasOf": "line/kiddush-festival-pesach",
+    "copyOf": "word/haftarah-after-w113"
   },
   {
     "path": "audio/m/israeli/word/kiddush-festival-pesach-w4.mp3",
@@ -95294,12 +95450,13 @@
     "kind": "word",
     "id": "kiddush-festival-pesach-w4",
     "text": "זְמַן",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "zeman",
     "english": "",
-    "aliasOf": "line/kiddush-festival-pesach"
+    "aliasOf": "line/kiddush-festival-pesach",
+    "copyOf": "word/h8f42d584"
   },
   {
     "path": "audio/f/israeli/word/kiddush-festival-pesach-w4.mp3",
@@ -95308,12 +95465,13 @@
     "kind": "word",
     "id": "kiddush-festival-pesach-w4",
     "text": "זְמַן",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "zeman",
     "english": "",
-    "aliasOf": "line/kiddush-festival-pesach"
+    "aliasOf": "line/kiddush-festival-pesach",
+    "copyOf": "word/h8f42d584"
   },
   {
     "path": "audio/m/israeli/word/kiddush-festival-pesach-w5.mp3",
@@ -95350,12 +95508,13 @@
     "kind": "word",
     "id": "kiddush-festival-shavuot-w1",
     "text": "חַג",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "chag",
     "english": "",
-    "aliasOf": "line/kiddush-festival-shavuot"
+    "aliasOf": "line/kiddush-festival-shavuot",
+    "copyOf": "word/i-30-w2"
   },
   {
     "path": "audio/f/israeli/word/kiddush-festival-shavuot-w1.mp3",
@@ -95364,12 +95523,13 @@
     "kind": "word",
     "id": "kiddush-festival-shavuot-w1",
     "text": "חַג",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "chag",
     "english": "",
-    "aliasOf": "line/kiddush-festival-shavuot"
+    "aliasOf": "line/kiddush-festival-shavuot",
+    "copyOf": "word/i-30-w2"
   },
   {
     "path": "audio/m/israeli/word/kiddush-festival-shavuot-w2.mp3",
@@ -95406,12 +95566,13 @@
     "kind": "word",
     "id": "kiddush-festival-shavuot-w3",
     "text": "הַזֶּה",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "hazeh",
     "english": "",
-    "aliasOf": "line/kiddush-festival-shavuot"
+    "aliasOf": "line/kiddush-festival-shavuot",
+    "copyOf": "word/haftarah-after-w113"
   },
   {
     "path": "audio/f/israeli/word/kiddush-festival-shavuot-w3.mp3",
@@ -95420,12 +95581,13 @@
     "kind": "word",
     "id": "kiddush-festival-shavuot-w3",
     "text": "הַזֶּה",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "hazeh",
     "english": "",
-    "aliasOf": "line/kiddush-festival-shavuot"
+    "aliasOf": "line/kiddush-festival-shavuot",
+    "copyOf": "word/haftarah-after-w113"
   },
   {
     "path": "audio/m/israeli/word/kiddush-festival-shavuot-w4.mp3",
@@ -95434,12 +95596,13 @@
     "kind": "word",
     "id": "kiddush-festival-shavuot-w4",
     "text": "זְמַן",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "zeman",
     "english": "",
-    "aliasOf": "line/kiddush-festival-shavuot"
+    "aliasOf": "line/kiddush-festival-shavuot",
+    "copyOf": "word/h8f42d584"
   },
   {
     "path": "audio/f/israeli/word/kiddush-festival-shavuot-w4.mp3",
@@ -95448,12 +95611,13 @@
     "kind": "word",
     "id": "kiddush-festival-shavuot-w4",
     "text": "זְמַן",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "zeman",
     "english": "",
-    "aliasOf": "line/kiddush-festival-shavuot"
+    "aliasOf": "line/kiddush-festival-shavuot",
+    "copyOf": "word/h8f42d584"
   },
   {
     "path": "audio/m/israeli/word/kiddush-festival-shavuot-w5.mp3",
@@ -95518,12 +95682,13 @@
     "kind": "word",
     "id": "kiddush-festival-sukkot-w1",
     "text": "חַג",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "chag",
     "english": "",
-    "aliasOf": "line/kiddush-festival-sukkot"
+    "aliasOf": "line/kiddush-festival-sukkot",
+    "copyOf": "word/i-30-w2"
   },
   {
     "path": "audio/f/israeli/word/kiddush-festival-sukkot-w1.mp3",
@@ -95532,12 +95697,13 @@
     "kind": "word",
     "id": "kiddush-festival-sukkot-w1",
     "text": "חַג",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "chag",
     "english": "",
-    "aliasOf": "line/kiddush-festival-sukkot"
+    "aliasOf": "line/kiddush-festival-sukkot",
+    "copyOf": "word/i-30-w2"
   },
   {
     "path": "audio/m/israeli/word/kiddush-festival-sukkot-w2.mp3",
@@ -95574,12 +95740,13 @@
     "kind": "word",
     "id": "kiddush-festival-sukkot-w3",
     "text": "הַזֶּה",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "hazeh",
     "english": "",
-    "aliasOf": "line/kiddush-festival-sukkot"
+    "aliasOf": "line/kiddush-festival-sukkot",
+    "copyOf": "word/haftarah-after-w113"
   },
   {
     "path": "audio/f/israeli/word/kiddush-festival-sukkot-w3.mp3",
@@ -95588,12 +95755,13 @@
     "kind": "word",
     "id": "kiddush-festival-sukkot-w3",
     "text": "הַזֶּה",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "hazeh",
     "english": "",
-    "aliasOf": "line/kiddush-festival-sukkot"
+    "aliasOf": "line/kiddush-festival-sukkot",
+    "copyOf": "word/haftarah-after-w113"
   },
   {
     "path": "audio/m/israeli/word/kiddush-festival-sukkot-w4.mp3",
@@ -95602,12 +95770,13 @@
     "kind": "word",
     "id": "kiddush-festival-sukkot-w4",
     "text": "זְמַן",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "zeman",
     "english": "",
-    "aliasOf": "line/kiddush-festival-sukkot"
+    "aliasOf": "line/kiddush-festival-sukkot",
+    "copyOf": "word/h8f42d584"
   },
   {
     "path": "audio/f/israeli/word/kiddush-festival-sukkot-w4.mp3",
@@ -95616,12 +95785,13 @@
     "kind": "word",
     "id": "kiddush-festival-sukkot-w4",
     "text": "זְמַן",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "zeman",
     "english": "",
-    "aliasOf": "line/kiddush-festival-sukkot"
+    "aliasOf": "line/kiddush-festival-sukkot",
+    "copyOf": "word/h8f42d584"
   },
   {
     "path": "audio/m/israeli/word/kiddush-festival-sukkot-w5.mp3",
@@ -95742,12 +95912,13 @@
     "kind": "word",
     "id": "kiddush-festival-shemini-w4",
     "text": "הַזֶּה",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "hazeh",
     "english": "",
-    "aliasOf": "line/kiddush-festival-shemini"
+    "aliasOf": "line/kiddush-festival-shemini",
+    "copyOf": "word/haftarah-after-w113"
   },
   {
     "path": "audio/f/israeli/word/kiddush-festival-shemini-w4.mp3",
@@ -95756,12 +95927,13 @@
     "kind": "word",
     "id": "kiddush-festival-shemini-w4",
     "text": "הַזֶּה",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "hazeh",
     "english": "",
-    "aliasOf": "line/kiddush-festival-shemini"
+    "aliasOf": "line/kiddush-festival-shemini",
+    "copyOf": "word/haftarah-after-w113"
   },
   {
     "path": "audio/m/israeli/word/kiddush-festival-shemini-w5.mp3",
@@ -95770,12 +95942,13 @@
     "kind": "word",
     "id": "kiddush-festival-shemini-w5",
     "text": "זְמַן",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "zeman",
     "english": "",
-    "aliasOf": "line/kiddush-festival-shemini"
+    "aliasOf": "line/kiddush-festival-shemini",
+    "copyOf": "word/h8f42d584"
   },
   {
     "path": "audio/f/israeli/word/kiddush-festival-shemini-w5.mp3",
@@ -95784,12 +95957,13 @@
     "kind": "word",
     "id": "kiddush-festival-shemini-w5",
     "text": "זְמַן",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "zeman",
     "english": "",
-    "aliasOf": "line/kiddush-festival-shemini"
+    "aliasOf": "line/kiddush-festival-shemini",
+    "copyOf": "word/h8f42d584"
   },
   {
     "path": "audio/m/israeli/word/kiddush-festival-shemini-w6.mp3",
@@ -95854,12 +96028,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-close-w2",
     "text": "קֹדֶשׁ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "kodesh",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-close"
+    "aliasOf": "line/kiddush-festival-eve-close",
+    "copyOf": "word/i-06-w7"
   },
   {
     "path": "audio/f/israeli/word/kiddush-festival-eve-close-w2.mp3",
@@ -95868,12 +96043,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-close-w2",
     "text": "קֹדֶשׁ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "kodesh",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-close"
+    "aliasOf": "line/kiddush-festival-eve-close",
+    "copyOf": "word/i-06-w7"
   },
   {
     "path": "audio/m/israeli/word/kiddush-festival-eve-close-w3.mp3",
@@ -95882,12 +96058,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-close-w3",
     "text": "זֵכֶר",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "zekher",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-close"
+    "aliasOf": "line/kiddush-festival-eve-close",
+    "copyOf": "word/kiddush-shabbat-eve-w26"
   },
   {
     "path": "audio/f/israeli/word/kiddush-festival-eve-close-w3.mp3",
@@ -95896,12 +96073,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-close-w3",
     "text": "זֵכֶר",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "zekher",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-close"
+    "aliasOf": "line/kiddush-festival-eve-close",
+    "copyOf": "word/kiddush-shabbat-eve-w26"
   },
   {
     "path": "audio/m/israeli/word/kiddush-festival-eve-close-w4.mp3",
@@ -95910,12 +96088,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-close-w4",
     "text": "לִיצִיאַת",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "litzi'at",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-close"
+    "aliasOf": "line/kiddush-festival-eve-close",
+    "copyOf": "word/kiddush-shabbat-eve-w27"
   },
   {
     "path": "audio/f/israeli/word/kiddush-festival-eve-close-w4.mp3",
@@ -95924,12 +96103,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-close-w4",
     "text": "לִיצִיאַת",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "litzi'at",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-close"
+    "aliasOf": "line/kiddush-festival-eve-close",
+    "copyOf": "word/kiddush-shabbat-eve-w27"
   },
   {
     "path": "audio/m/israeli/word/kiddush-festival-eve-close-w5.mp3",
@@ -95938,12 +96118,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-close-w5",
     "text": "מִצְרָיִם",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "mitzrayim",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-close"
+    "aliasOf": "line/kiddush-festival-eve-close",
+    "copyOf": "word/kiddush-shabbat-eve-w28"
   },
   {
     "path": "audio/f/israeli/word/kiddush-festival-eve-close-w5.mp3",
@@ -95952,12 +96133,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-close-w5",
     "text": "מִצְרָיִם",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "mitzrayim",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-close"
+    "aliasOf": "line/kiddush-festival-eve-close",
+    "copyOf": "word/kiddush-shabbat-eve-w28"
   },
   {
     "path": "audio/m/israeli/word/kiddush-festival-eve-close-w6.mp3",
@@ -95966,12 +96148,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-close-w6",
     "text": "כִּי",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "ki",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-close"
+    "aliasOf": "line/kiddush-festival-eve-close",
+    "copyOf": "word/r10-w1"
   },
   {
     "path": "audio/f/israeli/word/kiddush-festival-eve-close-w6.mp3",
@@ -95980,12 +96163,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-close-w6",
     "text": "כִּי",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "ki",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-close"
+    "aliasOf": "line/kiddush-festival-eve-close",
+    "copyOf": "word/r10-w1"
   },
   {
     "path": "audio/m/israeli/word/kiddush-festival-eve-close-w7.mp3",
@@ -95994,12 +96178,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-close-w7",
     "text": "בָנוּ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "vanu",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-close"
+    "aliasOf": "line/kiddush-festival-eve-close",
+    "copyOf": "word/kiddush-shabbat-eve-w11"
   },
   {
     "path": "audio/f/israeli/word/kiddush-festival-eve-close-w7.mp3",
@@ -96008,12 +96193,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-close-w7",
     "text": "בָנוּ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "vanu",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-close"
+    "aliasOf": "line/kiddush-festival-eve-close",
+    "copyOf": "word/kiddush-shabbat-eve-w11"
   },
   {
     "path": "audio/m/israeli/word/kiddush-festival-eve-close-w8.mp3",
@@ -96022,12 +96208,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-close-w8",
     "text": "בָחַרְתָּ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "vacharta",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-close"
+    "aliasOf": "line/kiddush-festival-eve-close",
+    "copyOf": "word/kiddush-shabbat-eve-w31"
   },
   {
     "path": "audio/f/israeli/word/kiddush-festival-eve-close-w8.mp3",
@@ -96036,12 +96223,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-close-w8",
     "text": "בָחַרְתָּ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "vacharta",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-close"
+    "aliasOf": "line/kiddush-festival-eve-close",
+    "copyOf": "word/kiddush-shabbat-eve-w31"
   },
   {
     "path": "audio/m/israeli/word/kiddush-festival-eve-close-w9.mp3",
@@ -96050,12 +96238,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-close-w9",
     "text": "וְאוֹתָנוּ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "ve'otanu",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-close"
+    "aliasOf": "line/kiddush-festival-eve-close",
+    "copyOf": "word/kiddush-shabbat-eve-w32"
   },
   {
     "path": "audio/f/israeli/word/kiddush-festival-eve-close-w9.mp3",
@@ -96064,12 +96253,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-close-w9",
     "text": "וְאוֹתָנוּ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "ve'otanu",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-close"
+    "aliasOf": "line/kiddush-festival-eve-close",
+    "copyOf": "word/kiddush-shabbat-eve-w32"
   },
   {
     "path": "audio/m/israeli/word/kiddush-festival-eve-close-w10.mp3",
@@ -96078,12 +96268,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-close-w10",
     "text": "קִדַּשְׁתָּ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "kidashta",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-close"
+    "aliasOf": "line/kiddush-festival-eve-close",
+    "copyOf": "word/kiddush-shabbat-eve-w33"
   },
   {
     "path": "audio/f/israeli/word/kiddush-festival-eve-close-w10.mp3",
@@ -96092,12 +96283,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-close-w10",
     "text": "קִדַּשְׁתָּ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "kidashta",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-close"
+    "aliasOf": "line/kiddush-festival-eve-close",
+    "copyOf": "word/kiddush-shabbat-eve-w33"
   },
   {
     "path": "audio/m/israeli/word/kiddush-festival-eve-close-w11.mp3",
@@ -96106,12 +96298,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-close-w11",
     "text": "מִכָּל",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "mikol",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-close"
+    "aliasOf": "line/kiddush-festival-eve-close",
+    "copyOf": "word/kiddush-shabbat-eve-w34"
   },
   {
     "path": "audio/f/israeli/word/kiddush-festival-eve-close-w11.mp3",
@@ -96120,12 +96313,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-close-w11",
     "text": "מִכָּל",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "mikol",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-close"
+    "aliasOf": "line/kiddush-festival-eve-close",
+    "copyOf": "word/kiddush-shabbat-eve-w34"
   },
   {
     "path": "audio/m/israeli/word/kiddush-festival-eve-close-w12.mp3",
@@ -96134,12 +96328,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-close-w12",
     "text": "הָעַמִּים",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "ha'amim",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-close"
+    "aliasOf": "line/kiddush-festival-eve-close",
+    "copyOf": "word/r38-w3"
   },
   {
     "path": "audio/f/israeli/word/kiddush-festival-eve-close-w12.mp3",
@@ -96148,12 +96343,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-close-w12",
     "text": "הָעַמִּים",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "ha'amim",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-close"
+    "aliasOf": "line/kiddush-festival-eve-close",
+    "copyOf": "word/r38-w3"
   },
   {
     "path": "audio/m/israeli/word/kiddush-festival-eve-close-w13.mp3",
@@ -96218,12 +96414,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-close-w15",
     "text": "בְּשִׂמְחָה",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "besimchah",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-close"
+    "aliasOf": "line/kiddush-festival-eve-close",
+    "copyOf": "word/i-19-w5"
   },
   {
     "path": "audio/f/israeli/word/kiddush-festival-eve-close-w15.mp3",
@@ -96232,12 +96429,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-close-w15",
     "text": "בְּשִׂמְחָה",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "besimchah",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-close"
+    "aliasOf": "line/kiddush-festival-eve-close",
+    "copyOf": "word/i-19-w5"
   },
   {
     "path": "audio/m/israeli/word/kiddush-festival-eve-close-w16.mp3",
@@ -96274,12 +96472,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-close-w17",
     "text": "הִנְחַלְתָּנוּ׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "hinchaltanu",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-close"
+    "aliasOf": "line/kiddush-festival-eve-close",
+    "copyOf": "word/kiddush-shabbat-eve-w40"
   },
   {
     "path": "audio/f/israeli/word/kiddush-festival-eve-close-w17.mp3",
@@ -96288,12 +96487,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-close-w17",
     "text": "הִנְחַלְתָּנוּ׃",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "hinchaltanu",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-close"
+    "aliasOf": "line/kiddush-festival-eve-close",
+    "copyOf": "word/kiddush-shabbat-eve-w40"
   },
   {
     "path": "audio/m/israeli/word/kiddush-festival-eve-close-w18.mp3",
@@ -96302,12 +96502,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-close-w18",
     "text": "בָּרוּךְ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "barukh",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-close"
+    "aliasOf": "line/kiddush-festival-eve-close",
+    "copyOf": "word/r28-w1"
   },
   {
     "path": "audio/f/israeli/word/kiddush-festival-eve-close-w18.mp3",
@@ -96316,12 +96517,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-close-w18",
     "text": "בָּרוּךְ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "barukh",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-close"
+    "aliasOf": "line/kiddush-festival-eve-close",
+    "copyOf": "word/r28-w1"
   },
   {
     "path": "audio/m/israeli/word/kiddush-festival-eve-close-w19.mp3",
@@ -96330,12 +96532,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-close-w19",
     "text": "אַתָּה",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "atah",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-close"
+    "aliasOf": "line/kiddush-festival-eve-close",
+    "copyOf": "word/r10-w3"
   },
   {
     "path": "audio/f/israeli/word/kiddush-festival-eve-close-w19.mp3",
@@ -96344,12 +96547,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-close-w19",
     "text": "אַתָּה",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "atah",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-close"
+    "aliasOf": "line/kiddush-festival-eve-close",
+    "copyOf": "word/r10-w3"
   },
   {
     "path": "audio/m/israeli/word/kiddush-festival-eve-close-w20.mp3",
@@ -96358,12 +96562,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-close-w20",
     "text": "אֲדֹנָי",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "adonai",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-close"
+    "aliasOf": "line/kiddush-festival-eve-close",
+    "copyOf": "word/r15-w2"
   },
   {
     "path": "audio/f/israeli/word/kiddush-festival-eve-close-w20.mp3",
@@ -96372,12 +96577,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-close-w20",
     "text": "אֲדֹנָי",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "adonai",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-close"
+    "aliasOf": "line/kiddush-festival-eve-close",
+    "copyOf": "word/r15-w2"
   },
   {
     "path": "audio/m/israeli/word/kiddush-festival-eve-close-w21.mp3",
@@ -96386,12 +96592,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-close-w21",
     "text": "מְקַדֵּשׁ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "mekadesh",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-close"
+    "aliasOf": "line/kiddush-festival-eve-close",
+    "copyOf": "word/kiddush-shabbat-eve-w44"
   },
   {
     "path": "audio/f/israeli/word/kiddush-festival-eve-close-w21.mp3",
@@ -96400,12 +96607,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-close-w21",
     "text": "מְקַדֵּשׁ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "mekadesh",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-close"
+    "aliasOf": "line/kiddush-festival-eve-close",
+    "copyOf": "word/kiddush-shabbat-eve-w44"
   },
   {
     "path": "audio/m/israeli/word/kiddush-festival-eve-close-w22.mp3",
@@ -96414,12 +96622,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-close-w22",
     "text": "יִשְׂרָאֵל",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "yisra'el",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-close"
+    "aliasOf": "line/kiddush-festival-eve-close",
+    "copyOf": "word/r20-w2"
   },
   {
     "path": "audio/f/israeli/word/kiddush-festival-eve-close-w22.mp3",
@@ -96428,12 +96637,13 @@
     "kind": "word",
     "id": "kiddush-festival-eve-close-w22",
     "text": "יִשְׂרָאֵל",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "yisra'el",
     "english": "",
-    "aliasOf": "line/kiddush-festival-eve-close"
+    "aliasOf": "line/kiddush-festival-eve-close",
+    "copyOf": "word/r20-w2"
   },
   {
     "path": "audio/m/israeli/word/kiddush-festival-eve-close-w23.mp3",
@@ -96470,12 +96680,13 @@
     "kind": "word",
     "id": "leshev-basukkah-w1",
     "text": "בָּרוּךְ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "barukh",
     "english": "",
-    "aliasOf": "line/leshev-basukkah"
+    "aliasOf": "line/leshev-basukkah",
+    "copyOf": "word/r28-w1"
   },
   {
     "path": "audio/f/israeli/word/leshev-basukkah-w1.mp3",
@@ -96484,12 +96695,13 @@
     "kind": "word",
     "id": "leshev-basukkah-w1",
     "text": "בָּרוּךְ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "barukh",
     "english": "",
-    "aliasOf": "line/leshev-basukkah"
+    "aliasOf": "line/leshev-basukkah",
+    "copyOf": "word/r28-w1"
   },
   {
     "path": "audio/m/israeli/word/leshev-basukkah-w2.mp3",
@@ -96498,12 +96710,13 @@
     "kind": "word",
     "id": "leshev-basukkah-w2",
     "text": "אַתָּה",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "atah",
     "english": "",
-    "aliasOf": "line/leshev-basukkah"
+    "aliasOf": "line/leshev-basukkah",
+    "copyOf": "word/r10-w3"
   },
   {
     "path": "audio/f/israeli/word/leshev-basukkah-w2.mp3",
@@ -96512,12 +96725,13 @@
     "kind": "word",
     "id": "leshev-basukkah-w2",
     "text": "אַתָּה",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "atah",
     "english": "",
-    "aliasOf": "line/leshev-basukkah"
+    "aliasOf": "line/leshev-basukkah",
+    "copyOf": "word/r10-w3"
   },
   {
     "path": "audio/m/israeli/word/leshev-basukkah-w3.mp3",
@@ -96526,12 +96740,13 @@
     "kind": "word",
     "id": "leshev-basukkah-w3",
     "text": "אֲדֹנָי",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "adonai",
     "english": "",
-    "aliasOf": "line/leshev-basukkah"
+    "aliasOf": "line/leshev-basukkah",
+    "copyOf": "word/r15-w2"
   },
   {
     "path": "audio/f/israeli/word/leshev-basukkah-w3.mp3",
@@ -96540,12 +96755,13 @@
     "kind": "word",
     "id": "leshev-basukkah-w3",
     "text": "אֲדֹנָי",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "adonai",
     "english": "",
-    "aliasOf": "line/leshev-basukkah"
+    "aliasOf": "line/leshev-basukkah",
+    "copyOf": "word/r15-w2"
   },
   {
     "path": "audio/m/israeli/word/leshev-basukkah-w4.mp3",
@@ -96554,12 +96770,13 @@
     "kind": "word",
     "id": "leshev-basukkah-w4",
     "text": "אֱלֹהֵינוּ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "eloheinu",
     "english": "",
-    "aliasOf": "line/leshev-basukkah"
+    "aliasOf": "line/leshev-basukkah",
+    "copyOf": "word/r22-w3"
   },
   {
     "path": "audio/f/israeli/word/leshev-basukkah-w4.mp3",
@@ -96568,12 +96785,13 @@
     "kind": "word",
     "id": "leshev-basukkah-w4",
     "text": "אֱלֹהֵינוּ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "eloheinu",
     "english": "",
-    "aliasOf": "line/leshev-basukkah"
+    "aliasOf": "line/leshev-basukkah",
+    "copyOf": "word/r22-w3"
   },
   {
     "path": "audio/m/israeli/word/leshev-basukkah-w5.mp3",
@@ -96582,12 +96800,13 @@
     "kind": "word",
     "id": "leshev-basukkah-w5",
     "text": "מֶלֶךְ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "melekh",
     "english": "",
-    "aliasOf": "line/leshev-basukkah"
+    "aliasOf": "line/leshev-basukkah",
+    "copyOf": "word/r11-w2"
   },
   {
     "path": "audio/f/israeli/word/leshev-basukkah-w5.mp3",
@@ -96596,12 +96815,13 @@
     "kind": "word",
     "id": "leshev-basukkah-w5",
     "text": "מֶלֶךְ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "melekh",
     "english": "",
-    "aliasOf": "line/leshev-basukkah"
+    "aliasOf": "line/leshev-basukkah",
+    "copyOf": "word/r11-w2"
   },
   {
     "path": "audio/m/israeli/word/leshev-basukkah-w6.mp3",
@@ -96610,12 +96830,13 @@
     "kind": "word",
     "id": "leshev-basukkah-w6",
     "text": "הָעוֹלָם",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "ha'olam",
     "english": "",
-    "aliasOf": "line/leshev-basukkah"
+    "aliasOf": "line/leshev-basukkah",
+    "copyOf": "word/r28-w5"
   },
   {
     "path": "audio/f/israeli/word/leshev-basukkah-w6.mp3",
@@ -96624,12 +96845,13 @@
     "kind": "word",
     "id": "leshev-basukkah-w6",
     "text": "הָעוֹלָם",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "ha'olam",
     "english": "",
-    "aliasOf": "line/leshev-basukkah"
+    "aliasOf": "line/leshev-basukkah",
+    "copyOf": "word/r28-w5"
   },
   {
     "path": "audio/m/israeli/word/leshev-basukkah-w7.mp3",
@@ -96638,12 +96860,13 @@
     "kind": "word",
     "id": "leshev-basukkah-w7",
     "text": "אֲשֶׁר",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "asher",
     "english": "",
-    "aliasOf": "line/leshev-basukkah"
+    "aliasOf": "line/leshev-basukkah",
+    "copyOf": "word/vahavta-2-w4"
   },
   {
     "path": "audio/f/israeli/word/leshev-basukkah-w7.mp3",
@@ -96652,12 +96875,13 @@
     "kind": "word",
     "id": "leshev-basukkah-w7",
     "text": "אֲשֶׁר",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "asher",
     "english": "",
-    "aliasOf": "line/leshev-basukkah"
+    "aliasOf": "line/leshev-basukkah",
+    "copyOf": "word/vahavta-2-w4"
   },
   {
     "path": "audio/m/israeli/word/leshev-basukkah-w8.mp3",
@@ -96666,12 +96890,13 @@
     "kind": "word",
     "id": "leshev-basukkah-w8",
     "text": "קִדְּשָׁנוּ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "kideshanu",
     "english": "",
-    "aliasOf": "line/leshev-basukkah"
+    "aliasOf": "line/leshev-basukkah",
+    "copyOf": "word/candle-shabbat-w8"
   },
   {
     "path": "audio/f/israeli/word/leshev-basukkah-w8.mp3",
@@ -96680,12 +96905,13 @@
     "kind": "word",
     "id": "leshev-basukkah-w8",
     "text": "קִדְּשָׁנוּ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "kideshanu",
     "english": "",
-    "aliasOf": "line/leshev-basukkah"
+    "aliasOf": "line/leshev-basukkah",
+    "copyOf": "word/candle-shabbat-w8"
   },
   {
     "path": "audio/m/israeli/word/leshev-basukkah-w9.mp3",
@@ -96694,12 +96920,13 @@
     "kind": "word",
     "id": "leshev-basukkah-w9",
     "text": "בְּמִצְוֹתָיו",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "bemitzvotav",
     "english": "",
-    "aliasOf": "line/leshev-basukkah"
+    "aliasOf": "line/leshev-basukkah",
+    "copyOf": "word/i-30-w9"
   },
   {
     "path": "audio/f/israeli/word/leshev-basukkah-w9.mp3",
@@ -96708,12 +96935,13 @@
     "kind": "word",
     "id": "leshev-basukkah-w9",
     "text": "בְּמִצְוֹתָיו",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "bemitzvotav",
     "english": "",
-    "aliasOf": "line/leshev-basukkah"
+    "aliasOf": "line/leshev-basukkah",
+    "copyOf": "word/i-30-w9"
   },
   {
     "path": "audio/m/israeli/word/leshev-basukkah-w10.mp3",
@@ -96722,12 +96950,13 @@
     "kind": "word",
     "id": "leshev-basukkah-w10",
     "text": "וְצִוָּנוּ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "vetzivanu",
     "english": "",
-    "aliasOf": "line/leshev-basukkah"
+    "aliasOf": "line/leshev-basukkah",
+    "copyOf": "word/candle-shabbat-w10"
   },
   {
     "path": "audio/f/israeli/word/leshev-basukkah-w10.mp3",
@@ -96736,12 +96965,13 @@
     "kind": "word",
     "id": "leshev-basukkah-w10",
     "text": "וְצִוָּנוּ",
-    "status": "missing",
-    "source": "none",
+    "status": "tts",
+    "source": "paid-cloud",
     "group": "prayer-word",
     "phonetic": "vetzivanu",
     "english": "",
-    "aliasOf": "line/leshev-basukkah"
+    "aliasOf": "line/leshev-basukkah",
+    "copyOf": "word/candle-shabbat-w10"
   },
   {
     "path": "audio/m/israeli/word/leshev-basukkah-w11.mp3",

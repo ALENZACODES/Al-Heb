@@ -7,7 +7,9 @@ Talk (`#/talk`) turns a short everyday line from English into Hebrew or from Heb
 Talk answers in two steps.
 
 1. **Stored lines first.** A phrase memory with sentence patterns on top. It knows travel, shop, table, emergency and synagogue talk. Its wording is fixed and its gender and number forms are right, so it is trusted over anything else.
-2. **A language pack for the rest.** Two small translation models, one for each direction, that run in the browser on the learner's device. They are not part of the first install. The learner adds a pack on the Talk screen; after that it works offline. Without a pack, a line the stored lines do not hold is refused as before, and the screen offers the pack.
+2. **A language pack for the rest.** Two small translation models, one for each direction, that run in the browser on the learner's device. They are not part of the first install. The learner adds a pack on the Talk screen; after that it works offline. Without a pack, a line the stored lines do not hold is refused as before, and the screen offers the pack: a button right under the line ("Translate It: Get the English to Hebrew Pack (About 93 MB, One Time)") downloads it and then translates the line that was waiting.
+
+Most everyday phrases are not stored lines. "Very complex", "good idea", "big house" and "he is late" all need the pack; with it they come out as מורכב מאוד, רעיון טוב, בית גדול and הוא מאחר. Of 470 short lines written by people (one to three English words, both directions), the stored lines alone answer 12.
 
 Every answer carries a label that says how it was made.
 
@@ -16,7 +18,7 @@ Every answer carries a label that says how it was made.
 | A stored line | An exact line from the stored sentence pairs. |
 | Built from a sentence pattern | A stored frame such as "Where is …?" with a known noun, place, name or number slotted in. |
 | The closest stored line | A stored line that differs from the request only by small words such as "here" or "very". The matched line is shown. Only used when the pack is not on the device. |
-| A single word | One noun from the Talk list, or one dictionary word. |
+| A single word | One noun from the Talk list, or one dictionary word, shown with its vowel marks (without them חמץ could be vinegar or leaven). A word has several senses and the dictionary shows one: when the pack is on the device and gives another word, that word is shown under it as "Language pack". |
 | Word by word | Hebrew read one word at a time from the dictionary. Shown as a gist, not as a sentence. Only used when the pack is not on the device. |
 | Translated on this device | A line from the language pack. The note under it says it is not from a checked line. |
 
@@ -38,6 +40,24 @@ A line that differs from a stored line by a real word is never matched to it. "I
 - **Where it runs.** In a worker, so the page stays responsive, on WebAssembly with one thread. A line takes about 0.3 to 0.6 seconds on the desktop used for testing. It has not been timed on a phone.
 - **Size.** The stock export of these models is about 143 MiB a direction at 8 bits because the 60,000-row word table is stored three times. `tools/talk/nmt/export.py` stores it once, with one scale per row, and splits the model into three graphs. On the held-out file the 8-bit packs score within one point of the full-precision models (greedy decoding, first-choice wording: 69.8 against 70.0 Hebrew to English, 79.9 against 80.8 English to Hebrew).
 - **Synagogue words.** `data/talk/terms.json` lists words the packs get wrong (כיפה as "dome", קידוש as "sanctification") with the wrong renderings, found by `tools/talk/nmt/terms.mjs`. A rendering is replaced only when the source line holds the word and the output holds that exact rendering. Words with a second everyday meaning are left out.
+
+## What Is Done Around The Pack
+
+The pack is a small model and makes some kinds of mistake again and again. They were found by running it on many lines (see "Scores") and each is handled in code, with a test.
+
+- **One sentence at a time.** The pack was made from single sentences. Given two in one line it runs them together or leaves one out: "אל תבכה. הכל יהיה בסדר." came back as "Everything's gonna be okay." So a line of several sentences is cut (`src/talk/nmt/sentences.js`) and translated a sentence at a time. A sentence the stored lines hold is taken from them. A cut is made only after ".", "!", "?" or "…" when the next part starts like a sentence; "Dr. Cohen", "No. 5", "U.S." and "3.50" do not cut.
+- **Numbers come out as typed** (`src/talk/nmt/numbers.js`). The pack copies numbers badly. Seen on the shipped pack: "054-123-4567" came back as "054-113-4567", "18:40" as "6:40", "772 steps" as "722 steps", "66 kilos" as "160 kilos", and "He was born on 03.10.2029 and she was born in 2005" as "He was born in 2005". Every pack line is compared with the line as typed:
+  - a changed number is put back when it is clearly a bad copy of one typed (the same form, nearly the same digits, or a clock time with the same minutes);
+  - "9: 15" is closed up to "9:15", and a number with the right digits goes back to the way it was typed ("8.386" to "8,386");
+  - "21:45" answered as "9:45 p.m." is left alone: it is the same time;
+  - a small number written as a word ("7 days" as "שבעה ימים", from the stored number table) is left alone;
+  - when the numbers still do not match, the sentence is translated once more with each number swapped for a stand-in the pack copies as it stands (417, 528, ...), and the typed numbers are put back in their places;
+  - if that does not settle it, the pack's own answer is shown with "Check the numbers and units against what you typed" in front of the note.
+- **Shekels stay shekels.** Hebrew to English, the pack often answers a shekel price in dollars ("50 שקלים" as "50 bucks", "12.50 שקלים" as "$12.50"). When the line names shekels and no dollars, the answer says shekels. The sign ₪ and the short forms ש"ח and NIS are written out as the word before the pack sees the line, because it does not know them.
+- **Units stay units.** The pack swaps a unit for its cousin and keeps the number ("81 קילו" as "81 pounds", "417 קילומטר" as "417 miles") or converts both roughly ("196 סנטימטר" as 6'2"). Hebrew to English, the metric word of the line is put back after its number. English to Hebrew a change of family is reported with the same note and not rewritten: the Hebrew words for miles and pounds are not in this project's sources.
+- **Endings and capitals.** A full stop the pack added to a phrase typed without one is taken off ("very complex" gives מורכב מאוד, not מורכב מאוד.). Headline capitals on a short phrase go back to a plain phrase ("Very Complicated" to "Very complicated"); names keep theirs.
+- **A word left untranslated is pointed out.** "A slam dunk" came back as "טריקה dunk". The note says part of the line came out in English letters.
+- **A frame filled from the dictionary is not trusted over the pack.** "Built from a sentence pattern and a dictionary word" is the stored lines' least sure sentence. On 23 such lines of the back test the pack was closer to the person's translation on 16 and further on 5. With the pack on the device those lines go to the pack; without it the frame answer stands, with its warning.
 
 ## The Graphics Card (WebGPU)
 
@@ -96,12 +116,14 @@ A misheard word that is itself a real word is a different request. It is transla
 | `src/talk/hybrid.js` | Stored lines first, the pack for the rest. |
 | `src/talk/nmt/tokenizer.js`, `decode.js`, `runtime.js` | Splitting a line into word pieces, the beam search, and the three graphs put together. The same code runs in the browser and in the Node scoring tool. |
 | `src/talk/nmt/pack.js`, `client.js`, `worker.js` | Download, checking and keeping of the pack files; the page's side; the worker. |
-| `src/talk/nmt/postedit.js` | What is done to a pack line before it is shown: the Name, the term list, stray dashes. |
+| `src/talk/nmt/postedit.js` | What is done to a pack line before it is shown: the Name, the term list, stray dashes, the ending and capitals of a short phrase. |
+| `src/talk/nmt/sentences.js` | Cuts a line into its sentences, so the pack gets one at a time. |
+| `src/talk/nmt/numbers.js` | Keeps the numbers, money and units of a pack line as typed. |
 | `src/talk/data.js` | Loads the stored lines and builds the engine. |
 | `src/talk/speech.js` | Listening through the browser's own speech recognition. |
 | `src/talk/talk.model.js` | Settings, history, the sacred-Name hold, scoring helpers. |
 | `src/talk/talk.view.js` | The screen. |
-| `tools/talk/nmt/` | `export.py` builds a pack from a checkpoint, `pack.mjs` splits it and writes the manifest, `terms.mjs` builds the term list, `score.mjs` scores a held-out file, `e2e-talk.mjs` runs the screen in a real browser. |
+| `tools/talk/nmt/` | `export.py` builds a pack from a checkpoint, `pack.mjs` splits it and writes the manifest, `terms.mjs` builds the term list, `score.mjs` scores a held-out file, `backtest.mjs` runs thousands of person-written sentence pairs both ways, `numbers-test.mjs` checks that typed numbers come out unchanged, `e2e-talk.mjs` runs the screen in a real browser. |
 
 ## Listening And Voice
 
@@ -141,19 +163,85 @@ Shipped code and shipped packs, WebAssembly, beam of 2 (`node tools/talk/nmt/sco
 | What answers | First-choice wording | Accepted wordings | Refused |
 |---|---|---|---|
 | Stored lines only (no pack on the device) | 5.0 | 5.5 | 224 of 240 |
-| Stored lines first, then the pack (what the screen does) | 77.3 | 94.4 | 0 |
+| Stored lines first, then the pack (what the screen does) | 77.2 | 94.4 | 0 |
 | The pack alone | 77.0 | 94.4 | 0 |
 
 | Direction, stored lines then pack | First-choice wording | Accepted wordings |
 |---|---|---|
 | English to Hebrew (120) | 84.7 | 97.9 |
-| Hebrew to English (120) | 69.9 | 90.8 |
+| Hebrew to English (120) | 69.7 | 90.8 |
 
 Against the bar of 92: the accepted-wordings score is above it, the first-choice score is not, and Hebrew to English is below it on both counts taken alone. Which of the two scores the bar means is the reviewer's call.
 
 Read line by line by the builder (not a native speaker), about 11 of the 240 lines came out with a wrong meaning, 8 of them Hebrew to English: "These shoes are too small for me" became "I don't have any of those shoes", הכדור (the pill) became "ball", חצי קילו became "a pound", החשבון (the bill) became "the math", חלות לשבת became "Saturday nights", שנה טובה ומתוקה became "Happy New Year, sweetheart". English to Hebrew: "services" (prayers) became שירותים, and "the Torah portion of the week" was put word for word. The recorded lines are in `tests/fixtures/talk.heldout.results.json`.
 
 Not measured: real speech, a phone, and a native speaker's judgment of any line.
+
+### The Back Test (5,000 Lines)
+
+`tools/talk/nmt/backtest.mjs` runs sentence pairs written by people through the shipped code and the shipped packs. The pairs are the dictionary's example sentences (`data/vocab/words.json`, from Tatoeba, CC BY 2.0 FR). About 4,700 are short enough for Talk (14 words at most). 2,500 are drawn with a fixed seed and each is asked both ways, which makes 5,000 lines. No network is used.
+
+"The person's words" counts answers that have the same words as the person's translation once case, vowel points and punctuation are set aside. The house score is 1 minus the word error rate. chrF is a standard measure on groups of letters that gives part marks for a close wording.
+
+| What answers (seed 20261111, beam of 2) | Answered | The person's words | House score | chrF |
+|---|---|---|---|---|
+| Stored lines only (no pack on the device) | 35 of 5,000 | 4 | 0.4 | 0.4 |
+| Stored lines, then the pack, before this round (2026-11-11) | 5,000 | 1,032 | 61.3 | 63.4 |
+| Stored lines, then the pack, now | 5,000 | 1,043 | 61.5 | 63.6 |
+
+| Direction, now | The person's words | House score | chrF |
+|---|---|---|---|
+| English to Hebrew (2,500) | 421 | 56.3 | 60.4 |
+| Hebrew to English (2,500) | 622 | 66.7 | 66.7 |
+
+How to read these numbers.
+
+- They measure closeness to one person's wording, not correctness. A sentence has many right translations and each pair holds one. "I abhor spiders" answered as אני מתעב עכבישים scores 0.41 against the person's אני לא סובל עכבישים, and both are right.
+- The pack's model was made from public sentence collections that include Tatoeba, so it may have seen some of these pairs. Treat the scores as an upper bound.
+- The sentences are general ones (many are about "Tom"), not travel talk. The stored lines were not written for them, which is why they answer 35.
+- The totals barely moved this round, because nearly all of these lines are one sentence with no number in it. The run earned its keep by showing where the pack goes wrong. 78 answers changed between the two runs: 48 came closer to the person's wording by chrF, 16 went further and 14 stayed the same distance.
+
+| Found by the run | Lines | Before | Now |
+|---|---|---|---|
+| A line of more than one sentence | 53 | The answer had fewer sentences than the line in 51; chrF 53.2 | In none; chrF 63.4 |
+| A frame filled from the dictionary ("I have an a migraine headache", "I like camel" for camels) | 23 | The frame answered; chrF 58.1 | The pack answers: closer to the person on 16, further on 5; chrF 73.5 |
+| "היום" read as "the day" in a frame | 1 | "I want to eat the day outside" | "I want to eat outside today" |
+| A typed number changed (11 lines have digits) | 1 | "32 דונם" as "20 acres" | "32 dunams" |
+| An English word left in a Hebrew answer (2 or more Latin letters) | 5 | Not said | The note under the answer says so |
+
+What the run shows and nothing here fixes: rare and bookish words. "תום נפטר ערירי" (Tom died childless) came back as "Tom's gone rogue", "תום קהה חושים" (Tom is numb) as "Consciousness.", "כולם תעבו את זה" (everyone hated it) as "Everyone's been clouding it". These are the pack's own limits.
+
+Nobody who speaks Hebrew natively has read these 5,000 answers.
+
+### The Number Test
+
+`tools/talk/nmt/numbers-test.mjs` asks one question: do the numbers typed in a line come out of the translation unchanged? Sentence frames about times, prices, phone numbers, dates, rooms, buses, weights and distances are filled with numbers from a seeded generator and each line is answered twice: by the pack alone, and as the screen answers it now. The judging code is written apart from the fixing code. No reference translation is used and the wording is not scored.
+
+A line counts as intact when the answer holds no number that was not typed and every typed number is there (a small count may be written as its word; "21:45" answered as "9:45 p.m." is the same time).
+
+| Set | Lines | Pack alone: numbers intact | Now | Now, wrong and not flagged |
+|---|---|---|---|---|
+| First: 20 frames each way, the ones the check was built against | 1,200 | 1,031 | 1,200 | 0 |
+| Second: 12 other frames each way | 600 | 517 | 600 | 0 |
+| Third: 12 other frames each way | 600 | 528 | 600 | 0 |
+
+| The pack alone, by direction | First | Second | Third |
+|---|---|---|---|
+| English to Hebrew: numbers intact | 570 of 600 | 293 of 300 | 292 of 300 |
+| Hebrew to English: numbers intact | 461 of 600 | 224 of 300 | 236 of 300 |
+| Hebrew to English: a metric unit answered in miles, pounds or feet | 0 | 33 | 23 |
+| Hebrew to English: a shekel price answered in dollars | 30 of 120 | 6 of 25 | 10 of 25 |
+| English to Hebrew: a stray space inside a clock time ("9: 15") | 240 | 75 | 49 |
+
+Now: no unit is changed, no shekel price is in dollars and no time has a stray space, in all three sets. No line needed the "check the numbers" note.
+
+How to read these numbers.
+
+- The first set says only that the check does what it was built to do: it was written while looking at those frames.
+- The second set was written after the check was first finished and run once. It scored 598 of 600: two lines were wrong and not flagged, because the pack had turned kilos and centimetres into pounds and feet and the check then put the typed numbers beside the wrong units. Units were added to the check after that, and a number is no longer put back unless it is nearly the number typed.
+- The third set was written after that change and before it was run. Its first run scored 600 of 600 with one blemish the judge counts apart (a date written "13: 06.2028"). Writing numbers back the way they were typed was added, and all three sets were run again: the table shows those runs.
+- So the third set is the fairest measure, and it is still 24 frames written by the builder. Real lines will hold things these frames do not. The Hebrew frames were not checked by a native speaker; only their numbers are scored.
+- What the pack alone does on these lines is the plainest finding. Hebrew to English it gets a number or a unit wrong in about one line in five: "החבילה שוקלת 66 קילו" came back as "160 kilos", "המלון נמצא 130 מטר מהים" as "300 feet from the sea", "יש 772 מדרגות" as "722 steps".
 
 ### The Older Files (Stored Lines Only)
 
@@ -185,3 +273,8 @@ Each line of `transcripts.jsonl` is `{"id": "...", "direction": "he-en", "text":
 - A native speaker's check of the stored lines, the term list and the held-out references.
 - Speaker forms for pack lines. A pack line comes out as said by and to a man unless the English says otherwise; the screen says so.
 - Playing the recorded phrasebook clips for stored lines. Today every line uses the device voice.
+- A pack that downloads by itself. The learner presses one button under the first line that needs it. Whether the download should start without that press (about 93 MB) is the owner's decision.
+- A native speaker's read of the back-test answers, and of the Hebrew frames in the number test.
+- Putting a changed unit right English to Hebrew ("5 miles" answered as "5 קילומטרים"). It is reported with the "check the numbers and units" note. Hebrew to English it is put right.
+- Checking numbers that are not digits: a number said in words, or a Hebrew date written in letters.
+- A better pack. Rare and bookish words come out wrong, and no code around the pack can know that.

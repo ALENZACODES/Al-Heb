@@ -22,7 +22,11 @@ export async function openApp({ viewport = { width: 390, height: 1100 }, launchA
   const server = createAppServer(); await new Promise((r) => server.listen(0, r));
   const base = `http://localhost:${server.address().port}`;
   const browser = await chromium.launch(launchArgs.length ? { args: launchArgs } : {});
-  const ctx = await browser.newContext({ viewport, deviceScaleFactor: 2, serviceWorkers: 'block' });
+  // reduced motion: the site scrolls smoothly, and a pointer click sent while the page is still gliding lands beside its button
+  const ctx = await browser.newContext({ viewport, deviceScaleFactor: 2, serviceWorkers: 'block', reducedMotion: 'reduce' });
+  // The opening prayer covers the whole screen for its reading time and the page behind it takes no input. These runs
+  // are about the screens behind it, so the prayer is marked as already seen today (as tools/qa/sweep.mjs does).
+  await ctx.addInitScript(() => { try { const d = new Date(); localStorage.setItem('alef:opening-prayer:day:v1', `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`); } catch { /* storage off */ } });
   const page = await ctx.newPage();
   const errors = []; const reqs = []; const posts = [];
   page.on('pageerror', (e) => errors.push(e.message));

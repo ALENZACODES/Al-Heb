@@ -113,7 +113,9 @@ function glossTerms(gloss) {
 }
 
 const MASS = new Set(['coffee', 'tea', 'water', 'milk', 'bread', 'wine', 'beer', 'juice', 'orange juice', 'meat', 'rice', 'cheese', 'sugar', 'salt', 'pepper', 'ice', 'ice cream', 'help', 'money', 'cash', 'hummus', 'falafel', 'internet', 'wifi', 'time', 'parking', 'fruit', 'chicken', 'fish', 'soup', 'salad', 'gluten', 'sesame', 'dairy', 'breakfast', 'lunch', 'dinner', 'kiddush', 'police', 'family', 'challah', 'sunscreen', 'pizza', 'medicine']);
-const withArticle = (en) => (MASS.has(en) || /s$/.test(en) ? en : (/^[aeiou]/.test(en) ? 'an ' : 'a ') + en);
+/** A dictionary gloss may already carry its article ("a sofa"): the bare noun is what the frames work with. */
+const noArticle = (en) => String(en).replace(/^(?:an?|the) (?=\S)/i, '');
+const withArticle = (en) => (/^(?:an?|the|some|my|your|his|her|our|their) /i.test(en) || MASS.has(en) || /s$/.test(en) ? en : (/^[aeiou]/.test(en) ? 'an ' : 'a ') + en);
 const cap = (s) => (s ? s[0].toUpperCase() + s.slice(1) : s);
 const hasHebrewText = (s) => /[א-ת]/.test(String(s));
 const PREFIX_GLOSS = { 'ו': 'and', 'ה': 'the', 'ב': 'in', 'ל': 'to' };
@@ -232,6 +234,23 @@ export function createEngine(data) {
   /** @type {Set<string>} */ const takesThing = new Set(); // to-forms that can be followed by a thing ("buy a ticket"); the rest stand alone ("sit", "leave")
   for (const v of pack.verbs || []) { if (!verbEn.has(v.en)) verbEn.set(v.en, v.he); if (!verbHe.has(v.he)) verbHe.set(v.he, v.en); if (v.thing) { takesThing.add(v.en); takesThing.add(v.he); } }
   const ADV = [['here', 'כאן'], ['now', 'עכשיו'], ['today', 'היום'], ['tomorrow', 'מחר'], ['tonight', 'הערב'], ['outside', 'בחוץ'], ['inside', 'בפנים'], ['later', 'אחר כך'], ['there', 'שם']];
+  /** "Where" words go before "when" words in English ("eat outside today"); Hebrew keeps the order it was said in. */
+  const WHERE_EN = new Set(['here', 'there', 'outside', 'inside']);
+  /**
+   * Words for "when" that are not things. היום is "today" far more often than "the day", and the frames read it as the noun:
+   * "אני רוצה לאכול היום בחוץ" came out as "I want to eat the day outside" (found by the back test).
+   */
+  const WHEN_HE = new Set(['היום', 'מחר', 'עכשיו']);
+  /** Up to two closing words for where and when ("... outside today"), taken off the end of a to-form phrase. */
+  const takeAdverbs = (text, side) => {
+    let t = text; const found = [];
+    for (let n = 0; n < 2; n++) {
+      const hit = ADV.find((pair) => t.endsWith(' ' + pair[side]));
+      if (!hit) break;
+      found.unshift(hit); t = t.slice(0, -hit[side].length - 1);
+    }
+    return { rest: t, found };
+  };
   const CONTAINER = new Map([['bottle', 'בקבוק'], ['glass', 'כוס'], ['cup', 'כוס'], ['plate', 'צלחת'], ['bowl', 'קערה']]);
   const CONTAINER_HE = new Map([['בקבוק', 'bottle'], ['כוס', 'glass'], ['צלחת', 'plate'], ['קערה', 'bowl']]);
   const LANGS = new Map([['english', 'אנגלית'], ['hebrew', 'עברית']]);
@@ -240,11 +259,15 @@ export function createEngine(data) {
   /** @type {Map<string, {he:string, pointed:string, rank:number, verb:boolean, noun:boolean}>} */ let dictEn = new Map();
   /** @type {Map<string, {en:string, pointed:string}>} */ let dictHe = new Map();
   let hasDict = false;
+  /** Ordinary English words: the lower-case words of the dictionary's glosses. Used to tell a common word from a name. */
+  /** @type {Set<string>} */ let glossWords = new Set();
   function setDictionary(rows) {
-    dictEn = new Map(); dictHe = new Map(); hasDict = false;
+    dictEn = new Map(); dictHe = new Map(); hasDict = false; glossWords = new Set();
     for (const r of rows || []) {
       const pointed = r[1]; const he = r[2]; const gloss = r[3]; const pos = r[4]; const rank = Number(r[9]) || 99999;
       if (!he || !gloss || /^\(/.test(String(gloss).trim())) continue;
+      // every lower-case word of a gloss is an ordinary English word (a gloss word written with a capital is a name and is left out)
+      for (const w of String(gloss).split(/[^A-Za-z']+/)) if (w.length > 1 && w === w.toLowerCase()) glossWords.add(w);
       const first = firstGloss(gloss);
       if (first && !dictHe.has(he)) dictHe.set(he, { en: first, pointed });
       const verb = pos === 'verb';
@@ -272,7 +295,7 @@ export function createEngine(data) {
     /** @type {'table'|'dictionary'} */ let from = 'table';
     if (!hit && !t.includes(' ')) {
       const d = dictEn.get(t) || (/s$/.test(t) ? dictEn.get(t.slice(0, -1)) : null);
-      if (d && d.noun) { hit = { en: t, he: d.he, def: 'ה' + d.he, kind: 'noun' }; from = 'dictionary'; }
+      if (d && d.noun) { hit = { en: t, he: d.he, def: 'ה' + d.he, kind: 'noun', pointed: d.pointed }; from = 'dictionary'; }
     }
     if (!hit && !m) {
       // "three tickets", "two beers", "one night", "20 shekels": the noun must have a stored plural
@@ -330,7 +353,7 @@ export function createEngine(data) {
     }
     if (hit.kind === 'place') return { he: hit.he, def: hit.he, definite: true, from, kind: 'place', g: '' };
     const def = mine ? `${hit.def} שלי` : hit.def;
-    return { he: definite ? def : hit.he, def, definite, from, kind: hit.kind, g: from === 'table' ? (hit.g || 'm') : '' };
+    return { he: definite ? def : hit.he, def, definite, from, kind: hit.kind, g: from === 'table' ? (hit.g || 'm') : '', ...(from === 'dictionary' && !definite && hit.pointed ? { pointed: hit.pointed } : {}) };
   }
   /** Attach a one-letter preposition (ל, ב, מ): the article ה folds into it. */
   const withPrep = (n, prep) => prep + (n.definite && n.kind !== 'place' && n.he.startsWith('ה') ? n.he.slice(1) : n.he);
@@ -339,7 +362,7 @@ export function createEngine(data) {
   /** Hebrew noun phrase -> English ("the hospital", "coffee", "two tickets"). */
   function enOf(heText) {
     const t = normHe(heText);
-    if (!t) return null;
+    if (!t || WHEN_HE.has(t)) return null;
     const hit = nounHe.get(t);
     if (hit) return { en: hit.kind === 'place' ? hit.en : (hit.definite ? 'the ' + hit.en : hit.en), bare: hit.en, definite: hit.definite, from: 'table', kind: hit.kind };
     const parts = t.split(' ');
@@ -371,16 +394,16 @@ export function createEngine(data) {
     }
     if (parts.length === 1) {
       const d = dictHe.get(t);
-      if (d) return { en: d.en, bare: d.en, definite: false, from: 'dictionary', kind: 'noun' };
-      if (t.startsWith('ה') && t.length > 2) { const d2 = dictHe.get(t.slice(1)); if (d2) return { en: 'the ' + d2.en, bare: d2.en, definite: true, from: 'dictionary', kind: 'noun' }; }
+      if (d) { const bare = noArticle(d.en); return { en: bare, bare, definite: false, from: 'dictionary', kind: 'noun' }; }
+      if (t.startsWith('ה') && t.length > 2) { const d2 = dictHe.get(t.slice(1)); if (d2) { const bare = noArticle(d2.en); return { en: 'the ' + bare, bare, definite: true, from: 'dictionary', kind: 'noun' }; } }
     }
     return null;
   }
 
   /** English verb phrase after "to": a stored to-form, then an optional thing and an optional "here / now / outside". */
   function vp(text) {
-    let t = String(text || '').trim(); let tail = '';
-    for (const [e, hx] of ADV) { if (t.endsWith(' ' + e)) { tail = ' ' + hx + tail; t = t.slice(0, -e.length - 1); break; } }
+    const cut = takeAdverbs(String(text || '').trim(), 0);
+    const t = cut.rest; const tail = cut.found.map((pair) => ' ' + pair[1]).join('');
     const words = t.split(' ');
     for (let k = Math.min(4, words.length); k >= 1; k--) {
       const key = words.slice(0, k).join(' ');
@@ -396,8 +419,9 @@ export function createEngine(data) {
   }
   /** Hebrew to-form phrase -> English ("לשלם עכשיו" -> "pay now"). */
   function vpHe(text) {
-    let t = normHe(text); let tail = '';
-    for (const [e, hx] of ADV) { if (t.endsWith(' ' + hx)) { tail = ' ' + e; t = t.slice(0, -hx.length - 1); break; } }
+    const cut = takeAdverbs(normHe(text), 1);
+    const t = cut.rest;
+    const tail = [...cut.found].sort((x, y) => Number(WHERE_EN.has(y[0])) - Number(WHERE_EN.has(x[0]))).map((pair) => ' ' + pair[0]).join('');
     const words = t.split(' ');
     for (let k = Math.min(4, words.length); k >= 1; k--) {
       const key = words.slice(0, k).join(' ');
@@ -740,6 +764,8 @@ export function createEngine(data) {
       if (single) {
         const several = bare.includes(' '); // "two beers", "tea with milk": put together, not one word
         return { ok: true, direction, source, translation: please(single.he), method: several ? 'pattern' : 'word', confidence: single.from === 'table' ? 'medium' : 'low',
+          // a lone dictionary word carries its vowel marks: the screen shows them, because the short spelling can read as another word
+          ...(!several && /** @type {any} */ (single).pointed && please(single.he) === single.he ? { pointed: /** @type {any} */ (single).pointed } : {}),
           note: single.from !== 'table' ? 'One dictionary word. It may not be the sense you meant.' : (several ? 'Built from a sentence pattern.' : undefined) };
       }
       const verb = !bare.includes(' ') ? dictEn.get(bare) : null;
@@ -804,6 +830,10 @@ export function createEngine(data) {
     translate,
     setDictionary,
     get hasDictionary() { return hasDict; },
+    /** True when `word` (lower case) is an ordinary English word the dictionary uses in a gloss. False for every word while no dictionary is loaded. */
+    knowsEnglish: (word) => glossWords.has(String(word || '').toLowerCase()),
+    /** The ways a number of the table (0 to 100) is written as a word, in English and in Hebrew (every gender form); empty lists for any other number. */
+    numberWords(n) { const N = numEn.get(String(n)); return N ? { en: [...N.en], he: [N.count, N.m, N.mConstruct, N.fConstruct].filter(Boolean) } : { en: [], he: [] }; },
     size: { pairs: pairs.length, nouns: nounEn.size, names: nameEn.size },
     /** Stored lines of one group, for the "Try saying" list. */
     examples(cat, n = 6) { return (pack.phrases || []).filter((p) => !cat || p.cat === cat).slice(0, n).map((p) => ({ id: p.id, en: p.en[0], he: p.he })); },

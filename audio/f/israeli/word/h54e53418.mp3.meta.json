@@ -1,0 +1,27 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "israeli",
+ "inputText": "גַּרְזֶן",
+ "inputSha256": "2bfcc9f28a0baf6df64ae2f49e9fd42c6c50e635792222f3be2bce36078a0df1",
+ "ingestedAt": "2026-11-11T23:23:02.033Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-11T23:23:02.033Z",
+ "redistributionCleared": false,
+ "spokenText": "גַּרְזֶן",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [],
+  "google": {
+   "heard": "גרזן",
+   "acc": 1.0,
+   "issues": []
+  },
+  "reviewersFailing": 0
+ }
+}

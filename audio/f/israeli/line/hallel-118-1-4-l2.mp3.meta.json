@@ -1,0 +1,30 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Chirp3-HD-Kore",
+ "tradition": "israeli",
+ "inputText": "יֹאמַר־נָא יִשְׂרָאֵל כִּי לְעוֹלָם חַסְדּוֹ׃",
+ "inputSha256": "db24049277dc003527a87ef5046a2c6256365e1d367a9c27cb5b27dca7d65c49",
+ "ingestedAt": "2026-11-11T23:14:39.291Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-11T23:14:39.291Z",
+ "redistributionCleared": false,
+ "spokenText": "יֹאמַר, נָא, יִשְׂרָאֵל, כִּי, לְעוֹלָם, חַסְדּוֹ.",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "speakingRate": 0.9,
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [],
+  "google": {
+   "heard": "יומני ישראל כי לעולם חסדו",
+   "acc": 0.667,
+   "issues": [
+    "יֹאמַר נָא"
+   ]
+  },
+  "reviewersFailing": 1
+ }
+}

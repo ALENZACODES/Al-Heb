@@ -1,7 +1,10 @@
 {
  "schema": "alef-lab-clip-holds/1",
- "note": "Recordings Brain Lab does not play: each failed at least 2 of 3 independent transcription passes on 2026-11-10 (docs: shared overnight brain-lab/tts/BACKTEST-3X-2026-11-10.md). The files stay in the app for other screens; Brain Lab shows the written sound instead until a person has listened.",
+ "note": "Recordings no screen plays until a person has listened: each failed at least 2 of 3 independent checks (the 35 Brain Lab clips: transcription backtests on 2026-11-10, docs: shared overnight brain-lab/tts/BACKTEST-3X-2026-11-10.md; later clips: the sound review, the word check and Google Speech-to-Text in the fill-clips run, docs/audio/fill/). The files stay in the app. Where one would play, the screen says it is held for review and what plays instead (the device voice, or the written sound).",
  "paths": [
+  "audio/f/israeli/line/kiddush-festival-eve-close.mp3",
+  "audio/f/israeli/line/kiddush-festival-eve-open.mp3",
+  "audio/f/israeli/line/leshev-basukkah.mp3",
   "audio/f/israeli/syllable/ayin-i.mp3",
   "audio/f/israeli/syllable/bet-u.mp3",
   "audio/f/israeli/syllable/chet-u.mp3",
@@ -17,7 +20,14 @@
   "audio/f/israeli/syllable/zayin-a.mp3",
   "audio/f/israeli/word/cafe-19.mp3",
   "audio/f/israeli/word/h1643d708.mp3",
+  "audio/f/israeli/word/h348f2813.mp3",
+  "audio/f/israeli/word/h55a2e7f1.mp3",
+  "audio/f/israeli/word/h61f0d2fb.mp3",
+  "audio/f/israeli/word/h7bd1602a.mp3",
   "audio/m/israeli/line/directions-08-m.mp3",
+  "audio/m/israeli/line/hallel-113-1.mp3",
+  "audio/m/israeli/line/kiddush-festival-eve-open.mp3",
+  "audio/m/israeli/line/leshev-basukkah.mp3",
   "audio/m/israeli/syllable/alef-i.mp3",
   "audio/m/israeli/syllable/dalet-e.mp3",
   "audio/m/israeli/syllable/dalet-o.mp3",
@@ -36,6 +46,7 @@
   "audio/m/israeli/syllable/yod-i.mp3",
   "audio/m/israeli/syllable/yod-u.mp3",
   "audio/m/israeli/syllable/zayin-a.mp3",
+  "audio/m/israeli/word/h55a2e7f1.mp3",
   "audio/m/israeli/word/i-13-w5.mp3"
  ]
 }

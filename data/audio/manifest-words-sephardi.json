@@ -80428,14 +80428,15 @@
   "kind": "word",
   "id": "hb63f1e69",
   "text": "מִפָּה",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "vocab-alias",
   "aliasOf": "word/i-40-w7",
   "english": "to map, to chart",
   "equivalentTo": [
    "israeli"
-  ]
+  ],
+  "plays": "audio/m/israeli/word/i-40-w7.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hb63f1e69.mp3",
@@ -80444,14 +80445,15 @@
   "kind": "word",
   "id": "hb63f1e69",
   "text": "מִפָּה",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "vocab-alias",
   "aliasOf": "word/i-40-w7",
   "english": "to map, to chart",
   "equivalentTo": [
    "israeli"
-  ]
+  ],
+  "plays": "audio/f/israeli/word/i-40-w7.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hb6ae069f.mp3",
@@ -82103,14 +82105,15 @@
   "kind": "word",
   "id": "hed3878d2",
   "text": "מִטְעָן",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "vocab-alias",
   "aliasOf": "word/i-16-w8",
   "english": "cargo, luggage; charge (of munitions); electric charge",
   "equivalentTo": [
    "israeli"
-  ]
+  ],
+  "plays": "audio/m/israeli/word/i-16-w8.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hed3878d2.mp3",
@@ -82119,14 +82122,15 @@
   "kind": "word",
   "id": "hed3878d2",
   "text": "מִטְעָן",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "vocab-alias",
   "aliasOf": "word/i-16-w8",
   "english": "cargo, luggage; charge (of munitions); electric charge",
   "equivalentTo": [
    "israeli"
-  ]
+  ],
+  "plays": "audio/f/israeli/word/i-16-w8.mp3"
  },
  {
   "path": "audio/m/sephardi/word/heede8c51.mp3",
@@ -88283,12 +88287,13 @@
   "kind": "word",
   "id": "hallel-113-1-w1",
   "text": "הַלְלוּ",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "halelu",
   "english": "",
-  "aliasOf": "line/hallel-113-1"
+  "aliasOf": "line/hallel-113-1",
+  "plays": "audio/m/israeli/line/hallel-113-1.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-113-1-w1.mp3",
@@ -88297,12 +88302,13 @@
   "kind": "word",
   "id": "hallel-113-1-w1",
   "text": "הַלְלוּ",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "halelu",
   "english": "",
-  "aliasOf": "line/hallel-113-1"
+  "aliasOf": "line/hallel-113-1",
+  "plays": "audio/f/israeli/line/hallel-113-1.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-113-1-w2.mp3",
@@ -88317,7 +88323,7 @@
   "phonetic": "yah",
   "english": "",
   "aliasOf": "line/hallel-113-1",
-  "plays": "audio/m/israeli/word/hallel-113-1-w2.mp3"
+  "plays": "audio/m/israeli/line/hallel-113-1.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-113-1-w2.mp3",
@@ -88332,7 +88338,7 @@
   "phonetic": "yah",
   "english": "",
   "aliasOf": "line/hallel-113-1",
-  "plays": "audio/f/israeli/word/hallel-113-1-w2.mp3"
+  "plays": "audio/f/israeli/line/hallel-113-1.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-113-1-w3.mp3",
@@ -88341,12 +88347,13 @@
   "kind": "word",
   "id": "hallel-113-1-w3",
   "text": "הַלְלוּ",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "halelu",
   "english": "",
-  "aliasOf": "line/hallel-113-1"
+  "aliasOf": "line/hallel-113-1",
+  "plays": "audio/m/israeli/line/hallel-113-1.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-113-1-w3.mp3",
@@ -88355,12 +88362,13 @@
   "kind": "word",
   "id": "hallel-113-1-w3",
   "text": "הַלְלוּ",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "halelu",
   "english": "",
-  "aliasOf": "line/hallel-113-1"
+  "aliasOf": "line/hallel-113-1",
+  "plays": "audio/f/israeli/line/hallel-113-1.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-113-1-w4.mp3",
@@ -88369,12 +88377,13 @@
   "kind": "word",
   "id": "hallel-113-1-w4",
   "text": "עַבְדֵי",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "avdei",
   "english": "",
-  "aliasOf": "line/hallel-113-1"
+  "aliasOf": "line/hallel-113-1",
+  "plays": "audio/m/israeli/line/hallel-113-1.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-113-1-w4.mp3",
@@ -88383,12 +88392,13 @@
   "kind": "word",
   "id": "hallel-113-1-w4",
   "text": "עַבְדֵי",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "avdei",
   "english": "",
-  "aliasOf": "line/hallel-113-1"
+  "aliasOf": "line/hallel-113-1",
+  "plays": "audio/f/israeli/line/hallel-113-1.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-113-1-w5.mp3",
@@ -88403,7 +88413,7 @@
   "phonetic": "adonai",
   "english": "",
   "aliasOf": "line/hallel-113-1",
-  "plays": "audio/m/israeli/word/hallel-113-1-w5.mp3"
+  "plays": "audio/m/israeli/line/hallel-113-1.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-113-1-w5.mp3",
@@ -88418,7 +88428,7 @@
   "phonetic": "adonai",
   "english": "",
   "aliasOf": "line/hallel-113-1",
-  "plays": "audio/f/israeli/word/hallel-113-1-w5.mp3"
+  "plays": "audio/f/israeli/line/hallel-113-1.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-113-1-w6.mp3",
@@ -88427,12 +88437,13 @@
   "kind": "word",
   "id": "hallel-113-1-w6",
   "text": "הַלְלוּ",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "halelu",
   "english": "",
-  "aliasOf": "line/hallel-113-1"
+  "aliasOf": "line/hallel-113-1",
+  "plays": "audio/m/israeli/line/hallel-113-1.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-113-1-w6.mp3",
@@ -88441,12 +88452,13 @@
   "kind": "word",
   "id": "hallel-113-1-w6",
   "text": "הַלְלוּ",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "halelu",
   "english": "",
-  "aliasOf": "line/hallel-113-1"
+  "aliasOf": "line/hallel-113-1",
+  "plays": "audio/f/israeli/line/hallel-113-1.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-113-1-w7.mp3",
@@ -88461,7 +88473,7 @@
   "phonetic": "et-shem",
   "english": "",
   "aliasOf": "line/hallel-113-1",
-  "plays": "audio/m/israeli/word/hallel-113-1-w7.mp3"
+  "plays": "audio/m/israeli/line/hallel-113-1.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-113-1-w7.mp3",
@@ -88476,7 +88488,7 @@
   "phonetic": "et-shem",
   "english": "",
   "aliasOf": "line/hallel-113-1",
-  "plays": "audio/f/israeli/word/hallel-113-1-w7.mp3"
+  "plays": "audio/f/israeli/line/hallel-113-1.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-113-1-w8.mp3",
@@ -88491,7 +88503,7 @@
   "phonetic": "adonai",
   "english": "",
   "aliasOf": "line/hallel-113-1",
-  "plays": "audio/m/israeli/word/hallel-113-1-w8.mp3"
+  "plays": "audio/m/israeli/line/hallel-113-1.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-113-1-w8.mp3",
@@ -88506,7 +88518,7 @@
   "phonetic": "adonai",
   "english": "",
   "aliasOf": "line/hallel-113-1",
-  "plays": "audio/f/israeli/word/hallel-113-1-w8.mp3"
+  "plays": "audio/f/israeli/line/hallel-113-1.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-115-1-w1.mp3",
@@ -88521,7 +88533,7 @@
   "phonetic": "lo",
   "english": "",
   "aliasOf": "line/hallel-115-1",
-  "plays": "audio/m/israeli/word/hallel-115-1-w1.mp3"
+  "plays": "audio/m/israeli/line/hallel-115-1.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-115-1-w1.mp3",
@@ -88536,7 +88548,7 @@
   "phonetic": "lo",
   "english": "",
   "aliasOf": "line/hallel-115-1",
-  "plays": "audio/f/israeli/word/hallel-115-1-w1.mp3"
+  "plays": "audio/f/israeli/line/hallel-115-1.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-115-1-w2.mp3",
@@ -88551,7 +88563,7 @@
   "phonetic": "lanu",
   "english": "",
   "aliasOf": "line/hallel-115-1",
-  "plays": "audio/m/israeli/word/hallel-115-1-w2.mp3"
+  "plays": "audio/m/israeli/line/hallel-115-1.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-115-1-w2.mp3",
@@ -88566,7 +88578,7 @@
   "phonetic": "lanu",
   "english": "",
   "aliasOf": "line/hallel-115-1",
-  "plays": "audio/f/israeli/word/hallel-115-1-w2.mp3"
+  "plays": "audio/f/israeli/line/hallel-115-1.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-115-1-w3.mp3",
@@ -88581,7 +88593,7 @@
   "phonetic": "adonai",
   "english": "",
   "aliasOf": "line/hallel-115-1",
-  "plays": "audio/m/israeli/word/hallel-115-1-w3.mp3"
+  "plays": "audio/m/israeli/line/hallel-115-1.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-115-1-w3.mp3",
@@ -88596,7 +88608,7 @@
   "phonetic": "adonai",
   "english": "",
   "aliasOf": "line/hallel-115-1",
-  "plays": "audio/f/israeli/word/hallel-115-1-w3.mp3"
+  "plays": "audio/f/israeli/line/hallel-115-1.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-115-1-w4.mp3",
@@ -88611,7 +88623,7 @@
   "phonetic": "lo",
   "english": "",
   "aliasOf": "line/hallel-115-1",
-  "plays": "audio/m/israeli/word/hallel-115-1-w4.mp3"
+  "plays": "audio/m/israeli/line/hallel-115-1.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-115-1-w4.mp3",
@@ -88626,7 +88638,7 @@
   "phonetic": "lo",
   "english": "",
   "aliasOf": "line/hallel-115-1",
-  "plays": "audio/f/israeli/word/hallel-115-1-w4.mp3"
+  "plays": "audio/f/israeli/line/hallel-115-1.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-115-1-w5.mp3",
@@ -88641,7 +88653,7 @@
   "phonetic": "lanu",
   "english": "",
   "aliasOf": "line/hallel-115-1",
-  "plays": "audio/m/israeli/word/hallel-115-1-w5.mp3"
+  "plays": "audio/m/israeli/line/hallel-115-1.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-115-1-w5.mp3",
@@ -88656,7 +88668,7 @@
   "phonetic": "lanu",
   "english": "",
   "aliasOf": "line/hallel-115-1",
-  "plays": "audio/f/israeli/word/hallel-115-1-w5.mp3"
+  "plays": "audio/f/israeli/line/hallel-115-1.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-115-1-w6.mp3",
@@ -88665,12 +88677,13 @@
   "kind": "word",
   "id": "hallel-115-1-w6",
   "text": "כִּי־לְשִׁמְךָ",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "ki-leshimkha",
   "english": "",
-  "aliasOf": "line/hallel-115-1"
+  "aliasOf": "line/hallel-115-1",
+  "plays": "audio/m/israeli/line/hallel-115-1.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-115-1-w6.mp3",
@@ -88679,12 +88692,13 @@
   "kind": "word",
   "id": "hallel-115-1-w6",
   "text": "כִּי־לְשִׁמְךָ",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "ki-leshimkha",
   "english": "",
-  "aliasOf": "line/hallel-115-1"
+  "aliasOf": "line/hallel-115-1",
+  "plays": "audio/f/israeli/line/hallel-115-1.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-115-1-w7.mp3",
@@ -88693,12 +88707,13 @@
   "kind": "word",
   "id": "hallel-115-1-w7",
   "text": "תֵּן",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "ten",
   "english": "",
-  "aliasOf": "line/hallel-115-1"
+  "aliasOf": "line/hallel-115-1",
+  "plays": "audio/m/israeli/line/hallel-115-1.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-115-1-w7.mp3",
@@ -88707,12 +88722,13 @@
   "kind": "word",
   "id": "hallel-115-1-w7",
   "text": "תֵּן",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "ten",
   "english": "",
-  "aliasOf": "line/hallel-115-1"
+  "aliasOf": "line/hallel-115-1",
+  "plays": "audio/f/israeli/line/hallel-115-1.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-115-1-w8.mp3",
@@ -88727,7 +88743,7 @@
   "phonetic": "kavod",
   "english": "",
   "aliasOf": "line/hallel-115-1",
-  "plays": "audio/m/israeli/word/hallel-115-1-w8.mp3"
+  "plays": "audio/m/israeli/line/hallel-115-1.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-115-1-w8.mp3",
@@ -88742,7 +88758,7 @@
   "phonetic": "kavod",
   "english": "",
   "aliasOf": "line/hallel-115-1",
-  "plays": "audio/f/israeli/word/hallel-115-1-w8.mp3"
+  "plays": "audio/f/israeli/line/hallel-115-1.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-115-1-w9.mp3",
@@ -88751,12 +88767,13 @@
   "kind": "word",
   "id": "hallel-115-1-w9",
   "text": "עַל־חַסְדְּךָ",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "al-chasdekha",
   "english": "",
-  "aliasOf": "line/hallel-115-1"
+  "aliasOf": "line/hallel-115-1",
+  "plays": "audio/m/israeli/line/hallel-115-1.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-115-1-w9.mp3",
@@ -88765,12 +88782,13 @@
   "kind": "word",
   "id": "hallel-115-1-w9",
   "text": "עַל־חַסְדְּךָ",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "al-chasdekha",
   "english": "",
-  "aliasOf": "line/hallel-115-1"
+  "aliasOf": "line/hallel-115-1",
+  "plays": "audio/f/israeli/line/hallel-115-1.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-115-1-w10.mp3",
@@ -88779,12 +88797,13 @@
   "kind": "word",
   "id": "hallel-115-1-w10",
   "text": "עַל־אֲמִתֶּךָ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "al-amitekha",
   "english": "",
-  "aliasOf": "line/hallel-115-1"
+  "aliasOf": "line/hallel-115-1",
+  "plays": "audio/m/israeli/line/hallel-115-1.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-115-1-w10.mp3",
@@ -88793,12 +88812,13 @@
   "kind": "word",
   "id": "hallel-115-1-w10",
   "text": "עַל־אֲמִתֶּךָ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "al-amitekha",
   "english": "",
-  "aliasOf": "line/hallel-115-1"
+  "aliasOf": "line/hallel-115-1",
+  "plays": "audio/f/israeli/line/hallel-115-1.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-116-13-w1.mp3",
@@ -88807,12 +88827,13 @@
   "kind": "word",
   "id": "hallel-116-13-w1",
   "text": "כּוֹס־יְשׁוּעוֹת",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "kos-yeshu'ot",
   "english": "",
-  "aliasOf": "line/hallel-116-13"
+  "aliasOf": "line/hallel-116-13",
+  "plays": "audio/m/israeli/line/hallel-116-13.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-116-13-w1.mp3",
@@ -88821,12 +88842,13 @@
   "kind": "word",
   "id": "hallel-116-13-w1",
   "text": "כּוֹס־יְשׁוּעוֹת",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "kos-yeshu'ot",
   "english": "",
-  "aliasOf": "line/hallel-116-13"
+  "aliasOf": "line/hallel-116-13",
+  "plays": "audio/f/israeli/line/hallel-116-13.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-116-13-w2.mp3",
@@ -88841,7 +88863,7 @@
   "phonetic": "esa",
   "english": "",
   "aliasOf": "line/hallel-116-13",
-  "plays": "audio/m/israeli/word/hallel-116-13-w2.mp3"
+  "plays": "audio/m/israeli/line/hallel-116-13.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-116-13-w2.mp3",
@@ -88856,7 +88878,7 @@
   "phonetic": "esa",
   "english": "",
   "aliasOf": "line/hallel-116-13",
-  "plays": "audio/f/israeli/word/hallel-116-13-w2.mp3"
+  "plays": "audio/f/israeli/line/hallel-116-13.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-116-13-w3.mp3",
@@ -88871,7 +88893,7 @@
   "phonetic": "uveshem",
   "english": "",
   "aliasOf": "line/hallel-116-13",
-  "plays": "audio/m/israeli/word/hallel-116-13-w3.mp3"
+  "plays": "audio/m/israeli/line/hallel-116-13.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-116-13-w3.mp3",
@@ -88886,7 +88908,7 @@
   "phonetic": "uveshem",
   "english": "",
   "aliasOf": "line/hallel-116-13",
-  "plays": "audio/f/israeli/word/hallel-116-13-w3.mp3"
+  "plays": "audio/f/israeli/line/hallel-116-13.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-116-13-w4.mp3",
@@ -88901,7 +88923,7 @@
   "phonetic": "adonai",
   "english": "",
   "aliasOf": "line/hallel-116-13",
-  "plays": "audio/m/israeli/word/hallel-116-13-w4.mp3"
+  "plays": "audio/m/israeli/line/hallel-116-13.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-116-13-w4.mp3",
@@ -88916,7 +88938,7 @@
   "phonetic": "adonai",
   "english": "",
   "aliasOf": "line/hallel-116-13",
-  "plays": "audio/f/israeli/word/hallel-116-13-w4.mp3"
+  "plays": "audio/f/israeli/line/hallel-116-13.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-116-13-w5.mp3",
@@ -88931,7 +88953,7 @@
   "phonetic": "ekra",
   "english": "",
   "aliasOf": "line/hallel-116-13",
-  "plays": "audio/m/israeli/word/hallel-116-13-w5.mp3"
+  "plays": "audio/m/israeli/line/hallel-116-13.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-116-13-w5.mp3",
@@ -88946,7 +88968,7 @@
   "phonetic": "ekra",
   "english": "",
   "aliasOf": "line/hallel-116-13",
-  "plays": "audio/f/israeli/word/hallel-116-13-w5.mp3"
+  "plays": "audio/f/israeli/line/hallel-116-13.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-117-w1.mp3",
@@ -89301,12 +89323,13 @@
   "kind": "word",
   "id": "hallel-118-1-4-w1",
   "text": "הוֹדוּ",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "hodu",
   "english": "",
-  "aliasOf": "line/hallel-118-1-4-l1"
+  "aliasOf": "line/hallel-118-1-4-l1",
+  "plays": "audio/m/israeli/line/hallel-118-1-4-l1.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-118-1-4-w1.mp3",
@@ -89315,12 +89338,13 @@
   "kind": "word",
   "id": "hallel-118-1-4-w1",
   "text": "הוֹדוּ",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "hodu",
   "english": "",
-  "aliasOf": "line/hallel-118-1-4-l1"
+  "aliasOf": "line/hallel-118-1-4-l1",
+  "plays": "audio/f/israeli/line/hallel-118-1-4-l1.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-118-1-4-w2.mp3",
@@ -89335,7 +89359,7 @@
   "phonetic": "la'adonai",
   "english": "",
   "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/m/israeli/word/hallel-118-1-4-w2.mp3"
+  "plays": "audio/m/israeli/line/hallel-118-1-4-l1.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-118-1-4-w2.mp3",
@@ -89350,7 +89374,7 @@
   "phonetic": "la'adonai",
   "english": "",
   "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/f/israeli/word/hallel-118-1-4-w2.mp3"
+  "plays": "audio/f/israeli/line/hallel-118-1-4-l1.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-118-1-4-w3.mp3",
@@ -89359,12 +89383,13 @@
   "kind": "word",
   "id": "hallel-118-1-4-w3",
   "text": "כִּי־טוֹב",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "ki-tov",
   "english": "",
-  "aliasOf": "line/hallel-118-1-4-l1"
+  "aliasOf": "line/hallel-118-1-4-l1",
+  "plays": "audio/m/israeli/line/hallel-118-1-4-l1.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-118-1-4-w3.mp3",
@@ -89373,12 +89398,13 @@
   "kind": "word",
   "id": "hallel-118-1-4-w3",
   "text": "כִּי־טוֹב",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "ki-tov",
   "english": "",
-  "aliasOf": "line/hallel-118-1-4-l1"
+  "aliasOf": "line/hallel-118-1-4-l1",
+  "plays": "audio/f/israeli/line/hallel-118-1-4-l1.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-118-1-4-w4.mp3",
@@ -89393,7 +89419,7 @@
   "phonetic": "ki",
   "english": "",
   "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/m/israeli/word/hallel-118-1-4-w4.mp3"
+  "plays": "audio/m/israeli/line/hallel-118-1-4-l1.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-118-1-4-w4.mp3",
@@ -89408,7 +89434,7 @@
   "phonetic": "ki",
   "english": "",
   "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/f/israeli/word/hallel-118-1-4-w4.mp3"
+  "plays": "audio/f/israeli/line/hallel-118-1-4-l1.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-118-1-4-w5.mp3",
@@ -89423,7 +89449,7 @@
   "phonetic": "le'olam",
   "english": "",
   "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/m/israeli/word/hallel-118-1-4-w5.mp3"
+  "plays": "audio/m/israeli/line/hallel-118-1-4-l1.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-118-1-4-w5.mp3",
@@ -89438,7 +89464,7 @@
   "phonetic": "le'olam",
   "english": "",
   "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/f/israeli/word/hallel-118-1-4-w5.mp3"
+  "plays": "audio/f/israeli/line/hallel-118-1-4-l1.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-118-1-4-w6.mp3",
@@ -89453,7 +89479,7 @@
   "phonetic": "chasdo",
   "english": "",
   "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/m/israeli/word/hallel-118-1-4-w6.mp3"
+  "plays": "audio/m/israeli/line/hallel-118-1-4-l1.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-118-1-4-w6.mp3",
@@ -89468,7 +89494,7 @@
   "phonetic": "chasdo",
   "english": "",
   "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/f/israeli/word/hallel-118-1-4-w6.mp3"
+  "plays": "audio/f/israeli/line/hallel-118-1-4-l1.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-118-1-4-w7.mp3",
@@ -89477,12 +89503,13 @@
   "kind": "word",
   "id": "hallel-118-1-4-w7",
   "text": "יֹאמַר־נָא",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "yomar-na",
   "english": "",
-  "aliasOf": "line/hallel-118-1-4-l1"
+  "aliasOf": "line/hallel-118-1-4-l1",
+  "plays": "audio/m/israeli/line/hallel-118-1-4-l1.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-118-1-4-w7.mp3",
@@ -89491,12 +89518,13 @@
   "kind": "word",
   "id": "hallel-118-1-4-w7",
   "text": "יֹאמַר־נָא",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "yomar-na",
   "english": "",
-  "aliasOf": "line/hallel-118-1-4-l1"
+  "aliasOf": "line/hallel-118-1-4-l1",
+  "plays": "audio/f/israeli/line/hallel-118-1-4-l1.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-118-1-4-w8.mp3",
@@ -89511,7 +89539,7 @@
   "phonetic": "yisra'el",
   "english": "",
   "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/m/israeli/word/hallel-118-1-4-w8.mp3"
+  "plays": "audio/m/israeli/line/hallel-118-1-4-l1.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-118-1-4-w8.mp3",
@@ -89526,7 +89554,7 @@
   "phonetic": "yisra'el",
   "english": "",
   "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/f/israeli/word/hallel-118-1-4-w8.mp3"
+  "plays": "audio/f/israeli/line/hallel-118-1-4-l1.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-118-1-4-w9.mp3",
@@ -89541,7 +89569,7 @@
   "phonetic": "ki",
   "english": "",
   "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/m/israeli/word/hallel-118-1-4-w9.mp3"
+  "plays": "audio/m/israeli/line/hallel-118-1-4-l1.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-118-1-4-w9.mp3",
@@ -89556,7 +89584,7 @@
   "phonetic": "ki",
   "english": "",
   "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/f/israeli/word/hallel-118-1-4-w9.mp3"
+  "plays": "audio/f/israeli/line/hallel-118-1-4-l1.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-118-1-4-w10.mp3",
@@ -89571,7 +89599,7 @@
   "phonetic": "le'olam",
   "english": "",
   "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/m/israeli/word/hallel-118-1-4-w10.mp3"
+  "plays": "audio/m/israeli/line/hallel-118-1-4-l1.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-118-1-4-w10.mp3",
@@ -89586,7 +89614,7 @@
   "phonetic": "le'olam",
   "english": "",
   "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/f/israeli/word/hallel-118-1-4-w10.mp3"
+  "plays": "audio/f/israeli/line/hallel-118-1-4-l1.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-118-1-4-w11.mp3",
@@ -89601,7 +89629,7 @@
   "phonetic": "chasdo",
   "english": "",
   "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/m/israeli/word/hallel-118-1-4-w11.mp3"
+  "plays": "audio/m/israeli/line/hallel-118-1-4-l1.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-118-1-4-w11.mp3",
@@ -89616,7 +89644,7 @@
   "phonetic": "chasdo",
   "english": "",
   "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/f/israeli/word/hallel-118-1-4-w11.mp3"
+  "plays": "audio/f/israeli/line/hallel-118-1-4-l1.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-118-1-4-w12.mp3",
@@ -89625,12 +89653,13 @@
   "kind": "word",
   "id": "hallel-118-1-4-w12",
   "text": "יֹאמְרוּ־נָא",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "yomru-na",
   "english": "",
-  "aliasOf": "line/hallel-118-1-4-l1"
+  "aliasOf": "line/hallel-118-1-4-l1",
+  "plays": "audio/m/israeli/line/hallel-118-1-4-l1.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-118-1-4-w12.mp3",
@@ -89639,12 +89668,13 @@
   "kind": "word",
   "id": "hallel-118-1-4-w12",
   "text": "יֹאמְרוּ־נָא",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "yomru-na",
   "english": "",
-  "aliasOf": "line/hallel-118-1-4-l1"
+  "aliasOf": "line/hallel-118-1-4-l1",
+  "plays": "audio/f/israeli/line/hallel-118-1-4-l1.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-118-1-4-w13.mp3",
@@ -89653,12 +89683,13 @@
   "kind": "word",
   "id": "hallel-118-1-4-w13",
   "text": "בֵית־אַהֲרֹן",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "veit-aharon",
   "english": "",
-  "aliasOf": "line/hallel-118-1-4-l1"
+  "aliasOf": "line/hallel-118-1-4-l1",
+  "plays": "audio/m/israeli/line/hallel-118-1-4-l1.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-118-1-4-w13.mp3",
@@ -89667,12 +89698,13 @@
   "kind": "word",
   "id": "hallel-118-1-4-w13",
   "text": "בֵית־אַהֲרֹן",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "veit-aharon",
   "english": "",
-  "aliasOf": "line/hallel-118-1-4-l1"
+  "aliasOf": "line/hallel-118-1-4-l1",
+  "plays": "audio/f/israeli/line/hallel-118-1-4-l1.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-118-1-4-w14.mp3",
@@ -89687,7 +89719,7 @@
   "phonetic": "ki",
   "english": "",
   "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/m/israeli/word/hallel-118-1-4-w14.mp3"
+  "plays": "audio/m/israeli/line/hallel-118-1-4-l1.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-118-1-4-w14.mp3",
@@ -89702,7 +89734,7 @@
   "phonetic": "ki",
   "english": "",
   "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/f/israeli/word/hallel-118-1-4-w14.mp3"
+  "plays": "audio/f/israeli/line/hallel-118-1-4-l1.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-118-1-4-w15.mp3",
@@ -89717,7 +89749,7 @@
   "phonetic": "le'olam",
   "english": "",
   "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/m/israeli/word/hallel-118-1-4-w15.mp3"
+  "plays": "audio/m/israeli/line/hallel-118-1-4-l1.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-118-1-4-w15.mp3",
@@ -89732,7 +89764,7 @@
   "phonetic": "le'olam",
   "english": "",
   "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/f/israeli/word/hallel-118-1-4-w15.mp3"
+  "plays": "audio/f/israeli/line/hallel-118-1-4-l1.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-118-1-4-w16.mp3",
@@ -89747,7 +89779,7 @@
   "phonetic": "chasdo",
   "english": "",
   "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/m/israeli/word/hallel-118-1-4-w16.mp3"
+  "plays": "audio/m/israeli/line/hallel-118-1-4-l1.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-118-1-4-w16.mp3",
@@ -89762,7 +89794,7 @@
   "phonetic": "chasdo",
   "english": "",
   "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/f/israeli/word/hallel-118-1-4-w16.mp3"
+  "plays": "audio/f/israeli/line/hallel-118-1-4-l1.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-118-1-4-w17.mp3",
@@ -89771,12 +89803,13 @@
   "kind": "word",
   "id": "hallel-118-1-4-w17",
   "text": "יֹאמְרוּ־נָא",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "yomru-na",
   "english": "",
-  "aliasOf": "line/hallel-118-1-4-l1"
+  "aliasOf": "line/hallel-118-1-4-l1",
+  "plays": "audio/m/israeli/line/hallel-118-1-4-l1.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-118-1-4-w17.mp3",
@@ -89785,12 +89818,13 @@
   "kind": "word",
   "id": "hallel-118-1-4-w17",
   "text": "יֹאמְרוּ־נָא",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "yomru-na",
   "english": "",
-  "aliasOf": "line/hallel-118-1-4-l1"
+  "aliasOf": "line/hallel-118-1-4-l1",
+  "plays": "audio/f/israeli/line/hallel-118-1-4-l1.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-118-1-4-w18.mp3",
@@ -89799,12 +89833,13 @@
   "kind": "word",
   "id": "hallel-118-1-4-w18",
   "text": "יִרְאֵי",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "yir'ei",
   "english": "",
-  "aliasOf": "line/hallel-118-1-4-l1"
+  "aliasOf": "line/hallel-118-1-4-l1",
+  "plays": "audio/m/israeli/line/hallel-118-1-4-l1.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-118-1-4-w18.mp3",
@@ -89813,12 +89848,13 @@
   "kind": "word",
   "id": "hallel-118-1-4-w18",
   "text": "יִרְאֵי",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "yir'ei",
   "english": "",
-  "aliasOf": "line/hallel-118-1-4-l1"
+  "aliasOf": "line/hallel-118-1-4-l1",
+  "plays": "audio/f/israeli/line/hallel-118-1-4-l1.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-118-1-4-w19.mp3",
@@ -89833,7 +89869,7 @@
   "phonetic": "adonai",
   "english": "",
   "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/m/israeli/word/hallel-118-1-4-w19.mp3"
+  "plays": "audio/m/israeli/line/hallel-118-1-4-l1.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-118-1-4-w19.mp3",
@@ -89848,7 +89884,7 @@
   "phonetic": "adonai",
   "english": "",
   "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/f/israeli/word/hallel-118-1-4-w19.mp3"
+  "plays": "audio/f/israeli/line/hallel-118-1-4-l1.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-118-1-4-w20.mp3",
@@ -89863,7 +89899,7 @@
   "phonetic": "ki",
   "english": "",
   "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/m/israeli/word/hallel-118-1-4-w20.mp3"
+  "plays": "audio/m/israeli/line/hallel-118-1-4-l1.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-118-1-4-w20.mp3",
@@ -89878,7 +89914,7 @@
   "phonetic": "ki",
   "english": "",
   "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/f/israeli/word/hallel-118-1-4-w20.mp3"
+  "plays": "audio/f/israeli/line/hallel-118-1-4-l1.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-118-1-4-w21.mp3",
@@ -89893,7 +89929,7 @@
   "phonetic": "le'olam",
   "english": "",
   "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/m/israeli/word/hallel-118-1-4-w21.mp3"
+  "plays": "audio/m/israeli/line/hallel-118-1-4-l1.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-118-1-4-w21.mp3",
@@ -89908,7 +89944,7 @@
   "phonetic": "le'olam",
   "english": "",
   "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/f/israeli/word/hallel-118-1-4-w21.mp3"
+  "plays": "audio/f/israeli/line/hallel-118-1-4-l1.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-118-1-4-w22.mp3",
@@ -89923,7 +89959,7 @@
   "phonetic": "chasdo",
   "english": "",
   "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/m/israeli/word/hallel-118-1-4-w22.mp3"
+  "plays": "audio/m/israeli/line/hallel-118-1-4-l1.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-118-1-4-w22.mp3",
@@ -89938,7 +89974,7 @@
   "phonetic": "chasdo",
   "english": "",
   "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/f/israeli/word/hallel-118-1-4-w22.mp3"
+  "plays": "audio/f/israeli/line/hallel-118-1-4-l1.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-118-5-w1.mp3",
@@ -89947,12 +89983,13 @@
   "kind": "word",
   "id": "hallel-118-5-w1",
   "text": "מִן־הַמֵּצַר",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "min-hametzar",
   "english": "",
-  "aliasOf": "line/hallel-118-5"
+  "aliasOf": "line/hallel-118-5",
+  "plays": "audio/m/israeli/line/hallel-118-5.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-118-5-w1.mp3",
@@ -89961,12 +89998,13 @@
   "kind": "word",
   "id": "hallel-118-5-w1",
   "text": "מִן־הַמֵּצַר",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "min-hametzar",
   "english": "",
-  "aliasOf": "line/hallel-118-5"
+  "aliasOf": "line/hallel-118-5",
+  "plays": "audio/f/israeli/line/hallel-118-5.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-118-5-w2.mp3",
@@ -89975,12 +90013,13 @@
   "kind": "word",
   "id": "hallel-118-5-w2",
   "text": "קָרָאתִי",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "karati",
   "english": "",
-  "aliasOf": "line/hallel-118-5"
+  "aliasOf": "line/hallel-118-5",
+  "plays": "audio/m/israeli/line/hallel-118-5.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-118-5-w2.mp3",
@@ -89989,12 +90028,13 @@
   "kind": "word",
   "id": "hallel-118-5-w2",
   "text": "קָרָאתִי",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "karati",
   "english": "",
-  "aliasOf": "line/hallel-118-5"
+  "aliasOf": "line/hallel-118-5",
+  "plays": "audio/f/israeli/line/hallel-118-5.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-118-5-w3.mp3",
@@ -90003,12 +90043,13 @@
   "kind": "word",
   "id": "hallel-118-5-w3",
   "text": "יָּהּ",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "yah",
   "english": "",
-  "aliasOf": "line/hallel-118-5"
+  "aliasOf": "line/hallel-118-5",
+  "plays": "audio/m/israeli/line/hallel-118-5.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-118-5-w3.mp3",
@@ -90017,12 +90058,13 @@
   "kind": "word",
   "id": "hallel-118-5-w3",
   "text": "יָּהּ",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "yah",
   "english": "",
-  "aliasOf": "line/hallel-118-5"
+  "aliasOf": "line/hallel-118-5",
+  "plays": "audio/f/israeli/line/hallel-118-5.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-118-5-w4.mp3",
@@ -90031,12 +90073,13 @@
   "kind": "word",
   "id": "hallel-118-5-w4",
   "text": "עָנָנִי",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "anani",
   "english": "",
-  "aliasOf": "line/hallel-118-5"
+  "aliasOf": "line/hallel-118-5",
+  "plays": "audio/m/israeli/line/hallel-118-5.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-118-5-w4.mp3",
@@ -90045,12 +90088,13 @@
   "kind": "word",
   "id": "hallel-118-5-w4",
   "text": "עָנָנִי",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "anani",
   "english": "",
-  "aliasOf": "line/hallel-118-5"
+  "aliasOf": "line/hallel-118-5",
+  "plays": "audio/f/israeli/line/hallel-118-5.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-118-5-w5.mp3",
@@ -90059,12 +90103,13 @@
   "kind": "word",
   "id": "hallel-118-5-w5",
   "text": "בַמֶּרְחָב",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "vamerchav",
   "english": "",
-  "aliasOf": "line/hallel-118-5"
+  "aliasOf": "line/hallel-118-5",
+  "plays": "audio/m/israeli/line/hallel-118-5.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-118-5-w5.mp3",
@@ -90073,12 +90118,13 @@
   "kind": "word",
   "id": "hallel-118-5-w5",
   "text": "בַמֶּרְחָב",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "vamerchav",
   "english": "",
-  "aliasOf": "line/hallel-118-5"
+  "aliasOf": "line/hallel-118-5",
+  "plays": "audio/f/israeli/line/hallel-118-5.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-118-5-w6.mp3",
@@ -90093,7 +90139,7 @@
   "phonetic": "yah",
   "english": "",
   "aliasOf": "line/hallel-118-5",
-  "plays": "audio/m/israeli/word/hallel-118-5-w6.mp3"
+  "plays": "audio/m/israeli/line/hallel-118-5.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-118-5-w6.mp3",
@@ -90108,7 +90154,7 @@
   "phonetic": "yah",
   "english": "",
   "aliasOf": "line/hallel-118-5",
-  "plays": "audio/f/israeli/word/hallel-118-5-w6.mp3"
+  "plays": "audio/f/israeli/line/hallel-118-5.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-118-6-w1.mp3",
@@ -90123,7 +90169,7 @@
   "phonetic": "adonai",
   "english": "",
   "aliasOf": "line/hallel-118-6",
-  "plays": "audio/m/israeli/word/hallel-118-6-w1.mp3"
+  "plays": "audio/m/israeli/line/hallel-118-6.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-118-6-w1.mp3",
@@ -90138,7 +90184,7 @@
   "phonetic": "adonai",
   "english": "",
   "aliasOf": "line/hallel-118-6",
-  "plays": "audio/f/israeli/word/hallel-118-6-w1.mp3"
+  "plays": "audio/f/israeli/line/hallel-118-6.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-118-6-w2.mp3",
@@ -90153,7 +90199,7 @@
   "phonetic": "li",
   "english": "",
   "aliasOf": "line/hallel-118-6",
-  "plays": "audio/m/israeli/word/hallel-118-6-w2.mp3"
+  "plays": "audio/m/israeli/line/hallel-118-6.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-118-6-w2.mp3",
@@ -90168,7 +90214,7 @@
   "phonetic": "li",
   "english": "",
   "aliasOf": "line/hallel-118-6",
-  "plays": "audio/f/israeli/word/hallel-118-6-w2.mp3"
+  "plays": "audio/f/israeli/line/hallel-118-6.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-118-6-w3.mp3",
@@ -90183,7 +90229,7 @@
   "phonetic": "lo",
   "english": "",
   "aliasOf": "line/hallel-118-6",
-  "plays": "audio/m/israeli/word/hallel-118-6-w3.mp3"
+  "plays": "audio/m/israeli/line/hallel-118-6.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-118-6-w3.mp3",
@@ -90198,7 +90244,7 @@
   "phonetic": "lo",
   "english": "",
   "aliasOf": "line/hallel-118-6",
-  "plays": "audio/f/israeli/word/hallel-118-6-w3.mp3"
+  "plays": "audio/f/israeli/line/hallel-118-6.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-118-6-w4.mp3",
@@ -90213,7 +90259,7 @@
   "phonetic": "ira",
   "english": "",
   "aliasOf": "line/hallel-118-6",
-  "plays": "audio/m/israeli/word/hallel-118-6-w4.mp3"
+  "plays": "audio/m/israeli/line/hallel-118-6.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-118-6-w4.mp3",
@@ -90228,7 +90274,7 @@
   "phonetic": "ira",
   "english": "",
   "aliasOf": "line/hallel-118-6",
-  "plays": "audio/f/israeli/word/hallel-118-6-w4.mp3"
+  "plays": "audio/f/israeli/line/hallel-118-6.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-118-6-w5.mp3",
@@ -90237,12 +90283,13 @@
   "kind": "word",
   "id": "hallel-118-6-w5",
   "text": "מַה־יַּעֲשֶׂה",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "mah-ya'aseh",
   "english": "",
-  "aliasOf": "line/hallel-118-6"
+  "aliasOf": "line/hallel-118-6",
+  "plays": "audio/m/israeli/line/hallel-118-6.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-118-6-w5.mp3",
@@ -90251,12 +90298,13 @@
   "kind": "word",
   "id": "hallel-118-6-w5",
   "text": "מַה־יַּעֲשֶׂה",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "mah-ya'aseh",
   "english": "",
-  "aliasOf": "line/hallel-118-6"
+  "aliasOf": "line/hallel-118-6",
+  "plays": "audio/f/israeli/line/hallel-118-6.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-118-6-w6.mp3",
@@ -90271,7 +90319,7 @@
   "phonetic": "li",
   "english": "",
   "aliasOf": "line/hallel-118-6",
-  "plays": "audio/m/israeli/word/hallel-118-6-w6.mp3"
+  "plays": "audio/m/israeli/line/hallel-118-6.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-118-6-w6.mp3",
@@ -90286,7 +90334,7 @@
   "phonetic": "li",
   "english": "",
   "aliasOf": "line/hallel-118-6",
-  "plays": "audio/f/israeli/word/hallel-118-6-w6.mp3"
+  "plays": "audio/f/israeli/line/hallel-118-6.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-118-6-w7.mp3",
@@ -90301,7 +90349,7 @@
   "phonetic": "adam",
   "english": "",
   "aliasOf": "line/hallel-118-6",
-  "plays": "audio/m/israeli/word/hallel-118-6-w7.mp3"
+  "plays": "audio/m/israeli/line/hallel-118-6.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-118-6-w7.mp3",
@@ -90316,7 +90364,7 @@
   "phonetic": "adam",
   "english": "",
   "aliasOf": "line/hallel-118-6",
-  "plays": "audio/f/israeli/word/hallel-118-6-w7.mp3"
+  "plays": "audio/f/israeli/line/hallel-118-6.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-118-24-w1.mp3",
@@ -90325,12 +90373,13 @@
   "kind": "word",
   "id": "hallel-118-24-w1",
   "text": "זֶה־הַיּוֹם",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "zeh-hayom",
   "english": "",
-  "aliasOf": "line/hallel-118-24"
+  "aliasOf": "line/hallel-118-24",
+  "plays": "audio/m/israeli/line/hallel-118-24.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-118-24-w1.mp3",
@@ -90339,12 +90388,13 @@
   "kind": "word",
   "id": "hallel-118-24-w1",
   "text": "זֶה־הַיּוֹם",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "zeh-hayom",
   "english": "",
-  "aliasOf": "line/hallel-118-24"
+  "aliasOf": "line/hallel-118-24",
+  "plays": "audio/f/israeli/line/hallel-118-24.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-118-24-w2.mp3",
@@ -90359,7 +90409,7 @@
   "phonetic": "asah",
   "english": "",
   "aliasOf": "line/hallel-118-24",
-  "plays": "audio/m/israeli/word/hallel-118-24-w2.mp3"
+  "plays": "audio/m/israeli/line/hallel-118-24.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-118-24-w2.mp3",
@@ -90374,7 +90424,7 @@
   "phonetic": "asah",
   "english": "",
   "aliasOf": "line/hallel-118-24",
-  "plays": "audio/f/israeli/word/hallel-118-24-w2.mp3"
+  "plays": "audio/f/israeli/line/hallel-118-24.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-118-24-w3.mp3",
@@ -90389,7 +90439,7 @@
   "phonetic": "adonai",
   "english": "",
   "aliasOf": "line/hallel-118-24",
-  "plays": "audio/m/israeli/word/hallel-118-24-w3.mp3"
+  "plays": "audio/m/israeli/line/hallel-118-24.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-118-24-w3.mp3",
@@ -90404,7 +90454,7 @@
   "phonetic": "adonai",
   "english": "",
   "aliasOf": "line/hallel-118-24",
-  "plays": "audio/f/israeli/word/hallel-118-24-w3.mp3"
+  "plays": "audio/f/israeli/line/hallel-118-24.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-118-24-w4.mp3",
@@ -90413,12 +90463,13 @@
   "kind": "word",
   "id": "hallel-118-24-w4",
   "text": "נָגִילָה",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "nagilah",
   "english": "",
-  "aliasOf": "line/hallel-118-24"
+  "aliasOf": "line/hallel-118-24",
+  "plays": "audio/m/israeli/line/hallel-118-24.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-118-24-w4.mp3",
@@ -90427,12 +90478,13 @@
   "kind": "word",
   "id": "hallel-118-24-w4",
   "text": "נָגִילָה",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "nagilah",
   "english": "",
-  "aliasOf": "line/hallel-118-24"
+  "aliasOf": "line/hallel-118-24",
+  "plays": "audio/f/israeli/line/hallel-118-24.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-118-24-w5.mp3",
@@ -90441,12 +90493,13 @@
   "kind": "word",
   "id": "hallel-118-24-w5",
   "text": "וְנִשְׂמְחָה",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "venismechah",
   "english": "",
-  "aliasOf": "line/hallel-118-24"
+  "aliasOf": "line/hallel-118-24",
+  "plays": "audio/m/israeli/line/hallel-118-24.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-118-24-w5.mp3",
@@ -90455,12 +90508,13 @@
   "kind": "word",
   "id": "hallel-118-24-w5",
   "text": "וְנִשְׂמְחָה",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "venismechah",
   "english": "",
-  "aliasOf": "line/hallel-118-24"
+  "aliasOf": "line/hallel-118-24",
+  "plays": "audio/f/israeli/line/hallel-118-24.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-118-24-w6.mp3",
@@ -90475,7 +90529,7 @@
   "phonetic": "vo",
   "english": "",
   "aliasOf": "line/hallel-118-24",
-  "plays": "audio/m/israeli/word/hallel-118-24-w6.mp3"
+  "plays": "audio/m/israeli/line/hallel-118-24.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-118-24-w6.mp3",
@@ -90490,7 +90544,7 @@
   "phonetic": "vo",
   "english": "",
   "aliasOf": "line/hallel-118-24",
-  "plays": "audio/f/israeli/word/hallel-118-24-w6.mp3"
+  "plays": "audio/f/israeli/line/hallel-118-24.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-118-25-w1.mp3",
@@ -90505,7 +90559,7 @@
   "phonetic": "ana",
   "english": "",
   "aliasOf": "line/hallel-118-25",
-  "plays": "audio/m/israeli/word/hallel-118-25-w1.mp3"
+  "plays": "audio/m/israeli/line/hallel-118-25.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-118-25-w1.mp3",
@@ -90520,7 +90574,7 @@
   "phonetic": "ana",
   "english": "",
   "aliasOf": "line/hallel-118-25",
-  "plays": "audio/f/israeli/word/hallel-118-25-w1.mp3"
+  "plays": "audio/f/israeli/line/hallel-118-25.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-118-25-w2.mp3",
@@ -90535,7 +90589,7 @@
   "phonetic": "adonai",
   "english": "",
   "aliasOf": "line/hallel-118-25",
-  "plays": "audio/m/israeli/word/hallel-118-25-w2.mp3"
+  "plays": "audio/m/israeli/line/hallel-118-25.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-118-25-w2.mp3",
@@ -90550,7 +90604,7 @@
   "phonetic": "adonai",
   "english": "",
   "aliasOf": "line/hallel-118-25",
-  "plays": "audio/f/israeli/word/hallel-118-25-w2.mp3"
+  "plays": "audio/f/israeli/line/hallel-118-25.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-118-25-w3.mp3",
@@ -90565,7 +90619,7 @@
   "phonetic": "hoshi'ah",
   "english": "",
   "aliasOf": "line/hallel-118-25",
-  "plays": "audio/m/israeli/word/hallel-118-25-w3.mp3"
+  "plays": "audio/m/israeli/line/hallel-118-25.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-118-25-w3.mp3",
@@ -90580,7 +90634,7 @@
   "phonetic": "hoshi'ah",
   "english": "",
   "aliasOf": "line/hallel-118-25",
-  "plays": "audio/f/israeli/word/hallel-118-25-w3.mp3"
+  "plays": "audio/f/israeli/line/hallel-118-25.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-118-25-w4.mp3",
@@ -90589,12 +90643,13 @@
   "kind": "word",
   "id": "hallel-118-25-w4",
   "text": "נָּא",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "na",
   "english": "",
-  "aliasOf": "line/hallel-118-25"
+  "aliasOf": "line/hallel-118-25",
+  "plays": "audio/m/israeli/line/hallel-118-25.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-118-25-w4.mp3",
@@ -90603,12 +90658,13 @@
   "kind": "word",
   "id": "hallel-118-25-w4",
   "text": "נָּא",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "na",
   "english": "",
-  "aliasOf": "line/hallel-118-25"
+  "aliasOf": "line/hallel-118-25",
+  "plays": "audio/f/israeli/line/hallel-118-25.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-118-25-w5.mp3",
@@ -90623,7 +90679,7 @@
   "phonetic": "ana",
   "english": "",
   "aliasOf": "line/hallel-118-25",
-  "plays": "audio/m/israeli/word/hallel-118-25-w5.mp3"
+  "plays": "audio/m/israeli/line/hallel-118-25.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-118-25-w5.mp3",
@@ -90638,7 +90694,7 @@
   "phonetic": "ana",
   "english": "",
   "aliasOf": "line/hallel-118-25",
-  "plays": "audio/f/israeli/word/hallel-118-25-w5.mp3"
+  "plays": "audio/f/israeli/line/hallel-118-25.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-118-25-w6.mp3",
@@ -90653,7 +90709,7 @@
   "phonetic": "adonai",
   "english": "",
   "aliasOf": "line/hallel-118-25",
-  "plays": "audio/m/israeli/word/hallel-118-25-w6.mp3"
+  "plays": "audio/m/israeli/line/hallel-118-25.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-118-25-w6.mp3",
@@ -90668,7 +90724,7 @@
   "phonetic": "adonai",
   "english": "",
   "aliasOf": "line/hallel-118-25",
-  "plays": "audio/f/israeli/word/hallel-118-25-w6.mp3"
+  "plays": "audio/f/israeli/line/hallel-118-25.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-118-25-w7.mp3",
@@ -90677,12 +90733,13 @@
   "kind": "word",
   "id": "hallel-118-25-w7",
   "text": "הַצְלִיחָה",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "hatzlichah",
   "english": "",
-  "aliasOf": "line/hallel-118-25"
+  "aliasOf": "line/hallel-118-25",
+  "plays": "audio/m/israeli/line/hallel-118-25.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-118-25-w7.mp3",
@@ -90691,12 +90748,13 @@
   "kind": "word",
   "id": "hallel-118-25-w7",
   "text": "הַצְלִיחָה",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "hatzlichah",
   "english": "",
-  "aliasOf": "line/hallel-118-25"
+  "aliasOf": "line/hallel-118-25",
+  "plays": "audio/f/israeli/line/hallel-118-25.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-118-25-w8.mp3",
@@ -90705,12 +90763,13 @@
   "kind": "word",
   "id": "hallel-118-25-w8",
   "text": "נָּא׃",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "na",
   "english": "",
-  "aliasOf": "line/hallel-118-25"
+  "aliasOf": "line/hallel-118-25",
+  "plays": "audio/m/israeli/line/hallel-118-25.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-118-25-w8.mp3",
@@ -90719,12 +90778,13 @@
   "kind": "word",
   "id": "hallel-118-25-w8",
   "text": "נָּא׃",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "na",
   "english": "",
-  "aliasOf": "line/hallel-118-25"
+  "aliasOf": "line/hallel-118-25",
+  "plays": "audio/f/israeli/line/hallel-118-25.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-118-28-w1.mp3",
@@ -90739,7 +90799,7 @@
   "phonetic": "eli",
   "english": "",
   "aliasOf": "line/hallel-118-28",
-  "plays": "audio/m/israeli/word/hallel-118-28-w1.mp3"
+  "plays": "audio/m/israeli/line/hallel-118-28.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-118-28-w1.mp3",
@@ -90754,7 +90814,7 @@
   "phonetic": "eli",
   "english": "",
   "aliasOf": "line/hallel-118-28",
-  "plays": "audio/f/israeli/word/hallel-118-28-w1.mp3"
+  "plays": "audio/f/israeli/line/hallel-118-28.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-118-28-w2.mp3",
@@ -90769,7 +90829,7 @@
   "phonetic": "atah",
   "english": "",
   "aliasOf": "line/hallel-118-28",
-  "plays": "audio/m/israeli/word/hallel-118-28-w2.mp3"
+  "plays": "audio/m/israeli/line/hallel-118-28.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-118-28-w2.mp3",
@@ -90784,7 +90844,7 @@
   "phonetic": "atah",
   "english": "",
   "aliasOf": "line/hallel-118-28",
-  "plays": "audio/f/israeli/word/hallel-118-28-w2.mp3"
+  "plays": "audio/f/israeli/line/hallel-118-28.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-118-28-w3.mp3",
@@ -90793,12 +90853,13 @@
   "kind": "word",
   "id": "hallel-118-28-w3",
   "text": "וְאוֹדֶךָּ",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "ve'odeka",
   "english": "",
-  "aliasOf": "line/hallel-118-28"
+  "aliasOf": "line/hallel-118-28",
+  "plays": "audio/m/israeli/line/hallel-118-28.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-118-28-w3.mp3",
@@ -90807,12 +90868,13 @@
   "kind": "word",
   "id": "hallel-118-28-w3",
   "text": "וְאוֹדֶךָּ",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "ve'odeka",
   "english": "",
-  "aliasOf": "line/hallel-118-28"
+  "aliasOf": "line/hallel-118-28",
+  "plays": "audio/f/israeli/line/hallel-118-28.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-118-28-w4.mp3",
@@ -90827,7 +90889,7 @@
   "phonetic": "elohai",
   "english": "",
   "aliasOf": "line/hallel-118-28",
-  "plays": "audio/m/israeli/word/hallel-118-28-w4.mp3"
+  "plays": "audio/m/israeli/line/hallel-118-28.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-118-28-w4.mp3",
@@ -90842,7 +90904,7 @@
   "phonetic": "elohai",
   "english": "",
   "aliasOf": "line/hallel-118-28",
-  "plays": "audio/f/israeli/word/hallel-118-28-w4.mp3"
+  "plays": "audio/f/israeli/line/hallel-118-28.mp3"
  },
  {
   "path": "audio/m/sephardi/word/hallel-118-28-w5.mp3",
@@ -90851,12 +90913,13 @@
   "kind": "word",
   "id": "hallel-118-28-w5",
   "text": "אֲרוֹמְמֶךָּ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "aromemeka",
   "english": "",
-  "aliasOf": "line/hallel-118-28"
+  "aliasOf": "line/hallel-118-28",
+  "plays": "audio/m/israeli/line/hallel-118-28.mp3"
  },
  {
   "path": "audio/f/sephardi/word/hallel-118-28-w5.mp3",
@@ -90865,12 +90928,13 @@
   "kind": "word",
   "id": "hallel-118-28-w5",
   "text": "אֲרוֹמְמֶךָּ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "aromemeka",
   "english": "",
-  "aliasOf": "line/hallel-118-28"
+  "aliasOf": "line/hallel-118-28",
+  "plays": "audio/f/israeli/line/hallel-118-28.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-day-verses-w1.mp3",
@@ -90879,12 +90943,13 @@
   "kind": "word",
   "id": "kiddush-festival-day-verses-w1",
   "text": "אֵלֶּה",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "eleh",
   "english": "",
-  "aliasOf": "line/kiddush-festival-day-verses-l1"
+  "aliasOf": "line/kiddush-festival-day-verses-l1",
+  "plays": "audio/m/israeli/line/kiddush-festival-day-verses-l1.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-day-verses-w1.mp3",
@@ -90893,12 +90958,13 @@
   "kind": "word",
   "id": "kiddush-festival-day-verses-w1",
   "text": "אֵלֶּה",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "eleh",
   "english": "",
-  "aliasOf": "line/kiddush-festival-day-verses-l1"
+  "aliasOf": "line/kiddush-festival-day-verses-l1",
+  "plays": "audio/f/israeli/line/kiddush-festival-day-verses-l1.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-day-verses-w2.mp3",
@@ -90907,12 +90973,13 @@
   "kind": "word",
   "id": "kiddush-festival-day-verses-w2",
   "text": "מוֹעֲדֵי",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "mo'adei",
   "english": "",
-  "aliasOf": "line/kiddush-festival-day-verses-l1"
+  "aliasOf": "line/kiddush-festival-day-verses-l1",
+  "plays": "audio/m/israeli/line/kiddush-festival-day-verses-l1.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-day-verses-w2.mp3",
@@ -90921,12 +90988,13 @@
   "kind": "word",
   "id": "kiddush-festival-day-verses-w2",
   "text": "מוֹעֲדֵי",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "mo'adei",
   "english": "",
-  "aliasOf": "line/kiddush-festival-day-verses-l1"
+  "aliasOf": "line/kiddush-festival-day-verses-l1",
+  "plays": "audio/f/israeli/line/kiddush-festival-day-verses-l1.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-day-verses-w3.mp3",
@@ -90941,7 +91009,7 @@
   "phonetic": "adonai",
   "english": "",
   "aliasOf": "line/kiddush-festival-day-verses-l1",
-  "plays": "audio/m/israeli/word/kiddush-festival-day-verses-w3.mp3"
+  "plays": "audio/m/israeli/line/kiddush-festival-day-verses-l1.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-day-verses-w3.mp3",
@@ -90956,7 +91024,7 @@
   "phonetic": "adonai",
   "english": "",
   "aliasOf": "line/kiddush-festival-day-verses-l1",
-  "plays": "audio/f/israeli/word/kiddush-festival-day-verses-w3.mp3"
+  "plays": "audio/f/israeli/line/kiddush-festival-day-verses-l1.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-day-verses-w4.mp3",
@@ -90965,12 +91033,13 @@
   "kind": "word",
   "id": "kiddush-festival-day-verses-w4",
   "text": "מִקְרָאֵי",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "mikra'ei",
   "english": "",
-  "aliasOf": "line/kiddush-festival-day-verses-l1"
+  "aliasOf": "line/kiddush-festival-day-verses-l1",
+  "plays": "audio/m/israeli/line/kiddush-festival-day-verses-l1.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-day-verses-w4.mp3",
@@ -90979,12 +91048,13 @@
   "kind": "word",
   "id": "kiddush-festival-day-verses-w4",
   "text": "מִקְרָאֵי",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "mikra'ei",
   "english": "",
-  "aliasOf": "line/kiddush-festival-day-verses-l1"
+  "aliasOf": "line/kiddush-festival-day-verses-l1",
+  "plays": "audio/f/israeli/line/kiddush-festival-day-verses-l1.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-day-verses-w5.mp3",
@@ -90999,7 +91069,7 @@
   "phonetic": "kodesh",
   "english": "",
   "aliasOf": "line/kiddush-festival-day-verses-l1",
-  "plays": "audio/m/israeli/word/kiddush-festival-day-verses-w5.mp3"
+  "plays": "audio/m/israeli/line/kiddush-festival-day-verses-l1.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-day-verses-w5.mp3",
@@ -91014,7 +91084,7 @@
   "phonetic": "kodesh",
   "english": "",
   "aliasOf": "line/kiddush-festival-day-verses-l1",
-  "plays": "audio/f/israeli/word/kiddush-festival-day-verses-w5.mp3"
+  "plays": "audio/f/israeli/line/kiddush-festival-day-verses-l1.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-day-verses-w6.mp3",
@@ -91023,12 +91093,13 @@
   "kind": "word",
   "id": "kiddush-festival-day-verses-w6",
   "text": "אֲשֶׁר־תִּקְרְאוּ",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "asher-tikre'u",
   "english": "",
-  "aliasOf": "line/kiddush-festival-day-verses-l1"
+  "aliasOf": "line/kiddush-festival-day-verses-l1",
+  "plays": "audio/m/israeli/line/kiddush-festival-day-verses-l1.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-day-verses-w6.mp3",
@@ -91037,12 +91108,13 @@
   "kind": "word",
   "id": "kiddush-festival-day-verses-w6",
   "text": "אֲשֶׁר־תִּקְרְאוּ",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "asher-tikre'u",
   "english": "",
-  "aliasOf": "line/kiddush-festival-day-verses-l1"
+  "aliasOf": "line/kiddush-festival-day-verses-l1",
+  "plays": "audio/f/israeli/line/kiddush-festival-day-verses-l1.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-day-verses-w7.mp3",
@@ -91051,12 +91123,13 @@
   "kind": "word",
   "id": "kiddush-festival-day-verses-w7",
   "text": "אֹתָם",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "otam",
   "english": "",
-  "aliasOf": "line/kiddush-festival-day-verses-l1"
+  "aliasOf": "line/kiddush-festival-day-verses-l1",
+  "plays": "audio/m/israeli/line/kiddush-festival-day-verses-l1.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-day-verses-w7.mp3",
@@ -91065,12 +91138,13 @@
   "kind": "word",
   "id": "kiddush-festival-day-verses-w7",
   "text": "אֹתָם",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "otam",
   "english": "",
-  "aliasOf": "line/kiddush-festival-day-verses-l1"
+  "aliasOf": "line/kiddush-festival-day-verses-l1",
+  "plays": "audio/f/israeli/line/kiddush-festival-day-verses-l1.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-day-verses-w8.mp3",
@@ -91079,12 +91153,13 @@
   "kind": "word",
   "id": "kiddush-festival-day-verses-w8",
   "text": "בְּמוֹעֲדָם׃",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "bemo'adam",
   "english": "",
-  "aliasOf": "line/kiddush-festival-day-verses-l1"
+  "aliasOf": "line/kiddush-festival-day-verses-l1",
+  "plays": "audio/m/israeli/line/kiddush-festival-day-verses-l1.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-day-verses-w8.mp3",
@@ -91093,12 +91168,13 @@
   "kind": "word",
   "id": "kiddush-festival-day-verses-w8",
   "text": "בְּמוֹעֲדָם׃",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "bemo'adam",
   "english": "",
-  "aliasOf": "line/kiddush-festival-day-verses-l1"
+  "aliasOf": "line/kiddush-festival-day-verses-l1",
+  "plays": "audio/f/israeli/line/kiddush-festival-day-verses-l1.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-day-verses-w9.mp3",
@@ -91107,12 +91183,13 @@
   "kind": "word",
   "id": "kiddush-festival-day-verses-w9",
   "text": "וַיְדַבֵּר",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "vaydaber",
   "english": "",
-  "aliasOf": "line/kiddush-festival-day-verses-l1"
+  "aliasOf": "line/kiddush-festival-day-verses-l1",
+  "plays": "audio/m/israeli/line/kiddush-festival-day-verses-l1.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-day-verses-w9.mp3",
@@ -91121,12 +91198,13 @@
   "kind": "word",
   "id": "kiddush-festival-day-verses-w9",
   "text": "וַיְדַבֵּר",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "vaydaber",
   "english": "",
-  "aliasOf": "line/kiddush-festival-day-verses-l1"
+  "aliasOf": "line/kiddush-festival-day-verses-l1",
+  "plays": "audio/f/israeli/line/kiddush-festival-day-verses-l1.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-day-verses-w10.mp3",
@@ -91141,7 +91219,7 @@
   "phonetic": "mosheh",
   "english": "",
   "aliasOf": "line/kiddush-festival-day-verses-l1",
-  "plays": "audio/m/israeli/word/kiddush-festival-day-verses-w10.mp3"
+  "plays": "audio/m/israeli/line/kiddush-festival-day-verses-l1.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-day-verses-w10.mp3",
@@ -91156,7 +91234,7 @@
   "phonetic": "mosheh",
   "english": "",
   "aliasOf": "line/kiddush-festival-day-verses-l1",
-  "plays": "audio/f/israeli/word/kiddush-festival-day-verses-w10.mp3"
+  "plays": "audio/f/israeli/line/kiddush-festival-day-verses-l1.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-day-verses-w11.mp3",
@@ -91165,12 +91243,13 @@
   "kind": "word",
   "id": "kiddush-festival-day-verses-w11",
   "text": "אֶת־מֹעֲדֵי",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "et-mo'adei",
   "english": "",
-  "aliasOf": "line/kiddush-festival-day-verses-l1"
+  "aliasOf": "line/kiddush-festival-day-verses-l1",
+  "plays": "audio/m/israeli/line/kiddush-festival-day-verses-l1.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-day-verses-w11.mp3",
@@ -91179,12 +91258,13 @@
   "kind": "word",
   "id": "kiddush-festival-day-verses-w11",
   "text": "אֶת־מֹעֲדֵי",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "et-mo'adei",
   "english": "",
-  "aliasOf": "line/kiddush-festival-day-verses-l1"
+  "aliasOf": "line/kiddush-festival-day-verses-l1",
+  "plays": "audio/f/israeli/line/kiddush-festival-day-verses-l1.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-day-verses-w12.mp3",
@@ -91199,7 +91279,7 @@
   "phonetic": "adonai",
   "english": "",
   "aliasOf": "line/kiddush-festival-day-verses-l1",
-  "plays": "audio/m/israeli/word/kiddush-festival-day-verses-w12.mp3"
+  "plays": "audio/m/israeli/line/kiddush-festival-day-verses-l1.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-day-verses-w12.mp3",
@@ -91214,7 +91294,7 @@
   "phonetic": "adonai",
   "english": "",
   "aliasOf": "line/kiddush-festival-day-verses-l1",
-  "plays": "audio/f/israeli/word/kiddush-festival-day-verses-w12.mp3"
+  "plays": "audio/f/israeli/line/kiddush-festival-day-verses-l1.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-day-verses-w13.mp3",
@@ -91223,12 +91303,13 @@
   "kind": "word",
   "id": "kiddush-festival-day-verses-w13",
   "text": "אֶל־בְּנֵי",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "el-benei",
   "english": "",
-  "aliasOf": "line/kiddush-festival-day-verses-l1"
+  "aliasOf": "line/kiddush-festival-day-verses-l1",
+  "plays": "audio/m/israeli/line/kiddush-festival-day-verses-l1.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-day-verses-w13.mp3",
@@ -91237,12 +91318,13 @@
   "kind": "word",
   "id": "kiddush-festival-day-verses-w13",
   "text": "אֶל־בְּנֵי",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "el-benei",
   "english": "",
-  "aliasOf": "line/kiddush-festival-day-verses-l1"
+  "aliasOf": "line/kiddush-festival-day-verses-l1",
+  "plays": "audio/f/israeli/line/kiddush-festival-day-verses-l1.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-day-verses-w14.mp3",
@@ -91257,7 +91339,7 @@
   "phonetic": "yisra'el",
   "english": "",
   "aliasOf": "line/kiddush-festival-day-verses-l1",
-  "plays": "audio/m/israeli/word/kiddush-festival-day-verses-w14.mp3"
+  "plays": "audio/m/israeli/line/kiddush-festival-day-verses-l1.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-day-verses-w14.mp3",
@@ -91272,7 +91354,7 @@
   "phonetic": "yisra'el",
   "english": "",
   "aliasOf": "line/kiddush-festival-day-verses-l1",
-  "plays": "audio/f/israeli/word/kiddush-festival-day-verses-w14.mp3"
+  "plays": "audio/f/israeli/line/kiddush-festival-day-verses-l1.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-eve-open-w1.mp3",
@@ -91287,7 +91369,7 @@
   "phonetic": "barukh",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-open",
-  "plays": "audio/m/israeli/word/kiddush-festival-eve-open-w1.mp3"
+  "plays": "audio/m/israeli/line/kiddush-festival-eve-open.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-eve-open-w1.mp3",
@@ -91302,7 +91384,7 @@
   "phonetic": "barukh",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-open",
-  "plays": "audio/f/israeli/word/kiddush-festival-eve-open-w1.mp3"
+  "plays": "audio/f/israeli/line/kiddush-festival-eve-open.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-eve-open-w2.mp3",
@@ -91317,7 +91399,7 @@
   "phonetic": "atah",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-open",
-  "plays": "audio/m/israeli/word/kiddush-festival-eve-open-w2.mp3"
+  "plays": "audio/m/israeli/line/kiddush-festival-eve-open.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-eve-open-w2.mp3",
@@ -91332,7 +91414,7 @@
   "phonetic": "atah",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-open",
-  "plays": "audio/f/israeli/word/kiddush-festival-eve-open-w2.mp3"
+  "plays": "audio/f/israeli/line/kiddush-festival-eve-open.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-eve-open-w3.mp3",
@@ -91347,7 +91429,7 @@
   "phonetic": "adonai",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-open",
-  "plays": "audio/m/israeli/word/kiddush-festival-eve-open-w3.mp3"
+  "plays": "audio/m/israeli/line/kiddush-festival-eve-open.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-eve-open-w3.mp3",
@@ -91362,7 +91444,7 @@
   "phonetic": "adonai",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-open",
-  "plays": "audio/f/israeli/word/kiddush-festival-eve-open-w3.mp3"
+  "plays": "audio/f/israeli/line/kiddush-festival-eve-open.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-eve-open-w4.mp3",
@@ -91377,7 +91459,7 @@
   "phonetic": "eloheinu",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-open",
-  "plays": "audio/m/israeli/word/kiddush-festival-eve-open-w4.mp3"
+  "plays": "audio/m/israeli/line/kiddush-festival-eve-open.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-eve-open-w4.mp3",
@@ -91392,7 +91474,7 @@
   "phonetic": "eloheinu",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-open",
-  "plays": "audio/f/israeli/word/kiddush-festival-eve-open-w4.mp3"
+  "plays": "audio/f/israeli/line/kiddush-festival-eve-open.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-eve-open-w5.mp3",
@@ -91407,7 +91489,7 @@
   "phonetic": "melekh",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-open",
-  "plays": "audio/m/israeli/word/kiddush-festival-eve-open-w5.mp3"
+  "plays": "audio/m/israeli/line/kiddush-festival-eve-open.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-eve-open-w5.mp3",
@@ -91422,7 +91504,7 @@
   "phonetic": "melekh",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-open",
-  "plays": "audio/f/israeli/word/kiddush-festival-eve-open-w5.mp3"
+  "plays": "audio/f/israeli/line/kiddush-festival-eve-open.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-eve-open-w6.mp3",
@@ -91437,7 +91519,7 @@
   "phonetic": "ha'olam",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-open",
-  "plays": "audio/m/israeli/word/kiddush-festival-eve-open-w6.mp3"
+  "plays": "audio/m/israeli/line/kiddush-festival-eve-open.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-eve-open-w6.mp3",
@@ -91452,7 +91534,7 @@
   "phonetic": "ha'olam",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-open",
-  "plays": "audio/f/israeli/word/kiddush-festival-eve-open-w6.mp3"
+  "plays": "audio/f/israeli/line/kiddush-festival-eve-open.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-eve-open-w7.mp3",
@@ -91467,7 +91549,7 @@
   "phonetic": "asher",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-open",
-  "plays": "audio/m/israeli/word/kiddush-festival-eve-open-w7.mp3"
+  "plays": "audio/m/israeli/line/kiddush-festival-eve-open.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-eve-open-w7.mp3",
@@ -91482,7 +91564,7 @@
   "phonetic": "asher",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-open",
-  "plays": "audio/f/israeli/word/kiddush-festival-eve-open-w7.mp3"
+  "plays": "audio/f/israeli/line/kiddush-festival-eve-open.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-eve-open-w8.mp3",
@@ -91497,7 +91579,7 @@
   "phonetic": "bachar",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-open",
-  "plays": "audio/m/israeli/word/kiddush-festival-eve-open-w8.mp3"
+  "plays": "audio/m/israeli/line/kiddush-festival-eve-open.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-eve-open-w8.mp3",
@@ -91512,7 +91594,7 @@
   "phonetic": "bachar",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-open",
-  "plays": "audio/f/israeli/word/kiddush-festival-eve-open-w8.mp3"
+  "plays": "audio/f/israeli/line/kiddush-festival-eve-open.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-eve-open-w9.mp3",
@@ -91527,7 +91609,7 @@
   "phonetic": "banu",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-open",
-  "plays": "audio/m/israeli/word/kiddush-festival-eve-open-w9.mp3"
+  "plays": "audio/m/israeli/line/kiddush-festival-eve-open.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-eve-open-w9.mp3",
@@ -91542,7 +91624,7 @@
   "phonetic": "banu",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-open",
-  "plays": "audio/f/israeli/word/kiddush-festival-eve-open-w9.mp3"
+  "plays": "audio/f/israeli/line/kiddush-festival-eve-open.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-eve-open-w10.mp3",
@@ -91557,7 +91639,7 @@
   "phonetic": "mikol",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-open",
-  "plays": "audio/m/israeli/word/kiddush-festival-eve-open-w10.mp3"
+  "plays": "audio/m/israeli/line/kiddush-festival-eve-open.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-eve-open-w10.mp3",
@@ -91572,7 +91654,7 @@
   "phonetic": "mikol",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-open",
-  "plays": "audio/f/israeli/word/kiddush-festival-eve-open-w10.mp3"
+  "plays": "audio/f/israeli/line/kiddush-festival-eve-open.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-eve-open-w11.mp3",
@@ -91581,12 +91663,13 @@
   "kind": "word",
   "id": "kiddush-festival-eve-open-w11",
   "text": "עָם",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "am",
   "english": "",
-  "aliasOf": "line/kiddush-festival-eve-open"
+  "aliasOf": "line/kiddush-festival-eve-open",
+  "plays": "audio/m/israeli/line/kiddush-festival-eve-open.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-eve-open-w11.mp3",
@@ -91595,12 +91678,13 @@
   "kind": "word",
   "id": "kiddush-festival-eve-open-w11",
   "text": "עָם",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "am",
   "english": "",
-  "aliasOf": "line/kiddush-festival-eve-open"
+  "aliasOf": "line/kiddush-festival-eve-open",
+  "plays": "audio/f/israeli/line/kiddush-festival-eve-open.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-eve-open-w12.mp3",
@@ -91609,12 +91693,13 @@
   "kind": "word",
   "id": "kiddush-festival-eve-open-w12",
   "text": "וְרוֹמְמָנוּ",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "veromemanu",
   "english": "",
-  "aliasOf": "line/kiddush-festival-eve-open"
+  "aliasOf": "line/kiddush-festival-eve-open",
+  "plays": "audio/m/israeli/line/kiddush-festival-eve-open.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-eve-open-w12.mp3",
@@ -91623,12 +91708,13 @@
   "kind": "word",
   "id": "kiddush-festival-eve-open-w12",
   "text": "וְרוֹמְמָנוּ",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "veromemanu",
   "english": "",
-  "aliasOf": "line/kiddush-festival-eve-open"
+  "aliasOf": "line/kiddush-festival-eve-open",
+  "plays": "audio/f/israeli/line/kiddush-festival-eve-open.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-eve-open-w13.mp3",
@@ -91643,7 +91729,7 @@
   "phonetic": "mikol",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-open",
-  "plays": "audio/m/israeli/word/kiddush-festival-eve-open-w13.mp3"
+  "plays": "audio/m/israeli/line/kiddush-festival-eve-open.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-eve-open-w13.mp3",
@@ -91658,7 +91744,7 @@
   "phonetic": "mikol",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-open",
-  "plays": "audio/f/israeli/word/kiddush-festival-eve-open-w13.mp3"
+  "plays": "audio/f/israeli/line/kiddush-festival-eve-open.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-eve-open-w14.mp3",
@@ -91673,7 +91759,7 @@
   "phonetic": "lashon",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-open",
-  "plays": "audio/m/israeli/word/kiddush-festival-eve-open-w14.mp3"
+  "plays": "audio/m/israeli/line/kiddush-festival-eve-open.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-eve-open-w14.mp3",
@@ -91688,7 +91774,7 @@
   "phonetic": "lashon",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-open",
-  "plays": "audio/f/israeli/word/kiddush-festival-eve-open-w14.mp3"
+  "plays": "audio/f/israeli/line/kiddush-festival-eve-open.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-eve-open-w15.mp3",
@@ -91697,12 +91783,13 @@
   "kind": "word",
   "id": "kiddush-festival-eve-open-w15",
   "text": "וְקִדְּשָׁנוּ",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "vekideshanu",
   "english": "",
-  "aliasOf": "line/kiddush-festival-eve-open"
+  "aliasOf": "line/kiddush-festival-eve-open",
+  "plays": "audio/m/israeli/line/kiddush-festival-eve-open.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-eve-open-w15.mp3",
@@ -91711,12 +91798,13 @@
   "kind": "word",
   "id": "kiddush-festival-eve-open-w15",
   "text": "וְקִדְּשָׁנוּ",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "vekideshanu",
   "english": "",
-  "aliasOf": "line/kiddush-festival-eve-open"
+  "aliasOf": "line/kiddush-festival-eve-open",
+  "plays": "audio/f/israeli/line/kiddush-festival-eve-open.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-eve-open-w16.mp3",
@@ -91731,7 +91819,7 @@
   "phonetic": "bemitzvotav",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-open",
-  "plays": "audio/m/israeli/word/kiddush-festival-eve-open-w16.mp3"
+  "plays": "audio/m/israeli/line/kiddush-festival-eve-open.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-eve-open-w16.mp3",
@@ -91746,7 +91834,7 @@
   "phonetic": "bemitzvotav",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-open",
-  "plays": "audio/f/israeli/word/kiddush-festival-eve-open-w16.mp3"
+  "plays": "audio/f/israeli/line/kiddush-festival-eve-open.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-eve-open-w17.mp3",
@@ -91755,12 +91843,13 @@
   "kind": "word",
   "id": "kiddush-festival-eve-open-w17",
   "text": "וַתִּתֶּן",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "vatiten",
   "english": "",
-  "aliasOf": "line/kiddush-festival-eve-open"
+  "aliasOf": "line/kiddush-festival-eve-open",
+  "plays": "audio/m/israeli/line/kiddush-festival-eve-open.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-eve-open-w17.mp3",
@@ -91769,12 +91858,13 @@
   "kind": "word",
   "id": "kiddush-festival-eve-open-w17",
   "text": "וַתִּתֶּן",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "vatiten",
   "english": "",
-  "aliasOf": "line/kiddush-festival-eve-open"
+  "aliasOf": "line/kiddush-festival-eve-open",
+  "plays": "audio/f/israeli/line/kiddush-festival-eve-open.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-eve-open-w18.mp3",
@@ -91789,7 +91879,7 @@
   "phonetic": "lanu",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-open",
-  "plays": "audio/m/israeli/word/kiddush-festival-eve-open-w18.mp3"
+  "plays": "audio/m/israeli/line/kiddush-festival-eve-open.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-eve-open-w18.mp3",
@@ -91804,7 +91894,7 @@
   "phonetic": "lanu",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-open",
-  "plays": "audio/f/israeli/word/kiddush-festival-eve-open-w18.mp3"
+  "plays": "audio/f/israeli/line/kiddush-festival-eve-open.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-eve-open-w19.mp3",
@@ -91819,7 +91909,7 @@
   "phonetic": "adonai",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-open",
-  "plays": "audio/m/israeli/word/kiddush-festival-eve-open-w19.mp3"
+  "plays": "audio/m/israeli/line/kiddush-festival-eve-open.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-eve-open-w19.mp3",
@@ -91834,7 +91924,7 @@
   "phonetic": "adonai",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-open",
-  "plays": "audio/f/israeli/word/kiddush-festival-eve-open-w19.mp3"
+  "plays": "audio/f/israeli/line/kiddush-festival-eve-open.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-eve-open-w20.mp3",
@@ -91849,7 +91939,7 @@
   "phonetic": "eloheinu",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-open",
-  "plays": "audio/m/israeli/word/kiddush-festival-eve-open-w20.mp3"
+  "plays": "audio/m/israeli/line/kiddush-festival-eve-open.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-eve-open-w20.mp3",
@@ -91864,7 +91954,7 @@
   "phonetic": "eloheinu",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-open",
-  "plays": "audio/f/israeli/word/kiddush-festival-eve-open-w20.mp3"
+  "plays": "audio/f/israeli/line/kiddush-festival-eve-open.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-eve-open-w21.mp3",
@@ -91879,7 +91969,7 @@
   "phonetic": "be'ahavah",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-open",
-  "plays": "audio/m/israeli/word/kiddush-festival-eve-open-w21.mp3"
+  "plays": "audio/m/israeli/line/kiddush-festival-eve-open.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-eve-open-w21.mp3",
@@ -91894,7 +91984,7 @@
   "phonetic": "be'ahavah",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-open",
-  "plays": "audio/f/israeli/word/kiddush-festival-eve-open-w21.mp3"
+  "plays": "audio/f/israeli/line/kiddush-festival-eve-open.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-eve-open-w22.mp3",
@@ -91903,12 +91993,13 @@
   "kind": "word",
   "id": "kiddush-festival-eve-open-w22",
   "text": "מוֹעֲדִים",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "mo'adim",
   "english": "",
-  "aliasOf": "line/kiddush-festival-eve-open"
+  "aliasOf": "line/kiddush-festival-eve-open",
+  "plays": "audio/m/israeli/line/kiddush-festival-eve-open.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-eve-open-w22.mp3",
@@ -91917,12 +92008,13 @@
   "kind": "word",
   "id": "kiddush-festival-eve-open-w22",
   "text": "מוֹעֲדִים",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "mo'adim",
   "english": "",
-  "aliasOf": "line/kiddush-festival-eve-open"
+  "aliasOf": "line/kiddush-festival-eve-open",
+  "plays": "audio/f/israeli/line/kiddush-festival-eve-open.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-eve-open-w23.mp3",
@@ -91931,12 +92023,13 @@
   "kind": "word",
   "id": "kiddush-festival-eve-open-w23",
   "text": "לְשִׂמְחָה",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "lesimchah",
   "english": "",
-  "aliasOf": "line/kiddush-festival-eve-open"
+  "aliasOf": "line/kiddush-festival-eve-open",
+  "plays": "audio/m/israeli/line/kiddush-festival-eve-open.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-eve-open-w23.mp3",
@@ -91945,12 +92038,13 @@
   "kind": "word",
   "id": "kiddush-festival-eve-open-w23",
   "text": "לְשִׂמְחָה",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "lesimchah",
   "english": "",
-  "aliasOf": "line/kiddush-festival-eve-open"
+  "aliasOf": "line/kiddush-festival-eve-open",
+  "plays": "audio/f/israeli/line/kiddush-festival-eve-open.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-eve-open-w24.mp3",
@@ -91959,12 +92053,13 @@
   "kind": "word",
   "id": "kiddush-festival-eve-open-w24",
   "text": "חַגִּים",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "chagim",
   "english": "",
-  "aliasOf": "line/kiddush-festival-eve-open"
+  "aliasOf": "line/kiddush-festival-eve-open",
+  "plays": "audio/m/israeli/line/kiddush-festival-eve-open.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-eve-open-w24.mp3",
@@ -91973,12 +92068,13 @@
   "kind": "word",
   "id": "kiddush-festival-eve-open-w24",
   "text": "חַגִּים",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "chagim",
   "english": "",
-  "aliasOf": "line/kiddush-festival-eve-open"
+  "aliasOf": "line/kiddush-festival-eve-open",
+  "plays": "audio/f/israeli/line/kiddush-festival-eve-open.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-eve-open-w25.mp3",
@@ -91987,12 +92083,13 @@
   "kind": "word",
   "id": "kiddush-festival-eve-open-w25",
   "text": "וּזְמַנִּים",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "uzemanim",
   "english": "",
-  "aliasOf": "line/kiddush-festival-eve-open"
+  "aliasOf": "line/kiddush-festival-eve-open",
+  "plays": "audio/m/israeli/line/kiddush-festival-eve-open.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-eve-open-w25.mp3",
@@ -92001,12 +92098,13 @@
   "kind": "word",
   "id": "kiddush-festival-eve-open-w25",
   "text": "וּזְמַנִּים",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "uzemanim",
   "english": "",
-  "aliasOf": "line/kiddush-festival-eve-open"
+  "aliasOf": "line/kiddush-festival-eve-open",
+  "plays": "audio/f/israeli/line/kiddush-festival-eve-open.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-eve-open-w26.mp3",
@@ -92015,12 +92113,13 @@
   "kind": "word",
   "id": "kiddush-festival-eve-open-w26",
   "text": "לְשָׂשׂוֹן",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "lesason",
   "english": "",
-  "aliasOf": "line/kiddush-festival-eve-open"
+  "aliasOf": "line/kiddush-festival-eve-open",
+  "plays": "audio/m/israeli/line/kiddush-festival-eve-open.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-eve-open-w26.mp3",
@@ -92029,12 +92128,13 @@
   "kind": "word",
   "id": "kiddush-festival-eve-open-w26",
   "text": "לְשָׂשׂוֹן",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "lesason",
   "english": "",
-  "aliasOf": "line/kiddush-festival-eve-open"
+  "aliasOf": "line/kiddush-festival-eve-open",
+  "plays": "audio/f/israeli/line/kiddush-festival-eve-open.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-eve-open-w27.mp3",
@@ -92049,7 +92149,7 @@
   "phonetic": "et",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-open",
-  "plays": "audio/m/israeli/word/kiddush-festival-eve-open-w27.mp3"
+  "plays": "audio/m/israeli/line/kiddush-festival-eve-open.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-eve-open-w27.mp3",
@@ -92064,7 +92164,7 @@
   "phonetic": "et",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-open",
-  "plays": "audio/f/israeli/word/kiddush-festival-eve-open-w27.mp3"
+  "plays": "audio/f/israeli/line/kiddush-festival-eve-open.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-eve-open-w28.mp3",
@@ -92079,7 +92179,7 @@
   "phonetic": "yom",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-open",
-  "plays": "audio/m/israeli/word/kiddush-festival-eve-open-w28.mp3"
+  "plays": "audio/m/israeli/line/kiddush-festival-eve-open.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-eve-open-w28.mp3",
@@ -92094,7 +92194,7 @@
   "phonetic": "yom",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-open",
-  "plays": "audio/f/israeli/word/kiddush-festival-eve-open-w28.mp3"
+  "plays": "audio/f/israeli/line/kiddush-festival-eve-open.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-pesach-w1.mp3",
@@ -92109,7 +92209,7 @@
   "phonetic": "chag",
   "english": "",
   "aliasOf": "line/kiddush-festival-pesach",
-  "plays": "audio/m/israeli/word/kiddush-festival-pesach-w1.mp3"
+  "plays": "audio/m/israeli/line/kiddush-festival-pesach.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-pesach-w1.mp3",
@@ -92124,7 +92224,7 @@
   "phonetic": "chag",
   "english": "",
   "aliasOf": "line/kiddush-festival-pesach",
-  "plays": "audio/f/israeli/word/kiddush-festival-pesach-w1.mp3"
+  "plays": "audio/f/israeli/line/kiddush-festival-pesach.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-pesach-w2.mp3",
@@ -92133,12 +92233,13 @@
   "kind": "word",
   "id": "kiddush-festival-pesach-w2",
   "text": "הַמַּצּוֹת",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "hamatzot",
   "english": "",
-  "aliasOf": "line/kiddush-festival-pesach"
+  "aliasOf": "line/kiddush-festival-pesach",
+  "plays": "audio/m/israeli/line/kiddush-festival-pesach.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-pesach-w2.mp3",
@@ -92147,12 +92248,13 @@
   "kind": "word",
   "id": "kiddush-festival-pesach-w2",
   "text": "הַמַּצּוֹת",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "hamatzot",
   "english": "",
-  "aliasOf": "line/kiddush-festival-pesach"
+  "aliasOf": "line/kiddush-festival-pesach",
+  "plays": "audio/f/israeli/line/kiddush-festival-pesach.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-pesach-w3.mp3",
@@ -92167,7 +92269,7 @@
   "phonetic": "hazeh",
   "english": "",
   "aliasOf": "line/kiddush-festival-pesach",
-  "plays": "audio/m/israeli/word/kiddush-festival-pesach-w3.mp3"
+  "plays": "audio/m/israeli/line/kiddush-festival-pesach.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-pesach-w3.mp3",
@@ -92182,7 +92284,7 @@
   "phonetic": "hazeh",
   "english": "",
   "aliasOf": "line/kiddush-festival-pesach",
-  "plays": "audio/f/israeli/word/kiddush-festival-pesach-w3.mp3"
+  "plays": "audio/f/israeli/line/kiddush-festival-pesach.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-pesach-w4.mp3",
@@ -92197,7 +92299,7 @@
   "phonetic": "zeman",
   "english": "",
   "aliasOf": "line/kiddush-festival-pesach",
-  "plays": "audio/m/israeli/word/kiddush-festival-pesach-w4.mp3"
+  "plays": "audio/m/israeli/line/kiddush-festival-pesach.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-pesach-w4.mp3",
@@ -92212,7 +92314,7 @@
   "phonetic": "zeman",
   "english": "",
   "aliasOf": "line/kiddush-festival-pesach",
-  "plays": "audio/f/israeli/word/kiddush-festival-pesach-w4.mp3"
+  "plays": "audio/f/israeli/line/kiddush-festival-pesach.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-pesach-w5.mp3",
@@ -92221,12 +92323,13 @@
   "kind": "word",
   "id": "kiddush-festival-pesach-w5",
   "text": "חֵרוּתֵנוּ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "cherutenu",
   "english": "",
-  "aliasOf": "line/kiddush-festival-pesach"
+  "aliasOf": "line/kiddush-festival-pesach",
+  "plays": "audio/m/israeli/line/kiddush-festival-pesach.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-pesach-w5.mp3",
@@ -92235,12 +92338,13 @@
   "kind": "word",
   "id": "kiddush-festival-pesach-w5",
   "text": "חֵרוּתֵנוּ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "cherutenu",
   "english": "",
-  "aliasOf": "line/kiddush-festival-pesach"
+  "aliasOf": "line/kiddush-festival-pesach",
+  "plays": "audio/f/israeli/line/kiddush-festival-pesach.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-shavuot-w1.mp3",
@@ -92255,7 +92359,7 @@
   "phonetic": "chag",
   "english": "",
   "aliasOf": "line/kiddush-festival-shavuot",
-  "plays": "audio/m/israeli/word/kiddush-festival-shavuot-w1.mp3"
+  "plays": "audio/m/israeli/line/kiddush-festival-shavuot.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-shavuot-w1.mp3",
@@ -92270,7 +92374,7 @@
   "phonetic": "chag",
   "english": "",
   "aliasOf": "line/kiddush-festival-shavuot",
-  "plays": "audio/f/israeli/word/kiddush-festival-shavuot-w1.mp3"
+  "plays": "audio/f/israeli/line/kiddush-festival-shavuot.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-shavuot-w2.mp3",
@@ -92279,12 +92383,13 @@
   "kind": "word",
   "id": "kiddush-festival-shavuot-w2",
   "text": "הַשָׁבוּעוֹת",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "hashavu'ot",
   "english": "",
-  "aliasOf": "line/kiddush-festival-shavuot"
+  "aliasOf": "line/kiddush-festival-shavuot",
+  "plays": "audio/m/israeli/line/kiddush-festival-shavuot.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-shavuot-w2.mp3",
@@ -92293,12 +92398,13 @@
   "kind": "word",
   "id": "kiddush-festival-shavuot-w2",
   "text": "הַשָׁבוּעוֹת",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "hashavu'ot",
   "english": "",
-  "aliasOf": "line/kiddush-festival-shavuot"
+  "aliasOf": "line/kiddush-festival-shavuot",
+  "plays": "audio/f/israeli/line/kiddush-festival-shavuot.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-shavuot-w3.mp3",
@@ -92313,7 +92419,7 @@
   "phonetic": "hazeh",
   "english": "",
   "aliasOf": "line/kiddush-festival-shavuot",
-  "plays": "audio/m/israeli/word/kiddush-festival-shavuot-w3.mp3"
+  "plays": "audio/m/israeli/line/kiddush-festival-shavuot.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-shavuot-w3.mp3",
@@ -92328,7 +92434,7 @@
   "phonetic": "hazeh",
   "english": "",
   "aliasOf": "line/kiddush-festival-shavuot",
-  "plays": "audio/f/israeli/word/kiddush-festival-shavuot-w3.mp3"
+  "plays": "audio/f/israeli/line/kiddush-festival-shavuot.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-shavuot-w4.mp3",
@@ -92343,7 +92449,7 @@
   "phonetic": "zeman",
   "english": "",
   "aliasOf": "line/kiddush-festival-shavuot",
-  "plays": "audio/m/israeli/word/kiddush-festival-shavuot-w4.mp3"
+  "plays": "audio/m/israeli/line/kiddush-festival-shavuot.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-shavuot-w4.mp3",
@@ -92358,7 +92464,7 @@
   "phonetic": "zeman",
   "english": "",
   "aliasOf": "line/kiddush-festival-shavuot",
-  "plays": "audio/f/israeli/word/kiddush-festival-shavuot-w4.mp3"
+  "plays": "audio/f/israeli/line/kiddush-festival-shavuot.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-shavuot-w5.mp3",
@@ -92367,12 +92473,13 @@
   "kind": "word",
   "id": "kiddush-festival-shavuot-w5",
   "text": "מַתַּן",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "matan",
   "english": "",
-  "aliasOf": "line/kiddush-festival-shavuot"
+  "aliasOf": "line/kiddush-festival-shavuot",
+  "plays": "audio/m/israeli/line/kiddush-festival-shavuot.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-shavuot-w5.mp3",
@@ -92381,12 +92488,13 @@
   "kind": "word",
   "id": "kiddush-festival-shavuot-w5",
   "text": "מַתַּן",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "matan",
   "english": "",
-  "aliasOf": "line/kiddush-festival-shavuot"
+  "aliasOf": "line/kiddush-festival-shavuot",
+  "plays": "audio/f/israeli/line/kiddush-festival-shavuot.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-shavuot-w6.mp3",
@@ -92395,12 +92503,13 @@
   "kind": "word",
   "id": "kiddush-festival-shavuot-w6",
   "text": "תּוֹרָתֵינוּ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "torateinu",
   "english": "",
-  "aliasOf": "line/kiddush-festival-shavuot"
+  "aliasOf": "line/kiddush-festival-shavuot",
+  "plays": "audio/m/israeli/line/kiddush-festival-shavuot.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-shavuot-w6.mp3",
@@ -92409,12 +92518,13 @@
   "kind": "word",
   "id": "kiddush-festival-shavuot-w6",
   "text": "תּוֹרָתֵינוּ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "torateinu",
   "english": "",
-  "aliasOf": "line/kiddush-festival-shavuot"
+  "aliasOf": "line/kiddush-festival-shavuot",
+  "plays": "audio/f/israeli/line/kiddush-festival-shavuot.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-sukkot-w1.mp3",
@@ -92429,7 +92539,7 @@
   "phonetic": "chag",
   "english": "",
   "aliasOf": "line/kiddush-festival-sukkot",
-  "plays": "audio/m/israeli/word/kiddush-festival-sukkot-w1.mp3"
+  "plays": "audio/m/israeli/line/kiddush-festival-sukkot.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-sukkot-w1.mp3",
@@ -92444,7 +92554,7 @@
   "phonetic": "chag",
   "english": "",
   "aliasOf": "line/kiddush-festival-sukkot",
-  "plays": "audio/f/israeli/word/kiddush-festival-sukkot-w1.mp3"
+  "plays": "audio/f/israeli/line/kiddush-festival-sukkot.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-sukkot-w2.mp3",
@@ -92453,12 +92563,13 @@
   "kind": "word",
   "id": "kiddush-festival-sukkot-w2",
   "text": "הַסֻּכּוֹת",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "hasukot",
   "english": "",
-  "aliasOf": "line/kiddush-festival-sukkot"
+  "aliasOf": "line/kiddush-festival-sukkot",
+  "plays": "audio/m/israeli/line/kiddush-festival-sukkot.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-sukkot-w2.mp3",
@@ -92467,12 +92578,13 @@
   "kind": "word",
   "id": "kiddush-festival-sukkot-w2",
   "text": "הַסֻּכּוֹת",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "hasukot",
   "english": "",
-  "aliasOf": "line/kiddush-festival-sukkot"
+  "aliasOf": "line/kiddush-festival-sukkot",
+  "plays": "audio/f/israeli/line/kiddush-festival-sukkot.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-sukkot-w3.mp3",
@@ -92487,7 +92599,7 @@
   "phonetic": "hazeh",
   "english": "",
   "aliasOf": "line/kiddush-festival-sukkot",
-  "plays": "audio/m/israeli/word/kiddush-festival-sukkot-w3.mp3"
+  "plays": "audio/m/israeli/line/kiddush-festival-sukkot.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-sukkot-w3.mp3",
@@ -92502,7 +92614,7 @@
   "phonetic": "hazeh",
   "english": "",
   "aliasOf": "line/kiddush-festival-sukkot",
-  "plays": "audio/f/israeli/word/kiddush-festival-sukkot-w3.mp3"
+  "plays": "audio/f/israeli/line/kiddush-festival-sukkot.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-sukkot-w4.mp3",
@@ -92517,7 +92629,7 @@
   "phonetic": "zeman",
   "english": "",
   "aliasOf": "line/kiddush-festival-sukkot",
-  "plays": "audio/m/israeli/word/kiddush-festival-sukkot-w4.mp3"
+  "plays": "audio/m/israeli/line/kiddush-festival-sukkot.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-sukkot-w4.mp3",
@@ -92532,7 +92644,7 @@
   "phonetic": "zeman",
   "english": "",
   "aliasOf": "line/kiddush-festival-sukkot",
-  "plays": "audio/f/israeli/word/kiddush-festival-sukkot-w4.mp3"
+  "plays": "audio/f/israeli/line/kiddush-festival-sukkot.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-sukkot-w5.mp3",
@@ -92541,12 +92653,13 @@
   "kind": "word",
   "id": "kiddush-festival-sukkot-w5",
   "text": "שִׂמְחָתֵנוּ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "simchatenu",
   "english": "",
-  "aliasOf": "line/kiddush-festival-sukkot"
+  "aliasOf": "line/kiddush-festival-sukkot",
+  "plays": "audio/m/israeli/line/kiddush-festival-sukkot.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-sukkot-w5.mp3",
@@ -92555,12 +92668,13 @@
   "kind": "word",
   "id": "kiddush-festival-sukkot-w5",
   "text": "שִׂמְחָתֵנוּ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "simchatenu",
   "english": "",
-  "aliasOf": "line/kiddush-festival-sukkot"
+  "aliasOf": "line/kiddush-festival-sukkot",
+  "plays": "audio/f/israeli/line/kiddush-festival-sukkot.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-shemini-w1.mp3",
@@ -92569,12 +92683,13 @@
   "kind": "word",
   "id": "kiddush-festival-shemini-w1",
   "text": "שְׁמִינִי",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "shemini",
   "english": "",
-  "aliasOf": "line/kiddush-festival-shemini"
+  "aliasOf": "line/kiddush-festival-shemini",
+  "plays": "audio/m/israeli/line/kiddush-festival-shemini.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-shemini-w1.mp3",
@@ -92583,12 +92698,13 @@
   "kind": "word",
   "id": "kiddush-festival-shemini-w1",
   "text": "שְׁמִינִי",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "shemini",
   "english": "",
-  "aliasOf": "line/kiddush-festival-shemini"
+  "aliasOf": "line/kiddush-festival-shemini",
+  "plays": "audio/f/israeli/line/kiddush-festival-shemini.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-shemini-w2.mp3",
@@ -92597,12 +92713,13 @@
   "kind": "word",
   "id": "kiddush-festival-shemini-w2",
   "text": "עֲצֶרֶת",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "atzeret",
   "english": "",
-  "aliasOf": "line/kiddush-festival-shemini"
+  "aliasOf": "line/kiddush-festival-shemini",
+  "plays": "audio/m/israeli/line/kiddush-festival-shemini.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-shemini-w2.mp3",
@@ -92611,12 +92728,13 @@
   "kind": "word",
   "id": "kiddush-festival-shemini-w2",
   "text": "עֲצֶרֶת",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "atzeret",
   "english": "",
-  "aliasOf": "line/kiddush-festival-shemini"
+  "aliasOf": "line/kiddush-festival-shemini",
+  "plays": "audio/f/israeli/line/kiddush-festival-shemini.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-shemini-w3.mp3",
@@ -92625,12 +92743,13 @@
   "kind": "word",
   "id": "kiddush-festival-shemini-w3",
   "text": "הַחַג",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "hachag",
   "english": "",
-  "aliasOf": "line/kiddush-festival-shemini"
+  "aliasOf": "line/kiddush-festival-shemini",
+  "plays": "audio/m/israeli/line/kiddush-festival-shemini.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-shemini-w3.mp3",
@@ -92639,12 +92758,13 @@
   "kind": "word",
   "id": "kiddush-festival-shemini-w3",
   "text": "הַחַג",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "hachag",
   "english": "",
-  "aliasOf": "line/kiddush-festival-shemini"
+  "aliasOf": "line/kiddush-festival-shemini",
+  "plays": "audio/f/israeli/line/kiddush-festival-shemini.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-shemini-w4.mp3",
@@ -92659,7 +92779,7 @@
   "phonetic": "hazeh",
   "english": "",
   "aliasOf": "line/kiddush-festival-shemini",
-  "plays": "audio/m/israeli/word/kiddush-festival-shemini-w4.mp3"
+  "plays": "audio/m/israeli/line/kiddush-festival-shemini.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-shemini-w4.mp3",
@@ -92674,7 +92794,7 @@
   "phonetic": "hazeh",
   "english": "",
   "aliasOf": "line/kiddush-festival-shemini",
-  "plays": "audio/f/israeli/word/kiddush-festival-shemini-w4.mp3"
+  "plays": "audio/f/israeli/line/kiddush-festival-shemini.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-shemini-w5.mp3",
@@ -92689,7 +92809,7 @@
   "phonetic": "zeman",
   "english": "",
   "aliasOf": "line/kiddush-festival-shemini",
-  "plays": "audio/m/israeli/word/kiddush-festival-shemini-w5.mp3"
+  "plays": "audio/m/israeli/line/kiddush-festival-shemini.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-shemini-w5.mp3",
@@ -92704,7 +92824,7 @@
   "phonetic": "zeman",
   "english": "",
   "aliasOf": "line/kiddush-festival-shemini",
-  "plays": "audio/f/israeli/word/kiddush-festival-shemini-w5.mp3"
+  "plays": "audio/f/israeli/line/kiddush-festival-shemini.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-shemini-w6.mp3",
@@ -92713,12 +92833,13 @@
   "kind": "word",
   "id": "kiddush-festival-shemini-w6",
   "text": "שִׂמְחָתֵנוּ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "simchatenu",
   "english": "",
-  "aliasOf": "line/kiddush-festival-shemini"
+  "aliasOf": "line/kiddush-festival-shemini",
+  "plays": "audio/m/israeli/line/kiddush-festival-shemini.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-shemini-w6.mp3",
@@ -92727,12 +92848,13 @@
   "kind": "word",
   "id": "kiddush-festival-shemini-w6",
   "text": "שִׂמְחָתֵנוּ׃",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "simchatenu",
   "english": "",
-  "aliasOf": "line/kiddush-festival-shemini"
+  "aliasOf": "line/kiddush-festival-shemini",
+  "plays": "audio/f/israeli/line/kiddush-festival-shemini.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-eve-close-w1.mp3",
@@ -92741,12 +92863,13 @@
   "kind": "word",
   "id": "kiddush-festival-eve-close-w1",
   "text": "מִקְרָא",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "mikra",
   "english": "",
-  "aliasOf": "line/kiddush-festival-eve-close"
+  "aliasOf": "line/kiddush-festival-eve-close",
+  "plays": "audio/m/israeli/line/kiddush-festival-eve-close.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-eve-close-w1.mp3",
@@ -92755,12 +92878,13 @@
   "kind": "word",
   "id": "kiddush-festival-eve-close-w1",
   "text": "מִקְרָא",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "mikra",
   "english": "",
-  "aliasOf": "line/kiddush-festival-eve-close"
+  "aliasOf": "line/kiddush-festival-eve-close",
+  "plays": "audio/f/israeli/line/kiddush-festival-eve-close.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-eve-close-w2.mp3",
@@ -92775,7 +92899,7 @@
   "phonetic": "kodesh",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-close",
-  "plays": "audio/m/israeli/word/kiddush-festival-eve-close-w2.mp3"
+  "plays": "audio/m/israeli/line/kiddush-festival-eve-close.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-eve-close-w2.mp3",
@@ -92790,7 +92914,7 @@
   "phonetic": "kodesh",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-close",
-  "plays": "audio/f/israeli/word/kiddush-festival-eve-close-w2.mp3"
+  "plays": "audio/f/israeli/line/kiddush-festival-eve-close.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-eve-close-w3.mp3",
@@ -92805,7 +92929,7 @@
   "phonetic": "zekher",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-close",
-  "plays": "audio/m/israeli/word/kiddush-festival-eve-close-w3.mp3"
+  "plays": "audio/m/israeli/line/kiddush-festival-eve-close.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-eve-close-w3.mp3",
@@ -92820,7 +92944,7 @@
   "phonetic": "zekher",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-close",
-  "plays": "audio/f/israeli/word/kiddush-festival-eve-close-w3.mp3"
+  "plays": "audio/f/israeli/line/kiddush-festival-eve-close.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-eve-close-w4.mp3",
@@ -92835,7 +92959,7 @@
   "phonetic": "litzi'at",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-close",
-  "plays": "audio/m/israeli/word/kiddush-festival-eve-close-w4.mp3"
+  "plays": "audio/m/israeli/line/kiddush-festival-eve-close.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-eve-close-w4.mp3",
@@ -92850,7 +92974,7 @@
   "phonetic": "litzi'at",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-close",
-  "plays": "audio/f/israeli/word/kiddush-festival-eve-close-w4.mp3"
+  "plays": "audio/f/israeli/line/kiddush-festival-eve-close.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-eve-close-w5.mp3",
@@ -92865,7 +92989,7 @@
   "phonetic": "mitzrayim",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-close",
-  "plays": "audio/m/israeli/word/kiddush-festival-eve-close-w5.mp3"
+  "plays": "audio/m/israeli/line/kiddush-festival-eve-close.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-eve-close-w5.mp3",
@@ -92880,7 +93004,7 @@
   "phonetic": "mitzrayim",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-close",
-  "plays": "audio/f/israeli/word/kiddush-festival-eve-close-w5.mp3"
+  "plays": "audio/f/israeli/line/kiddush-festival-eve-close.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-eve-close-w6.mp3",
@@ -92895,7 +93019,7 @@
   "phonetic": "ki",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-close",
-  "plays": "audio/m/israeli/word/kiddush-festival-eve-close-w6.mp3"
+  "plays": "audio/m/israeli/line/kiddush-festival-eve-close.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-eve-close-w6.mp3",
@@ -92910,7 +93034,7 @@
   "phonetic": "ki",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-close",
-  "plays": "audio/f/israeli/word/kiddush-festival-eve-close-w6.mp3"
+  "plays": "audio/f/israeli/line/kiddush-festival-eve-close.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-eve-close-w7.mp3",
@@ -92925,7 +93049,7 @@
   "phonetic": "vanu",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-close",
-  "plays": "audio/m/israeli/word/kiddush-festival-eve-close-w7.mp3"
+  "plays": "audio/m/israeli/line/kiddush-festival-eve-close.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-eve-close-w7.mp3",
@@ -92940,7 +93064,7 @@
   "phonetic": "vanu",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-close",
-  "plays": "audio/f/israeli/word/kiddush-festival-eve-close-w7.mp3"
+  "plays": "audio/f/israeli/line/kiddush-festival-eve-close.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-eve-close-w8.mp3",
@@ -92955,7 +93079,7 @@
   "phonetic": "vacharta",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-close",
-  "plays": "audio/m/israeli/word/kiddush-festival-eve-close-w8.mp3"
+  "plays": "audio/m/israeli/line/kiddush-festival-eve-close.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-eve-close-w8.mp3",
@@ -92970,7 +93094,7 @@
   "phonetic": "vacharta",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-close",
-  "plays": "audio/f/israeli/word/kiddush-festival-eve-close-w8.mp3"
+  "plays": "audio/f/israeli/line/kiddush-festival-eve-close.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-eve-close-w9.mp3",
@@ -92985,7 +93109,7 @@
   "phonetic": "ve'otanu",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-close",
-  "plays": "audio/m/israeli/word/kiddush-festival-eve-close-w9.mp3"
+  "plays": "audio/m/israeli/line/kiddush-festival-eve-close.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-eve-close-w9.mp3",
@@ -93000,7 +93124,7 @@
   "phonetic": "ve'otanu",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-close",
-  "plays": "audio/f/israeli/word/kiddush-festival-eve-close-w9.mp3"
+  "plays": "audio/f/israeli/line/kiddush-festival-eve-close.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-eve-close-w10.mp3",
@@ -93015,7 +93139,7 @@
   "phonetic": "kidashta",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-close",
-  "plays": "audio/m/israeli/word/kiddush-festival-eve-close-w10.mp3"
+  "plays": "audio/m/israeli/line/kiddush-festival-eve-close.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-eve-close-w10.mp3",
@@ -93030,7 +93154,7 @@
   "phonetic": "kidashta",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-close",
-  "plays": "audio/f/israeli/word/kiddush-festival-eve-close-w10.mp3"
+  "plays": "audio/f/israeli/line/kiddush-festival-eve-close.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-eve-close-w11.mp3",
@@ -93045,7 +93169,7 @@
   "phonetic": "mikol",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-close",
-  "plays": "audio/m/israeli/word/kiddush-festival-eve-close-w11.mp3"
+  "plays": "audio/m/israeli/line/kiddush-festival-eve-close.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-eve-close-w11.mp3",
@@ -93060,7 +93184,7 @@
   "phonetic": "mikol",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-close",
-  "plays": "audio/f/israeli/word/kiddush-festival-eve-close-w11.mp3"
+  "plays": "audio/f/israeli/line/kiddush-festival-eve-close.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-eve-close-w12.mp3",
@@ -93075,7 +93199,7 @@
   "phonetic": "ha'amim",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-close",
-  "plays": "audio/m/israeli/word/kiddush-festival-eve-close-w12.mp3"
+  "plays": "audio/m/israeli/line/kiddush-festival-eve-close.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-eve-close-w12.mp3",
@@ -93090,7 +93214,7 @@
   "phonetic": "ha'amim",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-close",
-  "plays": "audio/f/israeli/word/kiddush-festival-eve-close-w12.mp3"
+  "plays": "audio/f/israeli/line/kiddush-festival-eve-close.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-eve-close-w13.mp3",
@@ -93099,12 +93223,13 @@
   "kind": "word",
   "id": "kiddush-festival-eve-close-w13",
   "text": "וּמוֹעֲדֵי",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "umo'adei",
   "english": "",
-  "aliasOf": "line/kiddush-festival-eve-close"
+  "aliasOf": "line/kiddush-festival-eve-close",
+  "plays": "audio/m/israeli/line/kiddush-festival-eve-close.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-eve-close-w13.mp3",
@@ -93113,12 +93238,13 @@
   "kind": "word",
   "id": "kiddush-festival-eve-close-w13",
   "text": "וּמוֹעֲדֵי",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "umo'adei",
   "english": "",
-  "aliasOf": "line/kiddush-festival-eve-close"
+  "aliasOf": "line/kiddush-festival-eve-close",
+  "plays": "audio/f/israeli/line/kiddush-festival-eve-close.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-eve-close-w14.mp3",
@@ -93127,12 +93253,13 @@
   "kind": "word",
   "id": "kiddush-festival-eve-close-w14",
   "text": "קָדְשֶׁךָ",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "kadeshekha",
   "english": "",
-  "aliasOf": "line/kiddush-festival-eve-close"
+  "aliasOf": "line/kiddush-festival-eve-close",
+  "plays": "audio/m/israeli/line/kiddush-festival-eve-close.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-eve-close-w14.mp3",
@@ -93141,12 +93268,13 @@
   "kind": "word",
   "id": "kiddush-festival-eve-close-w14",
   "text": "קָדְשֶׁךָ",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "kadeshekha",
   "english": "",
-  "aliasOf": "line/kiddush-festival-eve-close"
+  "aliasOf": "line/kiddush-festival-eve-close",
+  "plays": "audio/f/israeli/line/kiddush-festival-eve-close.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-eve-close-w15.mp3",
@@ -93161,7 +93289,7 @@
   "phonetic": "besimchah",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-close",
-  "plays": "audio/m/israeli/word/kiddush-festival-eve-close-w15.mp3"
+  "plays": "audio/m/israeli/line/kiddush-festival-eve-close.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-eve-close-w15.mp3",
@@ -93176,7 +93304,7 @@
   "phonetic": "besimchah",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-close",
-  "plays": "audio/f/israeli/word/kiddush-festival-eve-close-w15.mp3"
+  "plays": "audio/f/israeli/line/kiddush-festival-eve-close.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-eve-close-w16.mp3",
@@ -93185,12 +93313,13 @@
   "kind": "word",
   "id": "kiddush-festival-eve-close-w16",
   "text": "וּבְשָׂשׂוֹן",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "uvesason",
   "english": "",
-  "aliasOf": "line/kiddush-festival-eve-close"
+  "aliasOf": "line/kiddush-festival-eve-close",
+  "plays": "audio/m/israeli/line/kiddush-festival-eve-close.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-eve-close-w16.mp3",
@@ -93199,12 +93328,13 @@
   "kind": "word",
   "id": "kiddush-festival-eve-close-w16",
   "text": "וּבְשָׂשׂוֹן",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "uvesason",
   "english": "",
-  "aliasOf": "line/kiddush-festival-eve-close"
+  "aliasOf": "line/kiddush-festival-eve-close",
+  "plays": "audio/f/israeli/line/kiddush-festival-eve-close.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-eve-close-w17.mp3",
@@ -93219,7 +93349,7 @@
   "phonetic": "hinchaltanu",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-close",
-  "plays": "audio/m/israeli/word/kiddush-festival-eve-close-w17.mp3"
+  "plays": "audio/m/israeli/line/kiddush-festival-eve-close.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-eve-close-w17.mp3",
@@ -93234,7 +93364,7 @@
   "phonetic": "hinchaltanu",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-close",
-  "plays": "audio/f/israeli/word/kiddush-festival-eve-close-w17.mp3"
+  "plays": "audio/f/israeli/line/kiddush-festival-eve-close.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-eve-close-w18.mp3",
@@ -93249,7 +93379,7 @@
   "phonetic": "barukh",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-close",
-  "plays": "audio/m/israeli/word/kiddush-festival-eve-close-w18.mp3"
+  "plays": "audio/m/israeli/line/kiddush-festival-eve-close.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-eve-close-w18.mp3",
@@ -93264,7 +93394,7 @@
   "phonetic": "barukh",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-close",
-  "plays": "audio/f/israeli/word/kiddush-festival-eve-close-w18.mp3"
+  "plays": "audio/f/israeli/line/kiddush-festival-eve-close.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-eve-close-w19.mp3",
@@ -93279,7 +93409,7 @@
   "phonetic": "atah",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-close",
-  "plays": "audio/m/israeli/word/kiddush-festival-eve-close-w19.mp3"
+  "plays": "audio/m/israeli/line/kiddush-festival-eve-close.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-eve-close-w19.mp3",
@@ -93294,7 +93424,7 @@
   "phonetic": "atah",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-close",
-  "plays": "audio/f/israeli/word/kiddush-festival-eve-close-w19.mp3"
+  "plays": "audio/f/israeli/line/kiddush-festival-eve-close.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-eve-close-w20.mp3",
@@ -93309,7 +93439,7 @@
   "phonetic": "adonai",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-close",
-  "plays": "audio/m/israeli/word/kiddush-festival-eve-close-w20.mp3"
+  "plays": "audio/m/israeli/line/kiddush-festival-eve-close.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-eve-close-w20.mp3",
@@ -93324,7 +93454,7 @@
   "phonetic": "adonai",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-close",
-  "plays": "audio/f/israeli/word/kiddush-festival-eve-close-w20.mp3"
+  "plays": "audio/f/israeli/line/kiddush-festival-eve-close.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-eve-close-w21.mp3",
@@ -93339,7 +93469,7 @@
   "phonetic": "mekadesh",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-close",
-  "plays": "audio/m/israeli/word/kiddush-festival-eve-close-w21.mp3"
+  "plays": "audio/m/israeli/line/kiddush-festival-eve-close.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-eve-close-w21.mp3",
@@ -93354,7 +93484,7 @@
   "phonetic": "mekadesh",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-close",
-  "plays": "audio/f/israeli/word/kiddush-festival-eve-close-w21.mp3"
+  "plays": "audio/f/israeli/line/kiddush-festival-eve-close.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-eve-close-w22.mp3",
@@ -93369,7 +93499,7 @@
   "phonetic": "yisra'el",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-close",
-  "plays": "audio/m/israeli/word/kiddush-festival-eve-close-w22.mp3"
+  "plays": "audio/m/israeli/line/kiddush-festival-eve-close.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-eve-close-w22.mp3",
@@ -93384,7 +93514,7 @@
   "phonetic": "yisra'el",
   "english": "",
   "aliasOf": "line/kiddush-festival-eve-close",
-  "plays": "audio/f/israeli/word/kiddush-festival-eve-close-w22.mp3"
+  "plays": "audio/f/israeli/line/kiddush-festival-eve-close.mp3"
  },
  {
   "path": "audio/m/sephardi/word/kiddush-festival-eve-close-w23.mp3",
@@ -93393,12 +93523,13 @@
   "kind": "word",
   "id": "kiddush-festival-eve-close-w23",
   "text": "וְהַזְּמַנִּים׃",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "vehazemanim",
   "english": "",
-  "aliasOf": "line/kiddush-festival-eve-close"
+  "aliasOf": "line/kiddush-festival-eve-close",
+  "plays": "audio/m/israeli/line/kiddush-festival-eve-close.mp3"
  },
  {
   "path": "audio/f/sephardi/word/kiddush-festival-eve-close-w23.mp3",
@@ -93407,12 +93538,13 @@
   "kind": "word",
   "id": "kiddush-festival-eve-close-w23",
   "text": "וְהַזְּמַנִּים׃",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "vehazemanim",
   "english": "",
-  "aliasOf": "line/kiddush-festival-eve-close"
+  "aliasOf": "line/kiddush-festival-eve-close",
+  "plays": "audio/f/israeli/line/kiddush-festival-eve-close.mp3"
  },
  {
   "path": "audio/m/sephardi/word/leshev-basukkah-w1.mp3",
@@ -93427,7 +93559,7 @@
   "phonetic": "barukh",
   "english": "",
   "aliasOf": "line/leshev-basukkah",
-  "plays": "audio/m/israeli/word/leshev-basukkah-w1.mp3"
+  "plays": "audio/m/israeli/line/leshev-basukkah.mp3"
  },
  {
   "path": "audio/f/sephardi/word/leshev-basukkah-w1.mp3",
@@ -93442,7 +93574,7 @@
   "phonetic": "barukh",
   "english": "",
   "aliasOf": "line/leshev-basukkah",
-  "plays": "audio/f/israeli/word/leshev-basukkah-w1.mp3"
+  "plays": "audio/f/israeli/line/leshev-basukkah.mp3"
  },
  {
   "path": "audio/m/sephardi/word/leshev-basukkah-w2.mp3",
@@ -93457,7 +93589,7 @@
   "phonetic": "atah",
   "english": "",
   "aliasOf": "line/leshev-basukkah",
-  "plays": "audio/m/israeli/word/leshev-basukkah-w2.mp3"
+  "plays": "audio/m/israeli/line/leshev-basukkah.mp3"
  },
  {
   "path": "audio/f/sephardi/word/leshev-basukkah-w2.mp3",
@@ -93472,7 +93604,7 @@
   "phonetic": "atah",
   "english": "",
   "aliasOf": "line/leshev-basukkah",
-  "plays": "audio/f/israeli/word/leshev-basukkah-w2.mp3"
+  "plays": "audio/f/israeli/line/leshev-basukkah.mp3"
  },
  {
   "path": "audio/m/sephardi/word/leshev-basukkah-w3.mp3",
@@ -93487,7 +93619,7 @@
   "phonetic": "adonai",
   "english": "",
   "aliasOf": "line/leshev-basukkah",
-  "plays": "audio/m/israeli/word/leshev-basukkah-w3.mp3"
+  "plays": "audio/m/israeli/line/leshev-basukkah.mp3"
  },
  {
   "path": "audio/f/sephardi/word/leshev-basukkah-w3.mp3",
@@ -93502,7 +93634,7 @@
   "phonetic": "adonai",
   "english": "",
   "aliasOf": "line/leshev-basukkah",
-  "plays": "audio/f/israeli/word/leshev-basukkah-w3.mp3"
+  "plays": "audio/f/israeli/line/leshev-basukkah.mp3"
  },
  {
   "path": "audio/m/sephardi/word/leshev-basukkah-w4.mp3",
@@ -93517,7 +93649,7 @@
   "phonetic": "eloheinu",
   "english": "",
   "aliasOf": "line/leshev-basukkah",
-  "plays": "audio/m/israeli/word/leshev-basukkah-w4.mp3"
+  "plays": "audio/m/israeli/line/leshev-basukkah.mp3"
  },
  {
   "path": "audio/f/sephardi/word/leshev-basukkah-w4.mp3",
@@ -93532,7 +93664,7 @@
   "phonetic": "eloheinu",
   "english": "",
   "aliasOf": "line/leshev-basukkah",
-  "plays": "audio/f/israeli/word/leshev-basukkah-w4.mp3"
+  "plays": "audio/f/israeli/line/leshev-basukkah.mp3"
  },
  {
   "path": "audio/m/sephardi/word/leshev-basukkah-w5.mp3",
@@ -93547,7 +93679,7 @@
   "phonetic": "melekh",
   "english": "",
   "aliasOf": "line/leshev-basukkah",
-  "plays": "audio/m/israeli/word/leshev-basukkah-w5.mp3"
+  "plays": "audio/m/israeli/line/leshev-basukkah.mp3"
  },
  {
   "path": "audio/f/sephardi/word/leshev-basukkah-w5.mp3",
@@ -93562,7 +93694,7 @@
   "phonetic": "melekh",
   "english": "",
   "aliasOf": "line/leshev-basukkah",
-  "plays": "audio/f/israeli/word/leshev-basukkah-w5.mp3"
+  "plays": "audio/f/israeli/line/leshev-basukkah.mp3"
  },
  {
   "path": "audio/m/sephardi/word/leshev-basukkah-w6.mp3",
@@ -93577,7 +93709,7 @@
   "phonetic": "ha'olam",
   "english": "",
   "aliasOf": "line/leshev-basukkah",
-  "plays": "audio/m/israeli/word/leshev-basukkah-w6.mp3"
+  "plays": "audio/m/israeli/line/leshev-basukkah.mp3"
  },
  {
   "path": "audio/f/sephardi/word/leshev-basukkah-w6.mp3",
@@ -93592,7 +93724,7 @@
   "phonetic": "ha'olam",
   "english": "",
   "aliasOf": "line/leshev-basukkah",
-  "plays": "audio/f/israeli/word/leshev-basukkah-w6.mp3"
+  "plays": "audio/f/israeli/line/leshev-basukkah.mp3"
  },
  {
   "path": "audio/m/sephardi/word/leshev-basukkah-w7.mp3",
@@ -93607,7 +93739,7 @@
   "phonetic": "asher",
   "english": "",
   "aliasOf": "line/leshev-basukkah",
-  "plays": "audio/m/israeli/word/leshev-basukkah-w7.mp3"
+  "plays": "audio/m/israeli/line/leshev-basukkah.mp3"
  },
  {
   "path": "audio/f/sephardi/word/leshev-basukkah-w7.mp3",
@@ -93622,7 +93754,7 @@
   "phonetic": "asher",
   "english": "",
   "aliasOf": "line/leshev-basukkah",
-  "plays": "audio/f/israeli/word/leshev-basukkah-w7.mp3"
+  "plays": "audio/f/israeli/line/leshev-basukkah.mp3"
  },
  {
   "path": "audio/m/sephardi/word/leshev-basukkah-w8.mp3",
@@ -93637,7 +93769,7 @@
   "phonetic": "kideshanu",
   "english": "",
   "aliasOf": "line/leshev-basukkah",
-  "plays": "audio/m/israeli/word/leshev-basukkah-w8.mp3"
+  "plays": "audio/m/israeli/line/leshev-basukkah.mp3"
  },
  {
   "path": "audio/f/sephardi/word/leshev-basukkah-w8.mp3",
@@ -93652,7 +93784,7 @@
   "phonetic": "kideshanu",
   "english": "",
   "aliasOf": "line/leshev-basukkah",
-  "plays": "audio/f/israeli/word/leshev-basukkah-w8.mp3"
+  "plays": "audio/f/israeli/line/leshev-basukkah.mp3"
  },
  {
   "path": "audio/m/sephardi/word/leshev-basukkah-w9.mp3",
@@ -93667,7 +93799,7 @@
   "phonetic": "bemitzvotav",
   "english": "",
   "aliasOf": "line/leshev-basukkah",
-  "plays": "audio/m/israeli/word/leshev-basukkah-w9.mp3"
+  "plays": "audio/m/israeli/line/leshev-basukkah.mp3"
  },
  {
   "path": "audio/f/sephardi/word/leshev-basukkah-w9.mp3",
@@ -93682,7 +93814,7 @@
   "phonetic": "bemitzvotav",
   "english": "",
   "aliasOf": "line/leshev-basukkah",
-  "plays": "audio/f/israeli/word/leshev-basukkah-w9.mp3"
+  "plays": "audio/f/israeli/line/leshev-basukkah.mp3"
  },
  {
   "path": "audio/m/sephardi/word/leshev-basukkah-w10.mp3",
@@ -93697,7 +93829,7 @@
   "phonetic": "vetzivanu",
   "english": "",
   "aliasOf": "line/leshev-basukkah",
-  "plays": "audio/m/israeli/word/leshev-basukkah-w10.mp3"
+  "plays": "audio/m/israeli/line/leshev-basukkah.mp3"
  },
  {
   "path": "audio/f/sephardi/word/leshev-basukkah-w10.mp3",
@@ -93712,7 +93844,7 @@
   "phonetic": "vetzivanu",
   "english": "",
   "aliasOf": "line/leshev-basukkah",
-  "plays": "audio/f/israeli/word/leshev-basukkah-w10.mp3"
+  "plays": "audio/f/israeli/line/leshev-basukkah.mp3"
  },
  {
   "path": "audio/m/sephardi/word/leshev-basukkah-w11.mp3",
@@ -93721,12 +93853,13 @@
   "kind": "word",
   "id": "leshev-basukkah-w11",
   "text": "לֵישֵׁב",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "leishev",
   "english": "",
-  "aliasOf": "line/leshev-basukkah"
+  "aliasOf": "line/leshev-basukkah",
+  "plays": "audio/m/israeli/line/leshev-basukkah.mp3"
  },
  {
   "path": "audio/f/sephardi/word/leshev-basukkah-w11.mp3",
@@ -93735,12 +93868,13 @@
   "kind": "word",
   "id": "leshev-basukkah-w11",
   "text": "לֵישֵׁב",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "leishev",
   "english": "",
-  "aliasOf": "line/leshev-basukkah"
+  "aliasOf": "line/leshev-basukkah",
+  "plays": "audio/f/israeli/line/leshev-basukkah.mp3"
  },
  {
   "path": "audio/m/sephardi/word/leshev-basukkah-w12.mp3",
@@ -93749,12 +93883,13 @@
   "kind": "word",
   "id": "leshev-basukkah-w12",
   "text": "בַּסֻּכָּה׃",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "basukah",
   "english": "",
-  "aliasOf": "line/leshev-basukkah"
+  "aliasOf": "line/leshev-basukkah",
+  "plays": "audio/m/israeli/line/leshev-basukkah.mp3"
  },
  {
   "path": "audio/f/sephardi/word/leshev-basukkah-w12.mp3",
@@ -93763,12 +93898,13 @@
   "kind": "word",
   "id": "leshev-basukkah-w12",
   "text": "בַּסֻּכָּה׃",
-  "status": "missing",
-  "source": "none",
+  "status": "plays-israeli",
+  "source": "israeli-clip",
   "group": "prayer-word",
   "phonetic": "basukah",
   "english": "",
-  "aliasOf": "line/leshev-basukkah"
+  "aliasOf": "line/leshev-basukkah",
+  "plays": "audio/f/israeli/line/leshev-basukkah.mp3"
  },
  {
   "path": "audio/m/sephardi/word/h1f02450d.mp3",

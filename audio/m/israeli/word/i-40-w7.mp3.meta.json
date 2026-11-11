@@ -1,13 +1,27 @@
 {
  "status": "tts",
- "source": "paid-cloud",
- "engine": "google-cloud-tts",
+ "source": "tts:google",
+ "engine": "google",
  "voiceId": "he-IL-Wavenet-B",
  "tradition": "israeli",
- "inputText": "מִפָּה",
- "inputSha256": "29ad9f274d34936194d51aeb21cbc6655d2bb49826099f5333610daaa21771ec",
- "ingestedAt": null,
+ "inputText": "מַפָּה",
+ "inputSha256": "f5d8a597ced00122bd22bfb1090b4de532bfcf2e56e36e7362fdff89af113c6e",
+ "ingestedAt": "2026-11-11T23:16:26.283Z",
  "licence": "customer-owned",
- "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
- "inputTextKind": "hebrew"
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-11T23:16:26.283Z",
+ "redistributionCleared": false,
+ "spokenText": "מַפָּה",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [],
+  "google": {
+   "heard": "מפה",
+   "acc": 1.0,
+   "issues": []
+  },
+  "reviewersFailing": 0
+ }
 }

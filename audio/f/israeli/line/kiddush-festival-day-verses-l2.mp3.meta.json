@@ -1,0 +1,27 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Chirp3-HD-Kore",
+ "tradition": "israeli",
+ "inputText": "וַיְדַבֵּר מֹשֶׁה אֶת־מֹעֲדֵי אֲדֹנָי אֶל־בְּנֵי יִשְׂרָאֵל׃",
+ "inputSha256": "2d8324c3fb2e98c6415ba9823bf169444c773f07888d99c7434aba7065e6300a",
+ "ingestedAt": "2026-11-11T23:16:01.964Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-11T23:16:01.964Z",
+ "redistributionCleared": false,
+ "spokenText": "וַיְדַבֵּר מֹשֶׁה אֶת מֹעֲדֵי אֲדֹנָי אֶל בְּנֵי יִשְׂרָאֵל",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [],
+  "google": {
+   "heard": "וידבר משה את מועדי אדוני אל בני ישראל",
+   "acc": 1.0,
+   "issues": []
+  },
+  "reviewersFailing": 0
+ }
+}

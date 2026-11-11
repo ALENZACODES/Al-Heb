@@ -1,0 +1,29 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "israeli",
+ "inputText": "הִגִּישׁ",
+ "inputSha256": "c48f6646482eb51b09a135a893a9fda85e2b936159901d8f531c4445c32d777b",
+ "ingestedAt": "2026-11-11T23:24:38.782Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-11T23:24:38.782Z",
+ "redistributionCleared": false,
+ "spokenText": "הִגִּישׁ",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [],
+  "google": {
+   "heard": "קדיש",
+   "acc": 0.0,
+   "issues": [
+    "הִגִּישׁ"
+   ]
+  },
+  "reviewersFailing": 1
+ }
+}

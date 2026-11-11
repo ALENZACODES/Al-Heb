@@ -3,7 +3,7 @@ Run as a GitHub Actions matrix job (.github/workflows/fill-clips.yml); needs GOO
 
 Each job row: {"path", "text", "voice": "m"|"f", "family": "wavenet"|"chirp", "mode": "new"|"replace"}.
   new      the row has no clip. Takes are made in order (the row's family at normal pace, then words apart at 0.9, then the
-           other family) until one passes; the best-heard take is written either way. A take "fails" a reviewer when that
+           other family; a prayer line stays in Chirp 3 HD: normal, words apart at 0.9, then 0.85) until one passes; the best-heard take is written either way. A take "fails" a reviewer when that
            reviewer hears a word off: the sound review (phoneme_review.py) has a weak word, the word check (scan_lines.py)
            has an issue, or Google Speech-to-Text (review3_shard.py) has an issue. A clip that still fails 2 of the 3 is
            listed with "held": true, for data/lab/clip-holds.json, so no screen plays it before a person listens.
@@ -65,6 +65,9 @@ def takes(row, text):
     apart = ', '.join(text.replace('.', '').split()) + '.'
     if row['mode'] == 'replace':
         return [('chirp', VOICES[v]['chirp'], text, 1.0)]
+    if '/line/' in row['path'] or '/prayer/' in row['path']:   # prayer lines: Chirp 3 HD only (owner rule, 7 November 2026)
+        return [('chirp', VOICES[v]['chirp'], text, 1.0), ('chirp-apart', VOICES[v]['chirp'], apart, 0.9),
+                ('chirp-0.85', VOICES[v]['chirp'], text, 0.85)]
     out = [(fam, VOICES[v][fam], text, 1.0)]
     if len(text.split()) > 1:
         out.append((fam + '-apart', VOICES[v][fam], apart, 0.9))

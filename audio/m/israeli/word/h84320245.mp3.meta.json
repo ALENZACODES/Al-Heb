@@ -1,0 +1,29 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "israeli",
+ "inputText": "הוּרַד",
+ "inputSha256": "5ed28a19373f0258b364bd760418d1987d873d1172112de225ae16cee17ef6c8",
+ "ingestedAt": "2026-11-11T23:21:45.325Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-11T23:21:45.325Z",
+ "redistributionCleared": false,
+ "spokenText": "הוּרַד",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [],
+  "google": {
+   "heard": "פורד",
+   "acc": 0.0,
+   "issues": [
+    "הוּרַד"
+   ]
+  },
+  "reviewersFailing": 1
+ }
+}

@@ -1,0 +1,29 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "israeli",
+ "inputText": "קוּר",
+ "inputSha256": "6c64e83b5795d451384c92cf8ff849cee6fb6727c7d87c8c6e268e63a4d61b56",
+ "ingestedAt": "2026-11-11T23:17:30.667Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-11T23:17:30.667Z",
+ "redistributionCleared": false,
+ "spokenText": "קוּר",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [],
+  "google": {
+   "heard": "‏car",
+   "acc": 0.0,
+   "issues": [
+    "קוּר"
+   ]
+  },
+  "reviewersFailing": 1
+ }
+}

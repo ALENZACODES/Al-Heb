@@ -1,13 +1,27 @@
 {
  "status": "tts",
- "source": "paid-cloud",
- "engine": "google-cloud-tts",
+ "source": "tts:google",
+ "engine": "google",
  "voiceId": "he-IL-Wavenet-A",
  "tradition": "israeli",
- "inputText": "קוֹרֵס",
- "inputSha256": "ebd799f7b2392e2c3ef172830abbbce6261da115bbd3875f56bc068ec80ff3b8",
- "ingestedAt": null,
+ "inputText": "קוּרְס",
+ "inputSha256": "be2cffe9f6501768deb0c84770d9135db750ff9e269240904959e6af08702189",
+ "ingestedAt": "2026-11-11T23:15:53.532Z",
  "licence": "customer-owned",
- "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
- "inputTextKind": "hebrew"
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-11T23:15:53.532Z",
+ "redistributionCleared": false,
+ "spokenText": "קוּרְס",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [],
+  "google": {
+   "heard": "קורס",
+   "acc": 1.0,
+   "issues": []
+  },
+  "reviewersFailing": 0
+ }
 }

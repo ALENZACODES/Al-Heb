@@ -1,0 +1,27 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "israeli",
+ "inputText": "אֵלִי אַתָּה וְאוֹדֶךָּ אֱלֹהַי אֲרוֹמְמֶךָּ׃",
+ "inputSha256": "0d0842dfe76b6433bdb9ee093b93ab496e2764fc802c3c88c6222ae6e0511537",
+ "ingestedAt": "2026-11-11T23:15:43.177Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-11T23:15:43.177Z",
+ "redistributionCleared": false,
+ "spokenText": "אֵלִי אַתָּה וְאוֹדֶךָּ אֱלֹהַי אֲרוֹמְמֶךָּ",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [],
+  "google": {
+   "heard": "אלי אתה ואודך אלוהי ארוממך",
+   "acc": 1.0,
+   "issues": []
+  },
+  "reviewersFailing": 0
+ }
+}

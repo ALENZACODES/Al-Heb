@@ -1,0 +1,29 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Chirp3-HD-Charon",
+ "tradition": "israeli",
+ "inputText": "תָּקַע",
+ "inputSha256": "c11a63cb36a69e48a84a57ad6a146e3218eb9d5d3846d11b287275e45025f192",
+ "ingestedAt": "2026-11-11T23:20:46.889Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-11T23:20:46.889Z",
+ "redistributionCleared": false,
+ "spokenText": "תָּקַע",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [],
+  "google": {
+   "heard": "דקה",
+   "acc": 0.0,
+   "issues": [
+    "תָּקַע"
+   ]
+  },
+  "reviewersFailing": 1
+ }
+}

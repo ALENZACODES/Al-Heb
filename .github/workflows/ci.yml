@@ -29,11 +29,11 @@ jobs:
       - name: System tools used by some unit tests (ffmpeg, pdfinfo, rsvg-convert, tesseract + Hebrew data); required, so a failed install fails the job
         run: |
           # The runner's mirror sometimes cannot be resolved for a minute or two; try again before failing the job.
-          for try in 1 2 3 4; do
-            sudo apt-get -o Acquire::Retries=5 update -y \
-              && sudo apt-get -o Acquire::Retries=5 install -y --no-install-recommends ffmpeg poppler-utils librsvg2-bin tesseract-ocr tesseract-ocr-heb \
+          for try in 1 2 3; do
+            sudo apt-get -o Acquire::Retries=2 -o Acquire::http::Timeout=20 -o Acquire::https::Timeout=20 update -y \
+              && sudo apt-get -o Acquire::Retries=2 -o Acquire::http::Timeout=20 -o Acquire::https::Timeout=20 install -y --no-install-recommends ffmpeg poppler-utils librsvg2-bin tesseract-ocr tesseract-ocr-heb \
               && break
-            [ "$try" = 4 ] && exit 1
+            [ "$try" = 3 ] && exit 1
             sleep $((try * 20))
           done
       - name: Python deps (segno pinned for the book QR test; Pillow, pypdf, numpy, OpenCV for the image, PDF and QR-decode tests)
@@ -84,9 +84,9 @@ jobs:
         run: |
           npm install --no-save --no-package-lock playwright@1.63.0
           # Same mirror trouble as above: try the browser and its libraries again before failing the job.
-          for try in 1 2 3 4; do
+          for try in 1 2 3; do
             npx playwright install --with-deps chromium && break
-            [ "$try" = 4 ] && exit 1
+            [ "$try" = 3 ] && exit 1
             sleep $((try * 20))
           done
       - name: axe-core for the a11y tests (lockfile tracked, node_modules gitignored)

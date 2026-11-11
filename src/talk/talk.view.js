@@ -29,7 +29,7 @@ export const NO_LINE = 'Aleph does not have that line yet. Try fewer words, or o
 export const HELD_LINE = 'A sacred Name is in that line. Aleph shows it as ה׳, does not speak it and does not reword it, so the line is left as it is.';
 export const NAME_NOT_READ = 'This line shows the Name as ה׳, so it is not read aloud.';
 export const PACK_LEAD = 'For lines Aleph has not stored, add a language pack. It translates on this device and sends nothing anywhere. A pack is a large download, so use Wi-Fi.';
-export const PACK_OFFER = 'Aleph has no stored line for that. A language pack can translate it on this device.';
+export const PACK_OFFER = 'Aleph has no stored line for that. A language pack can translate it on this device: press the button below.';
 export const PACK_CELLULAR = 'You seem to be on mobile data. Wait for Wi-Fi if your plan is limited.';
 export const PACK_SAVER = 'Data saving is on in this browser. Wait for Wi-Fi, or turn it off for this download.';
 export const PACK_FULL = 'This device reports too little free space for the pack.';
@@ -72,6 +72,10 @@ const CSS = `
 .talk-pack h2{margin:0;font-size:1.05rem}
 .talk-pack-row{display:flex;gap:.6rem;flex-wrap:wrap;align-items:center}
 .talk-pack-row progress{flex:1 1 10rem;min-width:8rem;height:.8rem}
+.talk-pack-now{display:flex;flex-direction:column;align-items:flex-start;gap:.4rem;margin-block:.5rem}
+.talk-pack-now .btn{white-space:normal;text-align:start;min-block-size:44px}
+.talk-pack-now progress{inline-size:100%;height:.8rem}
+.talk-pack-now p{margin:0}
 `;
 function injectCss() {
   try {
@@ -121,7 +125,13 @@ export function mount(root, ctx = {}) {
   const btnSay = h('button', { type: 'button', class: 'btn secondary', disabled: true, onclick: () => speak(true) }, 'Say It');
   const btnCopy = h('button', { type: 'button', class: 'btn secondary', disabled: true, onclick: copy }, 'Copy');
   const said = h('span', { class: 'muted talk-small', role: 'status' });
-  const paneMe = h('div', { class: 'talk-pane talk-pane-me' }, srcEl, trEl, badge, note, variants, h('div', { class: 'row' }, btnSay, btnCopy), said);
+  // When a line needs a language pack that is not on this device, the button to get it sits right under the answer (it used to be
+  // only in the Language Packs box further down the page, so a line with no stored answer looked like a dead end).
+  const packNow = /** @type {HTMLButtonElement} */ (h('button', { type: 'button', class: 'btn', hidden: true, 'data-pack-now': '', onclick: () => { const d = packNow.dataset.packNow; if (d) getPack(d); } }, 'Translate It With a Language Pack'));
+  const packNowBar = /** @type {HTMLProgressElement} */ (h('progress', { max: 100, value: 0, hidden: true, 'aria-label': 'Language pack download' }));
+  const packNowNote = h('p', { class: 'muted talk-small', role: 'status', 'aria-live': 'polite' });
+  const packNowBox = h('div', { class: 'talk-pack-now', hidden: true }, packNow, packNowBar, packNowNote);
+  const paneMe = h('div', { class: 'talk-pane talk-pane-me' }, srcEl, trEl, badge, note, packNowBox, variants, h('div', { class: 'row' }, btnSay, btnCopy), said);
   const themTr = h('div', { class: 'talk-translation' });
   const paneThem = h('div', { class: 'talk-pane talk-pane-them', hidden: true, 'aria-hidden': 'true' }, themTr);
   const face = h('div', { class: 'talk-face' }, paneThem, paneMe);
@@ -140,7 +150,7 @@ export function mount(root, ctx = {}) {
   // Language packs: one row per direction (size, a button, progress while it downloads).
   const pack = ctx.pack || (typeof Worker === 'function' && typeof caches !== 'undefined' ? sharedPack() : null);
   /** @type {any} */ let terms = null;
-  /** @type {Record<string, {row:HTMLElement, text:HTMLElement, btn:HTMLButtonElement, bar:HTMLProgressElement, busy:boolean, stop:AbortController|null}>} */
+  /** @type {Record<string, {row:HTMLElement, text:HTMLElement, btn:HTMLButtonElement, bar:HTMLProgressElement, busy:boolean, stop:AbortController|null, missing?:number}>} */
   const packRows = {};
   const packNote = h('p', { class: 'muted talk-small', role: 'status', 'aria-live': 'polite' });
   const packRemove = h('button', { type: 'button', class: 'btn secondary', hidden: true, onclick: removePack }, 'Remove The Packs From This Device');
@@ -185,8 +195,10 @@ export function mount(root, ctx = {}) {
   const tryList = h('ul', { class: 'talk-list' });
   tryPick.addEventListener('change', paintExamples);
 
+  // The box to type in comes first, right under the greeting, and the answer under it: on a phone the old order put the
+  // box a full screen down, below the introduction, the direction buttons and the empty answer pane.
   root.replaceChildren(h('section', { class: 'talk-screen', 'aria-labelledby': 'view-title' },
-    title, hero, lead, status, langs, face, mics, err, input, listenNote, suggestTitle, suggest, packBox, toggles, tryTitle, tryPick, tryList, histTitle, hist, clear));
+    title, hero, status, input, err, mics, listenNote, face, suggestTitle, suggest, langs, lead, packBox, toggles, tryTitle, tryPick, tryList, histTitle, hist, clear));
 
   function save() { write(SETTINGS_KEY, settings); }
 
@@ -196,7 +208,9 @@ export function mount(root, ctx = {}) {
     paneThem.hidden = !settings.faceToFace;
   }
 
-  const shownHebrew = (r) => (settings.nikkud && r.pointed ? r.pointed : stripNikkud(r.translation));
+  // A lone dictionary word is always shown with its vowel marks: without them a short spelling can read as a different word
+  // (vinegar came out looking like the word for leavened food). Other lines follow the learner's setting.
+  const shownHebrew = (r) => ((settings.nikkud || r.method === 'word') && r.pointed ? r.pointed : stripNikkud(r.translation));
   const setText = (el, text) => { const he = hasHebrew(text); el.textContent = text; el.dir = he ? 'rtl' : 'ltr'; el.lang = he ? 'he' : 'en'; };
 
   function lineButton(item, label) {
@@ -223,12 +237,33 @@ export function mount(root, ctx = {}) {
           const part = st.have > 0 && st.missing > 0;
           p.btn.textContent = part ? `Carry On With ${DIRECTION_LABEL[d]}` : `Get ${DIRECTION_LABEL[d]}`;
           p.text.textContent = `${DIRECTION_LABEL[d]}: about ${megabytes(st.missing)} MB to download.`;
+          p.missing = st.missing;
           if (st.have > 0) any = true;
         }
       } catch { p.text.textContent = `${DIRECTION_LABEL[d]}: the pack list could not be read. Check your connection.`; p.btn.disabled = false; }
     }
     packRemove.hidden = !any;
     packSpeed.hidden = !DIRECTIONS.some((d) => pack.ready(d));
+    paintPackNow();
+  }
+
+  /** The button under the answer: shown only while the line on screen needs a pack this device does not have. */
+  function paintPackNow() {
+    const d = last && !last.held && last.needsPack && pack ? last.needsPack : '';
+    const p = d ? packRows[d] : null;
+    packNowBox.hidden = !d;
+    packNow.hidden = !d;
+    if (!d || !p) { packNow.dataset.packNow = ''; packNowBar.hidden = true; packNowNote.textContent = ''; return; }
+    packNow.dataset.packNow = d;
+    if (!p.busy) {
+      packNowBar.hidden = true;
+      packNow.textContent = `Translate It: Get the ${DIRECTION_LABEL[d]} Pack${p.missing ? ` (About ${megabytes(p.missing)} MB, One Time)` : ''}`;
+    }
+  }
+  /** A pack message, said in the Language Packs box and, when the line on screen is waiting for this pack, under the answer too. */
+  function sayPack(d, msg) {
+    packNote.textContent = msg;
+    if (packNow.dataset.packNow === d) packNowNote.textContent = msg;
   }
 
   /** Times a few lines each way the pack can run on this device and says which one is in use. */
@@ -264,32 +299,36 @@ export function mount(root, ctx = {}) {
     if (!pack) return;
     const p = packRows[d];
     if (p.busy) { p.stop?.abort(); return; }
-    packNote.textContent = '';
+    sayPack(d, '');
+    const inline = () => packNow.dataset.packNow === d; // the line on screen is waiting for this pack
     try {
       const st = await pack.state(d);
-      if (await tooFull(st.missing)) { packNote.textContent = PACK_FULL; return; }
+      if (await tooFull(st.missing)) { sayPack(d, PACK_FULL); return; }
       const kind = connectionKind();
-      if (kind && !p.btn.dataset.asked) { p.btn.dataset.asked = '1'; packNote.textContent = `${kind === 'saver' ? PACK_SAVER : PACK_CELLULAR} Press the button again to download about ${megabytes(st.missing)} MB now.`; return; }
+      if (kind && !p.btn.dataset.asked) { p.btn.dataset.asked = '1'; sayPack(d, `${kind === 'saver' ? PACK_SAVER : PACK_CELLULAR} Press the button again to download about ${megabytes(st.missing)} MB now.`); return; }
       p.busy = true; p.stop = new AbortController();
       p.bar.hidden = false; p.bar.value = 0; p.btn.textContent = 'Stop';
+      if (inline()) { packNowBar.hidden = false; packNowBar.value = 0; packNow.textContent = 'Stop'; }
       let shown = -1;
       await pack.download(d, { signal: p.stop.signal, onProgress: (have, total) => {
         if (!alive) return;
         const pct = total ? Math.floor((100 * have) / total) : 0;
         if (pct === shown) return; shown = pct;
         p.bar.value = pct; p.text.textContent = `${DIRECTION_LABEL[d]}: ${megabytes(have)} of ${megabytes(total)} MB.`;
+        if (inline()) { packNowBar.hidden = false; packNowBar.value = pct; packNow.textContent = 'Stop'; packNowNote.textContent = `Getting the pack: ${megabytes(have)} of ${megabytes(total)} MB. Your line is translated as soon as it is here.`; }
       } });
       if (!alive) return;
       p.text.textContent = `${DIRECTION_LABEL[d]}: getting it ready…`;
+      if (inline()) packNowNote.textContent = 'Getting the pack ready…';
       const ok = await pack.load(d);
       if (!alive) return;
       p.busy = false; p.stop = null;
-      packNote.textContent = ok ? `${DIRECTION_LABEL[d]} is ready. It works offline from now on.` : PACK_CANNOT_RUN;
+      sayPack(d, ok ? `${DIRECTION_LABEL[d]} is ready. It works offline from now on.` : PACK_CANNOT_RUN);
       await paintPack();
       if (ok && last && last.needsPack === d) run(last.source, last.direction);
     } catch (e) {
       p.busy = false; p.stop = null; p.bar.hidden = true;
-      if (alive) { packNote.textContent = /** @type {any} */ (e)?.message === 'no-storage' ? PACK_NONE : PACK_FAILED; paintPack(); }
+      if (alive) { sayPack(d, /** @type {any} */ (e)?.message === 'no-storage' ? PACK_NONE : PACK_FAILED); paintPack(); }
     }
   }
 
@@ -315,9 +354,11 @@ export function mount(root, ctx = {}) {
     const offer = !r.held && r.needsPack && pack ? PACK_OFFER : '';
     const msg = r.held ? HELD_LINE : (!r.ok ? (offer || NO_LINE) : [r.note || '', offer].filter(Boolean).join(' '));
     note.hidden = !msg; note.textContent = msg;
+    packNowNote.textContent = '';
+    paintPackNow();
     const vs = r.ok ? (r.variants || []) : [];
     variants.hidden = !vs.length;
-    variants.replaceChildren(...vs.map((v) => h('li', {}, h('span', { class: 'muted talk-small' }, `${v.label}: `), h('span', { lang: 'he', dir: 'rtl' }, v.text))));
+    variants.replaceChildren(...vs.map((v) => { const he = hasHebrew(v.text); return h('li', {}, h('span', { class: 'muted talk-small' }, `${v.label}: `), h('span', { lang: he ? 'he' : 'en', dir: he ? 'rtl' : 'ltr' }, v.text)); }));
     btnSay.disabled = !r.ok; btnCopy.disabled = !r.ok;
     said.textContent = '';
     const sug = !r.ok && !r.held ? (r.suggestions || []) : [];
@@ -347,6 +388,8 @@ export function mount(root, ctx = {}) {
       if (!alive || ticket !== runSeq) return;
     }
     show(r);
+    // the answer is under the box: bring it into view when part of it is off the screen (it does nothing when it is all in view)
+    try { paneMe.scrollIntoView?.({ block: 'nearest' }); } catch { /* an old browser: the learner scrolls */ }
     if (r.ok) {
       history = pushHistory(history, { id: uid(), ts: Date.now(), direction: r.direction, source: r.source, translation: r.translation });
       write(HISTORY_KEY, history);

@@ -6,7 +6,7 @@
   "beams": 2,
   "all": {
    "lines": 240,
-   "strict": 77.3,
+   "strict": 77.2,
    "accepted": 94.4,
    "exact": 197,
    "refused": 0
@@ -20,16 +20,16 @@
   },
   "he-en": {
    "lines": 120,
-   "strict": 69.9,
+   "strict": 69.7,
    "accepted": 90.8,
    "exact": 85,
    "refused": 0
   },
   "byMethod": {
-   "model": 229,
-   "pattern": 11
+   "model": 230,
+   "pattern": 10
   },
-  "secondsPerLine": 0.39
+  "secondsPerLine": 0.26
  },
  "rows": [
   {
@@ -1776,10 +1776,10 @@
    "id": "x-he-055",
    "direction": "he-en",
    "source": "אני רוצה להחליף את זה.",
-   "translation": "I want to change this",
+   "translation": "I want to replace it.",
    "ok": true,
-   "method": "pattern",
-   "strict": 0.8,
+   "method": "model",
+   "strict": 0.6,
    "accepted": 1
   },
   {

@@ -48,6 +48,8 @@ export async function runTalk({ direction = 'he-en', lines = null, timeout = 240
     await page.waitForFunction(() => /MB to download/.test(document.querySelector('.talk-pack')?.textContent || ''));
     const packText = await page.textContent('.talk-pack');
     const before = await ask(say[0]);
+    // the button to get the pack sits right under a line that needs it
+    const inlineOffer = await page.evaluate(() => { const b = document.querySelector('.talk-pane-me [data-pack-now]'); return b && !b.hidden && !b.closest('[hidden]') ? { text: b.textContent, pack: b.dataset.packNow } : null; });
     const packRequestsBefore = reqs.filter((u) => /\/assets\/vendor\/_(nmt|ort)\//.test(u) && !u.endsWith('manifest.json')).length;
     const progress = [];
     await page.exposeFunction('__seen', (t) => { progress.push(t); });
@@ -60,6 +62,7 @@ export async function runTalk({ direction = 'he-en', lines = null, timeout = 240
     const downloadMs = Date.now() - t0;
     const results = [];
     for (const l of say) { const t = Date.now(); results.push({ line: l, ...(await ask(l)), ms: Date.now() - t }); }
+    const inlineAfter = await page.evaluate(() => { const box = document.querySelector('.talk-pack-now'); return !!box && !box.hidden; });
     // with a slow software adapter accepted, wait for the background check to hand over to the graphics card, then ask again on it
     let onGpu = null;
     if (acceptSlowGpu) {
@@ -79,7 +82,7 @@ export async function runTalk({ direction = 'he-en', lines = null, timeout = 240
     const refetched = reqs.filter((u) => /\.p\d+\.bin/.test(u)).length - partsFetched;
     const again = await ask(say[0]);
     const origins = [...new Set(reqs.map((u) => new URL(u).origin))];
-    return { hostBase, fromHost: reqs.filter((u) => hostBase && u.startsWith(hostBase.replace('/_nmt/', '/'))).length, packText, before, packRequestsBefore, progress, packNote, downloadMs, results, onGpu, engine, speed, gpuFetched, cache, refetched, again, errors, posts, externalOrigins: origins.filter((o) => o !== base && !o.startsWith('blob:') && o !== 'null') };
+    return { inlineOffer, inlineAfter, hostBase, fromHost: reqs.filter((u) => hostBase && u.startsWith(hostBase.replace('/_nmt/', '/'))).length, packText, before, packRequestsBefore, progress, packNote, downloadMs, results, onGpu, engine, speed, gpuFetched, cache, refetched, again, errors, posts, externalOrigins: origins.filter((o) => o !== base && !o.startsWith('blob:') && o !== 'null') };
   } finally { await browser.close(); server.close(); host?.close(); }
 }
 

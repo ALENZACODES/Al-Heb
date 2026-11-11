@@ -9,16 +9,21 @@ let runTalk = null; let runCameraWithPack = null; let SOFTWARE_GPU = null;
 try { ({ runTalk, runCameraWithPack, SOFTWARE_GPU } = await import('../tools/talk/nmt/e2e-talk.mjs')); } catch { /* no playwright */ }
 
 test('e2e #/talk: nothing of the pack is fetched until asked; download with progress; a new line is translated; a reload finds the pack on the device', { skip: !runTalk, timeout: 400000 }, async () => {
-  const r = await runTalk({ direction: 'he-en' });
+  const r = await runTalk({ direction: 'he-en', lines: ['הכלב שלנו ברח אתמול.', 'איפה המעלית?', 'אנחנו מגיעים ב-9:15 ועוזבים ב-18:40.', 'אל תבכה. הכל יהיה בסדר.'] });
   assert.deepEqual(r.errors, []); assert.deepEqual(r.posts, []); assert.deepEqual(r.externalOrigins, []);
   assert.match(r.packText, /Hebrew to English: about \d+ MB to download/); assert.match(r.packText, /Wi-Fi/);
   assert.equal(r.packRequestsBefore, 0, 'no pack or runtime file before the learner asks');
   assert.equal(r.before.translation, ''); assert.match(r.before.note, /language pack can translate it/);
+  assert.deepEqual(r.inlineOffer && r.inlineOffer.pack, 'he-en', 'the button to get the pack is right under the line that needs it'); assert.match(r.inlineOffer.text, /Translate It: Get the Hebrew to English Pack \(About \d+ MB, One Time\)/);
+  assert.equal(r.inlineAfter, false, 'once the line is translated the button is gone');
   assert.ok(r.progress.length >= 5 && r.progress[r.progress.length - 1] === 100, 'the progress bar moved to 100');
   for (let i = 1; i < r.progress.length; i++) assert.ok(r.progress[i] >= r.progress[i - 1], 'progress never goes back');
   assert.match(r.packNote, /is ready\. It works offline/);
   assert.equal(r.results[0].badge, 'Translated on this device'); assert.match(r.results[0].translation, /dog/i); assert.match(r.results[0].note, /not from a checked line/);
   assert.equal(r.results[1].badge, 'Built from a sentence pattern', 'a line the stored lines hold still comes from them');
+  // the numbers typed come out as typed (the pack alone answers "6:40" for 18:40), and a line of two sentences keeps both
+  assert.match(r.results[2].translation, /9:15/); assert.match(r.results[2].translation, /18:40/); assert.doesNotMatch(r.results[2].note, /Check the numbers/);
+  assert.match(r.results[3].translation, /cry/i, 'the first sentence is not lost'); assert.match(r.results[3].translation, /\.\s+\S.*(okay|ok|fine|all right|alright)/i, 'and the second follows it');
   assert.ok(r.cache.names.includes('alef-talk-pack-v1')); assert.ok(r.cache.bytes > 80 * 1048576 && r.cache.bytes < 110 * 1048576);
   assert.equal(r.refetched, 0, 'after a reload no pack part is downloaded again');
   assert.equal(r.again.translation, r.results[0].translation);

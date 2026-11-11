@@ -69,6 +69,36 @@ export function applyTerms(out, source, direction, terms) {
 export function finishLine(out, source, direction, terms) {
   let s = String(out || '').replace(/^\s*[-–—]\s*/, '').replace(/^"+|"+$/g, '').replace(/\s+/g, ' ').trim();
   s = applyTerms(s, source, direction, terms);
-  if (direction === 'he-en' && s) s = s[0].toUpperCase() + s.slice(1);
+  s = matchEnding(s, source);
+  if (direction === 'he-en' && s) { s = sentenceCase(s, source, terms?.commonEnglish); s = s[0].toUpperCase() + s.slice(1); }
   return maskName(s);
+}
+
+const ENDS = /[.!?…]["”')\]]*$/;
+/**
+ * The model closes most lines with a full stop, also a bare word or a two-word phrase ("very good" came back as "טוב מאוד.").
+ * When the line as typed has no closing mark, a single full stop the model added is taken off again. A question mark, an
+ * exclamation mark and "..." are left alone: they carry meaning the reader wants.
+ * @param {string} out @param {string} source
+ */
+export function matchEnding(out, source) {
+  const src = String(source || '').trim();
+  if (!out || ENDS.test(src)) return out;
+  return /[^.]\.$/.test(out) ? out.slice(0, -1).trimEnd() : out;
+}
+
+/**
+ * Hebrew has no capital letters, and for a short phrase with no closing mark the model often answers in headline capitals
+ * ("מסובך מאוד" came back as "Very Complicated"). Words after the first are put back in lower case when `common` says they
+ * are ordinary English words; a word it does not know (a name, a place, a holiday) keeps its capital, and so does "I".
+ * Nothing is changed when the line as typed has a closing mark, or when no word list was given.
+ * @param {string} out @param {string} source @param {((word:string)=>boolean)|null|undefined} common
+ */
+export function sentenceCase(out, source, common) {
+  if (!out || typeof common !== 'function' || ENDS.test(String(source || '').trim())) return out;
+  const words = out.split(' ');
+  if (words.length < 2 || words.length > 6) return out;
+  const capped = (w) => /^(?:I|[A-Z][a-z']+)[,;:]?$/.test(w);
+  if (!words.every(capped)) return out; // a real sentence has lower-case words in it: leave it
+  return words.map((w, i) => (i > 0 && w !== 'I' && !/^I'/.test(w) && common(w.replace(/[,;:]$/, '').toLowerCase()) ? w.toLowerCase() : w)).join(' ');
 }

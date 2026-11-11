@@ -115,6 +115,9 @@ const ON_DEMAND_FILES = new Set([
   'src/curriculum/review.view.js', 'src/curriculum/loanwords.view.js', 'src/curriculum/spotit.view.js', 'src/curriculum/checkpoint.view.js', 'src/curriculum/dialogues.view.js', 'src/curriculum/ladder.view.js', 'src/curriculum/fade.view.js', 'src/curriculum/gender.view.js', 'src/curriculum/scaffold.view.js',
   // Speak screen engine (preview route /speak, 58 KB): imported only by speak.view.js, which the router loads lazily; fetched on first open and runtime-cached (keeps first install under 3.95 MiB after the tracing pointer fix).
   'src/speak/speak.js',
+  // Speaking score (word-by-word scoring from the browser recognizer) and the small check control used by the practical units' speaking cards:
+  // imported by speak.js and loaded by practical.view.js on first use, runtime-cached.
+  'src/speak/score.js', 'src/speak/check.js',
   // Talk screen (preview route /talk): route code and its on-device phrase engine, fetched on first open and runtime-cached (keeps first install under 3.95 MiB). Its sentence pairs are data/talk/.
   'src/talk/talk.view.js', 'src/talk/talk.model.js', 'src/talk/engine.js', 'src/talk/data.js', 'src/talk/speech.js',
   // Talk language pack code (tokenizer, decoding loop, downloader, worker): fetched with the Talk screen, runtime-cached. The packs themselves

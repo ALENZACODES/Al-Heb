@@ -535,6 +535,8 @@ self.ALEF_ON_DEMAND = [
  "src/shell/rimon-triggers.js",
  "src/shell/speak-english.js",
  "src/shell/torah-he-index.js",
+ "src/speak/check.js",
+ "src/speak/score.js",
  "src/speak/speak.js",
  "src/sprint/sprint.view.js",
  "src/synagogues/synagogues.view.js",

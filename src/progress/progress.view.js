@@ -1,4 +1,4 @@
-// Aleph Progress screen: what you can read now, today (streak, gentle goal, rest day), your path per goal, belts, weak spots.
+// Aleph Progress screen: what you can read now, today (streak, gentle goal, rest day), your path per goal, belts and ranks, weak spots.
 // Everything is computed offline from the store (see model.js). Nothing here is estimated: reading speed comes only from
 // the learner's own timed reads (#/timedread), which are self-reported, and is labelled so (see docs/progress/timed-read-spec.md).
 import { plain } from '../shell/plain-copy.js';
@@ -13,6 +13,7 @@ import { evaluateMilestones, milestoneRows } from './milestones.js';
 import { statModel } from '../shell/statbar.js';
 import { weekStripNode } from '../shell/weekstrip.js';
 import { DAILY_GOAL_KEY } from '../home/today.js';
+import { rankBadge } from '../curriculum/ranks.js';
 
 const CSS = `
 .pg { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--gap, 1rem); max-inline-size: 100%; overflow-wrap: anywhere; }
@@ -241,17 +242,24 @@ export async function mount(root, ctx) {
           m.status === 'next' ? h('span', {}, ' ', h('a', { href: m.href }, 'Go')) : null)))));
     }
 
-    // 4. belts
+    // 4. belts and ranks (Krav Maga style: White P0 .. Black E5). Earned only by finishing lessons, in course order.
     const belts = evaluateBelts(d, c);
-    const stateText = { earned: 'Earned', ready: 'Ready: only a check the app cannot make is left', current: 'Working on', later: 'Later' };
-    const timedBelts = belts.filter((b) => b.gates.some((g) => g.kind === 'timedRead'));
-    sections.push(h('section', { class: 'card', 'aria-labelledby': 'pg-h-belts' }, h('h2', { id: 'pg-h-belts' }, 'Belts'),
-      h('p', { class: 'small muted' }, `Belts are Aleph's own levels, named after colours, like in martial arts. A belt means you have met every letter and vowel sign in its texts and finished its lessons.${timedBelts.length ? ` The ${timedBelts.map((b) => b.name).join(' and ')} belt${timedBelts.length === 1 ? '' : 's'} also ask for timed read-alouds, which you time and mark yourself (self-reported, not measured by the app).` : ''}`),
-      ...belts.map((b) => h('details', { open: b.state === 'current' ? true : null }, h('summary', {}, `${b.name} belt: ${stateText[b.state]}`),
-        h('p', { class: 'small' }, b.gate),
-        h('ul', {}, ...b.gates.map((g) => h('li', { class: 'small', 'data-gate': g.kind }, `${g.label}: `, g.measurable ? (g.done ? 'met' : `${g.have} of ${g.need}`) : 'cannot be checked in the app yet',
-          g.note && g.measurable ? h('span', { class: 'muted' }, ` (${g.note})`) : null,
-          g.kind === 'timedRead' && !g.done && has('timedread') ? h('span', {}, ' ', h('a', { href: '#/timedread' }, 'Time a read')) : null)))))));
+    const stateText = { earned: 'Earned', current: 'Working on', later: 'Later' };
+    const top = [...belts].reverse().find((b) => b.state === 'earned'), cur = belts.find((b) => b.state === 'current');
+    const timedRanks = belts.filter((b) => b.checks.some((g) => g.kind === 'timedRead'));
+    const check = (g) => h('li', { class: 'small', 'data-gate': g.kind }, `${g.label}: `, g.measurable ? (g.done ? 'met' : `${g.have} of ${g.need}`) : 'cannot be checked in the app yet',
+      g.note && g.measurable ? h('span', { class: 'muted' }, ` (${g.note})`) : null,
+      g.kind === 'timedRead' && !g.done && has('timedread') ? h('span', {}, ' ', h('a', { href: '#/timedread' }, 'Time a read')) : null);
+    sections.push(h('section', { class: 'card', 'aria-labelledby': 'pg-h-belts' }, h('h2', { id: 'pg-h-belts' }, 'Belts and ranks'),
+      h('p', { class: 'small muted' }, 'Krav Maga style belts on the Reading and prayer track: White, Yellow, Orange, Green, Blue, Brown and Black, each with rank patches P (Practitioner), G (Graduate) and E (Expert). Each rank is a run of lessons in course order, and you earn it only by finishing those lessons, one rank after another. These are Aleph\'s own ranks, not a Krav Maga or outside grade. The Israel track has no belts; it uses Stage 1 to 3.'),
+      h('p', { class: 'pg-rank-now', role: 'status' }, 'Your rank: ', top ? rankBadge(h, top) : 'none yet', cur ? h('span', {}, ' · next: ', rankBadge(h, cur), ` (${cur.doneCount} of ${cur.total} lessons)`) : h('span', {}, ' · every rank earned')),
+      timedRanks.length ? h('p', { class: 'small muted' }, `The ${timedRanks.map((b) => b.label).join(' and ')} skill checks include timed read-alouds, which you time and mark yourself (self-reported, not measured by the app). They do not earn or hold back a rank.`) : null,
+      h('ol', { class: 'pg-ranks' }, ...belts.map((b) => h('li', { 'data-rank': b.id, 'data-state': b.state },
+        h('details', { open: b.state === 'current' ? true : null }, h('summary', {}, rankBadge(h, b), `: ${stateText[b.state]}`, h('span', { class: 'small muted' }, ` (lessons ${b.range}, ${b.doneCount} of ${b.total} done)`)),
+          h('p', { class: 'small' }, b.gate),
+          h('ul', {}, ...b.gates.map(check)),
+          b.checks.length ? h('p', { class: 'small muted' }, 'Skill checks for this range (information only):') : null,
+          b.checks.length ? h('ul', {}, ...b.checks.map(check)) : null))))));
 
     // 5. weak spots: up to 10, merged across sources, each with a plain-English next step
     const weak = weakReport(s, d, c, { max: 10, has });

@@ -36,7 +36,7 @@ function bar(done, total, label) {
 function lessonRow(l, done, hasIntermediate) {
   return el("li", { class: done ? "alef-path-item is-done" : "alef-path-item", "data-lesson": l.id },
     el("a", { href: lessonHref(l, hasIntermediate) }, ...mixed(l.title)),
-    el("span", { class: "alef-path-meta" }, [levelLabel(l.level), l.min ? `about ${l.min} min` : ""].filter(Boolean).join(" · ")),
+    el("span", { class: "alef-path-meta" }, [levelLabel(l.level, l.rank ? { label: l.rank } : null), l.min ? `about ${l.min} min` : ""].filter(Boolean).join(" · ")),
     done ? el("span", { class: "alef-path-done" }, "Done") : null);
 }
 
@@ -67,7 +67,7 @@ function stageSection(row, i, isCurrent, lessonsDone, pagesDone, hasIntermediate
   const s = row.stage;
   const id = `path-${s.id}`;
   const gates = s.gates && s.gates.length
-    ? el("ul", { class: "alef-path-gates", "aria-label": "Reading goals of this stage" }, ...s.gates.map((g) => el("li", {}, el("strong", {}, `${g.belt} belt: `), ...mixed(g.gate))))
+    ? el("ul", { class: "alef-path-gates", "aria-label": "Reading goals of this stage" }, ...s.gates.map((g) => el("li", {}, el("strong", {}, `${g.rank || `${g.belt} belt`}: `), ...mixed(g.gate))))
     : null;
   const unitsN = s.units.length;
   return el("section", { class: `alef-path-stage${isCurrent ? " is-current" : ""}${row.complete ? " is-complete" : ""}`, "data-stage": s.id, "aria-labelledby": id },

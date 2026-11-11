@@ -65,7 +65,7 @@ Intermediate split: I-01 to I-10 and I-26 to I-35 synagogue (reading track, 20),
 | 48 | r48 | read | Timed reading 1: Priestly Blessing + Shema | r47 | 20 |
 | 49 | r49 | read | Timed reading 2: V'ahavta and the blessing formula | r48 | 20 |
 | 50 | r50 | read | Timed reading 3: new siddur page you have never seen | r49 | 25 |
-| 51 | r51 | read | Grey-belt check | r50 | 30 |
+| 51 | r51 | read | Brown belt · G5 check | r50 | 30 |
 
 ## Israel (beginner)
 

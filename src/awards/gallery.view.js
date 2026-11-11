@@ -290,7 +290,7 @@ export async function mount(root, ctx) {
     : h('div', {},
       h('p', {}, `Confirmed criteria: none. Proposed criteria: ${rubric.items.length} items from lessons ${rubric.lessonIds[0]}–${rubric.lessonIds[rubric.lessonIds.length - 1]}. Review status: ${rubric.reviewStatus}. These are not a passing score.`),
       h('p', {}, rubric.graphNote || ''),
-      h('p', {}, rubric.belt ? `White-belt sentence from the shipped belt file: ${rubric.belt.gate}` : ''),
+      h('p', {}, rubric.belt ? `Covers ${rubric.belt.name} (lessons ${rubric.belt.lessons}). White belt · P0 sentence from the shipped belt file: ${rubric.belt.gate}` : ''),
       ...['letter', 'vowel', 'word', 'line'].map((kind) => {
         const items = rubric.items.filter((it) => it.kind === kind);
         if (!items.length) return null;

@@ -4,6 +4,7 @@
 // (data/pronunciation/consonants.json, niqqud.json) and src/pronunciation/transliterate.js. Pure: data in, HTML string out.
 import { readJson, registryEntries } from '../content.mjs';
 import { transliterate } from '../../src/pronunciation/transliterate.js';
+import { resolveRanks, rankByLesson } from '../../src/curriculum/ranks.js';
 
 const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const he = (s, cls = '') => `<span class="he ${cls}" lang="he" dir="rtl">${s}</span>`;
@@ -21,6 +22,8 @@ export function babyStepsModel() {
   const vowels = Object.fromEntries((readJson('data/pronunciation/niqqud.json')?.records ?? []).map((r) => [r.id, r]));
   const onramp = readJson('data/firstday/onramp.json');
   const reg = Object.fromEntries(registryEntries().map((e) => [e.id, e]));
+  const beltsFile = readJson('data/curriculum/belts.json');
+  const rankOf = beltsFile?.ranks ? rankByLesson(resolveRanks(beltsFile, lessons)) : new Map();
   const out = BABY_LESSONS.map((id) => lessons.find((l) => l.id === id)).filter(Boolean).map((l) => {
     const diffs = [];
     for (const id2 of l.letters ?? []) {
@@ -37,7 +40,7 @@ export function babyStepsModel() {
     const prayer = (l.prayerLines ?? []).map((pid) => reg[pid]).filter((e) => e?.he);
     const letterRecs = (l.letters ?? []).map((id2) => ({ id: id2, name: letters[id2]?.name ?? id2, he: letters[id2]?.he ?? '' }));
     const vowelRecs = (l.vowels ?? []).map((id2) => vowels[id2]).filter(Boolean);
-    return { ...l, diffs, words, prayer, letterRecs, vowelRecs };
+    return { ...l, rank: rankOf.get(l.id)?.label ?? null, diffs, words, prayer, letterRecs, vowelRecs };
   });
   return { lessons: out, onramp };
 }
@@ -56,7 +59,7 @@ export function babyStepsChapter(pages = {}) {
       ? `<ul>${l.diffs.map((d) => `<li>${d.he ? he(esc(d.he)) + ' ' : ''}<b>${esc(d.name)}</b>: ${TRADS.map(([t, label]) => `<i>${label}</i> ${esc(d.byTrad[t])}`).join('; ')}${d.verified ? '' : ' (not source-verified)'}</li>`).join('')}</ul>`
       : '<p class="small">No difference between the three traditions in the signs this lesson introduces.</p>';
     const prayer = l.prayer.length ? `<p class="small">Listen and spot the letters you know (Numbers 6:24&ndash;26; text status in the prayer chapter):</p>${l.prayer.map((e) => `<div class="he pheb" lang="he" dir="rtl">${esc(e.he)}</div>`).join('')}` : '';
-    return `<div class="babystep"><h3>Lesson ${i + 1} (${l.id}): ${esc(l.title)} <span class="small">${l.estMinutes} min &middot; ${esc(l.level)} belt</span></h3>
+    return `<div class="babystep"><h3>Lesson ${i + 1} (${l.id}): ${esc(l.title)} <span class="small">${l.estMinutes} min &middot; ${esc(l.rank ?? `${l.level} belt`)}</span></h3>
 <ul>${(l.goals ?? []).map((g) => `<li>${esc(g)}</li>`).join('')}</ul>
 ${letters || vows ? `<p><b>New:</b> ${letters}${vows}</p>` : '<p class="small">No new letters or signs: this lesson is practice.</p>'}
 ${words ? `<table class="grid"><thead><tr><th>Word</th><th>Meaning</th><th>Israeli</th><th>Sephardi</th><th>Ashkenazi</th></tr></thead><tbody>${words}</tbody></table>${wordsSame ? '<p class="small">These words read alike in all three traditions in the siddur spelling used here.</p>' : ''}` : ''}

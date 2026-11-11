@@ -74,6 +74,20 @@ test("learn view: lists read lessons, locks unmet prerequisites, shows due count
   unmount();
 });
 
+test("learn view: Krav Maga style rank strip and per-lesson rank chips, in text; earned only by finishing a rank's lessons", async () => {
+  const done = { r01: 1, r02: 1, r03: 1, r04: 1, r05: 1 };
+  const root = new Node_("div");
+  const unmount = mountLearn(root, { store: memStore({ "curriculum.progress": { completed: done } }), route: () => {}, t: (k) => k, settings: {} });
+  await waitFor(() => /Your rank:/.test(root.text), { message: "rank strip rendered" });
+  const strip = root.find((n) => /\balef-belt\b/.test(n.className || ""))[0];
+  assert.match(strip.text, /^Your rank: White belt · P0 · next: Yellow belt · P1 \(1 of 5 lessons done\)\./);
+  const chip = (id) => root.find((n) => n.tag === "li" && n.attrs["data-lesson"] === id)[0].find((n) => /\balef-level\b/.test(n.className || ""))[0];
+  assert.equal(chip("r01").text, "White belt · P0"); assert.equal(chip("r10").text, "Yellow belt · P2"); assert.equal(chip("r51").text, "Brown belt · G5");
+  const badge = chip("r10").find((n) => /\balef-rank\b/.test(n.className || ""))[0];
+  assert.equal(badge.attrs["data-belt"], "yellow"); assert.equal(badge.attrs["data-patch"], "P"); assert.match(badge.attrs.title, /Yellow belt, Practitioner 2: yellow P patch with 2 stripes/);
+  unmount();
+});
+
 test("learn view works with no store (graceful)", async () => {
   const root = new Node_("div");
   const unmount = mountLearn(root, {});

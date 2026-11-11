@@ -27,7 +27,7 @@ export function mount(root, ctx) {
       h('ul', {},
         li(h('strong', {}, 'Siddur:'), ' the Jewish prayer book. “Read the prayers” works through it line by line.'),
         li(h('strong', {}, 'Style (tradition):'), ' how Hebrew is pronounced in your community: Israeli, Sephardi or Ashkenazi. Aleph follows the one you choose, and labels any sound that only exists in Israeli style.'),
-        li(h('strong', {}, 'Belts:'), ' Aleph’s own levels, named after colours like in martial arts. A belt means you have met every letter and sign in its texts and finished its lessons. They are Aleph’s invention, not an outside qualification.'),
+        li(h('strong', {}, 'Belts and ranks:'), ' Krav Maga style belts on the Reading track: White, Yellow, Orange, Green, Blue, Brown and Black, with rank patches P (Practitioner), G (Graduate) and E (Expert), shown as text such as “Yellow belt · P2”. Each rank is the next run of lessons in course order, and you earn it only by finishing those lessons. They are Aleph’s own ranks, not a Krav Maga grade or an outside qualification. The Israel track uses Stage 1 to 3 instead.'),
         li(h('strong', {}, 'Parsha:'), ' the weekly Torah portion, named on the ', h('a', { href: '#/calendar' }, 'Calendar'), ' page.')))
 
     , sec('progress', 'Is my progress saved?',

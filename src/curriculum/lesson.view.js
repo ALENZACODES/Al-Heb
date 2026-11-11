@@ -1,6 +1,6 @@
 /** One lesson: its letters, vowels, words and prayer lines, with audio, completion and links to review. */
 import { streakVisible } from "../shell/comfort.js";
-import { lessons, byId } from "./lessons.js";
+import { lessons, byId, rankOf } from "./lessons.js";
 import { el, heText, tr, replaceKeepingFocus, levelLabel } from "./dom.js";
 import { loadContent, vowelEnglish } from "./content.js";
 import { saveQuickCheck, loadState } from "./actions.js";
@@ -60,7 +60,7 @@ export function mountLesson(root, ctx, lessonId) {
     const section = (id, title, ...kids) => el("section", { class: "card", "aria-labelledby": id }, el("h2", { id }, title), ...kids);
     const parts = [
       ctx.img?.(el, { kind: 'lesson', id: lesson.id, class: 'l-scene', width: 900 }),
-      el("p", { class: "muted alef-meta" }, `${levelLabel(lesson.level)} · about ${lesson.estMinutes} min · ${lesson.track === "read" ? "Read the prayer book" : "Speak in Israel"}`),
+      el("p", { class: "muted alef-meta" }, `${levelLabel(lesson.level, rankOf.get(lesson.id))} · about ${lesson.estMinutes} min · ${lesson.track === "read" ? "Read the prayer book" : "Speak in Israel"}`),
       el("details", { class: "draft-flag alef-draft" }, el("summary", {}, "About This Lesson"),
         // review status is stated once, on the credits page
         el("h2", { id: "l-goals", class: "alef-draft-h" }, tr(ctx, "lesson.goals", "Goals")), el("ul", {}, ...lesson.goals.map((g) => el("li", {}, g)))),

@@ -7,6 +7,7 @@ import { timedReadGate } from '../timedread/gate.js';
 import { cleanState as cleanTimedReads, median, cleanWpm, accuracy as readAccuracy } from '../timedread/model.js';
 import { coverage as siddurCoverageOf, FOLLOW_IDS, ORDER_IDS } from '../service/model.js';
 import { unpointedScore } from '../firstday/model.js';
+import { resolveRanks, rankStates } from '../curriculum/ranks.js';
 import { gradeLines, gradeWords, knownSet, entriesDecodable, wordsDecodable, unlockers, missingIn } from './decode.js';
 
 export const ALL_LETTERS = [...BASE_LETTER_IDS, ...FINAL_LETTER_IDS];
@@ -376,19 +377,22 @@ export function evaluatePath(goalKey, d, c) {
   return { goal: goalKey, title: path.title, items, done: items.filter((i) => i.done).length, total: items.length };
 }
 
-/** Belts with Aleph-specific gates. state: earned | ready (only unmeasurable gates left) | current | later. */
+/**
+ * Krav Maga style ranks (data/curriculum/belts.json): White P0 .. Black E5, in course order on the reading track.
+ * A rank is EARNED only by finishing every one of its lessons, and only after every rank before it is earned.
+ * state: earned | current (the first rank not earned) | later. Skill checks from belt-gates.json (letters, signs, decoding,
+ * timed reads) are listed per rank for information; they never earn a rank and never hold one back.
+ */
 export function evaluateBelts(d, c) {
-  let currentSeen = false;
-  return d.belts.belts.map((b) => {
-    const ids = expandRange(b.lessons);
-    const gates = [];
-    if (ids.length) { const r = evaluate({ kind: 'lessonRange', ids }, c); gates.push({ label: `Lessons ${b.lessons}`, kind: 'lessonRange', ...r }); }
-    for (const g of d.gates.gates[b.id] || []) gates.push({ label: g.label, kind: g.kind, ...evaluate(g, c) });
-    const measurable = gates.filter((g) => g.measurable), unmeasured = gates.filter((g) => !g.measurable);
-    const allMet = measurable.length > 0 && measurable.every((g) => g.done);
-    const state = allMet && unmeasured.length === 0 ? 'earned' : allMet ? 'ready' : !currentSeen ? 'current' : 'later';
-    if (state === 'current' || state === 'ready') currentSeen = true;
-    return { id: b.id, name: b.name, gate: b.gate, speedNote: b.wpmTarget ? 'Speed target not measured here' : null, gates, state, metCount: measurable.filter((g) => g.done).length, measurableCount: measurable.length };
+  const ranks = rankStates(resolveRanks(d.belts, d.lessons), c.s.completed);
+  return ranks.map((r) => {
+    const checks = (d.gates.gates[r.id] || []).map((g) => ({ label: g.label, kind: g.kind, ...evaluate(g, c) }));
+    return {
+      id: r.id, belt: r.belt, beltName: r.beltName, patch: r.patch, stripes: r.stripes, name: r.label, label: r.label, a11y: r.a11y,
+      gate: r.gate, range: r.range, lessons: r.lessons, state: r.state, doneCount: r.doneCount, total: r.total,
+      gates: [{ label: `Lessons ${r.range}`, kind: 'lessonRange', done: r.doneCount === r.total, have: r.doneCount, need: r.total, measurable: true }],
+      checks,
+    };
   });
 }
 

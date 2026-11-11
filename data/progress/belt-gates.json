@@ -1,18 +1,18 @@
 {
-  "schema": "alef-belt-gates/1",
+  "schema": "alef-belt-gates/2",
   "status": "draft-needs-expert-review",
-  "note": "Aleph-specific belt gates. Belt names, lesson ranges and wpm proposals come from data/curriculum/belts.json. The verification sweep found these belts are NOT the Aleph Champ ladder, so no gate here claims to match it. A belt is 'earned' only when every gate Aleph can measure is met. 'decode' gates mean the learner has met every letter and sign in the text; they do not prove fluent reading aloud. Gates of kind 'unmeasured' cannot be checked in the app: a belt with one tops out at 'ready'.",
+  "note": "Aleph-specific skill checks, keyed by rank (P0..E5) of the Krav Maga style belts in data/curriculum/belts.json. A rank is EARNED only by finishing its lessons, in course order; these checks never hold a rank back. They are shown on the Progress screen as information about the skills in that range. These belts are NOT the Aleph Champ ladder, and no check here claims to match it. 'decode' checks mean the learner has met every letter and sign in the text; they do not prove fluent reading aloud. Checks of kind 'unmeasured' cannot be made in the app.",
   "gates": {
-    "white":  [ { "kind": "letters", "ids": ["shin", "bet", "tav", "lamed", "mem-final", "vav"], "label": "Shin, Bet, Tav, Lamed, final Mem, Vav" }, { "kind": "signs", "ids": ["kamatz", "patach", "cholam", "dagesh"], "label": "Kamatz, patach, cholam, dagesh" }, { "kind": "decodeWords", "words": ["שַׁבָּת", "שָׁלוֹם"], "label": "Shabbat Shalom decodable" } ],
-    "red":    [ { "kind": "letters", "count": 19, "label": "At least 19 letters" }, { "kind": "signs", "count": 7, "label": "At least 7 signs" }, { "kind": "decode", "entries": ["bless-priestly-1"], "label": "Priestly Blessing line 1 decodable" }, { "kind": "checkpoint", "stage": 2, "label": "Look-alike checkpoint 2 passed" } ],
-    "orange": [ { "kind": "letters", "count": 27, "label": "All 27 letter shapes" }, { "kind": "signs", "ids": ["chataf-patach", "chataf-segol", "chataf-kamatz"], "label": "The three chataf vowels" }, { "kind": "decode", "entries": ["shema-1"], "label": "Shema line 1 decodable" }, { "kind": "checkpoint", "stage": 3, "label": "Look-alike checkpoint 3 passed" } ],
-    "yellow": [ { "kind": "decode", "entries": ["bless-priestly-1", "bless-priestly-2", "bless-priestly-3"], "label": "Whole Priestly Blessing decodable" } ],
-    "green":  [ { "kind": "signs", "ids": ["shva", "dagesh"], "label": "Shva and dagesh" }, { "kind": "decode", "entries": ["bless-formula-1"], "label": "Blessing formula decodable" } ],
-    "blue":   [ { "kind": "signs", "count": 15, "label": "All 15 signs" }, { "kind": "decode", "entries": ["shema-2"], "label": "Shema line 2 decodable" } ],
-    "purple": [ { "kind": "decode", "entries": ["shema-1", "vahavta-full", "torah-bless-1", "modeh-ani-1", "mah-tovu-1", "kiddush-wine-1"], "label": "Basic prayers decodable" } ],
-    "brown":  [ { "kind": "decode", "entries": ["avot-1", "mi-chamocha-1", "aleinu-1", "kaddish-1", "adon-olam-1", "birkat-hamazon-1"], "label": "Higher prayers decodable" } ],
-    "grey":   [ { "kind": "unmeasured", "label": "A prayer book page read inside a time limit (no timed read in the app yet)" } ],
-    "black":  [ { "kind": "unmeasured", "label": "Fluency target by timed reads (no timed read in the app yet)" } ]
+    "P0":     [ { "kind": "letters", "ids": ["shin", "bet", "tav", "lamed", "mem-final", "vav"], "label": "Shin, Bet, Tav, Lamed, final Mem, Vav" }, { "kind": "signs", "ids": ["kamatz", "patach", "cholam", "dagesh"], "label": "Kamatz, patach, cholam, dagesh" }, { "kind": "decodeWords", "words": ["שַׁבָּת", "שָׁלוֹם"], "label": "Shabbat Shalom decodable" } ],
+    "P3":     [ { "kind": "letters", "count": 19, "label": "At least 19 letters" }, { "kind": "signs", "count": 7, "label": "At least 7 signs" }, { "kind": "decode", "entries": ["bless-priestly-1"], "label": "Priestly Blessing line 1 decodable" }, { "kind": "checkpoint", "stage": 2, "label": "Look-alike checkpoint 2 passed" } ],
+    "P4":     [ { "kind": "letters", "count": 27, "label": "All 27 letter shapes" }, { "kind": "signs", "ids": ["chataf-patach", "chataf-segol", "chataf-kamatz"], "label": "The three chataf vowels" }, { "kind": "decode", "entries": ["shema-1"], "label": "Shema line 1 decodable" }, { "kind": "checkpoint", "stage": 3, "label": "Look-alike checkpoint 3 passed" } ],
+    "P5":     [ { "kind": "decode", "entries": ["bless-priestly-1", "bless-priestly-2", "bless-priestly-3"], "label": "Whole Priestly Blessing decodable" } ],
+    "G1":     [ { "kind": "signs", "ids": ["shva", "dagesh"], "label": "Shva and dagesh" }, { "kind": "decode", "entries": ["bless-formula-1"], "label": "Blessing formula decodable" } ],
+    "G2":     [ { "kind": "signs", "count": 15, "label": "All 15 signs" }, { "kind": "decode", "entries": ["shema-2"], "label": "Shema line 2 decodable" } ],
+    "G3":     [ { "kind": "decode", "entries": ["shema-1", "vahavta-full", "torah-bless-1", "modeh-ani-1", "mah-tovu-1", "kiddush-wine-1"], "label": "Basic prayers decodable" } ],
+    "G4":     [ { "kind": "decode", "entries": ["avot-1", "mi-chamocha-1", "aleinu-1", "kaddish-1", "adon-olam-1", "birkat-hamazon-1"], "label": "Higher prayers decodable" } ],
+    "G5":     [ { "kind": "unmeasured", "label": "A prayer book page read inside a time limit (no timed read in the app yet)" } ],
+    "E5":     [ { "kind": "unmeasured", "label": "Fluency target by timed reads (no timed read in the app yet)" } ]
   },
   "nameLesson": "r15"
 }

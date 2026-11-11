@@ -41,7 +41,7 @@ const prereqName = (x) => {
   const t = byId[x]?.title;
   if (!t) return x;
   // The course's "belt" wording is not explained on these screens, so say it as a plain beginner lesson.
-  const plain = t.replace(/\b[A-Za-z]+[- ]belt\s*/i, "").trim();
+  const plain = t.replace(/\b[A-Za-z]+[- ]belt(?:\s*·\s*[PGE]\d)?\s*/i, "").trim(); // "Brown belt · G5 check" -> "check"
   return `the beginner ${plain ? plain.toLowerCase() : "lesson"} (lesson ${x})`;
 };
 const tradition = (ctx, lesson) => (lesson.track === "israel" ? "israeli" : ctx?.settings?.get?.("congregation") || "sephardi");

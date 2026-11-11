@@ -3,6 +3,7 @@
  * and are fetched only when a lesson, review, or completion needs them.
  */
 import { loadJSON } from "./data.js";
+import { resolveRanks, rankByLesson } from "./ranks.js";
 const [data, beltsFile] = await Promise.all([
   loadJSON("data/curriculum/lessons-index.json"),
   loadJSON("data/curriculum/belts.json"),
@@ -11,3 +12,6 @@ const [data, beltsFile] = await Promise.all([
 export const lessonSummaries = data.lessons;
 export const belts = beltsFile;
 export const summaryById = Object.fromEntries(lessonSummaries.map((l) => [l.id, l]));
+/** Krav Maga style ranks (White P0 .. Black E5) resolved against the lesson order, and lesson id -> rank. */
+export const ranks = resolveRanks(beltsFile, lessonSummaries);
+export const rankOf = rankByLesson(ranks);

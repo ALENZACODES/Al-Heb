@@ -1,4 +1,4 @@
-# Practical Hebrew: The Written Pages (189)
+# Practical Hebrew: The Written Pages (200)
 
 Generated from `data/curriculum/practical-pages/written.json` by the page builder. Do not edit by hand.
 
@@ -1160,6 +1160,67 @@ Spaced review: each page queues its new items, plus earlier items marked review.
 - Ask when they close. → מָתַי אַתֶּם סוֹגְרִים? (matai atem sogrim?) · audio `shop-18`
 
 **Review queue from earlier pages:** `shop-01`, `shop-06-m`, `d-shop-l4`, `shop-07`, `shop-09`, `shop-13`, `shop-14`, `shop-19`
+
+## pu-shuk-p01: The Market and the Prices
+
+*Learn page.* Name the market, ask a price, and say if it is expensive or cheap.
+
+**Grammar: Two ways to ask a price.** שׁוּק is the open market. כַּמָּה זֶה עוֹלֶה? asks how much something costs, and מָה הַמְּחִיר? asks what the price is. Your answer can be short: זֶה יָקָר when it is expensive, זֶה זוֹל when it is cheap.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| שׁוּק | shuk \* | market | `i-12-w1` tts, f+m |
+| כַּמָּה זֶה עוֹלֶה? | kamah zeh oleh? \* | how much does it cost? | `i-12-w2` tts, f+m |
+| מָה הַמְּחִיר? | mah hamechir? \* | what is the price? | `i-12-w3` tts, f+m |
+| זֶה יָקָר | zeh yakar \* | it's expensive | `i-12-w4` tts, f+m |
+| זֶה זוֹל | zeh zol \* | it's cheap | `i-12-w5` tts, f+m |
+
+**Speak.**
+
+- You pick up a melon at a stall. Ask how much it costs. → כַּמָּה זֶה עוֹלֶה? (kamah zeh oleh?) · audio `i-12-w2`
+- The price is too high. Say it is expensive. → זֶה יָקָר (zeh yakar) · audio `i-12-w4`
+
+**Review queue from earlier pages:** `shop-17`, `shop-18`
+
+## pu-shuk-p02: A Discount and Two Vegetables
+
+*Speak page.* Ask for a discount and name two vegetables.
+
+**Grammar: Asking with יֵשׁ.** יֵשׁ means there is. Said as a question, יֵשׁ הַנָּחָה? asks if there is a discount. חֲצִי is half. עַגְבָנִיָּה is a tomato and מְלָפְפוֹן is a cucumber.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| יֵשׁ הַנָּחָה? | yesh hanachah? \* | is there a discount? | `i-12-w6` tts, f+m |
+| חֲצִי | chatzi \* | half | `i-12-w7` tts, f+m |
+| עַגְבָנִיָּה | agvaniyah \* | tomato | `i-12-w9` tts, f+m |
+| מְלָפְפוֹן | melafefon \* | cucumber | `i-12-w10` tts, f+m |
+
+**Speak.**
+
+- You are buying a lot. Ask if there is a discount. → יֵשׁ הַנָּחָה? (yesh hanachah?) · audio `i-12-w6`
+- Point at the tomatoes and name one. → עַגְבָנִיָּה (agvaniyah) · audio `i-12-w9`
+
+**Review queue from earlier pages:** `i-12-w4`, `i-12-w5`
+
+## pu-shuk-p03: Unit Review
+
+*Review page.* Choose, pay in cash and take a bag.
+
+**Grammar: Closing the sale.** אֶקַּח אֶת זֶה says I will take this, and it works for גְּבִינָה, for זֵיתִים, or for anything you point at. מְזֻמָּן is cash. A שַׂקִּית is a bag.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| גְּבִינָה | gevinah \* | cheese | `i-12-w11` tts, f+m |
+| זֵיתִים | zeitim \* | olives | `i-12-w12` tts, f+m |
+| אֶקַּח אֶת זֶה | ekach et zeh \* | I'll take this | `i-12-w13` tts, f+m |
+| מְזֻמָּן | mezuman \* | cash | `i-12-w14` tts, f+m |
+| שַׂקִּית | sakit \* | bag | `i-12-w15` tts, f+m |
+
+**Speak.**
+
+- You have chosen. Say you will take this. → אֶקַּח אֶת זֶה (ekach et zeh) · audio `i-12-w13`
+
+**Review queue from earlier pages:** `i-12-w5`, `i-12-w6`, `i-12-w7`, `i-12-w9`, `i-12-w10`
 
 ## pu-directions-p01: Where Is...?
 
@@ -2979,6 +3040,162 @@ Spaced review: each page queues its new items, plus earlier items marked review.
 - Name the pharmacy. → בֵּית מֶרְקַחַת (beit merkachat) · audio `il18-w5`
 
 **Review queue from earlier pages:** `i-14-w9`, `help-02`, `help-07`, `help-08`, `il24-w1`, `i-36-w3`, `i-14-w1`
+
+## pu-pharmacy-p01: Words at the Pharmacy
+
+*Learn page.* Name the pharmacy, medicine, pills, a prescription and a headache.
+
+**Grammar: The pharmacy and what you ask for.** בֵּית מֶרְקַחַת is the pharmacy. תְּרוּפָה is a medicine and כַּדּוּרִים are pills. A מִרְשָׁם is the prescription from the doctor. כְּאֵב רֹאשׁ is a headache: כְּאֵב is an ache and רֹאשׁ is the head.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| בֵּית מֶרְקַחַת | beit merkachat \* | pharmacy | `i-14-w1` tts, f+m |
+| תְּרוּפָה | terufah \* | medicine | `i-14-w2` tts, f+m |
+| כַּדּוּרִים | kadurim \* | pills | `i-14-w3` tts, f+m |
+| מִרְשָׁם | mirsham \* | prescription | `i-14-w4` tts, f+m |
+| כְּאֵב רֹאשׁ | ke'ev rosh \* | headache | `i-14-w5` tts, f+m |
+
+**Speak.**
+
+- You need medicine. Name the pharmacy. → בֵּית מֶרְקַחַת (beit merkachat) · audio `i-14-w1`
+- Your head hurts. Name a headache. → כְּאֵב רֹאשׁ (ke'ev rosh) · audio `i-14-w5`
+
+**Review queue from earlier pages:** `help-08`, `il18-w5`
+
+## pu-pharmacy-p02: Pain, Fever and How Often
+
+*Learn page.* Name a sore throat, a stomach ache and a fever, and say once a day.
+
+**Grammar: כְּאֵב plus the part that hurts.** כְּאֵב joins the part of the body that hurts: כְּאֵב גָּרוֹן is a sore throat and כְּאֵב בֶּטֶן is a stomach ache, built the same way as the word for a headache. A fever is חֹם, and נֶגֶד means against, so a medicine can be נֶגֶד חֹם. Once a day is פַּעַם בְּיוֹם.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| כְּאֵב גָּרוֹן | ke'ev garon \* | sore throat | `i-14-w6` tts, f+m |
+| כְּאֵב בֶּטֶן | ke'ev beten \* | stomach ache | `i-14-w7` tts, f+m |
+| חֹם | chom \* | fever | `i-14-w8` tts, f+m |
+| נֶגֶד | neged \* | against, for (a symptom) | `i-14-w9` tts, f+m |
+| פַּעַם בְּיוֹם | pa'am beyom \* | once a day | `i-14-w10` tts, f+m |
+
+**Speak.**
+
+- Your throat hurts. Name a sore throat. → כְּאֵב גָּרוֹן (ke'ev garon) · audio `i-14-w6`
+- The label says one time each day. Say once a day. → פַּעַם בְּיוֹם (pa'am beyom) · audio `i-14-w10`
+
+**Review queue from earlier pages:** `i-14-w4`, `i-14-w5`
+
+## pu-pharmacy-p03: Before, After and Allergies
+
+*Speak page.* Say twice a day, before and after, and name an allergy and antibiotics.
+
+**Grammar: The ending of פַּעֲמַיִם means two.** פַּעַם is one time and פַּעֲמַיִם is two times, so פַּעֲמַיִם בְּיוֹם is twice a day. אַחֲרֵי is after and לִפְנֵי is before, as in before or after a meal. אָלֶרְגִּי is allergic, in the form a man uses about himself. אַנְטִיבְּיוֹטִיקָה is antibiotics.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| פַּעֲמַיִם בְּיוֹם | pa'amayim beyom \* | twice a day | `i-14-w11` tts, f+m |
+| אַחֲרֵי | acharei \* | after | `i-14-w12` tts, f+m |
+| לִפְנֵי | lifnei \* | before | `i-14-w13` tts, f+m |
+| אָלֶרְגִּי | alergi \* | allergic (m) (to or by a man) | `i-14-w14` tts, f+m |
+| אַנְטִיבְּיוֹטִיקָה | antibiotika \* | antibiotics | `i-14-w15` tts, f+m |
+
+**Speak.**
+
+- The pharmacist says two times each day. Say twice a day. → פַּעֲמַיִם בְּיוֹם (pa'amayim beyom) · audio `i-14-w11`
+- You are a man with an allergy. Say allergic. → אָלֶרְגִּי (alergi) · audio `i-14-w14`
+
+**Review queue from earlier pages:** `i-14-w9`, `i-14-w10`
+
+## pu-pharmacy-p04: Unit Review
+
+*Review page.* Ask where the pharmacy is and review the unit.
+
+**Grammar: Finding the pharmacy.** אֵיפֹה בֵּית הַמִּרְקַחַת? asks where the pharmacy is. With הַ it is the pharmacy, a particular one: בֵּית מֶרְקַחַת becomes בֵּית הַמִּרְקַחַת, and the הַ goes on the second word.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| אֵיפֹה בֵּית הַמִּרְקַחַת? | eifo beit hamirkachat? | where is the pharmacy? | `directions-18` tts, f+m |
+
+**Speak.**
+
+- You are in a new town and need medicine. Ask where the pharmacy is. → אֵיפֹה בֵּית הַמִּרְקַחַת? (eifo beit hamirkachat?) · audio `directions-18`
+
+**Review queue from earlier pages:** `i-14-w10`, `i-14-w11`, `i-14-w12`, `i-14-w13`, `i-14-w14`, `i-14-w15`
+
+## pu-hospital-p01: The Hospital and Who Works There
+
+*Learn page.* Name the hospital, a doctor and a nurse.
+
+**Grammar: The hospital, a doctor and a nurse.** בֵּית חוֹלִים is the hospital. רוֹפֵא is a doctor, in the form used for a man. אָחוֹת is a nurse, and it is also the word for a sister.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| בֵּית חוֹלִים | beit cholim \* | hospital | `i-20-w1` tts, f+m |
+| רוֹפֵא | rofe \* | medical doctor, physician | `i-20-w2` tts, f+m |
+| אָחוֹת | achot \* | nurse (f) (to or by a woman) | `i-20-w4` tts, f+m |
+
+**Speak.**
+
+- The taxi driver asks where to. Name the hospital. → בֵּית חוֹלִים (beit cholim) · audio `i-20-w1`
+- You ask who will see you. Name a doctor. → רוֹפֵא (rofe) · audio `i-20-w2`
+
+**Review queue from earlier pages:** `i-14-w15`, `directions-18`
+
+## pu-hospital-p02: Insurance, Tests and Emergencies
+
+*Learn page.* Name insurance, a test, blood and an emergency, and say it hurts.
+
+**Grammar: כּוֹאֵב says it hurts.** כּוֹאֵב means it hurts, and it comes from the same root as the word for an ache. Insurance is בִּטּוּחַ. A בְּדִיקָה is a test or an examination, and דָּם is blood. חֵרוּם is an emergency.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| בִּטּוּחַ | bituach \* | insurance | `i-20-w6` tts, f+m |
+| כּוֹאֵב | ko'ev \* | it hurts | `i-20-w7` tts, f+m |
+| בְּדִיקָה | bedikah \* | test, examination | `i-20-w8` tts, f+m |
+| דָּם | dam \* | blood | `i-20-w9` tts, f+m |
+| חֵרוּם | cherum \* | emergency | `i-20-w10` tts, f+m |
+
+**Speak.**
+
+- The doctor presses your arm. Say it hurts. → כּוֹאֵב (ko'ev) · audio `i-20-w7`
+- It cannot wait. Name an emergency. → חֵרוּם (cherum) · audio `i-20-w10`
+
+**Review queue from earlier pages:** `i-20-w2`, `i-20-w4`
+
+## pu-hospital-p03: Ambulance, Passport and Family
+
+*Speak page.* Name an ambulance, the passport and family.
+
+**Grammar: הַ makes it the passport.** אַמְבּוּלַנְס is an ambulance. הַדַּרְכּוֹן is the passport: the הַ at the front is the word the. At a hospital desk you may be asked for הַדַּרְכּוֹן, and about your מִשְׁפָּחָה, your family.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| אַמְבּוּלַנְס | ambulans \* | ambulance | `i-20-w11` tts, f+m |
+| הַדַּרְכּוֹן | hadarkon \* | the passport | `i-20-w12` tts, f+m |
+| מִשְׁפָּחָה | mishpachah \* | family | `i-20-w13` tts, f+m |
+
+**Speak.**
+
+- Someone has collapsed in the street. Name an ambulance. → אַמְבּוּלַנְס (ambulans) · audio `i-20-w11`
+- The clerk asks for your papers. Name the passport. → הַדַּרְכּוֹן (hadarkon) · audio `i-20-w12`
+
+**Review queue from earlier pages:** `i-20-w9`, `i-20-w10`
+
+## pu-hospital-p04: Unit Review
+
+*Review page.* Ask where the hospital is and say you need a doctor.
+
+**Grammar: אֲנִי צָרִיךְ says I need.** אֵיפֹה בֵּית הַחוֹלִים? asks where the hospital is. אֲנִי צָרִיךְ רוֹפֵא says I need a doctor, in the form a man uses: צָרִיךְ is the man's form.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| אֵיפֹה בֵּית הַחוֹלִים? | eifo beit hacholim? | where is the hospital? | `directions-17` tts, f+m |
+| אֲנִי צָרִיךְ רוֹפֵא | ani tsarich rofe | I need a doctor | `help-02-m` tts, f+m |
+
+**Speak.**
+
+- You are lost and unwell. Ask where the hospital is. → אֵיפֹה בֵּית הַחוֹלִים? (eifo beit hacholim?) · audio `directions-17`
+- You are a man and feel very ill. Say you need a doctor. → אֲנִי צָרִיךְ רוֹפֵא (ani tsarich rofe) · audio `help-02-m`
+
+**Review queue from earlier pages:** `i-20-w8`, `i-20-w9`, `i-20-w10`, `i-20-w11`, `i-20-w12`, `i-20-w13`
 
 ## pu-bank-p01: At the Bank
 

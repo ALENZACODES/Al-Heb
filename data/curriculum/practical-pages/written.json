@@ -15930,6 +15930,912 @@
    ]
   },
   {
+   "id": "pu-shuk-p01",
+   "title": "The Market and the Prices",
+   "order": 1,
+   "kind": "learn",
+   "can": "Name the market, ask a price, and say if it is expensive or cheap.",
+   "grammar": {
+    "point": "Two ways to ask a price",
+    "body": "שׁוּק is the open market. כַּמָּה זֶה עוֹלֶה? asks how much something costs, and מָה הַמְּחִיר? asks what the price is. Your answer can be short: זֶה יָקָר when it is expensive, זֶה זוֹל when it is cheap.",
+    "examples": [
+     {
+      "itemId": "i-12-w2",
+      "he": "כַּמָּה זֶה עוֹלֶה?",
+      "en": "how much does it cost?"
+     },
+     {
+      "itemId": "i-12-w4",
+      "he": "זֶה יָקָר",
+      "en": "it's expensive"
+     }
+    ]
+   },
+   "grammarNote": "Two ways to ask a price. שׁוּק is the open market. כַּמָּה זֶה עוֹלֶה? asks how much something costs, and מָה הַמְּחִיר? asks what the price is. Your answer can be short: זֶה יָקָר when it is expensive, זֶה זוֹל when it is cheap.",
+   "items": [
+    {
+     "id": "i-12-w1",
+     "source": "data/curriculum/lessons.json#I-12.words[0]",
+     "he": "שׁוּק",
+     "en": "market",
+     "translit": "shuk",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-12-w1"
+     },
+     "audio": {
+      "clipId": "i-12-w1",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-12-w2",
+     "source": "data/curriculum/lessons.json#I-12.words[1]",
+     "he": "כַּמָּה זֶה עוֹלֶה?",
+     "en": "how much does it cost?",
+     "translit": "kamah zeh oleh?",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "line",
+      "id": "i-12-w2"
+     },
+     "audio": {
+      "clipId": "i-12-w2",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-12-w3",
+     "source": "data/curriculum/lessons.json#I-12.words[2]",
+     "he": "מָה הַמְּחִיר?",
+     "en": "what is the price?",
+     "translit": "mah hamechir?",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "line",
+      "id": "i-12-w3"
+     },
+     "audio": {
+      "clipId": "i-12-w3",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-12-w4",
+     "source": "data/curriculum/lessons.json#I-12.words[3]",
+     "he": "זֶה יָקָר",
+     "en": "it's expensive",
+     "translit": "zeh yakar",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-12-w4"
+     },
+     "audio": {
+      "clipId": "i-12-w4",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-12-w5",
+     "source": "data/curriculum/lessons.json#I-12.words[4]",
+     "he": "זֶה זוֹל",
+     "en": "it's cheap",
+     "translit": "zeh zol",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-12-w5"
+     },
+     "audio": {
+      "clipId": "i-12-w5",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-12-w1"
+     },
+     "answer": "i-12-w1",
+     "options": [
+      "i-12-w2",
+      "i-12-w3",
+      "i-12-w1"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "line",
+      "id": "i-12-w2"
+     },
+     "answer": "i-12-w2",
+     "options": [
+      "i-12-w3",
+      "i-12-w4",
+      "i-12-w2"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "line",
+      "id": "i-12-w3"
+     },
+     "answer": "i-12-w3",
+     "options": [
+      "i-12-w4",
+      "i-12-w5",
+      "i-12-w3"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-12-w4"
+     },
+     "answer": "i-12-w4",
+     "options": [
+      "i-12-w5",
+      "i-12-w1",
+      "i-12-w4"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-12-w5"
+     },
+     "answer": "i-12-w5",
+     "options": [
+      "i-12-w1",
+      "i-12-w2",
+      "i-12-w5"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "You pick up a melon at a stall. Ask how much it costs.",
+     "answer": "i-12-w2",
+     "he": "כַּמָּה זֶה עוֹלֶה?",
+     "translit": "kamah zeh oleh?",
+     "en": "how much does it cost?",
+     "audio": {
+      "clipId": "i-12-w2",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "prompt": "The price is too high. Say it is expensive.",
+     "answer": "i-12-w4",
+     "he": "זֶה יָקָר",
+     "translit": "zeh yakar",
+     "en": "it's expensive",
+     "audio": {
+      "clipId": "i-12-w4",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "shop-17",
+    "shop-18"
+   ],
+   "listenIds": [
+    "i-12-w1",
+    "i-12-w2",
+    "i-12-w3",
+    "i-12-w4",
+    "i-12-w5"
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-12-w1",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "i-12-w2",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "line",
+     "id": "i-12-w3",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-12-w4",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "i-12-w5",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 6,
+     "kind": "word",
+     "id": "shop-17",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 7,
+     "kind": "line",
+     "id": "shop-18",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    }
+   ]
+  },
+  {
+   "id": "pu-shuk-p02",
+   "title": "A Discount and Two Vegetables",
+   "order": 2,
+   "kind": "speak",
+   "can": "Ask for a discount and name two vegetables.",
+   "grammar": {
+    "point": "Asking with יֵשׁ",
+    "body": "יֵשׁ means there is. Said as a question, יֵשׁ הַנָּחָה? asks if there is a discount. חֲצִי is half. עַגְבָנִיָּה is a tomato and מְלָפְפוֹן is a cucumber.",
+    "examples": [
+     {
+      "itemId": "i-12-w6",
+      "he": "יֵשׁ הַנָּחָה?",
+      "en": "is there a discount?"
+     },
+     {
+      "itemId": "i-12-w9",
+      "he": "עַגְבָנִיָּה",
+      "en": "tomato"
+     }
+    ]
+   },
+   "grammarNote": "Asking with יֵשׁ. יֵשׁ means there is. Said as a question, יֵשׁ הַנָּחָה? asks if there is a discount. חֲצִי is half. עַגְבָנִיָּה is a tomato and מְלָפְפוֹן is a cucumber.",
+   "items": [
+    {
+     "id": "i-12-w6",
+     "source": "data/curriculum/lessons.json#I-12.words[5]",
+     "he": "יֵשׁ הַנָּחָה?",
+     "en": "is there a discount?",
+     "translit": "yesh hanachah?",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "line",
+      "id": "i-12-w6"
+     },
+     "audio": {
+      "clipId": "i-12-w6",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-12-w7",
+     "source": "data/curriculum/lessons.json#I-12.words[6]",
+     "he": "חֲצִי",
+     "en": "half",
+     "translit": "chatzi",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-12-w7"
+     },
+     "audio": {
+      "clipId": "i-12-w7",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-12-w9",
+     "source": "data/curriculum/lessons.json#I-12.words[8]",
+     "he": "עַגְבָנִיָּה",
+     "en": "tomato",
+     "translit": "agvaniyah",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-12-w9"
+     },
+     "audio": {
+      "clipId": "i-12-w9",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-12-w10",
+     "source": "data/curriculum/lessons.json#I-12.words[9]",
+     "he": "מְלָפְפוֹן",
+     "en": "cucumber",
+     "translit": "melafefon",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-12-w10"
+     },
+     "audio": {
+      "clipId": "i-12-w10",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "line",
+      "id": "i-12-w6"
+     },
+     "answer": "i-12-w6",
+     "options": [
+      "i-12-w7",
+      "i-12-w9",
+      "i-12-w6"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-12-w7"
+     },
+     "answer": "i-12-w7",
+     "options": [
+      "i-12-w9",
+      "i-12-w10",
+      "i-12-w7"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-12-w9"
+     },
+     "answer": "i-12-w9",
+     "options": [
+      "i-12-w10",
+      "i-12-w6",
+      "i-12-w9"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-12-w10"
+     },
+     "answer": "i-12-w10",
+     "options": [
+      "i-12-w6",
+      "i-12-w7",
+      "i-12-w10"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "You are buying a lot. Ask if there is a discount.",
+     "answer": "i-12-w6",
+     "he": "יֵשׁ הַנָּחָה?",
+     "translit": "yesh hanachah?",
+     "en": "is there a discount?",
+     "audio": {
+      "clipId": "i-12-w6",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "prompt": "Point at the tomatoes and name one.",
+     "answer": "i-12-w9",
+     "he": "עַגְבָנִיָּה",
+     "translit": "agvaniyah",
+     "en": "tomato",
+     "audio": {
+      "clipId": "i-12-w9",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "i-12-w4",
+    "i-12-w5"
+   ],
+   "listenIds": [
+    "i-12-w6",
+    "i-12-w7",
+    "i-12-w9",
+    "i-12-w10"
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "i-12-w6",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-12-w7",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-12-w9",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-12-w10",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "i-12-w4",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 6,
+     "kind": "word",
+     "id": "i-12-w5",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    }
+   ]
+  },
+  {
+   "id": "pu-shuk-p03",
+   "title": "Unit Review",
+   "order": 3,
+   "kind": "review",
+   "can": "Choose, pay in cash and take a bag.",
+   "grammar": {
+    "point": "Closing the sale",
+    "body": "אֶקַּח אֶת זֶה says I will take this, and it works for גְּבִינָה, for זֵיתִים, or for anything you point at. מְזֻמָּן is cash. A שַׂקִּית is a bag.",
+    "examples": [
+     {
+      "itemId": "i-12-w13",
+      "he": "אֶקַּח אֶת זֶה",
+      "en": "I'll take this"
+     },
+     {
+      "itemId": "i-12-w14",
+      "he": "מְזֻמָּן",
+      "en": "cash"
+     }
+    ]
+   },
+   "grammarNote": "Closing the sale. אֶקַּח אֶת זֶה says I will take this, and it works for גְּבִינָה, for זֵיתִים, or for anything you point at. מְזֻמָּן is cash. A שַׂקִּית is a bag.",
+   "items": [
+    {
+     "id": "i-12-w11",
+     "source": "data/curriculum/lessons.json#I-12.words[10]",
+     "he": "גְּבִינָה",
+     "en": "cheese",
+     "translit": "gevinah",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-12-w11"
+     },
+     "audio": {
+      "clipId": "i-12-w11",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-12-w12",
+     "source": "data/curriculum/lessons.json#I-12.words[11]",
+     "he": "זֵיתִים",
+     "en": "olives",
+     "translit": "zeitim",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-12-w12"
+     },
+     "audio": {
+      "clipId": "i-12-w12",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-12-w13",
+     "source": "data/curriculum/lessons.json#I-12.words[12]",
+     "he": "אֶקַּח אֶת זֶה",
+     "en": "I'll take this",
+     "translit": "ekach et zeh",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-12-w13"
+     },
+     "audio": {
+      "clipId": "i-12-w13",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-12-w14",
+     "source": "data/curriculum/lessons.json#I-12.words[13]",
+     "he": "מְזֻמָּן",
+     "en": "cash",
+     "translit": "mezuman",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-12-w14"
+     },
+     "audio": {
+      "clipId": "i-12-w14",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-12-w15",
+     "source": "data/curriculum/lessons.json#I-12.words[14]",
+     "he": "שַׂקִּית",
+     "en": "bag",
+     "translit": "sakit",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-12-w15"
+     },
+     "audio": {
+      "clipId": "i-12-w15",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-12-w11"
+     },
+     "answer": "i-12-w11",
+     "options": [
+      "i-12-w12",
+      "i-12-w13",
+      "i-12-w11"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-12-w12"
+     },
+     "answer": "i-12-w12",
+     "options": [
+      "i-12-w13",
+      "i-12-w14",
+      "i-12-w12"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-12-w13"
+     },
+     "answer": "i-12-w13",
+     "options": [
+      "i-12-w14",
+      "i-12-w15",
+      "i-12-w13"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-12-w14"
+     },
+     "answer": "i-12-w14",
+     "options": [
+      "i-12-w15",
+      "i-12-w11",
+      "i-12-w14"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-12-w15"
+     },
+     "answer": "i-12-w15",
+     "options": [
+      "i-12-w11",
+      "i-12-w12",
+      "i-12-w15"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "You have chosen. Say you will take this.",
+     "answer": "i-12-w13",
+     "he": "אֶקַּח אֶת זֶה",
+     "translit": "ekach et zeh",
+     "en": "I'll take this",
+     "audio": {
+      "clipId": "i-12-w13",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "i-12-w5",
+    "i-12-w6",
+    "i-12-w7",
+    "i-12-w9",
+    "i-12-w10"
+   ],
+   "listenIds": [
+    "i-12-w11",
+    "i-12-w12",
+    "i-12-w13",
+    "i-12-w14",
+    "i-12-w15"
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-12-w11",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-12-w12",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-12-w13",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-12-w14",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "i-12-w15",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 6,
+     "kind": "word",
+     "id": "i-12-w5",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 7,
+     "kind": "line",
+     "id": "i-12-w6",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 8,
+     "kind": "word",
+     "id": "i-12-w7",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 9,
+     "kind": "word",
+     "id": "i-12-w9",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 10,
+     "kind": "word",
+     "id": "i-12-w10",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    }
+   ]
+  },
+  {
    "id": "pu-directions-p01",
    "title": "Where Is...?",
    "order": 1,
@@ -39566,6 +40472,2072 @@
    ]
   },
   {
+   "id": "pu-pharmacy-p01",
+   "title": "Words at the Pharmacy",
+   "order": 1,
+   "kind": "learn",
+   "can": "Name the pharmacy, medicine, pills, a prescription and a headache.",
+   "grammar": {
+    "point": "The pharmacy and what you ask for",
+    "body": "בֵּית מֶרְקַחַת is the pharmacy. תְּרוּפָה is a medicine and כַּדּוּרִים are pills. A מִרְשָׁם is the prescription from the doctor. כְּאֵב רֹאשׁ is a headache: כְּאֵב is an ache and רֹאשׁ is the head.",
+    "examples": [
+     {
+      "itemId": "i-14-w1",
+      "he": "בֵּית מֶרְקַחַת",
+      "en": "pharmacy"
+     },
+     {
+      "itemId": "i-14-w5",
+      "he": "כְּאֵב רֹאשׁ",
+      "en": "headache"
+     }
+    ]
+   },
+   "grammarNote": "The pharmacy and what you ask for. בֵּית מֶרְקַחַת is the pharmacy. תְּרוּפָה is a medicine and כַּדּוּרִים are pills. A מִרְשָׁם is the prescription from the doctor. כְּאֵב רֹאשׁ is a headache: כְּאֵב is an ache and רֹאשׁ is the head.",
+   "items": [
+    {
+     "id": "i-14-w1",
+     "source": "data/curriculum/lessons.json#I-14.words[0]",
+     "he": "בֵּית מֶרְקַחַת",
+     "en": "pharmacy",
+     "translit": "beit merkachat",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-14-w1"
+     },
+     "audio": {
+      "clipId": "i-14-w1",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-14-w2",
+     "source": "data/curriculum/lessons.json#I-14.words[1]",
+     "he": "תְּרוּפָה",
+     "en": "medicine",
+     "translit": "terufah",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-14-w2"
+     },
+     "audio": {
+      "clipId": "i-14-w2",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-14-w3",
+     "source": "data/curriculum/lessons.json#I-14.words[2]",
+     "he": "כַּדּוּרִים",
+     "en": "pills",
+     "translit": "kadurim",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-14-w3"
+     },
+     "audio": {
+      "clipId": "i-14-w3",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-14-w4",
+     "source": "data/curriculum/lessons.json#I-14.words[3]",
+     "he": "מִרְשָׁם",
+     "en": "prescription",
+     "translit": "mirsham",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-14-w4"
+     },
+     "audio": {
+      "clipId": "i-14-w4",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-14-w5",
+     "source": "data/curriculum/lessons.json#I-14.words[4]",
+     "he": "כְּאֵב רֹאשׁ",
+     "en": "headache",
+     "translit": "ke'ev rosh",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-14-w5"
+     },
+     "audio": {
+      "clipId": "i-14-w5",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-14-w1"
+     },
+     "answer": "i-14-w1",
+     "options": [
+      "i-14-w2",
+      "i-14-w3",
+      "i-14-w1"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-14-w2"
+     },
+     "answer": "i-14-w2",
+     "options": [
+      "i-14-w3",
+      "i-14-w4",
+      "i-14-w2"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-14-w3"
+     },
+     "answer": "i-14-w3",
+     "options": [
+      "i-14-w4",
+      "i-14-w5",
+      "i-14-w3"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-14-w4"
+     },
+     "answer": "i-14-w4",
+     "options": [
+      "i-14-w5",
+      "i-14-w1",
+      "i-14-w4"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-14-w5"
+     },
+     "answer": "i-14-w5",
+     "options": [
+      "i-14-w1",
+      "i-14-w2",
+      "i-14-w5"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "You need medicine. Name the pharmacy.",
+     "answer": "i-14-w1",
+     "he": "בֵּית מֶרְקַחַת",
+     "translit": "beit merkachat",
+     "en": "pharmacy",
+     "audio": {
+      "clipId": "i-14-w1",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "prompt": "Your head hurts. Name a headache.",
+     "answer": "i-14-w5",
+     "he": "כְּאֵב רֹאשׁ",
+     "translit": "ke'ev rosh",
+     "en": "headache",
+     "audio": {
+      "clipId": "i-14-w5",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "help-08",
+    "il18-w5"
+   ],
+   "listenIds": [
+    "i-14-w1",
+    "i-14-w2",
+    "i-14-w3",
+    "i-14-w4",
+    "i-14-w5"
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-14-w1",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-14-w2",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-14-w3",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-14-w4",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "i-14-w5",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 6,
+     "kind": "line",
+     "id": "help-08",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 7,
+     "kind": "word",
+     "id": "il18-w5",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    }
+   ]
+  },
+  {
+   "id": "pu-pharmacy-p02",
+   "title": "Pain, Fever and How Often",
+   "order": 2,
+   "kind": "learn",
+   "can": "Name a sore throat, a stomach ache and a fever, and say once a day.",
+   "grammar": {
+    "point": "כְּאֵב plus the part that hurts",
+    "body": "כְּאֵב joins the part of the body that hurts: כְּאֵב גָּרוֹן is a sore throat and כְּאֵב בֶּטֶן is a stomach ache, built the same way as the word for a headache. A fever is חֹם, and נֶגֶד means against, so a medicine can be נֶגֶד חֹם. Once a day is פַּעַם בְּיוֹם.",
+    "examples": [
+     {
+      "itemId": "i-14-w6",
+      "he": "כְּאֵב גָּרוֹן",
+      "en": "sore throat"
+     },
+     {
+      "itemId": "i-14-w10",
+      "he": "פַּעַם בְּיוֹם",
+      "en": "once a day"
+     }
+    ]
+   },
+   "grammarNote": "כְּאֵב plus the part that hurts. כְּאֵב joins the part of the body that hurts: כְּאֵב גָּרוֹן is a sore throat and כְּאֵב בֶּטֶן is a stomach ache, built the same way as the word for a headache. A fever is חֹם, and נֶגֶד means against, so a medicine can be נֶגֶד חֹם. Once a day is פַּעַם בְּיוֹם.",
+   "items": [
+    {
+     "id": "i-14-w6",
+     "source": "data/curriculum/lessons.json#I-14.words[5]",
+     "he": "כְּאֵב גָּרוֹן",
+     "en": "sore throat",
+     "translit": "ke'ev garon",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-14-w6"
+     },
+     "audio": {
+      "clipId": "i-14-w6",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-14-w7",
+     "source": "data/curriculum/lessons.json#I-14.words[6]",
+     "he": "כְּאֵב בֶּטֶן",
+     "en": "stomach ache",
+     "translit": "ke'ev beten",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-14-w7"
+     },
+     "audio": {
+      "clipId": "i-14-w7",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-14-w8",
+     "source": "data/curriculum/lessons.json#I-14.words[7]",
+     "he": "חֹם",
+     "en": "fever",
+     "translit": "chom",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-14-w8"
+     },
+     "audio": {
+      "clipId": "i-14-w8",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-14-w9",
+     "source": "data/curriculum/lessons.json#I-14.words[8]",
+     "he": "נֶגֶד",
+     "en": "against, for (a symptom)",
+     "translit": "neged",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-14-w9"
+     },
+     "audio": {
+      "clipId": "i-14-w9",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-14-w10",
+     "source": "data/curriculum/lessons.json#I-14.words[9]",
+     "he": "פַּעַם בְּיוֹם",
+     "en": "once a day",
+     "translit": "pa'am beyom",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-14-w10"
+     },
+     "audio": {
+      "clipId": "i-14-w10",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-14-w6"
+     },
+     "answer": "i-14-w6",
+     "options": [
+      "i-14-w7",
+      "i-14-w8",
+      "i-14-w6"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-14-w7"
+     },
+     "answer": "i-14-w7",
+     "options": [
+      "i-14-w8",
+      "i-14-w9",
+      "i-14-w7"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-14-w8"
+     },
+     "answer": "i-14-w8",
+     "options": [
+      "i-14-w9",
+      "i-14-w10",
+      "i-14-w8"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-14-w9"
+     },
+     "answer": "i-14-w9",
+     "options": [
+      "i-14-w10",
+      "i-14-w6",
+      "i-14-w9"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-14-w10"
+     },
+     "answer": "i-14-w10",
+     "options": [
+      "i-14-w6",
+      "i-14-w7",
+      "i-14-w10"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "Your throat hurts. Name a sore throat.",
+     "answer": "i-14-w6",
+     "he": "כְּאֵב גָּרוֹן",
+     "translit": "ke'ev garon",
+     "en": "sore throat",
+     "audio": {
+      "clipId": "i-14-w6",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "prompt": "The label says one time each day. Say once a day.",
+     "answer": "i-14-w10",
+     "he": "פַּעַם בְּיוֹם",
+     "translit": "pa'am beyom",
+     "en": "once a day",
+     "audio": {
+      "clipId": "i-14-w10",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "i-14-w4",
+    "i-14-w5"
+   ],
+   "listenIds": [
+    "i-14-w6",
+    "i-14-w7",
+    "i-14-w8",
+    "i-14-w9",
+    "i-14-w10"
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-14-w6",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-14-w7",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-14-w8",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-14-w9",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "i-14-w10",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 6,
+     "kind": "word",
+     "id": "i-14-w4",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 7,
+     "kind": "word",
+     "id": "i-14-w5",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    }
+   ]
+  },
+  {
+   "id": "pu-pharmacy-p03",
+   "title": "Before, After and Allergies",
+   "order": 3,
+   "kind": "speak",
+   "can": "Say twice a day, before and after, and name an allergy and antibiotics.",
+   "grammar": {
+    "point": "The ending of פַּעֲמַיִם means two",
+    "body": "פַּעַם is one time and פַּעֲמַיִם is two times, so פַּעֲמַיִם בְּיוֹם is twice a day. אַחֲרֵי is after and לִפְנֵי is before, as in before or after a meal. אָלֶרְגִּי is allergic, in the form a man uses about himself. אַנְטִיבְּיוֹטִיקָה is antibiotics.",
+    "examples": [
+     {
+      "itemId": "i-14-w11",
+      "he": "פַּעֲמַיִם בְּיוֹם",
+      "en": "twice a day"
+     },
+     {
+      "itemId": "i-14-w14",
+      "he": "אָלֶרְגִּי",
+      "en": "allergic (m)"
+     }
+    ]
+   },
+   "grammarNote": "The ending of פַּעֲמַיִם means two. פַּעַם is one time and פַּעֲמַיִם is two times, so פַּעֲמַיִם בְּיוֹם is twice a day. אַחֲרֵי is after and לִפְנֵי is before, as in before or after a meal. אָלֶרְגִּי is allergic, in the form a man uses about himself. אַנְטִיבְּיוֹטִיקָה is antibiotics.",
+   "items": [
+    {
+     "id": "i-14-w11",
+     "source": "data/curriculum/lessons.json#I-14.words[10]",
+     "he": "פַּעֲמַיִם בְּיוֹם",
+     "en": "twice a day",
+     "translit": "pa'amayim beyom",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-14-w11"
+     },
+     "audio": {
+      "clipId": "i-14-w11",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-14-w12",
+     "source": "data/curriculum/lessons.json#I-14.words[11]",
+     "he": "אַחֲרֵי",
+     "en": "after",
+     "translit": "acharei",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-14-w12"
+     },
+     "audio": {
+      "clipId": "i-14-w12",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-14-w13",
+     "source": "data/curriculum/lessons.json#I-14.words[12]",
+     "he": "לִפְנֵי",
+     "en": "before",
+     "translit": "lifnei",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-14-w13"
+     },
+     "audio": {
+      "clipId": "i-14-w13",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-14-w14",
+     "source": "data/curriculum/lessons.json#I-14.words[13]",
+     "he": "אָלֶרְגִּי",
+     "en": "allergic (m)",
+     "translit": "alergi",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-14-w14"
+     },
+     "audio": {
+      "clipId": "i-14-w14",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     },
+     "form": "to or by a man"
+    },
+    {
+     "id": "i-14-w15",
+     "source": "data/curriculum/lessons.json#I-14.words[14]",
+     "he": "אַנְטִיבְּיוֹטִיקָה",
+     "en": "antibiotics",
+     "translit": "antibiotika",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-14-w15"
+     },
+     "audio": {
+      "clipId": "i-14-w15",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-14-w11"
+     },
+     "answer": "i-14-w11",
+     "options": [
+      "i-14-w12",
+      "i-14-w13",
+      "i-14-w11"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-14-w12"
+     },
+     "answer": "i-14-w12",
+     "options": [
+      "i-14-w13",
+      "i-14-w14",
+      "i-14-w12"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-14-w13"
+     },
+     "answer": "i-14-w13",
+     "options": [
+      "i-14-w14",
+      "i-14-w15",
+      "i-14-w13"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-14-w14"
+     },
+     "answer": "i-14-w14",
+     "options": [
+      "i-14-w15",
+      "i-14-w11",
+      "i-14-w14"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-14-w15"
+     },
+     "answer": "i-14-w15",
+     "options": [
+      "i-14-w11",
+      "i-14-w12",
+      "i-14-w15"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "The pharmacist says two times each day. Say twice a day.",
+     "answer": "i-14-w11",
+     "he": "פַּעֲמַיִם בְּיוֹם",
+     "translit": "pa'amayim beyom",
+     "en": "twice a day",
+     "audio": {
+      "clipId": "i-14-w11",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "prompt": "You are a man with an allergy. Say allergic.",
+     "answer": "i-14-w14",
+     "he": "אָלֶרְגִּי",
+     "translit": "alergi",
+     "en": "allergic (m)",
+     "audio": {
+      "clipId": "i-14-w14",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "i-14-w9",
+    "i-14-w10"
+   ],
+   "listenIds": [
+    "i-14-w11",
+    "i-14-w12",
+    "i-14-w13",
+    "i-14-w14",
+    "i-14-w15"
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-14-w11",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-14-w12",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-14-w13",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-14-w14",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "i-14-w15",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 6,
+     "kind": "word",
+     "id": "i-14-w9",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 7,
+     "kind": "word",
+     "id": "i-14-w10",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    }
+   ]
+  },
+  {
+   "id": "pu-pharmacy-p04",
+   "title": "Unit Review",
+   "order": 4,
+   "kind": "review",
+   "can": "Ask where the pharmacy is and review the unit.",
+   "grammar": {
+    "point": "Finding the pharmacy",
+    "body": "אֵיפֹה בֵּית הַמִּרְקַחַת? asks where the pharmacy is. With הַ it is the pharmacy, a particular one: בֵּית מֶרְקַחַת becomes בֵּית הַמִּרְקַחַת, and the הַ goes on the second word.",
+    "examples": [
+     {
+      "itemId": "directions-18",
+      "he": "אֵיפֹה בֵּית הַמִּרְקַחַת?",
+      "en": "where is the pharmacy?"
+     }
+    ]
+   },
+   "grammarNote": "Finding the pharmacy. אֵיפֹה בֵּית הַמִּרְקַחַת? asks where the pharmacy is. With הַ it is the pharmacy, a particular one: בֵּית מֶרְקַחַת becomes בֵּית הַמִּרְקַחַת, and the הַ goes on the second word.",
+   "items": [
+    {
+     "id": "directions-18",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֵיפֹה בֵּית הַמִּרְקַחַת?",
+     "en": "where is the pharmacy?",
+     "translit": "eifo beit hamirkachat?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "directions-18"
+     },
+     "audio": {
+      "clipId": "directions-18",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "line",
+      "id": "directions-18"
+     },
+     "answer": "directions-18",
+     "options": [
+      "directions-18"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "You are in a new town and need medicine. Ask where the pharmacy is.",
+     "answer": "directions-18",
+     "he": "אֵיפֹה בֵּית הַמִּרְקַחַת?",
+     "translit": "eifo beit hamirkachat?",
+     "en": "where is the pharmacy?",
+     "audio": {
+      "clipId": "directions-18",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "i-14-w10",
+    "i-14-w11",
+    "i-14-w12",
+    "i-14-w13",
+    "i-14-w14",
+    "i-14-w15"
+   ],
+   "listenIds": [
+    "directions-18"
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "directions-18",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-14-w10",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-14-w11",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-14-w12",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "i-14-w13",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 6,
+     "kind": "word",
+     "id": "i-14-w14",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 7,
+     "kind": "word",
+     "id": "i-14-w15",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    }
+   ]
+  },
+  {
+   "id": "pu-hospital-p01",
+   "title": "The Hospital and Who Works There",
+   "order": 1,
+   "kind": "learn",
+   "can": "Name the hospital, a doctor and a nurse.",
+   "grammar": {
+    "point": "The hospital, a doctor and a nurse",
+    "body": "בֵּית חוֹלִים is the hospital. רוֹפֵא is a doctor, in the form used for a man. אָחוֹת is a nurse, and it is also the word for a sister.",
+    "examples": [
+     {
+      "itemId": "i-20-w1",
+      "he": "בֵּית חוֹלִים",
+      "en": "hospital"
+     },
+     {
+      "itemId": "i-20-w2",
+      "he": "רוֹפֵא",
+      "en": "medical doctor, physician"
+     }
+    ]
+   },
+   "grammarNote": "The hospital, a doctor and a nurse. בֵּית חוֹלִים is the hospital. רוֹפֵא is a doctor, in the form used for a man. אָחוֹת is a nurse, and it is also the word for a sister.",
+   "items": [
+    {
+     "id": "i-20-w1",
+     "source": "data/curriculum/lessons.json#I-20.words[0]",
+     "he": "בֵּית חוֹלִים",
+     "en": "hospital",
+     "translit": "beit cholim",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-20-w1"
+     },
+     "audio": {
+      "clipId": "i-20-w1",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-20-w2",
+     "source": "data/curriculum/lessons.json#I-20.words[1]",
+     "he": "רוֹפֵא",
+     "en": "medical doctor, physician",
+     "translit": "rofe",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-20-w2"
+     },
+     "audio": {
+      "clipId": "i-20-w2",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-20-w4",
+     "source": "data/curriculum/lessons.json#I-20.words[3]",
+     "he": "אָחוֹת",
+     "en": "nurse (f)",
+     "translit": "achot",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-20-w4"
+     },
+     "audio": {
+      "clipId": "i-20-w4",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     },
+     "form": "to or by a woman"
+    }
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-20-w1"
+     },
+     "answer": "i-20-w1",
+     "options": [
+      "i-20-w2",
+      "i-20-w4",
+      "i-20-w1"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-20-w2"
+     },
+     "answer": "i-20-w2",
+     "options": [
+      "i-20-w4",
+      "i-20-w1",
+      "i-20-w2"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-20-w4"
+     },
+     "answer": "i-20-w4",
+     "options": [
+      "i-20-w1",
+      "i-20-w2",
+      "i-20-w4"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "The taxi driver asks where to. Name the hospital.",
+     "answer": "i-20-w1",
+     "he": "בֵּית חוֹלִים",
+     "translit": "beit cholim",
+     "en": "hospital",
+     "audio": {
+      "clipId": "i-20-w1",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "prompt": "You ask who will see you. Name a doctor.",
+     "answer": "i-20-w2",
+     "he": "רוֹפֵא",
+     "translit": "rofe",
+     "en": "medical doctor, physician",
+     "audio": {
+      "clipId": "i-20-w2",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "i-14-w15",
+    "directions-18"
+   ],
+   "listenIds": [
+    "i-20-w1",
+    "i-20-w2",
+    "i-20-w4"
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-20-w1",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-20-w2",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-20-w4",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-14-w15",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 5,
+     "kind": "line",
+     "id": "directions-18",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    }
+   ]
+  },
+  {
+   "id": "pu-hospital-p02",
+   "title": "Insurance, Tests and Emergencies",
+   "order": 2,
+   "kind": "learn",
+   "can": "Name insurance, a test, blood and an emergency, and say it hurts.",
+   "grammar": {
+    "point": "כּוֹאֵב says it hurts",
+    "body": "כּוֹאֵב means it hurts, and it comes from the same root as the word for an ache. Insurance is בִּטּוּחַ. A בְּדִיקָה is a test or an examination, and דָּם is blood. חֵרוּם is an emergency.",
+    "examples": [
+     {
+      "itemId": "i-20-w7",
+      "he": "כּוֹאֵב",
+      "en": "it hurts"
+     },
+     {
+      "itemId": "i-20-w8",
+      "he": "בְּדִיקָה",
+      "en": "test, examination"
+     }
+    ]
+   },
+   "grammarNote": "כּוֹאֵב says it hurts. כּוֹאֵב means it hurts, and it comes from the same root as the word for an ache. Insurance is בִּטּוּחַ. A בְּדִיקָה is a test or an examination, and דָּם is blood. חֵרוּם is an emergency.",
+   "items": [
+    {
+     "id": "i-20-w6",
+     "source": "data/curriculum/lessons.json#I-20.words[5]",
+     "he": "בִּטּוּחַ",
+     "en": "insurance",
+     "translit": "bituach",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-20-w6"
+     },
+     "audio": {
+      "clipId": "i-20-w6",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-20-w7",
+     "source": "data/curriculum/lessons.json#I-20.words[6]",
+     "he": "כּוֹאֵב",
+     "en": "it hurts",
+     "translit": "ko'ev",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-20-w7"
+     },
+     "audio": {
+      "clipId": "i-20-w7",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-20-w8",
+     "source": "data/curriculum/lessons.json#I-20.words[7]",
+     "he": "בְּדִיקָה",
+     "en": "test, examination",
+     "translit": "bedikah",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-20-w8"
+     },
+     "audio": {
+      "clipId": "i-20-w8",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-20-w9",
+     "source": "data/curriculum/lessons.json#I-20.words[8]",
+     "he": "דָּם",
+     "en": "blood",
+     "translit": "dam",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-20-w9"
+     },
+     "audio": {
+      "clipId": "i-20-w9",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-20-w10",
+     "source": "data/curriculum/lessons.json#I-20.words[9]",
+     "he": "חֵרוּם",
+     "en": "emergency",
+     "translit": "cherum",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-20-w10"
+     },
+     "audio": {
+      "clipId": "i-20-w10",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-20-w6"
+     },
+     "answer": "i-20-w6",
+     "options": [
+      "i-20-w7",
+      "i-20-w8",
+      "i-20-w6"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-20-w7"
+     },
+     "answer": "i-20-w7",
+     "options": [
+      "i-20-w8",
+      "i-20-w9",
+      "i-20-w7"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-20-w8"
+     },
+     "answer": "i-20-w8",
+     "options": [
+      "i-20-w9",
+      "i-20-w10",
+      "i-20-w8"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-20-w9"
+     },
+     "answer": "i-20-w9",
+     "options": [
+      "i-20-w10",
+      "i-20-w6",
+      "i-20-w9"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-20-w10"
+     },
+     "answer": "i-20-w10",
+     "options": [
+      "i-20-w6",
+      "i-20-w7",
+      "i-20-w10"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "The doctor presses your arm. Say it hurts.",
+     "answer": "i-20-w7",
+     "he": "כּוֹאֵב",
+     "translit": "ko'ev",
+     "en": "it hurts",
+     "audio": {
+      "clipId": "i-20-w7",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "prompt": "It cannot wait. Name an emergency.",
+     "answer": "i-20-w10",
+     "he": "חֵרוּם",
+     "translit": "cherum",
+     "en": "emergency",
+     "audio": {
+      "clipId": "i-20-w10",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "i-20-w2",
+    "i-20-w4"
+   ],
+   "listenIds": [
+    "i-20-w6",
+    "i-20-w7",
+    "i-20-w8",
+    "i-20-w9",
+    "i-20-w10"
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-20-w6",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-20-w7",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-20-w8",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-20-w9",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "i-20-w10",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 6,
+     "kind": "word",
+     "id": "i-20-w2",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 7,
+     "kind": "word",
+     "id": "i-20-w4",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    }
+   ]
+  },
+  {
+   "id": "pu-hospital-p03",
+   "title": "Ambulance, Passport and Family",
+   "order": 3,
+   "kind": "speak",
+   "can": "Name an ambulance, the passport and family.",
+   "grammar": {
+    "point": "הַ makes it the passport",
+    "body": "אַמְבּוּלַנְס is an ambulance. הַדַּרְכּוֹן is the passport: the הַ at the front is the word the. At a hospital desk you may be asked for הַדַּרְכּוֹן, and about your מִשְׁפָּחָה, your family.",
+    "examples": [
+     {
+      "itemId": "i-20-w11",
+      "he": "אַמְבּוּלַנְס",
+      "en": "ambulance"
+     },
+     {
+      "itemId": "i-20-w12",
+      "he": "הַדַּרְכּוֹן",
+      "en": "the passport"
+     }
+    ]
+   },
+   "grammarNote": "הַ makes it the passport. אַמְבּוּלַנְס is an ambulance. הַדַּרְכּוֹן is the passport: the הַ at the front is the word the. At a hospital desk you may be asked for הַדַּרְכּוֹן, and about your מִשְׁפָּחָה, your family.",
+   "items": [
+    {
+     "id": "i-20-w11",
+     "source": "data/curriculum/lessons.json#I-20.words[10]",
+     "he": "אַמְבּוּלַנְס",
+     "en": "ambulance",
+     "translit": "ambulans",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-20-w11"
+     },
+     "audio": {
+      "clipId": "i-20-w11",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-20-w12",
+     "source": "data/curriculum/lessons.json#I-20.words[11]",
+     "he": "הַדַּרְכּוֹן",
+     "en": "the passport",
+     "translit": "hadarkon",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-20-w12"
+     },
+     "audio": {
+      "clipId": "i-20-w12",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-20-w13",
+     "source": "data/curriculum/lessons.json#I-20.words[12]",
+     "he": "מִשְׁפָּחָה",
+     "en": "family",
+     "translit": "mishpachah",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-20-w13"
+     },
+     "audio": {
+      "clipId": "i-20-w13",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-20-w11"
+     },
+     "answer": "i-20-w11",
+     "options": [
+      "i-20-w12",
+      "i-20-w13",
+      "i-20-w11"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-20-w12"
+     },
+     "answer": "i-20-w12",
+     "options": [
+      "i-20-w13",
+      "i-20-w11",
+      "i-20-w12"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-20-w13"
+     },
+     "answer": "i-20-w13",
+     "options": [
+      "i-20-w11",
+      "i-20-w12",
+      "i-20-w13"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "Someone has collapsed in the street. Name an ambulance.",
+     "answer": "i-20-w11",
+     "he": "אַמְבּוּלַנְס",
+     "translit": "ambulans",
+     "en": "ambulance",
+     "audio": {
+      "clipId": "i-20-w11",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "prompt": "The clerk asks for your papers. Name the passport.",
+     "answer": "i-20-w12",
+     "he": "הַדַּרְכּוֹן",
+     "translit": "hadarkon",
+     "en": "the passport",
+     "audio": {
+      "clipId": "i-20-w12",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "i-20-w9",
+    "i-20-w10"
+   ],
+   "listenIds": [
+    "i-20-w11",
+    "i-20-w12",
+    "i-20-w13"
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-20-w11",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-20-w12",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-20-w13",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-20-w9",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "i-20-w10",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    }
+   ]
+  },
+  {
+   "id": "pu-hospital-p04",
+   "title": "Unit Review",
+   "order": 4,
+   "kind": "review",
+   "can": "Ask where the hospital is and say you need a doctor.",
+   "grammar": {
+    "point": "אֲנִי צָרִיךְ says I need",
+    "body": "אֵיפֹה בֵּית הַחוֹלִים? asks where the hospital is. אֲנִי צָרִיךְ רוֹפֵא says I need a doctor, in the form a man uses: צָרִיךְ is the man's form.",
+    "examples": [
+     {
+      "itemId": "directions-17",
+      "he": "אֵיפֹה בֵּית הַחוֹלִים?",
+      "en": "where is the hospital?"
+     },
+     {
+      "itemId": "help-02",
+      "he": "אֲנִי צָרִיךְ רוֹפֵא",
+      "en": "I need a doctor"
+     }
+    ]
+   },
+   "grammarNote": "אֲנִי צָרִיךְ says I need. אֵיפֹה בֵּית הַחוֹלִים? asks where the hospital is. אֲנִי צָרִיךְ רוֹפֵא says I need a doctor, in the form a man uses: צָרִיךְ is the man's form.",
+   "items": [
+    {
+     "id": "directions-17",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֵיפֹה בֵּית הַחוֹלִים?",
+     "en": "where is the hospital?",
+     "translit": "eifo beit hacholim?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "directions-17"
+     },
+     "audio": {
+      "clipId": "directions-17",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "help-02",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֲנִי צָרִיךְ רוֹפֵא",
+     "en": "I need a doctor",
+     "translit": "ani tsarich rofe",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "help-02-m"
+     },
+     "audio": {
+      "clipId": "help-02-m",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "line",
+      "id": "directions-17"
+     },
+     "answer": "directions-17",
+     "options": [
+      "help-02",
+      "directions-17"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "line",
+      "id": "help-02-m"
+     },
+     "answer": "help-02",
+     "options": [
+      "directions-17",
+      "help-02"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "You are lost and unwell. Ask where the hospital is.",
+     "answer": "directions-17",
+     "he": "אֵיפֹה בֵּית הַחוֹלִים?",
+     "translit": "eifo beit hacholim?",
+     "en": "where is the hospital?",
+     "audio": {
+      "clipId": "directions-17",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "prompt": "You are a man and feel very ill. Say you need a doctor.",
+     "answer": "help-02",
+     "he": "אֲנִי צָרִיךְ רוֹפֵא",
+     "translit": "ani tsarich rofe",
+     "en": "I need a doctor",
+     "audio": {
+      "clipId": "help-02-m",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "i-20-w8",
+    "i-20-w9",
+    "i-20-w10",
+    "i-20-w11",
+    "i-20-w12",
+    "i-20-w13"
+   ],
+   "listenIds": [
+    "directions-17",
+    "help-02-m"
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "directions-17",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "help-02",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-20-w8",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-20-w9",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "i-20-w10",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 6,
+     "kind": "word",
+     "id": "i-20-w11",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 7,
+     "kind": "word",
+     "id": "i-20-w12",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 8,
+     "kind": "word",
+     "id": "i-20-w13",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    }
+   ]
+  },
+  {
    "id": "pu-bank-p01",
    "title": "At the Bank",
    "order": 1,
@@ -49919,6 +52891,7 @@
   "pu-cafe",
   "pu-restaurant",
   "pu-shop",
+  "pu-shuk",
   "pu-directions",
   "pu-transport",
   "pu-small-talk",
@@ -49939,6 +52912,8 @@
   "pu-decide",
   "pu-work",
   "pu-health",
+  "pu-pharmacy",
+  "pu-hospital",
   "pu-bank",
   "pu-post",
   "pu-emergencies",

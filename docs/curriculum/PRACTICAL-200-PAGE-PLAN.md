@@ -10,6 +10,16 @@ All 189 pages are written in full and show in the live `#/practical` course, whi
 - Tests: `tests/curriculum.practical-pages.test.js` (10 tests)
 - Builder: the page builder script kept with the lane's working files; it reads only repo data
 
+## Update, 2026-11-10 (evening): 200 Written Pages in 40 Units
+
+Three place units now have written pages too, which takes the course from 189 to 200 written pages: the shuk (3 pages, after
+Shopping), the pharmacy (4 pages) and the hospital (4 pages, both after the health unit). The 189 earlier pages are unchanged.
+The specs are in `tools/curriculum/place_page_specs.py` and `tools/curriculum/build_place_pages.py` builds them. Three lesson
+words whose clips failed the voice check are left off these pages (i-12-w8, i-20-w3, i-20-w5). The level check pages were not
+rewritten, so they do not yet draw on the three new units. Five more place units (supermarket, university, school, going out,
+airport taxi; 16 pages) keep their simpler pages, because the plan and its tests cap the course at 200 written pages. Where
+the text below says 189 pages or 37 units, read 200 and 40.
+
 ## One Course, Not Two
 
 `#/practical` is the single Israel course. `#/israel-units` and `#/israel-units/:id` stay registered so old bookmarks and search

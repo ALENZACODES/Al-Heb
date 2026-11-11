@@ -26,9 +26,9 @@
   "check": "End-of-level check across every unit in the level"
  },
  "totals": {
-  "units": 37,
-  "pages": 189,
-  "written": 189
+  "units": 40,
+  "pages": 200,
+  "written": 200
  },
  "units": [
   {
@@ -597,6 +597,44 @@
      "title": "Closing Time and Unit Review",
      "status": "written",
      "route": "#/practical/pu-shop/pu-shop-p09"
+    }
+   ]
+  },
+  {
+   "id": "pu-shuk",
+   "level": "L1",
+   "title": "At the Shuk",
+   "lessons": [
+    "I-12"
+   ],
+   "phrasebookSituation": null,
+   "dialogue": null,
+   "file": "data/curriculum/practical/pu-shuk.json",
+   "route": "#/practical/pu-shuk",
+   "pages": [
+    {
+     "id": "pu-shuk-p01",
+     "order": 1,
+     "kind": "learn",
+     "title": "The Market and the Prices",
+     "status": "written",
+     "route": "#/practical/pu-shuk/pu-shuk-p01"
+    },
+    {
+     "id": "pu-shuk-p02",
+     "order": 2,
+     "kind": "speak",
+     "title": "A Discount and Two Vegetables",
+     "status": "written",
+     "route": "#/practical/pu-shuk/pu-shuk-p02"
+    },
+    {
+     "id": "pu-shuk-p03",
+     "order": 3,
+     "kind": "review",
+     "title": "Unit Review",
+     "status": "written",
+     "route": "#/practical/pu-shuk/pu-shuk-p03"
     }
    ]
   },
@@ -1633,6 +1671,98 @@
      "title": "Unit Review",
      "status": "written",
      "route": "#/practical/pu-health/pu-health-p07"
+    }
+   ]
+  },
+  {
+   "id": "pu-pharmacy",
+   "level": "L3",
+   "title": "At the Pharmacy",
+   "lessons": [
+    "I-14"
+   ],
+   "phrasebookSituation": null,
+   "dialogue": null,
+   "file": "data/curriculum/practical/pu-pharmacy.json",
+   "route": "#/practical/pu-pharmacy",
+   "pages": [
+    {
+     "id": "pu-pharmacy-p01",
+     "order": 1,
+     "kind": "learn",
+     "title": "Words at the Pharmacy",
+     "status": "written",
+     "route": "#/practical/pu-pharmacy/pu-pharmacy-p01"
+    },
+    {
+     "id": "pu-pharmacy-p02",
+     "order": 2,
+     "kind": "learn",
+     "title": "Pain, Fever and How Often",
+     "status": "written",
+     "route": "#/practical/pu-pharmacy/pu-pharmacy-p02"
+    },
+    {
+     "id": "pu-pharmacy-p03",
+     "order": 3,
+     "kind": "speak",
+     "title": "Before, After and Allergies",
+     "status": "written",
+     "route": "#/practical/pu-pharmacy/pu-pharmacy-p03"
+    },
+    {
+     "id": "pu-pharmacy-p04",
+     "order": 4,
+     "kind": "review",
+     "title": "Unit Review",
+     "status": "written",
+     "route": "#/practical/pu-pharmacy/pu-pharmacy-p04"
+    }
+   ]
+  },
+  {
+   "id": "pu-hospital",
+   "level": "L3",
+   "title": "Hospital and Clinic",
+   "lessons": [
+    "I-20"
+   ],
+   "phrasebookSituation": null,
+   "dialogue": null,
+   "file": "data/curriculum/practical/pu-hospital.json",
+   "route": "#/practical/pu-hospital",
+   "pages": [
+    {
+     "id": "pu-hospital-p01",
+     "order": 1,
+     "kind": "learn",
+     "title": "The Hospital and Who Works There",
+     "status": "written",
+     "route": "#/practical/pu-hospital/pu-hospital-p01"
+    },
+    {
+     "id": "pu-hospital-p02",
+     "order": 2,
+     "kind": "learn",
+     "title": "Insurance, Tests and Emergencies",
+     "status": "written",
+     "route": "#/practical/pu-hospital/pu-hospital-p02"
+    },
+    {
+     "id": "pu-hospital-p03",
+     "order": 3,
+     "kind": "speak",
+     "title": "Ambulance, Passport and Family",
+     "status": "written",
+     "route": "#/practical/pu-hospital/pu-hospital-p03"
+    },
+    {
+     "id": "pu-hospital-p04",
+     "order": 4,
+     "kind": "review",
+     "title": "Unit Review",
+     "status": "written",
+     "route": "#/practical/pu-hospital/pu-hospital-p04"
     }
    ]
   },

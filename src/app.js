@@ -38,7 +38,8 @@ async function makeAudio() {
   try {
     const m = await import('./audio/player.js');
     if (typeof m.createAudio !== 'function') throw new Error('player unavailable');
-    return createShellAudio({ settings, loadManifest: () => fetchFullManifest((u) => fetch(u)), loadSummary: () => fetchAudioSummary((u) => fetch(u)), createAudio: m.createAudio });
+    return createShellAudio({ settings, loadManifest: () => fetchFullManifest((u) => fetch(u)), loadSummary: () => fetchAudioSummary((u) => fetch(u)),
+      loadHolds: () => fetch('data/lab/clip-holds.json').then((r) => (r.ok ? r.json() : null)).then((j) => (Array.isArray(j?.paths) ? j.paths : [])), createAudio: m.createAudio });
   } catch (e) { console.warn('lane 4 audio player not used:', e?.message); }
   return (await import('./shell/audio-stub.js')).createStubAudio({ settings }); // fallback only: loaded when the player is unavailable
 }

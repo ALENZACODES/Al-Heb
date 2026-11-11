@@ -6,51 +6,51 @@ Reading this table: "required" counts the clips the app can ask for (optional wh
 
 Status labels (the same table the app shows, src/shell/audio-labels.js): recorded = "Recorded by a human reader"; tts = "Israeli voice"; missing = "No audio yet".
 
-**Overall: 22282 of 23801 required clips exist (93.6%); Recorded by a human reader: 0; Israeli voice: 21093; No audio yet: 1519.**
+**Overall: 23029 of 23801 required clips exist (96.8%); Recorded by a human reader: 0; Israeli voice: 21093; No audio yet: 772.**
 
 ## By talent and group
 
 ### Ashkenazi reader (woman)  (voice=f, tradition=ashkenazi)
 
-Required 3369; have 2971; missing 398.
+Required 3369; have 3344; missing 25.
 
 | group | required | recorded | tts | via equivalent | missing | optional (missing/total) | who can supply |
 |---|---:|---:|---:|---:|---:|---:|---|
-| letter | 22 | 0 | 0 | 0 | 22 | 0/0 | human only |
-| letter-final | 5 | 0 | 0 | 0 | 5 | 0/0 | human only |
-| letter-variant | 4 | 0 | 0 | 0 | 4 | 0/0 | human only |
-| letter-sound | 22 | 0 | 0 | 0 | 22 | 0/0 | human only |
-| letter-variant-sound | 4 | 0 | 0 | 0 | 4 | 0/0 | human only |
-| niqqud | 15 | 0 | 0 | 0 | 15 | 0/0 | human only |
-| syllable | 110 | 0 | 0 | 0 | 110 | 0/0 | human only |
+| letter | 22 | 0 | 0 | 22 | 0 | 0/0 | human only |
+| letter-final | 5 | 0 | 0 | 5 | 0 | 0/0 | human only |
+| letter-variant | 4 | 0 | 0 | 4 | 0 | 0/0 | human only |
+| letter-sound | 22 | 0 | 0 | 22 | 0 | 0/0 | human only |
+| letter-variant-sound | 4 | 0 | 0 | 4 | 0 | 0/0 | human only |
+| niqqud | 15 | 0 | 0 | 15 | 0 | 0/0 | human only |
+| syllable | 110 | 0 | 0 | 110 | 0 | 0/0 | human only |
 | lesson-word | 418 | 0 | 416 | 0 | 2 | 0/0 | human only |
 | prayer-line | 152 | 0 | 129 | 0 | 23 | 0/0 | human only |
 | prayer-word | 1573 | 0 | 1573 | 0 | 0 | 0/0 | human only |
-| prayer-whole | 0 | 0 | 0 | 0 | 0 | 21/21 | human only |
-| vocab-word | 1000 | 0 | 844 | 0 | 156 | 0/0 | human only |
+| prayer-whole | 0 | 0 | 0 | 0 | 0 | 3/21 | human only |
+| vocab-word | 1000 | 0 | 844 | 156 | 0 | 0/0 | human only |
 | vocab-alias | 0 | 0 | 0 | 0 | 0 | 0/0 | human only |
-| vocab-extra | 44 | 0 | 9 | 0 | 35 | 0/0 | human only |
+| vocab-extra | 44 | 0 | 9 | 35 | 0 | 0/0 | human only |
 
 ### Ashkenazi reader (man)  (voice=m, tradition=ashkenazi)
 
-Required 3366; have 2967; missing 399.
+Required 3366; have 3341; missing 25.
 
 | group | required | recorded | tts | via equivalent | missing | optional (missing/total) | who can supply |
 |---|---:|---:|---:|---:|---:|---:|---|
-| letter | 22 | 0 | 0 | 0 | 22 | 0/0 | human only |
-| letter-final | 5 | 0 | 0 | 0 | 5 | 0/0 | human only |
-| letter-variant | 4 | 0 | 0 | 0 | 4 | 0/0 | human only |
-| letter-sound | 22 | 0 | 0 | 0 | 22 | 0/0 | human only |
-| letter-variant-sound | 4 | 0 | 0 | 0 | 4 | 0/0 | human only |
-| niqqud | 15 | 0 | 0 | 0 | 15 | 0/0 | human only |
-| syllable | 110 | 0 | 0 | 0 | 110 | 0/0 | human only |
+| letter | 22 | 0 | 0 | 22 | 0 | 0/0 | human only |
+| letter-final | 5 | 0 | 0 | 5 | 0 | 0/0 | human only |
+| letter-variant | 4 | 0 | 0 | 4 | 0 | 0/0 | human only |
+| letter-sound | 22 | 0 | 0 | 22 | 0 | 0/0 | human only |
+| letter-variant-sound | 4 | 0 | 0 | 4 | 0 | 0/0 | human only |
+| niqqud | 15 | 0 | 0 | 15 | 0 | 0/0 | human only |
+| syllable | 110 | 0 | 0 | 110 | 0 | 0/0 | human only |
 | lesson-word | 418 | 0 | 416 | 0 | 2 | 0/0 | human only |
 | prayer-line | 152 | 0 | 129 | 0 | 23 | 0/0 | human only |
 | prayer-word | 1573 | 0 | 1573 | 0 | 0 | 0/0 | human only |
-| prayer-whole | 0 | 0 | 0 | 0 | 0 | 21/21 | human only |
-| vocab-word | 1000 | 0 | 843 | 0 | 157 | 0/0 | human only |
+| prayer-whole | 0 | 0 | 0 | 0 | 0 | 3/21 | human only |
+| vocab-word | 1000 | 0 | 843 | 157 | 0 | 0/0 | human only |
 | vocab-alias | 0 | 0 | 0 | 0 | 0 | 0/0 | human only |
-| vocab-extra | 41 | 0 | 6 | 0 | 35 | 0/0 | human only |
+| vocab-extra | 41 | 0 | 6 | 35 | 0 | 0/0 | human only |
 
 ### Noa (woman), Israeli  (voice=f, tradition=israeli)
 

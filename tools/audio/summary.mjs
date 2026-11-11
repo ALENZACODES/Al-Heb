@@ -10,12 +10,18 @@
 //   spoken                 tts + every extra: all synthetic speech clips on disk. This is the N the sound line shows.
 //   sfx                    non-speech interface sounds (audio/sfx); never counted as speech
 //   other                  audio on disk outside the spoken count (OTHER_FOLDERS + Hebrew Torah lines from the Torah manifest)
+//   playsIsraeli           Sephardi/Ashkenazi rows with no clip of their own that play the Israeli clip of the same voice by the
+//                          owner's rule (status "plays-israeli", tools/audio/plays_israeli.mjs). Not missing.
+//   viaOther               rows with status "missing" that still play a clip: an alias target or a linked id (src/audio/player.js)
+//   missing                rows with no clip at all: the device voice reads them, where the device has a Hebrew voice
+//   total = recorded + tts + playsIsraeli + viaOther + missing
 // Reads the committed manifests through manifest_io.mjs; it does not rebuild them (see docs/audio/ISRAELI-VOICE-2026-11-07.md, "Still open").
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { isSyntheticStatus } from '../../src/shell/audio-labels.js';
 import { loadManifestFull } from './manifest_io.mjs';
+import { createAudio, PLAYS_ISRAELI } from '../../src/audio/player.js';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '..');
 export const SUMMARY_FILE = 'data/audio/summary.json';
@@ -78,6 +84,15 @@ export function summaryOf(entries, root = ROOT) {
   const kinds = {};
   for (const e of entries) if (isSyntheticStatus(e.status)) kinds[e.kind] = (kinds[e.kind] || 0) + 1;
   const tts = Object.values(kinds).reduce((s, n) => s + n, 0);
+  const players = {};
+  const P = (v, t) => (players[v + t] ||= createAudio({ settings: { voice: v, congregation: t }, manifest: entries, AudioCtor: class {}, speech: null }));
+  let viaOther = 0, missing = 0;
+  for (const e of entries) {
+    if (e.status !== 'missing') continue;
+    let s = null;
+    try { s = P(e.voice, e.tradition).status(e.kind, e.id); } catch { s = null; }
+    if (s && s.source === 'file' && s.path && fs.existsSync(path.join(root, s.path))) viaOther++; else missing++;
+  }
   return {
     total: entries.length,
     recorded: entries.filter((e) => e.status === 'recorded').length,
@@ -87,6 +102,9 @@ export function summaryOf(entries, root = ROOT) {
     spoken: tts + Object.values(extra).reduce((s, n) => s + n, 0),
     sfx: countSfx(root),
     other: countOther(root),
+    playsIsraeli: entries.filter((e) => e.status === PLAYS_ISRAELI).length,
+    viaOther,
+    missing,
   };
 }
 export const summaryText = (s) => JSON.stringify(s) + '\n';

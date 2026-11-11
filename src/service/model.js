@@ -102,6 +102,22 @@ export function buildCards(orders, orderId, byId, tradition) {
   });
 }
 
+/** The clip for line k (0-based) of a card: its own line clip ("<id>-l<k+1>") for a multi-line text, the card's line or prayer clip
+ *  for a one-line text. Returns {kind,id} or null when no file exists (never a speech-synthesis fallback). */
+export function lineClipFor(audio, card, k, tradition) {
+  if (!audio || typeof audio.status !== 'function') return null;
+  if (card.he.length === 1) return clipFor(audio, card, tradition);
+  try { const p = audio.status('line', `${card.id}-l${k + 1}`, { tradition }); if (p && p.source === 'file') return { kind: 'line', id: `${card.id}-l${k + 1}` }; } catch { /* no clip */ }
+  return null;
+}
+
+/** Lines of an order that have a clip, for the coverage tab: {lines, withClip, pct}. Counts the clips a learner can play here. */
+export function audioCoverage(audio, cards, tradition) {
+  let lines = 0, withClip = 0;
+  for (const c of cards) for (let k = 0; k < c.he.length; k++) { lines++; if (lineClipFor(audio, c, k, tradition)) withClip++; }
+  return { lines, withClip, pct: lines ? Math.round((withClip / lines) * 100) : 0 };
+}
+
 /** Does a real audio clip exist for this card (not a speech-synthesis fallback)? Returns {kind,id} to play or null. */
 export function clipFor(audio, card, tradition) {
   if (!audio || typeof audio.status !== 'function') return null;

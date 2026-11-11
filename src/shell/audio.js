@@ -2,7 +2,7 @@
 // The wrapper keeps the player's interface (play, playSequence, has, status, stop) and publishes what is actually
 // being used for sound: a recorded file, the browser's text-to-speech voice, or nothing.
 // Status wording comes from ./audio-labels.js (one table for every screen and report).
-import { fileLabel, isSyntheticStatus, STATUS_LABELS, traditionCaption } from './audio-labels.js';
+import { fileLabel, isSyntheticStatus, STATUS_LABELS, traditionCaption, PLAYS_ISRAELI } from './audio-labels.js';
 import { spokenClips } from './audio-truth.js';
 import { gameMusic } from '../audio/music.js';
 import { sfx } from '../audio/sfx.js';
@@ -22,10 +22,10 @@ export const REASONS = {
 };
 const TRAD = { israeli: 'Israeli', sephardi: 'Sephardi', ashkenazi: 'Ashkenazi' };
 
-/** Pure: summarise the manifest ({total, recorded, tts, missing}). */
+/** Pure: summarise the manifest ({total, recorded, tts, playsIsraeli, missing}); playsIsraeli rows play the Israeli clip by rule. */
 export function summarizeManifest(manifest) {
-  const s = { total: manifest.length, recorded: 0, tts: 0, missing: 0 };
-  for (const e of manifest) { if (e.status === 'recorded') s.recorded++; else if (isSyntheticStatus(e.status)) s.tts++; else s.missing++; }
+  const s = { total: manifest.length, recorded: 0, tts: 0, playsIsraeli: 0, missing: 0 };
+  for (const e of manifest) { if (e.status === 'recorded') s.recorded++; else if (isSyntheticStatus(e.status)) s.tts++; else if (e.status === PLAYS_ISRAELI) s.playsIsraeli++; else s.missing++; }
   return s;
 }
 
@@ -35,6 +35,8 @@ export function describeResult(r, congregation = 'israeli') {
   if (r.source === 'file') {
     return { mode: 'file', text: `Sound: ${fileLabel(r.entryStatus, r.fileTradition || r.tradition, r.entrySource)} (${r.voice === 'm' ? 'man' : 'woman'}, ${traditionCaption(r.tradition, r.fileTradition)}).` };
   }
+  if (r.held && r.source === 'tts-fallback') return { mode: 'tts', text: "Sound: this recording is held for review, so your device's Hebrew voice reads it instead (not a recording)." };
+  if (r.held && r.source !== 'file' && r.played !== true) return { mode: 'none', text: 'No sound: this recording is held for review, and this device has no Hebrew voice to read it instead.' };
   if (r.source === 'tts-fallback' || r.played === true) {
     const mismatch = r.mismatch || (r.tradition && r.tradition !== 'israeli');
     return { mode: 'tts', text: `Sound: your browser's text-to-speech voice, not a recording. Gender and accent are set by your device, not by the Man/Woman choice${mismatch ? `, and it reads Israeli pronunciation, not ${TRAD[r.tradition] || r.tradition}` : ''}.` };
@@ -49,6 +51,7 @@ export function playbackLine(ev, plan = ev || {}) {
   if (ev?.type === 'playing' && (plan.source === 'file' || ev?.source === 'file')) {
     return { mode: 'file', text: `Playing: ${fileLabel(plan.entryStatus, plan.fileTradition || plan.tradition, plan.entrySource)} (${who}).${speed}` };
   }
+  if (ev?.type === 'playing' && plan.held) return { mode: 'tts', text: `Playing with this device's Hebrew voice: the recording is held for review.${speed}` };
   if (ev?.type === 'playing') return { mode: 'tts', text: `Playing with this device's Hebrew voice.${speed}` };
   if (ev?.type === 'your-turn') return { mode: 'idle', text: 'Your turn: say it.' };
   if (ev?.type === 'ended' && ev?.step === 'your-turn') return { mode: 'idle', text: 'Sound finished. Press Play to hear it again.' };
@@ -123,7 +126,7 @@ const initialText = (summary, shipped = null) => (summary.recorded > 0
  * play/ensureManifest, not on every status()). onNeed(fn) calls fn(kind) whenever something asks about a clip of that kind (the shell
  * uses it to load the word shard only when a word clip is asked about).
  */
-export function createShellAudio({ settings, manifest, loadManifest, loadSummary, createAudio }) {
+export function createShellAudio({ settings, manifest, loadManifest, loadSummary, loadHolds, createAudio }) {
   let summary = summarizeManifest(manifest || []);
   const inner = createAudio({
     settings: {
@@ -156,6 +159,8 @@ export function createShellAudio({ settings, manifest, loadManifest, loadSummary
     if (mstate !== 'checking') { setM('checking'); publish({ mode: 'idle', pending: true, text: 'Sound: checking which recordings exist...' }); }
     pending = Promise.resolve().then(loadManifest).then(async (list) => {
       inner.extend(list); summary = summarizeManifest(list);
+      // Held clips (S-11): loaded with the list; any failure means no holds, never a broken player.
+      try { if (typeof loadHolds === 'function' && typeof inner.setHeld === 'function') inner.setHeld(await loadHolds()); } catch { /* no holds */ }
       let shipped = null;
       try { if (typeof loadSummary === 'function') shipped = await loadSummary(); } catch { shipped = null; } // no count: the line still says what the clips are
       setM('ready'); publish(initialText(summary, shipped)); return true;
@@ -252,11 +257,13 @@ export function createShellAudio({ settings, manifest, loadManifest, loadSummary
         speechBegin();
         let fromMedia = false;
         try {
+          let heldNow = false;
+          try { heldNow = !!inner.status?.(kind, id, o2)?.held; } catch { heldNow = false; }
           const r = await inner.play(kind, id, { ...o2, onMedia(ev) {
             fromMedia = true;
             if (ev?.type === 'playing') emitPlay({ phase: 'playing', token });
             if (epoch !== playEpoch) return;
-            publish(playbackLine(ev));
+            publish(playbackLine(heldNow ? { ...ev, held: true } : ev));
           } });
           if (epoch !== playEpoch || r?.stopped) { phase = 'stopped'; return { ...r, stopped: true }; }
           if (!fromMedia || r?.source === 'tts-fallback' || r?.source === 'none' || r?.fileError) publish(describeResult(r));

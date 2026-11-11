@@ -8,6 +8,9 @@ import { fileLabel, STATUS_LABELS } from './audio-labels.js';
 import { isAudioFree } from './audiofree.js';
 export const DEVICE_LABEL = 'device voice, not recorded yet'; // the phone or browser reads it: say so, never a teacher's name or 'Israeli voice'
 export const NO_AUDIO = STATUS_LABELS.missing;
+/** S-11: a clip held back for review (data/lab/clip-holds.json) is never played; the screen says so and says what plays instead. */
+export const HELD_DEVICE = 'This recording is held for review, so your device voice reads it instead';
+export const HELD_NONE = 'This recording is held for review, so it does not play yet';
 
 /** 'yes' | 'no' | 'unknown' for a he-IL browser voice. getVoices() is often empty until the browser loads them: 'unknown'. */
 export function deviceVoiceState(speech = globalThis.speechSynthesis, Utt = globalThis.SpeechSynthesisUtterance) {
@@ -28,7 +31,8 @@ export function audioAccess(audio, kind, id, o = {}) {
     const s = typeof audio.status === 'function' ? audio.status(kind, id, o) : null;
     if (s) {
       if (s.source === 'file') return { level: 'file', label: fileLabel(s.entryStatus, s.fileTradition || s.tradition, s.entrySource) };
-      if (s.source === 'tts-fallback') return { level: 'device', label: DEVICE_LABEL };
+      if (s.source === 'tts-fallback') return s.held ? { level: 'device', label: HELD_DEVICE, held: true } : { level: 'device', label: DEVICE_LABEL };
+      if (s.held) return { level: 'none', label: HELD_NONE, reason: 'held', held: true };
       return { level: 'none', label: NO_AUDIO, reason: s.reason || 'unavailable', checking: s.reason === 'checking audio...' };
     }
     if (typeof audio.has === 'function') return audio.has(kind, id, o) ? { level: 'file', label: fileLabel(undefined) } : { level: 'none', label: NO_AUDIO, reason: 'no-clip' };
@@ -37,7 +41,7 @@ export function audioAccess(audio, kind, id, o = {}) {
 }
 
 /** One-line status chip text for an access result ('' when nothing to say). */
-export function chipText(a) { return a.level === 'none' ? NO_AUDIO : a.label; }
+export function chipText(a) { return a.level === 'none' ? (a.held ? HELD_NONE : NO_AUDIO) : a.label; }
 
 const VOICE_NAME = { m: 'Ari (the man’s voice)', f: 'Noa (the woman’s voice)' };
 /** Plain name of a voice slot, for honest fallback labels ("Hear Noa (the woman's voice)"). */
@@ -112,11 +116,12 @@ export function audioButton(h, ctx, o) {
   // before falling back to the plain "No audio yet" line.
   const noneNode = () => {
     const step = ladderStep(ctx && ctx.audio, kind, id, opt, ctx);
-    if (!step) return h('span', { class: o.noneClass || 'audio-none muted', 'data-audio-state': 'none' }, NO_AUDIO, respelling ? ` - say it as written: ${respelling}` : '');
+    const held = audioAccess(ctx && ctx.audio, kind, id, opt).held;
+    if (!step) return h('span', { class: o.noneClass || 'audio-none muted', 'data-audio-state': held ? 'held' : 'none' }, held ? HELD_NONE : NO_AUDIO, respelling ? ` - say it as written: ${respelling}` : '');
     const note = o.note || h('span', { class: 'audio-chip muted', role: 'status', 'aria-live': 'polite' }, step.label);
     const playOpts = step.kind === 'voice' ? { ...opt, voice: step.voice } : { ...opt, allowMismatchedTts: true };
     const btnLabel = step.kind === 'voice' ? `Hear ${VOICE_NAME[step.voice]}` : 'Hear the device voice';
-    const lead = step.kind === 'voice' ? `No clip in ${VOICE_NAME[step.forVoice]} for this yet.` : 'No clip for this yet.';
+    const lead = held ? `${HELD_NONE}.` : step.kind === 'voice' ? `No clip in ${VOICE_NAME[step.forVoice]} for this yet.` : 'No clip for this yet.';
     const btn = h('button', { type: 'button', class: o.class || 'btn secondary alef-play', ...(o.buttonId ? { id: o.buttonId } : {}), ...(o.attrs || {}), 'data-audio': `${kind}/${id}`, 'data-audio-state': 'ladder', 'data-ladder': step.kind,
       'aria-label': `${btnLabel}${o.name ? `: ${o.name}` : ''} (${step.label})`,
       onclick: async () => {
@@ -137,7 +142,8 @@ export function audioButton(h, ctx, o) {
       try {
         if (ctx.audio.ensureManifest) await ctx.audio.ensureManifest();
         const now = audioAccess(ctx.audio, kind, id, opt);
-        if (now.level === 'none') { note.textContent = respelling ? `${NO_AUDIO}. Say it as written: ${respelling}` : NO_AUDIO; return; }
+        const none = now.held ? HELD_NONE : NO_AUDIO;
+        if (now.level === 'none') { note.textContent = respelling ? `${none}. Say it as written: ${respelling}` : none; return; }
         note.textContent = now.label;
         const r = await playWithState(ctx, btn, kind, id, opt);
         if (r && r.source === 'none') note.textContent = `${NO_AUDIO}${respelling ? `. Say it as written: ${respelling}` : ''}`;

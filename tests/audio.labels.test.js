@@ -37,7 +37,7 @@ test('synthetic statuses: honest per-tradition wording, never the human label', 
   assert.ok(!isSyntheticStatus('recorded') && !isSyntheticStatus('missing') && !isSyntheticStatus('recorded-tts') && !isSyntheticStatus(undefined));
   assert.equal(statusLabel('synthetic-unreviewed') === STATUS_LABELS.missing, false);
   const s = summarizeManifest([{ status: 'recorded' }, { status: 'tts' }, { status: 'synthetic-unreviewed' }, { status: 'synthetic-reviewed' }, { status: 'missing' }]);
-  assert.deepEqual(s, { total: 5, recorded: 1, tts: 3, missing: 1 });
+  assert.deepEqual(s, { total: 5, recorded: 1, tts: 3, playsIsraeli: 0, missing: 1 });
   assert.equal(describeResult({ source: 'file', voice: 'f', tradition: 'sephardi', entryStatus: 'synthetic-unreviewed' }).text, `Sound: ${SEPH} (woman, Sephardi).`);
   assert.equal(describeResult({ source: 'file', voice: 'm', tradition: 'sephardi', fileTradition: 'israeli', entryStatus: 'synthetic-unreviewed' }).text,
     'Sound: Israeli voice (man, Israeli voice; Sephardi reading shown in English letters).', 'the label names the FILE tradition and the caption names both');
@@ -75,4 +75,12 @@ test('outside-synthetic clips: honest label, no claim about how they were made, 
     assert.doesNotMatch(l, /respelling|pointed Hebrew/); assert.notEqual(l, STATUS_LABELS.recorded);
   }
   assert.equal(fileLabel('synthetic-unreviewed', 'sephardi', 'outside-synthetic'), 'Sephardi voice');
+});
+
+test('plays-israeli: a Sephardi or Ashkenazi row with no clip of its own is labelled as the Israeli voice and counted apart from missing', async () => {
+  const { PLAYS_ISRAELI } = await import('../src/audio/player.js');
+  assert.equal(statusLabel(PLAYS_ISRAELI, 'sephardi'), 'Israeli voice; Sephardi reading shown in English letters');
+  assert.equal(statusLabel(PLAYS_ISRAELI, 'ashkenazi'), 'Israeli voice; Ashkenazi reading shown in English letters');
+  const s = summarizeManifest([{ status: PLAYS_ISRAELI }, { status: 'missing' }, { status: 'tts' }]);
+  assert.deepEqual(s, { total: 3, recorded: 0, tts: 1, playsIsraeli: 1, missing: 1 });
 });

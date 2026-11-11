@@ -21,7 +21,7 @@ test('committed manifest has contract fields, valid paths, hebrew code points', 
     assert.match(e.id, /^[a-z0-9][a-z0-9._-]*$/);
     if (e.kind === 'letter-lecture' && e.id.endsWith('-explain-en')) assert.match(e.text, /[A-Za-z]/);
     else assert.match(e.text, /[֐-׿]/);
-    assert.ok(['missing', 'tts', 'synthetic-unreviewed', 'recorded'].includes(e.status));
+    assert.ok(['missing', 'plays-israeli', 'tts', 'synthetic-unreviewed', 'recorded'].includes(e.status));
     assert.ok(typeof e.source === 'string');
     assert.ok(!seen.has(e.path), `dup ${e.path}`); seen.add(e.path);
   }
@@ -43,6 +43,14 @@ test('covers 31 letter forms (27 + 4 variants), 15 vowels, 22x5 syllable grid fo
 test('synthetic clips have files and explicit provenance; none is a human recording', () => {
   for (const e of manifest) {
     if (e.status === 'missing') { assert.equal(e.source, 'none', e.path); assert.equal(fs.existsSync(new URL('../' + e.path, import.meta.url)), false, e.path); continue; }
+    if (e.status === 'plays-israeli') {
+      // no clip of its own; plays the Israeli clip of the same voice by the owner's rule (tools/audio/plays_israeli.mjs)
+      assert.notEqual(e.tradition, 'israeli', e.path); assert.equal(e.source, 'israeli-clip', e.path);
+      assert.equal(fs.existsSync(new URL('../' + e.path, import.meta.url)), false, e.path);
+      assert.match(e.plays, new RegExp(`^audio/${e.voice}/israeli/`), e.path);
+      assert.equal(fs.existsSync(new URL('../' + e.plays, import.meta.url)), true, e.plays);
+      continue;
+    }
     assert.ok(['tts', 'synthetic-unreviewed'].includes(e.status), e.path);
     assert.ok(e.source === 'outside-synthetic' || e.source === 'paid-cloud' || /^tts[:-]/.test(e.source), `${e.path} source ${e.source}`);
     assert.notEqual(e.synth?.reviewed, true, `${e.path} claims a review that has not happened`);
@@ -138,7 +146,7 @@ test('every donor script id resolves to a manifest entry with the right kind/voi
     for (const r of rows) for (const v of ['m', 'f']) {
       const e = idx.get(`audio/${v}/${t}/word/${r.id}.mp3`);
       assert.ok(e, `${t}/${v}/${r.id} missing from manifest`);
-      assert.deepEqual([e.kind, e.voice, e.tradition], ['word', v, t]); assert.ok(['missing', 'tts', 'synthetic-unreviewed'].includes(e.status));
+      assert.deepEqual([e.kind, e.voice, e.tradition], ['word', v, t]); assert.ok(['missing', 'plays-israeli', 'tts', 'synthetic-unreviewed'].includes(e.status));
     }
   }
   assert.deepEqual(ids.israeli, ids.sephardi); assert.deepEqual(ids.israeli, ids.ashkenazi);
@@ -177,7 +185,7 @@ test('vocab ids: every mapped or Listen-pool vocab id has a word entry for every
   const ids = new Set([...Object.values(map), ...buildPool(words, cfg).map((w) => w.id)]);
   for (const id of ids) for (const t of ['israeli', 'sephardi', 'ashkenazi']) for (const v of ['m', 'f']) assert.ok(have.has(`${v}|${t}|${id}`), `${v}/${t}/${id}`);
   assert.ok(manifest.filter((x) => x.group === 'vocab-alias').every((e) => /^word\/[a-z0-9._-]+-w\d+$/.test(e.aliasOf)));
-  assert.ok(manifest.filter((x) => x.group === 'vocab-alias' || x.group === 'vocab-extra').every((e) => e.status === 'missing' || e.status === 'recorded' || e.status === 'tts' || e.status === 'synthetic-unreviewed'));
+  assert.ok(manifest.filter((x) => x.group === 'vocab-alias' || x.group === 'vocab-extra').every((e) => e.status === 'missing' || e.status === 'plays-israeli' || e.status === 'recorded' || e.status === 'tts' || e.status === 'synthetic-unreviewed'));
 });
 
 test('manifest serialization preserves every field and stays deterministic without indentation overhead', () => {

@@ -11,7 +11,7 @@ const MAX_CLIP_BYTES = +/const MAX_CLIP_BYTES = (\d+) \* 1024/.exec(SW)[1] * 102
 test('every learning and prayer clip fits the service worker offline cap', () => {
   let n = 0;
   for (const e of loadManifestFull()) {
-    if (e.status === 'missing') continue;
+    if (e.status === 'missing' || e.status === 'plays-israeli') continue; // plays-israeli: no file of its own
     const size = fs.statSync(new URL('../' + e.path, import.meta.url)).size; n++;
     assert.ok(size <= MAX_CLIP_BYTES, `${e.path} is ${size} bytes, over the worker cap of ${MAX_CLIP_BYTES}`);
   }

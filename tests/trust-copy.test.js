@@ -17,7 +17,7 @@ const json = (p) => JSON.parse(read(p));
 const summary = json('data/audio/summary.json');
 const listOf = (m) => (Array.isArray(m) ? m : (m.entries || m.clips || Object.values(m)));
 const all = [json('data/audio/manifest.json'), json('data/audio/manifest-kind-word.json'), ...['israeli', 'sephardi', 'ashkenazi'].map((t) => json(`data/audio/manifest-words-${t}.json`))].flatMap(listOf);
-const clips = all.filter((e) => e.status !== 'missing');
+const clips = all.filter((e) => e.status !== 'missing' && e.status !== 'plays-israeli'); // plays-israeli rows have no file of their own
 
 test('About: pictures line does not deny the pictures that are shown; the count is read from data/letters/memory-chain.json', async () => {
   const chain = json('data/letters/memory-chain.json');
@@ -72,7 +72,8 @@ test('Man/Woman: a clip plays only for its own voice and tradition, and the word
   assert.equal(mAsh.source, 'file', 'Man + Ashkenazi plays a clip');
   assert.match(mAsh.path, mAsh.fileTradition === 'israeli' ? /audio\/m\/israeli\// : /audio\/m\/ashkenazi\//);
   const d = audioTruthDetail(summary);
-  assert.match(d, /not swapped for a different voice or tradition/);
+  assert.match(d, /never swapped for the other voice/);
+  assert.match(d, /Sephardi and Ashkenazi settings play the Israeli clip of that voice/);
   assert.match(d, /Israeli style has not been verified/);
   assert.doesNotMatch(d, /native|recorded by|All .* use the Man \(Ari\) voice/i);
   for (const text of [plain('settingsIntro'), d, read('src/shell/how.view.js')]) {

@@ -96,7 +96,7 @@ test('local manifest: exact files that exist are not reported as another traditi
   for (const e of man) {
     const key = `${e.voice}|${e.tradition}`;
     tally[key] ??= { present: 0, missing: 0, onDisk: 0 };
-    if (e.status === 'missing') tally[key].missing += 1;
+    if (e.status === 'missing' || e.status === 'plays-israeli') tally[key].missing += 1; // plays-israeli: no file of its own
     else { tally[key].present += 1; if (e.path && existsSync(e.path)) tally[key].onDisk += 1; }
   }
   const haveTree = existsSync('audio/f/israeli/letter/alef.mp3') || existsSync('audio/m/israeli/letter/alef.mp3');

@@ -7,6 +7,8 @@ import { h, heSpan } from "../shell/ui.js";
 import { readerSlow, setReaderSlow, applyReaderRate, speedLine } from "./reader.speed.js";
 import { resolveBookId, shelfNumber, nextOnShelf } from "./order.js";
 import { storyCheck } from "./check.js";
+/** S-04: a page held back because it says the divine name; nothing plays, and the page says why. */
+export const HELD_PAGE = "This page says the divine name, so it is not read aloud until the way to read it here is decided. Read it from the page.";
 
 const fetchJson = async (ctx, url) => {
   const r = await (ctx.fetchFn ?? fetch)(url);
@@ -128,6 +130,7 @@ export async function mount(root, ctx) {
     const listen = (voice, label) => h("button", {
       type: "button", class: "btn book-listen",
       onclick: async () => {
+        if (p.audioHeld === "divine-name") { audioState.textContent = HELD_PAGE; return; }
         if (!p.audio || !p.audio[voice]) { audioState.textContent = "This page's voice is not recorded yet."; return; }
         audioState.textContent = "Loading…";
         playingLabel = label.replace(/^▶\s*/, "");

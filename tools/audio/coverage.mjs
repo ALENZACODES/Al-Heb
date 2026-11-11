@@ -37,14 +37,15 @@ export function suppliers(e) {
 export function entryState(e, index) {
   if (e.status === 'recorded') return 'recorded';
   if (isSyntheticStatus(e.status)) return 'tts'; // any synthetic status counts in the tts column
+  if (e.status === 'plays-israeli') return 'via-equivalent'; // plays the Israeli clip of the same voice by the owner's rule
   if (e.aliasOf) {
     const [k, ...r] = e.aliasOf.split('/');
     const t = index.get(`${e.voice}|${e.tradition}|${k}|${r.join('/')}`);
-    if (t && t.status !== 'missing') return 'via-alias';
+    if (t && t.status !== 'missing' && t.status !== 'plays-israeli') return 'via-alias';
   }
   for (const tr of e.equivalentTo || []) {
     const t = index.get(`${e.voice}|${tr}|${e.kind}|${e.id}`);
-    if (t && t.status !== 'missing') return 'via-equivalent';
+    if (t && t.status !== 'missing' && t.status !== 'plays-israeli') return 'via-equivalent';
   }
   return 'missing';
 }

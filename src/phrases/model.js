@@ -6,7 +6,7 @@
 // Slow is a separate slot. A normal clip is never stored as slow.
 import { loadJSON } from '../curriculum/data.js';
 import { genderedForms } from '../curriculum/gender.js';
-import { statusLabel } from '../shell/audio-labels.js';
+import { statusLabel, noOwnFile } from '../shell/audio-labels.js';
 
 export const TRADITIONS = ['israeli', 'sephardi', 'ashkenazi'];
 export const VOICES = ['m', 'f'];
@@ -47,7 +47,7 @@ export function clipSpeed(entry) {
 export function indexManifest(manifest) {
   const byText = new Map();
   for (const e of manifest || []) {
-    if (!e || e.status === 'missing' || typeof e.text !== 'string') continue;
+    if (!e || noOwnFile(e) || typeof e.text !== 'string') continue;
     const key = nfc(e.text);
     let bucket = byText.get(key);
     if (!bucket) { bucket = []; byText.set(key, bucket); }
@@ -71,7 +71,7 @@ export function pickClip(he, manifestOrIndex, { tradition, voice, speed, exactId
   if (!hasPointedHebrew(key)) return null;
   const hits = [];
   for (const e of asIndex(manifestOrIndex).get(key) || []) {
-    if (!e || e.status === 'missing' || !e.status) continue;
+    if (!e || noOwnFile(e) || !e.status) continue;
     if (e.id !== exactId) continue;
     if (e.tradition !== tradition || e.voice !== voice) continue;
     if (nfc(e.text) !== key) continue;

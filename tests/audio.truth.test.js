@@ -46,7 +46,7 @@ test('summary.json counts the clips outside the manifests (book pages, arcade li
 });
 
 test('"unreviewed" and "no recorded teacher" hold in the data: every clip has a synthetic status that no human has reviewed, none is recorded', () => {
-  const syn = all.filter((e) => e.status !== 'missing');
+  const syn = all.filter((e) => e.status !== 'missing' && e.status !== 'plays-israeli'); // plays-israeli rows have no file of their own
   assert.ok(syn.length > 0);
   for (const e of syn) {
     assert.ok(isSyntheticStatus(e.status), `${e.kind}/${e.id}: status ${e.status} is neither missing nor synthetic`);
@@ -63,7 +63,7 @@ test('every counted clip has its mp3 on disk, and there is no mp3 the summary do
   for (const e of json('data/audio/manifest-torah.json').filter((e) => e.status !== 'missing')) assert.ok(existsSync(join(root, e.path)), e.path);
   const other = summary.other || {};
   assert.equal(files.length, summary.recorded + summary.spoken + summary.sfx + Object.values(other).reduce((n, x) => n + x, 0));
-  const listed = new Set(all.filter((x) => x.status !== 'missing').map((e) => e.path || e.file || e.src || ''));
+  const listed = new Set(all.filter((x) => x.status !== 'missing' && x.status !== 'plays-israeli').map((e) => e.path || e.file || e.src || ''));
   for (const p of listed) assert.ok(existsSync(join(root, p)), `${p}: file missing`);
   const extraDirs = [...Object.values(EXTRA_FOLDERS).flat(), ...SFX_FOLDERS, ...Object.values(OTHER_FOLDERS).flat()];
   for (const p of torahLinePaths(root)) listed.add(p);

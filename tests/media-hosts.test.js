@@ -28,6 +28,11 @@ function standing() {
 }
 
 function mapper() { const self = {}; vm.runInNewContext(JS, { self, URL }); return self; }
+// A folder that is hosted right now, per host (the table drops a folder while its clips here differ from the host's, so the
+// tests must not name one folder that happens to be re-recorded).
+const hostedFolder = (host, start) => (mapper().ALEF_MEDIA_HOSTS.find(([pre, h]) => h === host && pre.startsWith(start)) || [])[0];
+const F_HOSTED = hostedFolder(PACKS, 'audio/f/israeli/');
+const M_HOSTED = hostedFolder(AUDIO_HOST, 'audio/m/israeli/');
 
 test('media-hosts.js is what the tool writes from tools/deploy/media-hosts.json and the clips as they stand here', (t) => {
   assert.equal(cfg.schema, 'alef.media-hosts.v2');
@@ -101,8 +106,9 @@ test('the folder state is read from the files as they stand, so a clip changed, 
 
 test('a clip address maps to its host only for hosted folders of this site', () => {
   const m = mapper();
-  assert.equal(m.alefMediaUrl(SCOPE + 'audio/f/israeli/word/r01-w1.mp3', SCOPE), PACKS + 'audio/f/israeli/word/r01-w1.mp3');
-  assert.equal(m.alefMediaUrl(SCOPE + 'audio/m/israeli/word/x.mp3', SCOPE), AUDIO_HOST + 'audio/m/israeli/word/x.mp3');
+  assert.ok(F_HOSTED && M_HOSTED, 'at least one Israeli folder per voice is on its host');
+  assert.equal(m.alefMediaUrl(SCOPE + F_HOSTED + 'r01-w1.mp3', SCOPE), PACKS + F_HOSTED + 'r01-w1.mp3');
+  assert.equal(m.alefMediaUrl(SCOPE + M_HOSTED + 'x.mp3', SCOPE), AUDIO_HOST + M_HOSTED + 'x.mp3');
   assert.equal(m.alefMediaUrl(SCOPE + 'audio/m/english/a.mp3?v=2', SCOPE), AUDIO_HOST + 'audio/m/english/a.mp3?v=2');
   // a site served from a sub-path (GitHub Pages project site)
   assert.equal(m.alefMediaUrl('https://x.github.io/Al-Heb/audio/f/english/a.mp3', 'https://x.github.io/Al-Heb/'), AUDIO_HOST + 'audio/f/english/a.mp3');
@@ -124,8 +130,8 @@ function worker(net) {
   vm.runInNewContext(SW, ctx);
   return { clipFetch: self.clipFetch, calls };
 }
-const OWN = SCOPE + 'audio/f/israeli/word/r01-w1.mp3';
-const HOSTED = PACKS + 'audio/f/israeli/word/r01-w1.mp3';
+const OWN = SCOPE + F_HOSTED + 'r01-w1.mp3';
+const HOSTED = PACKS + F_HOSTED + 'r01-w1.mp3';
 
 test('worker: a hosted clip is asked from the media host first, and the range the player wants goes with it', async () => {
   const w = worker(async (url) => new Response('host bytes', { status: url.startsWith(PACKS) ? 206 : 500 }));

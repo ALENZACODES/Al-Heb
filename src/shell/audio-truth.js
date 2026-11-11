@@ -42,10 +42,11 @@ export function audioTruthLine(a) {
 
 /** Second sentence for About and Settings: how the clips are labelled (in their manifest entries and sidecars). Only said when clips exist. @param {any} a */
 export function audioTruthDetail(a) {
-  // A clip is synthetic and unreviewed. It plays only for the voice and tradition on its own row.
-  // tests/trust-copy.test.js fails if a clip is handed to a different voice or tradition.
+  // A clip is synthetic and unreviewed. It plays only for the voice (man or woman) on its own row; the Sephardi and Ashkenazi
+  // settings play the Israeli clip of that voice when they have none of their own (owner rule, 7 November 2026).
+  // tests/trust-copy.test.js fails if a clip is handed to a different voice.
   return hasAudioCounts(a) && a.recorded === 0 && spokenClips(a) > 0
-    ? `A clip plays only for the voice and pronunciation you selected, and only when that exact combination has a file. It is not swapped for a different voice or tradition. The Israeli style has not been verified. Where no exact file exists, nothing is spoken unless this device has a Hebrew voice, and that voice is not a recording.`
+    ? `A clip plays only in the voice you selected (man or woman); it is never swapped for the other voice. The Sephardi and Ashkenazi settings play the Israeli clip of that voice, and show their own reading in English letters. The Israeli style has not been verified. Where no clip exists, nothing is spoken unless this device has a Hebrew voice, and that voice is not a recording.`
     : '';
 }
 

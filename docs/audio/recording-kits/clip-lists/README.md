@@ -12,9 +12,9 @@ Reconciliation with `node tools/audio/coverage.mjs` (required clips, state missi
 |---|---|---|---|---|---|
 | m-israeli | 313 | 0 / 0 | 0 / 23 | 313 / 313 | 336 |
 | m-sephardi | 2 | 0 / 0 | 0 / 23 | 2 / 2 | 25 |
-| m-ashkenazi | 159 | 0 / 0 | 0 / 23 | 159 / 159 | 399 |
+| m-ashkenazi | 2 | 0 / 0 | 0 / 23 | 2 / 2 | 25 |
 | f-israeli | 313 | 0 / 0 | 0 / 23 | 313 / 313 | 336 |
 | f-sephardi | 2 | 0 / 0 | 0 / 23 | 2 / 2 | 25 |
-| f-ashkenazi | 158 | 0 / 0 | 0 / 23 | 158 / 158 | 398 |
+| f-ashkenazi | 2 | 0 / 0 | 0 / 23 | 2 / 2 | 25 |
 
 Clips not listed (non-core prayer words and lines, lesson and vocabulary words beyond the cap, phrasebook, anchor and extra words, letters, vowel signs, syllables) are still missing and stay in the coverage report.

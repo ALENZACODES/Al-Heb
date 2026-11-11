@@ -754,7 +754,8 @@
    "hasImages": true,
    "hasAudio": false,
    "picturedPages": 12,
-   "audioPages": 8
+   "audioPages": 8,
+   "audioHeldPages": 4
   }
  ]
 }

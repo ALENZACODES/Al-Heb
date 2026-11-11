@@ -5,7 +5,7 @@ import { loadCorpus } from '../corpus/corpus.js';
 import { loadProgressData } from '../progress/data.js';
 import { readSnapshot, readableNow } from '../progress/model.js';
 import {
-  loadServiceData, coverage, coverageSentence, buildCards, clipFor, ORDER_IDS, FOLLOW_IDS, TRADITIONS, TRADITION_LABELS,
+  loadServiceData, coverage, coverageSentence, buildCards, clipFor, lineClipFor, audioCoverage, ORDER_IDS, FOLLOW_IDS, TRADITIONS, TRADITION_LABELS,
   MARKER_LABELS, VARIES, DRAFT_NOTICE, COVERAGE_NOTE,
 } from './model.js';
 
@@ -77,6 +77,8 @@ export async function mount(root, ctx) {
         h('p', { class: 'sv-big', 'data-pct': String(c.pct) }, `${c.pct}% ready to read`),
         h('progress', { max: '100', value: String(c.pct), 'aria-label': `${o.title}: share of lines ready to read` }),
         h('p', {}, coverageSentence(o.title, c)),
+        (() => { const a = audioCoverage(ctx.audio, buildCards(S.orders, oid, S.byId, st.tradition), st.tradition);
+          return a.lines ? h('p', { class: 'small', 'data-sv-audio': `${a.withClip}/${a.lines}` }, `Sound: ${a.withClip} of ${a.lines} lines have a clip you can play, in Ari's and Noa's synthetic voices (${a.pct}%).`) : null; })(),
         h('p', { class: 'small' }, `Words: ${c.wordsFull} of ${c.words} different words in these lines are ready to read (${c.wordsPct}%). Whole texts: ${c.textsFull} of ${c.texts}.`),
         c.almost ? h('p', { class: 'small' }, `${c.almost} more ${c.almost === 1 ? 'line is' : 'lines are'} exactly one sign away.`) : null,
         h('p', { class: 'small muted' }, `The percentage covers only the texts Aleph holds. ${c.gaps} typical ${c.gaps === 1 ? 'part is' : 'parts are'} not in Aleph yet, so it does not cover the whole service.`),
@@ -110,9 +112,14 @@ export async function mount(root, ctx) {
       h('p', { class: 'small muted' }, `Moment ${c.n} of ${c.of}`),
       h('h2', { id: 'sv-card-h' }, c.moment),
       h('p', { class: 'small muted' }, `${c.title} (${c.ref})`),
-      ...c.he.map((line, k) => h('div', { class: 'sv-line' },
-        heSpan(line, 'sv-he'),
-        st.showTr && c.tr[k] ? h('p', { class: 'sv-tr', lang: 'en' }, c.tr[k]) : null)),
+      ...c.he.map((line, k) => {
+        // a text of several lines: each line has its own Play, so a learner can follow and repeat one line at a time (M-11)
+        const lc = c.he.length > 1 ? lineClipFor(ctx.audio, c, k, st.tradition) : null;
+        return h('div', { class: 'sv-line' },
+          heSpan(line, 'sv-he'),
+          st.showTr && c.tr[k] ? h('p', { class: 'sv-tr', lang: 'en' }, c.tr[k]) : null,
+          lc ? audioButton(h, ctx, { kind: lc.kind, id: lc.id, tradition: st.tradition, text: line, label: `Play line ${k + 1}`, attrs: { 'data-sv-line': String(k + 1) } }) : null);
+      }),
       h('p', { class: 'sv-en' }, c.en.join(' ')),
       c.englishSource ? h('p', { class: 'small muted' }, `English: ${c.englishSource}`) : null,
       marks,

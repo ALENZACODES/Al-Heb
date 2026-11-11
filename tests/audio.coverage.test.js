@@ -48,8 +48,10 @@ test('states: recorded, tts, via-alias, via-equivalent, missing', () => {
 });
 
 test('who is missing what: filters by voice/tradition/group and labels the supplier honestly', () => {
-  const w = whoIsMissing(manifest, { voice: 'f', tradition: 'ashkenazi', group: 'niqqud' });
-  assert.equal(w.length, 15); assert.ok(w.every((e) => e.voice === 'f' && e.tradition === 'ashkenazi'));
+  // Ashkenazi vowels play the Israeli clip of the same voice by the owner's rule (status plays-israeli): nothing is missing there.
+  assert.equal(whoIsMissing(manifest, { voice: 'f', tradition: 'ashkenazi', group: 'niqqud' }).length, 0);
+  const w = whoIsMissing(manifest, { voice: 'f', tradition: 'israeli' });
+  assert.ok(w.length > 0); assert.ok(w.every((e) => e.voice === 'f' && e.tradition === 'israeli'));
   assert.equal(suppliers({ tradition: 'ashkenazi', group: 'lesson-word' }), 'human only');
   assert.equal(suppliers({ tradition: 'israeli', group: 'syllable' }), 'human only');
   assert.match(suppliers({ tradition: 'israeli', group: 'phrasebook' }), /TTS unvetted/);
@@ -67,5 +69,5 @@ test('docs/voices/coverage.md is current; CLI --who works and rejects bad flags'
   assert.equal(spawnSync('node', [cli, '--who', '--voice', 'x'], { encoding: 'utf8' }).status, 2);
   assert.equal(spawnSync('node', [cli, '--check'], { encoding: 'utf8' }).status, 0);
   const lst = spawnSync('node', [cli, '--who', '--voice', 'm', '--tradition', 'ashkenazi', '--group', 'letter', '--list', '--limit', '2'], { encoding: 'utf8' });
-  assert.match(lst.stdout, /audio\/m\/ashkenazi\/letter\/alef\.mp3/);
+  assert.match(lst.stdout, /Nothing missing for this filter/); // the Ashkenazi letters play the Israeli clips by rule
 });

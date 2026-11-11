@@ -72,7 +72,7 @@ for (const setting of ACCENT) {
   test(`real manifest, ${setting} setting: present own files are selected, and nothing falls silent when the Israeli counterpart exists`, () => {
     for (const voice of ['m', 'f']) {
       const audio = player(voice, setting);
-      const own = all.filter((e) => e.tradition === setting && e.voice === voice && e.status !== 'missing');
+      const own = all.filter((e) => e.tradition === setting && e.voice === voice && e.status !== 'missing' && e.status !== 'plays-israeli');
       assert.ok(own.filter((e) => e.kind === 'line').length >= 100, `${setting} line clips are in the manifest`);
       for (const e of own) {
         const r = audio.status(e.kind, e.id);

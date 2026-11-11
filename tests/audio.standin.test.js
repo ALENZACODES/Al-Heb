@@ -25,14 +25,14 @@ test('manifest: every sephardi letter, vowel, syllable and prayer without a clip
   let standIns = 0;
   for (const e of man.filter((e) => e.tradition === 'sephardi')) {
     const hasIsraeli = israeli.has(`${e.voice}|${e.kind}|${e.id}`);
-    if (e.status === 'missing' && hasIsraeli) { assert.deepEqual(e.equivalentTo, ['israeli'], e.path); standIns += 1; }
+    if ((e.status === 'missing' || e.status === 'plays-israeli') && hasIsraeli) { assert.deepEqual(e.equivalentTo, ['israeli'], e.path); standIns += 1; }
     else assert.equal(e.equivalentTo, undefined, e.path);
   }
   assert.ok(standIns >= 500, `stand-ins: ${standIns}`);
-  const missingWords = words.filter((e) => e.status === 'missing');
+  const missingWords = words.filter((e) => e.status === 'missing' || e.status === 'plays-israeli'); // no Sephardi clip of their own
   assert.ok(missingWords.length > 1800); /* 606 of the man's words gained their own Sephardi clip on 2026-11-10 */
   assert.ok(missingWords.filter((e) => e.equivalentTo?.[0] === 'israeli').length > 1400);
-  for (const e of words.filter((e) => e.status !== 'missing')) assert.equal(e.equivalentTo, undefined, e.path);
+  for (const e of words.filter((e) => e.status !== 'missing' && e.status !== 'plays-israeli')) assert.equal(e.equivalentTo, undefined, e.path);
 });
 
 test('player: with the Sephardi setting, shin, bet and oseh-shalom play the Israeli file and the result names that tradition', () => {

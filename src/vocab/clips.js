@@ -7,7 +7,7 @@
 // in PR #20, commit 8f37d4ba, file docs/audio/PLAYBACK-CONTRACT.md, on
 // the games-enrich-2026-11-06 branch. This screen does not set playbackRate itself.
 import { fileLabel, traditionCaption } from '../shell/audio-labels.js';
-import { playbackTradition, isAccentClip, isPlayableOwnClip } from '../audio/player.js';
+import { playbackTradition, isAccentClip, isPlayableOwnClip, noOwnFile } from '../audio/player.js';
 import { t } from '../shell/i18n.js';
 
 export const VOICES = Object.freeze(['m', 'f']);
@@ -53,7 +53,7 @@ export function buildClipLookup(rows, fileExists = () => true) {
   for (const e of rows || []) {
     if (e.kind !== 'word' && e.kind !== 'line') continue;
     if (!VOICES.includes(e.voice) || !TRADITIONS.includes(e.tradition)) continue;
-    if (!e.path || e.status === 'missing') continue;
+    if (!e.path || noOwnFile(e)) continue;
     if (String(e.id).startsWith('anchor-')) continue;
     if (!fileExists(e.path)) continue;
     const text = clipKey(e.text);

@@ -24,7 +24,7 @@ export function markPresent({ root = ROOT, dry = false } = {}) {
     const list = JSON.parse(fs.readFileSync(abs, 'utf8'));
     let changed = false;
     for (const e of list) {
-      if (e.status !== 'missing' || !e.path || !fs.existsSync(path.join(root, e.path))) continue;
+      if ((e.status !== 'missing' && e.status !== 'plays-israeli') || !e.path || !fs.existsSync(path.join(root, e.path))) continue; // a clip of its own now exists
       const metaRel = `${e.path}.meta.json`;
       if (!fs.existsSync(path.join(root, metaRel))) { res.noSidecar.push(e.path); continue; }
       let m;
@@ -32,7 +32,7 @@ export function markPresent({ root = ROOT, dry = false } = {}) {
       if (!isSyntheticStatus(m.status)) { res.badSidecar.push(`${metaRel}: status ${m.status} is not a synthetic status`); continue; }
       e.status = m.status;
       e.source = m.source ? String(m.source) : 'file-present-provenance-unverified';
-      delete e.equivalentTo; // the stand-in rules are listed per id only for entries with no clip of their own (data/audio/equivalence.json)
+      delete e.equivalentTo; delete e.plays; // the stand-in rules are listed per id only for entries with no clip of their own (data/audio/equivalence.json)
       if (m.synth && typeof m.synth === 'object') { delete e.synth; e.synth = m.synth; } // last key, as build_manifest.mjs writes it
       res.marked.push(e.path);
       changed = true;

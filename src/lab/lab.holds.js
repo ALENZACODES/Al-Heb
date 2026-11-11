@@ -25,6 +25,8 @@ function filePath(ctx, kind, id, options) {
 export const HELD_LABEL = 'This clip is held back for re-recording, so the written sound is shown instead.';
 /** True when the recording exists but is held (it failed the transcription checks). */
 export function isHeldClip(ctx, held, kind, id, options = {}) {
+  // The shell player now withholds held files itself (src/audio/player.js setHeld) and marks the plan `held`.
+  try { if (ctx?.audio?.status?.(kind, id, options)?.held) return true; } catch { /* fall through */ }
   if (!held?.has || !hasRecordedClip(ctx, kind, id, options)) return false;
   const p = filePath(ctx, kind, id, options);
   return !!(p && held.has(p));

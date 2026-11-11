@@ -112,7 +112,8 @@
    "audio": {},
    "illustration": "Moses kneeling barefoot before the burning bush",
    "hasImg": true,
-   "hasAudio": false
+   "hasAudio": false,
+   "audioHeld": "divine-name"
   },
   {
    "n": 9,
@@ -123,7 +124,8 @@
    "audio": {},
    "illustration": "Moses and Aaron standing before handsome Pharaoh in the palace",
    "hasImg": true,
-   "hasAudio": false
+   "hasAudio": false,
+   "audioHeld": "divine-name"
   },
   {
    "n": 10,
@@ -148,7 +150,8 @@
    "audio": {},
    "illustration": "Moses stretching his hand as the sea walls fall; Israel safe on the shore",
    "hasImg": true,
-   "hasAudio": false
+   "hasAudio": false,
+   "audioHeld": "divine-name"
   },
   {
    "n": 12,
@@ -159,7 +162,8 @@
    "audio": {},
    "illustration": "Miriam leading the women in dance and song on the far shore",
    "hasImg": true,
-   "hasAudio": false
+   "hasAudio": false,
+   "audioHeld": "divine-name"
   }
  ]
 }

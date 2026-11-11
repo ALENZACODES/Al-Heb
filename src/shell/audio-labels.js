@@ -10,8 +10,11 @@
 // A clip whose `source` is one of ACCENT_SOURCES (src/audio/player.js) is an admitted Sephardi/Ashkenazi clip: either the Israeli voice
 // reading the tradition's respelling ('tts-respelled-israeli-voice') or an older respelled clip sped up to the Israeli clip's pace
 // ('tts-respelled-tempo-capped'); its label says which, and that nobody has listened to it.
+//   plays-israeli         a Sephardi/Ashkenazi row with no clip of its own that plays the Israeli clip of the same voice (owner rule,
+//                         7 November 2026; the tradition is shown in English letters). Not a missing clip.
 // Anything else counts as 'missing' (see summarizeManifest in ./audio.js).
-import { ACCENT_SOURCES } from '../audio/player.js';
+import { ACCENT_SOURCES, PLAYS_ISRAELI } from '../audio/player.js';
+export { noOwnFile, PLAYS_ISRAELI } from '../audio/player.js';
 export const STATUS_LABELS = Object.freeze({
   recorded: 'Recorded by a human reader',
   tts: 'Israeli voice',
@@ -54,6 +57,8 @@ export function statusLabel(status, tradition, source) {
   if (tradition === 'english' && isSyntheticStatus(status)) return syntheticLabel(status, tradition, source);
   if (status === 'tts') return (tradition && tradition !== 'israeli' && TRAD_STYLE[tradition]) ? `${TRAD_STYLE[tradition]} voice` : STATUS_LABELS.tts;
   if (status === 'synthetic-unreviewed' || status === 'synthetic-reviewed') return syntheticLabel(status, tradition, source);
+  // A Sephardi or Ashkenazi row with no clip of its own plays the Israeli clip of the same voice by the owner's rule.
+  if (status === PLAYS_ISRAELI) return traditionCaption(tradition, 'israeli');
   return STATUS_LABELS.missing;
 }
 

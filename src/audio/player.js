@@ -67,12 +67,20 @@ export const isAccentSource = (source) => ADMITTED.has(String(source || ''));
 /**
  * True when this manifest row is a newer-provenance or human-recorded own-tradition clip.
  */
-export const isAccentClip = (entry) => !!entry && entry.status !== 'missing' && entry.tradition !== 'israeli' && (entry.status === 'recorded' || isAccentSource(entry.source));
+/**
+ * Manifest status of a Sephardi or Ashkenazi row that has no clip of its own and plays the Israeli clip of the same voice, by the
+ * owner's rule (7 November 2026: the Sephardi and Ashkenazi settings play the native Israeli clips; the tradition is shown only as
+ * English letters). The row's `plays` field names the Israeli file. Written by tools/audio/plays_israeli.mjs; never a missing clip.
+ */
+export const PLAYS_ISRAELI = 'plays-israeli';
+/** True when a manifest row has no file of its own at its path ("missing", or a row that plays the Israeli clip by rule). */
+export const noOwnFile = (entry) => !entry || entry.status === 'missing' || entry.status === PLAYS_ISRAELI;
+export const isAccentClip = (entry) => !!entry && !noOwnFile(entry) && entry.tradition !== 'israeli' && (entry.status === 'recorded' || isAccentSource(entry.source));
 /**
  * True when a Sephardi or Ashkenazi manifest row has a file the setting may play as itself: any present, non-missing path,
  * including the existing paid-cloud bank clips. Missing rows still fall back to the Israeli file of the same voice.
  */
-export const isPlayableOwnClip = (entry) => !!entry && entry.status !== 'missing' && entry.tradition !== 'israeli' && typeof entry.path === 'string' && !!entry.path && !String(entry.source || '').includes(':mock');
+export const isPlayableOwnClip = (entry) => !!entry && !noOwnFile(entry) && entry.tradition !== 'israeli' && typeof entry.path === 'string' && !!entry.path && !String(entry.source || '').includes(':mock');
 /**
  * The tradition whose files each setting prefers. When that row is missing, FALLBACK_TRADITION is used so nothing goes silent.
  * 10 November 2026: play the setting's own bank when the file is present.
@@ -99,7 +107,8 @@ const DEVICE_VOICE_OK = Object.freeze({ israeli: true, sephardi: true, ashkenazi
  *  manifest: Array<any>, basePath?: string,
  *  AudioCtor?: any, speech?: any, UtteranceCtor?: any,
  *  wait?: (ms:number)=>Promise<void>,
- *  allowMismatchedTts?: boolean
+ *  allowMismatchedTts?: boolean,
+ *  held?: Iterable<string>
  * }} opts
  */
 export function createAudio(opts) {
@@ -158,28 +167,28 @@ export function createAudio(opts) {
   /** File step for ONE id: exact, then alias, then equivalent tradition. Returns a partial plan or null. */
   function fileFor(voice, tradition, kind, id) {
     const exact = index.get(`${voice}|${tradition}|${kind}|${id}`);
-    if (exact && exact.status !== 'missing') {
+    if (exact && !noOwnFile(exact)) {
       return { source: 'file', path: exact.path, url: url(exact.path), entryStatus: exact.status, entrySource: exact.source, via: 'exact' };
     }
     // alias (e.g. a one-line 'prayer' record is the same clip as its 'line'): only when the target file exists
     if (exact && exact.aliasOf) {
       const [ak, ...rest] = String(exact.aliasOf).split('/');
       const target = index.get(`${voice}|${tradition}|${ak}|${rest.join('/')}`);
-      if (target && target.status !== 'missing') {
+      if (target && !noOwnFile(target)) {
         return { source: 'file', path: target.path, url: url(target.path), entryStatus: target.status, entrySource: target.source, via: 'alias' };
       }
     }
     if (exact && Array.isArray(exact.equivalentTo)) {
       for (const t of exact.equivalentTo) {
         const alt = index.get(`${voice}|${t}|${kind}|${id}`);
-        if (alt && alt.status !== 'missing') {
+        if (alt && !noOwnFile(alt)) {
           return { source: 'file', path: alt.path, url: url(alt.path), fileTradition: t, entryStatus: alt.status, entrySource: alt.source, via: 'equivalent' };
         }
         // the stand-in tradition's entry may itself be an alias (a dictionary word that plays its lesson-word clip): follow it once
         if (alt && alt.aliasOf) {
           const [ak, ...rest] = String(alt.aliasOf).split('/');
           const target = index.get(`${voice}|${t}|${ak}|${rest.join('/')}`);
-          if (target && target.status !== 'missing') {
+          if (target && !noOwnFile(target)) {
             return { source: 'file', path: target.path, url: url(target.path), fileTradition: t, entryStatus: target.status, entrySource: target.source, via: 'equivalent' };
           }
         }
@@ -196,7 +205,7 @@ export function createAudio(opts) {
     const own = index.get(`${voice}|${tradition}|${kind}|${id}`);
     if (!own) return null;
     if (isPlayableOwnClip(own) || isAccentClip(own)) return { source: 'file', path: own.path, url: url(own.path), entryStatus: own.status, entrySource: own.source, via: 'exact' };
-    if (own.aliasOf && own.status === 'missing') {
+    if (own.aliasOf && noOwnFile(own)) {
       const [ak, ...rest] = String(own.aliasOf).split('/');
       const target = index.get(`${voice}|${tradition}|${ak}|${rest.join('/')}`);
       if (target && (isPlayableOwnClip(target) || isAccentClip(target))) return { source: 'file', path: target.path, url: url(target.path), entryStatus: target.status, entrySource: target.source, via: 'alias' };
@@ -204,8 +213,16 @@ export function createAudio(opts) {
     return null;
   }
 
+  // Clips held back for review (data/lab/clip-holds.json, set through setHeld): a held file is never played. The plan falls to what
+  // would play if the file did not exist (the device voice, or nothing) and says so: `held: true`, `heldPath`.
+  let held = new Set(opts.held || []);
   /** Decide the source without playing. */
   function plan(kind, rawId, o = {}) {
+    const p = planCore(kind, rawId, o);
+    if (p.source !== 'file' || !held.has(p.path)) return p;
+    return { ...planCore(kind, rawId, { ...o, skipFiles: true }), held: true, heldPath: p.path };
+  }
+  function planCore(kind, rawId, o = {}) {
     const id = normalizeId(rawId);
     const ctxt = context(o);
     const { voice } = ctxt;
@@ -215,7 +232,7 @@ export function createAudio(opts) {
     if (tradition === 'english' && kind === 'torah-chapter-en') {
       if (!VOICES.includes(voice)) return { source: 'none', reason: 'invalid-voice', kind, id, voice, tradition };
       const entry = index.get(`${voice}|english|${kind}|${id}`);
-      if (entry && entry.status !== 'missing' && typeof entry.path === 'string' && entry.path) {
+      if (entry && !noOwnFile(entry) && typeof entry.path === 'string' && entry.path) {
         return { source: 'file', path: entry.path, url: url(entry.path), entryStatus: entry.status,
           entrySource: entry.source, via: 'exact', kind, id, voice, tradition };
       }
@@ -231,13 +248,13 @@ export function createAudio(opts) {
     // Per candidate id: own present file, then the fallback tradition's exact/alias file. Same-tradition files under any
     // linked id beat an `equivalentTo` stand-in under the requested id.
     let stand = null;
-    for (const cid of candidates(kind, id)) {
+    for (const cid of (o.skipFiles ? [] : candidates(kind, id))) {
       const own = tradition !== 'israeli' ? ownAccentFile(voice, tradition, kind, cid) : null;
       if (own) return { ...own, kind, id, voice, tradition, ...(cid !== id ? { viaId: cid } : {}) };
       // If the own row is missing but aliases a line/prayer, try that id in the Israeli fallback (the 188 Hallel/Kiddush word rows).
       if (tradition !== 'israeli') {
         const ownRow = index.get(`${voice}|${tradition}|${kind}|${cid}`);
-        if (ownRow && ownRow.aliasOf && ownRow.status === 'missing') {
+        if (ownRow && ownRow.aliasOf && noOwnFile(ownRow)) {
           const [ak, ...rest] = String(ownRow.aliasOf).split('/');
           const aliasHit = fileFor(voice, fallbackTrad, ak, rest.join('/'));
           if (aliasHit) {
@@ -459,6 +476,10 @@ export function createAudio(opts) {
     has: (kind, id, o) => plan(kind, id, o).source === 'file',
     /** what play() would use right now, without playing. */
     status: (kind, id, o) => plan(kind, id, o),
+    /** Replace the set of held file paths (clips no screen plays until a person has listened). */
+    setHeld(paths) { held = new Set(paths || []); },
+    /** True when this file path is held. */
+    isHeld: (p) => held.has(p),
     /** add entries after creation (the lazily loaded data/audio/manifest-words-<tradition>.json shards). Safe to call repeatedly. */
     extend: (entries) => { addEntries(entries || []); addLinks(entries || []); },
   };

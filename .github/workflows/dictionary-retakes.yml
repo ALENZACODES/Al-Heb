@@ -1,0 +1,82 @@
+name: dictionary-retakes
+# Re-record the Israeli clips the speech-to-text check flagged (docs/audio/asr-check.csv: fail, unheard, borderline) and keep a
+# take only when the same check hears it correctly (tools/audio/asr-check/fix.py). Twelve runners each take one slice; one job
+# then copies the kept takes into place, joins the logs, rewrites the report and commits to this branch.
+# Needs the repository secret GOOGLE_TTS_API_KEY. Nothing reaches main until the branch is reviewed and merged.
+on:
+  push:
+    branches: ['audio/retakes-*']
+    paths: ['tools/audio/asr-check/retake-queue-dictionary.txt']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: dictionary-retakes-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  retake:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 240
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0,1,2,3,4,5,6,7,8,9,10,11]
+    env:
+      LANG: C.UTF-8
+      GOOGLE_TTS_API_KEY: ${{ secrets.GOOGLE_TTS_API_KEY }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          sparse-checkout: |
+            tools/audio
+            docs/audio
+            audio/builder
+            audio/m/israeli/dictionary
+            audio/f/israeli/dictionary
+            audio/m/israeli/word
+            audio/f/israeli/word
+          sparse-checkout-cone-mode: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
+        with: { python-version: '3.12' }
+      - run: sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg && pip install -q numpy faster-whisper
+      - name: Re-record slice ${{ matrix.shard }} of 12
+        run: |
+          python tools/audio/asr-check/fix.py --execute --shard ${{ matrix.shard }} --of 12 --log slice-${{ matrix.shard }}.jsonl
+          mkdir -p out && mv slice-${{ matrix.shard }}.jsonl out/
+          for f in $(git diff --name-only -- audio); do mkdir -p "out/$(dirname "$f")"; cp "$f" "out/$f"; done
+          find out -name '*.mp3' | wc -l
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        if: always()
+        with:
+          name: retake-${{ matrix.shard }}
+          path: out
+          if-no-files-found: ignore
+  collect:
+    needs: retake
+    if: always()
+    runs-on: ubuntu-24.04
+    timeout-minutes: 150
+    env:
+      LANG: C.UTF-8
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
+        with: { python-version: '3.12' }
+      - run: sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg && pip install -q numpy faster-whisper
+      - uses: actions/download-artifact@v4
+        with: { path: takes, pattern: 'retake-*', merge-multiple: true }
+      - name: Copy the kept takes into place, join the logs, rewrite the report
+        run: |
+          mkdir -p takes
+          (cd takes && find . -name '*.mp3' -print0 | xargs -0 -r -I{} cp --parents {} "$GITHUB_WORKSPACE/")
+          find takes -name '*.mp3' | wc -l
+          python tools/audio/asr-check/fix.py --collect takes | tee /tmp/collect.txt
+          # clips replaced in earlier rounds still carry the result from before their retake: hear those again, then write the report
+          python tools/audio/asr-check/scan.py --rehear-kept | tee /tmp/summary.txt
+      - name: Commit
+        run: |
+          git config user.name "John Khan" && git config user.email "johnnykhan1@gmail.com"
+          git add audio tools/audio docs/audio
+          git diff --cached --quiet && exit 0
+          git commit -q -m "Flagged clips re-recorded: $(tail -1 /tmp/collect.txt)"
+          for i in 1 2 3 4 5; do git pull -q --rebase origin "${GITHUB_REF_NAME}" && git push -q origin "HEAD:${GITHUB_REF_NAME}" && break; sleep $((i*15)); done

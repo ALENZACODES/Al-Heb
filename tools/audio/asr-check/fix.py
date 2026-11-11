@@ -97,13 +97,47 @@ def encode(src, dst, builder):
                     '-codec:a', 'libmp3lame', dst], check=True)
 
 
+def collect(folder):
+    """Join the logs of parallel runs. The replaced clip files themselves are copied into place by the workflow."""
+    import glob
+    paths = rows_by_file()
+    recs = [r for p in sorted(glob.glob(os.path.join(folder, '*.jsonl'))) for r in L.jl_read(p)]
+    results = os.path.join(os.path.dirname(__file__), 'results.jsonl')
+    kept = human = refused = 0
+    with open(LOG, 'a', encoding='utf-8') as log, open(results, 'a', encoding='utf-8') as res, \
+            open(os.path.join(ROOT, 'docs', 'audio', 'ASR-NEEDS-HUMAN.md'), 'a', encoding='utf-8') as need:
+        for r in recs:
+            tried = r.get('tried', [])
+            if not r.get('kept') and tried and all('error' in t for t in tried):
+                refused += 1  # the voice service answered none of the takes: not a verdict on the word, so it stays on the list
+                continue
+            log.write(json.dumps(r, ensure_ascii=False) + '\n')
+            row = paths.get(r['file'])
+            if r.get('kept'):
+                kept += 1
+                # the saved result for these files is from before the retake: record what the kept take was heard as
+                for p in (row['same_audio_paths'].split() if row else [r['file']]):
+                    res.write(json.dumps({'file': p, 'asr': r.get('heard', ''), 'mode': 'single'}, ensure_ascii=False) + '\n')
+            else:
+                human += 1
+                need.write(f"- {r['hebrew']} ({row['phonetic'] if row else ''}): `{r['file']}`, no synthetic take passed\n")
+    refresh_builder_manifest()
+    print(f'collected {len(recs)} recordings: {kept} replaced, {human} no take passed, {refused} not answered by the voice service')
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--execute', action='store_true')
     ap.add_argument('--limit', type=int)
     ap.add_argument('--only', help='comma list of phonetic spellings to restrict to, e.g. shalom,barukh')
     ap.add_argument('--verdicts', default='fail,unheard,borderline')
+    ap.add_argument('--shard', type=int, default=0, help='with --of: re-record only this slice of the list (for parallel runs)')
+    ap.add_argument('--of', type=int, default=1)
+    ap.add_argument('--log', help='write this run\'s log lines here instead of fix-log.jsonl (parallel runs; join them with --collect)')
+    ap.add_argument('--collect', help='folder of slice logs from parallel runs: join them into fix-log.jsonl, save what each kept take was heard as, list what no take fixed')
     a = ap.parse_args()
+    if a.collect:
+        return collect(a.collect)
     verdicts = set(a.verdicts.split(','))
     with open(os.path.join(ROOT, 'docs', 'audio', 'asr-check.csv'), encoding='utf-8') as f:
         rows = [r for r in csv.DictReader(f) if r['verdict'] in verdicts]
@@ -111,7 +145,9 @@ def main():
         want = set(a.only.split(','))
         rows = [r for r in rows if r['phonetic'].strip().lower() in want]
     done = {r['file'] for r in L.jl_read(LOG) if r.get('kept')}
-    rows = [r for r in rows if r['file'] not in done][:a.limit]
+    rows = [r for r in rows if r['file'] not in done]
+    rows = [r for i, r in enumerate(rows) if i % a.of == a.shard][:a.limit]
+    log_path = a.log or LOG
     print(f'{len(rows)} recordings to re-record ({sum(len(r["same_audio_paths"].split()) for r in rows)} files)')
     if not a.execute:
         for r in rows[:30]:
@@ -157,10 +193,10 @@ def main():
             rec['kept'] = False
             human.append(r)
             print(f"[{n}/{len(rows)}] NO GOOD TAKE {r['pointed_hebrew']} ({r['file']})", flush=True)
-        with open(LOG, 'a', encoding='utf-8') as f:
+        with open(log_path, 'a', encoding='utf-8') as f:
             f.write(json.dumps(rec, ensure_ascii=False) + '\n')
     refresh_builder_manifest()
-    if human:
+    if human and not a.log:
         with open(os.path.join(ROOT, 'docs', 'audio', 'ASR-NEEDS-HUMAN.md'), 'a', encoding='utf-8') as f:
             for r in human:
                 f.write(f"- {r['pointed_hebrew']} ({r['phonetic']}): `{r['file']}`, no synthetic take passed\n")

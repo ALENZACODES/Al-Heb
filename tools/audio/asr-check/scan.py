@@ -119,10 +119,29 @@ def main():
     ap.add_argument('--shard', type=int, default=0, help='with --of: hear only this slice of the clips still to do (for parallel runs)')
     ap.add_argument('--of', type=int, default=1)
     ap.add_argument('--no-report', action='store_true', help='hear only; leave the report files alone (parallel runs write the report once, at the end)')
+    ap.add_argument('--rehear-kept', action='store_true', help='hear again, one at a time, every clip fix.py replaced (fix-log.jsonl, kept) whose saved result still fails: the saved result is from before the retake')
     a = ap.parse_args()
     kinds = a.kinds.split(',')
     all_jobs = jobs(kinds)
-    if not a.report_only:
+    if a.rehear_kept:
+        fixlog = os.path.join(os.path.dirname(__file__), 'fix-log.jsonl')
+        kept = {r['file'] for r in L.jl_read(fixlog) if r.get('kept')}
+        latest = {}
+        for r in L.jl_read(RESULTS):
+            if r.get('mode') == 'single' or r['file'] not in latest:
+                latest[r['file']] = r
+        stale = []
+        for j in all_jobs:
+            r = latest.get(j['file'])
+            sc = L.score(j['he'], r['asr']) if r else None
+            if j['file'] in kept and r and not isinstance(sc, str) and (sc or 0) < L.PASS:
+                stale.append(j)
+        print(f're-hearing {len(stale)} replaced clips whose saved result is from before the retake', flush=True)
+        for n, j in enumerate(stale, 1):
+            save({'file': j['file'], 'asr': L.hear(os.path.join(ROOT, j['file'])), 'mode': 'single'})
+            if n % 25 == 0:
+                print(f'{n}/{len(stale)}', flush=True)
+    elif not a.report_only:
         done = {r['file'] for r in L.jl_read(RESULTS)}
         todo = sorted((j for j in all_jobs if j['file'] not in done), key=lambda j: j['file'])
         todo = [j for i, j in enumerate(todo) if i % a.of == a.shard][:a.limit]

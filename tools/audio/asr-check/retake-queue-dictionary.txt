@@ -1,0 +1,2 @@
+# Change this file on an audio/retakes-* branch to start the dictionary-retakes job.
+2026-11-11 round 1: 363 recordings (fail, unheard, borderline) from docs/audio/asr-check.csv

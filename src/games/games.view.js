@@ -18,29 +18,29 @@ export const HUB_ENV_KEY = Object.freeze({
 export const GAMES = Object.freeze([
   ['tugowar', 'Antonym Tug-of-War', 'Pull the rope with opposites'],
   ['vowelcatcher', 'Vowel Catcher', 'Catch the falling vowel stars'],
-  ['pinball', 'The Hebrew Pinball Bouncer', 'Pinball with Hebrew letters'],
-  ['prefixblast', 'Bubble Pop Prefix Blast', 'Pop the right prefix bubbles'],
-  ['memorypalace', 'The Memory Palace Courtyard', 'A courtyard that remembers words'],
+  ['pinball', 'Hebrew Pinball', 'Pinball with Hebrew letters'],
+  ['prefixblast', 'Prefix Blast', 'Pop the right prefix bubbles'],
+  ['memorypalace', 'Memory Palace', 'A courtyard that remembers words'],
   ['archbuilder', 'Hebrew Arch-Builder', 'Build each letter stroke by stroke'],
   ['lasermaze', 'Laser Mirror Maze', 'Bounce the beam to the target word'],
   ['letterbridge', 'Letter Bridge Builder', 'Bridge the gap letter by letter'],
-  ['roottree', 'Hebrew Root Tree Cultivator', 'Grow words from their roots'],
-  ['bumperverbs', 'Bumper Car Verb Conjugations', 'Bump the right verb form'],
-  ['shabbatrush', 'Endless Runner: Shabbat Rush', 'Run the pre-Shabbat errands'],
-  ['typewriter', 'Typewriter Conveyor Belt', 'Type the words before they pass'],
+  ['roottree', 'Root Tree', 'Grow words from their roots'],
+  ['bumperverbs', 'Verb Bumper Cars', 'Bump the right verb form'],
+  ['shabbatrush', 'Shabbat Rush', 'Run the pre-Shabbat errands'],
+  ['typewriter', 'Typewriter Belt', 'Type the words before they pass'],
   ['petclinic', 'Pet Clinic Helper', 'Care for the animals, in Hebrew'],
   ['trainswitch', 'Train Track Switchboard', 'Switch the trains to the right words'],
   ['weatherstudio', 'Weather Presenter Studio', 'Present the forecast in Hebrew'],
   ['rentalagent', 'Apartment Rental Agent', 'Match renters to homes'],
   // Echo Chamber remains available by direct link, not in the catalogue until audible pairs pass review.
   ['museumcurator', 'The Museum Curator', 'Sort the artefacts by their words'],
-  ['karaokebeat', 'The Karaoke Beat Matcher', 'Match the word to the beat'],
+  ['karaokebeat', 'Karaoke Beat', 'Match the word to the beat'],
   ['shadowcraft', 'Shadow Craft', 'Match the word to its shadow'],
-  ['ciphergrid', 'Cipher Decryption Grid', 'Crack the letter code'],
+  ['ciphergrid', 'Cipher Grid', 'Crack the letter code'],
   ['shuktaxi', 'Shuk Taxi Driver', 'Drive the market run'],
-  ['barter', 'The Israeli Flea Market Barter', 'Trade your way through the shuk'],
-  ['submarinesonar', 'Submarine Sonar Vowels', 'Ping the vowels under the sea'],
-  ['rhymelab', 'Hebrew Rhyme Laboratory', 'Find the words that rhyme'],
+  ['barter', 'Shuk Barter', 'Trade your way through the shuk'],
+  ['submarinesonar', 'Sonar Vowels', 'Ping the vowels under the sea'],
+  ['rhymelab', 'Rhyme Lab', 'Find the words that rhyme'],
 ]);
 
 /** Practical entry labels, not CEFR equivalences or claims of verified mastery. */
@@ -76,7 +76,7 @@ export const LEVEL_BY_GAME = Object.freeze({
 
 export function mount(root, ctx) {
   const original = new Map([...GAMES, ...ARCADE_GAMES.map((x) => [x.id, x.title, x.tag])].map(([id, title, hook]) => [id, { id, title, hook }]));
-  const items = [{ id: 'wordfinder', title: 'Hebrew Word Finder', hook: 'No Hebrew experience needed: hear, look, find and learn 240 short words' }, ...original.values()];
+  const items = [{ id: 'wordfinder', title: 'Hebrew Word Finder', hook: 'For people who do not know Hebrew yet. Hear a word, find it and learn it. There are 240 short words.' }, ...original.values()];
   const thumbs = [];
   const sections = LEVEL_DESCRIPTIONS.map((intro, i) => {
     const level = i + 1;
@@ -91,9 +91,9 @@ export function mount(root, ctx) {
           h('span', { class: 'show-tile-title' }, title, ' ', heSpan('מִשְׂחָק')),
           h('span', { class: 'show-tile-hook' }, hook),
           id === 'wordfinder' ? h('span', { class: 'wf-try-first' }, 'Start with five words →') : null);
-        if (envId) { thumbs.push({ a, envId }); a.append(medal('word', id, 56)); }
+        if (envId) thumbs.push({ a, id, envId }); // the game's own scene is the card picture (owner, 2026-11-10: pictures over gold icons)
         else if (ARCADE_GAMES.some((game) => game.id === id)) {
-          a.prepend(medal('arcade', id, 96));
+          a.prepend(arcadeThumb(id, a));
         }
         return h('li', {}, a);
       })));
@@ -110,14 +110,23 @@ export function mount(root, ctx) {
   // its text-only card, exactly as before.
   loadGameImages({}).then((R) => {
     if (!R || !article.isConnected) return;
-    for (const { a, envId } of thumbs) {
+    for (const { a, id, envId } of thumbs) {
       const im = imgOf(R, 'id', envId);
       if (im?.src) a.prepend(h('img', { class: 'wf-game-thumb', src: im.src, alt: '', width: im.width, height: im.height, loading: 'lazy' }));
+      else a.append(medal('word', id, 56)); // last resort only: no approved scene for this game
     }
     // the same animated Rimon as setup, Learn and the lesson summary (one Rimon system); the corner Rimon steps aside while he is here
     try { const r = rimonInline({ action: 'wave', size: 88, label: 'Rimon waving' }); r.el.classList?.add?.('wf-hub-mascot'); article.insertBefore(r.el, article.children[1] || null); r.play('wave'); } catch { /* the picture is optional */ }
   }).catch(() => {});
   return () => {};
+}
+
+/** Light WebP card picture from the arcade game's own scene (the main card image; no coin on game cards) (assets/img/arcade-thumbs, made from assets/games/arcade/<id>/env.png
+ *  by tools/images/arcade-thumbs.py; 14-27 KB instead of ~850 KB, never precached). Lazy; removes itself if the file is missing. */
+export function arcadeThumb(id, card) {
+  const b = `assets/img/arcade-thumbs/${id}`;
+  return h('img', { class: 'wf-game-thumb wf-arcade-thumb', src: b + '.480.webp', srcset: `${b}.480.webp 480w, ${b}.800.webp 800w`, sizes: '(max-width: 719px) 92vw, 320px', width: 480, height: 180, alt: '', loading: 'lazy', decoding: 'async',
+    onerror: (e) => { e.target.remove(); card?.append?.(medal('arcade', id, 56)); } }); // a coin only if the scene is missing
 }
 
 /** The arcade strip: today's featured quick game, the learner's streak, and the count of arcade games. */

@@ -14,6 +14,7 @@ const CSS = `
 .ct .btn { min-block-size: var(--tap, 48px); }
 .ct progress { inline-size: 100%; block-size: .8rem; accent-color: var(--accent); }
 .ct-row { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; }
+.ct-row input, .ct-row select { min-block-size: 44px; }
 .ct-he { font-size: 1.6rem; line-height: 1.7; display: block; unicode-bidi: isolate; }
 .ct-tag { display: inline-block; font-size: .8rem; font-weight: 700; padding: 0 .5rem; border: 1px solid var(--border); border-radius: 6px; margin-inline-end: .4rem; }
 .ct-tag.done { background: var(--accent); color: var(--accent-fg); border-color: var(--accent); }

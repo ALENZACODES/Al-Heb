@@ -41,7 +41,7 @@ export function optionalGroups(tradition = "sephardi") {
     { id: "vocab-packs", label: "Vocabulary lists (5,000 words)", urls: [500, 1000, 2000, 5000].map((n) => `data/vocab/packs/vocab5k-tier-${n}.json`), approxMB: 0.95 },
     // Music is optional, so it is never part of "ready": these let a learner take it offline on purpose (sw.js keeps it in alef-music-v1).
     { id: "music-beds", label: "Game music (optional)", urls: [...MUSIC_TRACKS, ...ORIGINAL_MUSIC_TRACKS].map((m) => MUSIC_BASE + playableFile(m.file)), approxMB: 27.4 },
-    { id: "songs", label: "Songs (optional)", urls: ORIGINAL_SONG_TRACKS.map((m) => MUSIC_BASE + m.file), approxMB: 8.3 },
+    { id: "songs", label: "Songs (optional)", urls: ORIGINAL_SONG_TRACKS.map((m) => MUSIC_BASE + m.file), approxMB: 16.3 },
     { id: "ocr", label: "Photo reader (text recognition)", urls: ["assets/vendor/_tesseract/tesseract.esm.min.js", "assets/vendor/_tesseract/worker.min.js", "assets/vendor/_tesseract/tesseract-core-simd-lstm.wasm.js", "assets/vendor/_tesseract/heb.traineddata"], approxMB: 5.0 },
   ];
 }

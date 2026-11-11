@@ -281,7 +281,7 @@ export function mount(root, ctx) {
         el('p', { class: 'fd-card alef-card' }, heText(onramp.steps.find((s) => s.kind === 'word')?.he || '', 'alef-he alef-huge fd-big')),
         el('p', {}, d.body || ''),
         practice ? null : el('div', { class: 'visually-hidden' }, streakLine),
-        practice ? null : el('p', {}, d.tomorrow || 'Come back tomorrow for your next letter. A few minutes a day is all it takes.',
+        practice ? null : el('p', {}, d.tomorrow || 'Come back tomorrow for your next letter.',
           ctx?.hasRoute?.('reminders') !== false ? [' ', el('a', { href: '#/reminders', id: 'fd-remind' }, 'Remind me tomorrow')] : null),
         el('p', { class: 'fd-done-more' }, el('button', { class: 'btn secondary', type: 'button', id: 'fd-again', onclick: () => { practice = true; progress = migrateProgress(null); answered = null; stage = 'learn'; verdict = null; sel = null; say(''); renderStep(); focus(); } }, 'Do the steps again'),
           d.preview ? [' ', el('a', { class: 'btn secondary', id: 'fd-preview', href: '#/firstday?part=preview', title: d.preview }, 'Read shalom today')] : null),

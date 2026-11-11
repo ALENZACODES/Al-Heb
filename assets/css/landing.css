@@ -47,6 +47,7 @@
   transform: translateY(-2px); border-color: #d9a441;
   box-shadow: 0 8px 22px rgba(0,0,0,.35), 0 0 0 2px rgba(217,164,65,.35);
 }
+.show-tile .alef-medal { margin: 0 0 .55rem; inline-size: 3.5rem; block-size: 3.5rem; }
 .show-tile-title { display: block; font-weight: 700; color: #e8c97a; font-size: 1.02rem; }
 .show-tile-hook { display: block; margin-top: .25rem; color: #d8e2c4; font-size: .92rem; }
 /* The hero replaces the welcome card's tree band (no double tree). */

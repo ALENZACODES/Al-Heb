@@ -73,3 +73,20 @@ To reach 95:
 - dialogue clips (+1);
 - native and cantor review (+4);
 - John's held decisions (+2).
+
+## Launch-Check Pass at e6b78decc (Final)
+
+**State at `e6b78decc`:** GitHub CI was green (unit tests, build and browser). 94 Practical pages were written.
+
+**What this pass found and did:**
+
+| # | Finding | Status |
+|---|---|---|
+| 1 | `main` was 5 commits ahead (the Torah audio fix rounds). Launching from a branch behind `main` would drop them. | **Fixed:** `main` is merged into this branch at `fa9881566`, with no conflicts. All unit tests pass; first install is 3.93 MiB of 4 MiB. |
+| 2 | Levels 2 to 4 not written. | **Partly fixed:** `pu-time` (3 pages, cut from 5 to fit its six source words) and `pu-weather` (4) are written, for 101 live pages in a 189-page outline. |
+| 3 | 67 written lines have no clip: dialogue lines and gender-pair lines. | Open. Needs a recording run. The review lane's cloud check covers new items. |
+| 4 | Gender-pair lines are original and unreviewed. | Open. They are marked for native review on every page. |
+| 5 | No native, teacher or cantor read; John's held decisions. | Unchanged. |
+
+**Final score: 93 / 100** (estimate). The remaining points need people (native and cantor review, +4), John (holds, +2), a
+recording run (+1), and the last 88 pages (+1).

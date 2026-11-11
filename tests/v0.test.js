@@ -41,7 +41,7 @@ test('the bar shows only v0 destinations, at most 5 controls, for every availabi
     const list = tabs(ROUTES, av);
     assert.ok(list.length + 1 <= 5);
     for (const x of list) assert.equal(x.route.tier, 'v0', `${x.route.name} in the bar`);
-    assert.deepEqual(list.map((x) => x.route.name), ['learn', 'progress']);
+    assert.deepEqual(list.map((x) => x.route.name), ['learn', 'readhub', 'speakhub', 'progress']);
   }
 });
 test('More sheet model: open groups hold only v0 pages; every available static preview page is in the Preview group with a note per section', () => {

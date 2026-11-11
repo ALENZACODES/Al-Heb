@@ -10,6 +10,8 @@
      answer has gone out): a clip re-rendered at the same path reaches a phone that already played the old one on the next play.
    - data/audio/manifest-words-*.json (lazy per-tradition word shards, NOT precached): stale-while-revalidate into the runtime cache,
      so the learner's own shard is available offline after first use; a plain network error when neither exists (never offline.html)
+   - assets/vendor/_nmt and assets/vendor/_ort (Talk language packs, downloaded on request by the Talk screen into alef-talk-pack-v1):
+     a kept copy, else the network; the worker never stores them
    - everything else same-origin: stale-while-revalidate
    Lifecycle: a new worker installs its shell cache and then WAITS. It takes over only when the page posts {type:'SKIP_WAITING'}
    (src/shell/update.js does that when the learner presses "Reload now" in the update banner) or when every ALEF tab is closed.
@@ -131,7 +133,12 @@ self.addEventListener('fetch', (event) => {
   const req = event.request;
   if (req.method !== 'GET') return;
   const url = new URL(req.url);
-  if (url.origin !== self.location.origin) return;
+  // Talk language pack files kept on the device, when the packs come from a pack host (data/talk/pack-host.json): serve the kept copy.
+  // Nothing else from another address is ever touched here.
+  if (url.origin !== self.location.origin) {
+    if (/\/_(nmt|ort)\//.test(url.pathname)) event.respondWith((async () => (await caches.match(req.url)) || fetch(req))());
+    return;
+  }
   if (req.headers.has('range')) {
     if (!AUDIO.test(url.pathname)) return; // other media: the network handles Range as before
     event.respondWith((async () => {
@@ -148,6 +155,13 @@ self.addEventListener('fetch', (event) => {
       try { const res = await fetch(req); if (res.ok) return res; } catch { /* offline */ }
       return (await caches.match('index.html')) || (await caches.match('offline.html')) || Response.error();
     })());
+    return;
+  }
+  // Talk language packs and their runtime (assets/vendor/_nmt, assets/vendor/_ort): large files the Talk screen downloads on request
+  // into its own cache (alef-talk-pack-v1, src/talk/nmt/pack.js). Serve a kept copy, else the network; never copy them into the
+  // per-version data cache (that would store about 80 MB twice and throw it away at every update).
+  if (/\/assets\/vendor\/_(nmt|ort)\//.test(url.pathname)) {
+    event.respondWith((async () => (await caches.match(req.url)) || fetch(req))());
     return;
   }
   if (/\/data\/audio\/manifest-words-[a-z]+\.json$/.test(url.pathname)) {

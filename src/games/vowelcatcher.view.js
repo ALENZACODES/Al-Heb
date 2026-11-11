@@ -133,7 +133,7 @@ export function mount(root, ctx) {
     announce.replaceChildren(ok
       ? heSpan(letter.glyph + target.point, 'he game-he-sm')
       : `That was ${s.mark.name}. Catch ${target.name}.`,
-      ...(ok ? [` — yes! ${session.correct} caught · Score ${session.score}`] : []));
+      ...(ok ? [`. Yes! ${session.correct} caught · Score ${session.score}`] : []));
     s.el.remove(); stars = stars.filter((x) => x !== s);
     if (ok) { if (targetsDone >= TARGETS_PER_GAME) return finish(); newTarget(); }
   }

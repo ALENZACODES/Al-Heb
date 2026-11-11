@@ -3,24 +3,24 @@ import { uiEnglish, MORNING_TITLE } from './names.js';
 // The first-screen showcase: Tree of Knowledge hero + a tile for every major
 // destination, shown on Welcome (first run) and Home. Pure presentation —
 // every tile links to an existing route; counts are the app's real numbers.
-import { h, heSpan } from './ui.js';
+import { h, heSpan, destIcon } from './ui.js';
 import { astralTreeNode } from './astral-tree.js';
 import { builderNode } from '../home/builder.js';
 
-const TILES = [
+export const TILES = [
   ['firstday', '#/firstday', 'Your First 10 Minutes', 'עֲשָׂרָה', 'Build your first word, letter by letter'],
-  ['wordfinder', '#/wordfinder', 'Hebrew Word Finder · Level 1', 'מִלָּה', 'Hear, see and find your first real words — no Hebrew experience needed'],
+  ['wordfinder', '#/wordfinder', 'Hebrew Word Finder · Level 1', 'מִלָּה', 'Hear, see and find your first real words. No Hebrew experience needed'],
   ['letters', '#/letters', 'Letters', 'אָלֶף־בֵּית', 'All 27 letters — sounded, traced, remembered'],
-  ['books', '#/books', 'Little Books', 'סְפָרִים', '62 little books, 744 pages, every page voiced'],
+  ['books', '#/books', 'Little Books', 'סְפָרִים', '63 little books, 756 pictured pages'],
   ['games', '#/games', 'All the Games', 'מִשְׂחָקִים', 'Every game in one place — letters, words, roots and rhymes'],
   ['tugowar', '#/tugowar', 'Antonym Tug-of-War', 'מִשְׂחָק', 'Games — pull the rope with opposites'],
   ['vowelcatcher', '#/vowelcatcher', 'Vowel Catcher', 'מִשְׂחָק', 'Games — catch the falling vowel stars'],
   ['pinball', '#/pinball', 'Hebrew Pinball', 'מִשְׂחָק', 'Games — pinball with Hebrew letters'],
-  ['prefixblast', '#/prefixblast', 'Bubble Pop Prefix Blast', 'מִשְׂחָק', 'Games — pop the right prefix bubbles'],
+  ['prefixblast', '#/prefixblast', 'Prefix Blast', 'מִשְׂחָק', 'Games — pop the right prefix bubbles'],
   ['memorypalace', '#/memorypalace', 'Memory Palace', 'מִשְׂחָק', 'Games — a courtyard that remembers words'],
   ['sprint', '#/sprint', 'Word Sprint', 'מִלִּים', 'Fast rounds with real words'],
   ['read', '#/read', 'Read the Prayers', 'תְּפִלָּה', 'The siddur (the Jewish prayer book) line by line, at your pace'],
-  ['vocab', '#/vocab', 'Dictionary — 5,000 Words', 'מִלּוֹן', 'The whole vocabulary, searchable'],
+  ['vocab', '#/vocab', 'Dictionary (5,000 words)', 'מִלּוֹן', 'The whole vocabulary, searchable'],
   ['speak', '#/speak', 'Speak & Listen', 'דַּבֵּר', 'Say it out loud and be understood'],
   ['traditions', '#/traditions', 'Three Traditions', 'מָסוֹרֶת', 'Israeli, Sephardi, Ashkenazi — hear the difference'],
   ['morning', '#/morning', MORNING_TITLE, 'מוֹדֶה אֲנִי', 'Modeh Ani and a verse, every morning'],
@@ -56,8 +56,9 @@ function portalsNode(has) {
 
 export function showcaseNode(ctx) {
   const has = (name) => { if (name === 'books') return true; try { return ctx?.hasRoute ? !!ctx.hasRoute(name) : true; } catch { return true; } };
-  const tiles = TILES.filter(([name]) => has(name)).map(([, href, title, he, hook]) =>
+  const tiles = TILES.filter(([name]) => has(name)).map(([name, href, title, he, hook]) =>
     h('li', {}, h('a', { class: 'show-tile', href },
+      destIcon(name, 56),
       h('span', { class: 'show-tile-title' }, uiEnglish(ctx, title), ' ', heSpan(he)),
       h('span', { class: 'show-tile-hook' }, hook))));
   const mascotBox = h('div', { class: 'show-mascot-box' });

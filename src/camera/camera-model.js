@@ -288,6 +288,40 @@ export function createGlossary(data, { phrasebook = [] } = {}) {
     }
     return translateTokens(hebrewTokens(text));
   }
+  // Every listed phrase with its spaces taken out (three letters or more), for a line with a pole in front of it.
+  const whole = [...targets];
+  for (const [key, e] of entries) { const j = key.replace(/ /g, ''); if (j.length >= 3 && j.length < 5) whole.push({ joined: j, en: e.en, translit: e.translit || null, pointed: e.pointed || e.he }); }
+  /**
+   * A line cut in two by a bar in front of the sign: `before` is what was read before the bar (in reading order), `after` what
+   * was read after it, and at most `maxHidden` letters are behind the bar. Returns the one listed phrase that begins with the
+   * first piece and ends with the second, or null when none fits or more than one does. The letter right beside the bar is
+   * often half hidden and misread, so one letter may be dropped from the bar side of one piece.
+   */
+  function completeAcrossGap(before, after, maxHidden) {
+    const split = (text) => { const ts = hebrewTokens(text); return { letters: ts.filter((t) => !NUM_RE.test(t)).join(''), numbers: ts.filter((t) => NUM_RE.test(t) && [...t].length > 1) }; };
+    const A = split(before); const B = split(after);
+    const as = [[A.letters, 0]]; if (A.letters.length >= 2) as.push([A.letters.slice(0, -1), 1]);
+    const bs = [[B.letters, 0]]; if (B.letters.length >= 2) bs.push([B.letters.slice(1), 1]);
+    if (A.letters.length + B.letters.length < 2) return null;
+    // Tried in order: both pieces as read; then one piece with its bar-side letter dropped. The first step with any fit decides,
+    // and it must be a single phrase. Three letters and six in ten of the phrase must have been read.
+    let t = null;
+    for (const cost of [0, 1]) {
+      const found = new Map();
+      for (const cand of whole) for (const [a, da] of as) for (const [b, db] of bs) {
+        if (da + db !== cost) continue;
+        const read = a.length + b.length; const hiddenLetters = cand.joined.length - read;
+        if (hiddenLetters < 0 || hiddenLetters > maxHidden + cost) continue;
+        if (read < 3 || read < Math.ceil(cand.joined.length * 0.6)) continue;
+        if (!cand.joined.startsWith(a) || !cand.joined.endsWith(b)) continue;
+        found.set(cand.en, cand);
+      }
+      if (found.size > 1) return null;
+      if (found.size === 1) { t = [...found.values()][0]; break; }
+    }
+    if (!t) return null;
+    return { en: [t.en, ...A.numbers, ...B.numbers].join(' '), status: 'near', translit: t.translit, pointed: t.pointed, from: 'across-bar' };
+  }
   /** One listed word (single-word entries only), or null. */
   const entry = (tok) => { const e = entries.get(tok); return e ? { he: e.he, en: e.en, pointed: e.pointed || null, translit: e.translit || null, describes: !!e.describes, head: !!e.head } : null; };
   /** Longest listed phrase starting at toks[i]: {n, entry} or null. */
@@ -295,7 +329,7 @@ export function createGlossary(data, { phrasebook = [] } = {}) {
     for (let n = Math.min(maxLen, toks.length - i); n > 0; n--) { const e = entry(toks.slice(i, i + n).join(' ')); if (e) return { n, entry: e }; }
     return null;
   };
-  return { translate, entry, longest };
+  return { translate, entry, longest, completeAcrossGap };
 }
 
 // ---------------------------------------------------------------- word by word (the tap panel's deeper layer)
@@ -380,7 +414,7 @@ export function regionsFromBoxes(boxes, glossary) {
     if (!held && !t.en && tokens(line.text).join('').length < 2) continue; // a lone letter is almost always noise
     const he = side === line.words ? line.text : side.map((w) => w.text).join(' ');
     const confs = words.map((w) => w.conf).filter((c) => Number.isFinite(c));
-    out.push(makeRegion({ id: `r${out.length + 1}`, box, he, held, en: t.en, partial: !held && lineHadNoise(line.text), conf: confs.length ? confs.reduce((a, c) => a + c, 0) / confs.length : null,
+    out.push(makeRegion({ id: `r${out.length + 1}`, box, he, held, en: t.en, pieces: words.map((w) => ({ text: w.text, x: w.x, w: w.w })), partial: !held && lineHadNoise(line.text), conf: confs.length ? confs.reduce((a, c) => a + c, 0) / confs.length : null,
       translationSource: t.en ? (t.from === 'phrasebook' ? 'phrasebook' : t.status === 'near' ? 'word-list-near' : 'word-list') : null, translit: t.translit, pointed: t.pointed }));
   }
   return out;
@@ -388,8 +422,35 @@ export function regionsFromBoxes(boxes, glossary) {
 
 function makeRegion(r) {
   if (r.held) return { id: r.id, box: r.box, conf: r.conf ?? null, held: true, he: null, en: null, translationSource: null, translit: null, pointed: null, drawn: false, note: HELD_NOTE };
-  return { id: r.id, box: r.box, conf: r.conf ?? null, held: false, he: r.he, en: r.en || null, partial: !!r.partial, translationSource: r.en ? r.translationSource : null,
+  return { id: r.id, box: r.box, conf: r.conf ?? null, held: false, he: r.he, en: r.en || null, pieces: r.pieces || [], partial: !!r.partial, translationSource: r.en ? r.translationSource : null,
     translit: r.translit || null, pointed: r.pointed || null, drawn: !!r.drawn };
+}
+
+/** Lowest reading confidence (0 to 100) at which a line outside the word list is handed to the language pack. */
+export const PACK_MIN_CONF = 75;
+/**
+ * A read line made ready for the language pack, or '' when it should not be sent: it must have been read with confidence,
+ * hold no reader noise, and be two to twelve words.
+ * @param {string} he @param {number|null} [conf]
+ */
+export function lineForPack(he, conf = null) {
+  if (!he || containsSacredName(he) || lineHadNoise(he)) return '';
+  if (Number.isFinite(conf) && /** @type {number} */ (conf) < PACK_MIN_CONF) return '';
+  const toks = hebrewTokens(he);
+  if (!toks.length || toks.length > 12) return '';
+  // One word on its own stays with the dictionary, which knows when a spelling has two meanings and then draws nothing.
+  if (toks.filter((t) => /[א-ת]{2}/.test(t)).length < 2) return '';
+  return toks.join(' ');
+}
+
+/** A pack line as it is drawn on a sign: no closing full stop; short lines in title case ("Shoe Shop"), SHOUTED lines calmed. */
+export function signCase(en) {
+  let s = String(en || '').replace(/[.]+$/, '').replace(/\s+/g, ' ').trim();
+  if (!s) return '';
+  if (s === s.toUpperCase() && /[A-Z]{2}/.test(s)) s = s.toLowerCase();
+  const words = s.split(' ');
+  if (words.length <= 4) return words.map((w) => (/^[a-z]/.test(w) ? w[0].toUpperCase() + w.slice(1) : w)).join(' ');
+  return s[0].toUpperCase() + s.slice(1);
 }
 
 /** Box in picture pixels -> CSS percentages for a tap target laid over the picture. */
@@ -404,6 +465,7 @@ export function sourceLabel(src) {
   if (src === 'word-list-near') return 'Closest match in the built-in word list. A letter may have been misread, so check it.';
   if (src === 'phrasebook') return 'From the ALEF phrasebook.';
   if (src === 'word-for-word') return 'Word for word from the ALEF dictionary. The word order and the exact meaning can be off.';
+  if (src === 'language-pack') return 'Translated on this device by the language pack, not from a checked list. Check it before you rely on it.';
   return '';
 }
 
@@ -483,6 +545,61 @@ export function readerImage(img, mode = 'binary') {
     data[p] = data[p + 1] = data[p + 2] = v; data[p + 3] = 255;
   }
   return { inverted, threshold };
+}
+
+/**
+ * Upright bars standing in front of a sign (a pole, a post): columns that keep one flat colour from the top of the picture
+ * to the bottom, in a colour that is not the sign's background, with lettering on both sides of them.
+ * Only bars between 1.5% and 22% of the picture's width count; a thin dividing line or a wide side panel is left alone.
+ * @param {{data:Uint8ClampedArray|Uint8Array|number[], width:number, height:number}} img the levelled photo
+ * @returns {{bars:{x:number, w:number}[], background:number[]|null}} bars in picture pixels, and the sign's background colour
+ */
+export function findOccluders(img) {
+  const { data, width: w, height: h } = img;
+  const none = { bars: [], background: null };
+  if (w < 40 || h < 20) return none;
+  const stepY = Math.max(1, Math.floor(h / 200));
+  const mean = new Float32Array(w); const dev = new Float32Array(w);
+  for (let x = 0; x < w; x++) {
+    let n = 0; let sum = 0; let sq = 0;
+    for (let y = 0; y < h; y += stepY) { const p = (y * w + x) * 4; const v = 0.299 * data[p] + 0.587 * data[p + 1] + 0.114 * data[p + 2]; n++; sum += v; sq += v * v; }
+    mean[x] = sum / n; dev[x] = Math.sqrt(Math.max(0, sq / n - mean[x] * mean[x]));
+  }
+  const FLAT = 10; const BUSY = 18; const APART = 26;
+  const flat = []; for (let x = 0; x < w; x++) if (dev[x] < FLAT) flat.push(mean[x]);
+  if (flat.length < Math.max(4, w * 0.03)) return none;
+  // The background is the level most flat columns share (the margins and the gaps between words).
+  const hist = new Uint32Array(26); for (const v of flat) hist[Math.min(25, Math.floor(v / 10))]++;
+  let top = 0; for (let i = 1; i < 26; i++) if (hist[i] > hist[top]) top = i;
+  const near = flat.filter((v) => Math.abs(v - (top * 10 + 5)) <= 10); const bg = near.reduce((a, v) => a + v, 0) / near.length;
+  const isBar = (x) => dev[x] < FLAT && Math.abs(mean[x] - bg) > APART;
+  const bars = [];
+  for (let x = 0; x < w;) {
+    if (!isBar(x)) { x++; continue; }
+    let end = x; let gap = 0;
+    for (let k = x + 1; k < w && gap <= 2; k++) { if (isBar(k)) { end = k; gap = 0; } else gap++; }   // soft edges: up to two columns
+    const width = end - x + 1;
+    if (width >= Math.max(3, w * 0.015) && width <= w * 0.22) {
+      let left = 0; let right = 0;
+      for (let k = 0; k < x; k++) if (dev[k] > BUSY) left++;
+      for (let k = end + 1; k < w; k++) if (dev[k] > BUSY) right++;
+      const need = Math.max(3, w * 0.01);
+      if (left >= need && right >= need) bars.push({ x: Math.max(0, x - 2), w: Math.min(w, end + 3) - Math.max(0, x - 2) });
+    }
+    x = end + 1;
+  }
+  if (!bars.length) return none;
+  // background colour: the median of flat background columns, sampled down the middle row band
+  const cols = []; for (let x = 0; x < w; x++) if (dev[x] < FLAT && Math.abs(mean[x] - bg) <= 10) cols.push(x);
+  const samples = [];
+  for (let i = 0; i < cols.length; i += Math.max(1, Math.floor(cols.length / 40))) for (let y = 0; y < h; y += Math.max(1, Math.floor(h / 12))) { const p = (y * w + cols[i]) * 4; samples.push([data[p], data[p + 1], data[p + 2]]); }
+  return { bars, background: medianColour(samples) };
+}
+
+/** True when a line's box touches a bar, or stops within one letter height of it. @param {{x:number,y:number,w:number,h:number}} box */
+export function besideBar(box, bars) {
+  const reach = box.h * 0.8;
+  return bars.some((b) => box.x - reach < b.x + b.w && box.x + box.w + reach > b.x);
 }
 
 /**

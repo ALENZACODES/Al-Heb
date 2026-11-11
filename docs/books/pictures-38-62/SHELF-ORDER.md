@@ -1,3 +1,17 @@
+# Shelf order (current)
+
+Grade 1 and Beginner 1 stay in numeric order.
+
+**Beginner 2:** 25, 26, 38, 27, 28, 39, 29, 30, 40, 31, 32, 41, 33, 34, 42, 35, 36, 43, 37.
+
+**Beginner 3:** 44, 45, 52, 46, 48, 53, 51, 47, 50, 55, 58, 56, 49, 57, 62, 61, 59, 54, 60.
+
+**Advanced (end):** 63 The Story of Moses. All 12 pages have pictures. Pages 8, 9, 11 and 12 are not voiced yet (held for a reading decision). Pictures for books 52 and 60 are included.
+
+The groups follow the array order in `data/books/index.json`.
+
+---
+
 # Shelf order for little-book pictures
 
 Date: 2026-11-10 (America/Toronto)

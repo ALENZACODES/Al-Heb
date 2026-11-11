@@ -80,7 +80,7 @@ test('home view: first run shows Today with Continue -> #/firstday; existing sec
 test('home view: baby-step layout for a new learner (Today card, five destinations, More; no prayer card or streak)', async () => {
   const { root, ctx } = mk();
   const un = mount(root, ctx); await waitFor(() => root.querySelector('#today-continue'));
-  assert.deepEqual(root.queryAll('.home-dests a').map((a) => a.attrs.href), ['#/letters', '#/vocab', '#/read', '#/progress', '#/calendar']);
+  assert.deepEqual(root.queryAll('.home-dests a').map((a) => a.attrs.href), ['#/letters', '#/vocab', '#/read-home', '#/progress', '#/calendar']);
   assert.ok(root.querySelector('#home-more'), 'More button');
   assert.equal(root.querySelector('.opening'), null, 'opening prayer draft card is not on a new learner Home');
   assert.equal(root.querySelector('#today-streak'), null);
@@ -227,7 +227,7 @@ test('D: after 7+ days away Home greets warmly, offers a gentle review, and show
 test('E: a first-run Home shows Read in the destination row under the title (not only in More)', async () => {
   const { root, ctx } = mk(); const un = mount(root, ctx); await waitFor(() => root.querySelector('#today-continue'));
   const row = root.querySelector('#home-dests-host');
-  assert.ok(row.queryAll('a').some((a) => a.attrs.href === '#/read'), 'Read tile in the row');
+  assert.ok(row.queryAll('a').some((a) => a.attrs.href === '#/read-home'), 'Read tile in the row');
   assert.match(row.textContent, /Read/); un();
 });
 

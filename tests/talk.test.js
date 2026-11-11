@@ -119,5 +119,5 @@ test('the screen copy says what is true: device voice, browser listening, no own
   assert.match(v.DEVICE_VOICE, /device voice/);
   assert.match(v.VOICE_KEEP, /future feature/);
   assert.match(v.HELD_LINE, /does not speak it/);
-  assert.deepEqual(Object.keys(v.METHOD_LABEL).sort(), ['close', 'pattern', 'phrase', 'word', 'words']);
+  assert.deepEqual(Object.keys(v.METHOD_LABEL).sort(), ['close', 'model', 'pattern', 'phrase', 'word', 'words']);
 });

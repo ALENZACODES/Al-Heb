@@ -127,8 +127,13 @@ export async function runChecks(root) {
 
   const star = headersFor(rules, '/x/y.js');
   const csp = star.get('content-security-policy')?.value ?? '';
-  const origins = [...csp.matchAll(/(?:https?|wss?):\/\/[^\s;]+/g)].map((m) => m[0]).filter((u) => !/^http:\/\/(127\.0\.0\.1|localhost)(:\*|:\d+)?$/.test(u));
-  check('CSP present and has no third-party origins (only self, blob:, data:, local helper on 127.0.0.1/localhost)', csp && origins.length === 0, origins.join(' '));
+  // The only other address allowed is the project's own pack host (data/talk/pack-host.json), and only to read data from (connect-src).
+  let packHosts = [];
+  try { packHosts = (JSON.parse(readFileSync(join(root, 'data/talk/pack-host.json'), 'utf8')).hosts || []).map((h) => new URL(h).origin); } catch { /* no pack host */ }
+  const origins = [...csp.matchAll(/(?:https?|wss?):\/\/[^\s;]+/g)].map((m) => m[0]).filter((u) => !/^http:\/\/(127\.0\.0\.1|localhost)(:\*|:\d+)?$/.test(u)).filter((u) => !packHosts.includes(u));
+  check('CSP present and has no third-party origins (only self, blob:, data:, local helper on 127.0.0.1/localhost, the pack host)', csp && origins.length === 0, origins.join(' '));
+  const connect = /connect-src ([^;]*)/.exec(csp)?.[1] ?? '';
+  check('the pack host is allowed for reading data only (connect-src), never for scripts', packHosts.every((h) => connect.includes(h)) && packHosts.every((h) => !csp.replace(/connect-src [^;]*/, '').includes(h)), packHosts.join(' '));
   check("CSP: default-src 'self', object-src 'none', frame-ancestors 'none', base-uri 'self'", /default-src 'self'/.test(csp) && /object-src 'none'/.test(csp) && /frame-ancestors 'none'/.test(csp) && /base-uri 'self'/.test(csp));
   check("CSP does not allow 'unsafe-eval' or 'unsafe-inline' for scripts", !/script-src[^;]*'unsafe-(eval|inline)'/.test(csp));
   check('X-Content-Type-Options: nosniff', star.get('x-content-type-options')?.value === 'nosniff');

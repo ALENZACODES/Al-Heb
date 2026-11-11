@@ -57,7 +57,7 @@ function setup(A) {
   const answer = (g) => {
     if (!card) return;
     if (g === card.gender) { streak++; const pts = 10 + Math.min(streak - 1, 5) * 2; A.addScore(pts); A.sfx(streak >= 5 ? 'streak' : 'tick'); A.announce(`${card.he} is ${g === 'm' ? 'masculine' : 'feminine'}.`); }
-    else { streak = 0; A.addScore(-4); A.sfx('miss'); A.miss(); A.announce(`${card.he} (${card.en}) is ${card.gender === 'm' ? 'masculine, he' : 'feminine, she'}${(card.gender === 'm') === endsFem(card) ? ' — one of the exceptions.' : '.'}`); }
+    else { streak = 0; A.addScore(-4); A.sfx('miss'); A.miss(); A.announce(`${card.he} (${card.en}) is ${card.gender === 'm' ? 'masculine, he' : 'feminine, she'}${(card.gender === 'm') === endsFem(card) ? '. One of the exceptions.' : '.'}`); }
     next();
   };
   A.keys((k) => { if (k === 'left') { answer('m'); return true; } if (k === 'right') { answer('f'); return true; } return false; });

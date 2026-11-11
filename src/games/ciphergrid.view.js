@@ -20,7 +20,7 @@ export function mount(root, ctx) {
   const status = h('p', { class: 'game-status', role: 'status', 'aria-live': 'polite' }, 'Loading source-aligned corpus…');
   const board = h('div', { class: 'game-board' });
   const article = h('article', { class: 'card game-card game-ciphergrid' },
-    h('h1', { id: 'view-title' }, 'Cipher Decryption Grid'),
+    h('h1', { id: 'view-title' }, 'Cipher Grid'),
     h('p', {}, 'Find the authentic pointed form of this unpointed corpus line.'), status, board);
   root.replaceChildren(article);
   // The cipher-desk backdrop made for this game (approved art, decorative

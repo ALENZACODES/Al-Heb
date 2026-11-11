@@ -18,24 +18,24 @@ test("a fully written unit shows exactly its written pages, in order", () => {
   }
   const counts = writtenPageCounts(index, written);
   assert.equal(counts["pu-introducing"], 5);
-  assert.equal(counts["pu-weather"], index.units.find((u) => u.id === "pu-weather").pageCount, "unwritten units keep their draft count");
+  assert.equal(counts["pu-hotel"], written.pages.filter((p) => p.id.startsWith("pu-hotel-")).length);
+  assert.equal(counts["pu-army"], written.pages.filter((p) => p.id.startsWith("pu-army-")).length);
 });
 
-test("units without written pages are unchanged", () => {
-  const cafe = unitOf("pu-weather");
-  assert.equal(applyWritten(cafe, written), cafe);
+test("applyWritten leaves a unit unchanged when it has no written pages", () => {
+  const fake = { id: "pu-not-a-unit", title: "Test", pages: [{ id: "pu-not-a-unit-p01", title: "x", order: 1, items: [] }], items: [] };
+  assert.equal(applyWritten(fake, written), fake);
 });
 
-test("held items never reach the learner: politeness-21 and its grammar point are dropped", () => {
+test("politeness-21 is shown on the live page as the set phrase בְּעֶזְרַת הַשֵּׁם", () => {
   const p05 = written.pages.find((p) => p.id === "pu-politeness-p05");
-  assert.ok(p05.items.some((it) => it.id === "politeness-21" && it.heldForJohn));
+  const it = p05.items.find((x) => x.id === "politeness-21");
+  assert.ok(it && !it.heldForJohn);
   const live = livePage(p05);
-  assert.ok(!live.items.some((it) => it.id === "politeness-21"));
-  assert.equal(live.grammar, null);
-  assert.ok(!JSON.stringify(live).includes("הַשֵּׁם"), "no held Hebrew left anywhere on the live page");
+  assert.ok(live.items.some((x) => x.id === "politeness-21"));
+  assert.ok(JSON.stringify(live).includes("הַשֵּׁם"));
   const u = applyWritten(unitOf("pu-politeness"), written);
-  assert.ok(!JSON.stringify(u.pages).includes("politeness-21"));
-  assert.ok(!u.items.some((it) => it.id === "politeness-21"));
+  assert.ok(u.pages.some((pg) => (pg.items || []).some((x) => x.id === "politeness-21")));
 });
 
 test("review items come from earlier written pages", () => {
@@ -127,10 +127,24 @@ test("a hidden item's speaking prompt is left out of the rendered page", async (
   if (typeof un === "function") un();
 });
 
-test("every outline unit is a live Practical unit, so its written pages can show (pu-army is held off)", () => {
+test("every outline unit is a live Practical unit, so its written pages can show (pu-army is on the live set)", () => {
   const outline = read("data/curriculum/practical-pages/outline.json");
   const live = new Set(index.units.map((u) => u.id));
   const missing = outline.units.filter((u) => !live.has(u.id) && u.live !== false).map((u) => u.id);
   assert.deepEqual(missing, []);
   for (const id of written.completeUnits) assert.ok(live.has(id), `${id} is written but has no live unit`);
+});
+
+test("בְּעֶזְרַת הַשֵּׁם is shown as written; speech follows the existing name rule and fails closed if flagged", async () => {
+  const { speechSafeText, speechText, displayHebrew } = await import("../src/shell/names.js");
+  const he = written.pages.find((p) => p.id === "pu-politeness-p05").items.find((it) => it.id === "politeness-21").he;
+  assert.match(he, /בְּעֶזְרַת הַשֵּׁם/);
+  assert.equal(displayHebrew(he), he);
+  const safe = speechSafeText(he);
+  if (safe.ok) {
+    assert.equal(safe.text, speechText(he));
+  } else {
+    assert.equal(safe.ok, false);
+    assert.equal(safe.text, "");
+  }
 });

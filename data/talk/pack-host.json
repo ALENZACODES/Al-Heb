@@ -1,0 +1,5 @@
+{
+ "schema": "alef.talk.pack-host.v1",
+ "note": "Where the Talk language packs are fetched from when this copy of the site does not carry them (a deploy built with --packs-remote). Tried in order, after the site's own assets/vendor/_nmt/. Each host is a static folder written by tools/talk/nmt/export-host.mjs and must allow cross-origin reads. Only data files come from a host (pack parts and the runtime's WebAssembly); code always comes from the site itself.",
+ "hosts": ["https://alenzacodes.github.io/alef-packs/_nmt/"]
+}

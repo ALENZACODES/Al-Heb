@@ -1,0 +1,32 @@
+{
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
+  "engine": "google-cloud-tts",
+  "voiceId": "he-IL-Wavenet-B",
+  "tradition": "sephardi",
+  "inputText": "mal'akh",
+  "inputTextKind": "respelling",
+  "hebrew": "מַלְאָךְ",
+  "spokenText": "mal'akh",
+  "renderedAt": "2026-11-10T16:36:48.244Z",
+  "redistributionCleared": false,
+  "normalized": true,
+  "provider": "google",
+  "madeFrom": "respelling",
+  "voiceName": "he-IL-Wavenet-B",
+  "languageCode": "he-IL",
+  "israeliRef": "audio/m/israeli/word/h07aab9ea.mp3",
+  "tempo": {
+    "applied": false,
+    "factor": 1,
+    "cap": 1.26,
+    "before": 0.7680045351473923,
+    "after": 0.7680045351473923,
+    "israeliSec": 1.12,
+    "israeliRef": "audio/m/israeli/word/h07aab9ea.mp3"
+  },
+  "speakingRate": 1.33,
+  "batch": "ari-missing-ash-seph-2026-11-10",
+  "metadataStripped": true,
+  "licence": "customer-owned"
+}

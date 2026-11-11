@@ -24,7 +24,7 @@ a { color: var(--accent); }
 main:focus, h1:focus { outline: none; }
 h1[tabindex="-1"]:focus, h1[tabindex="-1"]:focus-visible { outline: none; }
 .skip-link { position: absolute; inset-inline-start: .5rem; inset-block-start: -12rem; background: var(--accent); color: var(--accent-fg); padding: .75rem 1rem; z-index: 100; border-radius: 8px; }
-.skip-link:focus { inset-block-start: .5rem; }
+.skip-link:focus { position: fixed; inset-block-start: .5rem; } /* fixed while focused, so it shows even when the page is scrolled */
 .visually-hidden { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 .site-header { padding: 0 1rem; padding-inline: max(1rem, env(safe-area-inset-left)); display: flex; align-items: center; }
 .brand { font-weight: 700; font-size: 1.25rem; text-decoration: none; color: var(--fg); display: inline-flex; gap: .5rem; min-block-size: 44px; align-items: center; }
@@ -303,7 +303,7 @@ main :is(p, li, dd, td) > a:not(.btn):not(.skip-link) { padding-block: 10px; }
 /* Sources line under word meanings and example sentences (src/shell/sources.js): small, wraps, link keeps the 44px target from the rule above */
 .src-line { display: none !important; }
 .fine-print { margin: 2.5rem 0 .4rem; text-align: center; font-size: .75rem; line-height: 1.5; }
-.fine-print a { color: var(--muted); text-decoration: none; }
+.fine-print a { color: var(--muted); text-decoration: none; display: inline-flex; align-items: center; justify-content: center; min-block-size: 44px; min-inline-size: 44px; } /* small text, full-size tap area */
 .fine-print a:hover, .fine-print a:focus-visible { opacity: 1; text-decoration: underline; }
 /* Memory card (src/letters/memorycard.js): on phones it sits after the stage and its toggles, never above the tracing stage. */
 @media (max-width: 600px) { main .alef-trace > div:has(> .stage) > .mc { order: 8; } main .alef-trace > div:has(> .stage) > .mc[data-first] { order: 4; } main .alef-trace > div:has(> .stage) > .mc-fallback { order: 8; } }
@@ -516,3 +516,8 @@ details.draft-flag { background: none; border: 0; padding: 0; font-weight: inher
 .alef-coin.is-long .he{font-size:calc(var(--z)*.28)}
 .wf-level-tile>.alef-medal:last-child{margin:.5rem 0 0}
 @media (forced-colors:active){.alef-medal{display:none}.alef-coin{background:none}.alef-coin .he{color:CanvasText;background:none}}
+
+/* Feature-screen gold coin + Rimon helper (Talk, Camera, Light, Scan). Icons lazy-load; onerror removes a missing file. */
+.alef-feature-hero{display:flex;gap:.75rem;align-items:center;flex-wrap:wrap;margin:0 0 1rem}
+.alef-feature-hero .alef-medal{margin:0}
+.alef-feature-hero .rimon-say{flex:1 1 12rem;min-inline-size:0}

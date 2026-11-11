@@ -4,7 +4,7 @@
 // Translation: the sign word list, then the app phrasebook, then (only if a line is still untranslated) the app dictionary
 // word for word. The English is then drawn over the Hebrew on the levelled photo.
 import { deskew } from '../photo/preprocess.js';
-import { regionsFromBoxes, chooseAlignment, fitText, boxColours, readerImage, wordForWord, boxOnOriginal, LINE_HEIGHT } from './camera-model.js';
+import { regionsFromBoxes, chooseAlignment, fitText, boxColours, readerImage, wordForWord, boxOnOriginal, findOccluders, besideBar, lineHadNoise, lineForPack, signCase, LINE_HEIGHT } from './camera-model.js';
 import { isHebrew } from '../photo/hebrew.js';
 
 const FONT_STACK = '"Alef", "Heebo", system-ui, -apple-system, "Segoe UI", sans-serif';
@@ -161,7 +161,7 @@ export async function retryLines(levelled, eng, regions, glossary, doc) {
  *   `engine` is injectable for tests; `dictionaryLoader` is called at most once, and only if a line is still untranslated.
  * @returns {Promise<{width:number,height:number,regions:object[],blob:Blob|null,notices:string[],engine:object,levelled:{applied:boolean,angle:number},dictionary:object|null}>}
  */
-export async function translateOnDevice(photo, { glossary, dictionaryLoader, onProgress, doc = globalThis.document, engine, readerMode, targetSide, secondSize, lineRetry = true } = {}) {
+export async function translateOnDevice(photo, { glossary, dictionaryLoader, translator, onProgress, doc = globalThis.document, engine, readerMode, targetSide, secondSize, lineRetry = true, occluders = true } = {}) {
   let eng = engine;
   if (!eng) {
     const { createBrowserTesseract } = await import('../photo/engines/tesseract-browser.js');
@@ -176,10 +176,56 @@ export async function translateOnDevice(photo, { glossary, dictionaryLoader, onP
   const sk = deskew(id);                                   // level a tilted sign before reading it
   if (sk.applied) g.putImageData(id, 0, 0);
   const levelled = { applied: !!sk.applied, angle: sk.applied ? sk.angle : 0 };
-  const readings = await readSign(canvas, eng, { doc, readerMode, targetSide, secondSize });
+  // A pole or post in front of the sign: the reader is given a copy with the bar painted in the sign's own background, so the bar
+  // is not read as ink. The photo shown to the learner keeps the bar.
+  const hidden = occluders ? findOccluders(sk.applied ? g.getImageData(0, 0, canvas.width, canvas.height) : id) : { bars: [], background: null };
+  let reading = canvas;
+  if (hidden.bars.length && hidden.background) {
+    reading = Object.assign(doc.createElement('canvas'), { width: canvas.width, height: canvas.height });
+    const rg = reading.getContext('2d', { willReadFrequently: true });
+    rg.drawImage(canvas, 0, 0);
+    rg.fillStyle = rgb(hidden.background);
+    for (const b of hidden.bars) rg.fillRect(b.x, 0, b.w, canvas.height);
+  }
+  const readings = await readSign(reading, eng, { doc, readerMode, targetSide, secondSize });
   const perReading = readings.map((r) => regionsFromBoxes(r.words, glossary));
   const regions = perReading.length > 1 ? mergeReadings(perReading[0], perReading[1]) : perReading[0];
-  if (lineRetry) await retryLines(canvas, eng, regions, glossary, doc);
+  if (lineRetry) await retryLines(reading, eng, regions, glossary, doc);
+  // A line that runs into a bar has letters nobody can see. It keeps a translation only when the word list recognised the whole
+  // line (every piece a listed word, or the closest listed phrase). A clean-looking piece of it is never translated as if it were the line.
+  for (const r of regions) {
+    if (r.held || !besideBar(r.box, hidden.bars)) continue;
+    r.occluded = true;
+    if (r.en && r.translationSource !== 'word-list-near' && lineHadNoise(r.he)) { r.en = null; r.translationSource = null; r.translit = null; }
+    if (!r.en && glossary.completeAcrossGap) {
+      // the pieces on each side of the bar, in reading order (Hebrew starts on the right), completed from the word list
+      const bar = hidden.bars.find((b) => besideBar(r.box, [b]));
+      const mid = bar.x + bar.w / 2;
+      const pieces = (r.pieces || []).filter((p) => isHebrew(p.text) || /[0-9]/.test(p.text));
+      const across = pieces.some((p) => p.x < bar.x - 2 && p.x + p.w > bar.x + bar.w + 2);
+      const letters = pieces.reduce((a, p) => a + [...p.text.replace(/[^א-ת]/g, '')].length, 0);
+      if (!across && letters) {
+        const letterW = pieces.reduce((a, p) => a + p.w, 0) / letters;
+        const side = (right) => pieces.filter((p) => (p.x + p.w / 2 > mid) === right).sort((p, q) => q.x - p.x).map((p) => p.text).join(' ');
+        const done = glossary.completeAcrossGap(side(true), side(false), Math.ceil(bar.w / Math.max(1, letterW)) + 1);
+        if (done) Object.assign(r, { en: done.en, translationSource: 'word-list-near', translit: done.translit, pointed: done.pointed, partial: false });
+      }
+    }
+    if (!r.en) r.partial = true;
+  }
+  // Lines the word list does not hold go to the Hebrew to English language pack when it is on this device (the same pack the
+  // Talk screen uses). Only a line that was read cleanly and with confidence is sent: a guess built on a misread line would look
+  // just as fluent as a right one. A held line, a partly read line and a line behind a bar are never sent.
+  let packUsed = 0;
+  if (translator) for (const r of regions) {
+    if (r.held || r.en || r.partial || r.occluded) continue;
+    const line = lineForPack(r.he, r.conf);
+    if (!line) continue;
+    try {
+      const en = signCase(await translator(line));
+      if (en) { Object.assign(r, { en, translationSource: 'language-pack' }); packUsed++; }
+    } catch { /* the pack could not answer: the dictionary below still may */ }
+  }
   let dictionary = null;
   if (dictionaryLoader && regions.some((r) => !r.held && !r.en)) {
     try { dictionary = await dictionaryLoader(); } catch { dictionary = null; }
@@ -196,5 +242,5 @@ export async function translateOnDevice(photo, { glossary, dictionaryLoader, onP
   else if (!regions.some((r) => r.drawn)) notices.push('Hebrew was found, but none of it could be translated on this device.');
   if (levelled.applied && regions.some((r) => r.drawn)) notices.push('The sign was tilted, so the translated photo has been straightened.');
   const blob = regions.some((r) => r.drawn) ? await toBlob(canvas, 'image/jpeg', 0.9) : null;
-  return { width: canvas.width, height: canvas.height, regions, blob, notices, engine: eng, levelled, dictionary };
+  return { width: canvas.width, height: canvas.height, regions, blob, notices, engine: eng, levelled, dictionary, bars: hidden.bars, packUsed };
 }

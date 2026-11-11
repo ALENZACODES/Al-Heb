@@ -68,6 +68,12 @@ export const ORIGINAL_SONG_TRACKS = [
   { id: 'open-hands', file: 'open-hands.mp3', title: 'Open Hands', role: 'Reform-friendly song', author: 'John Khan / ALENZA CODES', licence: 'All rights reserved', sha256_16: '6ca58d0d920488b6' },
   { id: 'gates-of-morning-a', file: 'gates-of-morning-a.mp3', title: 'Gates of Morning A', role: 'Cantorial-inspired song', author: 'John Khan / ALENZA CODES', licence: 'All rights reserved', sha256_16: '823f9bbdfdebf18a' },
   { id: 'gates-of-morning-b', file: 'gates-of-morning-b.mp3', title: 'Gates of Morning B', role: 'Cantorial-inspired song', author: 'John Khan / ALENZA CODES', licence: 'All rights reserved', sha256_16: '69f850d5b2de7257' },
+  { id: 'adon-olam', file: 'adon-olam.mp3', title: 'Adon Olam (Niggun)', role: 'Wordless niggun on a traditional melody', author: 'John Khan / ALENZA CODES', licence: 'All rights reserved', sha256_16: '85485a63b054f942' },
+  { id: 'hava-nagila', file: 'hava-nagila.mp3', title: 'Hava Nagila (Niggun)', role: 'Wordless niggun on a traditional melody', author: 'John Khan / ALENZA CODES', licence: 'All rights reserved', sha256_16: 'b924f9b883596f2d' },
+  { id: 'ma-oz-tzur', file: 'ma-oz-tzur.mp3', title: "Ma'oz Tzur", role: 'Traditional Hanukkah song, modern cantorial arrangement', author: 'John Khan / ALENZA CODES', licence: 'All rights reserved', sha256_16: 'ee87e9cf8c3936cf' },
+  { id: 'dayenu', file: 'dayenu.mp3', title: 'Dayenu', role: 'Traditional Passover song, modern cantorial arrangement', author: 'John Khan / ALENZA CODES', licence: 'All rights reserved', sha256_16: '0f8782f665b8baf8' },
+  { id: 'hevenu-shalom-aleichem', file: 'hevenu-shalom-aleichem.mp3', title: 'Hevenu Shalom Aleichem', role: 'Traditional peace song, modern cantorial arrangement', author: 'John Khan / ALENZA CODES', licence: 'All rights reserved', sha256_16: '0f7746b9da87c3ef' },
+  { id: 'yom-zeh-l-yisrael', file: 'yom-zeh-l-yisrael.mp3', title: "Yom Zeh L'Yisrael", role: 'Traditional Shabbat song, modern cantorial arrangement', author: 'John Khan / ALENZA CODES', licence: 'All rights reserved', sha256_16: '14fcb03475a97311' },
 ];
 
 export const SACRED_ROUTES = new Set([

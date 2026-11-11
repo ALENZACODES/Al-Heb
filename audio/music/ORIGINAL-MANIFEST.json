@@ -143,6 +143,102 @@
       "duration_seconds": 70.034286,
       "bytes": 1681448,
       "sha256_16": "69f850d5b2de7257"
+    },
+    {
+      "id": "adon-olam",
+      "file": "adon-olam.mp3",
+      "title": "Adon Olam (Niggun)",
+      "kind": "vocal",
+      "style": "Modern cantorial niggun on the traditional Adon Olam melody",
+      "role": "optional song (never under prayer screens or over learner speech)",
+      "melody": "traditional / public domain",
+      "words": "wordless niggun syllables (traditional public-domain text is not used in this recording)",
+      "arrangement_and_recording": "original, All rights reserved, John Khan / ALENZA CODES",
+      "lyrics": "Ai, ai, ai, yai-dai-dai, bim-bam",
+      "duration_seconds": 57.521625,
+      "bytes": 1380519,
+      "sha256_16": "85485a63b054f942",
+      "added": "2026-11-10"
+    },
+    {
+      "id": "hava-nagila",
+      "file": "hava-nagila.mp3",
+      "title": "Hava Nagila (Niggun)",
+      "kind": "vocal",
+      "style": "Modern cantorial niggun on the traditional Hava Nagila melody",
+      "role": "optional song (never under prayer screens or over learner speech)",
+      "melody": "traditional / public domain",
+      "words": "wordless niggun syllables (traditional public-domain text is not used in this recording)",
+      "arrangement_and_recording": "original, All rights reserved, John Khan / ALENZA CODES",
+      "lyrics": "Ai, ai, ai, yai-dai-dai, bim-bam",
+      "duration_seconds": 68.911,
+      "bytes": 1653864,
+      "sha256_16": "b924f9b883596f2d",
+      "added": "2026-11-10"
+    },
+    {
+      "id": "ma-oz-tzur",
+      "file": "ma-oz-tzur.mp3",
+      "title": "Ma'oz Tzur",
+      "kind": "vocal",
+      "style": "Modern cantorial arrangement of the traditional Hanukkah song",
+      "role": "optional song (never under prayer screens or over learner speech)",
+      "melody": "traditional / public domain",
+      "words": "traditional / public domain (first verse, as commonly sung)",
+      "arrangement_and_recording": "original, All rights reserved, John Khan / ALENZA CODES",
+      "lyrics": "Ma'oz tzur y'shu'ati / l'cha na'eh l'shabe'ach / tikon beit t'filati / v'sham todah n'zabe'ach",
+      "duration_seconds": 44.277542,
+      "bytes": 1062661,
+      "sha256_16": "ee87e9cf8c3936cf",
+      "added": "2026-11-10"
+    },
+    {
+      "id": "dayenu",
+      "file": "dayenu.mp3",
+      "title": "Dayenu",
+      "kind": "vocal",
+      "style": "Modern cantorial arrangement of the traditional Passover song",
+      "role": "optional song (never under prayer screens or over learner speech)",
+      "melody": "traditional / public domain",
+      "words": "traditional / public domain",
+      "arrangement_and_recording": "original, All rights reserved, John Khan / ALENZA CODES",
+      "lyrics": "Ilu hotzi hotzianu, hotzianu mimitzrayim, dayenu / Day-dayenu, day-dayenu, day-dayenu, dayenu dayenu",
+      "duration_seconds": 59.193458,
+      "bytes": 1420643,
+      "sha256_16": "0f8782f665b8baf8",
+      "added": "2026-11-10"
+    },
+    {
+      "id": "hevenu-shalom-aleichem",
+      "file": "hevenu-shalom-aleichem.mp3",
+      "title": "Hevenu Shalom Aleichem",
+      "kind": "vocal",
+      "style": "Modern cantorial arrangement of the traditional peace song",
+      "role": "optional song (never under prayer screens or over learner speech)",
+      "melody": "traditional / public domain",
+      "words": "traditional / public domain",
+      "arrangement_and_recording": "original, All rights reserved, John Khan / ALENZA CODES",
+      "lyrics": "Hevenu shalom aleichem / hevenu shalom aleichem / hevenu shalom, shalom, shalom aleichem",
+      "duration_seconds": 59.637542,
+      "bytes": 1431301,
+      "sha256_16": "0f7746b9da87c3ef",
+      "added": "2026-11-10"
+    },
+    {
+      "id": "yom-zeh-l-yisrael",
+      "file": "yom-zeh-l-yisrael.mp3",
+      "title": "Yom Zeh L'Yisrael",
+      "kind": "vocal",
+      "style": "Modern cantorial arrangement of the traditional Shabbat song",
+      "role": "optional song (never under prayer screens or over learner speech)",
+      "melody": "traditional / public domain",
+      "words": "traditional / public domain",
+      "arrangement_and_recording": "original, All rights reserved, John Khan / ALENZA CODES",
+      "lyrics": "Yom zeh l'Yisrael orah v'simcha / Shabbat m'nuchah",
+      "duration_seconds": 44.042417,
+      "bytes": 1057018,
+      "sha256_16": "14fcb03475a97311",
+      "added": "2026-11-10"
     }
   ],
   "stings": [
@@ -164,5 +260,7 @@
       "bytes": 96965,
       "duration_seconds": 6.034286
     }
-  ]
+  ],
+  "updated": "2026-11-10",
+  "pack_note": "Tracks dated 2026-11-09 are original compositions. Tracks dated 2026-11-10 are original arrangements and recordings of traditional public-domain words and melodies. Two of those (adon-olam, hava-nagila) use wordless niggun syllables rather than the traditional texts."
 }

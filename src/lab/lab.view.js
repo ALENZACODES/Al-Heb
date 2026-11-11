@@ -139,7 +139,7 @@ const CSS = `
 .lab-actions{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap;margin-block-start:.6rem}
 .lab-intro .how{font-size:1.05rem}
 /* hub: tokens, New marks, skill groups */
-.lab-hero-art{display:block;inline-size:100%;block-size:auto;aspect-ratio:3/1;object-fit:cover;border-radius:16px;margin-block-end:.8rem}
+.lab-hero-art{display:block;inline-size:100%;block-size:auto;aspect-ratio:3/1;object-fit:contain;border-radius:16px;margin-block-end:.8rem}
 .lab-token{inline-size:56px;block-size:56px;border-radius:50%;flex:none;object-fit:cover}
 .lab-token-glyph{display:grid;place-items:center;background:#1e4634;border:3px solid #d4a647;box-shadow:inset 0 0 0 3px #1e4634,inset 0 0 0 4px #e9c46a66;color:#f2d27c;font-weight:700;overflow:hidden}
 .lab-token-glyph .he{font-size:1.35rem;line-height:1;white-space:nowrap;color:#f2d27c}
@@ -157,7 +157,7 @@ const CSS = `
 .lab-teaches{font-size:.85rem;color:var(--lab-accent);font-weight:600}
 .lab-group{margin:1rem 0 .3rem;font-size:1.05rem;display:flex;align-items:center;gap:.5rem}
 .lab-group::before{content:"";inline-size:.8rem;block-size:.8rem;border-radius:3px;background:var(--sk)}
-.lab-plan .lab-token{inline-size:40px;block-size:40px}.lab-plan .lab-token-glyph .he{font-size:.95rem}
+.lab-plan .lab-token{inline-size:40px;max-inline-size:40px;min-inline-size:40px;block-size:40px}.lab-plan .lab-token-glyph .he{font-size:.95rem}
 /* intro and results */
 .lab-cover{display:block;inline-size:100%;block-size:auto;aspect-ratio:2/1;object-fit:cover;border-radius:14px}
 .lab-win-art{display:block;inline-size:180px;block-size:180px;margin:0 auto;object-fit:contain}
@@ -321,13 +321,17 @@ function hub(root, ctx) {
   const newOnes = GAMES.filter((g) => isNewGame(g, st));
   const tile = (g) => {
     const gs = st.games[g.id];
-    return h('a', { class: `lab-game${g.pack === 'studio' ? ' is-studio' : ''}`, href: `#/lab/${g.id}`, style: `--sk:${SKILL_COLOR[g.skill]}` },
-      g.pack === 'studio' ? artImg(h, artPath(g.id, 'cover'), 'studio-cover') : coin(GLYPH[g.id] || 'א', 56),
+    // every game card leads with its own cover picture (owner, 2026-11-10: pictures over gold icons); the coin only if the picture fails
+    const pic = artImg(h, g.pack === 'studio' ? artPath(g.id, 'cover') : coverArtPath(g.id), 'studio-cover');
+    const card = h('a', { class: `lab-game has-cover${g.pack === 'studio' ? ' is-studio' : ''}`, href: `#/lab/${g.id}`, style: `--sk:${SKILL_COLOR[g.skill]}` },
+      pic || coin(GLYPH[g.id] || GLYPHS[g.id] || 'א', 56),
       h('span', { class: 'body' },
         h('span', { class: 't' }, g.title, ' ', heSpan(g.titleHe, 'he'), isNewGame(g, st) ? h('span', { class: 'lab-new' }, 'New') : null),
         g.teaches ? h('span', { class: 'lab-teaches' }, g.teaches) : null,
         h('span', { class: 'm' }, gs ? `Best ${gs.best} · level ${gs.lastMax}` : g.blurb),
         gs ? spark(gs.history.map((x) => x.s)) : null));
+    pic?.addEventListener?.('error', () => card.prepend?.(coin(GLYPH[g.id] || GLYPHS[g.id] || 'א', 56)), { once: true });
+    return card;
   };
   const pack = (cls, title, tag, lead, list, bySkill = false) => list.length ? h('section', { class: `lab-pack ${cls}`, 'aria-labelledby': `${cls}-h` },
     h('h2', { id: `${cls}-h`, class: 'lab-pack-h' }, title, ' ', h('span', { class: 'lab-pack-tag' }, tag)),
@@ -349,7 +353,7 @@ function hub(root, ctx) {
       h('ol', { class: 'lab-plan' }, ...plan.map((id, i) => {
         const g = gameById(id), done = prog.done.includes(id);
         return h('li', { class: done ? 'done' : '' }, h('span', { class: 'dot', 'aria-hidden': 'true' }, done ? '✓' : String(i + 1)),
-          coin(GLYPH[g.id] || 'א', 40), h('span', {}, h('span', { class: 'name' }, g.title), h('br'), h('span', { class: 'skill' }, skillOf(g.skill).name)),
+          token(ctx, g), h('span', {}, h('span', { class: 'name' }, g.title), h('br'), h('span', { class: 'skill' }, skillOf(g.skill).name)),
           done ? h('span', { class: 'visually-hidden' }, ' (done)') : null);
       })),
       prog.complete ? h('a', { class: 'lab-go', href: `#/lab/${plan[0]}` }, 'Play again') : h('a', { class: 'lab-go', href: `#/lab/${next}?workout=1` }, prog.done.length ? 'Continue workout' : 'Start workout')),

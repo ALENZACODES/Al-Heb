@@ -32,6 +32,10 @@ One line per route; the backtick name is the route `name` in `ROUTES` (the test 
 - `libraryarticle` (/library/:id) - one Library article or the Letter Videos page (promoted with the Library).
 - `lab` (/lab) - Brain Lab: the daily three-game workout and skill scores, sixteen games since 2026-11-10 (docs/games/BRAIN-LAB.md) (promoted 2026-11-09 at the owner's order; its Hebrew all comes from data already in the app, not yet reviewed by a native speaker).
 - `labgame` (/lab/:game) - one Brain Lab game (promoted with Brain Lab).
+- `books` (/books) - Little books shelf (promoted 2026-11-10 so learners can find the story books; pictures for books 38–63 are included, and some pages in book 63 have no voice yet).
+- `readhub` (/read-home) - a short Read door with links to texts, little books, the library, Torah reading, the service, scan and camera (added 2026-11-10 so the Read tab has a v0 page).
+- `speakhub` (/speak-home) - a short Speak door with links to Say it, Talk, Listen, Songs and pronunciation styles (added 2026-11-10 so the Speak tab has a v0 page).
+- `practical` (/practical) - Practical places course (promoted 2026-11-10 so learners can find it; every line is copied from existing lessons or the phrasebook, and native review is still required).
 - `help` (/help) - the beginner's help page: plain-word answers about starting, sound, progress and what is not finished yet (added 2026-11-07, usability review U-10: the app had no help page at all; the deep explainer stays at /how).
 
 Why these: they are the shortest path a new learner takes (welcome, first day, lessons, letters, review, progress), plus the pages a
@@ -39,7 +43,7 @@ first release cannot ship without (settings with backup/restore/delete, about, c
 
 ## What a preview route gets
 
-- Not in the bottom bar. The bar shows only sections that contain a v0 page (Learn, Progress) plus More.
+- Not in the bottom bar. The bar shows only sections that contain a v0 page (Learn, Read, Speak, Progress) plus More.
 - Listed in the More sheet only inside the collapsed group "Preview (unreviewed, work in progress)", grouped by section with a
   one-line note per section (`nav.preview.note.*` in `src/shell/nav.strings.js`).
 - A small banner at the top of the page, "Preview: unreviewed, may change" (`src/shell/preview-banner.js`, mounted from

@@ -743,6 +743,18 @@
    "hasAudio": true,
    "picturedPages": 12,
    "audioPages": 12
+  },
+  {
+   "id": "book63",
+   "titleHe": "הַסִּפּוּר שֶׁל מֹשֶׁה",
+   "titleTranslit": "Ha-Sippur shel Moshe",
+   "titleEn": "The Story of Moses",
+   "level": "Advanced",
+   "pageCount": 12,
+   "hasImages": true,
+   "hasAudio": false,
+   "picturedPages": 12,
+   "audioPages": 8
   }
  ]
 }

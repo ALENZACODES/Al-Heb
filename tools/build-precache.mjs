@@ -78,6 +78,8 @@ const ON_DEMAND_FILES = new Set([
   'data/builder_words.json',
   // Non-v0 data (the integration test's must-install list is the v0 offline contract; these are fetched on first use, then runtime-cached).
   'data/audio/english-glosses.json',
+  // Book 63's clip record (37 KB): no screen reads it (the reader plays the page files directly), so it stays out of the first install.
+  'data/audio/manifest-book63.json',
   // Word Finder bank (51 KB): preview-game data, fetched when the game first opens, runtime-cached by sw.js (keeps first install under 3.95 MiB).
   'data/games/firstwords.json',
   // Awards gallery view: route code only (the router loads views lazily; its engine files stay installed), fetched when Awards first opens, runtime-cached by sw.js (keeps first install under 3.95 MiB after the 25-badge engine landed).
@@ -102,6 +104,9 @@ const ON_DEMAND_FILES = new Set([
   'src/speak/speak.js',
   // Talk screen (preview route /talk): route code and its on-device phrase engine, fetched on first open and runtime-cached (keeps first install under 3.95 MiB). Its sentence pairs are data/talk/.
   'src/talk/talk.view.js', 'src/talk/talk.model.js', 'src/talk/engine.js', 'src/talk/data.js', 'src/talk/speech.js',
+  // Talk language pack code (tokenizer, decoding loop, downloader, worker): fetched with the Talk screen, runtime-cached. The packs themselves
+  // (assets/vendor/_nmt, about 80 MB a direction) and their runtime (assets/vendor/_ort) are never listed here: assets/vendor/ is skipped above.
+  'src/talk/hybrid.js', 'src/talk/nmt/tokenizer.js', 'src/talk/nmt/decode.js', 'src/talk/nmt/runtime.js', 'src/talk/nmt/postedit.js', 'src/talk/nmt/pack.js', 'src/talk/nmt/worker.js', 'src/talk/nmt/client.js',
   // Torah reader view: route code only (the router loads views lazily; its model/loader files stay installed), fetched when the reader first opens, runtime-cached by sw.js (keeps first install under 3.95 MiB after the full-Torah reader landed).
   'src/torahreader/torahreader.view.js',
   // Ask the Torah (#/ask): route code only, fetched on first open, runtime-cached (keeps first install under 3.95 MiB).

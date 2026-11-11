@@ -167,11 +167,32 @@ test("outline covers every Israel-track lesson (il01-il24 and the Israel I- less
   assert.deepEqual(missing, []);
 });
 
-test("holds stay in place: politeness-21 held for John, pu-army off the live set", () => {
+test("John 2026-11-10: politeness-21 is shown; pu-army is live; Shabbat and holidays stay last; eight divine-name holds stay off the live pages", () => {
   const p05 = pages.pages.find((p) => p.id === "pu-politeness-p05");
-  assert.deepEqual(p05.heldForJohn, ["politeness-21"]);
-  assert.equal(p05.items.find((it) => it.id === "politeness-21").heldForJohn, true);
+  const it = p05.items.find((x) => x.id === "politeness-21");
+  assert.ok(it, "בְּעֶזְרַת הַשֵּׁם stays on pu-politeness-p05");
+  assert.ok(!it.heldForJohn);
+  assert.ok(!(p05.heldForJohn || []).includes("politeness-21"));
+  assert.match(it.he, /בְּעֶזְרַת הַשֵּׁם/);
   const army = outline.units.find((u) => u.id === "pu-army");
-  assert.equal(army.live, false);
-  assert.equal(army.heldForJohn, true);
+  assert.equal(army.live, true);
+  assert.ok(!army.heldForJohn);
+  const ids = outline.units.map((u) => u.id);
+  assert.ok(ids.indexOf("pu-army") > ids.indexOf("pu-social") && ids.indexOf("pu-army") < ids.indexOf("pu-news"));
+  assert.deepEqual(ids.slice(-2), ["pu-shabbat", "pu-holidays"]);
+  const holdTokens = new Set(["אֵל", "אֱלֹהִים", "אֱלֹהֵינוּ", "אֱלֹהֵי", "אֱלֹהַי", "אֲדֹנָי", "יָהּ", "אֶהְיֶה", "יהוה", "יְהוָה"]);
+  const tokenise = (he) => he.normalize("NFC").split(/[^\u0590-\u05FF]+/).filter(Boolean);
+  for (const p of pages.pages) {
+    for (const item of p.items) {
+      if (item.heldForJohn) continue;
+      assert.notEqual(item.id, "il13-w4", "do not add il13 בָּרוּךְ הַשֵּׁם to live pages");
+      const he = item.he.normalize("NFC");
+      assert.ok(!/הַלְלוּ[־\s]?יָהּ/.test(he), `${p.id} ${item.id}: Yah hold shown`);
+      const hit = tokenise(he).find((tok) => holdTokens.has(tok));
+      assert.ok(!hit, `${p.id} ${item.id}: divine-name hold shown (${hit})`);
+    }
+  }
+  const greet = pages.pages.filter((pg) => pg.items.some((x) => x.id === "i-50-w13" || x.id === "i-29-w13"));
+  assert.ok(greet.some((pg) => pg.items.some((x) => x.id === "i-50-w13" && !x.heldForJohn)));
+  assert.ok(greet.some((pg) => pg.items.some((x) => x.id === "i-29-w13" && !x.heldForJohn)));
 });

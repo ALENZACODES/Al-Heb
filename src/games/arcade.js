@@ -116,9 +116,10 @@ export async function createArcade(root, ctx, spec) {
       const stars = lv ? '★'.repeat(lv.stars) + '☆'.repeat(3 - lv.stars) : '☆☆☆';
       return h('button', {
         type: 'button', class: 'arc-level' + (l === level ? ' is-current' : ''), 'aria-pressed': l === level, disabled: locked || undefined,
-        'aria-label': `Level ${l}, ${spec.levels[l - 1]?.name || ''}${locked ? ', locked' : `, ${lv?.stars || 0} of 3 stars`}`,
         onclick: () => { if (!locked) { level = l; renderLevels(); restart(); } },
-      }, h('span', { class: 'arc-level-n' }, locked ? '🔒' : String(l)), h('span', { class: 'arc-level-name' }, spec.levels[l - 1]?.name || ''), h('span', { class: 'arc-level-stars', 'aria-hidden': 'true' }, stars));
+      }, h('span', { class: 'arc-level-n' }, locked ? h('span', { 'aria-hidden': 'true' }, '🔒') : String(l)), ' ', h('span', { class: 'arc-level-name' }, spec.levels[l - 1]?.name || ''),
+        // the spoken name is the words on the button plus this hidden line (no aria-label, so the two can never disagree)
+        h('span', { class: 'visually-hidden' }, `, level ${l}${locked ? ', locked' : `, ${lv?.stars || 0} of 3 stars`}`), h('span', { class: 'arc-level-stars', 'aria-hidden': 'true' }, stars));
     }));
     const best = record.levels?.[level]?.best || 0;
     hudBest.textContent = best ? `Best L${level}: ${best}` : 'No best yet';

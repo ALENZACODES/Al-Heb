@@ -15,7 +15,7 @@ export function mount(root,ctx) {
   let session=createSession({store:ctx?.store,storeKey:STORE_KEY,par:6});
   const status=h('p',{class:'game-status',role:'status','aria-live':'polite'},'Loading shared Hebrew keyboard deck…');
   const board=h('div',{class:'game-board'});
-  const article=h('article',{class:'card game-card game-typewriter'},h('h1',{id:'view-title'},'Typewriter Conveyor Belt'),
+  const article=h('article',{class:'card game-card game-typewriter'},h('h1',{id:'view-title'},'Typewriter Belt'),
     h('p',{},'Type exactly the Hebrew letters shown on each moving word box.'),status,board);
   root.replaceChildren(article);
   function paint(){

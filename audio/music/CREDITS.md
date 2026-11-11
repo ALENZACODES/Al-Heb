@@ -46,3 +46,17 @@ Klezmer A/B, Niggun Calm A/B and Cantor Strings A/B were trimmed (trailing silen
 A further pass the same evening trimmed the remaining lead-in / tail silence, recut each bed with an equal-power (half-sine) crossfade of about 1.6–2.7 s, applied a gentle high-shelf lift (+3 to +6 dB at 8 kHz) so the beds are less muffled than the Kenney loops, and ran a −1 dBTP true-peak limiter on the hot tracks while keeping loudness around −14 to −16 LUFS. Stings were rebuilt from the limited songs with the same commands as above. Files are 192 kbps stereo 44.1 kHz MP3, metadata stripped again after re-encode.
 
 That long end-to-start crossfade still did not loop musically (the join smeared different bars, and the player also dipped volume for 1.2 s at the wrap). A later pass cut each bed to a downbeat-aligned 16- or 32-bar loop in the steady middle of the track, with only a 10 ms splice, and plays those short beds through the gapless Web Audio engine (not HTMLAudio.loop).
+
+## Traditional songs, modern cantorial arrangements (2026-11-10)
+
+Author / owner of the arrangements and recordings: John Khan / ALENZA CODES.  
+Licence: the words and melodies are traditional and in the public domain. The arrangements and recordings are original. **All rights reserved, John Khan / ALENZA CODES.**
+
+Optional songs only (never under prayer screens or over learner speech). Files are metadata-stripped. See `ORIGINAL-MANIFEST.json` for durations and the words as sung.
+
+- adon-olam.mp3 — Adon Olam (Niggun): wordless niggun syllables on the traditional melody (the hymn text is not sung)
+- hava-nagila.mp3 — Hava Nagila (Niggun): wordless niggun syllables on the traditional melody (the song text is not sung)
+- ma-oz-tzur.mp3 — Ma'oz Tzur: traditional public-domain words (first verse), modern cantorial arrangement
+- dayenu.mp3 — Dayenu: traditional public-domain words, modern cantorial arrangement
+- hevenu-shalom-aleichem.mp3 — Hevenu Shalom Aleichem: traditional public-domain words, modern cantorial arrangement
+- yom-zeh-l-yisrael.mp3 — Yom Zeh L'Yisrael: traditional public-domain words, modern cantorial arrangement

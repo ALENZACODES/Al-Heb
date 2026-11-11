@@ -27,7 +27,7 @@ export function mount(root,ctx) {
   let session = createSession({ store:ctx?.store,storeKey:STORE_KEY,par:6 });
   const status = h('p',{class:'game-status',role:'status','aria-live':'polite'},'Loading recorded sonar targets…');
   const board = h('div',{class:'game-board'});
-  const article = h('article',{class:'card game-card game-submarinesonar'},h('h1',{id:'view-title'},'Submarine Sonar Vowels'),
+  const article = h('article',{class:'card game-card game-submarinesonar'},h('h1',{id:'view-title'},'Sonar Vowels'),
     h('p',{},'Hear the word spoken aloud, then steer through its exact pointed spelling.'), status,board);
   root.replaceChildren(article);
   async function paint(feedback) {

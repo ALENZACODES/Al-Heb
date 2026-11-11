@@ -1,4 +1,4 @@
-# Practical Hebrew: The Written Pages (94)
+# Practical Hebrew: The Written Pages (200)
 
 Generated from `data/curriculum/practical-pages/written.json` by the page builder. Do not edit by hand.
 
@@ -16,7 +16,7 @@ Spaced review: each page queues its new items, plus earlier items marked review.
 |---|---|---|---|
 | שָׁלוֹם | shalom | hello / goodbye / peace | `greetings-01` tts, f+m |
 | לְהִתְרָאוֹת | lehitra'ot | see you (later) | `greetings-20` tts, f+m |
-| הֵי | hey | hi (slang) | `greetings-02` tts, f+m |
+| הֵי | hey | hi | `greetings-02` tts, f+m |
 
 **Speak.**
 
@@ -55,7 +55,7 @@ Spaced review: each page queues its new items, plus earlier items marked review.
 | מַה שְׁלוֹמְךָ? | ma shlomcha? | how are you? (to or by a man) | `greetings-11-m` tts, f+m |
 | מַה שְׁלוֹמֵךְ? | ma shlomech? \* | how are you? (to or by a woman) | `greetings-11-f` tts, f+m |
 | מָה נִשְׁמָע? | ma nishma? | what's up? (lit. what is heard?) | `greetings-12` tts, f+m |
-| מָה קוֹרֶה? | ma kore? | what's happening? (slang) | `greetings-13` tts, f+m |
+| מָה קוֹרֶה? | ma kore? | what's happening? | `greetings-13` tts, f+m |
 
 **Speak.**
 
@@ -165,7 +165,7 @@ Spaced review: each page queues its new items, plus earlier items marked review.
 | תּוֹדָה | toda | thank you | `politeness-01` tts, f+m |
 | תּוֹדָה רַבָּה | toda raba | thank you very much | `politeness-02` tts, f+m |
 | בְּבַקָּשָׁה | bevakasha | please / you're welcome | `politeness-03` tts, f+m |
-| אֵין בַּעַד מָה | ein ba'ad ma | you're welcome (lit. nothing for what) (formal) | `politeness-05` tts, f+m |
+| אֵין בַּעַד מָה | ein ba'ad ma | you're welcome (lit. nothing for what) | `politeness-05` tts, f+m |
 | אֵין בְּעָיָה | ein be'aya | no problem | `politeness-04` tts, f+m |
 
 **Speak.**
@@ -226,13 +226,13 @@ Spaced review: each page queues its new items, plus earlier items marked review.
 
 | Hebrew | Transliteration | English | Audio |
 |---|---|---|---|
-| סַבָּבָה | sababa | cool / great / fine by me (slang) | `politeness-12` tts, f+m |
-| יַאלְלָה | yalla | come on / let's go / OK then (slang) | `politeness-13` tts, f+m |
-| וָואלָה | wallah | really? / wow / honestly (slang) | `politeness-14` tts, f+m |
-| אַחִי | achi | my brother (bro) (slang) | `politeness-15` tts, f+m |
-| יוֹפִי | yofi | great / nice (slang) | `politeness-16` tts, f+m |
-| חֲבָל עַל הַזְּמַן | chaval al hazman | awesome (lit. a waste of the time) (slang) | `politeness-17` tts, f+m |
-| מָה פִּתְאוֹם? | ma pitom? | no way! / what do you mean? (slang) | `politeness-18` tts, f+m |
+| סַבָּבָה | sababa | cool / great / fine by me | `politeness-12` tts, f+m |
+| יַאלְלָה | yalla | come on / let's go / OK then | `politeness-13` tts, f+m |
+| וָואלָה | wallah | really? / wow / honestly | `politeness-14` tts, f+m |
+| אַחִי | achi | my brother (bro) | `politeness-15` tts, f+m |
+| יוֹפִי | yofi | great / nice | `politeness-16` tts, f+m |
+| חֲבָל עַל הַזְּמַן | chaval al hazman | awesome (lit. a waste of the time) | `politeness-17` tts, f+m |
+| מָה פִּתְאוֹם? | ma pitom? | no way! / what do you mean? | `politeness-18` tts, f+m |
 
 **Speak.**
 
@@ -267,11 +267,11 @@ Spaced review: each page queues its new items, plus earlier items marked review.
 | Hebrew | Transliteration | English | Audio |
 |---|---|---|---|
 | אָז | az | so | `fillers-01` tts, f+m |
-| נוּ | nu | well? / come on (slang) | `fillers-02` tts, f+m |
+| נוּ | nu | well? / come on | `fillers-02` tts, f+m |
 | טוֹב | tov | OK / well / good | `fillers-03` tts, f+m |
 | אֲבָל | aval | but | `fillers-12` tts, f+m |
 | בְּעֶצֶם | be'etsem | actually / in fact | `fillers-10` tts, f+m |
-| כְּלוֹמַר | klomar | that is / I mean (formal) | `fillers-11` tts, f+m |
+| כְּלוֹמַר | klomar | that is / I mean | `fillers-11` tts, f+m |
 
 **Speak.**
 
@@ -291,9 +291,9 @@ Spaced review: each page queues its new items, plus earlier items marked review.
 | נָכוֹן | nachon | right / correct | `fillers-04` tts, f+m |
 | לֹא נָכוֹן | lo nachon | not right / wrong | `fillers-05` tts, f+m |
 | בֶּאֱמֶת? | be'emet? | really? | `fillers-06` tts, f+m |
-| מַמָּשׁ | mamash | really / truly / very (slang) | `fillers-07` tts, f+m |
+| מַמָּשׁ | mamash | really / truly / very | `fillers-07` tts, f+m |
 | פָּשׁוּט | pashut | simply / just | `fillers-08` tts, f+m |
-| סְתָם | stam | just (because) / for no reason (slang) | `fillers-09` tts, f+m |
+| סְתָם | stam | just (because) / for no reason | `fillers-09` tts, f+m |
 
 **Speak.**
 
@@ -629,7 +629,7 @@ Spaced review: each page queues its new items, plus earlier items marked review.
 
 | Hebrew | Transliteration | English | Audio |
 |---|---|---|---|
-| מָה הַמַּצָּב? | ma hamatsav? | how's it going? (lit. what's the situation) (slang) | `small-talk-16` tts, f+m |
+| מָה הַמַּצָּב? | ma hamatsav? | how's it going? (lit. what's the situation) | `small-talk-16` tts, f+m |
 
 **Speak.**
 
@@ -1161,6 +1161,67 @@ Spaced review: each page queues its new items, plus earlier items marked review.
 
 **Review queue from earlier pages:** `shop-01`, `shop-06-m`, `d-shop-l4`, `shop-07`, `shop-09`, `shop-13`, `shop-14`, `shop-19`
 
+## pu-shuk-p01: The Market and the Prices
+
+*Learn page.* Name the market, ask a price, and say if it is expensive or cheap.
+
+**Grammar: Two ways to ask a price.** שׁוּק is the open market. כַּמָּה זֶה עוֹלֶה? asks how much something costs, and מָה הַמְּחִיר? asks what the price is. Your answer can be short: זֶה יָקָר when it is expensive, זֶה זוֹל when it is cheap.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| שׁוּק | shuk \* | market | `i-12-w1` tts, f+m |
+| כַּמָּה זֶה עוֹלֶה? | kamah zeh oleh? \* | how much does it cost? | `i-12-w2` tts, f+m |
+| מָה הַמְּחִיר? | mah hamechir? \* | what is the price? | `i-12-w3` tts, f+m |
+| זֶה יָקָר | zeh yakar \* | it's expensive | `i-12-w4` tts, f+m |
+| זֶה זוֹל | zeh zol \* | it's cheap | `i-12-w5` tts, f+m |
+
+**Speak.**
+
+- You pick up a melon at a stall. Ask how much it costs. → כַּמָּה זֶה עוֹלֶה? (kamah zeh oleh?) · audio `i-12-w2`
+- The price is too high. Say it is expensive. → זֶה יָקָר (zeh yakar) · audio `i-12-w4`
+
+**Review queue from earlier pages:** `shop-17`, `shop-18`
+
+## pu-shuk-p02: A Discount and Two Vegetables
+
+*Speak page.* Ask for a discount and name two vegetables.
+
+**Grammar: Asking with יֵשׁ.** יֵשׁ means there is. Said as a question, יֵשׁ הַנָּחָה? asks if there is a discount. חֲצִי is half. עַגְבָנִיָּה is a tomato and מְלָפְפוֹן is a cucumber.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| יֵשׁ הַנָּחָה? | yesh hanachah? \* | is there a discount? | `i-12-w6` tts, f+m |
+| חֲצִי | chatzi \* | half | `i-12-w7` tts, f+m |
+| עַגְבָנִיָּה | agvaniyah \* | tomato | `i-12-w9` tts, f+m |
+| מְלָפְפוֹן | melafefon \* | cucumber | `i-12-w10` tts, f+m |
+
+**Speak.**
+
+- You are buying a lot. Ask if there is a discount. → יֵשׁ הַנָּחָה? (yesh hanachah?) · audio `i-12-w6`
+- Point at the tomatoes and name one. → עַגְבָנִיָּה (agvaniyah) · audio `i-12-w9`
+
+**Review queue from earlier pages:** `i-12-w4`, `i-12-w5`
+
+## pu-shuk-p03: Unit Review
+
+*Review page.* Choose, pay in cash and take a bag.
+
+**Grammar: Closing the sale.** אֶקַּח אֶת זֶה says I will take this, and it works for גְּבִינָה, for זֵיתִים, or for anything you point at. מְזֻמָּן is cash. A שַׂקִּית is a bag.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| גְּבִינָה | gevinah \* | cheese | `i-12-w11` tts, f+m |
+| זֵיתִים | zeitim \* | olives | `i-12-w12` tts, f+m |
+| אֶקַּח אֶת זֶה | ekach et zeh \* | I'll take this | `i-12-w13` tts, f+m |
+| מְזֻמָּן | mezuman \* | cash | `i-12-w14` tts, f+m |
+| שַׂקִּית | sakit \* | bag | `i-12-w15` tts, f+m |
+
+**Speak.**
+
+- You have chosen. Say you will take this. → אֶקַּח אֶת זֶה (ekach et zeh) · audio `i-12-w13`
+
+**Review queue from earlier pages:** `i-12-w5`, `i-12-w6`, `i-12-w7`, `i-12-w9`, `i-12-w10`
+
 ## pu-directions-p01: Where Is...?
 
 *Learn page.* Ask where a station, hotel, hospital or pharmacy is.
@@ -1385,7 +1446,7 @@ Spaced review: each page queues its new items, plus earlier items marked review.
 | תַּחֲנָה | tachana \* | station; stop | `il10-w4` tts, f+m |
 | אֵיפֹה תַּחֲנַת הָאוֹטוֹבּוּס? | eifo tachanat ha'otobus? | where is the bus stop? | `taxi-10` tts, f+m |
 | אֵיזֶה אוֹטוֹבּוּס הוֹלֵךְ לְ...? | eize otobus holech le...? | which bus goes to ...? | `taxi-11` tts, f+m |
-| הַאִם זֶה הָאוֹטוֹבּוּס לְ...? | ha'im ze ha'otobus le...? | is this the bus to ...? (formal) | `taxi-14` tts, f+m |
+| הַאִם זֶה הָאוֹטוֹבּוּס לְ...? | ha'im ze ha'otobus le...? | is this the bus to ...? | `taxi-14` tts, f+m |
 
 **Speak.**
 
@@ -1586,7 +1647,7 @@ Spaced review: each page queues its new items, plus earlier items marked review.
 | מָה אַתָּה עוֹשֶׂה? | ma ata ose? | what do you do (for work)? (to or by a man) | `small-talk-07-m` tts, f+m |
 | בַּת כַּמָּה אַתְּ? | bat kama at? \* | how old are you? (to a woman; lit. daughter of how much) (to or by a woman) | `small-talk-08-f` tts, f+m |
 | הַכֹּל בְּסֵדֶר אִתְּךָ? | hakol beseder itcha? | are you OK? (to or by a man) | `small-talk-14-m` tts, f+m |
-| מָה הַמַּצָּב? | ma hamatsav? | how's it going? (lit. what's the situation) (slang) | `small-talk-16` tts, f+m |
+| מָה הַמַּצָּב? | ma hamatsav? | how's it going? (lit. what's the situation) | `small-talk-16` tts, f+m |
 
 **Speak.**
 
@@ -1624,8 +1685,8 @@ Spaced review: each page queues its new items, plus earlier items marked review.
 |---|---|---|---|
 | הַכֹּל בְּסֵדֶר אִתְּךָ? | hakol beseder itcha? | are you OK? (to or by a man) | `small-talk-14-m` tts, f+m |
 | הַכֹּל בְּסֵדֶר אִתָּךְ? | hakol beseder itach? \* | are you OK? (to or by a woman) | `small-talk-14-f` tts, f+m |
-| תִּרְגַּע | tirga | chill / calm down (to or by a man) (slang) | `small-talk-15-m` tts, f+m |
-| תִּרְגְּעִי | tirgi \* | chill / calm down (to or by a woman) (slang) | `small-talk-15-f` tts, f+m |
+| תִּרְגַּע | tirga | chill / calm down (to or by a man) | `small-talk-15-m` tts, f+m |
+| תִּרְגְּעִי | tirgi \* | chill / calm down (to or by a woman) | `small-talk-15-f` tts, f+m |
 
 **Speak.**
 
@@ -1918,3 +1979,2002 @@ Spaced review: each page queues its new items, plus earlier items marked review.
 - Ask for help. → עֶזְרָה (ezra) · audio `i-44-w11`
 
 **Review queue from earlier pages:** `i-44-w3`, `i-44-w6`, `i-44-w2`, `i-44-w5`, `i-44-w8`, `i-44-w7`
+
+## pu-time-p01: Days of the Week
+
+*Learn page.* Name the first day of the week and Shabbat.
+
+**Grammar: Days are numbered: יוֹם רִאשׁוֹן.** In Israel the week starts on Sunday, and the days are counted: יוֹם רִאשׁוֹן is the first day, Sunday. Saturday is שַׁבָּת, the day of rest, so Sunday is a working day.
+
+**Culture.** Most buses and many shops stop from Friday afternoon until Saturday night; plan errands for Sunday to Thursday.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| יוֹם רִאשׁוֹן | yom rishon \* | Sunday (first day) | `il12-w5` tts, f+m |
+| שַׁבָּת | shabat \* | Saturday; Sabbath | `il12-w6` tts, f+m |
+| שָׁעָה | sha'a \* | hour; time | `il12-w4` tts, f+m |
+
+**Speak.**
+
+- Say: Sunday. → יוֹם רִאשׁוֹן (yom rishon) · audio `il12-w5`
+- Say: Shabbat. → שַׁבָּת (shabat) · audio `il12-w6`
+
+**Review queue from earlier pages:** `greetings-07`, `greetings-08`
+
+## pu-time-p02: Telling the Time
+
+*Grammar page.* Ask and say the time, with half and quarter.
+
+**Grammar: The hour, then the part.** שָׁעָה is hour and also time. Say הַשָּׁעָה and the hour in the counting set, then add half or quarter after it: חֲצִי, רֶבַע.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| שָׁעָה | sha'a \* | hour; time | `il12-w4` tts, f+m |
+| הַשָּׁעָה שָׁלוֹשׁ | hasha'a shalosh | it's three o'clock | `numbers-17` tts, f+m |
+| חֲצִי | chetsi | half | `numbers-18` tts, f+m |
+| רֶבַע | reva | quarter | `numbers-19` tts, f+m |
+
+**Speak.**
+
+- It is three. Say the time. → הַשָּׁעָה שָׁלוֹשׁ (hasha'a shalosh) · audio `numbers-17`
+- Say: half. → חֲצִי (chetsi) · audio `numbers-18`
+
+**Review queue from earlier pages:** `numbers-03-f`, `numbers-05-f`
+
+## pu-time-p03: Today and Tomorrow, and Unit Review
+
+*Review page.* Place a plan in time, then review the unit.
+
+**Grammar: Time words at the start or the end.** הַיּוֹם, מָחָר and אֶתְמוֹל can open the sentence or close it. Put them first when the time is the news: מָחָר, not today.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| הַיּוֹם | hayom \* | today | `il12-w1` tts, f+m |
+| מָחָר | machar \* | tomorrow | `il12-w2` synthetic-unreviewed, f+m |
+| אֶתְמוֹל | etmol \* | yesterday | `il12-w3` tts, f+m |
+
+**Speak.**
+
+- Say: tomorrow. → מָחָר (machar) · audio `il12-w2`
+
+**Review queue from earlier pages:** `il12-w5`, `il12-w6`, `il12-w4`, `numbers-17`, `il19-w1`, `i-38-w10`
+
+## pu-weather-p01: Hot, Cold, Rain
+
+*Learn page.* Say what the weather is like.
+
+**Grammar: The weather: two nouns as one.** מֶזֶג אֲוִיר is the weather, two nouns that work as one, like בֵּית חוֹלִים. חַם, קַר, גֶּשֶׁם and שֶׁמֶשׁ are enough to describe most Israeli days.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| מֶזֶג אֲוִיר | mezeg avir \* | weather | `i-24-w1` tts, f+m |
+| חַם | cham \* | hot | `i-24-w2` tts, f+m |
+| קַר | kar \* | cold | `i-24-w3` tts, f+m |
+| גֶּשֶׁם | geshem \* | rain | `i-24-w4` tts, f+m |
+| שֶׁמֶשׁ | shemesh \* | sun | `i-24-w5` tts, f+m |
+
+**Speak.**
+
+- Say: hot. → חַם (cham) · audio `i-24-w2`
+- Say: rain. → גֶּשֶׁם (geshem) · audio `i-24-w4`
+
+**Review queue from earlier pages:** `small-talk-12`, `i-15-w11`
+
+## pu-weather-p02: It Is: No Word Needed
+
+*Grammar page.* Say it is windy, cloudy or snowing.
+
+**Grammar: It is: no word needed.** To say it is hot, Hebrew says just חַם. There is no word for it and no word for is. חַם לִי is different: I'm hot.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| רוּחַ | ruach \* | wind | `i-24-w6` tts, f+m |
+| עָנָן | anan \* | cloud | `i-24-w7` tts, f+m |
+| שֶׁלֶג | sheleg \* | snow | `i-24-w8` tts, f+m |
+
+**Speak.**
+
+- Say: wind. → רוּחַ (ruach) · audio `i-24-w6`
+- Say: snow. → שֶׁלֶג (sheleg) · audio `i-24-w8`
+
+**Review queue from earlier pages:** `i-24-w2`, `small-talk-12`, `directions-04`
+
+## pu-weather-p03: Seasons and What to Take
+
+*Speak page.* Name the seasons and what to bring.
+
+**Grammar: Seasons and clothes.** קַיִץ is summer, סְתָו autumn and אָבִיב spring. In the Israeli summer take a כּוֹבַע against the sun; in the cold months a מְעִיל.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| קַיִץ | kayits \* | summer | `i-24-w10` tts, f+m |
+| אָבִיב | aviv \* | spring | `i-24-w12` tts, f+m |
+| סְתָו | stav \* | autumn | `i-24-w13` tts, f+m |
+| כּוֹבַע | kova \* | hat | `i-24-w14` tts, f+m |
+| מְעִיל | me'il \* | coat | `i-24-w15` tts, f+m |
+
+**Speak.**
+
+- Say: summer. → קַיִץ (kayits) · audio `i-24-w10`
+- Say: a hat. → כּוֹבַע (kova) · audio `i-24-w14`
+- Say: a coat. → מְעִיל (me'il) · audio `i-24-w15`
+
+**Review queue from earlier pages:** `i-24-w5`, `i-24-w3`
+
+## pu-weather-p04: Rain, and Unit Review
+
+*Review page.* Talk about the rain, then review the weather unit.
+
+**Grammar: Rain comes in winter.** In Israel גֶּשֶׁם falls mostly in the winter months; the summer is dry. Pair it with קַר when you describe a winter day.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| גֶּשֶׁם | geshem \* | rain | `il15-w3` tts, f+m |
+
+**Speak.**
+
+- Say: rain. → גֶּשֶׁם (geshem) · audio `il15-w3`
+
+**Review queue from earlier pages:** `i-24-w1`, `i-24-w2`, `i-24-w3`, `i-24-w6`, `i-24-w10`, `i-24-w15`
+
+## pu-hotel-p01: At Reception
+
+*Learn page.* Name a room, a reservation, a key, a night and breakfast.
+
+**Grammar: Hotel nouns you need at the desk.** חֶדֶר is the room, הַזְמָנָה the reservation, and מַפְתֵּחַ the key. לַיְלָה counts the nights of the stay. אַרוּחַת בֹּקֶר is breakfast.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| חֶדֶר | cheder \* | room | `il17-w1` tts, f+m |
+| הַזְמָנָה | hazmanah \* | reservation | `il17-w2` tts, f+m |
+| לַיְלָה | laylah \* | night | `il17-w3` tts, f+m |
+| מַפְתֵּחַ | mafteach \* | key | `il17-w4` tts, f+m |
+| אַרוּחַת בֹּקֶר | aruchat boker \* | breakfast | `il17-w5` tts, f+m |
+
+**Speak.**
+
+- You have booked a room. Name the reservation. → הַזְמָנָה (hazmanah) · audio `il17-w2`
+- The receptionist hands you the key. → מַפְתֵּחַ (mafteach) · audio `il17-w4`
+
+**Review queue from earlier pages:** `i-24-w15`, `il15-w3`
+
+## pu-hotel-p02: Checking In
+
+*Dialogue page.* Check in, give your name, and ask about breakfast.
+
+**Grammar: יֵשׁ לִי states what you have.** יֵשׁ לִי הַזְמָנָה means I have a reservation: יֵשׁ לִי is there is to me. בְּאֵיזֶה שֵׁם? asks under what name. מָתַי אֲרוּחַת הַבֹּקֶר? asks when breakfast is.
+
+**Dialogue setting.** A guest checks in at a hotel desk.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| Guest (woman): שָׁלוֹם. יֵשׁ לִי הַזְמָנָה. | shalom. yesh li hazmana. | Hello. I have a reservation. | `d-hotel-l1` gap |
+| Receptionist (man): בְּאֵיזֶה שֵׁם? | be'eize shem? | Under what name? | `d-hotel-l2` gap |
+| Guest (woman): לֵוִי. | levi. | Levi. | `d-hotel-l3` gap |
+| Receptionist (man): כֵּן, אֲנִי רוֹאֶה. שְׁלוֹשָׁה לֵילוֹת. | ken, ani ro'e. shlosha leilot. | Yes, I see it. Three nights. | `d-hotel-l4` gap |
+| Guest (woman): מָתַי אֲרוּחַת הַבֹּקֶר? | matai aruchat haboker? | When is breakfast? | `d-hotel-l5` gap |
+| Receptionist (man): מִשֶּׁבַע עַד עֶשֶׂר. | mishe'va ad eser. | From seven to ten. | `d-hotel-l6` gap |
+| Receptionist (man): הַחֶדֶר בַּקּוֹמָה הַשְּׁנִיָּה. הִנֵּה הַמַּפְתֵּחַ. | hacheder bakoma hashniya. hine hamafteach. | The room is on the second floor. Here is the key. | `d-hotel-l7` gap |
+| Guest (woman): תּוֹדָה רַבָּה! | toda raba! | Thank you very much! | `d-hotel-l8` gap |
+
+**Speak.**
+
+- You arrive at the desk. Say you have a reservation. → שָׁלוֹם. יֵשׁ לִי הַזְמָנָה. (shalom. yesh li hazmana.) · audio `d-hotel-l1`
+- Ask when breakfast is. → מָתַי אֲרוּחַת הַבֹּקֶר? (matai aruchat haboker?) · audio `d-hotel-l5`
+
+**Review queue from earlier pages:** `il17-w5`, `i-24-w15`, `il15-w3`
+
+## pu-hotel-p03: I Have, You Have: יֵשׁ לִי
+
+*Grammar page.* Use יֵשׁ and אֵין to say what there is, and יֵשׁ לִי for what you have.
+
+**Grammar: יֵשׁ לִי is there is to me.** יֵשׁ means there is, אֵין means there is not. To say you have something, Hebrew uses יֵשׁ לִי, there is to me, as in יֵשׁ לִי הַזְמָנָה. You do not need a separate verb for have.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| יֵשׁ | yesh \* | there is | `i-47-w12` tts, f+m |
+| אֵין | ein \* | there isn't | `il08-w6` tts, f+m |
+| Guest (woman): שָׁלוֹם. יֵשׁ לִי הַזְמָנָה. | shalom. yesh li hazmana. | Hello. I have a reservation. | `d-hotel-l1` gap |
+
+**Speak.**
+
+- Say there is, the short word. → יֵשׁ (yesh) · audio `i-47-w12`
+- Say you have a reservation. → שָׁלוֹם. יֵשׁ לִי הַזְמָנָה. (shalom. yesh li hazmana.) · audio `d-hotel-l1`
+
+**Review queue from earlier pages:** `i-24-w15`, `il15-w3`
+
+## pu-hotel-p04: Ask for Something in the Room
+
+*Speak page.* Ask for the key, the room, or breakfast.
+
+**Grammar: Reuse the desk nouns as requests.** At the desk you can ask with the nouns you already have: מַפְתֵּחַ, חֶדֶר, אַרוּחַת בֹּקֶר. Soften a request with בְּבַקָּשָׁה, which you learned in the first units, or just name what you need.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| מַפְתֵּחַ | mafteach \* | key | `il17-w4` tts, f+m |
+| חֶדֶר | cheder \* | room | `il17-w1` tts, f+m |
+| אַרוּחַת בֹּקֶר | aruchat boker \* | breakfast | `il17-w5` tts, f+m |
+
+**Speak.**
+
+- You left the key at reception. Ask for it. → מַפְתֵּחַ (mafteach) · audio `il17-w4`
+- In the morning, ask about breakfast. → אַרוּחַת בֹּקֶר (aruchat boker) · audio `il17-w5`
+
+**Review queue from earlier pages:** `i-24-w15`, `il15-w3`
+
+## pu-hotel-p05: Unit Review
+
+*Review page.* Thank the receptionist and review the hotel unit.
+
+**Grammar: Close the check-in with thanks.** תּוֹדָה רַבָּה! is how the guest ends the check-in. You already use תּוֹדָה in shops; the longer form fits a desk you have just been helped at.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| Guest (woman): תּוֹדָה רַבָּה! | toda raba! | Thank you very much! | `d-hotel-l8` gap |
+
+**Speak.**
+
+- The key is in your hand. Thank the receptionist. → תּוֹדָה רַבָּה! (toda raba!) · audio `d-hotel-l8`
+
+**Review queue from earlier pages:** `d-hotel-l1`, `il17-w4`, `il17-w1`, `il17-w5`, `i-24-w15`, `il15-w3`, `il17-w2`
+
+## pu-phone-p01: Buying a SIM
+
+*Learn page.* Name a phone, a number, the internet and a battery.
+
+**Grammar: The nouns you need in a phone shop.** טֶלֶפוֹן is the phone, מִסְפָּר a number, and מִסְפַּר טֶלֶפוֹן the phone number. אִינְטֶרְנֶט and סוֹלְלָה are what you ask about when the shop sets up a SIM.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| טֶלֶפוֹן | telefon \* | phone | `i-16-w1` tts, f+m |
+| מִסְפָּר | mispar \* | number | `i-16-w2` tts, f+m |
+| מִסְפַּר טֶלֶפוֹן | mispar telefon \* | phone number | `i-16-w3` tts, f+m |
+| אִינְטֶרְנֶט | internet \* | internet | `i-16-w5` tts, f+m |
+| סוֹלְלָה | solela \* | battery | `i-16-w7` tts, f+m |
+
+**Speak.**
+
+- The battery is dead. Name it. → סוֹלְלָה (solela) · audio `i-16-w7`
+- The clerk asks for your number. Name it. → מִסְפַּר טֶלֶפוֹן (mispar telefon) · audio `i-16-w3`
+
+**Review queue from earlier pages:** `il15-w3`, `il17-w2`
+
+## pu-phone-p02: On the Phone
+
+*Learn page.* Ask for a moment, say you cannot hear, and use the verb to call.
+
+**Grammar: On the phone you ask for a moment, or say you cannot hear.** רֶגַע asks the other person to wait a moment. אֲנִי לֹא שׁוֹמֵעַ is the man's form for I cannot hear; לְהִתְקַשֵּׁר is the verb to call or get in touch.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| רֶגַע | rega \* | one moment | `i-16-w13` tts, f+m |
+| אֲנִי לֹא שׁוֹמֵעַ | ani lo shome'a \* | I can't hear (m) (to or by a man) | `i-16-w14` tts, f+m |
+| לְהִתְקַשֵּׁר | lehitkasher \* | to call | `i-16-w9` tts, f+m |
+| לְהִתְקַשֵּׁר | lehitkasher \* | to get in touch | `il22-w2` tts, f+m |
+
+**Speak.**
+
+- Ask the other person to wait a moment. → רֶגַע (rega) · audio `i-16-w13`
+- You are a man and the line is bad. Say you cannot hear. → אֲנִי לֹא שׁוֹמֵעַ (ani lo shome'a) · audio `i-16-w14`
+
+**Review queue from earlier pages:** `il15-w3`, `il17-w2`
+
+## pu-phone-p03: Leave a Message
+
+*Speak page.* Talk about a message, sending it, and setting a meeting.
+
+**Grammar: הוֹדָעָה is the message itself.** הוֹדָעָה is a message or notice. לִשְׁלֹחַ is to send, and שׁוֹלֵחַ is the man's present-tense form, sending. To arrange a time, use פְּגִישָׁה (a meeting) and לְקַבֵּעַ (to set it).
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| הוֹדָעָה | hoda'ah \* | message, notice | `i-16-w4` tts, f+m |
+| לִשְׁלֹחַ | lishloach \* | to send | `i-16-w10` tts, f+m |
+| שׁוֹלֵחַ | sholeach \* | sending (m) (to or by a man) | `i-16-w11` tts, f+m |
+| פְּגִישָׁה | pegishah \* | meeting | `il22-w3` tts, f+m |
+| לְקַבֵּעַ | lekabe'a \* | to set (an appointment) | `il22-w4` tts, f+m |
+
+**Speak.**
+
+- Ask if you may send it: name the verb to send. → לִשְׁלֹחַ (lishloach) · audio `i-16-w10`
+- You need a time to meet. Name the meeting. → פְּגִישָׁה (pegishah) · audio `il22-w3`
+
+**Review queue from earlier pages:** `il15-w3`, `il17-w2`
+
+## pu-phone-p04: Unit Review
+
+*Review page.* Name a password, then review the phone unit.
+
+**Grammar: סִיסְמָה is the password.** סִיסְמָה is the password for a phone, a SIM account or the אִינְטֶרְנֶט. Keep it with מִסְפַּר טֶלֶפוֹן when a shop or an office asks you to log in.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| סִיסְמָה | sisma \* | password | `i-16-w6` tts, f+m |
+
+**Speak.**
+
+- The form asks for your password. → סִיסְמָה (sisma) · audio `i-16-w6`
+
+**Review queue from earlier pages:** `i-16-w10`, `i-16-w11`, `il22-w3`, `il22-w4`, `il15-w3`, `il17-w2`, `i-16-w5`
+
+## pu-apartment-p01: Rooms and Rent
+
+*Learn page.* Name an apartment, its rooms, a balcony and parking.
+
+**Grammar: Start with the place, then the parts.** דִּירָה is the apartment. חֶדֶר is one room and חֲדָרִים is rooms. מִרְפֶּסֶת is the balcony, and חֲנָיָה the parking.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| דִּירָה | dirah \* | apartment | `i-17-w1` tts, f+m |
+| חֶדֶר | cheder \* | room | `i-17-w2` tts, f+m |
+| חֲדָרִים | chadarim \* | rooms | `i-17-w3` tts, f+m |
+| מִרְפֶּסֶת | mirpeset \* | balcony | `i-17-w5` tts, f+m |
+| חֲנָיָה | chanayah \* | parking | `i-17-w6` tts, f+m |
+
+**Speak.**
+
+- You are on a viewing. Name the apartment. → דִּירָה (dirah) · audio `i-17-w1`
+- Name the balcony. → מִרְפֶּסֶת (mirpeset) · audio `i-17-w5`
+
+**Review queue from earlier pages:** `il17-w2`, `i-16-w5`
+
+## pu-apartment-p02: Is There...? יֵשׁ and אֵין
+
+*Grammar page.* Ask whether a flat has light, and describe it as big or good.
+
+**Grammar: יֵשׁ and אֵין answer is there.** You already have יֵשׁ (there is) and אֵין (there is not). On a viewing, put them next to a noun: light, a balcony, parking. גְּדוֹלָה and טוֹבָה are the feminine forms, and they match דִּירָה, which is feminine. אוֹר is light.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| גְּדוֹלָה | gedolah \* | big (f) (to or by a woman) | `i-17-w12` tts, f+m |
+| טוֹבָה | tovah \* | good (f) (to or by a woman) | `i-17-w13` tts, f+m |
+| אוֹר | or \* | light | `i-06-w9` tts, f+m |
+
+**Speak.**
+
+- The flat is large. Use the feminine form. → גְּדוֹלָה (gedolah) · audio `i-17-w12`
+- The rooms feel dark. Name the light. → אוֹר (or) · audio `i-06-w9`
+
+**Review queue from earlier pages:** `il17-w2`, `i-16-w5`
+
+## pu-apartment-p03: Questions for the Owner
+
+*Speak page.* Name the contract, the landlord and the building fee.
+
+**Grammar: The people and papers around a rental.** חוֹזֶה is the contract. בַּעַל הַבַּיִת is the landlord. וַעַד בַּיִת is the building committee, and also the fee paid to it. Ask for each of these by name when you view a דִּירָה.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| חוֹזֶה | chozeh \* | contract | `i-17-w7` tts, f+m |
+| בַּעַל הַבַּיִת | ba'al habayit \* | the landlord | `i-17-w8` tts, f+m |
+| וַעַד בַּיִת | va'ad bayit \* | building committee (fee) | `i-17-w9` tts, f+m |
+
+**Speak.**
+
+- You want to see the contract. → חוֹזֶה (chozeh) · audio `i-17-w7`
+- Ask to speak to the landlord. → בַּעַל הַבַּיִת (ba'al habayit) · audio `i-17-w8`
+
+**Review queue from earlier pages:** `il17-w2`, `i-16-w5`
+
+## pu-apartment-p04: Unit Review
+
+*Review page.* Review the apartment words.
+
+**Grammar: Put the viewing in order.** Name the דִּירָה and its חֲדָרִים first, then מִרְפֶּסֶת and חֲנָיָה. Save חוֹזֶה and בַּעַל הַבַּיִת for the end of the visit.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| חֶדֶר | cheder \* | room | `i-17-w2` tts, f+m |
+
+**Speak.**
+
+- How many rooms? Start with the word for room. → חֶדֶר (cheder) · audio `i-17-w2`
+
+**Review queue from earlier pages:** `i-06-w9`, `i-17-w7`, `i-17-w8`, `i-17-w9`, `il17-w2`, `i-16-w5`, `i-17-w1`
+
+## pu-plans-p01: When Are You Free?
+
+*Learn page.* Suggest maybe, in a week, or see you later.
+
+**Grammar: Soft plans use אוּלַי.** אוּלַי means maybe, and it keeps a plan open. בְּעוֹד שָׁבוּעַ means in a week. נִתְרָאֶה means we will see each other, a natural way to close a plan.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| אוּלַי | ulai \* | maybe | `il20-w4` tts, f+m |
+| בְּעוֹד שָׁבוּעַ | be'od shavu'a \* | in a week | `il20-w5` tts, f+m |
+| נִתְרָאֶה | nitra'eh \* | we will see each other | `il20-w3` tts, f+m |
+
+**Speak.**
+
+- You are not sure yet. Soften the plan. → אוּלַי (ulai) · audio `il20-w4`
+- Leave a friend, hoping to meet again. → נִתְרָאֶה (nitra'eh) · audio `il20-w3`
+
+**Review queue from earlier pages:** `i-16-w5`, `i-17-w1`
+
+## pu-plans-p02: Want To: רוֹצֶה Plus a Verb
+
+*Grammar page.* Say what you want, as a man or as a woman.
+
+**Grammar: רוֹצֶה and רוֹצָה change with the speaker.** A man says אֲנִי רוֹצֶה מַיִם; a woman says אֲנִי רוֹצָה מַיִם. The ending of רוֹצֶה / רוֹצָה marks who is speaking. You already know אֲנִי רוֹצֶה קָפֶה from the cafe. The thing you want comes after the verb.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| אֲנִי רוֹצֶה מַיִם | ani rotze mayim | I want water. (to or by a man) | `gp-04-m` gap |
+| אֲנִי רוֹצָה מַיִם | ani rotza mayim | I want water. (to or by a woman) | `gp-04-f` gap |
+
+**Speak.**
+
+- You are a woman and you want water. → אֲנִי רוֹצָה מַיִם (ani rotza mayim) · audio `gp-04-f`
+- You are a man and you want water. → אֲנִי רוֹצֶה מַיִם (ani rotze mayim) · audio `gp-04-m`
+
+**Review queue from earlier pages:** `i-16-w5`, `i-17-w1`
+
+## pu-plans-p03: Suggest a Plan
+
+*Speak page.* Say I will go or I will eat.
+
+**Grammar: אֲנִי plus a future form is I will.** אֲנִי אֵלֵךְ is I will go, and אֲנִי אֹכַל is I will eat. The form after אֲנִי already marks the future, so you do not add a separate word for will. Combine these with אוּלַי or בְּעוֹד שָׁבוּעַ from the first page.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| אֲנִי אֵלֵךְ | ani elekh \* | I will go | `il20-w1` tts, f+m |
+| אֲנִי אֹכַל | ani okhal \* | I will eat | `il20-w2` tts, f+m |
+
+**Speak.**
+
+- Suggest your own movement: I will go. → אֲנִי אֵלֵךְ (ani elekh) · audio `il20-w1`
+- Suggest lunch: I will eat. → אֲנִי אֹכַל (ani okhal) · audio `il20-w2`
+
+**Review queue from earlier pages:** `i-16-w5`, `i-17-w1`
+
+## pu-plans-p04: Unit Review
+
+*Review page.* Review the planning phrases.
+
+**Grammar: Close a plan with נִתְרָאֶה.** A short plan in Hebrew can be אוּלַי, a future line such as אֲנִי אֵלֵךְ, a time such as בְּעוֹד שָׁבוּעַ, and נִתְרָאֶה at the end.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| בְּעוֹד שָׁבוּעַ | be'od shavu'a \* | in a week | `il20-w5` tts, f+m |
+
+**Speak.**
+
+- Put the meeting off by a week. → בְּעוֹד שָׁבוּעַ (be'od shavu'a) · audio `il20-w5`
+
+**Review queue from earlier pages:** `gp-04-m`, `gp-04-f`, `il20-w1`, `il20-w2`, `i-16-w5`, `i-17-w1`, `il20-w3`
+
+## pu-opinions-p01: I Like, I Don't Like
+
+*Learn page.* Say you prefer, agree or disagree (man's forms).
+
+**Grammar: These are the man's forms.** אֲנִי מַעֲדִיף, מַסְכִּים and לֹא מַסְכִּים are the forms this lesson stores for a man. Prefer comes with אֲנִי; agree and disagree can stand on their own. This page does not invent the woman's partners.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| אֲנִי מַעֲדִיף | ani ma'adif \* | I prefer (m.) (to or by a man) | `il21-w3` tts, f+m |
+| מַסְכִּים | maskim \* | I agree (m.) (to or by a man) | `il21-w4` tts, f+m |
+| לֹא מַסְכִּים | lo maskim \* | I disagree (m.) (to or by a man) | `il21-w5` tts, f+m |
+
+**Speak.**
+
+- You are a man and you prefer the other option. → אֲנִי מַעֲדִיף (ani ma'adif) · audio `il21-w3`
+- You are a man and you do not agree. → לֹא מַסְכִּים (lo maskim) · audio `il21-w5`
+
+**Review queue from earlier pages:** `i-17-w1`, `il20-w3`
+
+## pu-opinions-p02: I Think That: שֶׁ
+
+*Grammar page.* Open an opinion with I think that, or in my opinion.
+
+**Grammar: שֶׁ opens the clause you think.** אֲנִי חוֹשֵׁב שֶׁ... is I think that..., and the שֶׁ is the that. This is the man's form in this lesson. לְדַעְתִּי means in my opinion and does not change for a man or a woman. After either opener, add the view itself.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| אֲנִי חוֹשֵׁב שֶׁ... | ani choshev she... \* | I think that... | `il21-w1` tts, f+m |
+| לְדַעְתִּי | ledati \* | in my opinion | `il21-w2` tts, f+m |
+
+**Speak.**
+
+- You are a man. Start I think that... → אֲנִי חוֹשֵׁב שֶׁ... (ani choshev she...) · audio `il21-w1`
+- Give a view without naming I think. → לְדַעְתִּי (ledati) · audio `il21-w2`
+
+**Review queue from earlier pages:** `i-17-w1`, `il20-w3`
+
+## pu-opinions-p03: Give Your Opinion
+
+*Speak page.* Tell a man or a woman that they are right.
+
+**Grammar: You are right changes for who you are speaking to.** אַתָּה צוֹדֵק is said to a man; אַתְּ צוֹדֶקֶת is said to a woman. Use these when you מַסְכִּים. They talk to the other person, unlike אֲנִי חוֹשֵׁב שֶׁ..., which talks about your own view.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| אַתָּה צוֹדֵק | ata tsodek | You are right. (to or by a man) | `gp-10-m` gap |
+| אַתְּ צוֹדֶקֶת | at tsodeket | You are right. (to or by a woman) | `gp-10-f` gap |
+
+**Speak.**
+
+- Noa has the right idea. Tell her so. → אַתְּ צוֹדֶקֶת (at tsodeket) · audio `gp-10-f`
+- Ari has the right idea. Tell him so. → אַתָּה צוֹדֵק (ata tsodek) · audio `gp-10-m`
+
+**Review queue from earlier pages:** `i-17-w1`, `il20-w3`
+
+## pu-opinions-p04: Unit Review
+
+*Review page.* Review the opinion phrases.
+
+**Grammar: Two ways to open a view.** Start with אֲנִי חוֹשֵׁב שֶׁ... or with לְדַעְתִּי, then prefer or agree. Keep מַסְכִּים and לֹא מַסְכִּים ready for a short reply.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| מַסְכִּים | maskim \* | I agree (m.) (to or by a man) | `il21-w4` tts, f+m |
+
+**Speak.**
+
+- You are a man and you agree. → מַסְכִּים (maskim) · audio `il21-w4`
+
+**Review queue from earlier pages:** `il21-w1`, `il21-w2`, `gp-10-m`, `gp-10-f`, `i-17-w1`, `il20-w3`
+
+## pu-driving-p01: Signs and Roads
+
+*Learn page.* Name a car, a road, a lane and a traffic light.
+
+**Grammar: The road has a name for each part.** מְכוֹנִית is the car and כְּבִישׁ the road. נָתִיב is a lane, and רִמְזוּר a traffic light. יָשָׁר means straight ahead, the direction you already use in street directions.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| מְכוֹנִית | mekhonit \* | car | `i-39-w1` tts, f+m |
+| כְּבִישׁ | kevish \* | road | `i-39-w2` tts, f+m |
+| נָתִיב | nativ \* | lane | `i-39-w8` tts, f+m |
+| רִמְזוּר | rimzur \* | traffic light | `i-39-w9` tts, f+m |
+| יָשָׁר | yashar \* | straight (ahead) | `i-39-w10` tts, f+m |
+
+**Speak.**
+
+- Point at the car. → מְכוֹנִית (mekhonit) · audio `i-39-w1`
+- The light is ahead. Name it. → רִמְזוּר (rimzur) · audio `i-39-w9`
+
+**Review queue from earlier pages:** `i-17-w1`, `il20-w3`
+
+## pu-driving-p02: Parking and Fuel
+
+*Learn page.* Name fuel, parking, the engine, a tyre, stop and slowly.
+
+**Grammar: Two short commands at the roadside.** דֶּלֶק is fuel and חֲנָיָה is parking. מָנוֹעַ is the engine and צְמִיג a tyre. עֲצֹר is the command stop, and לְאַט means slowly. You already know a longer stop line, עֲצֹר כָּאן, בְּבַקָּשָׁה, from the taxi unit.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| דֶּלֶק | delek \* | fuel | `i-39-w4` tts, f+m |
+| חֲנָיָה | chanayah \* | parking | `i-39-w5` tts, f+m |
+| מָנוֹעַ | mano'a \* | engine | `i-39-w6` tts, f+m |
+| צְמִיג | tzemig \* | tyre | `i-39-w7` tts, f+m |
+| עֲצֹר | atzor \* | stop! | `i-39-w11` tts, f+m |
+| לְאַט | le'at \* | slowly | `i-39-w12` tts, f+m |
+
+**Speak.**
+
+- The tank is low. Name the fuel. → דֶּלֶק (delek) · audio `i-39-w4`
+- Tell the driver to stop. → עֲצֹר (atzor) · audio `i-39-w11`
+
+**Review queue from earlier pages:** `i-17-w1`, `il20-w3`
+
+## pu-driving-p03: Ask a Driver
+
+*Speak page.* Tell a driver to go straight, to stop, or to go slowly.
+
+**Grammar: One-word directions in the car.** In the car, יָשָׁר, עֲצֹר and לְאַט are enough. Say them clearly. לְאַט also softens a request when the speed feels high.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| יָשָׁר | yashar \* | straight (ahead) | `i-39-w10` tts, f+m |
+| עֲצֹר | atzor \* | stop! | `i-39-w11` tts, f+m |
+| לְאַט | le'at \* | slowly | `i-39-w12` tts, f+m |
+
+**Speak.**
+
+- You want the next stretch of road, no turn. → יָשָׁר (yashar) · audio `i-39-w10`
+- The speed is too high. Say slowly. → לְאַט (le'at) · audio `i-39-w12`
+
+**Review queue from earlier pages:** `i-17-w1`, `il20-w3`
+
+## pu-driving-p04: Unit Review
+
+*Review page.* Review the road words.
+
+**Grammar: Name the machine, then the road.** Start with מְכוֹנִית and כְּבִישׁ, then the parts you may need to ask about: דֶּלֶק, חֲנָיָה, רִמְזוּר.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| כְּבִישׁ | kevish \* | road | `i-39-w2` tts, f+m |
+
+**Speak.**
+
+- Name the road itself. → כְּבִישׁ (kevish) · audio `i-39-w2`
+
+**Review queue from earlier pages:** `i-39-w7`, `i-39-w10`, `i-39-w11`, `i-39-w12`, `i-17-w1`, `il20-w3`, `i-39-w1`, `i-39-w4`
+
+## pu-hiking-p01: On the Trail
+
+*Learn page.* Name a hike, a route, a mountain, a stream, a trail and a map.
+
+**Grammar: The trail has its own nouns.** טִיּוּל is a hike or a trip. מַסְלוּל is the route and שְׁבִיל the trail under your feet. הַר is a mountain, נַחַל a stream, and מַפָּה the map you carry.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| טִיּוּל | tiyul \* | trip, hike | `i-40-w1` tts, f+m |
+| מַסְלוּל | maslul \* | route | `i-40-w2` tts, f+m |
+| הַר | har \* | mountain | `i-40-w3` tts, f+m |
+| נַחַל | nachal \* | stream | `i-40-w4` tts, f+m |
+| שְׁבִיל | shevil \* | trail | `i-40-w5` tts, f+m |
+| מַפָּה | mapah \* | a map | `i-40-w7` tts, f+m |
+
+**Speak.**
+
+- You are going out for the day. Name the hike. → טִיּוּל (tiyul) · audio `i-40-w1`
+- Ask to see the map. → מַפָּה (mapah) · audio `i-40-w7`
+
+**Review queue from earlier pages:** `i-39-w1`, `i-39-w4`
+
+## pu-hiking-p02: Water and Safety
+
+*Learn page.* Talk about water, sun, heat, a hat, and whether the trail is far or near.
+
+**Grammar: Far and near are a pair.** מַיִם is water, and you take it with you. שֶׁמֶשׁ and חַם are the same weather words you already know; on the trail you add כּוֹבַע. רָחוֹק means far.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| מַיִם | mayim \* | water | `i-40-w6` tts, f+m |
+| כּוֹבַע | kova \* | hat | `i-40-w8` tts, f+m |
+| שֶׁמֶשׁ | shemesh \* | sun | `i-40-w9` tts, f+m |
+| חַם | cham \* | hot | `i-40-w10` tts, f+m |
+| רָחוֹק | rachok \* | far | `i-40-w11` tts, f+m |
+
+**Speak.**
+
+- Ask if the spring is far. → רָחוֹק (rachok) · audio `i-40-w11`
+- Offer water. Name it. → מַיִם (mayim) · audio `i-40-w6`
+
+**Review queue from earlier pages:** `i-39-w1`, `i-39-w4`
+
+## pu-hiking-p03: Ask About the Trail
+
+*Speak page.* Ask whether a point is near, and name the trail or the map.
+
+**Grammar: Ask with the nouns you have.** To ask about the walk, use שְׁבִיל, מַסְלוּל or מַפָּה, and finish with קָרוֹב or רָחוֹק. A short question can be just the noun and קָרוֹב.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| קָרוֹב | karov \* | near | `i-40-w12` tts, f+m |
+| שְׁבִיל | shevil \* | trail | `i-40-w5` tts, f+m |
+| מַפָּה | mapah \* | a map | `i-40-w7` tts, f+m |
+
+**Speak.**
+
+- You hope the lookout is close. Say near. → קָרוֹב (karov) · audio `i-40-w12`
+- Point to the trail itself. → שְׁבִיל (shevil) · audio `i-40-w5`
+
+**Review queue from earlier pages:** `i-39-w1`, `i-39-w4`
+
+## pu-hiking-p04: Unit Review
+
+*Review page.* Review the hiking words.
+
+**Grammar: Pack water and a hat, then walk.** Take מַיִם and a כּוֹבַע, carry a מַפָּה, and follow the שְׁבִיל. הַר and נַחַל name what you will see.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| כּוֹבַע | kova \* | hat | `i-40-w8` tts, f+m |
+
+**Speak.**
+
+- The sun is strong on the ridge. Name the hat. → כּוֹבַע (kova) · audio `i-40-w8`
+
+**Review queue from earlier pages:** `i-40-w11`, `i-40-w12`, `i-40-w5`, `i-40-w7`, `i-39-w1`, `i-39-w4`, `i-40-w6`, `i-40-w1`
+
+## pu-beach-p01: Sun and Sea
+
+*Learn page.* Name the beach, the sea, sand, a wave, a towel and the sun.
+
+**Grammar: The seashore is חוֹף, the water is יָם.** חוֹף is the beach and יָם the sea. חוֹל is sand, גַּל a wave, מַגֶּבֶת a towel, and שֶׁמֶשׁ the sun you already know from the weather unit.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| חוֹף | chof \* | beach | `i-41-w1` tts, f+m |
+| יָם | yam \* | sea | `i-41-w2` tts, f+m |
+| חוֹל | chol \* | sand | `i-41-w3` tts, f+m |
+| גַּל | gal \* | wave | `i-41-w4` tts, f+m |
+| מַגֶּבֶת | magevet \* | towel | `i-41-w5` tts, f+m |
+| שֶׁמֶשׁ | shemesh \* | sun | `i-41-w6` tts, f+m |
+
+**Speak.**
+
+- You arrive and name the beach. → חוֹף (chof) · audio `i-41-w1`
+- Point at the water. Name the sea. → יָם (yam) · audio `i-41-w2`
+
+**Review queue from earlier pages:** `i-40-w6`, `i-40-w1`
+
+## pu-beach-p02: At the Beach Kiosk
+
+*Speak page.* Ask for water, a hat or a towel, and notice danger.
+
+**Grammar: What you buy, and a warning.** At a kiosk you may want מַיִם, a כּוֹבַע or a מַגֶּבֶת. בֶּגֶד is a garment, for clothes you still need. סַכָּנָה is danger: a flag or a sign on the חוֹף.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| מַיִם | mayim \* | water | `i-41-w7` tts, f+m |
+| כּוֹבַע | kova \* | hat | `i-41-w10` tts, f+m |
+| בֶּגֶד | beged \* | garment | `i-41-w11` tts, f+m |
+| סַכָּנָה | sakanah \* | danger | `i-41-w12` tts, f+m |
+| מַגֶּבֶת | magevet \* | towel | `i-41-w5` tts, f+m |
+
+**Speak.**
+
+- You are thirsty at the kiosk. Name water. → מַיִם (mayim) · audio `i-41-w7`
+- There is a warning flag. Name danger. → סַכָּנָה (sakanah) · audio `i-41-w12`
+
+**Review queue from earlier pages:** `i-40-w6`, `i-40-w1`
+
+## pu-beach-p03: Unit Review
+
+*Review page.* Review the beach words.
+
+**Grammar: Hot sand, cold water.** The חוֹף can be חַם; the יָם can be קַר. Keep מַגֶּבֶת and כּוֹבַע with you, and watch for סַכָּנָה.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| חַם | cham \* | hot | `i-41-w8` tts, f+m |
+| קַר | kar \* | cold | `i-41-w9` tts, f+m |
+
+**Speak.**
+
+- The sand burns your feet. Say hot. → חַם (cham) · audio `i-41-w8`
+
+**Review queue from earlier pages:** `i-41-w10`, `i-41-w11`, `i-41-w12`, `i-41-w5`, `i-40-w6`, `i-40-w1`
+
+## pu-decide-p01: Sound Less Like an Outsider
+
+*Learn page.* Hear three words that mark careful Israeli speech.
+
+**Grammar: These words repay careful listening.** רֹאשׁ, חַיִּים and מַה שְׁלוֹמְךָ are ordinary words, but each one carries a sound learners often miss: the resh, the chet, and the last-syllable stress on מַה שְׁלוֹמְךָ. Listen, then copy.
+
+**Culture.** These three are practice for the sounds, not a claim that one pronunciation is the only Israeli one.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| רֹאשׁ | rosh \* | head (uvular vs tapped resh) | `il23-w1` tts, f+m |
+| חַיִּים | chayim \* | life (chet, not kaf) | `il23-w2` tts, f+m |
+| מַה שְׁלוֹמְךָ | mah shelomekha \* | how are you (to a man; stress on the last syllable) (to or by a man) | `il23-w3` tts, f+m |
+
+**Speak.**
+
+- Say the word for head, carefully. → רֹאשׁ (rosh) · audio `il23-w1`
+- Ask a man how he is, with the stress at the end. → מַה שְׁלוֹמְךָ (mah shelomekha) · audio `il23-w3`
+
+**Review queue from earlier pages:** `i-40-w6`, `i-40-w1`
+
+## pu-decide-p02: A Longer Conversation
+
+*Dialogue page.* Ask what happened, and ask a man to explain it to you.
+
+**Grammar: Two lines that open a serious talk.** מַה קָרָה opens a conversation when something has happened. תַּסְבִּיר לִי, said to a man, asks him to explain it to you. You already know בּוֹא הֵנָּה as a shorter command with בּוֹא.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| מַה קָרָה | mah karah \* | what happened | `il24-w1` tts, f+m |
+| תַּסְבִּיר לִי | tasbir li \* | explain it to me (to a man) (to or by a man) | `il24-w2` tts, f+m |
+
+**Speak.**
+
+- Something is wrong. Ask what happened. → מַה קָרָה (mah karah) · audio `il24-w1`
+- Ask a man to explain it to you. → תַּסְבִּיר לִי (tasbir li) · audio `il24-w2`
+
+**Review queue from earlier pages:** `il23-w3`, `i-40-w6`, `i-40-w1`
+
+## pu-decide-p03: Your Turn
+
+*Speak page.* Use the capstone lines in a real exchange.
+
+**Grammar: Start, then ask.** A short serious talk can open with מַה קָרָה, then תַּסְבִּיר לִי. They use words you have already practised in the daily-life units.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| מַה קָרָה | mah karah \* | what happened | `il24-w1` tts, f+m |
+| תַּסְבִּיר לִי | tasbir li \* | explain it to me (to a man) (to or by a man) | `il24-w2` tts, f+m |
+
+**Speak.**
+
+- Ask a man to explain it to you. → תַּסְבִּיר לִי (tasbir li) · audio `il24-w2`
+- Open with what happened. → מַה קָרָה (mah karah) · audio `il24-w1`
+
+**Review queue from earlier pages:** `i-40-w6`, `i-40-w1`
+
+## pu-decide-p04: Level 2 Check
+
+*Check page.* Show you can talk about time, weather, home, plans and what happened.
+
+**Grammar: Putting level 2 together.** This check mixes the daily-life units. One new line: עֲצֹר כָּאן, בְּבַקָּשָׁה, stop here, please, a useful close when you have decided where to go.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| עֲצֹר כָּאן, בְּבַקָּשָׁה | atzor kan, bevakashah \* | stop here, please | `i-23-w8` tts, f+m |
+
+**Speak.**
+
+- Ask the driver to stop here, please. → עֲצֹר כָּאן, בְּבַקָּשָׁה (atzor kan, bevakashah) · audio `i-23-w8`
+- Ask what happened. → מַה קָרָה (mah karah) · audio `il24-w1`
+
+**Review queue from earlier pages:** `i-44-w11`, `il12-w3`, `il15-w3`, `d-hotel-l8`, `i-16-w6`, `i-17-w2`, `il20-w5`, `il21-w4`, `i-39-w2`, `i-40-w8`, `i-41-w9`, `i-24-w10`, `il24-w1`
+
+## pu-work-p01: At the Office
+
+*Learn page.* Name a meeting, a client, today and tomorrow.
+
+**Grammar: Office people and appointments.** You already have עֲבוֹדָה, מִשְׂרָד and מְנַהֵל from small talk. This page adds פְּגִישָׁה, a meeting, and לָקוֹחַ, a client. הַיּוֹם and מָחָר place the meeting in time. הוֹדָעָה is a notice you may send at work, the same word as a phone message.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| פְּגִישָׁה | pegishah \* | meeting, appointment | `i-36-w3` tts, f+m |
+| לָקוֹחַ | lakoach \* | client | `i-36-w5` tts, f+m |
+| מָחָר | machar \* | tomorrow | `i-36-w9` tts, f+m |
+| הַיּוֹם | hayom \* | today | `i-36-w10` tts, f+m |
+| הוֹדָעָה | hoda'ah \* | message, notice | `i-36-w8` tts, f+m |
+
+**Speak.**
+
+- The meeting is today. → הַיּוֹם (hayom) · audio `i-36-w10`
+- Name the meeting on the calendar. → פְּגִישָׁה (pegishah) · audio `i-36-w3`
+
+**Review queue from earlier pages:** `i-24-w10`, `il24-w1`
+
+## pu-work-p02: Requests at Work
+
+*Grammar page.* Ask for a moment, and make a polite request.
+
+**Grammar: רֶגַע and אֶפְשָׁר keep a request light.** רֶגַע, one moment, buys time in an office the same way it does in a shop. For a polite request, use אֶפְשָׁר plus a to-verb, which you already know from אֶפְשָׁר לְדַבֵּר לְאַט? The form does not change for a man or a woman.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| רֶגַע | rega \* | one moment | `i-36-w12` tts, f+m |
+
+**Speak.**
+
+- Someone is mid-sentence. Ask for one moment. → רֶגַע (rega) · audio `i-36-w12`
+
+**Review queue from earlier pages:** `i-24-w10`, `il24-w1`
+
+## pu-work-p03: Meetings and Email
+
+*Learn page.* Name a university, a class, an exam, a book and today.
+
+**Grammar: Study words sit next to work words.** שִׁעוּר is a class, and מִבְחָן an exam. אוּנִיבֶרְסִיטָה is the university, סֵפֶר a book, and מִלְגָּה a scholarship. מוֹרֶה and מְרַצֶּה name a teacher and a lecturer, both in the man's form here. הַיּוֹם places the class in time.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| אוּנִיבֶרְסִיטָה | universitah \* | university | `i-37-w1` tts, f+m |
+| מוֹרֶה | moreh \* | teacher (m) (to or by a man) | `i-37-w2` tts, f+m |
+| מְרַצֶּה | meratze \* | lecturer; lecturing | `i-37-w3` tts, f+m |
+| מִבְחָן | mivchan \* | test, exam | `i-37-w5` tts, f+m |
+| שִׁעוּר | shi'ur \* | lesson, class | `i-37-w6` tts, f+m |
+| סֵפֶר | sefer \* | book | `i-37-w7` tts, f+m |
+| מִלְגָּה | milgah \* | scholarship | `i-37-w8` tts, f+m |
+| הַיּוֹם | hayom \* | today | `i-37-w10` tts, f+m |
+
+**Speak.**
+
+- The class is today. → הַיּוֹם (hayom) · audio `i-37-w10`
+- There is an exam next week. → מִבְחָן (mivchan) · audio `i-37-w5`
+
+**Review queue from earlier pages:** `i-24-w10`, `il24-w1`
+
+## pu-work-p04: Introduce Your Job
+
+*Speak page.* Name a professor, a friend at work, or today.
+
+**Grammar: People you name at work or in class.** פְּרוֹפֶסוֹר is a professor. חָבֵר is a friend, the man's form. Together with הַיּוֹם and עֲבוֹדָה, these are enough to say what you do and who you study or work with.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| פְּרוֹפֶסוֹר | profesor \* | professor | `i-37-w4` tts, f+m |
+| חָבֵר | chaver \* | friend (m) (to or by a man) | `i-37-w12` tts, f+m |
+| הַיּוֹם | hayom \* | today | `i-37-w10` tts, f+m |
+
+**Speak.**
+
+- Introduce the professor. → פְּרוֹפֶסוֹר (profesor) · audio `i-37-w4`
+- Name a friend at the office or in class. → חָבֵר (chaver) · audio `i-37-w12`
+
+**Review queue from earlier pages:** `i-24-w10`, `il24-w1`
+
+## pu-work-p05: Unit Review
+
+*Review page.* Review the work and study words.
+
+**Grammar: Meetings, classes, people.** At work you will hear פְּגִישָׁה; in study, מִבְחָן. הַיּוֹם and מָחָר place the meeting. Keep רֶגַע ready when you need a second.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| הַיּוֹם | hayom \* | today | `i-36-w10` tts, f+m |
+
+**Speak.**
+
+- The meeting is today. → הַיּוֹם (hayom) · audio `i-36-w10`
+
+**Review queue from earlier pages:** `i-37-w8`, `i-37-w4`, `i-37-w12`, `i-37-w10`, `i-24-w10`, `il24-w1`, `i-36-w3`
+
+## pu-health-p01: It Hurts Here
+
+*Learn page.* Name a headache, a sore throat, a stomach ache, a fever, and that it hurts.
+
+**Grammar: Pain is often a noun, or the word כּוֹאֵב.** כְּאֵב רֹאשׁ, כְּאֵב גָּרוֹן and כְּאֵב בֶּטֶן name the place of the pain. חֹם is a fever. כּוֹאֵב means it hurts. A full everyday line is יֵשׁ לִי כְּאֵב רֹאשׁ, I have a headache: יֵשׁ לִי plus the pain.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| כְּאֵב רֹאשׁ | ke'ev rosh \* | headache | `i-14-w5` tts, f+m |
+| כְּאֵב גָּרוֹן | ke'ev garon \* | sore throat | `i-14-w6` tts, f+m |
+| כְּאֵב בֶּטֶן | ke'ev beten \* | stomach ache | `i-14-w7` tts, f+m |
+| חֹם | chom \* | fever | `i-14-w8` tts, f+m |
+| כּוֹאֵב | ko'ev \* | it hurts | `i-20-w7` tts, f+m |
+| יֵשׁ לִי כְּאֵב רֹאשׁ | yesh li ke'ev rosh | I have a headache | `help-08` tts, f+m |
+
+**Speak.**
+
+- You have a headache. Say the full line. → יֵשׁ לִי כְּאֵב רֹאשׁ (yesh li ke'ev rosh) · audio `help-08`
+- Point and say that it hurts. → כּוֹאֵב (ko'ev) · audio `i-20-w7`
+
+**Review queue from earlier pages:** `il24-w1`, `i-36-w3`
+
+## pu-health-p02: My Head Hurts: כּוֹאֵב לִי
+
+*Grammar page.* Say you have a headache, or that something hurts.
+
+**Grammar: יֵשׁ לִי plus the pain, or כּוֹאֵב alone.** The line is יֵשׁ לִי כְּאֵב רֹאשׁ, there is to me a headache, the same יֵשׁ לִי you used at the hotel. כּוֹאֵב can stand alone for it hurts. This course does not invent a phrase beyond those two lines.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| יֵשׁ לִי כְּאֵב רֹאשׁ | yesh li ke'ev rosh | I have a headache | `help-08` tts, f+m |
+| כּוֹאֵב | ko'ev \* | it hurts | `i-20-w7` tts, f+m |
+| כְּאֵב רֹאשׁ | ke'ev rosh \* | headache | `i-14-w5` tts, f+m |
+
+**Speak.**
+
+- Tell the doctor you have a headache. → יֵשׁ לִי כְּאֵב רֹאשׁ (yesh li ke'ev rosh) · audio `help-08`
+- Say that it hurts. → כּוֹאֵב (ko'ev) · audio `i-20-w7`
+
+**Review queue from earlier pages:** `il24-w1`, `i-36-w3`
+
+## pu-health-p03: At the Clinic
+
+*Learn page.* Name a hospital, a doctor, a nurse, a test, an ambulance and insurance.
+
+**Grammar: The clinic names the people and the paper.** בֵּית חוֹלִים is a hospital. רוֹפֵא is a doctor (man). אָחוֹת here is a nurse. בְּדִיקָה is a test or examination, אַמְבּוּלַנְס an ambulance, and בִּטּוּחַ is insurance.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| בֵּית חוֹלִים | beit cholim \* | hospital | `i-20-w1` tts, f+m |
+| רוֹפֵא | rofe \* | medical doctor, physician | `i-20-w2` tts, f+m |
+| בְּדִיקָה | bedikah \* | test, examination | `i-20-w8` tts, f+m |
+| אָחוֹת | achot \* | nurse (f) (to or by a woman) | `i-20-w4` tts, f+m |
+| אַמְבּוּלַנְס | ambulans \* | ambulance | `i-20-w11` tts, f+m |
+| בִּטּוּחַ | bituach \* | insurance | `i-20-w6` tts, f+m |
+
+**Speak.**
+
+- Ask for a doctor, the man's form. → רוֹפֵא (rofe) · audio `i-20-w2`
+- Name an ambulance. → אַמְבּוּלַנְס (ambulans) · audio `i-20-w11`
+
+**Review queue from earlier pages:** `il24-w1`, `i-36-w3`
+
+## pu-health-p04: At the Pharmacy
+
+*Learn page.* Name a pharmacy, medicine, pills, a prescription and how often to take it.
+
+**Grammar: How often: פַּעַם and פַּעֲמַיִם.** בֵּית מֶרְקַחַת is the pharmacy, תְּרוּפָה medicine, כַּדּוּרִים pills, and מִרְשָׁם the prescription. פַּעַם בְּיוֹם is once a day and פַּעֲמַיִם בְּיוֹם twice a day. נֶגֶד means against, or for a symptom.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| בֵּית מֶרְקַחַת | beit merkachat \* | pharmacy | `i-14-w1` tts, f+m |
+| תְּרוּפָה | terufah \* | medicine | `i-14-w2` tts, f+m |
+| כַּדּוּרִים | kadurim \* | pills | `i-14-w3` tts, f+m |
+| מִרְשָׁם | mirsham \* | prescription | `i-14-w4` tts, f+m |
+| נֶגֶד | neged \* | against, for (a symptom) | `i-14-w9` tts, f+m |
+| פַּעַם בְּיוֹם | pa'am beyom \* | once a day | `i-14-w10` tts, f+m |
+| פַּעֲמַיִם בְּיוֹם | pa'amayim beyom \* | twice a day | `i-14-w11` tts, f+m |
+
+**Speak.**
+
+- The label says once a day. → פַּעַם בְּיוֹם (pa'am beyom) · audio `i-14-w10`
+- Name the prescription. → מִרְשָׁם (mirsham) · audio `i-14-w4`
+
+**Review queue from earlier pages:** `il24-w1`, `i-36-w3`
+
+## pu-health-p05: Hear the Instructions
+
+*Listen page.* Hear when to take a medicine, and words like before, after and allergic.
+
+**Grammar: Listen for before, after and how often.** אַחֲרֵי is after and לִפְנֵי is before. Together with פַּעַם בְּיוֹם they tell you when to take the תְּרוּפָה. אָלֶרְגִּי is allergic, in the man's form, and אַנְטִיבְּיוֹטִיקָה is antibiotics.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| אַחֲרֵי | acharei \* | after | `i-14-w12` tts, f+m |
+| לִפְנֵי | lifnei \* | before | `i-14-w13` tts, f+m |
+| פַּעַם בְּיוֹם | pa'am beyom \* | once a day | `i-14-w10` tts, f+m |
+| פַּעֲמַיִם בְּיוֹם | pa'amayim beyom \* | twice a day | `i-14-w11` tts, f+m |
+| אָלֶרְגִּי | alergi \* | allergic (m) (to or by a man) | `i-14-w14` tts, f+m |
+| אַנְטִיבְּיוֹטִיקָה | antibiotika \* | antibiotics | `i-14-w15` tts, f+m |
+
+**Speak.**
+
+- The nurse says to take it after food. Name after. → אַחֲרֵי (acharei) · audio `i-14-w12`
+
+**Review queue from earlier pages:** `i-14-w9`, `il24-w1`, `i-36-w3`
+
+## pu-health-p06: Describe What Hurts
+
+*Speak page.* Tell a clinic what hurts, or that you need a doctor.
+
+**Grammar: Need and pain in one visit.** You can walk in and say אֲנִי צָרִיךְ רוֹפֵא, I need a doctor, the man's form, or describe the pain with יֵשׁ לִי כְּאֵב רֹאשׁ or כּוֹאֵב. אֲנִי לֹא מַרְגִּישׁ טוֹב is I don't feel well, also a man's form.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| אֲנִי צָרִיךְ רוֹפֵא | ani tsarich rofe | I need a doctor | `help-02-m` tts, f+m |
+| אֲנִי לֹא מַרְגִּישׁ טוֹב | ani lo margish tov | I don't feel well | `help-07-m` tts, f+m |
+| יֵשׁ לִי כְּאֵב רֹאשׁ | yesh li ke'ev rosh | I have a headache | `help-08` tts, f+m |
+
+**Speak.**
+
+- You are a man and you need a doctor. → אֲנִי צָרִיךְ רוֹפֵא (ani tsarich rofe) · audio `help-02-m`
+- You are a man and you don't feel well. → אֲנִי לֹא מַרְגִּישׁ טוֹב (ani lo margish tov) · audio `help-07-m`
+
+**Review queue from earlier pages:** `il24-w1`, `i-36-w3`
+
+## pu-health-p07: Unit Review
+
+*Review page.* Review the clinic and pharmacy words.
+
+**Grammar: People, paper, timing.** Name רוֹפֵא, take a מִרְשָׁם to the בֵּית מֶרְקַחַת, and listen for פַּעַם בְּיוֹם. Keep יֵשׁ לִי כְּאֵב רֹאשׁ ready.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| בֵּית מֶרְקַחַת | beit merkachat \* | pharmacy | `il18-w5` tts, f+m |
+
+**Speak.**
+
+- Name the pharmacy. → בֵּית מֶרְקַחַת (beit merkachat) · audio `il18-w5`
+
+**Review queue from earlier pages:** `i-14-w9`, `help-02`, `help-07`, `help-08`, `il24-w1`, `i-36-w3`, `i-14-w1`
+
+## pu-pharmacy-p01: Words at the Pharmacy
+
+*Learn page.* Name the pharmacy, medicine, pills, a prescription and a headache.
+
+**Grammar: The pharmacy and what you ask for.** בֵּית מֶרְקַחַת is the pharmacy. תְּרוּפָה is a medicine and כַּדּוּרִים are pills. A מִרְשָׁם is the prescription from the doctor. כְּאֵב רֹאשׁ is a headache: כְּאֵב is an ache and רֹאשׁ is the head.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| בֵּית מֶרְקַחַת | beit merkachat \* | pharmacy | `i-14-w1` tts, f+m |
+| תְּרוּפָה | terufah \* | medicine | `i-14-w2` tts, f+m |
+| כַּדּוּרִים | kadurim \* | pills | `i-14-w3` tts, f+m |
+| מִרְשָׁם | mirsham \* | prescription | `i-14-w4` tts, f+m |
+| כְּאֵב רֹאשׁ | ke'ev rosh \* | headache | `i-14-w5` tts, f+m |
+
+**Speak.**
+
+- You need medicine. Name the pharmacy. → בֵּית מֶרְקַחַת (beit merkachat) · audio `i-14-w1`
+- Your head hurts. Name a headache. → כְּאֵב רֹאשׁ (ke'ev rosh) · audio `i-14-w5`
+
+**Review queue from earlier pages:** `help-08`, `il18-w5`
+
+## pu-pharmacy-p02: Pain, Fever and How Often
+
+*Learn page.* Name a sore throat, a stomach ache and a fever, and say once a day.
+
+**Grammar: כְּאֵב plus the part that hurts.** כְּאֵב joins the part of the body that hurts: כְּאֵב גָּרוֹן is a sore throat and כְּאֵב בֶּטֶן is a stomach ache, built the same way as the word for a headache. A fever is חֹם, and נֶגֶד means against, so a medicine can be נֶגֶד חֹם. Once a day is פַּעַם בְּיוֹם.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| כְּאֵב גָּרוֹן | ke'ev garon \* | sore throat | `i-14-w6` tts, f+m |
+| כְּאֵב בֶּטֶן | ke'ev beten \* | stomach ache | `i-14-w7` tts, f+m |
+| חֹם | chom \* | fever | `i-14-w8` tts, f+m |
+| נֶגֶד | neged \* | against, for (a symptom) | `i-14-w9` tts, f+m |
+| פַּעַם בְּיוֹם | pa'am beyom \* | once a day | `i-14-w10` tts, f+m |
+
+**Speak.**
+
+- Your throat hurts. Name a sore throat. → כְּאֵב גָּרוֹן (ke'ev garon) · audio `i-14-w6`
+- The label says one time each day. Say once a day. → פַּעַם בְּיוֹם (pa'am beyom) · audio `i-14-w10`
+
+**Review queue from earlier pages:** `i-14-w4`, `i-14-w5`
+
+## pu-pharmacy-p03: Before, After and Allergies
+
+*Speak page.* Say twice a day, before and after, and name an allergy and antibiotics.
+
+**Grammar: The ending of פַּעֲמַיִם means two.** פַּעַם is one time and פַּעֲמַיִם is two times, so פַּעֲמַיִם בְּיוֹם is twice a day. אַחֲרֵי is after and לִפְנֵי is before, as in before or after a meal. אָלֶרְגִּי is allergic, in the form a man uses about himself. אַנְטִיבְּיוֹטִיקָה is antibiotics.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| פַּעֲמַיִם בְּיוֹם | pa'amayim beyom \* | twice a day | `i-14-w11` tts, f+m |
+| אַחֲרֵי | acharei \* | after | `i-14-w12` tts, f+m |
+| לִפְנֵי | lifnei \* | before | `i-14-w13` tts, f+m |
+| אָלֶרְגִּי | alergi \* | allergic (m) (to or by a man) | `i-14-w14` tts, f+m |
+| אַנְטִיבְּיוֹטִיקָה | antibiotika \* | antibiotics | `i-14-w15` tts, f+m |
+
+**Speak.**
+
+- The pharmacist says two times each day. Say twice a day. → פַּעֲמַיִם בְּיוֹם (pa'amayim beyom) · audio `i-14-w11`
+- You are a man with an allergy. Say allergic. → אָלֶרְגִּי (alergi) · audio `i-14-w14`
+
+**Review queue from earlier pages:** `i-14-w9`, `i-14-w10`
+
+## pu-pharmacy-p04: Unit Review
+
+*Review page.* Ask where the pharmacy is and review the unit.
+
+**Grammar: Finding the pharmacy.** אֵיפֹה בֵּית הַמִּרְקַחַת? asks where the pharmacy is. With הַ it is the pharmacy, a particular one: בֵּית מֶרְקַחַת becomes בֵּית הַמִּרְקַחַת, and the הַ goes on the second word.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| אֵיפֹה בֵּית הַמִּרְקַחַת? | eifo beit hamirkachat? | where is the pharmacy? | `directions-18` tts, f+m |
+
+**Speak.**
+
+- You are in a new town and need medicine. Ask where the pharmacy is. → אֵיפֹה בֵּית הַמִּרְקַחַת? (eifo beit hamirkachat?) · audio `directions-18`
+
+**Review queue from earlier pages:** `i-14-w10`, `i-14-w11`, `i-14-w12`, `i-14-w13`, `i-14-w14`, `i-14-w15`
+
+## pu-hospital-p01: The Hospital and Who Works There
+
+*Learn page.* Name the hospital, a doctor and a nurse.
+
+**Grammar: The hospital, a doctor and a nurse.** בֵּית חוֹלִים is the hospital. רוֹפֵא is a doctor, in the form used for a man. אָחוֹת is a nurse, and it is also the word for a sister.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| בֵּית חוֹלִים | beit cholim \* | hospital | `i-20-w1` tts, f+m |
+| רוֹפֵא | rofe \* | medical doctor, physician | `i-20-w2` tts, f+m |
+| אָחוֹת | achot \* | nurse (f) (to or by a woman) | `i-20-w4` tts, f+m |
+
+**Speak.**
+
+- The taxi driver asks where to. Name the hospital. → בֵּית חוֹלִים (beit cholim) · audio `i-20-w1`
+- You ask who will see you. Name a doctor. → רוֹפֵא (rofe) · audio `i-20-w2`
+
+**Review queue from earlier pages:** `i-14-w15`, `directions-18`
+
+## pu-hospital-p02: Insurance, Tests and Emergencies
+
+*Learn page.* Name insurance, a test, blood and an emergency, and say it hurts.
+
+**Grammar: כּוֹאֵב says it hurts.** כּוֹאֵב means it hurts, and it comes from the same root as the word for an ache. Insurance is בִּטּוּחַ. A בְּדִיקָה is a test or an examination, and דָּם is blood. חֵרוּם is an emergency.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| בִּטּוּחַ | bituach \* | insurance | `i-20-w6` tts, f+m |
+| כּוֹאֵב | ko'ev \* | it hurts | `i-20-w7` tts, f+m |
+| בְּדִיקָה | bedikah \* | test, examination | `i-20-w8` tts, f+m |
+| דָּם | dam \* | blood | `i-20-w9` tts, f+m |
+| חֵרוּם | cherum \* | emergency | `i-20-w10` tts, f+m |
+
+**Speak.**
+
+- The doctor presses your arm. Say it hurts. → כּוֹאֵב (ko'ev) · audio `i-20-w7`
+- It cannot wait. Name an emergency. → חֵרוּם (cherum) · audio `i-20-w10`
+
+**Review queue from earlier pages:** `i-20-w2`, `i-20-w4`
+
+## pu-hospital-p03: Ambulance, Passport and Family
+
+*Speak page.* Name an ambulance, the passport and family.
+
+**Grammar: הַ makes it the passport.** אַמְבּוּלַנְס is an ambulance. הַדַּרְכּוֹן is the passport: the הַ at the front is the word the. At a hospital desk you may be asked for הַדַּרְכּוֹן, and about your מִשְׁפָּחָה, your family.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| אַמְבּוּלַנְס | ambulans \* | ambulance | `i-20-w11` tts, f+m |
+| הַדַּרְכּוֹן | hadarkon \* | the passport | `i-20-w12` tts, f+m |
+| מִשְׁפָּחָה | mishpachah \* | family | `i-20-w13` tts, f+m |
+
+**Speak.**
+
+- Someone has collapsed in the street. Name an ambulance. → אַמְבּוּלַנְס (ambulans) · audio `i-20-w11`
+- The clerk asks for your papers. Name the passport. → הַדַּרְכּוֹן (hadarkon) · audio `i-20-w12`
+
+**Review queue from earlier pages:** `i-20-w9`, `i-20-w10`
+
+## pu-hospital-p04: Unit Review
+
+*Review page.* Ask where the hospital is and say you need a doctor.
+
+**Grammar: אֲנִי צָרִיךְ says I need.** אֵיפֹה בֵּית הַחוֹלִים? asks where the hospital is. אֲנִי צָרִיךְ רוֹפֵא says I need a doctor, in the form a man uses: צָרִיךְ is the man's form.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| אֵיפֹה בֵּית הַחוֹלִים? | eifo beit hacholim? | where is the hospital? | `directions-17` tts, f+m |
+| אֲנִי צָרִיךְ רוֹפֵא | ani tsarich rofe | I need a doctor | `help-02-m` tts, f+m |
+
+**Speak.**
+
+- You are lost and unwell. Ask where the hospital is. → אֵיפֹה בֵּית הַחוֹלִים? (eifo beit hacholim?) · audio `directions-17`
+- You are a man and feel very ill. Say you need a doctor. → אֲנִי צָרִיךְ רוֹפֵא (ani tsarich rofe) · audio `help-02-m`
+
+**Review queue from earlier pages:** `i-20-w8`, `i-20-w9`, `i-20-w10`, `i-20-w11`, `i-20-w12`, `i-20-w13`
+
+## pu-bank-p01: At the Bank
+
+*Learn page.* Name a bank, an account, money, a cash machine and a shekel or a dollar.
+
+**Grammar: The counter nouns.** בַּנְק is the bank, חֶשְׁבּוֹן an account or a bill, and כֶּסֶף money. כַּסְפּוֹמָט is the cash machine. שֶׁקֶל and דּוֹלָר are the currencies you will hear at the window.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| בַּנְק | bank \* | bank | `i-21-w1` tts, f+m |
+| חֶשְׁבּוֹן | cheshbon \* | account; bill | `i-21-w2` tts, f+m |
+| כֶּסֶף | kesef \* | money | `i-21-w3` tts, f+m |
+| כַּסְפּוֹמָט | kaspomat \* | cash machine (ATM) | `i-21-w4` tts, f+m |
+| דּוֹלָר | dolar \* | dollar | `i-21-w7` tts, f+m |
+| שֶׁקֶל | shekel \* | shekel | `i-21-w8` tts, f+m |
+
+**Speak.**
+
+- You need a cash machine. Name it. → כַּסְפּוֹמָט (kaspomat) · audio `i-21-w4`
+- Name the bank. → בַּנְק (bank) · audio `i-21-w1`
+
+**Review queue from earlier pages:** `i-36-w3`, `i-14-w1`
+
+## pu-bank-p02: Filling In a Form
+
+*Learn page.* Name a signature, a name, a loan, and whether the bank is closed.
+
+**Grammar: The form asks for a name and a signature.** שֵׁם is name and חֲתִימָה is a signature. הַלְוָאָה is a loan. סָגוּר means closed, for the hours of the בַּנְק.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| חֲתִימָה | chatimah \* | signature | `i-48-w3` tts, f+m |
+| שֵׁם | shem \* | name | `i-48-w4` tts, f+m |
+| הַלְוָאָה | halva'ah \* | loan | `i-21-w11` tts, f+m |
+| חֲתִימָה | chatimah \* | signature | `i-21-w10` tts, f+m |
+| סָגוּר | sagur \* | closed | `i-21-w14` tts, f+m |
+
+**Speak.**
+
+- The clerk points to the signature line. → חֲתִימָה (chatimah) · audio `i-48-w3`
+- The bank is closed. Say it. → סָגוּר (sagur) · audio `i-21-w14`
+
+**Review queue from earlier pages:** `i-36-w3`, `i-14-w1`
+
+## pu-bank-p03: Must and Need: צָרִיךְ
+
+*Grammar page.* Say you need a doctor, or that you need something at the bank, as a man.
+
+**Grammar: צָרִיךְ means need, in the man's form.** אֲנִי צָרִיךְ רוֹפֵא is I need a doctor. The same צָרִיךְ works for what you need at the bank. You already know the pair אֲנִי צָרִיךְ מוֹנִית and אֲנִי צְרִיכָה מוֹנִית from the taxi unit; the woman's form ends in צְרִיכָה.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| אֲנִי צָרִיךְ רוֹפֵא | ani tsarich rofe | I need a doctor | `help-02-m` tts, f+m |
+
+**Speak.**
+
+- You are a man and you need a doctor. → אֲנִי צָרִיךְ רוֹפֵא (ani tsarich rofe) · audio `help-02-m`
+
+**Review queue from earlier pages:** `i-36-w3`, `i-14-w1`
+
+## pu-bank-p04: Ask at the Counter
+
+*Speak page.* Ask to withdraw or exchange money, and name a credit card.
+
+**Grammar: Two infinitives at the window.** לִמְשֹׁךְ is to withdraw and לְהַחְלִיף is to exchange. כַּרְטִיס אַשְׁרַאי is a credit card. Use them with כֶּסֶף, שֶׁקֶל or דּוֹלָר at the counter.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| לִמְשֹׁךְ | limshokh \* | to withdraw | `i-21-w5` tts, f+m |
+| לְהַחְלִיף | lehachlif \* | to exchange | `i-21-w6` tts, f+m |
+| כַּרְטִיס אַשְׁרַאי | kartis ashray \* | credit card | `i-21-w9` tts, f+m |
+
+**Speak.**
+
+- You want cash from the account. Name to withdraw. → לִמְשֹׁךְ (limshokh) · audio `i-21-w5`
+- You have dollars. Name to exchange. → לְהַחְלִיף (lehachlif) · audio `i-21-w6`
+
+**Review queue from earlier pages:** `i-36-w3`, `i-14-w1`
+
+## pu-bank-p05: Unit Review
+
+*Review page.* Review the bank words.
+
+**Grammar: Account, cash, signature.** A visit is often חֶשְׁבּוֹן, then כַּסְפּוֹמָט or לִמְשֹׁךְ, and a חֲתִימָה at the end. Check whether the בַּנְק is סָגוּר.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| בַּנְק | bank \* | bank | `i-48-w12` tts, f+m |
+
+**Speak.**
+
+- Name the bank, the form word. → בַּנְק (bank) · audio `i-48-w12`
+
+**Review queue from earlier pages:** `help-02`, `i-21-w5`, `i-21-w6`, `i-21-w9`, `i-36-w3`, `i-14-w1`, `i-21-w2`, `i-48-w3`
+
+## pu-post-p01: Sending a Parcel
+
+*Learn page.* Name the post, a parcel, a letter, a stamp and the verb to send.
+
+**Grammar: What you hand over at the post office.** דֹּאַר is the post. חֲבִילָה is a parcel, מִכְתָּב a letter, and בּוּל a stamp (בּוּלִים, stamps). לִשְׁלֹחַ is to send, the same verb you used for a message.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| דֹּאַר | do'ar \* | post, mail | `i-22-w1` tts, f+m |
+| חֲבִילָה | chavilah \* | parcel | `i-22-w2` tts, f+m |
+| מִכְתָּב | mikhtav \* | letter | `i-22-w3` tts, f+m |
+| בּוּל | bul \* | stamp | `i-22-w4` tts, f+m |
+| בּוּלִים | bulim \* | stamps | `i-22-w5` tts, f+m |
+| לִשְׁלֹחַ | lishloach \* | to send | `i-22-w6` tts, f+m |
+
+**Speak.**
+
+- You have a parcel to send. → חֲבִילָה (chavilah) · audio `i-22-w2`
+- Ask for a stamp. → בּוּל (bul) · audio `i-22-w4`
+
+**Review queue from earlier pages:** `i-21-w2`, `i-48-w3`
+
+## pu-post-p02: Collecting a Parcel
+
+*Learn page.* Name collecting, a number, regular post and air mail.
+
+**Grammar: Collect, then name the service.** לֶאֱסֹף is to collect. מִסְפָּר is a number. רָגִיל means regular, and דֹּאַר אֲוִיר air mail.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| לֶאֱסֹף | le'esof \* | to collect | `i-22-w7` tts, f+m |
+| מִסְפָּר | mispar \* | number | `i-22-w9` tts, f+m |
+| רָגִיל | ragil \* | regular | `i-22-w12` tts, f+m |
+| דֹּאַר אֲוִיר | do'ar avir \* | air mail | `i-22-w13` tts, f+m |
+
+**Speak.**
+
+- You have come to collect a parcel. → לֶאֱסֹף (le'esof) · audio `i-22-w7`
+- You want air mail. → דֹּאַר אֲוִיר (do'ar avir) · audio `i-22-w13`
+
+**Review queue from earlier pages:** `i-21-w2`, `i-48-w3`
+
+## pu-post-p03: Ask Where Your Parcel Is
+
+*Speak page.* Ask about a parcel, a letter or air mail.
+
+**Grammar: Hold up the noun and ask.** At the counter, name חֲבִילָה or מִכְתָּב. דֹּאַר אֲוִיר is the service you ask for when the letter must go far.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| חֲבִילָה | chavilah \* | parcel | `i-22-w2` tts, f+m |
+| מִכְתָּב | mikhtav \* | letter | `i-22-w3` tts, f+m |
+| דֹּאַר אֲוִיר | do'ar avir \* | air mail | `i-22-w13` tts, f+m |
+
+**Speak.**
+
+- Ask about your parcel. → חֲבִילָה (chavilah) · audio `i-22-w2`
+- You want air mail. → דֹּאַר אֲוִיר (do'ar avir) · audio `i-22-w13`
+
+**Review queue from earlier pages:** `i-21-w2`, `i-48-w3`
+
+## pu-post-p04: Unit Review
+
+*Review page.* Review the post office words.
+
+**Grammar: Send or collect.** You either לִשְׁלֹחַ or לֶאֱסֹף. Have a בּוּל ready, and ask for רָגִיל or דֹּאַר אֲוִיר.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| רָגִיל | ragil \* | regular | `i-22-w12` tts, f+m |
+
+**Speak.**
+
+- You want the regular service, not air mail. → רָגִיל (ragil) · audio `i-22-w12`
+
+**Review queue from earlier pages:** `i-22-w9`, `i-22-w2`, `i-22-w3`, `i-22-w13`, `i-21-w2`, `i-48-w3`, `i-22-w6`, `i-22-w7`
+
+## pu-emergencies-p01: Help!
+
+*Learn page.* Call for help, name an emergency, and say something is urgent or dangerous.
+
+**Grammar: Short shouts first.** עֶזְרָה! and the word חֵרוּם, emergency, are the first things to have ready. סַכָּנָה is danger and דָּחוּף is urgent. The shout עֶזְרָה! already has the mark of a call for help.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| עֶזְרָה! | ezra! | help! | `help-01` tts, f+m |
+| חֵרוּם | cherum \* | emergency | `i-46-w1` tts, f+m |
+| סַכָּנָה | sakanah \* | danger | `i-46-w4` tts, f+m |
+| דָּחוּף | dachuf \* | urgent | `i-46-w5` tts, f+m |
+| עֶזְרָה! | ezrah! \* | help! | `i-46-w8` tts, f+m |
+
+**Speak.**
+
+- You need help now. Shout it. → עֶזְרָה! (ezra!) · audio `help-01`
+- Name an emergency. → חֵרוּם (cherum) · audio `i-46-w1`
+
+**Review queue from earlier pages:** `i-22-w6`, `i-22-w7`
+
+## pu-emergencies-p02: Calling an Ambulance or the Police
+
+*Learn page.* Name the police, an ambulance, a fire, and a phone.
+
+**Grammar: The three numbers people ask for.** מִשְׁטָרָה is the police, אַמְבּוּלַנְס an ambulance, and שְׂרֵפָה a fire. טֶלֶפוֹן is the phone you use to call. רוֹפֵא may also be needed at the scene.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| מִשְׁטָרָה | mishtarah \* | police | `i-46-w2` tts, f+m |
+| אַמְבּוּלַנְס | ambulans \* | ambulance | `i-46-w3` tts, f+m |
+| שְׂרֵפָה | serefah \* | fire | `i-46-w6` tts, f+m |
+| טֶלֶפוֹן | telefon \* | phone | `i-46-w12` tts, f+m |
+| רוֹפֵא | rofe \* | medical doctor, physician | `i-46-w9` tts, f+m |
+
+**Speak.**
+
+- Ask someone to find the police. → מִשְׁטָרָה (mishtarah) · audio `i-46-w2`
+- Name an ambulance. → אַמְבּוּלַנְס (ambulans) · audio `i-46-w3`
+
+**Review queue from earlier pages:** `i-22-w6`, `i-22-w7`
+
+## pu-emergencies-p03: Commands: Come, Call, Wait
+
+*Grammar page.* Tell a man to call the police or an ambulance, or to wait a moment.
+
+**Grammar: Commands change for who you are speaking to.** תִּקְרָא לַמִּשְׁטָרָה and תִּקְרָא לְאַמְבּוּלַנְס are said to a man: call the police, call an ambulance. חַכֵּה רֶגַע tells a man to wait a moment; חַכִּי רֶגַע tells a woman. You already know בּוֹא הֵנָּה and בּוֹאִי הֵנָּה for come here.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| תִּקְרָא לַמִּשְׁטָרָה | tikra lamishtara | call the police | `help-03-m` tts, f+m |
+| תִּקְרָא לְאַמְבּוּלַנְס | tikra le'ambulans | call an ambulance | `help-04-m` tts, f+m |
+| חַכֵּה רֶגַע | chake rega | Wait a moment. (to or by a man) | `gp-15-m` gap |
+| חַכִּי רֶגַע | chaki rega | Wait a moment. (to or by a woman) | `gp-15-f` gap |
+
+**Speak.**
+
+- Tell a man to call the police. → תִּקְרָא לַמִּשְׁטָרָה (tikra lamishtara) · audio `help-03-m`
+- Tell a woman to wait a moment. → חַכִּי רֶגַע (chaki rega) · audio `gp-15-f`
+
+**Review queue from earlier pages:** `i-22-w6`, `i-22-w7`
+
+## pu-emergencies-p04: Hear the Instructions
+
+*Listen page.* Hear a call for the police or an ambulance, and a wait command.
+
+**Grammar: Listen for who is being told.** תִּקְרָא marks a command to a man. חַכֵּה and חַכִּי split by gender. מִשְׁטָרָה and אַמְבּוּלַנְס tell you which help is wanted.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| תִּקְרָא לַמִּשְׁטָרָה | tikra lamishtara | call the police | `help-03-m` tts, f+m |
+| תִּקְרָא לְאַמְבּוּלַנְס | tikra le'ambulans | call an ambulance | `help-04-m` tts, f+m |
+| חַכֵּה רֶגַע | chake rega | Wait a moment. (to or by a man) | `gp-15-m` gap |
+| חַכִּי רֶגַע | chaki rega | Wait a moment. (to or by a woman) | `gp-15-f` gap |
+| עֶזְרָה! | ezra! | help! | `help-01` tts, f+m |
+
+**Speak.**
+
+- You hear a call for an ambulance. Repeat it. → תִּקְרָא לְאַמְבּוּלַנְס (tikra le'ambulans) · audio `help-04-m`
+
+**Review queue from earlier pages:** `i-46-w9`, `i-22-w6`, `i-22-w7`
+
+## pu-emergencies-p05: Say What Happened
+
+*Speak page.* Say you lost a passport or a phone, or name a thief.
+
+**Grammar: The ready-made lost lines.** אָבַד לִי הַדַּרְכּוֹן is I lost my passport, and אָבַד לִי הַטֶּלֶפוֹן is I lost my phone. גַּנָּב is a thief. הַדַּרְכּוֹן is the passport itself.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| אָבַד לִי הַדַּרְכּוֹן | avad li hadarkon | I lost my passport | `help-05` tts, f+m |
+| אָבַד לִי הַטֶּלֶפוֹן | avad li hatelefon | I lost my phone | `help-06` tts, f+m |
+| גַּנָּב | ganav \* | thief | `i-46-w7` tts, f+m |
+| הַדַּרְכּוֹן | hadarkon \* | the passport | `i-46-w11` tts, f+m |
+
+**Speak.**
+
+- You cannot find your passport. → אָבַד לִי הַדַּרְכּוֹן (avad li hadarkon) · audio `help-05`
+- You cannot find your phone. → אָבַד לִי הַטֶּלֶפוֹן (avad li hatelefon) · audio `help-06`
+
+**Review queue from earlier pages:** `i-22-w6`, `i-22-w7`
+
+## pu-emergencies-p06: Unit Review
+
+*Review page.* Review the emergency lines.
+
+**Grammar: Shout, name, command.** Start with עֶזְרָה!, name מִשְׁטָרָה or אַמְבּוּלַנְס, and use a command such as תִּקְרָא לַמִּשְׁטָרָה when you are speaking to a man.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| עֶזְרָה | ezrah \* | help | `il18-w6` tts, f+m |
+
+**Speak.**
+
+- Name help, the lesson word. → עֶזְרָה (ezrah) · audio `il18-w6`
+
+**Review queue from earlier pages:** `help-05`, `help-06`, `i-46-w7`, `i-46-w11`, `i-22-w6`, `i-22-w7`, `help-01`, `help-03`
+
+## pu-delivery-p01: The Order
+
+*Learn page.* Name a delivery, an order, a courier, pizza, salad and something tasty.
+
+**Grammar: The order and the person who brings it.** מִשְׁלוֹחַ is a delivery and הַזְמָנָה an order, the same word as a hotel reservation. שָׁלִיחַ is the courier. פִּיצָה and סָלָט are what you might order; טָעִים means tasty.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| מִשְׁלוֹחַ | mishloach \* | delivery, shipment | `i-45-w1` tts, f+m |
+| הַזְמָנָה | hazmanah \* | order, invitation | `i-45-w2` tts, f+m |
+| שָׁלִיחַ | shaliach \* | courier | `i-45-w3` tts, f+m |
+| פִּיצָה | pitzah \* | pizza | `i-45-w4` tts, f+m |
+| סָלָט | salat \* | salad | `i-45-w8` tts, f+m |
+| טָעִים | ta'im \* | tasty | `i-45-w11` tts, f+m |
+
+**Speak.**
+
+- You are waiting for a delivery. → מִשְׁלוֹחַ (mishloach) · audio `i-45-w1`
+- The person at the door is the courier. → שָׁלִיחַ (shaliach) · audio `i-45-w3`
+
+**Review queue from earlier pages:** `help-01`, `help-03`
+
+## pu-delivery-p02: The Address
+
+*Learn page.* Name the door, ask how long it will take, and say thanks.
+
+**Grammar: Where to bring it, and how long.** דֶּלֶת is the door. כַּמָּה זְמַן asks how long. מַיִם may be part of the order; תּוֹדָה is how you close when the שָׁלִיחַ arrives.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| דֶּלֶת | delet \* | door | `i-45-w7` tts, f+m |
+| כַּמָּה זְמַן | kamah zeman \* | how long | `i-45-w10` tts, f+m |
+| מַיִם | mayim \* | water | `i-45-w9` tts, f+m |
+| תּוֹדָה | todah \* | thanks | `i-45-w12` tts, f+m |
+
+**Speak.**
+
+- Name the door. → דֶּלֶת (delet) · audio `i-45-w7`
+- Ask how long it will take. → כַּמָּה זְמַן (kamah zeman) · audio `i-45-w10`
+
+**Review queue from earlier pages:** `help-01`, `help-03`
+
+## pu-delivery-p03: Call the Courier
+
+*Speak page.* Name the courier, the order or the delivery.
+
+**Grammar: Three nouns for the phone call.** On the phone, מִשְׁלוֹחַ, הַזְמָנָה and שָׁלִיחַ are the words you need. Add דֶּלֶת if they have the wrong door.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| שָׁלִיחַ | shaliach \* | courier | `i-45-w3` tts, f+m |
+| הַזְמָנָה | hazmanah \* | order, invitation | `i-45-w2` tts, f+m |
+| מִשְׁלוֹחַ | mishloach \* | delivery, shipment | `i-45-w1` tts, f+m |
+
+**Speak.**
+
+- You are calling about the courier. → שָׁלִיחַ (shaliach) · audio `i-45-w3`
+- Name the order. → הַזְמָנָה (hazmanah) · audio `i-45-w2`
+
+**Review queue from earlier pages:** `help-01`, `help-03`
+
+## pu-delivery-p04: Unit Review
+
+*Review page.* Review the delivery words.
+
+**Grammar: Order, address, thanks.** Place a הַזְמָנָה, name the דֶּלֶת, and say תּוֹדָה when it arrives. כַּמָּה זְמַן is the useful wait question.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| תּוֹדָה | todah \* | thanks | `i-45-w12` tts, f+m |
+
+**Speak.**
+
+- The food is at the door. Thank the courier. → תּוֹדָה (todah) · audio `i-45-w12`
+
+**Review queue from earlier pages:** `i-45-w9`, `i-45-w3`, `i-45-w2`, `i-45-w1`, `help-01`, `help-03`
+
+## pu-social-p01: Short Messages
+
+*Learn page.* Name a message, a photo, a password and the internet.
+
+**Grammar: The nouns of a short message.** הוֹדָעָה is a message and תְּמוּנָה a picture. סִיסְמָה is the password and אִינְטֶרְנֶט the internet, as on the phone unit. טֶלֶפוֹן is still the phone you write from.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| הוֹדָעָה | hoda'ah \* | message, notice | `i-49-w1` tts, f+m |
+| תְּמוּנָה | temunah \* | picture | `i-49-w2` tts, f+m |
+| סִיסְמָה | sisma \* | password | `i-49-w4` tts, f+m |
+| אִינְטֶרְנֶט | internet \* | internet | `i-49-w5` tts, f+m |
+| טֶלֶפוֹן | telefon \* | phone | `i-49-w6` tts, f+m |
+
+**Speak.**
+
+- You want to send a picture. Name it. → תְּמוּנָה (temunah) · audio `i-49-w2`
+- The app asks for a password. → סִיסְמָה (sisma) · audio `i-49-w4`
+
+**Review queue from earlier pages:** `help-01`, `help-03`
+
+## pu-social-p02: Future Tense: I Will
+
+*Grammar page.* Use I will go and I will eat, and ask if you may send.
+
+**Grammar: The future forms you already have, plus sending.** You already know אֲנִי אֵלֵךְ, I will go, and אֲנִי אֹכַל, I will eat. On this page, אֶפְשָׁר לִשְׁלֹחַ asks if you may send, and שׁוֹלֵחַ is the man's present form, sending. The future in those earlier lines is marked on the verb after אֲנִי, with no extra word for will.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| אֶפְשָׁר לִשְׁלֹחַ | efshar lishloach \* | can I send? | `i-49-w9` tts, f+m |
+| שׁוֹלֵחַ | sholeach \* | sending (m) (to or by a man) | `i-49-w10` tts, f+m |
+
+**Speak.**
+
+- Ask if you may send the photo. → אֶפְשָׁר לִשְׁלֹחַ (efshar lishloach) · audio `i-49-w9`
+- You are a man and you are sending it now. → שׁוֹלֵחַ (sholeach) · audio `i-49-w10`
+
+**Review queue from earlier pages:** `help-01`, `help-03`
+
+## pu-social-p03: Reply to a Friend
+
+*Speak page.* Name a friend, say wait a moment, or say OK.
+
+**Grammar: A short reply has a friend and an OK.** חָבֵר is a friend (man) and חֲבֵרָה a friend (woman). רֶגַע buys a moment before you answer, and בְּסֵדֶר is OK, the same everyday word you learned in the first units.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| חָבֵר | chaver \* | friend (m) (to or by a man) | `i-49-w7` tts, f+m |
+| חֲבֵרָה | chaverah \* | friend (f) (to or by a woman) | `i-49-w8` tts, f+m |
+| רֶגַע | rega \* | one moment | `i-49-w11` tts, f+m |
+| בְּסֵדֶר | beseder \* | OK | `i-49-w12` tts, f+m |
+
+**Speak.**
+
+- You are writing to a woman friend. Name her as a friend. → חֲבֵרָה (chaverah) · audio `i-49-w8`
+- Agree with a short OK. → בְּסֵדֶר (beseder) · audio `i-49-w12`
+
+**Review queue from earlier pages:** `help-01`, `help-03`
+
+## pu-social-p04: Unit Review
+
+*Review page.* Review the message words.
+
+**Grammar: Write, send, OK.** A short exchange is often an הוֹדָעָה, a תְּמוּנָה, אֶפְשָׁר לִשְׁלֹחַ, and בְּסֵדֶר at the end.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| בְּסֵדֶר | beseder \* | OK | `i-49-w12` tts, f+m |
+
+**Speak.**
+
+- Close the chat with OK. → בְּסֵדֶר (beseder) · audio `i-49-w12`
+
+**Review queue from earlier pages:** `i-49-w10`, `i-49-w7`, `i-49-w8`, `i-49-w11`, `help-01`, `help-03`, `i-49-w1`
+
+## pu-army-p01: Words From the Army
+
+*Learn page.* Name the army, a soldier, reserve duty, a commander, a base and leave.
+
+**Grammar: Everyday service words.** צָבָא is the army. חַיָּל is a soldier (man) and חַיֶּלֶת a soldier (woman). מִלּוּאִים is reserve duty, מְפַקֵּד a commander (man), בָּסִיס a base, and חֻפְשָׁה leave. These are ordinary family words in Israeli life; this page stays with those, not with combat slang.
+
+**Culture.** Many families in Israel use these words in ordinary talk. The course keeps the set family-friendly: service, people and leave, not weapons drill.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| צָבָא | tzava \* | army | `i-18-w1` tts, f+m |
+| חַיָּל | chayal \* | soldier (m) (to or by a man) | `i-18-w2` tts, f+m |
+| חַיֶּלֶת | chayelet \* | soldier (f) (to or by a woman) | `i-18-w3` tts, f+m |
+| מִלּוּאִים | milu'im \* | reserve duty (IDF) | `i-18-w4` tts, f+m |
+| מְפַקֵּד | mefaked \* | commander (m) (to or by a man) | `i-18-w5` tts, f+m |
+| בָּסִיס | basis \* | base | `i-18-w6` tts, f+m |
+| חֻפְשָׁה | chufshah \* | leave, vacation | `i-18-w9` tts, f+m |
+
+**Speak.**
+
+- Name a soldier, the man's form. → חַיָּל (chayal) · audio `i-18-w2`
+- A friend is on reserve duty. → מִלּוּאִים (milu'im) · audio `i-18-w4`
+
+**Review queue from earlier pages:** `help-03`, `i-49-w1`
+
+## pu-army-p02: Hear It in Conversation
+
+*Listen page.* Hear everyday replies used by soldiers and their friends.
+
+**Grammar: Short replies you will also hear in civilian talk.** יַאלְלָה means come on, or let's go. סַבָּבָה means fine, or cool. מָה הַמַּצָּב? is how's it going, and אֵין מַצָּב is no way. חֲבָל עַל הַזְּמַן praises something as excellent. תִּרְגַּע tells a man to calm down. אַחִי is bro, said to a close friend.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| יַאלְלָה | yalla \* | come on / let's go | `i-18-w10` tts, f+m |
+| סַבָּבָה | sababa \* | cool, fine | `i-18-w11` tts, f+m |
+| מָה הַמַּצָּב? | mah hamatzav? \* | how's it going? | `i-18-w14` tts, f+m |
+| אֵין מַצָּב | ein matzav \* | no way | `i-18-w15` tts, f+m |
+| חֲבָל עַל הַזְּמַן | chaval al hazeman \* | awesome (lit. a waste of the time) | `i-18-w13` tts, f+m |
+| תִּרְגַּע | tirga \* | chill, calm down | `i-18-w16` tts, f+m |
+| אַחִי | achi \* | bro (my brother) | `i-18-w12` tts, f+m |
+
+**Speak.**
+
+- Agree that something is fine. → סַבָּבָה (sababa) · audio `i-18-w11`
+- Tell a friend, casually, to come on. → יַאלְלָה (yalla) · audio `i-18-w10`
+
+**Review queue from earlier pages:** `i-18-w9`, `help-03`, `i-49-w1`
+
+## pu-army-p03: Unit Review
+
+*Review page.* Review the service and reply words.
+
+**Grammar: People first, then the short replies.** Name צָבָא, חַיָּל or חַיֶּלֶת, and מִלּוּאִים when the talk is about service. In a casual reply, סַבָּבָה and יַאלְלָה are enough. This unit does not practise weapon words.
+
+**Culture.** Weapon vocabulary from the same lesson is left off these pages so the live unit stays family-friendly.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| שְׁמִירָה | shemirah \* | guard duty | `i-18-w8` tts, f+m |
+
+**Speak.**
+
+- Name guard duty. → שְׁמִירָה (shemirah) · audio `i-18-w8`
+
+**Review queue from earlier pages:** `i-18-w13`, `i-18-w16`, `i-18-w12`, `i-18-w9`, `help-03`, `i-49-w1`, `i-18-w1`, `i-18-w11`
+
+## pu-news-p01: Headline Words
+
+*Learn page.* Name the news, the government, elections, war, peace and a price.
+
+**Grammar: Headline nouns are short.** חֲדָשׁוֹת is the news. מֶמְשָׁלָה is the government and בְּחִירוֹת elections. מִלְחָמָה is war and שָׁלוֹם is peace, the same word as hello. מְחִיר is a price, which you already use in shops.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| חֲדָשׁוֹת | chadashot \* | news | `i-47-w1` tts, f+m |
+| מֶמְשָׁלָה | memshalah \* | government | `i-47-w2` tts, f+m |
+| בְּחִירוֹת | bechirot \* | elections | `i-47-w3` tts, f+m |
+| מִלְחָמָה | milchamah \* | war | `i-47-w4` tts, f+m |
+| שָׁלוֹם | shalom \* | peace | `i-47-w5` tts, f+m |
+| מְחִיר | mechir \* | price | `i-47-w6` tts, f+m |
+
+**Speak.**
+
+- Point to the news. → חֲדָשׁוֹת (chadashot) · audio `i-47-w1`
+- Name peace in a headline. → שָׁלוֹם (shalom) · audio `i-47-w5`
+
+**Review queue from earlier pages:** `i-18-w1`, `i-18-w11`
+
+## pu-news-p02: Reading Without Vowel Marks
+
+*Grammar page.* Recognise today's headline words when you already know them with vowels.
+
+**Grammar: Newspapers drop the vowel marks; you already know the words.** A printed headline is often written without vowel marks. The words themselves are the ones you have just learned: חֲדָשׁוֹת, מֶמְשָׁלָה, מְחִיר, הַיּוֹם. Learn them with the marks here, then look for the same letters on a page. This lesson does not invent unpointed spellings.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| הַיּוֹם | hayom \* | today | `i-47-w8` tts, f+m |
+| מָחָר | machar \* | tomorrow | `i-47-w9` tts, f+m |
+| אֶתְמוֹל | etmol \* | yesterday | `i-47-w10` tts, f+m |
+| חֲדָשׁוֹת | chadashot \* | news | `i-47-w1` tts, f+m |
+
+**Speak.**
+
+- A headline starts with today. → הַיּוֹם (hayom) · audio `i-47-w8`
+
+**Review queue from earlier pages:** `i-18-w1`, `i-18-w11`
+
+## pu-news-p03: One Short Story
+
+*Learn page.* Read a short headline with there is and there isn't.
+
+**Grammar: יֵשׁ and אֵין in a news line.** A short story may use יֵשׁ or אֵין with מְחִיר. הַיּוֹם, מָחָר and אֶתְמוֹל place the story in time.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| אֵין | ein \* | there isn't | `il08-w6` tts, f+m |
+| יֵשׁ | yesh \* | there is | `i-47-w12` tts, f+m |
+
+**Speak.**
+
+- Say there is. → יֵשׁ (yesh) · audio `i-47-w12`
+- Say there isn't. → אֵין (ein) · audio `il08-w6`
+
+**Review queue from earlier pages:** `i-18-w1`, `i-18-w11`
+
+## pu-news-p04: Level 3 Check
+
+*Check page.* Show you can handle work, health, the bank, the post, help and a headline.
+
+**Grammar: Putting level 3 together.** This check mixes the living-in-Israel units. One new polite line: אֶפְשָׁר לְהִשְׁתַּמֵּשׁ בַּטֶּלֶפוֹן שֶׁלְּךָ? asks if you may use someone's phone, built like the other אֶפְשָׁר requests you already know.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| אֶפְשָׁר לְהִשְׁתַּמֵּשׁ בַּטֶּלֶפוֹן שֶׁלְּךָ? | efshar lehishtamesh batelefon shelcha? | can I use your phone? | `help-09` tts, f+m |
+
+**Speak.**
+
+- You need to make a call. Ask to use the phone, politely. → אֶפְשָׁר לְהִשְׁתַּמֵּשׁ בַּטֶּלֶפוֹן שֶׁלְּךָ? (efshar lehishtamesh batelefon shelcha?) · audio `help-09`
+- Call for help. → עֶזְרָה! (ezra!) · audio `help-01`
+
+**Review queue from earlier pages:** `i-36-w10`, `il18-w5`, `i-48-w12`, `i-22-w12`, `il18-w6`, `i-45-w12`, `i-49-w12`, `i-18-w13`, `i-18-w16`, `i-18-w12`, `i-18-w8`, `help-01`
+
+## pu-shabbat-p01: The Invitation
+
+*Learn page.* Answer an invitation, ask when to come, and offer to bring something.
+
+**Grammar: Gladly, and when should I come.** בְּשִׂמְחָה means gladly, a warm yes to an invitation. מָתַי לָבוֹא? asks when you should arrive, and לְהָבִיא is to bring. הַשָּׁעָה שֶׁבַע can be the answer, a clock time you already know. שַׁבָּת שָׁלוֹם is the greeting that opens the invitation, the same one you learned in the first units.
+
+**Culture.** This unit is table conversation around an invitation, not a liturgy lesson.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| שַׁבָּת שָׁלוֹם | shabbat shalom \* | peaceful Sabbath (greeting from Friday afternoon to Saturday) | `i-19-w1` tts, f+m |
+| בְּשִׂמְחָה | besimchah \* | gladly, with pleasure | `i-19-w5` tts, f+m |
+| לְהָבִיא | lehavi \* | to bring | `i-19-w6` tts, f+m |
+| מָתַי לָבוֹא? | matai lavo? \* | when should I come? | `i-19-w9` tts, f+m |
+| הַשָּׁעָה שֶׁבַע | hasha'ah sheva \* | seven o'clock | `i-19-w10` tts, f+m |
+
+**Speak.**
+
+- You are happy to come. Say gladly. → בְּשִׂמְחָה (besimchah) · audio `i-19-w5`
+- Ask when you should arrive. → מָתַי לָבוֹא? (matai lavo?) · audio `i-19-w9`
+
+**Review queue from earlier pages:** `i-18-w8`, `help-01`
+
+## pu-shabbat-p02: At the Table
+
+*Learn page.* Name the meal, wine, dessert, and offer a toast.
+
+**Grammar: Food words at a Shabbat table.** אֲרוּחָה is the meal and עֶרֶב the evening. יַיִן is wine and קִנּוּחַ dessert. לְחַיִּים! is the toast.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| אֲרוּחָה | aruchah \* | meal | `i-19-w3` tts, f+m |
+| עֶרֶב | erev \* | evening | `i-19-w4` tts, f+m |
+| יַיִן | yayin | wine | `cafe-12` tts, f+m |
+| קִנּוּחַ | kinuach \* | dessert | `i-19-w8` tts, f+m |
+| לְחַיִּים! | lechayim! \* | cheers! | `i-19-w12` tts, f+m |
+
+**Speak.**
+
+- Raise a glass. Offer the toast. → לְחַיִּים! (lechayim!) · audio `i-19-w12`
+- Name the wine. → יַיִן (yayin) · audio `cafe-12`
+
+**Review queue from earlier pages:** `i-18-w8`, `help-01`
+
+## pu-shabbat-p03: Polite Requests at a Meal
+
+*Grammar page.* Make a polite request, and thank your hosts.
+
+**Grammar: בְּבַקָּשָׁה at the table, and thanks.** A request at the table can use בְּבַקָּשָׁה, which you already know, together with לְהָבִיא if you offer to bring something. תּוֹדָה רַבָּה is the thanks you already used at the hotel desk. The invitation itself is answered with בְּשִׂמְחָה, not with a new verb.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| לְהָבִיא | lehavi \* | to bring | `i-19-w6` tts, f+m |
+| תּוֹדָה רַבָּה | todah rabah \* | thank you very much | `i-19-w13` tts, f+m |
+
+**Speak.**
+
+- Offer to bring something. → לְהָבִיא (lehavi) · audio `i-19-w6`
+- Thank your hosts warmly. → תּוֹדָה רַבָּה (todah rabah) · audio `i-19-w13`
+
+**Review queue from earlier pages:** `i-18-w8`, `help-01`
+
+## pu-shabbat-p04: Thank Your Hosts
+
+*Speak page.* Thank your hosts and say goodbye or wish a good week.
+
+**Grammar: Leave with thanks and a greeting.** תּוֹדָה רַבָּה closes the meal. לְהִתְרָאוֹת is see you, and שָׁבוּעַ טוֹב is the greeting once Shabbat ends, both of which you already know from earlier units and from this lesson.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| תּוֹדָה רַבָּה | todah rabah \* | thank you very much | `i-19-w13` tts, f+m |
+| לְהִתְרָאוֹת | lehitra'ot \* | see you | `i-19-w14` tts, f+m |
+| שָׁבוּעַ טוֹב | shavu'a tov \* | a good week (said once Shabbat ends) | `i-19-w2` tts, f+m |
+
+**Speak.**
+
+- The evening is over. Thank your hosts. → תּוֹדָה רַבָּה (todah rabah) · audio `i-19-w13`
+- Shabbat has ended. Wish a good week. → שָׁבוּעַ טוֹב (shavu'a tov) · audio `i-19-w2`
+
+**Review queue from earlier pages:** `i-18-w8`, `help-01`
+
+## pu-shabbat-p05: Unit Review
+
+*Review page.* Review the invitation and table words.
+
+**Grammar: Yes, when, thanks.** Answer with בְּשִׂמְחָה, ask מָתַי לָבוֹא?, offer לְהָבִיא, and leave with תּוֹדָה רַבָּה. Open and close with שַׁבָּת שָׁלוֹם or שָׁבוּעַ טוֹב.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| בְּשִׂמְחָה | besimchah \* | gladly, with pleasure | `i-19-w5` tts, f+m |
+
+**Speak.**
+
+- Accept the invitation gladly. → בְּשִׂמְחָה (besimchah) · audio `i-19-w5`
+
+**Review queue from earlier pages:** `i-19-w6`, `i-19-w13`, `i-19-w14`, `i-19-w2`, `i-18-w8`, `help-01`
+
+## pu-holidays-p01: The Year at a Glance
+
+*Learn page.* Use everyday holiday greetings you already know, and a toast.
+
+**Grammar: The year is marked with short greetings.** חַג שָׂמֵחַ, שָׁנָה טוֹבָה, שַׁבָּת שָׁלוֹם and שָׁבוּעַ טוֹב are the greetings you learned at the start of the course; they also belong here, at the end of the year. לְחַיִּים is the toast, and יוֹם נָעִים is have a nice day, for ordinary mornings.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| שַׁבָּת שָׁלוֹם | shabbat shalom \* | peaceful Sabbath (greeting from Friday afternoon to Saturday) | `i-50-w1` tts, f+m |
+| שָׁבוּעַ טוֹב | shavu'a tov \* | good week | `i-50-w2` tts, f+m |
+| חַג שָׂמֵחַ | chag sameach \* | happy holiday | `i-50-w3` tts, f+m |
+| שָׁנָה טוֹבָה | shanah tovah \* | happy new year (Rosh Hashana greeting) | `i-50-w4` tts, f+m |
+| לְחַיִּים | lechayim \* | cheers! | `i-50-w6` tts, f+m |
+| יוֹם נָעִים | yom na'im \* | have a nice day | `i-50-w11` tts, f+m |
+
+**Speak.**
+
+- It is a festival. Give the general greeting. → חַג שָׂמֵחַ (chag sameach) · audio `i-50-w3`
+- It is Rosh Hashana. Give that greeting. → שָׁנָה טוֹבָה (shanah tovah) · audio `i-50-w4`
+
+**Review queue from earlier pages:** `i-18-w8`, `help-01`
+
+## pu-holidays-p02: Greetings for Each Holiday
+
+*Learn page.* Give the Yom Kippur and Pesach greetings, and everyday good wishes.
+
+**Grammar: Two festival greetings kept on the live course.** גְּמַר חֲתִימָה טוֹבָה is the Yom Kippur greeting, a good final sealing. חַג כָּשֵׁר וְשָׂמֵחַ is the Pesach greeting, a kosher and happy holiday. מַזָּל טוֹב and בְּהַצְלָחָה are everyday good wishes, not tied to one day.
+
+**Culture.** Both festival greetings are shown here, as decided: they are ordinary seasonal wishes, copied from the lesson sources.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| גְּמַר חֲתִימָה טוֹבָה | gemar chatima tova \* | a good final sealing (Yom Kippur greeting) | `i-50-w13` tts, f+m |
+| חַג כָּשֵׁר וְשָׂמֵחַ | chag kasher ve-sameach \* | a kosher and happy holiday (Pesach greeting) | `i-29-w13` tts, f+m |
+| מַזָּל טוֹב | mazal tov \* | congratulations | `i-50-w5` tts, f+m |
+| בְּהַצְלָחָה | behatzlachah \* | good luck | `i-50-w7` tts, f+m |
+
+**Speak.**
+
+- It is Yom Kippur. Give the greeting. → גְּמַר חֲתִימָה טוֹבָה (gemar chatima tova) · audio `i-50-w13`
+- It is Pesach. Give the greeting. → חַג כָּשֵׁר וְשָׂמֵחַ (chag kasher ve-sameach) · audio `i-29-w13`
+
+**Review queue from earlier pages:** `i-18-w8`, `help-01`
+
+## pu-holidays-p03: Hear the Greeting
+
+*Listen page.* Hear a festival or everyday greeting and pick its meaning.
+
+**Grammar: Listen for the festival word.** חַג, שָׁנָה and גְּמַר tell you which greeting you are hearing. לִבְרִיאוּת is to your health, often after a sneeze, and סְלִיחָה is the everyday pardon you already know.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| חַג שָׂמֵחַ | chag sameach \* | happy holiday | `i-50-w3` tts, f+m |
+| שָׁנָה טוֹבָה | shanah tovah \* | happy new year (Rosh Hashana greeting) | `i-50-w4` tts, f+m |
+| גְּמַר חֲתִימָה טוֹבָה | gemar chatima tova \* | a good final sealing (Yom Kippur greeting) | `i-50-w13` tts, f+m |
+| חַג כָּשֵׁר וְשָׂמֵחַ | chag kasher ve-sameach \* | a kosher and happy holiday (Pesach greeting) | `i-29-w13` tts, f+m |
+| לִבְרִיאוּת | livri'ut \* | to your health | `i-50-w9` tts, f+m |
+| סְלִיחָה | selichah \* | forgiveness, pardon | `i-50-w12` tts, f+m |
+
+**Speak.**
+
+- Someone sneezes. Wish them health. → לִבְרִיאוּת (livri'ut) · audio `i-50-w9`
+
+**Review queue from earlier pages:** `i-50-w7`, `i-18-w8`, `help-01`
+
+## pu-holidays-p04: Wish Someone Well
+
+*Speak page.* Tell a man or a woman to take care, or wish good luck.
+
+**Grammar: Take care changes for a man or a woman.** תִּשְׁמֹר עַל עַצְמְךָ is said to a man; תִּשְׁמְרִי עַל עַצְמֵךְ is said to a woman. You already practised this pair in the greetings unit. בְּהַצְלָחָה and מַזָּל טוֹב are the same for everyone.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| תִּשְׁמֹר עַל עַצְמְךָ | tishmor al atzmekha \* | take care of yourself (said to a man) (to or by a man) | `i-50-w8` tts, f+m |
+| תִּשְׁמְרִי עַל עַצְמֵךְ | tishmeri al atzmekh \* | take care of yourself (said to a woman) (to or by a woman) | `i-50-w14` tts, f+m |
+| בְּהַצְלָחָה | behatzlachah \* | good luck | `i-50-w7` tts, f+m |
+| מַזָּל טוֹב | mazal tov \* | congratulations | `i-50-w5` tts, f+m |
+
+**Speak.**
+
+- Noa is leaving on a trip. Tell her to take care. → תִּשְׁמְרִי עַל עַצְמֵךְ (tishmeri al atzmekh) · audio `i-50-w14`
+- Ari has an interview. Wish him luck. → בְּהַצְלָחָה (behatzlachah) · audio `i-50-w7`
+
+**Review queue from earlier pages:** `i-18-w8`, `help-01`
+
+## pu-holidays-p05: Final Check
+
+*Check page.* Show you can greet, thank, and give everyday and festival wishes.
+
+**Grammar: Putting the whole Practical course together.** This last check mixes greetings from the start of the course with the festival wishes you have just learned. The new line on this page is גְּמַר חֲתִימָה טוֹבָה, already taught in this unit and brought back once more. בְּעֶזְרַת הַשֵּׁם is the everyday set phrase you met under politeness, shown as written, not as a divine name to be voiced in a special way.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| גְּמַר חֲתִימָה טוֹבָה | gemar chatima tova \* | a good final sealing (Yom Kippur greeting) | `i-50-w13` tts, f+m |
+
+**Speak.**
+
+- It is Yom Kippur. Give the greeting. → גְּמַר חֲתִימָה טוֹבָה (gemar chatima tova) · audio `i-50-w13`
+- Wish someone a kosher and happy Pesach. → חַג כָּשֵׁר וְשָׂמֵחַ (chag kasher ve-sameach) · audio `i-29-w13`
+
+**Review queue from earlier pages:** `i-36-w10`, `il18-w5`, `i-48-w12`, `i-22-w12`, `il18-w6`, `i-45-w12`, `i-49-w12`, `i-18-w8`, `help-09`, `i-19-w5`, `i-50-w5`, `politeness-21`, `i-29-w13`

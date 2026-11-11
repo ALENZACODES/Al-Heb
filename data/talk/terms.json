@@ -1,0 +1,245 @@
+{
+ "schema": "alef.talk.terms.v1",
+ "note": "Synagogue and holiday words the Talk language pack renders wrongly, found by tools/talk/nmt/terms.mjs. A wrong rendering is replaced only when the source line holds the word and the output holds that exact rendering. Not yet checked by a native speaker.",
+ "terms": [
+  {
+   "he": [
+    "כיפה",
+    "כיפות"
+   ],
+   "en": "kippah",
+   "wrong": [
+    "domes",
+    "dome"
+   ]
+  },
+  {
+   "he": [
+    "קידוש"
+   ],
+   "en": "kiddush",
+   "wrong": [
+    "sanctification"
+   ]
+  },
+  {
+   "he": [
+    "סוכה"
+   ],
+   "en": "sukkah",
+   "wrong": [
+    "succah"
+   ]
+  },
+  {
+   "he": [
+    "טלית",
+    "טליתות"
+   ],
+   "en": "tallit",
+   "wrong": [
+    "telepathy",
+    "patches",
+    "Talith",
+    "lambs",
+    "lamb"
+   ]
+  },
+  {
+   "he": [
+    "תפילין"
+   ],
+   "en": "tefillin",
+   "wrong": [
+    "phylline"
+   ]
+  },
+  {
+   "he": [
+    "מזוזה",
+    "מזוזות"
+   ],
+   "en": "mezuzah",
+   "wrong": [
+    "mufflers",
+    "movables"
+   ]
+  },
+  {
+   "he": [
+    "הבדלה"
+   ],
+   "en": "havdalah",
+   "wrong": [
+    "distinction",
+    "difference"
+   ]
+  },
+  {
+   "he": [
+    "חזנית"
+   ],
+   "en": "cantor",
+   "wrong": [
+    "weather girl"
+   ]
+  },
+  {
+   "he": [
+    "שופר"
+   ],
+   "en": "shofar",
+   "wrong": [
+    "horn"
+   ]
+  },
+  {
+   "he": [
+    "הפטרה"
+   ],
+   "en": "haftarah",
+   "wrong": [
+    "haftorah",
+    "Hafthra",
+    "Haftrah"
+   ]
+  },
+  {
+   "he": [
+    "גבאי"
+   ],
+   "en": "gabbai",
+   "wrong": [
+    "Gabay",
+    "jack"
+   ]
+  },
+  {
+   "he": [
+    "קדיש"
+   ],
+   "en": "kaddish",
+   "wrong": [
+    "Kadesh"
+   ]
+  },
+  {
+   "he": [
+    "לולב"
+   ],
+   "en": "lulav",
+   "wrong": [
+    "lulub",
+    "Loeb"
+   ]
+  },
+  {
+   "he": [
+    "אתרוג"
+   ],
+   "en": "etrog",
+   "wrong": [
+    "translation",
+    "upgrade"
+   ]
+  }
+ ],
+ "termsEnHe": [
+  {
+   "en": [
+    "prayer book"
+   ],
+   "he": "סידור",
+   "wrong": [
+    "ספר התפילה",
+    "ספר תפילה"
+   ]
+  },
+  {
+   "en": [
+    "kippah",
+    "yarmulke"
+   ],
+   "he": "כיפה",
+   "wrong": [
+    "קיפה"
+   ]
+  },
+  {
+   "en": [
+    "challah"
+   ],
+   "he": "חלה",
+   "wrong": [
+    "חאללה",
+    "צ'אלה"
+   ]
+  },
+  {
+   "en": [
+    "kiddush"
+   ],
+   "he": "קידוש",
+   "wrong": [
+    "kiddush",
+    "ילדוש"
+   ]
+  },
+  {
+   "en": [
+    "tallit"
+   ],
+   "he": "טלית",
+   "wrong": [
+    "תליון"
+   ]
+  },
+  {
+   "en": [
+    "minyan"
+   ],
+   "he": "מניין",
+   "wrong": [
+    "מיניאן"
+   ]
+  },
+  {
+   "en": [
+    "havdalah"
+   ],
+   "he": "הבדלה",
+   "wrong": [
+    "havdalah",
+    "הבדהלה"
+   ]
+  },
+  {
+   "en": [
+    "kaddish"
+   ],
+   "he": "קדיש",
+   "wrong": [
+    "קאדיש"
+   ]
+  },
+  {
+   "en": [
+    "tefillin"
+   ],
+   "he": "תפילין",
+   "wrong": [
+    "טפילין"
+   ]
+  },
+  {
+   "en": [
+    "haftarah"
+   ],
+   "he": "הפטרה",
+   "wrong": [
+    "haftarara",
+    "Haftarah"
+   ]
+  }
+ ]
+}

@@ -69,7 +69,7 @@ function audit({ phone }) {
   const sel = (e) => e.tagName.toLowerCase() + (e.id ? '#' + e.id : typeof e.className === 'string' && e.className.trim() ? '.' + e.className.trim().split(/\s+/)[0] : '');
   const label = (e) => ((e.getAttribute('aria-label') || e.textContent || e.value || e.getAttribute('title') || '').replace(/\s+/g, ' ').trim()).slice(0, 40);
   const de = document.documentElement; const iw = window.innerWidth;
-  const inScroller = (e) => { for (let a = e.parentElement; a && a !== document.body; a = a.parentElement) { const o = getComputedStyle(a).overflowX; if (o === 'auto' || o === 'scroll') return true; } return false; };
+  const inScroller = (e) => { for (let a = e.parentElement; a && a !== document.body; a = a.parentElement) { const o = getComputedStyle(a).overflowX; if (o === 'auto' || o === 'scroll' || o === 'hidden' || o === 'clip') return true; } return false; }; // inside a scroller, or clipped by its parent (a decorative layer that bleeds past a clipping box does not make the page scroll; the scrollWidth test below still catches real overflow)
   const wide = [];
   for (const e of document.querySelectorAll('body *')) { const r = e.getBoundingClientRect(); if (r.width && r.right > iw + 1 && getComputedStyle(e).position !== 'fixed' && !e.closest('svg') && !inScroller(e) && !/^(OPTION|SCRIPT|STYLE)$/.test(e.tagName)) { wide.push(sel(e) + ' right=' + Math.round(r.right)); if (wide.length >= 4) break; } }
   const sw = Math.max(de.scrollWidth, document.body.scrollWidth);
@@ -81,6 +81,8 @@ function audit({ phone }) {
     const seen = new Set();
     for (const e of document.querySelectorAll('a[href],button,input:not([type=hidden]),select,textarea,summary,[role=button],[role=tab],[role=switch],[role=checkbox],[role=radio],[role=menuitem],[tabindex]:not([tabindex="-1"])')) {
       if (!vis(e) || e.disabled || e.closest('svg')) continue;
+      // a control taken out of the tab order and hidden from sight (a file input opened by a real button) is not a tap target
+      if (e.getAttribute('tabindex') === '-1' && e.classList.contains('visually-hidden')) continue;
       const lbl = e.labels && e.labels[0]; let r = e.getBoundingClientRect();
       if (lbl) { const lr = lbl.getBoundingClientRect(); if (lr.width * lr.height > r.width * r.height) r = lr; }
       // inline links inside running text are exempt from the target-size guidance

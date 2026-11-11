@@ -1,0 +1,3227 @@
+{
+ "schema": "alef.talk.heldout.v1",
+ "note": "Held-out lines for the Talk translation model. Written before the model was chosen or tuned; no line is used to change the model, the phrase bank or the patterns. reference is the first-choice wording; accept lists other correct wordings written at the same time. Not yet checked by a native speaker.",
+ "samples": [
+  {
+   "id": "x-en-001",
+   "direction": "en-he",
+   "category": "travel",
+   "source": "Which bus goes to the central station?",
+   "reference": "איזה אוטובוס נוסע לתחנה המרכזית?",
+   "accept": [
+    "איזה אוטובוס מגיע לתחנה המרכזית?"
+   ]
+  },
+  {
+   "id": "x-en-002",
+   "direction": "en-he",
+   "category": "travel",
+   "source": "The train was cancelled this morning.",
+   "reference": "הרכבת בוטלה הבוקר.",
+   "accept": [
+    "הרכבת בוטלה היום בבוקר."
+   ]
+  },
+  {
+   "id": "x-en-003",
+   "direction": "en-he",
+   "category": "travel",
+   "source": "I missed my train.",
+   "reference": "פספסתי את הרכבת שלי.",
+   "accept": [
+    "פספסתי את הרכבת.",
+    "החמצתי את הרכבת שלי.",
+    "החמצתי את הרכבת."
+   ]
+  },
+  {
+   "id": "x-en-004",
+   "direction": "en-he",
+   "category": "travel",
+   "source": "How far is the beach from here?",
+   "reference": "כמה רחוק החוף מכאן?",
+   "accept": [
+    "כמה רחוק החוף מפה?",
+    "מה המרחק מכאן לחוף?",
+    "כמה רחוק הים מכאן?"
+   ]
+  },
+  {
+   "id": "x-en-005",
+   "direction": "en-he",
+   "category": "travel",
+   "source": "Please stop at the next corner.",
+   "reference": "תעצור בפינה הבאה, בבקשה.",
+   "accept": [
+    "בבקשה תעצור בפינה הבאה.",
+    "עצור בפינה הבאה, בבקשה.",
+    "בבקשה עצור בפינה הבאה.",
+    "תעצרי בפינה הבאה, בבקשה.",
+    "אנא עצור בפינה הבאה."
+   ]
+  },
+  {
+   "id": "x-en-006",
+   "direction": "en-he",
+   "category": "travel",
+   "source": "The flight is delayed by two hours.",
+   "reference": "הטיסה מתעכבת בשעתיים.",
+   "accept": [
+    "הטיסה מתעכבת שעתיים.",
+    "הטיסה מאחרת בשעתיים.",
+    "הטיסה מעוכבת בשעתיים."
+   ]
+  },
+  {
+   "id": "x-en-007",
+   "direction": "en-he",
+   "category": "travel",
+   "source": "I would like to rent a car for three days.",
+   "reference": "אני רוצה לשכור רכב לשלושה ימים.",
+   "accept": [
+    "הייתי רוצה לשכור רכב לשלושה ימים.",
+    "אני רוצה לשכור מכונית לשלושה ימים.",
+    "הייתי רוצה לשכור מכונית לשלושה ימים."
+   ]
+  },
+  {
+   "id": "x-en-008",
+   "direction": "en-he",
+   "category": "travel",
+   "source": "My phone battery is dead.",
+   "reference": "הסוללה של הטלפון שלי נגמרה.",
+   "accept": [
+    "נגמרה לי הסוללה בטלפון.",
+    "הסוללה של הטלפון שלי מתה.",
+    "סוללת הטלפון שלי נגמרה.",
+    "סוללת הטלפון שלי מתה.",
+    "נגמרה הסוללה של הטלפון שלי."
+   ]
+  },
+  {
+   "id": "x-en-009",
+   "direction": "en-he",
+   "category": "travel",
+   "source": "Does this train stop in Haifa?",
+   "reference": "הרכבת הזאת עוצרת בחיפה?",
+   "accept": [
+    "האם הרכבת הזאת עוצרת בחיפה?",
+    "הרכבת הזו עוצרת בחיפה?",
+    "האם הרכבת הזו עוצרת בחיפה?"
+   ]
+  },
+  {
+   "id": "x-en-010",
+   "direction": "en-he",
+   "category": "travel",
+   "source": "We are lost.",
+   "reference": "הלכנו לאיבוד.",
+   "accept": [
+    "אנחנו אבודים.",
+    "איבדנו את הדרך."
+   ]
+  },
+  {
+   "id": "x-en-011",
+   "direction": "en-he",
+   "category": "travel",
+   "source": "Cross the street and walk two blocks.",
+   "reference": "תחצה את הכביש ותלך שני רחובות.",
+   "accept": [
+    "חצה את הרחוב ולך שני רחובות.",
+    "תחצה את הרחוב ותלך שני רחובות.",
+    "חצו את הרחוב ולכו שני רחובות.",
+    "חצה את הכביש ולך שני רחובות.",
+    "חצה את הרחוב ולך שני בלוקים.",
+    "תחצה את הרחוב ותלך שני בלוקים."
+   ]
+  },
+  {
+   "id": "x-en-012",
+   "direction": "en-he",
+   "category": "travel",
+   "source": "My luggage did not arrive.",
+   "reference": "המזוודות שלי לא הגיעו.",
+   "accept": [
+    "המטען שלי לא הגיע.",
+    "המזוודה שלי לא הגיעה.",
+    "הכבודה שלי לא הגיעה."
+   ]
+  },
+  {
+   "id": "x-en-013",
+   "direction": "en-he",
+   "category": "travel",
+   "source": "We want to visit the old market tomorrow.",
+   "reference": "אנחנו רוצים לבקר בשוק הישן מחר.",
+   "accept": [
+    "אנחנו רוצים לבקר מחר בשוק הישן.",
+    "אנו רוצים לבקר בשוק הישן מחר.",
+    "אנחנו רוצים לבקר בשוק העתיק מחר."
+   ]
+  },
+  {
+   "id": "x-en-014",
+   "direction": "en-he",
+   "category": "travel",
+   "source": "I need a taxi to the airport at five in the morning.",
+   "reference": "אני צריך מונית לשדה התעופה בחמש בבוקר.",
+   "accept": [
+    "אני צריכה מונית לשדה התעופה בחמש בבוקר.",
+    "אני צריך מונית לנמל התעופה בחמש בבוקר.",
+    "אני צריכה מונית לנמל התעופה בחמש בבוקר."
+   ]
+  },
+  {
+   "id": "x-en-015",
+   "direction": "en-he",
+   "category": "travel",
+   "source": "Is the museum open on Saturday?",
+   "reference": "המוזיאון פתוח בשבת?",
+   "accept": [
+    "האם המוזיאון פתוח בשבת?",
+    "המוזיאון פתוח ביום שבת?",
+    "האם המוזיאון פתוח ביום שבת?"
+   ]
+  },
+  {
+   "id": "x-en-016",
+   "direction": "en-he",
+   "category": "travel",
+   "source": "The road is closed because of the rain.",
+   "reference": "הכביש סגור בגלל הגשם.",
+   "accept": [
+    "הדרך סגורה בגלל הגשם.",
+    "הכביש חסום בגלל הגשם.",
+    "הדרך חסומה בגלל הגשם."
+   ]
+  },
+  {
+   "id": "x-en-017",
+   "direction": "en-he",
+   "category": "travel",
+   "source": "How many stops until Jerusalem?",
+   "reference": "כמה תחנות עד ירושלים?",
+   "accept": [
+    "כמה תחנות יש עד ירושלים?",
+    "כמה עצירות עד ירושלים?"
+   ]
+  },
+  {
+   "id": "x-en-018",
+   "direction": "en-he",
+   "category": "travel",
+   "source": "I left my bag on the bus.",
+   "reference": "השארתי את התיק שלי באוטובוס.",
+   "accept": [
+    "שכחתי את התיק שלי באוטובוס.",
+    "השארתי את התיק באוטובוס.",
+    "שכחתי את התיק באוטובוס."
+   ]
+  },
+  {
+   "id": "x-en-019",
+   "direction": "en-he",
+   "category": "travel",
+   "source": "Could you write that down for me?",
+   "reference": "אפשר לכתוב לי את זה?",
+   "accept": [
+    "אתה יכול לכתוב לי את זה?",
+    "את יכולה לכתוב לי את זה?",
+    "תוכל לכתוב לי את זה?",
+    "אתה יכול לרשום לי את זה?",
+    "תוכל לרשום לי את זה?",
+    "אתה יכול לרשום את זה בשבילי?",
+    "תוכל לרשום את זה בשבילי?",
+    "אתה יכול לכתוב את זה בשבילי?",
+    "תוכל לכתוב את זה בשבילי?"
+   ]
+  },
+  {
+   "id": "x-en-020",
+   "direction": "en-he",
+   "category": "travel",
+   "source": "We arrived yesterday evening.",
+   "reference": "הגענו אתמול בערב.",
+   "accept": [
+    "הגענו אמש."
+   ]
+  },
+  {
+   "id": "x-en-021",
+   "direction": "en-he",
+   "category": "food",
+   "source": "I don't eat eggs or cheese.",
+   "reference": "אני לא אוכל ביצים או גבינה.",
+   "accept": [
+    "אני לא אוכלת ביצים או גבינה.",
+    "אני לא אוכל ביצים וגבינה.",
+    "אני לא אוכל ביצים או גבינות."
+   ]
+  },
+  {
+   "id": "x-en-022",
+   "direction": "en-he",
+   "category": "food",
+   "source": "Could we get more bread?",
+   "reference": "אפשר לקבל עוד לחם?",
+   "accept": [
+    "אפשר עוד לחם?",
+    "אנחנו יכולים לקבל עוד לחם?",
+    "נוכל לקבל עוד לחם?"
+   ]
+  },
+  {
+   "id": "x-en-023",
+   "direction": "en-he",
+   "category": "food",
+   "source": "The soup is cold.",
+   "reference": "המרק קר.",
+   "accept": []
+  },
+  {
+   "id": "x-en-024",
+   "direction": "en-he",
+   "category": "food",
+   "source": "Which dish is the most popular?",
+   "reference": "איזו מנה הכי פופולרית?",
+   "accept": [
+    "איזו מנה היא הכי פופולרית?",
+    "איזו מנה הכי אהובה?",
+    "איזו מנה היא הפופולרית ביותר?",
+    "איזו מנה הפופולרית ביותר?",
+    "מהי המנה הפופולרית ביותר?"
+   ]
+  },
+  {
+   "id": "x-en-025",
+   "direction": "en-he",
+   "category": "food",
+   "source": "We did not order this.",
+   "reference": "לא הזמנו את זה.",
+   "accept": [
+    "אנחנו לא הזמנו את זה."
+   ]
+  },
+  {
+   "id": "x-en-026",
+   "direction": "en-he",
+   "category": "food",
+   "source": "I would like my coffee without sugar.",
+   "reference": "אני רוצה את הקפה שלי בלי סוכר.",
+   "accept": [
+    "הייתי רוצה את הקפה שלי בלי סוכר.",
+    "אני רוצה את הקפה בלי סוכר.",
+    "הייתי רוצה את הקפה שלי ללא סוכר.",
+    "אני רוצה את הקפה שלי ללא סוכר."
+   ]
+  },
+  {
+   "id": "x-en-027",
+   "direction": "en-he",
+   "category": "food",
+   "source": "Is the fish fresh today?",
+   "reference": "הדג טרי היום?",
+   "accept": [
+    "האם הדג טרי היום?",
+    "הדגים טריים היום?",
+    "האם הדגים טריים היום?"
+   ]
+  },
+  {
+   "id": "x-en-028",
+   "direction": "en-he",
+   "category": "food",
+   "source": "A table by the window, please.",
+   "reference": "שולחן ליד החלון, בבקשה.",
+   "accept": [
+    "שולחן על יד החלון, בבקשה."
+   ]
+  },
+  {
+   "id": "x-en-029",
+   "direction": "en-he",
+   "category": "food",
+   "source": "The waiter forgot our drinks.",
+   "reference": "המלצר שכח את המשקאות שלנו.",
+   "accept": [
+    "המלצר שכח את השתייה שלנו."
+   ]
+  },
+  {
+   "id": "x-en-030",
+   "direction": "en-he",
+   "category": "food",
+   "source": "Do you take dollars?",
+   "reference": "אתם מקבלים דולרים?",
+   "accept": [
+    "אתה מקבל דולרים?",
+    "האם אתם מקבלים דולרים?",
+    "אתם לוקחים דולרים?",
+    "אתה לוקח דולרים?"
+   ]
+  },
+  {
+   "id": "x-en-031",
+   "direction": "en-he",
+   "category": "food",
+   "source": "The children want ice cream.",
+   "reference": "הילדים רוצים גלידה.",
+   "accept": []
+  },
+  {
+   "id": "x-en-032",
+   "direction": "en-he",
+   "category": "food",
+   "source": "I'm still hungry.",
+   "reference": "אני עדיין רעב.",
+   "accept": [
+    "אני עדיין רעבה.",
+    "אני עוד רעב.",
+    "אני עוד רעבה."
+   ]
+  },
+  {
+   "id": "x-en-033",
+   "direction": "en-he",
+   "category": "food",
+   "source": "This is too spicy for me.",
+   "reference": "זה חריף מדי בשבילי.",
+   "accept": [
+    "זה יותר מדי חריף בשבילי.",
+    "זה חריף לי מדי.",
+    "זה חריף מדיי בשבילי."
+   ]
+  },
+  {
+   "id": "x-en-034",
+   "direction": "en-he",
+   "category": "food",
+   "source": "Do you have anything without gluten?",
+   "reference": "יש לכם משהו בלי גלוטן?",
+   "accept": [
+    "יש לכם משהו ללא גלוטן?",
+    "יש לך משהו בלי גלוטן?",
+    "יש לך משהו ללא גלוטן?",
+    "האם יש לכם משהו ללא גלוטן?",
+    "האם יש לכם משהו בלי גלוטן?"
+   ]
+  },
+  {
+   "id": "x-en-035",
+   "direction": "en-he",
+   "category": "food",
+   "source": "We'll share one dessert.",
+   "reference": "נתחלק בקינוח אחד.",
+   "accept": [
+    "אנחנו נתחלק בקינוח אחד.",
+    "נחלוק קינוח אחד.",
+    "אנחנו נחלוק קינוח אחד."
+   ]
+  },
+  {
+   "id": "x-en-036",
+   "direction": "en-he",
+   "category": "food",
+   "source": "A glass of red wine, please.",
+   "reference": "כוס יין אדום, בבקשה.",
+   "accept": [
+    "כוס של יין אדום, בבקשה."
+   ]
+  },
+  {
+   "id": "x-en-037",
+   "direction": "en-he",
+   "category": "food",
+   "source": "The kitchen closes at ten.",
+   "reference": "המטבח נסגר בעשר.",
+   "accept": [
+    "המטבח נסגר בשעה עשר.",
+    "המטבח נסגר ב-10.",
+    "המטבח סוגר בעשר."
+   ]
+  },
+  {
+   "id": "x-en-038",
+   "direction": "en-he",
+   "category": "food",
+   "source": "My wife is a vegetarian.",
+   "reference": "אשתי צמחונית.",
+   "accept": [
+    "אישתי צמחונית.",
+    "אשתי היא צמחונית."
+   ]
+  },
+  {
+   "id": "x-en-039",
+   "direction": "en-he",
+   "category": "food",
+   "source": "Everything was delicious, thank you.",
+   "reference": "הכול היה טעים, תודה.",
+   "accept": [
+    "הכל היה טעים, תודה.",
+    "הכול היה טעים מאוד, תודה.",
+    "הכל היה טעים מאוד, תודה.",
+    "הכל היה טעים, תודה לך.",
+    "הכול היה טעים, תודה לך."
+   ]
+  },
+  {
+   "id": "x-en-040",
+   "direction": "en-he",
+   "category": "food",
+   "source": "I'll have the same as him.",
+   "reference": "אני אקח אותו דבר כמוהו.",
+   "accept": [
+    "אני אקח מה שהוא לקח.",
+    "אני אזמין אותו דבר כמוהו.",
+    "אקח אותו דבר כמוהו.",
+    "אני אקח את אותו הדבר כמוהו.",
+    "אני אקח את אותו דבר כמוהו."
+   ]
+  },
+  {
+   "id": "x-en-041",
+   "direction": "en-he",
+   "category": "shop",
+   "source": "Do you have this in a larger size?",
+   "reference": "יש לכם את זה במידה גדולה יותר?",
+   "accept": [
+    "יש לך את זה במידה גדולה יותר?",
+    "יש לכם את זה במידה יותר גדולה?",
+    "יש לך את זה במידה יותר גדולה?",
+    "יש את זה במידה גדולה יותר?",
+    "יש לכם את זה בגודל גדול יותר?",
+    "יש לך את זה בגודל גדול יותר?"
+   ]
+  },
+  {
+   "id": "x-en-042",
+   "direction": "en-he",
+   "category": "shop",
+   "source": "This bag is too heavy.",
+   "reference": "התיק הזה כבד מדי.",
+   "accept": [
+    "התיק הזה יותר מדי כבד.",
+    "התיק הזה כבד מדיי.",
+    "השקית הזאת כבדה מדי.",
+    "התיק הזה כבד מידי."
+   ]
+  },
+  {
+   "id": "x-en-043",
+   "direction": "en-he",
+   "category": "shop",
+   "source": "I am looking for a birthday present for my husband.",
+   "reference": "אני מחפשת מתנת יום הולדת לבעלי.",
+   "accept": [
+    "אני מחפשת מתנת יום הולדת לבעל שלי.",
+    "אני מחפש מתנת יום הולדת לבעלי.",
+    "אני מחפש מתנת יום הולדת לבעל שלי.",
+    "אני מחפשת מתנה ליום הולדת לבעלי.",
+    "אני מחפש מתנה ליום הולדת לבעלי.",
+    "אני מחפשת מתנה ליום ההולדת של בעלי.",
+    "אני מחפש מתנה ליום ההולדת של בעלי."
+   ]
+  },
+  {
+   "id": "x-en-044",
+   "direction": "en-he",
+   "category": "shop",
+   "source": "Do you have a smaller one?",
+   "reference": "יש לכם קטן יותר?",
+   "accept": [
+    "יש לך קטן יותר?",
+    "יש לכם אחד קטן יותר?",
+    "יש לך אחד קטן יותר?",
+    "יש לכם יותר קטן?",
+    "יש לך יותר קטן?",
+    "יש לך אחד יותר קטן?",
+    "יש לכם אחד יותר קטן?"
+   ]
+  },
+  {
+   "id": "x-en-045",
+   "direction": "en-he",
+   "category": "shop",
+   "source": "Somebody took my seat.",
+   "reference": "מישהו לקח את המקום שלי.",
+   "accept": [
+    "מישהו תפס את המקום שלי.",
+    "מישהו לקח לי את המקום.",
+    "מישהו לקח את הכיסא שלי.",
+    "מישהו לקח את המושב שלי."
+   ]
+  },
+  {
+   "id": "x-en-046",
+   "direction": "en-he",
+   "category": "shop",
+   "source": "Can you give me a discount?",
+   "reference": "אפשר לקבל הנחה?",
+   "accept": [
+    "אתה יכול לתת לי הנחה?",
+    "את יכולה לתת לי הנחה?",
+    "אתם יכולים לתת לי הנחה?",
+    "תוכל לתת לי הנחה?"
+   ]
+  },
+  {
+   "id": "x-en-047",
+   "direction": "en-he",
+   "category": "shop",
+   "source": "I want to return this shirt.",
+   "reference": "אני רוצה להחזיר את החולצה הזאת.",
+   "accept": [
+    "אני רוצה להחזיר את החולצה הזו.",
+    "אני רוצה להחזיר את החולצה."
+   ]
+  },
+  {
+   "id": "x-en-048",
+   "direction": "en-he",
+   "category": "shop",
+   "source": "Do you sell stamps?",
+   "reference": "אתם מוכרים בולים?",
+   "accept": [
+    "אתה מוכר בולים?",
+    "את מוכרת בולים?",
+    "האם אתם מוכרים בולים?"
+   ]
+  },
+  {
+   "id": "x-en-049",
+   "direction": "en-he",
+   "category": "shop",
+   "source": "The store opens at nine.",
+   "reference": "החנות נפתחת בתשע.",
+   "accept": [
+    "החנות נפתחת בשעה תשע.",
+    "החנות נפתחת ב-9.",
+    "החנות פותחת בתשע."
+   ]
+  },
+  {
+   "id": "x-en-050",
+   "direction": "en-he",
+   "category": "shop",
+   "source": "I need a receipt.",
+   "reference": "אני צריך קבלה.",
+   "accept": [
+    "אני צריכה קבלה.",
+    "אני צריך חשבונית.",
+    "אני צריכה חשבונית."
+   ]
+  },
+  {
+   "id": "x-en-051",
+   "direction": "en-he",
+   "category": "shop",
+   "source": "How much are the tomatoes per kilo?",
+   "reference": "כמה עולות העגבניות לקילו?",
+   "accept": [
+    "כמה העגבניות לקילו?",
+    "כמה עולה קילו עגבניות?",
+    "כמה עולות עגבניות לקילו?"
+   ]
+  },
+  {
+   "id": "x-en-052",
+   "direction": "en-he",
+   "category": "shop",
+   "source": "I only have cash.",
+   "reference": "יש לי רק מזומן.",
+   "accept": [
+    "יש לי רק כסף מזומן.",
+    "יש לי מזומן בלבד.",
+    "יש לי רק מזומנים."
+   ]
+  },
+  {
+   "id": "x-en-053",
+   "direction": "en-he",
+   "category": "shop",
+   "source": "It doesn't fit me.",
+   "reference": "זה לא מתאים לי.",
+   "accept": [
+    "זה לא עולה עליי.",
+    "זה לא במידה שלי."
+   ]
+  },
+  {
+   "id": "x-en-054",
+   "direction": "en-he",
+   "category": "shop",
+   "source": "I'll take two of these.",
+   "reference": "אני אקח שניים כאלה.",
+   "accept": [
+    "אני אקח שניים מאלה.",
+    "אקח שניים כאלה.",
+    "אני אקח שתיים כאלה.",
+    "אני אקח שניים מהם.",
+    "אני אקח שניים מאלו.",
+    "אקח שניים מאלה."
+   ]
+  },
+  {
+   "id": "x-en-055",
+   "direction": "en-he",
+   "category": "shop",
+   "source": "Is there a supermarket near the hotel?",
+   "reference": "יש סופרמרקט ליד המלון?",
+   "accept": [
+    "יש סופר ליד המלון?",
+    "האם יש סופרמרקט ליד המלון?",
+    "יש סופרמרקט קרוב למלון?",
+    "האם יש סופרמרקט קרוב למלון?",
+    "יש סופרמרקט בקרבת המלון?"
+   ]
+  },
+  {
+   "id": "x-en-056",
+   "direction": "en-he",
+   "category": "health",
+   "source": "My son has a fever.",
+   "reference": "לבן שלי יש חום.",
+   "accept": [
+    "לבני יש חום.",
+    "הבן שלי עם חום."
+   ]
+  },
+  {
+   "id": "x-en-057",
+   "direction": "en-he",
+   "category": "health",
+   "source": "I need to see a doctor today.",
+   "reference": "אני צריך לראות רופא היום.",
+   "accept": [
+    "אני צריכה לראות רופא היום.",
+    "אני צריך לראות רופאה היום.",
+    "אני צריכה לראות רופאה היום."
+   ]
+  },
+  {
+   "id": "x-en-058",
+   "direction": "en-he",
+   "category": "health",
+   "source": "My daughter swallowed a coin.",
+   "reference": "הבת שלי בלעה מטבע.",
+   "accept": [
+    "בתי בלעה מטבע."
+   ]
+  },
+  {
+   "id": "x-en-059",
+   "direction": "en-he",
+   "category": "health",
+   "source": "His leg is bleeding.",
+   "reference": "הרגל שלו מדממת.",
+   "accept": [
+    "יורד לו דם מהרגל.",
+    "רגלו מדממת."
+   ]
+  },
+  {
+   "id": "x-en-060",
+   "direction": "en-he",
+   "category": "health",
+   "source": "We need help right now.",
+   "reference": "אנחנו צריכים עזרה עכשיו.",
+   "accept": [
+    "אנחנו צריכים עזרה מיד.",
+    "אנחנו צריכים עזרה ברגע זה.",
+    "אנו זקוקים לעזרה עכשיו.",
+    "אנחנו זקוקים לעזרה עכשיו."
+   ]
+  },
+  {
+   "id": "x-en-061",
+   "direction": "en-he",
+   "category": "health",
+   "source": "She fell and cannot walk.",
+   "reference": "היא נפלה והיא לא יכולה ללכת.",
+   "accept": [
+    "היא נפלה ולא יכולה ללכת.",
+    "היא נפלה ואינה יכולה ללכת."
+   ]
+  },
+  {
+   "id": "x-en-062",
+   "direction": "en-he",
+   "category": "health",
+   "source": "I can't find my glasses.",
+   "reference": "אני לא מוצא את המשקפיים שלי.",
+   "accept": [
+    "אני לא מוצאת את המשקפיים שלי.",
+    "אני לא יכול למצוא את המשקפיים שלי.",
+    "אני לא יכולה למצוא את המשקפיים שלי.",
+    "אני לא מוצא את המשקפיים."
+   ]
+  },
+  {
+   "id": "x-en-063",
+   "direction": "en-he",
+   "category": "health",
+   "source": "I take this medicine every morning.",
+   "reference": "אני לוקח את התרופה הזאת כל בוקר.",
+   "accept": [
+    "אני לוקחת את התרופה הזאת כל בוקר.",
+    "אני לוקח את התרופה הזו כל בוקר.",
+    "אני לוקחת את התרופה הזו כל בוקר.",
+    "אני נוטל את התרופה הזו כל בוקר.",
+    "אני נוטל את התרופה הזאת כל בוקר."
+   ]
+  },
+  {
+   "id": "x-en-064",
+   "direction": "en-he",
+   "category": "health",
+   "source": "She has trouble breathing.",
+   "reference": "קשה לה לנשום.",
+   "accept": [
+    "יש לה קשיי נשימה.",
+    "היא מתקשה לנשום.",
+    "יש לה בעיות נשימה.",
+    "יש לה בעיה לנשום.",
+    "יש לה קושי לנשום."
+   ]
+  },
+  {
+   "id": "x-en-065",
+   "direction": "en-he",
+   "category": "health",
+   "source": "I cut my finger.",
+   "reference": "חתכתי את האצבע.",
+   "accept": [
+    "חתכתי את האצבע שלי.",
+    "נחתכתי באצבע.",
+    "חתכתי לי את האצבע."
+   ]
+  },
+  {
+   "id": "x-en-066",
+   "direction": "en-he",
+   "category": "health",
+   "source": "He is not breathing.",
+   "reference": "הוא לא נושם.",
+   "accept": [
+    "הוא אינו נושם."
+   ]
+  },
+  {
+   "id": "x-en-067",
+   "direction": "en-he",
+   "category": "health",
+   "source": "I lost my passport at the market.",
+   "reference": "איבדתי את הדרכון שלי בשוק.",
+   "accept": [
+    "איבדתי את הדרכון בשוק."
+   ]
+  },
+  {
+   "id": "x-en-068",
+   "direction": "en-he",
+   "category": "health",
+   "source": "Do I need a prescription?",
+   "reference": "אני צריך מרשם?",
+   "accept": [
+    "אני צריכה מרשם?",
+    "צריך מרשם?",
+    "האם אני צריך מרשם?",
+    "האם אני צריכה מרשם?",
+    "האם צריך מרשם?"
+   ]
+  },
+  {
+   "id": "x-en-069",
+   "direction": "en-he",
+   "category": "health",
+   "source": "There is a fire in the building.",
+   "reference": "יש שרפה בבניין.",
+   "accept": [
+    "יש שריפה בבניין.",
+    "יש אש בבניין.",
+    "יש דליקה בבניין."
+   ]
+  },
+  {
+   "id": "x-en-070",
+   "direction": "en-he",
+   "category": "hotel",
+   "source": "The window in our room does not close.",
+   "reference": "החלון בחדר שלנו לא נסגר.",
+   "accept": [
+    "החלון בחדר שלנו אינו נסגר.",
+    "החלון בחדר שלנו לא סוגר."
+   ]
+  },
+  {
+   "id": "x-en-071",
+   "direction": "en-he",
+   "category": "hotel",
+   "source": "The air conditioner is not working.",
+   "reference": "המזגן לא עובד.",
+   "accept": [
+    "המזגן אינו עובד.",
+    "המזגן לא פועל."
+   ]
+  },
+  {
+   "id": "x-en-072",
+   "direction": "en-he",
+   "category": "hotel",
+   "source": "Can I get another pillow?",
+   "reference": "אפשר לקבל עוד כרית?",
+   "accept": [
+    "אפשר עוד כרית?",
+    "אני יכול לקבל עוד כרית?",
+    "אני יכולה לקבל עוד כרית?",
+    "אפשר לקבל כרית נוספת?",
+    "אני יכול לקבל כרית נוספת?"
+   ]
+  },
+  {
+   "id": "x-en-073",
+   "direction": "en-he",
+   "category": "hotel",
+   "source": "We are staying for four nights.",
+   "reference": "אנחנו נשארים לארבעה לילות.",
+   "accept": [
+    "אנחנו נשארים ארבעה לילות.",
+    "נישאר ארבעה לילות.",
+    "אנחנו נשארים לארבע לילות.",
+    "אנחנו נשארים ארבע לילות.",
+    "אנחנו שוהים ארבעה לילות."
+   ]
+  },
+  {
+   "id": "x-en-074",
+   "direction": "en-he",
+   "category": "hotel",
+   "source": "There is no hot water in the shower.",
+   "reference": "אין מים חמים במקלחת.",
+   "accept": []
+  },
+  {
+   "id": "x-en-075",
+   "direction": "en-he",
+   "category": "hotel",
+   "source": "Could we have a quieter room?",
+   "reference": "אפשר לקבל חדר שקט יותר?",
+   "accept": [
+    "אפשר לקבל חדר יותר שקט?",
+    "נוכל לקבל חדר שקט יותר?",
+    "נוכל לקבל חדר יותר שקט?",
+    "אנחנו יכולים לקבל חדר שקט יותר?",
+    "אנחנו יכולים לקבל חדר יותר שקט?"
+   ]
+  },
+  {
+   "id": "x-en-076",
+   "direction": "en-he",
+   "category": "hotel",
+   "source": "I forgot my key in the room.",
+   "reference": "שכחתי את המפתח בחדר.",
+   "accept": [
+    "שכחתי את המפתח שלי בחדר.",
+    "השארתי את המפתח בחדר.",
+    "השארתי את המפתח שלי בחדר."
+   ]
+  },
+  {
+   "id": "x-en-077",
+   "direction": "en-he",
+   "category": "hotel",
+   "source": "Is breakfast included in the price?",
+   "reference": "ארוחת הבוקר כלולה במחיר?",
+   "accept": [
+    "האם ארוחת הבוקר כלולה במחיר?",
+    "ארוחת בוקר כלולה במחיר?",
+    "האם ארוחת בוקר כלולה במחיר?"
+   ]
+  },
+  {
+   "id": "x-en-078",
+   "direction": "en-he",
+   "category": "hotel",
+   "source": "The room is very noisy.",
+   "reference": "החדר מאוד רועש.",
+   "accept": [
+    "החדר רועש מאוד."
+   ]
+  },
+  {
+   "id": "x-en-079",
+   "direction": "en-he",
+   "category": "hotel",
+   "source": "Can you wake me at six?",
+   "reference": "אפשר להעיר אותי בשש?",
+   "accept": [
+    "אתה יכול להעיר אותי בשש?",
+    "את יכולה להעיר אותי בשש?",
+    "אתם יכולים להעיר אותי בשש?",
+    "תוכל להעיר אותי בשש?",
+    "תוכלו להעיר אותי בשש?"
+   ]
+  },
+  {
+   "id": "x-en-080",
+   "direction": "en-he",
+   "category": "hotel",
+   "source": "We booked a room with a sea view.",
+   "reference": "הזמנו חדר עם נוף לים.",
+   "accept": [
+    "הזמנו חדר שפונה לים.",
+    "הזמנו חדר עם נוף אל הים."
+   ]
+  },
+  {
+   "id": "x-en-081",
+   "direction": "en-he",
+   "category": "social",
+   "source": "How old are your children?",
+   "reference": "בני כמה הילדים שלך?",
+   "accept": [
+    "בני כמה הילדים שלכם?",
+    "בני כמה ילדיך?",
+    "מה הגיל של הילדים שלך?"
+   ]
+  },
+  {
+   "id": "x-en-082",
+   "direction": "en-he",
+   "category": "social",
+   "source": "I grew up in a small town.",
+   "reference": "גדלתי בעיירה קטנה.",
+   "accept": [
+    "גדלתי בעיר קטנה.",
+    "אני גדלתי בעיירה קטנה.",
+    "אני גדלתי בעיר קטנה."
+   ]
+  },
+  {
+   "id": "x-en-083",
+   "direction": "en-he",
+   "category": "social",
+   "source": "We met at university.",
+   "reference": "נפגשנו באוניברסיטה.",
+   "accept": [
+    "הכרנו באוניברסיטה."
+   ]
+  },
+  {
+   "id": "x-en-084",
+   "direction": "en-he",
+   "category": "social",
+   "source": "Please speak more slowly.",
+   "reference": "דבר יותר לאט, בבקשה.",
+   "accept": [
+    "תדבר יותר לאט, בבקשה.",
+    "בבקשה דבר יותר לאט.",
+    "בבקשה תדבר יותר לאט.",
+    "דברי יותר לאט, בבקשה.",
+    "בבקשה דבר לאט יותר.",
+    "דבר לאט יותר, בבקשה.",
+    "אנא דבר לאט יותר.",
+    "אנא דבר יותר לאט."
+   ]
+  },
+  {
+   "id": "x-en-085",
+   "direction": "en-he",
+   "category": "social",
+   "source": "I did not understand the question.",
+   "reference": "לא הבנתי את השאלה.",
+   "accept": []
+  },
+  {
+   "id": "x-en-086",
+   "direction": "en-he",
+   "category": "social",
+   "source": "My daughter is seven years old.",
+   "reference": "הבת שלי בת שבע.",
+   "accept": [
+    "בתי בת שבע.",
+    "הבת שלי היא בת שבע.",
+    "בתי בת שבע שנים."
+   ]
+  },
+  {
+   "id": "x-en-087",
+   "direction": "en-he",
+   "category": "social",
+   "source": "We live in Toronto.",
+   "reference": "אנחנו גרים בטורונטו.",
+   "accept": [
+    "אנו גרים בטורונטו.",
+    "אנחנו חיים בטורונטו.",
+    "אנחנו גרות בטורונטו."
+   ]
+  },
+  {
+   "id": "x-en-088",
+   "direction": "en-he",
+   "category": "social",
+   "source": "It was nice to meet you.",
+   "reference": "היה נעים להכיר אותך.",
+   "accept": [
+    "היה נעים להכיר.",
+    "היה נחמד להכיר אותך.",
+    "היה נעים לפגוש אותך.",
+    "היה נחמד לפגוש אותך.",
+    "היה נעים להכיר אתכם."
+   ]
+  },
+  {
+   "id": "x-en-089",
+   "direction": "en-he",
+   "category": "social",
+   "source": "What do you do for work?",
+   "reference": "במה אתה עובד?",
+   "accept": [
+    "במה את עובדת?",
+    "מה אתה עושה בעבודה?",
+    "מה העבודה שלך?",
+    "במה אתה עוסק?",
+    "במה את עוסקת?"
+   ]
+  },
+  {
+   "id": "x-en-090",
+   "direction": "en-he",
+   "category": "social",
+   "source": "I'll call you tomorrow.",
+   "reference": "אני אתקשר אליך מחר.",
+   "accept": [
+    "אתקשר אליך מחר.",
+    "אני אתקשר אלייך מחר.",
+    "אתקשר אלייך מחר.",
+    "אני אתקשר מחר."
+   ]
+  },
+  {
+   "id": "x-en-091",
+   "direction": "en-he",
+   "category": "social",
+   "source": "She is my sister.",
+   "reference": "היא אחותי.",
+   "accept": [
+    "היא אחות שלי.",
+    "זאת אחותי.",
+    "היא האחות שלי."
+   ]
+  },
+  {
+   "id": "x-en-092",
+   "direction": "en-he",
+   "category": "social",
+   "source": "Do you have children?",
+   "reference": "יש לך ילדים?",
+   "accept": [
+    "יש לכם ילדים?",
+    "האם יש לך ילדים?",
+    "האם יש לכם ילדים?"
+   ]
+  },
+  {
+   "id": "x-en-093",
+   "direction": "en-he",
+   "category": "social",
+   "source": "We are waiting for our friends.",
+   "reference": "אנחנו מחכים לחברים שלנו.",
+   "accept": [
+    "אנחנו מחכות לחברים שלנו.",
+    "אנו מחכים לחברים שלנו.",
+    "אנחנו ממתינים לחברים שלנו.",
+    "אנחנו מחכים לחברינו."
+   ]
+  },
+  {
+   "id": "x-en-094",
+   "direction": "en-he",
+   "category": "social",
+   "source": "I forgot to call my mother.",
+   "reference": "שכחתי להתקשר לאמא שלי.",
+   "accept": [
+    "שכחתי להתקשר לאמי.",
+    "שכחתי לצלצל לאמא שלי.",
+    "שכחתי להתקשר אל אמא שלי."
+   ]
+  },
+  {
+   "id": "x-en-095",
+   "direction": "en-he",
+   "category": "social",
+   "source": "What are you doing this evening?",
+   "reference": "מה אתה עושה הערב?",
+   "accept": [
+    "מה את עושה הערב?",
+    "מה אתם עושים הערב?"
+   ]
+  },
+  {
+   "id": "x-en-096",
+   "direction": "en-he",
+   "category": "social",
+   "source": "I love this city.",
+   "reference": "אני אוהב את העיר הזאת.",
+   "accept": [
+    "אני אוהבת את העיר הזאת.",
+    "אני אוהב את העיר הזו.",
+    "אני אוהבת את העיר הזו."
+   ]
+  },
+  {
+   "id": "x-en-097",
+   "direction": "en-he",
+   "category": "social",
+   "source": "He works at the hospital.",
+   "reference": "הוא עובד בבית החולים.",
+   "accept": [
+    "הוא עובד בבית חולים."
+   ]
+  },
+  {
+   "id": "x-en-098",
+   "direction": "en-he",
+   "category": "social",
+   "source": "The weather is beautiful today.",
+   "reference": "מזג האוויר יפה היום.",
+   "accept": [
+    "מזג האוויר נפלא היום.",
+    "מזג האוויר יפהפה היום.",
+    "מזג האוויר היום יפה.",
+    "מזג האוויר נהדר היום."
+   ]
+  },
+  {
+   "id": "x-en-099",
+   "direction": "en-he",
+   "category": "social",
+   "source": "It will rain tomorrow.",
+   "reference": "מחר ירד גשם.",
+   "accept": [
+    "ירד גשם מחר.",
+    "מחר יהיה גשם.",
+    "מחר יירד גשם.",
+    "יירד גשם מחר.",
+    "יהיה גשם מחר."
+   ]
+  },
+  {
+   "id": "x-en-100",
+   "direction": "en-he",
+   "category": "social",
+   "source": "I don't know yet.",
+   "reference": "אני עוד לא יודע.",
+   "accept": [
+    "אני עדיין לא יודע.",
+    "אני עוד לא יודעת.",
+    "אני עדיין לא יודעת.",
+    "אני לא יודע עדיין.",
+    "אני לא יודעת עדיין."
+   ]
+  },
+  {
+   "id": "x-en-101",
+   "direction": "en-he",
+   "category": "social",
+   "source": "Can you help me with the bags?",
+   "reference": "אתה יכול לעזור לי עם התיקים?",
+   "accept": [
+    "את יכולה לעזור לי עם התיקים?",
+    "אפשר לעזור לי עם התיקים?",
+    "תוכל לעזור לי עם התיקים?",
+    "אתם יכולים לעזור לי עם התיקים?"
+   ]
+  },
+  {
+   "id": "x-en-102",
+   "direction": "en-he",
+   "category": "social",
+   "source": "My parents are coming next week.",
+   "reference": "ההורים שלי באים בשבוע הבא.",
+   "accept": [
+    "ההורים שלי מגיעים בשבוע הבא.",
+    "הוריי מגיעים בשבוע הבא.",
+    "ההורים שלי יגיעו בשבוע הבא.",
+    "ההורים שלי יבואו בשבוע הבא.",
+    "הוריי באים בשבוע הבא."
+   ]
+  },
+  {
+   "id": "x-en-103",
+   "direction": "en-he",
+   "category": "social",
+   "source": "I have never been to Israel.",
+   "reference": "אף פעם לא הייתי בישראל.",
+   "accept": [
+    "מעולם לא הייתי בישראל.",
+    "לא הייתי בישראל אף פעם.",
+    "מעולם לא ביקרתי בישראל.",
+    "אף פעם לא ביקרתי בישראל."
+   ]
+  },
+  {
+   "id": "x-en-104",
+   "direction": "en-he",
+   "category": "social",
+   "source": "Tell him I am on my way.",
+   "reference": "תגיד לו שאני בדרך.",
+   "accept": [
+    "תגידי לו שאני בדרך.",
+    "תגידו לו שאני בדרך.",
+    "אמור לו שאני בדרך.",
+    "תגיד לו שאני בדרכי."
+   ]
+  },
+  {
+   "id": "x-en-105",
+   "direction": "en-he",
+   "category": "social",
+   "source": "That's a good idea.",
+   "reference": "זה רעיון טוב.",
+   "accept": [
+    "רעיון טוב."
+   ]
+  },
+  {
+   "id": "x-en-106",
+   "direction": "en-he",
+   "category": "shul",
+   "source": "What time do services start on Friday night?",
+   "reference": "מתי מתחילה התפילה בליל שבת?",
+   "accept": [
+    "באיזו שעה מתחילה התפילה בליל שבת?",
+    "מתי התפילה מתחילה בליל שבת?",
+    "באיזו שעה מתחילות התפילות בליל שבת?",
+    "מתי מתחילות התפילות בליל שבת?",
+    "באיזו שעה מתחילה התפילה ביום שישי בערב?",
+    "מתי מתחילה התפילה ביום שישי בערב?",
+    "באיזו שעה מתחילות התפילות ביום שישי בערב?"
+   ]
+  },
+  {
+   "id": "x-en-107",
+   "direction": "en-he",
+   "category": "shul",
+   "source": "Where can I find a prayer book?",
+   "reference": "איפה אפשר למצוא סידור?",
+   "accept": [
+    "איפה אני יכול למצוא סידור?",
+    "איפה אני יכולה למצוא סידור?",
+    "איפה יש סידור?",
+    "איפה אפשר למצוא ספר תפילה?",
+    "איפה אני יכול למצוא ספר תפילה?",
+    "איפה אני יכול למצוא ספר תפילות?"
+   ]
+  },
+  {
+   "id": "x-en-108",
+   "direction": "en-he",
+   "category": "shul",
+   "source": "Happy holiday to you and your family.",
+   "reference": "חג שמח לך ולמשפחתך.",
+   "accept": [
+    "חג שמח לך ולמשפחה שלך.",
+    "חג שמח לכם ולמשפחתכם."
+   ]
+  },
+  {
+   "id": "x-en-109",
+   "direction": "en-he",
+   "category": "shul",
+   "source": "We light candles before sunset.",
+   "reference": "אנחנו מדליקים נרות לפני השקיעה.",
+   "accept": [
+    "מדליקים נרות לפני השקיעה.",
+    "אנו מדליקים נרות לפני השקיעה.",
+    "אנחנו מדליקים נרות לפני שקיעת השמש.",
+    "אנו מדליקים נרות לפני שקיעת השמש."
+   ]
+  },
+  {
+   "id": "x-en-110",
+   "direction": "en-he",
+   "category": "shul",
+   "source": "My son's bar mitzvah is in June.",
+   "reference": "בר המצווה של הבן שלי ביוני.",
+   "accept": [
+    "הבר מצווה של הבן שלי ביוני.",
+    "בר המצווה של בני ביוני.",
+    "בר המצווה של הבן שלי היא ביוני.",
+    "בר המצווה של בני היא ביוני.",
+    "בר המצווה של הבן שלי בחודש יוני."
+   ]
+  },
+  {
+   "id": "x-en-111",
+   "direction": "en-he",
+   "category": "shul",
+   "source": "The rabbi gave a beautiful sermon.",
+   "reference": "הרב נתן דרשה יפה.",
+   "accept": [
+    "הרב נשא דרשה יפה.",
+    "הרב נתן דרשה יפהפייה.",
+    "הרב נשא דרשה יפהפייה.",
+    "הרב נתן דרשה נפלאה."
+   ]
+  },
+  {
+   "id": "x-en-112",
+   "direction": "en-he",
+   "category": "shul",
+   "source": "Is the synagogue open to visitors?",
+   "reference": "בית הכנסת פתוח למבקרים?",
+   "accept": [
+    "האם בית הכנסת פתוח למבקרים?",
+    "בית הכנסת פתוח לקהל?"
+   ]
+  },
+  {
+   "id": "x-en-113",
+   "direction": "en-he",
+   "category": "shul",
+   "source": "We are reading the Torah portion of the week.",
+   "reference": "אנחנו קוראים את פרשת השבוע.",
+   "accept": [
+    "אנו קוראים את פרשת השבוע.",
+    "אנחנו קוראים בפרשת השבוע."
+   ]
+  },
+  {
+   "id": "x-en-114",
+   "direction": "en-he",
+   "category": "shul",
+   "source": "I would like to say Kaddish for my father.",
+   "reference": "אני רוצה לומר קדיש על אבי.",
+   "accept": [
+    "אני רוצה להגיד קדיש על אבא שלי.",
+    "אני רוצה לומר קדיש על אבא שלי.",
+    "הייתי רוצה לומר קדיש על אבי.",
+    "הייתי רוצה לומר קדיש על אבא שלי.",
+    "הייתי רוצה לומר קדיש לאבא שלי.",
+    "הייתי רוצה לומר קדיש עבור אבי.",
+    "הייתי רוצה לומר קדיש עבור אבא שלי."
+   ]
+  },
+  {
+   "id": "x-en-115",
+   "direction": "en-he",
+   "category": "shul",
+   "source": "Shabbat ends after dark.",
+   "reference": "השבת יוצאת אחרי רדת החשכה.",
+   "accept": [
+    "שבת יוצאת אחרי החשכה.",
+    "השבת מסתיימת אחרי רדת החשכה.",
+    "השבת נגמרת אחרי החשכה.",
+    "שבת מסתיימת אחרי רדת החשכה.",
+    "שבת מסתיימת אחרי החשכה.",
+    "שבת נגמרת אחרי החשכה.",
+    "שבת מסתיימת אחרי החושך."
+   ]
+  },
+  {
+   "id": "x-en-116",
+   "direction": "en-he",
+   "category": "shul",
+   "source": "Where do the women sit?",
+   "reference": "איפה הנשים יושבות?",
+   "accept": [
+    "איפה יושבות הנשים?",
+    "היכן יושבות הנשים?",
+    "היכן הנשים יושבות?"
+   ]
+  },
+  {
+   "id": "x-en-117",
+   "direction": "en-he",
+   "category": "shul",
+   "source": "May I come in?",
+   "reference": "אפשר להיכנס?",
+   "accept": [
+    "אני יכול להיכנס?",
+    "אני יכולה להיכנס?",
+    "מותר להיכנס?",
+    "מותר לי להיכנס?",
+    "אפשר להכנס?"
+   ]
+  },
+  {
+   "id": "x-en-118",
+   "direction": "en-he",
+   "category": "shul",
+   "source": "We fast on Yom Kippur.",
+   "reference": "אנחנו צמים ביום כיפור.",
+   "accept": [
+    "אנו צמים ביום כיפור.",
+    "אנחנו צמים ביום הכיפורים.",
+    "אנו צמים ביום הכיפורים.",
+    "צמים ביום כיפור."
+   ]
+  },
+  {
+   "id": "x-en-119",
+   "direction": "en-he",
+   "category": "shul",
+   "source": "The choir sings every Friday.",
+   "reference": "המקהלה שרה כל יום שישי.",
+   "accept": [
+    "המקהלה שרה בכל יום שישי.",
+    "המקהלה שרה כל שישי."
+   ]
+  },
+  {
+   "id": "x-en-120",
+   "direction": "en-he",
+   "category": "shul",
+   "source": "Thank you for inviting us.",
+   "reference": "תודה שהזמנתם אותנו.",
+   "accept": [
+    "תודה שהזמנת אותנו.",
+    "תודה על ההזמנה.",
+    "תודה לכם שהזמנתם אותנו.",
+    "תודה לך שהזמנת אותנו."
+   ]
+  },
+  {
+   "id": "x-he-001",
+   "direction": "he-en",
+   "category": "travel",
+   "source": "האוטובוס הבא יוצא בעוד רבע שעה.",
+   "reference": "The next bus leaves in fifteen minutes.",
+   "accept": [
+    "The next bus leaves in a quarter of an hour.",
+    "The next bus leaves in 15 minutes.",
+    "The next bus is leaving in fifteen minutes.",
+    "The next bus is leaving in a quarter of an hour.",
+    "The next bus departs in fifteen minutes.",
+    "The next bus departs in a quarter of an hour."
+   ]
+  },
+  {
+   "id": "x-he-002",
+   "direction": "he-en",
+   "category": "travel",
+   "source": "תרד בתחנה השלישית.",
+   "reference": "Get off at the third stop.",
+   "accept": [
+    "Get off at the third station."
+   ]
+  },
+  {
+   "id": "x-he-003",
+   "direction": "he-en",
+   "category": "travel",
+   "source": "אין לי מושג איפה אנחנו.",
+   "reference": "I have no idea where we are.",
+   "accept": [
+    "I don't have any idea where we are.",
+    "I have no clue where we are."
+   ]
+  },
+  {
+   "id": "x-he-004",
+   "direction": "he-en",
+   "category": "travel",
+   "source": "הרכבת לתל אביב יוצאת מרציף שתיים.",
+   "reference": "The train to Tel Aviv leaves from platform two.",
+   "accept": [
+    "The train to Tel Aviv departs from platform two.",
+    "The train to Tel Aviv leaves from platform 2.",
+    "The train to Tel Aviv departs from platform 2.",
+    "The train to Tel Aviv is leaving from platform two."
+   ]
+  },
+  {
+   "id": "x-he-005",
+   "direction": "he-en",
+   "category": "travel",
+   "source": "כמה זמן לוקח להגיע לשם ברגל?",
+   "reference": "How long does it take to get there on foot?",
+   "accept": [
+    "How long does it take to walk there?",
+    "How long does it take to get there by foot?"
+   ]
+  },
+  {
+   "id": "x-he-006",
+   "direction": "he-en",
+   "category": "travel",
+   "source": "תמשיך ישר עד הרמזור.",
+   "reference": "Go straight until the traffic light.",
+   "accept": [
+    "Continue straight until the traffic light.",
+    "Keep going straight until the traffic light.",
+    "Go straight to the traffic light.",
+    "Continue straight to the traffic light.",
+    "Keep going straight to the traffic light.",
+    "Go straight until the light.",
+    "Go straight until the traffic lights."
+   ]
+  },
+  {
+   "id": "x-he-007",
+   "direction": "he-en",
+   "category": "travel",
+   "source": "החניה כאן בתשלום?",
+   "reference": "Is parking here paid?",
+   "accept": [
+    "Do you have to pay for parking here?",
+    "Is the parking here paid?",
+    "Is there a charge for parking here?",
+    "Is there paid parking here?",
+    "Is the parking paid here?"
+   ]
+  },
+  {
+   "id": "x-he-008",
+   "direction": "he-en",
+   "category": "travel",
+   "source": "נסענו לים המלח בשבוע שעבר.",
+   "reference": "We went to the Dead Sea last week.",
+   "accept": [
+    "We drove to the Dead Sea last week.",
+    "We traveled to the Dead Sea last week.",
+    "We travelled to the Dead Sea last week."
+   ]
+  },
+  {
+   "id": "x-he-009",
+   "direction": "he-en",
+   "category": "travel",
+   "source": "המטוס נוחת בשמונה בערב.",
+   "reference": "The plane lands at eight in the evening.",
+   "accept": [
+    "The plane lands at 8 in the evening.",
+    "The plane lands at eight p.m.",
+    "The plane lands at 8 p.m.",
+    "The plane lands at eight at night.",
+    "The plane is landing at eight in the evening.",
+    "The plane lands at 8:00 p.m.",
+    "The plane lands at eight tonight."
+   ]
+  },
+  {
+   "id": "x-he-010",
+   "direction": "he-en",
+   "category": "travel",
+   "source": "איפה אפשר לקנות כרטיס לרכבת הקלה?",
+   "reference": "Where can I buy a ticket for the light rail?",
+   "accept": [
+    "Where can I buy a light rail ticket?",
+    "Where can you buy a ticket for the light rail?",
+    "Where can I buy a ticket to the light rail?",
+    "Where can I get a ticket for the light rail?",
+    "Where can I buy a ticket for the light train?",
+    "Where can you buy a light rail ticket?"
+   ]
+  },
+  {
+   "id": "x-he-011",
+   "direction": "he-en",
+   "category": "travel",
+   "source": "הנהג אמר שזה קרוב.",
+   "reference": "The driver said it is close.",
+   "accept": [
+    "The driver said it was close.",
+    "The driver said that it is close.",
+    "The driver said it is near.",
+    "The driver said it was near.",
+    "The driver said it is nearby.",
+    "The driver said it was nearby."
+   ]
+  },
+  {
+   "id": "x-he-012",
+   "direction": "he-en",
+   "category": "travel",
+   "source": "יש פקק גדול בכביש.",
+   "reference": "There is a big traffic jam on the road.",
+   "accept": [
+    "There is heavy traffic on the road.",
+    "There is a huge traffic jam on the road.",
+    "There is a big traffic jam on the highway.",
+    "There is a big jam on the road.",
+    "There is a lot of traffic on the road.",
+    "There is a large traffic jam on the road."
+   ]
+  },
+  {
+   "id": "x-he-013",
+   "direction": "he-en",
+   "category": "travel",
+   "source": "שכחתי את המטען בבית.",
+   "reference": "I forgot the charger at home.",
+   "accept": [
+    "I forgot my charger at home.",
+    "I left the charger at home.",
+    "I left my charger at home."
+   ]
+  },
+  {
+   "id": "x-he-014",
+   "direction": "he-en",
+   "category": "travel",
+   "source": "אנחנו טסים הביתה ביום ראשון.",
+   "reference": "We are flying home on Sunday.",
+   "accept": [
+    "We fly home on Sunday.",
+    "We are flying home Sunday."
+   ]
+  },
+  {
+   "id": "x-he-015",
+   "direction": "he-en",
+   "category": "travel",
+   "source": "המונית מחכה בחוץ.",
+   "reference": "The taxi is waiting outside.",
+   "accept": [
+    "The cab is waiting outside."
+   ]
+  },
+  {
+   "id": "x-he-016",
+   "direction": "he-en",
+   "category": "travel",
+   "source": "איך מגיעים מכאן לעיר העתיקה?",
+   "reference": "How do I get to the Old City from here?",
+   "accept": [
+    "How do you get to the Old City from here?",
+    "How do we get to the Old City from here?",
+    "How do you get from here to the Old City?",
+    "How do I get from here to the Old City?",
+    "How do we get from here to the Old City?",
+    "How do you get to the old town from here?",
+    "How do you get from here to the old town?"
+   ]
+  },
+  {
+   "id": "x-he-017",
+   "direction": "he-en",
+   "category": "travel",
+   "source": "הגשר סגור לתנועה.",
+   "reference": "The bridge is closed to traffic.",
+   "accept": [
+    "The bridge is closed for traffic."
+   ]
+  },
+  {
+   "id": "x-he-018",
+   "direction": "he-en",
+   "category": "travel",
+   "source": "אל תשכח את הדרכון.",
+   "reference": "Don't forget your passport.",
+   "accept": [
+    "Don't forget the passport."
+   ]
+  },
+  {
+   "id": "x-he-019",
+   "direction": "he-en",
+   "category": "travel",
+   "source": "ירדנו בתחנה הלא נכונה.",
+   "reference": "We got off at the wrong stop.",
+   "accept": [
+    "We got off at the wrong station.",
+    "We got out at the wrong stop.",
+    "We got out at the wrong station."
+   ]
+  },
+  {
+   "id": "x-he-020",
+   "direction": "he-en",
+   "category": "travel",
+   "source": "זה במרחק הליכה מכאן.",
+   "reference": "It is within walking distance from here.",
+   "accept": [
+    "It is within walking distance of here.",
+    "It is walking distance from here.",
+    "It is a walking distance from here.",
+    "It is within walking distance.",
+    "This is within walking distance of here.",
+    "That is within walking distance of here.",
+    "It is in walking distance from here."
+   ]
+  },
+  {
+   "id": "x-he-021",
+   "direction": "he-en",
+   "category": "food",
+   "source": "אפשר לקבל את התפריט?",
+   "reference": "Can I have the menu?",
+   "accept": [
+    "Can I get the menu?",
+    "Can we have the menu?",
+    "Can we get the menu?",
+    "May I have the menu?",
+    "Could I have the menu?",
+    "Can I see the menu?",
+    "Could we have the menu?"
+   ]
+  },
+  {
+   "id": "x-he-022",
+   "direction": "he-en",
+   "category": "food",
+   "source": "אני לא אוכלת מוצרי חלב.",
+   "reference": "I don't eat dairy products.",
+   "accept": [
+    "I don't eat dairy."
+   ]
+  },
+  {
+   "id": "x-he-023",
+   "direction": "he-en",
+   "category": "food",
+   "source": "המנה הזאת חריפה?",
+   "reference": "Is this dish spicy?",
+   "accept": [
+    "Is that dish spicy?",
+    "Is this dish hot?",
+    "Is this course spicy?"
+   ]
+  },
+  {
+   "id": "x-he-024",
+   "direction": "he-en",
+   "category": "food",
+   "source": "נשמח לקבל עוד מים.",
+   "reference": "We would like some more water.",
+   "accept": [
+    "We would like more water.",
+    "We would be happy to get more water.",
+    "We would love some more water.",
+    "We would love more water.",
+    "We would be happy to have more water.",
+    "We would love to have some more water.",
+    "We would love to get more water.",
+    "We would be glad to get more water."
+   ]
+  },
+  {
+   "id": "x-he-025",
+   "direction": "he-en",
+   "category": "food",
+   "source": "הזמנתי סלט בלי בצל.",
+   "reference": "I ordered a salad without onion.",
+   "accept": [
+    "I ordered a salad without onions.",
+    "I ordered salad without onion.",
+    "I ordered salad without onions.",
+    "I ordered a salad with no onions.",
+    "I ordered a salad with no onion."
+   ]
+  },
+  {
+   "id": "x-he-026",
+   "direction": "he-en",
+   "category": "food",
+   "source": "החשבון לא נכון.",
+   "reference": "The bill is wrong.",
+   "accept": [
+    "The check is wrong.",
+    "The bill is not correct.",
+    "The bill is incorrect.",
+    "The bill is not right.",
+    "The check is incorrect.",
+    "The check is not right.",
+    "The check is not correct."
+   ]
+  },
+  {
+   "id": "x-he-027",
+   "direction": "he-en",
+   "category": "food",
+   "source": "יש לכם מנות לילדים?",
+   "reference": "Do you have kids' meals?",
+   "accept": [
+    "Do you have children's meals?",
+    "Do you have dishes for children?",
+    "Do you have dishes for kids?",
+    "Do you have meals for children?",
+    "Do you have meals for kids?",
+    "Do you have children's dishes?",
+    "Do you have portions for children?",
+    "Do you have any dishes for children?"
+   ]
+  },
+  {
+   "id": "x-he-028",
+   "direction": "he-en",
+   "category": "food",
+   "source": "הקפה הזה מצוין.",
+   "reference": "This coffee is excellent.",
+   "accept": [
+    "This coffee is great.",
+    "That coffee is excellent.",
+    "This is excellent coffee.",
+    "This coffee is very good."
+   ]
+  },
+  {
+   "id": "x-he-029",
+   "direction": "he-en",
+   "category": "food",
+   "source": "אני מעדיף תה עם נענע.",
+   "reference": "I prefer tea with mint.",
+   "accept": [
+    "I prefer mint tea.",
+    "I would prefer tea with mint.",
+    "I would rather have tea with mint.",
+    "I would rather have mint tea.",
+    "I would prefer mint tea."
+   ]
+  },
+  {
+   "id": "x-he-030",
+   "direction": "he-en",
+   "category": "food",
+   "source": "אכלנו במסעדה הזאת אתמול.",
+   "reference": "We ate at this restaurant yesterday.",
+   "accept": [
+    "We ate in this restaurant yesterday.",
+    "We ate at that restaurant yesterday.",
+    "We ate in that restaurant yesterday.",
+    "We had dinner at this restaurant yesterday."
+   ]
+  },
+  {
+   "id": "x-he-031",
+   "direction": "he-en",
+   "category": "food",
+   "source": "מה יש לקינוח?",
+   "reference": "What is for dessert?",
+   "accept": [
+    "What is there for dessert?",
+    "What do you have for dessert?"
+   ]
+  },
+  {
+   "id": "x-he-032",
+   "direction": "he-en",
+   "category": "food",
+   "source": "בלי קרח, בבקשה.",
+   "reference": "No ice, please.",
+   "accept": [
+    "Without ice, please."
+   ]
+  },
+  {
+   "id": "x-he-033",
+   "direction": "he-en",
+   "category": "food",
+   "source": "האוכל מגיע תוך עשר דקות.",
+   "reference": "The food arrives within ten minutes.",
+   "accept": [
+    "The food will arrive within ten minutes.",
+    "The food arrives in ten minutes.",
+    "The food will arrive in ten minutes.",
+    "The food will be here in ten minutes.",
+    "The food comes in ten minutes.",
+    "The food is coming in ten minutes.",
+    "The food will be here within ten minutes.",
+    "The food arrives within 10 minutes.",
+    "The food arrives in 10 minutes.",
+    "The food will be here in 10 minutes."
+   ]
+  },
+  {
+   "id": "x-he-034",
+   "direction": "he-en",
+   "category": "food",
+   "source": "אני צמא מאוד.",
+   "reference": "I am very thirsty.",
+   "accept": [
+    "I am so thirsty.",
+    "I am really thirsty."
+   ]
+  },
+  {
+   "id": "x-he-035",
+   "direction": "he-en",
+   "category": "food",
+   "source": "הלחם עדיין חם.",
+   "reference": "The bread is still warm.",
+   "accept": [
+    "The bread is still hot."
+   ]
+  },
+  {
+   "id": "x-he-036",
+   "direction": "he-en",
+   "category": "food",
+   "source": "שתינו יותר מדי יין.",
+   "reference": "We drank too much wine.",
+   "accept": [
+    "We had too much wine.",
+    "We have had too much wine.",
+    "We have drunk too much wine."
+   ]
+  },
+  {
+   "id": "x-he-037",
+   "direction": "he-en",
+   "category": "food",
+   "source": "יש כאן שוק ביום שישי?",
+   "reference": "Is there a market here on Friday?",
+   "accept": [
+    "Is there a market here on Fridays?",
+    "Is there a market on Friday here?",
+    "Is there a market here Friday?"
+   ]
+  },
+  {
+   "id": "x-he-038",
+   "direction": "he-en",
+   "category": "food",
+   "source": "הפירות האלה מתוקים.",
+   "reference": "These fruits are sweet.",
+   "accept": [
+    "This fruit is sweet.",
+    "Those fruits are sweet.",
+    "These fruit are sweet."
+   ]
+  },
+  {
+   "id": "x-he-039",
+   "direction": "he-en",
+   "category": "food",
+   "source": "תביא לנו שתי כוסות, בבקשה.",
+   "reference": "Bring us two glasses, please.",
+   "accept": [
+    "Please bring us two glasses.",
+    "Get us two glasses, please.",
+    "Bring us two cups, please.",
+    "Please bring us two cups.",
+    "Get us two cups, please."
+   ]
+  },
+  {
+   "id": "x-he-040",
+   "direction": "he-en",
+   "category": "food",
+   "source": "אני מזמין את כולם לארוחת ערב.",
+   "reference": "I am inviting everyone to dinner.",
+   "accept": [
+    "I invite everyone to dinner.",
+    "I am inviting everybody to dinner.",
+    "I invite everybody to dinner.",
+    "I am inviting everyone for dinner.",
+    "I am inviting everyone over for dinner.",
+    "I am taking everyone to dinner.",
+    "I am inviting them all to dinner."
+   ]
+  },
+  {
+   "id": "x-he-041",
+   "direction": "he-en",
+   "category": "shop",
+   "source": "כמה עולה החולצה הכחולה?",
+   "reference": "How much is the blue shirt?",
+   "accept": [
+    "How much does the blue shirt cost?",
+    "How much for the blue shirt?"
+   ]
+  },
+  {
+   "id": "x-he-042",
+   "direction": "he-en",
+   "category": "shop",
+   "source": "זה במבצע השבוע.",
+   "reference": "It is on sale this week.",
+   "accept": [
+    "This is on sale this week.",
+    "That is on sale this week.",
+    "It is on special this week.",
+    "It is on offer this week."
+   ]
+  },
+  {
+   "id": "x-he-043",
+   "direction": "he-en",
+   "category": "shop",
+   "source": "אין לנו את זה במלאי.",
+   "reference": "We don't have it in stock.",
+   "accept": [
+    "We don't have that in stock.",
+    "We don't have this in stock.",
+    "We haven't got it in stock."
+   ]
+  },
+  {
+   "id": "x-he-044",
+   "direction": "he-en",
+   "category": "shop",
+   "source": "אפשר לקבל שקית?",
+   "reference": "Can I have a bag?",
+   "accept": [
+    "Can I get a bag?",
+    "May I have a bag?",
+    "Could I have a bag?",
+    "Can we have a bag?",
+    "Can we get a bag?",
+    "Could I get a bag?"
+   ]
+  },
+  {
+   "id": "x-he-045",
+   "direction": "he-en",
+   "category": "shop",
+   "source": "החנות סגורה בשבת.",
+   "reference": "The store is closed on Saturday.",
+   "accept": [
+    "The shop is closed on Saturday.",
+    "The store is closed on Shabbat.",
+    "The shop is closed on Shabbat.",
+    "The store is closed on Saturdays.",
+    "The shop is closed on Saturdays.",
+    "The store is closed on the Sabbath.",
+    "The shop is closed on the Sabbath.",
+    "The store is closed on Sabbath."
+   ]
+  },
+  {
+   "id": "x-he-046",
+   "direction": "he-en",
+   "category": "shop",
+   "source": "קניתי מתנה לאמא שלי.",
+   "reference": "I bought a gift for my mother.",
+   "accept": [
+    "I bought a present for my mother.",
+    "I bought a gift for my mom.",
+    "I bought a present for my mom.",
+    "I bought my mother a gift.",
+    "I bought my mother a present.",
+    "I bought my mom a gift.",
+    "I bought my mom a present.",
+    "I got my mom a present.",
+    "I got my mom a gift."
+   ]
+  },
+  {
+   "id": "x-he-047",
+   "direction": "he-en",
+   "category": "shop",
+   "source": "הנעליים האלה קטנות עליי.",
+   "reference": "These shoes are too small for me.",
+   "accept": [
+    "These shoes are small on me.",
+    "These shoes are small for me.",
+    "Those shoes are too small for me.",
+    "These shoes are too small on me.",
+    "These shoes are too tight on me.",
+    "These shoes are too small."
+   ]
+  },
+  {
+   "id": "x-he-048",
+   "direction": "he-en",
+   "category": "shop",
+   "source": "איפה אפשר למדוד את המכנסיים?",
+   "reference": "Where can I try on the pants?",
+   "accept": [
+    "Where can I try the pants on?",
+    "Where can I try on the trousers?",
+    "Where can I try on these pants?",
+    "Where can I try the trousers on?",
+    "Where can I try on pants?",
+    "Where can you try on the pants?"
+   ]
+  },
+  {
+   "id": "x-he-049",
+   "direction": "he-en",
+   "category": "shop",
+   "source": "המחיר כולל מע\"מ?",
+   "reference": "Does the price include VAT?",
+   "accept": [
+    "Is VAT included in the price?",
+    "Does the price include tax?",
+    "Is the price including VAT?",
+    "Does that price include VAT?",
+    "Does the price include the VAT?"
+   ]
+  },
+  {
+   "id": "x-he-050",
+   "direction": "he-en",
+   "category": "shop",
+   "source": "אני מחפשת מתנה לחבר.",
+   "reference": "I am looking for a gift for a friend.",
+   "accept": [
+    "I am looking for a present for a friend.",
+    "I am looking for a gift for my friend.",
+    "I am looking for a present for my friend.",
+    "I am looking for a gift for my boyfriend.",
+    "I am looking for a present for my boyfriend."
+   ]
+  },
+  {
+   "id": "x-he-051",
+   "direction": "he-en",
+   "category": "shop",
+   "source": "תן לי חצי קילו גבינה.",
+   "reference": "Give me half a kilo of cheese.",
+   "accept": [
+    "Give me a half kilo of cheese.",
+    "Give me half a kilogram of cheese.",
+    "Get me half a kilo of cheese.",
+    "Let me have half a kilo of cheese."
+   ]
+  },
+  {
+   "id": "x-he-052",
+   "direction": "he-en",
+   "category": "shop",
+   "source": "הכרטיס שלי לא עובר.",
+   "reference": "My card is not going through.",
+   "accept": [
+    "My card won't go through.",
+    "My card doesn't go through.",
+    "My card is not working.",
+    "My card doesn't work.",
+    "My card is declined.",
+    "My card was declined.",
+    "My card won't work.",
+    "My card is not passing.",
+    "My card doesn't pass."
+   ]
+  },
+  {
+   "id": "x-he-053",
+   "direction": "he-en",
+   "category": "shop",
+   "source": "יש לך עודף ממאה?",
+   "reference": "Do you have change for a hundred?",
+   "accept": [
+    "Do you have change from a hundred?",
+    "Do you have change for 100?",
+    "Do you have change from 100?",
+    "Have you got change for a hundred?",
+    "Do you have change for a hundred shekels?",
+    "Do you have change for one hundred?"
+   ]
+  },
+  {
+   "id": "x-he-054",
+   "direction": "he-en",
+   "category": "shop",
+   "source": "זה זול יותר בשוק.",
+   "reference": "It is cheaper at the market.",
+   "accept": [
+    "It is cheaper in the market.",
+    "It is cheaper on the market.",
+    "This is cheaper at the market.",
+    "This is cheaper in the market.",
+    "That is cheaper at the market.",
+    "That is cheaper in the market."
+   ]
+  },
+  {
+   "id": "x-he-055",
+   "direction": "he-en",
+   "category": "shop",
+   "source": "אני רוצה להחליף את זה.",
+   "reference": "I want to exchange this.",
+   "accept": [
+    "I want to exchange it.",
+    "I want to replace it.",
+    "I want to replace this.",
+    "I want to change it.",
+    "I want to change this.",
+    "I would like to exchange this.",
+    "I want to switch it.",
+    "I want to swap it.",
+    "I want to trade it."
+   ]
+  },
+  {
+   "id": "x-he-056",
+   "direction": "he-en",
+   "category": "health",
+   "source": "אני מרגיש הרבה יותר טוב היום.",
+   "reference": "I feel much better today.",
+   "accept": [
+    "I am feeling much better today.",
+    "I feel a lot better today.",
+    "I am feeling a lot better today.",
+    "I feel so much better today."
+   ]
+  },
+  {
+   "id": "x-he-057",
+   "direction": "he-en",
+   "category": "health",
+   "source": "כואבת לי הבטן מאתמול.",
+   "reference": "My stomach has hurt since yesterday.",
+   "accept": [
+    "My stomach has been hurting since yesterday.",
+    "I have had a stomach ache since yesterday.",
+    "I have had a stomachache since yesterday.",
+    "My stomach hurts since yesterday.",
+    "My stomach has been aching since yesterday.",
+    "I have had stomach pain since yesterday.",
+    "I have a stomach ache since yesterday.",
+    "I have a stomachache since yesterday.",
+    "My stomach hurts from yesterday."
+   ]
+  },
+  {
+   "id": "x-he-058",
+   "direction": "he-en",
+   "category": "health",
+   "source": "הוא נפל מהאופניים.",
+   "reference": "He fell off the bike.",
+   "accept": [
+    "He fell off his bike.",
+    "He fell off the bicycle.",
+    "He fell off his bicycle.",
+    "He fell from the bike.",
+    "He fell from the bicycle.",
+    "He fell from his bike."
+   ]
+  },
+  {
+   "id": "x-he-059",
+   "direction": "he-en",
+   "category": "health",
+   "source": "צריך להזמין משטרה.",
+   "reference": "We need to call the police.",
+   "accept": [
+    "We should call the police.",
+    "You need to call the police.",
+    "Someone needs to call the police.",
+    "We have to call the police.",
+    "The police need to be called.",
+    "We must call the police.",
+    "Need to call the police.",
+    "You have to call the police.",
+    "We need to call the cops.",
+    "I need to call the police."
+   ]
+  },
+  {
+   "id": "x-he-060",
+   "direction": "he-en",
+   "category": "health",
+   "source": "יש לה אלרגיה לפניצילין.",
+   "reference": "She is allergic to penicillin.",
+   "accept": [
+    "She has an allergy to penicillin.",
+    "She has a penicillin allergy.",
+    "She has got an allergy to penicillin."
+   ]
+  },
+  {
+   "id": "x-he-061",
+   "direction": "he-en",
+   "category": "health",
+   "source": "איפה חדר המיון?",
+   "reference": "Where is the emergency room?",
+   "accept": [
+    "Where is the ER?"
+   ]
+  },
+  {
+   "id": "x-he-062",
+   "direction": "he-en",
+   "category": "health",
+   "source": "נגמרו לי התרופות.",
+   "reference": "I ran out of my medication.",
+   "accept": [
+    "I ran out of medicine.",
+    "I ran out of my medicine.",
+    "I am out of medicine.",
+    "I ran out of medication.",
+    "I have run out of medicine.",
+    "I have run out of medication.",
+    "I am out of medication.",
+    "I am out of my medication.",
+    "I ran out of drugs.",
+    "I am out of drugs.",
+    "I ran out of meds.",
+    "I am out of meds.",
+    "I ran out of pills."
+   ]
+  },
+  {
+   "id": "x-he-063",
+   "direction": "he-en",
+   "category": "health",
+   "source": "הילדה בולעת בקושי.",
+   "reference": "The girl can barely swallow.",
+   "accept": [
+    "The girl is barely swallowing.",
+    "The girl can hardly swallow.",
+    "The girl has trouble swallowing.",
+    "The girl is having trouble swallowing.",
+    "The girl has difficulty swallowing.",
+    "The girl swallows with difficulty.",
+    "The girl is hardly swallowing.",
+    "The girl barely swallows.",
+    "The girl hardly swallows.",
+    "The little girl can barely swallow."
+   ]
+  },
+  {
+   "id": "x-he-064",
+   "direction": "he-en",
+   "category": "health",
+   "source": "תתרחקו מהחלון!",
+   "reference": "Get away from the window!",
+   "accept": [
+    "Stay away from the window!",
+    "Move away from the window!",
+    "Step away from the window!",
+    "Keep away from the window!",
+    "Get back from the window!",
+    "Back away from the window!"
+   ]
+  },
+  {
+   "id": "x-he-065",
+   "direction": "he-en",
+   "category": "health",
+   "source": "נשברה לי השן.",
+   "reference": "I broke my tooth.",
+   "accept": [
+    "I broke a tooth.",
+    "My tooth broke.",
+    "My tooth is broken.",
+    "I have broken my tooth.",
+    "I have broken a tooth.",
+    "I chipped my tooth.",
+    "I have a broken tooth."
+   ]
+  },
+  {
+   "id": "x-he-066",
+   "direction": "he-en",
+   "category": "health",
+   "source": "אני בהריון.",
+   "reference": "I am pregnant.",
+   "accept": []
+  },
+  {
+   "id": "x-he-067",
+   "direction": "he-en",
+   "category": "health",
+   "source": "הוא איבד את ההכרה.",
+   "reference": "He lost consciousness.",
+   "accept": [
+    "He passed out.",
+    "He has lost consciousness.",
+    "He is unconscious.",
+    "He blacked out.",
+    "He fainted."
+   ]
+  },
+  {
+   "id": "x-he-068",
+   "direction": "he-en",
+   "category": "health",
+   "source": "מישהו פרץ לדירה שלנו.",
+   "reference": "Someone broke into our apartment.",
+   "accept": [
+    "Somebody broke into our apartment.",
+    "Someone has broken into our apartment.",
+    "Someone broke into our flat.",
+    "Somebody broke into our flat.",
+    "Somebody has broken into our apartment."
+   ]
+  },
+  {
+   "id": "x-he-069",
+   "direction": "he-en",
+   "category": "health",
+   "source": "קח את הכדור הזה פעמיים ביום.",
+   "reference": "Take this pill twice a day.",
+   "accept": [
+    "Take this tablet twice a day.",
+    "Take that pill twice a day.",
+    "Take this pill two times a day.",
+    "Take this pill twice daily."
+   ]
+  },
+  {
+   "id": "x-he-070",
+   "direction": "he-en",
+   "category": "health",
+   "source": "אל תזוז, האמבולנס בדרך.",
+   "reference": "Don't move, the ambulance is on its way.",
+   "accept": [
+    "Don't move, the ambulance is on the way.",
+    "Don't move. The ambulance is on its way.",
+    "Don't move, an ambulance is on the way.",
+    "Don't move, the ambulance is coming.",
+    "Don't move, an ambulance is on its way."
+   ]
+  },
+  {
+   "id": "x-he-071",
+   "direction": "he-en",
+   "category": "hotel",
+   "source": "המפתח לא פותח את הדלת.",
+   "reference": "The key does not open the door.",
+   "accept": [
+    "The key won't open the door.",
+    "The key is not opening the door."
+   ]
+  },
+  {
+   "id": "x-he-072",
+   "direction": "he-en",
+   "category": "hotel",
+   "source": "אפשר להשאיר את המזוודות בקבלה?",
+   "reference": "Can we leave the suitcases at reception?",
+   "accept": [
+    "Can I leave the suitcases at reception?",
+    "Can I leave the suitcases at the reception?",
+    "Can we leave the suitcases at the reception?",
+    "Can I leave my suitcases at the reception?",
+    "Can we leave the luggage at reception?",
+    "Can I leave the luggage at the reception?",
+    "Can we leave our luggage at the reception?",
+    "Can I leave my luggage at the reception?",
+    "Can I leave the suitcases at the front desk?",
+    "Can we leave the suitcases at the front desk?"
+   ]
+  },
+  {
+   "id": "x-he-073",
+   "direction": "he-en",
+   "category": "hotel",
+   "source": "המעלית מקולקלת.",
+   "reference": "The elevator is broken.",
+   "accept": [
+    "The elevator is out of order.",
+    "The elevator is not working.",
+    "The lift is broken.",
+    "The lift is out of order."
+   ]
+  },
+  {
+   "id": "x-he-074",
+   "direction": "he-en",
+   "category": "hotel",
+   "source": "החדר שלנו בקומה השלישית.",
+   "reference": "Our room is on the third floor.",
+   "accept": []
+  },
+  {
+   "id": "x-he-075",
+   "direction": "he-en",
+   "category": "hotel",
+   "source": "שילמנו מראש על שלושה לילות.",
+   "reference": "We paid in advance for three nights.",
+   "accept": [
+    "We paid for three nights in advance.",
+    "We prepaid for three nights.",
+    "We paid up front for three nights.",
+    "We paid upfront for three nights.",
+    "We have paid in advance for three nights."
+   ]
+  },
+  {
+   "id": "x-he-076",
+   "direction": "he-en",
+   "category": "hotel",
+   "source": "אין מגבות נקיות בחדר.",
+   "reference": "There are no clean towels in the room.",
+   "accept": [
+    "There aren't any clean towels in the room.",
+    "No clean towels in the room.",
+    "There is no clean towels in the room."
+   ]
+  },
+  {
+   "id": "x-he-077",
+   "direction": "he-en",
+   "category": "hotel",
+   "source": "מישהו יכול לתקן את הטלוויזיה?",
+   "reference": "Can someone fix the television?",
+   "accept": [
+    "Can someone fix the TV?",
+    "Can somebody fix the TV?",
+    "Can somebody fix the television?",
+    "Can anyone fix the TV?",
+    "Can anyone fix the television?",
+    "Could someone fix the TV?",
+    "Can anybody fix the TV?",
+    "Can someone repair the TV?",
+    "Can someone repair the television?"
+   ]
+  },
+  {
+   "id": "x-he-078",
+   "direction": "he-en",
+   "category": "hotel",
+   "source": "אנחנו עוזבים מחר בבוקר.",
+   "reference": "We are leaving tomorrow morning.",
+   "accept": [
+    "We leave tomorrow morning."
+   ]
+  },
+  {
+   "id": "x-he-079",
+   "direction": "he-en",
+   "category": "hotel",
+   "source": "הבריכה פתוחה עד שבע.",
+   "reference": "The pool is open until seven.",
+   "accept": [
+    "The pool is open till seven.",
+    "The pool is open until 7.",
+    "The swimming pool is open until seven.",
+    "The pool is open until seven o'clock.",
+    "The pool is open until 7:00.",
+    "The pool is open till 7."
+   ]
+  },
+  {
+   "id": "x-he-080",
+   "direction": "he-en",
+   "category": "hotel",
+   "source": "תוכלו להזמין לנו מונית?",
+   "reference": "Could you call us a taxi?",
+   "accept": [
+    "Can you call us a taxi?",
+    "Could you order us a taxi?",
+    "Can you order us a taxi?",
+    "Could you call us a cab?",
+    "Can you call us a cab?",
+    "Can you get us a taxi?",
+    "Could you get us a taxi?",
+    "Can you get us a cab?",
+    "Could you get us a cab?",
+    "Could you call a taxi for us?",
+    "Can you order a taxi for us?",
+    "Will you call us a cab?",
+    "Will you call us a taxi?"
+   ]
+  },
+  {
+   "id": "x-he-081",
+   "direction": "he-en",
+   "category": "social",
+   "source": "מה שלום ההורים שלך?",
+   "reference": "How are your parents?",
+   "accept": [
+    "How are your parents doing?",
+    "How are your folks?"
+   ]
+  },
+  {
+   "id": "x-he-082",
+   "direction": "he-en",
+   "category": "social",
+   "source": "לא ראיתי אותך הרבה זמן.",
+   "reference": "I haven't seen you in a long time.",
+   "accept": [
+    "I haven't seen you for a long time.",
+    "I have not seen you in a long time.",
+    "I haven't seen you in a while.",
+    "I haven't seen you for a while.",
+    "Haven't seen you in a long time.",
+    "I haven't seen you in ages.",
+    "I haven't seen you for ages.",
+    "Long time no see."
+   ]
+  },
+  {
+   "id": "x-he-083",
+   "direction": "he-en",
+   "category": "social",
+   "source": "אנחנו נשואים עשרים שנה.",
+   "reference": "We have been married for twenty years.",
+   "accept": [
+    "We have been married twenty years.",
+    "We have been married for 20 years.",
+    "We have been married 20 years.",
+    "We are married twenty years.",
+    "We are married 20 years."
+   ]
+  },
+  {
+   "id": "x-he-084",
+   "direction": "he-en",
+   "category": "social",
+   "source": "הבן שלי לומד באוניברסיטה.",
+   "reference": "My son studies at the university.",
+   "accept": [
+    "My son is studying at the university.",
+    "My son studies at university.",
+    "My son is studying at university.",
+    "My son goes to university.",
+    "My son is at university.",
+    "My son goes to college.",
+    "My son is in college.",
+    "My son is studying in college.",
+    "My son is at the university.",
+    "My son is studying at college."
+   ]
+  },
+  {
+   "id": "x-he-085",
+   "direction": "he-en",
+   "category": "social",
+   "source": "מתי נפגשים מחר?",
+   "reference": "When are we meeting tomorrow?",
+   "accept": [
+    "What time are we meeting tomorrow?",
+    "When do we meet tomorrow?",
+    "What time do we meet tomorrow?",
+    "When shall we meet tomorrow?",
+    "When will we meet tomorrow?"
+   ]
+  },
+  {
+   "id": "x-he-086",
+   "direction": "he-en",
+   "category": "social",
+   "source": "אני גר כאן כבר חמש שנים.",
+   "reference": "I have lived here for five years.",
+   "accept": [
+    "I have been living here for five years.",
+    "I have lived here five years.",
+    "I have been living here five years.",
+    "I have lived here for five years now.",
+    "I have been living here for five years now.",
+    "I have been here five years.",
+    "I have been here for five years.",
+    "I have lived here for five years already.",
+    "I have already lived here for five years."
+   ]
+  },
+  {
+   "id": "x-he-087",
+   "direction": "he-en",
+   "category": "social",
+   "source": "היא מדברת עברית שוטפת.",
+   "reference": "She speaks fluent Hebrew.",
+   "accept": [
+    "She speaks Hebrew fluently.",
+    "She is fluent in Hebrew."
+   ]
+  },
+  {
+   "id": "x-he-088",
+   "direction": "he-en",
+   "category": "social",
+   "source": "תמסור ד\"ש למשפחה.",
+   "reference": "Say hello to the family.",
+   "accept": [
+    "Say hi to the family.",
+    "Give my regards to the family.",
+    "Send my regards to the family.",
+    "Say hello to your family.",
+    "Say hi to your family.",
+    "Give my regards to your family.",
+    "Say hello to the family for me.",
+    "Say hi to the family for me.",
+    "Say hi to your family for me.",
+    "Give my best to the family.",
+    "Give my love to the family.",
+    "Give my love to your family."
+   ]
+  },
+  {
+   "id": "x-he-089",
+   "direction": "he-en",
+   "category": "social",
+   "source": "אני מתגעגע הביתה.",
+   "reference": "I miss home.",
+   "accept": [
+    "I am homesick.",
+    "I miss my home."
+   ]
+  },
+  {
+   "id": "x-he-090",
+   "direction": "he-en",
+   "category": "social",
+   "source": "הם עברו לחיפה לפני שנה.",
+   "reference": "They moved to Haifa a year ago.",
+   "accept": [
+    "They moved to Haifa one year ago."
+   ]
+  },
+  {
+   "id": "x-he-091",
+   "direction": "he-en",
+   "category": "social",
+   "source": "נדבר על זה אחר כך.",
+   "reference": "We will talk about it later.",
+   "accept": [
+    "We will talk about this later.",
+    "Let us talk about it later.",
+    "We will discuss it later.",
+    "We will talk about that later.",
+    "We will discuss this later.",
+    "Let us talk about this later.",
+    "We will talk later."
+   ]
+  },
+  {
+   "id": "x-he-092",
+   "direction": "he-en",
+   "category": "social",
+   "source": "אני מסכים איתך לגמרי.",
+   "reference": "I completely agree with you.",
+   "accept": [
+    "I totally agree with you.",
+    "I agree with you completely.",
+    "I entirely agree with you.",
+    "I agree with you totally.",
+    "I fully agree with you.",
+    "I absolutely agree with you.",
+    "I agree with you entirely.",
+    "I quite agree with you.",
+    "I couldn't agree with you more."
+   ]
+  },
+  {
+   "id": "x-he-093",
+   "direction": "he-en",
+   "category": "social",
+   "source": "יום ההולדת שלה בשבוע הבא.",
+   "reference": "Her birthday is next week.",
+   "accept": [
+    "It is her birthday next week.",
+    "Her birthday is coming next week.",
+    "She has a birthday next week."
+   ]
+  },
+  {
+   "id": "x-he-094",
+   "direction": "he-en",
+   "category": "social",
+   "source": "אתה רוצה לבוא איתנו לסרט?",
+   "reference": "Do you want to come to a movie with us?",
+   "accept": [
+    "Do you want to come with us to a movie?",
+    "Do you want to come to the movies with us?",
+    "Do you want to come with us to the movies?",
+    "Do you want to come with us to the movie?",
+    "Do you want to come to the movie with us?",
+    "Would you like to come to a movie with us?",
+    "Would you like to come with us to the movies?",
+    "You want to come to the movies with us?",
+    "You want to come with us to the movies?",
+    "Do you want to go to the movies with us?",
+    "Do you want to come to the cinema with us?"
+   ]
+  },
+  {
+   "id": "x-he-095",
+   "direction": "he-en",
+   "category": "social",
+   "source": "סליחה, לא שמעתי.",
+   "reference": "Sorry, I didn't hear.",
+   "accept": [
+    "Sorry, I didn't hear you.",
+    "Sorry, I didn't hear that.",
+    "I am sorry, I didn't hear.",
+    "I am sorry, I didn't hear you.",
+    "I am sorry, I didn't hear that.",
+    "Excuse me, I didn't hear.",
+    "Excuse me, I didn't hear you.",
+    "Sorry, I didn't catch that.",
+    "I am sorry, I didn't catch that."
+   ]
+  },
+  {
+   "id": "x-he-096",
+   "direction": "he-en",
+   "category": "social",
+   "source": "החברים שלי גרים בירושלים.",
+   "reference": "My friends live in Jerusalem.",
+   "accept": []
+  },
+  {
+   "id": "x-he-097",
+   "direction": "he-en",
+   "category": "social",
+   "source": "אני עובד מהבית בימי שני.",
+   "reference": "I work from home on Mondays.",
+   "accept": [
+    "I work from home on Monday.",
+    "I work at home on Mondays.",
+    "I am working from home on Mondays."
+   ]
+  },
+  {
+   "id": "x-he-098",
+   "direction": "he-en",
+   "category": "social",
+   "source": "אחותי מתחתנת בקיץ.",
+   "reference": "My sister is getting married in the summer.",
+   "accept": [
+    "My sister is getting married this summer.",
+    "My sister gets married in the summer.",
+    "My sister is getting married in summer."
+   ]
+  },
+  {
+   "id": "x-he-099",
+   "direction": "he-en",
+   "category": "social",
+   "source": "הכלב שלנו ברח אתמול.",
+   "reference": "Our dog ran away yesterday.",
+   "accept": [
+    "Our dog escaped yesterday.",
+    "Our dog got away yesterday.",
+    "Our dog ran off yesterday.",
+    "Our dog got out yesterday."
+   ]
+  },
+  {
+   "id": "x-he-100",
+   "direction": "he-en",
+   "category": "social",
+   "source": "אין לי זמן עכשיו.",
+   "reference": "I don't have time right now.",
+   "accept": [
+    "I don't have time now.",
+    "I have no time now.",
+    "I have no time right now.",
+    "I haven't got time now.",
+    "I don't have the time right now.",
+    "I don't have the time now."
+   ]
+  },
+  {
+   "id": "x-he-101",
+   "direction": "he-en",
+   "category": "shul",
+   "source": "התפילה מתחילה בשש וחצי.",
+   "reference": "The service starts at six thirty.",
+   "accept": [
+    "The service begins at six thirty.",
+    "The prayer starts at six thirty.",
+    "The prayer begins at six thirty.",
+    "The service starts at half past six.",
+    "The prayer starts at half past six.",
+    "The service starts at 6:30.",
+    "The prayer starts at 6:30.",
+    "Prayer starts at 6:30.",
+    "Prayer begins at 6:30.",
+    "The prayer begins at 6:30.",
+    "Prayers start at 6:30.",
+    "Prayers begin at 6:30.",
+    "Prayer starts at six thirty.",
+    "The prayer begins at half past six."
+   ]
+  },
+  {
+   "id": "x-he-102",
+   "direction": "he-en",
+   "category": "shul",
+   "source": "איפה אפשר לקנות חלות לשבת?",
+   "reference": "Where can I buy challah for Shabbat?",
+   "accept": [
+    "Where can I buy challahs for Shabbat?",
+    "Where can I buy challot for Shabbat?",
+    "Where can you buy challah for Shabbat?",
+    "Where can I buy challah for the Sabbath?",
+    "Where can I buy challahs for the Sabbath?",
+    "Where can you buy challahs for Shabbat?",
+    "Where can I get challah for Shabbat?",
+    "Where can I buy challah for Sabbath?"
+   ]
+  },
+  {
+   "id": "x-he-103",
+   "direction": "he-en",
+   "category": "shul",
+   "source": "הרב מדבר אחרי קריאת התורה.",
+   "reference": "The rabbi speaks after the Torah reading.",
+   "accept": [
+    "The rabbi talks after the Torah reading.",
+    "The rabbi is speaking after the Torah reading.",
+    "The rabbi speaks after the reading of the Torah.",
+    "The rabbi talks after the reading of the Torah.",
+    "The rabbi speaks after reading the Torah.",
+    "The rabbi is talking after the Torah reading.",
+    "The rabbi talks after reading the Torah."
+   ]
+  },
+  {
+   "id": "x-he-104",
+   "direction": "he-en",
+   "category": "shul",
+   "source": "אנחנו חוגגים את פסח עם כל המשפחה.",
+   "reference": "We celebrate Passover with the whole family.",
+   "accept": [
+    "We are celebrating Passover with the whole family.",
+    "We celebrate Pesach with the whole family.",
+    "We celebrate Passover with all the family.",
+    "We celebrate Passover with the entire family.",
+    "We are celebrating Passover with the entire family.",
+    "We are celebrating Passover with all the family."
+   ]
+  },
+  {
+   "id": "x-he-105",
+   "direction": "he-en",
+   "category": "shul",
+   "source": "שנה טובה ומתוקה.",
+   "reference": "A good and sweet year.",
+   "accept": [
+    "A good and sweet new year.",
+    "Have a good and sweet year.",
+    "A sweet and good year.",
+    "Good and sweet year.",
+    "Happy and sweet new year.",
+    "A happy and sweet new year.",
+    "Have a good and sweet new year.",
+    "A happy and sweet year."
+   ]
+  },
+  {
+   "id": "x-he-106",
+   "direction": "he-en",
+   "category": "shul",
+   "source": "הבת שלי קוראת בתורה בשבת הבאה.",
+   "reference": "My daughter is reading from the Torah next Shabbat.",
+   "accept": [
+    "My daughter reads from the Torah next Shabbat.",
+    "My daughter is reading Torah next Shabbat.",
+    "My daughter is reading from the Torah next Saturday.",
+    "My daughter reads the Torah next Saturday.",
+    "My daughter is reading the Torah next Saturday.",
+    "My daughter is reading the Torah next Shabbat.",
+    "My daughter reads the Torah next Shabbat.",
+    "My daughter reads from the Torah next Saturday.",
+    "My daughter is reading in the Torah next Shabbat.",
+    "My daughter reads in the Torah next Saturday.",
+    "My daughter reads the Torah next Sabbath.",
+    "My daughter is reading the Torah next Sabbath."
+   ]
+  },
+  {
+   "id": "x-he-107",
+   "direction": "he-en",
+   "category": "shul",
+   "source": "צריך כיפה כדי להיכנס?",
+   "reference": "Do I need a kippah to go in?",
+   "accept": [
+    "Do I need a kippah to enter?",
+    "Do you need a kippah to enter?",
+    "Do you need a kippah to go in?",
+    "Do I need a yarmulke to go in?",
+    "Do I need a yarmulke to enter?",
+    "Do you need a yarmulke to enter?",
+    "Do I need a kippah to get in?",
+    "Do you need a kippah to get in?",
+    "Do I need a yarmulke to get in?",
+    "Do you need a yarmulke to get in?",
+    "Do you need a skullcap to enter?",
+    "Do you need a skullcap to get in?"
+   ]
+  },
+  {
+   "id": "x-he-108",
+   "direction": "he-en",
+   "category": "shul",
+   "source": "בית הכנסת נמצא מול הפארק.",
+   "reference": "The synagogue is across from the park.",
+   "accept": [
+    "The synagogue is opposite the park.",
+    "The synagogue is in front of the park.",
+    "The synagogue is located across from the park.",
+    "The synagogue is located opposite the park.",
+    "The synagogue is across the street from the park.",
+    "The synagogue is facing the park.",
+    "The synagogue is located in front of the park."
+   ]
+  },
+  {
+   "id": "x-he-109",
+   "direction": "he-en",
+   "category": "shul",
+   "source": "הדלקנו נרות חנוכה עם הילדים.",
+   "reference": "We lit Hanukkah candles with the children.",
+   "accept": [
+    "We lit Hanukkah candles with the kids.",
+    "We lit Chanukah candles with the children.",
+    "We lit Chanukah candles with the kids.",
+    "We lit the Hanukkah candles with the children.",
+    "We lit the Hanukkah candles with the kids.",
+    "We lit Hanukah candles with the kids.",
+    "We lit Hanukah candles with the children."
+   ]
+  },
+  {
+   "id": "x-he-110",
+   "direction": "he-en",
+   "category": "shul",
+   "source": "סבא שלי היה חזן.",
+   "reference": "My grandfather was a cantor.",
+   "accept": [
+    "My grandpa was a cantor.",
+    "My grandfather was a hazzan.",
+    "My grandfather was a chazzan."
+   ]
+  },
+  {
+   "id": "x-he-111",
+   "direction": "he-en",
+   "category": "shul",
+   "source": "מותר לצלם בפנים?",
+   "reference": "Is it allowed to take pictures inside?",
+   "accept": [
+    "Am I allowed to take pictures inside?",
+    "Is it okay to take pictures inside?",
+    "Can I take pictures inside?",
+    "Is photography allowed inside?",
+    "Are you allowed to take pictures inside?",
+    "Is it permitted to take pictures inside?",
+    "Is it allowed to take photos inside?",
+    "Can I take photos inside?",
+    "May I take pictures inside?",
+    "Can you take pictures inside?",
+    "Are we allowed to take pictures inside?",
+    "Is it OK to take pictures inside?"
+   ]
+  },
+  {
+   "id": "x-he-112",
+   "direction": "he-en",
+   "category": "shul",
+   "source": "הקידוש יהיה באולם.",
+   "reference": "The kiddush will be in the hall.",
+   "accept": [
+    "Kiddush will be in the hall.",
+    "The kiddush will be held in the hall.",
+    "Kiddush will be held in the hall.",
+    "The kiddush will take place in the hall.",
+    "The kiddush will be at the hall.",
+    "The kiddush will be in the auditorium."
+   ]
+  },
+  {
+   "id": "x-he-113",
+   "direction": "he-en",
+   "category": "shul",
+   "source": "אנחנו בונים סוכה בחצר.",
+   "reference": "We are building a sukkah in the yard.",
+   "accept": [
+    "We build a sukkah in the yard.",
+    "We are building a sukkah in the backyard.",
+    "We are building a sukkah in the courtyard.",
+    "We build a sukkah in the courtyard.",
+    "We build a sukkah in the backyard.",
+    "We are building a succah in the yard.",
+    "We are building a sukka in the yard."
+   ]
+  },
+  {
+   "id": "x-he-114",
+   "direction": "he-en",
+   "category": "shul",
+   "source": "מה הברכה על היין?",
+   "reference": "What is the blessing over the wine?",
+   "accept": [
+    "What is the blessing for the wine?",
+    "What is the blessing on the wine?",
+    "What is the blessing over wine?",
+    "What is the blessing for wine?",
+    "What is the blessing on wine?",
+    "What is the blessing of the wine?"
+   ]
+  },
+  {
+   "id": "x-he-115",
+   "direction": "he-en",
+   "category": "shul",
+   "source": "צום קל ומועיל.",
+   "reference": "Have an easy and meaningful fast.",
+   "accept": [
+    "An easy and meaningful fast.",
+    "Have an easy fast.",
+    "An easy and beneficial fast.",
+    "Have an easy and beneficial fast.",
+    "Easy and meaningful fast.",
+    "A light and beneficial fast.",
+    "An easy and useful fast.",
+    "Easy and useful fast.",
+    "A light and useful fast."
+   ]
+  },
+  {
+   "id": "x-he-116",
+   "direction": "he-en",
+   "category": "shul",
+   "source": "הטקס מתחיל אחרי השקיעה.",
+   "reference": "The ceremony starts after sunset.",
+   "accept": [
+    "The ceremony begins after sunset.",
+    "The ceremony starts after the sunset.",
+    "The ceremony begins after the sunset.",
+    "The ceremony starts after sundown.",
+    "The ceremony begins after sundown.",
+    "The ceremony will start after sunset."
+   ]
+  },
+  {
+   "id": "x-he-117",
+   "direction": "he-en",
+   "category": "shul",
+   "source": "תרמנו לבית הכנסת לזכר אמא.",
+   "reference": "We donated to the synagogue in memory of Mom.",
+   "accept": [
+    "We donated to the synagogue in memory of my mother.",
+    "We donated to the synagogue in memory of our mother.",
+    "We donated to the synagogue in Mom's memory.",
+    "We donated to the synagogue in memory of mother.",
+    "We made a donation to the synagogue in memory of Mom.",
+    "We contributed to the synagogue in memory of Mom.",
+    "We gave to the synagogue in memory of Mom.",
+    "We donated to the synagogue in my mother's memory."
+   ]
+  },
+  {
+   "id": "x-he-118",
+   "direction": "he-en",
+   "category": "shul",
+   "source": "יש שיעור תורה בכל יום שלישי.",
+   "reference": "There is a Torah class every Tuesday.",
+   "accept": [
+    "There is a Torah lesson every Tuesday.",
+    "There is a Torah study class every Tuesday.",
+    "There is a Torah class on Tuesdays.",
+    "There is a Torah lesson on Tuesdays.",
+    "There is Torah study every Tuesday.",
+    "There is a Torah class each Tuesday.",
+    "There is a Torah lesson on every Tuesday."
+   ]
+  },
+  {
+   "id": "x-he-119",
+   "direction": "he-en",
+   "category": "shul",
+   "source": "ברוכים הבאים לקהילה שלנו.",
+   "reference": "Welcome to our community.",
+   "accept": [
+    "Welcome to our congregation."
+   ]
+  },
+  {
+   "id": "x-he-120",
+   "direction": "he-en",
+   "category": "shul",
+   "source": "שבת שלום לכל המשפחה.",
+   "reference": "Shabbat shalom to the whole family.",
+   "accept": [
+    "Shabbat shalom to all the family.",
+    "Shabbat shalom to the entire family.",
+    "Good Shabbat to the whole family.",
+    "Shabbat shalom to all of the family.",
+    "A peaceful Sabbath to the whole family.",
+    "Good Sabbath to the whole family.",
+    "Shabbat shalom to the family."
+   ]
+  }
+ ]
+}

@@ -67,7 +67,7 @@ test('Every existing game has a suggested skill level 1–9 without reclassifyin
   for (const [id] of GAMES) assert.ok(LEVEL_BY_GAME[id] >= 1 && LEVEL_BY_GAME[id] <= 9);
   assert.deepEqual([...new Set(Object.values(LEVEL_BY_GAME))].sort((a, b) => a - b), [1,2,3,4,5,6,7,8,9]);
   const route = matchRoute('#/wordfinder').route;
-  assert.equal(route?.title, 'Hebrew Word Finder — Level 1');
+  assert.equal(route?.title, 'Hebrew Word Finder: Level 1');
   assert.equal(route?.module, '../games/wordfinder.view.js');
   assert.equal(route?.tier, 'preview');
 });

@@ -37,7 +37,7 @@ const CSS = `
 .syn .syn-tile-body{padding:.7rem .85rem .8rem;display:grid;gap:.15rem;flex:1}
 .syn .syn-tile-name{display:block;font-size:1.05rem;line-height:1.25;font-weight:700}
 .syn .syn-badge{display:inline-block;border:1px solid var(--border,#999);border-radius:999px;padding:0 .5em;font-size:.8rem;color:var(--muted,#555);margin-inline-start:.3em;vertical-align:middle}
-.syn .syn-map{display:inline-flex;align-items:center;justify-content:center;gap:.35em;min-block-size:40px;padding:.3rem .8rem;border-radius:999px;border:1.5px solid #b8962e;color:inherit;text-decoration:none;font-size:.9rem;font-weight:600;background:transparent}
+.syn .syn-map{display:inline-flex;align-items:center;justify-content:center;gap:.35em;min-block-size:44px;padding:.3rem .8rem;border-radius:999px;border:1.5px solid #b8962e;color:inherit;text-decoration:none;font-size:.9rem;font-weight:600;background:transparent}
 .syn .syn-map:hover,.syn .syn-map:focus-visible{background:#b8962e;color:#0f3d2e}
 .syn .syn-map-row{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center}
 .syn .syn-map-alt{font-size:.8rem;color:var(--muted,#555)}

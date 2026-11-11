@@ -45,3 +45,8 @@
 - ברוך (vrvkh): `audio/f/israeli/word/r35-w3.mp3`, no synthetic take passed
 - פָּרוּר (): `audio/f/israeli/dictionary/dict-v17d329a2.mp3`, no synthetic take passed
 - חָמַס (): `audio/m/israeli/dictionary/dict-v8242b1b0.mp3`, no synthetic take passed
+- גֶּבֶס (): `audio/f/israeli/dictionary/dict-v625564e6.mp3`, no synthetic take passed
+- הִרְגִּיעַ (): `audio/f/israeli/dictionary/dict-v4f199720.mp3`, no synthetic take passed
+- חָמַס (): `audio/f/israeli/dictionary/dict-v8242b1b0.mp3`, no synthetic take passed
+- הוֹשִׁיעַ (): `audio/f/israeli/dictionary/dict-vcc28a845.mp3`, no synthetic take passed
+- מַעַן (): `audio/m/israeli/dictionary/dict-veed16b07.mp3`, no synthetic take passed

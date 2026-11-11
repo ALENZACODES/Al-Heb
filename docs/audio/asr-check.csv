@@ -2,65 +2,42 @@ verdict,score,kind,pointed_hebrew,heard,phonetic,english,file,same_audio_paths
 fail,0.0,word,הָא,אה?,ha,"ha!; behold!, this, here is",audio/f/israeli/word/hcd00a615.mp3,audio/f/israeli/word/hcd00a615.mp3
 fail,0.0,dictionary,הֵד,Head,,,audio/f/israeli/dictionary/dict-vb75ed959.mp3,audio/f/israeli/dictionary/dict-vb75ed959.mp3
 fail,0.0,dictionary,הִזְהִיר,He's here,,,audio/f/israeli/dictionary/dict-v9fd8edbe.mp3,audio/f/israeli/dictionary/dict-v9fd8edbe.mp3
-fail,0.0,dictionary,לֵץ,let's,,,audio/m/israeli/dictionary/dict-ve591ed9d.mp3,audio/m/israeli/dictionary/dict-ve591ed9d.mp3
 fail,0.0,dictionary,אַיָּה,היה.,,,audio/f/israeli/dictionary/dict-vd549b2f6.mp3,audio/f/israeli/dictionary/dict-vd549b2f6.mp3
 fail,0.0,dictionary,הֵא,‫ה.,,,audio/m/israeli/dictionary/dict-va4b7d8ca.mp3,audio/m/israeli/dictionary/dict-va4b7d8ca.mp3
 fail,0.0,dictionary,הֵא,אה,,,audio/f/israeli/dictionary/dict-va4b7d8ca.mp3,audio/f/israeli/dictionary/dict-va4b7d8ca.mp3
 fail,0.333,dictionary,אָסַר,השר,,,audio/f/israeli/dictionary/dict-v55e2c8a5.mp3,audio/f/israeli/dictionary/dict-v55e2c8a5.mp3
-fail,0.333,dictionary,הִפּוּךְ,כיפור,,,audio/f/israeli/dictionary/dict-v627d068b.mp3,audio/f/israeli/dictionary/dict-v627d068b.mp3
-fail,0.5,dictionary,תָּקַע,דקה.,,,audio/m/israeli/dictionary/dict-vbb37f4e8.mp3,audio/m/israeli/dictionary/dict-vbb37f4e8.mp3
-fail,0.5,dictionary,גּוּשׁ,בוש,,,audio/f/israeli/dictionary/dict-va6fd2f59.mp3,audio/f/israeli/dictionary/dict-va6fd2f59.mp3
 fail,0.5,dictionary,עַיִט,היית,,,audio/f/israeli/dictionary/dict-v7f95515b.mp3,audio/f/israeli/dictionary/dict-v7f95515b.mp3
 fail,0.5,dictionary,שְׁעוּעִית,שהווית,,,audio/m/israeli/dictionary/dict-ve8865de4.mp3,audio/m/israeli/dictionary/dict-ve8865de4.mp3
 fail,0.5,dictionary,שְׁעוּעִית,שהוהית,,,audio/f/israeli/dictionary/dict-ve8865de4.mp3,audio/f/israeli/dictionary/dict-ve8865de4.mp3
-fail,0.5,dictionary,בְּתוּלִים,גדולים,,,audio/m/israeli/dictionary/dict-v81f6e097.mp3,audio/m/israeli/dictionary/dict-v81f6e097.mp3
-fail,0.571,word,אָכֹם,אקאם,akhom,"black, brown",audio/f/israeli/word/hf76c8cd2.mp3,audio/f/israeli/word/hf76c8cd2.mp3
 fail,0.571,dictionary,קֶטְשׁוֹפּ,קצ'ופ,,,audio/m/israeli/dictionary/dict-v84da75c3.mp3,audio/m/israeli/dictionary/dict-v84da75c3.mp3
 fail,0.571,dictionary,קֶטְשׁוֹפּ,קצ'ופ,,,audio/f/israeli/dictionary/dict-v84da75c3.mp3,audio/f/israeli/dictionary/dict-v84da75c3.mp3
+fail,0.667,word,אָכֹם,עקם,akhom,"black, brown",audio/f/israeli/word/hf76c8cd2.mp3,audio/f/israeli/word/hf76c8cd2.mp3
 fail,0.667,word,ברוך,ברוך,vrvkh,UNKNOWN,audio/f/israeli/word/r35-w3.mp3,audio/f/israeli/word/r35-w3.mp3
-fail,0.667,dictionary,אִמֵּת,היא מת.,,,audio/m/israeli/dictionary/dict-v040e9391.mp3,audio/m/israeli/dictionary/dict-v040e9391.mp3
 fail,0.667,dictionary,אֵפֶר,עשר,,,audio/f/israeli/dictionary/dict-v9a3752ee.mp3,audio/f/israeli/dictionary/dict-v9a3752ee.mp3
 fail,0.667,dictionary,אָסַר,עשר,,,audio/m/israeli/dictionary/dict-v55e2c8a5.mp3,audio/m/israeli/dictionary/dict-v55e2c8a5.mp3
-fail,0.667,dictionary,צַו,צב,,,audio/m/israeli/dictionary/dict-v2056afc2.mp3,audio/m/israeli/dictionary/dict-v2056afc2.mp3
-fail,0.667,dictionary,נוּר,נו,,,audio/m/israeli/dictionary/dict-v3228345c.mp3,audio/m/israeli/dictionary/dict-v3228345c.mp3
-fail,0.667,dictionary,אֹרַס,הורס,,,audio/m/israeli/dictionary/dict-v14a31f1d.mp3,audio/m/israeli/dictionary/dict-v14a31f1d.mp3
 fail,0.667,dictionary,שָׁ,שעה,,,audio/m/israeli/dictionary/dict-vf2bb3587.mp3,audio/m/israeli/dictionary/dict-vf2bb3587.mp3
-fail,0.667,dictionary,סָחַר,שכר,,,audio/f/israeli/dictionary/dict-vbb88200e.mp3,audio/f/israeli/dictionary/dict-vbb88200e.mp3
-fail,0.667,dictionary,אָטַם,אדם,,,audio/m/israeli/dictionary/dict-vd6be87a0.mp3,audio/m/israeli/dictionary/dict-vd6be87a0.mp3
 fail,0.667,dictionary,מֶם,מ.,,,audio/f/israeli/dictionary/dict-v1348133a.mp3,audio/f/israeli/dictionary/dict-v1348133a.mp3
 fail,0.667,dictionary,סָכָל,שחל,,,audio/m/israeli/dictionary/dict-v81437014.mp3,audio/m/israeli/dictionary/dict-v81437014.mp3
-fail,0.667,dictionary,לֹעַ,לועה,,,audio/f/israeli/dictionary/dict-v34490288.mp3,audio/f/israeli/dictionary/dict-v34490288.mp3
 fail,0.667,dictionary,הִתְנִיעַ,התמיה,,,audio/m/israeli/dictionary/dict-vaac207f7.mp3,audio/m/israeli/dictionary/dict-vaac207f7.mp3
-fail,0.667,dictionary,טֹפֶר,תופל,,,audio/m/israeli/dictionary/dict-vbdc46ffc.mp3,audio/m/israeli/dictionary/dict-vbdc46ffc.mp3
 fail,0.667,dictionary,יָצוּעַ,יצואה,,,audio/f/israeli/dictionary/dict-v983aaf3a.mp3,audio/f/israeli/dictionary/dict-v983aaf3a.mp3
 fail,0.667,dictionary,פָּרוּר,ברור,,,audio/m/israeli/dictionary/dict-v17d329a2.mp3,audio/m/israeli/dictionary/dict-v17d329a2.mp3
 fail,0.667,dictionary,פָּרוּר,ברור,,,audio/f/israeli/dictionary/dict-v17d329a2.mp3,audio/f/israeli/dictionary/dict-v17d329a2.mp3
 fail,0.667,dictionary,גֶּבֶס,גבש,,,audio/f/israeli/dictionary/dict-v625564e6.mp3,audio/f/israeli/dictionary/dict-v625564e6.mp3
 fail,0.667,dictionary,עָרַג,הרג,,,audio/f/israeli/dictionary/dict-v61830b9a.mp3,audio/f/israeli/dictionary/dict-v61830b9a.mp3
-borderline,0.75,dictionary,גַּרְעִינִי,גרעימי,,,audio/m/israeli/dictionary/dict-v8a716461.mp3,audio/m/israeli/dictionary/dict-v8a716461.mp3
-borderline,0.75,dictionary,נִסְעָר,ניסהר,,,audio/f/israeli/dictionary/dict-v73fe03c6.mp3,audio/f/israeli/dictionary/dict-v73fe03c6.mp3
 borderline,0.8,word,אֲבָרֲכֶךָּ,אברקק,avarakheka,I will bless you,audio/f/israeli/word/ashrei-145-1-3-w11.mp3,audio/f/israeli/word/ashrei-145-1-3-w11.mp3
 borderline,0.8,dictionary,הוֹשִׁיעַ,הושיעה,,,audio/f/israeli/dictionary/dict-vcc28a845.mp3,audio/f/israeli/dictionary/dict-vcc28a845.mp3
 borderline,0.8,dictionary,מִישֶׁהִי,מי שהיא.,,,audio/m/israeli/dictionary/dict-v49ca7a70.mp3,audio/m/israeli/dictionary/dict-v49ca7a70.mp3
 borderline,0.8,dictionary,יִוֵּן,איבן,,,audio/m/israeli/dictionary/dict-va8b52d4d.mp3,audio/m/israeli/dictionary/dict-va8b52d4d.mp3
 borderline,0.8,dictionary,יִוֵּן,איבן,,,audio/f/israeli/dictionary/dict-va8b52d4d.mp3,audio/f/israeli/dictionary/dict-va8b52d4d.mp3
-borderline,0.8,dictionary,יְפֵהפֶה,יפה יפה,,,audio/f/israeli/dictionary/dict-v6de0e13d.mp3,audio/f/israeli/dictionary/dict-v6de0e13d.mp3
 borderline,0.8,dictionary,בָּז,באז,,,audio/m/israeli/dictionary/dict-v71c26bc6.mp3,audio/m/israeli/dictionary/dict-v71c26bc6.mp3
-borderline,0.8,dictionary,אִחֵד,ייחד,,,audio/f/israeli/dictionary/dict-vba0e9abb.mp3,audio/f/israeli/dictionary/dict-vba0e9abb.mp3
 borderline,0.8,dictionary,הִבִּיעַ,הביעה,,,audio/f/israeli/dictionary/dict-vcd9714c3.mp3,audio/f/israeli/dictionary/dict-vcd9714c3.mp3
-borderline,0.8,dictionary,בַּג,באג,,,audio/m/israeli/dictionary/dict-v0f8b084a.mp3,audio/m/israeli/dictionary/dict-v0f8b084a.mp3
 borderline,0.8,dictionary,עֵנָב,עיניו,,,audio/f/israeli/dictionary/dict-v45d1d6f9.mp3,audio/f/israeli/dictionary/dict-v45d1d6f9.mp3
 borderline,0.8,dictionary,וִיסְקִי,וויסקי,,,audio/m/israeli/dictionary/dict-vb9c8a2b6.mp3,audio/m/israeli/dictionary/dict-vb9c8a2b6.mp3
 borderline,0.8,dictionary,מַעַן,מן,,,audio/m/israeli/dictionary/dict-veed16b07.mp3,audio/m/israeli/dictionary/dict-veed16b07.mp3
 borderline,0.8,dictionary,תְּאוֹם,תהום,,,audio/m/israeli/dictionary/dict-vada9e769.mp3,audio/m/israeli/dictionary/dict-vada9e769.mp3
 borderline,0.8,dictionary,קַשׁ,קאש,,,audio/f/israeli/dictionary/dict-v72edc72e.mp3,audio/f/israeli/dictionary/dict-v72edc72e.mp3
-borderline,0.8,dictionary,קָץ,קאץ,,,audio/f/israeli/dictionary/dict-v7b8bf406.mp3,audio/f/israeli/dictionary/dict-v7b8bf406.mp3
 borderline,0.8,dictionary,קַת,קאט,,,audio/m/israeli/dictionary/dict-vfbc8fdb6.mp3,audio/m/israeli/dictionary/dict-vfbc8fdb6.mp3
 borderline,0.8,dictionary,פַּת,פאט,,,audio/f/israeli/dictionary/dict-v03706504.mp3,audio/f/israeli/dictionary/dict-v03706504.mp3
-borderline,0.8,dictionary,תֻּיַּק,טויאק,,,audio/f/israeli/dictionary/dict-v0db67d59.mp3,audio/f/israeli/dictionary/dict-v0db67d59.mp3
-borderline,0.8,dictionary,דָּאוֹן,דהון,,,audio/m/israeli/dictionary/dict-v85a25d0c.mp3,audio/m/israeli/dictionary/dict-v85a25d0c.mp3
-borderline,0.8,dictionary,נוֹרְמָה,נו מה,,,audio/m/israeli/dictionary/dict-v9135537a.mp3,audio/m/israeli/dictionary/dict-v9135537a.mp3
-borderline,0.824,word,אֵל נָא רְפָא נָא לָהּ,אל נאר אפה נאלה,el na refa na lah,UNKNOWN,audio/f/israeli/word/i-10-w7.mp3,audio/f/israeli/word/i-10-w7.mp3
 borderline,0.833,dictionary,הִתְנַקְּשׁוּת,התנגשות,,,audio/m/israeli/dictionary/dict-v46725d39.mp3,audio/m/israeli/dictionary/dict-v46725d39.mp3
 borderline,0.857,dictionary,נָמַס,נמאס,,,audio/f/israeli/dictionary/dict-v88c94bb1.mp3,audio/f/israeli/dictionary/dict-v88c94bb1.mp3
 borderline,0.857,dictionary,חָמָס,חמאס,,,audio/f/israeli/dictionary/dict-vdab4e390.mp3,audio/f/israeli/dictionary/dict-vdab4e390.mp3
@@ -69,15 +46,12 @@ borderline,0.857,dictionary,הִשְׁקִיעַ,השקיעה,,,audio/f/israeli/
 borderline,0.857,dictionary,אֵיכְשֶׁהוּ,איך שהוא.,,,audio/f/israeli/dictionary/dict-v9fc86790.mp3,audio/f/israeli/dictionary/dict-v9fc86790.mp3
 borderline,0.857,dictionary,עָמַס,עמאס,,,audio/m/israeli/dictionary/dict-v10c77c9b.mp3,audio/m/israeli/dictionary/dict-v10c77c9b.mp3
 borderline,0.857,dictionary,עָמַס,עמאס,,,audio/f/israeli/dictionary/dict-v10c77c9b.mp3,audio/f/israeli/dictionary/dict-v10c77c9b.mp3
-borderline,0.857,dictionary,מָרַט,מראט,,,audio/m/israeli/dictionary/dict-vca7a7598.mp3,audio/m/israeli/dictionary/dict-vca7a7598.mp3
 borderline,0.857,dictionary,הִטְבִּיעַ,התביעה,,,audio/m/israeli/dictionary/dict-ve8caca46.mp3,audio/m/israeli/dictionary/dict-ve8caca46.mp3
 borderline,0.857,dictionary,הִטְבִּיעַ,הטביעה,,,audio/f/israeli/dictionary/dict-ve8caca46.mp3,audio/f/israeli/dictionary/dict-ve8caca46.mp3
 borderline,0.857,dictionary,חָמַס,חמאס,,,audio/m/israeli/dictionary/dict-v8242b1b0.mp3,audio/m/israeli/dictionary/dict-v8242b1b0.mp3
 borderline,0.857,dictionary,חָמַס,חמאס,,,audio/f/israeli/dictionary/dict-v8242b1b0.mp3,audio/f/israeli/dictionary/dict-v8242b1b0.mp3
 borderline,0.857,dictionary,הִתְנִיעַ,התניעה,,,audio/f/israeli/dictionary/dict-vaac207f7.mp3,audio/f/israeli/dictionary/dict-vaac207f7.mp3
-borderline,0.857,dictionary,עֲזָרָה,אזהרה,,,audio/f/israeli/dictionary/dict-vf983d985.mp3,audio/f/israeli/dictionary/dict-vf983d985.mp3
 borderline,0.857,dictionary,הִכְנִיעַ,הכניעה,,,audio/f/israeli/dictionary/dict-v47224aa8.mp3,audio/f/israeli/dictionary/dict-v47224aa8.mp3
-borderline,0.857,dictionary,הֵזִין,האזין,,,audio/f/israeli/dictionary/dict-ve7e4dbe5.mp3,audio/f/israeli/dictionary/dict-ve7e4dbe5.mp3
 borderline,0.889,dictionary,הִזְדַּקֵּק,יזדקק,,,audio/f/israeli/dictionary/dict-v5c628dbf.mp3,audio/f/israeli/dictionary/dict-v5c628dbf.mp3
 number,digits,word,אַחַת,1.,achat,one (f.),audio/m/israeli/word/numbers-01-f.mp3,audio/m/israeli/word/numbers-01-f.mp3
 number,digits,word,שְׁתַּיִם,2.,shtayim,two (f.),audio/m/israeli/word/numbers-02-f.mp3,audio/m/israeli/word/numbers-02-f.mp3
@@ -98,6 +72,7 @@ pass,0.923,word,כָּל־עֹלָמִים,קהל עולמים,kol-olamim,all ag
 pass,0.923,word,בְּכָל־לְבָבְךָ,בך לבבך,bekhol-levavekha,with all your heart,audio/f/israeli/word/vahavta-full-w5.mp3,audio/f/israeli/word/vahavta-full-w5.mp3
 pass,0.923,word,אֲדֹנָי לִי לֹא אִירָא,אדוני לי לא יירא.,adonai li lo ira,UNKNOWN,audio/m/israeli/word/i-07-w8.mp3,audio/m/israeli/word/i-07-w8.mp3
 pass,0.923,dictionary,הִתְנַקְּשׁוּת,התנקשפות,,,audio/f/israeli/dictionary/dict-v46725d39.mp3,audio/f/israeli/dictionary/dict-v46725d39.mp3
+pass,0.933,word,אֵל נָא רְפָא נָא לָהּ,אל נא רפא נאלה,el na refa na lah,UNKNOWN,audio/f/israeli/word/i-10-w7.mp3,audio/f/israeli/word/i-10-w7.mp3
 pass,0.933,word,מִכָּל־הָעַמִּים,מקהל העמים,mikol-ha'amim,from all the peoples,audio/f/israeli/word/torah-bless-1-w10.mp3,audio/f/israeli/word/torah-bless-1-w10.mp3
 pass,0.933,word,מִכָּל־הָעַמִּים,מקהל העמים,mikol-ha'amim,from all the peoples,audio/m/israeli/word/torah-bless-1-w10.mp3,audio/m/israeli/word/torah-bless-1-w10.mp3
 pass,0.941,word,מְלֹא כָל הָאָרֶץ,מלוך על הארץ.,melo khol ha'aretz,UNKNOWN,audio/f/israeli/word/i-27-w2.mp3,audio/f/israeli/word/i-27-w2.mp3
@@ -6349,6 +6324,7 @@ pass,1.0,dictionary,פֶּרֶק,פרק,,,audio/m/israeli/dictionary/dict-ve6f0c
 pass,1.0,dictionary,פֶּרֶק,פרק,,,audio/f/israeli/dictionary/dict-ve6f0ccc5.mp3,audio/f/israeli/dictionary/dict-ve6f0ccc5.mp3
 pass,1.0,dictionary,בְּעֵינֵי־,בעיני,,,audio/m/israeli/dictionary/dict-vda78eeac.mp3,audio/m/israeli/dictionary/dict-vda78eeac.mp3
 pass,1.0,dictionary,בְּעֵינֵי־,בעיני,,,audio/f/israeli/dictionary/dict-vda78eeac.mp3,audio/f/israeli/dictionary/dict-vda78eeac.mp3
+pass,1.0,dictionary,אִמֵּת,אמת,,,audio/m/israeli/dictionary/dict-v040e9391.mp3,audio/m/israeli/dictionary/dict-v040e9391.mp3
 pass,1.0,dictionary,אִמֵּת,אמת,,,audio/f/israeli/dictionary/dict-v040e9391.mp3,audio/f/israeli/dictionary/dict-v040e9391.mp3
 pass,1.0,dictionary,נָס,נס,,,audio/m/israeli/dictionary/dict-va68ecfe2.mp3,audio/m/israeli/dictionary/dict-va68ecfe2.mp3
 pass,1.0,dictionary,נָס,נס,,,audio/f/israeli/dictionary/dict-va68ecfe2.mp3,audio/f/israeli/dictionary/dict-va68ecfe2.mp3
@@ -6860,6 +6836,7 @@ pass,1.0,dictionary,יָ־,יא,,,audio/m/israeli/dictionary/dict-v5a31921c.mp3,
 pass,1.0,dictionary,יָ־,יא,,,audio/f/israeli/dictionary/dict-v5a31921c.mp3,audio/f/israeli/dictionary/dict-v5a31921c.mp3
 pass,1.0,dictionary,חָשַׂף,חשף,,,audio/m/israeli/dictionary/dict-v604a2a30.mp3,audio/m/israeli/dictionary/dict-v604a2a30.mp3
 pass,1.0,dictionary,חָשַׂף,חשף,,,audio/f/israeli/dictionary/dict-v604a2a30.mp3,audio/f/israeli/dictionary/dict-v604a2a30.mp3
+pass,1.0,dictionary,תָּקַע,תקע,,,audio/m/israeli/dictionary/dict-vbb37f4e8.mp3,audio/m/israeli/dictionary/dict-vbb37f4e8.mp3
 pass,1.0,dictionary,תָּקַע,תקע,,,audio/f/israeli/dictionary/dict-vbb37f4e8.mp3,audio/f/israeli/dictionary/dict-vbb37f4e8.mp3
 pass,1.0,dictionary,עָר,אר,,,audio/m/israeli/dictionary/dict-vb5b4abf5.mp3,audio/m/israeli/dictionary/dict-vb5b4abf5.mp3
 pass,1.0,dictionary,עָר,אר,,,audio/f/israeli/dictionary/dict-vb5b4abf5.mp3,audio/f/israeli/dictionary/dict-vb5b4abf5.mp3
@@ -7123,6 +7100,7 @@ pass,1.0,dictionary,סַכִּין,סכין,,,audio/f/israeli/dictionary/dict-ve
 pass,1.0,dictionary,כְּסִיל,כסיל,,,audio/m/israeli/dictionary/dict-v4b1bc29a.mp3,audio/m/israeli/dictionary/dict-v4b1bc29a.mp3
 pass,1.0,dictionary,כְּסִיל,כסיל,,,audio/f/israeli/dictionary/dict-v4b1bc29a.mp3,audio/f/israeli/dictionary/dict-v4b1bc29a.mp3
 pass,1.0,dictionary,יְפֵהפֶה,יפהפה,,,audio/m/israeli/dictionary/dict-v6de0e13d.mp3,audio/m/israeli/dictionary/dict-v6de0e13d.mp3
+pass,1.0,dictionary,יְפֵהפֶה,יפהפה,,,audio/f/israeli/dictionary/dict-v6de0e13d.mp3,audio/f/israeli/dictionary/dict-v6de0e13d.mp3
 pass,1.0,dictionary,נִמְלַט,נמלט,,,audio/m/israeli/dictionary/dict-vf0fe32bb.mp3,audio/m/israeli/dictionary/dict-vf0fe32bb.mp3
 pass,1.0,dictionary,נִמְלַט,נמלט,,,audio/f/israeli/dictionary/dict-vf0fe32bb.mp3,audio/f/israeli/dictionary/dict-vf0fe32bb.mp3
 pass,1.0,dictionary,הֵאֵט,האט,,,audio/m/israeli/dictionary/dict-vc70d5db9.mp3,audio/m/israeli/dictionary/dict-vc70d5db9.mp3
@@ -7418,6 +7396,7 @@ pass,1.0,dictionary,נְשָׁמָה,נשמה,,,audio/m/israeli/dictionary/dict-
 pass,1.0,dictionary,נְשָׁמָה,נשמה,,,audio/f/israeli/dictionary/dict-vd0e6546a.mp3,audio/f/israeli/dictionary/dict-vd0e6546a.mp3
 pass,1.0,dictionary,קָצַף,קצף,,,audio/m/israeli/dictionary/dict-vb4cbb5c9.mp3,audio/m/israeli/dictionary/dict-vb4cbb5c9.mp3
 pass,1.0,dictionary,קָצַף,קצף,,,audio/f/israeli/dictionary/dict-vb4cbb5c9.mp3,audio/f/israeli/dictionary/dict-vb4cbb5c9.mp3
+pass,1.0,dictionary,צַו,צו,,,audio/m/israeli/dictionary/dict-v2056afc2.mp3,audio/m/israeli/dictionary/dict-v2056afc2.mp3
 pass,1.0,dictionary,צַו,צו,,,audio/f/israeli/dictionary/dict-v2056afc2.mp3,audio/f/israeli/dictionary/dict-v2056afc2.mp3
 pass,1.0,dictionary,תִּקְשֹׁרֶת,תקשורת,,,audio/m/israeli/dictionary/dict-v1b7d4abd.mp3,audio/m/israeli/dictionary/dict-v1b7d4abd.mp3
 pass,1.0,dictionary,תִּקְשֹׁרֶת,תקשורת,,,audio/f/israeli/dictionary/dict-v1b7d4abd.mp3,audio/f/israeli/dictionary/dict-v1b7d4abd.mp3
@@ -7688,6 +7667,7 @@ pass,1.0,dictionary,הִשְׁתַּחְרֵר,השתחרר,,,audio/f/israeli/di
 pass,1.0,dictionary,נָד,נד,,,audio/m/israeli/dictionary/dict-v1782a811.mp3,audio/m/israeli/dictionary/dict-v1782a811.mp3
 pass,1.0,dictionary,נָד,נד,,,audio/f/israeli/dictionary/dict-v1782a811.mp3,audio/f/israeli/dictionary/dict-v1782a811.mp3
 pass,1.0,dictionary,אִחֵד,אחד.,,,audio/m/israeli/dictionary/dict-vba0e9abb.mp3,audio/m/israeli/dictionary/dict-vba0e9abb.mp3
+pass,1.0,dictionary,אִחֵד,אחד.,,,audio/f/israeli/dictionary/dict-vba0e9abb.mp3,audio/f/israeli/dictionary/dict-vba0e9abb.mp3
 pass,1.0,dictionary,כָּרָה,קרה,,,audio/m/israeli/dictionary/dict-vdd04d8a3.mp3,audio/m/israeli/dictionary/dict-vdd04d8a3.mp3
 pass,1.0,dictionary,כָּרָה,קרה,,,audio/f/israeli/dictionary/dict-vdd04d8a3.mp3,audio/f/israeli/dictionary/dict-vdd04d8a3.mp3
 pass,1.0,dictionary,הַצָּעָה,הצעה,,,audio/m/israeli/dictionary/dict-vbb50aadf.mp3,audio/m/israeli/dictionary/dict-vbb50aadf.mp3
@@ -8248,6 +8228,7 @@ pass,1.0,dictionary,גָּאָה,גאה,,,audio/m/israeli/dictionary/dict-v76f33
 pass,1.0,dictionary,גָּאָה,גאה,,,audio/f/israeli/dictionary/dict-v76f33797.mp3,audio/f/israeli/dictionary/dict-v76f33797.mp3
 pass,1.0,dictionary,שַׁרְשֶׁרֶת,שרשרת,,,audio/m/israeli/dictionary/dict-ve5187617.mp3,audio/m/israeli/dictionary/dict-ve5187617.mp3
 pass,1.0,dictionary,שַׁרְשֶׁרֶת,שרשרת,,,audio/f/israeli/dictionary/dict-ve5187617.mp3,audio/f/israeli/dictionary/dict-ve5187617.mp3
+pass,1.0,dictionary,בַּג,בג,,,audio/m/israeli/dictionary/dict-v0f8b084a.mp3,audio/m/israeli/dictionary/dict-v0f8b084a.mp3
 pass,1.0,dictionary,בַּג,בג,,,audio/f/israeli/dictionary/dict-v0f8b084a.mp3,audio/f/israeli/dictionary/dict-v0f8b084a.mp3
 pass,1.0,dictionary,חָס,חס.,,,audio/m/israeli/dictionary/dict-vcfd9a955.mp3,audio/m/israeli/dictionary/dict-vcfd9a955.mp3
 pass,1.0,dictionary,חָס,חס,,,audio/f/israeli/dictionary/dict-vcfd9a955.mp3,audio/f/israeli/dictionary/dict-vcfd9a955.mp3
@@ -8382,6 +8363,7 @@ pass,1.0,dictionary,דַּוָּר,דבר,,,audio/m/israeli/dictionary/dict-v779
 pass,1.0,dictionary,דַּוָּר,דבר,,,audio/f/israeli/dictionary/dict-v779235b5.mp3,audio/f/israeli/dictionary/dict-v779235b5.mp3
 pass,1.0,dictionary,פְּלִילִי,פלילי,,,audio/m/israeli/dictionary/dict-v0afe49b6.mp3,audio/m/israeli/dictionary/dict-v0afe49b6.mp3
 pass,1.0,dictionary,פְּלִילִי,פלילי,,,audio/f/israeli/dictionary/dict-v0afe49b6.mp3,audio/f/israeli/dictionary/dict-v0afe49b6.mp3
+pass,1.0,dictionary,נוּר,נור,,,audio/m/israeli/dictionary/dict-v3228345c.mp3,audio/m/israeli/dictionary/dict-v3228345c.mp3
 pass,1.0,dictionary,נוּר,נור,,,audio/f/israeli/dictionary/dict-v3228345c.mp3,audio/f/israeli/dictionary/dict-v3228345c.mp3
 pass,1.0,dictionary,סִלֵּק,סילק,,,audio/m/israeli/dictionary/dict-v5ee65c65.mp3,audio/m/israeli/dictionary/dict-v5ee65c65.mp3
 pass,1.0,dictionary,סִלֵּק,סילק,,,audio/f/israeli/dictionary/dict-v5ee65c65.mp3,audio/f/israeli/dictionary/dict-v5ee65c65.mp3
@@ -8969,6 +8951,7 @@ pass,1.0,dictionary,כֵּיף,כיף,,,audio/m/israeli/dictionary/dict-vd4591d7
 pass,1.0,dictionary,כֵּיף,כיף,,,audio/f/israeli/dictionary/dict-vd4591d7d.mp3,audio/f/israeli/dictionary/dict-vd4591d7d.mp3
 pass,1.0,dictionary,זֵהֶה,זהה.,,,audio/m/israeli/dictionary/dict-v6b4ccead.mp3,audio/m/israeli/dictionary/dict-v6b4ccead.mp3
 pass,1.0,dictionary,זֵהֶה,זהה,,,audio/f/israeli/dictionary/dict-v6b4ccead.mp3,audio/f/israeli/dictionary/dict-v6b4ccead.mp3
+pass,1.0,dictionary,מָרַט,מרת,,,audio/m/israeli/dictionary/dict-vca7a7598.mp3,audio/m/israeli/dictionary/dict-vca7a7598.mp3
 pass,1.0,dictionary,מָרַט,מרת,,,audio/f/israeli/dictionary/dict-vca7a7598.mp3,audio/f/israeli/dictionary/dict-vca7a7598.mp3
 pass,1.0,dictionary,הִתְאַהֵב,התאהב,,,audio/m/israeli/dictionary/dict-vad682775.mp3,audio/m/israeli/dictionary/dict-vad682775.mp3
 pass,1.0,dictionary,הִתְאַהֵב,התאהב,,,audio/f/israeli/dictionary/dict-vad682775.mp3,audio/f/israeli/dictionary/dict-vad682775.mp3
@@ -9383,6 +9366,7 @@ pass,1.0,dictionary,קוֹץ,קוץ,,,audio/m/israeli/dictionary/dict-vbef50be7.
 pass,1.0,dictionary,קוֹץ,קוץ,,,audio/f/israeli/dictionary/dict-vbef50be7.mp3,audio/f/israeli/dictionary/dict-vbef50be7.mp3
 pass,1.0,dictionary,צִוּוּת,ציוות,,,audio/m/israeli/dictionary/dict-vdcca1bbf.mp3,audio/m/israeli/dictionary/dict-vdcca1bbf.mp3
 pass,1.0,dictionary,צִוּוּת,ציוות,,,audio/f/israeli/dictionary/dict-vdcca1bbf.mp3,audio/f/israeli/dictionary/dict-vdcca1bbf.mp3
+pass,1.0,dictionary,אֹרַס,ארס,,,audio/m/israeli/dictionary/dict-v14a31f1d.mp3,audio/m/israeli/dictionary/dict-v14a31f1d.mp3
 pass,1.0,dictionary,אֹרַס,אורס,,,audio/f/israeli/dictionary/dict-v14a31f1d.mp3,audio/f/israeli/dictionary/dict-v14a31f1d.mp3
 pass,1.0,dictionary,נָטַר,נתר,,,audio/m/israeli/dictionary/dict-v89005239.mp3,audio/m/israeli/dictionary/dict-v89005239.mp3
 pass,1.0,dictionary,נָטַר,נטר,,,audio/f/israeli/dictionary/dict-v89005239.mp3,audio/f/israeli/dictionary/dict-v89005239.mp3
@@ -9445,6 +9429,7 @@ pass,1.0,dictionary,אֹסֶף,אוסף,,,audio/f/israeli/dictionary/dict-va4296
 pass,1.0,dictionary,וִכּוּחַ,ויכוח,,,audio/m/israeli/dictionary/dict-v5ce292e8.mp3,audio/m/israeli/dictionary/dict-v5ce292e8.mp3
 pass,1.0,dictionary,וִכּוּחַ,ויכוח,,,audio/f/israeli/dictionary/dict-v5ce292e8.mp3,audio/f/israeli/dictionary/dict-v5ce292e8.mp3
 pass,1.0,dictionary,קָץ,קץ,,,audio/m/israeli/dictionary/dict-v7b8bf406.mp3,audio/m/israeli/dictionary/dict-v7b8bf406.mp3
+pass,1.0,dictionary,קָץ,קץ,,,audio/f/israeli/dictionary/dict-v7b8bf406.mp3,audio/f/israeli/dictionary/dict-v7b8bf406.mp3
 pass,1.0,dictionary,צוֹדֵק,צודק.,,,audio/m/israeli/dictionary/dict-v775058f9.mp3,audio/m/israeli/dictionary/dict-v775058f9.mp3
 pass,1.0,dictionary,צוֹדֵק,צודק.,,,audio/f/israeli/dictionary/dict-v775058f9.mp3,audio/f/israeli/dictionary/dict-v775058f9.mp3
 pass,1.0,dictionary,יְבוּל,יבול,,,audio/m/israeli/dictionary/dict-v7553196f.mp3,audio/m/israeli/dictionary/dict-v7553196f.mp3
@@ -9664,6 +9649,7 @@ pass,1.0,dictionary,אֶגְרוֹף,אגרוף,,,audio/f/israeli/dictionary/dic
 pass,1.0,dictionary,בִּקְעָה,בקעה,,,audio/m/israeli/dictionary/dict-v2a8568d1.mp3,audio/m/israeli/dictionary/dict-v2a8568d1.mp3
 pass,1.0,dictionary,בִּקְעָה,בקעה,,,audio/f/israeli/dictionary/dict-v2a8568d1.mp3,audio/f/israeli/dictionary/dict-v2a8568d1.mp3
 pass,1.0,dictionary,גּוּשׁ,גוש,,,audio/m/israeli/dictionary/dict-va6fd2f59.mp3,audio/m/israeli/dictionary/dict-va6fd2f59.mp3
+pass,1.0,dictionary,גּוּשׁ,גוש,,,audio/f/israeli/dictionary/dict-va6fd2f59.mp3,audio/f/israeli/dictionary/dict-va6fd2f59.mp3
 pass,1.0,dictionary,טְרָאוּמָה,טראומה,,,audio/m/israeli/dictionary/dict-vddbd8920.mp3,audio/m/israeli/dictionary/dict-vddbd8920.mp3
 pass,1.0,dictionary,טְרָאוּמָה,טראומה,,,audio/f/israeli/dictionary/dict-vddbd8920.mp3,audio/f/israeli/dictionary/dict-vddbd8920.mp3
 pass,1.0,dictionary,תִּעֵב,תיאב,,,audio/m/israeli/dictionary/dict-v1df8d7ff.mp3,audio/m/israeli/dictionary/dict-v1df8d7ff.mp3
@@ -10227,10 +10213,12 @@ pass,1.0,dictionary,חִזָּיוֹן,חיזיון,,,audio/f/israeli/dictionary
 pass,1.0,dictionary,סָמוּי,סמוי,,,audio/m/israeli/dictionary/dict-vf5c57221.mp3,audio/m/israeli/dictionary/dict-vf5c57221.mp3
 pass,1.0,dictionary,סָמוּי,סמוי,,,audio/f/israeli/dictionary/dict-vf5c57221.mp3,audio/f/israeli/dictionary/dict-vf5c57221.mp3
 pass,1.0,dictionary,תֻּיַּק,טויק,,,audio/m/israeli/dictionary/dict-v0db67d59.mp3,audio/m/israeli/dictionary/dict-v0db67d59.mp3
+pass,1.0,dictionary,תֻּיַּק,טויק,,,audio/f/israeli/dictionary/dict-v0db67d59.mp3,audio/f/israeli/dictionary/dict-v0db67d59.mp3
 pass,1.0,dictionary,אַלִּיפוּת,אליפות,,,audio/m/israeli/dictionary/dict-v8dcdd20f.mp3,audio/m/israeli/dictionary/dict-v8dcdd20f.mp3
 pass,1.0,dictionary,אַלִּיפוּת,אליפות,,,audio/f/israeli/dictionary/dict-v8dcdd20f.mp3,audio/f/israeli/dictionary/dict-v8dcdd20f.mp3
 pass,1.0,dictionary,סָקַר,סקר,,,audio/m/israeli/dictionary/dict-v7f87ade3.mp3,audio/m/israeli/dictionary/dict-v7f87ade3.mp3
 pass,1.0,dictionary,סָקַר,סקר,,,audio/f/israeli/dictionary/dict-v7f87ade3.mp3,audio/f/israeli/dictionary/dict-v7f87ade3.mp3
+pass,1.0,dictionary,לֵץ,לץ,,,audio/m/israeli/dictionary/dict-ve591ed9d.mp3,audio/m/israeli/dictionary/dict-ve591ed9d.mp3
 pass,1.0,dictionary,לֵץ,לץ,,,audio/f/israeli/dictionary/dict-ve591ed9d.mp3,audio/f/israeli/dictionary/dict-ve591ed9d.mp3
 pass,1.0,dictionary,הִתְגוֹרֵר,התגורר,,,audio/m/israeli/dictionary/dict-vbeb4f8b4.mp3,audio/m/israeli/dictionary/dict-vbeb4f8b4.mp3
 pass,1.0,dictionary,הִתְגוֹרֵר,התגורר,,,audio/f/israeli/dictionary/dict-vbeb4f8b4.mp3,audio/f/israeli/dictionary/dict-vbeb4f8b4.mp3
@@ -10277,6 +10265,7 @@ pass,1.0,dictionary,צָמָא,צמא,,,audio/f/israeli/dictionary/dict-ve8b5aab
 pass,1.0,dictionary,שֹׁרֶשׁ,שורש,,,audio/m/israeli/dictionary/dict-vda9892ef.mp3,audio/m/israeli/dictionary/dict-vda9892ef.mp3
 pass,1.0,dictionary,שֹׁרֶשׁ,שורש,,,audio/f/israeli/dictionary/dict-vda9892ef.mp3,audio/f/israeli/dictionary/dict-vda9892ef.mp3
 pass,1.0,dictionary,סָחַר,סחר,,,audio/m/israeli/dictionary/dict-vbb88200e.mp3,audio/m/israeli/dictionary/dict-vbb88200e.mp3
+pass,1.0,dictionary,סָחַר,סחר,,,audio/f/israeli/dictionary/dict-vbb88200e.mp3,audio/f/israeli/dictionary/dict-vbb88200e.mp3
 pass,1.0,dictionary,עַכָּבִישׁ,עכביש,,,audio/m/israeli/dictionary/dict-vf43c3202.mp3,audio/m/israeli/dictionary/dict-vf43c3202.mp3
 pass,1.0,dictionary,עַכָּבִישׁ,עכביש,,,audio/f/israeli/dictionary/dict-vf43c3202.mp3,audio/f/israeli/dictionary/dict-vf43c3202.mp3
 pass,1.0,dictionary,בָּדַל,בדל,,,audio/m/israeli/dictionary/dict-vdf429139.mp3,audio/m/israeli/dictionary/dict-vdf429139.mp3
@@ -10333,6 +10322,7 @@ pass,1.0,dictionary,תִּעֵד,תיעד,,,audio/m/israeli/dictionary/dict-v0e7
 pass,1.0,dictionary,תִּעֵד,תיעד,,,audio/f/israeli/dictionary/dict-v0e7c7e84.mp3,audio/f/israeli/dictionary/dict-v0e7c7e84.mp3
 pass,1.0,dictionary,פַּז,פז,,,audio/m/israeli/dictionary/dict-v827bf5d6.mp3,audio/m/israeli/dictionary/dict-v827bf5d6.mp3
 pass,1.0,dictionary,פַּז,פז,,,audio/f/israeli/dictionary/dict-v827bf5d6.mp3,audio/f/israeli/dictionary/dict-v827bf5d6.mp3
+pass,1.0,dictionary,גַּרְעִינִי,גרעיני,,,audio/m/israeli/dictionary/dict-v8a716461.mp3,audio/m/israeli/dictionary/dict-v8a716461.mp3
 pass,1.0,dictionary,גַּרְעִינִי,גרעיני,,,audio/f/israeli/dictionary/dict-v8a716461.mp3,audio/f/israeli/dictionary/dict-v8a716461.mp3
 pass,1.0,dictionary,פְּנִיָּה,פנייה,,,audio/m/israeli/dictionary/dict-vb7da2acc.mp3,audio/m/israeli/dictionary/dict-vb7da2acc.mp3
 pass,1.0,dictionary,פְּנִיָּה,פנייה,,,audio/f/israeli/dictionary/dict-vb7da2acc.mp3,audio/f/israeli/dictionary/dict-vb7da2acc.mp3
@@ -10860,6 +10850,7 @@ pass,1.0,dictionary,קְטַנְטַן,קטנטן,,,audio/m/israeli/dictionary/d
 pass,1.0,dictionary,קְטַנְטַן,קטנטן,,,audio/f/israeli/dictionary/dict-v7ae9bf6a.mp3,audio/f/israeli/dictionary/dict-v7ae9bf6a.mp3
 pass,1.0,dictionary,הֵסִיט,הסית,,,audio/m/israeli/dictionary/dict-v7f7605af.mp3,audio/m/israeli/dictionary/dict-v7f7605af.mp3
 pass,1.0,dictionary,הֵסִיט,הסית,,,audio/f/israeli/dictionary/dict-v7f7605af.mp3,audio/f/israeli/dictionary/dict-v7f7605af.mp3
+pass,1.0,dictionary,אָטַם,אטם,,,audio/m/israeli/dictionary/dict-vd6be87a0.mp3,audio/m/israeli/dictionary/dict-vd6be87a0.mp3
 pass,1.0,dictionary,אָטַם,אטם,,,audio/f/israeli/dictionary/dict-vd6be87a0.mp3,audio/f/israeli/dictionary/dict-vd6be87a0.mp3
 pass,1.0,dictionary,כָּפָה,קפה.,,,audio/m/israeli/dictionary/dict-v762e0e5a.mp3,audio/m/israeli/dictionary/dict-v762e0e5a.mp3
 pass,1.0,dictionary,כָּפָה,כפה,,,audio/f/israeli/dictionary/dict-v762e0e5a.mp3,audio/f/israeli/dictionary/dict-v762e0e5a.mp3
@@ -11261,6 +11252,7 @@ pass,1.0,dictionary,דְּאָגָה,דאגה,,,audio/f/israeli/dictionary/dict-
 pass,1.0,dictionary,קָטַל,קטל,,,audio/m/israeli/dictionary/dict-v5d0e35f6.mp3,audio/m/israeli/dictionary/dict-v5d0e35f6.mp3
 pass,1.0,dictionary,קָטַל,קטל,,,audio/f/israeli/dictionary/dict-v5d0e35f6.mp3,audio/f/israeli/dictionary/dict-v5d0e35f6.mp3
 pass,1.0,dictionary,לֹעַ,לה.,,,audio/m/israeli/dictionary/dict-v34490288.mp3,audio/m/israeli/dictionary/dict-v34490288.mp3
+pass,1.0,dictionary,לֹעַ,לה,,,audio/f/israeli/dictionary/dict-v34490288.mp3,audio/f/israeli/dictionary/dict-v34490288.mp3
 pass,1.0,dictionary,עָרַק,ערק,,,audio/m/israeli/dictionary/dict-v258796c1.mp3,audio/m/israeli/dictionary/dict-v258796c1.mp3
 pass,1.0,dictionary,עָרַק,ערק,,,audio/f/israeli/dictionary/dict-v258796c1.mp3,audio/f/israeli/dictionary/dict-v258796c1.mp3
 pass,1.0,dictionary,גֵּט,גט,,,audio/m/israeli/dictionary/dict-v27ecca35.mp3,audio/m/israeli/dictionary/dict-v27ecca35.mp3
@@ -11710,8 +11702,10 @@ pass,1.0,dictionary,פִּיפִּי,פיפי,,,audio/m/israeli/dictionary/dict-
 pass,1.0,dictionary,פִּיפִּי,פי פי,,,audio/f/israeli/dictionary/dict-v7e829fa2.mp3,audio/f/israeli/dictionary/dict-v7e829fa2.mp3
 pass,1.0,dictionary,תַּיִשׁ,תש,,,audio/m/israeli/dictionary/dict-vdb91a4c3.mp3,audio/m/israeli/dictionary/dict-vdb91a4c3.mp3
 pass,1.0,dictionary,תַּיִשׁ,תש,,,audio/f/israeli/dictionary/dict-vdb91a4c3.mp3,audio/f/israeli/dictionary/dict-vdb91a4c3.mp3
+pass,1.0,dictionary,דָּאוֹן,דאון,,,audio/m/israeli/dictionary/dict-v85a25d0c.mp3,audio/m/israeli/dictionary/dict-v85a25d0c.mp3
 pass,1.0,dictionary,דָּאוֹן,דאון,,,audio/f/israeli/dictionary/dict-v85a25d0c.mp3,audio/f/israeli/dictionary/dict-v85a25d0c.mp3
 pass,1.0,dictionary,עֲזָרָה,עזרא,,,audio/m/israeli/dictionary/dict-vf983d985.mp3,audio/m/israeli/dictionary/dict-vf983d985.mp3
+pass,1.0,dictionary,עֲזָרָה,עזרה,,,audio/f/israeli/dictionary/dict-vf983d985.mp3,audio/f/israeli/dictionary/dict-vf983d985.mp3
 pass,1.0,dictionary,מַכֹּלֶת,מכולת,,,audio/m/israeli/dictionary/dict-vc8481a17.mp3,audio/m/israeli/dictionary/dict-vc8481a17.mp3
 pass,1.0,dictionary,מַכֹּלֶת,מכולת,,,audio/f/israeli/dictionary/dict-vc8481a17.mp3,audio/f/israeli/dictionary/dict-vc8481a17.mp3
 pass,1.0,dictionary,צִנְצֶנֶת,צנצנת,,,audio/m/israeli/dictionary/dict-v731243b9.mp3,audio/m/israeli/dictionary/dict-v731243b9.mp3
@@ -11821,6 +11815,7 @@ pass,1.0,dictionary,תַּקְצִיב,תקציב,,,audio/f/israeli/dictionary/d
 pass,1.0,dictionary,קוֹנְצֵרְט,קונצרט,,,audio/m/israeli/dictionary/dict-v331f9527.mp3,audio/m/israeli/dictionary/dict-v331f9527.mp3
 pass,1.0,dictionary,קוֹנְצֵרְט,קונצרט,,,audio/f/israeli/dictionary/dict-v331f9527.mp3,audio/f/israeli/dictionary/dict-v331f9527.mp3
 pass,1.0,dictionary,הִפּוּךְ,היפוך,,,audio/m/israeli/dictionary/dict-v627d068b.mp3,audio/m/israeli/dictionary/dict-v627d068b.mp3
+pass,1.0,dictionary,הִפּוּךְ,הפוך,,,audio/f/israeli/dictionary/dict-v627d068b.mp3,audio/f/israeli/dictionary/dict-v627d068b.mp3
 pass,1.0,dictionary,נָבוּב,נבוב,,,audio/m/israeli/dictionary/dict-v6433dd45.mp3,audio/m/israeli/dictionary/dict-v6433dd45.mp3
 pass,1.0,dictionary,נָבוּב,נבוב,,,audio/f/israeli/dictionary/dict-v6433dd45.mp3,audio/f/israeli/dictionary/dict-v6433dd45.mp3
 pass,1.0,dictionary,צָלַף,צלף,,,audio/m/israeli/dictionary/dict-v9aa5fe58.mp3,audio/m/israeli/dictionary/dict-v9aa5fe58.mp3
@@ -12051,6 +12046,7 @@ pass,1.0,dictionary,תַּחְזוּקָה,תחזוקה,,,audio/m/israeli/dictio
 pass,1.0,dictionary,תַּחְזוּקָה,תחזוקה,,,audio/f/israeli/dictionary/dict-v64ea22e1.mp3,audio/f/israeli/dictionary/dict-v64ea22e1.mp3
 pass,1.0,dictionary,רָתַם,רתם,,,audio/m/israeli/dictionary/dict-ve7969a58.mp3,audio/m/israeli/dictionary/dict-ve7969a58.mp3
 pass,1.0,dictionary,רָתַם,רתם,,,audio/f/israeli/dictionary/dict-ve7969a58.mp3,audio/f/israeli/dictionary/dict-ve7969a58.mp3
+pass,1.0,dictionary,טֹפֶר,תפר,,,audio/m/israeli/dictionary/dict-vbdc46ffc.mp3,audio/m/israeli/dictionary/dict-vbdc46ffc.mp3
 pass,1.0,dictionary,טֹפֶר,תופר,,,audio/f/israeli/dictionary/dict-vbdc46ffc.mp3,audio/f/israeli/dictionary/dict-vbdc46ffc.mp3
 pass,1.0,dictionary,יָצוּעַ,יצוע,,,audio/m/israeli/dictionary/dict-v983aaf3a.mp3,audio/m/israeli/dictionary/dict-v983aaf3a.mp3
 pass,1.0,dictionary,הָרוּג,הרוג,,,audio/m/israeli/dictionary/dict-vc6fc39ba.mp3,audio/m/israeli/dictionary/dict-vc6fc39ba.mp3
@@ -12119,6 +12115,7 @@ pass,1.0,dictionary,אֲסֵפָה,אספה,,,audio/m/israeli/dictionary/dict-va
 pass,1.0,dictionary,אֲסֵפָה,אספה,,,audio/f/israeli/dictionary/dict-va02b0b3e.mp3,audio/f/israeli/dictionary/dict-va02b0b3e.mp3
 pass,1.0,dictionary,מַחְסוֹר,מחסור,,,audio/m/israeli/dictionary/dict-v49d3fb10.mp3,audio/m/israeli/dictionary/dict-v49d3fb10.mp3
 pass,1.0,dictionary,מַחְסוֹר,מחסור,,,audio/f/israeli/dictionary/dict-v49d3fb10.mp3,audio/f/israeli/dictionary/dict-v49d3fb10.mp3
+pass,1.0,dictionary,בְּתוּלִים,בתולים,,,audio/m/israeli/dictionary/dict-v81f6e097.mp3,audio/m/israeli/dictionary/dict-v81f6e097.mp3
 pass,1.0,dictionary,בְּתוּלִים,בתולים,,,audio/f/israeli/dictionary/dict-v81f6e097.mp3,audio/f/israeli/dictionary/dict-v81f6e097.mp3
 pass,1.0,dictionary,מִצְמֵץ,מצמץ,,,audio/m/israeli/dictionary/dict-vcbc92bfa.mp3,audio/m/israeli/dictionary/dict-vcbc92bfa.mp3
 pass,1.0,dictionary,מִצְמֵץ,מצמץ,,,audio/f/israeli/dictionary/dict-vcbc92bfa.mp3,audio/f/israeli/dictionary/dict-vcbc92bfa.mp3
@@ -12608,6 +12605,7 @@ pass,1.0,dictionary,פִּלְפֵּל,פלפל,,,audio/f/israeli/dictionary/dic
 pass,1.0,dictionary,צַמָּה,צמא,,,audio/m/israeli/dictionary/dict-va529e1eb.mp3,audio/m/israeli/dictionary/dict-va529e1eb.mp3
 pass,1.0,dictionary,צַמָּה,צמא,,,audio/f/israeli/dictionary/dict-va529e1eb.mp3,audio/f/israeli/dictionary/dict-va529e1eb.mp3
 pass,1.0,dictionary,נִסְעָר,נסער,,,audio/m/israeli/dictionary/dict-v73fe03c6.mp3,audio/m/israeli/dictionary/dict-v73fe03c6.mp3
+pass,1.0,dictionary,נִסְעָר,נסער,,,audio/f/israeli/dictionary/dict-v73fe03c6.mp3,audio/f/israeli/dictionary/dict-v73fe03c6.mp3
 pass,1.0,dictionary,גֵּאוּת,גאות,,,audio/m/israeli/dictionary/dict-v347bd3c3.mp3,audio/m/israeli/dictionary/dict-v347bd3c3.mp3
 pass,1.0,dictionary,גֵּאוּת,גאות,,,audio/f/israeli/dictionary/dict-v347bd3c3.mp3,audio/f/israeli/dictionary/dict-v347bd3c3.mp3
 pass,1.0,dictionary,אֲפַרְסֵק,אפרסק,,,audio/m/israeli/dictionary/dict-v3999fa02.mp3,audio/m/israeli/dictionary/dict-v3999fa02.mp3
@@ -12976,6 +12974,7 @@ pass,1.0,dictionary,סָפִיחַ,ספיח,,,audio/m/israeli/dictionary/dict-vf
 pass,1.0,dictionary,סָפִיחַ,ספיח,,,audio/f/israeli/dictionary/dict-vf1e64508.mp3,audio/f/israeli/dictionary/dict-vf1e64508.mp3
 pass,1.0,dictionary,פִּקֵּחַ,פיקח,,,audio/m/israeli/dictionary/dict-v89bc2ad7.mp3,audio/m/israeli/dictionary/dict-v89bc2ad7.mp3
 pass,1.0,dictionary,הֵזִין,הזין,,,audio/m/israeli/dictionary/dict-ve7e4dbe5.mp3,audio/m/israeli/dictionary/dict-ve7e4dbe5.mp3
+pass,1.0,dictionary,הֵזִין,הזין,,,audio/f/israeli/dictionary/dict-ve7e4dbe5.mp3,audio/f/israeli/dictionary/dict-ve7e4dbe5.mp3
 pass,1.0,dictionary,הַבְטָחָה,הבטחה,,,audio/m/israeli/dictionary/dict-v061a8834.mp3,audio/m/israeli/dictionary/dict-v061a8834.mp3
 pass,1.0,dictionary,הַבְטָחָה,הבטחה,,,audio/f/israeli/dictionary/dict-v061a8834.mp3,audio/f/israeli/dictionary/dict-v061a8834.mp3
 pass,1.0,dictionary,נֶאֱשָׁם,נאשם,,,audio/m/israeli/dictionary/dict-v3f0743aa.mp3,audio/m/israeli/dictionary/dict-v3f0743aa.mp3
@@ -13247,6 +13246,7 @@ pass,1.0,dictionary,בִּכּוּר,ביקור,,,audio/m/israeli/dictionary/dic
 pass,1.0,dictionary,בִּכּוּר,ביקור,,,audio/f/israeli/dictionary/dict-v3786b057.mp3,audio/f/israeli/dictionary/dict-v3786b057.mp3
 pass,1.0,dictionary,נְדִיבוּת,נדיבות,,,audio/m/israeli/dictionary/dict-v64d5fa38.mp3,audio/m/israeli/dictionary/dict-v64d5fa38.mp3
 pass,1.0,dictionary,נְדִיבוּת,נדיבות,,,audio/f/israeli/dictionary/dict-v64d5fa38.mp3,audio/f/israeli/dictionary/dict-v64d5fa38.mp3
+pass,1.0,dictionary,נוֹרְמָה,נורמה,,,audio/m/israeli/dictionary/dict-v9135537a.mp3,audio/m/israeli/dictionary/dict-v9135537a.mp3
 pass,1.0,dictionary,נוֹרְמָה,נורמה,,,audio/f/israeli/dictionary/dict-v9135537a.mp3,audio/f/israeli/dictionary/dict-v9135537a.mp3
 pass,1.0,dictionary,יַתּוּשׁ,יתוש,,,audio/m/israeli/dictionary/dict-vd04b67ab.mp3,audio/m/israeli/dictionary/dict-vd04b67ab.mp3
 pass,1.0,dictionary,יַתּוּשׁ,יתוש,,,audio/f/israeli/dictionary/dict-vd04b67ab.mp3,audio/f/israeli/dictionary/dict-vd04b67ab.mp3

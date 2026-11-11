@@ -47,21 +47,21 @@ export function mount(root, ctx) {
     const it = nextItem(items, answers, P.config.stop);
     if (!it) return finish();
     answered = false; status.textContent = '';
-    const fb = el('p', { class: 'ps-fb' });
     const next = el('button', { type: 'button', class: 'btn', id: 'placement-next', hidden: true, onclick: question }, 'Next');
     const give = (opt) => {
       if (answered) return; answered = true;
       const correct = !!opt?.correct;
       answers.push({ id: it.id, correct, picked: opt?.id ?? null });
-      fb.textContent = correct ? 'Yes.' : 'Not this time. That is fine; it only helps pick your starting point.';
-      next.hidden = false; status.textContent = fb.textContent; focus(next);
+      // C-06: one feedback only — the visible status line (also the live region); no second copy in the question body
+      status.textContent = correct ? 'Yes.' : 'Not this time. That is fine; it only helps pick your starting point.';
+      next.hidden = false; focus(next);
     };
     const play = it.audio && !isAudioFree(ctx) && ctx?.audio?.play && audioAccess(ctx.audio, it.audio.kind, it.audio.id).level !== 'none' ? el('button', { type: 'button', class: 'btn', onclick: async () => { try { await ctx.audio.play(it.audio.kind, it.audio.id); } catch { status.textContent = 'No audio yet'; } } }, 'Listen (device voice, not a recorded teacher)') : null;
     set(
       el('p', { class: 'muted' }, `Question ${answers.length + 1} of up to ${items.length}`),
       el('p', {}, it.prompt), el('p', { class: 'ps-he' }, heText(it.he)), play,
       el('div', { class: 'ps-opts' }, it.options.map((o) => el('button', { type: 'button', class: 'btn', onclick: () => give(o) }, o.label)), el('button', { type: 'button', class: 'btn', onclick: () => give(null) }, 'Not sure')),
-      fb, next,
+      next,
     );
     focus(h1);
   }

@@ -50,7 +50,7 @@ for (const failKey of KEYS) {
   test(`saveQuickCheck: a refused write of ${failKey} rejects, completed is never reported, stored state is unchanged`, async () => {
     const before = { "curriculum.progress": { completed: { x01: 5 } }, streak: { count: 2, best: 2, last: "2001-09-07" } };
     const s = mkStore(before); s.failWhen((k) => k === failKey);
-    await assert.rejects(() => A.saveQuickCheck({ store: s }, lesson, qs, { q1: false }, 1e12), StoreWriteError);
+    await assert.rejects(() => A.saveQuickCheck({ store: s }, lesson, qs, { q1: true }, 1e12), StoreWriteError); // a pass: the full batch
     assert.deepEqual(s.m, before);
   });
 }
@@ -77,12 +77,20 @@ test("a missing store is an error for the writes that count a lesson as done", a
   await assert.rejects(() => A.saveQuickCheck({ store: {} }, lesson, qs, { q1: true }), StoreWriteError);
   await assert.rejects(() => A.completeLesson(undefined, lesson, 1e12), StoreWriteError);
 });
-test("saveQuickCheck writes cards (with the answers applied), the done mark and the streak in one batch", async () => {
+test("saveQuickCheck (a pass) writes cards (with the answers applied), the done mark and the streak in one batch", async () => {
+  const s = mkStore();
+  const r = await A.saveQuickCheck({ store: s }, lesson, qs, { q1: true }, 1e12);
+  assert.deepEqual([r.completed, r.passed, r.updated], [true, true, 1]);
+  assert.deepEqual(s.log, ["srs.cards", "curriculum.progress", "streak"], "cards first, so a lesson is never done without its cards");
+  assert.equal(s.m["srs.cards"]["word:r01:1"].reps, 1, "the answer was applied to the saved card");
+});
+test("saveQuickCheck below the pass mark (C-01) writes the review cards only: no done mark, no streak day", async () => {
   const s = mkStore();
   const r = await A.saveQuickCheck({ store: s }, lesson, qs, { q1: false }, 1e12);
-  assert.deepEqual([r.completed, r.updated], [true, 1]);
-  assert.deepEqual(s.log, ["srs.cards", "curriculum.progress", "streak"], "cards first, so a lesson is never done without its cards");
-  assert.equal(s.m["srs.cards"]["word:r01:1"].reps, 1, "the answer was applied to the saved card (a miss: relearning, due in minutes)");
+  assert.deepEqual([r.completed, r.passed, r.updated, r.right, r.need, r.of], [false, false, 1, 0, 1, 1]);
+  assert.deepEqual(s.log, ["srs.cards"], "only the cards are written");
+  assert.equal(s.m["srs.cards"]["word:r01:1"].reps, 1, "the miss was applied to the saved card (relearning, due in minutes)");
+  assert.equal(s.m["curriculum.progress"], undefined); assert.equal(s.m.streak, undefined);
 });
 test("a store that kept the data in memory (set returns false) is not a failure: the learner is told by the storage notice", async () => {
   const m = {}; const store = { persistent: false, get: (k) => m[k], set: (k, v) => { m[k] = v; return false; } };

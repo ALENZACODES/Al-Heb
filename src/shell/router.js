@@ -265,6 +265,39 @@ export function createRouter(onChange) {
   };
 }
 
+/**
+ * M-09 navigation contract: on every route change the old view is fully unmounted before the new one renders. After the
+ * old view's own cleanup has run, whatever it left in the page root (stale headings, banners, text) is removed here, except
+ * the nodes in `keep` (the first-paint title the next view reuses). Returns the number of nodes removed.
+ * @param {{childNodes:ArrayLike<any>, removeChild?:(n:any)=>any}} root @param {Iterable<any>} [keep]
+ */
+export function clearView(root, keep = []) {
+  if (!root) return 0;
+  const kept = new Set([...keep].filter(Boolean));
+  let n = 0;
+  for (const node of [...(root.childNodes || root.children || [])]) {
+    if (kept.has(node)) continue;
+    if (typeof node.remove === 'function') node.remove(); else root.removeChild?.(node);
+    n++;
+  }
+  return n;
+}
+
+/**
+ * Announce the new page's title in the live region, then empty it shortly after, so the title of a page the learner has
+ * left never stays in the page text (M-09: "Word Search - Aleph" read at the end of the Scramble page). Call with an
+ * empty text at the start of a navigation to drop the previous announcement at once.
+ * @param {{textContent:string}|null} live @param {string} text @param {{win?:any, ms?:number}} [o]
+ */
+export function announceTitle(live, text, { win = globalThis, ms = 2000 } = {}) {
+  if (!live) return;
+  const t = /** @type {any} */ (live);
+  try { if (t.__alefClear) win.clearTimeout?.(t.__alefClear); } catch { /* ignore */ }
+  t.__alefClear = 0;
+  live.textContent = text || '';
+  if (text) t.__alefClear = win.setTimeout?.(() => { t.__alefClear = 0; if (live.textContent === text) live.textContent = ''; }, ms) || 0;
+}
+
 /** Lazily import a route's view module (paths in ROUTES are relative to this file). @param {RouteDef} route */
 export function loadRouteModule(route) {
   if (!route.module) return Promise.reject(new Error('route has no module'));

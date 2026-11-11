@@ -104,7 +104,7 @@ export function mount(root, ctx) {
   }
 
   function show() {
-    answered = false;
+    answered = false; say(''); // the last answer's verdict must not linger into the next word
     const q = qs[qi];
     const opts = el('div', { class: 'ls-opts', role: 'group', 'aria-label': 'Choices' },
       q.choices.map((c, i) => el('button', { class: 'btn', type: 'button', lang: 'he', dir: 'rtl', 'aria-label': `Choice ${i + 1}: ${c.he}`, onclick: () => pick(c, opts) }, heText(c.he))));
@@ -136,14 +136,16 @@ export function mount(root, ctx) {
     if (ok) right++;
     state = applyAnswer(state, q.id, ok, Date.now(), mode); await storeSet(ctx, KEY, state);
     const msg = ok ? 'Right.' : `Not this time. The word was ${q.answer}. It will come back later.`;
-    say(msg);
-    const next = el('button', { class: 'btn', type: 'button', onclick: () => { qi++; if (qi < qs.length) show(); else done(); } }, qi + 1 < qs.length ? 'Next word' : 'Finish');
+    // C-06: one feedback only — a visible verdict line, read with the Next button that takes focus; the status line is not a second copy
+    say('');
+    const verdict = el('p', { class: 'ls-verdict', id: 'ls-verdict' }, msg);
+    const next = el('button', { class: 'btn', type: 'button', 'aria-describedby': 'ls-verdict', onclick: () => { qi++; if (qi < qs.length) show(); else done(); } }, qi + 1 < qs.length ? 'Next word' : 'Finish');
     try { body.querySelector?.('.ls-skip')?.remove?.(); } catch { /* optional */ }
-    body.append(el('p', {}, msg), next); next.focus?.();
+    body.append(verdict, next); next.focus?.();
   }
   // After the list is replaced the focused button is gone; move focus to the new first paragraph so keyboard and screen reader users keep their place.
   function focusLead() { const lead = body.querySelector?.('p'); if (lead) { lead.setAttribute('tabindex', '-1'); lead.focus?.(); } }
-  function done() { set(el('p', {}, `Done: ${right} right out of ${qs.length} ${mode === 'audio' ? 'listening' : 'reading'} questions.`), el('button', { class: 'btn', type: 'button', onclick: home }, 'Back')); focusLead(); say(`Done: ${right} of ${qs.length}.`); }
+  function done() { set(el('p', {}, `Done: ${right} right out of ${qs.length} ${mode === 'audio' ? 'listening' : 'reading'} questions.`), el('button', { class: 'btn', type: 'button', onclick: home }, 'Back')); focusLead(); say(''); }
 
   init();
   return () => { alive = false; wrap.remove?.(); };

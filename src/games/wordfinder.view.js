@@ -15,7 +15,7 @@ export function mount(root, ctx) {
   let alive = true;
   let bank = [], found = { version: 1, found: [], rounds: 0 };
   let topic = TOPIC_FIRST, deck = [], index = 0, phase = 'loading';
-  let wrong = new Set(), hint = false, roundChoices = [];
+  let wrong = new Set(), hint = false, roundChoices = [], lastClean = true;
   const status = h('p', { class: 'wf-status', role: 'status', 'aria-live': 'polite' }, 'Getting your first words ready…');
   const sound = h('p', { class: 'wf-sound muted', role: 'status', 'aria-live': 'polite' });
   const progress = h('div', { class: 'wf-progress', role: 'group', 'aria-label': 'Your word-finding progress' });
@@ -131,11 +131,14 @@ export function mount(root, ctx) {
       focusNextChoice();
       return;
     }
-    persist(target);
+    // C-01 (in miniature): only a clean find (no wrong pick first) is saved as found; after a miss the word comes back in a later round.
+    const clean = wrong.size === 0;
+    if (clean) persist(target);
+    lastClean = clean;
     signalRimon('correct');
     sfx.play('success');
     phase = 'found';
-    status.textContent = 'You found it! There is no penalty for trying.';
+    status.textContent = clean ? 'You found it on the first try! It counts as found.' : 'You found it. It does not count as found yet, because of the earlier pick: it will come back in a later round. There is no penalty for trying.';
     sound.textContent = '';
     paint();
     focusStage('button.wf-next');
@@ -212,9 +215,9 @@ export function mount(root, ctx) {
         h('button', { type: 'button', class: 'btn secondary wf-back', onclick: () => { phase = 'learn'; paint(); focusStage('button.wf-next'); } }, 'Look at the word again'));
     } else if (phase === 'found') {
       stage.replaceChildren(
-        wordCard(word, '✦ You found it!'),
+        wordCard(word, lastClean ? '✦ You found it!' : '✦ You found it (not counted yet)'),
         hearingButtons(word),
-        h('p', { class: 'wf-reassure' }, 'That is one more real word you can recognise.'),
+        h('p', { class: 'wf-reassure' }, lastClean ? 'That is one more real word you can recognise.' : 'Pick it first time in a later round and it counts as found.'),
         h('button', { type: 'button', class: 'btn wf-next', onclick: nextWord }, index + 1 === deck.length ? 'Finish this round ✓' : 'Next word →'));
     }
   }

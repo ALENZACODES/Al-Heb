@@ -244,6 +244,12 @@ test("createSession carry: earlier answers count as answered, and an earlier mis
 const lessonCtx = (store, o = {}) => ({ store, t: (k) => k, settings: settingsOf(o) });
 const { mountLesson } = await import("../src/curriculum/lesson.view.js");
 const content = await (await import("../src/curriculum/content.js")).loadContent();
+// The right option of a shown quick-check question (the lesson pages build their questions the same way).
+const answerOf = (lessonId, qid, tradition = "sephardi") => {
+  const idx = lessons.findIndex((l) => l.id === lessonId);
+  const qs = S.buildChoiceQuestions(byId[lessonId], { ...content, wordPool: lessons.filter((l) => !/^I-\d{2}$/.test(l.id)).flatMap((l) => l.words) }, { seed: 1 + idx, tradition });
+  return qs.find((q) => q.id === qid).answerIndex;
+};
 
 test("quick check (normal mode): answers are saved as you go; reopening says Continue, keeps them, and finishing clears the saved place", async () => {
   const store = memStore(); const ctx = lessonCtx(store);
@@ -299,7 +305,9 @@ test("short session lesson: walking through every part and answering finishes th
     if (q) {
       const cont = btn(root, (b) => b.attrs["data-act"] === "next" && !b.hidden)[0];
       if (cont) { await cont.click(); continue; }
-      await btn(root, (b) => b.attrs["data-n"] === "1")[0].click(); continue;
+      // C-01: the lesson completes only on a pass (70% right on the first try), so answer right
+      const n = answerOf("r01", q.attrs["data-ex"]) + 1;
+      await btn(root, (b) => b.attrs["data-n"] === String(n))[0].click(); continue;
     }
     const next = btn(root, (b) => b.attrs.id === "alef-next-part")[0];
     if (!next) break;

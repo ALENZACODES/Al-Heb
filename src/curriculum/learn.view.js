@@ -13,8 +13,8 @@ import { lessonSummaries as lessons, ranks, rankOf } from "./lessons-index.js";
 import { rankSummary, rankBadge } from "./ranks.js";
 import { due } from "./srs.js";
 import { plural } from "../shell/plural.js";
-import { el, heText, tr, replaceKeepingFocus, levelLabel, showSaveFailure, refocusIfLost } from "./dom.js";
-import { loadState, completeLesson } from "./actions.js";
+import { el, heText, tr, replaceKeepingFocus, levelLabel } from "./dom.js";
+import { loadState } from "./actions.js";
 import { streakVisible } from "../shell/comfort.js";
 import { DAILY_GOAL_KEY, normalizeDailyGoal } from "../home/today.js";
 import { rimonInline } from "../shell/rimon-inline.js";
@@ -137,8 +137,9 @@ function mountMap(root, ctx) {
             state === "locked" ? (() => { let armed = false; const b = el("button", { type: "button", class: "alef-btn alef-btn-secondary alef-unlock", "aria-label": `Locked: ${l.title}. Press twice to unlock.`,
               onclick: (e) => { if (armed) { unlock(); return; } armed = true; showNote(e?.currentTarget?.closest?.("li") || e?.currentTarget?.parent); b.replaceChildren("Press again to unlock"); } }, "Locked"); return b; })() : null,
             state === "locked" ? el("p", { class: "alef-locked-note", hidden: "", role: "note" }, (() => { const need = l.prerequisites.filter((p) => !done.has(p)).map((p) => `“${lessons.find((x) => x.id === p)?.title || p}”`); return (need.length ? `Opens after you finish ${need.join(" and ")}.` : "Opens after the lesson before it.") + " Or double tap it to open it now."; })()) : null,
-            state === "available" ? el("button", { type: "button", class: "alef-btn alef-btn-secondary", "aria-label": `${tr(ctx, "learn.markDone", "Test out")}: Mark complete without studying it: ${l.title}`,
-              onclick: async function markDone() { try { await completeLesson(ctx, l); } catch (e) { if (alive) showSaveFailure(wrap, e, markDone); return; } await render(); if (alive) { h1.focus?.({ preventScroll: true }); refocusIfLost(wrap, "#view-title", h1); } } }, tr(ctx, "learn.markDone", "Test out")) : null);
+            // C-01: "Test out" is a real short test (the lesson's quick check, same pass mark), not a free checkmark.
+            state === "available" ? el("button", { type: "button", class: "alef-btn alef-btn-secondary alef-testout", "aria-label": `${tr(ctx, "learn.markDone", "Test out")}: take a short test to skip ${l.title}. Pass it and the lesson counts as done.`,
+              onclick: () => ctx?.route?.(`/learn?lesson=${l.id}&testout=1`) }, tr(ctx, "learn.markDone", "Test out")) : null);
         })),
       list.length > 8 ? el("p", {}, el("button", { type: "button", class: "btn secondary", id: "alef-show-all", "aria-pressed": String(showAll), onclick: () => { showAll = !showAll; render().then(() => { if (alive) wrap.querySelector?.("#alef-show-all")?.focus?.(); }); } }, showAll ? "Show fewer lessons" : `Show all ${list.length} lessons`)) : null);
   }

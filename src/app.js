@@ -4,7 +4,7 @@ import { watchTitleCase, titleCase } from './shell/title-case.js';
 import { store } from './store.js';
 import { createSettings } from './shell/settings.js';
 import { applyComfort, COMFORT_KEYS } from './shell/comfort.js';
-import { createRouter, ROUTES, loadRouteModule, availableRoutes } from './shell/router.js';
+import { createRouter, ROUTES, loadRouteModule, availableRoutes, clearView, announceTitle } from './shell/router.js';
 import { VIEW_FILES } from './shell/views.generated.js';
 import { renderNav as renderNavBar } from './shell/nav.js';
 import { t, tHe } from './shell/i18n.js';
@@ -240,6 +240,7 @@ async function show(match, ctxBase, { quiet = false } = {}) {
   // superseded before it rendered cannot file the previous page's scroll position under the wrong path.
   if (!quiet) { lastMatch = match; lastCtx = ctxBase; touched = false; touchedOutsideField = false; fieldEdited = false; if (lastHashShown != null) scrollKeeper?.leave(lastHashShown); }
   const live = document.getElementById('announcer');
+  if (!quiet) announceTitle(live, ''); // M-09: the previous page's title leaves the page text as soon as navigation starts
   if (!route) {
     const updating = h('p', { class: 'muted', role: 'status' });
     root.replaceChildren(h('section', { class: 'card' }, h('h1', { id: 'view-title', tabindex: '-1' }, t('notfound.title')), h('p', { class: 'mono' }, path), updating, h('a', { class: 'btn', href: '#/' }, t('nav.home'))));
@@ -259,8 +260,8 @@ async function show(match, ctxBase, { quiet = false } = {}) {
   // U-24: never a blank page while a view module loads — a named skeleton
   // stands in, replaced the moment the view mounts (or by the error card).
   // Keep a first-paint title on Learn, Letters and Sounds so LCP can be the heading, not a late view block.
+  const keepTitle = route.name === 'learn' || route.name === 'letter' || route.name === 'sounds';
   if (!quiet) {
-    const keepTitle = route.name === 'learn' || route.name === 'letter' || route.name === 'sounds';
     const existing = root.querySelector('#view-title');
     const glyph = root.querySelector('.alef-first-glyph');
     if (keepTitle) {
@@ -294,7 +295,11 @@ async function show(match, ctxBase, { quiet = false } = {}) {
   if (token !== navToken) return;
   try {
     if (typeof mod.mount !== 'function') throw new Error('module has no mount(root, ctx) export');
-    // Keep #view-title (already painted, often the LCP element); the placeholder leaves as soon as the view adds content (loading-contract.js).
+    // Keep #view-title (already painted, often the LCP element) and lane 4's loading placeholder (it leaves as soon as the
+    // view adds content, loading-contract.js); drop everything else (M-09), so no stale heading or banner text from the
+    // previous page reaches the new one.
+    const held = (n) => n.id === 'view-title' || ['alef-first-glyph', 'alef-first-paint', 'alef-skeleton', 'alef-skeleton-note', 'alef-snapshot'].some((c) => n.classList?.contains(c));
+    clearView(root, [...root.children].filter((n) => (keepTitle || n.id !== 'view-title') && held(n)));
     const u = await mod.mount(root, ctx);
     loadHold?.viewMounted();
     // Superseded while mounting: this view's cleanup would never be registered (unmount now belongs to the newer navigation), so run it here.
@@ -332,7 +337,7 @@ async function show(match, ctxBase, { quiet = false } = {}) {
     firstShow = false; navFocusOwed = false;
     if (quiet && heldFocusId && (!document.activeElement || document.activeElement === document.body)) document.getElementById(heldFocusId)?.focus({ preventScroll: true });
     heldFocusId = '';
-    if (!quiet) { live.textContent = document.title; if (scrollKeeper) scrollKeeper.arrive(location.hash); else window.scrollTo(0, 0); lastHashShown = location.hash; }
+    if (!quiet) { announceTitle(live, document.title); if (scrollKeeper) scrollKeeper.arrive(location.hash); else window.scrollTo(0, 0); lastHashShown = location.hash; }
     document.body.dataset.route = route?.name ?? 'notfound';
     if (!quiet) shownPath = route ? path : '';
     try { updateCompanions(route?.name, { R: ctxBase?.images, voice: ctxBase?.settings?.get?.('voice') }); } catch (e) { console.warn('companions band failed', e); } // Ari and Noa on every screen; a band fault must not break the view

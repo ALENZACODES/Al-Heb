@@ -48,8 +48,8 @@ async function start(root) { await byId_(root, "alef-int-start").click(); await 
 async function next(root) {
   const before = section(root)?.attrs["data-ex"] + "|" + byId_(root, "alef-int-ex")?.text;
   await byId_(root, "alef-int-next").click();
-  await waitFor(() => /Lesson finished/.test(root.text) || (section(root) && section(root).attrs["data-ex"] + "|" + byId_(root, "alef-int-ex")?.text !== before));
-  await waitFor(() => !/Lesson finished/.test(root.text) || /marked as known/.test(root.text) && /review card|No review cards/.test(root.text));
+  await waitFor(() => /Lesson finished|Not passed yet/.test(root.text) || (section(root) && section(root).attrs["data-ex"] + "|" + byId_(root, "alef-int-ex")?.text !== before));
+  await waitFor(() => !/Lesson finished|Not passed yet/.test(root.text) || /marked as known|right on the first try/.test(root.text) && /review card|No review cards/.test(root.text));
 }
 
 /** Answer the exercise currently shown. `right` false picks a wrong answer where there is one. */
@@ -188,26 +188,28 @@ test("learn.css pins the action bar: sticky, 44px buttons, above the tab bar, sa
   assert.match(css, /max-height:\s*480px[^{]*\{\s*\.alef-actionbar\s*\{[^}]*inset-block-end:\s*env\(safe-area-inset-bottom\)/, "short viewport (soft keyboard): the bar drops to the bottom edge");
 });
 
-test("a whole lesson: wrong answers lapse word cards in the SRS, store keeps results, lesson is completed; fade links to the fade screen", async () => {
+test("a whole lesson answered wrong (C-01): word cards lapse in the SRS, results are kept, but the lesson is NOT completed; fade links to the fade screen", async () => {
   const lesson = FIRST_OF.produce.lesson, l = byId[lesson];
   const store = memStore(); const { root } = await mountLessonAt(store, lesson); await start(root);
-  for (let guard = 0; !/Lesson finished/.test(root.text) && guard < 200; guard++) {
+  for (let guard = 0; !/Lesson finished|Not passed yet/.test(root.text) && guard < 200; guard++) {
     const ex = shownEx(root, l);
     if (ex.type === "fade") assert.ok(section(root).find((n) => n.tag === "a" && n.attrs.href === `#/learn?fade=${encodeURIComponent(ex.line)}`).length);
     await answer(root, ex, false);
   }
-  assert.match(root.text, /Lesson finished/);
-  assert.match(root.text, new RegExp(`0 of ${l.exercises.length} marked as known`));
+  assert.match(root.text, /Not passed yet — try again/);
+  assert.doesNotMatch(root.text, /Lesson finished/);
+  assert.match(root.text, new RegExp(`0 of ${l.exercises.length} right on the first try`));
+  assert.match(root.text, /The pass mark is \d+ of \d+ right on the first try/);
   assert.match(root.text, /Accuracy/); assert.match(root.text, /To review:/);
+  assert.ok(byId_(root, "alef-try-again"), "a Try again button");
   const s = store.m["intermediate.v1"].lessons[lesson];
-  assert.equal(s.score, 0); assert.equal(s.total, l.exercises.length); assert.ok(s.done);
+  assert.equal(s.score, 0); assert.equal(s.total, l.exercises.length); assert.ok(!s.done, "not marked done");
   assert.equal(Object.keys(s.results).length, l.exercises.length);
   const cards = store.m["srs.cards"]; assert.ok(cards && Object.keys(cards).length > 0);
   assert.ok(Object.keys(cards).some((k) => k.startsWith(`word:${lesson}:`) || k.startsWith("line:")));
-  assert.ok(store.m["curriculum.progress"].completed[lesson]);
-  // list now shows it done
+  assert.ok(!store.m["curriculum.progress"]?.completed?.[lesson], "the course does not advance");
   const list = new Node_("div"); V.mount(list, ctxFor(store)); await waitFor(() => /of 50 lessons finished/.test(list.text));
-  assert.match(list.text, /1 of 50 lessons finished/);
+  assert.match(list.text, /0 of 50 lessons finished/);
 });
 
 test("a perfect run creates no word-card lapses and resumes where the learner stopped", async () => {

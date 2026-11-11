@@ -100,6 +100,8 @@ const ON_DEMAND_FILES = new Set([
   'src/coursemap/model.js', 'src/coursemap/syllabus.view.js', 'src/coursemap/timebudget.view.js',
   // Intermediate lessons view (optional preview route /intermediate, 30 KB): route code only, loaded lazily on first open and runtime-cached; its adapter and data stay as they were.
   'src/curriculum/intermediate.view.js',
+  // Timed read-aloud (optional preview route /timedread, 13 KB): view code only, fetched on first open and runtime-cached; its gates data stays installed. Moved when lessons gained a pass mark, test-out and one-feedback rendering (keeps first install under 3.95 MiB).
+  'src/timedread/timedread.view.js',
   // Israel units (preview route /israel-units): view, model and data are loaded on first open and runtime-cached.
   'src/curriculum/practical.view.js', 'src/curriculum/practical-progress.js', 'src/curriculum/practical-written.js',
   // Curriculum page (the whole course in one order): fetched when it is opened

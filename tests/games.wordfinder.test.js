@@ -96,10 +96,16 @@ test('Day-0 view loads a lesson, asks a three-card find question, and saves only
   const correct = root.queryAll('button.wf-choice').find((b) => b.textContent.includes(bank[0].he));
   assert.ok(correct);
   await correct.click();
-  assert.deepEqual(store.get(STORE_KEY).found, [bank[0].id]);
-  assert.match(root.textContent, /You found it/);
+  assert.equal(store.get(STORE_KEY), undefined, 'C-01: a find after a wrong pick is not a clean find, so it is not saved as found');
+  assert.match(root.textContent, /You found it/); assert.match(root.textContent, /not count as found yet/);
   await root.querySelector('button.wf-next').click();
   assert.ok(root.querySelector('.wf-word-card'), 'next learn card appears');
+  // the next word, picked right on the first try, is a clean find and is saved
+  await root.querySelector('button.wf-next').click();
+  const right2 = root.queryAll('button.wf-choice').find((b) => b.textContent.includes(bank[1].he));
+  assert.ok(right2); await right2.click();
+  assert.deepEqual(store.get(STORE_KEY).found, [bank[1].id]);
+  assert.match(root.textContent, /first try! It counts as found/);
   unmount();
 });
 
@@ -124,7 +130,7 @@ test('keyboard focus moves to a usable choice after a miss, then to the answer o
   const answer = root.querySelector('button.wf-glow');
   assert.ok(answer?.focused, 'after the hint, the highlighted answer receives keyboard focus');
   await answer.click();
-  assert.equal(store.get(STORE_KEY).found.length, 1, 'the user must still select the answer');
+  assert.equal(store.get(STORE_KEY), undefined, 'the user must still select the answer, and after a miss it is not a clean find');
   assert.ok(root.querySelector('button.wf-next')?.focused, 'the next action is keyboard-reachable after success');
   unmount();
 });

@@ -1,0 +1,27 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "israeli",
+ "inputText": "יְדִידוּת",
+ "inputSha256": "161b6ebf1ac5b34dc55f2d9e0ea155014c45f65cc0fecfc6298b6bcf90c6c24d",
+ "ingestedAt": "2026-11-11T23:24:05.234Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-11T23:24:05.234Z",
+ "redistributionCleared": false,
+ "spokenText": "יְדִידוּת",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [],
+  "google": {
+   "heard": "ידידות",
+   "acc": 1.0,
+   "issues": []
+  },
+  "reviewersFailing": 0
+ }
+}

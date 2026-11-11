@@ -17,6 +17,35 @@
    (src/shell/update.js does that when the learner presses "Reload now" in the update banner) or when every Aleph tab is closed.
    So a running page is never switched to a newer cache under it. activate still claims clients so the reload lands on the new worker. */
 importScripts('precache-manifest.js');
+// Media hosts (media-hosts.js, generated from tools/deploy/media-hosts.json): audio folders that are also served from the media repositories.
+// A missing or broken file must never stop the worker installing, so the import is guarded; without it every clip comes from this site.
+try { importScripts('media-hosts.js'); } catch (e) { /* no media hosts */ }
+const HOST_WAIT_MS = 4000; // how long the media host gets to start answering before this site's own copy is asked instead
+/**
+ * Network fetch of a clip. When the clip's folder is on a media host, the host is asked first (same bytes, checked at sync time);
+ * any failure there (offline host, blocked request, a slow start, a status other than 200/206/304) falls back to this site, so
+ * the answer is never worse than before. The page still asks for, and the caches still key on, this site's own address.
+ */
+async function clipFetch(reqOrUrl, init) {
+  const own = typeof reqOrUrl === 'string' ? reqOrUrl : reqOrUrl.url;
+  let alt = null;
+  try { alt = typeof self.alefMediaUrl === 'function' ? self.alefMediaUrl(own, self.registration.scope) : null; } catch (e) { alt = null; }
+  if (alt) {
+    let timer = 0;
+    try {
+      const headers = Object.assign({}, (init && init.headers) || {});
+      const range = typeof reqOrUrl !== 'string' && reqOrUrl.headers.get('range');
+      if (range) headers.Range = range;
+      const ctl = new AbortController();
+      timer = setTimeout(() => ctl.abort(), HOST_WAIT_MS);
+      const res = await fetch(alt, { mode: 'cors', credentials: 'omit', headers, signal: ctl.signal, cache: (init && init.cache) || 'default' });
+      clearTimeout(timer);
+      if (res.status === 200 || res.status === 206 || res.status === 304) return res;
+    } catch (e) { clearTimeout(timer); /* fall back to this site */ }
+  }
+  return init ? fetch(reqOrUrl, init) : fetch(reqOrUrl);
+}
+self.clipFetch = clipFetch;
 const VERSION = self.ALEF_VERSION || 'dev';
 const SHELL = `alef-shell-${VERSION}`;
 const RUNTIME = 'alef-runtime-v1'; // audio clips only (cache first, kept across versions)
@@ -48,7 +77,7 @@ async function revalidateClip(url, hit) {
     const etag = hit.headers.get('etag'); const lm = hit.headers.get('last-modified');
     if (etag) headers['If-None-Match'] = etag;
     if (lm) headers['If-Modified-Since'] = lm;
-    const res = await fetch(url, { headers, cache: 'no-cache' });
+    const res = await clipFetch(url, { headers, cache: 'no-cache' });
     if (res.status !== 200) return; // 304: unchanged; anything else: keep what we have
     const fresh = new Uint8Array(await res.clone().arrayBuffer());
     if (fresh.byteLength > capFor(url)) { await (await clipCache(url)).delete(url); return; }
@@ -65,7 +94,7 @@ async function fillClip(url, total) {
   inFlight.add(url);
   try {
     if (await (await clipCache(url)).match(url)) return;
-    const res = await fetch(url);
+    const res = await clipFetch(url);
     if (res.status !== 200) return;
     const buf = await res.clone().arrayBuffer();
     if (buf.byteLength > capFor(url)) return;
@@ -93,7 +122,7 @@ async function audioRange(req, event) {
     if (r === 'bad') return new Response(buf, { status: 200, headers: { 'content-type': type, 'content-length': String(len), 'accept-ranges': 'bytes' } });
     return new Response(buf.slice(r.a, r.b + 1), { status: 206, headers: { 'content-type': type, 'content-length': String(r.b - r.a + 1), 'content-range': `bytes ${r.a}-${r.b}/${len}`, 'accept-ranges': 'bytes' } });
   }
-  const res = await fetch(req); // not cached yet: network answers (offline: this rejects, as before)
+  const res = await clipFetch(req); // not cached yet: network answers, the media host first when the folder is hosted (offline: this rejects, as before)
   const cr = /\/(\d+)$/.exec(res.headers.get('content-range') || '');
   const total = res.status === 206 && cr ? +cr[1] : res.status === 200 ? +(res.headers.get('content-length') || 0) : 0;
   return { res, total };
@@ -176,7 +205,7 @@ self.addEventListener('fetch', (event) => {
     event.respondWith((async () => {
       const hit = await caches.match(req);
       if (hit) { if (AUDIO.test(url.pathname) && hit.status === 200) event.waitUntil(revalidateClip(req.url, hit.clone())); return hit; }
-      const res = await fetch(req);
+      const res = AUDIO.test(url.pathname) ? await clipFetch(req) : await fetch(req);
       if (res.ok && !(AUDIO.test(url.pathname) && +(res.headers.get('content-length') || 0) > capFor(req.url))) { const name = AUDIO.test(url.pathname) ? RUNTIME : DATA; const c = await caches.open(isMusic(req.url) ? MUSIC : name); c.put(req, res.clone()); if (AUDIO.test(url.pathname) && !isMusic(req.url)) event.waitUntil(trimClips()); }
       return res;
     })());

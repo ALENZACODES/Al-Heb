@@ -1,0 +1,38 @@
+/* Loaded when #/curriculum first opens (src/curriculum/path.view.js), not in the first-install CSS. */
+/* Curriculum (#/curriculum): the whole course in one order. */
+.alef-path-lead { font-size: 1.05rem; }
+.alef-path-next { margin-block: 1rem; padding: .9rem 1rem; border: 2px solid var(--accent, #d4a647); border-radius: 16px; background: color-mix(in srgb, currentColor 5%, transparent); }
+.alef-path-next h2 { margin: 0 0 .6rem; font-size: 1.15rem; }
+.alef-path-next-list { list-style: none; margin: 0; padding: 0; display: grid; gap: .55rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr)); }
+.alef-path-next-link { display: flex; flex-direction: column; align-items: flex-start; gap: .15rem; inline-size: 100%; block-size: 100%; min-block-size: 44px; text-align: start; white-space: normal; padding: .6rem .8rem; }
+.alef-path-next-kind { font-size: .78rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+.alef-path-next-title { font-weight: 700; line-height: 1.25; overflow-wrap: anywhere; }
+.alef-path-next-meta { font-size: .85rem; font-weight: 500; }
+.alef-path-total { display: grid; gap: .5rem; margin-block: .8rem; }
+.alef-path-bar { position: relative; block-size: 1.9rem; border-radius: 999px; overflow: hidden; border: 1px solid color-mix(in srgb, currentColor 30%, transparent); background: color-mix(in srgb, currentColor 6%, transparent); }
+.alef-path-bar-fill { position: absolute; inset-block: 0; inset-inline-start: 0; background: color-mix(in srgb, var(--accent, #d4a647) 55%, transparent); }
+.alef-path-bar-text { position: relative; display: block; padding-inline: .8rem; line-height: 1.9rem; font-size: .9rem; font-weight: 700; }
+.alef-path-links { list-style: none; margin: .2rem 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0 1.5rem; }
+.alef-path-links a { display: inline-block; min-block-size: 44px; padding-block: .6rem; }
+.alef-path-stage { margin-block-start: 1.1rem; padding: .9rem 1rem; border: 1px solid color-mix(in srgb, currentColor 22%, transparent); border-radius: 16px; }
+.alef-path-stage.is-current { border: 2px solid var(--accent, #d4a647); }
+.alef-path-stage h2 { margin: 0 0 .2rem; font-size: 1.2rem; }
+.alef-path-status { margin: 0 0 .6rem; font-size: .92rem; }
+.alef-path-block { border-block-start: 1px solid color-mix(in srgb, currentColor 16%, transparent); }
+.alef-path-block > summary { cursor: pointer; min-block-size: 44px; padding-block: .65rem; display: flex; flex-wrap: wrap; align-items: baseline; gap: .15rem .6rem; }
+.alef-path-block-name { font-weight: 800; }
+.alef-path-meta { font-size: .85rem; opacity: .85; }
+.alef-path-gates { margin: 0 0 .5rem; padding-inline-start: 1.1rem; font-size: .88rem; }
+.alef-path-lessons { margin: 0 0 .6rem; padding-inline-start: 2rem; }
+.alef-path-item { padding-block: .1rem; }
+.alef-path-item > a { display: block; inline-size: fit-content; max-inline-size: 100%; min-block-size: 44px; padding-block: .6rem .7rem; overflow-wrap: anywhere; }
+.alef-path-item .alef-path-meta { display: inline-block; margin-block-start: -.5rem; padding-block-end: .35rem; }
+@media (min-width: 720px) { .alef-path-lessons { column-count: 2; column-gap: 2.5rem; } .alef-path-item { break-inside: avoid; } }
+.alef-path-done { display: inline-block; margin-inline-start: .5rem; padding: .05rem .5rem; border-radius: 999px; font-size: .78rem; font-weight: 800; border: 1px solid currentColor; }
+.alef-path-units { list-style: none; margin: 0 0 .6rem; padding: 0; display: grid; gap: .7rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 17rem), 1fr)); }
+.alef-path-unit { min-inline-size: 0; padding: .5rem .7rem .6rem; border-radius: 12px; background: color-mix(in srgb, currentColor 5%, transparent); }
+.alef-path-unit-name { display: inline-block; min-block-size: 44px; padding-block: .6rem; font-weight: 700; overflow-wrap: anywhere; }
+.alef-path-unit .alef-path-meta { display: block; margin-block: -.35rem .45rem; }
+.alef-path-pages { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .4rem; }
+.alef-path-page { display: grid; place-items: center; inline-size: 44px; block-size: 44px; border-radius: 10px; border: 1px solid color-mix(in srgb, currentColor 40%, transparent); font-weight: 700; text-decoration: none; }
+.alef-path-page.is-done { background: color-mix(in srgb, var(--accent, #d4a647) 55%, transparent); border-style: double; border-width: 3px; }

@@ -36,6 +36,7 @@ One line per route; the backtick name is the route `name` in `ROUTES` (the test 
 - `readhub` (/read-home) - a short Read door with links to texts, little books, the library, Torah reading, the service, scan and camera (added 2026-11-10 so the Read tab has a v0 page).
 - `speakhub` (/speak-home) - a short Speak door with links to Say it, Talk, Listen, Songs and pronunciation styles (added 2026-11-10 so the Speak tab has a v0 page).
 - `practical` (/practical) - Practical places course (promoted 2026-11-10 so learners can find it; every line is copied from existing lessons or the phrasebook, and native review is still required).
+- `curriculum` (/curriculum) - the whole course in one order: every lesson and every Practical page in five stages (added 2026-11-11 at the owner's request; the page is built from the lesson and Practical data and adds no Hebrew)
 - `help` (/help) - the beginner's help page: plain-word answers about starting, sound, progress and what is not finished yet (added 2026-11-07, usability review U-10: the app had no help page at all; the deep explainer stays at /how).
 
 Why these: they are the shortest path a new learner takes (welcome, first day, lessons, letters, review, progress), plus the pages a

@@ -139,6 +139,8 @@ export const ROUTES = [
   { name: 'rules-page', pattern: '/rules/:rule', module: '../pronunciation/rules.view.js', title: 'Pronunciation rules', owner: 'pronunciation', optional: true, group: 'learn' },
   { name: 'intermediate',       pattern: '/intermediate',     module: '../curriculum/intermediate.view.js', title: 'Intermediate lessons', owner: 'intermediate', optional: true, group: 'learn', quick: 'nav.intermediate' },
   { name: 'intermediatelesson', pattern: '/intermediate/:id', module: '../curriculum/intermediate.view.js', title: 'Intermediate lesson',  owner: 'intermediate', optional: true, paramQuery: { id: 'id' } },
+  // Curriculum: every lesson and every Practical page in one order to follow (data/curriculum/path.json, built by tools/curriculum/build_path.mjs).
+  { name: 'curriculum',    pattern: '/curriculum',    module: '../curriculum/path.view.js',      title: 'Curriculum',     owner: 'curriculum', optional: true, tier: 'v0', group: 'learn', quick: 'nav.curriculum' },
   { name: 'practical',     pattern: '/practical',     module: '../curriculum/practical.view.js', title: 'Practical',      owner: 'curriculum', optional: true, tier: 'v0', group: 'learn', quick: 'nav.practical' },
   { name: 'practicalunit', pattern: '/practical/:id', module: '../curriculum/practical.view.js', title: 'Practical unit', owner: 'curriculum', optional: true, paramQuery: { id: 'id' } },
   { name: 'practicalpage', pattern: '/practical/:id/:page', module: '../curriculum/practical.view.js', title: 'Practical page', owner: 'curriculum', optional: true, paramQuery: { id: 'id', page: 'page' } },

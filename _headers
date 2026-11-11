@@ -46,6 +46,8 @@
   Cache-Control: no-cache
 /precache-manifest.js
   Cache-Control: no-cache
+/media-hosts.js
+  Cache-Control: no-cache
 /robots.txt
   Cache-Control: no-cache
 /sitemap.xml

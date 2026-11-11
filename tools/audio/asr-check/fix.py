@@ -133,6 +133,7 @@ def main():
     ap.add_argument('--verdicts', default='fail,unheard,borderline')
     ap.add_argument('--shard', type=int, default=0, help='with --of: re-record only this slice of the list (for parallel runs)')
     ap.add_argument('--of', type=int, default=1)
+    ap.add_argument('--skip-tried', action='store_true', help='leave out recordings an earlier run already tried with no take passing (they are in ASR-NEEDS-HUMAN.md); a run that the voice service did not answer does not count as tried')
     ap.add_argument('--log', help='write this run\'s log lines here instead of fix-log.jsonl (parallel runs; join them with --collect)')
     ap.add_argument('--collect', help='folder of slice logs from parallel runs: join them into fix-log.jsonl, save what each kept take was heard as, list what no take fixed')
     a = ap.parse_args()
@@ -145,6 +146,8 @@ def main():
         want = set(a.only.split(','))
         rows = [r for r in rows if r['phonetic'].strip().lower() in want]
     done = {r['file'] for r in L.jl_read(LOG) if r.get('kept')}
+    if a.skip_tried:
+        done |= {r['file'] for r in L.jl_read(LOG) if not r.get('kept') and any('error' not in t for t in r.get('tried', []))}
     rows = [r for r in rows if r['file'] not in done]
     rows = [r for i, r in enumerate(rows) if i % a.of == a.shard][:a.limit]
     log_path = a.log or LOG
@@ -178,7 +181,8 @@ def main():
             heard = L.hear(out)
             s = L.score(r['pointed_hebrew'], heard)
             tried.append({'voice': name, 'text': text, 'heard': heard, 'score': s})
-            if s is not None and s >= L.PASS and (best is None or s > best[0]):
+            # score() answers 'digits' (a string) when the check heard a number: that is not a pass mark to compare
+            if isinstance(s, (int, float)) and s >= L.PASS and (best is None or s > best[0]):
                 best = (s, out, name, text, heard)
                 if s >= 1.0:
                     break

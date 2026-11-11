@@ -40,9 +40,12 @@ jobs:
         with: { python-version: '3.12' }
       - run: sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg && pip install -q numpy faster-whisper
       - name: Re-record slice ${{ matrix.shard }} of 12
+        run: python tools/audio/asr-check/fix.py --execute --skip-tried --shard ${{ matrix.shard }} --of 12 --log slice-${{ matrix.shard }}.jsonl
+      - name: Keep what this slice did (also when the step above stopped part-way)
+        if: always()
         run: |
-          python tools/audio/asr-check/fix.py --execute --shard ${{ matrix.shard }} --of 12 --log slice-${{ matrix.shard }}.jsonl
-          mkdir -p out && mv slice-${{ matrix.shard }}.jsonl out/
+          mkdir -p out
+          [ -f slice-${{ matrix.shard }}.jsonl ] && mv slice-${{ matrix.shard }}.jsonl out/ || true
           for f in $(git diff --name-only -- audio); do mkdir -p "out/$(dirname "$f")"; cp "$f" "out/$f"; done
           find out -name '*.mp3' | wc -l
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2

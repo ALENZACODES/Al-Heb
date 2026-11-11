@@ -234,7 +234,7 @@
         "kind": "consonant",
         "id": "ayin"
       },
-      "israeli": "silent, or a tiny catch like the break in uh-oh (same as alef)",
+      "israeli": "silent, or a tiny catch like the break in uh-oh (same as aleph)",
       "american": "silent",
       "ashkenazi": "silent in most forms. Traditional authorities advised a throaty sound in prayer, which is rarely done.",
       "other": [
@@ -265,7 +265,7 @@
         "sephardicu"
       ],
       "americanBasis": "Same as Israeli; lane 3 inference for American habits.",
-      "note": "In Israeli speech ayin and alef are the same sound. Trying a pharyngeal there is likely to sound foreign; that last point is lane 3's inference.",
+      "note": "In Israeli speech ayin and aleph are the same sound. Trying a pharyngeal there is likely to sound foreign; that last point is lane 3's inference.",
       "sephardi": {
         "say": "A real sound from the throat, like the Arabic ayin, among Balkan, Turkish, North African and Levantine Sephardim; the Spanish-Portuguese and Italian communities say ng as in singing.",
         "translit": "’ (an apostrophe: Shema’, ma’ariv); ng among Western Sephardim"

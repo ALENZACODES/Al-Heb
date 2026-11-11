@@ -434,9 +434,9 @@ export function weakSpots(s, { max = 6, has = () => true } = {}) {
   return rows.sort((a, b) => b.score - a.score || a.key.localeCompare(b.key)).slice(0, max);
 }
 
-/** "mem-final" -> "Mem (final)"; "shin-dot" -> "Shin dot"; others capitalised. */
+/** "mem-final" -> "Mem (final)"; "shin-dot" -> "Shin dot"; others capitalised. The first letter's id is "alef"; on screen it is written Aleph. */
 export function niceId(id) {
-  const s = String(id ?? '');
+  const s = String(id ?? '').replace(/\balef\b/g, 'aleph');
   if (s.endsWith('-final')) return cap(s.slice(0, -6)) + ' (final)';
   return cap(s.replace(/-/g, ' '));
 }

@@ -52,7 +52,7 @@ export const SHVA_RULES = [
   { id: 'T1', level: 2, status: 'todo', text: 'Shva between two marked accents is vocal (עִירְךָ).', source: 'Sefaria sheet 626927' },
   { id: 'T2', level: 2, status: 'todo', text: 'Shva after a letter carrying a trope is vocal (conflicts with L3 reading; unresolved).', source: 'Sefaria sheet 626927' },
   { id: 'T3', level: 2, status: 'todo', text: 'Shva after the prefixes כַּ מִ שֶׁ בַּ לַ הַ is vocal; after conjunctive וּ most scholars say silent. Needs morphology.', source: 'Sefaria sheet 626927' },
-  { id: 'T4', level: 1, status: 'todo', text: 'If the second letter is alef, heh or ayin the shva is pronounced as a short e.', source: 'HebrewPod101 (heuristic)' },
+  { id: 'T4', level: 1, status: 'todo', text: 'If the second letter is aleph, heh or ayin the shva is pronounced as a short e.', source: 'HebrewPod101 (heuristic)' },
   { id: 'T5', level: 1, status: 'todo', text: 'Colloquial Israeli realisation (z\'man, g\'dola): no corpus data in our notes.', source: 'Wikipedia: Modern Hebrew phonology (qualitative only)' },
 ];
 

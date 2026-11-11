@@ -275,15 +275,15 @@ export function letterSequencePuzzle(letters, level, rnd = Math.random) {
     const shown = alef.slice(s, s + shownN);
     const answer = alef[s + shownN];
     const opts = choices(answer, alef.filter((l) => l.id !== answer.id).concat([answer]), 4, rnd, (a, b) => a.id === b.id);
-    return { kind: 'next', shown, answer, choices: opts, step: 1, hint: 'the next letter of the alef-bet' };
+    return { kind: 'next', shown, answer, choices: opts, step: 1, hint: 'the next letter of the aleph-bet' };
   }
   const shown = idx.slice(0, shownN).map((i) => alef[i]);
   const answer = alef[idx[shownN]];
   const opts = choices(answer, alef, 4, rnd, (a, b) => a.id === b.id);
-  const hint = kind === 'back' ? 'the previous letter of the alef-bet'
-    : kind === 'skip2' ? 'every second letter of the alef-bet'
-    : kind === 'skip3' ? 'every third letter of the alef-bet'
-    : 'the next letter of the alef-bet';
+  const hint = kind === 'back' ? 'the previous letter of the aleph-bet'
+    : kind === 'skip2' ? 'every second letter of the aleph-bet'
+    : kind === 'skip3' ? 'every third letter of the aleph-bet'
+    : 'the next letter of the aleph-bet';
   return { kind, shown, answer, choices: opts, step: stepN, hint: level <= 6 ? hint : 'the same pattern' };
 }
 

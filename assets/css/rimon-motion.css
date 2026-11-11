@@ -1,0 +1,58 @@
+/* Rimon's body movement (src/shell/rimon-motion.js loads this after the companion is on screen; docs/images/rimon-motion.md).
+   Movement on top of the drawn frames, so Rimon is never a frozen picture. Transforms on the picture only: the host's own
+   transform is the phone peek. Switched on by .rimon-lively, which the motion module adds. Reduced motion, .rimon-static
+   (assets/css/rimon.css) and calm mode (:root[data-calm] in app.css) switch all of it off. Not part of the first install. */
+/* 1. Waiting: a slow sway with the breath, on the sprite and on a still (Rimon dressed for the screen). */
+.rimon-companion.rimon-lively[data-action=idle] .rimon-sprite,
+.rimon-companion.rimon-lively.rimon-has-still .rimon-still{animation:rimon-sway 5.2s ease-in-out infinite}
+@keyframes rimon-sway{0%,100%{transform:none}25%{transform:rotate(-2deg) scale(1.012,1.026) translateY(-1px)}50%{transform:scale(1.02,1.036) translateY(-2px)}75%{transform:rotate(2deg) scale(1.012,1.026) translateY(-1px)}}
+/* 2. Reactions: the body moves with each drawn move (data-action is set by src/shell/rimon.js for as long as the move plays). */
+.rimon-lively[data-action=bounce] .rimon-sprite{animation:rimon-jump .66s cubic-bezier(.3,0,.4,1) 2}
+.rimon-lively[data-action=laugh] .rimon-sprite{animation:rimon-giggle .5s ease-in-out 4}
+.rimon-lively[data-action=wave] .rimon-sprite{animation:rimon-tilt 1s ease-in-out 2}
+.rimon-lively[data-action=wink] .rimon-sprite{animation:rimon-cheeky .9s ease-in-out .3s 1}
+.rimon-lively[data-action=highfive] .rimon-sprite{animation:rimon-reach 1.1s cubic-bezier(.3,1.4,.5,1) .45s 1}
+.rimon-lively[data-action=nervous] .rimon-sprite{animation:rimon-jitter .56s ease-in-out 5}
+.rimon-lively[data-action=sad] .rimon-sprite{animation:rimon-droop 2.4s ease-in-out 1}
+.rimon-lively[data-action=thinking] .rimon-sprite{animation:rimon-ponder 3.2s ease-in-out 1}
+.rimon-lively[data-action=point] .rimon-sprite{animation:rimon-lean-in 1.25s ease-in-out 2}
+.rimon-lively[data-action=stretch] .rimon-sprite{animation:rimon-reach-up 1.45s ease-in-out 2}
+.rimon-lively[data-action=yawn] .rimon-sprite{animation:rimon-inflate 3.3s ease-in-out 1}
+@keyframes rimon-jump{0%,100%{transform:none}15%{transform:scale(1.08,.9)}45%{transform:translateY(-16%) scale(.95,1.08)}75%{transform:translateY(0) scale(1.07,.93)}}
+@keyframes rimon-giggle{0%,100%{transform:none}50%{transform:translateY(-3%) rotate(1.5deg) scale(1.02)}}
+@keyframes rimon-tilt{0%,100%{transform:none}30%{transform:rotate(-6deg)}70%{transform:rotate(4deg)}}
+@keyframes rimon-cheeky{0%,100%{transform:none}35%{transform:rotate(8deg) translateY(-5%)}65%{transform:rotate(5deg) translateY(-2%)}}
+@keyframes rimon-reach{0%,100%{transform:none}40%{transform:translate(-5%,-12%) scale(1.1) rotate(-5deg)}60%{transform:translate(-4%,-9%) scale(1.08) rotate(-4deg)}}
+@keyframes rimon-jitter{0%,100%{transform:none}25%{transform:translateX(-1.5%)}75%{transform:translateX(1.5%)}}
+@keyframes rimon-droop{0%,100%{transform:none}25%,70%{transform:translateY(3%) scale(1.03,.95) rotate(-3deg)}}
+@keyframes rimon-ponder{0%,100%{transform:none}30%,70%{transform:rotate(5deg) translateY(-1%)}}
+@keyframes rimon-lean-in{0%,100%{transform:none}45%{transform:translateX(-7%) rotate(-7deg)}}
+@keyframes rimon-reach-up{0%,100%{transform:none}50%{transform:scale(.95,1.13) translateY(-3%)}}
+@keyframes rimon-inflate{0%,100%{transform:none}45%,60%{transform:scale(1.06,1.07) rotate(-2deg)}}
+/* 3. Fidgets while waiting, the hop in on a new screen, the pop of a new still, and the tap reaction (classes set by the module). */
+.rimon-companion.rimon-lively.rimon-fx-hop :is(.rimon-sprite,.rimon-still){animation:rimon-jump .64s cubic-bezier(.3,0,.4,1) 1}
+.rimon-companion.rimon-lively.rimon-fx-wiggle :is(.rimon-sprite,.rimon-still){animation:rimon-wiggle 1.1s ease-in-out 1}
+.rimon-companion.rimon-lively.rimon-fx-nod :is(.rimon-sprite,.rimon-still){animation:rimon-nod 1.1s ease-in-out 1}
+.rimon-companion.rimon-lively.rimon-fx-twirl :is(.rimon-sprite,.rimon-still){animation:rimon-twirl .86s cubic-bezier(.4,0,.3,1) 1}
+.rimon-companion.rimon-lively.rimon-fx-lean :is(.rimon-sprite,.rimon-still){animation:rimon-lean .98s ease-in-out 1}
+.rimon-companion.rimon-lively.rimon-fx-peekaboo :is(.rimon-sprite,.rimon-still){animation:rimon-jump .64s cubic-bezier(.3,0,.4,1) 1}
+.rimon-companion.rimon-lively.rimon-corner.rimon-fx-peekaboo :is(.rimon-sprite,.rimon-still){animation:rimon-peekaboo 1.1s cubic-bezier(.4,0,.3,1) 1}
+.rimon-companion.rimon-lively.rimon-fx-enter :is(.rimon-sprite,.rimon-still){animation:rimon-enter .6s cubic-bezier(.2,1.2,.4,1) 1 both}
+.rimon-companion.rimon-lively.rimon-fx-pop :is(.rimon-sprite,.rimon-still){animation:rimon-pop .44s cubic-bezier(.2,1.4,.4,1) 1}
+.rimon-companion.rimon-lively.rimon-fx-boing :is(.rimon-sprite,.rimon-still){animation:rimon-boing .54s ease-out 1}
+@keyframes rimon-wiggle{0%,100%{transform:none}20%{transform:rotate(-7deg)}40%{transform:rotate(6deg)}60%{transform:rotate(-4deg)}80%{transform:rotate(3deg)}}
+@keyframes rimon-nod{0%,100%{transform:none}25%,65%{transform:translateY(3%) scale(1.04,.94)}45%,85%{transform:translateY(-2%) scale(.98,1.04)}}
+@keyframes rimon-twirl{0%{transform:none}50%{transform:translateY(-10%) rotateY(180deg)}100%{transform:translateY(0) rotateY(360deg)}}
+@keyframes rimon-lean{0%,100%{transform:none}35%{transform:rotate(-9deg) translateX(-4%)}70%{transform:rotate(5deg) translateX(2%)}}
+@keyframes rimon-peekaboo{0%,100%{transform:none}30%,45%{transform:translateY(62%) scale(1.03,.94)}70%{transform:translateY(-9%) scale(.96,1.08)}85%{transform:translateY(2%) scale(1.04,.96)}}
+@keyframes rimon-enter{0%{opacity:0;transform:translateY(55%) scale(.6) rotate(-10deg)}60%{opacity:1;transform:translateY(-8%) scale(1.08) rotate(3deg)}80%{transform:translateY(2%) scale(.97)}100%{transform:none}}
+@keyframes rimon-pop{0%{transform:scale(.82,.9)}55%{transform:scale(1.1,1.12)}100%{transform:none}}
+@keyframes rimon-boing{0%,100%{transform:none}25%{transform:scale(1.14,.86)}55%{transform:scale(.92,1.12) translateY(-6%)}80%{transform:scale(1.04,.97)}}
+.rimon-lively .rimon-sprite{cursor:pointer}
+/* 4. Rimon drawn into a page (the large Rimon under a heading, the card at the bottom, the in-page sprite) breathes too. */
+.rimon-hero img{transform-origin:50% 90%;animation:rimon-hero-in .55s cubic-bezier(.2,1.4,.4,1) both,rimon-float 4.2s ease-in-out .55s infinite}
+.rimon-toast img{transform-origin:50% 90%;animation:rimon-wiggle 1.1s ease-in-out .25s 1,rimon-float 4.2s ease-in-out 1.4s infinite}
+.rimon-inline,.lab-rimon,.alef-rimon:not(.alef-rimon-burst){transform-origin:50% 90%;animation:rimon-float 4.2s ease-in-out infinite}
+@keyframes rimon-float{0%,100%{transform:none}50%{transform:translateY(-3%) rotate(-1.2deg) scale(1.012,1.03)}}
+@keyframes rimon-hero-in{0%{opacity:0;transform:translateY(22%) scale(.7) rotate(-8deg)}65%{opacity:1;transform:translateY(-5%) scale(1.06) rotate(2deg)}100%{transform:none}}
+@media(prefers-reduced-motion:reduce){.rimon-hero img,.rimon-toast img,.rimon-inline,.lab-rimon,.alef-rimon{animation:none!important}}

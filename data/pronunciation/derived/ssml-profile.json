@@ -18,7 +18,7 @@
   },
   "sephardi": {
    "lang": "he-IL",
-   "ipaInventory": "adds ʔ (alef), ħ (het), ʕ (ayin), trilled r, x; no length marks",
+   "ipaInventory": "adds ʔ (aleph), ħ (het), ʕ (ayin), trilled r, x; no length marks",
    "browser": "no browser voice is known to do this; the he-IL voice will read it as Israeli. Needs a recording or an engine that honours IPA"
   },
   "ashkenazi": {

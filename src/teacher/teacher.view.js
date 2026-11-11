@@ -68,8 +68,8 @@ export function mount(root, ctx = {}) {
         ta,
         h('div', { class: 'tc-row' },
           h('button', { type: 'button', class: 'btn', onclick: async () => { try { await navigator.clipboard.writeText(code); status.textContent = 'Code copied.'; } catch { ta.focus?.(); ta.select?.(); status.textContent = 'Select the code and copy it yourself.'; } } }, 'Copy code'),
-          h('button', { type: 'button', class: 'btn secondary', onclick: () => download('alef-progress.json', json, 'application/json') }, 'Download file (.json)'),
-          h('button', { type: 'button', class: 'btn secondary', onclick: () => download('alef-progress.txt', code + '\n', 'text/plain') }, 'Download file (.txt)')),
+          h('button', { type: 'button', class: 'btn secondary', onclick: () => download('aleph-progress.json', json, 'application/json') }, 'Download file (.json)'),
+          h('button', { type: 'button', class: 'btn secondary', onclick: () => download('aleph-progress.txt', code + '\n', 'text/plain') }, 'Download file (.txt)')),
         h('details', {}, h('summary', {}, 'Show the exact file contents'), h('pre', { class: 'tc-code', tabindex: '0' }, json)));
     }
     main.replaceChildren(draft,

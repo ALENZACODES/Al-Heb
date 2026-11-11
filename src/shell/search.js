@@ -24,7 +24,7 @@ const FEATURE_WORDS = {
   games: 'play playing game',
   vocab: 'dictionary words word meanings translate translation',
   calendar: 'dates shabbat holidays festivals portion week',
-  letters: 'alphabet alef bet letters tracing',
+  letters: 'alphabet aleph alef bet letters tracing',
   books: 'stories story book reading',
   help: 'help questions answers guide stuck',
   settings: 'voice style preferences options',

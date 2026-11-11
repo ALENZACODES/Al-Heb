@@ -189,7 +189,7 @@
     },
     "sephardi": {
      "merged": [],
-     "text": "Strict Sephardi/Mizrahi keeps ayin as a pharyngeal consonant, different from alef."
+     "text": "Strict Sephardi/Mizrahi keeps ayin as a pharyngeal consonant, different from aleph."
     },
     "ashkenazi": {
      "merged": [
@@ -208,7 +208,7 @@
    },
    "mouth": [
     {
-     "for": "alef / ayin (Israeli)",
+     "for": "aleph / ayin (Israeli)",
      "steps": [
       "Say uh-oh slowly. The little stop between uh and oh is the glottal stop.",
       "Between two vowels (sha-AL, ma-A-seh) use that catch very lightly. At the start of a word say nothing: just begin with the vowel."

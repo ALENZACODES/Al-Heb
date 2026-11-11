@@ -339,7 +339,11 @@ async function boot() {
   // Rimon's greeting (the companion module is about 101 KB with its imports) waits until after first paint
   // and the first-load JS window, like the other after-paint work, so Home stays under the 532 KB budget.
   shownFirst.then(() => afterPaint(() => {
-    import('./shell/rimon.js').then((m) => m.mountRimon({ store })).catch((e) => console.warn('rimon failed', e));
+    import('./shell/rimon.js').then((m) => {
+      const rimon = m.mountRimon({ store });
+      // Body movement on top of Rimon's drawn moves (src/shell/rimon-motion.js): decoration only, loaded after the companion.
+      import('./shell/rimon-motion.js').then((mm) => { try { mm.mountRimonMotion({ companion: rimon }); } catch (e) { console.warn('rimon motion failed', e); } }).catch(() => {});
+    }).catch((e) => console.warn('rimon failed', e));
     import('./shell/rimon-stills-lazy.js').then((m) => { try { m.mountRimonStillsLazy(); } catch (e) { console.warn('rimon stills failed', e); } }).catch((e) => console.warn('rimon stills failed', e));
   }, { waitMs: 8000, minMs: 8000 })).catch(() => {});
   // Day-start stamp (Early Bird / Night Owl evidence): first opening of the day, before any study can happen.

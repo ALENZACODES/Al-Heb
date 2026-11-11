@@ -76,7 +76,7 @@ export function exportProgress(store, now = Date.now()) {
 }
 export function exportProgressJSON(store, now) { return JSON.stringify(exportProgress(store, now), null, 2); }
 /** File name for a download. @param {number|Date} [now] */
-export function progressFileName(now = Date.now()) { return `alef-progress-${new Date(now).toISOString().slice(0, 10)}.json`; }
+export function progressFileName(now = Date.now()) { return `aleph-progress-${new Date(now).toISOString().slice(0, 10)}.json`; }
 
 /**
  * Validate a progress backup WITHOUT touching the store. Mirrors importProgress's checks.

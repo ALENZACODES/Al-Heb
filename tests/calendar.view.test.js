@@ -162,7 +162,7 @@ test("reminders list, .ics download status, toggles", async () => {
   await byId(root, "alef-ics-days").fire("change", { target: { value: "30" } });
   await byId(root, "alef-ics-btn").click();
   assert.equal(clicked.length, 1);
-  assert.match(clicked[0], /^alef-calendar-2026-11-04\.ics$/);
+  assert.match(clicked[0], /^aleph-calendar-2026-11-04\.ics$/);
   assert.match(byId(root, "alef-rem-status").text, /Downloaded \d+ events for 30 days/);
   assert.match(byId(root, "alef-rem-status").text, /alarm behaviour depends on the calendar app/);
   // switch everything off -> nothing to export

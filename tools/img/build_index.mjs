@@ -63,7 +63,8 @@ function synthAlt(stem, set) {
   if ((m = /^BADGE_(\d+)$/.exec(stem))) return `Achievement badge ${+m[1]}.`;
   if ((m = /^PRAY_(.+)_(\d+)$/.exec(stem))) return `Illustration ${+m[2]} for the ${m[1].replace(/_/g, ' ')} page.`;
   if ((m = /^BRAND_(.+)$/.exec(stem))) return `Aleph brand artwork: ${m[1].replace(/_/g, ' ')}.`;
-  return `Illustration: ${stem.replace(/_/g, ' ')}${set ? ` (${set.replace(/_/g, ' ')})` : ''}.`;
+  const say = (t) => t.replace(/_/g, ' ').replace(/\balef\b/g, 'aleph'); // the id is "alef"; alt text is read aloud, so it says aleph
+  return `Illustration: ${say(stem)}${set ? ` (${say(set)})` : ''}.`;
 }
 
 function readCsv(root, rel) { const p = join(root, rel); return existsSync(p) ? parseCsv(readFileSync(p, 'utf8')) : []; }
@@ -97,7 +98,7 @@ export function buildIndexFrom({ manifest = [], blockJ = [], inter = [], altText
   // Approved opposite-pair gap artwork was added outside the original intake CSV.
   for (const id of Object.keys(edges).filter((id) => /^OPP_gap_(white_black|expensive_cheap|strong_weak|happy_sad|near_far)$/.test(id))) put(id, { set: 'Opposites gap', alt: 'Opposites: ' + id.slice(8).replaceAll('_', ' and ') + '.' });
   // Reviewed meet cartoons are runtime letter artwork added after the intake CSV.
-  for (const id of Object.keys(edges).filter((id) => /^L\d\d_[a-z_]+_print_meet$/.test(id))) put(id, { set: '', alt: 'Meet the Hebrew letter ' + id.replace(/^L\d\d_/, '').replace(/_print_meet$/, '').replaceAll('_', ' ') + ': illustrated letter character.' });
+  for (const id of Object.keys(edges).filter((id) => /^L\d\d_[a-z_]+_print_meet$/.test(id))) put(id, { set: '', alt: 'Meet the Hebrew letter ' + id.replace(/^L\d\d_/, '').replace(/_print_meet$/, '').replaceAll('_', ' ').replace(/\balef\b/, 'aleph') + ': illustrated letter character.' });
   for (const id of ['SPEAK_04_table_shabbat', 'SPEAK_05_table_welcome', 'SPEAK_08_street_taxi', 'OPP_expensive_cheap', 'OPP_near_far']) if (edges[id]?.length) put(id, { set: '' });
   const groups = new Map(); let order = 0;
   for (const [stem, r] of recs) {

@@ -28,7 +28,7 @@
     "ashkenazi": "Aleph says nothing; it only holds a vowel."
    },
    "changesSound": false,
-   "notes": "Ashkenazi alef is silent at all times in most forms.",
+   "notes": "Ashkenazi aleph is silent at all times in most forms.",
    "sources": [
     {
      "label": "Wikipedia: Modern Hebrew phonology",
@@ -622,7 +622,7 @@
    "he": "ע",
    "name": "Ayin",
    "ipa": {
-    "israeli": "[ʔ] or ∅ (merged with alef)",
+    "israeli": "[ʔ] or ∅ (merged with aleph)",
     "sephardi": "[ʕ] (Western Sephardim [ŋ])",
     "ashkenazi": "∅ (silent); relic [ŋ] in Yiddish Yankev, mayse"
    },
@@ -638,7 +638,7 @@
     "ashkenazi": "Ayin says nothing, like Aleph; it only holds a vowel."
    },
    "changesSound": true,
-   "notes": "General Israeli ayin is absorbed by alef. A pharyngeal learned in shul can mark a speaker as an outsider in Israel. The per-tradition English lines follow the stored IPA; needs-native-review.",
+   "notes": "General Israeli ayin is absorbed by aleph. A pharyngeal learned in shul can mark a speaker as an outsider in Israel. The per-tradition English lines follow the stored IPA; needs-native-review.",
    "sources": [
     {
      "label": "Wikipedia: Modern Hebrew phonology",
@@ -1203,7 +1203,7 @@
     "ayin",
     "alef"
    ],
-   "summary": "In General Israeli ayin is merged with alef. Pharyngeal ayin survives in Sephardi/Mizrahi tradition; Ashkenazi is silent.",
+   "summary": "In General Israeli ayin is merged with aleph. Pharyngeal ayin survives in Sephardi/Mizrahi tradition; Ashkenazi is silent.",
    "sources": [
     {
      "label": "Wikipedia: Modern Hebrew phonology",

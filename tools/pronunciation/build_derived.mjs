@@ -92,7 +92,7 @@ export function buildDerived() {
     format: { root: '<speak version="1.1" xml:lang="he-IL">', word: '<phoneme alphabet="ipa" ph="IPA">pointed Hebrew</phoneme>', separator: 'one space between words; maqaf also becomes a space', escaping: '& < > " are XML-escaped', ph: 'IPA with syllable dots removed, primary stress mark ˈ kept before the stressed syllable' },
     traditions: {
       israeli: { lang: 'he-IL', ipaInventory: 'b v ɡ d h z χ t j k l m n s p f ts ʁ ʃ + a e i o u; no ʔ or ʕ written; stress final unless a listed exception', browser: 'the only tradition a stock he-IL browser voice approximates; use the pointed Hebrew text, not the IPA' },
-      sephardi: { lang: 'he-IL', ipaInventory: 'adds ʔ (alef), ħ (het), ʕ (ayin), trilled r, x; no length marks', browser: 'no browser voice is known to do this; the he-IL voice will read it as Israeli. Needs a recording or an engine that honours IPA' },
+      sephardi: { lang: 'he-IL', ipaInventory: 'adds ʔ (aleph), ħ (het), ʕ (ayin), trilled r, x; no length marks', browser: 'no browser voice is known to do this; the he-IL voice will read it as Israeli. Needs a recording or an engine that honours IPA' },
       ashkenazi: { lang: 'he-IL', ipaInventory: 'adds ɔ (kamatz), ej (tzere), oj (cholam), s for tav without dagesh, x, r, ə final; penultimate stress', browser: 'no browser voice is known to do this; same caveat as Sephardi' },
     },
     engines: 'The Web Speech API (speechSynthesis) generally takes plain text and ignores SSML markup, so the phoneme elements are for server-side engines or a future TTS lane that documents <phoneme alphabet="ipa">. Which engines accept he-IL with IPA, and whether they honour ħ ʕ ɔ, has NOT been checked here.',

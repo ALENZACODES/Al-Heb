@@ -72,7 +72,7 @@
         "genAlternateSlot": {
           "id": "J-0731",
           "filesOnDisk": 0,
-          "alt": "Alternate memory picture for the letter alef: a mime in a silent handstand with one hand over the mouth and a tiny audience clapping behind, in a stripe-free costume."
+          "alt": "Alternate memory picture for the letter aleph: a mime in a silent handstand with one hand over the mouth and a tiny audience clapping behind, in a stripe-free costume."
         },
         "placeholderSvgs": 17
       },
@@ -1902,9 +1902,9 @@
     }
   ],
   "ayin": {
-    "rule": "Stated per reading, only from data/pronunciation/consonants.json (verified true): Israeli [ʔ] or silent, merged with alef (\"do not try a pharyngeal in Israel\"); Sephardi pharyngeal [ʕ] (Western Sephardim [ŋ]); Ashkenazi silent (relic [ŋ] in Yiddish Yankev, mayse).",
+    "rule": "Stated per reading, only from data/pronunciation/consonants.json (verified true): Israeli [ʔ] or silent, merged with aleph (\"do not try a pharyngeal in Israel\"); Sephardi pharyngeal [ʕ] (Western Sephardim [ŋ]); Ashkenazi silent (relic [ŋ] in Yiddish Yankev, mayse).",
     "fieldsChanged": [
-      "mnemonics.json ayin sound, soundAnchor, story, altStory, caption, lookalike, imageIdea; alef lookalike; meta.note",
+      "mnemonics.json ayin sound, soundAnchor, story, altStory, caption, lookalike, imageIdea; aleph lookalike; meta.note",
       "memory-chain.json ayin story (via tools/letters/memory-chain.source.json)",
       "tools/images/spec.mjs ayin sound (printed in the book header and the art prompt; it said \"silent in Tel Aviv, throaty in Mizrahi speech\", which the data does not say)"
     ],
@@ -1946,9 +1946,9 @@
     "reviewer": "A qualified Hebrew reader should confirm the pointing and the word choice. The word list is dictionary-derived and flagged for review, and the data does not say whether the qamats form is a recognised variant, so it was not kept as one."
   },
   "decisions": [
-    "alef: keep the handstand mime (approved in the chain) or replace it with a Noa picture. The data shows no Noa letter picture.",
+    "aleph: keep the handstand mime (approved in the chain) or replace it with a Noa picture. The data shows no Noa letter picture.",
     "Older art in assets/img/gen: keep hidden, rename or remove later. Nothing was deleted.",
-    "ayin and alef sound wording: reviewer to check the per-reading lines (see the ayin section).",
+    "ayin and aleph sound wording: reviewer to check the per-reading lines (see the ayin section).",
     "garden pointing: reviewer to confirm patach + dagesh.",
     "nun-final and tsadi-final alt stories still describe a cat: retire them or leave them hidden.",
     "The brief mentions kneeling and standing nuns near lines 29 and 40 of mnemonics.json. Those lines are the nun (napping cat) and nun-final (nail) records; no kneeling or standing nun text was found in the file. docs/DECISIONS-NEEDED.md item 13 says a kneeling-nun picture was already replaced by the cat."

@@ -30,7 +30,7 @@ export const CODES = {
   al: { text: 'Aleph (א) that carries a vowel: silent in Israeli and Ashkenazi, a glottal stop [ʔ] in Sephardi.' },
   re: { text: 'Resh (ר): a back-of-the-throat [ʁ] in Israeli, a front rolled or tapped r in Sephardi and Ashkenazi.' },
   sv: { text: 'Spoken shva: e in Israeli and Sephardi, a short [ə] in Ashkenazi.' },
-  fr: { text: 'Final kamatz + he (or alef) when the word is not stressed on it: an open [a] in Israeli and Sephardi, a short [ə] ("eh") in Ashkenazi.' },
+  fr: { text: 'Final kamatz + he (or aleph) when the word is not stressed on it: an open [a] in Israeli and Sephardi, a short [ə] ("eh") in Ashkenazi.' },
   dn: { text: 'The four-letter divine name is read as Adonai in all three traditions (Adonoy in Ashkenazi).' },
 };
 

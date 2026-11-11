@@ -36,7 +36,7 @@ export function mount(root, ctx = {}) {
           const r = chk.roles[i];
           line.append(r === 'consonant' ? ch : h('span', { class: r, style: 'text-decoration:underline;' + (r === 'plene-extra' ? 'text-decoration-style:dotted' : '') }, ch));
         });
-        card.append(line, h('p', { class: 'muted' }, 'Underlined letters are vowel letters (vav, yod, he, alef used as vowels). Dotted underline: a vowel letter that the pointed spelling leaves out.'));
+        card.append(line, h('p', { class: 'muted' }, 'Underlined letters are vowel letters (vav, yod, he, aleph used as vowels). Dotted underline: a vowel letter that the pointed spelling leaves out.'));
       } else card.append(ui.he(w.full));
       card.append(h('p', {}, w.gloss), ui.audioButton('word', `dial-${w.id}`, w.gloss, w.full));
       return card;

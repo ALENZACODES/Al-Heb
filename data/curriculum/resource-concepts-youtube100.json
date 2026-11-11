@@ -27,7 +27,7 @@
   {
    "id": "y100-tech-01",
    "source": "y100-tech",
-   "name": "Letters taught in alef-bet order",
+   "name": "Letters taught in aleph-bet order",
    "what": "The default sequence: aleph first, then bet, gimel and so on, a few letters per lesson. Seen in 9 of 11 reading videos read. Easy to follow but puts look-alikes far apart and gives no reading until late.",
    "axes": {
     "r": 650,

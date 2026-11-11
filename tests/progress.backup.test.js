@@ -38,7 +38,7 @@ test('export carries only progress keys that exist, a sorted key list, the date 
   assert.deepEqual(e.keys, ['curriculum.progress', 'firstday.ladder', 'progress.state', 'service.prefs', 'srs.cards', 'timedread.v1']);
   assert.ok(!('settings' in e.data));
   assert.equal(e.checksum, dataChecksum(e.data));
-  assert.equal(progressFileName(T), 'alef-progress-2026-11-10.json');
+  assert.equal(progressFileName(T), 'aleph-progress-2026-11-10.json');
   const j = JSON.parse(exportProgressJSON(seeded(), T));
   assert.deepEqual(j.keys, e.keys); assert.equal(j.checksum, e.checksum);
   assert.deepEqual(exportProgress(fake(), T).keys, []);

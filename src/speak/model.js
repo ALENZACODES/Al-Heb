@@ -148,7 +148,7 @@ export function setSummary(attempts, setId) {
 // which Aleph has not verified for Hebrew: a "weak" sound may be the recognizer's weakness, not the learner's.
 
 export const SOUND_CLASSES = [
-  { id: 'alef-ayin', label: 'alef / ayin (glottal or silent)', letters: 'אע' },
+  { id: 'alef-ayin', label: 'aleph / ayin (glottal or silent)', letters: 'אע' },
   { id: 'bet-vet', label: 'bet / vet', letters: 'ב' },
   { id: 'het-khaf', label: 'het / khaf (throaty kh)', letters: 'חכ' },
   { id: 'he', label: 'he (h)', letters: 'ה' },
@@ -164,7 +164,7 @@ export function soundClass(letter) {
   for (const c of SOUND_CLASSES) if (c.letters.includes(letter)) return c.id;
   return 'other';
 }
-const PAIR_LABELS = { 'kaf-khaf': 'kaf / khaf', 'pe-fe': 'pe / fe', 'tav-sav': 'tav / sav', 'tzere-segol': 'tzere / segol', 'kamatz-patach': 'kamatz / patach', 'alef-ayin': 'alef / ayin (glottal or silent)' };
+const PAIR_LABELS = { 'kaf-khaf': 'kaf / khaf', 'pe-fe': 'pe / fe', 'tav-sav': 'tav / sav', 'tzere-segol': 'tzere / segol', 'kamatz-patach': 'kamatz / patach', 'alef-ayin': 'aleph / ayin (glottal or silent)' };
 export const soundLabel = (id) => (SOUND_CLASSES.find((c) => c.id === id) || { label: PAIR_LABELS[id] || id }).label;
 
 /**

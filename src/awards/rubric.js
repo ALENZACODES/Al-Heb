@@ -24,6 +24,9 @@ export function lessonRange(spec) {
   return out;
 }
 
+/** The first letter's id is "alef"; on screen it is written "aleph". Other ids are shown as they are. */
+const letterName = (id) => (id === 'alef' ? 'aleph' : id);
+
 function item(fields) {
   return {
     status: 'proposed',
@@ -67,8 +70,8 @@ export function deriveBeginnerRubric(lessonsFile, beltsFile) {
           id: 'letter:' + id,
           kind: 'letter',
           lessonIds: [lesson.id],
-          label: 'Letter ' + id,
-          requirement: `A checked question on the name or sound of ${id}, scored by the assessment. Marking lesson ${lesson.id} complete does not count, including when answers were wrong.`,
+          label: 'Letter ' + letterName(id),
+          requirement: `A checked question on the name or sound of ${letterName(id)}, scored by the assessment. Marking lesson ${lesson.id} complete does not count, including when answers were wrong.`,
         });
         letterSeen.set(id, row);
         items.push(row);

@@ -252,7 +252,7 @@
     "letters"
    ],
    "pdf": "alef-cursive-words-a4.pdf",
-   "bytes": 649124
+   "bytes": 649426
   },
   {
    "id": "alef-cursive-words-letter",
@@ -279,7 +279,7 @@
     "letters"
    ],
    "pdf": "alef-cursive-words-letter.pdf",
-   "bytes": 648653
+   "bytes": 648956
   },
   {
    "id": "alef-niqqud-a4",
@@ -377,7 +377,7 @@
     "cheatsheet"
    ],
    "pdf": "alef-readaloud-a4.pdf",
-   "bytes": 238879
+   "bytes": 239460
   },
   {
    "id": "alef-readaloud-letter",
@@ -419,7 +419,7 @@
     "cheatsheet"
    ],
    "pdf": "alef-readaloud-letter.pdf",
-   "bytes": 237602
+   "bytes": 238232
   },
   {
    "id": "alef-flashcards-a4",
@@ -1602,7 +1602,7 @@
     "readaloud"
    ],
    "pdf": "alef-answer-key-a4.pdf",
-   "bytes": 221730
+   "bytes": 222002
   },
   {
    "id": "alef-answer-key-letter",
@@ -1625,7 +1625,7 @@
     "readaloud"
    ],
    "pdf": "alef-answer-key-letter.pdf",
-   "bytes": 221474
+   "bytes": 221748
   }
  ]
 }

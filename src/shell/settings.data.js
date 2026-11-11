@@ -7,7 +7,7 @@ export const CONFIRM_WORD = 'DELETE';
 export const confirmMatches = (typed) => String(typed ?? '').trim().toUpperCase() === CONFIRM_WORD;
 
 /** @param {number|Date} [now] */
-export const backupFileName = (now = Date.now()) => `alef-backup-${new Date(now).toISOString().slice(0, 10)}.json`;
+export const backupFileName = (now = Date.now()) => `aleph-backup-${new Date(now).toISOString().slice(0, 10)}.json`;
 
 /** Plain-language lines describing what a restore will do. @param {any} preview result of store.previewImport */
 export function describePreview(preview) {

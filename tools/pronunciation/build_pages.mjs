@@ -44,7 +44,7 @@ export const RULES = [
     limits: 'The difference between [χ] and [x] is too small to hear in most voices; the [ħ] is the audible one.',
     sources: [WIKI.mod, WIKI.sep, WIKI.ash] },
   { id: 'ayin', code: 'ay', title: 'Ayin (ע)', nav: 'Ayin',
-    summary: 'Israeli and Ashkenazi readers say nothing for an ayin (it behaves like alef). The Sephardi reading used here keeps a throat sound [ʕ], a squeezed "ah" from deep in the throat.',
+    summary: 'Israeli and Ashkenazi readers say nothing for an ayin (it behaves like aleph). The Sephardi reading used here keeps a throat sound [ʕ], a squeezed "ah" from deep in the throat.',
     rows: [['israeli', '(silent)', 'no sound'], ['sephardi', '[ʕ]', 'squeezed throat sound'], ['ashkenazi', '(silent)', 'no sound']],
     who: 'Rule-generated: [ʕ] for Sephardi follows the cited description. Spanish-Portuguese communities use a different sound [ŋ] that is not generated.',
     limits: 'A silent ayin still splits the syllables, which the spelled-out respelling shows as an apostrophe.',

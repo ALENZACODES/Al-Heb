@@ -77,7 +77,7 @@ export function toICS(items, opt = {}) {
 }
 
 /** Download helper for browsers (no-op elsewhere). Returns true if a download was started. */
-export function downloadICS(text, filename = "alef-calendar.ics", doc = globalThis.document) {
+export function downloadICS(text, filename = "aleph-calendar.ics", doc = globalThis.document) {
   if (!doc || typeof Blob === "undefined" || !globalThis.URL?.createObjectURL) return false;
   const url = URL.createObjectURL(new Blob([text], { type: "text/calendar;charset=utf-8" }));
   const a = doc.createElement("a");

@@ -63,7 +63,7 @@
         "israeli": "nedar",
         "ashkenazi": "nedor"
       },
-      "candidate": "ne'dar (alef closing a syllable written as an apostrophe, as in ya'er)",
+      "candidate": "ne'dar (aleph closing a syllable written as an apostrophe, as in ya'er)",
       "reason": "Aleph with a silent shva is not a consonant sound in the engine, so it is dropped; whether the learner-facing spelling should show a glottal stop is a style decision for a reviewer."
     },
     {

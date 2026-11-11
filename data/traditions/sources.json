@@ -23,7 +23,7 @@
       "open": true,
       "fetched": "2026-11-03",
       "coverage": "whole page summarised by the fetch tool",
-      "supports": "unaccented tav as s; kamatz gadol as a back rounded vowel (o or aw), u in southern dialects; cholam and tsere regional values; traditional penultimate stress with final stress promoted for Torah reading; ayin, het and alef silent in most forms; resh varies by dialect; Israeli Hebrew was meant to follow Sephardi values but absorbed some Ashkenazi features; Yemenite keeps kamatz and patah apart but not patah and segol"
+      "supports": "unaccented tav as s; kamatz gadol as a back rounded vowel (o or aw), u in southern dialects; cholam and tsere regional values; traditional penultimate stress with final stress promoted for Torah reading; ayin, het and aleph silent in most forms; resh varies by dialect; Israeli Hebrew was meant to follow Sephardi values but absorbed some Ashkenazi features; Yemenite keeps kamatz and patah apart but not patah and segol"
     },
     {
       "id": "wp-mhp",
@@ -67,7 +67,7 @@
       "open": false,
       "fetched": "2026-11-03",
       "coverage": "whole page summarised by the fetch tool; page does not discuss stress",
-      "supports": "unaccented tav; kamatz versus patach; cholam; tsere and segol; Sephardim distinguish alef/ayin and het/khaf, Ashkenazim generally do not; many variants inside each grouping; modern Hebrew read with 'Sepharadic' values by many Jews of both backgrounds; the page says all dialects are acceptable"
+      "supports": "unaccented tav; kamatz versus patach; cholam; tsere and segol; Sephardim distinguish aleph/ayin and het/khaf, Ashkenazim generally do not; many variants inside each grouping; modern Hebrew read with 'Sepharadic' values by many Jews of both backgrounds; the page says all dialects are acceptable"
     },
     {
       "id": "benor",
@@ -111,7 +111,7 @@
       "open": false,
       "fetched": "2026-11-08",
       "coverage": "whole page read through a fetch tool",
-      "supports": "one Latin letter or digraph per Hebrew letter: alef silent, bet b or v, gimel g (gh when the soft form is kept), dalet d (dh), he h and always written at the end of a word, vav v (w in some communities), het h, tet t, kaf k, khaf kh, samekh s, ayin an apostrophe (ng among Spanish-Portuguese and Italian Jews), pe p or f, tsadi ss, qof q, resh r, shin sh and sin s, tav t (th when the soft form is kept); patach and kamatz both a, tsere and segol e, hiriq i, holam o, shuruk and kubbutz u, vocal shva e, the ai diphthong, a dagesh shown as a doubled letter (Hanukkah), and articles and prepositions written as separate words (Ha gefen)"
+      "supports": "one Latin letter or digraph per Hebrew letter: aleph silent, bet b or v, gimel g (gh when the soft form is kept), dalet d (dh), he h and always written at the end of a word, vav v (w in some communities), het h, tet t, kaf k, khaf kh, samekh s, ayin an apostrophe (ng among Spanish-Portuguese and Italian Jews), pe p or f, tsadi ss, qof q, resh r, shin sh and sin s, tav t (th when the soft form is kept); patach and kamatz both a, tsere and segol e, hiriq i, holam o, shuruk and kubbutz u, vocal shva e, the ai diphthong, a dagesh shown as a doubled letter (Hanukkah), and articles and prepositions written as separate words (Ha gefen)"
     },
     {
       "id": "harshav",

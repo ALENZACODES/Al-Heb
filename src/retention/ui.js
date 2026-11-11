@@ -97,7 +97,7 @@ async function nextLessonId(ctx) {
 }
 /** Download a daily calendar reminder (the fallback where a closed app cannot be reminded). */
 export async function downloadReminder(R) {
-  try { const { downloadICS } = await import('../curriculum/reminders.ics.js'); return downloadICS(reminderICS(R.get()), 'alef-rimon-reminder.ics'); } catch { return false; }
+  try { const { downloadICS } = await import('../curriculum/reminders.ics.js'); return downloadICS(reminderICS(R.get()), 'aleph-rimon-reminder.ics'); } catch { return false; }
 }
 const onIphoneTab = (g = globalThis) => { try { const n = g.navigator, ua = String(n?.userAgent || ''); const ios = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && (n?.maxTouchPoints || 0) > 1); return ios && !(n?.standalone === true || g.matchMedia?.('(display-mode: standalone)')?.matches); } catch { return false; } };
 

@@ -9,7 +9,7 @@ const ORDER = ['alef', 'bet', 'gimel', 'dalet', 'he', 'vav', 'zayin', 'chet', 't
 
 const spec = {
   id: 'alefbetrun', title: 'Aleph-Bet Run', titleHe: 'רִיצַת אָלֶף־בֵּית',
-  blurb: 'The letters are scattered. Tap them in order, alef to tav, as fast as you can. Each level gives you a longer run and a bigger board.',
+  blurb: 'The letters are scattered. Tap them in order, aleph to tav, as fast as you can. Each level gives you a longer run and a bigger board.',
   howTo: ['Tap the next letter in alphabetical order. The one you need is named at the top.', 'A wrong tap costs two points; the right one lights up.', 'Finish the run to score a time bonus: faster is more.', 'Level 5 is the whole alphabet with the final forms mixed in as distractors.'],
   levels: [
     { name: 'Aleph to he', from: 0, to: 5, size: 3 },

@@ -6,10 +6,10 @@
   "families": {
     "a": {
       "pair": null,
-      "pairNote": "No vav/yod spelling for the a sound in this set. The a sound is also written with a final he or alef as a vowel letter.",
+      "pairNote": "No vav/yod spelling for the a sound in this set. The a sound is also written with a final he or aleph as a vowel letter.",
       "finalVowelLetter": [
         { "he": "שָׂרָה", "gloss": "Sarah (name)", "note": "kamatz then a final he with no dot: the he is a vowel letter, it is not a consonant" },
-        { "he": "בָּרָא", "gloss": "he created", "note": "kamatz then a final alef that is not read as a consonant" }
+        { "he": "בָּרָא", "gloss": "he created", "note": "kamatz then a final aleph that is not read as a consonant" }
       ]
     },
     "e": { "pair": { "defective": "פֵּרוֹת", "plene": "פֵּירוֹת", "gloss": "fruit (plural)", "note": "yod added after the tzere in everyday spelling" } },

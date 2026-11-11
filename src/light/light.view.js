@@ -234,8 +234,8 @@ export async function mount(root, ctx) {
         h('p', { class: 'alef-light-stencil' },
           'Print a small Star of David cutout, tape it over your phone flash, and project the star on a wall.',
           h('span', { class: 'alef-light-downloads' },
-            h('a', { class: 'btn', href: STENCIL_PDF, download: 'alef-star-of-david-stencil.pdf' }, 'Download PDF'),
-            h('a', { class: 'btn secondary', href: STENCIL_SVG, download: 'alef-star-of-david-stencil.svg' }, 'Download SVG'))))));
+            h('a', { class: 'btn', href: STENCIL_PDF, download: 'aleph-star-of-david-stencil.pdf' }, 'Download PDF'),
+            h('a', { class: 'btn secondary', href: STENCIL_SVG, download: 'aleph-star-of-david-stencil.svg' }, 'Download SVG'))))));
     applyStar();
     bind();
   }

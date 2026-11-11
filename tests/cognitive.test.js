@@ -182,7 +182,16 @@ test("motion audit: animations match the reviewed inventory, loops are slow, and
     'lab-fly', 'lab-fall', 'lab-flipin', 'lab-pop',
     // Combo meter pop and floating +points (src/lab/lab.view.js, 2026-11-10): both one-shot, under 0.75 s, no flashing.
     // Reduced motion switches them off. The on-demand 3D particle field in lab.fx3d.js is canvas-only and has no keyframes.
-    'lab-combo-pop', 'lab-float-up'];
+    'lab-combo-pop', 'lab-float-up',
+    // Rimon's body movement (assets/css/rimon-motion.css, src/shell/rimon-motion.js, 2026-11-11). Transforms only, plus one fade from
+    // clear on the two entrances; no colour, brightness or filter change, so nothing can flash. Two slow loops: the sway while waiting
+    // (5.2 s) and the float of a Rimon drawn into a page (4.2 s). Everything else is short and ends by itself: the movement that goes
+    // with a reaction, a fidget every 5.5 to 11 s, the hop in, the pop of a new still, the tap reaction. Repeats stay at or under two
+    // cycles per second. Reduced motion, calm mode, .rimon-static and Hide Rimon switch all of it off; quiet days and screens hide
+    // Rimon; from Friday evening to Saturday night only the sway stays.
+    'rimon-sway', 'rimon-float', 'rimon-jump', 'rimon-giggle', 'rimon-tilt', 'rimon-cheeky', 'rimon-reach', 'rimon-jitter', 'rimon-droop',
+    'rimon-ponder', 'rimon-lean-in', 'rimon-reach-up', 'rimon-inflate', 'rimon-wiggle', 'rimon-nod', 'rimon-twirl', 'rimon-lean',
+    'rimon-peekaboo', 'rimon-enter', 'rimon-pop', 'rimon-boing', 'rimon-hero-in'];
   assert.deepEqual(frames.sort(), reviewed.sort(), 'new animations require a motion review');
   for (const animation of anims) {
     if (!/\binfinite\b/.test(animation)) continue;

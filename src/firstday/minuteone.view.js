@@ -191,7 +191,7 @@ export async function mount(root, ctx) {
     builder = recordBuilt(builder, word, nowISO());
     try { store.set(BUILDER_KEY, builder); } catch { /* best effort: the word still shows and plays */ }
     aim = null;
-    const opened = builder.count > prev && builder.count < FULL_AT ? ' More letters are open.' : builder.count === FULL_AT && prev < FULL_AT ? ' The whole alef-bet is open now.' : '';
+    const opened = builder.count > prev && builder.count < FULL_AT ? ' More letters are open.' : builder.count === FULL_AT && prev < FULL_AT ? ' The whole aleph-bet is open now.' : '';
     statusMsg = `You built ${word.he} — ${word.translit}, “${word.en}”.${finalNote ? ' ' + finalNote : ''}${opened}`;
     render();
     sayWord(word);

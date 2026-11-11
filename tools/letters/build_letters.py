@@ -27,7 +27,7 @@ META = [
  ("mem","Mem","מֵם","מ",40,"m","m as in map"),
  ("nun","Nun","נוּן","נ",50,"n","n as in net"),
  ("samekh","Samekh","סָמֶךְ","ס",60,"s","s as in sun"),
- ("ayin","Ayin","עַיִן","ע",70,"ʔ","silent in modern Israeli Hebrew (like alef)"),
+ ("ayin","Ayin","עַיִן","ע",70,"ʔ","silent in modern Israeli Hebrew (like aleph)"),
  ("pe","Pe","פֵא","פ",80,"p ~ f","p with a dot (pe), f without (fe)"),
  ("tsadi","Tsadi","צָדִי","צ",90,"ts","ts as in cats"),
  ("qof","Qof","קוֹף","ק",100,"k","k as in kite"),

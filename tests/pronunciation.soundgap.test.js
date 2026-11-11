@@ -74,7 +74,7 @@ test('data agrees with consonants.json on the headline merges', () => {
   const merged = (id) => soundgap.gaps.find((g) => g.id === id).tradition.israeli.merged;
   assert.match(consonants.letters.chet.ipa.israeli, /merged with khaf/);
   assert.deepEqual(merged('chet-khaf-he'), ['chet', 'kaf']);
-  assert.match(consonants.letters.ayin.ipa.israeli, /merged with alef/);
+  assert.match(consonants.letters.ayin.ipa.israeli, /merged with aleph/);
   assert.deepEqual(merged('alef-ayin'), ['alef', 'ayin']);
   assert.match(consonants.letters.qof.ipa.israeli, /\[k\]/);
   assert.deepEqual(merged('kaf-qof'), ['kaf', 'qof']);

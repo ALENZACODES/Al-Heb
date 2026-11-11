@@ -132,7 +132,7 @@ test('wrong answers, self-marks, and legacy completion never certify; games reco
   await again.root.querySelector('#award-share').click();
   assert.equal(printed, 1);
   assert.equal(pdfs.length, 1);
-  assert.equal(pdfs[0].filename, 'alef-certificate-DESIGN-PROOF.pdf');
+  assert.equal(pdfs[0].filename, 'aleph-certificate-DESIGN-PROOF.pdf');
   const pdf = Buffer.from(pdfs[0].bytes).toString('latin1');
   assert.match(pdf, /Design proof/);
   assert.doesNotMatch(pdf, /SAMPLE \/ NOT EARNED/);

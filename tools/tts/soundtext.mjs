@@ -76,7 +76,7 @@ export const FLAG_INFO = {
   'divine-name': { hard: false, reason: 'The Name is read as Adonai by convention.' },
   'kamatz-katan-list': { hard: false, reason: 'Kamatz katan is recognised only from a four-word list, unverified.' },
   'vav-dagesh-consonantal': { hard: false, reason: 'A vav with dagesh inside the word was read as a consonant.' },
-  'alef-vav-mater-repaired': { hard: false, reason: 'A vav after a silent alef was re-read as a vowel letter.' },
+  'alef-vav-mater-repaired': { hard: false, reason: 'A vav after a silent aleph was re-read as a vowel letter.' },
   'words-ipa-colloquial-shva-drop': { hard: false, reason: 'The repo\'s own Israeli IPA for this word drops a shva that the careful reading keeps; the respelling keeps it.' },
   'maqaf-compound': { hard: false, reason: 'Words joined by a hyphen/maqaf: only the last part carries the stress mark.' },
   'template-ellipsis': { hard: false, reason: 'A phrase template with "..." (an open slot), not a full utterance.' },

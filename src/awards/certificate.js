@@ -19,7 +19,7 @@ export function formatPreviewDate(now) {
   return `${d.getUTCDate()} ${MONTHS[d.getUTCMonth()]} ${d.getUTCFullYear()} UTC`;
 }
 
-export const PDF_FILENAME = 'alef-certificate-DESIGN-PROOF.pdf';
+export const PDF_FILENAME = 'aleph-certificate-DESIGN-PROOF.pdf';
 /** One face label. Callers cannot replace it with an earned claim. */
 export const DESIGN_PROOF = 'Design proof';
 /** A4 landscape, points. Margins stay at or beyond PRINT_MARGIN. */

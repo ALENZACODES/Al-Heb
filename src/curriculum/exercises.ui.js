@@ -2,7 +2,7 @@ import { signalRimon } from '../shell/rimon-events.js';
 /** DOM pieces of the lesson loop shared by the exercise players: progress bar, summary card, and the quick-check player. */
 import { plain } from "../shell/plain-copy.js";
 import { el, heText, heLabeled } from "./dom.js";
-import { createSession, fmtDuration, pct, feedbackText, closingLine, fireFeedback, buildChoiceQuestions } from "./exercises.session.js";
+import { createSession, fmtDuration, pct, feedbackText, closingLine, fireFeedback, buildChoiceQuestions, retryText } from "./exercises.session.js";
 import { onKeys } from "./ex-ui.js";
 import { confirmOn } from "../shell/motor.js";
 import { rimonInline } from "../shell/rimon-inline.js";
@@ -23,6 +23,7 @@ export function progressBar(label = "Lesson progress") {
  * extraLinks[] }. The primary button is "next"; review and the list are secondary.
  */
 export function summaryNode(d) {
+  if (d.passed === false) return notPassedNode(d);
   const st = d.stats;
   const next = d.nextHref ? el("a", { class: "btn alef-next-primary", href: d.nextHref }, d.nextLabel || "Next lesson") : null;
   // Celebration first: Rimon, confetti (still for reduced motion) and a cheer that matches the score.
@@ -59,6 +60,26 @@ export function summaryNode(d) {
 }
 
 /**
+ * C-01: the end card for a quick check below the pass mark. No celebration event (so no lesson XP, gems or streak day from
+ * the retention layer), no confetti, no "Lesson complete": it says the score, the pass mark, that review cards were updated,
+ * and offers to try again. d: { title?, countText, stats, ms, need, of, missedLabels[], cardsUpdated, onRetry?, retryLabel?, extraLinks[] }.
+ */
+export function notPassedNode(d) {
+  const st = d.stats || { accuracy: null, missed: [] };
+  const retry = d.onRetry ? el("button", { type: "button", class: "btn alef-retry-primary", id: "alef-try-again", onclick: () => d.onRetry() }, d.retryLabel || "Try again") : null;
+  return el("div", { class: "alef-summary alef-summary-notpassed", "data-passed": "false" },
+    el("h2", { id: "alef-int-ex", tabindex: "-1" }, d.title || "Not passed yet — try again"),
+    el("p", { role: "status" }, d.countText),
+    d.need ? el("p", { "data-pass-mark": String(d.need) }, `The pass mark is ${d.need} of ${d.of} right on the first try. ${d.wasDone ? "The lesson stays marked done from before; this try gives no lesson XP." : "This lesson is not marked done yet, and no lesson XP was given."}`) : null,
+    el("dl", { class: "alef-summary-stats" },
+      el("div", {}, el("dt", {}, "Accuracy (first try)"), el("dd", { "data-stat": "accuracy" }, pct(st.accuracy))),
+      d.ms != null ? el("div", {}, el("dt", {}, "Time"), el("dd", { "data-stat": "time" }, fmtDuration(d.ms))) : null),
+    d.missedLabels?.length ? el("div", {}, el("p", {}, "To review:"), el("ul", { "data-list": "review" }, ...d.missedLabels.map((t) => el("li", {}, t)))) : null,
+    el("p", { class: "muted" }, d.cardsUpdated ? `${d.cardsUpdated} review card${d.cardsUpdated === 1 ? "" : "s"} updated, so the ones you missed come back in Review.` : "No review cards needed updating."),
+    el("div", { class: "row alef-summary-actions" }, retry, ...(d.extraLinks || [])));
+}
+
+/**
  * Quick-check player for lessons without exercises of their own. opts: { questions, ctx, onFinish({stats, results, ms}) }.
  * Keys: 1-9 pick an option, Enter continues, S skips. Wrong answers are repeated once at the end.
  */
@@ -72,7 +93,8 @@ export function mountQuiz(host, { questions, ctx, onFinish, now = () => Date.now
   const body = el("div", { class: "alef-quiz" });
   let off = () => {}, streak = 0, n = 0;
   host.replaceChildren(pb.node, body);
-  const refresh = () => { const p = session.progress(); pb.update(p.fraction, `${p.resolved} of ${p.total} done`); };
+  // C-02: the bar and the counter run on the check's fixed length; repeats of missed questions are counted apart ("1 retry so far").
+  const refresh = () => { const p = session.progress(); pb.update(p.share, `${p.position} of ${p.length} done${p.retries ? `, ${retryText(p.retries)}` : ""}`); };
 
   function show() {
     off();
@@ -118,7 +140,8 @@ export function mountQuiz(host, { questions, ctx, onFinish, now = () => Date.now
         (q.why ? why : status).scrollIntoView?.({ block: "nearest" }); // one call (a second would cancel the smooth scroll): the explanation sits last, so clearing the sticky bar with it keeps the verdict above it in view
     }
     const card = el("section", { class: "card alef-ex-card", "data-ex": q.id, "data-type": q.kind, "aria-labelledby": "alef-q-title" },
-      el("h2", { id: "alef-q-title", tabindex: "-1" }, `${retry ? "Try again: " : ""}Question ${Math.min(p.resolved + 1, p.total)} of ${p.total}`),
+      el("h2", { id: "alef-q-title", tabindex: "-1" }, retry ? `Try again: retry ${p.retriesDone + 1} of ${p.retries}` : `Question ${Math.min(p.position + 1, p.length)} of ${p.length}`),
+      p.retries ? el("p", { class: "muted alef-retries", "data-retries": String(p.retries) }, retryText(p.retries) + ". Only first tries count toward the pass mark.") : null,
       el("p", {}, q.prompt), q.promptHe ? el("p", {}, heLabeled(q.promptHe, q.promptLabel, "alef-he alef-big")) : null,
       el("div", { class: "alef-int-options col", role: "group", "aria-label": "Choices" }, ...opts), status, why,
       el("div", { class: "row alef-actionbar" }, check, cont, undo, skip));

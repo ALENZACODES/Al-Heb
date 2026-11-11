@@ -1,7 +1,7 @@
 // @ts-check
 // Retention UI pieces that live inside other screens: the top-bar chips (streak flame, gems, hearts), the daily-goal
 // ring on Home, the end-of-lesson reward panel, and the out-of-hearts gate. Text always sits beside every drawing.
-import { h, countUp, confetti, setKids } from './dom.js';
+import { h, confetti, setKids } from './dom.js';
 import { goalProgress, GOALS, setGoal } from './xp.js';
 import { gemsText, PRICES } from './gems.js';
 import { HEARTS, REFILL_ROUTE, nextHeartInMs, refillByGems } from './hearts.js';
@@ -260,7 +260,7 @@ function optInCard(R) {
     status);
   return card;
 }
-/** Insert the reward panel into the lesson's end card: XP count-up, confetti, goal, streak, gems, and Rimon. */
+/** Insert the reward panel into the lesson's end card: XP (final value, no count-up), confetti, goal, streak, gems, and Rimon. */
 export function showReward(R, out, g = globalThis) {
   if (out.calm) return;
   const doc = g.document;
@@ -268,7 +268,8 @@ export function showReward(R, out, g = globalThis) {
     const card = doc.querySelector('.alef-summary');
     if (!card) { if (tries < 20) g.setTimeout(() => place(tries + 1), 50); return; }
     if (card.querySelector('.ret-reward')) return;
-    const total = h('strong', { class: 'ret-total' }, String(out.todayBefore));
+    // S-05: the number is frozen at its final value before the card renders (no count-up racing the text beside it)
+    const total = h('strong', { class: 'ret-total' }, String(out.todayAfter));
     const lines = [];
     if (out.parts.accuracy) lines.push(`Sharp lesson bonus: +${out.parts.accuracy} XP`);
     if (out.parts.combo) lines.push(`Combo bonus: +${out.parts.combo} XP`);
@@ -288,8 +289,6 @@ export function showReward(R, out, g = globalThis) {
       h('p', { class: 'visually-hidden', role: 'status' }, sentence));
     const anchor = card.querySelector('.alef-celebrate-cheer');
     if (anchor?.parentNode) anchor.parentNode.insertBefore(panel, anchor.nextSibling); else card.prepend(panel);
-    const stop = countUp(total, out.todayBefore, out.todayAfter, 600, g);
-    card.addEventListener('click', stop, { once: true }); // any tap skips the count-up
     if (out.heartsEmpty) {
       const next = card.querySelector('.alef-next-primary'); if (next) { next.hidden = true; next.setAttribute('hidden', ''); }
       (card.querySelector('.alef-summary-actions') || card).before(heartsBlock(R));
@@ -309,7 +308,7 @@ export function showQuickDone(R, out, g = globalThis) {
   // The card sits in <main> above the lesson, not inside it: the lesson player redraws its own article on every part.
   const doc = g.document, page = doc.getElementById('main');
   if (!page || out.calm || page.querySelector('.ret-quick-done')) return;
-  const total = h('strong', { class: 'ret-total' }, String(out.todayBefore));
+  const total = h('strong', { class: 'ret-total' }, String(out.todayAfter)); // S-05: final value, no count-up
   const card = h('section', { class: 'ret-reward ret-quick-done alef-retention', 'aria-labelledby': 'ret-quick-h' },
     out.goalCrossed || out.streak.milestone ? confetti() : null,
     h('h2', { id: 'ret-quick-h', tabindex: '-1' }, 'Three Minutes Done'),
@@ -318,7 +317,6 @@ export function showQuickDone(R, out, g = globalThis) {
     h('p', { role: 'status' }, `${out.streak.grew ? `${out.streak.count}-day streak! ` : ''}${out.goalCrossed ? 'Daily goal reached! ' : ''}${out.gems ? `+${gemsText(out.gems)}. ` : ''}Your place is saved.`),
     h('div', { class: 'row' }, h('button', { type: 'button', class: 'btn', onclick: () => card.remove() }, 'Keep going'), h('a', { class: 'btn secondary', href: '#/' }, 'Done for today')));
   page.prepend(card);
-  countUp(total, out.todayBefore, out.todayAfter, 600, g);
   try { g.scrollTo?.(0, 0); card.querySelector('h2')?.focus({ preventScroll: true }); } catch { /* optional */ }
   g.setTimeout(() => showRimon(out.goalCrossed ? 'daily_goal' : out.streak.grew ? (out.streak.milestone ? 'streak_milestone' : 'streak_extended') : 'xp_payout'), 600);
 }

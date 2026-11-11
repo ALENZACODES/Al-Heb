@@ -56,7 +56,7 @@ test("session: a miss comes back once at the end, first attempt is what counts, 
   assert.equal(s.answer(false).requeued, true);            // b missed
   assert.equal(s.current().id, "c"); s.answer(true);
   assert.equal(s.current().id, "b"); assert.ok(s.isRetry());
-  assert.deepEqual(s.progress(), { resolved: 3, total: 4, fraction: 0.75 });
+  assert.deepEqual(s.progress(), { resolved: 3, total: 4, fraction: 0.75, length: 3, position: 3, retries: 1, retriesDone: 0, retriesLeft: 1, share: 1 }); // C-02: the length stays 3; the retry is counted apart
   s.answer(true);                                           // retry right: not counted as a first-attempt hit
   assert.ok(s.done());
   const st = s.stats();
@@ -176,7 +176,8 @@ test("quick check player: bar, per-answer feedback with the right answer and why
   assert.equal(by(host, (b) => b.attrs["data-state"]).length, 0); assert.equal(bar().attrs["aria-valuenow"], "0");
   await by(host, (b) => b.attrs["data-n"] === String(wrongI + 1))[0].click();
   const total0 = qs.length; await key("Enter");
-  assert.match(host.text, new RegExp(`Question 2 of ${total0 + 1}`), "the miss added one repeat to the total");
+  assert.equal(host.find((n) => n.attrs.id === "alef-q-title")[0].text, `Question 2 of ${total0}`, "C-02: the denominator stays the check's length after a miss");
+  assert.match(host.text, /1 retry so far/, "the repeat is counted apart");
   // the rest right, then the repeat; finish
   for (let g = 0; g < 40 && !fin; g++) {
     const cur = host.find((n) => n.attrs["data-ex"])[0]; const q = qs.find((x) => x.id === cur.attrs["data-ex"]);
@@ -216,7 +217,7 @@ test("quick check player: number keys answer, S skips (nothing recorded), and a 
 
 // ------------------------------------------------------------------------------------------------ lesson page + SRS
 const { mountLesson } = await import("../src/curriculum/lesson.view.js");
-test("a lesson without exercises cannot be completed by a tap; the quick check completes it and feeds the SRS (misses lapse, hits review)", async () => {
+test("a lesson without exercises cannot be completed by a tap; a quick check below the pass mark does not complete it (C-01), a passing try does; misses lapse cards either way", async () => {
   const store = memStore(); const ctx = lessonCtx(store, { query: { lesson: "r01" } });
   const root = new Node_("div"); const off = mountLesson(root, ctx, "r01");
   await waitFor(() => by(root, (b) => b.attrs.id === "alef-quick-start")[0]);
@@ -227,17 +228,28 @@ test("a lesson without exercises cannot be completed by a tap; the quick check c
   // answer everything wrong on the first pass, right on the retry
   const qs = S.buildChoiceQuestions(byId.r01, { ...content, wordPool }, { seed: 1 + lessons.findIndex((l) => l.id === "r01") });
   const first = new Set();
-  for (let g = 0; g < 80 && !/Lesson complete/.test(root.text); g++) {
-    const cont = by(root, (b) => b.attrs["data-act"] === "next" && !b.hidden)[0]; if (cont) { await cont.click(); continue; }
-    const cur = root.find((n) => n.attrs["data-ex"])[0]; const q = qs.find((x) => x.id === cur.attrs["data-ex"]);
-    const retry = first.has(q.id); first.add(q.id);
-    const pick = retry ? q.answerIndex : q.options.findIndex((_, i) => i !== q.answerIndex);
-    await by(root, (b) => b.attrs["data-n"] === String(pick + 1))[0].click();
-  }
-  await waitFor(() => store.m["curriculum.progress"]?.completed?.r01);
-  assert.match(root.text, /0 of \d+ right first time/); assert.match(root.text, /To review:/); assert.match(root.text, /Next lesson/);
+  const play = async (wrongFirst) => {
+    for (let g = 0; g < 80 && !/Lesson complete|Not passed yet/.test(root.text); g++) {
+      const cont = by(root, (b) => b.attrs["data-act"] === "next" && !b.hidden)[0]; if (cont) { await cont.click(); continue; }
+      const cur = root.find((n) => n.attrs["data-ex"])[0]; const q = qs.find((x) => x.id === cur.attrs["data-ex"]);
+      const retry = first.has(q.id); first.add(q.id);
+      const pick = retry || !wrongFirst ? q.answerIndex : q.options.findIndex((_, i) => i !== q.answerIndex);
+      await by(root, (b) => b.attrs["data-n"] === String(pick + 1))[0].click();
+    }
+  };
+  await play(true);
+  await waitFor(() => /Not passed yet/.test(root.text));
+  assert.match(root.text, /0 of \d+ right on the first try/); assert.match(root.text, /To review:/); assert.doesNotMatch(root.text, /Lesson complete|Next lesson/);
+  assert.equal(store.m["curriculum.progress"], undefined, "0% does not count as done");
+  assert.equal(store.m.streak, undefined, "no streak day for a failed check");
   const cards = store.m["srs.cards"]; const lapsed = Object.values(cards).filter((c) => c.lapses > 0);
   assert.ok(lapsed.length >= 1, "first-attempt misses lapse their cards");
+  // try again, all right on the first try: now it passes and completes
+  first.clear();
+  await by(root, (b) => b.attrs.id === "alef-try-again")[0].click();
+  await play(false);
+  await waitFor(() => store.m["curriculum.progress"]?.completed?.r01);
+  assert.match(root.text, /Lesson complete/); assert.match(root.text, /Next lesson/);
   assert.ok(store.m.streak.count >= 1);
   off();
 });

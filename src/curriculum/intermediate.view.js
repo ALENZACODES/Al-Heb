@@ -16,6 +16,7 @@ import { settingVoice, onKeys } from "./ex-ui.js";
 import { audioButton } from "../shell/audio-access.js";
 import * as A from "./intermediate-adapter.js";
 import { sequenceExercises, fairProduceOptions, createSession, feedbackText, fireFeedback } from "./exercises.session.js";
+import { passed as passedCheck, passMark, passRuleText } from "./passmark.js";
 import { progressBar, summaryNode } from "./exercises.ui.js";
 import { respell } from "../pronunciation/forTradition.js";
 import { uiEnglish } from "../shell/names.js";
@@ -274,7 +275,7 @@ function mountLesson(root, ctx, id) {
     const intro = () => [
       el("p", { class: "muted" }, `${lesson.unit ? lesson.unit + " · " : ""}about ${lesson.estMinutes} min (estimate) · ${lesson.track === "read" ? "Read the siddur" : "Speak in Israel"} · ${exs.length} exercises`),
       el("p", { class: "draft-flag", role: "note" }, DRAFT_TEXT),
-      exs.length ? null : el("p", { class: "alef-locked", role: "note" }, "This lesson has no exercises yet, so it cannot be completed."),
+      exs.length ? el("p", { class: "alef-check-rule", role: "note" }, passRuleText(exs.length)) : el("p", { class: "alef-locked", role: "note" }, "This lesson has no exercises yet, so it cannot be completed."),
       lesson.needsNativeReview ? el("p", { class: "draft-flag alef-needs-review", role: "note" }, REVIEW_FLAG) : null,
       unmet.length ? el("p", { class: "alef-locked", role: "note" }, `Finish ${unmet.map(prereqName).join(", ")} first. You can still look around.`) : null,
       exs.length ? el("p", {}, el("button", { type: "button", class: "btn secondary", "data-act": "jump-start", onclick: () => { const b = document.getElementById("alef-int-start"); b?.scrollIntoView?.({ block: "center" }); b?.focus?.(); } }, "Jump to the exercises")) : null,
@@ -352,6 +353,17 @@ function mountLesson(root, ctx, id) {
       const st2 = session.stats(), skipped = session.skippedIds();
       const all = exs.length > 0 && Object.keys(results).length === exs.length;
       const right = exs.filter((e) => results[e.id]).length, missed = exs.filter((e) => results[e.id] === false);
+      const pass = all && passedCheck(right, exs.length); // C-01: every exercise answered is not enough; the first-try pass mark must be met
+      if (all && !pass) {
+        await persist({ score: right, total: exs.length });
+        if (!alive) return;
+        body.replaceChildren(summaryNode({ passed: false, ctx, title: "Not passed yet — try again", countText: `${right} of ${exs.length} right on the first try.`, stats: { ...st2, accuracy: st2.answered ? st2.right / st2.answered : null },
+          ms: Date.now() - t0, need: passMark(exs.length), of: exs.length, wasDone: !!mine.done, missedLabels: missed.map(exLabel), cardsUpdated,
+          onRetry: () => { started = true; offKeys(); begin(); show(); }, retryLabel: "Try again",
+          extraLinks: [el("a", { class: "btn secondary", href: "#/intermediate" }, "All intermediate lessons")] }));
+        body.querySelector?.("#alef-int-ex")?.focus?.();
+        return;
+      }
       if (all) {
         // Count the lesson in the shared progress first: if that cannot be saved, nothing here says "finished" (the exercise results stay, so the learner can try again).
         try { await completeLesson(ctx, lesson); } catch (e) { if (alive) showSaveFailure(body, e, summary); return; }

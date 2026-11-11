@@ -8,6 +8,7 @@ import { nextScaffold, SCAFFOLD_KEY } from "./scaffold.js";
 import { nextFadeLevel } from "./fade.js";
 import { memoryCardsFor, ensureMemoryCards } from "../letters/memory.core.js";
 import { loadContent } from "./content.js";
+import { passMark, passed as passedCheck } from "./passmark.js";
 export { loadState };
 async function pointToNext(lesson, completed) {
   const { available } = await import('./lessons.js');
@@ -245,15 +246,29 @@ export async function setScaffoldPin(ctx, cardId, pinned) {
 }
 
 /**
- * Finish a quick check: the lesson is completed (cards created, streak counted) only here, after the learner answered every
- * question. First-attempt results feed the SRS: misses lapse the card, hits review it. Returns { added, updated }.
+ * Finish a quick check. C-01: the lesson is completed (done mark, streak day) only when the learner PASSED: at least
+ * PASS_SHARE (70%) of the questions right on the first try (exercises.session.js passMark). Below the mark the answers
+ * still feed the SRS (the lesson's cards are created, misses lapse, hits review) but nothing marks the lesson done.
+ * Returns { added, updated, completed, passed, right, need, of }.
  */
 export async function saveQuickCheck(ctx, lesson, questions, results, now = Date.now()) {
-  if (!questions.length || !Object.keys(results).length) return { added: 0, updated: 0, completed: false };
+  if (!questions.length || !Object.keys(results).length) return { added: 0, updated: 0, completed: false, passed: false, right: 0, need: passMark(questions.length), of: questions.length };
   const outcomes = questions.filter((q) => q.cardId && q.id in results).map((q) => ({ id: q.cardId, kind: q.cardKind || "word", good: !!results[q.id], create: true }));
+  const right = questions.filter((q) => results[q.id] === true).length, of = questions.length, need = passMark(of);
+  const ok = passedCheck(right, of);
+  if (!ok) {
+    // Not passed: review cards only (all or nothing), no done mark and no streak day.
+    const full = await fullLesson(lesson);
+    const st = await loadState(ctx, now);
+    const oldCards = await storeGet(ctx, CARDS_KEY, undefined);
+    const { cards: base, added } = ensureCards(st.cards, full, now);
+    const cards = outcomes.length ? applyOutcomesToCards(base, outcomes, now) : base;
+    await storeWriteAll(ctx, [{ key: CARDS_KEY, value: cards, old: oldCards }]);
+    return { added, updated: outcomes.length, completed: false, passed: false, right, need, of };
+  }
   // One batch: the lesson's cards, the answers' effect on them, the done mark and the streak are written together or not at all (throws StoreWriteError).
   const { added, completed, writes } = await planCompletion(ctx, lesson, now, outcomes.length ? (cards) => applyOutcomesToCards(cards, outcomes, now) : null);
   await storeWriteAll(ctx, writes);
   pointToNext(lesson, completed);
-  return { added, updated: outcomes.length, completed: true };
+  return { added, updated: outcomes.length, completed: true, passed: true, right, need, of };
 }

@@ -28,7 +28,7 @@ test('the accessibility route exists, is a preview route (not in v0), and its vi
   assert.ok(existsSync(join(root, 'src/shell/a11y.view.js')));
   assert.ok(en['nav.accessibility']);
   assert.ok(!/`accessibility`/.test(read('docs/v0/SCOPE.md').split('## What a preview route gets')[0]), 'not listed as a v0 route');
-  assert.equal(ROUTES.filter((x) => x.tier === 'v0').length, 28, 'v0 stays at 28 routes (24 + Little books, the Read and Speak doors and Practical, promoted 2026-11-10)');
+  assert.equal(ROUTES.filter((x) => x.tier === 'v0').length, 29, 'v0 stays at 29 routes (24 + Little books, the Read and Speak doors and Practical, promoted 2026-11-10; Curriculum, 2026-11-11)');
 });
 
 test('every setting in settings.js has a control here or is listed as not an accessibility setting; no stale entries', () => {

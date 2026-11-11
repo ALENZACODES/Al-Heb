@@ -13,7 +13,7 @@ export const SECTIONS = [
 
 /** Route names per section, in display order. */
 export const SECTION_ROUTES = {
-  learn: ['home', 'firstday', 'firstwin', 'wordfinder', 'learn', 'letters', 'atlas', 'letter', 'sounds', 'rules', 'rules-page', 'loanwords', 'loanword', 'spotit', 'checkpoint',
+  learn: ['home', 'firstday', 'firstwin', 'wordfinder', 'learn', 'curriculum', 'letters', 'atlas', 'letter', 'sounds', 'rules', 'rules-page', 'loanwords', 'loanword', 'spotit', 'checkpoint',
     'ladder', 'fade', 'fadeline', 'scaffold', 'gender', 'roles', 'firstday-ladder', 'vocab', 'vocab-themes', 'sprint', 'wordtrace', 'dialogues', 'dialogue', 'phrases', 'phrase',
     'israel', 'israelsec', 'israelunits', 'israelunit', 'intermediate', 'intermediatelesson', 'practical', 'practicalunit', 'practicalpage', 'grammar', 'grammartopic', 'typing', 'classtrack', 'classtrackweek', 'classtrackmode',
     'soundgap', 'vowelboard', 'niqquddial', 'dottile', 'syllablechips', 'nikkud-fade', 'roots', 'gender-drill', 'scheduler', 'known-words',

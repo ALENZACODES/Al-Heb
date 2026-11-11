@@ -136,7 +136,8 @@ function renderList(root, ctx, index, covers, progress, results, written) {
   root.replaceChildren(
     el("article", { class: "card alef-practical", "aria-labelledby": "view-title" },
       el("h1", { id: "view-title", tabindex: "-1" }, "Practical"),
-      el("p", {}, el("a", { href: "#/books" }, "Little books"), " · ", el("a", { href: "#/phrases" }, "Common phrases")),
+      el("p", {}, ctx?.hasRoute?.("curriculum") ? el("a", { href: "#/curriculum" }, "Curriculum: where these pages sit in the course") : null, ctx?.hasRoute?.("curriculum") ? " · " : null,
+        el("a", { href: "#/books" }, "Little books"), " · ", el("a", { href: "#/phrases" }, "Common phrases")),
       el("p", {}, DRAFT_TEXT),
       el("p", { class: "muted" },
         `${totals.units ?? ""} units of short pages, grouped by level. Each page has a grammar note, spaced review, listening and speaking.`),

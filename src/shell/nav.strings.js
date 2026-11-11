@@ -14,6 +14,7 @@ export const NAV_EN = {
   'nav.more': 'More', 'nav.search': 'Search', 'nav.menu.label': 'All sections',
   'nav.talk': 'Talk',
   'nav.phrases': 'Common phrases',
+  'nav.curriculum': 'Curriculum',
   'nav.practical': 'Practical',
   'nav.books': 'Little books',
   'nav.games': 'Games',

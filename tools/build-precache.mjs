@@ -97,6 +97,8 @@ const ON_DEMAND_FILES = new Set([
   'src/curriculum/intermediate.view.js',
   // Israel units (preview route /israel-units): view, model and data are loaded on first open and runtime-cached.
   'src/curriculum/practical.view.js', 'src/curriculum/practical-progress.js', 'src/curriculum/practical-written.js',
+  // Curriculum page (the whole course in one order): fetched when it is opened
+  'src/curriculum/path.view.js', 'src/curriculum/path.model.js', 'data/curriculum/path.json', 'assets/css/curriculum.css',
   'src/curriculum/israel-units.view.js', 'src/curriculum/israel-units.js', 'data/curriculum/israel-units.json',
   // Learn map sub-screens: dynamically imported by learn.view.js when their query is opened; the map itself uses the slim lessons-index and stays installed.
   'src/curriculum/review.view.js', 'src/curriculum/loanwords.view.js', 'src/curriculum/spotit.view.js', 'src/curriculum/checkpoint.view.js', 'src/curriculum/dialogues.view.js', 'src/curriculum/ladder.view.js', 'src/curriculum/fade.view.js', 'src/curriculum/gender.view.js', 'src/curriculum/scaffold.view.js',

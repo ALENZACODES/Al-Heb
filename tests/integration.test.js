@@ -129,7 +129,7 @@ ifFile('data/corpus/registry.json', (d) => {
 });
 ifFile('data/audio/manifest.json', (d) => {
   assert.ok(Array.isArray(d));
-  for (const e of d) { assert.ok(['m', 'f'].includes(e.voice), e.path); assert.ok(['israeli', 'sephardi', 'ashkenazi'].includes(e.tradition), e.path); assert.ok(['missing', 'tts', 'synthetic-unreviewed', 'recorded'].includes(e.status), e.path); assert.equal(e.path, `audio/${e.voice}/${e.tradition}/${e.kind}/${e.id}.mp3`); }
+  for (const e of d) { assert.ok(['m', 'f'].includes(e.voice), e.path); assert.ok(['israeli', 'sephardi', 'ashkenazi'].includes(e.tradition), e.path); assert.ok(['missing', 'plays-israeli', 'tts', 'synthetic-unreviewed', 'recorded'].includes(e.status), e.path); assert.equal(e.path, `audio/${e.voice}/${e.tradition}/${e.kind}/${e.id}.mp3`); }
   const letterIds = new Set(d.filter((e) => e.kind === 'letter').map((e) => e.id));
   for (const id of letterIds) assert.ok(LETTERS.includes(id.replace(/-sound$/, '')) || ['vet', 'khaf', 'fe', 'sin'].includes(id.replace(/-sound$/, '')), 'audio letter id not in shared ids: ' + id);
 });

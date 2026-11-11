@@ -34,8 +34,11 @@ test("the three corrected words are taught with the right Hebrew and have no sta
     const mine = rows.filter((r) => r.id === id);
     assert.equal(mine.length, 2, `${id}: one row per voice`);
     for (const r of mine) {
-      assert.equal(r.status, "missing", `${id} ${r.voice}: the old clip said the wrong word`);
-      assert.ok(!fs.existsSync(new URL(`../${r.path}`, import.meta.url)), `${r.path}: the old mp3 is still on disk`);
+      // either no clip, or a clip made from the corrected Hebrew (its sidecar records the text it was made from)
+      if (r.status === "missing") { assert.ok(!fs.existsSync(new URL(`../${r.path}`, import.meta.url)), `${r.path}: the old mp3 is still on disk`); continue; }
+      const meta = JSON.parse(fs.readFileSync(new URL(`../${r.path}.meta.json`, import.meta.url), "utf8"));
+      assert.equal(nfc(meta.inputText), nfc(r.text), `${id} ${r.voice}: the clip was made from the corrected word`);
+      assert.equal(nfc(r.text), nfc(lessons.flatMap((l) => l.words.map((w, i) => [`${l.id.toLowerCase()}-w${i + 1}`, w.he])).find(([k]) => k === id)[1]), `${id}: the row text is the taught word`);
     }
   }
 });

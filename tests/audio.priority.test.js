@@ -30,7 +30,12 @@ test('the list has the stated columns and ranks 1..N with unique ids', () => {
   // not 500. Ranks are 1..N whatever N is.
   assert.ok(rows.length <= DEFAULT_TOP, `list has ${rows.length} rows, over the ${DEFAULT_TOP} cap`);
   // Empty is the finished state: no Israeli man-voice word is missing (2026-11-08).
-  if (!rows.length) { assert.equal(manifest.filter((e) => e.voice === 'm' && e.tradition === 'israeli' && e.kind === 'word' && e.status === 'missing' && !e.aliasOf).length, 0); return; }
+  // (the words on NEXT-CLIPS-EXCLUDED.csv carry a pronunciation flag and stay unrecorded until a person checks them)
+  if (!rows.length) {
+    const excluded = new Set(fs.readFileSync(new URL('../docs/audio/NEXT-CLIPS-EXCLUDED.csv', import.meta.url), 'utf8').split('\n').slice(1).map((l) => (l.match(/^"?([^",]+)/) || [])[1]).filter(Boolean));
+    assert.deepEqual(manifest.filter((e) => e.voice === 'm' && e.tradition === 'israeli' && e.kind === 'word' && e.status === 'missing' && !e.aliasOf && !excluded.has(e.id)).map((e) => e.id), []);
+    return;
+  }
   assert.deepEqual(Object.keys(rows[0]), ROW_COLS);
   assert.deepEqual(rows.map((r) => Number(r.rank)), Array.from({ length: rows.length }, (_, i) => i + 1));
   assert.equal(new Set(rows.map((r) => r.id)).size, rows.length);

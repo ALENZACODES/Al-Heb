@@ -32,3 +32,7 @@ Known limit, stated plainly: the sound is Modern Israeli, so for Ashkenazi-speci
 ## Honest limits
 
 No one listened to any clip in this environment (no speaker). The Sephardi-line duration and the "unnatural" verdict are the owner's, from the live site. The claim that Israeli clips are "complete for stories/arcade" is the coordinator's live-site observation (`audio/f/israeli/book/book20-p01.mp3` played to the end); this lane only counted the files (1,488 book, 370 games).
+
+## In the catalogue (11 November 2026)
+
+The site check of 11 November counted every Sephardi and Ashkenazi row without a file of its own as a missing clip (Sephardi 67% serving). Under this decision those rows are not missing: they play the Israeli clip of the same voice. The catalogue now says so. `tools/audio/plays_israeli.mjs` asks the player (`src/audio/player.js` `status()`) what each such row plays and writes `"status": "plays-israeli"`, `"source": "israeli-clip"` and `"plays": "<the Israeli file>"` on the row; the row's own `path` stays as the place a clip of its own would go. A row whose own clip appears goes back to `missing` so `tools/audio/mark_present.mjs` admits it, and a row whose Israeli clip disappears goes back to `missing` too. `data/audio/summary.json` counts these rows as `playsIsraeli`, apart from `missing` (rows nothing plays from a file) and `viaOther` (rows that play an alias or linked clip): `total = recorded + tts + playsIsraeli + viaOther + missing`. Tests: `tests/audit.audio-lane-2026-11-11.test.js`, `tests/audio.manifest.test.js`.

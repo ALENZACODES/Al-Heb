@@ -154,6 +154,16 @@ function initPrayerVeil() {
   const today = localDay();
   if (!veilDue(readLocal(DAY_KEY), today)) { veil.remove(); return; }
   writeLocal(DAY_KEY, today);
+  // While the opening covers the screen, the page behind it takes no keyboard focus (Tab used to wander onto controls the
+  // veil was hiding). Everything is given back the moment the veil leaves the page, whichever way it closes.
+  try {
+    const held = [...document.body.children].filter((n) => n !== veil && !/^(SCRIPT|STYLE|NOSCRIPT|LINK)$/.test(n.tagName) && !n.hasAttribute('inert'));
+    for (const n of held) n.setAttribute('inert', '');
+    const release = () => { for (const n of held) n.removeAttribute('inert'); };
+    const watch = new MutationObserver(() => { if (!veil.isConnected) { watch.disconnect(); release(); } });
+    watch.observe(document.body, { childList: true });
+    setTimeout(() => { if (veil.isConnected) return; watch.disconnect(); release(); }, 35000);
+  } catch { /* the veil still closes on its own */ }
   const firstVisit = !readLocal(VISIT_KEY);
   writeLocal(VISIT_KEY, '1');
   let closed = false;

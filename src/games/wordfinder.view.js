@@ -18,7 +18,7 @@ export function mount(root, ctx) {
   let wrong = new Set(), hint = false, roundChoices = [];
   const status = h('p', { class: 'wf-status', role: 'status', 'aria-live': 'polite' }, 'Getting your first words ready…');
   const sound = h('p', { class: 'wf-sound muted', role: 'status', 'aria-live': 'polite' });
-  const progress = h('div', { class: 'wf-progress', 'aria-label': 'Your word-finding progress' });
+  const progress = h('div', { class: 'wf-progress', role: 'group', 'aria-label': 'Your word-finding progress' });
   const stage = h('div', { class: 'wf-stage' });
   const more = h('div', { class: 'wf-menu' });
 

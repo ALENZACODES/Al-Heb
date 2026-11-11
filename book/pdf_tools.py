@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""PDF helpers for the ALEF book (pypdf; pip install pypdf, BSD-3).
+"""PDF helpers for the Aleph book (pypdf; pip install pypdf, BSD-3).
   pdf_tools.py dests FILE.pdf              -> JSON {anchor-id: 1-based page} from the PDF's named destinations
   pdf_tools.py pad-even FILE.pdf           -> append a blank page (same size) if the page count is odd (in place)
   pdf_tools.py reverse IN.pdf OUT.pdf      -> reversed page order (bookmarks remapped; tags dropped) (for IngramSpark/Lulu right-to-left bound books); pads to even first

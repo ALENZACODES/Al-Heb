@@ -56,7 +56,7 @@ UNITS = [
     dict(id="pu-restaurant", title="Ordering at a restaurant", level="L1",
          lessons=["il06", "il07", "I-13", "I-38"], situation=None, speak="speak-survival-cafe-1",
          phrasebook_ids=RESTAURANT_IDS, dialogues=["d-restaurant"],
-         grammar="The same אֶפְשָׁר + infinitive used at a cafe also opens a restaurant request. ALEF has no separate restaurant phrasebook: every Hebrew line here is copied from the cafe situation, from I-13 / I-38, or from the existing restaurant dialogue.",
+         grammar="The same אֶפְשָׁר + infinitive used at a cafe also opens a restaurant request. Aleph has no separate restaurant phrasebook: every Hebrew line here is copied from the cafe situation, from I-13 / I-38, or from the existing restaurant dialogue.",
          note="There is no separate restaurant phrasebook; these lines come from the cafe situation, I-38 מִסְעָדָה, and dialogue d-restaurant. No new Hebrew was composed."),
     dict(id="pu-shop", title="Shopping and paying", level="L1",
          lessons=["il08", "il09", "I-12", "I-43"], situation="shop", speak="speak-survival-shop-1",

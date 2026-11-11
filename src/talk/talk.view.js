@@ -25,11 +25,11 @@ export const METHOD_LABEL = Object.freeze({
   words: 'Word by word',
   model: 'Translated on this device',
 });
-export const NO_LINE = 'ALEF does not have that line yet. Try fewer words, or one of the lines below.';
-export const HELD_LINE = 'A sacred Name is in that line. ALEF shows it as ה׳, does not speak it and does not reword it, so the line is left as it is.';
+export const NO_LINE = 'Aleph does not have that line yet. Try fewer words, or one of the lines below.';
+export const HELD_LINE = 'A sacred Name is in that line. Aleph shows it as ה׳, does not speak it and does not reword it, so the line is left as it is.';
 export const NAME_NOT_READ = 'This line shows the Name as ה׳, so it is not read aloud.';
-export const PACK_LEAD = 'For lines ALEF has not stored, add a language pack. It translates on this device and sends nothing anywhere. A pack is a large download, so use Wi-Fi.';
-export const PACK_OFFER = 'ALEF has no stored line for that. A language pack can translate it on this device.';
+export const PACK_LEAD = 'For lines Aleph has not stored, add a language pack. It translates on this device and sends nothing anywhere. A pack is a large download, so use Wi-Fi.';
+export const PACK_OFFER = 'Aleph has no stored line for that. A language pack can translate it on this device.';
 export const PACK_CELLULAR = 'You seem to be on mobile data. Wait for Wi-Fi if your plan is limited.';
 export const PACK_SAVER = 'Data saving is on in this browser. Wait for Wi-Fi, or turn it off for this download.';
 export const PACK_FULL = 'This device reports too little free space for the pack.';
@@ -37,7 +37,7 @@ export const PACK_FAILED = 'The download stopped. What arrived is kept; press th
 export const PACK_CANNOT_RUN = 'This browser could not start the language pack. Stored lines still work.';
 export const ENGINE_WORDS = Object.freeze({ webgpu: 'the graphics chip', wasm: 'the processor' });
 export const PACK_NONE = 'Language packs are not available on this browser. Stored lines still work.';
-export const LISTEN_NOTE = 'Listening uses your browser’s own speech service. Some browsers send the sound to the browser maker to turn it into text. ALEF sends nothing anywhere and keeps only the text of your last lines on this device.';
+export const LISTEN_NOTE = 'Listening uses your browser’s own speech service. Some browsers send the sound to the browser maker to turn it into text. Aleph sends nothing anywhere and keeps only the text of your last lines on this device.';
 export const NO_LISTEN = 'This browser cannot listen. Type your line instead; on most phones the keyboard has its own microphone key.';
 export const DEVICE_VOICE = 'Read aloud by your device voice, not by a recorded teacher.';
 export const VOICE_KEEP = 'Speaking the translation in your own voice is a future feature.';
@@ -104,7 +104,7 @@ export function mount(root, ctx = {}) {
   const title = h('h1', { id: 'view-title', tabindex: '-1' }, 'Talk');
   const helper = rimonSays('Say a short line. I will help you find it in the other language.', { action: 'wave', size: 96 });
   const hero = h('div', { class: 'alef-feature-hero talk-hero' }, medal('home', 'talk', 54), helper.el);
-  const lead = h('p', {}, 'Say or type a short everyday line in English or Hebrew. ALEF shows it in the other language and can read it aloud. Stored lines for travel, shop, table and synagogue talk answer at once. With a language pack on this device, other everyday lines are translated too.');
+  const lead = h('p', {}, 'Say or type a short everyday line in English or Hebrew. Aleph shows it in the other language and can read it aloud. Stored lines for travel, shop, table and synagogue talk answer at once. With a language pack on this device, other everyday lines are translated too.');
   const status = h('p', { class: 'muted', role: 'status', 'aria-live': 'polite' }, 'Getting the lines ready…');
 
   const dirBtn = (value, label, lang) => h('button', { type: 'button', class: 'btn secondary', 'data-dir': value, lang, onclick: () => { settings = { ...settings, direction: value }; save(); paintLangs(); } }, label);
@@ -156,7 +156,7 @@ export function mount(root, ctx = {}) {
   const packSpeed = h('button', { type: 'button', class: 'btn secondary', hidden: true, onclick: speedCheck }, 'Check Translation Speed');
   packBox.append(packNote, h('div', { class: 'talk-pack-row' }, packSpeed, packRemove));
 
-  const suggestTitle = h('h2', { hidden: true }, 'Lines ALEF Knows');
+  const suggestTitle = h('h2', { hidden: true }, 'Lines Aleph Knows');
   const suggest = h('ul', { class: 'talk-list', hidden: true });
 
   const check = (id, label, on, set) => {
@@ -172,7 +172,7 @@ export function mount(root, ctx = {}) {
   const toggles = h('div', { class: 'talk-toggles' },
     check('talk-speak', 'Read each translation aloud', settings.autoSpeak, (v) => { settings = { ...settings, autoSpeak: v }; }),
     check('talk-face', 'Show it upside down for the person facing me', settings.faceToFace, (v) => { settings = { ...settings, faceToFace: v }; }),
-    check('talk-nikkud', 'Show Hebrew vowel marks where ALEF has them', settings.nikkud, (v) => { settings = { ...settings, nikkud: v }; }),
+    check('talk-nikkud', 'Show Hebrew vowel marks where Aleph has them', settings.nikkud, (v) => { settings = { ...settings, nikkud: v }; }),
     h('label', { for: 'talk-speaker' }, 'Hebrew “I” forms: ', who),
     h('p', { class: 'muted talk-small' }, VOICE_KEEP));
 

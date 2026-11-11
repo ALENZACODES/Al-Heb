@@ -1,11 +1,11 @@
 <!-- Copy of John's Run 3 command sheet (Nov 4, 2026) with the image tool and its vendor named neutrally. Parsed by tools/images/build_run3.mjs; do not renumber commands. -->
 # 100 image-tool commands for the Hebrew image lane — Run 3: the next 1,000 images
 
-Commands **150–249** · Nov 4, 2026 · for ALEF (ALENZACODES/Al-Heb)
+Commands **150–249** · Nov 4, 2026 · for Aleph (ALENZACODES/Al-Heb)
 
 ## How to use
 
-This is the third run of the ALEF image lane, built to sit exactly on top of what already exists — nothing in it repeats Runs 1–2:
+This is the third run of the Aleph image lane, built to sit exactly on top of what already exists — nothing in it repeats Runs 1–2:
 
 - **Run 1 (commands 1–100, the original PDF):** style guide, Ari & Noa, mouth shapes, frames, backgrounds; 27 print-letter sets; 27 cursive-letter sets; 15 vowel sets; 15 vocabulary packs; prayer art, badges, icons, brand. ≈765 unique images.
 - **Run 2 (repo `docs/images/NEXT_1000_COMMANDS.md`, commands 36–149):** the unfinished Run 1 rows plus Block H — Torah-service and holiday step-scenes, Street Hebrew scenes, object-illustration packs, traditions explorer, Rimon dashboard poses, workbook doodles, mouth panels, extra pins. Paste-ready files already live in `docs/images/paste/` (cmd-036 … cmd-149).
@@ -13,7 +13,7 @@ This is the third run of the ALEF image lane, built to sit exactly on top of wha
 
 The standing rule is unchanged and absolute: **no image ever contains Hebrew letters, nikkud, transliteration, or any text at all.** The image tool garbles Hebrew; every letter, mark and caption is typeset later in code. If a design needs words, leave a clean blank area.
 
-Run it the same way as Run 1: one image-tool **Project** ("ALEF Image Lane — Run 3"), command 150 first, its outputs pinned; one command per message; answer "continue" until each 10-image set is complete; after each command, send back the images named exactly as the command says plus the manifest lines (they feed the app's asset manifest). The image tool makes images one or two at a time and account limits apply as before (user reports in 2026: roughly 40 images per 3 hours, ~200 per day on Plus), so 1,000 images is roughly a week of daily sessions, or one scripted run through the image tool's API.
+Run it the same way as Run 1: one image-tool **Project** ("Aleph Image Lane — Run 3"), command 150 first, its outputs pinned; one command per message; answer "continue" until each 10-image set is complete; after each command, send back the images named exactly as the command says plus the manifest lines (they feed the app's asset manifest). The image tool makes images one or two at a time and account limits apply as before (user reports in 2026: roughly 40 images per 3 hours, ~200 per day on Plus), so 1,000 images is roughly a week of daily sessions, or one scripted run through the image tool's API.
 
 Ownership note, same as Run 1: the image tool's terms assign output rights to you and the images may be used commercially; unmodified generated images are likely not copyrightable in the US, so the overlaid Hebrew type and layout are what you own outright. Strip all embedded metadata from every returned file before it enters the repo.
 
@@ -21,7 +21,7 @@ Ownership note, same as Run 1: the image tool's terms assign output rights to yo
 
 Paste this as the first message of the new Project, with this file in the Project's files, and the Run 1–2 reference sheets attached (CHAR_ari_sheet.png, CHAR_noa_sheet.png, a Rimon mascot image, FRAME_lettercard.png, and the BG_ backgrounds):
 
-> You are the Image Lane for ALEF, a Hebrew reading-and-speaking course (app + printed book) for English-speaking adults. You work for the project's build coordinator, who integrates your output. You do not write code or Hebrew text. Your only job is to produce illustration sets to spec.
+> You are the Image Lane for Aleph, a Hebrew reading-and-speaking course (app + printed book) for English-speaking adults. You work for the project's build coordinator, who integrates your output. You do not write code or Hebrew text. Your only job is to produce illustration sets to spec.
 >
 > WORK ORDER 3
 > 1. Load the attached file "Run 3 commands". Execute commands 150 through 249 in order, one command per cycle.
@@ -161,7 +161,7 @@ The app has background scenes for five places; the travel track needs a real atl
 
 ## Block O — commands 210–219: grammar in pictures (100 images)
 
-Grammar is where apps usually go text-only. ALEF's edge is teaching it visually. Each command is one grammar idea told in 10 single clear scenes; Ari, Noa and Rimon are the actors; every object is from vocabulary the learner already knows. No text, no arrows with letters (plain gold arrows are allowed where a command says so). Use the SET TEMPLATE. Files are the set name in each command's title (GRAM_…) + _01 … _10.
+Grammar is where apps usually go text-only. Aleph's edge is teaching it visually. Each command is one grammar idea told in 10 single clear scenes; Ari, Noa and Rimon are the actors; every object is from vocabulary the learner already knows. No text, no arrows with letters (plain gold arrows are allowed where a command says so). Use the SET TEMPLATE. Files are the set name in each command's title (GRAM_…) + _01 … _10.
 
 210. **Prepositions — place (GRAM_place).** Rimon on a chair; Rimon under the chair; Rimon inside a box; Rimon beside the box; Rimon behind a curtain (paws visible); Rimon in front of a door; Rimon between two books; a cup on a table vs the same cup under the table (2 images); one wide image of a lane with a house at the far end — Ari small beside the far house and a second Ari large close to the viewer beside an identical near house (distance readable in a single frame).
 211. **Prepositions — movement (GRAM_move).** Rimon jumping into a box; Rimon climbing out of the box; a ball rolling across a table; a bird flying over a wall; a fish swimming through a hoop of seaweed; Ari walking toward Noa with a gift; Noa walking away from a door waving; a cat slipping between two chair legs; water pouring from a jug into a glass; a letter (blank envelope) going into a post box.

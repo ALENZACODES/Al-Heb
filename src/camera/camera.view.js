@@ -12,7 +12,7 @@ import { isPointed } from '../photo/hebrew.js';
 import { createGlossary, createDictionary, wordBreakdown, percentBox, sourceLabel, MAX_PHOTO_SIDE, HELD_NOTE } from './camera-model.js';
 import { loadGlossaryData, loadPhrasebook, loadDictionaryIndex } from './camera-client.js';
 
-export const ON_DEVICE_NOTICE = 'Your photo stays on this device. It is read and translated here, in your browser, and nothing is sent anywhere. Common sign and menu words get the best results; other lines are translated word for word from the ALEF dictionary when every word is found.';
+export const ON_DEVICE_NOTICE = 'Your photo stays on this device. It is read and translated here, in your browser, and nothing is sent anywhere. Common sign and menu words get the best results; other lines are translated word for word from the Aleph dictionary when every word is found.';
 export const PACK_READY_NOTE = 'The Hebrew to English language pack is on this device, so lines outside the sign list are translated as whole lines.';
 export const PACK_MISSING_NOTE = 'For whole-line translation of signs outside the sign list, add the Hebrew to English language pack on the Talk screen. It is a large download, so use Wi-Fi.';
 export const ACCURACY_NOTICE = 'This reader has only been measured on computer-made sign images, not on real photos. Expect mistakes with glare, angles, small or decorative lettering. Do not rely on it for anything important.';
@@ -132,7 +132,7 @@ export function mount(root, ctx = {}) {
     if (!dictionary) { try { dictionary = createDictionary(ctx.cameraDictionary || await loadDictionaryIndex()); } catch { dictionary = createDictionary(null); } }
     return dictionary;
   };
-  const KIND_NOTE = { 'sign-list': 'From the built-in sign word list.', dictionary: 'From the ALEF dictionary.', unknown: 'Not in the ALEF dictionary as written.', number: '',
+  const KIND_NOTE = { 'sign-list': 'From the built-in sign word list.', dictionary: 'From the Aleph dictionary.', unknown: 'Not in the Aleph dictionary as written.', number: '',
     joined: 'This may be the joined form of the word shown here (the form a noun takes before another noun, as in \u201cstation of\u201d). Check it against the sign.',
     plural: 'This may be the plural of the word shown here. Check it against the sign.' };
   const showWords = async (r, btn) => {

@@ -1,4 +1,4 @@
-/* ALEF base styles. Logical properties throughout (RTL-aware). Fonts: assets/css/fonts.css (self-hosted OFL). */
+/* Aleph base styles. Logical properties throughout (RTL-aware). Fonts: assets/css/fonts.css (self-hosted OFL). */
 :root {
   --bg: #f6efe0; --fg: #1c2a1e; --muted: #5a6656; --card: #fffaf0; --border: #d9cdb3;
   --accent: #1e4634; --accent-fg: #fffaf0; --focus: #b45309; --warn-bg: #fff1c2; --warn-fg: #5b4200;

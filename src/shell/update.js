@@ -156,12 +156,12 @@ export function mountUpdateBanner(handle, opt = {}) {
   const tryApply = () => { if (!pending) return; if (isBusy()) return; pending = false; stopPoll(); handle.apply({ beforeReload: opt.beforeReload }); };
   const render = (s) => {
     if (s === "idle") { bar.hidden = true; return; }
-    msg.textContent = s === "stalled" ? "The update could not be applied from here. Close all ALEF tabs and open it again." : "A new version of ALEF is ready. Reload to use it; your progress is already saved.";
+    msg.textContent = s === "stalled" ? "The update could not be applied from here. Close all Aleph tabs and open it again." : "A new version of Aleph is ready. Reload to use it; your progress is already saved.";
     reload.hidden = s === "stalled"; bar.hidden = false;
   };
   reload.addEventListener("click", () => {
     if (!isBusy()) { handle.apply({ beforeReload: opt.beforeReload }); return; }
-    pending = true; msg.textContent = "You are in the middle of an exercise, so ALEF will reload when you finish it. Your progress is already saved.";
+    pending = true; msg.textContent = "You are in the middle of an exercise, so Aleph will reload when you finish it. Your progress is already saved.";
     if (poll == null) poll = setT2(tryApply, 2000);
   });
   later.addEventListener("click", () => { pending = false; stopPoll(); bar.hidden = true; });

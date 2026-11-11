@@ -117,7 +117,7 @@ test('harvest art is local and documentary text stays out of image pixels', () =
   // (Home and About), not in the shell on every page.
   assert.doesNotMatch(html, /site-footer/);
   assert.match(read('src/shell/home.view.js'), /Made by John Khan · © 2026 John Khan\. All rights reserved\./);
-  assert.match(read('src/shell/about.view.js'), /Made by John Khan\. ALEF is \\u00a9 2026 John Khan/);
+  assert.match(read('src/shell/about.view.js'), /Made by John Khan\. Aleph is \\u00a9 2026 John Khan/);
 });
 
 

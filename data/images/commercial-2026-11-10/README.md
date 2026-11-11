@@ -1,6 +1,6 @@
 # Commercial image pack (10 Nov 2026)
 
-New pictures for ALEF store listings, onboarding, empty states, streak lamps, missing medallions, Brain Lab tokens, and learn-track covers. Orders: draft PR #41 (`docs/commercial-image-orders-2026-11-09`, `COMMERCIAL-ORDERS-2026-11-09.md`). Nothing here overwrites existing files under `assets/` or `data/images/manifest.csv`.
+New pictures for Aleph store listings, onboarding, empty states, streak lamps, missing medallions, Brain Lab tokens, and learn-track covers. Orders: draft PR #41 (`docs/commercial-image-orders-2026-11-09`, `COMMERCIAL-ORDERS-2026-11-09.md`). Nothing here overwrites existing files under `assets/` or `data/images/manifest.csv`.
 
 All 46 ordered pictures are here as `.webp`, metadata stripped. Also included:
 

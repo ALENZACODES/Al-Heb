@@ -1,4 +1,4 @@
-/* ALEF mini-games — scoped styles (.game-*, .tug-*, .catcher-*). */
+/* Aleph mini-games — scoped styles (.game-*, .tug-*, .catcher-*). */
 
 .game-card { overflow: hidden; }
 .game-status { font-weight: 600; margin-block: .5rem; }

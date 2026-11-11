@@ -48,7 +48,7 @@
    "name": "focus returns to the heading after the step changes",
    "ok": true,
    "gap": false,
-   "detail": "{\"tag\":\"h1\",\"id\":\"view-title\",\"role\":null,\"type\":\"\",\"name\":\"Welcome to ALEF אלף\",\"inMain\":true,\"inNav\":false,\"pressed\":null,\"letter\":\"\"}"
+   "detail": "{\"tag\":\"h1\",\"id\":\"view-title\",\"role\":null,\"type\":\"\",\"name\":\"Welcome to Aleph אלף\",\"inMain\":true,\"inNav\":false,\"pressed\":null,\"letter\":\"\"}"
   },
   {
    "flow": "onboarding",

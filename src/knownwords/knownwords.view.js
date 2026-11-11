@@ -9,7 +9,7 @@ import { el, heText } from '../curriculum/dom.js';
 import { loadJSON } from '../curriculum/data.js';
 import { LEVELS, knownSet, knownSetFromIndex, validate, similar } from './validate.js';
 
-export const NOTE = 'Preview. This checks spelling against ALEF\'s own word list (which no Hebrew teacher has reviewed). A word that is not found may still be fine Hebrew, and a word that is found may still be used wrongly. Nothing you paste is saved or sent anywhere.';
+export const NOTE = 'Preview. This checks spelling against Aleph\'s own word list (which no Hebrew teacher has reviewed). A word that is not found may still be fine Hebrew, and a word that is found may still be used wrongly. Nothing you paste is saved or sent anywhere.';
 const LEVEL_NOTE = { A1: 'A1 words', A2: 'A1 and A2 words', B1: 'A1 to B1 words', B2: 'all listed words (A1 to B2)' };
 
 /** @param {HTMLElement} root @param {any} ctx @returns {() => void} unmount */

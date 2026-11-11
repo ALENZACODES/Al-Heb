@@ -99,7 +99,7 @@ test("scheduleStudyReminder: fires at the chosen time via the injected show(), t
   assert.equal(shown.length, 0);
   t.advanceTo(local(2026, 11, 4, 9, 0));
   assert.equal(shown.length, 1);
-  assert.equal(shown[0].title, "ALEF: a few minutes of Hebrew");
+  assert.equal(shown[0].title, "Aleph: a few minutes of Hebrew");
   assert.equal(shown[0].o.route, "#/learn");
   assert.deepEqual(fired, [local(2026, 11, 4, 9, 0)]);
   assert.equal(N.status().next.getTime(), local(2026, 11, 5, 9, 0), "re-armed for Thursday");

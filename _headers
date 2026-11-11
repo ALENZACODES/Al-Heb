@@ -1,9 +1,9 @@
-# Cloudflare Pages headers for ALEF (copied into dist/ by tools/deploy/make-dist.mjs; checked by tools/deploy/check-deploy.mjs).
+# Cloudflare Pages headers for Aleph (copied into dist/ by tools/deploy/make-dist.mjs; checked by tools/deploy/check-deploy.mjs).
 # Cloudflare rules: when several rules match one URL ALL their headers apply, and a header set twice is joined with a comma.
 # So Cache-Control is set only in rules that do not overlap; /* carries security headers only.
 # Limits (developers.cloudflare.com/pages/platform/limits, read 2026-11-03): 100 header rules, 2,000 characters per header.
 #
-# CSP: ALEF is zero-dependency, so every source is 'self'. Notes:
+# CSP: Aleph is zero-dependency, so every source is 'self'. Notes:
 #  - style-src 'unsafe-inline': views set style="" attributes from JavaScript and offline.html has a <style> block.
 #  - script-src 'wasm-unsafe-eval': the vendored Tesseract OCR core (assets/vendor/_tesseract) is WebAssembly.
 #  - worker-src blob: and img-src/media-src blob: data: : OCR worker, photo canvas, picked photos.

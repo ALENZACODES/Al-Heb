@@ -191,13 +191,13 @@ export function mount(root, ctx = {}) {
         h('article', { class: 'ct-sheet card', 'aria-label': `Week ${w.week} handout` },
           ...weekHeader(i),
           h('h3', {}, 'This week'), list(w.goals),
-          h('h3', {}, 'Lessons in ALEF'), list([...w.lessons.map((id) => `${id}: ${lessonTitle(id)}`), ...(w.stretch || []).map((id) => `Extra: ${id}: ${lessonTitle(id)}`)]),
+          h('h3', {}, 'Lessons in Aleph'), list([...w.lessons.map((id) => `${id}: ${lessonTitle(id)}`), ...(w.stretch || []).map((id) => `Extra: ${id}: ${lessonTitle(id)}`)]),
           h('h3', {}, `${w.readAloud.mode === 'listen' ? 'Listen to' : 'Read aloud'}`),
           ...(w.readAloud.mode === 'listen' ? [h('p', {}, `Listen to: ${ra.map((t) => t.title).join('; ')}. Do not read it yet.`)] : ra.flatMap((t) => [h('p', { class: 'small' }, t.title), ...t.lines.map((l) => heSpan(l, 'he ct-he'))])),
           h('h3', {}, 'Homework'), h('ul', { class: 'ct-checks' }, ...w.homework.map((x) => h('li', {}, h('span', { class: 'ct-box', 'aria-hidden': 'true' }), `${x.label} (about ${x.minutes} min)`))),
           h('h3', {}, 'Can you...'), h('ul', { class: 'ct-checks' }, ...w.canYou.map((c) => h('li', {}, h('span', { class: 'ct-box', 'aria-hidden': 'true' }), `...${c}?`))),
           h('p', { class: 'small' }, 'Culture note: ', w.culture),
-          h('p', { class: 'small' }, 'ALEF class track: original plan, draft, not reviewed by an educator.')));
+          h('p', { class: 'small' }, 'Aleph class track: original plan, draft, not reviewed by an educator.')));
     }
 
     /** Help for this week: sounds English speakers mix up, common slips, and where to practise them. */

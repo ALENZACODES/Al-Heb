@@ -31,7 +31,7 @@ export { STREAK_LINE };
 export const DAILY_PRAYERS = Object.freeze({
   morning: {
     title: "Modeh Ani: Morning Prayer",
-    calName: "ALEF Morning Prayer",
+    calName: "Aleph Morning Prayer",
     he: "מוֹדֶה אֲנִי לְפָנֶיךָ מֶלֶךְ חַי וְקַיָּם, שֶׁהֶחֱזַרְתָּ בִּי נִשְׁמָתִי בְּחֶמְלָה. רַבָּה אֱמוּנָתֶךָ",
     tr: "Modeh ani lefanecha, Melech chai vekayam, shehechezarta bi nishmati bechemla. Raba emunatecha.",
     en: "I thank You, living and eternal King, for returning my soul to me with compassion. Great is Your faithfulness.",
@@ -40,7 +40,7 @@ export const DAILY_PRAYERS = Object.freeze({
   },
   bedtime: {
     title: "Shema at Bedtime",
-    calName: "ALEF Bedtime Shema",
+    calName: "Aleph Bedtime Shema",
     he: "שְׁמַע יִשְׂרָאֵל יְהוָה אֱלֹהֵינוּ יְהוָה אֶחָד׃",
     tr: "Shma Yisrael, Adonai Eloheinu, Adonai Echad.",
     en: "Hear, O Israel: the Lord is our God, the Lord is One. (Deuteronomy 6:4)",
@@ -81,7 +81,7 @@ export function prayerReminderICS(slot, hhmm, opt = {}) {
   const endMin = hh * 60 + mm + 5;
   const e = endMin >= 1440 ? `${ymd(start)}T235900` : `${ymd(start)}T${pad(Math.floor(endMin / 60))}${pad(endMin % 60)}00`;
   const link = opt.appUrl ? `${opt.appUrl.replace(/\/?$/, "/")}${p.route}` : "";
-  const description = [p.he, p.tr, p.en, "", p.note, "", STREAK_LINE, link ? `Open ALEF: ${link}` : ""].join("\n").replace(/\n{3,}/g, "\n\n").trim();
+  const description = [p.he, p.tr, p.en, "", p.note, "", STREAK_LINE, link ? `Open Aleph: ${link}` : ""].join("\n").replace(/\n{3,}/g, "\n\n").trim();
   const L = calendarHead(p.calName);
   L.push("BEGIN:VEVENT", `UID:aleph-daily-${slot}-${timeSlug(hhmm)}@aleph`, `DTSTAMP:${utcStamp(now)}`,
     `DTSTART:${s}`, `DTEND:${e}`, "RRULE:FREQ=DAILY",
@@ -110,13 +110,13 @@ export function torahQuoteFor(quotes, date) {
  */
 export function torahDailyICS(quotes, from, days, opt = {}) {
   const now = opt.now || new Date();
-  const L = calendarHead("ALEF Torah Verse of the Day");
+  const L = calendarHead("Aleph Torah Verse of the Day");
   for (let i = 0; i < days; i++) {
     const d = new Date(from.getFullYear(), from.getMonth(), from.getDate() + i, 12);
     const next = new Date(d.getFullYear(), d.getMonth(), d.getDate() + 1, 12);
     const q = torahQuoteFor(quotes, d);
     const link = opt.appUrl ? `${opt.appUrl.replace(/\/?$/, "/")}#/morning` : "";
-    const description = [q.he, q.tr, q.en, "", q.why, link ? `\nOpen ALEF: ${link}` : ""].join("\n").trim();
+    const description = [q.he, q.tr, q.en, "", q.why, link ? `\nOpen Aleph: ${link}` : ""].join("\n").trim();
     L.push("BEGIN:VEVENT", `UID:aleph-torah-${ymd(d)}@aleph`, `DTSTAMP:${utcStamp(now)}`, `DTSTART;VALUE=DATE:${ymd(d)}`, `DTEND;VALUE=DATE:${ymd(next)}`,
       `SUMMARY:${escapeText(`Torah: ${q.ref}`)}`, `DESCRIPTION:${escapeText(description)}`, "TRANSP:TRANSPARENT", "CATEGORIES:Aleph", "END:VEVENT");
   }
@@ -150,9 +150,9 @@ export function subscribeLinks(httpsUrl, name) {
 /** How to take a calendar off again, per app. Plain steps, shown under the buttons. */
 export const REMOVE_STEPS = Object.freeze([
   ["Google Calendar", "On a computer, open Google Calendar, find the calendar under \"Other calendars\", click the three dots next to it and choose \"Unsubscribe\" (or Settings, then \"Remove calendar\")."],
-  ["iPhone or iPad", "Open Calendar, tap \"Calendars\" at the bottom, tap the (i) next to the ALEF calendar and choose \"Delete Calendar\" (or \"Unsubscribe\")."],
-  ["Mac", "In Calendar, right-click the ALEF calendar in the sidebar and choose \"Unsubscribe\" or \"Delete\"."],
-  ["Outlook", "Right-click the ALEF calendar under \"My calendars\" or \"Other calendars\" and choose \"Remove\"."],
+  ["iPhone or iPad", "Open Calendar, tap \"Calendars\" at the bottom, tap the (i) next to the Aleph calendar and choose \"Delete Calendar\" (or \"Unsubscribe\")."],
+  ["Mac", "In Calendar, right-click the Aleph calendar in the sidebar and choose \"Unsubscribe\" or \"Delete\"."],
+  ["Outlook", "Right-click the Aleph calendar under \"My calendars\" or \"Other calendars\" and choose \"Remove\"."],
   ["A downloaded reminder", "Open the reminder in your calendar, choose Delete, then \"All events\" (or \"Delete all future events\")."],
 ]);
 

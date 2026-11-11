@@ -4,7 +4,7 @@ Google's Hebrew voices guess at Biblical words, and the earlier pilots in `docs/
 
 ## How Each Word Is Worked Out
 
-- **Vowels and consonants** come from the points, through [Phonikud](https://github.com/thewh1teagle/phonikud) (Israeli/Sephardi five vowels, the same sound as the rest of ALEF).
+- **Vowels and consonants** come from the points, through [Phonikud](https://github.com/thewh1teagle/phonikud) (Israeli/Sephardi five vowels, the same sound as the rest of Aleph).
 - **Stress** comes from the chanting mark on the word. The mark sits on the stressed syllable. Marks that are always written at the start or end of a word (segol, pashta, zarqa, telisha, dehi) are skipped; a doubled pashta uses the first one; yetiv means the first syllable; silluq marks the last word of a verse. Where a word has only a fixed-place mark, the stress is taken from the same word elsewhere in the Torah (3,003 words); 257 words keep the default last-syllable stress.
 - **Vocal sheva**: at the start of a word, under a doubled letter, after another sheva, before the same letter, and after a vowel the text marks with meteg.
 - **Qamats as "o"**: in כָּל־, before hataf qamats, and in a closed syllable proven by the dagesh after the sheva (קָרְבָּן korban).

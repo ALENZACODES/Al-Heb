@@ -3,7 +3,7 @@
 export const SYNTH_STYLE_LIST = Object.freeze([
   {"id":"syn_galilee","title":"Galilee Breeze","role":"Calm lo-fi"},
   {"id":"syn_shuk","title":"Shuk Groove","role":"Market rhythm"},
-  {"id":"syn_pixel","title":"Pixel ALEF","role":"Chiptune"},
+  {"id":"syn_pixel","title":"Pixel Aleph","role":"Chiptune"},
   {"id":"syn_jerusalem","title":"Jerusalem Dawn","role":"Ambient"},
   {"id":"syn_telaviv","title":"Tel Aviv Nights","role":"Synthwave"},
   {"id":"syn_hora","title":"Hora Hop","role":"Lively dance"},

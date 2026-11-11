@@ -168,6 +168,6 @@ export function renderSeal(_h) {
     svgNode('text', {
       fill: '#3d0a10', 'font-size': '8.5', 'font-family': 'Frank Ruhl Libre, Times New Roman, Times, serif', 'letter-spacing': '1.4',
     }, [ringWord('KEY FOUNDATION')]),
-    centerWord('ALEF'),
+    centerWord('Aleph'),
   ]);
 }

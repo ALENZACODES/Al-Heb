@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>ALEF voice recorder</title>
+<title>Aleph voice recorder</title>
 <style>
 :root{--bg:#faf8f3;--fg:#1d1b16;--mut:#5b574c;--card:#fff;--line:#d9d3c3;--acc:#1f4e8c;--acc-fg:#fff;--ok:#1b6b3a;--warn:#9a4d00;--bad:#b3261e}
 @media (prefers-color-scheme:dark){:root{--bg:#15140f;--fg:#f1eee4;--mut:#b7b1a0;--card:#1f1d16;--line:#3a3729;--acc:#8ab4f8;--acc-fg:#0b1a2e;--ok:#7ad39a;--warn:#ffb25e;--bad:#ff8a80}}
@@ -40,7 +40,7 @@ small,.small{color:var(--mut);font-size:.9rem}
 </head>
 <body>
 <main>
-<h1>ALEF voice recorder</h1>
+<h1>Aleph voice recorder</h1>
 
 <section id="s-resume" class="card hidden" aria-live="polite">
   <p><b>Welcome back.</b> A session for <span id="r-name"></span> (<span id="r-count"></span>) was saved on this device.</p>
@@ -67,7 +67,7 @@ small,.small{color:var(--mut);font-size:.9rem}
 <section id="s-script" class="card hidden">
   <h2 style="margin-top:0">Choose the reading list</h2>
   <p id="sc-bundled" class="hidden"></p>
-  <label for="f-file">Reading list file (.csv from ALEF, or .json)</label>
+  <label for="f-file">Reading list file (.csv from Aleph, or .json)</label>
   <input id="f-file" type="file" accept=".csv,.json,text/csv,application/json">
   <p class="msg" id="sc-msg" role="status"></p>
   <div class="row"><button id="b-bundle" class="primary hidden">Use the built-in list</button></div>
@@ -466,7 +466,7 @@ async function doExport() {
   if (!files.length) { msg('Nothing recorded yet.', 'warn'); return; }
   files.push({ name: 'manifest.csv', data: toCsv(MANIFEST_COLS, rows) });
   files.push({ name: 'consent.json', data: JSON.stringify(S.consent, null, 2) });
-  files.push({ name: 'consent.txt', data: [`ALEF voice recording consent (${S.consent.version})`, '', ...CONSENT_TEXT, '', ...Object.entries(S.consent.required_boxes).map(([k, t]) => `[${S.consent.required[k] ? 'x' : ' '}] ${t}`), `[${S.consent.ai_clone_consent ? 'x' : ' '}] ${S.consent.optional_box}`, '', `Name: ${S.consent.volunteer_name}`, `Credit: ${S.consent.credit_name || '(anonymous)'}`, `Accepted at: ${S.consent.accepted_at}`, `Donor ref: ${S.consent.donor_ref}`].join('\r\n') });
+  files.push({ name: 'consent.txt', data: [`Aleph voice recording consent (${S.consent.version})`, '', ...CONSENT_TEXT, '', ...Object.entries(S.consent.required_boxes).map(([k, t]) => `[${S.consent.required[k] ? 'x' : ' '}] ${t}`), `[${S.consent.ai_clone_consent ? 'x' : ' '}] ${S.consent.optional_box}`, '', `Name: ${S.consent.volunteer_name}`, `Credit: ${S.consent.credit_name || '(anonymous)'}`, `Accepted at: ${S.consent.accepted_at}`, `Donor ref: ${S.consent.donor_ref}`].join('\r\n') });
   const zip = zipStore(files, new Date());
   const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([zip], { type: 'application/zip' })); a.download = exportName(S.volunteerName, date); document.body.appendChild(a); a.click(); setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 4000);
   msg(`Exported ${rows.length} recordings as ${a.download}. Send that one file back to the person who sent you this page. Your progress stays saved here.`, 'ok');

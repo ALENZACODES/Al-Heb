@@ -227,7 +227,7 @@ function whatsNew(list) {
 /** A milestone is worth telling someone: the phone's own share sheet, or the clipboard where there is none. Only ever from a tap. */
 function shareButton(count, g = globalThis) {
   const status = h('span', { role: 'status', class: 'ret-share-status' });
-  const text = `I am on a ${count}-day Hebrew streak with ALEF.`, url = (() => { try { return g.location.origin + g.location.pathname; } catch { return ''; } })();
+  const text = `I am on a ${count}-day Hebrew streak with Aleph.`, url = (() => { try { return g.location.origin + g.location.pathname; } catch { return ''; } })();
   return h('p', { class: 'ret-share' }, h('button', { type: 'button', class: 'btn secondary', onclick: async () => {
     try { if (g.navigator?.share) { await g.navigator.share({ text, url }); status.textContent = ''; return; } await g.navigator.clipboard.writeText(`${text} ${url}`.trim()); status.textContent = ' Copied. Paste it anywhere.'; }
     catch (e) { status.textContent = e && e.name === 'AbortError' ? '' : ' Sharing is not available in this browser.'; }
@@ -236,7 +236,7 @@ function shareButton(count, g = globalThis) {
 function optInCard(R) {
   if (onIphoneTab()) {
     const card = h('section', { class: 'card ret-optin', 'aria-labelledby': 'ret-optin-h' }, h('h3', { id: 'ret-optin-h' }, 'Want a nudge from Rimon?'),
-      h('p', {}, 'On iPhone, add ALEF to your Home Screen to get reminders, or add a daily reminder to your calendar.'),
+      h('p', {}, 'On iPhone, add Aleph to your Home Screen to get reminders, or add a daily reminder to your calendar.'),
       h('div', { class: 'row' }, h('a', { class: 'btn', href: '#/install' }, 'How to add'),
         h('button', { type: 'button', class: 'btn secondary', onclick: async () => { await downloadReminder(R); R.update((r) => answerAsk(r, 'later')); } }, 'Add to calendar'),
         h('button', { type: 'button', class: 'btn secondary', onclick: () => { R.update((r) => answerAsk(r, 'later')); card.remove(); } }, 'Not now')));
@@ -252,8 +252,8 @@ function optInCard(R) {
       h('button', { type: 'button', class: 'btn', onclick: async () => {
         const picked = card.querySelector('input[name="ret-tone"]:checked')?.value || 'kind';
         const p = await R.turnOnReminders(picked);
-        status.textContent = p === 'granted' ? 'Reminders are on. They only arrive while ALEF is open on this device, or on Android with ALEF installed.'
-          : p === 'unsupported' ? 'This browser cannot show reminders. On iPhone, add ALEF to your Home Screen first.' : 'No problem. You can turn reminders on later in the shop.';
+        status.textContent = p === 'granted' ? 'Reminders are on. They only arrive while Aleph is open on this device, or on Android with Aleph installed.'
+          : p === 'unsupported' ? 'This browser cannot show reminders. On iPhone, add Aleph to your Home Screen first.' : 'No problem. You can turn reminders on later in the shop.';
         card.querySelector('.row')?.remove();
       } }, 'Yes, remind me'),
       h('button', { type: 'button', class: 'btn secondary', onclick: () => { R.update((r) => answerAsk(r, 'later')); card.remove(); } }, 'Not now')),

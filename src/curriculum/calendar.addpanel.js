@@ -9,7 +9,7 @@ import {
 } from "./calendar.quickadd.js";
 
 export const QUICKADD_KEY = "calendar.quickadd";
-const HOLIDAY_NAMES = { reform: "ALEF Jewish Holidays (Reform)", traditional: "ALEF Jewish Holidays (Traditional)", israel: "ALEF Jewish Holidays (Israel)" };
+const HOLIDAY_NAMES = { reform: "Aleph Jewish Holidays (Reform)", traditional: "Aleph Jewish Holidays (Traditional)", israel: "Aleph Jewish Holidays (Israel)" };
 const label12 = (hhmm) => { const [h, m] = hhmm.split(":").map(Number); return `${((h + 11) % 12) + 1}:${String(m).padStart(2, "0")} ${h < 12 ? "AM" : "PM"}`; };
 
 export const ADDPANEL_CSS = `
@@ -85,7 +85,7 @@ export function addToCalendarPanel(el, opt = {}) {
     };
     return el("div", { class: "alef-add-row" }, el("h3", {}, "Torah Verse of the Day"),
       el("p", { class: "small" }, "One verse each morning in Hebrew, how to say it, the English and a short explanation. No alert, it simply sits on your calendar."),
-      buttons(torahFeedPath(), "ALEF Torah Verse of the Day", dl));
+      buttons(torahFeedPath(), "Aleph Torah Verse of the Day", dl));
   }
 
   function holidayRow() {
@@ -104,7 +104,7 @@ export function addToCalendarPanel(el, opt = {}) {
   function draw() {
     box.replaceChildren(
       el("h2", { id: "alef-add-h" }, "Add to Your Calendar"),
-      el("p", { class: "small" }, "One tap puts these on your phone or computer calendar, so they remind you even when ALEF is closed. Each one is its own calendar, so you can remove any of them later in one step."),
+      el("p", { class: "small" }, "One tap puts these on your phone or computer calendar, so they remind you even when Aleph is closed. Each one is its own calendar, so you can remove any of them later in one step."),
       publicSite ? null : el("p", { class: "small" }, "Calendar buttons work on the live site. Here, use Download file."),
       prayerRow("morning", MORNING_TIMES), prayerRow("bedtime", BEDTIME_TIMES), torahRow(), holidayRow(), status,
       el("details", {}, el("summary", {}, "Alerts not showing?"), ...ALERT_NOTES.map((n) => el("p", { class: "small" }, n))),

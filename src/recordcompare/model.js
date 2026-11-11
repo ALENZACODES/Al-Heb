@@ -8,8 +8,8 @@ export const STORE_KEY = 'recordcompare.v1';
 export const RECORD_MS = 4000;
 export const ANSWERS = ['yes', 'unsure', 'no'];
 export const ANSWER_LABEL = { yes: 'Yes, I could hear a difference', unsure: 'Not sure', no: 'No, they sounded the same' };
-export const HONESTY = 'Practice only. ALEF does not judge your pronunciation and gives no score: you listen to yourself and decide. The model voice is your device\'s speech voice, not a recording of a person, and it can be wrong.';
-export const PRIVACY = 'Your recordings stay in this page\'s memory. They are not saved, not uploaded by ALEF, and are dropped when you press Next or leave the page. Your browser asks for microphone permission.';
+export const HONESTY = 'Practice only. Aleph does not judge your pronunciation and gives no score: you listen to yourself and decide. The model voice is your device\'s speech voice, not a recording of a person, and it can be wrong.';
+export const PRIVACY = 'Your recordings stay in this page\'s memory. They are not saved, not uploaded by Aleph, and are dropped when you press Next or leave the page. Your browser asks for microphone permission.';
 
 export const pairKey = (p) => `${p.a.id}|${p.b.id}`;
 

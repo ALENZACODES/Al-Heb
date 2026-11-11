@@ -115,7 +115,7 @@ test('the Talk code calls no server and names no outside service', () => {
 test('the screen copy says what is true: device voice, browser listening, no own-voice claim', async () => {
   const v = await import('../src/talk/talk.view.js');
   assert.match(v.LISTEN_NOTE, /browser/);
-  assert.match(v.LISTEN_NOTE, /ALEF sends nothing/);
+  assert.match(v.LISTEN_NOTE, /Aleph sends nothing/);
   assert.match(v.DEVICE_VOICE, /device voice/);
   assert.match(v.VOICE_KEEP, /future feature/);
   assert.match(v.HELD_LINE, /does not speak it/);

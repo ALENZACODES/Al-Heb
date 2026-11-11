@@ -60,7 +60,7 @@ export function buildFlashcardsHtml(paper = 'letter', o = {}) {
   const R = createImgResolver({ base: relative(outDir, join(ROOT, 'assets/img')) || '.', files: idx?.files || [] });
   const cards = mnemonicCards();
   const st = mnemonicStatus();
-  const front = (c) => `<div class="card front"><span class="nn">${c.nn} / 27</span><div>${he(glyphFor(c.id, lettersJson), 'big')}${he(glyphFor(c.id, lettersJson), 'he-cursive cur')}</div><div><div class="nm">${esc(c.name)}</div><div class="sd">${esc(c.sound.split(/\s*[;(]|,\s+like|\s+like\s/)[0])}</div></div><span class="tag">ALEF &middot; print and cursive</span></div>`;
+  const front = (c) => `<div class="card front"><span class="nn">${c.nn} / 27</span><div>${he(glyphFor(c.id, lettersJson), 'big')}${he(glyphFor(c.id, lettersJson), 'he-cursive cur')}</div><div><div class="nm">${esc(c.name)}</div><div class="sd">${esc(c.sound.split(/\s*[;(]|,\s+like|\s+like\s/)[0])}</div></div><span class="tag">Aleph &middot; print and cursive</span></div>`;
   const back = (c) => `<div class="card back"><div class="pic">${overlaySvg({ id: c.id, state: 'outline', imageHref: R.src(c.stem), size: 600, lettersJson, title: c.stem })}</div>
 <h3>${esc(c.name)}</h3><div class="sn">${c.nn} / 27</div>
 <p><b>Shape</b> ${esc(c.shape)}</p><p><b>Sound</b> ${esc(c.sound)}</p><p><b>Story</b> ${esc(c.story)}</p><p class="warn"><b>Look-alike</b> ${esc(c.lookalike)}</p>
@@ -81,7 +81,7 @@ export function buildFlashcardsHtml(paper = 'letter', o = {}) {
 <p>Pictures: every illustration is still a labelled placeholder (the image run has not happened). The faint outlined letter is real vector type. The memory hooks are teaching aids, not etymology: the letter-name meanings are real Hebrew words, but the claim that each letter was originally a drawing of that object is only a popular story.</p>
 <p>Text source: data/letters/mnemonics.json at build time. Fonts: Noto Serif Hebrew and Gveret Levin (SIL OFL 1.1).</p></div>`;
   const css = `:root{--pw:${P.w}in;--ph:${P.h}in}@page{size:${P.w}in ${P.h}in;margin:0}${CSS}`;
-  return `<!doctype html><html lang="en"><head><meta charset="utf-8"/><title>ALEF mnemonic flashcards (${P.label})</title><style>${fontFaces(outDir)}\n${css}</style></head><body>${info}${sheets.join('')}</body></html>`;
+  return `<!doctype html><html lang="en"><head><meta charset="utf-8"/><title>Aleph mnemonic flashcards (${P.label})</title><style>${fontFaces(outDir)}\n${css}</style></head><body>${info}${sheets.join('')}</body></html>`;
 }
 
 export async function main(argv = process.argv.slice(2)) {

@@ -271,7 +271,7 @@ def write_partial_md(sample, files, node, stt=None, spend=0.0, note=""):
     lines.append("# Tradition styles test (Israeli, Sephardi, Ashkenazi)")
     lines.append("")
     lines.append("**Date:** 10 November 2026, America/Toronto (ET)  ")
-    lines.append("**Lane:** overnight ALEF lesson-integrity  ")
+    lines.append("**Lane:** overnight Aleph lesson-integrity  ")
     lines.append(f"**Sample:** {n} items with on-disk clips in all three traditions (male voice).  ")
     lines.append("**Spend cap:** US$5  ")
     lines.append(f"**Spend so far:** ${spend:.4f}  ")

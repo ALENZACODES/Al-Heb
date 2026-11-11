@@ -163,7 +163,7 @@ function mountMap(root, ctx) {
 
   function beltStrip(done) {
     const current = belts.belts.find((b) => b.lessons && !lessonsOfBelt(b).every((id) => done.has(id)));
-    return el("p", { class: "alef-belt" }, `${tr(ctx, "learn.belt", "Your level")}: ${current ? current.name + " belt" : "Black belt (all belts finished; keep practising)"}. `, el("span", { class: "muted" }, "Belts are ALEF's own levels, like in martial arts. Each one covers a set of lessons."));
+    return el("p", { class: "alef-belt" }, `${tr(ctx, "learn.belt", "Your level")}: ${current ? current.name + " belt" : "Black belt (all belts finished; keep practising)"}. `, el("span", { class: "muted" }, "Belts are Aleph's own levels, like in martial arts. Each one covers a set of lessons."));
   }
   render();
   return () => { alive = false; wrap.remove(); };

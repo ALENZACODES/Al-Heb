@@ -1,4 +1,4 @@
-/* ALEF astral homepage: all motion is opacity/transform; no image or network media. */
+/* Aleph astral homepage: all motion is opacity/transform; no image or network media. */
 .prayer-veil {
   position: fixed; inset: 0; z-index: 9999; display: grid;
   place-items: center; overflow: hidden; isolation: isolate;
@@ -215,7 +215,7 @@
 }
 
 
-/* ALEF crafted entryways. Every photograph is a different framing of the
+/* Aleph crafted entryways. Every photograph is a different framing of the
    already-loaded, locally stored olive-harvest hero — no external image,
    generic icon library, hidden text, or new image download. */
 .show-portals {

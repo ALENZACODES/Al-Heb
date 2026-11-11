@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
-  "description": "ALEF Hebrew course - zero-dependency static PWA",
+  "description": "Aleph Hebrew course - zero-dependency static PWA",
   "scripts": {
     "test": "node tools/test/run.mjs unit",
     "serve": "node tools/serve.mjs",

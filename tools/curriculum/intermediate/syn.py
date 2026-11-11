@@ -201,7 +201,7 @@ lesson("I-07", "synagogue", "Hallel refrains: the lines the congregation sings b
   ["birkat-hamazon-1", "yehalelu", "havdalah-opening"],
   ["Sing back 'ki l'olam chasdo' and 'halleluyah' at the right moments",
    "Recognise the Psalm 118 lines that are sung responsively",
-   "Know that the full Hallel is not in ALEF yet; follow it in your congregation's siddur"],
+   "Know that the full Hallel is not in Aleph yet; follow it in your congregation's siddur"],
   30, ["I-01"],
   [respond("Psalm 118 opens with 'Hodu l'Adonai ki tov'. The congregation sings back the refrain. Say the refrain's closing words.",
            "כִּי לְעוֹלָם חַסְדּוֹ", "for his kindness is for ever"),

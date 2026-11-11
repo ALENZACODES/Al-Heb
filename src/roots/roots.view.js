@@ -104,7 +104,7 @@ export function mount(root, ctx) {
       verbs = d?.verbs || (await loadVerbs());
       prog = normalizeProgress(await storeGet(ctx, STORE_KEY, null)); round = prog.round;
       if (alive) render();
-    } catch { if (alive) body.replaceChildren(el('p', { role: 'alert' }, 'The word list could not be loaded. If you are offline, open this page once while online, or use "Use ALEF offline" in the More menu to download everything. Nothing was lost.')); }
+    } catch { if (alive) body.replaceChildren(el('p', { role: 'alert' }, 'The word list could not be loaded. If you are offline, open this page once while online, or use "Use Aleph offline" in the More menu to download everything. Nothing was lost.')); }
   })();
   return () => { alive = false; wrap.children = []; if (typeof wrap.remove === 'function') wrap.remove(); else root.replaceChildren?.(); };
 }

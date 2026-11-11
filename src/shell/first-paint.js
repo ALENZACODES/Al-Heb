@@ -4,7 +4,7 @@
   var main = document.getElementById('main');
   if (!main || !hash || hash === '/' || hash === '/welcome') return;
   var roster = {"alef":{"he":"א","name":"Aleph"},"bet":{"he":"ב","name":"Bet"},"gimel":{"he":"ג","name":"Gimel"},"dalet":{"he":"ד","name":"Dalet"},"he":{"he":"ה","name":"He"},"vav":{"he":"ו","name":"Vav"},"zayin":{"he":"ז","name":"Zayin"},"chet":{"he":"ח","name":"Chet"},"tet":{"he":"ט","name":"Tet"},"yod":{"he":"י","name":"Yod"},"kaf":{"he":"כ","name":"Kaf"},"lamed":{"he":"ל","name":"Lamed"},"mem":{"he":"מ","name":"Mem"},"nun":{"he":"נ","name":"Nun"},"samekh":{"he":"ס","name":"Samekh"},"ayin":{"he":"ע","name":"Ayin"},"pe":{"he":"פ","name":"Pe"},"tsadi":{"he":"צ","name":"Tsadi"},"qof":{"he":"ק","name":"Qof"},"resh":{"he":"ר","name":"Resh"},"shin":{"he":"ש","name":"Shin"},"tav":{"he":"ת","name":"Tav"},"kaf-final":{"he":"ך","name":"Final Kaf"},"mem-final":{"he":"ם","name":"Final Mem"},"nun-final":{"he":"ן","name":"Final Nun"},"pe-final":{"he":"ף","name":"Final Pe"},"tsadi-final":{"he":"ץ","name":"Final Tsadi"}};
-  var title = 'ALEF';
+  var title = 'Aleph';
   var glyph = '';
   if (hash === '/learn') title = 'Lessons';
   else if (hash === '/sounds') title = 'Vowels and sounds';

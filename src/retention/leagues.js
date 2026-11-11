@@ -1,5 +1,5 @@
 // @ts-check
-// Weekly PRACTICE league: 10 tiers, 29 pretend players and the learner. ALEF has no accounts and no server, so there is
+// Weekly PRACTICE league: 10 tiers, 29 pretend players and the learner. Aleph has no accounts and no server, so there is
 // nobody real to rank against; the pretend players are generated on this device from a seeded random number generator
 // and paced to the learner's own past weeks. The screen says so every time. Pure functions.
 import { clone, CAPS } from './state.js';
@@ -21,7 +21,7 @@ export const TIERS = Object.freeze([
   { n: 10, en: 'Golden Pomegranate', he: 'רִמּוֹן זָהָב', promote: 0, demote: 5 },
 ]);
 export const LEAGUE = Object.freeze({ players: 29, defaultBaseline: 120, unlockLessons: 5, dayStartMin: 8 * 60, dayEndMin: 21 * 60 });
-export const HONESTY_LINE = "Practice league. The other players are pretend, paced to your own weeks so the race is fair. Real leagues need accounts, which ALEF doesn't have yet.";
+export const HONESTY_LINE = "Practice league. The other players are pretend, paced to your own weeks so the race is fair. Real leagues need accounts, which Aleph doesn't have yet.";
 export const tierOf = (n) => TIERS[Math.min(Math.max(n, 1), 10) - 1];
 
 // ---- deterministic randomness ----

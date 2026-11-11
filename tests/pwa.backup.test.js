@@ -42,7 +42,7 @@ test('inspectBackup agrees with store.importData on bad files, and a rejected re
   assert.equal(strip(store.exportJSON()), strip(before), 'progress unchanged after every rejected restore');
 });
 test('a newer-schema backup is refused with a message that says to update the app', () => {
-  const r = inspectBackup(JSON.stringify({ app: 'alef', schema: SCHEMA_VERSION + 1, data: {} })); assert.equal(r.ok, false); assert.match(r.error, /newer ALEF/);
+  const r = inspectBackup(JSON.stringify({ app: 'alef', schema: SCHEMA_VERSION + 1, data: {} })); assert.equal(r.ok, false); assert.match(r.error, /newer Aleph/);
 });
 test('requestPersistence: not supported -> reported, never throws', async () => {
   assert.deepEqual(await requestPersistence({}), { supported: false, persisted: null, granted: null });

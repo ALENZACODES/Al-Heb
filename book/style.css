@@ -1,4 +1,4 @@
-/* ALEF book - print CSS. build.mjs injects (before this sheet): the :root size variables, the @font-face block (relative file URLs to assets/fonts), and the @page rules. */
+/* Aleph book - print CSS. build.mjs injects (before this sheet): the :root size variables, the @font-face block (relative file URLs to assets/fonts), and the @page rules. */
 :root {
   --cream: #F6F1E7; --blue: #1F3A5F; --red: #B0373B; --olive: #6B7F3A; --gold: #D9A441; --ink: #2B2B2B;
   /* Print face: Noto Serif Hebrew (full niqqud coverage, checked visually); Frank Ruhl Libre as fallback; Gveret Levin = Israeli cursive (ktav yad) */

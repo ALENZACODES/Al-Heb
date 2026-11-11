@@ -197,7 +197,7 @@ export function scheduleStudyReminder(p, opt = {}) {
       let msg = null, skip = false;
       if (typeof opt.compose === "function") { try { msg = opt.compose(when); } catch { msg = null; } skip = !msg; }
       if (!skip) {
-        const txt = [opt.title ?? "ALEF: a few minutes of Hebrew", opt.body ?? "Only if you feel like it. Your lessons and review cards stay as they are."];
+        const txt = [opt.title ?? "Aleph: a few minutes of Hebrew", opt.body ?? "Only if you feel like it. Your lessons and review cards stay as they are."];
         Promise.resolve(show(msg?.title ?? txt[0], msg?.body ?? txt[1], { route: opt.route ?? "#/learn" })).catch(() => {});
         try { opt.onFire?.(when, msg); } catch { /* listener bug must not stop the chain */ }
       }

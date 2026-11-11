@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 215.9 279.4" width="215.9mm" height="279.4mm">
-  <title>ALEF Star of David flash stencil</title>
+  <title>Aleph Star of David flash stencil</title>
   <style>
     text { font-family: Georgia, "Times New Roman", serif; fill: #111; }
     .muted { fill: #333; }
@@ -10,7 +10,7 @@
     .rule { stroke: #000; stroke-width: 0.25; }
   </style>
   <rect x="0" y="0" width="215.9" height="279.4" fill="#fff"/>
-  <text x="107.95" y="16" text-anchor="middle" font-size="6.2" font-weight="700">ALEF - Star of David flash stencil</text>
+  <text x="107.95" y="16" text-anchor="middle" font-size="6.2" font-weight="700">Aleph - Star of David flash stencil</text>
   <text x="107.95" y="23.2" text-anchor="middle" font-size="3.4" class="muted">Print at 100% size (actual size). Do not choose Fit to page. Cut on solid lines. Tape over the rear flash.</text>
   <line class="rule" x1="16" y1="32" x2="36" y2="32"/>
   <line class="rule" x1="16" y1="30.5" x2="16" y2="33.5"/>
@@ -47,5 +47,5 @@
   <text x="16" y="158.00" font-size="3.3" font-weight="400">4. Centre the star over the rear flash (use the tick marks) and tape the frame to the phone. Do not cover cameras or microphones.</text>
   <text x="16" y="165.00" font-size="3.3" font-weight="400">5. In a dark room, shine the flash at a wall or ceiling. The star will appear in the beam.</text>
   <text x="16" y="172.00" font-size="3.3" font-weight="400">6. This is a stencil for the phone flash only. It is not for use as a flame or with candles.</text>
-  <text x="16" y="179.00" font-size="3.3" font-weight="400">ALEF - a Hebrew-learning app by John Khan, Toronto, Ontario.</text>
+  <text x="16" y="179.00" font-size="3.3" font-weight="400">Aleph - a Hebrew-learning app by John Khan, Toronto, Ontario.</text>
 </svg>

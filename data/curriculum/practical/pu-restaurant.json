@@ -34,7 +34,7 @@
  "speakSets": [
   "speak-survival-cafe-1"
  ],
- "grammarNote": "The same אֶפְשָׁר + infinitive used at a cafe also opens a restaurant request. ALEF has no separate restaurant phrasebook: every Hebrew line here is copied from the cafe situation, from I-13 / I-38, or from the existing restaurant dialogue.",
+ "grammarNote": "The same אֶפְשָׁר + infinitive used at a cafe also opens a restaurant request. Aleph has no separate restaurant phrasebook: every Hebrew line here is copied from the cafe situation, from I-13 / I-38, or from the existing restaurant dialogue.",
  "items": [
   {
    "id": "cafe-01",

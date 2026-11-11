@@ -63,7 +63,7 @@ test('a tampered, truncated or wrong-kind file is refused and nothing is written
   r = importProgress(dst, text.slice(0, text.length - 40)); assert.equal(r.ok, false); assert.match(r.error, /not valid JSON/);
   r = importProgress(dst, src.exportJSON()); assert.equal(r.ok, false); assert.match(r.error, /whole-app backup.*Settings/);
   r = importProgress(dst, '[1,2]'); assert.equal(r.ok, false);
-  r = importProgress(dst, { app: 'alef', kind: 'alef-progress', schema: 2, data: {}, checksum: dataChecksum({}) }); assert.match(r.error, /newer ALEF/);
+  r = importProgress(dst, { app: 'alef', kind: 'alef-progress', schema: 2, data: {}, checksum: dataChecksum({}) }); assert.match(r.error, /newer Aleph/);
   r = importProgress(dst, { app: 'alef', kind: 'alef-progress', schema: 1, data: {} }); assert.match(r.error, /no checksum/);
   r = importProgress(dst, { app: 'alef', kind: 'alef-progress', schema: 1, checksum: 'x' }); assert.match(r.error, /no data block/);
   r = importProgress(dst, { app: 'alef', kind: 'alef-progress', data: {}, checksum: dataChecksum({}) }); assert.match(r.error, /no version/);

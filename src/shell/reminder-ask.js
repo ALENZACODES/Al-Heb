@@ -1,4 +1,4 @@
-// The one place ALEF offers reminders unprompted: a small card after the learner's FIRST lesson win (First day finish or
+// The one place Aleph offers reminders unprompted: a small card after the learner's FIRST lesson win (First day finish or
 // the first lesson-complete card). Never on first load, never twice: the answer is kept under store key "notify.asked".
 // Permission is requested only from the Yes button's click. Fail-safe: no card where notifications are unsupported,
 // already decided (granted/denied), or the learner already answered.

@@ -203,13 +203,13 @@ export function createStore(opts = {}) {
      */
     previewImport(input, o = {}) {
       const mode = o.mode === 'merge' ? 'merge' : 'replace';
-      if (typeof input === 'string' && input.length > MAX_BACKUP_CHARS * 2) return { ok: false, error: 'This file is too large to be an ALEF backup.' };
+      if (typeof input === 'string' && input.length > MAX_BACKUP_CHARS * 2) return { ok: false, error: 'This file is too large to be an Aleph backup.' };
       let obj;
       try { obj = typeof input === 'string' ? JSON.parse(input) : input; }
       catch { return { ok: false, error: 'Not valid JSON' }; }
-      if (!obj || typeof obj !== 'object' || obj.app !== APP_ID || typeof obj.data !== 'object' || obj.data === null || Array.isArray(obj.data)) return { ok: false, error: 'Not an ALEF backup' };
+      if (!obj || typeof obj !== 'object' || obj.app !== APP_ID || typeof obj.data !== 'object' || obj.data === null || Array.isArray(obj.data)) return { ok: false, error: 'Not an Aleph backup' };
       if (!Number.isInteger(obj.schema) || obj.schema < 1) return { ok: false, error: 'Missing schema version' };
-      if (obj.schema > schemaNow) return { ok: false, error: `Backup is from a newer ALEF (schema ${obj.schema})` };
+      if (obj.schema > schemaNow) return { ok: false, error: `Backup is from a newer Aleph (schema ${obj.schema})` };
       if (obj.checksum !== undefined) {
         if (typeof obj.checksum !== 'string' || checksum(canonicalJSON(obj.data)) !== obj.checksum) return { ok: false, error: 'The checksum does not match: the file was changed or cut short after it was saved' };
       }

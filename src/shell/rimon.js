@@ -66,7 +66,7 @@ export function mountRimon({store,doc=document,stage:givenStage=null}={}) {
   let alive=true,hidden=false,requestId=0,lastActivity=Date.now(),yawned=false,thought=false,nextBlink=Date.now()+4000,lastPaint='',idleSince=Date.now();
   try{hidden=store?.get('rimon.dismissed',false)===true;}catch{}
   host.hidden=hidden;restore.hidden=!hidden;
-  const speech=mountSpeechBubble(host,{doc,streak:()=>{try{const r=store?.get?.('streak');return r?projectStreak(r,new Date()):null;}catch{return null;}}});
+  const speech=mountSpeechBubble(host,{doc,gender:()=>{try{return store?.get?.('settings',{})?.gender??null;}catch{return null;}},streak:()=>{try{const r=store?.get?.('streak');return r?projectStreak(r,new Date()):null;}catch{return null;}}});
   function remember(){try{store?.set('rimon.dismissed',hidden);}catch{}}
   function load(name){
     // light WebP copy first; if it cannot load (an old cache, a missing file), the original PNG sheet next to it

@@ -21,6 +21,7 @@
 .rimon-bubble::after{content:'';position:absolute;right:-9px;top:var(--rimon-tail-top,23px);width:14px;height:14px;background:#fffbed;border-top:2px solid #d4a647;border-right:2px solid #d4a647;transform:rotate(45deg)}
 .rimon-bubble-he{display:block;font-family:'Frank Ruhl Libre',serif;font-size:23px;font-weight:700;line-height:1.4;overflow-wrap:anywhere}
 .rimon-bubble-en{display:block;margin-top:5px;font:700 12px/1.45 system-ui;letter-spacing:.025em;overflow-wrap:anywhere}
+.rimon-bubble-say{display:block;margin-top:3px;font:italic 500 12px/1.4 system-ui;opacity:.85;overflow-wrap:anywhere}
 .rimon-shabbat,.rimon-encouragement{display:block}
 .rimon-shabbat + .rimon-encouragement{border-top:1px solid #dccfa8;margin-top:10px;padding-top:9px}
 .rimon-shabbat .rimon-bubble-he{color:#805b11}

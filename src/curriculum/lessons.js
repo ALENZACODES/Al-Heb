@@ -4,11 +4,16 @@
  * synchronous for importers. No JSON import attributes are used.
  */
 import { loadJSON } from "./data.js";
+import { resolveRanks, rankByLesson } from "./ranks.js";
 const [data, belts] = await Promise.all([loadJSON("data/curriculum/lessons.json"), loadJSON("data/curriculum/belts.json")]);
 
 /** @type {Array<{id:string, track:"read"|"israel", level:string, title:string, letters:string[], vowels:string[], words:{he:string,en:string,translit:string|null,note?:string}[], prayerLines:string[], goals:string[], estMinutes:number, prerequisites:string[]}>} */
 export const lessons = data.lessons;
 export { belts };
+/** Krav Maga style ranks (White P0 .. Black E5) in course order, and lesson id -> rank. */
+export const ranks = resolveRanks(belts, data.lessons);
+export const rankOf = rankByLesson(ranks);
+export { rankSummary, rankBadge } from "./ranks.js";
 export const byId = Object.fromEntries(lessons.map((l) => [l.id, l]));
 export const tracks = { read: lessons.filter((l) => l.track === "read"), israel: lessons.filter((l) => l.track === "israel") };
 

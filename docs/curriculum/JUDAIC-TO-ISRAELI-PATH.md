@@ -8,7 +8,7 @@ Written 10 November 2026, America/Toronto. Not a rabbi review.
 
 There are two roots.
 
-- **Read track:** `r01`–`r51` (letters, vowels, then Shema, the Priestly Blessing, Friday-night Kiddush, Amidah openings, Kaddish, and a grey-belt assessment), then intermediate synagogue `I-01`–`I-10` and `I-26`–`I-35`. `I-01` requires `r51`.
+- **Read track:** `r01`–`r51` (letters, vowels, then Shema, the Priestly Blessing, Friday-night Kiddush, Amidah openings, Kaddish, and a Brown belt · G5 check), then intermediate synagogue `I-01`–`I-10` and `I-26`–`I-35`. `I-01` requires `r51`.
 - **Israel track:** `il01`–`il24` (greetings through an A2–B1 conversation), then intermediate Israel `I-11`–`I-25` and `I-36`–`I-50`. `I-11` requires `il24`.
 
 A lesson on one track cannot list a lesson on the other as a prerequisite (the intermediate tests enforce this). So the product cannot, today, require a street-Hebrew learner to have finished the siddur belt, or a siddur learner to have finished the cafe belt. The "from Judaism Hebrew to Israeli Hebrew" story is therefore a **recommended order for a person**, not a single DAG.

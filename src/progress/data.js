@@ -3,11 +3,11 @@
 import { loadJSON } from '../curriculum/data.js';
 import { loadCorpus } from '../corpus/corpus.js';
 
-/** Belts whose placeholder "unmeasured" gates are replaced by timed-read gates when data/timedread/gates.json has them. */
-export const TIMED_READ_BELTS = ['grey', 'black'];
+/** Ranks (Brown belt G5, Black belt E5) whose placeholder "unmeasured" skill checks are replaced by timed-read checks when data/timedread/gates.json has them. */
+export const TIMED_READ_BELTS = ['G5', 'E5'];
 
 /**
- * Belt gates with the timed-read gates merged in: for each belt listed in the timed-read file, its gates REPLACE the
+ * Rank skill checks with the timed-read checks merged in: for each rank listed in the timed-read file, its checks REPLACE the
  * placeholder gates of belt-gates.json (which only say "unmeasured"). Never mutates either input (loadJSON caches them).
  * @param {any} beltGates data/progress/belt-gates.json @param {any} timed data/timedread/gates.json (or null)
  */
@@ -25,7 +25,7 @@ export async function loadProgressData() {
   const [lessonsFile, belts, milestones, beltGates, timedGates, orders, corpus] = await Promise.all([
     loadJSON('data/curriculum/lessons.json'), loadJSON('data/curriculum/belts.json'),
     loadJSON('data/progress/milestones.json'), loadJSON('data/progress/belt-gates.json'),
-    loadJSON('data/timedread/gates.json').catch(() => null), // missing file: grey and black stay "unmeasured"
+    loadJSON('data/timedread/gates.json').catch(() => null), // missing file: G5 and E5 checks stay "unmeasured"
     loadJSON('data/service/orders.json').catch(() => null), // missing file: no siddur coverage line
     loadCorpus(),
   ]);

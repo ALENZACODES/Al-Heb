@@ -95,6 +95,9 @@ const ON_DEMAND_FILES = new Set([
   // Day page (preview route /day/<date>): its view and model are loaded lazily by the router when a day is opened, runtime-cached by sw.js; the markers module stays installed because the Calendar (v0) draws them. Morning screen view (optional route /morning): route code only, its verses/model files stay installed. Both moved here when the day pages landed (keeps first install under 3.95 MiB).
   'src/curriculum/day.view.js', 'src/curriculum/calendar.day.js', 'src/morning/morning.view.js',
   'src/curriculum/calendar.addpanel.js', 'src/curriculum/calendar.quickadd.js' /* calendar quick-add box: loaded when the Calendar opens */,
+  // Syllabus and Time budget (preview routes /syllabus and /time-budget): view code and their pure model, fetched on first open and runtime-cached
+  // (keeps first install under 3.95 MiB after the Krav Maga style ranks module landed; src/shell/offline.js already lists them in its "practice" group).
+  'src/coursemap/model.js', 'src/coursemap/syllabus.view.js', 'src/coursemap/timebudget.view.js',
   // Intermediate lessons view (optional preview route /intermediate, 30 KB): route code only, loaded lazily on first open and runtime-cached; its adapter and data stay as they were.
   'src/curriculum/intermediate.view.js',
   // Israel units (preview route /israel-units): view, model and data are loaded on first open and runtime-cached.

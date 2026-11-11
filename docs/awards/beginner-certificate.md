@@ -12,10 +12,10 @@ None. `CRITERIA_REVIEWED` in `src/awards/rubric.js` is false. `REVIEW_STATUS` is
 
 Derived by `deriveBeginnerRubric` from:
 
-- `data/curriculum/belts.json` white belt (`r01-r09`)
+- `data/curriculum/belts.json` ranks White belt · P0 (`r01-r04`) and Yellow belt · P1 (`r05-r09`), together `r01-r09`
 - `data/curriculum/lessons.json` letters, vowels, words, and prayer-line ids on those lessons
 
-The belt sentence is shorter than the lesson graph. The proposal follows the graph and says so. Every item status is `proposed`.
+The White belt · P0 sentence is shorter than the lesson graph. The proposal follows the graph and says so. Every item status is `proposed`.
 
 A future item is satisfied only by an accepted event with `correct: true`. A wrong answer can be stored and does not satisfy the item.
 
@@ -63,9 +63,9 @@ Not decided here:
 
 Not adopted. Do not treat this section as a reviewed standard, and do not flip `CRITERIA_REVIEWED`.
 
-Independent QA of the draft white belt (`lessons.json` status `draft-needs-native-review`) found three different bars and two addressing gaps. A later review has to pick one list before any engine scores against it.
+Independent QA of the draft beginner lessons r01-r09 (then the white belt; now White belt · P0 and Yellow belt · P1) (`lessons.json` status `draft-needs-native-review`) found three different bars and two addressing gaps. A later review has to pick one list before any engine scores against it.
 
-1. Belt sentence in `data/curriculum/belts.json`: reads Shabbat Shalom; Shin, Bet, Tav, Lamed, final-Mem, Vav; kamatz, patach, cholam, dagesh.
+1. White belt · P0 sentence in `data/curriculum/belts.json`: reads Shabbat Shalom; Shin, Bet, Tav, Lamed, final-Mem, Vav; kamatz, patach, cholam, dagesh.
 2. Lesson r04 goal text says "6 letters, 3 vowels". Lessons r01–r03 list 6 letters and 5 vowel-array entries, because r01 also lists `shin-dot` on the vowels array.
 3. The derived proposal is 40 items: 11 letters, 7 vowel-array entries, 19 words, and 3 Priestly Blessing line ids. It follows the lesson graph, not the shorter belt sentence.
 

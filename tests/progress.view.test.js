@@ -42,18 +42,23 @@ test('siddur coverage line follows the saved service choice and rises with compl
   assert.equal(r2.querySelector('.pg-siddur').attrs['data-order'], 'shabbat-morning');
 });
 
-test('belts: grey shows its timed-read gate with the self-reported wording, a note and a link; earned once three reads qualify', async () => {
+test('belts and ranks: Krav Maga style ladder in text; earned only by lessons; timed-read skill checks are self-reported, with a link', async () => {
+  const { root: r0 } = await show();
+  const b0 = section(r0, 'pg-h-belts');
+  assert.match(b0.textContent, /Belts and ranks/); assert.match(b0.textContent, /Your rank: none yet · next: White belt · P0 \(0 of 4 lessons\)/);
+  assert.match(b0.textContent, /White belt · P0: Working on/); assert.match(b0.textContent, /Yellow belt · P2: Later/);
+  assert.equal(b0.queryAll('li[data-state]').length, 16);
+  const badge = b0.querySelector('.alef-rank'); assert.ok(badge.attrs.title && /White belt, Practitioner 0/.test(badge.attrs.title), 'accessible description, not colour alone');
   const { root } = await show(allRead());
   const belts = section(root, 'pg-h-belts');
-  assert.match(belts.textContent, /grey and black belts also ask for timed read-alouds, which you time and mark yourself \(self-reported, not measured by the app\)/i);
-  assert.doesNotMatch(belts.textContent, /only a timed read is left/);
+  assert.match(belts.textContent, /The Brown belt · G5 and Black belt · E5 skill checks include timed read-alouds, which you time and mark yourself \(self-reported, not measured by the app\)\. They do not earn or hold back a rank\./);
   const gate = belts.queryAll('[data-gate="timedRead"]')[0];
   assert.match(gate.textContent, /self-reported.*0 of 3 \(needs 3 timed reads of one text with 8\+ words\)/);
   assert.equal(gate.queryAll('a')[0].attrs.href, '#/timedread');
-  assert.match(belts.textContent, /Grey belt: Working on/);
+  assert.match(belts.textContent, /Brown belt · G5: Earned/); assert.match(belts.textContent, /Black belt · E5: Earned/, 'every reading lesson done earns every rank');
+  assert.match(belts.textContent, /every rank earned/);
   const { root: r2 } = await show({ ...allRead(), 'timedread.v1': { v: 1, reads: [read(), read(), read()] } });
   const b2 = section(r2, 'pg-h-belts');
-  assert.match(b2.textContent, /Grey belt: Earned/); assert.match(b2.textContent, /Black belt: Earned/);
   assert.equal(b2.queryAll('[data-gate="timedRead"] a').length, 0, 'no "Time a read" link once met');
 });
 
@@ -119,7 +124,7 @@ test('export button produces a progress file whose checksum verifies; import is 
   await bk2.querySelector('#pg-bk-go').click();
   assert.equal(s2.m['timedread.v1'].reads.length, 3);
   assert.match(r2.querySelector('#pg-bk-status').textContent, /Imported 4 saved items/);
-  assert.match(section(r2, 'pg-h-belts').textContent, /Grey belt: Earned/, 'screen rebuilt from the imported data');
+  assert.match(section(r2, 'pg-h-belts').textContent, /Brown belt · G5: Earned/, 'screen rebuilt from the imported data');
 });
 test('a tampered pasted file is refused with the checksum message and no confirm button appears', async () => {
   const { root, store } = await show();

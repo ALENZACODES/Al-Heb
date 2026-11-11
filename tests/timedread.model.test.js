@@ -78,11 +78,11 @@ test('gate result has the shape progress evaluate() returns and notes say self-r
   assert.deepEqual(Object.keys(g).sort(), ['done', 'have', 'measurable', 'need', 'note']);
   assert.match(g.note, /self-reported/);
 });
-test('gates.json: every gate has the fields the evaluator needs and ties to belts.json targets', () => {
+test('gates.json: every gate has the fields the evaluator needs and ties to the rank targets in belts.json', () => {
   const j = JSON.parse(readFileSync(new URL('../data/timedread/gates.json', import.meta.url)));
-  const belts = JSON.parse(readFileSync(new URL('../data/curriculum/belts.json', import.meta.url))).belts;
-  for (const [belt, gs] of Object.entries(j.gates)) for (const g of gs) {
-    assert.equal(g.kind, 'timedRead'); assert.equal(g.minWpm, belts.find((b) => b.id === belt).wpmTarget); assert.match(g.label, /self-reported/);
+  const ranks = JSON.parse(readFileSync(new URL('../data/curriculum/belts.json', import.meta.url))).ranks;
+  for (const [rank, gs] of Object.entries(j.gates)) for (const g of gs) {
+    assert.equal(g.kind, 'timedRead'); assert.equal(g.minWpm, ranks.find((r) => r.id === rank).wpmTarget); assert.match(g.label, /self-reported/);
     assert.equal(typeof timedReadGate(g, null).done, 'boolean');
   }
   assert.equal(evaluate({ kind: 'unmeasured' }, {}).measurable, false); // progress today: still unmeasured until the parent wires gate.js

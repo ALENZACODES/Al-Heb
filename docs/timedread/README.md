@@ -8,10 +8,10 @@ Definitions: wpm = words / minutes (all words); cleanWpm = (words - stumbled) / 
 
 ## Integration for src/progress (parent to apply)
 - `src/timedread/gate.js` exports `timedReadGate(gate, state)` returning `{done, have, need, measurable:true, note}`.
-- `data/timedread/gates.json` proposes grey and black gates (kind `timedRead`; targets copy belts.json wpmTarget, Aleph proposals, unsourced).
+- `data/timedread/gates.json` proposes skill checks for ranks G5 (Brown belt) and E5 (Black belt) (kind `timedRead`; targets copy the rank's wpmTarget in belts.json, Aleph proposals, unsourced). They never earn or hold back a rank.
 - In `src/progress/model.js` `evaluate()`: add `import { timedReadGate } from '../timedread/gate.js';` and `case 'timedRead': return timedReadGate(g, c.timedRead);`
 - In `readSnapshot` (or makeContext): `timedRead: g('timedread.v1', null)` and expose as `c.timedRead`.
-- In `src/progress/data.js` merge gates: replace `gates.gates.grey` and `.black` with `data/timedread/gates.json` entries. Until then those gates stay `unmeasured`.
+- In `src/progress/data.js` merge gates: replace `gates.gates.G5` and `.E5` with `data/timedread/gates.json` entries. Until then those gates stay `unmeasured`.
 - Update the spec note in progress.view.js that reading speed is "not measured" once wired (it would be self-reported).
 
 Tests: `tests/timedread.model.test.js`, `tests/timedread.view.test.js` (fake DOM; real-browser layout at 390px not checked here).

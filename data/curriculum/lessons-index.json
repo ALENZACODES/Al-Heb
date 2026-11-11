@@ -49,7 +49,7 @@
     {
       "id": "r05",
       "track": "read",
-      "level": "white",
+      "level": "yellow",
       "title": "Meet the Priestly Blessing (listen and spot)",
       "estMinutes": 15,
       "prerequisites": [
@@ -60,7 +60,7 @@
     {
       "id": "r06",
       "track": "read",
-      "level": "white",
+      "level": "yellow",
       "title": "Yod and the 'ee' vowel",
       "estMinutes": 20,
       "prerequisites": [
@@ -71,7 +71,7 @@
     {
       "id": "r07",
       "track": "read",
-      "level": "white",
+      "level": "yellow",
       "title": "Aleph and He",
       "estMinutes": 25,
       "prerequisites": [
@@ -82,7 +82,7 @@
     {
       "id": "r08",
       "track": "read",
-      "level": "white",
+      "level": "yellow",
       "title": "Tzere: the 'e' / 'ay' vowel",
       "estMinutes": 20,
       "prerequisites": [
@@ -93,7 +93,7 @@
     {
       "id": "r09",
       "track": "read",
-      "level": "white",
+      "level": "yellow",
       "title": "Resh and Mem",
       "estMinutes": 25,
       "prerequisites": [
@@ -104,7 +104,7 @@
     {
       "id": "r10",
       "track": "read",
-      "level": "red",
+      "level": "yellow",
       "title": "Kaf, final Kaf, and a silent shva at word end",
       "estMinutes": 25,
       "prerequisites": [
@@ -115,7 +115,7 @@
     {
       "id": "r11",
       "track": "read",
-      "level": "red",
+      "level": "yellow",
       "title": "Segol: the 'eh' vowel",
       "estMinutes": 20,
       "prerequisites": [
@@ -126,7 +126,7 @@
     {
       "id": "r12",
       "track": "read",
-      "level": "red",
+      "level": "yellow",
       "title": "Nun and final Nun",
       "estMinutes": 25,
       "prerequisites": [
@@ -137,7 +137,7 @@
     {
       "id": "r13",
       "track": "read",
-      "level": "red",
+      "level": "yellow",
       "title": "Shuruk and Kubutz: the 'oo' vowels",
       "estMinutes": 25,
       "prerequisites": [
@@ -148,7 +148,7 @@
     {
       "id": "r14",
       "track": "read",
-      "level": "red",
+      "level": "yellow",
       "title": "Shva at the start of a syllable",
       "estMinutes": 25,
       "prerequisites": [
@@ -159,7 +159,7 @@
     {
       "id": "r15",
       "track": "read",
-      "level": "red",
+      "level": "orange",
       "title": "Priestly Blessing, line 1",
       "estMinutes": 25,
       "prerequisites": [
@@ -170,7 +170,7 @@
     {
       "id": "r16",
       "track": "read",
-      "level": "red",
+      "level": "orange",
       "title": "Pe and final Pe",
       "estMinutes": 20,
       "prerequisites": [
@@ -181,7 +181,7 @@
     {
       "id": "r17",
       "track": "read",
-      "level": "red",
+      "level": "orange",
       "title": "Chet and the sneaky patach",
       "estMinutes": 25,
       "prerequisites": [
@@ -192,7 +192,7 @@
     {
       "id": "r18",
       "track": "read",
-      "level": "red",
+      "level": "orange",
       "title": "Dalet and Gimel",
       "estMinutes": 25,
       "prerequisites": [
@@ -203,7 +203,7 @@
     {
       "id": "r19",
       "track": "read",
-      "level": "red",
+      "level": "orange",
       "title": "Ayin",
       "estMinutes": 20,
       "prerequisites": [
@@ -269,7 +269,7 @@
     {
       "id": "r25",
       "track": "read",
-      "level": "yellow",
+      "level": "green",
       "title": "Priestly Blessing, line 2",
       "estMinutes": 25,
       "prerequisites": [
@@ -280,7 +280,7 @@
     {
       "id": "r26",
       "track": "read",
-      "level": "yellow",
+      "level": "green",
       "title": "Priestly Blessing, line 3",
       "estMinutes": 25,
       "prerequisites": [
@@ -291,7 +291,7 @@
     {
       "id": "r27",
       "track": "read",
-      "level": "yellow",
+      "level": "green",
       "title": "The full Priestly Blessing, read straight through",
       "estMinutes": 20,
       "prerequisites": [
@@ -390,7 +390,7 @@
     {
       "id": "r36",
       "track": "read",
-      "level": "purple",
+      "level": "blue",
       "title": "Shema in full: line 2 (Baruch shem)",
       "estMinutes": 25,
       "prerequisites": [
@@ -401,7 +401,7 @@
     {
       "id": "r37",
       "track": "read",
-      "level": "purple",
+      "level": "blue",
       "title": "V'ahavta",
       "estMinutes": 35,
       "prerequisites": [
@@ -412,7 +412,7 @@
     {
       "id": "r38",
       "track": "read",
-      "level": "purple",
+      "level": "blue",
       "title": "Blessings before and after the Torah reading",
       "estMinutes": 30,
       "prerequisites": [
@@ -423,7 +423,7 @@
     {
       "id": "r39",
       "track": "read",
-      "level": "purple",
+      "level": "blue",
       "title": "Modeh Ani and the morning words",
       "estMinutes": 20,
       "prerequisites": [
@@ -434,7 +434,7 @@
     {
       "id": "r40",
       "track": "read",
-      "level": "purple",
+      "level": "blue",
       "title": "Mah Tovu",
       "estMinutes": 20,
       "prerequisites": [
@@ -445,7 +445,7 @@
     {
       "id": "r41",
       "track": "read",
-      "level": "purple",
+      "level": "blue",
       "title": "Kiddush on Friday night: the wine blessing",
       "estMinutes": 25,
       "prerequisites": [
@@ -522,7 +522,7 @@
     {
       "id": "r48",
       "track": "read",
-      "level": "grey",
+      "level": "brown",
       "title": "Timed reading 1: Priestly Blessing + Shema",
       "estMinutes": 20,
       "prerequisites": [
@@ -533,7 +533,7 @@
     {
       "id": "r49",
       "track": "read",
-      "level": "grey",
+      "level": "brown",
       "title": "Timed reading 2: V'ahavta and the blessing formula",
       "estMinutes": 20,
       "prerequisites": [
@@ -544,7 +544,7 @@
     {
       "id": "r50",
       "track": "read",
-      "level": "grey",
+      "level": "brown",
       "title": "Timed reading 3: new siddur page you have never seen",
       "estMinutes": 25,
       "prerequisites": [
@@ -555,8 +555,8 @@
     {
       "id": "r51",
       "track": "read",
-      "level": "grey",
-      "title": "Grey-belt check",
+      "level": "brown",
+      "title": "Brown belt · G5 check",
       "estMinutes": 30,
       "prerequisites": [
         "r50"

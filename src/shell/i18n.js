@@ -52,6 +52,9 @@ export const en = {
   'settings.goal': 'My goal', 'settings.goal.read': 'Read in synagogue', 'settings.goal.israel': 'Get around in Israel', 'settings.goal.both': 'Both',
   'settings.browserVoiceAnyway': 'Use my browser\'s voice even when it cannot match my pronunciation style (you will see a note when that happens)',
   'settings.redo': 'Run the first-time setup again',
+  // Krav Maga style belts and rank patches (data/curriculum/belts.json). Every rank is shown as text too, e.g. "Yellow belt · P2".
+  'learn.belt': 'Your rank', 'learn.belt.none': 'none yet', 'learn.belt.next': 'next', 'learn.belt.all': 'every rank earned; keep practising',
+  'learn.belt.note': 'Krav Maga style belts and patches, Aleph\'s own ranks. Each rank is a run of lessons in course order; finish them to earn it.',
 };
 /** Hebrew UI labels. FLAGGED: machine-assisted drafts, need native-speaker review. */
 export const he = {

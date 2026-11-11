@@ -9,7 +9,8 @@
  * Storage keys: see progress.js.
  */
 import { plain } from "../shell/plain-copy.js";
-import { lessonSummaries as lessons, belts } from "./lessons-index.js";
+import { lessonSummaries as lessons, ranks, rankOf } from "./lessons-index.js";
+import { rankSummary, rankBadge } from "./ranks.js";
 import { due } from "./srs.js";
 import { plural } from "../shell/plural.js";
 import { el, heText, tr, replaceKeepingFocus, levelLabel, showSaveFailure, refocusIfLost } from "./dom.js";
@@ -121,7 +122,7 @@ function mountMap(root, ctx) {
               // a locked stop says what opens it on the first tap, and opens on the second
               lockedTap(e);
             } },
-            el("span", { class: "alef-level" }, levelLabel(l.level)), " ",
+            el("span", { class: "alef-level" }, rankOf.get(l.id) ? rankBadge(el, rankOf.get(l.id)) : levelLabel(l.level)), " ",
             el("strong", {}, l.title), " ",
             el("span", { class: "alef-min" }, `about ${l.estMinutes} min`), " ",
             (l.teaser || l.words?.[0]?.he) ? heText(l.teaser || l.words[0].he) : null, " ",
@@ -173,17 +174,14 @@ function mountMap(root, ctx) {
   }
 
   function beltStrip(done) {
-    const current = belts.belts.find((b) => b.lessons && !lessonsOfBelt(b).every((id) => done.has(id)));
-    return el("p", { class: "alef-belt" }, `${tr(ctx, "learn.belt", "Your level")}: ${current ? current.name + " belt" : "Black belt (all belts finished; keep practising)"}. `, el("span", { class: "muted" }, "Belts are Aleph's own levels, like in martial arts. Each one covers a set of lessons."));
+    // Krav Maga style ranks: earned in course order, only by finishing each rank's lessons.
+    const { highest, current } = rankSummary(ranks, done);
+    return el("p", { class: "alef-belt" }, `${tr(ctx, "learn.belt", "Your rank")}: `,
+      highest ? rankBadge(el, highest) : tr(ctx, "learn.belt.none", "none yet"),
+      current ? [` · ${tr(ctx, "learn.belt.next", "next")}: `, rankBadge(el, current), ` (${current.lessons.filter((id) => done.has(id)).length} of ${current.lessons.length} ${tr(ctx, "learn.lessonsDone", "lessons done")})`]
+        : ` · ${tr(ctx, "learn.belt.all", "every rank earned; keep practising")}`,
+      ". ", el("span", { class: "muted" }, tr(ctx, "learn.belt.note", "Krav Maga style belts and patches, Aleph's own ranks. Each rank is a run of lessons in course order; finish them to earn it.")));
   }
   render();
   return () => { alive = false; wrap.remove(); };
-}
-
-function lessonsOfBelt(b) {
-  const m = /^r(\d+)-r(\d+)$/.exec(b.lessons || "");
-  if (!m) return [];
-  const out = [];
-  for (let i = Number(m[1]); i <= Number(m[2]); i++) out.push(`r${String(i).padStart(2, "0")}`);
-  return out;
 }

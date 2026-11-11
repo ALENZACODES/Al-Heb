@@ -10,7 +10,7 @@ import { CRITERIA_REVIEWED, REVIEW_STATUS, RUBRIC_ID, deriveBeginnerRubric } fro
 import { cleanRecord, readAwards, toStored, writeAwards } from './record.js';
 import { lessons as shippedLessons, belts as shippedBelts } from '../curriculum/lessons.js';
 
-/** Ids of the shipped white-belt proposal. Not a reviewed standard. A shorter or edited list is not this candidate. */
+/** Ids of the shipped beginner proposal (White belt · P0 and Yellow belt · P1). Not a reviewed standard. A shorter or edited list is not this candidate. */
 export const CANONICAL_CANDIDATE_IDS = Object.freeze(
   deriveBeginnerRubric({ lessons: shippedLessons }, shippedBelts).items.map((it) => it.id),
 );
@@ -288,7 +288,7 @@ export function planMilestones(record, facts, games, now) {
 /**
  * Pure certificate rule. Does not write. The page does not call this to issue.
  * `confirmed` must be the boolean true. Omitted, null, and false do not issue.
- * `items` must be the shipped white-belt candidate, in order, with no holes and no substitutions.
+ * `items` must be the shipped beginner candidate (White belt · P0 and Yellow belt · P1), in order, with no holes and no substitutions.
  * A shorter, empty, or rewritten list is not that candidate. `CRITERIA_REVIEWED` stays false,
  * and `certificateDecision` always passes `confirmed: false`, so this does not unlock issuance.
  */

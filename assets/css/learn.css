@@ -217,3 +217,29 @@ main > section.card[aria-labelledby] .alef-item { row-gap: .1rem; }
 .alef-practical-text .muted { font-size: 0.85rem; }
 /* Read: each doorway button sits on its own line with its sentence under it (the sentence used to start beside the button and wrap under it). */
 .crp-torahdoor > .btn { display: flex; inline-size: fit-content; max-inline-size: 100%; margin-block-end: .35rem; }
+/* Krav Maga style belts and rank patches (src/curriculum/ranks.js rankBadge). The text label ("Yellow belt · P2") is always
+   shown or given to screen readers, so colour is never the only cue. White and Black belts carry an outline that stays visible
+   in light and dark themes. */
+.alef-rank { --belt: #fff; --belt-edge: #4a4a4a; display: inline-flex; align-items: center; gap: .3rem; vertical-align: middle; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]):not([data-theme="contrast"]) .alef-rank { --belt-edge: #d6d6d6; } }
+:root[data-theme="dark"] .alef-rank, :root[data-theme="contrast-dark"] .alef-rank { --belt-edge: #d6d6d6; }
+.alef-rank[data-belt="white"]  { --belt: #ffffff; }
+.alef-rank[data-belt="yellow"] { --belt: #f5d90a; }
+.alef-rank[data-belt="orange"] { --belt: #f28c18; }
+.alef-rank[data-belt="green"]  { --belt: #1f9a2e; }
+.alef-rank[data-belt="blue"]   { --belt: #1f5fd6; }
+.alef-rank[data-belt="brown"]  { --belt: #8a5323; }
+.alef-rank[data-belt="black"]  { --belt: #1b1b1b; }
+.alef-rank-belt { display: inline-block; inline-size: 1.7em; block-size: .6em; border-radius: 2px; background: var(--belt); border: 1.5px solid var(--belt-edge); box-sizing: border-box; }
+.alef-rank-patch { display: inline-flex; flex-direction: column; align-items: center; justify-content: flex-start; inline-size: 1.1em; block-size: 1.45em;
+  padding-block-start: .08em; gap: 1px; box-sizing: border-box; border: 1.5px solid #111; background: #ffeb00; color: #111; font-size: .78em; line-height: 1; }
+.alef-rank-patch::before { content: attr(data-letter); font-size: .8em; font-weight: 800; }
+.alef-rank[data-patch="G"] .alef-rank-patch { background: #00e5ff; }
+.alef-rank[data-patch="E"] .alef-rank-patch { background: #ffeb00; border-color: #e00000; color: #d00000; }
+.alef-rank-stripe { display: block; inline-size: 70%; block-size: 1.5px; background: currentColor; }
+.alef-rank-text { font-weight: 600; }
+.alef-belt .alef-rank, .alef-rank-home .alef-rank { margin-inline: .15rem; }
+.pg-ranks { list-style: none; padding-inline-start: 0; }
+.pg-ranks > li { margin-block: .25rem; }
+.pg-ranks > li[data-state="earned"] summary { font-weight: 600; }
+@media (forced-colors: active) { .alef-rank-belt, .alef-rank-patch { border-color: CanvasText; forced-color-adjust: none; } }

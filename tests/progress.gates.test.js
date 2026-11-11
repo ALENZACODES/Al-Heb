@@ -121,7 +121,7 @@ test('phrases: readable phrasebook phrases, which need the alphabet', () => {
   expectNum(ev({ kind: 'phrases', count: n }, c1), true, n, n); expectNum(ev({ kind: 'phrases', count: n + 1 }, c1), false, n, n + 1);
 });
 // ---------- timedRead ----------
-const grey = D.gates.gates.grey[0], black = D.gates.gates.black[0];
+const grey = D.gates.gates.G5[0], black = D.gates.gates.E5[0]; // timed-read skill checks of Brown belt G5 and Black belt E5
 const rd = (o = {}) => ({ textId: 'shema-1', lineId: 'shema-1', words: 10, ms: 8000, stumbled: 0, stumbledIdx: [], at: T, ...o }); // 75 clean wpm
 const withReads = (reads) => ctx((st) => st.set('timedread.v1', { v: 1, reads }));
 test('timedRead: 0, 1, 2 reads are short of 3; the third qualifying read of the same text passes', () => {
@@ -179,19 +179,24 @@ test('unmeasured and unknown kinds are never done and never measurable', () => {
   for (const g of [{ kind: 'unmeasured' }, { kind: 'nonsense' }, {}]) assert.deepEqual(ev(g, ctx((st) => lessons(st, readIds))), { done: false, have: 0, need: 1, measurable: false });
 });
 
-// ---------- belt state transitions ----------
-test('belt states: later -> current -> earned as gates are met; one current belt at a time; ready only with an unmeasured gate', () => {
+// ---------- rank state transitions (Krav Maga style belts: earned only by finishing lessons, in order) ----------
+test('rank states: later -> current -> earned as lessons are finished; one current rank at a time; skill checks never decide', () => {
   const states = (c) => Object.fromEntries(M.evaluateBelts(D, c).map((b) => [b.id, b.state]));
-  const s0 = states(ctx()); assert.equal(s0.white, 'current'); assert.ok(Object.values(s0).filter((x) => x === 'current').length === 1); assert.equal(s0.red, 'later');
-  const s1 = states(ctx((st) => lessons(st, M.expandRange(D.belts.belts[0].lessons)))); assert.equal(s1.white, 'earned'); assert.equal(s1.red, 'current');
-  const full = (st) => { lessons(st, readIds); st.set('curriculum.checkpoints', { 1: { right: 9, total: 10 }, 2: { right: 9, total: 10 }, 3: { right: 9, total: 10 } }); };
-  const s2 = states(ctx(full)); assert.equal(s2.brown, 'earned'); assert.equal(s2.grey, 'current'); assert.equal(s2.black, 'later');
-  const s3 = states(ctx((st) => { full(st); st.set('timedread.v1', { v: 1, reads: [rd(), rd(), rd()] }); })); assert.equal(s3.grey, 'earned'); assert.equal(s3.black, 'current');
-  const s4 = states(ctx((st) => { full(st); st.set('timedread.v1', { v: 1, reads: [rd({ words: 12 }), rd({ words: 12 }), rd({ words: 12, ms: 7000 })] }); })); // 90, 90, ~103 wpm
-  assert.equal(s4.black, 'earned'); assert.ok(Object.values(s4).every((x) => x === 'earned'));
-  // 'ready' needs an unmeasured gate: use the raw belt-gates file (placeholders) instead of the merged one
-  const raw = { ...D, gates: { ...D.gates, gates: { ...D.gates.gates, grey: [{ kind: 'unmeasured', label: 'x' }] } } };
-  assert.equal(Object.fromEntries(M.evaluateBelts(raw, ctx(full)).map((b) => [b.id, b.state])).grey, 'ready');
+  const s0 = states(ctx()); assert.equal(s0.P0, 'current'); assert.ok(Object.values(s0).filter((x) => x === 'current').length === 1); assert.equal(s0.P1, 'later');
+  const p0 = M.evaluateBelts(D, ctx())[0].lessons;
+  assert.deepEqual(p0, ['r01', 'r02', 'r03', 'r04']);
+  const s1 = states(ctx((st) => lessons(st, p0))); assert.equal(s1.P0, 'earned'); assert.equal(s1.P1, 'current');
+  // every reading lesson done, no checkpoints, no timed reads: every rank is earned (skill checks are information only)
+  const s2 = states(ctx((st) => lessons(st, D.lessons.filter((l) => l.track === 'read').map((l) => l.id))));
+  assert.ok(Object.values(s2).every((x) => x === 'earned'), JSON.stringify(s2));
+  // r01..r51 only: G5 earned, E1 current (the Intermediate reading lessons are its lessons), E2.. later
+  const rOnly = readIds.filter((id) => /^r\d+$/.test(id));
+  const s3 = states(ctx((st) => lessons(st, rOnly))); assert.equal(s3.G5, 'earned'); assert.equal(s3.E1, 'current'); assert.equal(s3.E5, 'later');
+  // a gap holds back every later rank even when their lessons are done
+  const s4 = states(ctx((st) => lessons(st, readIds.filter((id) => id !== 'r10')))); assert.equal(s4.P1, 'earned'); assert.equal(s4.P2, 'current'); assert.equal(s4.G5, 'later');
+  // the timed-read checks still evaluate on the ranks they belong to
+  const b = Object.fromEntries(M.evaluateBelts(D, ctx((st) => st.set('timedread.v1', { v: 1, reads: [rd(), rd(), rd()] }))).map((x) => [x.id, x]));
+  assert.equal(b.G5.checks.find((g) => g.kind === 'timedRead').done, true); assert.equal(b.G5.state, 'later');
 });
 test('milestone path: later -> next -> done moves one step at a time, and a later milestone met early is done without changing "next"', () => {
   const st = fake();

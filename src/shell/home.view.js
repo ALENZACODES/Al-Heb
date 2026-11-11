@@ -93,6 +93,13 @@ export function mount(root, ctx) {
       // Streak flame under the title (Duolingo-style), only when there is a streak and the learner has not hidden streaks.
       header.querySelector?.('.alef-streak-flame')?.remove?.();
       if (streakVisible(ctx) && today.streak.count > 0) header.append(h('p', { class: 'alef-streak-flame', 'data-streak-slot': 'home' }, h('span', { class: 'alef-flame', 'aria-hidden': 'true' }, '🔥'), h('strong', {}, `${today.streak.count}-day streak`), today.streak.activeToday ? ' · today counts' : ' · keep it lit today'));
+      // Krav Maga style rank (earned only by finishing lessons, in course order), as text plus belt and patch; returning learners only.
+      header.querySelector?.('.alef-rank-home')?.remove?.();
+      if (!today.firstRun && cur.ranks?.length && cur.rankSummary && cur.rankBadge) {
+        const rs = cur.rankSummary(cur.ranks, st.completed);
+        if (rs.highest || rs.current) header.append(h('p', { class: 'alef-rank-home' }, 'Your rank: ', rs.highest ? cur.rankBadge(h, rs.highest) : 'none yet',
+          rs.current ? h('span', {}, ' · next: ', cur.rankBadge(h, rs.current)) : ' · every rank earned'));
+      }
       // A returning learner sees their next step first: the Today card moves up under the title, and the hero's
       // "Start your first 10 minutes" (already done) gives way to it. A first visit keeps the showcase on top.
       if (!today.firstRun) {

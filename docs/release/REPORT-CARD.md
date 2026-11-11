@@ -9,7 +9,7 @@ The grades are the builder's own, against the evidence listed. A grade moves onl
 | Area | Grade | What was checked | What an A needs |
 |---|---|---|---|
 | Pages load and work | B+ | 3,786 of 3,795 unit tests pass (9 skipped, 0 fail). All 157 static pages opened at phone size from a built copy: no script errors, no empty pages, no broken pictures. Deploy check 46 of 46. | Every page that needs an id (a lesson, a book, a game round, a Practical page) opened too. A second browser engine. A real phone. |
-| Layout, touch and keyboard | B | The repo's sweep on 16 key screens at three widths, light and dark: 11 findings at the start of the evening, 2 left (a hidden file input the sweep misreads, and focus landing off screen on three screens). No serious accessibility rule fails on those 16. | The sweep on every screen with nothing left. A screen-reader pass by a person. |
+| Layout, touch and keyboard | B | The repo's sweep on 16 key screens at three widths, light and dark: 11 findings at the start of the evening, 3 kinds left (the Play music button is 40px tall, not 44; a hidden file input the sweep misreads; and keyboard focus landing off screen on three screens). No serious accessibility rule fails on those 16. | The sweep on every screen with nothing left. A screen-reader pass by a person. |
 | Look, pictures and icons | B+ | Rimon and 58 other pictures have a clear background. Blank doorway cards, missing menu icons, stretched tokens and banded game cards fixed. About ten screens looked at in screenshots. | Every screen looked at. A designer's eye. |
 | Course depth | B | 200 written Practical pages in 40 units, 125 core lessons, 50 intermediate lessons, 63 little books. Level checks do not yet draw on the three newest units. Five place units keep thinner pages. | Level checks rebuilt. Every unit in the full page format. A teacher's review. |
 | Hebrew accuracy and rabbi appeal | Incomplete | Nothing. No native speaker, rabbi, cantor or teacher has read or heard any of it. | People. This cannot be earned by building. |
@@ -27,4 +27,4 @@ It can raise the first four rows, games, and parts of audio and the translator, 
 
 | Round | Time | What changed | Checked by |
 |---|---|---|---|
-| 1 | 10:30 PM | Sweep findings 11 to 2: tap areas on the footer links and the music bar, two button names for screen readers, a request for a file that is never there, and the sweep no longer counts a clipped decorative layer as page overflow. | Sweep re-run on 16 screens; full unit run 3,786 pass, 0 fail. |
+| 1 | 10:30 PM | Sweep findings 11 to 3 kinds: tap areas on the footer links and the music bar, two button names for screen readers, a request for a file that is never there, and the sweep no longer counts a clipped decorative layer as page overflow. | Sweep re-run on 16 screens; full unit run 3,786 pass, 0 fail. |

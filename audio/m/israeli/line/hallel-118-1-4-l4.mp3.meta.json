@@ -1,0 +1,31 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Chirp3-HD-Charon",
+ "tradition": "israeli",
+ "inputText": "יֹאמְרוּ־נָא יִרְאֵי אֲדֹנָי כִּי לְעוֹלָם חַסְדּוֹ׃",
+ "inputSha256": "146894e1bb444f719cd00a47196e66192b371b174bddb364394bdf4b808c4e2b",
+ "ingestedAt": "2026-11-11T23:58:53.998Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-11T23:58:53.998Z",
+ "redistributionCleared": false,
+ "spokenText": "יֹאמְרוּ נָא יִרְאֵי אֲדֹנָי כִּי לְעוֹלָם חַסְדּוֹ",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [
+   "נָא"
+  ],
+  "wordIssues": [],
+  "google": {
+   "heard": "יאמרו נייר לאדוני כי לעולם חסדו",
+   "acc": 0.286,
+   "issues": [
+    "יֹאמְרוּ נָא יִרְאֵי אֲדֹנָי כִּי"
+   ]
+  },
+  "reviewersFailing": 2
+ }
+}

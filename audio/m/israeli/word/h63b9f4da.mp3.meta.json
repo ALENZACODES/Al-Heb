@@ -1,0 +1,29 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "israeli",
+ "inputText": "צִטֵּט",
+ "inputSha256": "37ca7d3becfc6f2825d882d4e9383b7110e1b5b9b5139731d61ff09a4e5bd3b4",
+ "ingestedAt": "2026-11-11T23:20:47.902Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-11T23:20:47.902Z",
+ "redistributionCleared": false,
+ "spokenText": "צִטֵּט",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [],
+  "google": {
+   "heard": "‏tits",
+   "acc": 0.0,
+   "issues": [
+    "צִטֵּט"
+   ]
+  },
+  "reviewersFailing": 1
+ }
+}

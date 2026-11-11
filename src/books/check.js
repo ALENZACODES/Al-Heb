@@ -11,6 +11,17 @@ export function firstSentence(en) {
   return (m ? m[1] : t).trim();
 }
 
+/**
+ * A sentence a reader can place in the story: at least three words, and no quote left open. One-word lines ("Yes.",
+ * "Fine.", "Rain.") and the cut-off start of a quotation could belong anywhere in the book, so the check avoids them.
+ */
+export function placeable(text) {
+  const t = String(text || "").trim();
+  const words = t.replace(/["“”]/g, "").split(/\s+/).filter((w) => /[A-Za-z0-9]/.test(w));
+  const quotes = (t.match(/["“”]/g) || []).length;
+  return words.length >= 3 && quotes % 2 === 0;
+}
+
 const hash = (s) => { let x = 2166136261; for (const ch of String(s)) { x ^= ch.codePointAt(0) || 0; x = Math.imul(x, 16777619) >>> 0; } return x; };
 
 /**
@@ -26,13 +37,17 @@ export function storyCheck(book) {
   const want = [Math.min(1, n - 3), Math.floor(n / 2), n - 1];
   const picked = [];
   const seen = new Set();
+  // Pass 1 takes only sentences a reader can place in the story (see placeable); pass 2 falls back to any page text.
   for (const target of want) {
     let found = null;
-    for (let d = 0; d < n && !found; d++) {
-      for (const j of [target + d, target - d]) {
-        const p = pages[j];
-        if (p && !picked.includes(p) && !seen.has(p.text.toLowerCase())) { found = p; break; }
+    for (const strict of [true, false]) {
+      for (let d = 0; d < n && !found; d++) {
+        for (const j of [target + d, target - d]) {
+          const p = pages[j];
+          if (p && (!strict || placeable(p.text)) && !picked.includes(p) && !seen.has(p.text.toLowerCase())) { found = p; break; }
+        }
       }
+      if (found) break;
     }
     if (!found) return null;
     picked.push(found); seen.add(found.text.toLowerCase());

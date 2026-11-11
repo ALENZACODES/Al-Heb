@@ -102,7 +102,7 @@ test('the folder state is read from the files as they stand, so a clip changed, 
 test('a clip address maps to its host only for hosted folders of this site', () => {
   const m = mapper();
   assert.equal(m.alefMediaUrl(SCOPE + 'audio/f/israeli/word/r01-w1.mp3', SCOPE), PACKS + 'audio/f/israeli/word/r01-w1.mp3');
-  assert.equal(m.alefMediaUrl(SCOPE + 'audio/m/israeli/line/x.mp3', SCOPE), AUDIO_HOST + 'audio/m/israeli/line/x.mp3');
+  assert.equal(m.alefMediaUrl(SCOPE + 'audio/m/israeli/word/x.mp3', SCOPE), AUDIO_HOST + 'audio/m/israeli/word/x.mp3');
   assert.equal(m.alefMediaUrl(SCOPE + 'audio/m/english/a.mp3?v=2', SCOPE), AUDIO_HOST + 'audio/m/english/a.mp3?v=2');
   // a site served from a sub-path (GitHub Pages project site)
   assert.equal(m.alefMediaUrl('https://x.github.io/Al-Heb/audio/f/english/a.mp3', 'https://x.github.io/Al-Heb/'), AUDIO_HOST + 'audio/f/english/a.mp3');

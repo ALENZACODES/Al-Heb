@@ -99,7 +99,7 @@ button.catcher-star { pointer-events: auto; background: transparent; border: 0; 
 /* Day-zero Word Finder: oversized targets, calm feedback, no time pressure. */
 .wf-game { background: #F6F1E7; color: #2B2B2B; }
 .wf-game .muted { color: #1E4634; }
-.wf-eyebrow { font-weight: 800; letter-spacing: .14em; font-size: .72rem; color: #6B7F3A; }
+.wf-eyebrow { font-weight: 800; letter-spacing: .14em; font-size: .72rem; color: #4c5c26; }
 .wf-game h1 { font-size: clamp(1.5rem, 5vw, 2.1rem); color: #1E4634; margin: .35rem 0 .55rem; }
 .wf-game h1 .he { font-size: .82em; }
 .wf-intro { font-size: 1.03rem; line-height: 1.5; max-width: 44rem; }
@@ -260,3 +260,5 @@ button.catcher-star { pointer-events: auto; background: transparent; border: 0; 
 .tug-level { min-width: 44px; min-height: 44px; }
 .tug-help { flex-basis: 100%; margin: 0; font-size: .85rem; }
 .tug-hear { min-width: 44px; min-height: 44px; vertical-align: middle; }
+/* Folded phones: Rimon is small so the opening words keep their width. */
+@media (max-width: 340px) { .wf-hub-mascot { width: 52px; height: 52px; margin: 0 0 .25rem .5rem; } }

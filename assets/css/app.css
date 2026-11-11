@@ -227,7 +227,7 @@ main { padding-inline: max(1rem, env(safe-area-inset-left), env(safe-area-inset-
   body:has(input:focus, textarea:focus, select:focus) { padding-block-end: env(safe-area-inset-bottom); }
 }
 /* short landscape phones: a fixed bar plus header would take a third of the screen, so let the bar scroll with the page */
-@media (max-height: 480px) and (max-width: 719.98px) {
+@media (max-height: 560px) and (max-width: 719.98px) and (orientation: landscape), (max-height: 480px) and (max-width: 719.98px) {
   .site-nav { position: static; box-shadow: none; }
   body { padding-block-end: env(safe-area-inset-bottom); }
   .site-nav .nav-more { position: static; }
@@ -521,3 +521,10 @@ details.draft-flag { background: none; border: 0; padding: 0; font-weight: inher
 .alef-feature-hero{display:flex;gap:.75rem;align-items:center;flex-wrap:wrap;margin:0 0 1rem}
 .alef-feature-hero .alef-medal{margin:0}
 .alef-feature-hero .rimon-say{flex:1 1 12rem;min-inline-size:0}
+
+/* Short screens (a fold phone held sideways, a small tablet in landscape): the teachers band and page top take less height. */
+@media (max-height: 560px) and (orientation: landscape) {
+  .companions { min-block-size: 2.6rem; padding-block-start: .3rem; }
+  .companions .comp-pic { width: 2.2rem; height: 2.2rem; }
+  main h1 { margin-block: .4rem; }
+}

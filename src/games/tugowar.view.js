@@ -123,7 +123,7 @@ export function mount(root, ctx) {
     id: 'tug-start', inputmode: 'numeric', 'aria-describedby': 'tug-start-help',
   });
   const levelBtns = Array.from({ length: ROUND_COUNT / LEVEL_SIZE }, (_, i) => h('button', {
-    type: 'button', class: 'btn secondary tug-level', 'aria-label': `Level ${i + 1}: rounds ${i * LEVEL_SIZE + 1} to ${(i + 1) * LEVEL_SIZE}`,
+    type: 'button', class: 'btn secondary tug-level', 'aria-label': `L${i + 1}: level ${i + 1}, rounds ${i * LEVEL_SIZE + 1} to ${(i + 1) * LEVEL_SIZE}`,
     onclick: () => begin(i * LEVEL_SIZE + 1),
   }, `L${i + 1}`));
   const picker = h('form', { class: 'tug-picker', onsubmit: (e) => { e.preventDefault(); begin(startInput.value); } },

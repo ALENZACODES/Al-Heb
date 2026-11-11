@@ -428,3 +428,9 @@ main:has(.showcase) .show-hero-text { display:flex; gap:1rem; align-items:flex-s
 /* Opening-prayer gold leaf (.prayer-he, prayer-gold-dawn/sheen) lives in polish.css so the
    keyframe names stay unique. The mobile prayer-veil backdrop above stays here. */
 
+
+/* Folded phones (under 340px wide): the hero words get the full width and Rimon sits small above them. */
+@media (max-width: 340px) {
+  main:has(.showcase) .show-hero-text { flex-direction: column-reverse; gap: .4rem; }
+  .show-mascot-box { width: 3.5rem; height: 3.5rem; align-self: flex-end; }
+}

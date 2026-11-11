@@ -21,7 +21,7 @@ const CSS = `
 .camera-tr{max-inline-size:46rem;margin-inline:auto;display:grid;gap:1rem}
 .camera-tr figure{margin:0}
 .camera-tr .row{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center}
-.camera-tr .pick{position:relative;overflow:hidden;display:inline-flex;align-items:center;min-block-size:44px;cursor:pointer}
+.camera-tr .pick{position:relative;overflow:hidden;display:inline-flex;align-items:center;min-block-size:44px;block-size:auto;white-space:normal;cursor:pointer}
 .camera-tr .pick input{position:absolute;inset:0;opacity:0;cursor:pointer;inline-size:100%;block-size:100%}
 .camera-tr .pick:focus-within{outline:3px solid currentColor;outline-offset:2px}
 .camera-tr .note{border-inline-start:4px solid var(--gold,#c9a227);padding:.4rem .8rem;margin:0}

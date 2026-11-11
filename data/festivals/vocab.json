@@ -1195,9 +1195,9 @@
   },
   {
    "id": "shavuot",
-   "size": 11,
-   "short": 1,
-   "withLine": 4,
+   "size": 12,
+   "short": 0,
+   "withLine": 5,
    "words": [
     {
      "id": "h16b7af50",
@@ -1311,6 +1311,21 @@
      "en": "an act of counting",
      "pos": "noun",
      "line": null
+    },
+    {
+     "id": "h92151b55",
+     "he": "שָׁבוּעַ",
+     "translit": "shavu'a",
+     "en": "week, period of seven days",
+     "pos": "noun",
+     "senseNote": "Week; Shavuot means \"weeks\", the seven weeks counted from Pesach.",
+     "line": {
+      "he": "שָׁבוּעַ טוֹב",
+      "source": "phrasebook",
+      "id": "greetings-08",
+      "n": 1,
+      "title": "good week"
+     }
     }
    ],
    "gaps": [

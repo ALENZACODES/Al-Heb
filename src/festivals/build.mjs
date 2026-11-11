@@ -22,7 +22,7 @@ export const PICKS = {
   "tu-bishvat": ["hd2fac0d2", "h166d92b0", "hb67e1917", "h08e0fe5b", "h5d939fef", "h5ef32c54", "hf1b8cedf", "h2a49fab3", "hef745501", "h85cda534", "h2d90f840", "h991d080e"],
   purim: ["h58d8d8fe", "h571c298a", "hffd4de51", "h3612be9c", "h03763c94", "hfcc1a370", "he1fb2094", "hb88ee2ce", "h407a8f11", "hc5b0c1a0", "h492d82b0", "h6e73aa1f"],
   pesach: ["h4ebf1a3c", "h5f4ecfc7", "h6ad3ddd8", "hd60cd96a", "h1414a3a2", "h8c6b1e0c", "h129dd70a", "hf9047f4b", "h050cbd4d", "h0073b076", "h5ad2503a", "h8f56fc93"],
-  shavuot: ["h16b7af50", "h8b8da70a", "h35be21c5", "h4ef6ec03", "ha664d093", "hc91c0d80", "h44a725b6", "h519ce338", "h2ff06831", "h39b463af", "ha3fb2785"],
+  shavuot: ["h16b7af50", "h8b8da70a", "h35be21c5", "h4ef6ec03", "ha664d093", "hc91c0d80", "h44a725b6", "h519ce338", "h2ff06831", "h39b463af", "ha3fb2785", "h92151b55"],
   "tisha-bav": ["hf8b5d278", "hf1772ec6", "hb629c4c6", "he945f31c", "h4bb1b2a9", "h2d75f6cf", "h9432ab7f", "ha8df8ecd", "h4981fa93", "h141dc740", "h5b3adbaf", "h1de12f34"],
 };
 /** Words whose dictionary gloss differs from, or only partly covers, the festival sense. Shown next to the word. */
@@ -31,6 +31,7 @@ export const SENSE_NOTES = {
   hffd4de51: "Gloss is \"shipment\"; the Purim custom is mishloach manot, gifts of food.",
   h63ca5856: "Gloss is a general word for a gathering; Atzeret is the festival's name.",
   h35be21c5: "Milk; the Shavuot custom of dairy foods is a custom, not a rule.",
+  h92151b55: "Week; Shavuot means \"weeks\", the seven weeks counted from Pesach.",
   h5ef32c54: "Fig tree; one of the seven species named for Tu BiShvat.",
   hf1b8cedf: "Gloss is \"the grains of various...\"; the entry is about grapes, one of the seven species.",
   h4700de9c: "Light in general; Hanukkah is the Festival of Lights.",

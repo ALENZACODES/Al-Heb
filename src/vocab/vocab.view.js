@@ -305,7 +305,7 @@ export function mount(root, ctx) {
         el('div', {}, el('label', { for: 'vc-topic' }, 'Topic'), topicSel),
         el('div', {}, el('label', { for: 'vc-tag' }, 'Kind of word'), tagSel),
         el('div', {}, el('label', { for: 'vc-search' }, 'Search (Hebrew with or without vowel points, English, or transliteration)'), search)),
-      el('div', { class: 'vc-check' }, el('label', { for: 'vc-forms' }, formsBox, ' Show word forms (spellings that are only a form of another word)')),
+      el('div', { class: 'vc-check' }, el('label', { for: 'vc-forms' }, formsBox, ' Show word forms (spellings that are only a form of another word). Ranks follow the frequency list, so a rank held by a form, such as rank 5, is skipped while forms are hidden.')),
       el('div', { class: 'vc-check' }, el('label', { for: 'vc-broad' }, broadBox, ' Also show words that only contain these letters')),
       sense, status, addRow, heading, list, moreRow);
     let all = [], ranked = [], matches = [], shown = 0, hiddenNoise = 0;

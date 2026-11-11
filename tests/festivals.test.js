@@ -38,8 +38,8 @@ test("every pack word is a words.json record (same pointed form, gloss, pos); pa
     assert.equal(p.withLine, p.words.filter((w) => w.line).length);
     assert.ok(p.gaps.length > 0 || p.id === "x", `${p.id}: every festival has named gaps`);
   }
-  assert.equal(total, 119); // 9 packs of 12 + Shavuot with 11
-  assert.deepEqual(VOCAB.packs.filter((p) => p.short).map((p) => [p.id, p.short]), [["shavuot", 1]]);
+  assert.equal(total, 120); // 10 packs of 12
+  assert.deepEqual(VOCAB.packs.filter((p) => p.short).map((p) => [p.id, p.short]), []);
 });
 test("every reading line is copied verbatim from the corpus and really contains the word (independent substring check on unpointed text)", () => {
   const srcs = new Map();
@@ -248,7 +248,7 @@ test("pack view: 12 words with Hebrew lang/dir, corpus line where one exists, ga
   assert.match(root.textContent, /Words to know for Hanukkah/); assert.doesNotMatch(root.textContent, /No reading line|copied from Aleph's texts/);
   assert.ok(hrefs(root).includes("#/read/hanukkah-candle"));
   const sh = new N("div"); await mount(sh, ctxOf({ query: { id: "shavuot" } }));
-  assert.equal(sh.queryAll("li").filter((l) => l.attrs["data-word"]).length, 11); assert.ok(sh.querySelector('[data-part="gaps"]'), "missing words are named in their own section"); assert.match(sh.textContent, /"Chinese"/);
+  assert.equal(sh.queryAll("li").filter((l) => l.attrs["data-word"]).length, 12); assert.ok(sh.querySelector('[data-part="gaps"]'), "missing words are named in their own section"); assert.match(sh.textContent, /"Chinese"/);
   const bad = new N("div"); await mount(bad, ctxOf({ query: { id: "nope" } })); assert.match(bad.textContent, /No such festival pack/);
 });
 test("Shabbat-ready view: three phrases, fresh learner 0 of 3, skipped phrases named, links guarded; learner who has all signs sees full coverage", async () => {

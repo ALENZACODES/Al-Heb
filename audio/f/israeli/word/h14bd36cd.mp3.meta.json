@@ -1,0 +1,27 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "israeli",
+ "inputText": "אֶנֶרְגִּיָה",
+ "inputSha256": "53d8a6cf8a54bd354525d895f6b0babbf3ba55c6b019ecfe3fd7bf34de644061",
+ "ingestedAt": "2026-11-11T23:25:54.958Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-11T23:25:54.958Z",
+ "redistributionCleared": false,
+ "spokenText": "אֶנֶרְגִּיָה",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [],
+  "google": {
+   "heard": "אנרגיה",
+   "acc": 1.0,
+   "issues": []
+  },
+  "reviewersFailing": 0
+ }
+}

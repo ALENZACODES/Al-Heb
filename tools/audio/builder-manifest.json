@@ -2447,8 +2447,8 @@
       "voice": "he-IL-Chirp3-HD-Kore",
       "path": "audio/builder/h8633259a_noa.mp3",
       "fingerprint": "94a48ceb66e662733d35c476d0c8b3050a4b18cc13ed17e9a8dac2d37a4c13a1",
-      "bytes": 10892,
-      "sha256": "7c778146952ff749c309fade66ef9ca4fbcc6774669cdd954de537f0bf6b075c"
+      "bytes": 7581,
+      "sha256": "83af0d0d95c6111782ee46892df6ae7752e3055dd4591af1eca8713341e56530"
     },
     {
       "id": "h3c6a06b3",
@@ -3014,8 +3014,8 @@
       "voice": "he-IL-Chirp3-HD-Charon",
       "path": "audio/builder/symbol-vav_ari.mp3",
       "fingerprint": "79096294d4b3927b23f047de40843f9d4ed84802c8e5705652af6ede050f6230",
-      "bytes": 6140,
-      "sha256": "518ad02fd23f2729d4e3dee99f3175335bc0d100f5af55fec02adbe3919d8539"
+      "bytes": 9761,
+      "sha256": "14be72f3ec253319e3c2b53d59693461c93032da2697e08a8b647eee854ca5c4"
     },
     {
       "id": "vav",
@@ -3023,8 +3023,8 @@
       "voice": "he-IL-Chirp3-HD-Kore",
       "path": "audio/builder/symbol-vav_noa.mp3",
       "fingerprint": "39d57475a47659ea8b3792c714ef979e82def3a167a3271cdb83cf2f000d90e1",
-      "bytes": 8588,
-      "sha256": "78a066ddddaefbe5914515841eb7e83e046c767ca0106fc14b439cfeca413c19"
+      "bytes": 11642,
+      "sha256": "00951dfd5419278a3f172bff690077cae17c30a2aa5da17ad9799b896a347dca"
     },
     {
       "id": "zayin",
@@ -3374,8 +3374,8 @@
       "voice": "he-IL-Chirp3-HD-Charon",
       "path": "audio/builder/symbol-shin_ari.mp3",
       "fingerprint": "bd4898ce568d9842d3f89c4b9edd0458287f9ebd663eed80440b9dc281ebf5cd",
-      "bytes": 9020,
-      "sha256": "98c20940e079bbc4746f3e01d8b42d7cebf4f8e41de6bd2d1dab7cf8099f445e"
+      "bytes": 9448,
+      "sha256": "143e45f1860674f3625f0722a72d4cd08c31ed7bcbc441f05d963f7cd97412db"
     },
     {
       "id": "shin",
@@ -3383,8 +3383,8 @@
       "voice": "he-IL-Chirp3-HD-Kore",
       "path": "audio/builder/symbol-shin_noa.mp3",
       "fingerprint": "2a802448949ed796b65dae5fb1d6d9e7feb8c00e742c8e22011fdda660dd9a2b",
-      "bytes": 8012,
-      "sha256": "a72ecab23bfc35d8de2fcf83b36c3678e8f762abf3485f7529b73d7462206426"
+      "bytes": 11328,
+      "sha256": "4c25b764922b769c131a440d457b1176a9cf4648db56bbc223bf348b53565b0e"
     },
     {
       "id": "tav",

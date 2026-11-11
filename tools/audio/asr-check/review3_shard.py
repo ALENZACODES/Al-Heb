@@ -76,9 +76,15 @@ def main():
         chunk, parts, spans, pos = [], [gap[: len(gap) // 2]], [], len(gap) // 2
         while i < len(todo):
             x = pcm(os.path.join(ROOT, todo[i]))
+            if len(x) / SR > 55:   # Google's quick method takes at most one minute per request
+                out.write(json.dumps({'file': todo[i], 'skipped': 'longer than 55 s'}, ensure_ascii=False) + '\n')
+                i += 1
+                continue
             if chunk and (pos + len(x) + len(gap)) / SR > WINDOW:
                 break
             spans.append((pos / SR, (pos + len(x)) / SR)); chunk.append(todo[i]); parts += [x, gap]; pos += len(x) + len(gap); i += 1
+        if not chunk:
+            continue
         texts = [text_of(c) for c in chunk]
         for attempt in range(4):
             try:

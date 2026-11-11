@@ -25,7 +25,9 @@ jobs:
         with: { python-version: '3.12' }
       - run: sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg && pip install -q numpy
       - name: One request, to see whether Speech-to-Text is enabled
-        run: python tools/audio/asr-check/review3_shard.py --list tools/audio/asr-check/review3-list.txt --probe --out /tmp/probe.jsonl && cat /tmp/probe.jsonl
+        run: |
+          echo "separate Speech-to-Text key (GOOGLE_STT_API_KEY) set: $([ -n "$GOOGLE_STT_API_KEY" ] && echo yes || echo no)"
+          python tools/audio/asr-check/review3_shard.py --list tools/audio/asr-check/review3-list.txt --probe --out /tmp/probe.jsonl && cat /tmp/probe.jsonl
   review:
     needs: probe
     runs-on: ubuntu-24.04

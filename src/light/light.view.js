@@ -55,7 +55,7 @@ export async function mount(root, ctx) {
   let loc = null;
   try { loc = await resolveQuietLocation(ctx); } catch { loc = null; }
 
-  let brightness = 80;
+  let brightness = 100; // opens at full brightness (owner, 2026-11-11: the light needs to be brighter)
   let warm = true;
   let pulseOn = !motionOff;
   let sparkleOn = false;
@@ -197,7 +197,7 @@ export async function mount(root, ctx) {
       s('defs', {},
         s('radialGradient', { id: 'alef-light-glow', cx: '50%', cy: '50%', r: '50%' },
           s('stop', { offset: '0%', 'stop-color': 'var(--light-core)', 'stop-opacity': '1' }),
-          s('stop', { offset: '45%', 'stop-color': 'var(--light-mid)', 'stop-opacity': '0.65' }),
+          s('stop', { offset: '45%', 'stop-color': 'var(--light-mid)', 'stop-opacity': '0.92' }),
           s('stop', { offset: '100%', 'stop-color': 'var(--light-edge)', 'stop-opacity': '0' })),
         s('linearGradient', { id: 'alef-light-gold', x1: '0%', y1: '0%', x2: '100%', y2: '100%' },
           s('stop', { offset: '0%', 'stop-color': 'var(--light-hi)' }),
@@ -206,7 +206,7 @@ export async function mount(root, ctx) {
       s('circle', { class: 'alef-light-halo', cx: '100', cy: '100', r: '96', fill: 'url(#alef-light-glow)' }),
       s('path', { class: 'alef-light-tri alef-light-tri-up', d: trianglePath(tri.up), fill: 'none', stroke: 'url(#alef-light-gold)', 'stroke-width': '5.5', 'stroke-linejoin': 'round' }),
       s('path', { class: 'alef-light-tri alef-light-tri-down', d: trianglePath(tri.down), fill: 'none', stroke: 'url(#alef-light-gold)', 'stroke-width': '5.5', 'stroke-linejoin': 'round' }),
-      s('path', { class: 'alef-light-hex', d: star.d, fill: 'url(#alef-light-gold)', 'fill-opacity': '0.22' }));
+      s('path', { class: 'alef-light-hex', d: star.d, fill: 'url(#alef-light-gold)', 'fill-opacity': '0.96' }));
   };
 
   function render() {
@@ -243,7 +243,7 @@ export async function mount(root, ctx) {
   function bind() {
     const on = (id, fn) => root.querySelector('#' + id)?.addEventListener('click', fn);
     root.querySelector('#light-brightness')?.addEventListener('input', (e) => {
-      brightness = Number(e.target.value) || 80;
+      brightness = Number(e.target.value) || 100;
       applyStar();
     });
     on('light-temp', () => { warm = !warm; render(); });

@@ -1,4 +1,5 @@
-/* Star of David light (#/light). Loaded on first open, not in the first-install CSS. */
+/* Star of David light (#/light). Loaded on first open, not in the first-install CSS.
+   Brighter since 2026-11-11 (owner): the star is filled, the field behind it glows to the edges, and it opens at full brightness. */
 .alef-light-root{
   position:fixed; inset:0; z-index:10000;
   display:flex; flex-direction:column;
@@ -18,26 +19,26 @@
   display:flex; flex-direction:column; align-items:center; justify-content:center;
   min-block-size:0;
   background:
-    radial-gradient(ellipse at 50% 46%, rgba(232,201,122, calc(0.18 * var(--light-brightness, .8))) 0%, #000 68%);
+    radial-gradient(ellipse at 50% 46%, rgba(255,246,208, calc(0.95 * var(--light-brightness, 1))) 0%, rgba(240,208,124, calc(0.72 * var(--light-brightness, 1))) 34%, rgba(150,104,24, calc(0.5 * var(--light-brightness, 1))) 66%, #000 100%);
   overflow:hidden;
 }
 .alef-light-root[data-temp="white"] .alef-light-stage{
   background:
-    radial-gradient(ellipse at 50% 46%, rgba(255,252,245, calc(0.16 * var(--light-brightness, .8))) 0%, #000 68%);
+    radial-gradient(ellipse at 50% 46%, rgba(255,255,255, calc(0.98 * var(--light-brightness, 1))) 0%, rgba(246,244,236, calc(0.8 * var(--light-brightness, 1))) 36%, rgba(150,146,134, calc(0.5 * var(--light-brightness, 1))) 68%, #000 100%);
 }
 .alef-light-star{
   width:min(78vmin, 28rem);
   height:auto;
   filter:
-    drop-shadow(0 0 calc(18px * var(--light-brightness, .8)) rgba(232,201,122, .55))
-    drop-shadow(0 0 calc(48px * var(--light-brightness, .8)) rgba(184,134,43, .35));
-  opacity:calc(0.45 + var(--light-brightness, .8) * 0.55);
+    drop-shadow(0 0 calc(26px * var(--light-brightness, 1)) rgba(255,244,200, .95))
+    drop-shadow(0 0 calc(80px * var(--light-brightness, 1)) rgba(240,200,110, .7));
+  opacity:calc(0.45 + var(--light-brightness, 1) * 0.55);
   transform-origin:50% 50%;
 }
 .alef-light-root[data-temp="white"] .alef-light-star{
   filter:
-    drop-shadow(0 0 calc(18px * var(--light-brightness, .8)) rgba(255,255,255, .5))
-    drop-shadow(0 0 calc(48px * var(--light-brightness, .8)) rgba(230,224,200, .3));
+    drop-shadow(0 0 calc(26px * var(--light-brightness, 1)) rgba(255,255,255, .95))
+    drop-shadow(0 0 calc(80px * var(--light-brightness, 1)) rgba(240,236,220, .7));
 }
 .alef-light-halo{ transform-origin:100px 100px; }
 .alef-light-caption{
@@ -45,8 +46,9 @@
   letter-spacing:.18em;
   text-transform:uppercase;
   font-size:.78rem;
-  color:#e8c97a;
-  opacity:calc(.35 + var(--light-brightness, .8) * .4);
+  color:#f3dfa6;
+  /* the field behind the star is bright now, so the caption carries its own dark plate */
+  background:rgba(0,0,0,.6); padding:.25rem .8rem; border-radius:999px;
 }
 .alef-light-caption .he{ letter-spacing:0; margin-inline-end:.6em; font-size:1.15em; }
 .alef-light-panel{
@@ -115,8 +117,8 @@
   }
 }
 @keyframes alef-light-breathe{
-  0%,100%{ opacity:calc(0.42 + var(--light-brightness, .8) * 0.45); transform:scale(0.985); }
-  50%{ opacity:calc(0.62 + var(--light-brightness, .8) * 0.38); transform:scale(1.03); }
+  0%,100%{ opacity:calc(0.42 + var(--light-brightness, 1) * 0.45); transform:scale(0.985); }
+  50%{ opacity:calc(0.62 + var(--light-brightness, 1) * 0.38); transform:scale(1.03); }
 }
 @keyframes alef-light-halo{
   0%,100%{ opacity:.85; }

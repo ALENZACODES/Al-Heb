@@ -16,7 +16,7 @@ from render_word_takes import key
 from fix_shard import spoken
 
 ROOT = S.ROOT
-SR, GAP, WINDOW = 16000, 1.2, 50.0
+SR, GAP, WINDOW = 16000, 1.2, 1.0   # one clip per request: batching lost the first word of each clip
 URL = 'https://speech.googleapis.com/v1/speech:recognize'
 
 

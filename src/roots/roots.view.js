@@ -9,6 +9,7 @@ import { sourcesLine } from '../shell/sources.js';
 import { mixed } from '../hebrewtext/mixed.js';
 import { loadFamilies, loadVerbs } from './loader.js';
 import { STORE_KEY, binyanName, BINYAN, verbTable, groupFamily, searchFamilies, searchVerbs, coverageText, buildQuiz, gradeAnswer, normalizeProgress, familyBadge } from './model.js';
+import { rootsCoverage } from '../lib/counts.js';
 
 export const DRAFT_NOTE = 'Draft and unreviewed: roots and patterns come from a dictionary-based word list, and no Hebrew teacher has checked them. Some links between words may be loose.';
 export const POS_LABEL = { verb: 'Verbs', noun: 'Nouns', adj: 'Adjectives', adv: 'Adverbs', prep: 'Prepositions', num: 'Numbers' };
@@ -49,7 +50,7 @@ export function mount(root, ctx) {
   }
 
   function renderFamilies() {
-    const nodes = [el('p', { 'data-coverage': '1' }, coverageText(fam.coverage, verbs && verbs.verbs)), field('rt-q', 'Find a root (Hebrew letters) or a word (English or sounds-like)', q, (v) => { q = v; selRoot = null; renderList(); })];
+    const nodes = [el('p', { 'data-coverage': '1' }, coverageText(rootsCoverage())), field('rt-q', 'Find a root (Hebrew letters) or a word (English or sounds-like)', q, (v) => { q = v; selRoot = null; renderList(); })];
     const list = el('div', { class: 'rt-list' }), detail = el('div', { class: 'rt-detail' });
     function renderList() {
       const res = searchFamilies(fam.families, q, 30);

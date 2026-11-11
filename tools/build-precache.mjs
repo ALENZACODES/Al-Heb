@@ -82,6 +82,9 @@ const ON_DEMAND_FILES = new Set([
   // fetched on first open and runtime-cached (keeps first install under 3.95 MiB after the 11 November site-check fixes).
   'data/builder_symbols.json', 'src/recordcompare/recordcompare.view.js', 'src/roots/roots.view.js', 'src/nikkudfade/nikkudfade.view.js',
   'src/genderdrill/genderdrill.view.js', 'src/knownwords/knownwords.view.js', 'src/fsrs/scheduler.view.js',
+  // The Roots page model (11 KB): imported only by roots.view.js above, so it loads with the page (moved on 11 November when the
+  // Sacred Listen Hebrew titles and the shared Roots and activity-point counts landed; keeps first install under 3.95 MiB).
+  'src/roots/model.js',
   // Non-v0 data (the integration test's must-install list is the v0 offline contract; these are fetched on first use, then runtime-cached).
   'data/audio/english-glosses.json',
   // Book 63's clip record (37 KB): no screen reads it (the reader plays the page files directly), so it stays out of the first install.

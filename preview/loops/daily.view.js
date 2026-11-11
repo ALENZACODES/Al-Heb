@@ -9,7 +9,7 @@ import { ringSVG } from './points.js';
 import { ensureStyle } from './celebrate.js';
 // The daily goal, the streak and its free restore, and the week's review cards are the app's own numbers from src/lib/counts.js
 // (the same values Home, the shop and Progress show). Only the calendar below counts activity points, and it says so.
-import { KEYS, XP_GOALS, xpGoal, streakNow, repairOffer, reviewCardsThisWeek, read as readCounts, daysText, SCOPE } from '../../src/lib/counts.js';
+import { KEYS, XP_GOALS, xpGoal, streakNow, repairOffer, reviewCardsThisWeek, read as readCounts, daysText, SCOPE, activityText } from '../../src/lib/counts.js';
 import { save as saveRetention, load as loadRetention } from '../../src/retention/state.js';
 import { setGoal } from '../../src/retention/xp.js';
 import { repairStreak } from '../../src/retention/streak.js';
@@ -85,11 +85,11 @@ export function mount(root, ctx) {
     // review cards this week: src/lib/counts.js, the same floor Progress shows; the rest of the week line is activity points
     const wkCards = reviewCardsThisWeek(c.cards, c.vocab, t);
     const weekCard = h('section', { class: 'card', 'aria-labelledby': 'lp-h-week' }, h('h2', { id: 'lp-h-week' }, 'Your week'),
-      ...m.week.sentences.map((s) => h('p', {}, s.replace(/\b(\d+) review cards?\b/, wkCards === 1 ? '1 review card' : `${wkCards} review cards`).replace(/\bearned (\d+) points?\b/, (x, n) => `earned ${n} activity ${n === '1' ? 'point' : 'points'}`))),
+      ...m.week.sentences.map((s) => h('p', {}, s.replace(/\b(\d+) review cards?\b/, wkCards === 1 ? '1 review card' : `${wkCards} review cards`).replace(/\bearned (\d+) points?\b/, (x, n) => `earned ${activityText(Number(n))}`))),
       h('p', { class: 'muted small' }, `Review cards: different cards reviewed in the last 7 days (a floor, the same count as Progress). Points here are ${SCOPE.activityPoints}.`));
 
     // progress + heatmap
-    const cells = m.heat.flat().map((c) => (c ? h('span', { class: 'lp-cell', 'data-level': String(c.level), 'aria-hidden': 'true', title: `${c.iso}: ${c.points} points` }, String(c.level)) : h('span', { class: 'lp-cell', 'data-level': 'none', 'aria-hidden': 'true' })));
+    const cells = m.heat.flat().map((c) => (c ? h('span', { class: 'lp-cell', 'data-level': String(c.level), 'aria-hidden': 'true', title: `${c.iso}: ${activityText(c.points)}` }, String(c.level)) : h('span', { class: 'lp-cell', 'data-level': 'none', 'aria-hidden': 'true' })));
     const progressCard = h('section', { class: 'card', 'aria-labelledby': 'lp-h-progress' }, h('h2', { id: 'lp-h-progress' }, 'Your progress'),
       h('ul', {}, h('li', { 'data-stat': 'letters' }, d.letters), h('li', { 'data-stat': 'words' }, d.words), h('li', { 'data-stat': 'minutes' }, d.minutes), h('li', { 'data-stat': 'accuracy' }, d.accuracy)),
       h('p', { class: 'muted' }, 'These are read from your own review cards and lesson records. Reviews and minutes are lower bounds, because a card keeps only its latest review time.'),
@@ -98,7 +98,7 @@ export function mount(root, ctx) {
       h('div', { class: 'lp-heat', 'aria-hidden': 'true', tabindex: '-1' }, ...cells),
       h('p', { class: 'muted' }, `Level 0 none, 1 some, 2 a practice day, 3 ${m.goal} or more activity points. The calendar counts ${SCOPE.activityPoints}.`),
       h('details', {}, h('summary', {}, 'Show the calendar as a table'),
-        h('div', { class: 'table-wrap', role: 'region', 'aria-label': 'Points per week, newest first', tabindex: '0' }, h('table', {}, h('caption', {}, 'Points per week, newest first'), h('thead', {}, h('tr', {}, h('th', { scope: 'col' }, 'Week starting'), h('th', { scope: 'col' }, 'Points'), h('th', { scope: 'col' }, 'Practice days'), h('th', { scope: 'col' }, 'Each day (month-day: points)'))),
+        h('div', { class: 'table-wrap', role: 'region', 'aria-label': 'Activity points per week, newest first', tabindex: '0' }, h('table', {}, h('caption', {}, 'Activity points per week, newest first'), h('thead', {}, h('tr', {}, h('th', { scope: 'col' }, 'Week starting'), h('th', { scope: 'col' }, 'Activity points'), h('th', { scope: 'col' }, 'Practice days'), h('th', { scope: 'col' }, 'Each day (month-day: activity points)'))),
           h('tbody', {}, ...d.heatRows.map((r) => h('tr', {}, h('th', { scope: 'row' }, r.from), h('td', {}, String(r.points)), h('td', {}, String(r.days)), h('td', {}, r.detail))))))));
 
     main.replaceChildren(...[goalCard, rhythmCard, questCard, weekCard, badgeHost, progressCard].filter(Boolean));

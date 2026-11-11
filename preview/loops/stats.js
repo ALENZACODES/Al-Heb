@@ -4,6 +4,7 @@
 import { addDaysISO } from '../../src/curriculum/streak.js';
 import { weekday, parseISO } from '../../src/curriculum/calendar.js';
 import { dayPoints } from './points.js';
+import { activityLevel } from '../../src/lib/counts.js';
 
 export const KNOWN_REPS = 2;
 const known = (c) => !!c && c.state === 'review' && (c.reps || 0) >= KNOWN_REPS;
@@ -34,7 +35,7 @@ export function statSentences(s) {
 }
 
 /** Level 0..3 for a day: 0 none, 1 some, 2 a practice day, 3 goal reached. The level is also written as a number in the cell. */
-export function level(points, goal) { return points <= 0 ? 0 : points >= goal ? 3 : points >= 5 ? 2 : 1; }
+export const level = (points, goal) => activityLevel(points, goal);
 
 /** Calendar grid of `weeks` columns ending at the week of `today`; each column Sunday..Saturday. Days after today are null. */
 export function heatmap(days, today, goal, weeks = 26) {
@@ -56,7 +57,7 @@ export function heatmap(days, today, goal, weeks = 26) {
 export function heatmapSummary(cols) {
   const cells = cols.flat().filter(Boolean);
   const active = cells.filter((c) => c.level >= 2).length, goalDays = cells.filter((c) => c.level === 3).length;
-  return `Last ${cols.length} weeks: ${active} practice days, ${goalDays} of them reaching the daily goal. Darker squares are days with more points; each square also shows its level as a number.`;
+  return `Last ${cols.length} weeks: ${active} practice days, ${goalDays} of them reaching the daily goal. Darker squares are days with more activity points; each square also shows its level as a number.`;
 }
 /** Rows for the text alternative: one per week, newest first, dates and points. */
 export function heatmapRows(cols, limit = 12) {

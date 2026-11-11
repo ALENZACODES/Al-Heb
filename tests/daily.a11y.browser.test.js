@@ -191,7 +191,7 @@ test('browser /daily: the opened calendar table stays inside its card (it scroll
       await page.click('summary:has-text("calendar as a table")');
       const r = await page.evaluate(() => { const w = document.querySelector('.lp .table-wrap'), c = w.closest('.card').getBoundingClientRect(), b = w.getBoundingClientRect(); return { right: b.right, cardRight: c.right, iw: innerWidth, role: w.getAttribute('role'), name: w.getAttribute('aria-label'), tab: w.tabIndex, rows: w.querySelectorAll('tbody tr').length, heads: w.querySelectorAll('thead th[scope="col"]').length, rowHeads: w.querySelectorAll('tbody th[scope="row"]').length }; });
       assert.ok(r.right <= r.cardRight + 1 && r.right <= r.iw, `table box reaches ${r.right} (card ${r.cardRight}, screen ${r.iw})`);
-      assert.equal(r.role, 'region'); assert.match(r.name, /Points per week/); assert.equal(r.tab, 0);
+      assert.equal(r.role, 'region'); assert.match(r.name, /points per week/i); assert.equal(r.tab, 0);
       assert.equal(r.rows, 26); assert.equal(r.heads, 4); assert.equal(r.rowHeads, 26);
       await ctx.close();
     }

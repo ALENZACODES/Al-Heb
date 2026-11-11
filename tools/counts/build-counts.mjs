@@ -42,11 +42,14 @@ export async function computeTotals(root = ROOT) {
   }
   return {
     books: list(rd(root, 'data/books/index.json'), 'books').length,
+    bookPictured: list(rd(root, 'data/books/index.json'), 'books').reduce((a, b) => a + (Number(b.picturedPages) || 0), 0),
     dictionary: { entries: vocab.length, words: words.length, forms: vocab.length - words.length, addable: words.filter((e) => !hasTag(e, 'rare-sense')).length },
     firstWords: list(rd(root, 'data/games/firstwords.json'), 'words').length,
     buildWords: list(rd(root, 'data/builder_words.json'), 'words').length,
     lessons: { core, reading: track('read'), israel: track('israel'), all: lessons.length },
-    roots: { verbs: fam.verbs || 0, withRoot: fam.verbsWithRoot || 0, withPattern: fam.verbsWithBinyan || 0, explorer: list(verbs, 'verbs').length },
+    roots: { verbs: fam.verbs || 0, withRoot: fam.verbsWithRoot || 0, withPattern: fam.verbsWithBinyan || 0, explorer: list(verbs, 'verbs').length,
+      explorerWithRoot: list(verbs, 'verbs').filter((v) => v && v.root).length, familiesOf2Plus: fam.familiesOf2Plus || 0, familiesOf3Plus: fam.familiesOf3Plus || 0,
+      familiesRuleChecked: fam.familiesRuleChecked || 0, familiesVerified: fam.familiesVerified || 0 },
     audio,
   };
 }

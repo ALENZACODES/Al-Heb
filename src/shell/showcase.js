@@ -6,13 +6,13 @@ import { uiEnglish, MORNING_TITLE } from './names.js';
 import { h, heSpan, destIcon } from './ui.js';
 import { astralTreeNode } from './astral-tree.js';
 import { builderNode } from '../home/builder.js';
-import { BOOKS, FIRST_WORDS, fmt, dictionaryTitle } from '../lib/counts.js';
+import { BOOKS, BOOK_PICTURED_PAGES, FIRST_WORDS, fmt, dictionaryTitle } from '../lib/counts.js';
 
 export const TILES = [
   ['firstday', '#/firstday', 'Your First 10 Minutes', 'עֲשָׂרָה', 'Build your first word, letter by letter'],
   ['wordfinder', '#/wordfinder', 'Hebrew Word Finder · Level 1', 'מִלָּה', 'Hear, see and find your first real words. No Hebrew experience needed'],
   ['letters', '#/letters', 'Letters', 'אָלֶף־בֵּית', 'All 27 letters — sounded, traced, remembered'],
-  ['books', '#/books', 'Little Books', 'סְפָרִים', '63 little books, 756 pictured pages'],
+  ['books', '#/books', 'Little Books', 'סְפָרִים', `${BOOKS} little books, ${fmt(BOOK_PICTURED_PAGES)} pictured pages`],
   ['games', '#/games', 'All the Games', 'מִשְׂחָקִים', 'Every game in one place — letters, words, roots and rhymes'],
   ['tugowar', '#/tugowar', 'Antonym Tug-of-War', 'מִשְׂחָק', 'Games — pull the rope with opposites'],
   ['vowelcatcher', '#/vowelcatcher', 'Vowel Catcher', 'מִשְׂחָק', 'Games — catch the falling vowel stars'],

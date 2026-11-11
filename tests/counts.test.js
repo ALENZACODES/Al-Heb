@@ -187,7 +187,37 @@ test('C-05: every surface reads its numbers through src/lib/counts.js', () => {
     'src/progress/weekly.js', 'src/coursemap/syllabus.view.js', 'src/shell/backup-reminder.js', 'src/shell/about.view.js', 'src/vocab/vocab.view.js',
     'src/awards/gallery.view.js', 'src/awards/eligibility.js', 'preview/loops/daily.view.js', 'src/retention/shop.view.js', 'src/retention/league.view.js',
     'src/shell/showcase.js', 'src/shell/statbar.js', 'src/retention/ui.js', 'src/retention/xp.js', 'src/retention/streak.js', 'src/retention/boot.js',
-    'src/morning/model.js', 'src/shell/weekstrip.js', 'src/classtrack/classtrack.view.js', 'src/shell/i18n.js', 'src/home/builder.js', 'src/games/wordfinder.view.js'];
+    'src/morning/model.js', 'src/shell/weekstrip.js', 'src/classtrack/classtrack.view.js', 'src/shell/i18n.js', 'src/home/builder.js', 'src/games/wordfinder.view.js',
+    'src/roots/roots.view.js', 'preview/loops/points.js', 'preview/loops/stats.js'];
   for (const f of surfaces) assert.match(read(f), /lib\/counts\.js['"]/, f);
   assert.match(read('src/lib/counts.js'), /from '\.\/counts\.generated\.js'/);
+});
+
+// ---------- M-01 leftovers: the Roots page and the Daily calendar ----------
+test('M-01: the Roots page numbers are counts.js rootsCoverage(), equal to a fresh count of its data files', async () => {
+  const fam = JSON.parse(read('data/roots/families.json')), verbs = JSON.parse(read('data/roots/verbs.json')).verbs;
+  const r = C.rootsCoverage();
+  for (const k of ['verbs', 'verbsWithRoot', 'verbsWithBinyan', 'familiesOf2Plus', 'familiesOf3Plus', 'familiesRuleChecked', 'familiesVerified']) assert.equal(r[k], fam.coverage[k], k);
+  assert.equal(r.explorer, verbs.length);
+  assert.equal(r.explorerWithRoot, verbs.filter((v) => v.root).length);
+  const { coverageText } = await import('../src/roots/model.js');
+  assert.equal(coverageText(r), coverageText(fam.coverage, verbs), 'counts.js and the data files give the same sentence');
+  assert.doesNotMatch(read('src/roots/roots.view.js'), /coverageText\(fam\.coverage/);
+});
+
+test('M-01: activity points (the Daily calendar) are counted once, in counts.js, and say they are not XP', async () => {
+  assert.equal(C.activityPoints({ lessons: ['r01', 'r02', 'r01'], r: 30, t: 1, s: 9 }), 2 * 10 + 20 + 5 + 5);
+  assert.equal(C.activityPoints(null), 0);
+  assert.deepEqual([0, 1, 4, 5, 19, 20, 99].map((p) => C.activityLevel(p, 20)), [0, 1, 1, 2, 2, 3, 3]);
+  assert.equal(C.activityText(1), '1 activity point'); assert.equal(C.activityText(12), '12 activity points');
+  const P = await import('../preview/loops/points.js'), S = await import('../preview/loops/stats.js');
+  const day = { lessons: ['r01'], r: 7, t: 2, s: 1 };
+  assert.equal(P.dayPoints(day), C.activityPoints(day));
+  assert.equal(P.WEIGHTS, C.ACTIVITY.weights); assert.equal(P.CAPS, C.ACTIVITY.caps); assert.equal(P.PRACTICE_POINTS, C.ACTIVITY.practicePoints);
+  assert.equal(S.level(7, 20), C.activityLevel(7, 20));
+  assert.doesNotMatch(read('preview/loops/points.js'), /lesson: 10, review: 1/, 'no second copy of the weights');
+  assert.match(C.SCOPE.activityPoints, /XP is counted separately/);
+  const daily = read('preview/loops/daily.view.js');
+  assert.match(daily, /activityText\(c\.points\)/);
+  assert.doesNotMatch(daily, /\$\{c\.points\} points`/);
 });

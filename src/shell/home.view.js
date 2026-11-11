@@ -31,13 +31,13 @@ export function mount(root, ctx) {
     h('ul', { class: 'tiles home-dests', style: 'grid-template-columns:repeat(auto-fit,minmax(min(4.5rem,100%),1fr));gap:.5rem;margin:0;padding:0' },
       ...DESTS.filter(([n]) => ctx.hasRoute?.(n) ?? false).map(([n, route, label]) => {
         const pre = previewTag(n);
-        return h('li', {}, h('a', { class: 'tile', href: '#/' + route, style: 'padding-inline:.25rem;min-block-size:3rem' }, medal('home', n, 40), h('span', {}, label), pre ? ' ' : null, pre ? h('span', { class: 'muted small' }, 'Preview') : null));
+        return h('li', {}, h('a', { class: 'tile', href: '#/' + route, style: 'padding-inline:.25rem;min-block-size:3rem' }, (medalFor(n, 40) || medal('home', n, 40)), h('span', {}, label), pre ? ' ' : null, pre ? h('span', { class: 'muted small' }, 'Preview') : null));
       }))),
     h('nav', { 'aria-labelledby': 'h-stories', style: 'margin-block-start:.75rem' },
       h('h2', { id: 'h-stories' }, 'Stories and places'),
       h('ul', { class: 'tiles', style: 'grid-template-columns:repeat(auto-fit,minmax(min(4.5rem,100%),1fr));gap:.5rem;margin:0;padding:0' },
-        ctx.hasRoute?.('books') ? h('li', {}, h('a', { class: 'tile', href: '#/books' }, 'Little books')) : null,
-        ctx.hasRoute?.('practical') ? h('li', {}, h('a', { class: 'tile', href: '#/practical' }, 'Practical')) : null)));
+        ctx.hasRoute?.('books') ? h('li', {}, h('a', { class: 'tile', href: '#/books' }, medalFor('books', 40), h('span', {}, 'Little Books'))) : null,
+        ctx.hasRoute?.('practical') ? h('li', {}, h('a', { class: 'tile', href: '#/practical' }, medalFor('practical', 40), h('span', {}, 'Practical'))) : null)));
   const babyRest = () => [
     h('p', {}, h('button', { class: 'btn secondary', type: 'button', id: 'home-more', 'aria-controls': 'nav-more', onclick: openMenu }, 'More'))];
   const fullRest = () => {
@@ -47,7 +47,7 @@ export function mount(root, ctx) {
       // U-19: no destination twice on one screen — the quick wall skips any
       // target the five-destination row above already shows (Letters, Read
       // and Calendar used to appear in both, reading as duplicate tiles).
-      h('ul', { class: 'tiles' }, ...QUICK.filter(([, href]) => !DESTS.some(([, r]) => '#/' + r === href)).map(([k, href]) => h('li', {}, h('a', { class: 'tile', href }, medal('home', k, 48), h('span', {}, t('nav.' + k)), tHe('nav.' + k) ? heSpan(tHe('nav.' + k)) : null))),
+      h('ul', { class: 'tiles' }, ...QUICK.filter(([, href]) => !DESTS.some(([, r]) => '#/' + r === href)).map(([k, href]) => h('li', {}, h('a', { class: 'tile', href }, (medalFor(k, 48) || medal('home', k, 48)), h('span', {}, t('nav.' + k)), tHe('nav.' + k) ? heSpan(tHe('nav.' + k)) : null))),
         // optional views from other lanes: only listed when their file exists in this build
         ...ROUTES.filter((r) => r.optional && r.quick && !r.group && !PREVIEW_HIDDEN.has(r.name) && (ctx.hasRoute?.(r.name) ?? false)).map((r) => h('li', {}, h('a', { class: 'tile', href: '#' + r.pattern }, destIcon(r.name, 48), h('span', {}, t(r.quick))))))),
     ROUTES.some((r) => r.group === 'learn' && r.quick && !r.pattern.includes(':') && !PREVIEW_HIDDEN.has(r.name) && ctx.hasRoute?.(r.name))

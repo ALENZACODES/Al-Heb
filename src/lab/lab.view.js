@@ -139,7 +139,7 @@ const CSS = `
 .lab-actions{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap;margin-block-start:.6rem}
 .lab-intro .how{font-size:1.05rem}
 /* hub: tokens, New marks, skill groups */
-.lab-hero-art{display:block;inline-size:100%;block-size:auto;aspect-ratio:3/1;object-fit:cover;border-radius:16px;margin-block-end:.8rem}
+.lab-hero-art{display:block;inline-size:100%;block-size:auto;aspect-ratio:3/1;object-fit:contain;border-radius:16px;margin-block-end:.8rem}
 .lab-token{inline-size:56px;block-size:56px;border-radius:50%;flex:none;object-fit:cover}
 .lab-token-glyph{display:grid;place-items:center;background:#1e4634;border:3px solid #d4a647;box-shadow:inset 0 0 0 3px #1e4634,inset 0 0 0 4px #e9c46a66;color:#f2d27c;font-weight:700;overflow:hidden}
 .lab-token-glyph .he{font-size:1.35rem;line-height:1;white-space:nowrap;color:#f2d27c}
@@ -157,7 +157,7 @@ const CSS = `
 .lab-teaches{font-size:.85rem;color:var(--lab-accent);font-weight:600}
 .lab-group{margin:1rem 0 .3rem;font-size:1.05rem;display:flex;align-items:center;gap:.5rem}
 .lab-group::before{content:"";inline-size:.8rem;block-size:.8rem;border-radius:3px;background:var(--sk)}
-.lab-plan .lab-token{inline-size:40px;block-size:40px}.lab-plan .lab-token-glyph .he{font-size:.95rem}
+.lab-plan .lab-token{inline-size:40px;max-inline-size:40px;min-inline-size:40px;block-size:40px}.lab-plan .lab-token-glyph .he{font-size:.95rem}
 /* intro and results */
 .lab-cover{display:block;inline-size:100%;block-size:auto;aspect-ratio:2/1;object-fit:cover;border-radius:14px}
 .lab-win-art{display:block;inline-size:180px;block-size:180px;margin:0 auto;object-fit:contain}

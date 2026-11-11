@@ -285,6 +285,16 @@
   background-position: center, center;
   background-size: cover, cover;
 }
+/* The other three doorways crop the olive-harvest picture: the trunk, the carved menorah with its lamp, and Jerusalem at sunset.
+   (They used to crop the dark home hero, which left the cards blank.) */
+.show-portal--wood .show-portal-art, .show-portal--sky .show-portal-art, .show-portal--scroll .show-portal-art {
+  background-image: linear-gradient(180deg,rgba(31,58,95,.02) 28%,rgba(31,58,95,.22) 68%,rgba(31,58,95,.55) 100%),
+    url("../img/gen/HERO_olive_harvest_astral.900.webp");
+  background-size: cover, 230% auto;
+}
+.show-portal--wood .show-portal-art { background-position: center, 46% 12%; }
+.show-portal--sky .show-portal-art { background-position: center, 0% 62%; }
+.show-portal--scroll .show-portal-art { background-position: center, 100% 42%; }
 .show-portal-copy {
   display: flex; flex: 1; flex-direction: column; gap: .38rem;
   padding: .8rem .8rem 1rem;

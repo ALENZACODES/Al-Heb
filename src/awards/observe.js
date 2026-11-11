@@ -153,7 +153,10 @@ export const DIALOGUES_DONE_KEY = 'dialogues.done.v1';
 export const SHELF_PLAYS_KEY = 'listen.shelf.v1';
 export const BOOKS_FINISHED_KEY = 'books.finished.v1';
 export const CAFE_DIALOGUE_ID = 'd-cafe';
-export const STORY_BOOK_IDS = Object.freeze(['book1', 'book2', 'book3', 'book4', 'book5']);
+/** Book Finisher: any this many little books finished (last page reached and the story check answered). */
+export const BOOK_FINISHER_TARGET = 5;
+/** Books on the shelf (data/books/index.json; tests/awards.books-count.test.js keeps this in step with the data). */
+export const BOOK_SHELF_COUNT = 63;
 
 export function observeFutureSets(store) {
   const dialogues = readKey(store, DIALOGUES_DONE_KEY, null);
@@ -165,12 +168,12 @@ export function observeFutureSets(store) {
     .filter(([, n]) => Number.isInteger(n) && n > 0).length;
   const books = readKey(store, BOOKS_FINISHED_KEY, null);
   const finished = books && typeof books === 'object' && !Array.isArray(books) ? books : {};
-  const booksFinished = STORY_BOOK_IDS.filter((id) => Number.isFinite(finished[id])).length;
+  const booksFinished = Object.entries(finished).filter(([id, at]) => /^book\d+$/.test(id) && Number.isFinite(at)).length;
   return {
     cafeDone,
     shelfDistinct,
     booksFinished,
-    booksAllFive: booksFinished >= STORY_BOOK_IDS.length,
+    booksAllFive: booksFinished >= BOOK_FINISHER_TARGET, // name kept for saved evidence readers: "enough books for Book Finisher"
   };
 }
 

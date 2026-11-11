@@ -96,6 +96,14 @@ export async function createArcade(root, ctx, spec) {
   // Open until the learner has finished one round of this game; after that it folds away but stays one tap off.
   const howTo = h('details', { class: 'arc-howto', open: (record.plays || 0) === 0 ? true : undefined }, h('summary', {}, 'How to play'), h('ol', {}, ...spec.howTo.map((s) => h('li', {}, uiEnglish(ctx, s)))));
   const streakEl = h('p', { class: 'arc-streak muted' });
+  // M-13: the Start button is on screen from the first paint. A tap that lands while the letters and words are still loading
+  // is kept and starts the round the moment they arrive, instead of hitting a page that has no button yet (a dead first click).
+  let dataReady = false, pendingStart = false;
+  const startBtn = h('button', { type: 'button', class: 'btn arc-start', onclick: () => {
+    if (dataReady) { restart(); return; }
+    pendingStart = true; startBtn.textContent = 'Starting…'; status.textContent = 'Getting the letters ready…';
+  } }, `Start level ${level}`);
+  results.replaceChildren(startBtn);
   root.replaceChildren(h('article', { class: 'card game-card arcade', 'data-game': spec.id },
     h('div', { class: 'arc-eyebrow' }, `ARCADE · ${spec.levels.length} LEVELS`),
     titleEl,
@@ -327,7 +335,11 @@ export async function createArcade(root, ctx, spec) {
   window.addEventListener('keydown', onKey);
   renderLevels(); renderStreak();
   status.textContent = 'Pick a level and press Start, or play the daily challenge.';
-  results.replaceChildren(h('button', { type: 'button', class: 'btn arc-start', onclick: () => restart() }, `Start level ${level}`));
+  startBtn.textContent = `Start level ${level}`;
+  results.replaceChildren(startBtn);
+  dataReady = true;
+  // the round setup is registered by mountArcade right after this returns; a queued tap starts once it is
+  if (pendingStart) setTimeout(() => { if (alive && !startedAt) restart(); }, 0);
   return A;
 }
 

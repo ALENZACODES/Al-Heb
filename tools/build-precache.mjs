@@ -73,6 +73,8 @@ const ON_DEMAND_FILES = new Set([
   // and two older Rimon modules no screen imports (kept for reference and their tests).
   'src/shell/rimon-stage.js', 'src/shell/rimon-triggers.js', 'src/shell/rimon-stills.generated.js', 'assets/css/rimon-stills.css',
   'src/shell/rimon-model.js', 'src/shell/mascot.js',
+  // Shared playing / finished / failed state (src/app.js imports it after boot; runtime-cached).
+  'src/shell/play-state.js',
   'data/audio/manifest.json', 'data/audio/manifest-kind-word.json', 'data/audio/manifest-torah.json', 'data/audio/manifest-torah-he.json', 'src/shell/torah-he-index.js', 'data/curriculum/intermediate-index.json', 'data/curriculum/intermediate-image-slots.json', 'data/curriculum/class-track.json', 'data/curriculum/practical-units.json', 'data/curriculum/lesson-lexicon.json',
   // Word-builder bank (63 KB): fetched when the builder first opens, runtime-cached (keeps first install under 3.95 MiB after Hallel and festival Kiddush landed in the installed registry).
   'data/builder_words.json',

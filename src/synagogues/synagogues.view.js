@@ -34,6 +34,9 @@ const CSS = `
 .syn .syn-tile-pic{position:relative;aspect-ratio:4/3;overflow:hidden;background:#0f3d2e;display:grid;place-items:center;flex:none}
 .syn .syn-tile-pic img{position:absolute;inset:0;inline-size:100%!important;block-size:100%!important;max-inline-size:none;object-fit:cover;object-position:center;display:block}
 .syn .syn-tile-pic .he{font-size:2rem;color:#d4af37}
+.syn .syn-soon{display:grid;place-items:center;gap:.2rem;text-align:center;color:#f3e6bf}
+.syn .syn-soon small{font-size:.85rem;opacity:.85}
+.syn .syn-photo-soon{display:grid;place-items:center;aspect-ratio:16/10;border:2px dashed var(--border,#999);border-radius:var(--radius,12px);background:#0f3d2e;color:#f3e6bf;text-align:center;padding:1rem}
 .syn .syn-tile-body{padding:.7rem .85rem .8rem;display:grid;gap:.15rem;flex:1}
 .syn .syn-tile-name{display:block;font-size:1.05rem;line-height:1.25;font-weight:700}
 .syn .syn-badge{display:inline-block;border:1px solid var(--border,#999);border-radius:999px;padding:0 .5em;font-size:.8rem;color:var(--muted,#555);margin-inline-start:.3em;vertical-align:middle}
@@ -86,10 +89,11 @@ async function loadData(ctx) {
 
 function tile(ctx, c) {
   const first = c.images?.[0];
-  const pic = h("div", { class: "syn-tile-pic", "aria-hidden": first ? null : "true" },
+  // No photo that shows this congregation: a neutral card, never a stand-in picture (M-03).
+  const pic = h("div", { class: "syn-tile-pic" },
     first
       ? h("img", { src: IMG(c.id, first.file, true), alt: first.alt || "", loading: "lazy", decoding: "async" })
-      : heSpan("בֵּית כְּנֶסֶת"));
+      : h("span", { class: "syn-soon" }, h("span", { "aria-hidden": "true" }, heSpan("בֵּית כְּנֶסֶת")), h("small", {}, "Photo to come")));
   const body = h("div", { class: "syn-tile-body" },
     h("strong", { class: "syn-tile-name" }, c.name),
     h("span", { class: "syn-muted" }, [c.city, c.status === "legacy" ? "" : sinceText(c)].filter(Boolean).join(" · ")));
@@ -165,7 +169,8 @@ function detailView(ctx, D, c) {
   parts.push(h("p", { class: "syn-muted" }, [place, sinceText(c)].filter(Boolean).join(" · "), c.status === "legacy" ? h("span", { class: "syn-badge" }, FORMER) : null));
   if (c.summary) parts.push(h("p", { class: "syn-lead" }, c.summary));
   parts.push(mapLinks(c, { both: true }));
-  const g = gallery(c); if (g) parts.push(g);
+  const g = gallery(c);
+  parts.push(g || h("div", { "data-part": "gallery" }, h("div", { class: "syn-photo-soon" }, h("p", {}, "Photo to come"))));
   parts.push(h("section", { class: "syn-card syn-story", "data-part": "story", "aria-labelledby": "syn-h-story" },
     h("h2", { id: "syn-h-story" }, "History"),
     ...(c.story || []).map((p) => h("p", {}, p))));

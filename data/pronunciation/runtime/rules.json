@@ -8,7 +8,7 @@
  "pages": [
   {
    "id": "kamatz",
-   "title": "Kamatz (ָ)",
+   "title": "Kamatz (אָ)",
    "nav": "Kamatz",
    "summary": "The T-shaped vowel sign under a letter. Israeli and Sephardi readers say [a], like the a in \"father\". The Ashkenazi reading says [ɔ], like the o in \"saw\", so בָּרוּךְ is barukh in one and borukh in the other.",
    "rows": [
@@ -244,7 +244,7 @@
   },
   {
    "id": "holam",
-   "title": "Holam (ֹ)",
+   "title": "Holam (אֹ)",
    "nav": "Holam",
    "summary": "The dot above a letter. Israeli and Sephardi readers say a plain o. The Ashkenazi reading used here says \"oy\" [oj], the Polish and Galician value, so תּוֹרָה is torah in one and toyreh in the other.",
    "rows": [

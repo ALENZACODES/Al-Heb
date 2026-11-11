@@ -19,7 +19,7 @@ const WIKI = { ash: { label: 'Wikipedia: Ashkenazi Hebrew', url: 'https://en.wik
 
 /** The seven rule pages. `code` links to the difference codes in build_runtime.mjs. */
 export const RULES = [
-  { id: 'kamatz', code: 'ka', title: 'Kamatz (ָ)', nav: 'Kamatz',
+  { id: 'kamatz', code: 'ka', title: 'Kamatz (אָ)', nav: 'Kamatz',
     summary: 'The T-shaped vowel sign under a letter. Israeli and Sephardi readers say [a], like the a in "father". The Ashkenazi reading says [ɔ], like the o in "saw", so בָּרוּךְ is barukh in one and borukh in the other.',
     rows: [['israeli', '[a]', 'ba-RUKH'], ['sephardi', '[a]', 'ba-RUKH'], ['ashkenazi', '[ɔ]', 'BO-rukh']],
     who: 'Rule-generated: the [a] reading is the one used here for Israeli and Sephardi, the [ɔ] reading for Ashkenazi (the rule is "kamatz gadol is generally [ɔ]" in the cited description of Ashkenazi Hebrew). Not checked by a native speaker.',
@@ -31,7 +31,7 @@ export const RULES = [
     who: 'Rule-generated: Ashkenazi s for a tav without dagesh, as in the cited description ("ungeminated tav is pronounced [s]"). Some Sephardi communities say th or d here; those are not generated.',
     limits: 'The rule needs the dagesh to be written in the pointed text. A word with the dot missing is read with s in the Ashkenazi column.',
     sources: [WIKI.ash, WIKI.sep] },
-  { id: 'holam', code: 'ho', title: 'Holam (ֹ)', nav: 'Holam',
+  { id: 'holam', code: 'ho', title: 'Holam (אֹ)', nav: 'Holam',
     summary: 'The dot above a letter. Israeli and Sephardi readers say a plain o. The Ashkenazi reading used here says "oy" [oj], the Polish and Galician value, so תּוֹרָה is torah in one and toyreh in the other.',
     rows: [['israeli', '[o]', 'to-RA'], ['sephardi', '[o]', 'to-RA'], ['ashkenazi', '[oj]', 'TOY-reh']],
     who: 'Rule-generated: one Ashkenazi value is chosen. Other Ashkenazi communities say o, ey or au; they are not shown. Not checked by a native speaker.',

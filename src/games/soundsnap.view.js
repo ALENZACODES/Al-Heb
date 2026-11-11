@@ -8,7 +8,7 @@ export const STORE_KEY = 'games.soundsnap.v1';
 const spec = {
   id: 'soundsnap', title: 'Sound Snap', titleHe: 'שְׁמַע וְלַחֵץ',
   blurb: 'A letter is called by name. Letters pop up in the holes; tap the one you heard before it sinks back. Each level calls faster and adds look-alikes.',
-  howTo: ['Read (and, where a recording exists, hear) the letter name at the top.', 'Letters appear in the holes for a moment. Tap the one that matches.', 'Tapping a wrong letter costs a point; letting the right one sink costs a life.', 'Fifteen correct taps finish the level.'],
+  howTo: ['Read (and, where a recording exists, hear) the letter name at the top.', 'Letters appear in the holes for a moment. Tap the one that matches.', 'Tapping a wrong letter costs a point; letting the right one sink costs a life (from your first tap on).', 'Fifteen correct taps finish the level.'],
   levels: [
     { name: '6 letters, slow', holes: 6, letters: 6, show: 3500, goal: 12 },
     { name: '9 letters', holes: 9, letters: 9, show: 3000, goal: 14 },
@@ -28,6 +28,8 @@ function setup(A) {
   const cols = cfg.holes <= 6 ? 3 : cfg.holes <= 9 ? 3 : 4;
   const rows = Math.ceil(cfg.holes / cols);
   let called = null, hits = 0, up = new Map(), tick = 0;
+  // M-13: no heart is lost before the learner's first tap. A round left untouched used to end 'Out of lives' with no input.
+  let engaged = false;
   const call = A.h('p', { class: 'arc-prompt' });
   const { el, cells } = makeGrid(rows, cols, { label: 'Holes', onCell: (r, c, cell) => tap(r * cols + c, cell) });
   A.board.replaceChildren(call, el);
@@ -50,6 +52,7 @@ function setup(A) {
     up.set(i, { letter, until: tick + Math.max(2, Math.round(cfg.show / 350)) });
   };
   const tap = (i) => {
+    engaged = true;
     const u = up.get(i); if (!u) return;
     if (u.letter.id === called.id) { hits++; A.addScore(10); A.sfx('pop'); up.delete(i); A.announce(`${called.name}! ${cfg.goal - hits} to go.`); if (hits >= cfg.goal) { draw(); A.finish({ won: true }); return; } newCall(); }
     else { A.addScore(-2); A.sfx('error_soft'); A.announce(`That was ${u.letter.name}, not ${called.name}.`); up.delete(i); }
@@ -63,11 +66,15 @@ function setup(A) {
   };
   const step = () => {
     tick++;
-    for (const [i, u] of [...up]) if (u.until <= tick) { if (u.letter.id === called.id) { A.announce(`${called.name} sank back.`); if (A.miss()) { draw(); return; } } up.delete(i); }
+    for (const [i, u] of [...up]) if (u.until <= tick) { if (u.letter.id === called.id) {
+      if (!engaged) A.announce(`${called.name} sank back. Tap ${called.name} when it pops up; no heart is lost until your first tap.`);
+      else { A.announce(`${called.name} sank back.`); if (A.miss()) { draw(); return; } }
+    } up.delete(i); }
     if (up.size < Math.min(cfg.holes, 3 + A.level)) popOne();
     draw();
   };
   newCall();
+  draw();
   if (!A.quiet) A.loop(step, 350);
   else { ensureTarget(); draw(); A.announce('Calm mode: letters stay up until you tap one.'); }
 }

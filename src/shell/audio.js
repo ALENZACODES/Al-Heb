@@ -135,6 +135,10 @@ export function createShellAudio({ settings, manifest, loadManifest, loadSummary
     manifest: manifest || [],
   });
   const subs = new Set(), mSubs = new Set();
+  // Play lifecycle for the shared playing / finished / failed state on every control (src/shell/play-state.js, M-04).
+  const playSubs = new Set(); let playToken = 0;
+  const emitPlay = (ev) => { for (const f of playSubs) { try { f(ev); } catch { /* a listener must not break playback */ } } };
+  const whyNot = (r) => (r?.fileError && r?.source !== 'tts-fallback' ? 'the recording did not load' : REASONS[r?.reason] || (r?.reason && !/^[a-z-]+$/.test(r.reason) ? r.reason : '') || '');
   const needSubs = new Set();
   let mstate = !manifest && typeof loadManifest === 'function' ? 'idle' : 'ready';
   let state = mstate === 'idle' ? { mode: 'idle', pending: true, text: IDLE_TEXT } : initialText(summary); // pending: nothing has been asked yet, so the sound bar stays hidden
@@ -224,6 +228,8 @@ export function createShellAudio({ settings, manifest, loadManifest, loadSummary
     onNeed(fn) { needSubs.add(fn); return () => needSubs.delete(fn); },
     /** fn(state) on every manifest state change; returns an unsubscribe function. */
     onManifestState(fn) { mSubs.add(fn); return () => mSubs.delete(fn); },
+    /** fn({phase:'start'|'playing'|'finished'|'failed'|'stopped', token, what?, why?}) for every play(); returns an unsubscribe function. */
+    onPlay(fn) { playSubs.add(fn); return () => playSubs.delete(fn); },
     /** short extra note appended to the sound-status line (e.g. 'audio info unavailable offline'); '' clears it */
     setNote(n) { note = n || ''; publish(raw); },
     subscribe(fn) { subs.add(fn); fn(state); return () => subs.delete(fn); },
@@ -235,25 +241,33 @@ export function createShellAudio({ settings, manifest, loadManifest, loadSummary
       const waits = need(kind);
       const epoch = playEpoch;
       playsInFlight += 1;
+      const token = ++playToken; let phase = 'failed', why = '';
+      emitPlay({ phase: 'start', token, kind, id, what: typeof o?.label === 'string' ? o.label : '' });
       try {
         await settle();
         await waitFor(waits);
         if (queued) queuedChapters.delete(queued);
-        if (epoch !== playEpoch) return { source: 'none', stopped: true, reason: 'stopped' };
+        if (epoch !== playEpoch) { phase = 'stopped'; return { source: 'none', stopped: true, reason: 'stopped' }; }
         const o2 = opts(queued ? { ...o, rate: queued.rate } : o);
         speechBegin();
         let fromMedia = false;
         try {
           const r = await inner.play(kind, id, { ...o2, onMedia(ev) {
             fromMedia = true;
+            if (ev?.type === 'playing') emitPlay({ phase: 'playing', token });
             if (epoch !== playEpoch) return;
             publish(playbackLine(ev));
           } });
-          if (epoch !== playEpoch) return { ...r, stopped: true };
+          if (epoch !== playEpoch || r?.stopped) { phase = 'stopped'; return { ...r, stopped: true }; }
           if (!fromMedia || r?.source === 'tts-fallback' || r?.source === 'none' || r?.fileError) publish(describeResult(r));
+          if (r && r.source !== 'none' && r.ok !== false && !(r.fileError && r.source !== 'tts-fallback')) phase = 'finished';
+          else why = whyNot(r);
           return r;
         } finally { speechEnd(); }
-      } finally { if (queued) queuedChapters.delete(queued); playsInFlight = Math.max(0, playsInFlight - 1); }
+      } finally {
+        if (queued) queuedChapters.delete(queued); playsInFlight = Math.max(0, playsInFlight - 1);
+        emitPlay({ phase, token, why });
+      }
     },
     async playSequence(items, so) {
       for (const it of items) need(Array.isArray(it) ? it[0] : it && it.kind);

@@ -102,14 +102,14 @@ export function addToCalendarPanel(el, opt = {}) {
   }
 
   function draw() {
-    box.replaceChildren(
+    box.replaceChildren(...[ // filtered: replaceChildren prints a literal "null" for a null child
       el("h2", { id: "alef-add-h" }, "Add to Your Calendar"),
       el("p", { class: "small" }, "One tap puts these on your phone or computer calendar, so they remind you even when Aleph is closed. Each one is its own calendar, so you can remove any of them later in one step."),
       publicSite ? null : el("p", { class: "small" }, "Calendar buttons work on the live site. Here, use Download file."),
       prayerRow("morning", MORNING_TIMES), prayerRow("bedtime", BEDTIME_TIMES), torahRow(), holidayRow(), status,
       el("details", {}, el("summary", {}, "Alerts not showing?"), ...ALERT_NOTES.map((n) => el("p", { class: "small" }, n))),
       el("details", {}, el("summary", {}, "How to Take a Reminder Off"),
-        el("ul", {}, ...REMOVE_STEPS.map(([who, how]) => el("li", { class: "small" }, el("strong", {}, who + ": "), how)))));
+        el("ul", {}, ...REMOVE_STEPS.map(([who, how]) => el("li", { class: "small" }, el("strong", {}, who + ": "), how))))].filter((n) => n != null));
   }
   draw();
   return box;

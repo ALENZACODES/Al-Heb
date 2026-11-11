@@ -21,6 +21,14 @@ export function loadHolds(ctx) {
 function filePath(ctx, kind, id, options) {
   try { const s = ctx?.audio?.status?.(kind, id, options); return s?.source === 'file' ? s.path || null : null; } catch { return null; }
 }
+/** One-line label shown where a held clip falls back (S-11): the absence is a quality decision, not a missing file. */
+export const HELD_LABEL = 'This clip is held back for re-recording, so the written sound is shown instead.';
+/** True when the recording exists but is held (it failed the transcription checks). */
+export function isHeldClip(ctx, held, kind, id, options = {}) {
+  if (!held?.has || !hasRecordedClip(ctx, kind, id, options)) return false;
+  const p = filePath(ctx, kind, id, options);
+  return !!(p && held.has(p));
+}
 /** hasRecordedClip, minus held files. */
 export function hasLabClip(ctx, held, kind, id, options = {}) {
   if (!hasRecordedClip(ctx, kind, id, options)) return false;

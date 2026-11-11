@@ -2,7 +2,7 @@
 // Builds tools/audio/fill-list.json, the job list for tools/audio/fill_clips.py (.github/workflows/fill-clips.yml).
 //   node tools/audio/fill_list.mjs --new        Israeli rows with no clip that no other clip stands in for (the player decides:
 //                                               src/audio/player.js status()), words in the WaveNet pair, prayer lines in Chirp 3 HD
-//   node tools/audio/fill_list.mjs --service    every Israeli line and prayer clip the Siddur service screens play
+//   node tools/audio/fill_list.mjs --service    (writes tools/audio/fill-list-service.json) every Israeli line and prayer clip the Siddur service screens play
 //                                               (data/service/orders.json), to be re-recorded in Chirp 3 HD where no reviewer hears it as worse
 // Prints the row count, characters and a cost estimate (list prices, data/audio/tts-prices.json; Speech-to-Text at US$0.006 per
 // request, Google's 15-second billing step). Writes nothing else.
@@ -20,6 +20,7 @@ import { createAudio } from '../../src/audio/player.js';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '..');
 export const OUT = 'tools/audio/fill-list.json';
+export const SERVICE_OUT = 'tools/audio/fill-list-service.json';
 /** Ids (and their -l<n> / -w<n> parts) the repo holds for a divine-name or wording decision. */
 export const HELD_IDS = ['gadlu', 'kiddush-zachor', 'ashrei-144-15', 'havdalah-opening', 'kedushah-baruch', 'hallel-117'];
 const UNCOVERED_NAME = /(^|[^א-ת])יְיָ|(^|[^א-ת])ה[׳']/;
@@ -85,8 +86,9 @@ export function main(argv = process.argv.slice(2)) {
   const mode = argv.includes('--service') ? 'service' : 'new';
   const { rows, held } = mode === 'service' ? serviceRows(all) : newRows(all);
   const est = estimate(rows);
-  fs.writeFileSync(path.join(ROOT, OUT), JSON.stringify({ schema: 'alef-fill-list/1', mode, estimate: est, rows, held }, null, 1) + '\n');
-  console.log(`${OUT}: ${mode}: ${rows.length} rows, ${held.length} held; ${JSON.stringify(est)}`);
+  const out = mode === 'service' ? SERVICE_OUT : OUT;
+  fs.writeFileSync(path.join(ROOT, out), JSON.stringify({ schema: 'alef-fill-list/1', mode, estimate: est, rows, held }, null, 1) + '\n');
+  console.log(`${out}: ${mode}: ${rows.length} rows, ${held.length} held; ${JSON.stringify(est)}`);
   const by = {}; for (const r of rows) by[`${r.path.split('/')[3]}/${r.family}`] = (by[`${r.path.split('/')[3]}/${r.family}`] || 0) + 1;
   console.log(by);
 }

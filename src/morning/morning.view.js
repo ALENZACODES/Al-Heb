@@ -39,7 +39,7 @@ function ring(sec, goal) {
   return svg("svg", { class: "mrn-ring", viewBox: "0 0 48 48", "aria-hidden": "true", focusable: "false" },
     svg("circle", { class: "bg", cx: 24, cy: 24, r }), svg("circle", { class: "fg", cx: 24, cy: 24, r, "stroke-dasharray": `${(c * frac).toFixed(1)} ${c.toFixed(1)}` }));
 }
-const GLYPH = { done: ["✓", "done"], frozen: ["❄", "resting (Shabbat or festival)"], today: ["·", "today, not yet done"], open: ["·", "no activity"] };
+const GLYPH = { done: ["✓", "done"], frozen: ["❄", "rest day or covered (never a miss)"], today: ["·", "today, not yet done"], open: ["·", "no activity"] };
 const DAY = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
 /** Flame + count + progress ring + "3:20 of 5:00 today" + 7-day strip + break/rest messages. Returns a node; call again to refresh. */

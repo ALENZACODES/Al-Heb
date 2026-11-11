@@ -133,7 +133,7 @@ export function shelfText(catalog, badges, points) {
   const shown = shownTier(catalog, points || 0, b.tier);
   const lines = [`My Hebrew course badges`, `Tier: ${shown.tier ? shown.tier.name : 'Newcomer'}`];
   for (const r of rows) lines.push(`- ${r.name}: ${r.levelName} (${r.threshold})`);
-  if (!rows.length) lines.push('No badges yet. They are earned by practising, at any pace.');
+  if (!rows.length) lines.push('No badges yet. They are earned by practicing, at any pace.');
   return lines.join('\n');
 }
 

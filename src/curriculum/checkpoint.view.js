@@ -52,7 +52,7 @@ export function mountCheckpoint(root, ctx, seed0 = 1) {
       replaceKeepingFocus(wrap, h1,
         el("h2", {}, res.passed ? "Checkpoint passed" : "Checkpoint: more practice needed"),
         el("p", {}, `${res.right} of ${res.total} right (${Math.round(res.ratio * 100)}%). The pass mark is 80%.`),
-        res.weakSets.length ? el("p", {}, "Look-alike groups to practise: " + res.weakSets.map((id) => (c.confusables.sets.find((s) => s.id === id)?.letters || []).map((l) => L(l)?.name || l).join("/")).join("; ") + ".") : null,
+        res.weakSets.length ? el("p", {}, "Look-alike groups to practice: " + res.weakSets.map((id) => (c.confusables.sets.find((s) => s.id === id)?.letters || []).map((l) => L(l)?.name || l).join("/")).join("; ") + ".") : null,
         res.wrongLetters.length ? el("div", {}, el("p", {}, "Scan drills for the ones you missed:"), el("div", { class: "row" }, ...res.wrongLetters.map((l) => el("a", { class: "btn secondary", href: `#/learn?spotit=${l}` }, `Spot It: ${L(l)?.name || l}`)))) : null,
         el("p", { class: "muted" }, "Missed letters were sent back to your review queue; correct ones counted as a good review."),
         el("div", { class: "row" }, el("a", { class: "btn", href: "#/learn?review=1" }, "Review now"), el("a", { class: "btn secondary", href: "#/learn" }, "All lessons")));

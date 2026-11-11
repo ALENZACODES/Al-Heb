@@ -1,5 +1,6 @@
 import { reactRimon } from '../shell/rimon-events.js';
 import { h, heSpan } from '../shell/ui.js';
+import { FIRST_WORDS } from '../lib/counts.js';
 import { createSession } from '../games/engine.js';
 import { BUILDER_KEY, GAME_KEY, wordsFor, trayFor, tokensFor, phonetics, clipFor, recordWord } from './builder-model.js';
 
@@ -122,13 +123,13 @@ export function builderNode(ctx = {}) {
     if(disposed) return;
     words=loadedWords; symbols=loadedSymbols;
     const mode=h('input',{type:'checkbox',onchange:()=>{withVowels=mode.checked;vowels.open=withVowels;choose(word);}});
-    vowels.append(h('summary',{},'Vowel marks and dots'),h('p',{},'Turn on “Practise vowel marks” to place these yourself.'),
+    vowels.append(h('summary',{},'Vowel marks and dots'),h('p',{},'Turn on “Practice vowel marks” to place these yourself.'),
       h('div',{class:'builder-tray',dir:'rtl'},...symbols.marks.map(symbolButton)));
-    host.replaceChildren(h('h2',{},'Build a Hebrew word'),h('p',{},`${words.length} words to discover. Start small and choose a higher level when you are ready.`),
+    host.replaceChildren(h('h2',{},'Build a Hebrew word'),h('p',{},`${words.length} words to build from tiles (a separate list from the ${FIRST_WORDS} first words in Word Finder). Start small and choose a higher level when you are ready.`),
       h('div',{class:'builder-options'},h('label',{},'Level ',levelSelect),h('label',{},'Voice ',voiceSelect),h('label',{},'Phonetics ',traditionSelect)),
       h('p',{class:'builder-audio-note'},'Both voices read Israeli Hebrew. Phonetic style changes only the English letters.'),
       h('label',{class:'builder-choice'},'Choose a word ',wordSelect),target,slots,tray,
-      h('label',{class:'builder-mode'},mode,' Practise vowel marks'),vowels,symbolInfo,status,
+      h('label',{class:'builder-mode'},mode,' Practice vowel marks'),vowels,symbolInfo,status,
       h('div',{class:'builder-actions'},button('Start over',()=>choose(word)),button('Next word',()=>{const list=wordsFor(words,level);choose(list[(list.findIndex(w=>w.id===word.id)+1)%list.length]);}),h('a',{href:'#/awards',class:'btn secondary'},'My badges')),tally);
     drawChoices(); drawTally();
     unsubscribe=ctx.settings?.subscribe(()=>{voice=ctx.settings.get('voice');tradition=ctx.settings.get('congregation');voiceSelect.value=voice;traditionSelect.value=tradition;drawTarget();});

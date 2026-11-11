@@ -66,7 +66,7 @@ export const LINES = Object.freeze([
   { id: "h-purim-1", kind: "holiday", holiday: "purim", title: "Purim sameach! 🎭", body: "I'm in costume. I'm dressed as a pomegranate. It's a great costume." },
   { id: "h-purim-2", kind: "holiday", holiday: "purim", title: "Hamantaschen break?", body: "Grab one, then grab the word מְגִלָּה, scroll." },
   { id: "h-tubishvat-1", kind: "holiday", holiday: "tu-bishvat", title: "Happy Tu BiShvat 🌳", body: "New Year for trees, and a big day for pomegranates. Celebrate with a tree word: עֵץ." },
-  { id: "h-yomhaatzmaut-1", kind: "holiday", holiday: "yom-haatzmaut", title: "Happy Yom HaAtzmaut 🇮🇱", body: "Practise the Hebrew they speak in Israel today. Start with: חַג שָׂמֵחַ." },
+  { id: "h-yomhaatzmaut-1", kind: "holiday", holiday: "yom-haatzmaut", title: "Happy Yom HaAtzmaut 🇮🇱", body: "Practice the Hebrew they speak in Israel today. Start with: חַג שָׂמֵחַ." },
   { id: "h-erev-shabbat-1", kind: "holiday", holiday: "erev-shabbat", title: "Shabbat is coming", body: "One quick lesson this morning, then I'll go quiet until Shabbat is over. שַׁבָּת שָׁלוֹם." },
   { id: "h-erev-chag-1", kind: "holiday", holiday: "erev-chag", title: "חַג שָׂמֵחַ! Chag sameach!", body: "I'll be quiet for the chag. One short lesson before, if there's time." },
   // milestones

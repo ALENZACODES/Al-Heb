@@ -4,6 +4,7 @@ import { ROUTES } from './router.js';
 import { PREVIEW_HIDDEN, sectionOf } from './nav-model.js';
 import { tHe } from './i18n.js';
 import { calmOn, streakVisible } from './comfort.js';
+import { reviewsDue, streakText } from '../lib/counts.js';
 import { buildToday, renderToday, daysAway, reviewedToday, previewTag, FIRSTDAY_PROGRESS_KEY, ONBOARDING_KEY, PLACEMENT_KEY, DAILY_GOAL_KEY, PRACTICE_KEYS } from '../home/today.js';
 
 async function tryImport(paths) {
@@ -76,7 +77,7 @@ export function mount(root, ctx) {
   // Lane 1 data (fetch-based loaders; modules shared with the Learn screen). Best effort: a missing module leaves the placeholder.
   // The Today card only reads other modules' stores (curriculum progress, SRS cards, streak, firstday.progress, onboarding.v1, placement.v1).
   (async () => {
-    const [cur, act, srs] = await Promise.all([tryImport(['../curriculum/lessons.js']), tryImport(['../curriculum/state.js']), tryImport(['../curriculum/srs.js'])]);
+    const [cur, act] = await Promise.all([tryImport(['../curriculum/lessons.js']), tryImport(['../curriculum/state.js'])]);
     if (!alive || !cur?.lessons?.length || !act?.loadState) return;
     const st = await act.loadState(ctx);
     const get = async (k) => { try { const v = await store.get(k); return v ?? null; } catch { return null; } };
@@ -86,13 +87,13 @@ export function mount(root, ctx) {
     const draw = () => {
       const today = buildToday({
       completedIds: Object.keys(st.completed), lessons: cur.lessons, goal: settings.get('goal'), available: cur.available,
-      dueCount: srs?.due ? srs.due(Object.values(st.cards), new Date()).length : 0, streak: st.streak,
+      dueCount: reviewsDue(st.cards, Date.now()), streak: st.streak, // src/lib/counts.js: the number Learn and Progress show
       firstday, onboarding, placement, hasRoute: ctx.hasRoute, daysAway: daysAway({ last: st.rawStreak?.last, cards: st.cards }), reviewedToday: reviewedToday(st.cards), dailyGoal: goalNow, speak, typing, compare,
       });
       renderRest(today.firstRun);
       // Streak flame under the title (Duolingo-style), only when there is a streak and the learner has not hidden streaks.
       header.querySelector?.('.alef-streak-flame')?.remove?.();
-      if (streakVisible(ctx) && today.streak.count > 0) header.append(h('p', { class: 'alef-streak-flame', 'data-streak-slot': 'home' }, h('span', { class: 'alef-flame', 'aria-hidden': 'true' }, '🔥'), h('strong', {}, `${today.streak.count}-day streak`), today.streak.activeToday ? ' · today counts' : ' · keep it lit today'));
+      if (streakVisible(ctx) && today.streak.count > 0) header.append(h('p', { class: 'alef-streak-flame', 'data-streak-slot': 'home' }, h('span', { class: 'alef-flame', 'aria-hidden': 'true' }, '🔥'), h('strong', {}, streakText(today.streak.count)), today.streak.activeToday ? ' · today counts' : ' · keep it lit today'));
       // Krav Maga style rank (earned only by finishing lessons, in course order), as text plus belt and patch; returning learners only.
       header.querySelector?.('.alef-rank-home')?.remove?.();
       if (!today.firstRun && cur.ranks?.length && cur.rankSummary && cur.rankBadge) {

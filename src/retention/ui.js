@@ -2,9 +2,10 @@
 // Retention UI pieces that live inside other screens: the top-bar chips (streak flame, gems, hearts), the daily-goal
 // ring on Home, the end-of-lesson reward panel, and the out-of-hearts gate. Text always sits beside every drawing.
 import { h, confetti, setKids } from './dom.js';
-import { goalProgress, GOALS, setGoal } from './xp.js';
+import { GOALS, setGoal } from './xp.js';
+import { xpGoal, streakText, count } from '../lib/counts.js';
 import { gemsText, PRICES } from './gems.js';
-import { HEARTS, REFILL_ROUTE, nextHeartInMs, refillByGems } from './hearts.js';
+import { REFILL_ROUTE, nextHeartInMs, refillByGems } from './hearts.js';
 import { streakLine, STREAK } from './streak.js';
 import { shouldAsk, answerAsk, reminderICS } from './notify.js';
 import { showRimon } from './rimon.js';
@@ -14,27 +15,25 @@ const RING_R = 26, RING_C = 2 * Math.PI * RING_R;
 const svg = (tag, attrs) => { const n = document.createElementNS('http://www.w3.org/2000/svg', tag); for (const [k, v] of Object.entries(attrs)) n.setAttribute(k, String(v)); return n; };
 
 // ---------- top bar ----------
+// The streak, gems and hearts counters live in ONE header group, the stat bar (src/shell/statbar.js), drawn on every page from
+// src/lib/counts.js as soon as the page shows. This bar only adds the practice-league cup and the spoken status line, so no
+// counter appears twice in the header and none waits for this module to load.
 export function mountTopBar(R, g = globalThis) {
   const doc = g.document, header = doc.querySelector('.site-header');
   if (!header || header.querySelector('.ret-bar')) return;
   const live = h('p', { class: 'visually-hidden ret-live', role: 'status', 'aria-live': 'polite' });
-  const bar = h('div', { class: 'ret-bar alef-retention', role: 'group', 'aria-label': 'Your streak, gems and hearts' });
+  const bar = h('div', { class: 'ret-bar alef-retention', role: 'group', 'aria-label': 'Practice league' });
   header.append(bar, live);
   let sig = '';
   const draw = () => {
     try {
       if (R.calm() || !R.revealed()) { bar.hidden = true; sig = ''; return; }
       bar.hidden = false;
-      const rec = R.get(), st = R.status(), kids = [];
-      const next = [st.count, st.activeToday, rec.gems.balance, rec.hearts.n, R.streakShown(), R.heartsShown(), R.leagueShown()].join('|');
+      const kids = [];
+      const next = [R.leagueShown()].join('|');
       if (next === sig) return; // nothing changed: leave the chips (and any focus on them) alone
       sig = next;
-      if (R.streakShown()) kids.push(h('a', { class: `ret-chip ret-flame${st.activeToday ? ' is-lit' : ''}`, href: '#/shop', 'aria-label': `${st.count}-day streak${st.activeToday ? ', done today' : ''}. Open the shop.` },
-        h('span', { class: 'ret-ico ret-ico-flame', 'aria-hidden': 'true' }), h('span', { class: 'ret-num' }, String(st.count))));
-      kids.push(h('a', { class: 'ret-chip ret-gems', href: '#/shop', 'aria-label': `${gemsText(rec.gems.balance)}. Open the shop.` },
-        h('span', { class: 'ret-ico ret-ico-gem', 'aria-hidden': 'true' }), h('span', { class: 'ret-num' }, String(rec.gems.balance))));
-      if (R.heartsShown()) kids.push(h('a', { class: 'ret-chip ret-hearts', href: '#/shop', 'aria-label': `${rec.hearts.n} of ${HEARTS.max} hearts. Open the shop.` },
-        h('span', { class: 'ret-ico ret-ico-heart', 'aria-hidden': 'true' }), h('span', { class: 'ret-num' }, String(rec.hearts.n))));
+      bar.hidden = !R.leagueShown();
       if (R.leagueShown()) kids.push(h('a', { class: 'ret-chip ret-league', href: '#/league', 'aria-label': 'Practice league' }, h('span', { class: 'ret-ico ret-ico-cup', 'aria-hidden': 'true' })));
       setKids(bar, kids);
     } catch { /* the bar is optional */ }
@@ -49,23 +48,27 @@ export function goalRingNode(R) {
   const wrap = h('section', { class: 'card ret-goal alef-retention', 'aria-labelledby': 'ret-goal-h' });
   let sig = '';
   const draw = () => {
-    const rec = R.get(), p = goalProgress(rec), st = R.status();
+    const rec = R.get(), p = xpGoal(rec), st = R.status();
     const next = JSON.stringify([p, st, rec.freezes, rec.gems.balance, R.streakShown(), R.weekDots().map((d) => d.state)]);
     if (next === sig) return; // unchanged: keep the open goal picker and the focus where they are
     sig = next;
     const wasOpen = wrap.querySelector('.ret-goal-pick')?.open === true, focusGoal = wrap.contains(document.activeElement) ? document.activeElement.getAttribute('data-goal') : null;
-    const ring = svg('svg', { class: 'ret-ring', viewBox: '0 0 64 64', width: 72, height: 72, 'aria-hidden': 'true', focusable: 'false' });
-    ring.append(svg('circle', { class: 'ret-ring-track', cx: 32, cy: 32, r: RING_R }), svg('circle', { class: `ret-ring-fill${p.done ? ' is-done' : ''}`, cx: 32, cy: 32, r: RING_R, 'stroke-dasharray': RING_C.toFixed(1), 'stroke-dashoffset': (RING_C * (1 - p.fraction)).toFixed(1), transform: 'rotate(-90 32 32)' }));
+    // The ring, its text and the XP quest all draw p (src/lib/counts.js xpGoal): one quantity, one source (C-03).
+    const ring = svg('svg', { class: 'ret-ring', viewBox: '0 0 64 64', width: 72, height: 72, 'aria-hidden': 'true', focusable: 'false', 'data-pct': p.pct });
+    const offset = (RING_C * (1 - p.fraction)).toFixed(1);
+    const fill = svg('circle', { class: `ret-ring-fill${p.done ? ' is-done' : ''}`, cx: 32, cy: 32, r: RING_R, 'stroke-dasharray': RING_C.toFixed(1), 'stroke-dashoffset': offset, transform: 'rotate(-90 32 32)' });
+    try { fill.style.strokeDashoffset = offset; } catch { /* the attribute already holds it */ }
+    ring.append(svg('circle', { class: 'ret-ring-track', cx: 32, cy: 32, r: RING_R }), fill);
     const picker = h('details', { class: 'ret-goal-pick' }, h('summary', {}, 'Change XP goal'),
       h('div', { class: 'row', role: 'group', 'aria-label': 'Daily XP goal' }, ...GOALS.map((gl) => h('button', { type: 'button', class: 'btn secondary', 'data-goal': gl.xp, 'aria-pressed': String(rec.goal === gl.xp), onclick: () => { R.update((r) => setGoal(r, gl.xp)); R.say(`Daily goal set to ${gl.xp} XP.`); } }, `${gl.label} · ${gl.xp} XP`))));
     setKids(wrap, 
       h('div', { class: 'ret-goal-row' }, ring,
         h('div', {}, h('h2', { id: 'ret-goal-h' }, 'Daily XP Goal'),
-          h('p', { class: 'ret-goal-text' }, p.done ? `Goal reached: ${p.xp} of ${p.goal} XP today.` : `${p.xp} of ${p.goal} XP today.`),
+          h('p', { class: 'ret-goal-text', 'data-xp': p.xp, 'data-goal': p.goal }, p.text),
           R.streakShown() ? h('p', { class: 'muted' }, streakLine(st)) : null)),
       R.streakShown() ? stripNode(R) : null,
       h('div', { class: 'row ret-goal-actions' }, quick,
-        st.repair ? h('a', { class: 'btn secondary', href: '#/shop' }, `Repair your ${st.repair.prev}-day streak`) : null,
+        st.repair ? h('a', { class: 'btn secondary', href: '#/shop' }, `Bring back your ${streakText(st.repair.prev)} (free)`) : null,
         R.streakShown() && !st.repair && rec.freezes.held < STREAK.freezeMax && rec.gems.balance >= PRICES.freeze ? h('a', { class: 'btn secondary', href: '#/shop' }, 'Get a streak freeze') : null),
       picker);
     wrap.setAttribute('data-state', st.state);
@@ -140,7 +143,7 @@ export function questsNode(R) {
       v.rest ? h('p', {}, 'A rest day. No quests today.')
         : h('ul', { class: 'ret-quest-list' }, ...v.items.map((q) => h('li', { class: q.done ? 'is-done' : '' },
           h('span', { class: 'ret-quest-mark', 'aria-hidden': 'true' }, q.done ? '\u2713' : ''), h('span', { class: 'ret-quest-text' }, q.text),
-          h('span', { class: 'ret-quest-count' }, q.done ? 'Done, +5 gems' : `${q.p} of ${q.n}`)))),
+          h('span', { class: 'ret-quest-count', 'data-p': q.p, 'data-n': q.n }, q.done ? 'Done, +5 gems' : `${q.p} of ${q.n}`)))),
       v.rest ? null : h('p', { class: 'muted' }, v.chest ? 'All three done. +10 gems. New quests tomorrow.' : `Finish all three for ${gemsText(10)} more.`));
   };
   const on = () => { if (wrap.isConnected) { try { draw(); } catch { /* keep the last drawing */ } } else document.removeEventListener('alef:retention', on); };
@@ -160,7 +163,7 @@ export function monthNode(R) {
     const pct = Math.round(v.fraction * 100);
     setKids(wrap, h('h2', { id: 'ret-month-h' }, v.title, v.he ? ' ' : null, v.he ? h('span', { lang: 'he', dir: 'rtl', class: 'he' }, v.he) : null),
       h('div', { class: 'ret-month-bar', role: 'progressbar', 'aria-label': v.title, 'aria-valuemin': '0', 'aria-valuemax': String(v.target), 'aria-valuenow': String(v.xp), 'aria-valuetext': `${v.xp} of ${v.target} XP` }, h('span', { style: `--w:${pct}` })),
-      h('p', {}, v.done ? `Done: ${v.target} XP this month. +${gemsText(50)}.` : `${v.xp} of ${v.target} XP. ${v.daysLeft === 0 ? 'Last day of the month.' : `${v.daysLeft} day${v.daysLeft === 1 ? '' : 's'} left.`}`));
+      h('p', {}, v.done ? `Done: ${v.target} XP this month. +${gemsText(50)}.` : `${v.xp} of ${v.target} XP. ${v.daysLeft === 0 ? 'Last day of the month.' : `${count(v.daysLeft, 'day')} left.`}`));
   };
   const on = () => { if (wrap.isConnected) { try { draw(); } catch { /* keep the last drawing */ } } else document.removeEventListener('alef:retention', on); };
   document.addEventListener('alef:retention', on);
@@ -180,10 +183,10 @@ export function heartsBlock(R, { gate = false } = {}) {
   } }, `Refill all hearts for ${gemsText(PRICES.hearts)}`) : null;
   const box = h('section', { class: 'card ret-hearts-out alef-retention', 'aria-labelledby': 'ret-out-h' },
     h(gate ? 'h1' : 'h3', { id: gate ? 'view-title' : 'ret-out-h', tabindex: '-1' }, 'Out of hearts for now'),
-    h('p', {}, 'Practise a few old words to earn one back.'),
-    h('div', { class: 'row' }, h('a', { class: 'btn', href: REFILL_ROUTE }, 'Practise to earn a heart'), refill),
+    h('p', {}, 'Practice a few old words to earn one back.'),
+    h('div', { class: 'row' }, h('a', { class: 'btn', href: REFILL_ROUTE }, 'Practice to earn a heart'), refill),
     wait ? h('p', { class: 'muted' }, `Next heart in ${hm(wait)}.`) : null,
-    h('p', { class: 'muted' }, 'Review is always open. Practising old words is how memory sticks.'));
+    h('p', { class: 'muted' }, 'Review is always open. Practicing old words is how memory sticks.'));
   if (gate) box.setAttribute('aria-labelledby', 'view-title');
   return box;
 }
@@ -215,7 +218,7 @@ export function routeShown(R, g = globalThis, gate = false) {
 // ---------- end-of-lesson reward ----------
 const NEW = {
   quests: ['Daily quests are open.', 'Three small goals wait on Home each day, with a few gems for each.', '#/', 'See today\u2019s quests'],
-  hearts: ['Hearts are on.', 'You have 5. A wrong first answer in a lesson costs one, and practising old words wins it back. You can switch hearts off in the shop.', '#/shop', 'Open the shop'],
+  hearts: ['Hearts are on.', 'You have 5. A wrong first answer in a lesson costs one, and practicing old words wins it back. You can switch hearts off in the shop.', '#/shop', 'Open the shop'],
   league: ['The practice league is open.', 'See how your week compares. The other players are pretend, and the page says so.', '#/league', 'See the league'],
 };
 /** One short introduction the first time a part of the system opens, so nothing new appears unexplained. */
@@ -246,7 +249,7 @@ function optInCard(R) {
   const status = h('p', { role: 'status', class: 'muted' });
   const card = h('section', { class: 'card ret-optin', 'aria-labelledby': 'ret-optin-h' },
     h('h3', { id: 'ret-optin-h' }, 'Want a nudge from Rimon?'),
-    h('p', {}, "Rimon can send one short reminder on days you haven't practised. Never on Shabbat or holidays."),
+    h('p', {}, "Rimon can send one short reminder on days you haven't practiced. Never on Shabbat or holidays."),
     h('fieldset', { class: 'ret-tone' }, h('legend', {}, 'Tone'), tone('kind', 'Kind Rimon: gentle reminders', true), tone('playful', 'Playful Rimon: gentle, then teasing jokes (for adults)', false)),
     h('div', { class: 'row' },
       h('button', { type: 'button', class: 'btn', onclick: async () => {
@@ -268,7 +271,8 @@ export function showReward(R, out, g = globalThis) {
     const card = doc.querySelector('.alef-summary');
     if (!card) { if (tries < 20) g.setTimeout(() => place(tries + 1), 50); return; }
     if (card.querySelector('.ret-reward')) return;
-    // S-05: the number is frozen at its final value before the card renders (no count-up racing the text beside it)
+    // Today's total is drawn once, at its final value (src/lib/counts.js xpToday after this lesson): a count-up showed two values of
+    // the same number on one screen (C-03), so only the XP chip moves.
     const total = h('strong', { class: 'ret-total' }, String(out.todayAfter));
     const lines = [];
     if (out.parts.accuracy) lines.push(`Sharp lesson bonus: +${out.parts.accuracy} XP`);
@@ -289,6 +293,7 @@ export function showReward(R, out, g = globalThis) {
       h('p', { class: 'visually-hidden', role: 'status' }, sentence));
     const anchor = card.querySelector('.alef-celebrate-cheer');
     if (anchor?.parentNode) anchor.parentNode.insertBefore(panel, anchor.nextSibling); else card.prepend(panel);
+
     if (out.heartsEmpty) {
       const next = card.querySelector('.alef-next-primary'); if (next) { next.hidden = true; next.setAttribute('hidden', ''); }
       (card.querySelector('.alef-summary-actions') || card).before(heartsBlock(R));
@@ -308,7 +313,7 @@ export function showQuickDone(R, out, g = globalThis) {
   // The card sits in <main> above the lesson, not inside it: the lesson player redraws its own article on every part.
   const doc = g.document, page = doc.getElementById('main');
   if (!page || out.calm || page.querySelector('.ret-quick-done')) return;
-  const total = h('strong', { class: 'ret-total' }, String(out.todayAfter)); // S-05: final value, no count-up
+  const total = h('strong', { class: 'ret-total' }, String(out.todayAfter)); // final value only, as on the lesson's end card
   const card = h('section', { class: 'ret-reward ret-quick-done alef-retention', 'aria-labelledby': 'ret-quick-h' },
     out.goalCrossed || out.streak.milestone ? confetti() : null,
     h('h2', { id: 'ret-quick-h', tabindex: '-1' }, 'Three Minutes Done'),

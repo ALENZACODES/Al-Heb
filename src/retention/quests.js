@@ -38,16 +38,23 @@ export function ensureQuests(rec, now = Date.now(), mode = 'reform') {
   r.quests = { day, items: isRestDay(day, mode) ? [] : dailyQuests(rec.installId, day), chest: false, rest: isRestDay(day, mode) };
   return r;
 }
+/** Quests whose progress is a count the app already keeps (src/lib/counts.js): XP today and lessons finished today.
+ *  Their progress is that count, never a separate tally, so Home's goal ring and the XP quest always agree (C-03). */
+export const LIVE_KINDS = Object.freeze({ xp: 'xpToday', lesson: 'lessonsToday' });
+const liveOf = (it, live) => { const k = LIVE_KINDS[it.id]; const v = k && live ? Number(live[k]) : NaN; return Number.isFinite(v) ? Math.max(0, Math.floor(v)) : null; };
 /**
- * Count progress. `amounts` e.g. { xp: 15, lesson: 1, sharp: 1, combo: 6 }.
+ * Count progress. `amounts` e.g. { xp: 15, lesson: 1, sharp: 1, combo: 6 }. opt.live = { xpToday, lessonsToday } (counts.js):
+ * when given, the XP and lesson quests take that value instead of adding the amount.
  * @returns {{rec:object, done:string[], chest:boolean, gems:number}} done = quests finished by this call (their text)
  */
 export function questProgress(rec, amounts, now = Date.now(), opt = {}) {
   if (!questsOn(rec, opt)) return { rec, done: [], chest: false, gems: 0 };
   let r = clone(ensureQuests(rec, now, opt.mode)); const done = []; let gems = 0, chest = false;
   for (const it of r.quests.items) {
-    const a = Number(amounts[it.id]) || 0; if (a <= 0 || it.paid) continue;
-    it.p = Math.min(it.n, def(it.id).max ? Math.max(it.p, a) : it.p + a);
+    if (it.paid) continue;
+    const lv = liveOf(it, opt.live);
+    if (lv !== null) { if (Math.min(it.n, lv) <= it.p) continue; it.p = Math.min(it.n, lv); }
+    else { const a = Number(amounts[it.id]) || 0; if (a <= 0) continue; it.p = Math.min(it.n, def(it.id).max ? Math.max(it.p, a) : it.p + a); }
     if (it.p >= it.n) { it.paid = true; done.push(questText(it)); gems += QUESTS.gemsEach; }
   }
   if (done.length) {
@@ -59,5 +66,6 @@ export function questProgress(rec, amounts, now = Date.now(), opt = {}) {
 /** What the quest card draws. */
 export function questView(rec, now = Date.now(), opt = {}) {
   const r = ensureQuests(rec, now, opt.mode), q = r.quests;
-  return { on: questsOn(rec, opt), rest: !!q.rest, chest: !!q.chest, items: q.items.map((i) => ({ id: i.id, text: questText(i), p: i.p, n: i.n, done: !!i.paid })), doneCount: q.items.filter((i) => i.paid).length };
+  const p = (i) => { const lv = liveOf(i, opt.live); return i.paid ? i.n : lv !== null ? Math.min(i.n, lv) : i.p; };
+  return { on: questsOn(rec, opt), rest: !!q.rest, chest: !!q.chest, items: q.items.map((i) => ({ id: i.id, text: questText(i), p: p(i), n: i.n, done: !!i.paid || p(i) >= i.n })), doneCount: q.items.filter((i) => i.paid || p(i) >= i.n).length };
 }

@@ -104,22 +104,22 @@ test('buying: at most 2 held; 199 gems is not enough', () => {
   let r = ret({ gems: 1000 }); r = buyFreeze(r).rec; r = buyFreeze(r).rec;
   assert.equal(r.freezes.held, 2); assert.equal(buyFreeze(r).reason, 'max'); assert.equal(r.gems.balance, 600);
 });
-test('repair window: a broken streak can be bought back for 48 hours', () => {
+test('repair window: a broken streak can be brought back, free, for 48 hours (M-14)', () => {
   const thu = T('2026-11-05T10:00'), s0 = streakRec({ last: '2026-11-02' });
   const r0 = ret({ gems: 300 }); r0.freezes.evaluatedThrough = '2026-11-01';
   const a = applyRollover(s0, r0, thu);
   const offer = repairOffer(a.ret, thu);
-  assert.deepEqual(offer.days, ['2026-11-03', '2026-11-04']); assert.equal(offer.price, 300); assert.equal(offer.hoursLeft, STREAK.repairWindowHours);
+  assert.deepEqual(offer.days, ['2026-11-03', '2026-11-04']); assert.equal(offer.price, 0, 'free, as on the Daily page'); assert.equal(offer.hoursLeft, STREAK.repairWindowHours);
   const fixed = repairStreak(a.streak, a.ret, thu);
-  assert.equal(fixed.ok, true); assert.equal(fixed.rec.gems.balance, 0); assert.equal(fixed.rec.repair, null);
+  assert.equal(fixed.ok, true); assert.equal(fixed.rec.gems.balance, a.ret.gems.balance, 'nothing is spent'); assert.equal(fixed.rec.repair, null);
   assert.equal(projectStreak(fixed.streak, thu).count, 10);
   // the learner already started again before repairing: the two chains join
   const restarted = completeDay(a.streak, thu); assert.equal(restarted.count, 1);
   const joined = repairStreak(restarted, a.ret, thu);
   assert.equal(projectStreak(joined.streak, thu).count, 11); assert.equal(joined.streak.best, 11);
-  // too poor, too late
-  const poor = { ...a.ret, gems: { ...a.ret.gems, balance: 10 } };
-  assert.equal(repairStreak(a.streak, poor, thu).reason, 'balance');
+  // no gems needed; too late is still too late
+  const poor = { ...a.ret, gems: { ...a.ret.gems, balance: 0 } };
+  assert.equal(repairStreak(a.streak, poor, thu).ok, true);
   assert.equal(repairOffer(a.ret, thu + 49 * 3600000), null);
   assert.equal(repairStreak(a.streak, a.ret, thu + 49 * 3600000).reason, 'none');
   assert.equal(applyRollover(a.streak, a.ret, thu + 49 * 3600000).ret.repair, null, 'an expired offer is cleared');

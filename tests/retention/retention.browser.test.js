@@ -130,7 +130,7 @@ test('zero hearts gates a new lesson but not review; reduced motion runs no anim
     const empty = { 'alef:retention.v1': ret({ hearts: { enabled: null, n: 0, lastRefillAt: Date.now(), lost: [] } }) };
     const a = await open(browser, base, empty, { reducedMotion: 'reduce' });
     await a.go('#/learn?lesson=r02', '.ret-hearts-out');
-    assert.match(await a.page.$eval('.ret-hearts-out', (n) => n.textContent), /Practise to earn a heart/);
+    assert.match(await a.page.$eval('.ret-hearts-out', (n) => n.textContent), /Practice to earn a heart/);
     await a.go('#/learn?review=1', 'body[data-ready="1"]'); await a.page.waitForTimeout(800);
     assert.equal(!!(await a.page.$('.ret-hearts-out')), false, 'review is always open');
     await a.go('#/', '.ret-goal');
@@ -138,7 +138,7 @@ test('zero hearts gates a new lesson but not review; reduced motion runs no anim
     assert.deepEqual(a.errors, []); await a.close();
     const hid = await open(browser, base, { 'alef:settings': { onboarded: true, showStreak: false }, 'alef:retention.v1': ret() });
     await hid.go('#/', '.ret-goal');
-    assert.deepEqual([await hid.page.$$eval('.ret-flame, .ret-strip', (n) => n.length), await stray(hid.page)], [0, []], 'with streaks hidden there is no flame, no strip and no stray text');
+    assert.deepEqual([await hid.page.$$eval('#stat-streak:not([hidden]), .ret-strip', (n) => n.length), await stray(hid.page)], [0, []], 'with streaks hidden there is no flame, no strip and no stray text');
     await hid.go('#/shop', '.ret-shop'); assert.deepEqual(await stray(hid.page), []);
     await hid.close();
     const c = await open(browser, base, { 'alef:settings': { onboarded: true, calmMode: true }, 'alef:retention.v1': ret() });

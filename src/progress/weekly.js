@@ -14,6 +14,7 @@ import { weekStrip, projectStreak, GOAL_SECONDS } from '../curriculum/streak.js'
 import { cleanState as cleanTimedReads } from '../timedread/model.js';
 import { coerceState } from '../speak/model.js';
 import { dayKey } from './model.js';
+import { reviewCardsThisWeek } from '../lib/counts.js';
 
 export const WEEKS = 8;
 const DAY = 86400000;
@@ -54,8 +55,7 @@ export function weeklySummary(s, now) {
   const rest = { shabbat: frozen.filter((x) => x.restKind === 'shabbat').length, yomtov: frozen.filter((x) => x.restKind === 'yomtov').length, declared: frozen.filter((x) => !x.restKind).length, total: frozen.length };
 
   const inWeek = (t) => { const a = daysAgo(t, today); return a !== null && a < 7; };
-  const cards = [...Object.entries(s.cards), ...Object.entries(s.vocab)];
-  const reviewed = cards.filter(([, c]) => c && c.lastReview && inWeek(c.lastReview));
+  const reviewed = { length: reviewCardsThisWeek(s.cards, s.vocab, now) }; // src/lib/counts.js: the number the Daily page shows too
   const newWords = [...Object.entries(s.vocab), ...Object.entries(s.cards).filter(([id]) => /^word:/.test(id))].filter(([, c]) => c && c.reps === 1 && c.lastReview && inWeek(c.lastReview));
   const reads = cleanTimedReads(s.timedRead).reads.filter((r) => inWeek(r.at)).length;
   const lessons = Object.values(s.completed).filter(inWeek).length;

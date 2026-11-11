@@ -37,7 +37,7 @@ export function mountScaffold(root, ctx) {
     async function draw() {
       if (!alive) return;
       if (pos >= queue.length) {
-        replaceKeepingFocus(wrap, h1, head, el("h2", {}, "Session done"), el("p", {}, `${queue.length} word${queue.length === 1 ? "" : "s"} practised. Words you knew well now show less Latin next time.`),
+        replaceKeepingFocus(wrap, h1, head, el("h2", {}, "Session done"), el("p", {}, `${queue.length} word${queue.length === 1 ? "" : "s"} practiced. Words you knew well now show less Latin next time.`),
           el("div", { class: "row" }, el("a", { class: "btn", href: "#/learn?scaffold=1" }, "Again"), el("a", { class: "btn secondary", href: "#/learn?review=1" }, "Review now"), el("a", { class: "btn secondary", href: "#/learn" }, "All lessons")));
         return;
       }

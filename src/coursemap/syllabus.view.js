@@ -10,6 +10,7 @@ import { loadJSON } from '../curriculum/data.js';
 import { mixed } from '../hebrewtext/mixed.js';
 import { syllabus, intermediateSplit } from './model.js';
 import { resolveRanks, rankBadge } from '../curriculum/ranks.js';
+import { LESSONS, SCOPE } from '../lib/counts.js';
 
 export const NOTE = 'Draft and unreviewed: the goals below are the course authors\' own wording from the lesson data, and no Hebrew teacher has checked them. Minutes are estimates that were never measured on a learner.';
 
@@ -37,7 +38,7 @@ export function mount(root, ctx) {
           lv.gate ? el('p', { class: 'sy-gate' }, 'Goal of the rank: ', ...mixed(lv.gate)) : null,
           el('ul', {}, ...lv.lessons.map((l) => { n++; return el('li', {}, el('strong', {}, l.id), ' ', ...mixed(l.title), ` (about ${l.minutes} min)`,
             l.goals.length ? el('ul', { 'aria-label': `Goals of ${l.id}` }, ...l.goals.map((g) => el('li', {}, ...mixed(g)))) : null); })))))));
-      status.textContent = `${n} lessons listed.`;
+      status.textContent = `${n} lessons listed: the whole course (${LESSONS.reading} ${SCOPE.reading}, ${LESSONS.israel} ${SCOPE.israel}). The ten-week study plan uses ${LESSONS.core} of them.`;
     } catch { if (alive) body.replaceChildren(el('p', { role: 'alert' }, 'The lesson list could not be loaded. Reload; nothing was lost.')); }
   })();
   return () => { alive = false; wrap.children = []; if (typeof wrap.remove === 'function') wrap.remove(); else root.replaceChildren?.(); };

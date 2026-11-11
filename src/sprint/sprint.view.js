@@ -205,7 +205,7 @@ export function mount(root, ctx) {
       if (learned.length) kids.push(el('ul', { class: 'sp-list', 'aria-label': 'Words you have answered correctly' }, learned.map((e) => el('li', {}, heText(e.pointed, 'alef-he'), ` ${e.gloss}`))));
       kids.push(dest.readId
         ? el('p', {}, el('a', { href: `#/read/${dest.readId}` }, 'Read this line aloud'))
-        : el('p', {}, el('a', { href: '#/israel' }, 'Practise this scenario')));
+        : el('p', {}, el('a', { href: '#/israel' }, 'Practice this scenario')));
     } else if (results.length) kids.push(el('p', {}, 'Pick a destination next time to aim the words at a prayer line or an Israel scenario.'));
     kids.push(el('div', { class: 'sp-row' },
       el('button', { type: 'button', class: 'btn', id: 'sprint-again', onclick: () => renderStart() }, 'Another sprint'),

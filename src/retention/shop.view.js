@@ -10,6 +10,7 @@ import { setReminders, usualTimeText, pickMessage } from './notify.js';
 import { isRestQuiet } from './quiet.js';
 import { showRimon } from './rimon.js';
 import { downloadReminder } from './ui.js';
+import { read as readCounts, lessonsFinished, repairOffer as liveRepair, daysText, streakText, count } from '../lib/counts.js';
 
 const DAY = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 export function mount(root, ctx) {
@@ -30,8 +31,10 @@ export function mount(root, ctx) {
   const item = (title, text, price, btn) => h('section', { class: 'card ret-item' }, h('h2', {}, title), h('p', {}, text), h('p', { class: 'ret-price' }, price), btn);
   let sig = '';
   function draw() {
-    const rec = R.get(), st = R.status(), bal = rec.gems.balance, offer = repairOffer(rec), calm = R.calm();
-    const next = JSON.stringify([rec.xp.total, rec.lessonsFinished, st.best, st.state, st.count, rec.gems, rec.freezes.held, rec.hearts.n, rec.hearts.enabled, rec.league.enabled, rec.notify.optedIn, rec.notify.tone, !!offer, calm]);
+    // The restore is free and shown only while the streak is broken (src/lib/counts.js repairOffer); the same rule as the Daily page.
+    const rec = R.get(), st = R.status(), bal = rec.gems.balance, offer = liveRepair(rec, R.streakRaw()) ? repairOffer(rec) : null, calm = R.calm();
+    const done = lessonsFinished(readCounts(ctx.store).completed);
+    const next = JSON.stringify([rec.xp.total, done, st.best, st.state, st.count, rec.gems, rec.freezes.held, rec.hearts.n, rec.hearts.enabled, rec.league.enabled, rec.notify.optedIn, rec.notify.tone, !!offer, calm]);
     if (next === sig) return; // unchanged: leave the page (and the focus) alone
     sig = next;
     const focusKey = body.contains(document.activeElement) ? document.activeElement.getAttribute('data-k') : null;
@@ -45,13 +48,13 @@ export function mount(root, ctx) {
     setKids(body,
       h('p', { class: 'ret-balance' }, h('span', { class: 'ret-ico ret-ico-gem', 'aria-hidden': 'true' }), ` You have ${gemsText(bal)}. `, h('span', { class: 'muted' }, `${CURRENCY.title} are earned in lessons. They are never sold.`)),
       R.streakShown() ? h('p', {}, streakLine(st)) : null,
-      offer ? item('Repair Your Streak', `Bring back your ${offer.prev}-day streak. The offer ends in about ${offer.hoursLeft} hour${offer.hoursLeft === 1 ? '' : 's'}.`, gemsText(offer.price),
-        h('button', { type: 'button', class: 'btn', 'data-buy': 'repair', 'data-k': 'repair', disabled: bal < offer.price, onclick: () => ask(`Spend ${gemsText(offer.price)} to repair your streak?`, 'Yes, repair it', () => {
+      offer ? item('Bring Back Your Streak', `Your ${streakText(offer.prev)} broke. You can bring it back for free for about ${count(offer.hoursLeft, 'hour')} more.`, 'Free',
+        h('button', { type: 'button', class: 'btn', 'data-buy': 'repair', 'data-k': 'repair', onclick: () => ask(`Bring back your ${streakText(offer.prev)}? It is free.`, 'Yes, bring it back', () => {
           const out = repairStreak(R.streakRaw(), R.get()); if (!out.ok) { status.textContent = out.reason === 'balance' ? `You need ${gemsText(offer.price)}.` : 'The repair offer has ended.'; return; }
-          R.setStreak(out.streak); R.update(() => out.rec); status.textContent = STREAK.repairCountsToday ? 'Streak repaired, and today is counted.' : 'Streak repaired. One lesson today keeps it going.'; showRimon('streak_repaired');
-        }) }, bal < offer.price ? `Needs ${gemsText(offer.price)}` : 'Repair my streak')) : null,
+          R.setStreak(out.streak); R.update(() => out.rec); status.textContent = STREAK.repairCountsToday ? 'Your streak is back, and today is counted.' : 'Your streak is back. One lesson today keeps it going.'; showRimon('streak_repaired');
+        }) }, 'Bring back my streak (free)')) : null,
       item('Streak Freeze', `Covers one missed day automatically. You hold ${rec.freezes.held} of ${STREAK.freezeMax}. Shabbat and holidays never need one.`, gemsText(PRICES.freeze), freezeBtn),
-      heartsOn ? item('Refill Hearts', rec.hearts.n >= HEARTS.max ? 'Your hearts are full.' : `You have ${rec.hearts.n} of ${HEARTS.max} hearts. Practising old words also earns them back.${nextHeartInMs(rec) ? ' One returns by itself every 4 hours.' : ''}`, gemsText(PRICES.hearts),
+      heartsOn ? item('Refill Hearts', rec.hearts.n >= HEARTS.max ? 'Your hearts are full.' : `You have ${rec.hearts.n} of ${HEARTS.max} hearts. Practicing old words also earns them back.${nextHeartInMs(rec) ? ' One returns by itself every 4 hours.' : ''}`, gemsText(PRICES.hearts),
         rec.hearts.n >= HEARTS.max ? null : h('button', { type: 'button', class: 'btn', 'data-buy': 'hearts', 'data-k': 'hearts', disabled: bal < PRICES.hearts, onclick: () => ask(`Spend ${gemsText(PRICES.hearts)} to refill your hearts?`, 'Yes, refill', () => {
           const out = refillByGems(R.get()); if (!out.ok) { status.textContent = out.reason === 'full' ? 'Your hearts are already full.' : `You need ${gemsText(PRICES.hearts)}.`; return; }
           R.update(() => out.rec); status.textContent = 'Hearts full. Off you go!'; showRimon('hearts_refilled');
@@ -60,14 +63,14 @@ export function mount(root, ctx) {
         ? h('ul', { class: 'ret-ledger' }, ...rec.gems.ledger.slice(-10).reverse().map((e) => h('li', {}, `${e.d > 0 ? '+' : ''}${e.d} ${whyLabel(e.why)}, ${DAY[new Date(e.at).getDay()]}`)))
         : h('p', { class: 'muted' }, 'Nothing yet. Finish a lesson to earn your first gems.')),
       h('section', { class: 'card ret-numbers' }, h('h2', {}, 'Your Numbers'),
-        h('dl', {}, ...[['Total XP', rec.xp.total], ['Lessons finished', rec.lessonsFinished], ['Best streak', `${st.best} day${st.best === 1 ? '' : 's'}`], ['Streak freezes used', rec.freezes.used.length]]
+        h('dl', {}, ...[['Total XP', rec.xp.total], ['Lessons finished', done], ['Best streak', daysText(st.best)], ['Streak freezes used', rec.freezes.used.length]]
           .flatMap(([k, v]) => [h('dt', {}, k), h('dd', {}, String(v))]))),
       h('details', { class: 'card ret-how' }, h('summary', {}, 'How It All Works'),
         h('ul', {},
           h('li', {}, 'XP: 10 for a lesson, a little more for a sharp one or a run of right answers, 1 for each old card you review. XP is never taken away.'),
           h('li', {}, 'Streak: one lesson, or five minutes of study, counts the day. Friday evening, Saturday and holidays never break it.'),
-          h('li', {}, 'Streak freeze: covers one missed day by itself. Repair: for two days after a break you can bring a short streak back.'),
-          h('li', {}, 'Hearts: five. A wrong first answer in a lesson costs one. Practising old words wins one back, and one returns every four hours. Reading, prayers, Torah, songs and games never cost hearts.'),
+          h('li', {}, 'Streak freeze: covers one missed day by itself. Bring back: for two days after a break you can bring a streak back, free, here or on the Daily page.'),
+          h('li', {}, 'Hearts: five. A wrong first answer in a lesson costs one. Practicing old words wins one back, and one returns every four hours. Reading, prayers, Torah, songs and games never cost hearts.'),
           h('li', {}, 'Gems: earned by learning. They cannot be bought, and there are no ads.'),
           h('li', {}, 'Practice league: the other players are pretend, paced to your own weeks. It is a race against your usual self.'),
           h('li', {}, 'Reminders: one short line from Rimon, only if you say yes, never on Shabbat or holidays, never at night.'),

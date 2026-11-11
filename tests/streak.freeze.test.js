@@ -148,8 +148,9 @@ test("Rosh Hashanah 2 days (traditional and israel modes, and a reform user who 
     assert.equal(p.count, 10, mode); assert.equal(p.broken, false, mode);
     assert.deepEqual(d.rec().frozenDates, ["2026-09-12", "2026-09-13"], mode); // rollover persisted the classification
     d.study(at("2026-09-14", 8), 300); assert.equal(d.shown(at("2026-09-14", 9)).count, 11, mode);
-    // strip Tue 8 .. Mon 14 (the seeded record has no doneDates, so earlier days show "open")
-    assert.deepEqual(d.model.strip().map((x) => x.state), ["open", "open", "open", "open", "frozen", "frozen", "done"], mode);
+    // strip Tue 8 .. Mon 14 (the seeded record has no doneDates, so earlier days show "open"). Friday 11 is a free rest day under the
+    // owner rule, so the Morning Verse dots show it as rest, the same as Home's strip (src/lib/counts.js weekDays, M-01).
+    assert.deepEqual(d.model.strip().map((x) => x.state), ["open", "open", "open", "frozen", "frozen", "frozen", "done"], mode);
   }
   // reform: day 2 is ordinary unless declared in Progress
   const r = device({ record: v2({ count: 10, best: 10, last: "2026-09-11" }), prefs: { observant: true }, cal: { observance: "reform" } });

@@ -11,12 +11,12 @@
 import { plain } from "../shell/plain-copy.js";
 import { lessonSummaries as lessons, ranks, rankOf } from "./lessons-index.js";
 import { rankSummary, rankBadge } from "./ranks.js";
-import { due } from "./srs.js";
+import { reviewsDue, minutesGoal, LESSONS, SCOPE, scopeOfTrack, daysText } from "../lib/counts.js";
 import { plural } from "../shell/plural.js";
 import { el, heText, tr, replaceKeepingFocus, levelLabel } from "./dom.js";
 import { loadState } from "./actions.js";
 import { streakVisible } from "../shell/comfort.js";
-import { DAILY_GOAL_KEY, normalizeDailyGoal } from "../home/today.js";
+import { DAILY_GOAL_KEY } from "../home/today.js";
 import { rimonInline } from "../shell/rimon-inline.js";
 import { firstHebrewLetter } from "../shell/ui.js";
 import { loadUnlocked, unlockLesson, doubleTap } from "./unlock.js";
@@ -72,7 +72,7 @@ function mountMap(root, ctx) {
     const done = new Set(Object.keys(st.completed));
     const unlocked = await loadUnlocked(ctx); // lessons opened early with a double tap
     if (!alive) return;
-    const dueCount = due(Object.values(st.cards), Date.now()).length;
+    const dueCount = reviewsDue(st.cards, Date.now()); // src/lib/counts.js: the same number Home and Progress show
     const list = lessons.filter((l) => l.track === track);
     const doneInTrack = list.filter((l) => done.has(l.id)).length;
     const firstOpen = Math.max(0, list.findIndex((l) => !done.has(l.id)));
@@ -88,14 +88,15 @@ function mountMap(root, ctx) {
       track === "read" && ctx?.hasRoute?.("classtrack") ? el("p", { class: "alef-plan-link" }, el("a", { href: "#/classtrack" }, "My study plan"), ": 10 weeks, 3 months, 6 months or a year, on your own dates, with help each week.") : null,
       ctx?.hasRoute?.("library") ? el("p", { class: "alef-plan-link" }, el("a", { href: "#/library" }, "Library"), ": short reads on Shabbat, the holidays and prayer, each with its Hebrew words.") : null,
       ctx?.hasRoute?.("lab") ? el("p", { class: "alef-plan-link" }, el("a", { href: "#/lab" }, "Brain Lab"), ": today’s three quick drills for your Hebrew eyes, ears and memory.") : null,
-      el("p", { class: "alef-progress", role: "status" }, `${doneInTrack} / ${list.length} ${tr(ctx, "learn.lessonsDone", "lessons done")}`),
+      // Scope named on the page (M-01): this is one track; the whole course and the ten-week plan count other sets (src/lib/counts.js SCOPE).
+      el("p", { class: "alef-progress", role: "status", "data-scope": scopeOfTrack(track) }, `${doneInTrack} / ${list.length} ${tr(ctx, "learn.lessonsDone", "lessons done")} `, el("span", { class: "muted" }, `(${SCOPE[scopeOfTrack(track)]}; ${LESSONS.all} ${SCOPE.all})`)),
       el("p", { class: "alef-due", role: "status" }, dueCount
         ? dueCount === 1 ? "1 review due" : `${dueCount} ${tr(ctx, "learn.dueReviews", "reviews due")}`
         : tr(ctx, "learn.noDue", "No reviews due"), " ",
         dueCount ? el("a", { class: "btn", href: "#/learn?review=1" }, "Review now") : null),
-      !streakVisible(ctx) ? null : el("p", { class: "alef-streak" }, st.streak.count ? `Streak: ${st.streak.count} day${st.streak.count === 1 ? "" : "s"}.${st.streak.activeToday ? " Today counts." : " Study for 5 minutes today to add a day."}` : (st.streak.best ? `Your best streak was ${st.streak.best} day${st.streak.best === 1 ? "" : "s"}. A new one starts the next time you study for 5 minutes.` : plain("streakNone"))),
+      !streakVisible(ctx) ? null : el("p", { class: "alef-streak" }, st.streak.count ? `Streak: ${daysText(st.streak.count)}.${st.streak.activeToday ? " Today counts." : " Study for 5 minutes today to add a day."}` : (st.streak.best ? `Your best streak was ${daysText(st.streak.best)}. A new one starts the next time you study for 5 minutes.` : plain("streakNone"))),
       track === "read" ? beltStrip(done) : null,
-      el("details", { class: "alef-more-practice" }, el("summary", {}, "More ways to practise"), el("p", { class: "row alef-extras" },
+      el("details", { class: "alef-more-practice" }, el("summary", {}, "More ways to practice"), el("p", { class: "row alef-extras" },
         track === "read" ? el("a", { class: "btn secondary", href: "#/learn?loanwords=1" }, "Words you can already read") : null,
         track === "read" ? el("a", { class: "btn secondary", href: "#/learn?checkpoint=1" }, "Look-alike checkpoint") : null,
         track === "read" ? el("a", { class: "btn secondary", href: "#/learn?ladder=1" }, "Syllable ladder") : null,
@@ -159,11 +160,12 @@ function mountMap(root, ctx) {
       : streak > 1 && !st.streak.activeToday ? `${streak} days in a row! One lesson keeps it going.`
       : "Ready for the next one? You're doing great.";
     // the ring is the learner's own daily goal (chosen at setup, the same number the header shows); the streak still counts a day at 5 minutes
-    let goalSec = 0; try { const g = ctx?.store?.get?.(DAILY_GOAL_KEY); if (g != null) goalSec = normalizeDailyGoal(g) * 60; } catch { /* no store: the streak goal */ }
-    const goal = goalSec || st?.streak?.goal || 300, secs = Math.min(goal, st?.streak?.todaySeconds || 0);
-    const goalPct = Math.round((secs / goal) * 100), mins = Math.floor(secs / 60), goalMin = Math.round(goal / 60);
+    // src/lib/counts.js minutesGoal: minutes today from the streak record against the setup goal, the same numbers as the header ring.
+    let goalRaw = null; try { goalRaw = ctx?.store?.get?.(DAILY_GOAL_KEY) ?? null; } catch { /* no store: the default goal */ }
+    const mg = minutesGoal(st?.rawStreak ?? null, goalRaw, Date.now());
+    const goalPct = mg.pct, mins = mg.min, goalMin = mg.goal;
     const ring = el("div", { class: "alef-goal-ring", style: `--p:${goalPct}`, role: "img", "aria-label": goalPct >= 100 ? "Daily goal reached" : `Today: ${mins} of ${goalMin} minutes` },
-      el("span", {}, goalPct >= 100 ? "✓" : `${mins}/${goalMin}`), el("small", {}, goalPct >= 100 ? "Goal!" : "min today"));
+      el("span", {}, goalPct >= 100 ? "✓" : mg.short), el("small", {}, goalPct >= 100 ? "Goal!" : "min today"));
     return el("div", { class: "alef-continue", role: "group", "aria-label": "Continue learning" },
       pic, ring,
       el("div", { class: "alef-continue-body" },
@@ -180,7 +182,7 @@ function mountMap(root, ctx) {
     return el("p", { class: "alef-belt" }, `${tr(ctx, "learn.belt", "Your rank")}: `,
       highest ? rankBadge(el, highest) : tr(ctx, "learn.belt.none", "none yet"),
       current ? [` · ${tr(ctx, "learn.belt.next", "next")}: `, rankBadge(el, current), ` (${current.lessons.filter((id) => done.has(id)).length} of ${current.lessons.length} ${tr(ctx, "learn.lessonsDone", "lessons done")})`]
-        : ` · ${tr(ctx, "learn.belt.all", "every rank earned; keep practising")}`,
+        : ` · ${tr(ctx, "learn.belt.all", "every rank earned; keep practicing")}`,
       ". ", el("span", { class: "muted" }, tr(ctx, "learn.belt.note", "Krav Maga style belts and patches, Aleph's own ranks. Each rank is a run of lessons in course order; finish them to earn it.")));
   }
   render();

@@ -64,7 +64,7 @@ export function mount(root, ctx) {
       el('ul', { class: 'gr-list' }, TOPIC_IDS.map((id) => {
         const t = topics[id], s = saved.topics?.[id];
         return el('li', {}, el('a', { class: 'btn gr-link', href: `#/grammar/${id}` },
-          el('span', {}, el('strong', {}, t.title), ' - ', t.summary, s?.done ? ` Practised: best ${s.best} of ${s.total || 6}.` : '')));
+          el('span', {}, el('strong', {}, t.title), ' - ', t.summary, s?.done ? ` Practiced: best ${s.best} of ${s.total || 6}.` : '')));
       })),
     );
     say(''); focusNode(h1);

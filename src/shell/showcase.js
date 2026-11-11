@@ -6,6 +6,7 @@ import { uiEnglish, MORNING_TITLE } from './names.js';
 import { h, heSpan, destIcon } from './ui.js';
 import { astralTreeNode } from './astral-tree.js';
 import { builderNode } from '../home/builder.js';
+import { BOOKS, FIRST_WORDS, fmt, dictionaryTitle } from '../lib/counts.js';
 
 export const TILES = [
   ['firstday', '#/firstday', 'Your First 10 Minutes', 'עֲשָׂרָה', 'Build your first word, letter by letter'],
@@ -20,7 +21,7 @@ export const TILES = [
   ['memorypalace', '#/memorypalace', 'Memory Palace', 'מִשְׂחָק', 'Games — a courtyard that remembers words'],
   ['sprint', '#/sprint', 'Word Sprint', 'מִלִּים', 'Fast rounds with real words'],
   ['read', '#/read', 'Read the Prayers', 'תְּפִלָּה', 'The siddur (the Jewish prayer book) line by line, at your pace'],
-  ['vocab', '#/vocab', 'Dictionary (5,000 words)', 'מִלּוֹן', 'The whole vocabulary, searchable'],
+  ['vocab', '#/vocab', dictionaryTitle(), 'מִלּוֹן', 'The whole vocabulary, searchable'],
   ['speak', '#/speak', 'Speak & Listen', 'דַּבֵּר', 'Say it out loud and be understood'],
   ['traditions', '#/traditions', 'Three Traditions', 'מָסוֹרֶת', 'Israeli, Sephardi, Ashkenazi — hear the difference'],
   ['morning', '#/morning', MORNING_TITLE, 'מוֹדֶה אֲנִי', 'Modeh Ani and a verse, every morning'],
@@ -34,7 +35,7 @@ export const TILES = [
 // distinct, carefully chosen crops; no new requests, icon sprites or labels
 // baked into images. The links and all words remain accessible DOM content.
 const PORTALS = [
-  ['wordfinder', '#/wordfinder', 'Start with words', 'Hear, find, understand — 240 gentle first words', 'clay'],
+  ['wordfinder', '#/wordfinder', 'Start with words', `Hear, find, understand — ${FIRST_WORDS} gentle first words`, 'clay'],
   ['books', '#/books', 'Open a little book', 'Read an illustrated story at your own pace', 'wood'],
   ['games', '#/games', 'Enter the games', 'Explore games across Levels 1–9', 'harvest'],
   ['read', '#/read', 'Read the prayers', 'Hebrew first, English beneath; go line by line', 'sky'],
@@ -78,7 +79,7 @@ export function showcaseNode(ctx) {
       heroText),
     portalsNode(has),
     builderNode(ctx),
-    h('p', { class: 'show-stats' }, 'Games across 9 levels · 240 first words · 62 story books · 3 Hebrew traditions'),
+    h('p', { class: 'show-stats' }, `Games across 9 levels · ${fmt(FIRST_WORDS)} first words · ${fmt(BOOKS)} story books · 3 Hebrew traditions`), // src/lib/counts.js
     h('details', { class: 'show-all-destinations' }, // closed: the full list is one tap away, so the page opens small (depth revealed, not dumped)
       h('summary', {}, 'Explore all Aleph destinations'),
       h('ul', { class: 'show-grid' }, ...tiles)));

@@ -6,6 +6,7 @@ import { earn, EARN } from './gems.js';
 import { addLeagueXp, LEAGUE } from './leagues.js';
 import { HEARTS } from './hearts.js';
 import { QUESTS } from './quests.js';
+import { xpToday as countXpToday, xpGoal } from '../lib/counts.js';
 
 /** Daily goal choices shown to the learner. */
 export const GOALS = Object.freeze([
@@ -20,8 +21,9 @@ export const XP = Object.freeze({
   game: 3, gameCapPerDay: 15,
 });
 
-export const todayXp = (rec, now = Date.now()) => rec.xp.days[dayKey(now)] || 0;
-export const goalProgress = (rec, now = Date.now()) => { const x = todayXp(rec, now); return { xp: x, goal: rec.goal, fraction: Math.min(1, x / rec.goal), done: x >= rec.goal }; };
+/** XP today and the goal: read through src/lib/counts.js, the one source Home, the quests and the Daily page share. */
+export const todayXp = (rec, now = Date.now()) => countXpToday(rec, now);
+export const goalProgress = (rec, now = Date.now()) => { const p = xpGoal(rec, now); return { xp: p.xp, goal: p.goal, fraction: p.fraction, done: p.done }; };
 export const comboBonus = (maxRun) => Math.min(XP.comboCap, Math.floor(Math.max(0, maxRun || 0) / XP.comboEvery) * XP.comboBonus);
 export function setGoal(rec, xp) { if (!GOAL_CHOICES.includes(xp)) return rec; const r = clone(rec); r.goal = xp; return r; }
 

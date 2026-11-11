@@ -1,3 +1,4 @@
+import { count } from '../shell/plural.js';
 import { reactRimon } from '../shell/rimon-events.js';
 // Arcade: the shared DOM layer for the arcade games. One contract for all of them:
 //   const A = await createArcade(root, ctx, spec); A.onRound(setupFn); A.begin();
@@ -135,7 +136,7 @@ export async function createArcade(root, ctx, spec) {
   function renderStreak() {
     const a = get(ARCADE_KEY);
     if (!showStreak || !a?.streak) { streakEl.textContent = ''; return; }
-    streakEl.textContent = `Arcade streak: ${a.streak} day${a.streak === 1 ? '' : 's'} in a row · ${a.totalBadges || 0} badges across all games.`;
+    streakEl.textContent = `Arcade streak: ${count(a.streak, 'day')} in a row · ${count(a.totalBadges || 0, 'badge')} across all games.`;
   }
   function toggleDaily() {
     daily = !daily;

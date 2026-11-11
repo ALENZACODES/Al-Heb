@@ -68,7 +68,7 @@ function weekView(ctx, D, now) {
     s.parsha
       ? h("p", {}, heSpan(s.parsha.he), " ", h("strong", {}, s.parsha.en), h("span", { class: "fv-muted" }, ` (${s.schedule === "israel" ? "Israel" : "diaspora"} schedule), Shabbat ${s.hebrewDate}, ${s.daysAway === 0 ? "today" : s.daysAway === 1 ? "tomorrow" : "in " + s.daysAway + " days"}`))
       : h("p", {}, s.noPortion),
-    card.parshaRoutes.length ? h("p", {}, h("a", { class: "btn secondary", href: "#/" + card.parshaRoutes[0] }, "Practise Torah reading")) : null));
+    card.parshaRoutes.length ? h("p", {}, h("a", { class: "btn secondary", href: "#/" + card.parshaRoutes[0] }, "Practice Torah reading")) : null));
   parts.push(h("section", { class: "fv-card", "data-part": "festival", "aria-labelledby": "fv-h-fest" },
     h("h2", { id: "fv-h-fest" }, "Next festival"),
     f ? h("div", {},

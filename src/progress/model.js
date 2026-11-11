@@ -2,7 +2,7 @@
 // Aleph Progress: pure computations over a store snapshot. No DOM, no fetch, no clock (callers pass `now`).
 // Everything here is derived from data other lanes already write; nothing is estimated that was not measured.
 import { BASE_LETTER_IDS, FINAL_LETTER_IDS, MARK_IDS } from '../corpus/normalize.js';
-import { projectStreak } from '../curriculum/streak.js';
+import { streakNow, lessonsFinishedToday } from '../lib/counts.js';
 import { timedReadGate } from '../timedread/gate.js';
 import { cleanState as cleanTimedReads, median, cleanWpm, accuracy as readAccuracy } from '../timedread/model.js';
 import { coverage as siddurCoverageOf, FOLLOW_IDS, ORDER_IDS } from '../service/model.js';
@@ -106,7 +106,7 @@ export function activityDays(s) {
  */
 export function streakInfo(s, now) {
   // v2 records belong to the engaged-time engine: one shared projection, the same one Home uses (src/curriculum/streak.js)
-  if (s.streak && s.streak.v === 2) { const p = projectStreak(s.streak, now, s.rest); return { count: p.count, best: p.best, activeToday: p.activeToday, restToday: p.restToday }; }
+  if (s.streak && s.streak.v === 2) { const p = streakNow(s.streak, now, s.rest); return { count: p.count, best: p.best, activeToday: p.activeToday, restToday: p.restToday }; } // src/lib/counts.js
   const act = activityDays(s), rest = new Set(s.rest);
   const today = dayKey(now);
   const activeToday = act.has(today), restToday = rest.has(today);
@@ -141,7 +141,7 @@ export function goalInfo(s, now, dflt = { kind: 'cards', target: 10 }) {
   const target = s.goal && Number.isInteger(s.goal.target) && s.goal.target > 0 ? s.goal.target : dflt.target;
   const reviewed = new Set();
   for (const [id, c] of [...Object.entries(s.cards), ...Object.entries(s.vocab)]) if (c && c.lastReview && dayKey(c.lastReview) === today) reviewed.add(id);
-  const lessonsToday = Object.values(s.completed).filter((t) => dayKey(Number(t)) === today).length;
+  const lessonsToday = lessonsFinishedToday(s.completed, now); // src/lib/counts.js: the number the lesson quest on Home reads
   const cards = reviewed.size;
   return { kind: 'cards', target, cards, lessonsToday, met: cards >= target || lessonsToday > 0 };
 }
@@ -471,7 +471,7 @@ export function readNowSummary(s, d, c) {
   const k = c.know, r = c.read, v = c.vocab, tr = timedReadSummary(c.timedRead), sc = siddurCoverage(s, d, c), fd = firstDayInfo(s, d);
   const rows = [
     { id: 'letters', label: 'Letters and signs met', value: `${k.letters.size} of ${ALL_LETTERS.length} letters, ${k.signs.size} of ${ALL_SIGNS.length} signs`, detail: 'From completed lessons and finished tracing.', href: '#/learn', have: k.letters.size + k.signs.size, need: ALL_LETTERS.length + ALL_SIGNS.length, measured: 'taught' },
-    { id: 'lines', label: 'Prayer and Torah lines using practised signs', value: `${r.linesFull.length} of ${r.lines.length} lines, ${r.words.full.length.toLocaleString('en-US')} words`, detail: `${r.linesAlmost.length} more ${r.linesAlmost.length === 1 ? 'line is' : 'lines are'} one sign away. Every letter and sign in them has been taught; this is not a fluency check.`, href: '#/read', have: r.linesFull.length, need: r.lines.length, measured: 'taught' },
+    { id: 'lines', label: 'Prayer and Torah lines using practiced signs', value: `${r.linesFull.length} of ${r.lines.length} lines, ${r.words.full.length.toLocaleString('en-US')} words`, detail: `${r.linesAlmost.length} more ${r.linesAlmost.length === 1 ? 'line is' : 'lines are'} one sign away. Every letter and sign in them has been taught; this is not a fluency check.`, href: '#/read', have: r.linesFull.length, need: r.lines.length, measured: 'taught' },
     { id: 'vocab', label: 'Vocabulary cards', value: v.started ? `${v.started} started, ${v.bands.reduce((n, b) => n + b.mature, 0)} mature${v.reached ? `, working in the first ${v.reached.toLocaleString('en-US')}` : ''}` : 'none started', detail: 'Cards you have reviewed at least once; mature means the scheduler expects you to keep them for 21 days or more.', href: '#/vocab', have: v.started, need: null, measured: 'taught' },
     { id: 'timedread', label: 'Timed read-alouds', value: tr.reads ? `${tr.reads} ${tr.reads === 1 ? 'read' : 'reads'} of ${tr.texts} ${tr.texts === 1 ? 'text' : 'texts'}${tr.best ? `, about ${tr.best.medianWpm} clean words a minute on ${tr.best.textId}` : ''}` : 'none yet', detail: 'Self-reported: you time the read and mark the words that tripped you; the app keeps only the clock.', href: '#/timedread', have: tr.reads, need: null, measured: 'self' },
   ];

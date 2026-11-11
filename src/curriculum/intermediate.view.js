@@ -171,7 +171,7 @@ const R = {
   fade(env, ex, finish) {
     const r = env.corpus?.get(ex.line), text = r ? lineText(r, ex) : null;
     return revealable(env, ex, [el("p", {}, "Say this line from memory: ", el("strong", {}, G(env.ctx, ex.en))),
-      el("p", {}, el("a", { class: "btn secondary", href: A.exerciseRoute(ex) }, "Practise with fade-out screen"))],
+      el("p", {}, el("a", { class: "btn secondary", href: A.exerciseRoute(ex) }, "Practice with fade-out screen"))],
       [text ? heRow(env.ctx, env.lesson, env.note, text, { audio: { kind: "line", id: lineAudioId(r, ex) } }) : el("p", { class: "muted" }, `(${ex.line}: text not in the corpus build)`)], finish);
   },
   spot(env, ex, finish) {
@@ -286,7 +286,7 @@ function mountLesson(root, ctx, id) {
           el("div", { class: "alef-item-body" }, el("span", {}, G(ctx, w.en)), el("div", { class: "alef-pron muted", "data-pron": "1" }, pronLine(w, trad))),
           el("div", { class: "alef-item-actions" }, playBtn(ctx, "word", wordAudioId(lesson.id, i + 1), `Listen to ${G(ctx, w.en)}`, note, lesson)))))),
       note,
-      el("div", { class: "row alef-actions" }, el("button", { type: "button", class: "btn", id: "alef-int-start", disabled: exs.length ? null : "", onclick: () => { started = true; offKeys(); begin(); show(); } }, mine.done ? "Practise again" : Object.keys(results).length ? "Continue" : "Start exercises"),
+      el("div", { class: "row alef-actions" }, el("button", { type: "button", class: "btn", id: "alef-int-start", disabled: exs.length ? null : "", onclick: () => { started = true; offKeys(); begin(); show(); } }, mine.done ? "Practice again" : Object.keys(results).length ? "Continue" : "Start exercises"),
         el("a", { class: "btn secondary", href: "#/intermediate" }, "All intermediate lessons")),
     ].filter(Boolean); // replaceChildren turns a raw null into the text "null"
 

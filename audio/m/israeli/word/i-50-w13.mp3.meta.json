@@ -1,0 +1,27 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "israeli",
+ "inputText": "גְּמַר חֲתִימָה טוֹבָה",
+ "inputSha256": "d50f1964df2678df97b7e2b9255d51ea22ea3352c39df6d6b7c54ba1ff8576a9",
+ "ingestedAt": "2026-11-11T23:17:16.263Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-11T23:17:16.263Z",
+ "redistributionCleared": false,
+ "spokenText": "גְּמַר חֲתִימָה טוֹבָה",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [],
+  "google": {
+   "heard": "גמר חתימה טובה",
+   "acc": 1.0,
+   "issues": []
+  },
+  "reviewersFailing": 0
+ }
+}

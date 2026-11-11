@@ -1,0 +1,27 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "israeli",
+ "inputText": "מַשְׁכַּנְתָּה",
+ "inputSha256": "32605e81ed52a266d4cae46a7777736b5d9fe22037eb367f3075b6d859f164f4",
+ "ingestedAt": "2026-11-11T23:27:30.998Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-11T23:27:30.998Z",
+ "redistributionCleared": false,
+ "spokenText": "מַשְׁכַּנְתָּה",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [],
+  "google": {
+   "heard": "משכנתא",
+   "acc": 1.0,
+   "issues": []
+  },
+  "reviewersFailing": 0
+ }
+}

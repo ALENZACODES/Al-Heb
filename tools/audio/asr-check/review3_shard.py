@@ -17,7 +17,7 @@ from fix_shard import spoken
 
 ROOT = S.ROOT
 SR, GAP, WINDOW = 16000, 1.2, 50.0
-URL = 'https://speech.googleapis.com/v1p1beta1/speech:recognize'
+URL = 'https://speech.googleapis.com/v1/speech:recognize'
 
 
 def pcm(path):

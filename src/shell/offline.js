@@ -29,7 +29,7 @@ export const GROUPS = Object.freeze([
   { id: "games", label: "Hebrew games", test: /^src\/games\//, route: "#/learn" },
   { id: "books", label: "Little Books (read-aloud stories)", test: /^(src\/books\/|data\/books\/)/, route: "#/books" },
   { id: "light", label: "Star of David light", test: /^(src\/light\/|assets\/light\/|assets\/css\/light\.css$)/, route: "#/light" },
-  { id: "shell", label: "App shell, settings and install", test: /^(index\.html|offline\.html|manifest\.webmanifest|src\/(app|store)\.js|src\/shell\/|src\/motion\/|src\/img\/|data\/img\/|data\/images\/|data\/legal\/|src\/audio\/|data\/audio\/|src\/onboarding\/|data\/onboarding\/|assets\/)/, route: "#/" },
+  { id: "shell", label: "App shell, settings and install", test: /^(index\.html|offline\.html|manifest\.webmanifest|src\/(app|store)\.js|src\/shell\/|src\/lib\/|data\/fun\/|src\/motion\/|src\/img\/|data\/img\/|data\/images\/|data\/legal\/|src\/audio\/|data\/audio\/|src\/onboarding\/|data\/onboarding\/|assets\/)/, route: "#/" },
 ]);
 export const groupOf = (path) => GROUPS.find((g) => g.test.test(path))?.id || "other";
 
@@ -53,7 +53,7 @@ export function optionalGroups(tradition = "sephardi") {
  * First match wins; anything unmatched lands in "More pages and data".
  */
 export const ON_DEMAND_GROUPS = Object.freeze([
-  { id: "od-practice", label: "Vowel-point, root, gender, known-word and record-and-compare practice data", test: /^data\/(nikkudfade|roots|gender|knownwords)\//, approxMB: 1.2 },
+  { id: "od-practice", label: "Vowel-point, root, gender, known-word and record-and-compare practice data", test: /^(data\/(nikkudfade|roots|gender|knownwords)\/|src\/(recordcompare|roots|nikkudfade|genderdrill|knownwords|fsrs)\/[a-z]+\.view\.js$)/, approxMB: 1.2 },
   { id: "od-vocab", label: "Vocabulary data and theme packs", test: /^data\/vocab\//, approxMB: 5.9 },
   { id: "od-audio-index", label: "Audio clip list (core)", test: /^data\/audio\//, approxMB: 2.6 },
   { id: "od-pronunciation", label: "Sounds and pronunciation data", test: /^data\/pronunciation\//, approxMB: 0.8 },
@@ -80,14 +80,14 @@ export const ON_DEMAND_GROUPS = Object.freeze([
   { id: "od-letters", label: "Letter art concepts and keyboard layout", test: /^data\/letters\//, approxMB: 0.08 },
   { id: "od-home", label: "Home prayers and morning verses", test: /^(data\/homepage\/|data\/morning-verses\.json)/, approxMB: 0.09 },
   { id: "od-ask", label: "Ask the Torah: the checked answers", test: /^(data\/ask\/|src\/ask\/)/, approxMB: 2.8 },
-  { id: "od-firstday", label: "First-day minute-one data and the word builder", test: /^(data\/firstday\/|src\/firstday\/minuteone\.view\.js$|data\/builder_words\.json$)/, approxMB: 0.2 },
+  { id: "od-firstday", label: "First-day minute-one data and the word builder", test: /^(data\/builder_symbols\.json$|data\/firstday\/|src\/firstday\/minuteone\.view\.js$|data\/builder_words\.json$)/, approxMB: 0.2 },
   { id: "od-fonts", label: "Cursive display font (used only with the cursive script setting)", test: /^assets\/fonts\//, approxMB: 0.03 },
   { id: "od-traditions-code", label: "Traditions pages (preview-route code)", test: /^src\/traditions\//, approxMB: 0.04 },
   { id: "od-coursemap", label: "Syllabus and time budget (preview-route code)", test: /^src\/coursemap\//, approxMB: 0.02 },
   { id: "od-vocab-code", label: "Vocabulary browser (preview-route code)", test: /^src\/vocab\//, approxMB: 0.06 },
   { id: "od-talk", label: "Talk page and its stored lines", test: /^(src\/talk\/|data\/talk\/)/, approxMB: 0.12 },
   { id: "od-speak-code", label: "Say it page (preview-route code)", test: /^src\/speak\/speak\.js$/, approxMB: 0.06 },
-  { id: "od-music", label: "Game music player, Songs page and English read-aloud", test: /^src\/(audio\/(synth-music|sting)|shell\/speak-english|listen\/songs\.view)\.js$/, approxMB: 0.04 },
+  { id: "od-music", label: "Game music player, Songs page, English read-aloud and the playing state", test: /^src\/(audio\/(synth-music|sting)|shell\/(speak-english|play-state)|listen\/songs\.view)\.js$/, approxMB: 0.04 },
   { id: "od-day-code", label: "Calendar day pages, add-to-calendar box, morning screen, intermediate lessons, practical units, the Curriculum page and Israel units (route code)", test: /^(src\/curriculum\/(day\.view|calendar\.day|calendar\.addpanel|calendar\.quickadd|intermediate\.view|practical\.view|practical-progress|practical-written|israel-units|israel-units\.view|path\.view|path\.model)\.js|src\/morning\/morning\.view\.js|assets\/css\/curriculum\.css)$/, approxMB: 0.11 },
   { id: "od-learn-practice", label: "Learn practice screens (review, loanwords, drills and dialogues)", test: /^src\/curriculum\/(review|loanwords|spotit|checkpoint|dialogues|ladder|fade|gender|scaffold)\.view\.js$/, approxMB: 0.07 },
   { id: "od-light", label: "Star of David light (page, style and printable stencil)", test: /^(src\/light\/|assets\/light\/|assets\/css\/light\.css$)/, approxMB: 0.02 },

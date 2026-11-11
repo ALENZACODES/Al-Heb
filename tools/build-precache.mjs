@@ -78,6 +78,10 @@ const ON_DEMAND_FILES = new Set([
   'data/audio/manifest.json', 'data/audio/manifest-kind-word.json', 'data/audio/manifest-torah.json', 'data/audio/manifest-torah-he.json', 'src/shell/torah-he-index.js', 'data/curriculum/intermediate-index.json', 'data/curriculum/intermediate-image-slots.json', 'data/curriculum/class-track.json', 'data/curriculum/practical-units.json', 'data/curriculum/lesson-lexicon.json',
   // Word-builder bank (63 KB): fetched when the builder first opens, runtime-cached (keeps first install under 3.95 MiB after Hallel and festival Kiddush landed in the installed registry).
   'data/builder_words.json',
+  // Word-builder symbols (11 KB) and six preview practice pages (recordcompare, roots, nikkudfade, genderdrill, knownwords, scheduler; 40 KB):
+  // fetched on first open and runtime-cached (keeps first install under 3.95 MiB after the 11 November site-check fixes).
+  'data/builder_symbols.json', 'src/recordcompare/recordcompare.view.js', 'src/roots/roots.view.js', 'src/nikkudfade/nikkudfade.view.js',
+  'src/genderdrill/genderdrill.view.js', 'src/knownwords/knownwords.view.js', 'src/fsrs/scheduler.view.js',
   // Non-v0 data (the integration test's must-install list is the v0 offline contract; these are fetched on first use, then runtime-cached).
   'data/audio/english-glosses.json',
   // Book 63's clip record (37 KB): no screen reads it (the reader plays the page files directly), so it stays out of the first install.

@@ -1,0 +1,31 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-respelled-israeli-voice",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "ashkenazi",
+ "inputText": "מָה הַמַּצָּב?",
+ "inputSha256": "3191f24de592d4499e7ec8e6e86bffb9d0bdd044e3e5855e338e29919b324548",
+ "ingestedAt": "2026-11-12T14:42:13.195Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice: the Israeli man voice reading the ashkenazi reading written in pointed Hebrew letters (tools/audio/ashkenazi_script.mjs). Not a human recording; no human has listened to it. Licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel.",
+ "renderedAt": "2026-11-12T14:42:13.195Z",
+ "redistributionCleared": false,
+ "spokenText": "מֹה הַמַּצֹּב?",
+ "normalized": true,
+ "provider": "google",
+ "madeFrom": "hebrew-script",
+ "voiceName": "he-IL-Wavenet-B",
+ "languageCode": "he-IL",
+ "hebrew": "מָה הַמַּצָּב?",
+ "israeliRef": "audio/m/israeli/word/paf26ae56.mp3",
+ "tempo": {
+  "applied": false,
+  "factor": 1,
+  "cap": 1.26,
+  "before": 1.08,
+  "after": 1.08,
+  "israeliSec": 1.24,
+  "israeliRef": "audio/m/israeli/word/paf26ae56.mp3"
+ }
+}

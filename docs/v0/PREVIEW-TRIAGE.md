@@ -325,3 +325,15 @@ Home shows a backup reminder after three finished lessons (`docs/progress/BACKUP
 | `bridge` | keep | Reading Without Vowels (lane 6, 12 Nov): the Fade-out ladder's last three stages per text, books, prayer lines, word recognition and the modern texts shelf. Self-graded; preview until a teacher reviews it. |
 | `trope-families` | keep | Trope Families (lane 6, 12 Nov): signs and names from the app's trope table with real-verse examples; no melody audio exists. Names not reviewed. |
 | `trope-aliyah` | keep | Trope Practice by Aliyah (lane 6, 12 Nov): phrase-by-phrase stepping with the existing verse recording; no chant audio exists. Names not reviewed. |
+| `game-library` | keep | Games Library (lane games-books, 12 Nov): every game on the games page counted once, skill and played/mastered filters, best and last scores, level requirements, the daily challenge. Reached from the `games` hub. |
+| `tournament` | keep | Games Tournament (lane games-books, 12 Nov): five arcade games a week, one combined score, a board of this device's own runs. Reached from the Games Library. |
+| `rootbuilder` | hide | Root Builder (lane games-books); reached from the games hub's More Games section, and search finds it by name. Answers come only from the app's unreviewed root families and verb list. |
+| `sprint60` | hide | Sixty-Second Sprint (lane games-books); reached from the games hub's More Games section, and search finds it by name. |
+| `wordfinder-listen` | hide | Word Finder by ear (lane games-books); reached from Word Finder and the games hub, and search finds it by name. |
+| `listenspot` | hide | Listen and Spot (lane games-books); reached from the games hub's More Games section, and search finds it by name. |
+| `quizladder-duo` | hide | Quiz Ladder for Two (lane games-books); reached from the games hub's More Games section, and search finds it by name. |
+| `dreidel-duo` | hide | Dreidel for two to four players (lane games-books); reached from the games hub's More Games section, and search finds it by name. |
+| `parashah` | keep | This Week's Parashah (lane games-books, 12 Nov): the calendar's portion with its aliyot, self-marked reading progress and a weekly goal. |
+| `torah-search` | keep | Torah Search (lane games-books, 12 Nov): find a Hebrew word, or the words the app's root data lists under a root, in every verse; results open the reader at the verse. |
+| `verse-notebook` | keep | Verse Notebook (lane games-books, 12 Nov): saved verses with the learner's own notes, kept on the device, exportable as a file. |
+| `reading-challenge` | keep | Reading Challenges (lane games-books, 12 Nov): a learner-chosen number of little books in a month or a week, counted from books finished with the story check. |

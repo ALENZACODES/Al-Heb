@@ -8,6 +8,8 @@ import { ARCADE_GAMES, HANUKKAH_GAMES } from './arcade.catalog.js';
 import { TG_GAMES } from './tg-catalog.js';
 import { rimonInline } from '../shell/rimon-inline.js';
 import { gameOfTheDay, dayKey, ARCADE_KEY, LEVELS as ARCADE_STEPS } from './arcade.model.js';
+import { GAMES_ALL } from '../lib/counts.js';
+import { MORE_GAMES } from './more-catalog.js';
 
 /** Hub id -> GAME_ENV key, for the games whose backdrop key differs from the route id. */
 export const HUB_ENV_KEY = Object.freeze({
@@ -102,6 +104,8 @@ export function mount(root, ctx) {
   const article = h('article', { class: 'card wf-games-hub' },
     h('h1', { id: 'view-title', tabindex: '-1' }, 'Hebrew Games ', heSpan('מִשְׂחָקִים')),
     h('p', {}, `${hubSummary(items)} Completely new to Hebrew? Start at Level 1. Every level is open; you can play at your pace.`),
+    // D1: the one total, every section counted once (src/games/library.catalog.js via the counts module)
+    h('p', { class: 'wf-lab-link gb-all-games' }, h('a', { class: 'btn', href: '#/game-library' }, 'Games Library'), ` All ${GAMES_ALL.total} games on this page in one list, each counted once: filter by skill, see what you have played and mastered, today's challenge and a tournament.`),
     h('p', { class: 'wf-lab-link' }, h('a', { class: 'btn', href: '#/lab' }, 'Brain Lab'), ' Three 45-second drills a day that get harder as you improve, with a score for each skill.'),
     arcadeCard(ctx, items.length),
     hanukkahSection(),
@@ -111,8 +115,10 @@ export function mount(root, ctx) {
     g3Section(), // lane g3
     g4Section(),
     g5Section(), // lane 5: holiday, Shabbat and prayer games
+    moreSection(), // lane games-books: builders, sprints, listening and two-player games
     ...sections);
   root.replaceChildren(article);
+  import('./library.view.js').then((m) => m.decorateHub(article, ctx)).catch(() => {}); // D4/D9: best and last score, state and practice link on each card
   // Card thumbnails from each game's own backdrop art, plus Rimon the mascot
   // beside the title. Approved art only; a game with no approved scene keeps
   // its text-only card, exactly as before.
@@ -213,6 +219,15 @@ export function g5Section() {
   import('./g5-catalog.js').then(({ G5_GAMES }) => list.replaceChildren(...G5_GAMES.map((g) => h('li', {}, h('a', { class: 'show-tile wf-level-tile', href: '#/' + g.id },
     h('span', { class: 'wf-game-level' }, 'LEVEL ' + g.level + ' / 5'), h('span', { class: 'show-tile-title' }, g.title, ' ', heSpan(g.titleHe)), h('span', { class: 'show-tile-hook' }, g.tag)))))).catch(() => sec.remove());
   return sec;
+}
+
+/** Lane games-books (12 Nov): the new builder, sprint, listening and two-player games (src/games/more-catalog.js). */
+export function moreSection() {
+  return h('section', { class: 'wf-level-section gb-more-hub', 'aria-labelledby': 'wf-more-h' },
+    h('h2', { id: 'wf-more-h' }, 'More Games: Builders, Sprints, Listening and Two Players'),
+    h('p', { class: 'muted' }, 'Build words from a root, race the clock with your lesson words, play by ear, or pass one device between two players.'),
+    h('ul', { class: 'show-grid wf-game-grid' }, ...MORE_GAMES.map((g) => h('li', {}, h('a', { class: 'show-tile wf-level-tile', href: '#/' + g.id },
+      h('span', { class: 'wf-game-level' }, 'LEVEL ' + g.level + ' / 5'), h('span', { class: 'show-tile-title' }, g.title, ' ', heSpan(g.titleHe)), h('span', { class: 'show-tile-hook' }, g.tag))))));
 }
 
 const NUM_WORDS = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'];

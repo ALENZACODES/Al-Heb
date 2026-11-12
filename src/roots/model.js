@@ -18,26 +18,37 @@ export const BINYAN = Object.freeze({
 export const binyanName = (b) => (BINYAN[b] ? BINYAN[b].name : b ? String(b) : 'not listed');
 export const COMMON_BINYANIM = ["pa'al", "nif'al", "pi'el", "hif'il", "hitpa'el"];
 
-const PAST_NOTE = 'The vocabulary data has no past tense. It is not shown rather than guessed.';
-export const FORM_LABELS = { infinitive: 'Infinitive', present: 'Present (the form listed in the data)', future: 'Future (the form listed in the data)' };
+// lane 3 (12 Nov, #5 sweep): the dictionary form IS the past "he did" form (as the verb games say), so the note no longer says the data has no past tense.
+const PAST_NOTE = 'The dictionary form is the past "he did" form. The data has no other past forms, so none is shown rather than guessed.';
+/** Row order of the verb table: the forms the word list holds for a verb, and nothing else. */
+export const FORM_KEYS = Object.freeze(['dictionary', 'infinitive', 'present', 'future']);
+export const FORM_LABELS = { dictionary: 'Dictionary form (he did)', infinitive: 'Infinitive (to …)', present: 'Present (the form listed in the data)', future: 'Future (the form listed in the data)' };
 
 const stripRoot = (r) => String(r || '').replace(/[־־\s]/g, '').replace(/[֑-ׇ]/g, '');
 
 /** Verb table: rows for the forms the data has, plus honest notes about what is missing. verb = row from verbs.json. */
 export function verbTable(verb) {
-  const forms = (verb && verb.forms) || {};
-  const rows = ['infinitive', 'present', 'future'].filter((k) => typeof forms[k] === 'string' && forms[k]).map((k) => ({ key: k, label: FORM_LABELS[k], he: forms[k] }));
-  const missing = ['infinitive', 'present', 'future'].filter((k) => !forms[k]);
+  const forms = { ...((verb && verb.forms) || {}), dictionary: verb?.he || null };
+  const rows = FORM_KEYS.filter((k) => typeof forms[k] === 'string' && forms[k]).map((k) => ({ key: k, label: FORM_LABELS[k], he: forms[k] }));
+  const missing = FORM_KEYS.filter((k) => !forms[k]);
   return { id: verb?.id, he: verb?.he, translit: verb?.translit, en: verb?.en, binyan: verb?.binyan || null, root: verb?.root || null, rows, missing,
-    notes: [PAST_NOTE, 'Only one form per tense is in the data: other persons, genders and plurals are not listed.'], needsReview: !!verb?.needsReview };
+    notes: [PAST_NOTE, 'Only one form per tense is in the data: other persons, genders and plurals are not listed, and the app does not make them up.'], needsReview: !!verb?.needsReview };
 }
 
-/** Group a family's rows by part of speech, verbs first. */
+/** Binyan order on the family page: the seven taught patterns, then any other label the data has, then verbs with none. */
+export const BINYAN_ORDER = Object.freeze(["pa'al", "nif'al", "pi'el", "pu'al", "hif'il", "huf'al", "hitpa'el", "hitpu'al"]);
+const binyanRank = (b) => { const i = BINYAN_ORDER.indexOf(b); return i >= 0 ? i : b ? 50 : 99; };
+/** Group a family's rows by part of speech, verbs first; the verbs are grouped again by binyan (byBinyan), in the taught order. */
 export function groupFamily(fam) {
   const order = ['verb', 'noun', 'adj', 'adv', 'prep', 'num'];
   const g = new Map();
   for (const w of fam.words) { if (!g.has(w.pos)) g.set(w.pos, []); g.get(w.pos).push(w); }
-  return [...g].sort((a, b) => (order.indexOf(a[0]) + 99 * (order.indexOf(a[0]) < 0)) - (order.indexOf(b[0]) + 99 * (order.indexOf(b[0]) < 0))).map(([pos, words]) => ({ pos, words }));
+  return [...g].sort((a, b) => (order.indexOf(a[0]) + 99 * (order.indexOf(a[0]) < 0)) - (order.indexOf(b[0]) + 99 * (order.indexOf(b[0]) < 0))).map(([pos, words]) => {
+    if (pos !== 'verb') return { pos, words };
+    const by = new Map();
+    for (const w of words) { const k = w.binyan || null; if (!by.has(k)) by.set(k, []); by.get(k).push(w); }
+    return { pos, words, byBinyan: [...by].sort((a, b) => binyanRank(a[0]) - binyanRank(b[0])).map(([binyan, ws]) => ({ binyan, words: ws })) };
+  });
 }
 
 /** Find families by root letters (with or without maqaf) or by an English/transliteration substring in any member. Empty query = first `limit`. */
@@ -54,30 +65,34 @@ export function searchFamilies(families, q, limit = 30) {
  * The build (tools/roots/build.mjs) keeps a verb only when it has a binyan, at least one form, and
  * either modernRank <= 5000 or a place in a root family of two or more words (any part of speech).
  */
-export const EXPLORER_VERB_RULE = 'A verb is listed in the explorer only when it has a pattern (binyan), at least one listed form, and either a frequency rank of 5000 or better or a place in a root family of two or more words (any part of speech). Verbs that fail that rule stay in the word-list totals and are not browsable in the explorer.';
+export const EXPLORER_VERB_RULE = 'A verb can be opened on this page only when it has a pattern (binyan), at least one listed form, and either a frequency rank of 5000 or better or a place in a group of two or more words that share family letters (any part of speech). Verbs that fail that rule still count in the word-list total.';
 
+const n0 = (x) => (Number(x) || 0).toLocaleString('en-US');
 /**
- * On-screen coverage. The word-list totals stay labelled as the word list. When the browsable verb
- * rows are passed (the verbs.json list the explorer actually opens), their count is stated separately.
- * @param {any} c families.json coverage
- * @param {any[]|{verbs?: any[]}|null} [browsable] verb rows the page can open
+ * On-screen coverage, with ONE denominator (lane 3, 12 Nov, points plan #5: the page showed 1,820, 1,655 and 1,817 as if each were
+ * "the verbs"). The word-list verb total is the only total; every other verb figure is stated as a part of it. Groups of words are
+ * a different unit and are named as groups. The page says "family letters", never "root", while no root is confirmed.
+ * @param {any} c families.json coverage, or counts.js rootsCoverage() (which also carries the explorer totals)
+ * @param {any[]|{verbs?: any[]}|null} [browsable] verb rows the page can open (only when c has no explorer totals)
  */
 export function coverageText(c, browsable) {
   const pct = (a, b) => (b ? Math.round((100 * a) / b) : 0);
   const list = Array.isArray(browsable) ? browsable : (browsable && Array.isArray(browsable.verbs) ? browsable.verbs : null);
-  const wordList = `Roots are listed for ${c.verbsWithRoot} of ${c.verbs} verbs in the word list (${pct(c.verbsWithRoot, c.verbs)}%).`;
-  let explorer = '';
-  // counts.js rootsCoverage() carries the explorer totals itself (explorer, explorerWithRoot); a list passed in is counted here
   const fromCounts = !list && Number.isFinite(c.explorer);
+  const total = c.verbs;
+  const parts = [`${n0(c.verbsWithBinyan)} have a verb pattern (binyan) listed`, `${n0(c.verbsWithRoot)} (${pct(c.verbsWithRoot, total)}%) have family letters listed`];
+  let rest = '';
   if (list || fromCounts) {
     const shown = fromCounts ? c.explorer : list.length;
     const withRoot = fromCounts ? (c.explorerWithRoot || 0) : list.filter((v) => v && v.root).length;
-    const leftOut = Number.isFinite(c.verbs) ? c.verbs - shown : null;
-    explorer = leftOut > 0
-      ? ` This explorer shows ${withRoot} of ${shown} verbs you can open here with a root listed (${leftOut} word-list verbs are not in this explorer, of the ${c.verbs} in the word list).`
-      : ` This explorer shows the same ${shown} verbs (${withRoot} with a root listed).`;
+    parts.push(`${n0(shown)} can be opened on this page (${n0(withRoot)} of those with family letters)`);
+    const leftOut = total - shown;
+    if (leftOut > 0) rest = ` The other ${n0(leftOut)} of the ${n0(total)} are not on this page. ${EXPLORER_VERB_RULE}`;
   }
-  return `${wordList}${explorer} ${EXPLORER_VERB_RULE} A verb pattern is listed for ${c.verbsWithBinyan} of the same ${c.verbs} verbs in the word list. ${c.familiesOf2Plus} groups of two or more words share root letters, and ${c.familiesOf3Plus} groups have three or more. ${c.familiesRuleChecked} groups pass a stricter check made by rules. A Hebrew reader has confirmed ${c.familiesVerified} groups. Verbs without a root are not grouped.`;
+  const confirmed = c.familiesVerified
+    ? `A Hebrew reader has confirmed ${n0(c.familiesVerified)} groups as one root.`
+    : 'A Hebrew reader has confirmed 0 groups, so this page says the words share letters and does not call any group one root.';
+  return `The word list has ${n0(total)} verbs. Every verb figure here is out of those ${n0(total)}: ${parts.slice(0, -1).join(', ')} and ${parts[parts.length - 1]}.${rest} Word groups: ${n0(c.familiesOf2Plus)} groups of two or more words share family letters, ${n0(c.familiesOf3Plus)} of them have three or more, and ${n0(c.familiesRuleChecked)} pass a stricter check made by rules. ${confirmed} Words without family letters are not grouped.`;
 }
 
 /** Prompt wording: a claim of "root" only for a verified family; otherwise a statement about the word list. */
@@ -86,7 +101,7 @@ export function relation(f, kind, a, b) {
   return f.verified ? `Same root as ${a.translit} (${a.en}), but in ${binyanName(b.binyan)}: which verb?` : `Listed under the same letters (${f.root}) as ${a.translit} (${a.en}), in ${binyanName(b.binyan)}: which verb?`;
 }
 /** Badge text for a family on screen. */
-export const familyBadge = (f) => (f.verified ? 'Confirmed by a Hebrew reader as one root.' : f.ruleChecked ? 'Passes the word-list rule check. Not yet confirmed by a Hebrew reader.' : 'Loose: only the dictionary data links these words. They share letters, and may not share a root.');
+export const familyBadge = (f) => (f.verified ? 'Confirmed by a Hebrew reader as one root.' : f.ruleChecked ? 'Passes the word-list rule check. They share letters; a Hebrew reader has not yet confirmed them as one root.' : 'Loose: only the dictionary data links these words. They share letters, and may not share a root.');
 
 /**
  * Drill questions, all graded against the data (objective, unlike speech): 

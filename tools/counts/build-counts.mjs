@@ -61,7 +61,10 @@ export async function computeTotals(root = ROOT) {
     lessons: { core, reading: track('read'), israel: track('israel'), all: lessons.length },
     roots: { verbs: fam.verbs || 0, withRoot: fam.verbsWithRoot || 0, withPattern: fam.verbsWithBinyan || 0, explorer: list(verbs, 'verbs').length,
       explorerWithRoot: list(verbs, 'verbs').filter((v) => v && v.root).length, familiesOf2Plus: fam.familiesOf2Plus || 0, familiesOf3Plus: fam.familiesOf3Plus || 0,
-      familiesRuleChecked: fam.familiesRuleChecked || 0, familiesVerified: fam.familiesVerified || 0 },
+      familiesRuleChecked: fam.familiesRuleChecked || 0, familiesVerified: fam.familiesVerified || 0,
+      // lane 3 (12 Nov, points plan #5 and #15): verbs per pattern (word list, and the explorer's share of them) and the Dictionary's links
+      byBinyan: Object.fromEntries(Object.keys(fam.binyanCount || {}).sort().map((b) => [b, { verbs: fam.binyanCount[b], explorer: list(verbs, 'verbs').filter((v) => v && v.binyan === b).length }])),
+      dictLinks: fs.existsSync(path.join(root, 'data/roots/dict-links.json')) ? rd(root, 'data/roots/dict-links.json').counts : null },
     audio,
   };
 }

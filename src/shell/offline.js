@@ -53,7 +53,7 @@ export function optionalGroups(tradition = "sephardi") {
  * First match wins; anything unmatched lands in "More pages and data".
  */
 export const ON_DEMAND_GROUPS = Object.freeze([
-  { id: "od-practice", label: "Vowel-point, root, gender, known-word and record-and-compare practice data", test: /^(data\/(nikkudfade|roots|gender|knownwords)\/|src\/(recordcompare|roots|nikkudfade|genderdrill|knownwords|fsrs)\/[a-z]+\.view\.js$|src\/roots\/model\.js$)/, approxMB: 1.2 },
+  { id: "od-practice", label: "Vowel-point, root, gender, known-word and record-and-compare practice data", test: /^(data\/(nikkudfade|roots|gender|knownwords)\/|src\/(recordcompare|roots|nikkudfade|genderdrill|knownwords|fsrs)\/[a-z]+\.view\.js$|src\/roots\/(model|binyanim|links)\.js$)/, approxMB: 1.3 }, // lane 3 (12 Nov): + binyanim.js, links.js, dict-links.json
   { id: "od-vocab", label: "Vocabulary data and theme packs", test: /^data\/vocab\//, approxMB: 5.9 },
   { id: "od-audio-index", label: "Audio clip list (core)", test: /^data\/audio\//, approxMB: 2.6 },
   { id: "od-pronunciation", label: "Sounds and pronunciation data", test: /^data\/pronunciation\//, approxMB: 0.8 },

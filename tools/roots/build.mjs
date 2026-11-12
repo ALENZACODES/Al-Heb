@@ -49,9 +49,50 @@ export function build(words) {
   const note = 'Copied from data/vocab/words.json (roots and binyan labels come from its dictionary source, not checked by a Hebrew teacher; some links are loose). Unreviewed. ' + EXPLORER_VERB_RULE;
   return { skipped, families: { schema: 1, source: 'data/vocab/words.json', note, coverage, families }, verbs: { schema: 1, source: 'data/vocab/words.json', note, formKeys: ['present', 'future', 'infinitive'], count: verbs.length, verbs } };
 }
+/** The Dictionary's word packs (the same four tier files the Dictionary page loads), hidden records left out as the page does. */
+export const DICT_TIERS = Object.freeze([500, 1000, 2000, 5000]);
+const isHiddenRec = (r) => { const f = r && r.flags; return Array.isArray(f) ? f.includes('hidden') : !!(f && typeof f === 'object' && f.hidden === true); };
+export function readDictionary() {
+  return DICT_TIERS.flatMap((t) => JSON.parse(readFileSync(root + `data/vocab/packs/vocab5k-tier-${t}.json`, 'utf8')).entries).filter((e) => !isHiddenRec(e));
+}
+export const DICT_LINK_RULE = 'A Dictionary entry is linked to a word-list row only when its pointed spelling and part of speech are exactly the same as one word-list row (or as several rows that all list the same letters). Unpointed look-alikes are never linked: they are often different words.';
+/**
+ * data/roots/dict-links.json (lane 3, 12 Nov, points plan #15): for each Dictionary entry that matches a word-list row exactly,
+ * the family letters that row lists, the size of that letter family (0 when no other row shares them), and the explorer verb id
+ * when the verb's forms can be opened on the Roots page. Nothing is guessed: a letter set is copied from the word list.
+ * rows: [dictionaryId, letters|null, familySize, verbId|null]
+ */
+export function dictLinks(words, dict, built = build(words)) {
+  const ok = words.filter((w) => w.kind === 'word' && !(w.flags && w.flags.hidden));
+  const famSize = new Map(built.families.families.map((f) => [f.root, f.size]));
+  const verbIds = new Set(built.verbs.verbs.map((v) => v.id));
+  const byKey = new Map();
+  for (const w of ok) { const k = w.he + '\u0000' + w.pos; if (!byKey.has(k)) byKey.set(k, []); byKey.get(k).push(w); }
+  const rows = [];
+  let ambiguous = 0;
+  for (const e of dict) {
+    if (!e.pointed) continue;
+    const m = byKey.get(e.pointed + '\u0000' + e.pos);
+    if (!m) continue;
+    const roots = new Set(m.map((w) => w.root || null));
+    const verbs = m.filter((w) => verbIds.has(w.id));
+    const letters = roots.size === 1 ? [...roots][0] : null;
+    if (roots.size > 1) ambiguous++;
+    const verb = verbs.length === 1 ? verbs[0].id : null;
+    if (!letters && !verb) continue;
+    rows.push([e.id, letters, letters ? famSize.get(letters) || 0 : 0, verb]);
+  }
+  rows.sort((a, b) => (a[0] < b[0] ? -1 : a[0] > b[0] ? 1 : 0));
+  const withLetters = rows.filter((r) => r[1]);
+  return { schema: 1, source: ['data/vocab/words.json', 'data/vocab/packs/vocab5k-tier-*.json'], rule: DICT_LINK_RULE,
+    note: 'Family letters are copied from the word list (its dictionary source). No root here is confirmed by a Hebrew reader (data/roots/verified.json), so the app says the words share letters, not a root.',
+    counts: { dictionary: dict.length, withLetters: withLetters.length, inFamily: withLetters.filter((r) => r[2] >= 2).length, alone: withLetters.filter((r) => r[2] < 2).length, verbs: rows.filter((r) => r[3]).length, ambiguous },
+    rows };
+}
 if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) {
-  const b = build(JSON.parse(readFileSync(root + 'data/vocab/words.json', 'utf8')).words);
-  const files = { 'data/roots/families.json': b.families, 'data/roots/verbs.json': b.verbs };
+  const words = JSON.parse(readFileSync(root + 'data/vocab/words.json', 'utf8')).words;
+  const b = build(words);
+  const files = { 'data/roots/families.json': b.families, 'data/roots/verbs.json': b.verbs, 'data/roots/dict-links.json': dictLinks(words, readDictionary(), b) };
   for (const k of b.skipped) console.log('skipped (conflicting marks):', k.id, k.field, k.value, k.used ? '-> ' + k.used : '(left out)');
   let stale = false;
   for (const [p, v] of Object.entries(files)) {

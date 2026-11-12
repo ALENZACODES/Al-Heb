@@ -1,0 +1,31 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-respelled-israeli-voice",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "ashkenazi",
+ "inputText": "רֵיק",
+ "inputSha256": "f159f8ca4186e0d3ba51b99562c2cae7a7a960b9ffa205847a694d6e44aa3dd3",
+ "ingestedAt": "2026-11-12T07:50:38.915Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice: the Israeli woman voice reading the ashkenazi English-letter respelling, not pointed Hebrew. Not a human recording; no human has listened to it. Licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel.",
+ "renderedAt": "2026-11-12T07:50:38.915Z",
+ "redistributionCleared": false,
+ "spokenText": "reik",
+ "normalized": true,
+ "provider": "google",
+ "madeFrom": "respelling",
+ "voiceName": "he-IL-Wavenet-A",
+ "languageCode": "he-IL",
+ "hebrew": "רֵיק",
+ "israeliRef": "audio/f/israeli/word/hd9ea111b.mp3",
+ "tempo": {
+  "applied": false,
+  "factor": 1,
+  "cap": 1.26,
+  "before": 0.96,
+  "after": 0.96,
+  "israeliSec": 1,
+  "israeliRef": "audio/f/israeli/word/hd9ea111b.mp3"
+ }
+}

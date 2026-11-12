@@ -139,7 +139,7 @@ export function mount(root, ctx) {
 
 /** The game's card picture on a hub tile (every game in tools/images/lane-envs.json has one); other tiles are returned as they are. */
 export function withThumb(id, a) {
-  if (ENV_WEBP.has(id) || CARD_ONLY.has(id)) a.prepend(arcadeThumb(id, a));
+  try { if (ENV_WEBP.has(id) || CARD_ONLY.has(id)) a.prepend(arcadeThumb(id, a)); } catch { /* the picture is optional; the tile still works */ }
   return a;
 }
 

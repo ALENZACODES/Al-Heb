@@ -1,0 +1,33 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Chirp3-HD-Kore",
+ "tradition": "israeli",
+ "inputText": "מִי־כָמֹכָה בָּאֵלִם אֲדֹנָי מִי כָּמֹכָה נֶאְדָּר בַּקֹּדֶשׁ נוֹרָא תְהִלֹּת עֹשֵׂה פֶלֶא׃",
+ "inputSha256": "bb7be538901732a0c1a4ebe4c2c3d405b37e271c6f1cd90d8947eb72edcc0cb5",
+ "ingestedAt": "2026-11-12T02:16:01.182Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-12T02:16:01.182Z",
+ "redistributionCleared": false,
+ "spokenText": "מִי, כָמֹכָה, בָּאֵלִם, אֲדֹנָי, מִי, כָּמֹכָה, נֶאְדָּר, בַּקֹּדֶשׁ, נוֹרָא, תְהִלֹּת, עֹשֵׂה, פֶלֶא.",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "speakingRate": 0.9,
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [],
+  "google": {
+   "heard": "מי כמוכה באלים אדוני מי כמוך נאדר בקודש נורא תהילות עושה פלא",
+   "acc": 1.0,
+   "issues": []
+  },
+  "reviewersFailing": 0
+ },
+ "replaced": {
+  "voiceId": "he-IL-Wavenet-A",
+  "engine": "stitched-from-word-clips",
+  "renderedAt": null
+ }
+}

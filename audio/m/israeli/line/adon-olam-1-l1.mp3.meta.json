@@ -1,0 +1,33 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Chirp3-HD-Orus",
+ "tradition": "israeli",
+ "inputText": "אֲדוֹן עוֹלָם אֲשֶׁר מָלַךְ בְּטֶרֶם כָּל יְצִיר נִבְרָא׃",
+ "inputSha256": "b2f91c1ce014b892103d76cffbc3e037129bb576f4e8ef1db1d5cb3128954c8a",
+ "ingestedAt": "2026-11-12T02:18:32.553Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-12T02:18:32.553Z",
+ "redistributionCleared": false,
+ "spokenText": "אֲדוֹן עוֹלָם אֲשֶׁר מָלַךְ בְּטֶרֶם כָּל יְצִיר נִבְרָא",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "speakingRate": 0.9,
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [],
+  "google": {
+   "heard": "אדון עולם אשר מלך בטרם כל יציר נברא",
+   "acc": 1.0,
+   "issues": []
+  },
+  "reviewersFailing": 0
+ },
+ "replaced": {
+  "voiceId": "he-IL-Wavenet-B",
+  "engine": "stitched-from-word-clips",
+  "renderedAt": null
+ }
+}

@@ -1,0 +1,32 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Chirp3-HD-Leda",
+ "tradition": "israeli",
+ "inputText": "וּקְשַׁרְתָּם לְאוֹת עַל־יָדֶךָ וְהָיוּ לְטֹטָפֹת בֵּין עֵינֶיךָ׃",
+ "inputSha256": "c7d09aa9319771aba4bdaf3cfb477ce4be99b828bdc1578d93b9babd812a2648",
+ "ingestedAt": "2026-11-12T02:17:17.553Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-12T02:17:17.553Z",
+ "redistributionCleared": false,
+ "spokenText": "וּקְשַׁרְתָּם לְאוֹת עַל יָדֶךָ וְהָיוּ לְטֹטָפֹת בֵּין עֵינֶיךָ",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [],
+  "google": {
+   "heard": "וקשרתם לאות על ידך והיו לטוטפות בין עיניך",
+   "acc": 1.0,
+   "issues": []
+  },
+  "reviewersFailing": 0
+ },
+ "replaced": {
+  "voiceId": "he-IL-Wavenet-A",
+  "engine": "google-cloud-tts",
+  "renderedAt": null
+ }
+}

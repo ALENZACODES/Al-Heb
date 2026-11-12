@@ -1,0 +1,33 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Chirp3-HD-Aoede",
+ "tradition": "israeli",
+ "inputText": "פּוֹתֵחַ אֶת־יָדֶךָ וּמַשְׂבִּיעַ לְכָל־חַי רָצוֹן׃",
+ "inputSha256": "f6ea3314f851b8ada0fd98d40cadad453cec9bd0bee17fa3e89f588afed644bd",
+ "ingestedAt": "2026-11-12T02:12:01.273Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-12T02:12:01.273Z",
+ "redistributionCleared": false,
+ "spokenText": "פּוֹתֵחַ אֶת יָדֶךָ וּמַשְׂבִּיעַ לְכָל חַי רָצוֹן",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "speakingRate": 0.9,
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [],
+  "google": {
+   "heard": "פותח את ידיך ומשביע לכל חי רצון",
+   "acc": 1.0,
+   "issues": []
+  },
+  "reviewersFailing": 0
+ },
+ "replaced": {
+  "voiceId": "he-IL-Wavenet-A",
+  "engine": "stitched-from-word-clips",
+  "renderedAt": null
+ }
+}

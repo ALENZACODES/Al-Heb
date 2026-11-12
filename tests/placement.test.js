@@ -8,8 +8,9 @@ const items = M.buildItems(data, config);
 const lessonIds = new Set(data.lessons.map((l) => l.id));
 
 test("config is marked draft and unreviewed", () => { assert.match(config.status, /draft/); assert.match(config.note, /untested guess/); });
-test("20 items, correct mix per category", () => {
-  assert.equal(items.length, 20);
+test("23 items (lane 6 added 3 unpointed words), correct mix per category", () => {
+  assert.equal(items.length, Object.values(config.counts).reduce((a, b) => a + b, 0));
+  assert.equal(items.length, 23);
   for (const c of M.CATEGORIES) assert.equal(items.filter((i) => i.cat === c).length, config.counts[c], c);
 });
 test("every item has one correct option among distinct options, and a real curriculum lesson", () => {
@@ -23,7 +24,7 @@ test("every item has one correct option among distinct options, and a real curri
 });
 test("Hebrew in items comes verbatim from repo data", () => {
   const pool = new Set([...data.letters.map((x) => x.he), ...data.niqqud.map((r) => r.shape), ...data.words.map((w) => w.he), ...data.registry.map((e) => e.he)]);
-  for (const i of items) assert.ok(pool.has(i.he), i.id);
+  for (const i of items) assert.ok(pool.has(i.he) || (i.cat === "unpointed" && pool.has(i.pointed) && M.unpoint(i.pointed) === i.he), i.id);
 });
 test("stop rule: stops on misses in window, not before minAsked, and at the end", () => {
   const a = (c) => ({ id: "x", correct: c });
@@ -97,7 +98,8 @@ test("view: mounts, flags draft, runs to a result, saves placement.v1, unmounts"
   assert.match(go.attrs.href, /^#\/learn\?lesson=/);
   assert.ok(lessonIds.has(go.attrs.href.split("=")[1]));
   assert.equal(m["placement.v1"].draft, true);
-  assert.equal(m["placement.v1"].answers.length, 20);
+  assert.equal(m["placement.v1"].answers.length, items.length);
+  assert.equal(m["placement.v1"].result.applied, true, "lane 6: the result is applied (sticks)");
   un();
 });
 

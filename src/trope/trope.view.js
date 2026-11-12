@@ -38,7 +38,8 @@ export function mount(root, ctx) {
   const body = el('div', { class: 'tr-body' });
   const status = el('div', { class: 'tr-status', role: 'status', 'aria-live': 'polite' });
   const footer = el('footer', {}, el('p', { class: 'draft-flag', role: 'note' }, DRAFT_NOTICE), el('p', { role: 'note' }, MELODY_NOTE),
-    el('p', {}, 'Hebrew text with cantillation: Unicode/XML Leningrad Codex (UXLC), Tanach.us Inc., copy without restriction.'));
+    el('p', {}, 'Hebrew text with cantillation: Unicode/XML Leningrad Codex (UXLC), Tanach.us Inc., copy without restriction.'),
+    el('p', {}, el('a', { href: '#/trope/families' }, 'Trope Families'), ' · ', el('a', { href: '#/trope/aliyah' }, 'Trope Practice by Aliyah'))); // lane 6 (#13)
   wrap.append(h1, body, status, footer);
   root.append(wrap);
 

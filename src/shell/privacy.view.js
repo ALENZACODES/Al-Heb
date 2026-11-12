@@ -226,6 +226,9 @@ export const STORE_KEYS = [
   ['onboarding.v1.dailyGoal', 'Daily goal', 'src/home/today.js'],
   ['backup.reminder.v1', 'When you last downloaded a backup file, and "Not now" on the backup reminder', 'src/shell/backup-reminder.js'],
   ['placement.v1', 'Placement check result', 'src/placement/placement.view.js'],
+  // lane 6 (12 Nov round 2)
+  ['bridge.v1', 'Reading without vowels: your stage for each book and prayer line, and your word and modern-text reads', 'src/bridge/model.js'],
+  ['trope.practice.v1', 'Trope practice by aliyah: the portion, aliyah and phrase you were on', 'src/trope/families.js'],
   ['curriculum.progress', 'Completed lessons', 'src/curriculum/dom.js'],
   ['lesson.checks.v1', 'Quick-check scores (right on the first try, out of how many, when), for your own certificate', 'src/curriculum/passmark.js'], // lane 4
   ['srs.cards', 'Review cards for lessons', 'src/curriculum/dom.js'],

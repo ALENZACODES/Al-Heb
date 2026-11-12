@@ -29,6 +29,7 @@ export function mountFade(root, ctx, which = "1", q = {}) {
       const phrases = [...sources.values()].filter((s) => s.origin === "phrasebook").slice(0, 12);
       const row = (s) => { const card = st.cards[lineCardId(s.id)]; return el("li", { "data-line": s.id }, el("a", { href: `#/learn?fade=${s.id}` }, s.title || s.id), " ", heText(s.he), el("span", { class: "muted" }, card ? ` (fade level ${card.fadeLevel ?? 0} of ${MAX_FADE})` : " (new)")); };
       replaceKeepingFocus(wrap, h1, ...head, missing, el("p", {}, "Choose a line. Your level for each line moves one step when you recall it correctly at that level, and one step back when you miss."),
+        el("p", {}, "After stage 3 the ladder goes on without vowel marks: ", el("a", { href: "#/bridge" }, "Reading Without Vowels"), "."), // lane 6 (#16)
         el("h2", {}, "Prayer lines"), el("ul", { class: "alef-linelist" }, ...prayer.map(row)),
         el("h2", {}, "Israeli Phrases"), el("ul", { class: "alef-linelist" }, ...phrases.map(row)));
       return;
@@ -62,7 +63,8 @@ export function mountFade(root, ctx, which = "1", q = {}) {
         : (moved ? `Not this time. The line goes back one stage (level ${r.level}) and returns in your review queue.` : "Not this time. Your saved level stays; the line returns in your review queue.");
       state.result = el("div", { class: "alef-fade-result", role: "status", "aria-live": "polite" }, el("p", {}, msg), heText(restore(state.f), "alef-he alef-word-big"),
         src.english ? el("p", { class: "muted" }, src.english) : null, playButton(ctx, src.audioKind, which, "Listen to the line", el("span", {})),
-        el("div", { class: "row" }, el("a", { class: "btn", href: `#/learn?fade=${which}` }, "Again"), el("a", { class: "btn secondary", href: "#/learn?fade=1" }, "Other lines"), el("a", { class: "btn secondary", href: "#/learn?review=1" }, "Review now")));
+        el("div", { class: "row" }, el("a", { class: "btn", href: `#/learn?fade=${which}` }, "Again"), el("a", { class: "btn secondary", href: "#/learn?fade=1" }, "Other lines"), el("a", { class: "btn secondary", href: "#/learn?review=1" }, "Review now"),
+          src.origin === "corpus" ? el("a", { class: "btn secondary", href: `#/bridge/line/${encodeURIComponent(which)}` }, "Read it without vowels") : null)); // lane 6 (#16): the ladder's next stages
       draw();
     }
 

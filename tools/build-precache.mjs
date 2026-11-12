@@ -46,6 +46,7 @@ const ON_DEMAND_PREFIXES = ['data/vocab/', 'data/roots/', 'data/knownwords/', 'd
   'assets/game-art/', 'assets/letter-cartoons/', 'assets/books/', 'assets/speak-hold/', 'assets/speak-candidates/',
   // Lazy preview-route code + book content + image indexes: fetched on first view, runtime-cached (fix #4; #8 groups).
   'src/games/', 'src/books/', 'data/books/', 'data/images/',
+  'src/bridge/', // lane 6: Reading Without Vowels (#/bridge), view, model and loader, fetched on first open
   // Camera Translator (preview route /camera): view code, word list and config are fetched when the screen first opens, runtime-cached.
   'src/camera/', 'data/camera/',
   // Game data (word bank, prefix deck, arcade lists, the laws) and arcade art (backdrops, cast and letter sprites): fetched when a game first opens, runtime-cached.
@@ -166,6 +167,10 @@ const ON_DEMAND_FILES = new Set([
   'src/firstday/minuteone.view.js', 'src/israel/israel.view.js', 'src/phrases/phrases.view.js',
   // Scan a photo, Sounds and Word Sprint (preview routes): view code only, fetched on first open (keeps first install under 3.95 MiB with the launch branch).
   'src/photo/scan.view.js', 'src/pronunciation/sounds.view.js', 'src/sprint/sprint.view.js',
+  // lane 6 (12 Nov round 2): the placement check's page, item builder and loader (preview route /placement, about 19 KB; Home and the
+  // welcome flow use only src/placement/start.js and data/placement/config.json, which stay installed), and the trope families and
+  // per-aliyah practice page: fetched on first open, runtime-cached.
+  'src/placement/placement.view.js', 'src/placement/model.js', 'src/placement/loader.js', 'src/trope/families.js', 'src/trope/practice.view.js',
   // Cursive display font: only fetched when the cursive script setting is on (font-display: swap falls back otherwise).
   'assets/fonts/web/gveret-levin.woff2',
   // Star of David light stylesheet: loaded when #/light first opens, runtime-cached.

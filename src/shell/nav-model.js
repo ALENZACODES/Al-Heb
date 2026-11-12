@@ -49,6 +49,9 @@ export const SECTION_ROUTES = {
 const G2_ROUTES = ROUTES.filter((r) => r.name.startsWith('g2-')).map((r) => r.name);
 SECTION_ROUTES.learn.push(...G2_ROUTES);
 SECTION_ROUTES.progress.push('certificate'); SECTION_ROUTES.more.push('move'); // lane 4 (12 Nov)
+// lane 6 (12 Nov round 2): unvocalized bridge (Learn) and trope families / per-aliyah practice (Read)
+SECTION_ROUTES.learn.push('bridge', 'bridge-sec', 'bridge-text');
+SECTION_ROUTES.read.push('trope-families', 'trope-family', 'trope-aliyah');
 
 /** Route name -> section id. */
 export const ROUTE_SECTION = Object.fromEntries(Object.entries(SECTION_ROUTES).flatMap(([s, names]) => names.map((n) => [n, s])));
@@ -58,6 +61,7 @@ export const PARENT = {
   letter: 'letters', loanword: 'loanwords', spotit: 'learn', dialogue: 'dialogues', phrase: 'phrases', fadeline: 'fade', israelsec: 'israel', israelunit: 'israelunits',
   classtrackweek: 'classtrack', classtrackmode: 'classtrack', festival: 'festivals', 'rules-page': 'rules', intermediatelesson: 'intermediate', practicalunit: 'practical', practicalpage: 'practical',
   grammartopic: 'grammar', labgame: 'lab', libraryarticle: 'library', text: 'read', torahreadsec: 'torahread', book: 'books', day: 'calendar', synagogue: 'synagogues',
+  'bridge-sec': 'bridge', 'bridge-text': 'bridge', 'trope-family': 'trope-families', // lane 6
 };
 
 /** Hidden from the menu (still searchable): first-run onboarding. */

@@ -20,6 +20,7 @@ import { passed as passedCheck, passMark, passRuleText } from "./passmark.js";
 import { progressBar, summaryNode } from "./exercises.ui.js";
 import { respell } from "../pronunciation/forTradition.js";
 import { uiEnglish } from "../shell/names.js";
+import { signalRimon } from "../shell/rimon-events.js";
 
 /** English shown to the learner honours the writeGodAsGd setting (display only; grading uses the raw data). */
 const G = (ctx, text) => (typeof text === "string" ? uiEnglish(ctx, text) : text);
@@ -323,6 +324,7 @@ function mountLesson(root, ctx, id) {
       const finish = async (correct) => {
         if (answered) return; answered = true;
         const r = session.answer(!!correct);
+        signalRimon(correct ? "correct" : "wrong", { source: "lesson", questionId: ex.id, retry }); // I8: the same answer event as the quick check, so hearts work the same way
         fireFeedback(ctx, !!correct);
         sec.setAttribute("data-result", correct ? "right" : "wrong");
         status.textContent = (retry ? feedbackText(!!correct, { retry: true }) : correct ? "Marked as known." : "Marked to review.") + (r.requeued ? " You will see it once more at the end." : "");

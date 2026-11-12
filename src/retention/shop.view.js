@@ -11,6 +11,7 @@ import { isRestQuiet } from './quiet.js';
 import { showRimon } from './rimon.js';
 import { downloadReminder } from './ui.js';
 import { read as readCounts, lessonsFinished, repairOffer as liveRepair, daysText, streakText, count } from '../lib/counts.js';
+import { streakShort, heartsShort } from '../coursemap/rules.js'; // H8/I8: the one rule text, shared with the Daily page and #/app-rules
 
 const DAY = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 export function mount(root, ctx) {
@@ -68,9 +69,9 @@ export function mount(root, ctx) {
       h('details', { class: 'card ret-how' }, h('summary', {}, 'How It All Works'),
         h('ul', {},
           h('li', {}, 'XP: 10 for a lesson, a little more for a sharp one or a run of right answers, 1 for each old card you review. XP is never taken away.'),
-          h('li', {}, 'Streak: one lesson, or five minutes of study, counts the day. Friday evening, Saturday and holidays never break it.'),
-          h('li', {}, 'Streak freeze: covers one missed day by itself. Bring back: for two days after a break you can bring a streak back, free, here or on the Daily page.'),
-          h('li', {}, 'Hearts: five. A wrong first answer in a lesson costs one. Practicing old words wins one back, and one returns every four hours. Reading, prayers, Torah, songs and games never cost hearts.'),
+          ...streakShort().map((t) => h('li', { 'data-rule': 'streak' }, 'Streak: ' + t)),
+          h('li', { 'data-rule': 'hearts' }, 'Hearts: ' + heartsShort()),
+          h('li', {}, h('a', { href: '#/app-rules' }, 'Every rule for hearts, streaks, minutes and passing')),
           h('li', {}, 'Gems: earned by learning. They cannot be bought, and there are no ads.'),
           h('li', {}, 'Practice league: the other players are pretend, paced to your own weeks. It is a race against your usual self.'),
           h('li', {}, 'Reminders: one short line from Rimon, only if you say yes, never on Shabbat or holidays, never at night.'),

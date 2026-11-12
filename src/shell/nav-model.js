@@ -6,6 +6,7 @@ import { ROUTES } from './router.js'; // lane g1
 
 
 import { G4_NAMES } from './g4-routes.js'; // lane 4 (g4)
+import { COURSE_SECTIONS } from './course-routes.js'; // course lane
 export const SECTIONS = [
   { id: 'learn',    labelKey: 'nav.section.learn',    descKey: 'nav.section.learn.desc',    heKey: 'nav.learn', primary: ['learn'] },
   { id: 'read',     labelKey: 'nav.section.read',     descKey: 'nav.section.read.desc',     heKey: 'nav.read',  primary: ['readhub', 'read'] },
@@ -51,6 +52,7 @@ SECTION_ROUTES.learn.push(...G2_ROUTES);
 SECTION_ROUTES.progress.push('certificate'); SECTION_ROUTES.more.push('move'); // lane 4 (12 Nov)
 // lane 6 (12 Nov round 2): unvocalized bridge (Learn) and trope families / per-aliyah practice (Read)
 SECTION_ROUTES.learn.push('bridge', 'bridge-sec', 'bridge-text');
+for (const [sec, names] of Object.entries(COURSE_SECTIONS)) SECTION_ROUTES[sec].push(...names); // course lane
 SECTION_ROUTES.read.push('trope-families', 'trope-family', 'trope-aliyah');
 
 /** Route name -> section id. */

@@ -83,7 +83,7 @@ export const ON_DEMAND_GROUPS = Object.freeze([
   { id: "od-firstday", label: "First-day minute-one data and the word builder", test: /^(data\/builder_symbols\.json$|data\/firstday\/|src\/firstday\/minuteone\.view\.js$|data\/builder_words\.json$)/, approxMB: 0.2 },
   { id: "od-fonts", label: "Cursive display font (used only with the cursive script setting)", test: /^assets\/fonts\//, approxMB: 0.03 },
   { id: "od-traditions-code", label: "Traditions pages (preview-route code)", test: /^src\/traditions\//, approxMB: 0.04 },
-  { id: "od-coursemap", label: "Syllabus and time budget (preview-route code)", test: /^src\/coursemap\//, approxMB: 0.02 },
+  { id: "od-coursemap", label: "Syllabus, time budget, course map, checkpoints, mixed review, benchmarks, rules and grammar notes (page code)", test: /^src\/(coursemap\/|grammar\/(grammar\.view|model)\.js$)/, approxMB: 0.15 },
   { id: "od-vocab-code", label: "Vocabulary browser (preview-route code)", test: /^src\/vocab\//, approxMB: 0.06 },
   { id: "od-talk", label: "Talk page and its stored lines", test: /^(src\/talk\/|data\/talk\/)/, approxMB: 0.12 },
   { id: "od-speak-code", label: "Say it page and speaking scores (preview-route code)", test: /^src\/speak\/(speak|score|check)\.js$/, approxMB: 0.08 },

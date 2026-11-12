@@ -128,7 +128,8 @@ test('D-52: sacred listen titles are real Hebrew titles; the archive spellings s
       assert.match(row.he, /^[֐-׿\s]+$/, `${row.id}: Hebrew only`);
       assert.match(row.he, /[ְ-ּ]/, `${row.id}: Hebrew is pointed`);
     } else {
-      assert.ok(row.ownerCheck, `${row.id}: a missing Hebrew title is flagged for the owner`);
+      // a piece without a Hebrew title is either flagged for the owner or settled by him (Shofar Prayer, 2026-11-11: keep the plain title)
+      assert.ok(row.ownerCheck || row.id === 'cc_shofar_prayer_ashkenazi_nli', `${row.id}: a missing Hebrew title is flagged for the owner`);
     }
     assert.ok(row.sourceTitle, `${row.id}: archive name kept for credits`);
   }

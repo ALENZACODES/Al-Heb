@@ -56,7 +56,7 @@ export const LISTEN_TITLES = {
   cc_taamim_torah_superjew: { he: 'טַעֲמֵי הַמִּקְרָא', translit: 'Ta\'amei Hamikra', meaning: 'The Reading Marks, Sung to the Torah Melody' },
   cc_taamim_haftarah_superjew: { he: 'טַעֲמֵי הַמִּקְרָא', translit: 'Ta\'amei Hamikra', meaning: 'The Reading Marks, Sung to the Haftarah Melody' },
   cc_asael_genesis_noah_ashkenaz: { he: 'פָּרָשַׁת נֹחַ', translit: 'Parashat Noach', meaning: 'The Noah Portion of Genesis' },
-  cc_shofar_prayer_ashkenazi_nli: { he: null, translit: 'Shofar Prayer', meaning: 'The name the National Library of Israel gives this recording', ownerCheck: 'Hebrew title not set: the source does not say which shofar text is sung.' },
+  cc_shofar_prayer_ashkenazi_nli: { he: null, translit: 'Shofar Prayer', meaning: 'The name the National Library of Israel gives this recording' }, // owner decision 2026-11-11: keep it titled just 'Shofar Prayer'
   cc_chad_gadya_traditional: { he: 'חַד גַּדְיָא', translit: 'Chad Gadya', meaning: 'One Little Goat' },
 };
 

@@ -129,7 +129,7 @@ export function mount(root, ctx) {
   let chapterMedia = null;
   let chapterRate = 1;
   let verseSeq = null, verseBtn = null; // plan #6: the verse-by-verse chapter player (list, index, paused) and its button
-  const chapterRows = new Map(), shownTranslit = new Set();
+  const chapterRows = new Map(), shownTranslit = new Set(), hiddenEnglish = new Set(); // hiddenEnglish: verses whose English the learner hid (E7)
   const fingerGuide = createFingerGuide({ clock, calm: () => calmOn(ctx), announce: (text) => say(text), redraw: () => render() });
   const say = (t) => { status.textContent = t; };
   const save = () => storeSet(ctx, STORE_KEY, state);
@@ -499,7 +499,7 @@ export function mount(root, ctx) {
   const bookName = (id) => (TORAH_BOOKS.find((b) => b.id === id) || {}).en || id;
   const rangeLabel = (p) => `${bookName(p.from.book)} ${p.from.chapter}:${p.from.verse} – ${bookName(p.to.book)} ${p.to.chapter}:${p.to.verse}`;
   async function goChapter(book, chapter, portionId = null) {
-    stopTimer(); stopChapterAudio(); targetVerse = null; shownTranslit.clear();
+    stopTimer(); stopChapterAudio(); targetVerse = null; shownTranslit.clear(); hiddenEnglish.clear();
     setState({ screen: 'chapter', book, chapter, portionId });
     await ensureChapter();
     if (alive) render();
@@ -537,7 +537,8 @@ export function mount(root, ctx) {
         el('p', {}, `${bookRow.en} ${state.chapter}`),
         el('button', { type: 'button', class: 'trd-open-chapter', 'data-continue': '1', onclick: () => goChapter(state.book, state.chapter) }, `Continue: ${bookRow.en} ${state.chapter}`)));
     }
-    const week = el('div', { class: 'trd-card trd-week' }, el('h2', {}, "This week's parasha"));
+    const week = el('div', { class: 'trd-card trd-week' }, el('h2', {}, "This week's parasha"),
+      el('p', {}, el('a', { href: '#/parashah' }, 'Aliyot, your weekly goal and progress'), ' · ', el('a', { href: '#/torah-search' }, 'Torah Search'), ' · ', el('a', { href: '#/verse-notebook' }, 'Verse notebook'))); // lane games-books (E4, E5, E6)
     if (weekPortion && weekPortion.portions.length) {
       for (const p of weekPortion.portions) {
         week.append(el('p', { class: 'trd-week-line' }, `Read this week's portion: ${p.en} — ${rangeLabel(p)}`),
@@ -585,6 +586,15 @@ export function mount(root, ctx) {
     if (book === 'deuteronomy' && chapter === 6 && verse >= 4 && verse <= 9) return 'shema';
     return null;
   }
+  /** E6 (lane games-books): save this verse to the verse notebook (src/torahstudy/notebook.js); the module loads on first use. */
+  function saveVerse(v, btn) {
+    import('../torahstudy/notebook.js').then((NB) => {
+      const r = { book: state.book, en: (TORAH_BOOKS.find((b) => b.id === state.book) || {}).en || state.book, chapter: state.chapter, verse: v.n, he: v.he, english: v.en };
+      const ok = NB.write(ctx, NB.save(NB.read(ctx), r));
+      say(ok ? `${r.en} ${r.chapter}:${r.verse} saved to your verse notebook.` : 'The notebook could not be saved on this device.');
+      if (ok && btn) btn.textContent = 'Saved';
+    }).catch(() => say('The notebook did not load.'));
+  }
   function verseRow(v) {
     const base = state.showTrope ? v.heTrope : v.he;
     const heShown = state.showNiqqud ? base : stripNiqqud(base);
@@ -602,7 +612,10 @@ export function mount(root, ctx) {
         ...((state.showPronunciation !== shownTranslit.has(v.n)) ? [el('p', { class: 'trd-translit', lang: 'en', dir: 'ltr', 'data-pronunciation-verse': String(v.n) }, translit(v.he)), el('p', { class: 'trd-translit-note muted' }, TRANSLIT_LABEL)] : []),
         ctx?.hasRoute?.('ask') !== false ? el('a', { class: 'trd-ask', href: `#/ask?q=${encodeURIComponent(`What does ${chapterData.ref}:${v.n} say?`)}`, 'aria-label': `Ask the Torah about ${chapterData.ref}:${v.n}` }, 'Ask') : null,
         study ? el('button', { type: 'button', class: 'trd-study-link', onclick: () => { setState({ passage: study, view: 'reader', screen: 'study' }); render(); } }, 'Study this passage in depth') : null),
-      state.showEnglish ? el('div', { class: 'trd-cell-en' }, el('p', { class: 'trd-en' }, v.en)) : null);
+      state.showEnglish ? el('div', { class: 'trd-cell-en' }, hiddenEnglish.has(v.n) ? null : el('p', { class: 'trd-en' }, v.en),
+        // lane games-books: hide one verse's English (E7) and save the verse to the notebook (E6)
+        el('button', { type: 'button', class: 'trd-en-toggle', 'aria-pressed': hiddenEnglish.has(v.n) ? 'true' : 'false', onclick: () => { if (hiddenEnglish.has(v.n)) hiddenEnglish.delete(v.n); else hiddenEnglish.add(v.n); render(); } }, hiddenEnglish.has(v.n) ? 'Show English' : 'Hide English'),
+        el('button', { type: 'button', class: 'trd-save-verse', onclick: (e) => saveVerse(v, e.target) }, 'Save to notebook')) : null);
     chapterRows.set(v.n, row);
     return row;
   }

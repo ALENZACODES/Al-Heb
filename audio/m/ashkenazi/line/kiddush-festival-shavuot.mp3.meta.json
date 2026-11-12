@@ -1,0 +1,31 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-respelled-israeli-voice",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "ashkenazi",
+ "inputText": "חַג הַשָׁבוּעוֹת הַזֶּה זְמַן מַתַּן תּוֹרָתֵינוּ׃",
+ "inputSha256": "0b7a9aac8c66ac260c7b420c6abeceaa9cb8b0a074839faa1ccf2209811d0cd3",
+ "ingestedAt": "2026-11-12T14:08:37.941Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice: the Israeli man voice reading the ashkenazi reading written in pointed Hebrew letters (tools/audio/ashkenazi_script.mjs). Not a human recording; no human has listened to it. Licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel.",
+ "renderedAt": "2026-11-12T14:08:37.941Z",
+ "redistributionCleared": false,
+ "spokenText": "חַג הַשֹׁבוּעוֹס הַזֶּה זְמַן מַתַּן תּוֹרֹסֵינוּ",
+ "normalized": true,
+ "provider": "google",
+ "madeFrom": "hebrew-script",
+ "voiceName": "he-IL-Wavenet-B",
+ "languageCode": "he-IL",
+ "hebrew": "חַג הַשָׁבוּעוֹת הַזֶּה זְמַן מַתַּן תּוֹרָתֵינוּ׃",
+ "israeliRef": "audio/m/israeli/line/kiddush-festival-shavuot.mp3",
+ "tempo": {
+  "applied": false,
+  "factor": 1,
+  "cap": 1.26,
+  "before": 2.904013605442177,
+  "after": 2.904013605442177,
+  "israeliSec": 3.5760090702947847,
+  "israeliRef": "audio/m/israeli/line/kiddush-festival-shavuot.mp3"
+ }
+}

@@ -1,0 +1,458 @@
+{
+ "schema": "alef-tg-stories/1",
+ "note": "Torah stories in the order the Torah tells them. Each event names a verse (ref) and a word range [from, to) of that verse; the game quotes those words exactly from data/corpus/torah (UXLC), split on spaces, and shows the four-letter name as ה׳. The English captions are short summaries written for Aleph, not translations. Not reviewed by a teacher.",
+ "stories": [
+  {
+   "id": "creation",
+   "en": "The Six Days of Creation",
+   "events": [
+    {
+     "ref": {
+      "book": "genesis",
+      "chapter": 1,
+      "verse": 3
+     },
+     "from": 2,
+     "to": 5,
+     "en": "Light"
+    },
+    {
+     "ref": {
+      "book": "genesis",
+      "chapter": 1,
+      "verse": 6
+     },
+     "from": 2,
+     "to": 6,
+     "en": "A dome between the waters"
+    },
+    {
+     "ref": {
+      "book": "genesis",
+      "chapter": 1,
+      "verse": 9
+     },
+     "from": 8,
+     "to": 10,
+     "en": "Dry land appears"
+    },
+    {
+     "ref": {
+      "book": "genesis",
+      "chapter": 1,
+      "verse": 11
+     },
+     "from": 2,
+     "to": 5,
+     "en": "The earth grows plants"
+    },
+    {
+     "ref": {
+      "book": "genesis",
+      "chapter": 1,
+      "verse": 14
+     },
+     "from": 2,
+     "to": 6,
+     "en": "Lights in the sky"
+    },
+    {
+     "ref": {
+      "book": "genesis",
+      "chapter": 1,
+      "verse": 20
+     },
+     "from": 2,
+     "to": 4,
+     "en": "The waters swarm with life"
+    },
+    {
+     "ref": {
+      "book": "genesis",
+      "chapter": 1,
+      "verse": 24
+     },
+     "from": 2,
+     "to": 6,
+     "en": "Animals on the land"
+    },
+    {
+     "ref": {
+      "book": "genesis",
+      "chapter": 1,
+      "verse": 26
+     },
+     "from": 2,
+     "to": 4,
+     "en": "Humankind"
+    },
+    {
+     "ref": {
+      "book": "genesis",
+      "chapter": 2,
+      "verse": 2
+     },
+     "from": 7,
+     "to": 10,
+     "en": "Rest on the seventh day"
+    }
+   ]
+  },
+  {
+   "id": "eden",
+   "en": "The Garden and the First Brothers",
+   "events": [
+    {
+     "ref": {
+      "book": "genesis",
+      "chapter": 2,
+      "verse": 7
+     },
+     "from": 0,
+     "to": 6,
+     "en": "Adam is formed from the earth"
+    },
+    {
+     "ref": {
+      "book": "genesis",
+      "chapter": 2,
+      "verse": 22
+     },
+     "from": 3,
+     "to": 7,
+     "en": "A woman is built from the rib"
+    },
+    {
+     "ref": {
+      "book": "genesis",
+      "chapter": 3,
+      "verse": 6
+     },
+     "from": 12,
+     "to": 15,
+     "en": "The fruit is eaten"
+    },
+    {
+     "ref": {
+      "book": "genesis",
+      "chapter": 3,
+      "verse": 23
+     },
+     "from": 0,
+     "to": 4,
+     "en": "Sent out of Eden"
+    },
+    {
+     "ref": {
+      "book": "genesis",
+      "chapter": 4,
+      "verse": 8
+     },
+     "from": 7,
+     "to": 12,
+     "en": "Cain kills Abel"
+    }
+   ]
+  },
+  {
+   "id": "noah",
+   "en": "Noah and the Flood",
+   "events": [
+    {
+     "ref": {
+      "book": "genesis",
+      "chapter": 6,
+      "verse": 14
+     },
+     "from": 0,
+     "to": 4,
+     "en": "Build an ark"
+    },
+    {
+     "ref": {
+      "book": "genesis",
+      "chapter": 7,
+      "verse": 7
+     },
+     "from": 0,
+     "to": 7,
+     "en": "The family goes into the ark"
+    },
+    {
+     "ref": {
+      "book": "genesis",
+      "chapter": 7,
+      "verse": 12
+     },
+     "from": 0,
+     "to": 7,
+     "en": "Forty days of rain"
+    },
+    {
+     "ref": {
+      "book": "genesis",
+      "chapter": 8,
+      "verse": 11
+     },
+     "from": 0,
+     "to": 9,
+     "en": "The dove brings an olive leaf"
+    },
+    {
+     "ref": {
+      "book": "genesis",
+      "chapter": 9,
+      "verse": 13
+     },
+     "from": 0,
+     "to": 3,
+     "en": "A bow in the cloud"
+    }
+   ]
+  },
+  {
+   "id": "abraham",
+   "en": "Abraham and Sarah",
+   "events": [
+    {
+     "ref": {
+      "book": "genesis",
+      "chapter": 12,
+      "verse": 1
+     },
+     "from": 3,
+     "to": 6,
+     "en": "Leave your land"
+    },
+    {
+     "ref": {
+      "book": "genesis",
+      "chapter": 15,
+      "verse": 5
+     },
+     "from": 4,
+     "to": 8,
+     "en": "Count the stars"
+    },
+    {
+     "ref": {
+      "book": "genesis",
+      "chapter": 18,
+      "verse": 2
+     },
+     "from": 3,
+     "to": 6,
+     "en": "Three visitors at the tent"
+    },
+    {
+     "ref": {
+      "book": "genesis",
+      "chapter": 21,
+      "verse": 2
+     },
+     "from": 0,
+     "to": 5,
+     "en": "Sarah has a son"
+    },
+    {
+     "ref": {
+      "book": "genesis",
+      "chapter": 22,
+      "verse": 2
+     },
+     "from": 1,
+     "to": 6,
+     "en": "Take your son Isaac"
+    }
+   ]
+  },
+  {
+   "id": "jacob",
+   "en": "Jacob and Esau",
+   "events": [
+    {
+     "ref": {
+      "book": "genesis",
+      "chapter": 25,
+      "verse": 25
+     },
+     "from": 6,
+     "to": 9,
+     "en": "Esau is born first"
+    },
+    {
+     "ref": {
+      "book": "genesis",
+      "chapter": 25,
+      "verse": 33
+     },
+     "from": 7,
+     "to": 10,
+     "en": "The birthright is sold"
+    },
+    {
+     "ref": {
+      "book": "genesis",
+      "chapter": 27,
+      "verse": 19
+     },
+     "from": 3,
+     "to": 6,
+     "en": "Jacob says he is Esau"
+    },
+    {
+     "ref": {
+      "book": "genesis",
+      "chapter": 28,
+      "verse": 12
+     },
+     "from": 1,
+     "to": 5,
+     "en": "A ladder in a dream"
+    },
+    {
+     "ref": {
+      "book": "genesis",
+      "chapter": 32,
+      "verse": 29
+     },
+     "from": 1,
+     "to": 8,
+     "en": "A new name: Israel"
+    }
+   ]
+  },
+  {
+   "id": "joseph",
+   "en": "Joseph and His Brothers",
+   "events": [
+    {
+     "ref": {
+      "book": "genesis",
+      "chapter": 37,
+      "verse": 3
+     },
+     "from": 7,
+     "to": 11,
+     "en": "A special coat"
+    },
+    {
+     "ref": {
+      "book": "genesis",
+      "chapter": 37,
+      "verse": 28
+     },
+     "from": 8,
+     "to": 13,
+     "en": "Sold for twenty pieces of silver"
+    },
+    {
+     "ref": {
+      "book": "genesis",
+      "chapter": 39,
+      "verse": 1
+     },
+     "from": 0,
+     "to": 3,
+     "en": "Taken down to Egypt"
+    },
+    {
+     "ref": {
+      "book": "genesis",
+      "chapter": 41,
+      "verse": 41
+     },
+     "from": 3,
+     "to": 9,
+     "en": "Put over all Egypt"
+    },
+    {
+     "ref": {
+      "book": "genesis",
+      "chapter": 45,
+      "verse": 3
+     },
+     "from": 3,
+     "to": 8,
+     "en": "I am Joseph"
+    }
+   ]
+  },
+  {
+   "id": "exodus",
+   "en": "Out of Egypt",
+   "events": [
+    {
+     "ref": {
+      "book": "exodus",
+      "chapter": 2,
+      "verse": 10
+     },
+     "from": 6,
+     "to": 9,
+     "en": "A baby named Moses"
+    },
+    {
+     "ref": {
+      "book": "exodus",
+      "chapter": 3,
+      "verse": 2
+     },
+     "from": 8,
+     "to": 15,
+     "en": "The bush that does not burn up"
+    },
+    {
+     "ref": {
+      "book": "exodus",
+      "chapter": 12,
+      "verse": 31
+     },
+     "from": 5,
+     "to": 9,
+     "en": "Pharaoh says: go"
+    },
+    {
+     "ref": {
+      "book": "exodus",
+      "chapter": 14,
+      "verse": 21
+     },
+     "from": 14,
+     "to": 16,
+     "en": "The waters split"
+    },
+    {
+     "ref": {
+      "book": "exodus",
+      "chapter": 16,
+      "verse": 15
+     },
+     "from": 2,
+     "to": 7,
+     "en": "Manna: what is it?"
+    },
+    {
+     "ref": {
+      "book": "exodus",
+      "chapter": 19,
+      "verse": 20
+     },
+     "from": 0,
+     "to": 4,
+     "en": "Down on Mount Sinai"
+    },
+    {
+     "ref": {
+      "book": "exodus",
+      "chapter": 32,
+      "verse": 19
+     },
+     "from": 4,
+     "to": 6,
+     "en": "The golden calf"
+    }
+   ]
+  }
+ ]
+}

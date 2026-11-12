@@ -1,0 +1,666 @@
+{
+ "schema": "alef-tg-parashot/1",
+ "note": "The 54 weekly Torah portions in order. id, number, English name and book follow data/corpus/torah/index.json (parshiyot). he is the name word or words copied letter for letter from the opening verse named in ref (data/corpus/torah, UXLC), so the pointing is the verse's own. asInVerse marks names whose form in the verse differs from the usual name (a prefix such as ha-, a shorter spelling, or a letter without its usual dot after a vowel); the game says so on screen. Not reviewed by a Hebrew teacher.",
+ "parashot": [
+  {
+   "id": "bereshit",
+   "num": 1,
+   "en": "Bereshit",
+   "book": "genesis",
+   "he": "בְּרֵאשִׁית",
+   "ref": {
+    "book": "genesis",
+    "chapter": 1,
+    "verse": 1
+   }
+  },
+  {
+   "id": "noach",
+   "num": 2,
+   "en": "Noach",
+   "book": "genesis",
+   "he": "נֹחַ",
+   "ref": {
+    "book": "genesis",
+    "chapter": 6,
+    "verse": 9
+   }
+  },
+  {
+   "id": "lech-lecha",
+   "num": 3,
+   "en": "Lech-Lecha",
+   "book": "genesis",
+   "he": "לֶךְ־לְךָ",
+   "ref": {
+    "book": "genesis",
+    "chapter": 12,
+    "verse": 1
+   }
+  },
+  {
+   "id": "vayera",
+   "num": 4,
+   "en": "Vayera",
+   "book": "genesis",
+   "he": "וַיֵּרָא",
+   "ref": {
+    "book": "genesis",
+    "chapter": 18,
+    "verse": 1
+   }
+  },
+  {
+   "id": "chayei-sara",
+   "num": 5,
+   "en": "Chayei Sara",
+   "book": "genesis",
+   "he": "חַיֵּי שָׂרָה",
+   "ref": {
+    "book": "genesis",
+    "chapter": 23,
+    "verse": 1
+   }
+  },
+  {
+   "id": "toldot",
+   "num": 6,
+   "en": "Toldot",
+   "book": "genesis",
+   "he": "תּוֹלְדֹת",
+   "ref": {
+    "book": "genesis",
+    "chapter": 25,
+    "verse": 19
+   },
+   "asInVerse": true
+  },
+  {
+   "id": "vayetzei",
+   "num": 7,
+   "en": "Vayetzei",
+   "book": "genesis",
+   "he": "וַיֵּצֵא",
+   "ref": {
+    "book": "genesis",
+    "chapter": 28,
+    "verse": 10
+   }
+  },
+  {
+   "id": "vayishlach",
+   "num": 8,
+   "en": "Vayishlach",
+   "book": "genesis",
+   "he": "וַיִּשְׁלַח",
+   "ref": {
+    "book": "genesis",
+    "chapter": 32,
+    "verse": 4
+   }
+  },
+  {
+   "id": "vayeshev",
+   "num": 9,
+   "en": "Vayeshev",
+   "book": "genesis",
+   "he": "וַיֵּשֶׁב",
+   "ref": {
+    "book": "genesis",
+    "chapter": 37,
+    "verse": 1
+   }
+  },
+  {
+   "id": "miketz",
+   "num": 10,
+   "en": "Miketz",
+   "book": "genesis",
+   "he": "מִקֵּץ",
+   "ref": {
+    "book": "genesis",
+    "chapter": 41,
+    "verse": 1
+   }
+  },
+  {
+   "id": "vayigash",
+   "num": 11,
+   "en": "Vayigash",
+   "book": "genesis",
+   "he": "וַיִּגַּשׁ",
+   "ref": {
+    "book": "genesis",
+    "chapter": 44,
+    "verse": 18
+   }
+  },
+  {
+   "id": "vayechi",
+   "num": 12,
+   "en": "Vayechi",
+   "book": "genesis",
+   "he": "וַיְחִי",
+   "ref": {
+    "book": "genesis",
+    "chapter": 47,
+    "verse": 28
+   }
+  },
+  {
+   "id": "shemot",
+   "num": 13,
+   "en": "Shemot",
+   "book": "exodus",
+   "he": "שְׁמוֹת",
+   "ref": {
+    "book": "exodus",
+    "chapter": 1,
+    "verse": 1
+   }
+  },
+  {
+   "id": "vaera",
+   "num": 14,
+   "en": "Vaera",
+   "book": "exodus",
+   "he": "וָאֵרָא",
+   "ref": {
+    "book": "exodus",
+    "chapter": 6,
+    "verse": 3
+   }
+  },
+  {
+   "id": "bo",
+   "num": 15,
+   "en": "Bo",
+   "book": "exodus",
+   "he": "בֹּא",
+   "ref": {
+    "book": "exodus",
+    "chapter": 10,
+    "verse": 1
+   }
+  },
+  {
+   "id": "beshalach",
+   "num": 16,
+   "en": "Beshalach",
+   "book": "exodus",
+   "he": "בְּשַׁלַּח",
+   "ref": {
+    "book": "exodus",
+    "chapter": 13,
+    "verse": 17
+   }
+  },
+  {
+   "id": "yitro",
+   "num": 17,
+   "en": "Yitro",
+   "book": "exodus",
+   "he": "יִתְרוֹ",
+   "ref": {
+    "book": "exodus",
+    "chapter": 18,
+    "verse": 1
+   }
+  },
+  {
+   "id": "mishpatim",
+   "num": 18,
+   "en": "Mishpatim",
+   "book": "exodus",
+   "he": "הַמִּשְׁפָּטִים",
+   "ref": {
+    "book": "exodus",
+    "chapter": 21,
+    "verse": 1
+   },
+   "asInVerse": true
+  },
+  {
+   "id": "terumah",
+   "num": 19,
+   "en": "Terumah",
+   "book": "exodus",
+   "he": "תְּרוּמָה",
+   "ref": {
+    "book": "exodus",
+    "chapter": 25,
+    "verse": 2
+   }
+  },
+  {
+   "id": "tetzaveh",
+   "num": 20,
+   "en": "Tetzaveh",
+   "book": "exodus",
+   "he": "תְּצַוֶּה",
+   "ref": {
+    "book": "exodus",
+    "chapter": 27,
+    "verse": 20
+   }
+  },
+  {
+   "id": "ki-tisa",
+   "num": 21,
+   "en": "Ki Tisa",
+   "book": "exodus",
+   "he": "כִּי תִשָּׂא",
+   "ref": {
+    "book": "exodus",
+    "chapter": 30,
+    "verse": 12
+   }
+  },
+  {
+   "id": "vayakhel",
+   "num": 22,
+   "en": "Vayakhel",
+   "book": "exodus",
+   "he": "וַיַּקְהֵל",
+   "ref": {
+    "book": "exodus",
+    "chapter": 35,
+    "verse": 1
+   }
+  },
+  {
+   "id": "pekudei",
+   "num": 23,
+   "en": "Pekudei",
+   "book": "exodus",
+   "he": "פְקוּדֵי",
+   "ref": {
+    "book": "exodus",
+    "chapter": 38,
+    "verse": 21
+   },
+   "asInVerse": true
+  },
+  {
+   "id": "vayikra",
+   "num": 24,
+   "en": "Vayikra",
+   "book": "leviticus",
+   "he": "וַיִּקְרָא",
+   "ref": {
+    "book": "leviticus",
+    "chapter": 1,
+    "verse": 1
+   }
+  },
+  {
+   "id": "tzav",
+   "num": 25,
+   "en": "Tzav",
+   "book": "leviticus",
+   "he": "צַו",
+   "ref": {
+    "book": "leviticus",
+    "chapter": 6,
+    "verse": 2
+   }
+  },
+  {
+   "id": "shmini",
+   "num": 26,
+   "en": "Shmini",
+   "book": "leviticus",
+   "he": "הַשְּׁמִינִי",
+   "ref": {
+    "book": "leviticus",
+    "chapter": 9,
+    "verse": 1
+   },
+   "asInVerse": true
+  },
+  {
+   "id": "tazria",
+   "num": 27,
+   "en": "Tazria",
+   "book": "leviticus",
+   "he": "תַזְרִיעַ",
+   "ref": {
+    "book": "leviticus",
+    "chapter": 12,
+    "verse": 2
+   },
+   "asInVerse": true
+  },
+  {
+   "id": "metzora",
+   "num": 28,
+   "en": "Metzora",
+   "book": "leviticus",
+   "he": "הַמְּצֹרָע",
+   "ref": {
+    "book": "leviticus",
+    "chapter": 14,
+    "verse": 2
+   },
+   "asInVerse": true
+  },
+  {
+   "id": "achrei-mot",
+   "num": 29,
+   "en": "Achrei Mot",
+   "book": "leviticus",
+   "he": "אַחֲרֵי מוֹת",
+   "ref": {
+    "book": "leviticus",
+    "chapter": 16,
+    "verse": 1
+   }
+  },
+  {
+   "id": "kedoshim",
+   "num": 30,
+   "en": "Kedoshim",
+   "book": "leviticus",
+   "he": "קְדֹשִׁים",
+   "ref": {
+    "book": "leviticus",
+    "chapter": 19,
+    "verse": 2
+   }
+  },
+  {
+   "id": "emor",
+   "num": 31,
+   "en": "Emor",
+   "book": "leviticus",
+   "he": "אֱמֹר",
+   "ref": {
+    "book": "leviticus",
+    "chapter": 21,
+    "verse": 1
+   },
+   "asInVerse": true
+  },
+  {
+   "id": "behar",
+   "num": 32,
+   "en": "Behar",
+   "book": "leviticus",
+   "he": "בְּהַר",
+   "ref": {
+    "book": "leviticus",
+    "chapter": 25,
+    "verse": 1
+   }
+  },
+  {
+   "id": "bechukotai",
+   "num": 33,
+   "en": "Bechukotai",
+   "book": "leviticus",
+   "he": "בְּחֻקֹּתַי",
+   "ref": {
+    "book": "leviticus",
+    "chapter": 26,
+    "verse": 3
+   }
+  },
+  {
+   "id": "bamidbar",
+   "num": 34,
+   "en": "Bamidbar",
+   "book": "numbers",
+   "he": "בְּמִדְבַּר",
+   "ref": {
+    "book": "numbers",
+    "chapter": 1,
+    "verse": 1
+   }
+  },
+  {
+   "id": "nasso",
+   "num": 35,
+   "en": "Nasso",
+   "book": "numbers",
+   "he": "נָשֹׂא",
+   "ref": {
+    "book": "numbers",
+    "chapter": 4,
+    "verse": 22
+   }
+  },
+  {
+   "id": "behaalotcha",
+   "num": 36,
+   "en": "Beha'alotcha",
+   "book": "numbers",
+   "he": "בְּהַעֲלֹתְךָ",
+   "ref": {
+    "book": "numbers",
+    "chapter": 8,
+    "verse": 2
+   }
+  },
+  {
+   "id": "shlach",
+   "num": 37,
+   "en": "Sh'lach",
+   "book": "numbers",
+   "he": "שְׁלַח־לְךָ",
+   "ref": {
+    "book": "numbers",
+    "chapter": 13,
+    "verse": 2
+   }
+  },
+  {
+   "id": "korach",
+   "num": 38,
+   "en": "Korach",
+   "book": "numbers",
+   "he": "קֹרַח",
+   "ref": {
+    "book": "numbers",
+    "chapter": 16,
+    "verse": 1
+   },
+   "asInVerse": true
+  },
+  {
+   "id": "chukat",
+   "num": 39,
+   "en": "Chukat",
+   "book": "numbers",
+   "he": "חֻקַּת",
+   "ref": {
+    "book": "numbers",
+    "chapter": 19,
+    "verse": 2
+   },
+   "asInVerse": true
+  },
+  {
+   "id": "balak",
+   "num": 40,
+   "en": "Balak",
+   "book": "numbers",
+   "he": "בָּלָק",
+   "ref": {
+    "book": "numbers",
+    "chapter": 22,
+    "verse": 2
+   }
+  },
+  {
+   "id": "pinchas",
+   "num": 41,
+   "en": "Pinchas",
+   "book": "numbers",
+   "he": "פִּינְחָס",
+   "ref": {
+    "book": "numbers",
+    "chapter": 25,
+    "verse": 11
+   }
+  },
+  {
+   "id": "matot",
+   "num": 42,
+   "en": "Matot",
+   "book": "numbers",
+   "he": "הַמַּטּוֹת",
+   "ref": {
+    "book": "numbers",
+    "chapter": 30,
+    "verse": 2
+   },
+   "asInVerse": true
+  },
+  {
+   "id": "masei",
+   "num": 43,
+   "en": "Masei",
+   "book": "numbers",
+   "he": "מַסְעֵי",
+   "ref": {
+    "book": "numbers",
+    "chapter": 33,
+    "verse": 1
+   }
+  },
+  {
+   "id": "devarim",
+   "num": 44,
+   "en": "Devarim",
+   "book": "deuteronomy",
+   "he": "הַדְּבָרִים",
+   "ref": {
+    "book": "deuteronomy",
+    "chapter": 1,
+    "verse": 1
+   },
+   "asInVerse": true
+  },
+  {
+   "id": "vaetchanan",
+   "num": 45,
+   "en": "Vaetchanan",
+   "book": "deuteronomy",
+   "he": "וָאֶתְחַנַּן",
+   "ref": {
+    "book": "deuteronomy",
+    "chapter": 3,
+    "verse": 23
+   }
+  },
+  {
+   "id": "eikev",
+   "num": 46,
+   "en": "Eikev",
+   "book": "deuteronomy",
+   "he": "עֵקֶב",
+   "ref": {
+    "book": "deuteronomy",
+    "chapter": 7,
+    "verse": 12
+   }
+  },
+  {
+   "id": "reeh",
+   "num": 47,
+   "en": "Re'eh",
+   "book": "deuteronomy",
+   "he": "רְאֵה",
+   "ref": {
+    "book": "deuteronomy",
+    "chapter": 11,
+    "verse": 26
+   }
+  },
+  {
+   "id": "shoftim",
+   "num": 48,
+   "en": "Shoftim",
+   "book": "deuteronomy",
+   "he": "שֹׁפְטִים",
+   "ref": {
+    "book": "deuteronomy",
+    "chapter": 16,
+    "verse": 18
+   },
+   "asInVerse": true
+  },
+  {
+   "id": "ki-teitzei",
+   "num": 49,
+   "en": "Ki Teitzei",
+   "book": "deuteronomy",
+   "he": "כִּי־תֵצֵא",
+   "ref": {
+    "book": "deuteronomy",
+    "chapter": 21,
+    "verse": 10
+   }
+  },
+  {
+   "id": "ki-tavo",
+   "num": 50,
+   "en": "Ki Tavo",
+   "book": "deuteronomy",
+   "he": "כִּי־תָבוֹא",
+   "ref": {
+    "book": "deuteronomy",
+    "chapter": 26,
+    "verse": 1
+   }
+  },
+  {
+   "id": "nitzavim",
+   "num": 51,
+   "en": "Nitzavim",
+   "book": "deuteronomy",
+   "he": "נִצָּבִים",
+   "ref": {
+    "book": "deuteronomy",
+    "chapter": 29,
+    "verse": 9
+   }
+  },
+  {
+   "id": "vayeilech",
+   "num": 52,
+   "en": "Vayeilech",
+   "book": "deuteronomy",
+   "he": "וַיֵּלֶךְ",
+   "ref": {
+    "book": "deuteronomy",
+    "chapter": 31,
+    "verse": 1
+   }
+  },
+  {
+   "id": "haazinu",
+   "num": 53,
+   "en": "Ha'azinu",
+   "book": "deuteronomy",
+   "he": "הַאֲזִינוּ",
+   "ref": {
+    "book": "deuteronomy",
+    "chapter": 32,
+    "verse": 1
+   }
+  },
+  {
+   "id": "vezot-haberakhah",
+   "num": 54,
+   "en": "Vezot Haberakhah",
+   "book": "deuteronomy",
+   "he": "וְזֹאת הַבְּרָכָה",
+   "ref": {
+    "book": "deuteronomy",
+    "chapter": 33,
+    "verse": 1
+   }
+  }
+ ]
+}

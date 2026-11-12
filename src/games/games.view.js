@@ -5,6 +5,7 @@ import { h, heSpan, medal } from '../shell/ui.js';
 import { LEVEL_DESCRIPTIONS } from './wordfinder.model.js';
 import { loadGameImages, imgOf, GAME_ENV } from './engine.js';
 import { ARCADE_GAMES } from './arcade.catalog.js';
+import { TG_GAMES } from './tg-catalog.js';
 import { rimonInline } from '../shell/rimon-inline.js';
 import { gameOfTheDay, dayKey, ARCADE_KEY, LEVELS as ARCADE_STEPS } from './arcade.model.js';
 
@@ -103,6 +104,7 @@ export function mount(root, ctx) {
     h('p', {}, `${hubSummary(items)} Completely new to Hebrew? Start at Level 1. Every level is open; you can play at your pace.`),
     h('p', { class: 'wf-lab-link' }, h('a', { class: 'btn', href: '#/lab' }, 'Brain Lab'), ' Three 45-second drills a day that get harder as you improve, with a score for each skill.'),
     arcadeCard(ctx, items.length),
+    tgCard(),
     ...sections);
   root.replaceChildren(article);
   // Card thumbnails from each game's own backdrop art, plus Rimon the mascot
@@ -127,6 +129,17 @@ export function arcadeThumb(id, card) {
   const b = `assets/img/arcade-thumbs/${id}`;
   return h('img', { class: 'wf-game-thumb wf-arcade-thumb', src: b + '.480.webp', srcset: `${b}.480.webp 480w, ${b}.800.webp 800w`, sizes: '(max-width: 719px) 92vw, 320px', width: 480, height: 180, alt: '', loading: 'lazy', decoding: 'async',
     onerror: (e) => { e.target.remove(); card?.append?.(medal('arcade', id, 56)); } }); // a coin only if the scene is missing
+}
+
+/** Torah and Hebrew games: one card, beginner to advanced (each game is also in its level below). */
+export function tgCard() {
+  const bands = [['beginner', 'Beginner: Letters and Numbers'], ['intermediate', 'Intermediate: Words, Families and Verbs'], ['advanced', 'Advanced: Torah, Trope and Holidays']];
+  return h('section', { class: 'card wf-tg-card', 'aria-labelledby': 'wf-tg-h' },
+    h('h2', { id: 'wf-tg-h' }, 'Torah and Hebrew Games ', heSpan('תּוֹרָה')),
+    h('p', { class: 'muted' }, 'From first letters to real Torah verses, prayers and the holidays of the year.'),
+    ...bands.map(([band, title]) => h('div', {}, h('h3', {}, title),
+      h('ul', { class: 'show-grid wf-game-grid' }, ...TG_GAMES.filter((g) => g.band === band).map((g) => h('li', {}, h('a', { class: 'show-tile wf-level-tile', href: '#/' + g.id },
+        h('span', { class: 'show-tile-title' }, g.title, ' ', heSpan(g.titleHe)), h('span', { class: 'show-tile-hook' }, g.tag))))))));
 }
 
 const NUM_WORDS = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'];

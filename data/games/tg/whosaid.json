@@ -1,0 +1,426 @@
+{
+ "schema": "alef-tg-whosaid/1",
+ "note": "Who said it: short quotes from the Torah and the person who says them. Each quote is the word range [from, to) of the verse in ref, copied exactly from data/corpus/torah (UXLC), split on spaces; the four-letter name is shown as ה׳. Each speaker's Hebrew name (he) is copied from the word at index `word` of its ref verse, so it is the verse's own spelling and pointing (tests check it). The English lines are short paraphrases written for Aleph (the JPS 1917 translation of the whole verse is shown after each answer). The speaker of Genesis 24:18 is Rebekah (named in 24:15) and of Numbers 24:5 is Balaam (24:2-3). Not reviewed by a teacher.",
+ "speakers": [
+  {
+   "id": "adam",
+   "en": "Adam",
+   "he": "הָאָדָם",
+   "ref": {
+    "book": "genesis",
+    "chapter": 3,
+    "verse": 12
+   },
+   "word": 1
+  },
+  {
+   "id": "eve",
+   "en": "Eve",
+   "he": "חַוָּה",
+   "ref": {
+    "book": "genesis",
+    "chapter": 3,
+    "verse": 20
+   },
+   "word": 4
+  },
+  {
+   "id": "cain",
+   "en": "Cain",
+   "he": "קַיִן",
+   "ref": {
+    "book": "genesis",
+    "chapter": 4,
+    "verse": 8
+   },
+   "word": 1
+  },
+  {
+   "id": "abraham",
+   "en": "Abraham",
+   "he": "אַבְרָהָם",
+   "ref": {
+    "book": "genesis",
+    "chapter": 22,
+    "verse": 8
+   },
+   "word": 1
+  },
+  {
+   "id": "sarah",
+   "en": "Sarah",
+   "he": "שָׂרָה",
+   "ref": {
+    "book": "genesis",
+    "chapter": 21,
+    "verse": 6
+   },
+   "word": 1
+  },
+  {
+   "id": "isaac",
+   "en": "Isaac",
+   "he": "יִצְחָק",
+   "ref": {
+    "book": "genesis",
+    "chapter": 22,
+    "verse": 7
+   },
+   "word": 1
+  },
+  {
+   "id": "rebekah",
+   "en": "Rebekah",
+   "he": "רִבְקָה",
+   "ref": {
+    "book": "genesis",
+    "chapter": 24,
+    "verse": 15
+   },
+   "word": 5
+  },
+  {
+   "id": "esau",
+   "en": "Esau",
+   "he": "עֵשָׂו",
+   "ref": {
+    "book": "genesis",
+    "chapter": 25,
+    "verse": 32
+   },
+   "word": 1
+  },
+  {
+   "id": "jacob",
+   "en": "Jacob",
+   "he": "יַעֲקֹב",
+   "ref": {
+    "book": "genesis",
+    "chapter": 25,
+    "verse": 33
+   },
+   "word": 1
+  },
+  {
+   "id": "laban",
+   "en": "Laban",
+   "he": "לָבָן",
+   "ref": {
+    "book": "genesis",
+    "chapter": 29,
+    "verse": 26
+   },
+   "word": 1
+  },
+  {
+   "id": "rachel",
+   "en": "Rachel",
+   "he": "רָחֵל",
+   "ref": {
+    "book": "genesis",
+    "chapter": 30,
+    "verse": 1
+   },
+   "word": 1
+  },
+  {
+   "id": "judah",
+   "en": "Judah",
+   "he": "יְהוּדָה",
+   "ref": {
+    "book": "genesis",
+    "chapter": 38,
+    "verse": 26
+   },
+   "word": 1
+  },
+  {
+   "id": "joseph",
+   "en": "Joseph",
+   "he": "יוֹסֵף",
+   "ref": {
+    "book": "genesis",
+    "chapter": 45,
+    "verse": 3
+   },
+   "word": 1
+  },
+  {
+   "id": "pharaoh",
+   "en": "Pharaoh",
+   "he": "פַּרְעֹה",
+   "ref": {
+    "book": "exodus",
+    "chapter": 5,
+    "verse": 2
+   },
+   "word": 1
+  },
+  {
+   "id": "moses",
+   "en": "Moses",
+   "he": "מֹשֶׁה",
+   "ref": {
+    "book": "exodus",
+    "chapter": 3,
+    "verse": 11
+   },
+   "word": 1
+  },
+  {
+   "id": "miriam",
+   "en": "Miriam",
+   "he": "מִרְיָם",
+   "ref": {
+    "book": "exodus",
+    "chapter": 15,
+    "verse": 21
+   },
+   "word": 2
+  },
+  {
+   "id": "balaam",
+   "en": "Balaam",
+   "he": "בִּלְעָם",
+   "ref": {
+    "book": "numbers",
+    "chapter": 22,
+    "verse": 10
+   },
+   "word": 1
+  }
+ ],
+ "quotes": [
+  {
+   "who": "adam",
+   "ref": {
+    "book": "genesis",
+    "chapter": 3,
+    "verse": 12
+   },
+   "from": 2,
+   "to": 8,
+   "en": "The woman you gave to be with me, she gave it to me."
+  },
+  {
+   "who": "eve",
+   "ref": {
+    "book": "genesis",
+    "chapter": 3,
+    "verse": 13
+   },
+   "from": 8,
+   "to": 11,
+   "en": "The serpent tricked me, and I ate."
+  },
+  {
+   "who": "cain",
+   "ref": {
+    "book": "genesis",
+    "chapter": 4,
+    "verse": 9
+   },
+   "from": 9,
+   "to": 12,
+   "en": "Am I my brother's keeper?"
+  },
+  {
+   "who": "abraham",
+   "ref": {
+    "book": "genesis",
+    "chapter": 22,
+    "verse": 8
+   },
+   "from": 2,
+   "to": 6,
+   "en": "God will see to the lamb for the offering."
+  },
+  {
+   "who": "sarah",
+   "ref": {
+    "book": "genesis",
+    "chapter": 21,
+    "verse": 6
+   },
+   "from": 2,
+   "to": 6,
+   "en": "God has brought me laughter."
+  },
+  {
+   "who": "isaac",
+   "ref": {
+    "book": "genesis",
+    "chapter": 22,
+    "verse": 7
+   },
+   "from": 10,
+   "to": 16,
+   "en": "Here are the fire and the wood, but where is the lamb?"
+  },
+  {
+   "who": "rebekah",
+   "ref": {
+    "book": "genesis",
+    "chapter": 24,
+    "verse": 18
+   },
+   "from": 1,
+   "to": 3,
+   "en": "Drink, my lord."
+  },
+  {
+   "who": "esau",
+   "ref": {
+    "book": "genesis",
+    "chapter": 25,
+    "verse": 32
+   },
+   "from": 2,
+   "to": 6,
+   "en": "I am about to die."
+  },
+  {
+   "who": "esau",
+   "ref": {
+    "book": "genesis",
+    "chapter": 27,
+    "verse": 38
+   },
+   "from": 3,
+   "to": 7,
+   "en": "Do you have only one blessing, my father?"
+  },
+  {
+   "who": "jacob",
+   "ref": {
+    "book": "genesis",
+    "chapter": 28,
+    "verse": 16
+   },
+   "from": 4,
+   "to": 9,
+   "en": "Surely the LORD is in this place."
+  },
+  {
+   "who": "jacob",
+   "ref": {
+    "book": "genesis",
+    "chapter": 27,
+    "verse": 19
+   },
+   "from": 3,
+   "to": 6,
+   "en": "I am Esau, your firstborn."
+  },
+  {
+   "who": "laban",
+   "ref": {
+    "book": "genesis",
+    "chapter": 29,
+    "verse": 26
+   },
+   "from": 2,
+   "to": 9,
+   "en": "It is not done here, to give the younger before the elder."
+  },
+  {
+   "who": "rachel",
+   "ref": {
+    "book": "genesis",
+    "chapter": 30,
+    "verse": 1
+   },
+   "from": 11,
+   "to": 13,
+   "en": "Give me children."
+  },
+  {
+   "who": "judah",
+   "ref": {
+    "book": "genesis",
+    "chapter": 38,
+    "verse": 26
+   },
+   "from": 3,
+   "to": 5,
+   "en": "She is more in the right than I am."
+  },
+  {
+   "who": "joseph",
+   "ref": {
+    "book": "genesis",
+    "chapter": 45,
+    "verse": 3
+   },
+   "from": 3,
+   "to": 8,
+   "en": "I am Joseph. Is my father still alive?"
+  },
+  {
+   "who": "pharaoh",
+   "ref": {
+    "book": "exodus",
+    "chapter": 5,
+    "verse": 2
+   },
+   "from": 2,
+   "to": 7,
+   "en": "Who is the LORD, that I should listen to his voice?"
+  },
+  {
+   "who": "pharaoh",
+   "ref": {
+    "book": "genesis",
+    "chapter": 41,
+    "verse": 41
+   },
+   "from": 3,
+   "to": 9,
+   "en": "See, I have put you over all the land of Egypt."
+  },
+  {
+   "who": "moses",
+   "ref": {
+    "book": "exodus",
+    "chapter": 3,
+    "verse": 11
+   },
+   "from": 3,
+   "to": 8,
+   "en": "Who am I, that I should go to Pharaoh?"
+  },
+  {
+   "who": "moses",
+   "ref": {
+    "book": "exodus",
+    "chapter": 4,
+    "verse": 10
+   },
+   "from": 18,
+   "to": 22,
+   "en": "I am slow of speech and slow of tongue."
+  },
+  {
+   "who": "miriam",
+   "ref": {
+    "book": "exodus",
+    "chapter": 15,
+    "verse": 21
+   },
+   "from": 3,
+   "to": 7,
+   "en": "Sing to the LORD, who has triumphed gloriously."
+  },
+  {
+   "who": "balaam",
+   "ref": {
+    "book": "numbers",
+    "chapter": 24,
+    "verse": 5
+   },
+   "from": 0,
+   "to": 5,
+   "en": "How good are your tents, Jacob, your homes, Israel!"
+  }
+ ]
+}

@@ -1,6 +1,7 @@
-// The arcade: thirty short games for beginners, in the order a learner meets them.
+// The arcade: short games in the order a learner meets them (level 1 to 5).
 // id = route and file name (src/games/<id>.view.js); level = where it fits on the 1 to 5 ladder.
-export const ARCADE_GAMES = Object.freeze([
+import { TG_GAMES } from './tg-catalog.js';
+const BASE_GAMES = [
   // Level 1: letters and their shapes
   { id: 'letterchomp', title: 'Letter Chomp', titleHe: 'אוֹכֵל אוֹתִיּוֹת', level: 1, tag: 'Maze chase: eat only the target letter' },
   { id: 'fallingletters', title: 'Falling Letters', titleHe: 'אוֹתִיּוֹת נוֹפְלוֹת', level: 1, tag: 'Steer falling letters to spell the word' },
@@ -36,6 +37,8 @@ export const ARCADE_GAMES = Object.freeze([
   { id: 'noahseven', title: 'The Seven Laws', titleHe: 'שֶׁבַע מִצְווֹת', level: 5, tag: 'The seven laws given to all humanity' },
   { id: 'tenwords', title: 'The Ten Words', titleHe: 'עֲשֶׂרֶת הַדִּבְּרוֹת', level: 5, tag: 'Place the ten statements on the tablets' },
   { id: 'mitzvot613', title: '613 Sorter', titleHe: 'תַּרְיַ"ג מִצְווֹת', level: 5, tag: 'Do or do not? Sort the mitzvot' },
-]);
+];
+// Torah and Hebrew games (src/games/tg-catalog.js) join each level after its existing games; the advanced ones extend level 5.
+export const ARCADE_GAMES = Object.freeze([...BASE_GAMES, ...TG_GAMES].sort((a, b) => a.level - b.level));
 
 export const ARCADE_IDS = Object.freeze(ARCADE_GAMES.map((g) => g.id));

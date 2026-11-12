@@ -1,0 +1,31 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-respelled-israeli-voice",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "ashkenazi",
+ "inputText": "מַזָּל טוֹב",
+ "inputSha256": "1065a0387f95b6f49216ca5ee5b8f4dcf1ccb53db6160f34ff8435506a83d1cc",
+ "ingestedAt": "2026-11-12T14:42:16.992Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice: the Israeli man voice reading the ashkenazi reading written in pointed Hebrew letters (tools/audio/ashkenazi_script.mjs). Not a human recording; no human has listened to it. Licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel.",
+ "renderedAt": "2026-11-12T14:42:16.992Z",
+ "redistributionCleared": false,
+ "spokenText": "מַזֹּל טוֹב",
+ "normalized": true,
+ "provider": "google",
+ "madeFrom": "hebrew-script",
+ "voiceName": "he-IL-Wavenet-B",
+ "languageCode": "he-IL",
+ "hebrew": "מַזָּל טוֹב",
+ "israeliRef": "audio/m/israeli/word/pb9c1c2cd.mp3",
+ "tempo": {
+  "applied": false,
+  "factor": 1,
+  "cap": 1.26,
+  "before": 1.1519954648526076,
+  "after": 1.1519954648526076,
+  "israeliSec": 1.3119954648526078,
+  "israeliRef": "audio/m/israeli/word/pb9c1c2cd.mp3"
+ }
+}

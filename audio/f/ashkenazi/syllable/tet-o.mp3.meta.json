@@ -1,0 +1,32 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-respelled-israeli-voice",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "ashkenazi",
+ "inputText": "טֹ",
+ "inputSha256": "34a18b33c6e827c221d362b8a84deb289a32e2f17d1d5cb15c473fa377f10115",
+ "ingestedAt": "2026-11-12T14:42:00.136Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice: the Israeli woman voice reading the ashkenazi reading written in pointed Hebrew letters (tools/audio/ashkenazi_script.mjs). Not a human recording; no human has listened to it. Licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel.",
+ "renderedAt": "2026-11-12T14:42:00.136Z",
+ "redistributionCleared": false,
+ "spokenText": "טֹ",
+ "normalized": true,
+ "provider": "google",
+ "madeFrom": "hebrew-script",
+ "speakingRate": 0.85,
+ "voiceName": "he-IL-Wavenet-A",
+ "languageCode": "he-IL",
+ "hebrew": "טֹ",
+ "israeliRef": "audio/f/israeli/syllable/tet-o.mp3",
+ "tempo": {
+  "applied": false,
+  "factor": 1,
+  "cap": 1.26,
+  "before": 0.7440136054421769,
+  "after": 0.7440136054421769,
+  "israeliSec": 0.8319954648526077,
+  "israeliRef": "audio/f/israeli/syllable/tet-o.mp3"
+ }
+}

@@ -1,0 +1,31 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-respelled-israeli-voice",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "ashkenazi",
+ "inputText": "אָנָּא אֲדֹנָי הוֹשִׁיעָה נָּא אָנָּא אֲדֹנָי הַצְלִיחָה נָּא׃",
+ "inputSha256": "d79c8bd792fea2177c0cb9252c0b8038e1a1096132a3c5e70277c6c70d822bff",
+ "ingestedAt": "2026-11-12T14:07:52.876Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice: the Israeli woman voice reading the ashkenazi reading written in pointed Hebrew letters (tools/audio/ashkenazi_script.mjs). Not a human recording; no human has listened to it. Licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel.",
+ "renderedAt": "2026-11-12T14:07:52.876Z",
+ "redistributionCleared": false,
+ "spokenText": "אֹנֹּא אֲדֹנֹי הוֹשִׁיעֹה נֹּא אֹנֹּא אֲדֹנֹי הַצְלִיחֹה נֹּא",
+ "normalized": true,
+ "provider": "google",
+ "madeFrom": "hebrew-script",
+ "voiceName": "he-IL-Wavenet-A",
+ "languageCode": "he-IL",
+ "hebrew": "אָנָּא אֲדֹנָי הוֹשִׁיעָה נָּא אָנָּא אֲדֹנָי הַצְלִיחָה נָּא׃",
+ "israeliRef": "audio/f/israeli/line/hallel-118-25.mp3",
+ "tempo": {
+  "applied": false,
+  "factor": 1,
+  "cap": 1.26,
+  "before": 3.36,
+  "after": 3.36,
+  "israeliSec": 3.240249433106576,
+  "israeliRef": "audio/f/israeli/line/hallel-118-25.mp3"
+ }
+}

@@ -51,3 +51,9 @@ Your note on any of the three is enough to unlock the next change. A rabbi's mar
 ## Also on file (still held)
 
 Lane C's lesson-integrity read added clergy questions 28 to 32 in `docs/sensitivity/REVIEW-FOR-CLERGY.md` (El as a practice word; practice audio for Elohim / Adonai / Yah; English house style; Ken yehi ratzon; Rabotai / Chaverai). Those name questions were **not** applied. See also `docs/review/LESSON-INTEGRITY-2026-11-10.md`. The Yom Kippur greeting `גְּמַר חֲתִימָה טוֹבָה` is already in I-28 and I-50 via the curated lesson lexicon, which that report had still listed as missing.
+
+## Decided 12 November 2026 (after the six-lane coder-100 build)
+
+1. **Voice journal on the device: approved.** The Speaking Studio keeps the learner's own recordings in the browser's IndexedDB on the device (`src/voice/journal.js`, the only IndexedDB use). Nothing is sent anywhere; the Privacy page says so, and "Delete all my data" removes the journal.
+2. **Browser transcription check: approved as built.** The optional "the machine heard X" check uses the browser's own speech recognizer, labelled a machine guess, not a grade. The page says that some browsers (Chrome, for example) may send the audio to the browser's maker; Aleph itself sends nothing.
+3. **CI gates: approved.** The dead-button check (`tools/deploy/check-buttons.mjs`) and the accessibility check (`tools/deploy/check-a11y.mjs`) stay as steps in `.github/workflows/ci.yml`, as well as in `npm test`.

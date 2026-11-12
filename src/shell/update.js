@@ -20,6 +20,8 @@
 //    Views mark an exercise in progress with markBusy(true) or a data-busy="true" attribute on their root.
 import { storageNotice } from "./settings.data.js";
 export const SKIP_WAITING_MESSAGE = Object.freeze({ type: "SKIP_WAITING" });
+/** Posted to the running worker just before the hand-over: it lets go of its background clip work so the new worker can take over. */
+export const RELEASE_BACKGROUND_MESSAGE = Object.freeze({ type: "RELEASE_BACKGROUND" });
 export const STALL_MS = 4000;
 
 /** @typedef {"idle"|"waiting"|"activated"|"stalled"} UpdateState */
@@ -79,8 +81,12 @@ export function watchForUpdates(g = globalThis, opt = {}) {
 
   const doApply = async (o = {}) => {
     for (const h of [...(opt.beforeReload || []), ...(o.beforeReload || [])]) { try { await h(); } catch { /* a hook must not block the reload */ } }
+    // Ask the registration for its waiting worker now: the one noted earlier may have been discarded and replaced by a newer install
+    // (12 Nov 2026: the message went to a worker that no longer existed and the update never applied).
+    try { if (reg?.waiting) waiting = reg.waiting; } catch { /* keep the noted one */ }
     if (state === "waiting" && waiting) {
       reloading = true; requested = true;
+      try { swc.controller?.postMessage?.(RELEASE_BACKGROUND_MESSAGE); } catch { /* an older worker ignores it */ }
       try { waiting.postMessage(SKIP_WAITING_MESSAGE); } catch { reloading = false; set("stalled"); return; }
       // the page reloads on controllerchange; if the worker ignores the message (an older sw.js without the handler) say so instead of hanging
       stallTimer = setT(() => { if (reloading) { reloading = false; set("stalled"); } }, STALL_MS);

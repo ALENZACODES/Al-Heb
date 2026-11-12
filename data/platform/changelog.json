@@ -4,6 +4,11 @@
  "entries": [
   {
    "date": "2026-11-12",
+   "hash": "3fde8aefe",
+   "text": "Playback bar: each speed button wired itself, so the dead-button gate reads it (the merged gate flagged the group-delegated wiring)."
+  },
+  {
+   "date": "2026-11-12",
    "hash": "f7403e66f",
    "text": "Games and books lane: per-idea table (docs/plan/CODER-100-games-books.md), the listening games and book word clips in the Deaf and hard-of-hearing inventory, Brain Lab warm-up…"
   },
@@ -196,11 +201,6 @@
    "date": "2026-11-12",
    "hash": "0a3745406",
    "text": "Three Versions: tapping a word that already shows its marks opens the spotlight and does not count as help"
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "b5e6e9efc",
-   "text": "Tests for Reading Tools and the fluency chart"
   }
  ]
 }

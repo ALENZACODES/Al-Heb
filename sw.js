@@ -133,18 +133,35 @@ async function audioRange(req, event) {
 // Background clip work (finishing a download, re-checking a cached clip) is best effort: hold the worker for at most 15 s so it never
 // keeps an old worker busy and holds back an update the learner asked for (the hand-over waits for the old worker's pending events).
 const BACKGROUND_MS = 15000;
+// Every bounded() hold can also be let go at once: the page posts RELEASE_BACKGROUND to this (the running) worker just before it asks
+// the waiting worker to take over, so the hand-over does not wait out the 15 s (12 Nov 2026: an update sat waiting behind clip work).
+const releases = new Set();
 const bounded = (p) => {
   const work = Promise.resolve(p).catch(() => {});
-  return typeof setTimeout === 'function' ? Promise.race([work, new Promise((r) => setTimeout(r, BACKGROUND_MS))]) : work;
+  if (typeof setTimeout !== 'function') return work;
+  let free; const freed = new Promise((r) => { free = r; releases.add(r); });
+  return Promise.race([work, freed, new Promise((r) => setTimeout(r, BACKGROUND_MS))]).finally(() => releases.delete(free));
 };
+const releaseBackground = () => { for (const r of [...releases]) r(); releases.clear(); };
+// Install retries the shell download: during a deploy a new file can answer 404 for a few minutes (the host's edge keeps a 404 it saw
+// for up to 5 minutes), and one failed file used to fail the whole install silently, leaving an empty shell cache and no update.
+const PRECACHE_RETRY_MS = [15000, 45000, 90000];
+const wait = (ms) => new Promise((r) => (typeof setTimeout === 'function' ? setTimeout(r, ms) : r()));
+async function fillShell() {
+  const c = await caches.open(SHELL);
+  for (let i = 0; ; i++) {
+    try { return await c.addAll(self.ALEF_PRECACHE || []); } catch (e) { if (i >= PRECACHE_RETRY_MS.length) throw e; await wait(PRECACHE_RETRY_MS[i]); }
+  }
+}
 
 self.addEventListener('install', (event) => {
-  event.waitUntil(caches.open(SHELL).then((c) => c.addAll(self.ALEF_PRECACHE || [])));
+  event.waitUntil(fillShell());
 });
 // Consent-only takeover: the page's update banner posts this after the learner presses Reload (and not mid-exercise).
 self.addEventListener('message', (event) => {
   const d = event.data;
   if (d && (d === 'SKIP_WAITING' || d.type === 'SKIP_WAITING')) event.waitUntil(self.skipWaiting());
+  if (d && d.type === 'RELEASE_BACKGROUND') releaseBackground();
 });
 self.addEventListener('activate', (event) => {
   event.waitUntil((async () => {

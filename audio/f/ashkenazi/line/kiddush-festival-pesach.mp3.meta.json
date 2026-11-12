@@ -1,0 +1,31 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-respelled-israeli-voice",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "ashkenazi",
+ "inputText": "חַג הַמַּצּוֹת הַזֶּה זְמַן חֵרוּתֵנוּ׃",
+ "inputSha256": "d72a55718a5a2b2d29d3b0c69643867493c577d1e76e5d3c13170e15d78a0cd3",
+ "ingestedAt": "2026-11-12T14:07:49.760Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice: the Israeli woman voice reading the ashkenazi reading written in pointed Hebrew letters (tools/audio/ashkenazi_script.mjs). Not a human recording; no human has listened to it. Licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel.",
+ "renderedAt": "2026-11-12T14:07:49.760Z",
+ "redistributionCleared": false,
+ "spokenText": "חַג הַמַּצּוֹס הַזֶּה זְמַן חֵירוּסֵינוּ",
+ "normalized": true,
+ "provider": "google",
+ "madeFrom": "hebrew-script",
+ "voiceName": "he-IL-Wavenet-A",
+ "languageCode": "he-IL",
+ "hebrew": "חַג הַמַּצּוֹת הַזֶּה זְמַן חֵרוּתֵנוּ׃",
+ "israeliRef": "audio/f/israeli/line/kiddush-festival-pesach.mp3",
+ "tempo": {
+  "applied": false,
+  "factor": 1,
+  "cap": 1.26,
+  "before": 2.6880045351473925,
+  "after": 2.6880045351473925,
+  "israeliSec": 2.544013605442177,
+  "israeliRef": "audio/f/israeli/line/kiddush-festival-pesach.mp3"
+ }
+}

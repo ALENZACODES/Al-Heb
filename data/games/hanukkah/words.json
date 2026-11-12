@@ -1,0 +1,1203 @@
+{
+ "schema": "alef-hanukkah-words/1",
+ "note": "Hanukkah game words. Entries with an id are copied verbatim (Hebrew and transliteration) from data/vocab/words.json and play that word's recorded clip when one exists; the English is a short game gloss. Entries without an id are not in words.json yet and carry a review note for the owner. Counting words are the masculine forms from data/corpus/phrasebook.json, because נֵר and מַטְבֵּעַ are masculine.",
+ "words": [
+  {
+   "key": "nes",
+   "id": "h3674f19e",
+   "he": "נֵס",
+   "translit": "nes",
+   "en": "miracle",
+   "tags": [
+    "dreidel",
+    "story"
+   ],
+   "src": "vocab"
+  },
+  {
+   "key": "gadol",
+   "id": "hdd2bd792",
+   "he": "גָּדוֹל",
+   "translit": "gadol",
+   "en": "great, big",
+   "tags": [
+    "dreidel"
+   ],
+   "src": "vocab"
+  },
+  {
+   "key": "haya",
+   "id": "h2cd963e3",
+   "he": "הָיָה",
+   "translit": "hayah",
+   "en": "was, happened",
+   "tags": [
+    "dreidel"
+   ],
+   "src": "vocab"
+  },
+  {
+   "key": "sham",
+   "id": "hf2bba104",
+   "he": "שָׁם",
+   "translit": "sham",
+   "en": "there",
+   "tags": [
+    "dreidel"
+   ],
+   "src": "vocab"
+  },
+  {
+   "key": "po",
+   "id": "he0448a86",
+   "he": "פֹּה",
+   "translit": "poh",
+   "en": "here",
+   "tags": [
+    "dreidel"
+   ],
+   "src": "vocab"
+  },
+  {
+   "key": "chanukah",
+   "id": "h5e1ba7b7",
+   "he": "חֲנֻכָּה",
+   "translit": "chanukah",
+   "en": "Hanukkah (dedication)",
+   "tags": [
+    "story",
+    "light"
+   ],
+   "src": "vocab"
+  },
+  {
+   "key": "ner",
+   "id": "h64fb7d35",
+   "he": "נֵר",
+   "translit": "ner",
+   "en": "candle",
+   "tags": [
+    "light"
+   ],
+   "src": "vocab"
+  },
+  {
+   "key": "shamash",
+   "id": "h767217d5",
+   "he": "שַׁמָּשׁ",
+   "translit": "shamash",
+   "en": "helper candle (shamash)",
+   "tags": [
+    "light"
+   ],
+   "src": "vocab"
+  },
+  {
+   "key": "shemen",
+   "id": "h8459058d",
+   "he": "שֶׁמֶן",
+   "translit": "shemen",
+   "en": "oil",
+   "tags": [
+    "light",
+    "story"
+   ],
+   "src": "vocab"
+  },
+  {
+   "key": "pach",
+   "id": "h8f3e0650",
+   "he": "פַּךְ",
+   "translit": "pakh",
+   "en": "small jar, flask",
+   "tags": [
+    "story"
+   ],
+   "src": "vocab"
+  },
+  {
+   "key": "or",
+   "id": "h4700de9c",
+   "he": "אוֹר",
+   "translit": "or",
+   "en": "light",
+   "tags": [
+    "light"
+   ],
+   "src": "vocab"
+  },
+  {
+   "key": "esh",
+   "id": "hf1da5ea6",
+   "he": "אֵשׁ",
+   "translit": "esh",
+   "en": "fire",
+   "tags": [
+    "light"
+   ],
+   "src": "vocab"
+  },
+  {
+   "key": "lehava",
+   "id": "hde878aab",
+   "he": "לֶהָבָה",
+   "translit": "lehavah",
+   "en": "flame",
+   "tags": [
+    "light"
+   ],
+   "src": "vocab"
+  },
+  {
+   "key": "mikdash",
+   "id": "hf1772ec6",
+   "he": "מִקְדָּשׁ",
+   "translit": "mikdash",
+   "en": "temple",
+   "tags": [
+    "story"
+   ],
+   "src": "vocab"
+  },
+  {
+   "key": "menorah",
+   "id": "he10c2446",
+   "he": "מְנוֹרָה",
+   "translit": "menorah",
+   "en": "lamp, menorah",
+   "tags": [
+    "light",
+    "story"
+   ],
+   "src": "vocab"
+  },
+  {
+   "key": "nitzachon",
+   "id": "h6d09c984",
+   "he": "נִצָּחוֹן",
+   "translit": "nitzachon",
+   "en": "victory",
+   "tags": [
+    "story"
+   ],
+   "src": "vocab"
+  },
+  {
+   "key": "matana",
+   "id": "hc5b0c1a0",
+   "he": "מַתָּנָה",
+   "translit": "matanah",
+   "en": "gift",
+   "tags": [
+    "party"
+   ],
+   "src": "vocab"
+  },
+  {
+   "key": "matbea",
+   "id": "h05ccc01b",
+   "he": "מַטְבֵּעַ",
+   "translit": "matbe'a",
+   "en": "coin",
+   "tags": [
+    "party",
+    "dreidel"
+   ],
+   "src": "vocab"
+  },
+  {
+   "key": "shokolad",
+   "id": "h6cc8112a",
+   "he": "שׁוֹקוֹלָד",
+   "translit": "shokolad",
+   "en": "chocolate",
+   "tags": [
+    "food",
+    "party"
+   ],
+   "src": "vocab"
+  },
+  {
+   "key": "gevina",
+   "id": "h4ef6ec03",
+   "he": "גְּבִינָה",
+   "translit": "gevinah",
+   "en": "cheese",
+   "tags": [
+    "food"
+   ],
+   "src": "vocab"
+  },
+  {
+   "key": "chag",
+   "id": "h81fd04d9",
+   "he": "חַג",
+   "translit": "chag",
+   "en": "holiday",
+   "tags": [
+    "party"
+   ],
+   "src": "vocab"
+  },
+  {
+   "key": "chagsameach",
+   "id": "p6e9bcf25",
+   "he": "חַג שָׂמֵחַ",
+   "translit": "chag sameach",
+   "en": "happy holiday",
+   "tags": [
+    "party"
+   ],
+   "src": "vocab"
+  },
+  {
+   "key": "shir",
+   "id": "hf16db4f8",
+   "he": "שִׁיר",
+   "translit": "shir",
+   "en": "song",
+   "tags": [
+    "party"
+   ],
+   "src": "vocab"
+  },
+  {
+   "key": "mishpacha",
+   "id": "h9f3caed1",
+   "he": "מִשְׁפָּחָה",
+   "translit": "mishpachah",
+   "en": "family",
+   "tags": [
+    "party"
+   ],
+   "src": "vocab"
+  },
+  {
+   "key": "laila",
+   "id": "hf5bee50d",
+   "he": "לַיְלָה",
+   "translit": "laylah",
+   "en": "night",
+   "tags": [
+    "light"
+   ],
+   "src": "vocab"
+  },
+  {
+   "key": "bracha",
+   "id": "h93295b86",
+   "he": "בְּרָכָה",
+   "translit": "berakhah",
+   "en": "blessing",
+   "tags": [
+    "light"
+   ],
+   "src": "vocab"
+  },
+  {
+   "key": "zahav",
+   "id": "h761c6cb9",
+   "he": "זָהָב",
+   "translit": "zahav",
+   "en": "gold",
+   "tags": [
+    "party"
+   ],
+   "src": "vocab"
+  },
+  {
+   "key": "chatzi",
+   "id": "h47a142a6",
+   "he": "חֲצִי",
+   "translit": "chatzi",
+   "en": "half",
+   "tags": [
+    "dreidel",
+    "number"
+   ],
+   "src": "vocab"
+  },
+  {
+   "key": "shmona",
+   "id": "h745593b8",
+   "he": "שְׁמוֹנָה",
+   "translit": "shemonah",
+   "en": "eight",
+   "tags": [
+    "number",
+    "light"
+   ],
+   "src": "vocab"
+  },
+  {
+   "key": "cham",
+   "id": "h5c2548dc",
+   "he": "חַם",
+   "translit": "cham",
+   "en": "hot",
+   "tags": [
+    "temp"
+   ],
+   "src": "vocab"
+  },
+  {
+   "key": "chamim",
+   "id": "h0986ff35",
+   "he": "חָמִים",
+   "translit": "chamim",
+   "en": "warm",
+   "tags": [
+    "temp"
+   ],
+   "src": "vocab"
+  },
+  {
+   "key": "karir",
+   "id": "h453ca6b4",
+   "he": "קָרִיר",
+   "translit": "karir",
+   "en": "cool",
+   "tags": [
+    "temp"
+   ],
+   "src": "vocab"
+  },
+  {
+   "key": "kar",
+   "id": "h35a8fcbe",
+   "he": "קַר",
+   "translit": "kar",
+   "en": "cold",
+   "tags": [
+    "temp"
+   ],
+   "src": "vocab"
+  },
+  {
+   "key": "meod",
+   "id": "h81024165",
+   "he": "מְאוֹד",
+   "translit": "me'od",
+   "en": "very",
+   "tags": [
+    "temp"
+   ],
+   "src": "vocab"
+  },
+  {
+   "key": "shulchan",
+   "id": "hfac8b79e",
+   "he": "שֻׁלְחָן",
+   "translit": "shulchan",
+   "en": "table",
+   "tags": [
+    "room"
+   ],
+   "src": "vocab"
+  },
+  {
+   "key": "kise",
+   "id": "h568e3e03",
+   "he": "כִּסֵּא",
+   "translit": "kise",
+   "en": "chair",
+   "tags": [
+    "room"
+   ],
+   "src": "vocab"
+  },
+  {
+   "key": "chalon",
+   "id": "h495d2c04",
+   "he": "חַלּוֹן",
+   "translit": "chalon",
+   "en": "window",
+   "tags": [
+    "room"
+   ],
+   "src": "vocab"
+  },
+  {
+   "key": "delet",
+   "id": "h80c0273d",
+   "he": "דֶּלֶת",
+   "translit": "delet",
+   "en": "door",
+   "tags": [
+    "room"
+   ],
+   "src": "vocab"
+  },
+  {
+   "key": "sapa",
+   "id": "h470d40b1",
+   "he": "סַפָּה",
+   "translit": "sapah",
+   "en": "sofa",
+   "tags": [
+    "room"
+   ],
+   "src": "vocab"
+  },
+  {
+   "key": "mita",
+   "id": "h11b6d758",
+   "he": "מִטָּה",
+   "translit": "mitah",
+   "en": "bed",
+   "tags": [
+    "room"
+   ],
+   "src": "vocab"
+  },
+  {
+   "key": "aron",
+   "id": "h16acb4dc",
+   "he": "אָרוֹן",
+   "translit": "aron",
+   "en": "cupboard",
+   "tags": [
+    "room"
+   ],
+   "src": "vocab"
+  },
+  {
+   "key": "shatiach",
+   "id": "h78520975",
+   "he": "שָׁטִיחַ",
+   "translit": "shatiach",
+   "en": "rug",
+   "tags": [
+    "room"
+   ],
+   "src": "vocab"
+  },
+  {
+   "key": "karit",
+   "id": "h1029f2b7",
+   "he": "כָּרִית",
+   "translit": "karit",
+   "en": "pillow",
+   "tags": [
+    "room"
+   ],
+   "src": "vocab"
+  },
+  {
+   "key": "mekarer",
+   "id": "hff1401a7",
+   "he": "מְקָרֵר",
+   "translit": "mekarer",
+   "en": "fridge",
+   "tags": [
+    "room"
+   ],
+   "src": "vocab"
+  },
+  {
+   "key": "tanur",
+   "id": "h20a7042b",
+   "he": "תַּנּוּר",
+   "translit": "tanur",
+   "en": "oven",
+   "tags": [
+    "room"
+   ],
+   "src": "vocab"
+  },
+  {
+   "key": "panas",
+   "id": "hfb77971d",
+   "he": "פַּנָּס",
+   "translit": "panas",
+   "en": "lantern",
+   "tags": [
+    "room",
+    "light"
+   ],
+   "src": "vocab"
+  },
+  {
+   "key": "o",
+   "id": "h8ba0beaa",
+   "he": "אוֹ",
+   "translit": "o",
+   "en": "or",
+   "tags": [
+    "ui"
+   ],
+   "src": "vocab"
+  },
+  {
+   "key": "milah",
+   "id": "h95c52e9c",
+   "he": "מִלָּה",
+   "translit": "milah",
+   "en": "word",
+   "tags": [
+    "ui"
+   ],
+   "src": "vocab"
+  },
+  {
+   "key": "asur",
+   "id": "h99a3ea8b",
+   "he": "אָסוּר",
+   "translit": "asur",
+   "en": "forbidden",
+   "tags": [
+    "ui"
+   ],
+   "src": "vocab"
+  },
+  {
+   "key": "kevutza",
+   "id": "h447cab37",
+   "he": "קְבוּצָה",
+   "translit": "kevutzah",
+   "en": "team, group",
+   "tags": [
+    "ui"
+   ],
+   "src": "vocab"
+  },
+  {
+   "key": "tor",
+   "id": "h87abbddd",
+   "he": "תּוֹר",
+   "translit": "tor",
+   "en": "a turn",
+   "tags": [
+    "ui"
+   ],
+   "src": "vocab"
+  },
+  {
+   "key": "mischak",
+   "id": "h5441ebd3",
+   "he": "מִשְׂחָק",
+   "translit": "mischak",
+   "en": "game",
+   "tags": [
+    "ui"
+   ],
+   "src": "vocab"
+  },
+  {
+   "key": "tzeva",
+   "id": "hbbf4b263",
+   "he": "צֶבַע",
+   "translit": "tzeva",
+   "en": "colour",
+   "tags": [
+    "ui",
+    "colour"
+   ],
+   "src": "vocab"
+  },
+  {
+   "key": "nashaf",
+   "id": "h5c726648",
+   "he": "נָשַׁף",
+   "translit": "nashaf",
+   "en": "to blow",
+   "tags": [
+    "light"
+   ],
+   "src": "vocab"
+  },
+  {
+   "key": "sevivon",
+   "id": null,
+   "he": "סְבִיבוֹן",
+   "translit": "sevivon",
+   "en": "dreidel, spinning top",
+   "tags": [
+    "dreidel",
+    "party"
+   ],
+   "src": "calendar",
+   "review": "Pointing from data/calendar/days.json; not yet in words.json."
+  },
+  {
+   "key": "sufganiya",
+   "id": null,
+   "he": "סֻפְגָּנִיָּה",
+   "translit": "sufganiyah",
+   "en": "jam doughnut",
+   "tags": [
+    "food"
+   ],
+   "src": "calendar",
+   "review": "Pointing from data/calendar/days.json; not yet in words.json."
+  },
+  {
+   "key": "leviva",
+   "id": null,
+   "he": "לְבִיבָה",
+   "translit": "levivah",
+   "en": "latke, potato pancake",
+   "tags": [
+    "food"
+   ],
+   "src": "calendar",
+   "review": "Pointing from data/calendar/days.json; not yet in words.json."
+  },
+  {
+   "key": "chanukiya",
+   "id": null,
+   "he": "חֲנֻכִּיָּה",
+   "translit": "chanukiyah",
+   "en": "hanukkiah, the nine-branched lamp",
+   "tags": [
+    "light",
+    "party"
+   ],
+   "src": "calendar",
+   "review": "Pointing from data/calendar/days.json; not yet in words.json."
+  },
+  {
+   "key": "sufganiyot",
+   "id": null,
+   "he": "סֻפְגָּנִיּוֹת",
+   "translit": "sufganiyot",
+   "en": "jam doughnuts",
+   "tags": [
+    "food",
+    "party"
+   ],
+   "src": "brief",
+   "review": "Plural of סֻפְגָּנִיָּה; not in words.json. Please check the pointing."
+  },
+  {
+   "key": "levivot",
+   "id": null,
+   "he": "לְבִיבוֹת",
+   "translit": "levivot",
+   "en": "latkes",
+   "tags": [
+    "food",
+    "party"
+   ],
+   "src": "brief",
+   "review": "Plural of לְבִיבָה; not in words.json. Please check the pointing."
+  },
+  {
+   "key": "makabim",
+   "id": null,
+   "he": "מַכַּבִּים",
+   "translit": "Makabim",
+   "en": "the Maccabees",
+   "tags": [
+    "story",
+    "party"
+   ],
+   "src": "brief",
+   "review": "Not in words.json. Please check the pointing."
+  },
+  {
+   "key": "yehuda",
+   "id": null,
+   "he": "יְהוּדָה הַמַּכַּבִּי",
+   "translit": "Yehudah HaMakabi",
+   "en": "Judah the Maccabee",
+   "tags": [
+    "story"
+   ],
+   "src": "new",
+   "review": "Not in words.json. Please check the pointing."
+  },
+  {
+   "key": "dmei",
+   "id": null,
+   "he": "דְּמֵי חֲנֻכָּה",
+   "translit": "dmei Chanukah",
+   "en": "Hanukkah money, gelt",
+   "tags": [
+    "party",
+    "dreidel"
+   ],
+   "src": "new",
+   "review": "Not in words.json. Please check the pointing."
+  },
+  {
+   "key": "nerot",
+   "id": null,
+   "he": "נֵרוֹת",
+   "translit": "nerot",
+   "en": "candles",
+   "tags": [
+    "light",
+    "number"
+   ],
+   "src": "new",
+   "review": "Plural of נֵר (in words.json); the plural itself is not. Please check."
+  },
+  {
+   "key": "matbeot",
+   "id": null,
+   "he": "מַטְבְּעוֹת",
+   "translit": "matbe'ot",
+   "en": "coins",
+   "tags": [
+    "number",
+    "party"
+   ],
+   "src": "new",
+   "review": "Plural of מַטְבֵּעַ (in words.json); the plural itself is not. Please check."
+  },
+  {
+   "key": "kama",
+   "id": null,
+   "he": "כַּמָּה",
+   "translit": "kamah",
+   "en": "how many",
+   "tags": [
+    "number"
+   ],
+   "src": "new",
+   "review": "Question word; words.json has only the verb כָּמַהּ (to long). Please check."
+  },
+  {
+   "key": "kachol",
+   "id": null,
+   "he": "כָּחֹל",
+   "translit": "kachol",
+   "en": "blue",
+   "tags": [
+    "colour"
+   ],
+   "src": "new",
+   "review": "Colour word not in words.json. Please check."
+  },
+  {
+   "key": "lavan",
+   "id": null,
+   "he": "לָבָן",
+   "translit": "lavan",
+   "en": "white",
+   "tags": [
+    "colour"
+   ],
+   "src": "new",
+   "review": "Colour word not in words.json (it has only the verb לִבֵּן). Please check."
+  },
+  {
+   "key": "tzahov",
+   "id": null,
+   "he": "צָהֹב",
+   "translit": "tzahov",
+   "en": "yellow",
+   "tags": [
+    "colour"
+   ],
+   "src": "new",
+   "review": "Colour word not in words.json. Please check."
+  },
+  {
+   "key": "katom",
+   "id": null,
+   "he": "כָּתֹם",
+   "translit": "katom",
+   "en": "orange",
+   "tags": [
+    "colour"
+   ],
+   "src": "new",
+   "review": "Colour word not in words.json. Please check."
+  },
+  {
+   "key": "num1",
+   "id": "h155e306b",
+   "he": "אֶחָד",
+   "translit": "echad",
+   "en": "one",
+   "n": 1,
+   "tags": [
+    "number"
+   ],
+   "src": "phrasebook:numbers-01"
+  },
+  {
+   "key": "num2",
+   "id": "hf9a1a55b",
+   "he": "שְׁנַיִם",
+   "translit": "shnayim",
+   "en": "two",
+   "n": 2,
+   "tags": [
+    "number"
+   ],
+   "src": "phrasebook:numbers-02"
+  },
+  {
+   "key": "num3",
+   "id": null,
+   "he": "שְׁלוֹשָׁה",
+   "translit": "shlosha",
+   "en": "three",
+   "n": 3,
+   "tags": [
+    "number"
+   ],
+   "src": "phrasebook:numbers-03"
+  },
+  {
+   "key": "num4",
+   "id": null,
+   "he": "אַרְבָּעָה",
+   "translit": "arba'a",
+   "en": "four",
+   "n": 4,
+   "tags": [
+    "number"
+   ],
+   "src": "phrasebook:numbers-04"
+  },
+  {
+   "key": "num5",
+   "id": null,
+   "he": "חֲמִשָּׁה",
+   "translit": "chamisha",
+   "en": "five",
+   "n": 5,
+   "tags": [
+    "number"
+   ],
+   "src": "phrasebook:numbers-05"
+  },
+  {
+   "key": "num6",
+   "id": null,
+   "he": "שִׁשָּׁה",
+   "translit": "shisha",
+   "en": "six",
+   "n": 6,
+   "tags": [
+    "number"
+   ],
+   "src": "phrasebook:numbers-06"
+  },
+  {
+   "key": "num7",
+   "id": "h68a92f84",
+   "he": "שִׁבְעָה",
+   "translit": "shiv'a",
+   "en": "seven",
+   "n": 7,
+   "tags": [
+    "number"
+   ],
+   "src": "phrasebook:numbers-07"
+  },
+  {
+   "key": "num8",
+   "id": "h745593b8",
+   "he": "שְׁמוֹנָה",
+   "translit": "shmona",
+   "en": "eight",
+   "n": 8,
+   "tags": [
+    "number"
+   ],
+   "src": "phrasebook:numbers-08"
+  },
+  {
+   "key": "num9",
+   "id": null,
+   "he": "תִּשְׁעָה",
+   "translit": "tish'a",
+   "en": "nine",
+   "n": 9,
+   "tags": [
+    "number"
+   ],
+   "src": "phrasebook:numbers-09"
+  }
+ ],
+ "clues": [
+  {
+   "max": 0,
+   "he": "מָצָאתָ!",
+   "translit": "matzata!",
+   "en": "You found it!",
+   "review": "Masculine \"you found\"; the feminine is מָצָאת (matzat). The game shows both. Please check.",
+   "heF": "מָצָאת!",
+   "translitF": "matzat!"
+  },
+  {
+   "max": 1,
+   "he": "חַם מְאוֹד",
+   "translit": "cham me'od",
+   "en": "very hot",
+   "parts": [
+    "cham",
+    "meod"
+   ]
+  },
+  {
+   "max": 2,
+   "he": "חַם",
+   "translit": "cham",
+   "en": "hot",
+   "parts": [
+    "cham"
+   ]
+  },
+  {
+   "max": 3,
+   "he": "חָמִים",
+   "translit": "chamim",
+   "en": "warm",
+   "parts": [
+    "chamim"
+   ]
+  },
+  {
+   "max": 4,
+   "he": "קָרִיר",
+   "translit": "karir",
+   "en": "cool",
+   "parts": [
+    "karir"
+   ]
+  },
+  {
+   "max": 6,
+   "he": "קַר",
+   "translit": "kar",
+   "en": "cold",
+   "parts": [
+    "kar"
+   ]
+  },
+  {
+   "max": 99,
+   "he": "קַר מְאוֹד",
+   "translit": "kar me'od",
+   "en": "very cold",
+   "parts": [
+    "kar",
+    "meod"
+   ]
+  }
+ ],
+ "cards": [
+  {
+   "key": "levivot",
+   "forbidden": [
+    "potato",
+    "pancake",
+    "fry",
+    "latke"
+   ]
+  },
+  {
+   "key": "sufganiyot",
+   "forbidden": [
+    "doughnut",
+    "donut",
+    "jam",
+    "jelly"
+   ]
+  },
+  {
+   "key": "chanukiya",
+   "forbidden": [
+    "menorah",
+    "candle",
+    "nine",
+    "lamp"
+   ]
+  },
+  {
+   "key": "makabim",
+   "forbidden": [
+    "Judah",
+    "army",
+    "hammer",
+    "Maccabee"
+   ]
+  },
+  {
+   "key": "sevivon",
+   "forbidden": [
+    "dreidel",
+    "spin",
+    "top",
+    "gelt"
+   ]
+  },
+  {
+   "key": "ner",
+   "forbidden": [
+    "candle",
+    "wax",
+    "wick",
+    "light"
+   ]
+  },
+  {
+   "key": "shemen",
+   "forbidden": [
+    "oil",
+    "olive",
+    "fry",
+    "jar"
+   ]
+  },
+  {
+   "key": "nes",
+   "forbidden": [
+    "miracle",
+    "wonder",
+    "magic",
+    "amazing"
+   ]
+  },
+  {
+   "key": "shamash",
+   "forbidden": [
+    "helper",
+    "middle",
+    "ninth",
+    "candle"
+   ]
+  },
+  {
+   "key": "matana",
+   "forbidden": [
+    "gift",
+    "present",
+    "wrap",
+    "box"
+   ]
+  },
+  {
+   "key": "dmei",
+   "forbidden": [
+    "money",
+    "gelt",
+    "coin",
+    "chocolate"
+   ]
+  },
+  {
+   "key": "or",
+   "forbidden": [
+    "light",
+    "bright",
+    "lamp",
+    "dark"
+   ]
+  },
+  {
+   "key": "esh",
+   "forbidden": [
+    "fire",
+    "burn",
+    "hot",
+    "flame"
+   ]
+  },
+  {
+   "key": "shir",
+   "forbidden": [
+    "song",
+    "sing",
+    "music",
+    "Maoz Tzur"
+   ]
+  },
+  {
+   "key": "mikdash",
+   "forbidden": [
+    "temple",
+    "Jerusalem",
+    "holy",
+    "building"
+   ]
+  },
+  {
+   "key": "nitzachon",
+   "forbidden": [
+    "victory",
+    "win",
+    "won",
+    "battle"
+   ]
+  },
+  {
+   "key": "shokolad",
+   "forbidden": [
+    "chocolate",
+    "sweet",
+    "coin",
+    "brown"
+   ]
+  },
+  {
+   "key": "mishpacha",
+   "forbidden": [
+    "family",
+    "parents",
+    "children",
+    "relatives"
+   ]
+  },
+  {
+   "key": "shmona",
+   "forbidden": [
+    "eight",
+    "8",
+    "nights",
+    "number"
+   ]
+  },
+  {
+   "key": "bracha",
+   "forbidden": [
+    "blessing",
+    "pray",
+    "say",
+    "before"
+   ]
+  },
+  {
+   "key": "gevina",
+   "forbidden": [
+    "cheese",
+    "dairy",
+    "milk",
+    "Judith"
+   ]
+  },
+  {
+   "key": "pach",
+   "forbidden": [
+    "jar",
+    "oil",
+    "small",
+    "flask"
+   ]
+  },
+  {
+   "key": "laila",
+   "forbidden": [
+    "night",
+    "dark",
+    "evening",
+    "moon"
+   ]
+  },
+  {
+   "key": "chagsameach",
+   "forbidden": [
+    "happy",
+    "holiday",
+    "greeting",
+    "say"
+   ]
+  }
+ ]
+}

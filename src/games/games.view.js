@@ -4,7 +4,7 @@
 import { h, heSpan, medal } from '../shell/ui.js';
 import { LEVEL_DESCRIPTIONS } from './wordfinder.model.js';
 import { loadGameImages, imgOf, GAME_ENV } from './engine.js';
-import { ARCADE_GAMES } from './arcade.catalog.js';
+import { ARCADE_GAMES, HANUKKAH_GAMES } from './arcade.catalog.js';
 import { rimonInline } from '../shell/rimon-inline.js';
 import { gameOfTheDay, dayKey, ARCADE_KEY, LEVELS as ARCADE_STEPS } from './arcade.model.js';
 
@@ -103,6 +103,7 @@ export function mount(root, ctx) {
     h('p', {}, `${hubSummary(items)} Completely new to Hebrew? Start at Level 1. Every level is open; you can play at your pace.`),
     h('p', { class: 'wf-lab-link' }, h('a', { class: 'btn', href: '#/lab' }, 'Brain Lab'), ' Three 45-second drills a day that get harder as you improve, with a score for each skill.'),
     arcadeCard(ctx, items.length),
+    hanukkahSection(),
     ...sections);
   root.replaceChildren(article);
   // Card thumbnails from each game's own backdrop art, plus Rimon the mascot
@@ -127,6 +128,18 @@ export function arcadeThumb(id, card) {
   const b = `assets/img/arcade-thumbs/${id}`;
   return h('img', { class: 'wf-game-thumb wf-arcade-thumb', src: b + '.480.webp', srcset: `${b}.480.webp 480w, ${b}.800.webp 800w`, sizes: '(max-width: 719px) 92vw, 320px', width: 480, height: 180, alt: '', loading: 'lazy', decoding: 'async',
     onerror: (e) => { e.target.remove(); card?.append?.(medal('arcade', id, 56)); } }); // a coin only if the scene is missing
+}
+
+/** One section for the Hanukkah games (src/games/hanukkah-*.view.js), each with its level on the same 1 to 5 ladder. */
+export function hanukkahSection() {
+  return h('section', { class: 'wf-level-section hk-hub', 'aria-labelledby': 'wf-hanukkah-h' },
+    h('h2', { id: 'wf-hanukkah-h' }, 'Hanukkah Games ', heSpan('חֲנֻכָּה')),
+    h('p', { class: 'muted' }, `${HANUKKAH_GAMES.length} games for the Festival of Lights: two dreidel games, the hanukkiah, party games for the family and word games with Hanukkah words.`),
+    h('ul', { class: 'show-grid wf-game-grid' }, ...HANUKKAH_GAMES.map((g) => h('li', {},
+      h('a', { class: 'show-tile wf-level-tile', href: '#/' + g.id },
+        h('span', { class: 'wf-game-level' }, 'LEVEL ' + g.level + ' / 5'),
+        h('span', { class: 'show-tile-title' }, g.title, ' ', heSpan(g.titleHe)),
+        h('span', { class: 'show-tile-hook' }, g.tag))))));
 }
 
 const NUM_WORDS = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'];

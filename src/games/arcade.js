@@ -12,7 +12,7 @@ import { quietNow } from '../shell/comfort.js';
 import { uiEnglish } from '../shell/names.js';
 import { playRecordedClip, hasRecordedClip } from './engine.js';
 import { ARCADE_KEY, LEVELS, BADGES, applyResult, applyArcade, emptyRecord, seededRandom, seedFrom, dayKey, bestLine, starsFor } from './arcade.model.js';
-import { ARCADE_GAMES } from './arcade.catalog.js';
+import { ARCADE_GAMES, HANUKKAH_GAMES } from './arcade.catalog.js';
 
 const WORDS_URL = new URL('../../data/games/firstwords.json', import.meta.url);
 const LETTERS_URL = new URL('../../data/letters/letters.json', import.meta.url);
@@ -346,6 +346,8 @@ export async function createArcade(root, ctx, spec) {
 
 /** The next game in the catalogue after this one (wraps), for the results hand-off. */
 export function nextGame(id) {
+  const hk = HANUKKAH_GAMES.findIndex((g) => g.id === id); // a Hanukkah game hands on to the next Hanukkah game
+  if (hk >= 0) return HANUKKAH_GAMES[(hk + 1) % HANUKKAH_GAMES.length] || null;
   const i = ARCADE_GAMES.findIndex((g) => g.id === id);
   if (i < 0) return ARCADE_GAMES[0] || null;
   return ARCADE_GAMES[(i + 1) % ARCADE_GAMES.length] || null;

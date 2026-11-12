@@ -1,0 +1,37 @@
+{
+ "schema": "alef-hanukkah-dreidel/1",
+ "note": "The four dreidel letters, what each stands for in the phrase and in the game, and the house rules Aleph plays by. Letter names follow data/letters/letters.json (letter ids play the existing letter clips). Words of the phrase are data/vocab/words.json entries.",
+ "faces": {
+  "diaspora": ["nun", "gimel", "hey", "shin"],
+  "israel": ["nun", "gimel", "hey", "pe"]
+ },
+ "letters": {
+  "nun":   { "he": "נ", "letterId": "nun",   "name": "Nun",   "nameHe": "נוּן",  "sound": "n as in net", "word": "nes",  "rule": "none", "ruleEn": "Nothing happens. Pass the dreidel.", "yiddish": "nisht (nothing)" },
+  "gimel": { "he": "ג", "letterId": "gimel", "name": "Gimel", "nameHe": "גִּימֶל", "sound": "g as in go", "word": "gadol", "rule": "all", "ruleEn": "Take the whole pot.", "yiddish": "gants (all)" },
+  "hey":   { "he": "ה", "letterId": "he",    "name": "Hey",   "nameHe": "הֵא",   "sound": "h as in hat", "word": "haya", "rule": "half", "ruleEn": "Take half the pot. With an odd pot, round up.", "yiddish": "halb (half)" },
+  "shin":  { "he": "ש", "letterId": "shin",  "name": "Shin",  "nameHe": "שִׁין",  "sound": "sh as in ship", "word": "sham", "rule": "put", "ruleEn": "Put one piece into the pot.", "yiddish": "shtel arayn (put in)" },
+  "pe":    { "he": "פ", "letterId": "pe",    "name": "Pe",    "nameHe": "פֵּא",   "sound": "p as in pot", "word": "po",   "rule": "put", "ruleEn": "Put one piece into the pot (the same as Shin).", "yiddish": "" }
+ },
+ "rules": {
+  "none": "Nothing",
+  "all": "Take all",
+  "half": "Take half",
+  "put": "Put one in"
+ },
+ "phrase": {
+  "diaspora": { "he": "נֵס גָּדוֹל הָיָה שָׁם", "translit": "Nes Gadol Hayah Sham", "en": "A great miracle happened there", "words": ["nes", "gadol", "haya", "sham"] },
+  "israel":   { "he": "נֵס גָּדוֹל הָיָה פֹּה", "translit": "Nes Gadol Hayah Po", "en": "A great miracle happened here", "words": ["nes", "gadol", "haya", "po"] }
+ },
+ "israelNote": "In Israel the dreidel (סְבִיבוֹן, sevivon) has פ (Pe) instead of ש (Shin): פֹּה, po, means \"here\", because the miracle happened in the Land of Israel.",
+ "houseRules": [
+  "Everyone starts with the same number of gelt pieces and puts one in the pot.",
+  "Take turns spinning. The letter that lands face up says what to do.",
+  "Hey with an odd pot: round up. A pot of 5 gives 3.",
+  "When the pot is empty or has one piece, everyone puts one in again.",
+  "A player with no gelt left is out. The last player with gelt wins; in a short game, the most gelt wins."
+ ],
+ "review": [
+  "פֵּא is written with a dagesh here; data/letters/letters.json has פֵא. Please confirm which spelling to show.",
+  "The Yiddish words behind the letters are given in plain Latin letters only, as a memory aid."
+ ]
+}

@@ -1,0 +1,19 @@
+{
+ "schema": "alef-hanukkah-candles/1",
+ "note": "Lighting order for the hanukkiah and the blessing texts. Blessings are copied from data/corpus/registry.json (ids hanukkah-candle, hanukkah-nissim, shehecheyanu) with the divine Name written as ה׳. They are shown as text only and never voiced in this game.",
+ "order": {
+  "place": "Put the candles in from right to left: night 1 uses the right-most holder, and each night adds one holder to its left.",
+  "light": "Light the shamash first. Then light from left to right: the newest candle (the one added tonight) first.",
+  "shamash": "The shamash (שַׁמָּשׁ, helper) is the ninth candle. It lights the others and sits apart, higher or to the side."
+ },
+ "blessings": [
+  { "id": "hanukkah-candle", "name": "Lehadlik Ner", "when": "Every night, before lighting", "he": "בָּרוּךְ אַתָּה ה׳ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ לְהַדְלִיק נֵר חֲנֻכָּה׃", "en": "Blessed are you, LORD our God, king of the world, who made us holy with his commandments and commanded us to light the Hanukkah light.", "variant": "Many Reform prayer books say נֵר שֶׁל חֲנֻכָּה (ner shel Chanukah); the registry text says נֵר חֲנֻכָּה." },
+  { "id": "hanukkah-nissim", "name": "She'asah Nissim", "when": "Every night, before lighting", "he": "בָּרוּךְ אַתָּה ה׳ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם שֶׁעָשָׂה נִסִּים לַאֲבוֹתֵינוּ בַּיָּמִים הָהֵם בַּזְּמַן הַזֶּה׃", "en": "Blessed are you, LORD our God, king of the world, who performed miracles for our ancestors in those days, at this time." },
+  { "id": "shehecheyanu", "name": "Shehecheyanu", "when": "First night only", "he": "בָּרוּךְ אַתָּה ה׳ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם שֶׁהֶחֱיָינוּ וְקִיְּמָנוּ וְהִגִּיעָנוּ לַזְּמַן הַזֶּה׃", "en": "Blessed are you, LORD our God, king of the world, who has kept us alive, sustained us, and brought us to this time." }
+ ],
+ "afterNote": "At home the Hanukkah lights are left to burn down on their own, for at least half an hour after nightfall, and are not used for anything else. The blow-out in this game is only for the game candles, to end the round.",
+ "review": [
+  "Blow-out moment: the owner asked for it. The game says plainly that real Hanukkah lights are left to burn down, and the blow-out is for game candles only. Please confirm this framing.",
+  "The shamash is drawn in the middle, raised. Many hanukkiot put it at one end instead; both are correct."
+ ]
+}

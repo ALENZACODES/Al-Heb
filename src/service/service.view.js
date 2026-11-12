@@ -6,7 +6,7 @@ import { loadCorpus } from '../corpus/corpus.js';
 import { loadProgressData } from '../progress/data.js';
 import { readSnapshot, readableNow } from '../progress/model.js';
 import {
-  loadServiceData, coverage, coverageSentence, buildCards, clipFor, lineClipFor, audioCoverage, ORDER_IDS, FOLLOW_IDS, TRADITIONS, TRADITION_LABELS,
+  loadServiceData, coverage, coverageSentence, buildCards, clipFor, lineClipFor, audioCoverage, audioCoverageAll, ORDER_IDS, FOLLOW_IDS, TRADITIONS, TRADITION_LABELS,
   MARKER_LABELS, VARIES, DRAFT_NOTICE, COVERAGE_NOTE,
 } from './model.js';
 
@@ -91,7 +91,11 @@ export async function mount(root, ctx) {
         missingGaps.length ? h('details', {}, h('summary', {}, 'Not in Aleph yet'), h('ul', {}, ...missingGaps.map((g) => h('li', {}, g)))) : null,
         o.follow ? h('button', { type: 'button', class: 'btn secondary', 'data-follow': oid, onclick: () => { st.mode = 'follow'; st.order = oid; st.i = 0; save(); render('sv-card'); } }, `Follow ${o.short.toLowerCase()} service`) : null);
     });
-    return [h('p', { class: 'small' }, COVERAGE_NOTE), ...sections];
+    // M-11: line coverage for the whole Siddur Aleph holds, in the tradition and voice set now: the share of service lines with a clip
+    const all = audioCoverageAll(ctx.audio, S.orders, S.byId, ORDER_IDS, st.tradition);
+    const total = all.lines ? h('p', { class: 'small', 'data-sv-audio-total': `${all.withClip}/${all.lines}` },
+      `Line coverage: ${all.withClip} of the ${all.lines} service lines Aleph holds have a clip you can play (${all.pct}%), in a synthetic voice, ${TRADITION_LABELS[st.tradition] || st.tradition} pronunciation.`) : null;
+    return [h('p', { class: 'small' }, COVERAGE_NOTE), total, ...sections].filter(Boolean);
   }
 
   function followView() {

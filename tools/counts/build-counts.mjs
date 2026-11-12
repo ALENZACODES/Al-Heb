@@ -2,7 +2,8 @@
 // src/lib/counts.generated.js: every course-wide total the app shows (books, dictionary words, first words, lessons by scope,
 // root verbs, audio catalogue), computed from the data files the app serves, plus the build stamp (package version + build time).
 //   node tools/counts/build-counts.mjs            rewrite src/lib/counts.generated.js (keeps builtAt when nothing else changed)
-//   node tools/counts/build-counts.mjs --check    exit 1 when the totals are stale (builtAt is not compared)
+//   node tools/counts/build-counts.mjs --check    exit 1 when the totals are stale, or index.html's alef-build meta names another stamp
+//   node tools/counts/build-counts.mjs --stamp    rewrite and move the build time (a release build: npm run release)
 // It also writes the build stamp into index.html (<meta name="alef-build">), so the served HTML names its build.
 // tools/build-precache.mjs runs this first, so the deploy step that refreshes the precache list refreshes these numbers too.
 import fs from 'node:fs';
@@ -105,15 +106,22 @@ export async function writeCounts({ root = ROOT, now = new Date(), force = false
   return { totals, build };
 }
 
+/** True when index.html carries the same build stamp as the generated file (R-12: the About line and the meta tag name one build). */
+export function stampAgrees(root = ROOT) {
+  const prev = readGenerated(root), idx = path.join(root, 'index.html');
+  if (!prev?.build || !fs.existsSync(idx)) return !fs.existsSync(idx);
+  return fs.readFileSync(idx, 'utf8').includes(buildMeta(prev.build));
+}
+
 export async function check(root = ROOT) {
   const totals = await computeTotals(root), prev = readGenerated(root);
-  return !!prev?.totals && JSON.stringify(prev.totals) === JSON.stringify(totals) && prev.build?.version === pkgVersion(root);
+  return !!prev?.totals && JSON.stringify(prev.totals) === JSON.stringify(totals) && prev.build?.version === pkgVersion(root) && stampAgrees(root);
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const argv = process.argv.slice(2);
   if (argv.includes('--check')) {
-    if (!(await check())) { console.error(`${OUT_FILE} is stale; run: node tools/counts/build-counts.mjs`); process.exit(1); }
+    if (!(await check())) { console.error(`${OUT_FILE} is stale, or index.html names another build; run: node tools/counts/build-counts.mjs`); process.exit(1); }
     console.log(`${OUT_FILE} is current`);
   } else {
     const { totals, build } = await writeCounts({ force: argv.includes('--stamp') });

@@ -52,6 +52,8 @@ export function build({ out = 'dist', base = '/' } = {}) {
   rmSync(dist, { recursive: true, force: true });
   mkdirSync(dist, { recursive: true });
   for (const f of SHIP_FILES) copyFileSync(join(ROOT, f), join(dist, f));
+  // evidence that the deploy-time asset check passed (tools/deploy/check-assets.mjs), when a release build wrote it
+  if (existsSync(join(ROOT, 'audit/asset-check.json'))) { mkdirSync(join(dist, 'audit'), { recursive: true }); copyFileSync(join(ROOT, 'audit/asset-check.json'), join(dist, 'audit/asset-check.json')); }
   for (const d of SHIP_DIRS) {
     if (!existsSync(join(ROOT, d))) continue;
     for (const rel of walk(join(ROOT, d))) {

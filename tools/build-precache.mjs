@@ -205,10 +205,20 @@ if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) 
   // Course totals, audio catalogue counts and the build stamp first (src/lib/counts.generated.js, index.html meta), so the
   // precache hash below covers them and every deploy that refreshes the precache list also refreshes the app's own figures.
   const { writeCounts } = await import('./counts/build-counts.mjs');
+  // lane1112-2 (M-04, R-12): a release build (--stamp, run by npm run release) runs the deploy-time asset check first and stops on any
+  // gap, so no release is stamped with one; the evidence file (audit/asset-check.json) is written after the stamp, so it names this build.
+  const release = process.argv.includes('--stamp');
+  const assets = release ? await import('./deploy/check-assets.mjs') : null;
+  const checked = release ? await assets.checkAssets({ files: !process.argv.includes('--no-files') }) : null;
+  if (checked && !checked.ok) {
+    console.error(`release stopped: the asset check found ${checked.gaps.length} gap(s); run node tools/deploy/check-assets.mjs for the list`);
+    process.exit(1);
+  }
   // The build time moves when a total or the version changes, or when asked with --stamp (do that for a release build).
   // A plain rebuild is reproducible, so CI's "Precache manifest is current" check (rebuild, then git diff) passes.
-  const c = await writeCounts({ force: process.argv.includes('--stamp') });
+  const c = await writeCounts({ force: release });
   console.log(`src/lib/counts.generated.js: build ${c.build.version} ${c.build.builtAt}`);
+  if (checked?.report.filesChecked) console.log(`asset check passed, evidence: ${assets.writeEvidence({ ...checked.report, build: c.build })}`);
   writeViewList();
   const m = computeManifest();
   const root = repoRoot;

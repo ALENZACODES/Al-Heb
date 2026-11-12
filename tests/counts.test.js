@@ -178,7 +178,8 @@ test('S-09: the build stamp is on About and in the served HTML', () => {
   assert.match(C.buildStamp(), /^Version \d+\.\d+\.\d+, built \d{4}-\d\d-\d\d \d\d:\d\d UTC$/);
   assert.match(read('src/shell/about.view.js'), /buildStamp\(\)/);
   assert.equal(stampHtml('<head>\n  <meta charset="utf-8">\n</head>', { version: '1.2.3', builtAt: 'X' }), '<head>\n  <meta charset="utf-8">\n  <meta name="alef-build" content="1.2.3 X">\n</head>');
-  assert.match(read('tools/build-precache.mjs'), /writeCounts\(\{ force: process\.argv\.includes\('--stamp'\) \}\)/, 'the precache build regenerates the counts; the stamp moves on --stamp or a changed total, so a plain rebuild is reproducible');
+  // lane1112-2: the release flag is read once (it also runs the asset check before the stamp moves)
+  assert.match(read('tools/build-precache.mjs'), /const release = process\.argv\.includes\('--stamp'\);[\s\S]*writeCounts\(\{ force: release \}\)/, 'the precache build regenerates the counts; the stamp moves on --stamp or a changed total, so a plain rebuild is reproducible');
 });
 
 // ---------- routing ----------

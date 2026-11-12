@@ -149,6 +149,23 @@ This is the only route to the top of the scale. It has lead time, so start it no
 5. The clergy list, and the Moses pages' reading.
 6. Who reviews and records, starting with Rabbi Tepper.
 
+## Deploy-Time Asset Check: How Render Would Run It (M-04, R-08)
+
+The check exists and runs in two places today. Render itself is unchanged until the owner approves a build command (decision 1 above).
+
+- **What it checks:** `node tools/deploy/check-assets.mjs` reads all eight audio lists:
+  - manifest, kind-word and the three word shards
+  - the English Torah chapters and the Hebrew Torah verse index
+  - Book 63
+
+  Every row that should play must have its file, and every plays-Israeli row must have a `plays` target that has a file. Every held clip must be catalogued and still on disk. The three hold sets must agree, and so must `data/audio/summary.json`. Any gap exits 1.
+- **Evidence:** on a pass it writes `audit/asset-check.json` (build stamp, counts, gaps 0, time). Render serves the repo root, so the file is served once it is committed. `tools/deploy/make-dist.mjs` ships it in a built folder too.
+- **Where it runs now:**
+  - CI's `test` job, on every push (no evidence written there).
+  - `npm run release`: `tools/build-precache.mjs --stamp` runs the check before it moves the stamp, and stops the release on any gap.
+- **How Render would run it:** set the service's Build Command to `node tools/deploy/check-assets.mjs`, in render.yaml `buildCommand` and on the service itself, since it is not Blueprint-managed. Keep the publish path at `.`. A gap then fails the Render build and the old deploy stays live. Render's build runs on the full clone, so the check sees every clip. It takes about a second and needs no install.
+- **Not done:** render.yaml still has an empty build command. This is waiting on the owner.
+
 ## How Each Batch Is Checked
 
 Each batch ends with the report's acceptance test for its items, run on the live build after a stamped deploy (`--stamp`). No batch counts as closed until the auditor has released its points.

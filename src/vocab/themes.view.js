@@ -65,7 +65,7 @@ export function mount(root, ctx) {
   const wrap = el('section', { class: 'alef-themes', 'aria-labelledby': 'view-title' });
   const h1 = el('h1', { id: 'view-title', tabindex: '-1' }, 'Theme packs');
   const notice = el('p', { class: 'th-muted draft-flag' }, DRAFT_NOTICE);
-  const body = el('div', { class: 'th-body' });
+  const body = el('div', { class: 'th-body' }, el('p', { class: 'muted', role: 'status' }, 'Loading the theme packs…')); // plan 4.9: a loading line, not an empty shell
   const status = el('div', { class: 'th-status', role: 'status', 'aria-live': 'polite' });
   const footer = el('footer', {}, sourcesLine(el, { examples: true }));
   wrap.append(h1, notice, body, status, footer);

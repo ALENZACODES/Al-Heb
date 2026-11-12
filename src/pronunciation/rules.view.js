@@ -33,7 +33,7 @@ export function mount(root, ctx) {
   const loader = createLoader(ctx);
   let alive = true;
   const title = h('h1', { id: 'view-title', tabindex: '-1' }, 'Pronunciation rules');
-  const body = h('div', {});
+  const body = h('div', {}, h('p', { class: 'muted', role: 'status' }, 'Loading the rules…')); // plan 4.9
   const status = h('div', { role: 'status', 'aria-live': 'polite' });
   const style = h('style', {}, CSS);
   const wrap = h('section', { class: 'alef-rules', 'aria-labelledby': 'view-title' }, title, h('p', { class: 'ru-flag', role: 'note' }, NOTICE), body, status);

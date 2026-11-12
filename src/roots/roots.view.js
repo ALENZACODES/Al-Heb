@@ -20,7 +20,7 @@ export function mount(root, ctx) {
   const wrap = el('section', { class: 'alef-roots', 'aria-labelledby': 'rt-title' });
   const h1 = el('h1', { id: 'rt-title', tabindex: '-1' }, 'Roots and verb families');
   const tabs = el('div', { role: 'group', 'aria-label': 'Mode', class: 'rt-tabs' });
-  const body = el('div', { class: 'rt-body' });
+  const body = el('div', { class: 'rt-body' }, el('p', { class: 'muted', role: 'status' }, 'Loading the word families…')); // plan 4.9
   const status = el('p', { role: 'status', 'aria-live': 'polite', class: 'rt-status' });
   wrap.append(h1, el('p', { class: 'rt-draft' }, DRAFT_NOTE), tabs, body, status, el('footer', {}, sourcesLine(el)));
   root.append(wrap);

@@ -17,9 +17,10 @@ export async function mount(root, ctx) {
   root.append(h("p", { class: "muted" },
     "Little Hebrew story books, read along page by page. Big print, full vowels, and a voice on the pages that have a recording. Start at Beginner 1 — the shelf is grouped by level."));
   root.append(h("p", {}, h("a", { href: "#/practical" }, "Practice these places"), "."));
-  const wrap = h("div", { class: "book-groups" });
+  const wrap = h("div", { class: "book-groups" }, h("p", { class: "muted", role: "status" }, "Loading the bookshelf…")); // plan 4.9: no empty shelf while it loads
   root.append(wrap);
   const data = await fetchJson(ctx, "data/books/index.json").catch(() => null);
+  wrap.replaceChildren();
   if (!data || !Array.isArray(data.books)) {
     wrap.append(h("p", { class: "muted" }, "The bookshelf could not be loaded just now."));
     return;

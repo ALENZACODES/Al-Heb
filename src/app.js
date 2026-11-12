@@ -282,7 +282,7 @@ async function show(match, ctxBase, { quiet = false } = {}) {
     }
     // M-05 loading contract: a content-shaped placeholder (or, on a repeat visit, an inert snapshot of the page) until the view
     // adds content; it comes back if the view empties the region while it waits for data. Never a blank main.
-    loadHold = holdMain(root, { title: route.title, path: keepTitle ? '' : path, keep: (n) => n.nodeType === 1 && (n.classList.contains('alef-first-paint') || n.classList.contains('alef-first-glyph')) });
+    loadHold = holdMain(root, { title: route.title, path: keepTitle ? '' : path, keep: (n) => n.nodeType === 1 && (n.classList.contains('alef-first-paint') || n.classList.contains('alef-first-glyph') || n.hasAttribute('data-fallback-title')) }); // lane 1 (plan 4.9): the hidden fallback heading is not content
   }
   root.setAttribute('aria-busy', 'true');
   let mod;

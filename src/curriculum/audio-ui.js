@@ -43,3 +43,20 @@ export function playButton(ctx, kind, id, label, note, extra = {}) {
     } }, el("span", { "aria-hidden": "true", "data-glyph": "" }, "▶"), " ", tr(ctx, "learn.play", "Listen"));
   return btn;
 }
+
+/**
+ * D-30: a "Slow" button beside Listen (the same clip at the beginner slow speed, 0.7x, played once). Normal speed stays the
+ * default; slowing down is the learner's choice. Nothing is drawn when the learner uses no audio or there is no clip to slow.
+ */
+export function slowButton(ctx, kind, id, label, note, extra = {}) {
+  if (isAudioFree(ctx)) return null;
+  const acc = audioAccess(ctx?.audio, kind, id, extra);
+  if (acc.level === "none") return null;
+  const btn = el("button", { type: "button", class: "alef-play alef-play-slow", "aria-label": `${label}, slowly`,
+    onclick: async () => {
+      if (!ctx?.audio?.play) { if (note) note.textContent = "Audio is not available in this build."; return; }
+      try { const r = await playWithState(ctx, btn, kind, id, { ...extra, rate: "slow", noEcho: true }); if (note) note.textContent = r && r.source !== "none" ? `Slow speed. ${describePlay(r)}` : describePlay(r); }
+      catch (e) { if (note) note.textContent = "No sound: the browser could not play this."; }
+    } }, el("span", { "aria-hidden": "true", "data-glyph": "" }, "▶"), " ", tr(ctx, "learn.slow", "Slow"));
+  return btn;
+}

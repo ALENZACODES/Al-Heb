@@ -8,7 +8,7 @@ import { due as dueCards } from "./srs.js";
 import { buildChoiceQuestions } from "./exercises.session.js";
 import { mountQuiz, summaryNode } from "./exercises.ui.js";
 import { wordAudioId } from "./progress.js";
-import { playButton } from "./audio-ui.js";
+import { playButton, slowButton } from "./audio-ui.js";
 import { saySound, respell, LABELS } from "../pronunciation/forTradition.js";
 import { loadSoundTextData, letterSoundText, vowelSoundText, soundTextNode } from "../pronunciation/soundtext.js";
 import { isAudioFree } from "../shell/audiofree.js";
@@ -125,7 +125,7 @@ export function mountLesson(root, ctx, lessonId) {
         heText(w.he, "alef-he alef-word"),
         // a pointed word gets its respelling as text (a screen reader may have no Hebrew voice); the English meaning stays first
         el("div", { class: "alef-item-body" }, el("span", {}, w.en), hookNode(el, hookLine(c.chain, congregation, { he: w.he })), (() => { const r = respell(w.he, congregation); return r ? el("div", { class: "muted alef-respell", lang: "en" }, `Sounds like: ${r} (${LABELS[congregation] || congregation} style)`) : null; })()),
-        el("div", { class: "alef-item-actions" }, playButton(ctx, "word", wordAudioId(lesson.id, i + 1), `Listen to ${w.en}`, note)))))));
+        el("div", { class: "alef-item-actions" }, playButton(ctx, "word", wordAudioId(lesson.id, i + 1), `Listen to ${w.en}`, note), slowButton(ctx, "word", wordAudioId(lesson.id, i + 1), `Listen to ${w.en}`, note)))))));
     if (teach && lesson.prayerLines.length) parts.push(section("l-lines", "Prayer lines", el("ul", { class: "alef-items" },
       ...lesson.prayerLines.map((id) => {
         const r = c.corpus.get(id);
@@ -133,6 +133,7 @@ export function mountLesson(root, ctx, lessonId) {
           r ? heText(r.he.split("\n")[0], "alef-he alef-word") : el("span", { class: "muted" }, `(${id}: text not in the corpus yet)`),
           el("div", { class: "alef-item-body" }, el("span", {}, r?.title || id), el("div", { class: "muted" }, r?.ref || "")),
           el("div", { class: "alef-item-actions" }, r ? playButton(ctx, "line", r.lines > 1 ? `${id}-l1` : id, `Listen to ${r.title}`, note) : null,
+            r ? slowButton(ctx, "line", r.lines > 1 ? `${id}-l1` : id, `Listen to ${r.title}`, note) : null,
             el("a", { class: "alef-link", href: `#/read/${id}` }, "Read")));
       }))));
     parts.push(note);

@@ -180,6 +180,8 @@ export const gemsText = (n) => count(n, 'gem');
 
 // ---------- books, words, roots, audio, build ----------
 export const BOOKS = TOTALS.books;
+/** Pictured pages across the shelf (books/index.json picturedPages). */
+export const BOOK_PICTURED_PAGES = TOTALS.bookPictured;
 /** Books read to their last page (books.v1 places with finishedAt). */
 export const booksFinished = (rec) => Object.values(obj(rec)).filter((v) => v && Number.isFinite(toMs(v.finishedAt))).length;
 /** The Book Finisher badge counts the first five books (book1 to book5) of the shelf. */
@@ -191,6 +193,33 @@ export const dictionaryTitle = () => `Dictionary (${fmt(DICTIONARY.words)} words
 export const FIRST_WORDS = TOTALS.firstWords;
 export const BUILD_WORDS = TOTALS.buildWords;
 export const ROOTS = Object.freeze({ ...TOTALS.roots });
+/**
+ * The Roots page numbers (M-01). One scope per number: the word list (all verbs), and the explorer (the verbs the page can open).
+ * Shaped like data/roots/families.json coverage so src/roots/model.js coverageText can word it; the page never counts its own data file.
+ */
+export function rootsCoverage(r = ROOTS) {
+  return { verbs: nat(r.verbs), verbsWithRoot: nat(r.withRoot), verbsWithBinyan: nat(r.withPattern), explorer: nat(r.explorer), explorerWithRoot: nat(r.explorerWithRoot),
+    familiesOf2Plus: nat(r.familiesOf2Plus), familiesOf3Plus: nat(r.familiesOf3Plus), familiesRuleChecked: nat(r.familiesRuleChecked), familiesVerified: nat(r.familiesVerified) };
+}
+
+// ---------- activity points (the Daily page calendar and its week line; not XP) ----------
+/**
+ * Activity points: lessons 10, review cards 1 (up to 20 a day), timed reads 5, speaking tries 1 (up to 5 a day). Only the Daily
+ * calendar, its week line, its quests and the practice-day rule count these; XP (Home, Daily goal ring) is counted separately (SCOPE).
+ */
+export const ACTIVITY = Object.freeze({ weights: Object.freeze({ lesson: 10, review: 1, read: 5, speak: 1 }), caps: Object.freeze({ review: 20, speak: 5 }), practicePoints: 5, goal: 20 });
+/** Activity points for one day record ({lessons:string[], r, t, s}: lessons finished, review cards, timed reads, speaking tries). */
+export function activityPoints(day) {
+  const d = obj(day), W = ACTIVITY.weights, C = ACTIVITY.caps;
+  const lessons = Array.isArray(d.lessons) ? new Set(d.lessons.filter((x) => typeof x === 'string')).size : 0;
+  return lessons * W.lesson + Math.min(nat(d.r), C.review) * W.review + nat(d.t) * W.read + Math.min(nat(d.s), C.speak) * W.speak;
+}
+/** Calendar level 0..3: 0 none, 1 some, 2 a practice day, 3 the activity goal reached. */
+export function activityLevel(points, goal = ACTIVITY.goal) {
+  const p = nat(points); return p <= 0 ? 0 : p >= Math.max(1, nat(goal)) ? 3 : p >= ACTIVITY.practicePoints ? 2 : 1;
+}
+/** '1 activity point', '12 activity points' */
+export const activityText = (n) => count(n, 'activity point');
 /** The audio catalogue counted from the five served manifests at build time. */
 export const AUDIO_CATALOGUE = Object.freeze({ ...TOTALS.audio });
 /** True when data/audio/summary.json agrees with the served manifests (total entries and synthetic entries). */

@@ -115,3 +115,27 @@ test('sacred listen is its own preview route', () => {
   assert.equal(tierOf(m.route), 'preview');
   assert.notEqual(matchRoute('#/listen').route.name, 'listen-shelf');
 });
+
+test('D-52: sacred listen titles are real Hebrew titles; the archive spellings stay in the credits only', async () => {
+  const { LISTEN_TITLES } = await import('../src/listen/catalog.js');
+  const garbled = /mimkoimoi|jifen|kawokores|rohe adre|katomor|yasoido|meator|birchos|jisgadal|adoin|oilom/i;
+  for (const row of LISTEN_ITEMS) {
+    assert.ok(LISTEN_TITLES[row.id], `${row.id} has a title record`);
+    assert.doesNotMatch(row.title, garbled, row.title);
+    assert.ok(row.translit && row.meaning, row.id);
+    if (row.kind !== 'demonstration') assert.ok(row.title.includes(row.translit), `${row.id}: title uses the transliteration`);
+    if (row.he !== null) {
+      assert.match(row.he, /^[֐-׿\s]+$/, `${row.id}: Hebrew only`);
+      assert.match(row.he, /[ְ-ּ]/, `${row.id}: Hebrew is pointed`);
+    } else {
+      assert.ok(row.ownerCheck, `${row.id}: a missing Hebrew title is flagged for the owner`);
+    }
+    assert.ok(row.sourceTitle, `${row.id}: archive name kept for credits`);
+  }
+  // the divine Name is never spelled out in a title
+  for (const row of LISTEN_ITEMS) assert.doesNotMatch(row.he || '', /יהוה|יְהוָה|יְהֹוָה/);
+  const mim = LISTEN_ITEMS.find((r) => r.id === 'pd_mimkoimoi_hu_jifen_1902');
+  assert.equal(mim.title, 'Mimkomo Hu Yifen (1902)');
+  assert.equal(mim.he, 'מִמְּקוֹמוֹ הוּא יִפֶן');
+  assert.equal(mim.sourceTitle, 'Mimkoimoi hu jifen (1902)');
+});

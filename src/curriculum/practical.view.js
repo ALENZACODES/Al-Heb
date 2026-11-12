@@ -209,17 +209,32 @@ async function renderSrs(ctx, unit, items, mountEl, { clipMap, onPageComplete } 
   show(next);
 }
 
+/** Speaking check (src/speak/check.js, loaded on demand): fills `slot` with a check button for `he`, and `intro` with one line
+ * saying whether this browser can score at all. ctx.speakCheck = {caps, Ctor} lets tests inject a recognizer. */
+function fillCheck(ctx, intro, slots) {
+  import("../speak/check.js").then((m) => {
+    const o = ctx?.speakCheck || {};
+    const caps = o.caps || undefined;
+    if (intro) intro.textContent = m.checkIntro(caps);
+    for (const [slot, he, id] of slots) { const c = m.checkControl(he, { ...o, caps, id }); if (c) slot.replaceChildren(c); }
+  }).catch(() => { /* the check is optional: the cards work without it */ });
+}
+
 async function speakBlock(ctx, setId, fallbackNote) {
   let set = null;
   try { set = await loadJson(`data/speak/sets/${setId}.json`); } catch { set = null; }
-  return el("section", { class: "alef-practical-speak" },
+  const intro = el("p", { class: "muted", "data-speak-check-intro": "" }), slots = [];
+  const section = el("section", { class: "alef-practical-speak" },
     el("h3", {}, "Speaking"),
     el("p", { class: "muted" }, fallbackNote || "Say each line aloud. These lines have not been checked by a native speaker yet."),
     el("p", {}, el("a", { href: "#/speak" }, "Open the Say it page"), " for more speaking practice."),
-    set ? el("ul", {}, ...(set.items || []).map((it) => el("li", { "data-speak": it.id },
+    set ? intro : null,
+    set ? el("ul", {}, ...(set.items || []).map((it) => { const slot = el("div", {}); if (typeof it.he === "string") slots.push([slot, it.he, it.id]); return el("li", { "data-speak": it.id },
       heText(it.he, "alef-he"), " ", el("span", { class: "muted" }, it.en || ""),
-      it.audioId ? playBtn(ctx, it.kind === "word" ? "word" : "line", it.audioId, it.en) : el("span", { class: "muted" }, " No recording yet."))))
+      it.audioId ? playBtn(ctx, it.kind === "word" ? "word" : "line", it.audioId, it.en) : el("span", { class: "muted" }, " No recording yet."), slot); }))
       : el("p", { class: "muted" }, "The speaking lines could not be loaded. Try again when you are online."));
+  if (set) fillCheck(ctx, intro, slots);
+  return section;
 }
 
 function listenList(ctx, unit, ids, items, clipMap) {
@@ -288,10 +303,13 @@ function grammarBlock(page, unit) {
 
 /** Speaking prompts: an English situation, then the line to say and its clip, shown on request. */
 function speakCards(ctx, page, kindOf) {
-  return el("section", { class: "alef-practical-speak" },
+  const intro = el("p", { class: "muted", "data-speak-check-intro": "" }), slots = [];
+  const section = el("section", { class: "alef-practical-speak" },
     el("h3", {}, "Speaking"),
     el("p", { class: "muted" }, "Say the line aloud first, then show it and listen."),
+    intro,
     el("ol", {}, ...page.speak.map((s) => {
+      const slot = el("div", {}); if (typeof s.he === "string") slots.push([slot, s.he, s.answer]);
       const answer = el("div", { class: "alef-practical-answer", hidden: "" },
         heText(s.he, "alef-he"), " ", el("span", { class: "alef-pron muted" }, s.translit), " ",
         el("span", { class: "muted" }, s.en), " ",
@@ -299,8 +317,10 @@ function speakCards(ctx, page, kindOf) {
       const show = el("button", { type: "button", class: "btn secondary", onclick: () => {
         answer.hidden = false; answer.removeAttribute?.("hidden"); show.hidden = true;
       } }, "Show the line");
-      return el("li", { "data-speak": s.answer }, el("p", {}, s.prompt), show, answer);
+      return el("li", { "data-speak": s.answer }, el("p", {}, s.prompt), show, answer, slot);
     })));
+  fillCheck(ctx, intro, slots);
+  return section;
 }
 
 /** Hear a clip, pick its meaning from the page's own lines. */

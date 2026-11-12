@@ -1,19 +1,18 @@
 // Points from real actions, the daily goal ring and the weekly summary. Pure: no DOM, no clock, no storage.
 // Points only go up. They never expire, are never taken away, cannot be bought and give no bonus for streak length.
+// The weights, caps and the per-day sum are src/lib/counts.js (activity points, M-01): this file only re-exports them.
 import { addDaysISO } from '../../src/curriculum/streak.js';
+import { ACTIVITY, activityPoints } from '../../src/lib/counts.js';
 import { cleanDay } from './store.js';
 
-export const WEIGHTS = Object.freeze({ lesson: 10, review: 1, read: 5, speak: 1 });
+export const WEIGHTS = ACTIVITY.weights;
 /** Per-day caps on the repeatable kinds, so grinding one easy thing does not run away with the day. */
-export const CAPS = Object.freeze({ review: 20, speak: 5 });
+export const CAPS = ACTIVITY.caps;
 /** A day with at least this many points counts as a practice day for the rhythm. */
-export const PRACTICE_POINTS = 5;
+export const PRACTICE_POINTS = ACTIVITY.practicePoints;
 
 /** @param {any} day a record day (see store.js cleanDay) */
-export function dayPoints(day) {
-  const d = cleanDay(day);
-  return d.lessons.length * WEIGHTS.lesson + Math.min(d.r, CAPS.review) * WEIGHTS.review + d.t * WEIGHTS.read + Math.min(d.s, CAPS.speak) * WEIGHTS.speak;
-}
+export const dayPoints = (day) => activityPoints(cleanDay(day));
 /** Points of one action kind, for the "+N points" line. */
 export const lessonPoints = () => WEIGHTS.lesson;
 

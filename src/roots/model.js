@@ -67,9 +67,11 @@ export function coverageText(c, browsable) {
   const list = Array.isArray(browsable) ? browsable : (browsable && Array.isArray(browsable.verbs) ? browsable.verbs : null);
   const wordList = `Roots are listed for ${c.verbsWithRoot} of ${c.verbs} verbs in the word list (${pct(c.verbsWithRoot, c.verbs)}%).`;
   let explorer = '';
-  if (list) {
-    const shown = list.length;
-    const withRoot = list.filter((v) => v && v.root).length;
+  // counts.js rootsCoverage() carries the explorer totals itself (explorer, explorerWithRoot); a list passed in is counted here
+  const fromCounts = !list && Number.isFinite(c.explorer);
+  if (list || fromCounts) {
+    const shown = fromCounts ? c.explorer : list.length;
+    const withRoot = fromCounts ? (c.explorerWithRoot || 0) : list.filter((v) => v && v.root).length;
     const leftOut = Number.isFinite(c.verbs) ? c.verbs - shown : null;
     explorer = leftOut > 0
       ? ` This explorer shows ${withRoot} of ${shown} verbs you can open here with a root listed (${leftOut} word-list verbs are not in this explorer, of the ${c.verbs} in the word list).`

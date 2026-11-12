@@ -82,6 +82,9 @@ const ON_DEMAND_FILES = new Set([
   // fetched on first open and runtime-cached (keeps first install under 3.95 MiB after the 11 November site-check fixes).
   'data/builder_symbols.json', 'src/recordcompare/recordcompare.view.js', 'src/roots/roots.view.js', 'src/nikkudfade/nikkudfade.view.js',
   'src/genderdrill/genderdrill.view.js', 'src/knownwords/knownwords.view.js', 'src/fsrs/scheduler.view.js',
+  // The Roots page model (11 KB): imported only by roots.view.js above, so it loads with the page (moved on 11 November when the
+  // Sacred Listen Hebrew titles and the shared Roots and activity-point counts landed; keeps first install under 3.95 MiB).
+  'src/roots/model.js',
   // Non-v0 data (the integration test's must-install list is the v0 offline contract; these are fetched on first use, then runtime-cached).
   'data/audio/english-glosses.json',
   // Book 63's clip record (37 KB): no screen reads it (the reader plays the page files directly), so it stays out of the first install.
@@ -115,6 +118,9 @@ const ON_DEMAND_FILES = new Set([
   'src/curriculum/review.view.js', 'src/curriculum/loanwords.view.js', 'src/curriculum/spotit.view.js', 'src/curriculum/checkpoint.view.js', 'src/curriculum/dialogues.view.js', 'src/curriculum/ladder.view.js', 'src/curriculum/fade.view.js', 'src/curriculum/gender.view.js', 'src/curriculum/scaffold.view.js',
   // Speak screen engine (preview route /speak, 58 KB): imported only by speak.view.js, which the router loads lazily; fetched on first open and runtime-cached (keeps first install under 3.95 MiB after the tracing pointer fix).
   'src/speak/speak.js',
+  // Speaking score (word-by-word scoring from the browser recognizer) and the small check control used by the practical units' speaking cards:
+  // imported by speak.js and loaded by practical.view.js on first use, runtime-cached.
+  'src/speak/score.js', 'src/speak/check.js',
   // Talk screen (preview route /talk): route code and its on-device phrase engine, fetched on first open and runtime-cached (keeps first install under 3.95 MiB). Its sentence pairs are data/talk/.
   'src/talk/talk.view.js', 'src/talk/talk.model.js', 'src/talk/engine.js', 'src/talk/data.js', 'src/talk/speech.js',
   // Talk language pack code (tokenizer, decoding loop, downloader, worker): fetched with the Talk screen, runtime-cached. The packs themselves

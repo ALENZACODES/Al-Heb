@@ -14,6 +14,10 @@ import { createRecorder, createSpeaker } from '../speak/recognizer.js';
 import { STORE_KEY, RECORD_MS, ANSWERS, ANSWER_LABEL, HONESTY, PRIVACY, listPairs, contrastsFor, normalizeState, recordAnswer, pickPairs, summaryText, describeError } from './model.js';
 
 export const DRAFT_NOTE = 'Draft and unreviewed: the pairs are made by rule from the word list and no Hebrew teacher has checked them.';
+// M-12: this page stays a self-check on purpose. A browser recognizer writes letters without vowel points, so it cannot separate
+// most of these pairs (same letters, different points or dagesh); for the rest (alef/ayin, het/khaf) it would pick the more common
+// word, not the sound you made. A score here would look objective without being so.
+export const NO_SCORE_WHY = 'Why there is no score here: your browser\'s speech recognizer writes Hebrew without vowel points, and in most of these pairs both words have the same letters, so it cannot tell them apart. In the others it would guess the more common word, not judge your sound. For a scored check of whole words and lines, use the Say it page.';
 const TRADS = [['israeli', 'Israeli'], ['sephardi', 'Sephardi'], ['ashkenazi', 'Ashkenazi']];
 
 /** @param {HTMLElement} root @param {any} ctx @returns {() => void} unmount */
@@ -24,7 +28,7 @@ export function mount(root, ctx) {
   const top = el('div', { class: 'rc-top' });
   const body = el('div', { class: 'rc-body' });
   const status = el('p', { role: 'status', 'aria-live': 'polite', class: 'rc-status' });
-  wrap.append(h1, el('p', { class: 'rc-draft' }, DRAFT_NOTE), el('p', { class: 'rc-honest' }, HONESTY), el('p', { class: 'rc-privacy' }, PRIVACY), top, body, status, el('footer', {}, sourcesLine(el)));
+  wrap.append(h1, el('p', { class: 'rc-draft' }, DRAFT_NOTE), el('p', { class: 'rc-honest' }, HONESTY), el('p', { class: 'rc-privacy' }, PRIVACY), el('p', { class: 'rc-noscore' }, NO_SCORE_WHY, ' ', el('a', { href: '#/speak' }, 'Open Say it')), top, body, status, el('footer', {}, sourcesLine(el)));
   root.append(wrap);
   const recorder = inj.recorder || createRecorder({ maxMs: untimedOn(ctx) ? 600000 : RECORD_MS + 10000 }) // the view stops at RECORD_MS itself so it keeps the result; the recorder's own limit is only a backstop;
   const speaker = inj.speaker || createSpeaker();

@@ -13,7 +13,7 @@ import { due as dueCards } from "./srs.js";
 import { buildChoiceQuestions } from "./exercises.session.js";
 import { mountQuiz, summaryNode, progressBar } from "./exercises.ui.js";
 import { wordAudioId } from "./progress.js";
-import { playButton } from "./audio-ui.js";
+import { playButton, slowButton } from "./audio-ui.js";
 import { saySound } from "../pronunciation/forTradition.js";
 import { hookLine, hookNode } from "../letters/hookline.js";
 import { passRuleText } from "./passmark.js";
@@ -70,14 +70,14 @@ export function mountChunkedLesson(root, ctx, lessonId) {
       const w = lesson.words[i];
       return el("li", { class: "alef-item" }, heText(w.he, "alef-he alef-word"),
         el("div", { class: "alef-item-body" }, el("span", {}, w.en), hookNode(el, hookLine(c.chain, congregation, { he: w.he }))),
-        el("div", { class: "alef-item-actions" }, playButton(ctx, "word", wordAudioId(lesson.id, i + 1), `Listen to ${w.en}`, note)));
+        el("div", { class: "alef-item-actions" }, playButton(ctx, "word", wordAudioId(lesson.id, i + 1), `Listen to ${w.en}`, note), slowButton(ctx, "word", wordAudioId(lesson.id, i + 1), `Listen to ${w.en}`, note)));
     };
     const lineItem = (id) => {
       const r = c.corpus.get(id);
       return el("li", { class: "alef-item alef-line" },
         r ? heText(r.he.split("\n")[0], "alef-he alef-word") : el("span", { class: "muted" }, `(${id}: text not in the corpus yet)`),
         el("div", { class: "alef-item-body" }, el("span", {}, r?.title || id), el("div", { class: "muted" }, r?.ref || "")),
-        el("div", { class: "alef-item-actions" }, r ? playButton(ctx, "line", r.lines > 1 ? `${id}-l1` : id, `Listen to ${r.title}`, note) : null));
+        el("div", { class: "alef-item-actions" }, r ? playButton(ctx, "line", r.lines > 1 ? `${id}-l1` : id, `Listen to ${r.title}`, note) : null, r ? slowButton(ctx, "line", r.lines > 1 ? `${id}-l1` : id, `Listen to ${r.title}`, note) : null));
     };
     const groupOf = (items, t) => items.filter((x) => x.t === t);
     const teachNodes = (chunk) => {

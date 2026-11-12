@@ -117,7 +117,10 @@ test('view: draft note, coverage, labelled 44px controls, root opens with verb t
   const root = new N('main'); const store = memStore();
   const un = V.mount(root, { store, rootsData: data }); await tick();
   assert.match(root.textContent, /Draft and unreviewed/);
-  assert.ok(root.textContent.includes(M.coverageText(data.families.coverage, data.verbs.verbs)));
+  // M-01: the page's numbers come from src/lib/counts.js, not from the (here deliberately partial) data it was handed
+  const { rootsCoverage } = await import('../src/lib/counts.js');
+  assert.ok(root.textContent.includes(M.coverageText(rootsCoverage())));
+  assert.ok(!root.textContent.includes(`of ${data.verbs.verbs.length} verbs you can open here`));
   for (const b of root.all((n) => n.tag === 'button')) assert.match(b.attrs.style || '', /min-height:44px/);
   assert.ok(root.queryAll('label')[0].attrs.for === 'rt-q' && root.queryAll('#rt-q').length === 1);
   const f = data.families.families.find((x) => x.words.some((w) => w.forms));

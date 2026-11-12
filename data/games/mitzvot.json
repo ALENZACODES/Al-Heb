@@ -47,7 +47,7 @@
   { "he": "וְאָהַבְתָּ לְרֵעֲךָ", "translit": "ve-ahavta le-re'acha", "en": "Love your neighbour as yourself", "kind": "positive", "source": "Leviticus 19:18", "area": "people" },
   { "he": "הַכְנָסַת אוֹרְחִים", "translit": "hachnasat orchim", "en": "Love the stranger", "kind": "positive", "source": "Deuteronomy 10:19", "area": "people" },
   { "he": "בִּרְכַּת הַמָּזוֹן", "translit": "birkat ha-mazon", "en": "Bless after a meal with bread", "kind": "positive", "source": "Deuteronomy 8:10", "area": "food" },
-  { "he": "שְׂמִיטָה", "translit": "shmitah", "en": "Let the land rest in the seventh year", "kind": "positive", "source": "Exodus 23:11", "area": "land" },
+  { "he": "שְׁמִטָּה", "translit": "shmitah", "en": "Let the land rest in the seventh year", "kind": "positive", "source": "Exodus 23:11", "area": "land" },
   { "he": "לֹא תִרְצָח", "translit": "lo tirtzach", "en": "Do not murder", "kind": "negative", "source": "Exodus 20:13", "area": "people" },
   { "he": "לֹא תִגְנֹב", "translit": "lo tignov", "en": "Do not steal", "kind": "negative", "source": "Exodus 20:13", "area": "justice" },
   { "he": "לֹא תַעֲנֶה עֵד שָׁקֶר", "translit": "lo ta'aneh ed shaker", "en": "Do not give false testimony", "kind": "negative", "source": "Exodus 20:13", "area": "justice" },

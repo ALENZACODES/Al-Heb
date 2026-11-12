@@ -13,6 +13,9 @@
  * Tabs are links like #/speak?tab=read and also work from #/speak/read (read from ctx.query or location.hash), so no router
  * entry is needed for them.
  * Hebrew comes only from data/speak/ (built from data/vocab/words.json); nothing here invents Hebrew.
+ * Scoring (src/speak/score.js): where the browser has speech recognition, each printed word is marked heard right, close or not
+ * heard and the score is the share of words recognized (letters only: it does not measure accent or vowels). Where it has none,
+ * the screen says so and offers a self-check (record, play back next to the model, mark it yourself), which is never scored.
  * The browser recognizer is UNVERIFIED for Hebrew: Aleph has not measured it; its verdicts are hints. Nothing is uploaded by
  * Aleph; the browser's own recognizer may send audio to its vendor, and the screen says so before the first use.
  * Module pattern: mount(root, ctx) -> unmount. Store key speak.v1. ctx extras for tests: ctx.clock {now}, ctx.rng,
@@ -23,8 +26,9 @@ import { count } from '../shell/plural.js';
 import { uiEnglish } from '../shell/names.js';
 import { sourcesLine } from '../shell/sources.js';
 import { loadSetsIndex, loadSet, loadPairs, loadPrayers, loadTraditionPairs } from './loader.js';
-import { STORE_KEY, MODES, capabilities, pickMode, compare, usableItems, coerceState, recordAttempt, setSummary, soundReport, historyRows, dailyTotals, spokenPointed, wordsOf, compareLine, missedWordsReport } from './model.js';
+import { STORE_KEY, MODES, capabilities, pickMode, usableItems, coerceState, recordAttempt, soundReport, historyRows, dailyTotals, spokenPointed, missedWordsReport } from './model.js';
 import { createRecognizer, createRecorder, createSpeaker } from './recognizer.js';
+import { scoreSpeech, scoreLine, plainWords, scoringStatus, isFatal, splitSummary, summaryText, SCORE_MEANS, SELF_CHECK_NOTE, STATUS_TEXT } from './score.js';
 import { contrastById, drillQueue, drillQuestion } from './pairs.js';
 import { loadDailyCard, dayKeyLocal, DAILY_PREFIX } from './daily.js';
 import { respell, congregationOf, audioNote, settingLine, LABELS as TRAD_NAMES } from '../pronunciation/forTradition.js';
@@ -74,6 +78,8 @@ const CSS = `
 .alef-speak .sk-line{line-height:1.8;font-size:2rem}
 .alef-speak .w-miss{text-decoration:underline wavy;text-underline-offset:.25em;font-weight:700}
 .alef-speak .w-near{text-decoration:underline dotted;text-underline-offset:.25em}
+.alef-speak .sk-words{list-style:none;margin:.5rem 0;padding:0;display:grid;gap:.25rem}
+.alef-speak .sk-words .alef-he{font-size:1.4rem}
 @media (forced-colors:active){.alef-speak .w-miss,.alef-speak .w-near{text-decoration-color:CanvasText}}
 .alef-speak footer{margin-block-start:1.5rem;font-size:.85rem;color:var(--muted,#555)}
 `;
@@ -94,6 +100,12 @@ const ERRORS = {
   'language-not-supported': 'This browser\'s recognizer does not offer Hebrew.',
 };
 const errorText = (e) => ERRORS[e] || `The browser reported: ${e}.`;
+export const SCORE_SHORT = 'The score counts words the recognizer wrote back as printed; it does not measure your accent or vowels. A hint from the browser\'s recognizer, which is unverified for Hebrew.';
+/** Each printed word with its status in words (never colour alone): heard right, close (with what was heard) or not heard. */
+function wordList(r, id) {
+  return el('ul', { class: 'sk-words', id, 'aria-label': 'Word by word' }, r.words.map((w) => el('li', { 'data-status': w.status, class: w.status === 'hit' ? null : `w-${w.status}` },
+    heText(w.word), ` - ${STATUS_TEXT[w.status]}`, w.status === 'near' && w.heard ? el('span', {}, ' (heard ', heText(w.heard), ')') : '')));
+}
 
 /** @param {HTMLElement} root @param {any} ctx @returns {() => void} unmount */
 export function mount(root, ctx) {
@@ -162,7 +174,7 @@ export function mount(root, ctx) {
   // ---- Say it ---------------------------------------------------------------------------------------------------------
   function capsText() {
     const parts = [];
-    parts.push(caps.recognition ? 'Speech recognition: on.' : 'Speech recognition: not available in this browser, so the check is by ear.');
+    parts.push(scoringStatus(caps).text);
     parts.push(caps.recording ? 'Recording: available.' : 'Recording: not available here.');
     parts.push(caps.synthesis ? (caps.hebrewVoice === false ? 'Model voice: this browser lists no Hebrew voice, so "Listen" may stay silent or read with a wrong accent.' : 'Listen plays the word in Ari\'s or Noa\'s voice.') : 'Model voice: this browser has no speech synthesis; "Listen" will do nothing until clips are recorded.');
     return parts.join(' ');
@@ -193,7 +205,8 @@ export function mount(root, ctx) {
       el('label', { for: 'speak-set' }, 'Set'),
       sel,
       fs,
-      el('p', { class: 'muted' }, caps.recognition ? RECOGNIZER_NOTE : 'With no recognizer, you judge yourself: listen, say it, and be honest. That is still good practice.'),
+      caps.recognition ? el('p', { class: 'muted', id: 'speak-score-means' }, SCORE_MEANS) : null,
+      el('p', { class: 'muted' }, caps.recognition ? RECOGNIZER_NOTE : SELF_CHECK_NOTE),
       caps.recording ? el('p', { class: 'muted' }, RECORD_NOTE) : null,
       el('div', { class: 'sk-row' }, el('button', { type: 'button', class: 'btn', id: 'speak-start', onclick: start }, 'Start')),
     );
@@ -272,17 +285,21 @@ export function mount(root, ctx) {
         if (!alive) return;
         mic.removeAttribute?.('disabled'); mic.textContent = 'Say it again (microphone)';
         if (!r.ok) {
-          showVerdict(errorText(r.error), r.error === 'not-allowed' || r.error === 'unsupported' || r.error === 'language-not-supported' || r.error === 'service-not-allowed' ? el('div', { class: 'sk-opts' }, el('p', {}, 'Judge it yourself instead:'), ...selfButtons()) : null);
+          if (isFatal(r.error)) { // scoring cannot work here now: say so and offer the self-check, never a score
+            const instead = caps.recording && r.error !== 'audio-capture' ? el('button', { type: 'button', class: 'btn secondary', id: 'speak-record-instead', onclick: () => { mode = 'record'; question(); } }, 'Record myself instead') : null;
+            showVerdict(errorText(r.error), el('div', { class: 'sk-opts' }, el('p', { id: 'speak-noscore' }, 'No score is possible here right now. Check it yourself instead (not scored):'), instead, ...selfButtons()));
+          } else showVerdict(errorText(r.error));
           return;
         }
-        const c = compare(item.he, r.alternatives);
-        const heardNode = el('p', {}, 'The recognizer wrote: ', heText(c.heard));
-        const text = c.outcome === 'match' ? 'That matched the target.' : c.outcome === 'close' ? `Close: ${Math.round(c.score * 100)}% of the letters matched.` : 'That did not match. Listen once more and try again, or judge it yourself.';
-        showVerdict(text, el('div', {}, heardNode, el('p', { class: 'muted' }, 'A hint from the browser\'s recognizer, which is unverified for Hebrew.'), c.outcome === 'match' ? null : el('div', { class: 'sk-opts' }, ...selfButtons('You decided: '))));
+        const c = scoreSpeech(item.he, r.alternatives);
+        const lead = c.outcome === 'match' ? 'That matched the target.' : c.outcome === 'close' ? 'Close.' : 'That did not match. Listen once more and try again, or judge it yourself.';
+        const text = `${lead} ${scoreLine(c)}`;
+        showVerdict(text, el('div', {}, wordList(c, 'speak-words'), el('p', {}, 'The recognizer wrote: ', heText(c.heard)), el('p', { class: 'muted' }, SCORE_SHORT), c.outcome === 'match' ? null : el('div', { class: 'sk-opts' }, el('p', {}, 'Or mark it yourself (not scored):'), ...selfButtons('You decided: '))));
         if (c.outcome === 'match') settle({ outcome: 'match', score: c.score, heard: c.heard });
         else { // keep the best attempt; the learner may try again or self-judge
           const prev = results.find((x) => x.item === item);
-          if (!prev) { results.push({ item, outcome: c.outcome, score: c.score, heard: c.heard, provisional: true }); }
+          if (!prev) results.push({ item, outcome: c.outcome, score: c.score, heard: c.heard, provisional: true });
+          else if (prev.provisional && c.score > (prev.score ?? -1)) Object.assign(prev, { outcome: c.outcome, score: c.score, heard: c.heard });
           await record({ kind: 'say', set: set.id, itemId: item.id, he: item.he, mode: m, outcome: c.outcome, score: c.score, heard: c.heard });
           nextRow.replaceChildren(next);
         }
@@ -303,20 +320,22 @@ export function mount(root, ctx) {
           if (!r.ok) { showVerdict(errorText(r.error)); return; }
           if (player) player.remove?.();
           player = el('audio', { controls: true, src: r.url, 'aria-label': 'Your recording' });
-          showVerdict(`Recorded ${Math.round(r.ms / 100) / 10} seconds. Play it back, then decide.`, el('div', {}, player, el('p', { class: 'muted' }, 'You grade this one yourself — self-check practice, not a grade.'), el('div', { class: 'sk-opts' }, ...selfButtons())));
+          const pair = silent() ? null : el('button', { type: 'button', class: 'btn secondary', id: 'speak-model-then-mine', onclick: async () => { await playModel(item.he, item.audioId, null); try { await player?.play?.(); } catch { /* the learner can press play */ } } }, 'Play the model, then mine');
+          showVerdict(`Recorded ${Math.round(r.ms / 100) / 10} seconds. Play it back next to the model, then decide.`, el('div', {}, player, pair, el('p', { class: 'muted' }, 'You grade this one yourself — self-check practice, not a grade.'), el('div', { class: 'sk-opts' }, ...selfButtons())));
         }
       } }, 'Record');
       attemptButtons.push(rec); area.append(rec);
     } else {
       area.append(...selfButtons(), el('p', { class: 'muted' }, 'No microphone in this mode: you mark it yourself. Practice on your own — no grading.'));
     }
+    const noScore = m === 'asr' ? null : el('p', { class: 'muted', id: 'speak-noscore' }, caps.recognition ? 'You chose to check this yourself, so there is no score for it.' : scoringStatus(caps).text);
     setBody(
       el('p', { class: 'muted' }, `${set.title}: ${n} of ${items.length}`),
       el('h2', { tabindex: '-1', id: 'speak-q' }, silent() ? 'Say it, or skip it' : m === 'self' ? 'Listen, then say it out loud' : 'Listen, then say it'),
       el('div', { class: 'sk-he' }, heText(item.he)),
       el('p', { class: 'sk-sub' }, el('span', { lang: 'he-Latn' }, (respell(item.he, congregationOf(ctx?.settings)) || item.translit) || ''), (respell(item.he, congregationOf(ctx?.settings)) || item.translit) ? ' - ' : '', uiEnglish(ctx, item.en)),
       el('div', { class: 'sk-row' }, listen),
-      area, verdict, nextRow,
+      noScore, area, verdict, nextRow,
       el('div', { class: 'sk-row' }, skip, el('button', { type: 'button', class: 'btn secondary', id: 'speak-finish', onclick: () => end() }, 'Finish now')),
     );
     say('');
@@ -327,12 +346,13 @@ export function mount(root, ctx) {
 
   function end() {
     recognizer.stop(); recorder.dispose();
-    const sum = set ? setSummary(state.attempts, set.id) : { tried: 0, good: 0, close: 0, missed: 0 };
+    const round = splitSummary(results.map((r) => ({ outcome: r.outcome, score: r.score })));
+    const all = splitSummary(state.attempts.filter((a) => a.kind === 'say' && set && a.set === set.id), { byItem: true });
     const answered = results.filter((r) => r.outcome !== 'skip').length;
     const kids = [el('h2', {}, answered ? 'Set done' : 'Nothing tried this time')];
-    if (answered) kids.push(el('p', {}, `You tried ${count(answered, 'item')} this round. Across every round of "${set.title}": ${sum.good} said or matched, ${sum.close} close, ${sum.missed} not yet, of ${sum.tried} tried.`));
+    if (answered) kids.push(el('p', { id: 'speak-round' }, `You tried ${count(answered, 'item')} this round. ${summaryText(round)}`), el('p', { id: 'speak-all' }, `Across every round of "${set.title}" (your last try at each item): ${summaryText(all, { average: false })}`));
     else kids.push(el('p', {}, 'Nothing was recorded, so nothing changed.'));
-    kids.push(el('p', { class: 'muted' }, 'A "match" means the browser\'s recognizer wrote the same letters, not that a teacher heard you.'));
+    kids.push(el('p', { class: 'muted' }, 'A "match" means the browser\'s recognizer wrote the same letters, not that a teacher heard you. The score counts words recognized; it does not measure accent.'));
     kids.push(el('div', { class: 'sk-row' },
       el('button', { type: 'button', class: 'btn', id: 'speak-again', onclick: renderStart }, 'Another set'),
       el('button', { type: 'button', class: 'btn secondary', id: 'speak-to-drills', onclick: () => go('drills') }, 'Listening drills'),
@@ -541,6 +561,7 @@ export function mount(root, ctx) {
       el('p', { class: 'draft-flag', role: 'note' }, PRAYER_NOTE),
       read ? el('p', { class: 'muted' }, TRADITION_NOTE) : null,
       read && caps.recognition ? el('p', { class: 'muted' }, RECOGNIZER_NOTE) : null,
+      read ? el('p', { class: 'muted', id: 'read-score-means' }, caps.recognition ? SCORE_MEANS : scoringStatus(caps).text) : null,
       el('label', { for: 'speak-prayer' }, 'Prayer'), sel, fs,
       el('div', { class: 'sk-row' }, el('button', { type: 'button', class: 'btn', id: `${kind}-start`, onclick: () => startPrayer(kind) }, 'Start')));
     say('');
@@ -559,7 +580,7 @@ export function mount(root, ctx) {
   }
   function prayerLine(kind) {
     const line = rLines[ri], m = pickMode(caps, mode), n = ri + 1, last = n >= rLines.length;
-    const tokens = line.he.split(/\s+/).filter(Boolean), per = tokens.map((t) => wordsOf(t).length);
+    const tokens = line.he.split(/\s+/).filter(Boolean), per = tokens.map((t) => plainWords(t).length);
     const lineBox = el('div', { class: 'sk-he sk-line', id: `${kind}-line` });
     const draw = (cmp) => {
       let k = 0; const spans = [];
@@ -590,18 +611,19 @@ export function mount(root, ctx) {
           const r = await recognizer.listen({ timeoutMs: 20000 });
           if (!alive) return;
           mic.removeAttribute?.('disabled'); mic.textContent = 'Read it again (microphone)';
-          if (!r.ok) { showVerdict(errorText(r.error), el('div', { class: 'sk-opts' }, el('p', {}, 'Judge it yourself instead:'), ...selfBtns())); return; }
-          const cmp = compareLine(line.he, r.alternatives);
+          if (!r.ok) { showVerdict(errorText(r.error), el('div', { class: 'sk-opts' }, el('p', {}, isFatal(r.error) ? 'No score is possible here right now. Judge it yourself instead (not scored):' : 'Judge it yourself instead (not scored):'), ...selfBtns())); return; }
+          const cmp = scoreSpeech(line.he, r.alternatives);
           draw(cmp);
           const missed = tokens.filter((t, i) => { let k = per.slice(0, i).reduce((a, b) => a + b, 0); return cmp.words.slice(k, k + per[i]).some((w) => w.status === 'miss'); });
-          const text = cmp.outcome === 'match' ? 'Every word matched.' : `${cmp.hit} of ${cmp.words.length} words matched${cmp.near ? `, ${cmp.near} close` : ''}.`;
+          const text = cmp.outcome === 'match' ? `Every word matched. ${scoreLine(cmp)}` : scoreLine(cmp);
           const extra = el('div', {},
             missed.length ? el('p', { id: 'read-missed' }, 'Not heard: ', missed.flatMap((t) => [heText(t), ' '])) : null,
-            el('p', { class: 'muted' }, 'Underlined words were not heard as written (wavy = not heard, dotted = close). A hint from the browser\'s recognizer, which is unverified for Hebrew.'),
+            el('p', { class: 'muted' }, 'Underlined words were not heard as written (wavy = not heard, dotted = close).'),
+            el('p', { class: 'muted' }, SCORE_SHORT),
             cmp.outcome === 'match' ? null : el('div', { class: 'sk-opts' }, ...selfBtns('You decided: ')));
           showVerdict(text, extra);
-          rres.push({ outcome: cmp.outcome, hit: cmp.hit, total: cmp.words.length });
-          await record({ kind: 'read', ...base, mode: 'asr', outcome: cmp.outcome, score: cmp.score, heard: cmp.heard, missedWords: cmp.words.filter((w) => w.status === 'miss').map((w) => w.word) });
+          rres.push({ outcome: cmp.outcome, hit: cmp.hit, total: cmp.words.length, score: cmp.score });
+          await record({ kind: 'read', ...base, mode: 'asr', outcome: cmp.outcome, score: cmp.score, heard: cmp.heard, missedWords: cmp.words.filter((w) => w.status === 'miss').map((w) => w.plain) });
           nextRow.replaceChildren(next); if (cmp.outcome === 'match') focusNode(next);
         });
         controls.push(mic);
@@ -664,7 +686,7 @@ export function mount(root, ctx) {
     if (!tried) kids.push(el('p', {}, 'Nothing was recorded, so nothing changed.'));
     else if (kind === 'read') {
       const full = rres.filter((r) => r.outcome === 'match' || r.outcome === 'said').length;
-      kids.push(el('p', { id: 'read-summary' }, `${prayer.title}: ${count(tried, 'line')} tried, ${full} read in full (matched or marked as read).`));
+      kids.push(el('p', { id: 'read-summary' }, `${prayer.title}: ${count(tried, 'line')} tried, ${full} read in full (matched or marked as read). ${summaryText(splitSummary(rres))}`));
       kids.push(el('p', { class: 'muted' }, 'A "match" means the recognizer wrote every word as printed, not that a teacher heard you.'));
     } else {
       const avg = rres.reduce((a, r) => a + r.rating, 0) / tried;

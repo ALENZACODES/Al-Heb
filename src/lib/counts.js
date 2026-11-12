@@ -147,14 +147,28 @@ export function reviewsDue(cards, now = Date.now()) {
 }
 /** Dictionary words due in their own review (srs.vocab), shown on the Dictionary. */
 export const wordsDue = (vocab, now = Date.now()) => reviewsDue(vocab, now);
-/** Different review cards (lesson cards and dictionary words) last reviewed in the 7 days ending today. A floor: a card keeps only its latest review. */
+/** The local days a card was graded: its review-day history (srs.js keeps up to 8), or, for a card graded before that history
+ * was kept, the day of its latest review only. A later review only adds a day, so counts built on this never drop. */
+export function reviewDays(c) {
+  if (Array.isArray(c?.days) && c.days.length) return c.days;
+  const n = toMs(c?.lastReview); return Number.isFinite(n) && n > 0 ? [dayKey(n)] : [];
+}
+/** Different review cards (lesson cards and dictionary words) graded on any day of the 7 days ending today. */
 export function reviewCardsThisWeek(cards, vocab, now = Date.now()) {
   const today = dayKey(now), from = addDaysISO(today, -6);
-  return [...cardList(cards), ...cardList(vocab)].filter((c) => { const n = toMs(c.lastReview); if (!Number.isFinite(n) || n <= 0) return false; const k = dayKey(n); return k >= from && k <= today; }).length;
+  return [...cardList(cards), ...cardList(vocab)].filter((c) => reviewDays(c).some((k) => k >= from && k <= today)).length;
 }
-/** Lesson cards rated today. */
+/** Lesson cards graded today. */
 export function reviewedToday(cards, now = Date.now()) {
-  const today = dayKey(now); return cardList(cards).filter((c) => { const n = toMs(c.lastReview); return Number.isFinite(n) && n > 0 && dayKey(n) === today; }).length;
+  const today = dayKey(now); return cardList(cards).filter((c) => reviewDays(c).includes(today)).length;
+}
+/** Words first graded in the 7 days ending today. exact: cards that carry their first-review time; atLeast adds cards graded
+ * before that was kept whose only review so far falls in the week (a floor), so the line says "at least" only when it has to. */
+export function newWordsThisWeek(entries, now = Date.now()) {
+  const today = dayKey(now), from = addDaysISO(today, -6), inWeek = (t) => { const n = toMs(t); if (!Number.isFinite(n) || n <= 0) return false; const k = dayKey(n); return k >= from && k <= today; };
+  let exact = 0, legacy = 0;
+  for (const c of entries) { if (!c) continue; if (c.firstReview != null) { if (inWeek(c.firstReview)) exact++; } else if (c.reps === 1 && inWeek(c.lastReview)) legacy++; }
+  return { count: exact + legacy, atLeast: legacy > 0 };
 }
 
 // ---------- gems and hearts (retention.v1) ----------

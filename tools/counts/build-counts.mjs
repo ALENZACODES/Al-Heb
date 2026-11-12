@@ -28,7 +28,11 @@ export async function computeTotals(root = ROOT) {
   const track = (t) => lessons.filter((l) => l.track === t).length;
   const classTrack = rd(root, 'data/curriculum/class-track.json');
   const core = new Set((classTrack.weeks || []).flatMap((w) => w.lessons || [])).size;
-  const vocab = VOCAB_TIERS.flatMap((t) => list(rd(root, `data/vocab/packs/vocab5k-tier-${t}.json`), 'entries', 'words'));
+  const allVocab = VOCAB_TIERS.flatMap((t) => list(rd(root, `data/vocab/packs/vocab5k-tier-${t}.json`), 'entries', 'words'));
+  // Hidden records (gloss withheld pending review; src/vocab/loader.js isHiddenRecord) are not shown on the Dictionary, so they are
+  // not counted as its words either (M-07, 12 Nov site check: the page showed 4,992 against a title of 4,996).
+  const isHidden = (r) => { const f = r && r.flags; return Array.isArray(f) ? f.includes('hidden') : !!(f && typeof f === 'object' && f.hidden === true); };
+  const vocab = allVocab.filter((r) => !isHidden(r)), hiddenCount = allVocab.length - vocab.length;
   const words = vocab.filter((e) => !e.isForm);
   const fam = rd(root, 'data/roots/families.json').coverage || {};
   const verbs = rd(root, 'data/roots/verbs.json');
@@ -40,10 +44,17 @@ export async function computeTotals(root = ROOT) {
     audio.files[rel.replace('data/audio/', '')] = { entries: rows.length, synthetic: syn };
     audio.total += rows.length; audio.synthetic += syn; audio.recorded += rec;
   }
+  // The audio statement's figures (C-02, 12 Nov site check): copied from data/audio/summary.json at build time, so the app reads
+  // one source (this generated file) instead of fetching the summary at run time. tests/audio.truth.test.js keeps the summary
+  // reconciled with the manifests, so these and the manifest totals above agree.
+  if (fs.existsSync(path.join(root, 'data/audio/summary.json'))) {
+    const sm = rd(root, 'data/audio/summary.json');
+    audio.summary = Object.fromEntries(['total', 'recorded', 'tts', 'spoken', 'kinds', 'extra', 'playsIsraeli', 'viaOther', 'missing'].filter((k) => sm[k] !== undefined).map((k) => [k, sm[k]]));
+  }
   return {
     books: list(rd(root, 'data/books/index.json'), 'books').length,
     bookPictured: list(rd(root, 'data/books/index.json'), 'books').reduce((a, b) => a + (Number(b.picturedPages) || 0), 0),
-    dictionary: { entries: vocab.length, words: words.length, forms: vocab.length - words.length, addable: words.filter((e) => !hasTag(e, 'rare-sense')).length },
+    dictionary: { entries: vocab.length, words: words.length, forms: vocab.length - words.length, addable: words.filter((e) => !hasTag(e, 'rare-sense')).length, hidden: hiddenCount },
     firstWords: list(rd(root, 'data/games/firstwords.json'), 'words').length,
     buildWords: list(rd(root, 'data/builder_words.json'), 'words').length,
     lessons: { core, reading: track('read'), israel: track('israel'), all: lessons.length },

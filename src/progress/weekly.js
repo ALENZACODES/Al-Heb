@@ -14,7 +14,7 @@ import { weekStrip, projectStreak, GOAL_SECONDS } from '../curriculum/streak.js'
 import { cleanState as cleanTimedReads } from '../timedread/model.js';
 import { coerceState } from '../speak/model.js';
 import { dayKey } from './model.js';
-import { reviewCardsThisWeek } from '../lib/counts.js';
+import { reviewCardsThisWeek, newWordsThisWeek } from '../lib/counts.js';
 
 export const WEEKS = 8;
 const DAY = 86400000;
@@ -56,7 +56,7 @@ export function weeklySummary(s, now) {
 
   const inWeek = (t) => { const a = daysAgo(t, today); return a !== null && a < 7; };
   const reviewed = { length: reviewCardsThisWeek(s.cards, s.vocab, now) }; // src/lib/counts.js: the number the Daily page shows too
-  const newWords = [...Object.entries(s.vocab), ...Object.entries(s.cards).filter(([id]) => /^word:/.test(id))].filter(([, c]) => c && c.reps === 1 && c.lastReview && inWeek(c.lastReview));
+  const newWords = newWordsThisWeek([...Object.values(s.vocab), ...Object.entries(s.cards).filter(([id]) => /^word:/.test(id)).map(([, c]) => c)], now); // only goes up during the week
   const reads = cleanTimedReads(s.timedRead).reads.filter((r) => inWeek(r.at)).length;
   const lessons = Object.values(s.completed).filter(inWeek).length;
 
@@ -66,7 +66,7 @@ export function weeklySummary(s, now) {
   return {
     from: strip[0].date, to: today, days: strip,
     engagedDays: done.length, todaySeconds: proj.todaySeconds || 0, minutesAtLeast: Math.floor(seconds / 60),
-    newWordsAtLeast: newWords.length, cardsReviewed: reviewed.length, reads, lessons,
+    newWordsAtLeast: newWords.count, newWordsExact: !newWords.atLeast, cardsReviewed: reviewed.length, reads, lessons,
     streak: { count: proj.count, best: proj.best, restToday: proj.restToday },
     rest, series, seriesTotal: series.reduce((a, b) => a + b, 0),
   };
@@ -79,7 +79,7 @@ export function weeklySentences(w) {
   return {
     minutes: `At least ${n(w.minutesAtLeast, 'minute', 'minutes')} engaged`,
     days: `${w.engagedDays} of 7 days reached the daily goal`,
-    words: `At least ${n(w.newWordsAtLeast, 'new word', 'new words')} first reviewed`,
+    words: `${w.newWordsExact === false ? 'At least ' : ''}${n(w.newWordsAtLeast, 'new word', 'new words')} first reviewed`,
     reviews: `${n(w.cardsReviewed, 'card', 'cards')} reviewed`,
     reads: `${n(w.reads, 'timed read', 'timed reads')} (self-reported)`,
     streak: `Streak: ${n(w.streak.count, 'day', 'days')}${w.streak.restToday ? ', resting today' : ''}`,

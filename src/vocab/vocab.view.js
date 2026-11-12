@@ -22,7 +22,7 @@ import { DICTIONARY, fmt } from '../lib/counts.js';
 /** The browse total, the same number as the page title (src/lib/counts.js, counted from the served word packs). */
 export const ALL_WORDS_LABEL = `All ${fmt(DICTIONARY.words)} words`;
 /** What the title's number counts, said once on the page (M-01): entries, head-words, word forms, and what "Add" can add. */
-export const SCOPE_NOTE = `The list holds ${fmt(DICTIONARY.entries)} entries: ${fmt(DICTIONARY.words)} words, shown below, and ${fmt(DICTIONARY.forms)} word forms, shown when you tick "Show word forms". ${fmt(DICTIONARY.words - DICTIONARY.addable)} rare-sense words are left out of "Add all" (each card can still add its own word).`;
+export const SCOPE_NOTE = `The list holds ${fmt(DICTIONARY.entries)} entries: ${fmt(DICTIONARY.words)} words, shown below, and ${fmt(DICTIONARY.forms)} word forms, shown when you tick "Show word forms". ${fmt(DICTIONARY.words - DICTIONARY.addable)} rare-sense words are left out of "Add all" (each card can still add its own word).${DICTIONARY.hidden ? ` ${fmt(DICTIONARY.hidden)} more ${DICTIONARY.hidden === 1 ? 'entry is' : 'entries are'} hidden while ${DICTIONARY.hidden === 1 ? 'its meaning is' : 'their meanings are'} checked.` : ''}`;
 import { NO_AUDIO, DEVICE_LABEL } from '../shell/audio-access.js';
 import { isAudioFree } from '../shell/audiofree.js';
 import { uiEnglish } from '../shell/names.js';
@@ -356,7 +356,7 @@ export function mount(root, ctx) {
     };
     const statusText = () => {
       const q = sel.query.trim();
-      if (!q) return `Showing ${shown} of ${ranked.length} word${ranked.length === 1 ? '' : 's'}.`;
+      if (!q) return `Showing ${shown} of ${ranked.length === DICTIONARY.words ? 'all ' : ''}${fmt(ranked.length)} word${ranked.length === 1 ? '' : 's'}${ranked.length === DICTIONARY.words ? '' : ' in this view'}.`;
       if (!ranked.length && !hiddenNoise) return 'No words match. Try fewer letters, or another tier or topic.';
       const aliasN = ranked.filter((x) => x.band === BAND.alias).length;
       const glossN = ranked.filter((x) => x.band != null && x.band >= BAND.gloss && x.band <= BAND.sense).length;

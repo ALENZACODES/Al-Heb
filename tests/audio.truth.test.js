@@ -22,6 +22,8 @@ const all = [json('data/audio/manifest.json'), json('data/audio/manifest-kind-wo
 
 const mp3sUnder = (dir) => { const out = []; const walk = (d) => { if (!existsSync(join(root, d))) return; for (const n of readdirSync(join(root, d))) { const p = `${d}/${n}`; if (statSync(join(root, p)).isDirectory()) walk(p); else if (n.endsWith('.mp3')) out.push(p); } }; walk(dir); return out; };
 
+import { TOTALS } from '../src/lib/counts.generated.js';
+
 test('summary.json matches the manifests: total, recorded, synthetic and per-kind counts', () => {
   assert.equal(summary.total, all.length);
   assert.equal(summary.recorded, all.filter((e) => e.status === 'recorded').length);
@@ -111,15 +113,17 @@ test('no source file types the clip count into a sentence', () => {
   assert.deepEqual(bad, []);
 });
 
-test('audioTruthNode: drawn with no number, then filled from the fetched summary; a failed fetch keeps the no-number wording', async () => {
+test('audioTruthNode: one source — the build-time totals (counts.generated.js, copied from summary.json) fill it at once, with no fetch (C-02); the fetch is only a fallback', async () => {
   const h = (tag, attrs = {}, ...kids) => ({ tag, attrs, textContent: kids.join('') });
-  const ok = async (u) => { assert.equal(u, 'data/audio/summary.json'); return { ok: true, json: async () => ({ total: 50, recorded: 0, tts: 4 }) }; };
-  const n = audioTruthNode(h, { fetchFn: ok });
-  assert.match(n.textContent, /could not be checked right now/); assert.doesNotMatch(n.textContent, /\d/);
+  let fetched = 0;
+  const n = audioTruthNode(h, { fetchFn: async () => { fetched++; return { ok: false }; } });
+  const sm = TOTALS.audio.summary;
+  assert.ok(sm && Number.isFinite(sm.spoken), 'the generated totals carry the summary figures');
+  assert.match(n.textContent, new RegExp(`^Sound: ${sm.spoken.toLocaleString('en-US')} Hebrew clips in a synthetic voice`));
   await new Promise((r) => setTimeout(r, 0));
-  assert.match(n.textContent, /^Sound: 4 Hebrew clips in a synthetic voice \(a man's and a woman's; no recorded teacher, unreviewed by native speakers\); where none exists the app uses your device voice when it has a Hebrew voice\./);
-  const bad = audioTruthNode(h, { fetchFn: async () => { throw new Error('offline'); } }); await new Promise((r) => setTimeout(r, 0));
-  assert.match(bad.textContent, /could not be checked/); assert.equal(await loadAudioSummary(async () => ({ ok: false })), null);
+  assert.equal(fetched, 0, 'no run-time read of summary.json when the generated totals have it');
+  assert.deepEqual(Object.fromEntries(['total', 'recorded', 'tts', 'spoken'].map((k) => [k, sm[k]])), Object.fromEntries(['total', 'recorded', 'tts', 'spoken'].map((k) => [k, JSON.parse(read('data/audio/summary.json'))[k]])), 'generated copy matches summary.json');
+  assert.equal(await loadAudioSummary(async () => ({ ok: false })), null);
 });
 
 test('about and how screens use the data-driven node, not typed counts; settings links to About instead of repeating it', () => {

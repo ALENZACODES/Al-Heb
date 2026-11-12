@@ -1,0 +1,27 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "israeli",
+ "inputText": "אֲנִי מִתֵּל אָבִיב. וְאַתָּה?",
+ "inputSha256": "d1396a65f9ca7d127f3f7df431a48e54db411e3c35079085a2fc53e3b3bb52af",
+ "ingestedAt": "2026-11-12T00:24:21.587Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-12T00:24:21.587Z",
+ "redistributionCleared": false,
+ "spokenText": "אֲנִי מִתֵּל אָבִיב. וְאַתָּה?",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [],
+  "google": {
+   "heard": "אני מתל אביב ואתה",
+   "acc": 1.0,
+   "issues": []
+  },
+  "reviewersFailing": 0
+ }
+}

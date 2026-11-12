@@ -202,7 +202,9 @@ if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) 
   // Course totals, audio catalogue counts and the build stamp first (src/lib/counts.generated.js, index.html meta), so the
   // precache hash below covers them and every deploy that refreshes the precache list also refreshes the app's own figures.
   const { writeCounts } = await import('./counts/build-counts.mjs');
-  const c = await writeCounts({ force: true }); // a new build time on every precache build: the stamp names this build
+  // The build time moves when a total or the version changes, or when asked with --stamp (do that for a release build).
+  // A plain rebuild is reproducible, so CI's "Precache manifest is current" check (rebuild, then git diff) passes.
+  const c = await writeCounts({ force: process.argv.includes('--stamp') });
   console.log(`src/lib/counts.generated.js: build ${c.build.version} ${c.build.builtAt}`);
   writeViewList();
   const m = computeManifest();

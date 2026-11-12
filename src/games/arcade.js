@@ -11,7 +11,7 @@ import { isAudioFree } from '../shell/audiofree.js';
 import { quietNow } from '../shell/comfort.js';
 import { uiEnglish } from '../shell/names.js';
 import { playRecordedClip, hasRecordedClip } from './engine.js';
-import { ARCADE_KEY, LEVELS, BADGES, applyResult, applyArcade, emptyRecord, seededRandom, seedFrom, dayKey, bestLine, starsFor } from './arcade.model.js';
+import { ARCADE_KEY, LEVELS, BADGES, applyResult, applyArcade, emptyRecord, seededRandom, seedFrom, dayKey, bestLine, starsFor, mistakesLine } from './arcade.model.js';
 import { ARCADE_GAMES, HANUKKAH_GAMES } from './arcade.catalog.js';
 
 const WORDS_URL = new URL('../../data/games/firstwords.json', import.meta.url);
@@ -74,7 +74,7 @@ export async function createArcade(root, ctx, spec) {
   let record = { ...emptyRecord(), ...(get(storeKey) || {}) };
   let level = Math.min(record.unlocked || 1, Math.max(1, Number(ctx?.route?.query?.level) || record.unlocked || 1));
   let daily = false, rnd = Math.random, roundSetup = null, alive = true;
-  let score = 0, misses = 0, lives = 0, startedAt = 0, timeLeft = 0, timerId = 0, loopId = 0, loops = [];
+  let score = 0, misses = 0, slips = 0, lives = 0, startedAt = 0, timeLeft = 0, timerId = 0, loopId = 0, loops = [];
   // readyAt: nothing moves and the clock does not run until the get-ready countdown ends. paused: same, on demand.
   let readyAt = 0, paused = false, countdownIds = [];
   const COUNTDOWN_S = 3;
@@ -185,6 +185,7 @@ export async function createArcade(root, ctx, spec) {
     get cfg() { return spec.levels[level - 1]; },
     get score() { return score; },
     get misses() { return misses; },
+    get slips() { return slips; },
     get lives() { return lives; },
     get daily() { return daily; },
     get rnd() { return rnd; },
@@ -196,6 +197,8 @@ export async function createArcade(root, ctx, spec) {
     announce(text) { status.textContent = text; },
     addScore(n) { if(n > 0) reactRimon('bounce'); score = Math.max(0, score + n); hudScore.textContent = `Score ${score}`; },
     setLives(n) { lives = n; hudLives.textContent = n > 0 ? '♥'.repeat(Math.min(n, 5)) + (n > 5 ? `+${n - 5}` : '') : ''; },
+    /** M-03: a wrong answer or guess that does not fail the item (no life lost). It still rules out the Perfect badge. */
+    slip() { slips += 1; },
     miss() { reactRimon('sad'); misses += 1; if (lives > 0) { A.setLives(lives - 1); if (lives === 0) { A.finish({ reason: 'lives' }); return true; } } return false; },
     sfx(name) { try { if (!quiet) sfx.play(name); } catch { /* sound is optional */ } },
     /** Recorded Hebrew word clip when present (never a non-Hebrew voice); the text always stays on screen. */
@@ -263,7 +266,7 @@ export async function createArcade(root, ctx, spec) {
       startedAt = 0; clearLoops(); setPaused(false); pauseBtn.hidden = true; board.classList.remove('is-ready');
       const par = spec.par(level, A.cfg);
       const previousBest = record.best;
-      const out = applyResult(record, { level, score, par, misses, timeMs, daily, day: dayKey() });
+      const out = applyResult(record, { level, score, par, misses, slips, timeMs, daily, day: dayKey() });
       record = out.record; set(storeKey, record);
       const arc = applyArcade(get(ARCADE_KEY), { gameId: spec.id, day: dayKey(), badgesEarned: out.newBadges.length });
       const streakNew = arc.streakBadges.filter((b) => !record.earned.includes(b));
@@ -279,7 +282,7 @@ export async function createArcade(root, ctx, spec) {
         h('h2', { id: 'game-results-h' }, `${why} Level ${level}: ${score} points`),
         h('p', { class: 'game-stars', 'aria-label': `${stars} of 3 stars` }, '★'.repeat(stars) + '☆'.repeat(3 - stars)),
         h('p', {}, bestLine(score, previousBest)),
-        misses ? h('p', { class: 'muted' }, `${misses} miss${misses === 1 ? '' : 'es'} · par for three stars is ${par}`) : h('p', { class: 'muted' }, `No misses · par for three stars is ${par}`),
+        h('p', { class: 'muted' }, mistakesLine({ misses, slips }, par)),
         out.unlockedNow ? h('p', { class: 'arc-unlock' }, `Level ${out.unlockedNow} unlocked: ${spec.levels[out.unlockedNow - 1]?.name || ''}.`) : null,
         [...out.newBadges, ...streakNew].length ? h('p', { class: 'arc-badges' }, 'New badge' + ([...out.newBadges, ...streakNew].length > 1 ? 's' : '') + ': ', ...[...out.newBadges, ...streakNew].map((b) => h('span', { class: 'arc-badge' }, BADGES[b] || b))) : null,
         h('div', { class: 'row' },
@@ -305,7 +308,7 @@ export async function createArcade(root, ctx, spec) {
     if (!alive) return;
     clearLoops();
     results.replaceChildren();
-    score = 0; misses = 0; lives = 0; paused = false;
+    score = 0; misses = 0; slips = 0; lives = 0; paused = false;
     pauseBtn.hidden = false; pauseBtn.textContent = 'Pause'; pauseBtn.setAttribute('aria-pressed', 'false'); board.classList.remove('is-paused');
     // Calm mode with no clock has nothing to get ready for; every other round counts in.
     const lead = untimed && quiet ? 0 : COUNTDOWN_S;

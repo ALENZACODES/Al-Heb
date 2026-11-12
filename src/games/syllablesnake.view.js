@@ -52,7 +52,7 @@ function setup(A) {
     const [hr, hc] = snake[0];
     const [dr, dc] = { up: [-1, 0], down: [1, 0], left: [0, 1], right: [0, -1] }[dir]; // board is rtl: visual left is +c
     const r = hr + dr, c = hc + dc;
-    if (r < 0 || c < 0 || r >= n || c >= n || snake.some(([a, b]) => a === r && b === c)) { A.sfx('error'); A.announce('The snake hit something. Run over.'); draw(); A.finish({ reason: 'lives' }); return; }
+    if (r < 0 || c < 0 || r >= n || c >= n || snake.some(([a, b]) => a === r && b === c)) { A.sfx('error'); A.slip(); A.announce('The snake hit something. Run over.'); draw(); A.finish({ reason: 'lives' }); return; }
     const f = food.get(`${r},${c}`);
     snake.unshift([r, c]);
     if (f) {

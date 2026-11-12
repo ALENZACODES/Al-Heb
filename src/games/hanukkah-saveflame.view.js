@@ -67,7 +67,7 @@ function setup(A, data) {
         slots.replaceChildren(A.heSpan(word.he, 'he hk-he'));
         if (A.miss()) { done = true; return; }
         setTimeout(next, A.quiet ? 400 : 1300);
-      } else A.announce(`No ${ch}. ${cfg.burns - burns} left on the candle.`);
+      } else { A.slip(); A.announce(`No ${ch}. ${cfg.burns - burns} left on the candle.`); }
     }
   }
   function next() {

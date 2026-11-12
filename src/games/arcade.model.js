@@ -49,7 +49,7 @@ export const BADGES = Object.freeze({
   'bronze': 'Bronze: one star on a level',
   'silver': 'Silver: two stars on a level',
   'gold': 'Gold: three stars on a level',
-  'perfect': 'Perfect: a round with no misses',
+  'perfect': 'Perfect: a round with no wrong answers or guesses', // M-03: wrong guesses count too (see applyResult)
   'level-5': 'Summit: finished level 5',
   'all-gold': 'Scholar: three stars on every level',
   'marathon': 'Marathon: ten rounds in this game',
@@ -60,6 +60,15 @@ export const BADGES = Object.freeze({
   'comeback': 'Comeback: beat your own best',
 });
 
+/** M-03: a round with no failed item and no wrong answer or guess on the way (missing values count as 0). */
+export const wrongCount = (result) => (Number(result?.misses) || 0) + (Number(result?.slips) || 0);
+export const isPerfect = (result) => wrongCount(result) === 0;
+/** Results-card line for a round's mistakes (M-03: says what the Perfect badge measures). */
+export const mistakesLine = (result, par) => {
+  const n = wrongCount(result);
+  return `${n ? `${n} mistake${n === 1 ? '' : 's'} (wrong answers and guesses)` : 'No mistakes, not even a wrong guess'} · par for three stars is ${par}`;
+};
+
 /** Empty per-game record. */
 export function emptyRecord() {
   return { version: 1, best: 0, plays: 0, lastStars: 0, levels: {}, earned: [], unlocked: 1, daily: {} };
@@ -67,7 +76,8 @@ export function emptyRecord() {
 
 /**
  * Apply a finished round to a game record. Pure: returns { record, newBadges, beatBest, unlockedNow }.
- * result = { level, score, par, misses, timeMs, daily (bool), day (YYYY-MM-DD) }
+ * result = { level, score, par, misses, slips, timeMs, daily (bool), day (YYYY-MM-DD) }
+ * misses = failed items (A.miss); slips = wrong answers or guesses that did not fail the item (A.slip). M-03: Perfect needs both at 0.
  */
 export function applyResult(previous, result) {
   const rec = { ...emptyRecord(), ...(previous || {}) };
@@ -89,7 +99,7 @@ export function applyResult(previous, result) {
   if (stars >= 1 && level < 5 && (rec.unlocked || 1) <= level) { rec.unlocked = level + 1; unlockedNow = level + 1; }
   earn('first-play');
   if (stars >= 1) earn('bronze'); if (stars >= 2) earn('silver'); if (stars >= 3) earn('gold');
-  if (stars >= 1 && Number(result.misses) === 0) earn('perfect');
+  if (stars >= 1 && isPerfect(result)) earn('perfect');
   if (level === 5 && stars >= 1) earn('level-5');
   if (LEVELS.every((l) => (rec.levels[l]?.stars || 0) >= 3)) earn('all-gold');
   if (rec.plays >= 10) earn('marathon');

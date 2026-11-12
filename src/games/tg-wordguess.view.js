@@ -65,6 +65,7 @@ function setup(A) {
     if (marks.every((m) => m === 'hit')) { solved(true); return; }
     A.sfx('drop');
     if (guesses.length >= cfg.tries) { solved(false); return; }
+    A.slip(); // M-03: a wrong guess (the last one fails the word through A.miss instead)
     draw();
   };
   const solved = (ok) => {

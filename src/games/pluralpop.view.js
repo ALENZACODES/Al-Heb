@@ -67,7 +67,7 @@ function setup(A) {
   };
   const pop = (o, el) => {
     if (o.ok) { A.addScore(10); A.sfx('bubble_pop'); A.announce(`${card.he} → ${card.plural} (${card.pluralTranslit}).`); next(); }
-    else { A.addScore(-2); A.sfx('error_soft'); el.remove(); balloons = balloons.filter((b) => b.el !== el); A.announce(`Not ${o.t}. Think: ${card.ending === 'im' ? 'this one takes ים' : 'this one takes ות'}.`); }
+    else { A.addScore(-2); A.sfx('error_soft'); A.slip(); el.remove(); balloons = balloons.filter((b) => b.el !== el); A.announce(`Not ${o.t}. Think: ${card.ending === 'im' ? 'this one takes ים' : 'this one takes ות'}.`); }
   };
   const step = () => { for (const b of balloons) { b.y -= 2.5; b.el.style.top = `${b.y}px`; } if (balloons.some((b) => b.o.ok && b.y < -60)) { A.announce(`It floated away: ${card.he} → ${card.plural}.`); if (A.miss()) return; next(); } };
   if (!A.quiet) A.loop(step, cfg.speed); else A.announce('Calm mode: balloons hold still.');

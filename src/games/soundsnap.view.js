@@ -55,7 +55,7 @@ function setup(A) {
     engaged = true;
     const u = up.get(i); if (!u) return;
     if (u.letter.id === called.id) { hits++; A.addScore(10); A.sfx('pop'); up.delete(i); A.announce(`${called.name}! ${cfg.goal - hits} to go.`); if (hits >= cfg.goal) { draw(); A.finish({ won: true }); return; } newCall(); }
-    else { A.addScore(-2); A.sfx('error_soft'); A.announce(`That was ${u.letter.name}, not ${called.name}.`); up.delete(i); }
+    else { A.addScore(-2); A.sfx('error_soft'); A.slip(); A.announce(`That was ${u.letter.name}, not ${called.name}.`); up.delete(i); }
     if (A.quiet) ensureTarget();
     draw();
   };

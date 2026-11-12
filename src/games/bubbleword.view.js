@@ -48,7 +48,7 @@ function setup(A) {
   };
   const pop = (ch, el) => {
     if (ch === missing) { solved++; A.addScore(10); A.sfx('bubble_pop'); A.announce(`${word.he}: ${word.en}.`); A.sayWord(word); if (solved >= cfg.goal) { A.finish({ won: true }); return; } newWord(); }
-    else { A.addScore(-2); A.sfx('error_soft'); el.remove(); bubbles = bubbles.filter((b) => b.el !== el); A.announce(`${ch} does not make "${word.translit}".`); }
+    else { A.addScore(-2); A.sfx('error_soft'); A.slip(); el.remove(); bubbles = bubbles.filter((b) => b.el !== el); A.announce(`${ch} does not make "${word.translit}".`); }
   };
   const step = () => {
     for (const b of bubbles) { b.y -= 3; b.el.style.top = `${b.y}px`; }

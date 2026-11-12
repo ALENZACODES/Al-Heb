@@ -1,0 +1,4253 @@
+{
+"schema": "alef-g2-sets/1",
+"note": "Game sets for the g2 vocabulary games. Words are referenced by their pointed form in data/games/g2/words.json, or copied in full (extra) from data/vocab/vocab5000.json or data/vocab/words.json; Friday (יוֹם שִׁישִׁי) is copied from data/books/book13.json because the word lists have no pointed form of it. opposites are copied unchanged from src/games/tugowar.bank.js. ladders and hives were built from data/vocab/vocab5000.json (tier 2000 or lower, no homograph, form, biblical or unclear entries) plus the topic words; letters count as written, final forms as their base letter. Paint mixes, the colour of things, family relations, body positions, line-up orders and place clues are editorial (English facts, no new Hebrew).",
+"review": "native-speaker-needed: Friday spelling from the reading books; ladder and hive words are dictionary entries, some uncommon",
+"sets": {
+"genderSkip": [
+"רוּחַ",
+"שֶׁמֶשׁ",
+"סַכִּין",
+"פָּנִים",
+"שָׁמַיִם",
+"מַיִם",
+"מִכְנָסַיִם",
+"מִשְׁקָפַיִם",
+"אוֹפַנַּיִם",
+"תַּחְתּוֹנִים",
+"בּוֹס",
+"אַף"
+],
+"opposites": [
+{
+"key": "big_small",
+"a": {
+"he": "גָּדוֹל",
+"tr": "gadol",
+"en": "big"
+},
+"b": {
+"he": "קָטָן",
+"tr": "katan",
+"en": "small"
+}
+},
+{
+"key": "hot_cold",
+"a": {
+"he": "חַם",
+"tr": "cham",
+"en": "hot"
+},
+"b": {
+"he": "קַר",
+"tr": "kar",
+"en": "cold"
+}
+},
+{
+"key": "white_black",
+"a": {
+"he": "לָבָן",
+"tr": "lavan",
+"en": "white"
+},
+"b": {
+"he": "שָׁחֹר",
+"tr": "shachor",
+"en": "black"
+}
+},
+{
+"key": "tall_low",
+"a": {
+"he": "גָּבוֹהַּ",
+"tr": "gavoha",
+"en": "tall / high"
+},
+"b": {
+"he": "נָמוּךְ",
+"tr": "namukh",
+"en": "low"
+}
+},
+{
+"key": "fast_slow",
+"a": {
+"he": "מָהִיר",
+"tr": "mahir",
+"en": "fast"
+},
+"b": {
+"he": "אִטִּי",
+"tr": "iti",
+"en": "slow"
+}
+},
+{
+"key": "expensive_cheap",
+"a": {
+"he": "יָקָר",
+"tr": "yakar",
+"en": "expensive"
+},
+"b": {
+"he": "זוֹל",
+"tr": "zol",
+"en": "cheap"
+}
+},
+{
+"key": "strong_weak",
+"a": {
+"he": "חָזָק",
+"tr": "chazak",
+"en": "strong"
+},
+"b": {
+"he": "חַלָּשׁ",
+"tr": "chalash",
+"en": "weak"
+}
+},
+{
+"key": "happy_sad",
+"a": {
+"he": "שָׂמֵחַ",
+"tr": "sameach",
+"en": "happy"
+},
+"b": {
+"he": "עָצוּב",
+"tr": "atzuv",
+"en": "sad"
+}
+},
+{
+"key": "old_new",
+"a": {
+"he": "יָשָׁן",
+"tr": "yashan",
+"en": "old (thing)"
+},
+"b": {
+"he": "חָדָשׁ",
+"tr": "chadash",
+"en": "new"
+}
+},
+{
+"key": "near_far",
+"a": {
+"he": "קָרוֹב",
+"tr": "karov",
+"en": "near"
+},
+"b": {
+"he": "רָחוֹק",
+"tr": "rachok",
+"en": "far"
+}
+},
+{
+"key": "full_empty",
+"a": {
+"he": "מָלֵא",
+"tr": "male",
+"en": "full"
+},
+"b": {
+"he": "רֵיק",
+"tr": "reik",
+"en": "empty"
+}
+},
+{
+"key": "good_bad",
+"a": {
+"he": "טוֹב",
+"tr": "tov",
+"en": "good"
+},
+"b": {
+"he": "רַע",
+"tr": "ra",
+"en": "bad"
+}
+},
+{
+"key": "wide_narrow",
+"a": {
+"he": "רָחָב",
+"tr": "rachav",
+"en": "wide"
+},
+"b": {
+"he": "צַר",
+"tr": "tzar",
+"en": "narrow"
+}
+},
+{
+"key": "heavy_light",
+"a": {
+"he": "כָּבֵד",
+"tr": "kaved",
+"en": "heavy"
+},
+"b": {
+"he": "קַל",
+"tr": "kal",
+"en": "light (weight)"
+}
+},
+{
+"key": "long_short",
+"a": {
+"he": "אָרֹךְ",
+"tr": "arokh",
+"en": "long"
+},
+"b": {
+"he": "קָצָר",
+"tr": "katzar",
+"en": "short"
+}
+},
+{
+"key": "thick_thin",
+"a": {
+"he": "עָבֶה",
+"tr": "ave",
+"en": "thick"
+},
+"b": {
+"he": "דַּק",
+"tr": "dak",
+"en": "thin"
+}
+},
+{
+"key": "open_closed",
+"a": {
+"he": "פָּתוּחַ",
+"tr": "patuach",
+"en": "open"
+},
+"b": {
+"he": "סָגוּר",
+"tr": "sagur",
+"en": "closed"
+}
+},
+{
+"key": "clean_dirty",
+"a": {
+"he": "נָקִי",
+"tr": "naki",
+"en": "clean"
+},
+"b": {
+"he": "מְלֻכְלָךְ",
+"tr": "melukhlakh",
+"en": "dirty"
+}
+},
+{
+"key": "sweet_sour",
+"a": {
+"he": "מָתוֹק",
+"tr": "matok",
+"en": "sweet"
+},
+"b": {
+"he": "חָמוּץ",
+"tr": "chamutz",
+"en": "sour"
+}
+},
+{
+"key": "deep_shallow",
+"a": {
+"he": "עָמֹק",
+"tr": "amok",
+"en": "deep"
+},
+"b": {
+"he": "רָדוּד",
+"tr": "radud",
+"en": "shallow"
+}
+},
+{
+"key": "wet_dry",
+"a": {
+"he": "רָטֹב",
+"tr": "ratov",
+"en": "wet"
+},
+"b": {
+"he": "יָבֵשׁ",
+"tr": "yavesh",
+"en": "dry"
+}
+},
+{
+"key": "young_old",
+"a": {
+"he": "צָעִיר",
+"tr": "tza'ir",
+"en": "young"
+},
+"b": {
+"he": "זָקֵן",
+"tr": "zaken",
+"en": "old (person)"
+}
+},
+{
+"key": "rich_poor",
+"a": {
+"he": "עָשִׁיר",
+"tr": "ashir",
+"en": "rich"
+},
+"b": {
+"he": "עָנִי",
+"tr": "ani",
+"en": "poor"
+}
+},
+{
+"key": "hungry_full",
+"a": {
+"he": "רָעֵב",
+"tr": "ra'ev",
+"en": "hungry"
+},
+"b": {
+"he": "שָׂבֵעַ",
+"tr": "save'a",
+"en": "full (after eating)"
+}
+},
+{
+"key": "awake_asleep",
+"a": {
+"he": "עֵר",
+"tr": "er",
+"en": "awake"
+},
+"b": {
+"he": "יָשֵׁן",
+"tr": "yashen",
+"en": "asleep"
+}
+},
+{
+"key": "healthy_sick",
+"a": {
+"he": "בָּרִיא",
+"tr": "bari",
+"en": "healthy"
+},
+"b": {
+"he": "חוֹלֶה",
+"tr": "chole",
+"en": "sick"
+}
+},
+{
+"key": "first_last",
+"a": {
+"he": "רִאשׁוֹן",
+"tr": "rishon",
+"en": "first"
+},
+"b": {
+"he": "אַחֲרוֹן",
+"tr": "acharon",
+"en": "last"
+}
+},
+{
+"key": "early_late",
+"a": {
+"he": "מֻקְדָּם",
+"tr": "mukdam",
+"en": "early"
+},
+"b": {
+"he": "מְאֻחָר",
+"tr": "meuchar",
+"en": "late"
+}
+},
+{
+"key": "wise_foolish",
+"a": {
+"he": "חָכָם",
+"tr": "chakham",
+"en": "wise"
+},
+"b": {
+"he": "טִפֵּשׁ",
+"tr": "tipesh",
+"en": "foolish"
+}
+},
+{
+"key": "brave_coward",
+"a": {
+"he": "אַמִּיץ",
+"tr": "amitz",
+"en": "brave"
+},
+"b": {
+"he": "פַּחְדָן",
+"tr": "pachdan",
+"en": "coward"
+}
+},
+{
+"key": "busy_free",
+"a": {
+"he": "עָסוּק",
+"tr": "asuk",
+"en": "busy"
+},
+"b": {
+"he": "פָּנוּי",
+"tr": "panuy",
+"en": "free (available)"
+}
+},
+{
+"key": "fat_thin",
+"a": {
+"he": "שָׁמֵן",
+"tr": "shamen",
+"en": "fat"
+},
+"b": {
+"he": "רָזֶה",
+"tr": "raze",
+"en": "thin"
+}
+},
+{
+"key": "alive_dead",
+"a": {
+"he": "חַי",
+"tr": "chai",
+"en": "alive"
+},
+"b": {
+"he": "מֵת",
+"tr": "met",
+"en": "dead"
+}
+},
+{
+"key": "simple_complicated",
+"a": {
+"he": "פָּשׁוּט",
+"tr": "pashut",
+"en": "simple"
+},
+"b": {
+"he": "מְסֻבָּךְ",
+"tr": "mesubakh",
+"en": "complicated"
+}
+},
+{
+"key": "safe_dangerous",
+"a": {
+"he": "בָּטוּחַ",
+"tr": "batuach",
+"en": "safe"
+},
+"b": {
+"he": "מְסֻכָּן",
+"tr": "mesukan",
+"en": "dangerous"
+}
+},
+{
+"key": "whole_broken",
+"a": {
+"he": "שָׁלֵם",
+"tr": "shalem",
+"en": "whole"
+},
+"b": {
+"he": "שָׁבוּר",
+"tr": "shavur",
+"en": "broken"
+}
+},
+{
+"key": "interesting_boring",
+"a": {
+"he": "מְעַנְיֵן",
+"tr": "meanyen",
+"en": "interesting"
+},
+"b": {
+"he": "מְשַׁעֲמֵם",
+"tr": "meshaamem",
+"en": "boring"
+}
+}
+],
+"family": [
+{
+"he": "סַבָּא",
+"row": 0,
+"col": 1,
+"label": "grandfather",
+"rel": "your father's father"
+},
+{
+"he": "סָבְתָא",
+"row": 0,
+"col": 2,
+"label": "grandmother",
+"rel": "your father's mother"
+},
+{
+"he": "דּוֹד",
+"row": 1,
+"col": 0,
+"label": "uncle",
+"rel": "your father's brother"
+},
+{
+"he": "אַבָּא",
+"row": 1,
+"col": 1,
+"label": "father",
+"rel": "the man who is your parent"
+},
+{
+"he": "אִמָּא",
+"row": 1,
+"col": 2,
+"label": "mother",
+"rel": "the woman who is your parent"
+},
+{
+"he": "דּוֹדָה",
+"row": 1,
+"col": 3,
+"label": "aunt",
+"rel": "your mother's sister"
+},
+{
+"he": "אָח",
+"row": 2,
+"col": 0,
+"label": "brother",
+"rel": "your parents' son, not you"
+},
+{
+"he": "אָחוֹת",
+"row": 2,
+"col": 3,
+"label": "sister",
+"rel": "your parents' daughter, not you"
+},
+{
+"he": "בֵּן",
+"row": 3,
+"col": 1,
+"label": "son",
+"rel": "your boy"
+},
+{
+"he": "בַּת",
+"row": 3,
+"col": 2,
+"label": "daughter",
+"rel": "your girl"
+},
+{
+"he": "נֶכֶד",
+"row": 4,
+"col": 1,
+"label": "grandson",
+"rel": "your son's son"
+}
+],
+"body": {
+"face": [
+{
+"he": "שֵׂעָר",
+"x": 50,
+"y": 8
+},
+{
+"he": "עַיִן",
+"x": 35,
+"y": 38
+},
+{
+"he": "אֹזֶן",
+"x": 10,
+"y": 45
+},
+{
+"he": "אַף",
+"x": 50,
+"y": 52
+},
+{
+"he": "פֶּה",
+"x": 50,
+"y": 70
+},
+{
+"he": "שָׂפָה",
+"x": 66,
+"y": 72
+},
+{
+"he": "שֵׁן",
+"x": 42,
+"y": 70
+},
+{
+"he": "זָקָן",
+"x": 50,
+"y": 90
+},
+{
+"he": "שָׂפָם",
+"x": 34,
+"y": 63
+}
+],
+"figure": [
+{
+"he": "רֹאשׁ",
+"x": 50,
+"y": 7
+},
+{
+"he": "צַוָּאר",
+"x": 50,
+"y": 17
+},
+{
+"he": "כָּתֵף",
+"x": 30,
+"y": 22
+},
+{
+"he": "זְרוֹעַ",
+"x": 22,
+"y": 35
+},
+{
+"he": "יָד",
+"x": 16,
+"y": 50
+},
+{
+"he": "אֶצְבַּע",
+"x": 12,
+"y": 58
+},
+{
+"he": "חָזֶה",
+"x": 50,
+"y": 28
+},
+{
+"he": "בֶּטֶן",
+"x": 50,
+"y": 42
+},
+{
+"he": "מֹתֶן",
+"x": 64,
+"y": 50
+},
+{
+"he": "בֶּרֶךְ",
+"x": 42,
+"y": 72
+},
+{
+"he": "רֶגֶל",
+"x": 58,
+"y": 82
+},
+{
+"he": "עָקֵב",
+"x": 42,
+"y": 96
+}
+]
+},
+"mixes": [
+[
+"אָדֹם",
+"צָהֹב",
+"כָּתֹם"
+],
+[
+"כָּחֹל",
+"צָהֹב",
+"יָרֹק"
+],
+[
+"אָדֹם",
+"כָּחֹל",
+"סָגֹל"
+],
+[
+"אָדֹם",
+"לָבָן",
+"וָרֹד"
+],
+[
+"שָׁחֹר",
+"לָבָן",
+"אָפֹר"
+]
+],
+"swatch": {
+"אָדֹם": "#d62828",
+"כָּחֹל": "#1d4ed8",
+"יָרֹק": "#2a9d4b",
+"צָהֹב": "#f5c518",
+"לָבָן": "#ffffff",
+"שָׁחֹר": "#111111",
+"כָּתֹם": "#f07c15",
+"סָגֹל": "#7b3fb5",
+"וָרֹד": "#f4a3c0",
+"אָפֹר": "#8d8d8d",
+"חוּם": "#7a4a22"
+},
+"colourOf": [
+[
+"בָּנָנָה",
+"צָהֹב"
+],
+[
+"עַגְבָנִיָּה",
+"אָדֹם"
+],
+[
+"מְלָפְפוֹן",
+"יָרֹק"
+],
+[
+"חָלָב",
+"לָבָן"
+],
+[
+"שֶׁלֶג",
+"לָבָן"
+],
+[
+"גֶּזֶר",
+"כָּתֹם"
+],
+[
+"תַּפּוּז",
+"כָּתֹם"
+],
+[
+"פִּיל",
+"אָפֹר"
+],
+[
+"שׁוֹקוֹלָד",
+"חוּם"
+],
+[
+"לִימוֹן",
+"צָהֹב"
+],
+[
+"חַסָּה",
+"יָרֹק"
+],
+[
+"צְפַרְדֵּעַ",
+"יָרֹק"
+],
+[
+"שָׁמַיִם",
+"כָּחֹל"
+],
+[
+"דֹּב",
+"חוּם"
+]
+],
+"cycles": {
+"days": [
+{
+"id": "ve5cc0b4e",
+"he": "יוֹם רִאשׁוֹן",
+"en": "Sunday"
+},
+{
+"id": "vccb0ddef",
+"he": "יוֹם שֵׁנִי",
+"en": "Monday"
+},
+{
+"id": "vb533dfe6",
+"he": "יוֹם שְׁלִישִׁי",
+"en": "Tuesday"
+},
+{
+"id": "v90caa792",
+"he": "יוֹם רְבִיעִי",
+"en": "Wednesday"
+},
+{
+"id": "v4e0fa1cb",
+"he": "יוֹם חֲמִישִׁי",
+"en": "Thursday"
+},
+{
+"id": "book:data/books/book13.json",
+"he": "יוֹם שִׁישִׁי",
+"en": "Friday"
+},
+{
+"id": "v5095f117",
+"he": "שַׁבָּת",
+"en": "Shabbat",
+"tr": "shabat",
+"w": "h0eb811da",
+"g": "f"
+}
+],
+"months": [
+{
+"id": "v7b5f9fa7",
+"he": "יָנוּאָר",
+"en": "January"
+},
+{
+"id": "v99bc9edd",
+"he": "פֶבְּרוּאָר",
+"en": "February"
+},
+{
+"id": "v9e04887c",
+"he": "מֶרְץ",
+"en": "March"
+},
+{
+"id": "vefa9a0f3",
+"he": "אַפְּרִיל",
+"en": "April"
+},
+{
+"id": "vb5e43565",
+"he": "מַאי",
+"en": "May"
+},
+{
+"id": "ve6e3dde5",
+"he": "יוּנִי",
+"en": "June"
+},
+{
+"id": "v47de871d",
+"he": "יוּלִי",
+"en": "July"
+},
+{
+"id": "v81155311",
+"he": "אוֹגוּסְט",
+"en": "August"
+},
+{
+"id": "v70307f9a",
+"he": "סֶפְּטֶמְבֶּר",
+"en": "September"
+},
+{
+"id": "vf50200a2",
+"he": "אוֹקְטוֹבֶּר",
+"en": "October"
+},
+{
+"id": "v631cf640",
+"he": "נוֹבֶמְבֶּר",
+"en": "November"
+},
+{
+"id": "vc5861dcf",
+"he": "דֵּצֶמְבֶּר",
+"en": "December"
+}
+],
+"seasons": [
+"אָבִיב",
+"קַיִץ",
+"סְתָו",
+"חֹרֶף"
+],
+"times": [
+{
+"id": "v7f64097f",
+"he": "בֹּקֶר",
+"en": "morning",
+"tr": "boker",
+"w": "h50241e1c",
+"g": "m"
+},
+{
+"id": "v4bda263c",
+"he": "צׇהֳרַיִם",
+"en": "Noon",
+"tr": "tzohorayim",
+"w": "h25aa368e",
+"g": "m"
+},
+{
+"id": "vd0ca2727",
+"he": "עֶרֶב",
+"en": "evening",
+"tr": "erev",
+"w": "he074d347",
+"g": "m"
+},
+{
+"id": "v1a7f8a15",
+"he": "לַיְלָה",
+"en": "night",
+"tr": "laylah",
+"w": "hf5bee50d",
+"g": "m"
+}
+]
+},
+"lineups": [
+{
+"id": "days",
+"prompt": "The days of the week, from Sunday",
+"items": "cycle:days"
+},
+{
+"id": "months",
+"prompt": "The months, from January",
+"items": "cycle:months"
+},
+{
+"id": "seasons",
+"prompt": "The seasons, from spring",
+"items": "cycle:seasons"
+},
+{
+"id": "times",
+"prompt": "The day, from morning to night",
+"items": "cycle:times"
+},
+{
+"id": "generations",
+"prompt": "Oldest to youngest",
+"items": [
+"סַבָּא",
+"אַבָּא",
+"בֵּן",
+"נֶכֶד"
+]
+},
+{
+"id": "sizes",
+"prompt": "Smallest to biggest",
+"items": [
+"זְבוּב",
+"עַכְבָּר",
+"חָתוּל",
+"כֶּלֶב",
+"סוּס",
+"פִּיל"
+]
+},
+{
+"id": "growing",
+"prompt": "Youngest to oldest",
+"items": [
+"תִּינוֹק",
+"יֶלֶד",
+"נַעַר",
+"זָקֵן"
+]
+},
+{
+"id": "ordinals",
+"prompt": "First to fifth",
+"items": [
+"רִאשׁוֹן",
+"שֵׁנִי",
+"שְׁלִישִׁי",
+"רְבִיעִי",
+"חֲמִישִׁי"
+]
+},
+{
+"id": "houses",
+"prompt": "Smallest to biggest",
+"items": [
+"חֶדֶר",
+"דִּירָה",
+"בִּנְיָן",
+"כְּפָר",
+"עִיר"
+]
+},
+{
+"id": "vehicles",
+"prompt": "Fewest wheels to most",
+"items": [
+"אוֹפַנַּיִם",
+"מְכוֹנִית",
+"מַשָּׂאִית"
+]
+}
+],
+"places": [
+{
+"place": "מִטְבָּח",
+"clues": [
+"סִיר",
+"תַּנּוּר",
+"צַלַּחַת",
+"מַזְלֵג",
+"קְעָרָה",
+"סַכִּין"
+]
+},
+{
+"place": "חַוָּה",
+"clues": [
+"פָּרָה",
+"כֶּבֶשׂ",
+"עֵז",
+"חֲמוֹר",
+"חַקְלַאי",
+"חֲזִיר"
+]
+},
+{
+"place": "חוֹף",
+"clues": [
+"כָּרִישׁ",
+"סַנְדָּל",
+"יָם"
+]
+},
+{
+"place": "מִסְעָדָה",
+"clues": [
+"שֶׁף",
+"תַּפְרִיט",
+"מָרָק",
+"פִּיצָה"
+]
+},
+{
+"place": "סִפְרִיָּה",
+"clues": [
+"סֵפֶר",
+"מִלּוֹן"
+]
+},
+{
+"place": "כִּתָּה",
+"clues": [
+"מוֹרֶה",
+"תַּלְמִיד",
+"לוּחַ",
+"בְּחִינָה",
+"עִפָּרוֹן",
+"עֵט"
+]
+},
+{
+"place": "תַּחֲנָה",
+"clues": [
+"רַכֶּבֶת",
+"אוֹטוֹבּוּס",
+"מוֹנִית"
+]
+},
+{
+"place": "נָמֵל",
+"clues": [
+"סְפִינָה",
+"מַעְבֹּרֶת",
+"סִירָה",
+"דַּיָּג"
+]
+},
+{
+"place": "מִשְׂרָד",
+"clues": [
+"פָּקִיד",
+"חַשָּׁב"
+]
+},
+{
+"place": "יַעַר",
+"clues": [
+"עֵץ",
+"זְאֵב",
+"דֹּב",
+"צְבִי"
+]
+},
+{
+"place": "קִרְקָס",
+"clues": [
+"לֵיצָן",
+"פִּיל"
+]
+},
+{
+"place": "מִקְלַחַת",
+"clues": [
+"סַבּוֹן",
+"מַגֶּבֶת"
+]
+}
+],
+"extra": [
+{
+"id": "ve5cc0b4e",
+"he": "יוֹם רִאשׁוֹן",
+"en": "Sunday"
+},
+{
+"id": "vccb0ddef",
+"he": "יוֹם שֵׁנִי",
+"en": "Monday"
+},
+{
+"id": "vb533dfe6",
+"he": "יוֹם שְׁלִישִׁי",
+"en": "Tuesday"
+},
+{
+"id": "v90caa792",
+"he": "יוֹם רְבִיעִי",
+"en": "Wednesday"
+},
+{
+"id": "v4e0fa1cb",
+"he": "יוֹם חֲמִישִׁי",
+"en": "Thursday"
+},
+{
+"id": "v5095f117",
+"he": "שַׁבָּת",
+"en": "Shabbat",
+"tr": "shabat",
+"w": "h0eb811da",
+"g": "f"
+},
+{
+"id": "v7b5f9fa7",
+"he": "יָנוּאָר",
+"en": "January"
+},
+{
+"id": "v99bc9edd",
+"he": "פֶבְּרוּאָר",
+"en": "February"
+},
+{
+"id": "v9e04887c",
+"he": "מֶרְץ",
+"en": "March"
+},
+{
+"id": "vefa9a0f3",
+"he": "אַפְּרִיל",
+"en": "April"
+},
+{
+"id": "vb5e43565",
+"he": "מַאי",
+"en": "May"
+},
+{
+"id": "ve6e3dde5",
+"he": "יוּנִי",
+"en": "June"
+},
+{
+"id": "v47de871d",
+"he": "יוּלִי",
+"en": "July"
+},
+{
+"id": "v81155311",
+"he": "אוֹגוּסְט",
+"en": "August"
+},
+{
+"id": "v70307f9a",
+"he": "סֶפְּטֶמְבֶּר",
+"en": "September"
+},
+{
+"id": "vf50200a2",
+"he": "אוֹקְטוֹבֶּר",
+"en": "October"
+},
+{
+"id": "v631cf640",
+"he": "נוֹבֶמְבֶּר",
+"en": "November"
+},
+{
+"id": "vc5861dcf",
+"he": "דֵּצֶמְבֶּר",
+"en": "December"
+},
+{
+"id": "v7f64097f",
+"he": "בֹּקֶר",
+"en": "morning",
+"tr": "boker",
+"w": "h50241e1c",
+"g": "m"
+},
+{
+"id": "v4bda263c",
+"he": "צׇהֳרַיִם",
+"en": "Noon",
+"tr": "tzohorayim",
+"w": "h25aa368e",
+"g": "m"
+},
+{
+"id": "vd0ca2727",
+"he": "עֶרֶב",
+"en": "evening",
+"tr": "erev",
+"w": "he074d347",
+"g": "m"
+},
+{
+"id": "v1a7f8a15",
+"he": "לַיְלָה",
+"en": "night",
+"tr": "laylah",
+"w": "hf5bee50d",
+"g": "m"
+},
+{
+"id": "vcee15f1b",
+"he": "זָקֵן",
+"en": "old person",
+"tr": "zaken",
+"w": "h5fa9ade9",
+"g": "m"
+},
+{
+"id": "v343a5a8c",
+"he": "רִאשׁוֹן",
+"en": "first",
+"tr": "rishon",
+"w": "hc44a3fa8"
+},
+{
+"id": "vb2d58c9a",
+"he": "שֵׁנִי",
+"en": "second",
+"tr": "sheni",
+"w": "h42410d5e"
+},
+{
+"id": "v1c0c4e8c",
+"he": "שְׁלִישִׁי",
+"en": "third",
+"tr": "shelishi",
+"w": "h0b1cfbd9"
+},
+{
+"id": "v89565865",
+"he": "רְבִיעִי",
+"en": "fourth",
+"tr": "revi'i",
+"w": "h9160d23f"
+},
+{
+"id": "v1db9fd4d",
+"he": "חֲמִישִׁי",
+"en": "fifth",
+"tr": "chamishi",
+"w": "h5c689c60"
+},
+{
+"id": "va5110a5b",
+"he": "יָם",
+"en": "sea",
+"tr": "yam",
+"w": "h4692cd32",
+"g": "m"
+},
+{
+"id": "vb64da690",
+"he": "תַּפְרִיט",
+"en": "menu",
+"tr": "tafrit",
+"w": "h2f67dd06",
+"g": "m"
+},
+{
+"id": "va726080c",
+"he": "כִּתָּה",
+"en": "class",
+"tr": "kitah",
+"w": "hd04dbb3d",
+"g": "f"
+},
+{
+"id": "vf806ba52",
+"he": "דַּיָּג",
+"en": "fisherman",
+"tr": "dayag",
+"w": "h1e54cc13",
+"g": "m"
+},
+{
+"id": "v775aeabf",
+"he": "יַעַר",
+"en": "forest",
+"tr": "ya'ar",
+"w": "hef745501",
+"g": "m"
+},
+{
+"id": "v8d61211f",
+"he": "עֵץ",
+"en": "tree",
+"tr": "etz",
+"w": "hd2fac0d2",
+"g": "m"
+},
+{
+"id": "v78954a2b",
+"he": "לֵיצָן",
+"en": "clown",
+"tr": "leitzan",
+"w": "h5c0918b1",
+"g": "m"
+},
+{
+"id": "v22562b21",
+"he": "מִקְלַחַת",
+"en": "shower",
+"tr": "miklachat",
+"w": "h14ba87da",
+"g": "f"
+},
+{
+"id": "book:data/books/book13.json",
+"he": "יוֹם שִׁישִׁי",
+"en": "Friday"
+}
+],
+"ladders": {
+"3": [
+[
+{
+"id": "v8781742f",
+"he": "מֶלַח",
+"en": "salt"
+},
+{
+"id": "vd840e0b6",
+"he": "מִלָּה",
+"en": "word"
+},
+{
+"id": "v685efde9",
+"he": "חַלָּה",
+"en": "challah"
+},
+{
+"id": "vfb5d89b6",
+"he": "חַוָּה",
+"en": "farm"
+},
+{
+"id": "v37dab560",
+"he": "חוֹף",
+"en": "beach"
+},
+{
+"id": "vd1d8402d",
+"he": "חֹרֶף",
+"en": "winter"
+}
+],
+[
+{
+"id": "vb68cb843",
+"he": "גָּמָל",
+"en": "camel"
+},
+{
+"id": "vac36bce7",
+"he": "נָמֵל",
+"en": "port"
+},
+{
+"id": "va9e07809",
+"he": "נַעַל",
+"en": "shoe"
+},
+{
+"id": "va149d5ba",
+"he": "נַעַר",
+"en": "boy"
+},
+{
+"id": "vb445ee9e",
+"he": "שֵׂעָר",
+"en": "hair"
+},
+{
+"id": "vb97f3ace",
+"he": "שָׁחֹר",
+"en": "black"
+}
+],
+[
+{
+"id": "v34373e24",
+"he": "נַגָּר",
+"en": "carpenter"
+},
+{
+"id": "vc07ad4b6",
+"he": "נְיָר",
+"en": "paper"
+},
+{
+"id": "v23fdcf37",
+"he": "קִיר",
+"en": "wall"
+},
+{
+"id": "va9c100c0",
+"he": "קַיִץ",
+"en": "summer"
+},
+{
+"id": "ve232041d",
+"he": "מִיץ",
+"en": "juice"
+},
+{
+"id": "vaa98c647",
+"he": "מַיִם",
+"en": "water"
+}
+],
+[
+{
+"id": "v435a6d4c",
+"he": "כַּלָּה",
+"en": "bride"
+},
+{
+"id": "vd840e0b6",
+"he": "מִלָּה",
+"en": "word"
+},
+{
+"id": "vbbf8a99f",
+"he": "מַפָּה",
+"en": "map"
+},
+{
+"id": "ve245716e",
+"he": "סַפָּה",
+"en": "sofa"
+},
+{
+"id": "vd735f7d7",
+"he": "סֵפֶר",
+"en": "book"
+},
+{
+"id": "va8cfe372",
+"he": "אָפֹר",
+"en": "grey"
+}
+],
+[
+{
+"id": "v9c39f968",
+"he": "מִטָּה",
+"en": "bed"
+},
+{
+"id": "vbbf8a99f",
+"he": "מַפָּה",
+"en": "map"
+},
+{
+"id": "vcff61062",
+"he": "שָׂפָה",
+"en": "lip"
+},
+{
+"id": "v5f30055c",
+"he": "שָׂפָם",
+"en": "moustache"
+},
+{
+"id": "v505f48c6",
+"he": "שׁוּם",
+"en": "garlic"
+},
+{
+"id": "v239cdf37",
+"he": "שׁוּק",
+"en": "market"
+}
+],
+[
+{
+"id": "vf8616ca7",
+"he": "זַמָּר",
+"en": "singer"
+},
+{
+"id": "v310c7fc7",
+"he": "נָמֵר",
+"en": "leopard"
+},
+{
+"id": "vc07ad4b6",
+"he": "נְיָר",
+"en": "paper"
+},
+{
+"id": "vbd21bb15",
+"he": "עִיר",
+"en": "city"
+},
+{
+"id": "v8d4641ea",
+"he": "עַיִן",
+"en": "eye"
+},
+{
+"id": "v5b9fd694",
+"he": "עָנָן",
+"en": "cloud"
+}
+],
+[
+{
+"id": "vd39b4d93",
+"he": "בֶּרֶךְ",
+"en": "knee"
+},
+{
+"id": "vcace600e",
+"he": "בָּרָק",
+"en": "lightning"
+},
+{
+"id": "v2aae2e95",
+"he": "פַּרְק",
+"en": "park"
+},
+{
+"id": "v53c1004b",
+"he": "פָּרָה",
+"en": "cow"
+},
+{
+"id": "v1242a961",
+"he": "פִּנָּה",
+"en": "corner"
+},
+{
+"id": "v8767fa3a",
+"he": "קָנֶה",
+"en": "reed"
+}
+],
+[
+{
+"id": "vf47c5d91",
+"he": "חַשָּׁב",
+"en": "accountant"
+},
+{
+"id": "v4012c7d8",
+"he": "חָלָב",
+"en": "milk"
+},
+{
+"id": "vfe8e622e",
+"he": "כֶּלֶב",
+"en": "dog"
+},
+{
+"id": "vd29aac74",
+"he": "כְּלִי",
+"en": "tool"
+},
+{
+"id": "v884d5737",
+"he": "דְּלִי",
+"en": "bucket"
+},
+{
+"id": "v0b29e752",
+"he": "דֶּלֶת",
+"en": "door"
+}
+],
+[
+{
+"id": "v390aa9b9",
+"he": "בַּנְק",
+"en": "bank"
+},
+{
+"id": "vcace600e",
+"he": "בָּרָק",
+"en": "lightning"
+},
+{
+"id": "v6695800e",
+"he": "מָרָק",
+"en": "soup"
+},
+{
+"id": "v0a8d3676",
+"he": "מֹתֶק",
+"en": "sweetness"
+},
+{
+"id": "vae5613a3",
+"he": "מֹתֶן",
+"en": "waist"
+},
+{
+"id": "v0e2927e4",
+"he": "חָתָן",
+"en": "bridegroom"
+}
+],
+[
+{
+"id": "vf4a97ac7",
+"he": "סֻכָּר",
+"en": "sugar"
+},
+{
+"id": "vd4f4521d",
+"he": "סִיר",
+"en": "pot"
+},
+{
+"id": "vbd21bb15",
+"he": "עִיר",
+"en": "city"
+},
+{
+"id": "v8f3dd0a6",
+"he": "עוֹר",
+"en": "skin"
+},
+{
+"id": "v5f01fc89",
+"he": "עוֹף",
+"en": "poultry"
+},
+{
+"id": "v6727d95a",
+"he": "קוֹף",
+"en": "monkey"
+}
+],
+[
+{
+"id": "v3e646a5d",
+"he": "גֶּשֶׁם",
+"en": "rain"
+},
+{
+"id": "v9bbd98b6",
+"he": "גֶּשֶׁר",
+"en": "bridge"
+},
+{
+"id": "vee33e3a3",
+"he": "גֶּבֶר",
+"en": "man"
+},
+{
+"id": "v22b596b2",
+"he": "דָּבָר",
+"en": "thing"
+},
+{
+"id": "v2a2f0ee8",
+"he": "דְּבַשׁ",
+"en": "honey"
+},
+{
+"id": "vc596c1dc",
+"he": "כֶּבֶשׂ",
+"en": "sheep"
+}
+],
+[
+{
+"id": "v92945c3e",
+"he": "חֶדֶר",
+"en": "room"
+},
+{
+"id": "vb3239acd",
+"he": "חָבֵר",
+"en": "friend"
+},
+{
+"id": "v8810ec81",
+"he": "אֵבֶר",
+"en": "limb"
+},
+{
+"id": "vbeb6b7ea",
+"he": "אַבָּא",
+"en": "father"
+},
+{
+"id": "v3f086e90",
+"he": "צָבָא",
+"en": "military"
+},
+{
+"id": "v1a36c399",
+"he": "צְבִי",
+"en": "gazelle"
+}
+],
+[
+{
+"id": "v4f6779c4",
+"he": "אֹזֶן",
+"en": "ear"
+},
+{
+"id": "v243bfcd5",
+"he": "אֶבֶן",
+"en": "stone"
+},
+{
+"id": "vbeb6b7ea",
+"he": "אַבָּא",
+"en": "father"
+},
+{
+"id": "v97ce71c7",
+"he": "אִמָּא",
+"en": "mother"
+},
+{
+"id": "vb6f8a704",
+"he": "אַמָּה",
+"en": "forearm"
+},
+{
+"id": "vba8f5e67",
+"he": "אִשָּׁה",
+"en": "woman"
+}
+],
+[
+{
+"id": "v4fd7ebbc",
+"he": "חוּם",
+"en": "brown"
+},
+{
+"id": "v37dab560",
+"he": "חוֹף",
+"en": "beach"
+},
+{
+"id": "v6d14e58d",
+"he": "סוֹף",
+"en": "end"
+},
+{
+"id": "v94ca1876",
+"he": "סוּס",
+"en": "horse"
+},
+{
+"id": "v1aac119c",
+"he": "בּוֹס",
+"en": "boss"
+}
+],
+[
+{
+"id": "vaafbe197",
+"he": "חַיָּל",
+"en": "soldier"
+},
+{
+"id": "vd9637217",
+"he": "פִּיל",
+"en": "elephant"
+},
+{
+"id": "v22ab70dc",
+"he": "פּוֹל",
+"en": "broad bean"
+},
+{
+"id": "va0751378",
+"he": "לוּל",
+"en": "chicken coop"
+},
+{
+"id": "v00b5515e",
+"he": "לוּחַ",
+"en": "board"
+},
+{
+"id": "vab071ffb",
+"he": "רוּחַ",
+"en": "wind"
+}
+],
+[
+{
+"id": "vad4c6df5",
+"he": "סַבָּא",
+"en": "grandfather"
+},
+{
+"id": "v37698187",
+"he": "סִבָּה",
+"en": "cause"
+},
+{
+"id": "ve245716e",
+"he": "סַפָּה",
+"en": "sofa"
+},
+{
+"id": "ved7fcd23",
+"he": "קָפֶה",
+"en": "coffee"
+},
+{
+"id": "v49391fae",
+"he": "קָשֶׁה",
+"en": "hard"
+},
+{
+"id": "vc6f4ad7b",
+"he": "קֶשֶׁת",
+"en": "rainbow"
+}
+],
+[
+{
+"id": "v7412cb0f",
+"he": "אָדֹם",
+"en": "red"
+},
+{
+"id": "va52b4f06",
+"he": "אֶדֶן",
+"en": "base"
+},
+{
+"id": "v75a0214a",
+"he": "אֹפֶן",
+"en": "way"
+},
+{
+"id": "va8cfe372",
+"he": "אָפֹר",
+"en": "grey"
+},
+{
+"id": "v9a5671fa",
+"he": "כְּפָר",
+"en": "village"
+}
+],
+[
+{
+"id": "vd7f06cf4",
+"he": "רֹאשׁ",
+"en": "head"
+},
+{
+"id": "v369156cb",
+"he": "רֶגֶשׁ",
+"en": "emotion"
+},
+{
+"id": "v3f0221c1",
+"he": "רֶגֶל",
+"en": "leg"
+},
+{
+"id": "v09410329",
+"he": "רָחֵל",
+"en": "ewe"
+},
+{
+"id": "v7ba41398",
+"he": "כָּחֹל",
+"en": "blue"
+}
+],
+[
+{
+"id": "v75c844b9",
+"he": "אִישׁ",
+"en": "man"
+},
+{
+"id": "v8404c31b",
+"he": "אַיִל",
+"en": "ram"
+},
+{
+"id": "vaafbe197",
+"he": "חַיָּל",
+"en": "soldier"
+},
+{
+"id": "v25a8f4c2",
+"he": "חַיָּה",
+"en": "animal"
+},
+{
+"id": "v7a583919",
+"he": "חַסָּה",
+"en": "lettuce"
+},
+{
+"id": "vfbd7215e",
+"he": "חֶסֶד",
+"en": "loving kindness"
+}
+],
+[
+{
+"id": "ve8fd537b",
+"he": "כָּתֹם",
+"en": "orange"
+},
+{
+"id": "v18b230ee",
+"he": "כָּתֵף",
+"en": "shoulder"
+},
+{
+"id": "vab6eeb7b",
+"he": "כֶּסֶף",
+"en": "silver"
+},
+{
+"id": "v26c23c1e",
+"he": "כִּסֵּא",
+"en": "chair"
+}
+],
+[
+{
+"id": "v4d9a0889",
+"he": "כּוֹס",
+"en": "cup"
+},
+{
+"id": "v94ca1876",
+"he": "סוּס",
+"en": "horse"
+},
+{
+"id": "v1355e8e0",
+"he": "סוֹד",
+"en": "secret"
+},
+{
+"id": "v0715a205",
+"he": "דּוֹד",
+"en": "uncle"
+}
+],
+[
+{
+"id": "vdcc69086",
+"he": "יָעֵל",
+"en": "ibex"
+},
+{
+"id": "va9e07809",
+"he": "נַעַל",
+"en": "shoe"
+},
+{
+"id": "vbca746dc",
+"he": "נַחַל",
+"en": "stream"
+},
+{
+"id": "v3f66f363",
+"he": "נָחָשׁ",
+"en": "snake"
+},
+{
+"id": "v81fe2a90",
+"he": "נֶפֶשׁ",
+"en": "soul"
+},
+{
+"id": "vad55b9b9",
+"he": "חֹפֶשׁ",
+"en": "freedom"
+}
+],
+[
+{
+"id": "vca2f807e",
+"he": "חָזֶה",
+"en": "chest"
+},
+{
+"id": "v685efde9",
+"he": "חַלָּה",
+"en": "challah"
+},
+{
+"id": "v41ea478a",
+"he": "עָלֶה",
+"en": "leaf"
+},
+{
+"id": "v3371810f",
+"he": "עֵדָה",
+"en": "community"
+}
+],
+[
+{
+"id": "vd685b907",
+"he": "מֵצַר",
+"en": "strait"
+},
+{
+"id": "vb977dc83",
+"he": "חָצֵר",
+"en": "yard"
+},
+{
+"id": "vd6ce87d6",
+"he": "חֹמֶר",
+"en": "material"
+},
+{
+"id": "vf8616ca7",
+"he": "זַמָּר",
+"en": "singer"
+},
+{
+"id": "v54fbcea9",
+"he": "זְמַן",
+"en": "time"
+},
+{
+"id": "va29be09f",
+"he": "זָקָן",
+"en": "beard"
+}
+],
+[
+{
+"id": "vb26d1a07",
+"he": "אֱמֶת",
+"en": "truth"
+},
+{
+"id": "v1caf23b5",
+"he": "אֹמֶר",
+"en": "utterance"
+},
+{
+"id": "va8cfe372",
+"he": "אָפֹר",
+"en": "grey"
+},
+{
+"id": "vc4f6426e",
+"he": "אֶפֶס",
+"en": "zero"
+},
+{
+"id": "v55ab6854",
+"he": "אַגָּס",
+"en": "pear"
+}
+],
+[
+{
+"id": "v51d055bc",
+"he": "בְּאֵר",
+"en": "well"
+},
+{
+"id": "v0de7889f",
+"he": "בָּשָׂר",
+"en": "flesh"
+},
+{
+"id": "v9bbd98b6",
+"he": "גֶּשֶׁר",
+"en": "bridge"
+},
+{
+"id": "v68ac9f9b",
+"he": "גֶּזֶר",
+"en": "carrot"
+}
+],
+[
+{
+"id": "v86a38eb0",
+"he": "קֶרַח",
+"en": "ice"
+},
+{
+"id": "vcbaea340",
+"he": "קֶרֶשׁ",
+"en": "board"
+},
+{
+"id": "vd82fc871",
+"he": "קֹדֶשׁ",
+"en": "sanctity"
+},
+{
+"id": "v6c1717d8",
+"he": "חֹדֶשׁ",
+"en": "month"
+},
+{
+"id": "v92945c3e",
+"he": "חֶדֶר",
+"en": "room"
+},
+{
+"id": "v3bb3aed6",
+"he": "סֵדֶר",
+"en": "order"
+}
+],
+[
+{
+"id": "v3a8d4692",
+"he": "מוֹחַ",
+"en": "brain"
+},
+{
+"id": "vab071ffb",
+"he": "רוּחַ",
+"en": "wind"
+},
+{
+"id": "v16a32b8a",
+"he": "רֵיחַ",
+"en": "smell"
+},
+{
+"id": "vae57ae03",
+"he": "רֵיק",
+"en": "empty"
+},
+{
+"id": "v56c6aba0",
+"he": "תִּיק",
+"en": "bag"
+}
+],
+[
+{
+"id": "vdec621a5",
+"he": "סֶרֶט",
+"en": "film"
+},
+{
+"id": "v94934d05",
+"he": "פְּרָט",
+"en": "detail"
+},
+{
+"id": "v2aae2e95",
+"he": "פַּרְק",
+"en": "park"
+},
+{
+"id": "v928a9fac",
+"he": "יָרֹק",
+"en": "green"
+}
+],
+[
+{
+"id": "ve18b5997",
+"he": "דֵּעָה",
+"en": "opinion"
+},
+{
+"id": "vf0a93652",
+"he": "שָׁעָה",
+"en": "hour"
+},
+{
+"id": "vcff61062",
+"he": "שָׂפָה",
+"en": "lip"
+},
+{
+"id": "v6e4fe004",
+"he": "יָפֶה",
+"en": "beautiful"
+}
+],
+[
+{
+"id": "ve3e1c887",
+"he": "תּוֹר",
+"en": "turn"
+},
+{
+"id": "v0debf9c6",
+"he": "שׁוֹר",
+"en": "ox"
+},
+{
+"id": "vb97f3ace",
+"he": "שָׁחֹר",
+"en": "black"
+},
+{
+"id": "vd761064f",
+"he": "אַחֵר",
+"en": "other"
+}
+],
+[
+{
+"id": "v6b1b5c23",
+"he": "קָהָל",
+"en": "audience"
+},
+{
+"id": "vacf23607",
+"he": "קוֹל",
+"en": "voice"
+},
+{
+"id": "v6727d95a",
+"he": "קוֹף",
+"en": "monkey"
+},
+{
+"id": "v470870f6",
+"he": "גּוּף",
+"en": "body"
+}
+],
+[
+{
+"id": "v11b11cce",
+"he": "פֵּאָה",
+"en": "wig"
+},
+{
+"id": "v1242a961",
+"he": "פִּנָּה",
+"en": "corner"
+},
+{
+"id": "v6066fa4f",
+"he": "שָׁנָה",
+"en": "year"
+},
+{
+"id": "ve9721132",
+"he": "שָׂדֶה",
+"en": "field"
+}
+],
+[
+{
+"id": "v557be8f0",
+"he": "גִּיל",
+"en": "age"
+},
+{
+"id": "vaafbe197",
+"he": "חַיָּל",
+"en": "soldier"
+},
+{
+"id": "v93a59252",
+"he": "חָלָל",
+"en": "space"
+},
+{
+"id": "v841c4a68",
+"he": "חֵלֶק",
+"en": "part"
+}
+],
+[
+{
+"id": "v5be021dc",
+"he": "עָפָר",
+"en": "dust"
+},
+{
+"id": "v8d03d3cc",
+"he": "עֵבֶר",
+"en": "the past"
+},
+{
+"id": "vee33e3a3",
+"he": "גֶּבֶר",
+"en": "man"
+},
+{
+"id": "v7f39feed",
+"he": "גָּבֹהַ",
+"en": "high"
+}
+],
+[
+{
+"id": "v698cc04b",
+"he": "יֶתֶר",
+"en": "remainder"
+},
+{
+"id": "vbaa626a4",
+"he": "יָשָׁר",
+"en": "right"
+},
+{
+"id": "v0de7889f",
+"he": "בָּשָׂר",
+"en": "flesh"
+},
+{
+"id": "v7f64097f",
+"he": "בֹּקֶר",
+"en": "morning"
+}
+],
+[
+{
+"id": "v9e04887c",
+"he": "מֶרְץ",
+"en": "March"
+},
+{
+"id": "v11eca607",
+"he": "אֶרֶץ",
+"en": "country"
+},
+{
+"id": "vefdcc8d6",
+"he": "אֹרֶךְ",
+"en": "length"
+},
+{
+"id": "vddc43d2d",
+"he": "דֶּרֶךְ",
+"en": "road"
+}
+]
+],
+"4": [
+[
+{
+"id": "vd9bb3d5b",
+"he": "טִירָה",
+"en": "castle"
+},
+{
+"id": "v4db1d044",
+"he": "סִירָה",
+"en": "boat"
+},
+{
+"id": "v43904cd6",
+"he": "סְעָרָה",
+"en": "storm"
+},
+{
+"id": "vfba2ddb8",
+"he": "מְעָרָה",
+"en": "cave"
+},
+{
+"id": "vc455feff",
+"he": "מוֹרֶה",
+"en": "teacher"
+},
+{
+"id": "v5af757db",
+"he": "הוֹרֶה",
+"en": "parent"
+}
+],
+[
+{
+"id": "v95a895f0",
+"he": "מָלוֹן",
+"en": "hotel"
+},
+{
+"id": "v447138f7",
+"he": "חַלּוֹן",
+"en": "window"
+},
+{
+"id": "v191a3d25",
+"he": "חֲלוֹם",
+"en": "dream"
+},
+{
+"id": "v1c1c9b93",
+"he": "שָׁלוֹם",
+"en": "peace"
+}
+]
+]
+},
+"hives": [
+{
+"letters": [
+"ב",
+"ג",
+"ד",
+"ה",
+"ו",
+"ע",
+"ר"
+],
+"centre": "ר",
+"words": [
+{
+"id": "v8f3dd0a6",
+"he": "עוֹר",
+"en": "skin"
+},
+{
+"id": "v53ef56c9",
+"he": "וָרֹד",
+"en": "pink"
+},
+{
+"id": "v05bbbfd0",
+"he": "גֶּרֶב",
+"en": "sock"
+},
+{
+"id": "v22b596b2",
+"he": "דָּבָר",
+"en": "thing"
+},
+{
+"id": "v967f3c7b",
+"he": "רֶגַע",
+"en": "moment"
+},
+{
+"id": "vee33e3a3",
+"he": "גֶּבֶר",
+"en": "man"
+},
+{
+"id": "v8d03d3cc",
+"he": "עֵבֶר",
+"en": "the past"
+},
+{
+"id": "vd0ca2727",
+"he": "עֶרֶב",
+"en": "evening"
+},
+{
+"id": "v1b11bc7b",
+"he": "רָעָב",
+"en": "hunger"
+},
+{
+"id": "v5af757db",
+"he": "הוֹרֶה",
+"en": "parent"
+},
+{
+"id": "v47eec6bd",
+"he": "גָּרוּעַ",
+"en": "bad"
+},
+{
+"id": "vbbf51290",
+"he": "גִּבּוֹר",
+"en": "hero"
+},
+{
+"id": "v5fa911ee",
+"he": "דְּבוֹרָה",
+"en": "bee"
+}
+]
+},
+{
+"letters": [
+"ד",
+"ו",
+"י",
+"ל",
+"ק",
+"ר",
+"ש"
+],
+"centre": "ק",
+"words": [
+{
+"id": "v23fdcf37",
+"he": "קִיר",
+"en": "wall"
+},
+{
+"id": "v928a9fac",
+"he": "יָרֹק",
+"en": "green"
+},
+{
+"id": "v239cdf37",
+"he": "שׁוּק",
+"en": "market"
+},
+{
+"id": "vd82fc871",
+"he": "קֹדֶשׁ",
+"en": "sanctity"
+},
+{
+"id": "vacf23607",
+"he": "קוֹל",
+"en": "voice"
+},
+{
+"id": "vcbaea340",
+"he": "קֶרֶשׁ",
+"en": "board"
+},
+{
+"id": "vae57ae03",
+"he": "רֵיק",
+"en": "empty"
+},
+{
+"id": "vc94384be",
+"he": "שֶׁקֶל",
+"en": "shekel"
+},
+{
+"id": "vccef5708",
+"he": "דִּיּוּק",
+"en": "accuracy"
+},
+{
+"id": "vf2aa182e",
+"he": "יַקִּיר",
+"en": "dear"
+},
+{
+"id": "ve8a6cb90",
+"he": "שׁוֹקוֹלָד",
+"en": "chocolate"
+}
+]
+},
+{
+"letters": [
+"ה",
+"ט",
+"י",
+"ס",
+"פ",
+"ק",
+"ר"
+],
+"centre": "ר",
+"words": [
+{
+"id": "v23fdcf37",
+"he": "קִיר",
+"en": "wall"
+},
+{
+"id": "vd4f4521d",
+"he": "סִיר",
+"en": "pot"
+},
+{
+"id": "v928a9fac",
+"he": "יָרֹק",
+"en": "green"
+},
+{
+"id": "v53c1004b",
+"he": "פָּרָה",
+"en": "cow"
+},
+{
+"id": "vd735f7d7",
+"he": "סֵפֶר",
+"en": "book"
+},
+{
+"id": "v2aae2e95",
+"he": "פַּרְק",
+"en": "park"
+},
+{
+"id": "vdec621a5",
+"he": "סֶרֶט",
+"en": "film"
+},
+{
+"id": "v6d3e7f65",
+"he": "פְּרִי",
+"en": "fruit"
+},
+{
+"id": "vae57ae03",
+"he": "רֵיק",
+"en": "empty"
+},
+{
+"id": "v94934d05",
+"he": "פְּרָט",
+"en": "detail"
+},
+{
+"id": "v1429ac7b",
+"he": "פַּרְפַּר",
+"en": "butterfly"
+},
+{
+"id": "vd9bb3d5b",
+"he": "טִירָה",
+"en": "castle"
+},
+{
+"id": "vf8c4f59a",
+"he": "קִרְקָס",
+"en": "circus"
+},
+{
+"id": "v4db1d044",
+"he": "סִירָה",
+"en": "boat"
+},
+{
+"id": "vf2aa182e",
+"he": "יַקִּיר",
+"en": "dear"
+},
+{
+"id": "v8f72270a",
+"he": "סִפְרִיָּה",
+"en": "library"
+}
+]
+},
+{
+"letters": [
+"ב",
+"ה",
+"י",
+"נ",
+"ע",
+"ק",
+"ר"
+],
+"centre": "ר",
+"words": [
+{
+"id": "v23fdcf37",
+"he": "קִיר",
+"en": "wall"
+},
+{
+"id": "va149d5ba",
+"he": "נַעַר",
+"en": "boy"
+},
+{
+"id": "v928a9fac",
+"he": "יָרֹק",
+"en": "green"
+},
+{
+"id": "vcace600e",
+"he": "בָּרָק",
+"en": "lightning"
+},
+{
+"id": "vc07ad4b6",
+"he": "נְיָר",
+"en": "paper"
+},
+{
+"id": "vbd21bb15",
+"he": "עִיר",
+"en": "city"
+},
+{
+"id": "v8d03d3cc",
+"he": "עֵבֶר",
+"en": "the past"
+},
+{
+"id": "vd0ca2727",
+"he": "עֶרֶב",
+"en": "evening"
+},
+{
+"id": "v7f64097f",
+"he": "בֹּקֶר",
+"en": "morning"
+},
+{
+"id": "v1b11bc7b",
+"he": "רָעָב",
+"en": "hunger"
+},
+{
+"id": "vae57ae03",
+"he": "רֵיק",
+"en": "empty"
+},
+{
+"id": "vda3341b5",
+"he": "קְעָרָה",
+"en": "bowl"
+},
+{
+"id": "v1b646894",
+"he": "קׇרְבָּן",
+"en": "ritual sacrifice"
+},
+{
+"id": "vf2aa182e",
+"he": "יַקִּיר",
+"en": "dear"
+},
+{
+"id": "v9522f91c",
+"he": "יְרִיעָה",
+"en": "curtain"
+}
+]
+},
+{
+"letters": [
+"א",
+"ד",
+"ח",
+"י",
+"מ",
+"ר",
+"ש"
+],
+"centre": "מ",
+"words": [
+{
+"id": "vaa98c647",
+"he": "מַיִם",
+"en": "water"
+},
+{
+"id": "v97ce71c7",
+"he": "אִמָּא",
+"en": "mother"
+},
+{
+"id": "v7412cb0f",
+"he": "אָדֹם",
+"en": "red"
+},
+{
+"id": "vd7085110",
+"he": "שֶׁמֶשׁ",
+"en": "sun"
+},
+{
+"id": "v1caf23b5",
+"he": "אֹמֶר",
+"en": "utterance"
+},
+{
+"id": "vd6ce87d6",
+"he": "חֹמֶר",
+"en": "material"
+},
+{
+"id": "vb5e43565",
+"he": "מַאי",
+"en": "May"
+},
+{
+"id": "v9f9ed943",
+"he": "שָׁמַיִם",
+"en": "sky"
+},
+{
+"id": "vcdd80e6d",
+"he": "מִשְׂרָד",
+"en": "office"
+},
+{
+"id": "vbf41d95c",
+"he": "חַיִּים",
+"en": "life"
+},
+{
+"id": "v201ced39",
+"he": "מְאֻחָר",
+"en": "late"
+},
+{
+"id": "v2057584e",
+"he": "מְיֻחָד",
+"en": "unique"
+}
+]
+},
+{
+"letters": [
+"ד",
+"ו",
+"ח",
+"מ",
+"ס",
+"ק",
+"ר"
+],
+"centre": "ו",
+"words": [
+{
+"id": "v0715a205",
+"he": "דּוֹד",
+"en": "uncle"
+},
+{
+"id": "v53ef56c9",
+"he": "וָרֹד",
+"en": "pink"
+},
+{
+"id": "v4fd7ebbc",
+"he": "חוּם",
+"en": "brown"
+},
+{
+"id": "v94ca1876",
+"he": "סוּס",
+"en": "horse"
+},
+{
+"id": "vab071ffb",
+"he": "רוּחַ",
+"en": "wind"
+},
+{
+"id": "v3a8d4692",
+"he": "מוֹחַ",
+"en": "brain"
+},
+{
+"id": "v1355e8e0",
+"he": "סוֹד",
+"en": "secret"
+},
+{
+"id": "vdb1112a0",
+"he": "חֲמוֹר",
+"en": "donkey"
+},
+{
+"id": "v1a8fee2b",
+"he": "סְוֶדֶר",
+"en": "sweater"
+},
+{
+"id": "v1e169a6e",
+"he": "מַסּוֹק",
+"en": "helicopter"
+},
+{
+"id": "v4390f6e7",
+"he": "מָקוֹם",
+"en": "place"
+},
+{
+"id": "v6a1dec10",
+"he": "חוֹסֶר",
+"en": "lack"
+}
+]
+},
+{
+"letters": [
+"ד",
+"ו",
+"ח",
+"י",
+"ל",
+"נ",
+"ס"
+],
+"centre": "י",
+"words": [
+{
+"id": "v884d5737",
+"he": "דְּלִי",
+"en": "bucket"
+},
+{
+"id": "v6dd6daf3",
+"he": "יֶלֶד",
+"en": "child"
+},
+{
+"id": "vaafbe197",
+"he": "חַיָּל",
+"en": "soldier"
+},
+{
+"id": "vf43935ed",
+"he": "יַיִן",
+"en": "wine"
+},
+{
+"id": "v1aa48c50",
+"he": "דִּין",
+"en": "law"
+},
+{
+"id": "vda368758",
+"he": "יַחַס",
+"en": "relation"
+},
+{
+"id": "v50f40ec4",
+"he": "סָדִין",
+"en": "bedsheet"
+},
+{
+"id": "vc5f21fb9",
+"he": "יָחִיד",
+"en": "individual"
+},
+{
+"id": "v47de871d",
+"he": "יוּלִי",
+"en": "July"
+},
+{
+"id": "ve6e3dde5",
+"he": "יוּנִי",
+"en": "June"
+},
+{
+"id": "vad40c578",
+"he": "יָדִיד",
+"en": "friend"
+}
+]
+},
+{
+"letters": [
+"ו",
+"י",
+"כ",
+"ל",
+"מ",
+"נ",
+"ת"
+],
+"centre": "נ",
+"words": [
+{
+"id": "vae5613a3",
+"he": "מֹתֶן",
+"en": "waist"
+},
+{
+"id": "vac36bce7",
+"he": "נָמֵל",
+"en": "port"
+},
+{
+"id": "vf43935ed",
+"he": "יַיִן",
+"en": "wine"
+},
+{
+"id": "v2b3c5a13",
+"he": "תַּנִּין",
+"en": "crocodile"
+},
+{
+"id": "v95a895f0",
+"he": "מָלוֹן",
+"en": "hotel"
+},
+{
+"id": "v387c867d",
+"he": "נָכוֹן",
+"en": "right"
+},
+{
+"id": "vf14b5b05",
+"he": "יָמִין",
+"en": "right"
+},
+{
+"id": "v0ddd822e",
+"he": "מוּכָן",
+"en": "ready"
+},
+{
+"id": "v3e49e0eb",
+"he": "כִּוּוּן",
+"en": "direction"
+},
+{
+"id": "ve6e3dde5",
+"he": "יוּנִי",
+"en": "June"
+},
+{
+"id": "v7062bf6d",
+"he": "לִימוֹן",
+"en": "lemon"
+},
+{
+"id": "v59730626",
+"he": "תִּיכוֹן",
+"en": "high school"
+},
+{
+"id": "v6e2df838",
+"he": "מְתַכְנֵת",
+"en": "programmer"
+},
+{
+"id": "v4875a5b2",
+"he": "מוֹנִית",
+"en": "taxi"
+},
+{
+"id": "vbf17db98",
+"he": "תׇּכְנִית",
+"en": "plan"
+},
+{
+"id": "vd2b83e57",
+"he": "מְכוֹנִית",
+"en": "car"
+}
+]
+},
+{
+"letters": [
+"ג",
+"י",
+"מ",
+"נ",
+"צ",
+"ר",
+"ש"
+],
+"centre": "מ",
+"words": [
+{
+"id": "vaa98c647",
+"he": "מַיִם",
+"en": "water"
+},
+{
+"id": "ve232041d",
+"he": "מִיץ",
+"en": "juice"
+},
+{
+"id": "v310c7fc7",
+"he": "נָמֵר",
+"en": "leopard"
+},
+{
+"id": "v3e646a5d",
+"he": "גֶּשֶׁם",
+"en": "rain"
+},
+{
+"id": "vd7085110",
+"he": "שֶׁמֶשׁ",
+"en": "sun"
+},
+{
+"id": "vd685b907",
+"he": "מֵצַר",
+"en": "strait"
+},
+{
+"id": "v3e03a3ca",
+"he": "מֻשָּׂג",
+"en": "concept"
+},
+{
+"id": "v9e04887c",
+"he": "מֶרְץ",
+"en": "March"
+},
+{
+"id": "v9f9ed943",
+"he": "שָׁמַיִם",
+"en": "sky"
+},
+{
+"id": "vee2afe8b",
+"he": "צְמִיג",
+"en": "tyre"
+},
+{
+"id": "vf14b5b05",
+"he": "יָמִין",
+"en": "right"
+},
+{
+"id": "vd18b0187",
+"he": "מְצֻיָּן",
+"en": "exceptional"
+}
+]
+},
+{
+"letters": [
+"ב",
+"ו",
+"ח",
+"ל",
+"מ",
+"נ",
+"ש"
+],
+"centre": "ל",
+"words": [
+{
+"id": "v737f7196",
+"he": "לֶחֶם",
+"en": "bread"
+},
+{
+"id": "v8781742f",
+"he": "מֶלַח",
+"en": "salt"
+},
+{
+"id": "v4012c7d8",
+"he": "חָלָב",
+"en": "milk"
+},
+{
+"id": "vb79be216",
+"he": "לָבָן",
+"en": "white"
+},
+{
+"id": "v00b5515e",
+"he": "לוּחַ",
+"en": "board"
+},
+{
+"id": "v6037e888",
+"he": "בַּלָּשׁ",
+"en": "detective"
+},
+{
+"id": "vac36bce7",
+"he": "נָמֵל",
+"en": "port"
+},
+{
+"id": "vbca746dc",
+"he": "נַחַל",
+"en": "stream"
+},
+{
+"id": "v93a59252",
+"he": "חָלָל",
+"en": "space"
+},
+{
+"id": "va0751378",
+"he": "לוּל",
+"en": "chicken coop"
+},
+{
+"id": "v40aec0e4",
+"he": "שֻׁלְחָן",
+"en": "table"
+},
+{
+"id": "v447138f7",
+"he": "חַלּוֹן",
+"en": "window"
+},
+{
+"id": "v61fabe9b",
+"he": "לָשׁוֹן",
+"en": "tongue"
+},
+{
+"id": "v95a895f0",
+"he": "מָלוֹן",
+"en": "hotel"
+},
+{
+"id": "v1c1c9b93",
+"he": "שָׁלוֹם",
+"en": "peace"
+},
+{
+"id": "v191a3d25",
+"he": "חֲלוֹם",
+"en": "dream"
+}
+]
+},
+{
+"letters": [
+"ב",
+"ד",
+"ה",
+"ו",
+"ר",
+"ש",
+"ת"
+],
+"centre": "ו",
+"words": [
+{
+"id": "v0715a205",
+"he": "דּוֹד",
+"en": "uncle"
+},
+{
+"id": "v53ef56c9",
+"he": "וָרֹד",
+"en": "pink"
+},
+{
+"id": "v0debf9c6",
+"he": "שׁוֹר",
+"en": "ox"
+},
+{
+"id": "ve3e1c887",
+"he": "תּוֹר",
+"en": "turn"
+},
+{
+"id": "v7a45e40d",
+"he": "דּוֹדָה",
+"en": "aunt"
+},
+{
+"id": "v5af757db",
+"he": "הוֹרֶה",
+"en": "parent"
+},
+{
+"id": "v5fa911ee",
+"he": "דְּבוֹרָה",
+"en": "bee"
+},
+{
+"id": "v2a49eebc",
+"he": "תְּשׁוּבָה",
+"en": "answer"
+}
+]
+},
+{
+"letters": [
+"ג",
+"ו",
+"ז",
+"ל",
+"מ",
+"ר",
+"ש"
+],
+"centre": "ש",
+"words": [
+{
+"id": "v505f48c6",
+"he": "שׁוּם",
+"en": "garlic"
+},
+{
+"id": "v3e646a5d",
+"he": "גֶּשֶׁם",
+"en": "rain"
+},
+{
+"id": "v3f4b3981",
+"he": "שֶׁלֶג",
+"en": "snow"
+},
+{
+"id": "vd7085110",
+"he": "שֶׁמֶשׁ",
+"en": "sun"
+},
+{
+"id": "v9bbd98b6",
+"he": "גֶּשֶׁר",
+"en": "bridge"
+},
+{
+"id": "v3e03a3ca",
+"he": "מֻשָּׂג",
+"en": "concept"
+},
+{
+"id": "v0debf9c6",
+"he": "שׁוֹר",
+"en": "ox"
+},
+{
+"id": "v369156cb",
+"he": "רֶגֶשׁ",
+"en": "emotion"
+},
+{
+"id": "v1c1c9b93",
+"he": "שָׁלוֹם",
+"en": "peace"
+},
+{
+"id": "v0a4c4f19",
+"he": "שַׁרְווּל",
+"en": "sleeve"
+}
+]
+},
+{
+"letters": [
+"א",
+"ב",
+"ג",
+"י",
+"מ",
+"נ",
+"ת"
+],
+"centre": "י",
+"words": [
+{
+"id": "vaa98c647",
+"he": "מַיִם",
+"en": "water"
+},
+{
+"id": "v0a377305",
+"he": "בַּיִת",
+"en": "house"
+},
+{
+"id": "vf43935ed",
+"he": "יַיִן",
+"en": "wine"
+},
+{
+"id": "vb5e43565",
+"he": "מַאי",
+"en": "May"
+},
+{
+"id": "v2b3c5a13",
+"he": "תַּנִּין",
+"en": "crocodile"
+},
+{
+"id": "ve8f56722",
+"he": "אָבִיב",
+"en": "spring"
+},
+{
+"id": "v9c76efb9",
+"he": "בִּנְיָן",
+"en": "building"
+},
+{
+"id": "v90570264",
+"he": "אֲמִתִּי",
+"en": "real"
+},
+{
+"id": "vf14b5b05",
+"he": "יָמִין",
+"en": "right"
+},
+{
+"id": "v6368da73",
+"he": "תָּמִים",
+"en": "honest"
+}
+]
+},
+{
+"letters": [
+"ב",
+"ג",
+"ו",
+"ט",
+"ע",
+"ר",
+"ת"
+],
+"centre": "ר",
+"words": [
+{
+"id": "v8f3dd0a6",
+"he": "עוֹר",
+"en": "skin"
+},
+{
+"id": "v05bbbfd0",
+"he": "גֶּרֶב",
+"en": "sock"
+},
+{
+"id": "v967f3c7b",
+"he": "רֶגַע",
+"en": "moment"
+},
+{
+"id": "vee33e3a3",
+"he": "גֶּבֶר",
+"en": "man"
+},
+{
+"id": "v8d03d3cc",
+"he": "עֵבֶר",
+"en": "the past"
+},
+{
+"id": "vd0ca2727",
+"he": "עֶרֶב",
+"en": "evening"
+},
+{
+"id": "v1b11bc7b",
+"he": "רָעָב",
+"en": "hunger"
+},
+{
+"id": "ve3e1c887",
+"he": "תּוֹר",
+"en": "turn"
+},
+{
+"id": "v47eec6bd",
+"he": "גָּרוּעַ",
+"en": "bad"
+},
+{
+"id": "vbbf51290",
+"he": "גִּבּוֹר",
+"en": "hero"
+}
+]
+},
+{
+"letters": [
+"ד",
+"ה",
+"ו",
+"ח",
+"י",
+"ל",
+"ר"
+],
+"centre": "ל",
+"words": [
+{
+"id": "v685efde9",
+"he": "חַלָּה",
+"en": "challah"
+},
+{
+"id": "v884d5737",
+"he": "דְּלִי",
+"en": "bucket"
+},
+{
+"id": "v6dd6daf3",
+"he": "יֶלֶד",
+"en": "child"
+},
+{
+"id": "v00b5515e",
+"he": "לוּחַ",
+"en": "board"
+},
+{
+"id": "vaafbe197",
+"he": "חַיָּל",
+"en": "soldier"
+},
+{
+"id": "v09410329",
+"he": "רָחֵל",
+"en": "ewe"
+},
+{
+"id": "v93a59252",
+"he": "חָלָל",
+"en": "space"
+},
+{
+"id": "va0751378",
+"he": "לוּל",
+"en": "chicken coop"
+},
+{
+"id": "vfb4ca342",
+"he": "יַלְדָּה",
+"en": "girl"
+},
+{
+"id": "v1a7f8a15",
+"he": "לַיְלָה",
+"en": "night"
+},
+{
+"id": "vfbb65293",
+"he": "דּוֹלָר",
+"en": "dollar"
+},
+{
+"id": "v8a2a0412",
+"he": "חוֹלֶה",
+"en": "sick person"
+},
+{
+"id": "v47de871d",
+"he": "יוּלִי",
+"en": "July"
+}
+]
+},
+{
+"letters": [
+"א",
+"ב",
+"מ",
+"ע",
+"צ",
+"ר",
+"ת"
+],
+"centre": "ר",
+"words": [
+{
+"id": "vcca6fa46",
+"he": "רַעַם",
+"en": "thunder"
+},
+{
+"id": "v11eca607",
+"he": "אֶרֶץ",
+"en": "country"
+},
+{
+"id": "vd685b907",
+"he": "מֵצַר",
+"en": "strait"
+},
+{
+"id": "v8d03d3cc",
+"he": "עֵבֶר",
+"en": "the past"
+},
+{
+"id": "vd0ca2727",
+"he": "עֶרֶב",
+"en": "evening"
+},
+{
+"id": "v8810ec81",
+"he": "אֵבֶר",
+"en": "limb"
+},
+{
+"id": "v1b11bc7b",
+"he": "רָעָב",
+"en": "hunger"
+},
+{
+"id": "v51d055bc",
+"he": "בְּאֵר",
+"en": "well"
+},
+{
+"id": "v1caf23b5",
+"he": "אֹמֶר",
+"en": "utterance"
+},
+{
+"id": "v9e04887c",
+"he": "מֶרְץ",
+"en": "March"
+},
+{
+"id": "v1ffc162e",
+"he": "מַעְבֹּרֶת",
+"en": "ferry"
+}
+]
+},
+{
+"letters": [
+"ה",
+"י",
+"מ",
+"פ",
+"צ",
+"ק",
+"ר"
+],
+"centre": "ר",
+"words": [
+{
+"id": "v6695800e",
+"he": "מָרָק",
+"en": "soup"
+},
+{
+"id": "v23fdcf37",
+"he": "קִיר",
+"en": "wall"
+},
+{
+"id": "v928a9fac",
+"he": "יָרֹק",
+"en": "green"
+},
+{
+"id": "v53c1004b",
+"he": "פָּרָה",
+"en": "cow"
+},
+{
+"id": "v2aae2e95",
+"he": "פַּרְק",
+"en": "park"
+},
+{
+"id": "vd685b907",
+"he": "מֵצַר",
+"en": "strait"
+},
+{
+"id": "v6d3e7f65",
+"he": "פְּרִי",
+"en": "fruit"
+},
+{
+"id": "vae57ae03",
+"he": "רֵיק",
+"en": "empty"
+},
+{
+"id": "v9e04887c",
+"he": "מֶרְץ",
+"en": "March"
+},
+{
+"id": "vca94eeb0",
+"he": "רִצְפָּה",
+"en": "floor"
+},
+{
+"id": "v1429ac7b",
+"he": "פַּרְפַּר",
+"en": "butterfly"
+},
+{
+"id": "va742a50b",
+"he": "מָהִיר",
+"en": "fast"
+},
+{
+"id": "vf2aa182e",
+"he": "יַקִּיר",
+"en": "dear"
+},
+{
+"id": "v4bda263c",
+"he": "צׇהֳרַיִם",
+"en": "noon"
+}
+]
+},
+{
+"letters": [
+"ו",
+"ח",
+"ט",
+"מ",
+"פ",
+"ר",
+"ש"
+],
+"centre": "ש",
+"words": [
+{
+"id": "v505f48c6",
+"he": "שׁוּם",
+"en": "garlic"
+},
+{
+"id": "v5f30055c",
+"he": "שָׂפָם",
+"en": "moustache"
+},
+{
+"id": "vb97f3ace",
+"he": "שָׁחֹר",
+"en": "black"
+},
+{
+"id": "vd7085110",
+"he": "שֶׁמֶשׁ",
+"en": "sun"
+},
+{
+"id": "v0debf9c6",
+"he": "שׁוֹר",
+"en": "ox"
+},
+{
+"id": "vad55b9b9",
+"he": "חֹפֶשׁ",
+"en": "freedom"
+},
+{
+"id": "v3f225c03",
+"he": "שׁוֹטֵר",
+"en": "policeman"
+},
+{
+"id": "v0dc265de",
+"he": "שׁוֹפֵט",
+"en": "judge"
+},
+{
+"id": "v1314eef9",
+"he": "מִשְׁפָּט",
+"en": "sentence"
+},
+{
+"id": "vef589333",
+"he": "פָּשׁוּט",
+"en": "simple"
+}
+]
+},
+{
+"letters": [
+"ו",
+"ח",
+"ט",
+"י",
+"ל",
+"מ",
+"ס"
+],
+"centre": "ח",
+"words": [
+{
+"id": "v737f7196",
+"he": "לֶחֶם",
+"en": "bread"
+},
+{
+"id": "v8781742f",
+"he": "מֶלַח",
+"en": "salt"
+},
+{
+"id": "v4fd7ebbc",
+"he": "חוּם",
+"en": "brown"
+},
+{
+"id": "v00b5515e",
+"he": "לוּחַ",
+"en": "board"
+},
+{
+"id": "v1947e5b2",
+"he": "חַיָּט",
+"en": "tailor"
+},
+{
+"id": "vaafbe197",
+"he": "חַיָּל",
+"en": "soldier"
+},
+{
+"id": "v3a8d4692",
+"he": "מוֹחַ",
+"en": "brain"
+},
+{
+"id": "vda368758",
+"he": "יַחַס",
+"en": "relation"
+},
+{
+"id": "v93a59252",
+"he": "חָלָל",
+"en": "space"
+},
+{
+"id": "vbf41d95c",
+"he": "חַיִּים",
+"en": "life"
+},
+{
+"id": "v191a3d25",
+"he": "חֲלוֹם",
+"en": "dream"
+}
+]
+},
+{
+"letters": [
+"א",
+"ב",
+"ו",
+"כ",
+"ס",
+"ר",
+"ת"
+],
+"centre": "ב",
+"words": [
+{
+"id": "vd39b4d93",
+"he": "בֶּרֶךְ",
+"en": "knee"
+},
+{
+"id": "vbeb6b7ea",
+"he": "אַבָּא",
+"en": "father"
+},
+{
+"id": "vad4c6df5",
+"he": "סַבָּא",
+"en": "grandfather"
+},
+{
+"id": "v1aac119c",
+"he": "בּוֹס",
+"en": "boss"
+},
+{
+"id": "v8810ec81",
+"he": "אֵבֶר",
+"en": "limb"
+},
+{
+"id": "v51d055bc",
+"he": "בְּאֵר",
+"en": "well"
+},
+{
+"id": "v7d1ad689",
+"he": "סָבְתָא",
+"en": "grandmother"
+},
+{
+"id": "v7c281440",
+"he": "רַכֶּבֶת",
+"en": "train"
+},
+{
+"id": "vef6c305f",
+"he": "כּוֹכָב",
+"en": "star"
+}
+]
+},
+{
+"letters": [
+"ו",
+"ח",
+"י",
+"ל",
+"מ",
+"נ",
+"ת"
+],
+"centre": "מ",
+"words": [
+{
+"id": "v737f7196",
+"he": "לֶחֶם",
+"en": "bread"
+},
+{
+"id": "v8781742f",
+"he": "מֶלַח",
+"en": "salt"
+},
+{
+"id": "vaa98c647",
+"he": "מַיִם",
+"en": "water"
+},
+{
+"id": "vae5613a3",
+"he": "מֹתֶן",
+"en": "waist"
+},
+{
+"id": "v4fd7ebbc",
+"he": "חוּם",
+"en": "brown"
+},
+{
+"id": "vac36bce7",
+"he": "נָמֵל",
+"en": "port"
+},
+{
+"id": "v4b1f7879",
+"he": "יוֹם",
+"en": "day"
+},
+{
+"id": "v3a8d4692",
+"he": "מוֹחַ",
+"en": "brain"
+},
+{
+"id": "v95a895f0",
+"he": "מָלוֹן",
+"en": "hotel"
+},
+{
+"id": "vbf41d95c",
+"he": "חַיִּים",
+"en": "life"
+},
+{
+"id": "vf14b5b05",
+"he": "יָמִין",
+"en": "right"
+},
+{
+"id": "v191a3d25",
+"he": "חֲלוֹם",
+"en": "dream"
+},
+{
+"id": "v6368da73",
+"he": "תָּמִים",
+"en": "honest"
+},
+{
+"id": "v7062bf6d",
+"he": "לִימוֹן",
+"en": "lemon"
+},
+{
+"id": "v4875a5b2",
+"he": "מוֹנִית",
+"en": "taxi"
+},
+{
+"id": "v43faf058",
+"he": "תַּחְתּוֹנִים",
+"en": "underwear"
+}
+]
+},
+{
+"letters": [
+"ו",
+"ח",
+"י",
+"ל",
+"מ",
+"פ",
+"ת"
+],
+"centre": "ח",
+"words": [
+{
+"id": "v737f7196",
+"he": "לֶחֶם",
+"en": "bread"
+},
+{
+"id": "v8781742f",
+"he": "מֶלַח",
+"en": "salt"
+},
+{
+"id": "v4fd7ebbc",
+"he": "חוּם",
+"en": "brown"
+},
+{
+"id": "v00b5515e",
+"he": "לוּחַ",
+"en": "board"
+},
+{
+"id": "vaafbe197",
+"he": "חַיָּל",
+"en": "soldier"
+},
+{
+"id": "v37dab560",
+"he": "חוֹף",
+"en": "beach"
+},
+{
+"id": "v0929a38c",
+"he": "פֶּתַח",
+"en": "doorway"
+},
+{
+"id": "v3a8d4692",
+"he": "מוֹחַ",
+"en": "brain"
+},
+{
+"id": "v93a59252",
+"he": "חָלָל",
+"en": "space"
+},
+{
+"id": "v7866964d",
+"he": "תַּפּוּחַ",
+"en": "apple"
+},
+{
+"id": "v46a76df7",
+"he": "חָתוּל",
+"en": "cat"
+},
+{
+"id": "vbf41d95c",
+"he": "חַיִּים",
+"en": "life"
+},
+{
+"id": "v191a3d25",
+"he": "חֲלוֹם",
+"en": "dream"
+}
+]
+},
+{
+"letters": [
+"ד",
+"ה",
+"מ",
+"ס",
+"ע",
+"ק",
+"ר"
+],
+"centre": "ע",
+"words": [
+{
+"id": "vcca6fa46",
+"he": "רַעַם",
+"en": "thunder"
+},
+{
+"id": "v3371810f",
+"he": "עֵדָה",
+"en": "community"
+},
+{
+"id": "ve18b5997",
+"he": "דֵּעָה",
+"en": "opinion"
+},
+{
+"id": "vbc7de0f4",
+"he": "עֵסֶק",
+"en": "business"
+},
+{
+"id": "v55cd43de",
+"he": "עָמֹק",
+"en": "deep"
+},
+{
+"id": "vda3341b5",
+"he": "קְעָרָה",
+"en": "bowl"
+},
+{
+"id": "v43904cd6",
+"he": "סְעָרָה",
+"en": "storm"
+},
+{
+"id": "vfba2ddb8",
+"he": "מְעָרָה",
+"en": "cave"
+},
+{
+"id": "vcaad43c2",
+"he": "עִסְקָה",
+"en": "transaction"
+},
+{
+"id": "v6a9a92e2",
+"he": "מִסְעָדָה",
+"en": "restaurant"
+}
+]
+},
+{
+"letters": [
+"ו",
+"י",
+"ל",
+"נ",
+"ע",
+"פ",
+"ר"
+],
+"centre": "ע",
+"words": [
+{
+"id": "v8d4641ea",
+"he": "עַיִן",
+"en": "eye"
+},
+{
+"id": "v8f3dd0a6",
+"he": "עוֹר",
+"en": "skin"
+},
+{
+"id": "va149d5ba",
+"he": "נַעַר",
+"en": "boy"
+},
+{
+"id": "va9e07809",
+"he": "נַעַל",
+"en": "shoe"
+},
+{
+"id": "v5b9fd694",
+"he": "עָנָן",
+"en": "cloud"
+},
+{
+"id": "vbd21bb15",
+"he": "עִיר",
+"en": "city"
+},
+{
+"id": "v5be021dc",
+"he": "עָפָר",
+"en": "dust"
+},
+{
+"id": "vdcc69086",
+"he": "יָעֵל",
+"en": "ibex"
+},
+{
+"id": "v5f01fc89",
+"he": "עוֹף",
+"en": "poultry"
+},
+{
+"id": "v90b72c4d",
+"he": "עֲרָפֶל",
+"en": "fog"
+},
+{
+"id": "vfb7a944e",
+"he": "עִנְיָן",
+"en": "interest"
+},
+{
+"id": "vbe532fce",
+"he": "עִפָּרוֹן",
+"en": "pencil"
+},
+{
+"id": "v5e9ae542",
+"he": "רַעֲיוֹן",
+"en": "idea"
+}
+]
+}
+]
+}
+}

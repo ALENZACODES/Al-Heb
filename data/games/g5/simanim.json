@@ -1,0 +1,126 @@
+{
+ "schema": "alef-g5-simanim/1",
+ "note": "Sweet Year Table. Foods and their wishes. The apple in honey and the round challah are from the calendar day page for Rosh Hashanah (data/calendar/days.json customs); the pomegranate, the head and the new fruit are widely kept customs that the app does not state yet, so each carries a review note. The head line quotes Deuteronomy 28:13 from the app's Torah text. Decoys are foods of other holidays from the same day pages.",
+ "foods": [
+  {
+   "he": "תַּפּוּחַ בִּדְבַשׁ",
+   "en": "apple in honey",
+   "tr": "tapuach bidvash",
+   "src": {
+    "kind": "days",
+    "day": "rosh-hashanah",
+    "i": 1
+   },
+   "id": "apple",
+   "wish": "a sweet year",
+   "wishSrc": "days.json rosh-hashanah customs"
+  },
+  {
+   "he": "חַלָּה",
+   "en": "braided Shabbat bread",
+   "tr": "challah",
+   "src": {
+    "kind": "days",
+    "day": "shabbat",
+    "i": 3
+   },
+   "id": "challah",
+   "wish": "a whole, full year: the challah is baked round",
+   "wishSrc": "days.json rosh-hashanah customs (round challah)"
+  },
+  {
+   "he": "רִמּוֹן",
+   "en": "pomegranate",
+   "tr": "rimon",
+   "src": {
+    "kind": "days",
+    "day": "tu-bishvat",
+    "i": 4
+   },
+   "id": "pomegranate",
+   "wish": "good deeds as many as its seeds",
+   "review": "custom not stated in app data"
+  },
+  {
+   "he": "רֹאשׁ",
+   "en": "head",
+   "tr": "rosh",
+   "src": {
+    "kind": "words",
+    "id": "h4fed6814"
+   },
+   "id": "head",
+   "wish": "to be the head and not the tail",
+   "review": "custom (often a fish head) not stated in app data",
+   "verse": {
+    "he": "לְרֹאשׁ וְלֹא לְזָנָב",
+    "ref": {
+     "book": "deuteronomy",
+     "chapter": 28,
+     "verse": 13
+    },
+    "from": 2,
+    "to": 5,
+    "src": {
+     "kind": "verse"
+    },
+    "en": "the head, and not the tail"
+   }
+  },
+  {
+   "he": "פְּרִי",
+   "en": "fruit",
+   "tr": "pri",
+   "src": {
+    "kind": "days",
+    "day": "tu-bishvat",
+    "i": 1
+   },
+   "id": "newfruit",
+   "wish": "a new season: a fruit not eaten yet this year, with Shehecheyanu",
+   "review": "second-night custom not stated in app data for Rosh Hashanah"
+  }
+ ],
+ "decoys": [
+  {
+   "he": "מַצָּה",
+   "en": "unleavened bread",
+   "tr": "matzah",
+   "src": {
+    "kind": "days",
+    "day": "pesach",
+    "i": 1
+   }
+  },
+  {
+   "he": "סֻפְגָּנִיָּה",
+   "en": "jam doughnut",
+   "tr": "sufganiyah",
+   "src": {
+    "kind": "days",
+    "day": "hanukkah",
+    "i": 5
+   }
+  },
+  {
+   "he": "אֹזֶן הָמָן",
+   "en": "hamantasch (literally 'Haman's ear')",
+   "tr": "ozen Haman",
+   "src": {
+    "kind": "days",
+    "day": "purim",
+    "i": 2
+   }
+  },
+  {
+   "he": "גְּבִינָה",
+   "en": "cheese",
+   "tr": "gvinah",
+   "src": {
+    "kind": "days",
+    "day": "shavuot",
+    "i": 5
+   }
+  }
+ ]
+}

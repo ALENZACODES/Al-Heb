@@ -1,0 +1,86 @@
+{
+ "schema": "alef-g5-scroll/1",
+ "note": "Roll the Scroll. Places to roll to, by book and chapter; the words shown on arrival are loaded from the app's Torah text at run time. Captions are short English summaries.",
+ "start": {
+  "book": "deuteronomy",
+  "chapter": 34
+ },
+ "targets": [
+  {
+   "book": "genesis",
+   "chapter": 1,
+   "verse": 1,
+   "en": "In the beginning: where the reading starts again"
+  },
+  {
+   "book": "genesis",
+   "chapter": 12,
+   "verse": 1,
+   "en": "Abram is told to go"
+  },
+  {
+   "book": "genesis",
+   "chapter": 22,
+   "verse": 1,
+   "en": "The binding of Isaac"
+  },
+  {
+   "book": "exodus",
+   "chapter": 12,
+   "verse": 21,
+   "en": "The first Passover"
+  },
+  {
+   "book": "exodus",
+   "chapter": 15,
+   "verse": 1,
+   "en": "The Song of the Sea"
+  },
+  {
+   "book": "exodus",
+   "chapter": 20,
+   "verse": 1,
+   "en": "The Ten Commandments"
+  },
+  {
+   "book": "leviticus",
+   "chapter": 19,
+   "verse": 18,
+   "en": "Love your neighbour"
+  },
+  {
+   "book": "leviticus",
+   "chapter": 23,
+   "verse": 4,
+   "en": "The festivals of the year"
+  },
+  {
+   "book": "numbers",
+   "chapter": 6,
+   "verse": 24,
+   "en": "The Priestly Blessing"
+  },
+  {
+   "book": "deuteronomy",
+   "chapter": 6,
+   "verse": 4,
+   "en": "Shema"
+  },
+  {
+   "book": "deuteronomy",
+   "chapter": 33,
+   "verse": 1,
+   "en": "Moses blesses the tribes: the Simchat Torah reading"
+  }
+ ],
+ "name": {
+  "he": "שִׂמְחַת תּוֹרָה",
+  "en": "rejoicing in the Torah",
+  "tr": "Simchat Torah",
+  "src": {
+   "kind": "article-term",
+   "article": "sukkot",
+   "i": 3
+  }
+ }
+}

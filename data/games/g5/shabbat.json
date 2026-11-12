@@ -1,0 +1,148 @@
+{
+ "schema": "alef-g5-shabbat/1",
+ "note": "Shabbat Table. What the Friday table needs, from the app's article Shabbat at Home: at least two candles, wine or grape juice for Kiddush, two whole challot. The Havdalah table (wine, spices, a braided candle) is from the same article; the Hebrew labels for spices and flame are word slices of the Havdalah blessings in the corpus registry. Decoys are objects of other holidays from the calendar day pages.",
+ "friday": [
+  {
+   "he": "נֵרוֹת",
+   "en": "candles",
+   "tr": "nerot",
+   "src": {
+    "kind": "days",
+    "day": "shabbat",
+    "i": 1
+   },
+   "id": "candles",
+   "need": 2,
+   "unit": "candle"
+  },
+  {
+   "he": "חַלָּה",
+   "en": "braided Shabbat bread",
+   "tr": "challah",
+   "src": {
+    "kind": "days",
+    "day": "shabbat",
+    "i": 3
+   },
+   "id": "challah",
+   "need": 2,
+   "unit": "challah"
+  },
+  {
+   "he": "כּוֹס",
+   "en": "cup",
+   "tr": "kos",
+   "src": {
+    "kind": "words",
+    "id": "hf9047f4b"
+   },
+   "id": "cup",
+   "need": 1,
+   "unit": "cup of wine or grape juice"
+  }
+ ],
+ "saturday": [
+  {
+   "he": "כּוֹס",
+   "en": "cup",
+   "tr": "kos",
+   "src": {
+    "kind": "words",
+    "id": "hf9047f4b"
+   },
+   "id": "cup",
+   "need": 1,
+   "unit": "cup of wine or grape juice"
+  },
+  {
+   "he": "מִינֵי בְשָׂמִים׃",
+   "src": {
+    "kind": "registry",
+    "id": "havdalah-spices",
+    "from": 7,
+    "to": 9
+   },
+   "id": "spices",
+   "en": "spices",
+   "tr": "minei besamim",
+   "need": 1,
+   "unit": "box of spices"
+  },
+  {
+   "he": "מְאוֹרֵי הָאֵשׁ׃",
+   "src": {
+    "kind": "registry",
+    "id": "havdalah-flame",
+    "from": 7,
+    "to": 9
+   },
+   "id": "flame",
+   "en": "a braided candle (the lights of the fire)",
+   "tr": "me'orei ha'esh",
+   "need": 1,
+   "unit": "braided candle"
+  }
+ ],
+ "decoys": [
+  {
+   "he": "חֲנֻכִּיָּה",
+   "en": "the nine-branched Hanukkah lamp",
+   "tr": "chanukiyah",
+   "src": {
+    "kind": "days",
+    "day": "hanukkah",
+    "i": 0
+   }
+  },
+  {
+   "he": "מַצָּה",
+   "en": "unleavened bread",
+   "tr": "matzah",
+   "src": {
+    "kind": "days",
+    "day": "pesach",
+    "i": 1
+   }
+  },
+  {
+   "he": "שׁוֹפָר",
+   "en": "ram's horn",
+   "tr": "shofar",
+   "src": {
+    "kind": "days",
+    "day": "rosh-hashanah",
+    "i": 0
+   }
+  },
+  {
+   "he": "סְבִיבוֹן",
+   "en": "dreidel, spinning top",
+   "tr": "sevivon",
+   "src": {
+    "kind": "days",
+    "day": "hanukkah",
+    "i": 3
+   }
+  },
+  {
+   "he": "רַעֲשָׁן",
+   "en": "noisemaker, grogger",
+   "tr": "ra'ashan",
+   "src": {
+    "kind": "days",
+    "day": "purim",
+    "i": 1
+   }
+  },
+  {
+   "he": "לוּלָב",
+   "en": "palm frond",
+   "tr": "lulav",
+   "src": {
+    "kind": "days",
+    "day": "sukkot",
+    "i": 1
+   }
+  }
+ ]
+}

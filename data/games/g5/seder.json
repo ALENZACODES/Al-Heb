@@ -1,0 +1,370 @@
+{
+ "schema": "alef-g5-seder/1",
+ "note": "Seder Plate, Seder Steps and The Four Questions. The plate items and what three of them stand for come from the app's article Pesach and the Seder; the shank bone's and the egg's meanings and the layout (the Ari's arrangement, common in many homes) are not in the app yet and carry review notes. The fifteen steps are the traditional ones the article mentions; their names (except matzah, maror and Hallel) are not in the app data yet. The Four Questions follow the order most Ashkenazi haggadot print; Sephardi haggadot order them differently. Nothing here rules on practice.",
+ "plate": [
+  {
+   "he": "זְרוֹעַ",
+   "en": "arm",
+   "tr": "zero'a",
+   "src": {
+    "kind": "words",
+    "id": "hbdf796ba"
+   },
+   "id": "zeroa",
+   "name": "roasted shank bone",
+   "means": "recalls the Passover offering",
+   "slot": "top-right",
+   "review": "meaning and slot not in app data; word list gives \"arm\", the same word"
+  },
+  {
+   "he": "בֵּיצָה",
+   "en": "egg",
+   "tr": "beitzah",
+   "src": {
+    "kind": "words",
+    "id": "h9974efdc"
+   },
+   "id": "beitzah",
+   "name": "roasted egg",
+   "means": "recalls the festival offering",
+   "slot": "top-left",
+   "review": "meaning and slot not in app data"
+  },
+  {
+   "he": "מָרוֹר",
+   "en": "bitter herb",
+   "tr": "maror",
+   "src": {
+    "kind": "days",
+    "day": "pesach",
+    "i": 3
+   },
+   "id": "maror",
+   "name": "bitter herb",
+   "means": "the bitterness of slavery",
+   "slot": "middle",
+   "review": "slot not in app data"
+  },
+  {
+   "he": "חֲרֹסֶת",
+   "en": "charoset",
+   "tr": "charoset",
+   "src": {
+    "kind": "review"
+   },
+   "review": "seder word not in app data; common pointing",
+   "id": "charoset",
+   "name": "charoset",
+   "means": "the mortar the slaves used for bricks",
+   "slot": "bottom-right"
+  },
+  {
+   "he": "כַּרְפַּס",
+   "en": "green vegetable",
+   "tr": "karpas",
+   "src": {
+    "kind": "review"
+   },
+   "review": "seder word not in app data; common pointing",
+   "id": "karpas",
+   "name": "green vegetable (parsley)",
+   "means": "dipped in salt water, a taste of tears",
+   "slot": "bottom-left"
+  },
+  {
+   "he": "חֲזֶרֶת",
+   "en": "lettuce",
+   "tr": "chazeret",
+   "src": {
+    "kind": "review"
+   },
+   "review": "seder word not in app data; common pointing",
+   "id": "chazeret",
+   "name": "lettuce",
+   "means": "a second bitter herb",
+   "slot": "bottom-middle"
+  }
+ ],
+ "steps": [
+  {
+   "he": "קַדֵּשׁ",
+   "en": "bless the first cup of wine (Kiddush)",
+   "tr": "kadesh",
+   "src": {
+    "kind": "review"
+   },
+   "review": "seder word not in app data; common pointing",
+   "id": "kadesh"
+  },
+  {
+   "he": "וּרְחַץ",
+   "en": "wash the hands, no blessing",
+   "tr": "urchatz",
+   "src": {
+    "kind": "review"
+   },
+   "review": "seder word not in app data; common pointing",
+   "id": "urchatz"
+  },
+  {
+   "he": "כַּרְפַּס",
+   "en": "dip a green vegetable in salt water",
+   "tr": "karpas",
+   "src": {
+    "kind": "review"
+   },
+   "review": "seder word not in app data; common pointing",
+   "id": "karpas"
+  },
+  {
+   "he": "יַחַץ",
+   "en": "break the middle matzah and hide the afikoman",
+   "tr": "yachatz",
+   "src": {
+    "kind": "review"
+   },
+   "review": "seder word not in app data; common pointing",
+   "id": "yachatz"
+  },
+  {
+   "he": "מַגִּיד",
+   "en": "tell the story of the Exodus",
+   "tr": "maggid",
+   "src": {
+    "kind": "review"
+   },
+   "review": "seder word not in app data; common pointing",
+   "id": "maggid"
+  },
+  {
+   "he": "רָחְצָה",
+   "en": "wash the hands with a blessing",
+   "tr": "rachtzah",
+   "src": {
+    "kind": "review"
+   },
+   "review": "seder word not in app data; common pointing",
+   "id": "rachtzah"
+  },
+  {
+   "he": "מוֹצִיא",
+   "en": "the blessing over bread",
+   "tr": "motzi",
+   "src": {
+    "kind": "review"
+   },
+   "review": "seder word not in app data; common pointing",
+   "id": "motzi"
+  },
+  {
+   "he": "מַצָּה",
+   "en": "unleavened bread",
+   "tr": "matzah",
+   "src": {
+    "kind": "days",
+    "day": "pesach",
+    "i": 1
+   },
+   "id": "matzah",
+   "step": "the blessing over matzah, and eat it"
+  },
+  {
+   "he": "מָרוֹר",
+   "en": "bitter herb",
+   "tr": "maror",
+   "src": {
+    "kind": "days",
+    "day": "pesach",
+    "i": 3
+   },
+   "id": "maror",
+   "step": "eat the bitter herb"
+  },
+  {
+   "he": "כּוֹרֵךְ",
+   "en": "a sandwich of matzah and maror",
+   "tr": "korech",
+   "src": {
+    "kind": "review"
+   },
+   "review": "seder word not in app data; common pointing",
+   "id": "korech"
+  },
+  {
+   "he": "שֻׁלְחָן עוֹרֵךְ",
+   "en": "the festive meal",
+   "tr": "shulchan orech",
+   "src": {
+    "kind": "review"
+   },
+   "review": "seder word not in app data; common pointing",
+   "id": "shulchan"
+  },
+  {
+   "he": "צָפוּן",
+   "en": "find and eat the afikoman",
+   "tr": "tzafun",
+   "src": {
+    "kind": "review"
+   },
+   "review": "seder word not in app data; common pointing",
+   "id": "tzafun"
+  },
+  {
+   "he": "בָּרֵךְ",
+   "en": "grace after meals",
+   "tr": "barech",
+   "src": {
+    "kind": "review"
+   },
+   "review": "seder word not in app data; common pointing",
+   "id": "barech"
+  },
+  {
+   "he": "הַלֵּל",
+   "en": "psalms of praise (Psalms 113-118)",
+   "tr": "Hallel",
+   "src": {
+    "kind": "days",
+    "day": "rosh-chodesh",
+    "i": 3
+   },
+   "id": "hallel",
+   "step": "psalms of praise"
+  },
+  {
+   "he": "נִרְצָה",
+   "en": "the close of the seder",
+   "tr": "nirtzah",
+   "src": {
+    "kind": "review"
+   },
+   "review": "seder word not in app data; common pointing",
+   "id": "nirtzah"
+  }
+ ],
+ "stepDecoys": [
+  {
+   "he": "הַבְדָּלָה",
+   "en": "separation; the ceremony that ends Shabbat",
+   "tr": "havdalah",
+   "src": {
+    "kind": "days",
+    "day": "shabbat",
+    "i": 5
+   }
+  },
+  {
+   "he": "תַּשְׁלִיךְ",
+   "en": "casting away (the riverside ceremony)",
+   "tr": "tashlich",
+   "src": {
+    "kind": "days",
+    "day": "rosh-hashanah",
+    "i": 4
+   }
+  },
+  {
+   "he": "הַקָּפוֹת",
+   "en": "circuits with the Torah scrolls",
+   "tr": "hakafot",
+   "src": {
+    "kind": "days",
+    "day": "shemini-atzeret",
+    "i": 1
+   }
+  }
+ ],
+ "questions": {
+  "opening": {
+   "he": "מַה נִּשְׁתַּנָּה הַלַּיְלָה הַזֶּה מִכָּל הַלֵּילוֹת",
+   "en": "Why is this night different from all other nights?",
+   "tr": "ma nishtanah halailah hazeh mikol haleilot",
+   "src": {
+    "kind": "review"
+   },
+   "review": "Haggadah line not in app data; common pointing"
+  },
+  "order": "Ashkenazi",
+  "review": "order and wording: not in app data; Sephardi haggadot put the dipping question first",
+  "items": [
+   {
+    "id": "matzah",
+    "other": "On all other nights we eat chametz or matzah",
+    "tonight": "tonight, only matzah",
+    "key": {
+     "he": "מַצָּה",
+     "en": "unleavened bread",
+     "tr": "matzah",
+     "src": {
+      "kind": "days",
+      "day": "pesach",
+      "i": 1
+     }
+    }
+   },
+   {
+    "id": "maror",
+    "other": "On all other nights we eat all kinds of vegetables",
+    "tonight": "tonight, maror (bitter herbs)",
+    "key": {
+     "he": "מָרוֹר",
+     "en": "bitter herb",
+     "tr": "maror",
+     "src": {
+      "kind": "days",
+      "day": "pesach",
+      "i": 3
+     }
+    }
+   },
+   {
+    "id": "dip",
+    "other": "On all other nights we do not dip even once",
+    "tonight": "tonight, we dip twice",
+    "key": null
+   },
+   {
+    "id": "recline",
+    "other": "On all other nights we eat sitting or reclining",
+    "tonight": "tonight, we all recline",
+    "key": null
+   }
+  ],
+  "clues": [
+   {
+    "q": "matzah",
+    "en": "Yachatz: the middle matzah is broken"
+   },
+   {
+    "q": "matzah",
+    "en": "No chametz in the house all week"
+   },
+   {
+    "q": "maror",
+    "en": "Korech: a sandwich with a bitter herb"
+   },
+   {
+    "q": "maror",
+    "en": "Horseradish on the plate"
+   },
+   {
+    "q": "dip",
+    "en": "Karpas goes into salt water"
+   },
+   {
+    "q": "dip",
+    "en": "Maror goes into charoset"
+   },
+   {
+    "q": "recline",
+    "en": "Leaning on a pillow like free people"
+   },
+   {
+    "q": "recline",
+    "en": "Lounging at the table, the way free people ate"
+   }
+  ],
+  "cluesReview": "the links between the clues and the questions are written for this game"
+ }
+}

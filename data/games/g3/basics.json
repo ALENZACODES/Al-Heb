@@ -1,0 +1,9 @@
+{"schema":"g3-basics/1","note":"Copied from the app's own data by the Grammar in Action lane (g3). Every record names its source and tests/games.g3.test.js checks the copy against it. Not reviewed by a Hebrew teacher. Small words the games use to frame a round (there is, yes, no, I, you, he, she). The word list flags these for review only because other entries share their spelling.","words":[{"key":"yesh","he":"יֵשׁ","en":"there is, has","src":{"file":"data/vocab/words.json","id":"ha18100a8"}},
+{"key":"ein","he":"אֵין","en":"there is no, has no","src":{"file":"data/vocab/words.json","id":"h8828bfb6"}},
+{"key":"ken","he":"כֵּן","en":"yes","src":{"file":"data/vocab/words.json","id":"hf63de22c"}},
+{"key":"lo","he":"לֹא","en":"no, not","src":{"file":"data/vocab/words.json","id":"h8e3e6f50"}},
+{"key":"ani","he":"אֲנִי","en":"I","src":{"file":"data/vocab/words.json","id":"h103e7d27"}},
+{"key":"ata","he":"אַתָּה","en":"you (a man)","src":{"file":"data/vocab/words.json","id":"h36d595e4"}},
+{"key":"at","he":"אַתְּ","en":"you (a woman)","src":{"file":"data/vocab/words.json","id":"h2ba0b3bf"}},
+{"key":"hu","he":"הוּא","en":"he","src":{"file":"data/vocab/words.json","id":"h1ef19acb"}},
+{"key":"hi","he":"הִיא","en":"she","src":{"file":"data/vocab/words.json","id":"h0b842943"}}]}

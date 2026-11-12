@@ -1,0 +1,3 @@
+// Lane 4 (g4): Everyday Israel routes [id, title], route g4-<id>; catalogue: src/games/g4-catalog.js
+export const G4_ROUTES = [['greetings', 'Greeting Rush'], ['clock', 'Clock Talk'], ['signs', 'Sign Spotter'], ['cafe', 'Café Counter'], ['change', 'Exact Change'], ['bell', 'Ring the Bell'], ['weather', 'Pack for the Weather'], ['slang', 'Local Fillers'], ['falafel', 'Falafel Stand'], ['busboard', 'Departure Board'], ['hours', 'Open or Closed?'], ['shuk', 'Shuk Haggle'], ['menu', 'The Budget Menu'], ['grid', 'City Grid'], ['phone', 'Read It Back'], ['tone', 'Right Tone'], ['week', 'Week Planner'], ['tourist', 'Spot the Tourist'], ['emergency', 'Who Do You Call?'], ['pharmacy', 'Pill Box']];
+export const G4_NAMES = G4_ROUTES.map(([id]) => 'g4-' + id);

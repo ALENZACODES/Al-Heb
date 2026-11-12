@@ -1,0 +1,170 @@
+{
+ "schema": "alef-g5-species/1",
+ "note": "Four Species. Each plant is matched to its words in Leviticus 23:40 (word slices of the app's Torah text). Which phrase means which plant is the traditional reading (palm for the lulav, myrtle for the thick-leaved tree, willow of the brook, citron for the goodly fruit) and the English names come from the Sukkot calendar page. Decoy plants are Tu BiShvat words. The willow's word-list record gives another sense of the same spelling, so it carries a review note.",
+ "species": [
+  {
+   "he": "אֶתְרוֹג",
+   "en": "citron",
+   "tr": "etrog",
+   "src": {
+    "kind": "days",
+    "day": "sukkot",
+    "i": 2
+   },
+   "id": "etrog",
+   "name": "etrog (citron)",
+   "phrase": {
+    "he": "פְּרִי עֵץ הָדָר",
+    "ref": {
+     "book": "leviticus",
+     "chapter": 23,
+     "verse": 40
+    },
+    "from": 4,
+    "to": 7,
+    "src": {
+     "kind": "verse"
+    },
+    "en": "the fruit of goodly trees"
+   }
+  },
+  {
+   "he": "לוּלָב",
+   "en": "palm frond",
+   "tr": "lulav",
+   "src": {
+    "kind": "days",
+    "day": "sukkot",
+    "i": 1
+   },
+   "id": "lulav",
+   "name": "lulav (palm)",
+   "phrase": {
+    "he": "כַּפֹּת תְּמָרִים",
+    "ref": {
+     "book": "leviticus",
+     "chapter": 23,
+     "verse": 40
+    },
+    "from": 7,
+    "to": 9,
+    "src": {
+     "kind": "verse"
+    },
+    "en": "branches of palm trees"
+   }
+  },
+  {
+   "he": "הֲדַס",
+   "en": "myrtle",
+   "tr": "hadas",
+   "src": {
+    "kind": "vocab",
+    "pack": "sukkot",
+    "id": "ha76619e4"
+   },
+   "id": "hadas",
+   "name": "hadas (myrtle)",
+   "phrase": {
+    "he": "וַעֲנַף עֵץ־עָבֹת",
+    "ref": {
+     "book": "leviticus",
+     "chapter": 23,
+     "verse": 40
+    },
+    "from": 9,
+    "to": 11,
+    "src": {
+     "kind": "verse"
+    },
+    "en": "boughs of thick trees"
+   }
+  },
+  {
+   "he": "עֲרָבָה",
+   "en": "steppe, prairie, savannah",
+   "tr": "aravah",
+   "src": {
+    "kind": "words",
+    "id": "h7dbe2f95"
+   },
+   "id": "aravah",
+   "name": "aravah (willow)",
+   "review": "word list gives \"steppe\" for this spelling; the willow is spelled and pointed the same",
+   "phrase": {
+    "he": "וְעַרְבֵי־נָחַל",
+    "ref": {
+     "book": "leviticus",
+     "chapter": 23,
+     "verse": 40
+    },
+    "from": 11,
+    "to": 12,
+    "src": {
+     "kind": "verse"
+    },
+    "en": "willows of the brook"
+   }
+  }
+ ],
+ "decoys": [
+  {
+   "he": "זַיִת",
+   "en": "olive (species)",
+   "tr": "zayit",
+   "src": {
+    "kind": "vocab",
+    "pack": "tu-bishvat",
+    "id": "h08e0fe5b"
+   }
+  },
+  {
+   "he": "תְּאֵנָה",
+   "en": "a fig tree",
+   "tr": "te'enah",
+   "src": {
+    "kind": "vocab",
+    "pack": "tu-bishvat",
+    "id": "h5ef32c54"
+   }
+  },
+  {
+   "he": "גֶּפֶן",
+   "en": "vine, grapevine",
+   "tr": "gefen",
+   "src": {
+    "kind": "vocab",
+    "pack": "tu-bishvat",
+    "id": "h85cda534"
+   }
+  },
+  {
+   "he": "שָׁקֵד",
+   "en": "almond",
+   "tr": "shaked",
+   "src": {
+    "kind": "vocab",
+    "pack": "tu-bishvat",
+    "id": "hb67e1917"
+   }
+  },
+  {
+   "he": "תַּפּוּחַ",
+   "en": "apple",
+   "tr": "tapuach",
+   "src": {
+    "kind": "words",
+    "id": "hbb1dc7a2"
+   }
+  },
+  {
+   "he": "לִימוֹן",
+   "en": "lemon",
+   "tr": "limon",
+   "src": {
+    "kind": "words",
+    "id": "h77944f4c"
+   }
+  }
+ ]
+}

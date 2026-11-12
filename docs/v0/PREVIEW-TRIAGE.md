@@ -184,6 +184,106 @@ Home shows a backup reminder after three finished lessons (`docs/progress/BACKUP
 | `tg-parashah` | keep | Torah and Hebrew game; reached from the `games` hub. Preview until a teacher reviews its Hebrew. |
 | `tg-tropehunt` | keep | Torah and Hebrew game; reached from the `games` hub. Preview until a teacher reviews its Hebrew. |
 | `tg-holidays` | keep | Torah and Hebrew game; reached from the `games` hub. Preview until a teacher reviews its Hebrew. |
+| `g1-strokeorder` | hide | A letters, vowels and sounds game (lane g1); reached from its section of the games hub, and search finds it by name. |
+| `g1-reveal` | hide | A letters, vowels and sounds game (lane g1); reached from its section of the games hub, and search finds it by name. |
+| `g1-script` | hide | A letters, vowels and sounds game (lane g1); reached from its section of the games hub, and search finds it by name. |
+| `g1-duel` | hide | A letters, vowels and sounds game (lane g1); reached from its section of the games hub, and search finds it by name. |
+| `g1-sounddash` | hide | A letters, vowels and sounds game (lane g1); reached from its section of the games hub, and search finds it by name. |
+| `g1-rhythm` | hide | A letters, vowels and sounds game (lane g1); reached from its section of the games hub, and search finds it by name. |
+| `g1-gaptrain` | hide | A letters, vowels and sounds game (lane g1); reached from its section of the games hub, and search finds it by name. |
+| `g1-whereis` | hide | A letters, vowels and sounds game (lane g1); reached from its section of the games hub, and search finds it by name. |
+| `g1-finalswitch` | hide | A letters, vowels and sounds game (lane g1); reached from its section of the games hub, and search finds it by name. |
+| `g1-sounddots` | hide | A letters, vowels and sounds game (lane g1); reached from its section of the games hub, and search finds it by name. |
+| `g1-vowelchain` | hide | A letters, vowels and sounds game (lane g1); reached from its section of the games hub, and search finds it by name. |
+| `g1-soundpairs` | hide | A letters, vowels and sounds game (lane g1); reached from its section of the games hub, and search finds it by name. |
+| `g1-blend` | hide | A letters, vowels and sounds game (lane g1); reached from its section of the games hub, and search finds it by name. |
+| `g1-nonsense` | hide | A letters, vowels and sounds game (lane g1); reached from its section of the games hub, and search finds it by name. |
+| `g1-dagesh` | hide | A letters, vowels and sounds game (lane g1); reached from its section of the games hub, and search finds it by name. |
+| `g1-riverhop` | hide | A letters, vowels and sounds game (lane g1); reached from its section of the games hub, and search finds it by name. |
+| `g1-shva` | hide | A letters, vowels and sounds game (lane g1); reached from its section of the games hub, and search finds it by name. |
+| `g1-helpers` | hide | A letters, vowels and sounds game (lane g1); reached from its section of the games hub, and search finds it by name. |
+| `g1-syllablecut` | hide | A letters, vowels and sounds game (lane g1); reached from its section of the games hub, and search finds it by name. |
+| `g1-flashread` | hide | A letters, vowels and sounds game (lane g1); reached from its section of the games hub, and search finds it by name. |
+| `g2-sortrush` | hide | Words-by-topic game (lane g2); reached from the `games` hub, kept out of the More sheet. Preview until a native speaker reviews its Hebrew. |
+| `g2-oddone` | hide | Words-by-topic game (lane g2); reached from the `games` hub, kept out of the More sheet. Preview until a native speaker reviews its Hebrew. |
+| `g2-popup` | hide | Words-by-topic game (lane g2); reached from the `games` hub, kept out of the More sheet. Preview until a native speaker reviews its Hebrew. |
+| `g2-familytree` | hide | Words-by-topic game (lane g2); reached from the `games` hub, kept out of the More sheet. Preview until a native speaker reviews its Hebrew. |
+| `g2-bodymap` | hide | Words-by-topic game (lane g2); reached from the `games` hub, kept out of the More sheet. Preview until a native speaker reviews its Hebrew. |
+| `g2-paintpots` | hide | Words-by-topic game (lane g2); reached from the `games` hub, kept out of the More sheet. Preview until a native speaker reviews its Hebrew. |
+| `g2-lineup` | hide | Words-by-topic game (lane g2); reached from the `games` hub, kept out of the More sheet. Preview until a native speaker reviews its Hebrew. |
+| `g2-snap` | hide | Words-by-topic game (lane g2); reached from the `games` hub, kept out of the More sheet. Preview until a native speaker reviews its Hebrew. |
+| `g2-chain` | hide | Words-by-topic game (lane g2); reached from the `games` hub, kept out of the More sheet. Preview until a native speaker reviews its Hebrew. |
+| `g2-dominoes` | hide | Words-by-topic game (lane g2); reached from the `games` hub, kept out of the More sheet. Preview until a native speaker reviews its Hebrew. |
+| `g2-endings` | hide | Words-by-topic game (lane g2); reached from the `games` hub, kept out of the More sheet. Preview until a native speaker reviews its Hebrew. |
+| `g2-street` | hide | Words-by-topic game (lane g2); reached from the `games` hub, kept out of the More sheet. Preview until a native speaker reviews its Hebrew. |
+| `g2-whereami` | hide | Words-by-topic game (lane g2); reached from the `games` hub, kept out of the More sheet. Preview until a native speaker reviews its Hebrew. |
+| `g2-clues` | hide | Words-by-topic game (lane g2); reached from the `games` hub, kept out of the More sheet. Preview until a native speaker reviews its Hebrew. |
+| `g2-dayafter` | hide | Words-by-topic game (lane g2); reached from the `games` hub, kept out of the More sheet. Preview until a native speaker reviews its Hebrew. |
+| `g2-trail` | hide | Words-by-topic game (lane g2); reached from the `games` hub, kept out of the More sheet. Preview until a native speaker reviews its Hebrew. |
+| `g2-fourgroups` | hide | Words-by-topic game (lane g2); reached from the `games` hub, kept out of the More sheet. Preview until a native speaker reviews its Hebrew. |
+| `g2-hive` | hide | Words-by-topic game (lane g2); reached from the `games` hub, kept out of the More sheet. Preview until a native speaker reviews its Hebrew. |
+| `g2-ladder` | hide | Words-by-topic game (lane g2); reached from the `games` hub, kept out of the More sheet. Preview until a native speaker reviews its Hebrew. |
+| `g2-firstletter` | hide | Words-by-topic game (lane g2); reached from the `games` hub, kept out of the More sheet. Preview until a native speaker reviews its Hebrew. |
+| `g3-conveyor` | keep | Grammar in Action game (lane g3); reached from the `games` hub. Preview until a teacher reviews its Hebrew. |
+| `g3-lostfound` | keep | Grammar in Action game (lane g3); reached from the `games` hub. Preview until a teacher reviews its Hebrew. |
+| `g3-whack` | keep | Grammar in Action game (lane g3); reached from the `games` hub. Preview until a teacher reviews its Hebrew. |
+| `g3-onetwomany` | keep | Grammar in Action game (lane g3); reached from the `games` hub. Preview until a teacher reviews its Hebrew. |
+| `g3-questions` | keep | Grammar in Action game (lane g3); reached from the `games` hub. Preview until a teacher reviews its Hebrew. |
+| `g3-packcheck` | keep | Grammar in Action game (lane g3); reached from the `games` hub. Preview until a teacher reviews its Hebrew. |
+| `g3-clues` | keep | Grammar in Action game (lane g3); reached from the `games` hub. Preview until a teacher reviews its Hebrew. |
+| `g3-gate` | keep | Grammar in Action game (lane g3); reached from the `games` hub. Preview until a teacher reviews its Hebrew. |
+| `g3-grid` | keep | Grammar in Action game (lane g3); reached from the `games` hub. Preview until a teacher reviews its Hebrew. |
+| `g3-arrows` | keep | Grammar in Action game (lane g3); reached from the `games` hub. Preview until a teacher reviews its Hebrew. |
+| `g3-agree` | keep | Grammar in Action game (lane g3); reached from the `games` hub. Preview until a teacher reviews its Hebrew. |
+| `g3-negate` | keep | Grammar in Action game (lane g3); reached from the `games` hub. Preview until a teacher reviews its Hebrew. |
+| `g3-swapfix` | keep | Grammar in Action game (lane g3); reached from the `games` hub. Preview until a teacher reviews its Hebrew. |
+| `g3-mirror` | keep | Grammar in Action game (lane g3); reached from the `games` hub. Preview until a teacher reviews its Hebrew. |
+| `g3-shop` | keep | Grammar in Action game (lane g3); reached from the `games` hub. Preview until a teacher reviews its Hebrew. |
+| `g3-chains` | keep | Grammar in Action game (lane g3); reached from the `games` hub. Preview until a teacher reviews its Hebrew. |
+| `g3-press` | keep | Grammar in Action game (lane g3); reached from the `games` hub. Preview until a teacher reviews its Hebrew. |
+| `g3-sieve` | keep | Grammar in Action game (lane g3); reached from the `games` hub. Preview until a teacher reviews its Hebrew. |
+| `g3-repair` | keep | Grammar in Action game (lane g3); reached from the `games` hub. Preview until a teacher reviews its Hebrew. |
+| `g3-decoder` | keep | Grammar in Action game (lane g3); reached from the `games` hub. Preview until a teacher reviews its Hebrew. |
+| `g4-greetings` | hide | Everyday Israel game (lane 4); reached from the Everyday Israel section of the games hub, and search finds it by name. Preview until a native speaker reviews its Hebrew. |
+| `g4-clock` | hide | Everyday Israel game (lane 4); reached from the Everyday Israel section of the games hub, and search finds it by name. Preview until a native speaker reviews its Hebrew. |
+| `g4-signs` | hide | Everyday Israel game (lane 4); reached from the Everyday Israel section of the games hub, and search finds it by name. Preview until a native speaker reviews its Hebrew. |
+| `g4-cafe` | hide | Everyday Israel game (lane 4); reached from the Everyday Israel section of the games hub, and search finds it by name. Preview until a native speaker reviews its Hebrew. |
+| `g4-change` | hide | Everyday Israel game (lane 4); reached from the Everyday Israel section of the games hub, and search finds it by name. Preview until a native speaker reviews its Hebrew. |
+| `g4-bell` | hide | Everyday Israel game (lane 4); reached from the Everyday Israel section of the games hub, and search finds it by name. Preview until a native speaker reviews its Hebrew. |
+| `g4-weather` | hide | Everyday Israel game (lane 4); reached from the Everyday Israel section of the games hub, and search finds it by name. Preview until a native speaker reviews its Hebrew. |
+| `g4-slang` | hide | Everyday Israel game (lane 4); reached from the Everyday Israel section of the games hub, and search finds it by name. Preview until a native speaker reviews its Hebrew. |
+| `g4-falafel` | hide | Everyday Israel game (lane 4); reached from the Everyday Israel section of the games hub, and search finds it by name. Preview until a native speaker reviews its Hebrew. |
+| `g4-busboard` | hide | Everyday Israel game (lane 4); reached from the Everyday Israel section of the games hub, and search finds it by name. Preview until a native speaker reviews its Hebrew. |
+| `g4-hours` | hide | Everyday Israel game (lane 4); reached from the Everyday Israel section of the games hub, and search finds it by name. Preview until a native speaker reviews its Hebrew. |
+| `g4-shuk` | hide | Everyday Israel game (lane 4); reached from the Everyday Israel section of the games hub, and search finds it by name. Preview until a native speaker reviews its Hebrew. |
+| `g4-menu` | hide | Everyday Israel game (lane 4); reached from the Everyday Israel section of the games hub, and search finds it by name. Preview until a native speaker reviews its Hebrew. |
+| `g4-grid` | hide | Everyday Israel game (lane 4); reached from the Everyday Israel section of the games hub, and search finds it by name. Preview until a native speaker reviews its Hebrew. |
+| `g4-phone` | hide | Everyday Israel game (lane 4); reached from the Everyday Israel section of the games hub, and search finds it by name. Preview until a native speaker reviews its Hebrew. |
+| `g4-tone` | hide | Everyday Israel game (lane 4); reached from the Everyday Israel section of the games hub, and search finds it by name. Preview until a native speaker reviews its Hebrew. |
+| `g4-week` | hide | Everyday Israel game (lane 4); reached from the Everyday Israel section of the games hub, and search finds it by name. Preview until a native speaker reviews its Hebrew. |
+| `g4-tourist` | hide | Everyday Israel game (lane 4); reached from the Everyday Israel section of the games hub, and search finds it by name. Preview until a native speaker reviews its Hebrew. |
+| `g4-emergency` | hide | Everyday Israel game (lane 4); reached from the Everyday Israel section of the games hub, and search finds it by name. Preview until a native speaker reviews its Hebrew. |
+| `g4-pharmacy` | hide | Everyday Israel game (lane 4); reached from the Everyday Israel section of the games hub, and search finds it by name. Preview until a native speaker reviews its Hebrew. |
+| `g5-simanim` | hide | Holiday, Shabbat and prayer game (lane 5); reached from its section of the `games` hub, and search finds it by name. Preview until a teacher reviews the Hebrew marked for review. |
+| `g5-harvest` | hide | Holiday, Shabbat and prayer game (lane 5); reached from its section of the `games` hub, and search finds it by name. Preview until a teacher reviews the Hebrew marked for review. |
+| `g5-grogger` | hide | Holiday, Shabbat and prayer game (lane 5); reached from its section of the `games` hub, and search finds it by name. Preview until a teacher reviews the Hebrew marked for review. |
+| `g5-fireworks` | hide | Holiday, Shabbat and prayer game (lane 5); reached from its section of the `games` hub, and search finds it by name. Preview until a teacher reviews the Hebrew marked for review. |
+| `g5-table` | hide | Holiday, Shabbat and prayer game (lane 5); reached from its section of the `games` hub, and search finds it by name. Preview until a teacher reviews the Hebrew marked for review. |
+| `g5-greet` | hide | Holiday, Shabbat and prayer game (lane 5); reached from its section of the `games` hub, and search finds it by name. Preview until a teacher reviews the Hebrew marked for review. |
+| `g5-shofar` | hide | Holiday, Shabbat and prayer game (lane 5); reached from its section of the `games` hub, and search finds it by name. Preview until a teacher reviews the Hebrew marked for review. |
+| `g5-kippur` | hide | Holiday, Shabbat and prayer game (lane 5); reached from its section of the `games` hub, and search finds it by name. Preview until a teacher reviews the Hebrew marked for review. |
+| `g5-gifts` | hide | Holiday, Shabbat and prayer game (lane 5); reached from its section of the `games` hub, and search finds it by name. Preview until a teacher reviews the Hebrew marked for review. |
+| `g5-plate` | hide | Holiday, Shabbat and prayer game (lane 5); reached from its section of the `games` hub, and search finds it by name. Preview until a teacher reviews the Hebrew marked for review. |
+| `g5-questions` | hide | Holiday, Shabbat and prayer game (lane 5); reached from its section of the `games` hub, and search finds it by name. Preview until a teacher reviews the Hebrew marked for review. |
+| `g5-omer` | hide | Holiday, Shabbat and prayer game (lane 5); reached from its section of the `games` hub, and search finds it by name. Preview until a teacher reviews the Hebrew marked for review. |
+| `g5-sukkah` | hide | Holiday, Shabbat and prayer game (lane 5); reached from its section of the `games` hub, and search finds it by name. Preview until a teacher reviews the Hebrew marked for review. |
+| `g5-species` | hide | Holiday, Shabbat and prayer game (lane 5); reached from its section of the `games` hub, and search finds it by name. Preview until a teacher reviews the Hebrew marked for review. |
+| `g5-steps` | hide | Holiday, Shabbat and prayer game (lane 5); reached from its section of the `games` hub, and search finds it by name. Preview until a teacher reviews the Hebrew marked for review. |
+| `g5-stars` | hide | Holiday, Shabbat and prayer game (lane 5); reached from its section of the `games` hub, and search finds it by name. Preview until a teacher reviews the Hebrew marked for review. |
+| `g5-bless` | hide | Holiday, Shabbat and prayer game (lane 5); reached from its section of the `games` hub, and search finds it by name. Preview until a teacher reviews the Hebrew marked for review. |
+| `g5-mend` | hide | Holiday, Shabbat and prayer game (lane 5); reached from its section of the `games` hub, and search finds it by name. Preview until a teacher reviews the Hebrew marked for review. |
+| `g5-readings` | hide | Holiday, Shabbat and prayer game (lane 5); reached from its section of the `games` hub, and search finds it by name. Preview until a teacher reviews the Hebrew marked for review. |
+| `g5-scroll` | hide | Holiday, Shabbat and prayer game (lane 5); reached from its section of the `games` hub, and search finds it by name. Preview until a teacher reviews the Hebrew marked for review. |
 | `wordfinder` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
 | `tugowar` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
 | `vowelcatcher` | keep | Game; reached from the `games` hub. Preview until native review of its words. |

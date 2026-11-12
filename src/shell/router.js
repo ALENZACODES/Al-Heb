@@ -10,6 +10,7 @@
  * the route on Home under "More ways to learn" instead of the nav bar.
  */
 /** @type {RouteDef[]} Module paths are relative to src/shell/. */
+import { G4_ROUTES } from './g4-routes.js'; // lane 4 (g4)
 export const ROUTES = [
   { name: 'home',     pattern: '/',               module: './home.view.js', tier: 'v0',                      nav: 'nav.home',     title: 'Home', owner: 'lane8' },
   { name: 'learn',    pattern: '/learn',          module: '../curriculum/learn.view.js', tier: 'v0',         nav: 'nav.learn',    title: 'Learn', owner: 'lane1' },
@@ -113,6 +114,18 @@ export const ROUTES = [
   { name: 'tg-parashah', pattern: '/tg-parashah', module: '../games/tg-parashah.view.js', title: 'Parashah Path', tier: 'preview', owner: 'games' },
   { name: 'tg-tropehunt', pattern: '/tg-tropehunt', module: '../games/tg-tropehunt.view.js', title: 'Trope Hunt', tier: 'preview', owner: 'games' },
   { name: 'tg-holidays', pattern: '/tg-holidays', module: '../games/tg-holidays.view.js', title: 'Holiday Sorter', tier: 'preview', owner: 'games' },
+  // Lane g1 games (src/games/g1-catalog.js), id:Title
+  ...('strokeorder:Stroke Order|reveal:Slow Reveal|script:Print and Script|duel:Look-Alike Duel|sounddash:Sound Dash|rhythm:Letter Rhythm|gaptrain:Gap Train|whereis:Start, Middle or End|finalswitch:Final Switch|sounddots:Dot or No Dot|vowelchain:Vowel Dominoes|soundpairs:Same Sound Pairs|blend:Blend It|nonsense:Nonsense Reader|dagesh:Dagesh Spotter|riverhop:River Hop|shva:Shva: Said or Silent|helpers:Silent Helpers|syllablecut:Syllable Cut|flashread:Flash Read')
+    .split('|').map((x) => { const n = 'g1-' + x.slice(0, x.indexOf(':')); return { name: n, pattern: '/' + n, module: `../games/${n}.view.js`, title: x.slice(x.indexOf(':') + 1), tier: /** @type {'preview'} */ ('preview'), owner: 'games' }; }),
+  // lane g2: words by topic (src/games/g2-catalog.js)
+  ...[['sortrush', 'Sort Rush'], ['oddone', 'Odd One Out'], ['popup', 'Pop-Up Pantry'], ['familytree', 'Family Tree'], ['bodymap', 'Body Map'], ['paintpots', 'Paint Pots'], ['lineup', 'Line Them Up'], ['snap', 'Topic Snap'], ['chain', 'Meaning Chain'], ['dominoes', 'Opposite Dominoes'], ['endings', 'Ending Detective'], ['street', 'Memory Street'], ['whereami', 'Where Am I?'], ['clues', 'Clue After Clue'], ['dayafter', 'Day After Day'], ['trail', 'Topic Trail'], ['fourgroups', 'Four Groups of Four'], ['hive', 'Spelling Hive'], ['ladder', 'Word Ladder'], ['firstletter', 'Letter and Topic']]
+    .map(([id, title]) => ({ name: 'g2-' + id, pattern: '/g2-' + id, module: `../games/g2-${id}.view.js`, title, tier: 'preview', owner: 'games' })),
+  // lane g3: Grammar in Action
+  ...'conveyor:Tense Conveyor|lostfound:Lost and Found|whack:Article Whack|onetwomany:One, Two, Many|questions:Question Radar|packcheck:Pack Check|clues:Pattern Clues|gate:Pattern Gate|grid:Ending Grid|arrows:Gift Arrows|agree:Agreement Match|negate:Not-Word Gap|swapfix:Swap Fix|mirror:Mirror Flip|shop:Counting Shop|chains:Chain Links|press:Pattern Press|sieve:Letter Sieve|repair:Repair Shop|decoder:Ending Decoder'
+    .split('|').map((x) => { const [n, title] = x.split(':'), name = 'g3-' + n; return { name, pattern: '/' + name, module: `../games/${name}.view.js`, title, tier: 'preview', owner: 'games' }; }),
+  ...G4_ROUTES.map(([id, title]) => ({ name: 'g4-' + id, pattern: '/g4-' + id, module: `../games/g4-${id}.view.js`, title, tier: 'preview', owner: 'games' })), // lane 4 (g4): Everyday Israel games
+  // g5 (lane 5) games
+  ...'simanim:Sweet Year Table|harvest:Seven Species|grogger:Grogger|fireworks:Independence Fireworks|table:Shabbat Table|greet:Holiday Greetings|shofar:Shofar Echo|kippur:Quiet Words|gifts:Mishloach Manot|plate:Seder Plate|questions:The Four Questions|omer:Count to Shavuot|sukkah:Sukkah Builder|species:Four Species|steps:Seder Steps|stars:Sundown to Stars|bless:Blessing Match|mend:Siddur Mend|readings:Holiday Readings|scroll:Roll the Scroll'.split('|').map((x) => { const [n, title] = x.split(':'); return { name: 'g5-' + n, pattern: '/g5-' + n, module: `../games/g5-${n}.view.js`, title, tier: 'preview', owner: 'games' }; }),
   { name: 'wordfinder', pattern: '/wordfinder', module: '../games/wordfinder.view.js', title: 'Hebrew Word Finder: Level 1', tier: 'preview', owner: 'games' },
   { name: 'tugowar', pattern: '/tugowar', module: '../games/tugowar.view.js', title: 'Antonym Tug-of-War', tier: 'preview', owner: 'games' },
   { name: 'vowelcatcher', pattern: '/vowelcatcher', module: '../games/vowelcatcher.view.js', title: 'Vowel Catcher', tier: 'preview', owner: 'games' },

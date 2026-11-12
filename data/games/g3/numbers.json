@@ -1,0 +1,10 @@
+{"schema":"g3-numbers/1","note":"Copied from the app's own data by the Grammar in Action lane (g3). Every record names its source and tests/games.g3.test.js checks the copy against it. Not reviewed by a Hebrew teacher. The counting forms 1 to 10 for masculine (m) and feminine (f) nouns. From 3 to 10 the form used with masculine nouns is the one ending in -a. 1 follows its noun; 2 has a short form before a noun (not used here).","numbers":[{"n":1,"m":"אֶחָד","f":"אַחַת","src":{"file":"data/corpus/phrasebook.json","id":"numbers-01"}},
+{"n":2,"m":"שְׁנַיִם","f":"שְׁתַּיִם","src":{"file":"data/corpus/phrasebook.json","id":"numbers-02"}},
+{"n":3,"m":"שְׁלוֹשָׁה","f":"שָׁלוֹשׁ","src":{"file":"data/corpus/phrasebook.json","id":"numbers-03"}},
+{"n":4,"m":"אַרְבָּעָה","f":"אַרְבַּע","src":{"file":"data/corpus/phrasebook.json","id":"numbers-04"}},
+{"n":5,"m":"חֲמִשָּׁה","f":"חָמֵשׁ","src":{"file":"data/corpus/phrasebook.json","id":"numbers-05"}},
+{"n":6,"m":"שִׁשָּׁה","f":"שֵׁשׁ","src":{"file":"data/corpus/phrasebook.json","id":"numbers-06"}},
+{"n":7,"m":"שִׁבְעָה","f":"שֶׁבַע","src":{"file":"data/corpus/phrasebook.json","id":"numbers-07"}},
+{"n":8,"m":"שְׁמוֹנָה","f":"שְׁמוֹנֶה","src":{"file":"data/corpus/phrasebook.json","id":"numbers-08"}},
+{"n":9,"m":"תִּשְׁעָה","f":"תֵּשַׁע","src":{"file":"data/corpus/phrasebook.json","id":"numbers-09"}},
+{"n":10,"m":"עֲשָׂרָה","f":"עֶשֶׂר","src":{"file":"data/corpus/phrasebook.json","id":"numbers-10"}}]}

@@ -1,0 +1,266 @@
+{
+ "schema": "alef-g5-sevenspecies/1",
+ "note": "Seven Species. The seven come from the Tu BiShvat calendar page (wheat, barley, grapes, figs, pomegranates, olives and dates) and are matched to their words in Deuteronomy 8:8 (word slices of the app's Torah text; the verse names the date by its honey). Names are word-list records, except barley, which is copied from the verse without its leading \"and\". Decoys are other fruit and nuts from the word list.",
+ "species": [
+  {
+   "he": "חִטָּה",
+   "en": "wheat",
+   "tr": "chitah",
+   "src": {
+    "kind": "words",
+    "id": "h0210d621"
+   },
+   "id": "wheat",
+   "name": "wheat",
+   "phrase": {
+    "he": "חִטָּה",
+    "ref": {
+     "book": "deuteronomy",
+     "chapter": 8,
+     "verse": 8
+    },
+    "from": 1,
+    "to": 2,
+    "src": {
+     "kind": "verse"
+    }
+   }
+  },
+  {
+   "he": "וּשְׂעֹרָה",
+   "ref": {
+    "book": "deuteronomy",
+    "chapter": 8,
+    "verse": 8
+   },
+   "from": 2,
+   "to": 3,
+   "src": {
+    "kind": "verse"
+   },
+   "id": "barley",
+   "name": "barley",
+   "en": "barley",
+   "tr": "se'orah",
+   "strip": 1
+  },
+  {
+   "he": "גֶּפֶן",
+   "en": "vine, grapevine",
+   "tr": "gefen",
+   "src": {
+    "kind": "words",
+    "id": "h85cda534"
+   },
+   "id": "grapes",
+   "name": "grapes (the vine)",
+   "phrase": {
+    "he": "וְגֶפֶן",
+    "ref": {
+     "book": "deuteronomy",
+     "chapter": 8,
+     "verse": 8
+    },
+    "from": 3,
+    "to": 4,
+    "src": {
+     "kind": "verse"
+    }
+   }
+  },
+  {
+   "he": "תְּאֵנָה",
+   "en": "a fig tree",
+   "tr": "te'enah",
+   "src": {
+    "kind": "words",
+    "id": "h5ef32c54"
+   },
+   "id": "figs",
+   "name": "figs",
+   "phrase": {
+    "he": "וּתְאֵנָה",
+    "ref": {
+     "book": "deuteronomy",
+     "chapter": 8,
+     "verse": 8
+    },
+    "from": 4,
+    "to": 5,
+    "src": {
+     "kind": "verse"
+    }
+   }
+  },
+  {
+   "he": "רִמּוֹן",
+   "en": "pomegranate",
+   "tr": "rimon",
+   "src": {
+    "kind": "days",
+    "day": "tu-bishvat",
+    "i": 4
+   },
+   "id": "pomegranates",
+   "name": "pomegranates",
+   "phrase": {
+    "he": "וְרִמּוֹן",
+    "ref": {
+     "book": "deuteronomy",
+     "chapter": 8,
+     "verse": 8
+    },
+    "from": 5,
+    "to": 6,
+    "src": {
+     "kind": "verse"
+    }
+   }
+  },
+  {
+   "he": "זַיִת",
+   "en": "olive (species)",
+   "tr": "zayit",
+   "src": {
+    "kind": "words",
+    "id": "h08e0fe5b"
+   },
+   "id": "olives",
+   "name": "olives",
+   "phrase": {
+    "he": "אֶרֶץ־זֵית שֶׁמֶן",
+    "ref": {
+     "book": "deuteronomy",
+     "chapter": 8,
+     "verse": 8
+    },
+    "from": 6,
+    "to": 8,
+    "src": {
+     "kind": "verse"
+    }
+   }
+  },
+  {
+   "he": "תָּמָר",
+   "en": "date palm, palm tree in general",
+   "tr": "tamar",
+   "src": {
+    "kind": "words",
+    "id": "h5d939fef"
+   },
+   "id": "dates",
+   "name": "dates",
+   "phrase": {
+    "he": "וּדְבָשׁ׃",
+    "ref": {
+     "book": "deuteronomy",
+     "chapter": 8,
+     "verse": 8
+    },
+    "from": 8,
+    "to": 9,
+    "src": {
+     "kind": "verse"
+    }
+   }
+  }
+ ],
+ "decoys": [
+  {
+   "he": "תַּפּוּחַ",
+   "en": "apple",
+   "tr": "tapuach",
+   "src": {
+    "kind": "words",
+    "id": "hbb1dc7a2"
+   }
+  },
+  {
+   "he": "תַּפּוּז",
+   "en": "orange",
+   "tr": "tapuz",
+   "src": {
+    "kind": "words",
+    "id": "hec23eb47"
+   }
+  },
+  {
+   "he": "בָּנָנָה",
+   "en": "banana",
+   "tr": "bananah",
+   "src": {
+    "kind": "words",
+    "id": "hb2dc0f86"
+   }
+  },
+  {
+   "he": "אַגָּס",
+   "en": "pear",
+   "tr": "agas",
+   "src": {
+    "kind": "words",
+    "id": "h737baa89"
+   }
+  },
+  {
+   "he": "לִימוֹן",
+   "en": "lemon",
+   "tr": "limon",
+   "src": {
+    "kind": "words",
+    "id": "h77944f4c"
+   }
+  },
+  {
+   "he": "תּוּת",
+   "en": "strawberry",
+   "tr": "tut",
+   "src": {
+    "kind": "words",
+    "id": "hbc3cffd5"
+   }
+  },
+  {
+   "he": "אֱגוֹז",
+   "en": "walnut",
+   "tr": "egoz",
+   "src": {
+    "kind": "words",
+    "id": "hafad1419"
+   }
+  },
+  {
+   "he": "שָׁקֵד",
+   "en": "almond",
+   "tr": "shaked",
+   "src": {
+    "kind": "words",
+    "id": "hb67e1917"
+   }
+  },
+  {
+   "he": "עַגְבָנִיָּה",
+   "en": "tomato",
+   "tr": "agvaniyah",
+   "src": {
+    "kind": "words",
+    "id": "h89e110bd"
+   }
+  },
+  {
+   "he": "מְלָפְפוֹן",
+   "en": "cucumber",
+   "tr": "melafefon",
+   "src": {
+    "kind": "words",
+    "id": "hd91e4a26"
+   }
+  }
+ ],
+ "verse": {
+  "book": "deuteronomy",
+  "chapter": 8,
+  "verse": 8
+ }
+}

@@ -1,0 +1,319 @@
+{
+ "schema": "alef-g5-purim/1",
+ "note": "Grogger and Mishloach Manot. The Book of Esther is not in the app's data yet, so the grogger game reads a stream of Purim words, not the Megillah text. Haman's name is the second word of אֹזֶן הָמָן on the Purim calendar page. Look-alikes are word-list records. Basket foods are word-list records (hamantasch from the Purim page); the basket rule (at least two kinds of ready-to-eat food) is from the app's Purim article. Food groups (sweet, fruit, dairy, bread, nuts) were set for this game.",
+ "haman": {
+  "he": "הָמָן",
+  "en": "Haman",
+  "tr": "Haman",
+  "src": {
+   "kind": "days-token",
+   "day": "purim",
+   "i": 2,
+   "t": 1
+  }
+ },
+ "stream": [
+  {
+   "he": "מְגִלָּה",
+   "en": "scroll; the Book of Esther",
+   "tr": "megillah",
+   "src": {
+    "kind": "days",
+    "day": "purim",
+    "i": 0
+   }
+  },
+  {
+   "he": "רַעֲשָׁן",
+   "en": "noisemaker, grogger",
+   "tr": "ra'ashan",
+   "src": {
+    "kind": "days",
+    "day": "purim",
+    "i": 1
+   }
+  },
+  {
+   "he": "תַּחְפֹּשֶׂת",
+   "en": "costume",
+   "tr": "tachposet",
+   "src": {
+    "kind": "days",
+    "day": "purim",
+    "i": 4
+   }
+  },
+  {
+   "he": "אֶסְתֵּר",
+   "en": "Esther",
+   "tr": "Esther",
+   "src": {
+    "kind": "days",
+    "day": "purim",
+    "i": 5
+   }
+  },
+  {
+   "he": "מֶלֶךְ",
+   "en": "king",
+   "tr": "melekh",
+   "src": {
+    "kind": "vocab",
+    "pack": "purim",
+    "id": "h58d8d8fe"
+   }
+  },
+  {
+   "he": "מַלְכָּה",
+   "en": "queen (female monarch)",
+   "tr": "malkah",
+   "src": {
+    "kind": "vocab",
+    "pack": "purim",
+    "id": "h571c298a"
+   }
+  },
+  {
+   "he": "יַיִן",
+   "en": "wine",
+   "tr": "yayin",
+   "src": {
+    "kind": "vocab",
+    "pack": "purim",
+    "id": "h03763c94"
+   }
+  },
+  {
+   "he": "גּוֹרָל",
+   "en": "a lot",
+   "tr": "goral",
+   "src": {
+    "kind": "vocab",
+    "pack": "purim",
+    "id": "hfcc1a370"
+   }
+  },
+  {
+   "he": "פּוּר",
+   "en": "lot, fate",
+   "tr": "pur",
+   "src": {
+    "kind": "vocab",
+    "pack": "purim",
+    "id": "he1fb2094"
+   }
+  },
+  {
+   "he": "מַתָּנָה",
+   "en": "gift",
+   "tr": "matanah",
+   "src": {
+    "kind": "vocab",
+    "pack": "purim",
+    "id": "hc5b0c1a0"
+   }
+  },
+  {
+   "he": "סְעוּדָה",
+   "en": "banquet, feast",
+   "tr": "se'udah",
+   "src": {
+    "kind": "vocab",
+    "pack": "purim",
+    "id": "h6e73aa1f"
+   }
+  },
+  {
+   "he": "שִׂמְחָה",
+   "en": "joy, happiness, glee",
+   "tr": "simchah",
+   "src": {
+    "kind": "vocab",
+    "pack": "purim",
+    "id": "h3612be9c"
+   }
+  }
+ ],
+ "lookalikes": [
+  {
+   "he": "הָמוֹן",
+   "en": "a crowd, a mass (of people)",
+   "tr": "hamon",
+   "src": {
+    "kind": "words",
+    "id": "h64713a3a"
+   }
+  },
+  {
+   "he": "מָן",
+   "en": "manna",
+   "tr": "man",
+   "src": {
+    "kind": "words",
+    "id": "h5c96df63"
+   }
+  },
+  {
+   "he": "אָמֵן",
+   "en": "amen (so be it)",
+   "tr": "amen",
+   "src": {
+    "kind": "words",
+    "id": "hebf7495d"
+   }
+  }
+ ],
+ "foods": [
+  {
+   "he": "אֹזֶן הָמָן",
+   "en": "hamantasch (literally 'Haman's ear')",
+   "tr": "ozen Haman",
+   "src": {
+    "kind": "days",
+    "day": "purim",
+    "i": 2
+   },
+   "group": "sweet"
+  },
+  {
+   "he": "עוּגָה",
+   "en": "cake",
+   "tr": "ugah",
+   "src": {
+    "kind": "words",
+    "id": "ha664d093"
+   },
+   "group": "sweet"
+  },
+  {
+   "he": "עוּגִיָּה",
+   "en": "cookie",
+   "tr": "ugiyah",
+   "src": {
+    "kind": "words",
+    "id": "h2e0fd9ab"
+   },
+   "group": "sweet"
+  },
+  {
+   "he": "שׁוֹקוֹלָד",
+   "en": "chocolate",
+   "tr": "shokolad",
+   "src": {
+    "kind": "words",
+    "id": "h6cc8112a"
+   },
+   "group": "sweet"
+  },
+  {
+   "he": "תַּפּוּחַ",
+   "en": "apple",
+   "tr": "tapuach",
+   "src": {
+    "kind": "words",
+    "id": "hbb1dc7a2"
+   },
+   "group": "fruit"
+  },
+  {
+   "he": "תַּפּוּז",
+   "en": "orange",
+   "tr": "tapuz",
+   "src": {
+    "kind": "words",
+    "id": "hec23eb47"
+   },
+   "group": "fruit"
+  },
+  {
+   "he": "בָּנָנָה",
+   "en": "banana",
+   "tr": "bananah",
+   "src": {
+    "kind": "words",
+    "id": "hb2dc0f86"
+   },
+   "group": "fruit"
+  },
+  {
+   "he": "אַגָּס",
+   "en": "pear",
+   "tr": "agas",
+   "src": {
+    "kind": "words",
+    "id": "h737baa89"
+   },
+   "group": "fruit"
+  },
+  {
+   "he": "תּוּת",
+   "en": "strawberry",
+   "tr": "tut",
+   "src": {
+    "kind": "words",
+    "id": "hbc3cffd5"
+   },
+   "group": "fruit"
+  },
+  {
+   "he": "גְּבִינָה",
+   "en": "cheese",
+   "tr": "gevinah",
+   "src": {
+    "kind": "words",
+    "id": "h4ef6ec03"
+   },
+   "group": "dairy"
+  },
+  {
+   "he": "לֶחֶם",
+   "en": "bread",
+   "tr": "lechem",
+   "src": {
+    "kind": "words",
+    "id": "hf22f36ee"
+   },
+   "group": "bread"
+  },
+  {
+   "he": "חַלָּה",
+   "en": "challah",
+   "tr": "chalah",
+   "src": {
+    "kind": "words",
+    "id": "h95d4df2c"
+   },
+   "group": "bread"
+  },
+  {
+   "he": "אֱגוֹז",
+   "en": "walnut",
+   "tr": "egoz",
+   "src": {
+    "kind": "words",
+    "id": "hafad1419"
+   },
+   "group": "nuts"
+  }
+ ],
+ "rule": "at least two kinds of ready-to-eat food, to at least one person (Purim article)",
+ "basket": {
+  "he": "סַל",
+  "en": "basket",
+  "tr": "sal",
+  "src": {
+   "kind": "words",
+   "id": "hae5f6946"
+  }
+ },
+ "name": {
+  "he": "מִשְׁלוֹחַ מָנוֹת",
+  "en": "sending portions (gifts of food)",
+  "tr": "mishlo'ach manot",
+  "src": {
+   "kind": "days",
+   "day": "purim",
+   "i": 3
+  }
+ }
+}

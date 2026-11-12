@@ -1,0 +1,115 @@
+{
+ "schema": "alef-g5-kippur/1",
+ "note": "Quiet Words. Yom Kippur words for a calm, untimed meaning game: the calendar day page words and gentle words from the Yom Kippur festival pack (data/festivals/vocab.json, itself copied from data/vocab/words.json). No buzzers, no lives, no clock.",
+ "words": [
+  {
+   "he": "צוֹם",
+   "en": "fast",
+   "tr": "tzom",
+   "src": {
+    "kind": "days",
+    "day": "yom-kippur",
+    "i": 0
+   }
+  },
+  {
+   "he": "סְלִיחָה",
+   "en": "forgiveness; sorry",
+   "tr": "slichah",
+   "src": {
+    "kind": "days",
+    "day": "yom-kippur",
+    "i": 1
+   }
+  },
+  {
+   "he": "כָּל נִדְרֵי",
+   "en": "'all vows', the evening prayer that opens the day",
+   "tr": "Kol Nidrei",
+   "src": {
+    "kind": "days",
+    "day": "yom-kippur",
+    "i": 2
+   }
+  },
+  {
+   "he": "נְעִילָה",
+   "en": "closing; the final service",
+   "tr": "Ne'ilah",
+   "src": {
+    "kind": "days",
+    "day": "yom-kippur",
+    "i": 3
+   }
+  },
+  {
+   "he": "גְּמַר חֲתִימָה טוֹבָה",
+   "en": "may you be sealed for good (the greeting)",
+   "tr": "g'mar chatimah tovah",
+   "src": {
+    "kind": "days",
+    "day": "yom-kippur",
+    "i": 4
+   }
+  },
+  {
+   "he": "סָלַח",
+   "en": "to forgive",
+   "tr": "salach",
+   "src": {
+    "kind": "vocab",
+    "pack": "yom-kippur",
+    "id": "hdd847ae4"
+   }
+  },
+  {
+   "he": "רַחֲמִים",
+   "en": "mercy",
+   "tr": "rachamim",
+   "src": {
+    "kind": "vocab",
+    "pack": "yom-kippur",
+    "id": "h9a1ab3f5"
+   }
+  },
+  {
+   "he": "טָהוֹר",
+   "en": "pure",
+   "tr": "tahor",
+   "src": {
+    "kind": "vocab",
+    "pack": "yom-kippur",
+    "id": "hc09d494d"
+   }
+  },
+  {
+   "he": "חָתַם",
+   "en": "to sign, to affix a seal",
+   "tr": "chatam",
+   "src": {
+    "kind": "vocab",
+    "pack": "yom-kippur",
+    "id": "h0d9fc785"
+   }
+  },
+  {
+   "he": "תְּשׁוּבָה",
+   "en": "return, repentance",
+   "tr": "teshuvah",
+   "src": {
+    "kind": "days",
+    "day": "rosh-hashanah",
+    "i": 3
+   }
+  },
+  {
+   "he": "תְּפִלָּה",
+   "en": "prayer, entreaty, supplication",
+   "tr": "tefilah",
+   "src": {
+    "kind": "words",
+    "id": "h8c95843f"
+   }
+  }
+ ]
+}

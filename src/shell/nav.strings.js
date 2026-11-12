@@ -2,6 +2,8 @@
 // so the table in i18n.js stays untouched. Hebrew is NOT added here: no new Hebrew was written for this lane. The only Hebrew shown in
 // the menu is what already exists in i18n.js `he` (looked up with tHe); sections without an existing label show English only.
 import { en } from './i18n.js';
+import { ROUTES } from './router.js'; // lane g1 labels
+import { G4_ROUTES } from './g4-routes.js'; // lane 4 (g4)
 
 export const NAV_EN = {
   'nav.ask': 'Ask the Torah',
@@ -81,6 +83,12 @@ export const NAV_EN = {
   'nav.route.tg-parashah': 'Parashah Path',
   'nav.route.tg-tropehunt': 'Trope Hunt',
   'nav.route.tg-holidays': 'Holiday Sorter',
+  // lane g1
+  ...Object.fromEntries(ROUTES.filter((r) => r.name.startsWith('g1-')).map((r) => ['nav.route.' + r.name, r.title])),
+  // lane g2: labels are the router titles
+  ...Object.fromEntries(ROUTES.filter((r) => r.name.startsWith('g2-')).map((r) => ['nav.route.' + r.name, r.title])),
+  ...Object.fromEntries(ROUTES.filter((r) => r.name.startsWith('g3-')).map((r) => ['nav.route.' + r.name, r.title])), // lane g3
+  ...Object.fromEntries(G4_ROUTES.map(([id, title]) => ['nav.route.g4-' + id, title])), // lane 4 (g4)
   'nav.route.wordfinder': 'Hebrew Word Finder: Level 1',
   'nav.route.tugowar': 'Antonym Tug-of-War',
   'nav.route.vowelcatcher': 'Vowel Catcher',
@@ -167,4 +175,5 @@ export const NAV_EN = {
   'nav.preview.banner': 'Preview: unreviewed, may change',
   'nav.preview.banner.more': 'This page is not part of the first release yet. It works, but it has not been reviewed and may change or move.',
 };
+for (const r of ROUTES) if (r.name.startsWith('g5-')) NAV_EN['nav.route.' + r.name] = r.title;
 for (const [k, v] of Object.entries(NAV_EN)) if (!(k in en)) en[k] = v;

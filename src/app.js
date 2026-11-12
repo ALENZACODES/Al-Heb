@@ -6,6 +6,7 @@ import { createSettings } from './shell/settings.js';
 import { applyComfort, COMFORT_KEYS } from './shell/comfort.js';
 import { createRouter, ROUTES, loadRouteModule, availableRoutes, clearView, announceTitle } from './shell/router.js';
 import { clearTransient } from './shell/transient.js';
+import { watchOnline } from './shell/offline-badge.js';
 import { VIEW_FILES } from './shell/views.generated.js';
 import { renderNav as renderNavBar } from './shell/nav.js';
 import { t, tHe } from './shell/i18n.js';
@@ -356,6 +357,7 @@ async function show(match, ctxBase, { quiet = false } = {}) {
 
 async function boot() {
   try { watchTitleCase(document.body); } catch { /* casing is cosmetic */ }
+  try { watchOnline(window); } catch { /* the offline line is a convenience */ } // J1 (lane platform)
   // Rimon's greeting (the companion module is about 101 KB with its imports) waits until after first paint
   // and the first-load JS window, like the other after-paint work, so Home stays under the 532 KB budget.
   shownFirst.then(() => afterPaint(() => {

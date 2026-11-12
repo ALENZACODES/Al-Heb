@@ -1,0 +1,34 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Chirp3-HD-Kore",
+ "tradition": "israeli",
+ "inputText": "וְהוּא נִסִּי וּמָנוֹס לִי מְנָת כּוֹסִי בְּיוֹם אֶקְרָא׃",
+ "inputSha256": "c00fa832144a50bc3aa1ecaebabccf7e2c38f0627a9f75984196860a615e3160",
+ "ingestedAt": "2026-11-12T02:13:08.168Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-12T02:13:08.168Z",
+ "redistributionCleared": false,
+ "spokenText": "וְהוּא נִסִּי וּמָנוֹס לִי מְנָת כּוֹסִי בְּיוֹם אֶקְרָא",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [],
+  "google": {
+   "heard": "ניסים ומנוסים מנת כוסי ביום אקרא",
+   "acc": 0.5,
+   "issues": [
+    "וְהוּא נִסִּי וּמָנוֹס לִי"
+   ]
+  },
+  "reviewersFailing": 1
+ },
+ "replaced": {
+  "voiceId": "he-IL-Wavenet-A",
+  "engine": "stitched-from-word-clips",
+  "renderedAt": null
+ }
+}

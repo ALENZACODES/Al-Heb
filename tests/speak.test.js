@@ -386,7 +386,7 @@ test('drills: contrast select with note, ten questions, answers stored with cont
   assert.ok(root.find((n) => n.tag === 'label' && n.attrs.for === 'speak-contrast').length);
   byId(root, 'drill-start').click();
   await waitFor(() => byId(root, 'drill-q'));
-  let right = 0;
+  let right = 0, pairsSeen = 0;
   for (let i = 0; i < 10; i++) {
     assert.match(root.text, new RegExp(`${i + 1} of 10`));
     const opts = root.find((n) => n.tag === 'button' && n.attrs['data-id']);
@@ -400,11 +400,14 @@ test('drills: contrast select with note, ten questions, answers stored with cont
     if (a.correct) right++;
     assert.match(byId(root, 'drill-verdict').text, a.correct ? /^Right\./ : /^Not this time/);
     assert.match(byId(root, 'drill-verdict').text, /The word was/);
+    if (/Which word did you hear\?/.test(root.text)) { pairsSeen++; assert.ok(byId(root, 'drill-both'), 'A9: after a pair answer, both words can be heard one after the other'); assert.match(byId(root, 'drill-verdict').text, /, then /); }
+    else assert.ok(!byId(root, 'drill-both'));
     assert.ok(opts.every((o) => o.attrs.disabled === ''));
     byId(root, 'drill-next').click();
   }
   await waitFor(() => byId(root, 'drill-summary'));
   assert.equal(byId(root, 'drill-summary').text, `Shin or sin (sh / s): ${right} of 10 right this round.`);
+  assert.ok(pairsSeen > 0, 'the round had true pair questions');
   assert.equal(store.m['speak.v1'].attempts.length, 10);
 });
 test('drills: a sound question shows the unpointed word with the marked letter; het/khaf shows a hint and hides the letter', async () => {

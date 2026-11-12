@@ -45,16 +45,30 @@ export function mount(root, ctx) {
     const ws = searchWords(words, q, 15, translitOf).map((e) => h('li', {}, h('a', { href: '#/vocab?q=' + encodeURIComponent(q) }, heSpan(e.pointed || e.lemma, 'he search-he'), ' ', h('span', { class: 'menu-label' }, uiEnglish(ctx, e.gloss || '')),
       isTranslitHit(e, q, translitOf) ? h('span', { class: 'menu-desc search-tl' }, 'Sounds like: ' + translitOf(e)[0] + ' (transliteration match)') : null,
       h('span', { class: 'menu-desc' }, [e.pos, e.topic].filter(Boolean).join(', ')))));
-    const total = pages.length + ls.length + ws.length;
-    out.append(...[group(t('search.pages'), pages), group(t('search.letters'), ls), group(t('search.words'), ws)].filter(Boolean));
+    // J9 (lane platform): lessons, books, root families, prayers, Torah references and, on request, Torah verse text (src/platform/search-more.js)
+    const row = (x) => h('li', {}, h('a', { href: x.href }, h('span', { class: 'menu-label' }, x.label), x.he ? ' ' : null, x.he ? heSpan(x.he, 'he search-he') : null, x.desc ? h('span', { class: 'menu-desc' }, x.desc) : null));
+    const extra = more ? more.m.searchAll(more.ix, q).map(([title, rows]) => group(title, rows.map(row))) : [];
+    if (more && torahHits.q === q && torahHits.rows.length) extra.push(group('Torah Verses', torahHits.rows.map(row)));
+    const total = pages.length + ls.length + ws.length + extra.reduce((a, g) => a + g.querySelectorAll('li').length, 0);
+    out.append(...[group(t('search.pages'), pages), group(t('search.letters'), ls), group(t('search.words'), ws), ...extra].filter(Boolean));
+    if (more && q.length >= 2) out.append(h('p', {}, h('button', { type: 'button', class: 'btn secondary', onclick: () => torahText(q) }, `Search every Torah verse for “${q}”`), torahHits.q === q && torahHits.note ? h('span', { class: 'menu-desc' }, ' ' + torahHits.note) : null));
     if (!total && loadedWords >= 4) out.append(h('p', {}, t('search.none')));
     status.textContent = error ? t('search.error') : (loadedWords < 4 ? t('search.loading') + ' ' + (total === 1 ? '1 result' : t('search.count', { n: total })) : (total === 1 ? '1 result' : t('search.count', { n: total })));
     try { const u = '#/search' + (q ? '?q=' + encodeURIComponent(q) : ''); if (location.hash !== u) history.replaceState(null, '', u); } catch { /* ignore */ }
   }
+  let more = null, torahHits = { q: '', rows: [], note: '' }, torahRun = 0;
+  function torahText(q) {
+    const run = ++torahRun;
+    torahHits = { q, rows: [], note: 'Searching…' }; render();
+    more.m.searchTorahText(q, more.ix.torah, { onProgress: (d, n) => { if (run === torahRun && !stopped) status.textContent = `Searching the Torah: chapter ${d} of ${n}…`; }, cancelled: () => run !== torahRun || stopped })
+      .then((r) => { if (run !== torahRun || stopped) return; torahHits = { q, rows: r.hits, note: r.hits.length ? (r.complete ? `${r.hits.length} verses.` : `The first ${r.hits.length} verses.`) : 'No verse has these words.' }; render(); })
+      .catch(() => { if (run === torahRun) { torahHits = { q, rows: [], note: 'The Torah text did not load. Try again while online.' }; render(); } });
+  }
+  import('../platform/search-more.js').then((m) => m.loadIndexes().then((ix) => { if (!stopped) { more = { m, ix }; render(); } })).catch(() => { /* the other groups still work */ });
   let timer = 0;
   input.addEventListener('input', () => { clearTimeout(timer); timer = setTimeout(render, 120); });
   render();
   loadLetters().then((l) => { letters = l; render(); }).catch(() => { error = true; render(); });
   loadWordTiers((tier, entries, err) => { if (stopped) return; loadedWords++; if (entries) words = words.concat(entries); else error = true; if (loadedWords === 4) status.dataset.done = '1'; render(); }).catch(() => { error = true; render(); });
-  return () => { stopped = true; clearTimeout(timer); };
+  return () => { stopped = true; torahRun++; clearTimeout(timer); };
 }

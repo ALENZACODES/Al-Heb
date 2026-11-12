@@ -1,0 +1,35 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Chirp3-HD-Charon",
+ "tradition": "israeli",
+ "inputText": "וְהָיוּ הַדְּבָרִים הָאֵלֶּה אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם עַל־לְבָבֶךָ׃",
+ "inputSha256": "3e3d929d0b6fba0ae2b4e42e5d8ca67ca1b0c35e536285d377eed39763046f4a",
+ "ingestedAt": "2026-11-12T02:30:30.539Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-12T02:30:30.539Z",
+ "redistributionCleared": false,
+ "spokenText": "וְהָיוּ הַדְּבָרִים הָאֵלֶּה אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם עַל לְבָבֶךָ",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [
+   "אֲשֶׁר",
+   "הַיּוֹם"
+  ],
+  "google": {
+   "heard": "והיו הדברים האלה אשר אנוכי מצווך היום על לבבך",
+   "acc": 1.0,
+   "issues": []
+  },
+  "reviewersFailing": 1
+ },
+ "replaced": {
+  "voiceId": "he-IL-Wavenet-B",
+  "engine": "stitched-from-word-clips",
+  "renderedAt": null
+ }
+}

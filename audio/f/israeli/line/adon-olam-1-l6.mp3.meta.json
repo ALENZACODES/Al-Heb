@@ -1,0 +1,35 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Chirp3-HD-Aoede",
+ "tradition": "israeli",
+ "inputText": "בְּלִי רֵאשִׁית בְּלִי תַכְלִית וְלוֹ הָעֹז וְהַמִּשְׂרָה׃",
+ "inputSha256": "0fa08799b3e944226e048c55570bd7086ae35618a7ba5ef9c9d440d83386ec7e",
+ "ingestedAt": "2026-11-12T02:11:48.641Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-12T02:11:48.641Z",
+ "redistributionCleared": false,
+ "spokenText": "בְּלִי רֵאשִׁית בְּלִי תַכְלִית וְלוֹ הָעֹז וְהַמִּשְׂרָה",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "speakingRate": 0.9,
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [
+   "רֵאשִׁית"
+  ],
+  "google": {
+   "heard": "בלי ראשית בלי תכלית ולא העוז והמשרה",
+   "acc": 1.0,
+   "issues": []
+  },
+  "reviewersFailing": 1
+ },
+ "replaced": {
+  "voiceId": "he-IL-Wavenet-A",
+  "engine": "stitched-from-word-clips",
+  "renderedAt": null
+ }
+}

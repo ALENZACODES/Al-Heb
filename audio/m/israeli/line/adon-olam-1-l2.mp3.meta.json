@@ -1,0 +1,35 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Chirp3-HD-Charon",
+ "tradition": "israeli",
+ "inputText": "לְעֵת נַעֲשָׂה בְחֶפְצוֹ כֹּל אֲזַי מֶלֶךְ שְׁמוֹ נִקְרָא׃",
+ "inputSha256": "77568b8bbe267c89197404d9d011271c26056a4decbbe224275fc9e39c7778ec",
+ "ingestedAt": "2026-11-12T02:22:01.096Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-12T02:22:01.096Z",
+ "redistributionCleared": false,
+ "spokenText": "לְעֵת נַעֲשָׂה בְחֶפְצוֹ כֹּל אֲזַי מֶלֶךְ שְׁמוֹ נִקְרָא",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "speakingRate": 0.85,
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [
+   "אֲזַי"
+  ],
+  "google": {
+   "heard": "לעת נעשה בחפצו כל אזי מלך שמו נקרא",
+   "acc": 1.0,
+   "issues": []
+  },
+  "reviewersFailing": 1
+ },
+ "replaced": {
+  "voiceId": "he-IL-Wavenet-B",
+  "engine": "stitched-from-word-clips",
+  "renderedAt": null
+ }
+}

@@ -1,3 +1,4 @@
+import { execFileSync } from 'node:child_process';
 import { pathToFileURL } from 'node:url';
 // Generates precache-manifest.js (list of app-shell + data files and a content-hash version) for sw.js.
 // Run: node tools/build-precache.mjs   (re-run whenever files under src/, data/, assets/ change)
@@ -235,7 +236,9 @@ if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) 
   console.log(`src/lib/counts.generated.js: build ${c.build.version} ${c.build.builtAt}`);
   if (checked?.report.filesChecked) console.log(`asset check passed, evidence: ${assets.writeEvidence({ ...checked.report, build: c.build })}`);
   writeViewList();
-  await (await import('./offline-packs.mjs')).writePacks(); // lane 4: offline pack lists and sizes, before the hash covers them
+  // lane 4: offline pack lists and sizes, before the hash covers them. Run in its own process: offline-packs.mjs imports this
+  // module, and importing it from here would wait on this module's own top-level await (a module cycle that never settles).
+  execFileSync(process.execPath, [join(repoRoot, 'tools/offline-packs.mjs')], { stdio: 'inherit' });
   const m = computeManifest();
   const root = repoRoot;
   writeFileSync(join(root, 'precache-manifest.js'), manifestText(m));

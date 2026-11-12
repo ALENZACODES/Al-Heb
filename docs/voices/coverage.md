@@ -161,8 +161,8 @@ Required 3368; have 3366; missing 2.
 ## Hold sets
 
 - clip-holds: 40 of these clips. Withheld from playback: a person listens before any screen plays it (data/lab/clip-holds.json).
-- plays-israeli: 3780 rows (64 of them play an Israeli clip that is in clip-holds, so they are withheld with it). Fallback: a Sephardi or Ashkenazi row with no clip of its own plays the Israeli clip of the same voice (status "plays-israeli").
-- chirpHeld: 68 rows. A Chirp re-take was held; the current clip plays (manifest flag "chirpHeld": true).
+- plays-israeli: 3287 rows (35 of them play an Israeli clip that is in clip-holds, so they are withheld with it). Fallback: a Sephardi or Ashkenazi row with no clip of its own plays the Israeli clip of the same voice (status "plays-israeli").
+- chirpHeld: 67 rows. A Chirp re-take was held; the current clip plays (manifest flag "chirpHeld": true).
 - The three sets do not contradict one another.
 
 ## Notes

@@ -52,6 +52,8 @@
   Cache-Control: no-cache
 /sitemap.xml
   Cache-Control: no-cache
+/audit/*
+  Cache-Control: no-cache
 
 # App code, styles and data keep stable (un-hashed) file names, so they are NOT immutable: revalidate with the ETag (a 304 is cheap).
 # The service worker precaches them anyway, and a new precache-manifest.js version replaces the cache.

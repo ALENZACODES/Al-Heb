@@ -9,7 +9,7 @@
    "files": [
     [
      "data/audio/summary.json",
-     375,
+     374,
      1
     ],
     [
@@ -114,7 +114,7 @@
     ],
     [
      "src/audio/player.js",
-     28141,
+     28555,
      1
     ],
     [
@@ -204,7 +204,7 @@
     ],
     [
      "src/curriculum/exercises.ui.js",
-     14552,
+     14643,
      1
     ],
     [
@@ -214,7 +214,7 @@
     ],
     [
      "src/curriculum/fade.view.js",
-     9269,
+     9626,
      0
     ],
     [
@@ -354,7 +354,7 @@
     ],
     [
      "src/home/today.js",
-     15414,
+     15703,
      1
     ],
     [
@@ -374,12 +374,12 @@
     ],
     [
      "src/letters/memory.view.js",
-     10573,
+     10732,
      1
     ],
     [
      "src/letters/memorycard.js",
-     25844,
+     26834,
      1
     ],
     [
@@ -389,17 +389,17 @@
     ],
     [
      "src/lib/counts.generated.js",
-     1355,
+     1768,
      1
     ],
     [
      "src/lib/counts.js",
-     18456,
+     18893,
      1
     ],
     [
      "src/placement/start.js",
-     1199,
+     2004,
      1
     ],
     [
@@ -489,7 +489,7 @@
     ],
     [
      "src/shell/nav-model.js",
-     11584,
+     11948,
      1
     ],
     [
@@ -549,7 +549,7 @@
     ],
     [
      "src/shell/router.js",
-     45825,
+     47304,
      1
     ],
     [
@@ -651,7 +651,7 @@
     ],
     [
      "data/service/orders.json",
-     9328,
+     9890,
      1
     ],
     [
@@ -661,7 +661,7 @@
     ],
     [
      "src/audio/player.js",
-     28141,
+     28555,
      1
     ],
     [
@@ -706,12 +706,12 @@
     ],
     [
      "src/lib/counts.generated.js",
-     1355,
+     1768,
      1
     ],
     [
      "src/lib/counts.js",
-     18456,
+     18893,
      1
     ],
     [
@@ -756,12 +756,12 @@
     ],
     [
      "src/service/model.js",
-     8080,
+     8884,
      0
     ],
     [
      "src/service/service.view.js",
-     11042,
+     11807,
      0
     ],
     [
@@ -833,7 +833,7 @@
    "files": [
     [
      "data/audio/summary.json",
-     375,
+     374,
      1
     ],
     [
@@ -908,7 +908,7 @@
     ],
     [
      "src/audio/player.js",
-     28141,
+     28555,
      1
     ],
     [
@@ -1063,12 +1063,12 @@
     ],
     [
      "src/letters/memory.view.js",
-     10573,
+     10732,
      1
     ],
     [
      "src/letters/memorycard.js",
-     25844,
+     26834,
      1
     ],
     [
@@ -1078,12 +1078,12 @@
     ],
     [
      "src/lib/counts.generated.js",
-     1355,
+     1768,
      1
     ],
     [
      "src/lib/counts.js",
-     18456,
+     18893,
      1
     ],
     [

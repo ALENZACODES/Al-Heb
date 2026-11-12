@@ -128,3 +128,16 @@ test('M-01: the tradition chosen in Settings is the default; the page override h
   r = await run('sephardi', { 'service.prefs': { tradition: 'israeli' } });
   assert.equal(r.sel.children.find((o) => 'selected' in o.attrs)?.attrs.value, 'sephardi', 'an old saved choice without a basis gives way to Settings');
 });
+
+test('owner rule: Follow the Service shows the four-letter name as ה׳ (exact and prefixed), never as written', async () => {
+  const { root, ctx } = mk();
+  await mount(root, ctx);
+  await btn(root, /Follow the service/).click();
+  await root.querySelector('[data-order="shabbat-morning"]').click();
+  const seen = [];
+  for (let i = 0; i < 40; i++) { seen.push(...root.queryAll('.sv-he').map((n) => n.textContent)); const nx = root.querySelector('#sv-next'); if (!nx || nx.attrs.disabled !== undefined) break; await nx.click(); }
+  const { findName } = await import('../src/shell/names.js');
+  assert.ok(seen.length > 20);
+  for (const t of seen) assert.equal(findName(t).filter((w) => w.kind !== 'abbrev').length, 0, t);
+  assert.ok(seen.some((t) => t.includes('ה׳')), 'some lines carry the name, shown abbreviated');
+});

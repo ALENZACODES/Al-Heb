@@ -2,6 +2,7 @@
 // mount(root, ctx) -> unmount. ctx: { store, settings?, audio?, query? }. Offline; reads only repo data files.
 import { congregationOf } from '../pronunciation/forTradition.js';
 import { h, heSpan, audioButton } from '../shell/ui.js';
+import { showName } from '../games/tg-core.js';
 import { loadCorpus } from '../corpus/corpus.js';
 import { loadProgressData } from '../progress/data.js';
 import { readSnapshot, readableNow } from '../progress/model.js';
@@ -125,7 +126,7 @@ export async function mount(root, ctx) {
         // a text of several lines: each line has its own Play, so a learner can follow and repeat one line at a time (M-11)
         const lc = c.he.length > 1 ? lineClipFor(ctx.audio, c, k, st.tradition) : null;
         return h('div', { class: 'sv-line' },
-          heSpan(line, 'sv-he'),
+          heSpan(showName(line), 'sv-he'), // owner rule: the four-letter name is shown as ה׳ (same helper as the Shabbat Companion); audio unchanged
           st.showTr && c.tr[k] ? h('p', { class: 'sv-tr', lang: 'en' }, c.tr[k]) : null,
           lc ? audioButton(h, ctx, { kind: lc.kind, id: lc.id, tradition: st.tradition, text: line, label: `Play line ${k + 1}`, attrs: { 'data-sv-line': String(k + 1) } }) : null);
       }),

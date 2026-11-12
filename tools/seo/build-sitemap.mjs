@@ -20,6 +20,17 @@ const ids = (xs) => xs.map((x) => (x && typeof x === 'object' ? x.id : x)).filte
 
 /** pattern -> async () => values (one string per parameter, or an array of strings for a two-parameter route). */
 export const ENUMERATE = {
+  // lane 6 bridge: the four sections, then one page per book and per prayer line (src/bridge/bridge.view.js)
+  '/bridge/:sec': async () => ['books', 'lines', 'words', 'modern'],
+  '/trope/families/:id': async () => {
+    const { families } = await import(pathToFileURL(join(root, 'src/trope/families.js')).href);
+    return ids(families(rd('data/corpus/trope/table.json')));
+  },
+  '/bridge/:sec/:id': async () => {
+    const { eligibleLines } = await import(pathToFileURL(join(root, 'src/curriculum/fade.js')).href);
+    return [...ids(arr(rd('data/books/index.json'), 'books')).map((id) => ['book', id]),
+      ...ids(eligibleLines(arr(rd('data/corpus/registry.json'), 'texts', 'entries'))).map((id) => ['line', id])];
+  },
   '/letters/:id': async () => ids(arr(rd('data/letters/letters.json'), 'letters')),
   '/loanwords/:group': async () => ids(arr(rd('data/curriculum/loanwords.json'), 'groups')),
   '/spotit/:letter': async () => {

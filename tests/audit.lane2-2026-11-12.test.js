@@ -449,9 +449,13 @@ test('M-11: the coverage tab shows line coverage, rounded down, and a held clip 
   // withhold one of those clips: it stops counting
   const orders = json('data/service/orders.json'), reg = json('data/corpus/registry.json');
   const byId = new Map((reg.entries || reg).map((e) => [e.id, e]));
+  // withhold every clip that would play this line (a line can be covered by more than one clip, e.g. its own and a prayer clip)
   const one = audio.status('line', 'shema-1', { tradition: 'ashkenazi' });
   if (one.source === 'file') {
-    audio.setHeld([one.path]);
+    const held = [];
+    for (let k = 0; k < 5; k++) { const st = audio.status('line', 'shema-1', { tradition: 'ashkenazi' }); if (st.source !== 'file') break; held.push(st.path); audio.setHeld(held); }
+    const covered = (kind) => audio.status(kind, 'shema-1', { tradition: 'ashkenazi' }).source === 'file';
+    for (let k = 0; k < 5 && covered('prayer'); k++) { held.push(audio.status('prayer', 'shema-1', { tradition: 'ashkenazi' }).path); audio.setHeld(held); }
     const after = audioCoverageAll(audio, orders, byId, ORDER_IDS, 'ashkenazi');
     assert.equal(after.withClip, of - 1);
   }

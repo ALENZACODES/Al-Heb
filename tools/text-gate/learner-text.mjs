@@ -43,6 +43,10 @@ export function scanLearnerText(root) {
   const visit = (x, file, key) => {
     if (Array.isArray(x)) { for (const y of x) visit(y, file, key); return; }
     if (x && typeof x === 'object') {
+      // Column tables ({fields: [...], rows: [[...], ...]}, e.g. data/vocab/index.json) are checked as records.
+      if (Array.isArray(x.fields) && Array.isArray(x.rows) && x.fields.every((f) => typeof f === 'string')) {
+        for (const r of x.rows) if (Array.isArray(r)) visit(Object.fromEntries(x.fields.map((f, i) => [f, r[i]])), file, key);
+      }
       // A record copied from another data file ({id, source: "data/....json"}) must show the source's English and Hebrew.
       if (typeof x.id === 'string' && typeof x.source === 'string' && /^data\/.*\.json$/.test(x.source) && existsSync(join(root, x.source))) {
         const src = byId(x.source).get(x.id);

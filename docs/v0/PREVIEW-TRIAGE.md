@@ -31,6 +31,7 @@ decision, so the More sheet stays short and the first session stays coherent (we
 | `share` | keep | Small and self-contained. |
 | `classsummary` | hide | Teacher-only view; reached from `classtrack` or by link. |
 | `service` | keep | Prayer-service follow-along. |
+| `shabbat` | keep | Shabbat Companion (lane 5, 12 Nov): this Shabbat, the service map, follow-along, join-in drills and home rituals. Order not yet reviewed by a rabbi. |
 | `firstday-ladder` | merge | Into `firstday` as its optional last part. |
 | `placement` | keep | Linked from the welcome screen for learners who can already read. |
 | `reminders` | keep | Study reminders. |

@@ -1,0 +1,31 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-respelled-israeli-voice",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "ashkenazi",
+ "inputText": "זוֹנָה",
+ "inputSha256": "9314e4aa672679c35abf4db3d1c9fa514acfc3210398b6abe4dd7ce0ce41e94a",
+ "ingestedAt": "2026-11-12T07:50:52.650Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice: the Israeli man voice reading the ashkenazi English-letter respelling, not pointed Hebrew. Not a human recording; no human has listened to it. Licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel.",
+ "renderedAt": "2026-11-12T07:50:52.650Z",
+ "redistributionCleared": false,
+ "spokenText": "zonoh",
+ "normalized": true,
+ "provider": "google",
+ "madeFrom": "respelling",
+ "voiceName": "he-IL-Wavenet-B",
+ "languageCode": "he-IL",
+ "hebrew": "זוֹנָה",
+ "israeliRef": "audio/m/israeli/word/hefbbc2c7.mp3",
+ "tempo": {
+  "applied": false,
+  "factor": 1,
+  "cap": 1.26,
+  "before": 0.8160090702947845,
+  "after": 0.8160090702947845,
+  "israeliSec": 0.9040136054421769,
+  "israeliRef": "audio/m/israeli/word/hefbbc2c7.mp3"
+ }
+}

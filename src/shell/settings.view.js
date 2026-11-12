@@ -165,7 +165,7 @@ export function mount(root, ctx) {
     group('audio', 'Sound', 'For learners who do not use audio', [boolRow('audioFree', AUDIO_FREE_LABEL, AUDIO_FREE_HELP)]),
     group('listen', 'Listen and repeat', 'Slow speed and a pause to say it yourself', [
     h('p', { class: 'muted' }, 'Slow keeps the same voice at 0.7 of the speed, so you can hear each sound. Echo plays a letter, sound or word, plays it again slowly, then stays quiet for a moment so you can say it back before moving on.'),
-    labelled('clipRate', 'Speed', { normal: 'Normal', slow: 'Slow (0.7×)' }),
+    labelled('clipRate', 'Speed', { normal: 'Normal', 'slow-0.8': 'A little slower (0.8×)', slow: 'Slow (0.7×)', 'slow-0.6': 'Very slow (0.6×)' }),
     boolRow('echoMode', 'Echo: hear it, hear it slowly, say it', 'After a letter, vowel, syllable or word plays, it plays again slowly and then leaves a silent turn for you. Lines and prayers play once as usual.'),
     ]),
     group('look', 'Look and sound', 'Colours, Hebrew letter style and voice', [

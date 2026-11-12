@@ -42,7 +42,7 @@ export const DEFAULTS = Object.freeze({
   untimed: false,       // true = no time limit anywhere (Word Sprint has no clock; Record and compare does not stop by itself)
   confirmAnswers: false, // true = choosing an answer only marks it; a "Check answer" button submits it
   keyShortcuts: true,   // false = the single-key shortcuts (1 to 4, S) are off
-  clipRate: 'normal',  // 'normal' (1×) or 'slow' (0.7×) for the shared play control. Not a voice change.
+  clipRate: 'normal',  // 'normal' (1×), 'slow-0.8' (0.8×), 'slow' (0.7×) or 'slow-0.6' (0.6×) for the shared play control. Not a voice change.
   echoMode: false,     // true = after a letter, vowel, syllable or word plays, it plays again slowly and then leaves a silent turn for you to say it (src/audio/player.js echo)
   // Optional game music bar (src/audio/music.js via src/app.js). Before these keys existed set() rejected every music field, so a
   // learner's on/off, mute, volume and track were never saved. Off by default; the track is an id from GAME_TRACKS ('' = first).
@@ -60,7 +60,7 @@ export const ENUMS = Object.freeze({
   textSize: ['normal', 'large', 'larger', 'largest'],
   lineLength: ['normal', 'narrow'],
   targetSize: ['normal', 'large'],
-  clipRate: ['normal', 'slow'],
+  clipRate: ['normal', 'slow', 'slow-0.8', 'slow-0.6'],
 });
 export const GENDER_VALUES = Object.freeze(['m', 'f', 'both']);
 

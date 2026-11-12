@@ -45,7 +45,7 @@ export function installPlayState({ audio, doc = globalThis.document, win = globa
   let lastControl = null, lastAt = 0, seq = 0, active = null, hideTimer = 0;
   doc.addEventListener('click', (e) => {
     const c = e.target instanceof win.Element ? e.target.closest(CONTROL) : null;
-    if (!c || c.closest('.music-bar, .alef-music-bar, .sound-bar, .alef-now-playing')) return;
+    if (!c || c.closest('.music-bar, .alef-music-bar, .sound-bar, .alef-now-playing, .alef-nowbar')) return;
     lastControl = c; lastAt = Date.now();
     if (c.dataset.playState === 'failed' || c.dataset.playState === 'finished') delete c.dataset.playState;
   }, true);

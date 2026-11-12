@@ -134,6 +134,8 @@ const ON_DEMAND_FILES = new Set([
   // Ask the Torah (#/ask): route code only, fetched on first open, runtime-cached (keeps first install under 3.95 MiB).
   'src/ask/ask.view.js', 'src/ask/model.js', 'src/ask/match.js',
   'data/corpus/prayer-meta.json', 'data/corpus/torah-service-guide.json', 'data/corpus/gaps.json',
+  // lane 5 (12 Nov, plan #10): Shabbat Companion drills and home steps, read only by #/shabbat (its code is under src/service/, already on demand).
+  'data/service/companion.json',
   'data/curriculum/dialogues.json', 'data/curriculum/gender-pairs.json', 'data/curriculum/loanwords.json', 'data/curriculum/prompts.json', 'data/curriculum/word-vocab-map.json',
   'data/firstday/minute-one.json', 'data/firstday/buildable-words.json' /* word builder list (168 KB): preview route #/firstwin, fetched when it opens, runtime-cached */, 'data/homepage/prayers.json', 'data/morning-verses.json', 'data/torah-quotes.json',
   'data/letters/art-concept-map.json', 'data/letters/keyboard-si1452.json',

@@ -71,7 +71,8 @@ export function showcaseNode(ctx) {
     h('p', { class: 'show-cta' },
       h('a', { class: 'btn show-btn', href: '#/firstday' }, 'Start your first 10 minutes'),
       ' ',
-      h('a', { class: 'btn secondary show-btn2', href: '#/books' }, 'Read a story book'))),
+      h('a', { class: 'btn secondary show-btn2', href: '#/books' }, 'Read a story book'),
+      has('shabbat') ? h('a', { class: 'btn secondary show-btn3', href: '#/shabbat' }, 'Shabbat: find the Sh\'ma and follow the service') : null)), // lane 5: Shabbat Companion
     mascotBox);
   return h('section', { class: 'showcase', 'aria-label': 'Explore Aleph' },
     h('div', { class: 'show-hero' },

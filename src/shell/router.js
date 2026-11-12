@@ -162,6 +162,8 @@ export const ROUTES = [
   { name: 'share', pattern: '/share', module: '../teacher/teacher.view.js', title: 'Share my progress', owner: 'teacher', optional: true, quick: 'nav.share', query: { mode: 'share' } },
   { name: 'classsummary', pattern: '/classsummary', module: '../teacher/teacher.view.js', title: 'Class summary', owner: 'teacher', optional: true, quick: 'nav.classsummary', query: { mode: 'class' } },
   { name: 'service', pattern: '/service', module: '../service/service.view.js', title: 'Follow the service', owner: 'service', optional: true, quick: 'nav.service' },
+  // lane 5 (12 Nov, plan #10): Shabbat Companion, a lazy route (its code and data are on demand)
+  { name: 'shabbat', pattern: '/shabbat', module: '../service/shabbat.view.js', title: 'Shabbat Companion', owner: 'service', optional: true, quick: 'nav.route.shabbat' },
   { name: 'firstday', pattern: '/firstday', module: '../firstday/firstday.view.js', tier: 'v0', title: 'Your first 10 minutes', owner: 'firstday', optional: true, group: 'learn', quick: 'nav.firstday' },
   { name: 'firstday-ladder', pattern: '/firstday/ladder', module: '../firstday/ladder.view.js', title: 'Pointed to unpointed ladder', owner: 'firstday', optional: true, group: 'learn', quick: 'nav.firstday-ladder' },
   { name: 'firstwin', pattern: '/firstwin', module: '../firstday/minuteone.view.js', title: 'Build your first Hebrew word', owner: 'firstday', optional: true, group: 'learn' },

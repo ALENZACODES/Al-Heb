@@ -72,7 +72,7 @@ test('markers: Amidah card shows stand and silent with the guide quote; Shema ca
     if (root.querySelector('#sv-next').attrs.disabled === '') break;
     await root.querySelector('#sv-next').click();
   }
-  assert.equal(Object.keys(seen).length, 24);
+  assert.equal(Object.keys(seen).length, 28); // 24 + Gadlu, Lecha Adonai, Yehalelu and Hashivenu (lane 5, 12 Nov: the Shabbat Companion map)
   assert.deepEqual(seen['The Amidah begins'].marks, ['stand', 'silent']);
   assert.equal(seen['The Amidah begins'].varies, false);
   assert.deepEqual(seen['The Shema'], { marks: [], varies: true });

@@ -125,6 +125,7 @@ export const NAV_EN = {
   'nav.route.books': 'Little books',
   'nav.route.book': 'Read a book',
   'nav.route.synagogues': 'Reform Synagogues in Canada',
+  'nav.route.shabbat': 'Shabbat Companion', // lane 5
   'nav.route.synagogue': 'Synagogue',
   'nav.route.nikkud-fade': 'Vowel marks, fading out',
   'nav.route.roots': 'Roots and verb families',

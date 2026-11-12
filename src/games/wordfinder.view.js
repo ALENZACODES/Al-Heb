@@ -3,7 +3,8 @@ import { signalRimon } from '../shell/rimon-events.js';
 // One tap to hear, one tap to find. No timers, typing, lives or penalties.
 import { h, heSpan } from '../shell/ui.js';
 import { FIRST_WORDS } from '../lib/counts.js';
-import { speak, loadGameImages, envNode, GAME_ENV } from './engine.js';
+import { speak, loadGameImages, envNode, GAME_ENV, playRecordedClip, hasRecordedClip } from './engine.js';
+import { recordScore } from './scores.js';
 import { sfx } from '../audio/sfx.js';
 import { isAudioFree } from '../shell/audiofree.js';
 import { STORE_KEY, TOPIC_FIRST, TOPIC_ALL, ROUND_SIZE,
@@ -11,8 +12,15 @@ import { STORE_KEY, TOPIC_FIRST, TOPIC_ALL, ROUND_SIZE,
 
 const DATA_URL = new URL('../../data/games/firstwords.json', import.meta.url);
 
+/** D6 (lane games-books): #/wordfinder-listen plays the same game by ear: no English and no sounds-like line until the word is found,
+ *  only words whose clip plays from a file, and its finds are kept apart (games.wordfinder-listen.v1). */
+export const LISTEN_KEY = 'games.wordfinder-listen.v1';
+export const isListenMode = (ctx) => ctx?.query?.listen === '1' || ctx?.route?.query?.listen === '1';
+
 export function mount(root, ctx) {
   const leaveSfx = sfx.enter(ctx);
+  const listen = isListenMode(ctx);
+  const KEY = listen ? LISTEN_KEY : STORE_KEY;
   let alive = true;
   let bank = [], found = { version: 1, found: [], rounds: 0 };
   let topic = TOPIC_FIRST, deck = [], index = 0, phase = 'loading';
@@ -24,10 +32,11 @@ export function mount(root, ctx) {
   const more = h('div', { class: 'wf-menu' });
 
   root.replaceChildren(h('article', { class: 'card game-card wf-game' },
-    h('div', { class: 'wf-eyebrow' }, 'LEVEL 1 OF 9 · START FROM ZERO'),
-    h('h1', { id: 'view-title', tabindex: '-1' }, 'Hebrew Word Finder ', heSpan('מִלָּה')),
+    h('div', { class: 'wf-eyebrow' }, listen ? 'LISTENING · BY EAR' : 'LEVEL 1 OF 9 · START FROM ZERO'),
+    h('h1', { id: 'view-title', tabindex: '-1' }, listen ? 'Word Finder: Listening ' : 'Hebrew Word Finder ', heSpan('מִלָּה')),
     h('div', { class: 'wf-artifact', 'aria-hidden': 'true' }),
-    h('p', { class: 'wf-intro' }, 'Never heard Hebrew before? You belong here. Listen, look at the letters, then find the same word. You do not need to read yet.'),
+    h('p', { class: 'wf-intro' }, listen ? 'Hear a word, then find it among the Hebrew words. No English and no sounds-like help until you find it. Only words with a recorded clip are used.' : 'Never heard Hebrew before? You belong here. Listen, look at the letters, then find the same word. You do not need to read yet.'),
+    listen ? null : h('p', { class: 'muted' }, h('a', { href: '#/wordfinder-listen' }, 'Play by ear: Word Finder Listening →')),
     h('p', { class: 'muted' }, 'Hebrew reads right to left ←. The dots help with sounds. Every word has an English meaning.'),
     progress, status, sound, stage, more,
     h('p', { class: 'muted wf-source' },
@@ -58,12 +67,12 @@ export function mount(root, ctx) {
   const audioOff = () => isAudioFree(ctx);
   function persist(word) {
     found = recordFound(found, word.id, bank);
-    try { ctx?.store?.set?.(STORE_KEY, found); } catch { /* private mode: session remains playable */ }
+    try { ctx?.store?.set?.(KEY, found); } catch { /* private mode: session remains playable */ }
   }
   function updateProgress() {
     const count = found.found.length;
     progress.replaceChildren(
-      h('span', { class: 'wf-progress-label' }, count + ' / ' + FIRST_WORDS + ' words found on this device'),
+      h('span', { class: 'wf-progress-label' }, listen ? `${count} / ${bank.length} words with a clip found by ear on this device` : count + ' / ' + FIRST_WORDS + ' words found on this device'),
       h('span', { class: 'wf-track', role: 'progressbar', 'aria-label': 'Words found', 'aria-valuemin': '0', 'aria-valuemax': String(FIRST_WORDS), 'aria-valuenow': String(count) },
         h('span', { class: 'wf-track-fill', style: 'width:' + (100 * count / FIRST_WORDS).toFixed(1) + '%' })));
   }
@@ -94,6 +103,13 @@ export function mount(root, ctx) {
     else if (result?.source === 'tts-fallback') sound.textContent = 'Spoken with your device’s Hebrew voice.';
     else sound.textContent = result?.message || 'No Hebrew audio available; use the pointed text and pronunciation guide.';
   }
+  /** Listening mode: the word's own clip only (never the device voice). */
+  async function playWord(word) {
+    if (!word) return;
+    if (audioOff()) { sound.textContent = 'Audio is off in your Aleph settings, so the listening game cannot play.'; return; }
+    const ok = await playRecordedClip(ctx, 'word', word.id);
+    if (alive && current()?.id === word.id) sound.textContent = ok ? 'Playing the word.' : 'The clip did not play. Tap Play the word again.';
+  }
   function hearingButtons(word) {
     return h('div', { class: 'wf-actions' },
       h('button', { type: 'button', class: 'btn wf-hear', onclick: () => void hebrewReadAloud(word) }, 'Hear the Hebrew'),
@@ -112,6 +128,7 @@ export function mount(root, ctx) {
     deck = nextRound(bank, found, topic, ROUND_SIZE);
     index = 0;
     phase = deck.length ? 'learn' : 'empty';
+    if (listen && deck.length) { phase = 'learn'; wrong = new Set(); hint = false; roundChoices = []; sound.textContent = ''; startFind(); playWord(current()); return; }
     wrong = new Set(); hint = false; roundChoices = [];
     sound.textContent = ''; paint();
   }
@@ -150,8 +167,10 @@ export function mount(root, ctx) {
     if (index >= deck.length) {
       phase = 'done';
       found = { ...found, rounds: found.rounds + 1 };
-      try { ctx?.store?.set?.(STORE_KEY, found); } catch { /* learner can continue without persistence */ }
+      try { ctx?.store?.set?.(KEY, found); } catch { /* learner can continue without persistence */ }
+      if (listen) recordScore(ctx?.store, 'wordfinder-listen', deck.filter((w) => found.found.includes(w.id)).length * 10, 0);
     } else phase = 'learn';
+    if (listen && phase === 'learn') { startFind(); playWord(current()); focusStage('button.wf-hear'); return; }
     hint = false; wrong = new Set(); roundChoices = [];
     sound.textContent = '';
     paint();
@@ -201,10 +220,10 @@ export function mount(root, ctx) {
       stage.replaceChildren(
         h('section', { class: 'wf-find-header' },
           h('p', { class: 'wf-step' }, '2 · Find the same Hebrew word'),
-          h('p', { class: 'wf-prompt' }, 'Find: ', h('strong', {}, word.en)),
-          h('p', { class: 'wf-say' }, 'It sounds like: ', h('strong', {}, word.translit)),
+          ...(listen ? [h('p', { class: 'wf-prompt' }, 'Find the word you heard.')] : [h('p', { class: 'wf-prompt' }, 'Find: ', h('strong', {}, word.en)),
+            h('p', { class: 'wf-say' }, 'It sounds like: ', h('strong', {}, word.translit))]),
           hint ? h('div', { class: 'wf-hint' }, 'Look for these shapes: ', heSpan(word.he, 'he wf-hint-he')) : null),
-        hearingButtons(word),
+        listen ? h('div', { class: 'wf-actions' }, h('button', { type: 'button', class: 'btn wf-hear', onclick: () => void playWord(word) }, 'Play the word again')) : hearingButtons(word),
         h('div', { class: 'wf-choices', role: 'group', 'aria-label': 'Choose the matching Hebrew word' },
           ...roundChoices.map(choice => h('button', {
             type: 'button',
@@ -213,7 +232,7 @@ export function mount(root, ctx) {
             onclick: () => choose(choice)
           }, heSpan(choice.he, 'he wf-choice-he'), wrong.has(choice.id) ? h('span', { class: 'wf-choice-hint' }, 'Try another') : null))),
         h('button', { type: 'button', class: 'btn secondary wf-show', onclick: () => { hint = true; status.textContent = 'A little help: the matching shapes are highlighted in gold.'; paint(false); focusStage('button.wf-glow'); } }, 'Show me a hint'),
-        h('button', { type: 'button', class: 'btn secondary wf-back', onclick: () => { phase = 'learn'; paint(); focusStage('button.wf-next'); } }, 'Look at the word again'));
+        listen ? null : h('button', { type: 'button', class: 'btn secondary wf-back', onclick: () => { phase = 'learn'; paint(); focusStage('button.wf-next'); } }, 'Look at the word again'));
     } else if (phase === 'found') {
       stage.replaceChildren(
         wordCard(word, lastClean ? '✦ You found it!' : '✦ You found it (not counted yet)'),
@@ -230,8 +249,12 @@ export function mount(root, ctx) {
       const response = await loader(DATA_URL);
       if (!response.ok) throw new Error('HTTP ' + response.status);
       bank = assertWordBank(await response.json());
+      if (listen) {
+        bank = bank.filter((w) => hasRecordedClip(ctx, 'word', w.id));
+        if (bank.length < 4) { status.textContent = audioOff() ? 'Audio is off in your Aleph settings, so the listening game cannot play.' : 'Not enough words have a clip that plays on this device yet.'; stage.replaceChildren(h('a', { class: 'btn', href: '#/wordfinder' }, 'Play Word Finder with English help')); return; }
+      }
       if (!alive) return;
-      try { found = recordFound(ctx?.store?.get?.(STORE_KEY), '', bank); }
+      try { found = recordFound(ctx?.store?.get?.(KEY), '', bank); }
       catch { found = { version: 1, found: [], rounds: 0 }; }
       status.textContent = 'Ready. Your first Hebrew word is waiting.';
       newRound(TOPIC_FIRST);

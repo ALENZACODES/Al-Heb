@@ -56,7 +56,7 @@ export function createEngagement(io, opt = {}) {
     st.lastPersist = t;
     if (sec === st.lastSavedSec && !force) return;
     st.lastSavedSec = sec;
-    rec = setTodaySeconds(rec, t, next);
+    rec = setTodaySeconds(rec, t, next, sec); // I6: `sec` is the measured active time; `next` may be raised to the goal by a finished lesson
     let completed = false;
     if (next >= goal && rec.last !== dayKey(t)) { const before = rec; rec = completeDay(rec, t, extraRest()); completed = rec.last === dayKey(t) && before.last !== rec.last; }
     io.save(rec);
@@ -79,7 +79,7 @@ export function createEngagement(io, opt = {}) {
       st.lastT = t; st.day = dayKey(t);
       const rec = rollover(io.load(), t, extraRest());
       const p = projectStreak(rec, t, extraRest());
-      st.ms = (rec.todayDate === dayKey(t) ? Math.max(rec.todaySeconds, p.activeToday ? goal : 0) : 0) * 1000;
+      st.ms = (rec.todayDate === dayKey(t) ? p.activeSeconds : 0) * 1000; // I6: resume from measured time, not the goal a lesson raised
       st.lastSavedSec = seconds(); st.lastPersist = t;
       io.save(rec);
     },

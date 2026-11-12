@@ -146,6 +146,8 @@ export function mergeStreak(local, other) {
     const ta = isISO(local.todayDate) ? local.todayDate : '', tb = isISO(other.todayDate) ? other.todayDate : '';
     out.todayDate = ta >= tb ? ta : tb;
     out.todaySeconds = Math.max(...[local, other].filter((r) => r.todayDate === out.todayDate).map((r) => num(r.todaySeconds) ?? 0));
+    const act = [local, other].filter((r) => r.todayDate === out.todayDate && num(r.activeSeconds) !== null && num(r.activeSeconds) !== undefined).map((r) => num(r.activeSeconds));
+    if (act.length) out.activeSeconds = Math.max(...act); // I6: measured minutes
   }
   return out;
 }

@@ -1,0 +1,27 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "israeli",
+ "inputText": "אֲנִי אוֹהֵב אוֹתָךְ",
+ "inputSha256": "834c50b18363ae872e129092094811313c8d68e39b223a4f0e458a0d4b9be2b6",
+ "ingestedAt": "2026-11-12T00:23:00.915Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-12T00:23:00.915Z",
+ "redistributionCleared": false,
+ "spokenText": "אֲנִי אוֹהֵב אוֹתָךְ",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [],
+  "google": {
+   "heard": "אני אוהב אותך",
+   "acc": 1.0,
+   "issues": []
+  },
+  "reviewersFailing": 0
+ }
+}

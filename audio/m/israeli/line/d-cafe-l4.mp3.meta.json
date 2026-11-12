@@ -1,0 +1,27 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "israeli",
+ "inputText": "כֵּן, גַּם עוּגָה. כַּמָּה זֶה?",
+ "inputSha256": "ea2a4b57bfc4b5f10d308875de5c48e0d23d569277a2b4310052c5ae0b7e5ded",
+ "ingestedAt": "2026-11-12T00:23:27.644Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-12T00:23:27.644Z",
+ "redistributionCleared": false,
+ "spokenText": "כֵּן, גַּם עוּגָה. כַּמָּה זֶה?",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [],
+  "google": {
+   "heard": "כן גם עוגה כמה זה",
+   "acc": 1.0,
+   "issues": []
+  },
+  "reviewersFailing": 0
+ }
+}

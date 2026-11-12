@@ -1,0 +1,27 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "israeli",
+ "inputText": "הַיי, מָה נִשְׁמָע?",
+ "inputSha256": "6823e082c898f632ad13ed1dd57e6e67bfb8a770ec24e39ab9ea9f1f337a858e",
+ "ingestedAt": "2026-11-12T00:23:54.725Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-12T00:23:54.725Z",
+ "redistributionCleared": false,
+ "spokenText": "הַיי, מָה נִשְׁמָע?",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [],
+  "google": {
+   "heard": "היי מה נשמע",
+   "acc": 1.0,
+   "issues": []
+  },
+  "reviewersFailing": 0
+ }
+}

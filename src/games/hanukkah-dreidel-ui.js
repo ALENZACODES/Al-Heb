@@ -15,14 +15,23 @@ export const LEVELS = Object.freeze({
 });
 const CAST = [{ id: 'you', name: 'You', human: true }, { id: 'rimon', name: 'Rimon' }, { id: 'ari', name: 'Ari' }, { id: 'noa', name: 'Noa' }];
 const NAMES = Object.fromEntries(CAST.map((p) => [p.id, p.name]));
+// D8 (lane games-books): pass-and-play. #/dreidel-duo (?players=2) seats two to four people at one device, each a named player,
+// taking turns; every player's gelt (and, in Beginner 2, letters read) is shown, and nobody plays against the computer cast.
+export const DUO_KEY = 'games.dreidel-duo.v1';
+export const PASS_SIZES = Object.freeze([2, 3, 4]);
+export const passCast = (n) => Array.from({ length: Math.min(4, Math.max(2, Number(n) || 2)) }, (_, i) => ({ id: `p${i + 1}`, name: `Player ${i + 1}`, human: true }));
+export const isPassMode = (ctx) => ctx?.query?.players === '2' || ctx?.route?.query?.players === '2';
 const SPIN_MS = 1200;
 
 export function mountDreidel(level) {
   const L = LEVELS[level] || LEVELS[1];
   return async function mount(root, ctx) {
+    const pass = isPassMode(ctx);
+    let seats = 2, names = NAMES, tally = {};
+    const isYou = (p) => p.human && !pass;
     const P = createPage(root, ctx, {
-      id: L.id, title: L.title, titleHe: 'סְבִיבוֹן',
-      cast: 'You play against Rimon, Ari and Noa. Everyone starts with the same gelt.',
+      id: pass ? 'dreidel-duo' : L.id, title: pass ? 'Dreidel for Two to Four' : L.title, titleHe: 'סְבִיבוֹן',
+      cast: pass ? 'Two to four players, one device: pass it along on each turn. Everyone starts with the same gelt.' : 'You play against Rimon, Ari and Noa. Everyone starts with the same gelt.',
       blurb: level === 1
         ? 'Spin the dreidel and learn its four letters. Each spin shows the letter, its name, its sound, the word it stands for and what to do with the gelt.'
         : 'Read the dreidel yourself. When it lands, name the letter and choose the rule before the gelt moves. Try the Israeli dreidel too.',
@@ -72,7 +81,9 @@ export function mountDreidel(level) {
     function setControls(...btns) { P.controls.replaceChildren(...btns); const b = btns.find(Boolean); try { b?.focus?.(); } catch { /* no focus in a small DOM */ } }
 
     function newGame() {
-      game = createDreidelGame({ players: CAST, start: L.start, variant, maxSpins: L.maxSpins });
+      const players = pass ? passCast(seats) : CAST;
+      names = Object.fromEntries(players.map((p) => [p.id, p.name])); tally = Object.fromEntries(players.map((p) => [p.id, { reads: 0, rights: 0 }]));
+      game = createDreidelGame({ players, start: L.start, variant, maxSpins: pass ? L.maxSpins * seats / 4 : L.maxSpins });
       reads = 0; rights = 0;
       P.results.replaceChildren();
       P.board.replaceChildren(phraseCard(), playersList, pot, h('div', { style: 'text-align:center' }, dreidel), face, ask);
@@ -81,14 +92,14 @@ export function mountDreidel(level) {
       P.announce(`New game. Everyone put one gelt in. The pot has ${game.pot}. ${turnLine()}`);
       nextStep();
     }
-    const turnLine = () => { const p = currentPlayer(game); return p.human ? 'Your turn: press Spin.' : `${p.name}’s turn.`; };
+    const turnLine = () => { const p = currentPlayer(game); return pass ? `${p.name}: your turn. Take the device and press Spin.` : p.human ? 'Your turn: press Spin.' : `${p.name}’s turn.`; };
 
     function nextStep() {
       if (!alive || !game) return;
       paintTable();
       if (game.over) { finish(); return; }
       const p = currentPlayer(game);
-      const btn = h('button', { type: 'button', class: 'btn hk-spin', onclick: () => spin() }, p.human ? 'Spin' : `Next Turn: ${p.name} Spins`);
+      const btn = h('button', { type: 'button', class: 'btn hk-spin', onclick: () => spin() }, pass ? `${p.name}: Spin` : p.human ? 'Spin' : `Next Turn: ${p.name} Spins`);
       setControls(btn);
     }
 
@@ -100,7 +111,7 @@ export function mountDreidel(level) {
       P.controls.replaceChildren();
       face.replaceChildren(); ask.replaceChildren();
       const quiet = isQuiet(ctx);
-      P.announce(`${p.human ? 'You spin' : `${p.name} spins`} the dreidel…`);
+      P.announce(`${isYou(p) ? 'You spin' : `${p.name} spins`} the dreidel…`);
       if (quiet) { land(p, landed); return; }
       // one smooth turn (a CSS transition, not a looping animation); the letter shows only when it lands
       turnDeg += 1080; // whole turns, so the letter lands upright
@@ -121,9 +132,9 @@ export function mountDreidel(level) {
       const l = letter(f);
       const opts = shuffled(FACES[variant]);
       const q = h('div', { role: 'group', 'aria-labelledby': `${L.id}-q1` },
-        h('p', { id: `${L.id}-q1` }, h('strong', {}, `${p.human ? 'You' : p.name} landed on `), heSpan(l.he, 'he hk-he'), h('strong', {}, '. Which letter is it?')),
+        h('p', { id: `${L.id}-q1` }, h('strong', {}, `${isYou(p) ? 'You' : p.name} landed on `), heSpan(l.he, 'he hk-he'), h('strong', {}, '. Which letter is it?')),
         h('div', { class: 'hk-row' }, ...opts.map((o) => h('button', { type: 'button', class: 'btn secondary', onclick: (e) => {
-          reads++; const ok = o === f; if (ok) rights++;
+          reads++; const ok = o === f; if (ok) rights++; if (tally[p.id]) { tally[p.id].reads++; if (ok) tally[p.id].rights++; }
           fx(ctx, ok ? 'success' : 'miss');
           markChoice(e.target, ok);
           P.announce(ok ? `Yes: ${l.name}.` : `Not quite: this is ${l.name} (${l.he}).`);
@@ -137,9 +148,9 @@ export function mountDreidel(level) {
       const l = letter(f);
       const rules = ['none', 'all', 'half', 'put'];
       const q = h('div', { role: 'group', 'aria-labelledby': `${L.id}-q2` },
-        h('p', { id: `${L.id}-q2` }, readOk ? '' : `It is ${l.name}. `, h('strong', {}, `What does `), heSpan(l.he, 'he hk-he'), h('strong', {}, ` ${l.name} tell ${p.human ? 'you' : p.name} to do?`)),
+        h('p', { id: `${L.id}-q2` }, readOk ? '' : `It is ${l.name}. `, h('strong', {}, `What does `), heSpan(l.he, 'he hk-he'), h('strong', {}, ` ${l.name} tell ${isYou(p) ? 'you' : p.name} to do?`)),
         h('div', { class: 'hk-row' }, ...rules.map((r) => h('button', { type: 'button', class: 'btn secondary', onclick: (e) => {
-          reads++; const ok = r === l.rule; if (ok) rights++;
+          reads++; const ok = r === l.rule; if (ok) rights++; if (tally[p.id]) { tally[p.id].reads++; if (ok) tally[p.id].rights++; }
           fx(ctx, ok ? 'success' : 'miss');
           markChoice(e.target, ok);
           P.announce(ok ? `Right: ${D.rules[r]}.` : `Not quite: ${l.name} means ${D.rules[l.rule].toLowerCase()}.`);
@@ -161,7 +172,7 @@ export function mountDreidel(level) {
       const w = words.get(l.word);
       ask.replaceChildren();
       const counting = [];
-      if (ev.rule === 'all') counting.push(`${p.human ? 'You had' : `${p.name} had`} ${gBefore}. ${gBefore} + ${ev.took} = ${gBefore + ev.took}.`);
+      if (ev.rule === 'all') counting.push(`${isYou(p) ? 'You had' : `${p.name} had`} ${gBefore}. ${gBefore} + ${ev.took} = ${gBefore + ev.took}.`);
       if (ev.rule === 'half' && potBefore) counting.push(`${heyExplain(potBefore)} ${gBefore} + ${ev.took} = ${gBefore + ev.took}.`);
       if (ev.rule === 'put' && ev.put) counting.push(`${gBefore} − 1 = ${gBefore - 1}. The pot goes from ${potBefore} to ${potBefore + 1}.`);
       if (ev.reAnte) counting.push(`The pot had ${ev.potAfter - ev.reAnte.length <= 0 ? 'nothing' : 'just one'} left, so everyone still in put one more in. Pot: ${ev.potAfter}.`);
@@ -170,15 +181,16 @@ export function mountDreidel(level) {
         w ? h('p', {}, 'Stands for ', wordLine(w), '.') : null,
         h('p', {}, h('strong', {}, `Rule: ${l.ruleEn}`)),
         ...counting.map((c) => h('p', {}, c)),
-        ev.out.length ? h('p', {}, `${ev.out.map((id) => NAMES[id]).join(' and ')} ${ev.out.length > 1 ? 'are' : 'is'} out of gelt.`) : null));
+        ev.out.length ? h('p', {}, `${ev.out.map((id) => names[id]).join(' and ')} ${ev.out.length > 1 ? 'are' : 'is'} out of gelt.`) : null));
       if (!L.ask) { sayLetter(ctx, l.letterId, l.nameHe); }
       else if (w) sayWord(ctx, w);
       fx(ctx, ev.took ? 'collect' : ev.put ? 'drop' : 'tick');
-      P.announce(describe(ev, NAMES, lettersForDescribe) + (ev.over ? '' : ' ' + turnLine()));
+      P.announce(describe(ev, names, lettersForDescribe) + (ev.over ? '' : ' ' + turnLine()));
       nextStep();
     }
 
     function finish() {
+      if (pass) { finishPass(); return; }
       const you = game.players.find((p) => p.human);
       const won = game.winners.includes('you');
       const gelt = you.gelt;
@@ -201,15 +213,34 @@ export function mountDreidel(level) {
       });
     }
 
+    /** Pass-and-play results: every player's gelt (and letters read, Beginner 2); the top gelt is the score kept for this device. */
+    function finishPass() {
+      const winners = game.winners.map((id) => names[id]).join(' and ');
+      const top = Math.max(...game.players.map((p) => p.gelt));
+      P.controls.replaceChildren();
+      P.announce(`Game over. ${winners} ${game.winners.length > 1 ? 'share the win' : 'wins'}.`);
+      pageResults(P, ctx, {
+        id: 'dreidel-duo', heading: `${winners} ${game.winners.length > 1 ? 'Share the Win' : 'Wins'}`, score: top, stars: 0,
+        lines: [
+          h('ul', {}, ...game.players.map((p) => h('li', {}, `${p.name}: ${p.gelt} gelt${L.ask ? `, ${tally[p.id]?.rights || 0} of ${tally[p.id]?.reads || 0} letters and rules right` : ''}.`))),
+          `${game.spins} spins in all.`,
+          h('p', {}, 'Remember: ', heSpan(D.phrase[variant].he), ` — ${D.phrase[variant].en}.`),
+        ],
+        onAgain: () => newGame(),
+      });
+    }
+
     // ---------- start screen ----------
     function startScreen() {
       const start = h('button', { type: 'button', class: 'btn', onclick: () => newGame() }, 'Start the Game');
       const picker = L.ask ? h('fieldset', { class: 'hk-variant' }, h('legend', {}, 'Which dreidel?'),
         ...[['diaspora', 'Outside Israel: נ ג ה ש (Nes Gadol Hayah Sham, “a great miracle happened there”)'], ['israel', 'In Israel: נ ג ה פ (Nes Gadol Hayah Po, “a great miracle happened here”)']].map(([v, label]) =>
           h('label', { style: 'display:block' }, h('input', { type: 'radio', name: `${L.id}-variant`, value: v, checked: v === variant || undefined, onchange: () => { variant = v; P.board.replaceChildren(phraseCard()); } }), ' ', label))) : null;
+      const seatsPicker = pass ? h('fieldset', { class: 'hk-variant' }, h('legend', {}, 'How many players?'),
+        ...PASS_SIZES.map((n) => h('label', { style: 'display:inline-block;margin-inline-end:1rem' }, h('input', { type: 'radio', name: `${L.id}-seats`, value: String(n), checked: n === seats || undefined, onchange: () => { seats = n; } }), ` ${n} players`))) : null;
       P.board.replaceChildren(phraseCard());
-      P.controls.replaceChildren(...[picker, start].filter(Boolean));
-      P.announce(L.ask ? 'Pick a dreidel and press Start the Game.' : 'Press Start the Game. You spin first.');
+      P.controls.replaceChildren(...[seatsPicker, picker, start].filter(Boolean));
+      P.announce(pass ? 'Choose how many players, then press Start the Game. Player 1 spins first.' : L.ask ? 'Pick a dreidel and press Start the Game.' : 'Press Start the Game. You spin first.');
     }
     startScreen();
     return () => { alive = false; for (const t of timers) clearTimeout(t); P.destroy(); };

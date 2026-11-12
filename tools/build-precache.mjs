@@ -83,8 +83,13 @@ const ON_DEMAND_PREFIXES = ['data/vocab/', 'data/roots/', 'data/knownwords/', 'd
   'src/platform/', 'data/platform/',
   // Grammar notes (optional preview route /grammar; its data was already on demand) and the unused speaking-check model (no screen imports
   // src/speak/dss.model.js; only its tests do): 44 KB moved out of the first install by lane platform (12 Nov) to pay for its route entries.
-  'src/grammar/', 'src/speak/dss.model.js'];
+  'src/grammar/', 'src/speak/dss.model.js',
+  // lane games-books (12 Nov): This Week's Parashah, Torah Search (its 0.7 MB letters-only index) and the Verse Notebook, fetched on first open.
+  'src/torahstudy/', 'data/torahstudy/'];
 const ON_DEMAND_FILES = new Set([
+  // lane games-books (12 Nov): Word Sprint's model and loader and the known-word validator are imported only by lazy views (Word Sprint,
+  // Known-word checker, the little books' word marks), so they are fetched on first use, runtime-cached (frees about 16 KB of first install).
+  'src/sprint/model.js', 'src/sprint/loader.js', 'src/knownwords/validate.js',
   // Rimon's stills (src/app.js imports the stage after boot; it shows nothing until the pictures exist, and the pictures are fetched on demand too),
   // and two older Rimon modules no screen imports (kept for reference and their tests).
   'src/shell/rimon-stage.js', 'src/shell/rimon-triggers.js', 'src/shell/rimon-stills.generated.js', 'assets/css/rimon-stills.css',

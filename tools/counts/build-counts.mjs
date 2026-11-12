@@ -71,6 +71,8 @@ export async function computeTotals(root = ROOT) {
       byBinyan: Object.fromEntries(Object.keys(fam.binyanCount || {}).sort().map((b) => [b, { verbs: fam.binyanCount[b], explorer: list(verbs, 'verbs').filter((v) => v && v.binyan === b).length }])),
       dictLinks: fs.existsSync(path.join(root, 'data/roots/dict-links.json')) ? rd(root, 'data/roots/dict-links.json').counts : null },
     audio,
+    // lane games-books (D1): every game on the games page, counted once across its sections (src/games/library.catalog.js)
+    games: await import(pathToFileURL(path.join(root, 'src/games/library.catalog.js')).href).then((m) => m.gameTotals()).catch(() => null),
   };
 }
 

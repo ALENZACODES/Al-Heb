@@ -34,6 +34,7 @@ export const ENUMERATE = {
       ...ids(eligibleLines(arr(rd('data/corpus/registry.json'), 'texts', 'entries'))).map((id) => ['line', id])];
   },
   '/letters/:id': async () => ids(arr(rd('data/letters/letters.json'), 'letters')),
+  '/book-card/:id': async () => ids(arr(rd('data/books/index.json'), 'books')), // lane games-books: a completion card per book
   '/loanwords/:group': async () => ids(arr(rd('data/curriculum/loanwords.json'), 'groups')),
   '/spotit/:letter': async () => {
     const letters = new Set(ids(arr(rd('data/letters/letters.json'), 'letters')));

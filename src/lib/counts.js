@@ -219,6 +219,16 @@ export function rootsCoverage(r = ROOTS) {
     dictLinks: { withLetters: nat(r.dictLinks?.withLetters), inFamily: nat(r.dictLinks?.inFamily), alone: nat(r.dictLinks?.alone), verbs: nat(r.dictLinks?.verbs) } };
 }
 
+// ---------- games and book shelves ----------
+/** Every game on the games page, counted once; by section and skill. */
+export const GAMES_ALL = Object.freeze({ total: 0, bySection: {}, bySkill: {}, ...obj(TOTALS.games) });
+/** Books among `ids` finished (books.v1 finishedAt), optionally in [from, to). */
+export const booksFinishedOf = (rec, ids, from = -Infinity, to = Infinity) => (ids || []).filter((id) => { const t = toMs(obj(obj(rec)[id]).finishedAt); return Number.isFinite(t) && t >= from && t < to; }).length;
+/** Games played and mastered, from per-game states (src/games/scores.js). */
+export const gamesProgress = (states) => { const v = Object.values(obj(states)); return { played: v.filter((s) => s && s.played).length, mastered: v.filter((s) => s && s.mastered).length }; };
+/** Whole percent of part in whole; 0 when whole is 0. */
+export const percentOf = (part, whole) => (Number(whole) > 0 ? Math.round((100 * (Number(part) || 0)) / Number(whole)) : 0);
+
 // ---------- activity points (the Daily page calendar and its week line; not XP) ----------
 /**
  * Activity points: lessons 10, review cards 1 (up to 20 a day), timed reads 5, speaking tries 1 (up to 5 a day). Only the Daily

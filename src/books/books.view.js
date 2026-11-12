@@ -74,4 +74,13 @@ export async function mount(root, ctx) {
     for (const b of groups.get(k)) grid.append(cardFor(b));
     wrap.append(grid);
   }
+  // lane games-books (E1, E9, E10): difficulty and known-word share on each card, finished count per level, reading challenge line
+  try {
+    const [{ decorateShelf, SERIES_NOTE }, { CHALLENGE_KEY, challengeProgress }] = await Promise.all([import("./extras.js"), import("./challenge.js")]);
+    let rec = null; try { rec = await ctx.store.get(CHALLENGE_KEY); } catch { rec = null; }
+    const p = challengeProgress(rec, data.books, places);
+    wrap.prepend(h("p", { class: "book-challenge-line" }, p ? `Reading challenge: ${p.text} ` : "", h("a", { href: "#/reading-challenge" }, p ? "Change it" : "Set a reading challenge"),
+      h("span", { class: "muted" }, ` · ${SERIES_NOTE}`)));
+    await decorateShelf(h, wrap, data.books, ctx, places);
+  } catch { /* the shelf works without its extras */ }
 }

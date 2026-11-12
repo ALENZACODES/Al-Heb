@@ -5,6 +5,7 @@
 //   - sound: Hebrew clips only through ctx.audio (recorded word or letter clip when one exists, otherwise text only);
 //     game effects through the shared sfx player; nothing plays in calm mode or with reduced motion;
 //   - best score: games.<id>.v1 = { best, plays, lastStars } on this device.
+import { recordScore } from './scores.js';
 import { h, heSpan } from '../shell/ui.js';
 import { sfx } from '../audio/sfx.js';
 import { quietNow } from '../shell/comfort.js';
@@ -63,6 +64,7 @@ export function saveBest(ctx, storeKey, score, stars = 0) {
   try { prev = ctx?.store?.get?.(storeKey) || {}; } catch { prev = {}; }
   const rec = { best: Math.max(prev.best || 0, score), plays: (prev.plays || 0) + 1, lastStars: stars };
   try { ctx?.store?.set?.(storeKey, rec); } catch { /* storage may be full or blocked; the game still ends */ }
+  recordScore(ctx?.store, (/^games\.(.+)\.v1$/.exec(storeKey) || [])[1], score, stars); // last score for the game cards (src/games/scores.js)
   return { rec, newBest: (prev.plays || 0) > 0 && score > (prev.best || 0) };
 }
 export function readBest(ctx, storeKey) { try { return ctx?.store?.get?.(storeKey) || null; } catch { return null; } }

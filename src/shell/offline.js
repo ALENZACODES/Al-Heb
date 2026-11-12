@@ -104,6 +104,7 @@ export const ON_DEMAND_GROUPS = Object.freeze([
   { id: "od-grammar", label: "Grammar notes (route code) and a speaking-check model", test: /^src\/(grammar\/|speak\/dss\.model\.js$)/, approxMB: 0.05 },
   // reading lane (12 Nov): Reading Tools (#/readlab), its code and its two word lookups (family letters and patterns; stress)
   { id: "od-readlab", label: "Reading Tools: code, family-letter and stress word lists", test: /^(src|data)\/readlab\//, approxMB: 0.6 },
+  { id: "od-torah-study", label: "This week's parashah, Torah Search, the verse notebook, and the word tools behind Word Sprint and the books' word marks", test: /^(src\/torahstudy\/|data\/torahstudy\/|src\/sprint\/(model|loader)\.js$|src\/knownwords\/validate\.js$)/, approxMB: 0.75 }, // lane games-books
 ]);
 /** Group a list of ALEF_ON_DEMAND paths into optional-download entries ({id,label,urls,approxMB}); empty groups are dropped. */
 export function onDemandGroups(onDemand = []) {

@@ -7,6 +7,7 @@ import { ROUTES } from './router.js'; // lane g1
 
 import { G4_NAMES } from './g4-routes.js'; // lane 4 (g4)
 import { PLATFORM_ROUTES } from './platform-routes.js';
+import { GB_SECTION, GB_HIDDEN, GB_PARENT } from './gb-routes.js';
 export const SECTIONS = [
   { id: 'learn',    labelKey: 'nav.section.learn',    descKey: 'nav.section.learn.desc',    heKey: 'nav.learn', primary: ['learn'] },
   { id: 'read',     labelKey: 'nav.section.read',     descKey: 'nav.section.read.desc',     heKey: 'nav.read',  primary: ['readhub', 'read'] },
@@ -55,6 +56,7 @@ SECTION_ROUTES.learn.push('bridge', 'bridge-sec', 'bridge-text');
 SECTION_ROUTES.read.push('trope-families', 'trope-family', 'trope-aliyah');
 for (const r of PLATFORM_ROUTES) SECTION_ROUTES[r.section].push(r.name); // lane platform (12 Nov)
 SECTION_ROUTES.learn.push('readlab', 'readlab-tool'); // reading lane (12 Nov): Reading Tools
+SECTION_ROUTES.learn.push(...GB_SECTION('learn')); SECTION_ROUTES.read.push(...GB_SECTION('read'));
 
 /** Route name -> section id. */
 export const ROUTE_SECTION = Object.fromEntries(Object.entries(SECTION_ROUTES).flatMap(([s, names]) => names.map((n) => [n, s])));
@@ -66,6 +68,7 @@ export const PARENT = {
   grammartopic: 'grammar', labgame: 'lab', libraryarticle: 'library', text: 'read', torahreadsec: 'torahread', book: 'books', day: 'calendar', synagogue: 'synagogues',
   'bridge-sec': 'bridge', 'bridge-text': 'bridge', 'trope-family': 'trope-families', // lane 6
   'readlab-tool': 'readlab', // reading lane
+  ...GB_PARENT,
 };
 
 /** Hidden from the menu (still searchable): first-run onboarding. */
@@ -86,7 +89,7 @@ export const PREVIEW_HIDDEN = new Set(['scheduler', 'known-words', 'time-budget'
   ...G1, // lane g1
   ...G2_ROUTES, // lane g2
   ...G4_NAMES, // lane 4 (g4): one section in the games hub
-  ...G5]);
+  ...G5, ...GB_HIDDEN]);
 
 export const isStatic = (r) => !r.pattern.includes(':');
 /** Release tier of a route: 'v0' only when router.js says so; anything else is 'preview'. */

@@ -13,6 +13,7 @@ import { uiEnglish } from '../shell/names.js';
 import { playRecordedClip, hasRecordedClip } from './engine.js';
 import { ARCADE_KEY, LEVELS, BADGES, applyResult, applyArcade, emptyRecord, seededRandom, seedFrom, dayKey, bestLine, starsFor, mistakesLine } from './arcade.model.js';
 import { ARCADE_GAMES, HANUKKAH_GAMES } from './arcade.catalog.js';
+import { roundMode, afterRound, tournamentRandom } from './round-extras.js'; // daily challenge, tournament runs, last-score ledger
 
 const WORDS_URL = new URL('../../data/games/firstwords.json', import.meta.url);
 const LETTERS_URL = new URL('../../data/letters/letters.json', import.meta.url);
@@ -73,7 +74,9 @@ export async function createArcade(root, ctx, spec) {
   const showStreak = setting('showStreak') !== false && setting('calmMode') !== true;
   let record = { ...emptyRecord(), ...(get(storeKey) || {}) };
   let level = Math.min(record.unlocked || 1, Math.max(1, Number(ctx?.route?.query?.level) || record.unlocked || 1));
-  let daily = false, rnd = Math.random, roundSetup = null, alive = true;
+  const mode = roundMode(ctx, spec.id); // ?daily=1 opens on the daily board; ?tournament=1 plays the open tournament run at level 1
+  if (mode.level) level = mode.level;
+  let daily = mode.daily, rnd = Math.random, roundSetup = null, alive = true;
   let score = 0, misses = 0, slips = 0, lives = 0, startedAt = 0, timeLeft = 0, timerId = 0, loopId = 0, loops = [];
   // readyAt: nothing moves and the clock does not run until the get-ready countdown ends. paused: same, on demand.
   let readyAt = 0, paused = false, countdownIds = [];
@@ -93,7 +96,7 @@ export async function createArcade(root, ctx, spec) {
   const controls = h('div', { class: 'arc-controls' });
   const results = h('div', { class: 'arc-results' });
   const pauseBtn = h('button', { type: 'button', class: 'btn secondary arc-pause', 'aria-pressed': false, hidden: true, onclick: () => setPaused(!paused) }, 'Pause');
-  const dailyBtn = h('button', { type: 'button', class: 'btn secondary arc-daily', 'aria-pressed': false, onclick: () => toggleDaily() }, 'Daily challenge');
+  const dailyBtn = h('button', { type: 'button', class: 'btn secondary arc-daily', 'aria-pressed': daily, onclick: () => toggleDaily() }, daily ? `Daily challenge · ${dayKey()}` : 'Daily challenge');
   // Open until the learner has finished one round of this game; after that it folds away but stays one tap off.
   const howTo = h('details', { class: 'arc-howto', open: (record.plays || 0) === 0 ? true : undefined }, h('summary', {}, 'How to play'), h('ol', {}, ...spec.howTo.map((s) => h('li', {}, uiEnglish(ctx, s)))));
   const streakEl = h('p', { class: 'arc-streak muted' });
@@ -274,6 +277,7 @@ export async function createArcade(root, ctx, spec) {
       if (streakNew.length) set(storeKey, record);
       set(ARCADE_KEY, arc.arcade);
       const stars = out.stars;
+      const extra = afterRound(h, ctx, { id: spec.id, level, score, stars, daily, tournament: mode.tournament, week: mode.week });
       A.sfx(stars >= 2 ? 'success' : stars === 1 ? 'confirm' : 'miss');
       A.sayLine(stars >= 2 ? 3 : 4);
       const why = reason === 'time' ? 'Time is up.' : reason === 'lives' ? 'Out of lives.' : won ? 'Round complete!' : 'Round over.';
@@ -284,6 +288,7 @@ export async function createArcade(root, ctx, spec) {
         h('p', {}, bestLine(score, previousBest)),
         h('p', { class: 'muted' }, mistakesLine({ misses, slips }, par)),
         out.unlockedNow ? h('p', { class: 'arc-unlock' }, `Level ${out.unlockedNow} unlocked: ${spec.levels[out.unlockedNow - 1]?.name || ''}.`) : null,
+        ...extra,
         [...out.newBadges, ...streakNew].length ? h('p', { class: 'arc-badges' }, 'New badge' + ([...out.newBadges, ...streakNew].length > 1 ? 's' : '') + ': ', ...[...out.newBadges, ...streakNew].map((b) => h('span', { class: 'arc-badge' }, BADGES[b] || b))) : null,
         h('div', { class: 'row' },
           h('button', { type: 'button', class: 'btn', onclick: () => restart() }, stars === 3 && level < 5 ? 'Play again' : 'One more go'),
@@ -314,7 +319,7 @@ export async function createArcade(root, ctx, spec) {
     const lead = untimed && quiet ? 0 : COUNTDOWN_S;
     readyAt = Date.now() + lead * 1000;
     hudScore.textContent = 'Score 0'; hudLives.textContent = '';
-    rnd = daily ? seededRandom(seedFrom(`${spec.id}|${dayKey()}|${level}`)) : Math.random;
+    rnd = daily ? seededRandom(seedFrom(`${spec.id}|${dayKey()}|${level}`)) : mode.tournament ? tournamentRandom(spec.id, mode.week) : Math.random;
     renderLevels();
     startedAt = Date.now();
     timeLeft = untimed ? 0 : Math.max(20, Math.round(spec.seconds ? spec.seconds(level, A.cfg) : 90));

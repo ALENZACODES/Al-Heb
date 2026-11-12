@@ -1,3 +1,4 @@
+import { recordScore } from './scores.js';
 import { reactRimon } from '../shell/rimon-events.js';
 // Aleph games engine — shared plumbing for the mini-game views.
 // Zero-dependency ES module, written against the same ctx contract as the
@@ -57,6 +58,7 @@ export function createSession({ store = null, storeKey = '', par = 10 } = {}) {
       const prev = store.get(storeKey) || {};
       const rec = { best: Math.max(prev.best || 0, score), plays: (prev.plays || 0) + 1, lastStars: this.stars() };
       store.set(storeKey, rec);
+      recordScore(store, (/^games\.(.+)\.v1$/.exec(storeKey) || [])[1], score, this.stars()); // last score for the game cards (src/games/scores.js)
       return rec;
     },
   };

@@ -389,12 +389,12 @@
     ],
     [
      "src/lib/counts.generated.js",
-     2049,
+     2273,
      1
     ],
     [
      "src/lib/counts.js",
-     21321,
+     22298,
      1
     ],
     [
@@ -488,6 +488,11 @@
      1
     ],
     [
+     "src/shell/gb-routes.js",
+     2203,
+     1
+    ],
+    [
      "src/shell/motor.js",
      3121,
      1
@@ -499,7 +504,7 @@
     ],
     [
      "src/shell/nav-model.js",
-     12350,
+     12547,
      1
     ],
     [
@@ -564,7 +569,7 @@
     ],
     [
      "src/shell/router.js",
-     48720,
+     48800,
      1
     ],
     [
@@ -741,12 +746,12 @@
     ],
     [
      "src/lib/counts.generated.js",
-     2049,
+     2273,
      1
     ],
     [
      "src/lib/counts.js",
-     21321,
+     22298,
      1
     ],
     [
@@ -1113,12 +1118,12 @@
     ],
     [
      "src/lib/counts.generated.js",
-     2049,
+     2273,
      1
     ],
     [
      "src/lib/counts.js",
-     21321,
+     22298,
      1
     ],
     [

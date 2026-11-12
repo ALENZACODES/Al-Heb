@@ -4,6 +4,11 @@
  "entries": [
   {
    "date": "2026-11-12",
+   "hash": "63050f4ed",
+   "text": "Full-suite fixes for lane platform: the lesson badge files are named verified.js so the loops badge catalogue check stays clean, the four new store keys and the card answer log…"
+  },
+  {
+   "date": "2026-11-12",
    "hash": "7ec86c90d",
    "text": "Preview triage rows for Prayer Practice and Speaking Studio"
   },
@@ -24,8 +29,68 @@
   },
   {
    "date": "2026-11-12",
+   "hash": "f395fb653",
+   "text": "Lane platform plan table (docs/plan/CODER-100-platform.md), sitemap with the new pages, docs index and precache rebuilt"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "d0a650ea2",
+   "text": "Focus mode (J5): #/focus shows a little book, a prayer or text, or a Torah chapter one passage at a time in large text (three sizes, English on request) with the header, menus…"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "6563d9042",
+   "text": "Printable worksheet (J4): #/worksheet builds a practice sheet for the learner's current lesson (or any lesson picked) from the lesson data: copy the letters, copy the words, match…"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "02bf0c326",
+   "text": "Reading lane plan table (docs/plan/CODER-100-reading.md)."
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "387d6608e",
+   "text": "Reading Tools in the privacy table (readlab.v1) and the Deaf and hard-of-hearing inventory"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "fc292eb5a",
+   "text": "Accessibility gate (J7): tools/deploy/check-a11y.mjs checks every field the app creates has a name (aria, title, label for, or inside a label), every image has alt, the global…"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "911f794b0",
+   "text": "Keyboard shortcuts page (J6): #/shortcuts lists the single-key shortcuts that exist (lessons, review, dictionary review, first day, fade-out recall, word builder, service, reader…"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "50caa0d1b",
+   "text": "Offline indicator (J1): a line under the header while the device is offline says that pages opened before and everything installed still work, with a link to Use Aleph offline."
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "ff50b7423",
+   "text": "Lesson Badges (H9): #/lesson-badges awards count and path badges only for verified lessons (passing first-try score kept, recomputed with the certificate's pass rule)."
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "0fc1ea87a",
+   "text": "My Week (H6, H7, J3): #/my-week reports the last 7 days from the existing weekly summary plus XP and books finished, lets the learner set their own weekly XP, minutes and lesson…"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "f574bb40d",
+   "text": "Cram, leeches and Mastery Map (H3, H4, H5): #/cram sizes a lesson review to 5 to 30 minutes from the learner's own measured pace (an estimate of 12 seconds a card until 20 cards…"
+  },
+  {
+   "date": "2026-11-12",
    "hash": "540018dc7",
    "text": "Accent run 8 list: the Ashkenazi rows of the festival-day Kiddush verses"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "4af111b67",
+   "text": "My Data page (H10): #/my-data lists every stored item with its size and downloads the JSON backup (read back by Settings > Restore and Move to Another Device) plus review cards…"
   },
   {
    "date": "2026-11-12",
@@ -39,6 +104,46 @@
   },
   {
    "date": "2026-11-12",
+   "hash": "b7de8953f",
+   "text": "First-install headroom: the Grammar notes page code and the speaking-check model no screen imports load on demand (44 KB), so the first install is 3.90 of 3.95 MiB after this…"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "0a3745406",
+   "text": "Three Versions: tapping a word that already shows its marks opens the spotlight and does not count as help"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "b5e6e9efc",
+   "text": "Tests for Reading Tools and the fluency chart"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "5c4aba6df",
+   "text": "Timed read-aloud: chart of words a minute, read by read, for the chosen line"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "b3c51fe6f",
+   "text": "Reading Tools screen (#/readlab): Read With Tools with word spotlight and syllable taps, family letters, verb-pattern colours, fade challenge and three versions."
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "80565c9ad",
+   "text": "Reading Tools model: vowel-mark level per section, fade challenge, three versions with unlock, progress by text type, sh'va, final-form, dagesh and stress drill builders"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "502496427",
+   "text": "Reading Tools data: family letters and verb patterns by exact spelling, and IPA stress for 900 words, built from the existing word lists"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "8535d17ea",
+   "text": "Search everything (J9): #/search also finds lessons, little books, root families, prayers and texts, and Torah references in English or Hebrew (Genesis 12:1, gen 3, a Hebrew book…"
+  },
+  {
+   "date": "2026-11-12",
    "hash": "261af4aec",
    "text": "Siddur and speaking lane: per-idea plan table, sitemap with the two new pages, docs index and precache rebuilt"
   },
@@ -49,6 +154,11 @@
   },
   {
    "date": "2026-11-12",
+   "hash": "d1a88b7e0",
+   "text": "Dead-button gate (I4): tools/deploy/check-buttons.mjs reads every button the app creates (h/el calls, createElement and index.html) and fails on any without a handler, a submit…"
+  },
+  {
+   "date": "2026-11-12",
    "hash": "5e1d7e810",
    "text": "Sound-pair drill: after each pair answer, hear both words one after the other"
   },
@@ -56,6 +166,16 @@
    "date": "2026-11-12",
    "hash": "4cbd91e6f",
    "text": "Play-all queues with a tappable progress list (prayer reader, theme packs), lines/words/pages-with-audio counts, and book read along (page turns by itself, word highlight from…"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "dc1a2208a",
+   "text": "Performance budget (J8): the precache build prints the first-install size and the installed JavaScript size and exits with an error when the first install is over 3.95 MiB or its…"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "fe4b5cc3a",
+   "text": "Change list on About and What's New page (I10, J10): tools/release/changelog.mjs writes data/platform/changelog.json from the git history (date, hash, first sentence of each…"
   },
   {
    "date": "2026-11-12",
@@ -79,123 +199,8 @@
   },
   {
    "date": "2026-11-12",
-   "hash": "8559ca347",
-   "text": "One playback bar on every route (what plays, progress, pause, speed, stop)."
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "559338c02",
-   "text": "Weekday morning gets the Follow the service cards (F1): the existing weekday order, same component, no stand/sit markers invented"
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "2c383690f",
-   "text": "Accent run 7 list: the Ashkenazi prayer and line rows run 5 held, retaken at speaking rate 1.1"
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "6027fd748",
-   "text": "Owner decisions A and B: 1,299 Sephardi rows that played the Israeli clip carry a copy of it as their own file, captioned 'Sephardi voice, the same reading as Israeli' (the app's…"
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "146268c16",
-   "text": "Owner decision B: a letter, vowel or syllable accent clip passes on the sound reviewer alone (calibration run 4: Google passed 13-40% of the app's own Israeli short clips, the…"
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "e71c4bf75",
-   "text": "Ashkenazi own clips to 95.3% (accent-fill run 5): 643 alias rows and the 159 run-3 holds retaken at rate 0.85, 617 passed 2 of 3 and are admitted."
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "fd6dbf7bd",
-   "text": "Ashkenazi clips of their own from the Ashkenazi reading in Hebrew letters (accent-fill run 3): 442 rows that played the Israeli clip, 283 passed 2 of 3 reviewers and are admitted…"
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "d9bca8f96",
-   "text": "Accent runs: retakes at a chosen speaking rate for the rows a past run held, alias rows that have no clip of their own, a review-only mode for calibrating the reviewers on clips…"
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "a69aeeb46",
-   "text": "Ashkenazi clips from the Ashkenazi reading written in pointed Hebrew letters: kamatz as holam, tav without dagesh as samekh, tzere with a yod (the engine's three Ashkenazi rules…"
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "23910f29b",
-   "text": "Render runs the asset check as its build command, so a deploy with a missing clip fails and the served evidence file comes from the deploy itself"
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "8c09f8ef3",
-   "text": "Release build: stamp, asset check evidence (0 gaps) with the new accent clips and the search fix"
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "82a6c987c",
-   "text": "Accent clips of their own, words (accent-fill run 2): 1,216 Sephardi and Ashkenazi word rows that played the Israeli clip made by the repo's accent pipeline and reviewed by the…"
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "c74381cee",
-   "text": "Search: \"1 result\", not \"1 results\""
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "f95c09ce7",
-   "text": "Rebuild word frequencies and theme packs after the merged lanes changed their sources"
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "741e17f25",
-   "text": "Accent clips of their own (accent-fill run 1), alias rows with files of their own, and the Chirp long-prayer retry"
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "eef8fc0a7",
-   "text": "C-06 in part, #3 and #18: move progress between the learner's own devices with no server (link, QR code or file."
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "1347e6728",
-   "text": "Roots #5, #9, #15: one verb denominator on the Roots page."
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "e1f5a43e3",
-   "text": "Lane 6 (#16, #13, #17): Reading Without Vowels, trope families and aliyah practice, placement as the front door"
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "1a66fa1e2",
-   "text": "Plan 4.9 (skeleton first-paints): the shell's visually hidden fallback heading no longer counts as page content, so the loading placeholder stays until a view paints something…"
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "86504a0d9",
-   "text": "Shabbat Companion: sitemap entry, deaf and hard-of-hearing inventory row, and the service.companion store key in the privacy table"
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "8dff39c4e",
-   "text": "M-04, M-05, M-06, M-09, M-11, R-12, plan #6: deploy-time asset check, full sitemap, hold sets reconciled, chapter audio from verse clips, book completion proven, Siddur line…"
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "cb3139c02",
-   "text": "M-08: About has a Held Recordings section: the recordings held for review (what each is, whose voice), why (each failed at least 2 of 3 independent checks of its words), what…"
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "142566cc8",
-   "text": "Accent clips of their own for the rows that play the Israeli clip: accent-fill workflow (the repo's accent pipeline: the Israeli WaveNet voice reads the tradition's respelling…"
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "067d30565",
-   "text": "Plan #10, Shabbat Companion (code): #/shabbat lazy route with This Shabbat (portion, candle lighting, practise-before-Friday list), the Friday evening and Shabbat morning service…"
+   "hash": "6d5ceabc6",
+   "text": "Helpful 404 (I9): an unknown address lists up to three close pages from the route table (close spelling, longer form or a common word such as lessons or prayers) and a Search link."
   }
  ]
 }

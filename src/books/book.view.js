@@ -12,6 +12,7 @@ import { estimateWordTimings, wordAt, bookReadiness, readinessLine } from "../au
 import { ensureStyle as ensureListenStyle } from "../audiolab/ui.js";
 /** A8: the read-along highlight uses estimated word timings (there are no measured ones for book pages); the page says so. */
 export const ESTIMATED_NOTE = "Read along: the highlighted word follows estimated timings (shared out by word length), not measured ones.";
+import { bookPage } from "./extras.js"; // lane games-books: difficulty, new-word marks, English per line, completion card, next in level
 /** S-04: a page held back because it says the divine name; nothing plays, and the page says why. */
 export const HELD_PAGE = "This page's recording is held for review: the checks heard words in it wrongly. Read it from the page.";
 
@@ -54,6 +55,8 @@ export async function mount(root, ctx) {
   ensureListenStyle(globalThis.document);
   const nextBook = nextOnShelf(id, shelfBooks);
   const check = storyCheck(book);
+  const extras = bookPage(h, heSpan, ctx, { id, book, shelfBooks, onChange: () => { if (shownPage >= 0) render(); } });
+  root.append(extras.header());
 
   // Reading place, shared with the shelf and the awards engine: books.v1 holds the last page
   // reached per book (and when its last page was first reached); books.finished.v1 is the
@@ -81,7 +84,7 @@ export async function mount(root, ctx) {
       }
     } catch { /* progress is an addition; the reading never waits on it */ }
   };
-  const finishedLine = () => h("p", { class: "book-finished" }, `You finished ${book.titleEn}.`);
+  const finishedLine = () => h("div", {}, h("p", { class: "book-finished" }, `You finished ${book.titleEn}.`), extras.finished());
   const nextLink = () => (nextBook ? h("p", {}, h("a", { class: "btn secondary", href: `#/book/${nextBook.id}` },
     `Next book: ${nextBook.titleTranslit} — ${nextBook.titleEn}`)) : null);
   /** The story check on the last page: three options from the book's own pages. */
@@ -201,13 +204,14 @@ export async function mount(root, ctx) {
     } else {
       stage.append(pending());
     }
+    // Read along (audio lane) draws the line as plain word spans it highlights; otherwise the line carries the new-word marks (games-books lane).
     if (readAlong) {
       wordSpans = String(p.he).split(/\s+/).filter(Boolean).map((w) => h("span", { class: "al-word", "data-on": "0" }, w));
       timings = null;
       stage.append(h("span", { lang: "he", dir: "rtl", class: "book-line" }, ...wordSpans.flatMap((x, i) => (i ? [" ", x] : [x]))));
-    } else { wordSpans = []; stage.append(heSpan(p.he, "book-line")); }
+    } else { wordSpans = []; stage.append(extras.line(p)); }
     stage.append(h("p", { class: "book-translit" }, p.translit));
-    stage.append(h("p", { class: "muted book-en" }, p.en));
+    stage.append(extras.en(p, page));
 
     const listen = (voice, label) => h("button", {
       type: "button", class: "btn book-listen",

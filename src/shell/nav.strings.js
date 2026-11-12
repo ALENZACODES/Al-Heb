@@ -2,6 +2,7 @@
 // so the table in i18n.js stays untouched. Hebrew is NOT added here: no new Hebrew was written for this lane. The only Hebrew shown in
 // the menu is what already exists in i18n.js `he` (looked up with tHe); sections without an existing label show English only.
 import { en } from './i18n.js';
+import { ROUTES } from './router.js'; // g5 (lane 5)
 
 export const NAV_EN = {
   'nav.ask': 'Ask the Torah',
@@ -167,4 +168,5 @@ export const NAV_EN = {
   'nav.preview.banner': 'Preview: unreviewed, may change',
   'nav.preview.banner.more': 'This page is not part of the first release yet. It works, but it has not been reviewed and may change or move.',
 };
+for (const r of ROUTES) if (r.name.startsWith('g5-')) NAV_EN['nav.route.' + r.name] = r.title;
 for (const [k, v] of Object.entries(NAV_EN)) if (!(k in en)) en[k] = v;

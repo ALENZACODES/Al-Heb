@@ -1,0 +1,168 @@
+{
+ "schema": "alef-g5-prayers/1",
+ "note": "Sundown to Stars, Siddur Mend and Blessing Match. Every Hebrew line is a word slice of an entry in data/corpus/registry.json with the four-letter name shown as ה׳ (it is never voiced). The two orders (Friday evening, Havdalah) are copied from data/corpus/torah-service-guide.json. Blessing occasions are the registry titles.",
+ "orders": {
+  "shabbat-evening": [
+   "candle-shabbat",
+   "lecha-dodi-1",
+   "kiddush-gen-2-1-3",
+   "kiddush-wine-1",
+   "kiddush-shabbat-eve",
+   "hamotzi"
+  ],
+  "havdalah": [
+   "havdalah-opening",
+   "kiddush-wine-1",
+   "havdalah-spices",
+   "havdalah-flame",
+   "havdalah-hamavdil"
+  ]
+ },
+ "evening": [
+  {
+   "he": "לְהַדְלִיק נֵר שֶׁל שַׁבָּת׃",
+   "src": {
+    "kind": "registry",
+    "id": "candle-shabbat",
+    "from": 10,
+    "to": 14
+   },
+   "id": "candle-shabbat",
+   "label": "Candles",
+   "when": "Friday evening",
+   "title": "Shabbat candle blessing"
+  },
+  {
+   "he": "לְכָה דוֹדִי לִקְרַאת כַּלָּה",
+   "src": {
+    "kind": "registry",
+    "id": "lecha-dodi-1",
+    "from": 0,
+    "to": 4
+   },
+   "id": "lecha-dodi-1",
+   "label": "Lecha Dodi",
+   "when": "Friday evening",
+   "title": "Lecha Dodi (refrain and first verse)"
+  },
+  {
+   "he": "וַיְכֻלּוּ הַשָּׁמַיִם וְהָאָרֶץ וְכָל־צְבָאָם׃",
+   "src": {
+    "kind": "registry",
+    "id": "kiddush-gen-2-1-3",
+    "from": 0,
+    "to": 4
+   },
+   "id": "kiddush-gen-2-1-3",
+   "label": "Kiddush: the verses of the seventh day",
+   "when": "Friday evening",
+   "title": "Kiddush (Shabbat verses)"
+  },
+  {
+   "he": "בּוֹרֵא פְּרִי הַגָּפֶן׃",
+   "src": {
+    "kind": "registry",
+    "id": "kiddush-wine-1",
+    "from": 6,
+    "to": 9
+   },
+   "id": "kiddush-wine-1",
+   "label": "Kiddush: the wine",
+   "when": "Friday evening",
+   "title": "Blessing over wine"
+  },
+  {
+   "he": "קִדְּשָׁנוּ בְּמִצְוֹתָיו וְרָצָה בָנוּ",
+   "src": {
+    "kind": "registry",
+    "id": "kiddush-shabbat-eve",
+    "from": 7,
+    "to": 11
+   },
+   "id": "kiddush-shabbat-eve",
+   "label": "Kiddush: making the day holy",
+   "when": "Friday evening",
+   "title": "Kiddush for Shabbat evening (the sanctification blessing)"
+  },
+  {
+   "he": "הַמּוֹצִיא לֶחֶם מִן הָאָרֶץ׃",
+   "src": {
+    "kind": "registry",
+    "id": "hamotzi",
+    "from": 6,
+    "to": 10
+   },
+   "id": "hamotzi",
+   "label": "HaMotzi: the bread",
+   "when": "Friday evening",
+   "title": "HaMotzi (blessing over bread)"
+  }
+ ],
+ "havdalah": [
+  {
+   "he": "הִנֵּה אֵל יְשׁוּעָתִי אֶבְטַח",
+   "src": {
+    "kind": "registry",
+    "id": "havdalah-opening",
+    "from": 0,
+    "to": 4
+   },
+   "id": "havdalah-opening",
+   "label": "Havdalah opens",
+   "when": "Saturday night",
+   "title": "Hinei El yeshuati (opening of Havdalah)"
+  },
+  {
+   "he": "בּוֹרֵא פְּרִי הַגָּפֶן׃",
+   "src": {
+    "kind": "registry",
+    "id": "kiddush-wine-1",
+    "from": 6,
+    "to": 9
+   },
+   "id": "kiddush-wine-1",
+   "label": "Havdalah: the wine",
+   "when": "Saturday night",
+   "title": "Blessing over wine"
+  },
+  {
+   "he": "בּוֹרֵא מִינֵי בְשָׂמִים׃",
+   "src": {
+    "kind": "registry",
+    "id": "havdalah-spices",
+    "from": 6,
+    "to": 9
+   },
+   "id": "havdalah-spices",
+   "label": "Havdalah: the spices",
+   "when": "Saturday night",
+   "title": "Havdalah: blessing over spices (besamim)"
+  },
+  {
+   "he": "בּוֹרֵא מְאוֹרֵי הָאֵשׁ׃",
+   "src": {
+    "kind": "registry",
+    "id": "havdalah-flame",
+    "from": 6,
+    "to": 9
+   },
+   "id": "havdalah-flame",
+   "label": "Havdalah: the flame",
+   "when": "Saturday night",
+   "title": "Havdalah: blessing over the flame"
+  },
+  {
+   "he": "הַמַּבְדִּיל בֵּין קֹדֶשׁ לְחוֹל",
+   "src": {
+    "kind": "registry",
+    "id": "havdalah-hamavdil",
+    "from": 6,
+    "to": 10
+   },
+   "id": "havdalah-hamavdil",
+   "label": "Havdalah: between holy and everyday",
+   "when": "Saturday night",
+   "title": "Havdalah: Hamavdil bein kodesh lechol"
+  }
+ ]
+}

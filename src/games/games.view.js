@@ -106,6 +106,7 @@ export function mount(root, ctx) {
     arcadeCard(ctx, items.length),
     hanukkahSection(),
     tgCard(),
+    g5Section(), // lane 5: holiday, Shabbat and prayer games
     ...sections);
   root.replaceChildren(article);
   // Card thumbnails from each game's own backdrop art, plus Rimon the mascot
@@ -153,6 +154,16 @@ export function tgCard() {
     ...bands.map(([band, title]) => h('div', {}, h('h3', {}, title),
       h('ul', { class: 'show-grid wf-game-grid' }, ...TG_GAMES.filter((g) => g.band === band).map((g) => h('li', {}, h('a', { class: 'show-tile wf-level-tile', href: '#/' + g.id },
         h('span', { class: 'show-tile-title' }, g.title, ' ', heSpan(g.titleHe)), h('span', { class: 'show-tile-hook' }, g.tag))))))));
+}
+
+/** Lane 5 (g5): holiday, Shabbat and prayer games. The catalogue is loaded on demand (src/games/g5-catalog.js), so the hub stays small. */
+export function g5Section() {
+  const list = h('ul', { class: 'show-grid wf-game-grid' });
+  const sec = h('section', { class: 'wf-level-section g5-hub', 'aria-labelledby': 'wf-g5-h' },
+    h('h2', { id: 'wf-g5-h' }, 'Holidays, Shabbat and Prayer ', heSpan('חַגִּים')), h('p', { class: 'muted' }, 'Games through the Jewish year, from Rosh Hashanah to Shavuot, with Shabbat and the siddur.'), list);
+  import('./g5-catalog.js').then(({ G5_GAMES }) => list.replaceChildren(...G5_GAMES.map((g) => h('li', {}, h('a', { class: 'show-tile wf-level-tile', href: '#/' + g.id },
+    h('span', { class: 'wf-game-level' }, 'LEVEL ' + g.level + ' / 5'), h('span', { class: 'show-tile-title' }, g.title, ' ', heSpan(g.titleHe)), h('span', { class: 'show-tile-hook' }, g.tag)))))).catch(() => sec.remove());
+  return sec;
 }
 
 const NUM_WORDS = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'];

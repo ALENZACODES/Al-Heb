@@ -113,6 +113,8 @@ export const ROUTES = [
   { name: 'tg-parashah', pattern: '/tg-parashah', module: '../games/tg-parashah.view.js', title: 'Parashah Path', tier: 'preview', owner: 'games' },
   { name: 'tg-tropehunt', pattern: '/tg-tropehunt', module: '../games/tg-tropehunt.view.js', title: 'Trope Hunt', tier: 'preview', owner: 'games' },
   { name: 'tg-holidays', pattern: '/tg-holidays', module: '../games/tg-holidays.view.js', title: 'Holiday Sorter', tier: 'preview', owner: 'games' },
+  // g5 (lane 5) games
+  ...'simanim:Sweet Year Table|harvest:Seven Species|grogger:Grogger|fireworks:Independence Fireworks|table:Shabbat Table|greet:Holiday Greetings|shofar:Shofar Echo|kippur:Quiet Words|gifts:Mishloach Manot|plate:Seder Plate|questions:The Four Questions|omer:Count to Shavuot|sukkah:Sukkah Builder|species:Four Species|steps:Seder Steps|stars:Sundown to Stars|bless:Blessing Match|mend:Siddur Mend|readings:Holiday Readings|scroll:Roll the Scroll'.split('|').map((x) => { const [n, title] = x.split(':'); return { name: 'g5-' + n, pattern: '/g5-' + n, module: `../games/g5-${n}.view.js`, title, tier: 'preview', owner: 'games' }; }),
   { name: 'wordfinder', pattern: '/wordfinder', module: '../games/wordfinder.view.js', title: 'Hebrew Word Finder: Level 1', tier: 'preview', owner: 'games' },
   { name: 'tugowar', pattern: '/tugowar', module: '../games/tugowar.view.js', title: 'Antonym Tug-of-War', tier: 'preview', owner: 'games' },
   { name: 'vowelcatcher', pattern: '/vowelcatcher', module: '../games/vowelcatcher.view.js', title: 'Vowel Catcher', tier: 'preview', owner: 'games' },

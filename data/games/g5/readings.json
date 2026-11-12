@@ -1,0 +1,177 @@
+{
+ "schema": "alef-g5-readings/1",
+ "note": "Holiday Readings. Each holiday's Torah reading as the app's calendar day page names it (`reading` is copied from data/calendar/days.json and holds the reference); the verse shown is a verse inside that reading, loaded from the app's Torah text at run time. Rosh Chodesh and Sukkot show a verse from inside the reading, because their first verse is a general opening.",
+ "items": [
+  {
+   "day": "rosh-hashanah",
+   "ref": {
+    "book": "genesis",
+    "chapter": 22,
+    "verse": 1
+   },
+   "cite": "Genesis 22",
+   "reading": "Torah: the binding of Isaac, Genesis 22 (read on the first day in most Reform congregations) and Genesis 21",
+   "name": {
+    "he": "רֹאשׁ הַשָּׁנָה",
+    "en": "Rosh Hashanah (the Jewish New Year)",
+    "tr": "Rosh HaShanah",
+    "src": {
+     "kind": "days-name",
+     "day": "rosh-hashanah"
+    }
+   }
+  },
+  {
+   "day": "yom-kippur",
+   "ref": {
+    "book": "deuteronomy",
+    "chapter": 29,
+    "verse": 9
+   },
+   "cite": "Deuteronomy 29:9-14",
+   "reading": "Torah: Deuteronomy 29:9-14 and 30:11-20 in Reform congregations (Leviticus 16 in traditional ones); Haftarah Isaiah 57:14-58:14",
+   "name": {
+    "he": "יוֹם כִּפּוּר",
+    "en": "Yom Kippur (the Day of Atonement)",
+    "tr": "Yom Kippur",
+    "src": {
+     "kind": "days-name",
+     "day": "yom-kippur"
+    }
+   }
+  },
+  {
+   "day": "sukkot",
+   "ref": {
+    "book": "leviticus",
+    "chapter": 23,
+    "verse": 42
+   },
+   "cite": "Leviticus 22:26-23:44",
+   "reading": "Torah: Leviticus 22:26-23:44 on the first day",
+   "name": {
+    "he": "סֻכּוֹת",
+    "en": "Sukkot (the Festival of Booths)",
+    "tr": "Sukkot",
+    "src": {
+     "kind": "days-name",
+     "day": "sukkot"
+    }
+   }
+  },
+  {
+   "day": "simchat-torah",
+   "ref": {
+    "book": "deuteronomy",
+    "chapter": 33,
+    "verse": 1
+   },
+   "cite": "Deuteronomy 33-34",
+   "reading": "Torah: Deuteronomy 33-34, then Genesis 1:1-2:3",
+   "name": {
+    "he": "שִׂמְחַת תּוֹרָה",
+    "en": "Simchat Torah",
+    "tr": "Simchat Torah",
+    "src": {
+     "kind": "days-name",
+     "day": "simchat-torah"
+    }
+   }
+  },
+  {
+   "day": "purim",
+   "ref": {
+    "book": "exodus",
+    "chapter": 17,
+    "verse": 8
+   },
+   "cite": "Exodus 17:8-16",
+   "reading": "Torah: Exodus 17:8-16 (Amalek)",
+   "name": {
+    "he": "פּוּרִים",
+    "en": "Purim",
+    "tr": "Purim",
+    "src": {
+     "kind": "days-name",
+     "day": "purim"
+    }
+   }
+  },
+  {
+   "day": "pesach",
+   "ref": {
+    "book": "exodus",
+    "chapter": 12,
+    "verse": 21
+   },
+   "cite": "Exodus 12:21-51",
+   "reading": "Torah: Exodus 12:21-51 on the first day; the Song of the Sea, Exodus 13:17-15:26, on the seventh day",
+   "name": {
+    "he": "פֶּסַח",
+    "en": "Pesach (Passover)",
+    "tr": "Pesach",
+    "src": {
+     "kind": "days-name",
+     "day": "pesach"
+    }
+   }
+  },
+  {
+   "day": "shavuot",
+   "ref": {
+    "book": "exodus",
+    "chapter": 20,
+    "verse": 1
+   },
+   "cite": "Exodus 19-20",
+   "reading": "Torah: Exodus 19-20, the giving of the Torah and the Ten Commandments",
+   "name": {
+    "he": "שָׁבוּעוֹת",
+    "en": "Shavuot (the Festival of Weeks)",
+    "tr": "Shavuot",
+    "src": {
+     "kind": "days-name",
+     "day": "shavuot"
+    }
+   }
+  },
+  {
+   "day": "rosh-chodesh",
+   "ref": {
+    "book": "numbers",
+    "chapter": 28,
+    "verse": 11
+   },
+   "cite": "Numbers 28:1-15",
+   "reading": "Torah: Numbers 28:1-15",
+   "name": {
+    "he": "רֹאשׁ חֹדֶשׁ",
+    "en": "Rosh Chodesh (the new month)",
+    "tr": "Rosh Chodesh",
+    "src": {
+     "kind": "days-name",
+     "day": "rosh-chodesh"
+    }
+   }
+  },
+  {
+   "day": "tisha-bav",
+   "ref": {
+    "book": "deuteronomy",
+    "chapter": 4,
+    "verse": 25
+   },
+   "cite": "Deuteronomy 4:25-40",
+   "reading": "Torah: Deuteronomy 4:25-40; Haftarah Jeremiah 8:13-9:23",
+   "name": {
+    "he": "תִּשְׁעָה בְּאָב",
+    "en": "Tisha B'Av (the Ninth of Av)",
+    "tr": "Tish'ah beAv",
+    "src": {
+     "kind": "days-name",
+     "day": "tisha-bav"
+    }
+   }
+  }
+ ]
+}

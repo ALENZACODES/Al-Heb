@@ -1,0 +1,128 @@
+{
+ "schema": "alef-g5-fireworks/1",
+ "note": "Independence Fireworks. Yom HaAtzmaut words from the calendar day page, with a few everyday words of a street party from the word list.",
+ "words": [
+  {
+   "he": "עַצְמָאוּת",
+   "en": "independence",
+   "tr": "atzma'ut",
+   "src": {
+    "kind": "days",
+    "day": "yom-haatzmaut",
+    "i": 0
+   }
+  },
+  {
+   "he": "דֶּגֶל",
+   "en": "flag",
+   "tr": "degel",
+   "src": {
+    "kind": "days",
+    "day": "yom-haatzmaut",
+    "i": 1
+   }
+  },
+  {
+   "he": "מְדִינָה",
+   "en": "state, country",
+   "tr": "medinah",
+   "src": {
+    "kind": "days",
+    "day": "yom-haatzmaut",
+    "i": 2
+   }
+  },
+  {
+   "he": "הַתִּקְוָה",
+   "en": "'the hope', Israel's anthem",
+   "tr": "Hatikvah",
+   "src": {
+    "kind": "days",
+    "day": "yom-haatzmaut",
+    "i": 3
+   }
+  },
+  {
+   "he": "מַנְגָּל",
+   "en": "barbecue",
+   "tr": "mangal",
+   "src": {
+    "kind": "days",
+    "day": "yom-haatzmaut",
+    "i": 4
+   }
+  },
+  {
+   "he": "שִׁיר",
+   "en": "song",
+   "tr": "shir",
+   "src": {
+    "kind": "words",
+    "id": "hf16db4f8"
+   }
+  },
+  {
+   "he": "שִׂמְחָה",
+   "en": "joy, happiness, glee",
+   "tr": "simchah",
+   "src": {
+    "kind": "words",
+    "id": "h3612be9c"
+   }
+  },
+  {
+   "he": "חַג",
+   "en": "holiday",
+   "tr": "chag",
+   "src": {
+    "kind": "words",
+    "id": "h81fd04d9"
+   }
+  },
+  {
+   "he": "אֶרֶץ",
+   "en": "country, land",
+   "tr": "eretz",
+   "src": {
+    "kind": "words",
+    "id": "hd82a3079"
+   }
+  },
+  {
+   "he": "אֵשׁ",
+   "en": "fire",
+   "tr": "esh",
+   "src": {
+    "kind": "words",
+    "id": "hf1da5ea6"
+   }
+  },
+  {
+   "he": "עִיר",
+   "en": "city",
+   "tr": "ir",
+   "src": {
+    "kind": "words",
+    "id": "he3b1acbd"
+   }
+  },
+  {
+   "he": "עַם",
+   "en": "a nation, a people",
+   "tr": "am",
+   "src": {
+    "kind": "words",
+    "id": "h020c4fa8"
+   }
+  },
+  {
+   "he": "תִּקְוָה",
+   "en": "hope",
+   "tr": "tikvah",
+   "src": {
+    "kind": "words",
+    "id": "hc8e59638"
+   }
+  }
+ ]
+}

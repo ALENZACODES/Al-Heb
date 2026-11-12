@@ -13,6 +13,9 @@ sys.path.insert(0, os.path.join(ROOT, 'tools', 'torah', 'audio'))
 sys.path.insert(0, os.path.join(ROOT, 'tools', 'audio', 'asr-check')); sys.path.insert(0, os.path.join(ROOT, 'tools', 'audio'))
 
 
+SHORT = {'letter', 'vowel', 'syllable'}
+
+
 def judge_script(F, path, script, original, model, stt):
     """Judge a clip made from the Ashkenazi reading in Hebrew letters (tools/audio/ashkenazi_script.mjs). The sound reviewer compares
     what it hears with the sounds of that reading (Phonikud on the Hebrew-letter text: o for kamatz, s for tav without dagesh, ei for
@@ -61,8 +64,15 @@ def main():
             else:
                 j = F.judge(clip, said, a.model, stt)
             f = FC.fails(j)
+            if r.get('kind') in SHORT:
+                # Owner decision B (12 Nov 2026): a letter, vowel or syllable passes on the sound reviewer alone. Calibration (run 4) on the
+                # app's own Israeli short clips: Google passed 13-40% of them and the word reviewer 33-72%, the sound reviewer 80-85%.
+                ok = not j['weak'] and j.get('ratio') is not None
+                rule = 'sound-only-short'
+            else:
+                ok, rule = f <= 1, '2-of-3'
             rec = {'path': r['path'], 'tradition': r['tradition'], 'spokenText': r['spokenText'], 'judgedAgainst': said, 'review': j,
-                   'reviewersFailing': f, 'decision': 'pass' if f <= 1 else 'held', 'held': f >= 2}
+                   'reviewersFailing': f, 'rule': rule, 'decision': 'pass' if ok else 'held', 'held': not ok}
         out.write(json.dumps(rec, ensure_ascii=False) + '\n'); out.flush()
         print(f"{n}/{len(rows)} {r['path']}: {rec['decision']}", flush=True)
 

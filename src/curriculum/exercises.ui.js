@@ -131,7 +131,7 @@ export function mountQuiz(host, { questions, ctx, onFinish, now = () => Date.now
           if (q.options[k].label) b.setAttribute("aria-label", q.options[k].label + (k === q.answerIndex ? " This was the right answer." : k === i ? " Your choice, not the answer." : "")); });
         card.setAttribute("data-result", ok ? "right" : "wrong");
         status.textContent = feedbackText(ok, { retry, streak, n }) + (ok ? "" : ` The answer is ${q.options[q.answerIndex].text}.`);
-        why.textContent = q.why || "";
+        why.textContent = [q.why, ok ? "" : q.optionWhy?.[i]].filter(Boolean).join(" "); // C4: on a miss, why the pick was wrong (from the data)
         [cont, ...(session.canUndo() ? [undo] : [])].forEach((b) => { b.hidden = false; b.removeAttribute?.("hidden"); }); // no Undo after a first-try miss
         skip.hidden = true; skip.setAttribute("hidden", "");
         if (check) { check.hidden = true; check.setAttribute("hidden", ""); opts.forEach((b) => b.removeAttribute("aria-pressed")); }

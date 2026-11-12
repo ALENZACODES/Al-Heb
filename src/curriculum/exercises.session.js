@@ -273,19 +273,32 @@ export function buildChoiceQuestions(lesson, { letters, confusables, consonants,
   const rand = rng(seed), qs = [];
   const shapeOf = (x) => shapeLabel(letters.get(x), mnemonics?.get?.(x)); // '' when there is no shape text; then the plain glyph is all there is
   const meaningKeys = new Set(lesson.words.map((w) => norm(w.en)));
+  // C4: the reason a wrong pick is wrong, from the data only: what the picked letter is, plus the look-alike rule that names both
+  // letters (data/letters/confusables.json hint, else the target's mnemonics.json look-alike line when it names the picked letter).
+  const pickedLetterWhy = (pid, target, already = "") => {
+    if (!pid || pid === target) return "";
+    const P = letters.get(pid); if (!P) return "";
+    const snd = soundEn(pid, P);
+    const set = (confusables?.sets || []).find((s) => s.letters.includes(pid) && s.letters.includes(target));
+    const look = mnemonics?.get?.(target)?.lookalike;
+    const rule = set?.hint || (look && new RegExp(`\\b${String(P.name).replace(/[^A-Za-z]/g, "")}\\b`, "i").test(look) ? look : "");
+    return `You picked ${P.name}: that is ${P.he}${snd ? `, which sounds like ${snd}` : ""}.${rule && rule !== already ? " " + rule : ""}`;
+  };
   lesson.letters.forEach((id, i) => {
     const L = letters.get(id); if (!L) return;
     const names = [id, ...letterDistractors(id, letters, confusables, rand, { n: optionCount - 1 })];
     const named = placeOptions(names.map((x) => letters.get(x).name), L.name, rand);
     const hint = (confusables?.sets || []).find((s) => s.letters.includes(id))?.hint;
+    const byName = new Map(names.map((x) => [letters.get(x).name, x]));
     qs.push({ id: `${lesson.id}-q-name-${id}`, kind: "letter-name", prompt: "Which letter is this?", promptHe: L.he, promptLabel: shapeOf(id),
-      options: named.options.map((text) => ({ text })), answerIndex: named.answerIndex,
+      options: named.options.map((text) => ({ text })), answerIndex: named.answerIndex, optionWhy: named.options.map((text) => pickedLetterWhy(byName.get(text), id, hint)),
       why: `This is ${L.name}${soundEn(id, L) ? `, which sounds like ${soundEn(id, L)}` : ""}.${hint ? " Tip: " + hint : ""}`, cardId: `letter:${id}`, cardKind: "letter" });
     if (L.sound?.en) {
       const ids = [id, ...letterDistractors(id, letters, confusables, rand, { n: optionCount - 1, bySound: true, consonants, tradition })];
       const g = placeOptions(ids.map((x) => letters.get(x).he), L.he, rand);
       qs.push({ id: `${lesson.id}-q-sound-${id}`, kind: "letter-sound", prompt: `Which letter sounds like: ${soundEn(id, L)}`,
-        options: g.options.map((text) => ({ text, he: true, label: shapeOf(ids[ids.findIndex((x) => letters.get(x).he === text)]) })), answerIndex: g.answerIndex, why: `${L.he} is ${L.name}.`, cardId: `letter:${id}`, cardKind: "letter" });
+        options: g.options.map((text) => ({ text, he: true, label: shapeOf(ids[ids.findIndex((x) => letters.get(x).he === text)]) })), answerIndex: g.answerIndex, why: `${L.he} is ${L.name}.`, cardId: `letter:${id}`, cardKind: "letter",
+        optionWhy: g.options.map((text) => pickedLetterWhy(ids.find((x) => letters.get(x).he === text), id)) });
     }
   });
   lesson.words.forEach((w, i) => {
@@ -302,8 +315,9 @@ export function buildChoiceQuestions(lesson, { letters, confusables, consonants,
     const uniq = pick(list.slice(0, k));
     if (uniq.length < optionCount - 1) return;
     const opts = placeOptions([w.en, ...uniq.slice(0, optionCount - 1).map((p) => p.en)], w.en, rand);
+    const heOf = new Map(uniq.slice(0, optionCount - 1).map((p) => [p.en, p.he]));
     qs.push({ id: `${lesson.id}-q-word-${i + 1}`, kind: "word-meaning", prompt: "What does this mean?", promptHe: w.he, promptLabel: wordLabel(w.he, tradition),
-      options: opts.options.map((text) => ({ text })), answerIndex: opts.answerIndex, why: `${w.he} means "${w.en}".`, cardId: `word:${lesson.id}:${i + 1}`, cardKind: "word" });
+      options: opts.options.map((text) => ({ text })), answerIndex: opts.answerIndex, optionWhy: opts.options.map((text) => (heOf.has(text) ? `You picked "${text}": that is ${heOf.get(text)}, a different word.` : "")), why: `${w.he} means "${w.en}".`, cardId: `word:${lesson.id}:${i + 1}`, cardKind: "word" });
   });
   return sequenceExercises(qs.map((q) => ({ ...q, type: q.kind })));
 }

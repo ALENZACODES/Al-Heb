@@ -210,6 +210,10 @@ export function whyLine(ex, lesson, trad) {
   if (ex.type === "order") return `${ex.he} means "${ex.en}".`;
   if (ex.type === "register") return `"${ex.en}" is ${ex.answer}.`;
   if (ex.type === "match") return ex.pairs.map((p) => `${p.he} = ${p.en}`).join("; ") + ".";
+  // C4: the exercise's own data, for the types that had no line yet
+  if (ex.type === "recall" && ex.he && ex.en) return `${ex.he} means "${ex.en}".`;
+  if (ex.type === "gender" && ex.m && ex.f && ex.en) return `${ex.m} is the masculine form and ${ex.f} the feminine form of "${ex.en}".`;
+  if (ex.type === "fade" && ex.en) return `The line means "${ex.en}".`;
   return "";
 }
 const exLabel = (e) => TYPE_LABEL[e.type] + ": " + (e.he || e.en || e.line || e.m || e.task || e.id);

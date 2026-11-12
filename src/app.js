@@ -246,7 +246,9 @@ async function show(match, ctxBase, { quiet = false } = {}) {
   if (!quiet) announceTitle(live, ''); // M-09: the previous page's title leaves the page text as soon as navigation starts
   if (!route) {
     const updating = h('p', { class: 'muted', role: 'status' });
-    root.replaceChildren(h('section', { class: 'card' }, h('h1', { id: 'view-title', tabindex: '-1' }, t('notfound.title')), h('p', { class: 'mono' }, path), updating, h('a', { class: 'btn', href: '#/' }, t('nav.home'))));
+    const sugg = h('div', { class: 'alef-404-suggest' }); // I9: "Did you mean" links from the route table, loaded on demand
+    root.replaceChildren(h('section', { class: 'card' }, h('h1', { id: 'view-title', tabindex: '-1' }, t('notfound.title')), h('p', { class: 'mono' }, path), sugg, updating, h('a', { class: 'btn', href: '#/' }, t('nav.home')), ' ', h('a', { class: 'btn secondary', href: '#/search' }, t('search.title'))));
+    import('./platform/suggest.js').then((m) => { const s = m.suggestRoutes(path, ROUTES, { available }); if (s.length && token === navToken) sugg.replaceChildren(h('p', {}, 'Did you mean:'), h('ul', {}, ...s.map((x) => h('li', {}, h('a', { href: x.href }, `${titleCase(x.title)} (${x.href})`))))); }).catch(() => {});
     renderNav(null); document.title = `${t('notfound.title')} - Aleph`;
     updateForMissingPage(path, () => { updating.textContent = t('notfound.updating'); });
     return finish();

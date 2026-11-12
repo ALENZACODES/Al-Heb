@@ -1149,6 +1149,10 @@
     <changefreq>weekly</changefreq>
   </url>
   <url>
+    <loc>https://alef-review.onrender.com/#/readlab</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://alef-review.onrender.com/#/trope/families</loc>
     <changefreq>weekly</changefreq>
   </url>
@@ -5338,6 +5342,26 @@
   </url>
   <url>
     <loc>https://alef-review.onrender.com/#/bridge/line/leshev-basukkah</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://alef-review.onrender.com/#/readlab/texts</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://alef-review.onrender.com/#/readlab/shva</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://alef-review.onrender.com/#/readlab/forms</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://alef-review.onrender.com/#/readlab/stress</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://alef-review.onrender.com/#/readlab/progress</loc>
     <changefreq>weekly</changefreq>
   </url>
   <url>

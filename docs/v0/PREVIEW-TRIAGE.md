@@ -98,6 +98,19 @@ decision, so the More sheet stays short and the first session stays coherent (we
 | `trainswitch` | hide | A game; reached from the games hub, and search finds it by name. |
 | `weatherstudio` | hide | A game; reached from the games hub, and search finds it by name. |
 | `rentalagent` | hide | A game; reached from the games hub, and search finds it by name. |
+| `hanukkah-dreidel1` | hide | A Hanukkah game; reached from the Hanukkah section of the games hub, and search finds it by name. |
+| `hanukkah-dreidel2` | hide | A Hanukkah game; reached from the Hanukkah section of the games hub, and search finds it by name. |
+| `hanukkah-candles` | hide | A Hanukkah game; reached from the Hanukkah section of the games hub, and search finds it by name. |
+| `hanukkah-count` | hide | A Hanukkah game; reached from the Hanukkah section of the games hub, and search finds it by name. |
+| `hanukkah-pairs` | hide | A Hanukkah game; reached from the Hanukkah section of the games hub, and search finds it by name. |
+| `hanukkah-colour` | hide | A Hanukkah game; reached from the Hanukkah section of the games hub, and search finds it by name. |
+| `hanukkah-gelthunt` | hide | A Hanukkah game; reached from the Hanukkah section of the games hub, and search finds it by name. |
+| `hanukkah-slide` | hide | A Hanukkah game; reached from the Hanukkah section of the games hub, and search finds it by name. |
+| `hanukkah-hiddenlights` | hide | A Hanukkah game; reached from the Hanukkah section of the games hub, and search finds it by name. |
+| `hanukkah-jumble` | hide | A Hanukkah game; reached from the Hanukkah section of the games hub, and search finds it by name. |
+| `hanukkah-saveflame` | hide | A Hanukkah game; reached from the Hanukkah section of the games hub, and search finds it by name. |
+| `hanukkah-charades` | hide | A Hanukkah game; reached from the Hanukkah section of the games hub, and search finds it by name. |
+| `hanukkah-forbidden` | hide | A Hanukkah game; reached from the Hanukkah section of the games hub, and search finds it by name. |
 | `echochamber` | hide | A game; reached from the games hub, and search finds it by name. |
 | `museumcurator` | hide | A game; reached from the games hub, and search finds it by name. |
 | `karaokebeat` | hide | A game; reached from the games hub, and search finds it by name. |

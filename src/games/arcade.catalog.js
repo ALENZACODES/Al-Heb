@@ -39,3 +39,24 @@ export const ARCADE_GAMES = Object.freeze([
 ]);
 
 export const ARCADE_IDS = Object.freeze(ARCADE_GAMES.map((g) => g.id));
+
+// Hanukkah: one section in the games hub (#/games). id = route and file name (src/games/<id>.view.js); level = where it fits on
+// the same 1 to 5 ladder. Kept apart from ARCADE_GAMES so the thirty-game arcade rotation (game of the day, art set) is unchanged.
+// kind: 'arcade' games use the arcade shell (five levels, badges); 'table' games are turn-based or pass-the-phone party games.
+export const HANUKKAH_GAMES = Object.freeze([
+  { id: 'hanukkah-dreidel1', title: 'Dreidel, Beginner 1', titleHe: 'סְבִיבוֹן', level: 1, kind: 'table', tag: 'Spin with Rimon, Ari and Noa; every letter named and explained' },
+  { id: 'hanukkah-dreidel2', title: 'Dreidel, Beginner 2', titleHe: 'סְבִיבוֹן', level: 2, kind: 'table', tag: 'Read the letter and pick the rule yourself; Israeli dreidel option' },
+  { id: 'hanukkah-candles', title: 'Candle Blow-Out', titleHe: 'חֲנֻכִּיָּה', level: 1, kind: 'table', tag: 'Place and light the hanukkiah in the right order' },
+  { id: 'hanukkah-count', title: 'Count the Lights', titleHe: 'כַּמָּה נֵרוֹת', level: 1, kind: 'arcade', tag: 'Count candles and gelt in Hebrew' },
+  { id: 'hanukkah-pairs', title: 'Candle Pairs', titleHe: 'נֵרוֹת', level: 1, kind: 'arcade', tag: 'Memory pairs: Hanukkah word and its meaning' },
+  { id: 'hanukkah-colour', title: 'Colour by Letter', titleHe: 'צֶבַע', level: 1, kind: 'arcade', tag: 'Read the letter, paint the part' },
+  { id: 'hanukkah-gelthunt', title: 'Gelt Hunt', titleHe: 'חַם אוֹ קַר', level: 2, kind: 'arcade', tag: 'Hot or cold in Hebrew: find the hidden gelt' },
+  { id: 'hanukkah-slide', title: 'Sevivon Slide', titleHe: 'סְבִיבוֹן', level: 2, kind: 'arcade', tag: 'Slide the tiles until the word reads right to left' },
+  { id: 'hanukkah-hiddenlights', title: 'Hidden Lights', titleHe: 'אוֹר', level: 3, kind: 'arcade', tag: 'Find the Hanukkah words in the letter grid' },
+  { id: 'hanukkah-jumble', title: 'Jumbled Jars', titleHe: 'פַּךְ', level: 3, kind: 'arcade', tag: 'Put the letters back in order' },
+  { id: 'hanukkah-saveflame', title: 'Save the Flame', titleHe: 'לֶהָבָה', level: 3, kind: 'arcade', tag: 'Guess the letters before the candle burns down' },
+  { id: 'hanukkah-charades', title: 'Hanukkah Charades', titleHe: 'פַּנְטוֹמִימָה', level: 2, kind: 'table', tag: 'Pass the phone: act it out for your team' },
+  { id: 'hanukkah-forbidden', title: 'Forbidden Word', titleHe: 'מִלָּה אֲסוּרָה', level: 3, kind: 'table', tag: 'Pass the phone: describe it without the forbidden words' },
+]);
+
+export const HANUKKAH_IDS = Object.freeze(HANUKKAH_GAMES.map((g) => g.id));

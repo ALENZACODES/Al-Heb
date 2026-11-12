@@ -6,6 +6,7 @@ import { ROUTES } from './router.js'; // lane g1
 
 
 import { G4_NAMES } from './g4-routes.js'; // lane 4 (g4)
+import { PLATFORM_ROUTES } from './platform-routes.js';
 export const SECTIONS = [
   { id: 'learn',    labelKey: 'nav.section.learn',    descKey: 'nav.section.learn.desc',    heKey: 'nav.learn', primary: ['learn'] },
   { id: 'read',     labelKey: 'nav.section.read',     descKey: 'nav.section.read.desc',     heKey: 'nav.read',  primary: ['readhub', 'read'] },
@@ -52,6 +53,7 @@ SECTION_ROUTES.progress.push('certificate'); SECTION_ROUTES.more.push('move'); /
 // lane 6 (12 Nov round 2): unvocalized bridge (Learn) and trope families / per-aliyah practice (Read)
 SECTION_ROUTES.learn.push('bridge', 'bridge-sec', 'bridge-text');
 SECTION_ROUTES.read.push('trope-families', 'trope-family', 'trope-aliyah');
+for (const r of PLATFORM_ROUTES) SECTION_ROUTES[r.section].push(r.name); // lane platform (12 Nov)
 
 /** Route name -> section id. */
 export const ROUTE_SECTION = Object.fromEntries(Object.entries(SECTION_ROUTES).flatMap(([s, names]) => names.map((n) => [n, s])));

@@ -489,7 +489,7 @@
     ],
     [
      "src/shell/nav-model.js",
-     11948,
+     12103,
      1
     ],
     [
@@ -500,6 +500,11 @@
     [
      "src/shell/plain-copy.js",
      3437,
+     1
+    ],
+    [
+     "src/shell/platform-routes.js",
+     490,
      1
     ],
     [
@@ -549,7 +554,7 @@
     ],
     [
      "src/shell/router.js",
-     47304,
+     47494,
      1
     ],
     [

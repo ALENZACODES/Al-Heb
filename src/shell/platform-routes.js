@@ -1,0 +1,5 @@
+// lane platform (12 Nov, CODER-100 H, I, J): routes whose code lives under src/platform/ (on demand, see tools/build-precache.mjs).
+// [name, pattern, view file under src/platform/, title, nav section]
+export const PLATFORM_ROUTES = [
+  ['whats-new', '/whats-new', 'whatsnew.view.js', "What's New", 'more'],
+].map(([name, pattern, file, title, section]) => ({ name, pattern, module: `../platform/${file}`, title, owner: 'platform', optional: true, quick: `nav.route.${name}`, section }));

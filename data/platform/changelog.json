@@ -1,0 +1,200 @@
+{
+ "generatedFrom": "git log (commit subjects, first sentence)",
+ "entries": [
+  {
+   "date": "2026-11-12",
+   "hash": "6d5ceabc6",
+   "text": "Helpful 404 (I9): an unknown address lists up to three close pages from the route table (close spelling, longer form or a common word such as lessons or prayers) and a Search link."
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "b9c67815f",
+   "text": "Scheduler transparency and on-device fit (H1, H2): #/scheduler now shows the live scheduler's real state (cards by state and by interval, due now, today and tomorrow, its own…"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "454c2baad",
+   "text": "Toast hygiene contract (I1): answer feedback for screen readers, the hearts line and toasts are emptied a few seconds after they are written and cleared on every navigation, so…"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "6027fd748",
+   "text": "Owner decisions A and B: 1,299 Sephardi rows that played the Israeli clip carry a copy of it as their own file, captioned 'Sephardi voice, the same reading as Israeli' (the app's…"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "146268c16",
+   "text": "Owner decision B: a letter, vowel or syllable accent clip passes on the sound reviewer alone (calibration run 4: Google passed 13-40% of the app's own Israeli short clips, the…"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "e71c4bf75",
+   "text": "Ashkenazi own clips to 95.3% (accent-fill run 5): 643 alias rows and the 159 run-3 holds retaken at rate 0.85, 617 passed 2 of 3 and are admitted."
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "fd6dbf7bd",
+   "text": "Ashkenazi clips of their own from the Ashkenazi reading in Hebrew letters (accent-fill run 3): 442 rows that played the Israeli clip, 283 passed 2 of 3 reviewers and are admitted…"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "d9bca8f96",
+   "text": "Accent runs: retakes at a chosen speaking rate for the rows a past run held, alias rows that have no clip of their own, a review-only mode for calibrating the reviewers on clips…"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "a69aeeb46",
+   "text": "Ashkenazi clips from the Ashkenazi reading written in pointed Hebrew letters: kamatz as holam, tav without dagesh as samekh, tzere with a yod (the engine's three Ashkenazi rules…"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "23910f29b",
+   "text": "Render runs the asset check as its build command, so a deploy with a missing clip fails and the served evidence file comes from the deploy itself"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "8c09f8ef3",
+   "text": "Release build: stamp, asset check evidence (0 gaps) with the new accent clips and the search fix"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "82a6c987c",
+   "text": "Accent clips of their own, words (accent-fill run 2): 1,216 Sephardi and Ashkenazi word rows that played the Israeli clip made by the repo's accent pipeline and reviewed by the…"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "c74381cee",
+   "text": "Search: \"1 result\", not \"1 results\""
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "f95c09ce7",
+   "text": "Rebuild word frequencies and theme packs after the merged lanes changed their sources"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "741e17f25",
+   "text": "Accent clips of their own (accent-fill run 1), alias rows with files of their own, and the Chirp long-prayer retry"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "eef8fc0a7",
+   "text": "C-06 in part, #3 and #18: move progress between the learner's own devices with no server (link, QR code or file."
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "1347e6728",
+   "text": "Roots #5, #9, #15: one verb denominator on the Roots page."
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "e1f5a43e3",
+   "text": "Lane 6 (#16, #13, #17): Reading Without Vowels, trope families and aliyah practice, placement as the front door"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "1a66fa1e2",
+   "text": "Plan 4.9 (skeleton first-paints): the shell's visually hidden fallback heading no longer counts as page content, so the loading placeholder stays until a view paints something…"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "86504a0d9",
+   "text": "Shabbat Companion: sitemap entry, deaf and hard-of-hearing inventory row, and the service.companion store key in the privacy table"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "8dff39c4e",
+   "text": "M-04, M-05, M-06, M-09, M-11, R-12, plan #6: deploy-time asset check, full sitemap, hold sets reconciled, chapter audio from verse clips, book completion proven, Siddur line…"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "cb3139c02",
+   "text": "M-08: About has a Held Recordings section: the recordings held for review (what each is, whose voice), why (each failed at least 2 of 3 independent checks of its words), what…"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "142566cc8",
+   "text": "Accent clips of their own for the rows that play the Israeli clip: accent-fill workflow (the repo's accent pipeline: the Israeli WaveNet voice reads the tradition's respelling…"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "067d30565",
+   "text": "Plan #10, Shabbat Companion (code): #/shabbat lazy route with This Shabbat (portion, candle lighting, practise-before-Friday list), the Friday evening and Shabbat morning service…"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "9544066e4",
+   "text": "S-09: a book page attaches its clip in the learner's voice with preload=metadata when it is drawn (Listen reuses it), and once a voice plays the next page's clip in that voice is…"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "61c4407d0",
+   "text": "S-05: the heart toast names the count the hearts display shows at that moment ('Oops, that cost a heart: 4 of 5 left'), instead of 'Oops, one heart' that read as one heart left"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "904ff27a3",
+   "text": "S-03: Offline 'Download everything' says why it is disabled (the file list is still being checked, or it did not load) and what turns it on, with a Try again button that reloads…"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "b32922c36",
+   "text": "S-02, S-04: the memory-chain picture on Review and in Letters practice sits inside the .mc-svg scope its sanitised styles need, so Bet draws as the coloured bungalow with its ball…"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "a8af866c9",
+   "text": "S-01: the learner-text gate also reads column tables (fields + rows), and the three cut-off glosses it then found in the dictionary index are closed"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "f879956f3",
+   "text": "S-01: the greetings gloss reads 'hi (slang)', with the register as its own bracketed word, never 'hislang'."
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "741eebb7c",
+   "text": "M-03: Perfect is awarded only for a round with no wrong answer or guess."
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "ba547b2b8",
+   "text": "M-02: global Search matches transliteration through the Dictionary's own matcher and spelling (translitFor moved to vocab/model.js), so shalom finds the word for peace, labelled…"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "4b18c7344",
+   "text": "M-01: the service page takes the tradition from Settings (its own selector is an override only while Settings is unchanged)."
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "f49f36cd8",
+   "text": "Chirp long prayers: the joined-length check allows for the MP3 padding each separately encoded part carries (about 38 ms)."
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "e229bf71f",
+   "text": "C-03, C-04, C-07, S-06: game hosts sit beside the board, not over it (Parashah Path's Exodus button visible again)."
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "3406f1c54",
+   "text": "C-02, M-07: counts finish their wiring."
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "2324461d4",
+   "text": "Chirp long prayers, second pass: parts of one verse line or about 150 bytes."
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "da25c6f0b",
+   "text": "Chirp long prayers (chirp-long run 1): the five whole prayers recorded in Chirp 3 HD in parts (every part accepted."
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "6ebb14f0a",
+   "text": "Chirp 3 HD for the five whole prayers too long for one Chirp request (adon-olam-1, aleinu-1, kaddish-1, haftarah-after, amidah-elohai-netzor): parts from the registry's lines and…"
+  }
+ ]
+}

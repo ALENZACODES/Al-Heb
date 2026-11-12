@@ -244,6 +244,8 @@ export const STORE_KEYS = [
   ['intermediate.v1', 'Intermediate lessons progress', 'src/curriculum/intermediate.view.js'],
   ['israelUnits.v1', 'Israel unit review schedule (when each unit review was done)', 'src/curriculum/israel-units.js'],
   ['service.prefs', 'Follow-the-service choices (order, tradition, whether to show transliteration)', 'src/service/service.view.js'],
+  // lane 5: Shabbat Companion
+  ['service.companion', 'Shabbat Companion: prayers you marked as practised, your last join-in result (timing band and your own check) and this week\'s home checklist', 'src/service/companion.model.js'],
   ['progress.milestones.v1', 'Which progress milestones you have reached, and when', 'src/progress/store.js'],
   ['__meta', 'Storage format version number only (no learner data; left out of backups)', 'src/store.js'],
   ['firstday.progress', 'First 10 minutes progress', 'src/firstday/model.js'],

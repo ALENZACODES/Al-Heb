@@ -11,7 +11,7 @@ recorded at rate 1.0 and judged by the three reviewers on its own; a part that f
 differ from part to part, the voice may not). The first voice with which every part passes at least 2 of 3 reviewers is joined
 (pauses of 0.45 s at line and sentence breaks, 0.3 s at a cut inside a sentence), loudness-normalised to the repo format (mono
 44.1 kHz 96 kbps, -16 LUFS) with all metadata stripped, and checked as a whole: its length is the parts plus the pauses (within
-0.15 s), it starts and ends quietly and does not clip, and Google Speech-to-Text hears each chunk of it (whole parts, under 50 s)
+0.15 s, less the MP3 padding of each part), it starts and ends quietly and does not clip, and Google Speech-to-Text hears each chunk of it (whole parts, under 50 s)
 no worse than it heard those parts alone (at most one more word off per chunk). Only then does it replace the clip. Otherwise
 the clip is left as it is and the log says "chirpHeld" with the reason (the part that failed).
 
@@ -128,8 +128,12 @@ def final_check(clip, files, pauses, parts, judged, stt):
     want = sum(lens) + sum(pauses)
     out = {'seconds': round(got, 2), 'expected': round(want, 2)}
     problems = []
-    if abs(got - want) > 0.15:
-        problems.append(f'length {got:.2f} s, expected {want:.2f} s')
+    # each separately encoded part carries about 38 ms of MP3 encoder padding and decoder delay (1,152 + 529 samples at 44.1 kHz)
+    # that the joined clip does not, so the joined clip is shorter by up to that much per part
+    pad = 0.04 * len(files)
+    out['allowedShortBy'] = round(pad + 0.15, 2)
+    if got > want + 0.15 or got < want - pad - 0.15:
+        problems.append(f'length {got:.2f} s, expected {want:.2f} s (allowed {want - pad - 0.15:.2f} to {want + 0.15:.2f})')
     head, tail, peak = level(clip, 0, 0.02), level(clip, got - 0.02, 0.02), level(clip)
     out.update({'edgeStartDb': head, 'edgeEndDb': tail, 'peakDb': peak})
     if head > -20 or tail > -20:

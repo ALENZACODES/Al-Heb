@@ -106,7 +106,7 @@ test('M-04: the real lists pass the list-only check (this checkout may have no a
   assert.doesNotMatch(cli.stdout, /wrote/);
 });
 
-test('M-04: wired into CI and the release build (a gap stops the stamp); audit/ ships; Render plan documented, Render unchanged', () => {
+test('M-04: wired into CI and the release build (a gap stops the stamp); audit/ ships; Render runs the check as its build command', () => {
   assert.match(src('.github/workflows/ci.yml'), /node tools\/deploy\/check-assets\.mjs/);
   const pre = src('tools/build-precache.mjs');
   const gate = pre.indexOf('checkAssets('), stamp = pre.indexOf('writeCounts({ force: release })');
@@ -119,7 +119,8 @@ test('M-04: wired into CI and the release build (a gap stops the stamp); audit/ 
     const road = src('docs/plan/ROAD-TO-950.md');
     assert.match(road, /How Render Would Run It/);
     assert.match(road, /Build Command to `node tools\/deploy\/check-assets\.mjs`/);
-    assert.match(src('render.yaml'), /buildCommand: ""/, 'Render is not changed until the owner approves');
+    // Owner approved on 12 Nov 2026 ("yes deploy"): Render runs the check as its build command, so a gap fails the deploy there too.
+    assert.match(src('render.yaml'), /buildCommand: node tools\/deploy\/check-assets\.mjs/);
   });
 });
 

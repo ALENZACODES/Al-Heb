@@ -1,0 +1,31 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-respelled-israeli-voice",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "ashkenazi",
+ "inputText": "חַג הַסֻּכּוֹת הַזֶּה זְמַן שִׂמְחָתֵנוּ׃",
+ "inputSha256": "62bfa0240cc039b6b42e3d518fe311a18217dc56df570c4fdbdac03f26ea7feb",
+ "ingestedAt": "2026-11-12T14:08:38.065Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice: the Israeli woman voice reading the ashkenazi reading written in pointed Hebrew letters (tools/audio/ashkenazi_script.mjs). Not a human recording; no human has listened to it. Licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel.",
+ "renderedAt": "2026-11-12T14:08:38.065Z",
+ "redistributionCleared": false,
+ "spokenText": "חַג הַסֻּכּוֹס הַזֶּה זְמַן שִׂמְחֹסֵינוּ",
+ "normalized": true,
+ "provider": "google",
+ "madeFrom": "hebrew-script",
+ "voiceName": "he-IL-Wavenet-A",
+ "languageCode": "he-IL",
+ "hebrew": "חַג הַסֻּכּוֹת הַזֶּה זְמַן שִׂמְחָתֵנוּ׃",
+ "israeliRef": "audio/f/israeli/line/kiddush-festival-sukkot.mp3",
+ "tempo": {
+  "applied": false,
+  "factor": 1,
+  "cap": 1.26,
+  "before": 2.76,
+  "after": 2.76,
+  "israeliSec": 2.736009070294785,
+  "israeliRef": "audio/f/israeli/line/kiddush-festival-sukkot.mp3"
+ }
+}

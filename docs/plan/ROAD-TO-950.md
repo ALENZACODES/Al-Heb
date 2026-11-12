@@ -151,7 +151,7 @@ This is the only route to the top of the scale. It has lead time, so start it no
 
 ## Deploy-Time Asset Check: How Render Would Run It (M-04, R-08)
 
-The check exists and runs in two places today. Render itself is unchanged until the owner approves a build command (decision 1 above).
+The check runs in three places: CI, the release build, and Render's own build (approved by the owner on 12 Nov 2026).
 
 - **What it checks:** `node tools/deploy/check-assets.mjs` reads all eight audio lists:
   - manifest, kind-word and the three word shards
@@ -164,7 +164,7 @@ The check exists and runs in two places today. Render itself is unchanged until 
   - CI's `test` job, on every push (no evidence written there).
   - `npm run release`: `tools/build-precache.mjs --stamp` runs the check before it moves the stamp, and stops the release on any gap.
 - **How Render would run it:** set the service's Build Command to `node tools/deploy/check-assets.mjs`, in render.yaml `buildCommand` and on the service itself, since it is not Blueprint-managed. Keep the publish path at `.`. A gap then fails the Render build and the old deploy stays live. Render's build runs on the full clone, so the check sees every clip. It takes about a second and needs no install.
-- **Not done:** render.yaml still has an empty build command. This is waiting on the owner.
+- **Done (12 Nov 2026):** the Build Command is `node tools/deploy/check-assets.mjs` on the service and in render.yaml. The first deploy with it (commit 23910f29b) passed, and the served `audit/asset-check.json` carries the time of the check Render ran (14:01:08 UTC).
 
 ## How Each Batch Is Checked
 

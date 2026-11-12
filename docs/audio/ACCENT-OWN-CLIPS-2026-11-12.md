@@ -27,3 +27,26 @@ Own-file coverage on the five audio manifests (a row counts when it has a synthe
 The targets (every main-manifest kind and Sephardi and Ashkenazi above 90%) are **not met**. The pipeline is deterministic (the same respelling gives the same WaveNet clip), so a second run would only remake the held clips. Most held clips are the Israeli voice reading Latin-letter respellings that the reviewers, judging against the pointed Hebrew, hear as other words; no prayer clip passed. Raising these kinds further needs a different way of making the tradition clips (human readers, or a decision to judge them another way), which is the owner's call.
 
 Logs: `docs/audio/fill/accent-r1-*.jsonl`, `docs/audio/fill/accent-r2-*.jsonl`.
+
+## Second method: the Ashkenazi reading in Hebrew letters (run 3, 12 November)
+
+Why the first method stalled: the held clips' reviews show the Israeli voice reading English letters ("cherev" was heard by Google as "chairs", "pesach" as "tasc"), and all three reviewers judged every clip against the Israeli pronunciation of the pointed Hebrew, so a correct "shabos" could not pass.
+
+What changed:
+- **Input:** Ashkenazi rows now send the Ashkenazi reading written in pointed Hebrew letters (`tools/audio/ashkenazi_script.mjs`): kamatz as holam, tav without dagesh as samekh, tzere with a yod, `-ָיו` as `-ֹב`. These are the transliteration engine's own three Ashkenazi rules; the Israeli reading of the new text equals the engine's Ashkenazi reading on 442 of 444 gap rows (test: `tests/audio.ashkenazi-script.test.js`).
+- **Judge:** the sound reviewer compares with the sounds of that Hebrew-letter reading, so it checks o for kamatz and s for tav. The two word reviewers (speech-to-text trained on Israeli Hebrew) may match a heard word to either spelling, so they still catch a wrong or garbled word. Pass rule unchanged: at most one reviewer hears a word off.
+- **Sephardi is not in this method.** The app's Sephardi reading is letter for letter the Israeli one (`src/pronunciation/forTradition.js`), so the Israeli voice reading it in Hebrew letters would only make the Israeli clip again.
+
+| run 3 (Ashkenazi, Hebrew letters) | rows | kept | held | first method, same kinds |
+|---|---:|---:|---:|---|
+| words | 179 | 166 | 13 | 208 of 387 kept |
+| lines | 40 | 27 | 13 | 2 of 42 |
+| prayers | 34 | 6 | 28 | 0 of 34 |
+| syllables | 97 | 48 | 49 | 123 of 220 |
+| letters | 78 | 35 | 43 | 36 of 110 |
+| vowels | 14 | 1 | 13 | 16 of 30 |
+| **all** | **442** | **283** | **159** | |
+
+Coverage after run 3: Ashkenazi 7,240/8,245 (87.8%, was 84.1%); kind letter 70.5%, syllable 79.4%, prayer 77.1%, line 95.5%, vowel 66.7%. Logs: `docs/audio/fill/accent-r3-*.jsonl`. Merged with `tools/audio/accent_merge.mjs --run 3`.
+
+Short items: in 96 of the 159 held clips the sound reviewer passed the clip and only the two word reviewers failed it, mostly on single letters and syllables (Google heard "gimel" as "gmail" and returned nothing for most syllables). A review-only run of the same three reviewers on the Israeli letter, vowel and syllable clips already in the app measures how often the word reviewers fail short clips in general.

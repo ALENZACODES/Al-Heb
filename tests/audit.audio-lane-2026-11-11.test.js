@@ -145,9 +145,18 @@ test('C-01/C-05: an accent clip made for a row that played the Israeli clip ship
   const logs = readdirSync(dir).filter((f) => /^accent-r\d+-\d+\.jsonl$/.test(f));
   assert.ok(logs.length > 0);
   const byPath = new Map(all.map((e) => [e.path, e]));
+  // A clip a later run passed (a retake, or the Hebrew-letter method of 12 Nov) ships even if an earlier run held it: per path, a pass in
+  // any run wins; a path that no run passed must not ship.
+  const latest = new Map();
+  const runOf = (f) => +/^accent-r(\d+)-/.exec(f)[1];
+  for (const f of logs.sort((a, b) => runOf(a) - runOf(b))) for (const l of readFileSync(join(dir, f), 'utf8').split('\n').filter(Boolean)) {
+    const r = JSON.parse(l);
+    if (!r.tradition || r.tradition === 'israeli') continue;   // review-only calibration logs judge Israeli clips and admit nothing
+    if (!(latest.get(r.path)?.decision === 'pass')) latest.set(r.path, r);
+  }
   let passed = 0, held = 0;
-  for (const f of logs) for (const l of readFileSync(join(dir, f), 'utf8').split('\n').filter(Boolean)) {
-    const r = JSON.parse(l); const e = byPath.get(r.path);
+  for (const r of latest.values()) {
+    const e = byPath.get(r.path);
     assert.ok(e, r.path);
     if (r.decision === 'pass') {
       passed++; assert.ok(r.reviewersFailing <= 1);

@@ -1,0 +1,31 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-respelled-israeli-voice",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "ashkenazi",
+ "inputText": "וַיְדַבֵּר מֹשֶׁה אֶת־מֹעֲדֵי אֲדֹנָי אֶל־בְּנֵי יִשְׂרָאֵל׃",
+ "inputSha256": "2d8324c3fb2e98c6415ba9823bf169444c773f07888d99c7434aba7065e6300a",
+ "ingestedAt": "2026-11-12T14:08:55.318Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice: the Israeli man voice reading the ashkenazi reading written in pointed Hebrew letters (tools/audio/ashkenazi_script.mjs). Not a human recording; no human has listened to it. Licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel.",
+ "renderedAt": "2026-11-12T14:08:55.318Z",
+ "redistributionCleared": false,
+ "spokenText": "וַיְדַבֵּיר מֹשֶׁה אֶס מֹעֲדֵי אֲדֹנֹי אֶל בְּנֵי יִשְׂרֹאֵיל",
+ "normalized": true,
+ "provider": "google",
+ "madeFrom": "hebrew-script",
+ "voiceName": "he-IL-Wavenet-B",
+ "languageCode": "he-IL",
+ "hebrew": "וַיְדַבֵּר מֹשֶׁה אֶת־מֹעֲדֵי אֲדֹנָי אֶל־בְּנֵי יִשְׂרָאֵל׃",
+ "israeliRef": "audio/m/israeli/line/kiddush-festival-day-verses-l2.mp3",
+ "tempo": {
+  "applied": false,
+  "factor": 1,
+  "cap": 1.26,
+  "before": 3.5280045351473923,
+  "after": 3.5280045351473923,
+  "israeliSec": 3.888004535147392,
+  "israeliRef": "audio/m/israeli/line/kiddush-festival-day-verses-l2.mp3"
+ }
+}

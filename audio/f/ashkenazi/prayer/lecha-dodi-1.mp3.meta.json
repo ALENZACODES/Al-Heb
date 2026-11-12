@@ -1,0 +1,32 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-respelled-israeli-voice",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "ashkenazi",
+ "inputText": "לְכָה דוֹדִי לִקְרַאת כַּלָּה פְּנֵי שַׁבָּת נְקַבְּלָה׃ שָׁמוֹר וְזָכוֹר בְּדִבּוּר אֶחָד הִשְׁמִיעָנוּ אֵל הַמְיוּחָד אֲדֹנָי אֶחָד וּשְׁמוֹ אֶחָד לְשֵׁם וּלְתִפְאֶרֶת וְלִתְהִלָּה׃",
+ "inputSha256": "e7ee6cff2cde6c8570e58da8f0c7fd31d3ce818402cb8dc1974a640051001dd6",
+ "ingestedAt": "2026-11-12T14:41:49.432Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice: the Israeli woman voice reading the ashkenazi reading written in pointed Hebrew letters (tools/audio/ashkenazi_script.mjs). Not a human recording; no human has listened to it. Licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel.",
+ "renderedAt": "2026-11-12T14:41:49.432Z",
+ "redistributionCleared": false,
+ "spokenText": "לְכֹה דוֹדִי לִקְרַאס כַּלֹּה פְּנֵי שַׁבֹּס נְקַבְּלֹה שֹׁמוֹר וְזֹכוֹר בְּדִבּוּר אֶחֹד הִשְׁמִיעֹנוּ אֵיל הַמְיוּחֹד אֲדֹנֹי אֶחֹד וּשְׁמוֹ אֶחֹד לְשֵׁים וּלְסִפְאֶרֶס וְלִסְהִלֹּה",
+ "normalized": true,
+ "provider": "google",
+ "madeFrom": "hebrew-script",
+ "speakingRate": 0.85,
+ "voiceName": "he-IL-Wavenet-A",
+ "languageCode": "he-IL",
+ "hebrew": "לְכָה דוֹדִי לִקְרַאת כַּלָּה פְּנֵי שַׁבָּת נְקַבְּלָה׃ שָׁמוֹר וְזָכוֹר בְּדִבּוּר אֶחָד הִשְׁמִיעָנוּ אֵל הַמְיוּחָד אֲדֹנָי אֶחָד וּשְׁמוֹ אֶחָד לְשֵׁם וּלְתִפְאֶרֶת וְלִתְהִלָּה׃",
+ "israeliRef": "audio/f/israeli/prayer/lecha-dodi-1.mp3",
+ "tempo": {
+  "applied": false,
+  "factor": 1,
+  "cap": 1.26,
+  "before": 11.424013605442177,
+  "after": 11.424013605442177,
+  "israeliSec": 12.168004535147393,
+  "israeliRef": "audio/f/israeli/prayer/lecha-dodi-1.mp3"
+ }
+}

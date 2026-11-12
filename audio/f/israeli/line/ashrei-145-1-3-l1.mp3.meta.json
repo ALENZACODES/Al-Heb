@@ -1,0 +1,35 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Chirp3-HD-Leda",
+ "tradition": "israeli",
+ "inputText": "תְּהִלָּה לְדָוִד אֲרוֹמִמְךָ אֱלוֹהַי הַמֶּלֶךְ וַאֲבָרֲכָה שִׁמְךָ לְעוֹלָם וָעֶד׃",
+ "inputSha256": "8324076f0ecad3413410f8ffb959e2988d45347489fca97613775625996ae15b",
+ "ingestedAt": "2026-11-12T02:12:59.156Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-12T02:12:59.156Z",
+ "redistributionCleared": false,
+ "spokenText": "תְּהִלָּה לְדָוִד אֲרוֹמִמְךָ אֱלוֹהַי הַמֶּלֶךְ וַאֲבָרֲכָה שִׁמְךָ לְעוֹלָם וָעֶד",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [
+   "לְדָוִד",
+   "שִׁמְךָ"
+  ],
+  "wordIssues": [],
+  "google": {
+   "heard": "תהילה לדוד ארוממך אלוהי המלך ואברכה שמך לעולם ועד",
+   "acc": 1.0,
+   "issues": []
+  },
+  "reviewersFailing": 1
+ },
+ "replaced": {
+  "voiceId": "he-IL-Wavenet-A",
+  "engine": "stitched-from-word-clips",
+  "renderedAt": null
+ }
+}

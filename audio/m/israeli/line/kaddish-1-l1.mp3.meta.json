@@ -1,0 +1,32 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Chirp3-HD-Fenrir",
+ "tradition": "israeli",
+ "inputText": "יִתְגַּדַּל וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא אָמֵן",
+ "inputSha256": "94e8081bfc90a61f7a5b0e8f31991ace1856becb68e89715fd9df00ddd44065b",
+ "ingestedAt": "2026-11-12T02:28:00.412Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-12T02:28:00.412Z",
+ "redistributionCleared": false,
+ "spokenText": "יִתְגַּדַּל וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא אָמֵן",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [],
+  "google": {
+   "heard": "יתגדל ויתקדש שמי רבא ואמן",
+   "acc": 1.0,
+   "issues": []
+  },
+  "reviewersFailing": 0
+ },
+ "replaced": {
+  "voiceId": "he-IL-Wavenet-B",
+  "engine": "stitched-from-word-clips",
+  "renderedAt": null
+ }
+}

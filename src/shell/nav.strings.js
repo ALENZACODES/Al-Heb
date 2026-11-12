@@ -22,7 +22,7 @@ export const NAV_EN = {
   'nav.games': 'Games',
   'nav.route.awards': 'Awards and certificate',
   'nav.route.move': 'Move to another device', 'nav.route.certificate': 'Certificate of lessons completed', // lane 4 (12 Nov)
-  'nav.route.whats-new': "What's New", 'nav.route.my-data': 'My Data', 'nav.route.cram': 'Cram', 'nav.route.mastery': 'Mastery Map', 'nav.route.my-week': 'My Week', 'nav.route.lesson-badges': 'Lesson Badges', // lane platform (12 Nov)
+  'nav.route.whats-new': "What's New", 'nav.route.my-data': 'My Data', 'nav.route.cram': 'Cram', 'nav.route.mastery': 'Mastery Map', 'nav.route.my-week': 'My Week', 'nav.route.lesson-badges': 'Lesson Badges', 'nav.route.shortcuts': 'Keyboard Shortcuts', // lane platform (12 Nov)
   'nav.route.songs': 'Songs',
   'nav.route.camera': 'Camera Translator',
   // games hub and every game

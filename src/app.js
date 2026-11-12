@@ -18,7 +18,7 @@ import { h, heSpan, unavailableCard } from './shell/ui.js';
 import { holdMain, rememberPage, watchFallbackHeading } from './shell/loading-contract.js';
 import { loadImageResolver, img as imgEl } from './img/resolve.js';
 import { updateCompanions } from './shell/companions.js';
-import { applyMotor, MOTOR_KEYS } from './shell/motor.js';
+import { applyMotor, MOTOR_KEYS, shortcutsOn } from './shell/motor.js';
 import { gameMusic } from './audio/music.js';
 import { mountGameMusic, syncGameMusic } from './audio/music-bar.js';
 import { mountMediaPrompt } from './audio/media-prompt.js';
@@ -358,6 +358,8 @@ async function show(match, ctxBase, { quiet = false } = {}) {
 async function boot() {
   try { watchTitleCase(document.body); } catch { /* casing is cosmetic */ }
   try { watchOnline(window); } catch { /* the offline line is a convenience */ } // J1 (lane platform)
+  // J6 (lane platform): "?" opens the keyboard shortcuts page; never in a field, with a modifier, or on pages that use every key themselves
+  document.addEventListener('keydown', (e) => { if (e.key === '?' && !e.ctrlKey && !e.metaKey && !e.altKey && !/^(INPUT|TEXTAREA|SELECT)$/.test(e.target?.tagName || '') && !e.target?.isContentEditable && !['letter', 'letters', 'typing', 'firstwin', 'talk'].includes(document.body.dataset.route) && shortcutsOn({ settings })) { e.preventDefault(); location.hash = '#/shortcuts'; } });
   // Rimon's greeting (the companion module is about 101 KB with its imports) waits until after first paint
   // and the first-load JS window, like the other after-paint work, so Home stays under the 532 KB budget.
   shownFirst.then(() => afterPaint(() => {

@@ -7,4 +7,5 @@ export const PLATFORM_ROUTES = [
   ['mastery', '/mastery', 'mastery.view.js', 'Mastery Map', 'progress'],
   ['my-week', '/my-week', 'week.view.js', 'My Week', 'progress'],
   ['lesson-badges', '/lesson-badges', 'badges.view.js', 'Lesson Badges', 'progress'],
+  ['shortcuts', '/shortcuts', 'shortcuts.view.js', 'Keyboard Shortcuts', 'more'],
 ].map(([name, pattern, file, title, section]) => ({ name, pattern, module: `../platform/${file}`, title, owner: 'platform', optional: true, quick: `nav.route.${name}`, section }));

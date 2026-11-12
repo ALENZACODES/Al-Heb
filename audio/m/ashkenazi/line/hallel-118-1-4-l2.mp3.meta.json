@@ -1,0 +1,32 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-respelled-israeli-voice",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "ashkenazi",
+ "inputText": "יֹאמַר־נָא יִשְׂרָאֵל כִּי לְעוֹלָם חַסְדּוֹ׃",
+ "inputSha256": "db24049277dc003527a87ef5046a2c6256365e1d367a9c27cb5b27dca7d65c49",
+ "ingestedAt": "2026-11-12T17:12:17.618Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice: the Israeli man voice reading the ashkenazi reading written in pointed Hebrew letters (tools/audio/ashkenazi_script.mjs). Not a human recording; no human has listened to it. Licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel.",
+ "renderedAt": "2026-11-12T17:12:17.618Z",
+ "redistributionCleared": false,
+ "spokenText": "יֹאמַר נֹא יִשְׂרֹאֵיל כִּי לְעוֹלֹם חַסְדּוֹ",
+ "normalized": true,
+ "provider": "google",
+ "madeFrom": "hebrew-script",
+ "speakingRate": 1.1,
+ "voiceName": "he-IL-Wavenet-B",
+ "languageCode": "he-IL",
+ "hebrew": "יֹאמַר־נָא יִשְׂרָאֵל כִּי לְעוֹלָם חַסְדּוֹ׃",
+ "israeliRef": "audio/m/israeli/line/hallel-118-1-4-l2.mp3",
+ "tempo": {
+  "applied": false,
+  "factor": 1,
+  "cap": 1.26,
+  "before": 2.424013605442177,
+  "after": 2.424013605442177,
+  "israeliSec": 2.4,
+  "israeliRef": "audio/m/israeli/line/hallel-118-1-4-l2.mp3"
+ }
+}

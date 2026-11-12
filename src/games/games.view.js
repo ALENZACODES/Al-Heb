@@ -95,7 +95,9 @@ export function mount(root, ctx) {
           h('span', { class: 'show-tile-title' }, title, ' ', heSpan('מִשְׂחָק')),
           h('span', { class: 'show-tile-hook' }, hook),
           id === 'wordfinder' ? h('span', { class: 'wf-try-first' }, 'Start with five words →') : null);
-        if (envId) thumbs.push({ a, id, envId }); // the game's own scene is the card picture (owner, 2026-11-10: pictures over gold icons)
+        if (ENV_WEBP.has(id) || CARD_ONLY.has(id)) {
+          a.prepend(arcadeThumb(id, a)); // Level 3–9 list: use the card picture already made for this game (including the four More-section copies)
+        } else if (envId) thumbs.push({ a, id, envId }); // the game's own scene is the card picture (owner, 2026-11-10: pictures over gold icons)
         else if (ARCADE_GAMES.some((game) => game.id === id)) {
           a.prepend(arcadeThumb(id, a));
         }

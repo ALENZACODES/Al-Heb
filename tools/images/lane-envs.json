@@ -528,6 +528,51 @@
       "CHAR_ari_neutral",
       "rimon-111-dreidel",
       "CHAR_noa_neutral"
+    ],
+    "museumcurator": [
+      "GAME_museumcurator_env"
+    ],
+    "submarinesonar": [
+      "GAME_submarine_sonar_env",
+      "rimon-017-goggles-thumbs-up"
+    ],
+    "prefixblast": [
+      "GAME_prefix_blast_stage",
+      "rimon-019-fist-pump"
+    ],
+    "typewriter": [
+      "GAME_typewriter_env",
+      "rimon-160-phrasebook"
+    ],
+    "trainswitch": [
+      "GAME_trainswitch_env"
+    ],
+    "shuktaxi": [
+      "GAME_shuk_taxi_env",
+      "rimon-195-map-pin"
+    ],
+    "rhymelab": [
+      "GAME_rhymelab_env",
+      "rimon-094-singing"
+    ],
+    "lasermaze": [
+      "GAME_laser_maze_env",
+      "rimon-010-magnifying-glass"
+    ],
+    "shabbatrush": [
+      "GAME_shabbat_rush_env",
+      "rimon-088-carrying-candlesticks"
+    ],
+    "weatherstudio": [
+      "GAME_weatherstudio_env",
+      "rimon-080-sunrise-stretch"
+    ],
+    "rentalagent": [
+      "GAME_rentalagent_env",
+      "rimon-006-plan-map"
+    ],
+    "ciphergrid": [
+      "GAME_ciphergrid_env"
     ]
   },
   "cardOnly": {

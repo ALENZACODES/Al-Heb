@@ -1,0 +1,31 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-respelled-israeli-voice",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "ashkenazi",
+ "inputText": "שְׁמִינִי עֲצֶרֶת הַחַג הַזֶּה זְמַן שִׂמְחָתֵנוּ׃",
+ "inputSha256": "54028efcdd3a56478f770c15d7c336cc40707fd10b10ecd74440a0d7eb0036f1",
+ "ingestedAt": "2026-11-12T14:08:12.572Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice: the Israeli man voice reading the ashkenazi reading written in pointed Hebrew letters (tools/audio/ashkenazi_script.mjs). Not a human recording; no human has listened to it. Licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel.",
+ "renderedAt": "2026-11-12T14:08:12.572Z",
+ "redistributionCleared": false,
+ "spokenText": "שְׁמִינִי עֲצֶרֶס הַחַג הַזֶּה זְמַן שִׂמְחֹסֵינוּ",
+ "normalized": true,
+ "provider": "google",
+ "madeFrom": "hebrew-script",
+ "voiceName": "he-IL-Wavenet-B",
+ "languageCode": "he-IL",
+ "hebrew": "שְׁמִינִי עֲצֶרֶת הַחַג הַזֶּה זְמַן שִׂמְחָתֵנוּ׃",
+ "israeliRef": "audio/m/israeli/line/kiddush-festival-shemini.mp3",
+ "tempo": {
+  "applied": false,
+  "factor": 1,
+  "cap": 1.26,
+  "before": 2.9760090702947846,
+  "after": 2.9760090702947846,
+  "israeliSec": 3,
+  "israeliRef": "audio/m/israeli/line/kiddush-festival-shemini.mp3"
+ }
+}

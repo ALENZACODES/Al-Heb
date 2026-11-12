@@ -1,0 +1,36 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Chirp3-HD-Kore",
+ "tradition": "israeli",
+ "inputText": "הוֹדוּ לַאֲדֹנָי כִּי־טוֹב כִּי לְעוֹלָם חַסְדּוֹ׃ יֹאמַר־נָא יִשְׂרָאֵל כִּי לְעוֹלָם חַסְדּוֹ׃ יֹאמְרוּ־נָא בֵית־אַהֲרֹן כִּי לְעוֹלָם חַסְדּוֹ׃ יֹאמְרוּ־נָא יִרְאֵי אֲדֹנָי כִּי לְעוֹלָם חַסְדּוֹ׃",
+ "inputSha256": "855b3a54fbd469005ade9a6dd6a871fbca3099ad56ae4bfc21d3ca90f48574cc",
+ "ingestedAt": "2026-11-12T17:23:09.960Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-12T17:23:09.960Z",
+ "redistributionCleared": false,
+ "spokenText": "הוֹדוּ לַאֲדֹנָי כִּי טוֹב כִּי לְעוֹלָם חַסְדּוֹ יֹאמַר נָא יִשְׂרָאֵל כִּי לְעוֹלָם חַסְדּוֹ יֹאמְרוּ נָא בֵית אַהֲרֹן כִּי לְעוֹלָם חַסְדּוֹ יֹאמְרוּ נָא יִרְאֵי אֲדֹנָי כִּי לְעוֹלָם חַסְדּוֹ",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "speakingRate": 0.85,
+ "review": {
+  "phonemeWeak": [
+   "נָא",
+   "נָא",
+   "נָא"
+  ],
+  "wordIssues": [
+   "יֹאמַר נָא יִשְׂרָאֵל כִּי"
+  ],
+  "google": {
+   "heard": "הודו לאדוני כי טוב כי לעולם חסדו יומרני ישראל כי לעולם חסדו יאמרו נא בית אהרון כי לעולם חסדו יאמרו מאיר אדוני כי לעולם חסדו",
+   "acc": 0.889,
+   "issues": [
+    "יֹאמְרוּ נָא יִרְאֵי"
+   ]
+  },
+  "reviewersFailing": 3
+ }
+}

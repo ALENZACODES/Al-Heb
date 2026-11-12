@@ -13,6 +13,27 @@ sys.path.insert(0, os.path.join(ROOT, 'tools', 'torah', 'audio'))
 sys.path.insert(0, os.path.join(ROOT, 'tools', 'audio', 'asr-check')); sys.path.insert(0, os.path.join(ROOT, 'tools', 'audio'))
 
 
+def judge_script(F, path, script, original, model, stt):
+    """Judge a clip made from the Ashkenazi reading in Hebrew letters (tools/audio/ashkenazi_script.mjs). The sound reviewer compares
+    what it hears with the sounds of that reading (Phonikud on the Hebrew-letter text: o for kamatz, s for tav without dagesh, ei for
+    tzere), so it is the reviewer that checks the Ashkenazi sounds. The two word reviewers are speech-to-text models trained on
+    Israeli Hebrew: they write the word they recognise, often in its Israeli spelling, so each heard word may match either the
+    Ashkenazi spelling or the original word; whichever comparison finds fewer faults counts. They still catch a wrong or garbled word."""
+    import phoneme_review as P, scan_lines as S
+    ratio, ws = P.review(script, P.hear(path, model, max_tokens=300))
+    heard = S.transcribe(path)
+    iss = min((S.compare(t, heard)[1] for t in (script, original)), key=len)
+    j = {'ratio': ratio, 'weak': [w['word'] for w in ws if w['match'] < 0.6], 'issues': [i['say'] for i in iss], 'judgedBy': 'ashkenazi-script'}
+    if stt:
+        g = F.google(path, script, stt)
+        if 'heard' in g:
+            alt = S.compare(original, g['heard'])[1]
+            if len(alt) < len(g['issues']):
+                g['issues'] = [i['say'] for i in alt]; g['matchedOriginal'] = True
+        j['google'] = g
+    return j
+
+
 def main():
     ap = argparse.ArgumentParser()
     for x in ('--list', '--model', '--log'):
@@ -34,7 +55,11 @@ def main():
             rec = {'path': r['path'], 'decision': 'not-rendered', 'held': True}
         else:
             said = F.spoken(r['text'])
-            j = F.judge(clip, said, a.model, stt)
+            if r.get('scriptText'):
+                said = F.spoken(r['scriptText'])
+                j = judge_script(F, clip, said, F.spoken(r['text']), a.model, stt)
+            else:
+                j = F.judge(clip, said, a.model, stt)
             f = FC.fails(j)
             rec = {'path': r['path'], 'tradition': r['tradition'], 'spokenText': r['spokenText'], 'judgedAgainst': said, 'review': j,
                    'reviewersFailing': f, 'decision': 'pass' if f <= 1 else 'held', 'held': f >= 2}

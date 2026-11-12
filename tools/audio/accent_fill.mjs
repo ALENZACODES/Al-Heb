@@ -19,23 +19,30 @@ import { renderBatch, estimate, warnedRows } from './render_tts.mjs';
 import * as google from './tts/google.mjs';
 import { PLAYS_ISRAELI } from '../../src/audio/player.js';
 import { heldReason } from './fill_list.mjs';
+import { ashkenaziScript } from './ashkenazi_script.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '..');
 const STT_PER_REQUEST = 0.006; // Google Speech-to-Text v1, one 15-second step per clip (longer clips cost more)
 
 function arg(name, def) { const i = process.argv.indexOf(name); return i > 0 ? process.argv[i + 1] : def; }
 
-export function plan({ kinds, traditions, root = ROOT, out = 'tools/audio/accent-list.json' }) {
+// script 'hebrew' (12 Nov, second method): Ashkenazi rows send the Ashkenazi reading written in pointed Hebrew letters instead of the
+// English-letter respelling (tools/audio/ashkenazi_script.mjs), and carry it as scriptText for the review to judge against. Sephardi rows
+// are left out in this mode: the app's own Sephardi reading is letter for letter the Israeli one (src/pronunciation/forTradition.js),
+// so the Israeli voice reading the Sephardi reading in Hebrew letters would only make the Israeli clip again.
+export function plan({ kinds, traditions, root = ROOT, out = 'tools/audio/accent-list.json', script = 'latin' }) {
+  if (script === 'hebrew') traditions = traditions.filter((t) => t === 'ashkenazi');
   const all = loadManifestFull(root);
   const rows = all.filter((e) => traditions.includes(e.tradition) && kinds.includes(e.kind) && e.status === PLAYS_ISRAELI && !e.aliasOf
     && !heldReason(e) && fs.existsSync(path.join(root, israeliRef(e.path))))   // clergy-list ids and uncovered divine-name forms stay held
-    .map((e) => ({ path: e.path, voice: e.voice, tradition: e.tradition, kind: e.kind, id: e.id, text: e.text, spokenText: respellFor(e.text, e.tradition), israeliRef: israeliRef(e.path) }));
+    .map((e) => ({ path: e.path, voice: e.voice, tradition: e.tradition, kind: e.kind, id: e.id, text: e.text, israeliRef: israeliRef(e.path),
+      ...(script === 'hebrew' ? { spokenText: ashkenaziScript(e.text), scriptText: ashkenaziScript(e.text), madeFrom: 'hebrew-script' } : { spokenText: respellFor(e.text, e.tradition) }) }));
   const warned = new Set(warnedRows(rows, google).map((w) => w.row.path));
   const ok = rows.filter((r) => !warned.has(r.path));
   const est = estimate(ok, google);
   const stt = ok.reduce((n, r) => n + Math.max(1, Math.ceil([...r.text].length / 12 / 15)), 0) * STT_PER_REQUEST;
   const summary = { rows: ok.length, skippedWithWarnings: warned.size, chars: est.chars, ttsUsd: +est.usd.toFixed(2), sttUsd: +stt.toFixed(2), totalUsd: +(est.usd + stt).toFixed(2) };
-  fs.writeFileSync(path.join(root, out), JSON.stringify({ schema: 'alef-accent-list/1', kinds, traditions, estimate: summary, rows: ok, warned: [...warned] }, null, 1) + '\n');
+  fs.writeFileSync(path.join(root, out), JSON.stringify({ schema: 'alef-accent-list/1', kinds, traditions, script, estimate: summary, rows: ok, warned: [...warned] }, null, 1) + '\n');
   console.log(out, JSON.stringify(summary));
   return summary;
 }
@@ -48,6 +55,6 @@ export async function shard({ list, n, of }) {
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
-  if (process.argv.includes('--plan')) plan({ kinds: arg('--kinds', 'letter,vowel,syllable,prayer,line').split(','), traditions: arg('--traditions', 'sephardi,ashkenazi').split(','), out: arg('--out', 'tools/audio/accent-list.json') });
+  if (process.argv.includes('--plan')) plan({ kinds: arg('--kinds', 'letter,vowel,syllable,prayer,line').split(','), traditions: arg('--traditions', 'sephardi,ashkenazi').split(','), script: arg('--script', 'latin'), out: arg('--out', 'tools/audio/accent-list.json') });
   else await shard({ list: arg('--list', 'tools/audio/accent-list.json'), n: +arg('--shard', '0'), of: +arg('--of', '1') });
 }

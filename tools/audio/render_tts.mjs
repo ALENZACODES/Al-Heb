@@ -157,11 +157,11 @@ export async function renderBatch({ provider, rows, root = ROOT, fetchImpl = fet
       meta = {
         ...baseSidecar({ status: ACCENT_STATUS, source: ACCENT_SOURCES.israeliVoice }),
         provider: provider.id,
-        tradition: r.tradition, madeFrom: 'respelling', ...(voiceName ? { voiceName } : {}), languageCode: 'he-IL',
+        tradition: r.tradition, madeFrom: r.madeFrom || 'respelling', ...(voiceName ? { voiceName } : {}), languageCode: 'he-IL',
         spokenText: buf.spokenText || r.spokenText, hebrew: r.text, israeliRef: r.israeliRef || null,
         tempo: tempo || { applied: false, factor: 1, cap, before: null, after: null, israeliSec: null, israeliRef: r.israeliRef || null, note: 'no Israeli counterpart on disk, so no cap was applied' },
         ...(normalize ? { normalized } : {}),
-        note: `Synthetic voice: the Israeli ${r.voice === 'm' ? 'man' : 'woman'} voice reading the ${r.tradition} English-letter respelling, not pointed Hebrew. Not a human recording; no human has listened to it. Licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel.`,
+        note: `Synthetic voice: the Israeli ${r.voice === 'm' ? 'man' : 'woman'} voice reading the ${r.tradition} ${r.madeFrom === 'hebrew-script' ? 'reading written in pointed Hebrew letters (tools/audio/ashkenazi_script.mjs)' : 'English-letter respelling, not pointed Hebrew'}. Not a human recording; no human has listened to it. Licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel.`,
       };
     } else {
       meta = baseSidecar({});

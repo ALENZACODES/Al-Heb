@@ -213,7 +213,10 @@ export const ROOTS = Object.freeze({ ...TOTALS.roots });
  */
 export function rootsCoverage(r = ROOTS) {
   return { verbs: nat(r.verbs), verbsWithRoot: nat(r.withRoot), verbsWithBinyan: nat(r.withPattern), explorer: nat(r.explorer), explorerWithRoot: nat(r.explorerWithRoot),
-    familiesOf2Plus: nat(r.familiesOf2Plus), familiesOf3Plus: nat(r.familiesOf3Plus), familiesRuleChecked: nat(r.familiesRuleChecked), familiesVerified: nat(r.familiesVerified) };
+    familiesOf2Plus: nat(r.familiesOf2Plus), familiesOf3Plus: nat(r.familiesOf3Plus), familiesRuleChecked: nat(r.familiesRuleChecked), familiesVerified: nat(r.familiesVerified),
+    // lane 3 (12 Nov, #5/#15): verbs per pattern (word list; explorer share) and the Dictionary entries linked to family letters
+    byBinyan: Object.fromEntries(Object.entries(obj(r.byBinyan)).map(([b, v]) => [b, { verbs: nat(v?.verbs), explorer: nat(v?.explorer) }])),
+    dictLinks: { withLetters: nat(r.dictLinks?.withLetters), inFamily: nat(r.dictLinks?.inFamily), alone: nat(r.dictLinks?.alone), verbs: nat(r.dictLinks?.verbs) } };
 }
 
 // ---------- activity points (the Daily page calendar and its week line; not XP) ----------

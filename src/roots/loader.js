@@ -18,3 +18,5 @@ function loadJson(rel) {
 }
 export const loadFamilies = () => loadJson('data/roots/families.json');
 export const loadVerbs = () => loadJson('data/roots/verbs.json');
+// lane 3 (12 Nov, #15a): Dictionary entry -> family letters links (tools/roots/build.mjs dictLinks)
+export const loadDictLinks = () => loadJson('data/roots/dict-links.json');

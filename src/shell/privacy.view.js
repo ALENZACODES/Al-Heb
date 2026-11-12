@@ -265,6 +265,8 @@ export const STORE_KEYS = [
   ['trope.v1', 'Chanting-mark trainer results', 'src/trope/trope.view.js'],
   ['nikkudfade.v1', 'Vowel-fade practice progress (which words you saw pointed, and which you revealed)', 'src/nikkudfade/model.js'],
   ['roots.v1', 'Word-roots drill counts', 'src/roots/model.js'],
+  // lane 3 (12 Nov, #15d): the Dictionary review option
+  ['vocab.reviewGroup', 'Dictionary review option: whether words that share family letters are reviewed together (on or off)', 'src/vocab/vocab.view.js'],
   ['gender.v1', 'Gender drill: checked-question counts (your gender choice itself is kept in the settings row above; older copies of it in this row, in Gender pair practice and in Sound-like-a-local preferences are read once and then no longer used)', 'src/genderdrill/model.js'],
   ['recordcompare.v1', 'Record-and-compare: counts of your own answers (no recordings are stored)', 'src/recordcompare/model.js'],
   ['grammar.v1', 'Grammar notes progress', 'src/grammar/grammar.view.js'],

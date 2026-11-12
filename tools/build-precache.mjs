@@ -88,6 +88,9 @@ const ON_DEMAND_FILES = new Set([
   // The Roots page model (11 KB): imported only by roots.view.js above, so it loads with the page (moved on 11 November when the
   // Sacred Listen Hebrew titles and the shared Roots and activity-point counts landed; keeps first install under 3.95 MiB).
   'src/roots/model.js',
+  // lane 3 (12 Nov, points plan #15): the seven-patterns pages and the Dictionary's family links, loaded with the Roots page or when
+  // the Dictionary first shows a family line (data/roots/dict-links.json is on demand through the data/roots/ prefix).
+  'src/roots/binyanim.js', 'src/roots/links.js',
   // Non-v0 data (the integration test's must-install list is the v0 offline contract; these are fetched on first use, then runtime-cached).
   'data/audio/english-glosses.json',
   // Book 63's clip record (37 KB): no screen reads it (the reader plays the page files directly), so it stays out of the first install.

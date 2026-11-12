@@ -36,6 +36,8 @@ export const SENSE_NOTE = 'A greeting search such as hi or hello can lead with a
 const PAGE = 40;          // cards rendered per page
 const ADD_LIMIT = 100;    // words added to reviews per click
 const SESSION = 20;       // cards per review session
+/** Store key for the review option "group words that share family letters" (lane 3, 12 Nov, #15d). */
+export const GROUP_KEY = 'vocab.reviewGroup';
 const RATINGS = [[1, 'Again', 'forgot it'], [2, 'Hard', 'got it with effort'], [3, 'Good', 'got it'], [4, 'Easy', 'no effort']];
 const hasTag = (e, t) => Array.isArray(e.tags) && e.tags.includes(t);
 /** Tag filter options: value -> label. 'function' is the closed-class group. */
@@ -221,6 +223,22 @@ export function mount(root, ctx) {
     return el('p', { class: 'vc-meta' }, `Say it (${TRAD[tradition()]}): `, tl ? el('i', {}, tl) : '(not available: this word has no vowel points yet)');
   };
   const known = new Map(); // id -> entry, for every tier loaded so far (cross-references)
+  // ---- lane 3 (12 Nov, #15a/#15d): family letters and verb forms for a word (data/roots/dict-links.json, loaded on demand) ----
+  let links = ctx?.dictLinks || null, linksMod = null, linksPromise = null;
+  const ensureLinks = () => {
+    if (links && linksMod) return Promise.resolve(links);
+    if (!linksPromise) linksPromise = import('../roots/links.js').then(async (m) => { linksMod = m; if (!links) links = await m.loadLinks(); else if (!(links instanceof Map)) links = m.indexLinks(links); return links; }).catch(() => { linksPromise = null; return null; });
+    return linksPromise;
+  };
+  /** "Family letters X: n words share them. Open the family" and "Verb forms" links, or nothing when the word has neither. */
+  const familyLine = (e) => {
+    const l = linksMod && links instanceof Map ? links.get(e.id) : null;
+    if (!l) return null;
+    return el('p', { class: 'vc-meta vc-family', 'data-letters': l.letters || '' }, ...(l.letters ? [...glossNodes(linksMod.linkText(l)), ' '] : []),
+      linksMod.hasFamily(l) ? el('a', { href: linksMod.familyHref(l.letters), 'aria-label': `Open the word family for the letters ${l.letters}` }, 'Open the family') : null,
+      linksMod.hasFamily(l) && l.verb ? ' · ' : null,
+      l.verb ? el('a', { href: linksMod.verbHref(l.verb), 'aria-label': `Verb forms for ${e.gloss}` }, 'Verb forms') : null);
+  };
   /** Wrap runs of Hebrew letters (with points) inside an English string in lang=he spans. */
   const HE_RUN = /[\u0590-\u05FF\uFB1D-\uFB4F]+(?:[\s\u05BE\u05F3\u05F4'\"-]+[\u0590-\u05FF\uFB1D-\uFB4F]+)*/g;
   const glossNodes = (text) => {
@@ -336,7 +354,7 @@ export function mount(root, ctx) {
         heWord(e, 'vc-he'), el('p', { tabindex: '-1', class: 'vc-gloss' }, ...glossNodes(e.gloss)),
         alias ? el('p', { class: 'vc-alias' }, aliasNote(alias)) : null,
         band === BAND.translit ? el('p', { class: 'vc-meta' }, 'Transliteration match. This is not an English gloss.') : null,
-        metaLine(e), ...noteLines(e), translitLine(e),
+        metaLine(e), ...noteLines(e), familyLine(e), translitLine(e),
         el('div', { class: 'row' }, listenButton(e), add));
     };
     const updateAdd = () => {
@@ -398,7 +416,7 @@ export function mount(root, ctx) {
     };
     const reload = async () => {
       const id = ++gen; status.textContent = 'Loading words…'; list.replaceChildren(); moreRow.replaceChildren(); addRow.replaceChildren();
-      try { all = await entriesFor(sel.tier); } catch (err) {
+      try { [all] = await Promise.all([entriesFor(sel.tier), ensureLinks()]); } catch (err) {
         if (!alive || id !== gen) return;
         status.textContent = ''; list.replaceChildren(); addRow.replaceChildren(el('p', { role: 'alert' }, 'Could not load the word list. Check your connection, then try again.'), el('button', { type: 'button', class: 'btn', onclick: reload }, 'Try again')); return;
       }
@@ -427,13 +445,19 @@ export function mount(root, ctx) {
         el('button', { type: 'button', class: 'btn', onclick: () => setMode('browse') }, 'Browse words')));
       return;
     }
-    const queueCards = dueNow().slice(0, SESSION);
+    // lane 3 (12 Nov, #15d): the learner can review due words grouped by family letters (same cards, same count, new order)
+    const grouped = !!(await storeGet(ctx, GROUP_KEY, false));
+    let groupOf = new Map(), dueCards = dueNow();
+    const haveLinks = await ensureLinks(); // also gives each answer its family letters line
+    if (grouped && haveLinks) { const g = linksMod.groupByFamily(dueCards, links, (c) => String(c.id).slice(CARD_PREFIX.length)); dueCards = g.cards; }
+    const queueCards = dueCards.slice(0, SESSION);
+    if (grouped && linksMod) groupOf = linksMod.groupByFamily(queueCards, links, (c) => String(c.id).slice(CARD_PREFIX.length)).groupOf;
     const byTier = {};
     try { for (const t of new Set(queueCards.map((c) => c.tier))) for (const e of await load(t)) { byTier[e.id] = e; known.set(e.id, e); } }
     catch (err) { if (!alive || my !== gen) return; body.replaceChildren(el('p', { role: 'alert' }, 'Could not load the word list. Check your connection, then try again.'), el('button', { type: 'button', class: 'btn', onclick: renderReview }, 'Try again')); return; }
     if (!alive || my !== gen) return;
     const queue = queueCards.map((c) => c.id).filter((id) => byTier[id.slice(CARD_PREFIX.length)]);
-    rv = { queue, pos: 0, revealed: false, stats: { 1: 0, 2: 0, 3: 0, 4: 0 }, byTier, requeued: new Set() };
+    rv = { queue, pos: 0, revealed: false, stats: { 1: 0, 2: 0, 3: 0, 4: 0 }, byTier, requeued: new Set(), grouped, groupOf };
     showCard();
   }
   function summary() {
@@ -450,16 +474,24 @@ export function mount(root, ctx) {
     if (rv.pos >= rv.queue.length) { summary(); return; }
     const id = rv.queue[rv.pos], e = rv.byTier[id.slice(CARD_PREFIX.length)];
     rv.revealed = false; rv.current = e;
+    const grp = rv.groupOf?.get(id);
     const prompt = el('div', { class: 'card vc-card', tabindex: '-1', id: 'vc-q', role: 'group', 'aria-label': `Word ${rv.pos + 1} of ${rv.queue.length}` },
-      el('p', { class: 'vc-meta' }, `Word ${rv.pos + 1} of ${rv.queue.length}. Say what it means, then check.`), heWord(e, 'vc-big'));
+      el('p', { class: 'vc-meta' }, `Word ${rv.pos + 1} of ${rv.queue.length}. Say what it means, then check.`),
+      grp ? el('p', { class: 'vc-meta vc-group-line', 'data-letters': grp.letters }, 'Family letters ', el('span', { lang: 'he', dir: 'rtl' }, grp.letters), `: word ${grp.i} of ${grp.n} due today that share them.`) : null,
+      heWord(e, 'vc-big'));
     const reveal = el('button', { type: 'button', class: 'btn', id: 'vc-show', onclick: () => showAnswer(prompt, reveal) }, 'Show answer');
-    body.replaceChildren(prompt, el('div', { class: 'row' }, reveal));
+    const groupBox = el('input', { id: 'vc-group', type: 'checkbox' });
+    if (rv.grouped) groupBox.setAttribute('checked', '');
+    groupBox.checked = !!rv.grouped;
+    groupBox.addEventListener('change', async () => { await storeSet(ctx, GROUP_KEY, !!groupBox.checked); renderReview(); });
+    body.replaceChildren(prompt, el('div', { class: 'row' }, reveal),
+      rv.pos === 0 ? el('div', { class: 'vc-check' }, el('label', { for: 'vc-group' }, groupBox, ' Group words that share family letters (the same due words, in a new order)')) : null);
     focusNode(prompt);
   }
   function showAnswer(prompt, reveal) {
     const e = rv.current; rv.revealed = true;
     reveal.remove?.();
-    const answer = el('div', { class: 'vc-answer', 'aria-live': 'polite' }, ctx.img?.(el, { kind: 'word', id: e.id, class: 'vc-pic', width: 400 }), el('p', { class: 'vc-gloss', tabindex: '-1', id: 'vc-a' }, ...glossNodes(e.gloss)), metaLine(e), ...noteLines(e), translitLine(e), el('div', { class: 'row' }, listenButton(e)));
+    const answer = el('div', { class: 'vc-answer', 'aria-live': 'polite' }, ctx.img?.(el, { kind: 'word', id: e.id, class: 'vc-pic', width: 400 }), el('p', { class: 'vc-gloss', tabindex: '-1', id: 'vc-a' }, ...glossNodes(e.gloss)), metaLine(e), ...noteLines(e), familyLine(e), translitLine(e), el('div', { class: 'row' }, listenButton(e)));
     const rate = el('div', { class: 'vc-rate', role: 'group', 'aria-label': 'How well did you remember it?' },
       ...RATINGS.map(([r, name, hint]) => el('button', { type: 'button', class: 'btn' + (r === 3 ? '' : ' secondary'), 'data-rating': String(r), 'aria-label': `${name} (${r}): ${hint}`, onclick: () => rate_(r) }, `${name} (${r})`)));
     prompt.append(answer); body.append(rate);

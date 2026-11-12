@@ -97,6 +97,8 @@ export const ON_DEMAND_GROUPS = Object.freeze([
   { id: "od-sync", label: "Move to another device, your certificate and the offline pack lists", test: /^(src\/sync\/|data\/offline\/)/, approxMB: 0.08 }, // lane 4 (12 Nov)
   // lane 6 (12 Nov round 2): Reading Without Vowels, the placement check page, trope families and per-aliyah practice (route code)
   { id: "od-bridge-trope-placement", label: "Reading without vowels, the placement check, trope families and aliyah practice (route code)", test: /^src\/(bridge\/|placement\/(placement\.view|model|loader)\.js$|trope\/(families|practice\.view)\.js$)/, approxMB: 0.07 },
+  // reading lane (12 Nov): Reading Tools (#/readlab), its code and its two word lookups (family letters and patterns; stress)
+  { id: "od-readlab", label: "Reading Tools: code, family-letter and stress word lists", test: /^(src|data)\/readlab\//, approxMB: 0.6 },
 ]);
 /** Group a list of ALEF_ON_DEMAND paths into optional-download entries ({id,label,urls,approxMB}); empty groups are dropped. */
 export function onDemandGroups(onDemand = []) {

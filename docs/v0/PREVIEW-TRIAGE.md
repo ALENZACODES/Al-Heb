@@ -323,5 +323,6 @@ Home shows a backup reminder after three finished lessons (`docs/progress/BACKUP
 | `fleamarket` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
 | `light` | keep | Star of David light: on-screen glow, optional phone flash, and a printable stencil. Preview until a real-phone check. |
 | `bridge` | keep | Reading Without Vowels (lane 6, 12 Nov): the Fade-out ladder's last three stages per text, books, prayer lines, word recognition and the modern texts shelf. Self-graded; preview until a teacher reviews it. |
+| `readlab` | keep | Reading Tools (reading lane, 12 Nov): vowel-mark slider per section and the Fade Challenge, Word Spotlight with syllable taps, family letters and verb-pattern colours by exact spelling, Three Versions, Sh'va Detective, Final Forms and Dagesh, Stress Drill, Reading by Text Type. Self-graded reads; drills checked against the app's data. Preview until a teacher reviews it. |
 | `trope-families` | keep | Trope Families (lane 6, 12 Nov): signs and names from the app's trope table with real-verse examples; no melody audio exists. Names not reviewed. |
 | `trope-aliyah` | keep | Trope Practice by Aliyah (lane 6, 12 Nov): phrase-by-phrase stepping with the existing verse recording; no chant audio exists. Names not reviewed. |

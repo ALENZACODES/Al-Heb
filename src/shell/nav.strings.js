@@ -129,7 +129,7 @@ export const NAV_EN = {
   'nav.route.shabbat': 'Shabbat Companion', // lane 5
   'nav.route.synagogue': 'Synagogue',
   'nav.route.nikkud-fade': 'Vowel marks, fading out',
-  'nav.route.bridge': 'Reading Without Vowels', 'nav.route.trope-families': 'Trope Families', 'nav.route.trope-aliyah': 'Trope Practice by Aliyah', // lane 6
+  'nav.route.bridge': 'Reading Without Vowels', 'nav.route.readlab': 'Reading Tools', 'nav.route.trope-families': 'Trope Families', 'nav.route.trope-aliyah': 'Trope Practice by Aliyah', // lane 6
   'nav.route.roots': 'Roots and verb families',
   'nav.route.gender-drill': 'Gender drill',
   'nav.route.record-compare': 'Record and compare',

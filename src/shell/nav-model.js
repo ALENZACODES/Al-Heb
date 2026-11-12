@@ -52,6 +52,7 @@ SECTION_ROUTES.progress.push('certificate'); SECTION_ROUTES.more.push('move'); /
 // lane 6 (12 Nov round 2): unvocalized bridge (Learn) and trope families / per-aliyah practice (Read)
 SECTION_ROUTES.learn.push('bridge', 'bridge-sec', 'bridge-text');
 SECTION_ROUTES.read.push('trope-families', 'trope-family', 'trope-aliyah');
+SECTION_ROUTES.learn.push('readlab', 'readlab-tool'); // reading lane (12 Nov): Reading Tools
 
 /** Route name -> section id. */
 export const ROUTE_SECTION = Object.fromEntries(Object.entries(SECTION_ROUTES).flatMap(([s, names]) => names.map((n) => [n, s])));
@@ -62,6 +63,7 @@ export const PARENT = {
   classtrackweek: 'classtrack', classtrackmode: 'classtrack', festival: 'festivals', 'rules-page': 'rules', intermediatelesson: 'intermediate', practicalunit: 'practical', practicalpage: 'practical',
   grammartopic: 'grammar', labgame: 'lab', libraryarticle: 'library', text: 'read', torahreadsec: 'torahread', book: 'books', day: 'calendar', synagogue: 'synagogues',
   'bridge-sec': 'bridge', 'bridge-text': 'bridge', 'trope-family': 'trope-families', // lane 6
+  'readlab-tool': 'readlab', // reading lane
 };
 
 /** Hidden from the menu (still searchable): first-run onboarding. */

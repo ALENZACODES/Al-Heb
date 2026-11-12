@@ -53,7 +53,8 @@ export function mount(root, ctx) {
         el('li', {}, el('a', { href: '#/bridge/books' }, 'Little books without vowels'), ': the books you have already read with vowels come first.'),
         el('li', {}, el('a', { href: '#/bridge/lines' }, 'Prayer lines without vowels'), ': the lines from Fade-out recall.'),
         el('li', {}, el('a', { href: '#/bridge/words' }, 'Word recognition'), ': a word without its vowels; the vowelled form is one tap away.'),
-        el('li', {}, el('a', { href: '#/bridge/modern' }, 'Modern texts shelf'), ': signs, menus and short messages, the way Israel shows them.')),
+        el('li', {}, el('a', { href: '#/bridge/modern' }, 'Modern texts shelf'), ': signs, menus and short messages, the way Israel shows them.'),
+        el('li', {}, el('a', { href: '#/readlab/texts' }, 'Three versions'), ': one text with all vowel marks, then some, then none; each version opens when you read the one before it without help.')),
       el('p', { class: 'muted' }, 'Earlier stages: ', el('a', { href: '#/learn?fade=1' }, 'Fade-out recall'), '.'));
   }
 

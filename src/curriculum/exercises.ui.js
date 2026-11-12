@@ -2,7 +2,7 @@ import { signalRimon } from '../shell/rimon-events.js';
 /** DOM pieces of the lesson loop shared by the exercise players: progress bar, summary card, and the quick-check player. */
 import { plain } from "../shell/plain-copy.js";
 import { el, heText, heLabeled } from "./dom.js";
-import { createSession, fmtDuration, pct, feedbackText, closingLine, fireFeedback, buildChoiceQuestions, retryText } from "./exercises.session.js";
+import { createSession, fmtDuration, pct, feedbackText, closingLine, fireFeedback, buildChoiceQuestions, retryText, skipNotice } from "./exercises.session.js";
 import { onKeys } from "./ex-ui.js";
 import { confirmOn } from "../shell/motor.js";
 import { rimonInline } from "../shell/rimon-inline.js";
@@ -92,7 +92,7 @@ export function mountQuiz(host, { questions, ctx, onFinish, now = () => Date.now
   const t0 = now();
   const pb = progressBar("Quick check progress");
   const body = el("div", { class: "alef-quiz" });
-  let off = () => {}, streak = 0, n = 0;
+  let off = () => {}, streak = 0, n = 0, notice = "";
   host.replaceChildren(pb.node, body);
   // C-02: the bar and the counter run on the check's fixed length; repeats of missed questions are counted apart ("1 retry so far").
   const refresh = () => { const p = session.progress(); pb.update(p.share, `${p.position} of ${p.length} done${p.retries ? `, ${retryText(p.retries)}` : ""}`); };
@@ -107,7 +107,8 @@ export function mountQuiz(host, { questions, ctx, onFinish, now = () => Date.now
     const why = el("p", { class: "muted alef-why", id: "alef-why-" + (n + 1) });
     const cont = el("button", { type: "button", class: "btn", "data-act": "next", hidden: "", onclick: () => show() }, session.progress().resolved + 1 >= p.total ? "Finish" : "Continue");
     const undo = el("button", { type: "button", class: "btn secondary", "data-act": "undo", hidden: "", onclick: () => { if (session.undo()) { n--; saveProgress(); show(); } } }, "Undo");
-    const skip = el("button", { type: "button", class: "btn secondary", "data-act": "skip", onclick: () => { if (!answered) { session.skip(); show(); } } }, "Skip");
+    const skip = el("button", { type: "button", class: "btn secondary", "data-act": "skip", onclick: () => { if (!answered) { notice = skipNotice(session.skip()); show(); } } }, "Skip");
+    const skipped = notice ? el("p", { class: "muted alef-skipped", role: "status", "data-skipped-note": "" }, notice) : null; notice = "";
     // Settings > "Ask me to confirm each answer": a tap only marks a choice; "Check answer" submits it. Nothing is graded until then.
     const confirm = confirmOn(ctx); let selected = -1;
     const check = confirm ? el("button", { type: "button", class: "btn", "data-act": "check", disabled: "", onclick: () => { if (selected >= 0) submit(selected); } }, "Check answer") : null;
@@ -141,7 +142,7 @@ export function mountQuiz(host, { questions, ctx, onFinish, now = () => Date.now
         (q.why ? why : status).scrollIntoView?.({ block: "nearest" }); // one call (a second would cancel the smooth scroll): the explanation sits last, so clearing the sticky bar with it keeps the verdict above it in view
     }
     const card = el("section", { class: "card alef-ex-card", "data-ex": q.id, "data-type": q.kind, "aria-labelledby": "alef-q-title" },
-      el("h2", { id: "alef-q-title", tabindex: "-1" }, retry ? `Try again: retry ${p.retriesDone + 1} of ${p.retries}` : `Question ${Math.min(p.position + 1, p.length)} of ${p.length}`),
+      el("h2", { id: "alef-q-title", tabindex: "-1" }, retry ? `Try again: retry ${Math.min(p.retriesDone + p.retriesSkipped + 1, p.retries)} of ${p.retries}` : `Question ${Math.min(p.position + 1, p.length)} of ${p.length}`), skipped,
       p.retries ? el("p", { class: "muted alef-retries", "data-retries": String(p.retries) }, retryText(p.retries) + ". Only first tries count toward the pass mark.") : null,
       el("p", {}, q.prompt), q.promptHe ? el("p", {}, heLabeled(q.promptHe, q.promptLabel, "alef-he alef-big")) : null,
       el("div", { class: "alef-int-options col", role: "group", "aria-label": "Choices" }, ...opts), status, why,

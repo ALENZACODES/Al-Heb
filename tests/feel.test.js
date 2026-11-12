@@ -56,7 +56,7 @@ test("session: a miss comes back once at the end, first attempt is what counts, 
   assert.equal(s.answer(false).requeued, true);            // b missed
   assert.equal(s.current().id, "c"); s.answer(true);
   assert.equal(s.current().id, "b"); assert.ok(s.isRetry());
-  assert.deepEqual(s.progress(), { resolved: 3, total: 4, fraction: 0.75, length: 3, position: 3, retries: 1, retriesDone: 0, retriesLeft: 1, share: 1 }); // C-02: the length stays 3; the retry is counted apart
+  assert.deepEqual(s.progress(), { resolved: 3, total: 4, fraction: 0.75, length: 3, position: 3, retries: 1, retriesDone: 0, retriesSkipped: 0, retriesLeft: 1, share: 1 }); // C-02: the length stays 3; the retry is counted apart
   s.answer(true);                                           // retry right: not counted as a first-attempt hit
   assert.ok(s.done());
   const st = s.stats();
@@ -68,7 +68,7 @@ test("session: skip is penalty-free, comes back once, a second skip drops it ung
   const s = S.createSession([{ id: "a" }, { id: "b" }]);
   s.skip(); assert.equal(s.current().id, "b"); assert.deepEqual(s.firstResults(), {});
   s.answer(true); assert.equal(s.current().id, "a");
-  assert.deepEqual(s.skip(), { dropped: true });
+  assert.deepEqual(s.skip(), { dropped: true, retry: false, again: false });
   assert.ok(s.done()); assert.deepEqual(s.skippedIds(), ["a"]); assert.equal(s.stats().answered, 1); assert.equal(s.stats().accuracy, 1);
   const u = S.createSession([{ id: "a" }, { id: "b" }]);
   u.answer(true); assert.equal(u.progress().resolved, 1);

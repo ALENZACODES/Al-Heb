@@ -50,7 +50,7 @@ export function createSession(items, o = {}) {
   const queue = items.map((it) => ({ it, attempt: 1, skips: 0 }));
   const first = {};          // id -> boolean, first attempt only
   const skipped = new Set(); // ids dropped after a second skip (never answered)
-  let resolved = 0, total = items.length, last = null, retried = 0, retriedRight = 0;
+  let resolved = 0, total = items.length, last = null, retried = 0, retriedRight = 0, retrySkips = 0;
   const length = items.length + (o.carry || []).length; // C-02: the lesson's fixed length (the denominator never moves)
   // carry: answers already given in an earlier visit ({ it, right }). They count as answered; a miss comes back once at the end, as it would have.
   for (const c of o.carry || []) { first[c.it.id] = !!c.right; resolved++; total++; if (!c.right && retry) { queue.push({ it: c.it, attempt: 2, skips: 0 }); total++; } }
@@ -85,12 +85,18 @@ export function createSession(items, o = {}) {
       ({ resolved, total, retried, retriedRight } = last);
       last = null; return true;
     },
-    /** Skip with no penalty: nothing recorded. Back of the queue once; a second skip drops the item (counted as skipped). */
+    /**
+     * Skip with no penalty: nothing recorded. Back of the queue once; a second skip drops the item (counted as skipped).
+     * I5: a retry (the repeat of a first-try miss) is dropped at once: its first answer already counts and its review card is
+     * already marked to come back, so the learner is never held in the retry loop. The result says what happens next:
+     * { dropped, retry, again } where `again` is true when the skipped item is the only one left and so shows again at once.
+     */
     skip() {
       const cur = queue[0]; if (!cur) return null;
       last = null; queue.shift();
-      if (cur.skips >= 1) { skipped.add(cur.it.id); resolved++; return { dropped: true }; }
-      queue.push({ ...cur, skips: cur.skips + 1 }); return { dropped: false };
+      if (cur.attempt > 1) { retrySkips++; resolved++; return { dropped: true, retry: true, again: false }; }
+      if (cur.skips >= 1) { skipped.add(cur.it.id); resolved++; return { dropped: true, retry: false, again: false }; }
+      queue.push({ ...cur, skips: cur.skips + 1 }); return { dropped: false, retry: false, again: queue.length === 1 };
     },
     firstResults: () => ({ ...first }),
     skippedIds: () => [...skipped],
@@ -102,11 +108,11 @@ export function createSession(items, o = {}) {
      */
     progress: () => {
       const position = Object.keys(first).length + skipped.size, retries = total - length;
-      return { resolved, total, fraction: total ? resolved / total : 0, length, position, retries, retriesDone: retried, retriesLeft: Math.max(0, retries - retried), share: length ? Math.min(1, position / length) : 0 };
+      return { resolved, total, fraction: total ? resolved / total : 0, length, position, retries, retriesDone: retried, retriesSkipped: retrySkips, retriesLeft: Math.max(0, retries - retried - retrySkips), share: length ? Math.min(1, position / length) : 0 };
     },
     stats() {
       const ids = Object.keys(first), right = ids.filter((k) => first[k]).length;
-      return { answered: ids.length, right, missed: ids.filter((k) => !first[k]), skipped: [...skipped], retried, retriedRight,
+      return { answered: ids.length, right, missed: ids.filter((k) => !first[k]), skipped: [...skipped], retried, retriedRight, retrySkips,
         accuracy: ids.length ? right / ids.length : null };
     },
   };
@@ -119,6 +125,15 @@ export { PASS_SHARE, passMark, passed, passRuleText, retryText } from "./passmar
 /** "m:ss" for a duration in ms. */
 export function fmtDuration(ms) { const s = Math.max(0, Math.round(ms / 1000)); return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`; }
 export const pct = (x) => (x == null ? "n/a" : `${Math.round(x * 100)}%`);
+
+/** I5: what the learner is told after Skip (the next card shows it), from skip()'s result. */
+export function skipNotice(r) {
+  if (!r) return "";
+  if (r.retry) return "Skipped. Your first answer still counts, and this one comes back in your review.";
+  if (r.dropped) return "Skipped again, so it is left out of this check. It is not counted either way.";
+  if (r.again) return "Skipped. It is the last one left, so here it is again. Skip once more to leave it out.";
+  return "Skipped. It will come back at the end.";
+}
 
 // ------------------------------------------------------------------------------------------------ copy (encouraging, not gushing)
 const OK = ["Correct.", "Right.", "Yes.", "That's it."];

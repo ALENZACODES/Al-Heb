@@ -15,7 +15,7 @@ import { applyOutcomesToCards, wordCardId, wordAudioId } from "./progress.js";
 import { settingVoice, onKeys } from "./ex-ui.js";
 import { audioButton } from "../shell/audio-access.js";
 import * as A from "./intermediate-adapter.js";
-import { sequenceExercises, fairProduceOptions, createSession, feedbackText, fireFeedback } from "./exercises.session.js";
+import { sequenceExercises, fairProduceOptions, createSession, feedbackText, fireFeedback, skipNotice } from "./exercises.session.js";
 import { passed as passedCheck, passMark, passRuleText } from "./passmark.js";
 import { progressBar, summaryNode } from "./exercises.ui.js";
 import { respell } from "../pronunciation/forTradition.js";
@@ -262,7 +262,7 @@ function mountLesson(root, ctx, id) {
     const mine = prog.lessons[lesson.id] || { results: {}, done: null };
     const exs = sequenceExercises(lesson.exercises), corpus = content.corpus;
     const unmet = lesson.prerequisites.filter((p) => !st.completed[p]);
-    let results = { ...mine.results }, session = null, t0 = 0, cardsUpdated = 0, shown = 0;
+    let results = { ...mine.results }, session = null, t0 = 0, cardsUpdated = 0, shown = 0, skipNote = "";
     let started = false, base = 0;
 
     const begin = () => {
@@ -296,7 +296,7 @@ function mountLesson(root, ctx, id) {
     }
 
     /** Stable counts: `first` exercises answered once (never grows), `extra` retries queued so far, `retried` retries done. */
-    const counts = () => { const p = session.progress(), retried = session.stats().retried; return { first: shown + p.resolved - retried, extra: p.total - base, retried }; };
+    const counts = () => { const p = session.progress(), retried = session.stats().retried + p.retriesSkipped; return { first: shown + p.resolved - retried, extra: p.total - base, retried }; }; // a skipped retry counts as handled (I5)
 
     function show() {
       if (!alive) return;
@@ -318,7 +318,8 @@ function mountLesson(root, ctx, id) {
         if (!retry) { delete results[ex.id]; await persist(); }
         show();
       } }, "Undo");
-      const skip = el("button", { type: "button", class: "btn secondary", "data-act": "skip", onclick: () => { if (!answered) { session.skip(); show(); } } }, "Skip");
+      const skip = el("button", { type: "button", class: "btn secondary", "data-act": "skip", onclick: () => { if (!answered) { skipNote = skipNotice(session.skip()); show(); } } }, "Skip");
+      const skippedP = skipNote ? el("p", { class: "muted alef-skipped", role: "status", "data-skipped-note": "" }, skipNote) : null; skipNote = "";
       const finish = async (correct) => {
         if (answered) return; answered = true;
         const r = session.answer(!!correct);
@@ -340,7 +341,7 @@ function mountLesson(root, ctx, id) {
       const where = retry ? `retry ${Math.min(c0.retried + 1, c0.extra)} of ${c0.extra}` : `question ${Math.min(c0.first + 1, exs.length)} of ${exs.length}` + (c0.extra ? `, plus ${c0.extra} to retry` : "");
       const title = el("h2", { id: "alef-int-ex", tabindex: "-1" }, `${retry ? "Try again - " : ""}${TYPE_LABEL[ex.type] || ex.type}: ${where}`);
       const sec = el("section", { class: "card alef-ex-card", "aria-labelledby": "alef-int-ex", "data-type": ex.type, "data-ex": ex.id }, node, status, why, el("div", { class: "row alef-actionbar" }, lead, next, undo, skip));
-      body.replaceChildren(bar.node, title, sec, note,
+      body.replaceChildren(bar.node, title, ...(skippedP ? [skippedP] : []), sec, note,
         el("p", {}, el("a", { href: `#/intermediate/${lesson.id}` , onclick: (e) => { e?.preventDefault?.(); offKeys(); body.replaceChildren(...intro()); } }, "Back to the words")));
       title.focus?.();
       offKeys = onKeys((e) => {

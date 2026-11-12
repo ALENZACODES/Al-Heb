@@ -99,7 +99,7 @@ export function mount(root, ctx) {
         el("ul", {}, items),
         el("h3", {}, "Optional downloads"),
         el("ul", { id: "of-extras" }, optMissing.map(({ g, miss }) => el("li", { "data-extra": g.id }, `${g.label}: ${miss === 0 ? "saved" : `${miss} of ${g.urls.length} not saved, about ${g.approxMB} MB`}`))),
-        el("p", { class: "muted" }, "Ari's and Noa's voice clips are not part of this download. A clip is stored on this device after it plays once while you are online (up to the 600 most recent) and then plays without a connection, so play a lesson once online before using it offline. Speech in your device's own voice is not a recording; it works offline only if your device supports it.")));
+        el("p", { class: "muted" }, "Ari's and Noa's voice clips are not part of this download (Audio Packs below save them on purpose). A clip is stored on this device after it plays once while you are online (up to the 600 most recent) and then plays without a connection, so play a lesson once online before using it offline. Speech in your device's own voice is not a recording; it works offline only if your device supports it.")));
     }
 
     // download
@@ -150,6 +150,9 @@ export function mount(root, ctx) {
   // lane 4: offline packs (src/sync/packs.card.js, on demand)
   const packsHost = el("div", { id: "of-packs" }); wrap.append(packsHost); let offPacks = null;
   import("../sync/packs.card.js").then((m) => { if (alive) offPacks = m.mountPacks(packsHost, ctx, O, env); }).catch(() => { packsHost.textContent = "Offline packs need a connection once."; });
+  // audio lane: Audio Packs (src/audiolab/packs.card.js, on demand): a book's, the prayers' or a lesson set's voice clips, saved on purpose
+  const audioHost = el("div", { id: "of-audio-packs" }); wrap.append(audioHost); let offAudio = null;
+  import("../audiolab/packs.card.js").then((m) => { if (alive) offAudio = m.mountAudioPacks(audioHost, ctx, env); }).catch(() => { audioHost.textContent = "Audio packs need a connection once."; });
   (async () => { render(); await refresh(); if (alive) { render(); focusHeadingIfIdle(h1); } })();
-  return () => { alive = false; ac?.abort(); offUpd?.(); offPacks?.(); };
+  return () => { alive = false; ac?.abort(); offUpd?.(); offPacks?.(); offAudio?.(); };
 }

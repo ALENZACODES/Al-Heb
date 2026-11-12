@@ -254,7 +254,7 @@
     ],
     [
      "src/curriculum/learn.view.js",
-     17941,
+     17961,
      1
     ],
     [
@@ -304,7 +304,7 @@
     ],
     [
      "src/curriculum/review.view.js",
-     18643,
+     20755,
      0
     ],
     [
@@ -401,6 +401,16 @@
      "src/placement/start.js",
      2004,
      1
+    ],
+    [
+     "src/platform/sched-state.js",
+     3698,
+     0
+    ],
+    [
+     "src/platform/srs-tools.js",
+     3497,
+     0
     ],
     [
      "src/pronunciation/forTradition.js",
@@ -504,7 +514,7 @@
     ],
     [
      "src/shell/platform-routes.js",
-     554,
+     681,
      1
     ],
     [
@@ -1028,7 +1038,7 @@
     ],
     [
      "src/curriculum/review.view.js",
-     18643,
+     20755,
      0
     ],
     [
@@ -1095,6 +1105,16 @@
      "src/lib/counts.js",
      18893,
      1
+    ],
+    [
+     "src/platform/sched-state.js",
+     3698,
+     0
+    ],
+    [
+     "src/platform/srs-tools.js",
+     3497,
+     0
     ],
     [
      "src/pronunciation/forTradition.js",

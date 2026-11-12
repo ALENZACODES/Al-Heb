@@ -46,7 +46,7 @@ export function buildPageIndex(routes, available, t, tHe = () => '', sectionLabe
 
 function rank(hayWords, hay, labelN, tok) {
   if (labelN === tok) return 0;
-  if (labelN.startsWith(tok)) return 1;
+  if (labelN.startsWith(tok) || labelN.split(' ').some((w) => w.startsWith(tok))) return 1; // a word of the page's own name beats its section name
   if (hayWords.some((w) => w.startsWith(tok))) return 2;
   return hay.includes(tok) ? 3 : -1;
 }

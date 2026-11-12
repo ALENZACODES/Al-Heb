@@ -25,6 +25,8 @@ import { hashSeed } from "./exercises.session.js";
 import { taughtFromCompleted } from "./actions.js";
 import { isAudioFree, silentPrompt } from "../shell/audiofree.js";
 import { shortcutsOn } from "../shell/motor.js";
+import { storeGet, storeSet } from "./dom.js";
+import { isLeech, missesOf, cramQueue, paceOf, addPace, PACE_KEY } from "../platform/srs-tools.js"; // H3 cram, H4 leeches (lane platform)
 
 const RATINGS = [[1, "Again", "forgot it"], [2, "Hard", "got it with effort"], [3, "Good", "got it"], [4, "Easy", "no effort"]];
 
@@ -106,7 +108,7 @@ function keepRatingsInView(box) {
   win.setTimeout?.(fit, 250);
 }
 
-export function mountReview(root, ctx, { lessonId } = {}) {
+export function mountReview(root, ctx, { lessonId, minutes } = {}) {
   let alive = true;
   const wrap = el("section", { class: "alef-review", "aria-labelledby": "view-title" });
   root.append(wrap);
@@ -115,6 +117,8 @@ export function mountReview(root, ctx, { lessonId } = {}) {
   const congregation = ctx.settings?.get?.("congregation") || "sephardi";
   const stats = { 1: 0, 2: 0, 3: 0, 4: 0 };
   let dueAtStart = 0, queue = [], pos = 0, revealed = false, content, wordVocab = {}, onKey = null, notDone = false, memKnown = new Set(), memReps = {};
+  let cardsById = {}, cram = null, shownAt = 0; // H3: cram = {minutes, seconds, measured} when sized to the time available
+  const cramMin = Math.min(60, Math.max(0, Math.round(Number(minutes) || 0)));
   const describe = (id) => describeCard(id, content, congregation, wordVocab, { seed: hashSeed(id + ":" + (memReps[id] || 0)), known: memKnown });
 
   const body = el("div", { class: "alef-review-body" });
@@ -149,6 +153,12 @@ export function mountReview(root, ctx, { lessonId } = {}) {
     if (!alive) return;
     memKnown = taughtFromCompleted(st.completed, lessons); memReps = Object.fromEntries(Object.values(st.cards).map((c) => [c.id, c.reps || 0]));
     queue = buildQueue(st.cards, Date.now(), { lessonId, lessons, confusables: content.confusables, limit: 20 }).map((c) => c.id);
+    cardsById = st.cards || {};
+    if (cramMin && !lessonId) { // H3: a session sized to the minutes the learner has: due cards first, then weak ones
+      const pace = paceOf(await storeGet(ctx, PACE_KEY, null));
+      queue = cramQueue(cardsById, Date.now(), cramMin, pace.seconds).ids;
+      cram = { minutes: cramMin, ...pace };
+    }
     queue = queue.filter((id) => describe(id));
     dueAtStart = lessonId ? 0 : reviewsDue(st.cards, Date.now()); // the number Home and Learn show (src/lib/counts.js)
     render();
@@ -193,6 +203,9 @@ export function mountReview(root, ctx, { lessonId } = {}) {
     if (pos >= queue.length) return summary();
     revealed = false;
     const d = describe(queue[pos]);
+    shownAt = Date.now();
+    // H4: a card missed LEECH_MISSES times or more comes the other way round (the answer first, recall the Hebrew), not the same failing way again
+    const misses = missesOf(cardsById[queue[pos]]), flip = d.kind !== "mem" && isLeech(cardsById[queue[pos]]) && d.answer.some(Boolean);
     const note = el("p", { class: "alef-audio-note muted", role: "status", "aria-live": "polite" });
     const answerBox = el("div", { class: "alef-answer", tabindex: "-1", hidden: "" });
     const ratingBox = el("div", { class: "alef-ratings", role: "group", "aria-label": "How well did you remember it?", hidden: "" },
@@ -208,6 +221,7 @@ export function mountReview(root, ctx, { lessonId } = {}) {
         d.respelling ? el("p", { class: "alef-respell", lang: "en" }, `Sounds like: ${d.respelling} (${LABELS[congregation] || congregation} style)`) : null,
         hookNode(d.hook ? hookLine(content.chain, congregation, d.hook) : null),
         d.hint ? el("p", { class: "muted alef-hint" }, d.hint) : null, playButton(ctx, d.audio[0], d.audio[1], "Listen", note)].filter(Boolean));
+      if (flip) answerBox.replaceChildren(heLabeled(d.he, d.frontLabel, "alef-he " + (d.big ? "alef-huge" : "alef-word-big")), ...[...(answerBox.children || [])]);
       answerBox.hidden = false; ratingBox.hidden = false; show.hidden = true;
       answerBox.focus?.({ preventScroll: true });
       keepRatingsInView(ratingBox);
@@ -222,6 +236,7 @@ export function mountReview(root, ctx, { lessonId } = {}) {
         return;
       }
       stats[n]++; pos++;
+      if (shownAt) storeGet(ctx, PACE_KEY, null).then((p) => storeSet(ctx, PACE_KEY, addPace(p, (Date.now() - shownAt) / 1000))).catch(() => {}); // H3: the learner's own pace
       try { globalThis.document?.dispatchEvent?.(new CustomEvent("alef:review-rated", { detail: { rating: n } })); } catch { /* optional: hearts and XP listen for this (src/retention/) */ }
       // Interference hint only after the learner's own miss (rating Again), at most once per error kind per session.
       let panel = null;
@@ -238,9 +253,10 @@ export function mountReview(root, ctx, { lessonId } = {}) {
     onKey = (e) => { if (revealed && shortcutsOn(ctx) && /^[1-4]$/.test(e.key) && !e.ctrlKey && !e.metaKey && !e.altKey && !/^(INPUT|TEXTAREA|SELECT)$/.test(e.target?.tagName || "")) { e.preventDefault(); rate(Number(e.key)); } };
     body.replaceChildren(
       el("p", { class: "muted", role: "status" }, `Card ${pos + 1} of ${queue.length}${lessonId ? ` · ${byId[lessonId]?.title || lessonId}` : dueAtStart > queue.length ? ` · ${dueAtStart} due now; a session takes the first ${queue.length}` : ""}`),
-      el("div", { class: "card alef-card" },
-        el("p", { class: "muted" }, isAudioFree(ctx) ? silentPrompt(d.prompt) : d.prompt),
-        heLabeled(d.he, d.frontLabel, "alef-he " + (d.big ? "alef-huge" : "alef-word-big")),
+      cram && pos === 0 ? el("p", { class: "muted alef-cram-note" }, `Cram for ${cram.minutes} minutes: ${queue.length} card${queue.length === 1 ? "" : "s"}, at ${cram.measured ? `your own pace of about ${Math.round(cram.seconds)} seconds a card (measured on ${cram.n} cards)` : `an estimated ${Math.round(cram.seconds)} seconds a card (your own pace is used once 20 cards are timed)`}.`) : null,
+      el("div", { class: "card alef-card" + (flip ? " alef-leech" : "") },
+        flip ? el("p", { class: "muted" }, `A different way for a card you have missed ${misses} times: read the answer, recall the Hebrew, then show it.`) : el("p", { class: "muted" }, isAudioFree(ctx) ? silentPrompt(d.prompt) : d.prompt),
+        flip ? el("div", { class: "alef-leech-front" }, ...d.answer.filter(Boolean).map((a, i) => el(i === 0 ? "strong" : "p", {}, uiEnglish(ctx, a)))) : heLabeled(d.he, d.frontLabel, "alef-he " + (d.big ? "alef-huge" : "alef-word-big")),
         show, answerBox, ratingBox, note),
       el("p", { class: "muted alef-keys" }, "Keyboard: after showing the answer, press 1 Again, 2 Hard, 3 Good, 4 Easy."));
   }

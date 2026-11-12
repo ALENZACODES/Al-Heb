@@ -3,7 +3,7 @@
 // firstday.progress, onboarding.v1, placement.v1) and never writes. Every link is guarded by hasRoute.
 import { plain } from '../shell/plain-copy.js';
 import { h } from '../shell/ui.js';
-import { openStart } from '../placement/start.js';
+import { openStart, placedOut } from '../placement/start.js';
 import { ROUTES } from '../shell/router.js';
 import { tierOf } from '../shell/nav-model.js';
 import { nextPerTrack } from './nextlesson.js';
@@ -55,7 +55,10 @@ export function buildToday(o) {
   const ok = (n) => (typeof o.hasRoute === 'function' ? !!o.hasRoute(n) : n === 'learn');
   const done = new Set(o.completedIds || []);
   const goal = o.goal || 'read';
-  const nexts = nextPerTrack({ lessons: o.lessons, done, goal, available: o.available }); // shared with the week plan (nextlesson.js)
+  // Lane 6 (#17): an applied placement result sticks. The read lessons before it are skipped over when picking the next lesson (not completed).
+  const skip = placedOut(o.lessons, o.placement);
+  const nextDone = skip.length ? new Set([...done, ...skip]) : done;
+  const nexts = nextPerTrack({ lessons: o.lessons, done: nextDone, goal, available: o.available }); // shared with the week plan (nextlesson.js)
   const dueCount = Math.max(0, Number(o.dueCount) || 0);
   const streak = { count: o.streak?.count || 0, activeToday: !!o.streak?.activeToday, restToday: !!o.streak?.restToday, best: Math.max(o.streak?.best || 0, o.streak?.count || 0) };
   const triedBy = { speak: tried(o.speak), typing: tried(o.typing), compare: tried(o.compare), festivals: false };
@@ -83,7 +86,7 @@ export function buildToday(o) {
     const start = o.onboarding?.start === '/placement' ? 'placement' : 'firstday';
     // Only ever an open lesson: the placed lesson if its prerequisites are done, else the first open read lesson (placement completes nothing).
     const wanted = start === 'placement' && typeof o.placement?.result?.lesson === 'string' ? o.placement.result.lesson : null;
-    const placed = wanted && (o.lessons || []).some((l) => l.id === wanted) ? openStart(o.lessons, done, wanted).id : null;
+    const placed = wanted && (o.lessons || []).some((l) => l.id === wanted) ? openStart(o.lessons, nextDone, wanted).id : null;
     if (placed && ok('learn')) primary = rampFor(placed) || { href: lessonHref(placed), label: `Continue: lesson ${placed}${tag(placed)}`, kind: 'lesson', minutes: Number((o.lessons || []).find((l) => l.id === placed)?.estMinutes) || 0 };
     else if (ok(start)) primary = start === 'placement' ? { href: '#/placement', label: 'Continue: placement check' + previewTag('placement'), kind: 'placement' } : onramp;
     else if (ok('firstday')) primary = onramp;

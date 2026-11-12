@@ -4,7 +4,7 @@
 //   { v:1, letters:'none'|'some'|'vowels', start:'/firstday'|'/placement', askedAt:string,
 //     denomination:null|'reform'|'conservative'|'reconstructionist'|'orthodox', minutesPerDay:number|null, step:'letters'|'congregation'|'minutes'|'plan' }
 // The letters question is asked once; `letters` is only rewritten through "Change my starting point".
-import { openStart } from '../placement/model.js';
+import { openStart, placedOut } from '../placement/start.js'; // lane 6 (#17): start.js only, so the placement check's model loads with its page
 import { lessonQueue } from '../home/nextlesson.js';
 export const STORE_KEY = 'onboarding.v1';
 export const PLACEMENT_KEY = 'placement.v1'; // written by src/placement (read here, never written)
@@ -99,13 +99,14 @@ export function buildPlan(o) {
   const order = new Map(read.map((l, i) => [l.id, i]));
   const wanted = israel || rec.letters === 'none' ? null : placementLesson(o.placement, read);
   // Lessons unlock in order and placement completes none, so the plan starts at the recommended lesson only if it is open now.
-  const open = wanted ? openStart(o.lessons, o.completed || [], wanted) : null;
+  const skip = wanted ? placedOut(o.lessons, o.placement) : []; // lane 6 (#17): an applied placement result sticks (earlier lessons skipped, not completed)
+  const open = wanted ? openStart(o.lessons, [...(o.completed || []), ...skip], wanted) : null;
   const placed = open ? open.id : null;
   const startLesson = placed || (israel ? (read[0]?.id || plans.firstLesson) : plans.firstLesson);
 
   // Lessons come from the shared next-lesson rule (src/home/nextlesson.js), one finished lesson per day, so day 1 is what the Today card
   // recommends now and each later day is what it recommends after the lessons before it are done. Rebuilt from progress on every view.
-  const parts = lessonQueue({ lessons: o.lessons, completed: o.completed || [], goal: israel ? 'israel' : o.goal, first: (o.completed || []).length ? null : placed, limit: 14 })
+  const parts = lessonQueue({ lessons: o.lessons, completed: [...(o.completed || []), ...skip], goal: israel ? 'israel' : o.goal, first: (o.completed || []).length ? null : placed, limit: 14 })
     .map((l) => ({ kind: 'lesson', lesson: l.id, title: l.title, part: 1, parts: 1, minutes: Number(l.estMinutes) || minutes, route: 'learn', href: '#/learn?lesson=' + encodeURIComponent(l.id) }));
   const startDef = israel && rec.letters !== 'none' ? null : plans.starts[rec.letters];
   const needsPlacement = !israel && rec.start === '/placement' && !placed;

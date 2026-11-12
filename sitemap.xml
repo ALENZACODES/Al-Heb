@@ -332,4 +332,16 @@
     <loc>https://alef-review.onrender.com/#/about</loc>
     <changefreq>weekly</changefreq>
   </url>
+  <url>
+    <loc>https://alef-review.onrender.com/#/bridge</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://alef-review.onrender.com/#/trope/families</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://alef-review.onrender.com/#/trope/aliyah</loc>
+    <changefreq>weekly</changefreq>
+  </url>
 </urlset>

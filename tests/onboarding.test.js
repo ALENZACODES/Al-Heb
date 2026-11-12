@@ -398,3 +398,25 @@ test('plan screen: Rimon cheers, the Start button is pinned at the bottom, and a
   assert.equal(root.querySelector('#ob-close').attrs.href, '#/');
   assert.match(root.querySelector('.rimon-say').textContent, /all set/);
 });
+
+// Lane 6 (12 Nov round 2, points plan #17): the placement check is reachable from the first welcome screen.
+test('view, lane 6: "Not a beginner? Find your level" saves the first answer and opens the placement check', async () => {
+  const { root, store, settings, ctx, routed } = mk();
+  mount(root, ctx); await ready(root);
+  const b = root.querySelector('#ob-find-level');
+  assert.ok(b, 'the link is on the first screen'); assert.equal(b.textContent, 'Not a beginner? Find your level');
+  await b.click();
+  assert.deepEqual(routed, ['/placement?from=welcome']);
+  assert.equal(store.m[M.STORE_KEY].letters, 'some'); assert.equal(store.m[M.STORE_KEY].start, '/placement');
+  assert.equal(settings.get('onboarded'), true);
+  assert.ok(routeOf('#/placement?from=welcome'));
+});
+test('buildPlan, lane 6: an applied placement result sticks; the earlier lessons are skipped over, not completed', () => {
+  const applied = { v: 1, result: { lesson: 'r12', start: 'r12', applied: true } };
+  const p = M.buildPlan({ record: rec('vowels', 10), placement: applied, lessons: D.lessons, plans: D.plans, completed: [] });
+  assert.equal(p.startLesson, 'r12'); assert.equal(p.source, 'placement');
+  const lessonsInPlan = p.days.flatMap((d) => d.items.filter((i) => i.kind === 'lesson').map((i) => i.lesson));
+  assert.deepEqual(lessonsInPlan.slice(0, 3), ['r12', 'r13', 'r14']);
+  const notApplied = M.buildPlan({ record: rec('vowels', 10), placement: { result: { lesson: 'r12', start: 'r12', applied: false } }, lessons: D.lessons, plans: D.plans, completed: [] });
+  assert.equal(notApplied.startLesson, 'r01');
+});

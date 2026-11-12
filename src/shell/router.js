@@ -237,6 +237,13 @@ export const ROUTES = [
   { name: 'daily', pattern: '/daily', module: '../../preview/loops/daily.view.js', tier: 'preview', title: 'Daily goal and quests', owner: 'loops', group: 'progress', quick: 'nav.route.daily' },
   { name: 'search',   pattern: '/search',         module: './search.view.js', tier: 'v0',                    title: 'Search', owner: 'nav' },
   { name: 'about',    pattern: '/about',          module: './about.view.js', tier: 'v0',                     nav: 'nav.about',    title: 'About', owner: 'lane8' },
+  // lane 6 (12 Nov round 2): unvocalized bridge (#16) and trope families / per-aliyah practice (#13); views load on first open
+  { name: 'bridge', pattern: '/bridge', module: '../bridge/bridge.view.js', title: 'Reading Without Vowels', owner: 'lane6', group: 'learn', quick: 'nav.route.bridge' },
+  { name: 'bridge-sec', pattern: '/bridge/:sec', module: '../bridge/bridge.view.js', title: 'Reading Without Vowels', owner: 'lane6', paramQuery: { sec: 'sec' } },
+  { name: 'bridge-text', pattern: '/bridge/:sec/:id', module: '../bridge/bridge.view.js', title: 'Reading Without Vowels', owner: 'lane6', paramQuery: { sec: 'sec', id: 'id' } },
+  { name: 'trope-families', pattern: '/trope/families', module: '../trope/practice.view.js', title: 'Trope Families', owner: 'lane6', group: 'learn', quick: 'nav.route.trope-families' },
+  { name: 'trope-family', pattern: '/trope/families/:id', module: '../trope/practice.view.js', title: 'Trope Families', owner: 'lane6', paramQuery: { id: 'id' } },
+  { name: 'trope-aliyah', pattern: '/trope/aliyah', module: '../trope/practice.view.js', title: 'Trope Practice by Aliyah', owner: 'lane6', group: 'learn', quick: 'nav.route.trope-aliyah', query: { sec: 'aliyah' } },
 ];
 
 /**

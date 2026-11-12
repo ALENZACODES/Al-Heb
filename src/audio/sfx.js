@@ -2,6 +2,7 @@ import { reactRimon } from '../shell/rimon-events.js';
 // Short, opt-in game feedback only. Never touches the Hebrew/prayer voice player.
 // Public files must be supplied separately from the licensed CC0 staging pack.
 import { mediaPolicy } from './policy.js';
+import { sayBriefly } from '../shell/transient.js';
 export const SFX_FILES = Object.freeze({
   click: 'click.mp3', tick: 'tick.mp3', pop: 'pop.mp3',
   success: 'success.mp3', error: 'error.mp3', miss: 'miss.mp3',
@@ -113,7 +114,7 @@ function showTwin(kind) {
     }
     // The twin is a status line for assistive tech only; it must never show as stray text (audit D-45).
     if (node && node.getAttribute?.('class') !== 'visually-hidden') node.setAttribute('class', 'visually-hidden');
-    if (node) node.textContent = text;
+    if (node) sayBriefly(node, text); // I1: emptied after a few seconds and on every navigation (src/shell/transient.js)
   } catch { /* a missing status line must not block the game */ }
 }
 /** Action sounds (a tick, a whoosh, a pop) may not repeat faster than this, so a busy game never rattles. */

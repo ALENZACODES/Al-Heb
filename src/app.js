@@ -5,6 +5,7 @@ import { store } from './store.js';
 import { createSettings } from './shell/settings.js';
 import { applyComfort, COMFORT_KEYS } from './shell/comfort.js';
 import { createRouter, ROUTES, loadRouteModule, availableRoutes, clearView, announceTitle } from './shell/router.js';
+import { clearTransient } from './shell/transient.js';
 import { VIEW_FILES } from './shell/views.generated.js';
 import { renderNav as renderNavBar } from './shell/nav.js';
 import { t, tHe } from './shell/i18n.js';
@@ -241,6 +242,7 @@ async function show(match, ctxBase, { quiet = false } = {}) {
   // superseded before it rendered cannot file the previous page's scroll position under the wrong path.
   if (!quiet) { lastMatch = match; lastCtx = ctxBase; touched = false; touchedOutsideField = false; fieldEdited = false; if (lastHashShown != null) scrollKeeper?.leave(lastHashShown); }
   const live = document.getElementById('announcer');
+  if (!quiet) clearTransient(document); // I1: feedback lines and toasts from the page being left go with it
   if (!quiet) announceTitle(live, ''); // M-09: the previous page's title leaves the page text as soon as navigation starts
   if (!route) {
     const updating = h('p', { class: 'muted', role: 'status' });

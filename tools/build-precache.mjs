@@ -72,7 +72,10 @@ const ON_DEMAND_PREFIXES = ['data/vocab/', 'data/roots/', 'data/knownwords/', 'd
   'data/ask/',
   // lane 4 (12 Nov): Move to another device and the learner's certificate (route code, fetched on first open), and the
   // offline pack lists read by the Use Aleph offline page (data/offline/packs.json, built by tools/offline-packs.mjs).
-  'src/sync/', 'data/offline/'];
+  'src/sync/', 'data/offline/',
+  // lane platform (12 Nov, CODER-100 H, I, J): its screens and models (scheduler state and fit, cram, mastery, weekly report, goals,
+  // badges, data export, shortcuts, what's new) live under src/platform/ and are fetched on first open, runtime-cached.
+  'src/platform/'];
 const ON_DEMAND_FILES = new Set([
   // Rimon's stills (src/app.js imports the stage after boot; it shows nothing until the pictures exist, and the pictures are fetched on demand too),
   // and two older Rimon modules no screen imports (kept for reference and their tests).
@@ -90,6 +93,8 @@ const ON_DEMAND_FILES = new Set([
   // fetched on first open and runtime-cached (keeps first install under 3.95 MiB after the 11 November site-check fixes).
   'data/builder_symbols.json', 'src/recordcompare/recordcompare.view.js', 'src/roots/roots.view.js', 'src/nikkudfade/nikkudfade.view.js',
   'src/genderdrill/genderdrill.view.js', 'src/knownwords/knownwords.view.js', 'src/fsrs/scheduler.view.js',
+  // The FSRS-6 formulas (5 KB): imported only by the scheduler page above and the on-device fit (src/platform/), so they load with them.
+  'src/fsrs/fsrs6.js',
   // The Roots page model (11 KB): imported only by roots.view.js above, so it loads with the page (moved on 11 November when the
   // Sacred Listen Hebrew titles and the shared Roots and activity-point counts landed; keeps first install under 3.95 MiB).
   'src/roots/model.js',

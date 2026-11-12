@@ -323,3 +323,25 @@ test("card: the Updates section follows the handle and its check button works; a
   unmount(); h.stop();
   const none = await boot(); assert.equal(byId(none.root, "of-update"), undefined); none.unmount();
 });
+test("S-03 (12 Nov): a disabled Download button says why and what turns it on; Try again reloads the list", async () => {
+  // still loading: the reason is the list being checked
+  let release; const gate = new Promise((r) => { release = r; });
+  let failing = true;
+  const fetchImpl = async (u) => { if (u === "precache-manifest.js") { await gate; return failing ? resp("", { ok: false, status: 503 }) : resp(pm); } return resp("d"); };
+  const root = new El("div");
+  const m = mount(root, { env: { fetch: fetchImpl, caches: fakeCaches({}), navigator: { onLine: true }, localStorage: fakeLS({}) } });
+  await waitFor(() => byId(root, "of-download"));
+  assert.ok("disabled" in byId(root, "of-download").attrs);
+  assert.match(byId(root, "of-download-why").text, /Checking which files .* turns on when the list arrives/);
+  assert.equal(byId(root, "of-download").attrs["aria-describedby"], "of-download-why");
+  // the list fails: the reason says so and how to turn the button on
+  release();
+  await waitFor(() => byId(root, "of-error"));
+  assert.match(byId(root, "of-download-why").text, /did not load.*Connect to the internet and press Try again/);
+  failing = false;
+  await byId(root, "of-retry").click();
+  await waitFor(() => byId(root, "of-download") && !("disabled" in byId(root, "of-download").attrs));
+  assert.equal(byId(root, "of-download-why"), undefined);
+  assert.equal(byId(root, "of-retry"), undefined);
+  m();
+});

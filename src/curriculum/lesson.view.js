@@ -19,7 +19,7 @@ import { storeGet, storeSet, showSaveFailure } from "./dom.js";
 import { hookLine, hookNode } from "../letters/hookline.js";
 import { mountChunkedLesson } from "./lesson.parts.js";
 import { loadUnlocked, unlockLesson, stillLocked, doubleTap } from "./unlock.js";
-import { passMark, passRuleText } from "./passmark.js";
+import { passMark, passRuleText, passPercent } from "./passmark.js";
 
 const A_ID = /^I-\d{2}$/;
 export const MAX_PER_STEP = 2;
@@ -211,7 +211,7 @@ export function mountLesson(root, ctx, lessonId) {
     if (!visited) startBtn.disabled = true;
     parts.push(el("p", { class: "muted" }, questions.length ? (questions.length === 1 ? "Quick check: 1 question. Your place is saved." : `Quick check: ${questions.length} questions. Your place is saved.`) + (carried ? ` You have already answered ${carried}.` : "")
       : "No quick check is available for this lesson yet, so it cannot be marked complete."),
-      questions.length ? el("p", { class: "alef-pass-rule", "data-pass-mark": String(passMark(questions.length)) }, `Pass mark: ${passMark(questions.length)} of ${questions.length} right on the first try.`) : null,
+      questions.length ? el("p", { class: "alef-pass-rule", "data-pass-mark": String(passMark(questions.length)) }, `Pass mark: ${passMark(questions.length)} of ${questions.length} right on the first try (${passPercent(questions.length)}%).`) : null,
       gateNote, actions, more, quizHost, done);
     // S-13 and C-01: the rule is stated before the lesson starts, at the top, where it is seen without scrolling, with a way straight to the check.
     if (questions.length) {

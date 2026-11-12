@@ -71,7 +71,7 @@ export function notPassedNode(d) {
   return el("div", { class: "alef-summary alef-summary-notpassed", "data-passed": "false" },
     el("h2", { id: "alef-int-ex", tabindex: "-1" }, d.title || "Not passed yet — try again"),
     el("p", { role: "status" }, d.countText),
-    d.need ? el("p", { "data-pass-mark": String(d.need) }, `The pass mark is ${d.need} of ${d.of} right on the first try. ${d.wasDone ? "The lesson stays marked done from before; this try gives no lesson XP." : "This lesson is not marked done yet, and no lesson XP was given."}`) : null,
+    d.need ? el("p", { "data-pass-mark": String(d.need) }, `The pass mark is ${d.need} of ${d.of} right on the first try (${Math.round((d.need / d.of) * 100)}%). ${d.wasDone ? "The lesson stays marked done from before; this try gives no lesson XP." : "This lesson is not marked done yet, and no lesson XP was given."}`) : null,
     el("dl", { class: "alef-summary-stats" },
       el("div", {}, el("dt", {}, "Accuracy (first try)"), el("dd", { "data-stat": "accuracy" }, pct(st.accuracy))),
       d.ms != null ? el("div", {}, el("dt", {}, "Time"), el("dd", { "data-stat": "time" }, fmtDuration(d.ms))) : null),

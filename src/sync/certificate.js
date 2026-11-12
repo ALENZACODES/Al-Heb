@@ -86,7 +86,7 @@ export function recordLink(base, code) { return `${String(base).split('#')[0]}#/
 /** Fixed wording, kept here so tests can check it for overclaims. */
 export const COPY = Object.freeze({
   title: 'Certificate of Lessons Completed',
-  what: (n) => `This lists the Aleph lessons ${n || 'the learner'} completed under Aleph's pass rule: at least ${Math.round(PASS_SHARE * 100)}% of the lesson's quick check right on the first try (for example 7 of 10). For each lesson it shows the first-try score of the check that passed and the date. Everything comes from the learner's own records on their own device.`,
+  what: (n) => `This lists the Aleph lessons ${n || 'the learner'} completed under Aleph's pass rule: ${Math.round(PASS_SHARE * 100)}% of the lesson's quick check, rounded to the nearest whole question, right on the first try (for example 2 of 3, or 7 of 10). For each lesson it shows the first-try score of the check that passed and the date. Everything comes from the learner's own records on their own device.`,
   limits: 'What this cannot prove: Aleph has no server and no signature, so nothing here can show that the record was not edited before it was shared. A teacher can check the rule and each lesson’s result; this is not a proctored assessment. The pass rule is Aleph’s own, and the questions and the mark have not been reviewed by a qualified Hebrew teacher.',
   unscored: 'Score not kept: this lesson was completed before Aleph kept check scores, or by a screen that does not keep one. It is listed but not counted.',
   link: 'The link below carries this record. Whoever opens it sees the same lessons, and the page works out every pass again from the numbers, using the pass rule in the copy of Aleph they open.',

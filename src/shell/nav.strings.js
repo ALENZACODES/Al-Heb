@@ -123,6 +123,7 @@ export const NAV_EN = {
   'nav.route.cipher': 'Cipher Grid',
   'nav.route.fleamarket': 'Shuk Barter',
   'nav.route.listen-shelf': 'Sacred Listen',
+  'nav.route.listen-practice': 'Listening Practice', // audio lane
   'nav.route.books': 'Little books',
   'nav.route.book': 'Read a book',
   'nav.route.synagogues': 'Reform Synagogues in Canada',

@@ -38,7 +38,7 @@ test('siddur coverage line follows the saved service choice and rises with compl
   assert.equal(line.attrs['data-order'], 'friday-night');
   assert.match(line.textContent, /Prayer book coverage: \d+% of the phrases in Friday evening use signs you have practiced/);
   assert.ok(Number(line.attrs['data-pct']) > 0, 'all read lessons done: some lines decodable');
-  const { root: r2 } = await show({ 'service.prefs': { order: 'weekday-morning' } }); // not a follow order: falls back to the default
+  const { root: r2 } = await show({ 'service.prefs': { order: 'no-such-order' } }); // not a follow order: falls back to the default
   assert.equal(r2.querySelector('.pg-siddur').attrs['data-order'], 'shabbat-morning');
 });
 

@@ -11,7 +11,7 @@ Route `#/service`, view `src/service/service.view.js` (model `src/service/model.
 - Follow the service: page-turn cards for Friday evening and Shabbat morning from registry texts only: pointed Hebrew, transliteration per tradition (hide toggle), registry English. Stand/sit/sing/silent markers appear only where `torah-service-guide.json` says so, each with its quoted words (a test verifies the quote); otherwise "varies by congregation". Friday evening has no guide wording, so it has no markers. Audio button only when `audio.status` reports a real file (speech fallback does not count).
 
 ## Limits
-Draft, not clergy reviewed. Sequence differs in real congregations. No prayerbook text, layout or page numbers (Mishkan T'filah etc. are copyrighted). Weekday morning is coverage only.
+Draft, not clergy reviewed. Sequence differs in real congregations. No prayerbook text, layout or page numbers (Mishkan T'filah etc. are copyrighted). Weekday morning has the same Follow cards (no stand/sit markers: the guide quotes are for Shabbat morning only, so every weekday card says "varies by congregation").
 
 ## Checks
 `node --test tests/service.*.test.js`; `node tests/service.shot.mjs <siteCopyWithRoute> <outDir>` (390px, no horizontal overflow, no console errors).

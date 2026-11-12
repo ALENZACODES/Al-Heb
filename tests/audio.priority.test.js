@@ -96,7 +96,9 @@ test('first-day and v0 lesson words come before everything else in the real list
   if (r01 !== -1) assert.ok(r01 < 5, 'the first-day word of r01 is near the top');
 });
 test('the batch files match the generator manifest header and the ranked slices, with no Hebrew of their own', () => {
-  const files = fs.readdirSync(path.join(root, BATCH_DIR)).filter((f) => /^batch-\d+\.csv$/.test(f)).sort();
+  // git keeps no empty folder: with nothing left to record the batch folder is absent on a fresh checkout, which means no batches
+  const dir = path.join(root, BATCH_DIR);
+  const files = (fs.existsSync(dir) ? fs.readdirSync(dir) : []).filter((f) => /^batch-\d+\.csv$/.test(f)).sort();
   assert.equal(files.length, Math.ceil(rows.length / DEFAULT_BATCH));
   const seen = [];
   files.forEach((f, n) => {

@@ -73,3 +73,11 @@ The 159 rows run 3 held, retaken at speaking rate 0.85 (same voice), and 643 Ash
 - **B, short items:** a letter, vowel or syllable passes on the sound reviewer alone (`tools/audio/accent_review.py`, rule `sound-only-short`; every reviewer's result is still logged). Run 6 re-rendered the 94 Ashkenazi short rows still playing the Israeli clip: 56 passed (letters 23 of 38, syllables 25 of 43, vowels 8 of 13), 38 held. Logs: `docs/audio/fill/accent-r6-*.jsonl`.
 
 Own-file coverage after A and B: Ashkenazi 96.0%, Sephardi 98.6%, Israeli 98.2%; kind letter 95.6%, vowel 94.4%, syllable 95.1%, line 98.4%, word 97.9%, **prayer 89.2%** (the one kind under 90%: long Ashkenazi prayers where a word fails a reviewer, and rows held for divine-name or wording decisions).
+
+## Prayers past 90% (runs 7 and 8, fill-clips run 6)
+
+- Run 7: the 45 Ashkenazi prayer and line rows run 5 held, retaken at speaking rate 1.1: 3 passed (1 prayer, 2 lines).
+- Fill-clips run 6: the two optional whole-prayer rows with no clip in any tradition (they played their lines), made in Chirp 3 HD with the usual three takes and three reviewers. The festival-day Kiddush verses passed in both voices (1 reviewer each heard a word off); Hallel 118:1-4 failed 2 of 3 in both voices and was not admitted. The Sephardi rows of the Kiddush verses then took the Israeli clip as the same reading (decision A); run 8's Ashkenazi takes of it failed and were not admitted.
+- `tools/audio/plays_israeli.mjs` re-run: 90 Ashkenazi word rows whose alias target line now has an Ashkenazi clip of its own play that clip through the alias instead of the Israeli clip.
+
+Own-file coverage now: **prayer 476/528 (90.2%)**, letter 95.6%, vowel 94.4%, syllable 95.1%, line 98.5%, word 97.9%; Ashkenazi 96.0%, Sephardi 98.6%, Israeli 98.2%. Every kind and tradition is above 90%.

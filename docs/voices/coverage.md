@@ -6,7 +6,7 @@ Reading this table: "required" counts the clips the app can ask for (optional wh
 
 Status labels (the same table the app shows, src/shell/audio-labels.js): recorded = "Recorded by a human reader"; tts = "Israeli voice"; missing = "No audio yet".
 
-**Overall: 23951 of 24021 required clips exist (99.7%); Recorded by a human reader: 0; Israeli voice: 23882; No audio yet: 70.**
+**Overall: 23951 of 24021 required clips exist (99.7%); Recorded by a human reader: 0; Israeli voice: 23884; No audio yet: 70.**
 
 ## By talent and group
 
@@ -24,9 +24,9 @@ Required 3369; have 3367; missing 2.
 | niqqud | 15 | 0 | 13 | 2 | 0 | 0/0 | human only |
 | syllable | 110 | 0 | 101 | 9 | 0 | 0/0 | human only |
 | lesson-word | 418 | 0 | 418 | 0 | 0 | 0/0 | human only |
-| prayer-line | 152 | 0 | 144 | 6 | 2 | 0/0 | human only |
+| prayer-line | 152 | 0 | 145 | 5 | 2 | 0/0 | human only |
 | prayer-word | 1573 | 0 | 1573 | 0 | 0 | 0/0 | human only |
-| prayer-whole | 0 | 0 | 0 | 0 | 0 | 3/21 | human only |
+| prayer-whole | 0 | 0 | 0 | 0 | 0 | 2/21 | human only |
 | vocab-word | 1000 | 0 | 998 | 2 | 0 | 0/0 | human only |
 | vocab-alias | 0 | 0 | 0 | 0 | 0 | 0/0 | human only |
 | vocab-extra | 44 | 0 | 44 | 0 | 0 | 0/0 | human only |
@@ -45,9 +45,9 @@ Required 3366; have 3364; missing 2.
 | niqqud | 15 | 0 | 12 | 3 | 0 | 0/0 | human only |
 | syllable | 110 | 0 | 101 | 9 | 0 | 0/0 | human only |
 | lesson-word | 418 | 0 | 418 | 0 | 0 | 0/0 | human only |
-| prayer-line | 152 | 0 | 146 | 4 | 2 | 0/0 | human only |
+| prayer-line | 152 | 0 | 147 | 3 | 2 | 0/0 | human only |
 | prayer-word | 1573 | 0 | 1573 | 0 | 0 | 0/0 | human only |
-| prayer-whole | 0 | 0 | 0 | 0 | 0 | 3/21 | human only |
+| prayer-whole | 0 | 0 | 0 | 0 | 0 | 2/21 | human only |
 | vocab-word | 1000 | 0 | 996 | 4 | 0 | 0/0 | human only |
 | vocab-alias | 0 | 0 | 0 | 0 | 0 | 0/0 | human only |
 | vocab-extra | 41 | 0 | 41 | 0 | 0 | 0/0 | human only |
@@ -70,7 +70,7 @@ Required 5275; have 5244; missing 31.
 | phrasebook | 250 | 0 | 250 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
 | prayer-line | 152 | 0 | 150 | 0 | 2 | 0/0 | human or TTS (TTS unvetted) |
 | prayer-word | 1573 | 0 | 1573 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
-| prayer-whole | 0 | 0 | 0 | 0 | 0 | 3/21 | human or TTS (TTS unvetted) |
+| prayer-whole | 0 | 0 | 0 | 0 | 0 | 2/21 | human or TTS (TTS unvetted) |
 | sound | 27 | 0 | 27 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
 | name | 27 | 0 | 27 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
 | explain-en | 27 | 0 | 27 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
@@ -102,7 +102,7 @@ Required 5275; have 5244; missing 31.
 | phrasebook | 250 | 0 | 250 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
 | prayer-line | 152 | 0 | 150 | 0 | 2 | 0/0 | human or TTS (TTS unvetted) |
 | prayer-word | 1573 | 0 | 1573 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
-| prayer-whole | 0 | 0 | 0 | 0 | 0 | 3/21 | human or TTS (TTS unvetted) |
+| prayer-whole | 0 | 0 | 0 | 0 | 0 | 2/21 | human or TTS (TTS unvetted) |
 | sound | 27 | 0 | 27 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
 | name | 27 | 0 | 27 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
 | explain-en | 27 | 0 | 27 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
@@ -132,7 +132,7 @@ Required 3368; have 3366; missing 2.
 | lesson-word | 418 | 0 | 418 | 0 | 0 | 0/0 | human only |
 | prayer-line | 152 | 0 | 150 | 0 | 2 | 0/0 | human only |
 | prayer-word | 1573 | 0 | 1573 | 0 | 0 | 0/0 | human only |
-| prayer-whole | 0 | 0 | 0 | 0 | 0 | 3/21 | human only |
+| prayer-whole | 0 | 0 | 0 | 0 | 0 | 2/21 | human only |
 | vocab-word | 1000 | 0 | 1000 | 0 | 0 | 0/0 | human only |
 | vocab-alias | 0 | 0 | 0 | 0 | 0 | 0/0 | human only |
 | vocab-extra | 43 | 0 | 43 | 0 | 0 | 0/0 | human only |
@@ -153,7 +153,7 @@ Required 3368; have 3366; missing 2.
 | lesson-word | 418 | 0 | 418 | 0 | 0 | 0/0 | human only |
 | prayer-line | 152 | 0 | 150 | 0 | 2 | 0/0 | human only |
 | prayer-word | 1573 | 0 | 1573 | 0 | 0 | 0/0 | human only |
-| prayer-whole | 0 | 0 | 0 | 0 | 0 | 3/21 | human only |
+| prayer-whole | 0 | 0 | 0 | 0 | 0 | 2/21 | human only |
 | vocab-word | 1000 | 0 | 1000 | 0 | 0 | 0/0 | human only |
 | vocab-alias | 0 | 0 | 0 | 0 | 0 | 0/0 | human only |
 | vocab-extra | 43 | 0 | 43 | 0 | 0 | 0/0 | human only |
@@ -161,7 +161,7 @@ Required 3368; have 3366; missing 2.
 ## Hold sets
 
 - clip-holds: 40 of these clips. Withheld from playback: a person listens before any screen plays it (data/lab/clip-holds.json).
-- plays-israeli: 292 rows (20 of them play an Israeli clip that is in clip-holds, so they are withheld with it). Fallback: a Sephardi or Ashkenazi row with no clip of its own plays the Israeli clip of the same voice (status "plays-israeli").
+- plays-israeli: 201 rows (20 of them play an Israeli clip that is in clip-holds, so they are withheld with it). Fallback: a Sephardi or Ashkenazi row with no clip of its own plays the Israeli clip of the same voice (status "plays-israeli").
 - chirpHeld: 67 rows. A Chirp re-take was held; the current clip plays (manifest flag "chirpHeld": true).
 - The three sets do not contradict one another.
 

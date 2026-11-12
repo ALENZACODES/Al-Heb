@@ -1,0 +1,29 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Chirp3-HD-Charon",
+ "tradition": "israeli",
+ "inputText": "אֵלֶּה מוֹעֲדֵי אֲדֹנָי מִקְרָאֵי קֹדֶשׁ אֲשֶׁר־תִּקְרְאוּ אֹתָם בְּמוֹעֲדָם׃ וַיְדַבֵּר מֹשֶׁה אֶת־מֹעֲדֵי אֲדֹנָי אֶל־בְּנֵי יִשְׂרָאֵל׃",
+ "inputSha256": "116ceabfde5ce622c0315048a8309fd38ef21f3bf16955a1a7c9660444a51de8",
+ "ingestedAt": "2026-11-12T17:21:56.317Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-12T17:21:56.317Z",
+ "redistributionCleared": false,
+ "spokenText": "אֵלֶּה מוֹעֲדֵי אֲדֹנָי מִקְרָאֵי קֹדֶשׁ אֲשֶׁר תִּקְרְאוּ אֹתָם בְּמוֹעֲדָם וַיְדַבֵּר מֹשֶׁה אֶת מֹעֲדֵי אֲדֹנָי אֶל בְּנֵי יִשְׂרָאֵל",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [
+   "(nothing)"
+  ],
+  "google": {
+   "heard": "אלה מועדי אדוני מקראי קדש אשר תקראו אותם במועדם וידבר משה את מועדי אדוני אל בני ישראל",
+   "acc": 1.0,
+   "issues": []
+  },
+  "reviewersFailing": 1
+ }
+}

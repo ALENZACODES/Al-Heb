@@ -1,0 +1,33 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "israeli-clip-same-reading",
+ "engine": "google",
+ "voiceId": "he-IL-Chirp3-HD-Charon",
+ "tradition": "sephardi",
+ "inputText": "אֵלֶּה מוֹעֲדֵי אֲדֹנָי מִקְרָאֵי קֹדֶשׁ אֲשֶׁר־תִּקְרְאוּ אֹתָם בְּמוֹעֲדָם׃ וַיְדַבֵּר מֹשֶׁה אֶת־מֹעֲדֵי אֲדֹנָי אֶל־בְּנֵי יִשְׂרָאֵל׃",
+ "inputSha256": "116ceabfde5ce622c0315048a8309fd38ef21f3bf16955a1a7c9660444a51de8",
+ "ingestedAt": "2026-11-12T17:21:56.317Z",
+ "licence": "customer-owned",
+ "note": "A copy of the Israeli clip of the same voice: in this app the Sephardi reading is letter for letter the Israeli one (owner decision, 12 Nov 2026). Synthetic voice, not a Sephardi reader; no human has listened to it.",
+ "renderedAt": "2026-11-12T17:21:56.317Z",
+ "redistributionCleared": false,
+ "spokenText": "אֵלֶּה מוֹעֲדֵי אֲדֹנָי מִקְרָאֵי קֹדֶשׁ אֲשֶׁר תִּקְרְאוּ אֹתָם בְּמוֹעֲדָם וַיְדַבֵּר מֹשֶׁה אֶת מֹעֲדֵי אֲדֹנָי אֶל בְּנֵי יִשְׂרָאֵל",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [
+   "(nothing)"
+  ],
+  "google": {
+   "heard": "אלה מועדי אדוני מקראי קדש אשר תקראו אותם במועדם וידבר משה את מועדי אדוני אל בני ישראל",
+   "acc": 1,
+   "issues": []
+  },
+  "reviewersFailing": 1
+ },
+ "copyOf": "audio/m/israeli/prayer/kiddush-festival-day-verses.mp3",
+ "madeFrom": "israeli-clip",
+ "sephardiReading": "eleh mo'adei adonai mikra'ei kodesh asher-tikre'u otam bemo'adam vaydaber mosheh et-mo'adei adonai el-benei yisra'el",
+ "copiedAt": "2026-11-12T17:28:10.663Z"
+}

@@ -295,3 +295,46 @@ test('home rituals: candle blessing, Kiddush and Motzi from the registry, with a
   assert.deepEqual(store.m[C.COMPANION_KEY].home, { '2026-11-13': { candles: true } });
   assert.equal(root.querySelector('[data-done="candles"]').attrs['aria-pressed'], 'true');
 });
+
+test('F6: the Gadlu and Kedushah drills read their lines from the registry and follow the guide\'s roles', () => {
+  const g = comp.drills.find((d) => d.id === 'gadlu'), k = comp.drills.find((d) => d.id === 'kedushah');
+  assert.ok(g && k);
+  const roles = new Map(S.guide.sections.flatMap((s) => s.prayers).map((p) => [p.id, p.role]));
+  assert.match(roles.get('gadlu'), /^leader/); assert.match(roles.get('lecha-hashem'), /^congregation/);
+  assert.match(S.guide.sections.find((s) => s.id === 'amidah').yourPart, /join the Kedushah responses/);
+  assert.deepEqual(k.response.map((r) => r.entry), ['kedushah-kadosh', 'kedushah-baruch', 'kedushah-yimloch']);
+  for (const d of [g, k]) { assert.ok(C.partOf(S.byId, d.cue)); for (const r of d.response) assert.doesNotMatch(C.partOf(S.byId, r).shown, NAME); }
+});
+
+test('F10: countdown to candle lighting and Shabbat Mode, which quiets the chrome only while the page is open', async () => {
+  const cls = new Set();
+  const prevDoc = globalThis.document.documentElement;
+  globalThis.document.documentElement = { classList: { toggle: (c, on) => (on ? cls.add(c) : cls.delete(c)), remove: (c) => cls.delete(c) } };
+  try {
+    const { root, ctx, store } = mk({ init: { 'calendar.prefs': { locationId: 'new-york' } } });
+    const un = await mount(root, ctx);
+    const c = root.querySelector('[data-countdown]');
+    assert.ok(c, 'countdown shown when a location is set');
+    assert.match(c.textContent, /^Candle lighting in 1 day, \d+ hours?, \d+ minutes?\.$|^Candle lighting in 1 day, \d+ hours?\.$/);
+    assert.equal(cls.has('alef-shabbat-quiet'), false);
+    await root.querySelector('#sh-quiet').click();
+    assert.equal(cls.has('alef-shabbat-quiet'), true); assert.equal(store.m['service.shabbatMode'], true);
+    un();
+    assert.equal(cls.has('alef-shabbat-quiet'), false, 'leaving the page restores the chrome');
+    const none = mk(); await mount(none.root, none.ctx);
+    assert.equal(none.root.querySelector('[data-countdown]'), null, 'no location: no countdown, no invented time');
+  } finally { globalThis.document.documentElement = prevDoc; }
+});
+
+test('F2: a festival in the coming week is named from the calendar, with the prayers Aleph holds and what it does not hold yet', async () => {
+  const { root, ctx } = mk();
+  ctx.now = () => new Date('2026-12-01T15:00:00Z'); // Hanukkah 2026 begins the evening of 4 December
+  await mount(root, ctx);
+  const sec = root.querySelector('[data-festival-week]');
+  assert.ok(sec);
+  assert.match(sec.attrs['data-festival-week'], /hanukkah/);
+  assert.match(sec.textContent, /Hanukkah begins the evening of 2026-12-04/);
+  assert.match(sec.textContent, /Hanukkah: blessing to light the candles/);
+  const quiet = mk(); await mount(quiet.root, quiet.ctx); // 12 November 2026: no festival within a week
+  assert.equal(quiet.root.querySelector('[data-festival-week]'), null);
+});

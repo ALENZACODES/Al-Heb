@@ -22,7 +22,13 @@
     "cue": { "entry": "kaddish-1", "line": 2 }, "response": [{ "entry": "kaddish-1", "word": 5 }, { "entry": "kaddish-1", "line": 3 }] },
   { "id": "kaddish-amen", "title": "Kaddish: Amen", "kind": "response",
     "how": "Several Kaddish lines end with an invitation to say Amen. Answer when the line ends.",
-    "cue": { "entry": "kaddish-1", "line": 6 }, "response": [{ "entry": "kaddish-1", "word": 5 }] }
+    "cue": { "entry": "kaddish-1", "line": 6 }, "response": [{ "entry": "kaddish-1", "word": 5 }] },
+  { "id": "gadlu", "title": "Gadlu: The Answer", "kind": "response",
+    "how": "When the ark is open, the leader says Gadlu and the congregation answers with Lecha (the service guide names the leader's line and the congregation's line).",
+    "cue": { "entry": "gadlu", "line": 1 }, "response": [{ "entry": "lecha-hashem", "line": 1 }] },
+  { "id": "kedushah", "title": "Kedushah: The Three Verses", "kind": "together",
+    "how": "During the leader's repetition of the Amidah the congregation joins the Kedushah responses (the service guide). Aleph does not hold the leader's lines between the verses yet, so hear the first word, then come in with the three verses.",
+    "cue": { "entry": "kedushah-kadosh", "word": 1 }, "response": [{ "entry": "kedushah-kadosh", "line": 1 }, { "entry": "kedushah-baruch", "line": 1 }, { "entry": "kedushah-yimloch", "line": 1 }] }
  ],
  "home": [
   { "id": "candles", "title": "Light the Candles", "when": "Before sunset on Friday", "entries": ["candle-shabbat"] },

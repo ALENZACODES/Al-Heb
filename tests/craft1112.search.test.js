@@ -40,3 +40,8 @@ test('M-02: short Latin queries do not flood results with transliteration prefix
   assert.equal(peace[0].lemma, 'שלום');
   for (const e of searchWords(all, 'sh', 15, tl)) assert.equal(isTranslitHit(e, 'sh', tl), false);
 });
+
+test('search count is singular for one result ("1 result", not "1 results")', () => {
+  const src = readFileSync(new URL('../src/shell/search.view.js', import.meta.url), 'utf8');
+  assert.equal((src.match(/total === 1 \? '1 result' : t\('search\.count', \{ n: total \}\)/g) || []).length, 2);
+});

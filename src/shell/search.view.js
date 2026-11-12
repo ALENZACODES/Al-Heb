@@ -48,7 +48,7 @@ export function mount(root, ctx) {
     const total = pages.length + ls.length + ws.length;
     out.append(...[group(t('search.pages'), pages), group(t('search.letters'), ls), group(t('search.words'), ws)].filter(Boolean));
     if (!total && loadedWords >= 4) out.append(h('p', {}, t('search.none')));
-    status.textContent = error ? t('search.error') : (loadedWords < 4 ? t('search.loading') + ' ' + t('search.count', { n: total }) : t('search.count', { n: total }));
+    status.textContent = error ? t('search.error') : (loadedWords < 4 ? t('search.loading') + ' ' + (total === 1 ? '1 result' : t('search.count', { n: total })) : (total === 1 ? '1 result' : t('search.count', { n: total })));
     try { const u = '#/search' + (q ? '?q=' + encodeURIComponent(q) : ''); if (location.hash !== u) history.replaceState(null, '', u); } catch { /* ignore */ }
   }
   let timer = 0;

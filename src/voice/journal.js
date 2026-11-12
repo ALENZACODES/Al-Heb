@@ -52,3 +52,12 @@ export function memoryJournal() {
     remove: async (id) => { const i = rows.findIndex((r) => r.id === id); if (i >= 0) rows.splice(i, 1); return { ok: i >= 0 }; },
   };
 }
+
+/** Delete the whole journal database (Settings: Delete all my data). Resolves true when a database was asked to go, false without IndexedDB. */
+export function deleteJournal(idbOverride) {
+  const idb = idbOverride !== undefined ? idbOverride : globalThis.indexedDB;
+  if (!idb || typeof idb.deleteDatabase !== 'function') return Promise.resolve(false);
+  return new Promise((resolve) => {
+    try { const r = idb.deleteDatabase(DB_NAME); r.onsuccess = () => resolve(true); r.onerror = () => resolve(false); r.onblocked = () => resolve(true); } catch { resolve(false); }
+  });
+}

@@ -5,6 +5,7 @@
 import { h, heSpan, audioButton } from '../shell/ui.js';
 import { playWithState, audioAccess } from '../shell/audio-access.js';
 import { titleCase } from '../shell/title-case.js';
+import { isAudioFree } from '../shell/audiofree.js';
 import { congregationOf } from '../pronunciation/forTradition.js';
 import { loadCorpus } from '../corpus/corpus.js';
 import { loadJSON } from '../curriculum/data.js';
@@ -106,7 +107,7 @@ export async function mount(root, ctx) {
     l.words.forEach((w, k) => {
       if (k) kids.push(' ');
       const id = `${l.entryId}-w${w.n}`;
-      kids.push(hasFile('word', id)
+      kids.push(!isAudioFree(ctx) && hasFile('word', id)
         ? h('button', { type: 'button', class: 'pp-w', lang: 'he', 'data-word': id, 'aria-label': `Play word ${w.n}`, onclick: (e) => playWithState(ctx, e?.target, 'word', id, { tradition, text: w.spoken }) }, w.shown)
         : h('span', {}, w.shown));
     });

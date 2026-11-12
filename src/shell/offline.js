@@ -71,7 +71,7 @@ export const ON_DEMAND_GROUPS = Object.freeze([
   { id: "od-videos", label: "Letter videos", test: /^(assets\/videos|data\/videos)\//, approxMB: 2 },
   { id: "od-lab", label: "Brain Lab", test: /^(src\/lab|data\/lab)\//, approxMB: 0.06 },
   { id: "od-retention", label: "Streak, gems, hearts and practice league", test: /^src\/retention\//, approxMB: 0.1 },
-  { id: "od-service", label: "Follow the Service and the Shabbat Companion", test: /^(src\/service\/|data\/service\/companion\.json$)/, approxMB: 0.13 }, // lane 5: Shabbat Companion data
+  { id: "od-service", label: "Follow the Service, the Shabbat Companion and Prayer Practice", test: /^(src\/service\/|data\/service\/companion\.json$)/, approxMB: 0.1 }, // lane 5: Shabbat Companion data
   { id: "od-awards", label: "Awards gallery and certificate", test: /^src\/awards\/(?:gallery\.view|proof-font|certificate|icons)\.js$/, approxMB: 0.11 },
   { id: "od-torahreader", label: "Torah reader page and its Hebrew recording index", test: /^src\/(torahreader\/torahreader\.view|shell\/torah-he-index)\.js$/, approxMB: 0.05 },
   { id: "od-preview-pages", label: "Class track, pronunciation comparison, Sound like a local, the calendar, the privacy screen, Sounds, Scan a photo, Word Sprint and Timed read-aloud (route code)", test: /^src\/(classtrack\/classtrack|pronunciation\/compare|israel\/israel|curriculum\/calendar|shell\/privacy|photo\/scan|pronunciation\/sounds|sprint\/sprint|timedread\/timedread)\.view\.js$/, approxMB: 0.09 },
@@ -87,6 +87,7 @@ export const ON_DEMAND_GROUPS = Object.freeze([
   { id: "od-vocab-code", label: "Vocabulary browser (preview-route code)", test: /^src\/vocab\//, approxMB: 0.06 },
   { id: "od-talk", label: "Talk page and its stored lines", test: /^(src\/talk\/|data\/talk\/)/, approxMB: 0.12 },
   { id: "od-speak-code", label: "Say it page and speaking scores (preview-route code)", test: /^src\/speak\/(speak|score|check)\.js$/, approxMB: 0.08 },
+  { id: "od-voice", label: "Speaking Studio (record and compare, shadowing, voice journal)", test: /^src\/voice\//, approxMB: 0.04 }, // siddur-speaking lane
   { id: "od-music", label: "Game music player, Songs page, English read-aloud and the playing state", test: /^src\/(audio\/(synth-music|sting)|shell\/(speak-english|play-state)|listen\/songs\.view)\.js$/, approxMB: 0.04 },
   { id: "od-day-code", label: "Calendar day pages, add-to-calendar box, morning screen, intermediate lessons, practical units, the Curriculum page and Israel units (route code)", test: /^(src\/curriculum\/(day\.view|calendar\.day|calendar\.addpanel|calendar\.quickadd|intermediate\.view|practical\.view|practical-progress|practical-written|israel-units|israel-units\.view|path\.view|path\.model)\.js|src\/morning\/morning\.view\.js|assets\/css\/curriculum\.css)$/, approxMB: 0.11 },
   { id: "od-learn-practice", label: "Learn practice screens (review, loanwords, drills and dialogues)", test: /^src\/curriculum\/(review|loanwords|spotit|checkpoint|dialogues|ladder|fade|gender|scaffold)\.view\.js$/, approxMB: 0.07 },

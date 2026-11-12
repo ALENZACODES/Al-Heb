@@ -249,7 +249,8 @@ export function buildStamp(b = BUILD) {
 
 // ---------- one ring per service (CODER-100 F8): every denominator from TOTALS.service ----------
 /** Store keys the ring reads: Prayer Practice (src/service/practice.model.js) and the Shabbat Companion's practice marks. */
-export const SERVICE_KEYS = Object.freeze({ practice: 'service.practice', companion: 'service.companion' });
+const SERVICE_PRACTICE_KEY = 'service.practice', SERVICE_COMPANION_KEY = 'service.companion';
+export const SERVICE_KEYS = Object.freeze({ practice: SERVICE_PRACTICE_KEY, companion: SERVICE_COMPANION_KEY });
 /** Lines, distinct words and prayers Aleph holds for one service (null for an unknown service). */
 export const serviceTotals = (orderId) => { const t = obj(TOTALS.service)[orderId]; return t && typeof t === 'object' ? t : null; };
 /**

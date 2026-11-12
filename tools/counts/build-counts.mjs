@@ -76,7 +76,7 @@ export async function computeTotals(root = ROOT) {
 
 /** Lines, distinct words and prayers per service order, plus its gap count. {} when the files are absent. */
 export async function serviceTotals(root = ROOT) {
-  if (!fs.existsSync(path.join(root, 'data/service/orders.json')) || !fs.existsSync(path.join(root, 'data/corpus/registry.json'))) return {};
+  if (!['data/service/orders.json', 'data/corpus/registry.json', 'src/progress/decode.js'].every((f) => fs.existsSync(path.join(root, f)))) return {};
   const { gradeLines, gradeWords } = await import(pathToFileURL(path.join(root, 'src/progress/decode.js')).href);
   const orders = rd(root, 'data/service/orders.json').orders || {};
   const by = new Map(list(rd(root, 'data/corpus/registry.json'), 'entries').map((e) => [e.id, e]));

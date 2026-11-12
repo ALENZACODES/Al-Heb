@@ -136,6 +136,7 @@ export async function mount(root, ctx) {
     const l = line();
     const out = [...picker()];
     out.push(h('div', { class: 'vs-row' }, audioButton(h, ctx, { kind: l.clip.kind, id: l.clip.id, tradition, text: l.spoken, label: 'Play the model', buttonId: 'vs-model' })));
+    if (isAudioFree(ctx)) out.push(h('p', { role: 'note' }, AUDIO_FREE_NOTE, ' The model clip is not played here. Your recording, both waveforms and the machine guess are shown on screen.'));
     if (!recorder.supported) out.push(h('p', { role: 'note' }, ERR.unsupported, ' You can still listen to the model and use the machine check if your browser has one.'));
     else {
       out.push(h('div', { class: 'vs-row' },

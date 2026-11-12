@@ -10,8 +10,9 @@ export const REFILL_ROUTE = '#/learn?review=1&refill=1';
 /** Routes where hearts never apply (reading, prayer, Torah, songs, games, first day, placement). */
 const EXEMPT = [/^\/torahread/, /^\/torah/, /^\/read(\/|$)/, /^\/pray/, /^\/siddur/, /^\/service/, /^\/morning/, /^\/listen/, /^\/songs/, /^\/games/, /^\/lab/, /^\/firstday/, /^\/firstwin/, /^\/placement/, /^\/welcome/];
 const pathOf = (hash) => String(hash || '').replace(/^#/, '').split('?')[0];
-/** True on a lesson route (#/learn?lesson=...) that is not a review. */
-export const isLessonHash = (hash) => /^#\/learn\?/.test(String(hash || '')) && /[?&]lesson=/.test(hash) && !/[?&]review=1/.test(hash);
+/** True on a lesson route that is not a review: #/learn?lesson=... (whole, short parts, Test out) and #/intermediate/<id> (I8: every
+ *  lesson type takes hearts the same way; the rules page, src/coursemap/rules.js, lists the same kinds). */
+export const isLessonHash = (hash) => (/^#\/learn\?/.test(String(hash || '')) && /[?&]lesson=/.test(hash) && !/[?&]review=1/.test(hash)) || /^#\/intermediate\/[^/?]+/.test(String(hash || ''));
 
 /** Are hearts in force? Off in calm mode, when switched off, before the 3rd finished lesson, and on exempt routes. */
 export function heartsOn(rec, { calm = false, hash = '' } = {}) {

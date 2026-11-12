@@ -53,9 +53,10 @@ export function xpGoal(ret, now = Date.now()) {
 export const DAILY_GOALS = Object.freeze([5, 10, 15, 20, 30]);
 /** Minutes goal from setup (onboarding.v1.dailyGoal); 5 when unset or unknown. */
 export const normalizeDailyGoal = (v) => (DAILY_GOALS.includes(v) ? v : 5);
-/** Whole minutes studied today, from the streak record (the same number the header shows). */
+/** Whole minutes studied today, from the streak record (the same number the header shows). I6: measured active time only
+ *  (time on a learning page with a tap or key in the last minute); finishing a lesson completes the streak day but adds no minutes. */
 export function minutesToday(streakRaw, now = Date.now()) {
-  try { return Math.max(0, Math.floor((projectStreak(streakRaw, now).todaySeconds || 0) / 60)); } catch { return 0; }
+  try { return Math.max(0, Math.floor((projectStreak(streakRaw, now).activeSeconds || 0) / 60)); } catch { return 0; }
 }
 /** Minutes today against the setup goal: header ring, Learn card ring. */
 export function minutesGoal(streakRaw, goalRaw, now = Date.now()) {

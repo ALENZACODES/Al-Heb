@@ -2,7 +2,7 @@
 import { lessons } from "./lessons.js";
 import { el, heText, replaceKeepingFocus } from "./dom.js";
 import { loadContent } from "./content.js";
-import { buildCheckpoint, gradeCheckpoint, stageFor } from "./checkpoint.js";
+import { buildCheckpoint, gradeCheckpoint, stageFor, PASS_RATIO } from "./checkpoint.js";
 import { loadState, taughtFromCompleted, saveCheckpoint } from "./actions.js";
 import { hintPanel } from "./hint-ui.js";
 
@@ -51,7 +51,7 @@ export function mountCheckpoint(root, ctx, seed0 = 1) {
       if (!alive) return;
       replaceKeepingFocus(wrap, h1,
         el("h2", {}, res.passed ? "Checkpoint passed" : "Checkpoint: more practice needed"),
-        el("p", {}, `${res.right} of ${res.total} right (${Math.round(res.ratio * 100)}%). The pass mark is 80%.`),
+        el("p", {}, `${res.right} of ${res.total} right (${Math.round(res.ratio * 100)}%). The pass mark is ${Math.ceil(res.total * PASS_RATIO - 1e-9)} of ${res.total} (${res.total ? Math.round((Math.ceil(res.total * PASS_RATIO - 1e-9) / res.total) * 100) : 80}%).`),
         res.weakSets.length ? el("p", {}, "Look-alike groups to practice: " + res.weakSets.map((id) => (c.confusables.sets.find((s) => s.id === id)?.letters || []).map((l) => L(l)?.name || l).join("/")).join("; ") + ".") : null,
         res.wrongLetters.length ? el("div", {}, el("p", {}, "Scan drills for the ones you missed:"), el("div", { class: "row" }, ...res.wrongLetters.map((l) => el("a", { class: "btn secondary", href: `#/learn?spotit=${l}` }, `Spot It: ${L(l)?.name || l}`)))) : null,
         el("p", { class: "muted" }, "Missed letters were sent back to your review queue; correct ones counted as a good review."),

@@ -4,6 +4,11 @@
  "entries": [
   {
    "date": "2026-11-12",
+   "hash": "f7403e66f",
+   "text": "Games and books lane: per-idea table (docs/plan/CODER-100-games-books.md), the listening games and book word clips in the Deaf and hard-of-hearing inventory, Brain Lab warm-up…"
+  },
+  {
+   "date": "2026-11-12",
    "hash": "63050f4ed",
    "text": "Full-suite fixes for lane platform: the lesson badge files are named verified.js so the loops badge catalogue check stays clean, the four new store keys and the card answer log…"
   },
@@ -41,6 +46,21 @@
    "date": "2026-11-12",
    "hash": "6563d9042",
    "text": "Printable worksheet (J4): #/worksheet builds a practice sheet for the learner's current lesson (or any lesson picked) from the lesson data: copy the letters, copy the words, match…"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "6d358b1e5",
+   "text": "Lane games-books wiring: shorter route and privacy rows, offline group for the Torah study pages, Word Sprint's model and the known-word validator fetched on first use (first…"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "ff7387828",
+   "text": "Torah: This Week's Parashah (the calendar's portion, its aliyot linked into the reader, a weekly goal and self-marked progress), Torah Search by Hebrew word or by the forms the…"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "317de21d7",
+   "text": "Little books: difficulty label on every book (running words, different words, share known from the learner's own review cards), new words underlined with the dictionary's English…"
   },
   {
    "date": "2026-11-12",
@@ -86,6 +106,16 @@
    "date": "2026-11-12",
    "hash": "540018dc7",
    "text": "Accent run 8 list: the Ashkenazi rows of the festival-day Kiddush verses"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "ae212763e",
+   "text": "New games: Root Builder (answers only from the app's root families and verb list), Sixty-Second Sprint (lesson words, combo multiplier), Word Finder by ear and Listen and Spot…"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "8daa969b4",
+   "text": "Games library: one count of every game on the games page (186, from the counts module), skill and played/mastered filters, best and last score on every card, practice links, level…"
   },
   {
    "date": "2026-11-12",
@@ -171,36 +201,6 @@
    "date": "2026-11-12",
    "hash": "dc1a2208a",
    "text": "Performance budget (J8): the precache build prints the first-install size and the installed JavaScript size and exits with an error when the first install is over 3.95 MiB or its…"
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "fe4b5cc3a",
-   "text": "Change list on About and What's New page (I10, J10): tools/release/changelog.mjs writes data/platform/changelog.json from the git history (date, hash, first sentence of each…"
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "7b9182789",
-   "text": "Fill list for the two optional whole-prayer rows with no clip in any tradition (Hallel 118:1-4, the festival-day Kiddush verses), Chirp 3 HD, reviewed as usual"
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "81062b872",
-   "text": "Shabbat Companion: festivals this week from the calendar, candle-lighting countdown and Shabbat Mode, Gadlu and Kedushah join-in drills (F2, F10, F6)"
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "c0c82c9e3",
-   "text": "Listening Practice route: line tools (speed, word-by-word step, three-tradition compare, words-with-audio count), fill-the-gap from word clips, dictation with an on-screen Hebrew…"
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "23d233c4a",
-   "text": "Prayer Practice page (#/prayer-practice): line tutor for every service line, word decks per service with words known, fluency ladder per prayer, parts roadmap from the gap list…"
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "6d5ceabc6",
-   "text": "Helpful 404 (I9): an unknown address lists up to three close pages from the route table (close spelling, longer form or a common word such as lessons or prayers) and a Search link."
   }
  ]
 }

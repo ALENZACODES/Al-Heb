@@ -13,6 +13,7 @@ import { KEYS, XP_GOALS, xpGoal, streakNow, repairOffer, reviewCardsThisWeek, re
 import { save as saveRetention, load as loadRetention } from '../../src/retention/state.js';
 import { setGoal } from '../../src/retention/xp.js';
 import { repairStreak } from '../../src/retention/streak.js';
+import { streakShort } from '../../src/coursemap/rules.js'; // H8: the one streak rule, shared with the Shop and #/app-rules
 
 export const CSS = `
 .lp { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--gap, 1rem); max-inline-size: 100%; overflow-wrap: anywhere; }
@@ -66,7 +67,7 @@ export function mount(root, ctx) {
     // streak: the one streak (the streak record), and the one restore rule: free, offered only while the streak is broken
     const rhythmCard = showRhythm ? h('section', { class: 'card', 'aria-labelledby': 'lp-h-rhythm' }, h('h2', { id: 'lp-h-rhythm' }, 'Your streak'),
       h('p', {}, st.count > 0 ? `${daysText(st.count)} in a row${st.activeToday ? ', including today' : st.restToday ? ' (resting today)' : ''}.` : st.best > 0 ? 'No streak running today. A new one starts the next time you study for 5 minutes.' : 'No streak yet. Five minutes of study starts one.'),
-      h('p', { class: 'muted' }, `Best streak: ${daysText(st.best)}. Friday, Shabbat and holidays never end it. A streak that stopped can be brought back for free for two days, here or in the shop.`),
+      h('p', { class: 'muted', 'data-rule': 'streak' }, `Best streak: ${daysText(st.best)}. ${streakShort().join(' ')} `, h('a', { href: '#/app-rules?section=streak' }, 'Streak rules')),
       offer ? h('button', { type: 'button', class: 'btn', id: 'lp-repair', onclick: () => {
         const out = repairStreak(store.get(KEYS.streak), loadRetention(store, now()), now());
         if (out.ok) { store.set(KEYS.streak, out.streak); saveRetention(store, () => out.rec, now()); status.textContent = `Your ${offer.prev}-day streak is back. It was free.`; }

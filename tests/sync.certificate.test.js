@@ -75,7 +75,7 @@ test('wording: says what it certifies and what it cannot prove; no verified, acc
   const words = [COPY.title, COPY.what('Dana'), COPY.limits, COPY.unscored, COPY.link, COPY.checking].join(' ');
   const view = readFileSync(new URL('../src/sync/certificate.view.js', import.meta.url), 'utf8');
   for (const t of [words, view]) assert.ok(!/verif|accredit|endorse|official|guarantee/i.test(t), 'no overclaiming words');
-  assert.match(COPY.what(''), /at least 70% of the lesson's quick check right on the first try/);
+  assert.match(COPY.what(''), /70% of the lesson's quick check, rounded to the nearest whole question, right on the first try/);
   assert.match(COPY.what(''), /first-try score/); assert.match(COPY.what(''), /own records/);
   assert.match(COPY.limits, /no server and no signature/); assert.match(COPY.limits, /not a proctored assessment/); assert.match(COPY.limits, /A teacher can check the rule and each lesson/);
   // the same limit the Awards page states about the pass mark

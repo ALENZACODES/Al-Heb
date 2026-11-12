@@ -7,7 +7,8 @@
  *
  *   v: 2                  present once the engagement timer has written the record (migration marker, see docs/morning/MIGRATION.md)
  *   count   (= currentStreak)       best (= longestStreak)       last (= lastCompletedDate, local "YYYY-MM-DD")
- *   todayDate, todaySeconds         engaged seconds accrued on todayDate (reset at rollover)
+ *   todayDate, todaySeconds         engaged seconds accrued on todayDate (reset at rollover); raised to GOAL_SECONDS when the day completes
+ *   activeSeconds                   I6: the active seconds actually measured on todayDate, never raised by a finished lesson (the minutes shown)
  *   frozenDates: []                 days classified as resting (Shabbat / Yom Tov with freeze on, or declared in Progress)
  *   doneDates: []                   last 30 completed days (for the 7-day strip)
  *   freeze: boolean                 freeze Shabbat/Yom Tov days (default ON in observant mode, opt-in otherwise)
@@ -76,6 +77,7 @@ export function normalizeRecord(raw) {
     v: r.v === STREAK_V ? STREAK_V : undefined,
     count: natural(r.count), best: Math.max(natural(r.best), natural(r.count)), last: isISO(r.last) ? r.last : null,
     todayDate: isISO(r.todayDate) ? r.todayDate : null, todaySeconds: Math.min(natural(r.todaySeconds), 86400),
+    ...(r.activeSeconds === undefined || r.activeSeconds === null ? {} : { activeSeconds: Math.min(natural(r.activeSeconds), 86400) }),
     frozenDates: isoList(r.frozenDates, KEEP_FROZEN), doneDates: isoList(r.doneDates, KEEP_DONE),
     freeze: r.freeze === true, mode: OBSERVANCE_MODES.includes(r.mode) ? r.mode : "reform",
   };
@@ -98,7 +100,9 @@ export function projectStreak(raw, now, extraRest) {
   const restToday = isFrozen(rec, today, extra);
   const activeToday = rec.last === today;
   const seconds = rec.todayDate === today ? rec.todaySeconds : 0;
-  const base = { best: rec.best, last: rec.last, activeToday, restToday, goal: GOAL_SECONDS, todaySeconds: activeToday ? Math.max(seconds, GOAL_SECONDS) : seconds, restKind: restToday ? restKind(today, rec.mode) : null };
+  // I6: activeSeconds is measured time only. A record written before it existed falls back to todaySeconds (that day only).
+  const active = rec.todayDate === today ? (rec.activeSeconds ?? rec.todaySeconds) : 0;
+  const base = { best: rec.best, last: rec.last, activeToday, restToday, goal: GOAL_SECONDS, todaySeconds: activeToday ? Math.max(seconds, GOAL_SECONDS) : seconds, activeSeconds: active, restKind: restToday ? restKind(today, rec.mode) : null };
   if (!rec.last || rec.count === 0) return { ...base, count: 0, broken: false };
   if (activeToday) return { ...base, count: rec.count, broken: false };
   const gap = dayNum(today) - dayNum(rec.last);
@@ -120,14 +124,16 @@ export function rollover(raw, now, extraRest) {
     for (let i = 1; i < Math.min(gap, 400); i++) { const d = addDaysISO(rec.last, i); if (isFrozen(rec, d, extraRest ? new Set(extraRest) : null)) add.push(d); }
     out.frozenDates = isoList([...rec.frozenDates, ...add], KEEP_FROZEN);
   }
-  if (rec.todayDate !== today) { out.todayDate = today; out.todaySeconds = 0; }
+  if (rec.todayDate !== today) { out.todayDate = today; out.todaySeconds = 0; out.activeSeconds = 0; }
   return toStored(out);
 }
 
-/** Add engaged seconds for today (never completes the day by itself; see completeDay). */
-export function setTodaySeconds(raw, now, seconds) {
+/** Add engaged seconds for today (never completes the day by itself; see completeDay). `active` (I6): the measured active seconds. */
+export function setTodaySeconds(raw, now, seconds, active) {
   const rec = rollover(raw, now);
-  return { ...rec, todaySeconds: Math.min(Math.max(natural(seconds), rec.todaySeconds), 86400) };
+  const out = { ...rec, todaySeconds: Math.min(Math.max(natural(seconds), rec.todaySeconds), 86400) };
+  if (active !== undefined) out.activeSeconds = Math.min(Math.max(natural(active), rec.activeSeconds || 0), 86400);
+  return out;
 }
 
 /** Mark today complete (>= GOAL_SECONDS). On a frozen day the count is unchanged (a rest day neither adds nor breaks). */

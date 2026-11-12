@@ -13,6 +13,7 @@
 import { G4_ROUTES } from './g4-routes.js'; // lane 4 (g4)
 import { PLATFORM_ROUTES } from './platform-routes.js'; // lane platform
 import { GB_ROUTES } from './gb-routes.js';
+import { COURSE_ROUTES } from './course-routes.js'; // course lane: course map, checkpoints, mixed review, rules
 export const ROUTES = [
   { name: 'home',     pattern: '/',               module: './home.view.js', tier: 'v0',                      nav: 'nav.home',     title: 'Home', owner: 'lane8' },
   { name: 'learn',    pattern: '/learn',          module: '../curriculum/learn.view.js', tier: 'v0',         nav: 'nav.learn',    title: 'Learn', owner: 'lane1' },
@@ -258,6 +259,7 @@ export const ROUTES = [
   { name: 'readlab-tool', pattern: '/readlab/:tool', module: '../readlab/readlab.view.js', title: 'Reading Tools', owner: 'reading', paramQuery: { tool: 'tool' } },
   { name: 'trope-families', pattern: '/trope/families', module: '../trope/practice.view.js', title: 'Trope Families', owner: 'lane6', group: 'learn', quick: 'nav.route.trope-families' },
   { name: 'trope-family', pattern: '/trope/families/:id', module: '../trope/practice.view.js', title: 'Trope Families', owner: 'lane6', paramQuery: { id: 'id' } },
+  ...COURSE_ROUTES,
   { name: 'trope-aliyah', pattern: '/trope/aliyah', module: '../trope/practice.view.js', title: 'Trope Practice by Aliyah', owner: 'lane6', group: 'learn', quick: 'nav.route.trope-aliyah', query: { sec: 'aliyah' } },
   ...PLATFORM_ROUTES, // lane platform (12 Nov): What's New, My Data, Mastery Map, Cram, My Week, Keyboard Shortcuts
   ...GB_ROUTES, // lane games-books

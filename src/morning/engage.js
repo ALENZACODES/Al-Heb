@@ -14,7 +14,8 @@ export const PERSIST_MS = 10000;
 /** Routes that count as a learning activity: lessons, review, ladder/fade drills, prayer/Torah read-aloud, sprints. */
 const COUNTED = [/^\/learn(\b|$)/, /^\/ladder/, /^\/fade/, /^\/spotit\//, /^\/checkpoint/, /^\/loanwords/, /^\/dialogues/, /^\/gender/, /^\/scaffold/, /^\/read(\/|$)/, /^\/torahread/, /^\/sounds/, /^\/vocab/, /^\/words\/trace/, /^\/letters/, /^\/classtrack/, /^\/israel/, /^\/sprint/, /^\/timedread/, /^\/service/, /^\/lab(\/|$)/, /^\/library(\/|$)/,
   // The first lesson is a lesson: time in "Your First 10 Minutes" (and its word-builder sequel) counts toward the day, like /learn.
-  /^\/firstday(\/|$)/, /^\/firstwin(\/|$)/, /^\/placement(\/|$)/];
+  /^\/firstday(\/|$)/, /^\/firstwin(\/|$)/, /^\/placement(\/|$)/,
+  /^\/mixed-review$/, /^\/five-minutes$/, /^\/checkpoints$/]; // course lane: practice sets and checkpoint tests
 /** @param {string} hash e.g. "#/learn?review=1" */
 export function isCountedRoute(hash) {
   const p = String(hash || "").replace(/^#/, "").split("?")[0];
@@ -56,7 +57,7 @@ export function createEngagement(io, opt = {}) {
     st.lastPersist = t;
     if (sec === st.lastSavedSec && !force) return;
     st.lastSavedSec = sec;
-    rec = setTodaySeconds(rec, t, next);
+    rec = setTodaySeconds(rec, t, next, sec); // I6: `sec` is the measured active time; `next` may be raised to the goal by a finished lesson
     let completed = false;
     if (next >= goal && rec.last !== dayKey(t)) { const before = rec; rec = completeDay(rec, t, extraRest()); completed = rec.last === dayKey(t) && before.last !== rec.last; }
     io.save(rec);
@@ -79,7 +80,7 @@ export function createEngagement(io, opt = {}) {
       st.lastT = t; st.day = dayKey(t);
       const rec = rollover(io.load(), t, extraRest());
       const p = projectStreak(rec, t, extraRest());
-      st.ms = (rec.todayDate === dayKey(t) ? Math.max(rec.todaySeconds, p.activeToday ? goal : 0) : 0) * 1000;
+      st.ms = (rec.todayDate === dayKey(t) ? p.activeSeconds : 0) * 1000; // I6: resume from measured time, not the goal a lesson raised
       st.lastSavedSec = seconds(); st.lastPersist = t;
       io.save(rec);
     },

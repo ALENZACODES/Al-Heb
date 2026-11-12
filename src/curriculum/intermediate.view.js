@@ -15,11 +15,12 @@ import { applyOutcomesToCards, wordCardId, wordAudioId } from "./progress.js";
 import { settingVoice, onKeys } from "./ex-ui.js";
 import { audioButton } from "../shell/audio-access.js";
 import * as A from "./intermediate-adapter.js";
-import { sequenceExercises, fairProduceOptions, createSession, feedbackText, fireFeedback } from "./exercises.session.js";
-import { passed as passedCheck, passMark, passRuleText } from "./passmark.js";
+import { sequenceExercises, fairProduceOptions, createSession, feedbackText, fireFeedback, skipNotice } from "./exercises.session.js";
+import { passed as passedCheck, passMark, passRuleText, CHECKS_KEY, withCheck } from "./passmark.js";
 import { progressBar, summaryNode } from "./exercises.ui.js";
 import { respell } from "../pronunciation/forTradition.js";
 import { uiEnglish } from "../shell/names.js";
+import { signalRimon } from "../shell/rimon-events.js";
 
 /** English shown to the learner honours the writeGodAsGd setting (display only; grading uses the raw data). */
 const G = (ctx, text) => (typeof text === "string" ? uiEnglish(ctx, text) : text);
@@ -209,6 +210,10 @@ export function whyLine(ex, lesson, trad) {
   if (ex.type === "order") return `${ex.he} means "${ex.en}".`;
   if (ex.type === "register") return `"${ex.en}" is ${ex.answer}.`;
   if (ex.type === "match") return ex.pairs.map((p) => `${p.he} = ${p.en}`).join("; ") + ".";
+  // C4: the exercise's own data, for the types that had no line yet
+  if (ex.type === "recall" && ex.he && ex.en) return `${ex.he} means "${ex.en}".`;
+  if (ex.type === "gender" && ex.m && ex.f && ex.en) return `${ex.m} is the masculine form and ${ex.f} the feminine form of "${ex.en}".`;
+  if (ex.type === "fade" && ex.en) return `The line means "${ex.en}".`;
   return "";
 }
 const exLabel = (e) => TYPE_LABEL[e.type] + ": " + (e.he || e.en || e.line || e.m || e.task || e.id);
@@ -262,7 +267,7 @@ function mountLesson(root, ctx, id) {
     const mine = prog.lessons[lesson.id] || { results: {}, done: null };
     const exs = sequenceExercises(lesson.exercises), corpus = content.corpus;
     const unmet = lesson.prerequisites.filter((p) => !st.completed[p]);
-    let results = { ...mine.results }, session = null, t0 = 0, cardsUpdated = 0, shown = 0;
+    let results = { ...mine.results }, session = null, t0 = 0, cardsUpdated = 0, shown = 0, skipNote = "";
     let started = false, base = 0;
 
     const begin = () => {
@@ -285,6 +290,7 @@ function mountLesson(root, ctx, id) {
         el("ul", { class: "alef-items" }, ...lesson.words.map((w, i) => el("li", { class: "alef-item" }, heText(w.he, "alef-he alef-word"),
           el("div", { class: "alef-item-body" }, el("span", {}, G(ctx, w.en)), el("div", { class: "alef-pron muted", "data-pron": "1" }, pronLine(w, trad))),
           el("div", { class: "alef-item-actions" }, playBtn(ctx, "word", wordAudioId(lesson.id, i + 1), `Listen to ${G(ctx, w.en)}`, note, lesson)))))),
+      (() => { const gs = el("div", { class: "alef-spotlight-slot" }); import("../coursemap/spotlight.js").then((m) => alive && m.mountSpotlight(gs, lesson.id)).catch(() => {}); return gs; })(), // C9: grammar spotlight, on demand
       note,
       el("div", { class: "row alef-actions" }, el("button", { type: "button", class: "btn", id: "alef-int-start", disabled: exs.length ? null : "", onclick: () => { started = true; offKeys(); begin(); show(); } }, mine.done ? "Practice again" : Object.keys(results).length ? "Continue" : "Start exercises"),
         el("a", { class: "btn secondary", href: "#/intermediate" }, "All intermediate lessons")),
@@ -296,7 +302,7 @@ function mountLesson(root, ctx, id) {
     }
 
     /** Stable counts: `first` exercises answered once (never grows), `extra` retries queued so far, `retried` retries done. */
-    const counts = () => { const p = session.progress(), retried = session.stats().retried; return { first: shown + p.resolved - retried, extra: p.total - base, retried }; };
+    const counts = () => { const p = session.progress(), retried = session.stats().retried + p.retriesSkipped; return { first: shown + p.resolved - retried, extra: p.total - base, retried }; }; // a skipped retry counts as handled (I5)
 
     function show() {
       if (!alive) return;
@@ -318,10 +324,12 @@ function mountLesson(root, ctx, id) {
         if (!retry) { delete results[ex.id]; await persist(); }
         show();
       } }, "Undo");
-      const skip = el("button", { type: "button", class: "btn secondary", "data-act": "skip", onclick: () => { if (!answered) { session.skip(); show(); } } }, "Skip");
+      const skip = el("button", { type: "button", class: "btn secondary", "data-act": "skip", onclick: () => { if (!answered) { skipNote = skipNotice(session.skip()); show(); } } }, "Skip");
+      const skippedP = skipNote ? el("p", { class: "muted alef-skipped", role: "status", "data-skipped-note": "" }, skipNote) : null; skipNote = "";
       const finish = async (correct) => {
         if (answered) return; answered = true;
         const r = session.answer(!!correct);
+        signalRimon(correct ? "correct" : "wrong", { source: "lesson", questionId: ex.id, retry }); // I8: the same answer event as the quick check, so hearts work the same way
         fireFeedback(ctx, !!correct);
         sec.setAttribute("data-result", correct ? "right" : "wrong");
         status.textContent = (retry ? feedbackText(!!correct, { retry: true }) : correct ? "Marked as known." : "Marked to review.") + (r.requeued ? " You will see it once more at the end." : "");
@@ -340,7 +348,7 @@ function mountLesson(root, ctx, id) {
       const where = retry ? `retry ${Math.min(c0.retried + 1, c0.extra)} of ${c0.extra}` : `question ${Math.min(c0.first + 1, exs.length)} of ${exs.length}` + (c0.extra ? `, plus ${c0.extra} to retry` : "");
       const title = el("h2", { id: "alef-int-ex", tabindex: "-1" }, `${retry ? "Try again - " : ""}${TYPE_LABEL[ex.type] || ex.type}: ${where}`);
       const sec = el("section", { class: "card alef-ex-card", "aria-labelledby": "alef-int-ex", "data-type": ex.type, "data-ex": ex.id }, node, status, why, el("div", { class: "row alef-actionbar" }, lead, next, undo, skip));
-      body.replaceChildren(bar.node, title, sec, note,
+      body.replaceChildren(bar.node, title, ...(skippedP ? [skippedP] : []), sec, note,
         el("p", {}, el("a", { href: `#/intermediate/${lesson.id}` , onclick: (e) => { e?.preventDefault?.(); offKeys(); body.replaceChildren(...intro()); } }, "Back to the words")));
       title.focus?.();
       offKeys = onKeys((e) => {
@@ -356,6 +364,7 @@ function mountLesson(root, ctx, id) {
       const pass = all && passedCheck(right, exs.length); // C-01: every exercise answered is not enough; the first-try pass mark must be met
       if (all && !pass) {
         await persist({ score: right, total: exs.length });
+        try { await storeSet(ctx, CHECKS_KEY, withCheck(await storeGet(ctx, CHECKS_KEY, {}), lesson.id, right, exs.length, Date.now(), Date.now() - t0)); } catch { /* C8: the record is optional */ }
         if (!alive) return;
         body.replaceChildren(summaryNode({ passed: false, ctx, title: "Not passed yet — try again", countText: `${right} of ${exs.length} right on the first try.`, stats: { ...st2, accuracy: st2.answered ? st2.right / st2.answered : null },
           ms: Date.now() - t0, need: passMark(exs.length), of: exs.length, wasDone: !!mine.done, missedLabels: missed.map(exLabel), cardsUpdated,
@@ -366,7 +375,7 @@ function mountLesson(root, ctx, id) {
       }
       if (all) {
         // Count the lesson in the shared progress first: if that cannot be saved, nothing here says "finished" (the exercise results stay, so the learner can try again).
-        try { await completeLesson(ctx, lesson, Date.now(), { right, of: exs.length }); } catch (e) { if (alive) showSaveFailure(body, e, summary); return; }
+        try { await completeLesson(ctx, lesson, Date.now(), { right, of: exs.length, ms: Date.now() - t0 }); } catch (e) { if (alive) showSaveFailure(body, e, summary); return; }
         mine.done = Date.now();
         await persist({ done: mine.done, score: right, total: exs.length });
       }

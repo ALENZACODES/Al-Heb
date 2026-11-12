@@ -111,12 +111,12 @@ export function retention(ctx, g = globalThis) {
   }
   function answered(detail = {}) {
     const hash = g.location?.hash || '';
-    if (!/^#\/learn/.test(hash) || /[?&]review=1/.test(hash)) return;
+    if (!(/^#\/learn/.test(hash) || isLessonHash(hash)) || /[?&]review=1/.test(hash)) return; // I8: intermediate lessons too
     touch();
     if (detail.action === 'correct') { combo.run += 1; combo.max = Math.max(combo.max, combo.run); if (combo.run === 5 || combo.run === 8) questStep({ combo: combo.run }); return; }
     combo.run = 0;
     const rec = get();
-    if (detail.retry || !heartsOn(rec, opts())) return;
+    if (detail.retry || !isLessonHash(hash) || !heartsOn(rec, opts())) return; // I8: hearts are taken on lesson routes only, the same in every lesson type
     const qid = detail.questionId ?? doc.querySelector('.alef-ex-card')?.getAttribute('data-ex') ?? `q${++seq}`;
     const out = loseHeart(rec, `${hash}|${qid}`, now());
     if (!out.lost) return;

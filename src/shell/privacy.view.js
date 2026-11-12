@@ -241,7 +241,8 @@ export const STORE_KEYS = [
   ['readlab.v1', 'Reading Tools: your vowel-mark level for stories, prayers and Torah, Three Versions and Fade Challenge reads, and drill set counts', 'src/readlab/model.js'], // reading lane (12 Nov)
   ['trope.practice.v1', 'Trope practice by aliyah: the portion, aliyah and phrase you were on', 'src/trope/families.js'],
   ['curriculum.progress', 'Completed lessons', 'src/curriculum/dom.js'],
-  ['lesson.checks.v1', 'Quick-check scores (right on the first try, out of how many, when), for your own certificate', 'src/curriculum/passmark.js'], // lane 4
+  ['lesson.checks.v1', 'Quick-check scores (right on the first try, out of how many, when, how long the check took), for your own certificate and lesson record', 'src/curriculum/passmark.js'], // lane 4
+  ['checkpoints.v1', 'Checkpoint test results (right on the first try, out of how many, when, how long), for your checkpoint level', 'src/coursemap/checkpoints.js'], // course lane
   ['srs.cards', 'Review cards for lessons (each card also keeps the dates and ratings of its last 24 answers, from 12 November 2026)', 'src/curriculum/dom.js'],
   ['srs.vocab', 'Review cards for vocabulary', 'src/vocab/themes.view.js'],
   ['srs.practical', 'Review cards for practical conversation units', 'src/curriculum/practical.view.js'],

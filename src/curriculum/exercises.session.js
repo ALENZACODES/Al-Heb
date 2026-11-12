@@ -50,7 +50,7 @@ export function createSession(items, o = {}) {
   const queue = items.map((it) => ({ it, attempt: 1, skips: 0 }));
   const first = {};          // id -> boolean, first attempt only
   const skipped = new Set(); // ids dropped after a second skip (never answered)
-  let resolved = 0, total = items.length, last = null, retried = 0, retriedRight = 0;
+  let resolved = 0, total = items.length, last = null, retried = 0, retriedRight = 0, retrySkips = 0;
   const length = items.length + (o.carry || []).length; // C-02: the lesson's fixed length (the denominator never moves)
   // carry: answers already given in an earlier visit ({ it, right }). They count as answered; a miss comes back once at the end, as it would have.
   for (const c of o.carry || []) { first[c.it.id] = !!c.right; resolved++; total++; if (!c.right && retry) { queue.push({ it: c.it, attempt: 2, skips: 0 }); total++; } }
@@ -85,12 +85,18 @@ export function createSession(items, o = {}) {
       ({ resolved, total, retried, retriedRight } = last);
       last = null; return true;
     },
-    /** Skip with no penalty: nothing recorded. Back of the queue once; a second skip drops the item (counted as skipped). */
+    /**
+     * Skip with no penalty: nothing recorded. Back of the queue once; a second skip drops the item (counted as skipped).
+     * I5: a retry (the repeat of a first-try miss) is dropped at once: its first answer already counts and its review card is
+     * already marked to come back, so the learner is never held in the retry loop. The result says what happens next:
+     * { dropped, retry, again } where `again` is true when the skipped item is the only one left and so shows again at once.
+     */
     skip() {
       const cur = queue[0]; if (!cur) return null;
       last = null; queue.shift();
-      if (cur.skips >= 1) { skipped.add(cur.it.id); resolved++; return { dropped: true }; }
-      queue.push({ ...cur, skips: cur.skips + 1 }); return { dropped: false };
+      if (cur.attempt > 1) { retrySkips++; resolved++; return { dropped: true, retry: true, again: false }; }
+      if (cur.skips >= 1) { skipped.add(cur.it.id); resolved++; return { dropped: true, retry: false, again: false }; }
+      queue.push({ ...cur, skips: cur.skips + 1 }); return { dropped: false, retry: false, again: queue.length === 1 };
     },
     firstResults: () => ({ ...first }),
     skippedIds: () => [...skipped],
@@ -102,11 +108,11 @@ export function createSession(items, o = {}) {
      */
     progress: () => {
       const position = Object.keys(first).length + skipped.size, retries = total - length;
-      return { resolved, total, fraction: total ? resolved / total : 0, length, position, retries, retriesDone: retried, retriesLeft: Math.max(0, retries - retried), share: length ? Math.min(1, position / length) : 0 };
+      return { resolved, total, fraction: total ? resolved / total : 0, length, position, retries, retriesDone: retried, retriesSkipped: retrySkips, retriesLeft: Math.max(0, retries - retried - retrySkips), share: length ? Math.min(1, position / length) : 0 };
     },
     stats() {
       const ids = Object.keys(first), right = ids.filter((k) => first[k]).length;
-      return { answered: ids.length, right, missed: ids.filter((k) => !first[k]), skipped: [...skipped], retried, retriedRight,
+      return { answered: ids.length, right, missed: ids.filter((k) => !first[k]), skipped: [...skipped], retried, retriedRight, retrySkips,
         accuracy: ids.length ? right / ids.length : null };
     },
   };
@@ -119,6 +125,15 @@ export { PASS_SHARE, passMark, passed, passRuleText, retryText } from "./passmar
 /** "m:ss" for a duration in ms. */
 export function fmtDuration(ms) { const s = Math.max(0, Math.round(ms / 1000)); return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`; }
 export const pct = (x) => (x == null ? "n/a" : `${Math.round(x * 100)}%`);
+
+/** I5: what the learner is told after Skip (the next card shows it), from skip()'s result. */
+export function skipNotice(r) {
+  if (!r) return "";
+  if (r.retry) return "Skipped. Your first answer still counts, and this one comes back in your review.";
+  if (r.dropped) return "Skipped again, so it is left out of this check. It is not counted either way.";
+  if (r.again) return "Skipped. It is the last one left, so here it is again. Skip once more to leave it out.";
+  return "Skipped. It will come back at the end.";
+}
 
 // ------------------------------------------------------------------------------------------------ copy (encouraging, not gushing)
 const OK = ["Correct.", "Right.", "Yes.", "That's it."];
@@ -258,19 +273,32 @@ export function buildChoiceQuestions(lesson, { letters, confusables, consonants,
   const rand = rng(seed), qs = [];
   const shapeOf = (x) => shapeLabel(letters.get(x), mnemonics?.get?.(x)); // '' when there is no shape text; then the plain glyph is all there is
   const meaningKeys = new Set(lesson.words.map((w) => norm(w.en)));
+  // C4: the reason a wrong pick is wrong, from the data only: what the picked letter is, plus the look-alike rule that names both
+  // letters (data/letters/confusables.json hint, else the target's mnemonics.json look-alike line when it names the picked letter).
+  const pickedLetterWhy = (pid, target, already = "") => {
+    if (!pid || pid === target) return "";
+    const P = letters.get(pid); if (!P) return "";
+    const snd = soundEn(pid, P);
+    const set = (confusables?.sets || []).find((s) => s.letters.includes(pid) && s.letters.includes(target));
+    const look = mnemonics?.get?.(target)?.lookalike;
+    const rule = set?.hint || (look && new RegExp(`\\b${String(P.name).replace(/[^A-Za-z]/g, "")}\\b`, "i").test(look) ? look : "");
+    return `You picked ${P.name}: that is ${P.he}${snd ? `, which sounds like ${snd}` : ""}.${rule && rule !== already ? " " + rule : ""}`;
+  };
   lesson.letters.forEach((id, i) => {
     const L = letters.get(id); if (!L) return;
     const names = [id, ...letterDistractors(id, letters, confusables, rand, { n: optionCount - 1 })];
     const named = placeOptions(names.map((x) => letters.get(x).name), L.name, rand);
     const hint = (confusables?.sets || []).find((s) => s.letters.includes(id))?.hint;
+    const byName = new Map(names.map((x) => [letters.get(x).name, x]));
     qs.push({ id: `${lesson.id}-q-name-${id}`, kind: "letter-name", prompt: "Which letter is this?", promptHe: L.he, promptLabel: shapeOf(id),
-      options: named.options.map((text) => ({ text })), answerIndex: named.answerIndex,
+      options: named.options.map((text) => ({ text })), answerIndex: named.answerIndex, optionWhy: named.options.map((text) => pickedLetterWhy(byName.get(text), id, hint)),
       why: `This is ${L.name}${soundEn(id, L) ? `, which sounds like ${soundEn(id, L)}` : ""}.${hint ? " Tip: " + hint : ""}`, cardId: `letter:${id}`, cardKind: "letter" });
     if (L.sound?.en) {
       const ids = [id, ...letterDistractors(id, letters, confusables, rand, { n: optionCount - 1, bySound: true, consonants, tradition })];
       const g = placeOptions(ids.map((x) => letters.get(x).he), L.he, rand);
       qs.push({ id: `${lesson.id}-q-sound-${id}`, kind: "letter-sound", prompt: `Which letter sounds like: ${soundEn(id, L)}`,
-        options: g.options.map((text) => ({ text, he: true, label: shapeOf(ids[ids.findIndex((x) => letters.get(x).he === text)]) })), answerIndex: g.answerIndex, why: `${L.he} is ${L.name}.`, cardId: `letter:${id}`, cardKind: "letter" });
+        options: g.options.map((text) => ({ text, he: true, label: shapeOf(ids[ids.findIndex((x) => letters.get(x).he === text)]) })), answerIndex: g.answerIndex, why: `${L.he} is ${L.name}.`, cardId: `letter:${id}`, cardKind: "letter",
+        optionWhy: g.options.map((text) => pickedLetterWhy(ids.find((x) => letters.get(x).he === text), id)) });
     }
   });
   lesson.words.forEach((w, i) => {
@@ -287,8 +315,9 @@ export function buildChoiceQuestions(lesson, { letters, confusables, consonants,
     const uniq = pick(list.slice(0, k));
     if (uniq.length < optionCount - 1) return;
     const opts = placeOptions([w.en, ...uniq.slice(0, optionCount - 1).map((p) => p.en)], w.en, rand);
+    const heOf = new Map(uniq.slice(0, optionCount - 1).map((p) => [p.en, p.he]));
     qs.push({ id: `${lesson.id}-q-word-${i + 1}`, kind: "word-meaning", prompt: "What does this mean?", promptHe: w.he, promptLabel: wordLabel(w.he, tradition),
-      options: opts.options.map((text) => ({ text })), answerIndex: opts.answerIndex, why: `${w.he} means "${w.en}".`, cardId: `word:${lesson.id}:${i + 1}`, cardKind: "word" });
+      options: opts.options.map((text) => ({ text })), answerIndex: opts.answerIndex, optionWhy: opts.options.map((text) => (heOf.has(text) ? `You picked "${text}": that is ${heOf.get(text)}, a different word.` : "")), why: `${w.he} means "${w.en}".`, cardId: `word:${lesson.id}:${i + 1}`, cardKind: "word" });
   });
   return sequenceExercises(qs.map((q) => ({ ...q, type: q.kind })));
 }

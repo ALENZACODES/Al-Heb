@@ -134,7 +134,7 @@
     ],
     [
      "src/curriculum/actions.js",
-     16403,
+     16421,
      1
     ],
     [
@@ -159,7 +159,7 @@
     ],
     [
      "src/curriculum/checkpoint.view.js",
-     4430,
+     4594,
      0
     ],
     [
@@ -199,12 +199,12 @@
     ],
     [
      "src/curriculum/exercises.session.js",
-     21993,
+     24525,
      1
     ],
     [
      "src/curriculum/exercises.ui.js",
-     14643,
+     15025,
      1
     ],
     [
@@ -259,12 +259,12 @@
     ],
     [
      "src/curriculum/lesson.parts.js",
-     13980,
+     14192,
      1
     ],
     [
      "src/curriculum/lesson.view.js",
-     20948,
+     21995,
      1
     ],
     [
@@ -289,7 +289,7 @@
     ],
     [
      "src/curriculum/passmark.js",
-     1836,
+     2301,
      1
     ],
     [
@@ -339,7 +339,7 @@
     ],
     [
      "src/curriculum/streak.js",
-     10193,
+     10968,
      1
     ],
     [
@@ -394,7 +394,7 @@
     ],
     [
      "src/lib/counts.js",
-     22298,
+     22462,
      1
     ],
     [
@@ -478,6 +478,11 @@
      1
     ],
     [
+     "src/shell/course-routes.js",
+     1691,
+     1
+    ],
+    [
      "src/shell/flame.js",
      3105,
      1
@@ -504,7 +509,7 @@
     ],
     [
      "src/shell/nav-model.js",
-     12547,
+     12727,
      1
     ],
     [
@@ -569,7 +574,7 @@
     ],
     [
      "src/shell/router.js",
-     48800,
+     48933,
      1
     ],
     [
@@ -736,7 +741,7 @@
     ],
     [
      "src/curriculum/streak.js",
-     10193,
+     10968,
      1
     ],
     [
@@ -751,7 +756,7 @@
     ],
     [
      "src/lib/counts.js",
-     22298,
+     22462,
      1
     ],
     [
@@ -968,7 +973,7 @@
     ],
     [
      "src/curriculum/actions.js",
-     16403,
+     16421,
      1
     ],
     [
@@ -1003,7 +1008,7 @@
     ],
     [
      "src/curriculum/exercises.session.js",
-     21993,
+     24525,
      1
     ],
     [
@@ -1043,7 +1048,7 @@
     ],
     [
      "src/curriculum/passmark.js",
-     1836,
+     2301,
      1
     ],
     [
@@ -1083,7 +1088,7 @@
     ],
     [
      "src/curriculum/streak.js",
-     10193,
+     10968,
      1
     ],
     [
@@ -1123,7 +1128,7 @@
     ],
     [
      "src/lib/counts.js",
-     22298,
+     22462,
      1
     ],
     [

@@ -136,6 +136,8 @@ export async function mount(root, ctx) {
 
     // 2. lines and words in detail (the hook)
     const r = c.read, cnt = lessonCounts(s, d.lessons);
+    const ringSlot = h('div', { class: 'pg-course-ring-slot' }); // C6: one course ring, loaded on demand
+    import('../coursemap/ring.js').then((m) => ringSlot.replaceChildren(m.courseRing(h, cnt))).catch(() => {});
     const readSec = h('section', { class: 'card', 'aria-labelledby': 'pg-h-read' }, h('h2', { id: 'pg-h-read' }, 'Lines and words using signs you have practiced'));
     if (c.know.letters.size === 0) {
       readSec.append(h('p', {}, 'Finish your first lesson and this panel will list prayer lines and words using signs from that lesson.'), h('a', { class: 'btn', href: '#/learn' }, 'Start a lesson'));
@@ -280,6 +282,7 @@ export async function mount(root, ctx) {
     const row = (a, b) => [h('dt', {}, a), h('dd', {}, b)];
     sections.push(h('section', { class: 'card', 'aria-labelledby': 'pg-h-num' }, h('h2', { id: 'pg-h-num' }, 'Your numbers'),
       h('p', { class: 'small muted' }, `Aleph has ${cnt.read.total + cnt.israel.total} lessons in all: ${cnt.read.total} on the reading path and ${cnt.israel.total} on the Israel path. The ten-week study plan uses ${LESSONS.core} core reading lessons. Each count below says which set it counts.`),
+      ringSlot,
       h('dl', {},
         ...row('Letters traced', `${k.traced.size} of ${ALL_LETTERS.length}`),
         ...row('Letters taught by lessons', `${k.taughtLetters.size} of ${ALL_LETTERS.length}`),

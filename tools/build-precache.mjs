@@ -41,6 +41,8 @@ const ON_DEMAND_PREFIXES = ['data/vocab/', 'data/roots/', 'data/knownwords/', 'd
   'data/traditions/', 'data/trope-trainer/', 'data/listen/', 'data/grammar/', 'data/wordtrace/', 'data/corpus/reader/', 'data/corpus/trope/', 'data/curriculum/lessons-intermediate/', 'data/curriculum/practical/',
   'data/curriculum/practical-pages/', // Practical course outline and written pages: not read at first install
   'assets/screens/', 'assets/screenshots/', 'assets/letters/morph/',
+  // course lane (12 Nov): every course-map page (syllabus, time budget, map, checkpoints, mixed review, daily set, benchmarks, rules) is a lazy route; fetched on first open.
+  'src/coursemap/',
   // Light WebP copies of Rimon's animated sheets and still sprite (originals stay as PNG under assets/img/rimon/ and are not listed).
   'assets/img/rimon/web/',
   // Large image sets: runtime-cached on first view (and listed for "Download everything"), never installed up front (fix #4 / R39).
@@ -161,6 +163,9 @@ const ON_DEMAND_FILES = new Set([
   'src/torahreader/torahreader.view.js',
   // Ask the Torah (#/ask): route code only, fetched on first open, runtime-cached (keeps first install under 3.95 MiB).
   'src/ask/ask.view.js', 'src/ask/model.js', 'src/ask/match.js',
+  // Grammar notes page and its model (optional route /grammar and three preview games, about 27 KB): fetched on first open and
+  // runtime-cached; src/grammar/loader.js stays installed (Practical reads it). Moved by the course lane to keep first install under 3.95 MiB.
+  'src/grammar/grammar.view.js', 'src/grammar/model.js',
   'data/corpus/prayer-meta.json', 'data/corpus/torah-service-guide.json', 'data/corpus/gaps.json',
   // lane 5 (12 Nov, plan #10): Shabbat Companion drills and home steps, read only by #/shabbat (its code is under src/service/, already on demand).
   'data/service/companion.json',

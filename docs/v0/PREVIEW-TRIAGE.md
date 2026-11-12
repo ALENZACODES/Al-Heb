@@ -350,3 +350,9 @@ Home shows a backup reminder after three finished lessons (`docs/progress/BACKUP
 | `torah-search` | keep | Torah Search (lane games-books, 12 Nov): find a Hebrew word, or the words the app's root data lists under a root, in every verse; results open the reader at the verse. |
 | `verse-notebook` | keep | Verse Notebook (lane games-books, 12 Nov): saved verses with the learner's own notes, kept on the device, exportable as a file. |
 | `reading-challenge` | keep | Reading Challenges (lane games-books, 12 Nov): a learner-chosen number of little books in a month or a week, counted from books finished with the story check. |
+| `course-map` | keep | Course Map (course lane, 12 Nov): every lesson of both paths drawn from its prerequisites, with done/open/locked and where the learner is. Preview until learners have used it. |
+| `mixed-review` | keep | Mixed Review (course lane): a short quick-check set from the weakest reviewed cards; updates review cards. |
+| `five-minutes` | keep | Daily Five-Minute Set (course lane): due cards, one new item, one game round; the time shown is measured. |
+| `checkpoints` | keep | Checkpoint Tests (course lane): one per 10 lessons, lesson pass rule; opens the next block early, never marks lessons done. |
+| `benchmarks` | keep | Benchmark Map (course lane): the rank goals from belts.json with proven/unproven state; says the IJL list is not in the repo. |
+| `app-rules` | keep | How Hearts, Streaks, Minutes and Passing Work (course lane): the one rules page, built from the enforced constants; the Shop and Daily read from it. |

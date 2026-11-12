@@ -117,7 +117,9 @@ export function mountChunkedLesson(root, ctx, lessonId) {
         nextHref: next ? `#/learn?lesson=${next.id}` : "#/learn", nextLabel: next ? "Next lesson" : "All lessons",
         extraLinks: [el("a", { class: "btn secondary", href: `#/learn?lesson=${lesson.id}&review=1` }, "Review these cards")] }));
       wrap.querySelector?.("#alef-int-ex")?.focus?.();
+      provedLater();
     }
+    function provedLater() { import("../coursemap/objectives.js").then((m) => { if (alive) wrap.append(m.provedCard(el, questions, results)); }).catch(() => {}); } // C2
     async function finish(host) {
       let updated, saved;
       try { saved = await saveQuickCheck(ctx, lesson, questions, results); ({ updated } = saved); } catch (e) { if (alive) showSaveFailure(host, e, () => finish(host)); return; } // never say "Lesson complete" for a lesson that was not saved
@@ -138,6 +140,7 @@ export function mountChunkedLesson(root, ctx, lessonId) {
         onRetry: async () => { results = {}; await persist({ results, replaceResults: true, chunk: firstCheck }); if (alive) goTo(firstCheck); }, retryLabel: "Try again",
         extraLinks: [el("a", { class: "btn secondary", href: `#/learn?lesson=${lesson.id}&review=1` }, "Review these cards"), el("a", { class: "btn secondary", href: "#/learn" }, "All lessons")] }));
       wrap.querySelector?.("#alef-int-ex")?.focus?.();
+      provedLater();
     }
 
     function draw() {

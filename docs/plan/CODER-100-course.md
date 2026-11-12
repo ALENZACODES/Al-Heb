@@ -1,0 +1,28 @@
+# Coder-100 Brief: Course Lane (2026-11-12)
+
+What the course lane built for ideas C1 to C10, I5 to I8 and H8 of the owner's brief. Every learner-facing number is computed on
+the device from the learner's own records or from the course data; nothing here was tested with learners or reviewed by a teacher.
+
+| Idea | Status | Files | What the learner sees |
+|---|---|---|---|
+| C1 Skill-tree map | built | `src/coursemap/map.js`, `src/coursemap/map.view.js` | `#/course-map`: every lesson of both paths drawn from its prerequisites (done, open, locked), "you are here", and the same graph as a list. |
+| C2 Objective cards | built | `src/coursemap/objectives.js`, `src/curriculum/lesson.view.js`, `src/curriculum/lesson.parts.js` | A lesson opens with What You Will Learn (the authors' goals, what the check asks, the computed pass mark) and ends with What You Proved (only items right on the first try) or Not Proved Yet. |
+| C3 Mixed review | built | `src/coursemap/mixed.js`, `src/coursemap/practice.view.js` | `#/mixed-review`: the 8 weakest reviewed letter and word cards as one quick check; answers update the cards. |
+| C4 Why on wrong answers | extended existing | `src/curriculum/exercises.session.js`, `src/curriculum/exercises.ui.js`, `src/curriculum/intermediate.view.js` | A miss says what the picked option is (letter and sound, or its own Hebrew word) plus the look-alike rule from the confusables or mnemonics data that names both letters; intermediate recall, gender and fade get a line from their own data. Where no rule text exists, the old feedback stays. |
+| C5 Checkpoint tests | built | `src/coursemap/checkpoints.js`, `src/coursemap/checkpoints.view.js` | `#/checkpoints`: one per 10 lessons per path (7 reading, 5 Israel), one question per lesson, lesson pass rule; a pass raises the checkpoint level, opens the next block early (not done) and on the reading path offers to move the start forward (placement record). |
+| C6 One course ring | built | `src/coursemap/ring.js`, `src/progress/progress.view.js` | Progress shows one ring of all lessons with the reading and Israel paths as its two labelled parts. Both paths already used the same pass rule (verified in tests). |
+| C7 Daily five-minute set | built | `src/coursemap/mixed.js`, `src/coursemap/practice.view.js` | `#/five-minutes`: due cards (up to 5), one new item from the next open lesson (practice only), one game round (Spot It on a taught letter); the time shown is measured. |
+| C8 Honest lesson metadata | built | `src/coursemap/objectives.js`, `src/curriculum/passmark.js`, `src/curriculum/actions.js`, `src/curriculum/intermediate.view.js` | "Your record on this device: N tries, P passed (R%). Median time for a check: m:ss", shown only where tries exist; checks now save their time; intermediate failures are recorded too. |
+| C9 Grammar spotlights | built | `tools/grammar/build-spotlights.mjs`, `data/grammar/spotlights.json`, `src/coursemap/spotlight.js` | 49 lessons (the ones whose own words or prayer lines contain a grammar-note form) show a Grammar Spotlight with their examples and a three-question drill; the Name is shown as ה׳. |
+| C10 Benchmark map | built (substitute list) | `src/coursemap/benchmarks.js`, `src/coursemap/benchmarks.view.js` | `#/benchmarks`. The 28 IJL skills are not in the repo, so the page says so and uses the rank goals in `data/curriculum/belts.json` (16), each proven / done before checks / started / not started. |
+| I5 Skip always works | extended existing | `src/curriculum/exercises.session.js`, `src/curriculum/exercises.ui.js`, `src/curriculum/intermediate.view.js` | After Skip the next card says it will come back, is back as the last one, or was left out; in the retry phase Skip moves on at once ("comes back in your review"). |
+| I6 Honest minutes | built | `src/curriculum/streak.js`, `src/morning/engage.js`, `src/lib/counts.js`, `src/sync/merge.js` | Minutes are measured active time; a finished lesson completes the streak day but adds no minutes. Rule on `#/app-rules`. |
+| I7 Computed pass text | built | `src/curriculum/passmark.js`, `lesson.view.js`, `exercises.ui.js`, `checkpoint.view.js`, `src/awards/trust.js`, `src/sync/certificate.js` | "To pass: at least 3 of 4 right on the first try (75%)"; no "about 70%" or "at least 70%" anywhere; a table on `#/app-rules`. |
+| I8 One hearts page | built | `src/coursemap/rules.js`, `src/coursemap/rules.view.js`, `src/retention/hearts.js`, `src/retention/boot.js`, `src/curriculum/intermediate.view.js` | `#/app-rules` states the hearts rules from the constants; intermediate lessons now take hearts and are gated exactly like the other lesson types. |
+| H8 One streak rule | built | `src/coursemap/rules.js`, `src/retention/shop.view.js`, `preview/loops/daily.view.js` | The Shop and the Daily page show the same streak lines, read from one module; bring-back is free in both. |
+
+## Not done, and what others should know
+
+- The 28 IJL Graduate Benchmark skills are not in the repository; C10 uses the belts.json rank goals instead and says so.
+- `src/progress/weekly.js` still says "At least N minutes engaged" from done days times five minutes; the past days' measured minutes are not stored, so that line was left for the weekly-report owner.
+- Shared files touched (small, additive): `src/shell/router.js` (one import, one spread), `src/shell/nav-model.js` (one import, one loop), `src/shell/nav.strings.js`, `src/shell/offline.js` (group label), `tools/build-precache.mjs` (`src/coursemap/` prefix; grammar page and model on demand), `src/progress/progress.view.js`, `src/curriculum/lesson.view.js`, `docs/v0/PREVIEW-TRIAGE.md`.

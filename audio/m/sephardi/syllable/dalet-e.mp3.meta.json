@@ -1,0 +1,31 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-respelled-israeli-voice",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "sephardi",
+ "inputText": "דֶ",
+ "inputSha256": "d6c251b2237071e395c19517d19f2ea4065d8a17bb3c3517299e52759f9cffe3",
+ "ingestedAt": "2026-11-12T07:00:57.782Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice: the Israeli man voice reading the sephardi English-letter respelling, not pointed Hebrew. Not a human recording; no human has listened to it. Licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel.",
+ "renderedAt": "2026-11-12T07:00:57.782Z",
+ "redistributionCleared": false,
+ "spokenText": "de",
+ "normalized": true,
+ "provider": "google",
+ "madeFrom": "respelling",
+ "voiceName": "he-IL-Wavenet-B",
+ "languageCode": "he-IL",
+ "hebrew": "דֶ",
+ "israeliRef": "audio/m/israeli/syllable/dalet-e.mp3",
+ "tempo": {
+  "applied": false,
+  "factor": 1,
+  "cap": 1.26,
+  "before": 0.6480045351473923,
+  "after": 0.6480045351473923,
+  "israeliSec": 0.76,
+  "israeliRef": "audio/m/israeli/syllable/dalet-e.mp3"
+ }
+}

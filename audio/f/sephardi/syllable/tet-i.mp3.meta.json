@@ -1,0 +1,31 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-respelled-israeli-voice",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "sephardi",
+ "inputText": "טִ",
+ "inputSha256": "65a0befdd77d6833e92400df0638a04a37cdf613429337a3a3d3e5cd0c156a6e",
+ "ingestedAt": "2026-11-12T07:01:36.889Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice: the Israeli woman voice reading the sephardi English-letter respelling, not pointed Hebrew. Not a human recording; no human has listened to it. Licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel.",
+ "renderedAt": "2026-11-12T07:01:36.889Z",
+ "redistributionCleared": false,
+ "spokenText": "ti",
+ "normalized": true,
+ "provider": "google",
+ "madeFrom": "respelling",
+ "voiceName": "he-IL-Wavenet-A",
+ "languageCode": "he-IL",
+ "hebrew": "טִ",
+ "israeliRef": "audio/f/israeli/syllable/tet-i.mp3",
+ "tempo": {
+  "applied": false,
+  "factor": 1,
+  "cap": 1.26,
+  "before": 0.72,
+  "after": 0.72,
+  "israeliSec": 0.8560090702947846,
+  "israeliRef": "audio/f/israeli/syllable/tet-i.mp3"
+ }
+}

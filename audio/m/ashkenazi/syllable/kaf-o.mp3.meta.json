@@ -1,0 +1,31 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-respelled-israeli-voice",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "ashkenazi",
+ "inputText": "כֹּ",
+ "inputSha256": "0d71bad8159ae6f8d4d772cbc57194a9461cfedc55bd4eaa69daa3303bc7ada6",
+ "ingestedAt": "2026-11-12T07:02:22.658Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice: the Israeli man voice reading the ashkenazi English-letter respelling, not pointed Hebrew. Not a human recording; no human has listened to it. Licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel.",
+ "renderedAt": "2026-11-12T07:02:22.658Z",
+ "redistributionCleared": false,
+ "spokenText": "ko",
+ "normalized": true,
+ "provider": "google",
+ "madeFrom": "respelling",
+ "voiceName": "he-IL-Wavenet-B",
+ "languageCode": "he-IL",
+ "hebrew": "כֹּ",
+ "israeliRef": "audio/m/israeli/syllable/kaf-o.mp3",
+ "tempo": {
+  "applied": false,
+  "factor": 1,
+  "cap": 1.26,
+  "before": 0.6240136054421769,
+  "after": 0.6240136054421769,
+  "israeliSec": 0.7360090702947846,
+  "israeliRef": "audio/m/israeli/syllable/kaf-o.mp3"
+ }
+}

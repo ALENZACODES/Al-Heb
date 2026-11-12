@@ -1,0 +1,31 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-respelled-israeli-voice",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "ashkenazi",
+ "inputText": "רַ",
+ "inputSha256": "8e7d2beec32941bd23894ca46286932891c34db444913d23045405f862bdaa24",
+ "ingestedAt": "2026-11-12T07:00:44.085Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice: the Israeli man voice reading the ashkenazi English-letter respelling, not pointed Hebrew. Not a human recording; no human has listened to it. Licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel.",
+ "renderedAt": "2026-11-12T07:00:44.085Z",
+ "redistributionCleared": false,
+ "spokenText": "ra",
+ "normalized": true,
+ "provider": "google",
+ "madeFrom": "respelling",
+ "voiceName": "he-IL-Wavenet-B",
+ "languageCode": "he-IL",
+ "hebrew": "רַ",
+ "israeliRef": "audio/m/israeli/syllable/resh-a.mp3",
+ "tempo": {
+  "applied": false,
+  "factor": 1,
+  "cap": 1.26,
+  "before": 0.6480045351473923,
+  "after": 0.6480045351473923,
+  "israeliSec": 0.76,
+  "israeliRef": "audio/m/israeli/syllable/resh-a.mp3"
+ }
+}

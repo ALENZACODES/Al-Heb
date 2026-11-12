@@ -65897,13 +65897,14 @@
   "kind": "word",
   "id": "i-50-w14",
   "text": "תִּשְׁמְרִי עַל עַצְמֵךְ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "english": "take care of yourself (said to a woman)",
   "phonetic": "tishmeri al atzmekh",
-  "aliasOf": "line/greetings-27-f"
+  "aliasOf": "line/greetings-27-f",
+  "copyOf": "line/greetings-27-f"
  },
  {
   "path": "audio/f/israeli/word/i-50-w13.mp3",
@@ -65925,13 +65926,14 @@
   "kind": "word",
   "id": "i-50-w14",
   "text": "תִּשְׁמְרִי עַל עַצְמֵךְ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "lesson-word",
   "scope": "israeli-only",
   "english": "take care of yourself (said to a woman)",
   "phonetic": "tishmeri al atzmekh",
-  "aliasOf": "line/greetings-27-f"
+  "aliasOf": "line/greetings-27-f",
+  "copyOf": "line/greetings-27-f"
  },
  {
   "path": "audio/m/israeli/word/calendar-rosh-hashanah.mp3",

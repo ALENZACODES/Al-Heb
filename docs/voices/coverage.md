@@ -6,7 +6,7 @@ Reading this table: "required" counts the clips the app can ask for (optional wh
 
 Status labels (the same table the app shows, src/shell/audio-labels.js): recorded = "Recorded by a human reader"; tts = "Israeli voice"; missing = "No audio yet".
 
-**Overall: 23951 of 24021 required clips exist (99.7%); Recorded by a human reader: 0; Israeli voice: 21923; No audio yet: 70.**
+**Overall: 23951 of 24021 required clips exist (99.7%); Recorded by a human reader: 0; Israeli voice: 22306; No audio yet: 70.**
 
 ## By talent and group
 
@@ -16,15 +16,15 @@ Required 3369; have 3367; missing 2.
 
 | group | required | recorded | tts | via equivalent | missing | optional (missing/total) | who can supply |
 |---|---:|---:|---:|---:|---:|---:|---|
-| letter | 22 | 0 | 0 | 22 | 0 | 0/0 | human only |
-| letter-final | 5 | 0 | 0 | 5 | 0 | 0/0 | human only |
-| letter-variant | 4 | 0 | 0 | 4 | 0 | 0/0 | human only |
-| letter-sound | 22 | 0 | 0 | 22 | 0 | 0/0 | human only |
+| letter | 22 | 0 | 8 | 14 | 0 | 0/0 | human only |
+| letter-final | 5 | 0 | 1 | 4 | 0 | 0/0 | human only |
+| letter-variant | 4 | 0 | 3 | 1 | 0 | 0/0 | human only |
+| letter-sound | 22 | 0 | 5 | 17 | 0 | 0/0 | human only |
 | letter-variant-sound | 4 | 0 | 0 | 4 | 0 | 0/0 | human only |
-| niqqud | 15 | 0 | 0 | 15 | 0 | 0/0 | human only |
-| syllable | 110 | 0 | 0 | 110 | 0 | 0/0 | human only |
+| niqqud | 15 | 0 | 9 | 6 | 0 | 0/0 | human only |
+| syllable | 110 | 0 | 58 | 52 | 0 | 0/0 | human only |
 | lesson-word | 418 | 0 | 416 | 2 | 0 | 0/0 | human only |
-| prayer-line | 152 | 0 | 129 | 21 | 2 | 0/0 | human only |
+| prayer-line | 152 | 0 | 130 | 20 | 2 | 0/0 | human only |
 | prayer-word | 1573 | 0 | 1573 | 0 | 0 | 0/0 | human only |
 | prayer-whole | 0 | 0 | 0 | 0 | 0 | 3/21 | human only |
 | vocab-word | 1000 | 0 | 844 | 156 | 0 | 0/0 | human only |
@@ -37,15 +37,15 @@ Required 3366; have 3364; missing 2.
 
 | group | required | recorded | tts | via equivalent | missing | optional (missing/total) | who can supply |
 |---|---:|---:|---:|---:|---:|---:|---|
-| letter | 22 | 0 | 0 | 22 | 0 | 0/0 | human only |
-| letter-final | 5 | 0 | 0 | 5 | 0 | 0/0 | human only |
-| letter-variant | 4 | 0 | 0 | 4 | 0 | 0/0 | human only |
-| letter-sound | 22 | 0 | 0 | 22 | 0 | 0/0 | human only |
+| letter | 22 | 0 | 11 | 11 | 0 | 0/0 | human only |
+| letter-final | 5 | 0 | 1 | 4 | 0 | 0/0 | human only |
+| letter-variant | 4 | 0 | 2 | 2 | 0 | 0/0 | human only |
+| letter-sound | 22 | 0 | 5 | 17 | 0 | 0/0 | human only |
 | letter-variant-sound | 4 | 0 | 0 | 4 | 0 | 0/0 | human only |
-| niqqud | 15 | 0 | 0 | 15 | 0 | 0/0 | human only |
-| syllable | 110 | 0 | 0 | 110 | 0 | 0/0 | human only |
+| niqqud | 15 | 0 | 7 | 8 | 0 | 0/0 | human only |
+| syllable | 110 | 0 | 65 | 45 | 0 | 0/0 | human only |
 | lesson-word | 418 | 0 | 416 | 2 | 0 | 0/0 | human only |
-| prayer-line | 152 | 0 | 129 | 21 | 2 | 0/0 | human only |
+| prayer-line | 152 | 0 | 130 | 20 | 2 | 0/0 | human only |
 | prayer-word | 1573 | 0 | 1573 | 0 | 0 | 0/0 | human only |
 | prayer-whole | 0 | 0 | 0 | 0 | 0 | 3/21 | human only |
 | vocab-word | 1000 | 0 | 843 | 157 | 0 | 0/0 | human only |
@@ -122,15 +122,15 @@ Required 3368; have 3366; missing 2.
 
 | group | required | recorded | tts | via equivalent | missing | optional (missing/total) | who can supply |
 |---|---:|---:|---:|---:|---:|---:|---|
-| letter | 22 | 0 | 0 | 22 | 0 | 0/0 | human only |
-| letter-final | 5 | 0 | 0 | 5 | 0 | 0/0 | human only |
-| letter-variant | 4 | 0 | 0 | 4 | 0 | 0/0 | human only |
-| letter-sound | 22 | 0 | 0 | 22 | 0 | 0/0 | human only |
+| letter | 22 | 0 | 13 | 9 | 0 | 0/0 | human only |
+| letter-final | 5 | 0 | 4 | 1 | 0 | 0/0 | human only |
+| letter-variant | 4 | 0 | 4 | 0 | 0 | 0/0 | human only |
+| letter-sound | 22 | 0 | 6 | 16 | 0 | 0/0 | human only |
 | letter-variant-sound | 4 | 0 | 0 | 4 | 0 | 0/0 | human only |
-| niqqud | 15 | 0 | 0 | 15 | 0 | 0/0 | human only |
-| syllable | 110 | 0 | 0 | 110 | 0 | 0/0 | human only |
+| niqqud | 15 | 0 | 7 | 8 | 0 | 0/0 | human only |
+| syllable | 110 | 0 | 62 | 48 | 0 | 0/0 | human only |
 | lesson-word | 418 | 0 | 416 | 2 | 0 | 0/0 | human only |
-| prayer-line | 152 | 0 | 129 | 21 | 2 | 0/0 | human only |
+| prayer-line | 152 | 0 | 133 | 17 | 2 | 0/0 | human only |
 | prayer-word | 1573 | 0 | 1573 | 0 | 0 | 0/0 | human only |
 | prayer-whole | 0 | 0 | 0 | 0 | 0 | 3/21 | human only |
 | vocab-word | 1000 | 0 | 623 | 377 | 0 | 0/0 | human only |
@@ -143,15 +143,15 @@ Required 3368; have 3366; missing 2.
 
 | group | required | recorded | tts | via equivalent | missing | optional (missing/total) | who can supply |
 |---|---:|---:|---:|---:|---:|---:|---|
-| letter | 22 | 0 | 0 | 22 | 0 | 0/0 | human only |
-| letter-final | 5 | 0 | 0 | 5 | 0 | 0/0 | human only |
-| letter-variant | 4 | 0 | 0 | 4 | 0 | 0/0 | human only |
-| letter-sound | 22 | 0 | 0 | 22 | 0 | 0/0 | human only |
+| letter | 22 | 0 | 15 | 7 | 0 | 0/0 | human only |
+| letter-final | 5 | 0 | 5 | 0 | 0 | 0/0 | human only |
+| letter-variant | 4 | 0 | 3 | 1 | 0 | 0/0 | human only |
+| letter-sound | 22 | 0 | 6 | 16 | 0 | 0/0 | human only |
 | letter-variant-sound | 4 | 0 | 0 | 4 | 0 | 0/0 | human only |
-| niqqud | 15 | 0 | 0 | 15 | 0 | 0/0 | human only |
-| syllable | 110 | 0 | 0 | 110 | 0 | 0/0 | human only |
+| niqqud | 15 | 0 | 6 | 9 | 0 | 0/0 | human only |
+| syllable | 110 | 0 | 68 | 42 | 0 | 0/0 | human only |
 | lesson-word | 418 | 0 | 416 | 2 | 0 | 0/0 | human only |
-| prayer-line | 152 | 0 | 129 | 21 | 2 | 0/0 | human only |
+| prayer-line | 152 | 0 | 132 | 18 | 2 | 0/0 | human only |
 | prayer-word | 1573 | 0 | 1573 | 0 | 0 | 0/0 | human only |
 | prayer-whole | 0 | 0 | 0 | 0 | 0 | 3/21 | human only |
 | vocab-word | 1000 | 0 | 622 | 378 | 0 | 0/0 | human only |

@@ -29,16 +29,19 @@ test('manifest: every sephardi letter, vowel, syllable and prayer without a clip
     else if (e.status === 'missing' && hasIsraeli) { assert.deepEqual(e.equivalentTo, ['israeli'], e.path); standIns += 1; }
     else assert.equal(e.equivalentTo, undefined, e.path);
   }
-  assert.ok(standIns >= 500, `stand-ins: ${standIns}`);
+  assert.ok(standIns >= 100, `stand-ins: ${standIns}`); // 12 November 2026: Sephardi clips of their own replaced many stand-ins
   const missingWords = words.filter((e) => e.status === 'missing' || e.status === 'plays-israeli'); // no Sephardi clip of their own
-  assert.ok(missingWords.length > 1800); /* 606 of the man's words gained their own Sephardi clip on 2026-11-10 */
-  assert.ok(missingWords.filter((e) => e.equivalentTo?.[0] === 'israeli' || e.status === 'plays-israeli').length > 1400);
+  // 606 of the man's words gained their own Sephardi clip on 2026-11-10, and more on 2026-11-12 (accent-fill runs): the count falls
+  assert.ok(missingWords.length > 0);
+  assert.ok(missingWords.filter((e) => e.equivalentTo?.[0] === 'israeli' || e.status === 'plays-israeli').length >= 0.8 * missingWords.length);
   for (const e of words.filter((e) => e.status !== 'missing' && e.status !== 'plays-israeli')) assert.equal(e.equivalentTo, undefined, e.path);
 });
 
 test('player: with the Sephardi setting, shin, bet and oseh-shalom play the Israeli file and the result names that tradition', () => {
   class El { constructor(url) { this.url = url; } play() { return Promise.resolve(); } pause() {} }
-  const rows = man.filter((e) => (e.kind === 'letter' && ['shin', 'bet'].includes(e.id)) || (e.kind === 'prayer' && e.id === 'oseh-shalom'));
+  // as for any Sephardi row with no clip of its own (the rows are set to plays-israeli here: some have their own clip now)
+  const rows = man.filter((e) => (e.kind === 'letter' && ['shin', 'bet'].includes(e.id)) || (e.kind === 'prayer' && e.id === 'oseh-shalom'))
+    .map((e) => (e.tradition === 'sephardi' ? { ...e, status: 'plays-israeli', source: 'israeli-clip' } : e));
   for (const voice of ['m', 'f']) {
     const audio = createAudio({ settings: { voice, congregation: 'sephardi' }, manifest: rows, AudioCtor: El, speech: null, UtteranceCtor: null });
     for (const [kind, id] of [['letter', 'shin'], ['letter', 'bet'], ['prayer', 'oseh-shalom']]) {

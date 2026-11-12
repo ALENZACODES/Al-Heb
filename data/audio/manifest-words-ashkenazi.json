@@ -73613,11 +73613,12 @@
   "kind": "word",
   "id": "h0eb811da",
   "text": "שַׁבָּת",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r02-w1",
-  "english": "Shabbat, Sabbath; Saturday; week (Mishnaic Hebrew)"
+  "english": "Shabbat, Sabbath; Saturday; week (Mishnaic Hebrew)",
+  "copyOf": "word/r02-w1"
  },
  {
   "path": "audio/f/ashkenazi/word/h0eb811da.mp3",
@@ -73626,11 +73627,12 @@
   "kind": "word",
   "id": "h0eb811da",
   "text": "שַׁבָּת",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r02-w1",
-  "english": "Shabbat, Sabbath; Saturday; week (Mishnaic Hebrew)"
+  "english": "Shabbat, Sabbath; Saturday; week (Mishnaic Hebrew)",
+  "copyOf": "word/r02-w1"
  },
  {
   "path": "audio/m/ashkenazi/word/h12353001.mp3",
@@ -73639,11 +73641,12 @@
   "kind": "word",
   "id": "h12353001",
   "text": "אֳנִיָּה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r21-w5",
-  "english": "ship"
+  "english": "ship",
+  "copyOf": "word/r21-w5"
  },
  {
   "path": "audio/f/ashkenazi/word/h12353001.mp3",
@@ -73652,11 +73655,12 @@
   "kind": "word",
   "id": "h12353001",
   "text": "אֳנִיָּה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r21-w5",
-  "english": "ship"
+  "english": "ship",
+  "copyOf": "word/r21-w5"
  },
  {
   "path": "audio/m/ashkenazi/word/h127e8661.mp3",
@@ -74029,11 +74033,12 @@
   "kind": "word",
   "id": "h2cdd3e7d",
   "text": "נְסִיעָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/i-34-w5",
-  "english": "a journey, a ride, a trip, a voyage"
+  "english": "a journey, a ride, a trip, a voyage",
+  "copyOf": "word/i-34-w5"
  },
  {
   "path": "audio/f/ashkenazi/word/h2cdd3e7d.mp3",
@@ -74042,11 +74047,12 @@
   "kind": "word",
   "id": "h2cdd3e7d",
   "text": "נְסִיעָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/i-34-w5",
-  "english": "a journey, a ride, a trip, a voyage"
+  "english": "a journey, a ride, a trip, a voyage",
+  "copyOf": "word/i-34-w5"
  },
  {
   "path": "audio/m/ashkenazi/word/h2d8a8058.mp3",
@@ -74111,11 +74117,12 @@
   "kind": "word",
   "id": "h2ff06831",
   "text": "מִצְוָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/i-30-w8",
-  "english": "commandment; mitzvah"
+  "english": "commandment; mitzvah",
+  "copyOf": "word/i-30-w8"
  },
  {
   "path": "audio/f/ashkenazi/word/h2ff06831.mp3",
@@ -74124,11 +74131,12 @@
   "kind": "word",
   "id": "h2ff06831",
   "text": "מִצְוָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/i-30-w8",
-  "english": "commandment; mitzvah"
+  "english": "commandment; mitzvah",
+  "copyOf": "word/i-30-w8"
  },
  {
   "path": "audio/m/ashkenazi/word/h3006118f.mp3",
@@ -74277,11 +74285,12 @@
   "kind": "word",
   "id": "h33cf0d1b",
   "text": "סְלִיחָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/i-28-w4",
-  "english": "forgiveness, pardon"
+  "english": "forgiveness, pardon",
+  "copyOf": "word/i-28-w4"
  },
  {
   "path": "audio/f/ashkenazi/word/h33cf0d1b.mp3",
@@ -74290,11 +74299,12 @@
   "kind": "word",
   "id": "h33cf0d1b",
   "text": "סְלִיחָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/i-28-w4",
-  "english": "forgiveness, pardon"
+  "english": "forgiveness, pardon",
+  "copyOf": "word/i-28-w4"
  },
  {
   "path": "audio/m/ashkenazi/word/h33e8c3ac.mp3",
@@ -74331,11 +74341,12 @@
   "kind": "word",
   "id": "h344eb438",
   "text": "מָגֵן",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/i-02-w11",
-  "english": "shield"
+  "english": "shield",
+  "copyOf": "word/i-02-w11"
  },
  {
   "path": "audio/f/ashkenazi/word/h344eb438.mp3",
@@ -74344,11 +74355,12 @@
   "kind": "word",
   "id": "h344eb438",
   "text": "מָגֵן",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/i-02-w11",
-  "english": "shield"
+  "english": "shield",
+  "copyOf": "word/i-02-w11"
  },
  {
   "path": "audio/m/ashkenazi/word/h35207b27.mp3",
@@ -74357,11 +74369,12 @@
   "kind": "word",
   "id": "h35207b27",
   "text": "צֶדֶק",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r24-w1",
-  "english": "Justice, righteousness, rightness, right"
+  "english": "Justice, righteousness, rightness, right",
+  "copyOf": "word/r24-w1"
  },
  {
   "path": "audio/f/ashkenazi/word/h35207b27.mp3",
@@ -74370,11 +74383,12 @@
   "kind": "word",
   "id": "h35207b27",
   "text": "צֶדֶק",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r24-w1",
-  "english": "Justice, righteousness, rightness, right"
+  "english": "Justice, righteousness, rightness, right",
+  "copyOf": "word/r24-w1"
  },
  {
   "path": "audio/m/ashkenazi/word/h3564ecca.mp3",
@@ -74439,11 +74453,12 @@
   "kind": "word",
   "id": "h3612be9c",
   "text": "שִׂמְחָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r20-w3",
-  "english": "joy, happiness, glee; any behaviour that comes from that state of mind/emotion"
+  "english": "joy, happiness, glee; any behaviour that comes from that state of mind/emotion",
+  "copyOf": "word/r20-w3"
  },
  {
   "path": "audio/f/ashkenazi/word/h3612be9c.mp3",
@@ -74452,11 +74467,12 @@
   "kind": "word",
   "id": "h3612be9c",
   "text": "שִׂמְחָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r20-w3",
-  "english": "joy, happiness, glee; any behaviour that comes from that state of mind/emotion"
+  "english": "joy, happiness, glee; any behaviour that comes from that state of mind/emotion",
+  "copyOf": "word/r20-w3"
  },
  {
   "path": "audio/m/ashkenazi/word/h3693d71a.mp3",
@@ -74605,11 +74621,12 @@
   "kind": "word",
   "id": "h3a561e77",
   "text": "רְפוּאָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/i-10-w4",
-  "english": "healing, becoming healthy; treatment; medicine"
+  "english": "healing, becoming healthy; treatment; medicine",
+  "copyOf": "word/i-10-w4"
  },
  {
   "path": "audio/f/ashkenazi/word/h3a561e77.mp3",
@@ -74618,11 +74635,12 @@
   "kind": "word",
   "id": "h3a561e77",
   "text": "רְפוּאָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/i-10-w4",
-  "english": "healing, becoming healthy; treatment; medicine"
+  "english": "healing, becoming healthy; treatment; medicine",
+  "copyOf": "word/i-10-w4"
  },
  {
   "path": "audio/m/ashkenazi/word/h3b6e7044.mp3",
@@ -74659,11 +74677,12 @@
   "kind": "word",
   "id": "h40bd6f51",
   "text": "נִקְרָא",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/i-09-w5",
-  "english": "to be read; to be called"
+  "english": "to be read; to be called",
+  "copyOf": "word/i-09-w5"
  },
  {
   "path": "audio/f/ashkenazi/word/h40bd6f51.mp3",
@@ -74672,11 +74691,12 @@
   "kind": "word",
   "id": "h40bd6f51",
   "text": "נִקְרָא",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/i-09-w5",
-  "english": "to be read; to be called"
+  "english": "to be read; to be called",
+  "copyOf": "word/i-09-w5"
  },
  {
   "path": "audio/m/ashkenazi/word/h411fe0c1.mp3",
@@ -74909,11 +74929,12 @@
   "kind": "word",
   "id": "h4e578223",
   "text": "פֶּסַח",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/i-29-w1",
-  "english": "the paschal sacrificial offering"
+  "english": "the paschal sacrificial offering",
+  "copyOf": "word/i-29-w1"
  },
  {
   "path": "audio/f/ashkenazi/word/h4e578223.mp3",
@@ -74922,11 +74943,12 @@
   "kind": "word",
   "id": "h4e578223",
   "text": "פֶּסַח",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/i-29-w1",
-  "english": "the paschal sacrificial offering"
+  "english": "the paschal sacrificial offering",
+  "copyOf": "word/i-29-w1"
  },
  {
   "path": "audio/m/ashkenazi/word/h4ee14b3b.mp3",
@@ -75215,11 +75237,12 @@
   "kind": "word",
   "id": "h57665cd9",
   "text": "שָׂמֵחַ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/i-31-w3",
-  "english": "happy, glad, pleased; merry, joyous, cheerful"
+  "english": "happy, glad, pleased; merry, joyous, cheerful",
+  "copyOf": "word/i-31-w3"
  },
  {
   "path": "audio/f/ashkenazi/word/h57665cd9.mp3",
@@ -75228,11 +75251,12 @@
   "kind": "word",
   "id": "h57665cd9",
   "text": "שָׂמֵחַ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/i-31-w3",
-  "english": "happy, glad, pleased; merry, joyous, cheerful"
+  "english": "happy, glad, pleased; merry, joyous, cheerful",
+  "copyOf": "word/i-31-w3"
  },
  {
   "path": "audio/m/ashkenazi/word/h5bfd5fc6.mp3",
@@ -75269,11 +75293,12 @@
   "kind": "word",
   "id": "h5e1ba7b7",
   "text": "חֲנֻכָּה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/i-32-w1",
-  "english": "consecration, dedication, inauguration"
+  "english": "consecration, dedication, inauguration",
+  "copyOf": "word/i-32-w1"
  },
  {
   "path": "audio/f/ashkenazi/word/h5e1ba7b7.mp3",
@@ -75282,11 +75307,12 @@
   "kind": "word",
   "id": "h5e1ba7b7",
   "text": "חֲנֻכָּה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/i-32-w1",
-  "english": "consecration, dedication, inauguration"
+  "english": "consecration, dedication, inauguration",
+  "copyOf": "word/i-32-w1"
  },
  {
   "path": "audio/m/ashkenazi/word/h5f4ecfc7.mp3",
@@ -75295,11 +75321,12 @@
   "kind": "word",
   "id": "h5f4ecfc7",
   "text": "חָמֵץ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/i-29-w3",
-  "english": "chametz"
+  "english": "chametz",
+  "copyOf": "word/i-29-w3"
  },
  {
   "path": "audio/f/ashkenazi/word/h5f4ecfc7.mp3",
@@ -75308,11 +75335,12 @@
   "kind": "word",
   "id": "h5f4ecfc7",
   "text": "חָמֵץ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/i-29-w3",
-  "english": "chametz"
+  "english": "chametz",
+  "copyOf": "word/i-29-w3"
  },
  {
   "path": "audio/m/ashkenazi/word/h5f517008.mp3",
@@ -75433,11 +75461,12 @@
   "kind": "word",
   "id": "h64684490",
   "text": "סֻכָּה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/i-30-w1",
-  "english": "a booth, a hut; sukkah"
+  "english": "a booth, a hut; sukkah",
+  "copyOf": "word/i-30-w1"
  },
  {
   "path": "audio/f/ashkenazi/word/h64684490.mp3",
@@ -75446,11 +75475,12 @@
   "kind": "word",
   "id": "h64684490",
   "text": "סֻכָּה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/i-30-w1",
-  "english": "a booth, a hut; sukkah"
+  "english": "a booth, a hut; sukkah",
+  "copyOf": "word/i-30-w1"
  },
  {
   "path": "audio/m/ashkenazi/word/h64fb7d35.mp3",
@@ -75459,11 +75489,12 @@
   "kind": "word",
   "id": "h64fb7d35",
   "text": "נֵר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/i-05-w1",
-  "english": "oil lamp, candle"
+  "english": "oil lamp, candle",
+  "copyOf": "word/i-05-w1"
  },
  {
   "path": "audio/f/ashkenazi/word/h64fb7d35.mp3",
@@ -75472,11 +75503,12 @@
   "kind": "word",
   "id": "h64fb7d35",
   "text": "נֵר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/i-05-w1",
-  "english": "oil lamp, candle"
+  "english": "oil lamp, candle",
+  "copyOf": "word/i-05-w1"
  },
  {
   "path": "audio/m/ashkenazi/word/h65f4ae84.mp3",
@@ -75485,11 +75517,12 @@
   "kind": "word",
   "id": "h65f4ae84",
   "text": "סִדּוּר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r51-w1",
-  "english": "order, arrangement, layout; siddur; typesetting"
+  "english": "order, arrangement, layout; siddur; typesetting",
+  "copyOf": "word/r51-w1"
  },
  {
   "path": "audio/f/ashkenazi/word/h65f4ae84.mp3",
@@ -75498,11 +75531,12 @@
   "kind": "word",
   "id": "h65f4ae84",
   "text": "סִדּוּר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r51-w1",
-  "english": "order, arrangement, layout; siddur; typesetting"
+  "english": "order, arrangement, layout; siddur; typesetting",
+  "copyOf": "word/r51-w1"
  },
  {
   "path": "audio/m/ashkenazi/word/h68953136.mp3",
@@ -75847,11 +75881,12 @@
   "kind": "word",
   "id": "h7ad9f575",
   "text": "יְצִיר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r46-w5",
-  "english": "creature, creation"
+  "english": "creature, creation",
+  "copyOf": "word/r46-w5"
  },
  {
   "path": "audio/f/ashkenazi/word/h7ad9f575.mp3",
@@ -75860,11 +75895,12 @@
   "kind": "word",
   "id": "h7ad9f575",
   "text": "יְצִיר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r46-w5",
-  "english": "creature, creation"
+  "english": "creature, creation",
+  "copyOf": "word/r46-w5"
  },
  {
   "path": "audio/m/ashkenazi/word/h7fc282e5.mp3",
@@ -76153,11 +76189,12 @@
   "kind": "word",
   "id": "h88576753",
   "text": "שׁוֹפָר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/i-28-w3",
-  "english": "shofar; mouthpiece, spokesman"
+  "english": "shofar; mouthpiece, spokesman",
+  "copyOf": "word/i-28-w3"
  },
  {
   "path": "audio/f/ashkenazi/word/h88576753.mp3",
@@ -76166,11 +76203,12 @@
   "kind": "word",
   "id": "h88576753",
   "text": "שׁוֹפָר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/i-28-w3",
-  "english": "shofar; mouthpiece, spokesman"
+  "english": "shofar; mouthpiece, spokesman",
+  "copyOf": "word/i-28-w3"
  },
  {
   "path": "audio/m/ashkenazi/word/h89be12e3.mp3",
@@ -76263,11 +76301,12 @@
   "kind": "word",
   "id": "h8c045649",
   "text": "עֲלִיָּה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/i-03-w3",
-  "english": "ascent, ascending, going up; rise; aliyah"
+  "english": "ascent, ascending, going up; rise; aliyah",
+  "copyOf": "word/i-03-w3"
  },
  {
   "path": "audio/f/ashkenazi/word/h8c045649.mp3",
@@ -76276,11 +76315,12 @@
   "kind": "word",
   "id": "h8c045649",
   "text": "עֲלִיָּה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/i-03-w3",
-  "english": "ascent, ascending, going up; rise; aliyah"
+  "english": "ascent, ascending, going up; rise; aliyah",
+  "copyOf": "word/i-03-w3"
  },
  {
   "path": "audio/m/ashkenazi/word/h8c95843f.mp3",
@@ -76289,11 +76329,12 @@
   "kind": "word",
   "id": "h8c95843f",
   "text": "תְּפִלָּה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r50-w1",
-  "english": "prayer, entreaty, supplication; intercession, deprecation; hymn, sacred song, Psalm"
+  "english": "prayer, entreaty, supplication; intercession, deprecation; hymn, sacred song, Psalm",
+  "copyOf": "word/r50-w1"
  },
  {
   "path": "audio/f/ashkenazi/word/h8c95843f.mp3",
@@ -76302,11 +76343,12 @@
   "kind": "word",
   "id": "h8c95843f",
   "text": "תְּפִלָּה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r50-w1",
-  "english": "prayer, entreaty, supplication; intercession, deprecation; hymn, sacred song, Psalm"
+  "english": "prayer, entreaty, supplication; intercession, deprecation; hymn, sacred song, Psalm",
+  "copyOf": "word/r50-w1"
  },
  {
   "path": "audio/m/ashkenazi/word/h8ccd0ca9.mp3",
@@ -76483,11 +76525,12 @@
   "kind": "word",
   "id": "h93295b86",
   "text": "בְּרָכָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r14-w1",
-  "english": "blessing, congratulation"
+  "english": "blessing, congratulation",
+  "copyOf": "word/r14-w1"
  },
  {
   "path": "audio/f/ashkenazi/word/h93295b86.mp3",
@@ -76496,11 +76539,12 @@
   "kind": "word",
   "id": "h93295b86",
   "text": "בְּרָכָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r14-w1",
-  "english": "blessing, congratulation"
+  "english": "blessing, congratulation",
+  "copyOf": "word/r14-w1"
  },
  {
   "path": "audio/m/ashkenazi/word/h96c3d6d7.mp3",
@@ -76593,11 +76637,12 @@
   "kind": "word",
   "id": "h9a1ab3f5",
   "text": "רַחֲמִים",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/i-28-w12",
-  "english": "mercy; compassion"
+  "english": "mercy; compassion",
+  "copyOf": "word/i-28-w12"
  },
  {
   "path": "audio/f/ashkenazi/word/h9a1ab3f5.mp3",
@@ -76606,11 +76651,12 @@
   "kind": "word",
   "id": "h9a1ab3f5",
   "text": "רַחֲמִים",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/i-28-w12",
-  "english": "mercy; compassion"
+  "english": "mercy; compassion",
+  "copyOf": "word/i-28-w12"
  },
  {
   "path": "audio/m/ashkenazi/word/h9a52f49b.mp3",
@@ -76815,11 +76861,12 @@
   "kind": "word",
   "id": "ha5babfe9",
   "text": "גַּן",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r18-w3",
-  "english": "a garden"
+  "english": "a garden",
+  "copyOf": "word/r18-w3"
  },
  {
   "path": "audio/f/ashkenazi/word/ha5babfe9.mp3",
@@ -76828,11 +76875,12 @@
   "kind": "word",
   "id": "ha5babfe9",
   "text": "גַּן",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r18-w3",
-  "english": "a garden"
+  "english": "a garden",
+  "copyOf": "word/r18-w3"
  },
  {
   "path": "audio/m/ashkenazi/word/ha61e0686.mp3",
@@ -76981,11 +77029,12 @@
   "kind": "word",
   "id": "hb6ae069f",
   "text": "שָׁמַיִם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/i-08-w9",
-  "english": "sky, skies, heavens, heaven"
+  "english": "sky, skies, heavens, heaven",
+  "copyOf": "word/i-08-w9"
  },
  {
   "path": "audio/f/ashkenazi/word/hb6ae069f.mp3",
@@ -76994,11 +77043,12 @@
   "kind": "word",
   "id": "hb6ae069f",
   "text": "שָׁמַיִם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/i-08-w9",
-  "english": "sky, skies, heavens, heaven"
+  "english": "sky, skies, heavens, heaven",
+  "copyOf": "word/i-08-w9"
  },
  {
   "path": "audio/m/ashkenazi/word/hb77664ca.mp3",
@@ -77007,11 +77057,12 @@
   "kind": "word",
   "id": "hb77664ca",
   "text": "נִבְרָא",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r46-w6",
-  "english": "to be created"
+  "english": "to be created",
+  "copyOf": "word/r46-w6"
  },
  {
   "path": "audio/f/ashkenazi/word/hb77664ca.mp3",
@@ -77020,11 +77071,12 @@
   "kind": "word",
   "id": "hb77664ca",
   "text": "נִבְרָא",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r46-w6",
-  "english": "to be created"
+  "english": "to be created",
+  "copyOf": "word/r46-w6"
  },
  {
   "path": "audio/m/ashkenazi/word/hb7990a7a.mp3",
@@ -77033,11 +77085,12 @@
   "kind": "word",
   "id": "hb7990a7a",
   "text": "כִּפּוּר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/i-28-w1",
-  "english": "Repentance, atonement"
+  "english": "Repentance, atonement",
+  "copyOf": "word/i-28-w1"
  },
  {
   "path": "audio/f/ashkenazi/word/hb7990a7a.mp3",
@@ -77046,11 +77099,12 @@
   "kind": "word",
   "id": "hb7990a7a",
   "text": "כִּפּוּר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/i-28-w1",
-  "english": "Repentance, atonement"
+  "english": "Repentance, atonement",
+  "copyOf": "word/i-28-w1"
  },
  {
   "path": "audio/m/ashkenazi/word/hb91b91be.mp3",
@@ -77059,11 +77113,12 @@
   "kind": "word",
   "id": "hb91b91be",
   "text": "טַל",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r23-w4",
-  "english": "dew"
+  "english": "dew",
+  "copyOf": "word/r23-w4"
  },
  {
   "path": "audio/f/ashkenazi/word/hb91b91be.mp3",
@@ -77072,11 +77127,12 @@
   "kind": "word",
   "id": "hb91b91be",
   "text": "טַל",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r23-w4",
-  "english": "dew"
+  "english": "dew",
+  "copyOf": "word/r23-w4"
  },
  {
   "path": "audio/m/ashkenazi/word/hb92174cf.mp3",
@@ -77645,11 +77701,12 @@
   "kind": "word",
   "id": "hdb90c144",
   "text": "בְּחֶמְלָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r39-w4",
-  "english": "mercifully"
+  "english": "mercifully",
+  "copyOf": "word/r39-w4"
  },
  {
   "path": "audio/f/ashkenazi/word/hdb90c144.mp3",
@@ -77658,11 +77715,12 @@
   "kind": "word",
   "id": "hdb90c144",
   "text": "בְּחֶמְלָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r39-w4",
-  "english": "mercifully"
+  "english": "mercifully",
+  "copyOf": "word/r39-w4"
  },
  {
   "path": "audio/m/ashkenazi/word/hdbc9b05f.mp3",
@@ -77923,11 +77981,12 @@
   "kind": "word",
   "id": "he1fb2094",
   "text": "פּוּר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/i-31-w2",
-  "english": "lot, fate"
+  "english": "lot, fate",
+  "copyOf": "word/i-31-w2"
  },
  {
   "path": "audio/f/ashkenazi/word/he1fb2094.mp3",
@@ -77936,11 +77995,12 @@
   "kind": "word",
   "id": "he1fb2094",
   "text": "פּוּר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/i-31-w2",
-  "english": "lot, fate"
+  "english": "lot, fate",
+  "copyOf": "word/i-31-w2"
  },
  {
   "path": "audio/m/ashkenazi/word/he2c1284d.mp3",
@@ -77949,11 +78009,12 @@
   "kind": "word",
   "id": "he2c1284d",
   "text": "חָכָם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r17-w2",
-  "english": "wise man, sage; rabbi; wise, smart"
+  "english": "wise man, sage; rabbi; wise, smart",
+  "copyOf": "word/r17-w2"
  },
  {
   "path": "audio/f/ashkenazi/word/he2c1284d.mp3",
@@ -77962,11 +78023,12 @@
   "kind": "word",
   "id": "he2c1284d",
   "text": "חָכָם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r17-w2",
-  "english": "wise man, sage; rabbi; wise, smart"
+  "english": "wise man, sage; rabbi; wise, smart",
+  "copyOf": "word/r17-w2"
  },
  {
   "path": "audio/m/ashkenazi/word/he3294d36.mp3",
@@ -78227,11 +78289,12 @@
   "kind": "word",
   "id": "heba57078",
   "text": "מָלַךְ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r46-w3",
-  "english": "to reign (to rule as a king)"
+  "english": "to reign (to rule as a king)",
+  "copyOf": "word/r46-w3"
  },
  {
   "path": "audio/f/ashkenazi/word/heba57078.mp3",
@@ -78240,11 +78303,12 @@
   "kind": "word",
   "id": "heba57078",
   "text": "מָלַךְ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r46-w3",
-  "english": "to reign (to rule as a king)"
+  "english": "to reign (to rule as a king)",
+  "copyOf": "word/r46-w3"
  },
  {
   "path": "audio/m/ashkenazi/word/hebf7495d.mp3",
@@ -78253,11 +78317,12 @@
   "kind": "word",
   "id": "hebf7495d",
   "text": "אָמֵן",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r12-w4",
-  "english": "used to express agreement with what was just stated"
+  "english": "used to express agreement with what was just stated",
+  "copyOf": "word/r12-w4"
  },
  {
   "path": "audio/f/ashkenazi/word/hebf7495d.mp3",
@@ -78266,11 +78331,12 @@
   "kind": "word",
   "id": "hebf7495d",
   "text": "אָמֵן",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r12-w4",
-  "english": "used to express agreement with what was just stated"
+  "english": "used to express agreement with what was just stated",
+  "copyOf": "word/r12-w4"
  },
  {
   "path": "audio/m/ashkenazi/word/hec10b52e.mp3",
@@ -78279,11 +78345,12 @@
   "kind": "word",
   "id": "hec10b52e",
   "text": "לְעוֹלָם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r36-w5",
-  "english": "eternally, forever"
+  "english": "eternally, forever",
+  "copyOf": "word/r36-w5"
  },
  {
   "path": "audio/f/ashkenazi/word/hec10b52e.mp3",
@@ -78292,11 +78359,12 @@
   "kind": "word",
   "id": "hec10b52e",
   "text": "לְעוֹלָם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r36-w5",
-  "english": "eternally, forever"
+  "english": "eternally, forever",
+  "copyOf": "word/r36-w5"
  },
  {
   "path": "audio/m/ashkenazi/word/hed321842.mp3",
@@ -78389,11 +78457,12 @@
   "kind": "word",
   "id": "hf16db4f8",
   "text": "שִׁיר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r09-w1",
-  "english": "song; a poem"
+  "english": "song; a poem",
+  "copyOf": "word/r09-w1"
  },
  {
   "path": "audio/f/ashkenazi/word/hf16db4f8.mp3",
@@ -78402,11 +78471,12 @@
   "kind": "word",
   "id": "hf16db4f8",
   "text": "שִׁיר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r09-w1",
-  "english": "song; a poem"
+  "english": "song; a poem",
+  "copyOf": "word/r09-w1"
  },
  {
   "path": "audio/m/ashkenazi/word/hf1a3cd45.mp3",
@@ -78583,11 +78653,12 @@
   "kind": "word",
   "id": "hf8b5d278",
   "text": "צוֹם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/i-28-w2",
-  "english": "fast"
+  "english": "fast",
+  "copyOf": "word/i-28-w2"
  },
  {
   "path": "audio/f/ashkenazi/word/hf8b5d278.mp3",
@@ -78596,11 +78667,12 @@
   "kind": "word",
   "id": "hf8b5d278",
   "text": "צוֹם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/i-28-w2",
-  "english": "fast"
+  "english": "fast",
+  "copyOf": "word/i-28-w2"
  },
  {
   "path": "audio/m/ashkenazi/word/hfa49d2fe.mp3",
@@ -78777,11 +78849,12 @@
   "kind": "word",
   "id": "p0147cc70",
   "text": "יִשְׁמְרֶךָ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r29-w1",
-  "english": "may He keep you"
+  "english": "may He keep you",
+  "copyOf": "word/r29-w1"
  },
  {
   "path": "audio/f/ashkenazi/word/p0147cc70.mp3",
@@ -78790,11 +78863,12 @@
   "kind": "word",
   "id": "p0147cc70",
   "text": "יִשְׁמְרֶךָ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r29-w1",
-  "english": "may He keep you"
+  "english": "may He keep you",
+  "copyOf": "word/r29-w1"
  },
  {
   "path": "audio/m/ashkenazi/word/p0381993d.mp3",
@@ -78831,11 +78905,12 @@
   "kind": "word",
   "id": "p0494a8ee",
   "text": "אֵלֶיךָ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r25-w3",
-  "english": "toward you"
+  "english": "toward you",
+  "copyOf": "word/r25-w3"
  },
  {
   "path": "audio/f/ashkenazi/word/p0494a8ee.mp3",
@@ -78844,11 +78919,12 @@
   "kind": "word",
   "id": "p0494a8ee",
   "text": "אֵלֶיךָ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r25-w3",
-  "english": "toward you"
+  "english": "toward you",
+  "copyOf": "word/r25-w3"
  },
  {
   "path": "audio/m/ashkenazi/word/p054b41e0.mp3",
@@ -78857,11 +78933,12 @@
   "kind": "word",
   "id": "p054b41e0",
   "text": "נֶאְדָּר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r43-w3",
-  "english": "majestic"
+  "english": "majestic",
+  "copyOf": "word/r43-w3"
  },
  {
   "path": "audio/f/ashkenazi/word/p054b41e0.mp3",
@@ -78870,11 +78947,12 @@
   "kind": "word",
   "id": "p054b41e0",
   "text": "נֶאְדָּר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r43-w3",
-  "english": "majestic"
+  "english": "majestic",
+  "copyOf": "word/r43-w3"
  },
  {
   "path": "audio/m/ashkenazi/word/p0571afce.mp3",
@@ -78911,11 +78989,12 @@
   "kind": "word",
   "id": "p05fe27e4",
   "text": "כֻּלּוֹ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r30-w4",
-  "english": "all of it"
+  "english": "all of it",
+  "copyOf": "word/r30-w4"
  },
  {
   "path": "audio/f/ashkenazi/word/p05fe27e4.mp3",
@@ -78924,11 +79003,12 @@
   "kind": "word",
   "id": "p05fe27e4",
   "text": "כֻּלּוֹ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r30-w4",
-  "english": "all of it"
+  "english": "all of it",
+  "copyOf": "word/r30-w4"
  },
  {
   "path": "audio/m/ashkenazi/word/p07b88d14.mp3",
@@ -78937,11 +79017,12 @@
   "kind": "word",
   "id": "p07b88d14",
   "text": "יַעֲקֹב",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r40-w4",
-  "english": "Jacob"
+  "english": "Jacob",
+  "copyOf": "word/r40-w4"
  },
  {
   "path": "audio/f/ashkenazi/word/p07b88d14.mp3",
@@ -78950,11 +79031,12 @@
   "kind": "word",
   "id": "p07b88d14",
   "text": "יַעֲקֹב",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r40-w4",
-  "english": "Jacob"
+  "english": "Jacob",
+  "copyOf": "word/r40-w4"
  },
  {
   "path": "audio/m/ashkenazi/word/p0a649453.mp3",
@@ -78963,11 +79045,12 @@
   "kind": "word",
   "id": "p0a649453",
   "text": "רַבָּא",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r45-w4",
-  "english": "great"
+  "english": "great",
+  "copyOf": "word/r45-w4"
  },
  {
   "path": "audio/f/ashkenazi/word/p0a649453.mp3",
@@ -78976,11 +79059,12 @@
   "kind": "word",
   "id": "p0a649453",
   "text": "רַבָּא",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r45-w4",
-  "english": "great"
+  "english": "great",
+  "copyOf": "word/r45-w4"
  },
  {
   "path": "audio/m/ashkenazi/word/p0bc14da9.mp3",
@@ -79017,11 +79101,12 @@
   "kind": "word",
   "id": "p0cf7314a",
   "text": "תִּשְׁמְעוּ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r29-w3",
-  "english": "you will hear"
+  "english": "you will hear",
+  "copyOf": "word/r29-w3"
  },
  {
   "path": "audio/f/ashkenazi/word/p0cf7314a.mp3",
@@ -79030,11 +79115,12 @@
   "kind": "word",
   "id": "p0cf7314a",
   "text": "תִּשְׁמְעוּ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r29-w3",
-  "english": "you will hear"
+  "english": "you will hear",
+  "copyOf": "word/r29-w3"
  },
  {
   "path": "audio/m/ashkenazi/word/p0dea9302.mp3",
@@ -79071,11 +79157,12 @@
   "kind": "word",
   "id": "p0e9c033e",
   "text": "הַכֹּל",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r44-w4",
-  "english": "the all"
+  "english": "the all",
+  "copyOf": "word/r44-w4"
  },
  {
   "path": "audio/f/ashkenazi/word/p0e9c033e.mp3",
@@ -79084,11 +79171,12 @@
   "kind": "word",
   "id": "p0e9c033e",
   "text": "הַכֹּל",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r44-w4",
-  "english": "the all"
+  "english": "the all",
+  "copyOf": "word/r44-w4"
  },
  {
   "path": "audio/m/ashkenazi/word/p0f23ebb4.mp3",
@@ -79181,11 +79269,12 @@
   "kind": "word",
   "id": "p133cac9a",
   "text": "וּבְכָל",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r29-w4",
-  "english": "and with all"
+  "english": "and with all",
+  "copyOf": "word/r29-w4"
  },
  {
   "path": "audio/f/ashkenazi/word/p133cac9a.mp3",
@@ -79194,11 +79283,12 @@
   "kind": "word",
   "id": "p133cac9a",
   "text": "וּבְכָל",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r29-w4",
-  "english": "and with all"
+  "english": "and with all",
+  "copyOf": "word/r29-w4"
  },
  {
   "path": "audio/m/ashkenazi/word/p171a5ee2.mp3",
@@ -79235,11 +79325,12 @@
   "kind": "word",
   "id": "p176bc3b2",
   "text": "פָּנָיו",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r16-w3",
-  "english": "His face"
+  "english": "His face",
+  "copyOf": "word/r16-w3"
  },
  {
   "path": "audio/f/ashkenazi/word/p176bc3b2.mp3",
@@ -79248,11 +79339,12 @@
   "kind": "word",
   "id": "p176bc3b2",
   "text": "פָּנָיו",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r16-w3",
-  "english": "His face"
+  "english": "His face",
+  "copyOf": "word/r16-w3"
  },
  {
   "path": "audio/m/ashkenazi/word/p189bffd6.mp3",
@@ -79401,11 +79493,12 @@
   "kind": "word",
   "id": "p217d8c84",
   "text": "בַּקֹּדֶשׁ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r43-w4",
-  "english": "in holiness"
+  "english": "in holiness",
+  "copyOf": "word/r43-w4"
  },
  {
   "path": "audio/f/ashkenazi/word/p217d8c84.mp3",
@@ -79414,11 +79507,12 @@
   "kind": "word",
   "id": "p217d8c84",
   "text": "בַּקֹּדֶשׁ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r43-w4",
-  "english": "in holiness"
+  "english": "in holiness",
+  "copyOf": "word/r43-w4"
  },
  {
   "path": "audio/m/ashkenazi/word/p220fbd8f.mp3",
@@ -79455,11 +79549,12 @@
   "kind": "word",
   "id": "p248f9fc5",
   "text": "אֹהָלֶיךָ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r40-w3",
-  "english": "your tents"
+  "english": "your tents",
+  "copyOf": "word/r40-w3"
  },
  {
   "path": "audio/f/ashkenazi/word/p248f9fc5.mp3",
@@ -79468,11 +79563,12 @@
   "kind": "word",
   "id": "p248f9fc5",
   "text": "אֹהָלֶיךָ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r40-w3",
-  "english": "your tents"
+  "english": "your tents",
+  "copyOf": "word/r40-w3"
  },
  {
   "path": "audio/m/ashkenazi/word/p29823ceb.mp3",
@@ -79481,11 +79577,12 @@
   "kind": "word",
   "id": "p29823ceb",
   "text": "אֱלֹהֵינוּ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r22-w3",
-  "english": "our God"
+  "english": "our God",
+  "copyOf": "word/r22-w3"
  },
  {
   "path": "audio/f/ashkenazi/word/p29823ceb.mp3",
@@ -79494,11 +79591,12 @@
   "kind": "word",
   "id": "p29823ceb",
   "text": "אֱלֹהֵינוּ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r22-w3",
-  "english": "our God"
+  "english": "our God",
+  "copyOf": "word/r22-w3"
  },
  {
   "path": "audio/m/ashkenazi/word/p2b2c75da.mp3",
@@ -79535,11 +79633,12 @@
   "kind": "word",
   "id": "p2bee7060",
   "text": "לְבָבְךָ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r37-w2",
-  "english": "your heart"
+  "english": "your heart",
+  "copyOf": "word/r37-w2"
  },
  {
   "path": "audio/f/ashkenazi/word/p2bee7060.mp3",
@@ -79548,11 +79647,12 @@
   "kind": "word",
   "id": "p2bee7060",
   "text": "לְבָבְךָ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r37-w2",
-  "english": "your heart"
+  "english": "your heart",
+  "copyOf": "word/r37-w2"
  },
  {
   "path": "audio/m/ashkenazi/word/p2de095da.mp3",
@@ -79589,11 +79689,12 @@
   "kind": "word",
   "id": "p2f6563bf",
   "text": "לְשַׁבֵּחַ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r44-w2",
-  "english": "to praise"
+  "english": "to praise",
+  "copyOf": "word/r44-w2"
  },
  {
   "path": "audio/f/ashkenazi/word/p2f6563bf.mp3",
@@ -79602,11 +79703,12 @@
   "kind": "word",
   "id": "p2f6563bf",
   "text": "לְשַׁבֵּחַ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r44-w2",
-  "english": "to praise"
+  "english": "to praise",
+  "copyOf": "word/r44-w2"
  },
  {
   "path": "audio/m/ashkenazi/word/p2f823c8f.mp3",
@@ -79615,11 +79717,12 @@
   "kind": "word",
   "id": "p2f823c8f",
   "text": "שָׁנָה טוֹבָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/i-28-w7",
-  "english": "happy new year (Rosh Hashana greeting)"
+  "english": "happy new year (Rosh Hashana greeting)",
+  "copyOf": "word/i-28-w7"
  },
  {
   "path": "audio/f/ashkenazi/word/p2f823c8f.mp3",
@@ -79628,11 +79731,12 @@
   "kind": "word",
   "id": "p2f823c8f",
   "text": "שָׁנָה טוֹבָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/i-28-w7",
-  "english": "happy new year (Rosh Hashana greeting)"
+  "english": "happy new year (Rosh Hashana greeting)",
+  "copyOf": "word/i-28-w7"
  },
  {
   "path": "audio/m/ashkenazi/word/p30a278f2.mp3",
@@ -79641,11 +79745,12 @@
   "kind": "word",
   "id": "p30a278f2",
   "text": "נִשְׁמָתִי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r39-w3",
-  "english": "my soul"
+  "english": "my soul",
+  "copyOf": "word/r39-w3"
  },
  {
   "path": "audio/f/ashkenazi/word/p30a278f2.mp3",
@@ -79654,11 +79759,12 @@
   "kind": "word",
   "id": "p30a278f2",
   "text": "נִשְׁמָתִי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r39-w3",
-  "english": "my soul"
+  "english": "my soul",
+  "copyOf": "word/r39-w3"
  },
  {
   "path": "audio/m/ashkenazi/word/p34a67ccc.mp3",
@@ -79779,11 +79885,12 @@
   "kind": "word",
   "id": "p41545921",
   "text": "יִשְׂרָאֵל",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r20-w2",
-  "english": "Israel"
+  "english": "Israel",
+  "copyOf": "word/r20-w2"
  },
  {
   "path": "audio/f/ashkenazi/word/p41545921.mp3",
@@ -79792,11 +79899,12 @@
   "kind": "word",
   "id": "p41545921",
   "text": "יִשְׂרָאֵל",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r20-w2",
-  "english": "Israel"
+  "english": "Israel",
+  "copyOf": "word/r20-w2"
  },
  {
   "path": "audio/m/ashkenazi/word/p41740a5e.mp3",
@@ -79833,11 +79941,12 @@
   "kind": "word",
   "id": "p425f3263",
   "text": "שַׁבָּת שָׁלוֹם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r04-w3",
-  "english": "peaceful Sabbath (greeting from Friday afternoon to Saturday)"
+  "english": "peaceful Sabbath (greeting from Friday afternoon to Saturday)",
+  "copyOf": "word/r04-w3"
  },
  {
   "path": "audio/f/ashkenazi/word/p425f3263.mp3",
@@ -79846,11 +79955,12 @@
   "kind": "word",
   "id": "p425f3263",
   "text": "שַׁבָּת שָׁלוֹם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r04-w3",
-  "english": "peaceful Sabbath (greeting from Friday afternoon to Saturday)"
+  "english": "peaceful Sabbath (greeting from Friday afternoon to Saturday)",
+  "copyOf": "word/r04-w3"
  },
  {
   "path": "audio/m/ashkenazi/word/p44e4b411.mp3",
@@ -79859,11 +79969,12 @@
   "kind": "word",
   "id": "p44e4b411",
   "text": "אֱמוּנָתֶךָ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r39-w5",
-  "english": "your faithfulness"
+  "english": "your faithfulness",
+  "copyOf": "word/r39-w5"
  },
  {
   "path": "audio/f/ashkenazi/word/p44e4b411.mp3",
@@ -79872,11 +79983,12 @@
   "kind": "word",
   "id": "p44e4b411",
   "text": "אֱמוּנָתֶךָ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r39-w5",
-  "english": "your faithfulness"
+  "english": "your faithfulness",
+  "copyOf": "word/r39-w5"
  },
  {
   "path": "audio/m/ashkenazi/word/p459412f0.mp3",
@@ -79885,11 +79997,12 @@
   "kind": "word",
   "id": "p459412f0",
   "text": "וְיָשֵׂם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r26-w2",
-  "english": "and grant"
+  "english": "and grant",
+  "copyOf": "word/r26-w2"
  },
  {
   "path": "audio/f/ashkenazi/word/p459412f0.mp3",
@@ -79898,11 +80011,12 @@
   "kind": "word",
   "id": "p459412f0",
   "text": "וְיָשֵׂם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r26-w2",
-  "english": "and grant"
+  "english": "and grant",
+  "copyOf": "word/r26-w2"
  },
  {
   "path": "audio/m/ashkenazi/word/p46372486.mp3",
@@ -80051,11 +80165,12 @@
   "kind": "word",
   "id": "p5218d74d",
   "text": "מוֹדָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r39-w2",
-  "english": "grateful (f.)"
+  "english": "grateful (f.)",
+  "copyOf": "word/r39-w2"
  },
  {
   "path": "audio/f/ashkenazi/word/p5218d74d.mp3",
@@ -80064,11 +80179,12 @@
   "kind": "word",
   "id": "p5218d74d",
   "text": "מוֹדָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r39-w2",
-  "english": "grateful (f.)"
+  "english": "grateful (f.)",
+  "copyOf": "word/r39-w2"
  },
  {
   "path": "audio/m/ashkenazi/word/p526c2f8a.mp3",
@@ -80077,11 +80193,12 @@
   "kind": "word",
   "id": "p526c2f8a",
   "text": "קָדְשׁוֹ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r32-w3",
-  "english": "His holiness"
+  "english": "His holiness",
+  "copyOf": "word/r32-w3"
  },
  {
   "path": "audio/f/ashkenazi/word/p526c2f8a.mp3",
@@ -80090,11 +80207,12 @@
   "kind": "word",
   "id": "p526c2f8a",
   "text": "קָדְשׁוֹ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r32-w3",
-  "english": "His holiness"
+  "english": "His holiness",
+  "copyOf": "word/r32-w3"
  },
  {
   "path": "audio/m/ashkenazi/word/p527b9357.mp3",
@@ -80103,11 +80221,12 @@
   "kind": "word",
   "id": "p527b9357",
   "text": "וּבְרַחֲמִים",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r47-w6",
-  "english": "and with mercy"
+  "english": "and with mercy",
+  "copyOf": "word/r47-w6"
  },
  {
   "path": "audio/f/ashkenazi/word/p527b9357.mp3",
@@ -80116,11 +80235,12 @@
   "kind": "word",
   "id": "p527b9357",
   "text": "וּבְרַחֲמִים",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r47-w6",
-  "english": "and with mercy"
+  "english": "and with mercy",
+  "copyOf": "word/r47-w6"
  },
  {
   "path": "audio/m/ashkenazi/word/p52c330da.mp3",
@@ -80129,11 +80249,12 @@
   "kind": "word",
   "id": "p52c330da",
   "text": "עָלֵינוּ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r44-w1",
-  "english": "it is upon us"
+  "english": "it is upon us",
+  "copyOf": "word/r44-w1"
  },
  {
   "path": "audio/f/ashkenazi/word/p52c330da.mp3",
@@ -80142,11 +80263,12 @@
   "kind": "word",
   "id": "p52c330da",
   "text": "עָלֵינוּ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r44-w1",
-  "english": "it is upon us"
+  "english": "it is upon us",
+  "copyOf": "word/r44-w1"
  },
  {
   "path": "audio/m/ashkenazi/word/p575f23eb.mp3",
@@ -80183,11 +80305,12 @@
   "kind": "word",
   "id": "p58f69180",
   "text": "יָאֵר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r25-w1",
-  "english": "may He shine"
+  "english": "may He shine",
+  "copyOf": "word/r25-w1"
  },
  {
   "path": "audio/f/ashkenazi/word/p58f69180.mp3",
@@ -80196,11 +80319,12 @@
   "kind": "word",
   "id": "p58f69180",
   "text": "יָאֵר",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r25-w1",
-  "english": "may He shine"
+  "english": "may He shine",
+  "copyOf": "word/r25-w1"
  },
  {
   "path": "audio/m/ashkenazi/word/p5acc4988.mp3",
@@ -80321,11 +80445,12 @@
   "kind": "word",
   "id": "p61dd8aa9",
   "text": "מְאֹדֶךָ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r37-w4",
-  "english": "your might"
+  "english": "your might",
+  "copyOf": "word/r37-w4"
  },
  {
   "path": "audio/f/ashkenazi/word/p61dd8aa9.mp3",
@@ -80334,11 +80459,12 @@
   "kind": "word",
   "id": "p61dd8aa9",
   "text": "מְאֹדֶךָ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r37-w4",
-  "english": "your might"
+  "english": "your might",
+  "copyOf": "word/r37-w4"
  },
  {
   "path": "audio/m/ashkenazi/word/p623743cc.mp3",
@@ -80403,11 +80529,12 @@
   "kind": "word",
   "id": "p64e66aea",
   "text": "יִשָּׂא",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r26-w1",
-  "english": "may He lift"
+  "english": "may He lift",
+  "copyOf": "word/r26-w1"
  },
  {
   "path": "audio/f/ashkenazi/word/p64e66aea.mp3",
@@ -80416,11 +80543,12 @@
   "kind": "word",
   "id": "p64e66aea",
   "text": "יִשָּׂא",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r26-w1",
-  "english": "may He lift"
+  "english": "may He lift",
+  "copyOf": "word/r26-w1"
  },
  {
   "path": "audio/m/ashkenazi/word/p6584b7dc.mp3",
@@ -80429,11 +80557,12 @@
   "kind": "word",
   "id": "p6584b7dc",
   "text": "אֲדֹנָי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r15-w2",
-  "english": "the Name (read aloud as Adonai)"
+  "english": "the Name (read aloud as Adonai)",
+  "copyOf": "word/r15-w2"
  },
  {
   "path": "audio/f/ashkenazi/word/p6584b7dc.mp3",
@@ -80442,11 +80571,12 @@
   "kind": "word",
   "id": "p6584b7dc",
   "text": "אֲדֹנָי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r15-w2",
-  "english": "the Name (read aloud as Adonai)"
+  "english": "the Name (read aloud as Adonai)",
+  "copyOf": "word/r15-w2"
  },
  {
   "path": "audio/m/ashkenazi/word/p65b86295.mp3",
@@ -80455,11 +80585,12 @@
   "kind": "word",
   "id": "p65b86295",
   "text": "וִיחֻנֶּךָּ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r25-w4",
-  "english": "and be gracious to you"
+  "english": "and be gracious to you",
+  "copyOf": "word/r25-w4"
  },
  {
   "path": "audio/f/ashkenazi/word/p65b86295.mp3",
@@ -80468,11 +80599,12 @@
   "kind": "word",
   "id": "p65b86295",
   "text": "וִיחֻנֶּךָּ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r25-w4",
-  "english": "and be gracious to you"
+  "english": "and be gracious to you",
+  "copyOf": "word/r25-w4"
  },
  {
   "path": "audio/m/ashkenazi/word/p666197ac.mp3",
@@ -80509,11 +80641,12 @@
   "kind": "word",
   "id": "p67242f56",
   "text": "שָׁבוּעַ טוֹב",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/i-06-w11",
-  "english": "good week"
+  "english": "good week",
+  "copyOf": "word/i-06-w11"
  },
  {
   "path": "audio/f/ashkenazi/word/p67242f56.mp3",
@@ -80522,11 +80655,12 @@
   "kind": "word",
   "id": "p67242f56",
   "text": "שָׁבוּעַ טוֹב",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/i-06-w11",
-  "english": "good week"
+  "english": "good week",
+  "copyOf": "word/i-06-w11"
  },
  {
   "path": "audio/m/ashkenazi/word/p67b402d0.mp3",
@@ -80535,11 +80669,12 @@
   "kind": "word",
   "id": "p67b402d0",
   "text": "וְיִשְׁמְרֶךָ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r15-w3",
-  "english": "and keep you"
+  "english": "and keep you",
+  "copyOf": "word/r15-w3"
  },
  {
   "path": "audio/f/ashkenazi/word/p67b402d0.mp3",
@@ -80548,11 +80683,12 @@
   "kind": "word",
   "id": "p67b402d0",
   "text": "וְיִשְׁמְרֶךָ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r15-w3",
-  "english": "and keep you"
+  "english": "and keep you",
+  "copyOf": "word/r15-w3"
  },
  {
   "path": "audio/m/ashkenazi/word/p681cee95.mp3",
@@ -80645,11 +80781,12 @@
   "kind": "word",
   "id": "p6dc7c01b",
   "text": "הָעַמִּים",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r38-w3",
-  "english": "the peoples"
+  "english": "the peoples",
+  "copyOf": "word/r38-w3"
  },
  {
   "path": "audio/f/ashkenazi/word/p6dc7c01b.mp3",
@@ -80658,11 +80795,12 @@
   "kind": "word",
   "id": "p6dc7c01b",
   "text": "הָעַמִּים",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r38-w3",
-  "english": "the peoples"
+  "english": "the peoples",
+  "copyOf": "word/r38-w3"
  },
  {
   "path": "audio/m/ashkenazi/word/p6e3c9416.mp3",
@@ -80699,11 +80837,12 @@
   "kind": "word",
   "id": "p6e9bcf25",
   "text": "חַג שָׂמֵחַ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/i-29-w5",
-  "english": "happy holiday"
+  "english": "happy holiday",
+  "copyOf": "word/i-29-w5"
  },
  {
   "path": "audio/f/ashkenazi/word/p6e9bcf25.mp3",
@@ -80712,11 +80851,12 @@
   "kind": "word",
   "id": "p6e9bcf25",
   "text": "חַג שָׂמֵחַ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/i-29-w5",
-  "english": "happy holiday"
+  "english": "happy holiday",
+  "copyOf": "word/i-29-w5"
  },
  {
   "path": "audio/m/ashkenazi/word/p709f2aa2.mp3",
@@ -80753,11 +80893,12 @@
   "kind": "word",
   "id": "p711c1cc3",
   "text": "נַפְשְׁךָ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r37-w3",
-  "english": "your soul"
+  "english": "your soul",
+  "copyOf": "word/r37-w3"
  },
  {
   "path": "audio/f/ashkenazi/word/p711c1cc3.mp3",
@@ -80766,11 +80907,12 @@
   "kind": "word",
   "id": "p711c1cc3",
   "text": "נַפְשְׁךָ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r37-w3",
-  "english": "your soul"
+  "english": "your soul",
+  "copyOf": "word/r37-w3"
  },
  {
   "path": "audio/m/ashkenazi/word/p725975f2.mp3",
@@ -80807,11 +80949,12 @@
   "kind": "word",
   "id": "p728a4c88",
   "text": "יִצְחָק",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r42-w3",
-  "english": "Isaac"
+  "english": "Isaac",
+  "copyOf": "word/r42-w3"
  },
  {
   "path": "audio/f/ashkenazi/word/p728a4c88.mp3",
@@ -80820,11 +80963,12 @@
   "kind": "word",
   "id": "p728a4c88",
   "text": "יִצְחָק",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r42-w3",
-  "english": "Isaac"
+  "english": "Isaac",
+  "copyOf": "word/r42-w3"
  },
  {
   "path": "audio/m/ashkenazi/word/p7675ce88.mp3",
@@ -80833,11 +80977,12 @@
   "kind": "word",
   "id": "p7675ce88",
   "text": "מֵהָעוֹלָם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r33-w4",
-  "english": "from the world"
+  "english": "from the world",
+  "copyOf": "word/r33-w4"
  },
  {
   "path": "audio/f/ashkenazi/word/p7675ce88.mp3",
@@ -80846,11 +80991,12 @@
   "kind": "word",
   "id": "p7675ce88",
   "text": "מֵהָעוֹלָם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r33-w4",
-  "english": "from the world"
+  "english": "from the world",
+  "copyOf": "word/r33-w4"
  },
  {
   "path": "audio/m/ashkenazi/word/p7792a364.mp3",
@@ -80859,11 +81005,12 @@
   "kind": "word",
   "id": "p7792a364",
   "text": "בַּבַּיִת",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r33-w2",
-  "english": "in the house"
+  "english": "in the house",
+  "copyOf": "word/r33-w2"
  },
  {
   "path": "audio/f/ashkenazi/word/p7792a364.mp3",
@@ -80872,11 +81019,12 @@
   "kind": "word",
   "id": "p7792a364",
   "text": "בַּבַּיִת",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r33-w2",
-  "english": "in the house"
+  "english": "in the house",
+  "copyOf": "word/r33-w2"
  },
  {
   "path": "audio/m/ashkenazi/word/p797dfc5a.mp3",
@@ -80885,11 +81033,12 @@
   "kind": "word",
   "id": "p797dfc5a",
   "text": "וְאָנִי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r14-w4",
-  "english": "and I"
+  "english": "and I",
+  "copyOf": "word/r14-w4"
  },
  {
   "path": "audio/f/ashkenazi/word/p797dfc5a.mp3",
@@ -80898,11 +81047,12 @@
   "kind": "word",
   "id": "p797dfc5a",
   "text": "וְאָנִי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r14-w4",
-  "english": "and I"
+  "english": "and I",
+  "copyOf": "word/r14-w4"
  },
  {
   "path": "audio/m/ashkenazi/word/p79f72887.mp3",
@@ -80939,11 +81089,12 @@
   "kind": "word",
   "id": "p7cb5e293",
   "text": "אֲדֹנָי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r34-w1",
-  "english": "the Name (unpointed) -> Adonai"
+  "english": "the Name (unpointed) -> Adonai",
+  "copyOf": "word/r34-w1"
  },
  {
   "path": "audio/f/ashkenazi/word/p7cb5e293.mp3",
@@ -80952,11 +81103,12 @@
   "kind": "word",
   "id": "p7cb5e293",
   "text": "אֲדֹנָי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r34-w1",
-  "english": "the Name (unpointed) -> Adonai"
+  "english": "the Name (unpointed) -> Adonai",
+  "copyOf": "word/r34-w1"
  },
  {
   "path": "audio/m/ashkenazi/word/p7d6ce332.mp3",
@@ -81077,11 +81229,12 @@
   "kind": "word",
   "id": "p7fceebe3",
   "text": "בְּטוּבוֹ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r47-w3",
-  "english": "in His goodness"
+  "english": "in His goodness",
+  "copyOf": "word/r47-w3"
  },
  {
   "path": "audio/f/ashkenazi/word/p7fceebe3.mp3",
@@ -81090,11 +81243,12 @@
   "kind": "word",
   "id": "p7fceebe3",
   "text": "בְּטוּבוֹ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r47-w3",
-  "english": "in His goodness"
+  "english": "in His goodness",
+  "copyOf": "word/r47-w3"
  },
  {
   "path": "audio/m/ashkenazi/word/p80064ddc.mp3",
@@ -81159,11 +81313,12 @@
   "kind": "word",
   "id": "p86e5156c",
   "text": "אַבְרָהָם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r42-w2",
-  "english": "Abraham"
+  "english": "Abraham",
+  "copyOf": "word/r42-w2"
  },
  {
   "path": "audio/f/ashkenazi/word/p86e5156c.mp3",
@@ -81172,11 +81327,12 @@
   "kind": "word",
   "id": "p86e5156c",
   "text": "אַבְרָהָם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r42-w2",
-  "english": "Abraham"
+  "english": "Abraham",
+  "copyOf": "word/r42-w2"
  },
  {
   "path": "audio/m/ashkenazi/word/p876ae85e.mp3",
@@ -81185,11 +81341,12 @@
   "kind": "word",
   "id": "p876ae85e",
   "text": "לִי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r06-w2",
-  "english": "to me"
+  "english": "to me",
+  "copyOf": "word/r06-w2"
  },
  {
   "path": "audio/f/ashkenazi/word/p876ae85e.mp3",
@@ -81198,11 +81355,12 @@
   "kind": "word",
   "id": "p876ae85e",
   "text": "לִי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r06-w2",
-  "english": "to me"
+  "english": "to me",
+  "copyOf": "word/r06-w2"
  },
  {
   "path": "audio/m/ashkenazi/word/p877578e9.mp3",
@@ -81491,11 +81649,12 @@
   "kind": "word",
   "id": "p926665ea",
   "text": "לַמֶּלֶךְ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r33-w3",
-  "english": "to the king"
+  "english": "to the king",
+  "copyOf": "word/r33-w3"
  },
  {
   "path": "audio/f/ashkenazi/word/p926665ea.mp3",
@@ -81504,11 +81663,12 @@
   "kind": "word",
   "id": "p926665ea",
   "text": "לַמֶּלֶךְ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r33-w3",
-  "english": "to the king"
+  "english": "to the king",
+  "copyOf": "word/r33-w3"
  },
  {
   "path": "audio/m/ashkenazi/word/p955decf7.mp3",
@@ -81545,11 +81705,12 @@
   "kind": "word",
   "id": "p96977aad",
   "text": "וְיִתְקַדַּשׁ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r45-w2",
-  "english": "and sanctified"
+  "english": "and sanctified",
+  "copyOf": "word/r45-w2"
  },
  {
   "path": "audio/f/ashkenazi/word/p96977aad.mp3",
@@ -81558,11 +81719,12 @@
   "kind": "word",
   "id": "p96977aad",
   "text": "וְיִתְקַדַּשׁ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r45-w2",
-  "english": "and sanctified"
+  "english": "and sanctified",
+  "copyOf": "word/r45-w2"
  },
  {
   "path": "audio/m/ashkenazi/word/p98cfc62f.mp3",
@@ -81571,11 +81733,12 @@
   "kind": "word",
   "id": "p98cfc62f",
   "text": "בְּרֵאשִׁית",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r14-w2",
-  "english": "in the beginning"
+  "english": "in the beginning",
+  "copyOf": "word/r14-w2"
  },
  {
   "path": "audio/f/ashkenazi/word/p98cfc62f.mp3",
@@ -81584,11 +81747,12 @@
   "kind": "word",
   "id": "p98cfc62f",
   "text": "בְּרֵאשִׁית",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r14-w2",
-  "english": "in the beginning"
+  "english": "in the beginning",
+  "copyOf": "word/r14-w2"
  },
  {
   "path": "audio/m/ashkenazi/word/p98dde51c.mp3",
@@ -81625,11 +81789,12 @@
   "kind": "word",
   "id": "p996ad12f",
   "text": "אֲדֹנָי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r21-w4",
-  "english": "my Lord (read in place of the Name)"
+  "english": "my Lord (read in place of the Name)",
+  "copyOf": "word/r21-w4"
  },
  {
   "path": "audio/f/ashkenazi/word/p996ad12f.mp3",
@@ -81638,11 +81803,12 @@
   "kind": "word",
   "id": "p996ad12f",
   "text": "אֲדֹנָי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r21-w4",
-  "english": "my Lord (read in place of the Name)"
+  "english": "my Lord (read in place of the Name)",
+  "copyOf": "word/r21-w4"
  },
  {
   "path": "audio/m/ashkenazi/word/p9a26e069.mp3",
@@ -81819,11 +81985,12 @@
   "kind": "word",
   "id": "pa4aa8a5d",
   "text": "מוֹדֶה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r39-w1",
-  "english": "grateful (m.)"
+  "english": "grateful (m.)",
+  "copyOf": "word/r39-w1"
  },
  {
   "path": "audio/f/ashkenazi/word/pa4aa8a5d.mp3",
@@ -81832,11 +81999,12 @@
   "kind": "word",
   "id": "pa4aa8a5d",
   "text": "מוֹדֶה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r39-w1",
-  "english": "grateful (m.)"
+  "english": "grateful (m.)",
+  "copyOf": "word/r39-w1"
  },
  {
   "path": "audio/m/ashkenazi/word/paa7b1166.mp3",
@@ -81845,11 +82013,12 @@
   "kind": "word",
   "id": "paa7b1166",
   "text": "וְשִׁנַּנְתָּם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r37-w5",
-  "english": "and you shall teach them"
+  "english": "and you shall teach them",
+  "copyOf": "word/r37-w5"
  },
  {
   "path": "audio/f/ashkenazi/word/paa7b1166.mp3",
@@ -81858,11 +82027,12 @@
   "kind": "word",
   "id": "paa7b1166",
   "text": "וְשִׁנַּנְתָּם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r37-w5",
-  "english": "and you shall teach them"
+  "english": "and you shall teach them",
+  "copyOf": "word/r37-w5"
  },
  {
   "path": "audio/m/ashkenazi/word/pad15f022.mp3",
@@ -82095,11 +82265,12 @@
   "kind": "word",
   "id": "pb2b00765",
   "text": "יִתְגַּדַּל",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r45-w1",
-  "english": "may it be magnified"
+  "english": "may it be magnified",
+  "copyOf": "word/r45-w1"
  },
  {
   "path": "audio/f/ashkenazi/word/pb2b00765.mp3",
@@ -82108,11 +82279,12 @@
   "kind": "word",
   "id": "pb2b00765",
   "text": "יִתְגַּדַּל",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r45-w1",
-  "english": "may it be magnified"
+  "english": "may it be magnified",
+  "copyOf": "word/r45-w1"
  },
  {
   "path": "audio/m/ashkenazi/word/pb34f3bdc.mp3",
@@ -82121,11 +82293,12 @@
   "kind": "word",
   "id": "pb34f3bdc",
   "text": "וְהָיָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r33-w1",
-  "english": "and it will be"
+  "english": "and it will be",
+  "copyOf": "word/r33-w1"
  },
  {
   "path": "audio/f/ashkenazi/word/pb34f3bdc.mp3",
@@ -82134,11 +82307,12 @@
   "kind": "word",
   "id": "pb34f3bdc",
   "text": "וְהָיָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r33-w1",
-  "english": "and it will be"
+  "english": "and it will be",
+  "copyOf": "word/r33-w1"
  },
  {
   "path": "audio/m/ashkenazi/word/pb4796e21.mp3",
@@ -82175,11 +82349,12 @@
   "kind": "word",
   "id": "pb5035285",
   "text": "הַזָּן",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r47-w1",
-  "english": "who feeds"
+  "english": "who feeds",
+  "copyOf": "word/r47-w1"
  },
  {
   "path": "audio/f/ashkenazi/word/pb5035285.mp3",
@@ -82188,11 +82363,12 @@
   "kind": "word",
   "id": "pb5035285",
   "text": "הַזָּן",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r47-w1",
-  "english": "who feeds"
+  "english": "who feeds",
+  "copyOf": "word/r47-w1"
  },
  {
   "path": "audio/m/ashkenazi/word/pb561109e.mp3",
@@ -82201,11 +82377,12 @@
   "kind": "word",
   "id": "pb561109e",
   "text": "כָּמֹכָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r43-w2",
-  "english": "like you"
+  "english": "like you",
+  "copyOf": "word/r43-w2"
  },
  {
   "path": "audio/f/ashkenazi/word/pb561109e.mp3",
@@ -82214,11 +82391,12 @@
   "kind": "word",
   "id": "pb561109e",
   "text": "כָּמֹכָה",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r43-w2",
-  "english": "like you"
+  "english": "like you",
+  "copyOf": "word/r43-w2"
  },
  {
   "path": "audio/m/ashkenazi/word/pb62c5467.mp3",
@@ -82227,11 +82405,12 @@
   "kind": "word",
   "id": "pb62c5467",
   "text": "אֱלֹהֵי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r42-w1",
-  "english": "God of"
+  "english": "God of",
+  "copyOf": "word/r42-w1"
  },
  {
   "path": "audio/f/ashkenazi/word/pb62c5467.mp3",
@@ -82240,11 +82419,12 @@
   "kind": "word",
   "id": "pb62c5467",
   "text": "אֱלֹהֵי",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r42-w1",
-  "english": "God of"
+  "english": "God of",
+  "copyOf": "word/r42-w1"
  },
  {
   "path": "audio/m/ashkenazi/word/pb84cc9a5.mp3",
@@ -82281,11 +82461,12 @@
   "kind": "word",
   "id": "pb8600a56",
   "text": "שְׁמֵהּ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r30-w3",
-  "english": "His name (Aramaic)"
+  "english": "His name (Aramaic)",
+  "copyOf": "word/r30-w3"
  },
  {
   "path": "audio/f/ashkenazi/word/pb8600a56.mp3",
@@ -82294,11 +82475,12 @@
   "kind": "word",
   "id": "pb8600a56",
   "text": "שְׁמֵהּ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r30-w3",
-  "english": "His name (Aramaic)"
+  "english": "His name (Aramaic)",
+  "copyOf": "word/r30-w3"
  },
  {
   "path": "audio/m/ashkenazi/word/pb9484fba.mp3",
@@ -82307,11 +82489,12 @@
   "kind": "word",
   "id": "pb9484fba",
   "text": "לְךָ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r14-w3",
-  "english": "to you"
+  "english": "to you",
+  "copyOf": "word/r14-w3"
  },
  {
   "path": "audio/f/ashkenazi/word/pb9484fba.mp3",
@@ -82320,11 +82503,12 @@
   "kind": "word",
   "id": "pb9484fba",
   "text": "לְךָ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r14-w3",
-  "english": "to you"
+  "english": "to you",
+  "copyOf": "word/r14-w3"
  },
  {
   "path": "audio/m/ashkenazi/word/pb9c1c2cd.mp3",
@@ -82361,11 +82545,12 @@
   "kind": "word",
   "id": "pbc01a362",
   "text": "בִּרְכַּת כֹּהֲנִים",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r27-w1",
-  "english": "Priestly Blessing (title)"
+  "english": "Priestly Blessing (title)",
+  "copyOf": "word/r27-w1"
  },
  {
   "path": "audio/f/ashkenazi/word/pbc01a362.mp3",
@@ -82374,11 +82559,12 @@
   "kind": "word",
   "id": "pbc01a362",
   "text": "בִּרְכַּת כֹּהֲנִים",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r27-w1",
-  "english": "Priestly Blessing (title)"
+  "english": "Priestly Blessing (title)",
+  "copyOf": "word/r27-w1"
  },
  {
   "path": "audio/m/ashkenazi/word/pbcc9b4c6.mp3",
@@ -82387,11 +82573,12 @@
   "kind": "word",
   "id": "pbcc9b4c6",
   "text": "בּוֹרֵא",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r41-w1",
-  "english": "creator"
+  "english": "creator",
+  "copyOf": "word/r41-w1"
  },
  {
   "path": "audio/f/ashkenazi/word/pbcc9b4c6.mp3",
@@ -82400,11 +82587,12 @@
   "kind": "word",
   "id": "pbcc9b4c6",
   "text": "בּוֹרֵא",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r41-w1",
-  "english": "creator"
+  "english": "creator",
+  "copyOf": "word/r41-w1"
  },
  {
   "path": "audio/m/ashkenazi/word/pbcdb3791.mp3",
@@ -82469,11 +82657,12 @@
   "kind": "word",
   "id": "pbf0df268",
   "text": "לָךְ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r10-w2",
-  "english": "to you"
+  "english": "to you",
+  "copyOf": "word/r10-w2"
  },
  {
   "path": "audio/f/ashkenazi/word/pbf0df268.mp3",
@@ -82482,11 +82671,12 @@
   "kind": "word",
   "id": "pbf0df268",
   "text": "לָךְ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r10-w2",
-  "english": "to you"
+  "english": "to you",
+  "copyOf": "word/r10-w2"
  },
  {
   "path": "audio/m/ashkenazi/word/pc05559a1.mp3",
@@ -82523,11 +82713,12 @@
   "kind": "word",
   "id": "pc1622162",
   "text": "טֹּבוּ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r40-w2",
-  "english": "good are"
+  "english": "good are",
+  "copyOf": "word/r40-w2"
  },
  {
   "path": "audio/f/ashkenazi/word/pc1622162.mp3",
@@ -82536,11 +82727,12 @@
   "kind": "word",
   "id": "pc1622162",
   "text": "טֹּבוּ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r40-w2",
-  "english": "good are"
+  "english": "good are",
+  "copyOf": "word/r40-w2"
  },
  {
   "path": "audio/m/ashkenazi/word/pc72a6f5c.mp3",
@@ -82577,11 +82769,12 @@
   "kind": "word",
   "id": "pc7b573ce",
   "text": "הָעוֹלָם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r28-w5",
-  "english": "the world"
+  "english": "the world",
+  "copyOf": "word/r28-w5"
  },
  {
   "path": "audio/f/ashkenazi/word/pc7b573ce.mp3",
@@ -82590,11 +82783,12 @@
   "kind": "word",
   "id": "pc7b573ce",
   "text": "הָעוֹלָם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r28-w5",
-  "english": "the world"
+  "english": "the world",
+  "copyOf": "word/r28-w5"
  },
  {
   "path": "audio/m/ashkenazi/word/pc8f262be.mp3",
@@ -82603,11 +82797,12 @@
   "kind": "word",
   "id": "pc8f262be",
   "text": "מַלְכוּתוֹ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r36-w4",
-  "english": "His kingdom"
+  "english": "His kingdom",
+  "copyOf": "word/r36-w4"
  },
  {
   "path": "audio/f/ashkenazi/word/pc8f262be.mp3",
@@ -82616,11 +82811,12 @@
   "kind": "word",
   "id": "pc8f262be",
   "text": "מַלְכוּתוֹ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r36-w4",
-  "english": "His kingdom"
+  "english": "His kingdom",
+  "copyOf": "word/r36-w4"
  },
  {
   "path": "audio/m/ashkenazi/word/pca1d1a55.mp3",
@@ -82629,11 +82825,12 @@
   "kind": "word",
   "id": "pca1d1a55",
   "text": "הַגָּפֶן",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r41-w3",
-  "english": "the vine"
+  "english": "the vine",
+  "copyOf": "word/r41-w3"
  },
  {
   "path": "audio/f/ashkenazi/word/pca1d1a55.mp3",
@@ -82642,11 +82839,12 @@
   "kind": "word",
   "id": "pca1d1a55",
   "text": "הַגָּפֶן",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r41-w3",
-  "english": "the vine"
+  "english": "the vine",
+  "copyOf": "word/r41-w3"
  },
  {
   "path": "audio/m/ashkenazi/word/pce477866.mp3",
@@ -82711,11 +82909,12 @@
   "kind": "word",
   "id": "pd0eff784",
   "text": "מִשְׁכְּנֹתֶיךָ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r40-w5",
-  "english": "your dwellings"
+  "english": "your dwellings",
+  "copyOf": "word/r40-w5"
  },
  {
   "path": "audio/f/ashkenazi/word/pd0eff784.mp3",
@@ -82724,11 +82923,12 @@
   "kind": "word",
   "id": "pd0eff784",
   "text": "מִשְׁכְּנֹתֶיךָ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r40-w5",
-  "english": "your dwellings"
+  "english": "your dwellings",
+  "copyOf": "word/r40-w5"
  },
  {
   "path": "audio/m/ashkenazi/word/pd2536208.mp3",
@@ -82765,11 +82965,12 @@
   "kind": "word",
   "id": "pd4b665ac",
   "text": "וְאָהַבְתָּ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r37-w1",
-  "english": "and you shall love"
+  "english": "and you shall love",
+  "copyOf": "word/r37-w1"
  },
  {
   "path": "audio/f/ashkenazi/word/pd4b665ac.mp3",
@@ -82778,11 +82979,12 @@
   "kind": "word",
   "id": "pd4b665ac",
   "text": "וְאָהַבְתָּ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r37-w1",
-  "english": "and you shall love"
+  "english": "and you shall love",
+  "copyOf": "word/r37-w1"
  },
  {
   "path": "audio/m/ashkenazi/word/pd6c4722c.mp3",
@@ -82931,11 +83133,12 @@
   "kind": "word",
   "id": "pdf2ee05f",
   "text": "בְּטֶרֶם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r46-w4",
-  "english": "before"
+  "english": "before",
+  "copyOf": "word/r46-w4"
  },
  {
   "path": "audio/f/ashkenazi/word/pdf2ee05f.mp3",
@@ -82944,11 +83147,12 @@
   "kind": "word",
   "id": "pdf2ee05f",
   "text": "בְּטֶרֶם",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r46-w4",
-  "english": "before"
+  "english": "before",
+  "copyOf": "word/r46-w4"
  },
  {
   "path": "audio/m/ashkenazi/word/pdfabdbb8.mp3",
@@ -83265,11 +83469,12 @@
   "kind": "word",
   "id": "pfcc78ea6",
   "text": "אדני",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r34-w2",
-  "english": "Adonai (unpointed)"
+  "english": "Adonai (unpointed)",
+  "copyOf": "word/r34-w2"
  },
  {
   "path": "audio/f/ashkenazi/word/pfcc78ea6.mp3",
@@ -83278,11 +83483,12 @@
   "kind": "word",
   "id": "pfcc78ea6",
   "text": "אדני",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r34-w2",
-  "english": "Adonai (unpointed)"
+  "english": "Adonai (unpointed)",
+  "copyOf": "word/r34-w2"
  },
  {
   "path": "audio/m/ashkenazi/word/pfd539aaf.mp3",
@@ -83319,11 +83525,12 @@
   "kind": "word",
   "id": "pfe83972b",
   "text": "יְבָרֶכְךָ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r15-w1",
-  "english": "may He bless you"
+  "english": "may He bless you",
+  "copyOf": "word/r15-w1"
  },
  {
   "path": "audio/f/ashkenazi/word/pfe83972b.mp3",
@@ -83332,11 +83539,12 @@
   "kind": "word",
   "id": "pfe83972b",
   "text": "יְבָרֶכְךָ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r15-w1",
-  "english": "may He bless you"
+  "english": "may He bless you",
+  "copyOf": "word/r15-w1"
  },
  {
   "path": "audio/m/ashkenazi/word/pfee59f13.mp3",
@@ -83345,11 +83553,12 @@
   "kind": "word",
   "id": "pfee59f13",
   "text": "לַאֲדוֹן",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r44-w3",
-  "english": "to the Lord"
+  "english": "to the Lord",
+  "copyOf": "word/r44-w3"
  },
  {
   "path": "audio/f/ashkenazi/word/pfee59f13.mp3",
@@ -83358,11 +83567,12 @@
   "kind": "word",
   "id": "pfee59f13",
   "text": "לַאֲדוֹן",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "paid-cloud",
   "group": "vocab-alias",
   "aliasOf": "word/r44-w3",
-  "english": "to the Lord"
+  "english": "to the Lord",
+  "copyOf": "word/r44-w3"
  },
  {
   "path": "audio/m/ashkenazi/word/pff9a3ef7.mp3",
@@ -84435,13 +84645,12 @@
   "kind": "word",
   "id": "hallel-118-1-4-w1",
   "text": "הוֹדוּ",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "missing",
+  "source": "none",
   "group": "prayer-word",
   "phonetic": "hodu",
   "english": "",
-  "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/m/israeli/line/hallel-118-1-4-l1.mp3"
+  "aliasOf": "line/hallel-118-1-4-l1"
  },
  {
   "path": "audio/f/ashkenazi/word/hallel-118-1-4-w1.mp3",
@@ -84450,13 +84659,12 @@
   "kind": "word",
   "id": "hallel-118-1-4-w1",
   "text": "הוֹדוּ",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "missing",
+  "source": "none",
   "group": "prayer-word",
   "phonetic": "hodu",
   "english": "",
-  "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/f/israeli/line/hallel-118-1-4-l1.mp3"
+  "aliasOf": "line/hallel-118-1-4-l1"
  },
  {
   "path": "audio/m/ashkenazi/word/hallel-118-1-4-w2.mp3",
@@ -84465,13 +84673,12 @@
   "kind": "word",
   "id": "hallel-118-1-4-w2",
   "text": "לַאֲדֹנָי",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "missing",
+  "source": "none",
   "group": "prayer-word",
   "phonetic": "la'adonoy",
   "english": "",
-  "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/m/israeli/line/hallel-118-1-4-l1.mp3"
+  "aliasOf": "line/hallel-118-1-4-l1"
  },
  {
   "path": "audio/f/ashkenazi/word/hallel-118-1-4-w2.mp3",
@@ -84480,13 +84687,12 @@
   "kind": "word",
   "id": "hallel-118-1-4-w2",
   "text": "לַאֲדֹנָי",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "missing",
+  "source": "none",
   "group": "prayer-word",
   "phonetic": "la'adonoy",
   "english": "",
-  "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/f/israeli/line/hallel-118-1-4-l1.mp3"
+  "aliasOf": "line/hallel-118-1-4-l1"
  },
  {
   "path": "audio/m/ashkenazi/word/hallel-118-1-4-w3.mp3",
@@ -84495,13 +84701,12 @@
   "kind": "word",
   "id": "hallel-118-1-4-w3",
   "text": "כִּי־טוֹב",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "missing",
+  "source": "none",
   "group": "prayer-word",
   "phonetic": "ki-tov",
   "english": "",
-  "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/m/israeli/line/hallel-118-1-4-l1.mp3"
+  "aliasOf": "line/hallel-118-1-4-l1"
  },
  {
   "path": "audio/f/ashkenazi/word/hallel-118-1-4-w3.mp3",
@@ -84510,13 +84715,12 @@
   "kind": "word",
   "id": "hallel-118-1-4-w3",
   "text": "כִּי־טוֹב",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "missing",
+  "source": "none",
   "group": "prayer-word",
   "phonetic": "ki-tov",
   "english": "",
-  "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/f/israeli/line/hallel-118-1-4-l1.mp3"
+  "aliasOf": "line/hallel-118-1-4-l1"
  },
  {
   "path": "audio/m/ashkenazi/word/hallel-118-1-4-w4.mp3",
@@ -84525,13 +84729,12 @@
   "kind": "word",
   "id": "hallel-118-1-4-w4",
   "text": "כִּי",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "missing",
+  "source": "none",
   "group": "prayer-word",
   "phonetic": "ki",
   "english": "",
-  "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/m/israeli/line/hallel-118-1-4-l1.mp3"
+  "aliasOf": "line/hallel-118-1-4-l1"
  },
  {
   "path": "audio/f/ashkenazi/word/hallel-118-1-4-w4.mp3",
@@ -84540,13 +84743,12 @@
   "kind": "word",
   "id": "hallel-118-1-4-w4",
   "text": "כִּי",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "missing",
+  "source": "none",
   "group": "prayer-word",
   "phonetic": "ki",
   "english": "",
-  "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/f/israeli/line/hallel-118-1-4-l1.mp3"
+  "aliasOf": "line/hallel-118-1-4-l1"
  },
  {
   "path": "audio/m/ashkenazi/word/hallel-118-1-4-w5.mp3",
@@ -84555,13 +84757,12 @@
   "kind": "word",
   "id": "hallel-118-1-4-w5",
   "text": "לְעוֹלָם",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "missing",
+  "source": "none",
   "group": "prayer-word",
   "phonetic": "le'olom",
   "english": "",
-  "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/m/israeli/line/hallel-118-1-4-l1.mp3"
+  "aliasOf": "line/hallel-118-1-4-l1"
  },
  {
   "path": "audio/f/ashkenazi/word/hallel-118-1-4-w5.mp3",
@@ -84570,13 +84771,12 @@
   "kind": "word",
   "id": "hallel-118-1-4-w5",
   "text": "לְעוֹלָם",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "missing",
+  "source": "none",
   "group": "prayer-word",
   "phonetic": "le'olom",
   "english": "",
-  "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/f/israeli/line/hallel-118-1-4-l1.mp3"
+  "aliasOf": "line/hallel-118-1-4-l1"
  },
  {
   "path": "audio/m/ashkenazi/word/hallel-118-1-4-w6.mp3",
@@ -84585,13 +84785,12 @@
   "kind": "word",
   "id": "hallel-118-1-4-w6",
   "text": "חַסְדּוֹ׃",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "missing",
+  "source": "none",
   "group": "prayer-word",
   "phonetic": "chasdo",
   "english": "",
-  "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/m/israeli/line/hallel-118-1-4-l1.mp3"
+  "aliasOf": "line/hallel-118-1-4-l1"
  },
  {
   "path": "audio/f/ashkenazi/word/hallel-118-1-4-w6.mp3",
@@ -84600,13 +84799,12 @@
   "kind": "word",
   "id": "hallel-118-1-4-w6",
   "text": "חַסְדּוֹ׃",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "missing",
+  "source": "none",
   "group": "prayer-word",
   "phonetic": "chasdo",
   "english": "",
-  "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/f/israeli/line/hallel-118-1-4-l1.mp3"
+  "aliasOf": "line/hallel-118-1-4-l1"
  },
  {
   "path": "audio/m/ashkenazi/word/hallel-118-1-4-w7.mp3",
@@ -84615,13 +84813,12 @@
   "kind": "word",
   "id": "hallel-118-1-4-w7",
   "text": "יֹאמַר־נָא",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "missing",
+  "source": "none",
   "group": "prayer-word",
   "phonetic": "yomar-no",
   "english": "",
-  "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/m/israeli/line/hallel-118-1-4-l1.mp3"
+  "aliasOf": "line/hallel-118-1-4-l1"
  },
  {
   "path": "audio/f/ashkenazi/word/hallel-118-1-4-w7.mp3",
@@ -84630,13 +84827,12 @@
   "kind": "word",
   "id": "hallel-118-1-4-w7",
   "text": "יֹאמַר־נָא",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "missing",
+  "source": "none",
   "group": "prayer-word",
   "phonetic": "yomar-no",
   "english": "",
-  "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/f/israeli/line/hallel-118-1-4-l1.mp3"
+  "aliasOf": "line/hallel-118-1-4-l1"
  },
  {
   "path": "audio/m/ashkenazi/word/hallel-118-1-4-w8.mp3",
@@ -84645,13 +84841,12 @@
   "kind": "word",
   "id": "hallel-118-1-4-w8",
   "text": "יִשְׂרָאֵל",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "missing",
+  "source": "none",
   "group": "prayer-word",
   "phonetic": "yisro'eil",
   "english": "",
-  "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/m/israeli/line/hallel-118-1-4-l1.mp3"
+  "aliasOf": "line/hallel-118-1-4-l1"
  },
  {
   "path": "audio/f/ashkenazi/word/hallel-118-1-4-w8.mp3",
@@ -84660,13 +84855,12 @@
   "kind": "word",
   "id": "hallel-118-1-4-w8",
   "text": "יִשְׂרָאֵל",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "missing",
+  "source": "none",
   "group": "prayer-word",
   "phonetic": "yisro'eil",
   "english": "",
-  "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/f/israeli/line/hallel-118-1-4-l1.mp3"
+  "aliasOf": "line/hallel-118-1-4-l1"
  },
  {
   "path": "audio/m/ashkenazi/word/hallel-118-1-4-w9.mp3",
@@ -84675,13 +84869,12 @@
   "kind": "word",
   "id": "hallel-118-1-4-w9",
   "text": "כִּי",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "missing",
+  "source": "none",
   "group": "prayer-word",
   "phonetic": "ki",
   "english": "",
-  "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/m/israeli/line/hallel-118-1-4-l1.mp3"
+  "aliasOf": "line/hallel-118-1-4-l1"
  },
  {
   "path": "audio/f/ashkenazi/word/hallel-118-1-4-w9.mp3",
@@ -84690,13 +84883,12 @@
   "kind": "word",
   "id": "hallel-118-1-4-w9",
   "text": "כִּי",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "missing",
+  "source": "none",
   "group": "prayer-word",
   "phonetic": "ki",
   "english": "",
-  "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/f/israeli/line/hallel-118-1-4-l1.mp3"
+  "aliasOf": "line/hallel-118-1-4-l1"
  },
  {
   "path": "audio/m/ashkenazi/word/hallel-118-1-4-w10.mp3",
@@ -84705,13 +84897,12 @@
   "kind": "word",
   "id": "hallel-118-1-4-w10",
   "text": "לְעוֹלָם",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "missing",
+  "source": "none",
   "group": "prayer-word",
   "phonetic": "le'olom",
   "english": "",
-  "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/m/israeli/line/hallel-118-1-4-l1.mp3"
+  "aliasOf": "line/hallel-118-1-4-l1"
  },
  {
   "path": "audio/f/ashkenazi/word/hallel-118-1-4-w10.mp3",
@@ -84720,13 +84911,12 @@
   "kind": "word",
   "id": "hallel-118-1-4-w10",
   "text": "לְעוֹלָם",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "missing",
+  "source": "none",
   "group": "prayer-word",
   "phonetic": "le'olom",
   "english": "",
-  "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/f/israeli/line/hallel-118-1-4-l1.mp3"
+  "aliasOf": "line/hallel-118-1-4-l1"
  },
  {
   "path": "audio/m/ashkenazi/word/hallel-118-1-4-w11.mp3",
@@ -84735,13 +84925,12 @@
   "kind": "word",
   "id": "hallel-118-1-4-w11",
   "text": "חַסְדּוֹ׃",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "missing",
+  "source": "none",
   "group": "prayer-word",
   "phonetic": "chasdo",
   "english": "",
-  "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/m/israeli/line/hallel-118-1-4-l1.mp3"
+  "aliasOf": "line/hallel-118-1-4-l1"
  },
  {
   "path": "audio/f/ashkenazi/word/hallel-118-1-4-w11.mp3",
@@ -84750,13 +84939,12 @@
   "kind": "word",
   "id": "hallel-118-1-4-w11",
   "text": "חַסְדּוֹ׃",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "missing",
+  "source": "none",
   "group": "prayer-word",
   "phonetic": "chasdo",
   "english": "",
-  "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/f/israeli/line/hallel-118-1-4-l1.mp3"
+  "aliasOf": "line/hallel-118-1-4-l1"
  },
  {
   "path": "audio/m/ashkenazi/word/hallel-118-1-4-w12.mp3",
@@ -84765,13 +84953,12 @@
   "kind": "word",
   "id": "hallel-118-1-4-w12",
   "text": "יֹאמְרוּ־נָא",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "missing",
+  "source": "none",
   "group": "prayer-word",
   "phonetic": "yomru-no",
   "english": "",
-  "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/m/israeli/line/hallel-118-1-4-l1.mp3"
+  "aliasOf": "line/hallel-118-1-4-l1"
  },
  {
   "path": "audio/f/ashkenazi/word/hallel-118-1-4-w12.mp3",
@@ -84780,13 +84967,12 @@
   "kind": "word",
   "id": "hallel-118-1-4-w12",
   "text": "יֹאמְרוּ־נָא",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "missing",
+  "source": "none",
   "group": "prayer-word",
   "phonetic": "yomru-no",
   "english": "",
-  "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/f/israeli/line/hallel-118-1-4-l1.mp3"
+  "aliasOf": "line/hallel-118-1-4-l1"
  },
  {
   "path": "audio/m/ashkenazi/word/hallel-118-1-4-w13.mp3",
@@ -84795,13 +84981,12 @@
   "kind": "word",
   "id": "hallel-118-1-4-w13",
   "text": "בֵית־אַהֲרֹן",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "missing",
+  "source": "none",
   "group": "prayer-word",
   "phonetic": "veis-aharon",
   "english": "",
-  "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/m/israeli/line/hallel-118-1-4-l1.mp3"
+  "aliasOf": "line/hallel-118-1-4-l1"
  },
  {
   "path": "audio/f/ashkenazi/word/hallel-118-1-4-w13.mp3",
@@ -84810,13 +84995,12 @@
   "kind": "word",
   "id": "hallel-118-1-4-w13",
   "text": "בֵית־אַהֲרֹן",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "missing",
+  "source": "none",
   "group": "prayer-word",
   "phonetic": "veis-aharon",
   "english": "",
-  "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/f/israeli/line/hallel-118-1-4-l1.mp3"
+  "aliasOf": "line/hallel-118-1-4-l1"
  },
  {
   "path": "audio/m/ashkenazi/word/hallel-118-1-4-w14.mp3",
@@ -84825,13 +85009,12 @@
   "kind": "word",
   "id": "hallel-118-1-4-w14",
   "text": "כִּי",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "missing",
+  "source": "none",
   "group": "prayer-word",
   "phonetic": "ki",
   "english": "",
-  "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/m/israeli/line/hallel-118-1-4-l1.mp3"
+  "aliasOf": "line/hallel-118-1-4-l1"
  },
  {
   "path": "audio/f/ashkenazi/word/hallel-118-1-4-w14.mp3",
@@ -84840,13 +85023,12 @@
   "kind": "word",
   "id": "hallel-118-1-4-w14",
   "text": "כִּי",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "missing",
+  "source": "none",
   "group": "prayer-word",
   "phonetic": "ki",
   "english": "",
-  "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/f/israeli/line/hallel-118-1-4-l1.mp3"
+  "aliasOf": "line/hallel-118-1-4-l1"
  },
  {
   "path": "audio/m/ashkenazi/word/hallel-118-1-4-w15.mp3",
@@ -84855,13 +85037,12 @@
   "kind": "word",
   "id": "hallel-118-1-4-w15",
   "text": "לְעוֹלָם",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "missing",
+  "source": "none",
   "group": "prayer-word",
   "phonetic": "le'olom",
   "english": "",
-  "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/m/israeli/line/hallel-118-1-4-l1.mp3"
+  "aliasOf": "line/hallel-118-1-4-l1"
  },
  {
   "path": "audio/f/ashkenazi/word/hallel-118-1-4-w15.mp3",
@@ -84870,13 +85051,12 @@
   "kind": "word",
   "id": "hallel-118-1-4-w15",
   "text": "לְעוֹלָם",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "missing",
+  "source": "none",
   "group": "prayer-word",
   "phonetic": "le'olom",
   "english": "",
-  "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/f/israeli/line/hallel-118-1-4-l1.mp3"
+  "aliasOf": "line/hallel-118-1-4-l1"
  },
  {
   "path": "audio/m/ashkenazi/word/hallel-118-1-4-w16.mp3",
@@ -84885,13 +85065,12 @@
   "kind": "word",
   "id": "hallel-118-1-4-w16",
   "text": "חַסְדּוֹ׃",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "missing",
+  "source": "none",
   "group": "prayer-word",
   "phonetic": "chasdo",
   "english": "",
-  "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/m/israeli/line/hallel-118-1-4-l1.mp3"
+  "aliasOf": "line/hallel-118-1-4-l1"
  },
  {
   "path": "audio/f/ashkenazi/word/hallel-118-1-4-w16.mp3",
@@ -84900,13 +85079,12 @@
   "kind": "word",
   "id": "hallel-118-1-4-w16",
   "text": "חַסְדּוֹ׃",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "missing",
+  "source": "none",
   "group": "prayer-word",
   "phonetic": "chasdo",
   "english": "",
-  "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/f/israeli/line/hallel-118-1-4-l1.mp3"
+  "aliasOf": "line/hallel-118-1-4-l1"
  },
  {
   "path": "audio/m/ashkenazi/word/hallel-118-1-4-w17.mp3",
@@ -84915,13 +85093,12 @@
   "kind": "word",
   "id": "hallel-118-1-4-w17",
   "text": "יֹאמְרוּ־נָא",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "missing",
+  "source": "none",
   "group": "prayer-word",
   "phonetic": "yomru-no",
   "english": "",
-  "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/m/israeli/line/hallel-118-1-4-l1.mp3"
+  "aliasOf": "line/hallel-118-1-4-l1"
  },
  {
   "path": "audio/f/ashkenazi/word/hallel-118-1-4-w17.mp3",
@@ -84930,13 +85107,12 @@
   "kind": "word",
   "id": "hallel-118-1-4-w17",
   "text": "יֹאמְרוּ־נָא",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "missing",
+  "source": "none",
   "group": "prayer-word",
   "phonetic": "yomru-no",
   "english": "",
-  "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/f/israeli/line/hallel-118-1-4-l1.mp3"
+  "aliasOf": "line/hallel-118-1-4-l1"
  },
  {
   "path": "audio/m/ashkenazi/word/hallel-118-1-4-w18.mp3",
@@ -84945,13 +85121,12 @@
   "kind": "word",
   "id": "hallel-118-1-4-w18",
   "text": "יִרְאֵי",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "missing",
+  "source": "none",
   "group": "prayer-word",
   "phonetic": "yir'ei",
   "english": "",
-  "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/m/israeli/line/hallel-118-1-4-l1.mp3"
+  "aliasOf": "line/hallel-118-1-4-l1"
  },
  {
   "path": "audio/f/ashkenazi/word/hallel-118-1-4-w18.mp3",
@@ -84960,13 +85135,12 @@
   "kind": "word",
   "id": "hallel-118-1-4-w18",
   "text": "יִרְאֵי",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "missing",
+  "source": "none",
   "group": "prayer-word",
   "phonetic": "yir'ei",
   "english": "",
-  "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/f/israeli/line/hallel-118-1-4-l1.mp3"
+  "aliasOf": "line/hallel-118-1-4-l1"
  },
  {
   "path": "audio/m/ashkenazi/word/hallel-118-1-4-w19.mp3",
@@ -84975,13 +85149,12 @@
   "kind": "word",
   "id": "hallel-118-1-4-w19",
   "text": "אֲדֹנָי",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "missing",
+  "source": "none",
   "group": "prayer-word",
   "phonetic": "adonoy",
   "english": "",
-  "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/m/israeli/line/hallel-118-1-4-l1.mp3"
+  "aliasOf": "line/hallel-118-1-4-l1"
  },
  {
   "path": "audio/f/ashkenazi/word/hallel-118-1-4-w19.mp3",
@@ -84990,13 +85163,12 @@
   "kind": "word",
   "id": "hallel-118-1-4-w19",
   "text": "אֲדֹנָי",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "missing",
+  "source": "none",
   "group": "prayer-word",
   "phonetic": "adonoy",
   "english": "",
-  "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/f/israeli/line/hallel-118-1-4-l1.mp3"
+  "aliasOf": "line/hallel-118-1-4-l1"
  },
  {
   "path": "audio/m/ashkenazi/word/hallel-118-1-4-w20.mp3",
@@ -85005,13 +85177,12 @@
   "kind": "word",
   "id": "hallel-118-1-4-w20",
   "text": "כִּי",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "missing",
+  "source": "none",
   "group": "prayer-word",
   "phonetic": "ki",
   "english": "",
-  "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/m/israeli/line/hallel-118-1-4-l1.mp3"
+  "aliasOf": "line/hallel-118-1-4-l1"
  },
  {
   "path": "audio/f/ashkenazi/word/hallel-118-1-4-w20.mp3",
@@ -85020,13 +85191,12 @@
   "kind": "word",
   "id": "hallel-118-1-4-w20",
   "text": "כִּי",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "missing",
+  "source": "none",
   "group": "prayer-word",
   "phonetic": "ki",
   "english": "",
-  "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/f/israeli/line/hallel-118-1-4-l1.mp3"
+  "aliasOf": "line/hallel-118-1-4-l1"
  },
  {
   "path": "audio/m/ashkenazi/word/hallel-118-1-4-w21.mp3",
@@ -85035,13 +85205,12 @@
   "kind": "word",
   "id": "hallel-118-1-4-w21",
   "text": "לְעוֹלָם",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "missing",
+  "source": "none",
   "group": "prayer-word",
   "phonetic": "le'olom",
   "english": "",
-  "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/m/israeli/line/hallel-118-1-4-l1.mp3"
+  "aliasOf": "line/hallel-118-1-4-l1"
  },
  {
   "path": "audio/f/ashkenazi/word/hallel-118-1-4-w21.mp3",
@@ -85050,13 +85219,12 @@
   "kind": "word",
   "id": "hallel-118-1-4-w21",
   "text": "לְעוֹלָם",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "missing",
+  "source": "none",
   "group": "prayer-word",
   "phonetic": "le'olom",
   "english": "",
-  "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/f/israeli/line/hallel-118-1-4-l1.mp3"
+  "aliasOf": "line/hallel-118-1-4-l1"
  },
  {
   "path": "audio/m/ashkenazi/word/hallel-118-1-4-w22.mp3",
@@ -85065,13 +85233,12 @@
   "kind": "word",
   "id": "hallel-118-1-4-w22",
   "text": "חַסְדּוֹ׃",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "missing",
+  "source": "none",
   "group": "prayer-word",
   "phonetic": "chasdo",
   "english": "",
-  "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/m/israeli/line/hallel-118-1-4-l1.mp3"
+  "aliasOf": "line/hallel-118-1-4-l1"
  },
  {
   "path": "audio/f/ashkenazi/word/hallel-118-1-4-w22.mp3",
@@ -85080,13 +85247,12 @@
   "kind": "word",
   "id": "hallel-118-1-4-w22",
   "text": "חַסְדּוֹ׃",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "missing",
+  "source": "none",
   "group": "prayer-word",
   "phonetic": "chasdo",
   "english": "",
-  "aliasOf": "line/hallel-118-1-4-l1",
-  "plays": "audio/f/israeli/line/hallel-118-1-4-l1.mp3"
+  "aliasOf": "line/hallel-118-1-4-l1"
  },
  {
   "path": "audio/m/ashkenazi/word/hallel-118-5-w1.mp3",

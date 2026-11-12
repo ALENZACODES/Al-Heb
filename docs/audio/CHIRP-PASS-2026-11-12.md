@@ -99,3 +99,24 @@ No try passed for any of the ten clips, so every current clip keeps playing and 
 | `audio/f/israeli/line/amidah-elohai-netzor.mp3` | 4 | 2 |
 
 Logs: `docs/audio/fill/chirp-long-r1-*.jsonl`.
+
+## Second pass on the five whole prayers (chirp-long runs 2 and 3)
+
+Smaller parts: one verse line or about 150 bytes, cut only at word boundaries in the registry text. One voice per prayer, never mixed: the narrator's three Chirp 3 HD voices in turn; with each, every part was recorded at 1.0 and judged by the three reviewers on its own, and a failing part was retried at 0.9 and then 0.85 (the rate may differ from part to part, the voice may not). When every part passed 2 of 3, the parts were joined (0.45 s at line and sentence breaks, 0.3 s at a cut), loudness-normalised to the repo format with all metadata stripped, and the joined clip was checked: its length (the parts plus the pauses, allowing the MP3 padding of each separately encoded part), quiet edges, no clipping, and Google Speech-to-Text on chunks of whole parts under 50 s, which may hear at most one more word off than it heard in those parts alone. Run 2's length check did not allow for the per-part MP3 padding (about 38 ms a part), so the three clips that failed only that check were recorded again in run 3 with the corrected check (Chirp takes differ from one request to the next).
+
+| clip | result |
+|---|---|
+| `audio/f/israeli/line/aleinu-1.mp3` | held: Kore: part 8 failed 2 of 3 reviewers at rates 1.0, 0.9 and 0.85; Aoede: part 3 failed 2 of 3 reviewers at rates 1.0, 0.9 and 0.85; Leda: part 2 failed 2 of 3 reviewers at rates 1.0, 0.9 and 0.85 |
+| `audio/f/israeli/line/amidah-elohai-netzor.mp3` | **Chirp kept** (he-IL-Chirp3-HD-Kore, run 3) |
+| `audio/f/israeli/prayer/adon-olam-1.mp3` | held: Kore: part 1 failed 2 of 3 reviewers at rates 1.0, 0.9 and 0.85; Aoede: part 1 failed 2 of 3 reviewers at rates 1.0, 0.9 and 0.85; Leda: part 5 failed 2 of 3 reviewers at rates 1.0, 0.9 and 0.85 |
+| `audio/f/israeli/prayer/haftarah-after.mp3` | held: Kore: part 3 failed 2 of 3 reviewers at rates 1.0, 0.9 and 0.85; Aoede: part 2 failed 2 of 3 reviewers at rates 1.0, 0.9 and 0.85; Leda: part 3 failed 2 of 3 reviewers at rates 1.0, 0.9 and 0.85 |
+| `audio/f/israeli/prayer/kaddish-1.mp3` | held: Kore: part 2 failed 2 of 3 reviewers at rates 1.0, 0.9 and 0.85; Aoede: part 2 failed 2 of 3 reviewers at rates 1.0, 0.9 and 0.85; Leda: part 2 failed 2 of 3 reviewers at rates 1.0, 0.9 and 0.85 |
+| `audio/m/israeli/line/aleinu-1.mp3` | held: Charon: part 3 failed 2 of 3 reviewers at rates 1.0, 0.9 and 0.85; Orus: part 3 failed 2 of 3 reviewers at rates 1.0, 0.9 and 0.85; Fenrir: part 3 failed 2 of 3 reviewers at rates 1.0, 0.9 and 0.85 |
+| `audio/m/israeli/line/amidah-elohai-netzor.mp3` | held: Charon: part 1 failed 2 of 3 reviewers at rates 1.0, 0.9 and 0.85; Orus: part 6 failed 2 of 3 reviewers at rates 1.0, 0.9 and 0.85; Fenrir: part 5 failed 2 of 3 reviewers at rates 1.0, 0.9 and 0.85 |
+| `audio/m/israeli/prayer/adon-olam-1.mp3` | held: Charon: part 5 failed 2 of 3 reviewers at rates 1.0, 0.9 and 0.85; Orus: part 5 failed 2 of 3 reviewers at rates 1.0, 0.9 and 0.85; Fenrir: part 1 failed 2 of 3 reviewers at rates 1.0, 0.9 and 0.85 |
+| `audio/m/israeli/prayer/haftarah-after.mp3` | held: Charon: part 3 failed 2 of 3 reviewers at rates 1.0, 0.9 and 0.85; Orus: part 3 failed 2 of 3 reviewers at rates 1.0, 0.9 and 0.85; Fenrir: part 3 failed 2 of 3 reviewers at rates 1.0, 0.9 and 0.85 |
+| `audio/m/israeli/prayer/kaddish-1.mp3` | held: Charon: part 2 failed 2 of 3 reviewers at rates 1.0, 0.9 and 0.85; Orus: part 1 failed 2 of 3 reviewers at rates 1.0, 0.9 and 0.85; Fenrir: part 2 failed 2 of 3 reviewers at rates 1.0, 0.9 and 0.85 |
+
+The catalogue rows of the held clips carry `"chirpHeld": true` and `chirpHeldReason`; their current clip keeps playing. Logs: `docs/audio/fill/chirp-long-r2-*.jsonl`, `docs/audio/fill/chirp-long-r3-*.jsonl`.
+
+Service clips in Chirp 3 HD after this pass: **93 of 146** (92 before; the woman's Elohai Netzor line is the new one).

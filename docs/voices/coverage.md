@@ -6,7 +6,7 @@ Reading this table: "required" counts the clips the app can ask for (optional wh
 
 Status labels (the same table the app shows, src/shell/audio-labels.js): recorded = "Recorded by a human reader"; tts = "Israeli voice"; missing = "No audio yet".
 
-**Overall: 23951 of 24021 required clips exist (99.7%); Recorded by a human reader: 0; Israeli voice: 23303; No audio yet: 70.**
+**Overall: 23951 of 24021 required clips exist (99.7%); Recorded by a human reader: 0; Israeli voice: 23324; No audio yet: 70.**
 
 ## By talent and group
 
@@ -17,17 +17,17 @@ Required 3369; have 3367; missing 2.
 | group | required | recorded | tts | via equivalent | missing | optional (missing/total) | who can supply |
 |---|---:|---:|---:|---:|---:|---:|---|
 | letter | 22 | 0 | 18 | 4 | 0 | 0/0 | human only |
-| letter-final | 5 | 0 | 3 | 2 | 0 | 0/0 | human only |
+| letter-final | 5 | 0 | 4 | 1 | 0 | 0/0 | human only |
 | letter-variant | 4 | 0 | 4 | 0 | 0 | 0/0 | human only |
-| letter-sound | 22 | 0 | 9 | 13 | 0 | 0/0 | human only |
+| letter-sound | 22 | 0 | 11 | 11 | 0 | 0/0 | human only |
 | letter-variant-sound | 4 | 0 | 0 | 4 | 0 | 0/0 | human only |
 | niqqud | 15 | 0 | 9 | 6 | 0 | 0/0 | human only |
-| syllable | 110 | 0 | 83 | 27 | 0 | 0/0 | human only |
+| syllable | 110 | 0 | 87 | 23 | 0 | 0/0 | human only |
 | lesson-word | 418 | 0 | 418 | 0 | 0 | 0/0 | human only |
-| prayer-line | 152 | 0 | 143 | 7 | 2 | 0/0 | human only |
+| prayer-line | 152 | 0 | 144 | 6 | 2 | 0/0 | human only |
 | prayer-word | 1573 | 0 | 1573 | 0 | 0 | 0/0 | human only |
 | prayer-whole | 0 | 0 | 0 | 0 | 0 | 3/21 | human only |
-| vocab-word | 1000 | 0 | 995 | 5 | 0 | 0/0 | human only |
+| vocab-word | 1000 | 0 | 998 | 2 | 0 | 0/0 | human only |
 | vocab-alias | 0 | 0 | 0 | 0 | 0 | 0/0 | human only |
 | vocab-extra | 44 | 0 | 44 | 0 | 0 | 0/0 | human only |
 
@@ -40,17 +40,17 @@ Required 3366; have 3364; missing 2.
 | letter | 22 | 0 | 20 | 2 | 0 | 0/0 | human only |
 | letter-final | 5 | 0 | 5 | 0 | 0 | 0/0 | human only |
 | letter-variant | 4 | 0 | 4 | 0 | 0 | 0/0 | human only |
-| letter-sound | 22 | 0 | 8 | 14 | 0 | 0/0 | human only |
-| letter-variant-sound | 4 | 0 | 0 | 4 | 0 | 0/0 | human only |
+| letter-sound | 22 | 0 | 9 | 13 | 0 | 0/0 | human only |
+| letter-variant-sound | 4 | 0 | 1 | 3 | 0 | 0/0 | human only |
 | niqqud | 15 | 0 | 8 | 7 | 0 | 0/0 | human only |
-| syllable | 110 | 0 | 88 | 22 | 0 | 0/0 | human only |
-| lesson-word | 418 | 0 | 417 | 1 | 0 | 0/0 | human only |
-| prayer-line | 152 | 0 | 144 | 6 | 2 | 0/0 | human only |
+| syllable | 110 | 0 | 90 | 20 | 0 | 0/0 | human only |
+| lesson-word | 418 | 0 | 418 | 0 | 0 | 0/0 | human only |
+| prayer-line | 152 | 0 | 146 | 4 | 2 | 0/0 | human only |
 | prayer-word | 1573 | 0 | 1573 | 0 | 0 | 0/0 | human only |
 | prayer-whole | 0 | 0 | 0 | 0 | 0 | 3/21 | human only |
-| vocab-word | 1000 | 0 | 995 | 5 | 0 | 0/0 | human only |
+| vocab-word | 1000 | 0 | 996 | 4 | 0 | 0/0 | human only |
 | vocab-alias | 0 | 0 | 0 | 0 | 0 | 0/0 | human only |
-| vocab-extra | 41 | 0 | 39 | 2 | 0 | 0/0 | human only |
+| vocab-extra | 41 | 0 | 41 | 0 | 0 | 0/0 | human only |
 
 ### Noa (woman), Israeli  (voice=f, tradition=israeli)
 
@@ -161,7 +161,7 @@ Required 3368; have 3366; missing 2.
 ## Hold sets
 
 - clip-holds: 40 of these clips. Withheld from playback: a person listens before any screen plays it (data/lab/clip-holds.json).
-- plays-israeli: 2264 rows (24 of them play an Israeli clip that is in clip-holds, so they are withheld with it). Fallback: a Sephardi or Ashkenazi row with no clip of its own plays the Israeli clip of the same voice (status "plays-israeli").
+- plays-israeli: 1647 rows (21 of them play an Israeli clip that is in clip-holds, so they are withheld with it). Fallback: a Sephardi or Ashkenazi row with no clip of its own plays the Israeli clip of the same voice (status "plays-israeli").
 - chirpHeld: 67 rows. A Chirp re-take was held; the current clip plays (manifest flag "chirpHeld": true).
 - The three sets do not contradict one another.
 

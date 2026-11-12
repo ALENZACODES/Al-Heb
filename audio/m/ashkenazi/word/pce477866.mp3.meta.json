@@ -1,0 +1,31 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-respelled-israeli-voice",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "ashkenazi",
+ "inputText": "קָפֶה שָׁחוֹר",
+ "inputSha256": "db8ffa971397d53efc1620b4397d1ac0b9f0450c92ea42921a8853fc25e61438",
+ "ingestedAt": "2026-11-12T14:44:09.763Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice: the Israeli man voice reading the ashkenazi reading written in pointed Hebrew letters (tools/audio/ashkenazi_script.mjs). Not a human recording; no human has listened to it. Licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel.",
+ "renderedAt": "2026-11-12T14:44:09.763Z",
+ "redistributionCleared": false,
+ "spokenText": "קֹפֶה שֹׁחוֹר",
+ "normalized": true,
+ "provider": "google",
+ "madeFrom": "hebrew-script",
+ "voiceName": "he-IL-Wavenet-B",
+ "languageCode": "he-IL",
+ "hebrew": "קָפֶה שָׁחוֹר",
+ "israeliRef": "audio/m/israeli/word/pce477866.mp3",
+ "tempo": {
+  "applied": false,
+  "factor": 1,
+  "cap": 1.26,
+  "before": 1.1519954648526076,
+  "after": 1.1519954648526076,
+  "israeliSec": 1.3360090702947847,
+  "israeliRef": "audio/m/israeli/word/pce477866.mp3"
+ }
+}

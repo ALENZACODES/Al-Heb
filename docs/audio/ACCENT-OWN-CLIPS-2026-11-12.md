@@ -50,3 +50,19 @@ What changed:
 Coverage after run 3: Ashkenazi 7,240/8,245 (87.8%, was 84.1%); kind letter 70.5%, syllable 79.4%, prayer 77.1%, line 95.5%, vowel 66.7%. Logs: `docs/audio/fill/accent-r3-*.jsonl`. Merged with `tools/audio/accent_merge.mjs --run 3`.
 
 Short items: in 96 of the 159 held clips the sound reviewer passed the clip and only the two word reviewers failed it, mostly on single letters and syllables (Google heard "gimel" as "gmail" and returned nothing for most syllables). A review-only run of the same three reviewers on the Israeli letter, vowel and syllable clips already in the app measures how often the word reviewers fail short clips in general.
+
+## Calibration of the reviewers on short clips (run 4, review only)
+
+The same three reviewers judged the 364 Israeli letter, vowel and syllable clips already in the app (nothing rendered, nothing admitted). Share each reviewer passed:
+
+| | sound reviewer | word reviewer | Google | pass 2 of 3 |
+|---|---:|---:|---:|---:|
+| letters (114) | 82% | 63% | 40% | 68% |
+| vowels (30) | 80% | 33% | 13% | 27% |
+| syllables (220) | 85% | 72% | 29% | 68% |
+
+Google Speech-to-Text cannot judge an isolated sound, and the word reviewer rarely can for a lone vowel, so under the 2-of-3 rule even the app's reference clips fall below 90% on these kinds. Whether short items should be judged by the sound reviewer alone is the owner's decision; nothing here changes the rule. Logs: `docs/audio/fill/accent-r4-*.jsonl`.
+
+## Run 5: retakes and alias rows (Ashkenazi, Hebrew letters)
+
+The 159 rows run 3 held, retaken at speaking rate 0.85 (same voice), and 643 Ashkenazi alias rows whose target has no Ashkenazi clip. 617 of 802 passed: 600 of 633 alias words, and 17 of the 159 retakes (the slower rate helps little). Ashkenazi own-clip coverage 87.8% to **95.3%**; kind letter 71.9%, vowel 66.7%, syllable 80.3%, prayer 77.7%, line 95.8%, word 93.7%; Sephardi unchanged at 82.9%. Logs: `docs/audio/fill/accent-r5-*.jsonl`.

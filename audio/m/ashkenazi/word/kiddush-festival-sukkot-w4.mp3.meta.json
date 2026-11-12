@@ -1,0 +1,31 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-respelled-israeli-voice",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "ashkenazi",
+ "inputText": "זְמַן",
+ "inputSha256": "9b646099a96b7a1e7f6437038f0d306776bda157d2a3c2b7e346766103a0e528",
+ "ingestedAt": "2026-11-12T14:42:22.466Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice: the Israeli man voice reading the ashkenazi reading written in pointed Hebrew letters (tools/audio/ashkenazi_script.mjs). Not a human recording; no human has listened to it. Licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel.",
+ "renderedAt": "2026-11-12T14:42:22.466Z",
+ "redistributionCleared": false,
+ "spokenText": "זְמַן",
+ "normalized": true,
+ "provider": "google",
+ "madeFrom": "hebrew-script",
+ "voiceName": "he-IL-Wavenet-B",
+ "languageCode": "he-IL",
+ "hebrew": "זְמַן",
+ "israeliRef": "audio/m/israeli/word/kiddush-festival-sukkot-w4.mp3",
+ "tempo": {
+  "applied": false,
+  "factor": 1,
+  "cap": 1.26,
+  "before": 0.8160090702947845,
+  "after": 0.8160090702947845,
+  "israeliSec": 0.9760090702947846,
+  "israeliRef": "audio/m/israeli/word/kiddush-festival-sukkot-w4.mp3"
+ }
+}

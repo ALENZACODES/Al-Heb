@@ -1,0 +1,31 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-respelled-israeli-voice",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "ashkenazi",
+ "inputText": "זֶה רָחוֹק?",
+ "inputSha256": "d35d11f39f0cd7a4869392bec8bcc809f98d85067f20f55f37949a287e2ba816",
+ "ingestedAt": "2026-11-12T14:42:30.051Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice: the Israeli man voice reading the ashkenazi reading written in pointed Hebrew letters (tools/audio/ashkenazi_script.mjs). Not a human recording; no human has listened to it. Licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel.",
+ "renderedAt": "2026-11-12T14:42:30.051Z",
+ "redistributionCleared": false,
+ "spokenText": "זֶה רֹחוֹק?",
+ "normalized": true,
+ "provider": "google",
+ "madeFrom": "hebrew-script",
+ "voiceName": "he-IL-Wavenet-B",
+ "languageCode": "he-IL",
+ "hebrew": "זֶה רָחוֹק?",
+ "israeliRef": "audio/m/israeli/word/p18cee479.mp3",
+ "tempo": {
+  "applied": false,
+  "factor": 1,
+  "cap": 1.26,
+  "before": 0.9840136054421769,
+  "after": 0.9840136054421769,
+  "israeliSec": 1.1440136054421768,
+  "israeliRef": "audio/m/israeli/word/p18cee479.mp3"
+ }
+}

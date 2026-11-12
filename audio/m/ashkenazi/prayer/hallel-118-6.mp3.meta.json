@@ -1,0 +1,31 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-respelled-israeli-voice",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "ashkenazi",
+ "inputText": "אֲדֹנָי לִי לֹא אִירָא מַה־יַּעֲשֶׂה לִי אָדָם׃",
+ "inputSha256": "b57a4f1d007bd16db3038a213fca6e007c55e93ec5c7e0bea7358349d776c1b1",
+ "ingestedAt": "2026-11-12T14:42:05.058Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice: the Israeli man voice reading the ashkenazi reading written in pointed Hebrew letters (tools/audio/ashkenazi_script.mjs). Not a human recording; no human has listened to it. Licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel.",
+ "renderedAt": "2026-11-12T14:42:05.058Z",
+ "redistributionCleared": false,
+ "spokenText": "אֲדֹנֹי לִי לֹא אִירֹא מַה יַּעֲשֶׂה לִי אֹדֹם",
+ "normalized": true,
+ "provider": "google",
+ "madeFrom": "hebrew-script",
+ "voiceName": "he-IL-Wavenet-B",
+ "languageCode": "he-IL",
+ "hebrew": "אֲדֹנָי לִי לֹא אִירָא מַה־יַּעֲשֶׂה לִי אָדָם׃",
+ "israeliRef": "audio/m/israeli/prayer/hallel-118-6.mp3",
+ "tempo": {
+  "applied": false,
+  "factor": 1,
+  "cap": 1.26,
+  "before": 2.6880045351473925,
+  "after": 2.6880045351473925,
+  "israeliSec": 2.8560090702947845,
+  "israeliRef": "audio/m/israeli/prayer/hallel-118-6.mp3"
+ }
+}

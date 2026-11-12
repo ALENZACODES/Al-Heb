@@ -1,0 +1,31 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-respelled-israeli-voice",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "ashkenazi",
+ "inputText": "לֹא",
+ "inputSha256": "b38010887a440db0ca6b2b6d7fa7514d90d03486e1a15459ca7c50378585abe0",
+ "ingestedAt": "2026-11-12T14:42:15.429Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice: the Israeli man voice reading the ashkenazi reading written in pointed Hebrew letters (tools/audio/ashkenazi_script.mjs). Not a human recording; no human has listened to it. Licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel.",
+ "renderedAt": "2026-11-12T14:42:15.429Z",
+ "redistributionCleared": false,
+ "spokenText": "לֹא",
+ "normalized": true,
+ "provider": "google",
+ "madeFrom": "hebrew-script",
+ "voiceName": "he-IL-Wavenet-B",
+ "languageCode": "he-IL",
+ "hebrew": "לֹא",
+ "israeliRef": "audio/m/israeli/word/hallel-115-1-w4.mp3",
+ "tempo": {
+  "applied": false,
+  "factor": 1,
+  "cap": 1.26,
+  "before": 0.5760090702947845,
+  "after": 0.5760090702947845,
+  "israeliSec": 0.7360090702947846,
+  "israeliRef": "audio/m/israeli/word/hallel-115-1-w4.mp3"
+ }
+}

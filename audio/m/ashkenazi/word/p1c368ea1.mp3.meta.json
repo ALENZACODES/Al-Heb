@@ -1,0 +1,31 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-respelled-israeli-voice",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "ashkenazi",
+ "inputText": "אֶפְשָׁר לְהַזְמִין?",
+ "inputSha256": "1ef50fff8e9184c9ef180ba548a8e707cad409950efbb1c6901590b647a52260",
+ "ingestedAt": "2026-11-12T14:41:55.294Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice: the Israeli man voice reading the ashkenazi reading written in pointed Hebrew letters (tools/audio/ashkenazi_script.mjs). Not a human recording; no human has listened to it. Licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel.",
+ "renderedAt": "2026-11-12T14:41:55.294Z",
+ "redistributionCleared": false,
+ "spokenText": "אֶפְשֹׁר לְהַזְמִין?",
+ "normalized": true,
+ "provider": "google",
+ "madeFrom": "hebrew-script",
+ "voiceName": "he-IL-Wavenet-B",
+ "languageCode": "he-IL",
+ "hebrew": "אֶפְשָׁר לְהַזְמִין?",
+ "israeliRef": "audio/m/israeli/word/p1c368ea1.mp3",
+ "tempo": {
+  "applied": false,
+  "factor": 1,
+  "cap": 1.26,
+  "before": 1.2240136054421769,
+  "after": 1.2240136054421769,
+  "israeliSec": 1.3840136054421768,
+  "israeliRef": "audio/m/israeli/word/p1c368ea1.mp3"
+ }
+}

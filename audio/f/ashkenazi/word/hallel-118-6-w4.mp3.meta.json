@@ -1,0 +1,31 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-respelled-israeli-voice",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "ashkenazi",
+ "inputText": "אִירָא",
+ "inputSha256": "ec5ccfd9c62ef5916f692cc330c9f29c1d89316a8e2fdbebc4db638bfe05d97e",
+ "ingestedAt": "2026-11-12T14:42:35.936Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice: the Israeli woman voice reading the ashkenazi reading written in pointed Hebrew letters (tools/audio/ashkenazi_script.mjs). Not a human recording; no human has listened to it. Licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel.",
+ "renderedAt": "2026-11-12T14:42:35.936Z",
+ "redistributionCleared": false,
+ "spokenText": "אִירֹא",
+ "normalized": true,
+ "provider": "google",
+ "madeFrom": "hebrew-script",
+ "voiceName": "he-IL-Wavenet-A",
+ "languageCode": "he-IL",
+ "hebrew": "אִירָא",
+ "israeliRef": "audio/f/israeli/word/hallel-118-6-w4.mp3",
+ "tempo": {
+  "applied": false,
+  "factor": 1,
+  "cap": 1.26,
+  "before": 0.7680045351473923,
+  "after": 0.7680045351473923,
+  "israeliSec": 0.9280045351473923,
+  "israeliRef": "audio/f/israeli/word/hallel-118-6-w4.mp3"
+ }
+}

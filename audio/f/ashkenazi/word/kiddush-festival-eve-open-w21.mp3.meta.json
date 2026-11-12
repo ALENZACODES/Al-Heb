@@ -1,0 +1,31 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-respelled-israeli-voice",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "ashkenazi",
+ "inputText": "בְּאַהֲבָה",
+ "inputSha256": "f4b92bcf7827d9efaf0880d8afac38bc07ee71af9cf462de6163d0decb4764d0",
+ "ingestedAt": "2026-11-12T14:42:03.834Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice: the Israeli woman voice reading the ashkenazi reading written in pointed Hebrew letters (tools/audio/ashkenazi_script.mjs). Not a human recording; no human has listened to it. Licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel.",
+ "renderedAt": "2026-11-12T14:42:03.834Z",
+ "redistributionCleared": false,
+ "spokenText": "בְּאַהֲבֹה",
+ "normalized": true,
+ "provider": "google",
+ "madeFrom": "hebrew-script",
+ "voiceName": "he-IL-Wavenet-A",
+ "languageCode": "he-IL",
+ "hebrew": "בְּאַהֲבָה",
+ "israeliRef": "audio/f/israeli/word/kiddush-festival-eve-open-w21.mp3",
+ "tempo": {
+  "applied": false,
+  "factor": 1,
+  "cap": 1.26,
+  "before": 1.08,
+  "after": 1.08,
+  "israeliSec": 1.264013605442177,
+  "israeliRef": "audio/f/israeli/word/kiddush-festival-eve-open-w21.mp3"
+ }
+}

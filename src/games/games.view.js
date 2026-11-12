@@ -106,6 +106,7 @@ export function mount(root, ctx) {
     arcadeCard(ctx, items.length),
     hanukkahSection(),
     tgCard(),
+    g2Section(), // lane g2: words by topic
     ...sections);
   root.replaceChildren(article);
   // Card thumbnails from each game's own backdrop art, plus Rimon the mascot
@@ -153,6 +154,16 @@ export function tgCard() {
     ...bands.map(([band, title]) => h('div', {}, h('h3', {}, title),
       h('ul', { class: 'show-grid wf-game-grid' }, ...TG_GAMES.filter((g) => g.band === band).map((g) => h('li', {}, h('a', { class: 'show-tile wf-level-tile', href: '#/' + g.id },
         h('span', { class: 'show-tile-title' }, g.title, ' ', heSpan(g.titleHe)), h('span', { class: 'show-tile-hook' }, g.tag))))))));
+}
+
+/** Lane g2: the words-by-topic games in one section, grouped by band. The catalogue (src/games/g2-catalog.js) loads on demand. */
+export function g2Section() {
+  const body = h('div', {});
+  import('./g2-catalog.js').then(({ G2_GAMES }) => body.replaceChildren(...[['beginner', 'Beginner'], ['intermediate', 'Intermediate'], ['upper', 'Upper Intermediate']].map(([band, name]) => h('div', {}, h('h3', {}, name),
+    h('ul', { class: 'show-grid wf-game-grid' }, ...G2_GAMES.filter((g) => g.band === band).map((g) => h('li', {}, h('a', { class: 'show-tile wf-level-tile', href: '#/' + g.id },
+      h('span', { class: 'wf-game-level' }, 'LEVEL ' + g.level + ' / 5'), h('span', { class: 'show-tile-title' }, g.title, ' ', heSpan(g.titleHe)), h('span', { class: 'show-tile-hook' }, g.tag))))))))).catch(() => {});
+  return h('section', { class: 'wf-level-section g2-hub', 'aria-labelledby': 'wf-g2-h' }, h('h2', { id: 'wf-g2-h' }, 'Word Games by Topic ', heSpan('מִלָּה')),
+    h('p', { class: 'muted' }, 'Food, home, the body, family, colours, animals, clothes, weather, school, work and places: twenty games for everyday words.'), body);
 }
 
 const NUM_WORDS = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'];

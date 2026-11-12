@@ -113,6 +113,9 @@ export const ROUTES = [
   { name: 'tg-parashah', pattern: '/tg-parashah', module: '../games/tg-parashah.view.js', title: 'Parashah Path', tier: 'preview', owner: 'games' },
   { name: 'tg-tropehunt', pattern: '/tg-tropehunt', module: '../games/tg-tropehunt.view.js', title: 'Trope Hunt', tier: 'preview', owner: 'games' },
   { name: 'tg-holidays', pattern: '/tg-holidays', module: '../games/tg-holidays.view.js', title: 'Holiday Sorter', tier: 'preview', owner: 'games' },
+  // lane g2: words by topic (src/games/g2-catalog.js)
+  ...[['sortrush', 'Sort Rush'], ['oddone', 'Odd One Out'], ['popup', 'Pop-Up Pantry'], ['familytree', 'Family Tree'], ['bodymap', 'Body Map'], ['paintpots', 'Paint Pots'], ['lineup', 'Line Them Up'], ['snap', 'Topic Snap'], ['chain', 'Meaning Chain'], ['dominoes', 'Opposite Dominoes'], ['endings', 'Ending Detective'], ['street', 'Memory Street'], ['whereami', 'Where Am I?'], ['clues', 'Clue After Clue'], ['dayafter', 'Day After Day'], ['trail', 'Topic Trail'], ['fourgroups', 'Four Groups of Four'], ['hive', 'Spelling Hive'], ['ladder', 'Word Ladder'], ['firstletter', 'Letter and Topic']]
+    .map(([id, title]) => ({ name: 'g2-' + id, pattern: '/g2-' + id, module: `../games/g2-${id}.view.js`, title, tier: 'preview', owner: 'games' })),
   { name: 'wordfinder', pattern: '/wordfinder', module: '../games/wordfinder.view.js', title: 'Hebrew Word Finder: Level 1', tier: 'preview', owner: 'games' },
   { name: 'tugowar', pattern: '/tugowar', module: '../games/tugowar.view.js', title: 'Antonym Tug-of-War', tier: 'preview', owner: 'games' },
   { name: 'vowelcatcher', pattern: '/vowelcatcher', module: '../games/vowelcatcher.view.js', title: 'Vowel Catcher', tier: 'preview', owner: 'games' },

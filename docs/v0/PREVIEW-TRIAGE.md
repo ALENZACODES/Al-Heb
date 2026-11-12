@@ -184,6 +184,26 @@ Home shows a backup reminder after three finished lessons (`docs/progress/BACKUP
 | `tg-parashah` | keep | Torah and Hebrew game; reached from the `games` hub. Preview until a teacher reviews its Hebrew. |
 | `tg-tropehunt` | keep | Torah and Hebrew game; reached from the `games` hub. Preview until a teacher reviews its Hebrew. |
 | `tg-holidays` | keep | Torah and Hebrew game; reached from the `games` hub. Preview until a teacher reviews its Hebrew. |
+| `g2-sortrush` | hide | Words-by-topic game (lane g2); reached from the `games` hub, kept out of the More sheet. Preview until a native speaker reviews its Hebrew. |
+| `g2-oddone` | hide | Words-by-topic game (lane g2); reached from the `games` hub, kept out of the More sheet. Preview until a native speaker reviews its Hebrew. |
+| `g2-popup` | hide | Words-by-topic game (lane g2); reached from the `games` hub, kept out of the More sheet. Preview until a native speaker reviews its Hebrew. |
+| `g2-familytree` | hide | Words-by-topic game (lane g2); reached from the `games` hub, kept out of the More sheet. Preview until a native speaker reviews its Hebrew. |
+| `g2-bodymap` | hide | Words-by-topic game (lane g2); reached from the `games` hub, kept out of the More sheet. Preview until a native speaker reviews its Hebrew. |
+| `g2-paintpots` | hide | Words-by-topic game (lane g2); reached from the `games` hub, kept out of the More sheet. Preview until a native speaker reviews its Hebrew. |
+| `g2-lineup` | hide | Words-by-topic game (lane g2); reached from the `games` hub, kept out of the More sheet. Preview until a native speaker reviews its Hebrew. |
+| `g2-snap` | hide | Words-by-topic game (lane g2); reached from the `games` hub, kept out of the More sheet. Preview until a native speaker reviews its Hebrew. |
+| `g2-chain` | hide | Words-by-topic game (lane g2); reached from the `games` hub, kept out of the More sheet. Preview until a native speaker reviews its Hebrew. |
+| `g2-dominoes` | hide | Words-by-topic game (lane g2); reached from the `games` hub, kept out of the More sheet. Preview until a native speaker reviews its Hebrew. |
+| `g2-endings` | hide | Words-by-topic game (lane g2); reached from the `games` hub, kept out of the More sheet. Preview until a native speaker reviews its Hebrew. |
+| `g2-street` | hide | Words-by-topic game (lane g2); reached from the `games` hub, kept out of the More sheet. Preview until a native speaker reviews its Hebrew. |
+| `g2-whereami` | hide | Words-by-topic game (lane g2); reached from the `games` hub, kept out of the More sheet. Preview until a native speaker reviews its Hebrew. |
+| `g2-clues` | hide | Words-by-topic game (lane g2); reached from the `games` hub, kept out of the More sheet. Preview until a native speaker reviews its Hebrew. |
+| `g2-dayafter` | hide | Words-by-topic game (lane g2); reached from the `games` hub, kept out of the More sheet. Preview until a native speaker reviews its Hebrew. |
+| `g2-trail` | hide | Words-by-topic game (lane g2); reached from the `games` hub, kept out of the More sheet. Preview until a native speaker reviews its Hebrew. |
+| `g2-fourgroups` | hide | Words-by-topic game (lane g2); reached from the `games` hub, kept out of the More sheet. Preview until a native speaker reviews its Hebrew. |
+| `g2-hive` | hide | Words-by-topic game (lane g2); reached from the `games` hub, kept out of the More sheet. Preview until a native speaker reviews its Hebrew. |
+| `g2-ladder` | hide | Words-by-topic game (lane g2); reached from the `games` hub, kept out of the More sheet. Preview until a native speaker reviews its Hebrew. |
+| `g2-firstletter` | hide | Words-by-topic game (lane g2); reached from the `games` hub, kept out of the More sheet. Preview until a native speaker reviews its Hebrew. |
 | `wordfinder` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
 | `tugowar` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
 | `vowelcatcher` | keep | Game; reached from the `games` hub. Preview until native review of its words. |

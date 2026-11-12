@@ -3,6 +3,8 @@
 // Release tiers (router.js `tier`, docs/v0/SCOPE.md): the bar and the open menu groups show only 'v0' routes; 'preview' routes are
 // listed in one collapsed Preview group at the end of the More sheet (previewGroups) and stay searchable (tests/v0.test.js).
 
+import { ROUTES } from './router.js'; // lane g2
+
 export const SECTIONS = [
   { id: 'learn',    labelKey: 'nav.section.learn',    descKey: 'nav.section.learn.desc',    heKey: 'nav.learn', primary: ['learn'] },
   { id: 'read',     labelKey: 'nav.section.read',     descKey: 'nav.section.read.desc',     heKey: 'nav.read',  primary: ['readhub', 'read'] },
@@ -34,6 +36,10 @@ export const SECTION_ROUTES = {
   more: ['search', 'settings', 'accessibility', 'help', 'workbook', 'light', 'install', 'offline', 'about', 'how', 'credits', 'privacy', 'terms', 'welcome'],
 };
 
+// lane g2: words by topic, hub-only (PREVIEW_HIDDEN)
+const G2_ROUTES = ROUTES.filter((r) => r.name.startsWith('g2-')).map((r) => r.name);
+SECTION_ROUTES.learn.push(...G2_ROUTES);
+
 /** Route name -> section id. */
 export const ROUTE_SECTION = Object.fromEntries(Object.entries(SECTION_ROUTES).flatMap(([s, names]) => names.map((n) => [n, s])));
 
@@ -58,7 +64,8 @@ export const PREVIEW_HIDDEN = new Set(['scheduler', 'known-words', 'time-budget'
   'rentalagent', 'echochamber', 'museumcurator', 'karaokebeat', 'archbuilder', 'lasermaze', 'roottree', 'letterbridge', 'shadowcraft', 'ciphergrid',
   'shuktaxi', 'barter', 'submarinesonar', 'rhymelab', 'bumperverbs', 'bumpercar', 'traintrack', 'weatherpresenter', 'karaoke', 'cipher', 'fleamarket',
   // the Hanukkah games: one section in the games hub
-  'hanukkah-dreidel1', 'hanukkah-dreidel2', 'hanukkah-candles', 'hanukkah-count', 'hanukkah-pairs', 'hanukkah-colour', 'hanukkah-gelthunt', 'hanukkah-slide', 'hanukkah-hiddenlights', 'hanukkah-jumble', 'hanukkah-saveflame', 'hanukkah-charades', 'hanukkah-forbidden']);
+  'hanukkah-dreidel1', 'hanukkah-dreidel2', 'hanukkah-candles', 'hanukkah-count', 'hanukkah-pairs', 'hanukkah-colour', 'hanukkah-gelthunt', 'hanukkah-slide', 'hanukkah-hiddenlights', 'hanukkah-jumble', 'hanukkah-saveflame', 'hanukkah-charades', 'hanukkah-forbidden',
+  ...G2_ROUTES]); // lane g2
 
 export const isStatic = (r) => !r.pattern.includes(':');
 /** Release tier of a route: 'v0' only when router.js says so; anything else is 'preview'. */

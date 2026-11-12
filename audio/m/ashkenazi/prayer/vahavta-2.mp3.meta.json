@@ -1,0 +1,31 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-respelled-israeli-voice",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "ashkenazi",
+ "inputText": "וְהָיוּ הַדְּבָרִים הָאֵלֶּה אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם עַל־לְבָבֶךָ׃ וְשִׁנַּנְתָּם לְבָנֶיךָ וְדִבַּרְתָּ בָּם בְּשִׁבְתְּךָ בְּבֵיתֶךָ וּבְלֶכְתְּךָ בַדֶּרֶךְ וּבְשָׁכְבְּךָ וּבְקוּמֶךָ׃",
+ "inputSha256": "0f85afd7e50b3279d97a93c01153027d79be7bef7640a41e5154f771045d9510",
+ "ingestedAt": "2026-11-12T14:07:33.033Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice: the Israeli man voice reading the ashkenazi reading written in pointed Hebrew letters (tools/audio/ashkenazi_script.mjs). Not a human recording; no human has listened to it. Licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel.",
+ "renderedAt": "2026-11-12T14:07:33.033Z",
+ "redistributionCleared": false,
+ "spokenText": "וְהֹיוּ הַדְּבֹרִים הֹאֵילֶּה אֲשֶׁר אֹנֹכִי מְצַוְּךֹ הַיּוֹם עַל לְבֹבֶךֹ וְשִׁנַּנְתֹּם לְבֹנֶיךֹ וְדִבַּרְתֹּ בֹּם בְּשִׁבְתְּךֹ בְּבֵיסֶךֹ וּבְלֶכְתְּךֹ בַדֶּרֶךְ וּבְשֹׁכְבְּךֹ וּבְקוּמֶךֹ",
+ "normalized": true,
+ "provider": "google",
+ "madeFrom": "hebrew-script",
+ "voiceName": "he-IL-Wavenet-B",
+ "languageCode": "he-IL",
+ "hebrew": "וְהָיוּ הַדְּבָרִים הָאֵלֶּה אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם עַל־לְבָבֶךָ׃ וְשִׁנַּנְתָּם לְבָנֶיךָ וְדִבַּרְתָּ בָּם בְּשִׁבְתְּךָ בְּבֵיתֶךָ וּבְלֶכְתְּךָ בַדֶּרֶךְ וּבְשָׁכְבְּךָ וּבְקוּמֶךָ׃",
+ "israeliRef": "audio/m/israeli/prayer/vahavta-2.mp3",
+ "tempo": {
+  "applied": false,
+  "factor": 1,
+  "cap": 1.26,
+  "before": 10.56,
+  "after": 10.56,
+  "israeliSec": 14.989591836734695,
+  "israeliRef": "audio/m/israeli/prayer/vahavta-2.mp3"
+ }
+}

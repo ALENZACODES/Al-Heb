@@ -1,0 +1,31 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-respelled-israeli-voice",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "sephardi",
+ "inputText": "יָא",
+ "inputSha256": "0658675b181df560181dca1ef4fb5477dfc47e0522b9d607124489ef9c3d0fe7",
+ "ingestedAt": "2026-11-12T07:50:34.511Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice: the Israeli man voice reading the sephardi English-letter respelling, not pointed Hebrew. Not a human recording; no human has listened to it. Licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel.",
+ "renderedAt": "2026-11-12T07:50:34.511Z",
+ "redistributionCleared": false,
+ "spokenText": "ya",
+ "normalized": true,
+ "provider": "google",
+ "madeFrom": "respelling",
+ "voiceName": "he-IL-Wavenet-B",
+ "languageCode": "he-IL",
+ "hebrew": "יָא",
+ "israeliRef": "audio/m/israeli/word/heabe1020.mp3",
+ "tempo": {
+  "applied": false,
+  "factor": 1,
+  "cap": 1.26,
+  "before": 0.5760090702947845,
+  "after": 0.5760090702947845,
+  "israeliSec": 0.7360090702947846,
+  "israeliRef": "audio/m/israeli/word/heabe1020.mp3"
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "israeli",
+ "inputText": "הַכֹּל בְּסֵדֶר, תּוֹדָה. וְאַתָּה?",
+ "inputSha256": "3e606be5a6f934f168a5def5d886ef6c61a324710f323dbf5a6ae4c131f8aa7b",
+ "ingestedAt": "2026-11-12T00:24:18.497Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-12T00:24:18.497Z",
+ "redistributionCleared": false,
+ "spokenText": "הַכֹּל בְּסֵדֶר, תּוֹדָה. וְאַתָּה?",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [],
+  "google": {
+   "heard": "הכל בסדר תודה ואתה",
+   "acc": 1.0,
+   "issues": []
+  },
+  "reviewersFailing": 0
+ }
+}

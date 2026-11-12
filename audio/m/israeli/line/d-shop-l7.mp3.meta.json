@@ -1,0 +1,27 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "israeli",
+ "inputText": "בֶּטַח. חֲדַר הַלְבָּשָׁה שָׁם.",
+ "inputSha256": "cb2a8f8f21bf207151f507b473cb5c3feb437be5888bc5d3abdb6a75e309405f",
+ "ingestedAt": "2026-11-12T00:24:38.416Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-12T00:24:38.416Z",
+ "redistributionCleared": false,
+ "spokenText": "בֶּטַח. חֲדַר הַלְבָּשָׁה שָׁם.",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [],
+  "google": {
+   "heard": "בטח חדר הלבשה שם",
+   "acc": 1.0,
+   "issues": []
+  },
+  "reviewersFailing": 0
+ }
+}

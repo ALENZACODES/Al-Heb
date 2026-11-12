@@ -1,0 +1,27 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "israeli",
+ "inputText": "אֲנִי רוֹצֶה שְׁנִיצֶל וְסָלָט.",
+ "inputSha256": "02dbb88163e6095ba3b56ec5effcc1e929e9f0f047ece7575d0fbff91dc3d016",
+ "ingestedAt": "2026-11-12T00:23:59.372Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-12T00:23:59.372Z",
+ "redistributionCleared": false,
+ "spokenText": "אֲנִי רוֹצֶה שְׁנִיצֶל וְסָלָט.",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [],
+  "google": {
+   "heard": "אני רוצה שניצל וסלט",
+   "acc": 1.0,
+   "issues": []
+  },
+  "reviewersFailing": 0
+ }
+}

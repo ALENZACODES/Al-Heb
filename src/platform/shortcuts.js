@@ -15,5 +15,6 @@ export const SHORTCUTS = Object.freeze([
   { where: 'Build your first word', keys: 'Hebrew letters, Backspace, Enter, Escape', does: 'Place a letter, remove the last one, check the word, clear it.', file: 'src/firstday/minuteone.model.js', proof: "if (key === 'Escape') return { type: 'clear' }", always: true },
   { where: 'Follow the service', keys: 'Right Arrow or Page Down, Left Arrow or Page Up', does: 'With the service text focused: next and previous part.', file: 'src/service/service.view.js', proof: "e.key === 'ArrowRight' || e.key === 'PageDown'", always: true },
   { where: 'Prayer reader tabs', keys: 'Left and Right Arrows', does: 'Move between the tabs.', file: 'src/corpus/read.view.js', proof: "e.key === 'ArrowRight' || e.key === 'ArrowLeft'", always: true },
+  { where: 'Focus mode', keys: 'Right Arrow or Page Down, Left Arrow or Page Up, Escape', does: 'Next passage, previous passage, leave focus mode.', file: 'src/platform/focus.view.js', proof: "e.key === 'ArrowRight' || e.key === 'PageDown'", always: true },
   { where: 'Talk', keys: 'Enter (Shift+Enter for a new line)', does: 'Send what you typed.', file: 'src/talk/talk.view.js', proof: "e.key === 'Enter' && !e.shiftKey", always: true },
 ]);

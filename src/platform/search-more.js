@@ -101,7 +101,8 @@ export async function searchTorahText(q, books, { load = loadJSON, limit = 30, o
 export function searchAll(ix, q) {
   const ref = parseTorahRef(q, ix.torah);
   return [
-    ['Torah', ref ? [{ href: ref.href, label: `${ref.en} ${ref.chapter}${ref.verse ? ':' + ref.verse : ''}`, desc: 'Open in the Torah reader' }] : []],
+    ['Torah', ref ? [{ href: ref.href, label: `${ref.en} ${ref.chapter}${ref.verse ? ':' + ref.verse : ''}`, desc: 'Open in the Torah reader' },
+      { href: `#/focus?src=torah:${ref.book}:${ref.chapter}`, label: `${ref.en} ${ref.chapter} in focus mode`, desc: 'Large text, one verse at a time' }] : []],
     ['Lessons', searchLessons(ix.lessons, q)], ['Little Books', searchBooks(ix.books, q)], ['Root Families', searchRoots(ix.roots, q)], ['Prayers and Texts', searchTexts(ix.registry, q)],
   ].filter(([, rows]) => rows.length);
 }

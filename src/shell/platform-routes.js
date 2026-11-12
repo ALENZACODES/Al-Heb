@@ -9,4 +9,5 @@ export const PLATFORM_ROUTES = [
   ['lesson-badges', '/lesson-badges', 'badges.view.js', 'Lesson Badges', 'progress'],
   ['shortcuts', '/shortcuts', 'shortcuts.view.js', 'Keyboard Shortcuts', 'more'],
   ['worksheet', '/worksheet', 'worksheet.view.js', 'Printable Worksheet', 'more'],
+  ['focus', '/focus', 'focus.view.js', 'Focus Mode', 'read'],
 ].map(([name, pattern, file, title, section]) => ({ name, pattern, module: `../platform/${file}`, title, owner: 'platform', optional: true, quick: `nav.route.${name}`, section }));

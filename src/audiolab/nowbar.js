@@ -44,7 +44,12 @@ export function installNowBar({ audio, settings, doc = globalThis.document, win 
   const pauseBtn = mk('button', { type: 'button', class: 'nb-pause', 'aria-label': 'Pause' }, '❚❚');
   const stopBtn = mk('button', { type: 'button', class: 'nb-stop', 'aria-label': 'Stop' }, '■');
   const speed = mk('div', { class: 'nb-speed', role: 'group', 'aria-label': 'Speed' });
-  for (const c of RATE_CHOICES) speed.append(mk('button', { type: 'button', 'data-rate': c.value, 'aria-label': `Speed ${c.label}`, 'aria-pressed': 'false' }, c.label));
+  const speedBtns = [];
+  for (const c of RATE_CHOICES) {
+    const rateBtn = mk('button', { type: 'button', 'data-rate': c.value, 'aria-label': `Speed ${c.label}`, 'aria-pressed': 'false' }, c.label);
+    rateBtn.addEventListener('click', () => pickRate(c.value));   // each button wired itself, so the dead-button gate can read it
+    speedBtns.push(rateBtn); speed.append(rateBtn);
+  }
   top.append(what, pauseBtn, stopBtn);
   const prog = mk('div', { class: 'nb-prog' });
   const meter = mk('progress', { max: '1', value: '0', 'aria-label': 'How far the sound has played' });
@@ -101,15 +106,13 @@ export function installNowBar({ audio, settings, doc = globalThis.document, win 
     else { try { audio?.stop?.(); } catch { /* ignore */ } try { win.speechSynthesis?.cancel?.(); } catch { /* ignore */ } }
     hide();
   });
-  speed.addEventListener('click', (e) => {
-    const b = /** @type {any} */ (e.target)?.closest?.('button[data-rate]'); if (!b) return;
-    const v = b.getAttribute('data-rate');
+  function pickRate(v) {
     try { settings?.set?.({ clipRate: v }); } catch { /* storage blocked */ }
     const m = mediaNow();
     if (cur?.type === 'shell') { try { audio?.setClipRate?.(v); } catch { /* ignore */ } }
     else if (m?.kind === 'file') { try { m.media.playbackRate = rateOf(v); m.media.preservesPitch = true; } catch { /* ignore */ } }
     syncSpeed(); draw();
-  });
+  }
 
   // 1) the shell audio (every ctx.audio.play)
   if (audio && typeof audio.onPlay === 'function') {

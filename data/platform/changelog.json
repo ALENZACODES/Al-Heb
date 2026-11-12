@@ -19,6 +19,11 @@
   },
   {
    "date": "2026-11-12",
+   "hash": "625054aa2",
+   "text": "Privacy table lists checkpoints.v1 and says lesson checks now keep how long a check took"
+  },
+  {
+   "date": "2026-11-12",
    "hash": "6173aa315",
    "text": "Prayers past 90% own-file coverage (476/528): accent run 7 retakes at rate 1.1 (3 passed), the festival-day Kiddush verses made in Chirp 3 HD (fill-clips run 6, both voices passed."
   },
@@ -74,8 +79,33 @@
   },
   {
    "date": "2026-11-12",
+   "hash": "5f516cce0",
+   "text": "Course lane plan table (docs/plan/CODER-100-course.md), docs index and precache manifest regenerated"
+  },
+  {
+   "date": "2026-11-12",
    "hash": "fc292eb5a",
    "text": "Accessibility gate (J7): tools/deploy/check-a11y.mjs checks every field the app creates has a name (aria, title, label for, or inside a label), every image has alt, the global…"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "d7c79ef60",
+   "text": "Links between the course pages: the course map lists checkpoints, mixed review, the daily set, the benchmark map and the rules."
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "9437dd8ee",
+   "text": "Preview triage rows and sitemap entries for the course-map, mixed-review, five-minutes, checkpoints, benchmarks and app-rules pages"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "0a0a11620",
+   "text": "Benchmark map (#/benchmarks): the 28-skill IJL list is not in the repo, so the page says so and uses the repo's own benchmark list, the rank goals in belts.json, each with a…"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "252863e46",
+   "text": "Grammar spotlights: a generated file (tools/grammar/build-spotlights.mjs) links each lesson to the grammar note whose forms its own words or prayer lines contain, from the…"
   },
   {
    "date": "2026-11-12",
@@ -89,6 +119,16 @@
   },
   {
    "date": "2026-11-12",
+   "hash": "a6a7260fa",
+   "text": "One course ring on Progress: both paths as one ring of all lessons, the reading and Israel paths labelled as its two parts, with the same pass rule for both stated under it"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "30c79e53f",
+   "text": "Checkpoint tests (#/checkpoints): one per 10 lessons of each path, one question from each lesson with the lesson pass rule."
+  },
+  {
+   "date": "2026-11-12",
    "hash": "ff50b7423",
    "text": "Lesson Badges (H9): #/lesson-badges awards count and path badges only for verified lessons (passing first-try score kept, recomputed with the certificate's pass rule)."
   },
@@ -99,8 +139,18 @@
   },
   {
    "date": "2026-11-12",
+   "hash": "0e13d99c7",
+   "text": "Course map (#/course-map): every lesson of both paths drawn from its prerequisites, with done, open and locked states, where the learner is, and the same graph as a list."
+  },
+  {
+   "date": "2026-11-12",
    "hash": "f574bb40d",
    "text": "Cram, leeches and Mastery Map (H3, H4, H5): #/cram sizes a lesson review to 5 to 30 minutes from the learner's own measured pace (an estimate of 12 seconds a card until 20 cards…"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "b91ee9a08",
+   "text": "Objective cards and honest lesson metadata: a lesson opens with What You Will Learn (the authors' goals, what the quick check asks, the computed pass mark) and the learner's own…"
   },
   {
    "date": "2026-11-12",
@@ -139,6 +189,11 @@
   },
   {
    "date": "2026-11-12",
+   "hash": "3bf46792b",
+   "text": "Why on every wrong answer: a missed letter or word question now says what the picked option is (its letter and sound, or its own Hebrew word) and adds the look-alike rule from the…"
+  },
+  {
+   "date": "2026-11-12",
    "hash": "0a3745406",
    "text": "Three Versions: tapping a word that already shows its marks opens the spotlight and does not count as help"
   },
@@ -146,61 +201,6 @@
    "date": "2026-11-12",
    "hash": "b5e6e9efc",
    "text": "Tests for Reading Tools and the fluency chart"
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "5c4aba6df",
-   "text": "Timed read-aloud: chart of words a minute, read by read, for the chosen line"
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "b3c51fe6f",
-   "text": "Reading Tools screen (#/readlab): Read With Tools with word spotlight and syllable taps, family letters, verb-pattern colours, fade challenge and three versions."
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "80565c9ad",
-   "text": "Reading Tools model: vowel-mark level per section, fade challenge, three versions with unlock, progress by text type, sh'va, final-form, dagesh and stress drill builders"
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "502496427",
-   "text": "Reading Tools data: family letters and verb patterns by exact spelling, and IPA stress for 900 words, built from the existing word lists"
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "8535d17ea",
-   "text": "Search everything (J9): #/search also finds lessons, little books, root families, prayers and texts, and Torah references in English or Hebrew (Genesis 12:1, gen 3, a Hebrew book…"
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "261af4aec",
-   "text": "Siddur and speaking lane: per-idea plan table, sitemap with the two new pages, docs index and precache rebuilt"
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "837d288b0",
-   "text": "Speaking Studio (#/speak-studio): record a service line and compare waveforms with the model clip, shadowing with a timed silent turn, self-rated rubric, machine guess from the…"
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "d1a88b7e0",
-   "text": "Dead-button gate (I4): tools/deploy/check-buttons.mjs reads every button the app creates (h/el calls, createElement and index.html) and fails on any without a handler, a submit…"
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "5e1d7e810",
-   "text": "Sound-pair drill: after each pair answer, hear both words one after the other"
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "4cbd91e6f",
-   "text": "Play-all queues with a tappable progress list (prayer reader, theme packs), lines/words/pages-with-audio counts, and book read along (page turns by itself, word highlight from…"
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "dc1a2208a",
-   "text": "Performance budget (J8): the precache build prints the first-install size and the installed JavaScript size and exits with an error when the first install is over 3.95 MiB or its…"
   }
  ]
 }

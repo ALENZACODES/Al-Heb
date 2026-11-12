@@ -48,7 +48,7 @@ test('the bar shows what plays, its progress, pause, speed and stop, then hides 
   assert.equal(media.paused, false);
 
   const slow = api.bar.querySelector('[data-rate=slow-0.6]');
-  api.bar.querySelector('.nb-speed').dispatchEvent({ type: 'click', target: slow });
+  slow.dispatchEvent({ type: 'click', target: slow });   // each speed button is wired itself (dead-button gate)
   assert.equal(settings.s.clipRate, 'slow-0.6');
   assert.equal(audio.rate, 'slow-0.6', 'the playing clip changes speed');
   assert.equal(slow.getAttribute('aria-pressed'), 'true');

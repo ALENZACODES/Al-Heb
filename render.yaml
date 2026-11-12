@@ -2,7 +2,7 @@
 # Render ignores the Cloudflare-format `_headers` file in the repo. This
 # `headers` block is the service-native equivalent of the security rules in
 # `_headers` (and the key cache / Content-Type rules the live host also lacks).
-# autoDeploy is on so a merge to main can go live without a manual trigger.
+# autoDeploy here is the Blueprint default; the live service has Auto-Deploy off and is deployed by hand.
 # The live service is not Blueprint-managed, so these fields also need to be
 # set on the service itself (headers and autoDeploy) to take effect.
 services:
@@ -11,7 +11,8 @@ services:
     runtime: static
     repo: https://github.com/ALENZACODES/Al-Heb
     branch: main
-    buildCommand: ""
+    # Deploy-time asset check (M-04): fails the deploy on any missing clip; on a pass it writes audit/asset-check.json from this run.
+    buildCommand: node tools/deploy/check-assets.mjs
     staticPublishPath: .
     autoDeploy: true
     headers:

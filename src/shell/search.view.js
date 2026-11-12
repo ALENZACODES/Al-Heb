@@ -14,8 +14,7 @@ export function mount(root, ctx) {
   const avail = availableRoutes(VIEW_FILES);
   const index = buildPageIndex(ROUTES, avail, t, tHe, (id) => t('nav.section.' + id));
   let letters = null, words = [], error = false, loadedWords = 0, stopped = false;
-  // M-02: words also match their transliteration, spelled as the Dictionary spells it for the learner's tradition
-  // (an Ashkenazi learner's "shalom" still finds the word: the Sephardi spelling is tried as well). Cached per entry.
+  // M-02: transliteration as the Dictionary spells it (Ashkenazi also tries Sephardi), cached.
   const trad = () => { const c = ctx?.settings?.get?.('congregation'); return TRAD[c] ? c : 'sephardi'; };
   const tlCache = new Map();
   const translitOf = (e) => {

@@ -116,7 +116,7 @@ export function mount(root, ctx = {}) {
     const want = (ctx.params && ctx.params.id) || (ctx.query && ctx.query.id); // the route has no :id, so #/letters/atlas?id=bet arrives in ctx.query
     state.selected = (want && state.tiles.find((x) => x.id === want)) ? want : null;
     render();
-    // S-04 (lane 1): the chain failed on this first load; keep trying and redraw once it arrives, if the fallback line is still on screen.
+    // S-04: chain failed; retry and redraw if the fallback line is still shown.
     if (!chain && !ctx.memoryChain) stopChainRetry = retryMemoryChainLater((c) => {
       if (unmounted) return; state.chain = c;
       if (body.querySelector?.('[data-memory-fallback]') && !state.practice) render();

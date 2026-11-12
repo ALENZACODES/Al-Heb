@@ -92,6 +92,8 @@ const ON_DEMAND_FILES = new Set([
   'data/audio/english-glosses.json',
   // Book 63's clip record (37 KB): no screen reads it (the reader plays the page files directly), so it stays out of the first install.
   'data/audio/manifest-book63.json',
+  // Lane 1 (M-08, 12 Nov): About's Held Recordings section, its code and list (14 KB together), fetched when About opens.
+  'src/shell/held-recordings.js', 'data/audio/held-recordings.json',
   // Word Finder bank (51 KB): preview-game data, fetched when the game first opens, runtime-cached by sw.js (keeps first install under 3.95 MiB).
   'data/games/firstwords.json',
   // Awards gallery view: route code only (the router loads views lazily; its engine files stay installed), fetched when Awards first opens, runtime-cached by sw.js (keeps first install under 3.95 MiB after the 25-badge engine landed).

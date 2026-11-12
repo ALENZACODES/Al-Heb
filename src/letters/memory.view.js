@@ -31,9 +31,7 @@ export function pictureNode(q, { cls = "alef-mem-pic", toggle = false } = {}) {
       for (const t of svg.querySelectorAll("title, desc")) t.remove();
       svg.setAttribute("class", (svg.getAttribute("class") || "") + " " + cls); svg.removeAttribute("width"); svg.removeAttribute("height");
       svg.setAttribute("role", "img"); svg.removeAttribute("aria-hidden"); if (alt) svg.setAttribute("aria-label", alt);
-      // S-02 (lane 1): the sanitiser scopes the picture's own styles under ".mc-svg" (memorycard.js scopeSvgCss), so the
-      // picture must sit inside an element of that class. Without it no style applied: the house drew as a solid black
-      // silhouette with the letter strokes on top and the ball (black on black) invisible.
+      // S-02: its styles are scoped under .mc-svg (scopeSvgCss); outside one it drew as a black silhouette.
       box.replaceChildren(el("span", { class: "mc-svg alef-mem-pic-art" }, svg));
       if (toggle) {
         const b = el("button", { type: "button", class: "btn secondary alef-mem-flip", "aria-pressed": "false", onclick: () => {

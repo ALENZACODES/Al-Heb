@@ -152,7 +152,7 @@ export function mount(root, ctx = {}) {
     state.consonants = (consonants && consonants.letters) || null; state.chain = chain || null;
     state.mnemonics = {}; for (const m of ((mn && mn.letters) || [])) state.mnemonics[m.id] = m;
     render();
-    // S-04 (lane 1): the chain failed on this first load; keep trying, and put the card where the fallback line is (nothing else redraws).
+    // S-04: chain failed; retry and swap the card in for the fallback line.
     if (!chain && !ctx.memoryChain) cleanups.push(retryMemoryChainLater((c) => {
       if (unmounted) return; state.chain = c;
       const line = body.querySelector?.('[data-memory-fallback]'); const letter = state.letters && (letterById(state.letterId) || state.letters[0]);

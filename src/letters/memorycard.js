@@ -20,9 +20,7 @@ function cached(key, make) {
 /** Test hook: forget loaded files. */
 export const _resetMemoryCardCache = () => cache.clear();
 
-// <network-retry> (S-04: bounded load retries, not animation; tests/letters.memorycard.test.js allows timers only in this block)
-/** S-04 (lane 1): a first load can fail (a slow or throttled host, a 5xx, or the worker answering with the offline page instead of
- *  JSON), which showed "did not load" until the learner opened the letter again. Each load now tries once more after a short wait. */
+// <network-retry> S-04: a failed first load is tried again (bounded; the only timers allowed here)
 export const RETRY_MS = [450];
 async function withRetry(attempt) {
   let last;
@@ -45,11 +43,7 @@ export function loadMemoryChain(fetchFn = globalThis.fetch?.bind(globalThis)) {
   })).catch(() => null);
 }
 
-/**
- * S-04: when a view had to show the fallback line, keep trying in the background (the cache forgets a failed load, so each try is a
- * real request) and hand the chain to `onChain` the moment it arrives, so the card replaces the line without a second visit.
- * Returns a cancel function for the view's unmount.
- */
+/** S-04: after a fallback, keep trying and hand the chain to `onChain`. Returns cancel. */
 export function retryMemoryChainLater(onChain, { delays = [2500, 8000], fetchFn } = {}) {
   let stopped = false, timer = 0, i = 0;
   const next = () => {
@@ -204,7 +198,7 @@ export function pictureDescription(entry, tradition, svgDesc = '', withSound = f
 /** Fetch + sanitize one picture (cached per path); resolves null on any failure, so the card falls back to the plain letter. */
 export function loadMorphSvg(path, fetchFn = globalThis.fetch?.bind(globalThis)) {
   if (!path || !fetchFn) return Promise.resolve(null);
-  return cached('svg:' + path, () => withRetry(async () => { // S-04: one more try after a short wait
+  return cached('svg:' + path, () => withRetry(async () => {
     const r = await fetchFn(rootUrl(path));
     if (!r.ok) throw new Error('HTTP ' + r.status);
     const clean = sanitizeSvg(await r.text());

@@ -76,10 +76,8 @@ export function searchLetters(letters, q, limit = 6) {
   return out.sort((a, b) => a.s - b.s).slice(0, limit).map((x) => x.l);
 }
 
-/** Word lookup over vocabulary entries (lemma/pointed for Hebrew queries, gloss for English). Lower rank = better match.
- *  M-02: a Latin query also matches the word's transliteration, through the Dictionary's own matcher (src/vocab/rank.js
- *  matchBand) and spelling (src/vocab/model.js translitFor); `translitOf(e)` gives the spelling(s) for the learner's tradition.
- *  An exact transliteration ("shalom") ranks with whole-word gloss hits; a transliteration prefix only for 4+ letters. */
+/** Word lookup (lemma/pointed for Hebrew, gloss for English); lower = better. M-02: Latin queries also match `translitOf(e)`
+ *  through the Dictionary's matcher (vocab/rank.js). */
 export function searchWords(entries, q, limit = 15, translitOf = null) {
   const n = norm(q); if (n.length < 1) return [];
   const heQ = hasHebrew(q); const out = [];
@@ -91,7 +89,7 @@ export function searchWords(entries, q, limit = 15, translitOf = null) {
     if (!heQ && translitOf && s !== 0 && s !== 1) {
       const tls = [].concat(translitOf(e) || []).filter(Boolean);
       for (const tl of tls) {
-        const b = matchBand({ pointed: e.pointed, lemma: e.lemma }, q, tl); // no gloss: only the transliteration bands can fire
+        const b = matchBand({ pointed: e.pointed, lemma: e.lemma }, q, tl);
         const ts = b === BAND.translit ? 2 : (b === BAND.prefix && !short ? 4 : -1);
         if (ts >= 0 && (s < 0 || ts < s)) s = ts;
       }
@@ -100,7 +98,7 @@ export function searchWords(entries, q, limit = 15, translitOf = null) {
   }
   return out.sort((a, b) => a.s - b.s || a.r - b.r).slice(0, limit).map((x) => x.e);
 }
-/** True when `e` is in the results because of its transliteration only (the view labels it, as the Dictionary does). */
+/** `e` matched by transliteration only (labelled, as in the Dictionary). */
 export function isTranslitHit(e, q, translitOf) {
   if (hasHebrew(q) || !translitOf) return false;
   const n = norm(q), g = norm(e.gloss), gw = g.split(' ');

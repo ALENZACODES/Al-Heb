@@ -92,6 +92,8 @@ export const ON_DEMAND_GROUPS = Object.freeze([
   { id: "od-learn-practice", label: "Learn practice screens (review, loanwords, drills and dialogues)", test: /^src\/curriculum\/(review|loanwords|spotit|checkpoint|dialogues|ladder|fade|gender|scaffold)\.view\.js$/, approxMB: 0.07 },
   { id: "od-teacher", label: "Share my progress and class summary", test: /^src\/teacher\//, approxMB: 0.02 },
   { id: "od-light", label: "Star of David light (page, style and printable stencil)", test: /^(src\/light\/|assets\/light\/|assets\/css\/light\.css$)/, approxMB: 0.02 },
+  // Lane 1 (M-08, 12 Nov): the code for About's Held Recordings list (its data file is in "Audio clip list" above).
+  { id: "od-held", label: "Held Recordings list on About", test: /^src\/shell\/held-recordings\.js$/, approxMB: 0.01 },
 ]);
 /** Group a list of ALEF_ON_DEMAND paths into optional-download entries ({id,label,urls,approxMB}); empty groups are dropped. */
 export function onDemandGroups(onDemand = []) {

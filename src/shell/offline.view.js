@@ -49,7 +49,7 @@ export function mount(root, ctx) {
   const offUpd = upd?.onChange?.((s) => { updState = s; if (alive && !job) render(); });
   if (upd?.state) updState = upd.state();
 
-  let loaded = false; // S-03: true once the first attempt to read the offline file list has finished (success or not)
+  let loaded = false; // S-03: the list has been tried
   async function refresh() {
     try { const l = await O.loadPrecacheList(env.fetch); files = l.files; onDemand = l.onDemand || []; version = l.version; loadError = ""; }
     catch (e) { loadError = `The list of offline files did not load. Open Aleph once while online, then try again.`; files = []; onDemand = []; }
@@ -108,7 +108,7 @@ export function mount(root, ctx) {
       dl.push(el("progress", { id: "of-progress", value: String(job.done), max: String(job.total || 1), "aria-label": "Download progress" }), el("p", { id: "of-progress-text" }, `${job.done} of ${job.total || "?"} files`),
         el("button", { type: "button", class: "btn secondary", id: "of-cancel", onclick: () => { ac?.abort(); say("Cancelling..."); } }, "Cancel"));
     } else {
-      // S-03 (lane 1): a disabled button always says why, and what turns it on.
+      // S-03: a disabled button says why and what turns it on.
       const why = files.length ? "" : loaded
         ? "Not available yet: the list of offline files did not load, so there is nothing to download. Connect to the internet and press Try again."
         : "Checking which files this device already has. The button turns on when the list arrives.";

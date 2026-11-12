@@ -171,7 +171,7 @@ main > section.card[aria-labelledby] .alef-item { row-gap: .1rem; }
 .alef-mem-prompt { margin: 0; font-weight: 600; }
 .alef-mem-cue { font-size: 1.4rem; margin: 0; }
 .alef-mem-pic-box { display: grid; justify-items: center; gap: .5rem; }
-.alef-mem-pic-art { display: contents; } /* S-02: carries the .mc-svg scope for the picture's own styles; no box of its own */
+.alef-mem-pic-art { display: contents; } /* S-02 */
 .alef-mem-pic { inline-size: min(60vw, 14rem); block-size: auto; color: var(--fg, currentColor); }
 .alef-mem-opts { display: grid; grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr)); gap: .5rem; inline-size: 100%; }
 .alef-mem-opt { display: grid; justify-items: center; gap: .1rem; min-block-size: 44px; }

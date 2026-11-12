@@ -202,6 +202,7 @@ export function g4Section() {
     h('p', { class: 'muted' }, 'Get by in Israel without seeming an outsider: greetings, signs, buses, the shuk, the café, the week and Shabbat.'), list);
   import('./g4-catalog.js').then(({ G4_GAMES }) => list.replaceChildren(...G4_GAMES.map((g) => h('li', {}, h('a', { class: 'show-tile wf-level-tile', href: '#/' + g.id },
     h('span', { class: 'wf-game-level' }, 'LEVEL ' + g.level + ' / 5'), h('span', { class: 'show-tile-title' }, g.title, ' ', heSpan(g.titleHe)), h('span', { class: 'show-tile-hook' }, g.tag)))))).catch(() => {});
+  return sec;
 }
 
 /** Lane 5 (g5): holiday, Shabbat and prayer games. The catalogue is loaded on demand (src/games/g5-catalog.js), so the hub stays small. */

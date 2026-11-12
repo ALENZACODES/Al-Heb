@@ -290,6 +290,7 @@ function mountLesson(root, ctx, id) {
         el("ul", { class: "alef-items" }, ...lesson.words.map((w, i) => el("li", { class: "alef-item" }, heText(w.he, "alef-he alef-word"),
           el("div", { class: "alef-item-body" }, el("span", {}, G(ctx, w.en)), el("div", { class: "alef-pron muted", "data-pron": "1" }, pronLine(w, trad))),
           el("div", { class: "alef-item-actions" }, playBtn(ctx, "word", wordAudioId(lesson.id, i + 1), `Listen to ${G(ctx, w.en)}`, note, lesson)))))),
+      (() => { const gs = el("div", { class: "alef-spotlight-slot" }); import("../coursemap/spotlight.js").then((m) => alive && m.mountSpotlight(gs, lesson.id)).catch(() => {}); return gs; })(), // C9: grammar spotlight, on demand
       note,
       el("div", { class: "row alef-actions" }, el("button", { type: "button", class: "btn", id: "alef-int-start", disabled: exs.length ? null : "", onclick: () => { started = true; offKeys(); begin(); show(); } }, mine.done ? "Practice again" : Object.keys(results).length ? "Continue" : "Start exercises"),
         el("a", { class: "btn secondary", href: "#/intermediate" }, "All intermediate lessons")),

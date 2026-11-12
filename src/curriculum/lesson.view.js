@@ -139,6 +139,7 @@ export function mountLesson(root, ctx, lessonId) {
             el("a", { class: "alef-link", href: `#/read/${id}` }, "Read")));
       }))));
     parts.push(note);
+    if (teach) { const gs = el("div", { class: "alef-spotlight-slot" }); parts.push(gs); import("../coursemap/spotlight.js").then((m) => alive && m.mountSpotlight(gs, lesson.id)).catch(() => {}); } // C9: grammar spotlight, on demand
 
     // Completion is earned: a quick check (letters and words of this lesson), not a bare "mark complete" tap.
     const allQuestions = buildChoiceQuestions(lesson, { ...c, wordPool: lessons.filter((l) => !A_ID.test(l.id)).flatMap((l) => l.words) }, { seed: 1 + idx, tradition: congregation });

@@ -1,0 +1,963 @@
+{
+ "schema": "alef-grammar-spotlights/1",
+ "status": "draft-unreviewed",
+ "generatedBy": "tools/grammar/build-spotlights.mjs",
+ "note": "Generated from the grammar notes data (rule-based or corpus-attested forms, see src/grammar/model.js). Not reviewed by a Hebrew teacher.",
+ "topics": {
+  "article": {
+   "title": "The word for \"the\": ha- and the doubled letter",
+   "summary": "Hebrew has one word for \"the\", a small prefix glued to the front of a noun.",
+   "drill": [
+    {
+     "prompt": "Which form means \"the earth\"?",
+     "options": [
+      "הַגָּדוֹל",
+      "הָאֲדָמָה",
+      "הָאֱמֶת",
+      "הַמֶּלֶךְ"
+     ],
+     "answer": 1,
+     "explain": "the earth = ha- + no dagesh: the first letter cannot take one; base word אֲדָמָה"
+    },
+    {
+     "prompt": "Which form means \"the strait\"?",
+     "options": [
+      "הַיּוֹם",
+      "הָעֲבוֹדָה",
+      "הַמֵּצַר",
+      "הַמֶּלֶךְ"
+     ],
+     "answer": 2,
+     "explain": "the strait = ha- + doubled first letter (dagesh); base word מֵצַר"
+    },
+    {
+     "prompt": "Which form means \"the body\"?",
+     "options": [
+      "הַמֶּלֶךְ",
+      "הַגּוּף",
+      "הַתּוֹרָה",
+      "הָאֱלֹהִים"
+     ],
+     "answer": 1,
+     "explain": "the body = ha- + doubled first letter (dagesh); base word גּוּף"
+    }
+   ]
+  },
+  "prefixes": {
+   "title": "One-letter prefixes: ve-, be-, le-, me-, she-",
+   "summary": "Small words such as and, in, to, from and that are written as one letter stuck to the next word.",
+   "drill": [
+    {
+     "prompt": "Which word means \"and thing\"?",
+     "options": [
+      "וְדָבָר",
+      "וְחַיִּים",
+      "שֶׁנָּתַן",
+      "וְטוֹב"
+     ],
+     "answer": 0,
+     "explain": "ve- (and) + דָּבָר (thing)"
+    },
+    {
+     "prompt": "Which word means \"to head\"?",
+     "options": [
+      "לְעוֹלָם",
+      "שֶׁנָּתַן",
+      "בְּיוֹם",
+      "לְרֹאשׁ"
+     ],
+     "answer": 3,
+     "explain": "le- (to / for) + רֹאשׁ (head)"
+    },
+    {
+     "prompt": "Which word means \"in loving kindness\"?",
+     "options": [
+      "שֶׁנָּתַן",
+      "לְרֹאשׁ",
+      "בְּחֶסֶד",
+      "מִטּוּב"
+     ],
+     "answer": 2,
+     "explain": "be- (in / with) + חֶסֶד (loving kindness)"
+    }
+   ]
+  },
+  "construct": {
+   "title": "Construct state: the \"of\" chain",
+   "summary": "Two nouns side by side can mean \"X of Y\" without a separate word for of.",
+   "drill": [
+    {
+     "prompt": "Which chain means \"king of the world\"?",
+     "options": [
+      "פְּרִי הַגָּפֶן",
+      "שִׁיר הַמַּעֲלוֹת",
+      "מְאוֹרֵי הָאֵשׁ",
+      "מֶלֶךְ הָעוֹלָם"
+     ],
+     "answer": 3,
+     "explain": "king of the world: two nouns side by side, in the line \"Blessing formula (Baruch atah Adonai Eloheinu Melech ha'olam)\""
+    },
+    {
+     "prompt": "Which chain means \"lights of the fire\"?",
+     "options": [
+      "מִינֵי בְשָׂמִים",
+      "שֵׁם כְּבוֹד מַלְכוּתוֹ",
+      "מְאוֹרֵי הָאֵשׁ",
+      "מֶלֶךְ הָעוֹלָם"
+     ],
+     "answer": 2,
+     "explain": "lights of the fire: two nouns side by side, in the line \"Havdalah: blessing over the flame\""
+    },
+    {
+     "prompt": "Which chain means \"name of the glory of his kingship\"?",
+     "options": [
+      "שֵׁם כְּבוֹד מַלְכוּתוֹ",
+      "פְּרִי הַגָּפֶן",
+      "בְנֵי־יִשְׂרָאֵל",
+      "מִינֵי בְשָׂמִים"
+     ],
+     "answer": 0,
+     "explain": "name of the glory of his kingship: two nouns side by side, in the line \"Baruch shem (said after Shema line)\""
+    }
+   ]
+  },
+  "plurals": {
+   "title": "Plural patterns: -im and -ot",
+   "summary": "Most masculine nouns take -im and most feminine nouns take -ot, with exceptions.",
+   "drill": [
+    {
+     "prompt": "Pick the plural of יוֹם (\"day\").",
+     "options": [
+      "בָּתִּים",
+      "יָמִים",
+      "נָשִׁים",
+      "עֲצָמוֹת"
+     ],
+     "answer": 1,
+     "explain": "יוֹם (masculine, day) -> יָמִים: the usual ending"
+    },
+    {
+     "prompt": "Pick the plural of שָׁנָה (\"year\").",
+     "options": [
+      "זְמַנִּים",
+      "יָדוֹת",
+      "אֲרָצוֹת",
+      "שָׁנִים"
+     ],
+     "answer": 3,
+     "explain": "שָׁנָה (feminine, year) -> שָׁנִים: an exception to the usual ending"
+    },
+    {
+     "prompt": "Pick the plural of בֵּן (\"son\").",
+     "options": [
+      "בָּנִים",
+      "זְמַנִּים",
+      "יָדוֹת",
+      "בָּתִּים"
+     ],
+     "answer": 0,
+     "explain": "בֵּן (masculine, son) -> בָּנִים: the usual ending"
+    }
+   ]
+  },
+  "roots": {
+   "title": "The three-letter root",
+   "summary": "Many Hebrew words are built on a skeleton of usually three consonants that carries a core meaning.",
+   "drill": [
+    {
+     "prompt": "Which word is listed under the same family letters א־נ־שׁ as אָנוּשׁ (\"mortal\")?",
+     "options": [
+      "פָּנָה",
+      "נָשִׁים",
+      "מָצוּי",
+      "אָהַב"
+     ],
+     "answer": 1,
+     "explain": "אָנוּשׁ and נָשִׁים are both listed under the letters א־נ־שׁ in the word list. A Hebrew reader has not yet confirmed them as one root."
+    },
+    {
+     "prompt": "Which word is listed under the same family letters פ־נ־ה as פָּנִים (\"face\")?",
+     "options": [
+      "מַסָּה",
+      "פָּנָה",
+      "יָשַׁב",
+      "דֵּעָה"
+     ],
+     "answer": 1,
+     "explain": "פָּנִים and פָּנָה are both listed under the letters פ־נ־ה in the word list. A Hebrew reader has not yet confirmed them as one root."
+    },
+    {
+     "prompt": "Which word is listed under the same family letters מ־צ־א as מָצוּי (\"regular\")?",
+     "options": [
+      "מָצָא",
+      "חָשַׁב",
+      "כִּוּוּן",
+      "יָשַׁב"
+     ],
+     "answer": 0,
+     "explain": "מָצוּי and מָצָא are both listed under the letters מ־צ־א in the word list. A Hebrew reader has not yet confirmed them as one root."
+    }
+   ]
+  },
+  "openings": {
+   "title": "How prayers begin: common opening patterns",
+   "summary": "Many prayer lines start with one of a few stock openings, such as the blessing formula.",
+   "drill": [
+    {
+     "prompt": "Which opening goes with this English: \"And these words, which I command thee this day, shall be...\"?",
+     "options": [
+      "יְהוָה עֹז לְעַמּוֹ",
+      "וְהָיוּ הַדְּבָרִים הָאֵלֶּה",
+      "מֶלֶךְ עוֹזֵר וּמוֹשִׁיעַ",
+      "שְׁמִינִי עֲצֶרֶת הַחַג"
+     ],
+     "answer": 1,
+     "explain": "opens 1 line in the library; in \"V'ahavta, verses 2-3\": And these words, which I command thee this day, shall be..."
+    },
+    {
+     "prompt": "Which opening goes with this English: \"And the heaven and the earth were finished, and all the h...\"?",
+     "options": [
+      "שְׁמַע יִשְׂרָאֵל יְהוָה",
+      "אֵל נָא רְפָא",
+      "וַיְכֻלּוּ הַשָּׁמַיִם וְהָאָרֶץ",
+      "עֵץ חַיִּים הִיא"
+     ],
+     "answer": 2,
+     "explain": "opens 1 line in the library; in \"Kiddush (Shabbat verses)\": And the heaven and the earth were finished, and all the h..."
+    },
+    {
+     "prompt": "Which opening goes with this English: \"The LORD make His face to shine upon thee, and be graciou...\"?",
+     "options": [
+      "בָּרוּךְ כְּבוֹד־יְהוָה מִמְּקוֹמוֹ",
+      "וַיְכֻלּוּ הַשָּׁמַיִם וְהָאָרֶץ",
+      "יָאֵר יְהוָה פָּנָיו",
+      "הַלְלוּ יָהּ הַלְלוּ"
+     ],
+     "answer": 2,
+     "explain": "opens 1 line in the library; in \"Priestly Blessing, line 2\": The LORD make His face to shine upon thee, and be graciou..."
+    }
+   ]
+  }
+ },
+ "lessons": {
+  "r05": {
+   "topic": "openings",
+   "examples": [
+    {
+     "he": "יְבָרֶכְךָ יְהוָה וְיִשְׁמְרֶךָ",
+     "meaning": "The LORD bless thee, and keep thee",
+     "note": "opens 1 line in the library; in \"Priestly Blessing, line 1\": The LORD bless thee, and keep thee",
+     "label": "corpus-attested"
+    },
+    {
+     "he": "יָאֵר יְהוָה פָּנָיו",
+     "meaning": "The LORD make His face to shine upon thee, and be graciou...",
+     "note": "opens 1 line in the library; in \"Priestly Blessing, line 2\": The LORD make His face to shine upon thee, and be graciou...",
+     "label": "corpus-attested"
+    },
+    {
+     "he": "יִשָּׂא יְהוָה פָּנָיו",
+     "meaning": "The LORD lift up His countenance upon thee, and give thee...",
+     "note": "opens 1 line in the library; in \"Priestly Blessing, line 3\": The LORD lift up His countenance upon thee, and give thee...",
+     "label": "corpus-attested"
+    }
+   ]
+  },
+  "r15": {
+   "topic": "openings",
+   "examples": [
+    {
+     "he": "יְבָרֶכְךָ יְהוָה וְיִשְׁמְרֶךָ",
+     "meaning": "The LORD bless thee, and keep thee",
+     "note": "opens 1 line in the library; in \"Priestly Blessing, line 1\": The LORD bless thee, and keep thee",
+     "label": "corpus-attested"
+    }
+   ]
+  },
+  "r22": {
+   "topic": "openings",
+   "examples": [
+    {
+     "he": "שְׁמַע יִשְׂרָאֵל יְהוָה",
+     "meaning": "HEAR, O ISRAEL",
+     "note": "opens 2 lines in the library; in \"Shema Yisrael\": HEAR, O ISRAEL",
+     "label": "corpus-attested"
+    }
+   ]
+  },
+  "r25": {
+   "topic": "openings",
+   "examples": [
+    {
+     "he": "יָאֵר יְהוָה פָּנָיו",
+     "meaning": "The LORD make His face to shine upon thee, and be graciou...",
+     "note": "opens 1 line in the library; in \"Priestly Blessing, line 2\": The LORD make His face to shine upon thee, and be graciou...",
+     "label": "corpus-attested"
+    }
+   ]
+  },
+  "r26": {
+   "topic": "openings",
+   "examples": [
+    {
+     "he": "יִשָּׂא יְהוָה פָּנָיו",
+     "meaning": "The LORD lift up His countenance upon thee, and give thee...",
+     "note": "opens 1 line in the library; in \"Priestly Blessing, line 3\": The LORD lift up His countenance upon thee, and give thee...",
+     "label": "corpus-attested"
+    }
+   ]
+  },
+  "r27": {
+   "topic": "openings",
+   "examples": [
+    {
+     "he": "יְבָרֶכְךָ יְהוָה וְיִשְׁמְרֶךָ",
+     "meaning": "The LORD bless thee, and keep thee",
+     "note": "opens 1 line in the library; in \"Priestly Blessing, line 1\": The LORD bless thee, and keep thee",
+     "label": "corpus-attested"
+    },
+    {
+     "he": "יָאֵר יְהוָה פָּנָיו",
+     "meaning": "The LORD make His face to shine upon thee, and be graciou...",
+     "note": "opens 1 line in the library; in \"Priestly Blessing, line 2\": The LORD make His face to shine upon thee, and be graciou...",
+     "label": "corpus-attested"
+    },
+    {
+     "he": "יִשָּׂא יְהוָה פָּנָיו",
+     "meaning": "The LORD lift up His countenance upon thee, and give thee...",
+     "note": "opens 1 line in the library; in \"Priestly Blessing, line 3\": The LORD lift up His countenance upon thee, and give thee...",
+     "label": "corpus-attested"
+    }
+   ]
+  },
+  "r28": {
+   "topic": "article",
+   "examples": [
+    {
+     "he": "הָעוֹלָם",
+     "meaning": "the world",
+     "note": "the world = ha- + no dagesh: the first letter cannot take one; base word עוֹלָם",
+     "label": "corpus-attested"
+    }
+   ]
+  },
+  "r32": {
+   "topic": "openings",
+   "examples": [
+    {
+     "he": "וְאָהַבְתָּ אֵת יְהוָה",
+     "meaning": "And thou shalt love the LORD thy God with all thy heart,...",
+     "note": "opens 2 lines in the library; in \"V'ahavta, verse 1\": And thou shalt love the LORD thy God with all thy heart,...",
+     "label": "corpus-attested"
+    }
+   ]
+  },
+  "r36": {
+   "topic": "prefixes",
+   "examples": [
+    {
+     "he": "לְעוֹלָם",
+     "meaning": "to world",
+     "note": "le- (to / for) + עוֹלָם (world)",
+     "label": "corpus-attested"
+    }
+   ]
+  },
+  "r37": {
+   "topic": "article",
+   "examples": [
+    {
+     "he": "הַיּוֹם",
+     "meaning": "the day",
+     "note": "the day = ha- + doubled first letter (dagesh); base word יוֹם",
+     "label": "corpus-attested"
+    }
+   ]
+  },
+  "r38": {
+   "topic": "article",
+   "examples": [
+    {
+     "he": "הָעוֹלָם",
+     "meaning": "the world",
+     "note": "the world = ha- + no dagesh: the first letter cannot take one; base word עוֹלָם",
+     "label": "corpus-attested"
+    },
+    {
+     "he": "הַתּוֹרָה",
+     "meaning": "the instruction",
+     "note": "the instruction = ha- + doubled first letter (dagesh); base word תּוֹרָה",
+     "label": "corpus-attested"
+    }
+   ]
+  },
+  "r39": {
+   "topic": "openings",
+   "examples": [
+    {
+     "he": "מוֹדֶה אֲנִי לְפָנֶיךָ",
+     "meaning": "I give thanks before you, living and enduring king, that...",
+     "note": "opens 1 line in the library; in \"Modeh Ani (on waking)\": I give thanks before you, living and enduring king, that...",
+     "label": "corpus-attested"
+    }
+   ]
+  },
+  "r40": {
+   "topic": "openings",
+   "examples": [
+    {
+     "he": "מַה־טֹּבוּ אֹהָלֶיךָ יַעֲקֹב",
+     "meaning": "How goodly are thy tents, O Jacob, Thy dwellings, O Israel!",
+     "note": "opens 1 line in the library; in \"Mah Tovu (first verse)\": How goodly are thy tents, O Jacob, Thy dwellings, O Israel!",
+     "label": "corpus-attested"
+    }
+   ]
+  },
+  "r41": {
+   "topic": "construct",
+   "examples": [
+    {
+     "he": "מֶלֶךְ הָעוֹלָם",
+     "meaning": "king of the world",
+     "note": "king of the world: two nouns side by side, in the line \"Blessing formula (Baruch atah Adonai Eloheinu Melech ha'olam)\"",
+     "label": "corpus-attested"
+    },
+    {
+     "he": "פְּרִי הַגָּפֶן",
+     "meaning": "fruit of the vine",
+     "note": "fruit of the vine: two nouns side by side, in the line \"Blessing over wine\"",
+     "label": "corpus-attested"
+    }
+   ]
+  },
+  "r42": {
+   "topic": "article",
+   "examples": [
+    {
+     "he": "הַגָּדוֹל",
+     "meaning": "the big",
+     "note": "the big = ha- + doubled first letter (dagesh); base word גָּדוֹל",
+     "label": "corpus-attested"
+    }
+   ]
+  },
+  "r43": {
+   "topic": "openings",
+   "examples": [
+    {
+     "he": "מִי־כָמֹכָה בָּאֵלִם יְהוָה",
+     "meaning": "Who is like unto Thee, O LORD, among the mighty? Who is l...",
+     "note": "opens 1 line in the library; in \"Mi Chamocha\": Who is like unto Thee, O LORD, among the mighty? Who is l...",
+     "label": "corpus-attested"
+    }
+   ]
+  },
+  "r44": {
+   "topic": "article",
+   "examples": [
+    {
+     "he": "הַיּוֹם",
+     "meaning": "the day",
+     "note": "the day = ha- + doubled first letter (dagesh); base word יוֹם",
+     "label": "corpus-attested"
+    },
+    {
+     "he": "הָאֱלֹהִים",
+     "meaning": "the god",
+     "note": "the god = ha- + no dagesh: the first letter cannot take one; base word אֱלֹהִים",
+     "label": "corpus-attested"
+    },
+    {
+     "he": "הָאֲדָמָה",
+     "meaning": "the earth",
+     "note": "the earth = ha- + no dagesh: the first letter cannot take one; base word אֲדָמָה",
+     "label": "corpus-attested"
+    }
+   ]
+  },
+  "r45": {
+   "topic": "prefixes",
+   "examples": [
+    {
+     "he": "וְחַיִּים",
+     "meaning": "and life",
+     "note": "ve- (and) + חַיִּים (life)",
+     "label": "corpus-attested"
+    }
+   ]
+  },
+  "r46": {
+   "topic": "prefixes",
+   "examples": [
+    {
+     "he": "בְּיוֹם",
+     "meaning": "in day",
+     "note": "be- (in / with) + יוֹם (day)",
+     "label": "corpus-attested"
+    }
+   ]
+  },
+  "r47": {
+   "topic": "prefixes",
+   "examples": [
+    {
+     "he": "בְּחֶסֶד",
+     "meaning": "in loving kindness",
+     "note": "be- (in / with) + חֶסֶד (loving kindness)",
+     "label": "corpus-attested"
+    },
+    {
+     "he": "לְעוֹלָם",
+     "meaning": "to world",
+     "note": "le- (to / for) + עוֹלָם (world)",
+     "label": "corpus-attested"
+    }
+   ]
+  },
+  "r48": {
+   "topic": "prefixes",
+   "examples": [
+    {
+     "he": "לְעוֹלָם",
+     "meaning": "to world",
+     "note": "le- (to / for) + עוֹלָם (world)",
+     "label": "corpus-attested"
+    }
+   ]
+  },
+  "r49": {
+   "topic": "article",
+   "examples": [
+    {
+     "he": "הַיּוֹם",
+     "meaning": "the day",
+     "note": "the day = ha- + doubled first letter (dagesh); base word יוֹם",
+     "label": "corpus-attested"
+    },
+    {
+     "he": "הָעוֹלָם",
+     "meaning": "the world",
+     "note": "the world = ha- + no dagesh: the first letter cannot take one; base word עוֹלָם",
+     "label": "corpus-attested"
+    }
+   ]
+  },
+  "r50": {
+   "topic": "article",
+   "examples": [
+    {
+     "he": "הַיּוֹם",
+     "meaning": "the day",
+     "note": "the day = ha- + doubled first letter (dagesh); base word יוֹם",
+     "label": "corpus-attested"
+    },
+    {
+     "he": "הָאֱלֹהִים",
+     "meaning": "the god",
+     "note": "the god = ha- + no dagesh: the first letter cannot take one; base word אֱלֹהִים",
+     "label": "corpus-attested"
+    },
+    {
+     "he": "הַגָּדוֹל",
+     "meaning": "the big",
+     "note": "the big = ha- + doubled first letter (dagesh); base word גָּדוֹל",
+     "label": "corpus-attested"
+    }
+   ]
+  },
+  "r51": {
+   "topic": "article",
+   "examples": [
+    {
+     "he": "הַיּוֹם",
+     "meaning": "the day",
+     "note": "the day = ha- + doubled first letter (dagesh); base word יוֹם",
+     "label": "corpus-attested"
+    },
+    {
+     "he": "הָאֱלֹהִים",
+     "meaning": "the god",
+     "note": "the god = ha- + no dagesh: the first letter cannot take one; base word אֱלֹהִים",
+     "label": "corpus-attested"
+    },
+    {
+     "he": "הָאֲדָמָה",
+     "meaning": "the earth",
+     "note": "the earth = ha- + no dagesh: the first letter cannot take one; base word אֲדָמָה",
+     "label": "corpus-attested"
+    }
+   ]
+  },
+  "il12": {
+   "topic": "article",
+   "examples": [
+    {
+     "he": "הַיּוֹם",
+     "meaning": "the day",
+     "note": "the day = ha- + doubled first letter (dagesh); base word יוֹם",
+     "label": "corpus-attested"
+    }
+   ]
+  },
+  "I-01": {
+   "topic": "prefixes",
+   "examples": [
+    {
+     "he": "לְעוֹלָם",
+     "meaning": "to world",
+     "note": "le- (to / for) + עוֹלָם (world)",
+     "label": "corpus-attested"
+    }
+   ]
+  },
+  "I-02": {
+   "topic": "article",
+   "examples": [
+    {
+     "he": "הַגָּדוֹל",
+     "meaning": "the big",
+     "note": "the big = ha- + doubled first letter (dagesh); base word גָּדוֹל",
+     "label": "corpus-attested"
+    }
+   ]
+  },
+  "I-03": {
+   "topic": "article",
+   "examples": [
+    {
+     "he": "הָעוֹלָם",
+     "meaning": "the world",
+     "note": "the world = ha- + no dagesh: the first letter cannot take one; base word עוֹלָם",
+     "label": "corpus-attested"
+    },
+    {
+     "he": "הַתּוֹרָה",
+     "meaning": "the instruction",
+     "note": "the instruction = ha- + doubled first letter (dagesh); base word תּוֹרָה",
+     "label": "corpus-attested"
+    }
+   ]
+  },
+  "I-04": {
+   "topic": "prefixes",
+   "examples": [
+    {
+     "he": "וְחַיִּים",
+     "meaning": "and life",
+     "note": "ve- (and) + חַיִּים (life)",
+     "label": "corpus-attested"
+    }
+   ]
+  },
+  "I-05": {
+   "topic": "article",
+   "examples": [
+    {
+     "he": "הָעוֹלָם",
+     "meaning": "the world",
+     "note": "the world = ha- + no dagesh: the first letter cannot take one; base word עוֹלָם",
+     "label": "corpus-attested"
+    },
+    {
+     "he": "הַשְּׁבִיעִי",
+     "meaning": "the seventh",
+     "note": "the seventh = ha- + doubled first letter (dagesh); base word שְׁבִיעִי",
+     "label": "corpus-attested"
+    }
+   ]
+  },
+  "I-06": {
+   "topic": "article",
+   "examples": [
+    {
+     "he": "הָעוֹלָם",
+     "meaning": "the world",
+     "note": "the world = ha- + no dagesh: the first letter cannot take one; base word עוֹלָם",
+     "label": "corpus-attested"
+    },
+    {
+     "he": "הַמֶּלֶךְ",
+     "meaning": "the king",
+     "note": "the king = ha- + doubled first letter (dagesh); base word מֶלֶךְ",
+     "label": "corpus-attested"
+    },
+    {
+     "he": "הַשְּׁבִיעִי",
+     "meaning": "the seventh",
+     "note": "the seventh = ha- + doubled first letter (dagesh); base word שְׁבִיעִי",
+     "label": "corpus-attested"
+    }
+   ]
+  },
+  "I-07": {
+   "topic": "article",
+   "examples": [
+    {
+     "he": "הַמֵּצַר",
+     "meaning": "the strait",
+     "note": "the strait = ha- + doubled first letter (dagesh); base word מֵצַר",
+     "label": "corpus-attested"
+    }
+   ]
+  },
+  "I-08": {
+   "topic": "article",
+   "examples": [
+    {
+     "he": "הַיּוֹם",
+     "meaning": "the day",
+     "note": "the day = ha- + doubled first letter (dagesh); base word יוֹם",
+     "label": "corpus-attested"
+    },
+    {
+     "he": "הָאֱלֹהִים",
+     "meaning": "the god",
+     "note": "the god = ha- + no dagesh: the first letter cannot take one; base word אֱלֹהִים",
+     "label": "corpus-attested"
+    },
+    {
+     "he": "הָאֲדָמָה",
+     "meaning": "the earth",
+     "note": "the earth = ha- + no dagesh: the first letter cannot take one; base word אֲדָמָה",
+     "label": "corpus-attested"
+    }
+   ]
+  },
+  "I-09": {
+   "topic": "prefixes",
+   "examples": [
+    {
+     "he": "בְּיוֹם",
+     "meaning": "in day",
+     "note": "be- (in / with) + יוֹם (day)",
+     "label": "corpus-attested"
+    },
+    {
+     "he": "לְאִישׁ",
+     "meaning": "to man",
+     "note": "le- (to / for) + אִישׁ (man)",
+     "label": "corpus-attested"
+    },
+    {
+     "he": "לְסוֹף",
+     "meaning": "to end",
+     "note": "le- (to / for) + סוֹף (end)",
+     "label": "corpus-attested"
+    }
+   ]
+  },
+  "I-10": {
+   "topic": "article",
+   "examples": [
+    {
+     "he": "הָעוֹלָם",
+     "meaning": "the world",
+     "note": "the world = ha- + no dagesh: the first letter cannot take one; base word עוֹלָם",
+     "label": "corpus-attested"
+    }
+   ]
+  },
+  "I-26": {
+   "topic": "prefixes",
+   "examples": [
+    {
+     "he": "מִטּוּב",
+     "meaning": "from goodness",
+     "note": "me- (from) + טוּב (goodness)",
+     "label": "corpus-attested"
+    },
+    {
+     "he": "שֶׁנָּתַן",
+     "meaning": "that to give",
+     "note": "she- (that) + נָתַן (to give)",
+     "label": "corpus-attested"
+    },
+    {
+     "he": "וְדָבָר",
+     "meaning": "and thing",
+     "note": "ve- (and) + דָּבָר (thing)",
+     "label": "corpus-attested"
+    }
+   ]
+  },
+  "I-27": {
+   "topic": "prefixes",
+   "examples": [
+    {
+     "he": "וְטוֹב",
+     "meaning": "and good",
+     "note": "ve- (and) + טוֹב (good)",
+     "label": "corpus-attested"
+    },
+    {
+     "he": "לְעוֹלָם",
+     "meaning": "to world",
+     "note": "le- (to / for) + עוֹלָם (world)",
+     "label": "corpus-attested"
+    },
+    {
+     "he": "בְּאוֹר",
+     "meaning": "in light",
+     "note": "be- (in / with) + אוֹר (light)",
+     "label": "corpus-attested"
+    }
+   ]
+  },
+  "I-28": {
+   "topic": "prefixes",
+   "examples": [
+    {
+     "he": "וְטוֹב",
+     "meaning": "and good",
+     "note": "ve- (and) + טוֹב (good)",
+     "label": "corpus-attested"
+    },
+    {
+     "he": "לְעוֹלָם",
+     "meaning": "to world",
+     "note": "le- (to / for) + עוֹלָם (world)",
+     "label": "corpus-attested"
+    },
+    {
+     "he": "בְּאוֹר",
+     "meaning": "in light",
+     "note": "be- (in / with) + אוֹר (light)",
+     "label": "corpus-attested"
+    }
+   ]
+  },
+  "I-29": {
+   "topic": "article",
+   "examples": [
+    {
+     "he": "הָעוֹלָם",
+     "meaning": "the world",
+     "note": "the world = ha- + no dagesh: the first letter cannot take one; base word עוֹלָם",
+     "label": "corpus-attested"
+    }
+   ]
+  },
+  "I-30": {
+   "topic": "article",
+   "examples": [
+    {
+     "he": "הָעוֹלָם",
+     "meaning": "the world",
+     "note": "the world = ha- + no dagesh: the first letter cannot take one; base word עוֹלָם",
+     "label": "corpus-attested"
+    }
+   ]
+  },
+  "I-31": {
+   "topic": "article",
+   "examples": [
+    {
+     "he": "הָעוֹלָם",
+     "meaning": "the world",
+     "note": "the world = ha- + no dagesh: the first letter cannot take one; base word עוֹלָם",
+     "label": "corpus-attested"
+    }
+   ]
+  },
+  "I-32": {
+   "topic": "article",
+   "examples": [
+    {
+     "he": "הָעוֹלָם",
+     "meaning": "the world",
+     "note": "the world = ha- + no dagesh: the first letter cannot take one; base word עוֹלָם",
+     "label": "corpus-attested"
+    }
+   ]
+  },
+  "I-33": {
+   "topic": "prefixes",
+   "examples": [
+    {
+     "he": "בְּחֶסֶד",
+     "meaning": "in loving kindness",
+     "note": "be- (in / with) + חֶסֶד (loving kindness)",
+     "label": "corpus-attested"
+    },
+    {
+     "he": "לְעוֹלָם",
+     "meaning": "to world",
+     "note": "le- (to / for) + עוֹלָם (world)",
+     "label": "corpus-attested"
+    }
+   ]
+  },
+  "I-34": {
+   "topic": "article",
+   "examples": [
+    {
+     "he": "הָעוֹלָם",
+     "meaning": "the world",
+     "note": "the world = ha- + no dagesh: the first letter cannot take one; base word עוֹלָם",
+     "label": "corpus-attested"
+    }
+   ]
+  },
+  "I-35": {
+   "topic": "article",
+   "examples": [
+    {
+     "he": "הָעוֹלָם",
+     "meaning": "the world",
+     "note": "the world = ha- + no dagesh: the first letter cannot take one; base word עוֹלָם",
+     "label": "corpus-attested"
+    },
+    {
+     "he": "הַשְּׁבִיעִי",
+     "meaning": "the seventh",
+     "note": "the seventh = ha- + doubled first letter (dagesh); base word שְׁבִיעִי",
+     "label": "corpus-attested"
+    }
+   ]
+  },
+  "I-36": {
+   "topic": "article",
+   "examples": [
+    {
+     "he": "הַיּוֹם",
+     "meaning": "the day",
+     "note": "the day = ha- + doubled first letter (dagesh); base word יוֹם",
+     "label": "corpus-attested"
+    }
+   ]
+  },
+  "I-37": {
+   "topic": "article",
+   "examples": [
+    {
+     "he": "הַיּוֹם",
+     "meaning": "the day",
+     "note": "the day = ha- + doubled first letter (dagesh); base word יוֹם",
+     "label": "corpus-attested"
+    }
+   ]
+  },
+  "I-47": {
+   "topic": "article",
+   "examples": [
+    {
+     "he": "הַיּוֹם",
+     "meaning": "the day",
+     "note": "the day = ha- + doubled first letter (dagesh); base word יוֹם",
+     "label": "corpus-attested"
+    }
+   ]
+  },
+  "I-48": {
+   "topic": "article",
+   "examples": [
+    {
+     "he": "הַיּוֹם",
+     "meaning": "the day",
+     "note": "the day = ha- + doubled first letter (dagesh); base word יוֹם",
+     "label": "corpus-attested"
+    }
+   ]
+  }
+ }
+}

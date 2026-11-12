@@ -1,0 +1,549 @@
+{
+  "note": "Backdrop and card picture for each game that had none (owner, 2026-11-12: fill every missing picture, same look and cast). Built only from pictures already in the app: assets/img/gen/<ID> (approved art) and data/images/rimon/v2/<still> (Rimon, clear background). Nothing new was drawn, nothing is flipped. Build: python3 tools/images/lane-envs.py",
+  "games": {
+    "tg-tilepairs": [
+      "GAME_art_08",
+      "rimon-190-peek-in-box"
+    ],
+    "tg-letterhunt": [
+      "CRAFT_practice_09",
+      "rimon-010-magnifying-glass"
+    ],
+    "tg-numerals": [
+      "VOC_numbers_09",
+      "rimon-142-abacus"
+    ],
+    "tg-wordguess": [
+      "GAME_art_06",
+      "rimon-036-idea-bulb"
+    ],
+    "tg-torahwords": [
+      "CRAFT_scroll_02",
+      "rimon-068-reading"
+    ],
+    "tg-family": [
+      "VOC_home_09",
+      "rimon-061-pomegranate-tree"
+    ],
+    "tg-verbslots": [
+      "CRAFT_haftarah_08",
+      "rimon-178-checklist"
+    ],
+    "tg-storyorder": [
+      "STORY_creation_07",
+      "STORY_jacob_03",
+      "STORY_joseph_01"
+    ],
+    "tg-whosaid": [
+      "CHAR_ari_listen",
+      "rimon-199-microphone"
+    ],
+    "tg-parashah": [
+      "HERO_amidah1_01",
+      "rimon-170-treasure-map"
+    ],
+    "tg-tropehunt": [
+      "CRAFT_practice_04",
+      "rimon-094-singing"
+    ],
+    "tg-holidays": [
+      "GAME_art_07",
+      "rimon-108-flag-dance"
+    ],
+    "g1-strokeorder": [
+      "VERB_hand_10",
+      "rimon-026-wink-point"
+    ],
+    "g1-reveal": [
+      "GAME_niqqud_fade_02",
+      "rimon-047-star-overhead"
+    ],
+    "g1-script": [
+      "CRAFT_practice_06",
+      "rimon-169-envelope"
+    ],
+    "g1-duel": [
+      "GRAM_ask_02",
+      "rimon-071-whistling"
+    ],
+    "g1-sounddash": [
+      "GAME_letter_rush_04",
+      "rimon-043-jog-in-place"
+    ],
+    "g1-rhythm": [
+      "GAME_karaoke_listen",
+      "rimon-158-tambourine"
+    ],
+    "g1-gaptrain": [
+      "VOC_directions_04",
+      "rimon-007-starting-line"
+    ],
+    "g1-whereis": [
+      "PLACE_everyday_05",
+      "rimon-040-onward-point"
+    ],
+    "g1-finalswitch": [
+      "GRAM_own_06",
+      "rimon-073-side-step"
+    ],
+    "g1-sounddots": [
+      "GAME_prefix_light",
+      "rimon-181-flashlight"
+    ],
+    "g1-vowelchain": [
+      "GAME_letter_rush_05",
+      "rimon-028-on-a-roll"
+    ],
+    "g1-soundpairs": [
+      "VERB_home_10",
+      "rimon-021-clapping"
+    ],
+    "g1-blend": [
+      "VERB_kitchen_07",
+      "rimon-070-juggling-seeds"
+    ],
+    "g1-nonsense": [
+      "CRAFT_practice_02",
+      "rimon-039-belly-laugh"
+    ],
+    "g1-dagesh": [
+      "VOC_numbers_09",
+      "rimon-137-binoculars"
+    ],
+    "g1-riverhop": [
+      "GAME_letter_rush_06",
+      "rimon-049-skip"
+    ],
+    "g1-shva": [
+      "CRAFT_practice_10",
+      "rimon-103-gentle-bow"
+    ],
+    "g1-helpers": [
+      "rimon-072-peeking",
+      "rimon-102-quiet-reflection"
+    ],
+    "g1-syllablecut": [
+      "VOC_market_07",
+      "rimon-089-carrying-challah"
+    ],
+    "g1-flashread": [
+      "CRAFT_practice_03",
+      "rimon-193-camera"
+    ],
+    "g2-sortrush": [
+      "BG_market"
+    ],
+    "g2-oddone": [
+      "GRAM_compare_02",
+      "rimon-032-crown-scratch"
+    ],
+    "g2-popup": [
+      "GRAM_there_03",
+      "rimon-072-peeking"
+    ],
+    "g2-familytree": [
+      "VOC_shabbat_10",
+      "rimon-086-bouquet"
+    ],
+    "g2-bodymap": [
+      "VOC_body_04",
+      "VOC_body_02",
+      "VOC_body_03"
+    ],
+    "g2-paintpots": [
+      "VOC_colours_01",
+      "VOC_colours_03",
+      "VOC_colours_02",
+      "rimon-023-twirl"
+    ],
+    "g2-lineup": [
+      "VOC_colours_09",
+      "VOC_colours_10",
+      "rimon-179-big-calendar"
+    ],
+    "g2-snap": [
+      "GAME_art_09",
+      "rimon-027-high-five"
+    ],
+    "g2-chain": [
+      "CRAFT_practice_10",
+      "rimon-106-paper-chain"
+    ],
+    "g2-dominoes": [
+      "GAME_art_06",
+      "GRAM_place_09",
+      "rimon-069-sipping-tea"
+    ],
+    "g2-endings": [
+      "GAME_tradition_detective_02",
+      "rimon-010-magnifying-glass"
+    ],
+    "g2-street": [
+      "FINALE_set_02"
+    ],
+    "g2-whereami": [
+      "VOC_directions_01",
+      "rimon-180-map-upside-down"
+    ],
+    "g2-clues": [
+      "GAME_tradition_detective_04",
+      "rimon-036-idea-bulb"
+    ],
+    "g2-dayafter": [
+      "VOC_colours_09",
+      "rimon-145-calendar-page"
+    ],
+    "g2-trail": [
+      "STORY_creation_09"
+    ],
+    "g2-fourgroups": [
+      "GAME_art_08",
+      "rimon-196-puzzle-pieces"
+    ],
+    "g2-hive": [
+      "VOC_market_08",
+      "rimon-074-butterfly"
+    ],
+    "g2-ladder": [
+      "CRAFT_haftarah_08",
+      "rimon-149-step-up"
+    ],
+    "g2-firstletter": [
+      "VOC_home_10",
+      "rimon-171-block-tower-three"
+    ],
+    "g3-conveyor": [
+      "GAME_art_09",
+      "rimon-141-lever"
+    ],
+    "g3-lostfound": [
+      "GRAM_move_02",
+      "GRAM_link_04"
+    ],
+    "g3-whack": [
+      "GRAM_move_03",
+      "rimon-072-peeking"
+    ],
+    "g3-onetwomany": [
+      "VOC_numbers_02",
+      "VOC_numbers_03",
+      "VOC_numbers_08"
+    ],
+    "g3-questions": [
+      "GRAM_ask_01",
+      "CHAR_ari_listen"
+    ],
+    "g3-packcheck": [
+      "HERO_calendar_10",
+      "rimon-041-backpack-on"
+    ],
+    "g3-clues": [
+      "GAME_tradition_detective_06",
+      "rimon-010-magnifying-glass"
+    ],
+    "g3-gate": [
+      "CRAFT_wheel_10",
+      "rimon-082-wave-hello"
+    ],
+    "g3-grid": [
+      "GAME_art_08",
+      "rimon-148-clipboard-thumbs-up"
+    ],
+    "g3-arrows": [
+      "VOC_directions_07",
+      "VOC_directions_08",
+      "rimon-125-balloons"
+    ],
+    "g3-agree": [
+      "VOC_greetings_07",
+      "rimon-025-dance-step"
+    ],
+    "g3-negate": [
+      "GRAM_there_07",
+      "rimon-196-puzzle-pieces"
+    ],
+    "g3-swapfix": [
+      "GAME_art_06",
+      "rimon-187-gear-wrench"
+    ],
+    "g3-mirror": [
+      "CHAR_ari_speak",
+      "CHAR_noa_speak"
+    ],
+    "g3-shop": [
+      "GRAM_link_09",
+      "VOC_market_10"
+    ],
+    "g3-chains": [
+      "GRAM_link_01",
+      "rimon-027-high-five"
+    ],
+    "g3-press": [
+      "VERB_kitchen_02",
+      "rimon-119-hamantash"
+    ],
+    "g3-sieve": [
+      "GRAM_move_09",
+      "rimon-079-offer-seeds"
+    ],
+    "g3-repair": [
+      "VERB_home_04",
+      "rimon-182-toolbox"
+    ],
+    "g3-decoder": [
+      "CHAR_ari_speak",
+      "rimon-192-typing"
+    ],
+    "g4-greetings": [
+      "CTX_house_03",
+      "rimon-082-wave-hello"
+    ],
+    "g4-clock": [
+      "GRAM_ask_04",
+      "rimon-177-alarm-clock"
+    ],
+    "g4-signs": [
+      "PLACE_everyday_07"
+    ],
+    "g4-cafe": [
+      "VOC_cafe_02",
+      "CHAR_noa_telaviv"
+    ],
+    "g4-change": [
+      "VOC_cafe_10",
+      "VOC_market_04",
+      "rimon-143-counting-fingers"
+    ],
+    "g4-bell": [
+      "VOC_directions_02",
+      "rimon-144-bell-ear"
+    ],
+    "g4-weather": [
+      "GRAM_link_04",
+      "rimon-185-packing-suitcase"
+    ],
+    "g4-slang": [
+      "CHAR_ari_telaviv",
+      "CHAR_noa_telaviv"
+    ],
+    "g4-falafel": [
+      "VOC_cafe_06",
+      "rimon-162-sunhat-falafel"
+    ],
+    "g4-busboard": [
+      "SPEAK_08_street_taxi",
+      "rimon-087-new-week-backpack"
+    ],
+    "g4-hours": [
+      "VOC_home_02",
+      "rimon-034-sheepish-grin"
+    ],
+    "g4-shuk": [
+      "CTX_food_01"
+    ],
+    "g4-menu": [
+      "CTX_food_02"
+    ],
+    "g4-grid": [
+      "PLACE_jerusalem_10",
+      "rimon-195-map-pin"
+    ],
+    "g4-phone": [
+      "VERB_talk_05",
+      "rimon-011-hop-out-of-phone"
+    ],
+    "g4-tone": [
+      "FINALE_set_04"
+    ],
+    "g4-week": [
+      "VOC_numbers_07",
+      "rimon-178-checklist"
+    ],
+    "g4-tourist": [
+      "GAME_story_seaside_market",
+      "rimon-193-camera"
+    ],
+    "g4-emergency": [
+      "VOC_directions_06",
+      "rimon-188-lifebuoy"
+    ],
+    "g4-pharmacy": [
+      "VOC_body_10",
+      "rimon-077-water-bottle"
+    ],
+    "g5-simanim": [
+      "HERO_grace_09",
+      "rimon-098-apple-and-honey"
+    ],
+    "g5-harvest": [
+      "HERO_grace_04",
+      "rimon-115-seven-species"
+    ],
+    "g5-grogger": [
+      "rimon-117-grogger",
+      "rimon-116-purim-mask"
+    ],
+    "g5-fireworks": [
+      "HERO_amidah2_07",
+      "rimon-124-israeli-flag"
+    ],
+    "g5-table": [
+      "BG_shabbat"
+    ],
+    "g5-greet": [
+      "VOC_greetings_08",
+      "VOC_greetings_06",
+      "rimon-176-lean-in-wave"
+    ],
+    "g5-shofar": [
+      "HERO_amidah1_02",
+      "rimon-099-shofar"
+    ],
+    "g5-kippur": [
+      "BG_synagogue",
+      "rimon-102-quiet-reflection"
+    ],
+    "g5-gifts": [
+      "rimon-118-gift-basket",
+      "rimon-119-hamantash"
+    ],
+    "g5-plate": [
+      "rimon-121-seder-plate",
+      "rimon-120-matzah"
+    ],
+    "g5-questions": [
+      "rimon-122-four-questions",
+      "rimon-123-afikoman"
+    ],
+    "g5-omer": [
+      "STORY_joseph_02"
+    ],
+    "g5-sukkah": [
+      "HERO_amidah1_10",
+      "rimon-105-in-the-sukkah"
+    ],
+    "g5-species": [
+      "HERO_amidah2_04",
+      "rimon-104-lulav-etrog"
+    ],
+    "g5-steps": [
+      "STORY_jacob_08"
+    ],
+    "g5-stars": [
+      "VOC_colours_10",
+      "rimon-095-havdalah"
+    ],
+    "g5-bless": [
+      "HERO_grace_03",
+      "rimon-091-kiddush-cup"
+    ],
+    "g5-mend": [
+      "CRAFT_practice_07",
+      "rimon-182-toolbox"
+    ],
+    "g5-readings": [
+      "CRAFT_bimah_02"
+    ],
+    "g5-scroll": [
+      "CRAFT_scroll_08",
+      "rimon-109-circle-dance"
+    ],
+    "hanukkah-dreidel1": [
+      "CHAR_ari_celebrate",
+      "rimon-111-dreidel",
+      "CHAR_noa_celebrate"
+    ],
+    "hanukkah-dreidel2": [
+      "rimon-111-dreidel",
+      "rimon-112-sufganiyah"
+    ],
+    "hanukkah-candles": [
+      "VOC_numbers_07",
+      "rimon-110-hanukkah-lights"
+    ],
+    "hanukkah-count": [
+      "VOC_numbers_08",
+      "rimon-110-hanukkah-lights"
+    ],
+    "hanukkah-pairs": [
+      "rimon-110-hanukkah-lights",
+      "GAME_art_09"
+    ],
+    "hanukkah-colour": [
+      "VOC_colours_02",
+      "rimon-112-sufganiyah",
+      "VOC_colours_03"
+    ],
+    "hanukkah-gelthunt": [
+      "VOC_cafe_10",
+      "rimon-170-treasure-map"
+    ],
+    "hanukkah-slide": [
+      "GAME_art_08",
+      "rimon-111-dreidel"
+    ],
+    "hanukkah-hiddenlights": [
+      "VOC_numbers_07",
+      "rimon-181-flashlight"
+    ],
+    "hanukkah-jumble": [
+      "VOC_market_08",
+      "rimon-113-latkes"
+    ],
+    "hanukkah-saveflame": [
+      "VOC_numbers_07",
+      "rimon-090-beside-candles"
+    ],
+    "hanukkah-charades": [
+      "CHAR_ari_celebrate",
+      "rimon-110-hanukkah-lights",
+      "CHAR_noa_celebrate"
+    ],
+    "hanukkah-forbidden": [
+      "rimon-030-oops",
+      "rimon-112-sufganiyah"
+    ],
+    "rootbuilder": [
+      "rimon-197-root-sprout",
+      "rimon-054-sprout-pot"
+    ],
+    "sprint60": [
+      "rimon-140-quick-read-stopwatch",
+      "rimon-151-towel-jog"
+    ],
+    "wordfinder-listen": [
+      "GAME_wordfinder_env",
+      "rimon-139-headphones-listen"
+    ],
+    "listenspot": [
+      "CHAR_noa_listen",
+      "rimon-004-listening-cupped-hand"
+    ],
+    "quizladder-duo": [
+      "CHAR_ari_celebrate",
+      "rimon-008-ladder-climb",
+      "CHAR_noa_celebrate"
+    ],
+    "dreidel-duo": [
+      "CHAR_ari_neutral",
+      "rimon-111-dreidel",
+      "CHAR_noa_neutral"
+    ]
+  },
+  "cardOnly": {
+    "roottree": [
+      "GAME_roottree_env"
+    ],
+    "karaokebeat": [
+      "GAME_karaoke_listen",
+      "rimon-159-headphones-sway"
+    ],
+    "barter": [
+      "GAME_barter_env"
+    ],
+    "bumperverbs": [
+      "GAME_bumper_verbs_env",
+      "rimon-150-sweatband-flex"
+    ]
+  }
+}

@@ -13,7 +13,8 @@ import { uiEnglish } from '../shell/names.js';
 import { playRecordedClip, hasRecordedClip } from './engine.js';
 import { ARCADE_KEY, LEVELS, BADGES, applyResult, applyArcade, emptyRecord, seededRandom, seedFrom, dayKey, bestLine, starsFor, mistakesLine } from './arcade.model.js';
 import { ARCADE_GAMES, HANUKKAH_GAMES } from './arcade.catalog.js';
-import { roundMode, afterRound, tournamentRandom } from './round-extras.js'; // daily challenge, tournament runs, last-score ledger
+import { roundMode, afterRound, tournamentRandom } from './round-extras.js';
+import { ENV_WEBP } from './env-webp.js'; // backdrops added 2026-11-12 are WebP // daily challenge, tournament runs, last-score ledger
 
 const WORDS_URL = new URL('../../data/games/firstwords.json', import.meta.url);
 const LETTERS_URL = new URL('../../data/letters/letters.json', import.meta.url);
@@ -42,7 +43,8 @@ export async function loadLetters(ctx) {
 
 /** Optional picture under assets/games/arcade/<game>/<name>.png; removes itself when the file is not there. */
 export function art(game, name, alt = '', cls = 'arc-art') {
-  const img = h('img', { class: cls, alt, src: `${ART_BASE}/${game}/${name}.png`, loading: 'lazy', decoding: 'async' });
+  const ext = name === 'env' && ENV_WEBP.has(game) ? 'webp' : 'png';
+  const img = h('img', { class: cls, alt, src: `${ART_BASE}/${game}/${name}.${ext}`, loading: 'lazy', decoding: 'async' });
   img.addEventListener('error', () => img.remove());
   return img;
 }

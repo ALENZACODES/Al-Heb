@@ -10,6 +10,7 @@ import { rimonInline } from '../shell/rimon-inline.js';
 import { gameOfTheDay, dayKey, ARCADE_KEY, LEVELS as ARCADE_STEPS } from './arcade.model.js';
 import { GAMES_ALL } from '../lib/counts.js';
 import { MORE_GAMES } from './more-catalog.js';
+import { ENV_WEBP, CARD_ONLY } from './env-webp.js';
 
 /** Hub id -> GAME_ENV key, for the games whose backdrop key differs from the route id. */
 export const HUB_ENV_KEY = Object.freeze({
@@ -127,12 +128,19 @@ export function mount(root, ctx) {
     for (const { a, id, envId } of thumbs) {
       const im = imgOf(R, 'id', envId);
       if (im?.src) a.prepend(h('img', { class: 'wf-game-thumb', src: im.src, alt: '', width: im.width, height: im.height, loading: 'lazy' }));
+      else if (CARD_ONLY.has(id) || ENV_WEBP.has(id)) a.prepend(arcadeThumb(id, a)); // the card picture made from the game's own art (2026-11-12)
       else a.append(medal('word', id, 56)); // last resort only: no approved scene for this game
     }
     // the same animated Rimon as setup, Learn and the lesson summary (one Rimon system); the corner Rimon steps aside while he is here
     try { const r = rimonInline({ action: 'wave', size: 88, label: 'Rimon waving' }); r.el.classList?.add?.('wf-hub-mascot'); article.insertBefore(r.el, article.children[1] || null); r.play('wave'); } catch { /* the picture is optional */ }
   }).catch(() => {});
   return () => {};
+}
+
+/** The game's card picture on a hub tile (every game in tools/images/lane-envs.json has one); other tiles are returned as they are. */
+export function withThumb(id, a) {
+  if (ENV_WEBP.has(id) || CARD_ONLY.has(id)) a.prepend(arcadeThumb(id, a));
+  return a;
 }
 
 /** Light WebP card picture from the arcade game's own scene (the main card image; no coin on game cards) (assets/img/arcade-thumbs, made from assets/games/arcade/<id>/env.png
@@ -149,10 +157,10 @@ export function hanukkahSection() {
     h('h2', { id: 'wf-hanukkah-h' }, 'Hanukkah Games ', heSpan('חֲנֻכָּה')),
     h('p', { class: 'muted' }, `${HANUKKAH_GAMES.length} games for the Festival of Lights: two dreidel games, the hanukkiah, party games for the family and word games with Hanukkah words.`),
     h('ul', { class: 'show-grid wf-game-grid' }, ...HANUKKAH_GAMES.map((g) => h('li', {},
-      h('a', { class: 'show-tile wf-level-tile', href: '#/' + g.id },
+      withThumb(g.id, h('a', { class: 'show-tile wf-level-tile', href: '#/' + g.id },
         h('span', { class: 'wf-game-level' }, 'LEVEL ' + g.level + ' / 5'),
         h('span', { class: 'show-tile-title' }, g.title, ' ', heSpan(g.titleHe)),
-        h('span', { class: 'show-tile-hook' }, g.tag))))));
+        h('span', { class: 'show-tile-hook' }, g.tag)))))));
 }
 
 /** Torah and Hebrew games: one card, beginner to advanced (each game is also in its level below). */
@@ -162,8 +170,8 @@ export function tgCard() {
     h('h2', { id: 'wf-tg-h' }, 'Torah and Hebrew Games ', heSpan('תּוֹרָה')),
     h('p', { class: 'muted' }, 'From first letters to real Torah verses, prayers and the holidays of the year.'),
     ...bands.map(([band, title]) => h('div', {}, h('h3', {}, title),
-      h('ul', { class: 'show-grid wf-game-grid' }, ...TG_GAMES.filter((g) => g.band === band).map((g) => h('li', {}, h('a', { class: 'show-tile wf-level-tile', href: '#/' + g.id },
-        h('span', { class: 'show-tile-title' }, g.title, ' ', heSpan(g.titleHe)), h('span', { class: 'show-tile-hook' }, g.tag))))))));
+      h('ul', { class: 'show-grid wf-game-grid' }, ...TG_GAMES.filter((g) => g.band === band).map((g) => h('li', {}, withThumb(g.id, h('a', { class: 'show-tile wf-level-tile', href: '#/' + g.id },
+        h('span', { class: 'show-tile-title' }, g.title, ' ', heSpan(g.titleHe)), h('span', { class: 'show-tile-hook' }, g.tag)))))))));
 }
 
 /** Lane g1: letters, vowels and reading sounds. The catalogue loads with the section, so the hub page stays small. */
@@ -173,8 +181,8 @@ export function g1Section() {
   import('./g1-catalog.js').then(({ G1_GAMES, G1_BANDS }) => body.replaceChildren(
     h('p', { class: 'muted' }, `${G1_GAMES.length} games for first readers: letter shapes and strokes, sounds and dots, vowels, syllables and whole words.`),
     ...G1_BANDS.map(([band, title]) => h('div', {}, h('h3', {}, title), h('ul', { class: 'show-grid wf-game-grid' }, ...G1_GAMES.filter((g) => g.band === band).map((g) => h('li', {},
-      h('a', { class: 'show-tile wf-level-tile', href: '#/' + g.id }, h('span', { class: 'wf-game-level' }, 'LEVEL ' + g.level + ' / 5'),
-        h('span', { class: 'show-tile-title' }, g.title, ' ', heSpan(g.titleHe)), h('span', { class: 'show-tile-hook' }, g.tag)))))))))
+      withThumb(g.id, h('a', { class: 'show-tile wf-level-tile', href: '#/' + g.id }, h('span', { class: 'wf-game-level' }, 'LEVEL ' + g.level + ' / 5'),
+        h('span', { class: 'show-tile-title' }, g.title, ' ', heSpan(g.titleHe)), h('span', { class: 'show-tile-hook' }, g.tag))))))))))
     .catch(() => body.replaceChildren(h('p', { class: 'muted' }, 'These games did not load. Check the connection and open this page again.')));
   return sec;
 }
@@ -183,8 +191,8 @@ export function g1Section() {
 export function g2Section() {
   const body = h('div', {});
   import('./g2-catalog.js').then(({ G2_GAMES }) => body.replaceChildren(...[['beginner', 'Beginner'], ['intermediate', 'Intermediate'], ['upper', 'Upper Intermediate']].map(([band, name]) => h('div', {}, h('h3', {}, name),
-    h('ul', { class: 'show-grid wf-game-grid' }, ...G2_GAMES.filter((g) => g.band === band).map((g) => h('li', {}, h('a', { class: 'show-tile wf-level-tile', href: '#/' + g.id },
-      h('span', { class: 'wf-game-level' }, 'LEVEL ' + g.level + ' / 5'), h('span', { class: 'show-tile-title' }, g.title, ' ', heSpan(g.titleHe)), h('span', { class: 'show-tile-hook' }, g.tag))))))))).catch(() => {});
+    h('ul', { class: 'show-grid wf-game-grid' }, ...G2_GAMES.filter((g) => g.band === band).map((g) => h('li', {}, withThumb(g.id, h('a', { class: 'show-tile wf-level-tile', href: '#/' + g.id },
+      h('span', { class: 'wf-game-level' }, 'LEVEL ' + g.level + ' / 5'), h('span', { class: 'show-tile-title' }, g.title, ' ', heSpan(g.titleHe)), h('span', { class: 'show-tile-hook' }, g.tag)))))))))).catch(() => {});
   return h('section', { class: 'wf-level-section g2-hub', 'aria-labelledby': 'wf-g2-h' }, h('h2', { id: 'wf-g2-h' }, 'Word Games by Topic ', heSpan('מִלָּה')),
     h('p', { class: 'muted' }, 'Food, home, the body, family, colours, animals, clothes, weather, school, work and places: twenty games for everyday words.'), body);
 }
@@ -193,8 +201,8 @@ export function g2Section() {
 export function g3Section() {
   const list = h('div', {}, h('p', { class: 'muted' }, 'Loading the grammar games…'));
   import('./g3-catalog.js').then(({ G3_GAMES, G3_BANDS }) => list.replaceChildren(...G3_BANDS.map(([band, title]) => h('div', {}, h('h3', {}, title),
-    h('ul', { class: 'show-grid wf-game-grid' }, ...G3_GAMES.filter((g) => g.band === band).map((g) => h('li', {}, h('a', { class: 'show-tile wf-level-tile', href: '#/' + g.id },
-      h('span', { class: 'wf-game-level' }, 'LEVEL ' + g.level + ' / 5'), h('span', { class: 'show-tile-title' }, g.title, ' ', heSpan(g.titleHe)), h('span', { class: 'show-tile-hook' }, g.tag))))))))).catch(() => list.replaceChildren(h('p', { class: 'muted' }, 'The grammar games did not load.')));
+    h('ul', { class: 'show-grid wf-game-grid' }, ...G3_GAMES.filter((g) => g.band === band).map((g) => h('li', {}, withThumb(g.id, h('a', { class: 'show-tile wf-level-tile', href: '#/' + g.id },
+      h('span', { class: 'wf-game-level' }, 'LEVEL ' + g.level + ' / 5'), h('span', { class: 'show-tile-title' }, g.title, ' ', heSpan(g.titleHe)), h('span', { class: 'show-tile-hook' }, g.tag)))))))))).catch(() => list.replaceChildren(h('p', { class: 'muted' }, 'The grammar games did not load.')));
   return h('section', { class: 'card wf-g3-card', 'aria-labelledby': 'wf-g3-h' },
     h('h2', { id: 'wf-g3-h' }, 'Grammar in Action'),
     h('p', { class: 'muted' }, 'Twenty games on how Hebrew works: verb tenses and patterns, person endings, "the", agreement, numbers, questions, "not", word order and two-noun chains.'), list);
@@ -206,8 +214,8 @@ export function g4Section() {
   const sec = h('section', { class: 'wf-level-section g4-hub', 'aria-labelledby': 'wf-g4-h' },
     h('h2', { id: 'wf-g4-h' }, 'Everyday Israel ', heSpan('יִשְׂרָאֵל')),
     h('p', { class: 'muted' }, 'Get by in Israel without seeming an outsider: greetings, signs, buses, the shuk, the café, the week and Shabbat.'), list);
-  import('./g4-catalog.js').then(({ G4_GAMES }) => list.replaceChildren(...G4_GAMES.map((g) => h('li', {}, h('a', { class: 'show-tile wf-level-tile', href: '#/' + g.id },
-    h('span', { class: 'wf-game-level' }, 'LEVEL ' + g.level + ' / 5'), h('span', { class: 'show-tile-title' }, g.title, ' ', heSpan(g.titleHe)), h('span', { class: 'show-tile-hook' }, g.tag)))))).catch(() => {});
+  import('./g4-catalog.js').then(({ G4_GAMES }) => list.replaceChildren(...G4_GAMES.map((g) => h('li', {}, withThumb(g.id, h('a', { class: 'show-tile wf-level-tile', href: '#/' + g.id },
+    h('span', { class: 'wf-game-level' }, 'LEVEL ' + g.level + ' / 5'), h('span', { class: 'show-tile-title' }, g.title, ' ', heSpan(g.titleHe)), h('span', { class: 'show-tile-hook' }, g.tag))))))).catch(() => {});
   return sec;
 }
 
@@ -216,8 +224,8 @@ export function g5Section() {
   const list = h('ul', { class: 'show-grid wf-game-grid' });
   const sec = h('section', { class: 'wf-level-section g5-hub', 'aria-labelledby': 'wf-g5-h' },
     h('h2', { id: 'wf-g5-h' }, 'Holidays, Shabbat and Prayer ', heSpan('חַגִּים')), h('p', { class: 'muted' }, 'Games through the Jewish year, from Rosh Hashanah to Shavuot, with Shabbat and the siddur.'), list);
-  import('./g5-catalog.js').then(({ G5_GAMES }) => list.replaceChildren(...G5_GAMES.map((g) => h('li', {}, h('a', { class: 'show-tile wf-level-tile', href: '#/' + g.id },
-    h('span', { class: 'wf-game-level' }, 'LEVEL ' + g.level + ' / 5'), h('span', { class: 'show-tile-title' }, g.title, ' ', heSpan(g.titleHe)), h('span', { class: 'show-tile-hook' }, g.tag)))))).catch(() => sec.remove());
+  import('./g5-catalog.js').then(({ G5_GAMES }) => list.replaceChildren(...G5_GAMES.map((g) => h('li', {}, withThumb(g.id, h('a', { class: 'show-tile wf-level-tile', href: '#/' + g.id },
+    h('span', { class: 'wf-game-level' }, 'LEVEL ' + g.level + ' / 5'), h('span', { class: 'show-tile-title' }, g.title, ' ', heSpan(g.titleHe)), h('span', { class: 'show-tile-hook' }, g.tag))))))).catch(() => sec.remove());
   return sec;
 }
 
@@ -226,8 +234,8 @@ export function moreSection() {
   return h('section', { class: 'wf-level-section gb-more-hub', 'aria-labelledby': 'wf-more-h' },
     h('h2', { id: 'wf-more-h' }, 'More Games: Builders, Sprints, Listening and Two Players'),
     h('p', { class: 'muted' }, 'Build words from a root, race the clock with your lesson words, play by ear, or pass one device between two players.'),
-    h('ul', { class: 'show-grid wf-game-grid' }, ...MORE_GAMES.map((g) => h('li', {}, h('a', { class: 'show-tile wf-level-tile', href: '#/' + g.id },
-      h('span', { class: 'wf-game-level' }, 'LEVEL ' + g.level + ' / 5'), h('span', { class: 'show-tile-title' }, g.title, ' ', heSpan(g.titleHe)), h('span', { class: 'show-tile-hook' }, g.tag))))));
+    h('ul', { class: 'show-grid wf-game-grid' }, ...MORE_GAMES.map((g) => h('li', {}, withThumb(g.id, h('a', { class: 'show-tile wf-level-tile', href: '#/' + g.id },
+      h('span', { class: 'wf-game-level' }, 'LEVEL ' + g.level + ' / 5'), h('span', { class: 'show-tile-title' }, g.title, ' ', heSpan(g.titleHe)), h('span', { class: 'show-tile-hook' }, g.tag)))))));
 }
 
 const NUM_WORDS = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'];

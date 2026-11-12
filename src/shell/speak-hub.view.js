@@ -1,6 +1,6 @@
 // Thin Speak door (#/speak-home): a v0 landing so the Speak tab and menu
 // can open, then send the learner on to speaking and listening pages.
-import { h } from './ui.js';
+import { h, destIcon } from './ui.js';
 
 const LINKS = [
   ['#/speak', 'Say it'],
@@ -16,5 +16,6 @@ export function mount(root) {
     h('h1', { id: 'view-title', tabindex: '-1' }, 'Speak'),
     h('p', { class: 'muted' }, 'Practice saying the words, and hear how they sound.'),
     h('ul', { class: 'tiles' },
-      ...LINKS.map(([href, label]) => h('li', {}, h('a', { class: 'tile', href }, label))))));
+      ...LINKS.map(([href, label]) => h('li', {}, h('a', { class: 'tile', href }, destIcon(href.slice(2), 48, 'speak'), h('span', {}, label)))))));
+  // every door has its gold coin, like the Go to list on Home (owner, 2026-11-12: no entry without its icon)
 }

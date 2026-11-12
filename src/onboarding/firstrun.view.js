@@ -210,7 +210,15 @@ export function mount(root, ctx) {
       const href = startHref().slice(1); // '#/firstday' -> route path
       if (typeof ctx.route === 'function') ctx.route(href); else { try { globalThis.location.hash = startHref(); } catch { /* tests */ } }
     }
-    body.replaceChildren(h('p', { class: 'ob-lede' }, 'Let’s find a comfortable place to begin. Tell us what you can read now, then choose what you want to learn.'), form,
+    // Owner, 2026-11-12 (rabbi review): Home is one tap from the very first screen; nothing is locked, the questions can wait.
+    function goHome() {
+      save();
+      try { settings.set({ onboarded: true, goal }); } catch { /* settings may be read-only in tests */ }
+      if (typeof ctx.route === 'function') ctx.route('/'); else { try { globalThis.location.hash = '#/'; } catch { /* tests */ } }
+    }
+    body.replaceChildren(h('p', { class: 'ob-lede' }, 'Let’s find a comfortable place to begin. Tell us what you can read now, then choose what you want to learn.'),
+      h('p', { class: 'ob-home-link' }, h('a', { href: '#/', class: 'btn secondary', onclick: (e) => { e.preventDefault(); goHome(); } }, 'Look around first: go to Home'), ' Every lesson, test and game is open from there.'),
+      form,
       h('p', { class: 'muted ob-fine' }, 'Your answer is saved only on this device. ', h('a', { href: '#/privacy' }, 'Privacy'), ' · ', h('a', { href: '#/terms' }, 'Terms'), '. ', h('a', { href: '#/how' }, 'How this works'), '. ', h('a', { href: '#/accessibility', id: 'ob-a11y-link' }, 'Accessibility options'), '.'));
     showPage(page);
   }

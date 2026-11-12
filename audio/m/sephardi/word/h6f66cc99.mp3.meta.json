@@ -1,0 +1,17 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "israeli-clip-same-reading",
+ "engine": "google-cloud-tts",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "sephardi",
+ "inputText": "טִיּוּל",
+ "inputSha256": "d668c2a9e55d77d2cfc382ca1d44d667dbc70f1c60901a34b914be26a378819e",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "A copy of the Israeli clip of the same voice: in this app the Sephardi reading is letter for letter the Israeli one (owner decision, 12 Nov 2026). Synthetic voice, not a Sephardi reader; no human has listened to it.",
+ "inputTextKind": "hebrew",
+ "copyOf": "audio/m/israeli/word/i-40-w1.mp3",
+ "madeFrom": "israeli-clip",
+ "sephardiReading": "tiyul",
+ "copiedAt": "2026-11-12T15:35:53.867Z"
+}

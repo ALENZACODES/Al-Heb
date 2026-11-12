@@ -26,3 +26,18 @@ test('the Hebrew-letter text reads as the engine\'s Ashkenazi reading on at leas
   const ok = rows.filter((r) => { const c = checkAgainstEngine(r.text); return same(c.want) === same(c.got); }).length;
   assert.ok(ok / rows.length >= 0.99, `${ok} of ${rows.length}`);
 });
+
+test('owner decision A: Sephardi rows given the Israeli clip are only rows whose two readings are the same, each a byte copy, captioned as the same reading', async () => {
+  const fs = await import('node:fs');
+  const { respell } = await import('../src/pronunciation/forTradition.js');
+  const { statusLabel } = await import('../src/shell/audio-labels.js');
+  const rows = loadManifestFull().filter((e) => e.source === 'israeli-clip-same-reading');
+  if (!rows.length) return;
+  for (const e of rows.slice(0, 400)) {
+    assert.equal(e.tradition, 'sephardi', e.path); assert.equal(e.status, 'synthetic-unreviewed', e.path);
+    assert.equal(respell(e.text, 'sephardi'), respell(e.text, 'israeli'), e.path);
+    const meta = JSON.parse(fs.readFileSync(`${e.path}.meta.json`, 'utf8'));
+    assert.ok(fs.readFileSync(e.path).equals(fs.readFileSync(meta.copyOf)), e.path);
+  }
+  assert.equal(statusLabel('synthetic-unreviewed', 'sephardi', 'israeli-clip-same-reading'), 'Sephardi voice, the same reading as Israeli');
+});

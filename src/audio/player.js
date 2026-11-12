@@ -60,7 +60,9 @@ const TRADITIONS = ['israeli', 'sephardi', 'ashkenazi'];
  * As of 10 November 2026 the settings also play the older present bank clips (paid-cloud / tts-respelled), not only these two
  * provenances. isAccentClip still names the newer provenance (or a human recording) for labels and reviews.
  */
-export const ACCENT_SOURCES = Object.freeze({ israeliVoice: 'tts-respelled-israeli-voice', tempoCapped: 'tts-respelled-tempo-capped' });
+// sameReading (owner decision, 12 Nov 2026): a Sephardi row whose reading is letter for letter the Israeli reading in this app
+// (src/pronunciation/forTradition.js) carries a copy of the Israeli clip of the same voice as its own file, labelled as the same reading.
+export const ACCENT_SOURCES = Object.freeze({ israeliVoice: 'tts-respelled-israeli-voice', tempoCapped: 'tts-respelled-tempo-capped', sameReading: 'israeli-clip-same-reading' });
 const ADMITTED = new Set(Object.values(ACCENT_SOURCES));
 /** True for a manifest source that is one of the newer accent provenances (a ':mock' suffix from a plumbing run does not count). */
 export const isAccentSource = (source) => ADMITTED.has(String(source || ''));

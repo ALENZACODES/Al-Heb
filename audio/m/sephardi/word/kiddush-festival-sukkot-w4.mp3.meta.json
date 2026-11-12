@@ -1,0 +1,31 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "israeli-clip-same-reading",
+ "engine": "google",
+ "voiceId": "he-IL-Chirp3-HD-Charon",
+ "tradition": "sephardi",
+ "inputText": "חַג הַסֻּכּוֹת הַזֶּה זְמַן שִׂמְחָתֵנוּ׃",
+ "inputSha256": "62bfa0240cc039b6b42e3d518fe311a18217dc56df570c4fdbdac03f26ea7feb",
+ "ingestedAt": "2026-11-11T23:16:05.387Z",
+ "licence": "customer-owned",
+ "note": "A copy of the Israeli clip of the same voice: in this app the Sephardi reading is letter for letter the Israeli one (owner decision, 12 Nov 2026). Synthetic voice, not a Sephardi reader; no human has listened to it.",
+ "renderedAt": "2026-11-11T23:16:05.387Z",
+ "redistributionCleared": false,
+ "spokenText": "חַג הַסֻּכּוֹת הַזֶּה זְמַן שִׂמְחָתֵנוּ",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [],
+  "google": {
+   "heard": "חג הסוכות הזה זמן שמחתנו",
+   "acc": 1,
+   "issues": []
+  },
+  "reviewersFailing": 0
+ },
+ "copyOf": "audio/m/israeli/line/kiddush-festival-sukkot.mp3",
+ "madeFrom": "israeli-clip",
+ "sephardiReading": "zeman",
+ "copiedAt": "2026-11-12T15:35:53.867Z"
+}

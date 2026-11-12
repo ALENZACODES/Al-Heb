@@ -1,0 +1,17 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "israeli-clip-same-reading",
+ "engine": "google-cloud-tts",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "sephardi",
+ "inputText": "בָּרוּךְ אַתָּה אֲדֹנָי אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם הַגּוֹמֵל לְחַיָּבִים טוֹבוֹת שֶׁגְּמָלַנִי כָּל טוֹב׃ מִי שֶׁגְּמָלְךָ טוֹב הוּא יִגְמָלְךָ כָּל טוֹב סֶלָה׃",
+ "inputSha256": "553695c7ba9df019b6292b67ba114ca29a29b85ee36fa0f69aa4ab1ed4f492a8",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "A copy of the Israeli clip of the same voice: in this app the Sephardi reading is letter for letter the Israeli one (owner decision, 12 Nov 2026). Synthetic voice, not a Sephardi reader; no human has listened to it.",
+ "inputTextKind": "hebrew",
+ "copyOf": "audio/m/israeli/prayer/hagomel.mp3",
+ "madeFrom": "israeli-clip",
+ "sephardiReading": "barukh atah adonai eloheinu melekh ha'olam hagomel lechayavim tovot shegemalani kol tov mi shegemalekha tov hu yigmalekha kol tov selah",
+ "copiedAt": "2026-11-12T15:35:53.867Z"
+}

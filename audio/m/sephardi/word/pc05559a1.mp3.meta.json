@@ -1,0 +1,17 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "israeli-clip-same-reading",
+ "engine": "google-cloud-tts",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "sephardi",
+ "inputText": "יֵשׁ הַנָּחָה?",
+ "inputSha256": "a4aae2911544b9a7e2994bda057ac7e2c1c4cffd9a14fa649f8c1fa0a2a9aa0f",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "A copy of the Israeli clip of the same voice: in this app the Sephardi reading is letter for letter the Israeli one (owner decision, 12 Nov 2026). Synthetic voice, not a Sephardi reader; no human has listened to it.",
+ "inputTextKind": "hebrew",
+ "copyOf": "audio/m/israeli/word/i-12-w6.mp3",
+ "madeFrom": "israeli-clip",
+ "sephardiReading": "yesh hanachah?",
+ "copiedAt": "2026-11-12T15:35:53.867Z"
+}

@@ -1,0 +1,35 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "israeli-clip-same-reading",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "sephardi",
+ "inputText": "הַלְלוּ יָהּ הַלְלוּ עַבְדֵי אֲדֹנָי הַלְלוּ אֶת־שֵׁם אֲדֹנָי",
+ "inputSha256": "c02ddfac97a76d8b1d8995a02a3a68f80112967f6cf3bfe855579248e9b43b33",
+ "ingestedAt": "2026-11-11T23:14:45.263Z",
+ "licence": "customer-owned",
+ "note": "A copy of the Israeli clip of the same voice: in this app the Sephardi reading is letter for letter the Israeli one (owner decision, 12 Nov 2026). Synthetic voice, not a Sephardi reader; no human has listened to it.",
+ "renderedAt": "2026-11-11T23:14:45.263Z",
+ "redistributionCleared": false,
+ "spokenText": "הַלְלוּ יָהּ הַלְלוּ עַבְדֵי אֲדֹנָי הַלְלוּ אֶת שֵׁם אֲדֹנָי",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [
+   "יָהּ"
+  ],
+  "google": {
+   "heard": "הללויה הללו עבדי אדוני הללו את שם אדוני",
+   "acc": 0.889,
+   "issues": [
+    "יָהּ"
+   ]
+  },
+  "reviewersFailing": 2
+ },
+ "copyOf": "audio/m/israeli/line/hallel-113-1.mp3",
+ "madeFrom": "israeli-clip",
+ "sephardiReading": "yah",
+ "copiedAt": "2026-11-12T15:35:53.867Z"
+}

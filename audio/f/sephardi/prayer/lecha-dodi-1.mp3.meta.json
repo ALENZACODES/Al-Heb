@@ -1,0 +1,42 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "israeli-clip-same-reading",
+ "engine": "google",
+ "voiceId": "he-IL-Chirp3-HD-Kore",
+ "tradition": "sephardi",
+ "inputText": "לְכָה דוֹדִי לִקְרַאת כַּלָּה פְּנֵי שַׁבָּת נְקַבְּלָה׃ שָׁמוֹר וְזָכוֹר בְּדִבּוּר אֶחָד הִשְׁמִיעָנוּ אֵל הַמְיוּחָד אֲדֹנָי אֶחָד וּשְׁמוֹ אֶחָד לְשֵׁם וּלְתִפְאֶרֶת וְלִתְהִלָּה׃",
+ "inputSha256": "e7ee6cff2cde6c8570e58da8f0c7fd31d3ce818402cb8dc1974a640051001dd6",
+ "ingestedAt": "2026-11-12T02:17:33.636Z",
+ "licence": "customer-owned",
+ "note": "A copy of the Israeli clip of the same voice: in this app the Sephardi reading is letter for letter the Israeli one (owner decision, 12 Nov 2026). Synthetic voice, not a Sephardi reader; no human has listened to it.",
+ "renderedAt": "2026-11-12T02:17:33.636Z",
+ "redistributionCleared": false,
+ "spokenText": "לְכָה דוֹדִי לִקְרַאת כַּלָּה פְּנֵי שַׁבָּת נְקַבְּלָה שָׁמוֹר וְזָכוֹר בְּדִבּוּר אֶחָד הִשְׁמִיעָנוּ אֵל הַמְיוּחָד אֲדֹנָי אֶחָד וּשְׁמוֹ אֶחָד לְשֵׁם וּלְתִפְאֶרֶת וְלִתְהִלָּה",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "speakingRate": 0.85,
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [
+   "שַׁבָּת",
+   "שָׁמוֹר",
+   "וּשְׁמוֹ",
+   "לְשֵׁם"
+  ],
+  "google": {
+   "heard": "לך דודי לקראת כלה פני שבת נקבלה שמור וזכור בדיבור אחד השמיענו אל המיוחד אדוני אחד ושמו אחד לשם ולתפארת ולתהילה",
+   "acc": 1,
+   "issues": []
+  },
+  "reviewersFailing": 1
+ },
+ "replaced": {
+  "voiceId": "he-IL-Wavenet-A",
+  "engine": "stitched-from-word-clips",
+  "renderedAt": null
+ },
+ "copyOf": "audio/f/israeli/prayer/lecha-dodi-1.mp3",
+ "madeFrom": "israeli-clip",
+ "sephardiReading": "lekhah dodi likrat kalah penei shabat nekabelah shamor vezakhor bedibur echad hishmi'anu el hamyuchad adonai echad ushemo echad leshem uletif'eret velithilah",
+ "copiedAt": "2026-11-12T15:35:53.867Z"
+}

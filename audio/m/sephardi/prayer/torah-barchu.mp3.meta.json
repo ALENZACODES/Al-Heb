@@ -1,0 +1,36 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "israeli-clip-same-reading",
+ "engine": "google",
+ "voiceId": "he-IL-Chirp3-HD-Orus",
+ "tradition": "sephardi",
+ "inputText": "בָּרְכוּ אֶת אֲדֹנָי הַמְּבֹרָךְ׃ בָּרוּךְ אֲדֹנָי הַמְּבֹרָךְ לְעוֹלָם וָעֶד׃",
+ "inputSha256": "3f91e591c9077a228fd5d5060ee21ab8db76d95f35fb90f91fb709b87bbaa364",
+ "ingestedAt": "2026-11-12T02:38:42.288Z",
+ "licence": "customer-owned",
+ "note": "A copy of the Israeli clip of the same voice: in this app the Sephardi reading is letter for letter the Israeli one (owner decision, 12 Nov 2026). Synthetic voice, not a Sephardi reader; no human has listened to it.",
+ "renderedAt": "2026-11-12T02:38:42.288Z",
+ "redistributionCleared": false,
+ "spokenText": "בָּרְכוּ אֶת אֲדֹנָי הַמְּבֹרָךְ בָּרוּךְ אֲדֹנָי הַמְּבֹרָךְ לְעוֹלָם וָעֶד",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [],
+  "google": {
+   "heard": "ברכו את אדוני המבורך ברוך אדוני המבורך לעולם ועד",
+   "acc": 1,
+   "issues": []
+  },
+  "reviewersFailing": 0
+ },
+ "replaced": {
+  "voiceId": "he-IL-Wavenet-B",
+  "engine": "google-cloud-tts",
+  "renderedAt": null
+ },
+ "copyOf": "audio/m/israeli/prayer/torah-barchu.mp3",
+ "madeFrom": "israeli-clip",
+ "sephardiReading": "barkhu et adonai hamevorakh barukh adonai hamevorakh le'olam va'ed",
+ "copiedAt": "2026-11-12T15:35:53.867Z"
+}

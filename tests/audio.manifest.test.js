@@ -52,13 +52,13 @@ test('synthetic clips have files and explicit provenance; none is a human record
       continue;
     }
     assert.ok(['tts', 'synthetic-unreviewed'].includes(e.status), e.path);
-    assert.ok(e.source === 'outside-synthetic' || e.source === 'paid-cloud' || /^tts[:-]/.test(e.source), `${e.path} source ${e.source}`);
+    assert.ok(e.source === 'outside-synthetic' || e.source === 'paid-cloud' || /^tts[:-]/.test(e.source) || (e.source === 'israeli-clip-same-reading' && e.tradition === 'sephardi'), `${e.path} source ${e.source}`);   // the last: owner decision A, 12 Nov 2026
     assert.notEqual(e.synth?.reviewed, true, `${e.path} claims a review that has not happened`);
     if (e.status === 'synthetic-unreviewed') {
       // Ingested clips: outside-synthetic, tts-respelled, tts-hebrew (tools/tts/lib.mjs SOURCES), and the two admitted
       // own-tradition sources in src/audio/player.js ACCENT_SOURCES (tts-respelled-israeli-voice, tts-respelled-tempo-capped).
       assert.ok(
-        e.source === 'outside-synthetic' || e.source === 'tts-respelled' || e.source === 'tts-hebrew' || e.source === 'tts-respelled-israeli-voice' || e.source === 'tts-respelled-tempo-capped',
+        e.source === 'outside-synthetic' || e.source === 'tts-respelled' || e.source === 'tts-hebrew' || e.source === 'tts-respelled-israeli-voice' || e.source === 'tts-respelled-tempo-capped' || e.source === 'israeli-clip-same-reading',
         e.path,
       );
       assert.notEqual(e.synth?.reviewed, true, e.path);

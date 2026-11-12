@@ -1,0 +1,31 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "israeli-clip-same-reading",
+ "engine": "google",
+ "voiceId": "he-IL-Chirp3-HD-Kore",
+ "tradition": "sephardi",
+ "inputText": "שְׁמִינִי עֲצֶרֶת הַחַג הַזֶּה זְמַן שִׂמְחָתֵנוּ׃",
+ "inputSha256": "54028efcdd3a56478f770c15d7c336cc40707fd10b10ecd74440a0d7eb0036f1",
+ "ingestedAt": "2026-11-11T23:17:33.895Z",
+ "licence": "customer-owned",
+ "note": "A copy of the Israeli clip of the same voice: in this app the Sephardi reading is letter for letter the Israeli one (owner decision, 12 Nov 2026). Synthetic voice, not a Sephardi reader; no human has listened to it.",
+ "renderedAt": "2026-11-11T23:17:33.895Z",
+ "redistributionCleared": false,
+ "spokenText": "שְׁמִינִי עֲצֶרֶת הַחַג הַזֶּה זְמַן שִׂמְחָתֵנוּ",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [],
+  "google": {
+   "heard": "שמיני עצרת החג הזה זמן שמחתנו",
+   "acc": 1,
+   "issues": []
+  },
+  "reviewersFailing": 0
+ },
+ "copyOf": "audio/f/israeli/line/kiddush-festival-shemini.mp3",
+ "madeFrom": "israeli-clip",
+ "sephardiReading": "atzeret",
+ "copiedAt": "2026-11-12T15:35:53.867Z"
+}

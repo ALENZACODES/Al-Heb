@@ -1,0 +1,23 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "israeli-clip-same-reading",
+ "synth": {
+  "origin": "outside-synthetic",
+  "reviewed": false,
+  "redistributionCleared": false,
+  "licence": "unknown: not cleared",
+  "batch": "2026-11 synthetic batch A (machine-checked, unreviewed)",
+  "note": "Synthetic default voice; unanimous machine pass only; no native review; voice gender and tradition style not verified",
+  "inputSha256": "2eeb75a865b6efc399209fe47b5d56e72b84cb7886ba309d20171252eb2035b5",
+  "ingestedAt": "2026-11-05T15:07:41.325Z",
+  "ingestedBy": "tools/audio/ingest.mjs"
+ },
+ "reviewed": false,
+ "redistributionCleared": false,
+ "note": "A copy of the Israeli clip of the same voice: in this app the Sephardi reading is letter for letter the Israeli one (owner decision, 12 Nov 2026). Synthetic voice, not a Sephardi reader; no human has listened to it.",
+ "tradition": "sephardi",
+ "copyOf": "audio/m/israeli/word/hdb9bd37f.mp3",
+ "madeFrom": "israeli-clip",
+ "sephardiReading": "azav",
+ "copiedAt": "2026-11-12T15:35:53.867Z"
+}

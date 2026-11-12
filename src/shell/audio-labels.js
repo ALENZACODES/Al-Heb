@@ -47,7 +47,9 @@ export function traditionCaption(tradition, fileTradition) {
  */
 export function syntheticLabel(status, tradition, source) {
   // Plain caption for learners: the voice's style only. Status and source stay in the manifest for the review round.
-  void status; void source;
+  void status;
+  // A Sephardi row given the Israeli clip because the two readings are the same in this app says so.
+  if (source === ACCENT_SOURCES.sameReading) return `${TRAD_STYLE[tradition] || 'Israeli'} voice, the same reading as Israeli`;
   return `${TRAD_STYLE[tradition] || 'Israeli'} voice`;
 }
 

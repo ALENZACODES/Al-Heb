@@ -1,0 +1,36 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "israeli-clip-same-reading",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "sephardi",
+ "inputText": "בָּרוּךְ אַתָּה אֲדֹנָי אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ לֵישֵׁב בַּסֻּכָּה׃",
+ "inputSha256": "635061d7783b45cd4b256ff1f0ff305d5ce9a1024bc5258b8ade99e55cda7f6e",
+ "ingestedAt": "2026-11-11T23:18:18.302Z",
+ "licence": "customer-owned",
+ "note": "A copy of the Israeli clip of the same voice: in this app the Sephardi reading is letter for letter the Israeli one (owner decision, 12 Nov 2026). Synthetic voice, not a Sephardi reader; no human has listened to it.",
+ "renderedAt": "2026-11-11T23:18:18.302Z",
+ "redistributionCleared": false,
+ "spokenText": "בָּרוּךְ אַתָּה אֲדֹנָי אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ לֵישֵׁב בַּסֻּכָּה",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [
+   "בְּמִצְוֹתָיו",
+   "לֵישֵׁב"
+  ],
+  "google": {
+   "heard": "ברוך אתה אדוני אלוהינו מלך העולם אשר קידשנו במצוותיו וציוונו לישב בסוכה",
+   "acc": 0.917,
+   "issues": [
+    "בְּמִצְוֹתָיו"
+   ]
+  },
+  "reviewersFailing": 2
+ },
+ "copyOf": "audio/f/israeli/line/leshev-basukkah.mp3",
+ "madeFrom": "israeli-clip",
+ "sephardiReading": "adonai",
+ "copiedAt": "2026-11-12T15:35:53.867Z"
+}

@@ -2,21 +2,21 @@
  "schema": "alef-asset-check/1",
  "build": {
   "version": "0.1.0",
-  "builtAt": "2026-11-12T15:09:52Z"
+  "builtAt": "2026-11-12T15:56:57Z"
  },
- "checkedAt": "2026-11-12T15:09:57Z",
+ "checkedAt": "2026-11-12T15:56:59Z",
  "filesChecked": true,
  "lists": {
   "manifest.json": {
    "rows": 3194,
-   "shouldPlay": 2760,
-   "playsIsraeli": 404,
+   "shouldPlay": 3062,
+   "playsIsraeli": 102,
    "declaredMissing": 30
   },
   "manifest-kind-word.json": {
    "rows": 5006,
-   "shouldPlay": 5002,
-   "playsIsraeli": 4,
+   "shouldPlay": 5006,
+   "playsIsraeli": 0,
    "declaredMissing": 0
   },
   "manifest-words-israeli.json": {
@@ -27,8 +27,8 @@
   },
   "manifest-words-sephardi.json": {
    "rows": 6566,
-   "shouldPlay": 5429,
-   "playsIsraeli": 1060,
+   "shouldPlay": 6478,
+   "playsIsraeli": 11,
    "declaredMissing": 77
   },
   "manifest-words-ashkenazi.json": {
@@ -58,13 +58,13 @@
  },
  "counts": {
   "rows": 40651,
-  "shouldPlay": 38630,
-  "playsIsraeli": 1647,
+  "shouldPlay": 39985,
+  "playsIsraeli": 292,
   "declaredMissing": 374,
   "held": 40,
-  "playsIsraeliTargetHeld": 21,
+  "playsIsraeliTargetHeld": 20,
   "chirpHeld": 67,
-  "alsoOnMediaHost": 876
+  "alsoOnMediaHost": 770
  },
  "gaps": 0
 }

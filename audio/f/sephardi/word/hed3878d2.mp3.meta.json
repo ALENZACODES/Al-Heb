@@ -1,0 +1,33 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "israeli-clip-same-reading",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "sephardi",
+ "inputText": "מַטְעֵן",
+ "inputSha256": "1decaa7caa099a83f4416cceca387cca4b9af1ab3871c2dc5aceeac80987abec",
+ "ingestedAt": "2026-11-11T23:16:26.174Z",
+ "licence": "customer-owned",
+ "note": "A copy of the Israeli clip of the same voice: in this app the Sephardi reading is letter for letter the Israeli one (owner decision, 12 Nov 2026). Synthetic voice, not a Sephardi reader; no human has listened to it.",
+ "renderedAt": "2026-11-11T23:16:26.174Z",
+ "redistributionCleared": false,
+ "spokenText": "מַטְעֵן",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [
+   "מַטְעֵן"
+  ],
+  "google": {
+   "heard": "מטען",
+   "acc": 1,
+   "issues": []
+  },
+  "reviewersFailing": 1
+ },
+ "copyOf": "audio/f/israeli/word/i-16-w8.mp3",
+ "madeFrom": "israeli-clip",
+ "sephardiReading": "mit'an",
+ "copiedAt": "2026-11-12T15:35:53.867Z"
+}

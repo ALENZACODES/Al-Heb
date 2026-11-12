@@ -1,0 +1,33 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "israeli-clip-same-reading",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "sephardi",
+ "inputText": "אָנָּא אֲדֹנָי הוֹשִׁיעָה נָּא אָנָּא אֲדֹנָי הַצְלִיחָה נָּא׃",
+ "inputSha256": "d79c8bd792fea2177c0cb9252c0b8038e1a1096132a3c5e70277c6c70d822bff",
+ "ingestedAt": "2026-11-11T23:15:24.326Z",
+ "licence": "customer-owned",
+ "note": "A copy of the Israeli clip of the same voice: in this app the Sephardi reading is letter for letter the Israeli one (owner decision, 12 Nov 2026). Synthetic voice, not a Sephardi reader; no human has listened to it.",
+ "renderedAt": "2026-11-11T23:15:24.326Z",
+ "redistributionCleared": false,
+ "spokenText": "אָנָּא אֲדֹנָי הוֹשִׁיעָה נָּא אָנָּא אֲדֹנָי הַצְלִיחָה נָּא",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [
+   "הוֹשִׁיעָה"
+  ],
+  "google": {
+   "heard": "אנא אדוני הושיעה נא אנא אדוני הצליחה נא",
+   "acc": 1,
+   "issues": []
+  },
+  "reviewersFailing": 1
+ },
+ "copyOf": "audio/f/israeli/line/hallel-118-25.mp3",
+ "madeFrom": "israeli-clip",
+ "sephardiReading": "ana adonai hoshi'ah na ana adonai hatzlichah na",
+ "copiedAt": "2026-11-12T15:35:53.867Z"
+}

@@ -1,0 +1,34 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "israeli-clip-same-reading",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "sephardi",
+ "inputText": "יֹאמְרוּ־נָא יִרְאֵי אֲדֹנָי כִּי לְעוֹלָם חַסְדּוֹ׃",
+ "inputSha256": "146894e1bb444f719cd00a47196e66192b371b174bddb364394bdf4b808c4e2b",
+ "ingestedAt": "2026-11-11T23:15:14.844Z",
+ "licence": "customer-owned",
+ "note": "A copy of the Israeli clip of the same voice: in this app the Sephardi reading is letter for letter the Israeli one (owner decision, 12 Nov 2026). Synthetic voice, not a Sephardi reader; no human has listened to it.",
+ "renderedAt": "2026-11-11T23:15:14.844Z",
+ "redistributionCleared": false,
+ "spokenText": "יֹאמְרוּ נָא יִרְאֵי אֲדֹנָי כִּי לְעוֹלָם חַסְדּוֹ",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [],
+  "google": {
+   "heard": "יום רוני ירי אדוניי כי לעולם חסדו",
+   "acc": 0.714,
+   "issues": [
+    "יֹאמְרוּ",
+    "נָא"
+   ]
+  },
+  "reviewersFailing": 1
+ },
+ "copyOf": "audio/m/israeli/line/hallel-118-1-4-l4.mp3",
+ "madeFrom": "israeli-clip",
+ "sephardiReading": "yomru-na yir'ei adonai ki le'olam chasdo",
+ "copiedAt": "2026-11-12T15:35:53.867Z"
+}

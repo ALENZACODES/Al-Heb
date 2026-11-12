@@ -1,0 +1,32 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "israeli-clip-same-reading",
+ "engine": "google",
+ "voiceId": "he-IL-Chirp3-HD-Charon",
+ "tradition": "sephardi",
+ "inputText": "יֹאמַר־נָא יִשְׂרָאֵל כִּי לְעוֹלָם חַסְדּוֹ׃",
+ "inputSha256": "db24049277dc003527a87ef5046a2c6256365e1d367a9c27cb5b27dca7d65c49",
+ "ingestedAt": "2026-11-11T23:15:06.804Z",
+ "licence": "customer-owned",
+ "note": "A copy of the Israeli clip of the same voice: in this app the Sephardi reading is letter for letter the Israeli one (owner decision, 12 Nov 2026). Synthetic voice, not a Sephardi reader; no human has listened to it.",
+ "renderedAt": "2026-11-11T23:15:06.804Z",
+ "redistributionCleared": false,
+ "spokenText": "יֹאמַר, נָא, יִשְׂרָאֵל, כִּי, לְעוֹלָם, חַסְדּוֹ.",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "speakingRate": 0.9,
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [],
+  "google": {
+   "heard": "יומרני ישראל כי לעולם חסדו",
+   "acc": 1,
+   "issues": []
+  },
+  "reviewersFailing": 0
+ },
+ "copyOf": "audio/m/israeli/line/hallel-118-1-4-l2.mp3",
+ "madeFrom": "israeli-clip",
+ "sephardiReading": "yomar-na yisra'el ki le'olam chasdo",
+ "copiedAt": "2026-11-12T15:35:53.867Z"
+}

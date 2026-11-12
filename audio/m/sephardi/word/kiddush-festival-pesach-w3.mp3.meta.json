@@ -1,0 +1,31 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "israeli-clip-same-reading",
+ "engine": "google",
+ "voiceId": "he-IL-Chirp3-HD-Charon",
+ "tradition": "sephardi",
+ "inputText": "חַג הַמַּצּוֹת הַזֶּה זְמַן חֵרוּתֵנוּ׃",
+ "inputSha256": "d72a55718a5a2b2d29d3b0c69643867493c577d1e76e5d3c13170e15d78a0cd3",
+ "ingestedAt": "2026-11-11T23:15:12.752Z",
+ "licence": "customer-owned",
+ "note": "A copy of the Israeli clip of the same voice: in this app the Sephardi reading is letter for letter the Israeli one (owner decision, 12 Nov 2026). Synthetic voice, not a Sephardi reader; no human has listened to it.",
+ "renderedAt": "2026-11-11T23:15:12.752Z",
+ "redistributionCleared": false,
+ "spokenText": "חַג הַמַּצּוֹת הַזֶּה זְמַן חֵרוּתֵנוּ",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [],
+  "google": {
+   "heard": "חג המצות הזה זמן חירותינו",
+   "acc": 1,
+   "issues": []
+  },
+  "reviewersFailing": 0
+ },
+ "copyOf": "audio/m/israeli/line/kiddush-festival-pesach.mp3",
+ "madeFrom": "israeli-clip",
+ "sephardiReading": "hazeh",
+ "copiedAt": "2026-11-12T15:35:53.867Z"
+}

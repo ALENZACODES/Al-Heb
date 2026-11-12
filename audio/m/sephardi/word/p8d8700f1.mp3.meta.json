@@ -1,0 +1,17 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "israeli-clip-same-reading",
+ "engine": "google-cloud-tts",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "sephardi",
+ "inputText": "מָה נִשְׁמָע?",
+ "inputSha256": "663e0af97916d5bae9c1077c24d07cbc67d7a9d47803bf0ee1a5b59bdb2c8850",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "A copy of the Israeli clip of the same voice: in this app the Sephardi reading is letter for letter the Israeli one (owner decision, 12 Nov 2026). Synthetic voice, not a Sephardi reader; no human has listened to it.",
+ "inputTextKind": "hebrew",
+ "copyOf": "audio/m/israeli/word/i-25-w12.mp3",
+ "madeFrom": "israeli-clip",
+ "sephardiReading": "mah nishma?",
+ "copiedAt": "2026-11-12T15:35:53.867Z"
+}

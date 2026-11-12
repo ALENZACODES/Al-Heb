@@ -1,0 +1,31 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "israeli-clip-same-reading",
+ "engine": "google",
+ "voiceId": "he-IL-Chirp3-HD-Kore",
+ "tradition": "sephardi",
+ "inputText": "חַג הַשָׁבוּעוֹת הַזֶּה זְמַן מַתַּן תּוֹרָתֵינוּ׃",
+ "inputSha256": "0b7a9aac8c66ac260c7b420c6abeceaa9cb8b0a074839faa1ccf2209811d0cd3",
+ "ingestedAt": "2026-11-11T23:15:39.422Z",
+ "licence": "customer-owned",
+ "note": "A copy of the Israeli clip of the same voice: in this app the Sephardi reading is letter for letter the Israeli one (owner decision, 12 Nov 2026). Synthetic voice, not a Sephardi reader; no human has listened to it.",
+ "renderedAt": "2026-11-11T23:15:39.422Z",
+ "redistributionCleared": false,
+ "spokenText": "חַג הַשָׁבוּעוֹת הַזֶּה זְמַן מַתַּן תּוֹרָתֵינוּ",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [],
+  "google": {
+   "heard": "חג השבועות הזה זמן מתן תורתנו",
+   "acc": 1,
+   "issues": []
+  },
+  "reviewersFailing": 0
+ },
+ "copyOf": "audio/f/israeli/line/kiddush-festival-shavuot.mp3",
+ "madeFrom": "israeli-clip",
+ "sephardiReading": "torateinu",
+ "copiedAt": "2026-11-12T15:35:53.867Z"
+}

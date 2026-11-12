@@ -29,11 +29,12 @@ test('manifest: every sephardi letter, vowel, syllable and prayer without a clip
     else if (e.status === 'missing' && hasIsraeli) { assert.deepEqual(e.equivalentTo, ['israeli'], e.path); standIns += 1; }
     else assert.equal(e.equivalentTo, undefined, e.path);
   }
-  assert.ok(standIns >= 100, `stand-ins: ${standIns}`); // 12 November 2026: Sephardi clips of their own replaced many stand-ins
+  assert.ok(standIns >= 10, `stand-ins: ${standIns}`); // 12 November 2026: Sephardi clips of their own, then (owner decision A) copies of the Israeli clip as the same reading, replaced most stand-ins; the rest are held rows
   const missingWords = words.filter((e) => e.status === 'missing' || e.status === 'plays-israeli'); // no Sephardi clip of their own
   // 606 of the man's words gained their own Sephardi clip on 2026-11-10, and more on 2026-11-12 (accent-fill runs): the count falls
   assert.ok(missingWords.length > 0);
-  assert.ok(missingWords.filter((e) => e.equivalentTo?.[0] === 'israeli' || e.status === 'plays-israeli').length >= 0.8 * missingWords.length);
+  // after owner decision A (12 Nov 2026) the rows still playing the Israeli clip are the held ones; each still names that clip
+  for (const e of missingWords.filter((x) => x.status === 'plays-israeli')) assert.ok(e.plays.startsWith(`audio/${e.voice}/israeli/`), e.path);
   for (const e of words.filter((e) => e.status !== 'missing' && e.status !== 'plays-israeli')) assert.equal(e.equivalentTo, undefined, e.path);
 });
 

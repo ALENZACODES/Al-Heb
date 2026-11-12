@@ -1,0 +1,33 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "israeli-clip-same-reading",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "sephardi",
+ "inputText": "כּוֹס־יְשׁוּעוֹת אֶשָּׂא וּבְשֵׁם אֲדֹנָי אֶקְרָא׃",
+ "inputSha256": "204daa47db0202fa61c4b589471741abf6dd61ac2044a7e84ddbaa49d0932388",
+ "ingestedAt": "2026-11-11T23:15:24.442Z",
+ "licence": "customer-owned",
+ "note": "A copy of the Israeli clip of the same voice: in this app the Sephardi reading is letter for letter the Israeli one (owner decision, 12 Nov 2026). Synthetic voice, not a Sephardi reader; no human has listened to it.",
+ "renderedAt": "2026-11-11T23:15:24.442Z",
+ "redistributionCleared": false,
+ "spokenText": "כּוֹס יְשׁוּעוֹת אֶשָּׂא וּבְשֵׁם אֲדֹנָי אֶקְרָא",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [
+   "אֶקְרָא"
+  ],
+  "google": {
+   "heard": "כוס ישועות אשא ובשם אדוני אקרא",
+   "acc": 1,
+   "issues": []
+  },
+  "reviewersFailing": 1
+ },
+ "copyOf": "audio/f/israeli/line/hallel-116-13.mp3",
+ "madeFrom": "israeli-clip",
+ "sephardiReading": "uveshem",
+ "copiedAt": "2026-11-12T15:35:53.867Z"
+}

@@ -19,7 +19,7 @@ const player = (voice, congregation, manifest = all) => createAudio({ settings: 
 test('rule table: each setting prefers its own bank and falls back to Israeli', () => {
   assert.deepEqual(PLAYBACK_TRADITION, { israeli: 'israeli', sephardi: 'sephardi', ashkenazi: 'ashkenazi' });
   assert.deepEqual(FALLBACK_TRADITION, { israeli: 'israeli', sephardi: 'israeli', ashkenazi: 'israeli' });
-  assert.deepEqual(ACCENT_SOURCES, { israeliVoice: 'tts-respelled-israeli-voice', tempoCapped: 'tts-respelled-tempo-capped' });
+  assert.deepEqual(ACCENT_SOURCES, { israeliVoice: 'tts-respelled-israeli-voice', tempoCapped: 'tts-respelled-tempo-capped', sameReading: 'israeli-clip-same-reading' });
 });
 
 test('real manifest: older paid-cloud Sephardi and Ashkenazi rows are playable own clips, even when they are not the newer accent provenance', () => {
@@ -124,7 +124,7 @@ test('fixture rows of the new provenance: the own file plays as itself under its
       assert.equal(line.source, 'file'); assert.equal(line.path, `audio/f/${setting}/line/bless-priestly-1.mp3`);
       assert.equal(line.tradition, setting); assert.equal(line.fileTradition, undefined); assert.equal(line.via, 'exact'); assert.equal(line.entrySource, source);
       const text = describeResult(line).text;
-      assert.equal(text, `Sound: ${name} voice (woman, ${name}).`);
+      assert.equal(text, source === ACCENT_SOURCES.sameReading ? `Sound: ${name} voice, the same reading as Israeli (woman, ${name}).` : `Sound: ${name} voice (woman, ${name}).`);
       assert.doesNotMatch(text, /Recorded by a human|Israeli only|reading shown in English letters/);
       assert.match(playLine(line, setting, 'the line'), new RegExp(`^Playing the line: ${name} voice`));
       assert.doesNotMatch(playLine(line, setting, 'the line'), /stand-in|Israeli reading/);

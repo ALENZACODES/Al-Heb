@@ -1,0 +1,33 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "israeli-clip-same-reading",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "sephardi",
+ "inputText": "לֹא לָנוּ אֲדֹנָי לֹא לָנוּ כִּי־לְשִׁמְךָ תֵּן כָּבוֹד עַל־חַסְדְּךָ עַל־אֲמִתֶּךָ׃",
+ "inputSha256": "c82def6622c0853c52c57ca9ae37fae20ca136e3a4ef438d462c7c663e3a6768",
+ "ingestedAt": "2026-11-11T23:15:16.085Z",
+ "licence": "customer-owned",
+ "note": "A copy of the Israeli clip of the same voice: in this app the Sephardi reading is letter for letter the Israeli one (owner decision, 12 Nov 2026). Synthetic voice, not a Sephardi reader; no human has listened to it.",
+ "renderedAt": "2026-11-11T23:15:16.085Z",
+ "redistributionCleared": false,
+ "spokenText": "לֹא לָנוּ אֲדֹנָי לֹא לָנוּ כִּי לְשִׁמְךָ תֵּן כָּבוֹד עַל חַסְדְּךָ עַל אֲמִתֶּךָ",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [],
+  "google": {
+   "heard": "לא לנו אדוני לא לנו כי לשמך תן כבוד על חסדך על המיטה",
+   "acc": 0.923,
+   "issues": [
+    "אֲמִתֶּךָ"
+   ]
+  },
+  "reviewersFailing": 1
+ },
+ "copyOf": "audio/f/israeli/line/hallel-115-1.mp3",
+ "madeFrom": "israeli-clip",
+ "sephardiReading": "al-amitekha",
+ "copiedAt": "2026-11-12T15:35:53.867Z"
+}

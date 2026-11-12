@@ -1,0 +1,17 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "israeli-clip-same-reading",
+ "engine": "google-cloud-tts",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "sephardi",
+ "inputText": "מִלְגָּה",
+ "inputSha256": "e95edf74ddc898c04b373cbdbc27d63966ce3b7f3a3d9141f090bae4aa54eaaf",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "A copy of the Israeli clip of the same voice: in this app the Sephardi reading is letter for letter the Israeli one (owner decision, 12 Nov 2026). Synthetic voice, not a Sephardi reader; no human has listened to it.",
+ "inputTextKind": "hebrew",
+ "copyOf": "audio/m/israeli/word/i-37-w8.mp3",
+ "madeFrom": "israeli-clip",
+ "sephardiReading": "milgah",
+ "copiedAt": "2026-11-12T15:35:53.867Z"
+}

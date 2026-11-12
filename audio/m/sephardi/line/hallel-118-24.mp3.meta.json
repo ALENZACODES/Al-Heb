@@ -1,0 +1,33 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "israeli-clip-same-reading",
+ "engine": "google",
+ "voiceId": "he-IL-Chirp3-HD-Charon",
+ "tradition": "sephardi",
+ "inputText": "זֶה־הַיּוֹם עָשָׂה אֲדֹנָי נָגִילָה וְנִשְׂמְחָה בוֹ׃",
+ "inputSha256": "5b70a23fb574baf27bb391fb1c6a9657f853dd88975571847988d2b1002bea3a",
+ "ingestedAt": "2026-11-11T23:14:57.784Z",
+ "licence": "customer-owned",
+ "note": "A copy of the Israeli clip of the same voice: in this app the Sephardi reading is letter for letter the Israeli one (owner decision, 12 Nov 2026). Synthetic voice, not a Sephardi reader; no human has listened to it.",
+ "renderedAt": "2026-11-11T23:14:57.784Z",
+ "redistributionCleared": false,
+ "spokenText": "זֶה הַיּוֹם עָשָׂה אֲדֹנָי נָגִילָה וְנִשְׂמְחָה בוֹ",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [
+   "בוֹ"
+  ],
+  "wordIssues": [],
+  "google": {
+   "heard": "זה היום עשה אדוני נגילה ונשמחה בו",
+   "acc": 1,
+   "issues": []
+  },
+  "reviewersFailing": 1
+ },
+ "copyOf": "audio/m/israeli/line/hallel-118-24.mp3",
+ "madeFrom": "israeli-clip",
+ "sephardiReading": "zeh-hayom asah adonai nagilah venismechah vo",
+ "copiedAt": "2026-11-12T15:35:53.867Z"
+}

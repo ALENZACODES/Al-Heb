@@ -1,0 +1,33 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "israeli-clip-same-reading",
+ "engine": "google",
+ "voiceId": "he-IL-Chirp3-HD-Charon",
+ "tradition": "sephardi",
+ "inputText": "אֲדֹנָי לִי לֹא אִירָא מַה־יַּעֲשֶׂה לִי אָדָם׃",
+ "inputSha256": "b57a4f1d007bd16db3038a213fca6e007c55e93ec5c7e0bea7358349d776c1b1",
+ "ingestedAt": "2026-11-11T23:15:09.991Z",
+ "licence": "customer-owned",
+ "note": "A copy of the Israeli clip of the same voice: in this app the Sephardi reading is letter for letter the Israeli one (owner decision, 12 Nov 2026). Synthetic voice, not a Sephardi reader; no human has listened to it.",
+ "renderedAt": "2026-11-11T23:15:09.991Z",
+ "redistributionCleared": false,
+ "spokenText": "אֲדֹנָי לִי לֹא אִירָא מַה יַּעֲשֶׂה לִי אָדָם",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [
+   "אֲדֹנָי"
+  ],
+  "wordIssues": [],
+  "google": {
+   "heard": "אדני לי לא אירא מה יעשה לי אדם",
+   "acc": 1,
+   "issues": []
+  },
+  "reviewersFailing": 1
+ },
+ "copyOf": "audio/m/israeli/line/hallel-118-6.mp3",
+ "madeFrom": "israeli-clip",
+ "sephardiReading": "ira",
+ "copiedAt": "2026-11-12T15:35:53.867Z"
+}

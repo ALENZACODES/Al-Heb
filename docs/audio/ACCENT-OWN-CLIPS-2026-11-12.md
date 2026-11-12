@@ -66,3 +66,10 @@ Google Speech-to-Text cannot judge an isolated sound, and the word reviewer rare
 ## Run 5: retakes and alias rows (Ashkenazi, Hebrew letters)
 
 The 159 rows run 3 held, retaken at speaking rate 0.85 (same voice), and 643 Ashkenazi alias rows whose target has no Ashkenazi clip. 617 of 802 passed: 600 of 633 alias words, and 17 of the 159 retakes (the slower rate helps little). Ashkenazi own-clip coverage 87.8% to **95.3%**; kind letter 71.9%, vowel 66.7%, syllable 80.3%, prayer 77.7%, line 95.8%, word 93.7%; Sephardi unchanged at 82.9%. Logs: `docs/audio/fill/accent-r5-*.jsonl`.
+
+## Owner decisions A and B (12 November, "do A and B")
+
+- **A, Sephardi:** in this app the Sephardi reading is letter for letter the Israeli reading, so 1,299 Sephardi rows that played the Israeli clip now carry a byte copy of it as their own file (`tools/audio/sephardi_same_reading.mjs`, source `israeli-clip-same-reading`). The learner caption reads "Sephardi voice, the same reading as Israeli". Not copied: 12 rows held for a divine-name or wording decision and 16 whose Israeli clip is held. It is not a Sephardi reader: the guttural ayin and chet of a traditional Sephardi reading are not in these clips.
+- **B, short items:** a letter, vowel or syllable passes on the sound reviewer alone (`tools/audio/accent_review.py`, rule `sound-only-short`; every reviewer's result is still logged). Run 6 re-rendered the 94 Ashkenazi short rows still playing the Israeli clip: 56 passed (letters 23 of 38, syllables 25 of 43, vowels 8 of 13), 38 held. Logs: `docs/audio/fill/accent-r6-*.jsonl`.
+
+Own-file coverage after A and B: Ashkenazi 96.0%, Sephardi 98.6%, Israeli 98.2%; kind letter 95.6%, vowel 94.4%, syllable 95.1%, line 98.4%, word 97.9%, **prayer 89.2%** (the one kind under 90%: long Ashkenazi prayers where a word fails a reviewer, and rows held for divine-name or wording decisions).

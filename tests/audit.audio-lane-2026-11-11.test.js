@@ -159,9 +159,15 @@ test('C-01/C-05: an accent clip made for a row that played the Israeli clip ship
     const e = byPath.get(r.path);
     assert.ok(e, r.path);
     if (r.decision === 'pass') {
-      passed++; assert.ok(r.reviewersFailing <= 1);
+      passed++;
+      // 2 of 3 reviewers, or (owner decision B, 12 Nov 2026) for a letter, vowel or syllable the sound reviewer alone
+      if (r.rule === 'sound-only-short') assert.ok(['letter', 'vowel', 'syllable'].includes(r.path.split('/')[3]) && r.review.weak.length === 0, r.path);
+      else assert.ok(r.reviewersFailing <= 1, r.path);
       assert.equal(e.status, 'synthetic-unreviewed', r.path); assert.equal(e.source, 'tts-respelled-israeli-voice', r.path);
       assert.ok(existsSync(join(ROOT, r.path)) && existsSync(join(ROOT, `${r.path}.meta.json`)), r.path);
+    } else if (e.source === 'israeli-clip-same-reading') {
+      // owner decision A: a held Sephardi clip's row may carry a copy of the Israeli clip instead (same reading in this app)
+      held++; assert.equal(e.tradition, 'sephardi', r.path);
     } else {
       held++; assert.equal(existsSync(join(ROOT, r.path)), false, `${r.path} was held and must not ship`);
       assert.ok(['plays-israeli', 'missing'].includes(e.status), r.path);

@@ -1,0 +1,17 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "israeli-clip-same-reading",
+ "engine": "google-cloud-tts",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "sephardi",
+ "inputText": "מַה שִּׁמְךָ?",
+ "inputSha256": "57ac39820fc0de1fe9893aa646daf30016a09f8c724b871fde0c3f15ca26e7d0",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "A copy of the Israeli clip of the same voice: in this app the Sephardi reading is letter for letter the Israeli one (owner decision, 12 Nov 2026). Synthetic voice, not a Sephardi reader; no human has listened to it.",
+ "inputTextKind": "hebrew",
+ "copyOf": "audio/f/israeli/word/i-25-w1.mp3",
+ "madeFrom": "israeli-clip",
+ "sephardiReading": "mah shimkha?",
+ "copiedAt": "2026-11-12T15:35:53.867Z"
+}

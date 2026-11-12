@@ -1,0 +1,31 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "israeli-clip-same-reading",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "sephardi",
+ "inputText": "אֵלִי אַתָּה וְאוֹדֶךָּ אֱלֹהַי אֲרוֹמְמֶךָּ׃",
+ "inputSha256": "0d0842dfe76b6433bdb9ee093b93ab496e2764fc802c3c88c6222ae6e0511537",
+ "ingestedAt": "2026-11-11T23:15:43.177Z",
+ "licence": "customer-owned",
+ "note": "A copy of the Israeli clip of the same voice: in this app the Sephardi reading is letter for letter the Israeli one (owner decision, 12 Nov 2026). Synthetic voice, not a Sephardi reader; no human has listened to it.",
+ "renderedAt": "2026-11-11T23:15:43.177Z",
+ "redistributionCleared": false,
+ "spokenText": "אֵלִי אַתָּה וְאוֹדֶךָּ אֱלֹהַי אֲרוֹמְמֶךָּ",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [],
+  "google": {
+   "heard": "אלי אתה ואודך אלוהי ארוממך",
+   "acc": 1,
+   "issues": []
+  },
+  "reviewersFailing": 0
+ },
+ "copyOf": "audio/m/israeli/line/hallel-118-28.mp3",
+ "madeFrom": "israeli-clip",
+ "sephardiReading": "aromemeka",
+ "copiedAt": "2026-11-12T15:35:53.867Z"
+}

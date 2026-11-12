@@ -1,0 +1,36 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "israeli-clip-same-reading",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "sephardi",
+ "inputText": "בָּרוּךְ אַתָּה אֲדֹנָי אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר בָּחַר בָּנוּ מִכָּל עָם וְרוֹמְמָנוּ מִכָּל לָשׁוֹן וְקִדְּשָׁנוּ בְּמִצְוֹתָיו וַתִּתֶּן לָנוּ אֲדֹנָי אֱלֹהֵינוּ בְּאַהֲבָה מוֹעֲדִים לְשִׂמְחָה חַגִּים וּזְמַנִּים לְשָׂשׂוֹן אֶת יוֹם׃",
+ "inputSha256": "0f18869e6c11023a9b1d8a89b34b34cdff111ac75d75859fa850c046656d3db5",
+ "ingestedAt": "2026-11-11T23:17:23.054Z",
+ "licence": "customer-owned",
+ "note": "A copy of the Israeli clip of the same voice: in this app the Sephardi reading is letter for letter the Israeli one (owner decision, 12 Nov 2026). Synthetic voice, not a Sephardi reader; no human has listened to it.",
+ "renderedAt": "2026-11-11T23:17:23.054Z",
+ "redistributionCleared": false,
+ "spokenText": "בָּרוּךְ אַתָּה אֲדֹנָי אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר בָּחַר בָּנוּ מִכָּל עָם וְרוֹמְמָנוּ מִכָּל לָשׁוֹן וְקִדְּשָׁנוּ בְּמִצְוֹתָיו וַתִּתֶּן לָנוּ אֲדֹנָי אֱלֹהֵינוּ בְּאַהֲבָה מוֹעֲדִים לְשִׂמְחָה חַגִּים וּזְמַנִּים לְשָׂשׂוֹן אֶת יוֹם",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [
+   "בְּמִצְוֹתָיו"
+  ],
+  "google": {
+   "heard": "ברוך אתה אדוני אלוהינו מלך העולם אשר בחר בנו מכל עם ורוממנו מכל לשון וכשאנו במצוותיו ותיתן לנו אדוני אלוהינו באהבה מועדים לשמחה חגים וזמנים לששון את יום",
+   "acc": 0.929,
+   "issues": [
+    "וְקִדְּשָׁנוּ",
+    "בְּמִצְוֹתָיו"
+   ]
+  },
+  "reviewersFailing": 2
+ },
+ "copyOf": "audio/f/israeli/line/kiddush-festival-eve-open.mp3",
+ "madeFrom": "israeli-clip",
+ "sephardiReading": "banu",
+ "copiedAt": "2026-11-12T15:35:53.867Z"
+}

@@ -1,0 +1,28 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "israeli-clip-same-reading",
+ "engine": "stitched-from-word-clips",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "sephardi",
+ "inputText": "רַבּוֹתַי נְבָרֵךְ׃ יְהִי שֵׁם אֲדֹנָי מְבֹרָךְ מֵעַתָּה וְעַד־עוֹלָם׃",
+ "inputSha256": "cd43d98b36f045c57c0f4f53a10a8a510f19bdd0f8bcb198f166c7a8ee161022",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "A copy of the Israeli clip of the same voice: in this app the Sephardi reading is letter for letter the Israeli one (owner decision, 12 Nov 2026). Synthetic voice, not a Sephardi reader; no human has listened to it.",
+ "inputTextKind": "hebrew",
+ "stitchedFromText": "רַבּוֹתַי נְבָרֵךְ׃ יְהִי שֵׁם אֲדֹנָי מְבֹרָךְ מֵעַתָּה וְעַד־עוֹלָם׃",
+ "stitchedFrom": [
+  "audio/m/israeli/word/zimun-opening-w1.mp3",
+  "audio/m/israeli/word/zimun-opening-w2.mp3",
+  "audio/m/israeli/word/zimun-opening-w3.mp3",
+  "audio/m/israeli/word/h65a05fb2.mp3",
+  "audio/m/israeli/word/adon-olam-1-w69.mp3",
+  "audio/m/israeli/word/zimun-opening-w6.mp3",
+  "audio/m/israeli/word/zimun-opening-w7.mp3",
+  "audio/m/israeli/word/zimun-opening-w8.mp3"
+ ],
+ "copyOf": "audio/m/israeli/prayer/zimun-opening.mp3",
+ "madeFrom": "israeli-clip",
+ "sephardiReading": "rabotai nevarekh yehi shem adonai mevorakh me'atah ve'ad-olam",
+ "copiedAt": "2026-11-12T15:35:53.867Z"
+}

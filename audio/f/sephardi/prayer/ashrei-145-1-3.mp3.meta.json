@@ -1,0 +1,18 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "israeli-clip-same-reading",
+ "engine": "google-tts standard",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "sephardi",
+ "inputText": "תְּהִלָּה לְדָוִד אֲרוֹמִמְךָ אֱלוֹהַי הַמֶּלֶךְ וַאֲבָרֲכָה שִׁמְךָ לְעוֹלָם וָעֶד׃ בְּכָל־יוֹם אֲבָרֲכֶךָּ וַאֲהַלְלָה שִׁמְךָ לְעוֹלָם וָעֶד׃ גָּדוֹל אֲדֹנָי וּמְהֻלָּל מְאֹד וְלִגְדֻלָּתוֹ אֵין חֵקֶר׃",
+ "inputSha256": "6643dd265acc95b6c0c2902c24567d6500820459828a34f9ad647fec4a2869ca",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "A copy of the Israeli clip of the same voice: in this app the Sephardi reading is letter for letter the Israeli one (owner decision, 12 Nov 2026). Synthetic voice, not a Sephardi reader; no human has listened to it.",
+ "inputTextKind": "hebrew",
+ "stitchedFromText": "תְּהִלָּה לְדָוִד אֲרוֹמִמְךָ אֱלוֹהַי הַמֶּלֶךְ וַאֲבָרֲכָה שִׁמְךָ לְעוֹלָם וָעֶד׃ בְּכָל־יוֹם אֲבָרֲכֶךָּ וַאֲהַלְלָה שִׁמְךָ לְעוֹלָם וָעֶד׃ גָּדוֹל אֲדֹנָי וּמְהֻלָּל מְאֹד וְלִגְדֻלָּתוֹ אֵין חֵקֶר׃",
+ "copyOf": "audio/f/israeli/prayer/ashrei-145-1-3.mp3",
+ "madeFrom": "israeli-clip",
+ "sephardiReading": "tehilah ledavid aromimkha elohai hamelekh va'avarakhah shimkha le'olam va'ed bekhol-yom avarakheka va'ahalelah shimkha le'olam va'ed gadol adonai umehulal me'od veligdulato ein cheker",
+ "copiedAt": "2026-11-12T15:35:53.867Z"
+}

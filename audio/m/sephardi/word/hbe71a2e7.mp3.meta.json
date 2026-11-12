@@ -1,0 +1,17 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "israeli-clip-same-reading",
+ "engine": "google-cloud-tts",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "sephardi",
+ "inputText": "הוֹד",
+ "inputSha256": "9e38501e15d24cbf3c417b26e954f9f388a5204aad1246eea33c4939573f2562",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "A copy of the Israeli clip of the same voice: in this app the Sephardi reading is letter for letter the Israeli one (owner decision, 12 Nov 2026). Synthetic voice, not a Sephardi reader; no human has listened to it.",
+ "inputTextKind": "hebrew",
+ "copyOf": "audio/m/israeli/word/hbe71a2e7.mp3",
+ "madeFrom": "israeli-clip",
+ "sephardiReading": "hod",
+ "copiedAt": "2026-11-12T15:35:53.867Z"
+}

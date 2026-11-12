@@ -1,0 +1,31 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-respelled-israeli-voice",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "ashkenazi",
+ "inputText": "הִנְחַלְתָּנוּ׃",
+ "inputSha256": "7f7da28654976f909e15a36d74bc2bab93500098ac4c86c28dd039560952f5bc",
+ "ingestedAt": "2026-11-12T14:44:15.336Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice: the Israeli man voice reading the ashkenazi reading written in pointed Hebrew letters (tools/audio/ashkenazi_script.mjs). Not a human recording; no human has listened to it. Licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel.",
+ "renderedAt": "2026-11-12T14:44:15.336Z",
+ "redistributionCleared": false,
+ "spokenText": "הִנְחַלְתֹּנוּ",
+ "normalized": true,
+ "provider": "google",
+ "madeFrom": "hebrew-script",
+ "voiceName": "he-IL-Wavenet-B",
+ "languageCode": "he-IL",
+ "hebrew": "הִנְחַלְתָּנוּ׃",
+ "israeliRef": "audio/m/israeli/word/kiddush-festival-eve-close-w17.mp3",
+ "tempo": {
+  "applied": false,
+  "factor": 1,
+  "cap": 1.26,
+  "before": 1.104013605442177,
+  "after": 1.104013605442177,
+  "israeliSec": 1.264013605442177,
+  "israeliRef": "audio/m/israeli/word/kiddush-festival-eve-close-w17.mp3"
+ }
+}

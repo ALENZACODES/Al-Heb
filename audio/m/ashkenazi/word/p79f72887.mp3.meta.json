@@ -1,0 +1,31 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-respelled-israeli-voice",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "ashkenazi",
+ "inputText": "אֲנִי הוֹלֵךְ",
+ "inputSha256": "52de00b8c101de73aa4367d2c3cd3b18285184f67e366d66d1f49e9e2098cb1b",
+ "ingestedAt": "2026-11-12T14:44:07.092Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice: the Israeli man voice reading the ashkenazi reading written in pointed Hebrew letters (tools/audio/ashkenazi_script.mjs). Not a human recording; no human has listened to it. Licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel.",
+ "renderedAt": "2026-11-12T14:44:07.092Z",
+ "redistributionCleared": false,
+ "spokenText": "אֲנִי הוֹלֵיךְ",
+ "normalized": true,
+ "provider": "google",
+ "madeFrom": "hebrew-script",
+ "voiceName": "he-IL-Wavenet-B",
+ "languageCode": "he-IL",
+ "hebrew": "אֲנִי הוֹלֵךְ",
+ "israeliRef": "audio/m/israeli/word/p79f72887.mp3",
+ "tempo": {
+  "applied": false,
+  "factor": 1,
+  "cap": 1.26,
+  "before": 1.104013605442177,
+  "after": 1.104013605442177,
+  "israeliSec": 1.2880045351473923,
+  "israeliRef": "audio/m/israeli/word/p79f72887.mp3"
+ }
+}

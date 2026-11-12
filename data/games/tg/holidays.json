@@ -1,0 +1,73 @@
+{
+ "schema": "alef-tg-holidays/1",
+ "note": "Holiday Sorter. Names, Hebrew names and words come from data/calendar/days.json at run time (its pointed Hebrew and English); this file only lists which days the game sorts and their order through the Jewish year, starting at Rosh Hashanah, with the usual Hebrew date in English. A word is used only when it belongs to exactly one of the sorted days. Not reviewed by a teacher.",
+ "sort": [
+  "shabbat",
+  "rosh-hashanah",
+  "yom-kippur",
+  "sukkot",
+  "hanukkah",
+  "tu-bishvat",
+  "purim",
+  "pesach",
+  "yom-hashoah",
+  "yom-hazikaron",
+  "yom-haatzmaut",
+  "shavuot",
+  "tisha-bav"
+ ],
+ "year": [
+  {
+   "id": "rosh-hashanah",
+   "date": "1 Tishrei"
+  },
+  {
+   "id": "yom-kippur",
+   "date": "10 Tishrei"
+  },
+  {
+   "id": "sukkot",
+   "date": "15 Tishrei"
+  },
+  {
+   "id": "shemini-atzeret",
+   "date": "22 Tishrei (in Israel; 22 and 23 outside Israel)"
+  },
+  {
+   "id": "hanukkah",
+   "date": "25 Kislev"
+  },
+  {
+   "id": "tu-bishvat",
+   "date": "15 Shevat"
+  },
+  {
+   "id": "purim",
+   "date": "14 Adar"
+  },
+  {
+   "id": "pesach",
+   "date": "15 Nisan"
+  },
+  {
+   "id": "yom-hashoah",
+   "date": "27 Nisan (moved when it falls next to Shabbat)"
+  },
+  {
+   "id": "yom-hazikaron",
+   "date": "4 Iyar (moved when it falls next to Shabbat)"
+  },
+  {
+   "id": "yom-haatzmaut",
+   "date": "5 Iyar (moved when it falls next to Shabbat)"
+  },
+  {
+   "id": "shavuot",
+   "date": "6 Sivan"
+  },
+  {
+   "id": "tisha-bav",
+   "date": "9 Av (moved to 10 Av when 9 Av is Shabbat)"
+  }
+ ]
+}

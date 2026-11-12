@@ -172,6 +172,18 @@ Home shows a backup reminder after three finished lessons (`docs/progress/BACKUP
 | `noahseven` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
 | `tenwords` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
 | `mitzvot613` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
+| `tg-tilepairs` | keep | Torah and Hebrew game; reached from the `games` hub. Preview until a teacher reviews its Hebrew. |
+| `tg-letterhunt` | keep | Torah and Hebrew game; reached from the `games` hub. Preview until a teacher reviews its Hebrew. |
+| `tg-numerals` | keep | Torah and Hebrew game; reached from the `games` hub. Preview until a teacher reviews its Hebrew. |
+| `tg-wordguess` | keep | Torah and Hebrew game; reached from the `games` hub. Preview until a teacher reviews its Hebrew. |
+| `tg-torahwords` | keep | Torah and Hebrew game; reached from the `games` hub. Preview until a teacher reviews its Hebrew. |
+| `tg-family` | keep | Torah and Hebrew game; reached from the `games` hub. Preview until a teacher reviews its Hebrew. |
+| `tg-verbslots` | keep | Torah and Hebrew game; reached from the `games` hub. Preview until a teacher reviews its Hebrew. |
+| `tg-storyorder` | keep | Torah and Hebrew game; reached from the `games` hub. Preview until a teacher reviews its Hebrew. |
+| `tg-whosaid` | keep | Torah and Hebrew game; reached from the `games` hub. Preview until a teacher reviews its Hebrew. |
+| `tg-parashah` | keep | Torah and Hebrew game; reached from the `games` hub. Preview until a teacher reviews its Hebrew. |
+| `tg-tropehunt` | keep | Torah and Hebrew game; reached from the `games` hub. Preview until a teacher reviews its Hebrew. |
+| `tg-holidays` | keep | Torah and Hebrew game; reached from the `games` hub. Preview until a teacher reviews its Hebrew. |
 | `wordfinder` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
 | `tugowar` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
 | `vowelcatcher` | keep | Game; reached from the `games` hub. Preview until native review of its words. |

@@ -4,6 +4,7 @@ import { readFileSync } from 'node:fs';
 import { N, memStore, tick } from './torahread.fakedom.js';
 import { matchRoute } from '../src/shell/router.js';
 import { GAMES, LEVEL_BY_GAME } from '../src/games/games.view.js';
+import { TG_GAMES } from '../src/games/tg-catalog.js';
 import { assertWordBank, recordFound, nextRound, choiceWords, STORE_KEY } from '../src/games/wordfinder.model.js';
 import { mount } from '../src/games/wordfinder.view.js';
 
@@ -62,7 +63,7 @@ test('Word Finder: three distinct choices, only one target and no made-up altern
 
 test('Every existing game has a suggested skill level 1–9 without reclassifying as certified', () => {
   assert.equal(GAMES.length, 24);
-  assert.equal(Object.keys(LEVEL_BY_GAME).length, 26 + 30, 'the 26 originals plus the 30 arcade games');
+  assert.equal(Object.keys(LEVEL_BY_GAME).length, 26 + 30 + TG_GAMES.length, 'the 26 originals, the 30 arcade games and the Torah and Hebrew games');
   assert.equal(LEVEL_BY_GAME.wordfinder, 1);
   for (const [id] of GAMES) assert.ok(LEVEL_BY_GAME[id] >= 1 && LEVEL_BY_GAME[id] <= 9);
   assert.deepEqual([...new Set(Object.values(LEVEL_BY_GAME))].sort((a, b) => a - b), [1,2,3,4,5,6,7,8,9]);

@@ -7,6 +7,7 @@ import { readFileSync, existsSync } from 'node:fs';
 import { Doc, El } from './wordtrace.fakedom.js';
 import { matchRoute, tierOf } from '../src/shell/router.js';
 import { ARCADE_GAMES } from '../src/games/arcade.catalog.js';
+import { TG_GAMES } from '../src/games/tg-catalog.js';
 import { applyResult, applyArcade, starsFor, buildWordSearch, buildCrossword, buildMaze, nextStepToward, seededRandom, dayKey, bestLine, bareLetters, gameOfTheDay, daysBetween } from '../src/games/arcade.model.js';
 import { STORE_KEYS } from '../src/shell/privacy.view.js';
 import { NAV_EN } from '../src/shell/nav.strings.js';
@@ -17,8 +18,8 @@ const json = (p) => JSON.parse(readFileSync(root + p, 'utf8'));
 const words = json('data/games/firstwords.json').words;
 
 test('catalogue: thirty games, unique ids, each with a view file, a preview route, a label, a section, a store key and a privacy row', () => {
-  assert.equal(ARCADE_GAMES.length, 30);
-  assert.equal(new Set(ARCADE_GAMES.map((g) => g.id)).size, 30);
+  assert.equal(ARCADE_GAMES.length, 30 + TG_GAMES.length); // thirty arcade games plus the Torah and Hebrew games
+  assert.equal(new Set(ARCADE_GAMES.map((g) => g.id)).size, ARCADE_GAMES.length);
   const listed = new Set(STORE_KEYS.map((r) => r[0]));
   const inSection = new Set(Object.values(SECTION_ROUTES).flat());
   for (const g of ARCADE_GAMES) {

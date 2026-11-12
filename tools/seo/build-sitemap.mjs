@@ -22,6 +22,8 @@ const ids = (xs) => xs.map((x) => (x && typeof x === 'object' ? x.id : x)).filte
 export const ENUMERATE = {
   // lane 6 bridge: the four sections, then one page per book and per prayer line (src/bridge/bridge.view.js)
   '/bridge/:sec': async () => ['books', 'lines', 'words', 'modern'],
+  // reading lane: the five Reading Tools (src/readlab/readlab.view.js TOOLS)
+  '/readlab/:tool': async () => ['texts', 'shva', 'forms', 'stress', 'progress'],
   '/trope/families/:id': async () => {
     const { families } = await import(pathToFileURL(join(root, 'src/trope/families.js')).href);
     return ids(families(rd('data/corpus/trope/table.json')));

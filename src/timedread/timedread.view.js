@@ -5,10 +5,11 @@
 import { el, heText } from '../curriculum/dom.js';
 import { loadProgressData } from '../progress/data.js';
 import { readSnapshot, readableNow } from '../progress/model.js';
-import { HONEST_NOTE, countWords, wordList, makeRead, rangeFor, describeRange, trickyWords, accuracy, wpm, seconds, speechSupport } from './model.js';
+import { HONEST_NOTE, countWords, wordList, makeRead, rangeFor, describeRange, trickyWords, accuracy, wpm, seconds, speechSupport, readsFor } from './model.js';
 import { loadState, saveRead, clearReads } from './store.js';
 import { isAudioFree } from '../shell/audiofree.js';
 import { calmOn } from '../shell/comfort.js';
+import { fluencyChart, CSS as FLUENCY_CSS } from '../readlab/fluency.js';
 
 export const CSS = `
 .tdr { display: grid; gap: 1rem; } .tdr * { min-inline-size: 0; overflow-wrap: anywhere; }
@@ -25,7 +26,7 @@ export const CSS = `
 .tdr-note { font-size: .9rem; } .tdr-exp { font-size: .85rem; font-style: italic; }
 .tdr table { border-collapse: collapse; inline-size: 100%; } .tdr th, .tdr td { text-align: start; padding: .25rem .4rem; border-bottom: 1px solid var(--border); }
 `;
-function ensureCss() { if (typeof document !== 'undefined' && document.head && !document.getElementById?.('alef-tdr-style')) document.head.append(el('style', { id: 'alef-tdr-style' }, CSS)); }
+function ensureCss() { if (typeof document !== 'undefined' && document.head && !document.getElementById?.('alef-tdr-style')) document.head.append(el('style', { id: 'alef-tdr-style' }, CSS + FLUENCY_CSS)); }
 
 const clock = (ms) => { const s = Math.floor(ms / 1000); return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`; };
 const pct = (x) => `${Math.round(x * 100)}%`;
@@ -78,6 +79,7 @@ export async function mount(root, ctx = /** @type {any} */ ({})) {
       el('p', { class: 'tdr-range' }, describeRange(r)),
       el('p', {}, `Seconds: ${r.seconds.min === r.seconds.max ? r.seconds.min : `${r.seconds.min} to ${r.seconds.max}`}. Words a minute (counting words you stumbled on): ${f1(r.wpm.min)} to ${f1(r.wpm.max)}.`),
       hard.length ? el('p', {}, 'Words that tripped you most: ', ...hard.flatMap((h, i) => [i ? ', ' : '', heText(words[h.idx] ?? '', 'tdr-hard'), ` (${h.count}x)`])) : null,
+      fluencyChart(readsFor(st, item.id)),
       el('p', { class: 'tdr-note' }, 'Different lines have different difficulty, so reads of different lines are never mixed.'));
   }
 

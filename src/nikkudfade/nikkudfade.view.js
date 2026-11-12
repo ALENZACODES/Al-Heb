@@ -35,7 +35,7 @@ export function mount(root, ctx) {
     controls.replaceChildren(el('div', { role: 'group', 'aria-label': 'Vowel-mark stage' }, ...stageBtns), auto,
       btn(anyWord ? 'Words from any lesson: on' : 'Words from any lesson: off', () => { anyWord = !anyWord; startRound(); say(anyWord ? 'Practicing words from every lesson.' : `Practicing words up to lesson ${reached}.`); }, { 'aria-pressed': String(anyWord), class: 'btn secondary' }),
       el('p', {}, anyWord ? 'Words from every lesson.' : `Words from lessons up to ${reached} (your progress, with the first-release path as the minimum).`),
-      el('p', {}, 'Related: ', el('a', { href: '#/torahread/ladder' }, 'reading Torah text without vowels'), ' and ', el('a', { href: '#/firstday/ladder' }, 'the 20-step ladder from vowel marks to none'), '. This page works on common modern words; the Torah page works on scroll text.'),
+      el('p', {}, 'Related: ', el('a', { href: '#/torahread/ladder' }, 'reading Torah text without vowels'), ' and ', el('a', { href: '#/firstday/ladder' }, 'the 20-step ladder from vowel marks to none'), '. This page works on common modern words; the Torah page works on scroll text. To set the vowel marks yourself for stories, prayers and Torah, each on its own, or to try the Fade Challenge: ', el('a', { href: '#/readlab/texts' }, 'Read With Tools'), '.'),
       el('p', {}, st.auto ? 'The app moves you to fewer vowel marks after you read steadily without revealing, and back if you reveal most words.' : 'You chose this stage. The app will not change it.'));
   }
 

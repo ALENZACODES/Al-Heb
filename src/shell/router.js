@@ -252,6 +252,9 @@ export const ROUTES = [
   { name: 'bridge', pattern: '/bridge', module: '../bridge/bridge.view.js', title: 'Reading Without Vowels', owner: 'lane6', group: 'learn', quick: 'nav.route.bridge' },
   { name: 'bridge-sec', pattern: '/bridge/:sec', module: '../bridge/bridge.view.js', title: 'Reading Without Vowels', owner: 'lane6', paramQuery: { sec: 'sec' } },
   { name: 'bridge-text', pattern: '/bridge/:sec/:id', module: '../bridge/bridge.view.js', title: 'Reading Without Vowels', owner: 'lane6', paramQuery: { sec: 'sec', id: 'id' } },
+  // reading lane (12 Nov): Reading Tools hub and its five tools (src/readlab, loaded on first open)
+  { name: 'readlab', pattern: '/readlab', module: '../readlab/readlab.view.js', title: 'Reading Tools', owner: 'reading', group: 'learn', quick: 'nav.route.readlab' },
+  { name: 'readlab-tool', pattern: '/readlab/:tool', module: '../readlab/readlab.view.js', title: 'Reading Tools', owner: 'reading', paramQuery: { tool: 'tool' } },
   { name: 'trope-families', pattern: '/trope/families', module: '../trope/practice.view.js', title: 'Trope Families', owner: 'lane6', group: 'learn', quick: 'nav.route.trope-families' },
   { name: 'trope-family', pattern: '/trope/families/:id', module: '../trope/practice.view.js', title: 'Trope Families', owner: 'lane6', paramQuery: { id: 'id' } },
   { name: 'trope-aliyah', pattern: '/trope/aliyah', module: '../trope/practice.view.js', title: 'Trope Practice by Aliyah', owner: 'lane6', group: 'learn', quick: 'nav.route.trope-aliyah', query: { sec: 'aliyah' } },

@@ -7,7 +7,8 @@ Each job row: {"path", "text", "voice": "m"|"f", "family": "wavenet"|"chirp", "m
            reviewer hears a word off: the sound review (phoneme_review.py) has a weak word, the word check (scan_lines.py)
            has an issue, or Google Speech-to-Text (review3_shard.py) has an issue. A clip that still fails 2 of the 3 is
            listed with "held": true, for data/lab/clip-holds.json, so no screen plays it before a person listens.
-  replace  the row has a clip (a prayer line the owner wants in a Chirp 3 HD voice). One Chirp take at normal pace; it
+  replace  the row has a clip (a prayer line the owner wants in a Chirp 3 HD voice, or a clip re-made from corrected text). One take
+           in the row's family at normal pace; it
            replaces the clip only when no reviewer hears it as worse (the torah-fix rule without "and one hears it better").
 The text is spoken exactly as the Torah clips are (tools/torah/audio/fix_shard.py spoken(): the four-letter name read as
 Adonai, Elohim where it is pointed with hiriq; everything else as written). Rows that need any other divine-name decision are
@@ -64,8 +65,8 @@ def takes(row, text):
     other = 'chirp' if fam == 'wavenet' else 'wavenet'
     apart = ', '.join(text.replace('.', '').split()) + '.'
     if row['mode'] == 'replace':
-        return [('chirp', VOICES[v]['chirp'], text, 1.0)]
-    if '/line/' in row['path'] or '/prayer/' in row['path']:   # prayer lines: Chirp 3 HD only (owner rule, 7 November 2026)
+        return [(fam, VOICES[v][fam], text, 1.0)]
+    if fam == 'chirp':   # prayer lines: Chirp 3 HD only (owner rule, 7 November 2026)
         return [('chirp', VOICES[v]['chirp'], text, 1.0), ('chirp-apart', VOICES[v]['chirp'], apart, 0.9),
                 ('chirp-0.85', VOICES[v]['chirp'], text, 0.85)]
     out = [(fam, VOICES[v][fam], text, 1.0)]

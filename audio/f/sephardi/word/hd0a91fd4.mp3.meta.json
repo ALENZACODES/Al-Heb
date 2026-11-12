@@ -1,0 +1,31 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-respelled-israeli-voice",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "sephardi",
+ "inputText": "מַמָּשׁ",
+ "inputSha256": "9ec61b2529e71bac031349c91f8845dde8a484bfde4ea5bd4d4e5cff1b939271",
+ "ingestedAt": "2026-11-12T07:50:36.452Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice: the Israeli woman voice reading the sephardi English-letter respelling, not pointed Hebrew. Not a human recording; no human has listened to it. Licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel.",
+ "renderedAt": "2026-11-12T07:50:36.452Z",
+ "redistributionCleared": false,
+ "spokenText": "mamash",
+ "normalized": true,
+ "provider": "google",
+ "madeFrom": "respelling",
+ "voiceName": "he-IL-Wavenet-A",
+ "languageCode": "he-IL",
+ "hebrew": "מַמָּשׁ",
+ "israeliRef": "audio/f/israeli/word/hd0a91fd4.mp3",
+ "tempo": {
+  "applied": false,
+  "factor": 1,
+  "cap": 1.26,
+  "before": 1.104013605442177,
+  "after": 1.104013605442177,
+  "israeliSec": 1.24,
+  "israeliRef": "audio/f/israeli/word/hd0a91fd4.mp3"
+ }
+}

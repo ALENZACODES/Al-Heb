@@ -52,6 +52,8 @@ jobs:
         run: npm test
       - name: Deploy-time asset check (every catalogued clip that should play has its file; held clips accounted for)
         run: node tools/deploy/check-assets.mjs --no-write
+      - name: Dead-button check (every button has a handler or an honest disabled state)
+        run: node tools/deploy/check-buttons.mjs
       - name: Precache manifest is current
         run: node tools/build-precache.mjs && git diff --exit-code precache-manifest.js
   build-dist:

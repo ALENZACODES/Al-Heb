@@ -221,7 +221,7 @@ export function mount(root, ctx) {
         const open = versionOpen(st, text.textId, x.n), done = versionDone(st, text.textId, x.n);
         return sbtn(`${x.name}${done ? ' (read)' : open ? '' : ' (locked)'}`, () => { if (!open) { say(`${x.name} opens when you read the version before it without help.`); return; } version = x.n; help = new Set(); vAnswered = false; draw(); }, { 'aria-pressed': String(version === x.n), 'aria-disabled': open ? null : 'true', class: `btn secondary${open ? '' : ' rl-locked'}` });
       }));
-      const onTap = (w) => { if (vAnswered) return tap(w); const k = `${w.line}|${w.index}`; if (!help.has(k)) { help.add(k); draw(); say('Vowel marks shown on that word. This read now counts as read with help.'); } else tap(w); };
+      const onTap = (w) => { if (vAnswered || w.pointed) return tap(w); const k = `${w.line}|${w.index}`; if (!help.has(k)) { help.add(k); draw(); say('Vowel marks shown on that word. This read now counts as read with help.'); } else tap(w); };
       const words = (ln, li) => fadeLine(ln.he, v.level).map((w) => { const k = `${li}|${w.index}`; return help.has(k) ? { ...w, line: li, shown: w.full, pointed: true } : { ...w, line: li }; });
       return [el('p', {}, 'Read the same text three ways: all vowel marks, some marks, then none. Each version opens when you read the one before it without help.'), tabs,
         el('p', { class: 'muted' }, `${v.name}. ${FADE_LEVELS[v.level].help}${version > 0 ? ' Tap a word to see its marks; that makes this read a read with help. Tap it again for the Word Spotlight.' : ' Tap a word for the Word Spotlight.'}`),

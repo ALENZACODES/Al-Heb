@@ -307,6 +307,9 @@ test('view: three versions open in order; showing marks on a word makes the read
   assert.match(r.text, /Version 2: Some Marks is now open/);
   await byText(r, 'Version 2: Some Marks').click();
   await find(r, (n) => n.tag === 'button' && n.attrs['data-word'] === '0').click();
+  await waitFor(() => /Letters and Vowel Marks/.test(r.text)); // a word that still has its marks opens the spotlight, not help
+  await find(r, (n) => n.tag === 'button' && n.attrs['data-word'] === '2').click();
+  assert.match(r.text, /counts as read with help|Vowel marks shown/);
   await byId(r, 'rl-v-read').click(); await flush();
   assert.equal(m['readlab.v1'].texts['book:book1'].versions[1].done, false, 'help shown');
   assert.match(r.text, /Version 3: No Marks \(locked\)/); un();

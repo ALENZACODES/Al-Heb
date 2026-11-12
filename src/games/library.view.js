@@ -21,7 +21,8 @@ export const CSS = `
 .gb-card .gb-title{font-weight:700}
 .gb-card .gb-meta,.gb-card .gb-score{font-size:.92rem}
 .gb-state{display:inline-block;font-size:.8rem;font-weight:700;border-radius:999px;padding:.05rem .5rem;border:1px solid currentColor}
-.gb-practice{font-size:.9rem}
+.gb-practice{font-size:.9rem;display:inline-block;margin-block:.2rem}
+.gb-hub-score{display:block;font-size:.85rem;margin-block-start:.2rem}
 .gb-share .gb-share-text{border-inline-start:4px solid var(--line,#8886);padding-inline-start:.5rem}
 .gb-levels{padding-inline-start:1.2rem}
 .gb-levels li{margin-block:.25rem}
@@ -122,6 +123,7 @@ export function mount(root, ctx) {
  * beside the card. Sections that load later are decorated when they arrive (MutationObserver where the browser has one).
  */
 export function decorateHub(article, ctx) {
+  injectStyles();
   const games = new Map(allGames().map((g) => [g.id, g]));
   const led = readJson(ctx, SCORES_KEY) || {};
   const done = new WeakSet();

@@ -72,8 +72,13 @@ const ON_DEMAND_PREFIXES = ['data/vocab/', 'data/roots/', 'data/knownwords/', 'd
   'data/ask/',
   // lane 4 (12 Nov): Move to another device and the learner's certificate (route code, fetched on first open), and the
   // offline pack lists read by the Use Aleph offline page (data/offline/packs.json, built by tools/offline-packs.mjs).
-  'src/sync/', 'data/offline/'];
+  'src/sync/', 'data/offline/',
+  // lane games-books (12 Nov): This Week's Parashah, Torah Search (its 0.7 MB letters-only index) and the Verse Notebook, fetched on first open.
+  'src/torahstudy/', 'data/torahstudy/'];
 const ON_DEMAND_FILES = new Set([
+  // lane games-books (12 Nov): Word Sprint's model and loader and the known-word validator are imported only by lazy views (Word Sprint,
+  // Known-word checker, the little books' word marks), so they are fetched on first use, runtime-cached (frees about 16 KB of first install).
+  'src/sprint/model.js', 'src/sprint/loader.js', 'src/knownwords/validate.js',
   // Rimon's stills (src/app.js imports the stage after boot; it shows nothing until the pictures exist, and the pictures are fetched on demand too),
   // and two older Rimon modules no screen imports (kept for reference and their tests).
   'src/shell/rimon-stage.js', 'src/shell/rimon-triggers.js', 'src/shell/rimon-stills.generated.js', 'assets/css/rimon-stills.css',

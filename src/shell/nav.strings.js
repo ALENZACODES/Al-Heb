@@ -4,7 +4,7 @@
 import { en } from './i18n.js';
 import { ROUTES } from './router.js'; // lane g1 labels
 import { G4_ROUTES } from './g4-routes.js'; // lane 4 (g4)
-import { GB_LABELS } from './gb-routes.js'; // lane games-books
+import { GB_LABELS } from './gb-routes.js';
 
 export const NAV_EN = {
   'nav.ask': 'Ask the Torah',
@@ -91,7 +91,7 @@ export const NAV_EN = {
   ...Object.fromEntries(ROUTES.filter((r) => r.name.startsWith('g2-')).map((r) => ['nav.route.' + r.name, r.title])),
   ...Object.fromEntries(ROUTES.filter((r) => r.name.startsWith('g3-')).map((r) => ['nav.route.' + r.name, r.title])), // lane g3
   ...Object.fromEntries(G4_ROUTES.map(([id, title]) => ['nav.route.g4-' + id, title])), // lane 4 (g4)
-  ...GB_LABELS, // lane games-books (12 Nov)
+  ...GB_LABELS,
   'nav.route.wordfinder': 'Hebrew Word Finder: Level 1',
   'nav.route.tugowar': 'Antonym Tug-of-War',
   'nav.route.vowelcatcher': 'Vowel Catcher',

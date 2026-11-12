@@ -1,5 +1,4 @@
-// Lane games-books (12 Nov): routes, menu sections and labels, spread into router.js, nav-model.js and nav.strings.js.
-// [name, pattern, module (from src/shell/), title, section, extra]; every view loads lazily. hidden = hub-only (search finds it).
+// Lane games-books: [name, pattern, module, title, section, extra] for router.js, nav-model.js, nav.strings.js. Views load lazily.
 const G = '../games/', B = '../books/', T = '../torahstudy/';
 export const GB = [
   ['game-library', '/game-library', G + 'library.view.js', 'Games Library', 'learn'],

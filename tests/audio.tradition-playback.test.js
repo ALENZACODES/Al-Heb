@@ -129,7 +129,8 @@ test('fixture rows of the new provenance: the own file plays as itself under its
       assert.match(playLine(line, setting, 'the line'), new RegExp(`^Playing the line: ${name} voice`));
       assert.doesNotMatch(playLine(line, setting, 'the line'), /stand-in|Israeli reading/);
       const prayer = f.status('prayer', 'bless-priestly-1');
-      assert.equal(prayer.path, `audio/f/${setting}/line/bless-priestly-1.mp3`); assert.equal(prayer.via, 'alias');
+      // the one-line prayer plays its line, or its own copy of that line (tools/audio/alias_copies.mjs)
+      assert.ok([`audio/f/${setting}/line/bless-priestly-1.mp3`, `audio/f/${setting}/prayer/bless-priestly-1.mp3`].includes(prayer.path), prayer.path);
       // the man's existing bank clip still plays as itself (paid-cloud is playable)
       const m = player('m', setting, fixture).status('line', 'bless-priestly-1');
       assert.equal(m.path, `audio/m/${setting}/line/bless-priestly-1.mp3`);

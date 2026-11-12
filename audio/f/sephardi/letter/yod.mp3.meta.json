@@ -1,0 +1,31 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-respelled-israeli-voice",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "sephardi",
+ "inputText": "יוֹד",
+ "inputSha256": "ff3455e9f01aa6e403e3735979cecc8d759de412b0eaae57c048131474740445",
+ "ingestedAt": "2026-11-12T07:01:26.326Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice: the Israeli woman voice reading the sephardi English-letter respelling, not pointed Hebrew. Not a human recording; no human has listened to it. Licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel.",
+ "renderedAt": "2026-11-12T07:01:26.326Z",
+ "redistributionCleared": false,
+ "spokenText": "yod",
+ "normalized": true,
+ "provider": "google",
+ "madeFrom": "respelling",
+ "voiceName": "he-IL-Wavenet-A",
+ "languageCode": "he-IL",
+ "hebrew": "יוֹד",
+ "israeliRef": "audio/f/israeli/letter/yod.mp3",
+ "tempo": {
+  "applied": false,
+  "factor": 1,
+  "cap": 1.26,
+  "before": 0.84,
+  "after": 0.84,
+  "israeliSec": 1.0480045351473923,
+  "israeliRef": "audio/f/israeli/letter/yod.mp3"
+ }
+}

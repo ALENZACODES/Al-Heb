@@ -1,0 +1,31 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-respelled-israeli-voice",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "ashkenazi",
+ "inputText": "עַיִן",
+ "inputSha256": "4c10d35fd572fc25d38a59b25dff401978b741b9d24ef8ad7c88eaca50020d1f",
+ "ingestedAt": "2026-11-12T07:00:20.943Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice: the Israeli man voice reading the ashkenazi English-letter respelling, not pointed Hebrew. Not a human recording; no human has listened to it. Licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel.",
+ "renderedAt": "2026-11-12T07:00:20.943Z",
+ "redistributionCleared": false,
+ "spokenText": "ayin",
+ "normalized": true,
+ "provider": "google",
+ "madeFrom": "respelling",
+ "voiceName": "he-IL-Wavenet-B",
+ "languageCode": "he-IL",
+ "hebrew": "עַיִן",
+ "israeliRef": "audio/m/israeli/letter/ayin.mp3",
+ "tempo": {
+  "applied": false,
+  "factor": 1,
+  "cap": 1.26,
+  "before": 0.7440136054421769,
+  "after": 0.7440136054421769,
+  "israeliSec": 0.9040136054421769,
+  "israeliRef": "audio/m/israeli/letter/ayin.mp3"
+ }
+}

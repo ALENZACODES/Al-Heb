@@ -124,7 +124,7 @@ export function markAccentRows(root, updates, { dry = false } = {}) {
       if (e.status === 'recorded' || e.status === 'synthetic-reviewed') { res.skipped.push(e.path); continue; }
       if (!ACCENT_TRADITIONS.includes(e.tradition)) { res.skipped.push(e.path); continue; }
       e.status = ACCENT_STATUS; e.source = u.source;
-      delete e.equivalentTo;
+      delete e.equivalentTo; delete e.plays; // a clip of its own: no longer the Israeli stand-in
       if (u.synth && typeof u.synth === 'object') { delete e.synth; e.synth = u.synth; }
       res.marked.push(e.path); changed = true;
     }

@@ -185,7 +185,9 @@ test('shell audio: a sephardi learner hears the Israeli clip for a letter with n
   // Owner decision 2026-11-07 (data/audio/equivalence.json): the Israeli file stands in for a missing Sephardi letter, vowel, syllable, prayer or word.
   const spoken = []; const speech = { speak(u) { spoken.push(u.text); setTimeout(() => u.onend(), 0); }, cancel() {} };
   class El { constructor(url) { this.url = url; } play() { setTimeout(() => { this.onplaying?.(); this.onended?.(); }, 0); return Promise.resolve(); } pause() {} }
-  const mk = (anyway) => createShellAudio({ settings: { get: (k) => ({ voice: 'f', congregation: 'sephardi', browserVoiceAnyway: anyway })[k] }, manifest,
+  // the Sephardi alef rows are set to plays-israeli here: some letters now have a Sephardi clip of their own
+  const fixture = manifest.map((e) => (e.tradition === 'sephardi' && e.kind === 'letter' && ['alef', 'bet'].includes(e.id) ? { ...e, status: 'plays-israeli', source: 'israeli-clip' } : e));
+  const mk = (anyway) => createShellAudio({ settings: { get: (k) => ({ voice: 'f', congregation: 'sephardi', browserVoiceAnyway: anyway })[k] }, manifest: fixture,
     createAudio: (o) => createAudio({ ...o, AudioCtor: El, speech, UtteranceCtor: class { constructor(t) { this.text = t; } } }) });
   for (const anyway of [true, false]) {
     const a = mk(anyway); const lines = []; a.subscribe((st) => lines.push(st.text));

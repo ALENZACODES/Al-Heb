@@ -104,7 +104,9 @@ test('local manifest: exact files that exist are not reported as another traditi
   assert.ok(tally['f|israeli'].onDisk > 0, 'woman Israeli exact files exist locally');
   assert.ok(tally['m|israeli'].onDisk > 0, 'man Israeli exact files exist locally');
   assert.equal(tally['f|sephardi'].onDisk >= 1, true);
-  assert.equal(existsSync('audio/m/sephardi/letter/alef.mp3'), false);
+  // a row that still plays the Israeli clip has no file of its own
+  const standIn = man.find((e) => e.status === 'plays-israeli' && e.kind === 'letter');
+  assert.ok(standIn); assert.equal(existsSync(standIn.path), false);
   assert.equal(existsSync('audio/f/israeli/letter/alef.mp3'), true);
   assert.equal(existsSync('audio/m/israeli/line/bless-priestly-1.mp3'), true);
   // This is the local tree only. It is not a count of https://alef-review.onrender.com.

@@ -1,0 +1,31 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-respelled-israeli-voice",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "ashkenazi",
+ "inputText": "גֹ",
+ "inputSha256": "620bf3ecbd8b6650179a3bd5d29f3be208c3f1107a08876047f7ed397f369df5",
+ "ingestedAt": "2026-11-12T07:02:18.458Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice: the Israeli man voice reading the ashkenazi English-letter respelling, not pointed Hebrew. Not a human recording; no human has listened to it. Licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel.",
+ "renderedAt": "2026-11-12T07:02:18.458Z",
+ "redistributionCleared": false,
+ "spokenText": "go",
+ "normalized": true,
+ "provider": "google",
+ "madeFrom": "respelling",
+ "voiceName": "he-IL-Wavenet-B",
+ "languageCode": "he-IL",
+ "hebrew": "גֹ",
+ "israeliRef": "audio/m/israeli/syllable/gimel-o.mp3",
+ "tempo": {
+  "applied": false,
+  "factor": 1,
+  "cap": 1.26,
+  "before": 0.72,
+  "after": 0.72,
+  "israeliSec": 0.76,
+  "israeliRef": "audio/m/israeli/syllable/gimel-o.mp3"
+ }
+}

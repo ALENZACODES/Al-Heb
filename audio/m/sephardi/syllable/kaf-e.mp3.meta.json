@@ -1,0 +1,31 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-respelled-israeli-voice",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "sephardi",
+ "inputText": "כֶּ",
+ "inputSha256": "82b1aeda62efe5909ce6512d7edeb2f94ae61e9e62e19851844166b628d8b697",
+ "ingestedAt": "2026-11-12T07:01:02.085Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice: the Israeli man voice reading the sephardi English-letter respelling, not pointed Hebrew. Not a human recording; no human has listened to it. Licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel.",
+ "renderedAt": "2026-11-12T07:01:02.085Z",
+ "redistributionCleared": false,
+ "spokenText": "ke",
+ "normalized": true,
+ "provider": "google",
+ "madeFrom": "respelling",
+ "voiceName": "he-IL-Wavenet-B",
+ "languageCode": "he-IL",
+ "hebrew": "כֶּ",
+ "israeliRef": "audio/m/israeli/syllable/kaf-e.mp3",
+ "tempo": {
+  "applied": false,
+  "factor": 1,
+  "cap": 1.26,
+  "before": 0.6960090702947845,
+  "after": 0.6960090702947845,
+  "israeliSec": 0.76,
+  "israeliRef": "audio/m/israeli/syllable/kaf-e.mp3"
+ }
+}

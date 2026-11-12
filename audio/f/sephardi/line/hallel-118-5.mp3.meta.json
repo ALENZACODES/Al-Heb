@@ -1,0 +1,31 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-respelled-israeli-voice",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "sephardi",
+ "inputText": "מִן־הַמֵּצַר קָרָאתִי יָּהּ עָנָנִי בַמֶּרְחָב יָהּ׃",
+ "inputSha256": "64efcd3d7f85d51f084e8ebdeffb6632408cf11b357ff7870c6e4eaf9f46cd1e",
+ "ingestedAt": "2026-11-12T07:00:40.676Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice: the Israeli woman voice reading the sephardi English-letter respelling, not pointed Hebrew. Not a human recording; no human has listened to it. Licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel.",
+ "renderedAt": "2026-11-12T07:00:40.676Z",
+ "redistributionCleared": false,
+ "spokenText": "min hametzar karati yah anani vamerchav yah",
+ "normalized": true,
+ "provider": "google",
+ "madeFrom": "respelling",
+ "voiceName": "he-IL-Wavenet-A",
+ "languageCode": "he-IL",
+ "hebrew": "מִן־הַמֵּצַר קָרָאתִי יָּהּ עָנָנִי בַמֶּרְחָב יָהּ׃",
+ "israeliRef": "audio/f/israeli/line/hallel-118-5.mp3",
+ "tempo": {
+  "applied": false,
+  "factor": 1,
+  "cap": 1.26,
+  "before": 3.432018140589569,
+  "after": 3.432018140589569,
+  "israeliSec": 3.3840136054421768,
+  "israeliRef": "audio/f/israeli/line/hallel-118-5.mp3"
+ }
+}

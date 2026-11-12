@@ -1,0 +1,31 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-respelled-israeli-voice",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "sephardi",
+ "inputText": "תַ",
+ "inputSha256": "287343c99b205c6c2c2a0a89da8ffc3dd3ecf4f572a3d99e39e815467533dd75",
+ "ingestedAt": "2026-11-12T07:00:59.152Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice: the Israeli man voice reading the sephardi English-letter respelling, not pointed Hebrew. Not a human recording; no human has listened to it. Licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel.",
+ "renderedAt": "2026-11-12T07:00:59.152Z",
+ "redistributionCleared": false,
+ "spokenText": "ta",
+ "normalized": true,
+ "provider": "google",
+ "madeFrom": "respelling",
+ "voiceName": "he-IL-Wavenet-B",
+ "languageCode": "he-IL",
+ "hebrew": "תַ",
+ "israeliRef": "audio/m/israeli/syllable/tav-a.mp3",
+ "tempo": {
+  "applied": false,
+  "factor": 1,
+  "cap": 1.26,
+  "before": 0.5760090702947845,
+  "after": 0.5760090702947845,
+  "israeliSec": 0.7360090702947846,
+  "israeliRef": "audio/m/israeli/syllable/tav-a.mp3"
+ }
+}

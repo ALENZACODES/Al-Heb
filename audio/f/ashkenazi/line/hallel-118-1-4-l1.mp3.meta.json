@@ -1,0 +1,31 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-respelled-israeli-voice",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "ashkenazi",
+ "inputText": "הוֹדוּ לַאֲדֹנָי כִּי־טוֹב כִּי לְעוֹלָם חַסְדּוֹ׃",
+ "inputSha256": "27820478cad62c6f35da91c2e77c03912445c88ae645038ff2160e28d1746b1c",
+ "ingestedAt": "2026-11-12T07:02:37.562Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice: the Israeli woman voice reading the ashkenazi English-letter respelling, not pointed Hebrew. Not a human recording; no human has listened to it. Licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel.",
+ "renderedAt": "2026-11-12T07:02:37.562Z",
+ "redistributionCleared": false,
+ "spokenText": "hodu la'adonoy ki tov ki le'olom chasdo",
+ "normalized": true,
+ "provider": "google",
+ "madeFrom": "respelling",
+ "voiceName": "he-IL-Wavenet-A",
+ "languageCode": "he-IL",
+ "hebrew": "הוֹדוּ לַאֲדֹנָי כִּי־טוֹב כִּי לְעוֹלָם חַסְדּוֹ׃",
+ "israeliRef": "audio/f/israeli/line/hallel-118-1-4-l1.mp3",
+ "tempo": {
+  "applied": false,
+  "factor": 1,
+  "cap": 1.26,
+  "before": 3.0960090702947847,
+  "after": 3.0960090702947847,
+  "israeliSec": 2.808004535147392,
+  "israeliRef": "audio/f/israeli/line/hallel-118-1-4-l1.mp3"
+ }
+}

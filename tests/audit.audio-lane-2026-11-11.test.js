@@ -139,3 +139,24 @@ test('D-07: gender pairs, role-plays and Israel dialogues have Israeli clips in 
 test('D-12: the Shin sound rows list the pointed shin (shin dot), not a bare letter', () => {
   for (const e of all.filter((x) => (x.kind === 'letter' && x.id === 'shin-sound') || (x.kind === 'syllable' && x.id === 'dot-shin-sin-0'))) assert.equal(e.text, 'שׁ', e.path);
 });
+
+test('C-01/C-05: an accent clip made for a row that played the Israeli clip ships only if it passed 2 of 3 reviewers; a held one has no file and its row still has no clip of its own', () => {
+  const dir = join(ROOT, 'docs/audio/fill');
+  const logs = readdirSync(dir).filter((f) => /^accent-r\d+-\d+\.jsonl$/.test(f));
+  assert.ok(logs.length > 0);
+  const byPath = new Map(all.map((e) => [e.path, e]));
+  let passed = 0, held = 0;
+  for (const f of logs) for (const l of readFileSync(join(dir, f), 'utf8').split('\n').filter(Boolean)) {
+    const r = JSON.parse(l); const e = byPath.get(r.path);
+    assert.ok(e, r.path);
+    if (r.decision === 'pass') {
+      passed++; assert.ok(r.reviewersFailing <= 1);
+      assert.equal(e.status, 'synthetic-unreviewed', r.path); assert.equal(e.source, 'tts-respelled-israeli-voice', r.path);
+      assert.ok(existsSync(join(ROOT, r.path)) && existsSync(join(ROOT, `${r.path}.meta.json`)), r.path);
+    } else {
+      held++; assert.equal(existsSync(join(ROOT, r.path)), false, `${r.path} was held and must not ship`);
+      assert.ok(['plays-israeli', 'missing'].includes(e.status), r.path);
+    }
+  }
+  assert.ok(passed > 0 && held >= 0);
+});

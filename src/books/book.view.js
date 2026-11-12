@@ -7,6 +7,7 @@ import { h, heSpan } from "../shell/ui.js";
 import { readerSlow, setReaderSlow, applyReaderRate, speedLine } from "./reader.speed.js";
 import { resolveBookId, shelfNumber, nextOnShelf } from "./order.js";
 import { storyCheck } from "./check.js";
+import { isAudioFree } from "../shell/audiofree.js";
 /** S-04: a page held back because it says the divine name; nothing plays, and the page says why. */
 export const HELD_PAGE = "This page's recording is held for review: the checks heard words in it wrongly. Read it from the page.";
 
@@ -20,6 +21,11 @@ const bookId = (ctx) => {
   const m = /#\/book\/([a-z0-9-]+)/i.exec(location.hash || "");
   return m ? m[1] : "book1";
 };
+
+/** S-09: a page's clip in one voice, or "" when the page is held or has no clip in that voice. */
+export const pageClip = (p, voice) => (p && !p.audioHeld && p.audio && p.audio[voice]) || "";
+/** S-09: the clip to warm once the current page's voice is playing: the next page, same voice. */
+export const nextClip = (pages, page, voice) => pageClip((pages || [])[page + 1], voice);
 
 export async function mount(root, ctx) {
   const asked = bookId(ctx);
@@ -100,26 +106,44 @@ export async function mount(root, ctx) {
   let page = 0;
   const stage = h("div", { class: "book-stage" });
   const dots = h("div", { class: "book-dots", role: "tablist", "aria-label": "Pages" });
-  const audioEl = h("audio", { preload: "none" });
+  // S-09 (lane 1): long read-aloud clips were slow to start. The page's clip in the learner's voice is attached when the page is
+  // drawn, with preload="metadata", so the browser knows its length and has its first bytes before Listen is pressed; once a
+  // voice plays, the next page's clip in the same voice is fetched quietly so the next page starts quickly. Never in
+  // audio-free mode or with the browser's data saver on.
+  const audioEl = h("audio", { preload: "metadata" });
+  const prefVoice = () => { try { return ctx?.settings?.get?.("voice") === "m" ? "m" : "f"; } catch { return "f"; } };
+  const quietData = () => { try { return isAudioFree(ctx) || !!globalThis.navigator?.connection?.saveData; } catch { return false; } };
+  let wanted = false, voiceNow = "";
+  const warmed = new Set();
+  const warmNext = () => {
+    const u = nextClip(book.pages, page, voiceNow || prefVoice());
+    if (!u || warmed.has(u) || quietData() || typeof fetch !== "function") return;
+    warmed.add(u);
+    fetch(u).then((r) => (r.ok ? r.arrayBuffer() : null)).catch(() => { warmed.delete(u); });
+  };
+  const primeVoice = () => {
+    const u = pageClip(book.pages[page], prefVoice());
+    if (u && !quietData()) audioEl.setAttribute("src", u);
+  };
   applyReaderRate(audioEl, readerSlow()); // normal unless Slower was chosen earlier this session
   let audioState = h("span", { class: "muted book-audio-state", role: "status" });
   // One shared state line for the book's voice (M-04): playing, finished, or why there is no sound.
   let playingLabel = "";
-  audioEl.addEventListener("playing", () => { audioState.textContent = `Playing: ${playingLabel || "this page"}.`; });
+  audioEl.addEventListener("playing", () => { audioState.textContent = `Playing: ${playingLabel || "this page"}.`; warmNext(); });
   audioEl.addEventListener("ended", () => { audioState.textContent = "Finished. Tap Listen to hear it again."; });
-  audioEl.addEventListener("error", () => { if (audioEl.getAttribute("src")) audioState.textContent = "No sound: this page's recording did not load."; });
+  audioEl.addEventListener("error", () => { if (wanted && audioEl.getAttribute("src")) audioState.textContent = "No sound: this page's recording did not load."; });
 
   // C-04 (12 Nov site check): a page turn stops the voice, and the status line belongs to the page on screen. A play that
   // resolves after the page changed (a slow clip) is stopped too, so the old page never plays over the new one.
   let shownPage = -1, playToken = 0;
   const stopVoice = () => {
-    playToken++;
+    playToken++; wanted = false;
     try { audioEl.pause(); } catch { /* already stopped */ }
     if (audioEl.getAttribute("src")) { audioEl.removeAttribute("src"); try { audioEl.load(); } catch { /* nothing loaded */ } }
     playingLabel = ""; audioState.textContent = "";
   };
   const render = () => {
-    if (page !== shownPage) { stopVoice(); shownPage = page; }
+    if (page !== shownPage) { stopVoice(); shownPage = page; primeVoice(); }
     const p = book.pages[page];
     stage.replaceChildren();
     dots.replaceChildren();
@@ -145,7 +169,8 @@ export async function mount(root, ctx) {
         const tok = ++playToken, at = page;
         audioState.textContent = "Loading…";
         playingLabel = label.replace(/^▶\s*/, "");
-        audioEl.src = p.audio[voice];
+        wanted = true; voiceNow = voice;
+        if (audioEl.getAttribute("src") !== p.audio[voice]) audioEl.setAttribute("src", p.audio[voice]); // already primed: keep what has loaded
         applyReaderRate(audioEl, readerSlow()); // normal pace unless the learner chose Slower (this session only)
         try { await audioEl.play(); if (tok !== playToken || at !== page) { try { audioEl.pause(); } catch { /* stopped */ } } }
         catch { if (tok === playToken && at === page) audioState.textContent = "This page's voice is not recorded yet."; }

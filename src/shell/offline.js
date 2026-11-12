@@ -90,6 +90,7 @@ export const ON_DEMAND_GROUPS = Object.freeze([
   { id: "od-music", label: "Game music player, Songs page, English read-aloud and the playing state", test: /^src\/(audio\/(synth-music|sting)|shell\/(speak-english|play-state)|listen\/songs\.view)\.js$/, approxMB: 0.04 },
   { id: "od-day-code", label: "Calendar day pages, add-to-calendar box, morning screen, intermediate lessons, practical units, the Curriculum page and Israel units (route code)", test: /^(src\/curriculum\/(day\.view|calendar\.day|calendar\.addpanel|calendar\.quickadd|intermediate\.view|practical\.view|practical-progress|practical-written|israel-units|israel-units\.view|path\.view|path\.model)\.js|src\/morning\/morning\.view\.js|assets\/css\/curriculum\.css)$/, approxMB: 0.11 },
   { id: "od-learn-practice", label: "Learn practice screens (review, loanwords, drills and dialogues)", test: /^src\/curriculum\/(review|loanwords|spotit|checkpoint|dialogues|ladder|fade|gender|scaffold)\.view\.js$/, approxMB: 0.07 },
+  { id: "od-teacher", label: "Share my progress and class summary", test: /^src\/teacher\//, approxMB: 0.02 },
   { id: "od-light", label: "Star of David light (page, style and printable stencil)", test: /^(src\/light\/|assets\/light\/|assets\/css\/light\.css$)/, approxMB: 0.02 },
 ]);
 /** Group a list of ALEF_ON_DEMAND paths into optional-download entries ({id,label,urls,approxMB}); empty groups are dropped. */

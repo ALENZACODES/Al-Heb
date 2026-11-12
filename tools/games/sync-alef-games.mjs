@@ -11,8 +11,8 @@ import crypto from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
-export const PATTERNS = [/^src\/games\/hanukkah-[\w.-]+\.js$/, /^src\/games\/tg-[\w.-]+\.js$/, /^data\/games\/hanukkah\/[\w-]+\.json$/, /^data\/games\/tg\/[\w-]+\.json$/,
-  /^tests\/games\.hanukkah\.test\.js$/, /^tests\/games\.tg\.test\.js$/];
+export const PATTERNS = [/^src\/games\/(?:hanukkah|tg|g[1-5])-[\w.-]+\.js$/, /^data\/games\/(?:hanukkah|tg|g[1-5])\/[\w-]+\.json$/,
+  /^tests\/games\.(?:hanukkah|tg|g[1-5])\.test\.js$/];
 const walk = (dir, base = dir) => (fs.existsSync(dir) ? fs.readdirSync(dir, { withFileTypes: true }).flatMap((e) => (e.isDirectory() ? walk(path.join(dir, e.name), base) : [path.relative(base, path.join(dir, e.name)).split(path.sep).join('/')])) : []);
 export const gameFiles = (root = ROOT) => ['src/games', 'data/games', 'tests'].flatMap((d) => walk(path.join(root, d)).map((f) => `${d}/${f}`)).filter((f) => PATTERNS.some((p) => p.test(f))).sort();
 const sha = (file) => crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');

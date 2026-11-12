@@ -78,6 +78,9 @@ const ON_DEMAND_FILES = new Set([
   'data/audio/manifest.json', 'data/audio/manifest-kind-word.json', 'data/audio/manifest-torah.json', 'data/audio/manifest-torah-he.json', 'src/shell/torah-he-index.js', 'data/curriculum/intermediate-index.json', 'data/curriculum/intermediate-image-slots.json', 'data/curriculum/class-track.json', 'data/curriculum/practical-units.json', 'data/curriculum/lesson-lexicon.json',
   // Word-builder bank (63 KB): fetched when the builder first opens, runtime-cached (keeps first install under 3.95 MiB after Hallel and festival Kiddush landed in the installed registry).
   'data/builder_words.json',
+  // Share my progress and Class summary (optional routes /share and /classsummary, 22 KB with their summary helpers): fetched on first open
+  // and runtime-cached (keeps first install under 3.95 MiB after the 100 new games' route entries landed).
+  'src/teacher/teacher.view.js', 'src/teacher/summary.js', 'src/teacher/aggregate.js',
   // Word-builder symbols (11 KB) and six preview practice pages (recordcompare, roots, nikkudfade, genderdrill, knownwords, scheduler; 40 KB):
   // fetched on first open and runtime-cached (keeps first install under 3.95 MiB after the 11 November site-check fixes).
   'data/builder_symbols.json', 'src/recordcompare/recordcompare.view.js', 'src/roots/roots.view.js', 'src/nikkudfade/nikkudfade.view.js',

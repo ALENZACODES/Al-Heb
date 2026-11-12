@@ -140,7 +140,7 @@ main .alef-trace .notice, main .alef-atlas .warn { color: #1b1b1f; }
   .site-nav .nav-more { display: none; position: absolute; inset-inline: 0; inset-block-end: 100%; background: var(--card); border: 1px solid var(--border); border-block-end: 0; border-radius: 12px 12px 0 0; padding: .5rem; box-shadow: 0 -6px 16px rgba(0,0,0,.18); }
   .site-nav .nav-more.open { display: grid; grid-template-columns: repeat(auto-fit, minmax(5.5rem, 1fr)); gap: .25rem; }
   .nav-more a { min-block-size: 56px; font-size: .85rem; border: 1px solid var(--border); border-radius: 10px; }
-  main { padding-block-end: 1.5rem; }
+  main { padding-block-end: calc(5rem + env(safe-area-inset-bottom)); } /* last door or tile clears the fixed tab bar (Camera on #/read-home was sitting under it) */
   .site-nav .nav-he { font-size: 1em; }
 }
 
@@ -395,6 +395,7 @@ button, input, select, textarea { letter-spacing: inherit; }
 @media (max-width: 719.98px) {
   :root[data-target-size="large"] body { padding-block-end: calc(5.5rem + env(safe-area-inset-bottom)); }
   :root[data-target-size="large"] { scroll-padding-block-end: calc(5.5rem + env(safe-area-inset-bottom)); }
+  :root[data-target-size="large"] main { padding-block-end: calc(6rem + env(safe-area-inset-bottom)); }
   :root[data-target-size="large"] .site-nav a, :root[data-target-size="large"] .more-btn { min-block-size: 4.25rem; }
   :root[data-target-size="large"] .alef-actionbar { inset-block-end: calc(4.4rem + env(safe-area-inset-bottom)); }
 }

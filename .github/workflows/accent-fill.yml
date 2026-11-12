@@ -1,0 +1,82 @@
+name: accent-fill
+# Sephardi and Ashkenazi clips of their own for rows that play the Israeli clip, made by the repo's accent pipeline
+# (tools/audio/accent_fill.mjs -> render_tts.mjs renderBatch: the Israeli he-IL WaveNet voice reads the tradition's respelling,
+# tempo cap 1.26x the Israeli clip), then reviewed by the three reviewers (tools/audio/accent_review.py). Only clips that pass
+# 2 of 3 are pushed. Needs GOOGLE_TTS_API_KEY (Text-to-Speech and Speech-to-Text). Manual only.
+# Results: john/accent-fill-r<run>-<n> (passing clips + sidecars + docs/audio/fill/accent-r<run>-<n>.jsonl).
+on:
+  workflow_dispatch:
+    inputs:
+      list:
+        description: 'Job list (from tools/audio/accent_fill.mjs --plan)'
+        type: string
+        default: 'tools/audio/accent-list-core.json'
+permissions:
+  contents: write
+concurrency:
+  group: accent-fill
+  cancel-in-progress: false
+jobs:
+  model:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    steps:
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
+        with: { python-version: '3.12' }
+      - name: Convert the pinned sound model
+        run: |
+          pip install -q torch --index-url https://download.pytorch.org/whl/cpu
+          pip install -q transformers ctranslate2==4.8.5
+          ct2-transformers-converter --model renikud/whisper-he-ipa --revision e709a907f8e0e6ebcb83340b8563818dd1bc3bee \
+            --output_dir phoneme-ct2 --quantization int8 --copy_files tokenizer.json preprocessor_config.json
+      - uses: actions/upload-artifact@v4
+        with: { name: phoneme-ct2-accent, path: phoneme-ct2, retention-days: 3 }
+  fill:
+    needs: model
+    runs-on: ubuntu-24.04
+    timeout-minutes: 300
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix:
+        shard: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]
+    env:
+      LANG: C.UTF-8
+      GOOGLE_TTS_API_KEY: ${{ secrets.GOOGLE_TTS_API_KEY }}
+      GOOGLE_STT_API_KEY: ${{ secrets.GOOGLE_STT_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with: { node-version: 22 }
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
+        with: { python-version: '3.12' }
+      - uses: actions/download-artifact@v4
+        with: { name: phoneme-ct2-accent, path: phoneme-ct2 }
+      - name: Tools
+        run: |
+          (sudo apt-get -qq update && sudo apt-get -qq install -y --no-install-recommends ffmpeg) || (pip install -q imageio-ffmpeg && sudo ln -sf "$(python -c 'import imageio_ffmpeg;print(imageio_ffmpeg.get_ffmpeg_exe())')" /usr/local/bin/ffmpeg)
+          pip install -q faster-whisper phonikud numpy
+      - name: Render slice ${{ matrix.shard }} of 20
+        run: node tools/audio/accent_fill.mjs --list "${{ inputs.list }}" --shard ${{ matrix.shard }} --of 20
+      - name: Review slice ${{ matrix.shard }} of 20
+        run: |
+          mkdir -p docs/audio/fill
+          python tools/audio/accent_review.py --list "${{ inputs.list }}" --shard ${{ matrix.shard }} --of 20 \
+            --model phoneme-ct2 --log docs/audio/fill/accent-r${{ github.run_number }}-${{ matrix.shard }}.jsonl
+      - name: Push to john/accent-fill-r${{ github.run_number }}-${{ matrix.shard }}
+        if: always()
+        run: |
+          f=docs/audio/fill/accent-r${{ github.run_number }}-${{ matrix.shard }}.jsonl
+          [ -f "$f" ] || exit 0
+          b=john/accent-fill-r${{ github.run_number }}-${{ matrix.shard }}
+          mkdir -p /tmp/keep && cp "$f" /tmp/keep/log.jsonl
+          python3 -c "import json,sys;[print(r['path']) for r in map(json.loads,open(sys.argv[1],encoding='utf-8')) if r['decision']=='pass']" "$f" > /tmp/passed.txt
+          while read -r c; do mkdir -p "/tmp/keep/$(dirname "$c")"; cp "$c" "/tmp/keep/$c"; cp "$c.meta.json" "/tmp/keep/$c.meta.json"; done < /tmp/passed.txt
+          auth=$(git config --get http.https://github.com/.extraheader)
+          rm -rf /tmp/out && mkdir -p /tmp/out && cp -r /tmp/keep/. /tmp/out/ && cd /tmp/out
+          mkdir -p "$(dirname "$f")" && mv log.jsonl "$f"
+          git init -q && git checkout -q -b "$b"
+          git config user.name "John Khan" && git config user.email "johnnykhan1@gmail.com"
+          git add -A
+          git commit -q -m "Accent clips: slice ${{ matrix.shard }} ($(wc -l < "$f") reviewed, $(wc -l < /tmp/passed.txt) passed)"
+          for i in 1 2 3 4 5; do git -c http.https://github.com/.extraheader="$auth" push -q --force "https://github.com/${{ github.repository }}.git" HEAD:refs/heads/$b && break; sleep $((i*20)); done

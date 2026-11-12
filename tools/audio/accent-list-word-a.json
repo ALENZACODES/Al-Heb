@@ -1,0 +1,3890 @@
+{
+ "schema": "alef-accent-list/1",
+ "kinds": [
+  "word"
+ ],
+ "traditions": [
+  "ashkenazi"
+ ],
+ "estimate": {
+  "rows": 387,
+  "skippedWithWarnings": 0,
+  "chars": 2124,
+  "ttsUsd": 0.01,
+  "sttUsd": 2.32,
+  "totalUsd": 2.33
+ },
+ "rows": [
+  {
+   "path": "audio/m/ashkenazi/word/i-29-w13.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "i-29-w13",
+   "text": "חַג כָּשֵׁר וְשָׂמֵחַ",
+   "spokenText": "chag kosheir vesomeiach",
+   "israeliRef": "audio/m/israeli/word/i-29-w13.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/i-29-w13.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "i-29-w13",
+   "text": "חַג כָּשֵׁר וְשָׂמֵחַ",
+   "spokenText": "chag kosheir vesomeiach",
+   "israeliRef": "audio/f/israeli/word/i-29-w13.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/i-28-w13.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "i-28-w13",
+   "text": "גְּמַר חֲתִימָה טוֹבָה",
+   "spokenText": "gemar chasimoh tovoh",
+   "israeliRef": "audio/m/israeli/word/i-28-w13.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/i-28-w13.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "i-28-w13",
+   "text": "גְּמַר חֲתִימָה טוֹבָה",
+   "spokenText": "gemar chasimoh tovoh",
+   "israeliRef": "audio/f/israeli/word/i-28-w13.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hdd2efa8e.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hdd2efa8e",
+   "text": "עָשָׂה",
+   "spokenText": "osoh",
+   "israeliRef": "audio/m/israeli/word/hdd2efa8e.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hdd2efa8e.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hdd2efa8e",
+   "text": "עָשָׂה",
+   "spokenText": "osoh",
+   "israeliRef": "audio/f/israeli/word/hdd2efa8e.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hf8c8316a.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf8c8316a",
+   "text": "שָׁלוֹם",
+   "spokenText": "sholom",
+   "israeliRef": "audio/m/israeli/word/hf8c8316a.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hf8c8316a.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf8c8316a",
+   "text": "שָׁלוֹם",
+   "spokenText": "sholom",
+   "israeliRef": "audio/f/israeli/word/hf8c8316a.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/pefce5ddb.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "pefce5ddb",
+   "text": "כָּל",
+   "spokenText": "kol",
+   "israeliRef": "audio/m/israeli/word/pefce5ddb.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/pefce5ddb.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "pefce5ddb",
+   "text": "כָּל",
+   "spokenText": "kol",
+   "israeliRef": "audio/f/israeli/word/pefce5ddb.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hea72b7d7.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hea72b7d7",
+   "text": "אִמֵּן",
+   "spokenText": "imein",
+   "israeliRef": "audio/m/israeli/word/hea72b7d7.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hea72b7d7.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hea72b7d7",
+   "text": "אִמֵּן",
+   "spokenText": "imein",
+   "israeliRef": "audio/f/israeli/word/hea72b7d7.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hf2bba104.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf2bba104",
+   "text": "שָׁם",
+   "spokenText": "shom",
+   "israeliRef": "audio/m/israeli/word/hf2bba104.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hf2bba104.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf2bba104",
+   "text": "שָׁם",
+   "spokenText": "shom",
+   "israeliRef": "audio/f/israeli/word/hf2bba104.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/h6b853dd5.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "h6b853dd5",
+   "text": "אֱלֹהִים",
+   "spokenText": "elohim",
+   "israeliRef": "audio/m/israeli/word/h6b853dd5.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/he5c23387.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he5c23387",
+   "text": "אֱמֶת",
+   "spokenText": "emes",
+   "israeliRef": "audio/m/israeli/word/he5c23387.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/he5c23387.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he5c23387",
+   "text": "אֱמֶת",
+   "spokenText": "emes",
+   "israeliRef": "audio/f/israeli/word/he5c23387.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/he801fe52.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he801fe52",
+   "text": "שְׁבִיעִי",
+   "spokenText": "shevi'i",
+   "israeliRef": "audio/m/israeli/word/he801fe52.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/he801fe52.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he801fe52",
+   "text": "שְׁבִיעִי",
+   "spokenText": "shevi'i",
+   "israeliRef": "audio/f/israeli/word/he801fe52.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hffd88aa2.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hffd88aa2",
+   "text": "עָקַב",
+   "spokenText": "okav",
+   "israeliRef": "audio/m/israeli/word/hffd88aa2.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hffd88aa2.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hffd88aa2",
+   "text": "עָקַב",
+   "spokenText": "okav",
+   "israeliRef": "audio/f/israeli/word/hffd88aa2.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/p580df509.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "p580df509",
+   "text": "בְּבַקָּשָׁה",
+   "spokenText": "bevakoshoh",
+   "israeliRef": "audio/m/israeli/word/p580df509.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/p580df509.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "p580df509",
+   "text": "בְּבַקָּשָׁה",
+   "spokenText": "bevakoshoh",
+   "israeliRef": "audio/f/israeli/word/p580df509.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hfe0c1c1e.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hfe0c1c1e",
+   "text": "אִפְשֵׁר",
+   "spokenText": "ifsheir",
+   "israeliRef": "audio/m/israeli/word/hfe0c1c1e.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hfe0c1c1e.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hfe0c1c1e",
+   "text": "אִפְשֵׁר",
+   "spokenText": "ifsheir",
+   "israeliRef": "audio/f/israeli/word/hfe0c1c1e.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hddb7aae9.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hddb7aae9",
+   "text": "אָדוֹן",
+   "spokenText": "odon",
+   "israeliRef": "audio/m/israeli/word/hddb7aae9.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hddb7aae9.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hddb7aae9",
+   "text": "אָדוֹן",
+   "spokenText": "odon",
+   "israeliRef": "audio/f/israeli/word/hddb7aae9.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hf63de22c.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf63de22c",
+   "text": "כֵּן",
+   "spokenText": "kein",
+   "israeliRef": "audio/m/israeli/word/hf63de22c.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hf63de22c.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf63de22c",
+   "text": "כֵּן",
+   "spokenText": "kein",
+   "israeliRef": "audio/f/israeli/word/hf63de22c.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hf4b5a979.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf4b5a979",
+   "text": "אֵיפֹה",
+   "spokenText": "eifoh",
+   "israeliRef": "audio/m/israeli/word/hf4b5a979.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hf4b5a979.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf4b5a979",
+   "text": "אֵיפֹה",
+   "spokenText": "eifoh",
+   "israeliRef": "audio/f/israeli/word/hf4b5a979.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hdee3e527.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hdee3e527",
+   "text": "אֲנַחְנוּ",
+   "spokenText": "anachnu",
+   "israeliRef": "audio/m/israeli/word/hdee3e527.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hdee3e527.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hdee3e527",
+   "text": "אֲנַחְנוּ",
+   "spokenText": "anachnu",
+   "israeliRef": "audio/f/israeli/word/hdee3e527.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hfd4bf43b.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hfd4bf43b",
+   "text": "זָכַר",
+   "spokenText": "zokhar",
+   "israeliRef": "audio/m/israeli/word/hfd4bf43b.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hfd4bf43b.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hfd4bf43b",
+   "text": "זָכַר",
+   "spokenText": "zokhar",
+   "israeliRef": "audio/f/israeli/word/hfd4bf43b.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hdd2bd792.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hdd2bd792",
+   "text": "גָּדוֹל",
+   "spokenText": "godol",
+   "israeliRef": "audio/m/israeli/word/hdd2bd792.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hdd2bd792.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hdd2bd792",
+   "text": "גָּדוֹל",
+   "spokenText": "godol",
+   "israeliRef": "audio/f/israeli/word/hdd2bd792.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/he0b2f96b.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he0b2f96b",
+   "text": "תּוֹדָה",
+   "spokenText": "todoh",
+   "israeliRef": "audio/m/israeli/word/he0b2f96b.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/he0b2f96b.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he0b2f96b",
+   "text": "תּוֹדָה",
+   "spokenText": "todoh",
+   "israeliRef": "audio/f/israeli/word/he0b2f96b.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hdbd6764a.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hdbd6764a",
+   "text": "סִדֵּר",
+   "spokenText": "sideir",
+   "israeliRef": "audio/m/israeli/word/hdbd6764a.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hdbd6764a.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hdbd6764a",
+   "text": "סִדֵּר",
+   "spokenText": "sideir",
+   "israeliRef": "audio/f/israeli/word/hdbd6764a.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hf07c1580.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf07c1580",
+   "text": "שָׁנָה",
+   "spokenText": "shonoh",
+   "israeliRef": "audio/m/israeli/word/hf07c1580.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hf07c1580.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf07c1580",
+   "text": "שָׁנָה",
+   "spokenText": "shonoh",
+   "israeliRef": "audio/f/israeli/word/hf07c1580.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/heaa07285.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "heaa07285",
+   "text": "אִחֵר",
+   "spokenText": "icheir",
+   "israeliRef": "audio/m/israeli/word/heaa07285.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/heaa07285.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "heaa07285",
+   "text": "אִחֵר",
+   "spokenText": "icheir",
+   "israeliRef": "audio/f/israeli/word/heaa07285.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hea14727f.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hea14727f",
+   "text": "זֹאת",
+   "spokenText": "zos",
+   "israeliRef": "audio/m/israeli/word/hea14727f.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hea14727f.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hea14727f",
+   "text": "זֹאת",
+   "spokenText": "zos",
+   "israeliRef": "audio/f/israeli/word/hea14727f.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/heb070da2.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "heb070da2",
+   "text": "קָנָה",
+   "spokenText": "konoh",
+   "israeliRef": "audio/m/israeli/word/heb070da2.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/heb070da2.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "heb070da2",
+   "text": "קָנָה",
+   "spokenText": "konoh",
+   "israeliRef": "audio/f/israeli/word/heb070da2.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/he15e52d3.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he15e52d3",
+   "text": "טֶלֶפוֹן",
+   "spokenText": "telefon",
+   "israeliRef": "audio/m/israeli/word/he15e52d3.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/he15e52d3.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he15e52d3",
+   "text": "טֶלֶפוֹן",
+   "spokenText": "telefon",
+   "israeliRef": "audio/f/israeli/word/he15e52d3.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hd9ea111b.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hd9ea111b",
+   "text": "רֵיק",
+   "spokenText": "reik",
+   "israeliRef": "audio/m/israeli/word/hd9ea111b.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hd9ea111b.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hd9ea111b",
+   "text": "רֵיק",
+   "spokenText": "reik",
+   "israeliRef": "audio/f/israeli/word/hd9ea111b.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hd9cf2fa5.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hd9cf2fa5",
+   "text": "יָקָר",
+   "spokenText": "yokor",
+   "israeliRef": "audio/m/israeli/word/hd9cf2fa5.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hd9cf2fa5.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hd9cf2fa5",
+   "text": "יָקָר",
+   "spokenText": "yokor",
+   "israeliRef": "audio/f/israeli/word/hd9cf2fa5.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/he9919e02.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he9919e02",
+   "text": "לְ־",
+   "spokenText": "le",
+   "israeliRef": "audio/m/israeli/word/he9919e02.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/he9919e02.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he9919e02",
+   "text": "לְ־",
+   "spokenText": "le",
+   "israeliRef": "audio/f/israeli/word/he9919e02.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hea4f6fcc.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hea4f6fcc",
+   "text": "חֵן",
+   "spokenText": "chein",
+   "israeliRef": "audio/m/israeli/word/hea4f6fcc.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hea4f6fcc.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hea4f6fcc",
+   "text": "חֵן",
+   "spokenText": "chein",
+   "israeliRef": "audio/f/israeli/word/hea4f6fcc.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/he527093f.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he527093f",
+   "text": "חֹם",
+   "spokenText": "chom",
+   "israeliRef": "audio/m/israeli/word/he527093f.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/he527093f.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he527093f",
+   "text": "חֹם",
+   "spokenText": "chom",
+   "israeliRef": "audio/f/israeli/word/he527093f.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hf9047f4b.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf9047f4b",
+   "text": "כּוֹס",
+   "spokenText": "kos",
+   "israeliRef": "audio/m/israeli/word/hf9047f4b.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hf9047f4b.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf9047f4b",
+   "text": "כּוֹס",
+   "spokenText": "kos",
+   "israeliRef": "audio/f/israeli/word/hf9047f4b.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hfe074a94.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hfe074a94",
+   "text": "טֶרֶם",
+   "spokenText": "terem",
+   "israeliRef": "audio/m/israeli/word/hfe074a94.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hfe074a94.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hfe074a94",
+   "text": "טֶרֶם",
+   "spokenText": "terem",
+   "israeliRef": "audio/f/israeli/word/hfe074a94.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hf5bee50d.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf5bee50d",
+   "text": "לַיְלָה",
+   "spokenText": "layloh",
+   "israeliRef": "audio/m/israeli/word/hf5bee50d.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hf5bee50d.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf5bee50d",
+   "text": "לַיְלָה",
+   "spokenText": "layloh",
+   "israeliRef": "audio/f/israeli/word/hf5bee50d.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/he90efaca.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he90efaca",
+   "text": "בַּי",
+   "spokenText": "bai",
+   "israeliRef": "audio/m/israeli/word/he90efaca.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/he90efaca.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he90efaca",
+   "text": "בַּי",
+   "spokenText": "bai",
+   "israeliRef": "audio/f/israeli/word/he90efaca.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hfaefa59a.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hfaefa59a",
+   "text": "קִבֵּל",
+   "spokenText": "kibeil",
+   "israeliRef": "audio/m/israeli/word/hfaefa59a.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hfaefa59a.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hfaefa59a",
+   "text": "קִבֵּל",
+   "spokenText": "kibeil",
+   "israeliRef": "audio/f/israeli/word/hfaefa59a.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hfe4ebf2c.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hfe4ebf2c",
+   "text": "אָדָם",
+   "spokenText": "odom",
+   "israeliRef": "audio/m/israeli/word/hfe4ebf2c.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hfe4ebf2c.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hfe4ebf2c",
+   "text": "אָדָם",
+   "spokenText": "odom",
+   "israeliRef": "audio/f/israeli/word/hfe4ebf2c.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hf28ba308.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf28ba308",
+   "text": "יָדַע",
+   "spokenText": "yoda",
+   "israeliRef": "audio/m/israeli/word/hf28ba308.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hf28ba308.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf28ba308",
+   "text": "יָדַע",
+   "spokenText": "yoda",
+   "israeliRef": "audio/f/israeli/word/hf28ba308.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hef6e1613.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hef6e1613",
+   "text": "אִישׁ",
+   "spokenText": "ish",
+   "israeliRef": "audio/m/israeli/word/hef6e1613.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hef6e1613.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hef6e1613",
+   "text": "אִישׁ",
+   "spokenText": "ish",
+   "israeliRef": "audio/f/israeli/word/hef6e1613.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hfcd9d9b6.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hfcd9d9b6",
+   "text": "יָשַׁב",
+   "spokenText": "yoshav",
+   "israeliRef": "audio/m/israeli/word/hfcd9d9b6.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hfcd9d9b6.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hfcd9d9b6",
+   "text": "יָשַׁב",
+   "spokenText": "yoshav",
+   "israeliRef": "audio/f/israeli/word/hfcd9d9b6.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hfa69f51c.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hfa69f51c",
+   "text": "הִתְרָאָה",
+   "spokenText": "hisro'oh",
+   "israeliRef": "audio/m/israeli/word/hfa69f51c.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hfa69f51c.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hfa69f51c",
+   "text": "הִתְרָאָה",
+   "spokenText": "hisro'oh",
+   "israeliRef": "audio/f/israeli/word/hfa69f51c.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hf19f0a88.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf19f0a88",
+   "text": "בַּנְק",
+   "spokenText": "bank",
+   "israeliRef": "audio/m/israeli/word/hf19f0a88.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hf19f0a88.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf19f0a88",
+   "text": "בַּנְק",
+   "spokenText": "bank",
+   "israeliRef": "audio/f/israeli/word/hf19f0a88.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hfaa15644.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hfaa15644",
+   "text": "זוֹל",
+   "spokenText": "zol",
+   "israeliRef": "audio/m/israeli/word/hfaa15644.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hfaa15644.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hfaa15644",
+   "text": "זוֹל",
+   "spokenText": "zol",
+   "israeliRef": "audio/f/israeli/word/hfaa15644.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hdcd31646.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hdcd31646",
+   "text": "אוּלַי",
+   "spokenText": "ulai",
+   "israeliRef": "audio/m/israeli/word/hdcd31646.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hdcd31646.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hdcd31646",
+   "text": "אוּלַי",
+   "spokenText": "ulai",
+   "israeliRef": "audio/f/israeli/word/hdcd31646.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hf14f89e0.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf14f89e0",
+   "text": "יִבֵּא",
+   "spokenText": "yibei",
+   "israeliRef": "audio/m/israeli/word/hf14f89e0.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hf14f89e0.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf14f89e0",
+   "text": "יִבֵּא",
+   "spokenText": "yibei",
+   "israeliRef": "audio/f/israeli/word/hf14f89e0.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/he0448a86.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he0448a86",
+   "text": "פֹּה",
+   "spokenText": "poh",
+   "israeliRef": "audio/m/israeli/word/he0448a86.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/he0448a86.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he0448a86",
+   "text": "פֹּה",
+   "spokenText": "poh",
+   "israeliRef": "audio/f/israeli/word/he0448a86.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hf3892816.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf3892816",
+   "text": "אֵיזֶה",
+   "spokenText": "eizeh",
+   "israeliRef": "audio/m/israeli/word/hf3892816.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hf3892816.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf3892816",
+   "text": "אֵיזֶה",
+   "spokenText": "eizeh",
+   "israeliRef": "audio/f/israeli/word/hf3892816.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hf95173f3.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf95173f3",
+   "text": "מִשְׁפָּט",
+   "spokenText": "mishpot",
+   "israeliRef": "audio/m/israeli/word/hf95173f3.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hf95173f3.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf95173f3",
+   "text": "מִשְׁפָּט",
+   "spokenText": "mishpot",
+   "israeliRef": "audio/f/israeli/word/hf95173f3.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hfb819565.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hfb819565",
+   "text": "רוּחַ",
+   "spokenText": "ruach",
+   "israeliRef": "audio/m/israeli/word/hfb819565.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hfb819565.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hfb819565",
+   "text": "רוּחַ",
+   "spokenText": "ruach",
+   "israeliRef": "audio/f/israeli/word/hfb819565.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hfc2573fa.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hfc2573fa",
+   "text": "נִמְצָא",
+   "spokenText": "nimtzo",
+   "israeliRef": "audio/m/israeli/word/hfc2573fa.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hfc2573fa.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hfc2573fa",
+   "text": "נִמְצָא",
+   "spokenText": "nimtzo",
+   "israeliRef": "audio/f/israeli/word/hfc2573fa.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hf68e31d9.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf68e31d9",
+   "text": "הֶעֱלָה",
+   "spokenText": "he'eloh",
+   "israeliRef": "audio/m/israeli/word/hf68e31d9.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hf68e31d9.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf68e31d9",
+   "text": "הֶעֱלָה",
+   "spokenText": "he'eloh",
+   "israeliRef": "audio/f/israeli/word/hf68e31d9.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/he43ad309.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he43ad309",
+   "text": "שָׁפַט",
+   "spokenText": "shofat",
+   "israeliRef": "audio/m/israeli/word/he43ad309.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/he43ad309.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he43ad309",
+   "text": "שָׁפַט",
+   "spokenText": "shofat",
+   "israeliRef": "audio/f/israeli/word/he43ad309.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/p71df0447.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "p71df0447",
+   "text": "שָׁלוֹשׁ",
+   "spokenText": "sholosh",
+   "israeliRef": "audio/m/israeli/word/p71df0447.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/p71df0447.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "p71df0447",
+   "text": "שָׁלוֹשׁ",
+   "spokenText": "sholosh",
+   "israeliRef": "audio/f/israeli/word/p71df0447.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hda5653dd.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hda5653dd",
+   "text": "לְבַד",
+   "spokenText": "levad",
+   "israeliRef": "audio/m/israeli/word/hda5653dd.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hda5653dd.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hda5653dd",
+   "text": "לְבַד",
+   "spokenText": "levad",
+   "israeliRef": "audio/f/israeli/word/hda5653dd.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hf60e846a.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf60e846a",
+   "text": "הִסְכִּים",
+   "spokenText": "hiskim",
+   "israeliRef": "audio/m/israeli/word/hf60e846a.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hf60e846a.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf60e846a",
+   "text": "הִסְכִּים",
+   "spokenText": "hiskim",
+   "israeliRef": "audio/f/israeli/word/hf60e846a.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hef7b6946.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hef7b6946",
+   "text": "מִשְׁטָרָה",
+   "spokenText": "mishtoroh",
+   "israeliRef": "audio/m/israeli/word/hef7b6946.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hef7b6946.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hef7b6946",
+   "text": "מִשְׁטָרָה",
+   "spokenText": "mishtoroh",
+   "israeliRef": "audio/f/israeli/word/hef7b6946.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/he0fc258b.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he0fc258b",
+   "text": "עֵז",
+   "spokenText": "eiz",
+   "israeliRef": "audio/m/israeli/word/he0fc258b.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/he0fc258b.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he0fc258b",
+   "text": "עֵז",
+   "spokenText": "eiz",
+   "israeliRef": "audio/f/israeli/word/he0fc258b.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/he19222ad.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he19222ad",
+   "text": "יָמִין",
+   "spokenText": "yomin",
+   "israeliRef": "audio/m/israeli/word/he19222ad.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/he19222ad.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he19222ad",
+   "text": "יָמִין",
+   "spokenText": "yomin",
+   "israeliRef": "audio/f/israeli/word/he19222ad.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/he6d29dfd.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he6d29dfd",
+   "text": "פָּתוּחַ",
+   "spokenText": "posuach",
+   "israeliRef": "audio/m/israeli/word/he6d29dfd.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/he6d29dfd.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he6d29dfd",
+   "text": "פָּתוּחַ",
+   "spokenText": "posuach",
+   "israeliRef": "audio/f/israeli/word/he6d29dfd.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/he38160e3.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he38160e3",
+   "text": "רֵיקָם",
+   "spokenText": "reikom",
+   "israeliRef": "audio/m/israeli/word/he38160e3.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/he38160e3.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he38160e3",
+   "text": "רֵיקָם",
+   "spokenText": "reikom",
+   "israeliRef": "audio/f/israeli/word/he38160e3.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/p0962becf.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "p0962becf",
+   "text": "אַחַת",
+   "spokenText": "achas",
+   "israeliRef": "audio/m/israeli/word/p0962becf.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/p0962becf.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "p0962becf",
+   "text": "אַחַת",
+   "spokenText": "achas",
+   "israeliRef": "audio/f/israeli/word/p0962becf.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/he1a5e616.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he1a5e616",
+   "text": "בֶּגֶד",
+   "spokenText": "beged",
+   "israeliRef": "audio/m/israeli/word/he1a5e616.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/he1a5e616.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he1a5e616",
+   "text": "בֶּגֶד",
+   "spokenText": "beged",
+   "israeliRef": "audio/f/israeli/word/he1a5e616.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/he1477da0.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he1477da0",
+   "text": "גֵּר",
+   "spokenText": "geir",
+   "israeliRef": "audio/m/israeli/word/he1477da0.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/he1477da0.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he1477da0",
+   "text": "גֵּר",
+   "spokenText": "geir",
+   "israeliRef": "audio/f/israeli/word/he1477da0.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hf31e9426.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf31e9426",
+   "text": "מוּכָן",
+   "spokenText": "mukhon",
+   "israeliRef": "audio/m/israeli/word/hf31e9426.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hf31e9426.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf31e9426",
+   "text": "מוּכָן",
+   "spokenText": "mukhon",
+   "israeliRef": "audio/f/israeli/word/hf31e9426.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/he314ca8e.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he314ca8e",
+   "text": "כַּדּוּר",
+   "spokenText": "kadur",
+   "israeliRef": "audio/m/israeli/word/he314ca8e.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/he314ca8e.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he314ca8e",
+   "text": "כַּדּוּר",
+   "spokenText": "kadur",
+   "israeliRef": "audio/f/israeli/word/he314ca8e.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hf3a8608b.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf3a8608b",
+   "text": "טָעַן",
+   "spokenText": "to'an",
+   "israeliRef": "audio/m/israeli/word/hf3a8608b.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hf3a8608b.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf3a8608b",
+   "text": "טָעַן",
+   "spokenText": "to'an",
+   "israeliRef": "audio/f/israeli/word/hf3a8608b.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hf3d6a0bb.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf3d6a0bb",
+   "text": "תְּשׁוּבָה",
+   "spokenText": "teshuvoh",
+   "israeliRef": "audio/m/israeli/word/hf3d6a0bb.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hf3d6a0bb.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf3d6a0bb",
+   "text": "תְּשׁוּבָה",
+   "spokenText": "teshuvoh",
+   "israeliRef": "audio/f/israeli/word/hf3d6a0bb.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hde989655.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hde989655",
+   "text": "סָתַר",
+   "spokenText": "sosar",
+   "israeliRef": "audio/m/israeli/word/hde989655.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hde989655.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hde989655",
+   "text": "סָתַר",
+   "spokenText": "sosar",
+   "israeliRef": "audio/f/israeli/word/hde989655.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/p92bccc56.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "p92bccc56",
+   "text": "שְׁתַּיִם",
+   "spokenText": "shtayim",
+   "israeliRef": "audio/m/israeli/word/p92bccc56.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/p92bccc56.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "p92bccc56",
+   "text": "שְׁתַּיִם",
+   "spokenText": "shtayim",
+   "israeliRef": "audio/f/israeli/word/p92bccc56.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/pc34fd630.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "pc34fd630",
+   "text": "אַרְבַּע",
+   "spokenText": "arba",
+   "israeliRef": "audio/m/israeli/word/pc34fd630.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/pc34fd630.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "pc34fd630",
+   "text": "אַרְבַּע",
+   "spokenText": "arba",
+   "israeliRef": "audio/f/israeli/word/pc34fd630.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hea59fdfe.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hea59fdfe",
+   "text": "שֵׁרוּת",
+   "spokenText": "sheirus",
+   "israeliRef": "audio/m/israeli/word/hea59fdfe.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hea59fdfe.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hea59fdfe",
+   "text": "שֵׁרוּת",
+   "spokenText": "sheirus",
+   "israeliRef": "audio/f/israeli/word/hea59fdfe.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hde2302bb.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hde2302bb",
+   "text": "חוֹף",
+   "spokenText": "chof",
+   "israeliRef": "audio/m/israeli/word/hde2302bb.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hde2302bb.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hde2302bb",
+   "text": "חוֹף",
+   "spokenText": "chof",
+   "israeliRef": "audio/f/israeli/word/hde2302bb.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/he078c9e6.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he078c9e6",
+   "text": "מַשְׁקֶה",
+   "spokenText": "mashkeh",
+   "israeliRef": "audio/m/israeli/word/he078c9e6.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/he078c9e6.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he078c9e6",
+   "text": "מַשְׁקֶה",
+   "spokenText": "mashkeh",
+   "israeliRef": "audio/f/israeli/word/he078c9e6.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hfac8b79e.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hfac8b79e",
+   "text": "שֻׁלְחָן",
+   "spokenText": "shulchon",
+   "israeliRef": "audio/m/israeli/word/hfac8b79e.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hfac8b79e.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hfac8b79e",
+   "text": "שֻׁלְחָן",
+   "spokenText": "shulchon",
+   "israeliRef": "audio/f/israeli/word/hfac8b79e.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hf1200b64.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf1200b64",
+   "text": "חֻלְצָה",
+   "spokenText": "chultzoh",
+   "israeliRef": "audio/m/israeli/word/hf1200b64.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hf1200b64.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf1200b64",
+   "text": "חֻלְצָה",
+   "spokenText": "chultzoh",
+   "israeliRef": "audio/f/israeli/word/hf1200b64.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hf31190f0.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf31190f0",
+   "text": "פָּנוּי",
+   "spokenText": "ponuy",
+   "israeliRef": "audio/m/israeli/word/hf31190f0.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hf31190f0.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf31190f0",
+   "text": "פָּנוּי",
+   "spokenText": "ponuy",
+   "israeliRef": "audio/f/israeli/word/hf31190f0.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hf3ec3b23.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf3ec3b23",
+   "text": "כְּמוֹ",
+   "spokenText": "kemo",
+   "israeliRef": "audio/m/israeli/word/hf3ec3b23.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hf3ec3b23.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf3ec3b23",
+   "text": "כְּמוֹ",
+   "spokenText": "kemo",
+   "israeliRef": "audio/f/israeli/word/hf3ec3b23.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/he943571e.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he943571e",
+   "text": "אִשָּׁה",
+   "spokenText": "ishoh",
+   "israeliRef": "audio/m/israeli/word/he943571e.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/he943571e.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he943571e",
+   "text": "אִשָּׁה",
+   "spokenText": "ishoh",
+   "israeliRef": "audio/f/israeli/word/he943571e.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hf1ccd0e6.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf1ccd0e6",
+   "text": "אֱלוֹהַּ",
+   "spokenText": "eloah",
+   "israeliRef": "audio/m/israeli/word/hf1ccd0e6.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hf1ccd0e6.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf1ccd0e6",
+   "text": "אֱלוֹהַּ",
+   "spokenText": "eloah",
+   "israeliRef": "audio/f/israeli/word/hf1ccd0e6.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hf5a50e5d.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf5a50e5d",
+   "text": "אִי",
+   "spokenText": "i",
+   "israeliRef": "audio/m/israeli/word/hf5a50e5d.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hf5a50e5d.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf5a50e5d",
+   "text": "אִי",
+   "spokenText": "i",
+   "israeliRef": "audio/f/israeli/word/hf5a50e5d.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/he3b1acbd.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he3b1acbd",
+   "text": "עִיר",
+   "spokenText": "ir",
+   "israeliRef": "audio/m/israeli/word/he3b1acbd.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/he3b1acbd.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he3b1acbd",
+   "text": "עִיר",
+   "spokenText": "ir",
+   "israeliRef": "audio/f/israeli/word/he3b1acbd.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hfd3118ed.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hfd3118ed",
+   "text": "הִגִּיעַ",
+   "spokenText": "higi'a",
+   "israeliRef": "audio/m/israeli/word/hfd3118ed.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hfd3118ed.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hfd3118ed",
+   "text": "הִגִּיעַ",
+   "spokenText": "higi'a",
+   "israeliRef": "audio/f/israeli/word/hfd3118ed.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/he6287163.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he6287163",
+   "text": "זָבַח",
+   "spokenText": "zovach",
+   "israeliRef": "audio/m/israeli/word/he6287163.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/he6287163.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he6287163",
+   "text": "זָבַח",
+   "spokenText": "zovach",
+   "israeliRef": "audio/f/israeli/word/he6287163.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hf95a2330.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf95a2330",
+   "text": "נִסָּה",
+   "spokenText": "nisoh",
+   "israeliRef": "audio/m/israeli/word/hf95a2330.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hf95a2330.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf95a2330",
+   "text": "נִסָּה",
+   "spokenText": "nisoh",
+   "israeliRef": "audio/f/israeli/word/hf95a2330.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hfa746c05.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hfa746c05",
+   "text": "עֲדַיִן",
+   "spokenText": "adayin",
+   "israeliRef": "audio/m/israeli/word/hfa746c05.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hfa746c05.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hfa746c05",
+   "text": "עֲדַיִן",
+   "spokenText": "adayin",
+   "israeliRef": "audio/f/israeli/word/hfa746c05.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/heb8a3bc1.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "heb8a3bc1",
+   "text": "הֵן",
+   "spokenText": "hein",
+   "israeliRef": "audio/m/israeli/word/heb8a3bc1.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/heb8a3bc1.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "heb8a3bc1",
+   "text": "הֵן",
+   "spokenText": "hein",
+   "israeliRef": "audio/f/israeli/word/heb8a3bc1.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hdb9bd37f.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hdb9bd37f",
+   "text": "עָזַב",
+   "spokenText": "ozav",
+   "israeliRef": "audio/m/israeli/word/hdb9bd37f.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hdb9bd37f.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hdb9bd37f",
+   "text": "עָזַב",
+   "spokenText": "ozav",
+   "israeliRef": "audio/f/israeli/word/hdb9bd37f.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hdd847ae4.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hdd847ae4",
+   "text": "סָלַח",
+   "spokenText": "solach",
+   "israeliRef": "audio/m/israeli/word/hdd847ae4.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hdd847ae4.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hdd847ae4",
+   "text": "סָלַח",
+   "spokenText": "solach",
+   "israeliRef": "audio/f/israeli/word/hdd847ae4.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/he8dfed90.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he8dfed90",
+   "text": "נִשְׁאַר",
+   "spokenText": "nish'ar",
+   "israeliRef": "audio/m/israeli/word/he8dfed90.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/he8dfed90.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he8dfed90",
+   "text": "נִשְׁאַר",
+   "spokenText": "nish'ar",
+   "israeliRef": "audio/f/israeli/word/he8dfed90.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hf1da5ea6.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf1da5ea6",
+   "text": "אֵשׁ",
+   "spokenText": "eish",
+   "israeliRef": "audio/m/israeli/word/hf1da5ea6.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hf1da5ea6.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf1da5ea6",
+   "text": "אֵשׁ",
+   "spokenText": "eish",
+   "israeliRef": "audio/f/israeli/word/hf1da5ea6.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hf8d6ef2c.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf8d6ef2c",
+   "text": "גָּמַר",
+   "spokenText": "gomar",
+   "israeliRef": "audio/m/israeli/word/hf8d6ef2c.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hf8d6ef2c.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf8d6ef2c",
+   "text": "גָּמַר",
+   "spokenText": "gomar",
+   "israeliRef": "audio/f/israeli/word/hf8d6ef2c.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/he945f31c.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he945f31c",
+   "text": "חֶרֶב",
+   "spokenText": "cherev",
+   "israeliRef": "audio/m/israeli/word/he945f31c.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/he945f31c.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he945f31c",
+   "text": "חֶרֶב",
+   "spokenText": "cherev",
+   "israeliRef": "audio/f/israeli/word/he945f31c.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/he53d1d1d.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he53d1d1d",
+   "text": "אֶבֶן",
+   "spokenText": "even",
+   "israeliRef": "audio/m/israeli/word/he53d1d1d.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/he53d1d1d.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he53d1d1d",
+   "text": "אֶבֶן",
+   "spokenText": "even",
+   "israeliRef": "audio/f/israeli/word/he53d1d1d.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hfe1ddb27.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hfe1ddb27",
+   "text": "נָפַל",
+   "spokenText": "nofal",
+   "israeliRef": "audio/m/israeli/word/hfe1ddb27.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hfe1ddb27.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hfe1ddb27",
+   "text": "נָפַל",
+   "spokenText": "nofal",
+   "israeliRef": "audio/f/israeli/word/hfe1ddb27.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hf5f3eb91.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf5f3eb91",
+   "text": "זָז",
+   "spokenText": "zoz",
+   "israeliRef": "audio/m/israeli/word/hf5f3eb91.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hf5f3eb91.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf5f3eb91",
+   "text": "זָז",
+   "spokenText": "zoz",
+   "israeliRef": "audio/f/israeli/word/hf5f3eb91.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/he22b4a86.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he22b4a86",
+   "text": "שַׂר",
+   "spokenText": "sar",
+   "israeliRef": "audio/m/israeli/word/he22b4a86.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/he22b4a86.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he22b4a86",
+   "text": "שַׂר",
+   "spokenText": "sar",
+   "israeliRef": "audio/f/israeli/word/he22b4a86.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hf94d4d72.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf94d4d72",
+   "text": "אֵד",
+   "spokenText": "eid",
+   "israeliRef": "audio/m/israeli/word/hf94d4d72.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hf94d4d72.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf94d4d72",
+   "text": "אֵד",
+   "spokenText": "eid",
+   "israeliRef": "audio/f/israeli/word/hf94d4d72.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hddb5189f.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hddb5189f",
+   "text": "שַׁעַר",
+   "spokenText": "sha'ar",
+   "israeliRef": "audio/m/israeli/word/hddb5189f.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hddb5189f.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hddb5189f",
+   "text": "שַׁעַר",
+   "spokenText": "sha'ar",
+   "israeliRef": "audio/f/israeli/word/hddb5189f.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hdb3c45eb.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hdb3c45eb",
+   "text": "רֶגֶל",
+   "spokenText": "regel",
+   "israeliRef": "audio/m/israeli/word/hdb3c45eb.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hdb3c45eb.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hdb3c45eb",
+   "text": "רֶגֶל",
+   "spokenText": "regel",
+   "israeliRef": "audio/f/israeli/word/hdb3c45eb.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/he9d6c9ab.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he9d6c9ab",
+   "text": "כַּר",
+   "spokenText": "kar",
+   "israeliRef": "audio/m/israeli/word/he9d6c9ab.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/he9d6c9ab.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he9d6c9ab",
+   "text": "כַּר",
+   "spokenText": "kar",
+   "israeliRef": "audio/f/israeli/word/he9d6c9ab.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hfdbafdf6.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hfdbafdf6",
+   "text": "בִּגְלַל",
+   "spokenText": "biglal",
+   "israeliRef": "audio/m/israeli/word/hfdbafdf6.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hfdbafdf6.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hfdbafdf6",
+   "text": "בִּגְלַל",
+   "spokenText": "biglal",
+   "israeliRef": "audio/f/israeli/word/hfdbafdf6.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hdebf05db.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hdebf05db",
+   "text": "הִשְׁאִיר",
+   "spokenText": "hish'ir",
+   "israeliRef": "audio/m/israeli/word/hdebf05db.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hdebf05db.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hdebf05db",
+   "text": "הִשְׁאִיר",
+   "spokenText": "hish'ir",
+   "israeliRef": "audio/f/israeli/word/hdebf05db.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hef13f241.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hef13f241",
+   "text": "גִּלָּה",
+   "spokenText": "giloh",
+   "israeliRef": "audio/m/israeli/word/hef13f241.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hef13f241.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hef13f241",
+   "text": "גִּלָּה",
+   "spokenText": "giloh",
+   "israeliRef": "audio/f/israeli/word/hef13f241.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hdf8bcf60.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hdf8bcf60",
+   "text": "תׇּכְנִית",
+   "spokenText": "tokhnis",
+   "israeliRef": "audio/m/israeli/word/hdf8bcf60.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hdf8bcf60.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hdf8bcf60",
+   "text": "תׇּכְנִית",
+   "spokenText": "tokhnis",
+   "israeliRef": "audio/f/israeli/word/hdf8bcf60.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hfb9cb2bb.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hfb9cb2bb",
+   "text": "הֶחְזִיק",
+   "spokenText": "hechzik",
+   "israeliRef": "audio/m/israeli/word/hfb9cb2bb.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hfb9cb2bb.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hfb9cb2bb",
+   "text": "הֶחְזִיק",
+   "spokenText": "hechzik",
+   "israeliRef": "audio/f/israeli/word/hfb9cb2bb.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hdea05db5.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hdea05db5",
+   "text": "עֵבֶר",
+   "spokenText": "eiver",
+   "israeliRef": "audio/m/israeli/word/hdea05db5.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hdea05db5.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hdea05db5",
+   "text": "עֵבֶר",
+   "spokenText": "eiver",
+   "israeliRef": "audio/f/israeli/word/hdea05db5.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/he43ec7f7.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he43ec7f7",
+   "text": "בָּנָה",
+   "spokenText": "bonoh",
+   "israeliRef": "audio/m/israeli/word/he43ec7f7.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/he43ec7f7.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he43ec7f7",
+   "text": "בָּנָה",
+   "spokenText": "bonoh",
+   "israeliRef": "audio/f/israeli/word/he43ec7f7.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hf7607ee6.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf7607ee6",
+   "text": "צִפָּה",
+   "spokenText": "tzipoh",
+   "israeliRef": "audio/m/israeli/word/hf7607ee6.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hf7607ee6.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf7607ee6",
+   "text": "צִפָּה",
+   "spokenText": "tzipoh",
+   "israeliRef": "audio/f/israeli/word/hf7607ee6.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hf64d1c8d.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf64d1c8d",
+   "text": "כָּלַל",
+   "spokenText": "kolal",
+   "israeliRef": "audio/m/israeli/word/hf64d1c8d.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hf64d1c8d.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf64d1c8d",
+   "text": "כָּלַל",
+   "spokenText": "kolal",
+   "israeliRef": "audio/f/israeli/word/hf64d1c8d.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hfdfd1efd.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hfdfd1efd",
+   "text": "נִרְגַּע",
+   "spokenText": "nirga",
+   "israeliRef": "audio/m/israeli/word/hfdfd1efd.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hfdfd1efd.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hfdfd1efd",
+   "text": "נִרְגַּע",
+   "spokenText": "nirga",
+   "israeliRef": "audio/f/israeli/word/hfdfd1efd.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hee07e419.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hee07e419",
+   "text": "נֶחְמָד",
+   "spokenText": "nechmod",
+   "israeliRef": "audio/m/israeli/word/hee07e419.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hee07e419.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hee07e419",
+   "text": "נֶחְמָד",
+   "spokenText": "nechmod",
+   "israeliRef": "audio/f/israeli/word/hee07e419.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hff7d24c0.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hff7d24c0",
+   "text": "רָכַב",
+   "spokenText": "rokhav",
+   "israeliRef": "audio/m/israeli/word/hff7d24c0.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hff7d24c0.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hff7d24c0",
+   "text": "רָכַב",
+   "spokenText": "rokhav",
+   "israeliRef": "audio/f/israeli/word/hff7d24c0.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hdc17acee.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hdc17acee",
+   "text": "טִהֵר",
+   "spokenText": "tiheir",
+   "israeliRef": "audio/m/israeli/word/hdc17acee.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hdc17acee.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hdc17acee",
+   "text": "טִהֵר",
+   "spokenText": "tiheir",
+   "israeliRef": "audio/f/israeli/word/hdc17acee.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hde82cf75.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hde82cf75",
+   "text": "הִטָּה",
+   "spokenText": "hitoh",
+   "israeliRef": "audio/m/israeli/word/hde82cf75.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hde82cf75.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hde82cf75",
+   "text": "הִטָּה",
+   "spokenText": "hitoh",
+   "israeliRef": "audio/f/israeli/word/hde82cf75.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hf2263f85.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf2263f85",
+   "text": "בִּצֵּעַ",
+   "spokenText": "bitzei'a",
+   "israeliRef": "audio/m/israeli/word/hf2263f85.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hf2263f85.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf2263f85",
+   "text": "בִּצֵּעַ",
+   "spokenText": "bitzei'a",
+   "israeliRef": "audio/f/israeli/word/hf2263f85.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hf7d0fb03.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf7d0fb03",
+   "text": "זִיֵּן",
+   "spokenText": "ziyein",
+   "israeliRef": "audio/m/israeli/word/hf7d0fb03.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hf7d0fb03.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf7d0fb03",
+   "text": "זִיֵּן",
+   "spokenText": "ziyein",
+   "israeliRef": "audio/f/israeli/word/hf7d0fb03.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/he2aec699.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he2aec699",
+   "text": "תָּקַף",
+   "spokenText": "tokaf",
+   "israeliRef": "audio/m/israeli/word/he2aec699.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/he2aec699.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he2aec699",
+   "text": "תָּקַף",
+   "spokenText": "tokaf",
+   "israeliRef": "audio/f/israeli/word/he2aec699.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hfa9e08b8.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hfa9e08b8",
+   "text": "עָף",
+   "spokenText": "of",
+   "israeliRef": "audio/m/israeli/word/hfa9e08b8.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hfa9e08b8.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hfa9e08b8",
+   "text": "עָף",
+   "spokenText": "of",
+   "israeliRef": "audio/f/israeli/word/hfa9e08b8.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/he028e6f0.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he028e6f0",
+   "text": "אַרְיֵה",
+   "spokenText": "aryeih",
+   "israeliRef": "audio/m/israeli/word/he028e6f0.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/he028e6f0.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he028e6f0",
+   "text": "אַרְיֵה",
+   "spokenText": "aryeih",
+   "israeliRef": "audio/f/israeli/word/he028e6f0.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/he54faf96.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he54faf96",
+   "text": "שָׁלַט",
+   "spokenText": "sholat",
+   "israeliRef": "audio/m/israeli/word/he54faf96.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/he54faf96.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he54faf96",
+   "text": "שָׁלַט",
+   "spokenText": "sholat",
+   "israeliRef": "audio/f/israeli/word/he54faf96.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hde9b27c8.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hde9b27c8",
+   "text": "חֻקָּה",
+   "spokenText": "chukoh",
+   "israeliRef": "audio/m/israeli/word/hde9b27c8.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hde9b27c8.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hde9b27c8",
+   "text": "חֻקָּה",
+   "spokenText": "chukoh",
+   "israeliRef": "audio/f/israeli/word/hde9b27c8.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hf2fcef6c.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf2fcef6c",
+   "text": "רְצִינִי",
+   "spokenText": "retzini",
+   "israeliRef": "audio/m/israeli/word/hf2fcef6c.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hf2fcef6c.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf2fcef6c",
+   "text": "רְצִינִי",
+   "spokenText": "retzini",
+   "israeliRef": "audio/f/israeli/word/hf2fcef6c.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/he964bca4.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he964bca4",
+   "text": "הִשְׁתַּחֲוָה",
+   "spokenText": "hishtachavoh",
+   "israeliRef": "audio/m/israeli/word/he964bca4.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/he964bca4.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he964bca4",
+   "text": "הִשְׁתַּחֲוָה",
+   "spokenText": "hishtachavoh",
+   "israeliRef": "audio/f/israeli/word/he964bca4.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/he038b6aa.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he038b6aa",
+   "text": "הוֹלִיד",
+   "spokenText": "holid",
+   "israeliRef": "audio/m/israeli/word/he038b6aa.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/he038b6aa.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he038b6aa",
+   "text": "הוֹלִיד",
+   "spokenText": "holid",
+   "israeliRef": "audio/f/israeli/word/he038b6aa.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hddeaa2ed.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hddeaa2ed",
+   "text": "אָוֶן",
+   "spokenText": "oven",
+   "israeliRef": "audio/m/israeli/word/hddeaa2ed.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hddeaa2ed.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hddeaa2ed",
+   "text": "אָוֶן",
+   "spokenText": "oven",
+   "israeliRef": "audio/f/israeli/word/hddeaa2ed.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hd8e09290.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hd8e09290",
+   "text": "יַחַס",
+   "spokenText": "yachas",
+   "israeliRef": "audio/m/israeli/word/hd8e09290.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hd8e09290.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hd8e09290",
+   "text": "יַחַס",
+   "spokenText": "yachas",
+   "israeliRef": "audio/f/israeli/word/hd8e09290.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hfb8d7482.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hfb8d7482",
+   "text": "רֵיחַ",
+   "spokenText": "reiach",
+   "israeliRef": "audio/m/israeli/word/hfb8d7482.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hfb8d7482.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hfb8d7482",
+   "text": "רֵיחַ",
+   "spokenText": "reiach",
+   "israeliRef": "audio/f/israeli/word/hfb8d7482.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hf423b369.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf423b369",
+   "text": "תָּו",
+   "spokenText": "tov",
+   "israeliRef": "audio/m/israeli/word/hf423b369.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hf423b369.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf423b369",
+   "text": "תָּו",
+   "spokenText": "tov",
+   "israeliRef": "audio/f/israeli/word/hf423b369.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hec9c6f65.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hec9c6f65",
+   "text": "מְסֻגָּל",
+   "spokenText": "mesugol",
+   "israeliRef": "audio/m/israeli/word/hec9c6f65.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hec9c6f65.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hec9c6f65",
+   "text": "מְסֻגָּל",
+   "spokenText": "mesugol",
+   "israeliRef": "audio/f/israeli/word/hec9c6f65.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/heece315f.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "heece315f",
+   "text": "חַיָּה",
+   "spokenText": "chayoh",
+   "israeliRef": "audio/m/israeli/word/heece315f.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/heece315f.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "heece315f",
+   "text": "חַיָּה",
+   "spokenText": "chayoh",
+   "israeliRef": "audio/f/israeli/word/heece315f.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hf3af4fb9.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf3af4fb9",
+   "text": "תָּמִים",
+   "spokenText": "tomim",
+   "israeliRef": "audio/m/israeli/word/hf3af4fb9.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hf3af4fb9.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf3af4fb9",
+   "text": "תָּמִים",
+   "spokenText": "tomim",
+   "israeliRef": "audio/f/israeli/word/hf3af4fb9.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/he21208a3.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he21208a3",
+   "text": "מְשֻׁגָּע",
+   "spokenText": "meshugo",
+   "israeliRef": "audio/m/israeli/word/he21208a3.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/he21208a3.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he21208a3",
+   "text": "מְשֻׁגָּע",
+   "spokenText": "meshugo",
+   "israeliRef": "audio/f/israeli/word/he21208a3.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/he7f4c5c3.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he7f4c5c3",
+   "text": "רֶגֶשׁ",
+   "spokenText": "regesh",
+   "israeliRef": "audio/m/israeli/word/he7f4c5c3.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/he7f4c5c3.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he7f4c5c3",
+   "text": "רֶגֶשׁ",
+   "spokenText": "regesh",
+   "israeliRef": "audio/f/israeli/word/he7f4c5c3.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hffc00eb8.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hffc00eb8",
+   "text": "מוּזִיקָה",
+   "spokenText": "muzikoh",
+   "israeliRef": "audio/m/israeli/word/hffc00eb8.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hffc00eb8.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hffc00eb8",
+   "text": "מוּזִיקָה",
+   "spokenText": "muzikoh",
+   "israeliRef": "audio/f/israeli/word/hffc00eb8.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hfb7bf5f4.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hfb7bf5f4",
+   "text": "לוּל",
+   "spokenText": "lul",
+   "israeliRef": "audio/m/israeli/word/hfb7bf5f4.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hfb7bf5f4.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hfb7bf5f4",
+   "text": "לוּל",
+   "spokenText": "lul",
+   "israeliRef": "audio/f/israeli/word/hfb7bf5f4.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hef13c381.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hef13c381",
+   "text": "חַוָּה",
+   "spokenText": "chavoh",
+   "israeliRef": "audio/m/israeli/word/hef13c381.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hef13c381.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hef13c381",
+   "text": "חַוָּה",
+   "spokenText": "chavoh",
+   "israeliRef": "audio/f/israeli/word/hef13c381.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hf4544f2a.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf4544f2a",
+   "text": "כַּנָּה",
+   "spokenText": "kanoh",
+   "israeliRef": "audio/m/israeli/word/hf4544f2a.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hf4544f2a.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf4544f2a",
+   "text": "כַּנָּה",
+   "spokenText": "kanoh",
+   "israeliRef": "audio/f/israeli/word/hf4544f2a.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hf12d3f21.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf12d3f21",
+   "text": "רוֹן",
+   "spokenText": "ron",
+   "israeliRef": "audio/m/israeli/word/hf12d3f21.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hf12d3f21.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf12d3f21",
+   "text": "רוֹן",
+   "spokenText": "ron",
+   "israeliRef": "audio/f/israeli/word/hf12d3f21.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hefbbc2c7.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hefbbc2c7",
+   "text": "זוֹנָה",
+   "spokenText": "zonoh",
+   "israeliRef": "audio/m/israeli/word/hefbbc2c7.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hefbbc2c7.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hefbbc2c7",
+   "text": "זוֹנָה",
+   "spokenText": "zonoh",
+   "israeliRef": "audio/f/israeli/word/hefbbc2c7.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hf09f7879.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf09f7879",
+   "text": "כּוּר",
+   "spokenText": "kur",
+   "israeliRef": "audio/m/israeli/word/hf09f7879.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hf09f7879.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf09f7879",
+   "text": "כּוּר",
+   "spokenText": "kur",
+   "israeliRef": "audio/f/israeli/word/hf09f7879.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/he0949da8.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he0949da8",
+   "text": "לָשׁוֹן",
+   "spokenText": "loshon",
+   "israeliRef": "audio/m/israeli/word/he0949da8.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/he0949da8.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he0949da8",
+   "text": "לָשׁוֹן",
+   "spokenText": "loshon",
+   "israeliRef": "audio/f/israeli/word/he0949da8.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/heca8ed1e.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "heca8ed1e",
+   "text": "טַבַּעַת",
+   "spokenText": "taba'as",
+   "israeliRef": "audio/m/israeli/word/heca8ed1e.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/heca8ed1e.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "heca8ed1e",
+   "text": "טַבַּעַת",
+   "spokenText": "taba'as",
+   "israeliRef": "audio/f/israeli/word/heca8ed1e.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hf059f7b7.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf059f7b7",
+   "text": "מַצְחִיק",
+   "spokenText": "matzchik",
+   "israeliRef": "audio/m/israeli/word/hf059f7b7.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hf059f7b7.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf059f7b7",
+   "text": "מַצְחִיק",
+   "spokenText": "matzchik",
+   "israeliRef": "audio/f/israeli/word/hf059f7b7.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/he34bd325.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he34bd325",
+   "text": "בְּהֵמָה",
+   "spokenText": "beheimoh",
+   "israeliRef": "audio/m/israeli/word/he34bd325.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/he34bd325.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he34bd325",
+   "text": "בְּהֵמָה",
+   "spokenText": "beheimoh",
+   "israeliRef": "audio/f/israeli/word/he34bd325.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hef745501.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hef745501",
+   "text": "יַעַר",
+   "spokenText": "ya'ar",
+   "israeliRef": "audio/m/israeli/word/hef745501.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hef745501.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hef745501",
+   "text": "יַעַר",
+   "spokenText": "ya'ar",
+   "israeliRef": "audio/f/israeli/word/hef745501.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hf2beda21.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf2beda21",
+   "text": "סַף",
+   "spokenText": "saf",
+   "israeliRef": "audio/m/israeli/word/hf2beda21.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hf2beda21.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf2beda21",
+   "text": "סַף",
+   "spokenText": "saf",
+   "israeliRef": "audio/f/israeli/word/hf2beda21.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hee0f6bea.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hee0f6bea",
+   "text": "בָּרִיא",
+   "spokenText": "bori",
+   "israeliRef": "audio/m/israeli/word/hee0f6bea.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hee0f6bea.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hee0f6bea",
+   "text": "בָּרִיא",
+   "spokenText": "bori",
+   "israeliRef": "audio/f/israeli/word/hee0f6bea.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/he973e381.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he973e381",
+   "text": "רְשִׁימָה",
+   "spokenText": "reshimoh",
+   "israeliRef": "audio/m/israeli/word/he973e381.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/he973e381.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he973e381",
+   "text": "רְשִׁימָה",
+   "spokenText": "reshimoh",
+   "israeliRef": "audio/f/israeli/word/he973e381.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hfcc1a370.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hfcc1a370",
+   "text": "גּוֹרָל",
+   "spokenText": "gorol",
+   "israeliRef": "audio/m/israeli/word/hfcc1a370.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hfcc1a370.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hfcc1a370",
+   "text": "גּוֹרָל",
+   "spokenText": "gorol",
+   "israeliRef": "audio/f/israeli/word/hfcc1a370.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hff9ae755.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hff9ae755",
+   "text": "לוּחַ",
+   "spokenText": "luach",
+   "israeliRef": "audio/m/israeli/word/hff9ae755.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hff9ae755.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hff9ae755",
+   "text": "לוּחַ",
+   "spokenText": "luach",
+   "israeliRef": "audio/f/israeli/word/hff9ae755.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hfdd2f995.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hfdd2f995",
+   "text": "עָנִי",
+   "spokenText": "oni",
+   "israeliRef": "audio/m/israeli/word/hfdd2f995.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hfdd2f995.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hfdd2f995",
+   "text": "עָנִי",
+   "spokenText": "oni",
+   "israeliRef": "audio/f/israeli/word/hfdd2f995.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hf148d52b.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf148d52b",
+   "text": "רְאָיָה",
+   "spokenText": "re'oyoh",
+   "israeliRef": "audio/m/israeli/word/hf148d52b.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hf148d52b.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf148d52b",
+   "text": "רְאָיָה",
+   "spokenText": "re'oyoh",
+   "israeliRef": "audio/f/israeli/word/hf148d52b.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hf78ea570.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf78ea570",
+   "text": "צְפוֹנִי",
+   "spokenText": "tzefoni",
+   "israeliRef": "audio/m/israeli/word/hf78ea570.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hf78ea570.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf78ea570",
+   "text": "צְפוֹנִי",
+   "spokenText": "tzefoni",
+   "israeliRef": "audio/f/israeli/word/hf78ea570.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hf76c8cd2.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf76c8cd2",
+   "text": "אָכֹם",
+   "spokenText": "okhom",
+   "israeliRef": "audio/m/israeli/word/hf76c8cd2.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hf76c8cd2.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf76c8cd2",
+   "text": "אָכֹם",
+   "spokenText": "okhom",
+   "israeliRef": "audio/f/israeli/word/hf76c8cd2.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/he78a3b3f.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he78a3b3f",
+   "text": "חָרִיף",
+   "spokenText": "chorif",
+   "israeliRef": "audio/m/israeli/word/he78a3b3f.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/he78a3b3f.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he78a3b3f",
+   "text": "חָרִיף",
+   "spokenText": "chorif",
+   "israeliRef": "audio/f/israeli/word/he78a3b3f.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hdaf2f831.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hdaf2f831",
+   "text": "יְמָנִי",
+   "spokenText": "yemoni",
+   "israeliRef": "audio/m/israeli/word/hdaf2f831.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hdaf2f831.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hdaf2f831",
+   "text": "יְמָנִי",
+   "spokenText": "yemoni",
+   "israeliRef": "audio/f/israeli/word/hdaf2f831.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hf53c9bc7.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf53c9bc7",
+   "text": "כַּמּוּבָן",
+   "spokenText": "kamuvon",
+   "israeliRef": "audio/m/israeli/word/hf53c9bc7.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hf53c9bc7.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf53c9bc7",
+   "text": "כַּמּוּבָן",
+   "spokenText": "kamuvon",
+   "israeliRef": "audio/f/israeli/word/hf53c9bc7.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/he53429ef.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he53429ef",
+   "text": "שְׂמָאלִי",
+   "spokenText": "semoli",
+   "israeliRef": "audio/m/israeli/word/he53429ef.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/he53429ef.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he53429ef",
+   "text": "שְׂמָאלִי",
+   "spokenText": "semoli",
+   "israeliRef": "audio/f/israeli/word/he53429ef.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hf228052b.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf228052b",
+   "text": "אַרְצִי",
+   "spokenText": "artzi",
+   "israeliRef": "audio/m/israeli/word/hf228052b.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hf228052b.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf228052b",
+   "text": "אַרְצִי",
+   "spokenText": "artzi",
+   "israeliRef": "audio/f/israeli/word/hf228052b.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/h04cd3011.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "h04cd3011",
+   "text": "אֲבָל",
+   "spokenText": "avol",
+   "israeliRef": "audio/m/israeli/word/h04cd3011.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/h04cd3011.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "h04cd3011",
+   "text": "אֲבָל",
+   "spokenText": "avol",
+   "israeliRef": "audio/f/israeli/word/h04cd3011.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/h0a138190.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "h0a138190",
+   "text": "יָפֶה",
+   "spokenText": "yofeh",
+   "israeliRef": "audio/m/israeli/word/h0a138190.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/h0a138190.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "h0a138190",
+   "text": "יָפֶה",
+   "spokenText": "yofeh",
+   "israeliRef": "audio/f/israeli/word/h0a138190.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/h14420fbf.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "h14420fbf",
+   "text": "זִמֵּן",
+   "spokenText": "zimein",
+   "israeliRef": "audio/m/israeli/word/h14420fbf.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/h14420fbf.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "h14420fbf",
+   "text": "זִמֵּן",
+   "spokenText": "zimein",
+   "israeliRef": "audio/f/israeli/word/h14420fbf.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/h16d29b05.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "h16d29b05",
+   "text": "אַחַר",
+   "spokenText": "achar",
+   "israeliRef": "audio/m/israeli/word/h16d29b05.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/h16d29b05.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "h16d29b05",
+   "text": "אַחַר",
+   "spokenText": "achar",
+   "israeliRef": "audio/f/israeli/word/h16d29b05.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/h17e4f4f9.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "h17e4f4f9",
+   "text": "פִּנָּה",
+   "spokenText": "pinoh",
+   "israeliRef": "audio/m/israeli/word/h17e4f4f9.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/h17e4f4f9.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "h17e4f4f9",
+   "text": "פִּנָּה",
+   "spokenText": "pinoh",
+   "israeliRef": "audio/f/israeli/word/h17e4f4f9.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/h3006118f.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "h3006118f",
+   "text": "גָּר",
+   "spokenText": "gor",
+   "israeliRef": "audio/m/israeli/word/h3006118f.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/h3006118f.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "h3006118f",
+   "text": "גָּר",
+   "spokenText": "gor",
+   "israeliRef": "audio/f/israeli/word/h3006118f.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/h324e6752.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "h324e6752",
+   "text": "דֶּרֶךְ",
+   "spokenText": "derekh",
+   "israeliRef": "audio/m/israeli/word/h324e6752.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/h324e6752.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "h324e6752",
+   "text": "דֶּרֶךְ",
+   "spokenText": "derekh",
+   "israeliRef": "audio/f/israeli/word/h324e6752.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/h397fb32e.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "h397fb32e",
+   "text": "נָכוֹן",
+   "spokenText": "nokhon",
+   "israeliRef": "audio/m/israeli/word/h397fb32e.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/h397fb32e.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "h397fb32e",
+   "text": "נָכוֹן",
+   "spokenText": "nokhon",
+   "israeliRef": "audio/f/israeli/word/h397fb32e.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/h4237207f.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "h4237207f",
+   "text": "יָלַד",
+   "spokenText": "yolad",
+   "israeliRef": "audio/m/israeli/word/h4237207f.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/h4237207f.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "h4237207f",
+   "text": "יָלַד",
+   "spokenText": "yolad",
+   "israeliRef": "audio/f/israeli/word/h4237207f.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/h49e0dbd7.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "h49e0dbd7",
+   "text": "אֶלֶף",
+   "spokenText": "elef",
+   "israeliRef": "audio/m/israeli/word/h49e0dbd7.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/h49e0dbd7.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "h49e0dbd7",
+   "text": "אֶלֶף",
+   "spokenText": "elef",
+   "israeliRef": "audio/f/israeli/word/h49e0dbd7.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/h4ee14b3b.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "h4ee14b3b",
+   "text": "קָנֶה",
+   "spokenText": "koneh",
+   "israeliRef": "audio/m/israeli/word/h4ee14b3b.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/h4ee14b3b.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "h4ee14b3b",
+   "text": "קָנֶה",
+   "spokenText": "koneh",
+   "israeliRef": "audio/f/israeli/word/h4ee14b3b.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/h5700ca54.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "h5700ca54",
+   "text": "גָּבַר",
+   "spokenText": "govar",
+   "israeliRef": "audio/m/israeli/word/h5700ca54.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/h5700ca54.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "h5700ca54",
+   "text": "גָּבַר",
+   "spokenText": "govar",
+   "israeliRef": "audio/f/israeli/word/h5700ca54.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/h68dd1435.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "h68dd1435",
+   "text": "כַּסָּף",
+   "spokenText": "kasof",
+   "israeliRef": "audio/m/israeli/word/h68dd1435.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/h68dd1435.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "h68dd1435",
+   "text": "כַּסָּף",
+   "spokenText": "kasof",
+   "israeliRef": "audio/f/israeli/word/h68dd1435.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/h6c9eee31.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "h6c9eee31",
+   "text": "חִיֵּב",
+   "spokenText": "chiyeiv",
+   "israeliRef": "audio/m/israeli/word/h6c9eee31.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/h6c9eee31.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "h6c9eee31",
+   "text": "חִיֵּב",
+   "spokenText": "chiyeiv",
+   "israeliRef": "audio/f/israeli/word/h6c9eee31.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/h743b589d.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "h743b589d",
+   "text": "צַר",
+   "spokenText": "tzar",
+   "israeliRef": "audio/m/israeli/word/h743b589d.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/h743b589d.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "h743b589d",
+   "text": "צַר",
+   "spokenText": "tzar",
+   "israeliRef": "audio/f/israeli/word/h743b589d.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/h74e5b729.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "h74e5b729",
+   "text": "קִדֵּשׁ",
+   "spokenText": "kideish",
+   "israeliRef": "audio/m/israeli/word/h74e5b729.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/h74e5b729.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "h74e5b729",
+   "text": "קִדֵּשׁ",
+   "spokenText": "kideish",
+   "israeliRef": "audio/f/israeli/word/h74e5b729.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/h808591c0.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "h808591c0",
+   "text": "דָּרַךְ",
+   "spokenText": "dorakh",
+   "israeliRef": "audio/m/israeli/word/h808591c0.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/h808591c0.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "h808591c0",
+   "text": "דָּרַךְ",
+   "spokenText": "dorakh",
+   "israeliRef": "audio/f/israeli/word/h808591c0.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/h87f1b5a9.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "h87f1b5a9",
+   "text": "זָכָר",
+   "spokenText": "zokhor",
+   "israeliRef": "audio/m/israeli/word/h87f1b5a9.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/h87f1b5a9.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "h87f1b5a9",
+   "text": "זָכָר",
+   "spokenText": "zokhor",
+   "israeliRef": "audio/f/israeli/word/h87f1b5a9.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/h8ea4d152.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "h8ea4d152",
+   "text": "לַעֲזָאזֵל",
+   "spokenText": "la'azozeil",
+   "israeliRef": "audio/m/israeli/word/h8ea4d152.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/h8ea4d152.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "h8ea4d152",
+   "text": "לַעֲזָאזֵל",
+   "spokenText": "la'azozeil",
+   "israeliRef": "audio/f/israeli/word/h8ea4d152.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/h8fe77c5d.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "h8fe77c5d",
+   "text": "חִשֵּׁב",
+   "spokenText": "chisheiv",
+   "israeliRef": "audio/m/israeli/word/h8fe77c5d.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/h8fe77c5d.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "h8fe77c5d",
+   "text": "חִשֵּׁב",
+   "spokenText": "chisheiv",
+   "israeliRef": "audio/f/israeli/word/h8fe77c5d.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/h9ea381d6.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "h9ea381d6",
+   "text": "גָּדַל",
+   "spokenText": "godal",
+   "israeliRef": "audio/m/israeli/word/h9ea381d6.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/h9ea381d6.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "h9ea381d6",
+   "text": "גָּדַל",
+   "spokenText": "godal",
+   "israeliRef": "audio/f/israeli/word/h9ea381d6.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/ha0457037.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "ha0457037",
+   "text": "פֶּתַח",
+   "spokenText": "pesach",
+   "israeliRef": "audio/m/israeli/word/ha0457037.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/ha0457037.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "ha0457037",
+   "text": "פֶּתַח",
+   "spokenText": "pesach",
+   "israeliRef": "audio/f/israeli/word/ha0457037.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/ha61e0686.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "ha61e0686",
+   "text": "פִּתֵּחַ",
+   "spokenText": "piteiach",
+   "israeliRef": "audio/m/israeli/word/ha61e0686.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/ha61e0686.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "ha61e0686",
+   "text": "פִּתֵּחַ",
+   "spokenText": "piteiach",
+   "israeliRef": "audio/f/israeli/word/ha61e0686.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hbe4076c4.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hbe4076c4",
+   "text": "כִי",
+   "spokenText": "khi",
+   "israeliRef": "audio/m/israeli/word/hbe4076c4.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hbe4076c4.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hbe4076c4",
+   "text": "כִי",
+   "spokenText": "khi",
+   "israeliRef": "audio/f/israeli/word/hbe4076c4.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hc1a18495.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hc1a18495",
+   "text": "יִשֵּׁב",
+   "spokenText": "yisheiv",
+   "israeliRef": "audio/m/israeli/word/hc1a18495.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hc1a18495.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hc1a18495",
+   "text": "יִשֵּׁב",
+   "spokenText": "yisheiv",
+   "israeliRef": "audio/f/israeli/word/hc1a18495.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hcfc3bd6e.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hcfc3bd6e",
+   "text": "אֵם",
+   "spokenText": "eim",
+   "israeliRef": "audio/m/israeli/word/hcfc3bd6e.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hcfc3bd6e.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hcfc3bd6e",
+   "text": "אֵם",
+   "spokenText": "eim",
+   "israeliRef": "audio/f/israeli/word/hcfc3bd6e.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hd1ed8938.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hd1ed8938",
+   "text": "שָׁנָה",
+   "spokenText": "shonoh",
+   "israeliRef": "audio/m/israeli/word/hd1ed8938.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hd1ed8938.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hd1ed8938",
+   "text": "שָׁנָה",
+   "spokenText": "shonoh",
+   "israeliRef": "audio/f/israeli/word/hd1ed8938.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hdcbb6117.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hdcbb6117",
+   "text": "אִישׁ",
+   "spokenText": "ish",
+   "israeliRef": "audio/m/israeli/word/hdcbb6117.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hdcbb6117.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hdcbb6117",
+   "text": "אִישׁ",
+   "spokenText": "ish",
+   "israeliRef": "audio/f/israeli/word/hdcbb6117.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hdd46eaf9.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hdd46eaf9",
+   "text": "רֶכֶב",
+   "spokenText": "rekhev",
+   "israeliRef": "audio/m/israeli/word/hdd46eaf9.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hdd46eaf9.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hdd46eaf9",
+   "text": "רֶכֶב",
+   "spokenText": "rekhev",
+   "israeliRef": "audio/f/israeli/word/hdd46eaf9.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/he0a1c6a5.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he0a1c6a5",
+   "text": "אֻמָּה",
+   "spokenText": "umoh",
+   "israeliRef": "audio/m/israeli/word/he0a1c6a5.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/he0a1c6a5.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he0a1c6a5",
+   "text": "אֻמָּה",
+   "spokenText": "umoh",
+   "israeliRef": "audio/f/israeli/word/he0a1c6a5.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/he39d02eb.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he39d02eb",
+   "text": "בָּקָר",
+   "spokenText": "bokor",
+   "israeliRef": "audio/m/israeli/word/he39d02eb.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/he39d02eb.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "he39d02eb",
+   "text": "בָּקָר",
+   "spokenText": "bokor",
+   "israeliRef": "audio/f/israeli/word/he39d02eb.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/heabe1020.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "heabe1020",
+   "text": "יָא",
+   "spokenText": "yo",
+   "israeliRef": "audio/m/israeli/word/heabe1020.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/heabe1020.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "heabe1020",
+   "text": "יָא",
+   "spokenText": "yo",
+   "israeliRef": "audio/f/israeli/word/heabe1020.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/heba0a42c.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "heba0a42c",
+   "text": "קָטֹן",
+   "spokenText": "koton",
+   "israeliRef": "audio/m/israeli/word/heba0a42c.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/heba0a42c.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "heba0a42c",
+   "text": "קָטֹן",
+   "spokenText": "koton",
+   "israeliRef": "audio/f/israeli/word/heba0a42c.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hf4758d4d.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf4758d4d",
+   "text": "רֹק",
+   "spokenText": "rok",
+   "israeliRef": "audio/m/israeli/word/hf4758d4d.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hf4758d4d.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hf4758d4d",
+   "text": "רֹק",
+   "spokenText": "rok",
+   "israeliRef": "audio/f/israeli/word/hf4758d4d.mp3"
+  },
+  {
+   "path": "audio/m/ashkenazi/word/hfbe29a09.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hfbe29a09",
+   "text": "דֻּבַּר",
+   "spokenText": "dubar",
+   "israeliRef": "audio/m/israeli/word/hfbe29a09.mp3"
+  },
+  {
+   "path": "audio/f/ashkenazi/word/hfbe29a09.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "word",
+   "id": "hfbe29a09",
+   "text": "דֻּבַּר",
+   "spokenText": "dubar",
+   "israeliRef": "audio/f/israeli/word/hfbe29a09.mp3"
+  }
+ ],
+ "warned": []
+}

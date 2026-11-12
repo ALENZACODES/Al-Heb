@@ -11,7 +11,7 @@ export function he(A, text, cls = 'he') {
 const CAST = { rimon: ['rimon-face', 'Rimon'], ari: ['ari-host', 'Ari'], noa: ['noa-hint', 'Noa'] };
 export function host(A, who, line) {
   const [art, name] = CAST[who] || CAST.rimon;
-  return A.h('div', { class: 'arc-host tg-host' }, A.cast(art, name, 'arc-sprite-inline'), A.h('p', { class: 'arc-prompt' }, A.h('strong', {}, name + ': '), line));
+  return A.h('div', { class: 'arc-host tg-host' }, A.cast(art, name), A.h('p', { class: 'arc-prompt' }, A.h('strong', {}, name + ': '), line));
 }
 
 /**

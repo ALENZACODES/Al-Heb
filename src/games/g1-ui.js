@@ -16,7 +16,7 @@ const CAST = {
 };
 export function host(A, who, line) {
   const [art, name] = CAST[who] || CAST.rimon;
-  return A.h('div', { class: 'arc-host g1-host' }, A.cast(art, name, 'arc-sprite-inline'), A.h('p', { class: 'arc-prompt' }, A.h('strong', {}, name + ': '), line));
+  return A.h('div', { class: 'arc-host g1-host' }, A.cast(art, name), A.h('p', { class: 'arc-prompt' }, A.h('strong', {}, name + ': '), line));
 }
 /** Hebrew text with lang and dir. */
 export const he = (A, text, cls = 'he') => A.h('span', { lang: 'he', dir: 'rtl', class: cls }, text);

@@ -87,3 +87,8 @@ button.arc-cell:focus-visible { outline: 3px solid var(--accent, #2a6); outline-
 .arc-host { display: flex; gap: .6rem; align-items: center; justify-content: center; }
 .arc-host .arc-cast { max-height: 72px; margin: 0; }
 .arc-board.is-paused { pointer-events: none; }
+/* C-03 (12 Nov site check): a host or lane illustration sits in the flow beside its text, never over the board. The
+   absolute .arc-sprite-inline is only for a picture inside its own positioned tile (a maze cell, a basket). */
+.arc-host .arc-sprite-inline, .g1-lane .arc-sprite-inline { position: static; inset: auto; width: auto; height: auto; max-height: 72px; }
+.arc-host .arc-cast { flex: 0 0 auto; }
+.g1-lane-cast { max-height: 40px; margin: 0; display: inline-block; vertical-align: middle; }

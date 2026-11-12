@@ -109,7 +109,17 @@ export async function mount(root, ctx) {
   audioEl.addEventListener("ended", () => { audioState.textContent = "Finished. Tap Listen to hear it again."; });
   audioEl.addEventListener("error", () => { if (audioEl.getAttribute("src")) audioState.textContent = "No sound: this page's recording did not load."; });
 
+  // C-04 (12 Nov site check): a page turn stops the voice, and the status line belongs to the page on screen. A play that
+  // resolves after the page changed (a slow clip) is stopped too, so the old page never plays over the new one.
+  let shownPage = -1, playToken = 0;
+  const stopVoice = () => {
+    playToken++;
+    try { audioEl.pause(); } catch { /* already stopped */ }
+    if (audioEl.getAttribute("src")) { audioEl.removeAttribute("src"); try { audioEl.load(); } catch { /* nothing loaded */ } }
+    playingLabel = ""; audioState.textContent = "";
+  };
   const render = () => {
+    if (page !== shownPage) { stopVoice(); shownPage = page; }
     const p = book.pages[page];
     stage.replaceChildren();
     dots.replaceChildren();
@@ -132,12 +142,13 @@ export async function mount(root, ctx) {
       onclick: async () => {
         if (p.audioHeld) { audioState.textContent = HELD_PAGE; return; }
         if (!p.audio || !p.audio[voice]) { audioState.textContent = "This page's voice is not recorded yet."; return; }
+        const tok = ++playToken, at = page;
         audioState.textContent = "Loading…";
         playingLabel = label.replace(/^▶\s*/, "");
         audioEl.src = p.audio[voice];
         applyReaderRate(audioEl, readerSlow()); // normal pace unless the learner chose Slower (this session only)
-        try { await audioEl.play(); }
-        catch { audioState.textContent = "This page's voice is not recorded yet."; }
+        try { await audioEl.play(); if (tok !== playToken || at !== page) { try { audioEl.pause(); } catch { /* stopped */ } } }
+        catch { if (tok === playToken && at === page) audioState.textContent = "This page's voice is not recorded yet."; }
       },
     }, label);
     // Slower: the learner's choice, kept for this visit only; never a default
@@ -150,8 +161,10 @@ export async function mount(root, ctx) {
         audioState.textContent = speedLine(on);
       },
     }, "Slower");
-    stage.append(h("div", { class: "book-listen-row" },
-      listen("f", "▶ Listen (Noa)"), listen("m", "▶ Listen (Ari)"), slower, audioState));
+    // S-06: a held page offers no Listen button, only the reason (a held page's recording is withheld on purpose).
+    stage.append(p.audioHeld
+      ? h("div", { class: "book-listen-row book-held" }, h("p", { class: "muted", role: "note" }, HELD_PAGE))
+      : h("div", { class: "book-listen-row" }, listen("f", "▶ Listen (Noa)"), listen("m", "▶ Listen (Ari)"), slower, audioState));
 
     const prev = h("button", { type: "button", class: "btn", onclick: () => { if (page > 0) { page--; render(); } } }, "← Previous");
     const next = h("button", { type: "button", class: "btn primary", onclick: () => { if (page < book.pages.length - 1) { page++; render(); } } },

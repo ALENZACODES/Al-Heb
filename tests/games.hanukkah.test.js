@@ -1,3 +1,4 @@
+import { TG_GAMES } from '../src/games/tg-catalog.js';
 // Hanukkah games: dreidel rules, candle order, data validity (pointed Hebrew), routes and catalogue, and every game
 // mounting and playing a little in the fake DOM. Logic and wiring checks only; the Hebrew flagged for review in the
 // data files is not claimed correct here.
@@ -226,7 +227,7 @@ test('data: blessings are text with the divine Name as ה׳, never spelled out, 
 test('catalogue and routes: every Hanukkah game has a view file, a preview route, a label, a section, a privacy row, a triage row and a level', () => {
   assert.equal(HANUKKAH_GAMES.length, 13);
   assert.equal(new Set(HANUKKAH_GAMES.map((g) => g.id)).size, 13);
-  assert.equal(ARCADE_GAMES.length, 30, 'the arcade rotation is unchanged');
+  assert.equal(ARCADE_GAMES.length, 30 + TG_GAMES.length, 'the arcade rotation is the thirty games plus the Torah and Hebrew games; Hanukkah games stay in their own list');
   assert.ok(!HANUKKAH_GAMES.some((g) => ARCADE_GAMES.some((a) => a.id === g.id)));
   const listed = new Set(STORE_KEYS.map((r) => r[0]));
   const learn = new Set(SECTION_ROUTES.learn);

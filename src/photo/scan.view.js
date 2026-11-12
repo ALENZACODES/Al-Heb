@@ -175,7 +175,7 @@ export function mount(root, ctx = {}) {
   let shvaP = null;
   let activeEngines = null;
   const run = async (image) => {
-    out.textContent = 'Working...'; status.textContent = '';
+    out.textContent = 'Reading the photo…'; status.textContent = '';
     try {
       let engines = forced;
       if (!engines) {
@@ -185,7 +185,7 @@ export function mount(root, ctx = {}) {
         else helperMsg.textContent = '';
         const helperUrl = typed && isLocalHelperUrl(typed) ? typed : (ctx.photoLocalServer || null);
         engines = createPhotoEngines({ localServerUrl: helperUrl,
-          onProgress: (m) => { if (m?.status) status.textContent = `${m.status}${typeof m.progress === 'number' ? ` ${Math.round(m.progress * 100)}%` : ''}`; } });
+          onProgress: (m) => { if (m?.status) status.textContent = scanStatusText(m); } });
         activeEngines = engines;
       }
       shvaP ||= loadLane3Shva();
@@ -212,4 +212,14 @@ export function mount(root, ctx = {}) {
   if (forced?.demo) run({ demo: true });
   modeSel.addEventListener('change', () => { if (forced?.demo) run({ demo: true }); });
   return () => { input.removeEventListener('change', onChange); activeEngines?.terminate?.(); root.textContent = ''; };
+}
+
+/** R-05: the reading engine's progress in plain words. The first use downloads about 5 MB once; after that it is cached on this device. */
+export function scanStatusText(m) {
+  const pct = typeof m?.progress === 'number' ? ` ${Math.round(m.progress * 100)}%` : '';
+  const st = String(m?.status || '').toLowerCase();
+  if (/core|traineddata|language|loading/.test(st)) return `Downloading the reading engine (about 5 MB, first use only)${pct}`;
+  if (/initiali[sz]/.test(st)) return 'Starting the reading engine…';
+  if (/recogni/.test(st)) return `Reading the Hebrew${pct}`;
+  return st ? `Working${pct}` : '';
 }

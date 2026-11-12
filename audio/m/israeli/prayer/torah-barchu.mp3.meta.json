@@ -1,0 +1,32 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Chirp3-HD-Orus",
+ "tradition": "israeli",
+ "inputText": "בָּרְכוּ אֶת אֲדֹנָי הַמְּבֹרָךְ׃ בָּרוּךְ אֲדֹנָי הַמְּבֹרָךְ לְעוֹלָם וָעֶד׃",
+ "inputSha256": "3f91e591c9077a228fd5d5060ee21ab8db76d95f35fb90f91fb709b87bbaa364",
+ "ingestedAt": "2026-11-12T02:38:42.288Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-12T02:38:42.288Z",
+ "redistributionCleared": false,
+ "spokenText": "בָּרְכוּ אֶת אֲדֹנָי הַמְּבֹרָךְ בָּרוּךְ אֲדֹנָי הַמְּבֹרָךְ לְעוֹלָם וָעֶד",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [],
+  "google": {
+   "heard": "ברכו את אדוני המבורך ברוך אדוני המבורך לעולם ועד",
+   "acc": 1.0,
+   "issues": []
+  },
+  "reviewersFailing": 0
+ },
+ "replaced": {
+  "voiceId": "he-IL-Wavenet-B",
+  "engine": "google-cloud-tts",
+  "renderedAt": null
+ }
+}

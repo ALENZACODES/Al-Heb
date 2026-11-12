@@ -1,13 +1,14 @@
 /**
  * Scheduler preview (#/scheduler), PREVIEW. Shows what the published FSRS-6 formulas (src/fsrs/fsrs6.js) would do: pick the answer to a
- * new card, pick a target recall, and see the days until each next review if every later answer is the same. This page does NOT
- * change your real reviews (they still use src/curriculum/srs.js) and stores nothing. The weights are published defaults, not fitted to your reviews.
+ * new card, pick a target recall, and see the days until each next review if every later answer is the same. That preview does NOT
+ * change your real reviews (they use src/curriculum/srs.js) and stores nothing; its weights are published defaults. Above it, src/platform/scheduler-live.js
+ * shows the live scheduler's real state and offers the on-device fit (H1, H2), which writes store key srs.fit only when a button is pressed.
  * ctx extras for tests: none.
  */
 import { el } from '../curriculum/dom.js';
 import { onDueDays, intervalsFor } from './fsrs6.js';
 
-export const NOTE = 'Preview and explanation only. Your real reviews still use Aleph\'s own scheduler; nothing here changes them and nothing is saved. The numbers come from the published default settings of the FSRS-6 method, not from your own review history.';
+export const NOTE = 'The FSRS-6 table below is a preview and explanation only: your real reviews use Aleph\'s own scheduler (shown first, with its real state on this device), nothing here changes them and nothing is saved. The table\'s numbers come from the published default settings of the FSRS-6 method, not from your own review history.';
 const NAMES = [['Again', 1], ['Hard', 2], ['Good', 3], ['Easy', 4]];
 const TARGETS = [0.8, 0.85, 0.9, 0.95];
 const LEN = 8;
@@ -18,9 +19,13 @@ export function mount(root, ctx) {
   const h1 = el('h1', { id: 'sc-title', tabindex: '-1' }, 'How reviews could be spaced');
   const ctl = el('div', { class: 'sc-ctl' }), out = el('div', { class: 'sc-out' });
   const status = el('p', { role: 'status', 'aria-live': 'polite', class: 'sc-status' });
-  wrap.append(h1, el('p', { class: 'sc-draft' }, NOTE), ctl, out, status);
+  const live = el('div', { class: 'sc-live-slot' });
+  wrap.append(h1, live, el('h2', {}, 'Preview: The FSRS-6 Method'), el('p', { class: 'sc-draft' }, NOTE), ctl, out, status);
   root.append(wrap);
   let alive = true, first = 3, later = 3, target = 0.9;
+  // H1 + H2 (lane platform): the live scheduler's state and the on-device fit, loaded on demand.
+  import('../platform/scheduler-live.js').then((m) => m.liveSection(ctx, status)).then((sec) => { if (alive) live.replaceChildren(sec); })
+    .catch(() => { if (alive) live.replaceChildren(el('p', {}, 'Your own review figures did not load. Open this page again while online.')); });
   const btn = (label, onclick, extra = {}) => el('button', { class: 'btn secondary', type: 'button', style: 'min-height:44px;min-width:44px', onclick, ...extra }, label);
   const group = (id, label, items, cur, set) => el('div', {}, el('p', { id }, label),
     el('div', { role: 'group', 'aria-labelledby': id }, ...items.map(([text, v]) => btn(text, () => { set(v); render(); status.textContent = `${label} ${text}.`; }, { 'aria-pressed': String(cur === v) }))));

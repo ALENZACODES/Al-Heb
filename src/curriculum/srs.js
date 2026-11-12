@@ -36,7 +36,18 @@ export const DECAY = -0.5;
 export const DESIRED_RETENTION = 0.9;
 export const MS_DAY = 86400000;
 export const AGAIN_DELAY_MS = 10 * 60 * 1000;
-const INIT_S = [0.4, 1.2, 3.0, 8.0];
+export const INIT_S = Object.freeze([0.4, 1.2, 3.0, 8.0]);
+// H2 (fitted on the device): every review appends day*10+rating (UTC day number) to card.log, newest last, at most LOG_MAX, so
+// src/platform/fit.js can fit INIT_S and a growth factor to this learner's own answers. Fitted values are used only when that page
+// saved them as active (store key srs.fit, read once here); otherwise, and in Node, the defaults above. Method: docs/srs/FITTED-WEIGHTS.md.
+export const LOG_MAX = 24, FIT_KEY = "alef:srs.fit";
+let fit;
+/** Active fitted parameters {init:[4], grow} or null. `p` replaces them (null = defaults; undefined = read the store again). */
+export function activeParams(p) {
+  if (arguments.length) fit = p === undefined ? undefined : p;
+  if (fit === undefined) { try { const v = JSON.parse(globalThis.localStorage?.getItem(FIT_KEY) || "null"); fit = v && v.active && v.init?.length === 4 ? v : null; } catch { fit = null; } }
+  return fit;
+}
 
 const clamp = (x, lo, hi) => Math.min(hi, Math.max(lo, x));
 const toMs = (t) => (t instanceof Date ? t.getTime() : Number(t));
@@ -81,7 +92,7 @@ export function cardRetrievability(card, now) {
  * @param {1|2|3|4} rating 1 Again, 2 Hard, 3 Good, 4 Easy
  * @param {number|Date} now
  */
-export function review(card, rating, now) {
+export function review(card, rating, now, params = activeParams()) {
   if (![1, 2, 3, 4].includes(rating)) throw new RangeError("rating must be 1, 2, 3 or 4");
   const t = toMs(now);
   if (!Number.isFinite(t)) throw new TypeError("now must be a valid time");
@@ -92,9 +103,11 @@ export function review(card, rating, now) {
   next.firstReview = card.reps === 0 && card.lastReview == null ? t : (card.firstReview ?? null);
   const day = dayKey(t);
   next.days = [...(Array.isArray(card.days) ? card.days.filter((d) => d !== day) : []), day].slice(-8);
+  next.log = [...(Array.isArray(card.log) ? card.log : []), Math.floor(t / MS_DAY) * 10 + rating].slice(-LOG_MAX);
+  const init = params?.init || INIT_S, grow = params?.grow || 1;
 
   if (card.state === "new") {
-    next.stability = INIT_S[rating - 1];
+    next.stability = init[rating - 1];
     next.difficulty = clamp(5.5 - 1.1 * (rating - 3), 1, 10);
     if (rating === 1) {
       next.state = "relearning";
@@ -121,7 +134,7 @@ export function review(card, rating, now) {
     next.due = t + AGAIN_DELAY_MS;
   } else {
     const m = rating === 2 ? 0.6 : rating === 4 ? 1.6 : 1;
-    const inc = 1 + Math.exp(1.6) * (11 - D) * Math.pow(S, -0.2) * (Math.exp(0.9 * (1 - R)) - 1) * m;
+    const inc = 1 + Math.exp(1.6) * (11 - D) * Math.pow(S, -0.2) * (Math.exp(0.9 * (1 - R)) - 1) * m * grow;
     next.stability = S * inc;
     next.state = "review";
     next.due = t + Math.max(1, Math.round(intervalFor(next.stability))) * MS_DAY;

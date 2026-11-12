@@ -124,7 +124,7 @@
     ],
     [
      "src/audio/sfx.js",
-     6261,
+     6396,
      1
     ],
     [
@@ -329,7 +329,7 @@
     ],
     [
      "src/curriculum/srs.js",
-     7366,
+     8493,
      1
     ],
     [
@@ -550,6 +550,11 @@
     [
      "src/shell/router.js",
      47304,
+     1
+    ],
+    [
+     "src/shell/transient.js",
+     1592,
      1
     ],
     [
@@ -918,7 +923,7 @@
     ],
     [
      "src/audio/sfx.js",
-     6261,
+     6396,
      1
     ],
     [
@@ -1033,7 +1038,7 @@
     ],
     [
      "src/curriculum/srs.js",
-     7366,
+     8493,
      1
     ],
     [
@@ -1194,6 +1199,11 @@
     [
      "src/shell/rimon.js",
      16106,
+     1
+    ],
+    [
+     "src/shell/transient.js",
+     1592,
      1
     ],
     [

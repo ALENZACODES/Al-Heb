@@ -409,6 +409,14 @@ export function mount(root, ctx) {
         const reveal = el('p', {}, 'The word was ', heText(q.played.he), ` (${(respell(q.played.he, congregationOf(ctx?.settings)) || q.played.translit)}, ${q.played.en}).`);
         const text = correct ? 'Right.' : `Not this time: it was ${q.kind === 'pair' ? q.played.en : c.sounds.find((s) => s.id === q.answer)?.label}.`;
         verdict.hidden = false; verdict.removeAttribute?.('hidden'); verdict.replaceChildren(el('p', {}, el('strong', {}, text)), reveal);
+        // A9: after the answer, hear the two words of the pair one after the other (each word's own clip where it has one)
+        if (q.kind === 'pair') {
+          const otherId = (pairs.items.find((i) => i.id === q.item.other.id) || {}).audioId || null;
+          const both = el('button', { type: 'button', class: 'btn secondary', id: 'drill-both', onclick: async () => {
+            await playModel(q.item.he, q.item.audioId, both); await new Promise((r) => setTimeout(r, 450)); await playModel(q.item.other.he, otherId, both);
+          } }, 'Hear both, one after the other');
+          verdict.append(el('p', {}, heText(q.item.he), ` (${q.item.en}), then `, heText(q.item.other.he), ` (${q.item.other.en})`), el('div', { class: 'sk-row' }, both));
+        }
         say(`${text} ${q.played.translit}, ${q.played.en}.`);
         await record({ kind: 'pair', set: q.item.contrast, itemId: q.item.id, he: q.played.he, mode: 'drill', outcome: correct ? 'match' : 'miss', contrast: q.item.contrast, correct });
         const next = el('button', { type: 'button', class: 'btn', id: 'drill-next', onclick: () => { if (di + 1 >= dq.length) return endDrill(); di++; drillQuestion_(); } }, di + 1 >= dq.length ? 'See my results' : 'Next');

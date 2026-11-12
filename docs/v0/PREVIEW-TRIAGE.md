@@ -87,6 +87,7 @@ decision, so the More sheet stays short and the first session stays coherent (we
 | `books` | keep | The little-books shelf; listed in the Preview group so the books can be found. |
 | `listen-shelf` | keep | The Sacred Listen shelf; listed in the Preview group so the recordings can be found. |
 | `songs` | keep | The original songs with their words and the Hebrew sung in them. Not prayer audio; listed in the Preview group so the songs can be found. |
+| `listen-practice` | keep | Listening Practice (audio lane, 12 Nov): line tools at slower speeds, word-by-word steps and the three-tradition compare, fill the gap from word clips, and dictation. Listed in the Preview group so it can be found. |
 | `synagogues` | keep | Reform synagogues in Canada: a directory with pictures, stories and contact details for 27 congregations. Not a lesson; stays preview until the facts are checked by the congregations. |
 | `games` | keep | The games hub; listed in the Preview group as the one door to all the games. |
 | `wordfinder` | keep | The first game; linked from Home and the showcase. |

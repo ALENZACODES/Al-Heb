@@ -23,9 +23,14 @@ export const ECHO_TURN_FACTOR = 1.25;
 export const ECHO_TURN_MIN_MS = 900;
 export const ECHO_TURN_MAX_MS = 6000;
 
-/** Shared clip speed. Only these two rates exist: normal, and the beginner slow speed. */
+/**
+ * Shared clip speed: normal, the beginner slow speed (0.7), and two learner-picked slow steps (0.8 and 0.6) for decoding.
+ * Pitch is kept (preservesPitch). Anything else is normal speed.
+ */
+export const CLIP_RATES = Object.freeze({ normal: 1, 'slow-0.8': 0.8, slow: 0.7, 'slow-0.6': 0.6 });
 export function clipPlaybackRate(value) {
-  if (value === 'slow' || value === 0.7) return 0.7;
+  if (typeof value === 'string' && Object.prototype.hasOwnProperty.call(CLIP_RATES, value)) return CLIP_RATES[value];
+  if (value === 0.7 || value === 0.8 || value === 0.6) return value;
   return 1;
 }
 
@@ -329,7 +334,9 @@ export function createAudio(opts) {
       try { a.preservesPitch = true; a.mozPreservesPitch = true; } catch { /* older engines */ }
       let settled = false;
       const finish = (result) => { if (settled) return; settled = true; resolve(result); };
-      current = { stop: () => { try { a.pause(); } catch { /* ignore */ } emitMedia(p, 'stopped'); finish({ ok: true, stopped: true }); } };
+      current = { media: a, stop: () => { try { a.pause(); } catch { /* ignore */ } emitMedia(p, 'stopped'); finish({ ok: true, stopped: true }); } };
+      // Any clip (not only chapters) can change pace while it plays: the playback bar's speed buttons.
+      current.setClipRate = (value) => { const rate = clipPlaybackRate(value); try { a.playbackRate = rate; p.rate = rate; return rate; } catch { return null; } };
       if (isChapter(p.kind)) current.setPlaybackRate = (value) => {
         const rate = chapterPlaybackRate(value);
         try { a.playbackRate = rate; p.rate = rate; emitMedia(p, 'playing'); return rate; } catch { return null; }
@@ -354,7 +361,7 @@ export function createAudio(opts) {
       if (voice) { try { u.voice = voice; } catch { /* a fake utterance may be frozen */ } }
       u.rate = p.rate;
       try { u.onstart = () => emitMedia(p, 'playing'); } catch { /* ignore */ }
-      current = { stop: () => { try { speech.cancel(); } catch { /* ignore */ } emitMedia(p, 'stopped'); resolve({ ok: true, stopped: true }); } };
+      current = { speech: true, stop: () => { try { speech.cancel(); } catch { /* ignore */ } emitMedia(p, 'stopped'); resolve({ ok: true, stopped: true }); } };
       u.onend = () => { emitMedia(p, 'ended'); resolve({ ok: true, ended: true }); };
       u.onerror = () => { emitMedia(p, 'error'); resolve({ ok: false, error: 'speech-error' }); };
       try { speech.speak(u); } catch { resolve({ ok: false, error: 'speech-threw' }); }
@@ -479,6 +486,13 @@ export function createAudio(opts) {
     stop,
     /** Change an active chapter's pace without seeking, restarting, or changing pitch. */
     setPlaybackRate: (rate) => current?.setPlaybackRate?.(rate) ?? null,
+    /** Change the pace of the clip playing now (0.6, 0.8, 0.7 or 1; pitch kept). Null when nothing is playing from a file. */
+    setClipRate: (rate) => current?.setClipRate?.(rate) ?? null,
+    /**
+     * What is sounding now, for the playback bar: {kind:'file', media} (the HTMLAudioElement, for progress and pause),
+     * {kind:'speech'} (the device voice; pause/resume through speechSynthesis), or null.
+     */
+    nowPlaying: () => (current?.media ? { kind: 'file', media: current.media } : current?.speech ? { kind: 'speech' } : null),
     /** true only when a real recorded/rendered file would be used (never for TTS fallback). */
     has: (kind, id, o) => plan(kind, id, o).source === 'file',
     /** what play() would use right now, without playing. */

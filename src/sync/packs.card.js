@@ -18,7 +18,7 @@ export function mountPacks(host, ctx, O, env = {}) {
   host.replaceChildren(el('div', { class: 'of-card' }, el('h2', {}, 'Offline Packs'),
     el('p', {}, 'Save just what you need for a place with no signal, such as a synagogue. Sizes are measured from the files themselves.'),
     list,
-    el('p', { class: 'muted' }, 'Voice clips are not in these packs. A clip plays offline after it has played once on this device while online.'),
+    el('p', { class: 'muted' }, 'Voice clips are not in these packs: save them with Audio Packs below. A clip also plays offline after it has played once on this device while online.'),
     status));
   const fetchFn = env.fetch ?? globalThis.fetch?.bind(globalThis);
   const nav = env.navigator ?? globalThis.navigator;

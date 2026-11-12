@@ -276,13 +276,15 @@ export async function mount(root, ctx = /** @type {any} */ ({})) {
           row.append(cell);
         });
         const lineBtn = audioButton(el, ctx, { kind: 'line', id: lines.length === 1 ? rec.id : `${rec.id}-l${li + 1}`, text: speechText(line), class: 'crp-play', label: `Play ${lines.length > 1 ? 'line ' + (li + 1) : 'line'}`, name: lines.length > 1 ? rec.ref : undefined });
-        textBox.append(row, el('div', { class: 'crp-bar' }, lineBtn));
+        textBox.append(row, el('div', { class: 'crp-bar' }, lineBtn, lines.length === 1 ? el('a', { class: 'crp-lnk', href: `#/listen-practice?tab=line&line=${rec.id}` }, 'Slow, step, compare') : null));
         if (state.english) textBox.append(el('p', { class: 'crp-en', lang: 'en' }, enLines.length === lines.length ? enLines[li] : (li === 0 ? enLines.join('\n') : '')));
       });
     });
     for (const rec of p.records) if (Array.isArray(rec.largeLetters) && rec.largeLetters.length) textBox.append(el('p', { class: 'crp-lgnote' }, `${p.records.length > 1 ? rec.ref + ': ' : ''}Written large in the source text: `, ...rec.largeLetters.flatMap((c, i) => [i ? ', ' : '', heEl('span', c, 'he')]), '.'));
     for (const rec of p.records) if (rec.variants?.f) textBox.append(el('p', {}, el('strong', {}, 'Women say: '), heEl('span', rec.variants.f.he, 'he'), el('span', { class: 'crp-badge' }, 'derived, needs check')));
-    host.append(textBox, status);
+    const ready = el('div', { id: 'crp-ready' }), queueHost = el('div', { id: 'crp-queue' });
+    host.append(ready, textBox, status, queueHost);
+    import('../audiolab/ui.js').then((m) => { if (ready.isConnected !== false) ready.replaceChildren(m.readinessNote(ctx, lineItems(p), 'lines')); }).catch(() => {}); // N of M lines have audio (on demand)
     for (const rec of p.records) {
       const tref = torahRefOf(rec.ref);
       const tbook = tref && torahIndex?.books.find((b) => b.id === tref.book);
@@ -331,7 +333,13 @@ export async function mount(root, ctx = /** @type {any} */ ({})) {
     const text = speechText(line);
     await playItem('line', lines.length === 1 ? rec.id : `${rec.id}-l${li + 1}`, text, `${rec.ref}${lines.length > 1 ? ' line ' + (li + 1) : ''}`, keepSeq);
   }
+  /** Every line of a passage as a clip request (the same ids as the Play line buttons). */
+  function lineItems(p) {
+    return p.records.flatMap((rec) => { const ls = rec.he.split('\n'); return ls.map((l, i) => ({ kind: 'line', id: ls.length === 1 ? rec.id : `${rec.id}-l${i + 1}`, he: l, text: speechText(l), label: ls.length > 1 ? `${rec.ref} line ${i + 1}` : rec.ref })); });
+  }
   async function playAll(p) {
+    // Play all with a progress list the learner can tap into (src/audiolab/ui.js, on demand); the plain loop below if it cannot load.
+    try { const m = await import('../audiolab/ui.js'); const qh = wrap.querySelector('#crp-queue'); if (qh) { seq++; const q = m.mountQueue(ctx, lineItems(p), { title: 'Play All Lines', noun: 'lines' }); qh.replaceChildren(q.node); q.playFrom(0); return; } } catch { /* offline before first use */ }
     const mine = ++seq;
     for (const rec of p.records) {
       const lines = rec.he.split('\n');

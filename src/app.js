@@ -405,6 +405,7 @@ async function boot() {
   for (const b of document.querySelectorAll('.sound-rate')) b.setAttribute('aria-pressed', String(b.getAttribute('data-rate') === savedRate));
   import('./shell/audio-access.js').then((m) => { soundBar = m.wireSoundBar(audio); }).catch(() => {});
   import('./shell/play-state.js').then((m) => m.installPlayState({ audio })).catch(() => {}); // playing / finished / failed on every Listen and Play control (M-04)
+  import('./audiolab/nowbar.js').then((m) => m.installNowBar({ audio, settings })).catch(() => {}); // one playback bar: what plays, pause, speed, progress, stop
   let router;
   let images = null;
   const resolveImages = () => loadImageResolver((u) => fetch(u).then((r) => {

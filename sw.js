@@ -56,6 +56,8 @@ const MAX_CLIPS = 600;             // audio entries kept in RUNTIME; past this t
 // Music beds and songs (audio/music/*.mp3, 0.2 to 5.1 MB each, 13 files) get their own cache: over MAX_CLIP_BYTES they were never
 // stored (no offline music), and in RUNTIME the word clips would push them out. Not trimmed; same per-lifetime revalidation.
 const MUSIC = 'alef-music-v1';
+// Audio packs (src/audiolab/packs.js): clips the learner saved on purpose for a book, the prayers or a lesson set. Never trimmed here.
+const PACK = 'alef-audio-pack-v1';
 const MUSIC_PATH = /\/audio\/music\/[^/]+\.(mp3|ogg)$/i;
 const MAX_MUSIC_BYTES = 8 * 1024 * 1024;
 const isMusic = (u) => MUSIC_PATH.test(new URL(u, self.location.origin).pathname);
@@ -112,7 +114,7 @@ function parseRange(h, len) {
 }
 async function audioRange(req, event) {
   const cache = await clipCache(req.url);
-  const hit = await cache.match(req.url); // by URL: the Range header is not part of the key
+  const hit = (await cache.match(req.url)) || (await (await caches.open(PACK)).match(req.url)); // by URL: the Range header is not part of the key; a saved audio pack counts
   if (hit && hit.status === 200) {
     if (event) event.waitUntil(bounded(revalidateClip(req.url, hit.clone())));
     const buf = await hit.clone().arrayBuffer(); const len = buf.byteLength;
@@ -209,6 +211,8 @@ self.addEventListener('fetch', (event) => {
     })());
     return;
   }
+  // An audio pack download (x-alef-pack): the page keeps the file in its own pack cache, so it is not copied into the runtime cache too.
+  if (AUDIO.test(url.pathname) && req.headers.get('x-alef-pack') === '1') { event.respondWith(clipFetch(req.url)); return; }
   if (MEDIA.test(url.pathname)) {
     event.respondWith((async () => {
       const hit = await caches.match(req);

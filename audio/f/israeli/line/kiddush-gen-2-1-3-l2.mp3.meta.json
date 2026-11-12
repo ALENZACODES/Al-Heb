@@ -1,0 +1,37 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Chirp3-HD-Kore",
+ "tradition": "israeli",
+ "inputText": "וַיְכַל אֱלֹהִים בַּיּוֹם הַשְּׁבִיעִי מְלַאכְתּוֹ אֲשֶׁר עָשָׂה וַיִּשְׁבֹּת בַּיּוֹם הַשְּׁבִיעִי מִכָּל־מְלַאכְתּוֹ אֲשֶׁר עָשָׂה׃",
+ "inputSha256": "0cd0f60d001043bf58dfc01e999b78800b4830a3b392c8224bcc078c14fd8702",
+ "ingestedAt": "2026-11-12T02:16:29.871Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-12T02:16:29.871Z",
+ "redistributionCleared": false,
+ "spokenText": "וַיְכַל אֱלֹהִים בַּיּוֹם הַשְּׁבִיעִי מְלַאכְתּוֹ אֲשֶׁר עָשָׂה וַיִּשְׁבֹּת בַּיּוֹם הַשְּׁבִיעִי מִכָּל מְלַאכְתּוֹ אֲשֶׁר עָשָׂה",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "speakingRate": 0.85,
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [
+   "אֲשֶׁר",
+   "עָשָׂה",
+   "הַשְּׁבִיעִי מִכָּל מְלַאכְתּוֹ אֲשֶׁר עָשָׂה"
+  ],
+  "google": {
+   "heard": "ויכל אלהים ביום השביעי מלאכתו אשר עשה וישבת ביום השביעי מכל מלאכתו אשר עשה",
+   "acc": 1.0,
+   "issues": []
+  },
+  "reviewersFailing": 1
+ },
+ "replaced": {
+  "voiceId": "he-IL-Wavenet-A",
+  "engine": "stitched-from-word-clips",
+  "renderedAt": null
+ }
+}

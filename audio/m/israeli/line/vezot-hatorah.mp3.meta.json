@@ -1,0 +1,36 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Chirp3-HD-Charon",
+ "tradition": "israeli",
+ "inputText": "וְזֹאת הַתּוֹרָה אֲשֶׁר שָׂם מֹשֶׁה לִפְנֵי בְּנֵי יִשְׂרָאֵל׃ עַל פִּי אֲדֹנָי בְּיַד מֹשֶׁה׃",
+ "inputSha256": "20320fd1e106e9b294e18797ddc36e8b04f32d68a59cdb606bd3d40cd0ae17cd",
+ "ingestedAt": "2026-11-12T02:41:15.563Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-12T02:41:15.563Z",
+ "redistributionCleared": false,
+ "spokenText": "וְזֹאת הַתּוֹרָה אֲשֶׁר שָׂם מֹשֶׁה לִפְנֵי בְּנֵי יִשְׂרָאֵל עַל פִּי אֲדֹנָי בְּיַד מֹשֶׁה",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "speakingRate": 0.85,
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [
+   "מֹשֶׁה",
+   "מֹשֶׁה"
+  ],
+  "google": {
+   "heard": "וזאת התורה אשר שם משה לפני בני ישראל על פי אדוני ביד משה",
+   "acc": 1.0,
+   "issues": []
+  },
+  "reviewersFailing": 1
+ },
+ "replaced": {
+  "voiceId": "he-IL-Wavenet-B",
+  "engine": "stitched-from-word-clips",
+  "renderedAt": null
+ }
+}

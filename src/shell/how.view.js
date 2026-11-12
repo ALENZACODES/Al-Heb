@@ -37,7 +37,7 @@ export function mount(root, ctx) {
       h('ul', {},
         li('Manalo, Mizutani and Trafford (2004) tested picture mnemonics for Japanese kana: pass rate rose from 51% to 65%, in a self-selected group of 27 with no effect size or retention data; the authors call it preliminary.'),
         li('Shmidman and Ehri (2010), per a literacy blog and a reader comment in the notes (the paper itself was not read): English-speaking preschoolers learning ten Hebrew letters learned faster and made fewer errors with embedded picture mnemonics, where the letter shape is drawn into the picture. The same sources caution that pictures can hurt whole-word learning and that the evidence base is thin.'),
-        li(h('strong', {}, 'In Aleph: '), 'mnemonic pictures are planned as a temporary scaffold to fade, with letters that have two sounds (bet, kaf, pe, shin) handled with two states. No finished mnemonic artwork is in the app yet: the images are placeholders.')),
+        li(h('strong', {}, 'In Aleph: '), 'mnemonic pictures are planned as a temporary scaffold to fade, with letters that have two sounds (bet, kaf, pe, shin) handled with two states. Each letter now has its own memory picture, shown in the letter games.')),
       h('h3', {}, 'Script and sound together'),
       h('ul', {},
         li('Shepperd (2024), a review: for beginners, input in an unfamiliar script gave little benefit for learning new sound contrasts compared with audio only, and sometimes hurt; the benefit grows with proficiency. Most of the studies were small, single-session samples of English speakers.'),

@@ -16,7 +16,8 @@ export function mount(root, ctx) {
   const status = h('p', { role: 'status', class: 'muted' }, 'Loading…');
   const body = h('div', {});
   const leave = () => { try { if (globalThis.history?.length > 1) globalThis.history.back(); else globalThis.location.hash = '#/'; } catch { /* ignore */ } };
-  root.append(h('section', { 'aria-labelledby': 'view-title' }, h('h1', { id: 'view-title', tabindex: '-1' }, 'Focus Mode'), status, body));
+  root.append(h('section', { 'aria-labelledby': 'view-title' }, h('h1', { id: 'view-title', tabindex: '-1' }, 'Focus Mode'), status, body,
+    h('p', { class: 'fx-home' }, h('a', { href: '#/', class: 'btn secondary' }, 'Home')))); // owner 2026-11-12: Home is always one tap away, even here
   let alive = true, at = 0, size = 1, showEn = false, data = null;
   const src = ctx?.query?.src;
   function render() {

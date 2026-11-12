@@ -4,6 +4,16 @@
  "entries": [
   {
    "date": "2026-11-12",
+   "hash": "19fb61c32",
+   "text": "Every game has its picture: 131 game backdrops and card pictures made from the app's own approved art and Rimon stills (nothing new drawn, nothing flipped, metadata stripped)…"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "674dc73b0",
+   "text": "Update hand-over hardened (live finding, 12 Nov): Reload asks the registration for the waiting worker at that moment instead of the one noted at boot, and first tells the running…"
+  },
+  {
+   "date": "2026-11-12",
    "hash": "3fde8aefe",
    "text": "Playback bar: each speed button wired itself, so the dead-button gate reads it (the merged gate flagged the group-delegated wiring)."
   },
@@ -191,16 +201,6 @@
    "date": "2026-11-12",
    "hash": "b7de8953f",
    "text": "First-install headroom: the Grammar notes page code and the speaking-check model no screen imports load on demand (44 KB), so the first install is 3.90 of 3.95 MiB after this…"
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "3bf46792b",
-   "text": "Why on every wrong answer: a missed letter or word question now says what the picked option is (its letter and sound, or its own Hebrew word) and adds the look-alike rule from the…"
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "0a3745406",
-   "text": "Three Versions: tapping a word that already shows its marks opens the spotlight and does not count as help"
   }
  ]
 }

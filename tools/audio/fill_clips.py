@@ -7,6 +7,8 @@ Each job row: {"path", "text", "voice": "m"|"f", "family": "wavenet"|"chirp", "m
            reviewer hears a word off: the sound review (phoneme_review.py) has a weak word, the word check (scan_lines.py)
            has an issue, or Google Speech-to-Text (review3_shard.py) has an issue. A clip that still fails 2 of the 3 is
            listed with "held": true, for data/lab/clip-holds.json, so no screen plays it before a person listens.
+  pass     (a list of explicit takes) every take is made and reviewed; the best take that fails at most one reviewer replaces
+           the clip. When none passes, the clip is left as it is and the row is logged with "chirpHeld": true.
   replace  the row has a clip (a prayer line the owner wants in a Chirp 3 HD voice, or a clip re-made from corrected text). One take
            in the row's family at normal pace; it
            replaces the clip only when no reviewer hears it as worse (the torah-fix rule without "and one hears it better").
@@ -64,6 +66,8 @@ def takes(row, text):
     v, fam = row['voice'], row['family']
     other = 'chirp' if fam == 'wavenet' else 'wavenet'
     apart = ', '.join(text.replace('.', '').split()) + '.'
+    if row.get('takes'):   # explicit takes: [{name, voice (Google voice name), rate, apart}]
+        return [(t['name'], t['voice'], apart if t.get('apart') else text, t.get('rate', 1.0)) for t in row['takes']]
     if row['mode'] == 'replace':
         return [(fam, VOICES[v][fam], text, 1.0)]
     if fam == 'chirp':   # prayer lines: Chirp 3 HD only (owner rule, 7 November 2026)
@@ -92,6 +96,18 @@ def sidecar(row, voice, said, rate, j, prev=None):
     return m
 
 
+def available(k):
+    """The he-IL voice names Google offers (empty set when the list cannot be read: then every take is tried)."""
+    import urllib.request
+    try:
+        req = urllib.request.Request('https://texttospeech.googleapis.com/v1/voices?languageCode=he-IL', headers={'X-Goog-Api-Key': k})
+        with urllib.request.urlopen(req, timeout=30) as r:
+            return {v['name'] for v in json.load(r).get('voices', [])}
+    except Exception as e:
+        print('voice list not read:', str(e)[:80], flush=True)
+        return set()
+
+
 def main():
     ap = argparse.ArgumentParser()
     for x in ('--list', '--model', '--log'):
@@ -105,6 +121,12 @@ def main():
         sys.exit(2)
     stt = os.environ.get('GOOGLE_STT_API_KEY', '').strip() or k
     rows = json.load(open(a.list, encoding='utf-8'))['rows'][a.shard::a.of]
+    have = available(k)
+    if have:
+        for row in rows:
+            if row.get('takes'):
+                row['takes'] = [t for t in row['takes'] if t['voice'] in have]
+        print('he-IL voices offered by Google:', len(have), flush=True)
     done = {json.loads(l)['path'] for l in open(a.log, encoding='utf-8')} if os.path.exists(a.log) else set()
     out = open(a.log, 'a', encoding='utf-8')
     tmpd = tempfile.mkdtemp()
@@ -135,6 +157,12 @@ def main():
                       and 'issues' in gc and 'issues' in gj and len(gj['issues']) <= len(gc['issues']) and gj['acc'] >= gc['acc'] - 0.01)
                 if ok:
                     best = (name, voice, say, rate, j, norm)
+            elif row['mode'] == 'pass':
+                # every take is made; the best take that at most one reviewer hears a word off in wins, whatever the current clip
+                if fails(j) <= 1 and (best is None or score(j) < score(best[4])):
+                    best = (name, voice, say, rate, j, os.path.join(tmpd, 'best.mp3'))
+                    shutil.copyfile(norm, best[5])
+                continue
             elif best is None or score(j) < score(best[4]):
                 best = (name, voice, say, rate, j, os.path.join(tmpd, 'best.mp3'))
                 shutil.copyfile(norm, best[5])
@@ -155,12 +183,13 @@ def main():
                     prev = None
             os.makedirs(os.path.dirname(clip), exist_ok=True)
             shutil.copyfile(f, clip)
-            json.dump(sidecar(row, voice, say, rate, j, prev if cur is not None else None), open(mp, 'w', encoding='utf-8'),
+            json.dump(sidecar(row, voice, say, rate, j, prev if (cur is not None or row['mode'] == 'pass') else None), open(mp, 'w', encoding='utf-8'),
                       ensure_ascii=False, indent=1)
             open(mp, 'a', encoding='utf-8').write('\n')
             rec.update({'decision': name, 'voiceId': voice, 'reviewersFailing': fails(j), 'held': cur is None and fails(j) >= 2})
         else:
-            rec.update({'decision': 'kept' if cur is not None else 'none', 'held': False})
+            rec.update({'decision': 'kept' if cur is not None or row['mode'] == 'pass' else 'none', 'held': False,
+                        **({'chirpHeld': True} if row['mode'] == 'pass' else {})})
         out.write(json.dumps(rec, ensure_ascii=False) + '\n'); out.flush()
         print(f"{n}/{len(rows)} {row['path']}: {rec['decision']}{' HELD' if rec['held'] else ''}", flush=True)
 

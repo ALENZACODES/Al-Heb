@@ -101,6 +101,7 @@ test('letters and syllables: strokes, look-alikes and the sound table come from 
   assert.equal(con.samekh.ipa.israeli, '[s]'); assert.equal(con.tet.ipa.israeli, '[t]'); assert.equal(con.tav.ipa.israeli, '[t]');
   assert.equal(con.qof.ipa.israeli, '[k]'); assert.equal(con.vav.ipa.israeli.slice(0, 3), '[v]'); assert.match(con.chet.ipa.israeli, /^\[χ\]/);
   assert.equal(G.LETTER_TWINS.length, 5);
+  for (const t of G.LETTER_TWINS) assert.ok(CONSONANTS.some((c) => c.tr === t.sound), `${t.sound} is spelled as in the consonant table`);
   const niq = new Map(json('data/pronunciation/niqqud.json').records.map((r) => [r.id, r]));
   const ID = { patach: 'patach', kamatz: 'kamatz', segol: 'segol', tsere: 'tzere', hiriq: 'chirik', holam: 'cholam', kubutz: 'kubutz' };
   for (const v of G.VOWEL_MARKS) {
@@ -174,6 +175,7 @@ test('vowels: dominoes, same-sound boards (one partner per tile), blends and mad
     assert.equal(b.length, 12);
     const keys = new Map(); for (const x of b) keys.set(x.key, (keys.get(x.key) || 0) + 1);
     assert.ok([...keys.values()].every((n) => n === 2), 'every sound written exactly twice');
+    assert.equal(new Set(b.map((x) => x.he.normalize('NFC'))).size, 12, 'no tile appears twice');
     for (const x of b) assert.match(x.he, POINTED);
   }
   const w = W.find((x) => x.syl?.length === 2);

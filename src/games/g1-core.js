@@ -152,7 +152,7 @@ export const LETTER_TWINS = Object.freeze([
   { sound: 't', a: 'ט', b: 'ת' + PT.DAGESH, why: 'tet and tav both say t' },
   { sound: 'k', a: 'ק', b: 'כ' + PT.DAGESH, why: 'qof and kaf with a dot both say k' },
   { sound: 'v', a: 'ו', b: 'ב', why: 'vav and bet without a dot both say v' },
-  { sound: 'kh', a: 'ח', b: 'כ', why: 'chet and khaf both sound like the ch in Bach' },
+  { sound: 'ch', a: 'ח', b: 'כ', why: 'chet and khaf both sound like the ch in Bach' }, // 'ch' as in the consonant table, so keys never split one sound
 ]);
 /**
  * Same Sound Pairs board: `pairs` sounds, each written two ways. Every sound on the board is different, so each tile has

@@ -12,8 +12,8 @@ Owner rule: prayer lines are spoken with Google Chirp 3 HD voices. Fill-clips ru
 |---|---|
 | `audio/f/israeli/line/adon-olam-1-l5.mp3` | best take: sound review 1 weak, word check 2 off, Google 3 off |
 | `audio/f/israeli/line/adon-olam-1-l7.mp3` | best take: sound review 0 weak, word check 1 off, Google 1 off |
-| `audio/f/israeli/line/aleinu-1.mp3` | Chirp 3 HD refused the text (HTTP 400) for every voice: the whole-prayer text is too long for one request |
-| `audio/f/israeli/line/amidah-elohai-netzor.mp3` | Chirp 3 HD refused the text (HTTP 400) for every voice: the whole-prayer text is too long for one request |
+| `audio/f/israeli/line/aleinu-1.mp3` | Chirp 3 HD refused the whole text (HTTP 400); recorded in parts later and still held: see the last section |
+| `audio/f/israeli/line/amidah-elohai-netzor.mp3` | Chirp 3 HD refused the whole text (HTTP 400); recorded in parts later and still held: see the last section |
 | `audio/f/israeli/line/avot-1.mp3` | best take: sound review 4 weak, word check 0 off, Google 1 off |
 | `audio/f/israeli/line/candle-shabbat.mp3` | best take: sound review 0 weak, word check 5 off, Google 4 off |
 | `audio/f/israeli/line/haftarah-after-l1.mp3` | best take: sound review 16 weak, word check 1 off, Google 8 off |
@@ -35,18 +35,18 @@ Owner rule: prayer lines are spoken with Google Chirp 3 HD voices. Fill-clips ru
 | `audio/f/israeli/line/vahavta-full-l2.mp3` | best take: sound review 0 weak, word check 2 off, Google 1 off |
 | `audio/f/israeli/line/vayehi-binsoa.mp3` | best take: sound review 1 weak, word check 3 off, Google 2 off |
 | `audio/f/israeli/line/vezot-hatorah.mp3` | best take: sound review 0 weak, word check 2 off, Google 2 off |
-| `audio/f/israeli/prayer/adon-olam-1.mp3` | Chirp 3 HD refused the text (HTTP 400) for every voice: the whole-prayer text is too long for one request |
+| `audio/f/israeli/prayer/adon-olam-1.mp3` | Chirp 3 HD refused the whole text (HTTP 400); recorded in parts later and still held: see the last section |
 | `audio/f/israeli/prayer/ashrei-145-1-3.mp3` | best take: sound review 1 weak, word check 1 off, Google 0 off |
-| `audio/f/israeli/prayer/haftarah-after.mp3` | Chirp 3 HD refused the text (HTTP 400) for every voice: the whole-prayer text is too long for one request |
-| `audio/f/israeli/prayer/kaddish-1.mp3` | Chirp 3 HD refused the text (HTTP 400) for every voice: the whole-prayer text is too long for one request |
+| `audio/f/israeli/prayer/haftarah-after.mp3` | Chirp 3 HD refused the whole text (HTTP 400); recorded in parts later and still held: see the last section |
+| `audio/f/israeli/prayer/kaddish-1.mp3` | Chirp 3 HD refused the whole text (HTTP 400); recorded in parts later and still held: see the last section |
 | `audio/f/israeli/prayer/kiddush-gen-2-1-3.mp3` | best take: sound review 4 weak, word check 3 off, Google 0 off |
 | `audio/f/israeli/prayer/sim-shalom.mp3` | best take: sound review 19 weak, word check 5 off, Google 4 off |
 | `audio/f/israeli/prayer/vahavta-full.mp3` | best take: sound review 11 weak, word check 1 off, Google 0 off |
 | `audio/m/israeli/line/adon-olam-1-l5.mp3` | best take: sound review 1 weak, word check 1 off, Google 1 off |
 | `audio/m/israeli/line/adon-olam-1-l6.mp3` | best take: sound review 0 weak, word check 1 off, Google 3 off |
 | `audio/m/israeli/line/adon-olam-1-l7.mp3` | best take: sound review 0 weak, word check 2 off, Google 2 off |
-| `audio/m/israeli/line/aleinu-1.mp3` | Chirp 3 HD refused the text (HTTP 400) for every voice: the whole-prayer text is too long for one request |
-| `audio/m/israeli/line/amidah-elohai-netzor.mp3` | Chirp 3 HD refused the text (HTTP 400) for every voice: the whole-prayer text is too long for one request |
+| `audio/m/israeli/line/aleinu-1.mp3` | Chirp 3 HD refused the whole text (HTTP 400); recorded in parts later and still held: see the last section |
+| `audio/m/israeli/line/amidah-elohai-netzor.mp3` | Chirp 3 HD refused the whole text (HTTP 400); recorded in parts later and still held: see the last section |
 | `audio/m/israeli/line/avot-1.mp3` | best take: sound review 6 weak, word check 1 off, Google 1 off |
 | `audio/m/israeli/line/candle-shabbat.mp3` | best take: sound review 0 weak, word check 4 off, Google 2 off |
 | `audio/m/israeli/line/etz-chaim.mp3` | best take: sound review 2 weak, word check 3 off, Google 0 off |
@@ -71,10 +71,31 @@ Owner rule: prayer lines are spoken with Google Chirp 3 HD voices. Fill-clips ru
 | `audio/m/israeli/line/mi-chamocha-1.mp3` | best take: sound review 1 weak, word check 1 off, Google 0 off |
 | `audio/m/israeli/line/sim-shalom-l1.mp3` | best take: sound review 12 weak, word check 3 off, Google 0 off |
 | `audio/m/israeli/line/vayehi-binsoa.mp3` | best take: sound review 1 weak, word check 2 off, Google 1 off |
-| `audio/m/israeli/prayer/adon-olam-1.mp3` | Chirp 3 HD refused the text (HTTP 400) for every voice: the whole-prayer text is too long for one request |
+| `audio/m/israeli/prayer/adon-olam-1.mp3` | Chirp 3 HD refused the whole text (HTTP 400); recorded in parts later and still held: see the last section |
 | `audio/m/israeli/prayer/ashrei-145-1-3.mp3` | best take: sound review 2 weak, word check 2 off, Google 0 off |
-| `audio/m/israeli/prayer/haftarah-after.mp3` | Chirp 3 HD refused the text (HTTP 400) for every voice: the whole-prayer text is too long for one request |
-| `audio/m/israeli/prayer/kaddish-1.mp3` | Chirp 3 HD refused the text (HTTP 400) for every voice: the whole-prayer text is too long for one request |
+| `audio/m/israeli/prayer/haftarah-after.mp3` | Chirp 3 HD refused the whole text (HTTP 400); recorded in parts later and still held: see the last section |
+| `audio/m/israeli/prayer/kaddish-1.mp3` | Chirp 3 HD refused the whole text (HTTP 400); recorded in parts later and still held: see the last section |
 | `audio/m/israeli/prayer/kiddush-gen-2-1-3.mp3` | best take: sound review 6 weak, word check 4 off, Google 1 off |
 | `audio/m/israeli/prayer/sim-shalom.mp3` | best take: sound review 20 weak, word check 4 off, Google 2 off |
 | `audio/m/israeli/prayer/vahavta-full.mp3` | best take: sound review 13 weak, word check 1 off, Google 1 off |
+
+## The five whole prayers too long for one Chirp request (chirp-long run 1)
+
+Chirp 3 HD refused every take of these with HTTP 400. Fill-clips run 5 shows where the limit sits: the longest text it accepted was 840 bytes and the shortest it refused 966, which matches a per-request limit of about 900 bytes, far below the 5,000 bytes the general Text-to-Speech quota page gives. `tools/audio/chirp_long.py` split each prayer at its own lines and sentence breaks in `data/corpus/registry.json`, cutting a sentence still over 400 bytes at a word boundary before a joining word (nothing retyped), and spoke each part as the Torah clips are (`spoken()`: the four-letter name read as Adonai; no line is on the clergy list). Every part was accepted: no request was refused. One voice per prayer: each narrator had 9 tries (Ari: Charon, Orus, Fenrir; Noa: Kore, Aoede, Leda; rates 1.0, 0.9, 0.85). The joined clips are over Google Speech-to-Text's 55-second limit, so **each part was judged on its own** by the three reviewers, and a try counted only if every part passed at least 2 of 3. A try stopped at its first failing part.
+
+No try passed for any of the ten clips, so every current clip keeps playing and its catalogue row carries `"chirpHeld": true` and `chirpHeldReason`.
+
+| clip | parts | furthest part reached before a part failed 2 of 3 |
+|---|---:|---:|
+| `audio/m/israeli/prayer/adon-olam-1.mp3` | 10 | 5 |
+| `audio/f/israeli/prayer/adon-olam-1.mp3` | 10 | 5 |
+| `audio/m/israeli/prayer/kaddish-1.mp3` | 7 | 4 |
+| `audio/f/israeli/prayer/kaddish-1.mp3` | 7 | 3 |
+| `audio/m/israeli/prayer/haftarah-after.mp3` | 8 | 2 |
+| `audio/f/israeli/prayer/haftarah-after.mp3` | 8 | 2 |
+| `audio/m/israeli/line/aleinu-1.mp3` | 4 | 1 |
+| `audio/f/israeli/line/aleinu-1.mp3` | 4 | 1 |
+| `audio/m/israeli/line/amidah-elohai-netzor.mp3` | 4 | 2 |
+| `audio/f/israeli/line/amidah-elohai-netzor.mp3` | 4 | 2 |
+
+Logs: `docs/audio/fill/chirp-long-r1-*.jsonl`.

@@ -55,7 +55,8 @@ test('transliteration toggle hides it and is remembered; tradition changes the r
   assert.notEqual(before, after);
   await root.querySelector('#sv-toggle-tr').click();
   assert.equal(root.queryAll('.sv-tr').length, 0);
-  assert.equal(root.querySelector('#sv-toggle-tr').attrs['aria-pressed'], 'true');
+  assert.equal(root.querySelector('#sv-toggle-tr').textContent, 'Show transliteration', 'M-01: the label says what the button will do');
+  assert.equal(root.querySelector('#sv-toggle-tr').attrs['aria-pressed'], undefined, 'no pressed state to contradict the words');
   assert.equal(store.m['service.prefs'].showTr, false);
   assert.equal(store.m['service.prefs'].tradition, 'ashkenazi');
 });
@@ -109,4 +110,21 @@ test('every control is a real button/select/summary (keyboard operable) and Hebr
   await root.querySelector('[data-follow="shabbat-morning"]').click();
   for (const n of root.all((x) => x.listeners.click)) assert.ok(['button', 'a'].includes(n.tag), n.tag);
   for (const n of root.all((x) => x.className.includes('sv-he'))) assert.equal(n.attrs.lang, 'he');
+});
+
+test('M-01: the tradition chosen in Settings is the default; the page override holds only while Settings is unchanged', async () => {
+  const run = async (settingsTrad, init) => {
+    const root = new N('div'); const store = memStore(init);
+    await mount(root, { store, settings: { get: (k) => (k === 'congregation' ? settingsTrad : undefined) } });
+    await btn(root, /Follow the service/).click();
+    return { sel: root.querySelector('#sv-tradition'), store };
+  };
+  let r = await run('ashkenazi');
+  assert.equal(r.sel.children.find((o) => 'selected' in o.attrs)?.attrs.value, 'ashkenazi', 'Settings choice applies with no re-selection');
+  r = await run('sephardi', { 'service.prefs': { tradition: 'israeli', basis: 'sephardi' } });
+  assert.equal(r.sel.children.find((o) => 'selected' in o.attrs)?.attrs.value, 'israeli', 'the page override holds while Settings is unchanged');
+  r = await run('ashkenazi', { 'service.prefs': { tradition: 'israeli', basis: 'sephardi' } });
+  assert.equal(r.sel.children.find((o) => 'selected' in o.attrs)?.attrs.value, 'ashkenazi', 'Settings changed since: the page follows Settings');
+  r = await run('sephardi', { 'service.prefs': { tradition: 'israeli' } });
+  assert.equal(r.sel.children.find((o) => 'selected' in o.attrs)?.attrs.value, 'sephardi', 'an old saved choice without a basis gives way to Settings');
 });

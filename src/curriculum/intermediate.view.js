@@ -366,7 +366,7 @@ function mountLesson(root, ctx, id) {
       }
       if (all) {
         // Count the lesson in the shared progress first: if that cannot be saved, nothing here says "finished" (the exercise results stay, so the learner can try again).
-        try { await completeLesson(ctx, lesson); } catch (e) { if (alive) showSaveFailure(body, e, summary); return; }
+        try { await completeLesson(ctx, lesson, Date.now(), { right, of: exs.length }); } catch (e) { if (alive) showSaveFailure(body, e, summary); return; }
         mine.done = Date.now();
         await persist({ done: mine.done, score: right, total: exs.length });
       }

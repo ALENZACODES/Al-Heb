@@ -48,6 +48,7 @@ export const SECTION_ROUTES = {
 // lane g2: words by topic, hub-only (PREVIEW_HIDDEN)
 const G2_ROUTES = ROUTES.filter((r) => r.name.startsWith('g2-')).map((r) => r.name);
 SECTION_ROUTES.learn.push(...G2_ROUTES);
+SECTION_ROUTES.progress.push('certificate'); SECTION_ROUTES.more.push('move'); // lane 4 (12 Nov)
 
 /** Route name -> section id. */
 export const ROUTE_SECTION = Object.fromEntries(Object.entries(SECTION_ROUTES).flatMap(([s, names]) => names.map((n) => [n, s])));

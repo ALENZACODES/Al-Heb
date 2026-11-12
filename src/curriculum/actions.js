@@ -8,7 +8,7 @@ import { nextScaffold, SCAFFOLD_KEY } from "./scaffold.js";
 import { nextFadeLevel } from "./fade.js";
 import { memoryCardsFor, ensureMemoryCards } from "../letters/memory.core.js";
 import { loadContent } from "./content.js";
-import { passMark, passed as passedCheck } from "./passmark.js";
+import { passMark, passed as passedCheck, CHECKS_KEY, withCheck } from "./passmark.js";
 export { loadState };
 async function pointToNext(lesson, completed) {
   const { available } = await import('./lessons.js');
@@ -25,7 +25,7 @@ async function fullLesson(lesson) {
  * Work out every write that counting a lesson as done needs, without writing anything. `old` is what each key holds now, so a failed batch can be undone.
  * Order matters: the review cards go first, then the "done" mark, then the streak, so a lesson is never marked done without its cards.
  */
-async function planCompletion(ctx, lesson, now, applyOutcomes) {
+async function planCompletion(ctx, lesson, now, applyOutcomes, check) {
   const st = await loadState(ctx, now);
   const oldProgress = await storeGet(ctx, PROGRESS_KEY, undefined), oldCards = await storeGet(ctx, CARDS_KEY, undefined);
   const completed = { ...st.completed, [lesson.id]: st.completed[lesson.id] || now };
@@ -36,6 +36,7 @@ async function planCompletion(ctx, lesson, now, applyOutcomes) {
     { key: CARDS_KEY, value: cards, old: oldCards },
     { key: PROGRESS_KEY, value: { completed }, old: oldProgress },
     { key: STREAK_KEY, value: recordActivity(st.rawStreak, now), old: st.rawStreak ?? undefined },
+    ...(check ? [await checkWrite(ctx, lesson.id, check, now)] : []), // lane 4: for the certificate
   ] };
 }
 
@@ -44,9 +45,11 @@ async function planCompletion(ctx, lesson, now, applyOutcomes) {
  * All-or-nothing: if the store is missing or a write fails, the writes already made are undone and StoreWriteError is thrown, so the caller must not show "complete".
  * (A store that has fallen back to memory still accepts the writes; that is disclosed by the storage notice, not an error.)
  */
-export async function completeLesson(ctx, lesson, now = Date.now()) {
+async function checkWrite(ctx, id, c, now) { const old = await storeGet(ctx, CHECKS_KEY, undefined); return { key: CHECKS_KEY, value: withCheck(old, id, c.right, c.of, now), old }; }
+/** `check` ({right, of}, optional): the first-try score that passed, kept for the certificate. */
+export async function completeLesson(ctx, lesson, now = Date.now(), check) {
   const full = await fullLesson(lesson);
-  const { added, completed, writes } = await planCompletion(ctx, full, now);
+  const { added, completed, writes } = await planCompletion(ctx, full, now, null, check);
   await storeWriteAll(ctx, writes);
   pointToNext(full, completed);
   return { added, completed };
@@ -263,11 +266,11 @@ export async function saveQuickCheck(ctx, lesson, questions, results, now = Date
     const oldCards = await storeGet(ctx, CARDS_KEY, undefined);
     const { cards: base, added } = ensureCards(st.cards, full, now);
     const cards = outcomes.length ? applyOutcomesToCards(base, outcomes, now) : base;
-    await storeWriteAll(ctx, [{ key: CARDS_KEY, value: cards, old: oldCards }]);
+    await storeWriteAll(ctx, [{ key: CARDS_KEY, value: cards, old: oldCards }, await checkWrite(ctx, full.id, { right, of }, now)]);
     return { added, updated: outcomes.length, completed: false, passed: false, right, need, of };
   }
   // One batch: the lesson's cards, the answers' effect on them, the done mark and the streak are written together or not at all (throws StoreWriteError).
-  const { added, completed, writes } = await planCompletion(ctx, lesson, now, outcomes.length ? (cards) => applyOutcomesToCards(cards, outcomes, now) : null);
+  const { added, completed, writes } = await planCompletion(ctx, lesson, now, outcomes.length ? (cards) => applyOutcomesToCards(cards, outcomes, now) : null, { right, of });
   await storeWriteAll(ctx, writes);
   pointToNext(lesson, completed);
   return { added, updated: outcomes.length, completed: true, passed: true, right, need, of };

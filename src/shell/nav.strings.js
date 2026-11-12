@@ -21,6 +21,7 @@ export const NAV_EN = {
   'nav.books': 'Little books',
   'nav.games': 'Games',
   'nav.route.awards': 'Awards and certificate',
+  'nav.route.move': 'Move to another device', 'nav.route.certificate': 'Certificate of lessons completed', // lane 4 (12 Nov)
   'nav.route.songs': 'Songs',
   'nav.route.camera': 'Camera Translator',
   // games hub and every game

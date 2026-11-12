@@ -81,14 +81,15 @@ test("saveQuickCheck (a pass) writes cards (with the answers applied), the done 
   const s = mkStore();
   const r = await A.saveQuickCheck({ store: s }, lesson, qs, { q1: true }, 1e12);
   assert.deepEqual([r.completed, r.passed, r.updated], [true, true, 1]);
-  assert.deepEqual(s.log, ["srs.cards", "curriculum.progress", "streak"], "cards first, so a lesson is never done without its cards");
+  assert.deepEqual(s.log, ["srs.cards", "curriculum.progress", "streak", "lesson.checks.v1"], "cards first, so a lesson is never done without its cards; the check score last, in the same batch (lane 4, certificate)");
   assert.equal(s.m["srs.cards"]["word:r01:1"].reps, 1, "the answer was applied to the saved card");
 });
 test("saveQuickCheck below the pass mark (C-01) writes the review cards only: no done mark, no streak day", async () => {
   const s = mkStore();
   const r = await A.saveQuickCheck({ store: s }, lesson, qs, { q1: false }, 1e12);
   assert.deepEqual([r.completed, r.passed, r.updated, r.right, r.need, r.of], [false, false, 1, 0, 1, 1]);
-  assert.deepEqual(s.log, ["srs.cards"], "only the cards are written");
+  assert.deepEqual(s.log, ["srs.cards", "lesson.checks.v1"], "only the cards and the attempt's score are written (lane 4: the certificate keeps attempts)");
+  assert.deepEqual(s.m["lesson.checks.v1"].r01, { pass: null, tries: [{ at: 1e12, right: 0, of: 1 }] });
   assert.equal(s.m["srs.cards"]["word:r01:1"].reps, 1, "the miss was applied to the saved card (relearning, due in minutes)");
   assert.equal(s.m["curriculum.progress"], undefined); assert.equal(s.m.streak, undefined);
 });

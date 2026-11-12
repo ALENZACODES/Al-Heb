@@ -67,7 +67,10 @@ const ON_DEMAND_PREFIXES = ['data/vocab/', 'data/roots/', 'data/knownwords/', 'd
   // Letter videos (about 70 KB each) and their list: streamed when watched, runtime-cached.
   'assets/videos/', 'data/videos/',
   // Ask the Torah answer bank (about 14 MB raw, 2.8 MB compressed, 32 answer files): fetched when #/ask opens, one answer file per question asked.
-  'data/ask/'];
+  'data/ask/',
+  // lane 4 (12 Nov): Move to another device and the learner's certificate (route code, fetched on first open), and the
+  // offline pack lists read by the Use Aleph offline page (data/offline/packs.json, built by tools/offline-packs.mjs).
+  'src/sync/', 'data/offline/'];
 const ON_DEMAND_FILES = new Set([
   // Rimon's stills (src/app.js imports the stage after boot; it shows nothing until the pictures exist, and the pictures are fetched on demand too),
   // and two older Rimon modules no screen imports (kept for reference and their tests).
@@ -210,6 +213,7 @@ if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) 
   const c = await writeCounts({ force: process.argv.includes('--stamp') });
   console.log(`src/lib/counts.generated.js: build ${c.build.version} ${c.build.builtAt}`);
   writeViewList();
+  await (await import('./offline-packs.mjs')).writePacks(); // lane 4: offline pack lists and sizes, before the hash covers them
   const m = computeManifest();
   const root = repoRoot;
   writeFileSync(join(root, 'precache-manifest.js'), manifestText(m));

@@ -18,3 +18,9 @@ export function passRuleText(n) {
 /** "1 retry so far" / "2 retries so far" (empty for none). */
 export const retryText = (n) => (n > 0 ? `${n} ${n === 1 ? "retry" : "retries"} so far` : "");
 
+// lane 4: graded checks for the certificate. { [lessonId]: { pass: {at,right,of}|null (earliest), tries: newest 10 } }
+export const CHECKS_KEY = "lesson.checks.v1";
+export function withCheck(map, id, right, of, at) {
+  const m = map && typeof map === "object" ? map : {}, r = m[id] || {}, t = { at, right, of };
+  return { ...m, [id]: { pass: r.pass || (passed(right, of) ? t : null), tries: [...(r.tries || []), t].slice(-10) } };
+}

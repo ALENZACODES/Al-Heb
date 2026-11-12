@@ -192,6 +192,9 @@ export const ROUTES = [
   { name: 'privacy', pattern: '/privacy', module: './privacy.view.js', tier: 'v0', title: 'Privacy', owner: 'legal', optional: true, group: 'learn', quick: 'nav.privacy' },
   { name: 'terms', pattern: '/terms', module: './terms.view.js', tier: 'v0', title: 'Terms and rights', owner: 'legal', optional: true, group: 'learn', quick: 'nav.terms' },
   { name: 'compare', pattern: '/compare', module: '../pronunciation/compare.view.js', title: 'Compare pronunciations', owner: 'pronunciation', optional: true, group: 'learn', quick: 'nav.compare' },
+  // lane 4: move progress between own devices (merge, no server); own certificate
+  { name: 'move', pattern: '/move', module: '../sync/move.view.js', title: 'Move to another device', owner: 'sync', optional: true },
+  { name: 'certificate', pattern: '/certificate', module: '../sync/certificate.view.js', title: 'Certificate of lessons completed', owner: 'sync', optional: true },
   { name: 'offline', pattern: '/offline', module: './offline.view.js', tier: 'v0', title: 'Use Aleph offline', owner: 'offline', optional: true, group: 'learn', quick: 'nav.offline' },
   { name: 'vocab-themes', pattern: '/vocab/themes', module: '../vocab/themes.view.js', title: 'Theme packs', owner: 'vocab', optional: true, group: 'learn', quick: 'nav.vocab-themes' },
   { name: 'talk', pattern: '/talk', module: '../talk/talk.view.js', title: 'Talk', owner: 'talk', optional: true, quick: 'nav.talk' },

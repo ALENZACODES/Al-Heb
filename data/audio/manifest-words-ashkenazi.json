@@ -45329,12 +45329,11 @@
   "id": "hdd2efa8e",
   "text": "עָשָׂה",
   "ipa": "ˈɔ.sə",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to do (to perform an action, to accomplish a thing); to make; to make (to cause to be)",
-  "phonetic": "asah",
-  "plays": "audio/m/israeli/word/hdd2efa8e.mp3"
+  "phonetic": "asah"
  },
  {
   "path": "audio/f/ashkenazi/word/hdd2efa8e.mp3",
@@ -45344,12 +45343,11 @@
   "id": "hdd2efa8e",
   "text": "עָשָׂה",
   "ipa": "ˈɔ.sə",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to do (to perform an action, to accomplish a thing); to make; to make (to cause to be)",
-  "phonetic": "asah",
-  "plays": "audio/f/israeli/word/hdd2efa8e.mp3"
+  "phonetic": "asah"
  },
  {
   "path": "audio/m/ashkenazi/word/hf8c8316a.mp3",
@@ -45359,12 +45357,11 @@
   "id": "hf8c8316a",
   "text": "שָׁלוֹם",
   "ipa": "ˈʃɔ.lojm",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "peace; well-being, welfare; rest, quietude",
-  "phonetic": "shalom",
-  "plays": "audio/m/israeli/word/hf8c8316a.mp3"
+  "phonetic": "shalom"
  },
  {
   "path": "audio/f/ashkenazi/word/hf8c8316a.mp3",
@@ -45374,12 +45371,11 @@
   "id": "hf8c8316a",
   "text": "שָׁלוֹם",
   "ipa": "ˈʃɔ.lojm",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "peace; well-being, welfare; rest, quietude",
-  "phonetic": "shalom",
-  "plays": "audio/f/israeli/word/hf8c8316a.mp3"
+  "phonetic": "shalom"
  },
  {
   "path": "audio/m/ashkenazi/word/pefce5ddb.mp3",
@@ -45389,12 +45385,11 @@
   "id": "pefce5ddb",
   "text": "כָּל",
   "ipa": "ˈkɔl",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "all, whole, everything",
-  "phonetic": "kol",
-  "plays": "audio/m/israeli/word/pefce5ddb.mp3"
+  "phonetic": "kol"
  },
  {
   "path": "audio/f/ashkenazi/word/pefce5ddb.mp3",
@@ -45404,12 +45399,11 @@
   "id": "pefce5ddb",
   "text": "כָּל",
   "ipa": "ˈkɔl",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "all, whole, everything",
-  "phonetic": "kol",
-  "plays": "audio/f/israeli/word/pefce5ddb.mp3"
+  "phonetic": "kol"
  },
  {
   "path": "audio/m/ashkenazi/word/h103e7d27.mp3",
@@ -45671,12 +45665,11 @@
   "id": "hea72b7d7",
   "text": "אִמֵּן",
   "ipa": "ˈi.mejn",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to train",
-  "phonetic": "imen",
-  "plays": "audio/m/israeli/word/hea72b7d7.mp3"
+  "phonetic": "imen"
  },
  {
   "path": "audio/f/ashkenazi/word/hea72b7d7.mp3",
@@ -46121,12 +46114,11 @@
   "id": "hf2bba104",
   "text": "שָׁם",
   "ipa": "ˈʃɔm",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "there",
-  "phonetic": "sham",
-  "plays": "audio/m/israeli/word/hf2bba104.mp3"
+  "phonetic": "sham"
  },
  {
   "path": "audio/f/ashkenazi/word/hf2bba104.mp3",
@@ -46136,12 +46128,11 @@
   "id": "hf2bba104",
   "text": "שָׁם",
   "ipa": "ˈʃɔm",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "there",
-  "phonetic": "sham",
-  "plays": "audio/f/israeli/word/hf2bba104.mp3"
+  "phonetic": "sham"
  },
  {
   "path": "audio/m/ashkenazi/word/h8f42d584.mp3",
@@ -46319,12 +46310,11 @@
   "id": "h6b853dd5",
   "text": "אֱלֹהִים",
   "ipa": "e.ˈloj.him",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "a god",
-  "phonetic": "elohim",
-  "plays": "audio/m/israeli/word/h6b853dd5.mp3"
+  "phonetic": "elohim"
  },
  {
   "path": "audio/f/ashkenazi/word/h6b853dd5.mp3",
@@ -46589,12 +46579,11 @@
   "id": "he801fe52",
   "text": "שְׁבִיעִי",
   "ipa": "ʃə.ˈvi.i",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "seventh",
-  "phonetic": "shevi'i",
-  "plays": "audio/f/israeli/word/he801fe52.mp3"
+  "phonetic": "shevi'i"
  },
  {
   "path": "audio/m/ashkenazi/word/h4692cd32.mp3",
@@ -46660,12 +46649,11 @@
   "id": "hffd88aa2",
   "text": "עָקַב",
   "ipa": "ˈɔ.kav",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to follow, tail, track, trace; to watch, observe; to pay attention",
-  "phonetic": "akav",
-  "plays": "audio/m/israeli/word/hffd88aa2.mp3"
+  "phonetic": "akav"
  },
  {
   "path": "audio/f/ashkenazi/word/hffd88aa2.mp3",
@@ -46675,12 +46663,11 @@
   "id": "hffd88aa2",
   "text": "עָקַב",
   "ipa": "ˈɔ.kav",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to follow, tail, track, trace; to watch, observe; to pay attention",
-  "phonetic": "akav",
-  "plays": "audio/f/israeli/word/hffd88aa2.mp3"
+  "phonetic": "akav"
  },
  {
   "path": "audio/m/ashkenazi/word/h9dcc35dc.mp3",
@@ -46804,12 +46791,11 @@
   "id": "hfe0c1c1e",
   "text": "אִפְשֵׁר",
   "ipa": "ˈif.ʃejr",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to permit; to permit (an action)",
-  "phonetic": "ifsher",
-  "plays": "audio/m/israeli/word/hfe0c1c1e.mp3"
+  "phonetic": "ifsher"
  },
  {
   "path": "audio/f/ashkenazi/word/hfe0c1c1e.mp3",
@@ -47116,12 +47102,11 @@
   "id": "hf63de22c",
   "text": "כֵּן",
   "ipa": "ˈkejn",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "yes; thus, so",
-  "phonetic": "ken",
-  "plays": "audio/m/israeli/word/hf63de22c.mp3"
+  "phonetic": "ken"
  },
  {
   "path": "audio/f/ashkenazi/word/hf63de22c.mp3",
@@ -47131,12 +47116,11 @@
   "id": "hf63de22c",
   "text": "כֵּן",
   "ipa": "ˈkejn",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "yes; thus, so",
-  "phonetic": "ken",
-  "plays": "audio/f/israeli/word/hf63de22c.mp3"
+  "phonetic": "ken"
  },
  {
   "path": "audio/m/ashkenazi/word/ha3acfc14.mp3",
@@ -47458,12 +47442,11 @@
   "id": "hfd4bf43b",
   "text": "זָכַר",
   "ipa": "ˈzɔ.xar",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to remember",
-  "phonetic": "zakhar",
-  "plays": "audio/m/israeli/word/hfd4bf43b.mp3"
+  "phonetic": "zakhar"
  },
  {
   "path": "audio/f/ashkenazi/word/hfd4bf43b.mp3",
@@ -47473,12 +47456,11 @@
   "id": "hfd4bf43b",
   "text": "זָכַר",
   "ipa": "ˈzɔ.xar",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to remember",
-  "phonetic": "zakhar",
-  "plays": "audio/f/israeli/word/hfd4bf43b.mp3"
+  "phonetic": "zakhar"
  },
  {
   "path": "audio/m/ashkenazi/word/hdd2bd792.mp3",
@@ -47488,12 +47470,11 @@
   "id": "hdd2bd792",
   "text": "גָּדוֹל",
   "ipa": "ˈɡɔ.dojl",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "big, large; great, important",
-  "phonetic": "gadol",
-  "plays": "audio/m/israeli/word/hdd2bd792.mp3"
+  "phonetic": "gadol"
  },
  {
   "path": "audio/f/ashkenazi/word/hdd2bd792.mp3",
@@ -47503,12 +47484,11 @@
   "id": "hdd2bd792",
   "text": "גָּדוֹל",
   "ipa": "ˈɡɔ.dojl",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "big, large; great, important",
-  "phonetic": "gadol",
-  "plays": "audio/f/israeli/word/hdd2bd792.mp3"
+  "phonetic": "gadol"
  },
  {
   "path": "audio/m/ashkenazi/word/hb43259df.mp3",
@@ -47602,12 +47582,11 @@
   "id": "he0b2f96b",
   "text": "תּוֹדָה",
   "ipa": "ˈtoj.də",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "gratitude",
-  "phonetic": "todah",
-  "plays": "audio/m/israeli/word/he0b2f96b.mp3"
+  "phonetic": "todah"
  },
  {
   "path": "audio/f/ashkenazi/word/he0b2f96b.mp3",
@@ -47617,12 +47596,11 @@
   "id": "he0b2f96b",
   "text": "תּוֹדָה",
   "ipa": "ˈtoj.də",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "gratitude",
-  "phonetic": "todah",
-  "plays": "audio/f/israeli/word/he0b2f96b.mp3"
+  "phonetic": "todah"
  },
  {
   "path": "audio/m/ashkenazi/word/h7ef4abda.mp3",
@@ -47772,12 +47750,11 @@
   "id": "hdbd6764a",
   "text": "סִדֵּר",
   "ipa": "ˈsi.dejr",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to organize",
-  "phonetic": "sider",
-  "plays": "audio/m/israeli/word/hdbd6764a.mp3"
+  "phonetic": "sider"
  },
  {
   "path": "audio/f/ashkenazi/word/hdbd6764a.mp3",
@@ -47787,12 +47764,11 @@
   "id": "hdbd6764a",
   "text": "סִדֵּר",
   "ipa": "ˈsi.dejr",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to organize",
-  "phonetic": "sider",
-  "plays": "audio/f/israeli/word/hdbd6764a.mp3"
+  "phonetic": "sider"
  },
  {
   "path": "audio/m/ashkenazi/word/h6ad3ddd8.mp3",
@@ -48222,12 +48198,11 @@
   "id": "hf07c1580",
   "text": "שָׁנָה",
   "ipa": "ˈʃɔ.nə",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "year",
-  "phonetic": "shanah",
-  "plays": "audio/m/israeli/word/hf07c1580.mp3"
+  "phonetic": "shanah"
  },
  {
   "path": "audio/f/ashkenazi/word/hf07c1580.mp3",
@@ -48605,12 +48580,11 @@
   "id": "hea14727f",
   "text": "זֹאת",
   "ipa": "ˈzojs",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "this (feminine)",
-  "phonetic": "zot",
-  "plays": "audio/f/israeli/word/hea14727f.mp3"
+  "phonetic": "zot"
  },
  {
   "path": "audio/m/ashkenazi/word/h67e9e6f3.mp3",
@@ -48958,12 +48932,11 @@
   "id": "he15e52d3",
   "text": "טֶלֶפוֹן",
   "ipa": "te.ˈle.fojn",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "telephone, phone",
-  "phonetic": "telefon",
-  "plays": "audio/m/israeli/word/he15e52d3.mp3"
+  "phonetic": "telefon"
  },
  {
   "path": "audio/f/ashkenazi/word/he15e52d3.mp3",
@@ -48973,12 +48946,11 @@
   "id": "he15e52d3",
   "text": "טֶלֶפוֹן",
   "ipa": "te.ˈle.fojn",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "telephone, phone",
-  "phonetic": "telefon",
-  "plays": "audio/f/israeli/word/he15e52d3.mp3"
+  "phonetic": "telefon"
  },
  {
   "path": "audio/m/ashkenazi/word/h3674f19e.mp3",
@@ -49044,12 +49016,11 @@
   "id": "hd9ea111b",
   "text": "רֵיק",
   "ipa": "ˈrejk",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "empty; dull, boring",
-  "phonetic": "reik",
-  "plays": "audio/m/israeli/word/hd9ea111b.mp3"
+  "phonetic": "reik"
  },
  {
   "path": "audio/f/ashkenazi/word/hd9ea111b.mp3",
@@ -49059,12 +49030,11 @@
   "id": "hd9ea111b",
   "text": "רֵיק",
   "ipa": "ˈrejk",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "empty; dull, boring",
-  "phonetic": "reik",
-  "plays": "audio/f/israeli/word/hd9ea111b.mp3"
+  "phonetic": "reik"
  },
  {
   "path": "audio/m/ashkenazi/word/ha74bd927.mp3",
@@ -49285,12 +49255,11 @@
   "id": "hd9cf2fa5",
   "text": "יָקָר",
   "ipa": "ˈjɔ.kɔr",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "expensive (having a high price, cost); dear, precious",
-  "phonetic": "yakar",
-  "plays": "audio/f/israeli/word/hd9cf2fa5.mp3"
+  "phonetic": "yakar"
  },
  {
   "path": "audio/m/ashkenazi/word/h447bb433.mp3",
@@ -49328,12 +49297,11 @@
   "id": "he9919e02",
   "text": "לְ־",
   "ipa": "ˈlə-",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to; to, for; of",
-  "phonetic": "le-",
-  "plays": "audio/m/israeli/word/he9919e02.mp3"
+  "phonetic": "le-"
  },
  {
   "path": "audio/f/ashkenazi/word/he9919e02.mp3",
@@ -49343,12 +49311,11 @@
   "id": "he9919e02",
   "text": "לְ־",
   "ipa": "ˈlə-",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to; to, for; of",
-  "phonetic": "le-",
-  "plays": "audio/f/israeli/word/he9919e02.mp3"
+  "phonetic": "le-"
  },
  {
   "path": "audio/m/ashkenazi/word/h66c2ffb6.mp3",
@@ -50021,12 +49988,11 @@
   "id": "hf9047f4b",
   "text": "כּוֹס",
   "ipa": "ˈkojs",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "cup; glass; little owl",
-  "phonetic": "kos",
-  "plays": "audio/f/israeli/word/hf9047f4b.mp3"
+  "phonetic": "kos"
  },
  {
   "path": "audio/m/ashkenazi/word/hfe074a94.mp3",
@@ -50036,12 +50002,11 @@
   "id": "hfe074a94",
   "text": "טֶרֶם",
   "ipa": "ˈte.rem",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "before; not yet",
-  "phonetic": "terem",
-  "plays": "audio/m/israeli/word/hfe074a94.mp3"
+  "phonetic": "terem"
  },
  {
   "path": "audio/f/ashkenazi/word/hfe074a94.mp3",
@@ -50051,12 +50016,11 @@
   "id": "hfe074a94",
   "text": "טֶרֶם",
   "ipa": "ˈte.rem",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "before; not yet",
-  "phonetic": "terem",
-  "plays": "audio/f/israeli/word/hfe074a94.mp3"
+  "phonetic": "terem"
  },
  {
   "path": "audio/m/ashkenazi/word/h5c2548dc.mp3",
@@ -50206,12 +50170,11 @@
   "id": "hf5bee50d",
   "text": "לַיְלָה",
   "ipa": "ˈlaj.lə",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "night; adversity",
-  "phonetic": "laylah",
-  "plays": "audio/m/israeli/word/hf5bee50d.mp3"
+  "phonetic": "laylah"
  },
  {
   "path": "audio/f/ashkenazi/word/hf5bee50d.mp3",
@@ -50221,12 +50184,11 @@
   "id": "hf5bee50d",
   "text": "לַיְלָה",
   "ipa": "ˈlaj.lə",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "night; adversity",
-  "phonetic": "laylah",
-  "plays": "audio/f/israeli/word/hf5bee50d.mp3"
+  "phonetic": "laylah"
  },
  {
   "path": "audio/m/ashkenazi/word/hcbafeb66.mp3",
@@ -50432,12 +50394,11 @@
   "id": "he90efaca",
   "text": "בַּי",
   "ipa": "ˈbaj",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "bye",
-  "phonetic": "bai",
-  "plays": "audio/m/israeli/word/he90efaca.mp3"
+  "phonetic": "bai"
  },
  {
   "path": "audio/f/ashkenazi/word/he90efaca.mp3",
@@ -50447,12 +50408,11 @@
   "id": "he90efaca",
   "text": "בַּי",
   "ipa": "ˈbaj",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "bye",
-  "phonetic": "bai",
-  "plays": "audio/f/israeli/word/he90efaca.mp3"
+  "phonetic": "bai"
  },
  {
   "path": "audio/m/ashkenazi/word/h5658dbbe.mp3",
@@ -50770,12 +50730,11 @@
   "id": "hfaefa59a",
   "text": "קִבֵּל",
   "ipa": "ˈki.bejl",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to receive, to get; to accept",
-  "phonetic": "kibel",
-  "plays": "audio/m/israeli/word/hfaefa59a.mp3"
+  "phonetic": "kibel"
  },
  {
   "path": "audio/f/ashkenazi/word/hfaefa59a.mp3",
@@ -50785,12 +50744,11 @@
   "id": "hfaefa59a",
   "text": "קִבֵּל",
   "ipa": "ˈki.bejl",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to receive, to get; to accept",
-  "phonetic": "kibel",
-  "plays": "audio/f/israeli/word/hfaefa59a.mp3"
+  "phonetic": "kibel"
  },
  {
   "path": "audio/m/ashkenazi/word/h842147e5.mp3",
@@ -50828,12 +50786,11 @@
   "id": "hfe4ebf2c",
   "text": "אָדָם",
   "ipa": "ˈɔ.dɔm",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "a man, a human",
-  "phonetic": "adam",
-  "plays": "audio/m/israeli/word/hfe4ebf2c.mp3"
+  "phonetic": "adam"
  },
  {
   "path": "audio/f/ashkenazi/word/hfe4ebf2c.mp3",
@@ -50843,12 +50800,11 @@
   "id": "hfe4ebf2c",
   "text": "אָדָם",
   "ipa": "ˈɔ.dɔm",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "a man, a human",
-  "phonetic": "adam",
-  "plays": "audio/f/israeli/word/hfe4ebf2c.mp3"
+  "phonetic": "adam"
  },
  {
   "path": "audio/m/ashkenazi/word/hffd9b904.mp3",
@@ -51530,12 +51486,11 @@
   "id": "hf28ba308",
   "text": "יָדַע",
   "ipa": "ˈjɔ.da",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to know (a fact); to know how (to do something); to know (a person or place)",
-  "phonetic": "yada",
-  "plays": "audio/m/israeli/word/hf28ba308.mp3"
+  "phonetic": "yada"
  },
  {
   "path": "audio/f/ashkenazi/word/hf28ba308.mp3",
@@ -51545,12 +51500,11 @@
   "id": "hf28ba308",
   "text": "יָדַע",
   "ipa": "ˈjɔ.da",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to know (a fact); to know how (to do something); to know (a person or place)",
-  "phonetic": "yada",
-  "plays": "audio/f/israeli/word/hf28ba308.mp3"
+  "phonetic": "yada"
  },
  {
   "path": "audio/m/ashkenazi/word/hef6e1613.mp3",
@@ -51560,12 +51514,11 @@
   "id": "hef6e1613",
   "text": "אִישׁ",
   "ipa": "ˈiʃ",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "a man, adult male human being; husband",
-  "phonetic": "ish",
-  "plays": "audio/m/israeli/word/hef6e1613.mp3"
+  "phonetic": "ish"
  },
  {
   "path": "audio/f/ashkenazi/word/hef6e1613.mp3",
@@ -51575,12 +51528,11 @@
   "id": "hef6e1613",
   "text": "אִישׁ",
   "ipa": "ˈiʃ",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "a man, adult male human being; husband",
-  "phonetic": "ish",
-  "plays": "audio/f/israeli/word/hef6e1613.mp3"
+  "phonetic": "ish"
  },
  {
   "path": "audio/m/ashkenazi/word/h46f7979e.mp3",
@@ -51758,12 +51710,11 @@
   "id": "hfcd9d9b6",
   "text": "יָשַׁב",
   "ipa": "ˈjɔ.ʃav",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to sit, to be in a position with the torso upright and the legs supported; to sit, to move into such a position; to settle, to establish a residence",
-  "phonetic": "yashav",
-  "plays": "audio/m/israeli/word/hfcd9d9b6.mp3"
+  "phonetic": "yashav"
  },
  {
   "path": "audio/f/ashkenazi/word/hfcd9d9b6.mp3",
@@ -51773,12 +51724,11 @@
   "id": "hfcd9d9b6",
   "text": "יָשַׁב",
   "ipa": "ˈjɔ.ʃav",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to sit, to be in a position with the torso upright and the legs supported; to sit, to move into such a position; to settle, to establish a residence",
-  "phonetic": "yashav",
-  "plays": "audio/f/israeli/word/hfcd9d9b6.mp3"
+  "phonetic": "yashav"
  },
  {
   "path": "audio/m/ashkenazi/word/hf9a1a55b.mp3",
@@ -52658,12 +52608,11 @@
   "id": "hf19f0a88",
   "text": "בַּנְק",
   "ipa": "ˈbank",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "bank",
-  "phonetic": "bank",
-  "plays": "audio/m/israeli/word/hf19f0a88.mp3"
+  "phonetic": "bank"
  },
  {
   "path": "audio/f/ashkenazi/word/hf19f0a88.mp3",
@@ -52673,12 +52622,11 @@
   "id": "hf19f0a88",
   "text": "בַּנְק",
   "ipa": "ˈbank",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "bank",
-  "phonetic": "bank",
-  "plays": "audio/f/israeli/word/hf19f0a88.mp3"
+  "phonetic": "bank"
  },
  {
   "path": "audio/m/ashkenazi/word/hc8c1466c.mp3",
@@ -53159,12 +53107,11 @@
   "id": "hf3892816",
   "text": "אֵיזֶה",
   "ipa": "ˈej.ze",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "what, which; some, whichever; what",
-  "phonetic": "eizeh",
-  "plays": "audio/f/israeli/word/hf3892816.mp3"
+  "phonetic": "eizeh"
  },
  {
   "path": "audio/m/ashkenazi/word/h60b16793.mp3",
@@ -53342,12 +53289,11 @@
   "id": "hf95173f3",
   "text": "מִשְׁפָּט",
   "ipa": "ˈmiʃ.pɔt",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "a trial; Law; a judgment, verdict, ruling",
-  "phonetic": "mishpat",
-  "plays": "audio/m/israeli/word/hf95173f3.mp3"
+  "phonetic": "mishpat"
  },
  {
   "path": "audio/f/ashkenazi/word/hf95173f3.mp3",
@@ -53357,12 +53303,11 @@
   "id": "hf95173f3",
   "text": "מִשְׁפָּט",
   "ipa": "ˈmiʃ.pɔt",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "a trial; Law; a judgment, verdict, ruling",
-  "phonetic": "mishpat",
-  "plays": "audio/f/israeli/word/hf95173f3.mp3"
+  "phonetic": "mishpat"
  },
  {
   "path": "audio/m/ashkenazi/word/hfb819565.mp3",
@@ -53372,12 +53317,11 @@
   "id": "hfb819565",
   "text": "רוּחַ",
   "ipa": "ˈru.ax",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "wind, a wind",
-  "phonetic": "ruach",
-  "plays": "audio/m/israeli/word/hfb819565.mp3"
+  "phonetic": "ruach"
  },
  {
   "path": "audio/f/ashkenazi/word/hfb819565.mp3",
@@ -53798,12 +53742,11 @@
   "id": "he43ad309",
   "text": "שָׁפַט",
   "ipa": "ˈʃɔ.fat",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to judge; to sentence; to referee",
-  "phonetic": "shafat",
-  "plays": "audio/m/israeli/word/he43ad309.mp3"
+  "phonetic": "shafat"
  },
  {
   "path": "audio/f/ashkenazi/word/he43ad309.mp3",
@@ -53813,12 +53756,11 @@
   "id": "he43ad309",
   "text": "שָׁפַט",
   "ipa": "ˈʃɔ.fat",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to judge; to sentence; to referee",
-  "phonetic": "shafat",
-  "plays": "audio/f/israeli/word/he43ad309.mp3"
+  "phonetic": "shafat"
  },
  {
   "path": "audio/m/ashkenazi/word/h80a03385.mp3",
@@ -53856,12 +53798,11 @@
   "id": "p71df0447",
   "text": "שָׁלוֹשׁ",
   "ipa": "ˈʃɔ.lojʃ",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "three (f.)",
-  "phonetic": "shalosh",
-  "plays": "audio/m/israeli/word/p71df0447.mp3"
+  "phonetic": "shalosh"
  },
  {
   "path": "audio/f/ashkenazi/word/p71df0447.mp3",
@@ -53871,12 +53812,11 @@
   "id": "p71df0447",
   "text": "שָׁלוֹשׁ",
   "ipa": "ˈʃɔ.lojʃ",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "three (f.)",
-  "phonetic": "shalosh",
-  "plays": "audio/f/israeli/word/p71df0447.mp3"
+  "phonetic": "shalosh"
  },
  {
   "path": "audio/m/ashkenazi/word/hda5653dd.mp3",
@@ -53886,12 +53826,11 @@
   "id": "hda5653dd",
   "text": "לְבַד",
   "ipa": "lə.ˈvad",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "Alone, apart, not together, on one's own; Alone, sole, only",
-  "phonetic": "levad",
-  "plays": "audio/m/israeli/word/hda5653dd.mp3"
+  "phonetic": "levad"
  },
  {
   "path": "audio/f/ashkenazi/word/hda5653dd.mp3",
@@ -53901,12 +53840,11 @@
   "id": "hda5653dd",
   "text": "לְבַד",
   "ipa": "lə.ˈvad",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "Alone, apart, not together, on one's own; Alone, sole, only",
-  "phonetic": "levad",
-  "plays": "audio/f/israeli/word/hda5653dd.mp3"
+  "phonetic": "levad"
  },
  {
   "path": "audio/m/ashkenazi/word/h3e4e6cff.mp3",
@@ -53944,12 +53882,11 @@
   "id": "hf60e846a",
   "text": "הִסְכִּים",
   "ipa": "ˈhis.kim",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to agree",
-  "phonetic": "hiskim",
-  "plays": "audio/m/israeli/word/hf60e846a.mp3"
+  "phonetic": "hiskim"
  },
  {
   "path": "audio/f/ashkenazi/word/hf60e846a.mp3",
@@ -53959,12 +53896,11 @@
   "id": "hf60e846a",
   "text": "הִסְכִּים",
   "ipa": "ˈhis.kim",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to agree",
-  "phonetic": "hiskim",
-  "plays": "audio/f/israeli/word/hf60e846a.mp3"
+  "phonetic": "hiskim"
  },
  {
   "path": "audio/m/ashkenazi/word/h2a0d492e.mp3",
@@ -54058,12 +53994,11 @@
   "id": "hef7b6946",
   "text": "מִשְׁטָרָה",
   "ipa": "miʃ.ˈtɔ.rə",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "police",
-  "phonetic": "mishtarah",
-  "plays": "audio/m/israeli/word/hef7b6946.mp3"
+  "phonetic": "mishtarah"
  },
  {
   "path": "audio/f/ashkenazi/word/hef7b6946.mp3",
@@ -54073,12 +54008,11 @@
   "id": "hef7b6946",
   "text": "מִשְׁטָרָה",
   "ipa": "miʃ.ˈtɔ.rə",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "police",
-  "phonetic": "mishtarah",
-  "plays": "audio/f/israeli/word/hef7b6946.mp3"
+  "phonetic": "mishtarah"
  },
  {
   "path": "audio/m/ashkenazi/word/he0fc258b.mp3",
@@ -54118,12 +54052,11 @@
   "id": "he19222ad",
   "text": "יָמִין",
   "ipa": "ˈjɔ.min",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "right; the right hand; south",
-  "phonetic": "yamin",
-  "plays": "audio/m/israeli/word/he19222ad.mp3"
+  "phonetic": "yamin"
  },
  {
   "path": "audio/f/ashkenazi/word/he19222ad.mp3",
@@ -54133,12 +54066,11 @@
   "id": "he19222ad",
   "text": "יָמִין",
   "ipa": "ˈjɔ.min",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "right; the right hand; south",
-  "phonetic": "yamin",
-  "plays": "audio/f/israeli/word/he19222ad.mp3"
+  "phonetic": "yamin"
  },
  {
   "path": "audio/m/ashkenazi/word/h3b09d299.mp3",
@@ -54486,12 +54418,11 @@
   "id": "he38160e3",
   "text": "רֵיקָם",
   "ipa": "ˈrej.kɔm",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "Having nothing at hand; not having accomplished its purpose; for no reason, on no basis",
-  "phonetic": "reikam",
-  "plays": "audio/m/israeli/word/he38160e3.mp3"
+  "phonetic": "reikam"
  },
  {
   "path": "audio/f/ashkenazi/word/he38160e3.mp3",
@@ -54501,12 +54432,11 @@
   "id": "he38160e3",
   "text": "רֵיקָם",
   "ipa": "ˈrej.kɔm",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "Having nothing at hand; not having accomplished its purpose; for no reason, on no basis",
-  "phonetic": "reikam",
-  "plays": "audio/f/israeli/word/he38160e3.mp3"
+  "phonetic": "reikam"
  },
  {
   "path": "audio/m/ashkenazi/word/h0f231144.mp3",
@@ -55849,12 +55779,11 @@
   "id": "he1a5e616",
   "text": "בֶּגֶד",
   "ipa": "ˈbe.ɡed",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "clothing, garment",
-  "phonetic": "beged",
-  "plays": "audio/f/israeli/word/he1a5e616.mp3"
+  "phonetic": "beged"
  },
  {
   "path": "audio/m/ashkenazi/word/h5f280d64.mp3",
@@ -55920,12 +55849,11 @@
   "id": "he1477da0",
   "text": "גֵּר",
   "ipa": "ˈɡejr",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "foreigner, stranger; convert to Judaism, proselyte; adventitious",
-  "phonetic": "ger",
-  "plays": "audio/m/israeli/word/he1477da0.mp3"
+  "phonetic": "ger"
  },
  {
   "path": "audio/f/ashkenazi/word/he1477da0.mp3",
@@ -55935,12 +55863,11 @@
   "id": "he1477da0",
   "text": "גֵּר",
   "ipa": "ˈɡejr",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "foreigner, stranger; convert to Judaism, proselyte; adventitious",
-  "phonetic": "ger",
-  "plays": "audio/f/israeli/word/he1477da0.mp3"
+  "phonetic": "ger"
  },
  {
   "path": "audio/m/ashkenazi/word/h5fc50b7a.mp3",
@@ -56904,12 +56831,11 @@
   "id": "he314ca8e",
   "text": "כַּדּוּר",
   "ipa": "ˈka.dur",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "a ball or orb or other spherical object; a ball; a sphere",
-  "phonetic": "kadur",
-  "plays": "audio/m/israeli/word/he314ca8e.mp3"
+  "phonetic": "kadur"
  },
  {
   "path": "audio/f/ashkenazi/word/he314ca8e.mp3",
@@ -56919,12 +56845,11 @@
   "id": "he314ca8e",
   "text": "כַּדּוּר",
   "ipa": "ˈka.dur",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "a ball or orb or other spherical object; a ball; a sphere",
-  "phonetic": "kadur",
-  "plays": "audio/f/israeli/word/he314ca8e.mp3"
+  "phonetic": "kadur"
  },
  {
   "path": "audio/m/ashkenazi/word/h233af6f2.mp3",
@@ -57147,12 +57072,11 @@
   "id": "hf3d6a0bb",
   "text": "תְּשׁוּבָה",
   "ipa": "tə.ˈʃu.və",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "answer, response; repentance; reconciliation",
-  "phonetic": "teshuvah",
-  "plays": "audio/f/israeli/word/hf3d6a0bb.mp3"
+  "phonetic": "teshuvah"
  },
  {
   "path": "audio/m/ashkenazi/word/hde989655.mp3",
@@ -57192,12 +57116,11 @@
   "id": "p92bccc56",
   "text": "שְׁתַּיִם",
   "ipa": "ˈʃta.jim",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "two (f.)",
-  "phonetic": "shtayim",
-  "plays": "audio/m/israeli/word/p92bccc56.mp3"
+  "phonetic": "shtayim"
  },
  {
   "path": "audio/f/ashkenazi/word/p92bccc56.mp3",
@@ -57207,12 +57130,11 @@
   "id": "p92bccc56",
   "text": "שְׁתַּיִם",
   "ipa": "ˈʃta.jim",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "two (f.)",
-  "phonetic": "shtayim",
-  "plays": "audio/f/israeli/word/p92bccc56.mp3"
+  "phonetic": "shtayim"
  },
  {
   "path": "audio/m/ashkenazi/word/h0047024c.mp3",
@@ -57250,12 +57172,11 @@
   "id": "pc34fd630",
   "text": "אַרְבַּע",
   "ipa": "ˈar.ba",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "four (f.)",
-  "phonetic": "arba",
-  "plays": "audio/m/israeli/word/pc34fd630.mp3"
+  "phonetic": "arba"
  },
  {
   "path": "audio/f/ashkenazi/word/pc34fd630.mp3",
@@ -57265,12 +57186,11 @@
   "id": "pc34fd630",
   "text": "אַרְבַּע",
   "ipa": "ˈar.ba",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "four (f.)",
-  "phonetic": "arba",
-  "plays": "audio/f/israeli/word/pc34fd630.mp3"
+  "phonetic": "arba"
  },
  {
   "path": "audio/m/ashkenazi/word/h565b3652.mp3",
@@ -57592,12 +57512,11 @@
   "id": "he078c9e6",
   "text": "מַשְׁקֶה",
   "ipa": "ˈmaʃ.ke",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "drink (a beverage)",
-  "phonetic": "mashkeh",
-  "plays": "audio/m/israeli/word/he078c9e6.mp3"
+  "phonetic": "mashkeh"
  },
  {
   "path": "audio/f/ashkenazi/word/he078c9e6.mp3",
@@ -57607,12 +57526,11 @@
   "id": "he078c9e6",
   "text": "מַשְׁקֶה",
   "ipa": "ˈmaʃ.ke",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "drink (a beverage)",
-  "phonetic": "mashkeh",
-  "plays": "audio/f/israeli/word/he078c9e6.mp3"
+  "phonetic": "mashkeh"
  },
  {
   "path": "audio/m/ashkenazi/word/hfac8b79e.mp3",
@@ -57794,12 +57712,11 @@
   "id": "hf31190f0",
   "text": "פָּנוּי",
   "ipa": "ˈpɔ.nuj",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "available, unoccupied, (of a person) single",
-  "phonetic": "panuy",
-  "plays": "audio/m/israeli/word/hf31190f0.mp3"
+  "phonetic": "panuy"
  },
  {
   "path": "audio/f/ashkenazi/word/hf31190f0.mp3",
@@ -57809,12 +57726,11 @@
   "id": "hf31190f0",
   "text": "פָּנוּי",
   "ipa": "ˈpɔ.nuj",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "available, unoccupied, (of a person) single",
-  "phonetic": "panuy",
-  "plays": "audio/f/israeli/word/hf31190f0.mp3"
+  "phonetic": "panuy"
  },
  {
   "path": "audio/m/ashkenazi/word/hb8b78e51.mp3",
@@ -57908,12 +57824,11 @@
   "id": "hf3ec3b23",
   "text": "כְּמוֹ",
   "ipa": "kə.ˈmoj",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "like, as",
-  "phonetic": "kemo",
-  "plays": "audio/m/israeli/word/hf3ec3b23.mp3"
+  "phonetic": "kemo"
  },
  {
   "path": "audio/f/ashkenazi/word/hf3ec3b23.mp3",
@@ -57923,12 +57838,11 @@
   "id": "hf3ec3b23",
   "text": "כְּמוֹ",
   "ipa": "kə.ˈmoj",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "like, as",
-  "phonetic": "kemo",
-  "plays": "audio/f/israeli/word/hf3ec3b23.mp3"
+  "phonetic": "kemo"
  },
  {
   "path": "audio/m/ashkenazi/word/hcb5a058a.mp3",
@@ -57966,12 +57880,11 @@
   "id": "he943571e",
   "text": "אִשָּׁה",
   "ipa": "ˈi.ʃə",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "woman (an adult female human); wife; a female animal",
-  "phonetic": "ishah",
-  "plays": "audio/m/israeli/word/he943571e.mp3"
+  "phonetic": "ishah"
  },
  {
   "path": "audio/f/ashkenazi/word/he943571e.mp3",
@@ -57981,12 +57894,11 @@
   "id": "he943571e",
   "text": "אִשָּׁה",
   "ipa": "ˈi.ʃə",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "woman (an adult female human); wife; a female animal",
-  "phonetic": "ishah",
-  "plays": "audio/f/israeli/word/he943571e.mp3"
+  "phonetic": "ishah"
  },
  {
   "path": "audio/m/ashkenazi/word/hf1ccd0e6.mp3",
@@ -58011,12 +57923,11 @@
   "id": "hf1ccd0e6",
   "text": "אֱלוֹהַּ",
   "ipa": "e.ˈloj.ah",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "a god; God",
-  "phonetic": "eloah",
-  "plays": "audio/f/israeli/word/hf1ccd0e6.mp3"
+  "phonetic": "eloah"
  },
  {
   "path": "audio/m/ashkenazi/word/hf5a50e5d.mp3",
@@ -58026,12 +57937,11 @@
   "id": "hf5a50e5d",
   "text": "אִי",
   "ipa": "ˈi",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "an island; Egyptian jackal (Canis aureus lupaster)",
-  "phonetic": "i",
-  "plays": "audio/m/israeli/word/hf5a50e5d.mp3"
+  "phonetic": "i"
  },
  {
   "path": "audio/f/ashkenazi/word/hf5a50e5d.mp3",
@@ -58041,12 +57951,11 @@
   "id": "hf5a50e5d",
   "text": "אִי",
   "ipa": "ˈi",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "an island; Egyptian jackal (Canis aureus lupaster)",
-  "phonetic": "i",
-  "plays": "audio/f/israeli/word/hf5a50e5d.mp3"
+  "phonetic": "i"
  },
  {
   "path": "audio/m/ashkenazi/word/hbd0751bc.mp3",
@@ -58342,12 +58251,11 @@
   "id": "hf95a2330",
   "text": "נִסָּה",
   "ipa": "ˈni.sə",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to try, to attempt; to test",
-  "phonetic": "nisah",
-  "plays": "audio/m/israeli/word/hf95a2330.mp3"
+  "phonetic": "nisah"
  },
  {
   "path": "audio/f/ashkenazi/word/hf95a2330.mp3",
@@ -58357,12 +58265,11 @@
   "id": "hf95a2330",
   "text": "נִסָּה",
   "ipa": "ˈni.sə",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to try, to attempt; to test",
-  "phonetic": "nisah",
-  "plays": "audio/f/israeli/word/hf95a2330.mp3"
+  "phonetic": "nisah"
  },
  {
   "path": "audio/m/ashkenazi/word/h139c94a9.mp3",
@@ -58512,12 +58419,11 @@
   "id": "hfa746c05",
   "text": "עֲדַיִן",
   "ipa": "a.ˈda.jin",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "still, yet",
-  "phonetic": "adayin",
-  "plays": "audio/m/israeli/word/hfa746c05.mp3"
+  "phonetic": "adayin"
  },
  {
   "path": "audio/f/ashkenazi/word/hfa746c05.mp3",
@@ -58682,12 +58588,11 @@
   "id": "heb8a3bc1",
   "text": "הֵן",
   "ipa": "ˈhejn",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "lo! as expressing surprise; yes, yea, aye; as well as",
-  "phonetic": "hen",
-  "plays": "audio/m/israeli/word/heb8a3bc1.mp3"
+  "phonetic": "hen"
  },
  {
   "path": "audio/f/ashkenazi/word/heb8a3bc1.mp3",
@@ -58697,12 +58602,11 @@
   "id": "heb8a3bc1",
   "text": "הֵן",
   "ipa": "ˈhejn",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "lo! as expressing surprise; yes, yea, aye; as well as",
-  "phonetic": "hen",
-  "plays": "audio/f/israeli/word/heb8a3bc1.mp3"
+  "phonetic": "hen"
  },
  {
   "path": "audio/m/ashkenazi/word/h0fc2ca76.mp3",
@@ -58992,12 +58896,11 @@
   "id": "hdb9bd37f",
   "text": "עָזַב",
   "ipa": "ˈɔ.zav",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to leave, leave behind, depart; to leave alone; to abandon",
-  "phonetic": "azav",
-  "plays": "audio/m/israeli/word/hdb9bd37f.mp3"
+  "phonetic": "azav"
  },
  {
   "path": "audio/f/ashkenazi/word/hdb9bd37f.mp3",
@@ -59007,12 +58910,11 @@
   "id": "hdb9bd37f",
   "text": "עָזַב",
   "ipa": "ˈɔ.zav",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to leave, leave behind, depart; to leave alone; to abandon",
-  "phonetic": "azav",
-  "plays": "audio/f/israeli/word/hdb9bd37f.mp3"
+  "phonetic": "azav"
  },
  {
   "path": "audio/m/ashkenazi/word/hbd47566a.mp3",
@@ -59388,12 +59290,11 @@
   "id": "he8dfed90",
   "text": "נִשְׁאַר",
   "ipa": "ˈniʃ.ar",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to stay, to remain; to be left",
-  "phonetic": "nish'ar",
-  "plays": "audio/m/israeli/word/he8dfed90.mp3"
+  "phonetic": "nish'ar"
  },
  {
   "path": "audio/f/ashkenazi/word/he8dfed90.mp3",
@@ -59403,12 +59304,11 @@
   "id": "he8dfed90",
   "text": "נִשְׁאַר",
   "ipa": "ˈniʃ.ar",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to stay, to remain; to be left",
-  "phonetic": "nish'ar",
-  "plays": "audio/f/israeli/word/he8dfed90.mp3"
+  "phonetic": "nish'ar"
  },
  {
   "path": "audio/m/ashkenazi/word/hf1da5ea6.mp3",
@@ -59418,12 +59318,11 @@
   "id": "hf1da5ea6",
   "text": "אֵשׁ",
   "ipa": "ˈejʃ",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "fire",
-  "phonetic": "esh",
-  "plays": "audio/m/israeli/word/hf1da5ea6.mp3"
+  "phonetic": "esh"
  },
  {
   "path": "audio/f/ashkenazi/word/hf1da5ea6.mp3",
@@ -59433,12 +59332,11 @@
   "id": "hf1da5ea6",
   "text": "אֵשׁ",
   "ipa": "ˈejʃ",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "fire",
-  "phonetic": "esh",
-  "plays": "audio/f/israeli/word/hf1da5ea6.mp3"
+  "phonetic": "esh"
  },
  {
   "path": "audio/m/ashkenazi/word/ha536b676.mp3",
@@ -59476,12 +59374,11 @@
   "id": "hf8d6ef2c",
   "text": "גָּמַר",
   "ipa": "ˈɡɔ.mar",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to finish, complete; to cum, ejaculate, have an orgasm; to be through or done",
-  "phonetic": "gamar",
-  "plays": "audio/m/israeli/word/hf8d6ef2c.mp3"
+  "phonetic": "gamar"
  },
  {
   "path": "audio/f/ashkenazi/word/hf8d6ef2c.mp3",
@@ -59491,12 +59388,11 @@
   "id": "hf8d6ef2c",
   "text": "גָּמַר",
   "ipa": "ˈɡɔ.mar",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to finish, complete; to cum, ejaculate, have an orgasm; to be through or done",
-  "phonetic": "gamar",
-  "plays": "audio/f/israeli/word/hf8d6ef2c.mp3"
+  "phonetic": "gamar"
  },
  {
   "path": "audio/m/ashkenazi/word/hcd826bec.mp3",
@@ -60348,12 +60244,11 @@
   "id": "he53d1d1d",
   "text": "אֶבֶן",
   "ipa": "ˈe.ven",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "stone; gem; token, tile, piece",
-  "phonetic": "even",
-  "plays": "audio/m/israeli/word/he53d1d1d.mp3"
+  "phonetic": "even"
  },
  {
   "path": "audio/f/ashkenazi/word/he53d1d1d.mp3",
@@ -60363,12 +60258,11 @@
   "id": "he53d1d1d",
   "text": "אֶבֶן",
   "ipa": "ˈe.ven",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "stone; gem; token, tile, piece",
-  "phonetic": "even",
-  "plays": "audio/f/israeli/word/he53d1d1d.mp3"
+  "phonetic": "even"
  },
  {
   "path": "audio/m/ashkenazi/word/h386e6ad7.mp3",
@@ -60490,12 +60384,11 @@
   "id": "hfe1ddb27",
   "text": "נָפַל",
   "ipa": "ˈnɔ.fal",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to fall; to be less the someone or something else; to be dropped",
-  "phonetic": "nafal",
-  "plays": "audio/m/israeli/word/hfe1ddb27.mp3"
+  "phonetic": "nafal"
  },
  {
   "path": "audio/f/ashkenazi/word/hfe1ddb27.mp3",
@@ -60505,12 +60398,11 @@
   "id": "hfe1ddb27",
   "text": "נָפַל",
   "ipa": "ˈnɔ.fal",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to fall; to be less the someone or something else; to be dropped",
-  "phonetic": "nafal",
-  "plays": "audio/f/israeli/word/hfe1ddb27.mp3"
+  "phonetic": "nafal"
  },
  {
   "path": "audio/m/ashkenazi/word/hb33d863f.mp3",
@@ -60858,12 +60750,11 @@
   "id": "he22b4a86",
   "text": "שַׂר",
   "ipa": "ˈsar",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "captain, commander; cabinet minister; guardian angel",
-  "phonetic": "sar",
-  "plays": "audio/m/israeli/word/he22b4a86.mp3"
+  "phonetic": "sar"
  },
  {
   "path": "audio/f/ashkenazi/word/he22b4a86.mp3",
@@ -60918,12 +60809,11 @@
   "id": "hddb5189f",
   "text": "שַׁעַר",
   "ipa": "ˈʃa.ar",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "gateway (entrance); gateway (beginning); market value",
-  "phonetic": "sha'ar",
-  "plays": "audio/m/israeli/word/hddb5189f.mp3"
+  "phonetic": "sha'ar"
  },
  {
   "path": "audio/f/ashkenazi/word/hddb5189f.mp3",
@@ -60933,12 +60823,11 @@
   "id": "hddb5189f",
   "text": "שַׁעַר",
   "ipa": "ˈʃa.ar",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "gateway (entrance); gateway (beginning); market value",
-  "phonetic": "sha'ar",
-  "plays": "audio/f/israeli/word/hddb5189f.mp3"
+  "phonetic": "sha'ar"
  },
  {
   "path": "audio/m/ashkenazi/word/hdb3c45eb.mp3",
@@ -60948,12 +60837,11 @@
   "id": "hdb3c45eb",
   "text": "רֶגֶל",
   "ipa": "ˈre.ɡel",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "foot, leg; leg (as of a table or chair); foot (unit of length)",
-  "phonetic": "regel",
-  "plays": "audio/m/israeli/word/hdb3c45eb.mp3"
+  "phonetic": "regel"
  },
  {
   "path": "audio/f/ashkenazi/word/hdb3c45eb.mp3",
@@ -60963,12 +60851,11 @@
   "id": "hdb3c45eb",
   "text": "רֶגֶל",
   "ipa": "ˈre.ɡel",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "foot, leg; leg (as of a table or chair); foot (unit of length)",
-  "phonetic": "regel",
-  "plays": "audio/f/israeli/word/hdb3c45eb.mp3"
+  "phonetic": "regel"
  },
  {
   "path": "audio/m/ashkenazi/word/h36173537.mp3",
@@ -61146,12 +61033,11 @@
   "id": "he9d6c9ab",
   "text": "כַּר",
   "ipa": "ˈkar",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "cushion; pillow",
-  "phonetic": "kar",
-  "plays": "audio/m/israeli/word/he9d6c9ab.mp3"
+  "phonetic": "kar"
  },
  {
   "path": "audio/f/ashkenazi/word/he9d6c9ab.mp3",
@@ -61161,12 +61047,11 @@
   "id": "he9d6c9ab",
   "text": "כַּר",
   "ipa": "ˈkar",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "cushion; pillow",
-  "phonetic": "kar",
-  "plays": "audio/f/israeli/word/he9d6c9ab.mp3"
+  "phonetic": "kar"
  },
  {
   "path": "audio/m/ashkenazi/word/h69a35691.mp3",
@@ -61344,12 +61229,11 @@
   "id": "hfdbafdf6",
   "text": "בִּגְלַל",
   "ipa": "ˈbiɡ.lal",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "because of, due to [with noun phrase]",
-  "phonetic": "biglal",
-  "plays": "audio/m/israeli/word/hfdbafdf6.mp3"
+  "phonetic": "biglal"
  },
  {
   "path": "audio/f/ashkenazi/word/hfdbafdf6.mp3",
@@ -61488,12 +61372,11 @@
   "id": "hef13f241",
   "text": "גִּלָּה",
   "ipa": "ˈɡi.lə",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to discover; to reveal",
-  "phonetic": "gilah",
-  "plays": "audio/m/israeli/word/hef13f241.mp3"
+  "phonetic": "gilah"
  },
  {
   "path": "audio/f/ashkenazi/word/hef13f241.mp3",
@@ -62166,12 +62049,11 @@
   "id": "hdea05db5",
   "text": "עֵבֶר",
   "ipa": "ˈej.ver",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "side, direction, way; the other side [of], the region beyond or across from",
-  "phonetic": "ever",
-  "plays": "audio/m/israeli/word/hdea05db5.mp3"
+  "phonetic": "ever"
  },
  {
   "path": "audio/f/ashkenazi/word/hdea05db5.mp3",
@@ -62592,12 +62474,11 @@
   "id": "hf64d1c8d",
   "text": "כָּלַל",
   "ipa": "ˈkɔ.lal",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to include (something) (in a group); to include (something)",
-  "phonetic": "kalal",
-  "plays": "audio/m/israeli/word/hf64d1c8d.mp3"
+  "phonetic": "kalal"
  },
  {
   "path": "audio/f/ashkenazi/word/hf64d1c8d.mp3",
@@ -62607,12 +62488,11 @@
   "id": "hf64d1c8d",
   "text": "כָּלַל",
   "ipa": "ˈkɔ.lal",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to include (something) (in a group); to include (something)",
-  "phonetic": "kalal",
-  "plays": "audio/f/israeli/word/hf64d1c8d.mp3"
+  "phonetic": "kalal"
  },
  {
   "path": "audio/m/ashkenazi/word/h1982ccc7.mp3",
@@ -62865,12 +62745,11 @@
   "id": "hff7d24c0",
   "text": "רָכַב",
   "ipa": "ˈrɔ.xav",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to ride (a horse or the like)",
-  "phonetic": "rakhav",
-  "plays": "audio/f/israeli/word/hff7d24c0.mp3"
+  "phonetic": "rakhav"
  },
  {
   "path": "audio/m/ashkenazi/word/hdc17acee.mp3",
@@ -63093,12 +62972,11 @@
   "id": "hde82cf75",
   "text": "הִטָּה",
   "ipa": "ˈhi.tə",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to tilt, slant; to inflect",
-  "phonetic": "hitah",
-  "plays": "audio/f/israeli/word/hde82cf75.mp3"
+  "phonetic": "hitah"
  },
  {
   "path": "audio/m/ashkenazi/word/hb59c5cdb.mp3",
@@ -63472,12 +63350,11 @@
   "id": "hf2263f85",
   "text": "בִּצֵּעַ",
   "ipa": "bi.ˈtsej.a",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to implement; to carry out, to perform, to execute",
-  "phonetic": "bitze'a",
-  "plays": "audio/m/israeli/word/hf2263f85.mp3"
+  "phonetic": "bitze'a"
  },
  {
   "path": "audio/f/ashkenazi/word/hf2263f85.mp3",
@@ -63487,12 +63364,11 @@
   "id": "hf2263f85",
   "text": "בִּצֵּעַ",
   "ipa": "bi.ˈtsej.a",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to implement; to carry out, to perform, to execute",
-  "phonetic": "bitze'a",
-  "plays": "audio/f/israeli/word/hf2263f85.mp3"
+  "phonetic": "bitze'a"
  },
  {
   "path": "audio/m/ashkenazi/word/hd502ab04.mp3",
@@ -63810,12 +63686,11 @@
   "id": "hf7d0fb03",
   "text": "זִיֵּן",
   "ipa": "ˈzi.jejn",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to arm (with weapons)",
-  "phonetic": "ziyen",
-  "plays": "audio/m/israeli/word/hf7d0fb03.mp3"
+  "phonetic": "ziyen"
  },
  {
   "path": "audio/f/ashkenazi/word/hf7d0fb03.mp3",
@@ -63825,12 +63700,11 @@
   "id": "hf7d0fb03",
   "text": "זִיֵּן",
   "ipa": "ˈzi.jejn",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to arm (with weapons)",
-  "phonetic": "ziyen",
-  "plays": "audio/f/israeli/word/hf7d0fb03.mp3"
+  "phonetic": "ziyen"
  },
  {
   "path": "audio/m/ashkenazi/word/h1fad8eb0.mp3",
@@ -63868,12 +63742,11 @@
   "id": "he2aec699",
   "text": "תָּקַף",
   "ipa": "ˈtɔ.kaf",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to attack",
-  "phonetic": "takaf",
-  "plays": "audio/m/israeli/word/he2aec699.mp3"
+  "phonetic": "takaf"
  },
  {
   "path": "audio/f/ashkenazi/word/he2aec699.mp3",
@@ -63883,12 +63756,11 @@
   "id": "he2aec699",
   "text": "תָּקַף",
   "ipa": "ˈtɔ.kaf",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to attack",
-  "phonetic": "takaf",
-  "plays": "audio/f/israeli/word/he2aec699.mp3"
+  "phonetic": "takaf"
  },
  {
   "path": "audio/m/ashkenazi/word/ha70e3427.mp3",
@@ -64376,12 +64248,11 @@
   "id": "he028e6f0",
   "text": "אַרְיֵה",
   "ipa": "ˈar.jej",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "lion",
-  "phonetic": "aryeh",
-  "plays": "audio/m/israeli/word/he028e6f0.mp3"
+  "phonetic": "aryeh"
  },
  {
   "path": "audio/f/ashkenazi/word/he028e6f0.mp3",
@@ -65386,12 +65257,11 @@
   "id": "he54faf96",
   "text": "שָׁלַט",
   "ipa": "ˈʃɔ.lat",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to rule; to control; to master, to have under control",
-  "phonetic": "shalat",
-  "plays": "audio/m/israeli/word/he54faf96.mp3"
+  "phonetic": "shalat"
  },
  {
   "path": "audio/f/ashkenazi/word/he54faf96.mp3",
@@ -65401,12 +65271,11 @@
   "id": "he54faf96",
   "text": "שָׁלַט",
   "ipa": "ˈʃɔ.lat",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to rule; to control; to master, to have under control",
-  "phonetic": "shalat",
-  "plays": "audio/f/israeli/word/he54faf96.mp3"
+  "phonetic": "shalat"
  },
  {
   "path": "audio/m/ashkenazi/word/hde9b27c8.mp3",
@@ -65474,12 +65343,11 @@
   "id": "hf2fcef6c",
   "text": "רְצִינִי",
   "ipa": "rə.ˈtsi.ni",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "Serious, somber, sober, earnest; Serious, grave, significant",
-  "phonetic": "retzini",
-  "plays": "audio/m/israeli/word/hf2fcef6c.mp3"
+  "phonetic": "retzini"
  },
  {
   "path": "audio/f/ashkenazi/word/hf2fcef6c.mp3",
@@ -65489,12 +65357,11 @@
   "id": "hf2fcef6c",
   "text": "רְצִינִי",
   "ipa": "rə.ˈtsi.ni",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "Serious, somber, sober, earnest; Serious, grave, significant",
-  "phonetic": "retzini",
-  "plays": "audio/f/israeli/word/hf2fcef6c.mp3"
+  "phonetic": "retzini"
  },
  {
   "path": "audio/m/ashkenazi/word/h447cab37.mp3",
@@ -66066,12 +65933,11 @@
   "id": "he038b6aa",
   "text": "הוֹלִיד",
   "ipa": "ˈhoj.lid",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to give birth, to sire, to beget",
-  "phonetic": "holid",
-  "plays": "audio/m/israeli/word/he038b6aa.mp3"
+  "phonetic": "holid"
  },
  {
   "path": "audio/f/ashkenazi/word/he038b6aa.mp3",
@@ -66081,12 +65947,11 @@
   "id": "he038b6aa",
   "text": "הוֹלִיד",
   "ipa": "ˈhoj.lid",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to give birth, to sire, to beget",
-  "phonetic": "holid",
-  "plays": "audio/f/israeli/word/he038b6aa.mp3"
+  "phonetic": "holid"
  },
  {
   "path": "audio/m/ashkenazi/word/h730c9015.mp3",
@@ -66824,12 +66689,11 @@
   "id": "hddeaa2ed",
   "text": "אָוֶן",
   "ipa": "ˈɔ.ven",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "evil, wickedness",
-  "phonetic": "aven",
-  "plays": "audio/m/israeli/word/hddeaa2ed.mp3"
+  "phonetic": "aven"
  },
  {
   "path": "audio/f/ashkenazi/word/hddeaa2ed.mp3",
@@ -66839,12 +66703,11 @@
   "id": "hddeaa2ed",
   "text": "אָוֶן",
   "ipa": "ˈɔ.ven",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "evil, wickedness",
-  "phonetic": "aven",
-  "plays": "audio/f/israeli/word/hddeaa2ed.mp3"
+  "phonetic": "aven"
  },
  {
   "path": "audio/m/ashkenazi/word/h572c48d4.mp3",
@@ -68656,12 +68519,11 @@
   "id": "hf3af4fb9",
   "text": "תָּמִים",
   "ipa": "ˈtɔ.mim",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "honest, simple, innocent, naive; complete, full (of a period of time); innocent",
-  "phonetic": "tamim",
-  "plays": "audio/m/israeli/word/hf3af4fb9.mp3"
+  "phonetic": "tamim"
  },
  {
   "path": "audio/f/ashkenazi/word/hf3af4fb9.mp3",
@@ -68671,12 +68533,11 @@
   "id": "hf3af4fb9",
   "text": "תָּמִים",
   "ipa": "ˈtɔ.mim",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "honest, simple, innocent, naive; complete, full (of a period of time); innocent",
-  "phonetic": "tamim",
-  "plays": "audio/f/israeli/word/hf3af4fb9.mp3"
+  "phonetic": "tamim"
  },
  {
   "path": "audio/m/ashkenazi/word/h342c3c55.mp3",
@@ -68856,12 +68717,11 @@
   "id": "he7f4c5c3",
   "text": "רֶגֶשׁ",
   "ipa": "ˈre.ɡeʃ",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "emotion, feeling",
-  "phonetic": "regesh",
-  "plays": "audio/m/israeli/word/he7f4c5c3.mp3"
+  "phonetic": "regesh"
  },
  {
   "path": "audio/f/ashkenazi/word/he7f4c5c3.mp3",
@@ -68871,12 +68731,11 @@
   "id": "he7f4c5c3",
   "text": "רֶגֶשׁ",
   "ipa": "ˈre.ɡeʃ",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "emotion, feeling",
-  "phonetic": "regesh",
-  "plays": "audio/f/israeli/word/he7f4c5c3.mp3"
+  "phonetic": "regesh"
  },
  {
   "path": "audio/m/ashkenazi/word/h27d68eba.mp3",
@@ -69054,12 +68913,11 @@
   "id": "hffc00eb8",
   "text": "מוּזִיקָה",
   "ipa": "mu.ˈzi.kə",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "music",
-  "phonetic": "muzikah",
-  "plays": "audio/m/israeli/word/hffc00eb8.mp3"
+  "phonetic": "muzikah"
  },
  {
   "path": "audio/f/ashkenazi/word/hffc00eb8.mp3",
@@ -69069,12 +68927,11 @@
   "id": "hffc00eb8",
   "text": "מוּזִיקָה",
   "ipa": "mu.ˈzi.kə",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "music",
-  "phonetic": "muzikah",
-  "plays": "audio/f/israeli/word/hffc00eb8.mp3"
+  "phonetic": "muzikah"
  },
  {
   "path": "audio/m/ashkenazi/word/hfb7bf5f4.mp3",
@@ -69084,12 +68941,11 @@
   "id": "hfb7bf5f4",
   "text": "לוּל",
   "ipa": "ˈlul",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "chicken coop; shaft, pit",
-  "phonetic": "lul",
-  "plays": "audio/m/israeli/word/hfb7bf5f4.mp3"
+  "phonetic": "lul"
  },
  {
   "path": "audio/f/ashkenazi/word/hfb7bf5f4.mp3",
@@ -69099,12 +68955,11 @@
   "id": "hfb7bf5f4",
   "text": "לוּל",
   "ipa": "ˈlul",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "chicken coop; shaft, pit",
-  "phonetic": "lul",
-  "plays": "audio/f/israeli/word/hfb7bf5f4.mp3"
+  "phonetic": "lul"
  },
  {
   "path": "audio/m/ashkenazi/word/hef13c381.mp3",
@@ -69258,12 +69113,11 @@
   "id": "hf12d3f21",
   "text": "רוֹן",
   "ipa": "ˈrojn",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "joy, elation",
-  "phonetic": "ron",
-  "plays": "audio/m/israeli/word/hf12d3f21.mp3"
+  "phonetic": "ron"
  },
  {
   "path": "audio/f/ashkenazi/word/hf12d3f21.mp3",
@@ -69273,12 +69127,11 @@
   "id": "hf12d3f21",
   "text": "רוֹן",
   "ipa": "ˈrojn",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "joy, elation",
-  "phonetic": "ron",
-  "plays": "audio/f/israeli/word/hf12d3f21.mp3"
+  "phonetic": "ron"
  },
  {
   "path": "audio/m/ashkenazi/word/h64713a3a.mp3",
@@ -69316,12 +69169,11 @@
   "id": "hefbbc2c7",
   "text": "זוֹנָה",
   "ipa": "ˈzoj.nə",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "female prostitute (who has sex for pay); slut",
-  "phonetic": "zonah",
-  "plays": "audio/m/israeli/word/hefbbc2c7.mp3"
+  "phonetic": "zonah"
  },
  {
   "path": "audio/f/ashkenazi/word/hefbbc2c7.mp3",
@@ -69331,12 +69183,11 @@
   "id": "hefbbc2c7",
   "text": "זוֹנָה",
   "ipa": "ˈzoj.nə",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "female prostitute (who has sex for pay); slut",
-  "phonetic": "zonah",
-  "plays": "audio/f/israeli/word/hefbbc2c7.mp3"
+  "phonetic": "zonah"
  },
  {
   "path": "audio/m/ashkenazi/word/hd791f802.mp3",
@@ -69598,12 +69449,11 @@
   "id": "hf09f7879",
   "text": "כּוּר",
   "ipa": "ˈkur",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "a furnace for melting metals; a nuclear reactor; used figuratively",
-  "phonetic": "kur",
-  "plays": "audio/m/israeli/word/hf09f7879.mp3"
+  "phonetic": "kur"
  },
  {
   "path": "audio/f/ashkenazi/word/hf09f7879.mp3",
@@ -69613,12 +69463,11 @@
   "id": "hf09f7879",
   "text": "כּוּר",
   "ipa": "ˈkur",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "a furnace for melting metals; a nuclear reactor; used figuratively",
-  "phonetic": "kur",
-  "plays": "audio/f/israeli/word/hf09f7879.mp3"
+  "phonetic": "kur"
  },
  {
   "path": "audio/m/ashkenazi/word/hd0f11592.mp3",
@@ -70063,12 +69912,11 @@
   "id": "he0949da8",
   "text": "לָשׁוֹן",
   "ipa": "ˈlɔ.ʃojn",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "tongue; language",
-  "phonetic": "lashon",
-  "plays": "audio/f/israeli/word/he0949da8.mp3"
+  "phonetic": "lashon"
  },
  {
   "path": "audio/m/ashkenazi/word/h0764a400.mp3",
@@ -70614,12 +70462,11 @@
   "id": "he34bd325",
   "text": "בְּהֵמָה",
   "ipa": "bə.ˈhej.mə",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "beast, animal (usually domesticated), livestock; beast, a person who behaves in an uncivilized manner",
-  "phonetic": "behemah",
-  "plays": "audio/m/israeli/word/he34bd325.mp3"
+  "phonetic": "behemah"
  },
  {
   "path": "audio/f/ashkenazi/word/he34bd325.mp3",
@@ -70629,12 +70476,11 @@
   "id": "he34bd325",
   "text": "בְּהֵמָה",
   "ipa": "bə.ˈhej.mə",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "beast, animal (usually domesticated), livestock; beast, a person who behaves in an uncivilized manner",
-  "phonetic": "behemah",
-  "plays": "audio/f/israeli/word/he34bd325.mp3"
+  "phonetic": "behemah"
  },
  {
   "path": "audio/m/ashkenazi/word/hd04dbb3d.mp3",
@@ -71122,12 +70968,11 @@
   "id": "hf2beda21",
   "text": "סַף",
   "ipa": "ˈsaf",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "threshold, verge; doorstep; limen",
-  "phonetic": "saf",
-  "plays": "audio/m/israeli/word/hf2beda21.mp3"
+  "phonetic": "saf"
  },
  {
   "path": "audio/f/ashkenazi/word/hf2beda21.mp3",
@@ -71137,12 +70982,11 @@
   "id": "hf2beda21",
   "text": "סַף",
   "ipa": "ˈsaf",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "threshold, verge; doorstep; limen",
-  "phonetic": "saf",
-  "plays": "audio/f/israeli/word/hf2beda21.mp3"
+  "phonetic": "saf"
  },
  {
   "path": "audio/m/ashkenazi/word/h064edcbd.mp3",
@@ -71180,12 +71024,11 @@
   "id": "hee0f6bea",
   "text": "בָּרִיא",
   "ipa": "ˈbɔ.ri",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "healthy, well (in good health); healthy, healthful; used adverbially",
-  "phonetic": "bari",
-  "plays": "audio/m/israeli/word/hee0f6bea.mp3"
+  "phonetic": "bari"
  },
  {
   "path": "audio/f/ashkenazi/word/hee0f6bea.mp3",
@@ -71195,12 +71038,11 @@
   "id": "hee0f6bea",
   "text": "בָּרִיא",
   "ipa": "ˈbɔ.ri",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "healthy, well (in good health); healthy, healthful; used adverbially",
-  "phonetic": "bari",
-  "plays": "audio/f/israeli/word/hee0f6bea.mp3"
+  "phonetic": "bari"
  },
  {
   "path": "audio/m/ashkenazi/word/hd5fd5e2d.mp3",
@@ -71266,12 +71108,11 @@
   "id": "he973e381",
   "text": "רְשִׁימָה",
   "ipa": "rə.ˈʃi.mə",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "list",
-  "phonetic": "reshimah",
-  "plays": "audio/m/israeli/word/he973e381.mp3"
+  "phonetic": "reshimah"
  },
  {
   "path": "audio/f/ashkenazi/word/he973e381.mp3",
@@ -71281,12 +71122,11 @@
   "id": "he973e381",
   "text": "רְשִׁימָה",
   "ipa": "rə.ˈʃi.mə",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "list",
-  "phonetic": "reshimah",
-  "plays": "audio/f/israeli/word/he973e381.mp3"
+  "phonetic": "reshimah"
  },
  {
   "path": "audio/m/ashkenazi/word/h2299e4b3.mp3",
@@ -71380,12 +71220,11 @@
   "id": "hfcc1a370",
   "text": "גּוֹרָל",
   "ipa": "ˈɡoj.rɔl",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "a lot; One's allotted portion, the result of drawing lots; fate, destiny",
-  "phonetic": "goral",
-  "plays": "audio/m/israeli/word/hfcc1a370.mp3"
+  "phonetic": "goral"
  },
  {
   "path": "audio/f/ashkenazi/word/hfcc1a370.mp3",
@@ -71395,12 +71234,11 @@
   "id": "hfcc1a370",
   "text": "גּוֹרָל",
   "ipa": "ˈɡoj.rɔl",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "a lot; One's allotted portion, the result of drawing lots; fate, destiny",
-  "phonetic": "goral",
-  "plays": "audio/f/israeli/word/hfcc1a370.mp3"
+  "phonetic": "goral"
  },
  {
   "path": "audio/m/ashkenazi/word/h68581174.mp3",
@@ -71720,12 +71558,11 @@
   "id": "hfdd2f995",
   "text": "עָנִי",
   "ipa": "ˈɔ.ni",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "poor; pauper",
-  "phonetic": "ani",
-  "plays": "audio/m/israeli/word/hfdd2f995.mp3"
+  "phonetic": "ani"
  },
  {
   "path": "audio/f/ashkenazi/word/hfdd2f995.mp3",
@@ -71735,12 +71572,11 @@
   "id": "hfdd2f995",
   "text": "עָנִי",
   "ipa": "ˈɔ.ni",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "poor; pauper",
-  "phonetic": "ani",
-  "plays": "audio/f/israeli/word/hfdd2f995.mp3"
+  "phonetic": "ani"
  },
  {
   "path": "audio/m/ashkenazi/word/h54170135.mp3",
@@ -72738,12 +72574,11 @@
   "id": "hdaf2f831",
   "text": "יְמָנִי",
   "ipa": "jə.ˈmɔ.ni",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "on the right; right-wing; right-handed",
-  "phonetic": "yemani",
-  "plays": "audio/m/israeli/word/hdaf2f831.mp3"
+  "phonetic": "yemani"
  },
  {
   "path": "audio/f/ashkenazi/word/hdaf2f831.mp3",
@@ -72753,12 +72588,11 @@
   "id": "hdaf2f831",
   "text": "יְמָנִי",
   "ipa": "jə.ˈmɔ.ni",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "on the right; right-wing; right-handed",
-  "phonetic": "yemani",
-  "plays": "audio/f/israeli/word/hdaf2f831.mp3"
+  "phonetic": "yemani"
  },
  {
   "path": "audio/m/ashkenazi/word/hf53c9bc7.mp3",
@@ -72768,12 +72602,11 @@
   "id": "hf53c9bc7",
   "text": "כַּמּוּבָן",
   "ipa": "ka.ˈmu.vɔn",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "of course, naturally, certainly",
-  "phonetic": "kamuvan",
-  "plays": "audio/m/israeli/word/hf53c9bc7.mp3"
+  "phonetic": "kamuvan"
  },
  {
   "path": "audio/f/ashkenazi/word/hf53c9bc7.mp3",
@@ -72783,12 +72616,11 @@
   "id": "hf53c9bc7",
   "text": "כַּמּוּבָן",
   "ipa": "ka.ˈmu.vɔn",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "of course, naturally, certainly",
-  "phonetic": "kamuvan",
-  "plays": "audio/f/israeli/word/hf53c9bc7.mp3"
+  "phonetic": "kamuvan"
  },
  {
   "path": "audio/m/ashkenazi/word/h34530899.mp3",
@@ -72854,12 +72686,11 @@
   "id": "he53429ef",
   "text": "שְׂמָאלִי",
   "ipa": "sə.ˈmɔ.li",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "on the left; left-wing; left-handed",
-  "phonetic": "semali",
-  "plays": "audio/m/israeli/word/he53429ef.mp3"
+  "phonetic": "semali"
  },
  {
   "path": "audio/f/ashkenazi/word/he53429ef.mp3",
@@ -72869,12 +72700,11 @@
   "id": "he53429ef",
   "text": "שְׂמָאלִי",
   "ipa": "sə.ˈmɔ.li",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "on the left; left-wing; left-handed",
-  "phonetic": "semali",
-  "plays": "audio/f/israeli/word/he53429ef.mp3"
+  "phonetic": "semali"
  },
  {
   "path": "audio/m/ashkenazi/word/h796a7887.mp3",
@@ -73529,12 +73359,11 @@
   "kind": "word",
   "id": "h0a138190",
   "text": "יָפֶה",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-extra",
   "english": "beautifully, nicely",
-  "phonetic": "yafeh",
-  "plays": "audio/m/israeli/word/h0a138190.mp3"
+  "phonetic": "yafeh"
  },
  {
   "path": "audio/f/ashkenazi/word/h0a138190.mp3",
@@ -73543,12 +73372,11 @@
   "kind": "word",
   "id": "h0a138190",
   "text": "יָפֶה",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-extra",
   "english": "beautifully, nicely",
-  "phonetic": "yafeh",
-  "plays": "audio/f/israeli/word/h0a138190.mp3"
+  "phonetic": "yafeh"
  },
  {
   "path": "audio/m/ashkenazi/word/h0aeef906.mp3",
@@ -73781,12 +73609,11 @@
   "kind": "word",
   "id": "h17e4f4f9",
   "text": "פִּנָּה",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-extra",
   "english": "to clear",
-  "phonetic": "pinah",
-  "plays": "audio/m/israeli/word/h17e4f4f9.mp3"
+  "phonetic": "pinah"
  },
  {
   "path": "audio/f/ashkenazi/word/h17e4f4f9.mp3",
@@ -73795,12 +73622,11 @@
   "kind": "word",
   "id": "h17e4f4f9",
   "text": "פִּנָּה",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-extra",
   "english": "to clear",
-  "phonetic": "pinah",
-  "plays": "audio/f/israeli/word/h17e4f4f9.mp3"
+  "phonetic": "pinah"
  },
  {
   "path": "audio/m/ashkenazi/word/h1844d777.mp3",
@@ -74145,12 +73971,11 @@
   "kind": "word",
   "id": "h3006118f",
   "text": "גָּר",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-extra",
   "english": "to dwell, reside, live; to assail",
-  "phonetic": "gar",
-  "plays": "audio/m/israeli/word/h3006118f.mp3"
+  "phonetic": "gar"
  },
  {
   "path": "audio/f/ashkenazi/word/h3006118f.mp3",
@@ -74159,12 +73984,11 @@
   "kind": "word",
   "id": "h3006118f",
   "text": "גָּר",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-extra",
   "english": "to dwell, reside, live; to assail",
-  "phonetic": "gar",
-  "plays": "audio/f/israeli/word/h3006118f.mp3"
+  "phonetic": "gar"
  },
  {
   "path": "audio/m/ashkenazi/word/h30a2fa5c.mp3",
@@ -74593,12 +74417,11 @@
   "kind": "word",
   "id": "h397fb32e",
   "text": "נָכוֹן",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-extra",
   "english": "correctly",
-  "phonetic": "nakhon",
-  "plays": "audio/m/israeli/word/h397fb32e.mp3"
+  "phonetic": "nakhon"
  },
  {
   "path": "audio/f/ashkenazi/word/h397fb32e.mp3",
@@ -74607,12 +74430,11 @@
   "kind": "word",
   "id": "h397fb32e",
   "text": "נָכוֹן",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-extra",
   "english": "correctly",
-  "phonetic": "nakhon",
-  "plays": "audio/f/israeli/word/h397fb32e.mp3"
+  "phonetic": "nakhon"
  },
  {
   "path": "audio/m/ashkenazi/word/h3a561e77.mp3",
@@ -74733,12 +74555,11 @@
   "kind": "word",
   "id": "h4237207f",
   "text": "יָלַד",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-extra",
   "english": "to give birth",
-  "phonetic": "yalad",
-  "plays": "audio/m/israeli/word/h4237207f.mp3"
+  "phonetic": "yalad"
  },
  {
   "path": "audio/f/ashkenazi/word/h4237207f.mp3",
@@ -74747,12 +74568,11 @@
   "kind": "word",
   "id": "h4237207f",
   "text": "יָלַד",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-extra",
   "english": "to give birth",
-  "phonetic": "yalad",
-  "plays": "audio/f/israeli/word/h4237207f.mp3"
+  "phonetic": "yalad"
  },
  {
   "path": "audio/m/ashkenazi/word/h4429136c.mp3",
@@ -74845,12 +74665,11 @@
   "kind": "word",
   "id": "h49e0dbd7",
   "text": "אֶלֶף",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-extra",
   "english": "millennium; thousandship, a part of thousand of a tribe; head of cattle, animal living in company",
-  "phonetic": "elef",
-  "plays": "audio/m/israeli/word/h49e0dbd7.mp3"
+  "phonetic": "elef"
  },
  {
   "path": "audio/f/ashkenazi/word/h49e0dbd7.mp3",
@@ -74859,12 +74678,11 @@
   "kind": "word",
   "id": "h49e0dbd7",
   "text": "אֶלֶף",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-extra",
   "english": "millennium; thousandship, a part of thousand of a tribe; head of cattle, animal living in company",
-  "phonetic": "elef",
-  "plays": "audio/f/israeli/word/h49e0dbd7.mp3"
+  "phonetic": "elef"
  },
  {
   "path": "audio/m/ashkenazi/word/h4d07da60.mp3",
@@ -74957,12 +74775,11 @@
   "kind": "word",
   "id": "h4ee14b3b",
   "text": "קָנֶה",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-extra",
   "english": "a cane; a barrel; a branch of a candelabrum",
-  "phonetic": "kaneh",
-  "plays": "audio/m/israeli/word/h4ee14b3b.mp3"
+  "phonetic": "kaneh"
  },
  {
   "path": "audio/f/ashkenazi/word/h4ee14b3b.mp3",
@@ -74971,12 +74788,11 @@
   "kind": "word",
   "id": "h4ee14b3b",
   "text": "קָנֶה",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-extra",
   "english": "a cane; a barrel; a branch of a candelabrum",
-  "phonetic": "kaneh",
-  "plays": "audio/f/israeli/word/h4ee14b3b.mp3"
+  "phonetic": "kaneh"
  },
  {
   "path": "audio/m/ashkenazi/word/h4ef6ec03.mp3",
@@ -75209,12 +75025,11 @@
   "kind": "word",
   "id": "h5700ca54",
   "text": "גָּבַר",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-extra",
   "english": "to become stronger, gain power; to overpower, conquer, vanquish, defeat",
-  "phonetic": "gavar",
-  "plays": "audio/m/israeli/word/h5700ca54.mp3"
+  "phonetic": "gavar"
  },
  {
   "path": "audio/f/ashkenazi/word/h5700ca54.mp3",
@@ -75223,12 +75038,11 @@
   "kind": "word",
   "id": "h5700ca54",
   "text": "גָּבַר",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-extra",
   "english": "to become stronger, gain power; to overpower, conquer, vanquish, defeat",
-  "phonetic": "gavar",
-  "plays": "audio/f/israeli/word/h5700ca54.mp3"
+  "phonetic": "gavar"
  },
  {
   "path": "audio/m/ashkenazi/word/h57665cd9.mp3",
@@ -75573,12 +75387,11 @@
   "kind": "word",
   "id": "h68dd1435",
   "text": "כַּסָּף",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-extra",
   "english": "silversmith",
-  "phonetic": "kasaf",
-  "plays": "audio/m/israeli/word/h68dd1435.mp3"
+  "phonetic": "kasaf"
  },
  {
   "path": "audio/f/ashkenazi/word/h68dd1435.mp3",
@@ -75587,12 +75400,11 @@
   "kind": "word",
   "id": "h68dd1435",
   "text": "כַּסָּף",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-extra",
   "english": "silversmith",
-  "phonetic": "kasaf",
-  "plays": "audio/f/israeli/word/h68dd1435.mp3"
+  "phonetic": "kasaf"
  },
  {
   "path": "audio/m/ashkenazi/word/h69e91f72.mp3",
@@ -75797,12 +75609,11 @@
   "kind": "word",
   "id": "h74e5b729",
   "text": "קִדֵּשׁ",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-extra",
   "english": "to sanctify",
-  "phonetic": "kidesh",
-  "plays": "audio/m/israeli/word/h74e5b729.mp3"
+  "phonetic": "kidesh"
  },
  {
   "path": "audio/f/ashkenazi/word/h74e5b729.mp3",
@@ -75811,12 +75622,11 @@
   "kind": "word",
   "id": "h74e5b729",
   "text": "קִדֵּשׁ",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-extra",
   "english": "to sanctify",
-  "phonetic": "kidesh",
-  "plays": "audio/f/israeli/word/h74e5b729.mp3"
+  "phonetic": "kidesh"
  },
  {
   "path": "audio/m/ashkenazi/word/h7631737e.mp3",
@@ -76385,12 +76195,11 @@
   "kind": "word",
   "id": "h8ea4d152",
   "text": "לַעֲזָאזֵל",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-extra",
   "english": "an exclamation of anger or dismissal (a mild curse)",
-  "phonetic": "la'azazel",
-  "plays": "audio/m/israeli/word/h8ea4d152.mp3"
+  "phonetic": "la'azazel"
  },
  {
   "path": "audio/f/ashkenazi/word/h8ea4d152.mp3",
@@ -76399,12 +76208,11 @@
   "kind": "word",
   "id": "h8ea4d152",
   "text": "לַעֲזָאזֵל",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-extra",
   "english": "an exclamation of anger or dismissal (a mild curse)",
-  "phonetic": "la'azazel",
-  "plays": "audio/f/israeli/word/h8ea4d152.mp3"
+  "phonetic": "la'azazel"
  },
  {
   "path": "audio/m/ashkenazi/word/h8f56fc93.mp3",
@@ -76441,12 +76249,11 @@
   "kind": "word",
   "id": "h8fe77c5d",
   "text": "חִשֵּׁב",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-extra",
   "english": "to calculate",
-  "phonetic": "chishev",
-  "plays": "audio/m/israeli/word/h8fe77c5d.mp3"
+  "phonetic": "chishev"
  },
  {
   "path": "audio/f/ashkenazi/word/h8fe77c5d.mp3",
@@ -76777,12 +76584,11 @@
   "kind": "word",
   "id": "h9ea381d6",
   "text": "גָּדַל",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-extra",
   "english": "to be big, large, great; to grow; to grow up, become older",
-  "phonetic": "gadal",
-  "plays": "audio/m/israeli/word/h9ea381d6.mp3"
+  "phonetic": "gadal"
  },
  {
   "path": "audio/f/ashkenazi/word/h9ea381d6.mp3",
@@ -76791,12 +76597,11 @@
   "kind": "word",
   "id": "h9ea381d6",
   "text": "גָּדַל",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-extra",
   "english": "to be big, large, great; to grow; to grow up, become older",
-  "phonetic": "gadal",
-  "plays": "audio/f/israeli/word/h9ea381d6.mp3"
+  "phonetic": "gadal"
  },
  {
   "path": "audio/m/ashkenazi/word/ha0457037.mp3",
@@ -77197,12 +77002,11 @@
   "kind": "word",
   "id": "hbe4076c4",
   "text": "כִי",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-extra",
   "english": "chi",
-  "phonetic": "khi",
-  "plays": "audio/m/israeli/word/hbe4076c4.mp3"
+  "phonetic": "khi"
  },
  {
   "path": "audio/f/ashkenazi/word/hbe4076c4.mp3",
@@ -77211,12 +77015,11 @@
   "kind": "word",
   "id": "hbe4076c4",
   "text": "כִי",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-extra",
   "english": "chi",
-  "phonetic": "khi",
-  "plays": "audio/f/israeli/word/hbe4076c4.mp3"
+  "phonetic": "khi"
  },
  {
   "path": "audio/m/ashkenazi/word/hbfe184a6.mp3",
@@ -77533,12 +77336,11 @@
   "kind": "word",
   "id": "hd1ed8938",
   "text": "שָׁנָה",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-extra",
   "english": "to repeat",
-  "phonetic": "shanah",
-  "plays": "audio/m/israeli/word/hd1ed8938.mp3"
+  "phonetic": "shanah"
  },
  {
   "path": "audio/f/ashkenazi/word/hd1ed8938.mp3",
@@ -77757,12 +77559,11 @@
   "kind": "word",
   "id": "hdcbb6117",
   "text": "אִישׁ",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-extra",
   "english": "anyone",
-  "phonetic": "ish",
-  "plays": "audio/m/israeli/word/hdcbb6117.mp3"
+  "phonetic": "ish"
  },
  {
   "path": "audio/f/ashkenazi/word/hdcbb6117.mp3",
@@ -77771,12 +77572,11 @@
   "kind": "word",
   "id": "hdcbb6117",
   "text": "אִישׁ",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-extra",
   "english": "anyone",
-  "phonetic": "ish",
-  "plays": "audio/f/israeli/word/hdcbb6117.mp3"
+  "phonetic": "ish"
  },
  {
   "path": "audio/m/ashkenazi/word/hdd46eaf9.mp3",
@@ -78065,12 +77865,11 @@
   "kind": "word",
   "id": "he39d02eb",
   "text": "בָּקָר",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-extra",
   "english": "bovine, cattle; beef",
-  "phonetic": "bakar",
-  "plays": "audio/m/israeli/word/he39d02eb.mp3"
+  "phonetic": "bakar"
  },
  {
   "path": "audio/f/ashkenazi/word/he39d02eb.mp3",
@@ -78079,12 +77878,11 @@
   "kind": "word",
   "id": "he39d02eb",
   "text": "בָּקָר",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-extra",
   "english": "bovine, cattle; beef",
-  "phonetic": "bakar",
-  "plays": "audio/f/israeli/word/he39d02eb.mp3"
+  "phonetic": "bakar"
  },
  {
   "path": "audio/m/ashkenazi/word/he4ad156c.mp3",
@@ -78233,12 +78031,11 @@
   "kind": "word",
   "id": "heabe1020",
   "text": "יָא",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-extra",
   "english": "vocative particle preceding a noun, especially a slur or pejorative",
-  "phonetic": "ya",
-  "plays": "audio/m/israeli/word/heabe1020.mp3"
+  "phonetic": "ya"
  },
  {
   "path": "audio/f/ashkenazi/word/heabe1020.mp3",
@@ -78247,12 +78044,11 @@
   "kind": "word",
   "id": "heabe1020",
   "text": "יָא",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-extra",
   "english": "vocative particle preceding a noun, especially a slur or pejorative",
-  "phonetic": "ya",
-  "plays": "audio/f/israeli/word/heabe1020.mp3"
+  "phonetic": "ya"
  },
  {
   "path": "audio/m/ashkenazi/word/heba0a42c.mp3",
@@ -78261,12 +78057,11 @@
   "kind": "word",
   "id": "heba0a42c",
   "text": "קָטֹן",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-extra",
   "english": "to be or become small; to be unworthy",
-  "phonetic": "katon",
-  "plays": "audio/m/israeli/word/heba0a42c.mp3"
+  "phonetic": "katon"
  },
  {
   "path": "audio/f/ashkenazi/word/heba0a42c.mp3",
@@ -78275,12 +78070,11 @@
   "kind": "word",
   "id": "heba0a42c",
   "text": "קָטֹן",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-extra",
   "english": "to be or become small; to be unworthy",
-  "phonetic": "katon",
-  "plays": "audio/f/israeli/word/heba0a42c.mp3"
+  "phonetic": "katon"
  },
  {
   "path": "audio/m/ashkenazi/word/heba57078.mp3",
@@ -78555,12 +78349,11 @@
   "kind": "word",
   "id": "hf4758d4d",
   "text": "רֹק",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-extra",
   "english": "saliva",
-  "phonetic": "rok",
-  "plays": "audio/f/israeli/word/hf4758d4d.mp3"
+  "phonetic": "rok"
  },
  {
   "path": "audio/m/ashkenazi/word/hf524a1ad.mp3",
@@ -78709,12 +78502,11 @@
   "kind": "word",
   "id": "hfbe29a09",
   "text": "דֻּבַּר",
-  "status": "plays-israeli",
-  "source": "israeli-clip",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
   "group": "vocab-extra",
   "english": "to be spoken",
-  "phonetic": "dubar",
-  "plays": "audio/m/israeli/word/hfbe29a09.mp3"
+  "phonetic": "dubar"
  },
  {
   "path": "audio/f/ashkenazi/word/hfbe29a09.mp3",

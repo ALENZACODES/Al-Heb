@@ -1,0 +1,31 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-respelled-israeli-voice",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "ashkenazi",
+ "inputText": "בָּרִיא",
+ "inputSha256": "bab91e0dd2aa395fa3a46146337c8725a57e11b5e3df1e1c36a4439790ef04dc",
+ "ingestedAt": "2026-11-12T07:50:42.278Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice: the Israeli man voice reading the ashkenazi English-letter respelling, not pointed Hebrew. Not a human recording; no human has listened to it. Licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel.",
+ "renderedAt": "2026-11-12T07:50:42.278Z",
+ "redistributionCleared": false,
+ "spokenText": "bori",
+ "normalized": true,
+ "provider": "google",
+ "madeFrom": "respelling",
+ "voiceName": "he-IL-Wavenet-B",
+ "languageCode": "he-IL",
+ "hebrew": "בָּרִיא",
+ "israeliRef": "audio/m/israeli/word/hee0f6bea.mp3",
+ "tempo": {
+  "applied": false,
+  "factor": 1,
+  "cap": 1.26,
+  "before": 0.7919954648526077,
+  "after": 0.7919954648526077,
+  "israeliSec": 0.9040136054421769,
+  "israeliRef": "audio/m/israeli/word/hee0f6bea.mp3"
+ }
+}

@@ -1,0 +1,31 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-respelled-israeli-voice",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "ashkenazi",
+ "inputText": "עָקַב",
+ "inputSha256": "c63d1e9593d3ed31695a5b18a7b3d87ec6408f274f500f0119a81f13ffdf4e57",
+ "ingestedAt": "2026-11-12T07:50:51.475Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice: the Israeli man voice reading the ashkenazi English-letter respelling, not pointed Hebrew. Not a human recording; no human has listened to it. Licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel.",
+ "renderedAt": "2026-11-12T07:50:51.475Z",
+ "redistributionCleared": false,
+ "spokenText": "okav",
+ "normalized": true,
+ "provider": "google",
+ "madeFrom": "respelling",
+ "voiceName": "he-IL-Wavenet-B",
+ "languageCode": "he-IL",
+ "hebrew": "עָקַב",
+ "israeliRef": "audio/m/israeli/word/hffd88aa2.mp3",
+ "tempo": {
+  "applied": false,
+  "factor": 1,
+  "cap": 1.26,
+  "before": 0.8880045351473923,
+  "after": 0.8880045351473923,
+  "israeliSec": 1.024013605442177,
+  "israeliRef": "audio/m/israeli/word/hffd88aa2.mp3"
+ }
+}

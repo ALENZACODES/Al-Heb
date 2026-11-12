@@ -6,7 +6,7 @@ Reading this table: "required" counts the clips the app can ask for (optional wh
 
 Status labels (the same table the app shows, src/shell/audio-labels.js): recorded = "Recorded by a human reader"; tts = "Israeli voice"; missing = "No audio yet".
 
-**Overall: 23951 of 24021 required clips exist (99.7%); Recorded by a human reader: 0; Israeli voice: 22306; No audio yet: 70.**
+**Overall: 23951 of 24021 required clips exist (99.7%); Recorded by a human reader: 0; Israeli voice: 23026; No audio yet: 70.**
 
 ## By talent and group
 
@@ -27,9 +27,9 @@ Required 3369; have 3367; missing 2.
 | prayer-line | 152 | 0 | 130 | 20 | 2 | 0/0 | human only |
 | prayer-word | 1573 | 0 | 1573 | 0 | 0 | 0/0 | human only |
 | prayer-whole | 0 | 0 | 0 | 0 | 0 | 3/21 | human only |
-| vocab-word | 1000 | 0 | 844 | 156 | 0 | 0/0 | human only |
+| vocab-word | 1000 | 0 | 929 | 71 | 0 | 0/0 | human only |
 | vocab-alias | 0 | 0 | 0 | 0 | 0 | 0/0 | human only |
-| vocab-extra | 44 | 0 | 9 | 35 | 0 | 0/0 | human only |
+| vocab-extra | 44 | 0 | 27 | 17 | 0 | 0/0 | human only |
 
 ### Ashkenazi reader (man)  (voice=m, tradition=ashkenazi)
 
@@ -48,9 +48,9 @@ Required 3366; have 3364; missing 2.
 | prayer-line | 152 | 0 | 130 | 20 | 2 | 0/0 | human only |
 | prayer-word | 1573 | 0 | 1573 | 0 | 0 | 0/0 | human only |
 | prayer-whole | 0 | 0 | 0 | 0 | 0 | 3/21 | human only |
-| vocab-word | 1000 | 0 | 843 | 157 | 0 | 0/0 | human only |
+| vocab-word | 1000 | 0 | 928 | 72 | 0 | 0/0 | human only |
 | vocab-alias | 0 | 0 | 0 | 0 | 0 | 0/0 | human only |
-| vocab-extra | 41 | 0 | 6 | 35 | 0 | 0/0 | human only |
+| vocab-extra | 41 | 0 | 26 | 15 | 0 | 0/0 | human only |
 
 ### Noa (woman), Israeli  (voice=f, tradition=israeli)
 
@@ -133,9 +133,9 @@ Required 3368; have 3366; missing 2.
 | prayer-line | 152 | 0 | 133 | 17 | 2 | 0/0 | human only |
 | prayer-word | 1573 | 0 | 1573 | 0 | 0 | 0/0 | human only |
 | prayer-whole | 0 | 0 | 0 | 0 | 0 | 3/21 | human only |
-| vocab-word | 1000 | 0 | 623 | 377 | 0 | 0/0 | human only |
+| vocab-word | 1000 | 0 | 855 | 145 | 0 | 0/0 | human only |
 | vocab-alias | 0 | 0 | 0 | 0 | 0 | 0/0 | human only |
-| vocab-extra | 43 | 0 | 8 | 35 | 0 | 0/0 | human only |
+| vocab-extra | 43 | 0 | 27 | 16 | 0 | 0/0 | human only |
 
 ### Sephardi-values reader (man), pending decision  (voice=m, tradition=sephardi)
 
@@ -154,14 +154,14 @@ Required 3368; have 3366; missing 2.
 | prayer-line | 152 | 0 | 132 | 18 | 2 | 0/0 | human only |
 | prayer-word | 1573 | 0 | 1573 | 0 | 0 | 0/0 | human only |
 | prayer-whole | 0 | 0 | 0 | 0 | 0 | 3/21 | human only |
-| vocab-word | 1000 | 0 | 622 | 378 | 0 | 0/0 | human only |
+| vocab-word | 1000 | 0 | 862 | 138 | 0 | 0/0 | human only |
 | vocab-alias | 0 | 0 | 0 | 0 | 0 | 0/0 | human only |
-| vocab-extra | 43 | 0 | 8 | 35 | 0 | 0/0 | human only |
+| vocab-extra | 43 | 0 | 29 | 14 | 0 | 0/0 | human only |
 
 ## Hold sets
 
 - clip-holds: 40 of these clips. Withheld from playback: a person listens before any screen plays it (data/lab/clip-holds.json).
-- plays-israeli: 3287 rows (35 of them play an Israeli clip that is in clip-holds, so they are withheld with it). Fallback: a Sephardi or Ashkenazi row with no clip of its own plays the Israeli clip of the same voice (status "plays-israeli").
+- plays-israeli: 2567 rows (35 of them play an Israeli clip that is in clip-holds, so they are withheld with it). Fallback: a Sephardi or Ashkenazi row with no clip of its own plays the Israeli clip of the same voice (status "plays-israeli").
 - chirpHeld: 67 rows. A Chirp re-take was held; the current clip plays (manifest flag "chirpHeld": true).
 - The three sets do not contradict one another.
 

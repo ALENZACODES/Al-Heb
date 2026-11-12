@@ -1,0 +1,31 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-respelled-israeli-voice",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "sephardi",
+ "inputText": "שָׁתָה",
+ "inputSha256": "f5f82c4e10c1f56607ee6831ce2d8d5ed92e0d4d6b99d4dc671dcf18f456ca61",
+ "ingestedAt": "2026-11-12T07:50:33.396Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice: the Israeli woman voice reading the sephardi English-letter respelling, not pointed Hebrew. Not a human recording; no human has listened to it. Licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel.",
+ "renderedAt": "2026-11-12T07:50:33.396Z",
+ "redistributionCleared": false,
+ "spokenText": "shatah",
+ "normalized": true,
+ "provider": "google",
+ "madeFrom": "respelling",
+ "voiceName": "he-IL-Wavenet-A",
+ "languageCode": "he-IL",
+ "hebrew": "שָׁתָה",
+ "israeliRef": "audio/f/israeli/word/hd59a2d59.mp3",
+ "tempo": {
+  "applied": false,
+  "factor": 1,
+  "cap": 1.26,
+  "before": 0.9360090702947845,
+  "after": 0.9360090702947845,
+  "israeliSec": 1.0960090702947847,
+  "israeliRef": "audio/f/israeli/word/hd59a2d59.mp3"
+ }
+}

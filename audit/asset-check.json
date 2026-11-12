@@ -2,9 +2,9 @@
  "schema": "alef-asset-check/1",
  "build": {
   "version": "0.1.0",
-  "builtAt": "2026-11-12T08:05:08Z"
+  "builtAt": "2026-11-12T08:43:16Z"
  },
- "checkedAt": "2026-11-12T08:05:08Z",
+ "checkedAt": "2026-11-12T08:43:20Z",
  "filesChecked": true,
  "lists": {
   "manifest.json": {
@@ -27,14 +27,14 @@
   },
   "manifest-words-sephardi.json": {
    "rows": 6566,
-   "shouldPlay": 4917,
-   "playsIsraeli": 1572,
+   "shouldPlay": 5429,
+   "playsIsraeli": 1060,
    "declaredMissing": 77
   },
   "manifest-words-ashkenazi.json": {
    "rows": 6565,
-   "shouldPlay": 5358,
-   "playsIsraeli": 1149,
+   "shouldPlay": 5566,
+   "playsIsraeli": 941,
    "declaredMissing": 58
   },
   "manifest-torah.json": {
@@ -58,8 +58,8 @@
  },
  "counts": {
   "rows": 40651,
-  "shouldPlay": 36990,
-  "playsIsraeli": 3287,
+  "shouldPlay": 37710,
+  "playsIsraeli": 2567,
   "declaredMissing": 374,
   "held": 40,
   "playsIsraeliTargetHeld": 35,

@@ -19,7 +19,7 @@ const summary = J('data/audio/summary.json');
 
 test('C-04: plays-israeli rows have no file of their own, name the Israeli clip they play, and the summary reconciles exactly', () => {
   const rows = all.filter((e) => e.status === PLAYS_ISRAELI);
-  assert.ok(rows.length > 3000);
+  assert.ok(rows.length > 0); // fewer since 12 November: Sephardi and Ashkenazi clips of their own replaced many
   for (const e of rows) {
     assert.ok(['sephardi', 'ashkenazi'].includes(e.tradition), e.path);
     assert.equal(existsSync(join(ROOT, e.path)), false, e.path);
@@ -30,7 +30,7 @@ test('C-04: plays-israeli rows have no file of their own, name the Israeli clip 
   assert.equal(summary.recorded + summary.tts + summary.playsIsraeli + summary.viaOther + summary.missing, summary.total);
   // and the player plays exactly that file for the setting
   const p = createAudio({ settings: { voice: 'f', congregation: 'sephardi' }, manifest: all, AudioCtor: class {}, speech: null });
-  const row = rows.find((e) => e.voice === 'f' && e.tradition === 'sephardi' && e.kind === 'letter');
+  const row = rows.find((e) => e.voice === 'f' && e.tradition === 'sephardi' && e.kind === 'letter') || rows.find((e) => e.voice === 'f' && e.tradition === 'sephardi');
   const s = p.status(row.kind, row.id);
   assert.equal(s.source, 'file'); assert.equal(s.path, row.plays); assert.equal(s.fileTradition, 'israeli');
 });

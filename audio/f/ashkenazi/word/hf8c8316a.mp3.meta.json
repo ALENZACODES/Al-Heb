@@ -1,0 +1,31 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-respelled-israeli-voice",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "ashkenazi",
+ "inputText": "שָׁלוֹם",
+ "inputSha256": "e1e7fe52c28a29e6247a5960f2942605e32ac92580e2170d03944646cdd29b0d",
+ "ingestedAt": "2026-11-12T08:18:30.828Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice: the Israeli woman voice reading the ashkenazi English-letter respelling, not pointed Hebrew. Not a human recording; no human has listened to it. Licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel.",
+ "renderedAt": "2026-11-12T08:18:30.828Z",
+ "redistributionCleared": false,
+ "spokenText": "sholom",
+ "normalized": true,
+ "provider": "google",
+ "madeFrom": "respelling",
+ "voiceName": "he-IL-Wavenet-A",
+ "languageCode": "he-IL",
+ "hebrew": "שָׁלוֹם",
+ "israeliRef": "audio/f/israeli/word/hf8c8316a.mp3",
+ "tempo": {
+  "applied": false,
+  "factor": 1,
+  "cap": 1.26,
+  "before": 1.0560090702947846,
+  "after": 1.0560090702947846,
+  "israeliSec": 0.9840136054421769,
+  "israeliRef": "audio/f/israeli/word/hf8c8316a.mp3"
+ }
+}

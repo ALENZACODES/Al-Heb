@@ -17,7 +17,7 @@ test('coverage tab: three services, honest wording, no fluency claim, gaps separ
   assert.doesNotMatch(root.textContent, /copyrighted|not reviewed/, 'source and review notes live on the credits page only');
   for (const s of secs) { assert.match(s.textContent, /\d+% ready to read/); assert.match(s.textContent, /not in Aleph yet/); assert.doesNotMatch(s.textContent, /fluent/); }
   assert.match(root.queryAll('[data-order="friday-night"]')[0].textContent, /^Friday evening0% ready to read/); // fresh learner
-  assert.equal(root.queryAll('[data-follow]').length, 2); // weekday morning has no follow mode
+  assert.equal(root.queryAll('[data-follow]').length, 3); // every service has a follow mode, weekday morning included (F1)
   un();
 });
 
@@ -140,4 +140,31 @@ test('owner rule: Follow the Service shows the four-letter name as ה׳ (exact a
   assert.ok(seen.length > 20);
   for (const t of seen) assert.equal(findName(t).filter((w) => w.kind !== 'abbrev').length, 0, t);
   assert.ok(seen.some((t) => t.includes('ה׳')), 'some lines carry the name, shown abbreviated');
+});
+
+test('F1 weekday follow: the same Follow cards for weekday morning, in its order, no invented markers, the name as ה׳', async () => {
+  const { root, ctx } = mk();
+  await mount(root, ctx);
+  await root.querySelector('[data-follow="weekday-morning"]').click();
+  assert.match(root.querySelector('#sv-card-h').textContent, /On waking/);
+  assert.match(root.textContent, /Moment 1 of 23/);
+  const seen = [];
+  for (let i = 0; i < 23; i++) {
+    seen.push(root.querySelector('#sv-card-h').textContent);
+    assert.ok(root.querySelector('.sv-varies'), 'no stand/sit marker data for weekday morning: says it varies');
+    assert.doesNotMatch(root.querySelector('#sv-card').textContent, /י[֑-ׇ]*ה[֑-ׇ]*ו[֑-ׇ]*ה/, 'four-letter name never shown');
+    if (i < 22) await root.querySelector('#sv-next').click();
+  }
+  assert.equal(seen.length, 23);
+  assert.match(seen[22], /Mourner's Kaddish/);
+  assert.ok(root.querySelector('#sv-next').attrs.disabled !== undefined, 'last card: Next disabled');
+});
+
+test('F8 ring: each service shows the one ring with the agreed denominators', async () => {
+  const { root, ctx } = mk({ init: { 'service.practice': { v: 1, lines: { 'shabbat-morning': { 'shema-1': '2026-11-12' } } } } });
+  await mount(root, ctx);
+  const ring = root.querySelector('[data-order="shabbat-morning"] .sv-ring');
+  assert.match(ring.textContent, /Lines read 1 of 53, words known 0 of 507, prayers followed 0 of 28/);
+  assert.match(root.querySelector('[data-order="friday-night"] .sv-ring').textContent, /of 32,.* of 303,.* of 17/);
+  assert.match(root.querySelector('[data-order="weekday-morning"] .sv-ring').textContent, /of 37,.* of 353,.* of 23/);
 });

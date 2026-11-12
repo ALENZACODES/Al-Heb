@@ -889,6 +889,10 @@
     <changefreq>weekly</changefreq>
   </url>
   <url>
+    <loc>https://alef-review.onrender.com/#/prayer-practice</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://alef-review.onrender.com/#/firstday</loc>
     <changefreq>weekly</changefreq>
   </url>
@@ -1002,6 +1006,10 @@
   </url>
   <url>
     <loc>https://alef-review.onrender.com/#/speak</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://alef-review.onrender.com/#/speak-studio</loc>
     <changefreq>weekly</changefreq>
   </url>
   <url>

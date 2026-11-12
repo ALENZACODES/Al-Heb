@@ -119,7 +119,7 @@ export function thisShabbat({ now, loc, parsha }) {
   let candles = null;
   if (loc && finite(loc.lat) && finite(loc.lon)) {
     const cl = candleLighting(fri, { lat: loc.lat, lon: loc.lon, offsetMinutes: loc.candleMinutes });
-    if (cl) candles = { time: formatTime(floorToMinute(cl.candles), loc.tz), tz: loc.tz || 'UTC', place: loc.name || '', minutes: loc.candleMinutes };
+    if (cl) candles = { time: formatTime(floorToMinute(cl.candles), loc.tz), tz: loc.tz || 'UTC', place: loc.name || '', minutes: loc.candleMinutes, at: floorToMinute(cl.candles).getTime() };
   }
   return { friday: isoDate(fri), saturday: isoDate(sat), portion, candles };
 }

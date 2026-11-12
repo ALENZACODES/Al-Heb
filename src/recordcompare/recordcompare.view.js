@@ -11,7 +11,7 @@ import { isAudioFree, AUDIO_FREE_NOTE, SKIP_NOTE } from '../shell/audiofree.js';
 import { mixed } from '../hebrewtext/mixed.js';
 import { loadJson } from '../speak/loader.js';
 import { createRecorder, createSpeaker } from '../speak/recognizer.js';
-import { STORE_KEY, RECORD_MS, ANSWERS, ANSWER_LABEL, HONESTY, PRIVACY, listPairs, contrastsFor, normalizeState, recordAnswer, pickPairs, summaryText, describeError } from './model.js';
+import { STORE_KEY, RECORD_MS, ANSWERS, ANSWER_LABEL, HONESTY, PRIVACY, listPairs, contrastsFor, normalizeState, recordAnswer, pickPairs, summaryText, describeError, BLIND_KEY, BLIND_NOTE, blindPick, blindVerdict, normalizeBlind, addBlind, blindSummary } from './model.js';
 
 export const DRAFT_NOTE = 'Draft and unreviewed: the pairs are made by rule from the word list and no Hebrew teacher has checked them.';
 // M-12: this page stays a self-check on purpose. A browser recognizer writes letters without vowel points, so it cannot separate
@@ -35,13 +35,14 @@ export function mount(root, ctx) {
   const makeAudio = inj.makeAudio || ((url) => (typeof Audio === 'function' ? new Audio(url) : null));
   let alive = true, data = null, st = normalizeState(null), trad = inj.tradition || ctx?.settings?.get?.('congregation') || 'israeli', contrast = 'all', queue = [], idx = 0, round = 0, answered = false;
   /** takes for the current pair: {a:{url,ms}|null, b:...}; recording = 'a'|'b'|null */
-  let takes = { a: null, b: null }, recording = null, audioEl = null, autoTimer = null;
+  let takes = { a: null, b: null }, recording = null, audioEl = null, autoTimer = null, blind = null, blindSt = normalizeBlind(null);
+  const rand = inj.random || Math.random;
   const clearAuto = () => { if (autoTimer != null) { (inj.clearTimeout || clearTimeout)(autoTimer); autoTimer = null; } };
   const say = (t) => { status.textContent = t; };
   const btn = (label, onclick, extra = {}) => el('button', { class: 'btn', type: 'button', style: 'min-height:44px;min-width:44px', onclick, ...extra }, label);
   if (!TRADS.some(([k]) => k === trad)) trad = 'israeli';
 
-  function dropTakes() { clearAuto(); takes = { a: null, b: null }; recording = null; try { recorder.dispose?.(); } catch { /* ignore */ } }
+  function dropTakes() { clearAuto(); takes = { a: null, b: null }; recording = null; blind = null; try { recorder.dispose?.(); } catch { /* ignore */ } }
   function renderTop() {
     const cs = data ? contrastsFor(data, trad) : [];
     top.replaceChildren(
@@ -106,13 +107,25 @@ export function mount(root, ctx) {
       nodes.push(el('div', { role: 'group', 'aria-label': ask }, el('p', {}, recorder.supported ? 'Play your A and your B. Could you hear a difference?' : 'Hear A and B. Could you hear a difference?'),
         ...ANSWERS.map((a) => btn(ANSWER_LABEL[a], () => { st = recordAnswer(st, p.key, a); storeSet(ctx, STORE_KEY, st); answered = true; renderPair(); say('Saved your answer.'); }))));
     }
+    if (recorder.supported && takes.a && takes.b) nodes.push(blindNode()); // G4: blind self-check of the learner's own two takes
     if (answered) nodes.push(btn(idx + 1 < queue.length ? 'Next pair' : 'Finish round', () => { dropTakes(); answered = false; idx += 1; renderPair(); }));
     else nodes.push(btn('Skip this pair', () => { dropTakes(); idx += 1; renderPair(); say('Skipped. Nothing was saved for that pair.'); }, { class: 'btn secondary', 'data-act': 'skip' }), el('p', { class: 'muted' }, SKIP_NOTE));
     body.replaceChildren(...nodes.filter(Boolean));
   }
 
+  function blindNode() {
+    const kids = [el('h2', {}, 'Blind Check'), el('p', { class: 'rc-blind-note' }, BLIND_NOTE)];
+    if (!blind) kids.push(btn('Play one of mine at random', async () => { blind = { which: blindPick(rand()), picked: null }; renderPair(); await play(blind.which); say('Which word was that?'); }, { 'data-act': 'blind' }));
+    else if (!blind.picked) kids.push(el('div', { role: 'group', 'aria-label': 'Which word was it?' }, btn('Play it again', () => play(blind.which), { class: 'btn secondary' }),
+      ...['a', 'b'].map((k) => btn(`That was ${k.toUpperCase()}`, () => { blind.picked = k; const v = blindVerdict(blind.which, k); blindSt = addBlind(blindSt, v.told); storeSet(ctx, BLIND_KEY, blindSt); renderPair(); say(v.text); }, { 'data-blind': k }))));
+    else kids.push(el('p', { 'data-blind-result': blind.which === blind.picked ? 'told' : 'alike' }, blindVerdict(blind.which, blind.picked).text), btn('Another blind check', async () => { blind = { which: blindPick(rand()), picked: null }; renderPair(); await play(blind.which); }, { class: 'btn secondary' }));
+    const sum = blindSummary(blindSt); if (sum) kids.push(el('p', { class: 'muted' }, sum));
+    return el('div', { class: 'rc-blind', role: 'group', 'aria-label': 'Blind check' }, ...kids);
+  }
+
   (async () => {
     try {
+      blindSt = normalizeBlind(await storeGet(ctx, BLIND_KEY, null));
       data = inj.data || await loadJson('data/speak/minimal-pairs.json');
       st = normalizeState(await storeGet(ctx, STORE_KEY, null));
       if (alive) start();

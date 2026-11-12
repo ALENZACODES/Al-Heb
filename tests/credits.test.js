@@ -138,7 +138,9 @@ test('no assistant or vendor names in the files this lane owns', () => {
 test('privacy: scroll position is session-only, nothing uses IndexedDB or uploads recordings, mic stays in memory', () => {
   const src = []; const walk = (d) => { for (const n of fs.readdirSync(path.join(ROOT, d), { withFileTypes: true })) { const p = `${d}/${n.name}`; if (n.isDirectory()) { if (n.name !== 'tools') walk(p); } else if (n.name.endsWith('.js')) src.push(p); } };
   walk('src');
-  for (const p of src) assert.doesNotMatch(read(p).replace(/\/\/.*$/gm, ''), /indexedDB|document\.cookie/, p);
+  // one exception, named on the privacy page: the Speaking Studio voice journal keeps takes the learner chose to keep (CODER-100 G10)
+  for (const p of src) assert.doesNotMatch(read(p).replace(/\/\/.*$/gm, ''), p === 'src/voice/journal.js' ? /document\.cookie/ : /indexedDB|document\.cookie/, p);
+  assert.doesNotMatch(read('src/voice/journal.js').replace(/\/\/.*$/gm, ''), /fetch\(|sendBeacon|XMLHttpRequest|FormData|WebSocket/, 'the journal never sends anything');
   assert.match(read('src/shell/scroll-restore.js'), /g\.sessionStorage/);
   assert.doesNotMatch(read('src/shell/scroll-restore.js').replace(/\/\/.*$/gm, ''), /localStorage/);
   const scrollRow = privacy.STORE_KEYS.find((r) => r[0] === 'alef.scroll.v1');
@@ -150,6 +152,7 @@ test('privacy: scroll position is session-only, nothing uses IndexedDB or upload
   assert.match(body, /createObjectURL/); assert.match(body, /revokeObjectURL/);
   const root = newRoot(doc); privacy.mount(root, { t: (k) => k }); const t = text(root);
   assert.match(t, /Record and compare/); assert.match(t, /microphone=\(self\)/); assert.match(t, /sessionStorage/);
+  assert.match(t, /IndexedDB .*for one thing only: the Speaking Studio voice journal/); assert.match(t, /Delete all my data removes them/);
 });
 
 test('credits: new practice screens carry the Sources line', () => {

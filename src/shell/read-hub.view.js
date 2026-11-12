@@ -8,6 +8,7 @@ const LINKS = [
   ['#/library', 'Library'],
   ['#/torahreader', 'Torah reader'],
   ['#/shabbat', 'Shabbat Companion'], // lane 5
+  ['#/prayer-practice', 'Prayer Practice'], // siddur-speaking lane
   ['#/service', 'Follow the service'],
   ['#/scan', 'Scan'],
   ['#/camera', 'Camera'],

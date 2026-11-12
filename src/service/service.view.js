@@ -6,6 +6,7 @@ import { showName } from '../games/tg-core.js';
 import { loadCorpus } from '../corpus/corpus.js';
 import { loadProgressData } from '../progress/data.js';
 import { readSnapshot, readableNow } from '../progress/model.js';
+import { serviceRing, SERVICE_KEYS } from '../lib/counts.js';
 import {
   loadServiceData, coverage, coverageSentence, buildCards, clipFor, lineClipFor, audioCoverage, audioCoverageAll, ORDER_IDS, FOLLOW_IDS, TRADITIONS, TRADITION_LABELS,
   MARKER_LABELS, VARIES, DRAFT_NOTICE, COVERAGE_NOTE,
@@ -85,6 +86,9 @@ export async function mount(root, ctx) {
         (() => { const a = audioCoverage(ctx.audio, buildCards(S.orders, oid, S.byId, st.tradition), st.tradition);
           return a.lines ? h('p', { class: 'small', 'data-sv-audio': `${a.withClip}/${a.lines}` }, `Sound: ${a.withClip} of ${a.lines} lines have a clip you can play, in Ari's and Noa's synthetic voices (${a.pct}%).`) : null; })(),
         h('p', { class: 'small' }, `Words: ${c.wordsFull} of ${c.words} different words in these lines are ready to read (${c.wordsPct}%). Whole texts: ${c.textsFull} of ${c.texts}.`),
+        (() => { // CODER-100 F8: the one service ring (same denominators as Progress and Prayer Practice, from the counts module)
+          let r = null; try { r = serviceRing(oid, store.get(SERVICE_KEYS.practice, null), store.get(SERVICE_KEYS.companion, null), readSnapshot(store).cards, o.items.map((x) => x.id)); } catch { r = null; }
+          return r ? h('p', { class: 'small sv-ring', 'data-ring': `${oid}:${r.pct}` }, `Your service ring: ${r.pct}%. Lines read ${r.lines.have} of ${r.lines.of}, words known ${r.words.have} of ${r.words.of}, prayers followed ${r.prayers.have} of ${r.prayers.of} (your own marks). `, h('a', { href: `#/prayer-practice?order=${oid}` }, 'Practise in Prayer Practice')) : null; })(),
         c.almost ? h('p', { class: 'small' }, `${c.almost} more ${c.almost === 1 ? 'line is' : 'lines are'} exactly one sign away.`) : null,
         h('p', { class: 'small muted' }, `The percentage covers only the texts Aleph holds. ${c.gaps} typical ${c.gaps === 1 ? 'part is' : 'parts are'} not in Aleph yet, so it does not cover the whole service.`),
         h('details', {}, h('summary', {}, 'Text by text'),

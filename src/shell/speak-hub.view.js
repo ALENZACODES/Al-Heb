@@ -4,6 +4,7 @@ import { h } from './ui.js';
 
 const LINKS = [
   ['#/speak', 'Say it'],
+  ['#/speak-studio', 'Speaking Studio'], // siddur-speaking lane
   ['#/talk', 'Talk'],
   ['#/listen', 'Listen and pick'],
   ['#/songs', 'Songs'],

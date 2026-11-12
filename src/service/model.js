@@ -7,7 +7,7 @@ import { gradeWords } from '../progress/decode.js';
 import { transliterate } from '../pronunciation/transliterate.js';
 
 export const ORDER_IDS = ['friday-night', 'shabbat-morning', 'weekday-morning'];
-export const FOLLOW_IDS = ['friday-night', 'shabbat-morning'];
+export const FOLLOW_IDS = ['friday-night', 'shabbat-morning', 'weekday-morning']; // weekday morning: the same Follow cards, from the order it already had (CODER-100 F1)
 export const TRADITIONS = ['israeli', 'sephardi', 'ashkenazi'];
 export const TRADITION_LABELS = { israeli: 'Modern Israeli', sephardi: 'American synagogue (Sephardi values)', ashkenazi: 'Ashkenazi' };
 export const MARKER_LABELS = { stand: 'Stand', sit: 'Sit', sing: 'Sing', silent: 'Silent' };

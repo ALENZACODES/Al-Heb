@@ -13,6 +13,8 @@ import {
   COMPANION_KEY, REVIEW_LABEL, NOT_SCORED, SCAFFOLD_KEY, LEVEL_NAMES, showName, linesOf, wordsOf, partOf, mapItems, translit, fadeLevel,
   practisedIds, practiseList, thisShabbat, timingOf, withPractice, withHomeStep,
 } from './companion.model.js';
+import { holidayPlan, holidaysWithin, countdown } from './practice.model.js';
+import { holidaysBetween } from '../curriculum/calendar.js';
 
 const CSS = `
 .sh { display: grid; gap: var(--gap, 1rem); max-inline-size: 100%; overflow-wrap: anywhere; }
@@ -33,6 +35,8 @@ const CSS = `
 .sh li { margin-block: .35rem; }
 .sh .small { font-size: .9rem; }
 .sh .sh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+.sh .sh-count { font-size: 1.3rem; font-weight: 700; margin: .25rem 0; }
+:root.alef-shabbat-quiet .site-nav, :root.alef-shabbat-quiet .sound-bar, :root.alef-shabbat-quiet #alef-companions, :root.alef-shabbat-quiet .fine-print { display: none !important; }
 `;
 const MODES = [['week', 'This Shabbat'], ['map', 'Service Map'], ['follow', 'Follow Along'], ['join', 'Join In'], ['home', 'Home Rituals']];
 const JUMP_LABEL = { 'shema-1': 'The Sh\'ma', 'torah-barchu': 'Barchu', 'mi-chamocha-1': 'Mi Chamocha', 'kaddish-1': 'Kaddish' };
@@ -47,11 +51,12 @@ export async function mount(root, ctx) {
   const title = () => h('h1', { id: 'view-title', tabindex: '-1' }, 'Shabbat Companion');
   root.replaceChildren(style, title(), h('p', { class: 'muted', role: 'status' }, 'Loading...'), main);
 
-  let S, comp, cal = null;
+  let S, comp, cal = null, gapsFile = null;
   try {
     [S, comp] = await Promise.all([loadServiceData({ loadCorpus }), loadJSON('data/service/companion.json')]);
     // the calendar's own modules (portion tables and city presets); without them the page still works, minus the dates
     try { const [p, l] = await Promise.all([import('../curriculum/calendar.parsha.js'), import('../curriculum/calendar.locations.js')]); cal = { parsha: p.parshaOnShabbat, ...l }; } catch { cal = null; }
+    gapsFile = await loadJSON('data/corpus/gaps.json').catch(() => null); // F2: what Aleph holds for a festival this week (no file: the section says nothing is known)
   } catch {
     if (alive) root.replaceChildren(style, title(), h('p', {}, 'The Shabbat Companion could not load its data files. Your learning is not affected.'));
     return () => { alive = false; };
@@ -85,6 +90,15 @@ export async function mount(root, ctx) {
     } catch { return null; }
   };
   if (cal) cal.__prefs = await storeGet(store, cal.CAL_PREFS_KEY, null);
+
+  // ---------- F10: Shabbat Mode quiets the app's chrome while this page is open; the countdown redraws each minute ----------
+  const QUIET_KEY = 'service.shabbatMode';
+  const docEl = globalThis.document?.documentElement;
+  let quiet = !!(await storeGet(store, QUIET_KEY, false));
+  const applyQuiet = () => { try { docEl?.classList?.toggle?.('alef-shabbat-quiet', quiet); } catch { /* no document */ } };
+  applyQuiet();
+  const tickId = typeof globalThis.setInterval === 'function' ? globalThis.setInterval(() => { if (alive && st.mode === 'week' && !st.drill) { const c = main.querySelector('[data-countdown]'); const w = c && thisShabbat({ now: now(), loc: location(), parsha: cal?.parsha }); const t = w?.candles ? countdown(w.candles.at, now().getTime()) : null; if (c && t) c.textContent = t.text; } }, 60000) : null;
+  tickId?.unref?.();
 
   // ---------- Wake Lock: off by default, only while this page is open ----------
   const wl = ctx.wakeLock !== undefined ? ctx.wakeLock : globalThis.navigator?.wakeLock;
@@ -147,6 +161,32 @@ export async function mount(root, ctx) {
     return h('p', { class: 'sh-he', lang: 'he', dir: 'rtl' }, ...kids);
   }
 
+  // ---------- F2: a festival this week, from the app's own calendar ----------
+  function festivalWeek() {
+    let list = [];
+    try {
+      const d = now(), iso = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+      const mode = ['reform', 'traditional', 'israel'].includes(cal?.__prefs?.observance) ? cal.__prefs.observance : 'reform';
+      const end = new Date(Date.parse(iso + 'T00:00:00Z') + 8 * 86400000).toISOString().slice(0, 10);
+      list = holidaysWithin(holidaysBetween(iso, end, { mode }), iso, 8);
+    } catch { list = []; }
+    if (!list.length) return null;
+    return h('section', { class: 'card', 'aria-labelledby': 'sh-fest-h', 'data-festival-week': list.map((x) => x.id).join(' ') },
+      h('h2', { id: 'sh-fest-h' }, 'Festivals This Week'),
+      ...list.map((x) => {
+        const p = holidayPlan(x, S.guide, gapsFile, S.byId);
+        return h('div', { 'data-holiday': x.id },
+          h('p', {}, h('strong', {}, x.en), ` begins the evening of ${x.eve}.`),
+          p.kind === 'skeleton'
+            ? h('div', {}, h('p', { class: 'small' }, `Prayers Aleph holds for it (${p.skeleton.held.length}):`),
+              h('ul', {}, ...p.skeleton.held.map((it) => h('li', {}, h('a', { href: it.href }, it.title)))),
+              p.skeleton.notYet.length ? h('p', { class: 'small muted' }, `Not in Aleph yet: ${p.skeleton.notYet.map((g) => g.name).join('; ')}.`) : null)
+            : p.kind === 'gap' ? h('p', { class: 'small muted' }, `Not in Aleph yet: ${p.gap.name}.`)
+              : h('p', { class: 'small muted' }, 'Aleph holds no prayers for this day yet.'));
+      }),
+      h('p', { class: 'small' }, h('a', { href: '#/prayer-practice?mode=festivals' }, 'The festival outline in Prayer Practice')));
+  }
+
   // ---------- This Shabbat ----------
   function weekView() {
     const w = thisShabbat({ now: now(), loc: location(), parsha: cal?.parsha });
@@ -160,7 +200,15 @@ export async function mount(root, ctx) {
         w.portion ? h('p', { 'data-portion': w.portion.en }, `Torah portion: ${w.portion.en} (`, heSpan(w.portion.he), ')') : h('p', { 'data-portion': '' }, 'No regular weekly portion this Shabbat: a festival reading is read instead.'),
         w.candles
           ? h('p', { 'data-candles': w.candles.time }, `Candle lighting: ${w.candles.time} ${w.candles.tz} in ${w.candles.place}, ${w.candles.minutes} minutes before sunset. Approximate; check with your community.`)
-          : h('p', {}, h('a', { href: '#/calendar' }, 'Set your location in the Calendar'), ' to see candle-lighting time.')),
+          : h('p', {}, h('a', { href: '#/calendar' }, 'Set your location in the Calendar'), ' to see candle-lighting time.'),
+        (() => { const t = w.candles && Number.isFinite(w.candles.at) ? countdown(w.candles.at, now().getTime()) : null;
+          return t ? h('p', { class: 'sh-count', 'data-countdown': t.past ? 'past' : String(t.days * 1440 + t.hours * 60 + t.minutes), role: 'timer', 'aria-live': 'off' }, t.text) : null; })(),
+        h('div', { class: 'sh-row' }, h('button', { type: 'button', class: 'btn secondary', id: 'sh-quiet', 'aria-pressed': quiet ? 'true' : 'false', onclick: () => {
+          quiet = !quiet; applyQuiet(); try { store.set(QUIET_KEY, quiet); } catch { /* best effort */ } render('sh-quiet');
+          live.textContent = quiet ? 'Shabbat Mode on: the menu and extras are hidden on this page.' : 'Shabbat Mode off.';
+        } }, quiet ? 'Shabbat Mode: On' : 'Shabbat Mode: Off')),
+        h('p', { class: 'small muted' }, 'Shabbat Mode hides the menu, the sound bar and the teachers while you are on this page. The Aleph name at the top still takes you home.')),
+      festivalWeek(),
       h('section', { class: 'card', 'aria-labelledby': 'sh-order-h' },
         h('h2', { id: 'sh-order-h' }, 'The Service Order'),
         ...comp.maps.map((o) => h('p', {}, h('button', { type: 'button', class: 'btn secondary', 'data-open-map': o, onclick: () => { st.order = o; st.mode = 'map'; render('sh-tab-map'); } }, `${S.orders.orders[o].title}: ${S.orders.orders[o].items.length} prayers`)))),
@@ -307,5 +355,7 @@ export async function mount(root, ctx) {
     globalThis.document?.removeEventListener?.('visibilitychange', onVisible);
     try { lock?.release?.(); } catch { /* ignore */ }
     lock = null; wantLock = false;
+    if (tickId != null) globalThis.clearInterval?.(tickId);
+    try { docEl?.classList?.remove?.('alef-shabbat-quiet'); } catch { /* no document */ }
   };
 }

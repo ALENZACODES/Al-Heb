@@ -164,6 +164,8 @@ export const ROUTES = [
   { name: 'service', pattern: '/service', module: '../service/service.view.js', title: 'Follow the service', owner: 'service', optional: true, quick: 'nav.service' },
   // lane 5 (12 Nov, plan #10): Shabbat Companion, a lazy route (its code and data are on demand)
   { name: 'shabbat', pattern: '/shabbat', module: '../service/shabbat.view.js', title: 'Shabbat Companion', owner: 'service', optional: true, quick: 'nav.route.shabbat' },
+  // siddur-speaking lane (CODER-100 F3-F9): Prayer Practice, a lazy route (src/service/ is on demand)
+  { name: 'prayer-practice', pattern: '/prayer-practice', module: '../service/practice.view.js', title: 'Prayer Practice', owner: 'service', optional: true, quick: 'nav.route.prayer-practice' },
   { name: 'firstday', pattern: '/firstday', module: '../firstday/firstday.view.js', tier: 'v0', title: 'Your first 10 minutes', owner: 'firstday', optional: true, group: 'learn', quick: 'nav.firstday' },
   { name: 'firstday-ladder', pattern: '/firstday/ladder', module: '../firstday/ladder.view.js', title: 'Pointed to unpointed ladder', owner: 'firstday', optional: true, group: 'learn', quick: 'nav.firstday-ladder' },
   { name: 'firstwin', pattern: '/firstwin', module: '../firstday/minuteone.view.js', title: 'Build your first Hebrew word', owner: 'firstday', optional: true, group: 'learn' },
@@ -202,6 +204,8 @@ export const ROUTES = [
   { name: 'vocab-themes', pattern: '/vocab/themes', module: '../vocab/themes.view.js', title: 'Theme packs', owner: 'vocab', optional: true, group: 'learn', quick: 'nav.vocab-themes' },
   { name: 'talk', pattern: '/talk', module: '../talk/talk.view.js', title: 'Talk', owner: 'talk', optional: true, quick: 'nav.talk' },
   { name: 'speak', pattern: '/speak', module: '../speak/speak.view.js', title: 'Say it', owner: 'speak', optional: true, group: 'learn', quick: 'nav.speak' },
+  // siddur-speaking lane (CODER-100 G1-G10): Speaking Studio, a lazy route (src/voice/ is on demand)
+  { name: 'speak-studio', pattern: '/speak-studio', module: '../voice/voice.view.js', title: 'Speaking Studio', owner: 'speak', optional: true, quick: 'nav.route.speak-studio' },
   { name: 'sprint', pattern: '/sprint', module: '../sprint/sprint.view.js', title: 'Word Sprint', owner: 'sprint', optional: true, group: 'learn', quick: 'nav.sprint' },
   { name: 'gender',   pattern: '/gender',        module: '../curriculum/learn.view.js', title: 'Gender pairs',     owner: 'lane1', group: 'learn', quick: 'nav.gender',   query: { gender: 'pairs' }, needs: 'curriculum/gender.view.js' },
   { name: 'roles',    pattern: '/gender/roles',  module: '../curriculum/learn.view.js', title: 'Say it as me',     owner: 'lane1', group: 'learn', quick: 'nav.roles',    query: { gender: 'roles' }, needs: 'curriculum/gender.view.js' },

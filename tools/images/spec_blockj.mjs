@@ -69,10 +69,13 @@ export const wordKind = (h, pos) => (pos === 'verb' ? 'word-action' : (pos === '
 
 // ---------- (a) theme packs ----------
 const SPECIAL_PACK = /^(describing-words|small-words|time-numbers)/;
+// Block J's 999 pictures are already made and keyed by J-number, so its picks must not move when a gloss is repaired.
+// The learner-text gate (S-01, 2026-11-12) closed the bracket in this gloss; block J keeps reading it as it was built.
+const BLOCKJ_BUILT_GLOSS = { h6fc590a9: 'plane (an airplane' };
 function packCandidates(theme, usedHeads) {
   const out = [];
   for (const w of theme.words) {
-    const h = head(w.en);
+    const h = head(BLOCKJ_BUILT_GLOSS[w.id] ?? w.en);
     if (!h || !/^[a-z][a-z ]{1,24}$/.test(h) || h.split(' ').length > 2) continue;
     if (usedHeads.has(h)) continue;
     const r = w.frequencyRank ?? (w.corpusRank ? w.corpusRank + 3000 : 99999);

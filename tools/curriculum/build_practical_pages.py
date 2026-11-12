@@ -247,8 +247,14 @@ def page_title(items: list, fallback: str) -> str:
         return fallback
     en = (items[0].get("en") or "").strip()
     if en:
-        # keep it short
-        return en[0].upper() + en[1:56]
+        # keep it short, but never cut a word or leave a bracket open (S-01 learner-text gate, 2026-11-12:
+        # "Peaceful Sabbath (greeting from Friday afternoon to Satu")
+        t = en[0].upper() + en[1:]
+        if len(t) > 57 and " (" in t and len(t[: t.index(" (")]) <= 57:
+            t = t[: t.index(" (")]
+        elif len(t) > 57:
+            t = t[:56].rsplit(" ", 1)[0] + "\u2026"
+        return t
     return fallback
 
 

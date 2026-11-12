@@ -312,7 +312,7 @@
  "pages": [
   {
    "id": "pu-holidays-p01",
-   "title": "Peaceful Sabbath (greeting from Friday afternoon to Satu",
+   "title": "Peaceful Sabbath",
    "order": 1,
    "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json. First line: שַׁבָּת שָׁלוֹם. I-50 already stores חַג שָׂמֵחַ, שָׁנָה טוֹבָה, גְּמַר חֲתִימָה טוֹבָה and everyday wishes.",
    "items": [

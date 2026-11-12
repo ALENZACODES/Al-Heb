@@ -63,6 +63,16 @@ export const RULES = [
     sources: [WIKI.ash, WIKI.sep] },
 ];
 
+/** S-01 (lane 1): a gloss over 40 characters is cut at a word, marked with an ellipsis, and any bracket it opened is
+ *  closed, so no example reads "to do (to perform an action, to accompli". */
+export function shortGloss(en, max = 40) {
+  const s = String(en ?? '');
+  if (s.length <= max) return s;
+  let cut = s.slice(0, max - 1); const sp = cut.lastIndexOf(' '); if (sp > 10) cut = cut.slice(0, sp);
+  cut = cut.replace(/[\s,;:(]+$/, '') + '…';
+  const open = (cut.match(/\(/g) || []).length - (cut.match(/\)/g) || []).length;
+  return cut + ')'.repeat(Math.max(0, open));
+}
 export function buildPages() {
   const rt = buildRuntime();
   const entries = new Map();
@@ -99,7 +109,7 @@ export function buildPages() {
       if (!codes.includes(r.code)) continue;
       if (usedSimple.has(e[4]) || usedFirst.has(w.he[0])) continue;
       usedSimple.add(e[4]); usedFirst.add(w.he[0]);
-      ex.push({ he: w.he.normalize('NFC'), gloss: w.en.slice(0, 40), ipa: [e[0], e[1], e[2]], simple: [e[3], e[4]] });
+      ex.push({ he: w.he.normalize('NFC'), gloss: shortGloss(w.en), ipa: [e[0], e[1], e[2]], simple: [e[3], e[4]] });
       if (ex.length >= EXAMPLES) break;
     }
     return { id: r.id, title: r.title, nav: r.nav, summary: r.summary, rows: r.rows, who: r.who, limits: r.limits, sources: r.sources, why: reasons.codes[r.code]?.text ?? '', examples: ex };

@@ -1,0 +1,46 @@
+{
+ "schema": "alef-accent-list/1",
+ "kinds": [
+  "prayer"
+ ],
+ "traditions": [
+  "ashkenazi"
+ ],
+ "script": "hebrew",
+ "estimate": {
+  "rows": 36,
+  "skippedWithWarnings": 0,
+  "chars": 14067,
+  "ttsUsd": 0.06,
+  "sttUsd": 0.59,
+  "totalUsd": 0.64
+ },
+ "rows": [
+  {
+   "path": "audio/m/ashkenazi/prayer/kiddush-festival-day-verses.mp3",
+   "voice": "m",
+   "tradition": "ashkenazi",
+   "kind": "prayer",
+   "id": "kiddush-festival-day-verses",
+   "text": "אֵלֶּה מוֹעֲדֵי אֲדֹנָי מִקְרָאֵי קֹדֶשׁ אֲשֶׁר־תִּקְרְאוּ אֹתָם בְּמוֹעֲדָם׃ וַיְדַבֵּר מֹשֶׁה אֶת־מֹעֲדֵי אֲדֹנָי אֶל־בְּנֵי יִשְׂרָאֵל׃",
+   "israeliRef": "audio/m/israeli/prayer/kiddush-festival-day-verses.mp3",
+   "spokenText": "אֵילֶּה מוֹעֲדֵי אֲדֹנֹי מִקְרֹאֵי קֹדֶשׁ אֲשֶׁר תִּקְרְאוּ אֹסֹם בְּמוֹעֲדֹם וַיְדַבֵּיר מֹשֶׁה אֶס מֹעֲדֵי אֲדֹנֹי אֶל בְּנֵי יִשְׂרֹאֵיל",
+   "scriptText": "אֵילֶּה מוֹעֲדֵי אֲדֹנֹי מִקְרֹאֵי קֹדֶשׁ אֲשֶׁר תִּקְרְאוּ אֹסֹם בְּמוֹעֲדֹם וַיְדַבֵּיר מֹשֶׁה אֶס מֹעֲדֵי אֲדֹנֹי אֶל בְּנֵי יִשְׂרֹאֵיל",
+   "madeFrom": "hebrew-script"
+  },
+  {
+   "path": "audio/f/ashkenazi/prayer/kiddush-festival-day-verses.mp3",
+   "voice": "f",
+   "tradition": "ashkenazi",
+   "kind": "prayer",
+   "id": "kiddush-festival-day-verses",
+   "text": "אֵלֶּה מוֹעֲדֵי אֲדֹנָי מִקְרָאֵי קֹדֶשׁ אֲשֶׁר־תִּקְרְאוּ אֹתָם בְּמוֹעֲדָם׃ וַיְדַבֵּר מֹשֶׁה אֶת־מֹעֲדֵי אֲדֹנָי אֶל־בְּנֵי יִשְׂרָאֵל׃",
+   "israeliRef": "audio/f/israeli/prayer/kiddush-festival-day-verses.mp3",
+   "spokenText": "אֵילֶּה מוֹעֲדֵי אֲדֹנֹי מִקְרֹאֵי קֹדֶשׁ אֲשֶׁר תִּקְרְאוּ אֹסֹם בְּמוֹעֲדֹם וַיְדַבֵּיר מֹשֶׁה אֶס מֹעֲדֵי אֲדֹנֹי אֶל בְּנֵי יִשְׂרֹאֵיל",
+   "scriptText": "אֵילֶּה מוֹעֲדֵי אֲדֹנֹי מִקְרֹאֵי קֹדֶשׁ אֲשֶׁר תִּקְרְאוּ אֹסֹם בְּמוֹעֲדֹם וַיְדַבֵּיר מֹשֶׁה אֶס מֹעֲדֵי אֲדֹנֹי אֶל בְּנֵי יִשְׂרֹאֵיל",
+   "madeFrom": "hebrew-script"
+  }
+ ],
+ "warned": [],
+ "note": "Run 8: the Ashkenazi rows of the festival-day Kiddush verses, whose Israeli clip was made in fill-clips run 6"
+}

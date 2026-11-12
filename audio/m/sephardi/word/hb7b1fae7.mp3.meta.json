@@ -1,0 +1,31 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-respelled-israeli-voice",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "sephardi",
+ "inputText": "עוֹר",
+ "inputSha256": "f603d591ba03d03b445ebafa2ff0e3dc5488e8c725d300adf8f401b605acf043",
+ "ingestedAt": "2026-11-12T07:50:35.896Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice: the Israeli man voice reading the sephardi English-letter respelling, not pointed Hebrew. Not a human recording; no human has listened to it. Licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel.",
+ "renderedAt": "2026-11-12T07:50:35.896Z",
+ "redistributionCleared": false,
+ "spokenText": "or",
+ "normalized": true,
+ "provider": "google",
+ "madeFrom": "respelling",
+ "voiceName": "he-IL-Wavenet-B",
+ "languageCode": "he-IL",
+ "hebrew": "עוֹר",
+ "israeliRef": "audio/m/israeli/word/hb7b1fae7.mp3",
+ "tempo": {
+  "applied": false,
+  "factor": 1,
+  "cap": 1.26,
+  "before": 0.6,
+  "after": 0.6,
+  "israeliSec": 0.8080045351473923,
+  "israeliRef": "audio/m/israeli/word/hb7b1fae7.mp3"
+ }
+}

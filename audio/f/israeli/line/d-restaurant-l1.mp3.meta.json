@@ -1,0 +1,27 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "israeli",
+ "inputText": "שָׁלוֹם. לְכַמָּה אֲנָשִׁים?",
+ "inputSha256": "2806ddb01bd0dcb842dd61625071f64f9684bd4475c173e12a7408e6794bd179",
+ "ingestedAt": "2026-11-12T00:24:30.056Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-12T00:24:30.056Z",
+ "redistributionCleared": false,
+ "spokenText": "שָׁלוֹם. לְכַמָּה אֲנָשִׁים?",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [],
+  "google": {
+   "heard": "שלום לך מה אנשים",
+   "acc": 1.0,
+   "issues": []
+  },
+  "reviewersFailing": 0
+ }
+}

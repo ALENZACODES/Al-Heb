@@ -1,0 +1,30 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "israeli",
+ "inputText": "בְּבַקָּשָׁה, פֹּה. הִנֵּה הַתַּפְרִיט.",
+ "inputSha256": "be2344ba9a799ca5b81e1ea72b7517e339eeaef6dfac86a39e871eafbb3acff5",
+ "ingestedAt": "2026-11-12T00:27:02.081Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-12T00:27:02.081Z",
+ "redistributionCleared": false,
+ "spokenText": "בְּבַקָּשָׁה, פֹּה. הִנֵּה הַתַּפְרִיט.",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [],
+  "google": {
+   "heard": "בבקשה פה קינאה תפריט",
+   "acc": 0.5,
+   "issues": [
+    "הִנֵּה",
+    "הַתַּפְרִיט"
+   ]
+  },
+  "reviewersFailing": 1
+ }
+}

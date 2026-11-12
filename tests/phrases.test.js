@@ -106,7 +106,7 @@ test('every mapped clip exists, and matches the catalogue row for that exact tex
       assert.notEqual(nfc(row.text), nfc(phrase.en));
       const ownId = phrase.source.kind === 'phrasebook'
         ? (form.key === 'same' ? phrase.source.id : `${phrase.source.id}-${form.key}`)
-        : null;
+        : `${phrase.source.id}-${form.key}`; // a role-play form plays word/gpar-NN-<speaker><addressee> (D-07)
       assert.equal(clip.id, ownId, `${phrase.id} must not use another item's id`);
     }
   }
@@ -181,10 +181,13 @@ test('gendered forms keep their own text, and the role-play line has no clip in 
   assert.equal(woman.audio.israeli.f.normal.id, 'greetings-11-f');
   const role = phrases.find((p) => p.id === 'role-gpar-04');
   assert.equal(role.forms.length, 4);
+  // D-07: each of the four role pairs has its own Israeli clip in both voices; no other style has a row of its own
   for (const form of role.forms) for (const tradition of TRADITIONS) for (const voice of VOICES) for (const speed of SPEEDS) {
-    assert.equal(form.audio[tradition][voice][speed], null);
+    const a = form.audio[tradition][voice][speed];
+    if (tradition === 'israeli' && speed === 'normal') { assert.equal(a.id, `gpar-04-${form.key}`); assert.equal(nfc(a.text), nfc(form.he)); }
+    else assert.equal(a, null);
   }
-  assert.equal(cellClip(role, 'israeli', 'f', 'normal'), null);
+  assert.ok(cellClip(role, 'israeli', 'f', 'normal'));
 });
 
 test('only the phrase id is mapped; the same spelling under another id is not a substitute', () => {
@@ -296,7 +299,7 @@ test('phrase list and a phrase page show the pointed line, the meaning, and an h
   assert.match(list, /Common phrases and sentences/);
   assert.match(list, /not every Hebrew phrase/i);
   assert.match(list, /good morning/);
-  assert.match(list, /No audio yet/);
+  assert.match(list, /Clip listed/);
   const greetings = root.find((n) => n.tag === 'button' && n.attrs['data-category'] === 'greetings')[0];
   greetings.click();
   assert.match(root.textContent, /Greetings/);
@@ -328,10 +331,9 @@ test('phrase list and a phrase page show the pointed line, the meaning, and an h
   const none = new N('main');
   const un3 = mount(none, { params: { id: 'role-gpar-04' }, query: { tradition: 'israeli', voice: 'f' }, settings: { get: () => undefined } });
   let gap = '';
-  for (let i = 0; i < 50 && !gap.includes('No audio yet'); i++) { await new Promise((r) => setTimeout(r, 20)); gap = none.textContent; }
+  for (let i = 0; i < 50 && !gap.includes('Can I help you'); i++) { await new Promise((r) => setTimeout(r, 20)); gap = none.textContent; }
   assert.match(gap, /Can I help you/);
-  assert.match(gap, /No audio yet/);
-  assert.equal(none.find((n) => n.tag === 'button' && n.textContent === 'Listen').length, 0);
+  assert.ok(none.find((n) => n.tag === 'button' && n.textContent === 'Listen').length > 0, 'the role-play forms have their own clips (D-07)');
   assert.match(gap, /No separate slow recording/);
   un3();
 });

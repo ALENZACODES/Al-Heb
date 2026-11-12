@@ -3,8 +3,11 @@ import { el, heText, replaceKeepingFocus } from "./dom.js";
 import { dialogues, dialogueById } from "./dialogues.js";
 import { byId } from "./lessons.js";
 import { loadState } from "./actions.js";
+import { voiceButton } from "./ex-ui.js";
 
-const FLAG = "Draft content: these dialogues have not been reviewed by a native speaker. There is no audio for them yet.";
+const FLAG = "Draft content: these dialogues have not been reviewed by a native speaker. Each line is read by a synthetic voice, a man's or a woman's to match the speaker; it is not a recording of a person.";
+/** The voice that reads a speaker's lines: the speaker's gender from the name ("Dana (woman)"), else the learner's voice. */
+export const speakerVoice = (name, fallback = "f") => (/\(.*\bwoman\b.*\)/i.test(name) ? "f" : /\(.*\bman\b.*\)/i.test(name) ? "m" : fallback);
 
 export function mountDialogues(root, ctx, id) {
   let alive = true;
@@ -28,13 +31,16 @@ export function mountDialogues(root, ctx, id) {
       return;
     }
     const name = Object.fromEntries(d.speakers.map((s) => [s.id, s.name]));
+    const voiceOf = Object.fromEntries(d.speakers.map((s) => [s.id, speakerVoice(s.name, ctx.settings?.get?.("voice") || "f")]));
+    const note = el("p", { class: "muted", role: "status", "aria-live": "polite" });
     let showTr = true, showEn = true;
     const list = el("ol", { class: "alef-dialogue-lines" });
     const draw = () => list.replaceChildren(...d.lines.map((l) => el("li", { class: "alef-dline", "data-speaker": l.speaker },
       el("span", { class: "muted alef-speaker" }, name[l.speaker] + ": "),
       heText(l.he, "alef-he alef-word"),
       showTr ? el("div", { class: "alef-translit" }, l.translit) : null,
-      showEn ? el("div", { class: "muted" }, l.en) : null)));
+      showEn ? el("div", { class: "muted" }, l.en) : null,
+      voiceButton(ctx, "line", l.id, voiceOf[l.speaker], "Listen", note, l.he))));
     const toggle = (label, get, set) => { const b = el("button", { type: "button", class: "btn secondary", "aria-pressed": String(get()),
       onclick: () => { set(!get()); b.setAttribute("aria-pressed", String(get())); draw(); } }, label); return b; };
     draw();

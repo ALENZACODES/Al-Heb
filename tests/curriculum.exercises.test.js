@@ -248,7 +248,8 @@ test("gender pairs: audio ids that are in the manifest exist for both voices; th
     else { flagged++; assert.equal(player.status("word", id || "none", { voice: "m" }).source, "none"); }
   }
   assert.ok(flagged > 0);
-  assert.ok(gender.pairs.filter((p) => p.source === "authored").every((p) => !ids.has(p.audio.m)));
+  // D-07: every authored pair now has its clip, in both forms and both voices
+  assert.ok(gender.pairs.filter((p) => p.source === "authored").every((p) => ids.has(p.audio.m) && ids.has(p.audio.f)));
 });
 test("gender paradigms: all four speaker/addressee pairs compose and differ only in the role-dependent parts", () => {
   assert.ok(gender.paradigms.length >= 5);

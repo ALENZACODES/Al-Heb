@@ -1,0 +1,27 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "israeli",
+ "inputText": "שְׁבִי בְּבַקָּשָׁה",
+ "inputSha256": "cefab6702d257a0a01e25542bb1c21f2d95f4f6b483637e55b28428d277189cc",
+ "ingestedAt": "2026-11-12T00:23:35.092Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-12T00:23:35.092Z",
+ "redistributionCleared": false,
+ "spokenText": "שְׁבִי בְּבַקָּשָׁה",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [],
+  "google": {
+   "heard": "שבי בבקשה",
+   "acc": 1.0,
+   "issues": []
+  },
+  "reviewersFailing": 0
+ }
+}

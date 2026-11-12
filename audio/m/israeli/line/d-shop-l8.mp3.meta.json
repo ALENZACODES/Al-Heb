@@ -1,0 +1,27 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "israeli",
+ "inputText": "אֲנִי לוֹקַחַת אֶת זֶה. בְּכַרְטִיס, בְּבַקָּשָׁה.",
+ "inputSha256": "5a550d71094f7de0c02cb11bb0109e005b0f1cb75df34cc323ddc48c6e0e4525",
+ "ingestedAt": "2026-11-12T00:28:04.269Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-12T00:28:04.269Z",
+ "redistributionCleared": false,
+ "spokenText": "אֲנִי לוֹקַחַת אֶת זֶה. בְּכַרְטִיס, בְּבַקָּשָׁה.",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [],
+  "google": {
+   "heard": "אני לוקחת את זה בכרטיס בבקשה",
+   "acc": 1.0,
+   "issues": []
+  },
+  "reviewersFailing": 0
+ }
+}

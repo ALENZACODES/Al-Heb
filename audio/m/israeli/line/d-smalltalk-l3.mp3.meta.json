@@ -1,0 +1,27 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "israeli",
+ "inputText": "הַכֹּל טוֹב. מֵאֵיפֹה אַתְּ?",
+ "inputSha256": "58017bc3f31b42bc90c67123738b02afad8bd1b4572841fc40589ba8ba7c2229",
+ "ingestedAt": "2026-11-12T00:27:20.141Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-12T00:27:20.141Z",
+ "redistributionCleared": false,
+ "spokenText": "הַכֹּל טוֹב. מֵאֵיפֹה אַתְּ?",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [],
+  "google": {
+   "heard": "הכל טוב מאיפה את",
+   "acc": 1.0,
+   "issues": []
+  },
+  "reviewersFailing": 0
+ }
+}

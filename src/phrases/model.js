@@ -178,7 +178,7 @@ function fromParadigm(ref, par, fileStatus, batch, index) {
     addressee: g.addressee,
     he: g.he,
     translit: translitOf(g.translit),
-    audio: slotsFor(g.he, index, null),
+    audio: slotsFor(g.he, index, `${ref.sourceId}-${g.speaker}${g.addressee}`), // D-07: word/gpar-NN-<speaker><addressee>
   }));
   return {
     id: ref.id,
@@ -400,11 +400,11 @@ export function coverageMarkdown(phrases) {
   lines.push('');
   lines.push('Separate slow files: **0**. That count is files only. It is not a claim that a shared 0.7× control could not play a normal file more slowly. This page plays a listed normal clip when you tap Listen; it never plays the normal file more slowly in place of a slow recording. A normal file is not entered in the slow column.');
   lines.push('');
-  lines.push('Review status is copied from the source (`native-speaker-needed: …` on phrasebook lines, `draft-needs-native-review` on the role-play line). No line is marked human-reviewed or native-reviewed. Israeli clips that match are synthetic text-to-speech files (catalogue status `tts`, source `paid-cloud`). They are not native human recordings.');
+  lines.push('Review status is copied from the source (`native-speaker-needed: …` on phrasebook lines, `draft-needs-native-review` on the role-play line). No line is marked human-reviewed or native-reviewed. Israeli clips that match are synthetic text-to-speech files (catalogue status `tts`). They are not native human recordings.');
   lines.push('');
   lines.push('Playback: this page plays through the shared player (src/audio/player.js), asking for the exact catalogue row of the chosen style and voice; a result that is not that exact file is refused, and nothing else is played in its place. Where the chosen style and voice have no row, the page offers another slot\'s own row as its own button, labelled with its real voice and style. Where no row exists at all, it offers the device voice, labelled as a device voice (Israeli-style only).');
   lines.push('');
-  lines.push('D-07 (audit): the gender-pair drills, the six role-play paradigms, and the seven Israel dialogues still have no clips of their own. This batch does not copy those screens. One role-play line, "Can I help you?", is referenced by id and has no catalogue row. Dialogue lines stay on the dialogues page.');
+  lines.push('D-07 (audit): the gender pairs, the six role-play paradigms and the seven Israel dialogues have Israeli clips in both voices (synthetic, not reviewed by a native speaker). This batch does not copy those screens. The role-play line "Can I help you?" plays its own clip for each of the four speaker and addressee pairs. Dialogue lines stay on the dialogues page.');
   lines.push('');
   return lines.join('\n');
 }

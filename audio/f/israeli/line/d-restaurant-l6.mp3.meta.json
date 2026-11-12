@@ -1,0 +1,29 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "israeli",
+ "inputText": "מַיִם, בְּבַקָּשָׁה.",
+ "inputSha256": "52f5ddc972865dd9b5d195ac16db5da278d40f6b43651d40375a138394f9954e",
+ "ingestedAt": "2026-11-12T00:24:01.632Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-12T00:24:01.632Z",
+ "redistributionCleared": false,
+ "spokenText": "מַיִם, בְּבַקָּשָׁה.",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [],
+  "google": {
+   "heard": "מה עם בבקשה",
+   "acc": 0.5,
+   "issues": [
+    "מַיִם"
+   ]
+  },
+  "reviewersFailing": 1
+ }
+}

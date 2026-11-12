@@ -1,0 +1,27 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "israeli",
+ "inputText": "יֵשׁ מִדָּה קְטַנָּה?",
+ "inputSha256": "e14f60f32bf2608d7dc76ab8dfab1282fb2af8a14f9d91346938328c682cdaf1",
+ "ingestedAt": "2026-11-12T00:27:34.058Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-12T00:27:34.058Z",
+ "redistributionCleared": false,
+ "spokenText": "יֵשׁ מִדָּה קְטַנָּה?",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [],
+  "google": {
+   "heard": "יש מידה קטנה",
+   "acc": 1.0,
+   "issues": []
+  },
+  "reviewersFailing": 0
+ }
+}

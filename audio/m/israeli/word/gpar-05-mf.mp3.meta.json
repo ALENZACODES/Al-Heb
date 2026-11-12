@@ -1,0 +1,27 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "israeli",
+ "inputText": "אֲנִי מְחַכֶּה לָךְ",
+ "inputSha256": "8d516771cfd399e8e14db62ec996dd7980b7925530199308569c4202fee7d780",
+ "ingestedAt": "2026-11-12T00:25:32.083Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-12T00:25:32.083Z",
+ "redistributionCleared": false,
+ "spokenText": "אֲנִי מְחַכֶּה לָךְ",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [],
+  "google": {
+   "heard": "אני מחכה לך",
+   "acc": 1.0,
+   "issues": []
+  },
+  "reviewersFailing": 0
+ }
+}

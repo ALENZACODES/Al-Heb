@@ -101,3 +101,30 @@ test('M-11: each line of a multi-line service text has its own Play, and the cov
   assert.deepEqual(audioCoverage(audio, [two, one], 'israeli'), { lines: 4, withClip: 3, pct: 75 });
   assert.match(readFileSync(join(ROOT, 'src/service/service.view.js'), 'utf8'), /Play line \$\{k \+ 1\}/);
 });
+
+test('D-07: gender pairs, role-plays and Israel dialogues have Israeli clips in both voices (or are held), and their screens ask for them', async () => {
+  const { d07Items } = await import('../tools/audio/d07_rows.mjs');
+  const holds = new Set(J('data/lab/clip-holds.json').paths);
+  const byPath = new Map(all.map((e) => [e.path, e]));
+  const items = d07Items(ROOT);
+  assert.equal(items.filter((i) => i.group === 'gender-pair').length, 32);
+  assert.equal(items.filter((i) => i.group === 'gender-paradigm').length, 24);
+  assert.equal(items.filter((i) => i.group === 'dialogue-line').length, 54);
+  for (const i of items) for (const v of ['m', 'f']) {
+    const e = byPath.get(`audio/${v}/israeli/${i.kind}/${i.id}.mp3`);
+    assert.ok(e, `${v}/${i.id} catalogued`); assert.equal(e.text, i.text); assert.equal(e.scope, 'israeli-only');
+    assert.ok(e.status === 'tts' && existsSync(join(ROOT, e.path)), `${e.path} has its clip`);
+    const meta = J(`${e.path}.meta.json`); assert.equal(meta.inputText, i.text);
+    if (meta.review.reviewersFailing >= 2) assert.ok(holds.has(e.path), `${e.path} failed 2 of 3 reviewers and must be held`);
+  }
+  const src = (p) => readFileSync(join(ROOT, p), 'utf8');
+  assert.match(src('src/curriculum/gender.view.js'), /audioStatus\(ctx, "word", pid\(c\)/);
+  assert.match(src('src/phrases/model.js'), /slotsFor\(g\.he, index, `\$\{ref\.sourceId\}-\$\{g\.speaker\}\$\{g\.addressee\}`\)/);
+  assert.match(src('src/curriculum/dialogues.view.js'), /voiceButton\(ctx, "line", l\.id, voiceOf\[l\.speaker\]/);
+  const { speakerVoice } = await import('../src/curriculum/dialogues.view.js');
+  assert.equal(speakerVoice('Dana (woman)'), 'f'); assert.equal(speakerVoice('Waiter (man)'), 'm'); assert.equal(speakerVoice('Host and waiter (woman)'), 'f');
+});
+
+test('D-12: the Shin sound rows list the pointed shin (shin dot), not a bare letter', () => {
+  for (const e of all.filter((x) => (x.kind === 'letter' && x.id === 'shin-sound') || (x.kind === 'syllable' && x.id === 'dot-shin-sin-0'))) assert.equal(e.text, 'שׁ', e.path);
+});

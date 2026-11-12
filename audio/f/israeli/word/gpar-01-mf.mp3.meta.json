@@ -1,0 +1,27 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "israeli",
+ "inputText": "אֲנִי רוֹצֶה מַיִם",
+ "inputSha256": "c4b8ec28697c686f1de4e631281480e5eeb1d89af59ea9b458e3c22d34feb912",
+ "ingestedAt": "2026-11-12T00:23:24.369Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-12T00:23:24.369Z",
+ "redistributionCleared": false,
+ "spokenText": "אֲנִי רוֹצֶה מַיִם",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [],
+  "google": {
+   "heard": "אני רוצה מים",
+   "acc": 1.0,
+   "issues": []
+  },
+  "reviewersFailing": 0
+ }
+}

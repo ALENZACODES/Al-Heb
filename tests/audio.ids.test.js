@@ -87,7 +87,7 @@ test('every manifest entry has a group; required groups all populated; no group 
   const groups = new Set(manifest.map((e) => e.group));
   for (const g of ['letter', 'letter-final', 'letter-variant', 'letter-sound', 'letter-variant-sound', 'niqqud', 'syllable', 'anchor-word', 'lesson-word', 'phrasebook', 'prayer-line', 'prayer-word', 'prayer-whole']) assert.ok(groups.has(g), g);
   assert.ok(manifest.every((e) => typeof e.group === 'string'));
-  assert.ok(manifest.filter((e) => e.scope === 'israeli-only').every((e) => ['phrasebook', 'anchor-word', 'lesson-word'].includes(e.group)));
+  assert.ok(manifest.filter((e) => e.scope === 'israeli-only').every((e) => ['phrasebook', 'anchor-word', 'lesson-word', 'gender-pair', 'gender-paradigm', 'dialogue-line'].includes(e.group))); // conversational Modern Hebrew (D-07 added the last three)
 });
 
 test('player + real manifest: phrasebook ignores congregation (plays the israeli file); read-track words still refuse mismatched TTS', async () => {

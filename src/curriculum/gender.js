@@ -2,7 +2,7 @@
  * Gender pair cards (gr-tmh-02) and say-as-me / hear-as-you paradigms (gr-jm-02), pure logic.
  * Data: data/curriculum/gender-pairs.json (original sentences, unreviewed) plus the gendered entries of the survival
  * phrasebook (data/corpus/phrasebook.json, "native-speaker-needed"). Audio ids: gp-NN-m / gp-NN-f for authored pairs
- * (NOT in the audio manifest yet); phrasebook pairs use the entry id for the masculine form only.
+ * (Israeli clips, both voices, since 11 November 2026; role-play forms play word/gpar-NN-<speaker><addressee>); phrasebook pairs use the entry id for the masculine form only.
  */
 import { loadJSON } from "./data.js";
 import { tokenize } from "./fade.js";

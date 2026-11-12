@@ -234,7 +234,7 @@
   {"id":"resh","kind":"letter","group":"letter","voices":["m","f"],"he":"רֵישׁ","soundtext":"résh","confidence":"high","flags":[]},
   {"id":"resh-sound","kind":"letter","group":"letter-sound","voices":["m","f"],"he":"ר","soundtext":"","confidence":"unvoiced","flags":["unpointed"]},
   {"id":"shin","kind":"letter","group":"letter","voices":["m","f"],"he":"שִׁין","soundtext":"shín","confidence":"high","flags":[]},
-  {"id":"shin-sound","kind":"letter","group":"letter-sound","voices":["m","f"],"he":"ש","soundtext":"","confidence":"unvoiced","flags":["unpointed"]},
+  {"id":"shin-sound","kind":"letter","group":"letter-sound","voices":["m","f"],"he":"שׁ","soundtext":"","confidence":"unvoiced","flags":["unpointed"]},
   {"id":"tav","kind":"letter","group":"letter","voices":["m","f"],"he":"תָּו","soundtext":"táv","confidence":"high","flags":[]},
   {"id":"tav-sound","kind":"letter","group":"letter-sound","voices":["m","f"],"he":"ת","soundtext":"","confidence":"unvoiced","flags":["unpointed"]},
   {"id":"kaf-final","kind":"letter","group":"letter-final","voices":["m","f"],"he":"כַּף סוֹפִית","soundtext":"káf so-fít","confidence":"medium","flags":["final-stress-assumed"]},

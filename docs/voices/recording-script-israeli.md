@@ -82,7 +82,7 @@ Takes per clip: 4. Clips: 26.
 | tsadi-sound | israeli/letter/tsadi-sound.mp3 | צ | ts | (as above) |
 | qof-sound | israeli/letter/qof-sound.mp3 | ק | k | (as above) |
 | resh-sound | israeli/letter/resh-sound.mp3 | ר | ʁ | (as above) |
-| shin-sound | israeli/letter/shin-sound.mp3 | ש | ʃ | (as above) |
+| shin-sound | israeli/letter/shin-sound.mp3 | שׁ | ʃ | (as above) |
 | tav-sound | israeli/letter/tav-sound.mp3 | ת | t | (as above) |
 | vet-sound | israeli/letter/vet-sound.mp3 | ב | v | (as above) |
 | khaf-sound | israeli/letter/khaf-sound.mp3 | כ | χ | (as above) |

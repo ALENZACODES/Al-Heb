@@ -88,7 +88,7 @@ Takes per clip: 4. Clips: 26.
 | tsadi-sound | ashkenazi/letter/tsadi-sound.mp3 | צ |  | (as above) |
 | qof-sound | ashkenazi/letter/qof-sound.mp3 | ק |  | (as above) |
 | resh-sound | ashkenazi/letter/resh-sound.mp3 | ר |  | (as above) |
-| shin-sound | ashkenazi/letter/shin-sound.mp3 | ש |  | (as above) |
+| shin-sound | ashkenazi/letter/shin-sound.mp3 | שׁ |  | (as above) |
 | tav-sound | ashkenazi/letter/tav-sound.mp3 | ת |  | (as above) |
 | vet-sound | ashkenazi/letter/vet-sound.mp3 | ב |  | (as above) |
 | khaf-sound | ashkenazi/letter/khaf-sound.mp3 | כ |  | (as above) |

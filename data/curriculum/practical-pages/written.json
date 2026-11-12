@@ -1152,8 +1152,12 @@
      },
      "audio": {
       "clipId": "d-smalltalk-l1",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "speaker": "Yossi (man)"
     },
@@ -1170,8 +1174,12 @@
      },
      "audio": {
       "clipId": "d-smalltalk-l2",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "speaker": "Maya (woman)"
     },
@@ -8296,8 +8304,12 @@
      },
      "audio": {
       "clipId": "d-smalltalk-l4",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "speaker": "Maya (woman)"
     }
@@ -8515,8 +8527,12 @@
      },
      "audio": {
       "clipId": "d-smalltalk-l3",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "speaker": "Yossi (man)"
     },
@@ -8533,8 +8549,12 @@
      },
      "audio": {
       "clipId": "d-smalltalk-l4",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "speaker": "Maya (woman)"
     },
@@ -8551,8 +8571,12 @@
      },
      "audio": {
       "clipId": "d-smalltalk-l5",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "speaker": "Yossi (man)"
     },
@@ -8569,8 +8593,12 @@
      },
      "audio": {
       "clipId": "d-smalltalk-l6",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "speaker": "Maya (woman)"
     },
@@ -8587,8 +8615,12 @@
      },
      "audio": {
       "clipId": "d-smalltalk-l7",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "speaker": "Yossi (man)"
     }
@@ -8676,8 +8708,12 @@
      "en": "I'm from Canada. I speak a little Hebrew.",
      "audio": {
       "clipId": "d-smalltalk-l5",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      }
     }
    ],
@@ -9649,8 +9685,12 @@
      },
      "audio": {
       "clipId": "d-cafe-l2",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "speaker": "Dana (woman)"
     },
@@ -10164,8 +10204,12 @@
      },
      "audio": {
       "clipId": "d-cafe-l4",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "speaker": "Dana (woman)"
     },
@@ -10182,8 +10226,12 @@
      },
      "audio": {
       "clipId": "d-cafe-l5",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "speaker": "Waiter (man)"
     },
@@ -10342,8 +10390,12 @@
      },
      "audio": {
       "clipId": "d-cafe-l1",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "speaker": "Waiter (man)"
     },
@@ -10360,8 +10412,12 @@
      },
      "audio": {
       "clipId": "d-cafe-l2",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "speaker": "Dana (woman)"
     },
@@ -10378,8 +10434,12 @@
      },
      "audio": {
       "clipId": "d-cafe-l3",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "speaker": "Waiter (man)"
     },
@@ -10396,8 +10456,12 @@
      },
      "audio": {
       "clipId": "d-cafe-l4",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "speaker": "Dana (woman)"
     },
@@ -10414,8 +10478,12 @@
      },
      "audio": {
       "clipId": "d-cafe-l5",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "speaker": "Waiter (man)"
     },
@@ -10432,8 +10500,12 @@
      },
      "audio": {
       "clipId": "d-cafe-l6",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "speaker": "Dana (woman)"
     },
@@ -10450,8 +10522,12 @@
      },
      "audio": {
       "clipId": "d-cafe-l7",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "speaker": "Waiter (man)"
     }
@@ -10557,8 +10633,12 @@
      "en": "I'd like a cafe hafuch (a milky coffee), please.",
      "audio": {
       "clipId": "d-cafe-l2",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      }
     }
    ],
@@ -11655,8 +11735,12 @@
      },
      "audio": {
       "clipId": "d-cafe-l6",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "speaker": "Dana (woman)"
     },
@@ -11673,8 +11757,12 @@
      },
      "audio": {
       "clipId": "d-cafe-l7",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "speaker": "Waiter (man)"
     }
@@ -12031,8 +12119,12 @@
      },
      "audio": {
       "clipId": "d-restaurant-l1",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "speaker": "Host and waiter (woman)"
     },
@@ -12049,8 +12141,12 @@
      },
      "audio": {
       "clipId": "d-restaurant-l2",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "speaker": "Guest (man)"
     },
@@ -12192,8 +12288,12 @@
      "en": "For two, please.",
      "audio": {
       "clipId": "d-restaurant-l2",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      }
     }
    ],
@@ -12267,8 +12367,12 @@
      },
      "audio": {
       "clipId": "d-restaurant-l3",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "speaker": "Host and waiter (woman)"
     },
@@ -12285,8 +12389,12 @@
      },
      "audio": {
       "clipId": "d-restaurant-l4",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "speaker": "Guest (man)"
     }
@@ -12378,8 +12486,12 @@
      "en": "I'd like a schnitzel and a salad.",
      "audio": {
       "clipId": "d-restaurant-l4",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      }
     }
    ],
@@ -12635,8 +12747,12 @@
      },
      "audio": {
       "clipId": "d-restaurant-l1",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "speaker": "Host and waiter (woman)"
     },
@@ -12653,8 +12769,12 @@
      },
      "audio": {
       "clipId": "d-restaurant-l2",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "speaker": "Guest (man)"
     },
@@ -12671,8 +12791,12 @@
      },
      "audio": {
       "clipId": "d-restaurant-l3",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "speaker": "Host and waiter (woman)"
     },
@@ -12689,8 +12813,12 @@
      },
      "audio": {
       "clipId": "d-restaurant-l4",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "speaker": "Guest (man)"
     },
@@ -12707,8 +12835,12 @@
      },
      "audio": {
       "clipId": "d-restaurant-l6",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "speaker": "Guest (man)"
     },
@@ -12725,8 +12857,12 @@
      },
      "audio": {
       "clipId": "d-restaurant-l7",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "speaker": "Guest (man)"
     },
@@ -12743,8 +12879,12 @@
      },
      "audio": {
       "clipId": "d-restaurant-l8",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "speaker": "Host and waiter (woman)"
     }
@@ -12850,8 +12990,12 @@
      "en": "Water, please.",
      "audio": {
       "clipId": "d-restaurant-l6",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      }
     }
    ],
@@ -13138,8 +13282,12 @@
      },
      "audio": {
       "clipId": "d-restaurant-l7",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "speaker": "Guest (man)"
     },
@@ -13890,8 +14038,12 @@
      },
      "audio": {
       "clipId": "d-shop-l3",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "speaker": "Shop assistant (man)"
     },
@@ -14146,8 +14298,12 @@
      },
      "audio": {
       "clipId": "d-shop-l4",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "speaker": "Customer (woman)"
     },
@@ -14278,8 +14434,12 @@
      "en": "Do you have a small size?",
      "audio": {
       "clipId": "d-shop-l4",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      }
     },
     {
@@ -14348,8 +14508,12 @@
      },
      "audio": {
       "clipId": "d-shop-l1",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "speaker": "Shop assistant (man)"
     },
@@ -14366,8 +14530,12 @@
      },
      "audio": {
       "clipId": "d-shop-l2",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "speaker": "Customer (woman)"
     },
@@ -14384,8 +14552,12 @@
      },
      "audio": {
       "clipId": "d-shop-l3",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "speaker": "Shop assistant (man)"
     },
@@ -14402,8 +14574,12 @@
      },
      "audio": {
       "clipId": "d-shop-l4",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "speaker": "Customer (woman)"
     },
@@ -14420,8 +14596,12 @@
      },
      "audio": {
       "clipId": "d-shop-l5",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "speaker": "Shop assistant (man)"
     },
@@ -14438,8 +14618,12 @@
      },
      "audio": {
       "clipId": "d-shop-l6",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "speaker": "Customer (woman)"
     },
@@ -14456,8 +14640,12 @@
      },
      "audio": {
       "clipId": "d-shop-l7",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "speaker": "Shop assistant (man)"
     },
@@ -14474,8 +14662,12 @@
      },
      "audio": {
       "clipId": "d-shop-l8",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "speaker": "Customer (woman)"
     }
@@ -14590,8 +14782,12 @@
      "en": "Can I try it on?",
      "audio": {
       "clipId": "d-shop-l6",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      }
     }
    ],
@@ -17578,8 +17774,12 @@
      },
      "audio": {
       "clipId": "d-directions-l1",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "speaker": "Tourist (man)"
     },
@@ -17596,8 +17796,12 @@
      },
      "audio": {
       "clipId": "d-directions-l2",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "speaker": "Passer-by (woman)"
     },
@@ -17614,8 +17818,12 @@
      },
      "audio": {
       "clipId": "d-directions-l3",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "speaker": "Tourist (man)"
     },
@@ -17632,8 +17840,12 @@
      },
      "audio": {
       "clipId": "d-directions-l4",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "speaker": "Passer-by (woman)"
     },
@@ -17650,8 +17862,12 @@
      },
      "audio": {
       "clipId": "d-directions-l5",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "speaker": "Tourist (man)"
     },
@@ -17668,8 +17884,12 @@
      },
      "audio": {
       "clipId": "d-directions-l6",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "speaker": "Passer-by (woman)"
     }
@@ -17766,8 +17986,12 @@
      "en": "Is it far?",
      "audio": {
       "clipId": "d-directions-l3",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      }
     }
    ],
@@ -19470,8 +19694,12 @@
      },
      "audio": {
       "clipId": "d-taxi-l1",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "speaker": "Passenger (man)"
     },
@@ -19488,8 +19716,12 @@
      },
      "audio": {
       "clipId": "d-taxi-l2",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "speaker": "Driver (man)"
     },
@@ -19506,8 +19738,12 @@
      },
      "audio": {
       "clipId": "d-taxi-l4",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "speaker": "Driver (man)"
     },
@@ -19524,8 +19760,12 @@
      },
      "audio": {
       "clipId": "d-taxi-l5",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "speaker": "Passenger (man)"
     },
@@ -19542,8 +19782,12 @@
      },
      "audio": {
       "clipId": "d-taxi-l6",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "speaker": "Driver (man)"
     },
@@ -19560,8 +19804,12 @@
      },
      "audio": {
       "clipId": "d-taxi-l7",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "speaker": "Driver (man)"
     },
@@ -19578,8 +19826,12 @@
      },
      "audio": {
       "clipId": "d-taxi-l8",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "speaker": "Passenger (man)"
     },
@@ -19596,8 +19848,12 @@
      },
      "audio": {
       "clipId": "d-taxi-l9",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "speaker": "Driver (man)"
     },
@@ -19614,8 +19870,12 @@
      },
      "audio": {
       "clipId": "d-taxi-l10",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "speaker": "Passenger (man)"
     }
@@ -19739,8 +19999,12 @@
      "en": "How long will it take?",
      "audio": {
       "clipId": "d-taxi-l5",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      }
     },
     {
@@ -19751,8 +20015,12 @@
      "en": "How much do I owe?",
      "audio": {
       "clipId": "d-taxi-l8",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      }
     }
    ],
@@ -23798,8 +24066,12 @@
      },
      "audio": {
       "clipId": "gp-05-m",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "form": "to or by a man"
     },
@@ -23816,8 +24088,12 @@
      },
      "audio": {
       "clipId": "gp-05-f",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "form": "to or by a woman"
     }
@@ -23937,8 +24213,12 @@
      "en": "I live in Tel Aviv.",
      "audio": {
       "clipId": "gp-05-f",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      }
     },
     {
@@ -24051,8 +24331,12 @@
      },
      "audio": {
       "clipId": "gp-07-m",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "form": "to or by a man"
     },
@@ -24069,8 +24353,12 @@
      },
      "audio": {
       "clipId": "gp-07-f",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "form": "to or by a woman"
     }
@@ -24168,8 +24456,12 @@
      "en": "I speak a little Hebrew.",
      "audio": {
       "clipId": "gp-07-f",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      }
     },
     {
@@ -24238,8 +24530,12 @@
      },
      "audio": {
       "clipId": "gp-14-m",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "form": "to or by a man"
     },
@@ -24256,8 +24552,12 @@
      },
      "audio": {
       "clipId": "gp-14-f",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "form": "to or by a woman"
     }
@@ -24334,8 +24634,12 @@
      "en": "Come here.",
      "audio": {
       "clipId": "gp-14-f",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      }
     }
    ],
@@ -25853,8 +26157,12 @@
      },
      "audio": {
       "clipId": "gp-01-m",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "form": "to or by a man"
     },
@@ -25871,8 +26179,12 @@
      },
      "audio": {
       "clipId": "gp-01-f",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "form": "to or by a woman"
     }
@@ -25948,8 +26260,12 @@
      "en": "I am a student.",
      "audio": {
       "clipId": "gp-01-f",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      }
     },
     {
@@ -26018,8 +26334,12 @@
      },
      "audio": {
       "clipId": "gp-08-m",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "form": "to or by a man"
     },
@@ -26036,8 +26356,12 @@
      },
      "audio": {
       "clipId": "gp-08-f",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "form": "to or by a woman"
     }
@@ -26130,8 +26454,12 @@
      "en": "I am happy.",
      "audio": {
       "clipId": "gp-08-f",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      }
     }
    ],
@@ -29068,8 +29396,12 @@
      },
      "audio": {
       "clipId": "d-hotel-l1",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "speaker": "Guest (woman)"
     },
@@ -29086,8 +29418,12 @@
      },
      "audio": {
       "clipId": "d-hotel-l2",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "speaker": "Receptionist (man)"
     },
@@ -29104,8 +29440,12 @@
      },
      "audio": {
       "clipId": "d-hotel-l3",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "speaker": "Guest (woman)"
     },
@@ -29122,8 +29462,12 @@
      },
      "audio": {
       "clipId": "d-hotel-l4",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "speaker": "Receptionist (man)"
     },
@@ -29140,8 +29484,12 @@
      },
      "audio": {
       "clipId": "d-hotel-l5",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "speaker": "Guest (woman)"
     },
@@ -29158,8 +29506,12 @@
      },
      "audio": {
       "clipId": "d-hotel-l6",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "speaker": "Receptionist (man)"
     },
@@ -29176,8 +29528,12 @@
      },
      "audio": {
       "clipId": "d-hotel-l7",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "speaker": "Receptionist (man)"
     },
@@ -29194,8 +29550,12 @@
      },
      "audio": {
       "clipId": "d-hotel-l8",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "speaker": "Guest (woman)"
     }
@@ -29210,8 +29570,12 @@
      "en": "Hello. I have a reservation.",
      "audio": {
       "clipId": "d-hotel-l1",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      }
     },
     {
@@ -29222,8 +29586,12 @@
      "en": "When is breakfast?",
      "audio": {
       "clipId": "d-hotel-l5",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      }
     }
    ],
@@ -29435,8 +29803,12 @@
      },
      "audio": {
       "clipId": "d-hotel-l1",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "speaker": "Guest (woman)"
     }
@@ -29492,8 +29864,12 @@
      "en": "Hello. I have a reservation.",
      "audio": {
       "clipId": "d-hotel-l1",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      }
     }
    ],
@@ -29818,8 +30194,12 @@
      },
      "audio": {
       "clipId": "d-hotel-l8",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "speaker": "Guest (woman)"
     }
@@ -29834,8 +30214,12 @@
      "en": "Thank you very much!",
      "audio": {
       "clipId": "d-hotel-l8",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      }
     }
    ],
@@ -32162,8 +32546,12 @@
      },
      "audio": {
       "clipId": "gp-04-m",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "form": "to or by a man"
     },
@@ -32180,8 +32568,12 @@
      },
      "audio": {
       "clipId": "gp-04-f",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "form": "to or by a woman"
     }
@@ -32196,8 +32588,12 @@
      "en": "I want water.",
      "audio": {
       "clipId": "gp-04-f",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      }
     },
     {
@@ -32208,8 +32604,12 @@
      "en": "I want water.",
      "audio": {
       "clipId": "gp-04-m",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      }
     }
    ],
@@ -33050,8 +33450,12 @@
      },
      "audio": {
       "clipId": "gp-10-m",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "form": "to or by a man"
     },
@@ -33068,8 +33472,12 @@
      },
      "audio": {
       "clipId": "gp-10-f",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "form": "to or by a woman"
     }
@@ -33084,8 +33492,12 @@
      "en": "You are right.",
      "audio": {
       "clipId": "gp-10-f",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      }
     },
     {
@@ -33096,8 +33508,12 @@
      "en": "You are right.",
      "audio": {
       "clipId": "gp-10-m",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      }
     }
    ],
@@ -45441,8 +45857,12 @@
      },
      "audio": {
       "clipId": "gp-15-m",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "form": "to or by a man"
     },
@@ -45459,8 +45879,12 @@
      },
      "audio": {
       "clipId": "gp-15-f",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "form": "to or by a woman"
     }
@@ -45516,8 +45940,12 @@
      "en": "Wait a moment.",
      "audio": {
       "clipId": "gp-15-f",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      }
     }
    ],
@@ -45668,8 +46096,12 @@
      },
      "audio": {
       "clipId": "gp-15-m",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "form": "to or by a man"
     },
@@ -45686,8 +46118,12 @@
      },
      "audio": {
       "clipId": "gp-15-f",
-      "status": "gap",
-      "voices": []
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
      },
      "form": "to or by a woman"
     },

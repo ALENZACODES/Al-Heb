@@ -1,0 +1,28 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "israeli",
+ "inputText": "עִם מוֹנֶה, בְּבַקָּשָׁה.",
+ "inputSha256": "e22a938fd17d4f30b37ab03695b3834a7b4e58fafc3bf657da109da8713b6b1f",
+ "ingestedAt": "2026-11-12T00:28:13.373Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-12T00:28:13.373Z",
+ "redistributionCleared": false,
+ "spokenText": "עִם, מוֹנֶה,, בְּבַקָּשָׁה.",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "speakingRate": 0.9,
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [],
+  "google": {
+   "heard": "אם מונה בבקשה",
+   "acc": 1.0,
+   "issues": []
+  },
+  "reviewersFailing": 0
+ }
+}

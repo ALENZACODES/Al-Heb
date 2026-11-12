@@ -6,7 +6,7 @@ Reading this table: "required" counts the clips the app can ask for (optional wh
 
 Status labels (the same table the app shows, src/shell/audio-labels.js): recorded = "Recorded by a human reader"; tts = "Israeli voice"; missing = "No audio yet".
 
-**Overall: 23731 of 23801 required clips exist (99.7%); Recorded by a human reader: 0; Israeli voice: 21703; No audio yet: 70.**
+**Overall: 23951 of 24021 required clips exist (99.7%); Recorded by a human reader: 0; Israeli voice: 21923; No audio yet: 70.**
 
 ## By talent and group
 
@@ -54,7 +54,7 @@ Required 3366; have 3364; missing 2.
 
 ### Noa (woman), Israeli  (voice=f, tradition=israeli)
 
-Required 5165; have 5134; missing 31.
+Required 5275; have 5244; missing 31.
 
 | group | required | recorded | tts | via equivalent | missing | optional (missing/total) | who can supply |
 |---|---:|---:|---:|---:|---:|---:|---|
@@ -76,14 +76,17 @@ Required 5165; have 5134; missing 31.
 | explain-en | 27 | 0 | 27 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
 | explain-he | 27 | 0 | 27 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
 | dot-tile | 0 | 0 | 0 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
+| dialogue-line | 54 | 0 | 54 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
 | screen-word | 551 | 0 | 551 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
+| gender-pair | 32 | 0 | 32 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
+| gender-paradigm | 24 | 0 | 24 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
 | vocab-word | 1333 | 0 | 1304 | 0 | 29 | 0/0 | human or TTS (TTS unvetted) |
 | vocab-alias | 0 | 0 | 0 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
 | vocab-extra | 46 | 0 | 46 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
 
 ### Ari (man), Israeli  (voice=m, tradition=israeli)
 
-Required 5165; have 5134; missing 31.
+Required 5275; have 5244; missing 31.
 
 | group | required | recorded | tts | via equivalent | missing | optional (missing/total) | who can supply |
 |---|---:|---:|---:|---:|---:|---:|---|
@@ -105,7 +108,10 @@ Required 5165; have 5134; missing 31.
 | explain-en | 27 | 0 | 27 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
 | explain-he | 27 | 0 | 27 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
 | dot-tile | 0 | 0 | 0 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
+| dialogue-line | 54 | 0 | 54 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
 | screen-word | 551 | 0 | 551 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
+| gender-pair | 32 | 0 | 32 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
+| gender-paradigm | 24 | 0 | 24 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
 | vocab-word | 1333 | 0 | 1304 | 0 | 29 | 0/0 | human or TTS (TTS unvetted) |
 | vocab-alias | 0 | 0 | 0 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
 | vocab-extra | 46 | 0 | 46 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |

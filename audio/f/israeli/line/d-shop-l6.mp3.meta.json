@@ -1,0 +1,27 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "israeli",
+ "inputText": "אֶפְשָׁר לִמְדֹּד?",
+ "inputSha256": "d407cc56d49d06bc6f8d2128d33f2c1fd2d9bb061b190a25e20989d3df4634b9",
+ "ingestedAt": "2026-11-12T00:28:31.143Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-12T00:28:31.143Z",
+ "redistributionCleared": false,
+ "spokenText": "אֶפְשָׁר לִמְדֹּד?",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [],
+  "google": {
+   "heard": "אפשר למדוד",
+   "acc": 1.0,
+   "issues": []
+  },
+  "reviewersFailing": 0
+ }
+}

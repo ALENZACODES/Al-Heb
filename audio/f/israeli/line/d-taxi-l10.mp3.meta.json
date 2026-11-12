@@ -1,0 +1,29 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "israeli",
+ "inputText": "הִנֵּה, תּוֹדָה. יוֹם טוֹב!",
+ "inputSha256": "5a61f9d4aff07a478425d1b27d250ececa1b1282cde8baab0a154d6cdb526e84",
+ "ingestedAt": "2026-11-12T00:29:14.461Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-12T00:29:14.461Z",
+ "redistributionCleared": false,
+ "spokenText": "הִנֵּה, תּוֹדָה. יוֹם טוֹב!",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [],
+  "google": {
+   "heard": "תהנה תודה יום טוב",
+   "acc": 0.75,
+   "issues": [
+    "הִנֵּה"
+   ]
+  },
+  "reviewersFailing": 1
+ }
+}

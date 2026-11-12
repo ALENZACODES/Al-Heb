@@ -1,0 +1,27 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "israeli",
+ "inputText": "סְלִיחָה, אֵיפֹה הַתַּחֲנָה הַמֶּרְכָּזִית?",
+ "inputSha256": "eead8c81c21816861e7bb362cc3c5bdd276eb222e61715dbdaa38102324473c8",
+ "ingestedAt": "2026-11-12T00:27:24.762Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-12T00:27:24.762Z",
+ "redistributionCleared": false,
+ "spokenText": "סְלִיחָה, אֵיפֹה הַתַּחֲנָה הַמֶּרְכָּזִית?",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [],
+  "google": {
+   "heard": "סליחה איפה התחנה המרכזית",
+   "acc": 1.0,
+   "issues": []
+  },
+  "reviewersFailing": 0
+ }
+}

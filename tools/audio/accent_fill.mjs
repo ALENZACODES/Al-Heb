@@ -30,12 +30,15 @@ function arg(name, def) { const i = process.argv.indexOf(name); return i > 0 ? p
 // English-letter respelling (tools/audio/ashkenazi_script.mjs), and carry it as scriptText for the review to judge against. Sephardi rows
 // are left out in this mode: the app's own Sephardi reading is letter for letter the Israeli one (src/pronunciation/forTradition.js),
 // so the Israeli voice reading the Sephardi reading in Hebrew letters would only make the Israeli clip again.
-export function plan({ kinds, traditions, root = ROOT, out = 'tools/audio/accent-list.json', script = 'latin' }) {
+// includeAliases: alias rows too (a row whose alias target has no clip of its own in this tradition still plays the Israeli clip).
+// heldFrom: only the rows a past run held (its logs docs/audio/fill/accent-r<run>-*.jsonl), for a retake; rate: speaking rate for the take.
+export function plan({ kinds, traditions, root = ROOT, out = 'tools/audio/accent-list.json', script = 'latin', includeAliases = false, heldFrom = null, rate = null }) {
   if (script === 'hebrew') traditions = traditions.filter((t) => t === 'ashkenazi');
+  const held = heldFrom ? heldPaths(root, heldFrom) : null;
   const all = loadManifestFull(root);
-  const rows = all.filter((e) => traditions.includes(e.tradition) && kinds.includes(e.kind) && e.status === PLAYS_ISRAELI && !e.aliasOf
+  const rows = all.filter((e) => traditions.includes(e.tradition) && kinds.includes(e.kind) && e.status === PLAYS_ISRAELI && (includeAliases || !e.aliasOf) && (!held || held.has(e.path))
     && !heldReason(e) && fs.existsSync(path.join(root, israeliRef(e.path))))   // clergy-list ids and uncovered divine-name forms stay held
-    .map((e) => ({ path: e.path, voice: e.voice, tradition: e.tradition, kind: e.kind, id: e.id, text: e.text, israeliRef: israeliRef(e.path),
+    .map((e) => ({ path: e.path, voice: e.voice, tradition: e.tradition, kind: e.kind, id: e.id, text: e.text, israeliRef: israeliRef(e.path), ...(rate ? { rate: +rate } : {}),
       ...(script === 'hebrew' ? { spokenText: ashkenaziScript(e.text), scriptText: ashkenaziScript(e.text), madeFrom: 'hebrew-script' } : { spokenText: respellFor(e.text, e.tradition) }) }));
   const warned = new Set(warnedRows(rows, google).map((w) => w.row.path));
   const ok = rows.filter((r) => !warned.has(r.path));
@@ -47,6 +50,14 @@ export function plan({ kinds, traditions, root = ROOT, out = 'tools/audio/accent
   return summary;
 }
 
+function heldPaths(root, run) {
+  const dir = path.join(root, 'docs/audio/fill'); const out = new Set();
+  for (const f of fs.readdirSync(dir).filter((f) => f.startsWith(`accent-r${run}-`))) {
+    for (const l of fs.readFileSync(path.join(dir, f), 'utf8').split('\n').filter(Boolean)) { const r = JSON.parse(l); if (r.decision !== 'pass') out.add(r.path); }
+  }
+  return out;
+}
+
 export async function shard({ list, n, of }) {
   const { rows } = JSON.parse(fs.readFileSync(path.join(ROOT, list), 'utf8'));
   const mine = rows.filter((_, i) => i % of === n);
@@ -55,6 +66,6 @@ export async function shard({ list, n, of }) {
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
-  if (process.argv.includes('--plan')) plan({ kinds: arg('--kinds', 'letter,vowel,syllable,prayer,line').split(','), traditions: arg('--traditions', 'sephardi,ashkenazi').split(','), script: arg('--script', 'latin'), out: arg('--out', 'tools/audio/accent-list.json') });
+  if (process.argv.includes('--plan')) plan({ kinds: arg('--kinds', 'letter,vowel,syllable,prayer,line').split(','), traditions: arg('--traditions', 'sephardi,ashkenazi').split(','), script: arg('--script', 'latin'), includeAliases: process.argv.includes('--include-aliases'), heldFrom: arg('--held-from', null), rate: arg('--rate', null), out: arg('--out', 'tools/audio/accent-list.json') });
   else await shard({ list: arg('--list', 'tools/audio/accent-list.json'), n: +arg('--shard', '0'), of: +arg('--of', '1') });
 }

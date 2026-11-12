@@ -11,6 +11,10 @@ on:
         description: 'Job list (from tools/audio/accent_fill.mjs --plan)'
         type: string
         default: 'tools/audio/accent-list-core.json'
+      review_only:
+        description: 'Review the clips already in the repo (calibration): nothing is rendered and only the log is pushed'
+        type: boolean
+        default: false
 permissions:
   contents: write
 concurrency:
@@ -57,6 +61,7 @@ jobs:
           (sudo apt-get -qq update && sudo apt-get -qq install -y --no-install-recommends ffmpeg) || (pip install -q imageio-ffmpeg && sudo ln -sf "$(python -c 'import imageio_ffmpeg;print(imageio_ffmpeg.get_ffmpeg_exe())')" /usr/local/bin/ffmpeg)
           pip install -q faster-whisper phonikud numpy
       - name: Render slice ${{ matrix.shard }} of 20
+        if: ${{ !inputs.review_only }}
         run: node tools/audio/accent_fill.mjs --list "${{ inputs.list }}" --shard ${{ matrix.shard }} --of 20
       - name: Review slice ${{ matrix.shard }} of 20
         run: |
@@ -71,6 +76,7 @@ jobs:
           b=john/accent-fill-r${{ github.run_number }}-${{ matrix.shard }}
           mkdir -p /tmp/keep && cp "$f" /tmp/keep/log.jsonl
           python3 -c "import json,sys;[print(r['path']) for r in map(json.loads,open(sys.argv[1],encoding='utf-8')) if r['decision']=='pass']" "$f" > /tmp/passed.txt
+          if [ "${{ inputs.review_only }}" = "true" ]; then : > /tmp/passed.txt; fi
           while read -r c; do mkdir -p "/tmp/keep/$(dirname "$c")"; cp "$c" "/tmp/keep/$c"; cp "$c.meta.json" "/tmp/keep/$c.meta.json"; done < /tmp/passed.txt
           auth=$(git config --get http.https://github.com/.extraheader)
           rm -rf /tmp/out && mkdir -p /tmp/out && cp -r /tmp/keep/. /tmp/out/ && cd /tmp/out

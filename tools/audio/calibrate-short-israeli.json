@@ -1,0 +1,3282 @@
+{
+ "schema": "alef-accent-list/1",
+ "note": "Calibration: the Israeli letter, vowel and syllable clips already in the app, judged by the same three reviewers (review only, nothing rendered or admitted)",
+ "rows": [
+  {
+   "path": "audio/m/israeli/letter/alef.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "alef",
+   "text": "אָלֶף",
+   "spokenText": "אָלֶף"
+  },
+  {
+   "path": "audio/f/israeli/letter/alef.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "alef",
+   "text": "אָלֶף",
+   "spokenText": "אָלֶף"
+  },
+  {
+   "path": "audio/m/israeli/letter/alef-sound.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "alef-sound",
+   "text": "א",
+   "spokenText": "א"
+  },
+  {
+   "path": "audio/f/israeli/letter/alef-sound.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "alef-sound",
+   "text": "א",
+   "spokenText": "א"
+  },
+  {
+   "path": "audio/m/israeli/letter/bet.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "bet",
+   "text": "בֵּית",
+   "spokenText": "בֵּית"
+  },
+  {
+   "path": "audio/f/israeli/letter/bet.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "bet",
+   "text": "בֵּית",
+   "spokenText": "בֵּית"
+  },
+  {
+   "path": "audio/m/israeli/letter/bet-sound.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "bet-sound",
+   "text": "ב",
+   "spokenText": "ב"
+  },
+  {
+   "path": "audio/f/israeli/letter/bet-sound.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "bet-sound",
+   "text": "ב",
+   "spokenText": "ב"
+  },
+  {
+   "path": "audio/m/israeli/letter/gimel.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "gimel",
+   "text": "גִּימֶל",
+   "spokenText": "גִּימֶל"
+  },
+  {
+   "path": "audio/f/israeli/letter/gimel.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "gimel",
+   "text": "גִּימֶל",
+   "spokenText": "גִּימֶל"
+  },
+  {
+   "path": "audio/m/israeli/letter/gimel-sound.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "gimel-sound",
+   "text": "ג",
+   "spokenText": "ג"
+  },
+  {
+   "path": "audio/f/israeli/letter/gimel-sound.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "gimel-sound",
+   "text": "ג",
+   "spokenText": "ג"
+  },
+  {
+   "path": "audio/m/israeli/letter/dalet.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "dalet",
+   "text": "דָּלֶת",
+   "spokenText": "דָּלֶת"
+  },
+  {
+   "path": "audio/f/israeli/letter/dalet.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "dalet",
+   "text": "דָּלֶת",
+   "spokenText": "דָּלֶת"
+  },
+  {
+   "path": "audio/m/israeli/letter/dalet-sound.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "dalet-sound",
+   "text": "ד",
+   "spokenText": "ד"
+  },
+  {
+   "path": "audio/f/israeli/letter/dalet-sound.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "dalet-sound",
+   "text": "ד",
+   "spokenText": "ד"
+  },
+  {
+   "path": "audio/m/israeli/letter/he.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "he",
+   "text": "הֵא",
+   "spokenText": "הֵא"
+  },
+  {
+   "path": "audio/f/israeli/letter/he.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "he",
+   "text": "הֵא",
+   "spokenText": "הֵא"
+  },
+  {
+   "path": "audio/m/israeli/letter/he-sound.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "he-sound",
+   "text": "ה",
+   "spokenText": "ה"
+  },
+  {
+   "path": "audio/f/israeli/letter/he-sound.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "he-sound",
+   "text": "ה",
+   "spokenText": "ה"
+  },
+  {
+   "path": "audio/m/israeli/letter/vav.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "vav",
+   "text": "וָו",
+   "spokenText": "וָו"
+  },
+  {
+   "path": "audio/f/israeli/letter/vav.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "vav",
+   "text": "וָו",
+   "spokenText": "וָו"
+  },
+  {
+   "path": "audio/m/israeli/letter/vav-sound.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "vav-sound",
+   "text": "ו",
+   "spokenText": "ו"
+  },
+  {
+   "path": "audio/f/israeli/letter/vav-sound.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "vav-sound",
+   "text": "ו",
+   "spokenText": "ו"
+  },
+  {
+   "path": "audio/m/israeli/letter/zayin.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "zayin",
+   "text": "זַיִן",
+   "spokenText": "זַיִן"
+  },
+  {
+   "path": "audio/f/israeli/letter/zayin.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "zayin",
+   "text": "זַיִן",
+   "spokenText": "זַיִן"
+  },
+  {
+   "path": "audio/m/israeli/letter/zayin-sound.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "zayin-sound",
+   "text": "ז",
+   "spokenText": "ז"
+  },
+  {
+   "path": "audio/f/israeli/letter/zayin-sound.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "zayin-sound",
+   "text": "ז",
+   "spokenText": "ז"
+  },
+  {
+   "path": "audio/m/israeli/letter/chet.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "chet",
+   "text": "חֵית",
+   "spokenText": "חֵית"
+  },
+  {
+   "path": "audio/f/israeli/letter/chet.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "chet",
+   "text": "חֵית",
+   "spokenText": "חֵית"
+  },
+  {
+   "path": "audio/m/israeli/letter/chet-sound.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "chet-sound",
+   "text": "ח",
+   "spokenText": "ח"
+  },
+  {
+   "path": "audio/f/israeli/letter/chet-sound.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "chet-sound",
+   "text": "ח",
+   "spokenText": "ח"
+  },
+  {
+   "path": "audio/m/israeli/letter/tet.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "tet",
+   "text": "טֵית",
+   "spokenText": "טֵית"
+  },
+  {
+   "path": "audio/f/israeli/letter/tet.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "tet",
+   "text": "טֵית",
+   "spokenText": "טֵית"
+  },
+  {
+   "path": "audio/m/israeli/letter/tet-sound.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "tet-sound",
+   "text": "ט",
+   "spokenText": "ט"
+  },
+  {
+   "path": "audio/f/israeli/letter/tet-sound.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "tet-sound",
+   "text": "ט",
+   "spokenText": "ט"
+  },
+  {
+   "path": "audio/m/israeli/letter/yod.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "yod",
+   "text": "יוֹד",
+   "spokenText": "יוֹד"
+  },
+  {
+   "path": "audio/f/israeli/letter/yod.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "yod",
+   "text": "יוֹד",
+   "spokenText": "יוֹד"
+  },
+  {
+   "path": "audio/m/israeli/letter/yod-sound.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "yod-sound",
+   "text": "י",
+   "spokenText": "י"
+  },
+  {
+   "path": "audio/f/israeli/letter/yod-sound.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "yod-sound",
+   "text": "י",
+   "spokenText": "י"
+  },
+  {
+   "path": "audio/m/israeli/letter/kaf.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "kaf",
+   "text": "כַּף",
+   "spokenText": "כַּף"
+  },
+  {
+   "path": "audio/f/israeli/letter/kaf.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "kaf",
+   "text": "כַּף",
+   "spokenText": "כַּף"
+  },
+  {
+   "path": "audio/m/israeli/letter/kaf-sound.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "kaf-sound",
+   "text": "כ",
+   "spokenText": "כ"
+  },
+  {
+   "path": "audio/f/israeli/letter/kaf-sound.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "kaf-sound",
+   "text": "כ",
+   "spokenText": "כ"
+  },
+  {
+   "path": "audio/m/israeli/letter/lamed.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "lamed",
+   "text": "לָמֶד",
+   "spokenText": "לָמֶד"
+  },
+  {
+   "path": "audio/f/israeli/letter/lamed.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "lamed",
+   "text": "לָמֶד",
+   "spokenText": "לָמֶד"
+  },
+  {
+   "path": "audio/m/israeli/letter/lamed-sound.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "lamed-sound",
+   "text": "ל",
+   "spokenText": "ל"
+  },
+  {
+   "path": "audio/f/israeli/letter/lamed-sound.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "lamed-sound",
+   "text": "ל",
+   "spokenText": "ל"
+  },
+  {
+   "path": "audio/m/israeli/letter/mem.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "mem",
+   "text": "מֵם",
+   "spokenText": "מֵם"
+  },
+  {
+   "path": "audio/f/israeli/letter/mem.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "mem",
+   "text": "מֵם",
+   "spokenText": "מֵם"
+  },
+  {
+   "path": "audio/m/israeli/letter/mem-sound.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "mem-sound",
+   "text": "מ",
+   "spokenText": "מ"
+  },
+  {
+   "path": "audio/f/israeli/letter/mem-sound.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "mem-sound",
+   "text": "מ",
+   "spokenText": "מ"
+  },
+  {
+   "path": "audio/m/israeli/letter/nun.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "nun",
+   "text": "נוּן",
+   "spokenText": "נוּן"
+  },
+  {
+   "path": "audio/f/israeli/letter/nun.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "nun",
+   "text": "נוּן",
+   "spokenText": "נוּן"
+  },
+  {
+   "path": "audio/m/israeli/letter/nun-sound.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "nun-sound",
+   "text": "נ",
+   "spokenText": "נ"
+  },
+  {
+   "path": "audio/f/israeli/letter/nun-sound.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "nun-sound",
+   "text": "נ",
+   "spokenText": "נ"
+  },
+  {
+   "path": "audio/m/israeli/letter/samekh.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "samekh",
+   "text": "סָמֶך",
+   "spokenText": "סָמֶך"
+  },
+  {
+   "path": "audio/f/israeli/letter/samekh.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "samekh",
+   "text": "סָמֶך",
+   "spokenText": "סָמֶך"
+  },
+  {
+   "path": "audio/m/israeli/letter/samekh-sound.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "samekh-sound",
+   "text": "ס",
+   "spokenText": "ס"
+  },
+  {
+   "path": "audio/f/israeli/letter/samekh-sound.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "samekh-sound",
+   "text": "ס",
+   "spokenText": "ס"
+  },
+  {
+   "path": "audio/m/israeli/letter/ayin.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "ayin",
+   "text": "עַיִן",
+   "spokenText": "עַיִן"
+  },
+  {
+   "path": "audio/f/israeli/letter/ayin.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "ayin",
+   "text": "עַיִן",
+   "spokenText": "עַיִן"
+  },
+  {
+   "path": "audio/m/israeli/letter/ayin-sound.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "ayin-sound",
+   "text": "ע",
+   "spokenText": "ע"
+  },
+  {
+   "path": "audio/f/israeli/letter/ayin-sound.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "ayin-sound",
+   "text": "ע",
+   "spokenText": "ע"
+  },
+  {
+   "path": "audio/m/israeli/letter/pe.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "pe",
+   "text": "פֵּא",
+   "spokenText": "פֵּא"
+  },
+  {
+   "path": "audio/f/israeli/letter/pe.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "pe",
+   "text": "פֵּא",
+   "spokenText": "פֵּא"
+  },
+  {
+   "path": "audio/m/israeli/letter/pe-sound.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "pe-sound",
+   "text": "פ",
+   "spokenText": "פ"
+  },
+  {
+   "path": "audio/f/israeli/letter/pe-sound.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "pe-sound",
+   "text": "פ",
+   "spokenText": "פ"
+  },
+  {
+   "path": "audio/m/israeli/letter/tsadi.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "tsadi",
+   "text": "צָדִי",
+   "spokenText": "צָדִי"
+  },
+  {
+   "path": "audio/f/israeli/letter/tsadi.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "tsadi",
+   "text": "צָדִי",
+   "spokenText": "צָדִי"
+  },
+  {
+   "path": "audio/m/israeli/letter/tsadi-sound.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "tsadi-sound",
+   "text": "צ",
+   "spokenText": "צ"
+  },
+  {
+   "path": "audio/f/israeli/letter/tsadi-sound.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "tsadi-sound",
+   "text": "צ",
+   "spokenText": "צ"
+  },
+  {
+   "path": "audio/m/israeli/letter/qof.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "qof",
+   "text": "קוֹף",
+   "spokenText": "קוֹף"
+  },
+  {
+   "path": "audio/f/israeli/letter/qof.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "qof",
+   "text": "קוֹף",
+   "spokenText": "קוֹף"
+  },
+  {
+   "path": "audio/m/israeli/letter/qof-sound.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "qof-sound",
+   "text": "ק",
+   "spokenText": "ק"
+  },
+  {
+   "path": "audio/f/israeli/letter/qof-sound.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "qof-sound",
+   "text": "ק",
+   "spokenText": "ק"
+  },
+  {
+   "path": "audio/m/israeli/letter/resh.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "resh",
+   "text": "רֵישׁ",
+   "spokenText": "רֵישׁ"
+  },
+  {
+   "path": "audio/f/israeli/letter/resh.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "resh",
+   "text": "רֵישׁ",
+   "spokenText": "רֵישׁ"
+  },
+  {
+   "path": "audio/m/israeli/letter/resh-sound.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "resh-sound",
+   "text": "ר",
+   "spokenText": "ר"
+  },
+  {
+   "path": "audio/f/israeli/letter/resh-sound.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "resh-sound",
+   "text": "ר",
+   "spokenText": "ר"
+  },
+  {
+   "path": "audio/m/israeli/letter/shin.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "shin",
+   "text": "שִׁין",
+   "spokenText": "שִׁין"
+  },
+  {
+   "path": "audio/f/israeli/letter/shin.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "shin",
+   "text": "שִׁין",
+   "spokenText": "שִׁין"
+  },
+  {
+   "path": "audio/m/israeli/letter/shin-sound.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "shin-sound",
+   "text": "שׁ",
+   "spokenText": "שׁ"
+  },
+  {
+   "path": "audio/f/israeli/letter/shin-sound.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "shin-sound",
+   "text": "שׁ",
+   "spokenText": "שׁ"
+  },
+  {
+   "path": "audio/m/israeli/letter/tav.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "tav",
+   "text": "תָּו",
+   "spokenText": "תָּו"
+  },
+  {
+   "path": "audio/f/israeli/letter/tav.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "tav",
+   "text": "תָּו",
+   "spokenText": "תָּו"
+  },
+  {
+   "path": "audio/m/israeli/letter/tav-sound.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "tav-sound",
+   "text": "ת",
+   "spokenText": "ת"
+  },
+  {
+   "path": "audio/f/israeli/letter/tav-sound.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "tav-sound",
+   "text": "ת",
+   "spokenText": "ת"
+  },
+  {
+   "path": "audio/m/israeli/letter/kaf-final.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "kaf-final",
+   "text": "כַּף סוֹפִית",
+   "spokenText": "כַּף סוֹפִית"
+  },
+  {
+   "path": "audio/f/israeli/letter/kaf-final.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "kaf-final",
+   "text": "כַּף סוֹפִית",
+   "spokenText": "כַּף סוֹפִית"
+  },
+  {
+   "path": "audio/m/israeli/letter/mem-final.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "mem-final",
+   "text": "מֵם סוֹפִית",
+   "spokenText": "מֵם סוֹפִית"
+  },
+  {
+   "path": "audio/f/israeli/letter/mem-final.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "mem-final",
+   "text": "מֵם סוֹפִית",
+   "spokenText": "מֵם סוֹפִית"
+  },
+  {
+   "path": "audio/m/israeli/letter/nun-final.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "nun-final",
+   "text": "נוּן סוֹפִית",
+   "spokenText": "נוּן סוֹפִית"
+  },
+  {
+   "path": "audio/f/israeli/letter/nun-final.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "nun-final",
+   "text": "נוּן סוֹפִית",
+   "spokenText": "נוּן סוֹפִית"
+  },
+  {
+   "path": "audio/m/israeli/letter/pe-final.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "pe-final",
+   "text": "פֵּא סוֹפִית",
+   "spokenText": "פֵּא סוֹפִית"
+  },
+  {
+   "path": "audio/f/israeli/letter/pe-final.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "pe-final",
+   "text": "פֵּא סוֹפִית",
+   "spokenText": "פֵּא סוֹפִית"
+  },
+  {
+   "path": "audio/m/israeli/letter/tsadi-final.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "tsadi-final",
+   "text": "צָדִי סוֹפִית",
+   "spokenText": "צָדִי סוֹפִית"
+  },
+  {
+   "path": "audio/f/israeli/letter/tsadi-final.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "tsadi-final",
+   "text": "צָדִי סוֹפִית",
+   "spokenText": "צָדִי סוֹפִית"
+  },
+  {
+   "path": "audio/m/israeli/letter/vet.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "vet",
+   "text": "בֵית",
+   "spokenText": "בֵית"
+  },
+  {
+   "path": "audio/f/israeli/letter/vet.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "vet",
+   "text": "בֵית",
+   "spokenText": "בֵית"
+  },
+  {
+   "path": "audio/m/israeli/letter/vet-sound.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "vet-sound",
+   "text": "ב",
+   "spokenText": "ב"
+  },
+  {
+   "path": "audio/f/israeli/letter/vet-sound.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "vet-sound",
+   "text": "ב",
+   "spokenText": "ב"
+  },
+  {
+   "path": "audio/m/israeli/letter/khaf.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "khaf",
+   "text": "כַף",
+   "spokenText": "כַף"
+  },
+  {
+   "path": "audio/f/israeli/letter/khaf.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "khaf",
+   "text": "כַף",
+   "spokenText": "כַף"
+  },
+  {
+   "path": "audio/m/israeli/letter/khaf-sound.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "khaf-sound",
+   "text": "כ",
+   "spokenText": "כ"
+  },
+  {
+   "path": "audio/f/israeli/letter/khaf-sound.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "khaf-sound",
+   "text": "כ",
+   "spokenText": "כ"
+  },
+  {
+   "path": "audio/m/israeli/letter/fe.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "fe",
+   "text": "פֵא",
+   "spokenText": "פֵא"
+  },
+  {
+   "path": "audio/f/israeli/letter/fe.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "fe",
+   "text": "פֵא",
+   "spokenText": "פֵא"
+  },
+  {
+   "path": "audio/m/israeli/letter/fe-sound.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "fe-sound",
+   "text": "פ",
+   "spokenText": "פ"
+  },
+  {
+   "path": "audio/f/israeli/letter/fe-sound.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "fe-sound",
+   "text": "פ",
+   "spokenText": "פ"
+  },
+  {
+   "path": "audio/m/israeli/letter/sin.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "sin",
+   "text": "שִׂין",
+   "spokenText": "שִׂין"
+  },
+  {
+   "path": "audio/f/israeli/letter/sin.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "sin",
+   "text": "שִׂין",
+   "spokenText": "שִׂין"
+  },
+  {
+   "path": "audio/m/israeli/letter/sin-sound.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "sin-sound",
+   "text": "שׂ",
+   "spokenText": "שׂ"
+  },
+  {
+   "path": "audio/f/israeli/letter/sin-sound.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "letter",
+   "id": "sin-sound",
+   "text": "שׂ",
+   "spokenText": "שׂ"
+  },
+  {
+   "path": "audio/m/israeli/vowel/kamatz.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "vowel",
+   "id": "kamatz",
+   "text": "אָ",
+   "spokenText": "אָ"
+  },
+  {
+   "path": "audio/f/israeli/vowel/kamatz.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "vowel",
+   "id": "kamatz",
+   "text": "אָ",
+   "spokenText": "אָ"
+  },
+  {
+   "path": "audio/m/israeli/vowel/patach.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "vowel",
+   "id": "patach",
+   "text": "אַ",
+   "spokenText": "אַ"
+  },
+  {
+   "path": "audio/f/israeli/vowel/patach.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "vowel",
+   "id": "patach",
+   "text": "אַ",
+   "spokenText": "אַ"
+  },
+  {
+   "path": "audio/m/israeli/vowel/tzere.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "vowel",
+   "id": "tzere",
+   "text": "אֵ",
+   "spokenText": "אֵ"
+  },
+  {
+   "path": "audio/f/israeli/vowel/tzere.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "vowel",
+   "id": "tzere",
+   "text": "אֵ",
+   "spokenText": "אֵ"
+  },
+  {
+   "path": "audio/m/israeli/vowel/segol.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "vowel",
+   "id": "segol",
+   "text": "אֶ",
+   "spokenText": "אֶ"
+  },
+  {
+   "path": "audio/f/israeli/vowel/segol.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "vowel",
+   "id": "segol",
+   "text": "אֶ",
+   "spokenText": "אֶ"
+  },
+  {
+   "path": "audio/m/israeli/vowel/chirik.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "vowel",
+   "id": "chirik",
+   "text": "אִ",
+   "spokenText": "אִ"
+  },
+  {
+   "path": "audio/f/israeli/vowel/chirik.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "vowel",
+   "id": "chirik",
+   "text": "אִ",
+   "spokenText": "אִ"
+  },
+  {
+   "path": "audio/m/israeli/vowel/cholam.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "vowel",
+   "id": "cholam",
+   "text": "אֹ",
+   "spokenText": "אֹ"
+  },
+  {
+   "path": "audio/f/israeli/vowel/cholam.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "vowel",
+   "id": "cholam",
+   "text": "אֹ",
+   "spokenText": "אֹ"
+  },
+  {
+   "path": "audio/m/israeli/vowel/kubutz.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "vowel",
+   "id": "kubutz",
+   "text": "אֻ",
+   "spokenText": "אֻ"
+  },
+  {
+   "path": "audio/f/israeli/vowel/kubutz.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "vowel",
+   "id": "kubutz",
+   "text": "אֻ",
+   "spokenText": "אֻ"
+  },
+  {
+   "path": "audio/m/israeli/vowel/shuruk.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "vowel",
+   "id": "shuruk",
+   "text": "וּ",
+   "spokenText": "וּ"
+  },
+  {
+   "path": "audio/f/israeli/vowel/shuruk.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "vowel",
+   "id": "shuruk",
+   "text": "וּ",
+   "spokenText": "וּ"
+  },
+  {
+   "path": "audio/m/israeli/vowel/shva.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "vowel",
+   "id": "shva",
+   "text": "בְ",
+   "spokenText": "בְ"
+  },
+  {
+   "path": "audio/f/israeli/vowel/shva.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "vowel",
+   "id": "shva",
+   "text": "בְ",
+   "spokenText": "בְ"
+  },
+  {
+   "path": "audio/m/israeli/vowel/chataf-patach.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "vowel",
+   "id": "chataf-patach",
+   "text": "אֲ",
+   "spokenText": "אֲ"
+  },
+  {
+   "path": "audio/f/israeli/vowel/chataf-patach.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "vowel",
+   "id": "chataf-patach",
+   "text": "אֲ",
+   "spokenText": "אֲ"
+  },
+  {
+   "path": "audio/m/israeli/vowel/chataf-segol.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "vowel",
+   "id": "chataf-segol",
+   "text": "אֱ",
+   "spokenText": "אֱ"
+  },
+  {
+   "path": "audio/f/israeli/vowel/chataf-segol.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "vowel",
+   "id": "chataf-segol",
+   "text": "אֱ",
+   "spokenText": "אֱ"
+  },
+  {
+   "path": "audio/m/israeli/vowel/chataf-kamatz.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "vowel",
+   "id": "chataf-kamatz",
+   "text": "אֳ",
+   "spokenText": "אֳ"
+  },
+  {
+   "path": "audio/f/israeli/vowel/chataf-kamatz.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "vowel",
+   "id": "chataf-kamatz",
+   "text": "אֳ",
+   "spokenText": "אֳ"
+  },
+  {
+   "path": "audio/m/israeli/vowel/dagesh.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "vowel",
+   "id": "dagesh",
+   "text": "בּ",
+   "spokenText": "בּ"
+  },
+  {
+   "path": "audio/f/israeli/vowel/dagesh.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "vowel",
+   "id": "dagesh",
+   "text": "בּ",
+   "spokenText": "בּ"
+  },
+  {
+   "path": "audio/m/israeli/vowel/shin-dot.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "vowel",
+   "id": "shin-dot",
+   "text": "שׁ",
+   "spokenText": "שׁ"
+  },
+  {
+   "path": "audio/f/israeli/vowel/shin-dot.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "vowel",
+   "id": "shin-dot",
+   "text": "שׁ",
+   "spokenText": "שׁ"
+  },
+  {
+   "path": "audio/m/israeli/vowel/sin-dot.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "vowel",
+   "id": "sin-dot",
+   "text": "שׂ",
+   "spokenText": "שׂ"
+  },
+  {
+   "path": "audio/f/israeli/vowel/sin-dot.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "vowel",
+   "id": "sin-dot",
+   "text": "שׂ",
+   "spokenText": "שׂ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/alef-a.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "alef-a",
+   "text": "אַ",
+   "spokenText": "אַ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/alef-a.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "alef-a",
+   "text": "אַ",
+   "spokenText": "אַ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/alef-e.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "alef-e",
+   "text": "אֶ",
+   "spokenText": "אֶ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/alef-e.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "alef-e",
+   "text": "אֶ",
+   "spokenText": "אֶ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/alef-i.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "alef-i",
+   "text": "אִ",
+   "spokenText": "אִ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/alef-i.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "alef-i",
+   "text": "אִ",
+   "spokenText": "אִ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/alef-o.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "alef-o",
+   "text": "אֹ",
+   "spokenText": "אֹ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/alef-o.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "alef-o",
+   "text": "אֹ",
+   "spokenText": "אֹ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/alef-u.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "alef-u",
+   "text": "אֻ",
+   "spokenText": "אֻ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/alef-u.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "alef-u",
+   "text": "אֻ",
+   "spokenText": "אֻ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/bet-a.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "bet-a",
+   "text": "בַּ",
+   "spokenText": "בַּ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/bet-a.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "bet-a",
+   "text": "בַּ",
+   "spokenText": "בַּ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/bet-e.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "bet-e",
+   "text": "בֶּ",
+   "spokenText": "בֶּ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/bet-e.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "bet-e",
+   "text": "בֶּ",
+   "spokenText": "בֶּ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/bet-i.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "bet-i",
+   "text": "בִּ",
+   "spokenText": "בִּ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/bet-i.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "bet-i",
+   "text": "בִּ",
+   "spokenText": "בִּ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/bet-o.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "bet-o",
+   "text": "בֹּ",
+   "spokenText": "בֹּ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/bet-o.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "bet-o",
+   "text": "בֹּ",
+   "spokenText": "בֹּ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/bet-u.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "bet-u",
+   "text": "בֻּ",
+   "spokenText": "בֻּ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/bet-u.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "bet-u",
+   "text": "בֻּ",
+   "spokenText": "בֻּ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/gimel-a.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "gimel-a",
+   "text": "גַ",
+   "spokenText": "גַ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/gimel-a.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "gimel-a",
+   "text": "גַ",
+   "spokenText": "גַ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/gimel-e.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "gimel-e",
+   "text": "גֶ",
+   "spokenText": "גֶ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/gimel-e.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "gimel-e",
+   "text": "גֶ",
+   "spokenText": "גֶ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/gimel-i.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "gimel-i",
+   "text": "גִ",
+   "spokenText": "גִ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/gimel-i.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "gimel-i",
+   "text": "גִ",
+   "spokenText": "גִ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/gimel-o.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "gimel-o",
+   "text": "גֹ",
+   "spokenText": "גֹ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/gimel-o.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "gimel-o",
+   "text": "גֹ",
+   "spokenText": "גֹ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/gimel-u.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "gimel-u",
+   "text": "גֻ",
+   "spokenText": "גֻ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/gimel-u.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "gimel-u",
+   "text": "גֻ",
+   "spokenText": "גֻ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/dalet-a.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "dalet-a",
+   "text": "דַ",
+   "spokenText": "דַ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/dalet-a.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "dalet-a",
+   "text": "דַ",
+   "spokenText": "דַ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/dalet-e.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "dalet-e",
+   "text": "דֶ",
+   "spokenText": "דֶ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/dalet-e.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "dalet-e",
+   "text": "דֶ",
+   "spokenText": "דֶ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/dalet-i.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "dalet-i",
+   "text": "דִ",
+   "spokenText": "דִ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/dalet-i.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "dalet-i",
+   "text": "דִ",
+   "spokenText": "דִ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/dalet-o.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "dalet-o",
+   "text": "דֹ",
+   "spokenText": "דֹ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/dalet-o.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "dalet-o",
+   "text": "דֹ",
+   "spokenText": "דֹ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/dalet-u.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "dalet-u",
+   "text": "דֻ",
+   "spokenText": "דֻ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/dalet-u.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "dalet-u",
+   "text": "דֻ",
+   "spokenText": "דֻ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/he-a.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "he-a",
+   "text": "הַ",
+   "spokenText": "הַ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/he-a.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "he-a",
+   "text": "הַ",
+   "spokenText": "הַ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/he-e.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "he-e",
+   "text": "הֶ",
+   "spokenText": "הֶ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/he-e.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "he-e",
+   "text": "הֶ",
+   "spokenText": "הֶ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/he-i.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "he-i",
+   "text": "הִ",
+   "spokenText": "הִ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/he-i.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "he-i",
+   "text": "הִ",
+   "spokenText": "הִ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/he-o.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "he-o",
+   "text": "הֹ",
+   "spokenText": "הֹ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/he-o.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "he-o",
+   "text": "הֹ",
+   "spokenText": "הֹ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/he-u.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "he-u",
+   "text": "הֻ",
+   "spokenText": "הֻ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/he-u.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "he-u",
+   "text": "הֻ",
+   "spokenText": "הֻ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/vav-a.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "vav-a",
+   "text": "וַ",
+   "spokenText": "וַ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/vav-a.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "vav-a",
+   "text": "וַ",
+   "spokenText": "וַ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/vav-e.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "vav-e",
+   "text": "וֶ",
+   "spokenText": "וֶ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/vav-e.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "vav-e",
+   "text": "וֶ",
+   "spokenText": "וֶ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/vav-i.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "vav-i",
+   "text": "וִ",
+   "spokenText": "וִ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/vav-i.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "vav-i",
+   "text": "וִ",
+   "spokenText": "וִ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/vav-o.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "vav-o",
+   "text": "וֹ",
+   "spokenText": "וֹ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/vav-o.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "vav-o",
+   "text": "וֹ",
+   "spokenText": "וֹ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/vav-u.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "vav-u",
+   "text": "וֻ",
+   "spokenText": "וֻ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/vav-u.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "vav-u",
+   "text": "וֻ",
+   "spokenText": "וֻ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/zayin-a.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "zayin-a",
+   "text": "זַ",
+   "spokenText": "זַ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/zayin-a.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "zayin-a",
+   "text": "זַ",
+   "spokenText": "זַ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/zayin-e.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "zayin-e",
+   "text": "זֶ",
+   "spokenText": "זֶ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/zayin-e.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "zayin-e",
+   "text": "זֶ",
+   "spokenText": "זֶ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/zayin-i.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "zayin-i",
+   "text": "זִ",
+   "spokenText": "זִ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/zayin-i.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "zayin-i",
+   "text": "זִ",
+   "spokenText": "זִ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/zayin-o.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "zayin-o",
+   "text": "זֹ",
+   "spokenText": "זֹ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/zayin-o.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "zayin-o",
+   "text": "זֹ",
+   "spokenText": "זֹ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/zayin-u.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "zayin-u",
+   "text": "זֻ",
+   "spokenText": "זֻ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/zayin-u.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "zayin-u",
+   "text": "זֻ",
+   "spokenText": "זֻ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/chet-a.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "chet-a",
+   "text": "חַ",
+   "spokenText": "חַ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/chet-a.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "chet-a",
+   "text": "חַ",
+   "spokenText": "חַ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/chet-e.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "chet-e",
+   "text": "חֶ",
+   "spokenText": "חֶ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/chet-e.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "chet-e",
+   "text": "חֶ",
+   "spokenText": "חֶ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/chet-i.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "chet-i",
+   "text": "חִ",
+   "spokenText": "חִ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/chet-i.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "chet-i",
+   "text": "חִ",
+   "spokenText": "חִ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/chet-o.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "chet-o",
+   "text": "חֹ",
+   "spokenText": "חֹ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/chet-o.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "chet-o",
+   "text": "חֹ",
+   "spokenText": "חֹ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/chet-u.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "chet-u",
+   "text": "חֻ",
+   "spokenText": "חֻ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/chet-u.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "chet-u",
+   "text": "חֻ",
+   "spokenText": "חֻ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/tet-a.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "tet-a",
+   "text": "טַ",
+   "spokenText": "טַ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/tet-a.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "tet-a",
+   "text": "טַ",
+   "spokenText": "טַ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/tet-e.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "tet-e",
+   "text": "טֶ",
+   "spokenText": "טֶ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/tet-e.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "tet-e",
+   "text": "טֶ",
+   "spokenText": "טֶ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/tet-i.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "tet-i",
+   "text": "טִ",
+   "spokenText": "טִ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/tet-i.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "tet-i",
+   "text": "טִ",
+   "spokenText": "טִ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/tet-o.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "tet-o",
+   "text": "טֹ",
+   "spokenText": "טֹ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/tet-o.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "tet-o",
+   "text": "טֹ",
+   "spokenText": "טֹ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/tet-u.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "tet-u",
+   "text": "טֻ",
+   "spokenText": "טֻ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/tet-u.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "tet-u",
+   "text": "טֻ",
+   "spokenText": "טֻ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/yod-a.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "yod-a",
+   "text": "יַ",
+   "spokenText": "יַ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/yod-a.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "yod-a",
+   "text": "יַ",
+   "spokenText": "יַ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/yod-e.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "yod-e",
+   "text": "יֶ",
+   "spokenText": "יֶ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/yod-e.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "yod-e",
+   "text": "יֶ",
+   "spokenText": "יֶ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/yod-i.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "yod-i",
+   "text": "יִ",
+   "spokenText": "יִ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/yod-i.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "yod-i",
+   "text": "יִ",
+   "spokenText": "יִ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/yod-o.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "yod-o",
+   "text": "יֹ",
+   "spokenText": "יֹ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/yod-o.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "yod-o",
+   "text": "יֹ",
+   "spokenText": "יֹ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/yod-u.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "yod-u",
+   "text": "יֻ",
+   "spokenText": "יֻ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/yod-u.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "yod-u",
+   "text": "יֻ",
+   "spokenText": "יֻ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/kaf-a.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "kaf-a",
+   "text": "כַּ",
+   "spokenText": "כַּ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/kaf-a.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "kaf-a",
+   "text": "כַּ",
+   "spokenText": "כַּ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/kaf-e.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "kaf-e",
+   "text": "כֶּ",
+   "spokenText": "כֶּ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/kaf-e.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "kaf-e",
+   "text": "כֶּ",
+   "spokenText": "כֶּ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/kaf-i.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "kaf-i",
+   "text": "כִּ",
+   "spokenText": "כִּ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/kaf-i.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "kaf-i",
+   "text": "כִּ",
+   "spokenText": "כִּ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/kaf-o.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "kaf-o",
+   "text": "כֹּ",
+   "spokenText": "כֹּ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/kaf-o.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "kaf-o",
+   "text": "כֹּ",
+   "spokenText": "כֹּ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/kaf-u.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "kaf-u",
+   "text": "כֻּ",
+   "spokenText": "כֻּ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/kaf-u.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "kaf-u",
+   "text": "כֻּ",
+   "spokenText": "כֻּ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/lamed-a.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "lamed-a",
+   "text": "לַ",
+   "spokenText": "לַ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/lamed-a.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "lamed-a",
+   "text": "לַ",
+   "spokenText": "לַ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/lamed-e.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "lamed-e",
+   "text": "לֶ",
+   "spokenText": "לֶ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/lamed-e.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "lamed-e",
+   "text": "לֶ",
+   "spokenText": "לֶ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/lamed-i.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "lamed-i",
+   "text": "לִ",
+   "spokenText": "לִ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/lamed-i.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "lamed-i",
+   "text": "לִ",
+   "spokenText": "לִ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/lamed-o.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "lamed-o",
+   "text": "לֹ",
+   "spokenText": "לֹ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/lamed-o.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "lamed-o",
+   "text": "לֹ",
+   "spokenText": "לֹ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/lamed-u.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "lamed-u",
+   "text": "לֻ",
+   "spokenText": "לֻ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/lamed-u.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "lamed-u",
+   "text": "לֻ",
+   "spokenText": "לֻ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/mem-a.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "mem-a",
+   "text": "מַ",
+   "spokenText": "מַ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/mem-a.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "mem-a",
+   "text": "מַ",
+   "spokenText": "מַ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/mem-e.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "mem-e",
+   "text": "מֶ",
+   "spokenText": "מֶ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/mem-e.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "mem-e",
+   "text": "מֶ",
+   "spokenText": "מֶ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/mem-i.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "mem-i",
+   "text": "מִ",
+   "spokenText": "מִ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/mem-i.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "mem-i",
+   "text": "מִ",
+   "spokenText": "מִ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/mem-o.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "mem-o",
+   "text": "מֹ",
+   "spokenText": "מֹ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/mem-o.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "mem-o",
+   "text": "מֹ",
+   "spokenText": "מֹ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/mem-u.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "mem-u",
+   "text": "מֻ",
+   "spokenText": "מֻ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/mem-u.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "mem-u",
+   "text": "מֻ",
+   "spokenText": "מֻ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/nun-a.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "nun-a",
+   "text": "נַ",
+   "spokenText": "נַ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/nun-a.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "nun-a",
+   "text": "נַ",
+   "spokenText": "נַ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/nun-e.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "nun-e",
+   "text": "נֶ",
+   "spokenText": "נֶ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/nun-e.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "nun-e",
+   "text": "נֶ",
+   "spokenText": "נֶ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/nun-i.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "nun-i",
+   "text": "נִ",
+   "spokenText": "נִ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/nun-i.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "nun-i",
+   "text": "נִ",
+   "spokenText": "נִ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/nun-o.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "nun-o",
+   "text": "נֹ",
+   "spokenText": "נֹ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/nun-o.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "nun-o",
+   "text": "נֹ",
+   "spokenText": "נֹ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/nun-u.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "nun-u",
+   "text": "נֻ",
+   "spokenText": "נֻ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/nun-u.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "nun-u",
+   "text": "נֻ",
+   "spokenText": "נֻ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/samekh-a.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "samekh-a",
+   "text": "סַ",
+   "spokenText": "סַ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/samekh-a.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "samekh-a",
+   "text": "סַ",
+   "spokenText": "סַ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/samekh-e.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "samekh-e",
+   "text": "סֶ",
+   "spokenText": "סֶ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/samekh-e.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "samekh-e",
+   "text": "סֶ",
+   "spokenText": "סֶ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/samekh-i.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "samekh-i",
+   "text": "סִ",
+   "spokenText": "סִ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/samekh-i.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "samekh-i",
+   "text": "סִ",
+   "spokenText": "סִ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/samekh-o.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "samekh-o",
+   "text": "סֹ",
+   "spokenText": "סֹ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/samekh-o.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "samekh-o",
+   "text": "סֹ",
+   "spokenText": "סֹ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/samekh-u.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "samekh-u",
+   "text": "סֻ",
+   "spokenText": "סֻ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/samekh-u.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "samekh-u",
+   "text": "סֻ",
+   "spokenText": "סֻ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/ayin-a.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "ayin-a",
+   "text": "עַ",
+   "spokenText": "עַ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/ayin-a.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "ayin-a",
+   "text": "עַ",
+   "spokenText": "עַ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/ayin-e.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "ayin-e",
+   "text": "עֶ",
+   "spokenText": "עֶ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/ayin-e.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "ayin-e",
+   "text": "עֶ",
+   "spokenText": "עֶ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/ayin-i.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "ayin-i",
+   "text": "עִ",
+   "spokenText": "עִ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/ayin-i.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "ayin-i",
+   "text": "עִ",
+   "spokenText": "עִ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/ayin-o.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "ayin-o",
+   "text": "עֹ",
+   "spokenText": "עֹ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/ayin-o.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "ayin-o",
+   "text": "עֹ",
+   "spokenText": "עֹ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/ayin-u.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "ayin-u",
+   "text": "עֻ",
+   "spokenText": "עֻ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/ayin-u.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "ayin-u",
+   "text": "עֻ",
+   "spokenText": "עֻ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/pe-a.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "pe-a",
+   "text": "פַּ",
+   "spokenText": "פַּ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/pe-a.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "pe-a",
+   "text": "פַּ",
+   "spokenText": "פַּ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/pe-e.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "pe-e",
+   "text": "פֶּ",
+   "spokenText": "פֶּ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/pe-e.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "pe-e",
+   "text": "פֶּ",
+   "spokenText": "פֶּ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/pe-i.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "pe-i",
+   "text": "פִּ",
+   "spokenText": "פִּ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/pe-i.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "pe-i",
+   "text": "פִּ",
+   "spokenText": "פִּ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/pe-o.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "pe-o",
+   "text": "פֹּ",
+   "spokenText": "פֹּ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/pe-o.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "pe-o",
+   "text": "פֹּ",
+   "spokenText": "פֹּ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/pe-u.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "pe-u",
+   "text": "פֻּ",
+   "spokenText": "פֻּ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/pe-u.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "pe-u",
+   "text": "פֻּ",
+   "spokenText": "פֻּ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/tsadi-a.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "tsadi-a",
+   "text": "צַ",
+   "spokenText": "צַ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/tsadi-a.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "tsadi-a",
+   "text": "צַ",
+   "spokenText": "צַ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/tsadi-e.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "tsadi-e",
+   "text": "צֶ",
+   "spokenText": "צֶ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/tsadi-e.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "tsadi-e",
+   "text": "צֶ",
+   "spokenText": "צֶ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/tsadi-i.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "tsadi-i",
+   "text": "צִ",
+   "spokenText": "צִ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/tsadi-i.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "tsadi-i",
+   "text": "צִ",
+   "spokenText": "צִ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/tsadi-o.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "tsadi-o",
+   "text": "צֹ",
+   "spokenText": "צֹ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/tsadi-o.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "tsadi-o",
+   "text": "צֹ",
+   "spokenText": "צֹ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/tsadi-u.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "tsadi-u",
+   "text": "צֻ",
+   "spokenText": "צֻ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/tsadi-u.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "tsadi-u",
+   "text": "צֻ",
+   "spokenText": "צֻ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/qof-a.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "qof-a",
+   "text": "קַ",
+   "spokenText": "קַ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/qof-a.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "qof-a",
+   "text": "קַ",
+   "spokenText": "קַ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/qof-e.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "qof-e",
+   "text": "קֶ",
+   "spokenText": "קֶ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/qof-e.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "qof-e",
+   "text": "קֶ",
+   "spokenText": "קֶ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/qof-i.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "qof-i",
+   "text": "קִ",
+   "spokenText": "קִ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/qof-i.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "qof-i",
+   "text": "קִ",
+   "spokenText": "קִ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/qof-o.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "qof-o",
+   "text": "קֹ",
+   "spokenText": "קֹ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/qof-o.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "qof-o",
+   "text": "קֹ",
+   "spokenText": "קֹ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/qof-u.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "qof-u",
+   "text": "קֻ",
+   "spokenText": "קֻ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/qof-u.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "qof-u",
+   "text": "קֻ",
+   "spokenText": "קֻ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/resh-a.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "resh-a",
+   "text": "רַ",
+   "spokenText": "רַ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/resh-a.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "resh-a",
+   "text": "רַ",
+   "spokenText": "רַ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/resh-e.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "resh-e",
+   "text": "רֶ",
+   "spokenText": "רֶ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/resh-e.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "resh-e",
+   "text": "רֶ",
+   "spokenText": "רֶ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/resh-i.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "resh-i",
+   "text": "רִ",
+   "spokenText": "רִ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/resh-i.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "resh-i",
+   "text": "רִ",
+   "spokenText": "רִ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/resh-o.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "resh-o",
+   "text": "רֹ",
+   "spokenText": "רֹ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/resh-o.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "resh-o",
+   "text": "רֹ",
+   "spokenText": "רֹ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/resh-u.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "resh-u",
+   "text": "רֻ",
+   "spokenText": "רֻ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/resh-u.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "resh-u",
+   "text": "רֻ",
+   "spokenText": "רֻ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/shin-a.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "shin-a",
+   "text": "שַׁ",
+   "spokenText": "שַׁ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/shin-a.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "shin-a",
+   "text": "שַׁ",
+   "spokenText": "שַׁ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/shin-e.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "shin-e",
+   "text": "שֶׁ",
+   "spokenText": "שֶׁ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/shin-e.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "shin-e",
+   "text": "שֶׁ",
+   "spokenText": "שֶׁ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/shin-i.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "shin-i",
+   "text": "שִׁ",
+   "spokenText": "שִׁ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/shin-i.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "shin-i",
+   "text": "שִׁ",
+   "spokenText": "שִׁ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/shin-o.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "shin-o",
+   "text": "שֹׁ",
+   "spokenText": "שֹׁ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/shin-o.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "shin-o",
+   "text": "שֹׁ",
+   "spokenText": "שֹׁ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/shin-u.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "shin-u",
+   "text": "שֻׁ",
+   "spokenText": "שֻׁ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/shin-u.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "shin-u",
+   "text": "שֻׁ",
+   "spokenText": "שֻׁ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/tav-a.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "tav-a",
+   "text": "תַ",
+   "spokenText": "תַ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/tav-a.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "tav-a",
+   "text": "תַ",
+   "spokenText": "תַ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/tav-e.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "tav-e",
+   "text": "תֶ",
+   "spokenText": "תֶ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/tav-e.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "tav-e",
+   "text": "תֶ",
+   "spokenText": "תֶ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/tav-i.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "tav-i",
+   "text": "תִ",
+   "spokenText": "תִ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/tav-i.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "tav-i",
+   "text": "תִ",
+   "spokenText": "תִ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/tav-o.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "tav-o",
+   "text": "תֹ",
+   "spokenText": "תֹ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/tav-o.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "tav-o",
+   "text": "תֹ",
+   "spokenText": "תֹ"
+  },
+  {
+   "path": "audio/m/israeli/syllable/tav-u.mp3",
+   "voice": "m",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "tav-u",
+   "text": "תֻ",
+   "spokenText": "תֻ"
+  },
+  {
+   "path": "audio/f/israeli/syllable/tav-u.mp3",
+   "voice": "f",
+   "tradition": "israeli",
+   "kind": "syllable",
+   "id": "tav-u",
+   "text": "תֻ",
+   "spokenText": "תֻ"
+  }
+ ]
+}

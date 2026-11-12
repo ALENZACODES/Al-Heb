@@ -125,7 +125,7 @@ export async function renderBatch({ provider, rows, root = ROOT, fetchImpl = fet
   const written = [];
   for (const r of rows) {
     const accent = typeof r.spokenText === 'string';
-    const buf = await withRetry(() => provider.synthesize({ text: textToSend(r), voice: r.voice, env, ...(accent ? { languageCode: 'he-IL' } : {}) }, fetchImpl), r.path, log);
+    const buf = await withRetry(() => provider.synthesize({ text: textToSend(r), voice: r.voice, env, ...(accent ? { languageCode: 'he-IL' } : {}), ...(r.rate ? { speakingRate: r.rate } : {}) }, fetchImpl), r.path, log);
     const out = path.join(root, r.path);
     fs.mkdirSync(path.dirname(out), { recursive: true });
     fs.writeFileSync(out, buf);
@@ -157,7 +157,7 @@ export async function renderBatch({ provider, rows, root = ROOT, fetchImpl = fet
       meta = {
         ...baseSidecar({ status: ACCENT_STATUS, source: ACCENT_SOURCES.israeliVoice }),
         provider: provider.id,
-        tradition: r.tradition, madeFrom: r.madeFrom || 'respelling', ...(voiceName ? { voiceName } : {}), languageCode: 'he-IL',
+        tradition: r.tradition, madeFrom: r.madeFrom || 'respelling', ...(r.rate ? { speakingRate: r.rate } : {}), ...(voiceName ? { voiceName } : {}), languageCode: 'he-IL',
         spokenText: buf.spokenText || r.spokenText, hebrew: r.text, israeliRef: r.israeliRef || null,
         tempo: tempo || { applied: false, factor: 1, cap, before: null, after: null, israeliSec: null, israeliRef: r.israeliRef || null, note: 'no Israeli counterpart on disk, so no cap was applied' },
         ...(normalize ? { normalized } : {}),

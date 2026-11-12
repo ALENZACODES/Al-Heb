@@ -2,26 +2,32 @@
  "status": "tts",
  "source": "tts:google",
  "engine": "google",
- "voiceId": "he-IL-Wavenet-A",
+ "voiceId": "he-IL-Chirp3-HD-Kore",
  "tradition": "israeli",
  "inputText": "אֵלִי אַתָּה וְאוֹדֶךָּ אֱלֹהַי אֲרוֹמְמֶךָּ׃",
  "inputSha256": "0d0842dfe76b6433bdb9ee093b93ab496e2764fc802c3c88c6222ae6e0511537",
- "ingestedAt": "2026-11-11T23:15:01.423Z",
+ "ingestedAt": "2026-11-11T23:59:04.407Z",
  "licence": "customer-owned",
  "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
- "renderedAt": "2026-11-11T23:15:01.423Z",
+ "renderedAt": "2026-11-11T23:59:04.407Z",
  "redistributionCleared": false,
- "spokenText": "אֵלִי אַתָּה וְאוֹדֶךָּ אֱלֹהַי אֲרוֹמְמֶךָּ",
+ "spokenText": "אֵלִי, אַתָּה, וְאוֹדֶךָּ, אֱלֹהַי, אֲרוֹמְמֶךָּ.",
  "normalized": true,
  "inputTextKind": "hebrew",
+ "speakingRate": 0.9,
  "review": {
-  "phonemeWeak": [],
+  "phonemeWeak": [
+   "וְאוֹדֶךָּ"
+  ],
   "wordIssues": [],
   "google": {
-   "heard": "אלי אתה ואודך אלוהי ארוממך",
-   "acc": 1.0,
-   "issues": []
+   "heard": "אלי אתה ואודך העירום מאק",
+   "acc": 0.6,
+   "issues": [
+    "אֱלֹהַי",
+    "אֲרוֹמְמֶךָּ"
+   ]
   },
-  "reviewersFailing": 0
+  "reviewersFailing": 2
  }
 }

@@ -2,28 +2,32 @@
  "status": "tts",
  "source": "tts:google",
  "engine": "google",
- "voiceId": "he-IL-Wavenet-A",
+ "voiceId": "he-IL-Chirp3-HD-Kore",
  "tradition": "israeli",
  "inputText": "יֹאמְרוּ־נָא יִרְאֵי אֲדֹנָי כִּי לְעוֹלָם חַסְדּוֹ׃",
  "inputSha256": "146894e1bb444f719cd00a47196e66192b371b174bddb364394bdf4b808c4e2b",
- "ingestedAt": "2026-11-11T23:16:31.099Z",
+ "ingestedAt": "2026-11-11T23:58:25.073Z",
  "licence": "customer-owned",
  "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
- "renderedAt": "2026-11-11T23:16:31.099Z",
+ "renderedAt": "2026-11-11T23:58:25.073Z",
  "redistributionCleared": false,
  "spokenText": "יֹאמְרוּ נָא יִרְאֵי אֲדֹנָי כִּי לְעוֹלָם חַסְדּוֹ",
  "normalized": true,
  "inputTextKind": "hebrew",
+ "speakingRate": 0.85,
  "review": {
-  "phonemeWeak": [],
+  "phonemeWeak": [
+   "נָא"
+  ],
   "wordIssues": [],
   "google": {
-   "heard": "אמרו לי לאדוני כי לעולם חסדו",
-   "acc": 0.286,
+   "heard": "יום רוני יראי אדוני כי לעולם חסדו",
+   "acc": 0.714,
    "issues": [
-    "יֹאמְרוּ נָא יִרְאֵי אֲדֹנָי כִּי"
+    "יֹאמְרוּ",
+    "נָא"
    ]
   },
-  "reviewersFailing": 1
+  "reviewersFailing": 2
  }
 }

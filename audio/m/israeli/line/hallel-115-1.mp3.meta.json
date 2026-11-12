@@ -2,28 +2,30 @@
  "status": "tts",
  "source": "tts:google",
  "engine": "google",
- "voiceId": "he-IL-Wavenet-B",
+ "voiceId": "he-IL-Chirp3-HD-Charon",
  "tradition": "israeli",
  "inputText": "לֹא לָנוּ אֲדֹנָי לֹא לָנוּ כִּי־לְשִׁמְךָ תֵּן כָּבוֹד עַל־חַסְדְּךָ עַל־אֲמִתֶּךָ׃",
  "inputSha256": "c82def6622c0853c52c57ca9ae37fae20ca136e3a4ef438d462c7c663e3a6768",
- "ingestedAt": "2026-11-11T23:14:37.995Z",
+ "ingestedAt": "2026-11-12T00:00:03.064Z",
  "licence": "customer-owned",
  "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
- "renderedAt": "2026-11-11T23:14:37.995Z",
+ "renderedAt": "2026-11-12T00:00:03.064Z",
  "redistributionCleared": false,
  "spokenText": "לֹא לָנוּ אֲדֹנָי לֹא לָנוּ כִּי לְשִׁמְךָ תֵּן כָּבוֹד עַל חַסְדְּךָ עַל אֲמִתֶּךָ",
  "normalized": true,
  "inputTextKind": "hebrew",
  "review": {
   "phonemeWeak": [],
-  "wordIssues": [],
+  "wordIssues": [
+   "לְשִׁמְךָ"
+  ],
   "google": {
-   "heard": "לא לנו אדוני לא לנו כי לשמך תן כבוד על חסדך על המתח",
+   "heard": "לא לנו אדוני לא לנו כי לשמך תן כבוד על חזק על עמיתך",
    "acc": 0.923,
    "issues": [
-    "אֲמִתֶּךָ"
+    "חַסְדְּךָ"
    ]
   },
-  "reviewersFailing": 1
+  "reviewersFailing": 2
  }
 }

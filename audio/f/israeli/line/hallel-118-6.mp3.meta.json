@@ -2,25 +2,26 @@
  "status": "tts",
  "source": "tts:google",
  "engine": "google",
- "voiceId": "he-IL-Wavenet-A",
+ "voiceId": "he-IL-Chirp3-HD-Kore",
  "tradition": "israeli",
  "inputText": "אֲדֹנָי לִי לֹא אִירָא מַה־יַּעֲשֶׂה לִי אָדָם׃",
  "inputSha256": "b57a4f1d007bd16db3038a213fca6e007c55e93ec5c7e0bea7358349d776c1b1",
- "ingestedAt": "2026-11-11T23:16:15.305Z",
+ "ingestedAt": "2026-11-11T23:58:39.146Z",
  "licence": "customer-owned",
  "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
- "renderedAt": "2026-11-11T23:16:15.305Z",
+ "renderedAt": "2026-11-11T23:58:39.146Z",
  "redistributionCleared": false,
  "spokenText": "אֲדֹנָי לִי לֹא אִירָא מַה יַּעֲשֶׂה לִי אָדָם",
  "normalized": true,
  "inputTextKind": "hebrew",
  "review": {
-  "phonemeWeak": [],
-  "wordIssues": [
-   "אִירָא"
+  "phonemeWeak": [
+   "אֲדֹנָי",
+   "אָדָם"
   ],
+  "wordIssues": [],
   "google": {
-   "heard": "אדוני לי לא אירא מה יעשה לי אדם",
+   "heard": "אדני לי לא אירא מה יעשה לי אדם",
    "acc": 1.0,
    "issues": []
   },

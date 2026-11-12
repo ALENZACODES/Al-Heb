@@ -2,27 +2,28 @@
  "status": "tts",
  "source": "tts:google",
  "engine": "google",
- "voiceId": "he-IL-Wavenet-A",
+ "voiceId": "he-IL-Chirp3-HD-Kore",
  "tradition": "israeli",
  "inputText": "זֶה־הַיּוֹם עָשָׂה אֲדֹנָי נָגִילָה וְנִשְׂמְחָה בוֹ׃",
  "inputSha256": "5b70a23fb574baf27bb391fb1c6a9657f853dd88975571847988d2b1002bea3a",
- "ingestedAt": "2026-11-11T23:15:40.810Z",
+ "ingestedAt": "2026-11-12T00:00:38.062Z",
  "licence": "customer-owned",
  "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
- "renderedAt": "2026-11-11T23:15:40.810Z",
+ "renderedAt": "2026-11-12T00:00:38.062Z",
  "redistributionCleared": false,
  "spokenText": "זֶה הַיּוֹם עָשָׂה אֲדֹנָי נָגִילָה וְנִשְׂמְחָה בוֹ",
  "normalized": true,
  "inputTextKind": "hebrew",
  "review": {
-  "phonemeWeak": [],
+  "phonemeWeak": [
+   "זֶה",
+   "בוֹ"
+  ],
   "wordIssues": [],
   "google": {
-   "heard": "זה היום אתה אדוני נגילה ונשמחה בו",
-   "acc": 0.857,
-   "issues": [
-    "עָשָׂה"
-   ]
+   "heard": "זה היום עשה אדוני נגילה ונשמחה בו",
+   "acc": 1.0,
+   "issues": []
   },
   "reviewersFailing": 1
  }

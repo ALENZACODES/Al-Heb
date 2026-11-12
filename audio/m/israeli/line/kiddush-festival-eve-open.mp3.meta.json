@@ -2,21 +2,28 @@
  "status": "tts",
  "source": "tts:google",
  "engine": "google",
- "voiceId": "he-IL-Wavenet-B",
+ "voiceId": "he-IL-Chirp3-HD-Charon",
  "tradition": "israeli",
  "inputText": "בָּרוּךְ אַתָּה אֲדֹנָי אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר בָּחַר בָּנוּ מִכָּל עָם וְרוֹמְמָנוּ מִכָּל לָשׁוֹן וְקִדְּשָׁנוּ בְּמִצְוֹתָיו וַתִּתֶּן לָנוּ אֲדֹנָי אֱלֹהֵינוּ בְּאַהֲבָה מוֹעֲדִים לְשִׂמְחָה חַגִּים וּזְמַנִּים לְשָׂשׂוֹן אֶת יוֹם׃",
  "inputSha256": "0f18869e6c11023a9b1d8a89b34b34cdff111ac75d75859fa850c046656d3db5",
- "ingestedAt": "2026-11-11T23:16:10.007Z",
+ "ingestedAt": "2026-11-12T00:00:04.557Z",
  "licence": "customer-owned",
  "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
- "renderedAt": "2026-11-11T23:16:10.007Z",
+ "renderedAt": "2026-11-12T00:00:04.557Z",
  "redistributionCleared": false,
  "spokenText": "בָּרוּךְ אַתָּה אֲדֹנָי אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר בָּחַר בָּנוּ מִכָּל עָם וְרוֹמְמָנוּ מִכָּל לָשׁוֹן וְקִדְּשָׁנוּ בְּמִצְוֹתָיו וַתִּתֶּן לָנוּ אֲדֹנָי אֱלֹהֵינוּ בְּאַהֲבָה מוֹעֲדִים לְשִׂמְחָה חַגִּים וּזְמַנִּים לְשָׂשׂוֹן אֶת יוֹם",
  "normalized": true,
  "inputTextKind": "hebrew",
+ "speakingRate": 0.85,
  "review": {
-  "phonemeWeak": [],
+  "phonemeWeak": [
+   "עָם"
+  ],
   "wordIssues": [
+   "אֲשֶׁר",
+   "וְרוֹמְמָנוּ",
+   "לָשׁוֹן",
+   "וְקִדְּשָׁנוּ",
    "בְּמִצְוֹתָיו"
   ],
   "google": {
@@ -27,6 +34,6 @@
     "בְּמִצְוֹתָיו"
    ]
   },
-  "reviewersFailing": 2
+  "reviewersFailing": 3
  }
 }

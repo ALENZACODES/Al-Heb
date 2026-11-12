@@ -2,14 +2,14 @@
  "status": "tts",
  "source": "tts:google",
  "engine": "google",
- "voiceId": "he-IL-Wavenet-A",
+ "voiceId": "he-IL-Chirp3-HD-Kore",
  "tradition": "israeli",
  "inputText": "בָּרוּךְ אַתָּה אֲדֹנָי אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ לֵישֵׁב בַּסֻּכָּה׃",
  "inputSha256": "635061d7783b45cd4b256ff1f0ff305d5ce9a1024bc5258b8ade99e55cda7f6e",
- "ingestedAt": "2026-11-11T23:18:18.302Z",
+ "ingestedAt": "2026-11-11T23:58:18.298Z",
  "licence": "customer-owned",
  "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
- "renderedAt": "2026-11-11T23:18:18.302Z",
+ "renderedAt": "2026-11-11T23:58:18.298Z",
  "redistributionCleared": false,
  "spokenText": "בָּרוּךְ אַתָּה אֲדֹנָי אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ לֵישֵׁב בַּסֻּכָּה",
  "normalized": true,
@@ -17,14 +17,16 @@
  "review": {
   "phonemeWeak": [],
   "wordIssues": [
+   "קִדְּשָׁנוּ",
    "בְּמִצְוֹתָיו",
-   "לֵישֵׁב"
+   "וְצִוָּנוּ"
   ],
   "google": {
-   "heard": "ברוך אתה אדוני אלוהינו מלך העולם אשר קידשנו במצוותיו וציוונו לישב בסוכה",
-   "acc": 0.917,
+   "heard": "ברוך אתה אדוני אלוהינו מלך העולם אשר קידשנו במצוותיו וצונו לישב בסוכה",
+   "acc": 0.833,
    "issues": [
-    "בְּמִצְוֹתָיו"
+    "בְּמִצְוֹתָיו",
+    "וְצִוָּנוּ"
    ]
   },
   "reviewersFailing": 2

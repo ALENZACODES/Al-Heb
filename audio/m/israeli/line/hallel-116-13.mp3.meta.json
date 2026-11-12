@@ -2,28 +2,31 @@
  "status": "tts",
  "source": "tts:google",
  "engine": "google",
- "voiceId": "he-IL-Wavenet-B",
+ "voiceId": "he-IL-Chirp3-HD-Charon",
  "tradition": "israeli",
  "inputText": "כּוֹס־יְשׁוּעוֹת אֶשָּׂא וּבְשֵׁם אֲדֹנָי אֶקְרָא׃",
  "inputSha256": "204daa47db0202fa61c4b589471741abf6dd61ac2044a7e84ddbaa49d0932388",
- "ingestedAt": "2026-11-11T23:14:54.677Z",
+ "ingestedAt": "2026-11-12T00:00:18.382Z",
  "licence": "customer-owned",
  "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
- "renderedAt": "2026-11-11T23:14:54.677Z",
+ "renderedAt": "2026-11-12T00:00:18.382Z",
  "redistributionCleared": false,
  "spokenText": "כּוֹס יְשׁוּעוֹת אֶשָּׂא וּבְשֵׁם אֲדֹנָי אֶקְרָא",
  "normalized": true,
  "inputTextKind": "hebrew",
+ "speakingRate": 0.85,
  "review": {
-  "phonemeWeak": [],
-  "wordIssues": [
+  "phonemeWeak": [
    "אֶקְרָא"
+  ],
+  "wordIssues": [
+   "כּוֹס יְשׁוּעוֹת אֶשָּׂא וּבְשֵׁם אֲדֹנָי"
   ],
   "google": {
    "heard": "כוס ישועות אשא ובשם אדוני אקרא",
    "acc": 1.0,
    "issues": []
   },
-  "reviewersFailing": 1
+  "reviewersFailing": 2
  }
 }

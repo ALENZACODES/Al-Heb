@@ -2,22 +2,23 @@
  "status": "tts",
  "source": "tts:google",
  "engine": "google",
- "voiceId": "he-IL-Wavenet-B",
+ "voiceId": "he-IL-Chirp3-HD-Charon",
  "tradition": "israeli",
  "inputText": "הַלְלוּ יָהּ הַלְלוּ עַבְדֵי אֲדֹנָי הַלְלוּ אֶת־שֵׁם אֲדֹנָי",
  "inputSha256": "c02ddfac97a76d8b1d8995a02a3a68f80112967f6cf3bfe855579248e9b43b33",
- "ingestedAt": "2026-11-11T23:14:45.263Z",
+ "ingestedAt": "2026-11-11T23:59:11.068Z",
  "licence": "customer-owned",
  "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
- "renderedAt": "2026-11-11T23:14:45.263Z",
+ "renderedAt": "2026-11-11T23:59:11.068Z",
  "redistributionCleared": false,
  "spokenText": "הַלְלוּ יָהּ הַלְלוּ עַבְדֵי אֲדֹנָי הַלְלוּ אֶת שֵׁם אֲדֹנָי",
  "normalized": true,
  "inputTextKind": "hebrew",
+ "speakingRate": 0.85,
  "review": {
   "phonemeWeak": [],
   "wordIssues": [
-   "יָהּ"
+   "שֵׁם"
   ],
   "google": {
    "heard": "הללויה הללו עבדי אדוני הללו את שם אדוני",

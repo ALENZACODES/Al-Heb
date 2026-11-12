@@ -1,0 +1,27 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "israeli",
+ "inputText": "שָׁלוֹם! מָה תִּרְצִי?",
+ "inputSha256": "cc25a9a85e84e769e9ed189c4a0e9affc6c13a07c86a3cc7fce6bff5599614c8",
+ "ingestedAt": "2026-11-12T00:25:49.368Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-12T00:25:49.368Z",
+ "redistributionCleared": false,
+ "spokenText": "שָׁלוֹם! מָה תִּרְצִי?",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [],
+  "google": {
+   "heard": "שלום מה תרצי",
+   "acc": 1.0,
+   "issues": []
+  },
+  "reviewersFailing": 0
+ }
+}

@@ -66,7 +66,7 @@ export async function audioReady(ctx, { words = false, ms = 8000 } = {}) {
  */
 export function readinessNote(ctx, items, noun = 'items', { words = false } = {}) {
   const p = el('p', { class: 'al-ready muted', 'data-audio-ready': '' });
-  const draw = () => { const r = readiness(ctx?.audio, items); p.textContent = readinessLine(r, noun); p.dataset.clip = String(r.clip); p.dataset.total = String(r.total); return r; };
+  const draw = () => { const r = readiness(ctx?.audio, items); p.textContent = readinessLine(r, noun); p.setAttribute('data-clip', String(r.clip)); p.setAttribute('data-total', String(r.total)); return r; };
   draw();
   audioReady(ctx, { words }).then(draw).catch(() => {});
   return p;
@@ -145,8 +145,8 @@ export function mountQueue(ctx, items, o = {}) {
       let r = null;
       try { r = await ctx.audio.play(it.kind, it.id, { ...(it.text ? { text: it.text } : {}), label: it.label || '' }); } catch { r = null; }
       if (mine !== gen) return;
-      rows[i].li.dataset.done = '1';
-      if (!r || r.source === 'none') { rows[i].li.dataset.none = '1'; rows[i].note.textContent = r?.held ? '(held for review)' : '(audio coming)'; }
+      rows[i].li.setAttribute('data-done', '1');
+      if (!r || r.source === 'none') { rows[i].li.setAttribute('data-none', '1'); rows[i].note.textContent = r?.held ? '(held for review)' : '(audio coming)'; }
       else if (r.source === 'tts-fallback') rows[i].note.textContent = "(this device's voice)";
       if (i < items.length - 1) await wait(o.gapMs ?? 400);
     }

@@ -114,7 +114,7 @@
     ],
     [
      "src/audio/player.js",
-     28864,
+     30042,
      1
     ],
     [
@@ -489,7 +489,7 @@
     ],
     [
      "src/shell/nav-model.js",
-     11948,
+     11967,
      1
     ],
     [
@@ -549,7 +549,7 @@
     ],
     [
      "src/shell/router.js",
-     47304,
+     47517,
      1
     ],
     [
@@ -661,8 +661,18 @@
     ],
     [
      "src/audio/player.js",
-     28864,
+     30042,
      1
+    ],
+    [
+     "src/audiolab/core.js",
+     12466,
+     0
+    ],
+    [
+     "src/audiolab/ui.js",
+     10509,
+     0
     ],
     [
      "src/corpus/corpus.js",
@@ -676,7 +686,7 @@
     ],
     [
      "src/corpus/read.view.js",
-     36025,
+     37296,
      1
     ],
     [
@@ -687,6 +697,11 @@
     [
      "src/curriculum/data.js",
      980,
+     1
+    ],
+    [
+     "src/curriculum/dom.js",
+     6606,
      1
     ],
     [
@@ -908,7 +923,7 @@
     ],
     [
      "src/audio/player.js",
-     28864,
+     30042,
      1
     ],
     [

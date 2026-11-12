@@ -18,6 +18,7 @@ import { DRAFT_NOTICE } from './vocab.view.js';
 import { audioButton } from '../shell/audio-access.js';
 import { uiEnglish } from '../shell/names.js';
 import { sourcesLine, exampleCredit } from '../shell/sources.js';
+import { mountQueue, readinessNote, ensureStyle as ensureListenStyle } from '../audiolab/ui.js';
 
 export const STORE_KEY = 'vocab.themes.v1';
 export const SENSE_NOTE = 'Example lines are copied from Aleph\'s own texts (prayers, phrasebook, lessons). Whether the word means the same thing in the line was not checked.';
@@ -71,7 +72,7 @@ export function mount(root, ctx) {
   wrap.append(h1, notice, body, status, footer);
   root.append(wrap);
 
-  let alive = true; let data = null; let state = { v: 1, last: null, sent: {} }; let current = null; let vocab = null;
+  let alive = true; let data = null; let state = { v: 1, last: null, sent: {} }; let current = null; let vocab = null; let queue = null;
   const say = (t) => { status.textContent = t; };
   const setBody = (...n) => { body.replaceChildren(...n.filter(Boolean)); };
   const save = () => storeSet(ctx, STORE_KEY, state);
@@ -84,7 +85,7 @@ export function mount(root, ctx) {
   const loadVocab = async () => { if (!vocab) vocab = ctx?.themesData?.entries || await loadAllVocab(); return vocab; };
 
   function showList() {
-    current = null;
+    current = null; try { queue?.stop(); } catch { /* ignore */ } queue = null;
     h1.textContent = 'Theme packs';
     const items = data.themes.map((t) => {
       const sent = state.sent[t.id];
@@ -138,7 +139,12 @@ export function mount(root, ctx) {
     const back = el('button', { type: 'button', class: 'btn secondary', onclick: showList }, 'All packs');
     const send = el('button', { type: 'button', class: 'btn', 'data-action': 'send', onclick: (ev) => { if (send.getAttribute('aria-disabled') === 'true') return; sendToDeck(pack, send); } }, 'Send to my review deck');
     const withEx = pack.words.filter((w) => w.example).length;
-    setBody(back, el('p', {}, `${plural(pack.words.length, 'word', 'words')}, most common first. ${withEx} have an example line.`), send,
+    // Play all (A6) and how many words have audio (A7): same ids and text as each word's Listen button.
+    ensureListenStyle(globalThis.document);
+    const clipItems = pack.words.map((w) => ({ kind: 'word', id: w.id, he: w.he, text: String(w.he || '').replace(/־/g, ' '), label: uiEnglish(ctx, w.en) }));
+    queue = mountQueue(ctx, clipItems, { title: 'Play All Words', noun: 'words' });
+    setBody(back, el('p', {}, `${plural(pack.words.length, 'word', 'words')}, most common first. ${withEx} have an example line.`), readinessNote(ctx, clipItems, 'words', { words: true }), send,
+      el('details', { class: 'th-queue' }, el('summary', {}, 'Play all the words'), queue.node),
       el('ul', { class: 'th-list', 'aria-label': pack.title }, ...pack.words.map(wordItem)));
     say('');
     focusNode(h1);
@@ -158,5 +164,5 @@ export function mount(root, ctx) {
     if (want && data.themes.some((t) => t.id === want)) await openPack(want); else showList();
   })();
 
-  return () => { alive = false; try { ctx?.audio?.stop?.(); } catch { /* ignore */ } wrap.remove?.(); };
+  return () => { alive = false; try { queue?.stop(); } catch { /* ignore */ } try { ctx?.audio?.stop?.(); } catch { /* ignore */ } wrap.remove?.(); };
 }

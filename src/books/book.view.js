@@ -8,6 +8,10 @@ import { readerSlow, setReaderSlow, applyReaderRate, speedLine } from "./reader.
 import { resolveBookId, shelfNumber, nextOnShelf } from "./order.js";
 import { storyCheck } from "./check.js";
 import { isAudioFree } from "../shell/audiofree.js";
+import { estimateWordTimings, wordAt, bookReadiness, readinessLine } from "../audiolab/core.js";
+import { ensureStyle as ensureListenStyle } from "../audiolab/ui.js";
+/** A8: the read-along highlight uses estimated word timings (there are no measured ones for book pages); the page says so. */
+export const ESTIMATED_NOTE = "Read along: the highlighted word follows estimated timings (shared out by word length), not measured ones.";
 /** S-04: a page held back because it says the divine name; nothing plays, and the page says why. */
 export const HELD_PAGE = "This page's recording is held for review: the checks heard words in it wrongly. Read it from the page.";
 
@@ -43,6 +47,11 @@ export async function mount(root, ctx) {
   root.append(h("h1", {}, book.titleEn));
   const num = shelfNumber(id, shelfBooks);
   root.append(h("p", { class: "muted" }, `${num ? `Book ${num} of ${shelfBooks.length} · ` : ""}${book.titleTranslit} · ${book.level} · ${book.pages.length} pages`));
+  // A7: how many pages have audio in the learner's voice, from the book's own page list
+  { const v = (() => { try { return ctx?.settings?.get?.("voice") === "m" ? "m" : "f"; } catch { return "f"; } })();
+    const line = readinessLine(bookReadiness(book.pages, v), "pages");
+    if (line && !isAudioFree(ctx)) root.append(h("p", { class: "muted book-audio-ready", "data-audio-ready": "" }, `${v === "m" ? "Ari" : "Noa"}: ${line}`)); }
+  ensureListenStyle(globalThis.document);
   const nextBook = nextOnShelf(id, shelfBooks);
   const check = storyCheck(book);
 
@@ -127,10 +136,31 @@ export async function mount(root, ctx) {
   };
   applyReaderRate(audioEl, readerSlow()); // normal unless Slower was chosen earlier this session
   let audioState = h("span", { class: "muted book-audio-state", role: "status" });
+  // A8 read along: this visit only. The voice turns the page by itself at the end of each page and the word sounding now is highlighted.
+  let readAlong = false, wordSpans = [], timings = null;
+  const lightWord = () => {
+    if (!readAlong || !wordSpans.length) return;
+    if (!timings && audioEl.duration > 0) timings = estimateWordTimings(wordSpans.map((x) => x.textContent), audioEl.duration);
+    const at = timings ? wordAt(timings, audioEl.currentTime) : -1;
+    wordSpans.forEach((x, i) => x.setAttribute("data-on", i === at ? "1" : "0"));
+  };
+  audioEl.addEventListener("timeupdate", lightWord);
+  audioEl.addEventListener("loadedmetadata", () => { timings = null; });
   // One shared state line for the book's voice (M-04): playing, finished, or why there is no sound.
   let playingLabel = "";
   audioEl.addEventListener("playing", () => { audioState.textContent = `Playing: ${playingLabel || "this page"}.`; warmNext(); });
   audioEl.addEventListener("ended", () => { audioState.textContent = "Finished. Tap Listen to hear it again."; });
+  // registered after the Finished line, so a read-along page turn writes the last word on the status line
+  audioEl.addEventListener("ended", () => {
+    wordSpans.forEach((x) => x.setAttribute("data-on", "0"));
+    if (!readAlong || page >= book.pages.length - 1) return;
+    const v = voiceNow || prefVoice();
+    page++; render();
+    const np = book.pages[page];
+    if (np.audioHeld) { audioState.textContent = HELD_PAGE; return; }
+    if (!np.audio || !np.audio[v]) { audioState.textContent = "Read along stopped: this page's voice is not recorded yet."; return; }
+    startVoice(v, v === "m" ? "Listen (Ari)" : "Listen (Noa)");
+  });
   audioEl.addEventListener("error", () => { if (wanted && audioEl.getAttribute("src")) audioState.textContent = "No sound: this page's recording did not load."; });
 
   // C-04 (12 Nov site check): a page turn stops the voice, and the status line belongs to the page on screen. A play that
@@ -142,6 +172,20 @@ export async function mount(root, ctx) {
     if (audioEl.getAttribute("src")) { audioEl.removeAttribute("src"); try { audioEl.load(); } catch { /* nothing loaded */ } }
     playingLabel = ""; audioState.textContent = "";
   };
+  /** Play this page in one voice (Listen buttons, and read along turning to the next page). */
+  async function startVoice(voice, label) {
+    const p = book.pages[page];
+    if (p.audioHeld) { audioState.textContent = HELD_PAGE; return; }
+    if (!p.audio || !p.audio[voice]) { audioState.textContent = "This page's voice is not recorded yet."; return; }
+    const tok = ++playToken, at = page;
+    audioState.textContent = "Loading…";
+    playingLabel = String(label).replace(/^▶\s*/, "");
+    wanted = true; voiceNow = voice;
+    if (audioEl.getAttribute("src") !== p.audio[voice]) audioEl.setAttribute("src", p.audio[voice]); // already primed: keep what has loaded
+    applyReaderRate(audioEl, readerSlow()); // normal pace unless the learner chose Slower (this session only)
+    try { await audioEl.play(); if (tok !== playToken || at !== page) { try { audioEl.pause(); } catch { /* stopped */ } } }
+    catch { if (tok === playToken && at === page) audioState.textContent = "This page's voice is not recorded yet."; }
+  }
   const render = () => {
     if (page !== shownPage) { stopVoice(); shownPage = page; primeVoice(); }
     const p = book.pages[page];
@@ -157,25 +201,22 @@ export async function mount(root, ctx) {
     } else {
       stage.append(pending());
     }
-    stage.append(heSpan(p.he, "book-line"));
+    if (readAlong) {
+      wordSpans = String(p.he).split(/\s+/).filter(Boolean).map((w) => h("span", { class: "al-word", "data-on": "0" }, w));
+      timings = null;
+      stage.append(h("span", { lang: "he", dir: "rtl", class: "book-line" }, ...wordSpans.flatMap((x, i) => (i ? [" ", x] : [x]))));
+    } else { wordSpans = []; stage.append(heSpan(p.he, "book-line")); }
     stage.append(h("p", { class: "book-translit" }, p.translit));
     stage.append(h("p", { class: "muted book-en" }, p.en));
 
     const listen = (voice, label) => h("button", {
       type: "button", class: "btn book-listen",
-      onclick: async () => {
-        if (p.audioHeld) { audioState.textContent = HELD_PAGE; return; }
-        if (!p.audio || !p.audio[voice]) { audioState.textContent = "This page's voice is not recorded yet."; return; }
-        const tok = ++playToken, at = page;
-        audioState.textContent = "Loading…";
-        playingLabel = label.replace(/^▶\s*/, "");
-        wanted = true; voiceNow = voice;
-        if (audioEl.getAttribute("src") !== p.audio[voice]) audioEl.setAttribute("src", p.audio[voice]); // already primed: keep what has loaded
-        applyReaderRate(audioEl, readerSlow()); // normal pace unless the learner chose Slower (this session only)
-        try { await audioEl.play(); if (tok !== playToken || at !== page) { try { audioEl.pause(); } catch { /* stopped */ } } }
-        catch { if (tok === playToken && at === page) audioState.textContent = "This page's voice is not recorded yet."; }
-      },
+      onclick: () => startVoice(voice, label),
     }, label);
+    const along = h("button", {
+      type: "button", class: "btn secondary book-along", "aria-pressed": String(readAlong),
+      onclick: () => { readAlong = !readAlong; along.setAttribute("aria-pressed", String(readAlong)); render(); audioState.textContent = readAlong ? "Read along is on: press Listen and the pages turn by themselves." : "Read along is off."; },
+    }, "Read along");
     // Slower: the learner's choice, kept for this visit only; never a default
     const slower = h("button", {
       type: "button", class: "btn secondary book-slower", "aria-pressed": readerSlow(),
@@ -189,7 +230,8 @@ export async function mount(root, ctx) {
     // S-06: a held page offers no Listen button, only the reason (a held page's recording is withheld on purpose).
     stage.append(p.audioHeld
       ? h("div", { class: "book-listen-row book-held" }, h("p", { class: "muted", role: "note" }, HELD_PAGE))
-      : h("div", { class: "book-listen-row" }, listen("f", "▶ Listen (Noa)"), listen("m", "▶ Listen (Ari)"), slower, audioState));
+      : h("div", { class: "book-listen-row" }, listen("f", "▶ Listen (Noa)"), listen("m", "▶ Listen (Ari)"), slower, along, audioState));
+    if (readAlong && !p.audioHeld) stage.append(h("p", { class: "muted al-est book-along-note" }, ESTIMATED_NOTE));
 
     const prev = h("button", { type: "button", class: "btn", onclick: () => { if (page > 0) { page--; render(); } } }, "← Previous");
     const next = h("button", { type: "button", class: "btn primary", onclick: () => { if (page < book.pages.length - 1) { page++; render(); } } },

@@ -1,0 +1,3276 @@
+{
+"schema":"aleph-g4-bank/1",
+"note":"Everyday Israel games (src/games/g4-*). Every Hebrew line here is copied from the app's own data: src names the file and record (phrasebook, lessons, dialogues, words, vocab5000, the calendar days file, the register ladder or the scenarios file). slice keeps only some words of the source; strip takes a prefix and suffix off; parts joins two copied entries. Nothing was retyped. The sources are drafts that still need a native speaker's review; review notes are carried over. Tests (tests/games.g4.test.js) re-check every copy.",
+"composed":[
+"Clock Talk shows each hour as t.thehour then a counting number nf1 to nf10 side by side (for 3 and 7 this equals the phrasebook and lesson I-19 lines exactly; the others need review).",
+"Read It Back reads phone digits with the counting numbers nf1 to nf9 and nf0 (zero, from vocab5000): owner to confirm this is how numbers are read out.",
+"Falafel Stand shows f.without next to a topping (bli plus the food word) as two chips.",
+"Pill Box shows ph.against next to a complaint, and ph.before or ph.after next to f.meal, as separate words on the label.",
+"Ring the Bell shows b.next, a colon, then the stop name.",
+"Open or Closed? and Week Planner show Friday as day.fri (erev Shabbat)."
+],
+"items":[
+{
+"key":"g.morning",
+"src":"phrasebook:greetings-03",
+"he":"בֹּקֶר טוֹב",
+"en":"good morning",
+"tr":"boker tov",
+"clip":{
+"kind":"line",
+"id":"greetings-03"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"g.noon",
+"src":"phrasebook:greetings-04",
+"he":"צָהֳרַיִם טוֹבִים",
+"en":"good afternoon",
+"tr":"tsohorayim tovim",
+"clip":{
+"kind":"line",
+"id":"greetings-04"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"g.evening",
+"src":"phrasebook:greetings-05",
+"he":"עֶרֶב טוֹב",
+"en":"good evening",
+"tr":"erev tov",
+"clip":{
+"kind":"line",
+"id":"greetings-05"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"g.night",
+"src":"phrasebook:greetings-06",
+"he":"לַיְלָה טוֹב",
+"en":"good night",
+"tr":"layla tov",
+"clip":{
+"kind":"line",
+"id":"greetings-06"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"g.shabbat",
+"src":"phrasebook:greetings-07",
+"he":"שַׁבָּת שָׁלוֹם",
+"en":"Shabbat shalom",
+"sourceEn":"peaceful Sabbath (greeting from Friday afternoon to Saturday)",
+"tr":"shabbat shalom",
+"clip":{
+"kind":"line",
+"id":"greetings-07"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"g.week",
+"src":"phrasebook:greetings-08",
+"he":"שָׁבוּעַ טוֹב",
+"en":"a good week",
+"sourceEn":"good week",
+"tr":"shavua tov",
+"clip":{
+"kind":"line",
+"id":"greetings-08"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"g.chag",
+"src":"phrasebook:greetings-09",
+"he":"חַג שָׂמֵחַ",
+"en":"happy holiday",
+"tr":"chag sameach",
+"clip":{
+"kind":"line",
+"id":"greetings-09"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"g.newyear",
+"src":"phrasebook:greetings-10",
+"he":"שָׁנָה טוֹבָה",
+"en":"happy new year",
+"sourceEn":"happy new year (Rosh Hashana greeting)",
+"tr":"shana tova",
+"clip":{
+"kind":"line",
+"id":"greetings-10"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"g.nicemeet",
+"src":"phrasebook:greetings-19",
+"he":"נָעִים מְאֹד",
+"en":"nice to meet you",
+"tr":"naim meod",
+"clip":{
+"kind":"line",
+"id":"greetings-19"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"g.seeyou",
+"src":"phrasebook:greetings-20",
+"he":"לְהִתְרָאוֹת",
+"en":"see you",
+"sourceEn":"see you (later)",
+"tr":"lehitra'ot",
+"clip":{
+"kind":"word",
+"id":"greetings-20"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"g.niceday",
+"src":"phrasebook:greetings-21",
+"he":"יוֹם נָעִים",
+"en":"have a nice day",
+"tr":"yom naim",
+"clip":{
+"kind":"line",
+"id":"greetings-21"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"g.welcome1",
+"src":"phrasebook:greetings-22",
+"he":"בָּרוּךְ הַבָּא",
+"en":"welcome (to one person)",
+"tr":"baruch haba",
+"clip":{
+"kind":"line",
+"id":"greetings-22-m"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"g.welcomeN",
+"src":"phrasebook:greetings-23",
+"he":"בְּרוּכִים הַבָּאִים",
+"en":"welcome (to a group)",
+"sourceEn":"welcome (to several people)",
+"tr":"brukhim haba'im",
+"clip":{
+"kind":"line",
+"id":"greetings-23"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"g.mazal",
+"src":"phrasebook:greetings-24",
+"he":"מַזָּל טוֹב",
+"en":"congratulations",
+"sourceEn":"congratulations / good luck",
+"tr":"mazal tov",
+"clip":{
+"kind":"line",
+"id":"greetings-24"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"g.luck",
+"src":"phrasebook:greetings-25",
+"he":"בְּהַצְלָחָה",
+"en":"good luck",
+"sourceEn":"good luck / all the best",
+"tr":"behatslacha",
+"clip":{
+"kind":"word",
+"id":"greetings-25"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"g.bless",
+"src":"phrasebook:greetings-26",
+"he":"לִבְרִיאוּת",
+"en":"bless you",
+"sourceEn":"bless you (after a sneeze) / to your health",
+"tr":"livri'ut",
+"clip":{
+"kind":"word",
+"id":"greetings-26"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"g.cheers",
+"src":"phrasebook:cafe-13",
+"he":"לְחַיִּים!",
+"en":"cheers!",
+"tr":"lechayim!",
+"clip":{
+"kind":"word",
+"id":"cafe-13"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"g.thanks",
+"src":"phrasebook:politeness-01",
+"he":"תּוֹדָה",
+"en":"thank you",
+"tr":"toda",
+"clip":{
+"kind":"word",
+"id":"politeness-01"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"g.sorry",
+"src":"phrasebook:politeness-06",
+"he":"סְלִיחָה",
+"en":"excuse me, sorry",
+"sourceEn":"excuse me / sorry",
+"tr":"slicha",
+"clip":{
+"kind":"word",
+"id":"politeness-06"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"g.hello",
+"src":"phrasebook:greetings-01",
+"he":"שָׁלוֹם",
+"en":"hello",
+"sourceEn":"hello / goodbye / peace",
+"tr":"shalom",
+"clip":{
+"kind":"word",
+"id":"greetings-01"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"g.sealing",
+"src":"lessons:I-50:12",
+"he":"גְּמַר חֲתִימָה טוֹבָה",
+"en":"a good final sealing (Yom Kippur)",
+"sourceEn":"a good final sealing (Yom Kippur greeting)",
+"review":"lesson word, not native-checked"
+},
+{
+"key":"t.morning",
+"src":"phrasebook:greetings-03",
+"slice":[
+0,
+1
+],
+"he":"בֹּקֶר",
+"en":"morning",
+"sourceEn":"good morning",
+"tr":"boker",
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"t.noon",
+"src":"phrasebook:greetings-04",
+"slice":[
+0,
+1
+],
+"he":"צָהֳרַיִם",
+"en":"noon, midday",
+"sourceEn":"good afternoon",
+"tr":"tsohorayim",
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"t.evening",
+"src":"phrasebook:greetings-05",
+"slice":[
+0,
+1
+],
+"he":"עֶרֶב",
+"en":"evening",
+"sourceEn":"good evening",
+"tr":"erev",
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"t.night",
+"src":"phrasebook:greetings-06",
+"slice":[
+0,
+1
+],
+"he":"לַיְלָה",
+"en":"night",
+"sourceEn":"good night",
+"tr":"layla",
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"t.whattime",
+"src":"phrasebook:numbers-16",
+"he":"מָה הַשָּׁעָה?",
+"en":"what time is it?",
+"tr":"ma hasha'a?",
+"clip":{
+"kind":"line",
+"id":"numbers-16"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"t.thehour",
+"src":"phrasebook:numbers-17",
+"slice":[
+0,
+1
+],
+"he":"הַשָּׁעָה",
+"en":"the time is (it is ... o'clock)",
+"sourceEn":"it's three o'clock",
+"tr":"hasha'a",
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"t.three",
+"src":"phrasebook:numbers-17",
+"he":"הַשָּׁעָה שָׁלוֹשׁ",
+"en":"it is three o'clock",
+"sourceEn":"it's three o'clock",
+"tr":"hasha'a shalosh",
+"clip":{
+"kind":"line",
+"id":"numbers-17"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"t.seven",
+"src":"lessons:I-19:9",
+"he":"הַשָּׁעָה שֶׁבַע",
+"en":"seven o'clock",
+"clip":{
+"kind":"word",
+"id":"i-19-w10"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"t.half",
+"src":"phrasebook:numbers-18",
+"he":"חֲצִי",
+"en":"half",
+"tr":"chetsi",
+"clip":{
+"kind":"word",
+"id":"numbers-18"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"t.quarter",
+"src":"phrasebook:numbers-19",
+"he":"רֶבַע",
+"en":"quarter",
+"tr":"reva",
+"clip":{
+"kind":"word",
+"id":"numbers-19"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"nf1",
+"src":"lessons:il04:0",
+"he":"אַחַת",
+"en":"one",
+"sourceEn":"one (f., counting)",
+"clip":{
+"kind":"word",
+"id":"il04-w1"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"nf2",
+"src":"lessons:il04:1",
+"he":"שְׁתַּיִם",
+"en":"two",
+"sourceEn":"two (f.)",
+"clip":{
+"kind":"word",
+"id":"il04-w2"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"nf3",
+"src":"lessons:il04:2",
+"he":"שָׁלוֹשׁ",
+"en":"three",
+"sourceEn":"three (f.)",
+"clip":{
+"kind":"word",
+"id":"il04-w3"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"nf4",
+"src":"lessons:il04:3",
+"he":"אַרְבַּע",
+"en":"four",
+"sourceEn":"four (f.)",
+"clip":{
+"kind":"word",
+"id":"il04-w4"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"nf5",
+"src":"lessons:il04:4",
+"he":"חָמֵשׁ",
+"en":"five",
+"sourceEn":"five (f.)",
+"clip":{
+"kind":"word",
+"id":"il04-w5"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"nf6",
+"src":"lessons:il04:5",
+"he":"שֵׁשׁ",
+"en":"six",
+"clip":{
+"kind":"word",
+"id":"il04-w6"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"nf7",
+"src":"lessons:il04:6",
+"he":"שֶׁבַע",
+"en":"seven",
+"sourceEn":"seven (f.)",
+"clip":{
+"kind":"word",
+"id":"il04-w7"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"nf8",
+"src":"lessons:il04:7",
+"he":"שְׁמוֹנֶה",
+"en":"eight",
+"clip":{
+"kind":"word",
+"id":"il04-w8"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"nf9",
+"src":"lessons:il04:8",
+"he":"תֵּשַׁע",
+"en":"nine",
+"sourceEn":"nine (f.)",
+"clip":{
+"kind":"word",
+"id":"il04-w9"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"nf10",
+"src":"lessons:il04:9",
+"he":"עֶשֶׂר",
+"en":"ten",
+"sourceEn":"ten (f.)",
+"clip":{
+"kind":"word",
+"id":"il04-w10"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"nf0",
+"src":"vocab5000:vc4f6426e",
+"he":"אֶפֶס",
+"en":"zero",
+"sourceEn":"zero (digit)",
+"review":"zero for reading out a phone number: owner to confirm"
+},
+{
+"key":"nm1",
+"src":"phrasebook:numbers-01",
+"he":"אֶחָד",
+"en":"one",
+"sourceEn":"one (1)",
+"tr":"echad",
+"clip":{
+"kind":"word",
+"id":"r18-w1"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"nm2",
+"src":"phrasebook:numbers-02",
+"he":"שְׁנַיִם",
+"en":"two",
+"sourceEn":"two (2)",
+"tr":"shnayim",
+"clip":{
+"kind":"word",
+"id":"numbers-02-m"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"nm3",
+"src":"phrasebook:numbers-03",
+"he":"שְׁלוֹשָׁה",
+"en":"three",
+"sourceEn":"three (3)",
+"tr":"shlosha",
+"clip":{
+"kind":"word",
+"id":"numbers-03-m"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"nm4",
+"src":"phrasebook:numbers-04",
+"he":"אַרְבָּעָה",
+"en":"four",
+"sourceEn":"four (4)",
+"tr":"arba'a",
+"clip":{
+"kind":"word",
+"id":"numbers-04-m"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"nm5",
+"src":"phrasebook:numbers-05",
+"he":"חֲמִשָּׁה",
+"en":"five",
+"sourceEn":"five (5)",
+"tr":"chamisha",
+"clip":{
+"kind":"word",
+"id":"numbers-05-m"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"nm6",
+"src":"phrasebook:numbers-06",
+"he":"שִׁשָּׁה",
+"en":"six",
+"sourceEn":"six (6)",
+"tr":"shisha",
+"clip":{
+"kind":"word",
+"id":"numbers-06-m"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"nm7",
+"src":"phrasebook:numbers-07",
+"he":"שִׁבְעָה",
+"en":"seven",
+"sourceEn":"seven (7)",
+"tr":"shiv'a",
+"clip":{
+"kind":"word",
+"id":"numbers-07-m"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"nm8",
+"src":"phrasebook:numbers-08",
+"he":"שְׁמוֹנָה",
+"en":"eight",
+"sourceEn":"eight (8)",
+"tr":"shmona",
+"clip":{
+"kind":"word",
+"id":"numbers-08-m"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"nm9",
+"src":"phrasebook:numbers-09",
+"he":"תִּשְׁעָה",
+"en":"nine",
+"sourceEn":"nine (9)",
+"tr":"tish'a",
+"clip":{
+"kind":"word",
+"id":"numbers-09-m"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"nm10",
+"src":"phrasebook:numbers-10",
+"he":"עֲשָׂרָה",
+"en":"ten",
+"sourceEn":"ten (10)",
+"tr":"asara",
+"clip":{
+"kind":"word",
+"id":"numbers-10-m"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"nm11",
+"src":"phrasebook:numbers-11",
+"he":"עֶשְׂרִים",
+"en":"twenty",
+"sourceEn":"twenty (20)",
+"tr":"esrim",
+"clip":{
+"kind":"word",
+"id":"numbers-11"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"nm12",
+"src":"phrasebook:numbers-12",
+"he":"שְׁלוֹשִׁים",
+"en":"thirty",
+"sourceEn":"thirty (30)",
+"tr":"shloshim",
+"clip":{
+"kind":"word",
+"id":"numbers-12"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"nm13",
+"src":"phrasebook:numbers-13",
+"he":"חֲמִשִּׁים",
+"en":"fifty",
+"sourceEn":"fifty (50)",
+"tr":"chamishim",
+"clip":{
+"kind":"word",
+"id":"numbers-13"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"nm14",
+"src":"phrasebook:numbers-14",
+"he":"מֵאָה",
+"en":"one hundred",
+"sourceEn":"one hundred (100)",
+"tr":"me'a",
+"clip":{
+"kind":"word",
+"id":"numbers-14"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"nm15",
+"src":"phrasebook:numbers-15",
+"he":"אֶלֶף",
+"en":"one thousand",
+"sourceEn":"one thousand (1000)",
+"tr":"elef",
+"clip":{
+"kind":"word",
+"id":"numbers-15"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"day.sun",
+"src":"lessons:il12:4",
+"he":"יוֹם רִאשׁוֹן",
+"en":"Sunday",
+"sourceEn":"Sunday (first day)",
+"clip":{
+"kind":"word",
+"id":"il12-w5"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"day.mon",
+"src":"vocab5000:vccb0ddef",
+"he":"יוֹם שֵׁנִי",
+"en":"Monday",
+"review":"vocab5000 entry, not proofread"
+},
+{
+"key":"day.tue",
+"src":"vocab5000:vb533dfe6",
+"he":"יוֹם שְׁלִישִׁי",
+"en":"Tuesday",
+"review":"vocab5000 entry, not proofread"
+},
+{
+"key":"day.wed",
+"src":"vocab5000:v90caa792",
+"he":"יוֹם רְבִיעִי",
+"en":"Wednesday",
+"review":"vocab5000 entry, not proofread"
+},
+{
+"key":"day.thu",
+"src":"vocab5000:v4e0fa1cb",
+"he":"יוֹם חֲמִישִׁי",
+"en":"Thursday",
+"review":"vocab5000 entry, not proofread"
+},
+{
+"key":"day.fri",
+"src":"days:erev-shabbat",
+"he":"עֶרֶב שַׁבָּת",
+"en":"Friday (Shabbat eve)",
+"sourceEn":"Friday, the eve of Shabbat",
+"tr":"erev Shabbat",
+"review":"Friday is shown as erev Shabbat; the plain weekday name is not in the app data yet"
+},
+{
+"key":"day.sat",
+"src":"lessons:il12:5",
+"he":"שַׁבָּת",
+"en":"Saturday, Shabbat",
+"sourceEn":"Saturday; Sabbath",
+"clip":{
+"kind":"word",
+"id":"il12-w6"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"day.today",
+"src":"lessons:il12:0",
+"he":"הַיּוֹם",
+"en":"today",
+"clip":{
+"kind":"word",
+"id":"il12-w1"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"day.tomorrow",
+"src":"lessons:il12:1",
+"he":"מָחָר",
+"en":"tomorrow",
+"clip":{
+"kind":"word",
+"id":"il12-w2"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"s.open",
+"src":"phrasebook:shop-16",
+"he":"פָּתוּחַ",
+"en":"open",
+"tr":"patuach",
+"clip":{
+"kind":"word",
+"id":"shop-16"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"s.closed",
+"src":"phrasebook:shop-17",
+"he":"סָגוּר",
+"en":"closed",
+"tr":"sagur",
+"clip":{
+"kind":"word",
+"id":"shop-17"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"s.exit",
+"src":"words:hd60cd96a",
+"he":"יְצִיאָה",
+"en":"exit",
+"sourceEn":"exit (a place to exit)",
+"tr":"yetzi'ah",
+"clip":{
+"kind":"word",
+"id":"hd60cd96a"
+}
+},
+{
+"key":"s.toilets",
+"src":"words:h65acae09",
+"he":"שֵׁרוּתִים",
+"en":"toilets",
+"sourceEn":"bathroom, toilet, water closet",
+"tr":"sherutim",
+"clip":{
+"kind":"word",
+"id":"h65acae09"
+},
+"review":"words.json flags it for review"
+},
+{
+"key":"s.pharmacy",
+"src":"lessons:il18:4",
+"he":"בֵּית מֶרְקַחַת",
+"en":"pharmacy",
+"clip":{
+"kind":"word",
+"id":"il18-w5"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"s.bakery",
+"src":"words:hdca77662",
+"he":"מַאֲפִיָּה",
+"en":"bakery",
+"tr":"ma'afiyah",
+"clip":{
+"kind":"word",
+"id":"hdca77662"
+}
+},
+{
+"key":"s.parking",
+"src":"words:hd7b6e838",
+"he":"חֲנָיָה",
+"en":"parking",
+"sourceEn":"parking, a parking space or parking lot",
+"tr":"chanayah",
+"clip":{
+"kind":"word",
+"id":"hd7b6e838"
+}
+},
+{
+"key":"s.forbidden",
+"src":"words:h99a3ea8b",
+"he":"אָסוּר",
+"en":"forbidden",
+"tr":"asur",
+"clip":{
+"kind":"word",
+"id":"h99a3ea8b"
+},
+"review":"words.json flags it for review"
+},
+{
+"key":"s.station",
+"src":"lessons:il10:3",
+"he":"תַּחֲנָה",
+"en":"station, stop",
+"sourceEn":"station; stop",
+"clip":{
+"kind":"word",
+"id":"il10-w4"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"s.atm",
+"src":"words:h36f204f4",
+"he":"כַּסְפּוֹמָט",
+"en":"cash machine",
+"sourceEn":"cashpoint, ATM, automated teller machine",
+"tr":"kaspomat",
+"clip":{
+"kind":"word",
+"id":"h36f204f4"
+}
+},
+{
+"key":"s.police",
+"src":"words:hef7b6946",
+"he":"מִשְׁטָרָה",
+"en":"police",
+"tr":"mishtarah",
+"clip":{
+"kind":"word",
+"id":"hef7b6946"
+}
+},
+{
+"key":"s.hospital",
+"src":"lessons:I-15:10",
+"he":"בֵּית חוֹלִים",
+"en":"hospital",
+"clip":{
+"kind":"word",
+"id":"i-15-w11"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"s.hotel",
+"src":"words:hdd727873",
+"he":"מָלוֹן",
+"en":"hotel",
+"tr":"malon",
+"clip":{
+"kind":"word",
+"id":"hdd727873"
+},
+"review":"words.json flags it for review"
+},
+{
+"key":"s.restaurant",
+"src":"lessons:I-38:2",
+"he":"מִסְעָדָה",
+"en":"restaurant",
+"clip":{
+"kind":"word",
+"id":"i-38-w3"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"s.market",
+"src":"lessons:I-12:0",
+"he":"שׁוּק",
+"en":"market",
+"clip":{
+"kind":"word",
+"id":"i-12-w1"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"s.post",
+"src":"lessons:I-22:0",
+"he":"דֹּאַר",
+"en":"post office",
+"sourceEn":"post, mail",
+"clip":{
+"kind":"word",
+"id":"i-22-w1"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"s.bank",
+"src":"lessons:I-21:0",
+"he":"בַּנְק",
+"en":"bank",
+"clip":{
+"kind":"word",
+"id":"i-21-w1"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"s.beach",
+"src":"lessons:I-41:0",
+"he":"חוֹף",
+"en":"beach",
+"clip":{
+"kind":"word",
+"id":"i-41-w1"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"s.platform",
+"src":"lessons:I-11:5",
+"he":"רְצִיף",
+"en":"platform",
+"clip":{
+"kind":"word",
+"id":"i-11-w6"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"s.taxi",
+"src":"lessons:il10:0",
+"he":"מוֹנִית",
+"en":"taxi",
+"clip":{
+"kind":"word",
+"id":"il10-w1"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"s.bus",
+"src":"lessons:il10:1",
+"he":"אוֹטוֹבּוּס",
+"en":"bus",
+"clip":{
+"kind":"word",
+"id":"il10-w2"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"s.train",
+"src":"lessons:il10:2",
+"he":"רַכֶּבֶת",
+"en":"train",
+"clip":{
+"kind":"word",
+"id":"il10-w3"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"s.danger",
+"src":"lessons:I-41:11",
+"he":"סַכָּנָה",
+"en":"danger",
+"clip":{
+"kind":"word",
+"id":"i-41-w12"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"s.shop",
+"src":"words:h3f9179f2",
+"he":"חֲנוּת",
+"en":"shop",
+"sourceEn":"shop, store",
+"tr":"chanut",
+"clip":{
+"kind":"word",
+"id":"h3f9179f2"
+}
+},
+{
+"key":"s.mall",
+"src":"words:hc5d5122c",
+"he":"קַנְיוֹן",
+"en":"shopping mall",
+"tr":"kanyon",
+"clip":{
+"kind":"word",
+"id":"hc5d5122c"
+}
+},
+{
+"key":"s.university",
+"src":"words:hd53982bf",
+"he":"אוּנִיבֶרְסִיטָה",
+"en":"university",
+"tr":"universitah",
+"clip":{
+"kind":"word",
+"id":"hd53982bf"
+}
+},
+{
+"key":"s.bridge",
+"src":"lessons:I-15:11",
+"he":"גֶּשֶׁר",
+"en":"bridge",
+"clip":{
+"kind":"word",
+"id":"i-15-w12"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"s.street",
+"src":"lessons:I-15:9",
+"he":"רְחוֹב",
+"en":"street",
+"clip":{
+"kind":"word",
+"id":"i-15-w10"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"s.trafficlight",
+"src":"lessons:I-39:8",
+"he":"רִמְזוּר",
+"en":"traffic light",
+"clip":{
+"kind":"word",
+"id":"i-39-w9"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"s.office",
+"src":"lessons:I-36:1",
+"he":"מִשְׂרָד",
+"en":"office",
+"clip":{
+"kind":"word",
+"id":"i-36-w2"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"s.mountain",
+"src":"lessons:I-40:2",
+"he":"הַר",
+"en":"mountain",
+"clip":{
+"kind":"word",
+"id":"i-40-w3"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"s.sea",
+"src":"lessons:I-41:1",
+"he":"יָם",
+"en":"sea",
+"clip":{
+"kind":"word",
+"id":"i-41-w2"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"s.kindergarten",
+"src":"lessons:I-42:4",
+"he":"גַּן",
+"en":"kindergarten, garden",
+"sourceEn":"garden, kindergarten",
+"clip":{
+"kind":"word",
+"id":"i-42-w5"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"b.next",
+"src":"lessons:I-11:7",
+"he":"הַתַּחֲנָה הַבָּאָה",
+"en":"the next stop",
+"clip":{
+"kind":"word",
+"id":"i-11-w8"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"b.offM",
+"src":"lessons:I-11:8",
+"he":"יוֹרֵד",
+"en":"getting off (a man)",
+"sourceEn":"getting off (m)",
+"clip":{
+"kind":"word",
+"id":"i-11-w9"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"b.offF",
+"src":"lessons:I-11:9",
+"he":"יוֹרֶדֶת",
+"en":"getting off (a woman)",
+"sourceEn":"getting off (f)",
+"clip":{
+"kind":"word",
+"id":"i-11-w10"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"b.ravkav",
+"src":"lessons:I-11:4",
+"he":"רַב-קַו",
+"en":"Rav-Kav card",
+"sourceEn":"Rav-Kav (the transit card)",
+"clip":{
+"kind":"word",
+"id":"i-11-w5"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"b.ticket",
+"src":"lessons:il10:4",
+"he":"כַּרְטִיס",
+"en":"ticket",
+"clip":{
+"kind":"word",
+"id":"il10-w5"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"b.whichbus",
+"src":"phrasebook:taxi-11",
+"he":"אֵיזֶה אוֹטוֹבּוּס הוֹלֵךְ לְ...?",
+"en":"which bus goes to ...?",
+"tr":"eize otobus holech le...?",
+"clip":{
+"kind":"line",
+"id":"taxi-11"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"b.nexttrain",
+"src":"phrasebook:taxi-12",
+"he":"מָתַי הָרַכֶּבֶת הַבָּאָה?",
+"en":"when is the next train?",
+"tr":"matai harakevet haba'a?",
+"clip":{
+"kind":"line",
+"id":"taxi-12"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"b.stop",
+"src":"phrasebook:taxi-09",
+"he":"עֲצֹר כָּאן, בְּבַקָּשָׁה",
+"en":"stop here, please",
+"tr":"atsor kan, bevakasha",
+"clip":{
+"kind":"line",
+"id":"taxi-09-m"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"c.whatlike",
+"src":"dialogues:d-cafe-l1",
+"he":"שָׁלוֹם! מָה תִּרְצִי?",
+"en":"Hello! What would you like? (to a woman)",
+"sourceEn":"Hello! What would you like?",
+"tr":"shalom! ma tirtsi?",
+"review":"dialogue line, not native-checked"
+},
+{
+"key":"c.help",
+"src":"scenario:sc-cafe:other",
+"he":"אֶפְשָׁר לַעֲזוֹר?",
+"en":"Can I help?",
+"tr":"efSHAR la'aZOR?",
+"review":"scenario draft, needs native review"
+},
+{
+"key":"c.hafuch",
+"src":"phrasebook:cafe-04",
+"he":"קָפֶה הָפוּךְ",
+"en":"a milky coffee (hafuch)",
+"sourceEn":"latte-style milky coffee (lit. upside-down coffee)",
+"tr":"kafe hafuch",
+"clip":{
+"kind":"line",
+"id":"cafe-04"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"c.espresso",
+"src":"phrasebook:cafe-05",
+"he":"אֶסְפְּרֶסוֹ",
+"en":"espresso",
+"tr":"espresso",
+"clip":{
+"kind":"word",
+"id":"cafe-05"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"c.black",
+"src":"phrasebook:cafe-06",
+"he":"קָפֶה שָׁחוֹר",
+"en":"black coffee",
+"tr":"kafe shachor",
+"clip":{
+"kind":"line",
+"id":"cafe-06"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"c.milk",
+"src":"phrasebook:cafe-07",
+"he":"קָפֶה עִם חָלָב",
+"en":"coffee with milk",
+"tr":"kafe im chalav",
+"clip":{
+"kind":"line",
+"id":"cafe-07"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"c.mint",
+"src":"phrasebook:cafe-08",
+"he":"תֵּה עִם נַעֲנָע",
+"en":"tea with mint",
+"tr":"te im na'ana",
+"clip":{
+"kind":"line",
+"id":"cafe-08"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"c.coldwater",
+"src":"phrasebook:cafe-10",
+"he":"מַיִם קָרִים, בְּבַקָּשָׁה",
+"en":"cold water, please",
+"tr":"mayim karim, bevakasha",
+"clip":{
+"kind":"line",
+"id":"cafe-10"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"c.anything",
+"src":"dialogues:d-cafe-l3",
+"he":"עוֹד מַשֶּׁהוּ?",
+"en":"Anything else?",
+"tr":"od mashehu?",
+"review":"dialogue line, not native-checked"
+},
+{
+"key":"c.cake",
+"src":"dialogues:d-cafe-l4",
+"he":"כֵּן, גַּם עוּגָה. כַּמָּה זֶה?",
+"en":"Yes, a cake too. How much is it?",
+"tr":"ken, gam uga. kama ze?",
+"review":"dialogue line, not native-checked"
+},
+{
+"key":"c.price48",
+"src":"dialogues:d-cafe-l5",
+"he":"אַרְבָּעִים וּשְׁמוֹנָה שְׁקָלִים.",
+"en":"Forty-eight shekels.",
+"tr":"arba'im ushmone shekalim.",
+"review":"dialogue line, not native-checked"
+},
+{
+"key":"c.card",
+"src":"dialogues:d-cafe-l6",
+"he":"אֶפְשָׁר בְּכַרְטִיס?",
+"en":"Can I pay by card?",
+"tr":"efshar bekartis?",
+"review":"dialogue line, not native-checked"
+},
+{
+"key":"c.sure",
+"src":"dialogues:d-cafe-l7",
+"he":"בֶּטַח. תּוֹדָה רַבָּה!",
+"en":"Of course. Thanks a lot!",
+"tr":"betach. toda raba!",
+"review":"dialogue line, not native-checked"
+},
+{
+"key":"c.cash",
+"src":"ladder:lad-pay-cash:everyday",
+"he":"בִּמְזֻמָּן, אִם אֶפְשָׁר",
+"en":"In cash, if possible",
+"sourceEn":"cash, if possible",
+"tr":"bimzuMAN, im efSHAR",
+"review":"register ladder draft, needs native review"
+},
+{
+"key":"c.receipt",
+"src":"phrasebook:shop-14",
+"he":"אֶפְשָׁר קַבָּלָה?",
+"en":"can I have a receipt?",
+"tr":"efshar kabala?",
+"clip":{
+"kind":"line",
+"id":"shop-14"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"c.herego",
+"src":"phrasebook:cafe-25",
+"he":"לֶאֱכֹל כָּאן אוֹ לָקַחַת?",
+"en":"eat here or take away?",
+"tr":"le'echol kan o lakachat?",
+"clip":{
+"kind":"line",
+"id":"cafe-25"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"c.takeaway",
+"src":"ladder:lad-takeaway:everyday",
+"he":"לָקַחַת, בְּבַקָּשָׁה",
+"en":"To take away, please",
+"sourceEn":"to take away, please",
+"tr":"laKAchat, bevakaSHA",
+"review":"register ladder draft, needs native review"
+},
+{
+"key":"c.order",
+"src":"phrasebook:cafe-14",
+"he":"אֶפְשָׁר לְהַזְמִין?",
+"en":"can I order?",
+"tr":"efshar lehazmin?",
+"clip":{
+"kind":"line",
+"id":"cafe-14"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"c.bill",
+"src":"phrasebook:cafe-26",
+"he":"הַחֶשְׁבּוֹן, בְּבַקָּשָׁה",
+"en":"the bill, please",
+"tr":"hacheshbon, bevakasha",
+"clip":{
+"kind":"line",
+"id":"cafe-26"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"c.rude",
+"src":"scenario:sc-cafe:off",
+"he":"הָפוּךְ, יַאלְלָה, מַהֵר",
+"en":"Hafuch, come on, quickly.",
+"tr":"haFUCH, yaLA, maHER",
+"review":"scenario draft, needs native review"
+},
+{
+"key":"c.stiff",
+"src":"scenario:sc-cafe:stiff",
+"he":"אֲנִי רוֹצֶה לְהַזְמִין קָפֶה הָפוּךְ, בְּבַקָּשָׁה",
+"en":"I want to order a coffee hafuch, please.",
+"tr":"ani roTSE lehazMIN kaFE haFUCH, bevakaSHA",
+"review":"scenario draft, needs native review"
+},
+{
+"key":"r.howmany",
+"src":"dialogues:d-restaurant-l1",
+"he":"שָׁלוֹם. לְכַמָּה אֲנָשִׁים?",
+"en":"Hello. For how many people?",
+"tr":"shalom. lekama anashim?",
+"review":"dialogue line, not native-checked"
+},
+{
+"key":"r.fortwo",
+"src":"dialogues:d-restaurant-l2",
+"he":"לִשְׁנַיִם, בְּבַקָּשָׁה.",
+"en":"For two, please.",
+"tr":"lishnayim, bevakasha.",
+"review":"dialogue line, not native-checked"
+},
+{
+"key":"r.menu",
+"src":"dialogues:d-restaurant-l3",
+"he":"בְּבַקָּשָׁה, פֹּה. הִנֵּה הַתַּפְרִיט.",
+"en":"Please, here. Here is the menu.",
+"tr":"bevakasha, po. hine hatafrit.",
+"review":"dialogue line, not native-checked"
+},
+{
+"key":"r.schnitzel",
+"src":"dialogues:d-restaurant-l4",
+"he":"אֲנִי רוֹצֶה שְׁנִיצֶל וְסָלָט.",
+"en":"I'd like a schnitzel and a salad.",
+"tr":"ani rotse shnitsel vesalat.",
+"review":"dialogue line, not native-checked"
+},
+{
+"key":"r.drink",
+"src":"dialogues:d-restaurant-l5",
+"he":"וְלִשְׁתּוֹת?",
+"en":"And to drink?",
+"tr":"velishtot?",
+"review":"dialogue line, not native-checked"
+},
+{
+"key":"r.water",
+"src":"dialogues:d-restaurant-l6",
+"he":"מַיִם, בְּבַקָּשָׁה.",
+"en":"Water, please.",
+"tr":"mayim, bevakasha.",
+"review":"dialogue line, not native-checked"
+},
+{
+"key":"r.bill",
+"src":"dialogues:d-restaurant-l7",
+"he":"סְלִיחָה, אֶפְשָׁר אֶת הַחֶשְׁבּוֹן?",
+"en":"Excuse me, can I have the bill?",
+"tr":"slicha, efshar et hacheshbon?",
+"review":"dialogue line, not native-checked"
+},
+{
+"key":"r.moment",
+"src":"dialogues:d-restaurant-l8",
+"he":"בֶּטַח, רֶגַע.",
+"en":"Sure, one moment.",
+"tr":"betach, rega.",
+"review":"dialogue line, not native-checked"
+},
+{
+"key":"r.table2",
+"src":"phrasebook:cafe-01",
+"he":"שֻׁלְחָן לִשְׁנַיִם, בְּבַקָּשָׁה",
+"en":"a table for two, please",
+"tr":"shulchan lishnayim, bevakasha",
+"clip":{
+"kind":"line",
+"id":"cafe-01"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"r.seemenu",
+"src":"phrasebook:cafe-02",
+"he":"אֶפְשָׁר לִרְאוֹת אֶת הַתַּפְרִיט?",
+"en":"can I see the menu?",
+"tr":"efshar lir'ot et hatafrit?",
+"clip":{
+"kind":"line",
+"id":"cafe-02"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"r.tasty",
+"src":"phrasebook:cafe-21",
+"he":"טָעִים מְאֹד",
+"en":"very tasty",
+"tr":"taim meod",
+"clip":{
+"kind":"line",
+"id":"cafe-21"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"r.veg",
+"src":"phrasebook:cafe-22",
+"he":"אֲנִי צִמְחוֹנִי",
+"en":"I'm vegetarian",
+"tr":"ani tsimchoni",
+"clip":{
+"kind":"line",
+"id":"cafe-22-m"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"r.vegan",
+"src":"phrasebook:cafe-23",
+"he":"אֲנִי טִבְעוֹנִי",
+"en":"I'm vegan",
+"tr":"ani tiv'oni",
+"clip":{
+"kind":"line",
+"id":"cafe-23-m"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"r.allergic",
+"src":"phrasebook:cafe-24",
+"he":"אֲנִי אָלֶרְגִּי לְ",
+"en":"I'm allergic to ...",
+"tr":"ani alergi le-",
+"clip":{
+"kind":"line",
+"id":"cafe-24-m"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"r.vegF",
+"src":"lessons:I-13:13",
+"he":"צִמְחוֹנִית",
+"en":"vegetarian (a woman)",
+"sourceEn":"vegetarian (f)",
+"clip":{
+"kind":"word",
+"id":"i-13-w14"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"r.recommend",
+"src":"ladder:lad-recommend:everyday",
+"he":"מָה כְּדַאי לָקַחַת?",
+"en":"What is good to get?",
+"sourceEn":"what is worth taking?",
+"tr":"ma keDAI laKAchat?",
+"review":"register ladder draft, needs native review"
+},
+{
+"key":"c.nothanks",
+"he":"לֹא, תּוֹדָה",
+"en":"No, thanks.",
+"parts":[
+"phrasebook:politeness-09",
+"phrasebook:politeness-01"
+],
+"join":", ",
+"review":"joined from two phrasebook entries (no and thank you); owner to confirm"
+},
+{
+"key":"f.pita",
+"src":"phrasebook:cafe-19",
+"he":"פִּיתָה",
+"en":"pita",
+"sourceEn":"pita bread",
+"tr":"pita",
+"clip":{
+"kind":"word",
+"id":"cafe-19"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"f.hummus",
+"src":"phrasebook:cafe-16",
+"he":"חוּמוּס",
+"en":"hummus",
+"tr":"humus",
+"clip":{
+"kind":"word",
+"id":"cafe-16"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"f.falafel",
+"src":"phrasebook:cafe-17",
+"he":"פָלָאפֶל",
+"en":"falafel",
+"tr":"falafel",
+"clip":{
+"kind":"word",
+"id":"cafe-17"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"f.shakshuka",
+"src":"phrasebook:cafe-18",
+"he":"שַׁקְשׁוּקָה",
+"en":"shakshuka",
+"sourceEn":"shakshuka (eggs poached in tomato sauce)",
+"tr":"shakshuka",
+"clip":{
+"kind":"word",
+"id":"cafe-18"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"f.salad",
+"src":"phrasebook:cafe-20",
+"he":"סָלָט",
+"en":"salad",
+"tr":"salat",
+"clip":{
+"kind":"word",
+"id":"cafe-20"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"f.tomato",
+"src":"lessons:I-12:8",
+"he":"עַגְבָנִיָּה",
+"en":"tomato",
+"clip":{
+"kind":"word",
+"id":"i-12-w9"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"f.cucumber",
+"src":"lessons:I-12:9",
+"he":"מְלָפְפוֹן",
+"en":"cucumber",
+"clip":{
+"kind":"word",
+"id":"i-12-w10"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"f.olives",
+"src":"lessons:I-12:11",
+"he":"זֵיתִים",
+"en":"olives",
+"clip":{
+"kind":"word",
+"id":"i-12-w12"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"f.cheese",
+"src":"lessons:il07:2",
+"he":"גְּבִינָה",
+"en":"cheese",
+"clip":{
+"kind":"word",
+"id":"il07-w3"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"f.egg",
+"src":"lessons:il07:3",
+"he":"בֵּיצָה",
+"en":"egg",
+"clip":{
+"kind":"word",
+"id":"il07-w4"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"f.bread",
+"src":"lessons:il07:1",
+"he":"לֶחֶם",
+"en":"bread",
+"clip":{
+"kind":"word",
+"id":"il07-w2"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"f.milk",
+"src":"lessons:I-13:5",
+"he":"חָלָב",
+"en":"milk",
+"clip":{
+"kind":"word",
+"id":"i-13-w6"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"f.eggs",
+"src":"lessons:I-43:3",
+"he":"בֵּיצִים",
+"en":"eggs",
+"clip":{
+"kind":"word",
+"id":"i-43-w4"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"f.fruit",
+"src":"lessons:I-43:5",
+"he":"פֵּרוֹת",
+"en":"fruit",
+"clip":{
+"kind":"word",
+"id":"i-43-w6"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"f.cake",
+"src":"words:ha664d093",
+"he":"עוּגָה",
+"en":"cake",
+"tr":"ugah",
+"clip":{
+"kind":"word",
+"id":"ha664d093"
+}
+},
+{
+"key":"f.cabbage",
+"src":"words:h3f1b7fcb",
+"he":"כְּרוּב",
+"en":"cabbage",
+"tr":"keruv",
+"clip":{
+"kind":"word",
+"id":"h3f1b7fcb"
+},
+"review":"words.json flags it for review"
+},
+{
+"key":"f.chicken",
+"src":"words:hbd118cf1",
+"he":"עוֹף",
+"en":"chicken",
+"sourceEn":"poultry (the meat from a domestic fowl), usually chicken",
+"tr":"of",
+"clip":{
+"kind":"word",
+"id":"hbd118cf1"
+}
+},
+{
+"key":"f.fish",
+"src":"words:h4f61c9d1",
+"he":"דָּג",
+"en":"fish",
+"tr":"dag",
+"clip":{
+"kind":"word",
+"id":"h4f61c9d1"
+},
+"review":"words.json flags it for review"
+},
+{
+"key":"f.juice",
+"src":"words:h1f02450d",
+"he":"מִיץ",
+"en":"juice",
+"tr":"mitz",
+"clip":{
+"kind":"word",
+"id":"h1f02450d"
+}
+},
+{
+"key":"f.lemonade",
+"src":"words:h8417ff6d",
+"he":"לִימוֹנָדָה",
+"en":"lemonade",
+"tr":"limonadah",
+"clip":{
+"kind":"word",
+"id":"h8417ff6d"
+}
+},
+{
+"key":"f.beer",
+"src":"phrasebook:cafe-11",
+"he":"בִּירָה",
+"en":"beer",
+"tr":"bira",
+"clip":{
+"kind":"word",
+"id":"cafe-11"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"f.wine",
+"src":"phrasebook:cafe-12",
+"he":"יַיִן",
+"en":"wine",
+"tr":"yayin",
+"clip":{
+"kind":"word",
+"id":"cafe-12"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"f.tea",
+"src":"lessons:il07:5",
+"he":"תֵּה",
+"en":"tea",
+"clip":{
+"kind":"word",
+"id":"il07-w6"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"f.coffee",
+"src":"lessons:il06:1",
+"he":"קָפֶה",
+"en":"coffee",
+"clip":{
+"kind":"word",
+"id":"il06-w2"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"f.water",
+"src":"phrasebook:cafe-09",
+"he":"מַיִם",
+"en":"water",
+"tr":"mayim",
+"clip":{
+"kind":"word",
+"id":"cafe-09"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"f.sugar",
+"src":"lessons:I-13:6",
+"he":"סֻכָּר",
+"en":"sugar",
+"clip":{
+"kind":"word",
+"id":"i-13-w7"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"f.without",
+"src":"lessons:I-13:7",
+"he":"בְּלִי",
+"en":"without",
+"clip":{
+"kind":"word",
+"id":"i-13-w8"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"f.pizza",
+"src":"lessons:I-45:3",
+"he":"פִּיצָה",
+"en":"pizza",
+"clip":{
+"kind":"word",
+"id":"i-45-w4"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"f.food",
+"src":"lessons:il07:0",
+"he":"אֹכֶל",
+"en":"food",
+"clip":{
+"kind":"word",
+"id":"il07-w1"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"f.meal",
+"src":"words:h6b636d7b",
+"he":"אֲרוּחָה",
+"en":"meal",
+"tr":"aruchah",
+"clip":{
+"kind":"word",
+"id":"h6b636d7b"
+}
+},
+{
+"key":"f.fresh",
+"src":"lessons:I-12:7",
+"he":"טָרִי",
+"en":"fresh",
+"clip":{
+"kind":"word",
+"id":"i-12-w8"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"f.dessert",
+"src":"lessons:I-19:7",
+"he":"קִנּוּחַ",
+"en":"dessert",
+"clip":{
+"kind":"word",
+"id":"i-19-w8"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"f.big",
+"src":"lessons:I-13:8",
+"he":"גָּדוֹל",
+"en":"big",
+"sourceEn":"big (m)",
+"clip":{
+"kind":"word",
+"id":"i-13-w9"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"f.small",
+"src":"lessons:I-13:9",
+"he":"קָטָן",
+"en":"small",
+"sourceEn":"small (m)",
+"clip":{
+"kind":"word",
+"id":"i-13-w10"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"m.change",
+"src":"lessons:il09:2",
+"he":"עוֹדֶף",
+"en":"change",
+"clip":{
+"kind":"word",
+"id":"il09-w3"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"m.cash",
+"src":"lessons:il09:0",
+"he":"מְזֻמָּן",
+"en":"cash",
+"review":"lesson word, not native-checked"
+},
+{
+"key":"m.card",
+"src":"lessons:il09:1",
+"he":"כַּרְטִיס אַשְׁרַאי",
+"en":"credit card",
+"review":"lesson word, not native-checked"
+},
+{
+"key":"m.receipt",
+"src":"lessons:il09:4",
+"he":"קַבָּלָה",
+"en":"receipt",
+"clip":{
+"kind":"word",
+"id":"il09-w5"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"m.bag",
+"src":"lessons:il09:3",
+"he":"שַׂקִּית",
+"en":"bag",
+"clip":{
+"kind":"word",
+"id":"il09-w4"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"m.howmuch",
+"src":"phrasebook:shop-01",
+"he":"כַּמָּה זֶה עוֹלֶה?",
+"en":"how much does it cost?",
+"tr":"kama ze ole?",
+"clip":{
+"kind":"line",
+"id":"shop-01"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"m.shekel",
+"src":"phrasebook:shop-19",
+"he":"שֶׁקֶל",
+"en":"shekel",
+"sourceEn":"shekel (Israeli currency)",
+"tr":"shekel",
+"clip":{
+"kind":"word",
+"id":"shop-19"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"m.price",
+"src":"lessons:I-43:6",
+"he":"מְחִיר",
+"en":"price",
+"clip":{
+"kind":"word",
+"id":"i-43-w7"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"m.discount",
+"src":"phrasebook:shop-05",
+"he":"יֵשׁ הַנָּחָה?",
+"en":"is there a discount?",
+"tr":"yesh hanacha?",
+"clip":{
+"kind":"line",
+"id":"shop-05"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"m.expensive",
+"src":"phrasebook:shop-03",
+"he":"זֶה יָקָר",
+"en":"it's expensive",
+"tr":"ze yakar",
+"clip":{
+"kind":"line",
+"id":"shop-03"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"m.cheap",
+"src":"phrasebook:shop-04",
+"he":"זֶה זוֹל",
+"en":"it's cheap",
+"tr":"ze zol",
+"clip":{
+"kind":"line",
+"id":"shop-04"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"m.illtake",
+"src":"phrasebook:shop-07",
+"he":"אֶקַּח אֶת זֶה",
+"en":"I'll take this",
+"tr":"ekach et ze",
+"clip":{
+"kind":"line",
+"id":"shop-07"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"m.looking",
+"src":"phrasebook:shop-06",
+"he":"אֲנִי רַק מִסְתַּכֵּל",
+"en":"I'm just looking",
+"tr":"ani rak mistakel",
+"clip":{
+"kind":"line",
+"id":"shop-06-m"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"m.iftwo",
+"src":"ladder:lad-if-two:everyday",
+"he":"אִם אֶקַּח שְׁנַיִם, כַּמָּה זֶה יוֹצֵא?",
+"en":"If I take two, how much does it come to?",
+"sourceEn":"if I take two, how much does it come to?",
+"tr":"im eKACH shnaYIM, kaMA ze yoTSE?",
+"review":"register ladder draft, needs native review"
+},
+{
+"key":"m.politeno",
+"src":"ladder:lad-polite-no:everyday",
+"he":"תּוֹדָה, אוּלַי בַּפַּעַם הַבָּאָה",
+"en":"Thanks, maybe next time",
+"sourceEn":"thanks, maybe next time",
+"tr":"toDA, uLAI bapa'AM haba'A",
+"review":"register ladder draft, needs native review"
+},
+{
+"key":"m.makeprice",
+"src":"ladder:lad-discount:everyday",
+"he":"תַּעֲשֶׂה לִי מְחִיר",
+"en":"Give me a price (to a man)",
+"sourceEn":"give me a (good) price",
+"tr":"ta'aSE li meCHIR",
+"review":"register ladder draft, needs native review"
+},
+{
+"key":"m.bitexp",
+"src":"ladder:lad-too-expensive:everyday",
+"he":"זֶה קְצָת יָקָר",
+"en":"It's a bit expensive",
+"sourceEn":"that's a bit expensive",
+"tr":"ZE ktsat yaKAR",
+"review":"register ladder draft, needs native review"
+},
+{
+"key":"m.taste",
+"src":"ladder:lad-shuk-taste:everyday",
+"he":"אֶפְשָׁר לִטְעוֹם?",
+"en":"Can I taste?",
+"sourceEn":"can I taste?",
+"tr":"efSHAR litOM?",
+"review":"register ladder draft, needs native review"
+},
+{
+"key":"m.kilo",
+"src":"ladder:lad-shuk-price:everyday",
+"he":"בְּכַמָּה הַקִּילוֹ?",
+"en":"How much is the kilo?",
+"sourceEn":"how much is the kilo?",
+"tr":"bekaMA hakiLO?",
+"review":"register ladder draft, needs native review"
+},
+{
+"key":"m.bargainoff",
+"src":"scenario:sc-shuk-bargain:off",
+"he":"זֶה גְּנֵבָה! אֲנִי לֹא מְשַׁלֵּם כָּל כָּךְ הַרְבֵּה!",
+"en":"That's robbery! I won't pay so much!",
+"tr":"ze gneVA! ani lo meshaLEM kol KACH harBE!",
+"review":"scenario draft, needs native review"
+},
+{
+"key":"m.bargainnatural",
+"src":"scenario:sc-shuk-bargain:natural",
+"he":"תַּעֲשֶׂה לִי מְחִיר?",
+"en":"Give me a price?",
+"tr":"ta'aSE li meCHIR?",
+"review":"scenario draft, needs native review"
+},
+{
+"key":"m.half",
+"src":"lessons:I-12:6",
+"he":"חֲצִי",
+"en":"half",
+"clip":{
+"kind":"word",
+"id":"i-12-w7"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"w.weather",
+"src":"lessons:il15:4",
+"he":"מֶזֶג אֲוִיר",
+"en":"weather",
+"clip":{
+"kind":"word",
+"id":"il15-w5"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"w.hot",
+"src":"lessons:il15:0",
+"he":"חַם",
+"en":"hot",
+"clip":{
+"kind":"word",
+"id":"il15-w1"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"w.cold",
+"src":"lessons:il15:1",
+"he":"קַר",
+"en":"cold",
+"clip":{
+"kind":"word",
+"id":"il15-w2"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"w.rain",
+"src":"lessons:il15:2",
+"he":"גֶּשֶׁם",
+"en":"rain",
+"clip":{
+"kind":"word",
+"id":"il15-w3"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"w.sun",
+"src":"lessons:il15:3",
+"he":"שֶׁמֶשׁ",
+"en":"sun",
+"clip":{
+"kind":"word",
+"id":"il15-w4"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"w.wind",
+"src":"lessons:I-24:5",
+"he":"רוּחַ",
+"en":"wind",
+"clip":{
+"kind":"word",
+"id":"i-24-w6"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"w.cloud",
+"src":"lessons:I-24:6",
+"he":"עָנָן",
+"en":"cloud",
+"clip":{
+"kind":"word",
+"id":"i-24-w7"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"w.snow",
+"src":"lessons:I-24:7",
+"he":"שֶׁלֶג",
+"en":"snow",
+"clip":{
+"kind":"word",
+"id":"i-24-w8"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"w.humid",
+"src":"lessons:I-24:8",
+"he":"לַח",
+"en":"humid",
+"clip":{
+"kind":"word",
+"id":"i-24-w9"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"w.summer",
+"src":"lessons:I-24:9",
+"he":"קַיִץ",
+"en":"summer",
+"clip":{
+"kind":"word",
+"id":"i-24-w10"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"w.winter",
+"src":"lessons:I-24:10",
+"he":"חֹרֶף",
+"en":"winter",
+"clip":{
+"kind":"word",
+"id":"i-24-w11"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"w.hat",
+"src":"lessons:I-24:13",
+"he":"כּוֹבַע",
+"en":"hat",
+"clip":{
+"kind":"word",
+"id":"i-24-w14"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"w.coat",
+"src":"lessons:I-24:14",
+"he":"מְעִיל",
+"en":"coat",
+"clip":{
+"kind":"word",
+"id":"i-24-w15"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"w.towel",
+"src":"lessons:I-41:4",
+"he":"מַגֶּבֶת",
+"en":"towel",
+"clip":{
+"kind":"word",
+"id":"i-41-w5"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"w.water",
+"src":"lessons:I-41:6",
+"he":"מַיִם",
+"en":"water",
+"clip":{
+"kind":"word",
+"id":"i-41-w7"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"w.scarf",
+"src":"words:h56b7692f",
+"he":"צָעִיף",
+"en":"scarf",
+"tr":"tza'if",
+"clip":{
+"kind":"word",
+"id":"h56b7692f"
+}
+},
+{
+"key":"w.sweater",
+"src":"vocab5000:v1a8fee2b",
+"he":"סְוֶדֶר",
+"en":"sweater",
+"sourceEn":"sweater, pullover",
+"review":"vocab5000 entry, not proofread"
+},
+{
+"key":"w.glove",
+"src":"vocab5000:v5fe3d5e0",
+"he":"כְּפָפָה",
+"en":"glove",
+"review":"vocab5000 entry, not proofread"
+},
+{
+"key":"w.sea",
+"src":"lessons:I-41:1",
+"he":"יָם",
+"en":"sea",
+"clip":{
+"kind":"word",
+"id":"i-41-w2"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"w.sand",
+"src":"lessons:I-41:2",
+"he":"חוֹל",
+"en":"sand",
+"clip":{
+"kind":"word",
+"id":"i-41-w3"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"w.trail",
+"src":"lessons:I-40:4",
+"he":"שְׁבִיל",
+"en":"trail",
+"clip":{
+"kind":"word",
+"id":"i-40-w5"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"w.map",
+"src":"lessons:I-40:6",
+"he":"מַפָּה",
+"en":"map",
+"sourceEn":"a map",
+"clip":{
+"kind":"word",
+"id":"i-40-w7"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"d.straight",
+"src":"phrasebook:directions-08",
+"he":"לֵךְ יָשָׁר",
+"en":"go straight",
+"tr":"lech yashar",
+"clip":{
+"kind":"line",
+"id":"directions-08-m"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"d.left",
+"src":"phrasebook:directions-09",
+"he":"פְּנֵה שְׂמֹאלָה",
+"en":"turn left",
+"tr":"pne smola",
+"clip":{
+"kind":"line",
+"id":"directions-09-m"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"d.right",
+"src":"phrasebook:directions-10",
+"he":"פְּנֵה יָמִינָה",
+"en":"turn right",
+"tr":"pne yamina",
+"clip":{
+"kind":"line",
+"id":"directions-10-m"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"d.nextto",
+"src":"phrasebook:directions-11",
+"he":"עַל יַד",
+"en":"next to",
+"tr":"al yad",
+"clip":{
+"kind":"line",
+"id":"directions-11"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"d.opposite",
+"src":"phrasebook:directions-12",
+"he":"מוּל",
+"en":"opposite",
+"tr":"mul",
+"clip":{
+"kind":"word",
+"id":"directions-12"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"d.corner",
+"src":"phrasebook:directions-13",
+"he":"בַּפִּנָּה",
+"en":"on the corner",
+"tr":"bapina",
+"clip":{
+"kind":"word",
+"id":"directions-13"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"d.where",
+"src":"phrasebook:directions-01",
+"he":"אֵיפֹה ...?",
+"en":"where is ...?",
+"tr":"eifo ...?",
+"clip":{
+"kind":"line",
+"id":"directions-01"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"d.howget",
+"src":"phrasebook:directions-02",
+"he":"אֵיךְ מַגִּיעִים לְ...?",
+"en":"how do you get to ...?",
+"tr":"eich magi'im le...?",
+"clip":{
+"kind":"line",
+"id":"directions-02"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"d.far",
+"src":"phrasebook:directions-03",
+"he":"זֶה רָחוֹק?",
+"en":"is it far?",
+"tr":"ze rachok?",
+"clip":{
+"kind":"line",
+"id":"directions-03"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"d.near",
+"src":"phrasebook:directions-04",
+"he":"זֶה קָרוֹב",
+"en":"it's near",
+"tr":"ze karov",
+"clip":{
+"kind":"line",
+"id":"directions-04"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"d.lost",
+"src":"phrasebook:directions-14",
+"he":"אֲנִי אָבוּד",
+"en":"I'm lost",
+"tr":"ani avud",
+"clip":{
+"kind":"line",
+"id":"directions-14-m"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"d.map",
+"src":"phrasebook:directions-15",
+"he":"אֶפְשָׁר לְהַרְאוֹת לִי עַל הַמַּפָּה?",
+"en":"can you show me on the map?",
+"tr":"efshar lehar'ot li al hamapa?",
+"clip":{
+"kind":"line",
+"id":"directions-15"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"p.hello",
+"src":"lessons:il22:0",
+"he":"הַלּוֹ",
+"en":"hello (on the phone)",
+"clip":{
+"kind":"word",
+"id":"il22-w1"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"p.number",
+"src":"lessons:I-16:2",
+"he":"מִסְפַּר טֶלֶפוֹן",
+"en":"phone number",
+"clip":{
+"kind":"word",
+"id":"i-16-w3"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"p.moment",
+"src":"lessons:I-16:12",
+"he":"רֶגַע",
+"en":"one moment",
+"clip":{
+"kind":"word",
+"id":"i-16-w13"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"p.canthear",
+"src":"lessons:I-16:13",
+"he":"אֲנִי לֹא שׁוֹמֵעַ",
+"en":"I can't hear (a man)",
+"sourceEn":"I can't hear (m)",
+"clip":{
+"kind":"word",
+"id":"i-16-w14"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"p.slowly",
+"src":"phrasebook:fillers-18",
+"he":"אֶפְשָׁר לְדַבֵּר לְאַט?",
+"en":"can you speak slowly?",
+"tr":"efshar ledaber le'at?",
+"clip":{
+"kind":"line",
+"id":"fillers-18"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"p.repeat",
+"src":"phrasebook:fillers-19",
+"he":"אֶפְשָׁר לַחֲזֹר עַל זֶה?",
+"en":"can you repeat that?",
+"tr":"efshar lachazor al ze?",
+"clip":{
+"kind":"line",
+"id":"fillers-19"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"p.write",
+"src":"phrasebook:fillers-23",
+"he":"אֶפְשָׁר לִכְתֹּב אֶת זֶה?",
+"en":"can you write that down?",
+"tr":"efshar lichtov et ze?",
+"clip":{
+"kind":"line",
+"id":"fillers-23"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"p.message",
+"src":"lessons:il22:4",
+"he":"הוֹדָעָה",
+"en":"message",
+"clip":{
+"kind":"word",
+"id":"il22-w5"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"p.meeting",
+"src":"lessons:il22:2",
+"he":"פְּגִישָׁה",
+"en":"meeting",
+"clip":{
+"kind":"word",
+"id":"il22-w3"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"ph.medicine",
+"src":"lessons:I-14:1",
+"he":"תְּרוּפָה",
+"en":"medicine",
+"clip":{
+"kind":"word",
+"id":"i-14-w2"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"ph.pills",
+"src":"lessons:I-14:2",
+"he":"כַּדּוּרִים",
+"en":"pills",
+"clip":{
+"kind":"word",
+"id":"i-14-w3"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"ph.prescription",
+"src":"lessons:I-14:3",
+"he":"מִרְשָׁם",
+"en":"prescription",
+"clip":{
+"kind":"word",
+"id":"i-14-w4"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"ph.headache",
+"src":"lessons:I-14:4",
+"he":"כְּאֵב רֹאשׁ",
+"en":"headache",
+"clip":{
+"kind":"word",
+"id":"i-14-w5"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"ph.throat",
+"src":"lessons:I-14:5",
+"he":"כְּאֵב גָּרוֹן",
+"en":"sore throat",
+"clip":{
+"kind":"word",
+"id":"i-14-w6"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"ph.stomach",
+"src":"lessons:I-14:6",
+"he":"כְּאֵב בֶּטֶן",
+"en":"stomach ache",
+"clip":{
+"kind":"word",
+"id":"i-14-w7"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"ph.fever",
+"src":"lessons:I-14:7",
+"he":"חֹם",
+"en":"fever",
+"clip":{
+"kind":"word",
+"id":"i-14-w8"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"ph.against",
+"src":"lessons:I-14:8",
+"he":"נֶגֶד",
+"en":"against, for (a symptom)",
+"clip":{
+"kind":"word",
+"id":"i-14-w9"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"ph.once",
+"src":"lessons:I-14:9",
+"he":"פַּעַם בְּיוֹם",
+"en":"once a day",
+"clip":{
+"kind":"word",
+"id":"i-14-w10"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"ph.twice",
+"src":"lessons:I-14:10",
+"he":"פַּעֲמַיִם בְּיוֹם",
+"en":"twice a day",
+"clip":{
+"kind":"word",
+"id":"i-14-w11"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"ph.after",
+"src":"lessons:I-14:11",
+"he":"אַחֲרֵי",
+"en":"after",
+"clip":{
+"kind":"word",
+"id":"i-14-w12"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"ph.before",
+"src":"lessons:I-14:12",
+"he":"לִפְנֵי",
+"en":"before",
+"clip":{
+"kind":"word",
+"id":"i-14-w13"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"ph.allergic",
+"src":"lessons:I-14:13",
+"he":"אָלֶרְגִּי",
+"en":"allergic",
+"sourceEn":"allergic (m)",
+"clip":{
+"kind":"word",
+"id":"i-14-w14"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"ph.antibiotics",
+"src":"lessons:I-14:14",
+"he":"אַנְטִיבְּיוֹטִיקָה",
+"en":"antibiotics",
+"clip":{
+"kind":"word",
+"id":"i-14-w15"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"ph.cough",
+"src":"ladder:lad-cough:everyday",
+"he":"יֵשׁ לָכֶם מַשֶּׁהוּ נֶגֶד שִׁעוּל?",
+"en":"Do you have something for a cough?",
+"sourceEn":"do you have something for a cough?",
+"tr":"yesh LAchem maSHEhu NEged shi'UL?",
+"review":"register ladder draft, needs native review"
+},
+{
+"key":"ph.needrx",
+"src":"ladder:lad-prescription:everyday",
+"he":"צָרִיךְ מִרְשָׁם?",
+"en":"Do I need a prescription?",
+"sourceEn":"need a prescription?",
+"tr":"tsaRICH mirSHAM?",
+"review":"register ladder draft, needs native review"
+},
+{
+"key":"ph.hurts",
+"src":"lessons:I-20:6",
+"he":"כּוֹאֵב",
+"en":"it hurts",
+"clip":{
+"kind":"word",
+"id":"i-20-w7"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"ph.appointment",
+"src":"lessons:I-20:4",
+"he":"תּוֹר",
+"en":"appointment, turn",
+"clip":{
+"kind":"word",
+"id":"i-20-w5"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"ph.doctor",
+"src":"lessons:il18:3",
+"he":"רוֹפֵא",
+"en":"doctor",
+"clip":{
+"kind":"word",
+"id":"il18-w4"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"ph.notwell",
+"src":"phrasebook:help-07",
+"he":"אֲנִי לֹא מַרְגִּישׁ טוֹב",
+"en":"I don't feel well",
+"tr":"ani lo margish tov",
+"clip":{
+"kind":"line",
+"id":"help-07-m"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"ph.hasheadache",
+"src":"phrasebook:help-08",
+"he":"יֵשׁ לִי כְּאֵב רֹאשׁ",
+"en":"I have a headache",
+"tr":"yesh li ke'ev rosh",
+"clip":{
+"kind":"line",
+"id":"help-08"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"e.help",
+"src":"phrasebook:help-01",
+"he":"עֶזְרָה!",
+"en":"help!",
+"tr":"ezra!",
+"clip":{
+"kind":"word",
+"id":"help-01"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"e.needdoctor",
+"src":"phrasebook:help-02",
+"he":"אֲנִי צָרִיךְ רוֹפֵא",
+"en":"I need a doctor",
+"tr":"ani tsarich rofe",
+"clip":{
+"kind":"line",
+"id":"help-02-m"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"e.callpolice",
+"src":"phrasebook:help-03",
+"he":"תִּקְרָא לַמִּשְׁטָרָה",
+"en":"call the police",
+"tr":"tikra lamishtara",
+"clip":{
+"kind":"line",
+"id":"help-03-m"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"e.callamb",
+"src":"phrasebook:help-04",
+"he":"תִּקְרָא לְאַמְבּוּלַנְס",
+"en":"call an ambulance",
+"tr":"tikra le'ambulans",
+"clip":{
+"kind":"line",
+"id":"help-04-m"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"e.lostpassport",
+"src":"phrasebook:help-05",
+"he":"אָבַד לִי הַדַּרְכּוֹן",
+"en":"I lost my passport",
+"tr":"avad li hadarkon",
+"clip":{
+"kind":"line",
+"id":"help-05"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"e.lostphone",
+"src":"phrasebook:help-06",
+"he":"אָבַד לִי הַטֶּלֶפוֹן",
+"en":"I lost my phone",
+"tr":"avad li hatelefon",
+"clip":{
+"kind":"line",
+"id":"help-06"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"e.usephone",
+"src":"phrasebook:help-09",
+"he":"אֶפְשָׁר לְהִשְׁתַּמֵּשׁ בַּטֶּלֶפוֹן שֶׁלְּךָ?",
+"en":"can I use your phone?",
+"tr":"efshar lehishtamesh batelefon shelcha?",
+"clip":{
+"kind":"line",
+"id":"help-09"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"e.emergency",
+"src":"lessons:I-46:0",
+"he":"חֵרוּם",
+"en":"emergency",
+"clip":{
+"kind":"word",
+"id":"i-46-w1"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"e.police",
+"src":"lessons:I-46:1",
+"he":"מִשְׁטָרָה",
+"en":"police",
+"clip":{
+"kind":"word",
+"id":"i-46-w2"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"e.ambulance",
+"src":"lessons:I-46:2",
+"he":"אַמְבּוּלַנְס",
+"en":"ambulance",
+"clip":{
+"kind":"word",
+"id":"i-46-w3"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"e.fire",
+"src":"lessons:I-46:5",
+"he":"שְׂרֵפָה",
+"en":"fire",
+"clip":{
+"kind":"word",
+"id":"i-46-w6"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"e.thief",
+"src":"lessons:I-46:6",
+"he":"גַּנָּב",
+"en":"thief",
+"clip":{
+"kind":"word",
+"id":"i-46-w7"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"e.urgent",
+"src":"lessons:I-46:4",
+"he":"דָּחוּף",
+"en":"urgent",
+"clip":{
+"kind":"word",
+"id":"i-46-w5"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"e.broken",
+"src":"lessons:I-44:0",
+"he":"שָׁבוּר",
+"en":"broken",
+"clip":{
+"kind":"word",
+"id":"i-44-w1"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"e.electric",
+"src":"lessons:I-44:3",
+"he":"חַשְׁמַל",
+"en":"electricity",
+"clip":{
+"kind":"word",
+"id":"i-44-w4"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"e.electrician",
+"src":"lessons:I-44:4",
+"he":"חַשְׁמַלַּאי",
+"en":"electrician",
+"clip":{
+"kind":"word",
+"id":"i-44-w5"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"e.landlord",
+"src":"lessons:I-44:7",
+"he":"בַּעַל הַבַּיִת",
+"en":"the landlord",
+"clip":{
+"kind":"word",
+"id":"i-44-w8"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"e.lock",
+"src":"lessons:I-44:1",
+"he":"מַנְעוּל",
+"en":"lock",
+"clip":{
+"kind":"word",
+"id":"i-44-w2"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"e.fridge",
+"src":"lessons:I-44:5",
+"he":"מְקָרֵר",
+"en":"refrigerator",
+"clip":{
+"kind":"word",
+"id":"i-44-w6"
+},
+"review":"lesson word, not native-checked"
+},
+{
+"key":"e.notunderstand",
+"src":"phrasebook:fillers-14",
+"he":"אֲנִי לֹא מֵבִין",
+"en":"I don't understand",
+"tr":"ani lo mevin",
+"clip":{
+"kind":"line",
+"id":"fillers-14-m"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"e.english",
+"src":"phrasebook:fillers-16",
+"he":"אַתָּה מְדַבֵּר אַנְגְּלִית?",
+"en":"do you speak English?",
+"tr":"ata medaber anglit?",
+"clip":{
+"kind":"line",
+"id":"fillers-16-m"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"x.sababa",
+"src":"phrasebook:politeness-12",
+"he":"סַבָּבָה",
+"en":"cool, fine by me",
+"sourceEn":"cool / great / fine by me",
+"tr":"sababa",
+"clip":{
+"kind":"word",
+"id":"politeness-12"
+},
+"review":"native-speaker-needed: slang/register and spelling"
+},
+{
+"key":"g.please",
+"src":"phrasebook:politeness-03",
+"he":"בְּבַקָּשָׁה",
+"en":"please",
+"sourceEn":"please / you're welcome",
+"tr":"bevakasha",
+"clip":{
+"kind":"word",
+"id":"politeness-03"
+},
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"t.week",
+"src":"phrasebook:greetings-08",
+"slice":[
+0,
+1
+],
+"he":"שָׁבוּעַ",
+"en":"week",
+"sourceEn":"good week",
+"tr":"shavua",
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"x.tourist",
+"src":"phrasebook:small-talk-05",
+"slice":[
+1,
+2
+],
+"he":"תַּיָּר",
+"en":"tourist",
+"sourceEn":"I'm a tourist",
+"tr":"tayar",
+"review":"native-speaker-needed: pointing and register"
+},
+{
+"key":"m.menu",
+"src":"vocab5000:vb64da690",
+"he":"תַּפְרִיט",
+"en":"menu",
+"review":"vocab5000 entry, not proofread"
+}
+]
+}

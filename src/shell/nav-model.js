@@ -5,6 +5,7 @@
 import { ROUTES } from './router.js'; // lane g1
 
 
+import { G4_NAMES } from './g4-routes.js'; // lane 4 (g4)
 export const SECTIONS = [
   { id: 'learn',    labelKey: 'nav.section.learn',    descKey: 'nav.section.learn.desc',    heKey: 'nav.learn', primary: ['learn'] },
   { id: 'read',     labelKey: 'nav.section.read',     descKey: 'nav.section.read.desc',     heKey: 'nav.read',  primary: ['readhub', 'read'] },
@@ -31,6 +32,7 @@ export const SECTION_ROUTES = {
     'tg-tilepairs', 'tg-letterhunt', 'tg-numerals', 'tg-wordguess', 'tg-torahwords', 'tg-family', 'tg-verbslots', 'tg-storyorder', 'tg-whosaid', 'tg-parashah', 'tg-tropehunt', 'tg-holidays',
     ...G1, // lane g1
     ...ROUTES.filter((r) => r.name.startsWith('g3-')).map((r) => r.name), // lane g3
+    ...G4_NAMES, // lane 4 (g4)
     'tugowar', 'vowelcatcher', 'pinball', 'prefixblast', 'memorypalace', 'shabbatrush', 'typewriter', 'petclinic', 'trainswitch', 'weatherstudio',
     'rentalagent', 'echochamber', 'museumcurator', 'karaokebeat', 'archbuilder', 'lasermaze', 'roottree', 'letterbridge', 'shadowcraft', 'ciphergrid',
     'shuktaxi', 'barter', 'submarinesonar', 'rhymelab', 'bumperverbs', 'bumpercar', 'traintrack', 'weatherpresenter', 'karaoke', 'cipher', 'fleamarket'],
@@ -70,7 +72,8 @@ export const PREVIEW_HIDDEN = new Set(['scheduler', 'known-words', 'time-budget'
   // the Hanukkah games: one section in the games hub
   'hanukkah-dreidel1', 'hanukkah-dreidel2', 'hanukkah-candles', 'hanukkah-count', 'hanukkah-pairs', 'hanukkah-colour', 'hanukkah-gelthunt', 'hanukkah-slide', 'hanukkah-hiddenlights', 'hanukkah-jumble', 'hanukkah-saveflame', 'hanukkah-charades', 'hanukkah-forbidden',
   ...G1, // lane g1
-  ...G2_ROUTES]); // lane g2
+  ...G2_ROUTES, // lane g2
+  ...G4_NAMES]); // lane 4 (g4): one section in the games hub
 
 export const isStatic = (r) => !r.pattern.includes(':');
 /** Release tier of a route: 'v0' only when router.js says so; anything else is 'preview'. */

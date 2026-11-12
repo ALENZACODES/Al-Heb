@@ -3,6 +3,7 @@
 // the menu is what already exists in i18n.js `he` (looked up with tHe); sections without an existing label show English only.
 import { en } from './i18n.js';
 import { ROUTES } from './router.js'; // lane g1 labels
+import { G4_ROUTES } from './g4-routes.js'; // lane 4 (g4)
 
 export const NAV_EN = {
   'nav.ask': 'Ask the Torah',
@@ -87,6 +88,7 @@ export const NAV_EN = {
   // lane g2: labels are the router titles
   ...Object.fromEntries(ROUTES.filter((r) => r.name.startsWith('g2-')).map((r) => ['nav.route.' + r.name, r.title])),
   ...Object.fromEntries(ROUTES.filter((r) => r.name.startsWith('g3-')).map((r) => ['nav.route.' + r.name, r.title])), // lane g3
+  ...Object.fromEntries(G4_ROUTES.map(([id, title]) => ['nav.route.g4-' + id, title])), // lane 4 (g4)
   'nav.route.wordfinder': 'Hebrew Word Finder: Level 1',
   'nav.route.tugowar': 'Antonym Tug-of-War',
   'nav.route.vowelcatcher': 'Vowel Catcher',

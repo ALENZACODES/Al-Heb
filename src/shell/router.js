@@ -10,6 +10,7 @@
  * the route on Home under "More ways to learn" instead of the nav bar.
  */
 /** @type {RouteDef[]} Module paths are relative to src/shell/. */
+import { G4_ROUTES } from './g4-routes.js'; // lane 4 (g4)
 export const ROUTES = [
   { name: 'home',     pattern: '/',               module: './home.view.js', tier: 'v0',                      nav: 'nav.home',     title: 'Home', owner: 'lane8' },
   { name: 'learn',    pattern: '/learn',          module: '../curriculum/learn.view.js', tier: 'v0',         nav: 'nav.learn',    title: 'Learn', owner: 'lane1' },
@@ -122,6 +123,7 @@ export const ROUTES = [
   // lane g3: Grammar in Action
   ...'conveyor:Tense Conveyor|lostfound:Lost and Found|whack:Article Whack|onetwomany:One, Two, Many|questions:Question Radar|packcheck:Pack Check|clues:Pattern Clues|gate:Pattern Gate|grid:Ending Grid|arrows:Gift Arrows|agree:Agreement Match|negate:Not-Word Gap|swapfix:Swap Fix|mirror:Mirror Flip|shop:Counting Shop|chains:Chain Links|press:Pattern Press|sieve:Letter Sieve|repair:Repair Shop|decoder:Ending Decoder'
     .split('|').map((x) => { const [n, title] = x.split(':'), name = 'g3-' + n; return { name, pattern: '/' + name, module: `../games/${name}.view.js`, title, tier: 'preview', owner: 'games' }; }),
+  ...G4_ROUTES.map(([id, title]) => ({ name: 'g4-' + id, pattern: '/g4-' + id, module: `../games/g4-${id}.view.js`, title, tier: 'preview', owner: 'games' })), // lane 4 (g4): Everyday Israel games
   { name: 'wordfinder', pattern: '/wordfinder', module: '../games/wordfinder.view.js', title: 'Hebrew Word Finder: Level 1', tier: 'preview', owner: 'games' },
   { name: 'tugowar', pattern: '/tugowar', module: '../games/tugowar.view.js', title: 'Antonym Tug-of-War', tier: 'preview', owner: 'games' },
   { name: 'vowelcatcher', pattern: '/vowelcatcher', module: '../games/vowelcatcher.view.js', title: 'Vowel Catcher', tier: 'preview', owner: 'games' },

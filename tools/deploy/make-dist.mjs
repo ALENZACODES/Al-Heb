@@ -25,6 +25,7 @@ export const EXTRAS = [
   ['_headers', 'Cloudflare Pages headers'],
   ['robots.txt', 'search crawler rules'],
   ['sitemap.xml', 'search sitemap for the app shell'],
+  ['audit/asset-check.json', 'evidence that the deploy-time asset check passed for this build (tools/deploy/check-assets.mjs; only if the file exists)'],
   ['_redirects', 'Cloudflare Pages redirects (only if the file exists)'],
   ['assets/vendor', 'vendored Tesseract OCR (lazy, runtime-cached; includes licence texts)'],
   ['assets/workbook', 'printable workbook PDFs + manifest (linked from the app, downloaded on demand)'],

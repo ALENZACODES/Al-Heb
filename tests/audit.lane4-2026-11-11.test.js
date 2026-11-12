@@ -133,7 +133,8 @@ test('S-08: sitemap.xml lists the main public pages and is what the router gener
   const n = (xml.match(/<url>/g) || []).length;
   assert.ok(n >= 20, `${n} URLs`);
   for (const p of ['/learn', '/letters', '/books', '/games', '/synagogues', '/calendar']) assert.ok(xml.includes(`/#${p}</loc>`), p);
-  assert.doesNotMatch(xml, /:id|:group|#\/settings/);
+  // M-05 (12 Nov, lane 2): every route without a parameter is listed now, utility screens included; parameters are always filled in
+  assert.doesNotMatch(xml, /\/:[A-Za-z]/);
 });
 
 test('S-11: a held clip is named as held where it falls back', () => {

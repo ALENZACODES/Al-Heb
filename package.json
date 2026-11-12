@@ -9,6 +9,8 @@
     "serve": "node tools/serve.mjs",
     "smoke": "node tools/smoke.mjs",
     "precache": "node tools/build-precache.mjs",
+    "release": "node tools/build-precache.mjs --stamp && node tools/seo/build-sitemap.mjs && node tools/audio/coverage.mjs --write && node tools/counts/build-counts.mjs --check",
+    "check:assets": "node tools/deploy/check-assets.mjs",
     "test:browser": "node tools/test/run.mjs browser",
     "test:all": "node tools/test/run.mjs all",
     "test:profile": "node tools/test/profile.mjs"

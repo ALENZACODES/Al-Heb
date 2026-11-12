@@ -9,6 +9,7 @@
 import { loadManifestFull } from './manifest_io.mjs';
 import { STATUS_LABELS, isSyntheticStatus } from '../../src/shell/audio-labels.js';
 import fs from 'node:fs';
+import { HOLD_SETS, reconcileHoldSets } from './hold_sets.mjs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -81,7 +82,12 @@ export function totals(rows) {
 
 const pct = (n, d) => (d ? `${((100 * n) / d).toFixed(1)}%` : 'n/a');
 
-export function renderMarkdown(manifest) {
+/** data/lab/clip-holds.json paths ([] when the file is missing). */
+export function readHolds(root = ROOT) {
+  try { return JSON.parse(fs.readFileSync(path.join(root, 'data/lab/clip-holds.json'), 'utf8')).paths || []; } catch { return []; }
+}
+
+export function renderMarkdown(manifest, holds = readHolds()) {
   const rows = computeCoverage(manifest);
   const L = [];
   L.push('# Audio coverage report', '',
@@ -106,6 +112,13 @@ export function renderMarkdown(manifest) {
     }
     L.push('');
   }
+  // M-06: the three hold sets, with their counts over these manifests (tools/audio/hold_sets.mjs explains and reconciles them)
+  const hs = reconcileHoldSets(manifest, holds.filter((p) => manifest.some((e) => e.path === p)));
+  L.push('## Hold sets', '',
+    `- clip-holds: ${hs.counts.clipHolds} of these clips. ${HOLD_SETS.clipHolds}`,
+    `- plays-israeli: ${hs.counts.playsIsraeli} rows (${hs.counts.playsIsraeliTargetHeld} of them play an Israeli clip that is in clip-holds, so they are withheld with it). ${HOLD_SETS.playsIsraeli}`,
+    `- chirpHeld: ${hs.counts.chirpHeld} rows. ${HOLD_SETS.chirpHeld}`,
+    hs.problems.length ? `- **${hs.problems.length} contradictions between the sets** (first: ${hs.problems[0]}).` : '- The three sets do not contradict one another.', '');
   L.push('## Notes', '',
     '- Phrasebook, mnemonic anchor words and the vocabulary of `israel`-track lessons are `scope: israeli-only` (Modern conversational Hebrew): they have no sephardi/ashkenazi entries, and the player plays the israeli clip whatever the congregation setting. This is a product decision recorded in the manifest, not a linguistic finding; change it in tools/audio/build_manifest.mjs if the owner disagrees.',
     '- Existing synthetic clips, missing clips and configured equivalences are counted above from the current manifests. An equivalence is a configured fallback, not a native-speaker approval.',

@@ -230,7 +230,8 @@ export const STORE_KEYS = [
   ['bridge.v1', 'Reading without vowels: your stage for each book and prayer line, and your word and modern-text reads', 'src/bridge/model.js'],
   ['trope.practice.v1', 'Trope practice by aliyah: the portion, aliyah and phrase you were on', 'src/trope/families.js'],
   ['curriculum.progress', 'Completed lessons', 'src/curriculum/dom.js'],
-  ['lesson.checks.v1', 'Quick-check scores (right on the first try, out of how many, when), for your own certificate', 'src/curriculum/passmark.js'], // lane 4
+  ['lesson.checks.v1', 'Quick-check scores (right on the first try, out of how many, when, how long the check took), for your own certificate and lesson record', 'src/curriculum/passmark.js'], // lane 4
+  ['checkpoints.v1', 'Checkpoint test results (right on the first try, out of how many, when, how long), for your checkpoint level', 'src/coursemap/checkpoints.js'], // course lane
   ['srs.cards', 'Review cards for lessons', 'src/curriculum/dom.js'],
   ['srs.vocab', 'Review cards for vocabulary', 'src/vocab/themes.view.js'],
   ['srs.practical', 'Review cards for practical conversation units', 'src/curriculum/practical.view.js'],

@@ -22,5 +22,6 @@ export function courseRing(make, cnt) {
       make('ul', { style: 'list-style:none;padding:0;margin:.4rem 0' },
         key('var(--accent,#1f6f5c)', `Reading path: ${m.read.done} of ${m.read.total}`),
         key('var(--accent-2,#b5651d)', `Israel path: ${m.israel.done} of ${m.israel.total}`)),
-      make('span', { class: 'small muted' }, 'One course, two paths. A lesson counts on either path only after its check is passed.')));
+      make('span', { class: 'small muted' }, 'One course, two paths. A lesson counts on either path only after its check is passed. '),
+      make('a', { href: '#/course-map' }, 'Course map'), ' · ', make('a', { href: '#/benchmarks' }, 'Benchmark map')));
 }

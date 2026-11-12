@@ -66,7 +66,8 @@ export function objectiveCard(el, lesson, questions, rec) {
     o.goals.length ? el('ul', {}, ...o.goals.map((g) => el('li', {}, g))) : null,
     o.goals.length ? el('p', { class: 'muted' }, "These are the course authors' draft goals; no teacher has reviewed them yet.") : null,
     el('p', {}, o.checks),
-    line ? el('p', { class: 'muted', 'data-record': '' }, line) : null);
+    line ? el('p', { class: 'muted', 'data-record': '' }, line) : null,
+    el('p', { class: 'small' }, el('a', { href: '#/course-map' }, 'Where this lesson sits in the course map')));
 }
 /** "What You Proved" card for the end of a passed check (or "Not proved yet" below the pass mark). */
 export function provedCard(el, questions, results) {

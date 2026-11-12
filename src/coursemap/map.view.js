@@ -37,7 +37,8 @@ export function mount(root, ctx) {
   const wrap = el('section', { class: 'alef-cmap', 'aria-labelledby': 'view-title' });
   const h1 = el('h1', { id: 'view-title', tabindex: '-1' }, 'Course Map');
   const body = el('div', {}, el('p', {}, 'Loading the map...'));
-  wrap.append(h1, el('p', { class: 'muted' }, 'Every lesson and what it needs first. Filled dot: done. Ringed dot: open. Faint dot: locked. The thick ring is where you are. Tap a dot to open the lesson.'), body);
+  const tools = el('p', { class: 'row' }, ...[['#/checkpoints', 'Checkpoint tests'], ['#/mixed-review', 'Mixed review'], ['#/five-minutes', 'Daily five-minute set'], ['#/benchmarks', 'Benchmark map'], ['#/app-rules', 'Rules']].map(([href, t]) => el('a', { class: 'btn secondary', href }, t)));
+  wrap.append(h1, tools, el('p', { class: 'muted' }, 'Every lesson and what it needs first. Filled dot: done. Ringed dot: open. Faint dot: locked. The thick ring is where you are. Tap a dot to open the lesson.'), body);
   root.append(wrap);
   (async () => {
     try {

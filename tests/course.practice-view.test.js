@@ -52,3 +52,28 @@ test("daily set: shows its plan (due, new item, game round)", async () => {
   assert.match(root.text, /Daily Five-Minute Set/); assert.match(root.text, /due review card/); assert.match(root.text, /One new item from r02/); assert.match(root.text, /One game round: Spot It/);
   off();
 });
+
+test("checkpoints view: list with levels; a passed checkpoint opens the next 10 lessons early and offers to move the start", async () => {
+  const { mount: cp } = await import("../src/coursemap/checkpoints.view.js");
+  const store = memStore();
+  let root = new N("div"); let off = cp(root, { store, settings: { get: () => undefined }, query: {} });
+  await waitFor(() => /Checkpoint level/.test(root.text));
+  assert.match(root.text, /Checkpoint level: 0 of 7/); assert.match(root.text, /Checkpoint 1: r01 to r10/); off();
+  root = new N("div"); off = cp(root, { store, settings: { get: () => undefined }, query: { block: "read-1" } });
+  await waitFor(() => root.find((n) => n.attrs["data-ex"]).length);
+  const { lessons } = await import("../src/curriculum/lessons.js"); const { loadContent } = await import("../src/curriculum/content.js");
+  const C = await import("../src/coursemap/checkpoints.js"); const qs = C.checkpointQuestions(C.blocks(lessons)[0], lessons, await loadContent());
+  for (let g = 0; g < 40 && !/Checkpoint Passed|Not Passed/.test(root.text); g++) {
+    const id = root.find((n) => n.attrs["data-ex"])[0]?.attrs["data-ex"]; const q = qs.find((x) => x.id === id);
+    if (q) { const b = root.find((n) => n.tag === "button" && n.attrs["data-n"] === String(q.answerIndex + 1))[0]; if (b && !b.disabled) await b.click(); }
+    const next = root.find((n) => n.attrs["data-act"] === "next" && !n.hidden)[0]; if (next) await next.click();
+    await new Promise((r) => setTimeout(r, 0));
+  }
+  await waitFor(() => /Checkpoint Passed/.test(root.text));
+  assert.equal(Object.keys(store.m["curriculum.unlocked"]).length, 10); assert.ok(store.m["curriculum.unlocked"].r11);
+  assert.equal(store.m["curriculum.progress"], undefined, "nothing is marked done");
+  assert.ok(store.m["checkpoints.v1"]["read-1"].pass);
+  const btn = root.find((n) => n.attrs.id === "cp-replace")[0]; assert.ok(btn); await btn.click();
+  assert.equal(store.m["placement.v1"].result.start, "r11");
+  off();
+});

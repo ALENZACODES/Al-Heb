@@ -1,20 +1,35 @@
 {
  "status": "tts",
- "source": "paid-cloud",
- "engine": "stitched-from-word-clips",
- "voiceId": "he-IL-Wavenet-A",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Chirp3-HD-Kore",
  "tradition": "israeli",
  "inputText": "וַיְכֻלּוּ הַשָּׁמַיִם וְהָאָרֶץ וְכָל־צְבָאָם׃",
  "inputSha256": "24d857b43913573d29156fd1fce04ae7d16b6d41a395430714a80091c460d7fe",
- "ingestedAt": null,
+ "ingestedAt": "2026-11-12T02:20:03.724Z",
  "licence": "customer-owned",
- "note": "Joined from its word clips because the whole-sentence render misread words; the joined version had fewer misheard words in the speech-to-text check (docs/audio/ASR-LINES-FIX.md).",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-12T02:20:03.724Z",
+ "redistributionCleared": false,
+ "spokenText": "וַיְכֻלּוּ הַשָּׁמַיִם וְהָאָרֶץ וְכָל צְבָאָם",
+ "normalized": true,
  "inputTextKind": "hebrew",
- "stitchedFromText": "וַיְכֻלּוּ הַשָּׁמַיִם וְהָאָרֶץ וְכָל־צְבָאָם׃",
- "stitchedFrom": [
-  "audio/f/israeli/word/kiddush-gen-2-1-3-w1.mp3",
-  "audio/f/israeli/word/kiddush-gen-2-1-3-w2.mp3",
-  "audio/f/israeli/word/kiddush-gen-2-1-3-w3.mp3",
-  "audio/f/israeli/word/kiddush-gen-2-1-3-w4.mp3"
- ]
+ "speakingRate": 0.85,
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [
+   "הַשָּׁמַיִם"
+  ],
+  "google": {
+   "heard": "ויכלו השמים והארץ וכל צבאם",
+   "acc": 1.0,
+   "issues": []
+  },
+  "reviewersFailing": 1
+ },
+ "replaced": {
+  "voiceId": "he-IL-Wavenet-A",
+  "engine": "stitched-from-word-clips",
+  "renderedAt": null
+ }
 }

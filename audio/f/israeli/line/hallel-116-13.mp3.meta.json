@@ -2,30 +2,28 @@
  "status": "tts",
  "source": "tts:google",
  "engine": "google",
- "voiceId": "he-IL-Chirp3-HD-Kore",
+ "voiceId": "he-IL-Wavenet-A",
  "tradition": "israeli",
  "inputText": "כּוֹס־יְשׁוּעוֹת אֶשָּׂא וּבְשֵׁם אֲדֹנָי אֶקְרָא׃",
  "inputSha256": "204daa47db0202fa61c4b589471741abf6dd61ac2044a7e84ddbaa49d0932388",
- "ingestedAt": "2026-11-11T23:59:08.369Z",
+ "ingestedAt": "2026-11-11T23:15:24.442Z",
  "licence": "customer-owned",
  "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
- "renderedAt": "2026-11-11T23:59:08.369Z",
+ "renderedAt": "2026-11-11T23:15:24.442Z",
  "redistributionCleared": false,
  "spokenText": "כּוֹס יְשׁוּעוֹת אֶשָּׂא וּבְשֵׁם אֲדֹנָי אֶקְרָא",
  "normalized": true,
  "inputTextKind": "hebrew",
  "review": {
-  "phonemeWeak": [
-   "אֶקְרָא"
-  ],
+  "phonemeWeak": [],
   "wordIssues": [
-   "וּבְשֵׁם"
+   "אֶקְרָא"
   ],
   "google": {
    "heard": "כוס ישועות אשא ובשם אדוני אקרא",
    "acc": 1.0,
    "issues": []
   },
-  "reviewersFailing": 2
+  "reviewersFailing": 1
  }
 }

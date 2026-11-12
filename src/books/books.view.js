@@ -42,7 +42,7 @@ export async function mount(root, ctx) {
     const marks = [];
     // Learner-facing marks only: what the book does for the reader, not how far production has got.
     if (b.hasAudio) marks.push("Read aloud by Ari and Noa");
-    else if (b.audioPages > 0) marks.push(`Read aloud by Ari and Noa on ${b.audioPages} of ${b.pageCount} pages${b.audioHeldPages ? `; ${b.audioHeldPages} ${b.audioHeldPages === 1 ? "page that says" : "pages that say"} the divine name ${b.audioHeldPages === 1 ? "is" : "are"} not read aloud until its reading is decided` : ""}`); // S-04: say how much, never nothing
+    else if (b.audioPages > 0) marks.push(`Read aloud by Ari and Noa on ${b.audioPages} of ${b.pageCount} pages${b.audioHeldPages ? `; ${b.audioHeldPages} ${b.audioHeldPages === 1 ? "page is" : "pages are"} held for review` : ""}`); // S-04: say how much, never nothing
     if (places[b.id] && places[b.id].finishedAt) marks.push("Finished");
     return h("a", { class: "card book-card", href: `#/book/${b.id}` },
       cover,

@@ -1,28 +1,35 @@
 {
  "status": "tts",
- "source": "paid-cloud",
- "engine": "stitched-from-word-clips",
- "voiceId": "he-IL-Wavenet-B",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Chirp3-HD-Orus",
  "tradition": "israeli",
  "inputText": "עֹשֶׂה שָׁלוֹם בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן׃",
  "inputSha256": "5b5048cc59b6082a065f0bf838ac826bc4f2a7f893456d99bc8203a8d13dc5f2",
- "ingestedAt": null,
+ "ingestedAt": "2026-11-12T02:38:46.502Z",
  "licence": "customer-owned",
- "note": "Joined from its word clips because the whole-sentence render misread words; the joined version had fewer misheard words in the speech-to-text check (docs/audio/ASR-LINES-FIX.md).",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-12T02:38:46.502Z",
+ "redistributionCleared": false,
+ "spokenText": "עֹשֶׂה שָׁלוֹם בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן",
+ "normalized": true,
  "inputTextKind": "hebrew",
- "stitchedFromText": "עֹשֶׂה שָׁלוֹם בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן׃",
- "stitchedFrom": [
-  "audio/m/israeli/word/oseh-shalom-w1.mp3",
-  "audio/m/israeli/word/anchor-shin.mp3",
-  "audio/m/israeli/word/kaddish-1-w60.mp3",
-  "audio/m/israeli/word/aleinu-1-w39.mp3",
-  "audio/m/israeli/word/kaddish-1-w62.mp3",
-  "audio/m/israeli/word/anchor-shin.mp3",
-  "audio/m/israeli/word/aleinu-1-w1.mp3",
-  "audio/m/israeli/word/haftarah-after-w106.mp3",
-  "audio/m/israeli/word/adon-olam-1-w6.mp3",
-  "audio/m/israeli/word/brich-shmei-w115.mp3",
-  "audio/m/israeli/word/kaddish-1-w19.mp3",
-  "audio/m/israeli/word/haftarah-after-w143.mp3"
- ]
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [
+   "שָׁלוֹם",
+   "שָׁלוֹם"
+  ],
+  "google": {
+   "heard": "עושה שלום במרומיו הוא יעשה שלום עלינו ועל כל ישראל ואמרו אמן",
+   "acc": 1.0,
+   "issues": []
+  },
+  "reviewersFailing": 1
+ },
+ "replaced": {
+  "voiceId": "he-IL-Wavenet-B",
+  "engine": "stitched-from-word-clips",
+  "renderedAt": null
+ }
 }

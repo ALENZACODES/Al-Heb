@@ -1,23 +1,35 @@
 {
  "status": "tts",
- "source": "paid-cloud",
- "engine": "stitched-from-word-clips",
- "voiceId": "he-IL-Wavenet-A",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Chirp3-HD-Kore",
  "tradition": "israeli",
  "inputText": "וְהוּא הָיָה וְהוּא הֹוֶה וְהוּא יִהְיֶה בְּתִפְאָרָה׃",
  "inputSha256": "331af19fa4b1ca02842eb84f4163dad722778fc76a8b8c7404dadc19c9184fce",
- "ingestedAt": null,
+ "ingestedAt": "2026-11-12T02:10:49.473Z",
  "licence": "customer-owned",
- "note": "Joined from word clips; weak words swapped for the take the sound review heard best (docs/audio/PHONEME-REVIEW.md, tools/audio/asr-check/word-pick-log.jsonl).",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-12T02:10:49.473Z",
+ "redistributionCleared": false,
+ "spokenText": "וְהוּא הָיָה וְהוּא הֹוֶה וְהוּא יִהְיֶה בְּתִפְאָרָה",
+ "normalized": true,
  "inputTextKind": "hebrew",
- "stitchedFromText": "וְהוּא הָיָה וְהוּא הֹוֶה וְהוּא יִהְיֶה בְּתִפְאָרָה׃",
- "stitchedFrom": [
-  "audio/f/israeli/word/adon-olam-1-w23.mp3",
-  "audio/f/israeli/word/adon-olam-1-w24.mp3",
-  "audio/f/israeli/word/adon-olam-1-w23.mp3",
-  "audio/f/israeli/word/adon-olam-1-w26.mp3",
-  "audio/f/israeli/word/adon-olam-1-w23.mp3",
-  "audio/f/israeli/word/adon-olam-1-w28.mp3",
-  "audio/f/israeli/word/adon-olam-1-w29.mp3"
- ]
+ "speakingRate": 0.85,
+ "review": {
+  "phonemeWeak": [
+   "בְּתִפְאָרָה"
+  ],
+  "wordIssues": [],
+  "google": {
+   "heard": "והוא היה והוא הווה והוא יהיה בתפארה",
+   "acc": 1.0,
+   "issues": []
+  },
+  "reviewersFailing": 1
+ },
+ "replaced": {
+  "voiceId": "he-IL-Wavenet-A",
+  "engine": "stitched-from-word-clips",
+  "renderedAt": null
+ }
 }

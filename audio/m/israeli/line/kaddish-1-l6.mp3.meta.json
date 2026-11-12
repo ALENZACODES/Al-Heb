@@ -1,25 +1,35 @@
 {
  "status": "tts",
- "source": "paid-cloud",
- "engine": "stitched-from-word-clips",
- "voiceId": "he-IL-Wavenet-B",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Chirp3-HD-Charon",
  "tradition": "israeli",
  "inputText": "יְהֵא שְׁלָמָא רַבָּא מִן־שְׁמַיָּא וְחַיִּים עָלֵינוּ וְעַל־כָּל־יִשְׂרָאֵל וְאִמְרוּ אָמֵן׃",
  "inputSha256": "0dd28e93e9d70ca96497a9c12bb3812e6f8d8acb9e68c78f3f1be0d8b7ddba35",
- "ingestedAt": null,
+ "ingestedAt": "2026-11-12T02:31:28.423Z",
  "licence": "customer-owned",
- "note": "Joined from its word clips because the whole-sentence render misread words; the joined version had fewer misheard words in the speech-to-text check (docs/audio/ASR-LINES-FIX.md).",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-12T02:31:28.423Z",
+ "redistributionCleared": false,
+ "spokenText": "יְהֵא, שְׁלָמָא, רַבָּא, מִן, שְׁמַיָּא, וְחַיִּים, עָלֵינוּ, וְעַל, כָּל, יִשְׂרָאֵל, וְאִמְרוּ, אָמֵן.",
+ "normalized": true,
  "inputTextKind": "hebrew",
- "stitchedFromText": "יְהֵא שְׁלָמָא רַבָּא מִן־שְׁמַיָּא וְחַיִּים עָלֵינוּ וְעַל־כָּל־יִשְׂרָאֵל וְאִמְרוּ אָמֵן׃",
- "stitchedFrom": [
-  "audio/m/israeli/word/brich-shmei-w104.mp3",
-  "audio/m/israeli/word/kaddish-1-w50.mp3",
-  "audio/m/israeli/word/kaddish-1-w23.mp3",
-  "audio/m/israeli/word/kaddish-1-w52.mp3",
-  "audio/m/israeli/word/kaddish-1-w53.mp3",
-  "audio/m/israeli/word/aleinu-1-w1.mp3",
-  "audio/m/israeli/word/kaddish-1-w55.mp3",
-  "audio/m/israeli/word/kaddish-1-w19.mp3",
-  "audio/m/israeli/word/haftarah-after-w143.mp3"
- ]
+ "speakingRate": 0.9,
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [
+   "וְחַיִּים"
+  ],
+  "google": {
+   "heard": "יהא שלמא רבא מן שמיא וחיים עלינו ועל כל ישראל ואמרו אמן",
+   "acc": 1.0,
+   "issues": []
+  },
+  "reviewersFailing": 1
+ },
+ "replaced": {
+  "voiceId": "he-IL-Wavenet-B",
+  "engine": "stitched-from-word-clips",
+  "renderedAt": null
+ }
 }

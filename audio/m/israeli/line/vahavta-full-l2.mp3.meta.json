@@ -1,24 +1,35 @@
 {
  "status": "tts",
- "source": "paid-cloud",
- "engine": "stitched-from-word-clips",
- "voiceId": "he-IL-Wavenet-B",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Chirp3-HD-Charon",
  "tradition": "israeli",
  "inputText": "וְהָיוּ הַדְּבָרִים הָאֵלֶּה אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם עַל־לְבָבֶךָ׃",
  "inputSha256": "3e3d929d0b6fba0ae2b4e42e5d8ca67ca1b0c35e536285d377eed39763046f4a",
- "ingestedAt": null,
+ "ingestedAt": "2026-11-12T02:30:30.539Z",
  "licence": "customer-owned",
- "note": "Joined from its word clips because the whole-sentence render misread words; the joined version had fewer misheard words in the speech-to-text check (docs/audio/ASR-LINES-FIX.md).",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-12T02:30:30.539Z",
+ "redistributionCleared": false,
+ "spokenText": "וְהָיוּ הַדְּבָרִים הָאֵלֶּה אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם עַל לְבָבֶךָ",
+ "normalized": true,
  "inputTextKind": "hebrew",
- "stitchedFromText": "וְהָיוּ הַדְּבָרִים הָאֵלֶּה אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם עַל־לְבָבֶךָ׃",
- "stitchedFrom": [
-  "audio/m/israeli/word/shema-vahavta-w14.mp3",
-  "audio/m/israeli/word/shema-vahavta-w15.mp3",
-  "audio/m/israeli/word/shema-vahavta-w16.mp3",
-  "audio/m/israeli/word/adon-olam-1-w3.mp3",
-  "audio/m/israeli/word/h8eec7f08.mp3",
-  "audio/m/israeli/word/shema-vahavta-w19.mp3",
-  "audio/m/israeli/word/aleinu-1-w65.mp3",
-  "audio/m/israeli/word/shema-vahavta-w21.mp3"
- ]
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [
+   "אֲשֶׁר",
+   "הַיּוֹם"
+  ],
+  "google": {
+   "heard": "והיו הדברים האלה אשר אנוכי מצווך היום על לבבך",
+   "acc": 1.0,
+   "issues": []
+  },
+  "reviewersFailing": 1
+ },
+ "replaced": {
+  "voiceId": "he-IL-Wavenet-B",
+  "engine": "stitched-from-word-clips",
+  "renderedAt": null
+ }
 }

@@ -1,13 +1,33 @@
 {
  "status": "tts",
- "source": "paid-cloud",
- "engine": "google-cloud-tts",
- "voiceId": "he-IL-Wavenet-A",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Chirp3-HD-Kore",
  "tradition": "israeli",
  "inputText": "בָּרְכוּ אֶת אֲדֹנָי הַמְּבֹרָךְ׃ בָּרוּךְ אֲדֹנָי הַמְּבֹרָךְ לְעוֹלָם וָעֶד׃",
  "inputSha256": "3f91e591c9077a228fd5d5060ee21ab8db76d95f35fb90f91fb709b87bbaa364",
- "ingestedAt": null,
+ "ingestedAt": "2026-11-12T02:21:47.733Z",
  "licence": "customer-owned",
- "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
- "inputTextKind": "hebrew"
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-12T02:21:47.733Z",
+ "redistributionCleared": false,
+ "spokenText": "בָּרְכוּ אֶת אֲדֹנָי הַמְּבֹרָךְ בָּרוּךְ אֲדֹנָי הַמְּבֹרָךְ לְעוֹלָם וָעֶד",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "speakingRate": 0.85,
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [],
+  "google": {
+   "heard": "ברכו את אדוני המבורך ברוך אדוני המבורך לעולם ועד",
+   "acc": 1.0,
+   "issues": []
+  },
+  "reviewersFailing": 0
+ },
+ "replaced": {
+  "voiceId": "he-IL-Wavenet-A",
+  "engine": "google-cloud-tts",
+  "renderedAt": null
+ }
 }

@@ -1,13 +1,33 @@
 {
  "status": "tts",
- "source": "paid-cloud",
- "engine": "google-cloud-tts",
- "voiceId": "he-IL-Wavenet-A",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Chirp3-HD-Kore",
  "tradition": "israeli",
  "inputText": "וְעִם רוּחִי גְּוִיָּתִי אֲדֹנָי לִי וְלֹא אִירָא׃",
  "inputSha256": "01aca2d86b565652b300924feec2ae1094c03572c80b6e8c637050ee5847dc13",
- "ingestedAt": null,
+ "ingestedAt": "2026-11-12T02:10:33.624Z",
  "licence": "customer-owned",
- "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
- "inputTextKind": "hebrew"
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-12T02:10:33.624Z",
+ "redistributionCleared": false,
+ "spokenText": "וְעִם רוּחִי גְּוִיָּתִי אֲדֹנָי לִי וְלֹא אִירָא",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "speakingRate": 0.85,
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [],
+  "google": {
+   "heard": "ועם רוחי גויתי אדני לי ולא אירא",
+   "acc": 1.0,
+   "issues": []
+  },
+  "reviewersFailing": 0
+ },
+ "replaced": {
+  "voiceId": "he-IL-Wavenet-A",
+  "engine": "google-cloud-tts",
+  "renderedAt": null
+ }
 }

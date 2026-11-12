@@ -1,26 +1,32 @@
 {
  "status": "tts",
- "source": "paid-cloud",
- "engine": "stitched-from-word-clips",
- "voiceId": "he-IL-Wavenet-A",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Chirp3-HD-Aoede",
  "tradition": "israeli",
  "inputText": "יִהְיוּ לְרָצוֹן אִמְרֵי פִי וְהֶגְיוֹן לִבִּי לְפָנֶיךָ אֲדֹנָי צוּרִי וְגוֹאֲלִי׃",
  "inputSha256": "80f2c4e6be5d349aee83fb82ec82c7efd0167405aefcadfa53446565875804c8",
- "ingestedAt": null,
+ "ingestedAt": "2026-11-12T02:11:33.403Z",
  "licence": "customer-owned",
- "note": "Joined from its word clips because the whole-sentence render misread words; the joined version had fewer misheard words in the speech-to-text check (docs/audio/ASR-LINES-FIX.md).",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-12T02:11:33.403Z",
+ "redistributionCleared": false,
+ "spokenText": "יִהְיוּ לְרָצוֹן אִמְרֵי פִי וְהֶגְיוֹן לִבִּי לְפָנֶיךָ אֲדֹנָי צוּרִי וְגוֹאֲלִי",
+ "normalized": true,
  "inputTextKind": "hebrew",
- "stitchedFromText": "יִהְיוּ לְרָצוֹן אִמְרֵי פִי וְהֶגְיוֹן לִבִּי לְפָנֶיךָ אֲדֹנָי צוּרִי וְגוֹאֲלִי׃",
- "stitchedFrom": [
-  "audio/f/israeli/word/amidah-elohai-netzor-w48.mp3",
-  "audio/f/israeli/word/amidah-elohai-netzor-w49.mp3",
-  "audio/f/israeli/word/amidah-elohai-netzor-w50.mp3",
-  "audio/f/israeli/word/amidah-elohai-netzor-w51.mp3",
-  "audio/f/israeli/word/amidah-elohai-netzor-w52.mp3",
-  "audio/f/israeli/word/amidah-elohai-netzor-w16.mp3",
-  "audio/f/israeli/word/amidah-elohai-netzor-w54.mp3",
-  "audio/f/israeli/word/adon-olam-1-w69.mp3",
-  "audio/f/israeli/word/amidah-elohai-netzor-w56.mp3",
-  "audio/f/israeli/word/amidah-elohai-netzor-w57.mp3"
- ]
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [],
+  "google": {
+   "heard": "יהיו לרצון אמרי פי והגיון לבי לפניך אדוני צורי וגואלי",
+   "acc": 1.0,
+   "issues": []
+  },
+  "reviewersFailing": 0
+ },
+ "replaced": {
+  "voiceId": "he-IL-Wavenet-A",
+  "engine": "stitched-from-word-clips",
+  "renderedAt": null
+ }
 }

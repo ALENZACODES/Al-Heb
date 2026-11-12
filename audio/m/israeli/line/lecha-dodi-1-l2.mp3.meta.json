@@ -1,30 +1,36 @@
 {
  "status": "tts",
- "source": "paid-cloud",
- "engine": "stitched-from-word-clips",
- "voiceId": "he-IL-Wavenet-B",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Chirp3-HD-Orus",
  "tradition": "israeli",
  "inputText": "שָׁמוֹר וְזָכוֹר בְּדִבּוּר אֶחָד הִשְׁמִיעָנוּ אֵל הַמְיוּחָד אֲדֹנָי אֶחָד וּשְׁמוֹ אֶחָד לְשֵׁם וּלְתִפְאֶרֶת וְלִתְהִלָּה׃",
  "inputSha256": "21cc0fa27b6393e87318bdad8f4cdc4afe8df9b70fae72792a120b0fee3a51be",
- "ingestedAt": null,
+ "ingestedAt": "2026-11-12T02:28:58.981Z",
  "licence": "customer-owned",
- "note": "Joined from its word clips because the whole-sentence render misread words; the joined version had fewer misheard words in the speech-to-text check (docs/audio/ASR-LINES-FIX.md).",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-12T02:28:58.981Z",
+ "redistributionCleared": false,
+ "spokenText": "שָׁמוֹר וְזָכוֹר בְּדִבּוּר אֶחָד הִשְׁמִיעָנוּ אֵל הַמְיוּחָד אֲדֹנָי אֶחָד וּשְׁמוֹ אֶחָד לְשֵׁם וּלְתִפְאֶרֶת וְלִתְהִלָּה",
+ "normalized": true,
  "inputTextKind": "hebrew",
- "stitchedFromText": "שָׁמוֹר וְזָכוֹר בְּדִבּוּר אֶחָד הִשְׁמִיעָנוּ אֵל הַמְיוּחָד אֲדֹנָי אֶחָד וּשְׁמוֹ אֶחָד לְשֵׁם וּלְתִפְאֶרֶת וְלִתְהִלָּה׃",
- "stitchedFrom": [
-  "audio/m/israeli/word/lecha-dodi-1-w8.mp3",
-  "audio/m/israeli/word/lecha-dodi-1-w9.mp3",
-  "audio/m/israeli/word/lecha-dodi-1-w10.mp3",
-  "audio/m/israeli/word/adon-olam-1-w31.mp3",
-  "audio/m/israeli/word/lecha-dodi-1-w12.mp3",
-  "audio/m/israeli/word/avot-1-w17.mp3",
-  "audio/m/israeli/word/lecha-dodi-1-w14.mp3",
-  "audio/m/israeli/word/adon-olam-1-w69.mp3",
-  "audio/m/israeli/word/adon-olam-1-w31.mp3",
-  "audio/m/israeli/word/lecha-dodi-1-w17.mp3",
-  "audio/m/israeli/word/adon-olam-1-w31.mp3",
-  "audio/m/israeli/word/lecha-dodi-1-w19.mp3",
-  "audio/m/israeli/word/lecha-dodi-1-w20.mp3",
-  "audio/m/israeli/word/lecha-dodi-1-w21.mp3"
- ]
+ "speakingRate": 0.9,
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [
+   "שָׁמוֹר",
+   "לְשֵׁם"
+  ],
+  "google": {
+   "heard": "שמור וזכור בדיבור אחד השמיענו אל המיוחד אדוני אחד ושמו אחד לשם ולתפארת ולתהילה",
+   "acc": 1.0,
+   "issues": []
+  },
+  "reviewersFailing": 1
+ },
+ "replaced": {
+  "voiceId": "he-IL-Wavenet-B",
+  "engine": "stitched-from-word-clips",
+  "renderedAt": null
+ }
 }

@@ -2,30 +2,29 @@
  "status": "tts",
  "source": "tts:google",
  "engine": "google",
- "voiceId": "he-IL-Chirp3-HD-Charon",
+ "voiceId": "he-IL-Wavenet-B",
  "tradition": "israeli",
  "inputText": "יֹאמְרוּ־נָא יִרְאֵי אֲדֹנָי כִּי לְעוֹלָם חַסְדּוֹ׃",
  "inputSha256": "146894e1bb444f719cd00a47196e66192b371b174bddb364394bdf4b808c4e2b",
- "ingestedAt": "2026-11-11T23:58:53.998Z",
+ "ingestedAt": "2026-11-11T23:15:14.844Z",
  "licence": "customer-owned",
  "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
- "renderedAt": "2026-11-11T23:58:53.998Z",
+ "renderedAt": "2026-11-11T23:15:14.844Z",
  "redistributionCleared": false,
  "spokenText": "יֹאמְרוּ נָא יִרְאֵי אֲדֹנָי כִּי לְעוֹלָם חַסְדּוֹ",
  "normalized": true,
  "inputTextKind": "hebrew",
  "review": {
-  "phonemeWeak": [
-   "נָא"
-  ],
+  "phonemeWeak": [],
   "wordIssues": [],
   "google": {
-   "heard": "יאמרו נייר לאדוני כי לעולם חסדו",
-   "acc": 0.286,
+   "heard": "יום רוני ירי אדוניי כי לעולם חסדו",
+   "acc": 0.714,
    "issues": [
-    "יֹאמְרוּ נָא יִרְאֵי אֲדֹנָי כִּי"
+    "יֹאמְרוּ",
+    "נָא"
    ]
   },
-  "reviewersFailing": 2
+  "reviewersFailing": 1
  }
 }

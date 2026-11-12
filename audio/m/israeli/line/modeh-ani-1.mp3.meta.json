@@ -1,28 +1,35 @@
 {
  "status": "tts",
- "source": "paid-cloud",
- "engine": "stitched-from-word-clips",
- "voiceId": "he-IL-Wavenet-B",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Chirp3-HD-Orus",
  "tradition": "israeli",
  "inputText": "מוֹדֶה אֲנִי לְפָנֶיךָ מֶלֶךְ חַי וְקַיָּם שֶׁהֶחֱזַרְתָּ בִּי נִשְׁמָתִי בְּחֶמְלָה רַבָּה אֱמוּנָתֶךָ׃",
  "inputSha256": "d5fc1788e25c334d43c60f919c16f733d446a57d12073814260ada6acc2aa34f",
- "ingestedAt": null,
+ "ingestedAt": "2026-11-12T02:34:07.226Z",
  "licence": "customer-owned",
- "note": "Joined from its word clips because the whole-sentence render misread words; the joined version had fewer misheard words in the speech-to-text check (docs/audio/ASR-LINES-FIX.md).",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-12T02:34:07.226Z",
+ "redistributionCleared": false,
+ "spokenText": "מוֹדֶה אֲנִי לְפָנֶיךָ מֶלֶךְ חַי וְקַיָּם שֶׁהֶחֱזַרְתָּ בִּי נִשְׁמָתִי בְּחֶמְלָה רַבָּה אֱמוּנָתֶךָ",
+ "normalized": true,
  "inputTextKind": "hebrew",
- "stitchedFromText": "מוֹדֶה אֲנִי לְפָנֶיךָ מֶלֶךְ חַי וְקַיָּם שֶׁהֶחֱזַרְתָּ בִּי נִשְׁמָתִי בְּחֶמְלָה רַבָּה אֱמוּנָתֶךָ׃",
- "stitchedFrom": [
-  "audio/m/israeli/word/modeh-ani-1-w1.mp3",
-  "audio/m/israeli/word/h103e7d27.mp3",
-  "audio/m/israeli/word/amidah-elohai-netzor-w54.mp3",
-  "audio/m/israeli/word/adon-olam-1-w14.mp3",
-  "audio/m/israeli/word/h2d58afb3.mp3",
-  "audio/m/israeli/word/modeh-ani-1-w6.mp3",
-  "audio/m/israeli/word/modeh-ani-1-w7.mp3",
-  "audio/m/israeli/word/modeh-ani-1-w8.mp3",
-  "audio/m/israeli/word/modeh-ani-1-w9.mp3",
-  "audio/m/israeli/word/modeh-ani-1-w10.mp3",
-  "audio/m/israeli/word/modeh-ani-1-w11.mp3",
-  "audio/m/israeli/word/modeh-ani-1-w12.mp3"
- ]
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [
+   "שֶׁהֶחֱזַרְתָּ",
+   "נִשְׁמָתִי"
+  ],
+  "google": {
+   "heard": "מודה אני לפניך מלך חי וקיים שהחזרת בי נשמתי בחמלה רבה אמונתך",
+   "acc": 1.0,
+   "issues": []
+  },
+  "reviewersFailing": 1
+ },
+ "replaced": {
+  "voiceId": "he-IL-Wavenet-B",
+  "engine": "stitched-from-word-clips",
+  "renderedAt": null
+ }
 }

@@ -1,23 +1,33 @@
 {
  "status": "tts",
- "source": "paid-cloud",
- "engine": "stitched-from-word-clips",
- "voiceId": "he-IL-Wavenet-B",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Chirp3-HD-Orus",
  "tradition": "israeli",
  "inputText": "לְכָה דוֹדִי לִקְרַאת כַּלָּה פְּנֵי שַׁבָּת נְקַבְּלָה׃",
  "inputSha256": "1fc50f798fbd2ee03599bcaf36f160ad0286546bcb043a8f6cc4e8c9c7f5de4b",
- "ingestedAt": null,
+ "ingestedAt": "2026-11-12T02:31:56.767Z",
  "licence": "customer-owned",
- "note": "Joined from its word clips because the whole-sentence render misread words; the joined version had fewer misheard words in the speech-to-text check (docs/audio/ASR-LINES-FIX.md).",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-12T02:31:56.767Z",
+ "redistributionCleared": false,
+ "spokenText": "לְכָה דוֹדִי לִקְרַאת כַּלָּה פְּנֵי שַׁבָּת נְקַבְּלָה",
+ "normalized": true,
  "inputTextKind": "hebrew",
- "stitchedFromText": "לְכָה דוֹדִי לִקְרַאת כַּלָּה פְּנֵי שַׁבָּת נְקַבְּלָה׃",
- "stitchedFrom": [
-  "audio/m/israeli/word/lecha-dodi-1-w1.mp3",
-  "audio/m/israeli/word/lecha-dodi-1-w2.mp3",
-  "audio/m/israeli/word/lecha-dodi-1-w3.mp3",
-  "audio/m/israeli/word/lecha-dodi-1-w4.mp3",
-  "audio/m/israeli/word/lecha-dodi-1-w5.mp3",
-  "audio/m/israeli/word/candle-shabbat-w14.mp3",
-  "audio/m/israeli/word/lecha-dodi-1-w7.mp3"
- ]
+ "speakingRate": 0.9,
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [],
+  "google": {
+   "heard": "לך דודי לקראת כלה פני שבת נקבלה",
+   "acc": 1.0,
+   "issues": []
+  },
+  "reviewersFailing": 0
+ },
+ "replaced": {
+  "voiceId": "he-IL-Wavenet-B",
+  "engine": "stitched-from-word-clips",
+  "renderedAt": null
+ }
 }

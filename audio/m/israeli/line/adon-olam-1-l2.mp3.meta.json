@@ -1,24 +1,35 @@
 {
  "status": "tts",
- "source": "paid-cloud",
- "engine": "stitched-from-word-clips",
- "voiceId": "he-IL-Wavenet-B",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Chirp3-HD-Charon",
  "tradition": "israeli",
  "inputText": "לְעֵת נַעֲשָׂה בְחֶפְצוֹ כֹּל אֲזַי מֶלֶךְ שְׁמוֹ נִקְרָא׃",
  "inputSha256": "77568b8bbe267c89197404d9d011271c26056a4decbbe224275fc9e39c7778ec",
- "ingestedAt": null,
+ "ingestedAt": "2026-11-12T02:22:01.096Z",
  "licence": "customer-owned",
- "note": "Joined from word clips; weak words swapped for the take the sound review heard best (docs/audio/PHONEME-REVIEW.md, tools/audio/asr-check/word-pick-log.jsonl).",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-12T02:22:01.096Z",
+ "redistributionCleared": false,
+ "spokenText": "לְעֵת נַעֲשָׂה בְחֶפְצוֹ כֹּל אֲזַי מֶלֶךְ שְׁמוֹ נִקְרָא",
+ "normalized": true,
  "inputTextKind": "hebrew",
- "stitchedFromText": "לְעֵת נַעֲשָׂה בְחֶפְצוֹ כֹּל אֲזַי מֶלֶךְ שְׁמוֹ נִקְרָא׃",
- "stitchedFrom": [
-  "audio/m/israeli/word/adon-olam-1-w9.mp3",
-  "audio/m/israeli/word/adon-olam-1-w10.mp3",
-  "audio/m/israeli/word/adon-olam-1-w11.mp3",
-  "audio/m/israeli/word/adon-olam-1-w12.mp3",
-  "audio/m/israeli/word/adon-olam-1-w13.mp3",
-  "audio/m/israeli/word/adon-olam-1-w14.mp3",
-  "audio/m/israeli/word/adon-olam-1-w15.mp3",
-  "audio/m/israeli/word/adon-olam-1-w16.mp3"
- ]
+ "speakingRate": 0.85,
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [
+   "אֲזַי"
+  ],
+  "google": {
+   "heard": "לעת נעשה בחפצו כל אזי מלך שמו נקרא",
+   "acc": 1.0,
+   "issues": []
+  },
+  "reviewersFailing": 1
+ },
+ "replaced": {
+  "voiceId": "he-IL-Wavenet-B",
+  "engine": "stitched-from-word-clips",
+  "renderedAt": null
+ }
 }

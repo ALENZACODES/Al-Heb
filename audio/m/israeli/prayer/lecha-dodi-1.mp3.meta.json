@@ -1,37 +1,37 @@
 {
  "status": "tts",
- "source": "paid-cloud",
- "engine": "stitched-from-word-clips",
- "voiceId": "he-IL-Wavenet-B",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Chirp3-HD-Charon",
  "tradition": "israeli",
  "inputText": "לְכָה דוֹדִי לִקְרַאת כַּלָּה פְּנֵי שַׁבָּת נְקַבְּלָה׃ שָׁמוֹר וְזָכוֹר בְּדִבּוּר אֶחָד הִשְׁמִיעָנוּ אֵל הַמְיוּחָד אֲדֹנָי אֶחָד וּשְׁמוֹ אֶחָד לְשֵׁם וּלְתִפְאֶרֶת וְלִתְהִלָּה׃",
  "inputSha256": "e7ee6cff2cde6c8570e58da8f0c7fd31d3ce818402cb8dc1974a640051001dd6",
- "ingestedAt": null,
+ "ingestedAt": "2026-11-12T02:35:23.246Z",
  "licence": "customer-owned",
- "note": "Joined from its word clips because the whole-sentence render misread words; the joined version had fewer misheard words in the speech-to-text check (docs/audio/ASR-LINES-FIX.md).",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-12T02:35:23.246Z",
+ "redistributionCleared": false,
+ "spokenText": "לְכָה דוֹדִי לִקְרַאת כַּלָּה פְּנֵי שַׁבָּת נְקַבְּלָה שָׁמוֹר וְזָכוֹר בְּדִבּוּר אֶחָד הִשְׁמִיעָנוּ אֵל הַמְיוּחָד אֲדֹנָי אֶחָד וּשְׁמוֹ אֶחָד לְשֵׁם וּלְתִפְאֶרֶת וְלִתְהִלָּה",
+ "normalized": true,
  "inputTextKind": "hebrew",
- "stitchedFromText": "לְכָה דוֹדִי לִקְרַאת כַּלָּה פְּנֵי שַׁבָּת נְקַבְּלָה׃ שָׁמוֹר וְזָכוֹר בְּדִבּוּר אֶחָד הִשְׁמִיעָנוּ אֵל הַמְיוּחָד אֲדֹנָי אֶחָד וּשְׁמוֹ אֶחָד לְשֵׁם וּלְתִפְאֶרֶת וְלִתְהִלָּה׃",
- "stitchedFrom": [
-  "audio/m/israeli/word/lecha-dodi-1-w1.mp3",
-  "audio/m/israeli/word/lecha-dodi-1-w2.mp3",
-  "audio/m/israeli/word/lecha-dodi-1-w3.mp3",
-  "audio/m/israeli/word/lecha-dodi-1-w4.mp3",
-  "audio/m/israeli/word/lecha-dodi-1-w5.mp3",
-  "audio/m/israeli/word/candle-shabbat-w14.mp3",
-  "audio/m/israeli/word/lecha-dodi-1-w7.mp3",
-  "audio/m/israeli/word/lecha-dodi-1-w8.mp3",
-  "audio/m/israeli/word/lecha-dodi-1-w9.mp3",
-  "audio/m/israeli/word/lecha-dodi-1-w10.mp3",
-  "audio/m/israeli/word/adon-olam-1-w31.mp3",
-  "audio/m/israeli/word/lecha-dodi-1-w12.mp3",
-  "audio/m/israeli/word/avot-1-w17.mp3",
-  "audio/m/israeli/word/lecha-dodi-1-w14.mp3",
-  "audio/m/israeli/word/adon-olam-1-w69.mp3",
-  "audio/m/israeli/word/adon-olam-1-w31.mp3",
-  "audio/m/israeli/word/lecha-dodi-1-w17.mp3",
-  "audio/m/israeli/word/adon-olam-1-w31.mp3",
-  "audio/m/israeli/word/lecha-dodi-1-w19.mp3",
-  "audio/m/israeli/word/lecha-dodi-1-w20.mp3",
-  "audio/m/israeli/word/lecha-dodi-1-w21.mp3"
- ]
+ "speakingRate": 0.85,
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [
+   "שַׁבָּת",
+   "שָׁמוֹר",
+   "לְשֵׁם"
+  ],
+  "google": {
+   "heard": "לך דודי לקראת כלה פני שבת נקבלה שמור וזכור בדיבור אחד השמיענו אל המיוחד אדוני אחד ושמו אחד לשם ולתפארת ולתהילה",
+   "acc": 1.0,
+   "issues": []
+  },
+  "reviewersFailing": 1
+ },
+ "replaced": {
+  "voiceId": "he-IL-Wavenet-B",
+  "engine": "stitched-from-word-clips",
+  "renderedAt": null
+ }
 }

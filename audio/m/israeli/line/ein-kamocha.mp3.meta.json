@@ -1,21 +1,34 @@
 {
  "status": "tts",
- "source": "paid-cloud",
- "engine": "stitched-from-word-clips",
- "voiceId": "he-IL-Wavenet-B",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Chirp3-HD-Fenrir",
  "tradition": "israeli",
  "inputText": "אֵין־כָּמוֹךָ בָאֱלֹהִים אֲדֹנָי וְאֵין כְּמַעֲשֶׂיךָ׃",
  "inputSha256": "de1d3ff03d6dcf803163444c410cca8b4fa4519de33dce24e92b731ca04512cc",
- "ingestedAt": null,
+ "ingestedAt": "2026-11-12T02:18:39.635Z",
  "licence": "customer-owned",
- "note": "Joined from word clips; weak words swapped for the take the sound review heard best (docs/audio/PHONEME-REVIEW.md, tools/audio/asr-check/word-pick-log.jsonl).",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-12T02:18:39.635Z",
+ "redistributionCleared": false,
+ "spokenText": "אֵין כָּמוֹךָ בָאֱלֹהִים אֲדֹנָי וְאֵין כְּמַעֲשֶׂיךָ",
+ "normalized": true,
  "inputTextKind": "hebrew",
- "stitchedFromText": "אֵין־כָּמוֹךָ בָאֱלֹהִים אֲדֹנָי וְאֵין כְּמַעֲשֶׂיךָ׃",
- "stitchedFrom": [
-  "audio/m/israeli/word/ein-kamocha-w1.mp3",
-  "audio/m/israeli/word/ein-kamocha-w2.mp3",
-  "audio/m/israeli/word/adon-olam-1-w69.mp3",
-  "audio/m/israeli/word/adon-olam-1-w32.mp3",
-  "audio/m/israeli/word/ein-kamocha-w5.mp3"
- ]
+ "review": {
+  "phonemeWeak": [
+   "בָאֱלֹהִים"
+  ],
+  "wordIssues": [],
+  "google": {
+   "heard": "אין כמוך באלהים אדני ואין כמעשיך",
+   "acc": 1.0,
+   "issues": []
+  },
+  "reviewersFailing": 1
+ },
+ "replaced": {
+  "voiceId": "he-IL-Wavenet-B",
+  "engine": "stitched-from-word-clips",
+  "renderedAt": null
+ }
 }

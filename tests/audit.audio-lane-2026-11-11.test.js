@@ -56,15 +56,26 @@ test('S-11: a held clip never plays; the plan falls to the device voice (or noth
   assert.match(readFileSync(join(ROOT, 'src/app.js'), 'utf8'), /loadHolds: \(\) => fetch\('data\/lab\/clip-holds\.json'\)/);
 });
 
-test('S-04: the Moses pages that say the divine name are held, marked, and say so; the shelf line counts them', () => {
+test('R-10: the Moses pages that say אֱלֹהִים are voiced, read as written, unless a page failed 2 of 3 reviewers; the shelf line counts what is true', () => {
   const book = J('data/books/book63.json');
-  const held = book.pages.filter((p) => p.audioHeld === 'divine-name');
-  assert.equal(held.length, 4);
-  for (const p of held) { assert.equal(p.hasAudio, false); assert.match(p.he, /אֱלֹהִים/); }
+  const named = book.pages.filter((p) => /אֱלֹהִים/.test(p.he));
+  assert.equal(named.length, 4);
+  for (const p of named) {
+    assert.doesNotMatch(p.he, /י[\u0591-\u05C7]*ה[\u0591-\u05C7]*ו[\u0591-\u05C7]*ה/, 'no page with the four-letter name is voiced');
+    if (p.audioHeld) { assert.equal(p.hasAudio, false); assert.equal(p.audioHeld, 'review'); continue; }
+    assert.equal(p.hasAudio, true);
+    for (const v of ['m', 'f']) {
+      assert.ok(existsSync(join(ROOT, p.audio[v])), p.audio[v]);
+      const meta = J(`${p.audio[v]}.meta.json`);
+      assert.equal(meta.spokenText.includes('אֱלֹהִים'), true, 'read as written, as the Torah clips are');
+      assert.equal(meta.speakingRate, 0.82); assert.equal(meta.voiceId, v === 'm' ? 'he-IL-Wavenet-B' : 'he-IL-Wavenet-A');
+    }
+  }
   const idx = J('data/books/index.json').books.find((b) => b.id === 'book63');
-  assert.equal(idx.audioHeldPages, held.length); assert.equal(idx.audioPages + held.length, idx.pageCount);
-  assert.match(HELD_PAGE, /divine name/);
-  assert.match(readFileSync(join(ROOT, 'src/books/books.view.js'), 'utf8'), /the divine name .* not read aloud until its reading is decided/);
+  const voiced = book.pages.filter((p) => p.hasAudio).length, held = book.pages.filter((p) => p.audioHeld).length;
+  assert.equal(idx.audioPages, voiced); assert.equal(idx.hasAudio, voiced === 12); assert.equal(idx.audioHeldPages || 0, held);
+  assert.equal(voiced + held, 12);
+  assert.match(HELD_PAGE, /review/);
 });
 
 test('S-10: every clip file in the tree is catalogued or lives in a counted folder (retired clips are not shipped)', () => {

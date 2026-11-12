@@ -1,23 +1,33 @@
 {
  "status": "tts",
  "source": "tts:google",
- "engine": "stitched-from-word-clips",
- "voiceId": null,
+ "engine": "google",
+ "voiceId": "he-IL-Chirp3-HD-Charon",
  "tradition": "israeli",
  "inputText": "אֲדֹנָי שְׂפָתַי תִּפְתָּח וּפִי יַגִּיד תְּהִלָּתֶךָ׃",
  "inputSha256": "391f5e80f7e9790c2a28f577440c1bdd57024de6f92ca980ae6a4f19acf4300e",
- "ingestedAt": null,
+ "ingestedAt": "2026-11-12T02:23:18.289Z",
  "licence": "customer-owned",
- "note": "Joined from word clips; weak words swapped for the take the sound review heard best (docs/audio/PHONEME-REVIEW.md, tools/audio/asr-check/word-pick-log.jsonl). Same text as audio/m/israeli/prayer/amidah-lips.mp3; that take reviewed better by sound, so it is used for both.",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-12T02:23:18.289Z",
+ "redistributionCleared": false,
+ "spokenText": "אֲדֹנָי שְׂפָתַי תִּפְתָּח וּפִי יַגִּיד תְּהִלָּתֶךָ",
+ "normalized": true,
  "inputTextKind": "hebrew",
- "stitchedFromText": "אֲדֹנָי שְׂפָתַי תִּפְתָּח וּפִי יַגִּיד תְּהִלָּתֶךָ׃",
- "stitchedFrom": [
-  "audio/m/israeli/word/adon-olam-1-w69.mp3",
-  "audio/m/israeli/word/amidah-lips-w2.mp3",
-  "audio/m/israeli/word/amidah-lips-w3.mp3",
-  "audio/m/israeli/word/amidah-lips-w4.mp3",
-  "audio/m/israeli/word/amidah-lips-w5.mp3",
-  "audio/m/israeli/word/amidah-lips-w6.mp3"
- ],
- "copiedFrom": "audio/m/israeli/prayer/amidah-lips.mp3"
+ "speakingRate": 0.85,
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [],
+  "google": {
+   "heard": "אדוני שפתי תפתח ופי יגיד תהילתך",
+   "acc": 1.0,
+   "issues": []
+  },
+  "reviewersFailing": 0
+ },
+ "replaced": {
+  "voiceId": null,
+  "engine": "stitched-from-word-clips",
+  "renderedAt": null
+ }
 }

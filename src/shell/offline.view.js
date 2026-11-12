@@ -147,6 +147,9 @@ export function mount(root, ctx) {
     body.replaceChildren(...kids.filter(Boolean));
   }
 
+  // lane 4: offline packs (src/sync/packs.card.js, on demand)
+  const packsHost = el("div", { id: "of-packs" }); wrap.append(packsHost); let offPacks = null;
+  import("../sync/packs.card.js").then((m) => { if (alive) offPacks = m.mountPacks(packsHost, ctx, O, env); }).catch(() => { packsHost.textContent = "Offline packs need a connection once."; });
   (async () => { render(); await refresh(); if (alive) { render(); focusHeadingIfIdle(h1); } })();
-  return () => { alive = false; ac?.abort(); offUpd?.(); };
+  return () => { alive = false; ac?.abort(); offUpd?.(); offPacks?.(); };
 }

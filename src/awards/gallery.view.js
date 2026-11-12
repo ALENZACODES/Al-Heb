@@ -380,6 +380,8 @@ export async function mount(root, ctx) {
       h('p', { 'data-badge': 'beginner-completion', 'data-state': 'locked' }, completionText(rubric ? settled.decision : { satisfied: 0, required: 0 }))),
     h('section', { 'aria-labelledby': 'award-h-cert' },
       h('h2', { id: 'award-h-cert' }, 'Sample certificate'),
+      // lane 4 (12 Nov): the record of passed lessons is its own page, with its own limits stated there
+      h('p', { id: 'award-lesson-record' }, 'This sample is a design only. For a printable list of the lessons you passed, with each first-try score and date, see ', h('a', { href: '#/certificate' }, 'Certificate of Lessons Completed'), '. It is self-issued from your own records, not reviewed.'),
       h('p', {}, 'Type your name to see your certificate.'),
       h('p', { id: 'award-art-count' }, 'Approved artwork: 0. No final artwork is accepted.'),
       h('p', {}, MAIL_OFFER.text),

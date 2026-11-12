@@ -227,6 +227,7 @@ export const STORE_KEYS = [
   ['backup.reminder.v1', 'When you last downloaded a backup file, and "Not now" on the backup reminder', 'src/shell/backup-reminder.js'],
   ['placement.v1', 'Placement check result', 'src/placement/placement.view.js'],
   ['curriculum.progress', 'Completed lessons', 'src/curriculum/dom.js'],
+  ['lesson.checks.v1', 'Quick-check scores (right on the first try, out of how many, when), for your own certificate', 'src/curriculum/passmark.js'], // lane 4
   ['srs.cards', 'Review cards for lessons', 'src/curriculum/dom.js'],
   ['srs.vocab', 'Review cards for vocabulary', 'src/vocab/themes.view.js'],
   ['srs.practical', 'Review cards for practical conversation units', 'src/curriculum/practical.view.js'],

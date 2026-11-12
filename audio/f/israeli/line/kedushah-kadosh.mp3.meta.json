@@ -1,0 +1,35 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Chirp3-HD-Kore",
+ "tradition": "israeli",
+ "inputText": "וְקָרָא זֶה אֶל־זֶה וְאָמַר קָדוֹשׁ קָדוֹשׁ קָדוֹשׁ אֲדֹנָי צְבָאוֹת מְלֹא כָל־הָאָרֶץ כְּבוֹדוֹ׃",
+ "inputSha256": "ea96fd16c0c49d087b82b265511c93fcb2a49ffec3c78fd0b2ee4157c4ef1cbf",
+ "ingestedAt": "2026-11-12T02:18:16.300Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-12T02:18:16.300Z",
+ "redistributionCleared": false,
+ "spokenText": "וְקָרָא זֶה אֶל זֶה וְאָמַר קָדוֹשׁ קָדוֹשׁ קָדוֹשׁ אֲדֹנָי צְבָאוֹת מְלֹא כָל הָאָרֶץ כְּבוֹדוֹ",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "speakingRate": 0.85,
+ "review": {
+  "phonemeWeak": [
+   "כָל"
+  ],
+  "wordIssues": [],
+  "google": {
+   "heard": "וקרא זה אל זה ואמר קדוש קדוש קדוש אדוני צבאות מלא כל הארץ כבודו",
+   "acc": 1.0,
+   "issues": []
+  },
+  "reviewersFailing": 1
+ },
+ "replaced": {
+  "voiceId": "he-IL-Wavenet-A",
+  "engine": "stitched-from-word-clips",
+  "renderedAt": null
+ }
+}

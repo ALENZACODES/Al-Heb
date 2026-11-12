@@ -1,0 +1,38 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Chirp3-HD-Aoede",
+ "tradition": "israeli",
+ "inputText": "עֵץ חַיִּים הִיא לַמַּחֲזִיקִים בָּהּ וְתוֹמְכֶיהָ מְאֻשָּׁר׃ דְּרָכֶיהָ דַרְכֵי נֹעַם וְכָל נְתִיבוֹתֶיהָ שָׁלוֹם׃ אֹרֶךְ יָמִים בִּימִינָהּ בִּשְׂמֹאלָהּ עֹשֶׁר וְכָבוֹד׃ אֲדֹנָי חָפֵץ לְמַעַן צִדְקוֹ יַגְדִּיל תּוֹרָה וְיַאְדִּיר׃",
+ "inputSha256": "f09c588ad5be3987933adfad51b34652729f07d37c849227963e1e58c1368f3f",
+ "ingestedAt": "2026-11-12T02:15:08.202Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-12T02:15:08.202Z",
+ "redistributionCleared": false,
+ "spokenText": "עֵץ חַיִּים הִיא לַמַּחֲזִיקִים בָּהּ וְתוֹמְכֶיהָ מְאֻשָּׁר דְּרָכֶיהָ דַרְכֵי נֹעַם וְכָל נְתִיבוֹתֶיהָ שָׁלוֹם אֹרֶךְ יָמִים בִּימִינָהּ בִּשְׂמֹאלָהּ עֹשֶׁר וְכָבוֹד אֲדֹנָי חָפֵץ לְמַעַן צִדְקוֹ יַגְדִּיל תּוֹרָה וְיַאְדִּיר",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [
+   "מְאֻשָּׁר",
+   "דְּרָכֶיהָ",
+   "שָׁלוֹם",
+   "בִּשְׂמֹאלָהּ עֹשֶׁר וְכָבוֹד",
+   "וְיַאְדִּיר"
+  ],
+  "google": {
+   "heard": "עץ חיים היא למחזיקים בה ותומכיה מאושר דרכיה דרכי נועם וכל נתיבותיה שלום אורך ימים בימינה בשמאלה עושר וכבוד אדוני חפץ למען צדקו יגדיל תורה ויאדיר",
+   "acc": 1.0,
+   "issues": []
+  },
+  "reviewersFailing": 1
+ },
+ "replaced": {
+  "voiceId": "he-IL-Wavenet-A",
+  "engine": "stitched-from-word-clips",
+  "renderedAt": null
+ }
+}

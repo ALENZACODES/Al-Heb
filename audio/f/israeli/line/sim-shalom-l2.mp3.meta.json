@@ -1,0 +1,34 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Chirp3-HD-Aoede",
+ "tradition": "israeli",
+ "inputText": "בָּרוּךְ אַתָּה אֲדֹנָי הַמְבָרֵךְ אֶת־עַמּוֹ יִשְׂרָאֵל בַּשָּׁלוֹם׃",
+ "inputSha256": "856956c9130dc8eaed23d6e54c275dba1e963c8d8f3e9bf8dc3ac8ce0fb815be",
+ "ingestedAt": "2026-11-12T02:22:20.180Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-12T02:22:20.180Z",
+ "redistributionCleared": false,
+ "spokenText": "בָּרוּךְ אַתָּה אֲדֹנָי הַמְבָרֵךְ אֶת עַמּוֹ יִשְׂרָאֵל בַּשָּׁלוֹם",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [
+   "בַּשָּׁלוֹם"
+  ],
+  "google": {
+   "heard": "ברוך אתה אדוני המברך את עמו ישראל בשלום",
+   "acc": 1.0,
+   "issues": []
+  },
+  "reviewersFailing": 1
+ },
+ "replaced": {
+  "voiceId": "he-IL-Wavenet-A",
+  "engine": "stitched-from-word-clips",
+  "renderedAt": null
+ }
+}

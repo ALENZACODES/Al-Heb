@@ -128,6 +128,7 @@ export const NAV_EN = {
   'nav.route.synagogues': 'Reform Synagogues in Canada',
   'nav.route.shabbat': 'Shabbat Companion', // lane 5
   'nav.route.prayer-practice': 'Prayer Practice', // siddur-speaking lane
+  'nav.route.speak-studio': 'Speaking Studio', // siddur-speaking lane
   'nav.route.synagogue': 'Synagogue',
   'nav.route.nikkud-fade': 'Vowel marks, fading out',
   'nav.route.bridge': 'Reading Without Vowels', 'nav.route.trope-families': 'Trope Families', 'nav.route.trope-aliyah': 'Trope Practice by Aliyah', // lane 6

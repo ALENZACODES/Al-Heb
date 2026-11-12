@@ -65,3 +65,25 @@ const ERRORS = {
   'not-recording': 'Nothing is recording.',
 };
 export const describeError = (code) => ERRORS[code] || 'The recording did not work. Try again.';
+
+// ---------- G4 blind check (CODER-100): play one of the learner's own two takes at random; they say which word it was ----------
+// A self-check of their own production: if they cannot tell their A from their B blind, the two words may have sounded alike.
+// Aleph hears nothing; only counts are kept (BLIND_KEY), never audio.
+export const BLIND_KEY = 'recordcompare.blind.v1';
+export const BLIND_NOTE = 'Blind check: one of your two recordings plays, chosen at random, and you say which word it was. It is a self-check of your own takes; Aleph does not listen to them.';
+/** Which take to play: 'a' or 'b' from a random number in [0, 1). */
+export const blindPick = (r) => (r < 0.5 ? 'a' : 'b');
+/** The plain result of one blind check. */
+export function blindVerdict(which, picked) {
+  const W = which.toUpperCase(), P = picked.toUpperCase();
+  return which === picked
+    ? { told: true, text: `It was ${W}. You said ${P}: you told your two words apart this time.` }
+    : { told: false, text: `It was ${W}. You said ${P}: your two words may have sounded alike. Listen to the model again and record both once more.` };
+}
+export function normalizeBlind(raw) {
+  const n = (x) => (Number.isFinite(x) && x >= 0 ? Math.floor(x) : 0);
+  const t = n(raw?.tries), told = Math.min(n(raw?.told), t);
+  return { v: 1, tries: t, told };
+}
+export const addBlind = (state, told) => { const s = normalizeBlind(state); return { v: 1, tries: s.tries + 1, told: s.told + (told ? 1 : 0) }; };
+export const blindSummary = (state) => { const s = normalizeBlind(state); return s.tries ? `Blind checks so far: you told your words apart ${s.told} of ${s.tries} times (your own check, not a measurement).` : ''; };

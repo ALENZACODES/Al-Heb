@@ -72,7 +72,9 @@ const ON_DEMAND_PREFIXES = ['data/vocab/', 'data/roots/', 'data/knownwords/', 'd
   'data/ask/',
   // lane 4 (12 Nov): Move to another device and the learner's certificate (route code, fetched on first open), and the
   // offline pack lists read by the Use Aleph offline page (data/offline/packs.json, built by tools/offline-packs.mjs).
-  'src/sync/', 'data/offline/'];
+  'src/sync/', 'data/offline/',
+  // siddur-speaking lane (12 Nov, CODER-100 G): Speaking Studio route code, fetched when #/speak-studio first opens.
+  'src/voice/'];
 const ON_DEMAND_FILES = new Set([
   // Rimon's stills (src/app.js imports the stage after boot; it shows nothing until the pictures exist, and the pictures are fetched on demand too),
   // and two older Rimon modules no screen imports (kept for reference and their tests).

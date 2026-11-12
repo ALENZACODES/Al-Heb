@@ -123,3 +123,25 @@ test('M-12: the page says why it gives no score, and the reason holds for the sh
   const other = new Set(DATA.contrasts.filter((c) => c.pairs.some((p) => normalizeHe(p.a.he) !== normalizeHe(p.b.he))).map((c) => c.id));
   assert.deepEqual([...other].sort(), ['alef-ayin', 'het-khaf'], 'the rest differ only in letters a recognizer guesses by word frequency');
 });
+
+test('G4 blind check: one of the learner\'s own takes plays at random; they say which; only counts are kept', async () => {
+  assert.equal(M.blindPick(0.2), 'a'); assert.equal(M.blindPick(0.7), 'b');
+  assert.equal(M.blindVerdict('a', 'a').told, true); assert.match(M.blindVerdict('b', 'a').text, /It was B\. You said A: your two words may have sounded alike/);
+  assert.deepEqual(M.addBlind(M.addBlind(null, true), false), { v: 1, tries: 2, told: 1 });
+  assert.deepEqual(M.normalizeBlind({ tries: 1, told: 5 }), { v: 1, tries: 1, told: 1 });
+  const V = await import('../src/recordcompare/recordcompare.view.js');
+  const root = new N('main'), m = mk(); m.ctx.recordCompare.random = () => 0.9;
+  const un = V.mount(root, m.ctx); await tick();
+  assert.equal(btn(root, /^Play one of mine at random/), undefined, 'no blind check before both takes');
+  await btn(root, /^Record A/).click(); await tick(); await btn(root, /^Stop recording A/).click(); await tick();
+  await btn(root, /^Record B/).click(); await tick(); await btn(root, /^Stop recording B/).click(); await tick();
+  assert.match(root.textContent, /Aleph does not listen to them/);
+  await btn(root, /^Play one of mine at random/).click(); await tick();
+  assert.equal(m.played.at(-1), 'blob:fake2', 'played take B');
+  await btn(root, /^That was B/).click(); await tick();
+  assert.equal(root.querySelector('[data-blind-result]').attrs['data-blind-result'], 'told');
+  assert.deepEqual(m.ctx.store.m[M.BLIND_KEY], { v: 1, tries: 1, told: 1 });
+  assert.ok(!JSON.stringify(m.ctx.store.m).includes('blob:'), 'no audio stored');
+  assert.doesNotMatch(root.textContent, /accuracy|% correct|you scored|score of|\d%/i);
+  un();
+});

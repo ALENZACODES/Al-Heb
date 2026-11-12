@@ -80,10 +80,10 @@ export function createRecorder(o = {}) {
     stopping = new Promise((resolve) => {
       r.onstop = () => {
         const ms = now() - startedAt;
-        let url = null;
-        try { const Blob = o.BlobCtor || g().Blob; const blob = Blob ? new Blob(chunks, { type: r.mimeType || 'audio/webm' }) : null; url = blob && URLImpl?.createObjectURL ? URLImpl.createObjectURL(blob) : null; if (url) urls.push(url); } catch { url = null; }
+        let url = null, blob = null;
+        try { const Blob = o.BlobCtor || g().Blob; blob = Blob ? new Blob(chunks, { type: r.mimeType || 'audio/webm' }) : null; url = blob && URLImpl?.createObjectURL ? URLImpl.createObjectURL(blob) : null; if (url) urls.push(url); } catch { url = null; }
         release(); stopping = null;
-        resolve(url ? { ok: true, url, ms } : { ok: false, error: 'no-data', ms });
+        resolve(url ? { ok: true, url, ms, blob } : { ok: false, error: 'no-data', ms }); // blob: for a page that keeps a take on the device (Speaking Studio voice journal)
       };
       try { r.stop(); } catch { release(); stopping = null; resolve({ ok: false, error: 'stop-failed' }); }
     });

@@ -184,6 +184,26 @@ Home shows a backup reminder after three finished lessons (`docs/progress/BACKUP
 | `tg-parashah` | keep | Torah and Hebrew game; reached from the `games` hub. Preview until a teacher reviews its Hebrew. |
 | `tg-tropehunt` | keep | Torah and Hebrew game; reached from the `games` hub. Preview until a teacher reviews its Hebrew. |
 | `tg-holidays` | keep | Torah and Hebrew game; reached from the `games` hub. Preview until a teacher reviews its Hebrew. |
+| `g4-greetings` | hide | Everyday Israel game (lane 4); reached from the Everyday Israel section of the games hub, and search finds it by name. Preview until a native speaker reviews its Hebrew. |
+| `g4-clock` | hide | Everyday Israel game (lane 4); reached from the Everyday Israel section of the games hub, and search finds it by name. Preview until a native speaker reviews its Hebrew. |
+| `g4-signs` | hide | Everyday Israel game (lane 4); reached from the Everyday Israel section of the games hub, and search finds it by name. Preview until a native speaker reviews its Hebrew. |
+| `g4-cafe` | hide | Everyday Israel game (lane 4); reached from the Everyday Israel section of the games hub, and search finds it by name. Preview until a native speaker reviews its Hebrew. |
+| `g4-change` | hide | Everyday Israel game (lane 4); reached from the Everyday Israel section of the games hub, and search finds it by name. Preview until a native speaker reviews its Hebrew. |
+| `g4-bell` | hide | Everyday Israel game (lane 4); reached from the Everyday Israel section of the games hub, and search finds it by name. Preview until a native speaker reviews its Hebrew. |
+| `g4-weather` | hide | Everyday Israel game (lane 4); reached from the Everyday Israel section of the games hub, and search finds it by name. Preview until a native speaker reviews its Hebrew. |
+| `g4-slang` | hide | Everyday Israel game (lane 4); reached from the Everyday Israel section of the games hub, and search finds it by name. Preview until a native speaker reviews its Hebrew. |
+| `g4-falafel` | hide | Everyday Israel game (lane 4); reached from the Everyday Israel section of the games hub, and search finds it by name. Preview until a native speaker reviews its Hebrew. |
+| `g4-busboard` | hide | Everyday Israel game (lane 4); reached from the Everyday Israel section of the games hub, and search finds it by name. Preview until a native speaker reviews its Hebrew. |
+| `g4-hours` | hide | Everyday Israel game (lane 4); reached from the Everyday Israel section of the games hub, and search finds it by name. Preview until a native speaker reviews its Hebrew. |
+| `g4-shuk` | hide | Everyday Israel game (lane 4); reached from the Everyday Israel section of the games hub, and search finds it by name. Preview until a native speaker reviews its Hebrew. |
+| `g4-menu` | hide | Everyday Israel game (lane 4); reached from the Everyday Israel section of the games hub, and search finds it by name. Preview until a native speaker reviews its Hebrew. |
+| `g4-grid` | hide | Everyday Israel game (lane 4); reached from the Everyday Israel section of the games hub, and search finds it by name. Preview until a native speaker reviews its Hebrew. |
+| `g4-phone` | hide | Everyday Israel game (lane 4); reached from the Everyday Israel section of the games hub, and search finds it by name. Preview until a native speaker reviews its Hebrew. |
+| `g4-tone` | hide | Everyday Israel game (lane 4); reached from the Everyday Israel section of the games hub, and search finds it by name. Preview until a native speaker reviews its Hebrew. |
+| `g4-week` | hide | Everyday Israel game (lane 4); reached from the Everyday Israel section of the games hub, and search finds it by name. Preview until a native speaker reviews its Hebrew. |
+| `g4-tourist` | hide | Everyday Israel game (lane 4); reached from the Everyday Israel section of the games hub, and search finds it by name. Preview until a native speaker reviews its Hebrew. |
+| `g4-emergency` | hide | Everyday Israel game (lane 4); reached from the Everyday Israel section of the games hub, and search finds it by name. Preview until a native speaker reviews its Hebrew. |
+| `g4-pharmacy` | hide | Everyday Israel game (lane 4); reached from the Everyday Israel section of the games hub, and search finds it by name. Preview until a native speaker reviews its Hebrew. |
 | `wordfinder` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
 | `tugowar` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
 | `vowelcatcher` | keep | Game; reached from the `games` hub. Preview until native review of its words. |

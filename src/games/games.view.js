@@ -106,6 +106,7 @@ export function mount(root, ctx) {
     arcadeCard(ctx, items.length),
     hanukkahSection(),
     tgCard(),
+    g4Section(),
     ...sections);
   root.replaceChildren(article);
   // Card thumbnails from each game's own backdrop art, plus Rimon the mascot
@@ -153,6 +154,17 @@ export function tgCard() {
     ...bands.map(([band, title]) => h('div', {}, h('h3', {}, title),
       h('ul', { class: 'show-grid wf-game-grid' }, ...TG_GAMES.filter((g) => g.band === band).map((g) => h('li', {}, h('a', { class: 'show-tile wf-level-tile', href: '#/' + g.id },
         h('span', { class: 'show-tile-title' }, g.title, ' ', heSpan(g.titleHe)), h('span', { class: 'show-tile-hook' }, g.tag))))))));
+}
+
+/** Lane 4 (g4): Everyday Israel games, one section; the catalogue (src/games/g4-catalog.js) loads after the hub paints. */
+export function g4Section() {
+  const list = h('ul', { class: 'show-grid wf-game-grid' });
+  const sec = h('section', { class: 'wf-level-section g4-hub', 'aria-labelledby': 'wf-g4-h' },
+    h('h2', { id: 'wf-g4-h' }, 'Everyday Israel ', heSpan('יִשְׂרָאֵל')),
+    h('p', { class: 'muted' }, 'Get by in Israel without seeming an outsider: greetings, signs, buses, the shuk, the café, the week and Shabbat.'), list);
+  import('./g4-catalog.js').then(({ G4_GAMES }) => list.replaceChildren(...G4_GAMES.map((g) => h('li', {}, h('a', { class: 'show-tile wf-level-tile', href: '#/' + g.id },
+    h('span', { class: 'wf-game-level' }, 'LEVEL ' + g.level + ' / 5'), h('span', { class: 'show-tile-title' }, g.title, ' ', heSpan(g.titleHe)), h('span', { class: 'show-tile-hook' }, g.tag)))))).catch(() => {});
+  return sec;
 }
 
 const NUM_WORDS = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'];

@@ -10,6 +10,7 @@
  * the route on Home under "More ways to learn" instead of the nav bar.
  */
 /** @type {RouteDef[]} Module paths are relative to src/shell/. */
+import { G4_ROUTES } from './g4-routes.js'; // lane 4 (g4)
 export const ROUTES = [
   { name: 'home',     pattern: '/',               module: './home.view.js', tier: 'v0',                      nav: 'nav.home',     title: 'Home', owner: 'lane8' },
   { name: 'learn',    pattern: '/learn',          module: '../curriculum/learn.view.js', tier: 'v0',         nav: 'nav.learn',    title: 'Learn', owner: 'lane1' },
@@ -113,6 +114,7 @@ export const ROUTES = [
   { name: 'tg-parashah', pattern: '/tg-parashah', module: '../games/tg-parashah.view.js', title: 'Parashah Path', tier: 'preview', owner: 'games' },
   { name: 'tg-tropehunt', pattern: '/tg-tropehunt', module: '../games/tg-tropehunt.view.js', title: 'Trope Hunt', tier: 'preview', owner: 'games' },
   { name: 'tg-holidays', pattern: '/tg-holidays', module: '../games/tg-holidays.view.js', title: 'Holiday Sorter', tier: 'preview', owner: 'games' },
+  ...G4_ROUTES.map(([id, title]) => ({ name: 'g4-' + id, pattern: '/g4-' + id, module: `../games/g4-${id}.view.js`, title, tier: 'preview', owner: 'games' })), // lane 4 (g4): Everyday Israel games
   { name: 'wordfinder', pattern: '/wordfinder', module: '../games/wordfinder.view.js', title: 'Hebrew Word Finder: Level 1', tier: 'preview', owner: 'games' },
   { name: 'tugowar', pattern: '/tugowar', module: '../games/tugowar.view.js', title: 'Antonym Tug-of-War', tier: 'preview', owner: 'games' },
   { name: 'vowelcatcher', pattern: '/vowelcatcher', module: '../games/vowelcatcher.view.js', title: 'Vowel Catcher', tier: 'preview', owner: 'games' },

@@ -2,6 +2,7 @@
 // so the table in i18n.js stays untouched. Hebrew is NOT added here: no new Hebrew was written for this lane. The only Hebrew shown in
 // the menu is what already exists in i18n.js `he` (looked up with tHe); sections without an existing label show English only.
 import { en } from './i18n.js';
+import { G4_ROUTES } from './g4-routes.js'; // lane 4 (g4)
 
 export const NAV_EN = {
   'nav.ask': 'Ask the Torah',
@@ -81,6 +82,7 @@ export const NAV_EN = {
   'nav.route.tg-parashah': 'Parashah Path',
   'nav.route.tg-tropehunt': 'Trope Hunt',
   'nav.route.tg-holidays': 'Holiday Sorter',
+  ...Object.fromEntries(G4_ROUTES.map(([id, title]) => ['nav.route.g4-' + id, title])), // lane 4 (g4)
   'nav.route.wordfinder': 'Hebrew Word Finder: Level 1',
   'nav.route.tugowar': 'Antonym Tug-of-War',
   'nav.route.vowelcatcher': 'Vowel Catcher',

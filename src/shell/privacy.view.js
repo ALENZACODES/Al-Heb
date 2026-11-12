@@ -232,7 +232,7 @@ export const STORE_KEYS = [
   ['trope.practice.v1', 'Trope practice by aliyah: the portion, aliyah and phrase you were on', 'src/trope/families.js'],
   ['curriculum.progress', 'Completed lessons', 'src/curriculum/dom.js'],
   ['lesson.checks.v1', 'Quick-check scores (right on the first try, out of how many, when), for your own certificate', 'src/curriculum/passmark.js'], // lane 4
-  ['srs.cards', 'Review cards for lessons', 'src/curriculum/dom.js'],
+  ['srs.cards', 'Review cards for lessons (each card also keeps the dates and ratings of its last 24 answers, from 12 November 2026)', 'src/curriculum/dom.js'],
   ['srs.vocab', 'Review cards for vocabulary', 'src/vocab/themes.view.js'],
   ['srs.practical', 'Review cards for practical conversation units', 'src/curriculum/practical.view.js'],
   ['practical.progress', 'Which practical pages you have finished on this device', 'src/curriculum/practical-progress.js'],
@@ -303,6 +303,11 @@ export const STORE_KEYS = [
   ['awards.v1', 'Awards on this device: practice-game activity, the name typed for a certificate sample, and any objective assessment evidence stored later. Lesson completion is not copied here. There is no account.', 'src/awards/record.js'],
   ['books.v1', 'Little-books reading place: the last page you reached in each book, when you first reached its last page, and when you finished it (its one story question answered)', 'src/books/book.view.js'],
   ['books.finished.v1', 'Little books you have read to the last page, and when (drives the Finished mark on the shelf and the Book Finisher award)', 'src/books/book.view.js'],
+  // lane platform (12 Nov)
+  ['srs.fit', 'Scheduler numbers fitted to your own review answers, saved only when you press "Use my fitted numbers" or "Use the set numbers instead" on the scheduler page, with how well they fit', 'src/platform/scheduler-live.js'],
+  ['review.pace', 'How many seconds a review card takes you on average, and over how many cards (sizes Cram sessions)', 'src/platform/srs-tools.js'],
+  ['goals.week.v1', 'The weekly XP, minutes and lesson goals you chose on My Week', 'src/platform/week.js'],
+  ['whatsnew.seen', 'The newest change you have seen on What\'s New, so later changes can be marked new', 'src/platform/whatsnew.js'],
 ];
 
 const table = (caption, head, rows) => h('div', { class: 'table-wrap', role: 'region', 'aria-label': caption, tabindex: '0' }, h('table', { class: 'priv-table' }, h('caption', {}, caption),

@@ -1,0 +1,201 @@
+{
+ "generatedFrom": "git log (commit subjects, first sentence)",
+ "leftOut": 0,
+ "entries": [
+  {
+   "date": "2026-11-12",
+   "hash": "7ec86c90d",
+   "text": "Preview triage rows for Prayer Practice and Speaking Studio"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "6173aa315",
+   "text": "Prayers past 90% own-file coverage (476/528): accent run 7 retakes at rate 1.1 (3 passed), the festival-day Kiddush verses made in Chirp 3 HD (fill-clips run 6, both voices passed."
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "3df0d8988",
+   "text": "Listening tools respect 'I do not use audio'."
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "1b9f4eb09",
+   "text": "Privacy page, offline groups and the Deaf and hard-of-hearing inventory name the new pages and store keys."
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "540018dc7",
+   "text": "Accent run 8 list: the Ashkenazi rows of the festival-day Kiddush verses"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "693f4436d",
+   "text": "Audio lane plan table; regenerated precache list, sitemap, view list and docs index"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "9d2057555",
+   "text": "Audio packs on Use Aleph offline: save a book's, the prayers' or a lesson set's clips on purpose, with clip count, measured size, progress, cancel and remove."
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "261af4aec",
+   "text": "Siddur and speaking lane: per-idea plan table, sitemap with the two new pages, docs index and precache rebuilt"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "837d288b0",
+   "text": "Speaking Studio (#/speak-studio): record a service line and compare waveforms with the model clip, shadowing with a timed silent turn, self-rated rubric, machine guess from the…"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "5e1d7e810",
+   "text": "Sound-pair drill: after each pair answer, hear both words one after the other"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "4cbd91e6f",
+   "text": "Play-all queues with a tappable progress list (prayer reader, theme packs), lines/words/pages-with-audio counts, and book read along (page turns by itself, word highlight from…"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "7b9182789",
+   "text": "Fill list for the two optional whole-prayer rows with no clip in any tradition (Hallel 118:1-4, the festival-day Kiddush verses), Chirp 3 HD, reviewed as usual"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "81062b872",
+   "text": "Shabbat Companion: festivals this week from the calendar, candle-lighting countdown and Shabbat Mode, Gadlu and Kedushah join-in drills (F2, F10, F6)"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "c0c82c9e3",
+   "text": "Listening Practice route: line tools (speed, word-by-word step, three-tradition compare, words-with-audio count), fill-the-gap from word clips, dictation with an on-screen Hebrew…"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "23d233c4a",
+   "text": "Prayer Practice page (#/prayer-practice): line tutor for every service line, word decks per service with words known, fluency ladder per prayer, parts roadmap from the gap list…"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "8559ca347",
+   "text": "One playback bar on every route (what plays, progress, pause, speed, stop)."
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "559338c02",
+   "text": "Weekday morning gets the Follow the service cards (F1): the existing weekday order, same component, no stand/sit markers invented"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "2c383690f",
+   "text": "Accent run 7 list: the Ashkenazi prayer and line rows run 5 held, retaken at speaking rate 1.1"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "6027fd748",
+   "text": "Owner decisions A and B: 1,299 Sephardi rows that played the Israeli clip carry a copy of it as their own file, captioned 'Sephardi voice, the same reading as Israeli' (the app's…"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "146268c16",
+   "text": "Owner decision B: a letter, vowel or syllable accent clip passes on the sound reviewer alone (calibration run 4: Google passed 13-40% of the app's own Israeli short clips, the…"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "e71c4bf75",
+   "text": "Ashkenazi own clips to 95.3% (accent-fill run 5): 643 alias rows and the 159 run-3 holds retaken at rate 0.85, 617 passed 2 of 3 and are admitted."
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "fd6dbf7bd",
+   "text": "Ashkenazi clips of their own from the Ashkenazi reading in Hebrew letters (accent-fill run 3): 442 rows that played the Israeli clip, 283 passed 2 of 3 reviewers and are admitted…"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "d9bca8f96",
+   "text": "Accent runs: retakes at a chosen speaking rate for the rows a past run held, alias rows that have no clip of their own, a review-only mode for calibrating the reviewers on clips…"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "a69aeeb46",
+   "text": "Ashkenazi clips from the Ashkenazi reading written in pointed Hebrew letters: kamatz as holam, tav without dagesh as samekh, tzere with a yod (the engine's three Ashkenazi rules…"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "23910f29b",
+   "text": "Render runs the asset check as its build command, so a deploy with a missing clip fails and the served evidence file comes from the deploy itself"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "8c09f8ef3",
+   "text": "Release build: stamp, asset check evidence (0 gaps) with the new accent clips and the search fix"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "82a6c987c",
+   "text": "Accent clips of their own, words (accent-fill run 2): 1,216 Sephardi and Ashkenazi word rows that played the Israeli clip made by the repo's accent pipeline and reviewed by the…"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "c74381cee",
+   "text": "Search: \"1 result\", not \"1 results\""
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "f95c09ce7",
+   "text": "Rebuild word frequencies and theme packs after the merged lanes changed their sources"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "741e17f25",
+   "text": "Accent clips of their own (accent-fill run 1), alias rows with files of their own, and the Chirp long-prayer retry"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "eef8fc0a7",
+   "text": "C-06 in part, #3 and #18: move progress between the learner's own devices with no server (link, QR code or file."
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "1347e6728",
+   "text": "Roots #5, #9, #15: one verb denominator on the Roots page."
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "e1f5a43e3",
+   "text": "Lane 6 (#16, #13, #17): Reading Without Vowels, trope families and aliyah practice, placement as the front door"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "1a66fa1e2",
+   "text": "Plan 4.9 (skeleton first-paints): the shell's visually hidden fallback heading no longer counts as page content, so the loading placeholder stays until a view paints something…"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "86504a0d9",
+   "text": "Shabbat Companion: sitemap entry, deaf and hard-of-hearing inventory row, and the service.companion store key in the privacy table"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "8dff39c4e",
+   "text": "M-04, M-05, M-06, M-09, M-11, R-12, plan #6: deploy-time asset check, full sitemap, hold sets reconciled, chapter audio from verse clips, book completion proven, Siddur line…"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "cb3139c02",
+   "text": "M-08: About has a Held Recordings section: the recordings held for review (what each is, whose voice), why (each failed at least 2 of 3 independent checks of its words), what…"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "142566cc8",
+   "text": "Accent clips of their own for the rows that play the Israeli clip: accent-fill workflow (the repo's accent pipeline: the Israeli WaveNet voice reads the tradition's respelling…"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "067d30565",
+   "text": "Plan #10, Shabbat Companion (code): #/shabbat lazy route with This Shabbat (portion, candle lighting, practise-before-Friday list), the Friday evening and Shabbat morning service…"
+  }
+ ]
+}

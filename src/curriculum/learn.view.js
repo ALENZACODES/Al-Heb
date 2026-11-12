@@ -36,7 +36,7 @@ export function mount(root, ctx) {
     else if (q.gender) go(() => import("./gender.view.js").then((m) => m.mountGender(root, ctx, q.gender === "roles" ? "roles" : "pairs", q)));
     else if (q.scaffold) go(() => import("./scaffold.view.js").then((m) => m.mountScaffold(root, ctx)));
     else if (q.dialogues || q.dialogue) go(() => import("./dialogues.view.js").then((m) => m.mountDialogues(root, ctx, q.dialogue)));
-    else if (q.review) go(() => import("./review.view.js").then((m) => m.mountReview(root, ctx, { lessonId: q.lesson })));
+    else if (q.review) go(() => import("./review.view.js").then((m) => m.mountReview(root, ctx, { lessonId: q.lesson, minutes: q.minutes })));
     else if (q.lesson) go(() => import("./lesson.view.js").then((m) => {
       const u = m.mountLesson(root, ctx, q.lesson);
       if (/^I-\d+$/.test(String(q.lesson)) && ctx?.hasRoute?.("intermediatelesson")) {

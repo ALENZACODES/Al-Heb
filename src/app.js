@@ -5,6 +5,8 @@ import { store } from './store.js';
 import { createSettings } from './shell/settings.js';
 import { applyComfort, COMFORT_KEYS } from './shell/comfort.js';
 import { createRouter, ROUTES, loadRouteModule, availableRoutes, clearView, announceTitle } from './shell/router.js';
+import { clearTransient } from './shell/transient.js';
+import { watchOnline } from './shell/offline-badge.js';
 import { VIEW_FILES } from './shell/views.generated.js';
 import { renderNav as renderNavBar } from './shell/nav.js';
 import { t, tHe } from './shell/i18n.js';
@@ -16,7 +18,7 @@ import { h, heSpan, unavailableCard } from './shell/ui.js';
 import { holdMain, rememberPage, watchFallbackHeading } from './shell/loading-contract.js';
 import { loadImageResolver, img as imgEl } from './img/resolve.js';
 import { updateCompanions } from './shell/companions.js';
-import { applyMotor, MOTOR_KEYS } from './shell/motor.js';
+import { applyMotor, MOTOR_KEYS, shortcutsOn } from './shell/motor.js';
 import { gameMusic } from './audio/music.js';
 import { mountGameMusic, syncGameMusic } from './audio/music-bar.js';
 import { mountMediaPrompt } from './audio/media-prompt.js';
@@ -241,10 +243,13 @@ async function show(match, ctxBase, { quiet = false } = {}) {
   // superseded before it rendered cannot file the previous page's scroll position under the wrong path.
   if (!quiet) { lastMatch = match; lastCtx = ctxBase; touched = false; touchedOutsideField = false; fieldEdited = false; if (lastHashShown != null) scrollKeeper?.leave(lastHashShown); }
   const live = document.getElementById('announcer');
+  if (!quiet) clearTransient(document); // I1: feedback lines and toasts from the page being left go with it
   if (!quiet) announceTitle(live, ''); // M-09: the previous page's title leaves the page text as soon as navigation starts
   if (!route) {
     const updating = h('p', { class: 'muted', role: 'status' });
-    root.replaceChildren(h('section', { class: 'card' }, h('h1', { id: 'view-title', tabindex: '-1' }, t('notfound.title')), h('p', { class: 'mono' }, path), updating, h('a', { class: 'btn', href: '#/' }, t('nav.home'))));
+    const sugg = h('div', { class: 'alef-404-suggest' }); // I9: "Did you mean" links from the route table, loaded on demand
+    root.replaceChildren(h('section', { class: 'card' }, h('h1', { id: 'view-title', tabindex: '-1' }, t('notfound.title')), h('p', { class: 'mono' }, path), sugg, updating, h('a', { class: 'btn', href: '#/' }, t('nav.home')), ' ', h('a', { class: 'btn secondary', href: '#/search' }, t('search.title'))));
+    import('./platform/suggest.js').then((m) => { const s = m.suggestRoutes(path, ROUTES, { available }); if (s.length && token === navToken) sugg.replaceChildren(h('p', {}, 'Did you mean:'), h('ul', {}, ...s.map((x) => h('li', {}, h('a', { href: x.href }, `${titleCase(x.title)} (${x.href})`))))); }).catch(() => {});
     renderNav(null); document.title = `${t('notfound.title')} - Aleph`;
     updateForMissingPage(path, () => { updating.textContent = t('notfound.updating'); });
     return finish();
@@ -352,6 +357,9 @@ async function show(match, ctxBase, { quiet = false } = {}) {
 
 async function boot() {
   try { watchTitleCase(document.body); } catch { /* casing is cosmetic */ }
+  try { watchOnline(window); } catch { /* the offline line is a convenience */ } // J1 (lane platform)
+  // J6 (lane platform): "?" opens the keyboard shortcuts page; never in a field, with a modifier, or on pages that use every key themselves
+  document.addEventListener('keydown', (e) => { if (e.key === '?' && !e.ctrlKey && !e.metaKey && !e.altKey && !/^(INPUT|TEXTAREA|SELECT)$/.test(e.target?.tagName || '') && !e.target?.isContentEditable && !['letter', 'letters', 'typing', 'firstwin', 'talk'].includes(document.body.dataset.route) && shortcutsOn({ settings })) { e.preventDefault(); location.hash = '#/shortcuts'; } });
   // Rimon's greeting (the companion module is about 101 KB with its imports) waits until after first paint
   // and the first-load JS window, like the other after-paint work, so Home stays under the 532 KB budget.
   shownFirst.then(() => afterPaint(() => {

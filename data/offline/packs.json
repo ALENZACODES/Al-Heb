@@ -124,7 +124,7 @@
     ],
     [
      "src/audio/sfx.js",
-     6261,
+     6396,
      1
     ],
     [
@@ -254,7 +254,7 @@
     ],
     [
      "src/curriculum/learn.view.js",
-     17941,
+     17961,
      1
     ],
     [
@@ -304,7 +304,7 @@
     ],
     [
      "src/curriculum/review.view.js",
-     18643,
+     20760,
      0
     ],
     [
@@ -329,7 +329,7 @@
     ],
     [
      "src/curriculum/srs.js",
-     7366,
+     8493,
      1
     ],
     [
@@ -401,6 +401,16 @@
      "src/placement/start.js",
      2004,
      1
+    ],
+    [
+     "src/platform/sched-state.js",
+     3698,
+     0
+    ],
+    [
+     "src/platform/srs-tools.js",
+     3497,
+     0
     ],
     [
      "src/pronunciation/forTradition.js",
@@ -489,7 +499,7 @@
     ],
     [
      "src/shell/nav-model.js",
-     12056,
+     12211,
      1
     ],
     [
@@ -500,6 +510,11 @@
     [
      "src/shell/plain-copy.js",
      3437,
+     1
+    ],
+    [
+     "src/shell/platform-routes.js",
+     1062,
      1
     ],
     [
@@ -549,7 +564,12 @@
     ],
     [
      "src/shell/router.js",
-     48096,
+     48286,
+     1
+    ],
+    [
+     "src/shell/transient.js",
+     1592,
      1
     ],
     [
@@ -933,7 +953,7 @@
     ],
     [
      "src/audio/sfx.js",
-     6261,
+     6396,
      1
     ],
     [
@@ -1033,7 +1053,7 @@
     ],
     [
      "src/curriculum/review.view.js",
-     18643,
+     20760,
      0
     ],
     [
@@ -1048,7 +1068,7 @@
     ],
     [
      "src/curriculum/srs.js",
-     7366,
+     8493,
      1
     ],
     [
@@ -1100,6 +1120,16 @@
      "src/lib/counts.js",
      21321,
      1
+    ],
+    [
+     "src/platform/sched-state.js",
+     3698,
+     0
+    ],
+    [
+     "src/platform/srs-tools.js",
+     3497,
+     0
     ],
     [
      "src/pronunciation/forTradition.js",
@@ -1209,6 +1239,11 @@
     [
      "src/shell/rimon.js",
      16106,
+     1
+    ],
+    [
+     "src/shell/transient.js",
+     1592,
      1
     ],
     [

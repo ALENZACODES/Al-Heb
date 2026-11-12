@@ -22,6 +22,7 @@ export const NAV_EN = {
   'nav.games': 'Games',
   'nav.route.awards': 'Awards and certificate',
   'nav.route.move': 'Move to another device', 'nav.route.certificate': 'Certificate of lessons completed', // lane 4 (12 Nov)
+  'nav.route.whats-new': "What's New", 'nav.route.my-data': 'My Data', 'nav.route.cram': 'Cram', 'nav.route.mastery': 'Mastery Map', 'nav.route.my-week': 'My Week', 'nav.route.lesson-badges': 'Lesson Badges', 'nav.route.shortcuts': 'Keyboard Shortcuts', 'nav.route.worksheet': 'Printable Worksheet', 'nav.route.focus': 'Focus Mode', // lane platform (12 Nov)
   'nav.route.songs': 'Songs',
   'nav.route.camera': 'Camera Translator',
   // games hub and every game
@@ -163,8 +164,8 @@ export const NAV_EN = {
   'nav.route.karaoke': 'Karaoke Beat', 'nav.route.cipher': 'Cipher Grid',
   'nav.route.fleamarket': 'Shuk Barter',
   'nav.route.traditions-guide': 'Which pronunciation style should I learn?', 'nav.route.traditions-hear': 'Hear the difference',
-  'search.title': 'Search', 'search.label': 'Search pages, letters and words',
-  'search.hint': 'Try a page name, a letter name such as bet, a Hebrew letter or word, or an English word.',
+  'search.title': 'Search', 'search.label': 'Search pages, letters, words, lessons, books, roots, prayers and the Torah',
+  'search.hint': 'Try a page name, a letter name such as bet, a Hebrew letter or word, an English word, or a Torah reference such as Genesis 12:1.',
   'search.pages': 'Pages', 'search.letters': 'Letters', 'search.words': 'Words',
   'search.none': 'No matches yet. Try a different spelling, or fewer letters.', 'search.loading': 'Loading letters and words…',
   'search.loaded': 'Searched {n} words.', 'search.error': 'Letters and words did not load, but you can still search pages.',

@@ -10,6 +10,7 @@ import { streakLine, STREAK } from './streak.js';
 import { shouldAsk, answerAsk, reminderICS } from './notify.js';
 import { showRimon } from './rimon.js';
 import { recapLine } from './recap.js';
+import { sayBriefly } from '../shell/transient.js';
 
 const RING_R = 26, RING_C = 2 * Math.PI * RING_R;
 const svg = (tag, attrs) => { const n = document.createElementNS('http://www.w3.org/2000/svg', tag); for (const [k, v] of Object.entries(attrs)) n.setAttribute(k, String(v)); return n; };
@@ -39,7 +40,7 @@ export function mountTopBar(R, g = globalThis) {
     } catch { /* the bar is optional */ }
   };
   doc.addEventListener('alef:retention', draw);
-  doc.addEventListener('alef:retention-say', (e) => { live.textContent = ''; g.setTimeout(() => { live.textContent = e.detail?.text || ''; }, 50); });
+  doc.addEventListener('alef:retention-say', (e) => { live.textContent = ''; g.setTimeout(() => sayBriefly(live, e.detail?.text || '', { ms: 6000, win: g }), 50); }); // I1: never left in the page text
   draw();
 }
 

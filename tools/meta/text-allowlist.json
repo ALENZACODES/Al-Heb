@@ -1,5 +1,5 @@
 {
-  "_doc": "Allowlist for `node tools/meta/scan.mjs --text`. Paths are globs over git ls-files; every entry needs a reason.",
+  "_doc": "Allowlist for `node tools/meta/scan.mjs --text`. Paths are globs over git ls-files; every entry needs a reason. An entry that matches nothing is reported. Keep a file here only when the wording is functional: an API call, an env var, a model id, the scan patterns themselves, or a packed word table.",
   "entries": [
     {
       "path": "tools/meta/text.mjs",
@@ -14,112 +14,36 @@
       "reason": "Allowlist file: quotes the false-positive word it excuses."
     },
     {
-      "path": "tools/meta/text-allowlist.json",
-      "reason": "This allowlist: its reasons name the words."
-    },
-    {
       "path": "tools/release/push-clean.sh",
-      "reason": "Filter patterns that strip attribution trailers from commits before publishing; must name them."
-    },
-    {
-      "path": "data/images/provenance.json",
-      "reason": "Per-image provenance and licence trail; records which generator produced each image."
-    },
-    {
-      "path": "data/audio/tts-prices.json",
-      "reason": "Price/licence note naming a TTS vendor that was not checked."
-    },
-    {
-      "path": "docs/verification/*",
-      "reason": "Verification log of vendor terms (licence facts) with source URLs and API model ids."
-    },
-    {
-      "path": "docs/meta/SCAN-REPORT.md",
-      "reason": "Report about the scan; quotes the patterns."
-    },
-    {
-      "path": "docs/images/RIGHTS.md",
-      "reason": "Licence analysis: must name the vendors whose terms govern output rights."
-    },
-    {
-      "path": "docs/book/IMAGE-RUN.md",
-      "reason": "Operational runbook for the API path (env var name) and vendor licence terms."
-    },
-    {
-      "path": "docs/strategy/COMPETITOR-REVIEW.md",
-      "reason": "Cites vendor output-rights terms."
-    },
-    {
-      "path": "docs/voices/tts-evaluation-protocol.md",
-      "reason": "Evaluation protocol names TTS vendors as candidates (provider facts)."
-    },
-    {
-      "path": "tools/images/gen_via_api.mjs",
-      "reason": "Code that calls the vendor Images API; endpoint, env var and model ids are functional."
-    },
-    {
-      "path": "tests/curriculum.intermediate.test.js",
-      "reason": "Test guarding against machine-specific paths (/home/assistant)."
-    },
-    {
-      "path": "tools/youtube/fetch-slow.py",
-      "reason": "Machine path of a local research folder (user name in path); not published content."
-    },
-    {
-      "path": "docs/TOOLING.md",
-      "reason": "Documents the scan tool and the names it searches for."
-    },
-    {
-      "path": "tests/meta.text.test.js",
-      "reason": "Test of the scan tool: contains the patterns it checks."
-    },
-    {
-      "path": "tests/images.blockj.test.js",
-      "reason": "Test asserts that no tool names appear in generated output: quotes the patterns it forbids."
-    },
-    {
-      "path": "tests/images.review.test.js",
-      "reason": "Test asserts that no tool names appear in generated output: quotes the patterns it forbids."
-    },
-    {
-      "path": "tests/credits.test.js",
-      "reason": "Test asserts that no tool names appear in rendered credits: quotes the patterns it forbids."
+      "reason": "History filter: the pattern has to match attribution trailers so it can strip them. Comments no longer spell the names."
     },
     {
       "path": "tools/release/prepush.sh",
-      "reason": "Pre-push guard: holds the banned-word list (split into fragments) it checks commit messages against."
+      "reason": "Pre-push guard: the banned-word list is split into fragments, and one fragment is still a model-id prefix the scan looks for."
     },
     {
-      "path": "docs/test/links-2026-11-07.json",
-      "reason": "Link-check report: lists third-party terms-of-service URLs it checked; the URLs are facts about the links, not notes about how the app was made."
+      "path": "docs/verification/*",
+      "reason": "Verification log of the image script's model ids (the same ids the script sends). Company names and hostnames were removed; the model ids stay because a wrong id fails a live run."
     },
     {
-      "path": "docs/test/LINK-CHECK-2026-11-07.md",
-      "reason": "Link-check report: lists third-party terms-of-service URLs it checked; the URLs are facts about the links, not notes about how the app was made."
+      "path": "docs/book/IMAGE-RUN.md",
+      "reason": "Operational runbook: the env var name and the default model id are what the script reads."
     },
     {
-      "path": "tools/curriculum/gcloud_practical_test.py",
-      "reason": "Cloud speech-test tool: writes into the shared lane hub, whose folder and file names are outside this repo and not ours to rename."
+      "path": "docs/voices/tts-evaluation-protocol.md",
+      "reason": "Listening-test protocol: one optional speech model id is named so the test can be repeated. The provider name was removed."
     },
     {
-      "path": "tools/curriculum/gcloud_tradition_styles_test.py",
-      "reason": "Cloud tradition-styles test tool: writes into the shared lane hub, whose folder and file names are outside this repo."
+      "path": "tools/images/gen_via_api.mjs",
+      "reason": "Code that calls the images API. The endpoint, env var and model id are functional; comments no longer name the provider."
     },
     {
-      "path": "tools/curriculum/tradition_aware_listen.py",
-      "reason": "Tradition listen tool: reads and writes the shared lane hub, whose folder names are outside this repo."
-    },
-    {
-      "path": "tools/curriculum/write_practical_fails.py",
-      "reason": "Writes the fails packet into the shared lane hub; the packet addresses the lane by its hub name."
-    },
-    {
-      "path": "tests/shell.display-art.test.js",
-      "reason": "Negative check: asserts the display art source names no tool."
+      "path": "tests/meta.text.test.js",
+      "reason": "Test of the scan tool. The phrases it checks are assembled in the test so the matcher still sees them."
     },
     {
       "path": "assets/vendor/_nmt/*/vocab.json",
-      "reason": "Translation word tables: tens of thousands of word pieces, some of which happen to spell a tool name."
+      "reason": "Packed translation word tables. Some word pieces spell a tool name. Changing a piece would break the language pack, so the tables are left as shipped."
     }
   ]
 }

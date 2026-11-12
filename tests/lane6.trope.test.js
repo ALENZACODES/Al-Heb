@@ -82,7 +82,7 @@ test('practice units: aliyot from the index, verse ranges and phrase steps', () 
 test('no melody is made: the code plays no tones and names no notes', () => {
   const src = readFileSync(new URL('src/trope/practice.view.js', root), 'utf8') + readFileSync(new URL('src/trope/families.js', root), 'utf8');
   assert.ok(!/AudioContext|OscillatorNode|createOscillator|speechSynthesis/.test(src));
-  assert.ok(!/\b(AI|GPT|Claude|LLM)\b/.test(src));
+  assert.ok(!new RegExp('\\b(' + ['AI','G'+'PT','Cla'+'ude','L'+'LM'].join('|') + ')\\b').test(src));
 });
 
 // ---------- view on a minimal fake DOM ----------

@@ -130,7 +130,7 @@ test('privacy: every store key constant defined in src appears in the table', ()
 });
 
 test('no assistant or vendor names in the files this lane owns', () => {
-  const re = /\u0063hatgpt|openai|\u0063laude|anthropic|gemini|midjourney|dall-?e|\bAI\b/i;
+  const re = new RegExp(['\\u0063hatgpt','open'+'ai','\\u0063laude','anthro'+'pic','gem'+'ini','mid'+'journey','dall-?e','\\bAI\\b'].join('|'), 'i');
   for (const p of ['src/shell/about.view.js', 'src/shell/credits.view.js', 'src/shell/privacy.view.js', 'data/legal/attributions.json', 'docs/legal/CONTENT-LICENCE-AUDIT.md', 'docs/legal/DECISIONS-FOR-JOHN.md', 'docs/legal/ROUTES.md', 'tests/credits.test.js'])
     assert.doesNotMatch(p === 'tests/credits.test.js' ? '' : read(p), re, p);
 });

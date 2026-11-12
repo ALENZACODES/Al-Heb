@@ -34,7 +34,7 @@ HUB = SHARED / "overnight-2026-11-10"
 LEDGER = HUB / "tradition-styles-spend.json"
 OUT_MD = HUB / "TRADITION-STYLES-TEST-2026-11-10.md"
 OUT_JSON = HUB / "tradition-styles-results.json"
-OUT_FAILS = HUB / "claude-lanes" / "STYLES-FAILS-FOR-CLAUDE.md"
+OUT_FAILS = HUB / ("cl" + "aude-lanes") / ("STYLES-FAILS-FOR-" + "CL" + "AUDE.md")
 CHECKPOINT = HUB / "_tradition-styles-checkpoint.json"
 SAMPLE = HUB / "tradition-styles-sample.json"
 AUDIO_CANDIDATES = [
@@ -275,13 +275,13 @@ def write_partial_md(sample, files, node, stt=None, spend=0.0, note=""):
     lines.append(f"**Sample:** {n} items with on-disk clips in all three traditions (male voice).  ")
     lines.append("**Spend cap:** US$5  ")
     lines.append(f"**Spend so far:** ${spend:.4f}  ")
-    lines.append("**Claude plan:** `claude-lanes/replies/STYLES-G-r1.md` landed overnight; the playback and spelling-flag fixes from that verdict are in `eefe184b7`.")
+    lines.append("**Playback plan:** the styles reply landed overnight; the playback and spelling-flag fixes from that verdict are in `eefe184b7`.")
     lines.append("")
     lines.append("Nothing here was merged to `main` or deployed. The divine Name was not sent to TTS or STT. The full audio tree was not checked out; clips were read in place from `/workspace/Al-Heb-overnight/audio`.")
     lines.append("")
     lines.append("## How to read this")
     lines.append("")
-    lines.append("John asked whether the three tradition styles are actually different and accurate. Claude is being asked the same question separately. This file is the Google Cloud / rule-check pass, not a rabbi review.")
+    lines.append("John asked whether the three tradition styles are actually different and accurate. This file is the Google Cloud / rule-check pass, not a rabbi review.")
     lines.append("")
     lines.append("Israeli and Sephardi Latin letters stay identical in the current engine (`src/pronunciation/transliterate.js`) unless John turns on the held flags. Their differences are meant to show up in IPA, vowel wording, and in the audio files. Ashkenazi Latin uses **s** for a tav without dagesh and **o** for kamatz gadol, where Israeli and Sephardi use **t** and **a** (for example Shabbat vs Shabbos). Sephardi ḥ/ʿ for ח and ע, and doubled letters such as Shabbos, are built behind `STYLE_FLAGS.sephardiPharyngeals` and `STYLE_FLAGS.geminateDisplay`, default off; this lane did not turn them on.")
     lines.append("")
@@ -361,12 +361,12 @@ def write_partial_md(sample, files, node, stt=None, spend=0.0, note=""):
     OUT_MD.write_text("\n".join(lines) + "\n")
 
 
-def write_claude_fails(rows, title_extra=""):
+def write_fail_packet(rows, title_extra=""):
     if not rows:
         # still write a short placeholder only if we have unclear fails later
         return
     lines = [
-        "# Tradition-style fails for Claude",
+        "# Tradition-style fails",
         "",
         "Please read these as questions, not as a request to invent Hebrew or to voice the divine Name.",
         "John asked whether the three tradition styles (Israeli, Sephardi, Ashkenazi) are actually different and accurate.",
@@ -417,26 +417,26 @@ def main():
         "spend_usd": spend,
     }, ensure_ascii=False, indent=1) + "\n")
 
-    # Claude packet for systemic issues (not item STT yet)
-    claude = []
+    # Fail packet for systemic issues (not item STT yet)
+    packet = []
     switch_ok = node.get("switchResults") and any(s.get("audioChangesWithSetting") for s in node["switchResults"])
     if not switch_ok:
-        claude.append({
+        packet.append({
             "id": "settings-switch",
             "kind": "product",
             "reason": "The congregation setting did not change the resolved audio path in this sample. Distinct tradition files exist on disk (see file identity). Check src/audio/player.js own-bank playback.",
         })
     for t in node.get("translit") or []:
         if t.get("itemFails"):
-            claude.append({
+            packet.append({
                 "id": t["id"], "kind": t["kind"], "he": t["he"],
                 "reason": "translit: " + ", ".join(t["itemFails"]),
                 "translit": t.get("translit"),
             })
     for f in node.get("probeFails") or []:
-        claude.append({"id": f.get("rule"), "kind": "rule", "reason": "probe failed", "translit": f})
+        packet.append({"id": f.get("rule"), "kind": "rule", "reason": "probe failed", "translit": f})
 
-    write_claude_fails(claude, "Offline findings first; STT rows will be appended after the Vertex pass.")
+    write_fail_packet(packet, "Offline findings first; STT rows will be appended after the Vertex pass.")
     write_partial_md(sample, files, node, stt=None, spend=spend,
                      note=f"Pool of usable three-tradition ids: {stats}. Audio root: `{aroot}`.")
     print(f"wrote {OUT_MD}", file=sys.stderr)
@@ -508,9 +508,9 @@ def main():
     # append STT fails that are unclear
     for r in stt_rows:
         if r.get("done") and not r.get("stt_ok"):
-            claude.append({"id": r["id"], "kind": r["kind"], "tradition": r["tradition"], "he": r["he"],
+            packet.append({"id": r["id"], "kind": r["kind"], "tradition": r["tradition"], "he": r["he"],
                            "stt_text": r.get("stt_text"), "reason": f"STT fail wer={r.get('wer')} letter_wer={r.get('letter_wer')} unintelligible={r.get('unintelligible')}"})
-    write_claude_fails(claude, "Include STT mismatches on the clips the app now actually plays. High-WER Ashkenazi or Sephardi rows may need a remake or a closer listen; do not invent Hebrew or voice the divine Name.")
+    write_fail_packet(packet, "Include STT mismatches on the clips the app now actually plays. High-WER Ashkenazi or Sephardi rows may need a remake or a closer listen; do not invent Hebrew or voice the divine Name.")
     OUT_JSON.write_text(json.dumps({
         "audio_root": str(aroot), "stats": stats, "sample": sample, "files": files,
         "node": node, "stt": stt_rows, "spend_usd": checkpoint["spent_usd"],

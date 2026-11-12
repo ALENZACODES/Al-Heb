@@ -36,6 +36,6 @@ Order matters: Block A first (character sheets and BG_ scenes are reference imag
 - [ ] Cultural check: kippah/tallit/tefillin/seder plate/menorah details by a knowledgeable reader.
 
 ## Licensing caveats (from the research; not legal advice)
-- OpenAI terms assign output rights to the user and allow commercial use, but US Copyright Office practice (Thaler denial) means unmodified AI images are likely not copyrightable in the US. What you own outright is the overlaid Hebrew type, layout and your edits; keep a record of human edits.
-- Do not claim the images are human-made. Credit line for the colophon: "Illustrations created with AI tools and edited by the author."
-- Midjourney (revenue threshold, trial CC BY-NC) and Flux dev (non-commercial) are not recommended; OpenAI/Firefly/Flux schnell are the commercially cleaner options per the research. OpenAI's own current terms were NOT fetched in this build; read them before the run.
+- The image service terms assign output rights to the user and allow commercial use, but US Copyright Office practice (Thaler denial) means unmodified tool-made pictures are likely not copyrightable in the US. What you own outright is the overlaid Hebrew type, layout and your edits; keep a record of human edits.
+- Do not claim the images are human-made. Credit line for the colophon: "Illustrations produced with an image tool and edited by the author."
+- Services whose trial terms are non-commercial are not recommended. The service's own current terms were NOT fetched in this build; read them before the run.

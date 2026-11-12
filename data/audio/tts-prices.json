@@ -31,7 +31,7 @@
         { "id": "neural2", "label": "Neural2 voices", "usdPerMillionChars": 16, "verified": true, "source": "https://cloud.google.com/text-to-speech/pricing", "evidence": "'Neural2 voices | 0 to 1 million characters | US$0.000016 per character (US$16 per 1 million characters)'", "freeCharsPerMonth": 1000000, "caveat": "Hebrew availability for Neural2 not verified." }
       ],
       "charCounting": { "verified": true, "source": "https://cloud.google.com/text-to-speech/pricing", "evidence": "'The total number of characters in the input string are counted for billing purposes, including spaces and newline characters. All SSML tags (except the <mark> tag) are also included in the character count.' For WaveNet/Standard the character count is 'equal to or less than the number of bytes'; the page does not say how combining marks (niqqud) are counted." },
-      "otherNotes": "Gemini-TTS is priced per token, not per character (for example Gemini 2.5 Flash TTS input $0.50 per 1M text tokens, output $10.00 per 1M audio tokens; 25 audio tokens per second). It is not in this plan because per-character budgeting does not apply and Hebrew suitability is untested."
+      "otherNotes": "Token-priced speech engines are not in this plan: per-character budgeting does not apply and Hebrew suitability is untested."
     },
     "elevenlabs": {
       "label": "ElevenLabs text to speech",
@@ -57,7 +57,7 @@
   "unverified": [
     "Redistribution rights for Azure and Google TTS output inside a shipped app (counsel; files are tagged redistributionCleared:false).",
     "Whether any engine bills or pronounces niqqud (combining marks) correctly.",
-    "OpenAI TTS and other providers: not checked this session.",
+    "Other speech providers: not checked this session.",
     "Volume discounts, committed-use tiers, taxes, currency conversion."
   ]
 }

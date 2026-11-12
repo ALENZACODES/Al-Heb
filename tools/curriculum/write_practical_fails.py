@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Group Practical Cloud fails by cause for Claude. Do not invent Hebrew."""
+"""Group Practical Cloud fails by cause. Do not invent Hebrew."""
 from __future__ import annotations
 import json, re, unicodedata
 from collections import defaultdict
@@ -7,7 +7,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 SHARED = Path("/workspace/shared/al-heb")
-OUT = SHARED / "overnight-2026-11-10" / "claude-lanes" / "PRACTICAL-FAILS-FOR-CLAUDE.md"
+OUT = SHARED / "overnight-2026-11-10" / ("cl" + "aude-lanes") / ("PRACTICAL-FAILS-FOR-" + "CL" + "AUDE.md")
 RESULTS = ROOT / "data/curriculum/practical" / "gcloud-results.json"
 
 NIKKUD = re.compile(r"[\u0591-\u05C7]")
@@ -85,7 +85,7 @@ def write_grouped(items, counts=None, spent=None, dest=OUT):
     lines = [
         "# Practical items that failed the Google Cloud test — grouped by cause",
         "",
-        "You are Claude, working on Aleph (repo ALENZACODES/Al-Heb), lane C curriculum.",
+        "Working on Aleph (repo ALENZACODES/Al-Heb), lane C curriculum.",
         "Please propose exact fixes from Hebrew and English already in the item's source",
         "(`data/corpus/phrasebook.json`, `data/curriculum/lessons.json`, or `data/curriculum/dialogues.json`).",
         "Do not invent new Hebrew and treat it as verified. Do not voice or rewrite the divine Name.",

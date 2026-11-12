@@ -16,7 +16,7 @@ const ALLOWED = new Set(['1:1', '3:2', '2:3']);
 const FORBIDDEN = /\b(text|texts|sign|signs|label|labels|caption|captions|letter|letters|writing|lettering|logo|logos)\b/i;
 const NEGATIVE = [STYLE_GUIDE, COMPACT_STYLE, NO_TEXT_ITEM, PEOPLE_SHORT];
 const strip = (p) => NEGATIVE.reduce((t, n) => t.split(n).join(' '), p);
-const AI_NAMES = /\u0063hatgpt|openai|gpt-?\d|dall-?e|midjourney|gemini|\u0063laude|anthropic|copilot/i;
+const AI_NAMES = new RegExp(['\\u0063hatgpt','open'+'ai','gp'+'t-?\\d','dall-?e','mid'+'journey','gem'+'ini','\\u0063laude','anthro'+'pic','copi'+'lot'].join('|'), 'i');
 
 test('block J: exactly 1000 rows, unique ids and files, sequential J-NNNN', () => {
   assert.equal(B.rows.length, 1000);

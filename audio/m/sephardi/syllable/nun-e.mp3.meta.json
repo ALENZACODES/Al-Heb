@@ -1,0 +1,31 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-respelled-israeli-voice",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "sephardi",
+ "inputText": "נֶ",
+ "inputSha256": "0e0584a3c17f691feb26ef0f6f694ea69b6894c43f341cb6edf6f903da577fb8",
+ "ingestedAt": "2026-11-12T07:01:03.735Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice: the Israeli man voice reading the sephardi English-letter respelling, not pointed Hebrew. Not a human recording; no human has listened to it. Licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel.",
+ "renderedAt": "2026-11-12T07:01:03.735Z",
+ "redistributionCleared": false,
+ "spokenText": "ne",
+ "normalized": true,
+ "provider": "google",
+ "madeFrom": "respelling",
+ "voiceName": "he-IL-Wavenet-B",
+ "languageCode": "he-IL",
+ "hebrew": "נֶ",
+ "israeliRef": "audio/m/israeli/syllable/nun-e.mp3",
+ "tempo": {
+  "applied": false,
+  "factor": 1,
+  "cap": 1.26,
+  "before": 0.6960090702947845,
+  "after": 0.6960090702947845,
+  "israeliSec": 0.76,
+  "israeliRef": "audio/m/israeli/syllable/nun-e.mp3"
+ }
+}

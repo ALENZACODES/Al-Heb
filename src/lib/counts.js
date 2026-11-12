@@ -247,6 +247,32 @@ export function buildStamp(b = BUILD) {
   return `Version ${b?.version || '0.0.0'}, built ${at}`;
 }
 
+// ---------- one ring per service (CODER-100 F8): every denominator from TOTALS.service ----------
+/** Store keys the ring reads: Prayer Practice (src/service/practice.model.js) and the Shabbat Companion's practice marks. */
+export const SERVICE_KEYS = Object.freeze({ practice: 'service.practice', companion: 'service.companion' });
+/** Lines, distinct words and prayers Aleph holds for one service (null for an unknown service). */
+export const serviceTotals = (orderId) => { const t = obj(TOTALS.service)[orderId]; return t && typeof t === 'object' ? t : null; };
+/**
+ * The one ring for a service: lines read, words known and prayers followed, each over the service's own total, and the ring as the
+ * mean of the three shares, rounded down. The parts are the learner's own marks (self-checked), not a measurement of reading.
+ * @param {string} orderId @param {any} practice service.practice record @param {any} companion service.companion record
+ * @param {Record<string,any>} [cards] srs.cards (a 'line:<id>' card counts as practising that prayer, as on the Companion)
+ * @param {string[]} [itemIds] the service's prayer ids (data/service/orders.json; every caller already holds the orders)
+ */
+export function serviceRing(orderId, practice, companion, cards, itemIds = []) {
+  const t = serviceTotals(orderId);
+  if (!t) return null;
+  const p = obj(practice), cap = (n, max) => Math.min(max, n);
+  const lines = cap(Object.keys(obj(obj(p.lines)[orderId])).length, t.lines);
+  const words = cap(Object.keys(obj(obj(p.words)[orderId])).length, t.words);
+  const done = new Set([...Object.keys(obj(obj(companion).practised)), ...Object.keys(obj(cards)).filter((k) => k.startsWith('line:')).map((k) => k.slice(5))]);
+  const prayers = cap([...new Set(Array.isArray(itemIds) ? itemIds : [])].filter((id) => done.has(id)).length, t.prayers);
+  const share = (a, b) => (b ? a / b : 0);
+  const pct = Math.floor(((share(lines, t.lines) + share(words, t.words) + share(prayers, t.prayers)) / 3) * 100);
+  return { orderId, title: t.title, pct, lines: { have: lines, of: t.lines }, words: { have: words, of: t.words }, prayers: { have: prayers, of: t.prayers }, gaps: t.gaps,
+    text: `${t.title}: ${pct}%. Lines read ${lines} of ${t.lines}, words known ${words} of ${t.words}, prayers followed ${prayers} of ${t.prayers}.` };
+}
+
 // ---------- everything at once ----------
 /** Read every stored record the counts need. Never throws. @param {{get:Function}} store */
 export function read(store) {

@@ -39,7 +39,7 @@ export const SECTION_ROUTES = {
     'tugowar', 'vowelcatcher', 'pinball', 'prefixblast', 'memorypalace', 'shabbatrush', 'typewriter', 'petclinic', 'trainswitch', 'weatherstudio',
     'rentalagent', 'echochamber', 'museumcurator', 'karaokebeat', 'archbuilder', 'lasermaze', 'roottree', 'letterbridge', 'shadowcraft', 'ciphergrid',
     'shuktaxi', 'barter', 'submarinesonar', 'rhymelab', 'bumperverbs', 'bumpercar', 'traintrack', 'weatherpresenter', 'karaoke', 'cipher', 'fleamarket'],
-  read: ['readhub', 'read', 'text', 'torahread', 'torahreadsec', 'torahreader', 'ask', 'service', 'shabbat' /* lane 5 */, 'trope', 'timedread', 'morning', 'scan', 'camera', 'books', 'book', 'listen-shelf', 'synagogues', 'synagogue'],
+  read: ['readhub', 'read', 'text', 'torahread', 'torahreadsec', 'torahreader', 'ask', 'service', 'shabbat' /* lane 5 */, 'prayer-practice' /* siddur-speaking lane */, 'trope', 'timedread', 'morning', 'scan', 'camera', 'books', 'book', 'listen-shelf', 'synagogues', 'synagogue'],
   speak: ['speakhub', 'speak', 'talk', 'listen', 'songs', 'compare', 'tradition-quiz', 'read-my-way', 'traditions', 'traditions-guide', 'traditions-hear', 'record-compare'],
   progress: ['progress', 'awards', 'placement', 'calendar', 'day', 'festivals', 'festival', 'reminders', 'share', 'classsummary', 'syllabus', 'time-budget', 'daily'],
   more: ['search', 'settings', 'accessibility', 'help', 'workbook', 'light', 'install', 'offline', 'about', 'how', 'credits', 'privacy', 'terms', 'welcome'],

@@ -159,3 +159,12 @@ test('F1 weekday follow: the same Follow cards for weekday morning, in its order
   assert.match(seen[22], /Mourner's Kaddish/);
   assert.ok(root.querySelector('#sv-next').attrs.disabled !== undefined, 'last card: Next disabled');
 });
+
+test('F8 ring: each service shows the one ring with the agreed denominators', async () => {
+  const { root, ctx } = mk({ init: { 'service.practice': { v: 1, lines: { 'shabbat-morning': { 'shema-1': '2026-11-12' } } } } });
+  await mount(root, ctx);
+  const ring = root.querySelector('[data-order="shabbat-morning"] .sv-ring');
+  assert.match(ring.textContent, /Lines read 1 of 53, words known 0 of 507, prayers followed 0 of 28/);
+  assert.match(root.querySelector('[data-order="friday-night"] .sv-ring').textContent, /of 32,.* of 303,.* of 17/);
+  assert.match(root.querySelector('[data-order="weekday-morning"] .sv-ring').textContent, /of 37,.* of 353,.* of 23/);
+});

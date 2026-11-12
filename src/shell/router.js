@@ -164,6 +164,8 @@ export const ROUTES = [
   { name: 'service', pattern: '/service', module: '../service/service.view.js', title: 'Follow the service', owner: 'service', optional: true, quick: 'nav.service' },
   // lane 5 (12 Nov, plan #10): Shabbat Companion, a lazy route (its code and data are on demand)
   { name: 'shabbat', pattern: '/shabbat', module: '../service/shabbat.view.js', title: 'Shabbat Companion', owner: 'service', optional: true, quick: 'nav.route.shabbat' },
+  // siddur-speaking lane (CODER-100 F3-F9): Prayer Practice, a lazy route (src/service/ is on demand)
+  { name: 'prayer-practice', pattern: '/prayer-practice', module: '../service/practice.view.js', title: 'Prayer Practice', owner: 'service', optional: true, quick: 'nav.route.prayer-practice' },
   { name: 'firstday', pattern: '/firstday', module: '../firstday/firstday.view.js', tier: 'v0', title: 'Your first 10 minutes', owner: 'firstday', optional: true, group: 'learn', quick: 'nav.firstday' },
   { name: 'firstday-ladder', pattern: '/firstday/ladder', module: '../firstday/ladder.view.js', title: 'Pointed to unpointed ladder', owner: 'firstday', optional: true, group: 'learn', quick: 'nav.firstday-ladder' },
   { name: 'firstwin', pattern: '/firstwin', module: '../firstday/minuteone.view.js', title: 'Build your first Hebrew word', owner: 'firstday', optional: true, group: 'learn' },

@@ -389,12 +389,12 @@
     ],
     [
      "src/lib/counts.generated.js",
-     1767,
+     2049,
      1
     ],
     [
      "src/lib/counts.js",
-     18893,
+     21223,
      1
     ],
     [
@@ -489,7 +489,7 @@
     ],
     [
      "src/shell/nav-model.js",
-     11948,
+     11994,
      1
     ],
     [
@@ -549,7 +549,7 @@
     ],
     [
      "src/shell/router.js",
-     47304,
+     47602,
      1
     ],
     [
@@ -651,7 +651,7 @@
     ],
     [
      "data/service/orders.json",
-     9890,
+     9889,
      1
     ],
     [
@@ -706,12 +706,12 @@
     ],
     [
      "src/lib/counts.generated.js",
-     1767,
+     2049,
      1
     ],
     [
      "src/lib/counts.js",
-     18893,
+     21223,
      1
     ],
     [
@@ -756,12 +756,12 @@
     ],
     [
      "src/service/model.js",
-     8884,
+     8991,
      0
     ],
     [
      "src/service/service.view.js",
-     11807,
+     12590,
      0
     ],
     [
@@ -1078,12 +1078,12 @@
     ],
     [
      "src/lib/counts.generated.js",
-     1767,
+     2049,
      1
     ],
     [
      "src/lib/counts.js",
-     18893,
+     21223,
      1
     ],
     [

@@ -52,7 +52,12 @@ export async function computeTotals(root = ROOT) {
     const sm = rd(root, 'data/audio/summary.json');
     audio.summary = Object.fromEntries(['total', 'recorded', 'tts', 'spoken', 'kinds', 'extra', 'playsIsraeli', 'viaOther', 'missing'].filter((k) => sm[k] !== undefined).map((k) => [k, sm[k]]));
   }
+  // CODER-100 F8 (siddur-speaking lane): per-service denominators, counted the way the Service coverage counts them
+  // (src/progress/decode.js gradeLines / gradeWords over the registry texts each order holds), so Progress, Service and the
+  // Prayer Practice ring all divide by the same lines, words and prayers.
+  const service = await serviceTotals(root);
   return {
+    service,
     books: list(rd(root, 'data/books/index.json'), 'books').length,
     bookPictured: list(rd(root, 'data/books/index.json'), 'books').reduce((a, b) => a + (Number(b.picturedPages) || 0), 0),
     dictionary: { entries: vocab.length, words: words.length, forms: vocab.length - words.length, addable: words.filter((e) => !hasTag(e, 'rare-sense')).length, hidden: hiddenCount },
@@ -67,6 +72,22 @@ export async function computeTotals(root = ROOT) {
       dictLinks: fs.existsSync(path.join(root, 'data/roots/dict-links.json')) ? rd(root, 'data/roots/dict-links.json').counts : null },
     audio,
   };
+}
+
+/** Lines, distinct words and prayers per service order, plus its gap count. {} when the files are absent. */
+export async function serviceTotals(root = ROOT) {
+  if (!fs.existsSync(path.join(root, 'data/service/orders.json')) || !fs.existsSync(path.join(root, 'data/corpus/registry.json'))) return {};
+  const { gradeLines, gradeWords } = await import(pathToFileURL(path.join(root, 'src/progress/decode.js')).href);
+  const orders = rd(root, 'data/service/orders.json').orders || {};
+  const by = new Map(list(rd(root, 'data/corpus/registry.json'), 'entries').map((e) => [e.id, e]));
+  const none = new Set();
+  const out = {};
+  for (const [id, o] of Object.entries(orders)) {
+    const items = (o.items || []).map((i) => i.id).filter((x) => by.has(x));
+    const lines = gradeLines(items.map((x) => by.get(x)), none);
+    out[id] = { title: o.title, prayers: items.length, lines: lines.length, words: gradeWords(lines, none).total, gaps: (o.gaps || []).length };
+  }
+  return out;
 }
 
 const pkgVersion = (root) => { try { return rd(root, 'package.json').version || '0.0.0'; } catch { return '0.0.0'; } };

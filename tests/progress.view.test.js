@@ -227,3 +227,10 @@ test('milestones: a store that refuses writes does not break the screen', async 
   const un = await mount(root, { store, settings: { get: () => 'read' } }); await waitFor(() => section(root, 'pg-h-ms') && section(root, 'pg-h-week'), { message: "milestones and week sections" });
   assert.ok(section(root, 'pg-h-ms')); assert.ok(section(root, 'pg-h-week')); un();
 });
+
+test('F8 ring: Progress shows the same service ring as the Service page, for the service the learner follows', async () => {
+  const { root } = await show({ ...allRead(), 'service.prefs': { order: 'weekday-morning' }, 'service.companion': { v: 1, practised: { 'kaddish-1': '2026-11-12' } } });
+  const p = root.querySelector('.pg-ring');
+  assert.ok(p, 'ring line shown');
+  assert.match(p.textContent, /Weekday morning: \d+%\. Lines read 0 of 37, words known 0 of 353, prayers followed 1 of 23\./);
+});

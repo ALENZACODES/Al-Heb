@@ -14,7 +14,7 @@ import { statModel } from '../shell/statbar.js';
 import { weekStripNode } from '../shell/weekstrip.js';
 import { DAILY_GOAL_KEY } from '../home/today.js';
 import { rankBadge } from '../curriculum/ranks.js';
-import { reviewsDue, wordsDue, SCOPE, LESSONS, count, KEYS } from '../lib/counts.js';
+import { reviewsDue, wordsDue, SCOPE, LESSONS, count, KEYS, serviceRing, SERVICE_KEYS } from '../lib/counts.js';
 
 const CSS = `
 .pg { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--gap, 1rem); max-inline-size: 100%; overflow-wrap: anywhere; }
@@ -161,6 +161,9 @@ export async function mount(root, ctx) {
     if (sc) readSec.append(h('p', { class: 'pg-siddur', 'data-pct': String(sc.pct), 'data-order': sc.orderId },
       `Prayer book coverage: ${sc.pct}% of the phrases in ${sc.title} use signs you have practiced`, ' ', h('a', { href: '#/service' }, 'See the service')),
       h('p', { class: 'small muted' }, `${sc.full} of the ${sc.lines} lines Aleph holds for ${sc.title.toLowerCase()} use only letters and signs from your completed activities. This is content coverage, not a reading assessment; ${plural(sc.gaps, 'part', 'parts')} of a typical service ${sc.gaps === 1 ? 'is' : 'are'} not in Aleph yet.`));
+    // CODER-100 F8: the same service ring Prayer Practice and the Service page show, from the counts module's denominators
+    const ring = sc ? (() => { try { return serviceRing(sc.orderId, store.get(SERVICE_KEYS.practice, null), store.get(SERVICE_KEYS.companion, null), s.cards, (d.orders?.orders?.[sc.orderId]?.items ?? []).map((x) => x.id)); } catch { return null; } })() : null;
+    if (ring) readSec.append(h('p', { class: 'small pg-ring', 'data-ring': `${ring.orderId}:${ring.pct}` }, `Service ring, ${ring.text} Your own marks, not a test. `, h('a', { href: `#/prayer-practice?order=${ring.orderId}` }, 'Prayer Practice')));
     sections.push(readSec);
 
     // 2. today, then this week

@@ -84,6 +84,8 @@ export const NAV_EN = {
   'nav.route.tg-holidays': 'Holiday Sorter',
   // lane g1
   ...Object.fromEntries(ROUTES.filter((r) => r.name.startsWith('g1-')).map((r) => ['nav.route.' + r.name, r.title])),
+  // lane g2: labels are the router titles
+  ...Object.fromEntries(ROUTES.filter((r) => r.name.startsWith('g2-')).map((r) => ['nav.route.' + r.name, r.title])),
   'nav.route.wordfinder': 'Hebrew Word Finder: Level 1',
   'nav.route.tugowar': 'Antonym Tug-of-War',
   'nav.route.vowelcatcher': 'Vowel Catcher',

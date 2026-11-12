@@ -75,7 +75,10 @@ const ON_DEMAND_PREFIXES = ['data/vocab/', 'data/roots/', 'data/knownwords/', 'd
   'src/sync/', 'data/offline/',
   // lane platform (12 Nov, CODER-100 H, I, J): its screens and models (scheduler state and fit, cram, mastery, weekly report, goals,
   // badges, data export, shortcuts, what's new) live under src/platform/ and are fetched on first open, runtime-cached.
-  'src/platform/', 'data/platform/'];
+  'src/platform/', 'data/platform/',
+  // Grammar notes (optional preview route /grammar; its data was already on demand) and the unused speaking-check model (no screen imports
+  // src/speak/dss.model.js; only its tests do): 44 KB moved out of the first install by lane platform (12 Nov) to pay for its route entries.
+  'src/grammar/', 'src/speak/dss.model.js'];
 const ON_DEMAND_FILES = new Set([
   // Rimon's stills (src/app.js imports the stage after boot; it shows nothing until the pictures exist, and the pictures are fetched on demand too),
   // and two older Rimon modules no screen imports (kept for reference and their tests).

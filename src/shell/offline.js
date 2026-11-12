@@ -99,6 +99,7 @@ export const ON_DEMAND_GROUPS = Object.freeze([
   { id: "od-bridge-trope-placement", label: "Reading without vowels, the placement check, trope families and aliyah practice (route code)", test: /^src\/(bridge\/|placement\/(placement\.view|model|loader)\.js$|trope\/(families|practice\.view)\.js$)/, approxMB: 0.07 },
   // lane platform (12 Nov): its pages and models (scheduler state and fit, what's new, my data, mastery, cram, my week, shortcuts) and the change list
   { id: "od-platform", label: "Review scheduler details, What's New, My Data, Mastery Map, Cram, My Week and Keyboard Shortcuts (route code and the change list)", test: /^(src\/platform\/|data\/platform\/|src\/fsrs\/fsrs6\.js$)/, approxMB: 0.06 },
+  { id: "od-grammar", label: "Grammar notes (route code) and a speaking-check model", test: /^src\/(grammar\/|speak\/dss\.model\.js$)/, approxMB: 0.05 },
 ]);
 /** Group a list of ALEF_ON_DEMAND paths into optional-download entries ({id,label,urls,approxMB}); empty groups are dropped. */
 export function onDemandGroups(onDemand = []) {

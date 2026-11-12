@@ -184,6 +184,26 @@ Home shows a backup reminder after three finished lessons (`docs/progress/BACKUP
 | `tg-parashah` | keep | Torah and Hebrew game; reached from the `games` hub. Preview until a teacher reviews its Hebrew. |
 | `tg-tropehunt` | keep | Torah and Hebrew game; reached from the `games` hub. Preview until a teacher reviews its Hebrew. |
 | `tg-holidays` | keep | Torah and Hebrew game; reached from the `games` hub. Preview until a teacher reviews its Hebrew. |
+| `g3-conveyor` | keep | Grammar in Action game (lane g3); reached from the `games` hub. Preview until a teacher reviews its Hebrew. |
+| `g3-lostfound` | keep | Grammar in Action game (lane g3); reached from the `games` hub. Preview until a teacher reviews its Hebrew. |
+| `g3-whack` | keep | Grammar in Action game (lane g3); reached from the `games` hub. Preview until a teacher reviews its Hebrew. |
+| `g3-onetwomany` | keep | Grammar in Action game (lane g3); reached from the `games` hub. Preview until a teacher reviews its Hebrew. |
+| `g3-questions` | keep | Grammar in Action game (lane g3); reached from the `games` hub. Preview until a teacher reviews its Hebrew. |
+| `g3-packcheck` | keep | Grammar in Action game (lane g3); reached from the `games` hub. Preview until a teacher reviews its Hebrew. |
+| `g3-clues` | keep | Grammar in Action game (lane g3); reached from the `games` hub. Preview until a teacher reviews its Hebrew. |
+| `g3-gate` | keep | Grammar in Action game (lane g3); reached from the `games` hub. Preview until a teacher reviews its Hebrew. |
+| `g3-grid` | keep | Grammar in Action game (lane g3); reached from the `games` hub. Preview until a teacher reviews its Hebrew. |
+| `g3-arrows` | keep | Grammar in Action game (lane g3); reached from the `games` hub. Preview until a teacher reviews its Hebrew. |
+| `g3-agree` | keep | Grammar in Action game (lane g3); reached from the `games` hub. Preview until a teacher reviews its Hebrew. |
+| `g3-negate` | keep | Grammar in Action game (lane g3); reached from the `games` hub. Preview until a teacher reviews its Hebrew. |
+| `g3-swapfix` | keep | Grammar in Action game (lane g3); reached from the `games` hub. Preview until a teacher reviews its Hebrew. |
+| `g3-mirror` | keep | Grammar in Action game (lane g3); reached from the `games` hub. Preview until a teacher reviews its Hebrew. |
+| `g3-shop` | keep | Grammar in Action game (lane g3); reached from the `games` hub. Preview until a teacher reviews its Hebrew. |
+| `g3-chains` | keep | Grammar in Action game (lane g3); reached from the `games` hub. Preview until a teacher reviews its Hebrew. |
+| `g3-press` | keep | Grammar in Action game (lane g3); reached from the `games` hub. Preview until a teacher reviews its Hebrew. |
+| `g3-sieve` | keep | Grammar in Action game (lane g3); reached from the `games` hub. Preview until a teacher reviews its Hebrew. |
+| `g3-repair` | keep | Grammar in Action game (lane g3); reached from the `games` hub. Preview until a teacher reviews its Hebrew. |
+| `g3-decoder` | keep | Grammar in Action game (lane g3); reached from the `games` hub. Preview until a teacher reviews its Hebrew. |
 | `wordfinder` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
 | `tugowar` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
 | `vowelcatcher` | keep | Game; reached from the `games` hub. Preview until native review of its words. |

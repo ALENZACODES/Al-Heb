@@ -113,6 +113,9 @@ export const ROUTES = [
   { name: 'tg-parashah', pattern: '/tg-parashah', module: '../games/tg-parashah.view.js', title: 'Parashah Path', tier: 'preview', owner: 'games' },
   { name: 'tg-tropehunt', pattern: '/tg-tropehunt', module: '../games/tg-tropehunt.view.js', title: 'Trope Hunt', tier: 'preview', owner: 'games' },
   { name: 'tg-holidays', pattern: '/tg-holidays', module: '../games/tg-holidays.view.js', title: 'Holiday Sorter', tier: 'preview', owner: 'games' },
+  // lane g3: Grammar in Action
+  ...'conveyor:Tense Conveyor|lostfound:Lost and Found|whack:Article Whack|onetwomany:One, Two, Many|questions:Question Radar|packcheck:Pack Check|clues:Pattern Clues|gate:Pattern Gate|grid:Ending Grid|arrows:Gift Arrows|agree:Agreement Match|negate:Not-Word Gap|swapfix:Swap Fix|mirror:Mirror Flip|shop:Counting Shop|chains:Chain Links|press:Pattern Press|sieve:Letter Sieve|repair:Repair Shop|decoder:Ending Decoder'
+    .split('|').map((x) => { const [n, title] = x.split(':'), name = 'g3-' + n; return { name, pattern: '/' + name, module: `../games/${name}.view.js`, title, tier: 'preview', owner: 'games' }; }),
   { name: 'wordfinder', pattern: '/wordfinder', module: '../games/wordfinder.view.js', title: 'Hebrew Word Finder: Level 1', tier: 'preview', owner: 'games' },
   { name: 'tugowar', pattern: '/tugowar', module: '../games/tugowar.view.js', title: 'Antonym Tug-of-War', tier: 'preview', owner: 'games' },
   { name: 'vowelcatcher', pattern: '/vowelcatcher', module: '../games/vowelcatcher.view.js', title: 'Vowel Catcher', tier: 'preview', owner: 'games' },

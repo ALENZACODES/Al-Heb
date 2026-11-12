@@ -3,6 +3,7 @@
 // Release tiers (router.js `tier`, docs/v0/SCOPE.md): the bar and the open menu groups show only 'v0' routes; 'preview' routes are
 // listed in one collapsed Preview group at the end of the More sheet (previewGroups) and stay searchable (tests/v0.test.js).
 
+import { ROUTES } from './router.js'; // lane g3
 export const SECTIONS = [
   { id: 'learn',    labelKey: 'nav.section.learn',    descKey: 'nav.section.learn.desc',    heKey: 'nav.learn', primary: ['learn'] },
   { id: 'read',     labelKey: 'nav.section.read',     descKey: 'nav.section.read.desc',     heKey: 'nav.read',  primary: ['readhub', 'read'] },
@@ -25,6 +26,7 @@ export const SECTION_ROUTES = {
     'games', 'letterchomp', 'fallingletters', 'lettertwins', 'soundsnap', 'lookalikes', 'alefbetrun', 'finalfive', 'letterdrop', 'vowelstack', 'syllablesnake', 'wordbuilder', 'meltdown', 'flapvowel', 'bingoletters', 'wordsearch', 'minicross', 'wordmaze', 'scramble', 'bubbleword', 'trueornot', 'lettercrush', 'lettersudoku', 'quizladder', 'speedtype', 'gendersplit', 'pluralpop', 'sentencetrain', 'noahseven', 'tenwords', 'mitzvot613',
     'hanukkah-dreidel1', 'hanukkah-dreidel2', 'hanukkah-candles', 'hanukkah-count', 'hanukkah-pairs', 'hanukkah-colour', 'hanukkah-gelthunt', 'hanukkah-slide', 'hanukkah-hiddenlights', 'hanukkah-jumble', 'hanukkah-saveflame', 'hanukkah-charades', 'hanukkah-forbidden',
     'tg-tilepairs', 'tg-letterhunt', 'tg-numerals', 'tg-wordguess', 'tg-torahwords', 'tg-family', 'tg-verbslots', 'tg-storyorder', 'tg-whosaid', 'tg-parashah', 'tg-tropehunt', 'tg-holidays',
+    ...ROUTES.filter((r) => r.name.startsWith('g3-')).map((r) => r.name), // lane g3
     'tugowar', 'vowelcatcher', 'pinball', 'prefixblast', 'memorypalace', 'shabbatrush', 'typewriter', 'petclinic', 'trainswitch', 'weatherstudio',
     'rentalagent', 'echochamber', 'museumcurator', 'karaokebeat', 'archbuilder', 'lasermaze', 'roottree', 'letterbridge', 'shadowcraft', 'ciphergrid',
     'shuktaxi', 'barter', 'submarinesonar', 'rhymelab', 'bumperverbs', 'bumpercar', 'traintrack', 'weatherpresenter', 'karaoke', 'cipher', 'fleamarket'],

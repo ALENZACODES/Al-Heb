@@ -1,0 +1,27 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "israeli",
+ "inputText": "סְלִיחָה, אֶפְשָׁר אֶת הַחֶשְׁבּוֹן?",
+ "inputSha256": "ee5d13eaa93db44f9f5054db7627dffe75d86c12d6e8cdae0928fd9264dcfbcf",
+ "ingestedAt": "2026-11-12T00:24:43.099Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-12T00:24:43.099Z",
+ "redistributionCleared": false,
+ "spokenText": "סְלִיחָה, אֶפְשָׁר אֶת הַחֶשְׁבּוֹן?",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [],
+  "google": {
+   "heard": "סליחה אפשר את החשבון",
+   "acc": 1.0,
+   "issues": []
+  },
+  "reviewersFailing": 0
+ }
+}

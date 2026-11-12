@@ -1,0 +1,27 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "israeli",
+ "inputText": "אֲנִי מִקָּנָדָה. אֲנִי מְדַבֵּר עִבְרִית קְצָת.",
+ "inputSha256": "406b8d320f0cb1ec5be60bf89dd8f3140baa9dd28e4d100b26e7a8a9a574c6e5",
+ "ingestedAt": "2026-11-12T00:25:10.385Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-12T00:25:10.385Z",
+ "redistributionCleared": false,
+ "spokenText": "אֲנִי מִקָּנָדָה. אֲנִי מְדַבֵּר עִבְרִית קְצָת.",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [],
+  "google": {
+   "heard": "אני מקנדה אני מדבר עברית קצת",
+   "acc": 1.0,
+   "issues": []
+  },
+  "reviewersFailing": 0
+ }
+}

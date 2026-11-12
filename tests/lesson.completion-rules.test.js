@@ -260,3 +260,18 @@ test("M-09: on a route change the shell removes everything the old view left in 
   assert.match(app, /clearView\(root, keep\)/, "the shell clears the old view before the new one mounts");
   assert.match(app, /announceTitle\(live, ''\)/);
 });
+
+test("C-01: a first-try miss cannot be undone into a first-try right (live finding: wrong, Undo, then the revealed answer counted)", async () => {
+  const { createSession } = await import("../src/curriculum/exercises.session.js");
+  const s = createSession([{ id: "a" }, { id: "b" }]);
+  s.answer(false);
+  assert.equal(s.canUndo(), false, "no Undo after a first-try miss");
+  assert.equal(s.undo(), false);
+  assert.equal(s.firstResults().a, false, "the miss stays on record");
+  s.answer(true); // b, right first time
+  assert.equal(s.canUndo(), true, "a slipped tap on a right answer can still be undone");
+  assert.equal(s.undo(), true);
+  assert.equal(s.firstResults().b, undefined);
+  s.answer(true); s.answer(true); // b, then the retry of a
+  assert.deepEqual(s.firstResults(), { a: false, b: true });
+});

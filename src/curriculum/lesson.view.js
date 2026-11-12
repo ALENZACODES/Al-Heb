@@ -70,7 +70,7 @@ export function mountLesson(root, ctx, lessonId) {
       unmet.length ? el("p", { class: "alef-locked", role: "note" }, `Locked: finish ${unmet.map((p) => byId[p]?.title || p).join(", ")} first. You can still look around, or double tap Unlock to take this lesson now. `,
         (() => { const go = async () => { await unlockLesson(ctx, lesson.id); if (alive) { root.replaceChildren(); mountLesson(root, ctx, lessonId); } };
           const b = el("button", { type: "button", class: "btn secondary", id: "alef-unlock", "aria-label": `Unlock ${lesson.title}. Press twice.`, onclick: doubleTap(go, () => { b.replaceChildren("Tap again to unlock"); }) }, "Unlock"); return b; })()) : null,
-      lesson.onramp && !isDone ? el("p", { class: "card alef-onramp", role: "note" }, el("strong", {}, "Short steps: "), `${lesson.steps?.length || 5} steps, about 2 minutes each. `,
+      lesson.onramp && !isDone ? el("p", { class: "card alef-onramp", role: "note" }, el("strong", {}, "Short steps: "), (() => { const n = lesson.steps?.length || 5, each = lesson.estMinutes ? Math.max(1, Math.round(lesson.estMinutes / n)) : 2; return `${n} steps, about ${each} minute${each === 1 ? "" : "s"} each. `; })(), // from the lesson's own estimate, so it agrees with "about N min" above
         el("a", { class: "btn", id: "alef-onramp-link", href: "#" + lesson.onramp }, "Start with one letter")) : null,
     ];
     const teach = !testOut; // a test-out shows the test only

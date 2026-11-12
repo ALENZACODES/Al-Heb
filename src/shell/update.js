@@ -31,7 +31,7 @@ export const STALL_MS = 4000;
  */
 export function watchForUpdates(g = globalThis, opt = {}) {
   const swc = g?.navigator?.serviceWorker;
-  let state = /** @type {UpdateState} */ ("idle"), reg = null, waiting = null, reloading = false, stallTimer = null, interval = null;
+  let state = /** @type {UpdateState} */ ("idle"), reg = null, waiting = null, reloading = false, requested = false, stallTimer = null, interval = null;
   const subs = new Set();
   const emit = () => { for (const f of subs) { try { f(state); } catch { /* listener bug */ } } };
   const set = (s) => { if (state !== s) { state = s; emit(); } };
@@ -63,7 +63,9 @@ export function watchForUpdates(g = globalThis, opt = {}) {
     });
   };
   const onControllerChange = () => {
-    if (reloading) { try { g.location?.reload?.(); } catch { /* ignore */ } return; }
+    // `requested` outlives the stall timer: the old worker can hold the hand-over while it finishes background work (a clip still
+    // downloading), so the new worker may take over after the page has said "stalled". The learner asked for it; reload then.
+    if (reloading || requested) { reloading = false; requested = false; try { g.location?.reload?.(); } catch { /* ignore */ } return; }
     if (hadController) set("activated"); // a different worker now controls this page
   };
   swc.addEventListener?.("controllerchange", onControllerChange);
@@ -78,7 +80,7 @@ export function watchForUpdates(g = globalThis, opt = {}) {
   const doApply = async (o = {}) => {
     for (const h of [...(opt.beforeReload || []), ...(o.beforeReload || [])]) { try { await h(); } catch { /* a hook must not block the reload */ } }
     if (state === "waiting" && waiting) {
-      reloading = true;
+      reloading = true; requested = true;
       try { waiting.postMessage(SKIP_WAITING_MESSAGE); } catch { reloading = false; set("stalled"); return; }
       // the page reloads on controllerchange; if the worker ignores the message (an older sw.js without the handler) say so instead of hanging
       stallTimer = setT(() => { if (reloading) { reloading = false; set("stalled"); } }, STALL_MS);

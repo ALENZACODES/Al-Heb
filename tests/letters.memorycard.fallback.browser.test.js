@@ -50,7 +50,7 @@ test('memory card fallbacks (browser)', { skip: !chromium && 'playwright not ins
         for (const route of ['/letters/bet', '/firstday']) {
           const { ctx, page, errors } = await open(browser, base, [[/memory-chain\.json/, how]], route);
           assert.equal(await page.locator('.mc').count(), 0, route + ': no card without data');
-          assert.equal(await page.locator('[data-memory-fallback]').innerText(), 'Picture and word hint unavailable offline', route + ': one-line fallback');
+          assert.equal(await page.locator('[data-memory-fallback]').innerText(), 'The picture and word hint did not load. Check your connection, then open the letter again.', route + ': one-line fallback');
           assert.ok((await page.locator('#main').innerText()).length > 80, route + ': page content is there');
           assert.doesNotMatch(await page.locator('#main').innerText(), /failed to start|could not be loaded/i, route);
           assert.deepEqual(errors, [], route);

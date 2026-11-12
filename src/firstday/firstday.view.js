@@ -115,7 +115,7 @@ export function mount(root, ctx) {
     const nodes = [el('p', { class: 'fd-steplabel' }, `${stepLabel} · about ${s.minutes} min`), kicker(KIND_LABEL[s.kind] || 'Learn'), el('h2', { class: 'fd-q', 'data-case': 'keep' }, s.title),
       memCard && (he || me?.hebrew) ? el('p', { class: 'fd-hero-glyph', 'data-hero-glyph': '1' }, heText(he || me.hebrew, 'alef-he')) : null, // the new letter, large, before its picture (the chain entry carries it when course content is still loading)
       memCard ? memCard.el : el('p', { class: 'fd-card alef-card', 'data-glyph-slot': '1' }, heText(he, 'alef-he alef-huge fd-big'))].filter(Boolean);
-    if (s.kind === 'letter' && chain === null) nodes.push(el('p', { class: 'mc-fallback muted small', role: 'status', 'data-memory-fallback': '1' }, 'Picture and word hint unavailable offline'));
+    if (s.kind === 'letter' && chain === null) nodes.push(el('p', { class: 'mc-fallback muted small', role: 'status', 'data-memory-fallback': '1' }, 'The picture and word hint did not load. Check your connection, then open the letter again.'));
     // one sound line, in the learner's tradition
     if (s.kind === 'letter') nodes.push(el('p', { class: 'fd-say' }, saySound(content?.consonants?.get?.(s.letter), tradition, { fallbackEn: L?.sound?.en || '' })));
     if (s.kind === 'vowel') nodes.push(el('p', { class: 'fd-say' }, el('strong', {}, V?.name || s.vowel), ': ', vowelSound(V, tradition).en, ` (${LABELS[tradition]} sound)`));
@@ -346,7 +346,7 @@ export function mount(root, ctx) {
       if (hero) slot.replaceWith(hero, memCard.el); else slot.replaceWith(memCard.el);
     }
     else {
-      if (chain === null) slot.after(el('p', { class: 'mc-fallback muted small', role: 'status', 'data-memory-fallback': '1' }, 'Picture and word hint unavailable offline'));
+      if (chain === null) slot.after(el('p', { class: 'mc-fallback muted small', role: 'status', 'data-memory-fallback': '1' }, 'The picture and word hint did not load. Check your connection, then open the letter again.'));
       const M = content?.mnemonics?.get(s.letter), shape = body.querySelector('.fd-why p'); // no chain entry: the old story stays, as before
       if (M?.story && shape && !body.querySelector('[data-old-story]')) shape.after(el('p', { 'data-old-story': '1' }, M.story));
     }

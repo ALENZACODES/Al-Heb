@@ -327,7 +327,7 @@ function mountLesson(root, ctx, id) {
         status.textContent = (retry ? feedbackText(!!correct, { retry: true }) : correct ? "Marked as known." : "Marked to review.") + (r.requeued ? " You will see it once more at the end." : "");
         const whyText = uiEnglish(ctx, whyLine(ex, lesson, trad)); why.textContent = whyText;
         refresh();
-        for (const b of [next, undo]) { b.hidden = false; b.removeAttribute?.("hidden"); }
+        for (const b of [next, ...(session.canUndo?.() ? [undo] : [])]) { b.hidden = false; b.removeAttribute?.("hidden"); } // no Undo after a first-try miss
         skip.hidden = true; skip.setAttribute("hidden", "");
         if (!retry) { results[ex.id] = !!correct; pending = { id: ex.id, correct: !!correct }; await persist(); }
         next.textContent = session.done() ? "Finish" : "Next";

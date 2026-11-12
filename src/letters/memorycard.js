@@ -232,7 +232,7 @@ export const MEMORY_CARD_CSS = `
 
 /** One calm line for a view whose chain file could not be loaded (offline, 404, bad JSON). Not a card: the view still works without it. */
 export function memoryFallback(t = (k, f) => f) {
-  return h('p', { class: 'mc-fallback', role: 'status', 'data-memory-fallback': '1' }, t('mc.unavailable', 'Picture and word hint unavailable offline'));
+  return h('p', { class: 'mc-fallback', role: 'status', 'data-memory-fallback': '1' }, t('mc.unavailable', 'The picture and word hint did not load. Check your connection, then open the letter again.'));
 }
 
 /**

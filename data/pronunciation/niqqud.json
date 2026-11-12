@@ -827,7 +827,7 @@
   {
    "id": "shin-dot",
    "kind": "mark",
-   "nameHe": "נקודת שין",
+   "nameHe": "נְקֻדַּת שִׁין",
    "name": "Shin dot",
    "base": "ש",
    "shape": "שׁ",
@@ -872,7 +872,7 @@
   {
    "id": "sin-dot",
    "kind": "mark",
-   "nameHe": "נקודת שין שמאלית",
+   "nameHe": "נְקֻדַּת שִׁין שְׂמָאלִית",
    "name": "Sin dot",
    "base": "ש",
    "shape": "שׂ",

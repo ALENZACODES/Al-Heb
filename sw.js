@@ -114,7 +114,7 @@ async function audioRange(req, event) {
   const cache = await clipCache(req.url);
   const hit = await cache.match(req.url); // by URL: the Range header is not part of the key
   if (hit && hit.status === 200) {
-    if (event) event.waitUntil(revalidateClip(req.url, hit.clone()));
+    if (event) event.waitUntil(bounded(revalidateClip(req.url, hit.clone())));
     const buf = await hit.clone().arrayBuffer(); const len = buf.byteLength;
     const r = parseRange(req.headers.get('range'), len);
     const type = hit.headers.get('content-type') || 'audio/mpeg';
@@ -127,6 +127,14 @@ async function audioRange(req, event) {
   const total = res.status === 206 && cr ? +cr[1] : res.status === 200 ? +(res.headers.get('content-length') || 0) : 0;
   return { res, total };
 }
+
+// Background clip work (finishing a download, re-checking a cached clip) is best effort: hold the worker for at most 15 s so it never
+// keeps an old worker busy and holds back an update the learner asked for (the hand-over waits for the old worker's pending events).
+const BACKGROUND_MS = 15000;
+const bounded = (p) => {
+  const work = Promise.resolve(p).catch(() => {});
+  return typeof setTimeout === 'function' ? Promise.race([work, new Promise((r) => setTimeout(r, BACKGROUND_MS))]) : work;
+};
 
 self.addEventListener('install', (event) => {
   event.waitUntil(caches.open(SHELL).then((c) => c.addAll(self.ALEF_PRECACHE || [])));
@@ -173,7 +181,7 @@ self.addEventListener('fetch', (event) => {
     event.respondWith((async () => {
       const out = await audioRange(req, event);
       if (out instanceof Response) return out;
-      event.waitUntil(fillClip(req.url, out.total));
+      event.waitUntil(bounded(fillClip(req.url, out.total)));
       return out.res;
     })());
     return;
@@ -204,7 +212,7 @@ self.addEventListener('fetch', (event) => {
   if (MEDIA.test(url.pathname)) {
     event.respondWith((async () => {
       const hit = await caches.match(req);
-      if (hit) { if (AUDIO.test(url.pathname) && hit.status === 200) event.waitUntil(revalidateClip(req.url, hit.clone())); return hit; }
+      if (hit) { if (AUDIO.test(url.pathname) && hit.status === 200) event.waitUntil(bounded(revalidateClip(req.url, hit.clone()))); return hit; }
       const res = AUDIO.test(url.pathname) ? await clipFetch(req) : await fetch(req);
       if (res.ok && !(AUDIO.test(url.pathname) && +(res.headers.get('content-length') || 0) > capFor(req.url))) { const name = AUDIO.test(url.pathname) ? RUNTIME : DATA; const c = await caches.open(isMusic(req.url) ? MUSIC : name); c.put(req, res.clone()); if (AUDIO.test(url.pathname) && !isMusic(req.url)) event.waitUntil(trimClips()); }
       return res;

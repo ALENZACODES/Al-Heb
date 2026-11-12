@@ -124,7 +124,7 @@ test('memory card: audio is honest (no recording, device voice, no player)', asy
 
 test('memoryFallback: one calm line, not a card', () => {
   const f = M.memoryFallback();
-  assert.equal(f.attrs['data-memory-fallback'], '1'); assert.equal(f.text, 'Picture and word hint unavailable offline');
+  assert.equal(f.attrs['data-memory-fallback'], '1'); assert.equal(f.text, 'The picture and word hint did not load. Check your connection, then open the letter again.');
   assert.equal(f.attrs['data-memory-card'], undefined);
 });
 

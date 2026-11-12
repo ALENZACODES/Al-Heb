@@ -71,10 +71,12 @@ test("session: skip is penalty-free, comes back once, a second skip drops it ung
   assert.deepEqual(s.skip(), { dropped: true });
   assert.ok(s.done()); assert.deepEqual(s.skippedIds(), ["a"]); assert.equal(s.stats().answered, 1); assert.equal(s.stats().accuracy, 1);
   const u = S.createSession([{ id: "a" }, { id: "b" }]);
-  u.answer(false); assert.equal(u.progress().total, 3);
-  assert.equal(u.undo(), true);
+  u.answer(true); assert.equal(u.progress().resolved, 1);
+  assert.equal(u.undo(), true, "a slipped tap on a right answer is undone without trace");
   assert.deepEqual([u.current().id, u.firstResults(), u.progress().total, u.progress().resolved], ["a", {}, 2, 0]);
   assert.equal(u.undo(), false, "only the last answer can be undone");
+  u.answer(false); assert.equal(u.progress().total, 3);
+  assert.equal(u.undo(), false, "a first-try miss cannot be undone (C-01)"); assert.deepEqual(u.firstResults(), { a: false });
 });
 
 // ------------------------------------------------------------------------------------------------ position bias
@@ -171,10 +173,8 @@ test("quick check player: bar, per-answer feedback with the right answer and why
   assert.ok(host.text.includes(q1.why));
   assert.equal(by(host, (b) => b.attrs["data-state"] === "right").length, 1); assert.equal(by(host, (b) => b.attrs["data-state"] === "wrong").length, 1);
   assert.equal(host.find((n) => n.attrs["data-result"])[0].attrs["data-result"], "wrong");
-  // undo restores a fresh question (no penalty), then answer wrong again and continue with Enter
-  await by(host, (b) => b.attrs["data-act"] === "undo")[0].click();
-  assert.equal(by(host, (b) => b.attrs["data-state"]).length, 0); assert.equal(bar().attrs["aria-valuenow"], "0");
-  await by(host, (b) => b.attrs["data-n"] === String(wrongI + 1))[0].click();
+  // C-01: no Undo after a first-try miss (the right answer is already showing); continue with Enter
+  assert.ok(by(host, (b) => b.attrs["data-act"] === "undo")[0].hidden, "Undo is not offered after a miss");
   const total0 = qs.length; await key("Enter");
   assert.equal(host.find((n) => n.attrs.id === "alef-q-title")[0].text, `Question 2 of ${total0}`, "C-02: the denominator stays the check's length after a miss");
   assert.match(host.text, /1 retry so far/, "the repeat is counted apart");
@@ -312,13 +312,8 @@ test("intermediate player: progress bar, why-line, undo costs nothing in the SRS
     await by(sec, (b) => b.text === ex.options.find((_, i) => i !== ex.answer))[0].click();
     assert.match(root.text, /Not quite\. The answer is /); assert.ok(root.text.includes(" is the Hebrew for \"" + ex.en + "\""), "why-line");
     assert.equal(section(root).attrs["data-result"], "wrong");
-    const before = JSON.stringify(store.m["srs.cards"] || {});
-    await by(root, (b) => b.attrs["data-act"] === "undo")[0].click();
-    await waitFor(() => !section(root).attrs["data-result"]);
-    assert.equal(JSON.stringify(store.m["srs.cards"] || {}), before, "undo leaves the SRS untouched");
-    assert.equal(store.m["intermediate.v1"].lessons[l.id].results[ex.id], undefined, "undo removes the stored result");
-    // wrong again -> Next -> card lapses -> the same exercise returns once at the end
-    await by(section(root), (b) => b.text === ex.options.find((_, i) => i !== ex.answer))[0].click();
+    // C-01: no Undo after a first-try miss; Next -> card lapses -> the same exercise returns once at the end
+    assert.ok(by(root, (b) => b.attrs["data-act"] === "undo")[0].hidden, "Undo is not offered after a miss");
     assert.match(root.text, /once more at the end/);
     await idOf(root, "alef-int-next").click();
     await waitFor(() => Object.keys(store.m["srs.cards"] || {}).some((k) => k.startsWith("word:" + l.id + ":") || k.startsWith("line:")));

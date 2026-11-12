@@ -71,9 +71,14 @@ export function createSession(items, o = {}) {
       } else { retried++; if (correct) retriedRight++; resolved++; }
       return { first: cur.attempt === 1, requeued: last.requeued };
     },
-    /** Undo the last answer (only until the next answer/skip). Returns true when something was undone. */
+    /**
+     * Undo is for a slipped tap on a right answer. A first-try miss cannot be undone: the right answer is already on screen, so
+     * undoing it and picking again would turn a miss into a "first try" (live finding, 2026-11-11; it broke the C-01 pass mark).
+     */
+    canUndo: () => !!last && !(last.cur.attempt === 1 && first[last.cur.it.id] === false),
+    /** Undo the last answer (only until the next answer/skip, and never a first-try miss). Returns true when something was undone. */
     undo() {
-      if (!last) return false;
+      if (!api.canUndo()) return false;
       if (last.requeued) queue.pop();
       queue.unshift(last.cur);
       if (last.cur.attempt === 1) { if (last.wasFirst === undefined) delete first[last.cur.it.id]; else first[last.cur.it.id] = last.wasFirst; }

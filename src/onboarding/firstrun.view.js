@@ -143,7 +143,7 @@ export function mount(root, ctx) {
       if (real && page !== 'daily') { nextPage(); return; }
       submit();
     } },
-      pageBox('level', levelFs, h('p', { class: 'muted' }, 'Not sure? Choose “Starting from zero” for a gentle introduction. Or skip the questions with “Start now” under Continue.')),
+      pageBox('level', levelFs, h('p', { class: 'muted' }, 'Not sure? Choose “Starting from zero” for a gentle introduction. Or skip the questions: press “Skip the questions and start” under Continue.')),
       pageBox('goal', goalFs),
       pageBox('daily', dailyFs),
       next,

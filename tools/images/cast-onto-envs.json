@@ -1,0 +1,566 @@
+{
+  "note": "Level 3–9 game pictures (owner, 2026-11-12): the frozen cast — Rimon, Ari and Noa — doing something that fits each game, composed onto that game's existing approved background. Only pictures already in the app: assets/img/gen (approved art, including Ari and Noa) and data/images/rimon/v2 (Rimon, clear background). Nothing new drawn, nothing flipped, metadata stripped. Build: python3 tools/images/cast-onto-envs.py",
+  "games": {
+    "museumcurator": {
+      "bg": "GAME_museumcurator_env",
+      "y_align": 0.55,
+      "who": "Ari, Rimon, Noa",
+      "cast": [
+        {
+          "id": "CHAR_ari_listen",
+          "cx": 0.16,
+          "h": 520
+        },
+        {
+          "id": "rimon-010-magnifying-glass",
+          "cx": 0.5,
+          "h": 500
+        },
+        {
+          "id": "CHAR_noa_listen",
+          "cx": 0.84,
+          "h": 520
+        }
+      ]
+    },
+    "submarinesonar": {
+      "bg": "GAME_submarine_sonar_env",
+      "y_align": 0.55,
+      "who": "Ari, Rimon, Noa",
+      "cast": [
+        {
+          "id": "CHAR_ari_listen",
+          "cx": 0.12,
+          "h": 500
+        },
+        {
+          "id": "rimon-017-goggles-thumbs-up",
+          "cx": 0.68,
+          "h": 440
+        },
+        {
+          "id": "CHAR_noa_listen",
+          "cx": 0.9,
+          "h": 500
+        }
+      ]
+    },
+    "wordsearch": {
+      "bg": "arcade:wordsearch",
+      "who": "Ari, Rimon, Noa",
+      "cast": [
+        {
+          "id": "CHAR_ari_listen",
+          "cx": 0.1,
+          "h": 500
+        },
+        {
+          "id": "rimon-010-magnifying-glass",
+          "cx": 0.88,
+          "h": 490
+        },
+        {
+          "id": "CHAR_noa_sheet:br",
+          "cx": 0.72,
+          "h": 470
+        }
+      ]
+    },
+    "minicross": {
+      "bg": "arcade:minicross",
+      "who": "Ari, Rimon, Noa",
+      "cast": [
+        {
+          "id": "CHAR_ari_sheet:bl",
+          "cx": 0.1,
+          "h": 500
+        },
+        {
+          "id": "rimon-196-puzzle-pieces",
+          "cx": 0.28,
+          "h": 380
+        },
+        {
+          "id": "CHAR_noa_speak",
+          "cx": 0.9,
+          "h": 500
+        }
+      ]
+    },
+    "wordmaze": {
+      "bg": "arcade:wordmaze",
+      "who": "Rimon (already in the backdrop), Ari, Noa",
+      "cast": [
+        {
+          "id": "CHAR_ari_sheet:bl",
+          "cx": 0.08,
+          "h": 500
+        },
+        {
+          "id": "CHAR_noa_speak",
+          "cx": 0.92,
+          "h": 500
+        }
+      ]
+    },
+    "scramble": {
+      "bg": "arcade:scramble",
+      "who": "Noa (already in the backdrop), Ari, Rimon",
+      "cast": [
+        {
+          "id": "CHAR_ari_sheet:bl",
+          "cx": 0.1,
+          "h": 500
+        },
+        {
+          "id": "rimon-009-tiles-together",
+          "cx": 0.3,
+          "h": 430
+        }
+      ]
+    },
+    "bubbleword": {
+      "bg": "arcade:bubbleword",
+      "who": "Rimon (already in the backdrop), Ari, Noa",
+      "cast": [
+        {
+          "id": "CHAR_ari_listen",
+          "cx": 0.1,
+          "h": 500
+        },
+        {
+          "id": "CHAR_noa_speak",
+          "cx": 0.9,
+          "h": 500
+        }
+      ]
+    },
+    "trueornot": {
+      "bg": "arcade:trueornot",
+      "who": "Ari, Rimon, Noa",
+      "cast": [
+        {
+          "id": "CHAR_ari_speak",
+          "cx": 0.12,
+          "h": 500
+        },
+        {
+          "id": "rimon-148-clipboard-thumbs-up",
+          "cx": 0.5,
+          "h": 460
+        },
+        {
+          "id": "CHAR_noa_speak",
+          "cx": 0.88,
+          "h": 500
+        }
+      ]
+    },
+    "lettercrush": {
+      "bg": "arcade:lettercrush",
+      "who": "Ari, Rimon, Noa",
+      "cast": [
+        {
+          "id": "CHAR_ari_celebrate",
+          "cx": 0.1,
+          "h": 500
+        },
+        {
+          "id": "rimon-019-fist-pump",
+          "cx": 0.5,
+          "h": 470
+        },
+        {
+          "id": "CHAR_noa_celebrate",
+          "cx": 0.9,
+          "h": 500
+        }
+      ]
+    },
+    "lettersudoku": {
+      "bg": "arcade:lettersudoku",
+      "who": "Ari, Rimon, Noa",
+      "cast": [
+        {
+          "id": "CHAR_ari_sheet:bl",
+          "cx": 0.1,
+          "h": 500
+        },
+        {
+          "id": "rimon-146-shape-pattern",
+          "cx": 0.34,
+          "h": 400
+        },
+        {
+          "id": "CHAR_noa_sheet:br",
+          "cx": 0.9,
+          "h": 500
+        }
+      ]
+    },
+    "quizladder": {
+      "bg": "arcade:quizladder",
+      "who": "Ari and Noa (already in the backdrop), Rimon",
+      "cast": [
+        {
+          "id": "rimon-008-ladder-climb",
+          "cx": 0.5,
+          "h": 340,
+          "yb": 0.98
+        }
+      ]
+    },
+    "speedtype": {
+      "bg": "arcade:speedtype",
+      "who": "Ari, Rimon, Noa",
+      "cast": [
+        {
+          "id": "CHAR_ari_sheet:bl",
+          "cx": 0.08,
+          "h": 500
+        },
+        {
+          "id": "rimon-192-typing",
+          "cx": 0.5,
+          "h": 430
+        },
+        {
+          "id": "CHAR_noa_sheet:br",
+          "cx": 0.92,
+          "h": 500
+        }
+      ]
+    },
+    "prefixblast": {
+      "bg": "GAME_prefix_blast_stage",
+      "y_align": 0.62,
+      "who": "Ari, Rimon, Noa",
+      "cast": [
+        {
+          "id": "CHAR_ari_celebrate",
+          "cx": 0.18,
+          "h": 500
+        },
+        {
+          "id": "rimon-019-fist-pump",
+          "cx": 0.5,
+          "h": 500
+        },
+        {
+          "id": "CHAR_noa_celebrate",
+          "cx": 0.82,
+          "h": 500
+        }
+      ]
+    },
+    "typewriter": {
+      "bg": "GAME_typewriter_env",
+      "y_align": 0.55,
+      "who": "Ari, Rimon, Noa",
+      "cast": [
+        {
+          "id": "CHAR_ari_sheet:bl",
+          "cx": 0.12,
+          "h": 500
+        },
+        {
+          "id": "rimon-192-typing",
+          "cx": 0.5,
+          "h": 460
+        },
+        {
+          "id": "CHAR_noa_sheet:br",
+          "cx": 0.88,
+          "h": 500
+        }
+      ]
+    },
+    "trainswitch": {
+      "bg": "GAME_trainswitch_env",
+      "y_align": 0.6,
+      "who": "Ari, Rimon, Noa",
+      "cast": [
+        {
+          "id": "CHAR_ari_sheet:bl",
+          "cx": 0.14,
+          "h": 500
+        },
+        {
+          "id": "rimon-141-lever",
+          "cx": 0.5,
+          "h": 470
+        },
+        {
+          "id": "CHAR_noa_speak",
+          "cx": 0.86,
+          "h": 500
+        }
+      ]
+    },
+    "gendersplit": {
+      "bg": "arcade:gendersplit",
+      "who": "Ari and Noa (already in the backdrop), Rimon",
+      "cast": [
+        {
+          "id": "rimon-189-nice-to-meet-you",
+          "cx": 0.5,
+          "h": 380
+        }
+      ]
+    },
+    "pluralpop": {
+      "bg": "arcade:pluralpop",
+      "who": "Rimon (already in the backdrop), Ari, Noa",
+      "cast": [
+        {
+          "id": "CHAR_ari_celebrate",
+          "cx": 0.12,
+          "h": 500
+        },
+        {
+          "id": "CHAR_noa_celebrate",
+          "cx": 0.88,
+          "h": 500
+        }
+      ]
+    },
+    "sentencetrain": {
+      "bg": "arcade:sentencetrain",
+      "who": "Ari, Rimon, Noa",
+      "cast": [
+        {
+          "id": "rimon-040-onward-point",
+          "cx": 0.48,
+          "h": 300
+        },
+        {
+          "id": "CHAR_ari_speak",
+          "cx": 0.68,
+          "h": 400
+        },
+        {
+          "id": "CHAR_noa_sheet:br",
+          "cx": 0.92,
+          "h": 440
+        }
+      ]
+    },
+    "shuktaxi": {
+      "bg": "GAME_shuk_taxi_env",
+      "y_align": 0.55,
+      "who": "Ari, Rimon, Noa",
+      "cast": [
+        {
+          "id": "CHAR_ari_sheet:bl",
+          "cx": 0.12,
+          "h": 500
+        },
+        {
+          "id": "rimon-195-map-pin",
+          "cx": 0.5,
+          "h": 470
+        },
+        {
+          "id": "CHAR_noa_speak",
+          "cx": 0.88,
+          "h": 500
+        }
+      ]
+    },
+    "rhymelab": {
+      "bg": "GAME_rhymelab_env",
+      "y_align": 0.55,
+      "who": "Ari, Rimon, Noa",
+      "cast": [
+        {
+          "id": "CHAR_ari_listen",
+          "cx": 0.12,
+          "h": 500
+        },
+        {
+          "id": "rimon-094-singing",
+          "cx": 0.5,
+          "h": 480
+        },
+        {
+          "id": "CHAR_noa_listen",
+          "cx": 0.88,
+          "h": 500
+        }
+      ]
+    },
+    "noahseven": {
+      "bg": "arcade:noahseven",
+      "who": "Ari, Rimon, Noa",
+      "cast": [
+        {
+          "id": "CHAR_ari_synagogue",
+          "cx": 0.1,
+          "h": 500
+        },
+        {
+          "id": "rimon-188-lifebuoy",
+          "cx": 0.5,
+          "h": 400
+        },
+        {
+          "id": "CHAR_noa_synagogue",
+          "cx": 0.9,
+          "h": 520
+        }
+      ]
+    },
+    "tenwords": {
+      "bg": "arcade:tenwords",
+      "who": "Ari, Rimon, Noa",
+      "cast": [
+        {
+          "id": "CHAR_ari_synagogue",
+          "cx": 0.1,
+          "h": 500
+        },
+        {
+          "id": "rimon-103-gentle-bow",
+          "cx": 0.28,
+          "h": 360
+        },
+        {
+          "id": "CHAR_noa_synagogue",
+          "cx": 0.9,
+          "h": 520
+        }
+      ]
+    },
+    "mitzvot613": {
+      "bg": "arcade:mitzvot613",
+      "who": "Ari, Rimon, Noa",
+      "cast": [
+        {
+          "id": "CHAR_ari_listen",
+          "cx": 0.1,
+          "h": 500
+        },
+        {
+          "id": "CHAR_noa_listen",
+          "cx": 0.28,
+          "h": 500
+        },
+        {
+          "id": "rimon-008-ladder-climb",
+          "cx": 0.86,
+          "h": 460
+        }
+      ]
+    },
+    "lasermaze": {
+      "bg": "GAME_laser_maze_env",
+      "y_align": 0.5,
+      "who": "Ari, Rimon, Noa",
+      "cast": [
+        {
+          "id": "CHAR_ari_listen",
+          "cx": 0.1,
+          "h": 500
+        },
+        {
+          "id": "rimon-010-magnifying-glass",
+          "cx": 0.88,
+          "h": 480
+        },
+        {
+          "id": "CHAR_noa_speak",
+          "cx": 0.72,
+          "h": 480
+        }
+      ]
+    },
+    "shabbatrush": {
+      "bg": "GAME_shabbat_rush_env",
+      "y_align": 0.55,
+      "who": "Ari, Rimon, Noa",
+      "cast": [
+        {
+          "id": "CHAR_ari_synagogue",
+          "cx": 0.14,
+          "h": 520
+        },
+        {
+          "id": "rimon-088-carrying-candlesticks",
+          "cx": 0.5,
+          "h": 500
+        },
+        {
+          "id": "CHAR_noa_synagogue",
+          "cx": 0.86,
+          "h": 540
+        }
+      ]
+    },
+    "weatherstudio": {
+      "bg": "GAME_weatherstudio_env",
+      "y_align": 0.55,
+      "who": "Ari, Rimon, Noa",
+      "cast": [
+        {
+          "id": "CHAR_ari_speak",
+          "cx": 0.12,
+          "h": 500
+        },
+        {
+          "id": "rimon-107-rain-umbrella",
+          "cx": 0.5,
+          "h": 480
+        },
+        {
+          "id": "CHAR_noa_speak",
+          "cx": 0.88,
+          "h": 500
+        }
+      ]
+    },
+    "rentalagent": {
+      "bg": "GAME_rentalagent_env",
+      "y_align": 0.55,
+      "who": "Ari, Rimon, Noa",
+      "cast": [
+        {
+          "id": "CHAR_ari_sheet:br",
+          "cx": 0.14,
+          "h": 500
+        },
+        {
+          "id": "rimon-006-plan-map",
+          "cx": 0.5,
+          "h": 470
+        },
+        {
+          "id": "CHAR_noa_sheet:br",
+          "cx": 0.86,
+          "h": 500
+        }
+      ]
+    },
+    "ciphergrid": {
+      "bg": "GAME_ciphergrid_env",
+      "y_align": 0.55,
+      "who": "Ari, Rimon, Noa",
+      "cast": [
+        {
+          "id": "CHAR_ari_listen",
+          "cx": 0.1,
+          "h": 500
+        },
+        {
+          "id": "rimon-135-lab-goggles-clipboard",
+          "cx": 0.5,
+          "h": 460
+        },
+        {
+          "id": "CHAR_noa_sheet:br",
+          "cx": 0.9,
+          "h": 500
+        }
+      ]
+    }
+  }
+}

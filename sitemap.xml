@@ -1153,6 +1153,30 @@
     <changefreq>weekly</changefreq>
   </url>
   <url>
+    <loc>https://alef-review.onrender.com/#/course-map</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://alef-review.onrender.com/#/mixed-review</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://alef-review.onrender.com/#/five-minutes</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://alef-review.onrender.com/#/checkpoints</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://alef-review.onrender.com/#/benchmarks</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://alef-review.onrender.com/#/app-rules</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://alef-review.onrender.com/#/trope/aliyah</loc>
     <changefreq>weekly</changefreq>
   </url>

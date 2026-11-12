@@ -362,7 +362,9 @@ test('chapter view: Genesis 1 renders 31 side-by-side rows, toggles work, next c
   assert.equal(rows(root)[0].queryAll('[data-pronunciation-verse]').length, 0, 'individual verse can hide its guide');
   await sel(root, '[data-translit="1"]').click();
   assert.equal(rows(root)[0].queryAll('[data-pronunciation-verse]').length, 1);
-  assert.match(root.queryAll('.trd-translit')[0].textContent, /computed from the vowel points/);
+  // C-07: the label is its own line after the transliteration, never run into the verse's last word
+  assert.doesNotMatch(root.queryAll('.trd-translit')[0].textContent, /computed/);
+  assert.match(root.queryAll('.trd-translit-note')[0].textContent, /^Transliteration computed from the vowel points/);
   // next chapter
   await sel(root, '.trd-next-ch').click(); await tick();
   assert.equal(sel(root, 'h1').textContent, 'Genesis 2');
@@ -585,4 +587,13 @@ test('a chapter recording that loses its download partway resumes from the same 
   assert.doesNotMatch(status(root), /could not load/);
   for (let i = 0; i < 3; i++) await media.fire('error');
   assert.match(status(root), /could not load/, 'after three resumes the failure is reported');
+});
+
+test('C-07: the About-this-text note states the verse count and why it differs from the Masorah by one, matching the index', async () => {
+  const { TORAH_TEXT_LABEL } = await import('../src/torahreader/torahreader.view.js');
+  const idx = JSON.parse(fs.readFileSync(new URL('../data/corpus/torah/index.json', import.meta.url), 'utf8'));
+  const deut = idx.books.find((b) => b.id === 'deuteronomy').verses;
+  assert.equal(idx.counts.verses, idx.books.reduce((a, b) => a + b.verses, 0));
+  assert.match(TORAH_TEXT_LABEL, new RegExp(`${idx.counts.verses.toLocaleString('en-US')} numbered verses \\(Deuteronomy ${deut}\\)`));
+  assert.match(TORAH_TEXT_LABEL, /Masoretic note at the end of Deuteronomy counts 955 verses there and 5,845 in the whole Torah/);
 });

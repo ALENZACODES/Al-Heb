@@ -226,7 +226,11 @@ export const STORE_KEYS = [
   ['onboarding.v1.dailyGoal', 'Daily goal', 'src/home/today.js'],
   ['backup.reminder.v1', 'When you last downloaded a backup file, and "Not now" on the backup reminder', 'src/shell/backup-reminder.js'],
   ['placement.v1', 'Placement check result', 'src/placement/placement.view.js'],
+  // lane 6 (12 Nov round 2)
+  ['bridge.v1', 'Reading without vowels: your stage for each book and prayer line, and your word and modern-text reads', 'src/bridge/model.js'],
+  ['trope.practice.v1', 'Trope practice by aliyah: the portion, aliyah and phrase you were on', 'src/trope/families.js'],
   ['curriculum.progress', 'Completed lessons', 'src/curriculum/dom.js'],
+  ['lesson.checks.v1', 'Quick-check scores (right on the first try, out of how many, when), for your own certificate', 'src/curriculum/passmark.js'], // lane 4
   ['srs.cards', 'Review cards for lessons', 'src/curriculum/dom.js'],
   ['srs.vocab', 'Review cards for vocabulary', 'src/vocab/themes.view.js'],
   ['srs.practical', 'Review cards for practical conversation units', 'src/curriculum/practical.view.js'],
@@ -244,6 +248,8 @@ export const STORE_KEYS = [
   ['intermediate.v1', 'Intermediate lessons progress', 'src/curriculum/intermediate.view.js'],
   ['israelUnits.v1', 'Israel unit review schedule (when each unit review was done)', 'src/curriculum/israel-units.js'],
   ['service.prefs', 'Follow-the-service choices (order, tradition, whether to show transliteration)', 'src/service/service.view.js'],
+  // lane 5: Shabbat Companion
+  ['service.companion', 'Shabbat Companion: prayers you marked as practised, your last join-in result (timing band and your own check) and this week\'s home checklist', 'src/service/companion.model.js'],
   ['progress.milestones.v1', 'Which progress milestones you have reached, and when', 'src/progress/store.js'],
   ['__meta', 'Storage format version number only (no learner data; left out of backups)', 'src/store.js'],
   ['firstday.progress', 'First 10 minutes progress', 'src/firstday/model.js'],
@@ -265,6 +271,8 @@ export const STORE_KEYS = [
   ['trope.v1', 'Chanting-mark trainer results', 'src/trope/trope.view.js'],
   ['nikkudfade.v1', 'Vowel-fade practice progress (which words you saw pointed, and which you revealed)', 'src/nikkudfade/model.js'],
   ['roots.v1', 'Word-roots drill counts', 'src/roots/model.js'],
+  // lane 3 (12 Nov, #15d): the Dictionary review option
+  ['vocab.reviewGroup', 'Dictionary review option: whether words that share family letters are reviewed together (on or off)', 'src/vocab/vocab.view.js'],
   ['gender.v1', 'Gender drill: checked-question counts (your gender choice itself is kept in the settings row above; older copies of it in this row, in Gender pair practice and in Sound-like-a-local preferences are read once and then no longer used)', 'src/genderdrill/model.js'],
   ['recordcompare.v1', 'Record-and-compare: counts of your own answers (no recordings are stored)', 'src/recordcompare/model.js'],
   ['grammar.v1', 'Grammar notes progress', 'src/grammar/grammar.view.js'],

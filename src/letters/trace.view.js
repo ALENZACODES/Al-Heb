@@ -9,7 +9,7 @@ import { createProgress } from './progress.js';
 import { matchLetter } from './shapecheck.js';
 import { warningAfterWrongTap } from './interference.js';
 import { letterSound, congregationOf } from '../pronunciation/forTradition.js';
-import { loadMemoryChain, entryFor, buildMemoryCard, memoryFallback } from './memorycard.js';
+import { loadMemoryChain, entryFor, buildMemoryCard, memoryFallback, retryMemoryChainLater } from './memorycard.js';
 import { describeLetterStrokes, STROKE_WORDS_NOTE } from './strokewords.js';
 import { shapeLabel } from './shapetext.js';
 import { makeRoving } from '../shell/roving.js';
@@ -152,6 +152,15 @@ export function mount(root, ctx = {}) {
     state.consonants = (consonants && consonants.letters) || null; state.chain = chain || null;
     state.mnemonics = {}; for (const m of ((mn && mn.letters) || [])) state.mnemonics[m.id] = m;
     render();
+    // S-04: chain failed; retry and swap the card in for the fallback line.
+    if (!chain && !ctx.memoryChain) cleanups.push(retryMemoryChainLater((c) => {
+      if (unmounted) return; state.chain = c;
+      const line = body.querySelector?.('[data-memory-fallback]'); const letter = state.letters && (letterById(state.letterId) || state.letters[0]);
+      const me = letter && entryFor(c, letter.id);
+      if (!line || !me) return;
+      memCard = buildMemoryCard({ entry: me, glyph: letter.he, tradition: congregationOf(ctx.settings), audio: ctx.audio, t, fetchFn: ctx.fetch, compact: true });
+      line.replaceWith(memCard.el);
+    }, { fetchFn: ctx.fetch }));
   }).catch(err => {
     if (unmounted) return;
     body.textContent = '';

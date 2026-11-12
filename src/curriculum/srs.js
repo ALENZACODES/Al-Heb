@@ -30,6 +30,7 @@
  * `kind` is one of letter | vowel | syllable | word | prayerLine (free text; not validated).
  */
 
+import { dayKey } from "./streak.js";
 export const FACTOR = 19 / 81;
 export const DECAY = -0.5;
 export const DESIRED_RETENTION = 0.9;
@@ -85,6 +86,12 @@ export function review(card, rating, now) {
   const t = toMs(now);
   if (!Number.isFinite(t)) throw new TypeError("now must be a valid time");
   const next = { ...card, reps: card.reps + 1, lastReview: t };
+  // Review history the counters need (C-02, 12 Nov site check): when the card was first graded (null = graded before this was
+  // kept, so unknown) and the local days it was graded, newest last, at most 8. A later review only adds a day, never removes
+  // one, so "reviewed today", "this week" and "first reviewed this week" can only go up during a day or week.
+  next.firstReview = card.reps === 0 && card.lastReview == null ? t : (card.firstReview ?? null);
+  const day = dayKey(t);
+  next.days = [...(Array.isArray(card.days) ? card.days.filter((d) => d !== day) : []), day].slice(-8);
 
   if (card.state === "new") {
     next.stability = INIT_S[rating - 1];

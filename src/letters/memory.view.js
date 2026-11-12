@@ -31,7 +31,8 @@ export function pictureNode(q, { cls = "alef-mem-pic", toggle = false } = {}) {
       for (const t of svg.querySelectorAll("title, desc")) t.remove();
       svg.setAttribute("class", (svg.getAttribute("class") || "") + " " + cls); svg.removeAttribute("width"); svg.removeAttribute("height");
       svg.setAttribute("role", "img"); svg.removeAttribute("aria-hidden"); if (alt) svg.setAttribute("aria-label", alt);
-      box.replaceChildren(svg);
+      // S-02: its styles are scoped under .mc-svg (scopeSvgCss); outside one it drew as a black silhouette.
+      box.replaceChildren(el("span", { class: "mc-svg alef-mem-pic-art" }, svg));
       if (toggle) {
         const b = el("button", { type: "button", class: "btn secondary alef-mem-flip", "aria-pressed": "false", onclick: () => {
           const on = svg.classList.toggle("morph-show-a"); b.setAttribute("aria-pressed", String(on)); }}, "Show the letter inside the picture");

@@ -46,6 +46,7 @@ const ON_DEMAND_PREFIXES = ['data/vocab/', 'data/roots/', 'data/knownwords/', 'd
   'assets/game-art/', 'assets/letter-cartoons/', 'assets/books/', 'assets/speak-hold/', 'assets/speak-candidates/',
   // Lazy preview-route code + book content + image indexes: fetched on first view, runtime-cached (fix #4; #8 groups).
   'src/games/', 'src/books/', 'data/books/', 'data/images/',
+  'src/bridge/', // lane 6: Reading Without Vowels (#/bridge), view, model and loader, fetched on first open
   // Camera Translator (preview route /camera): view code, word list and config are fetched when the screen first opens, runtime-cached.
   'src/camera/', 'data/camera/',
   // Game data (word bank, prefix deck, arcade lists, the laws) and arcade art (backdrops, cast and letter sprites): fetched when a game first opens, runtime-cached.
@@ -67,7 +68,10 @@ const ON_DEMAND_PREFIXES = ['data/vocab/', 'data/roots/', 'data/knownwords/', 'd
   // Letter videos (about 70 KB each) and their list: streamed when watched, runtime-cached.
   'assets/videos/', 'data/videos/',
   // Ask the Torah answer bank (about 14 MB raw, 2.8 MB compressed, 32 answer files): fetched when #/ask opens, one answer file per question asked.
-  'data/ask/'];
+  'data/ask/',
+  // lane 4 (12 Nov): Move to another device and the learner's certificate (route code, fetched on first open), and the
+  // offline pack lists read by the Use Aleph offline page (data/offline/packs.json, built by tools/offline-packs.mjs).
+  'src/sync/', 'data/offline/'];
 const ON_DEMAND_FILES = new Set([
   // Rimon's stills (src/app.js imports the stage after boot; it shows nothing until the pictures exist, and the pictures are fetched on demand too),
   // and two older Rimon modules no screen imports (kept for reference and their tests).
@@ -88,10 +92,15 @@ const ON_DEMAND_FILES = new Set([
   // The Roots page model (11 KB): imported only by roots.view.js above, so it loads with the page (moved on 11 November when the
   // Sacred Listen Hebrew titles and the shared Roots and activity-point counts landed; keeps first install under 3.95 MiB).
   'src/roots/model.js',
+  // lane 3 (12 Nov, points plan #15): the seven-patterns pages and the Dictionary's family links, loaded with the Roots page or when
+  // the Dictionary first shows a family line (data/roots/dict-links.json is on demand through the data/roots/ prefix).
+  'src/roots/binyanim.js', 'src/roots/links.js',
   // Non-v0 data (the integration test's must-install list is the v0 offline contract; these are fetched on first use, then runtime-cached).
   'data/audio/english-glosses.json',
   // Book 63's clip record (37 KB): no screen reads it (the reader plays the page files directly), so it stays out of the first install.
   'data/audio/manifest-book63.json',
+  // Lane 1 (M-08, 12 Nov): About's Held Recordings section, its code and list (14 KB together), fetched when About opens.
+  'src/shell/held-recordings.js', 'data/audio/held-recordings.json',
   // Word Finder bank (51 KB): preview-game data, fetched when the game first opens, runtime-cached by sw.js (keeps first install under 3.95 MiB).
   'data/games/firstwords.json',
   // Awards gallery view: route code only (the router loads views lazily; its engine files stay installed), fetched when Awards first opens, runtime-cached by sw.js (keeps first install under 3.95 MiB after the 25-badge engine landed).
@@ -134,6 +143,8 @@ const ON_DEMAND_FILES = new Set([
   // Ask the Torah (#/ask): route code only, fetched on first open, runtime-cached (keeps first install under 3.95 MiB).
   'src/ask/ask.view.js', 'src/ask/model.js', 'src/ask/match.js',
   'data/corpus/prayer-meta.json', 'data/corpus/torah-service-guide.json', 'data/corpus/gaps.json',
+  // lane 5 (12 Nov, plan #10): Shabbat Companion drills and home steps, read only by #/shabbat (its code is under src/service/, already on demand).
+  'data/service/companion.json',
   'data/curriculum/dialogues.json', 'data/curriculum/gender-pairs.json', 'data/curriculum/loanwords.json', 'data/curriculum/prompts.json', 'data/curriculum/word-vocab-map.json',
   'data/firstday/minute-one.json', 'data/firstday/buildable-words.json' /* word builder list (168 KB): preview route #/firstwin, fetched when it opens, runtime-cached */, 'data/homepage/prayers.json', 'data/morning-verses.json', 'data/torah-quotes.json',
   'data/letters/art-concept-map.json', 'data/letters/keyboard-si1452.json',
@@ -156,6 +167,10 @@ const ON_DEMAND_FILES = new Set([
   'src/firstday/minuteone.view.js', 'src/israel/israel.view.js', 'src/phrases/phrases.view.js',
   // Scan a photo, Sounds and Word Sprint (preview routes): view code only, fetched on first open (keeps first install under 3.95 MiB with the launch branch).
   'src/photo/scan.view.js', 'src/pronunciation/sounds.view.js', 'src/sprint/sprint.view.js',
+  // lane 6 (12 Nov round 2): the placement check's page, item builder and loader (preview route /placement, about 19 KB; Home and the
+  // welcome flow use only src/placement/start.js and data/placement/config.json, which stay installed), and the trope families and
+  // per-aliyah practice page: fetched on first open, runtime-cached.
+  'src/placement/placement.view.js', 'src/placement/model.js', 'src/placement/loader.js', 'src/trope/families.js', 'src/trope/practice.view.js',
   // Cursive display font: only fetched when the cursive script setting is on (font-display: swap falls back otherwise).
   'assets/fonts/web/gveret-levin.woff2',
   // Star of David light stylesheet: loaded when #/light first opens, runtime-cached.
@@ -205,11 +220,22 @@ if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) 
   // Course totals, audio catalogue counts and the build stamp first (src/lib/counts.generated.js, index.html meta), so the
   // precache hash below covers them and every deploy that refreshes the precache list also refreshes the app's own figures.
   const { writeCounts } = await import('./counts/build-counts.mjs');
+  // lane1112-2 (M-04, R-12): a release build (--stamp, run by npm run release) runs the deploy-time asset check first and stops on any
+  // gap, so no release is stamped with one; the evidence file (audit/asset-check.json) is written after the stamp, so it names this build.
+  const release = process.argv.includes('--stamp');
+  const assets = release ? await import('./deploy/check-assets.mjs') : null;
+  const checked = release ? await assets.checkAssets({ files: !process.argv.includes('--no-files') }) : null;
+  if (checked && !checked.ok) {
+    console.error(`release stopped: the asset check found ${checked.gaps.length} gap(s); run node tools/deploy/check-assets.mjs for the list`);
+    process.exit(1);
+  }
   // The build time moves when a total or the version changes, or when asked with --stamp (do that for a release build).
   // A plain rebuild is reproducible, so CI's "Precache manifest is current" check (rebuild, then git diff) passes.
-  const c = await writeCounts({ force: process.argv.includes('--stamp') });
+  const c = await writeCounts({ force: release });
   console.log(`src/lib/counts.generated.js: build ${c.build.version} ${c.build.builtAt}`);
+  if (checked?.report.filesChecked) console.log(`asset check passed, evidence: ${assets.writeEvidence({ ...checked.report, build: c.build })}`);
   writeViewList();
+  await (await import('./offline-packs.mjs')).writePacks(); // lane 4: offline pack lists and sizes, before the hash covers them
   const m = computeManifest();
   const root = repoRoot;
   writeFileSync(join(root, 'precache-manifest.js'), manifestText(m));

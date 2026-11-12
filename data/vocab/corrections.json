@@ -4631,6 +4631,70 @@
    "old": "pin",
    "new": "pin (a peg or fastener)",
    "reason": "sense-noise lane 2026-11-10: Disambiguate the English loanword (a peg or fastener, not a PIN code)."
+  },
+  {
+   "id": "h6fc590a9",
+   "field": "en",
+   "old": "plane (an airplane",
+   "new": "plane (an airplane)",
+   "reason": "learner-text gate (S-01) 2026-11-12: the source gloss was split at a comma inside its brackets, leaving an unclosed bracket in one field and a stray closing bracket in the next; the bracket is closed and nothing else changes"
+  },
+  {
+   "id": "h6fc590a9",
+   "field": "enNote",
+   "old": "an aeroplane)",
+   "new": "an aeroplane",
+   "reason": "learner-text gate (S-01) 2026-11-12: the source gloss was split at a comma inside its brackets, leaving an unclosed bracket in one field and a stray closing bracket in the next; the bracket is closed and nothing else changes"
+  },
+  {
+   "id": "haf452c59",
+   "field": "en",
+   "old": "when (what time",
+   "new": "when (what time)",
+   "reason": "learner-text gate (S-01) 2026-11-12: the source gloss was split at a comma inside its brackets, leaving an unclosed bracket in one field and a stray closing bracket in the next; the bracket is closed and nothing else changes"
+  },
+  {
+   "id": "haf452c59",
+   "field": "enNote",
+   "old": "which time)",
+   "new": "which time",
+   "reason": "learner-text gate (S-01) 2026-11-12: the source gloss was split at a comma inside its brackets, leaving an unclosed bracket in one field and a stray closing bracket in the next; the bracket is closed and nothing else changes"
+  },
+  {
+   "id": "hae939afd",
+   "field": "en",
+   "old": "successful (beneficial",
+   "new": "successful (beneficial)",
+   "reason": "learner-text gate (S-01) 2026-11-12: the source gloss was split at a comma inside its brackets, leaving an unclosed bracket in one field and a stray closing bracket in the next; the bracket is closed and nothing else changes"
+  },
+  {
+   "id": "hae939afd",
+   "field": "enNote",
+   "old": "worthwhile)",
+   "new": "worthwhile",
+   "reason": "learner-text gate (S-01) 2026-11-12: the source gloss was split at a comma inside its brackets, leaving an unclosed bracket in one field and a stray closing bracket in the next; the bracket is closed and nothing else changes"
+  },
+  {
+   "id": "hb5df453d",
+   "field": "alt",
+   "old": [
+    "to cheat (e.g"
+   ],
+   "new": [
+    "to cheat"
+   ],
+   "reason": "learner-text gate (S-01) 2026-11-12: the alt sense was cut off at \"e.g.\"; the cut-off example is removed and the sense kept"
+  },
+  {
+   "id": "h12e6232a",
+   "field": "alt",
+   "old": [
+    "royalty (e.g"
+   ],
+   "new": [
+    "royalty"
+   ],
+   "reason": "learner-text gate (S-01) 2026-11-12: the alt sense was cut off at \"e.g.\"; the cut-off example is removed and the sense kept"
   }
  ]
 }

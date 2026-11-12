@@ -36,9 +36,11 @@ test('coverage numbers equal a fresh count of words.json, and the explorer sente
   assert.equal(c.familiesOf3Plus, FAM.families.filter((f) => f.size >= 3).length);
   const text = M.coverageText(c, VERBS.verbs);
   const withRoot = VERBS.verbs.filter((v) => v.root).length;
-  assert.match(text, new RegExp(`Roots are listed for ${c.verbsWithRoot} of ${c.verbs} verbs in the word list`));
-  assert.match(text, new RegExp(`This explorer shows ${withRoot} of ${VERBS.verbs.length} verbs you can open here`));
-  assert.match(text, new RegExp(`${c.verbs - VERBS.verbs.length} word-list verbs are not in this explorer`));
+  const f = (n) => n.toLocaleString('en-US');
+  assert.match(text, new RegExp(`^The word list has ${f(c.verbs)} verbs\\. Every verb figure here is out of those ${f(c.verbs)}:`));
+  assert.match(text, new RegExp(`${f(c.verbsWithRoot)} \\(\\d+%\\) have family letters listed`));
+  assert.match(text, new RegExp(`${f(VERBS.verbs.length)} can be opened on this page \\(${f(withRoot)} of those with family letters\\)`));
+  assert.match(text, new RegExp(`The other ${f(c.verbs - VERBS.verbs.length)} of the ${f(c.verbs)} are not on this page`));
   assert.match(text, /frequency rank of 5000 or better/);
   assert.ok(FAM.note.includes(M.EXPLORER_VERB_RULE) && VERBS.note.includes(M.EXPLORER_VERB_RULE));
 });
@@ -56,13 +58,15 @@ test('the explorer verb file is exactly the documented build rule, not a fixed l
   assert.ok(verbsAll.length - included.length > 0, 'the exclusion is visible in this dataset');
 });
 
-test('verb rows hold only forms from the vocabulary file; verbTable never adds a past tense', () => {
+test('verb rows hold only forms from the vocabulary file; verbTable shows the dictionary form and never adds another past form', () => {
   for (const v of VERBS.verbs) { assert.deepEqual(v.forms, Object.fromEntries(Object.entries(byId.get(v.id).forms).filter(([, x]) => !badMarks(x)))); assert.ok(v.binyan); }
   const v = VERBS.verbs.find((x) => x.forms.future);
   const t = M.verbTable(v);
-  assert.deepEqual(t.rows.map((r) => r.he), ['infinitive', 'present', 'future'].map((k) => v.forms[k]).filter(Boolean));
-  assert.ok(t.notes.some((n) => /no past tense/.test(n)));
-  assert.ok(!t.rows.some((r) => /past/i.test(r.label)));
+  assert.deepEqual(t.rows.map((r) => r.he), [v.he, ...['infinitive', 'present', 'future'].map((k) => v.forms[k]).filter(Boolean)]);
+  assert.deepEqual(t.rows.map((r) => r.key), M.FORM_KEYS.filter((k) => k === 'dictionary' || v.forms[k]));
+  assert.ok(t.notes.some((n) => /no other past forms/.test(n)));
+  assert.ok(!t.notes.some((n) => /no past tense/.test(n)), 'the note no longer contradicts the dictionary form row');
+  assert.equal(t.rows.filter((r) => /he did/.test(r.label)).length, 1, 'the only past row is the dictionary form');
   const bare = M.verbTable({ id: 'x', he: 'x', forms: { infinitive: 'a' } });
   assert.deepEqual(bare.missing, ['present', 'future']); assert.equal(M.verbTable(null).rows.length, 0);
 });
@@ -112,7 +116,7 @@ test('normalizeProgress clamps junk', () => {
 });
 
 const data = { families: { coverage: FAM.coverage, families: FAM.families.slice(0, 40) }, verbs: { verbs: VERBS.verbs.slice(0, 400) } };
-test('view: draft note, coverage, labelled 44px controls, root opens with verb table that says no past tense', async () => {
+test('view: draft note, coverage, labelled 44px controls, family letters open with a verb table that shows only listed forms', async () => {
   const V = await import('../src/roots/roots.view.js');
   const root = new N('main'); const store = memStore();
   const un = V.mount(root, { store, rootsData: data }); await tick();
@@ -129,7 +133,7 @@ test('view: draft note, coverage, labelled 44px controls, root opens with verb t
   const vb = root.all((n) => n.tag === 'button' && n.attrs['aria-label'] && /^Verb forms for/.test(n.attrs['aria-label']))[0];
   await vb.click(); await tick();
   assert.ok(root.queryAll('table').length === 1 && root.queryAll('th').length >= 3);
-  assert.match(root.textContent, /no past tense/);
+  assert.match(root.textContent, /no other past forms/);
   un();
 });
 
@@ -168,7 +172,7 @@ test('no prompt or heading claims a shared root for an unverified family; drills
     assert.doesNotMatch(q.prompt + q.explain, /comes from the root|Same root|shares the root/i, q.prompt);
     if (q.type !== 'binyan') { assert.match(q.prompt, /letters/); assert.ok(checkedIds.has(q.options.find((o) => o.id === q.answer).wordId)); }
   }
-  assert.match(M.familyBadge({ verified: false, ruleChecked: true }), /Not yet confirmed/); assert.match(M.familyBadge({ verified: false, ruleChecked: false }), /Loose/);
+  assert.match(M.familyBadge({ verified: false, ruleChecked: true }), /not yet confirmed/i); assert.match(M.familyBadge({ verified: false, ruleChecked: false }), /Loose/);
   assert.match(M.relation({ root: 'x', verified: true }, 'root'), /comes from the root/);
 });
 

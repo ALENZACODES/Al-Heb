@@ -52,7 +52,7 @@ function setup(A) {
           after.textContent = `${w.he}, ${w.tr}: ${w.en}.`;
           lock(opts); T.later(1400, ask);
         } else {
-          b.disabled = true; b.append(A.h('span', { class: 'g5-tag' }, ' (not this one)'));
+          b.disabled = true; b.append(A.h('span', { class: 'g5-tag' }, ' (not this one)')); A.slip(); // M-03
           A.announce('Not this one. Take another look.');
         }
       })));

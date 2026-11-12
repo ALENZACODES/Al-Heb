@@ -1,11 +1,12 @@
 // Aleph Service screen: (1) Siddur Coverage % per service, (2) Follow the service, page-turn cards.
 // mount(root, ctx) -> unmount. ctx: { store, settings?, audio?, query? }. Offline; reads only repo data files.
+import { congregationOf } from '../pronunciation/forTradition.js';
 import { h, heSpan, audioButton } from '../shell/ui.js';
 import { loadCorpus } from '../corpus/corpus.js';
 import { loadProgressData } from '../progress/data.js';
 import { readSnapshot, readableNow } from '../progress/model.js';
 import {
-  loadServiceData, coverage, coverageSentence, buildCards, clipFor, lineClipFor, audioCoverage, ORDER_IDS, FOLLOW_IDS, TRADITIONS, TRADITION_LABELS,
+  loadServiceData, coverage, coverageSentence, buildCards, clipFor, lineClipFor, audioCoverage, audioCoverageAll, ORDER_IDS, FOLLOW_IDS, TRADITIONS, TRADITION_LABELS,
   MARKER_LABELS, VARIES, DRAFT_NOTICE, COVERAGE_NOTE,
 } from './model.js';
 
@@ -47,13 +48,16 @@ export async function mount(root, ctx) {
   root.replaceChildren(style, h('h1', { id: 'view-title', tabindex: '-1' }, 'Follow the service'), main);
 
   const saved = (() => { try { return store.get(PREFS, {}) || {}; } catch { return {}; } })();
-  const congregation = ctx.settings?.get?.('congregation');
+  // M-01 (12 Nov site check): the tradition chosen in Settings is the default here. This page's own selector is an override that
+  // holds only while Settings still says what it said when the override was chosen; change Settings and this page follows it.
+  const congregation = congregationOf(ctx.settings);
+  const overrideHolds = TRADITIONS.includes(saved.tradition) && saved.basis === congregation;
   const st = {
     mode: 'coverage', order: FOLLOW_IDS.includes(saved.order) ? saved.order : 'shabbat-morning', i: 0,
-    tradition: TRADITIONS.includes(saved.tradition) ? saved.tradition : TRADITIONS.includes(congregation) ? congregation : 'sephardi',
+    tradition: overrideHolds ? saved.tradition : congregation,
     showTr: saved.showTr !== false,
   };
-  const save = () => { try { store.set(PREFS, { order: st.order, tradition: st.tradition, showTr: st.showTr }); } catch { /* ignore */ } };
+  const save = () => { try { store.set(PREFS, { order: st.order, tradition: st.tradition, basis: congregation, showTr: st.showTr }); } catch { /* ignore */ } };
   const live = h('p', { class: 'muted small', role: 'status', 'aria-live': 'polite' });
 
   const read = readableNow(readSnapshot(store), P);
@@ -87,7 +91,11 @@ export async function mount(root, ctx) {
         missingGaps.length ? h('details', {}, h('summary', {}, 'Not in Aleph yet'), h('ul', {}, ...missingGaps.map((g) => h('li', {}, g)))) : null,
         o.follow ? h('button', { type: 'button', class: 'btn secondary', 'data-follow': oid, onclick: () => { st.mode = 'follow'; st.order = oid; st.i = 0; save(); render('sv-card'); } }, `Follow ${o.short.toLowerCase()} service`) : null);
     });
-    return [h('p', { class: 'small' }, COVERAGE_NOTE), ...sections];
+    // M-11: line coverage for the whole Siddur Aleph holds, in the tradition and voice set now: the share of service lines with a clip
+    const all = audioCoverageAll(ctx.audio, S.orders, S.byId, ORDER_IDS, st.tradition);
+    const total = all.lines ? h('p', { class: 'small', 'data-sv-audio-total': `${all.withClip}/${all.lines}` },
+      `Line coverage: ${all.withClip} of the ${all.lines} service lines Aleph holds have a clip you can play (${all.pct}%), in a synthetic voice, ${TRADITION_LABELS[st.tradition] || st.tradition} pronunciation.`) : null;
+    return [h('p', { class: 'small' }, COVERAGE_NOTE), total, ...sections].filter(Boolean);
   }
 
   function followView() {
@@ -99,7 +107,8 @@ export async function mount(root, ctx) {
     const orderBtns = FOLLOW_IDS.map((oid) => h('button', { type: 'button', class: 'btn secondary', 'data-order': oid, 'aria-pressed': st.order === oid ? 'true' : 'false', onclick: () => { st.order = oid; st.i = 0; save(); render('sv-card'); } }, S.orders.orders[oid].short));
     const sel = h('select', { id: 'sv-tradition', onchange: (e) => { st.tradition = e.target.value; save(); render('sv-tradition'); } },
       ...TRADITIONS.map((t) => h('option', { value: t, selected: t === st.tradition ? true : null }, TRADITION_LABELS[t])));
-    const toggle = h('button', { type: 'button', class: 'btn secondary', id: 'sv-toggle-tr', 'aria-pressed': st.showTr ? 'false' : 'true', onclick: () => { st.showTr = !st.showTr; save(); render('sv-toggle-tr'); } }, st.showTr ? 'Hide transliteration' : 'Show transliteration');
+    // M-01: the button says what it will do (Hide / Show) and carries no pressed state that could contradict its words
+    const toggle = h('button', { type: 'button', class: 'btn secondary', id: 'sv-toggle-tr', 'aria-controls': 'sv-card', onclick: () => { st.showTr = !st.showTr; save(); render('sv-toggle-tr'); } }, st.showTr ? 'Hide transliteration' : 'Show transliteration');
 
     const clip = clipFor(ctx.audio, c, st.tradition);
     const playKind = c.he.length > 1 ? 'prayer' : 'line';

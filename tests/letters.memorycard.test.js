@@ -148,7 +148,11 @@ test('memory card: no picture file -> the letter stays and the picture idea show
 
 test('memory card: no timers or animation frames in the module (no autoplay loops); reduced motion turns the morph off', () => {
   const src = readFileSync(new URL('../src/letters/memorycard.js', import.meta.url), 'utf8');
-  assert.doesNotMatch(src.replace(/\/\/.*$/gm, ''), /setInterval|setTimeout|requestAnimationFrame|animation\s*:/);
+  // S-04 (12 Nov): the only timers allowed are the bounded network retries between the <network-retry> markers (a few tries, then stop).
+  const retry = /\/\/ <network-retry>[^]*?\/\/ <\/network-retry>/.exec(src);
+  assert.ok(retry, 'retry block is marked');
+  assert.doesNotMatch(retry[0], /setInterval|requestAnimationFrame/);
+  assert.doesNotMatch(src.replace(retry[0], '').replace(/\/\/.*$/gm, ''), /setInterval|setTimeout|requestAnimationFrame|animation\s*:/);
   assert.match(M.MEMORY_CARD_CSS, /prefers-reduced-motion:reduce[^}]*\{[^}]*transition:none/);
   assert.match(M.MEMORY_CARD_CSS, /forced-colors:active/);
   assert.match(M.MEMORY_CARD_CSS, /min-block-size:44px/);

@@ -188,6 +188,7 @@ export function mount(root, ctx) {
     group('data', 'Back up, restore or delete', 'Your progress stays on this device', [
     h('fieldset', { class: 'field' }, h('legend', {}, t('settings.backup')),
       h('div', { class: 'row' }, exportBtn, h('button', { type: 'button', class: 'btn secondary', id: 's-import-label', 'aria-controls': 's-import', onclick: () => fileInput.click() }, t('settings.import')), fileInput),
+      h('p', {}, h('a', { href: '#/move', id: 's-move-link' }, 'Move to another device'), ': a link, QR code or file that merges into the other device. No account, no server.'), // lane 4
       notice, h('div', { class: 'row' }, retryBtn), restoreBox, persistLine, h('div', { class: 'row' }, persistBtn),
       store.persistent ? null : h('p', { class: 'muted' }, t('settings.persist.no'))),
     h('fieldset', { class: 'field' }, h('legend', {}, 'Delete all my data'),

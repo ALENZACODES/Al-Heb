@@ -62,7 +62,7 @@ function setup(A) {
         [order[first], order[i]] = [order[i], order[first]];
         first = -1; used += 1;
         const gain = placed(words, order) - before;
-        if (gain > 0) { A.addScore(3 * gain); A.sfx('click'); } else { A.addScore(-1); }
+        if (gain > 0) { A.addScore(3 * gain); A.sfx('click'); } else { A.addScore(-1); A.slip(); }
         if (placed(words, order) === words.length) {
           const bonus = used <= best ? 10 : 4;
           A.addScore(bonus); A.sfx('success'); A.announce(`Mended in ${used} swap${used === 1 ? '' : 's'}${used <= best ? ', the fewest possible' : ''}.`);

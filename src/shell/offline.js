@@ -53,7 +53,7 @@ export function optionalGroups(tradition = "sephardi") {
  * First match wins; anything unmatched lands in "More pages and data".
  */
 export const ON_DEMAND_GROUPS = Object.freeze([
-  { id: "od-practice", label: "Vowel-point, root, gender, known-word and record-and-compare practice data", test: /^(data\/(nikkudfade|roots|gender|knownwords)\/|src\/(recordcompare|roots|nikkudfade|genderdrill|knownwords|fsrs)\/[a-z]+\.view\.js$|src\/roots\/model\.js$)/, approxMB: 1.2 },
+  { id: "od-practice", label: "Vowel-point, root, gender, known-word and record-and-compare practice data", test: /^(data\/(nikkudfade|roots|gender|knownwords)\/|src\/(recordcompare|roots|nikkudfade|genderdrill|knownwords|fsrs)\/[a-z]+\.view\.js$|src\/roots\/(model|binyanim|links)\.js$)/, approxMB: 1.3 }, // lane 3 (12 Nov): + binyanim.js, links.js, dict-links.json
   { id: "od-vocab", label: "Vocabulary data and theme packs", test: /^data\/vocab\//, approxMB: 5.9 },
   { id: "od-audio-index", label: "Audio clip list (core)", test: /^data\/audio\//, approxMB: 2.6 },
   { id: "od-pronunciation", label: "Sounds and pronunciation data", test: /^data\/pronunciation\//, approxMB: 0.8 },
@@ -71,7 +71,7 @@ export const ON_DEMAND_GROUPS = Object.freeze([
   { id: "od-videos", label: "Letter videos", test: /^(assets\/videos|data\/videos)\//, approxMB: 2 },
   { id: "od-lab", label: "Brain Lab", test: /^(src\/lab|data\/lab)\//, approxMB: 0.06 },
   { id: "od-retention", label: "Streak, gems, hearts and practice league", test: /^src\/retention\//, approxMB: 0.1 },
-  { id: "od-service", label: "Follow the Service", test: /^src\/service\//, approxMB: 0.1 },
+  { id: "od-service", label: "Follow the Service and the Shabbat Companion", test: /^(src\/service\/|data\/service\/companion\.json$)/, approxMB: 0.13 }, // lane 5: Shabbat Companion data
   { id: "od-awards", label: "Awards gallery and certificate", test: /^src\/awards\/(?:gallery\.view|proof-font|certificate|icons)\.js$/, approxMB: 0.11 },
   { id: "od-torahreader", label: "Torah reader page and its Hebrew recording index", test: /^src\/(torahreader\/torahreader\.view|shell\/torah-he-index)\.js$/, approxMB: 0.05 },
   { id: "od-preview-pages", label: "Class track, pronunciation comparison, Sound like a local, the calendar, the privacy screen, Sounds, Scan a photo, Word Sprint and Timed read-aloud (route code)", test: /^src\/(classtrack\/classtrack|pronunciation\/compare|israel\/israel|curriculum\/calendar|shell\/privacy|photo\/scan|pronunciation\/sounds|sprint\/sprint|timedread\/timedread)\.view\.js$/, approxMB: 0.09 },
@@ -92,6 +92,11 @@ export const ON_DEMAND_GROUPS = Object.freeze([
   { id: "od-learn-practice", label: "Learn practice screens (review, loanwords, drills and dialogues)", test: /^src\/curriculum\/(review|loanwords|spotit|checkpoint|dialogues|ladder|fade|gender|scaffold)\.view\.js$/, approxMB: 0.07 },
   { id: "od-teacher", label: "Share my progress and class summary", test: /^src\/teacher\//, approxMB: 0.02 },
   { id: "od-light", label: "Star of David light (page, style and printable stencil)", test: /^(src\/light\/|assets\/light\/|assets\/css\/light\.css$)/, approxMB: 0.02 },
+  // Lane 1 (M-08, 12 Nov): the code for About's Held Recordings list (its data file is in "Audio clip list" above).
+  { id: "od-held", label: "Held Recordings list on About", test: /^src\/shell\/held-recordings\.js$/, approxMB: 0.01 },
+  { id: "od-sync", label: "Move to another device, your certificate and the offline pack lists", test: /^(src\/sync\/|data\/offline\/)/, approxMB: 0.08 }, // lane 4 (12 Nov)
+  // lane 6 (12 Nov round 2): Reading Without Vowels, the placement check page, trope families and per-aliyah practice (route code)
+  { id: "od-bridge-trope-placement", label: "Reading without vowels, the placement check, trope families and aliyah practice (route code)", test: /^src\/(bridge\/|placement\/(placement\.view|model|loader)\.js$|trope\/(families|practice\.view)\.js$)/, approxMB: 0.07 },
 ]);
 /** Group a list of ALEF_ON_DEMAND paths into optional-download entries ({id,label,urls,approxMB}); empty groups are dropped. */
 export function onDemandGroups(onDemand = []) {

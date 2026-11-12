@@ -21,6 +21,7 @@ export const NAV_EN = {
   'nav.books': 'Little books',
   'nav.games': 'Games',
   'nav.route.awards': 'Awards and certificate',
+  'nav.route.move': 'Move to another device', 'nav.route.certificate': 'Certificate of lessons completed', // lane 4 (12 Nov)
   'nav.route.songs': 'Songs',
   'nav.route.camera': 'Camera Translator',
   // games hub and every game
@@ -125,8 +126,10 @@ export const NAV_EN = {
   'nav.route.books': 'Little books',
   'nav.route.book': 'Read a book',
   'nav.route.synagogues': 'Reform Synagogues in Canada',
+  'nav.route.shabbat': 'Shabbat Companion', // lane 5
   'nav.route.synagogue': 'Synagogue',
   'nav.route.nikkud-fade': 'Vowel marks, fading out',
+  'nav.route.bridge': 'Reading Without Vowels', 'nav.route.trope-families': 'Trope Families', 'nav.route.trope-aliyah': 'Trope Practice by Aliyah', // lane 6
   'nav.route.roots': 'Roots and verb families',
   'nav.route.gender-drill': 'Gender drill',
   'nav.route.record-compare': 'Record and compare',

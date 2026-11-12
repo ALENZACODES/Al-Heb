@@ -162,6 +162,8 @@ export const ROUTES = [
   { name: 'share', pattern: '/share', module: '../teacher/teacher.view.js', title: 'Share my progress', owner: 'teacher', optional: true, quick: 'nav.share', query: { mode: 'share' } },
   { name: 'classsummary', pattern: '/classsummary', module: '../teacher/teacher.view.js', title: 'Class summary', owner: 'teacher', optional: true, quick: 'nav.classsummary', query: { mode: 'class' } },
   { name: 'service', pattern: '/service', module: '../service/service.view.js', title: 'Follow the service', owner: 'service', optional: true, quick: 'nav.service' },
+  // lane 5 (12 Nov, plan #10): Shabbat Companion, a lazy route (its code and data are on demand)
+  { name: 'shabbat', pattern: '/shabbat', module: '../service/shabbat.view.js', title: 'Shabbat Companion', owner: 'service', optional: true, quick: 'nav.route.shabbat' },
   { name: 'firstday', pattern: '/firstday', module: '../firstday/firstday.view.js', tier: 'v0', title: 'Your first 10 minutes', owner: 'firstday', optional: true, group: 'learn', quick: 'nav.firstday' },
   { name: 'firstday-ladder', pattern: '/firstday/ladder', module: '../firstday/ladder.view.js', title: 'Pointed to unpointed ladder', owner: 'firstday', optional: true, group: 'learn', quick: 'nav.firstday-ladder' },
   { name: 'firstwin', pattern: '/firstwin', module: '../firstday/minuteone.view.js', title: 'Build your first Hebrew word', owner: 'firstday', optional: true, group: 'learn' },
@@ -192,6 +194,9 @@ export const ROUTES = [
   { name: 'privacy', pattern: '/privacy', module: './privacy.view.js', tier: 'v0', title: 'Privacy', owner: 'legal', optional: true, group: 'learn', quick: 'nav.privacy' },
   { name: 'terms', pattern: '/terms', module: './terms.view.js', tier: 'v0', title: 'Terms and rights', owner: 'legal', optional: true, group: 'learn', quick: 'nav.terms' },
   { name: 'compare', pattern: '/compare', module: '../pronunciation/compare.view.js', title: 'Compare pronunciations', owner: 'pronunciation', optional: true, group: 'learn', quick: 'nav.compare' },
+  // lane 4: move progress between own devices (merge, no server); own certificate
+  { name: 'move', pattern: '/move', module: '../sync/move.view.js', title: 'Move to another device', owner: 'sync', optional: true },
+  { name: 'certificate', pattern: '/certificate', module: '../sync/certificate.view.js', title: 'Certificate of lessons completed', owner: 'sync', optional: true },
   { name: 'offline', pattern: '/offline', module: './offline.view.js', tier: 'v0', title: 'Use Aleph offline', owner: 'offline', optional: true, group: 'learn', quick: 'nav.offline' },
   { name: 'vocab-themes', pattern: '/vocab/themes', module: '../vocab/themes.view.js', title: 'Theme packs', owner: 'vocab', optional: true, group: 'learn', quick: 'nav.vocab-themes' },
   { name: 'talk', pattern: '/talk', module: '../talk/talk.view.js', title: 'Talk', owner: 'talk', optional: true, quick: 'nav.talk' },
@@ -237,6 +242,13 @@ export const ROUTES = [
   { name: 'daily', pattern: '/daily', module: '../../preview/loops/daily.view.js', tier: 'preview', title: 'Daily goal and quests', owner: 'loops', group: 'progress', quick: 'nav.route.daily' },
   { name: 'search',   pattern: '/search',         module: './search.view.js', tier: 'v0',                    title: 'Search', owner: 'nav' },
   { name: 'about',    pattern: '/about',          module: './about.view.js', tier: 'v0',                     nav: 'nav.about',    title: 'About', owner: 'lane8' },
+  // lane 6 (12 Nov round 2): unvocalized bridge (#16) and trope families / per-aliyah practice (#13); views load on first open
+  { name: 'bridge', pattern: '/bridge', module: '../bridge/bridge.view.js', title: 'Reading Without Vowels', owner: 'lane6', group: 'learn', quick: 'nav.route.bridge' },
+  { name: 'bridge-sec', pattern: '/bridge/:sec', module: '../bridge/bridge.view.js', title: 'Reading Without Vowels', owner: 'lane6', paramQuery: { sec: 'sec' } },
+  { name: 'bridge-text', pattern: '/bridge/:sec/:id', module: '../bridge/bridge.view.js', title: 'Reading Without Vowels', owner: 'lane6', paramQuery: { sec: 'sec', id: 'id' } },
+  { name: 'trope-families', pattern: '/trope/families', module: '../trope/practice.view.js', title: 'Trope Families', owner: 'lane6', group: 'learn', quick: 'nav.route.trope-families' },
+  { name: 'trope-family', pattern: '/trope/families/:id', module: '../trope/practice.view.js', title: 'Trope Families', owner: 'lane6', paramQuery: { id: 'id' } },
+  { name: 'trope-aliyah', pattern: '/trope/aliyah', module: '../trope/practice.view.js', title: 'Trope Practice by Aliyah', owner: 'lane6', group: 'learn', quick: 'nav.route.trope-aliyah', query: { sec: 'aliyah' } },
 ];
 
 /**

@@ -19,7 +19,7 @@ export function mount(root, ctx) {
   const wrap = el('section', { class: 'alef-genderdrill', 'aria-labelledby': 'gd-title' });
   const h1 = el('h1', { id: 'gd-title', tabindex: '-1' }, 'Gender drill');
   const who = el('div', { class: 'gd-who' });
-  const body = el('div', { class: 'gd-body' });
+  const body = el('div', { class: 'gd-body' }, el('p', { class: 'muted', role: 'status' }, 'Loading the words…')); // plan 4.9
   const status = el('p', { role: 'status', 'aria-live': 'polite', class: 'gd-status' });
   wrap.append(h1, el('p', { class: 'gd-draft' }, DRAFT_NOTE), who, body, status, el('footer', {}, sourcesLine(el)));
   root.append(wrap);

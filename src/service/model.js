@@ -111,11 +111,24 @@ export function lineClipFor(audio, card, k, tradition) {
   return null;
 }
 
-/** Lines of an order that have a clip, for the coverage tab: {lines, withClip, pct}. Counts the clips a learner can play here. */
+/** Lines of an order that have a clip, for the coverage tab: {lines, withClip, pct}. Counts the clips a learner can play here
+ *  (a held clip is not counted: the player withholds it). The percentage is rounded down, so it never claims more than is true. */
 export function audioCoverage(audio, cards, tradition) {
   let lines = 0, withClip = 0;
   for (const c of cards) for (let k = 0; k < c.he.length; k++) { lines++; if (lineClipFor(audio, c, k, tradition)) withClip++; }
-  return { lines, withClip, pct: lines ? Math.round((withClip / lines) * 100) : 0 };
+  return { lines, withClip, pct: lines ? Math.floor((withClip / lines) * 100) : 0 };
+}
+
+/** M-11: line coverage over several orders at once: each distinct service line Aleph holds (a text in two services counts once)
+ *  and whether it has a playable clip. */
+export function audioCoverageAll(audio, orders, byId, ids, tradition) {
+  const seen = new Map();
+  for (const oid of ids) for (const c of buildCards(orders, oid, byId, tradition)) for (let k = 0; k < c.he.length; k++) {
+    const key = `${c.id}#${k}`;
+    if (!seen.has(key)) seen.set(key, !!lineClipFor(audio, c, k, tradition));
+  }
+  const lines = seen.size, withClip = [...seen.values()].filter(Boolean).length;
+  return { lines, withClip, pct: lines ? Math.floor((withClip / lines) * 100) : 0 };
 }
 
 /** Does a real audio clip exist for this card (not a speech-synthesis fallback)? Returns {kind,id} to play or null. */

@@ -125,9 +125,13 @@ export function createAudio(opts) {
   // Items marked scope:'israeli-only' (survival phrasebook, mnemonic anchor words) exist only in the israeli tradition:
   // they are conversational Modern Hebrew, so the learner's congregation setting must not change how they sound.
   const israeliOnly = new Set();
+  // M-06: paths whose row says a Chirp re-take was held (the current clip passed review and plays). Information, never a gate;
+  // the three hold sets are explained in tools/audio/hold_sets.mjs.
+  const chirpHeldPaths = new Set();
   const addEntries = (list) => { for (const e of list) {
     if (e.scope === 'israeli-only') israeliOnly.add(`${e.kind}|${e.id}`);
     index.set(`${e.voice}|${e.tradition}|${e.kind}|${e.id}`, e);
+    if (e.chirpHeld && e.path) chirpHeldPaths.add(e.path);
     if (!textBy.has(`${e.kind}|${e.id}`) && e.text) textBy.set(`${e.kind}|${e.id}`, e.text);
   } };
   addEntries(manifest);
@@ -219,7 +223,8 @@ export function createAudio(opts) {
   /** Decide the source without playing. */
   function plan(kind, rawId, o = {}) {
     const p = planCore(kind, rawId, o);
-    if (p.source !== 'file' || !held.has(p.path)) return p;
+    if (p.source !== 'file') return p;
+    if (!held.has(p.path)) return chirpHeldPaths.has(p.path) ? { ...p, chirpHeld: true } : p; // M-06: plays as usual; the flag is information
     return { ...planCore(kind, rawId, { ...o, skipFiles: true }), held: true, heldPath: p.path };
   }
   function planCore(kind, rawId, o = {}) {

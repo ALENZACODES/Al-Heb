@@ -62,7 +62,7 @@ test('deep states keep the same guarantees: gender drill through a whole round, 
   assert.match(root.textContent, /Round done/); un();
 
   V = await import('../src/roots/roots.view.js'); root = new N('main'); un = V.mount(root, VIEWS[1][2]()); await tick();
-  await root.all((n) => n.tag === 'button' && /^Root /.test(n.attrs['aria-label'] || ''))[0].click(); await tick(); audit(root, 'roots family');
+  await root.all((n) => n.tag === 'button' && /^Family letters /.test(n.attrs['aria-label'] || ''))[0].click(); await tick(); audit(root, 'roots family');
   const vb = root.all((n) => n.tag === 'button' && /^Verb forms for/.test(n.attrs['aria-label'] || ''))[0]; if (vb) { await vb.click(); await tick(); audit(root, 'roots table'); }
   await btn(root, /^Drill$/).click(); await tick(); audit(root, 'roots drill');
   for (let i = 0; i < 8; i++) { const o = root.queryAll('[aria-label="Answers"] button'); if (!o.length) break; await o[0].click(); await tick(); audit(root, 'roots answer'); await btn(root, /^(Next question|Finish round)/).click(); await tick(5); }

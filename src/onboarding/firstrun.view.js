@@ -148,7 +148,8 @@ export function mount(root, ctx) {
       pageBox('daily', dailyFs),
       next,
       h('div', { class: 'ob-foot' },
-        h('div', { class: 'ob-foot-page', 'data-page': 'level' }, levelNext, rec ? h('button', { type: 'button', class: 'btn secondary', onclick: () => go('plan') }, 'Keep my current starting point') : h('button', { type: 'button', class: 'ob-quick-link', id: 'ob-quick-start', onclick: () => quickStart() }, 'New to Hebrew? Skip the questions and start')),
+        h('div', { class: 'ob-foot-page', 'data-page': 'level' }, levelNext, rec ? h('button', { type: 'button', class: 'btn secondary', onclick: () => go('plan') }, 'Keep my current starting point') : h('button', { type: 'button', class: 'ob-quick-link', id: 'ob-quick-start', onclick: () => quickStart() }, 'New to Hebrew? Skip the questions and start'),
+          h('button', { type: 'button', class: 'ob-quick-link', id: 'ob-find-level', onclick: () => findLevel() }, 'Not a beginner? Find your level')), // lane 6 (#17): the placement check as the front door
         h('div', { class: 'ob-foot-page', 'data-page': 'goal' }, goalNext),
         h('div', { class: 'ob-foot-page', 'data-page': 'daily' }, h('button', { type: 'submit', class: 'btn ob-cta', id: 'ob-letters-continue' }, 'Continue'))));
     const showPage = (name) => {
@@ -188,6 +189,16 @@ export function mount(root, ctx) {
       page = 'level';
       go(israelNow ? 'plan' : 'congregation');
     };
+    // Lane 6 (points plan #17): "Not a beginner? Find your level" goes straight to the placement check (about 10 minutes). The level answer
+    // is the one picked, or "I recognize some letters" when none is picked (every answer but "Starting from zero" leads to the same check).
+    function findLevel() {
+      rec = answerLetters(rec, picked && picked !== 'none' ? picked : 'some', nowISO());
+      if (DAILY_GOALS.includes(daily)) { rec = { ...rec, minutesPerDay: daily }; try { store.set(DAILY_GOAL_KEY, daily); } catch { /* best effort */ } }
+      save();
+      try { settings.set({ onboarded: true, goal }); } catch { /* settings may be read-only in tests */ }
+      say('Saved. The placement check is next; its result sets your starting lesson.');
+      if (typeof ctx.route === 'function') ctx.route('/placement?from=welcome'); else { try { globalThis.location.hash = '#/placement?from=welcome'; } catch { /* tests */ } }
+    }
     // Quick start (launch branch, Nov 10 2026): a brand-new learner is one tap from the first letter. Pronunciation and the week plan
     // keep their defaults (Sephardi reading, Israeli voices) and stay in Settings. Offered under Continue on the first question.
     function quickStart() {

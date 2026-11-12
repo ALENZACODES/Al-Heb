@@ -37,8 +37,8 @@ function setup(A) {
   const prompt = A.h('p', { class: 'arc-prompt' });
   const area = A.h('div', {});
   const drawRace = () => {
-    lanes.replaceChildren(A.h('div', { class: 'g1-lane' }, A.cast('rimon-fly', 'Rimon (you)', 'arc-sprite-inline'), A.h('strong', {}, 'You'), bar(you)),
-      A.h('div', { class: 'g1-lane' }, A.cast('ari-side', 'Ari', 'arc-sprite-inline'), A.h('strong', {}, 'Ari'), bar(ari)));
+    lanes.replaceChildren(A.h('div', { class: 'g1-lane' }, A.cast('rimon-fly', 'Rimon (you)', 'arc-cast g1-lane-cast'), A.h('strong', {}, 'You'), bar(you)),
+      A.h('div', { class: 'g1-lane' }, A.cast('ari-side', 'Ari', 'arc-cast g1-lane-cast'), A.h('strong', {}, 'Ari'), bar(ari)));
     line.textContent = raceLine(you, ari);
   };
   A.board.replaceChildren(host(A, 'ari-caller', 'Ready, steady… listen!'), lanes, line, prompt, area,

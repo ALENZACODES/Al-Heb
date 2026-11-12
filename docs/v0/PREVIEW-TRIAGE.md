@@ -31,6 +31,7 @@ decision, so the More sheet stays short and the first session stays coherent (we
 | `share` | keep | Small and self-contained. |
 | `classsummary` | hide | Teacher-only view; reached from `classtrack` or by link. |
 | `service` | keep | Prayer-service follow-along. |
+| `shabbat` | keep | Shabbat Companion (lane 5, 12 Nov): this Shabbat, the service map, follow-along, join-in drills and home rituals. Order not yet reviewed by a rabbi. |
 | `firstday-ladder` | merge | Into `firstday` as its optional last part. |
 | `placement` | keep | Linked from the welcome screen for learners who can already read. |
 | `reminders` | keep | Study reminders. |
@@ -80,6 +81,8 @@ decision, so the More sheet stays short and the first session stays coherent (we
 | `time-budget` | hide | Planning numbers; belongs inside `syllabus`. |
 | `daily` | keep | Daily goal and quests. |
 | `awards` | keep | Practice-game activity and a sample beginner certificate. Not a lesson score. |
+| `certificate` | keep | The learner's own record of lessons passed under the pass rule, with first-try scores and dates, and a link that recomputes it. Self-issued, not reviewed; says what it cannot prove. (lane 4, 12 Nov) |
+| `move` | keep | Move progress to another of the learner's own devices by link, QR code or file; the import merges, never overwrites. No account, no server. (lane 4, 12 Nov) |
 | `phrases` | keep | Common phrases and sentences; supports the speaking goal. |
 | `books` | keep | The little-books shelf; listed in the Preview group so the books can be found. |
 | `listen-shelf` | keep | The Sacred Listen shelf; listed in the Preview group so the recordings can be found. |
@@ -319,3 +322,6 @@ Home shows a backup reminder after three finished lessons (`docs/progress/BACKUP
 | `cipher` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
 | `fleamarket` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
 | `light` | keep | Star of David light: on-screen glow, optional phone flash, and a printable stencil. Preview until a real-phone check. |
+| `bridge` | keep | Reading Without Vowels (lane 6, 12 Nov): the Fade-out ladder's last three stages per text, books, prayer lines, word recognition and the modern texts shelf. Self-graded; preview until a teacher reviews it. |
+| `trope-families` | keep | Trope Families (lane 6, 12 Nov): signs and names from the app's trope table with real-verse examples; no melody audio exists. Names not reviewed. |
+| `trope-aliyah` | keep | Trope Practice by Aliyah (lane 6, 12 Nov): phrase-by-phrase stepping with the existing verse recording; no chant audio exists. Names not reviewed. |

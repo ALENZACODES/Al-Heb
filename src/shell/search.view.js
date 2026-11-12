@@ -7,12 +7,22 @@ import './nav.strings.js';
 import { ROUTES } from './router.js';
 import { VIEW_FILES } from './views.generated.js';
 import { availableRoutes } from './router.js';
-import { buildPageIndex, searchPages, searchLetters, searchWords, loadLetters, loadWordTiers } from './search.js';
+import { buildPageIndex, searchPages, searchLetters, searchWords, isTranslitHit, loadLetters, loadWordTiers } from './search.js';
+import { translitFor, TRAD } from '../vocab/model.js';
 
 export function mount(root, ctx) {
   const avail = availableRoutes(VIEW_FILES);
   const index = buildPageIndex(ROUTES, avail, t, tHe, (id) => t('nav.section.' + id));
   let letters = null, words = [], error = false, loadedWords = 0, stopped = false;
+  // M-02: transliteration as the Dictionary spells it (Ashkenazi also tries Sephardi), cached.
+  const trad = () => { const c = ctx?.settings?.get?.('congregation'); return TRAD[c] ? c : 'sephardi'; };
+  const tlCache = new Map();
+  const translitOf = (e) => {
+    const tr = trad(), key = tr + '|' + (e.pointed || '');
+    if (!e.pointed) return '';
+    if (!tlCache.has(key)) tlCache.set(key, [...new Set([translitFor(e, tr), tr === 'ashkenazi' ? translitFor(e, 'sephardi') : ''])].filter(Boolean));
+    return tlCache.get(key);
+  };
   const input = h('input', { id: 'search-q', type: 'search', name: 'q', autocomplete: 'off', enterkeyhint: 'search', value: ctx?.query?.q || '', 'aria-describedby': 'search-hint' });
   const status = h('p', { class: 'muted', id: 'search-status', role: 'status', 'aria-live': 'polite' });
   const out = h('div', { id: 'search-results' });
@@ -32,7 +42,9 @@ export function mount(root, ctx) {
       e.desc ? h('span', { class: 'menu-desc' }, e.desc) : null,
       h('span', { class: 'menu-desc' }, t('nav.section.' + e.section)))));
     const ls = (letters ? searchLetters(letters, q) : []).map((l) => h('li', {}, h('a', { href: '#/letters/' + l.id }, heSpan(l.he, 'he search-he'), ' ', h('span', { class: 'menu-label' }, l.name), l.nameHe ? heSpan(' ' + l.nameHe, 'he nav-he') : null, h('span', { class: 'menu-desc' }, uiEnglish(ctx, l.sound?.en || '')))));
-    const ws = searchWords(words, q).map((e) => h('li', {}, h('a', { href: '#/vocab' }, heSpan(e.pointed || e.lemma, 'he search-he'), ' ', h('span', { class: 'menu-label' }, uiEnglish(ctx, e.gloss || '')), h('span', { class: 'menu-desc' }, [e.pos, e.topic].filter(Boolean).join(', ')))));
+    const ws = searchWords(words, q, 15, translitOf).map((e) => h('li', {}, h('a', { href: '#/vocab?q=' + encodeURIComponent(q) }, heSpan(e.pointed || e.lemma, 'he search-he'), ' ', h('span', { class: 'menu-label' }, uiEnglish(ctx, e.gloss || '')),
+      isTranslitHit(e, q, translitOf) ? h('span', { class: 'menu-desc search-tl' }, 'Sounds like: ' + translitOf(e)[0] + ' (transliteration match)') : null,
+      h('span', { class: 'menu-desc' }, [e.pos, e.topic].filter(Boolean).join(', ')))));
     const total = pages.length + ls.length + ws.length;
     out.append(...[group(t('search.pages'), pages), group(t('search.letters'), ls), group(t('search.words'), ws)].filter(Boolean));
     if (!total && loadedWords >= 4) out.append(h('p', {}, t('search.none')));

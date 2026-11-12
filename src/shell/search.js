@@ -1,6 +1,7 @@
 // Pure search logic (no DOM) so it can be tested in Node: page index over routes, Hebrew letter lookup, vocabulary lookup.
 // Data comes from the existing files only: data/letters/letters.json and the vocab tier packs (lazy, via src/vocab/loader.js).
 import { searchablePages, labelKey, description, ROUTE_SECTION, tierOf } from './nav-model.js';
+import { matchBand, BAND, isShortQuery } from '../vocab/rank.js';
 
 const NIQQUD = /[֑-ׇ]/g;
 const FINALS = { 'ך': 'כ', 'ם': 'מ', 'ן': 'נ', 'ף': 'פ', 'ץ': 'צ' };
@@ -75,17 +76,34 @@ export function searchLetters(letters, q, limit = 6) {
   return out.sort((a, b) => a.s - b.s).slice(0, limit).map((x) => x.l);
 }
 
-/** Word lookup over vocabulary entries (lemma/pointed for Hebrew queries, gloss for English). Lower rank = better match. */
-export function searchWords(entries, q, limit = 15) {
+/** Word lookup (lemma/pointed for Hebrew, gloss for English); lower = better. M-02: Latin queries also match `translitOf(e)`
+ *  through the Dictionary's matcher (vocab/rank.js). */
+export function searchWords(entries, q, limit = 15, translitOf = null) {
   const n = norm(q); if (n.length < 1) return [];
   const heQ = hasHebrew(q); const out = [];
+  const short = isShortQuery(q);
   for (const e of entries || []) {
     let s = -1;
     if (heQ) { const lem = norm(e.lemma), pt = norm(e.pointed); if (lem === n || pt === n) s = 0; else if (lem.startsWith(n) || pt.startsWith(n)) s = 1; else if (n.length > 1 && (lem.includes(n) || pt.includes(n))) s = 3; }
     else { const g = norm(e.gloss); const gw = g.split(' '); if (g === n) s = 0; else if (gw[0] === n) s = 1; else if (n.length >= 2 && gw.includes(n)) s = 2; else if (n.length >= 3 && gw.some((w) => w.startsWith(n))) s = 3; }
+    if (!heQ && translitOf && s !== 0 && s !== 1) {
+      const tls = [].concat(translitOf(e) || []).filter(Boolean);
+      for (const tl of tls) {
+        const b = matchBand({ pointed: e.pointed, lemma: e.lemma }, q, tl);
+        const ts = b === BAND.translit ? 2 : (b === BAND.prefix && !short ? 4 : -1);
+        if (ts >= 0 && (s < 0 || ts < s)) s = ts;
+      }
+    }
     if (s >= 0) out.push({ e, s, r: e.rank ?? 1e9 });
   }
   return out.sort((a, b) => a.s - b.s || a.r - b.r).slice(0, limit).map((x) => x.e);
+}
+/** `e` matched by transliteration only (labelled, as in the Dictionary). */
+export function isTranslitHit(e, q, translitOf) {
+  if (hasHebrew(q) || !translitOf) return false;
+  const n = norm(q), g = norm(e.gloss), gw = g.split(' ');
+  if (g === n || gw.includes(n) || (n.length >= 3 && gw.some((w) => w.startsWith(n)))) return false;
+  return [].concat(translitOf(e) || []).some((tl) => tl && matchBand({ pointed: e.pointed, lemma: e.lemma }, q, tl) != null);
 }
 
 const cache = {};

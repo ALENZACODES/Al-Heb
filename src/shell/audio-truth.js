@@ -1,7 +1,10 @@
 // @ts-check
-// The one plain statement about what sound the app has. Every count comes from data/audio/summary.json (read at run time),
+// The one plain statement about what sound the app has. Every count comes from data/audio/summary.json (copied into
+// src/lib/counts.generated.js at build time; fetched at run time only as a fallback),
 // never from text typed here. Two words are never used for the synthetic clips: "native" and "recorded". They are computer-made
 // and no native speaker has listened to them (docs/audio/INGEST-REPORT-83.md, -88.md; docs/review/STATUS.md).
+
+import { TOTALS } from '../lib/counts.generated.js';
 
 const n = (x) => Number(x).toLocaleString('en-US');
 
@@ -67,6 +70,8 @@ export async function loadAudioSummary(fetchFn = globalThis.fetch) {
 export function audioTruthNode(h, { tag = 'p', id = 'audio-truth', class: cls = '', summary, fetchFn, prefix = 'Sound: ', detail = true } = {}) {
   const text = (a) => `${prefix}${audioTruthLine(a)}${detail && audioTruthDetail(a) ? ' ' + audioTruthDetail(a) : ''}`;
   const el = h(tag, { id, class: cls, 'data-audio-truth': 'yes' }, text(summary || null));
-  if (!summary) loadAudioSummary(fetchFn).then((a) => { el.textContent = text(a); }).catch(() => { /* keep the no-number wording */ });
+  // One source: the build-time totals (src/lib/counts.generated.js, copied from summary.json); the run-time fetch is only a fallback.
+  if (!summary && hasAudioCounts(TOTALS?.audio?.summary)) el.textContent = text(TOTALS.audio.summary);
+  else if (!summary) loadAudioSummary(fetchFn).then((a) => { el.textContent = text(a); }).catch(() => { /* keep the no-number wording */ });
   return el;
 }

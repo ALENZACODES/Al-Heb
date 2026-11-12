@@ -20,17 +20,45 @@ function cached(key, make) {
 /** Test hook: forget loaded files. */
 export const _resetMemoryCardCache = () => cache.clear();
 
+// <network-retry> S-04: a failed first load is tried again (bounded; the only timers allowed here)
+export const RETRY_MS = [450];
+async function withRetry(attempt) {
+  let last;
+  for (let i = 0; i <= RETRY_MS.length; i++) {
+    if (i) await new Promise((r) => setTimeout(r, RETRY_MS[i - 1]));
+    try { return await attempt(); } catch (e) { last = e; }
+  }
+  throw last;
+}
+
 /** Load the chain file; resolves null (never rejects) when it is absent or malformed, so a view simply shows no card. */
 export function loadMemoryChain(fetchFn = globalThis.fetch?.bind(globalThis)) {
   if (!fetchFn) return Promise.resolve(null);
-  return cached('chain', async () => {
+  return cached('chain', () => withRetry(async () => {
     const r = await fetchFn(rootUrl(CHAIN_PATH));
     if (!r.ok) throw new Error('HTTP ' + r.status);
     const j = await r.json();
     if (!j || !Array.isArray(j.letters)) throw new Error('bad memory chain');
     return j;
-  }).catch(() => null);
+  })).catch(() => null);
 }
+
+/** S-04: after a fallback, keep trying and hand the chain to `onChain`. Returns cancel. */
+export function retryMemoryChainLater(onChain, { delays = [2500, 8000], fetchFn } = {}) {
+  let stopped = false, timer = 0, i = 0;
+  const next = () => {
+    if (stopped || i >= delays.length) return;
+    timer = setTimeout(async () => {
+      i++;
+      const chain = await loadMemoryChain(fetchFn);
+      if (stopped) return;
+      if (chain) onChain(chain); else next();
+    }, delays[i]);
+  };
+  next();
+  return () => { stopped = true; clearTimeout(timer); };
+}
+// </network-retry>
 
 /** @param {any} chain @param {string} id the letter record for id, or null (finals and variants have none unless the file lists them) */
 export function entryFor(chain, id) {
@@ -170,13 +198,13 @@ export function pictureDescription(entry, tradition, svgDesc = '', withSound = f
 /** Fetch + sanitize one picture (cached per path); resolves null on any failure, so the card falls back to the plain letter. */
 export function loadMorphSvg(path, fetchFn = globalThis.fetch?.bind(globalThis)) {
   if (!path || !fetchFn) return Promise.resolve(null);
-  return cached('svg:' + path, async () => {
+  return cached('svg:' + path, () => withRetry(async () => {
     const r = await fetchFn(rootUrl(path));
     if (!r.ok) throw new Error('HTTP ' + r.status);
     const clean = sanitizeSvg(await r.text());
     if (!clean) throw new Error('unsafe or empty svg');
     return clean;
-  }).catch(() => null);
+  })).catch(() => null);
 }
 
 function h(tag, attrs, ...kids) {

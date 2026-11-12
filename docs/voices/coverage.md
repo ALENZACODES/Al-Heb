@@ -158,6 +158,13 @@ Required 3368; have 3366; missing 2.
 | vocab-alias | 0 | 0 | 0 | 0 | 0 | 0/0 | human only |
 | vocab-extra | 43 | 0 | 8 | 35 | 0 | 0/0 | human only |
 
+## Hold sets
+
+- clip-holds: 40 of these clips. Withheld from playback: a person listens before any screen plays it (data/lab/clip-holds.json).
+- plays-israeli: 3780 rows (64 of them play an Israeli clip that is in clip-holds, so they are withheld with it). Fallback: a Sephardi or Ashkenazi row with no clip of its own plays the Israeli clip of the same voice (status "plays-israeli").
+- chirpHeld: 68 rows. A Chirp re-take was held; the current clip plays (manifest flag "chirpHeld": true).
+- The three sets do not contradict one another.
+
 ## Notes
 
 - Phrasebook, mnemonic anchor words and the vocabulary of `israel`-track lessons are `scope: israeli-only` (Modern conversational Hebrew): they have no sephardi/ashkenazi entries, and the player plays the israeli clip whatever the congregation setting. This is a product decision recorded in the manifest, not a linguistic finding; change it in tools/audio/build_manifest.mjs if the owner disagrees.

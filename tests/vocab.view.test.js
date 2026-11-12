@@ -117,7 +117,7 @@ test("browse: draft notice, attribution footer, RTL pointed Hebrew, transliterat
   // no audio engine: no dead Listen button; one honest line with the respelling instead
   assert.equal(btn(lis[0], /Listen/), undefined);
   assert.match(lis[0].text, /No audio yet - say it as written: et/);
-  assert.match(root.text, /Showing 40 of 4992 words/);
+  assert.match(root.text, /Showing 40 of all 4,992 words\./);
   // every control has a label
   for (const id of ["vc-tier", "vc-topic", "vc-search"]) assert.ok(root.find((n) => n.tag === "label" && n.attrs.for === id).length === 1);
   un();
@@ -186,7 +186,7 @@ test("search Hi leads with the shalom greeting, then the she transliteration, an
   search.value = "שָׁלוֹם"; await search.fire("input");
   assert.equal(items(root)[0].attrs["data-match"], "hebrew");
   search.value = ""; await search.fire("input");
-  assert.match(root.text, /Showing 40 of 4992 words/);
+  assert.match(root.text, /Showing 40 of all 4,992 words\./);
   search.value = "Hi"; await search.fire("input");
   const broad = byId(root, "vc-broad");
   broad.checked = true; await broad.fire("change");

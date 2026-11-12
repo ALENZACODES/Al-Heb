@@ -15,3 +15,17 @@ export function openStart(lessons, completedIds, wanted) {
   const id = first ? first.id : (w ? w.id : null);
   return { id, wanted: w ? w.id : null, locked: !!w && !!first && w.id !== first.id && !(done.has(w.id)) };
 }
+
+/**
+ * Lane 6 (points plan #17): a placement result the learner took as their start ("applied") sticks. The read-track lessons before
+ * the placed lesson are skipped over when the next lesson is picked (Home's Today card and the week plan). They are NOT completed:
+ * no lesson is marked done, no award or count changes, and every one of them stays open. Returns [] when nothing was applied.
+ * @param {any[]} lessons @param {any} placement the placement.v1 record
+ */
+export function placedOut(lessons, placement) {
+  const r = placement?.result;
+  if (!r || r.applied !== true || typeof r.start !== 'string') return [];
+  const read = (lessons || []).filter((l) => l.track === 'read');
+  const at = read.findIndex((l) => l.id === r.start);
+  return at > 0 ? read.slice(0, at).map((l) => l.id) : [];
+}

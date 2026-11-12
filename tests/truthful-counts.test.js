@@ -71,9 +71,12 @@ test('roots coverage names the word list and the explorer list, and the exclusio
   assert.equal(verbsAll.length, fam.coverage.verbs);
   const text = coverageText(fam.coverage, verbs.verbs);
   const withRoot = verbs.verbs.filter((v) => v.root).length;
-  assert.match(text, new RegExp(`${fam.coverage.verbsWithRoot} of ${fam.coverage.verbs} verbs in the word list`));
-  assert.match(text, new RegExp(`${withRoot} of ${verbs.verbs.length} verbs you can open here`));
-  assert.match(text, new RegExp(`${verbsAll.length - included.length} word-list verbs are not in this explorer`));
+  // lane 3 (12 Nov, #5): one denominator, the word-list verb total; every other verb figure is a part of it
+  const f = (n) => n.toLocaleString('en-US');
+  assert.match(text, new RegExp(`The word list has ${f(fam.coverage.verbs)} verbs\\. Every verb figure here is out of those ${f(fam.coverage.verbs)}`));
+  assert.match(text, new RegExp(`${f(fam.coverage.verbsWithRoot)} \\(\\d+%\\) have family letters listed`));
+  assert.match(text, new RegExp(`${f(verbs.verbs.length)} can be opened on this page \\(${f(withRoot)} of those`));
+  assert.match(text, new RegExp(`The other ${f(verbsAll.length - included.length)} of the ${f(fam.coverage.verbs)} are not on this page`));
   assert.ok(text.includes(EXPLORER_VERB_RULE));
   assert.ok(fam.note.includes(EXPLORER_VERB_RULE) && verbs.note.includes(EXPLORER_VERB_RULE));
   assert.doesNotMatch(text, /70\s*\+/);

@@ -94,6 +94,7 @@ function mountMap(root, ctx) {
         ? dueCount === 1 ? "1 review due" : `${dueCount} ${tr(ctx, "learn.dueReviews", "reviews due")}`
         : tr(ctx, "learn.noDue", "No reviews due"), " ",
         dueCount ? el("a", { class: "btn", href: "#/learn?review=1" }, "Review now") : null),
+      Object.values(st.cards || {}).some((c) => c && c.state === "relearning") ? el("p", { class: "muted alef-due-note" }, "Cards you missed come back 10 minutes later, so this number can go up again after a review.") : null,
       !streakVisible(ctx) ? null : el("p", { class: "alef-streak" }, st.streak.count ? `Streak: ${daysText(st.streak.count)}.${st.streak.activeToday ? " Today counts." : " Study for 5 minutes today to add a day."}` : (st.streak.best ? `Your best streak was ${daysText(st.streak.best)}. A new one starts the next time you study for 5 minutes.` : plain("streakNone"))),
       track === "read" ? beltStrip(done) : null,
       el("details", { class: "alef-more-practice" }, el("summary", {}, "More ways to practice"), el("p", { class: "row alef-extras" },

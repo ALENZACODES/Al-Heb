@@ -33,7 +33,7 @@ export const NOTICE = 'The Hebrew and its cantillation marks come from the Lenin
 export const LEGEND_NOTICE = 'This page names the marks and says whether each one pauses or joins. It does not describe or play any melody, because melodies are passed on by ear and differ between communities, and nobody qualified has reviewed this table. To learn to chant, work with a cantor or teacher from your own community.';
 export const CALM_NOTE = 'Calm mode is on, so the highlight does not move on its own and there is no timer. Use Next word and Previous word to step through the passage one word at a time.';
 export const PACE_NOTE = 'The highlight moves at the pace you pick. It is not synchronised with any audio or chanting.';
-export const TORAH_TEXT_LABEL = 'About this text. Hebrew: the Leningrad Codex in the Unicode/XML edition (UXLC, tanach.us), shown with vowel points; the cantillation marks can be shown or hidden. English: the JPS 1917 translation — public domain, and a translation from 1917: its English is older than a modern version\'s ("thee/thou" appear in prayer passages), and it is the newest complete English translation whose licence allows it to be included here. References follow the Hebrew chapter and verse numbering.';
+export const TORAH_TEXT_LABEL = 'About this text. Hebrew: the Leningrad Codex in the Unicode/XML edition (UXLC, tanach.us), shown with vowel points; the cantillation marks can be shown or hidden. English: the JPS 1917 translation — public domain, and a translation from 1917: its English is older than a modern version\'s ("thee/thou" appear in prayer passages), and it is the newest complete English translation whose licence allows it to be included here. References follow the Hebrew chapter and verse numbering. Verse count: this text has 5,846 numbered verses (Deuteronomy 956), the sum of its chapter-and-verse numbers. The Masoretic note at the end of Deuteronomy counts 955 verses there and 5,845 in the whole Torah; editions differ by a verse or so because a few verses are divided differently.';
 export const TORAH_AUDIO_LABEL = 'Listen to the Hebrew read aloud in Israeli pronunciation. It is read, not chanted.';
 export const TORAH_EN_AUDIO_LABEL = 'Listen to the English, chapter by chapter, from the JPS 1917 translation.';
 export const TORAH_READING_LABEL = 'Read in Israeli Hebrew.';
@@ -128,6 +128,7 @@ export function mount(root, ctx) {
   let chapterRequest = 0, chapterActive = false;
   let chapterMedia = null;
   let chapterRate = 1;
+  let verseSeq = null, verseBtn = null; // plan #6: the verse-by-verse chapter player (list, index, paused) and its button
   const chapterRows = new Map(), shownTranslit = new Set();
   const fingerGuide = createFingerGuide({ clock, calm: () => calmOn(ctx), announce: (text) => say(text), redraw: () => render() });
   const say = (t) => { status.textContent = t; };
@@ -217,6 +218,7 @@ export function mount(root, ctx) {
   // ---------- full-Torah chapter audio ----------
   function stopChapterAudio(cancelPlayback = true) {
     if (cancelPlayback) {
+      verseSeq = null; setVerseBtn();
       try { chapterMedia?.pause?.(); } catch { /* optional */ }
       chapterRequest++;
       if (chapterActive) { try { ctx?.audio?.stop?.(); } catch { /* optional */ } }
@@ -281,6 +283,46 @@ export function mount(root, ctx) {
       if (!alive || request !== chapterRequest) return;
       chapterActive = false; stopChapterAudio(false); say(`Audio error for ${chapterRef}: ${e?.message || e}`);
     }
+  }
+  // Plan #6: Hebrew chapter audio from the verse clips the reader already has (no chapter recording, no new files). The verses
+  // play one after another with the current verse highlighted; Pause keeps the place, Stop and leaving the chapter end it.
+  const chapterVerseClips = () => (chapterData ? chapterData.verses.filter((v) => manifestHas('line', torahVerseId(state.book, state.chapter, v.n))) : []);
+  function setVerseBtn() {
+    if (!verseBtn) return;
+    verseBtn.textContent = verseSeq && !verseSeq.paused ? 'Pause' : verseSeq?.paused ? 'Resume chapter' : 'Play chapter';
+    verseBtn.setAttribute('aria-pressed', verseSeq && !verseSeq.paused ? 'true' : 'false');
+  }
+  function toggleChapterVerses() {
+    if (verseSeq && !verseSeq.paused) {
+      const keep = verseSeq; stopChapterAudio(); verseSeq = { ...keep, paused: true }; setVerseBtn();
+      say(`Paused at ${chapterData.ref}:${keep.list[keep.index].n}.`);
+      return;
+    }
+    playChapterVerses(verseSeq?.paused ? verseSeq.index : 0);
+  }
+  async function playChapterVerses(start = 0) {
+    if (!chapterData || !ctx?.audio || typeof ctx.audio.play !== 'function') { say('No audio for this chapter: this build has no audio player.'); return; }
+    const list = chapterVerseClips();
+    if (!list.length) { say(`Hebrew audio is not ready for ${chapterData.ref} yet.`); return; }
+    stopTimer(); stopChapterAudio();
+    const request = ++chapterRequest, ref = chapterData.ref;
+    chapterActive = true;
+    verseSeq = { list, index: Math.min(Math.max(0, start), list.length - 1), paused: false };
+    setVerseBtn();
+    say(`Playing ${ref} in Hebrew, verse by verse.`);
+    for (let i = verseSeq.index; i < list.length; i++) {
+      if (!alive || request !== chapterRequest || !verseSeq) return;
+      verseSeq.index = i;
+      const v = list[i];
+      markPlaying(v.n);
+      let r;
+      try { r = await ctx.audio.play('line', torahVerseId(state.book, state.chapter, v.n), { text: spokenText(v.he), tradition: 'israeli', rate: chapterRate }); }
+      catch (e) { if (alive && request === chapterRequest) { stopChapterAudio(); say(`Audio error for ${ref}:${v.n}: ${e?.message || e}`); } return; }
+      if (!alive || request !== chapterRequest) return;
+      if (r?.stopped) { stopChapterAudio(); say('Chapter audio stopped.'); return; }
+    }
+    chapterActive = false; stopChapterAudio(false); verseSeq = null; setVerseBtn();
+    say(`${ref} finished: ${list.length} ${list.length === 1 ? 'verse' : 'verses'} in Hebrew (synthetic voice).`);
   }
   async function playTorahVerse(v) {
     stopChapterAudio();
@@ -556,7 +598,8 @@ export function mount(root, ctx) {
           : null,
         el('button', { type: 'button', class: 'trd-sounds', 'data-translit': String(v.n), 'aria-pressed': (state.showPronunciation !== shownTranslit.has(v.n)) ? 'true' : 'false',
           onclick: () => { if (shownTranslit.has(v.n)) shownTranslit.delete(v.n); else shownTranslit.add(v.n); render(); } }, 'Sounds'),
-        (state.showPronunciation !== shownTranslit.has(v.n)) ? el('p', { class: 'trd-translit', lang: 'en', dir: 'ltr', 'data-pronunciation-verse': String(v.n) }, translit(v.he), el('span', { class: 'trd-translit-note' }, ` ${TRANSLIT_LABEL}`)) : null,
+        // C-07 (12 Nov site check): the label is its own line, so no reader or screen reader runs it into the last word of the verse
+        ...((state.showPronunciation !== shownTranslit.has(v.n)) ? [el('p', { class: 'trd-translit', lang: 'en', dir: 'ltr', 'data-pronunciation-verse': String(v.n) }, translit(v.he)), el('p', { class: 'trd-translit-note muted' }, TRANSLIT_LABEL)] : []),
         ctx?.hasRoute?.('ask') !== false ? el('a', { class: 'trd-ask', href: `#/ask?q=${encodeURIComponent(`What does ${chapterData.ref}:${v.n} say?`)}`, 'aria-label': `Ask the Torah about ${chapterData.ref}:${v.n}` }, 'Ask') : null,
         study ? el('button', { type: 'button', class: 'trd-study-link', onclick: () => { setState({ passage: study, view: 'reader', screen: 'study' }); render(); } }, 'Study this passage in depth') : null),
       state.showEnglish ? el('div', { class: 'trd-cell-en' }, el('p', { class: 'trd-en' }, v.en)) : null);
@@ -564,13 +607,21 @@ export function mount(root, ctx) {
     return row;
   }
   function chapterAudioBar(inPortion) {
+    verseBtn = null;
     if (inPortion || !chapterData) return [];
     const ready = {};
     for (const lang of ['he', 'en']) ready[lang] = manifestHas(torahChapterKind(lang), torahChapterId(state.book, state.chapter, lang));
-    const anyVoiceReady = torahManifest.some((e) => e && ['m', 'f'].includes(e.voice) && e.status && e.status !== 'missing'
+    // plan #6: the verse clips of this chapter, played in sequence when there is no Hebrew chapter recording
+    const verseClips = chapterVerseClips(), missingVerses = chapterData.verses.length - verseClips.length;
+    const anyVoiceReady = verseClips.length > 0 || torahManifest.some((e) => e && ['m', 'f'].includes(e.voice) && e.status && e.status !== 'missing'
       && ['he', 'en'].some((language) => e.kind === torahChapterKind(language) && e.id === torahChapterId(state.book, state.chapter, language)));
     if (!anyVoiceReady) return [];
     const lang = state.audioLang;
+    const byVerse = lang === 'he' && !ready.he && verseClips.length > 0;
+    if (byVerse) {
+      verseBtn = el('button', { type: 'button', class: 'trd-play-verses', 'aria-pressed': 'false', 'aria-label': `Play ${chapterData.ref} in Hebrew, verse by verse (synthetic voice); press again to pause`, onclick: toggleChapterVerses }, 'Play chapter');
+      setVerseBtn();
+    }
     const recording = torahManifest.find((e) => e.voice === voiceOf() && e.kind === torahChapterKind(lang) && e.id === torahChapterId(state.book, state.chapter, lang) && e.path && e.status !== 'missing');
     if (chapterMedia?.getAttribute('src') !== recording?.path) {
       try { chapterMedia?.pause?.(); } catch { /* optional */ }
@@ -629,10 +680,12 @@ export function mount(root, ctx) {
     return [voiceBar, el('div', { class: 'trd-bar trd-audiobar', role: 'group', 'aria-label': 'Chapter audio' },
       el('button', { type: 'button', 'data-audiolang': 'he', 'aria-pressed': lang === 'he' ? 'true' : 'false', onclick: () => { setState({ audioLang: 'he' }); render(); } }, 'Hebrew'),
       el('button', { type: 'button', 'data-audiolang': 'en', 'aria-pressed': lang === 'en' ? 'true' : 'false', onclick: () => { setState({ audioLang: 'en' }); render(); } }, 'English'),
-      ready[lang]
+      byVerse ? verseBtn
+      : ready[lang]
         ? el('button', { type: 'button', class: 'trd-play-chapter', 'aria-label': `Play ${chapterData.ref} read aloud in ${lang === 'en' ? 'English' : 'Hebrew'} (synthetic voice)`, onclick: () => playChapter(lang) }, `Play ${chapterData.ref} read aloud`)
         : el('span', { class: 'trd-audio-wait' }, `${lang === 'en' ? 'English' : 'Hebrew'} audio in ${voiceName}’s voice is not ready for this chapter yet.`),
       el('button', { type: 'button', class: 'trd-stop-chapter', onclick: () => { stopChapterAudio(); try { ctx?.audio?.stop?.(); } catch { /* ignore */ } say('Chapter audio stopped.'); } }, 'Stop')),
+      byVerse && missingVerses > 0 ? el('p', { class: 'trd-audio-wait', 'data-missing-verses': String(missingVerses) }, `${missingVerses} of ${chapterData.verses.length} verses in ${voiceName}’s voice are not ready yet; Play chapter skips them.`) : null,
       chapterMedia,
       recording ? el('a', { href: recording.path, target: '_blank', rel: 'noopener' }, 'Open recording directly') : null,
       el('div', { class: 'trd-bar trd-recording-speeds', role: 'group', 'aria-label': 'Recording speed' }, el('span', {}, 'Recording speed:'), ...rateButtons)].filter(Boolean);
@@ -685,6 +738,7 @@ export function mount(root, ctx) {
       versesBox.append(verseRow(v));
     }
     fingerGuide.bind(versesBox);
+    if (verseSeq && !verseSeq.paused) markPlaying(verseSeq.list[verseSeq.index].n); // a redraw mid-chapter keeps the highlight
     out.push(versesBox);
     out.push(labelBlock());
     return out;

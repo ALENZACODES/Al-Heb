@@ -34,7 +34,8 @@ export function summaryNode(d) {
   const store = d.store ?? d.ctx?.store ?? globalThis.alef?.store ?? null;
   let flame = null;
   if (store && d.showStreak !== false && d.ctx?.settings?.get?.("showStreak") !== false && d.ctx?.settings?.get?.("calmMode") !== true) { try { flame = flameCard({ make: el, store, onLit: () => { try { const fx = d.sfx || d.ctx?.sfx; if (fx?.play) fx.play("streak"); } catch { /* sound is never the only cue */ } rimon?.play?.("stretch"); } }); } catch { flame = null; } }
-  const cheer = st.accuracy >= 0.9 ? "Perfect lesson! Rimon is dancing." : st.accuracy >= 0.7 ? "Great job! Keep it going." : "You finished! Every lesson counts.";
+  // M-03: "Perfect" only at 100%.
+  const cheer = st.accuracy >= 1 ? "Perfect lesson! Rimon is dancing." : st.accuracy >= 0.9 ? "Strong lesson! Rimon is dancing." : st.accuracy >= 0.7 ? "Great job! Keep it going." : "You finished! Every lesson counts.";
   const party = el("div", { class: "alef-celebrate", "aria-hidden": "true" },
     ...Array.from({ length: 18 }, (_, i) => el("i", { style: `--i:${i}` })),
     rimon ? rimon.el : el("img", { class: "alef-celebrate-rimon", alt: "", width: "120", height: "120", "data-rimon-still": st.accuracy >= 0.9 ? "lesson.complete.perfect" : st.accuracy >= 0.7 ? "lesson.complete.great" : "lesson.complete.done", src: new URL("../../assets/img/gen/MASCOT_rimon.800.webp", import.meta.url).href }));

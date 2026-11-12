@@ -12,8 +12,8 @@ function loadDictionaryAudio(ctx) {
 }
 import { el, heText, tr, storeGet, storeSet } from '../curriculum/dom.js';
 import { review, due, MS_DAY } from '../curriculum/srs.js';
-import { transliterate } from '../pronunciation/transliterate.js';
 import { loadTier, TIER_BANDS } from './loader.js';
+import { translitFor, TRAD } from './model.js';
 import { TIER_LABEL, POS_LABEL, VOCAB_CARDS_KEY, stripPoints, addCards, cardId, CARD_PREFIX, rankEntries, isExactBand, isShortQuery, keepBand, fold, BAND } from './model.js';
 import { aliasHits, aliasNote } from './aliases.js';
 import { isFunction } from './vocab.js';
@@ -22,7 +22,7 @@ import { DICTIONARY, fmt } from '../lib/counts.js';
 /** The browse total, the same number as the page title (src/lib/counts.js, counted from the served word packs). */
 export const ALL_WORDS_LABEL = `All ${fmt(DICTIONARY.words)} words`;
 /** What the title's number counts, said once on the page (M-01): entries, head-words, word forms, and what "Add" can add. */
-export const SCOPE_NOTE = `The list holds ${fmt(DICTIONARY.entries)} entries: ${fmt(DICTIONARY.words)} words, shown below, and ${fmt(DICTIONARY.forms)} word forms, shown when you tick "Show word forms". ${fmt(DICTIONARY.words - DICTIONARY.addable)} rare-sense words are left out of "Add all" (each card can still add its own word).`;
+export const SCOPE_NOTE = `The list holds ${fmt(DICTIONARY.entries)} entries: ${fmt(DICTIONARY.words)} words, shown below, and ${fmt(DICTIONARY.forms)} word forms, shown when you tick "Show word forms". ${fmt(DICTIONARY.words - DICTIONARY.addable)} rare-sense words are left out of "Add all" (each card can still add its own word).${DICTIONARY.hidden ? ` ${fmt(DICTIONARY.hidden)} more ${DICTIONARY.hidden === 1 ? 'entry is' : 'entries are'} hidden while ${DICTIONARY.hidden === 1 ? 'its meaning is' : 'their meanings are'} checked.` : ''}`;
 import { NO_AUDIO, DEVICE_LABEL } from '../shell/audio-access.js';
 import { isAudioFree } from '../shell/audiofree.js';
 import { uiEnglish } from '../shell/names.js';
@@ -36,6 +36,8 @@ export const SENSE_NOTE = 'A greeting search such as hi or hello can lead with a
 const PAGE = 40;          // cards rendered per page
 const ADD_LIMIT = 100;    // words added to reviews per click
 const SESSION = 20;       // cards per review session
+/** Store key for the review option "group words that share family letters" (lane 3, 12 Nov, #15d). */
+export const GROUP_KEY = 'vocab.reviewGroup';
 const RATINGS = [[1, 'Again', 'forgot it'], [2, 'Hard', 'got it with effort'], [3, 'Good', 'got it'], [4, 'Easy', 'no effort']];
 const hasTag = (e, t) => Array.isArray(e.tags) && e.tags.includes(t);
 /** Tag filter options: value -> label. 'function' is the closed-class group. */
@@ -60,7 +62,6 @@ export function applyRanked(entries, { tag = '', topic = '', showForms = false, 
 export function applyFilters(entries, sel) {
   return applyRanked(entries, sel).map((x) => x.entry);
 }
-const TRAD = { israeli: 'Israeli', sephardi: 'Sephardi', ashkenazi: 'Ashkenazi' };
 
 export const ATTRIBUTION = 'Word ranking derived from the OpenSubtitles-based FrequencyWords lists by Hermit Dave (CC BY-SA 4.0); lemmas, glosses and vocalisation derived from Wiktionary contributors (CC BY-SA 4.0), via Wiktextract/kaikki.org. Changes were made (filtering, re-ranking, topic assignment, gloss shortening). This vocabulary data is shared under CC BY-SA 4.0.';
 export const DRAFT_NOTICE = 'Draft: not proofread. This list was built by a program from Wiktionary and subtitle frequencies. No Hebrew teacher has checked it, so expect wrong glosses, odd word choices and some spelling or vowel-point differences.';
@@ -98,11 +99,8 @@ function injectStyle() {
 }
 const focusNode = (n) => { try { n?.focus?.({ preventScroll: false }); } catch { /* ignore */ } };
 
-/** Transliteration for an entry in the learner's tradition; '' when the word has no vowel points. */
-export function translitFor(e, tradition) {
-  if (!e.pointed) return '';
-  try { return transliterate(e.pointed, { scheme: 'siddur', tradition: TRAD[tradition] ? tradition : 'sephardi' }); } catch { return ''; }
-}
+/** translitFor lives in model.js so global Search (src/shell/search.js) matches the same spelling (M-02). */
+export { translitFor };
 
 /** @param {HTMLElement} root @param {any} ctx */
 export function mount(root, ctx) {
@@ -221,6 +219,22 @@ export function mount(root, ctx) {
     return el('p', { class: 'vc-meta' }, `Say it (${TRAD[tradition()]}): `, tl ? el('i', {}, tl) : '(not available: this word has no vowel points yet)');
   };
   const known = new Map(); // id -> entry, for every tier loaded so far (cross-references)
+  // ---- lane 3 (12 Nov, #15a/#15d): family letters and verb forms for a word (data/roots/dict-links.json, loaded on demand) ----
+  let links = ctx?.dictLinks || null, linksMod = null, linksPromise = null;
+  const ensureLinks = () => {
+    if (links && linksMod) return Promise.resolve(links);
+    if (!linksPromise) linksPromise = import('../roots/links.js').then(async (m) => { linksMod = m; if (!links) links = await m.loadLinks(); else if (!(links instanceof Map)) links = m.indexLinks(links); return links; }).catch(() => { linksPromise = null; return null; });
+    return linksPromise;
+  };
+  /** "Family letters X: n words share them. Open the family" and "Verb forms" links, or nothing when the word has neither. */
+  const familyLine = (e) => {
+    const l = linksMod && links instanceof Map ? links.get(e.id) : null;
+    if (!l) return null;
+    return el('p', { class: 'vc-meta vc-family', 'data-letters': l.letters || '' }, ...(l.letters ? [...glossNodes(linksMod.linkText(l)), ' '] : []),
+      linksMod.hasFamily(l) ? el('a', { href: linksMod.familyHref(l.letters), 'aria-label': `Open the word family for the letters ${l.letters}` }, 'Open the family') : null,
+      linksMod.hasFamily(l) && l.verb ? ' · ' : null,
+      l.verb ? el('a', { href: linksMod.verbHref(l.verb), 'aria-label': `Verb forms for ${e.gloss}` }, 'Verb forms') : null);
+  };
   /** Wrap runs of Hebrew letters (with points) inside an English string in lang=he spans. */
   const HE_RUN = /[\u0590-\u05FF\uFB1D-\uFB4F]+(?:[\s\u05BE\u05F3\u05F4'\"-]+[\u0590-\u05FF\uFB1D-\uFB4F]+)*/g;
   const glossNodes = (text) => {
@@ -276,7 +290,7 @@ export function mount(root, ctx) {
   const showWord = (w) => { sel.tier = 'all'; sel.topic = ''; sel.tag = ''; sel.showForms = true; sel.query = stripPoints(w.lemma); setMode('browse'); };
 
   // ---- browse
-  const sel = { tier: 'all', topic: '', tag: '', showForms: false, broad: false, query: '' };
+  const sel = { tier: 'all', topic: '', tag: '', showForms: false, broad: false, query: String(ctx?.query?.q || '') }; // M-02: a Search result opens the Dictionary on the same query
   let gen = 0;
   async function entriesFor(tierSel) {
     const tiers = tierSel === 'all' ? TIER_BANDS : [Number(tierSel)];
@@ -336,7 +350,7 @@ export function mount(root, ctx) {
         heWord(e, 'vc-he'), el('p', { tabindex: '-1', class: 'vc-gloss' }, ...glossNodes(e.gloss)),
         alias ? el('p', { class: 'vc-alias' }, aliasNote(alias)) : null,
         band === BAND.translit ? el('p', { class: 'vc-meta' }, 'Transliteration match. This is not an English gloss.') : null,
-        metaLine(e), ...noteLines(e), translitLine(e),
+        metaLine(e), ...noteLines(e), familyLine(e), translitLine(e),
         el('div', { class: 'row' }, listenButton(e), add));
     };
     const updateAdd = () => {
@@ -356,7 +370,7 @@ export function mount(root, ctx) {
     };
     const statusText = () => {
       const q = sel.query.trim();
-      if (!q) return `Showing ${shown} of ${ranked.length} word${ranked.length === 1 ? '' : 's'}.`;
+      if (!q) return `Showing ${shown} of ${ranked.length === DICTIONARY.words ? 'all ' : ''}${fmt(ranked.length)} word${ranked.length === 1 ? '' : 's'}${ranked.length === DICTIONARY.words ? '' : ' in this view'}.`;
       if (!ranked.length && !hiddenNoise) return 'No words match. Try fewer letters, or another tier or topic.';
       const aliasN = ranked.filter((x) => x.band === BAND.alias).length;
       const glossN = ranked.filter((x) => x.band != null && x.band >= BAND.gloss && x.band <= BAND.sense).length;
@@ -398,7 +412,7 @@ export function mount(root, ctx) {
     };
     const reload = async () => {
       const id = ++gen; status.textContent = 'Loading words…'; list.replaceChildren(); moreRow.replaceChildren(); addRow.replaceChildren();
-      try { all = await entriesFor(sel.tier); } catch (err) {
+      try { [all] = await Promise.all([entriesFor(sel.tier), ensureLinks()]); } catch (err) {
         if (!alive || id !== gen) return;
         status.textContent = ''; list.replaceChildren(); addRow.replaceChildren(el('p', { role: 'alert' }, 'Could not load the word list. Check your connection, then try again.'), el('button', { type: 'button', class: 'btn', onclick: reload }, 'Try again')); return;
       }
@@ -427,13 +441,19 @@ export function mount(root, ctx) {
         el('button', { type: 'button', class: 'btn', onclick: () => setMode('browse') }, 'Browse words')));
       return;
     }
-    const queueCards = dueNow().slice(0, SESSION);
+    // lane 3 (12 Nov, #15d): the learner can review due words grouped by family letters (same cards, same count, new order)
+    const grouped = !!(await storeGet(ctx, GROUP_KEY, false));
+    let groupOf = new Map(), dueCards = dueNow();
+    const haveLinks = await ensureLinks(); // also gives each answer its family letters line
+    if (grouped && haveLinks) { const g = linksMod.groupByFamily(dueCards, links, (c) => String(c.id).slice(CARD_PREFIX.length)); dueCards = g.cards; }
+    const queueCards = dueCards.slice(0, SESSION);
+    if (grouped && linksMod) groupOf = linksMod.groupByFamily(queueCards, links, (c) => String(c.id).slice(CARD_PREFIX.length)).groupOf;
     const byTier = {};
     try { for (const t of new Set(queueCards.map((c) => c.tier))) for (const e of await load(t)) { byTier[e.id] = e; known.set(e.id, e); } }
     catch (err) { if (!alive || my !== gen) return; body.replaceChildren(el('p', { role: 'alert' }, 'Could not load the word list. Check your connection, then try again.'), el('button', { type: 'button', class: 'btn', onclick: renderReview }, 'Try again')); return; }
     if (!alive || my !== gen) return;
     const queue = queueCards.map((c) => c.id).filter((id) => byTier[id.slice(CARD_PREFIX.length)]);
-    rv = { queue, pos: 0, revealed: false, stats: { 1: 0, 2: 0, 3: 0, 4: 0 }, byTier, requeued: new Set() };
+    rv = { queue, pos: 0, revealed: false, stats: { 1: 0, 2: 0, 3: 0, 4: 0 }, byTier, requeued: new Set(), grouped, groupOf };
     showCard();
   }
   function summary() {
@@ -450,16 +470,24 @@ export function mount(root, ctx) {
     if (rv.pos >= rv.queue.length) { summary(); return; }
     const id = rv.queue[rv.pos], e = rv.byTier[id.slice(CARD_PREFIX.length)];
     rv.revealed = false; rv.current = e;
+    const grp = rv.groupOf?.get(id);
     const prompt = el('div', { class: 'card vc-card', tabindex: '-1', id: 'vc-q', role: 'group', 'aria-label': `Word ${rv.pos + 1} of ${rv.queue.length}` },
-      el('p', { class: 'vc-meta' }, `Word ${rv.pos + 1} of ${rv.queue.length}. Say what it means, then check.`), heWord(e, 'vc-big'));
+      el('p', { class: 'vc-meta' }, `Word ${rv.pos + 1} of ${rv.queue.length}. Say what it means, then check.`),
+      grp ? el('p', { class: 'vc-meta vc-group-line', 'data-letters': grp.letters }, 'Family letters ', el('span', { lang: 'he', dir: 'rtl' }, grp.letters), `: word ${grp.i} of ${grp.n} due today that share them.`) : null,
+      heWord(e, 'vc-big'));
     const reveal = el('button', { type: 'button', class: 'btn', id: 'vc-show', onclick: () => showAnswer(prompt, reveal) }, 'Show answer');
-    body.replaceChildren(prompt, el('div', { class: 'row' }, reveal));
+    const groupBox = el('input', { id: 'vc-group', type: 'checkbox' });
+    if (rv.grouped) groupBox.setAttribute('checked', '');
+    groupBox.checked = !!rv.grouped;
+    groupBox.addEventListener('change', async () => { await storeSet(ctx, GROUP_KEY, !!groupBox.checked); renderReview(); });
+    body.replaceChildren(prompt, el('div', { class: 'row' }, reveal),
+      rv.pos === 0 ? el('div', { class: 'vc-check' }, el('label', { for: 'vc-group' }, groupBox, ' Group words that share family letters (the same due words, in a new order)')) : null);
     focusNode(prompt);
   }
   function showAnswer(prompt, reveal) {
     const e = rv.current; rv.revealed = true;
     reveal.remove?.();
-    const answer = el('div', { class: 'vc-answer', 'aria-live': 'polite' }, ctx.img?.(el, { kind: 'word', id: e.id, class: 'vc-pic', width: 400 }), el('p', { class: 'vc-gloss', tabindex: '-1', id: 'vc-a' }, ...glossNodes(e.gloss)), metaLine(e), ...noteLines(e), translitLine(e), el('div', { class: 'row' }, listenButton(e)));
+    const answer = el('div', { class: 'vc-answer', 'aria-live': 'polite' }, ctx.img?.(el, { kind: 'word', id: e.id, class: 'vc-pic', width: 400 }), el('p', { class: 'vc-gloss', tabindex: '-1', id: 'vc-a' }, ...glossNodes(e.gloss)), metaLine(e), ...noteLines(e), familyLine(e), translitLine(e), el('div', { class: 'row' }, listenButton(e)));
     const rate = el('div', { class: 'vc-rate', role: 'group', 'aria-label': 'How well did you remember it?' },
       ...RATINGS.map(([r, name, hint]) => el('button', { type: 'button', class: 'btn' + (r === 3 ? '' : ' secondary'), 'data-rating': String(r), 'aria-label': `${name} (${r}): ${hint}`, onclick: () => rate_(r) }, `${name} (${r})`)));
     prompt.append(answer); body.append(rate);

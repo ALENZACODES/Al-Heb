@@ -49,9 +49,11 @@ export function mount(root, ctx) {
   const offUpd = upd?.onChange?.((s) => { updState = s; if (alive && !job) render(); });
   if (upd?.state) updState = upd.state();
 
+  let loaded = false; // S-03: the list has been tried
   async function refresh() {
     try { const l = await O.loadPrecacheList(env.fetch); files = l.files; onDemand = l.onDemand || []; version = l.version; loadError = ""; }
     catch (e) { loadError = `The list of offline files did not load. Open Aleph once while online, then try again.`; files = []; onDemand = []; }
+    loaded = true;
     report = await O.cacheReport(files, { caches: env.caches });
     extraReport = await O.cacheReport(extraUrls(), { caches: env.caches, measure: false });
     health = await O.storageHealth({ navigator: nav, localStorage: env.localStorage, hasRoute: ctx?.hasRoute });
@@ -105,7 +107,15 @@ export function mount(root, ctx) {
     if (job) {
       dl.push(el("progress", { id: "of-progress", value: String(job.done), max: String(job.total || 1), "aria-label": "Download progress" }), el("p", { id: "of-progress-text" }, `${job.done} of ${job.total || "?"} files`),
         el("button", { type: "button", class: "btn secondary", id: "of-cancel", onclick: () => { ac?.abort(); say("Cancelling..."); } }, "Cancel"));
-    } else dl.push(el("button", { type: "button", class: "btn", id: "of-download", disabled: files.length ? null : true, onclick: download }, "Download everything for offline"));
+    } else {
+      // S-03: a disabled button says why and what turns it on.
+      const why = files.length ? "" : loaded
+        ? "Not available yet: the list of offline files did not load, so there is nothing to download. Connect to the internet and press Try again."
+        : "Checking which files this device already has. The button turns on when the list arrives.";
+      dl.push(el("button", { type: "button", class: "btn", id: "of-download", disabled: files.length ? null : true, "aria-describedby": why ? "of-download-why" : null, onclick: download }, "Download everything for offline"));
+      if (why) dl.push(el("p", { class: "muted", id: "of-download-why" }, why));
+      if (why && loaded) dl.push(el("button", { type: "button", class: "btn secondary", id: "of-retry", onclick: async () => { say("Trying again..."); loaded = false; render(); await refresh(); if (alive) { render(); say(files.length ? "The list arrived. You can download now." : "The list still did not load."); } } }, "Try again"));
+    }
     if (!job && last?.failed?.length) {
       dl.push(el("div", { class: "of-warn", id: "of-failures", role: "alert" }, el("p", {}, `${last.failed.length} file${last.failed.length === 1 ? "" : "s"} could not be saved:`),
         el("ul", {}, last.failed.slice(0, 20).map((f) => el("li", {}, `${f.url}: ${f.reason}`))), last.failed.length > 20 ? el("p", { class: "muted" }, `and ${last.failed.length - 20} more.`) : null));
@@ -137,6 +147,9 @@ export function mount(root, ctx) {
     body.replaceChildren(...kids.filter(Boolean));
   }
 
+  // lane 4: offline packs (src/sync/packs.card.js, on demand)
+  const packsHost = el("div", { id: "of-packs" }); wrap.append(packsHost); let offPacks = null;
+  import("../sync/packs.card.js").then((m) => { if (alive) offPacks = m.mountPacks(packsHost, ctx, O, env); }).catch(() => { packsHost.textContent = "Offline packs need a connection once."; });
   (async () => { render(); await refresh(); if (alive) { render(); focusHeadingIfIdle(h1); } })();
-  return () => { alive = false; ac?.abort(); offUpd?.(); };
+  return () => { alive = false; ac?.abort(); offUpd?.(); offPacks?.(); };
 }

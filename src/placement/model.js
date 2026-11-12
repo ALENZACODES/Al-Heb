@@ -1,7 +1,12 @@
+import { findName } from '../shell/names.js';
 // DRAFT, UNREVIEWED placement check model. Pure functions, no DOM. The cutoffs (data/placement/config.json) are untested guesses.
 // Items are built only from existing repo data; nothing here writes Hebrew.
 export const STORE_KEY = 'placement.v1';
-export const CATEGORIES = ['letters', 'vowels', 'syllables', 'words', 'phrases'];
+export const CATEGORIES = ['letters', 'vowels', 'syllables', 'words', 'phrases', 'unpointed'];
+// Lane 6 (points plan #17): unpointed reading. The marks are removed in code from the vocabulary file's pointed word (same rule as
+// src/nikkudfade/model.js stripPoints); only words whose unpointed spelling no other word in the file shares are used.
+const MARKS = /[\u0591-\u05BD\u05BF\u05C1\u05C2\u05C4\u05C5\u05C7]/g;
+export const unpoint = (s) => String(s ?? '').replace(MARKS, '');
 
 export const seeded = (seed) => () => { seed = (seed * 1664525 + 1013904223) % 4294967296; return seed / 4294967296; };
 const shuffle = (a, rng) => { const r = a.slice(); for (let i = r.length - 1; i > 0; i--) { const j = Math.floor(rng() * (i + 1)); [r[i], r[j]] = [r[j], r[i]]; } return r; };
@@ -80,11 +85,28 @@ export function buildItems(data, config, rng = seeded(config.seed)) {
     items.push({ id: `phrase:${c.e.id}`, cat: 'phrases', lesson: c.lesson, rank: c.rank, he: c.e.he, prompt: 'Which English line is this prayer phrase?', audio: { kind: 'prayer', id: c.e.id },
       options: options(c.e, P.map((p) => p.e), (e) => e.english, n, rng) });
   }
+  // Lane 6: unpointed words come last (ranked at the lesson that teaches reading without points), so a miss here never pulls the
+  // start below that lesson. Options are English meanings, as for the common-words items.
+  if (config.counts.unpointed && config.lessonCaps.unpointed && order.has(config.lessonCaps.unpointed)) {
+    const spell = new Map();
+    for (const w of data.words) if (w.he) { const u = unpoint(w.he); spell.set(u, (spell.get(u) || 0) + 1); }
+    const capU = order.get(config.lessonCaps.unpointed);
+    const taken = new Set(items.map((i) => i.id.split(':')[1]));
+    const U = W.filter((w) => !taken.has(w.id) && order.get(w.unlockLesson) < capU && w.level === 'A1' && w.en.length <= config.wordMaxEnglishChars && !/^[A-Z(]/.test(w.en)
+      && spell.get(unpoint(w.he)) === 1 && unpoint(w.he) !== w.he && !findName(w.he).length).map((w) => ({ w, rank: wordRank(w) })).sort(byRank);
+    for (const c of spread(U, config.counts.unpointed)) {
+      items.push({ id: `unpointed:${c.w.id}`, cat: 'unpointed', lesson: config.lessonCaps.unpointed, rank: capU, he: unpoint(c.w.he), pointed: c.w.he, prompt: 'This word has no vowel marks. What does it mean?', audio: null,
+        options: options(c.w, U.map((s) => s.w), (w) => w.en, n, rng) });
+    }
+  }
   return items.sort((a, b) => a.rank - b.rank || a.id.localeCompare(b.id));
 }
 
+/** Lane 6: the check stops after config.maxMinutes (about 10) even if questions remain. */
+export const timeUp = (startedAt, now, config) => Number.isFinite(config?.maxMinutes) && Number.isFinite(startedAt) && now - startedAt >= config.maxMinutes * 60000;
+
 // openStart lives in start.js so Home can use it without loading this whole model (see src/home/today.js).
-export { openStart } from './start.js';
+export { openStart, placedOut } from './start.js';
 
 /** Adaptive stop rule (guess): stop when the window has too many misses, or when every item is answered. */
 export function shouldStop(answers, total, stop) {

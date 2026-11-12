@@ -1,0 +1,32 @@
+{
+ "schema": "alef-shabbat-companion/1",
+ "note": "Shabbat Companion data, written for Aleph. It adds nothing to the liturgy: every Hebrew line is read from data/corpus/registry.json by id, and the service order itself is data/service/orders.json (friday-night, shabbat-morning). No prayerbook text, layout, page numbers or arrangement wording is used (for example Mishkan T'filah). The order, the choice of congregational responses and the home-ritual steps are NOT reviewed by a rabbi, cantor or Hebrew educator.",
+ "review": { "status": "not-reviewed", "label": "Order not yet reviewed by a rabbi" },
+ "maps": ["friday-night", "shabbat-morning"],
+ "jump": ["shema-1", "torah-barchu", "mi-chamocha-1", "kaddish-1"],
+ "drills": [
+  { "id": "barchu", "title": "Barchu: The Response", "kind": "response",
+    "how": "The leader calls the congregation to bless. Everyone answers with the second line.",
+    "cue": { "entry": "torah-barchu", "line": 1 }, "response": [{ "entry": "torah-barchu", "line": 2 }] },
+  { "id": "shema", "title": "The Sh'ma", "kind": "together",
+    "how": "In many congregations the leader begins and everyone joins in. Hear the first word, then come in with the whole line.",
+    "cue": { "entry": "shema-1", "word": 1 }, "response": [{ "entry": "shema-1", "line": 1 }] },
+  { "id": "baruch-shem", "title": "After the Sh'ma: The Quiet Line", "kind": "response",
+    "how": "After the Sh'ma line, the next line is usually said quietly.",
+    "cue": { "entry": "shema-1", "line": 1 }, "response": [{ "entry": "shema-2", "line": 1 }] },
+  { "id": "mi-chamocha", "title": "Mi Chamocha", "kind": "together",
+    "how": "Mi Chamocha is usually sung together. Hear the first word, then come in with the whole line.",
+    "cue": { "entry": "mi-chamocha-1", "word": 1 }, "response": [{ "entry": "mi-chamocha-1", "line": 1 }] },
+  { "id": "kaddish-yehei", "title": "Kaddish: The Big Response", "kind": "response",
+    "how": "The Kaddish line ends with an invitation to say Amen. Answer Amen, then the response line.",
+    "cue": { "entry": "kaddish-1", "line": 2 }, "response": [{ "entry": "kaddish-1", "word": 5 }, { "entry": "kaddish-1", "line": 3 }] },
+  { "id": "kaddish-amen", "title": "Kaddish: Amen", "kind": "response",
+    "how": "Several Kaddish lines end with an invitation to say Amen. Answer when the line ends.",
+    "cue": { "entry": "kaddish-1", "line": 6 }, "response": [{ "entry": "kaddish-1", "word": 5 }] }
+ ],
+ "home": [
+  { "id": "candles", "title": "Light the Candles", "when": "Before sunset on Friday", "entries": ["candle-shabbat"] },
+  { "id": "kiddush", "title": "Kiddush over Wine or Grape Juice", "when": "At the start of the Friday meal", "entries": ["kiddush-gen-2-1-3", "kiddush-wine-1", "kiddush-shabbat-eve"] },
+  { "id": "motzi", "title": "Blessing over the Bread", "when": "After Kiddush, before the meal", "entries": ["hamotzi"] }
+ ]
+}

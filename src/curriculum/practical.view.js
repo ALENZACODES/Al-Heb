@@ -247,7 +247,9 @@ function listenList(ctx, unit, ids, items, clipMap) {
       return el("li", { "data-listen": listen.id },
         it ? heText(it.he, "alef-he") : el("span", {}, id),
         " ", el("span", { class: "muted" }, it?.en || ""),
-        tag ? el("span", { class: "alef-tag", "data-form": tag }, ` ${tag}`) : null,
+        // S-01 (lane 1): the register or form tag is its own bracketed word after a separate space, so it can never read
+        // as part of the gloss ("hi" + "slang" was read as "hislang").
+        tag ? " " : null, tag ? el("span", { class: "alef-tag", "data-form": tag }, `(${tag})`) : null,
         " ", playBtn(ctx, listen.kind, listen.id, it?.en || id));
     }));
 }

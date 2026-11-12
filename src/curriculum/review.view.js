@@ -3,6 +3,7 @@
  * Deep links: #/learn?review=1 (all due) and #/learn?lesson=<id>&review=1 (that lesson's cards; created only if the lesson is completed).
  * Rating buttons 1-4 (keyboard 1-4 once the answer is shown) call srs.review via actions.rateCard.
  */
+import { reviewsDue } from "../lib/counts.js";
 import { streakVisible } from "../shell/comfort.js";
 import { hookLine, hookNode as hookParagraph } from "../letters/hookline.js";
 import { lessons, byId } from "./lessons.js";
@@ -113,7 +114,7 @@ export function mountReview(root, ctx, { lessonId } = {}) {
   wrap.append(h1);
   const congregation = ctx.settings?.get?.("congregation") || "sephardi";
   const stats = { 1: 0, 2: 0, 3: 0, 4: 0 };
-  let queue = [], pos = 0, revealed = false, content, wordVocab = {}, onKey = null, notDone = false, memKnown = new Set(), memReps = {};
+  let dueAtStart = 0, queue = [], pos = 0, revealed = false, content, wordVocab = {}, onKey = null, notDone = false, memKnown = new Set(), memReps = {};
   const describe = (id) => describeCard(id, content, congregation, wordVocab, { seed: hashSeed(id + ":" + (memReps[id] || 0)), known: memKnown });
 
   const body = el("div", { class: "alef-review-body" });
@@ -149,6 +150,7 @@ export function mountReview(root, ctx, { lessonId } = {}) {
     memKnown = taughtFromCompleted(st.completed, lessons); memReps = Object.fromEntries(Object.values(st.cards).map((c) => [c.id, c.reps || 0]));
     queue = buildQueue(st.cards, Date.now(), { lessonId, lessons, confusables: content.confusables, limit: 20 }).map((c) => c.id);
     queue = queue.filter((id) => describe(id));
+    dueAtStart = lessonId ? 0 : reviewsDue(st.cards, Date.now()); // the number Home and Learn show (src/lib/counts.js)
     render();
   }
 
@@ -166,7 +168,7 @@ export function mountReview(root, ctx, { lessonId } = {}) {
     } });
     onKey = (e) => block.onKey(e);
     body.replaceChildren(
-      el("p", { class: "muted", role: "status" }, `Card ${pos + 1} of ${queue.length}${lessonId ? ` · ${byId[lessonId]?.title || lessonId}` : ""}`),
+      el("p", { class: "muted", role: "status" }, `Card ${pos + 1} of ${queue.length}${lessonId ? ` · ${byId[lessonId]?.title || lessonId}` : dueAtStart > queue.length ? ` · ${dueAtStart} due now; a session takes the first ${queue.length}` : ""}`),
       el("div", { class: "card alef-card" }, el("p", { class: "alef-mem-prompt" }, q.prompt), ...cueNodes(q), block.node, fb, acts, note),
       el("p", { class: "muted alef-keys" }, "Keyboard: press 1 to 4 to choose an answer."));
   }
@@ -235,7 +237,7 @@ export function mountReview(root, ctx, { lessonId } = {}) {
     if (d.kind === "mem" && d.q.type !== "recall") return renderMemChoice(d, note, rate);
     onKey = (e) => { if (revealed && shortcutsOn(ctx) && /^[1-4]$/.test(e.key) && !e.ctrlKey && !e.metaKey && !e.altKey && !/^(INPUT|TEXTAREA|SELECT)$/.test(e.target?.tagName || "")) { e.preventDefault(); rate(Number(e.key)); } };
     body.replaceChildren(
-      el("p", { class: "muted", role: "status" }, `Card ${pos + 1} of ${queue.length}${lessonId ? ` · ${byId[lessonId]?.title || lessonId}` : ""}`),
+      el("p", { class: "muted", role: "status" }, `Card ${pos + 1} of ${queue.length}${lessonId ? ` · ${byId[lessonId]?.title || lessonId}` : dueAtStart > queue.length ? ` · ${dueAtStart} due now; a session takes the first ${queue.length}` : ""}`),
       el("div", { class: "card alef-card" },
         el("p", { class: "muted" }, isAudioFree(ctx) ? silentPrompt(d.prompt) : d.prompt),
         heLabeled(d.he, d.frontLabel, "alef-he " + (d.big ? "alef-huge" : "alef-word-big")),

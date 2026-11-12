@@ -61,7 +61,7 @@ function setup(A) {
     if (Math.abs(r0 - r) + Math.abs(c0 - c) !== 1) { draw(); return; }
     [board[r0][c0], board[r][c]] = [board[r][c], board[r0][c0]];
     const { hit } = findMatches();
-    if (!hit.size) { [board[r0][c0], board[r][c]] = [board[r][c], board[r0][c0]]; A.sfx('error_soft'); A.announce('No line there. Swapped back.'); draw(); return; }
+    if (!hit.size) { [board[r0][c0], board[r][c]] = [board[r][c], board[r0][c0]]; A.sfx('error_soft'); A.slip(); A.announce('No line there. Swapped back.'); draw(); return; }
     moves--; const pts = resolve(); A.addScore(pts); A.sfx(pts >= 60 ? 'streak' : 'pop'); draw();
     if (A.score >= cfg.goal) { A.finish({ won: true }); return; }
     if (moves <= 0) { A.announce('Out of moves.'); A.finish({ reason: 'done' }); }

@@ -235,8 +235,9 @@ export function rootFamilies(words) {
 function rootsTopic(ctx) {
   const fams = rootFamilies(ctx.words).slice(0, 12);
   const items = fams.map((f) => ({ id: `root:${f.root}`, he: f.words.slice(0, 4).map((w) => w.he).join('  '), label: LABELS.rule, root: f.root, wordIds: f.words.slice(0, 4).map((w) => w.id), meaning: f.root,
-    note: `root ${f.root}: ${f.words.slice(0, 4).map((w) => `${w.he} (${gloss(w)})`).join(', ')}`, family: f.words }));
-  return { items, rule: 'shared root field in the vocabulary list' };
+    note: `family letters ${f.root}: ${f.words.slice(0, 4).map((w) => `${w.he} (${gloss(w)})`).join(', ')}`, family: f.words }));
+  // lane 3 (12 Nov, #5 sweep): no root is confirmed by a Hebrew reader (data/roots/verified.json), so this note says letters, as the Roots page does
+  return { items, rule: 'shared family letters in the vocabulary list' };
 }
 const OPEN_N = 3;
 export function openingGroups(registry) {
@@ -311,7 +312,7 @@ export function buildQuestions(topic, rng = Math.random, n = QUESTIONS_PER_TOPIC
       const [given, same] = shuffle(f.family.slice(0, 4), rng);
       const wrong = take(shuffle(pool.filter((p) => p.f !== f && !f.family.some((x) => skeleton(x.he) === skeleton(p.w.he))), rng).map((p) => p.w), 3).map((w) => w.he);
       if (!given || !same || wrong.length < 3) continue;
-      qs.push(mk(`Which word shares the root ${f.root} with ${given.he} ("${gloss(given)}")?`, same.he, wrong, `${given.he} and ${same.he} are both recorded under the root ${f.root}.`, rng));
+      qs.push(mk(`Which word is listed under the same family letters ${f.root} as ${given.he} ("${gloss(given)}")?`, same.he, wrong, `${given.he} and ${same.he} are both listed under the letters ${f.root} in the word list. A Hebrew reader has not yet confirmed them as one root.`, rng));
     }
     return qs;
   }

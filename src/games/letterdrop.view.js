@@ -57,7 +57,7 @@ function setup(A) {
         if (f.lane === basket) {
           if (f.letter.id === target.id) { catches++; A.addScore(10); A.sfx('catch'); A.announce(`Caught ${target.name}! ${cfg.goal - catches} to go.`); if (catches >= cfg.goal) { A.finish({ won: true }); return; } newTarget(); }
           else { A.sfx('miss'); A.announce(`That was ${f.letter.name}, not ${target.name}.`); if (A.miss()) return; }
-        } else if (f.letter.id === target.id) { A.addScore(-2); A.announce(`${target.name} fell past.`); }
+        } else if (f.letter.id === target.id) { A.addScore(-2); A.slip(); A.announce(`${target.name} fell past.`); }
       }
     }
   };

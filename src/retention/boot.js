@@ -8,7 +8,7 @@ import { load, save, RETENTION_KEY } from './state.js';
 import { dayKey, deviceZone, localAt, addDaysISO } from './clock.js';
 import { applyRollover, completeLessonDay, afterDayCompleted, streakStatus, weekDots, freezeNoteSeen, freezeNoteShown as markFreezeNote } from './streak.js';
 import { award, lessonPayout, todayXp, XP, lessonAward, unlockedBy } from './xp.js';
-import { heartsOn, loseHeart, practiceCard, refillByTime, startLesson, canStartLesson, isLessonHash, heartCount } from './hearts.js';
+import { heartsOn, loseHeart, practiceCard, refillByTime, startLesson, canStartLesson, isLessonHash, heartCount, HEARTS } from './hearts.js';
 import { settle, leagueOn, leagueView } from './leagues.js';
 import { logSession, createScheduler, readShown, recordSent, registerPeriodicSync, daysAway } from './notify.js';
 import { restNow } from './quiet.js';
@@ -121,9 +121,11 @@ export function retention(ctx, g = globalThis) {
     const out = loseHeart(rec, `${hash}|${qid}`, now());
     if (!out.lost) return;
     update(() => out.rec);
-    if (out.left === 0) say('Out of hearts for now. You can still finish this lesson.');
-    else if (out.left === 1) { say('One heart left. Take your time.'); later(() => showRimon('heart_last'), 900); }
-    else { say("Oops, one heart. You've got this."); later(() => showRimon('heart_lost'), 900); }
+    // S-05 (lane 1): the toast names the count the hearts display now shows ("Oops, one heart" read as "one heart left" beside 4 of 5).
+    const left = `${out.left} of ${HEARTS.max} left`;
+    if (out.left === 0) say(`That was your last heart (0 of ${HEARTS.max}). You can still finish this lesson.`);
+    else if (out.left === 1) { say(`That cost a heart: ${left}. Take your time.`); later(() => showRimon('heart_last'), 900); }
+    else { say(`Oops, that cost a heart: ${left}. You've got this.`); later(() => showRimon('heart_lost'), 900); }
   }
   function reviewRated(detail = {}) {
     const t = now(); touch();

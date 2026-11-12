@@ -7,7 +7,7 @@
 import { warningAfterWrongTap } from './interference.js';
 import { audioButton } from '../shell/audio-access.js';
 import { letterSound, congregationOf } from '../pronunciation/forTradition.js';
-import { loadMemoryChain, entryFor, buildMemoryCard, memoryFallback } from './memorycard.js';
+import { loadMemoryChain, entryFor, buildMemoryCard, memoryFallback, retryMemoryChainLater } from './memorycard.js';
 import { letterMeet } from '../img/scenes.js';
 
 const DATA = (name) => new URL('../../data/letters/' + name, import.meta.url).href;
@@ -95,7 +95,7 @@ const CSS = `
 export function mount(root, ctx = {}) {
   const t = (key, fallback) => { try { const v = ctx.t && ctx.t(key); return v && v !== key ? v : fallback; } catch (e) { return fallback; } };
   const state = { status: '', tiles: /** @type {any[]} */ ([]), selected: null, alt: false, quiz: null, conf: null, interf: null, practice: false };
-  let unmounted = false;
+  let unmounted = false, stopChainRetry = null;
   root.textContent = '';
   const wrap = h('div', { class: 'alef-atlas' });
   wrap.appendChild(h('style', { text: CSS }));
@@ -116,6 +116,11 @@ export function mount(root, ctx = {}) {
     const want = (ctx.params && ctx.params.id) || (ctx.query && ctx.query.id); // the route has no :id, so #/letters/atlas?id=bet arrives in ctx.query
     state.selected = (want && state.tiles.find((x) => x.id === want)) ? want : null;
     render();
+    // S-04: chain failed; retry and redraw if the fallback line is still shown.
+    if (!chain && !ctx.memoryChain) stopChainRetry = retryMemoryChainLater((c) => {
+      if (unmounted) return; state.chain = c;
+      if (body.querySelector?.('[data-memory-fallback]') && !state.practice) render();
+    }, { fetchFn: ctx.fetch });
   }).catch((err) => {
     if (unmounted) return;
     body.textContent = '';
@@ -240,5 +245,5 @@ export function mount(root, ctx = {}) {
     if (keep) { const el = body.querySelector(keep) || body.querySelector('[data-act="quiz"]'); if (el) el.focus(); }
   }
 
-  return function unmount() { unmounted = true; if (practiceUnmount) { try { practiceUnmount(); } catch (e) { /* ignore */ } } if (memCard) { try { memCard.destroy(); } catch (e) { /* ignore */ } } root.textContent = ''; };
+  return function unmount() { unmounted = true; if (stopChainRetry) stopChainRetry(); if (practiceUnmount) { try { practiceUnmount(); } catch (e) { /* ignore */ } } if (memCard) { try { memCard.destroy(); } catch (e) { /* ignore */ } } root.textContent = ''; };
 }

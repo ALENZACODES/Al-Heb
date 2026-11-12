@@ -1,6 +1,7 @@
 // Pure helpers for the vocabulary screen (no DOM).
 import { newCard } from '../curriculum/srs.js';
 import { rankEntries } from './rank.js';
+import { transliterate } from '../pronunciation/transliterate.js';
 
 export const TIER_LABEL = { 500: 'Words 1-500', 1000: 'Words 501-1,000', 2000: 'Words 1,001-2,000', 5000: 'Words 2,001-5,000' };
 export const CARD_PREFIX = 'vocab:';
@@ -43,3 +44,11 @@ export function addCards(cards, entries, now, limit = Infinity) {
 }
 
 export const POS_LABEL = { noun: 'noun', verb: 'verb', adj: 'adjective', adv: 'adverb', prep: 'preposition', pron: 'pronoun', conj: 'conjunction', num: 'numeral', intj: 'interjection', particle: 'particle', det: 'determiner' };
+
+export const TRAD = { israeli: 'Israeli', sephardi: 'Sephardi', ashkenazi: 'Ashkenazi' };
+/** Transliteration for an entry in the learner's tradition; '' when the word has no vowel points.
+ *  Shared by the Dictionary and global Search (M-02), so both match the same spelling. */
+export function translitFor(e, tradition) {
+  if (!e?.pointed) return '';
+  try { return transliterate(e.pointed, { scheme: 'siddur', tradition: TRAD[tradition] ? tradition : 'sephardi' }); } catch { return ''; }
+}

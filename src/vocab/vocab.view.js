@@ -12,8 +12,8 @@ function loadDictionaryAudio(ctx) {
 }
 import { el, heText, tr, storeGet, storeSet } from '../curriculum/dom.js';
 import { review, due, MS_DAY } from '../curriculum/srs.js';
-import { transliterate } from '../pronunciation/transliterate.js';
 import { loadTier, TIER_BANDS } from './loader.js';
+import { translitFor, TRAD } from './model.js';
 import { TIER_LABEL, POS_LABEL, VOCAB_CARDS_KEY, stripPoints, addCards, cardId, CARD_PREFIX, rankEntries, isExactBand, isShortQuery, keepBand, fold, BAND } from './model.js';
 import { aliasHits, aliasNote } from './aliases.js';
 import { isFunction } from './vocab.js';
@@ -60,7 +60,6 @@ export function applyRanked(entries, { tag = '', topic = '', showForms = false, 
 export function applyFilters(entries, sel) {
   return applyRanked(entries, sel).map((x) => x.entry);
 }
-const TRAD = { israeli: 'Israeli', sephardi: 'Sephardi', ashkenazi: 'Ashkenazi' };
 
 export const ATTRIBUTION = 'Word ranking derived from the OpenSubtitles-based FrequencyWords lists by Hermit Dave (CC BY-SA 4.0); lemmas, glosses and vocalisation derived from Wiktionary contributors (CC BY-SA 4.0), via Wiktextract/kaikki.org. Changes were made (filtering, re-ranking, topic assignment, gloss shortening). This vocabulary data is shared under CC BY-SA 4.0.';
 export const DRAFT_NOTICE = 'Draft: not proofread. This list was built by a program from Wiktionary and subtitle frequencies. No Hebrew teacher has checked it, so expect wrong glosses, odd word choices and some spelling or vowel-point differences.';
@@ -98,11 +97,8 @@ function injectStyle() {
 }
 const focusNode = (n) => { try { n?.focus?.({ preventScroll: false }); } catch { /* ignore */ } };
 
-/** Transliteration for an entry in the learner's tradition; '' when the word has no vowel points. */
-export function translitFor(e, tradition) {
-  if (!e.pointed) return '';
-  try { return transliterate(e.pointed, { scheme: 'siddur', tradition: TRAD[tradition] ? tradition : 'sephardi' }); } catch { return ''; }
-}
+/** translitFor lives in model.js so global Search (src/shell/search.js) matches the same spelling (M-02). */
+export { translitFor };
 
 /** @param {HTMLElement} root @param {any} ctx */
 export function mount(root, ctx) {
@@ -276,7 +272,7 @@ export function mount(root, ctx) {
   const showWord = (w) => { sel.tier = 'all'; sel.topic = ''; sel.tag = ''; sel.showForms = true; sel.query = stripPoints(w.lemma); setMode('browse'); };
 
   // ---- browse
-  const sel = { tier: 'all', topic: '', tag: '', showForms: false, broad: false, query: '' };
+  const sel = { tier: 'all', topic: '', tag: '', showForms: false, broad: false, query: String(ctx?.query?.q || '') }; // M-02: a Search result opens the Dictionary on the same query
   let gen = 0;
   async function entriesFor(tierSel) {
     const tiers = tierSel === 'all' ? TIER_BANDS : [Number(tierSel)];

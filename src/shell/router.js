@@ -119,6 +119,9 @@ export const ROUTES = [
   // lane g2: words by topic (src/games/g2-catalog.js)
   ...[['sortrush', 'Sort Rush'], ['oddone', 'Odd One Out'], ['popup', 'Pop-Up Pantry'], ['familytree', 'Family Tree'], ['bodymap', 'Body Map'], ['paintpots', 'Paint Pots'], ['lineup', 'Line Them Up'], ['snap', 'Topic Snap'], ['chain', 'Meaning Chain'], ['dominoes', 'Opposite Dominoes'], ['endings', 'Ending Detective'], ['street', 'Memory Street'], ['whereami', 'Where Am I?'], ['clues', 'Clue After Clue'], ['dayafter', 'Day After Day'], ['trail', 'Topic Trail'], ['fourgroups', 'Four Groups of Four'], ['hive', 'Spelling Hive'], ['ladder', 'Word Ladder'], ['firstletter', 'Letter and Topic']]
     .map(([id, title]) => ({ name: 'g2-' + id, pattern: '/g2-' + id, module: `../games/g2-${id}.view.js`, title, tier: 'preview', owner: 'games' })),
+  // lane g3: Grammar in Action
+  ...'conveyor:Tense Conveyor|lostfound:Lost and Found|whack:Article Whack|onetwomany:One, Two, Many|questions:Question Radar|packcheck:Pack Check|clues:Pattern Clues|gate:Pattern Gate|grid:Ending Grid|arrows:Gift Arrows|agree:Agreement Match|negate:Not-Word Gap|swapfix:Swap Fix|mirror:Mirror Flip|shop:Counting Shop|chains:Chain Links|press:Pattern Press|sieve:Letter Sieve|repair:Repair Shop|decoder:Ending Decoder'
+    .split('|').map((x) => { const [n, title] = x.split(':'), name = 'g3-' + n; return { name, pattern: '/' + name, module: `../games/${name}.view.js`, title, tier: 'preview', owner: 'games' }; }),
   { name: 'wordfinder', pattern: '/wordfinder', module: '../games/wordfinder.view.js', title: 'Hebrew Word Finder: Level 1', tier: 'preview', owner: 'games' },
   { name: 'tugowar', pattern: '/tugowar', module: '../games/tugowar.view.js', title: 'Antonym Tug-of-War', tier: 'preview', owner: 'games' },
   { name: 'vowelcatcher', pattern: '/vowelcatcher', module: '../games/vowelcatcher.view.js', title: 'Vowel Catcher', tier: 'preview', owner: 'games' },

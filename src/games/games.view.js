@@ -108,6 +108,7 @@ export function mount(root, ctx) {
     tgCard(),
     g1Section(),
     g2Section(), // lane g2: words by topic
+    g3Section(), // lane g3
     ...sections);
   root.replaceChildren(article);
   // Card thumbnails from each game's own backdrop art, plus Rimon the mascot
@@ -178,6 +179,17 @@ export function g2Section() {
       h('span', { class: 'wf-game-level' }, 'LEVEL ' + g.level + ' / 5'), h('span', { class: 'show-tile-title' }, g.title, ' ', heSpan(g.titleHe)), h('span', { class: 'show-tile-hook' }, g.tag))))))))).catch(() => {});
   return h('section', { class: 'wf-level-section g2-hub', 'aria-labelledby': 'wf-g2-h' }, h('h2', { id: 'wf-g2-h' }, 'Word Games by Topic ', heSpan('מִלָּה')),
     h('p', { class: 'muted' }, 'Food, home, the body, family, colours, animals, clothes, weather, school, work and places: twenty games for everyday words.'), body);
+}
+
+/** Lane g3: Grammar in Action games, one section; the catalogue (src/games/g3-catalog.js) loads when the hub opens, not at install. */
+export function g3Section() {
+  const list = h('div', {}, h('p', { class: 'muted' }, 'Loading the grammar games…'));
+  import('./g3-catalog.js').then(({ G3_GAMES, G3_BANDS }) => list.replaceChildren(...G3_BANDS.map(([band, title]) => h('div', {}, h('h3', {}, title),
+    h('ul', { class: 'show-grid wf-game-grid' }, ...G3_GAMES.filter((g) => g.band === band).map((g) => h('li', {}, h('a', { class: 'show-tile wf-level-tile', href: '#/' + g.id },
+      h('span', { class: 'wf-game-level' }, 'LEVEL ' + g.level + ' / 5'), h('span', { class: 'show-tile-title' }, g.title, ' ', heSpan(g.titleHe)), h('span', { class: 'show-tile-hook' }, g.tag))))))))).catch(() => list.replaceChildren(h('p', { class: 'muted' }, 'The grammar games did not load.')));
+  return h('section', { class: 'card wf-g3-card', 'aria-labelledby': 'wf-g3-h' },
+    h('h2', { id: 'wf-g3-h' }, 'Grammar in Action'),
+    h('p', { class: 'muted' }, 'Twenty games on how Hebrew works: verb tenses and patterns, person endings, "the", agreement, numbers, questions, "not", word order and two-noun chains.'), list);
 }
 
 const NUM_WORDS = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'];

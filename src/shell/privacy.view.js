@@ -127,6 +127,8 @@ export const STORE_KEYS = [
   ['games.tg-parashah.v1', 'Game: best score, plays, stars per level, badges and daily challenge results', 'src/games/tg-parashah.view.js'],
   ['games.tg-tropehunt.v1', 'Game: best score, plays, stars per level, badges and daily challenge results', 'src/games/tg-tropehunt.view.js'],
   ['games.tg-holidays.v1', 'Game: best score, plays, stars per level, badges and daily challenge results', 'src/games/tg-holidays.view.js'],
+  // lane g1: letters, vowels and reading sounds (one row per game)
+  ...'strokeorder reveal script duel sounddash rhythm gaptrain whereis finalswitch sounddots vowelchain soundpairs blend nonsense dagesh riverhop shva helpers syllablecut flashread'.split(' ').map((id) => [`games.g1-${id}.v1`, 'Game: best score, plays, stars per level, badges and daily challenge results', `src/games/g1-${id}.view.js`]),
   ['games.tugowar.v1', 'Game: best score, plays, stars per level, badges and daily challenge results', 'src/games/tugowar.view.js'],
   ['games.tugowar.next.v1', 'Game: the round number (1-600) where your next Tug-of-War game starts', 'src/games/tugowar.view.js'],
   ['games.vowelcatcher.v1', 'Game: best score, plays, stars per level, badges and daily challenge results', 'src/games/vowelcatcher.view.js'],

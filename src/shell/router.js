@@ -113,6 +113,9 @@ export const ROUTES = [
   { name: 'tg-parashah', pattern: '/tg-parashah', module: '../games/tg-parashah.view.js', title: 'Parashah Path', tier: 'preview', owner: 'games' },
   { name: 'tg-tropehunt', pattern: '/tg-tropehunt', module: '../games/tg-tropehunt.view.js', title: 'Trope Hunt', tier: 'preview', owner: 'games' },
   { name: 'tg-holidays', pattern: '/tg-holidays', module: '../games/tg-holidays.view.js', title: 'Holiday Sorter', tier: 'preview', owner: 'games' },
+  // Lane g1 games (src/games/g1-catalog.js), id:Title
+  ...('strokeorder:Stroke Order|reveal:Slow Reveal|script:Print and Script|duel:Look-Alike Duel|sounddash:Sound Dash|rhythm:Letter Rhythm|gaptrain:Gap Train|whereis:Start, Middle or End|finalswitch:Final Switch|sounddots:Dot or No Dot|vowelchain:Vowel Dominoes|soundpairs:Same Sound Pairs|blend:Blend It|nonsense:Nonsense Reader|dagesh:Dagesh Spotter|riverhop:River Hop|shva:Shva: Said or Silent|helpers:Silent Helpers|syllablecut:Syllable Cut|flashread:Flash Read')
+    .split('|').map((x) => { const n = 'g1-' + x.slice(0, x.indexOf(':')); return { name: n, pattern: '/' + n, module: `../games/${n}.view.js`, title: x.slice(x.indexOf(':') + 1), tier: /** @type {'preview'} */ ('preview'), owner: 'games' }; }),
   { name: 'wordfinder', pattern: '/wordfinder', module: '../games/wordfinder.view.js', title: 'Hebrew Word Finder: Level 1', tier: 'preview', owner: 'games' },
   { name: 'tugowar', pattern: '/tugowar', module: '../games/tugowar.view.js', title: 'Antonym Tug-of-War', tier: 'preview', owner: 'games' },
   { name: 'vowelcatcher', pattern: '/vowelcatcher', module: '../games/vowelcatcher.view.js', title: 'Vowel Catcher', tier: 'preview', owner: 'games' },

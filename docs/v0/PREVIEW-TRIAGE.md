@@ -184,6 +184,26 @@ Home shows a backup reminder after three finished lessons (`docs/progress/BACKUP
 | `tg-parashah` | keep | Torah and Hebrew game; reached from the `games` hub. Preview until a teacher reviews its Hebrew. |
 | `tg-tropehunt` | keep | Torah and Hebrew game; reached from the `games` hub. Preview until a teacher reviews its Hebrew. |
 | `tg-holidays` | keep | Torah and Hebrew game; reached from the `games` hub. Preview until a teacher reviews its Hebrew. |
+| `g1-strokeorder` | hide | A letters, vowels and sounds game (lane g1); reached from its section of the games hub, and search finds it by name. |
+| `g1-reveal` | hide | A letters, vowels and sounds game (lane g1); reached from its section of the games hub, and search finds it by name. |
+| `g1-script` | hide | A letters, vowels and sounds game (lane g1); reached from its section of the games hub, and search finds it by name. |
+| `g1-duel` | hide | A letters, vowels and sounds game (lane g1); reached from its section of the games hub, and search finds it by name. |
+| `g1-sounddash` | hide | A letters, vowels and sounds game (lane g1); reached from its section of the games hub, and search finds it by name. |
+| `g1-rhythm` | hide | A letters, vowels and sounds game (lane g1); reached from its section of the games hub, and search finds it by name. |
+| `g1-gaptrain` | hide | A letters, vowels and sounds game (lane g1); reached from its section of the games hub, and search finds it by name. |
+| `g1-whereis` | hide | A letters, vowels and sounds game (lane g1); reached from its section of the games hub, and search finds it by name. |
+| `g1-finalswitch` | hide | A letters, vowels and sounds game (lane g1); reached from its section of the games hub, and search finds it by name. |
+| `g1-sounddots` | hide | A letters, vowels and sounds game (lane g1); reached from its section of the games hub, and search finds it by name. |
+| `g1-vowelchain` | hide | A letters, vowels and sounds game (lane g1); reached from its section of the games hub, and search finds it by name. |
+| `g1-soundpairs` | hide | A letters, vowels and sounds game (lane g1); reached from its section of the games hub, and search finds it by name. |
+| `g1-blend` | hide | A letters, vowels and sounds game (lane g1); reached from its section of the games hub, and search finds it by name. |
+| `g1-nonsense` | hide | A letters, vowels and sounds game (lane g1); reached from its section of the games hub, and search finds it by name. |
+| `g1-dagesh` | hide | A letters, vowels and sounds game (lane g1); reached from its section of the games hub, and search finds it by name. |
+| `g1-riverhop` | hide | A letters, vowels and sounds game (lane g1); reached from its section of the games hub, and search finds it by name. |
+| `g1-shva` | hide | A letters, vowels and sounds game (lane g1); reached from its section of the games hub, and search finds it by name. |
+| `g1-helpers` | hide | A letters, vowels and sounds game (lane g1); reached from its section of the games hub, and search finds it by name. |
+| `g1-syllablecut` | hide | A letters, vowels and sounds game (lane g1); reached from its section of the games hub, and search finds it by name. |
+| `g1-flashread` | hide | A letters, vowels and sounds game (lane g1); reached from its section of the games hub, and search finds it by name. |
 | `wordfinder` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
 | `tugowar` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
 | `vowelcatcher` | keep | Game; reached from the `games` hub. Preview until native review of its words. |

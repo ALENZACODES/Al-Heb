@@ -1,0 +1,26 @@
+# Coder 100: Audio Lane (12 November 2026)
+
+Ideas A1 to A10 and I3 from the brief "ALEF: 100 coder-only ideas". Branch `lane/audio-2026-11-12c`.
+New code lives in `src/audiolab/` (on demand: not in the first install). Tests: `tests/audiolab.*.test.js`, plus additions to
+`tests/speak.test.js`.
+
+| Idea | Status | Files | What the learner sees |
+| --- | --- | --- | --- |
+| A1 One global playback bar | built | `src/audiolab/nowbar.js`, `src/app.js` (one import line), `src/shell/play-state.js` (bar clicks ignored) | While any Hebrew clip, device voice or book page plays, a bar above the bottom navigation shows what is playing, a progress line (clip files only), Pause or Resume, speed and Stop; it hides when the sound ends. |
+| A2 Slow and syllable-step playback | built | `src/audio/player.js` (`CLIP_RATES`, `setClipRate`, `nowPlaying`), `src/shell/settings.js`, `src/shell/settings.view.js`, `src/audiolab/practice.view.js` | Speeds 1×, 0.8×, 0.7× and 0.6× (pitch kept) in Settings, the playback bar and Listening Practice. Step mode plays a line word by word from its word clips. No line has syllable split data, so the screen says "No syllable split exists for this line yet, so step mode goes word by word." |
+| A3 Gap-fill listening drills | built | `src/audiolab/practice.view.js` (Fill The Gap), `src/audiolab/core.js` (`gapQuestion`) | A line is played from its word clips with a pause where one word is missing; pick the word from four, then hear the whole line. Only lines whose every word has a clip are used; the divine name is never the gap or an option. |
+| A4 Dictation mode | built | `src/audiolab/practice.view.js` (Dictation), reuses `src/typing/typing.js` (`checkAnswer`, `screenRows`) | Hear a word or short line, type it with an on-screen Hebrew keyboard, and the letters are checked by machine against the known text (labelled a machine check, not a grade). Items with the divine name are left out. |
+| A5 Three-tradition compare | built | `src/audiolab/ui.js` (`traditionCompare`), `src/audiolab/core.js` (`compareState`) | On Line Tools, one control with Israeli, Sephardi and Ashkenazi buttons, each labelled from the clip list: a clip of its own, the same reading as Israeli, plays the Israeli clip, held for review, or audio coming (button disabled, never dead). |
+| A6 Play-all queues | built (prayers, theme packs, books) | `src/audiolab/ui.js` (`mountQueue`), `src/corpus/read.view.js`, `src/vocab/themes.view.js`, `src/books/book.view.js` | Play all on a prayer and on a theme pack shows a numbered list with the current item marked; tap any row to play on from there; Stop says where it stopped. Books play page after page with read along (A8). Not done: a lesson's own vocabulary list. |
+| A7 Honest audio states | extended existing | `src/audiolab/core.js` (`readiness`, `readinessLine`, `bookReadiness`), `src/audiolab/ui.js` (`readinessNote`); used in `src/corpus/read.view.js`, `src/vocab/themes.view.js`, `src/books/book.view.js`, Line Tools | Lines like "48 of 50 lines have audio. 2 have audio coming." counted from the player's own plan and the clip holds. The existing per-button "No audio yet" states (`src/shell/audio-access.js`) were already in place and are kept. |
+| A8 Book karaoke | built | `src/books/book.view.js`, `src/audiolab/core.js` (`estimateWordTimings`, `wordAt`) | "Read along" in a book: the page turns by itself at the end of each page's clip and the word sounding now is highlighted. Book pages have no measured word timings, so the page says the highlight follows estimated timings. A page with no clip stops read along and says why. |
+| A9 Minimal-pair drills | extended existing | `src/speak/speak.js` (the existing drill in Say It) | After each pair answer, "Hear both, one after the other" plays the two words. The drill itself (hear one, pick which) already existed. |
+| A10 Offline audio packs | built | `src/audiolab/packs.js`, `src/audiolab/packs.card.js`, `src/shell/offline.view.js`, `src/sync/packs.card.js` (one sentence), `sw.js` | On Use Aleph offline, Audio Packs: choose a book, every prayer and Torah line, or a set of ten lessons; see the clip count in your voice and setting, how many are saved and their measured size; save with progress and Cancel; remove a pack. Sizes are measured as files arrive (the clip list has no sizes). |
+| I3 One audio component | already existed, verified | `src/shell/audio-access.js` (`audioButton`, `playWithState`), `src/shell/play-state.js` | Play buttons already carry a live playing state from real media events. Every new control in this lane uses `playWithState`. |
+
+Notes for the owner and other lanes:
+- Shared files touched (small, additive): `src/app.js`, `src/shell/router.js`, `src/shell/nav-model.js`, `src/shell/nav.strings.js`,
+  `src/shell/settings.js`, `src/shell/settings.view.js`, `src/shell/play-state.js`, `src/shell/offline.view.js`, `src/audio/player.js`,
+  `src/corpus/read.view.js`, `sw.js`, `tools/build-precache.mjs` (adds `src/audiolab/` to the on-demand list).
+- New route: `#/listen-practice` (Listening Practice), in the Speak section; tabs by query `?tab=line|gap|dictation&line=<id>`.
+- The compare control is used for lines only: word clips of other traditions load only with that tradition's word shard.

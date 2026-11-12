@@ -31,6 +31,6 @@ export async function mount(root, ctx) {
         h('li', {}, 'Print single-sided, in black and white is fine. Grey guide lines should stay light.'),
         h('li', {}, 'Use a pencil or a fine pen, and follow the arrows.')),
       m?.fonts ? h('p', { class: 'muted' }, 'Fonts: ' + m.fonts + '.') : null,
-      h('p', {}, h('a', { class: 'btn secondary', href: '#/letters' }, 'Trace letters on screen')))));
+      h('p', {}, h('a', { class: 'btn secondary', href: '#/letters' }, 'Trace letters on screen'), ' ', h('a', { class: 'btn secondary', href: '#/worksheet' }, 'Make a worksheet from a lesson')))));
   return () => {};
 }

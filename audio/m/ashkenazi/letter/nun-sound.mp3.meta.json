@@ -1,0 +1,31 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-respelled-israeli-voice",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "ashkenazi",
+ "inputText": "נ",
+ "inputSha256": "b04ecb020c430c872f65df35d355f809a99e25be2f4bf703117dcc0cdc99e9da",
+ "ingestedAt": "2026-11-12T15:41:05.053Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice: the Israeli man voice reading the ashkenazi reading written in pointed Hebrew letters (tools/audio/ashkenazi_script.mjs). Not a human recording; no human has listened to it. Licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel.",
+ "renderedAt": "2026-11-12T15:41:05.053Z",
+ "redistributionCleared": false,
+ "spokenText": "נ",
+ "normalized": true,
+ "provider": "google",
+ "madeFrom": "hebrew-script",
+ "voiceName": "he-IL-Wavenet-B",
+ "languageCode": "he-IL",
+ "hebrew": "נ",
+ "israeliRef": "audio/m/israeli/letter/nun-sound.mp3",
+ "tempo": {
+  "applied": false,
+  "factor": 1,
+  "cap": 1.26,
+  "before": 0.7680045351473923,
+  "after": 0.7680045351473923,
+  "israeliSec": 0.7847392290249433,
+  "israeliRef": "audio/m/israeli/letter/nun-sound.mp3"
+ }
+}

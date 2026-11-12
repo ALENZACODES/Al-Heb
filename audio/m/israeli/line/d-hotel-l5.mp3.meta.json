@@ -1,0 +1,27 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "israeli",
+ "inputText": "מָתַי אֲרוּחַת הַבֹּקֶר?",
+ "inputSha256": "0603988b4973065a405184b0b0a77e6a5a51f79e8848b21c80eb13504c025cca",
+ "ingestedAt": "2026-11-12T00:26:06.566Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-12T00:26:06.566Z",
+ "redistributionCleared": false,
+ "spokenText": "מָתַי אֲרוּחַת הַבֹּקֶר?",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [],
+  "google": {
+   "heard": "מתי ארוחת הבוקר",
+   "acc": 1.0,
+   "issues": []
+  },
+  "reviewersFailing": 0
+ }
+}

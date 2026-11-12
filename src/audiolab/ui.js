@@ -9,6 +9,7 @@
 import { el, heText } from '../curriculum/dom.js';
 import { playWithState } from '../shell/audio-access.js';
 import { displayHebrew } from '../shell/names.js';
+import { isAudioFree } from '../shell/audiofree.js';
 import { readiness, readinessLine, compareState, TRADITION_NAMES, RATE_CHOICES, rateOf } from './core.js';
 
 const CSS = `
@@ -65,6 +66,7 @@ export async function audioReady(ctx, { words = false, ms = 8000 } = {}) {
  * @param {any} ctx @param {{kind:string,id:string,text?:string}[]} items @param {string} noun plural noun
  */
 export function readinessNote(ctx, items, noun = 'items', { words = false } = {}) {
+  if (isAudioFree(ctx)) return el('span', { class: 'audio-off', hidden: true }); // "I do not use audio": no sound counts
   const p = el('p', { class: 'al-ready muted', 'data-audio-ready': '' });
   const draw = () => { const r = readiness(ctx?.audio, items); p.textContent = readinessLine(r, noun); p.setAttribute('data-clip', String(r.clip)); p.setAttribute('data-total', String(r.total)); return r; };
   draw();
@@ -77,6 +79,7 @@ export function readinessNote(ctx, items, noun = 'items', { words = false } = {}
  * @param {any} ctx @param {{kind:string, id:string, text?:string, title?:string}} o
  */
 export function traditionCompare(ctx, o) {
+  if (isAudioFree(ctx)) return el('span', { class: 'audio-off', hidden: true });
   const list = el('ul', { class: 'al-cmp-list' });
   const box = el('section', { class: 'al-cmp', 'aria-label': 'Compare the three traditions' },
     el('h3', {}, o.title || 'Hear It In Each Tradition'), list,
@@ -153,7 +156,7 @@ export function mountQueue(ctx, items, o = {}) {
     if (mine === gen) { status.textContent = `Finished all ${items.length} ${noun}.`; at = -1; mark(-1); }
   }
   function stop() { gen++; try { ctx?.audio?.stop?.(); } catch { /* ignore */ } status.textContent = at >= 0 ? `Stopped at ${at + 1} of ${items.length}. Tap a row to go on from there.` : ''; }
-  const node = el('section', { class: 'al-queue', 'aria-label': o.title || 'Play all' },
+  const node = isAudioFree(ctx) ? el('span', { class: 'audio-off', hidden: true }) : el('section', { class: 'al-queue', 'aria-label': o.title || 'Play all' },
     el('h3', {}, o.title || 'Play All'), el('div', { class: 'al-row' }, playBtn, stopBtn), status, list);
   return { node, stop, playFrom };
 }

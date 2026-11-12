@@ -14,6 +14,7 @@ import { displayHebrew, speechText, uiEnglish } from '../shell/names.js';
 import { checkAnswer, screenRows, stripPoints } from '../typing/typing.js';
 import { lineWords, wordIds, gapQuestion, dictationItems, makeRng, isNameish, NO_SYLLABLES, syllableSplit } from './core.js';
 import { ensureStyle, audioReady, readinessNote, traditionCompare, speedChooser } from './ui.js';
+import { isAudioFree } from '../shell/audiofree.js';
 
 const TABS = [['line', 'Line Tools'], ['gap', 'Fill The Gap'], ['dictation', 'Dictation']];
 const fetchJson = async (ctx, url) => { const r = await (ctx?.fetchFn ?? fetch)(url); if (!r || r.ok === false) throw new Error(url); return r.json(); };
@@ -187,6 +188,10 @@ export function mount(root, ctx) {
       el('p', { class: 'muted al-est' }, `Checked by machine: your letters are compared with the known text (${stripPoints(it.pointed).length} characters). It checks spelling from sound only; it is not a grade.`));
   }
 
+  if (isAudioFree(ctx)) { // "I do not use audio": these drills are heard, so say so and point to the written practice
+    body.replaceChildren(el('p', { id: 'lp-audio-free' }, 'Listening Practice is for sound, and "I do not use audio" is on. Practise the same skills in writing with ', el('a', { href: '#/typing' }, 'Typing practice'), ' and ', el('a', { href: '#/bridge' }, 'Reading Without Vowels'), '.'));
+    return () => { alive = false; };
+  }
   drawTabs();
   show();
   return () => { alive = false; stopAll(); };

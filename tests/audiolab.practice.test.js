@@ -96,3 +96,15 @@ test('Dictation: hear, type on the on-screen Hebrew keyboard, machine-checked ag
   assert.match(allText(root), /Checked by machine/);
   assert.ok(!/score|grade[ds]?\b(?! )/i.test(allText(root).replace('it is not a grade', '')), 'no score or grade claims');
 });
+
+test('"I do not use audio": Listening Practice says it is for sound and points to written practice; queues and counts are not drawn', async () => {
+  const root = doc.createElement('div');
+  const quiet = { get: (k) => (k === 'audioFree' ? true : undefined), set() {} };
+  mount(root, { audio: null, settings: quiet, query: {}, practiceData: { registry } });
+  assert.ok(root.querySelector('#lp-audio-free'));
+  assert.equal(root.querySelectorAll('button').length, 0);
+  const { mountQueue, readinessNote, traditionCompare } = await import('../src/audiolab/ui.js');
+  assert.equal(mountQueue({ settings: quiet }, [{ kind: 'word', id: 'x', label: 'x' }]).node.hasAttribute('hidden'), true);
+  assert.equal(readinessNote({ settings: quiet }, []).hasAttribute('hidden'), true);
+  assert.equal(traditionCompare({ settings: quiet }, { kind: 'line', id: 'x' }).hasAttribute('hidden'), true);
+});

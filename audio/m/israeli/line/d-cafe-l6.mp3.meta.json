@@ -1,0 +1,27 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "israeli",
+ "inputText": "אֶפְשָׁר בְּכַרְטִיס?",
+ "inputSha256": "fd23bfb39defc04e3544fc1ad3bcf7dac700ffd585f92eb61d3122cc4e3bb2d1",
+ "ingestedAt": "2026-11-12T00:26:14.960Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-12T00:26:14.960Z",
+ "redistributionCleared": false,
+ "spokenText": "אֶפְשָׁר בְּכַרְטִיס?",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [],
+  "google": {
+   "heard": "אפשר בכרטיס",
+   "acc": 1.0,
+   "issues": []
+  },
+  "reviewersFailing": 0
+ }
+}

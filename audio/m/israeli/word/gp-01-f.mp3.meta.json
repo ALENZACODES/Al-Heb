@@ -1,0 +1,27 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "israeli",
+ "inputText": "אֲנִי תַּלְמִידָה",
+ "inputSha256": "291e00fa83a6d2f4a3da9606ce3e39a818e0ab8bc9d7f4bcd0791f02b7dc5595",
+ "ingestedAt": "2026-11-12T00:22:38.494Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-12T00:22:38.494Z",
+ "redistributionCleared": false,
+ "spokenText": "אֲנִי תַּלְמִידָה",
+ "normalized": true,
+ "inputTextKind": "hebrew",
+ "review": {
+  "phonemeWeak": [],
+  "wordIssues": [],
+  "google": {
+   "heard": "אני תלמידה",
+   "acc": 1.0,
+   "issues": []
+  },
+  "reviewersFailing": 0
+ }
+}

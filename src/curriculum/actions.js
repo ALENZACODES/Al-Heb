@@ -45,7 +45,7 @@ async function planCompletion(ctx, lesson, now, applyOutcomes, check) {
  * All-or-nothing: if the store is missing or a write fails, the writes already made are undone and StoreWriteError is thrown, so the caller must not show "complete".
  * (A store that has fallen back to memory still accepts the writes; that is disclosed by the storage notice, not an error.)
  */
-async function checkWrite(ctx, id, c, now) { const old = await storeGet(ctx, CHECKS_KEY, undefined); return { key: CHECKS_KEY, value: withCheck(old, id, c.right, c.of, now), old }; }
+async function checkWrite(ctx, id, c, now) { const old = await storeGet(ctx, CHECKS_KEY, undefined); return { key: CHECKS_KEY, value: withCheck(old, id, c.right, c.of, now, c.ms), old }; }
 /** `check` ({right, of}, optional): the first-try score that passed, kept for the certificate. */
 export async function completeLesson(ctx, lesson, now = Date.now(), check) {
   const full = await fullLesson(lesson);
@@ -254,7 +254,7 @@ export async function setScaffoldPin(ctx, cardId, pinned) {
  * still feed the SRS (the lesson's cards are created, misses lapse, hits review) but nothing marks the lesson done.
  * Returns { added, updated, completed, passed, right, need, of }.
  */
-export async function saveQuickCheck(ctx, lesson, questions, results, now = Date.now()) {
+export async function saveQuickCheck(ctx, lesson, questions, results, now = Date.now(), ms) {
   if (!questions.length || !Object.keys(results).length) return { added: 0, updated: 0, completed: false, passed: false, right: 0, need: passMark(questions.length), of: questions.length };
   const outcomes = questions.filter((q) => q.cardId && q.id in results).map((q) => ({ id: q.cardId, kind: q.cardKind || "word", good: !!results[q.id], create: true }));
   const right = questions.filter((q) => results[q.id] === true).length, of = questions.length, need = passMark(of);
@@ -266,11 +266,11 @@ export async function saveQuickCheck(ctx, lesson, questions, results, now = Date
     const oldCards = await storeGet(ctx, CARDS_KEY, undefined);
     const { cards: base, added } = ensureCards(st.cards, full, now);
     const cards = outcomes.length ? applyOutcomesToCards(base, outcomes, now) : base;
-    await storeWriteAll(ctx, [{ key: CARDS_KEY, value: cards, old: oldCards }, await checkWrite(ctx, full.id, { right, of }, now)]);
+    await storeWriteAll(ctx, [{ key: CARDS_KEY, value: cards, old: oldCards }, await checkWrite(ctx, full.id, { right, of, ms }, now)]);
     return { added, updated: outcomes.length, completed: false, passed: false, right, need, of };
   }
   // One batch: the lesson's cards, the answers' effect on them, the done mark and the streak are written together or not at all (throws StoreWriteError).
-  const { added, completed, writes } = await planCompletion(ctx, lesson, now, outcomes.length ? (cards) => applyOutcomesToCards(cards, outcomes, now) : null, { right, of });
+  const { added, completed, writes } = await planCompletion(ctx, lesson, now, outcomes.length ? (cards) => applyOutcomesToCards(cards, outcomes, now) : null, { right, of, ms });
   await storeWriteAll(ctx, writes);
   pointToNext(lesson, completed);
   return { added, updated: outcomes.length, completed: true, passed: true, right, need, of };

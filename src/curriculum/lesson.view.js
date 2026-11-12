@@ -19,7 +19,9 @@ import { storeGet, storeSet, showSaveFailure } from "./dom.js";
 import { hookLine, hookNode } from "../letters/hookline.js";
 import { mountChunkedLesson } from "./lesson.parts.js";
 import { loadUnlocked, unlockLesson, stillLocked, doubleTap } from "./unlock.js";
-import { passMark, passRuleText, passPercent } from "./passmark.js";
+import { passMark, passRuleText, passPercent, CHECKS_KEY } from "./passmark.js";
+// C2/C8: objective cards and the learner's own record load on demand (src/coursemap/objectives.js); the lesson works without them.
+const objectives = () => import("../coursemap/objectives.js");
 
 const A_ID = /^I-\d{2}$/;
 export const MAX_PER_STEP = 2;
@@ -153,7 +155,7 @@ export function mountLesson(root, ctx, lessonId) {
       offQuiz = mountQuiz(quizHost, { questions, ctx, carry, onProgress: (r) => { saveResume({ results: r, replaceResults: true }); }, onFinish: async function finishQuiz(res) {
         const { stats, results, ms } = res;
         let saved;
-        try { saved = await saveQuickCheck(ctx, lesson, questions, results); } catch (e) { if (alive) showSaveFailure(quizHost, e, () => finishQuiz(res)); return; } // never say "Lesson complete" for a lesson that was not saved
+        try { saved = await saveQuickCheck(ctx, lesson, questions, results, Date.now(), ms); } catch (e) { if (alive) showSaveFailure(quizHost, e, () => finishQuiz(res)); return; } // never say "Lesson complete" for a lesson that was not saved
         const updated = saved.updated;
         carry = {}; // a new try starts from the first question
         if (!testOut) { resumeAll = clearResume(resumeAll, lesson.id); await storeSet(ctx, RESUME_KEY, resumeAll); }
@@ -169,6 +171,7 @@ export function mountLesson(root, ctx, lessonId) {
             missedLabels: stats.missed.map(label), cardsUpdated: updated, onRetry: () => startQuiz(), retryLabel: "Try again",
             extraLinks: [testOut ? el("a", { class: "btn secondary", href: `#/learn?lesson=${lesson.id}` }, "Study the lesson") : reviewLink, el("a", { class: "btn secondary", href: "#/learn" }, "All lessons")] }));
           quizHost.querySelector?.("#alef-int-ex")?.focus?.();
+          objectives().then((m) => { if (alive) quizHost.append(m.provedCard(el, questions, results)); }).catch(() => {});
           return;
         }
         quizHost.replaceChildren(summaryNode({ ctx, store: ctx?.store, sfx: ctx?.sfx, showStreak: streakVisible(ctx), title: testOut ? "Test passed: lesson complete" : "Lesson complete", countText, stats, ms,
@@ -176,6 +179,7 @@ export function mountLesson(root, ctx, lessonId) {
           nextHref: next ? `#/learn?lesson=${next.id}` : "#/learn", nextLabel: next ? "Next lesson" : "All lessons",
           extraLinks: [reviewLink] }));
         quizHost.querySelector?.("#alef-int-ex")?.focus?.();
+        objectives().then((m) => { if (alive) quizHost.append(m.provedCard(el, questions, results)); }).catch(() => {});
         showStart("Check again");
       } });
       // Nothing else on screen shows the quiz began (the card sits below the first screen): move focus to its heading and bring the card up.
@@ -226,7 +230,9 @@ export function mountLesson(root, ctx, lessonId) {
         testOut ? " Pass it and this lesson counts as done without studying it. Retries of a missed question do not count toward the pass." : " The check is at the end of the lesson; look through the lesson first, or go straight to it.",
         " ", testOut || unmet.length ? null : goCheck);
       const at = parts.findIndex((n) => n && /\balef-meta\b/.test(n.className || ""));
-      parts.splice(at >= 0 ? at + 1 : 1, 0, intro);
+      const objSlot = el("div", { class: "alef-objectives-slot" });
+      parts.splice(at >= 0 ? at + 1 : 1, 0, intro, objSlot);
+      Promise.all([objectives(), storeGet(ctx, CHECKS_KEY, {})]).then(([m, checks]) => { if (alive) objSlot.replaceChildren(m.objectiveCard(el, lesson, questions, m.lessonRecord(checks, lesson.id))); }).catch(() => {});
     }
 
     replaceKeepingFocus(wrap, h1, ...parts);

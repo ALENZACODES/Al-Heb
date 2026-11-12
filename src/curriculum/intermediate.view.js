@@ -16,7 +16,7 @@ import { settingVoice, onKeys } from "./ex-ui.js";
 import { audioButton } from "../shell/audio-access.js";
 import * as A from "./intermediate-adapter.js";
 import { sequenceExercises, fairProduceOptions, createSession, feedbackText, fireFeedback, skipNotice } from "./exercises.session.js";
-import { passed as passedCheck, passMark, passRuleText } from "./passmark.js";
+import { passed as passedCheck, passMark, passRuleText, CHECKS_KEY, withCheck } from "./passmark.js";
 import { progressBar, summaryNode } from "./exercises.ui.js";
 import { respell } from "../pronunciation/forTradition.js";
 import { uiEnglish } from "../shell/names.js";
@@ -363,6 +363,7 @@ function mountLesson(root, ctx, id) {
       const pass = all && passedCheck(right, exs.length); // C-01: every exercise answered is not enough; the first-try pass mark must be met
       if (all && !pass) {
         await persist({ score: right, total: exs.length });
+        try { await storeSet(ctx, CHECKS_KEY, withCheck(await storeGet(ctx, CHECKS_KEY, {}), lesson.id, right, exs.length, Date.now(), Date.now() - t0)); } catch { /* C8: the record is optional */ }
         if (!alive) return;
         body.replaceChildren(summaryNode({ passed: false, ctx, title: "Not passed yet — try again", countText: `${right} of ${exs.length} right on the first try.`, stats: { ...st2, accuracy: st2.answered ? st2.right / st2.answered : null },
           ms: Date.now() - t0, need: passMark(exs.length), of: exs.length, wasDone: !!mine.done, missedLabels: missed.map(exLabel), cardsUpdated,
@@ -373,7 +374,7 @@ function mountLesson(root, ctx, id) {
       }
       if (all) {
         // Count the lesson in the shared progress first: if that cannot be saved, nothing here says "finished" (the exercise results stay, so the learner can try again).
-        try { await completeLesson(ctx, lesson, Date.now(), { right, of: exs.length }); } catch (e) { if (alive) showSaveFailure(body, e, summary); return; }
+        try { await completeLesson(ctx, lesson, Date.now(), { right, of: exs.length, ms: Date.now() - t0 }); } catch (e) { if (alive) showSaveFailure(body, e, summary); return; }
         mine.done = Date.now();
         await persist({ done: mine.done, score: right, total: exs.length });
       }

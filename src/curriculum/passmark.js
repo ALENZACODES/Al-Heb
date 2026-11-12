@@ -24,7 +24,7 @@ export const retryText = (n) => (n > 0 ? `${n} ${n === 1 ? "retry" : "retries"} 
 
 // lane 4: graded checks for the certificate. { [lessonId]: { pass: {at,right,of}|null (earliest), tries: newest 10 } }
 export const CHECKS_KEY = "lesson.checks.v1";
-export function withCheck(map, id, right, of, at) {
-  const m = map && typeof map === "object" ? map : {}, r = m[id] || {}, t = { at, right, of };
+export function withCheck(map, id, right, of, at, ms) {
+  const m = map && typeof map === "object" ? map : {}, r = m[id] || {}, t = { at, right, of, ...(Number.isFinite(ms) && ms >= 0 ? { ms: Math.round(ms) } : {}) }; // C8: ms = time the check took
   return { ...m, [id]: { pass: r.pass || (passed(right, of) ? t : null), tries: [...(r.tries || []), t].slice(-10) } };
 }

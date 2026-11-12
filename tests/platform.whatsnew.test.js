@@ -45,3 +45,9 @@ test('What\'s New page marks the newest entry seen; About shows the list without
   assert.doesNotMatch(readFileSync(new URL('../src/platform/whatsnew.js', import.meta.url), 'utf8').split('export async function fillAbout')[1], /store\?\.set/, 'About never moves the marker');
   assert.match(readFileSync(new URL('../package.json', import.meta.url), 'utf8'), /tools\/release\/changelog\.mjs && node tools\/build-precache\.mjs --stamp/, 'release regenerates the list before the precache hash');
 });
+
+test('the generator leaves out a subject the learner-text gate would flag', async () => {
+  const { flagged } = await import('../tools/release/changelog.mjs');
+  assert.equal(flagged("S-01: the gloss reads 'hi (slang)', never 'hislang'."), true);
+  assert.equal(flagged('Helpful 404 (I9): suggestions from the route table.'), false);
+});

@@ -325,3 +325,12 @@ Home shows a backup reminder after three finished lessons (`docs/progress/BACKUP
 | `bridge` | keep | Reading Without Vowels (lane 6, 12 Nov): the Fade-out ladder's last three stages per text, books, prayer lines, word recognition and the modern texts shelf. Self-graded; preview until a teacher reviews it. |
 | `trope-families` | keep | Trope Families (lane 6, 12 Nov): signs and names from the app's trope table with real-verse examples; no melody audio exists. Names not reviewed. |
 | `trope-aliyah` | keep | Trope Practice by Aliyah (lane 6, 12 Nov): phrase-by-phrase stepping with the existing verse recording; no chant audio exists. Names not reviewed. |
+| `whats-new` | keep | What's New (lane platform, 12 Nov): the change list generated from the project history, new entries marked. |
+| `my-data` | keep | My Data (lane platform, 12 Nov): what is stored, the JSON backup and two CSV downloads. |
+| `cram` | keep | Cram (lane platform, 12 Nov): a lesson review sized to the minutes available. |
+| `mastery` | keep | Mastery Map (lane platform, 12 Nov): every review card as new, learning, known or mastered by stated thresholds. |
+| `my-week` | keep | My Week (lane platform, 12 Nov): weekly report, the learner's own weekly goals and a shareable picture card. |
+| `lesson-badges` | keep | Lesson Badges (lane platform, 12 Nov): badges from verified lessons only; the unverified era listed. |
+| `shortcuts` | keep | Keyboard Shortcuts (lane platform, 12 Nov): the shortcuts that exist, each checked against its code. |
+| `worksheet` | keep | Printable Worksheet (lane platform, 12 Nov): a practice sheet from a lesson's own letters and words. |
+| `focus` | keep | Focus Mode (lane platform, 12 Nov): one passage at a time, large text, the app's chrome hidden. |

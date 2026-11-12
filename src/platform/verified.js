@@ -11,7 +11,7 @@ export const TRACK_BADGES = Object.freeze([['read', 'Reading Path Complete'], ['
 /**
  * @param {{progress:any, checks:any, lessons:{id:string, track:string, title?:string}[]}} src
  * @returns {{verified:{id:string,title:string,right:number,of:number,passAt:number|null}[], unverified:{id:string,title:string,completedAt:number|null}[],
- *   badges:{id:string, name:string, earned:boolean, need:string, have:number, of:number}[]}}
+ *   list:{id:string, name:string, earned:boolean, need:string, have:number, of:number}[]}}
  */
 export function lessonBadges({ progress, checks, lessons = [] }) {
   const titles = Object.fromEntries(lessons.map((l) => [l.id, { title: l.title }]));
@@ -19,12 +19,12 @@ export function lessonBadges({ progress, checks, lessons = [] }) {
   const verified = ev.rows.filter((r) => r.status === 'meets').map((r) => ({ id: r.id, title: r.title, right: r.right, of: r.of, passAt: r.passAt }));
   const unverified = ev.rows.filter((r) => r.status === 'unscored').map((r) => ({ id: r.id, title: r.title, completedAt: r.completedAt }));
   const ok = new Set(verified.map((v) => v.id));
-  const badges = COUNT_BADGES.map(([n, name]) => ({ id: `verified-${n}`, name, earned: ok.size >= n, have: Math.min(ok.size, n), of: n, need: `${n} lesson${n === 1 ? '' : 's'} passed with the first-try score kept` }));
+  const list = COUNT_BADGES.map(([n, name]) => ({ id: `verified-${n}`, name, earned: ok.size >= n, have: Math.min(ok.size, n), of: n, need: `${n} lesson${n === 1 ? '' : 's'} passed with the first-try score kept` }));
   for (const [track, name] of TRACK_BADGES) {
     const ids = lessons.filter((l) => l.track === track).map((l) => l.id);
     if (!ids.length) continue;
     const have = ids.filter((id) => ok.has(id)).length;
-    badges.push({ id: `track-${track}`, name, earned: have === ids.length, have, of: ids.length, need: `all ${ids.length} lessons of this path passed with the first-try score kept` });
+    list.push({ id: `track-${track}`, name, earned: have === ids.length, have, of: ids.length, need: `all ${ids.length} lessons of this path passed with the first-try score kept` });
   }
-  return { verified, unverified, badges };
+  return { verified, unverified, list };
 }

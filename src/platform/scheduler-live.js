@@ -6,7 +6,7 @@ import { activeParams, INIT_S } from '../curriculum/srs.js';
 import { schedulerState, DECKS, pct } from './sched-state.js';
 import { fit, histories, fitRecord, MIN_REVIEWS, MIN_CARDS } from './fit.js';
 
-const FIT_STORE = 'srs.fit';
+const FIT_STORE_KEY = 'srs.fit';
 const B = (label, onclick) => el('button', { class: 'btn secondary', type: 'button', style: 'min-height:44px;min-width:44px', onclick }, label);
 const plural = (n, one, many = one + 's') => `${n} ${n === 1 ? one : many}`;
 const fmtS = (a) => a.map((v) => `${Number(v).toFixed(1)} d`).join(', ');
@@ -46,7 +46,7 @@ export async function liveSection(ctx, status, clock = () => Date.now()) {
 function fitPart(ctx, decks, status, clock) {
   const box = el('div', { class: 'sc-fit' });
   const hs = histories(decks);
-  const saved = (() => { try { return ctx?.store?.get?.(FIT_STORE, null) ?? null; } catch { return null; } })();
+  const saved = (() => { try { return ctx?.store?.get?.(FIT_STORE_KEY, null) ?? null; } catch { return null; } })();
   const render = (rec, result) => {
     const kids = [el('h3', {}, 'Fit to My Reviews')];
     kids.push(el('p', {}, `The scheduler starts every card from four set numbers (days a card lasts after a first answer of Again, Hard, Good or Easy: ${fmtS(INIT_S)}) and one growth factor (1). Aleph can fit these to your own answers, here on this device. It switches to fitted numbers only with enough history: at least ${MIN_REVIEWS} reviews made a day or more apart, on at least ${MIN_CARDS} cards, and only if the fit predicts your answers better than the set numbers.`));
@@ -63,7 +63,7 @@ function fitPart(ctx, decks, status, clock) {
   };
   async function save(r, active) {
     const rec = fitRecord(fit(hs), clock(), active);
-    try { await ctx?.store?.set?.(FIT_STORE, rec); } catch { /* best effort */ }
+    try { await ctx?.store?.set?.(FIT_STORE_KEY, rec); } catch { /* best effort */ }
     activeParams(rec.active ? rec : null);
     status.textContent = rec.active ? 'Saved. New reviews use your fitted numbers.' : 'Saved. New reviews use the set numbers.';
     render(rec, r);

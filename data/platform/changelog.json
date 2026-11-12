@@ -1,6 +1,82 @@
 {
  "generatedFrom": "git log (commit subjects, first sentence)",
+ "leftOut": 0,
  "entries": [
+  {
+   "date": "2026-11-12",
+   "hash": "f395fb653",
+   "text": "Lane platform plan table (docs/plan/CODER-100-platform.md), sitemap with the new pages, docs index and precache rebuilt"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "d0a650ea2",
+   "text": "Focus mode (J5): #/focus shows a little book, a prayer or text, or a Torah chapter one passage at a time in large text (three sizes, English on request) with the header, menus…"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "6563d9042",
+   "text": "Printable worksheet (J4): #/worksheet builds a practice sheet for the learner's current lesson (or any lesson picked) from the lesson data: copy the letters, copy the words, match…"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "fc292eb5a",
+   "text": "Accessibility gate (J7): tools/deploy/check-a11y.mjs checks every field the app creates has a name (aria, title, label for, or inside a label), every image has alt, the global…"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "911f794b0",
+   "text": "Keyboard shortcuts page (J6): #/shortcuts lists the single-key shortcuts that exist (lessons, review, dictionary review, first day, fade-out recall, word builder, service, reader…"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "50caa0d1b",
+   "text": "Offline indicator (J1): a line under the header while the device is offline says that pages opened before and everything installed still work, with a link to Use Aleph offline."
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "ff50b7423",
+   "text": "Lesson Badges (H9): #/lesson-badges awards count and path badges only for verified lessons (passing first-try score kept, recomputed with the certificate's pass rule)."
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "0fc1ea87a",
+   "text": "My Week (H6, H7, J3): #/my-week reports the last 7 days from the existing weekly summary plus XP and books finished, lets the learner set their own weekly XP, minutes and lesson…"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "f574bb40d",
+   "text": "Cram, leeches and Mastery Map (H3, H4, H5): #/cram sizes a lesson review to 5 to 30 minutes from the learner's own measured pace (an estimate of 12 seconds a card until 20 cards…"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "4af111b67",
+   "text": "My Data page (H10): #/my-data lists every stored item with its size and downloads the JSON backup (read back by Settings > Restore and Move to Another Device) plus review cards…"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "b7de8953f",
+   "text": "First-install headroom: the Grammar notes page code and the speaking-check model no screen imports load on demand (44 KB), so the first install is 3.90 of 3.95 MiB after this…"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "8535d17ea",
+   "text": "Search everything (J9): #/search also finds lessons, little books, root families, prayers and texts, and Torah references in English or Hebrew (Genesis 12:1, gen 3, a Hebrew book…"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "d1a88b7e0",
+   "text": "Dead-button gate (I4): tools/deploy/check-buttons.mjs reads every button the app creates (h/el calls, createElement and index.html) and fails on any without a handler, a submit…"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "dc1a2208a",
+   "text": "Performance budget (J8): the precache build prints the first-install size and the installed JavaScript size and exits with an error when the first install is over 3.95 MiB or its…"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "fe4b5cc3a",
+   "text": "Change list on About and What's New page (I10, J10): tools/release/changelog.mjs writes data/platform/changelog.json from the git history (date, hash, first sentence of each…"
+  },
   {
    "date": "2026-11-12",
    "hash": "6d5ceabc6",
@@ -120,81 +196,6 @@
    "date": "2026-11-12",
    "hash": "067d30565",
    "text": "Plan #10, Shabbat Companion (code): #/shabbat lazy route with This Shabbat (portion, candle lighting, practise-before-Friday list), the Friday evening and Shabbat morning service…"
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "9544066e4",
-   "text": "S-09: a book page attaches its clip in the learner's voice with preload=metadata when it is drawn (Listen reuses it), and once a voice plays the next page's clip in that voice is…"
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "61c4407d0",
-   "text": "S-05: the heart toast names the count the hearts display shows at that moment ('Oops, that cost a heart: 4 of 5 left'), instead of 'Oops, one heart' that read as one heart left"
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "904ff27a3",
-   "text": "S-03: Offline 'Download everything' says why it is disabled (the file list is still being checked, or it did not load) and what turns it on, with a Try again button that reloads…"
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "b32922c36",
-   "text": "S-02, S-04: the memory-chain picture on Review and in Letters practice sits inside the .mc-svg scope its sanitised styles need, so Bet draws as the coloured bungalow with its ball…"
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "a8af866c9",
-   "text": "S-01: the learner-text gate also reads column tables (fields + rows), and the three cut-off glosses it then found in the dictionary index are closed"
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "f879956f3",
-   "text": "S-01: the greetings gloss reads 'hi (slang)', with the register as its own bracketed word, never 'hislang'."
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "741eebb7c",
-   "text": "M-03: Perfect is awarded only for a round with no wrong answer or guess."
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "ba547b2b8",
-   "text": "M-02: global Search matches transliteration through the Dictionary's own matcher and spelling (translitFor moved to vocab/model.js), so shalom finds the word for peace, labelled…"
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "4b18c7344",
-   "text": "M-01: the service page takes the tradition from Settings (its own selector is an override only while Settings is unchanged)."
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "f49f36cd8",
-   "text": "Chirp long prayers: the joined-length check allows for the MP3 padding each separately encoded part carries (about 38 ms)."
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "e229bf71f",
-   "text": "C-03, C-04, C-07, S-06: game hosts sit beside the board, not over it (Parashah Path's Exodus button visible again)."
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "3406f1c54",
-   "text": "C-02, M-07: counts finish their wiring."
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "2324461d4",
-   "text": "Chirp long prayers, second pass: parts of one verse line or about 150 bytes."
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "da25c6f0b",
-   "text": "Chirp long prayers (chirp-long run 1): the five whole prayers recorded in Chirp 3 HD in parts (every part accepted."
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "6ebb14f0a",
-   "text": "Chirp 3 HD for the five whole prayers too long for one Chirp request (adon-olam-1, aleinu-1, kaddish-1, haftarah-after, amidah-elohai-netzor): parts from the registry's lines and…"
   }
  ]
 }

@@ -1,6 +1,6 @@
 // H9 Lesson Badges (#/lesson-badges): badges from verified completions only, with the unverified era listed honestly.
 import { h } from '../shell/ui.js';
-import { lessonBadges } from './badges.js';
+import { lessonBadges } from './verified.js';
 import { CHECKS_KEY } from '../curriculum/passmark.js';
 
 async function loadIndex(fetchFn = globalThis.fetch) {
@@ -18,14 +18,14 @@ export function mount(root, ctx) {
   loadIndex(ctx?.readinessFetch || globalThis.fetch).then((lessons) => {
     if (!alive) return;
     const r = lessonBadges({ progress: get('curriculum.progress'), checks: get(CHECKS_KEY), lessons });
-    const earned = r.badges.filter((b) => b.earned);
+    const earned = r.list.filter((b) => b.earned);
     body.replaceChildren(
-      h('p', { role: 'status' }, `${earned.length} of ${r.badges.length} badges earned. ${r.verified.length} verified ${r.verified.length === 1 ? 'lesson' : 'lessons'}.`),
-      h('ul', { class: 'wn-list' }, ...r.badges.map((b) => h('li', {}, h('strong', {}, b.name), `: ${b.earned ? 'earned' : `${b.have} of ${b.of}`}. `, h('span', { class: 'muted' }, `Needs ${b.need}.`)))),
+      h('p', { role: 'status' }, `${earned.length} of ${r.list.length} badges earned. ${r.verified.length} verified ${r.verified.length === 1 ? 'lesson' : 'lessons'}.`),
+      h('ul', { class: 'wn-list' }, ...r.list.map((b) => h('li', {}, h('strong', {}, b.name), `: ${b.earned ? 'earned' : `${b.have} of ${b.of}`}. `, h('span', { class: 'muted' }, `Needs ${b.need}.`)))),
       h('h2', {}, 'Verified Lessons'),
       r.verified.length ? h('ul', {}, ...r.verified.map((v) => h('li', {}, `${v.title}: ${v.right} of ${v.of} right on the first try`))) : h('p', {}, 'None yet. Pass a lesson\'s quick check and it appears here.'),
       h('h2', {}, 'Unverified Era'),
-      r.unverified.length ? h('div', {}, h('p', {}, `${r.unverified.length} ${r.unverified.length === 1 ? 'lesson was' : 'lessons were'} marked complete without a kept passing score (finished before scores were kept). They stay complete in your course, but they do not count toward these badges. Passing the lesson's check again verifies it.`),
+      r.unverified.length ? h('div', {}, h('p', {}, `${r.unverified.length} ${r.unverified.length === 1 ? 'lesson was' : 'lessons were'} marked complete without a kept passing score (finished before scores were kept). They stay complete in your course, but they do not count toward the badges on this page. Passing the lesson's check again verifies it.`),
         h('ul', {}, ...r.unverified.map((u) => h('li', {}, h('a', { href: `#/learn?lesson=${encodeURIComponent(u.id)}` }, u.title)))))
         : h('p', {}, 'None: every completed lesson on this device is verified.'),
       h('p', {}, h('a', { class: 'btn secondary', href: '#/certificate' }, 'Certificate of lessons completed'), ' ', h('a', { class: 'btn secondary', href: '#/awards' }, 'All awards')));

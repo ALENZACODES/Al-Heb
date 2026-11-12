@@ -6,7 +6,7 @@ export const PLATFORM_ROUTES = [
   ['cram', '/cram', 'cram.view.js', 'Cram', 'learn'],
   ['mastery', '/mastery', 'mastery.view.js', 'Mastery Map', 'progress'],
   ['my-week', '/my-week', 'week.view.js', 'My Week', 'progress'],
-  ['lesson-badges', '/lesson-badges', 'badges.view.js', 'Lesson Badges', 'progress'],
+  ['lesson-badges', '/lesson-badges', 'verified.view.js', 'Lesson Badges', 'progress'],
   ['shortcuts', '/shortcuts', 'shortcuts.view.js', 'Keyboard Shortcuts', 'more'],
   ['worksheet', '/worksheet', 'worksheet.view.js', 'Printable Worksheet', 'more'],
   ['focus', '/focus', 'focus.view.js', 'Focus Mode', 'read'],

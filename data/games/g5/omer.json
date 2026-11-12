@@ -1,0 +1,74 @@
+{
+ "schema": "alef-g5-omer/1",
+ "note": "Count to Shavuot. Seven weeks of seven days; the Torah lines are word slices of Leviticus 23:15-16 from the app's Torah text. The game counts days only; it does not say when or how to count (that is for the learner's community).",
+ "verses": [
+  {
+   "he": "שֶׁבַע שַׁבָּתוֹת תְּמִימֹת תִּהְיֶינָה׃",
+   "ref": {
+    "book": "leviticus",
+    "chapter": 23,
+    "verse": 15
+   },
+   "from": 8,
+   "to": 12,
+   "src": {
+    "kind": "verse"
+   },
+   "en": "seven complete weeks"
+  },
+  {
+   "he": "תִּסְפְּרוּ חֲמִשִּׁים יוֹם",
+   "ref": {
+    "book": "leviticus",
+    "chapter": 23,
+    "verse": 16
+   },
+   "from": 4,
+   "to": 7,
+   "src": {
+    "kind": "verse"
+   },
+   "en": "you shall count fifty days"
+  }
+ ],
+ "words": [
+  {
+   "he": "עֹמֶר",
+   "en": "omer (a sheaf; a small biblical dry measure; the Omer count)",
+   "tr": "omer",
+   "src": {
+    "kind": "words",
+    "id": "h795e3a35"
+   }
+  },
+  {
+   "he": "שָׁבוּעַ",
+   "en": "week, period of seven days",
+   "tr": "shavu'a",
+   "src": {
+    "kind": "words",
+    "id": "h92151b55"
+   }
+  },
+  {
+   "he": "סְפִירָה",
+   "en": "an act of counting",
+   "tr": "sefirah",
+   "src": {
+    "kind": "vocab",
+    "pack": "shavuot",
+    "id": "ha3fb2785"
+   }
+  },
+  {
+   "he": "תּוֹרָה",
+   "en": "Torah, teaching",
+   "tr": "Torah",
+   "src": {
+    "kind": "days",
+    "day": "shavuot",
+    "i": 0
+   }
+  }
+ ]
+}

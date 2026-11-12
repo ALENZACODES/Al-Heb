@@ -1,0 +1,187 @@
+{
+ "schema": "alef-g5-greetings/1",
+ "note": "Holiday Greetings. Each scene is a day of the app's calendar; the greeting is copied from that day's page (data/calendar/days.json), the phrasebook or the lesson lexicon. Dates are copied from data/games/tg/holidays.json. Scenes are short lines written for this game.",
+ "scenes": [
+  {
+   "day": "erev-shabbat",
+   "when": "Friday, just before sunset",
+   "greet": {
+    "he": "שַׁבָּת שָׁלוֹם",
+    "en": "a peaceful Shabbat (the greeting)",
+    "tr": "Shabbat shalom",
+    "src": {
+     "kind": "days",
+     "day": "shabbat",
+     "i": 0
+    }
+   },
+   "name": {
+    "he": "עֶרֶב שַׁבָּת",
+    "en": "Friday, the eve of Shabbat",
+    "tr": "erev Shabbat",
+    "src": {
+     "kind": "days-name",
+     "day": "erev-shabbat"
+    }
+   }
+  },
+  {
+   "day": "shabbat",
+   "when": "Saturday night, after Havdalah",
+   "greet": {
+    "he": "שָׁבוּעַ טוֹב",
+    "en": "a good week (said after Havdalah)",
+    "tr": "shavua tov",
+    "src": {
+     "kind": "days",
+     "day": "shabbat",
+     "i": 6
+    }
+   },
+   "name": {
+    "he": "שַׁבָּת",
+    "en": "Shabbat (the Sabbath)",
+    "tr": "Shabbat",
+    "src": {
+     "kind": "days-name",
+     "day": "shabbat"
+    }
+   }
+  },
+  {
+   "day": "rosh-hashanah",
+   "when": "1 Tishrei",
+   "greet": {
+    "he": "שָׁנָה טוֹבָה",
+    "en": "happy new year (Rosh Hashana greeting)",
+    "tr": "shana tova",
+    "src": {
+     "kind": "phrasebook",
+     "id": "greetings-10"
+    }
+   },
+   "name": {
+    "he": "רֹאשׁ הַשָּׁנָה",
+    "en": "Rosh Hashanah (the Jewish New Year)",
+    "tr": "Rosh HaShanah",
+    "src": {
+     "kind": "days-name",
+     "day": "rosh-hashanah"
+    }
+   }
+  },
+  {
+   "day": "yom-kippur",
+   "when": "10 Tishrei",
+   "greet": {
+    "he": "גְּמַר חֲתִימָה טוֹבָה",
+    "en": "a good final sealing (Yom Kippur greeting)",
+    "tr": "g'mar chatimah tovah",
+    "src": {
+     "kind": "lexicon",
+     "id": "lex-gmar"
+    }
+   },
+   "name": {
+    "he": "יוֹם כִּפּוּר",
+    "en": "Yom Kippur (the Day of Atonement)",
+    "tr": "Yom Kippur",
+    "src": {
+     "kind": "days-name",
+     "day": "yom-kippur"
+    }
+   }
+  },
+  {
+   "day": "sukkot",
+   "when": "15 Tishrei",
+   "greet": {
+    "he": "חַג שָׂמֵחַ",
+    "en": "happy festival",
+    "tr": "chag sameach",
+    "src": {
+     "kind": "days",
+     "day": "sukkot",
+     "i": 4
+    }
+   },
+   "name": {
+    "he": "סֻכּוֹת",
+    "en": "Sukkot (the Festival of Booths)",
+    "tr": "Sukkot",
+    "src": {
+     "kind": "days-name",
+     "day": "sukkot"
+    }
+   }
+  },
+  {
+   "day": "pesach",
+   "when": "15 Nisan",
+   "greet": {
+    "he": "חַג כָּשֵׁר וְשָׂמֵחַ",
+    "en": "a kosher and happy holiday (Pesach greeting)",
+    "tr": "chag kasher vesameach",
+    "src": {
+     "kind": "lexicon",
+     "id": "lex-kasher"
+    }
+   },
+   "name": {
+    "he": "פֶּסַח",
+    "en": "Pesach (Passover)",
+    "tr": "Pesach",
+    "src": {
+     "kind": "days-name",
+     "day": "pesach"
+    }
+   }
+  },
+  {
+   "day": "rosh-chodesh",
+   "when": "The first day of a new month",
+   "greet": {
+    "he": "חֹדֶשׁ טוֹב",
+    "en": "a good month (the greeting)",
+    "tr": "chodesh tov",
+    "src": {
+     "kind": "days",
+     "day": "rosh-chodesh",
+     "i": 2
+    }
+   },
+   "name": {
+    "he": "רֹאשׁ חֹדֶשׁ",
+    "en": "Rosh Chodesh (the new month)",
+    "tr": "Rosh Chodesh",
+    "src": {
+     "kind": "days-name",
+     "day": "rosh-chodesh"
+    }
+   }
+  },
+  {
+   "day": "shavuot",
+   "when": "6 Sivan",
+   "greet": {
+    "he": "חַג שָׂמֵחַ",
+    "en": "happy festival (the greeting)",
+    "tr": "chag sameach",
+    "src": {
+     "kind": "days",
+     "day": "erev-festival",
+     "i": 1
+    }
+   },
+   "name": {
+    "he": "שָׁבוּעוֹת",
+    "en": "Shavuot (the Festival of Weeks)",
+    "tr": "Shavuot",
+    "src": {
+     "kind": "days-name",
+     "day": "shavuot"
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,511 @@
+{
+ "schema": "alef-g5-siddur/1",
+ "note": "Siddur Mend and Blessing Match. Lines are the first line (to the first sof pasuq) of registry entries; blessings are the registry entries that open with the blessing formula, shown from the first words that tell them apart (word slices). The four-letter name is shown as ה׳ and is never voiced. Titles and English are the registry's.",
+ "formula": {
+  "he": "בָּרוּךְ אַתָּה ה׳ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם",
+  "src": {
+   "kind": "registry",
+   "id": "bless-formula-1",
+   "from": 0,
+   "to": 6
+  }
+ },
+ "lines": [
+  {
+   "he": "שְׁמַע יִשְׂרָאֵל ה׳ אֱלֹהֵינוּ ה׳ אֶחָד׃",
+   "src": {
+    "kind": "registry",
+    "id": "shema-1",
+    "from": 0,
+    "to": 6
+   },
+   "id": "shema-1",
+   "title": "Shema Yisrael",
+   "english": "HEAR, O ISRAEL: THE LORD OUR GOD, THE LORD IS ONE."
+  },
+  {
+   "he": "בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ לְעוֹלָם וָעֶד׃",
+   "src": {
+    "kind": "registry",
+    "id": "shema-2",
+    "from": 0,
+    "to": 6
+   },
+   "id": "shema-2",
+   "title": "Baruch shem (said after Shema line)",
+   "english": "Blessed is the name of the glory of his kingship for ever and ever."
+  },
+  {
+   "he": "מַה־טֹּבוּ אֹהָלֶיךָ יַעֲקֹב מִשְׁכְּנֹתֶיךָ יִשְׂרָאֵל׃",
+   "src": {
+    "kind": "registry",
+    "id": "mah-tovu-1",
+    "from": 0,
+    "to": 5
+   },
+   "id": "mah-tovu-1",
+   "title": "Mah Tovu (first verse)",
+   "english": "How goodly are thy tents, O Jacob, Thy dwellings, O Israel!"
+  },
+  {
+   "he": "יְבָרֶכְךָ ה׳ וְיִשְׁמְרֶךָ׃",
+   "src": {
+    "kind": "registry",
+    "id": "bless-priestly-1",
+    "from": 0,
+    "to": 3
+   },
+   "id": "bless-priestly-1",
+   "title": "Priestly Blessing, line 1",
+   "english": "The LORD bless thee, and keep thee;"
+  },
+  {
+   "he": "יָאֵר ה׳ פָּנָיו אֵלֶיךָ וִיחֻנֶּךָּ׃",
+   "src": {
+    "kind": "registry",
+    "id": "bless-priestly-2",
+    "from": 0,
+    "to": 5
+   },
+   "id": "bless-priestly-2",
+   "title": "Priestly Blessing, line 2",
+   "english": "The LORD make His face to shine upon thee, and be gracious unto thee;"
+  },
+  {
+   "he": "יִשָּׂא ה׳ פָּנָיו אֵלֶיךָ וְיָשֵׂם לְךָ שָׁלוֹם׃",
+   "src": {
+    "kind": "registry",
+    "id": "bless-priestly-3",
+    "from": 0,
+    "to": 7
+   },
+   "id": "bless-priestly-3",
+   "title": "Priestly Blessing, line 3",
+   "english": "The LORD lift up His countenance upon thee, and give thee peace."
+  },
+  {
+   "he": "הֲשִׁיבֵנוּ ה׳ אֵלֶיךָ וְנָשׁוּבָה חַדֵּשׁ יָמֵינוּ כְּקֶדֶם׃",
+   "src": {
+    "kind": "registry",
+    "id": "hashivenu",
+    "from": 0,
+    "to": 7
+   },
+   "id": "hashivenu",
+   "title": "Hashivenu (sung as the Torah is returned; 'Chadesh yameinu kekedem')",
+   "english": "Turn Thou us unto Thee, O LORD, and we shall be turned; Renew our days as of old."
+  },
+  {
+   "he": "בָּרוּךְ כְּבוֹד־ה׳ מִמְּקוֹמוֹ׃",
+   "src": {
+    "kind": "registry",
+    "id": "kedushah-baruch",
+    "from": 0,
+    "to": 3
+   },
+   "id": "kedushah-baruch",
+   "title": "Baruch kevod Adonai mimkomo (Kedushah)",
+   "english": "Blessed be the glory of the LORD from his place."
+  },
+  {
+   "he": "לְכָה דוֹדִי לִקְרַאת כַּלָּה פְּנֵי שַׁבָּת נְקַבְּלָה׃",
+   "src": {
+    "kind": "registry",
+    "id": "lecha-dodi-1",
+    "from": 0,
+    "to": 7
+   },
+   "id": "lecha-dodi-1",
+   "title": "Lecha Dodi (refrain and first verse)",
+   "english": "Come, my beloved, to meet the bride; let us welcome the presence of Shabbat."
+  },
+  {
+   "he": "ה׳ עֹז לְעַמּוֹ יִתֵּן ה׳ יְבָרֵךְ אֶת־עַמּוֹ בַשָּׁלוֹם׃",
+   "src": {
+    "kind": "registry",
+    "id": "adonai-oz",
+    "from": 0,
+    "to": 8
+   },
+   "id": "adonai-oz",
+   "title": "Adonai oz l'amo yiten (closing line of Ein Kamocha)",
+   "english": "The LORD will give strength unto His people; The LORD will bless his people with peace."
+  },
+  {
+   "he": "זֶה־הַיּוֹם עָשָׂה ה׳ נָגִילָה וְנִשְׂמְחָה בוֹ׃",
+   "src": {
+    "kind": "registry",
+    "id": "hallel-118-24",
+    "from": 0,
+    "to": 6
+   },
+   "id": "hallel-118-24",
+   "title": "Hallel: 'This is the day the LORD made' (Psalm 118:24)",
+   "english": "This is the day which the LORD hath made; We will rejoice and be glad in it."
+  },
+  {
+   "he": "הוֹדוּ לַה׳ כִּי־טוֹב כִּי לְעוֹלָם חַסְדּוֹ׃",
+   "src": {
+    "kind": "registry",
+    "id": "hallel-118-1-4",
+    "from": 0,
+    "to": 6
+   },
+   "id": "hallel-118-1-4",
+   "title": "Hallel: 'Hodu' and the responsive opening of Psalm 118",
+   "english": "'O give thanks unto the LORD, for He is good, For His mercy endureth for ever."
+  },
+  {
+   "he": "גַּדְּלוּ לַה׳ אִתִּי וּנְרוֹמְמָה שְׁמוֹ יַחְדָּו׃",
+   "src": {
+    "kind": "registry",
+    "id": "gadlu",
+    "from": 0,
+    "to": 6
+   },
+   "id": "gadlu",
+   "title": "Gadlu l'Adonai iti (leader invites the congregation to magnify)",
+   "english": "O magnify the LORD with me, And let us exalt His name together."
+  },
+  {
+   "he": "אֲדֹנָי שְׂפָתַי תִּפְתָּח וּפִי יַגִּיד תְּהִלָּתֶךָ׃",
+   "src": {
+    "kind": "registry",
+    "id": "amidah-lips",
+    "from": 0,
+    "to": 6
+   },
+   "id": "amidah-lips",
+   "title": "Amidah preface: open my lips",
+   "english": "My Lord, open my lips, and my mouth will declare your praise."
+  },
+  {
+   "he": "אֲדוֹן עוֹלָם אֲשֶׁר מָלַךְ בְּטֶרֶם כָּל יְצִיר נִבְרָא׃",
+   "src": {
+    "kind": "registry",
+    "id": "adon-olam-1",
+    "from": 0,
+    "to": 8
+   },
+   "id": "adon-olam-1",
+   "title": "Adon Olam",
+   "english": "Lord of the world, who reigned before any form was created."
+  },
+  {
+   "he": "עֵץ חַיִּים הִיא לַמַּחֲזִיקִים בָּהּ וְתוֹמְכֶיהָ מְאֻשָּׁר׃",
+   "src": {
+    "kind": "registry",
+    "id": "etz-chaim",
+    "from": 0,
+    "to": 7
+   },
+   "id": "etz-chaim",
+   "title": "Etz chaim hi (sung as the Torah is returned to the ark)",
+   "english": "It is a tree of life to those who hold fast to it, and those who support it are happy. Its ways are ways of pleasantness and all its paths are peace. Length of days is in its right hand, in its left hand riches and honour. The LORD desired, for the sake of his righteousness, to make the Torah great and glorious."
+  },
+  {
+   "he": "מִי־כָמֹכָה בָּאֵלִם ה׳ מִי כָּמֹכָה נֶאְדָּר בַּקֹּדֶשׁ נוֹרָא תְהִלֹּת עֹשֵׂה פֶלֶא׃",
+   "src": {
+    "kind": "registry",
+    "id": "mi-chamocha-1",
+    "from": 0,
+    "to": 11
+   },
+   "id": "mi-chamocha-1",
+   "title": "Mi Chamocha",
+   "english": "Who is like unto Thee, O LORD, among the mighty? Who is like unto Thee, glorious in holiness, Fearful in praises, doing wonders?"
+  },
+  {
+   "he": "עֹשֶׂה שָׁלוֹם בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן׃",
+   "src": {
+    "kind": "registry",
+    "id": "oseh-shalom",
+    "from": 0,
+    "to": 12
+   },
+   "id": "oseh-shalom",
+   "title": "Oseh shalom (end of the Amidah and of Kaddish)",
+   "english": "He who makes peace in his high places, may he make peace for us and for all Israel; and say: Amen."
+  },
+  {
+   "he": "אֵין־כָּמוֹךָ בָאֱלֹהִים אֲדֹנָי וְאֵין כְּמַעֲשֶׂיךָ׃",
+   "src": {
+    "kind": "registry",
+    "id": "ein-kamocha",
+    "from": 0,
+    "to": 5
+   },
+   "id": "ein-kamocha",
+   "title": "Ein Kamocha (opening line of the Torah-ark prayer)",
+   "english": "There is none like unto Thee among the gods, O Lord, And there are no works like Thine."
+  },
+  {
+   "he": "אַשְׁרֵי יוֹשְׁבֵי בֵיתֶךָ עוֹד יְהַלְלוּךָ סֶּלָה׃",
+   "src": {
+    "kind": "registry",
+    "id": "ashrei-84-5",
+    "from": 0,
+    "to": 6
+   },
+   "id": "ashrei-84-5",
+   "title": "Ashrei yoshvei veitecha (first line of Ashrei)",
+   "english": "Happy are they that dwell in Thy house, they are ever praising Thee. Selah"
+  }
+ ],
+ "blessings": [
+  {
+   "he": "בּוֹרֵא פְּרִי הַגָּפֶן׃",
+   "src": {
+    "kind": "registry",
+    "id": "kiddush-wine-1",
+    "from": 6,
+    "to": 9
+   },
+   "id": "kiddush-wine-1",
+   "title": "Blessing over wine",
+   "formula": 6,
+   "tells": 7
+  },
+  {
+   "he": "הַמּוֹצִיא לֶחֶם מִן",
+   "src": {
+    "kind": "registry",
+    "id": "hamotzi",
+    "from": 6,
+    "to": 9
+   },
+   "id": "hamotzi",
+   "title": "HaMotzi (blessing over bread)",
+   "formula": 6,
+   "tells": 6
+  },
+  {
+   "he": "לְהַדְלִיק נֵר שֶׁל שַׁבָּת׃",
+   "src": {
+    "kind": "registry",
+    "id": "candle-shabbat",
+    "from": 10,
+    "to": 14
+   },
+   "id": "candle-shabbat",
+   "title": "Shabbat candle blessing",
+   "formula": 6,
+   "tells": 12
+  },
+  {
+   "he": "אֲשֶׁר בָּחַר בָּנוּ מִכָּל־הָעַמִּים",
+   "src": {
+    "kind": "registry",
+    "id": "torah-bless-1",
+    "from": 6,
+    "to": 10
+   },
+   "id": "torah-bless-1",
+   "title": "Torah blessing (before reading/study)",
+   "formula": 6,
+   "tells": 8
+  },
+  {
+   "he": "אֲשֶׁר נָתַן לָנוּ",
+   "src": {
+    "kind": "registry",
+    "id": "torah-bless-2",
+    "from": 6,
+    "to": 9
+   },
+   "id": "torah-bless-2",
+   "title": "Torah blessing (after reading)",
+   "formula": 6,
+   "tells": 7
+  },
+  {
+   "he": "הַזָּן אֶת הָעוֹלָם",
+   "src": {
+    "kind": "registry",
+    "id": "birkat-hamazon-1",
+    "from": 6,
+    "to": 9
+   },
+   "id": "birkat-hamazon-1",
+   "title": "Birkat Hamazon opener (HaZan et haolam)",
+   "formula": 6,
+   "tells": 6
+  },
+  {
+   "he": "הַגּוֹמֵל לְחַיָּבִים טוֹבוֹת",
+   "src": {
+    "kind": "registry",
+    "id": "hagomel",
+    "from": 6,
+    "to": 9
+   },
+   "id": "hagomel",
+   "title": "Birkat Hagomel (after recovery or safe travel) and the congregation's response",
+   "formula": 6,
+   "tells": 6
+  },
+  {
+   "he": "אֲשֶׁר בָּחַר בִּנְבִיאִים טוֹבִים",
+   "src": {
+    "kind": "registry",
+    "id": "haftarah-before",
+    "from": 6,
+    "to": 10
+   },
+   "id": "haftarah-before",
+   "title": "Haftarah blessings before the reading",
+   "formula": 6,
+   "tells": 8
+  },
+  {
+   "he": "בּוֹרֵא מִינֵי בְשָׂמִים׃",
+   "src": {
+    "kind": "registry",
+    "id": "havdalah-spices",
+    "from": 6,
+    "to": 9
+   },
+   "id": "havdalah-spices",
+   "title": "Havdalah: blessing over spices (besamim)",
+   "formula": 6,
+   "tells": 7
+  },
+  {
+   "he": "בּוֹרֵא מְאוֹרֵי הָאֵשׁ׃",
+   "src": {
+    "kind": "registry",
+    "id": "havdalah-flame",
+    "from": 6,
+    "to": 9
+   },
+   "id": "havdalah-flame",
+   "title": "Havdalah: blessing over the flame",
+   "formula": 6,
+   "tells": 7
+  },
+  {
+   "he": "הַמַּבְדִּיל בֵּין קֹדֶשׁ",
+   "src": {
+    "kind": "registry",
+    "id": "havdalah-hamavdil",
+    "from": 6,
+    "to": 9
+   },
+   "id": "havdalah-hamavdil",
+   "title": "Havdalah: Hamavdil bein kodesh lechol",
+   "formula": 6,
+   "tells": 6
+  },
+  {
+   "he": "לְהַדְלִיק נֵר חֲנֻכָּה׃",
+   "src": {
+    "kind": "registry",
+    "id": "hanukkah-candle",
+    "from": 10,
+    "to": 13
+   },
+   "id": "hanukkah-candle",
+   "title": "Hanukkah: blessing to light the candles",
+   "formula": 6,
+   "tells": 12
+  },
+  {
+   "he": "שֶׁעָשָׂה נִסִּים לַאֲבוֹתֵינוּ",
+   "src": {
+    "kind": "registry",
+    "id": "hanukkah-nissim",
+    "from": 6,
+    "to": 9
+   },
+   "id": "hanukkah-nissim",
+   "title": "Hanukkah: sheasah nissim (who performed miracles)",
+   "formula": 6,
+   "tells": 6
+  },
+  {
+   "he": "שֶׁהֶחֱיָינוּ וְקִיְּמָנוּ וְהִגִּיעָנוּ",
+   "src": {
+    "kind": "registry",
+    "id": "shehecheyanu",
+    "from": 6,
+    "to": 9
+   },
+   "id": "shehecheyanu",
+   "title": "Shehecheyanu (first-time and festival blessing)",
+   "formula": 6,
+   "tells": 6
+  },
+  {
+   "he": "בְּמִצְוֹתָיו וְצִוָּנוּ לֵישֵׁב בַּסֻּכָּה׃",
+   "src": {
+    "kind": "registry",
+    "id": "leshev-basukkah",
+    "from": 8,
+    "to": 12
+   },
+   "id": "leshev-basukkah",
+   "title": "Leshev basukkah (blessing to dwell in the sukkah)",
+   "formula": 6,
+   "tells": 10
+  },
+  {
+   "he": "קִדְּשָׁנוּ בְּמִצְוֹתָיו וְרָצָה בָנוּ",
+   "src": {
+    "kind": "registry",
+    "id": "kiddush-shabbat-eve",
+    "from": 7,
+    "to": 11
+   },
+   "id": "kiddush-shabbat-eve",
+   "title": "Kiddush for Shabbat evening (the sanctification blessing)",
+   "formula": 6,
+   "tells": 9
+  }
+ ],
+ "kiddushInserts": [
+  {
+   "he": "חַג הַמַּצּוֹת הַזֶּה זְמַן חֵרוּתֵנוּ׃",
+   "src": {
+    "kind": "registry",
+    "id": "kiddush-festival-pesach",
+    "from": 0,
+    "to": 5
+   },
+   "id": "kiddush-festival-pesach",
+   "title": "Festival Kiddush insert: Pesach"
+  },
+  {
+   "he": "חַג הַשָׁבוּעוֹת הַזֶּה זְמַן מַתַּן תּוֹרָתֵינוּ׃",
+   "src": {
+    "kind": "registry",
+    "id": "kiddush-festival-shavuot",
+    "from": 0,
+    "to": 6
+   },
+   "id": "kiddush-festival-shavuot",
+   "title": "Festival Kiddush insert: Shavuot"
+  },
+  {
+   "he": "חַג הַסֻּכּוֹת הַזֶּה זְמַן שִׂמְחָתֵנוּ׃",
+   "src": {
+    "kind": "registry",
+    "id": "kiddush-festival-sukkot",
+    "from": 0,
+    "to": 5
+   },
+   "id": "kiddush-festival-sukkot",
+   "title": "Festival Kiddush insert: Sukkot"
+  },
+  {
+   "he": "שְׁמִינִי עֲצֶרֶת הַחַג הַזֶּה זְמַן שִׂמְחָתֵנוּ׃",
+   "src": {
+    "kind": "registry",
+    "id": "kiddush-festival-shemini",
+    "from": 0,
+    "to": 6
+   },
+   "id": "kiddush-festival-shemini",
+   "title": "Festival Kiddush insert: Shemini Atzeret"
+  }
+ ]
+}

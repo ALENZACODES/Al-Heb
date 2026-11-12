@@ -1,0 +1,148 @@
+{
+ "schema": "alef-g5-sukkah/1",
+ "note": "Sukkah Builder. The rules are the traditional ones (Mishnah, tractate Sukkah, chapter 1) in plain words. The app's own pages say only that a sukkah is a temporary hut with a roof of branches (data/library/articles.json, sukkot); every rule here is held for the owner's review, because details differ between communities. The Torah line is Leviticus 23:42 from the app's Torah text.",
+ "review": "halachic detail: the four rules below are traditional rules, not yet stated in the app; check before release",
+ "rules": {
+  "sky": "The roof covering must be open to the sky: not under a tree, a roof or a balcony.",
+  "walls": "A sukkah needs at least two full walls and part of a third.",
+  "schach": "The roof covering (schach) is plant material that grew from the ground and has been cut: branches, bamboo, palm leaves. Not metal, plastic or a living tree.",
+  "shade": "Inside, in the daytime, there should be more shade than sun."
+ },
+ "steps": [
+  {
+   "id": "place",
+   "ask": "Where will you build it?",
+   "options": [
+    {
+     "id": "yard",
+     "en": "In the yard, open to the sky",
+     "ok": true
+    },
+    {
+     "id": "tree",
+     "en": "Under a big shady tree",
+     "ok": false,
+     "rule": "sky"
+    },
+    {
+     "id": "porch",
+     "en": "Under the roof of a covered porch",
+     "ok": false,
+     "rule": "sky"
+    },
+    {
+     "id": "balcony",
+     "en": "On a top-floor balcony with nothing above",
+     "ok": true
+    }
+   ]
+  },
+  {
+   "id": "walls",
+   "ask": "How many walls?",
+   "options": [
+    {
+     "id": "w4",
+     "en": "Four walls with a doorway",
+     "ok": true
+    },
+    {
+     "id": "w3",
+     "en": "Three walls",
+     "ok": true
+    },
+    {
+     "id": "w25",
+     "en": "Two full walls and part of a third",
+     "ok": true
+    },
+    {
+     "id": "w1",
+     "en": "One wall",
+     "ok": false,
+     "rule": "walls"
+    }
+   ]
+  },
+  {
+   "id": "roof",
+   "ask": "What goes on the roof?",
+   "options": [
+    {
+     "id": "branches",
+     "en": "Branches cut from a tree",
+     "ok": true
+    },
+    {
+     "id": "bamboo",
+     "en": "Bamboo poles",
+     "ok": true
+    },
+    {
+     "id": "palm",
+     "en": "Cut palm leaves",
+     "ok": true
+    },
+    {
+     "id": "metal",
+     "en": "A sheet of metal",
+     "ok": false,
+     "rule": "schach"
+    },
+    {
+     "id": "tarp",
+     "en": "A plastic tarp",
+     "ok": false,
+     "rule": "schach"
+    },
+    {
+     "id": "living",
+     "en": "The branches of a tree still growing",
+     "ok": false,
+     "rule": "schach"
+    }
+   ]
+  },
+  {
+   "id": "cover",
+   "ask": "How thick is the roof?",
+   "options": [
+    {
+     "id": "shady",
+     "en": "More shade than sun, with gaps to see a few stars",
+     "ok": true
+    },
+    {
+     "id": "thin",
+     "en": "So thin that the sun is stronger than the shade",
+     "ok": false,
+     "rule": "shade"
+    }
+   ]
+  }
+ ],
+ "verse": {
+  "he": "בַּסֻּכֹּת תֵּשְׁבוּ שִׁבְעַת יָמִים",
+  "ref": {
+   "book": "leviticus",
+   "chapter": 23,
+   "verse": 42
+  },
+  "from": 0,
+  "to": 4,
+  "src": {
+   "kind": "verse"
+  },
+  "en": "In booths you shall live seven days"
+ },
+ "name": {
+  "he": "סֻכָּה",
+  "en": "booth, hut",
+  "tr": "sukkah",
+  "src": {
+   "kind": "days",
+   "day": "sukkot",
+   "i": 0
+  }
+ }
+}

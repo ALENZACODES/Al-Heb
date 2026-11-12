@@ -264,6 +264,26 @@ Home shows a backup reminder after three finished lessons (`docs/progress/BACKUP
 | `g4-tourist` | hide | Everyday Israel game (lane 4); reached from the Everyday Israel section of the games hub, and search finds it by name. Preview until a native speaker reviews its Hebrew. |
 | `g4-emergency` | hide | Everyday Israel game (lane 4); reached from the Everyday Israel section of the games hub, and search finds it by name. Preview until a native speaker reviews its Hebrew. |
 | `g4-pharmacy` | hide | Everyday Israel game (lane 4); reached from the Everyday Israel section of the games hub, and search finds it by name. Preview until a native speaker reviews its Hebrew. |
+| `g5-simanim` | hide | Holiday, Shabbat and prayer game (lane 5); reached from its section of the `games` hub, and search finds it by name. Preview until a teacher reviews the Hebrew marked for review. |
+| `g5-harvest` | hide | Holiday, Shabbat and prayer game (lane 5); reached from its section of the `games` hub, and search finds it by name. Preview until a teacher reviews the Hebrew marked for review. |
+| `g5-grogger` | hide | Holiday, Shabbat and prayer game (lane 5); reached from its section of the `games` hub, and search finds it by name. Preview until a teacher reviews the Hebrew marked for review. |
+| `g5-fireworks` | hide | Holiday, Shabbat and prayer game (lane 5); reached from its section of the `games` hub, and search finds it by name. Preview until a teacher reviews the Hebrew marked for review. |
+| `g5-table` | hide | Holiday, Shabbat and prayer game (lane 5); reached from its section of the `games` hub, and search finds it by name. Preview until a teacher reviews the Hebrew marked for review. |
+| `g5-greet` | hide | Holiday, Shabbat and prayer game (lane 5); reached from its section of the `games` hub, and search finds it by name. Preview until a teacher reviews the Hebrew marked for review. |
+| `g5-shofar` | hide | Holiday, Shabbat and prayer game (lane 5); reached from its section of the `games` hub, and search finds it by name. Preview until a teacher reviews the Hebrew marked for review. |
+| `g5-kippur` | hide | Holiday, Shabbat and prayer game (lane 5); reached from its section of the `games` hub, and search finds it by name. Preview until a teacher reviews the Hebrew marked for review. |
+| `g5-gifts` | hide | Holiday, Shabbat and prayer game (lane 5); reached from its section of the `games` hub, and search finds it by name. Preview until a teacher reviews the Hebrew marked for review. |
+| `g5-plate` | hide | Holiday, Shabbat and prayer game (lane 5); reached from its section of the `games` hub, and search finds it by name. Preview until a teacher reviews the Hebrew marked for review. |
+| `g5-questions` | hide | Holiday, Shabbat and prayer game (lane 5); reached from its section of the `games` hub, and search finds it by name. Preview until a teacher reviews the Hebrew marked for review. |
+| `g5-omer` | hide | Holiday, Shabbat and prayer game (lane 5); reached from its section of the `games` hub, and search finds it by name. Preview until a teacher reviews the Hebrew marked for review. |
+| `g5-sukkah` | hide | Holiday, Shabbat and prayer game (lane 5); reached from its section of the `games` hub, and search finds it by name. Preview until a teacher reviews the Hebrew marked for review. |
+| `g5-species` | hide | Holiday, Shabbat and prayer game (lane 5); reached from its section of the `games` hub, and search finds it by name. Preview until a teacher reviews the Hebrew marked for review. |
+| `g5-steps` | hide | Holiday, Shabbat and prayer game (lane 5); reached from its section of the `games` hub, and search finds it by name. Preview until a teacher reviews the Hebrew marked for review. |
+| `g5-stars` | hide | Holiday, Shabbat and prayer game (lane 5); reached from its section of the `games` hub, and search finds it by name. Preview until a teacher reviews the Hebrew marked for review. |
+| `g5-bless` | hide | Holiday, Shabbat and prayer game (lane 5); reached from its section of the `games` hub, and search finds it by name. Preview until a teacher reviews the Hebrew marked for review. |
+| `g5-mend` | hide | Holiday, Shabbat and prayer game (lane 5); reached from its section of the `games` hub, and search finds it by name. Preview until a teacher reviews the Hebrew marked for review. |
+| `g5-readings` | hide | Holiday, Shabbat and prayer game (lane 5); reached from its section of the `games` hub, and search finds it by name. Preview until a teacher reviews the Hebrew marked for review. |
+| `g5-scroll` | hide | Holiday, Shabbat and prayer game (lane 5); reached from its section of the `games` hub, and search finds it by name. Preview until a teacher reviews the Hebrew marked for review. |
 | `wordfinder` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
 | `tugowar` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
 | `vowelcatcher` | keep | Game; reached from the `games` hub. Preview until native review of its words. |

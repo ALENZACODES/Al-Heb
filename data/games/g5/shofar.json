@@ -1,0 +1,129 @@
+{
+ "schema": "alef-g5-shofar/1",
+ "note": "Shofar Echo. The four calls as rhythm patterns (no audio). teruah is the word-list record; the other call names are not in the app data yet and carry a review note. The sets (tekiah-shevarim-teruah-tekiah and the two shorter ones) and the nine short notes of teruah are the common Ashkenazi practice; communities differ. Verses are word slices of the app's Torah text.",
+ "calls": [
+  {
+   "he": "תְּקִיעָה",
+   "en": "one long blast",
+   "tr": "tekiah",
+   "src": {
+    "kind": "review"
+   },
+   "review": "call name not in app data; common pointing",
+   "id": "tekiah",
+   "beats": [
+    "long"
+   ]
+  },
+  {
+   "he": "שְׁבָרִים",
+   "en": "three broken blasts",
+   "tr": "shevarim",
+   "src": {
+    "kind": "review"
+   },
+   "review": "call name not in app data as a call (words.json has the word only as a plural form); common pointing",
+   "id": "shevarim",
+   "beats": [
+    "mid",
+    "mid",
+    "mid"
+   ]
+  },
+  {
+   "he": "תְּרוּעָה",
+   "en": "shout, cry",
+   "tr": "teru'ah",
+   "src": {
+    "kind": "words",
+    "id": "he3d7bfde"
+   },
+   "id": "teruah",
+   "beats": [
+    "short",
+    "short",
+    "short",
+    "short",
+    "short",
+    "short",
+    "short",
+    "short",
+    "short"
+   ],
+   "call": "nine short staccato notes"
+  },
+  {
+   "he": "תְּקִיעָה גְּדוֹלָה",
+   "en": "one very long blast",
+   "tr": "tekiah gedolah",
+   "src": {
+    "kind": "review"
+   },
+   "review": "call name not in app data; common pointing",
+   "id": "gedolah",
+   "beats": [
+    "xlong"
+   ]
+  }
+ ],
+ "sets": [
+  {
+   "id": "tashrat",
+   "en": "Tekiah, shevarim-teruah, tekiah",
+   "calls": [
+    "tekiah",
+    "shevarim",
+    "teruah",
+    "tekiah"
+   ]
+  },
+  {
+   "id": "tashat",
+   "en": "Tekiah, shevarim, tekiah",
+   "calls": [
+    "tekiah",
+    "shevarim",
+    "tekiah"
+   ]
+  },
+  {
+   "id": "tarat",
+   "en": "Tekiah, teruah, tekiah",
+   "calls": [
+    "tekiah",
+    "teruah",
+    "tekiah"
+   ]
+  }
+ ],
+ "verses": [
+  {
+   "he": "זִכְרוֹן תְּרוּעָה",
+   "ref": {
+    "book": "leviticus",
+    "chapter": 23,
+    "verse": 24
+   },
+   "from": 11,
+   "to": 13,
+   "src": {
+    "kind": "verse"
+   },
+   "en": "a remembrance with blasts of the shofar"
+  },
+  {
+   "he": "יוֹם תְּרוּעָה",
+   "ref": {
+    "book": "numbers",
+    "chapter": 29,
+    "verse": 1
+   },
+   "from": 11,
+   "to": 13,
+   "src": {
+    "kind": "verse"
+   },
+   "en": "a day of blowing the shofar"
+  }
+ ]
+}

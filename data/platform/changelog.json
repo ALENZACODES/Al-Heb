@@ -4,6 +4,16 @@
  "entries": [
   {
    "date": "2026-11-12",
+   "hash": "d16c812c1",
+   "text": "Cast backdrop helper moves to its own file (src/games/cast-env.js) so Brain Lab's download stays under its budget."
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "4f4d3d4b1",
+   "text": "Release build: precache list and change list rebuilt for the cast backdrops inside the game pages"
+  },
+  {
+   "date": "2026-11-12",
    "hash": "49481613c",
    "text": "The 28 Level 3–9 game pages show the Ari, Noa and Rimon backdrop inside the game, above the controls."
   },
@@ -191,16 +201,6 @@
    "date": "2026-11-12",
    "hash": "f574bb40d",
    "text": "Cram, leeches and Mastery Map (H3, H4, H5): #/cram sizes a lesson review to 5 to 30 minutes from the learner's own measured pace (an estimate of 12 seconds a card until 20 cards…"
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "b91ee9a08",
-   "text": "Objective cards and honest lesson metadata: a lesson opens with What You Will Learn (the authors' goals, what the quick check asks, the computed pass mark) and the learner's own…"
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "540018dc7",
-   "text": "Accent run 8 list: the Ashkenazi rows of the festival-day Kiddush verses"
   }
  ]
 }

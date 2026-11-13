@@ -167,3 +167,74 @@ export function board(b, id) {
   if (r.role === 'other-kind') return { ok: false, text: `That goes to ${r.to.en}, but it is a ${ride(r.kind)}. Your ticket is for the ${ride(b.want.kind)}.` };
   return { ok: false, text: `You are on the way to ${r.to.en}, not ${b.want.to.en}.` };
 }
+
+// ---- money: shekels in words, coins to pay with, change to give ------------------------------------------------------------------
+export const COINS = Object.freeze([10, 5, 2, 1]);
+/** A shekel amount from 1 to 19 in Hebrew words, from the stored number forms and the stored noun (שקל אחד, שני שקלים, חמישה שקלים). */
+export function amountHe(pack, n) {
+  const list = (pack && pack.numbers && pack.numbers.list) || []; const row = list.find((x) => x.n === n);
+  const noun = ((pack && pack.nouns) || []).find((x) => x.en[0] === 'shekel');
+  if (!row || !noun || n < 1 || n > 19) return '';
+  if (n === 1) return `${noun.he} ${row.m}`;
+  if (n === 2) return `${row.mConstruct} ${noun.pl}`;
+  return `${row.m} ${noun.pl}`;
+}
+/** The fewest coins that make an amount. @param {number} n */
+export function fewestCoins(n) { const out = []; let left = n; for (const c of COINS) while (left >= c) { out.push(c); left -= c; } return out; }
+/** A money task: pay a price exactly, or give the change from a 20-shekel note. The amount to make is 1 to 19. */
+export function newMoneyTask(pack, rng = Math.random) {
+  const kind = rng() < 0.5 ? 'pay' : 'change'; const price = 1 + Math.floor(rng() * 19);
+  const target = kind === 'pay' ? price : 20 - price;
+  return { kind, price, target, priceHe: amountHe(pack, price), ask: kind === 'pay' ? 'Pay this price exactly, with as few coins as you can.' : 'The buyer hands you a 20-shekel note for this price. Give the change, with as few coins as you can.' };
+}
+/** @param {{target:number}} task @param {number[]} picked @returns {{exact:boolean, fewest:boolean, sum:number, best:number[]}} */
+export function checkCoins(task, picked) {
+  const sum = picked.reduce((a, c) => a + c, 0); const best = fewestCoins(task.target);
+  return { exact: sum === task.target, fewest: sum === task.target && picked.length === best.length, sum, best };
+}
+
+// ---- the market stall ------------------------------------------------------------------------------------------------------------
+/** The stored lines a buyer can say at the stall. */
+export const STALL_LINES = Object.freeze({ expensive: 't-too-expensive', discount: 't-discount', take: 't-take-it', leave: 't-dont-want' });
+const STALL_GOODS = ['bowl', 'plate', 'glass', 'bottle', 'towel', 'chair', 'key'];
+export function stallLine(pack, key) { const p = ((pack && pack.phrases) || []).find((x) => x.id === STALL_LINES[key]); return p ? { he: p.he, en: p.en[0] } : null; }
+/** A new stall: something to buy, the price the keeper opens with, and the lowest price the keeper will take (never shown). */
+export function newStall(pack, rng = Math.random) {
+  const nouns = ((pack && pack.nouns) || []).filter((n) => STALL_GOODS.includes(n.en[0]));
+  const thing = nouns[Math.floor(rng() * nouns.length)] || { he: '', en: [''] };
+  const open = 60 + 10 * Math.floor(rng() * 15); const floor = 10 * Math.round((open * (0.6 + 0.15 * rng())) / 10);
+  return { thing: { he: thing.he, en: thing.en[0] }, open, floor, price: open, drops: 0, asked: false, over: false, deal: false, paid: 0, said: `${open} ₪` };
+}
+/**
+ * One move at the stall. `move` is a stored line (expensive, discount, take, leave) or {offer: shekels}.
+ * Saying it is too expensive brings the price down twice; a third time the keeper turns away. Asking for a discount works once.
+ * An offer at or above the keeper's lowest price is taken; a little under it gets a counter-price; far under it ends the talk.
+ */
+export function stallMove(s, move) {
+  if (s.over) return s;
+  const step = Math.max(10, 10 * Math.round(s.open / 100));
+  const end = (deal, paid, said) => ({ ...s, over: true, deal, paid, said });
+  if (move === 'take') return end(true, s.price, 'Sold.');
+  if (move === 'leave') return end(false, 0, 'The keeper shrugs. No sale.');
+  if (move === 'expensive') {
+    if (s.drops >= 2 || s.price <= s.floor) return end(false, 0, 'The keeper has heard enough and turns to the next buyer.');
+    const price = Math.max(s.floor, s.price - step); return { ...s, price, drops: s.drops + 1, said: `${price} ₪` };
+  }
+  if (move === 'discount') {
+    if (s.asked) return { ...s, said: `No more off. ${s.price} ₪` };
+    const price = Math.max(s.floor, s.price - step / 2); return { ...s, price, asked: true, said: `${price} ₪` };
+  }
+  const offer = Math.floor(Number(move && move.offer));
+  if (!Number.isFinite(offer) || offer <= 0) return { ...s, said: `Name a price in shekels. ${s.price} ₪` };
+  if (offer >= s.price) return end(true, s.price, 'Sold.');
+  if (offer >= s.floor) return end(true, offer, 'Sold.');
+  if (offer >= 0.8 * s.floor) { const price = Math.max(s.floor, Math.min(s.price, 5 * Math.round((s.price + offer) / 10))); return { ...s, price, said: `${price} ₪` }; }
+  return end(false, 0, 'The keeper laughs at that price and turns away.');
+}
+/** How the buying went, in plain words. */
+export function stallResult(s) {
+  if (!s.over) return '';
+  if (!s.deal) return 'No deal this time.';
+  const off = s.open - s.paid;
+  return off <= 0 ? `You paid the first price, ${s.paid} shekels. Try asking for less next time.` : `You paid ${s.paid} shekels, ${off} less than the first price.${s.paid === s.floor ? ' That was the lowest the keeper would go.' : ''}`;
+}

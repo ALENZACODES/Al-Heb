@@ -7,12 +7,12 @@
 // Tests inject ctx.tripData {pack}, ctx.rng.
 import { el, heText, storeGet, storeSet } from '../curriculum/dom.js';
 import { loadJSON } from '../curriculum/data.js';
-import { TRIP_KEY, STOPS, MAX_DAYS, israelPlaces, linesFor, normalizePlan, addDay, removeDay, toggleStop, planText, menu, line, newVisit, readOrder, heardAs, bill, checkVisit, newBoard, board } from './trip.js';
+import { TRIP_KEY, STOPS, MAX_DAYS, israelPlaces, linesFor, normalizePlan, addDay, removeDay, toggleStop, planText, menu, line, newVisit, readOrder, heardAs, bill, checkVisit, newBoard, board, COINS, newMoneyTask, checkCoins, newStall, stallMove, stallResult, stallLine } from './trip.js';
 
 export const COPY = Object.freeze({
   title: 'Israel Trip',
   lead: 'Plan your days and take the Hebrew you will need for each stop. Then practise ordering a meal.',
-  planner: 'Trip Planner', restaurant: 'At The Restaurant', station: 'At The Station',
+  planner: 'Trip Planner', restaurant: 'At The Restaurant', station: 'At The Station', money: 'Shekels And Coins', market: 'At The Market',
   stationHint: 'Read the board and press the line you would board.',
   noDays: 'No days yet. Pick a place and add your first day.',
   full: `A plan holds up to ${MAX_DAYS} days.`,
@@ -52,7 +52,7 @@ export async function mount(root, ctx = {}) {
   const panel = el('div', { id: 'tp-panel' }); const tabs = {};
   const show = (name) => { for (const [k, b] of Object.entries(tabs)) b.setAttribute('aria-pressed', String(k === name)); panel.replaceChildren(views[name]()); };
   const bar = el('div', { class: 'tp-tabs', role: 'group', 'aria-label': 'Parts of Israel Trip' });
-  for (const name of ['planner', 'restaurant', 'station']) { tabs[name] = el('button', { type: 'button', class: 'btn secondary', 'data-tab': name, 'aria-pressed': 'false', onclick: () => show(name) }, COPY[name]); bar.append(tabs[name]); }
+  for (const name of ['planner', 'restaurant', 'station', 'money', 'market']) { tabs[name] = el('button', { type: 'button', class: 'btn secondary', 'data-tab': name, 'aria-pressed': 'false', onclick: () => show(name) }, COPY[name]); bar.append(tabs[name]); }
   wrap.append(bar, panel);
 
   function planner() {
@@ -165,7 +165,47 @@ export async function mount(root, ctx = {}) {
     return host;
   }
 
-  const views = { planner, restaurant, station };
+  function money() {
+    const ROUNDS = 6; let n = 0, right = 0, best = 0;
+    const host = el('div', { class: 'tp-card' });
+    const round = () => {
+      if (n >= ROUNDS) { host.replaceChildren(el('h2', {}, 'How It Went'), el('p', { id: 'tp-money-score', role: 'status' }, `${right} of ${ROUNDS} right, ${best} with the fewest coins.`), el('button', { type: 'button', class: 'btn', onclick: () => show('money') }, 'Another Six')); return; }
+      const task = newMoneyTask(pack, rng); const picked = []; let done = false;
+      const tray = el('p', { id: 'tp-tray', 'aria-live': 'polite' }, 'No coins yet.'); const out = el('div', { id: 'tp-money-result', role: 'status', 'aria-live': 'polite' });
+      const paint = () => { tray.textContent = picked.length ? `Your coins: ${picked.join(', ')}` : 'No coins yet.'; };
+      const check = () => {
+        if (done) return; if (!picked.length) { out.replaceChildren(el('p', {}, 'Pick at least one coin.')); return; }
+        done = true; n++; const r = checkCoins(task, picked); if (r.exact) right++; if (r.fewest) best++;
+        out.replaceChildren(el('p', {}, el('strong', {}, r.fewest ? 'Right, with the fewest coins.' : r.exact ? `Right amount. Fewer coins would do: ${r.best.join(', ')}.` : `That makes ${r.sum}. It should be ${task.target}: ${r.best.join(', ')}.`)),
+          el('button', { type: 'button', class: 'btn', id: 'tp-money-next', onclick: round }, n >= ROUNDS ? 'See My Score' : 'Next'));
+      };
+      host.replaceChildren(el('h2', {}, task.kind === 'pay' ? 'Pay The Price' : 'Give The Change'), el('p', { class: 'muted' }, `${n + 1} of ${ROUNDS}`), el('p', {}, task.ask),
+        el('p', { id: 'tp-price' }, heText(task.priceHe, 'alef-he tp-he')),
+        el('div', { class: 'tp-row', role: 'group', 'aria-label': 'Coins' }, COINS.map((c) => el('button', { type: 'button', class: 'btn secondary', 'data-coin': String(c), onclick: () => { if (!done && picked.length < 12) { picked.push(c); paint(); } } }, `${c} \u20AA`)),
+          el('button', { type: 'button', class: 'btn secondary', id: 'tp-coins-clear', onclick: () => { if (!done) { picked.length = 0; paint(); } } }, 'Start Again')),
+        tray, el('div', { class: 'tp-row' }, el('button', { type: 'button', class: 'btn', id: 'tp-money-check', onclick: check }, 'Check')), out);
+    };
+    round();
+    return host;
+  }
+
+  function market() {
+    let s = newStall(pack, rng);
+    const host = el('div', { class: 'tp-card' });
+    const paint = () => {
+      const offer = /** @type {HTMLInputElement} */ (el('input', { type: 'text', id: 'tp-offer', inputmode: 'numeric', autocomplete: 'off', 'aria-label': 'Your price in shekels' }));
+      const act = (move) => { s = stallMove(s, move); paint(); };
+      host.replaceChildren(...kids(el('h2', {}, 'The Stall'), el('p', {}, 'You want to buy: ', heText(s.thing.he, 'alef-he tp-he'), el('span', { class: 'muted' }, s.thing.en)),
+        el('p', { id: 'tp-keeper' }, el('strong', {}, 'Keeper: '), s.said),
+        s.over ? [el('p', { id: 'tp-market-result', role: 'status' }, el('strong', {}, stallResult(s))), el('button', { type: 'button', class: 'btn', id: 'tp-market-again', onclick: () => show('market') }, 'Another Stall')]
+          : [el('p', {}, 'What do you say?'), el('div', { class: 'tp-row' }, ['expensive', 'discount', 'take', 'leave'].map((k) => el('button', { type: 'button', class: 'btn', 'data-say': k, onclick: () => act(k) }, kids(pair(stallLine(pack, k)))))),
+            el('label', { for: 'tp-offer' }, 'Or Name Your Price In Shekels'), offer, el('div', { class: 'tp-row' }, el('button', { type: 'button', class: 'btn secondary', id: 'tp-offer-go', onclick: () => act({ offer: offer.value }) }, 'Offer This Price'))]));
+    };
+    paint();
+    return host;
+  }
+
+  const views = { planner, restaurant, station, money, market };
   root.replaceChildren(wrap);
   show(ctx.query && views[ctx.query.part] ? ctx.query.part : 'planner');
   return () => { alive = false; };

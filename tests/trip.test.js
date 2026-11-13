@@ -154,3 +154,48 @@ test('the screen: five boards are played and scored', async () => {
   assert.equal(host.querySelector('#tp-station-score').textContent, '4 of 5 right.');
   unmount();
 });
+
+test('money: shekel amounts in stored Hebrew words, the fewest coins, paying and giving change', async () => {
+  const T = await import('../src/trip/trip.js');
+  assert.equal(T.amountHe(pack, 1), 'שקל אחד'); assert.equal(T.amountHe(pack, 2), 'שני שקלים'); assert.equal(T.amountHe(pack, 5), 'חמישה שקלים'); assert.equal(T.amountHe(pack, 15), 'חמישה עשר שקלים');
+  assert.equal(T.amountHe(pack, 0), ''); assert.equal(T.amountHe(pack, 20), '');
+  for (let n = 1; n <= 19; n++) { assert.ok(T.amountHe(pack, n)); const c = T.fewestCoins(n); assert.equal(c.reduce((a, b) => a + b, 0), n); assert.ok(c.length <= 5); }
+  assert.deepEqual(T.fewestCoins(18), [10, 5, 2, 1]);
+  for (let seed = 1; seed <= 100; seed++) { const t = T.newMoneyTask(pack, seeded(seed)); assert.ok(t.target >= 1 && t.target <= 19); assert.equal(t.target, t.kind === 'pay' ? t.price : 20 - t.price); assert.ok(t.priceHe); assert.equal(T.checkCoins(t, T.fewestCoins(t.target)).fewest, true); }
+  assert.deepEqual(T.checkCoins({ target: 6 }, [2, 2, 2]), { exact: true, fewest: false, sum: 6, best: [5, 1] }); assert.equal(T.checkCoins({ target: 6 }, [5, 2]).exact, false);
+});
+
+test('the market stall: the price comes down twice and no further, a discount works once, a fair offer is taken, a silly one ends it', async () => {
+  const T = await import('../src/trip/trip.js');
+  for (const k of Object.keys(T.STALL_LINES)) assert.ok(stored.has(T.stallLine(pack, k).he), k);
+  for (let seed = 1; seed <= 100; seed++) { const s = T.newStall(pack, seeded(seed)); assert.ok(nouns.has(s.thing.he)); assert.ok(s.floor < s.open && s.floor >= 0.55 * s.open, `${s.floor} of ${s.open}`); }
+  const s0 = { ...T.newStall(pack, seeded(4)), open: 100, floor: 70, price: 100, said: '' };
+  let s = T.stallMove(s0, 'expensive'); assert.equal(s.price, 90); s = T.stallMove(s, 'expensive'); assert.equal(s.price, 80);
+  const walked = T.stallMove(s, 'expensive'); assert.equal(walked.over, true); assert.equal(walked.deal, false);
+  let d = T.stallMove(s0, 'discount'); assert.equal(d.price, 95); d = T.stallMove(d, 'discount'); assert.equal(d.price, 95); assert.match(d.said, /No more off/);
+  const fair = T.stallMove(s0, { offer: '75' }); assert.deepEqual([fair.deal, fair.paid], [true, 75]); assert.match(T.stallResult(fair), /75 shekels, 25 less/);
+  const low = T.stallMove(s0, { offer: 60 }); assert.equal(low.over, false); assert.ok(low.price >= 70 && low.price < 100);
+  assert.equal(T.stallMove(s0, { offer: 20 }).deal, false); assert.equal(T.stallMove(s0, { offer: 500 }).paid, 100);
+  const full = T.stallMove(s0, 'take'); assert.match(T.stallResult(full), /first price/); assert.equal(T.stallMove(s0, 'leave').deal, false);
+  assert.match(T.stallMove(s0, { offer: 'abc' }).said, /Name a price/); assert.equal(T.stallMove(full, 'expensive'), full, 'nothing moves after the end');
+  const atFloor = T.stallMove({ ...s0, price: 70 }, 'take'); assert.match(T.stallResult(atFloor), /lowest the keeper would go/);
+});
+
+test('the screen: coins are picked and checked; a stall is bargained to a sale', async () => {
+  const { createDocument, ev, flush } = await import('./rimon.fakedom.js');
+  const doc = createDocument(); globalThis.document = doc;
+  const { mount } = await import('../src/trip/trip.view.js'); const T = await import('../src/trip/trip.js');
+  const host = doc.createElement('div'); doc.body.append(host);
+  const press = async (n) => { n.dispatchEvent(ev('click')); await flush(5); };
+  const unmount = await mount(host, { tripData: { pack }, rng: seeded(21), query: { part: 'money' } });
+  const task = T.newMoneyTask(pack, seeded(21));
+  assert.equal(host.querySelector('#tp-price').textContent, task.priceHe);
+  for (const c of T.fewestCoins(task.target)) await press(host.querySelector(`[data-coin="${c}"]`));
+  await press(host.querySelector('#tp-money-check'));
+  assert.match(host.querySelector('#tp-money-result').textContent, /fewest coins/);
+  await press(host.querySelector('[data-tab=market]'));
+  await press(host.querySelector('[data-say=expensive]')); assert.match(host.querySelector('#tp-keeper').textContent, /\d+ ₪/);
+  await press(host.querySelector('[data-say=take]'));
+  assert.match(host.querySelector('#tp-market-result').textContent, /You paid \d+ shekels, \d+ less than the first price/);
+  unmount();
+});

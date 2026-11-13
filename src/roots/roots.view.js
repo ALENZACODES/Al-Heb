@@ -98,8 +98,19 @@ export function mount(root, ctx) {
         el('thead', {}, el('tr', {}, el('th', { scope: 'col' }, 'Form'), el('th', { scope: 'col' }, 'Hebrew'), el('th', { scope: 'col' }, 'Sound'))), el('tbody', {}, ...rows)),
       el('p', { class: 'muted' }, VERB_FORMS_NOTE),
       el('ul', {}, ...t.notes.map((n) => el('li', {}, n)), ...(t.missing.length ? [el('li', {}, `Not in the data for this verb: ${t.missing.join(', ')}.`)] : [])),
+      everyForm(v),
       t.root ? el('p', {}, el('a', { href: `#/roots?letters=${encodeURIComponent(t.root)}` }, 'Words listed under the same family letters')) : null,
       t.binyan && SEVEN.includes(t.binyan) ? el('p', {}, el('a', { href: `#/roots?mode=binyanim&b=${encodeURIComponent(t.binyan)}` }, `About the ${binyanName(t.binyan)} pattern`)) : null);
+  }
+  /** Every person, number and tense of a regular verb, built by rule (src/grammar/conjugate.js, loaded on the press). */
+  function everyForm(v) {
+    const box = el('div', { class: 'rt-every-form' });
+    const show = btn('Show Every Form', () => {
+      show.disabled = true;
+      import('../grammar/conjugate.view.js').then((m) => { if (!alive) return; box.replaceChildren(m.fullTable(el, ctx, v)); say('Every form is shown.'); }).catch(() => { show.disabled = false; box.textContent = 'The full table could not be loaded. Check your connection and press again.'; });
+    }, { class: 'btn secondary', 'aria-label': `Show every form of ${v.translit}` });
+    box.append(show);
+    return box;
   }
   function wordLine(w, loose) {
     return el('li', {}, heText(w.he), ` ${w.translit}: ${w.en}`, loose ? ' (loose match)' : '', w.forms && w.pos === 'verb' ? btn('Verb forms', () => { selVerb = selVerb === w.id ? null : w.id; renderFamilies(); }, { 'aria-expanded': String(selVerb === w.id), 'aria-label': `Verb forms for ${w.translit}` }) : null,
@@ -127,16 +138,20 @@ export function mount(root, ctx) {
   }
 
   function renderVerbs() {
-    const list = el('div', {}), detail = el('div', {});
+    const list = el('div', {}), detail = el('div', {}), found = el('div', { 'aria-live': 'polite' });
     const draw = () => {
       const res = searchVerbs(verbs.verbs, q, 20);
       const v = verbs.verbs.find((x) => x.id === selVerb);
       const shown = v && !res.includes(v) ? [v, ...res] : res;
       list.replaceChildren(el('ul', {}, ...shown.map((x) => el('li', {}, btn(`${x.translit}: ${x.en}`, () => { selVerb = x.id; draw(); say(`${x.translit} opened.`); }, { 'aria-pressed': String(selVerb === x.id), 'aria-label': `Show forms of ${x.translit}, ${x.en}` })))));
       detail.replaceChildren(v ? table(v) : el('p', {}, qy.verb && selVerb === qy.verb ? 'That verb is not on this page.' : 'Pick a verb to see the forms the data has.'));
+      // Typed Hebrew letters can be any form of a verb (wrote, we will write): say which verb it is and open its table.
+      const typed = q;
+      if (/[א-ת]/.test(typed)) import('../grammar/conjugate.view.js').then((m) => { if (alive && q === typed) found.replaceChildren(m.finder(el, btn, verbs.verbs, typed, (id) => { selVerb = id; draw(); })); }).catch(() => {});
+      else found.replaceChildren();
     };
     body.replaceChildren(el('p', {}, `${rootsCoverage().explorer.toLocaleString('en-US')} of the word list's ${rootsCoverage().verbs.toLocaleString('en-US')} verbs can be opened here.`),
-      field('rt-vq', 'Find a verb (English, sounds-like, or Hebrew letters)', q, (x) => { q = x; draw(); }), list, detail); draw();
+      field('rt-vq', 'Find a verb (English, sounds-like, or Hebrew letters)', q, (x) => { q = x; draw(); }), found, list, detail); draw();
   }
 
   /** The seven patterns (#15b): a list, and one page per pattern. */

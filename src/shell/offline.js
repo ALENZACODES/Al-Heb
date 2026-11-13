@@ -89,6 +89,7 @@ export const ON_DEMAND_GROUPS = Object.freeze([
   { id: "od-talk", label: "Talk page and its stored lines", test: /^(src\/talk\/|data\/talk\/)/, approxMB: 0.12 },
   { id: "od-speak-code", label: "Say it page and speaking scores (preview-route code)", test: /^src\/speak\/(speak|score|check)\.js$/, approxMB: 0.08 },
   { id: "od-voice", label: "Speaking Studio (record and compare, shadowing, voice journal)", test: /^src\/voice\//, approxMB: 0.04 }, // siddur-speaking lane
+  { id: "od-listen-device", label: "Listening on this device (the code only; the listening packs are downloaded on the Language Packs page)", test: /^(src\/speak\/(ondevice|lettercheck)\.js$)/, approxMB: 0.03 }, // speech lane
   { id: "od-music", label: "Game music player, Songs page, English read-aloud and the playing state", test: /^src\/(audio\/(synth-music|sting)|shell\/(speak-english|play-state)|listen\/songs\.view)\.js$/, approxMB: 0.04 },
   { id: "od-day-code", label: "Calendar day pages, add-to-calendar box, morning screen, intermediate lessons, practical units, the Curriculum page and Israel units (route code)", test: /^(src\/curriculum\/(day\.view|calendar\.day|calendar\.addpanel|calendar\.quickadd|intermediate\.view|practical\.view|practical-progress|practical-written|israel-units|israel-units\.view|path\.view|path\.model)\.js|src\/morning\/morning\.view\.js|assets\/css\/curriculum\.css)$/, approxMB: 0.11 },
   { id: "od-learn-practice", label: "Learn practice screens (review, loanwords, drills and dialogues)", test: /^src\/curriculum\/(review|loanwords|spotit|checkpoint|dialogues|ladder|fade|gender|scaffold)\.view\.js$/, approxMB: 0.07 },
@@ -96,6 +97,8 @@ export const ON_DEMAND_GROUPS = Object.freeze([
   { id: "od-light", label: "Star of David light (page, style and printable stencil)", test: /^(src\/light\/|assets\/light\/|assets\/css\/light\.css$)/, approxMB: 0.02 },
   // Lane 1 (M-08, 12 Nov): the code for About's Held Recordings list (its data file is in "Audio clip list" above).
   { id: "od-held", label: "Held Recordings list on About", test: /^src\/shell\/held-recordings\.js$/, approxMB: 0.01 },
+  // alef-tools lane 7 (12 Nov): the Language Packs page and the pack downloader. Code only: a pack itself is downloaded on that page, on request.
+  { id: "od-packs", label: "Language Packs page and the pack downloader (the packs themselves are downloaded on that page)", test: /^(src\/settings\/|data\/packs\/|assets\/vendor\/_alef-tools\/)/, approxMB: 0.05 },
   { id: "od-sync", label: "Move to another device, your certificate and the offline pack lists", test: /^(src\/sync\/|data\/offline\/)/, approxMB: 0.08 }, // lane 4 (12 Nov)
   // lane 6 (12 Nov round 2): Reading Without Vowels, the placement check page, trope families and per-aliyah practice (route code)
   { id: "od-bridge-trope-placement", label: "Reading without vowels, the placement check, trope families and aliyah practice (route code)", test: /^src\/(bridge\/|placement\/(placement\.view|model|loader)\.js$|trope\/(families|practice\.view)\.js$)/, approxMB: 0.07 },

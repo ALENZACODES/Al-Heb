@@ -16,6 +16,7 @@ export const RATING = Object.freeze([[1, '1 Not yet'], [2, '2 Nearly'], [3, '3 L
 export const SELF_LABEL = 'Self-assessment: your own rating, not a score from Aleph.';
 export const MACHINE_LABEL = 'A machine guess, not a grade.';
 export const MACHINE_NOTE = 'This uses your browser\'s own speech recognizer set to Hebrew. Aleph has not measured how well it hears Hebrew, and it writes without vowel points. Your browser may send the sound to its maker to do the recognition; Aleph itself sends nothing.';
+export const MACHINE_NOTE_DEVICE = 'This listens on this device, with the listening pack you downloaded. Nothing you say leaves it. It writes without vowel points and can mishear, so read its line as a guess.';
 export const FLUENCY_NOTE = 'Words per minute and the stumbles you marked yourself, from Timed read-aloud. This is speed and smoothness, not pronunciation accuracy.';
 export const GAP_FACTORS = Object.freeze([1, 1.25, 1.5, 2]);
 export const MIN_TURN_MS = 1000, MAX_TURN_MS = 20000;

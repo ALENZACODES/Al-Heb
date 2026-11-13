@@ -85,7 +85,10 @@ export function capabilities(g = globalThis) {
   const synth = g?.speechSynthesis || null;
   let hebrewVoice = null; // null = unknown (voice list may load later), true/false when the list answered
   try { const vs = synth?.getVoices?.(); if (Array.isArray(vs) && vs.length) hebrewVoice = vs.some((v) => /^he\b/i.test(v.lang || '')); } catch { /* ignore */ }
-  return { recognition: !!Rec && secure, recording: !!(MR && gum) && secure, synthesis: !!synth && !!(g?.SpeechSynthesisUtterance), hebrewVoice, secure };
+  // a listening pack on this device recognizes speech without the browser's recognizer (src/speak/recognizer.js devicePack)
+  let pack = false;
+  try { pack = /^listen-(lite|best)$/.test(g?.localStorage?.getItem('alef.listen.pack') || '') && gum && !!(g?.AudioContext || g?.webkitAudioContext); } catch { pack = false; }
+  return { recognition: (!!Rec || pack) && secure, onDevice: pack && secure, recording: !!(MR && gum) && secure, synthesis: !!synth && !!(g?.SpeechSynthesisUtterance), hebrewVoice, secure };
 }
 
 /** The mode to use: the learner's choice if the browser supports it, else the best supported one. */

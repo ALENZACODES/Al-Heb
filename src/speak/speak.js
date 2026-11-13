@@ -27,7 +27,8 @@ import { uiEnglish } from '../shell/names.js';
 import { sourcesLine } from '../shell/sources.js';
 import { loadSetsIndex, loadSet, loadPairs, loadPrayers, loadTraditionPairs } from './loader.js';
 import { STORE_KEY, MODES, capabilities, pickMode, usableItems, coerceState, recordAttempt, soundReport, historyRows, dailyTotals, spokenPointed, missedWordsReport } from './model.js';
-import { createRecognizer, createRecorder, createSpeaker } from './recognizer.js';
+import { createListener, createRecorder, createSpeaker, DEVICE_NOTE, FALLBACK_NOTE, PACKS_ROUTE } from './recognizer.js';
+import { lettersSlot } from './check.js';
 import { scoreSpeech, scoreLine, plainWords, scoringStatus, isFatal, splitSummary, summaryText, SCORE_MEANS, SELF_CHECK_NOTE, STATUS_TEXT } from './score.js';
 import { contrastById, drillQueue, drillQuestion } from './pairs.js';
 import { loadDailyCard, dayKeyLocal, DAILY_PREFIX } from './daily.js';
@@ -100,6 +101,8 @@ const ERRORS = {
   'language-not-supported': 'This browser\'s recognizer does not offer Hebrew.',
 };
 const errorText = (e) => ERRORS[e] || `The browser reported: ${e}.`;
+export const SCORE_MEANS_DEVICE = 'What the score measures: how many of the printed words the listening pack on this device wrote back as that word. Vowel points are not checked, and it does not measure your accent or how natural you sound. It can mishear, so treat the score as a guide, not a grade.';
+export const SCORE_SHORT_DEVICE = 'The score counts words the listening pack wrote back as printed; it does not measure your accent or vowels. It can mishear, so treat it as a hint.';
 export const SCORE_SHORT = 'The score counts words the recognizer wrote back as printed; it does not measure your accent or vowels. A hint from the browser\'s recognizer, which is unverified for Hebrew.';
 /** Each printed word with its status in words (never colour alone): heard right, close (with what was heard) or not heard. */
 function wordList(r, id) {
@@ -114,11 +117,20 @@ export function mount(root, ctx) {
   const rng = ctx?.rng || Math.random;
   const inj = ctx?.speak || {};
   const g = /** @type {any} */ (globalThis);
-  const caps = inj.caps || capabilities(inj.RecognitionCtor !== undefined || inj.MediaRecorderCtor !== undefined ? {
+  const readCaps = () => inj.caps || capabilities(inj.RecognitionCtor !== undefined || inj.MediaRecorderCtor !== undefined ? {
     SpeechRecognition: inj.RecognitionCtor, MediaRecorder: inj.MediaRecorderCtor, navigator: inj.getUserMedia ? { mediaDevices: { getUserMedia: inj.getUserMedia } } : g.navigator,
     speechSynthesis: inj.synth !== undefined ? inj.synth : g.speechSynthesis, SpeechSynthesisUtterance: inj.UtteranceCtor !== undefined ? inj.UtteranceCtor : g.SpeechSynthesisUtterance, isSecureContext: true,
   } : g);
-  const recognizer = createRecognizer({ Ctor: inj.RecognitionCtor, setTimeout: inj.setTimeout, clearTimeout: inj.clearTimeout });
+  let caps = readCaps();
+  // This device first (a listening pack from Settings); the browser's recognizer only as the labelled fallback.
+  const recognizer = createListener({ Ctor: inj.RecognitionCtor, setTimeout: inj.setTimeout, clearTimeout: inj.clearTimeout, pack: inj.listenPack, loadDevice: inj.loadDevice });
+  const onDevice = () => recognizer.engine === 'device';
+  /** The lines that say where the listening happens: on this device, or the browser's recognizer as a fallback. */
+  const engineNote = () => (onDevice()
+    ? [el('p', { class: 'muted', id: 'speak-engine', 'data-engine': 'device' }, DEVICE_NOTE)]
+    : [el('p', { class: 'muted' }, RECOGNIZER_NOTE), el('p', { class: 'muted', id: 'speak-engine', 'data-engine': 'browser' }, FALLBACK_NOTE, ' ', el('a', { href: PACKS_ROUTE }, 'Language Packs'))]);
+  /** The score explanation names the browser's recognizer; on this device it names the pack instead. */
+  const scoreMeans = () => (onDevice() ? SCORE_MEANS_DEVICE : SCORE_MEANS);
   const recorder = createRecorder({ MediaRecorderCtor: inj.MediaRecorderCtor, getUserMedia: inj.getUserMedia, URL: inj.URL, BlobCtor: inj.BlobCtor, now: clock.now, setTimeout: inj.setTimeout, clearTimeout: inj.clearTimeout });
   const speaker = createSpeaker({ synth: inj.synth, UtteranceCtor: inj.UtteranceCtor });
   const audioHas = (kind, id) => { try { return !!id && !!ctx?.audio?.has?.(kind, id); } catch { return false; } };
@@ -157,6 +169,8 @@ export function mount(root, ctx) {
   async function init() {
     setBody(el('p', {}, 'Loading...'));
     try {
+      // a listening pack downloaded or deleted since the last visit changes what this browser can score
+      try { if (await recognizer.ready) caps = readCaps(); } catch { /* keep what was read at the start */ }
       const d = inj.data;
       index = d?.sets || await loadSetsIndex();
       state = coerceState(await storeGet(ctx, STORE_KEY, null));
@@ -205,8 +219,8 @@ export function mount(root, ctx) {
       el('label', { for: 'speak-set' }, 'Set'),
       sel,
       fs,
-      caps.recognition ? el('p', { class: 'muted', id: 'speak-score-means' }, SCORE_MEANS) : null,
-      el('p', { class: 'muted' }, caps.recognition ? RECOGNIZER_NOTE : SELF_CHECK_NOTE),
+      caps.recognition ? el('p', { class: 'muted', id: 'speak-score-means' }, scoreMeans()) : null,
+      ...(caps.recognition ? engineNote() : [el('p', { class: 'muted' }, SELF_CHECK_NOTE)]),
       caps.recording ? el('p', { class: 'muted' }, RECORD_NOTE) : null,
       el('div', { class: 'sk-row' }, el('button', { type: 'button', class: 'btn', id: 'speak-start', onclick: start }, 'Start')),
     );
@@ -294,7 +308,7 @@ export function mount(root, ctx) {
         const c = scoreSpeech(item.he, r.alternatives);
         const lead = c.outcome === 'match' ? 'That matched the target.' : c.outcome === 'close' ? 'Close.' : 'That did not match. Listen once more and try again, or judge it yourself.';
         const text = `${lead} ${scoreLine(c)}`;
-        showVerdict(text, el('div', {}, wordList(c, 'speak-words'), el('p', {}, 'The recognizer wrote: ', heText(c.heard)), el('p', { class: 'muted' }, SCORE_SHORT), c.outcome === 'match' ? null : el('div', { class: 'sk-opts' }, el('p', {}, 'Or mark it yourself (not scored):'), ...selfButtons('You decided: '))));
+        showVerdict(text, el('div', {}, wordList(c, 'speak-words'), el('p', {}, r.engine === 'device' ? 'Heard on this device: ' : 'The recognizer wrote: ', heText(c.heard)), el('p', { class: 'muted' }, r.engine === 'device' ? SCORE_SHORT_DEVICE : SCORE_SHORT), lettersSlot(item.he, { tradition: congregationOf(ctx?.settings), pron: inj.pron, loadLetters: inj.loadLetters, checkLetters: inj.checkLetters }), c.outcome === 'match' ? null : el('div', { class: 'sk-opts' }, el('p', {}, 'Or mark it yourself (not scored):'), ...selfButtons('You decided: '))));
         if (c.outcome === 'match') settle({ outcome: 'match', score: c.score, heard: c.heard });
         else { // keep the best attempt; the learner may try again or self-judge
           const prev = results.find((x) => x.item === item);
@@ -568,8 +582,8 @@ export function mount(root, ctx) {
         : 'Listen to a line, say it right after, then rate yourself from 1 to 3. Nobody checks this but you.'),
       el('p', { class: 'draft-flag', role: 'note' }, PRAYER_NOTE),
       read ? el('p', { class: 'muted' }, TRADITION_NOTE) : null,
-      read && caps.recognition ? el('p', { class: 'muted' }, RECOGNIZER_NOTE) : null,
-      read ? el('p', { class: 'muted', id: 'read-score-means' }, caps.recognition ? SCORE_MEANS : scoringStatus(caps).text) : null,
+      ...(read && caps.recognition ? engineNote() : []),
+      read ? el('p', { class: 'muted', id: 'read-score-means' }, caps.recognition ? scoreMeans() : scoringStatus(caps).text) : null,
       el('label', { for: 'speak-prayer' }, 'Prayer'), sel, fs,
       el('div', { class: 'sk-row' }, el('button', { type: 'button', class: 'btn', id: `${kind}-start`, onclick: () => startPrayer(kind) }, 'Start')));
     say('');

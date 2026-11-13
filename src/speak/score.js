@@ -136,6 +136,7 @@ export const STATUS_TEXT = Object.freeze({ hit: 'heard right', near: 'close', mi
  */
 export function scoringStatus(caps) {
   const c = caps || {};
+  if (c.recognition && c.onDevice) return { scored: true, reason: 'ok', text: 'Scoring is on: the listening pack on this device listens and Aleph compares what it wrote with the printed words. Nothing you say leaves this device.' };
   if (c.recognition) return { scored: true, reason: 'ok', text: 'Scoring is on: your browser\'s speech recognizer listens and Aleph compares what it wrote with the printed words.' };
   const fallback = c.recording
     ? 'You can still record yourself, play it back next to the model, and mark it yourself.'

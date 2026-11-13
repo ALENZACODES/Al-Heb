@@ -86,6 +86,9 @@ const ON_DEMAND_PREFIXES = ['data/vocab/', 'data/roots/', 'data/knownwords/', 'd
   // Grammar notes (optional preview route /grammar; its data was already on demand) and the unused speaking-check model (no screen imports
   // src/speak/dss.model.js; only its tests do): 44 KB moved out of the first install by lane platform (12 Nov) to pay for its route entries.
   'src/grammar/', 'src/speak/dss.model.js',
+  // together lane (12 Nov, R1 to R10): Profiles, Study Hall, Challenge A Friend, Buddy Pairing, Gift A Lesson, My Ratings: fetched on first open.
+  // (src/shell/profile-slots.js and src/shell/together-routes.js are the only installed files of the lane.)
+  'src/together/',
   // lane games-books (12 Nov): This Week's Parashah, Torah Search (its 0.7 MB letters-only index) and the Verse Notebook, fetched on first open.
   'src/torahstudy/', 'data/torahstudy/'];
 const ON_DEMAND_FILES = new Set([

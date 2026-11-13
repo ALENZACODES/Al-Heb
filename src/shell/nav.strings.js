@@ -135,7 +135,7 @@ export const NAV_EN = {
   'nav.route.speak-studio': 'Speaking Studio', // siddur-speaking lane
   'nav.route.synagogue': 'Synagogue',
   'nav.route.nikkud-fade': 'Vowel marks, fading out',
-  'nav.route.bridge': 'Reading Without Vowels', 'nav.route.readlab': 'Reading Tools', 'nav.route.trope-families': 'Trope Families', 'nav.route.trope-aliyah': 'Trope Practice by Aliyah', // lane 6
+  'nav.route.bridge': 'Reading Without Vowels', 'nav.route.readlab': 'Reading Tools', 'nav.route.profiles': 'Profiles', 'nav.route.study-hall': 'Study Hall', 'nav.route.friend-challenge': 'Challenge A Friend', 'nav.route.buddy': 'Buddy Pairing', 'nav.route.gift': 'Gift A Lesson', 'nav.route.ratings': 'My Ratings', 'nav.route.trope-families': 'Trope Families', 'nav.route.trope-aliyah': 'Trope Practice by Aliyah', // lane 6
   'nav.route.roots': 'Roots and verb families',
   'nav.route.gender-drill': 'Gender drill',
   'nav.route.record-compare': 'Record and compare',

@@ -96,6 +96,8 @@ export const ON_DEMAND_GROUPS = Object.freeze([
   { id: "od-light", label: "Star of David light (page, style and printable stencil)", test: /^(src\/light\/|assets\/light\/|assets\/css\/light\.css$)/, approxMB: 0.02 },
   // Lane 1 (M-08, 12 Nov): the code for About's Held Recordings list (its data file is in "Audio clip list" above).
   { id: "od-held", label: "Held Recordings list on About", test: /^src\/shell\/held-recordings\.js$/, approxMB: 0.01 },
+  // together lane (12 Nov, R1 to R10): profiles, Study Hall, challenge codes, buddy pairing, gifts and ratings (page code)
+  { id: "od-together", label: "Profiles, Study Hall, Challenge A Friend, Buddy Pairing, Gift A Lesson and My Ratings (page code)", test: /^src\/together\//, approxMB: 0.08 },
   { id: "od-sync", label: "Move to another device, your certificate and the offline pack lists", test: /^(src\/sync\/|data\/offline\/)/, approxMB: 0.08 }, // lane 4 (12 Nov)
   // lane 6 (12 Nov round 2): Reading Without Vowels, the placement check page, trope families and per-aliyah practice (route code)
   { id: "od-bridge-trope-placement", label: "Reading without vowels, the placement check, trope families and aliyah practice (route code)", test: /^src\/(bridge\/|placement\/(placement\.view|model|loader)\.js$|trope\/(families|practice\.view)\.js$)/, approxMB: 0.07 },

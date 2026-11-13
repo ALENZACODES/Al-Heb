@@ -3,6 +3,7 @@
 // print dialog (which can also save a PDF); a print stylesheet hides the app around the sheet.
 import { h, heSpan } from '../shell/ui.js';
 import { buildSheet, currentLesson } from './worksheet.js';
+import { lessonQr } from '../together/printshare.js'; // together lane (R10): a QR code on the sheet that opens the lesson, so its sounds can be heard
 
 const PRINT_CSS = `
 .ws-sheet{max-inline-size:46rem;margin-inline:auto}
@@ -12,6 +13,8 @@ const PRINT_CSS = `
 .ws-sheet td,.ws-sheet th{border:1px solid #999;padding:.4rem;vertical-align:middle}
 .ws-sheet .ws-box{inline-size:3.2rem;block-size:3.2rem}
 .ws-key{font-size:.9rem}
+.ws-qr{display:flex;gap:1rem;align-items:center}
+.ws-qr img{inline-size:7rem;block-size:7rem}
 @media print{
   body *{visibility:hidden}
   .ws-sheet,.ws-sheet *{visibility:visible}
@@ -58,6 +61,8 @@ export function mount(root, ctx) {
       if (s.match.words.length > 1) parts.push(h('section', {}, h('h3', {}, 'Match Each Word to Its Meaning'), h('p', {}, 'Write the letter of the meaning next to each word.'),
         h('table', {}, h('caption', {}, 'Words on the left, meanings on the right'), h('tbody', {}, ...s.match.words.map((w, i) => h('tr', {}, h('td', {}, `${w.n}. `, heSpan(w.he, 'he ws-he'), '  ____'), h('td', {}, s.match.meanings[i] ? `${s.match.meanings[i].key}. ${s.match.meanings[i].en}` : '')))))),
         h('section', { class: 'ws-key' }, h('h3', {}, 'Answer Key'), h('p', {}, s.match.answers.join(', '))));
+      // R10 print-and-share: the sheet teaches on a fridge or a classroom wall; the code brings the sound.
+      if (s.letters.length || s.copy.length) { try { const q = lessonQr(s.id); parts.splice(2, 0, h('section', { class: 'ws-qr' }, h('img', { src: q.src, alt: 'QR code that opens this lesson in Aleph', width: '112', height: '112' }), h('p', {}, 'Hear it: point a phone camera at this code to open the lesson in Aleph and listen to every letter and word. ', h('span', { class: 'ws-noprint muted' }, q.link)))); } catch { /* no code on this sheet: the sheet still prints */ } }
       if (!s.letters.length && !s.copy.length) parts.push(h('p', {}, 'This lesson has no letters or words to put on a sheet. Pick another lesson.'));
       sheetHost.replaceChildren(h('article', { class: 'ws-sheet' }, ...parts));
     }

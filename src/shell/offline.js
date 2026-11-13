@@ -53,7 +53,7 @@ export function optionalGroups(tradition = "sephardi") {
  * First match wins; anything unmatched lands in "More pages and data".
  */
 export const ON_DEMAND_GROUPS = Object.freeze([
-  { id: "od-practice", label: "Vowel-point, root, gender, known-word and record-and-compare practice data", test: /^(data\/(nikkudfade|roots|gender|knownwords)\/|src\/(recordcompare|roots|nikkudfade|genderdrill|knownwords|fsrs)\/[a-z]+\.view\.js$|src\/roots\/(model|binyanim|links)\.js$)/, approxMB: 1.3 }, // lane 3 (12 Nov): + binyanim.js, links.js, dict-links.json
+  { id: "od-practice", label: "Vowel-point, root, gender, known-word and record-and-compare practice data", test: /^(data\/(nikkudfade|roots|gender|knownwords)\/|src\/(recordcompare|roots|nikkudfade|genderdrill|knownwords|fsrs)\/[a-z]+\.view\.js$|src\/roots\/(model|binyanim|links|tree|listen)\.js$|src\/pairs\/)/, approxMB: 1.3 }, // lane 3 (12 Nov): + binyanim.js, links.js, dict-links.json
   { id: "od-vocab", label: "Vocabulary data and theme packs", test: /^data\/vocab\//, approxMB: 5.9 },
   { id: "od-listen-tools", label: "Playback bar, Listening Practice, play-all lists and audio packs", test: /^src\/audiolab\//, approxMB: 0.1 }, // audio lane
   { id: "od-audio-index", label: "Audio clip list (core)", test: /^data\/audio\//, approxMB: 2.6 },

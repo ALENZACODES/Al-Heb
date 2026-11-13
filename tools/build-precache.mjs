@@ -116,6 +116,9 @@ const ON_DEMAND_FILES = new Set([
   // lane 3 (12 Nov, points plan #15): the seven-patterns pages and the Dictionary's family links, loaded with the Roots page or when
   // the Dictionary first shows a family line (data/roots/dict-links.json is on demand through the data/roots/ prefix).
   'src/roots/binyanim.js', 'src/roots/links.js',
+  // vocabulary systems (12 Nov): the family tree and the shared Listen button load with the Roots page; Look-Alike Words (#/pairs) is a
+  // lazy route, and its pair list (data/vocab/confusables.json) is on demand through the data/vocab/ prefix.
+  'src/roots/tree.js', 'src/roots/listen.js', 'src/pairs/pairs.view.js', 'src/pairs/model.js', 'src/pairs/loader.js',
   // Non-v0 data (the integration test's must-install list is the v0 offline contract; these are fetched on first use, then runtime-cached).
   'data/audio/english-glosses.json',
   // Book 63's clip record (37 KB): no screen reads it (the reader plays the page files directly), so it stays out of the first install.

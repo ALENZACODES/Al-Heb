@@ -241,6 +241,8 @@ export const ROUTES = [
   { name: 'vocab',    pattern: '/vocab',          module: '../vocab/vocab.view.js',              title: 'Vocabulary', owner: 'lane9', optional: true, quick: 'nav.vocab' },
   { name: 'nikkud-fade', pattern: '/nikkud-fade', module: '../nikkudfade/nikkudfade.view.js', tier: 'preview', title: 'Vowel marks, fading out', owner: 'builder', group: 'learn', quick: 'nav.route.nikkud-fade' },
   { name: 'roots', pattern: '/roots', module: '../roots/roots.view.js', tier: 'preview', title: 'Roots and verb families', owner: 'builder', group: 'learn', quick: 'nav.route.roots' },
+  // vocabulary systems (12 Nov): confusing pairs, a tell-them-apart drill; the view and its pair list load on first open
+  { name: 'pairs', pattern: '/pairs', module: '../pairs/pairs.view.js', tier: 'preview', title: 'Look-Alike Words', owner: 'vocab', group: 'learn', quick: 'nav.route.pairs' },
   { name: 'gender-drill', pattern: '/gender-drill', module: '../genderdrill/genderdrill.view.js', tier: 'preview', title: 'Gender drill', owner: 'builder', group: 'learn', quick: 'nav.route.gender-drill' },
   { name: 'record-compare', pattern: '/record-compare', module: '../recordcompare/recordcompare.view.js', tier: 'preview', title: 'Record and compare', owner: 'builder', group: 'learn', quick: 'nav.route.record-compare' },
   { name: 'scheduler', pattern: '/scheduler', module: '../fsrs/scheduler.view.js', tier: 'preview', title: 'How reviews could be spaced', owner: 'builder2', group: 'learn', quick: 'nav.route.scheduler' },

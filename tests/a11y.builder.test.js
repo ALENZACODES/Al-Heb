@@ -14,6 +14,7 @@ const VIEWS = [
   ['roots', 'src/roots/roots.view.js', () => ({ store: memStore(), rootsData: { families: { coverage: FAM.coverage, families: FAM.families.slice(0, 20) }, verbs: { verbs: VERBS.verbs.slice(0, 100) } } })],
   ['genderdrill', 'src/genderdrill/genderdrill.view.js', () => ({ store: memStore(), genderData: { templates: TPL, paradigms: j('data/curriculum/gender-pairs.json').paradigms } })],
   ['recordcompare', 'src/recordcompare/recordcompare.view.js', () => ({ store: memStore(), recordCompare: { data: PAIRS, tradition: 'ashkenazi', recorder: rec, speaker: { supported: true, speak: async () => ({ ok: true }), cancel() {} } } })],
+  ['pairs', 'src/pairs/pairs.view.js', () => ({ store: memStore(), pairsData: j('data/vocab/confusables.json') })],
 ];
 
 for (const [name, file, ctxOf] of VIEWS) {

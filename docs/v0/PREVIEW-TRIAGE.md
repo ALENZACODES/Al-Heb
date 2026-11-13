@@ -75,6 +75,7 @@ decision, so the More sheet stays short and the first session stays coherent (we
 | `vocab` | keep | Vocabulary list and review (shared audio button). |
 | `nikkud-fade` | hide | Same idea as `fade`; to be merged into it. |
 | `roots` | keep | Roots and verb families. |
+| `pairs` | keep | Look-Alike Words: a tell-them-apart drill over pairs found by rule from the word list. |
 | `gender-drill` | merge | Into the gender page. |
 | `record-compare` | hide | Needs a recorded model voice, and there are no recordings yet; to be merged into `compare` later. |
 | `scheduler` | hide | Developer explainer of review spacing; not learner-facing. |

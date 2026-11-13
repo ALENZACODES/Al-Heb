@@ -55,17 +55,26 @@ export const SHOP_OUTFITS = Object.freeze([
   { id: 'ribbon', title: 'Shabbat ribbon', text: 'A small ribbon on Rimon for a festive day.' },
   { id: 'glasses', title: 'Study glasses', text: 'Round glasses on Rimon while you study.' },
 ]);
+/** Accessories Rimon earns with the learner. CSS only; never bought; never gendered. */
+export const SHOP_EARNED_OUTFITS = Object.freeze([
+  { id: 'pin', title: 'Lesson pin', text: 'A small pin Rimon earns with you after five finished lessons.', need: { lessons: 5 } },
+  { id: 'badge', title: 'Week badge', text: 'A badge Rimon earns with you after a 7-day streak.', need: { streak: 7 } },
+]);
+export const ALL_OUTFITS = Object.freeze([...SHOP_OUTFITS, ...SHOP_EARNED_OUTFITS]);
+export const earnedNeedLine = (item) => item.need?.lessons ? `Earned after ${item.need.lessons} finished lessons.` : item.need?.streak ? `Earned after a ${item.need.streak}-day streak.` : 'Earned by learning.';
+
 export const SHOP_AUDIO = Object.freeze([
   { id: 'blessings', title: 'Blessings practice', text: 'Marks the blessings audio you already have on this device as a pack you chose. Nothing new is downloaded until you open Listen or Speak.' },
 ]);
 export const SHOP_LIMITS = Object.freeze({ shieldMax: 2, gameLevelMax: 2 });
 
-export const shopState = (rec) => rec.shop || { themes: [], themeActive: null, outfits: [], outfitActive: null, audio: [], gameLevels: 0, shields: { held: 0, used: [] } };
+export const shopState = (rec) => rec.shop || { themes: [], themeActive: null, outfits: [], outfitActive: null, earnedOutfits: [], audio: [], gameLevels: 0, shields: { held: 0, used: [] } };
 export const hasUnlock = (rec, kind, id) => (shopState(rec)[kind] || []).includes(id);
 
 function withShop(rec, fn) {
   const next = clone(rec);
-  next.shop = { ...shopState(next), themes: [...shopState(next).themes], outfits: [...shopState(next).outfits], audio: [...shopState(next).audio], shields: { ...shopState(next).shields, used: [...(shopState(next).shields.used || [])] } };
+  const cur = shopState(next);
+  next.shop = { ...cur, themes: [...cur.themes], outfits: [...cur.outfits], earnedOutfits: [...(cur.earnedOutfits || [])], audio: [...cur.audio], shields: { ...cur.shields, used: [...(cur.shields.used || [])] } };
   fn(next.shop);
   return next;
 }
@@ -118,6 +127,26 @@ export function buyGameLevel(rec, now = Date.now()) {
 
 export const arcadeBoost = (rec) => Math.min(SHOP_LIMITS.gameLevelMax, Math.max(0, shopState(rec).gameLevels || 0));
 
+/** Grant outfits the learner has earned. Does not take off an outfit already in use. */
+export function grantEarnedOutfits(rec, { lessons, streak } = {}) {
+  const shop = shopState(rec);
+  const have = new Set(shop.outfits);
+  const add = [];
+  const lessonN = Number.isFinite(lessons) ? lessons : rec.lessonsFinished || 0;
+  const streakN = Number.isFinite(streak) ? streak : 0;
+  for (const item of SHOP_EARNED_OUTFITS) {
+    if (have.has(item.id)) continue;
+    if (item.need?.lessons && lessonN >= item.need.lessons) add.push(item.id);
+    else if (item.need?.streak && streakN >= item.need.streak) add.push(item.id);
+  }
+  if (!add.length) return rec;
+  return withShop(rec, (s) => {
+    s.outfits = [...s.outfits, ...add];
+    s.earnedOutfits = [...new Set([...(s.earnedOutfits || []), ...add])];
+    if (!s.outfitActive) s.outfitActive = add[0];
+  });
+}
+
 const SHOP_CSS = `/* Shop looks: injected on demand, not part of the first install. High-contrast Settings keep priority. */
 :root[data-shop-theme="sepia"]:not([data-theme^="contrast"]){--bg:#f4ecd8;--fg:#3b2a1a;--card:#efe4c9;--muted:#6b542e;}
 :root[data-shop-theme="dusk"]:not([data-theme^="contrast"]){--bg:#1b2430;--fg:#f3e6c4;--card:#243044;--muted:#cbb889;}
@@ -127,6 +156,8 @@ const SHOP_CSS = `/* Shop looks: injected on demand, not part of the first insta
 html[data-rimon-outfit="scarf"] .alef-rimon{box-shadow:inset 0 -0.55rem 0 0 #c45c4a;}
 html[data-rimon-outfit="ribbon"] .alef-rimon{box-shadow:inset 0.35rem 0 0 0 #d4a017;}
 html[data-rimon-outfit="glasses"] .alef-rimon{outline:2px solid #2a2a2a;outline-offset:-0.55rem;border-radius:50%;}
+html[data-rimon-outfit="pin"] .alef-rimon{box-shadow:inset -0.45rem 0.35rem 0 0 #e8c547;}
+html[data-rimon-outfit="badge"] .alef-rimon{box-shadow:inset 0 0 0 0.28rem #3d6b4f;}
 `;
 
 /** Paint unlocked shop looks. Contrast themes in Settings are left alone. */

@@ -8,7 +8,7 @@ import { load, save, RETENTION_KEY } from './state.js';
 import { dayKey, deviceZone, localAt, addDaysISO } from './clock.js';
 import { applyRollover, completeLessonDay, afterDayCompleted, streakStatus, weekDots, freezeNoteSeen, freezeNoteShown as markFreezeNote } from './streak.js';
 import { award, lessonPayout, todayXp, XP, lessonAward, unlockedBy } from './xp.js';
-import { applyShopLook } from './gems.js';
+import { applyShopLook, grantEarnedOutfits } from './gems.js';
 import { heartsOn, loseHeart, practiceCard, refillByTime, startLesson, canStartLesson, isLessonHash, heartCount, HEARTS } from './hearts.js';
 import { settle, leagueOn, leagueView } from './leagues.js';
 import { logSession, createScheduler, readShown, recordSent, registerPeriodicSync, daysAway } from './notify.js';
@@ -34,7 +34,13 @@ export function retention(ctx, g = globalThis) {
   // lessonsFinished never reads lower than the lessons Learn and Progress count (src/lib/counts.js), so the unlock gates and
   // every "lessons finished" line agree.
   const synced = (r) => { const n = lessonsFinished(readCounts(store).completed); return n > r.lessonsFinished ? { ...r, lessonsFinished: n } : r; };
-  const get = () => refillByTime(synced(load(store, now())), now());
+  const streakCount = () => { try { return projectStreak(normalizeRecord(streakRaw() ?? {}), now()).count || 0; } catch { return 0; } };
+  const withEarned = (r) => {
+    const g = grantEarnedOutfits(r, { lessons: r.lessonsFinished, streak: streakCount() });
+    if (g === r) return r;
+    try { return save(store, () => g, now()); } catch { return g; }
+  };
+  const get = () => withEarned(refillByTime(synced(load(store, now())), now()));
   const update = (fn) => { const r = save(store, fn, now()); emit(); return r; };
   const streakRaw = () => { try { return store.get(STREAK_KEY) ?? null; } catch { return null; } };
   const calm = () => calmOn(ctx);

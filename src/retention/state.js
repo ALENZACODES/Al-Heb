@@ -15,6 +15,12 @@ const ISO = /^\d{4}-\d\d-\d\d$/;
 const iso = (v) => (typeof v === 'string' && ISO.test(v) ? v : null);
 const arr = (v, cap, ok = () => true) => (Array.isArray(v) ? v.filter(ok).slice(-cap) : []);
 const tri = (v) => (v === true || v === false ? v : null);
+const SHOP_THEME_IDS = new Set(['sepia', 'dusk']);
+const SHOP_OUTFIT_IDS = new Set(['scarf', 'ribbon', 'glasses']);
+const SHOP_AUDIO_IDS = new Set(['blessings']);
+const shopIds = (v, allow) => arr(v, 12, (s) => typeof s === 'string' && allow.has(s));
+const pickShop = (v, allow, owned) => (typeof v === 'string' && allow.has(v) && owned.includes(v) ? v : null);
+
 
 export function newInstallId(g = globalThis) {
   try { if (g.crypto?.randomUUID) return g.crypto.randomUUID(); } catch { /* fall through */ }
@@ -34,6 +40,7 @@ export function defaults(now = Date.now(), installId = newInstallId()) {
     league: { enabled: null, tier: 1, weekId: null, weekXp: 0, carry: 0, joined: false, settled: null, history: [], resultUnseen: null },
     sessions: [], lastTz: null, lastBootDay: null,
     notify: { optedIn: false, tone: 'kind', asks: 0, lastAskAtLesson: 0, denied: false, sent: [], stopped: false, periodicSync: false },
+    shop: { themes: [], themeActive: null, outfits: [], outfitActive: null, audio: [], gameLevels: 0, shields: { held: 0, used: [] } },
   };
 }
 
@@ -69,6 +76,22 @@ export function normalize(raw, now = Date.now()) {
     lastTz: typeof r.lastTz === 'string' ? r.lastTz : null, lastBootDay: iso(r.lastBootDay),
     notify: { ...n, optedIn: n.optedIn === true, tone: n.tone === 'playful' ? 'playful' : 'kind', asks: nat(n.asks), lastAskAtLesson: nat(n.lastAskAtLesson), denied: n.denied === true,
       sent: arr(n.sent, CAPS.sent, (e) => isObj(e) && typeof e.id === 'string'), stopped: n.stopped === true, periodicSync: n.periodicSync === true },
+    shop: normalizeShop(r.shop),
+  };
+}
+
+function normalizeShop(raw) {
+  const s = isObj(raw) ? raw : {};
+  const sh = isObj(s.shields) ? s.shields : {};
+  const themes = shopIds(s.themes, SHOP_THEME_IDS);
+  const outfits = shopIds(s.outfits, SHOP_OUTFIT_IDS);
+  const audio = shopIds(s.audio, SHOP_AUDIO_IDS);
+  return {
+    themes, themeActive: pickShop(s.themeActive, SHOP_THEME_IDS, themes),
+    outfits, outfitActive: pickShop(s.outfitActive, SHOP_OUTFIT_IDS, outfits),
+    audio,
+    gameLevels: Math.min(nat(s.gameLevels), 2),
+    shields: { held: Math.min(nat(sh.held), 2), used: arr(sh.used, CAPS.used, iso) },
   };
 }
 

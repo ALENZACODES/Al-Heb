@@ -3,7 +3,7 @@
 // Gems are earned in lessons only. Nothing here costs money.
 import { h, setKids } from './dom.js';
 import { retention } from './boot.js';
-import { CURRENCY, PRICES, gemsText, whyLabel } from './gems.js';
+import { CURRENCY, PRICES, gemsText, whyLabel, SHOP_THEMES, SHOP_OUTFITS, SHOP_AUDIO, SHOP_LIMITS, shopState, buyShield, buyUnlock, chooseUnlock, buyGameLevel, applyShopLook } from './gems.js';
 import { STREAK, buyFreeze, repairOffer, repairStreak, streakLine } from './streak.js';
 import { HEARTS, refillByGems, nextHeartInMs } from './hearts.js';
 import { setReminders, usualTimeText, pickMessage } from './notify.js';
@@ -35,7 +35,7 @@ export function mount(root, ctx) {
     // The restore is free and shown only while the streak is broken (src/lib/counts.js repairOffer); the same rule as the Daily page.
     const rec = R.get(), st = R.status(), bal = rec.gems.balance, offer = liveRepair(rec, R.streakRaw()) ? repairOffer(rec) : null, calm = R.calm();
     const done = lessonsFinished(readCounts(ctx.store).completed);
-    const next = JSON.stringify([rec.xp.total, done, st.best, st.state, st.count, rec.gems, rec.freezes.held, rec.hearts.n, rec.hearts.enabled, rec.league.enabled, rec.notify.optedIn, rec.notify.tone, !!offer, calm]);
+    const next = JSON.stringify([rec.xp.total, done, st.best, st.state, st.count, rec.gems, rec.freezes.held, rec.hearts.n, rec.hearts.enabled, rec.league.enabled, rec.notify.optedIn, rec.notify.tone, rec.shop, !!offer, calm]);
     if (next === sig) return; // unchanged: leave the page (and the focus) alone
     sig = next;
     const focusKey = body.contains(document.activeElement) ? document.activeElement.getAttribute('data-k') : null;
@@ -60,6 +60,42 @@ export function mount(root, ctx) {
           const out = refillByGems(R.get()); if (!out.ok) { status.textContent = out.reason === 'full' ? 'Your hearts are already full.' : `You need ${gemsText(PRICES.hearts)}.`; return; }
           R.update(() => out.rec); status.textContent = 'Hearts full. Off you go!'; showRimon('hearts_refilled');
         }) }, bal < PRICES.hearts ? `Needs ${gemsText(PRICES.hearts)}` : 'Refill all hearts')) : null,
+      ...(function shopExtras() {
+        const shop = shopState(rec);
+        const buyOrUse = (kind, row, price, buyWhy) => {
+          const owned = kind === 'audio' ? shop.audio.includes(row.id) : (kind === 'theme' ? shop.themes.includes(row.id) : shop.outfits.includes(row.id));
+          const activeKey = kind === 'theme' ? 'themeActive' : kind === 'outfit' ? 'outfitActive' : null;
+          const active = activeKey && shop[activeKey] === row.id;
+          if (owned && kind === 'audio') return h('p', { class: 'muted' }, 'Ready on this device.');
+          if (owned && active) return h('p', { class: 'muted' }, 'This is the one in use.');
+          if (owned) return h('button', { type: 'button', class: 'btn secondary', 'data-k': kind + '-' + row.id, onclick: () => { R.update((r) => chooseUnlock(r, kind, row.id)); applyShopLook(R.get()); status.textContent = row.title + ' is on.'; } }, 'Use this one');
+          return h('button', { type: 'button', class: 'btn', 'data-k': kind + '-' + row.id, disabled: bal < price, onclick: () => ask(`Spend ${gemsText(price)} on ${row.title}?`, 'Yes, buy it', () => {
+            const out = buyUnlock(R.get(), kind, row.id); if (!out.ok) { status.textContent = out.reason === 'owned' ? 'You already have this.' : `You need ${gemsText(price)}.`; return; }
+            R.update(() => out.rec); applyShopLook(out.rec); status.textContent = row.title + ' is yours.'; showRimon(kind === 'outfit' ? 'freeze_bought' : 'hearts_refilled');
+          }) }, bal < price ? `Needs ${gemsText(price)}` : 'Buy');
+        };
+        const catalogBlock = (heading, rows, kind, price) => h('section', { class: 'card ret-item' }, h('h2', {}, heading),
+          ...rows.map((row) => h('div', { class: 'ret-shop-row', 'data-shop': kind + '-' + row.id }, h('h3', {}, row.title), h('p', {}, row.text), h('p', { class: 'ret-price' }, gemsText(price)), buyOrUse(kind, row, price))));
+        const shHeld = shop.shields.held || 0;
+        const shieldBtn = shHeld >= SHOP_LIMITS.shieldMax ? h('p', { class: 'muted' }, `You hold ${SHOP_LIMITS.shieldMax}, the most allowed.`)
+          : h('button', { type: 'button', class: 'btn', 'data-buy': 'shield', 'data-k': 'shield', disabled: bal < PRICES.shield, onclick: () => ask(`Spend ${gemsText(PRICES.shield)} on a streak shield?`, 'Yes, buy it', () => {
+            const out = buyShield(R.get()); if (!out.ok) { status.textContent = out.reason === 'max' ? 'You already hold the most shields allowed.' : `You need ${gemsText(PRICES.shield)}.`; return; }
+            R.update(() => out.rec); status.textContent = 'Shield ready. It covers a missed weekday after your freezes.'; showRimon('freeze_bought');
+          }) }, bal < PRICES.shield ? `Needs ${gemsText(PRICES.shield)}` : 'Buy a streak shield');
+        const lv = shop.gameLevels || 0;
+        const gameBtn = lv >= SHOP_LIMITS.gameLevelMax ? h('p', { class: 'muted' }, 'You already hold two bonus arcade levels.')
+          : h('button', { type: 'button', class: 'btn', 'data-buy': 'game-level', 'data-k': 'game-level', disabled: bal < PRICES.gameLevel, onclick: () => ask(`Spend ${gemsText(PRICES.gameLevel)} to open one more arcade level?`, 'Yes, buy it', () => {
+            const out = buyGameLevel(R.get()); if (!out.ok) { status.textContent = out.reason === 'max' ? 'You already hold two bonus arcade levels.' : `You need ${gemsText(PRICES.gameLevel)}.`; return; }
+            R.update(() => out.rec); status.textContent = `Bonus arcade levels: ${out.rec.shop.gameLevels}. They add to levels you earn by playing.`; showRimon('hearts_refilled');
+          }) }, bal < PRICES.gameLevel ? `Needs ${gemsText(PRICES.gameLevel)}` : 'Unlock one more arcade level');
+        return [
+          item('Streak Shield', `Covers one missed weekday automatically, after your streak freezes. You hold ${shHeld} of ${SHOP_LIMITS.shieldMax}. Shabbat and holidays never need one.`, gemsText(PRICES.shield), shieldBtn),
+          catalogBlock('Looks', SHOP_THEMES, 'theme', PRICES.theme),
+          catalogBlock('Rimon outfits', SHOP_OUTFITS, 'outfit', PRICES.outfit),
+          catalogBlock('Audio packs', SHOP_AUDIO, 'audio', PRICES.audio),
+          item('Bonus arcade level', `Opens the next level in arcade games, on top of levels you earn by playing. You hold ${lv} of ${SHOP_LIMITS.gameLevelMax}.`, gemsText(PRICES.gameLevel), gameBtn),
+        ];
+      })(),
       h('section', { class: 'card' }, h('h2', {}, 'Recent'), rec.gems.ledger.length
         ? h('ul', { class: 'ret-ledger' }, ...rec.gems.ledger.slice(-10).reverse().map((e) => h('li', {}, `${e.d > 0 ? '+' : ''}${e.d} ${whyLabel(e.why)}, ${DAY[new Date(e.at).getDay()]}`)))
         : h('p', { class: 'muted' }, 'Nothing yet. Finish a lesson to earn your first gems.')),
@@ -73,6 +109,7 @@ export function mount(root, ctx) {
           h('li', { 'data-rule': 'hearts' }, 'Hearts: ' + heartsShort()),
           h('li', {}, h('a', { href: '#/app-rules' }, 'Every rule for hearts, streaks, minutes and passing')),
           h('li', {}, 'Gems: earned by learning. They cannot be bought, and there are no ads.'),
+          h('li', {}, 'The shop also sells a streak shield, looks, outfits for Rimon, a blessings pack mark, and an extra arcade level. Nothing here costs money.'),
           h('li', {}, 'Practice league: the other players are pretend, paced to your own weeks. It is a race against your usual self.'),
           h('li', {}, 'Reminders: one short line from Rimon, only if you say yes, never on Shabbat or holidays, never at night.'),
           h('li', {}, 'Everything stays on this device. Calm mode switches all of it off.'))),
@@ -99,6 +136,6 @@ export function mount(root, ctx) {
   }
   root.replaceChildren(h('div', { class: 'stack ret-shop alef-retention' }, h('h1', { id: 'view-title', tabindex: '-1' }, 'Shop'), status, body));
   const on = () => { try { draw(); } catch { /* keep the last drawing */ } };
-  document.addEventListener('alef:retention', on); draw();
+  document.addEventListener('alef:retention', on); applyShopLook(R.get()); draw();
   return () => document.removeEventListener('alef:retention', on);
 }

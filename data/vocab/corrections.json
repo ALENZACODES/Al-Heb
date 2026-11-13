@@ -4787,7 +4787,7 @@
    "new": {
     "date": "2026-11-12",
     "issue": "verified",
-    "note": "Wiktionary (en.wiktionary.org/wiki/ארסנל, retrieved 12 Nov 2026) gives אַרְסֵנָל (arsenál) m, plural indefinite אַרְסֵנָלִים, IPA /aʁseˈnal/. Even-Shoshan / Avneyon also lists אַרְסֵנָל as masculine with inflected forms including ארסנלים. Pointing, gender and plural already on the entry are kept. Morfix prints אַרְסֶנָל with segol (same /e/ sound); that variant is noted and the Wiktionary / Avneyon pointing is kept."
+    "note": "Wiktionary (en.wiktionary.org/wiki/ארסנל, retrieved 12 Nov 2026) gives אַרְסֵנָל (arsenál) m, plural indefinite אַרְסֵנָלִים, IPA /aʁseˈnal/. Even-Shoshan / Avneyon also lists אַרְסֵנָל as masculine with inflected forms including ארסנלים. Pointing, gender and plural already on the entry are kept. Morfix prints אַרְסֶנָל with segol (same /e/ sound); that variant is noted and the Wiktionary / Avneyon pointing is kept."
    },
    "reason": "lemma-accuracy (12 Nov 2026): Second sources now settle the previously unverified pointing, gender and plural; values already on the entry are confirmed, not changed. Morfix's segol is noted as a variant."
   },

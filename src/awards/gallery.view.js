@@ -4,7 +4,9 @@
 // has one for the badge id (BADGE_<id>); the temporary vector is the fallback
 // and stays wherever no approved picture resolves. Certificate artwork: none yet.
 import { h } from '../shell/ui.js';
-import { count, SCOPE } from '../lib/counts.js';
+import { count, SCOPE, readCounts } from '../lib/counts.js';
+import { load, save } from '../retention/state.js';
+import { grantMysteries, mysteryView } from '../retention/xp.js';
 import { GAME_STORE_KEYS } from './observe.js';
 import { ART_NOTE, renderMedallion } from './icons.js';
 import { loadBeginnerRubric } from './rubric.js';
@@ -29,6 +31,9 @@ const CSS = `
 .aw button, .aw input { font: inherit; }
 .aw input { inline-size: min(100%, 24rem); padding: .4rem .6rem; border: 2px solid currentColor; background: transparent; color: inherit; }
 .aw-note { border-inline-start: 4px solid currentColor; padding-inline-start: .6rem; }
+.aw-mystery { list-style: none; padding: 0; margin: 0; display: grid; gap: .75rem; }
+.aw-mystery li { border: 2px solid currentColor; padding: .75rem; }
+.aw-mystery li[data-open="false"] { border-style: dashed; }
 .aw-gallery, .aw-slots, .aw-check { list-style: none; padding: 0; margin: 0; display: grid; gap: .75rem; }
 .aw-badge, .aw-slot { border: 2px solid currentColor; padding: .75rem; display: grid; grid-template-columns: auto 1fr; gap: .75rem; align-items: start; }
 .aw-badge[data-state="locked"], .aw-slot[data-state="locked"] { border-style: dashed; }
@@ -308,6 +313,23 @@ export async function mount(root, ctx) {
           })));
       }));
 
+
+  let mysteryItems = [];
+  try {
+    const rec0 = load(ctx?.store, now);
+    const progress = { perfect: rec0.perfectLessons || 0, books: readCounts(ctx?.store, now).booksFinished || 0 };
+    const granted = grantMysteries(rec0, progress, now);
+    if (granted.rec !== rec0) save(ctx?.store, () => granted.rec, now);
+    mysteryItems = mysteryView(granted.rec, progress).items;
+  } catch { mysteryItems = []; }
+  const mysterySection = h('section', { 'aria-labelledby': 'award-h-mystery', 'data-shop': 'mysteries' },
+    h('h2', { id: 'award-h-mystery' }, 'Mysteries'),
+    h('p', {}, 'A few things already in Aleph stay quietly out of sight until you earn them. Nothing new is downloaded.'),
+    h('ul', { class: 'aw-mystery' }, ...mysteryItems.map((item) => h('li', { 'data-mystery': item.id, 'data-open': String(item.open) },
+      h('h3', {}, item.open ? item.title : 'A surprise is waiting'),
+      h('p', {}, item.open ? item.text : item.needLine),
+      item.open ? h('p', {}, h('a', { class: 'aw-link', href: item.href }, 'Open ' + item.title)) : null))));
+
   page.append(
     h('h1', { id: 'view-title', tabindex: '-1' }, 'Awards'),
     h('p', { id: 'award-visit', 'data-visit': settled.visit }, visit),
@@ -317,6 +339,7 @@ export async function mount(root, ctx) {
     // One labelled count (M-01): badges here, not the path milestones Progress counts.
     h('p', { id: 'award-count', 'data-earned': String(rows.filter((r) => r.state === 'earned').length) }, `${count(rows.filter((r) => r.state === 'earned').length, 'badge')} earned. Counted: ${SCOPE.badges}.`),
     status,
+    mysterySection,
     h('section', { 'aria-labelledby': 'award-h-badges' },
       h('h2', { id: 'award-h-badges' }, 'Activity'),
       h('p', {}, 'These medallions record a saved practice-game session. The picture is a temporary enamel stand-in with a mark for the game that saved the play.'),

@@ -7,7 +7,7 @@ import { calmOn, streakVisible } from '../shell/comfort.js';
 import { load, save, RETENTION_KEY } from './state.js';
 import { dayKey, deviceZone, localAt, addDaysISO } from './clock.js';
 import { applyRollover, completeLessonDay, afterDayCompleted, streakStatus, weekDots, freezeNoteSeen, freezeNoteShown as markFreezeNote } from './streak.js';
-import { award, lessonPayout, todayXp, XP, lessonAward, unlockedBy } from './xp.js';
+import { award, lessonPayout, todayXp, XP, lessonAward, unlockedBy, grantMysteries, MYSTERIES } from './xp.js';
 import { applyShopLook } from './gems.js';
 import { heartsOn, loseHeart, practiceCard, refillByTime, startLesson, canStartLesson, isLessonHash, heartCount, HEARTS } from './hearts.js';
 import { settle, leagueOn, leagueView } from './leagues.js';
@@ -95,8 +95,12 @@ export function retention(ctx, g = globalThis) {
     lastTouch = t; lastCount = st.count; combo.run = 0; combo.max = 0; if (!detail.quick) lessonHash = null;
     scheduler?.arm();
     const q = questStep({ xp: pay.xp, lesson: partial ? 0 : 1, sharp: !partial && Number(detail.accuracy) >= 0.9 ? 1 : 0, combo: bestRun });
-    const lg = leagueOn(saved, { calm: calm() }) && saved.league.joined ? leagueView(load(store, t), t) : null;
-    return { month: q.month, unlocked: unlockedBy(saved, lessonsBefore, saved.lessonsFinished), league: lg && !lg.closed ? { rank: lg.you.rank, tier: lg.tier.en, toPromote: lg.toPromote } : null,
+    const afterPay = load(store, t);
+    const found = grantMysteries(afterPay, { perfect: afterPay.perfectLessons || 0, books: readCounts(store).booksFinished }, t);
+    if (found.rec !== afterPay) { update(() => found.rec); for (const id of found.opened) { const item = MYSTERIES.find((x) => x.id === id); if (item) say(`You found ${item.title}. +${found.gems / found.opened.length} gems.`); } }
+    const saved2 = load(store, t);
+    const lg = leagueOn(saved2, { calm: calm() }) && saved2.league.joined ? leagueView(saved2, t) : null;
+    return { month: q.month, unlocked: unlockedBy(saved2, lessonsBefore, saved2.lessonsFinished), league: lg && !lg.closed ? { rank: lg.you.rank, tier: lg.tier.en, toPromote: lg.toPromote } : null,
       quests: q.done, chest: q.chest, xp: pay.xp, parts: pay.parts, gems: pay.gems + st.gems + q.gems, goalCrossed: pay.goalCrossed, first: pay.first, todayBefore, todayAfter: todayXp(saved, t), goal: saved.goal,
       streak: { count: st.count, grew: st.grew, milestone: st.milestone }, heartsEmpty: heartsOn(saved, { calm: calm() }) && heartCount(saved, t) <= 0, calm: calm() };
   }

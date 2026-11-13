@@ -60,6 +60,7 @@ export function lessonPayout(rec, { awardId, accuracy = 0, maxCombo = 0, now = D
   const gemsBefore = rec.gems.balance, first = !partial && rec.lessonsFinished === 0;
   let { rec: r, paid, goalCrossed } = award(rec, { awardId, kind: 'lesson', amount: parts.base + parts.accuracy + parts.combo, now });
   r = clone(r); if (!partial) r.lessonsFinished += 1; // a 3-minute sitting pays XP but is not a finished lesson
+  if (!partial && parts.accuracy) r.perfectLessons = (r.perfectLessons || 0) + 1;
   if (parts.accuracy) r = earn(r, EARN.accuracy, 'accuracy', now);
   if (first) r = earn(r, EARN.first, 'first', now);
   return { rec: r, xp: paid, parts, gems: r.gems.balance - gemsBefore, goalCrossed, first, duplicate: false };
@@ -88,4 +89,37 @@ export function unlockedBy(rec, before, after) {
   if (crossed(HEARTS.unlockLessons) && rec.hearts.enabled !== false) out.push('hearts');
   if (crossed(LEAGUE.unlockLessons) && rec.league.enabled !== false) out.push('league');
   return out;
+}
+
+// ---------- Mystery unlocks (T5): discovery of content already in the catalogue ----------
+export const MYSTERY_GEMS = 10;
+export const MYSTERIES = Object.freeze([
+  { id: 'meltdown', title: 'Meltdown', text: 'Guess the word before the ice pop melts.', href: '#/meltdown', need: { perfect: 10 }, needLine: 'Opens after 10 sharp lessons (90% or better).' },
+  { id: 'songs', title: 'Songs', text: 'Songs already in Aleph, ready to listen.', href: '#/songs', need: { books: 1 }, needLine: 'Opens after you finish your first little book.' },
+]);
+export const mysteryNeedLine = (item) => item.needLine || 'Keep learning to open this.';
+export function mysteryOpen(item, progress = {}) {
+  if (item?.need?.perfect) return (progress.perfect || 0) >= item.need.perfect;
+  if (item?.need?.books) return (progress.books || 0) >= item.need.books;
+  return false;
+}
+export function mysteryView(rec, progress = {}) {
+  const opened = new Set(rec?.mysteries?.opened || []);
+  return {
+    items: MYSTERIES.map((item) => {
+      const open = mysteryOpen(item, progress) || opened.has(item.id);
+      return { ...item, open, found: opened.has(item.id), needLine: mysteryNeedLine(item) };
+    }),
+  };
+}
+/** Open any mystery the learner has earned, and pay gems once for each new find. */
+export function grantMysteries(rec, progress = {}, now = Date.now()) {
+  const opened = new Set(rec?.mysteries?.opened || []);
+  const add = MYSTERIES.filter((item) => mysteryOpen(item, progress) && !opened.has(item.id)).map((item) => item.id);
+  if (!add.length) return { rec, opened: [], gems: 0 };
+  let r = clone(rec);
+  r.mysteries = { opened: [...(r.mysteries?.opened || []), ...add] };
+  r = earn(r, add.length * MYSTERY_GEMS, 'mystery', now);
+  r.mysteries = { opened: [...(rec.mysteries?.opened || []), ...add] };
+  return { rec: r, opened: add, gems: add.length * MYSTERY_GEMS };
 }

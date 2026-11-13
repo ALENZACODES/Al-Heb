@@ -31,7 +31,7 @@ export function newInstallId(g = globalThis) {
 /** A fresh record. */
 export function defaults(now = Date.now(), installId = newInstallId()) {
   return {
-    v: RETENTION_V, installId, createdAt: dayKey(now), lessonsFinished: 0, goal: 20,
+    v: RETENTION_V, installId, createdAt: dayKey(now), lessonsFinished: 0, perfectLessons: 0, goal: 20,
     xp: { total: 0, days: {}, recentIds: [], capDay: null, capReview: 0, capGame: 0 },
     gems: { balance: 0, ledger: [], paidMilestones: [], goalPaidDay: null },
     freezes: { held: 0, used: [], evaluatedThrough: null, unseen: false },
@@ -41,6 +41,7 @@ export function defaults(now = Date.now(), installId = newInstallId()) {
     sessions: [], lastTz: null, lastBootDay: null,
     notify: { optedIn: false, tone: 'kind', asks: 0, lastAskAtLesson: 0, denied: false, sent: [], stopped: false, periodicSync: false },
     shop: { themes: [], themeActive: null, outfits: [], outfitActive: null, audio: [], gameLevels: 0, shields: { held: 0, used: [] } },
+    mysteries: { opened: [] },
   };
 }
 
@@ -64,7 +65,7 @@ export function normalize(raw, now = Date.now()) {
   const rep = isObj(r.repair) && Array.isArray(r.repair.days) && r.repair.days.every(iso) && r.repair.days.length ? { days: r.repair.days.slice(0, 7), prev: nat(r.repair.prev), last: iso(r.repair.last), until: nat(r.repair.until) } : null;
   return {
     ...r, v: typeof r.v === 'number' && r.v > RETENTION_V ? r.v : RETENTION_V, installId: d.installId, createdAt: iso(r.createdAt) || d.createdAt,
-    lessonsFinished: nat(r.lessonsFinished), goal: GOAL_CHOICES.includes(r.goal) ? r.goal : 20,
+    lessonsFinished: nat(r.lessonsFinished), perfectLessons: nat(r.perfectLessons), goal: GOAL_CHOICES.includes(r.goal) ? r.goal : 20,
     xp: { ...x, total: nat(x.total), days, recentIds: arr(x.recentIds, CAPS.recentIds, (s) => typeof s === 'string'), capDay: iso(x.capDay), capReview: nat(x.capReview), capGame: nat(x.capGame) },
     gems: { ...g, balance: nat(g.balance), ledger: arr(g.ledger, CAPS.ledger, (e) => isObj(e) && Number.isFinite(e.d)), paidMilestones: arr(g.paidMilestones, 20, Number.isInteger), goalPaidDay: iso(g.goalPaidDay) },
     freezes: { ...f, held: Math.min(nat(f.held), 2), used: arr(f.used, CAPS.used, iso), evaluatedThrough: iso(f.evaluatedThrough), unseen: f.unseen === true },
@@ -77,6 +78,7 @@ export function normalize(raw, now = Date.now()) {
     notify: { ...n, optedIn: n.optedIn === true, tone: n.tone === 'playful' ? 'playful' : 'kind', asks: nat(n.asks), lastAskAtLesson: nat(n.lastAskAtLesson), denied: n.denied === true,
       sent: arr(n.sent, CAPS.sent, (e) => isObj(e) && typeof e.id === 'string'), stopped: n.stopped === true, periodicSync: n.periodicSync === true },
     shop: normalizeShop(r.shop),
+    mysteries: { opened: arr((isObj(r.mysteries) ? r.mysteries.opened : r.mysteries), 12, (s) => s === 'meltdown' || s === 'songs') },
   };
 }
 

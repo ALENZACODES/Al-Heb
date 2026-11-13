@@ -18,3 +18,6 @@ tools/ask-torah/.venv/
 tools/ask-torah/**/__pycache__/
 # local Google Cloud test checkpoint (contains no secrets, but is a run artifact)
 data/curriculum/practical/_gcloud-checkpoint.json
+
+# language packs copied next to the site for a local try-out (never committed; see docs/nikud/README.md)
+assets/vendor/_packs/

@@ -66,6 +66,7 @@ export const ON_DEMAND_GROUPS = Object.freeze([
   { id: "od-pictures", label: "Book, story and speaking-practice pictures", test: /^assets\/(game-art|letter-cartoons|books|speak-hold|speak-candidates)\//, approxMB: 123.45 },
   { id: "od-games", label: "Games (preview-game code, word data and arcade art)", test: /^(src\/games\/|data\/games\/|assets\/games\/)/, approxMB: 1.4 },
   { id: "od-camera", label: "Camera Translator (code and sign word list)", test: /^(src\/camera|data\/camera)\//, approxMB: 0.07 },
+  { id: "od-vowel-marks", label: "Vowel mark button (code only; the vowel mark packs are downloaded separately)", test: /^src\/nikud\//, approxMB: 0.02 },
   { id: "od-books", label: "Little books (code and book texts)", test: /^(src\/books|data\/books)\//, approxMB: 0.04 },
   { id: "od-synagogues", label: "Reform Synagogues in Canada", test: /^(src\/synagogues|data\/synagogues|assets\/synagogues)\//, approxMB: 14 },
   { id: "od-library", label: "Library articles", test: /^(src\/library|data\/library)\//, approxMB: 0.07 },

@@ -53,6 +53,9 @@ const ON_DEMAND_PREFIXES = ['data/vocab/', 'data/roots/', 'data/knownwords/', 'd
   'src/readlab/', 'data/readlab/', // reading lane: Reading Tools (#/readlab), code and its two lookup files, fetched on first open
   // Camera Translator (preview route /camera): view code, word list and config are fetched when the screen first opens, runtime-cached.
   'src/camera/', 'data/camera/',
+  // Vowel marks on this device (lane hf-nikud, 12 Nov): the panel and its service load only when Talk, the Camera Translator or the
+  // Settings group asks for them. The vendored alef-tools code and the per-unit nikud files live under assets/vendor/, which is never installed.
+  'src/nikud/',
   // Game data (word bank, prefix deck, arcade lists, the laws) and arcade art (backdrops, cast and letter sprites): fetched when a game first opens, runtime-cached.
   'data/games/', 'assets/games/',
   // Preview-route view code (pronunciation styles, vocabulary browser): not v0, fetched on first view, runtime-cached.

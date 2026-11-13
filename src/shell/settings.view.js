@@ -144,6 +144,13 @@ export function mount(root, ctx) {
     labelled('lineSpacing', 'Space between lines', { normal: 'Normal', relaxed: 'More', wide: 'Most' }),
     labelled('letterSpacing', 'Space between letters (not used for Hebrew)', { normal: 'Normal', wide: 'More', wider: 'Most' }),
     labelled('lineLength', 'Line length', { normal: 'Normal', narrow: 'Short lines' })];
+  // Vowel mark packs: size, get and remove. The rows come from src/nikud (not in the first install) and load when the group is first opened.
+  const marksPacks = h('div', { id: 's-nikud-packs' });
+  const marksGroup = group('marks', 'Vowel mark packs', 'Optional downloads that add vowel marks on this device', [marksPacks]);
+  marksGroup.addEventListener('toggle', () => {
+    if (!marksGroup.open || marksPacks.firstChild) return;
+    import('../nikud/panel.js').then((m) => { marksPacks.replaceChildren(m.packRows({ heading: 'h3' })); }).catch(() => { marksPacks.textContent = 'These packs are not part of this copy of Aleph.'; });
+  });
   root.replaceChildren(h('article', { class: 'card' },
     h('h1', { id: 'view-title', tabindex: '-1' }, t('settings.title')),
     h('p', {}, h('a', { href: '#/accessibility', id: 's-a11y-link' }, 'Accessibility: text, sound, colour, touch and calm settings'), ' · ', h('a', { href: '#/shop' }, 'Streak, hearts and reminders'), ' · ', h('a', { href: '#/help', id: 's-help-link' }, 'Help: how Aleph works, in plain words')),
@@ -163,6 +170,7 @@ export function mount(root, ctx) {
     group('calm', 'Calm and quiet', 'Less movement, no sounds, no timers, one thing at a time', calmRows()),
     group('read', 'Reading comfort', 'Text size, spacing and font', readRows()),
     group('audio', 'Sound', 'For learners who do not use audio', [boolRow('audioFree', AUDIO_FREE_LABEL, AUDIO_FREE_HELP)]),
+    marksGroup,
     group('listen', 'Listen and repeat', 'Slow speed and a pause to say it yourself', [
     h('p', { class: 'muted' }, 'Slow keeps the same voice at 0.7 of the speed, so you can hear each sound. Echo plays a letter, sound or word, plays it again slowly, then stays quiet for a moment so you can say it back before moving on.'),
     labelled('clipRate', 'Speed', { normal: 'Normal', 'slow-0.8': 'A little slower (0.8×)', slow: 'Slow (0.7×)', 'slow-0.6': 'Very slow (0.6×)' }),

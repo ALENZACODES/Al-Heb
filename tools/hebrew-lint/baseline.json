@@ -1658,7 +1658,7 @@
   "data/pronunciation/runtime/lookup-02.json|conflicting-marks|.w.<key>|624565e5",
   "data/pronunciation/variants/_vocab-2.json|conflicting-marks|.records[590].he|624565e5",
   "data/vocab/corrections.json|duplicate-mark|.corrections[69].old|dedaa7fa",
-  "data/vocab/corrections.json|nonfinal-letter-at-end|.corrections[1505].old.he|2ba20ab9",
+  "data/vocab/corrections.json|nonfinal-letter-at-end|.corrections[1514].old.he|2ba20ab9",
   "data/vocab/frequency.json|conflicting-marks|.entries[3189].he|624565e5",
   "data/vocab/index.json|conflicting-marks|.rows[2590][1]|624565e5",
   "data/vocab/packs/describing-words-10.json|conflicting-marks|.words[28].forms.plural|03257bd6",

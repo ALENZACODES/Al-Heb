@@ -9,7 +9,10 @@ import { lintString } from '../tools/hebrew-lint/lint.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const rd = (r) => JSON.parse(fs.readFileSync(path.join(root, r), 'utf8'));
-const spec = rd('data/vocab/corrections.json').corrections.filter((c) => c.field === 'forms.plural');
+const stripNiq = (s) => String(s || '').replace(/[ְ-ׇ]/g, '');
+// Only the lint-driven doubled-sheva fixes. Later forms.plural corrections that change letters (for example a wrong
+// plural) are covered by their own tests, not this sheva-shape guard.
+const spec = rd('data/vocab/corrections.json').corrections.filter((c) => c.field === 'forms.plural' && stripNiq(c.old) === stripNiq(c.new));
 const words = rd('data/vocab/words.json').words;
 const byId = new Map(words.map((w) => [w.id, w]));
 const strip = (s) => s.replace(/[ְ-ׇ]/g, '');

@@ -5,13 +5,13 @@
  "counts": {
   "removed": 2,
   "translit": 173,
-  "forms": 1,
+  "forms": 2,
   "glosses": 92,
   "hidden": 4,
   "examples": 1500,
   "ipa": 23,
   "added": 6,
-  "patched": 28,
+  "patched": 36,
   "rank": 12
  },
  "corrections": [
@@ -4695,6 +4695,112 @@
     "royalty"
    ],
    "reason": "learner-text gate (S-01) 2026-11-12: the alt sense was cut off at \"e.g.\"; the cut-off example is removed and the sense kept"
+  },
+  {
+   "id": "h377d1fb1",
+   "field": "forms.plural",
+   "old": "הָרִים",
+   "new": "הָרוֹת",
+   "reason": "lemma-accuracy (12 Nov 2026): Feminine plural of the adjective pregnant is הָרוֹת (BDB: plural construct הָרוֺת Amos 1:13; Blue Letter Bible H2030). הָרִים is the plural of הַר mountain."
+  },
+  {
+   "id": "h377d1fb1",
+   "field": "example",
+   "old": {
+    "he": "הִנֵּה יְחַבֶּל אָוֶן וְהָרָה עָמָל וְיָלַד שָׁקֶר",
+    "en": null,
+    "hePointed": true,
+    "translit": "hineh yechabel aven veharah amal veyalad shaker",
+    "match": "וְהָרָה",
+    "ref": "Psalms 7:15",
+    "source": {
+     "type": "uxlc",
+     "ref": "Psalms 7:15",
+     "license": "public domain / copy without restriction (tanach.us/License.html)",
+     "url": "https://tanach.us"
+    },
+    "flags": {
+     "senseChecked": false,
+     "ambiguousMatch": true,
+     "noTranslation": true
+    }
+   },
+   "new": null,
+   "reason": "lemma-accuracy (12 Nov 2026): Hold: Psalms 7:15 token וְהָרָה is the verb to conceive, not the adjective הָרֶה. Lane 4 owns a replacement in the example-sentence sweep."
+  },
+  {
+   "id": "h3bb19e3d",
+   "field": "alt",
+   "old": [
+    "Nazarene",
+    "Nazarene (a resident of Nazareth)"
+   ],
+   "new": [
+    "Nazarene"
+   ],
+   "reason": "lemma-accuracy (12 Nov 2026): נוֹצְרִי means Christian (and Nazarene in that sense). The demonym for a Nazareth resident is נצרתי; no Hebrew-dictionary source gives נוצרי as resident of Nazareth (Pealim dict/5196-notzri)."
+  },
+  {
+   "id": "paa7b1166",
+   "field": "pos",
+   "old": "unknown",
+   "new": "verb",
+   "reason": "lemma-accuracy (12 Nov 2026): Finite verb form: Pi'el perfect consecutive, 2nd person masculine singular with a 3rd person masculine plural suffix, root ש־נ־ן, Strong's H8150 (Bible Hub http://biblehub.com/hebrew/8150.htm). Pointing verified from Sefaria Deuteronomy 6:7. Full analysis is also on enNote, binyan and root; pos is not simplified beyond verb."
+  },
+  {
+   "id": "paa7b1166",
+   "field": "root",
+   "old": null,
+   "new": "ש־נ־ן",
+   "reason": "lemma-accuracy (12 Nov 2026): Root of וְשִׁנַּנְתָּם is ש־נ־ן (Strong's H8150, Bible Hub)."
+  },
+  {
+   "id": "paa7b1166",
+   "field": "binyan",
+   "old": null,
+   "new": "pi'el",
+   "reason": "lemma-accuracy (12 Nov 2026): The form is Pi'el perfect consecutive (Bible Hub H8150)."
+  },
+  {
+   "id": "paa7b1166",
+   "field": "enNote",
+   "old": null,
+   "new": "A finite verb form: Pi'el perfect consecutive, 2nd person masculine singular, with a 3rd person masculine plural suffix (root ש־נ־ן, Strong's H8150). Pointing follows Sefaria on Deuteronomy 6:7.",
+   "reason": "lemma-accuracy (12 Nov 2026): Record the full POS analysis on the entry so it is not reduced to a bare verb label."
+  },
+  {
+   "id": "h1f02450d",
+   "field": "source.lemmaReview",
+   "old": null,
+   "new": {
+    "date": "2026-11-12",
+    "issue": "root-dispute",
+    "kept": "מ־ו־ץ",
+    "note": "The entry keeps the existing root מ־ו־ץ (Strong's / Gesenius, from H4160 מוּץ). Pealim assigns מ־צ־ה and Balashon assigns מ־צ־ץ. The dispute is recorded; the root is not changed pending a later human decision."
+   },
+   "reason": "lemma-accuracy (12 Nov 2026): Genuine three-way conflict on the root of מִיץ. Keep מ־ו־ץ and record the dissenting sources; do not pick a winner."
+  },
+  {
+   "id": "hcaa91987",
+   "field": "source.lemmaReview",
+   "old": null,
+   "new": {
+    "date": "2026-11-12",
+    "issue": "verified",
+    "note": "Wiktionary (en.wiktionary.org/wiki/ארסנל, retrieved 12 Nov 2026) gives אַרְסֵנָל (arsenál) m, plural indefinite אַרְסֵנָלִים, IPA /aʁseˈnal/. Even-Shoshan / Avneyon also lists אַרְסֵנָל as masculine with inflected forms including ארסנלים. Pointing, gender and plural already on the entry are kept. Morfix prints אַרְסֶנָל with segol (same /e/ sound); that variant is noted and the Wiktionary / Avneyon pointing is kept."
+   },
+   "reason": "lemma-accuracy (12 Nov 2026): Second sources now settle the previously unverified pointing, gender and plural; values already on the entry are confirmed, not changed. Morfix's segol is noted as a variant."
+  },
+  {
+   "id": "hc030e659",
+   "field": "source.lemmaReview",
+   "old": null,
+   "new": {
+    "date": "2026-11-12",
+    "issue": "verified",
+    "note": "Wiktionary (en.wiktionary.org/wiki/פורנו, retrieved 12 Nov 2026) lists פּוֹרְנוֹ (porno) as a masculine noun, informal 'porn, porno'. The gender already on the entry is kept and cited; it was not invented."
+   },
+   "reason": "lemma-accuracy (12 Nov 2026): A second source now states the gender as masculine, confirming the value already on the entry."
   },
   {
    "id": "he9919e02",
@@ -17310,31 +17416,6 @@
    },
    "new": null,
    "reason": "in this sentence \"קיצור\" is read as a noun; this entry is a verb. Held, not replaced (example sweep, 12 Nov 2026)."
-  },
-  {
-   "id": "h377d1fb1",
-   "field": "example",
-   "old": {
-    "he": "הִנֵּה יְחַבֶּל אָוֶן וְהָרָה עָמָל וְיָלַד שָׁקֶר",
-    "en": null,
-    "hePointed": true,
-    "translit": "hineh yechabel aven veharah amal veyalad shaker",
-    "match": "וְהָרָה",
-    "ref": "Psalms 7:15",
-    "source": {
-     "type": "uxlc",
-     "ref": "Psalms 7:15",
-     "license": "public domain / copy without restriction (tanach.us/License.html)",
-     "url": "https://tanach.us"
-    },
-    "flags": {
-     "senseChecked": false,
-     "ambiguousMatch": true,
-     "noTranslation": true
-    }
-   },
-   "new": null,
-   "reason": "in this sentence \"והרה\" is read as a verb; this entry is an adjective. Held, not replaced (example sweep, 12 Nov 2026)."
   },
   {
    "id": "h407a8f11",
@@ -43475,8 +43556,8 @@
   "date": "2026-11-12",
   "model": "dicta-il/dictabert-joint",
   "revision": "7b1256fc0846e22d1af431eae299e2dcecee2778",
-  "examplesRead": 5706,
-  "held": 1444,
+  "examplesRead": 5705,
+  "held": 1443,
   "tool": "tools/vocab/hold_examples.mjs",
   "list": "alef-tools packages/morph/review/example-sweep.json"
  }

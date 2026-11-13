@@ -16,7 +16,7 @@ Required attribution text (identical to `ATTRIBUTION` in `src/vocab/vocab.view.j
 
 - Every record is distributed under CC BY-SA 4.0 as part of the data set (`distribution` field; LICENSES.md "Share-alike consequence"). 6,033 records are themselves share-alike derivatives; 270 are project text that is bundled into it.
 - 51 Wiktionary entries also carry merged phrasebook text and 143 carry lesson references; their `sources` list includes `phrasebook` / `lessons` and `merged` names the ids (all ids checked to exist).
-- Examples: 3,935 Tatoeba sentences (CC BY 2.0 FR; both authors, both sentence ids and the URL are kept on the record, none missing), 327 verses from the Leningrad Codex (public domain), 2,041 records without an example (43 Tatoeba examples were removed by the earlier corrections, see docs/vocab/JUDGEMENT.md and docs/vocab/FIRST-500-CHECK.md; 1,337 Tatoeba sentences and 107 verses were held by the example sweep of 12 Nov 2026, see docs/vocab/EXAMPLE-SWEEP.md).
+- Examples: 3,935 Tatoeba sentences (CC BY 2.0 FR; both authors, both sentence ids and the URL are kept on the record, none missing), 327 verses from the Leningrad Codex (public domain), 2,041 records without an example (43 Tatoeba examples were removed by earlier corrections; one Leningrad verse example was held on 12 Nov 2026 because the matched token was the verb, not the adjective; 1,337 Tatoeba sentences and 106 verses were held by the example sweep of 12 Nov 2026, see docs/vocab/EXAMPLE-SWEEP.md).
 - Rank sources: `opensubtitles-he-2018` -> FrequencyWords (CC BY-SA 4.0, share-alike); `uxlc-tanakh+prayer-registry` -> counts only, no obligation (LICENSES.md row 3).
 - Every record's pack file exists under `data/vocab/packs/` and contains the id.
 

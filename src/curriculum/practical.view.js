@@ -216,7 +216,7 @@ function fillCheck(ctx, intro, slots) {
     const o = ctx?.speakCheck || {};
     const caps = o.caps || undefined;
     if (intro) intro.textContent = m.checkIntro(caps);
-    for (const [slot, he, id] of slots) { const c = m.checkControl(he, { ...o, caps, id }); if (c) slot.replaceChildren(c); }
+    for (const [slot, he, id] of slots) { const c = m.checkControl(he, { ...o, caps, id, tradition: ctx?.settings?.get?.('congregation') }); if (c) slot.replaceChildren(c); }
   }).catch(() => { /* the check is optional: the cards work without it */ });
 }
 
@@ -281,6 +281,32 @@ function renderUnit(root, ctx, index, unit, { covers, progress, results } = {}) 
         ...(unit.lessons || []).map((l) => el("li", {},
           el("a", { href: lessonHref(l.id) }, `${l.id}: ${l.title}`),
           el("span", { class: "muted" }, " (existing lesson, not a new one)"))))));
+  // Checked extra practice for this unit from the pinned alef-tools build, when it has any. Fetched now, never installed up front.
+  (ctx?.unitTools ? ctx.unitTools() : import("../alef-tools/offline-llm.js")).then((m) => m.unitExtras(unit.id, ctx?.fetchTools)).then((x) => {
+    const card = root.querySelector?.(`[data-unit="${unit.id}"]`);
+    if (card && (x.examples.length || x.quiz.length)) card.append(extrasBlock(x));
+  }).catch(() => { /* the unit page is complete without it */ });
+}
+
+/** Checked example sentences and fill-in-the-word items for a unit (see src/alef-tools/offline-llm.js). */
+export function extrasBlock({ examples = [], quiz = [] }) {
+  const quizItem = (q) => {
+    const say = el("p", { class: "muted", role: "status" });
+    return el("li", { "data-quiz": q.id },
+      el("p", {}, heText(q.stem), q.en ? el("span", { class: "muted" }, ` (${q.en})`) : null),
+      el("p", {}, ...q.choices.map((c, i) => {
+        const b = el("button", { type: "button", class: "btn secondary", "aria-pressed": "false", onclick: () => {
+          say.textContent = i === q.answer ? "Yes, that is the word." : "Not this one. Try another.";
+          b.setAttribute("aria-pressed", "true");
+        } }, heText(c));
+        return b;
+      })), say);
+  };
+  return el("section", { class: "alef-practical-extras", "data-extras": "true" },
+    examples.length ? el("h2", {}, "More Example Sentences") : null,
+    examples.length ? el("ul", {}, ...examples.map((x) => el("li", { "data-example-extra": x.id }, heText(x.he), el("span", { class: "muted" }, ` ${x.en}`)))) : null,
+    quiz.length ? el("h2", {}, "Fill in the Word") : null,
+    quiz.length ? el("ol", {}, ...quiz.map(quizItem)) : null);
 }
 
 /** True when the cloud check lists this item as failing in any unit. */

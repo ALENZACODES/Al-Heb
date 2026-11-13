@@ -28,7 +28,8 @@ test('backup covers every key in the privacy list plus keys nobody listed, and r
 });
 
 test('nothing in src writes to localStorage behind the store (so a backup cannot miss a key)', () => {
-  const allowed = new Set(['src/store.js', 'src/shell/offline.js', 'src/shell/privacy.view.js', 'src/shell/audio-access.js', 'src/shell/install-notice.js', 'src/shell/settings.view.js', 'src/shell/settings.data.js', 'src/shell/update.js', 'src/shell/prayer-veil.js', 'src/shell/rimon.js' /* session-only 'hide Rimon' flag, not progress */]);
+  const allowed = new Set(['src/store.js', 'src/shell/offline.js', 'src/shell/privacy.view.js', 'src/shell/audio-access.js', 'src/shell/install-notice.js', 'src/shell/settings.view.js', 'src/shell/settings.data.js', 'src/shell/update.js', 'src/shell/prayer-veil.js', 'src/shell/rimon.js' /* session-only 'hide Rimon' flag, not progress */,
+    'src/speak/recognizer.js', 'src/speak/ondevice.js' /* which listening pack is on THIS device: a fact about the device, re-read from its caches, and wrong to carry to another device in a backup */]);
   const bad = [];
   (function walk(d) { for (const f of readdirSync(d)) { const p = join(d, f); if (statSync(p).isDirectory()) walk(p); else if (p.endsWith('.js')) { const rel = relative(root, p).replaceAll('\\', '/'); if (!allowed.has(rel) && /(localStorage|sessionStorage|indexedDB)\s*[.[]\s*(setItem|set|open|\w)/.test(readFileSync(p, 'utf8').replace(/\/\/.*$/gm, '').replace(/\/\*[\s\S]*?\*\//g, ''))) bad.push(rel); } } })(join(root, 'src'));
   assert.deepEqual(bad, []);

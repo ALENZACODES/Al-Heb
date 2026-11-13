@@ -6,6 +6,7 @@
 //   vowelize(text)    -> string           optional. Unpointed Hebrew -> pointed Hebrew (e.g. the mock lexicon in tests/demo).
 //   ipa(pointed)      -> string|null      optional. Phonikud placeholder; absent in this build.
 //   translate(text)   -> string | {text, engine?}   optional. Hebrew -> English. ALWAYS labelled "machine translation".
+//   correct(boxes)    -> Box[]            optional. Tidies the reading against the app word list (src/handcheck/ocr-fix.js).
 // Engine bundle: {name?, demo?: boolean, ocr, vowelize?, ipa?, translate?, names?:{ocr?,vowelize?,...}}
 import { orderLines } from './order-lines.js';
 import { matchPrayer, DEFAULT_THRESHOLD } from './match-prayer.js';
@@ -22,7 +23,8 @@ export async function runPipeline(image, engines, { mode = 'prayer', registry = 
   if (!engines || typeof engines.ocr !== 'function') throw new TypeError('runPipeline: engines.ocr(image) is required');
   if (mode !== 'prayer' && mode !== 'sign') throw new RangeError(`runPipeline: unknown mode "${mode}"`);
   const warnings = [];
-  const boxes = await engines.ocr(image, { mode });
+  let boxes = await engines.ocr(image, { mode });
+  if (typeof engines.correct === 'function') { try { boxes = await engines.correct(boxes, { mode }); } catch (e) { warnings.push(`tidy-up skipped: ${e.message}`); } }
   const ordered = orderLines(boxes);
   if (!ordered.length) warnings.push('OCR returned no text');
   const lines = [];

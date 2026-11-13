@@ -459,12 +459,36 @@ export function percentBox(box, width, height) {
   return { left: pc(box.x, width), top: pc(box.y, height), width: pc(box.w, width), height: pc(box.h, height) };
 }
 
+/**
+ * Hands the lines nothing has translated yet to `translator`, one at a time, and fills in what it answers.
+ * Only a line that was read cleanly and with confidence is sent (lineForPack). A held line, a partly read line and a line behind
+ * a bar are never sent. The translator answers with a line (from the language pack) or with {en, source} when it knows where the
+ * line came from (a lesson sentence). When it has no answer or fails, the region is left as it was, for the dictionary.
+ * @param {any[]} regions @param {(he:string)=>Promise<string|{en:string, source?:string}|null>} translator
+ * @returns {Promise<number>} how many lines it filled in
+ */
+export async function translateMissingLines(regions, translator) {
+  let used = 0;
+  for (const r of regions) {
+    if (r.held || r.en || r.partial || r.occluded) continue;
+    const line = lineForPack(r.he, r.conf);
+    if (!line) continue;
+    try {
+      const got = await translator(line);
+      const en = signCase(typeof got === 'string' ? got : got && got.en);
+      if (en) { Object.assign(r, { en, translationSource: (got && typeof got === 'object' && got.source) || 'language-pack' }); used++; }
+    } catch { /* no answer: the dictionary still may */ }
+  }
+  return used;
+}
+
 /** Human label for where a translation came from. */
 export function sourceLabel(src) {
   if (src === 'word-list') return 'From the built-in word list.';
   if (src === 'word-list-near') return 'Closest match in the built-in word list. A letter may have been misread, so check it.';
   if (src === 'phrasebook') return 'From the Aleph phrasebook.';
   if (src === 'word-for-word') return 'Word for word from the Aleph dictionary. The word order and the exact meaning can be off.';
+  if (src === 'lesson-sentence') return 'A sentence from the Aleph lessons, with its English.';
   if (src === 'language-pack') return 'Translated on this device by the language pack, not from a checked list. Check it before you rely on it.';
   return '';
 }

@@ -51,18 +51,24 @@ Read directly on 2026-11-04:
 | `dejavu-outlines` | DejaVu Sans outlines | letter outline path data | Bitstream Vera licence; DejaVu changes public domain | Yes-with-conditions | No | Carry the Bitstream notice | partly-verified (upstream LICENSE header read; full Vera terms not read in full) |
 | `tesseract-js` | tesseract.js and core 7.0.0 | in-browser OCR, shipped lazily | Apache-2.0 (licence files are in the repo) | Yes-with-conditions | No | Keep licence and notices | partly-verified (repo files read, upstream not re-fetched) |
 | `tessdata-heb` | Tesseract Hebrew model | OCR language data | Apache-2.0 per repo README | Yes-with-conditions | No | Keep notice | unverified |
+| `dictabert-menaked` | DictaBERT-large-char-menaked (Dicta) | optional Vowel Marks pack and build-time vowel marks, shipped lazily | CC BY 4.0 (model page) | Yes-with-conditions | No | Credit Dicta and say it was converted to 8-bit ONNX | verified-primary (model page read 2026-11-12, revision 4dfc20b) |
+| `phonikud-onnx` | Phonikud ONNX 1.0 | optional Sounds And Stress pack and build-time sound lines, shipped lazily | MIT (model page) | Yes-with-conditions | No | Keep the MIT notice; credit Dicta for the base model | verified-primary (model page read 2026-11-12, revision b806189) |
 | `hebcal-fixtures` | Hebcal output snapshot | test fixtures; file is listed in `precache-manifest.js`, so it appears to ship | CC BY 4.0 (site-wide statement) | Yes-with-conditions | No | Credit Hebcal | partly-verified (site statement read; the fixture file's own source note repeats it) |
 | `wikipedia-paraphrase` | Wikipedia articles on Hebrew traditions | paraphrased facts in `data/traditions` | CC BY-SA 4.0 | Yes-with-conditions | The repo treats the notes as adaptations offered under CC BY-SA as a precaution; whether bare facts need it is a legal question | Yes if treated as adaptation | partly-verified |
 | `xkb-si1452` | xkeyboard-config il layout | keyboard layout data | X11-style permissive (repo note) | Yes-with-conditions | No | Keep notice | unverified |
 | `generated-images` | image tools | illustrations (pipeline built, repo says none ingested for real yet) | tool terms; copyright in machine-made images uncertain | Unknown | No | Disclosure line recommended in the repo | unverified |
 | `audio-voices` | recordings / synthetic speech | 87 synthetic word clips from an outside generator under `audio/` (0 recorded by a person); counts as of 2026-11-05 from `cat data/audio/summary.json`; this row's older "0 of 16,290" came from `docs/voices/coverage.md` before they were added | unknown: generator, model and voice terms not known to the repo | Unknown | No | n/a | unverified (recorded as "unknown: not cleared") |
 | `ts-fsrs-weights` | ts-fsrs 6.0.0 (open-spaced-repetition) | 21 default FSRS-6 weights in `src/fsrs/fsrs6.js` | MIT | Yes-with-conditions | No | Keep the MIT notice (`docs/licenses/MIT-ts-fsrs.txt`) | partly-verified |
+| `dictabert` | DictaBERT joint and tiny-joint (Dicta) | word notes in lessons (built ahead of time) and the optional Word helper language pack | CC BY 4.0 | Yes-with-conditions | No | Credit Dicta, name the licence, say the tiny one was changed in size and format | verified-primary (licence tag read on both Hugging Face pages, 2026-11-12) |
 | `project-original` | Project-written text and code | phrasebook, glosses, guides, code | owner's; none chosen | n/a | No | n/a | project-owned |
 | `lessons-unstated-licence` | `data/curriculum/lessons.json` | 117 records merged into the vocabulary set | none stated | Unknown | They sit inside a CC BY-SA data set without a stated basis | n/a | unverified |
 | `morph-pictures` | Letter-memory pictures (`assets/letters/morph/*.svg`) | the picture for each letter | original works by John Khan, no third-party sources (owner's statement); letter outlines inside come from DejaVu Sans | n/a | No (but see dejavu-outlines notice) | n/a | project-owned |
 | `memory-chain-text` | Memory hooks and stories (`data/letters/memory-chain.json`, `mnemonics.json`) | English hooks, picture ideas, stories; example words copied from vocab | original text (owner's statement); example words from Wiktionary data | n/a | Only for the copied example words | n/a | project-owned |
 | `practice-data-from-vocab` | `data/roots/*`, `data/gender/templates.json`, `data/nikkudfade/*`, `data/speak/minimal-pairs.json` | roots, gender, vowel-fade, record-and-compare pairs | derived from `data/vocab/words.json`, so CC BY-SA 4.0 | Yes-with-conditions | Yes, as the vocabulary data | Yes: as Wiktionary | partly-verified |
 | `reference-only-sites` | Pealim, Chabad.org, BJPA | cited by URL only | not open | n/a | n/a | n/a | not-present |
+| `hhd-handwriting` | HHD_v0 handwriting dataset (Rabaev, Kurar Barakat, Churkin, El-Sana), Zenodo 10.5281/zenodo.4287442 | part of the training data for the letter check model (`assets/vendor/_packs/handwriting`); no dataset image is in the app | CC BY 4.0 | Yes-with-conditions | No | Yes: one credit line | verified-primary |
+| `dicta-language-tools` | Dicta (the Israel Center for Text Analysis): NeoDictaBERT-bilingual-embed, DictaBERT-HeQ, DictaBERT-joint | build-time only, in the alef-tools repository: vectors and attached words of the Ask the Torah search index (`assets/vendor/_alef-tools/offline-llm@0.1.0/search/`); span finding and a grammar check whose results are not in the app yet | CC BY 4.0 (licence tag on each model's Hub page) | Yes-with-conditions | None | Yes: credit line on the credits page | partly-verified |
+| `opus-mt-tc-big-he-en` | Helsinki-NLP OPUS-MT tc-big-he-en | build-time only: Hebrew to English round-trip check on draft sentences; no output of it is in the app | CC BY 4.0 (licence tag on the model's Hub page) | Yes-with-conditions | None | Yes: credit line on the credits page | partly-verified |
 
 ## 3. Per-source notes
 
@@ -102,6 +108,15 @@ All six families carry OFL 1.1 headers upstream (read today). OFL permits sellin
 ### tesseract
 The vendored licence files are Apache-2.0 text. Apache-2.0 requires keeping the licence and notices when redistributing. The Hebrew model licence rests on the repo README only.
 
+### nikud-packs
+
+Two optional language packs for vowel marks and sound lines, added 2026-11-12. Neither is in the first install; the learner downloads a pack from Settings or the Talk screen.
+
+- **DictaBERT-large-char-menaked** (`dicta-il/dictabert-large-char-menaked`, revision `4dfc20b94565d7868e1c8c00bf039d38c071a062`). The model page states CC BY 4.0. The app uses a copy converted to ONNX with 8-bit weights by the alef-tools nikud package (`scripts/export_menaked.py`); CC BY asks that the credit says the material was changed, and the credit line does. The model card says it is trained for modern Hebrew prose and is not meant for Biblical or Rabbinic text, so the app never runs it over Torah or prayer text.
+- **Phonikud** (`Phonikud/phonikud-onnx`, revision `b806189fe1fc0085b1012b7560ffb5e8ecfd72a2`, file `phonikud-1.0.int8.onnx`). The model page states MIT. It is a fine-tune of the Dicta model above, so Dicta is credited too. The separate training repository `Phonikud/phonikud` says only "cc" and is not used.
+
+The model licences and pinned revisions are recorded in `models.manifest.json` of ALENZACODES/alef-tools.
+
 ### hebcal-fixtures
 Used by tests, but `data/calendar/hebcal-fixtures.json` is listed in `precache-manifest.js`, so it appears to be in the shipped bundle. Credit Hebcal in-app (or stop shipping the file). The file's own note says "Hebcal output is CC BY 4.0, credit Hebcal".
 
@@ -138,8 +153,20 @@ Each file names `data/vocab/words.json` as its source and copies Hebrew, pointin
 ### ts-fsrs-weights
 The weights are copied from the published defaults of ts-fsrs 6.0.0 (MIT, per `docs/research/B2-fsrs6.md`). The exact copyright line in the project's LICENSE file was not read; the notice file marks that line as to be replaced. The algorithm code is a hand port.
 
+### dictabert
+Two pages on Hugging Face were read on 2026-11-12: `dicta-il/dictabert-joint` (commit 7b1256fc0846e22d1af431eae299e2dcecee2778) and `dicta-il/dictabert-tiny-joint` (commit 708026b7297ffde293f14a3a592f8cf649f12c38). Both carry the tag `license:cc-by-4.0`. What the app holds: per-lesson word notes worked out ahead of time with dictabert-joint, and the reader code for an optional download (the Word helper language pack, not offered yet), which is dictabert-tiny-joint stored in smaller numbers and another file format. CC BY 4.0 asks for credit, the licence name and a note of changes; the credits page row carries all three. The pinned commits are in the tools repo (`models.manifest.json`; the pack's file hashes in `packages/morph/pack/pack.json`), and the tools commit itself is pinned in `data/alef-tools.lock.json` here. Hebrew-language tools from another group that carry no licence on their pages were left out.
+
 ### reference-only-sites
 Linked, not copied (per the repo's own source notes). No attribution duty is created by a link.
+
+### hhd-handwriting
+Added 2026-11-12 with the letter check on the tracing screens (`assets/vendor/_packs/handwriting/`, built in the alef-tools repo, `packages/handwriting`). The model file was trained for this app from three sources: letters drawn from 21 font families under the SIL Open Font License 1.1 (pinned list with each copyright line in alef-tools `packages/handwriting/fonts/LICENSES.md`; no font file was added to the app), this app's own letter stroke models, and the HHD_v0 handwriting dataset (I. Rabaev, B. Kurar Barakat, A. Churkin and J. El-Sana, "The HHD Dataset", ICFHR 2020). The Zenodo record (https://doi.org/10.5281/zenodo.4287442) states Creative Commons Attribution 4.0 International; read 2026-11-12. No image from the dataset is in the app. The word list for the photo-text tidy-up (`assets/vendor/_packs/ocr-words/lexicon.json`) is built only from this app's own dictionary, sign list and phrasebook, so it adds no outside source.
+
+### dicta-language-tools
+Added 2026-11-12 with the pinned alef-tools build (`tools/alef-tools/pin.json`). What was read: the `license:cc-by-4.0` tag returned by the Hub for `dicta-il/neodictabert-bilingual-embed`, `dicta-il/dictabert-heq` and `dicta-il/dictabert-joint` on 2026-11-12, with the revision of each recorded in the alef-tools file `models.manifest.json`. The licence text inside each model repository was not read line by line, hence partly-verified. None of these runs in the app and no weights are in this repository. What reaches the app from NeoDictaBERT-bilingual-embed is derived data only: one 32-number vector per search entry and the choice of which Hebrew and English words are attached to an entry. Nothing made with DictaBERT-HeQ or DictaBERT-joint is in the app yet (no draft answer or sentence has passed the build's gate). The credit line is shown on the credits page.
+
+### opus-mt-tc-big-he-en
+Added 2026-11-12. `license:cc-by-4.0` tag read from the Hub for `Helsinki-NLP/opus-mt-tc-big-he-en` on 2026-11-12; the model card's licence section was not read line by line, hence partly-verified. Used only as a check while content is built; none of its output is in the app. Credited because the plan for these tools credits every CC BY tool that was used.
 
 ## 4. Share-alike: what it covers and what is open
 

@@ -1,7 +1,8 @@
 // @ts-check
 // Talk: an English <-> Hebrew conversation helper that runs entirely on this device.
 // Lazy-loaded by the router at #/talk. There is no server: the sentence pairs are files of the site itself
-// (src/talk/data.js), listening is the browser's own speech recognition (src/talk/speech.js) and the voice is the
+// (src/talk/data.js), listening is on this device when a listening pack is there, else the browser's own speech recognition
+// as the labelled fallback (src/talk/speech.js), and the voice is the
 // device voice. Where the browser cannot listen, typing still works, online or offline.
 import { h, medal } from '../shell/ui.js';
 import { rimonSays } from '../shell/rimon-inline.js';
@@ -10,11 +11,12 @@ import {
   hasHebrew, pushHistory, stripNikkud, uid, HISTORY_KEY, SETTINGS_KEY, loadSettings, loadHistory,
 } from './talk.model.js';
 import { loadEngine } from './data.js';
-import { canListen, listenOnce } from './speech.js';
+import { canListen, listenOnce, listenEngine } from './speech.js';
 import { translateLine } from './hybrid.js';
 import { maskName, showsName } from './nmt/postedit.js';
 import { sharedPack } from './nmt/client.js';
-import { DIRECTIONS, DIRECTION_LABEL, megabytes, connectionKind, tooFull } from './nmt/pack.js';
+import { DIRECTIONS, PACK_NAMES, PACK_LABEL, PACK_DIRECTION, HQ_PACK, megabytes, connectionKind, tooFull, whyNot, wifiOnly } from './nmt/pack.js';
+import { sharedMemory } from './nmt/memory.js';
 import { loadJSON } from '../curriculum/data.js';
 
 export const METHOD_LABEL = Object.freeze({
@@ -24,20 +26,26 @@ export const METHOD_LABEL = Object.freeze({
   word: 'A single word',
   words: 'Word by word',
   model: 'Translated on this device',
+  memory: 'A lesson sentence',
 });
 export const NO_LINE = 'Aleph does not have that line yet. Try fewer words, or one of the lines below.';
 export const HELD_LINE = 'A sacred Name is in that line. Aleph shows it as ה׳, does not speak it and does not reword it, so the line is left as it is.';
 export const NAME_NOT_READ = 'This line shows the Name as ה׳, so it is not read aloud.';
 export const PACK_LEAD = 'For lines Aleph has not stored, add a language pack. It translates on this device and sends nothing anywhere. A pack is a large download, so use Wi-Fi.';
+export const HQ_NOTE = 'A larger pack for a computer with a graphics card. It gets more Hebrew lines right. The ordinary pack is enough for a phone.';
 export const PACK_OFFER = 'Aleph has no stored line for that. A language pack can translate it on this device.';
 export const PACK_CELLULAR = 'You seem to be on mobile data. Wait for Wi-Fi if your plan is limited.';
 export const PACK_SAVER = 'Data saving is on in this browser. Wait for Wi-Fi, or turn it off for this download.';
 export const PACK_FULL = 'This device reports too little free space for the pack.';
+export const PACK_WIFI_ONLY = 'Only on Wi-Fi is switched on, and this does not look like Wi-Fi. You can change that on the Language packs page in Settings.';
+export const PACK_OVER_LIMIT = 'That would pass the storage limit you set for language packs. You can change it on the Language packs page in Settings.';
 export const PACK_FAILED = 'The download stopped. What arrived is kept; press the button again to carry on.';
 export const PACK_CANNOT_RUN = 'This browser could not start the language pack. Stored lines still work.';
 export const ENGINE_WORDS = Object.freeze({ webgpu: 'the graphics chip', wasm: 'the processor' });
 export const PACK_NONE = 'Language packs are not available on this browser. Stored lines still work.';
 export const LISTEN_NOTE = 'Listening uses your browser’s own speech service. Some browsers send the sound to the browser maker to turn it into text. Aleph sends nothing anywhere and keeps only the text of your last lines on this device.';
+export const LISTEN_NOTE_DEVICE = 'Listening happens on this device, with the listening pack you downloaded. Nothing you say leaves it. Aleph keeps only the text of your last lines on this device.';
+export const LISTEN_FALLBACK = 'Fallback in use: to keep listening on this device, get a listening pack on the Language Packs page.';
 export const NO_LISTEN = 'This browser cannot listen. Type your line instead; on most phones the keyboard has its own microphone key.';
 export const DEVICE_VOICE = 'Read aloud by your device voice, not by a recorded teacher.';
 export const VOICE_KEEP = 'Speaking the translation in your own voice is a future feature.';
@@ -121,7 +129,13 @@ export function mount(root, ctx = {}) {
   const btnSay = h('button', { type: 'button', class: 'btn secondary', disabled: true, onclick: () => speak(true) }, 'Say It');
   const btnCopy = h('button', { type: 'button', class: 'btn secondary', disabled: true, onclick: copy }, 'Copy');
   const said = h('span', { class: 'muted talk-small', role: 'status' });
-  const paneMe = h('div', { class: 'talk-pane talk-pane-me' }, srcEl, trEl, badge, note, variants, h('div', { class: 'row' }, btnSay, btnCopy), said);
+  // Vowel marks from the optional packs (src/nikud, loaded only here): a button under the Hebrew line when a pack is on this device.
+  const marksBox = h('div', { class: 'talk-marks' });
+  const marksSounds = h('div', { class: 'talk-marks-sounds' });
+  /** @type {any} */ let marks = null;
+  /** @type {any} */ let built = null;
+  const hebrewPane = () => [trEl, srcEl].find((el) => hasHebrew(el.textContent || '')) || null;
+  const paneMe = h('div', { class: 'talk-pane talk-pane-me' }, srcEl, trEl, marksBox, marksSounds, badge, note, variants, h('div', { class: 'row' }, btnSay, btnCopy), said);
   const themTr = h('div', { class: 'talk-translation' });
   const paneThem = h('div', { class: 'talk-pane talk-pane-them', hidden: true, 'aria-hidden': 'true' }, themTr);
   const face = h('div', { class: 'talk-face' }, paneThem, paneMe);
@@ -130,7 +144,8 @@ export function mount(root, ctx = {}) {
   const micHe = h('button', { type: 'button', class: 'btn', 'aria-pressed': 'false', lang: 'he', dir: 'rtl', onclick: () => toggleListen('he-en') }, 'דַּבְּרוּ עִבְרִית');
   micHe.setAttribute('aria-label', 'דַּבְּרוּ עִבְרִית (Speak Hebrew)'); // the spoken name starts with the words on the button
   const mics = h('div', { class: 'talk-mics', hidden: !hearing }, micEn, micHe);
-  const listenNote = h('p', { class: 'muted talk-small' }, hearing ? LISTEN_NOTE : NO_LISTEN);
+  const onDevice = listenEngine() === 'device';
+  const listenNote = h('p', { class: 'muted talk-small', 'data-engine': hearing ? listenEngine() : 'none' }, ...(!hearing ? [NO_LISTEN] : onDevice ? [LISTEN_NOTE_DEVICE] : [LISTEN_NOTE, ' ', LISTEN_FALLBACK, ' ', h('a', { href: '#/packs' }, 'Language Packs')]));
   const err = h('p', { role: 'alert', hidden: true });
 
   const ta = h('textarea', { rows: 2, 'aria-label': 'Type a line in English or Hebrew', placeholder: 'Type a line…', dir: 'auto' });
@@ -140,21 +155,23 @@ export function mount(root, ctx = {}) {
   // Language packs: one row per direction (size, a button, progress while it downloads).
   const pack = ctx.pack || (typeof Worker === 'function' && typeof caches !== 'undefined' ? sharedPack() : null);
   /** @type {any} */ let terms = null;
+  /** Sentences of the lessons with their English (data/talk/tm): fetched only when a Hebrew line is looked up. */
+  const memory = ctx.memory !== undefined ? ctx.memory : (typeof fetch === 'function' ? sharedMemory() : null);
   /** @type {Record<string, {row:HTMLElement, text:HTMLElement, btn:HTMLButtonElement, bar:HTMLProgressElement, busy:boolean, stop:AbortController|null}>} */
   const packRows = {};
   const packNote = h('p', { class: 'muted talk-small', role: 'status', 'aria-live': 'polite' });
   const packRemove = h('button', { type: 'button', class: 'btn secondary', hidden: true, onclick: removePack }, 'Remove The Packs From This Device');
   const packBox = h('section', { class: 'talk-pack', 'aria-labelledby': 'talk-pack-title', hidden: !pack }, h('h2', { id: 'talk-pack-title' }, 'Language Packs'), h('p', { class: 'talk-small' }, PACK_LEAD));
-  for (const d of DIRECTIONS) {
-    const text = h('span', { class: 'talk-small' }, DIRECTION_LABEL[d]);
-    const btn = /** @type {HTMLButtonElement} */ (h('button', { type: 'button', class: 'btn secondary', 'data-pack': d, onclick: () => getPack(d) }, `Get ${DIRECTION_LABEL[d]}`));
-    const bar = /** @type {HTMLProgressElement} */ (h('progress', { max: 100, value: 0, hidden: true, 'aria-label': `${DIRECTION_LABEL[d]} pack download` }));
-    const row = h('div', { class: 'talk-pack-row' }, text, bar, btn);
+  for (const d of PACK_NAMES) {
+    const text = h('span', { class: 'talk-small' }, PACK_LABEL[d]);
+    const btn = /** @type {HTMLButtonElement} */ (h('button', { type: 'button', class: 'btn secondary', 'data-pack': d, onclick: () => getPack(d) }, `Get ${PACK_LABEL[d]}`));
+    const bar = /** @type {HTMLProgressElement} */ (h('progress', { max: 100, value: 0, hidden: true, 'aria-label': `${PACK_LABEL[d]} pack download` }));
+    const row = h('div', { class: 'talk-pack-row', hidden: d === HQ_PACK }, text, bar, btn);   // the high-quality row shows only where it is offered
     packRows[d] = { row, text, btn, bar, busy: false, stop: null };
     packBox.append(row);
   }
   const packSpeed = h('button', { type: 'button', class: 'btn secondary', hidden: true, onclick: speedCheck }, 'Check Translation Speed');
-  packBox.append(packNote, h('div', { class: 'talk-pack-row' }, packSpeed, packRemove));
+  packBox.append(packNote, h('div', { class: 'talk-pack-row' }, packSpeed, packRemove), h('p', { class: 'talk-small' }, h('a', { href: '#/packs', id: 'talk-packs-link' }, 'Language packs and storage')));
 
   const suggestTitle = h('h2', { hidden: true }, 'Lines Aleph Knows');
   const suggest = h('ul', { class: 'talk-list', hidden: true });
@@ -185,8 +202,28 @@ export function mount(root, ctx = {}) {
   const tryList = h('ul', { class: 'talk-list' });
   tryPick.addEventListener('change', paintExamples);
 
+  const marksPacks = h('div', { class: 'talk-marks-packs' });
+  import('../nikud/panel.js').then((m) => {
+    if (!alive) return;
+    marks = m.marksControl({
+      getText: () => (last && last.held ? '' : hebrewPane()?.textContent || ''),
+      settings: ctx.settings,
+      show: (r) => { const el = hebrewPane(); if (!el) return; setText(el, r.text); if (el === trEl) setText(themTr, r.text); marksSounds.replaceChildren(...m.soundLines(r)); },
+    });
+    marksBox.append(marks.el);
+    built = async (r, text) => {
+      const hit = await m.builtLine('talk', text);
+      if (!alive || last !== r || !hit) return;
+      setText(trEl, hit.p); setText(themTr, hit.p);
+      marksSounds.replaceChildren(...m.builtLines(hit));
+      marks.refresh();
+    };
+    marksPacks.append(m.packRows({ onChange: () => marks.refresh() }));
+    marks.refresh();
+  }).catch(() => { /* this copy of the site does not carry the vowel-mark code: the screen works without it */ });
+
   root.replaceChildren(h('section', { class: 'talk-screen', 'aria-labelledby': 'view-title' },
-    title, hero, lead, status, langs, face, mics, err, input, listenNote, suggestTitle, suggest, packBox, toggles, tryTitle, tryPick, tryList, histTitle, hist, clear));
+    title, hero, lead, status, langs, face, mics, err, input, listenNote, suggestTitle, suggest, packBox, marksPacks, toggles, tryTitle, tryPick, tryList, histTitle, hist, clear));
 
   function save() { write(SETTINGS_KEY, settings); }
 
@@ -207,28 +244,29 @@ export function mount(root, ctx = {}) {
   async function paintPack() {
     if (!pack) return;
     let any = false;
-    for (const d of DIRECTIONS) {
+    for (const d of PACK_NAMES) {
       const p = packRows[d];
       if (p.busy) continue;
       try {
         const st = await pack.state(d);
         if (!alive) return;
+        if (d === HQ_PACK) { p.row.hidden = st.offered !== true; if (p.row.hidden) continue; }
         if (st.ready) {
           any = true; p.bar.hidden = true;
           p.btn.hidden = true;
-          p.text.textContent = pack.ready(d) ? `${DIRECTION_LABEL[d]}: on this device and ready.` : `${DIRECTION_LABEL[d]}: on this device.`;
+          p.text.textContent = pack.ready(d) ? `${PACK_LABEL[d]}: on this device and ready.` : `${PACK_LABEL[d]}: on this device.`;
           p.row.dataset.engine = pack.engine?.(d)?.engine || ''; p.row.dataset.gpu = pack.engine?.(d)?.gpu || '';
         } else {
           p.btn.hidden = false; p.btn.disabled = false;
           const part = st.have > 0 && st.missing > 0;
-          p.btn.textContent = part ? `Carry On With ${DIRECTION_LABEL[d]}` : `Get ${DIRECTION_LABEL[d]}`;
-          p.text.textContent = `${DIRECTION_LABEL[d]}: about ${megabytes(st.missing)} MB to download.`;
+          p.btn.textContent = part ? `Carry On With ${PACK_LABEL[d]}` : `Get ${PACK_LABEL[d]}`;
+          p.text.textContent = d === HQ_PACK ? `${PACK_LABEL[d]}: about ${megabytes(st.missing)} MB to download. ${HQ_NOTE}` : `${PACK_LABEL[d]}: about ${megabytes(st.missing)} MB to download.`;
           if (st.have > 0) any = true;
         }
-      } catch { p.text.textContent = `${DIRECTION_LABEL[d]}: the pack list could not be read. Check your connection.`; p.btn.disabled = false; }
+      } catch { if (d === HQ_PACK) { p.row.hidden = true; continue; } p.text.textContent = `${PACK_LABEL[d]}: the pack list could not be read. Check your connection.`; p.btn.disabled = false; }
     }
     packRemove.hidden = !any;
-    packSpeed.hidden = !DIRECTIONS.some((d) => pack.ready(d));
+    packSpeed.hidden = !PACK_NAMES.some((d) => pack.ready(d));
   }
 
   /** Times a few lines each way the pack can run on this device and says which one is in use. */
@@ -236,15 +274,15 @@ export function mount(root, ctx = {}) {
     if (!pack) return;
     packSpeed.disabled = true; packNote.textContent = 'Timing a few lines on this device…';
     const said2 = [];
-    for (const d of DIRECTIONS) {
-      if (!pack.ready(d)) continue;
+    for (const d of PACK_NAMES) {
+      if (!(pack.has ? pack.has(d) : pack.ready(d))) continue;
       try {
         const b = await pack.bench(d); const e = pack.engine(d);
         const parts = [];
         if (typeof b.webgpu === 'number') parts.push(`${b.webgpu} ms a line on ${ENGINE_WORDS.webgpu}`);
         if (typeof b.wasm === 'number') parts.push(`${b.wasm} ms a line on ${ENGINE_WORDS.wasm}`);
-        said2.push(`${DIRECTION_LABEL[d]}: ${parts.join(', ')}. In use: ${ENGINE_WORDS[e?.engine] || ENGINE_WORDS.wasm}.`);
-      } catch { said2.push(`${DIRECTION_LABEL[d]}: the speed check did not finish.`); }
+        said2.push(`${PACK_LABEL[d]}: ${parts.join(', ')}. In use: ${ENGINE_WORDS[e?.engine] || ENGINE_WORDS.wasm}.`);
+      } catch { said2.push(`${PACK_LABEL[d]}: the speed check did not finish.`); }
       if (!alive) return;
     }
     packNote.textContent = said2.join(' ');
@@ -254,7 +292,10 @@ export function mount(root, ctx = {}) {
   /** Loads the packs that are already on this device, quietly. */
   async function warmPacks() {
     if (!pack) return;
-    for (const d of DIRECTIONS) {
+    // the high-quality pack first: when it loads, the ordinary Hebrew to English pack stays on disk and out of memory
+    for (const d of [HQ_PACK, ...DIRECTIONS]) {
+      if (d === 'he-en' && pack.has?.(HQ_PACK)) continue;
+      try { if (d === HQ_PACK && (await pack.state(d)).offered !== true) continue; } catch { continue; }
       try { if ((await pack.state(d)).ready) { const ok = await pack.load(d); if (!alive) return; if (!ok) packNote.textContent = PACK_CANNOT_RUN; } } catch { /* no pack list while offline and nothing kept */ }
     }
     paintPack();
@@ -269,33 +310,36 @@ export function mount(root, ctx = {}) {
       const st = await pack.state(d);
       if (await tooFull(st.missing)) { packNote.textContent = PACK_FULL; return; }
       const kind = connectionKind();
+      if (kind && st.missing > 0 && wifiOnly()) { packNote.textContent = PACK_WIFI_ONLY; return; }
       if (kind && !p.btn.dataset.asked) { p.btn.dataset.asked = '1'; packNote.textContent = `${kind === 'saver' ? PACK_SAVER : PACK_CELLULAR} Press the button again to download about ${megabytes(st.missing)} MB now.`; return; }
       p.busy = true; p.stop = new AbortController();
       p.bar.hidden = false; p.bar.value = 0; p.btn.textContent = 'Stop';
       let shown = -1;
-      await pack.download(d, { signal: p.stop.signal, onProgress: (have, total) => {
+      await pack.download(d, { userStarted: true, signal: p.stop.signal, onProgress: (have, total) => {
         if (!alive) return;
         const pct = total ? Math.floor((100 * have) / total) : 0;
         if (pct === shown) return; shown = pct;
-        p.bar.value = pct; p.text.textContent = `${DIRECTION_LABEL[d]}: ${megabytes(have)} of ${megabytes(total)} MB.`;
+        p.bar.value = pct; p.text.textContent = `${PACK_LABEL[d]}: ${megabytes(have)} of ${megabytes(total)} MB.`;
       } });
       if (!alive) return;
-      p.text.textContent = `${DIRECTION_LABEL[d]}: getting it ready…`;
+      p.text.textContent = `${PACK_LABEL[d]}: getting it ready…`;
       const ok = await pack.load(d);
       if (!alive) return;
       p.busy = false; p.stop = null;
-      packNote.textContent = ok ? `${DIRECTION_LABEL[d]} is ready. It works offline from now on.` : PACK_CANNOT_RUN;
+      packNote.textContent = ok ? `${PACK_LABEL[d]} is ready. It works offline from now on.` : PACK_CANNOT_RUN;
       await paintPack();
-      if (ok && last && last.needsPack === d) run(last.source, last.direction);
+      if (ok && last && last.needsPack === (PACK_DIRECTION[d] || d)) run(last.source, last.direction);
     } catch (e) {
       p.busy = false; p.stop = null; p.bar.hidden = true;
-      if (alive) { packNote.textContent = /** @type {any} */ (e)?.message === 'no-storage' ? PACK_NONE : PACK_FAILED; paintPack(); }
+      // why it stopped, in the shared loader's short codes (src/talk/nmt/pack.js whyNot)
+      const why = whyNot(e);
+      if (alive) { packNote.textContent = why === 'no-storage' ? PACK_NONE : why === 'wifi-only' ? PACK_WIFI_ONLY : why === 'too-full' || why === 'quota' ? PACK_FULL : why === 'over-limit' ? PACK_OVER_LIMIT : PACK_FAILED; paintPack(); }
     }
   }
 
   async function removePack() {
     if (!pack) return;
-    for (const d of DIRECTIONS) packRows[d].stop?.abort();
+    for (const d of PACK_NAMES) packRows[d].stop?.abort();
     await pack.remove();
     if (!alive) return;
     packNote.textContent = 'The packs were removed from this device.';
@@ -323,6 +367,10 @@ export function mount(root, ctx = {}) {
     const sug = !r.ok && !r.held ? (r.suggestions || []) : [];
     suggestTitle.hidden = !sug.length; suggest.hidden = !sug.length;
     suggest.replaceChildren(...sug.map((s) => lineButton(s)));
+    marksSounds.replaceChildren();
+    if (r.held) { if (marks) marks.el.hidden = true; } else if (marks) { marks.el.hidden = false; marks.refresh(); }
+    // a stored line Aleph has no checked vowel marks for: the marks made ahead of time, when the learner has asked to see vowel marks
+    if (built && r.ok && !r.held && toHe && settings.nikkud && !r.pointed) built(r, text);
   }
 
   async function run(text, forced) {
@@ -334,7 +382,7 @@ export function mount(root, ctx = {}) {
     paneMe.setAttribute('aria-busy', 'true');
     if (pack && DIRECTIONS.some((d) => pack.ready(d))) status.textContent = 'Translating…';
     let r;
-    try { r = await translateLine(engine, pack, t, { ...opts, terms }); } finally { if (ticket === runSeq) { paneMe.removeAttribute('aria-busy'); if (alive && status.textContent === 'Translating…') status.textContent = ''; } }
+    try { r = await translateLine(engine, pack, t, { ...opts, terms, memory }); } finally { if (ticket === runSeq) { paneMe.removeAttribute('aria-busy'); if (alive && status.textContent === 'Translating…') status.textContent = ''; } }
     if (!alive || ticket !== runSeq) return;
     if (r.method === 'model' && pack?.engine) { const row = packRows[r.direction]?.row; const e = pack.engine(r.direction); if (row && e) { row.dataset.engine = e.engine || ''; row.dataset.gpu = e.gpu || ''; } }
     if (!r.held && r.method !== 'model' && (!r.ok || r.method === 'words') && !engine.hasDictionary) {
@@ -343,7 +391,7 @@ export function mount(root, ctx = {}) {
       await engine.loadDictionary();
       if (!alive || ticket !== runSeq) return;
       status.textContent = '';
-      r = await translateLine(engine, pack, t, { ...opts, terms });
+      r = await translateLine(engine, pack, t, { ...opts, terms, memory });
       if (!alive || ticket !== runSeq) return;
     }
     show(r);
@@ -439,9 +487,13 @@ export function mount(root, ctx = {}) {
     if (alive) status.textContent = 'The stored lines could not be loaded. Check your connection once and open this screen again; after that it works offline.';
   });
 
+  // Word notes on tapped Hebrew: only when the Words language pack is already on this device (src/words/anywhere.js, lazy).
+  let offWords = () => {};
+  import('../words/anywhere.js').then((m) => m.armIfPackReady(root, h)).then((off) => { if (alive) offWords = off; else off(); }).catch(() => {});
+
   return () => {
-    alive = false;
-    for (const d of DIRECTIONS) packRows[d].stop?.abort(); // parts that arrived are kept; the rest waits for the next visit
+    alive = false; offWords();
+    for (const d of PACK_NAMES) packRows[d].stop?.abort(); // parts that arrived are kept; the rest waits for the next visit
     stopListening();
     stopEnglish();
     try { ctx.audio?.stop?.(); } catch { /* nothing playing */ }

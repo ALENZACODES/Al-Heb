@@ -58,7 +58,7 @@ export const ON_DEMAND_GROUPS = Object.freeze([
   { id: "od-listen-tools", label: "Playback bar, Listening Practice, play-all lists and audio packs", test: /^src\/audiolab\//, approxMB: 0.1 }, // audio lane
   { id: "od-audio-index", label: "Audio clip list (core)", test: /^data\/audio\//, approxMB: 2.6 },
   { id: "od-pronunciation", label: "Sounds and pronunciation data", test: /^data\/pronunciation\//, approxMB: 0.8 },
-  { id: "od-speak", label: "Speaking, Israel dialogues, everyday phrases, listening, typing, word tracing", test: /^(data\/(speak|israel|listen|typing|wordtrace)\/|src\/(wordtrace|typing)\/|src\/israel\/israel\.view\.js$|src\/phrases\/phrases\.view\.js$)/, approxMB: 0.53 },
+  { id: "od-speak", label: "Speaking, Israel dialogues, everyday phrases, listening, typing, word tracing", test: /^(data\/(speak|israel|listen|typing|wordtrace)\/|src\/(wordtrace|typing|handcheck)\/|src\/israel\/israel\.view\.js$|src\/phrases\/phrases\.view\.js$)/, approxMB: 0.53 },
   { id: "od-reading", label: "Reading, festivals, calendar, grammar and pronunciation-style data", test: /^data\/((corpus|torahread|festivals|calendar|grammar|traditions|trope-trainer)\/|torah-quotes\.json$)/, approxMB: 0.5 },
   { id: "od-intermediate", label: "Intermediate lessons and class track", test: /^data\/curriculum\//, approxMB: 0.6 },
   { id: "od-letter-pictures", label: "Letter memory pictures (the rest of the alphabet)", test: /^assets\/letters\/morph\//, approxMB: 0.09 },
@@ -66,6 +66,7 @@ export const ON_DEMAND_GROUPS = Object.freeze([
   { id: "od-pictures", label: "Book, story and speaking-practice pictures", test: /^assets\/(game-art|letter-cartoons|books|speak-hold|speak-candidates)\//, approxMB: 123.45 },
   { id: "od-games", label: "Games (preview-game code, word data and arcade art)", test: /^(src\/games\/|data\/games\/|assets\/games\/)/, approxMB: 1.4 },
   { id: "od-camera", label: "Camera Translator (code and sign word list)", test: /^(src\/camera|data\/camera)\//, approxMB: 0.07 },
+  { id: "od-vowel-marks", label: "Vowel mark button (code only; the vowel mark packs are downloaded separately)", test: /^src\/nikud\//, approxMB: 0.02 },
   { id: "od-books", label: "Little books (code and book texts)", test: /^(src\/books|data\/books)\//, approxMB: 0.04 },
   { id: "od-synagogues", label: "Reform Synagogues in Canada", test: /^(src\/synagogues|data\/synagogues|assets\/synagogues)\//, approxMB: 14 },
   { id: "od-library", label: "Library articles", test: /^(src\/library|data\/library)\//, approxMB: 0.07 },
@@ -80,7 +81,7 @@ export const ON_DEMAND_GROUPS = Object.freeze([
   { id: "od-images", label: "Picture approvals and word cues", test: /^data\/images\//, approxMB: 0.20 },
   { id: "od-letters", label: "Letter art concepts and keyboard layout", test: /^data\/letters\//, approxMB: 0.08 },
   { id: "od-home", label: "Home prayers and morning verses", test: /^(data\/homepage\/|data\/morning-verses\.json)/, approxMB: 0.09 },
-  { id: "od-ask", label: "Ask the Torah: the checked answers", test: /^(data\/ask\/|src\/ask\/)/, approxMB: 2.8 },
+  { id: "od-ask", label: "Ask the Torah: the checked answers", test: /^(data\/ask\/|src\/ask\/|src\/alef-tools\/)/, approxMB: 2.8 },
   { id: "od-firstday", label: "First-day minute-one data and the word builder", test: /^(data\/builder_symbols\.json$|data\/firstday\/|src\/firstday\/minuteone\.view\.js$|data\/builder_words\.json$)/, approxMB: 0.2 },
   { id: "od-fonts", label: "Cursive display font (used only with the cursive script setting)", test: /^assets\/fonts\//, approxMB: 0.03 },
   { id: "od-traditions-code", label: "Traditions pages (preview-route code)", test: /^src\/traditions\//, approxMB: 0.04 },
@@ -89,6 +90,7 @@ export const ON_DEMAND_GROUPS = Object.freeze([
   { id: "od-talk", label: "Talk page and its stored lines", test: /^(src\/talk\/|data\/talk\/)/, approxMB: 0.12 },
   { id: "od-speak-code", label: "Say it page and speaking scores (preview-route code)", test: /^src\/speak\/(speak|score|check)\.js$/, approxMB: 0.08 },
   { id: "od-voice", label: "Speaking Studio (record and compare, shadowing, voice journal)", test: /^src\/voice\//, approxMB: 0.04 }, // siddur-speaking lane
+  { id: "od-listen-device", label: "Listening on this device (the code only; the listening packs are downloaded on the Language Packs page)", test: /^(src\/speak\/(ondevice|lettercheck)\.js$)/, approxMB: 0.03 }, // speech lane
   { id: "od-music", label: "Game music player, Songs page, English read-aloud and the playing state", test: /^src\/(audio\/(synth-music|sting)|shell\/(speak-english|play-state)|listen\/songs\.view)\.js$/, approxMB: 0.04 },
   { id: "od-day-code", label: "Calendar day pages, add-to-calendar box, morning screen, intermediate lessons, practical units, the Curriculum page and Israel units (route code)", test: /^(src\/curriculum\/(day\.view|calendar\.day|calendar\.addpanel|calendar\.quickadd|intermediate\.view|practical\.view|practical-progress|practical-written|israel-units|israel-units\.view|path\.view|path\.model)\.js|src\/morning\/morning\.view\.js|assets\/css\/curriculum\.css)$/, approxMB: 0.11 },
   { id: "od-learn-practice", label: "Learn practice screens (review, loanwords, drills and dialogues)", test: /^src\/curriculum\/(review|loanwords|spotit|checkpoint|dialogues|ladder|fade|gender|scaffold)\.view\.js$/, approxMB: 0.07 },
@@ -96,6 +98,10 @@ export const ON_DEMAND_GROUPS = Object.freeze([
   { id: "od-light", label: "Star of David light (page, style and printable stencil)", test: /^(src\/light\/|assets\/light\/|assets\/css\/light\.css$)/, approxMB: 0.02 },
   // Lane 1 (M-08, 12 Nov): the code for About's Held Recordings list (its data file is in "Audio clip list" above).
   { id: "od-held", label: "Held Recordings list on About", test: /^src\/shell\/held-recordings\.js$/, approxMB: 0.01 },
+  // Word notes (12 Nov): the per-lesson notes and the card code. Listed before the Language Packs group, which would otherwise claim the tools folder.
+  { id: "od-words", label: "Word notes for every lesson (tap a Hebrew word)", test: /^(src\/words\/|assets\/vendor\/_alef-tools\/morph@|assets\/css\/words\.css$)/, approxMB: 1.2 },
+  // alef-tools lane 7 (12 Nov): the Language Packs page and the pack downloader. Code only: a pack itself is downloaded on that page, on request.
+  { id: "od-packs", label: "Language Packs page and the pack downloader (the packs themselves are downloaded on that page)", test: /^(src\/settings\/|data\/packs\/|assets\/vendor\/_alef-tools\/)/, approxMB: 0.05 },
   { id: "od-sync", label: "Move to another device, your certificate and the offline pack lists", test: /^(src\/sync\/|data\/offline\/)/, approxMB: 0.08 }, // lane 4 (12 Nov)
   // lane 6 (12 Nov round 2): Reading Without Vowels, the placement check page, trope families and per-aliyah practice (route code)
   { id: "od-bridge-trope-placement", label: "Reading without vowels, the placement check, trope families and aliyah practice (route code)", test: /^src\/(bridge\/|placement\/(placement\.view|model|loader)\.js$|trope\/(families|practice\.view)\.js$)/, approxMB: 0.07 },

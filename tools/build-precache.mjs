@@ -11,15 +11,23 @@ const repoRoot = join(fileURLToPath(new URL('.', import.meta.url)), '..');
 const INCLUDE_DIRS = ['src', 'assets', 'data'];
 // Files bigger than this are runtime-cached (or not cached) instead of installed up front, so first install stays small.
 export const MAX_FILE_BYTES = 2 * 1024 * 1024;
-const SKIP = (rel) => (rel.startsWith('assets/img/') && !rel.startsWith('assets/img/rimon/web/')) || rel.startsWith('assets/images/') || rel.startsWith('data/images/sheets/') || rel.startsWith('assets/vendor/') /* OCR engine + language data: opt-in, runtime-cached */
+// alef-tools lane 7 (12 Nov): the pinned alef-tools code (assets/vendor/_alef-tools/<pkg>@<version>/*.js, small ES modules) is the one
+// thing under assets/vendor/ that is listed, and only ON DEMAND: fetched the first time a screen needs it, or by "Download everything",
+// so Talk still opens offline. Never installed up front. A package's own vendor/ folder (a third-party runtime) and every language
+// pack (assets/vendor/_nmt, _ort, _packs) stay unlisted: packs are downloaded only on the learner's tap, into their own caches.
+export const isToolCode = (rel) => /^assets\/vendor\/_alef-tools\/[a-z0-9-]+@\d+\.\d+\.\d+\/(?!vendor\/)[A-Za-z0-9._/-]+\.js$/.test(rel);
+const SKIP = (rel) => !isToolCode(rel) && SKIP_REST(rel);
+const SKIP_REST = (rel) => (rel.startsWith('assets/img/') && !rel.startsWith('assets/img/rimon/web/')) || rel.startsWith('assets/images/') || rel.startsWith('data/images/sheets/') || rel.startsWith('assets/vendor/') /* OCR engine + language data: opt-in, runtime-cached */
   || rel.startsWith('assets/workbook/') /* printable PDFs (several MB): downloaded on demand */ || /\.pdf$/i.test(rel)
   || rel.startsWith('data/vocab/packs/') /* ~150 pack files: fetched when a pack is opened, then cached at runtime */ /* big, runtime-cached */ || rel.split('/').some((p) => p.startsWith('_') || p === 'node_modules')
   || rel.endsWith('.py') || rel.endsWith('.md') || (rel.startsWith('src/') && rel.endsWith('.mjs')) /* node build/dev scripts that live under src/ (data builders, tier splitter): run by hand, never loaded by the app */
   || /\.(mp3|wav|ogg|m4a|svg\.src|ttf|otf|txt)$/i.test(rel)  // original TTFs and licence texts are not precached; woff2 in assets/fonts/web/ is
   || rel.split('/').includes('tools')
   || (rel.startsWith('data/images/') && rel !== 'data/images/approvals.json' && rel !== 'data/images/word-cues.json' /* read live by the image resolver */) || rel === 'data/corpus/source-snapshot.json' || rel === 'data/audio/tts-prices.json'
+  || rel === 'data/alef-tools.lock.json' /* which vendored alef-tools files this build carries: read by tools/alef-tools/sync.mjs and tests, never by the app */
   || rel.startsWith('data/tts/') /* respelling files for the offline TTS factory: build-time inputs, never fetched by the app */
   || /^data\/audio\/manifest-words-[a-z]+\.json$/.test(rel)
+  || rel === 'data/alef-tools.lock.json' /* the alef-tools pin: read by tools/alef-tools/sync.mjs, never by the app */
   || rel === 'data/curriculum/practical/gcloud-results.json' || rel.endsWith('/_gcloud-checkpoint.json'); /* lazy per-tradition word shards: fetched after first paint, runtime-cached by sw.js */ /* tts-prices: build-time cost plan input */ // build-time inputs, not fetched by the app
 // ON-DEMAND (not installed up front): data that only preview routes read, plus the audio manifest (every clip is still "missing", so it
 // buys nothing offline). sw.js already stale-while-revalidates every same-origin non-media GET into the runtime cache, so these files
@@ -49,10 +57,16 @@ const ON_DEMAND_PREFIXES = ['data/vocab/', 'data/roots/', 'data/knownwords/', 'd
   'assets/game-art/', 'assets/letter-cartoons/', 'assets/books/', 'assets/speak-hold/', 'assets/speak-candidates/',
   // Lazy preview-route code + book content + image indexes: fetched on first view, runtime-cached (fix #4; #8 groups).
   'src/games/', 'src/books/', 'data/books/', 'data/images/',
+  'src/words/', // word notes (tap a Hebrew word): card, tap handling and the lesson section, fetched when a lesson first shows its Word Notes
+  'src/alef-tools/', // reader for the pinned alef-tools build in assets/vendor/_alef-tools/ (search index, checked extras): loaded when Ask the Torah or a unit page needs it
   'src/bridge/', // lane 6: Reading Without Vowels (#/bridge), view, model and loader, fetched on first open
+  'src/handcheck/', // letter check for the tracing screens and the photo-text tidy-up: hooks, pack handling and vendored-tool paths, fetched on first use
   'src/readlab/', 'data/readlab/', // reading lane: Reading Tools (#/readlab), code and its two lookup files, fetched on first open
   // Camera Translator (preview route /camera): view code, word list and config are fetched when the screen first opens, runtime-cached.
   'src/camera/', 'data/camera/',
+  // Vowel marks on this device (lane hf-nikud, 12 Nov): the panel and its service load only when Talk, the Camera Translator or the
+  // Settings group asks for them. The vendored alef-tools code and the per-unit nikud files live under assets/vendor/, which is never installed.
+  'src/nikud/',
   // Game data (word bank, prefix deck, arcade lists, the laws) and arcade art (backdrops, cast and letter sprites): fetched when a game first opens, runtime-cached.
   'data/games/', 'assets/games/',
   // Preview-route view code (pronunciation styles, vocabulary browser): not v0, fetched on first view, runtime-cached.
@@ -86,6 +100,8 @@ const ON_DEMAND_PREFIXES = ['data/vocab/', 'data/roots/', 'data/knownwords/', 'd
   // Grammar notes (optional preview route /grammar; its data was already on demand) and the unused speaking-check model (no screen imports
   // src/speak/dss.model.js; only its tests do): 44 KB moved out of the first install by lane platform (12 Nov) to pay for its route entries.
   'src/grammar/', 'src/speak/dss.model.js',
+  // alef-tools lane 7 (12 Nov): the Language packs page (#/packs), the Shabbat-safe check and the list of packs, fetched on first open.
+  'src/settings/', 'data/packs/',
   // lane games-books (12 Nov): This Week's Parashah, Torah Search (its 0.7 MB letters-only index) and the Verse Notebook, fetched on first open.
   'src/torahstudy/', 'data/torahstudy/'];
 const ON_DEMAND_FILES = new Set([
@@ -154,11 +170,14 @@ const ON_DEMAND_FILES = new Set([
   // Speaking score (word-by-word scoring from the browser recognizer) and the small check control used by the practical units' speaking cards:
   // imported by speak.js and loaded by practical.view.js on first use, runtime-cached.
   'src/speak/score.js', 'src/speak/check.js',
+  // Listening on this device (speech lane): the glue and the letter check are fetched the first time a screen listens with a pack;
+  // sw.js runtime-caches them. The packs themselves are never listed anywhere here.
+  'src/speak/ondevice.js', 'src/speak/lettercheck.js',
   // Talk screen (preview route /talk): route code and its on-device phrase engine, fetched on first open and runtime-cached (keeps first install under 3.95 MiB). Its sentence pairs are data/talk/.
   'src/talk/talk.view.js', 'src/talk/talk.model.js', 'src/talk/engine.js', 'src/talk/data.js', 'src/talk/speech.js',
   // Talk language pack code (tokenizer, decoding loop, downloader, worker): fetched with the Talk screen, runtime-cached. The packs themselves
   // (assets/vendor/_nmt, about 80 MB a direction) and their runtime (assets/vendor/_ort) are never listed here: assets/vendor/ is skipped above.
-  'src/talk/hybrid.js', 'src/talk/nmt/tokenizer.js', 'src/talk/nmt/decode.js', 'src/talk/nmt/runtime.js', 'src/talk/nmt/postedit.js', 'src/talk/nmt/pack.js', 'src/talk/nmt/worker.js', 'src/talk/nmt/client.js',
+  'src/talk/hybrid.js', 'src/talk/nmt/tokenizer.js', 'src/talk/nmt/decode.js', 'src/talk/nmt/runtime.js', 'src/talk/nmt/postedit.js', 'src/talk/nmt/pack.js', 'src/talk/nmt/worker.js', 'src/talk/nmt/client.js', 'src/talk/nmt/memory.js', 'src/talk/nmt/tools.js',
   // Torah reader view: route code only (the router loads views lazily; its model/loader files stay installed), fetched when the reader first opens, runtime-cached by sw.js (keeps first install under 3.95 MiB after the full-Torah reader landed).
   'src/torahreader/torahreader.view.js',
   // Ask the Torah (#/ask): route code only, fetched on first open, runtime-cached (keeps first install under 3.95 MiB).
@@ -198,8 +217,10 @@ const ON_DEMAND_FILES = new Set([
   // Cursive display font: only fetched when the cursive script setting is on (font-display: swap falls back otherwise).
   'assets/fonts/web/gveret-levin.woff2',
   // Star of David light stylesheet: loaded when #/light first opens, runtime-cached.
-  'assets/css/light.css']);
-export const isOnDemand = (rel) => !KEEP_DATA.has(rel) && (ON_DEMAND_FILES.has(rel) || /^data\/curriculum\/resource-concepts-/.test(rel) || ON_DEMAND_PREFIXES.some((p) => rel.startsWith(p)));
+  'assets/css/light.css',
+  // Word notes stylesheet: loaded with the first Word Notes section, runtime-cached.
+  'assets/css/words.css']);
+export const isOnDemand = (rel) => !KEEP_DATA.has(rel) && (isToolCode(rel) || ON_DEMAND_FILES.has(rel) || /^data\/curriculum\/resource-concepts-/.test(rel) || ON_DEMAND_PREFIXES.some((p) => rel.startsWith(p)));
 const DATA_ONLY_JSON = (rel) => !rel.startsWith('data/') || rel.endsWith('.json');
 
 function walk(dir, out = [], root = repoRoot) {

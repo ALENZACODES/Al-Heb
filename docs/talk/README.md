@@ -39,6 +39,52 @@ A line that differs from a stored line by a real word is never matched to it. "I
 - **Size.** The stock export of these models is about 143 MiB a direction at 8 bits because the 60,000-row word table is stored three times. `tools/talk/nmt/export.py` stores it once, with one scale per row, and splits the model into three graphs. On the held-out file the 8-bit packs score within one point of the full-precision models (greedy decoding, first-choice wording: 69.8 against 70.0 Hebrew to English, 79.9 against 80.8 English to Hebrew).
 - **Synagogue words.** `data/talk/terms.json` lists words the packs get wrong (כיפה as "dome", קידוש as "sanctification") with the wrong renderings, found by `tools/talk/nmt/terms.mjs`. A rendering is replaced only when the source line holds the word and the output holds that exact rendering. Words with a second everyday meaning are left out.
 
+## The Tools Repository
+
+Since 12 November 2026 the pack code lives in the tools repository, [ALENZACODES/alef-tools](https://github.com/ALENZACODES/alef-tools), in `packages/translate`: the tokenizer, the decoding loop, the runtime, the worker, the page's side, the mapping of the Talk pack list onto the shared loader, the pack builder and the scoring tool. The app carries a copy of that package's `dist/` at a pinned commit, beside the shared loader.
+
+- **Where the copy is.** `assets/vendor/_alef-tools/translate@0.1.0/`, 9 modules, 32.9 KB (12.8 KB gzipped). `data/alef-tools.lock.json` names the commit and every file's SHA-256. `node tools/alef-tools/sync.mjs --from <alef-tools checkout> --ref <commit> --add translate` refreshes it; `--check` proves every file is the pinned one, and `tests/talk.memory.test.js` runs that check.
+- **Old paths still work.** `src/talk/nmt/tokenizer.js`, `decode.js`, `runtime.js`, `worker.js`, `pack.js` and `client.js` are now short wrappers around the vendored modules. None of them names a version: `src/talk/nmt/tools.js` reads the folder from the file the sync tool writes. `pack.js` still says where this app keeps its packs. `postedit.js` (the Name, the term list) stays here.
+- **Not in the first install.** The first install is the same 357 files, byte for byte, as before this change. The vendored code and the wrappers are fetched when Talk or Camera first opens.
+- **The builder.** `tools/talk/nmt/export.py` and `gpu_graph.py` are kept here as they were. The copies in the tools repository are the ones to use from now on; they also build the larger model.
+
+## The Sentence Memory
+
+`data/talk/tm/` holds 885 Hebrew sentences of the app (lessons, little books, the Israel course, games) with one English line each. A Hebrew line that is one of them is answered from there, with or without a pack, on Talk and on the Camera Translator. The label is "A lesson sentence".
+
+- **Where the English comes from.** 876 lines carry the English the app already gives that sentence. 9 lines had none; they were translated ahead of time with the high-quality pack's model and passed every check. Their note says a person has not checked them yet.
+- **The checks.** Shape, numbers, person, singular and plural (using the number forms and noun plurals of `data/talk/pack.json`); for the translated lines also a round trip through the English to Hebrew model and agreement with the ordinary pack. 33 lines failed and are listed in the tools repository, `review/tm-needs-human.json`, for a person to settle. They are not in the app.
+- **Left out.** Any line with the four-letter Name (118), scripture and prayer lines (42), and the vocabulary's example sentences, which come from Tatoeba and need a credit each.
+- **Size.** Four unit files, the largest 27.7 KiB, and an index of 5.5 KiB. Nothing is fetched until a Hebrew line is looked up; then the index, and a unit only when the index says the line is in it. All of it comes from the site itself.
+- **What it did to the scores.** Nothing: no line of the test files is a lesson sentence. It helps a learner who types or photographs a line from a lesson.
+
+## The High-Quality Pack
+
+A second Hebrew to English pack, built from `Helsinki-NLP/opus-mt-tc-big-he-en` (CC BY 4.0, revision `134c5a85`), 237.6 MiB in 17 parts of at most 16 MiB.
+
+- **Where it stands.** Built and scored. It is **not on the pack host yet**, so the app does not offer it: `data/talk/pack-host.json` lists it part by part with sizes and SHA-256 and `"published": false`. Putting the files on the host and setting that to `true` turns it on. Until then the app asks the host for nothing.
+- **Who is offered it.** Only a browser with a real graphics adapter, on the Talk screen, with its size shown first. When it is on the device it answers Hebrew to English lines on Talk and on the Camera Translator in place of the ordinary pack.
+- **Both ways of running.** The 8-bit graphs on the processor and the graphics-card graphs run on the processor give the recorded check lines under Node. A real graphics card has not been tried. On the processor a line takes about 0.9 seconds on the two-core test machine, twice the ordinary pack.
+- **Credit.** Its credit line is in the pack list (`data/packs/catalog.json`, from the tools repository's `models.manifest.json`). The Credits page prints the credit lines of the packs a learner can download, so it appears there the moment the pack is published.
+
+### Scores With It
+
+`node tools/talk/nmt/score.mjs <file> --hq <packs dir>`, stored lines first, then the memory, then the pack; WebAssembly, beam of 2. chrF is the character n-gram score (the arithmetic of sacreBLEU's chrF2).
+
+| File | Lines | First-choice wording, before / after | Accepted wordings, before / after | chrF, before / after |
+|---|---|---|---|---|
+| `talk.utterances.json` | 100 | 96.3 / 96.3 | 96.5 / 96.5 | 93.8 / 93.8 |
+| `talk.fresh.json` | 60 | 96.6 / 96.6 | 97.0 / 97.0 | 93.5 / 93.5 |
+| `talk.fresh2.json` | 75 | 94.6 / 94.6 | 94.9 / 94.9 | 91.8 / 91.8 |
+| `talk.fresh3.json` | 40 | 91.5 / 91.5 | 91.5 / 91.5 | 90.1 / 89.9 |
+| `talk.heldout.json` | 240 | 77.3 / 81.0 | 94.4 / 96.3 | 76.6 / 80.1 |
+| held-out, Hebrew to English | 120 | 69.9 / 77.4 | 90.8 / 94.6 | 69.7 / 75.4 |
+| held-out, English to Hebrew | 120 | 84.7 / 84.7 | 97.9 / 97.9 | 87.1 / 87.1 |
+
+"Before" is the app with the two ordinary packs. Without the high-quality pack nothing changes, so the held-out file stays at 77.3 on first-choice wording. English to Hebrew is the same pack as before. On `talk.fresh3.json` one Hebrew to English line is worded a little further from its reference with the larger pack (chrF 90.1 to 89.9; the house scores are the same). The recorded lines are in `tests/fixtures/talk.heldout.results.hq.json`.
+
+The packs alone, without the stored lines, on the Hebrew to English half of each file (first-choice wording, ordinary / high-quality): held-out 70.0 / 77.5, fresh3 83.3 / 86.7, fresh2 76.0 / 79.3, fresh 69.1 / 63.1, utterances 67.6 / 65.7. On the two oldest files the larger pack words short stored-style lines further from the reference; the screen answers those from stored lines, so they do not reach a pack.
+
 ## The Graphics Card (WebGPU)
 
 The encoder and decoder can run on the device's graphics card. The word table stays on the processor.
@@ -94,7 +140,9 @@ A misheard word that is itself a real word is a different request. It is transla
 |---|---|
 | `src/talk/engine.js` | The stored-line engine. Pure functions. |
 | `src/talk/hybrid.js` | Stored lines first, the pack for the rest. |
-| `src/talk/nmt/tokenizer.js`, `decode.js`, `runtime.js` | Splitting a line into word pieces, the beam search, and the three graphs put together. The same code runs in the browser and in the Node scoring tool. |
+| `src/talk/nmt/tokenizer.js`, `decode.js`, `runtime.js` | Splitting a line into word pieces, the beam search, and the three graphs put together. The same code runs in the browser and in the Node scoring tool. Now wrappers around `assets/vendor/_alef-tools/translate@0.1.0/`. |
+| `src/talk/nmt/memory.js`, `data/talk/tm/` | The sentence memory and its lookup. |
+| `src/talk/nmt/tools.js` | Where the pinned translation code is (no version written in any screen). |
 | `src/talk/nmt/pack.js`, `client.js`, `worker.js` | Download, checking and keeping of the pack files; the page's side; the worker. |
 | `src/talk/nmt/postedit.js` | What is done to a pack line before it is shown: the Name, the term list, stray dashes. |
 | `src/talk/data.js` | Loads the stored lines and builds the engine. |

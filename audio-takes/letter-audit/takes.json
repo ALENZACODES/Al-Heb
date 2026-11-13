@@ -2882,5 +2882,789 @@
 "want": "meim sofis",
 "text": "מֶיְם סוֹפִיס",
 "engine": "he-IL-Chirp3-HD-Kore"
+},
+{
+"file": "ashk-vet-b-wm-1.mp3",
+"target": "ashk-vet-b",
+"want": "veis",
+"text": "בֵיס",
+"engine": "he-IL-Wavenet-B"
+},
+{
+"file": "ashk-vet-b-wf-1.mp3",
+"target": "ashk-vet-b",
+"want": "veis",
+"text": "בֵיס",
+"engine": "he-IL-Wavenet-A"
+},
+{
+"file": "ashk-vet-b-cm-1.mp3",
+"target": "ashk-vet-b",
+"want": "veis",
+"text": "בֵיס",
+"engine": "he-IL-Chirp3-HD-Charon"
+},
+{
+"file": "ashk-vet-b-cf-1.mp3",
+"target": "ashk-vet-b",
+"want": "veis",
+"text": "בֵיס",
+"engine": "he-IL-Chirp3-HD-Kore"
+},
+{
+"file": "ashk-vet-b-wm-2.mp3",
+"target": "ashk-vet-b",
+"want": "veis",
+"text": "בֵיְס",
+"engine": "he-IL-Wavenet-B"
+},
+{
+"file": "ashk-vet-b-wf-2.mp3",
+"target": "ashk-vet-b",
+"want": "veis",
+"text": "בֵיְס",
+"engine": "he-IL-Wavenet-A"
+},
+{
+"file": "ashk-vet-b-cm-2.mp3",
+"target": "ashk-vet-b",
+"want": "veis",
+"text": "בֵיְס",
+"engine": "he-IL-Chirp3-HD-Charon"
+},
+{
+"file": "ashk-vet-b-cf-2.mp3",
+"target": "ashk-vet-b",
+"want": "veis",
+"text": "בֵיְס",
+"engine": "he-IL-Chirp3-HD-Kore"
+},
+{
+"file": "ashk-vet-b-wm-3.mp3",
+"target": "ashk-vet-b",
+"want": "veis",
+"text": "ווייס",
+"engine": "he-IL-Wavenet-B"
+},
+{
+"file": "ashk-vet-b-wf-3.mp3",
+"target": "ashk-vet-b",
+"want": "veis",
+"text": "ווייס",
+"engine": "he-IL-Wavenet-A"
+},
+{
+"file": "ashk-vet-b-cm-3.mp3",
+"target": "ashk-vet-b",
+"want": "veis",
+"text": "ווייס",
+"engine": "he-IL-Chirp3-HD-Charon"
+},
+{
+"file": "ashk-vet-b-cf-3.mp3",
+"target": "ashk-vet-b",
+"want": "veis",
+"text": "ווייס",
+"engine": "he-IL-Chirp3-HD-Kore"
+},
+{
+"file": "ashk-vet-b-wm-4.mp3",
+"target": "ashk-vet-b",
+"want": "veis",
+"text": "וֶיס",
+"engine": "he-IL-Wavenet-B"
+},
+{
+"file": "ashk-vet-b-wf-4.mp3",
+"target": "ashk-vet-b",
+"want": "veis",
+"text": "וֶיס",
+"engine": "he-IL-Wavenet-A"
+},
+{
+"file": "ashk-vet-b-cm-4.mp3",
+"target": "ashk-vet-b",
+"want": "veis",
+"text": "וֶיס",
+"engine": "he-IL-Chirp3-HD-Charon"
+},
+{
+"file": "ashk-vet-b-cf-4.mp3",
+"target": "ashk-vet-b",
+"want": "veis",
+"text": "וֶיס",
+"engine": "he-IL-Chirp3-HD-Kore"
+},
+{
+"file": "ashk-vet-b-wm-5.mp3",
+"target": "ashk-vet-b",
+"want": "veis",
+"text": "וֵייס",
+"engine": "he-IL-Wavenet-B"
+},
+{
+"file": "ashk-vet-b-wf-5.mp3",
+"target": "ashk-vet-b",
+"want": "veis",
+"text": "וֵייס",
+"engine": "he-IL-Wavenet-A"
+},
+{
+"file": "ashk-vet-b-cm-5.mp3",
+"target": "ashk-vet-b",
+"want": "veis",
+"text": "וֵייס",
+"engine": "he-IL-Chirp3-HD-Charon"
+},
+{
+"file": "ashk-vet-b-cf-5.mp3",
+"target": "ashk-vet-b",
+"want": "veis",
+"text": "וֵייס",
+"engine": "he-IL-Chirp3-HD-Kore"
+},
+{
+"file": "ashk-vet-b-wm-6.mp3",
+"target": "ashk-vet-b",
+"want": "veis",
+"text": "בֶיְס",
+"engine": "he-IL-Wavenet-B"
+},
+{
+"file": "ashk-vet-b-wf-6.mp3",
+"target": "ashk-vet-b",
+"want": "veis",
+"text": "בֶיְס",
+"engine": "he-IL-Wavenet-A"
+},
+{
+"file": "ashk-vet-b-cm-6.mp3",
+"target": "ashk-vet-b",
+"want": "veis",
+"text": "בֶיְס",
+"engine": "he-IL-Chirp3-HD-Charon"
+},
+{
+"file": "ashk-vet-b-cf-6.mp3",
+"target": "ashk-vet-b",
+"want": "veis",
+"text": "בֶיְס",
+"engine": "he-IL-Chirp3-HD-Kore"
+},
+{
+"file": "ashk-mem-b-wm-1.mp3",
+"target": "ashk-mem-b",
+"want": "meim",
+"text": "מֵיים",
+"engine": "he-IL-Wavenet-B"
+},
+{
+"file": "ashk-mem-b-wf-1.mp3",
+"target": "ashk-mem-b",
+"want": "meim",
+"text": "מֵיים",
+"engine": "he-IL-Wavenet-A"
+},
+{
+"file": "ashk-mem-b-cm-1.mp3",
+"target": "ashk-mem-b",
+"want": "meim",
+"text": "מֵיים",
+"engine": "he-IL-Chirp3-HD-Charon"
+},
+{
+"file": "ashk-mem-b-cf-1.mp3",
+"target": "ashk-mem-b",
+"want": "meim",
+"text": "מֵיים",
+"engine": "he-IL-Chirp3-HD-Kore"
+},
+{
+"file": "ashk-mem-b-wm-2.mp3",
+"target": "ashk-mem-b",
+"want": "meim",
+"text": "מֶים",
+"engine": "he-IL-Wavenet-B"
+},
+{
+"file": "ashk-mem-b-wf-2.mp3",
+"target": "ashk-mem-b",
+"want": "meim",
+"text": "מֶים",
+"engine": "he-IL-Wavenet-A"
+},
+{
+"file": "ashk-mem-b-cm-2.mp3",
+"target": "ashk-mem-b",
+"want": "meim",
+"text": "מֶים",
+"engine": "he-IL-Chirp3-HD-Charon"
+},
+{
+"file": "ashk-mem-b-cf-2.mp3",
+"target": "ashk-mem-b",
+"want": "meim",
+"text": "מֶים",
+"engine": "he-IL-Chirp3-HD-Kore"
+},
+{
+"file": "ashk-mem-b-wm-3.mp3",
+"target": "ashk-mem-b",
+"want": "meim",
+"text": "מיים",
+"engine": "he-IL-Wavenet-B"
+},
+{
+"file": "ashk-mem-b-wf-3.mp3",
+"target": "ashk-mem-b",
+"want": "meim",
+"text": "מיים",
+"engine": "he-IL-Wavenet-A"
+},
+{
+"file": "ashk-mem-b-cm-3.mp3",
+"target": "ashk-mem-b",
+"want": "meim",
+"text": "מיים",
+"engine": "he-IL-Chirp3-HD-Charon"
+},
+{
+"file": "ashk-mem-b-cf-3.mp3",
+"target": "ashk-mem-b",
+"want": "meim",
+"text": "מיים",
+"engine": "he-IL-Chirp3-HD-Kore"
+},
+{
+"file": "ashk-mem-b-wm-4.mp3",
+"target": "ashk-mem-b",
+"want": "meim",
+"text": "מֵיְמְ",
+"engine": "he-IL-Wavenet-B"
+},
+{
+"file": "ashk-mem-b-wf-4.mp3",
+"target": "ashk-mem-b",
+"want": "meim",
+"text": "מֵיְמְ",
+"engine": "he-IL-Wavenet-A"
+},
+{
+"file": "ashk-mem-b-cm-4.mp3",
+"target": "ashk-mem-b",
+"want": "meim",
+"text": "מֵיְמְ",
+"engine": "he-IL-Chirp3-HD-Charon"
+},
+{
+"file": "ashk-mem-b-cf-4.mp3",
+"target": "ashk-mem-b",
+"want": "meim",
+"text": "מֵיְמְ",
+"engine": "he-IL-Chirp3-HD-Kore"
+},
+{
+"file": "ashk-resh-b-wm-1.mp3",
+"target": "ashk-resh-b",
+"want": "reish",
+"text": "רֵייש",
+"engine": "he-IL-Wavenet-B"
+},
+{
+"file": "ashk-resh-b-wf-1.mp3",
+"target": "ashk-resh-b",
+"want": "reish",
+"text": "רֵייש",
+"engine": "he-IL-Wavenet-A"
+},
+{
+"file": "ashk-resh-b-cm-1.mp3",
+"target": "ashk-resh-b",
+"want": "reish",
+"text": "רֵייש",
+"engine": "he-IL-Chirp3-HD-Charon"
+},
+{
+"file": "ashk-resh-b-cf-1.mp3",
+"target": "ashk-resh-b",
+"want": "reish",
+"text": "רֵייש",
+"engine": "he-IL-Chirp3-HD-Kore"
+},
+{
+"file": "ashk-resh-b-wm-2.mp3",
+"target": "ashk-resh-b",
+"want": "reish",
+"text": "רֶיְישׁ",
+"engine": "he-IL-Wavenet-B"
+},
+{
+"file": "ashk-resh-b-wf-2.mp3",
+"target": "ashk-resh-b",
+"want": "reish",
+"text": "רֶיְישׁ",
+"engine": "he-IL-Wavenet-A"
+},
+{
+"file": "ashk-resh-b-cm-2.mp3",
+"target": "ashk-resh-b",
+"want": "reish",
+"text": "רֶיְישׁ",
+"engine": "he-IL-Chirp3-HD-Charon"
+},
+{
+"file": "ashk-resh-b-cf-2.mp3",
+"target": "ashk-resh-b",
+"want": "reish",
+"text": "רֶיְישׁ",
+"engine": "he-IL-Chirp3-HD-Kore"
+},
+{
+"file": "ashk-resh-b-wm-3.mp3",
+"target": "ashk-resh-b",
+"want": "reish",
+"text": "רייש",
+"engine": "he-IL-Wavenet-B"
+},
+{
+"file": "ashk-resh-b-wf-3.mp3",
+"target": "ashk-resh-b",
+"want": "reish",
+"text": "רייש",
+"engine": "he-IL-Wavenet-A"
+},
+{
+"file": "ashk-resh-b-cm-3.mp3",
+"target": "ashk-resh-b",
+"want": "reish",
+"text": "רייש",
+"engine": "he-IL-Chirp3-HD-Charon"
+},
+{
+"file": "ashk-resh-b-cf-3.mp3",
+"target": "ashk-resh-b",
+"want": "reish",
+"text": "רייש",
+"engine": "he-IL-Chirp3-HD-Kore"
+},
+{
+"file": "ashk-resh-b-wm-4.mp3",
+"target": "ashk-resh-b",
+"want": "reish",
+"text": "רֵיְשְׁ",
+"engine": "he-IL-Wavenet-B"
+},
+{
+"file": "ashk-resh-b-wf-4.mp3",
+"target": "ashk-resh-b",
+"want": "reish",
+"text": "רֵיְשְׁ",
+"engine": "he-IL-Wavenet-A"
+},
+{
+"file": "ashk-resh-b-cm-4.mp3",
+"target": "ashk-resh-b",
+"want": "reish",
+"text": "רֵיְשְׁ",
+"engine": "he-IL-Chirp3-HD-Charon"
+},
+{
+"file": "ashk-resh-b-cf-4.mp3",
+"target": "ashk-resh-b",
+"want": "reish",
+"text": "רֵיְשְׁ",
+"engine": "he-IL-Chirp3-HD-Kore"
+},
+{
+"file": "ashk-vet-c-wm-1.mp3",
+"target": "ashk-vet-c",
+"want": "veis",
+"text": "ווֵיס",
+"engine": "he-IL-Wavenet-B"
+},
+{
+"file": "ashk-vet-c-wf-1.mp3",
+"target": "ashk-vet-c",
+"want": "veis",
+"text": "ווֵיס",
+"engine": "he-IL-Wavenet-A"
+},
+{
+"file": "ashk-vet-c-cm-1.mp3",
+"target": "ashk-vet-c",
+"want": "veis",
+"text": "ווֵיס",
+"engine": "he-IL-Chirp3-HD-Charon"
+},
+{
+"file": "ashk-vet-c-cf-1.mp3",
+"target": "ashk-vet-c",
+"want": "veis",
+"text": "ווֵיס",
+"engine": "he-IL-Chirp3-HD-Kore"
+},
+{
+"file": "ashk-vet-c-wm-2.mp3",
+"target": "ashk-vet-c",
+"want": "veis",
+"text": "ווֵיְס",
+"engine": "he-IL-Wavenet-B"
+},
+{
+"file": "ashk-vet-c-wf-2.mp3",
+"target": "ashk-vet-c",
+"want": "veis",
+"text": "ווֵיְס",
+"engine": "he-IL-Wavenet-A"
+},
+{
+"file": "ashk-vet-c-cm-2.mp3",
+"target": "ashk-vet-c",
+"want": "veis",
+"text": "ווֵיְס",
+"engine": "he-IL-Chirp3-HD-Charon"
+},
+{
+"file": "ashk-vet-c-cf-2.mp3",
+"target": "ashk-vet-c",
+"want": "veis",
+"text": "ווֵיְס",
+"engine": "he-IL-Chirp3-HD-Kore"
+},
+{
+"file": "ashk-vet-c-wm-3.mp3",
+"target": "ashk-vet-c",
+"want": "veis",
+"text": "װֵיס",
+"engine": "he-IL-Wavenet-B"
+},
+{
+"file": "ashk-vet-c-wf-3.mp3",
+"target": "ashk-vet-c",
+"want": "veis",
+"text": "װֵיס",
+"engine": "he-IL-Wavenet-A"
+},
+{
+"file": "ashk-vet-c-cm-3.mp3",
+"target": "ashk-vet-c",
+"want": "veis",
+"text": "װֵיס",
+"engine": "he-IL-Chirp3-HD-Charon"
+},
+{
+"file": "ashk-vet-c-cf-3.mp3",
+"target": "ashk-vet-c",
+"want": "veis",
+"text": "װֵיס",
+"engine": "he-IL-Chirp3-HD-Kore"
+},
+{
+"file": "ashk-vet-c-wm-4.mp3",
+"target": "ashk-vet-c",
+"want": "veis",
+"text": "בֵֿיס",
+"engine": "he-IL-Wavenet-B"
+},
+{
+"file": "ashk-vet-c-wf-4.mp3",
+"target": "ashk-vet-c",
+"want": "veis",
+"text": "בֵֿיס",
+"engine": "he-IL-Wavenet-A"
+},
+{
+"file": "ashk-vet-c-cm-4.mp3",
+"target": "ashk-vet-c",
+"want": "veis",
+"text": "בֵֿיס",
+"engine": "he-IL-Chirp3-HD-Charon"
+},
+{
+"file": "ashk-vet-c-cf-4.mp3",
+"target": "ashk-vet-c",
+"want": "veis",
+"text": "בֵֿיס",
+"engine": "he-IL-Chirp3-HD-Kore"
+},
+{
+"file": "ashk-vet-c-wm-5.mp3",
+"target": "ashk-vet-c",
+"want": "veis",
+"text": "וֵס",
+"engine": "he-IL-Wavenet-B"
+},
+{
+"file": "ashk-vet-c-wf-5.mp3",
+"target": "ashk-vet-c",
+"want": "veis",
+"text": "וֵס",
+"engine": "he-IL-Wavenet-A"
+},
+{
+"file": "ashk-vet-c-cm-5.mp3",
+"target": "ashk-vet-c",
+"want": "veis",
+"text": "וֵס",
+"engine": "he-IL-Chirp3-HD-Charon"
+},
+{
+"file": "ashk-vet-c-cf-5.mp3",
+"target": "ashk-vet-c",
+"want": "veis",
+"text": "וֵס",
+"engine": "he-IL-Chirp3-HD-Kore"
+},
+{
+"file": "ashk-vet-c-wm-6.mp3",
+"target": "ashk-vet-c",
+"want": "veis",
+"text": "ווֵס",
+"engine": "he-IL-Wavenet-B"
+},
+{
+"file": "ashk-vet-c-wf-6.mp3",
+"target": "ashk-vet-c",
+"want": "veis",
+"text": "ווֵס",
+"engine": "he-IL-Wavenet-A"
+},
+{
+"file": "ashk-vet-c-cm-6.mp3",
+"target": "ashk-vet-c",
+"want": "veis",
+"text": "ווֵס",
+"engine": "he-IL-Chirp3-HD-Charon"
+},
+{
+"file": "ashk-vet-c-cf-6.mp3",
+"target": "ashk-vet-c",
+"want": "veis",
+"text": "ווֵס",
+"engine": "he-IL-Chirp3-HD-Kore"
+},
+{
+"file": "ashk-vet-c-wm-7.mp3",
+"target": "ashk-vet-c",
+"want": "veis",
+"text": "ווֶיְס",
+"engine": "he-IL-Wavenet-B"
+},
+{
+"file": "ashk-vet-c-wf-7.mp3",
+"target": "ashk-vet-c",
+"want": "veis",
+"text": "ווֶיְס",
+"engine": "he-IL-Wavenet-A"
+},
+{
+"file": "ashk-vet-c-cm-7.mp3",
+"target": "ashk-vet-c",
+"want": "veis",
+"text": "ווֶיְס",
+"engine": "he-IL-Chirp3-HD-Charon"
+},
+{
+"file": "ashk-vet-c-cf-7.mp3",
+"target": "ashk-vet-c",
+"want": "veis",
+"text": "ווֶיְס",
+"engine": "he-IL-Chirp3-HD-Kore"
+},
+{
+"file": "ashk-vet-c-wm-8.mp3",
+"target": "ashk-vet-c",
+"want": "veis",
+"text": "וֵיס וֵיס",
+"engine": "he-IL-Wavenet-B"
+},
+{
+"file": "ashk-vet-c-wf-8.mp3",
+"target": "ashk-vet-c",
+"want": "veis",
+"text": "וֵיס וֵיס",
+"engine": "he-IL-Wavenet-A"
+},
+{
+"file": "ashk-vet-c-cm-8.mp3",
+"target": "ashk-vet-c",
+"want": "veis",
+"text": "וֵיס וֵיס",
+"engine": "he-IL-Chirp3-HD-Charon"
+},
+{
+"file": "ashk-vet-c-cf-8.mp3",
+"target": "ashk-vet-c",
+"want": "veis",
+"text": "וֵיס וֵיס",
+"engine": "he-IL-Chirp3-HD-Kore"
+},
+{
+"file": "ashk-mem-c-wm-1.mp3",
+"target": "ashk-mem-c",
+"want": "meim",
+"text": "מֶיים",
+"engine": "he-IL-Wavenet-B"
+},
+{
+"file": "ashk-mem-c-wf-1.mp3",
+"target": "ashk-mem-c",
+"want": "meim",
+"text": "מֶיים",
+"engine": "he-IL-Wavenet-A"
+},
+{
+"file": "ashk-mem-c-cm-1.mp3",
+"target": "ashk-mem-c",
+"want": "meim",
+"text": "מֶיים",
+"engine": "he-IL-Chirp3-HD-Charon"
+},
+{
+"file": "ashk-mem-c-cf-1.mp3",
+"target": "ashk-mem-c",
+"want": "meim",
+"text": "מֶיים",
+"engine": "he-IL-Chirp3-HD-Kore"
+},
+{
+"file": "ashk-mem-c-wm-2.mp3",
+"target": "ashk-mem-c",
+"want": "meim",
+"text": "מֵי ם",
+"engine": "he-IL-Wavenet-B"
+},
+{
+"file": "ashk-mem-c-wf-2.mp3",
+"target": "ashk-mem-c",
+"want": "meim",
+"text": "מֵי ם",
+"engine": "he-IL-Wavenet-A"
+},
+{
+"file": "ashk-mem-c-cm-2.mp3",
+"target": "ashk-mem-c",
+"want": "meim",
+"text": "מֵי ם",
+"engine": "he-IL-Chirp3-HD-Charon"
+},
+{
+"file": "ashk-mem-c-cf-2.mp3",
+"target": "ashk-mem-c",
+"want": "meim",
+"text": "מֵי ם",
+"engine": "he-IL-Chirp3-HD-Kore"
+},
+{
+"file": "ashk-mem-c-wm-3.mp3",
+"target": "ashk-mem-c",
+"want": "meim",
+"text": "מֵיְים.",
+"engine": "he-IL-Wavenet-B"
+},
+{
+"file": "ashk-mem-c-wf-3.mp3",
+"target": "ashk-mem-c",
+"want": "meim",
+"text": "מֵיְים.",
+"engine": "he-IL-Wavenet-A"
+},
+{
+"file": "ashk-mem-c-cm-3.mp3",
+"target": "ashk-mem-c",
+"want": "meim",
+"text": "מֵיְים.",
+"engine": "he-IL-Chirp3-HD-Charon"
+},
+{
+"file": "ashk-mem-c-cf-3.mp3",
+"target": "ashk-mem-c",
+"want": "meim",
+"text": "מֵיְים.",
+"engine": "he-IL-Chirp3-HD-Kore"
+},
+{
+"file": "ashk-resh-c-wm-1.mp3",
+"target": "ashk-resh-c",
+"want": "reish",
+"text": "רֶיְש",
+"engine": "he-IL-Wavenet-B"
+},
+{
+"file": "ashk-resh-c-wf-1.mp3",
+"target": "ashk-resh-c",
+"want": "reish",
+"text": "רֶיְש",
+"engine": "he-IL-Wavenet-A"
+},
+{
+"file": "ashk-resh-c-cm-1.mp3",
+"target": "ashk-resh-c",
+"want": "reish",
+"text": "רֶיְש",
+"engine": "he-IL-Chirp3-HD-Charon"
+},
+{
+"file": "ashk-resh-c-cf-1.mp3",
+"target": "ashk-resh-c",
+"want": "reish",
+"text": "רֶיְש",
+"engine": "he-IL-Chirp3-HD-Kore"
+},
+{
+"file": "ashk-resh-c-wm-2.mp3",
+"target": "ashk-resh-c",
+"want": "reish",
+"text": "רֵיְיש",
+"engine": "he-IL-Wavenet-B"
+},
+{
+"file": "ashk-resh-c-wf-2.mp3",
+"target": "ashk-resh-c",
+"want": "reish",
+"text": "רֵיְיש",
+"engine": "he-IL-Wavenet-A"
+},
+{
+"file": "ashk-resh-c-cm-2.mp3",
+"target": "ashk-resh-c",
+"want": "reish",
+"text": "רֵיְיש",
+"engine": "he-IL-Chirp3-HD-Charon"
+},
+{
+"file": "ashk-resh-c-cf-2.mp3",
+"target": "ashk-resh-c",
+"want": "reish",
+"text": "רֵיְיש",
+"engine": "he-IL-Chirp3-HD-Kore"
+},
+{
+"file": "ashk-resh-c-wm-3.mp3",
+"target": "ashk-resh-c",
+"want": "reish",
+"text": "רֵשׁ רֵיְשׁ",
+"engine": "he-IL-Wavenet-B"
+},
+{
+"file": "ashk-resh-c-wf-3.mp3",
+"target": "ashk-resh-c",
+"want": "reish",
+"text": "רֵשׁ רֵיְשׁ",
+"engine": "he-IL-Wavenet-A"
+},
+{
+"file": "ashk-resh-c-cm-3.mp3",
+"target": "ashk-resh-c",
+"want": "reish",
+"text": "רֵשׁ רֵיְשׁ",
+"engine": "he-IL-Chirp3-HD-Charon"
+},
+{
+"file": "ashk-resh-c-cf-3.mp3",
+"target": "ashk-resh-c",
+"want": "reish",
+"text": "רֵשׁ רֵיְשׁ",
+"engine": "he-IL-Chirp3-HD-Kore"
 }
 ]

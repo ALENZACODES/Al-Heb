@@ -107,9 +107,11 @@ Done without the owner's computer (it was offline, so no new recordings were pos
 - "Meet" pictures for Dalet, Ayin, Pe and Final Nun: new letter cards drawn from the app's own font, so the letter is right. They are plain cards, not illustrated scenes with Ari and Noa. The old files are kept in `assets/img/held/`.
 - Video captions: the caption no longer runs under the mascot badge. Rebuilt in both voices: Aleph, Kaf, Ayin, Shin and the five final letters.
 
-Still open, needs the owner's computer online for new recordings:
-- Ashkenazi Vet says "beis" (should be "veis").
-- Ashkenazi Mem and Resh say "mem" and "resh" (the app's Ashkenazi spelling is "meim" and "reish").
+Fifth pass, with the Google key stored as a repository secret (workflow `letter-takes`, takes on branch `john/letter-takes`):
+- Ashkenazi Vet, both voices: now says "veis". Cut from a take that said "vav-eis".
+
+Left as they are:
+- Ashkenazi Mem and Resh say "mem" and "resh". The app's Ashkenazi spelling is "meim" and "reish", but across 20 spellings the voice only ever said "me-im" and "re-ish", in two syllables, which is worse. A person's recording is the way to get these.
 
 ## Still Wrong: Needs A Decision Or New Art
 

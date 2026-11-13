@@ -27,7 +27,7 @@ export const EXTRAS = [
   ['sitemap.xml', 'search sitemap for the app shell'],
   ['audit/asset-check.json', 'evidence that the deploy-time asset check passed for this build (tools/deploy/check-assets.mjs; only if the file exists)'],
   ['_redirects', 'Cloudflare Pages redirects (only if the file exists)'],
-  ['assets/vendor', 'vendored Tesseract OCR (lazy, runtime-cached; includes licence texts)'],
+  ['assets/vendor', 'vendored Tesseract OCR (lazy, runtime-cached; includes licence texts); the Talk language packs and their runtime; and the pinned alef-tools code (assets/vendor/_alef-tools, checked against data/alef-tools.lock.json by tools/alef-tools/sync.mjs --check)'],
   ['assets/workbook', 'printable workbook PDFs + manifest (linked from the app, downloaded on demand)'],
   ['data/vocab/packs', 'vocab packs (fetched when a pack is opened)'],
   ['data/vocab/clip-lookup.json', 'dictionary clip lookup (2.2 MB, over the 2 MiB precache cap): fetched when the dictionary opens, runtime-cached'],
@@ -87,7 +87,7 @@ export function listShipFiles({ img = true } = {}) {
 }
 
 /** With the packs left out, these are not copied: the pack parts and lists, and the runtime's WebAssembly. The runtime's code stays. */
-export const isPackData = (rel) => rel.startsWith('assets/vendor/_nmt/') || (rel.startsWith('assets/vendor/_ort/') && /\.(wasm|bin)$/.test(rel));
+export const isPackData = (rel) => rel.startsWith('assets/vendor/_nmt/') || rel.startsWith('assets/vendor/_packs/') || (rel.startsWith('assets/vendor/_ort/') && /\.(wasm|bin)$/.test(rel));
 
 export function makeDist({ out = 'dist', img = true, packs = process.env.ALEF_PACKS === 'remote' ? 'remote' : 'local' } = {}) {
   const dist = join(ROOT, out);

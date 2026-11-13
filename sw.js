@@ -216,7 +216,8 @@ self.addEventListener('fetch', (event) => {
   // Talk language packs and their runtime (assets/vendor/_nmt, assets/vendor/_ort): large files the Talk screen downloads on request
   // into its own cache (alef-talk-pack-v1, src/talk/nmt/pack.js). Serve a kept copy, else the network; never copy them into the
   // per-version data cache (that would store about 80 MB twice and throw it away at every update).
-  if (/\/assets\/vendor\/_(nmt|ort)\//.test(url.pathname)) {
+  // The same holds for any language pack a deploy carries itself (assets/vendor/_packs): the shared loader keeps it in alef-pack-<name>-v1.
+  if (/\/assets\/vendor\/_(nmt|ort)\//.test(url.pathname) || url.pathname.includes('/assets/vendor/_packs/')) {
     event.respondWith((async () => (await caches.match(req.url)) || fetch(req))());
     return;
   }

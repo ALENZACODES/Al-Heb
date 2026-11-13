@@ -158,6 +158,7 @@ export function mount(root, ctx) {
     // The sound statement and the "what is ready" list live on About (one place for notes about the app), linked here.
     h('p', { class: 'small muted' }, 'About the voices and what is still being built: ', h('a', { href: '#/about' }, 'About Aleph'), '.'),
     h('p', { class: 'small muted' }, h('a', { href: '#/privacy', id: 's-privacy-link' }, 'Privacy'), ' · ', h('a', { href: '#/terms', id: 's-terms-link' }, 'Terms & sources'), '.'),
+    h('p', { class: 'small muted' }, h('a', { href: '#/packs', id: 's-packs-link' }, 'Language packs'), ': optional downloads that work on this device. See, download or delete them.'),
     status, // right under the backup buttons so a confirmation is visible without scrolling
     radioGroup('voice', 'settings.voice'),
     h('div', { class: 'teacher-row', id: 's-teachers' },

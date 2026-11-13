@@ -9,7 +9,14 @@ import { runPipeline } from './pipeline.js';
 import { loadLane3Shva, CONFIDENCE_REASONS } from './syllabify.js';
 import { buildWordCards, loadTransliterator, loadLetterInfo, TRADITIONS } from './word-card.js';
 import { isLocalHelperUrl } from './engines/local-server.js';
-import { speechSafeText } from '../shell/names.js';
+import { speechSafeText, findName, isNameWord, NAME_ABBREV } from '../shell/names.js';
+
+/** Hebrew for the screen: the four-letter Name is written ה׳ (prefix letters stay). Text read from a photo is never shown with the Name spelled out. */
+export function shownHebrew(text) {
+  const s = String(text ?? ''); let out = ''; let last = 0;
+  for (const w of findName(s)) { if (w.kind === 'abbrev') continue; out += s.slice(last, w.index) + w.prefix + NAME_ABBREV; last = w.index + w.word.length; }
+  return out + s.slice(last);
+}
 
 export const ACCURACY_NOTICE = 'Accuracy notice: this reader has only been tested on 145 computer-generated images (about 88% of letters right there). It has not been measured on real photos, so expect mistakes, especially with vowel points, curved pages, glare or small print. Treat the result as a study aid, check it against the page, and do not rely on it for anything important (medical, legal, kashrut, prayer text for a ritual).';
 export const NO_TRANSLATION_NOTICE = 'This app has no built-in Hebrew-to-English translator. Prayer lines that match the built-in texts show the stored translation; everything else shows no English. Nothing was sent anywhere to try.';
@@ -119,7 +126,7 @@ export function mount(root, ctx = {}) {
     if (!result.demo) out.append(el('p', { class: 'photo-engines' }, `Engines: ${result.engine}`));
     if (!result.translationAvailable) out.append(el('p', { class: 'photo-no-translation', role: 'note' }, NO_TRANSLATION_NOTICE));
     for (const line of result.lines) {
-      if (line.ocrText && !result.demo) out.append(el('p', { class: 'photo-ocrtext' }, `Line ${line.index + 1} as read by OCR: `, heEl(line.ocrText)));
+      if (line.ocrText && !result.demo) out.append(el('p', { class: 'photo-ocrtext' }, `Line ${line.index + 1} as read by OCR: `, heEl(shownHebrew(line.ocrText))));
       for (const lw of line.warnings) if (!skip.test(lw)) out.append(el('p', { class: 'photo-warn' }, `Line ${line.index + 1}: ${lw}`));
       if (line.match?.matched) out.append(el('p', { class: 'photo-match' }, `Matched ${line.match.ref || line.match.id} (score ${line.match.score})`));
     }
@@ -130,7 +137,8 @@ export function mount(root, ctx = {}) {
         if (w.kind !== 'hebrew') continue;
         const c = cards[ci++];
         const card = el('article', { class: 'photo-card' });
-        card.append(heEl(w.he, 'h3'));
+        card.append(heEl(shownHebrew(w.he), 'h3'));
+        if (isNameWord(w.he)) { card.append(el('p', { class: 'photo-label' }, 'The Name. It is read aloud as Adonai, and it is not broken into letters or sounds here.')); out.append(card); continue; }
         const note = el('p', { class: 'photo-audio-note', role: 'status' });
         const letters = el('div', { class: 'photo-letters', role: 'group', 'aria-label': 'Letter by letter', dir: 'rtl', style: ROW });
         let li = 0;
@@ -186,6 +194,8 @@ export function mount(root, ctx = {}) {
         const helperUrl = typed && isLocalHelperUrl(typed) ? typed : (ctx.photoLocalServer || null);
         engines = createPhotoEngines({ localServerUrl: helperUrl,
           onProgress: (m) => { if (m?.status) status.textContent = scanStatusText(m); } });
+        // Tidy the reading against the app's own word list (look-alike letters put right). Loaded on first use; skipped if it cannot load.
+        if (!engines.correct && ctx.photoFix !== false) engines.correct = async (boxes) => (await import('../handcheck/ocr-fix.js')).fixBoxes(boxes);
         activeEngines = engines;
       }
       shvaP ||= loadLane3Shva();

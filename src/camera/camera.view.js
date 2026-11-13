@@ -237,7 +237,8 @@ export function mount(root, ctx = {}) {
     out.replaceChildren(h('figure', {}, h('img', { src: objectUrl(photo.blob), width: String(photo.width), height: String(photo.height), alt: 'Your photo as taken', style: 'max-inline-size:100%;block-size:auto;border-radius:6px' })));
     try {
       const { translateOnDevice } = await import('./on-device.js');
-      const r = await translateOnDevice(photo.blob, { glossary, engine: ctx.cameraEngine || engine || undefined, doc, dictionaryLoader: getDictionary, translator: translator || undefined,
+      const fixer = ctx.cameraFixer !== undefined ? ctx.cameraFixer : await (await import('../handcheck/ocr-fix.js')).loadFix();
+      const r = await translateOnDevice(photo.blob, { glossary, engine: ctx.cameraEngine || engine || undefined, doc, dictionaryLoader: getDictionary, translator: translator || undefined, fixer,
         onProgress: (m) => { if (alive && m?.status) status.textContent = `Reading on this device: ${m.status}${typeof m.progress === 'number' ? ` ${Math.round(m.progress * 100)}%` : ''}`; } });
       engine = r.engine;
       if (!alive) return;

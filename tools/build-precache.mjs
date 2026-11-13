@@ -24,6 +24,7 @@ const SKIP_REST = (rel) => (rel.startsWith('assets/img/') && !rel.startsWith('as
   || /\.(mp3|wav|ogg|m4a|svg\.src|ttf|otf|txt)$/i.test(rel)  // original TTFs and licence texts are not precached; woff2 in assets/fonts/web/ is
   || rel.split('/').includes('tools')
   || (rel.startsWith('data/images/') && rel !== 'data/images/approvals.json' && rel !== 'data/images/word-cues.json' /* read live by the image resolver */) || rel === 'data/corpus/source-snapshot.json' || rel === 'data/audio/tts-prices.json'
+  || rel === 'data/alef-tools.lock.json' /* which vendored alef-tools files this build carries: read by tools/alef-tools/sync.mjs and tests, never by the app */
   || rel.startsWith('data/tts/') /* respelling files for the offline TTS factory: build-time inputs, never fetched by the app */
   || /^data\/audio\/manifest-words-[a-z]+\.json$/.test(rel)
   || rel === 'data/alef-tools.lock.json' /* the alef-tools pin: read by tools/alef-tools/sync.mjs, never by the app */
@@ -58,6 +59,7 @@ const ON_DEMAND_PREFIXES = ['data/vocab/', 'data/roots/', 'data/knownwords/', 'd
   'src/games/', 'src/books/', 'data/books/', 'data/images/',
   'src/words/', // word notes (tap a Hebrew word): card, tap handling and the lesson section, fetched when a lesson first shows its Word Notes
   'src/bridge/', // lane 6: Reading Without Vowels (#/bridge), view, model and loader, fetched on first open
+  'src/handcheck/', // letter check for the tracing screens and the photo-text tidy-up: hooks, pack handling and vendored-tool paths, fetched on first use
   'src/readlab/', 'data/readlab/', // reading lane: Reading Tools (#/readlab), code and its two lookup files, fetched on first open
   // Camera Translator (preview route /camera): view code, word list and config are fetched when the screen first opens, runtime-cached.
   'src/camera/', 'data/camera/',

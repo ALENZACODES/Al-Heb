@@ -64,6 +64,7 @@ Read directly on 2026-11-04:
 | `memory-chain-text` | Memory hooks and stories (`data/letters/memory-chain.json`, `mnemonics.json`) | English hooks, picture ideas, stories; example words copied from vocab | original text (owner's statement); example words from Wiktionary data | n/a | Only for the copied example words | n/a | project-owned |
 | `practice-data-from-vocab` | `data/roots/*`, `data/gender/templates.json`, `data/nikkudfade/*`, `data/speak/minimal-pairs.json` | roots, gender, vowel-fade, record-and-compare pairs | derived from `data/vocab/words.json`, so CC BY-SA 4.0 | Yes-with-conditions | Yes, as the vocabulary data | Yes: as Wiktionary | partly-verified |
 | `reference-only-sites` | Pealim, Chabad.org, BJPA | cited by URL only | not open | n/a | n/a | n/a | not-present |
+| `hhd-handwriting` | HHD_v0 handwriting dataset (Rabaev, Kurar Barakat, Churkin, El-Sana), Zenodo 10.5281/zenodo.4287442 | part of the training data for the letter check model (`assets/vendor/_packs/handwriting`); no dataset image is in the app | CC BY 4.0 | Yes-with-conditions | No | Yes: one credit line | verified-primary |
 
 ## 3. Per-source notes
 
@@ -144,6 +145,9 @@ Two pages on Hugging Face were read on 2026-11-12: `dicta-il/dictabert-joint` (c
 
 ### reference-only-sites
 Linked, not copied (per the repo's own source notes). No attribution duty is created by a link.
+
+### hhd-handwriting
+Added 2026-11-12 with the letter check on the tracing screens (`assets/vendor/_packs/handwriting/`, built in the alef-tools repo, `packages/handwriting`). The model file was trained for this app from three sources: letters drawn from 21 font families under the SIL Open Font License 1.1 (pinned list with each copyright line in alef-tools `packages/handwriting/fonts/LICENSES.md`; no font file was added to the app), this app's own letter stroke models, and the HHD_v0 handwriting dataset (I. Rabaev, B. Kurar Barakat, A. Churkin and J. El-Sana, "The HHD Dataset", ICFHR 2020). The Zenodo record (https://doi.org/10.5281/zenodo.4287442) states Creative Commons Attribution 4.0 International; read 2026-11-12. No image from the dataset is in the app. The word list for the photo-text tidy-up (`assets/vendor/_packs/ocr-words/lexicon.json`) is built only from this app's own dictionary, sign list and phrasebook, so it adds no outside source.
 
 ## 4. Share-alike: what it covers and what is open
 

@@ -1,0 +1,1100 @@
+{
+ "schema": "alef-grammar-tables/1",
+ "status": "draft-unreviewed",
+ "note": "Typed by hand for Aleph from the standard forms taught in beginner grammars. Not checked by a Hebrew teacher. tests/grammar.tables.test.js checks every word here that the dictionary also holds against the dictionary's own pointing.",
+ "persons": {
+  "1s": "I / me",
+  "2ms": "you (a man)",
+  "2fs": "you (a woman)",
+  "3ms": "he / him",
+  "3fs": "she / her",
+  "1p": "we / us",
+  "2mp": "you (men, or a mixed group)",
+  "2fp": "you (women)",
+  "3mp": "they / them (men, or mixed)",
+  "3fp": "they / them (women)"
+ },
+ "pronouns": {
+  "standalone": {
+   "title": "On Their Own",
+   "gloss": "I, you, he ...",
+   "forms": {
+    "1s": "אֲנִי",
+    "2ms": "אַתָּה",
+    "2fs": "אַתְּ",
+    "3ms": "הוּא",
+    "3fs": "הִיא",
+    "1p": "אֲנַחְנוּ",
+    "2mp": "אַתֶּם",
+    "2fp": "אַתֶּן",
+    "3mp": "הֵם",
+    "3fp": "הֵן"
+   },
+   "frame": {
+    "tplHe": "{x} פֹּה",
+    "tplEn": "{who} here (I am here, you are here ...)"
+   }
+  },
+  "possessive": {
+   "title": "Mine, Yours ...",
+   "gloss": "my, your, his ...",
+   "forms": {
+    "1s": "שֶׁלִּי",
+    "2ms": "שֶׁלְּךָ",
+    "2fs": "שֶׁלָּךְ",
+    "3ms": "שֶׁלּוֹ",
+    "3fs": "שֶׁלָּהּ",
+    "1p": "שֶׁלָּנוּ",
+    "2mp": "שֶׁלָּכֶם",
+    "2fp": "שֶׁלָּכֶן",
+    "3mp": "שֶׁלָּהֶם",
+    "3fp": "שֶׁלָּהֶן"
+   },
+   "frame": {
+    "tplHe": "הַסֵּפֶר {x}",
+    "tplEn": "the book of {who} (my book, your book ...)"
+   }
+  },
+  "object": {
+   "title": "Me, You, Him ...",
+   "gloss": "me, you, him ... after a verb",
+   "forms": {
+    "1s": "אוֹתִי",
+    "2ms": "אוֹתְךָ",
+    "2fs": "אוֹתָךְ",
+    "3ms": "אוֹתוֹ",
+    "3fs": "אוֹתָהּ",
+    "1p": "אוֹתָנוּ",
+    "2mp": "אֶתְכֶם",
+    "2fp": "אֶתְכֶן",
+    "3mp": "אוֹתָם",
+    "3fp": "אוֹתָן"
+   },
+   "frame": {
+    "tplHe": "הוּא רוֹאֶה {x}",
+    "tplEn": "he sees {who}"
+   }
+  }
+ },
+ "prepositions": [
+  {
+   "id": "le",
+   "base": "לְ־",
+   "en": "to, for",
+   "forms": {
+    "1s": "לִי",
+    "2ms": "לְךָ",
+    "2fs": "לָךְ",
+    "3ms": "לוֹ",
+    "3fs": "לָהּ",
+    "1p": "לָנוּ",
+    "2mp": "לָכֶם",
+    "2fp": "לָכֶן",
+    "3mp": "לָהֶם",
+    "3fp": "לָהֶן"
+   }
+  },
+  {
+   "id": "be",
+   "base": "בְּ־",
+   "en": "in, at, with (a tool)",
+   "forms": {
+    "1s": "בִּי",
+    "2ms": "בְּךָ",
+    "2fs": "בָּךְ",
+    "3ms": "בּוֹ",
+    "3fs": "בָּהּ",
+    "1p": "בָּנוּ",
+    "2mp": "בָּכֶם",
+    "2fp": "בָּכֶן",
+    "3mp": "בָּהֶם",
+    "3fp": "בָּהֶן"
+   }
+  },
+  {
+   "id": "shel",
+   "base": "שֶׁל",
+   "en": "of, belonging to",
+   "forms": {
+    "1s": "שֶׁלִּי",
+    "2ms": "שֶׁלְּךָ",
+    "2fs": "שֶׁלָּךְ",
+    "3ms": "שֶׁלּוֹ",
+    "3fs": "שֶׁלָּהּ",
+    "1p": "שֶׁלָּנוּ",
+    "2mp": "שֶׁלָּכֶם",
+    "2fp": "שֶׁלָּכֶן",
+    "3mp": "שֶׁלָּהֶם",
+    "3fp": "שֶׁלָּהֶן"
+   }
+  },
+  {
+   "id": "et",
+   "base": "אֵת",
+   "en": "(marks the thing an action is done to)",
+   "forms": {
+    "1s": "אוֹתִי",
+    "2ms": "אוֹתְךָ",
+    "2fs": "אוֹתָךְ",
+    "3ms": "אוֹתוֹ",
+    "3fs": "אוֹתָהּ",
+    "1p": "אוֹתָנוּ",
+    "2mp": "אֶתְכֶם",
+    "2fp": "אֶתְכֶן",
+    "3mp": "אוֹתָם",
+    "3fp": "אוֹתָן"
+   }
+  },
+  {
+   "id": "im",
+   "base": "עִם",
+   "en": "with (a person)",
+   "note": "In everyday speech \"with me, with you ...\" is built on another old word for \"with\", so the forms start with אִתּ.",
+   "forms": {
+    "1s": "אִתִּי",
+    "2ms": "אִתְּךָ",
+    "2fs": "אִתָּךְ",
+    "3ms": "אִתּוֹ",
+    "3fs": "אִתָּהּ",
+    "1p": "אִתָּנוּ",
+    "2mp": "אִתְּכֶם",
+    "2fp": "אִתְּכֶן",
+    "3mp": "אִתָּם",
+    "3fp": "אִתָּן"
+   }
+  },
+  {
+   "id": "min",
+   "base": "מִן",
+   "en": "from, than",
+   "note": "\"From us\" in everyday speech is מֵאִתָּנוּ; the older form is the same word as \"from him\".",
+   "forms": {
+    "1s": "מִמֶּנִּי",
+    "2ms": "מִמְּךָ",
+    "2fs": "מִמֵּךְ",
+    "3ms": "מִמֶּנּוּ",
+    "3fs": "מִמֶּנָּה",
+    "1p": "מֵאִתָּנוּ",
+    "2mp": "מִכֶּם",
+    "2fp": "מִכֶּן",
+    "3mp": "מֵהֶם",
+    "3fp": "מֵהֶן"
+   }
+  },
+  {
+   "id": "al",
+   "base": "עַל",
+   "en": "on, about",
+   "forms": {
+    "1s": "עָלַי",
+    "2ms": "עָלֶיךָ",
+    "2fs": "עָלַיִךְ",
+    "3ms": "עָלָיו",
+    "3fs": "עָלֶיהָ",
+    "1p": "עָלֵינוּ",
+    "2mp": "עֲלֵיכֶם",
+    "2fp": "עֲלֵיכֶן",
+    "3mp": "עֲלֵיהֶם",
+    "3fp": "עֲלֵיהֶן"
+   }
+  },
+  {
+   "id": "el",
+   "base": "אֶל",
+   "en": "to, towards",
+   "forms": {
+    "1s": "אֵלַי",
+    "2ms": "אֵלֶיךָ",
+    "2fs": "אֵלַיִךְ",
+    "3ms": "אֵלָיו",
+    "3fs": "אֵלֶיהָ",
+    "1p": "אֵלֵינוּ",
+    "2mp": "אֲלֵיכֶם",
+    "2fp": "אֲלֵיכֶן",
+    "3mp": "אֲלֵיהֶם",
+    "3fp": "אֲלֵיהֶן"
+   }
+  },
+  {
+   "id": "bishvil",
+   "base": "בִּשְׁבִיל",
+   "en": "for (someone)",
+   "forms": {
+    "1s": "בִּשְׁבִילִי",
+    "2ms": "בִּשְׁבִילְךָ",
+    "2fs": "בִּשְׁבִילֵךְ",
+    "3ms": "בִּשְׁבִילוֹ",
+    "3fs": "בִּשְׁבִילָהּ",
+    "1p": "בִּשְׁבִילֵנוּ",
+    "2mp": "בִּשְׁבִילְכֶם",
+    "2fp": "בִּשְׁבִילְכֶן",
+    "3mp": "בִּשְׁבִילָם",
+    "3fp": "בִּשְׁבִילָן"
+   }
+  },
+  {
+   "id": "etsel",
+   "base": "אֵצֶל",
+   "en": "at (someone's place)",
+   "forms": {
+    "1s": "אֶצְלִי",
+    "2ms": "אֶצְלְךָ",
+    "2fs": "אֶצְלֵךְ",
+    "3ms": "אֶצְלוֹ",
+    "3fs": "אֶצְלָהּ",
+    "1p": "אֶצְלֵנוּ",
+    "2mp": "אֶצְלְכֶם",
+    "2fp": "אֶצְלְכֶן",
+    "3mp": "אֶצְלָם",
+    "3fp": "אֶצְלָן"
+   }
+  }
+ ],
+ "numbers": {
+  "rule": "Hebrew numbers have two sets. One set goes with masculine nouns (three shekels) and one with feminine nouns, and the feminine set is also the one for counting and for telling the time. The surprise: the set with the ending -ah is the masculine one.",
+  "values": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "english": [
+   "one",
+   "two",
+   "three",
+   "four",
+   "five",
+   "six",
+   "seven",
+   "eight",
+   "nine",
+   "ten"
+  ],
+  "ordinalEnglish": [
+   "first",
+   "second",
+   "third",
+   "fourth",
+   "fifth",
+   "sixth",
+   "seventh",
+   "eighth",
+   "ninth",
+   "tenth"
+  ],
+  "cardinal": {
+   "m": [
+    "אֶחָד",
+    "שְׁנַיִם",
+    "שְׁלוֹשָׁה",
+    "אַרְבָּעָה",
+    "חֲמִשָּׁה",
+    "שִׁשָּׁה",
+    "שִׁבְעָה",
+    "שְׁמוֹנָה",
+    "תִּשְׁעָה",
+    "עֲשָׂרָה"
+   ],
+   "f": [
+    "אַחַת",
+    "שְׁתַּיִם",
+    "שָׁלוֹשׁ",
+    "אַרְבַּע",
+    "חָמֵשׁ",
+    "שֵׁשׁ",
+    "שֶׁבַע",
+    "שְׁמוֹנֶה",
+    "תֵּשַׁע",
+    "עֶשֶׂר"
+   ]
+  },
+  "ordinal": {
+   "m": [
+    "רִאשׁוֹן",
+    "שֵׁנִי",
+    "שְׁלִישִׁי",
+    "רְבִיעִי",
+    "חֲמִישִׁי",
+    "שִׁשִּׁי",
+    "שְׁבִיעִי",
+    "שְׁמִינִי",
+    "תְּשִׁיעִי",
+    "עֲשִׂירִי"
+   ],
+   "f": [
+    "רִאשׁוֹנָה",
+    "שְׁנִיָּה",
+    "שְׁלִישִׁית",
+    "רְבִיעִית",
+    "חֲמִישִׁית",
+    "שִׁשִּׁית",
+    "שְׁבִיעִית",
+    "שְׁמִינִית",
+    "תְּשִׁיעִית",
+    "עֲשִׂירִית"
+   ]
+  },
+  "time": {
+   "note": "The hour takes the feminine set.",
+   "tplHe": "הַשָּׁעָה {f}",
+   "tplEn": "It is {n} o'clock"
+  },
+  "money": {
+   "from": 3,
+   "note": "Shekel is masculine, so prices take the masculine set. (One shekel and two shekels are said differently, so this line starts at three.)",
+   "tplHe": "{m} שְׁקָלִים",
+   "tplEn": "{n} shekels"
+  },
+  "teens": {
+   "values": [
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+   ],
+   "english": [
+    "eleven",
+    "twelve",
+    "thirteen",
+    "fourteen",
+    "fifteen",
+    "sixteen",
+    "seventeen",
+    "eighteen",
+    "nineteen"
+   ],
+   "m": [
+    "אַחַד עָשָׂר",
+    "שְׁנֵים עָשָׂר",
+    "שְׁלוֹשָׁה עָשָׂר",
+    "אַרְבָּעָה עָשָׂר",
+    "חֲמִשָּׁה עָשָׂר",
+    "שִׁשָּׁה עָשָׂר",
+    "שִׁבְעָה עָשָׂר",
+    "שְׁמוֹנָה עָשָׂר",
+    "תִּשְׁעָה עָשָׂר"
+   ],
+   "f": [
+    "אַחַת עֶשְׂרֵה",
+    "שְׁתֵּים עֶשְׂרֵה",
+    "שְׁלוֹשׁ עֶשְׂרֵה",
+    "אַרְבַּע עֶשְׂרֵה",
+    "חֲמֵשׁ עֶשְׂרֵה",
+    "שֵׁשׁ עֶשְׂרֵה",
+    "שְׁבַע עֶשְׂרֵה",
+    "שְׁמוֹנֶה עֶשְׂרֵה",
+    "תְּשַׁע עֶשְׂרֵה"
+   ],
+   "note": "Eleven to nineteen are two words: the unit, then a word for ten. With a masculine noun the ten word is asar; with a feminine noun it is esreh and the unit is the short one."
+  },
+  "tens": {
+   "values": [
+    20,
+    30,
+    40,
+    50,
+    60,
+    70,
+    80,
+    90,
+    100,
+    1000
+   ],
+   "english": [
+    "twenty",
+    "thirty",
+    "forty",
+    "fifty",
+    "sixty",
+    "seventy",
+    "eighty",
+    "ninety",
+    "a hundred",
+    "a thousand"
+   ],
+   "he": [
+    "עֶשְׂרִים",
+    "שְׁלוֹשִׁים",
+    "אַרְבָּעִים",
+    "חֲמִשִּׁים",
+    "שִׁשִּׁים",
+    "שִׁבְעִים",
+    "שְׁמוֹנִים",
+    "תִּשְׁעִים",
+    "מֵאָה",
+    "אֶלֶף"
+   ],
+   "note": "The tens have one form for both kinds of noun."
+  },
+  "and": {
+   "note": "From twenty-one on: the ten, then \"and\" joined to the unit. Only the unit changes with the noun. The joined \"and\" is said ve-, u- or va- depending on the sound after it, so each joined form is listed whole.",
+   "m": [
+    "וְאֶחָד",
+    "וּשְׁנַיִם",
+    "וּשְׁלוֹשָׁה",
+    "וְאַרְבָּעָה",
+    "וַחֲמִשָּׁה",
+    "וְשִׁשָּׁה",
+    "וְשִׁבְעָה",
+    "וּשְׁמוֹנָה",
+    "וְתִשְׁעָה"
+   ],
+   "f": [
+    "וְאַחַת",
+    "וּשְׁתַּיִם",
+    "וְשָׁלוֹשׁ",
+    "וְאַרְבַּע",
+    "וְחָמֵשׁ",
+    "וְשֵׁשׁ",
+    "וְשֶׁבַע",
+    "וּשְׁמוֹנֶה",
+    "וְתֵשַׁע"
+   ],
+   "samples": [
+    21,
+    32,
+    43,
+    54,
+    65,
+    76,
+    87,
+    98
+   ]
+  },
+  "dates": {
+   "note": "A date is the day number from the masculine set, then \"in\" joined to the month. The first six days of the week are \"day\" plus first, second and so on; the seventh has its own name.",
+   "days": [
+    {
+     "en": "Sunday",
+     "he": "יוֹם רִאשׁוֹן"
+    },
+    {
+     "en": "Monday",
+     "he": "יוֹם שֵׁנִי"
+    },
+    {
+     "en": "Tuesday",
+     "he": "יוֹם שְׁלִישִׁי"
+    },
+    {
+     "en": "Wednesday",
+     "he": "יוֹם רְבִיעִי"
+    },
+    {
+     "en": "Thursday",
+     "he": "יוֹם חֲמִישִׁי"
+    },
+    {
+     "en": "Friday",
+     "he": "יוֹם שִׁשִּׁי"
+    },
+    {
+     "en": "Saturday",
+     "he": "שַׁבָּת"
+    }
+   ],
+   "months": [
+    {
+     "en": "January",
+     "he": "יָנוּאָר",
+     "in": "בְּיָנוּאָר"
+    },
+    {
+     "en": "February",
+     "he": "פֶבְּרוּאָר",
+     "in": "בְּפֶבְּרוּאָר"
+    },
+    {
+     "en": "March",
+     "he": "מֶרְץ",
+     "in": "בְּמֶרְץ"
+    },
+    {
+     "en": "April",
+     "he": "אַפְּרִיל",
+     "in": "בְּאַפְּרִיל"
+    },
+    {
+     "en": "May",
+     "he": "מַאי",
+     "in": "בְּמַאי"
+    },
+    {
+     "en": "June",
+     "he": "יוּנִי",
+     "in": "בְּיוּנִי"
+    },
+    {
+     "en": "July",
+     "he": "יוּלִי",
+     "in": "בְּיוּלִי"
+    },
+    {
+     "en": "August",
+     "he": "אוֹגוּסְט",
+     "in": "בְּאוֹגוּסְט"
+    },
+    {
+     "en": "September",
+     "he": "סֶפְּטֶמְבֶּר",
+     "in": "בְּסֶפְּטֶמְבֶּר"
+    },
+    {
+     "en": "October",
+     "he": "אוֹקְטוֹבֶּר",
+     "in": "בְּאוֹקְטוֹבֶּר"
+    },
+    {
+     "en": "November",
+     "he": "נוֹבֶמְבֶּר",
+     "in": "בְּנוֹבֶמְבֶּר"
+    },
+    {
+     "en": "December",
+     "he": "דֵּצֶמְבֶּר",
+     "in": "בְּדֵצֶמְבֶּר"
+    }
+   ],
+   "samples": [
+    [
+     1,
+     0
+    ],
+    [
+     14,
+     1
+    ],
+    [
+     8,
+     2
+    ],
+    [
+     23,
+     3
+    ],
+    [
+     5,
+     4
+    ],
+    [
+     30,
+     5
+    ],
+    [
+     4,
+     6
+    ],
+    [
+     19,
+     7
+    ],
+    [
+     11,
+     8
+    ],
+    [
+     27,
+     9
+    ],
+    [
+     2,
+     10
+    ],
+    [
+     31,
+     11
+    ]
+   ]
+  }
+ },
+ "questions": {
+  "words": [
+   {
+    "he": "מִי",
+    "en": "who"
+   },
+   {
+    "he": "מָה",
+    "en": "what"
+   },
+   {
+    "he": "אֵיפֹה",
+    "en": "where"
+   },
+   {
+    "he": "מָתַי",
+    "en": "when"
+   },
+   {
+    "he": "לָמָּה",
+    "en": "why"
+   },
+   {
+    "he": "אֵיךְ",
+    "en": "how"
+   },
+   {
+    "he": "כַּמָּה",
+    "en": "how much, how many"
+   },
+   {
+    "he": "לְאָן",
+    "en": "where to"
+   }
+  ],
+  "pairs": [
+   {
+    "word": "אֵיפֹה",
+    "q": "אֵיפֹה הַסֵּפֶר?",
+    "qEn": "Where is the book?",
+    "a": "הַסֵּפֶר עַל הַשֻּׁלְחָן.",
+    "aEn": "The book is on the table."
+   },
+   {
+    "word": "מָה",
+    "q": "מָה זֶה?",
+    "qEn": "What is this?",
+    "a": "זֶה סֵפֶר.",
+    "aEn": "This is a book."
+   },
+   {
+    "word": "מִי",
+    "q": "מִי זֹאת?",
+    "qEn": "Who is this?",
+    "a": "זֹאת נֹעָה.",
+    "aEn": "This is Noa."
+   },
+   {
+    "word": "מָתַי",
+    "q": "מָתַי הַשִּׁעוּר?",
+    "qEn": "When is the lesson?",
+    "a": "הַשִּׁעוּר בְּיוֹם שֵׁנִי.",
+    "aEn": "The lesson is on Monday."
+   },
+   {
+    "word": "כַּמָּה",
+    "q": "כַּמָּה זֶה עוֹלֶה?",
+    "qEn": "How much does this cost?",
+    "a": "זֶה עוֹלֶה עֲשָׂרָה שְׁקָלִים.",
+    "aEn": "It costs ten shekels."
+   },
+   {
+    "word": "לְאָן",
+    "q": "לְאָן אַתָּה נוֹסֵעַ?",
+    "qEn": "Where are you going (by car or bus)?",
+    "a": "אֲנִי נוֹסֵעַ לִירוּשָׁלַיִם.",
+    "aEn": "I am going to Jerusalem."
+   },
+   {
+    "word": "לָמָּה",
+    "q": "לָמָּה אַתָּה הוֹלֵךְ?",
+    "qEn": "Why are you leaving?",
+    "a": "כִּי אֲנִי עָיֵף.",
+    "aEn": "Because I am tired."
+   },
+   {
+    "word": "אֵיךְ",
+    "q": "אֵיךְ אַתָּה נוֹסֵעַ?",
+    "qEn": "How are you getting there?",
+    "a": "בָּאוֹטוֹבּוּס.",
+    "aEn": "By bus."
+   }
+  ]
+ },
+ "existence": {
+  "rule": "יֵשׁ means \"there is\" and אֵין means \"there is not\". Add \"to me\" and they mean \"I have\" and \"I do not have\": Hebrew has no verb for \"have\".",
+  "yes": "יֵשׁ",
+  "no": "אֵין",
+  "things": [
+   {
+    "he": "מַיִם",
+    "en": "water"
+   },
+   {
+    "he": "זְמַן",
+    "en": "time"
+   },
+   {
+    "he": "כֶּסֶף",
+    "en": "money"
+   },
+   {
+    "he": "קָפֶה",
+    "en": "coffee"
+   },
+   {
+    "he": "לֶחֶם",
+    "en": "bread"
+   },
+   {
+    "he": "מָקוֹם",
+    "en": "room, a place"
+   }
+  ]
+ },
+ "agreement": {
+  "rule": "A describing word comes after its noun and copies it: masculine or feminine, one or many. It follows what the noun is, not how the noun's ending looks: עָרִים (cities) ends like a masculine plural but is feminine.",
+  "adjectives": [
+   {
+    "en": "big",
+    "ms": "גָּדוֹל",
+    "fs": "גְּדוֹלָה",
+    "mp": "גְּדוֹלִים",
+    "fp": "גְּדוֹלוֹת",
+    "er": "bigger",
+    "est": "the biggest"
+   },
+   {
+    "en": "small",
+    "ms": "קָטָן",
+    "fs": "קְטַנָּה",
+    "mp": "קְטַנִּים",
+    "fp": "קְטַנּוֹת",
+    "er": "smaller",
+    "est": "the smallest"
+   },
+   {
+    "en": "good",
+    "ms": "טוֹב",
+    "fs": "טוֹבָה",
+    "mp": "טוֹבִים",
+    "fp": "טוֹבוֹת"
+   },
+   {
+    "en": "beautiful",
+    "ms": "יָפֶה",
+    "fs": "יָפָה",
+    "mp": "יָפִים",
+    "fp": "יָפוֹת",
+    "er": "more beautiful",
+    "est": "the most beautiful"
+   },
+   {
+    "en": "new",
+    "ms": "חָדָשׁ",
+    "fs": "חֲדָשָׁה",
+    "mp": "חֲדָשִׁים",
+    "fp": "חֲדָשׁוֹת",
+    "er": "newer",
+    "est": "the newest"
+   },
+   {
+    "en": "old (of things)",
+    "ms": "יָשָׁן",
+    "fs": "יְשָׁנָה",
+    "mp": "יְשָׁנִים",
+    "fp": "יְשָׁנוֹת",
+    "er": "older",
+    "est": "the oldest"
+   },
+   {
+    "en": "hot",
+    "ms": "חַם",
+    "fs": "חַמָּה",
+    "mp": "חַמִּים",
+    "fp": "חַמּוֹת"
+   },
+   {
+    "en": "cold",
+    "ms": "קַר",
+    "fs": "קָרָה",
+    "mp": "קָרִים",
+    "fp": "קָרוֹת"
+   },
+   {
+    "en": "cheap",
+    "ms": "זוֹל",
+    "fs": "זוֹלָה",
+    "mp": "זוֹלִים",
+    "fp": "זוֹלוֹת",
+    "er": "cheaper",
+    "est": "the cheapest"
+   },
+   {
+    "en": "expensive, dear",
+    "ms": "יָקָר",
+    "fs": "יְקָרָה",
+    "mp": "יְקָרִים",
+    "fp": "יְקָרוֹת",
+    "er": "more expensive",
+    "est": "the most expensive"
+   }
+  ],
+  "nouns": [
+   {
+    "en": "book",
+    "gender": "m",
+    "s": "סֵפֶר",
+    "p": "סְפָרִים",
+    "the": "הַסֵּפֶר"
+   },
+   {
+    "en": "house",
+    "gender": "m",
+    "s": "בַּיִת",
+    "p": "בָּתִּים",
+    "the": "הַבַּיִת"
+   },
+   {
+    "en": "room",
+    "gender": "m",
+    "s": "חֶדֶר",
+    "p": "חֲדָרִים",
+    "the": "הַחֶדֶר"
+   },
+   {
+    "en": "table",
+    "gender": "m",
+    "s": "שֻׁלְחָן",
+    "p": "שֻׁלְחָנוֹת",
+    "the": "הַשֻּׁלְחָן"
+   },
+   {
+    "en": "picture",
+    "gender": "f",
+    "s": "תְּמוּנָה",
+    "p": "תְּמוּנוֹת",
+    "the": "הַתְּמוּנָה"
+   },
+   {
+    "en": "flat, apartment",
+    "gender": "f",
+    "s": "דִּירָה",
+    "p": "דִּירוֹת",
+    "the": "הַדִּירָה"
+   },
+   {
+    "en": "city",
+    "gender": "f",
+    "s": "עִיר",
+    "p": "עָרִים",
+    "the": "הָעִיר"
+   },
+   {
+    "en": "cup, glass",
+    "gender": "f",
+    "s": "כּוֹס",
+    "p": "כּוֹסוֹת",
+    "the": "הַכּוֹס"
+   }
+  ]
+ },
+ "comparing": {
+  "rule": "Three small patterns do all the comparing. More than: יוֹתֵר ... מִן. The most: הֲכִי. As ... as: כְּמוֹ. The describing word still copies its noun.",
+  "patterns": [
+   {
+    "id": "more",
+    "tplHe": "{A} יוֹתֵר {adj} מִן {B}",
+    "tplEn": "{a} is {er} than {b}"
+   },
+   {
+    "id": "most",
+    "tplHe": "{A} הֲכִי {adj}",
+    "tplEn": "{a} is {est}"
+   },
+   {
+    "id": "as",
+    "tplHe": "{A} {adj} כְּמוֹ {B}",
+    "tplEn": "{a} is as {q} as {b}"
+   }
+  ],
+  "adjectives": [
+   "big",
+   "small",
+   "new",
+   "old (of things)",
+   "beautiful",
+   "expensive, dear",
+   "cheap"
+  ],
+  "nouns": [
+   "house",
+   "room",
+   "picture",
+   "flat, apartment",
+   "city",
+   "book"
+  ]
+ },
+ "construct": {
+  "rule": "Two nouns side by side make an \"of\" pair: house + book is a school. The first noun often changes its shape; the second never does. Four things can happen to the first noun.",
+  "rules": {
+   "same": "No change: the first noun stays as it is.",
+   "at": "A final -ah becomes -at.",
+   "ei": "A plural -im becomes -ei.",
+   "short": "The vowels shorten."
+  },
+  "pairs": [
+   {
+    "free": "בַּיִת",
+    "pair": "בֵּית סֵפֶר",
+    "en": "school",
+    "lit": "house of book",
+    "rule": "short"
+   },
+   {
+    "free": "בַּיִת",
+    "pair": "בֵּית כְּנֶסֶת",
+    "en": "synagogue",
+    "lit": "house of gathering",
+    "rule": "short"
+   },
+   {
+    "free": "בַּיִת",
+    "pair": "בֵּית חוֹלִים",
+    "en": "hospital",
+    "lit": "house of the sick",
+    "rule": "short"
+   },
+   {
+    "free": "בַּיִת",
+    "pair": "בֵּית קָפֶה",
+    "en": "café",
+    "lit": "house of coffee",
+    "rule": "short"
+   },
+   {
+    "free": "חֶדֶר",
+    "pair": "חֲדַר אֹכֶל",
+    "en": "dining room",
+    "lit": "room of food",
+    "rule": "short"
+   },
+   {
+    "free": "עוּגָה",
+    "pair": "עוּגַת שׁוֹקוֹלָד",
+    "en": "chocolate cake",
+    "lit": "cake of chocolate",
+    "rule": "at"
+   },
+   {
+    "free": "אֲרוּחָה",
+    "pair": "אֲרוּחַת בֹּקֶר",
+    "en": "breakfast",
+    "lit": "meal of morning",
+    "rule": "at"
+   },
+   {
+    "free": "אֲרוּחָה",
+    "pair": "אֲרוּחַת עֶרֶב",
+    "en": "dinner",
+    "lit": "meal of evening",
+    "rule": "at"
+   },
+   {
+    "free": "תַּחֲנָה",
+    "pair": "תַּחֲנַת אוֹטוֹבּוּס",
+    "en": "bus stop",
+    "lit": "station of bus",
+    "rule": "at"
+   },
+   {
+    "free": "תַּחֲנָה",
+    "pair": "תַּחֲנַת רַכֶּבֶת",
+    "en": "train station",
+    "lit": "station of train",
+    "rule": "at"
+   },
+   {
+    "free": "שִׁעוּרִים",
+    "pair": "שִׁעוּרֵי בַּיִת",
+    "en": "homework",
+    "lit": "lessons of home",
+    "rule": "ei"
+   },
+   {
+    "free": "בָּתִּים",
+    "pair": "בָּתֵּי סֵפֶר",
+    "en": "schools",
+    "lit": "houses of book",
+    "rule": "ei"
+   },
+   {
+    "free": "תַּלְמִידִים",
+    "pair": "תַּלְמִידֵי הַכִּתָּה",
+    "en": "the pupils of the class",
+    "lit": "pupils of the class",
+    "rule": "ei"
+   },
+   {
+    "free": "יוֹם",
+    "pair": "יוֹם הֻלֶּדֶת",
+    "en": "birthday",
+    "lit": "day of birth",
+    "rule": "same"
+   },
+   {
+    "free": "גַּן",
+    "pair": "גַּן יְלָדִים",
+    "en": "kindergarten",
+    "lit": "garden of children",
+    "rule": "same"
+   },
+   {
+    "free": "מִיץ",
+    "pair": "מִיץ תַּפּוּזִים",
+    "en": "orange juice",
+    "lit": "juice of oranges",
+    "rule": "same"
+   },
+   {
+    "free": "רֹאשׁ",
+    "pair": "רֹאשׁ הַשָּׁנָה",
+    "en": "Rosh Hashanah, the new year",
+    "lit": "head of the year",
+    "rule": "same"
+   }
+  ]
+ },
+ "homographs": {
+  "note": "Words above whose letters also spell a different dictionary word, so the dictionary check cannot confirm their pointing.",
+  "words": [
+   "שֶׁלּוֹ",
+   "שֶׁלָּהּ",
+   "מִן",
+   "חָמֵשׁ",
+   "שֵׁשׁ",
+   "שֶׁבַע",
+   "שְׁמוֹנֶה",
+   "עֶשֶׂר",
+   "כַּמָּה",
+   "יָפָה",
+   "יְשָׁנָה",
+   "חַמָּה",
+   "חַמּוֹת",
+   "יְקָרָה",
+   "לוֹ",
+   "לָכֶן",
+   "בִּי",
+   "בָּהֶן",
+   "אִתָּהּ",
+   "אִתָּם",
+   "מִמֶּנָּה",
+   "עָלַי",
+   "עָלֶיהָ",
+   "אֵלַיִךְ",
+   "אֵלֶיהָ",
+   "אֶצְלָהּ",
+   "אַחַד",
+   "שְׁנֵים",
+   "עֶשְׂרֵה",
+   "שְׁתֵּים",
+   "שְׁלוֹשׁ",
+   "חֲמֵשׁ",
+   "שְׁבַע",
+   "תְּשַׁע",
+   "יוּנִי"
+  ]
+ }
+}

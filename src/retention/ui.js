@@ -172,6 +172,29 @@ export function monthNode(R) {
   return wrap;
 }
 
+// ---------- login calendar (Home): days the app was opened this civil month, including the gaps ----------
+export function loginNode(R) {
+  const wrap = h('section', { class: 'card ret-login alef-retention', 'aria-labelledby': 'ret-login-h' });
+  let sig = '';
+  const draw = () => {
+    const v = R.loginView(), next = JSON.stringify(v);
+    if (next === sig) return; sig = next;
+    const pads = Array.from({ length: v.weekday0 }, () => h('li', { class: 'is-pad', 'aria-hidden': 'true' }));
+    const nextNeed = v.count >= v.days ? (v.paid.includes('month') ? 'Every day this month is marked.' : '') : v.count >= 14 ? `Open Aleph on every day this month for ${gemsText(v.gemsMonth)}.` : v.count >= 7 ? `${v.count} of 14 days opened. 14 days this month: ${gemsText(v.gems14)}.` : `${v.count} of 7 days opened this month. 7 days: ${gemsText(v.gems7)}.`;
+    setKids(wrap, h('h2', { id: 'ret-login-h' }, 'Days you opened Aleph'),
+      h('p', {}, 'This calendar marks days you opened the app, including the gaps. It is not your streak.'),
+      h('ol', { class: 'ret-login-grid', 'aria-label': 'Days you opened Aleph this month' }, ...pads, ...v.cells.map((c) => {
+        const label = c.state === 'on' || c.state === 'today-on' ? `${c.day}: opened` : c.state === 'today' ? `${c.day}: today, not opened yet` : c.state === 'gap' ? `${c.day}: not opened` : `${c.day}: coming up`;
+        return h('li', { class: 'is-' + c.state, 'aria-label': label }, h('span', { 'aria-hidden': 'true' }, String(c.n)));
+      })),
+      h('p', { class: 'muted' }, nextNeed));
+  };
+  const on = () => { if (wrap.isConnected) { try { draw(); } catch { /* keep the last drawing */ } } else document.removeEventListener('alef:retention', on); };
+  document.addEventListener('alef:retention', on);
+  draw();
+  return wrap;
+}
+
 // ---------- out of hearts ----------
 const hm = (ms) => { const m = Math.ceil(ms / 60000); return `${Math.floor(m / 60)} h ${m % 60} min`; };
 /** The block shown instead of "Next lesson" when hearts are gone, and as the gate on a new lesson. */
@@ -207,7 +230,7 @@ export function routeShown(R, g = globalThis, gate = false) {
     const head = main.querySelector('.stack > header') || main.querySelector('header');
     const ring = goalRingNode(R);
     if (head?.parentNode) head.parentNode.insertBefore(ring, head.nextSibling); else main.prepend(ring);
-    const quests = questsNode(R); ring.after(quests); quests.after(monthNode(R));
+    const quests = questsNode(R); ring.after(quests); const month = monthNode(R); quests.after(month); month.after(loginNode(R));
     const back = comebackNode(R); ring.before(back);
     const recap = recapNode(R); if (recap) ring.before(recap); // welcome first, then last week, then today's goal
     // Once a day, in the evening, Rimon looks a little worried about an unfinished streak day. Never on a rest day.

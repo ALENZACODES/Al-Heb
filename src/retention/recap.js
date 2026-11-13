@@ -7,6 +7,7 @@ import { dayKey, addDaysISO, weekIdOf, weekdayOf, inShabbatWindow } from './cloc
 import { HEARTS } from './hearts.js';
 import { tierOf } from './leagues.js';
 import { lastSessionStart } from './notify.js';
+import { earn } from './gems.js';
 
 export const RECAP = Object.freeze({ comebackDays: 7 });
 const DAY = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
@@ -57,3 +58,62 @@ export function welcomeBack(rec, now = Date.now()) {
 }
 /** Is today the day the learner came back? (Home shows the welcome card that day, until a lesson is finished.) */
 export const isComebackDay = (rec, now = Date.now()) => rec.comebackDay === dayKey(now);
+
+// ---------- Daily login calendar (T7): a monthly grid of days the app was opened, including the gaps. Not the streak. ----------
+export const LOGIN = Object.freeze({ gems7: 5, gems14: 10, gemsMonth: 20 });
+const civilMonth = (iso) => {
+  const y = +iso.slice(0, 4), m = +iso.slice(5, 7);
+  const days = new Date(y, m, 0).getDate();
+  const key = `${y}-${String(m).padStart(2, '0')}`;
+  return { key, y, m, days, start: `${key}-01` };
+};
+const monthDays = (iso) => {
+  const { key, days } = civilMonth(iso);
+  return Array.from({ length: days }, (_, i) => `${key}-${String(i + 1).padStart(2, '0')}`);
+};
+
+/** Mark that the app was opened today. Pays 7-day, 14-day, and full-month gems once each civil month. Gaps stay empty. */
+export function markLogin(rec, now = Date.now()) {
+  const today = dayKey(now);
+  const have = rec.loginDays || [];
+  if (have.includes(today) && rec.lastBootDay === today) {
+    if (!rec.loginJustPaid) return rec;
+    const r = clone(rec); delete r.loginJustPaid; return r;
+  }
+  const r = clone(rec);
+  r.lastBootDay = today;
+  r.loginDays = [...new Set([...have, today])].filter((d) => typeof d === 'string' && /^\d{4}-\d\d-\d\d$/.test(d)).sort().slice(-400);
+  const { key, days } = civilMonth(today);
+  const inMonth = monthDays(today).filter((d) => r.loginDays.includes(d));
+  const paid = new Set((r.loginPaid && r.loginPaid[key]) || []);
+  const add = [];
+  if (inMonth.length >= 7 && !paid.has('d7')) add.push('d7');
+  if (inMonth.length >= 14 && !paid.has('d14')) add.push('d14');
+  if (inMonth.length >= days && !paid.has('month')) add.push('month');
+  if (!add.length) { r.loginPaid = { ...(r.loginPaid || {}), [key]: [...paid] }; delete r.loginJustPaid; return r; }
+  const gems = (add.includes('d7') ? LOGIN.gems7 : 0) + (add.includes('d14') ? LOGIN.gems14 : 0) + (add.includes('month') ? LOGIN.gemsMonth : 0);
+  const why = add.includes('month') ? 'login-month' : add.includes('d14') ? 'login14' : 'login7';
+  let out = earn(r, gems, why, now);
+  out.loginDays = r.loginDays; out.lastBootDay = today;
+  out.loginPaid = { ...(r.loginPaid || {}), [key]: [...paid, ...add] };
+  out.loginJustPaid = add;
+  return out;
+}
+
+/** What the login calendar card draws for the civil month of `now`. */
+export function loginView(rec, now = Date.now()) {
+  const today = dayKey(now);
+  const { key, days, start } = civilMonth(today);
+  const have = new Set(rec.loginDays || []);
+  const weekday0 = weekdayOf(start); // 0=Sun
+  const cells = monthDays(today).map((d) => {
+    const n = +d.slice(8, 10);
+    let state = 'ahead';
+    if (d === today) state = have.has(d) ? 'today-on' : 'today';
+    else if (d < today) state = have.has(d) ? 'on' : 'gap';
+    return { day: d, n, state };
+  });
+  const count = cells.filter((c) => c.state === 'on' || c.state === 'today-on').length;
+  const paid = (rec.loginPaid && rec.loginPaid[key]) || [];
+  return { key, days, count, weekday0, cells, paid, gems7: LOGIN.gems7, gems14: LOGIN.gems14, gemsMonth: LOGIN.gemsMonth };
+}

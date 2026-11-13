@@ -9,7 +9,7 @@ export const PRICES = Object.freeze({ freeze: 200, hearts: 350, repairPerDay: 0,
 export const EARN = Object.freeze({ goal: 10, accuracy: 2, first: 50, promote: 50, rank1: 100, top3: 100 });
 export const WHY = Object.freeze({
   goal: 'Daily goal', accuracy: 'Sharp lesson', first: 'First lesson', promote: 'Moved up a league', rank1: 'First place', top3: 'Top three',
-  quest: 'Daily quest', chest: 'All three quests', month: 'Month challenge',
+  quest: 'Daily quest', chest: 'All three quests', month: 'Month challenge', login7: '7 days opened this month', login14: '14 days opened this month', 'login-month': 'Every day opened this month',
   'buy-freeze': 'Streak freeze', 'buy-hearts': 'Hearts refill', 'buy-repair': 'Streak repair',
   'buy-shield': 'Streak shield', 'buy-theme': 'Shop theme', 'buy-outfit': 'Rimon outfit',
   'buy-audio': 'Audio pack', 'buy-game-level': 'Bonus arcade level',

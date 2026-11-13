@@ -16,7 +16,7 @@ import { restNow } from './quiet.js';
 import { showRimon } from './rimon.js';
 import { questProgress, questView, questsOn } from './quests.js';
 import { monthProgress, monthView } from './month.js';
-import { welcomeBack, isComebackDay, recapDue, recapSeen, lastWeek } from './recap.js';
+import { welcomeBack, isComebackDay, recapDue, recapSeen, lastWeek, markLogin, loginView } from './recap.js';
 import { read as readCounts, xpToday, lessonsFinished, lessonsFinishedToday, weekDays } from '../lib/counts.js';
 
 const STREAK_KEY = 'streak';
@@ -64,7 +64,7 @@ export function retention(ctx, g = globalThis) {
     const s = settle(out.ret, t);
     if (out.streak !== raw && out.streak) { muteStreakSub = true; try { store.set(STREAK_KEY, out.streak); } finally { muteStreakSub = false; } }
     const wb = welcomeBack(refillByTime(s.rec, t), t); // a week or more away: full hearts, and Home offers a small first step
-    update(() => wb.rec);
+    update(() => markLogin(wb.rec, t));
     lastCount = projectStreak(streakRaw(), t).count;
     quietOpt.mode = normalizeRecord(streakRaw()).mode;
     return { events: wb.back ? [...out.events, 'welcome_back'] : out.events, result: s.result };
@@ -206,6 +206,7 @@ export function retention(ctx, g = globalThis) {
     rearm: () => scheduler?.arm(), quietOpt: () => quietOpt, say, ctx, revealed,
     comeback: () => { const r = get(); return isComebackDay(r, now()) && todayXp(r, now()) === 0 ? { days: r.comebackAway || 7 } : null; },
     recap: () => (recapDue(get(), now(), { calm: calm() }) ? lastWeek(get(), now()) : null), recapSeen: () => update((r) => recapSeen(r, now())),
+    loginView: () => loginView(get(), now()),
     monthView: () => monthView(get(), now(), { calm: calm() }),
     questView: () => questView(get(), now(), { calm: calm(), mode: quietOpt.mode, live: live() }), questsShown: () => questsOn(get(), { calm: calm() }),
     /** A lesson the learner has been let into (so a later redraw of the same page never gates it). */
@@ -243,7 +244,7 @@ export async function armRetention(ctx, g = globalThis) {
     const away = daysAway(rec, t, R.quietOpt().mode), rest = restNow(t, R.quietOpt());
     const pick = first.events.includes('freeze_used') ? 'freeze_used' : first.events.includes('streak_broken') ? 'streak_broken' : rest === 'shabbat' ? 'shabbat' : rest === 'yomtov' ? 'chag'
       : away >= 3 || first.events.includes('welcome_back') ? 'welcome_back' : new Date(t).getDay() === 0 ? 'shavua_tov' : null;
-    R.update((r) => { r.lastBootDay = today; return r; });
+    R.update((r) => markLogin(r, t));
     if (pick) g.setTimeout(safe(() => showRimon(pick)), 2600);
   })();
   R.armNotifications();

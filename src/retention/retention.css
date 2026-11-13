@@ -121,3 +121,11 @@
   .ret-confetti { display: none; }
 }
 :root[data-calm] .ret-confetti { display: none; }
+
+.ret-login h2 { margin: 0 0 .4rem; font-size: 1.1rem; }
+.ret-login-grid { list-style: none; display: grid; grid-template-columns: repeat(7, 1fr); gap: .25rem; margin: .5rem 0 .7rem; padding: 0; }
+.ret-login-grid li { display: grid; place-items: center; min-block-size: 2.2rem; border: 1px solid var(--border); border-radius: 4px; font-variant-numeric: tabular-nums; font-size: .8rem; }
+.ret-login-grid .is-on, .ret-login-grid .is-today-on { background: #2f8f5b; color: #fff; border-color: #2f8f5b; }
+.ret-login-grid .is-today, .ret-login-grid .is-today-on { outline: 2px solid #c9a227; outline-offset: 1px; }
+.ret-login-grid .is-gap { background: transparent; }
+.ret-login-grid .is-ahead, .ret-login-grid .is-pad { border-color: transparent; color: var(--muted); }

@@ -437,6 +437,34 @@
       "auditRef": "CONTENT-LICENCE-AUDIT.md#ts-fsrs-weights"
     },
     {
+      "id": "dicta-language-tools",
+      "name": "Dicta language tools: NeoDictaBERT-bilingual-embed, DictaBERT-HeQ, DictaBERT-joint",
+      "group": "software",
+      "usedFor": "Used while the search index for Ask the Torah is built, not inside the app: entry vectors and the Hebrew and English words attached to each entry (NeoDictaBERT-bilingual-embed). DictaBERT-HeQ (finds the words to quote in a cited verse) and DictaBERT-joint (a grammar check on draft sentences) are used by the same build; nothing made with those two is in the app yet",
+      "licence": "CC BY 4.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "commercialUse": "yes-with-conditions",
+      "shareAlike": false,
+      "attributionText": "Search index built with NeoDictaBERT-bilingual-embed by Dicta, the Israel Center for Text Analysis (dicta.org.il), CC BY 4.0. Build checks use DictaBERT-HeQ and DictaBERT-joint by Dicta, CC BY 4.0.",
+      "perItemCredit": false,
+      "status": "partly-verified",
+      "auditRef": "CONTENT-LICENCE-AUDIT.md#dicta-language-tools"
+    },
+    {
+      "id": "opus-mt-tc-big-he-en",
+      "name": "OPUS-MT tc-big-he-en (Helsinki-NLP, University of Helsinki)",
+      "group": "software",
+      "usedFor": "Used while content is built, not inside the app: translates draft Hebrew sentences back to English as one of the checks before a sentence may be added. Nothing it wrote is in the app",
+      "licence": "CC BY 4.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "commercialUse": "yes-with-conditions",
+      "shareAlike": false,
+      "attributionText": "Build checks use OPUS-MT tc-big-he-en by Helsinki-NLP (Tiedemann and Thottingal, OPUS-MT), CC BY 4.0.",
+      "perItemCredit": false,
+      "status": "partly-verified",
+      "auditRef": "CONTENT-LICENCE-AUDIT.md#opus-mt-tc-big-he-en"
+    },
+    {
       "id": "reference-only-sites",
       "name": "Pealim, Chabad.org, Berman Jewish Policy Archive (cited by URL only)",
       "group": "traditions",

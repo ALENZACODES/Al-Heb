@@ -164,7 +164,9 @@ export function monthNode(R) {
     const pct = Math.round(v.fraction * 100);
     setKids(wrap, h('h2', { id: 'ret-month-h' }, v.title, v.he ? ' ' : null, v.he ? h('span', { lang: 'he', dir: 'rtl', class: 'he' }, v.he) : null),
       h('div', { class: 'ret-month-bar', role: 'progressbar', 'aria-label': v.title, 'aria-valuemin': '0', 'aria-valuemax': String(v.target), 'aria-valuenow': String(v.xp), 'aria-valuetext': `${v.xp} of ${v.target} XP` }, h('span', { style: `--w:${pct}` })),
-      h('p', {}, v.done ? `Done: ${v.target} XP this month. +${gemsText(50)}.` : `${v.xp} of ${v.target} XP. ${v.daysLeft === 0 ? 'Last day of the month.' : `${count(v.daysLeft, 'day')} left.`}`));
+      h('p', {}, v.done ? `Done: ${v.target} XP this month. +${gemsText(50)}.` : `${v.xp} of ${v.target} XP. ${v.daysLeft === 0 ? 'Last day of the month.' : `${count(v.daysLeft, 'day')} left.`}`),
+      v.season ? h('p', { class: 'ret-season-text' }, v.season.text) : null,
+      v.season?.items?.length ? h('ul', { class: 'ret-season-list', 'aria-label': 'Here this season' }, ...v.season.items.map((it) => h('li', {}, h('a', { href: it.href }, it.title)))) : null);
   };
   const on = () => { if (wrap.isConnected) { try { draw(); } catch { /* keep the last drawing */ } } else document.removeEventListener('alef:retention', on); };
   document.addEventListener('alef:retention', on);

@@ -108,6 +108,16 @@
 .ret-how li { margin-block: .35rem; }
 .ret-shop-status:focus { outline: none; }
 
+.ret-expedition[hidden] { display: none; }
+.ret-expedition h2 { margin: 0 0 .4rem; font-size: 1.1rem; }
+.ret-expedition p { margin: .4rem 0 0; }
+.ret-exp-map { list-style: none; display: flex; gap: .35rem; margin: .5rem 0 .7rem; padding: 0; }
+.ret-exp-map li { flex: 1; display: flex; flex-direction: column; align-items: center; gap: .25rem; font-size: .8rem; }
+.ret-exp-dot { inline-size: 1.15rem; block-size: 1.15rem; border-radius: 50%; border: 2px solid var(--border); background: transparent; }
+.ret-exp-map .is-done .ret-exp-dot { background: #2f8f5b; border-color: #2f8f5b; }
+.ret-exp-map .is-rest .ret-exp-dot { background: #c9a227; border-color: #c9a227; }
+.ret-exp-map .is-today .ret-exp-dot { outline: 2px solid #c9a227; outline-offset: 2px; }
+.ret-exp-day { color: var(--muted); }
 .ret-month[hidden] { display: none; }
 .ret-month h2, .ret-numbers h2 { margin: 0 0 .4rem; font-size: 1.1rem; }
 .ret-month p { margin: .4rem 0 0; }

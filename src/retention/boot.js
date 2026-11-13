@@ -7,14 +7,14 @@ import { calmOn, streakVisible } from '../shell/comfort.js';
 import { load, save, RETENTION_KEY } from './state.js';
 import { dayKey, deviceZone, localAt, addDaysISO } from './clock.js';
 import { applyRollover, completeLessonDay, afterDayCompleted, streakStatus, weekDots, freezeNoteSeen, freezeNoteShown as markFreezeNote } from './streak.js';
-import { award, lessonPayout, todayXp, XP, lessonAward, unlockedBy } from './xp.js';
-import { applyShopLook } from './gems.js';
+import { award, lessonPayout, todayXp, XP, lessonAward, unlockedBy, grantMysteries, MYSTERIES } from './xp.js';
+import { applyShopLook, grantEarnedOutfits } from './gems.js';
 import { heartsOn, loseHeart, practiceCard, refillByTime, startLesson, canStartLesson, isLessonHash, heartCount, HEARTS } from './hearts.js';
 import { settle, leagueOn, leagueView } from './leagues.js';
 import { logSession, createScheduler, readShown, recordSent, registerPeriodicSync, daysAway } from './notify.js';
 import { restNow } from './quiet.js';
 import { showRimon } from './rimon.js';
-import { questProgress, questView, questsOn } from './quests.js';
+import { questProgress, questView, questsOn, expeditionProgress, expeditionView, expeditionOn } from './quests.js';
 import { monthProgress, monthView } from './month.js';
 import { welcomeBack, isComebackDay, recapDue, recapSeen, lastWeek } from './recap.js';
 import { read as readCounts, xpToday, lessonsFinished, lessonsFinishedToday, weekDays } from '../lib/counts.js';
@@ -34,7 +34,13 @@ export function retention(ctx, g = globalThis) {
   // lessonsFinished never reads lower than the lessons Learn and Progress count (src/lib/counts.js), so the unlock gates and
   // every "lessons finished" line agree.
   const synced = (r) => { const n = lessonsFinished(readCounts(store).completed); return n > r.lessonsFinished ? { ...r, lessonsFinished: n } : r; };
-  const get = () => refillByTime(synced(load(store, now())), now());
+  const streakCount = () => { try { return projectStreak(normalizeRecord(streakRaw() ?? {}), now()).count || 0; } catch { return 0; } };
+  const withEarned = (r) => {
+    const g = grantEarnedOutfits(r, { lessons: r.lessonsFinished, streak: streakCount() });
+    if (g === r) return r;
+    try { return save(store, () => g, now()); } catch { return g; }
+  };
+  const get = () => withEarned(refillByTime(synced(load(store, now())), now()));
   const update = (fn) => { const r = save(store, fn, now()); emit(); return r; };
   const streakRaw = () => { try { return store.get(STREAK_KEY) ?? null; } catch { return null; } };
   const calm = () => calmOn(ctx);
@@ -54,7 +60,10 @@ export function retention(ctx, g = globalThis) {
     const cur2 = load(store, t), mo = monthProgress(cur2, t, { calm: calm() }); // the month's challenge is checked wherever XP can change
     if (mo.rec !== cur2) update(() => mo.rec);
     if (mo.completed) { say(`${monthView(mo.rec, t).title} complete! +50 gems.`); later(() => showRimon('streak_milestone'), 2200); }
-    return { ...out, month: mo.completed ? monthView(mo.rec, t).title : null, gems: out.gems + (mo.completed ? 50 : 0) };
+    const cur3 = load(store, t), ex = expeditionProgress(cur3, amounts, t, { calm: calm(), mode: quietOpt.mode });
+    if (ex.rec !== cur3) update(() => ex.rec);
+    if (ex.done) { say(`${ex.title} complete! +${ex.gems} gems.`); later(() => showRimon('streak_milestone'), 2800); }
+    return { ...out, month: mo.completed ? monthView(mo.rec, t).title : null, expedition: ex.done ? ex.title : null, gems: out.gems + (mo.completed ? 50 : 0) + (ex.gems || 0) };
   }
   /** Has the learner earned anything yet? Until then the top bar and the Home cards stay out of the way of a first visit. */
   const revealed = () => { const r = load(store, now()); return r.xp.total > 0 || r.lessonsFinished > 0 || r.gems.balance > 0 || projectStreak(streakRaw(), now()).count > 0; };
@@ -95,8 +104,12 @@ export function retention(ctx, g = globalThis) {
     lastTouch = t; lastCount = st.count; combo.run = 0; combo.max = 0; if (!detail.quick) lessonHash = null;
     scheduler?.arm();
     const q = questStep({ xp: pay.xp, lesson: partial ? 0 : 1, sharp: !partial && Number(detail.accuracy) >= 0.9 ? 1 : 0, combo: bestRun });
-    const lg = leagueOn(saved, { calm: calm() }) && saved.league.joined ? leagueView(load(store, t), t) : null;
-    return { month: q.month, unlocked: unlockedBy(saved, lessonsBefore, saved.lessonsFinished), league: lg && !lg.closed ? { rank: lg.you.rank, tier: lg.tier.en, toPromote: lg.toPromote } : null,
+    const afterPay = load(store, t);
+    const found = grantMysteries(afterPay, { perfect: afterPay.perfectLessons || 0, books: readCounts(store).booksFinished }, t);
+    if (found.rec !== afterPay) { update(() => found.rec); for (const id of found.opened) { const item = MYSTERIES.find((x) => x.id === id); if (item) say(`You found ${item.title}. +${found.gems / found.opened.length} gems.`); } }
+    const saved2 = load(store, t);
+    const lg = leagueOn(saved2, { calm: calm() }) && saved2.league.joined ? leagueView(saved2, t) : null;
+    return { month: q.month, unlocked: unlockedBy(saved2, lessonsBefore, saved2.lessonsFinished), league: lg && !lg.closed ? { rank: lg.you.rank, tier: lg.tier.en, toPromote: lg.toPromote } : null,
       quests: q.done, chest: q.chest, xp: pay.xp, parts: pay.parts, gems: pay.gems + st.gems + q.gems, goalCrossed: pay.goalCrossed, first: pay.first, todayBefore, todayAfter: todayXp(saved, t), goal: saved.goal,
       streak: { count: st.count, grew: st.grew, milestone: st.milestone }, heartsEmpty: heartsOn(saved, { calm: calm() }) && heartCount(saved, t) <= 0, calm: calm() };
   }
@@ -208,6 +221,7 @@ export function retention(ctx, g = globalThis) {
     recap: () => (recapDue(get(), now(), { calm: calm() }) ? lastWeek(get(), now()) : null), recapSeen: () => update((r) => recapSeen(r, now())),
     monthView: () => monthView(get(), now(), { calm: calm() }),
     questView: () => questView(get(), now(), { calm: calm(), mode: quietOpt.mode, live: live() }), questsShown: () => questsOn(get(), { calm: calm() }),
+    expeditionView: () => expeditionView(get(), now(), { calm: calm(), mode: quietOpt.mode }), expeditionShown: () => expeditionOn(get(), { calm: calm() }),
     /** A lesson the learner has been let into (so a later redraw of the same page never gates it). */
     admit: (hash) => { lessonHash = hash; } };
   return api;

@@ -4,7 +4,7 @@
 // Translation: the sign word list, then the app phrasebook, then (only if a line is still untranslated) the app dictionary
 // word for word. The English is then drawn over the Hebrew on the levelled photo.
 import { deskew } from '../photo/preprocess.js';
-import { regionsFromBoxes, chooseAlignment, fitText, boxColours, readerImage, wordForWord, boxOnOriginal, findOccluders, besideBar, lineHadNoise, lineForPack, signCase, LINE_HEIGHT } from './camera-model.js';
+import { regionsFromBoxes, chooseAlignment, fitText, boxColours, readerImage, wordForWord, boxOnOriginal, findOccluders, besideBar, lineHadNoise, translateMissingLines, LINE_HEIGHT } from './camera-model.js';
 import { isHebrew } from '../photo/hebrew.js';
 
 const FONT_STACK = '"Alef", "Heebo", system-ui, -apple-system, "Segoe UI", sans-serif';
@@ -213,19 +213,10 @@ export async function translateOnDevice(photo, { glossary, dictionaryLoader, tra
     }
     if (!r.en) r.partial = true;
   }
-  // Lines the word list does not hold go to the Hebrew to English language pack when it is on this device (the same pack the
-  // Talk screen uses). Only a line that was read cleanly and with confidence is sent: a guess built on a misread line would look
+  // Lines the word list does not hold go to the lesson sentences (data/talk/tm) and then to the Hebrew to English language pack when
+  // it is on this device (the same pack the Talk screen uses; the high-quality one when that is there). Only a line that was read cleanly and with confidence is sent: a guess built on a misread line would look
   // just as fluent as a right one. A held line, a partly read line and a line behind a bar are never sent.
-  let packUsed = 0;
-  if (translator) for (const r of regions) {
-    if (r.held || r.en || r.partial || r.occluded) continue;
-    const line = lineForPack(r.he, r.conf);
-    if (!line) continue;
-    try {
-      const en = signCase(await translator(line));
-      if (en) { Object.assign(r, { en, translationSource: 'language-pack' }); packUsed++; }
-    } catch { /* the pack could not answer: the dictionary below still may */ }
-  }
+  const packUsed = translator ? await translateMissingLines(regions, translator) : 0;
   let dictionary = null;
   if (dictionaryLoader && regions.some((r) => !r.held && !r.en)) {
     try { dictionary = await dictionaryLoader(); } catch { dictionary = null; }

@@ -74,6 +74,8 @@ test('sync: fetches the pinned commit from the raw file host only, checks every 
   const serve = (table) => { const urls = []; const f = async (url) => { urls.push(url); const k = url.replace(`https://raw.githubusercontent.com/${REPO}/${ref}/`, ''); return k in table ? new Response(table[k]) : new Response('', { status: 404 }); }; f.urls = urls; return f; };
   const table = { 'packages/loader/dist/dist.json': listing(entries), 'packages/loader/dist/index.js': body['index.js'], 'packages/loader/dist/cache.js': body['cache.js'], 'models.manifest.json': JSON.stringify(manifest) };
   const dir = scratch();
+  // this test serves the loader alone: a scratch copy that pins only the loader
+  { const only = JSON.parse(readFileSync(join(dir, LOCK), 'utf8')); for (const name of Object.keys(only.packages)) if (name !== 'loader') { rmSync(join(dir, only.packages[name].path), { recursive: true, force: true }); delete only.packages[name]; } writeFileSync(join(dir, LOCK), JSON.stringify(only, null, 1) + '\n'); }
   const f = serve(table);
   const next = await sync({ root: dir, ref, fetchImpl: f });
   assert.equal(next.ref, ref); assert.equal(next.packages.loader.version, '0.2.0');

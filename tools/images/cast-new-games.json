@@ -1,5 +1,5 @@
 {
- "note": "Owner, 2026-11-12 9:18 PM ET: every remaining game whose tile or in-game backdrop had no cast (scenery only, or a generic/shared picture) gets its own picture of Ari, Noa and/or Rimon on that game's approved art. Never flipped, including Hebrew letters. Metadata stripped with exiftool. Rimon stays gender-neutral. The 17 older pages (bg + cast) are built with: CFG=tools/images/cast-new-games.json python3 tools/images/cast-onto-envs.py (inventory-only lane rows are skipped). The 47 lane games are built with: ONLY=<ids> python3 tools/images/lane-envs.py from the matching items in tools/images/lane-envs.json.",
+ "note": "Owner, 2026-11-12 9:18 PM ET: every remaining game whose tile or in-game backdrop had no cast (scenery only, or a generic/shared picture) gets its own picture of Ari, Noa and/or Rimon on that game's approved art. Never flipped, including Hebrew letters. Metadata stripped with exiftool. Rimon stays gender-neutral. The 17 older pages (bg + cast) are built with: CFG=tools/images/cast-new-games.json python3 tools/images/cast-onto-envs.py (inventory-only lane rows are skipped). The 47 lane games are built with: ONLY=<ids> python3 tools/images/lane-envs.py from the matching items in tools/images/lane-envs.json. Level 1-2 arcade games whose picture had Ari or Noa but no Rimon (lettertwins, lookalikes, letterdrop, vowelstack, wordbuilder, meltdown, bingoletters) get Rimon added on the same picture (bg arcade:<id>).",
  "games": {
   "wordfinder": {
    "bg": "GAME_wordfinder_env",
@@ -771,6 +771,90 @@
     "CHAR_ari_speak",
     "VOC_numbers_07",
     "rimon-090-beside-candles"
+   ]
+  },
+  "lettertwins": {
+   "bg": "arcade:lettertwins",
+   "y_align": 0.5,
+   "who": "Ari, Rimon, Noa",
+   "cast": [
+    {
+     "id": "rimon-138-flip-tile",
+     "cx": 0.5,
+     "h": 300
+    }
+   ]
+  },
+  "lookalikes": {
+   "bg": "arcade:lookalikes",
+   "y_align": 0.5,
+   "who": "Noa, Rimon",
+   "cast": [
+    {
+     "id": "rimon-052-compare-tiles",
+     "cx": 0.12,
+     "h": 330
+    }
+   ]
+  },
+  "letterdrop": {
+   "bg": "arcade:letterdrop",
+   "y_align": 0.5,
+   "who": "Ari, Rimon",
+   "cast": [
+    {
+     "id": "rimon-020-hop-arms-up",
+     "cx": 0.88,
+     "h": 330
+    }
+   ]
+  },
+  "vowelstack": {
+   "bg": "arcade:vowelstack",
+   "y_align": 0.5,
+   "who": "Ari, Rimon",
+   "cast": [
+    {
+     "id": "rimon-171-block-tower-three",
+     "cx": 0.86,
+     "h": 330
+    }
+   ]
+  },
+  "wordbuilder": {
+   "bg": "arcade:wordbuilder",
+   "y_align": 0.5,
+   "who": "Noa, Rimon",
+   "cast": [
+    {
+     "id": "rimon-009-tiles-together",
+     "cx": 0.62,
+     "h": 320
+    }
+   ]
+  },
+  "meltdown": {
+   "bg": "arcade:meltdown",
+   "y_align": 0.5,
+   "who": "Noa, Rimon",
+   "cast": [
+    {
+     "id": "rimon-063-brow-wipe-relief",
+     "cx": 0.56,
+     "h": 320
+    }
+   ]
+  },
+  "bingoletters": {
+   "bg": "arcade:bingoletters",
+   "y_align": 0.5,
+   "who": "Ari, Rimon",
+   "cast": [
+    {
+     "id": "rimon-144-bell-ear",
+     "cx": 0.62,
+     "h": 320
+    }
    ]
   }
  }

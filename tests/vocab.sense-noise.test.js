@@ -103,12 +103,12 @@ test('prior March, garlic, cucumber, sandek, blue, and the 370 earlier correctio
   assert.equal(byW.get('hd91e4a26').en, 'cucumber');
   assert.equal(byW.get('h1782f762').en, 'sandek (the person who holds the baby at a circumcision)');
   const corr = read('data/vocab/corrections.json');
-  // Later rounds append their own corrections (S-01 learner-text gate, 12 Nov: 8); this lane's 410 stay first and unchanged.
-  const later = corr.corrections.filter((c) => String(c.reason).startsWith('learner-text gate'));
+  // Later rounds append their own corrections (S-01 learner-text gate, 12 Nov: 8; the example sweep, 12 Nov: 1,444 held examples); this lane's 410 stay first and unchanged.
+  const later = corr.corrections.filter((c) => String(c.reason).startsWith('learner-text gate') || String(c.reason).includes('(example sweep, 12 Nov 2026)'));
   const prior = corr.corrections.filter((c) => !String(c.reason).includes('sense-noise lane') && !later.includes(c));
   assert.equal(prior.length, 373);
   assert.equal(corr.corrections.length - later.length, 410);
-  assert.equal(later.length, 8);
+  assert.equal(later.length, 1452);
 });
 
 test('disposition sheet counts 279 rows, 34 applied, 245 held, and matches the built glosses', () => {
@@ -183,5 +183,5 @@ test('a second apply of the correction chain is a no-op', async () => {
   const report = applyCorrections(ROOT, { dry: true });
   assert.equal(report.conflicts.length, 0);
   assert.equal(report.applied.length, 0);
-  assert.equal(report.already.length, 418); // 410 + the 8 learner-text gate corrections (S-01, 12 Nov)
+  assert.equal(report.already.length, 1862); // 410 + the 8 learner-text gate corrections (S-01, 12 Nov) + 1,444 examples held by the example sweep (12 Nov)
 });

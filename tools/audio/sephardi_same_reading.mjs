@@ -5,7 +5,7 @@
 // caption says "Sephardi voice, the same reading as Israeli". Not copied: rows held for a divine-name or wording decision
 // (fill_list.mjs heldReason), rows whose Israeli clip is in data/lab/clip-holds.json or missing, and any row whose two readings differ.
 // What this does not claim: a Sephardi reader; the guttural ayin and chet of a traditional Sephardi reading are not in the clip.
-//   node tools/audio/sephardi_same_reading.mjs [--dry]
+//   node tools/audio/sephardi_same_reading.mjs [--dry] [--letters]
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -17,12 +17,16 @@ import { PLAYS_ISRAELI } from '../../src/audio/player.js';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '..');
 
-export function sameReading({ root = ROOT, dry = false, now = new Date().toISOString() } = {}) {
+// replaceKinds: kinds whose existing Sephardi clip, made from an English respelling, is replaced too. Used for 'letter' on 13 Nov 2026:
+// the respelled letter clips spelled the name out or said another word (Qof as "kay oh ef", Yod as "yad", the H sound as "aitch").
+export function sameReading({ root = ROOT, dry = false, now = new Date().toISOString(), replaceKinds = [] } = {}) {
+  const replace = new Set(replaceKinds);
   const holds = new Set(JSON.parse(fs.readFileSync(path.join(root, 'data/lab/clip-holds.json'), 'utf8')).paths);
   const skipped = { held: 0, israeliHeld: 0, noIsraeliClip: 0, readingsDiffer: 0 };
   const marks = new Map();
   for (const e of loadManifestFull(root)) {
-    if (e.tradition !== 'sephardi' || e.status !== PLAYS_ISRAELI) continue;
+    if (e.tradition !== 'sephardi') continue;
+    if (e.status !== PLAYS_ISRAELI && !(replace.has(e.kind) && e.source === 'tts-respelled-israeli-voice')) continue;
     const src = e.plays || e.path.replace('/sephardi/', '/israeli/');
     if (heldReason(e)) { skipped.held++; continue; }
     if (holds.has(src)) { skipped.israeliHeld++; continue; }
@@ -45,4 +49,4 @@ export function sameReading({ root = ROOT, dry = false, now = new Date().toISOSt
   return { copied: marks.size, marked: res.marked.length, skipped, notFound: res.notFound.length };
 }
 
-if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) console.log(JSON.stringify(sameReading({ dry: process.argv.includes('--dry') })));
+if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) console.log(JSON.stringify(sameReading({ dry: process.argv.includes('--dry'), replaceKinds: process.argv.includes('--letters') ? ['letter'] : [] })));

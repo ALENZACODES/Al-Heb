@@ -163,7 +163,10 @@ test('C-01/C-05: an accent clip made for a row that played the Israeli clip ship
       // 2 of 3 reviewers, or (owner decision B, 12 Nov 2026) for a letter, vowel or syllable the sound reviewer alone
       if (r.rule === 'sound-only-short') assert.ok(['letter', 'vowel', 'syllable'].includes(r.path.split('/')[3]) && r.review.weak.length === 0, r.path);
       else assert.ok(r.reviewersFailing <= 1, r.path);
-      assert.equal(e.status, 'synthetic-unreviewed', r.path); assert.equal(e.source, 'tts-respelled-israeli-voice', r.path);
+      // 13 Nov 2026 letter audit: a passed Sephardi letter clip was later replaced by a copy of the Israeli clip (same reading), because
+      // the respelled clip said an English letter name or another word (docs/letters/LETTER-AUDIT-2026-11-13.md).
+      const replacedLetter = e.source === 'israeli-clip-same-reading' && e.tradition === 'sephardi' && e.kind === 'letter';
+      assert.equal(e.status, 'synthetic-unreviewed', r.path); assert.ok(e.source === 'tts-respelled-israeli-voice' || replacedLetter, r.path);
       assert.ok(existsSync(join(ROOT, r.path)) && existsSync(join(ROOT, `${r.path}.meta.json`)), r.path);
     } else if (e.source === 'israeli-clip-same-reading') {
       // owner decision A: a held Sephardi clip's row may carry a copy of the Israeli clip instead (same reading in this app)

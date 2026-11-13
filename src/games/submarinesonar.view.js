@@ -1,6 +1,7 @@
 // Game 7 — audio to exact pointed reading; recorded clip is mandatory for scoring.
 import { h, heSpan } from '../shell/ui.js';
 import { createSession, shuffled, loadGameImages, imgOf, hasRecordedClip, playRecordedClip, resultsCard, envNode, GAME_ENV, roundStatus, placeBoard } from './engine.js';
+import { castEnvNode } from './cast-env.js';
 import { sfx } from '../audio/sfx.js';
 import { loadJson } from '../grammar/loader.js';
 export const STORE_KEY = 'games.submarinesonar.v1';
@@ -56,7 +57,7 @@ export function mount(root,ctx) {
       heard=await playRecordedClip(ctx,'word',target.id);
       if(alive){status.textContent=heard?'Choose the spelling you heard.':'No recording available; scoring is disabled.'; if(heard) { gateButtons.forEach(b => b.disabled = false); } }
     }},'Play sonar word');
-    placeBoard(board,envNode(h,R,GAME_ENV.sonar),h('div',{class:'game-sonar-stage'},h('p',{},'Same unpointed spelling; choose by sound.'),
+    placeBoard(board,castEnvNode(h, R, 'submarinesonar', GAME_ENV.sonar),h('div',{class:'game-sonar-stage'},h('p',{},'Same unpointed spelling; choose by sound.'),
       heSpan(target.unpointed,'he game-he'),listen,h('div',{class:'game-choices game-rtl-grid'},...gateButtons)));
   }
   Promise.all([loadJson('data/vocab/index.json'),loadGameImages(ctx)]).then(([data,images])=>{
@@ -65,7 +66,7 @@ export function mount(root,ctx) {
       .map(g=>g.filter(w=>hasRecordedClip(ctx,'word',w.id))).filter(g=>g.length>=2);
     if(!groups.length){
       status.textContent='No exact pair of recorded pointed spellings. Sonar rounds are disabled.';
-      placeBoard(board, envNode(h, R, GAME_ENV.sonar));
+      placeBoard(board, castEnvNode(h, R, 'submarinesonar', GAME_ENV.sonar));
       return;
     }
     void paint();

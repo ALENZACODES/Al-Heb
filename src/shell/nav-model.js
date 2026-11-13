@@ -45,7 +45,7 @@ export const SECTION_ROUTES = {
   read: ['readhub', 'read', 'text', 'torahread', 'torahreadsec', 'torahreader', 'ask', 'service', 'shabbat' /* lane 5 */, 'prayer-practice' /* siddur-speaking lane */, 'trope', 'timedread', 'morning', 'scan', 'camera', 'books', 'book', 'listen-shelf', 'synagogues', 'synagogue'],
   speak: ['speakhub', 'speak', 'talk', 'listen', 'listen-practice', 'songs', 'compare', 'tradition-quiz', 'read-my-way', 'traditions', 'traditions-guide', 'traditions-hear', 'record-compare', 'speak-studio' /* siddur-speaking lane */],
   progress: ['progress', 'awards', 'placement', 'calendar', 'day', 'festivals', 'festival', 'reminders', 'share', 'classsummary', 'syllabus', 'time-budget', 'daily'],
-  more: ['search', 'settings', 'accessibility', 'help', 'workbook', 'light', 'install', 'offline', 'about', 'how', 'credits', 'privacy', 'terms', 'welcome'],
+  more: ['search', 'settings', 'accessibility', 'help', 'workbook', 'light', 'install', 'offline', 'about', 'data-health', 'how', 'credits', 'privacy', 'terms', 'welcome'],
 };
 
 // lane g2: words by topic, hub-only (PREVIEW_HIDDEN)
@@ -65,6 +65,7 @@ export const ROUTE_SECTION = Object.fromEntries(Object.entries(SECTION_ROUTES).f
 
 /** Parameterised routes are reached through a static parent page (a list, or a link from it). */
 export const PARENT = {
+  'data-health': 'about',
   letter: 'letters', loanword: 'loanwords', spotit: 'learn', dialogue: 'dialogues', phrase: 'phrases', fadeline: 'fade', israelsec: 'israel', israelunit: 'israelunits',
   classtrackweek: 'classtrack', classtrackmode: 'classtrack', festival: 'festivals', 'rules-page': 'rules', intermediatelesson: 'intermediate', practicalunit: 'practical', practicalpage: 'practical',
   grammartopic: 'grammar', labgame: 'lab', libraryarticle: 'library', text: 'read', torahreadsec: 'torahread', book: 'books', day: 'calendar', synagogue: 'synagogues',
@@ -80,7 +81,7 @@ const MENU_HIDDEN = new Set(['welcome']);
  * "More ways to learn" so a new learner meets fewer half-finished screens. They still open by direct link, still carry the Preview
  * banner and are still found by search (labelled Preview). Only preview routes may be listed here (tests/v0.test.js).
  */
-export const PREVIEW_HIDDEN = new Set(['scheduler', 'known-words', 'time-budget', 'classsummary', 'niqquddial', 'dottile', 'nikkud-fade', 'record-compare',
+export const PREVIEW_HIDDEN = new Set(['data-health', 'scheduler', 'known-words', 'time-budget', 'classsummary', 'niqquddial', 'dottile', 'nikkud-fade', 'record-compare',
   'israelunits',
   // The individual games stay out of the More sheet (the Games hub is the one listed door); search still finds each by name.
   'tugowar', 'vowelcatcher', 'pinball', 'prefixblast', 'memorypalace', 'shabbatrush', 'typewriter', 'petclinic', 'trainswitch', 'weatherstudio',

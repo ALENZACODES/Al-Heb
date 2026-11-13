@@ -15,7 +15,7 @@ const ISO = /^\d{4}-\d\d-\d\d$/;
 const iso = (v) => (typeof v === 'string' && ISO.test(v) ? v : null);
 const arr = (v, cap, ok = () => true) => (Array.isArray(v) ? v.filter(ok).slice(-cap) : []);
 const tri = (v) => (v === true || v === false ? v : null);
-const SHOP_THEME_IDS = new Set(['sepia', 'dusk']);
+const SHOP_THEME_IDS = new Set(['sepia', 'dusk', 'ink', 'olive', 'type']);
 const SHOP_OUTFIT_IDS = new Set(['scarf', 'ribbon', 'glasses']);
 const SHOP_AUDIO_IDS = new Set(['blessings']);
 const shopIds = (v, allow) => arr(v, 12, (s) => typeof s === 'string' && allow.has(s));

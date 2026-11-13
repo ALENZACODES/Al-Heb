@@ -3,7 +3,7 @@
 // Gems are earned in lessons only. Nothing here costs money.
 import { h, setKids } from './dom.js';
 import { retention } from './boot.js';
-import { CURRENCY, PRICES, gemsText, whyLabel, SHOP_THEMES, SHOP_OUTFITS, SHOP_AUDIO, SHOP_LIMITS, shopState, buyShield, buyUnlock, chooseUnlock, buyGameLevel, applyShopLook } from './gems.js';
+import { CURRENCY, PRICES, gemsText, whyLabel, SHOP_THEMES, SHOP_PROGRESS_THEMES, SHOP_OUTFITS, SHOP_AUDIO, SHOP_LIMITS, shopState, buyShield, buyUnlock, chooseUnlock, buyGameLevel, applyShopLook, themeNeedLine, themeGateOpen, themePrice } from './gems.js';
 import { STREAK, buyFreeze, repairOffer, repairStreak, streakLine } from './streak.js';
 import { HEARTS, refillByGems, nextHeartInMs } from './hearts.js';
 import { setReminders, usualTimeText, pickMessage } from './notify.js';
@@ -91,6 +91,31 @@ export function mount(root, ctx) {
         return [
           item('Streak Shield', `Covers one missed weekday automatically, after your streak freezes. You hold ${shHeld} of ${SHOP_LIMITS.shieldMax}. Shabbat and holidays never need one.`, gemsText(PRICES.shield), shieldBtn),
           catalogBlock('Looks', SHOP_THEMES, 'theme', PRICES.theme),
+          (function unlockLooks() {
+            const progress = { lessons: rec.lessonsFinished, streak: st.count };
+            const rows = SHOP_PROGRESS_THEMES.map((row) => {
+              const owned = shop.themes.includes(row.id);
+              const open = themeGateOpen(row, progress, rec);
+              const price = themePrice(row);
+              const active = shop.themeActive === row.id;
+              let action;
+              if (!owned && !open) action = h('p', { class: 'muted' }, themeNeedLine(row));
+              else if (!owned) action = h('button', { type: 'button', class: 'btn', 'data-k': 'theme-' + row.id, disabled: bal < price, onclick: () => ask(`Spend ${gemsText(price)} on ${row.title}?`, 'Yes, buy it', () => {
+                const out = buyUnlock(R.get(), 'theme', row.id, Date.now(), progress);
+                if (!out.ok) { status.textContent = out.reason === 'locked' ? themeNeedLine(row) : out.reason === 'owned' ? 'You already have this.' : `You need ${gemsText(price)}.`; return; }
+                R.update(() => out.rec); applyShopLook(out.rec); status.textContent = row.title + ' is yours.'; showRimon('hearts_refilled');
+              }) }, bal < price ? `Needs ${gemsText(price)}` : 'Buy');
+              else if (active) action = h('p', { class: 'muted' }, 'This is the one in use.');
+              else action = h('button', { type: 'button', class: 'btn secondary', 'data-k': 'theme-' + row.id, onclick: () => { R.update((r) => chooseUnlock(r, 'theme', row.id)); applyShopLook(R.get()); status.textContent = row.title + ' is on.'; } }, 'Use this one');
+              return h('div', { class: 'ret-shop-row', 'data-shop': 'theme-' + row.id }, h('h3', {}, row.title), h('p', {}, row.text), !owned && open ? h('p', { class: 'ret-price' }, gemsText(price)) : null, action);
+            });
+            const none = shop.themeActive
+              ? h('button', { type: 'button', class: 'btn secondary', 'data-k': 'theme-none', onclick: () => { R.update((r) => chooseUnlock(r, 'theme', null)); applyShopLook(R.get()); status.textContent = 'Back to the usual look.'; } }, 'Use the usual look')
+              : h('p', { class: 'muted' }, 'The usual look is on. High-contrast Settings still win when you need them.');
+            return h('section', { class: 'card ret-item', 'data-shop': 'unlock-looks' }, h('h2', {}, 'Looks you unlock'),
+              h('p', {}, 'These looks open as you learn, then you can buy them with gems. They are a choice, not the high-contrast setting in Settings, which always comes first when it is on.'),
+              ...rows, none);
+          })(),
           catalogBlock('Rimon outfits', SHOP_OUTFITS, 'outfit', PRICES.outfit),
           catalogBlock('Audio packs', SHOP_AUDIO, 'audio', PRICES.audio),
           item('Bonus arcade level', `Opens the next level in arcade games, on top of levels you earn by playing. You hold ${lv} of ${SHOP_LIMITS.gameLevelMax}.`, gemsText(PRICES.gameLevel), gameBtn),

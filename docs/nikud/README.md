@@ -43,21 +43,22 @@ vendored as plain ES modules:
 ```
 assets/vendor/_alef-tools/loader@<version>/   shared pack loader (download, checks, cache, worker host)
 assets/vendor/_alef-tools/nikud@<version>/    marks and sounds; nikud/<unit>.json = marks made ahead of time
-assets/vendor/_alef-tools/nikud.lock.json     the alef-tools commit and every file's size and SHA-256
-src/nikud/vendor.js                           the one file that names those folders (written by the tool)
+data/alef-tools.lock.json                     the alef-tools commit and every vendored file's size and SHA-256
+src/settings/alef-tools.generated.js          package id -> folder (written by the tool)
+src/nikud/vendor.js                           the one file of this lane that names the nikud folder
 ```
 
-To move to another alef-tools commit:
+Both packages come through the shared `tools/alef-tools/sync.mjs`. To move to another alef-tools commit:
 
 ```
-node tools/alef-tools/sync-nikud.mjs --from <alef-tools checkout>
+node tools/alef-tools/sync.mjs --ref <commit> --add nikud --from <alef-tools checkout>
 node tools/build-precache.mjs
 npm test
 ```
 
-`node tools/alef-tools/sync-nikud.mjs --check` fails when a vendored file differs from the lock.
-`sync-nikud.mjs` is a stand-in for the shared `tools/alef-tools/sync.mjs` of the alef-tools loader lane; it
-writes the same folders, so that tool can take over without moving anything.
+`node tools/alef-tools/sync.mjs --check` fails when a vendored file differs from the lock. The pin is currently a commit on
+the alef-tools vowel-marks branch (alef-tools PR 6), which holds the same loader as the earlier pin plus this package; move it to
+the merged commit once that PR is in.
 
 ## Where the packs come from
 

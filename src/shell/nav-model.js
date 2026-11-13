@@ -7,6 +7,7 @@ import { ROUTES } from './router.js'; // lane g1
 
 import { G4_NAMES } from './g4-routes.js'; // lane 4 (g4)
 import { PLATFORM_ROUTES } from './platform-routes.js';
+import { WRITING_SECTIONS } from './writing-routes.js'; // writing lane
 import { GB_SECTION, GB_HIDDEN, GB_PARENT } from './gb-routes.js';
 import { COURSE_SECTIONS } from './course-routes.js'; // course lane
 export const SECTIONS = [
@@ -57,6 +58,7 @@ SECTION_ROUTES.learn.push('bridge', 'bridge-sec', 'bridge-text');
 for (const [sec, names] of Object.entries(COURSE_SECTIONS)) SECTION_ROUTES[sec].push(...names); // course lane
 SECTION_ROUTES.read.push('trope-families', 'trope-family', 'trope-aliyah');
 for (const r of PLATFORM_ROUTES) SECTION_ROUTES[r.section].push(r.name); // lane platform (12 Nov)
+for (const [sec, names] of Object.entries(WRITING_SECTIONS)) SECTION_ROUTES[sec].push(...names); // writing lane
 SECTION_ROUTES.learn.push('readlab', 'readlab-tool'); // reading lane (12 Nov): Reading Tools
 SECTION_ROUTES.learn.push(...GB_SECTION('learn')); SECTION_ROUTES.read.push(...GB_SECTION('read'));
 

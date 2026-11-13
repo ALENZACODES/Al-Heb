@@ -509,7 +509,7 @@
     ],
     [
      "src/shell/nav-model.js",
-     12727,
+     12912,
      1
     ],
     [
@@ -574,7 +574,7 @@
     ],
     [
      "src/shell/router.js",
-     48933,
+     49093,
      1
     ],
     [
@@ -585,6 +585,11 @@
     [
      "src/shell/ui.js",
      7210,
+     1
+    ],
+    [
+     "src/shell/writing-routes.js",
+     604,
      1
     ]
    ]

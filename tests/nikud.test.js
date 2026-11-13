@@ -5,7 +5,8 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync, statSync, existsSync } from 'node:fs';
 import { createHash } from 'node:crypto';
-import { verify, PACKAGES } from '../tools/alef-tools/sync-nikud.mjs';
+import { check, LOCK } from '../tools/alef-tools/sync.mjs';
+import { ALEF_TOOLS } from '../src/settings/alef-tools.generated.js';
 import { loader, nikud, NIKUD_FOLDER } from '../src/nikud/vendor.js';
 import { addMarks, wantsMarks, hasPack, PACK_BASES, PACK_NAMES, ORT_BASE, SOURCE_NOTE } from '../src/nikud/service.js';
 import * as copy from '../src/nikud/copy.js';
@@ -53,23 +54,20 @@ function fakeWorker(log, answers = {}) {
 }
 
 // ---- vendoring
-test('the vendored alef-tools files are exactly what the lock pins', () => {
-  const { lock, problems } = verify();
-  assert.deepEqual(problems, []);
-  assert.match(lock.commit, /^[0-9a-f]{40}$/, 'the lock names one alef-tools commit');
-  assert.deepEqual(Object.keys(lock.packages).sort(), [...PACKAGES].sort());
+test('the vendored alef-tools files are what the shared lock pins, and this lane points at the pinned nikud folder', () => {
+  assert.deepEqual(check(), [], 'node tools/alef-tools/sync.mjs --check');
+  const lock = JSON.parse(read(LOCK));
+  assert.match(lock.ref, /^[0-9a-f]{40}$/, 'the lock names one alef-tools commit');
+  assert.equal(ALEF_TOOLS.commit, lock.ref);
+  assert.ok(lock.packages.loader && lock.packages.nikud, 'loader and nikud are both vendored');
   assert.equal(nikud.version, lock.packages.nikud.version);
   assert.equal(loader.VERSION, lock.packages.loader.version);
   assert.ok(NIKUD_FOLDER.endsWith(`/assets/vendor/_alef-tools/nikud@${nikud.version}/`));
-  assert.ok(read('src/nikud/vendor.js').includes(lock.commit));
+  assert.ok(read('src/nikud/vendor.js').includes(`_alef-tools/nikud@${lock.packages.nikud.version}/index.js`), 'vendor.js imports the pinned version');
+  assert.equal(existsSync(new URL('../assets/vendor/_alef-tools/nikud.lock.json', import.meta.url)), false, 'one lock only');
 });
 
-test('each vendored package matches its own dist.json, and the nikud package has the shape the loader expects', () => {
-  for (const name of PACKAGES) {
-    const dir = new URL(`../assets/vendor/_alef-tools/${name}@${verify().lock.packages[name].version}/`, import.meta.url);
-    const listing = JSON.parse(readFileSync(new URL('dist.json', dir), 'utf8'));
-    for (const f of listing.files) assert.equal(sha(readFileSync(new URL(f.path, dir))), f.sha256, `${name}/${f.path}`);
-  }
+test('the nikud package has the shape the loader expects', () => {
   const p = loader.definePackage(nikud);
   assert.deepEqual([...p.packs], ['nikud', 'phonemes']);
   assert.deepEqual([...PACK_NAMES], ['nikud', 'phonemes']);

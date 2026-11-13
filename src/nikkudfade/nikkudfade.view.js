@@ -4,11 +4,14 @@
  * Tap "Show the points" to reveal; a revealed word is recorded as aided. For look-alike words the learner also picks which sound they read; a wrong pick is recorded as aided. Store key nikkudfade.v1.
  * Whole lines: a second, optional part. The lines are the app's own marked lesson lines, read from the vowel-mark unit file only
  * when the learner asks. Marks are only ever taken away. A line read is not saved and does not move the stage.
- * ctx extras for tests: ctx.nikkudfadeData = {set, schedule}, ctx.nikkudfadeLines = a unit document.
+ * After a line is read, its English from the lesson is shown with the shared Listen button (a recording, the device voice, or
+ * "No audio yet", whichever is true).
+ * ctx extras for tests: ctx.nikkudfadeData = {set, schedule}, ctx.nikkudfadeLines = a unit document, ctx.nikkudfadeLinesEn = {lines}.
  */
 import { el, heText, storeGet, storeSet } from '../curriculum/dom.js';
 import { sourcesLine } from '../shell/sources.js';
-import { loadReadingSet, loadSchedule } from './loader.js';
+import { loadReadingSet, loadSchedule, loadLinesEn } from './loader.js';
+import { audioButton } from '../shell/audio-access.js';
 import { usableLines, wordIndex, fadeLine, pickLines, LINE_UNIT } from './lines.js';
 import { STORE_KEY, STAGES, normalizeState, display, recordRead, setStage, setAuto, pickSession, summary, DEFAULT_SCHEDULE, lessonReached, filterByLesson, soundChoices, gradeSound } from './model.js';
 
@@ -80,7 +83,7 @@ export function mount(root, ctx) {
   }
 
   // ---- whole lines
-  let lines = null, lineQueue = [], lineIdx = 0, lineShown = false, lineDone = false, lineRound = 0;
+  let lines = null, linesEn = {}, lineQueue = [], lineIdx = 0, lineShown = false, lineDone = false, lineRound = 0;
   const lineTitle = () => el('h2', { id: 'nf-lines-title' }, 'Whole Lines');
   function renderLineStart(note) {
     lineBox.replaceChildren(...[lineTitle(), el('p', {}, LINES_LEAD), note ? el('p', { role: 'alert' }, note) : null,
@@ -93,6 +96,8 @@ export function mount(root, ctx) {
       if (!alive) return;
       lines = usableLines(doc);
       if (!lines.length) { lines = null; renderLineStart(LINES_FAILED); return; }
+      try { linesEn = (ctx?.nikkudfadeLinesEn || await loadLinesEn()).lines || {}; } catch { linesEn = {}; }
+      if (!alive) return;
     }
     lineRound += 1; lineQueue = pickLines(lines, { seed: lineRound * 104729 + summary(st).reads, count: 5 }); lineIdx = 0; lineShown = false; lineDone = false;
     renderLine(); say(`Line 1 of ${lineQueue.length}.`);
@@ -112,8 +117,12 @@ export function mount(root, ctx) {
       if (!lineShown && kept < parts.length) nodes.push(btn('Show The Vowel Marks', () => { lineShown = true; renderLine(); say('Vowel marks shown.'); }, { 'aria-label': `Show the vowel marks for line ${lineIdx + 1}` }));
       nodes.push(btn('I Read It', () => { lineDone = true; renderLine(); say('Here is the line with every mark.'); }, { 'aria-label': `I read it, line ${lineIdx + 1}` }),
         btn('Not Yet', () => { lineDone = true; renderLine(); say('Here is the line with every mark.'); }, { 'aria-label': `Not yet, line ${lineIdx + 1}` }));
-    } else nodes.push(btn(lineIdx + 1 < lineQueue.length ? 'Next Line' : 'Finish Lines', () => { lineIdx += 1; lineShown = false; lineDone = false; renderLine(); say(lineIdx < lineQueue.length ? `Line ${lineIdx + 1} of ${lineQueue.length}.` : 'Lines done.'); }));
-    lineBox.replaceChildren(...nodes);
+    } else {
+      if (linesEn[line.he]) nodes.push(el('p', { class: 'nf-meaning' }, `Meaning: ${linesEn[line.he]}`));
+      nodes.push(audioButton(el, ctx, { kind: 'sentence', id: `nf-line-${lineRound}-${lineIdx}`, text: line.he, label: 'Listen', name: `line ${lineIdx + 1}` }));
+      nodes.push(btn(lineIdx + 1 < lineQueue.length ? 'Next Line' : 'Finish Lines', () => { lineIdx += 1; lineShown = false; lineDone = false; renderLine(); say(lineIdx < lineQueue.length ? `Line ${lineIdx + 1} of ${lineQueue.length}.` : 'Lines done.'); }));
+    }
+    lineBox.replaceChildren(...nodes.filter(Boolean));
   }
 
   function renderDone() {

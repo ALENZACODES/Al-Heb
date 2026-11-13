@@ -88,7 +88,8 @@ Two practice pages use this work. Neither fetches anything until the learner pre
 - **Vowel-mark fading (`#/nikkud-fade`), Whole Lines.** `src/nikkudfade/lines.js` picks 3 to 8 word lines from the `lessons` unit
   file and fades them to the learner's stage. Only lines with source `checked` or `book` are used, so every mark shown is one the
   lesson text already had; lines whose marks were added by the offline build are left out. The page still only removes marks. A
-  line read is not saved and does not move the stage.
+  line read is not saved and does not move the stage. After a line is read the page shows its English, copied from the lesson
+  item with the same Hebrew by `tools/nikkudfade/lines.mjs` into `data/nikkudfade/lines-en.json`, and the shared Listen button.
 - **Word Trace (`#/words/trace`), Trace Your Own Word.** A typed word is looked up in the word list first. A word typed with its
   own marks is traced as typed. A bare word outside the list is given marks by the vowel mark pack, and only when that pack is
   already on the device (the page links to Settings otherwise; it never starts a download). Such a word carries a note that its

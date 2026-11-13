@@ -19,3 +19,4 @@ function loadJson(rel) {
 export const loadReadingSet = () => loadJson('data/nikkudfade/reading-set.json');
 export const loadSchedule = () => loadJson('data/nikkudfade/schedule.json');
 export const loadHomographs = () => loadJson('data/nikkudfade/homographs.json');
+export const loadLinesEn = () => loadJson('data/nikkudfade/lines-en.json');

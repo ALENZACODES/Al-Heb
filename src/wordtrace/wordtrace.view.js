@@ -201,7 +201,7 @@ export function mount(root, ctx = {}) {
     return svc.addMarks(text);
   }
   function ownBox() {
-    const input = h('input', { type: 'text', id: 'wt-own', lang: 'he', dir: 'rtl', inputmode: 'text', autocomplete: 'off', autocapitalize: 'off', spellcheck: 'false', maxlength: '40', 'data-act': 'own-input', style: 'min-block-size:48px;font-size:1.4rem' });
+    const input = h('input', { type: 'text', id: 'wt-own', lang: 'he', dir: 'rtl', inputmode: 'text', autocomplete: 'off', autocapitalize: 'off', spellcheck: 'false', maxlength: '40', 'data-act': 'own-input', style: 'min-block-size:48px;font-size:1.4rem', onkeydown: (e) => { if (e.key === 'Enter') { e.preventDefault(); go(); } } });
     const note = h('p', { role: 'status', 'aria-live': 'polite', 'data-role': 'own-note' });
     const more = h('p', { 'data-role': 'own-more' });
     const tell = (msg, pack) => { note.textContent = msg; more.textContent = ''; if (pack) more.appendChild(h('a', { href: '#/settings', style: 'display:inline-flex;align-items:center;min-block-size:48px;min-inline-size:48px' }, t('wt.ownSettings', 'Vowel Mark Packs In Settings'))); };

@@ -11,6 +11,7 @@ const set = rd('data/nikkudfade/reading-set.json');
 const sched = rd('data/nikkudfade/schedule.json');
 const unit = rd(`assets/vendor/_alef-tools/nikud@0.1.0/nikud/${L.LINE_UNIT}.json`);
 const lines = L.usableLines(unit);
+const linesEn = rd('data/nikkudfade/lines-en.json');
 const NAME = 'יהוה';
 
 test('usable lines: only the app\'s own marked lines, 3 to 8 words, every word marked, never the Name', () => {
@@ -71,7 +72,7 @@ test('view: lines load only on the button, show the stage, reveal, and save noth
   const V = await import('../src/nikkudfade/nikkudfade.view.js');
   const root = new N('main'); const store = memStore();
   store.m[M.STORE_KEY] = { stage: 3, auto: false, words: {}, recent: [] };
-  const un = V.mount(root, { store, nikkudfadeData: { set: { items: set.items.slice(0, 5) }, schedule: sched }, nikkudfadeLines: unit });
+  const un = V.mount(root, { store, nikkudfadeData: { set: { items: set.items.slice(0, 5) }, schedule: sched }, nikkudfadeLines: unit, nikkudfadeLinesEn: linesEn });
   await tick();
   assert.match(root.textContent, /Whole Lines/);
   assert.equal(root.queryAll('.nf-line').length, 0, 'no line before the button');
@@ -85,7 +86,10 @@ test('view: lines load only on the button, show the stage, reveal, and save noth
   const full = root.queryAll('.nf-line')[0].textContent;
   assert.ok(M.hasPoints(full)); assert.equal(M.stripPoints(full), shown);
   assert.ok(lines.some((l) => l.he === full), 'the revealed line is a stored line, unchanged');
+  assert.equal(root.queryAll('.nf-meaning').length, 0, 'no English before the line is read');
   await btn(root, /^I Read It/).click(); await tick();
+  if (linesEn.lines[full]) assert.equal(root.queryAll('.nf-meaning')[0].textContent, `Meaning: ${linesEn.lines[full]}`);
+  assert.ok(root.all((n) => /Listen|No audio yet|device voice/.test(n.textContent)).length, 'the shared listen control is there');
   await btn(root, /^Next Line/).click(); await tick();
   assert.match(root.textContent, /Line 2 of 5/);
   assert.equal(JSON.stringify(store.m[M.STORE_KEY]), before, 'nothing saved for lines');
@@ -101,4 +105,13 @@ test('view: a unit file with no usable line gives a plain message and leaves the
   assert.match(root.textContent, /could not be loaded/);
   assert.ok(btn(root, /^I read it/), 'word round still there');
   un();
+});
+
+test('English for the lines: the file matches its tool, covers most lines, and each entry is a usable line', async () => {
+  const { build } = await import('../tools/nikkudfade/lines.mjs');
+  assert.deepEqual(linesEn, JSON.parse(JSON.stringify(build())), 'run node tools/nikkudfade/lines.mjs');
+  const have = new Set(lines.map((l) => l.he));
+  for (const [he, en] of Object.entries(linesEn.lines)) { assert.ok(have.has(he), he); assert.ok(en && !/[\u05d0-\u05ea]/.test(en) === true || en.length > 0); }
+  assert.equal(linesEn.of, lines.length);
+  assert.ok(linesEn.count >= 300 && linesEn.count <= linesEn.of, `${linesEn.count} of ${linesEn.of}`);
 });

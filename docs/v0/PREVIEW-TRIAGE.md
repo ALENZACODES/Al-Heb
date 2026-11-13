@@ -37,6 +37,7 @@ decision, so the More sheet stays short and the first session stays coherent (we
 | `placement` | keep | Linked from the welcome screen for learners who can already read. |
 | `reminders` | keep | Study reminders. |
 | `typing` | keep | Typing practice. |
+| `write` | keep | Writing: the daily journal, typed Hebrew answers, sentence rewriting. |
 | `festivals` | keep | Calendar content. |
 | `listen` | keep | Needs audio; useful once recordings exist. |
 | `trope` | keep | Names of the marks only; no audio claims. |

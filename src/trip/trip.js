@@ -130,3 +130,40 @@ export function checkVisit(visit, done) {
   ];
   return { points: checks.filter((c) => c.ok).length, of: checks.length, checks };
 }
+
+// ---- the bus and train board -------------------------------------------------------------------------------------------------------
+const pad = (n) => String(n).padStart(2, '0');
+/**
+ * A departures board and a trip to catch. Every Hebrew word on it is stored: the nouns for bus and train, the place names,
+ * and the two lines that say a bus or a train is late. The right pick is the first service of the right kind to the right
+ * place that is not late.
+ * @param {any} pack @param {()=>number} [rng]
+ */
+export function newBoard(pack, rng = Math.random) {
+  const places = israelPlaces(pack); const noun = new Map(((pack && pack.nouns) || []).map((n) => [n.en[0], n.he]));
+  const late = { bus: ((pack && pack.phrases) || []).find((p) => p.id === 't-bus-late')?.he || '', train: ((pack && pack.phrases) || []).find((p) => p.id === 't-train-late')?.he || '' };
+  const pick = (xs) => xs[Math.floor(rng() * xs.length)];
+  const kind = rng() < 0.5 ? 'bus' : 'train'; const other = kind === 'bus' ? 'train' : 'bus';
+  const to = pick(places); const rest = places.filter((p) => p.he !== to.he);
+  const start = 6 * 60 + Math.floor(rng() * 12) * 60 + pick([0, 10, 20, 30, 40, 50]);
+  const row = (k, place, minutes, isLate, role) => ({ kind: k, kindHe: noun.get(k), to: place, minutes, time: `${pad(Math.floor(minutes / 60) % 24)}:${pad(minutes % 60)}`, late: isLate, lateHe: isLate ? late[k] : '', role });
+  const rows = [
+    row(kind, to, start, true, 'late'),                       // the right kind and place, but late
+    row(kind, to, start + 20, false, 'right'),                // the one to catch
+    row(kind, to, start + 80, false, 'later'),                // gets there, much later
+    row(other, to, start + 10, false, 'other-kind'),          // right place, wrong kind of ride
+    row(kind, pick(rest), start + 15, false, 'wrong-place'),
+    row(other, pick(rest), start + 30, false, 'wrong-place'),
+  ].sort((a, b) => a.minutes - b.minutes).map((r, i) => ({ ...r, id: i, bay: 1 + ((i * 3 + Math.floor(start / 10)) % 9) }));
+  return { want: { kind, to }, rows };
+}
+/** What happens when the learner boards a row of the board. @returns {{ok:boolean, text:string}} */
+export function board(b, id) {
+  const r = b.rows.find((x) => x.id === id); if (!r) return { ok: false, text: 'Pick a line of the board.' };
+  const ride = (k) => (k === 'bus' ? 'bus' : 'train');
+  if (r.role === 'right') return { ok: true, text: `Right. The ${ride(r.kind)} to ${r.to.en} leaves at ${r.time}, on time.` };
+  if (r.role === 'late') return { ok: false, text: `That ${ride(r.kind)} goes to ${r.to.en}, but the board says it is late. The next one would have got you there sooner.` };
+  if (r.role === 'later') return { ok: false, text: `You reach ${r.to.en}, an hour later than you needed to. An earlier ${ride(r.kind)} was on time.` };
+  if (r.role === 'other-kind') return { ok: false, text: `That goes to ${r.to.en}, but it is a ${ride(r.kind)}. Your ticket is for the ${ride(b.want.kind)}.` };
+  return { ok: false, text: `You are on the way to ${r.to.en}, not ${b.want.to.en}.` };
+}

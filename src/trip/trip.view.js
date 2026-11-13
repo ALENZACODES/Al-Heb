@@ -7,12 +7,13 @@
 // Tests inject ctx.tripData {pack}, ctx.rng.
 import { el, heText, storeGet, storeSet } from '../curriculum/dom.js';
 import { loadJSON } from '../curriculum/data.js';
-import { TRIP_KEY, STOPS, MAX_DAYS, israelPlaces, linesFor, normalizePlan, addDay, removeDay, toggleStop, planText, menu, line, newVisit, readOrder, heardAs, bill, checkVisit } from './trip.js';
+import { TRIP_KEY, STOPS, MAX_DAYS, israelPlaces, linesFor, normalizePlan, addDay, removeDay, toggleStop, planText, menu, line, newVisit, readOrder, heardAs, bill, checkVisit, newBoard, board } from './trip.js';
 
 export const COPY = Object.freeze({
   title: 'Israel Trip',
   lead: 'Plan your days and take the Hebrew you will need for each stop. Then practise ordering a meal.',
-  planner: 'Trip Planner', restaurant: 'At The Restaurant',
+  planner: 'Trip Planner', restaurant: 'At The Restaurant', station: 'At The Station',
+  stationHint: 'Read the board and press the line you would board.',
   noDays: 'No days yet. Pick a place and add your first day.',
   full: `A plan holds up to ${MAX_DAYS} days.`,
   task: 'You are at a table. Read the menu and order these three things:',
@@ -51,7 +52,7 @@ export async function mount(root, ctx = {}) {
   const panel = el('div', { id: 'tp-panel' }); const tabs = {};
   const show = (name) => { for (const [k, b] of Object.entries(tabs)) b.setAttribute('aria-pressed', String(k === name)); panel.replaceChildren(views[name]()); };
   const bar = el('div', { class: 'tp-tabs', role: 'group', 'aria-label': 'Parts of Israel Trip' });
-  for (const name of ['planner', 'restaurant']) { tabs[name] = el('button', { type: 'button', class: 'btn secondary', 'data-tab': name, 'aria-pressed': 'false', onclick: () => show(name) }, COPY[name]); bar.append(tabs[name]); }
+  for (const name of ['planner', 'restaurant', 'station']) { tabs[name] = el('button', { type: 'button', class: 'btn secondary', 'data-tab': name, 'aria-pressed': 'false', onclick: () => show(name) }, COPY[name]); bar.append(tabs[name]); }
   wrap.append(bar, panel);
 
   function planner() {
@@ -147,7 +148,24 @@ export async function mount(root, ctx = {}) {
     return host;
   }
 
-  const views = { planner, restaurant };
+  function station() {
+    const ROUNDS = 5; let n = 0, right = 0;
+    const host = el('div', { class: 'tp-card' });
+    const round = () => {
+      if (n >= ROUNDS) { host.replaceChildren(el('h2', {}, 'How It Went'), el('p', { id: 'tp-station-score', role: 'status' }, `${right} of ${ROUNDS} right.`), el('button', { type: 'button', class: 'btn', onclick: () => show('station') }, 'Another Five')); return; }
+      const b = newBoard(pack, rng); const out = el('div', { id: 'tp-station-result', role: 'status', 'aria-live': 'polite' }); let done = false;
+      const rows = b.rows.map((r) => el('button', { type: 'button', class: 'btn secondary', 'data-row': String(r.id), 'data-role': r.role, onclick: () => {
+        if (done) return; done = true; const res = board(b, r.id); if (res.ok) right++; n++;
+        out.replaceChildren(el('p', {}, el('strong', {}, res.text)), el('button', { type: 'button', class: 'btn', id: 'tp-station-next', onclick: round }, n >= ROUNDS ? 'See My Score' : 'Next Board'));
+      } }, kids(el('span', {}, `${r.time} `), heText(r.kindHe), ' ', heText(r.to.he), el('span', {}, ` Platform ${r.bay}`), r.late ? heText(r.lateHe) : null)));
+      host.replaceChildren(el('h2', {}, 'Departures'), el('p', { class: 'muted' }, `Board ${n + 1} of ${ROUNDS}`), el('p', { id: 'tp-station-task' }, `You have a ${b.want.kind} ticket to ${b.want.to.en}. Take the first one that is on time.`), el('p', { class: 'muted' }, COPY.stationHint),
+        el('div', { class: 'tp-row', role: 'group', 'aria-label': 'Departures board', style: 'flex-direction:column' }, rows), out);
+    };
+    round();
+    return host;
+  }
+
+  const views = { planner, restaurant, station };
   root.replaceChildren(wrap);
   show(ctx.query && views[ctx.query.part] ? ctx.query.part : 'planner');
   return () => { alive = false; };

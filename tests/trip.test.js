@@ -118,3 +118,39 @@ test('the route: #/trip opens Israel Trip, fetched on demand, with copy in plain
   const { COPY } = await import('../src/trip/trip.view.js');
   for (const s of [...Object.values(COPY), ...STOPS.map((x) => x.label)]) assert.ok(!/\bAI\b|artificial|machine|model|algorithm/i.test(s), s);
 });
+
+test('the departures board: stored Hebrew only, one right line (the first on-time ride of the right kind to the right place), and a reason for every wrong pick', async () => {
+  const { newBoard, board } = await import('../src/trip/trip.js');
+  const places = new Set(israelPlaces(pack).map((p) => p.he));
+  for (let seed = 1; seed <= 200; seed++) {
+    const b = newBoard(pack, seeded(seed));
+    assert.equal(b.rows.length, 6); assert.deepEqual(b.rows.map((r) => r.minutes), [...b.rows.map((r) => r.minutes)].sort((x, y) => x - y), 'in time order');
+    const fits = b.rows.filter((r) => r.kind === b.want.kind && r.to.he === b.want.to.he && !r.late);
+    const first = fits.sort((x, y) => x.minutes - y.minutes)[0];
+    assert.equal(first.role, 'right'); assert.equal(b.rows.filter((r) => board(b, r.id).ok).length, 1); assert.equal(board(b, first.id).ok, true);
+    for (const r of b.rows) {
+      assert.ok(nouns.has(r.kindHe)); assert.ok(places.has(r.to.he)); assert.match(r.time, /^\d\d:\d\d$/); if (r.late) assert.ok(stored.has(r.lateHe));
+      const res = board(b, r.id); assert.ok(res.text.length > 10);
+      if (r.role === 'wrong-place') { assert.notEqual(r.to.he, b.want.to.he); assert.match(res.text, /You are on the way to /); }
+    }
+    assert.ok(b.rows.some((r) => r.late && r.minutes < first.minutes), 'an earlier ride of the same kind is late');
+  }
+  assert.equal(board(newBoard(pack, seeded(3)), 99).ok, false);
+});
+
+test('the screen: five boards are played and scored', async () => {
+  const { createDocument, ev, flush } = await import('./rimon.fakedom.js');
+  const doc = createDocument(); globalThis.document = doc;
+  const { mount } = await import('../src/trip/trip.view.js');
+  const host = doc.createElement('div'); doc.body.append(host);
+  const press = async (n) => { n.dispatchEvent(ev('click')); await flush(5); };
+  const unmount = await mount(host, { tripData: { pack }, rng: seeded(11), query: { part: 'station' } });
+  for (let i = 0; i < 5; i++) {
+    assert.match(host.querySelector('#tp-station-task').textContent, /^You have a (bus|train) ticket to /);
+    await press(host.querySelector(i === 2 ? '[data-role=late]' : '[data-role=right]'));
+    assert.ok(host.querySelector('#tp-station-result').textContent.length > 10);
+    await press(host.querySelector('#tp-station-next'));
+  }
+  assert.equal(host.querySelector('#tp-station-score').textContent, '4 of 5 right.');
+  unmount();
+});

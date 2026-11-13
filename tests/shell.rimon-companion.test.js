@@ -82,10 +82,17 @@ test('one greeting line a day: a retention greeting only waves when the stage al
   const say = { he: 'שַׁבָּת שָׁלוֹם!', en: 'SHABBAT SHALOM!' };
   const fire = (doc) => doc.dispatchEvent(ev('alef:rimon', { action: 'wave', situation: 'shabbat', say, retention: true }));
   let greeted = true;
+  // A fixed Wednesday morning, so the companion's own Shabbat or night greeting (Friday evening, Saturday, late at night)
+  // never lands in the bubble this test reads; it ran red whenever CI's clock was on a Friday night.
+  const RealDate = globalThis.Date;
+  const fixed = new RealDate(2026, 10, 11, 10, 0, 0).getTime();
+  globalThis.Date = class extends RealDate { constructor(...a) { super(...(a.length ? a : [fixed])); } static now() { return fixed; } };
+  try {
   await withCompanion(async ({ doc }) => {
     fire(doc); await flush(5);
     assert.doesNotMatch(doc.querySelector('.rimon-bubble')?.textContent || '', /SHABBAT SHALOM!/, 'no second Shabbat Shalom');
     greeted = false; fire(doc); await flush(5);
     assert.match(doc.querySelector('.rimon-bubble')?.textContent || '', /SHABBAT SHALOM!/, 'said when the stage has not greeted');
   }, { stage: { greetedToday: () => greeted } });
+  } finally { globalThis.Date = RealDate; }
 });

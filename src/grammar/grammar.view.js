@@ -5,7 +5,7 @@
  * ctx extras for tests: ctx.grammarData {words, registry, notes}, ctx.rng, ctx.query.topic (or ctx.params.topic).
  */
 import { el, storeGet, storeSet } from '../curriculum/dom.js';
-import { loadGrammarData } from './loader.js';
+import { loadGrammarData, loadJson } from './loader.js';
 import { STORE_KEY, TOPIC_IDS, DRAFT_NOTICE, buildTopics, buildQuestions, seededRng } from './model.js';
 import { loadFailureText } from '../shell/load-error.js';
 
@@ -66,8 +66,21 @@ export function mount(root, ctx) {
         return el('li', {}, el('a', { class: 'btn gr-link', href: `#/grammar/${id}` },
           el('span', {}, el('strong', {}, t.title), ' - ', t.summary, s?.done ? ` Practiced: best ${s.best} of ${s.total || 6}.` : '')));
       })),
+      labBox(),
     );
     say(''); focusNode(h1);
+  }
+
+  /** Tables And Drills (pronouns, prepositions, numbers, question words and more): code and data load on the press. */
+  function labBox() {
+    const box = el('div', { class: 'gr-lab-box' });
+    const open = el('button', { class: 'btn', type: 'button', onclick: () => {
+      open.disabled = true;
+      Promise.all([import('./tables.view.js'), loadJson('data/grammar/tables.json')]).then(([m, data]) => { if (alive) box.replaceChildren(m.tablesSection(el, ctx, data, { say })); })
+        .catch(() => { open.disabled = false; say('The tables could not be loaded. Check your connection and press again.'); });
+    } }, 'Tables And Drills');
+    box.append(el('p', {}, 'Pronouns, prepositions with their endings, numbers, question words, "there is" and "I have", describing words, comparing, and "of" pairs: each as a table you can hear, with a practice set.'), open);
+    return box;
   }
 
   function renderMissing() {

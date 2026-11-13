@@ -3,7 +3,7 @@
 // Gems are earned in lessons only. Nothing here costs money.
 import { h, setKids } from './dom.js';
 import { retention } from './boot.js';
-import { CURRENCY, PRICES, gemsText, whyLabel, SHOP_THEMES, SHOP_OUTFITS, SHOP_AUDIO, SHOP_LIMITS, shopState, buyShield, buyUnlock, chooseUnlock, buyGameLevel, applyShopLook } from './gems.js';
+import { CURRENCY, PRICES, gemsText, whyLabel, SHOP_THEMES, SHOP_PROGRESS_THEMES, SHOP_OUTFITS, SHOP_AUDIO, SHOP_EARNED_OUTFITS, ALL_OUTFITS, SHOP_LIMITS, shopState, buyShield, buyUnlock, chooseUnlock, buyGameLevel, applyShopLook, themeNeedLine, themeGateOpen, themePrice, earnedNeedLine } from './gems.js';
 import { STREAK, buyFreeze, repairOffer, repairStreak, streakLine } from './streak.js';
 import { HEARTS, refillByGems, nextHeartInMs } from './hearts.js';
 import { setReminders, usualTimeText, pickMessage } from './notify.js';
@@ -91,7 +91,52 @@ export function mount(root, ctx) {
         return [
           item('Streak Shield', `Covers one missed weekday automatically, after your streak freezes. You hold ${shHeld} of ${SHOP_LIMITS.shieldMax}. Shabbat and holidays never need one.`, gemsText(PRICES.shield), shieldBtn),
           catalogBlock('Looks', SHOP_THEMES, 'theme', PRICES.theme),
-          catalogBlock('Rimon outfits', SHOP_OUTFITS, 'outfit', PRICES.outfit),
+          (function unlockLooks() {
+            const progress = { lessons: rec.lessonsFinished, streak: st.count };
+            const rows = SHOP_PROGRESS_THEMES.map((row) => {
+              const owned = shop.themes.includes(row.id);
+              const open = themeGateOpen(row, progress, rec);
+              const price = themePrice(row);
+              const active = shop.themeActive === row.id;
+              let action;
+              if (!owned && !open) action = h('p', { class: 'muted' }, themeNeedLine(row));
+              else if (!owned) action = h('button', { type: 'button', class: 'btn', 'data-k': 'theme-' + row.id, disabled: bal < price, onclick: () => ask(`Spend ${gemsText(price)} on ${row.title}?`, 'Yes, buy it', () => {
+                const out = buyUnlock(R.get(), 'theme', row.id, Date.now(), progress);
+                if (!out.ok) { status.textContent = out.reason === 'locked' ? themeNeedLine(row) : out.reason === 'owned' ? 'You already have this.' : `You need ${gemsText(price)}.`; return; }
+                R.update(() => out.rec); applyShopLook(out.rec); status.textContent = row.title + ' is yours.'; showRimon('hearts_refilled');
+              }) }, bal < price ? `Needs ${gemsText(price)}` : 'Buy');
+              else if (active) action = h('p', { class: 'muted' }, 'This is the one in use.');
+              else action = h('button', { type: 'button', class: 'btn secondary', 'data-k': 'theme-' + row.id, onclick: () => { R.update((r) => chooseUnlock(r, 'theme', row.id)); applyShopLook(R.get()); status.textContent = row.title + ' is on.'; } }, 'Use this one');
+              return h('div', { class: 'ret-shop-row', 'data-shop': 'theme-' + row.id }, h('h3', {}, row.title), h('p', {}, row.text), !owned && open ? h('p', { class: 'ret-price' }, gemsText(price)) : null, action);
+            });
+            const none = shop.themeActive
+              ? h('button', { type: 'button', class: 'btn secondary', 'data-k': 'theme-none', onclick: () => { R.update((r) => chooseUnlock(r, 'theme', null)); applyShopLook(R.get()); status.textContent = 'Back to the usual look.'; } }, 'Use the usual look')
+              : h('p', { class: 'muted' }, 'The usual look is on. High-contrast Settings still win when you need them.');
+            return h('section', { class: 'card ret-item', 'data-shop': 'unlock-looks' }, h('h2', {}, 'Looks you unlock'),
+              h('p', {}, 'These looks open as you learn, then you can buy them with gems. They are a choice, not the high-contrast setting in Settings, which always comes first when it is on.'),
+              ...rows, none);
+          })(),
+          (function closet() {
+            const rows = ALL_OUTFITS.map((row) => {
+              const owned = shop.outfits.includes(row.id);
+              const earned = (shop.earnedOutfits || []).includes(row.id);
+              const bought = SHOP_OUTFITS.some((x) => x.id === row.id);
+              const active = shop.outfitActive === row.id;
+              let action;
+              if (!owned && !bought) action = h('p', { class: 'muted' }, earnedNeedLine(row));
+              else if (!owned) action = buyOrUse('outfit', row, PRICES.outfit);
+              else if (active) action = h('p', { class: 'muted' }, 'Rimon is wearing this.');
+              else action = h('button', { type: 'button', class: 'btn secondary', 'data-k': 'wear-' + row.id, onclick: () => { R.update((r) => chooseUnlock(r, 'outfit', row.id)); applyShopLook(R.get()); status.textContent = row.title + ' is on.'; } }, 'Wear this');
+              const how = owned ? (earned ? 'Earned by learning.' : 'Bought with gems.') : '';
+              return h('div', { class: 'ret-shop-row', 'data-shop': 'outfit-' + row.id }, h('h3', {}, row.title), h('p', {}, row.text, how ? ' ' + how : ''), bought && !owned ? h('p', { class: 'ret-price' }, gemsText(PRICES.outfit)) : null, action);
+            });
+            const none = shop.outfitActive
+              ? h('button', { type: 'button', class: 'btn secondary', 'data-k': 'wear-none', onclick: () => { R.update((r) => chooseUnlock(r, 'outfit', null)); applyShopLook(R.get()); status.textContent = 'Rimon has no extra outfit on.'; } }, 'Wear none')
+              : h('p', { class: 'muted' }, 'Rimon has no extra outfit on.');
+            return h('section', { class: 'card ret-item', 'data-shop': 'rimon-closet' }, h('h2', {}, "Rimon's things"),
+              h('p', {}, 'Outfits and accessories Rimon can wear everywhere in the app. Rimon stays Rimon — no he or she. Nothing here draws Hebrew, and nothing new is added to the first install.'),
+              ...rows, none);
+          })(),
           catalogBlock('Audio packs', SHOP_AUDIO, 'audio', PRICES.audio),
           item('Bonus arcade level', `Opens the next level in arcade games, on top of levels you earn by playing. You hold ${lv} of ${SHOP_LIMITS.gameLevelMax}.`, gemsText(PRICES.gameLevel), gameBtn),
         ];
@@ -109,7 +154,7 @@ export function mount(root, ctx) {
           h('li', { 'data-rule': 'hearts' }, 'Hearts: ' + heartsShort()),
           h('li', {}, h('a', { href: '#/app-rules' }, 'Every rule for hearts, streaks, minutes and passing')),
           h('li', {}, 'Gems: earned by learning. They cannot be bought, and there are no ads.'),
-          h('li', {}, 'The shop also sells a streak shield, looks, outfits for Rimon, a blessings pack mark, and an extra arcade level. Nothing here costs money.'),
+          h('li', {}, 'The shop also sells a streak shield, looks, outfits for Rimon, a blessings pack mark, and an extra arcade level. Rimon can also earn a lesson pin and a week badge. Nothing here costs money.'),
           h('li', {}, 'Practice league: the other players are pretend, paced to your own weeks. It is a race against your usual self.'),
           h('li', {}, 'Reminders: one short line from Rimon, only if you say yes, never on Shabbat or holidays, never at night.'),
           h('li', {}, 'Everything stays on this device. Calm mode switches all of it off.'))),

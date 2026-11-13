@@ -13,6 +13,8 @@
 // Code that keeps a whole object in memory should use store.update(key, fn) or merge on write
 // (settings.js does) so another tab's change to a different field is not overwritten.
 
+import { bootProfiles } from './shell/profile-slots.js';
+
 export const SCHEMA_VERSION = 1;
 const APP_ID = 'alef';
 const META = '__meta';
@@ -307,4 +309,6 @@ export function createStore(opts = {}) {
 }
 
 /** Shared default instance for the browser app. */
+// Household profiles (src/shell/profile-slots.js): finish any learner switch before the saved data is first read.
+bootProfiles();
 export const store = createStore();

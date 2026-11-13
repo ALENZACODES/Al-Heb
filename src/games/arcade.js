@@ -13,7 +13,7 @@ import { uiEnglish } from '../shell/names.js';
 import { playRecordedClip, hasRecordedClip } from './engine.js';
 import { ARCADE_KEY, LEVELS, BADGES, applyResult, applyArcade, emptyRecord, seededRandom, seedFrom, dayKey, bestLine, starsFor, mistakesLine } from './arcade.model.js';
 import { ARCADE_GAMES, HANUKKAH_GAMES } from './arcade.catalog.js';
-import { roundMode, afterRound, tournamentRandom } from './round-extras.js';
+import { roundMode, afterRound, tournamentRandom, challengeBoard } from './round-extras.js';
 import { ENV_WEBP } from './env-webp.js'; // backdrops added 2026-11-12 are WebP // daily challenge, tournament runs, last-score ledger
 
 const WORDS_URL = new URL('../../data/games/firstwords.json', import.meta.url);
@@ -279,7 +279,7 @@ export async function createArcade(root, ctx, spec) {
       if (streakNew.length) set(storeKey, record);
       set(ARCADE_KEY, arc.arcade);
       const stars = out.stars;
-      const extra = afterRound(h, ctx, { id: spec.id, level, score, stars, daily, tournament: mode.tournament, week: mode.week });
+      const extra = afterRound(h, ctx, { id: spec.id, level, score, stars, daily, tournament: mode.tournament, week: mode.week, challenge: mode.challenge });
       A.sfx(stars >= 2 ? 'success' : stars === 1 ? 'confirm' : 'miss');
       A.sayLine(stars >= 2 ? 3 : 4);
       const why = reason === 'time' ? 'Time is up.' : reason === 'lives' ? 'Out of lives.' : won ? 'Round complete!' : 'Round over.';
@@ -321,7 +321,7 @@ export async function createArcade(root, ctx, spec) {
     const lead = untimed && quiet ? 0 : COUNTDOWN_S;
     readyAt = Date.now() + lead * 1000;
     hudScore.textContent = 'Score 0'; hudLives.textContent = '';
-    rnd = daily ? seededRandom(seedFrom(`${spec.id}|${dayKey()}|${level}`)) : mode.tournament ? tournamentRandom(spec.id, mode.week) : Math.random;
+    rnd = daily ? seededRandom(seedFrom(`${spec.id}|${dayKey()}|${level}`)) : mode.tournament ? tournamentRandom(spec.id, mode.week) : mode.challenge && level === mode.challenge.level ? challengeBoard(mode.challenge) : Math.random; // together lane (R1): a challenge code's board
     renderLevels();
     startedAt = Date.now();
     timeLeft = untimed ? 0 : Math.max(20, Math.round(spec.seconds ? spec.seconds(level, A.cfg) : 90));

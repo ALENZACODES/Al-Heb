@@ -7,6 +7,9 @@ import { TOURNEY_KEY, TOURNEY_LEVEL, weekKey, nextGameId, noteRound, tourneyShar
 import { seededRandom, seedFrom, dayKey } from './arcade.model.js';
 import { ARCADE_GAMES } from './arcade.catalog.js';
 import { shareBlock } from './sharecard.js';
+// together lane (R1, R8): challenge codes and the learner's own star rating, on the same results card
+import { CHALLENGES_KEY, readCode, challengeRandom, noteMine, makeCode, compareLine } from '../together/challenge.js';
+import { RATINGS_KEY, rate, ratingOf } from '../together/ratings.js';
 
 const q = (ctx) => ({ ...(ctx?.query || {}), ...(ctx?.route?.query || {}) });
 const get = (ctx, k) => { try { return ctx?.store?.get?.(k) ?? null; } catch { return null; } };
@@ -18,8 +21,14 @@ export function roundMode(ctx, id, now = new Date()) {
   const query = q(ctx);
   const week = weekKey(now);
   const tournament = query.tournament === '1' && nextGameId(get(ctx, TOURNEY_KEY), week) === id;
-  return { daily: query.daily === '1' && !tournament, tournament, week, level: tournament ? TOURNEY_LEVEL : null };
+  // ?challenge=<code>: a board a friend also plays (src/together/challenge.js). The code fixes the game, the level and the seed.
+  const code = !tournament && query.challenge ? readCode(query.challenge) : null;
+  const challenge = code && code.ok && code.game === id ? code : null;
+  return { daily: query.daily === '1' && !tournament && !challenge, tournament, week, level: tournament ? TOURNEY_LEVEL : challenge ? challenge.level : null, challenge };
 }
+
+/** The challenge board's random source: the same board on every device that has the code. */
+export const challengeBoard = (challenge) => challengeRandom(challenge);
 
 /** The tournament board seed (same board for the same game all week). */
 export const tournamentRandom = (id, week) => seededRandom(seedFrom(`${id}|${week}|tournament`));
@@ -66,6 +75,28 @@ export function afterRound(h, ctx, r) {
           next ? h('a', { class: 'btn', href: `#/${next}?tournament=1&level=${TOURNEY_LEVEL}` }, `Next game: ${titleOf(next)}`) : null));
       }
     }
+  }
+  if (r.challenge) {
+    if (r.level !== r.challenge.level) nodes.push(h('p', { class: 'muted gb-challenge-done' }, `This round was at level ${r.level}. The challenge is at level ${r.challenge.level}, so this one does not count for it.`));
+    else {
+      const out = noteMine(get(ctx, CHALLENGES_KEY), r.challenge, { score: r.score, stars: r.stars }, now);
+      if (out.counted) set(ctx, CHALLENGES_KEY, out.state);
+      const mine = out.item.mine;
+      nodes.push(h('section', { class: 'gb-challenge-done', 'aria-label': 'Challenge result' },
+        h('p', {}, out.counted ? `Your challenge score is in: ${mine.score} points.` : `Practice round. Your challenge score on this board is already in: ${mine.score} points.`),
+        ...out.item.others.map((o) => h('p', { class: 'gb-challenge-compare' }, compareLine(mine, o))),
+        h('p', {}, 'Send this code to a friend. They play the same board and see both scores: ', h('strong', { class: 'gb-challenge-code' }, makeCode(r.challenge, mine.score))),
+        h('p', {}, h('a', { class: 'btn', href: '#/friend-challenge' }, 'Your Challenges'))));
+    }
+  }
+  // R8: the learner's own stars for this game. Kept on this device, never sent anywhere.
+  if (ctx?.store?.get && ctx?.store?.set) {
+    const stars = [1, 2, 3, 4, 5].map((n) => h('button', { type: 'button', class: 'btn secondary gb-rate', 'aria-label': `${n} ${n === 1 ? 'star' : 'stars'}`, 'aria-pressed': 'false', onclick: () => pick(n) }, '★'));
+    const said = h('span', { class: 'muted', role: 'status' });
+    const paint = () => { const cur = ratingOf(get(ctx, RATINGS_KEY), 'game', r.id); stars.forEach((b, i) => { b.setAttribute('aria-pressed', String(i < cur)); b.textContent = i < cur ? '★' : '☆'; }); return cur; };
+    const pick = (n) => { const cur = ratingOf(get(ctx, RATINGS_KEY), 'game', r.id); set(ctx, RATINGS_KEY, rate(get(ctx, RATINGS_KEY), 'game', r.id, cur === n ? 0 : n, now)); said.textContent = paint() ? ' Saved for you only.' : ' Rating cleared.'; };
+    paint();
+    nodes.push(h('p', { class: 'gb-rate-row' }, 'Rate this game for yourself: ', ...stars, said, ' ', h('a', { href: '#/ratings' }, 'My ratings')));
   }
   return nodes;
 }

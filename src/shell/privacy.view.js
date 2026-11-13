@@ -65,6 +65,12 @@ export const STORE_KEYS = [
   ['games.scores.v1', 'Last and best score of each game', 'src/games/scores.js'],
   ['games.daily.v1', 'Daily challenge: first score each day', 'src/games/daily.js'],
   ['games.tournament.v1', 'Tournament runs on this device', 'src/games/tournament.js'],
+  // together lane (R1 to R10): sharing without accounts. All of it stays on this device unless the learner sends a link, QR code or file.
+  ['games.challenges.v1', 'Challenge boards you made or were sent, your score on each, and the names and scores friends sent you', 'src/together/challenge.js'],
+  ['buddies.v1', 'Your buddies: the name, streak and lesson counts in the latest update each one sent you', 'src/together/buddy.js'],
+  ['ratings.v1', 'Your own star ratings of lessons, games and books', 'src/together/ratings.js'],
+  ['together.name', 'The name you chose to show friends on challenges, buddy updates and gifts', 'src/together/challenge.view.js'],
+  ['alef-profiles', 'The profiles on this device (names only), which one is in use, a guest session if one is open, and the household weekly goal. Each profile that is not in use is kept under keys that begin with alefp:', 'src/shell/profile-slots.js'],
   ['games.rootbuilder.v1', 'Game: best score, plays and stars', 'src/games/rootbuilder.model.js'],
   ['games.sprint60.v1', 'Game: best score, plays and stars', 'src/games/sprint60.model.js'],
   ['games.listenspot.v1', 'Game: best score, plays and stars', 'src/games/listenspot.view.js'],

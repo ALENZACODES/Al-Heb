@@ -1197,6 +1197,30 @@
     <changefreq>weekly</changefreq>
   </url>
   <url>
+    <loc>https://alef-review.onrender.com/#/profiles</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://alef-review.onrender.com/#/study-hall</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://alef-review.onrender.com/#/friend-challenge</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://alef-review.onrender.com/#/buddy</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://alef-review.onrender.com/#/gift</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://alef-review.onrender.com/#/ratings</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://alef-review.onrender.com/#/whats-new</loc>
     <changefreq>weekly</changefreq>
   </url>

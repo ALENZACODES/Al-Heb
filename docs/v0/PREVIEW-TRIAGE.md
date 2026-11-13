@@ -84,6 +84,12 @@ decision, so the More sheet stays short and the first session stays coherent (we
 | `daily` | keep | Daily goal and quests. |
 | `awards` | keep | Practice-game activity and a sample beginner certificate. Not a lesson score. |
 | `certificate` | keep | The learner's own record of lessons passed under the pass rule, with first-try scores and dates, and a link that recomputes it. Self-issued, not reviewed; says what it cannot prove. (lane 4, 12 Nov) |
+| `profiles` | keep | Profiles (R2, R3): several learners on one device, each with their own progress, streak and settings, and a guest session that keeps nothing unless asked. Slots on the device; no accounts, no sync. (together lane, 12 Nov) |
+| `study-hall` | keep | Study Hall (R5, R9): the profiles on this device side by side, a shared weekly goal, what each did lately, milestones, and buddies on other devices. Real people, nothing invented. (together lane, 12 Nov) |
+| `friend-challenge` | keep | Challenge A Friend (R1, R7): a short code for the same arcade board on two devices, both scores on the results card, and a table passed on as a file. No server. (together lane, 12 Nov) |
+| `buddy` | keep | Buddy Pairing (R4): send a progress summary (name, streak, lesson counts) by link, QR code or file; the other device keeps the latest. (together lane, 12 Nov) |
+| `gift` | keep | Gift A Lesson (R6): a link, QR code or file that opens one lesson and up to three games with a note. A guided first session, not a copy of progress. (together lane, 12 Nov) |
+| `ratings` | keep | My Ratings (R8): the learner's own stars for lessons, games and books, kept on the device, and suggestions from the 5-star ones. (together lane, 12 Nov) |
 | `move` | keep | Move progress to another of the learner's own devices by link, QR code or file; the import merges, never overwrites. No account, no server. (lane 4, 12 Nov) |
 | `phrases` | keep | Common phrases and sentences; supports the speaking goal. |
 | `books` | keep | The little-books shelf; listed in the Preview group so the books can be found. |

@@ -16,6 +16,9 @@ services:
     staticPublishPath: .
     autoDeploy: true
     headers:
+      # connect-src https://alenzacodes.github.io is the pack host (data/talk/pack-host.json, data/packs/catalog.json): language
+      # pack data is read from there when this copy of the site does not carry it. Data only; scripts still come from the site alone.
+      # Same value as in _headers. Nothing else outside the site is allowed.
       - path: /*
         name: Content-Security-Policy
         value: "default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' blob:; font-src 'self'; connect-src 'self' http://127.0.0.1:* http://localhost:* https://alenzacodes.github.io; worker-src 'self' blob:; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'"

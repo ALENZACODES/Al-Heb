@@ -41,6 +41,7 @@ export function defaults(now = Date.now(), installId = newInstallId()) {
     sessions: [], lastTz: null, lastBootDay: null,
     notify: { optedIn: false, tone: 'kind', asks: 0, lastAskAtLesson: 0, denied: false, sent: [], stopped: false, periodicSync: false },
     shop: { themes: [], themeActive: null, outfits: [], outfitActive: null, audio: [], gameLevels: 0, shields: { held: 0, used: [] } },
+    expedition: null,
   };
 }
 
@@ -77,6 +78,7 @@ export function normalize(raw, now = Date.now()) {
     notify: { ...n, optedIn: n.optedIn === true, tone: n.tone === 'playful' ? 'playful' : 'kind', asks: nat(n.asks), lastAskAtLesson: nat(n.lastAskAtLesson), denied: n.denied === true,
       sent: arr(n.sent, CAPS.sent, (e) => isObj(e) && typeof e.id === 'string'), stopped: n.stopped === true, periodicSync: n.periodicSync === true },
     shop: normalizeShop(r.shop),
+    expedition: normalizeExpedition(r.expedition),
   };
 }
 
@@ -92,6 +94,18 @@ function normalizeShop(raw) {
     audio,
     gameLevels: Math.min(nat(s.gameLevels), 2),
     shields: { held: Math.min(nat(sh.held), 2), used: arr(sh.used, CAPS.used, iso) },
+  };
+}
+
+function normalizeExpedition(raw) {
+  if (!isObj(raw) || typeof raw.id !== 'string' || !iso(raw.start)) return null;
+  const allow = new Set(['blessing', 'market']);
+  const stops = {};
+  if (isObj(raw.stops)) for (const k of Object.keys(raw.stops)) if (iso(k) && (raw.stops[k] === 'done' || raw.stops[k] === 'rest')) stops[k] = raw.stops[k];
+  return {
+    id: allow.has(raw.id) ? raw.id : 'blessing', start: raw.start, stops,
+    review: nat(raw.review), reviewDay: iso(raw.reviewDay), paid: raw.paid === true,
+    finished: arr(raw.finished, 12, (s) => s === 'blessing' || s === 'market'),
   };
 }
 

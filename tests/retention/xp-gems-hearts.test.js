@@ -129,10 +129,10 @@ test('review round 4: a finished lesson pays once per end card (also across tabs
   assert.match(lessonAward(c.rec, H, NOW + 86400000).id, /2026-11-11\|0$/, 'tomorrow it pays again');
   assert.equal(lessonAward({ ...fresh(), lessonRuns: 'junk', lastLesson: 7 }, H, NOW).id.endsWith('|0'), true);
 });
-test('new parts are introduced when they open: quests at 2 lessons, hearts at 3, the league at 5', async () => {
+test('new parts are introduced when they open: quests at 2 lessons, hearts at 3, expeditions at 4, the league at 5', async () => {
   const { unlockedBy } = await import('../../src/retention/xp.js');
   const r = fresh();
-  assert.deepEqual([unlockedBy(r, 0, 1), unlockedBy(r, 1, 2), unlockedBy(r, 2, 3), unlockedBy(r, 3, 4), unlockedBy(r, 4, 5), unlockedBy(r, 5, 6)], [[], ['quests'], ['hearts'], [], ['league'], []]);
+  assert.deepEqual([unlockedBy(r, 0, 1), unlockedBy(r, 1, 2), unlockedBy(r, 2, 3), unlockedBy(r, 3, 4), unlockedBy(r, 4, 5), unlockedBy(r, 5, 6)], [[], ['quests'], ['hearts'], ['expeditions'], ['league'], []]);
   const off = fresh(); off.hearts.enabled = false; off.league.enabled = false;
   assert.deepEqual([unlockedBy(off, 2, 3), unlockedBy(off, 4, 5)], [[], []], 'nothing is announced for a part the learner switched off');
 });

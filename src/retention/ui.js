@@ -172,6 +172,29 @@ export function monthNode(R) {
   return wrap;
 }
 
+// ---------- expeditions (Home) ----------
+export function expeditionNode(R) {
+  const wrap = h('section', { class: 'card ret-expedition alef-retention', 'aria-labelledby': 'ret-exp-h' });
+  let sig = '';
+  const draw = () => {
+    const v = R.expeditionView(), next = JSON.stringify(v);
+    if (next === sig) return; sig = next;
+    wrap.hidden = !v.on;
+    setKids(wrap, h('h2', { id: 'ret-exp-h' }, v.title || 'Expedition'),
+      h('p', {}, v.text),
+      h('ol', { class: 'ret-exp-map', 'aria-label': 'Expedition map, one stop for each day' }, ...v.stops.map((s) => {
+        const label = s.state === 'done' ? `${s.name}: done` : s.state === 'rest' ? `${s.name}: rest` : s.state === 'today' ? `${s.name}: today` : s.state === 'miss' ? `${s.name}: not this day` : `${s.name}: coming up`;
+        return h('li', { class: 'is-' + s.state, 'aria-label': label }, h('span', { class: 'ret-exp-dot', 'aria-hidden': 'true' }), h('span', { class: 'ret-exp-day', 'aria-hidden': 'true' }, s.name));
+      })),
+      h('p', {}, v.need),
+      v.paid ? null : h('p', { class: 'muted' }, `${v.doneCount} of ${v.needCount} study days done. Finish the journey for ${gemsText(40)} more.`));
+  };
+  const on = () => { if (wrap.isConnected) { try { draw(); } catch { /* keep the last drawing */ } } else document.removeEventListener('alef:retention', on); };
+  document.addEventListener('alef:retention', on);
+  draw();
+  return wrap;
+}
+
 // ---------- out of hearts ----------
 const hm = (ms) => { const m = Math.ceil(ms / 60000); return `${Math.floor(m / 60)} h ${m % 60} min`; };
 /** The block shown instead of "Next lesson" when hearts are gone, and as the gate on a new lesson. */
@@ -207,7 +230,7 @@ export function routeShown(R, g = globalThis, gate = false) {
     const head = main.querySelector('.stack > header') || main.querySelector('header');
     const ring = goalRingNode(R);
     if (head?.parentNode) head.parentNode.insertBefore(ring, head.nextSibling); else main.prepend(ring);
-    const quests = questsNode(R); ring.after(quests); quests.after(monthNode(R));
+    const quests = questsNode(R); ring.after(quests); const month = monthNode(R); quests.after(month); month.after(expeditionNode(R));
     const back = comebackNode(R); ring.before(back);
     const recap = recapNode(R); if (recap) ring.before(recap); // welcome first, then last week, then today's goal
     // Once a day, in the evening, Rimon looks a little worried about an unfinished streak day. Never on a rest day.
@@ -219,6 +242,7 @@ export function routeShown(R, g = globalThis, gate = false) {
 // ---------- end-of-lesson reward ----------
 const NEW = {
   quests: ['Daily quests are open.', 'Three small goals wait on Home each day, with a few gems for each.', '#/', 'See today\u2019s quests'],
+  expeditions: ['Expeditions are open.', 'A seven-day journey with a map waits on Home, with a finish line at the end.', '#/', 'See today\u2019s expedition'],
   hearts: ['Hearts are on.', 'You have 5. A wrong first answer in a lesson costs one, and practicing old words wins it back. You can switch hearts off in the shop.', '#/shop', 'Open the shop'],
   league: ['The practice league is open.', 'See how your week compares. The other players are pretend, and the page says so.', '#/league', 'See the league'],
 };

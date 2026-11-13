@@ -14,7 +14,7 @@ import { settle, leagueOn, leagueView } from './leagues.js';
 import { logSession, createScheduler, readShown, recordSent, registerPeriodicSync, daysAway } from './notify.js';
 import { restNow } from './quiet.js';
 import { showRimon } from './rimon.js';
-import { questProgress, questView, questsOn } from './quests.js';
+import { questProgress, questView, questsOn, expeditionProgress, expeditionView, expeditionOn } from './quests.js';
 import { monthProgress, monthView } from './month.js';
 import { welcomeBack, isComebackDay, recapDue, recapSeen, lastWeek } from './recap.js';
 import { read as readCounts, xpToday, lessonsFinished, lessonsFinishedToday, weekDays } from '../lib/counts.js';
@@ -54,7 +54,10 @@ export function retention(ctx, g = globalThis) {
     const cur2 = load(store, t), mo = monthProgress(cur2, t, { calm: calm() }); // the month's challenge is checked wherever XP can change
     if (mo.rec !== cur2) update(() => mo.rec);
     if (mo.completed) { say(`${monthView(mo.rec, t).title} complete! +50 gems.`); later(() => showRimon('streak_milestone'), 2200); }
-    return { ...out, month: mo.completed ? monthView(mo.rec, t).title : null, gems: out.gems + (mo.completed ? 50 : 0) };
+    const cur3 = load(store, t), ex = expeditionProgress(cur3, amounts, t, { calm: calm(), mode: quietOpt.mode });
+    if (ex.rec !== cur3) update(() => ex.rec);
+    if (ex.done) { say(`${ex.title} complete! +${ex.gems} gems.`); later(() => showRimon('streak_milestone'), 2800); }
+    return { ...out, month: mo.completed ? monthView(mo.rec, t).title : null, expedition: ex.done ? ex.title : null, gems: out.gems + (mo.completed ? 50 : 0) + (ex.gems || 0) };
   }
   /** Has the learner earned anything yet? Until then the top bar and the Home cards stay out of the way of a first visit. */
   const revealed = () => { const r = load(store, now()); return r.xp.total > 0 || r.lessonsFinished > 0 || r.gems.balance > 0 || projectStreak(streakRaw(), now()).count > 0; };
@@ -208,6 +211,7 @@ export function retention(ctx, g = globalThis) {
     recap: () => (recapDue(get(), now(), { calm: calm() }) ? lastWeek(get(), now()) : null), recapSeen: () => update((r) => recapSeen(r, now())),
     monthView: () => monthView(get(), now(), { calm: calm() }),
     questView: () => questView(get(), now(), { calm: calm(), mode: quietOpt.mode, live: live() }), questsShown: () => questsOn(get(), { calm: calm() }),
+    expeditionView: () => expeditionView(get(), now(), { calm: calm(), mode: quietOpt.mode }), expeditionShown: () => expeditionOn(get(), { calm: calm() }),
     /** A lesson the learner has been let into (so a later redraw of the same page never gates it). */
     admit: (hash) => { lessonHash = hash; } };
   return api;

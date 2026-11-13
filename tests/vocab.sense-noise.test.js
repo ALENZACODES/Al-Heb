@@ -107,9 +107,11 @@ test('prior March, garlic, cucumber, sandek, blue, and the 370 earlier correctio
   // this lane's 410 stay first and unchanged.
   const later = corr.corrections.filter((c) => String(c.reason).startsWith('learner-text gate'));
   const lemma = corr.corrections.filter((c) => String(c.reason).startsWith('lemma-accuracy'));
-  const prior = corr.corrections.filter((c) => !String(c.reason).includes('sense-noise lane') && !later.includes(c) && !lemma.includes(c));
+  const sweep = corr.corrections.filter((c) => String(c.reason).includes('(example sweep, 12 Nov 2026)')); // 1,443 examples held, appended last
+  const prior = corr.corrections.filter((c) => !String(c.reason).includes('sense-noise lane') && !later.includes(c) && !lemma.includes(c) && !sweep.includes(c));
   assert.equal(prior.length, 373);
-  assert.equal(corr.corrections.length - later.length - lemma.length, 410);
+  assert.equal(corr.corrections.length - later.length - lemma.length - sweep.length, 410);
+  assert.equal(sweep.length, 1443);
   assert.equal(later.length, 8);
   assert.equal(lemma.length, 10);
 });
@@ -186,5 +188,5 @@ test('a second apply of the correction chain is a no-op', async () => {
   const report = applyCorrections(ROOT, { dry: true });
   assert.equal(report.conflicts.length, 0);
   assert.equal(report.applied.length, 0);
-  assert.equal(report.already.length, 428); // 410 + 8 learner-text gate + 10 lemma-accuracy (12 Nov)
+  assert.equal(report.already.length, 1871); // 410 + 8 learner-text gate + 10 lemma-accuracy + 1,443 examples held by the example sweep (12 Nov)
 });

@@ -6,8 +6,8 @@
   "conflicting-marks": 89,
   "duplicate-mark": 22,
   "final-letter-mid-word": 65,
-  "nonfinal-letter-at-end": 55,
-  "nonfinal-pe-at-end": 341,
+  "nonfinal-letter-at-end": 54,
+  "nonfinal-pe-at-end": 352,
   "latin-in-hebrew-word": 0,
   "invisible-char": 3,
   "bidi-unbalanced": 0,
@@ -18,9 +18,9 @@
   "sof-pasuq-space-before": 0,
   "sof-pasuq-no-space-after": 0,
   "maqaf-spacing": 142,
-  "ascii-hyphen-in-pointed-text": 24,
-  "ascii-gershayim": 78,
-  "ascii-geresh": 22
+  "ascii-hyphen-in-pointed-text": 26,
+  "ascii-gershayim": 75,
+  "ascii-geresh": 29
  },
  "definiteFingerprints": [
   "data/ask/answers/00.json|final-letter-mid-word|.f1b5fb4d00.explanation|b4a4102f",
@@ -1658,10 +1658,10 @@
   "data/pronunciation/runtime/lookup-02.json|conflicting-marks|.w.<key>|624565e5",
   "data/pronunciation/variants/_vocab-2.json|conflicting-marks|.records[590].he|624565e5",
   "data/vocab/corrections.json|duplicate-mark|.corrections[69].old|dedaa7fa",
+  "data/vocab/corrections.json|nonfinal-letter-at-end|.corrections[1514].old.he|2ba20ab9",
   "data/vocab/frequency.json|conflicting-marks|.entries[3189].he|624565e5",
   "data/vocab/index.json|conflicting-marks|.rows[2590][1]|624565e5",
   "data/vocab/packs/describing-words-10.json|conflicting-marks|.words[28].forms.plural|03257bd6",
-  "data/vocab/packs/doing-verbs-14.json|nonfinal-letter-at-end|.words[7].example.he|2ba20ab9",
   "data/vocab/packs/doing-verbs-20.json|conflicting-marks|.words[2].he|624565e5",
   "data/vocab/packs/general-things-23.json|conflicting-marks|.words[2].forms.plural|221ec1e9",
   "data/vocab/packs/general-things-23.json|conflicting-marks|.words[2].forms.plural|221ec1e9",
@@ -1678,7 +1678,6 @@
   "data/vocab/words.json|conflicting-marks|.words[3159].forms.plural|221ec1e9",
   "data/vocab/words.json|conflicting-marks|.words[3159].forms.plural|221ec1e9",
   "data/vocab/words.json|conflicting-marks|.words[3466].forms.plural|03257bd6",
-  "data/vocab/words.json|conflicting-marks|.words[5716].forms.plural|149ff11f",
-  "data/vocab/words.json|nonfinal-letter-at-end|.words[4545].example.he|2ba20ab9"
+  "data/vocab/words.json|conflicting-marks|.words[5716].forms.plural|149ff11f"
  ]
 }

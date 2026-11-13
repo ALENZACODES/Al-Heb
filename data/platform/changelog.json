@@ -4,6 +4,21 @@
  "entries": [
   {
    "date": "2026-11-12",
+   "hash": "52732766c",
+   "text": "The 28 older Level 3–9 game pictures now show Ari, Noa and Rimon doing something that fits each game, on that game's own approved backdrop."
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "5c9c6e5eb",
+   "text": "Release build: precache list, build stamp and change list rebuilt for the Level 3–9 game pictures and the hub tab-bar spacing"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "21a1b295a",
+   "text": "Every Level 3–9 game card has its picture, and the Camera door sits above the tab bar"
+  },
+  {
+   "date": "2026-11-12",
    "hash": "041dbfd6f",
    "text": "Release build: precache list, build stamp and change list rebuilt for the game pictures."
   },
@@ -186,21 +201,6 @@
    "date": "2026-11-12",
    "hash": "8daa969b4",
    "text": "Games library: one count of every game on the games page (186, from the counts module), skill and played/mastered filters, best and last score on every card, practice links, level…"
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "4af111b67",
-   "text": "My Data page (H10): #/my-data lists every stored item with its size and downloads the JSON backup (read back by Settings > Restore and Move to Another Device) plus review cards…"
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "693f4436d",
-   "text": "Audio lane plan table; regenerated precache list, sitemap, view list and docs index"
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "9d2057555",
-   "text": "Audio packs on Use Aleph offline: save a book's, the prayers' or a lesson set's clips on purpose, with clip count, measured size, progress, cancel and remove."
   }
  ]
 }

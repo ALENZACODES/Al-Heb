@@ -1,6 +1,6 @@
 // Game 11 — Shuk Taxi: road signs use only attested Hebrew direction phrases.
 import { h, heSpan } from '../shell/ui.js';
-import { createSession, shuffled, loadGameImages, speak, resultsCard, envNode, GAME_ENV, roundStatus } from './engine.js';
+import { createSession, shuffled, loadGameImages, speak, resultsCard, envNode, castEnvNode, GAME_ENV, roundStatus } from './engine.js';
 import { sfx } from '../audio/sfx.js';
 import { loadJson } from '../grammar/loader.js';
 export const STORE_KEY = 'games.shuktaxi.v1';
@@ -25,7 +25,7 @@ export function mount(root, ctx) {
       board.replaceChildren(resultsCard(h,heSpan,session,{title:'Taxi arrived',onAgain:()=>{round=0;session=createSession({store:ctx?.store,storeKey:STORE_KEY,par:6});paint();}}));return;}
     const wanted=deck[round%deck.length];
     roundStatus(status,feedback,`Junction ${round+1} of 8: follow the Hebrew sign.`);
-    const stage=h('div',{class:'game-taxi-road'},envNode(h,images,GAME_ENV.taxi));
+    const stage=h('div',{class:'game-taxi-road'},castEnvNode(h, images, 'shuktaxi', GAME_ENV.taxi));
     const opts=shuffled([wanted,...shuffled(deck.filter(r=>r.id!==wanted.id)).slice(0,2)]);
     const buttons=opts.map(sign=>h('button',{type:'button',class:'btn secondary game-choice',onclick:()=>{
       if(!alive)return;const ok=isTaxiSign(wanted,sign);session.answer(ok); sfx.play(ok ? 'success' : 'miss');

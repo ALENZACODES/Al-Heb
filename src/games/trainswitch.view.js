@@ -1,6 +1,6 @@
 // Game 19 — SVO switchboard: only exact sourced paradigm word order reaches the station.
 import { h, heSpan } from '../shell/ui.js';
-import { createSession, shuffled, resultsCard, loadGameImages, envNode, GAME_ENV } from './engine.js';
+import { createSession, shuffled, resultsCard, loadGameImages, envNode, castEnvNode, GAME_ENV } from './engine.js';
 import { sfx } from '../audio/sfx.js';
 import { loadJson } from '../grammar/loader.js';
 export const STORE_KEY='games.trainswitch.v1';
@@ -31,7 +31,7 @@ export function mount(root,ctx){
   // never a word cue). A missing picture leaves the page as it was.
   loadGameImages(ctx).then((R) => {
     if (!alive) return;
-    const env = envNode(h, R, GAME_ENV.trainswitch);
+    const env = castEnvNode(h, R, 'trainswitch', GAME_ENV.trainswitch);
     if (env) article.insertBefore(env, status);
   }).catch(() => {});
   function paint(feedback){

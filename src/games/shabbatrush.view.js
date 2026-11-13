@@ -1,6 +1,6 @@
 // Game 8 — real Friday sunset countdown, recorded category cues, and timed collections.
 import { h, heSpan } from '../shell/ui.js';
-import { createSession, shuffled, loadGameImages, imgOf, hasRecordedClip, playRecordedClip, resultsCard, envNode, GAME_ENV, roundStatus, placeBoard } from './engine.js';
+import { createSession, shuffled, loadGameImages, imgOf, hasRecordedClip, playRecordedClip, resultsCard, envNode, castEnvNode, GAME_ENV, roundStatus, placeBoard } from './engine.js';
 import { sfx } from '../audio/sfx.js';
 import { loadJson } from '../grammar/loader.js';
 import { fridayOnOrAfter, sunset } from '../curriculum/calendar.js';
@@ -71,7 +71,7 @@ export function mount(root,ctx) {
       heard=success;if(success){cards.forEach(c=>{c.disabled=false;});status.textContent='Collect only matching words.';}
       else status.textContent='Category recording unavailable; collection disabled.';
     }},'Hear Hebrew category');
-    placeBoard(board,envNode(h,R,GAME_ENV.shabbat),hear,h('div',{class:'game-rush-lane'},...cards));
+    placeBoard(board,castEnvNode(h, R, 'shabbatrush', GAME_ENV.shabbat),hear,h('div',{class:'game-rush-lane'},...cards));
   }
   Promise.all([loadJson('data/vocab/index.json'),loadJson('data/calendar/locations.json'),loadGameImages(ctx)]).then(([index,places,images])=>{
     if(!alive||!article.isConnected)return;R=images;deck=buildRushItems(index);
@@ -80,7 +80,7 @@ export function mount(root,ctx) {
     if(!deadline){status.textContent='Sunset calculation unavailable.';return;}
     if(!CATEGORIES.every(c=>hasRecordedClip(ctx,'word',c.clipId))){
       status.textContent='Recorded Hebrew category call-outs unavailable. No guessing rounds.';
-      placeBoard(board, envNode(h, R, GAME_ENV.shabbat));
+      placeBoard(board, castEnvNode(h, R, 'shabbatrush', GAME_ENV.shabbat));
       return;
     }
     if(!deck.some(r=>r.topic==='food-drink')||!deck.some(r=>r.topic==='home-things')){

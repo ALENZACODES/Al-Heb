@@ -1,6 +1,6 @@
 // Game 5 — conveyor typing reuses the app's SI-1452 keyboard deck builder and checker.
 import { h, heSpan } from '../shell/ui.js';
-import { createSession, shuffled, loadGameImages, imgOf, resultsCard, envNode, GAME_ENV, placeBoard } from './engine.js';
+import { createSession, shuffled, loadGameImages, imgOf, resultsCard, envNode, castEnvNode, GAME_ENV, placeBoard } from './engine.js';
 import { sfx } from '../audio/sfx.js';
 import { loadJson } from '../grammar/loader.js';
 import { screenRows, buildRound, checkAnswer } from '../typing/typing.js';
@@ -35,7 +35,7 @@ export function mount(root,ctx) {
       if(ok)round++;paint();
     };
     input.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();submit();}});
-    placeBoard(board,envNode(h,R,GAME_ENV.typewriter),h('div',{class:'game-conveyor-track'},box),input,
+    placeBoard(board,castEnvNode(h, R, 'typewriter', GAME_ENV.typewriter),h('div',{class:'game-conveyor-track'},box),input,
       h('button',{type:'button',class:'btn',onclick:submit},'Send box'),keyboard);
     status.textContent='Box '+(round+1)+' of '+deck.length+' · Score '+session.score;
   }

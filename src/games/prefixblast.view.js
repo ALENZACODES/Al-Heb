@@ -1,6 +1,6 @@
 // Game 10. Cast and production voices stay untouched.
 import { h, heSpan } from '../shell/ui.js';
-import { createSession, shuffled, loadGameImages, imgOf, speak, resultsCard } from './engine.js';
+import { createSession, shuffled, loadGameImages, imgOf, speak, resultsCard, castEnvNode } from './engine.js';
 import { loadGrammarData, loadJson } from '../grammar/loader.js';
 import { buildTopics } from '../grammar/model.js';
 import { sfx } from '../audio/sfx.js';
@@ -55,7 +55,6 @@ export function mount(root, ctx) {
     }
     const r = deck[index];
     const image = imgOf(R, 'word', r.wordId);
-    const stage = imgOf(R, 'id', 'GAME_prefix_blast_stage');
     const prompt = h('div', { class: 'prefix-pedestal' },
       heSpan(r.baseHe, 'he game-he'), h('p', {}, `Make: ${r.meaning}`));
     if (image) prompt.prepend(h('img', { class: 'game-card-img', src: image.src, alt: image.alt, 'data-img-id': image.id }));
@@ -81,8 +80,9 @@ export function mount(root, ctx) {
       return button;
     }));
     const scene = h('div', { class: 'prefix-scene' }, bubbles, prompt);
-    if (stage) scene.style.backgroundImage = `url("${stage.src}")`;
-    board.replaceChildren(scene);
+    // The cast backdrop sits above the bubbles as its own picture, so Ari, Noa and Rimon never sit under a control.
+    const backdrop = castEnvNode(h, R, 'prefixblast', 'GAME_prefix_blast_stage');
+    board.replaceChildren(...[backdrop, scene].filter(Boolean));
     status.textContent = `Phrase ${index + 1} of ${deck.length} · Score ${session.score} · Streak ${session.streak}`;
   }
   Promise.all([loadDeck(), loadGameImages(ctx)]).then(([built, images]) => {

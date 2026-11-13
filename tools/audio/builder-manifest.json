@@ -2921,488 +2921,542 @@
     {
       "id": "alef",
       "text": "אָלֶף",
-      "voice": "he-IL-Chirp3-HD-Charon",
+      "voice": "he-IL-Wavenet-B",
       "path": "audio/builder/symbol-alef_ari.mp3",
       "fingerprint": "82fffa82d0c59790e9e369c6438ea3ee9801447b51ca89f1fd50903e7956f993",
-      "bytes": 7868,
-      "sha256": "8f4e280f51136a35619c556fbfd9c73b6d71a9de9ac85a03b9cf05ebee4a6f11"
+      "bytes": 6192,
+      "sha256": "10e9b25e52f8c4b0c12d27c446b47e62db14c0c1183e4dcd9cb90abd10082ec5",
+      "source": "audio/m/israeli/letter/alef.mp3"
     },
     {
       "id": "alef",
       "text": "אָלֶף",
-      "voice": "he-IL-Chirp3-HD-Kore",
+      "voice": "he-IL-Wavenet-A",
       "path": "audio/builder/symbol-alef_noa.mp3",
       "fingerprint": "a564533dd522ec8fab05c2b10954b993c99afa9f859cf15ed5a5a6f397520c82",
-      "bytes": 9308,
-      "sha256": "84047a260e8a110f27ee38b29c66d648475434ba2528544ab7b5a654be62f535"
+      "bytes": 6768,
+      "sha256": "968b9fc0905a810ae6b92a00b5cc6a8db632d30b6cb4300468abab80f5e825df",
+      "source": "audio/f/israeli/letter/alef.mp3"
     },
     {
       "id": "bet",
       "text": "בֵּית",
-      "voice": "he-IL-Chirp3-HD-Charon",
+      "voice": "he-IL-Wavenet-B",
       "path": "audio/builder/symbol-bet_ari.mp3",
       "fingerprint": "39bb52a1eea471144a84cfecda004bb992514fe041749f1148d3c2e0d87d2025",
-      "bytes": 9308,
-      "sha256": "e929899c728d081f473297ca3d8570a8ebb2531d89fe4cf302731f6609674475"
+      "bytes": 6336,
+      "sha256": "af5c8b3b6487788f87c205095db8111a228db2b0fa8888d7840fc982f6210905",
+      "source": "audio/m/israeli/letter/bet.mp3"
     },
     {
       "id": "bet",
       "text": "בֵּית",
-      "voice": "he-IL-Chirp3-HD-Kore",
+      "voice": "he-IL-Wavenet-A",
       "path": "audio/builder/symbol-bet_noa.mp3",
       "fingerprint": "f18ca22a10d98a5c11d6ef1a0d3f16e1daeff72e6d9ef20f6cd6d6cdeff8e8b6",
-      "bytes": 7148,
-      "sha256": "c22a27804ab3f13cc03001bce155825a59f0ea0a3eee062127abd7dbef80fa2b"
+      "bytes": 6768,
+      "sha256": "58850a73802cee0a89951fee775125ecaeac5e1cdaa12ef85f50e01256157ef6",
+      "source": "audio/f/israeli/letter/bet.mp3"
     },
     {
       "id": "gimel",
       "text": "גִּימֶל",
-      "voice": "he-IL-Chirp3-HD-Charon",
+      "voice": "he-IL-Wavenet-B",
       "path": "audio/builder/symbol-gimel_ari.mp3",
       "fingerprint": "5654926875f286a2b64d35895ae6e07f00f65170b388d70167a63597beb7c350",
-      "bytes": 8300,
-      "sha256": "37869ebd80ffea8bd8e3b0c45a8e780efd220d1a50dfe4f272d7c9812c4d6130"
+      "bytes": 6336,
+      "sha256": "0c509c84560cdadde1bcee832ec0b0d3a88df0cf92e7f3b99fbbcb625b0f569c",
+      "source": "audio/m/israeli/letter/gimel.mp3"
     },
     {
       "id": "gimel",
       "text": "גִּימֶל",
-      "voice": "he-IL-Chirp3-HD-Kore",
+      "voice": "he-IL-Wavenet-A",
       "path": "audio/builder/symbol-gimel_noa.mp3",
       "fingerprint": "c5a849207dcff77fadbe433bd1de4ef43d4abc3c3fe155bc7bd1e4aba5e9d6ae",
-      "bytes": 7868,
-      "sha256": "e024b484cd29463cd9e1d208ac54228aef597edd4598e9982d9c1bc8740b6c46"
+      "bytes": 7056,
+      "sha256": "2870a35cd19683baf86fc45905dc607fe3073b5fe71c7d3874ea4095c945e5d1",
+      "source": "audio/f/israeli/letter/gimel.mp3"
     },
     {
       "id": "dalet",
       "text": "דָּלֶת",
-      "voice": "he-IL-Chirp3-HD-Charon",
+      "voice": "he-IL-Wavenet-B",
       "path": "audio/builder/symbol-dalet_ari.mp3",
       "fingerprint": "955e564ffdfb131d9eda9347a4f7e7e39cea320ff72a4785f3d7b953b4bfd22c",
-      "bytes": 6572,
-      "sha256": "3f26725fe1676ad7db2b4b4fb04ae0f71d61659dc3c3d9d3b92b6bbfd67aa2e7"
+      "bytes": 6768,
+      "sha256": "bdbe1b66eaeff6fe95a15a18e841a7d2ea4b5034acc12a637cef8f9101d0fbc7",
+      "source": "audio/m/israeli/letter/dalet.mp3"
     },
     {
       "id": "dalet",
       "text": "דָּלֶת",
-      "voice": "he-IL-Chirp3-HD-Kore",
+      "voice": "he-IL-Wavenet-A",
       "path": "audio/builder/symbol-dalet_noa.mp3",
       "fingerprint": "8602690ba20c6df52a1317e4239923ca96115a2540f913c19f1af7a6fe724eee",
-      "bytes": 5420,
-      "sha256": "dbfec3d93fbeae93b76361f450d334c84de20699d3ae8dab6d3a041dd9c6e42e"
+      "bytes": 7488,
+      "sha256": "ad269b42018f3d233e49c008d53565e42a45200f311c96a74d27e719709d4965",
+      "source": "audio/f/israeli/letter/dalet.mp3"
     },
     {
       "id": "he",
       "text": "הֵא",
-      "voice": "he-IL-Chirp3-HD-Charon",
+      "voice": "he-IL-Wavenet-B",
       "path": "audio/builder/symbol-he_ari.mp3",
       "fingerprint": "dd3fc4542557a4ed76a9cffc3282683c09905d5b607aee7ac569603578010934",
-      "bytes": 7580,
-      "sha256": "c0247399022498af819dfcb32de8d0d374f62c3ae432fe10dd54d50ecb77a4d7"
+      "bytes": 4608,
+      "sha256": "642b26b67f28060a22d77398e8244204d66afbda8960b0b265082a289f711aa4",
+      "source": "audio/m/israeli/letter/he.mp3"
     },
     {
       "id": "he",
       "text": "הֵא",
-      "voice": "he-IL-Chirp3-HD-Kore",
+      "voice": "he-IL-Wavenet-A",
       "path": "audio/builder/symbol-he_noa.mp3",
       "fingerprint": "66bbe514b29cfa97f9d25420511e368b3ddb061732fd541f5565c66533a0eb4a",
-      "bytes": 2540,
-      "sha256": "8a371e0f75dae2451d1d855a221bfc52aaae55a32017291ed321c63232ac6939"
+      "bytes": 5472,
+      "sha256": "5c74d46497d2c377a8f989d9704ce3322233a1bd9a1afa64e9f463cf90c8bdbc",
+      "source": "audio/f/israeli/letter/he.mp3"
     },
     {
       "id": "vav",
       "text": "וָו",
-      "voice": "he-IL-Chirp3-HD-Charon",
+      "voice": "he-IL-Wavenet-B",
       "path": "audio/builder/symbol-vav_ari.mp3",
       "fingerprint": "79096294d4b3927b23f047de40843f9d4ed84802c8e5705652af6ede050f6230",
-      "bytes": 6140,
-      "sha256": "518ad02fd23f2729d4e3dee99f3175335bc0d100f5af55fec02adbe3919d8539"
+      "bytes": 4752,
+      "sha256": "955374449b0ff8bd7ccf443d6456c08124c9b884c16dac07341620c5683f1661",
+      "source": "audio/m/israeli/letter/vav.mp3"
     },
     {
       "id": "vav",
       "text": "וָו",
-      "voice": "he-IL-Chirp3-HD-Kore",
+      "voice": "he-IL-Wavenet-A",
       "path": "audio/builder/symbol-vav_noa.mp3",
       "fingerprint": "39d57475a47659ea8b3792c714ef979e82def3a167a3271cdb83cf2f000d90e1",
-      "bytes": 8588,
-      "sha256": "78a066ddddaefbe5914515841eb7e83e046c767ca0106fc14b439cfeca413c19"
+      "bytes": 5760,
+      "sha256": "d417c15171d16f1ffca5f611097ecd4ee6a68a79c0d47e0a9d4d57240c872afa",
+      "source": "audio/f/israeli/letter/vav.mp3"
     },
     {
       "id": "zayin",
       "text": "זַיִן",
-      "voice": "he-IL-Chirp3-HD-Charon",
+      "voice": "he-IL-Wavenet-B",
       "path": "audio/builder/symbol-zayin_ari.mp3",
       "fingerprint": "4e7f27fa85fb02be82b43f725c2482412777d664033a2e3ef4b1e879377009fb",
-      "bytes": 8300,
-      "sha256": "501e069742a126783272ab16f97fc12f7f42bc71b575d630a0be1f23f5603cf7"
+      "bytes": 6192,
+      "sha256": "3084053e89861140ee77a01195fa308d6e0a21b552269a0826e0605e17dddbf9",
+      "source": "audio/m/israeli/letter/zayin.mp3"
     },
     {
       "id": "zayin",
       "text": "זַיִן",
-      "voice": "he-IL-Chirp3-HD-Kore",
+      "voice": "he-IL-Wavenet-A",
       "path": "audio/builder/symbol-zayin_noa.mp3",
       "fingerprint": "c8fc737e54d858cac7e05d8ab7f1ee7199a52f85b5de64fcff5e215fc477cf8a",
-      "bytes": 7580,
-      "sha256": "558ae74f9adbadde40e416cf7bb95124270d917c81c42a28cec12133798cbc52"
+      "bytes": 6912,
+      "sha256": "d0de4b5aae814cb88d1435540dfc51d5e9f4107162d0ebaa450d948c68464bb4",
+      "source": "audio/f/israeli/letter/zayin.mp3"
     },
     {
       "id": "chet",
       "text": "חֵית",
-      "voice": "he-IL-Chirp3-HD-Charon",
+      "voice": "he-IL-Wavenet-B",
       "path": "audio/builder/symbol-chet_ari.mp3",
       "fingerprint": "c7aed469839cb038add8f97626fe8b60cb174fe776d7dbc098309b939a60e792",
-      "bytes": 7580,
-      "sha256": "f170973ceab6f0f7fbfcc148a72f67e56e7b21868f32d46b2eb5f259b484c10d"
+      "bytes": 6048,
+      "sha256": "6288d1cd9fe49a0b170fc4def9e8207015425a67254eae5a9561c840302f453f",
+      "source": "audio/m/israeli/letter/chet.mp3"
     },
     {
       "id": "chet",
       "text": "חֵית",
-      "voice": "he-IL-Chirp3-HD-Kore",
+      "voice": "he-IL-Wavenet-A",
       "path": "audio/builder/symbol-chet_noa.mp3",
       "fingerprint": "310af1af80c0d34888a5ad25613c8d818311cacd111938be20152ec5ae99648a",
-      "bytes": 9740,
-      "sha256": "a33211c98cfa441cc6f8b48800a2c9f24fe335e7efd4726848bfe2fedef3cf33"
+      "bytes": 6624,
+      "sha256": "fda1718437550ec02d403e91eec71e6461f569ddca0861ef0f7e688957e41df0",
+      "source": "audio/f/israeli/letter/chet.mp3"
     },
     {
       "id": "tet",
       "text": "טֵית",
-      "voice": "he-IL-Chirp3-HD-Charon",
+      "voice": "he-IL-Wavenet-B",
       "path": "audio/builder/symbol-tet_ari.mp3",
       "fingerprint": "4a56915857e918a0bd2283fd661a4cab5b40a68c8ba38202e2dd23c4d6fb7e87",
-      "bytes": 5708,
-      "sha256": "8527ab02fee6895b957ef61b9b782f19e431c1d54d9607588d5b4194f5b5fc8b"
+      "bytes": 5904,
+      "sha256": "a0896166ef937a924c49315c2fcfe38a4351e22b528354e55d665c490e0d446e",
+      "source": "audio/m/israeli/letter/tet.mp3"
     },
     {
       "id": "tet",
       "text": "טֵית",
-      "voice": "he-IL-Chirp3-HD-Kore",
+      "voice": "he-IL-Wavenet-A",
       "path": "audio/builder/symbol-tet_noa.mp3",
       "fingerprint": "f07e5aca0f4a65a4b7c24a1edb7605ae525256e6aef986285ed6ed975e129b87",
-      "bytes": 5708,
-      "sha256": "ed97ffb52a160fa99c02487a036bad0612a8851a9c4e817aa27c4b639a95021b"
+      "bytes": 6336,
+      "sha256": "0836dff70cc2dfd06dbdf05bcf80412ac9f0cd3332bbd841fa82dbbba9e21530",
+      "source": "audio/f/israeli/letter/tet.mp3"
     },
     {
       "id": "yod",
       "text": "יוֹד",
-      "voice": "he-IL-Chirp3-HD-Charon",
+      "voice": "he-IL-Wavenet-B",
       "path": "audio/builder/symbol-yod_ari.mp3",
       "fingerprint": "8e45ee20152f67f5cfe997941a62d45df69ff7a0bcaaae6cdcbbcc33d13bf1a8",
-      "bytes": 6572,
-      "sha256": "12ab1ef4242f4c5933e7784218c1a50fee707a02ea5eb69a0ccd72eb02a5807a"
+      "bytes": 5760,
+      "sha256": "6d27941fd8a6992015230d2cae6ef457939ce3aed1a5afdb40f4fca965753244",
+      "source": "audio/m/israeli/letter/yod.mp3"
     },
     {
       "id": "yod",
       "text": "יוֹד",
-      "voice": "he-IL-Chirp3-HD-Kore",
+      "voice": "he-IL-Wavenet-A",
       "path": "audio/builder/symbol-yod_noa.mp3",
       "fingerprint": "9b78316faa38019055e32488b2716bc0a9cb8285098335e6c1f93c187e5c38b1",
-      "bytes": 9452,
-      "sha256": "d03026f5eb53a8c2ef569fa4adf4f5b28c2ffc334029ebb5b922bc63453eea0b"
+      "bytes": 6624,
+      "sha256": "3ca86ae7527731613d62f73c17534661604be5485b1e7b07908915f7f8dd6686",
+      "source": "audio/f/israeli/letter/yod.mp3"
     },
     {
       "id": "kaf",
       "text": "כַּף",
-      "voice": "he-IL-Chirp3-HD-Charon",
+      "voice": "he-IL-Wavenet-B",
       "path": "audio/builder/symbol-kaf_ari.mp3",
       "fingerprint": "85d99dc37fd63d2cc9b48b396e20a9aaaf78f83afd15fdd444c7e55986595439",
-      "bytes": 7292,
-      "sha256": "318d1f5dd6e9653551ae97edfe48594a4fa970f691ca669f8fb117a792e575a7"
+      "bytes": 6048,
+      "sha256": "f9401988b99b068b48e967f66fa02e50aa2ebfa33dac6281f21b034e62645727",
+      "source": "audio/m/israeli/letter/kaf.mp3"
     },
     {
       "id": "kaf",
       "text": "כַּף",
-      "voice": "he-IL-Chirp3-HD-Kore",
+      "voice": "he-IL-Wavenet-A",
       "path": "audio/builder/symbol-kaf_noa.mp3",
       "fingerprint": "ff6f0027f617b1b60ca0d1a3b02b2db0b27fd548cbf56e94360a27ec9298f50e",
-      "bytes": 5132,
-      "sha256": "8823f5ba38e960659966cd7b304e22e085a887c66f96fd31f4873f7860c5c054"
+      "bytes": 6624,
+      "sha256": "783a3e7133fde559bcdf5592934458b0313196a1a2a12c7f2e14e3529a888a19",
+      "source": "audio/f/israeli/letter/kaf.mp3"
     },
     {
       "id": "kaf-final",
       "text": "כַּף סוֹפִית",
-      "voice": "he-IL-Chirp3-HD-Charon",
+      "voice": "he-IL-Wavenet-B",
       "path": "audio/builder/symbol-kaf-final_ari.mp3",
       "fingerprint": "3e137150e21a7415b9e4423bad988f7e3183f9e351f6a6b5c2cbdbb8e8370332",
-      "bytes": 9452,
-      "sha256": "ee11ab5f8826561c4a1b3637199fcbbe21671844e413c0bfa62ae5111b7a0ff5"
+      "bytes": 8064,
+      "sha256": "17b6498c7441182d04e6c8593f95163202876b52e801fd803e258315c2a8baaa",
+      "source": "audio/m/israeli/letter/kaf-final.mp3"
     },
     {
       "id": "kaf-final",
       "text": "כַּף סוֹפִית",
-      "voice": "he-IL-Chirp3-HD-Kore",
+      "voice": "he-IL-Wavenet-A",
       "path": "audio/builder/symbol-kaf-final_noa.mp3",
       "fingerprint": "33c8e3e3de2132146e1da2f11afa5fa7dd6c16eed43e8213b79c680b3b827d7c",
-      "bytes": 8732,
-      "sha256": "d1e8b4acf1502a517260d67c2ef1efbbacb708e0dee4048b6c85e7543edf9f0d"
+      "bytes": 8784,
+      "sha256": "62b21f92d02bc4da8ee79f5b19d6621ac793ac24d6d3c63cf603eda22516897e",
+      "source": "audio/f/israeli/letter/kaf-final.mp3"
     },
     {
       "id": "lamed",
       "text": "לָמֶד",
-      "voice": "he-IL-Chirp3-HD-Charon",
+      "voice": "he-IL-Wavenet-B",
       "path": "audio/builder/symbol-lamed_ari.mp3",
       "fingerprint": "247a59e21c6c2f2741d5396edb49bc9c0ee193ed8d912c2a6cbd1996ea4e600e",
-      "bytes": 6572,
-      "sha256": "6b6abd95f7469fc9d8ec0a39381a359ed2f9013cae7ffb9b240e7e43d5ddade1"
+      "bytes": 6336,
+      "sha256": "e44119907496a1414aee53179f4c99f74c2dec470cbfe3c2a3033dee4a71daba",
+      "source": "audio/m/israeli/letter/lamed.mp3"
     },
     {
       "id": "lamed",
       "text": "לָמֶד",
-      "voice": "he-IL-Chirp3-HD-Kore",
+      "voice": "he-IL-Wavenet-A",
       "path": "audio/builder/symbol-lamed_noa.mp3",
       "fingerprint": "803ea5bb386c8cb81882b74cbbca4f01a78ea2886ee66833945256f85171dbcf",
-      "bytes": 9740,
-      "sha256": "969540a92d5a900d36587e4c294cca0aed89672e3a227185787dc00576503be4"
+      "bytes": 7056,
+      "sha256": "af579e4b8efc78399bafaf156229e68d4156c8204e1a61f0ebe0094e7997043f",
+      "source": "audio/f/israeli/letter/lamed.mp3"
     },
     {
       "id": "mem",
       "text": "מֵם",
-      "voice": "he-IL-Chirp3-HD-Charon",
+      "voice": "he-IL-Wavenet-B",
       "path": "audio/builder/symbol-mem_ari.mp3",
       "fingerprint": "1489b1ee264c2dbfa6cab9826545f560d1fedd4a4eac3e49f17089a0d109bbd4",
-      "bytes": 7148,
-      "sha256": "7c6be58fb9a23db5c43ad1df9197b49e921a6d637b0a53f19ad6a3f2eda941f9"
+      "bytes": 5616,
+      "sha256": "5e2858895f9cf1276497c9aaf88caecbbc35632b4075b2804d4acc426bd98bd2",
+      "source": "audio/m/israeli/letter/mem.mp3"
     },
     {
       "id": "mem",
       "text": "מֵם",
-      "voice": "he-IL-Chirp3-HD-Kore",
+      "voice": "he-IL-Wavenet-A",
       "path": "audio/builder/symbol-mem_noa.mp3",
       "fingerprint": "f6021d3942bb081d7a2a4465de7b86a1b94882da332662e773c6763c077b0389",
-      "bytes": 9452,
-      "sha256": "b538a5f572051c880a274617223caeb4bcd8f89f826ebbb00b22d1f4d9ecee07"
+      "bytes": 6336,
+      "sha256": "2ddff5dc05cb283aca7eb4d43ad7535cfb623547f03900bf27f762dc8d8c7b1e",
+      "source": "audio/f/israeli/letter/mem.mp3"
     },
     {
       "id": "mem-final",
       "text": "מֵם סוֹפִית",
-      "voice": "he-IL-Chirp3-HD-Charon",
+      "voice": "he-IL-Wavenet-B",
       "path": "audio/builder/symbol-mem-final_ari.mp3",
       "fingerprint": "474a6c72af2a3bbf202c08a8388dbd3b14bf5917cdd5d5c84c58d3c354e70dbb",
-      "bytes": 8012,
-      "sha256": "3aa9909b29fe91011ca1ce97aa261fa22cfe39ba880cda00f9519116dda2756f"
+      "bytes": 8496,
+      "sha256": "8e4e7379921bf42a5705feadf1b33fb51bcf5f26620d09f969939259f9424b9c",
+      "source": "audio/m/israeli/letter/mem-final.mp3"
     },
     {
       "id": "mem-final",
       "text": "מֵם סוֹפִית",
-      "voice": "he-IL-Chirp3-HD-Kore",
+      "voice": "he-IL-Wavenet-A",
       "path": "audio/builder/symbol-mem-final_noa.mp3",
       "fingerprint": "fee5ee4a50359094085733b2f70ee3fccb3fc5033530c5a9174cc5b033a0a3b4",
-      "bytes": 8732,
-      "sha256": "3d57a7147d8f2d7fc412be693d3bf31b0e23996f5b6feba6adc05add90233e3b"
+      "bytes": 9216,
+      "sha256": "605600f44f413eb47183b84e26fd00c432f92bee1b240d3841af8dd89caabd98",
+      "source": "audio/f/israeli/letter/mem-final.mp3"
     },
     {
       "id": "nun",
       "text": "נוּן",
-      "voice": "he-IL-Chirp3-HD-Charon",
+      "voice": "he-IL-Wavenet-B",
       "path": "audio/builder/symbol-nun_ari.mp3",
       "fingerprint": "4d31471b5a4c09721811a507433aa808381db51ab82f0454320f709b5500a5ac",
-      "bytes": 5420,
-      "sha256": "638c81a66d6ab15f82ade4829d4bddc3ca67ac71f46a33bb1420a2fc654059e7"
+      "bytes": 5616,
+      "sha256": "9148fd37ef0fc9cc8f70d7fdb920a2a1409629ef947e58b898803f170f67dfe2",
+      "source": "audio/m/israeli/letter/nun.mp3"
     },
     {
       "id": "nun",
       "text": "נוּן",
-      "voice": "he-IL-Chirp3-HD-Kore",
+      "voice": "he-IL-Wavenet-A",
       "path": "audio/builder/symbol-nun_noa.mp3",
       "fingerprint": "440f8de6969a3bdb3dd745f2ff7daec6b71381a7c71c6fb93d053e88160dcf44",
-      "bytes": 5708,
-      "sha256": "9b691758e56e391077a439f602e44ff3f91593ce3e494118c429d8f57394a823"
+      "bytes": 6480,
+      "sha256": "4e726b8c13d1810c224825dd0b6a5db1e344252807807bf927ec55c20d760d07",
+      "source": "audio/f/israeli/letter/nun.mp3"
     },
     {
       "id": "nun-final",
       "text": "נוּן סוֹפִית",
-      "voice": "he-IL-Chirp3-HD-Charon",
+      "voice": "he-IL-Wavenet-B",
       "path": "audio/builder/symbol-nun-final_ari.mp3",
       "fingerprint": "6212e63cce14f08fe9f2c81916accdc3fa8f6c08bced36f2cbc37eb4397e58f6",
-      "bytes": 7580,
-      "sha256": "0f56b9eeb9c9c75349421c7c5966847eb5ebaf84582f6aaadbe806625d8d82ac"
+      "bytes": 8496,
+      "sha256": "3bc1bdaaf5211c8266759b543267007323a14ac0140c91d0b0f7167e6650a366",
+      "source": "audio/m/israeli/letter/nun-final.mp3"
     },
     {
       "id": "nun-final",
       "text": "נוּן סוֹפִית",
-      "voice": "he-IL-Chirp3-HD-Kore",
+      "voice": "he-IL-Wavenet-A",
       "path": "audio/builder/symbol-nun-final_noa.mp3",
       "fingerprint": "e297541688cf149c8410487af42233e8830dd39c61cbdf18a67eabfe20f99879",
-      "bytes": 8300,
-      "sha256": "c0d63b06da7fc8bb9b62cc5b43e63401e22969775478c7c7844b173419838194"
+      "bytes": 9216,
+      "sha256": "30c6e6362a0ba3cd8f82d391662f09608d9f53eee09b323ee62adc859bc976fe",
+      "source": "audio/f/israeli/letter/nun-final.mp3"
     },
     {
       "id": "samekh",
       "text": "סָמֶךְ",
-      "voice": "he-IL-Chirp3-HD-Charon",
+      "voice": "he-IL-Wavenet-B",
       "path": "audio/builder/symbol-samekh_ari.mp3",
       "fingerprint": "6ec8646a46b58e9e877e09c40872b68184e2887d1322be60b9d9f6c5d152f74f",
-      "bytes": 10460,
-      "sha256": "50173fe71e40e6dca0eae2ae9db73fd04b347f6b16101227a867455248cd09d5"
+      "bytes": 6912,
+      "sha256": "0e10bb1e6552c042f81fd2d43af97cf19a07f0f3638ab3b4a95b8736a93fead3",
+      "source": "audio/m/israeli/letter/samekh.mp3"
     },
     {
       "id": "samekh",
       "text": "סָמֶךְ",
-      "voice": "he-IL-Chirp3-HD-Kore",
+      "voice": "he-IL-Wavenet-A",
       "path": "audio/builder/symbol-samekh_noa.mp3",
       "fingerprint": "79807755c6367e3fa854712b24aed5c0315d2850d65b3b182fd8d82880844850",
-      "bytes": 5852,
-      "sha256": "8fafa448aaf04379e2060a05d4b77cc4fb6145cb43967e828852bff8590b97dd"
+      "bytes": 7632,
+      "sha256": "9f385023d8407e3367b8a8932aaf16199bb7c5a076fbd8f20304d1ace7af23e5",
+      "source": "audio/f/israeli/letter/samekh.mp3"
     },
     {
       "id": "ayin",
       "text": "עַיִן",
-      "voice": "he-IL-Chirp3-HD-Charon",
+      "voice": "he-IL-Wavenet-B",
       "path": "audio/builder/symbol-ayin_ari.mp3",
       "fingerprint": "00f678dcb4bce017028a3edc470ddf6392e08adf5f4dc648acdb79b1e30454da",
-      "bytes": 7580,
-      "sha256": "9993d2a574816bcdc1e8547b9f9914831d345e8c4f5e2adaad6f5f17b4c229f2"
+      "bytes": 5760,
+      "sha256": "591050f01fb9d2553224eeea8d3292060a04ac941aa99520a46d7bfe281adb4e",
+      "source": "audio/m/israeli/letter/ayin.mp3"
     },
     {
       "id": "ayin",
       "text": "עַיִן",
-      "voice": "he-IL-Chirp3-HD-Kore",
+      "voice": "he-IL-Wavenet-A",
       "path": "audio/builder/symbol-ayin_noa.mp3",
       "fingerprint": "09b61b2698d584c743719d85365617448d9a1dfc0db6cffe3406fbccd03bf628",
-      "bytes": 6860,
-      "sha256": "d7861fec3434a3b099e95e66aa649baf9b313b1f6908fc9439d5d74bafc51c56"
+      "bytes": 6336,
+      "sha256": "7805ca74cb60f831d952354ab65c8ebeefe74c6eb9c69ca9690f27dd2d8f0c82",
+      "source": "audio/f/israeli/letter/ayin.mp3"
     },
     {
       "id": "pe",
       "text": "פֵּא",
-      "voice": "he-IL-Chirp3-HD-Charon",
+      "voice": "he-IL-Wavenet-B",
       "path": "audio/builder/symbol-pe_ari.mp3",
       "fingerprint": "8a05f1d9425b2a6322a5db3090a2a492abb3a0667fc5d1b488ff764a09a91c06",
-      "bytes": 4700,
-      "sha256": "5762c8971d1ca03a9e156fab4a3d17a11b2448f94d2ee9d6b6aad038875f2abc"
+      "bytes": 4608,
+      "sha256": "c4eba3644c3791412a305f173c8b90f7cd9358cec3f5a049bae0f3a5206404d6",
+      "source": "audio/m/israeli/letter/pe.mp3"
     },
     {
       "id": "pe",
       "text": "פֵּא",
-      "voice": "he-IL-Chirp3-HD-Kore",
+      "voice": "he-IL-Wavenet-A",
       "path": "audio/builder/symbol-pe_noa.mp3",
       "fingerprint": "cb5d5e16cb528c83123c815e36e8bddac780e0a369a3ce87e5c5c364a23e5220",
-      "bytes": 5420,
-      "sha256": "82169f1859d2f160066346dc257e8f6c7f9607697d4fc938f283c804b2539a6d"
+      "bytes": 4752,
+      "sha256": "0bc487e4e0bec6d9a7b75930744e490d78f24ce7d7a43b78fb131bee9c57ca4a",
+      "source": "audio/f/israeli/letter/pe.mp3"
     },
     {
       "id": "pe-final",
       "text": "פֵּא סוֹפִית",
-      "voice": "he-IL-Chirp3-HD-Charon",
+      "voice": "he-IL-Wavenet-B",
       "path": "audio/builder/symbol-pe-final_ari.mp3",
       "fingerprint": "c57db1e9f746fc78c48e4ad33f084abf948695313ef0dc33d7301b2425bcd181",
-      "bytes": 7580,
-      "sha256": "060c4c3475256a40ff5100f5d433deed5437e1e08a2fa00a3fa37ffc128f9eb3"
+      "bytes": 7776,
+      "sha256": "f1271278e1e7ecface4af9276b05ff67473635ee222dff10ff357eb8265d573a",
+      "source": "audio/m/israeli/letter/pe-final.mp3"
     },
     {
       "id": "pe-final",
       "text": "פֵּא סוֹפִית",
-      "voice": "he-IL-Chirp3-HD-Kore",
+      "voice": "he-IL-Wavenet-A",
       "path": "audio/builder/symbol-pe-final_noa.mp3",
       "fingerprint": "918cbcad1d7e0a94dd8661be3842be9ac0451a6824e50ab37c64d7d76c802ad6",
-      "bytes": 7580,
-      "sha256": "acaaf1870d194c034543c840dd3d588fffd4ead5462a8852114c9f29992ca887"
+      "bytes": 8496,
+      "sha256": "4f9ed281a58be93eefdf6d4a25b5239fa0adb7de5028a79c9b464fd1bf6a3163",
+      "source": "audio/f/israeli/letter/pe-final.mp3"
     },
     {
       "id": "tsadi",
       "text": "צָדִי",
-      "voice": "he-IL-Chirp3-HD-Charon",
+      "voice": "he-IL-Wavenet-B",
       "path": "audio/builder/symbol-tsadi_ari.mp3",
       "fingerprint": "412157349cfcc56c1b8e56632e922e5c736e1a6c233023e9dade9c6d7030f5fe",
-      "bytes": 7148,
-      "sha256": "7f39505e80a477eb1e23cb82134624b56fffbbe44d5749532acfe69d6d8fc867"
+      "bytes": 6048,
+      "sha256": "139ae2b97b707c8b909269fc153a6738fe84e1a867f88103219d45233f2b88b6",
+      "source": "audio/m/israeli/letter/tsadi.mp3"
     },
     {
       "id": "tsadi",
       "text": "צָדִי",
-      "voice": "he-IL-Chirp3-HD-Kore",
+      "voice": "he-IL-Wavenet-A",
       "path": "audio/builder/symbol-tsadi_noa.mp3",
       "fingerprint": "1b94dbb594a4858c86ef4d94d1cd95e2bd286522ccb3f5f731ebc254c8291c8f",
-      "bytes": 4412,
-      "sha256": "7dbc210c5212cd51ff61e5dd8b035c59c8cf2dc11d366ebe05ccde858e382175"
+      "bytes": 6768,
+      "sha256": "650804534cfb5d677e9e3266245148bf7cee658a518caaa1261e21c882e58b24",
+      "source": "audio/f/israeli/letter/tsadi.mp3"
     },
     {
       "id": "tsadi-final",
       "text": "צָדִי סוֹפִית",
-      "voice": "he-IL-Chirp3-HD-Charon",
+      "voice": "he-IL-Wavenet-B",
       "path": "audio/builder/symbol-tsadi-final_ari.mp3",
       "fingerprint": "85a300ead4dd0427a48e65ac564850458bb15ffd10c6b233972c1982ac46ad3d",
-      "bytes": 9020,
-      "sha256": "6c94cc75faf6dd43c4271dbac9f5437e4f03304bbd6c6c3f423900fb226f7f53"
+      "bytes": 8928,
+      "sha256": "870b3f4f09695660e0cf8f157b341fb9ecd0a7bc3b666ae395373bcb48ab316b",
+      "source": "audio/m/israeli/letter/tsadi-final.mp3"
     },
     {
       "id": "tsadi-final",
       "text": "צָדִי סוֹפִית",
-      "voice": "he-IL-Chirp3-HD-Kore",
+      "voice": "he-IL-Wavenet-A",
       "path": "audio/builder/symbol-tsadi-final_noa.mp3",
       "fingerprint": "ffab5799273d64bb94d7b5793b8e15441d3fb37f7d020dac64e41518fd0925de",
-      "bytes": 10172,
-      "sha256": "c109b81d1380ba3a033ebae3b496c26f35a44cbb5b43616579b910e7e9bd5e1a"
+      "bytes": 9360,
+      "sha256": "ed018bbdceddf498b059197226c2265051c18f556d9081a001ec7e9829b0219f",
+      "source": "audio/f/israeli/letter/tsadi-final.mp3"
     },
     {
       "id": "qof",
       "text": "קוֹף",
-      "voice": "he-IL-Chirp3-HD-Charon",
+      "voice": "he-IL-Wavenet-B",
       "path": "audio/builder/symbol-qof_ari.mp3",
       "fingerprint": "88632a01dc39678c4ac63abc416266814c3c7cae50c4737389bdcc454fbfdb22",
-      "bytes": 5420,
-      "sha256": "8282fe682e18d532bab6923d96c399caa7c00d2648c87b8d3ac81f30257cb381"
+      "bytes": 6192,
+      "sha256": "7a9d217c8e1417dffdc8fb8a18b926fa8b29b952b37d5f27bc05418bed1362e6",
+      "source": "audio/m/israeli/letter/qof.mp3"
     },
     {
       "id": "qof",
       "text": "קוֹף",
-      "voice": "he-IL-Chirp3-HD-Kore",
+      "voice": "he-IL-Wavenet-A",
       "path": "audio/builder/symbol-qof_noa.mp3",
       "fingerprint": "b321b9ec8b0595760920081222671be72e044821c76088eee2cf774204989fc5",
-      "bytes": 5852,
-      "sha256": "7005065fbd969dab88a462e273f965e352b9dddf17b0da6c6f79c788f8852ca8"
+      "bytes": 6624,
+      "sha256": "9638aa53f5e0dc1f2288a3abd8aa937c727b5de7ebe128c781b29548e6c608e4",
+      "source": "audio/f/israeli/letter/qof.mp3"
     },
     {
       "id": "resh",
       "text": "רֵישׁ",
-      "voice": "he-IL-Chirp3-HD-Charon",
+      "voice": "he-IL-Wavenet-B",
       "path": "audio/builder/symbol-resh_ari.mp3",
       "fingerprint": "6dbc34e8ce00a72cb18b6391715a81180c7464ff15cf2883994bd8cb53129525",
-      "bytes": 7148,
-      "sha256": "245eb26442817030f15a01e804934d47feeb54e97f965eddb0e9385765b9ea6b"
+      "bytes": 6624,
+      "sha256": "da4f126d7ae2f0aa25e7d08f1e1136d05b1f3bc47523c8c049ba0fb0e260cdbb",
+      "source": "audio/m/israeli/letter/resh.mp3"
     },
     {
       "id": "resh",
       "text": "רֵישׁ",
-      "voice": "he-IL-Chirp3-HD-Kore",
+      "voice": "he-IL-Wavenet-A",
       "path": "audio/builder/symbol-resh_noa.mp3",
       "fingerprint": "48d95d820e9da147b04c7d49340357fedd9c228e4f25eb7eb808e0b5ec9c15a3",
-      "bytes": 7868,
-      "sha256": "f60be5295e59965f059364073f81f0a45b2d08a8c01b7d1d6f29ccbda1c44323"
+      "bytes": 7200,
+      "sha256": "7b6fdd969d9a24baeb89570c1dd7bc5cb54403ea28bb3d31ea7a079757b52596",
+      "source": "audio/f/israeli/letter/resh.mp3"
     },
     {
       "id": "shin",
       "text": "שִׁין",
-      "voice": "he-IL-Chirp3-HD-Charon",
+      "voice": "he-IL-Wavenet-B",
       "path": "audio/builder/symbol-shin_ari.mp3",
       "fingerprint": "bd4898ce568d9842d3f89c4b9edd0458287f9ebd663eed80440b9dc281ebf5cd",
-      "bytes": 9020,
-      "sha256": "98c20940e079bbc4746f3e01d8b42d7cebf4f8e41de6bd2d1dab7cf8099f445e"
+      "bytes": 4608,
+      "sha256": "2beb607fb794b16b0ab851a2758e98eb4c3e05527b2f718c14736dd85d839f28",
+      "source": "audio/m/israeli/letter/shin.mp3"
     },
     {
       "id": "shin",
       "text": "שִׁין",
-      "voice": "he-IL-Chirp3-HD-Kore",
+      "voice": "he-IL-Wavenet-A",
       "path": "audio/builder/symbol-shin_noa.mp3",
       "fingerprint": "2a802448949ed796b65dae5fb1d6d9e7feb8c00e742c8e22011fdda660dd9a2b",
-      "bytes": 8012,
-      "sha256": "a72ecab23bfc35d8de2fcf83b36c3678e8f762abf3485f7529b73d7462206426"
+      "bytes": 5472,
+      "sha256": "092e78728ee2a48f67f59a0ef9cc1e6e9b5a10bd4bf4a1d89c805af0cfd4f83f",
+      "source": "audio/f/israeli/letter/shin.mp3"
     },
     {
       "id": "tav",
       "text": "תָּו",
-      "voice": "he-IL-Chirp3-HD-Charon",
+      "voice": "he-IL-Wavenet-B",
       "path": "audio/builder/symbol-tav_ari.mp3",
       "fingerprint": "aef2a8d77174e2c1de33f50e742d108ea3905676b8120bcb966fbe1de0f25f01",
-      "bytes": 5420,
-      "sha256": "f90c691fcbcff2f910792043e5de4ab808e519fd35c569c1ebc26c5ff0fd3d73"
+      "bytes": 5760,
+      "sha256": "f4fe78fed73b5405d633a41805da7e9ab8ab0641065329bf3989d99ac29590b7",
+      "source": "audio/m/israeli/letter/tav.mp3"
     },
     {
       "id": "tav",
       "text": "תָּו",
-      "voice": "he-IL-Chirp3-HD-Kore",
+      "voice": "he-IL-Wavenet-A",
       "path": "audio/builder/symbol-tav_noa.mp3",
       "fingerprint": "0ec283baf3b32125c37be7cad76ef5d56cc915284ee9af19bbff5649242aa3b1",
-      "bytes": 5132,
-      "sha256": "233446c840eb798bb35a2d0bfa1a173b85743e15ecc854e02d342b2d3983ad46"
+      "bytes": 6480,
+      "sha256": "797d5ef96d18e1995c588ed2b378555a23f9d0c2c38b547107729b717ed78c60",
+      "source": "audio/f/israeli/letter/tav.mp3"
     },
     {
       "id": "sheva",

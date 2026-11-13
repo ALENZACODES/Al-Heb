@@ -2,7 +2,7 @@
   "version": 1,
   "note": "APPROVED generated images only (see docs/images/RIGHTS.md). Files live in assets/img/gen/. Built by tools/images/ingest.mjs; do not edit by hand.",
   "dir": "gen",
-  "count": 1104,
+  "count": 1129,
   "images": {
     "BADGE_01": {
       "w": 512,
@@ -4162,6 +4162,24 @@
         }
       ]
     },
+    "L01_alef_quirky": {
+      "w": 1254,
+      "h": 1254,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L01_alef_quirky.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1254,
+          "file": "L01_alef_quirky.1254.webp",
+          "w": 1254,
+          "h": 1254
+        }
+      ]
+    },
     "L02_bet_print_ari": {
       "w": 1254,
       "h": 1254,
@@ -4337,6 +4355,24 @@
         {
           "edge": 1254,
           "file": "L02_bet_print_v3.1254.webp",
+          "w": 1254,
+          "h": 1254
+        }
+      ]
+    },
+    "L02_bet_quirky": {
+      "w": 1254,
+      "h": 1254,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L02_bet_quirky.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1254,
+          "file": "L02_bet_quirky.1254.webp",
           "w": 1254,
           "h": 1254
         }
@@ -4522,6 +4558,24 @@
         }
       ]
     },
+    "L03_gimel_quirky": {
+      "w": 1254,
+      "h": 1254,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L03_gimel_quirky.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1254,
+          "file": "L03_gimel_quirky.1254.webp",
+          "w": 1254,
+          "h": 1254
+        }
+      ]
+    },
     "L04_dalet_print_ari": {
       "w": 1254,
       "h": 1254,
@@ -4697,6 +4751,24 @@
         {
           "edge": 1254,
           "file": "L04_dalet_print_v3.1254.webp",
+          "w": 1254,
+          "h": 1254
+        }
+      ]
+    },
+    "L04_dalet_quirky": {
+      "w": 1254,
+      "h": 1254,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L04_dalet_quirky.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1254,
+          "file": "L04_dalet_quirky.1254.webp",
           "w": 1254,
           "h": 1254
         }
@@ -4882,6 +4954,24 @@
         }
       ]
     },
+    "L05_he_quirky": {
+      "w": 1254,
+      "h": 1254,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L05_he_quirky.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1254,
+          "file": "L05_he_quirky.1254.webp",
+          "w": 1254,
+          "h": 1254
+        }
+      ]
+    },
     "L06_vav_print_ari": {
       "w": 1254,
       "h": 1254,
@@ -5057,6 +5147,24 @@
         {
           "edge": 1254,
           "file": "L06_vav_print_v3.1254.webp",
+          "w": 1254,
+          "h": 1254
+        }
+      ]
+    },
+    "L06_vav_quirky": {
+      "w": 1254,
+      "h": 1254,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L06_vav_quirky.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1254,
+          "file": "L06_vav_quirky.1254.webp",
           "w": 1254,
           "h": 1254
         }
@@ -5434,6 +5542,24 @@
         }
       ]
     },
+    "L08_chet_quirky": {
+      "w": 1254,
+      "h": 1254,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L08_chet_quirky.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1254,
+          "file": "L08_chet_quirky.1254.webp",
+          "w": 1254,
+          "h": 1254
+        }
+      ]
+    },
     "L09_tet_print_ari": {
       "w": 1254,
       "h": 1254,
@@ -5609,6 +5735,24 @@
         {
           "edge": 1254,
           "file": "L09_tet_print_v3.1254.webp",
+          "w": 1254,
+          "h": 1254
+        }
+      ]
+    },
+    "L09_tet_quirky": {
+      "w": 1254,
+      "h": 1254,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L09_tet_quirky.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1254,
+          "file": "L09_tet_quirky.1254.webp",
           "w": 1254,
           "h": 1254
         }
@@ -5998,6 +6142,24 @@
         }
       ]
     },
+    "L11_kaf_quirky": {
+      "w": 1254,
+      "h": 1254,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L11_kaf_quirky.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1254,
+          "file": "L11_kaf_quirky.1254.webp",
+          "w": 1254,
+          "h": 1254
+        }
+      ]
+    },
     "L12_lamed_print_ari": {
       "w": 1254,
       "h": 1254,
@@ -6173,6 +6335,24 @@
         {
           "edge": 1254,
           "file": "L12_lamed_print_v3.1254.webp",
+          "w": 1254,
+          "h": 1254
+        }
+      ]
+    },
+    "L12_lamed_quirky": {
+      "w": 1254,
+      "h": 1254,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L12_lamed_quirky.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1254,
+          "file": "L12_lamed_quirky.1254.webp",
           "w": 1254,
           "h": 1254
         }
@@ -6358,6 +6538,24 @@
         }
       ]
     },
+    "L13_mem_quirky": {
+      "w": 1254,
+      "h": 1254,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L13_mem_quirky.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1254,
+          "file": "L13_mem_quirky.1254.webp",
+          "w": 1254,
+          "h": 1254
+        }
+      ]
+    },
     "L14_nun_print_ari": {
       "w": 1254,
       "h": 1254,
@@ -6533,6 +6731,24 @@
         {
           "edge": 1254,
           "file": "L14_nun_print_v3.1254.webp",
+          "w": 1254,
+          "h": 1254
+        }
+      ]
+    },
+    "L14_nun_quirky": {
+      "w": 1254,
+      "h": 1254,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L14_nun_quirky.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1254,
+          "file": "L14_nun_quirky.1254.webp",
           "w": 1254,
           "h": 1254
         }
@@ -6718,6 +6934,24 @@
         }
       ]
     },
+    "L15_samekh_quirky": {
+      "w": 1254,
+      "h": 1254,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L15_samekh_quirky.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1254,
+          "file": "L15_samekh_quirky.1254.webp",
+          "w": 1254,
+          "h": 1254
+        }
+      ]
+    },
     "L16_ayin_print_ari": {
       "w": 1254,
       "h": 1254,
@@ -6893,6 +7127,24 @@
         {
           "edge": 1254,
           "file": "L16_ayin_print_v3.1254.webp",
+          "w": 1254,
+          "h": 1254
+        }
+      ]
+    },
+    "L16_ayin_quirky": {
+      "w": 1254,
+      "h": 1254,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L16_ayin_quirky.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1254,
+          "file": "L16_ayin_quirky.1254.webp",
           "w": 1254,
           "h": 1254
         }
@@ -7078,6 +7330,24 @@
         }
       ]
     },
+    "L17_pe_quirky": {
+      "w": 1254,
+      "h": 1254,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L17_pe_quirky.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1254,
+          "file": "L17_pe_quirky.1254.webp",
+          "w": 1254,
+          "h": 1254
+        }
+      ]
+    },
     "L18_tsadi_print_ari": {
       "w": 1254,
       "h": 1254,
@@ -7253,6 +7523,24 @@
         {
           "edge": 1254,
           "file": "L18_tsadi_print_v3.1254.webp",
+          "w": 1254,
+          "h": 1254
+        }
+      ]
+    },
+    "L18_tsadi_quirky": {
+      "w": 1254,
+      "h": 1254,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L18_tsadi_quirky.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1254,
+          "file": "L18_tsadi_quirky.1254.webp",
           "w": 1254,
           "h": 1254
         }
@@ -7438,6 +7726,24 @@
         }
       ]
     },
+    "L19_qof_quirky": {
+      "w": 1254,
+      "h": 1254,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L19_qof_quirky.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1254,
+          "file": "L19_qof_quirky.1254.webp",
+          "w": 1254,
+          "h": 1254
+        }
+      ]
+    },
     "L20_resh_print_ari": {
       "w": 1254,
       "h": 1254,
@@ -7618,6 +7924,24 @@
         }
       ]
     },
+    "L20_resh_quirky": {
+      "w": 1254,
+      "h": 1254,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L20_resh_quirky.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1254,
+          "file": "L20_resh_quirky.1254.webp",
+          "w": 1254,
+          "h": 1254
+        }
+      ]
+    },
     "L21_shin_print_ari": {
       "w": 1254,
       "h": 1254,
@@ -7793,6 +8117,24 @@
         {
           "edge": 1254,
           "file": "L21_shin_print_v3.1254.webp",
+          "w": 1254,
+          "h": 1254
+        }
+      ]
+    },
+    "L21_shin_quirky": {
+      "w": 1254,
+      "h": 1254,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L21_shin_quirky.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1254,
+          "file": "L21_shin_quirky.1254.webp",
           "w": 1254,
           "h": 1254
         }
@@ -7990,6 +8332,24 @@
         }
       ]
     },
+    "L22_tav_quirky": {
+      "w": 1254,
+      "h": 1254,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L22_tav_quirky.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1254,
+          "file": "L22_tav_quirky.1254.webp",
+          "w": 1254,
+          "h": 1254
+        }
+      ]
+    },
     "L23_kaf_final_print_ari": {
       "w": 1254,
       "h": 1254,
@@ -8165,6 +8525,24 @@
         {
           "edge": 1254,
           "file": "L23_kaf_final_print_v3.1254.webp",
+          "w": 1254,
+          "h": 1254
+        }
+      ]
+    },
+    "L23_kaf_final_quirky": {
+      "w": 1254,
+      "h": 1254,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L23_kaf_final_quirky.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1254,
+          "file": "L23_kaf_final_quirky.1254.webp",
           "w": 1254,
           "h": 1254
         }
@@ -8350,6 +8728,24 @@
         }
       ]
     },
+    "L24_mem_final_quirky": {
+      "w": 1254,
+      "h": 1254,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L24_mem_final_quirky.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1254,
+          "file": "L24_mem_final_quirky.1254.webp",
+          "w": 1254,
+          "h": 1254
+        }
+      ]
+    },
     "L25_nun_final_print_ari": {
       "w": 1254,
       "h": 1254,
@@ -8525,6 +8921,24 @@
         {
           "edge": 1254,
           "file": "L25_nun_final_print_v3.1254.webp",
+          "w": 1254,
+          "h": 1254
+        }
+      ]
+    },
+    "L25_nun_final_quirky": {
+      "w": 1254,
+      "h": 1254,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L25_nun_final_quirky.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1254,
+          "file": "L25_nun_final_quirky.1254.webp",
           "w": 1254,
           "h": 1254
         }
@@ -8734,6 +9148,24 @@
         }
       ]
     },
+    "L26_pe_final_quirky": {
+      "w": 1254,
+      "h": 1254,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L26_pe_final_quirky.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1254,
+          "file": "L26_pe_final_quirky.1254.webp",
+          "w": 1254,
+          "h": 1254
+        }
+      ]
+    },
     "L27_tsadi_final_cursive_trace": {
       "w": 512,
       "h": 512,
@@ -8921,6 +9353,24 @@
         {
           "edge": 1254,
           "file": "L27_tsadi_final_print_v3.1254.webp",
+          "w": 1254,
+          "h": 1254
+        }
+      ]
+    },
+    "L27_tsadi_final_quirky": {
+      "w": 1254,
+      "h": 1254,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L27_tsadi_final_quirky.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1254,
+          "file": "L27_tsadi_final_quirky.1254.webp",
           "w": 1254,
           "h": 1254
         }
@@ -20412,7 +20862,7 @@
     "L07_zayin_print_v1": "Olive (Hebrew: zayit), a vocabulary picture for the Hebrew letter Zayin.",
     "L07_zayin_print_v2": "Gold (Hebrew: zahav), a vocabulary picture for the Hebrew letter Zayin.",
     "L07_zayin_print_v3": "Clock (Hebrew: sha'on; time = zman), a vocabulary picture for the Hebrew letter Zayin.",
-    "L07_zayin_quirky": "QUIRKY ADDENDUM: a funny, slightly absurd cartoon in the same flat-vector style, one hero subject only (plus at most one small prop), a cheeky expression or pose, the same line weight and the same.",
+    "L07_zayin_quirky": "Memory picture: Zayin becomes a zipper pull on a zipper with gold teeth.",
     "L08_chet_print_ari": "Ari points at hut doorway, the memory picture for the Hebrew letter Chet.",
     "L08_chet_print_mnemonic": "Hut doorway, drawn so its outline echoes the shape of the Hebrew letter Chet: a gateway: two posts with a flat roof, no gap.",
     "L08_chet_print_noa": "Noa points at hut doorway, the memory picture for the Hebrew letter Chet.",
@@ -20443,7 +20893,7 @@
     "L10_yod_print_v1": "Hand (Hebrew: yad), a vocabulary picture for the Hebrew letter Yod.",
     "L10_yod_print_v2": "Sea (Hebrew: yam), a vocabulary picture for the Hebrew letter Yod.",
     "L10_yod_print_v3": "Boy (Hebrew: yeled), a vocabulary picture for the Hebrew letter Yod.",
-    "L10_yod_quirky": "QUIRKY ADDENDUM: a funny, slightly absurd cartoon in the same flat-vector style, one hero subject only (plus at most one small prop), a cheeky expression or pose, the same line weight and the same.",
+    "L10_yod_quirky": "Memory picture: Yod becomes a tiny hand at the top flicking a yo-yo on a string.",
     "L11_kaf_cursive_mnemonic": "The keyword object a cupped hand, drawn so its outline echoes silhouette (REF_cursive_kaf.png). Draw the object only, never the letter.",
     "L11_kaf_print_ari": "Ari points at cupped palm, the memory picture for the Hebrew letter Kaf / Khaf.",
     "L11_kaf_print_mnemonic": "Cupped palm, drawn so its outline echoes the shape of the Hebrew letter Kaf / Khaf: a rounded bracket open to the left, like a cupped hand.",
@@ -21366,6 +21816,31 @@
     "VOC_transport_08": "One centred image: a hotel key card. No people unless the item is an action.",
     "VOC_transport_09": "One centred image: a backpack. No people unless the item is an action.",
     "VOC_transport_10": "One centred image: a sunhat. No people unless the item is an action.",
-    "VOC_weather_04": "One centred image: a clock face without numbers. No people unless the item is an action."
+    "VOC_weather_04": "One centred image: a clock face without numbers. No people unless the item is an action.",
+    "L01_alef_quirky": "Memory picture: Aleph becomes a silent mime doing a handstand.",
+    "L02_bet_quirky": "Memory picture: Bet becomes a bungalow with a ball inside.",
+    "L03_gimel_quirky": "Memory picture: Gimel becomes a grumpy camel stomping with one foot kicked out.",
+    "L04_dalet_quirky": "Memory picture: Dalet becomes a diving board on one post over a pool.",
+    "L05_he_quirky": "Memory picture: He becomes a small hut on a mountain with a gap in the wall.",
+    "L06_vav_quirky": "Memory picture: Vav becomes a single straight vine hanging from a hook.",
+    "L08_chet_quirky": "Memory picture: Chet becomes a closed gate beside a loch with a jug of milk.",
+    "L09_tet_quirky": "Memory picture: Tet becomes a round teapot full of tea with its top curling in.",
+    "L11_kaf_quirky": "Memory picture: Kaf becomes a cup lying on its side.",
+    "L12_lamed_quirky": "Memory picture: Lamed becomes a tall bent lamp post with a cone of light.",
+    "L13_mem_quirky": "Memory picture: Mem becomes a mailbox on a post with a letter and a flag.",
+    "L14_nun_quirky": "Memory picture: Nun becomes a cat curled up asleep.",
+    "L15_samekh_quirky": "Memory picture: Samekh becomes a striped swim ring floating on water.",
+    "L16_ayin_quirky": "Memory picture: Ayin becomes a big open eye whose lid curve is the letter.",
+    "L17_pe_quirky": "Memory picture: Pe becomes a mouth blowing a bubble with the tongue curled inside.",
+    "L18_tsadi_quirky": "Memory picture: Tsadi becomes a bird on a pizza box beside a slice of pizza.",
+    "L19_qof_quirky": "Memory picture: Qof becomes a red kite with a long string dangling below the line.",
+    "L20_resh_quirky": "Memory picture: Resh becomes a smooth round head in profile, growling.",
+    "L21_shin_quirky": "Memory picture: Shin becomes a shortcake with three candle flames.",
+    "L22_tav_quirky": "Memory picture: Tav becomes a small table with a baby beside it.",
+    "L23_kaf_final_quirky": "Memory picture: Final kaf becomes a king whose long cloak trails into a loch.",
+    "L24_mem_final_quirky": "Memory picture: Final mem becomes a zipped tent by the sea with mom at the door.",
+    "L25_nun_final_quirky": "Memory picture: Final nun becomes one tall nail hammered upright into a stone.",
+    "L26_pe_final_quirky": "Memory picture: Final pe becomes a big feather held off the tip of a nose.",
+    "L27_tsadi_final_quirky": "Memory picture: Final tsadi becomes a tall Y-branched tree with nuts hanging from it."
   }
 }

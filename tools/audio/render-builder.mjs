@@ -9,13 +9,20 @@ const read = p => JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
 const config = read('tools/audio/voices.json');
 const words = read('data/builder_words.json');
 const symbols = read('data/builder_symbols.json');
-const rows = [...words,...symbols.letters,...symbols.marks].flatMap(w => ['ari','noa'].map(v => ({
+// Vowel and dot names (symbols.marks) are read from pointed text. The Chirp 3 HD voices ignore the points on these short names
+// (sheva, qamats and patah came out as other words), so they use the WaveNet pair that reads the letter names correctly.
+const markVoice = v => config[v === 'ari' ? 'marksAri' : 'marksNoa'] || config[v];
+const rows = [...words,...symbols.letters].flatMap(w => ['ari','noa'].map(v => ({
   id: w.id, text: w.nikud, voice: config[v], path: w['audio_'+v],
-})));
+}))).concat(symbols.marks.flatMap(w => ['ari','noa'].map(v => ({
+  id: w.id, text: w.nikud, voice: markVoice(v), path: w['audio_'+v],
+}))));
 const manifestPath = path.join(root,'tools/audio/builder-manifest.json');
 const existing = fs.existsSync(manifestPath) ? read('tools/audio/builder-manifest.json') : { clips: [] };
 const fingerprint = r => createHash('sha256').update(JSON.stringify([r.text,r.voice,config.bitrateKbps])).digest('hex');
-const pending = rows.filter(r => process.argv.includes('--redo') || !existing.clips.some(c => c.path===r.path && c.fingerprint===fingerprint(r) && fs.existsSync(path.join(root,r.path))));
+// A clip with a "source" in the manifest was copied from a checked recording (letter names: audio/{m,f}/israeli/letter). Never re-render it.
+const pinned = new Set(existing.clips.filter(c => c.source).map(c => c.path));
+const pending = rows.filter(r => !pinned.has(r.path)).filter(r => process.argv.includes('--redo') || !existing.clips.some(c => c.path===r.path && c.fingerprint===fingerprint(r) && fs.existsSync(path.join(root,r.path))));
 console.log(JSON.stringify({total: rows.length, pending: pending.length, characters: pending.reduce((n,r)=>n+[...r.text].length,0), estimatedUSD: pending.reduce((n,r)=>n+[...r.text].length,0)*30/1e6}));
 if (!process.argv.includes('--execute')) process.exit(0);
 const key = process.env.GOOGLE_TTS_API_KEY;

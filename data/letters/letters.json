@@ -7930,7 +7930,7 @@
  {
   "id": "pe",
   "name": "Pe",
-  "nameHe": "פֵא",
+  "nameHe": "פֵּא",
   "he": "פ",
   "gematria": 80,
   "sound": {
@@ -13003,7 +13003,7 @@
  {
   "id": "pe-final",
   "name": "Final Pe",
-  "nameHe": "פֵא סוֹפִית",
+  "nameHe": "פֵּא סוֹפִית",
   "he": "ף",
   "finalOf": "pe",
   "gematria": 800,

@@ -97,6 +97,16 @@ export function createImageResolver(opts) {
     if (!id) return null;
     let list = candidates(kind, id, o);
     if (o.role) list = list.filter((e) => e.id.endsWith(`_${o.role}`) || e.id.endsWith(`-${o.role}`));
+    // Letters: the memory picture that matches the story on the card (letter:<id>:quirky) stands in for a retired
+    // "mnemonic" picture, and comes before the vocabulary pictures when no role is asked for.
+    if (kind === 'letter' && o.slot == null && o.script !== 'cursive' && (o.role === 'mnemonic' || (!o.role && !o.variant))) {
+      const memory = candidates('letter', id, { variant: 'quirky' });
+      if (o.role) list = [...list, ...memory];
+      else {
+        const first = list.filter((e) => /_(meet|mnemonic)$/.test(e.id));
+        list = [...first, ...memory, ...list.filter((e) => !first.includes(e) && !memory.some((m) => m.id === e.id))];
+      }
+    }
     if (o.slot != null) {
       const n = +o.slot;
       if (kind === 'theme') list = list.filter((e) => +(/(\d+)$/.exec(e.id)?.[1] ?? NaN) === n); // VOC_<theme>_<NN>

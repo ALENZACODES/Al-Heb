@@ -121,6 +121,8 @@
 .ret-month[hidden] { display: none; }
 .ret-month h2, .ret-numbers h2 { margin: 0 0 .4rem; font-size: 1.1rem; }
 .ret-month p { margin: .4rem 0 0; }
+.ret-season-list { list-style: none; margin: .5rem 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: .4rem .8rem; }
+.ret-season-list a { min-block-size: 2.75rem; display: inline-flex; align-items: center; }
 .ret-month-bar { block-size: .8rem; border-radius: 999px; background: var(--border); overflow: hidden; }
 .ret-month-bar span { display: block; block-size: 100%; inline-size: calc(var(--w) * 1%); background: #c9a227; border-radius: 999px; }
 .ret-numbers dl { display: grid; grid-template-columns: 1fr auto; gap: .3rem 1rem; margin: 0; }

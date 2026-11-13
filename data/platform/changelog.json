@@ -4,6 +4,16 @@
  "entries": [
   {
    "date": "2026-11-12",
+   "hash": "49481613c",
+   "text": "The 28 Level 3–9 game pages show the Ari, Noa and Rimon backdrop inside the game, above the controls."
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "1f462177d",
+   "text": "Release build: precache list, build stamp and change list rebuilt for the Level 3–9 pictures of Ari, Noa and Rimon"
+  },
+  {
+   "date": "2026-11-12",
    "hash": "52732766c",
    "text": "The 28 older Level 3–9 game pictures now show Ari, Noa and Rimon doing something that fits each game, on that game's own approved backdrop."
   },
@@ -191,16 +201,6 @@
    "date": "2026-11-12",
    "hash": "540018dc7",
    "text": "Accent run 8 list: the Ashkenazi rows of the festival-day Kiddush verses"
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "ae212763e",
-   "text": "New games: Root Builder (answers only from the app's root families and verb list), Sixty-Second Sprint (lesson words, combo multiplier), Word Finder by ear and Listen and Spot…"
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "8daa969b4",
-   "text": "Games library: one count of every game on the games page (186, from the counts module), skill and played/mastered filters, best and last score on every card, practice links, level…"
   }
  ]
 }

@@ -201,3 +201,30 @@ test('the screen: a story is cut one line early, the learner\'s ending is saved,
   assert.equal(host.querySelector('h2').textContent, 'One Thing Is Wrong. Type It Right.');
   unmount();
 });
+
+test('postcards: built only from stored greetings, places, lines and sign-offs, plus what the learner types; the Name is never spelled', async () => {
+  const W = await import('../src/writing/writing.js'); const stored = new Set(pack.phrases.map((p) => p.he)); const places = new Set(pack.places.map((p) => p.he));
+  const c = W.postcardChoices(pack);
+  assert.ok(c.greeting.length >= 3 && c.signoff.length >= 2 && c.line.length >= 6); assert.equal(c.place.length, 9);
+  for (const x of [...c.greeting, ...c.line, ...c.signoff]) assert.ok(stored.has(x.he), x.he); for (const x of c.place) assert.ok(places.has(x.he));
+  const picks = { greeting: c.greeting[0].id, place: 'haifa', line: c.line[0].id, signoff: c.signoff[0].id };
+  const card = W.postcard(c, picks, { to: 'דנה', from: 'John' });
+  assert.deepEqual(card.he, [`${c.greeting[0].he}, דנה!`, 'חיפה', c.line[0].he, c.signoff[0].he, 'John']); assert.equal(card.en[1], 'Haifa');
+  assert.equal(W.postcard(c, picks, { own: `ברוך ${NAME}` }).he[2], `ברוך ${NAME_SHOWN}`); assert.equal(W.postcard(c, picks, {}).he[0], `${c.greeting[0].he}!`);
+  assert.equal(W.postcard(c, { ...picks, place: 'mars' }, {}), null);
+});
+
+test('the screen: a postcard is put together and kept under My Writing', async () => {
+  const { createDocument, ev, flush } = await import('./rimon.fakedom.js');
+  const doc = createDocument(); globalThis.document = doc;
+  const { mount } = await import('../src/writing/writing.view.js');
+  const mem = {}; const store = { get: (k) => mem[k], set: (k, v) => { mem[k] = JSON.parse(JSON.stringify(v)); } };
+  const host = doc.createElement('div'); doc.body.append(host);
+  const unmount = await mount(host, { store, writingData: { prompts, pack }, clock: { now: () => at(2026, 11, 13) }, query: { part: 'postcard' } });
+  assert.ok(host.querySelector('#wr-pc-card').textContent.includes('ירושלים'), 'the card shows the first place');
+  const to = host.querySelector('#wr-pc-to'); to.value = 'דנה'; to.dispatchEvent(ev('input'));
+  assert.ok(host.querySelector('#wr-pc-card').textContent.includes('דנה'));
+  host.querySelector('#wr-pc-save').dispatchEvent(ev('click')); await flush(10);
+  assert.equal(mem[WRITING_KEY].answers[0].drill, 'postcard'); assert.ok(mem[WRITING_KEY].answers[0].typed.includes('דנה'));
+  unmount();
+});

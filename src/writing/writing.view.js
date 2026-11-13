@@ -6,13 +6,13 @@
 // Nothing leaves the device. Store key: writing.v1. Tests inject ctx.writingData {prompts, pack}, ctx.clock {now}, ctx.rng.
 import { el, heText, storeGet, storeSet } from '../curriculum/dom.js';
 import { loadJSON } from '../curriculum/data.js';
-import { WRITING_KEY, normalizeState, promptFor, saveEntry, journalStreak, exportText, dayKey, showName, gradeHebrew, freeTextItems, rewriteItems, pickRound, recordAnswer, REWRITE_ASK, copyCheck, copySpeed, copyItems, portfolio, searchPortfolio, portfolioText, PORTFOLIO_KIND, gymItems, errorItems, storyCut, saveEnding } from './writing.js';
+import { WRITING_KEY, normalizeState, promptFor, saveEntry, journalStreak, exportText, dayKey, showName, gradeHebrew, freeTextItems, rewriteItems, pickRound, recordAnswer, REWRITE_ASK, copyCheck, copySpeed, copyItems, portfolio, searchPortfolio, portfolioText, PORTFOLIO_KIND, gymItems, errorItems, storyCut, saveEnding, postcardChoices, postcard } from './writing.js';
 
 export const ROUND = 8;
 export const COPY = Object.freeze({
   title: 'Writing',
   lead: 'Write a few lines each day, and practise typing Hebrew from memory. What you write stays on this device.',
-  journal: 'Journal', answer: 'Type The Answer', rewrite: 'Rewrite', copy: 'Copy-Work', portfolio: 'My Writing', gym: 'Translation Gym', errors: 'Find The Error', story: 'Finish The Story',
+  journal: 'Journal', answer: 'Type The Answer', rewrite: 'Rewrite', copy: 'Copy-Work', portfolio: 'My Writing', gym: 'Translation Gym', errors: 'Find The Error', story: 'Finish The Story', postcard: 'Postcard',
   storyHint: 'Write the last line yourself, in Hebrew or in English. Then see how the book ends.',
   copyHint: 'Type the line exactly as it is shown. Vowel points are not needed.',
   nothingYet: 'Nothing here yet. What you write on the other parts of this page collects here.',
@@ -54,7 +54,7 @@ export async function mount(root, ctx = {}) {
   const tabs = {};
   const show = (name) => { for (const [k, b] of Object.entries(tabs)) b.setAttribute('aria-pressed', String(k === name)); panel.replaceChildren(views[name]()); };
   const bar = el('div', { class: 'wr-tabs', role: 'group', 'aria-label': 'Parts of Writing' });
-  for (const name of ['journal', 'answer', 'gym', 'rewrite', 'errors', 'copy', 'story', 'portfolio']) { tabs[name] = el('button', { type: 'button', class: 'btn secondary', 'data-tab': name, 'aria-pressed': 'false', onclick: () => show(name) }, COPY[name]); bar.append(tabs[name]); }
+  for (const name of ['journal', 'answer', 'gym', 'rewrite', 'errors', 'copy', 'story', 'postcard', 'portfolio']) { tabs[name] = el('button', { type: 'button', class: 'btn secondary', 'data-tab': name, 'aria-pressed': 'false', onclick: () => show(name) }, COPY[name]); bar.append(tabs[name]); }
   wrap.append(bar, panel);
 
   function journal() {
@@ -181,8 +181,41 @@ export async function mount(root, ctx = {}) {
     return host;
   }
 
+  function postcardPart() {
+    const choices = postcardChoices(pack);
+    if (!choices.greeting.length || !choices.place.length || !choices.signoff.length) return el('p', {}, 'This part could not load its lines. Check your connection and open the page again.');
+    const sel = (id, name, list) => el('select', { id, 'aria-label': name }, list.map((x) => el('option', { value: x.id }, `${x.he}  (${x.en})`)));
+    const g = sel('wr-pc-greeting', 'Greeting', choices.greeting), pl = sel('wr-pc-place', 'Where are you?', choices.place), ln = sel('wr-pc-line', 'Your line', choices.line), so = sel('wr-pc-signoff', 'Sign-off', choices.signoff);
+    const text = (id, name, max) => /** @type {HTMLInputElement} */ (el('input', { type: 'text', id, 'aria-label': name, maxlength: String(max), dir: 'auto', autocomplete: 'off' }));
+    const to = text('wr-pc-to', 'Who is it for?', 30), own = text('wr-pc-own', 'Your own line in Hebrew', 80), from = text('wr-pc-from', 'Your name', 30);
+    const card = el('div', { id: 'wr-pc-card', class: 'wr-card', dir: 'rtl', lang: 'he', style: 'text-align:center;border-width:3px' }); const note = el('p', { class: 'muted', role: 'status', 'aria-live': 'polite' });
+    const val = (n, list) => /** @type {any} */ (n).value || list[0]?.id;
+    const read = () => postcard(choices, { greeting: val(g, choices.greeting), place: val(pl, choices.place), line: val(ln, choices.line), signoff: val(so, choices.signoff) }, { to: to.value, own: own.value, from: from.value });
+    const paint = () => { const c = read(); card.replaceChildren(...(c ? c.he.map((l, i) => el('p', { class: i === 1 ? 'muted' : 'wr-he' }, l)) : [el('p', {}, '\u2026')])); };
+    for (const n of [g, pl, ln, so]) n.addEventListener('change', paint);
+    for (const n of [to, own, from]) n.addEventListener('input', paint);
+    const save = async () => {
+      const c = read(); if (!c) return;
+      await keep(recordAnswer(state, { at: now(), drill: 'postcard', ask: `pc-${now()}`, typed: c.he.join(' / '), ok: true }));
+      note.textContent = 'Your postcard is saved under My Writing.';
+      try {   // a picture of the card, when the browser can draw one
+        const cv = /** @type {HTMLCanvasElement} */ (document.createElement('canvas')); cv.width = 1200; cv.height = 800; const x = cv.getContext('2d');
+        if (!x) return;
+        x.fillStyle = '#16301C'; x.fillRect(0, 0, 1200, 800); x.strokeStyle = '#C9A227'; x.lineWidth = 12; x.strokeRect(30, 30, 1140, 740);
+        x.fillStyle = '#F5E9C8'; x.textAlign = 'center'; x.direction = 'rtl';
+        c.he.forEach((l, i) => { x.font = `${i === 1 ? 44 : 64}px "Alef", "Heebo", system-ui, sans-serif`; x.fillText(l, 600, 190 + i * 125, 1060); });
+        cv.toBlob((blob) => { if (!blob) return; const a = el('a', { href: URL.createObjectURL(blob), download: 'aleph-postcard.png' }); a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 2000); note.textContent = 'Your postcard is saved under My Writing, and as a picture.'; }, 'image/png');
+      } catch { /* no picture on this browser; the words are saved */ }
+    };
+    paint();
+    return el('div', { class: 'wr-card' }, el('h2', {}, 'Write A Postcard'), el('label', { for: 'wr-pc-greeting' }, 'Greeting'), g, el('label', { for: 'wr-pc-to' }, 'Who Is It For?'), to,
+      el('label', { for: 'wr-pc-place' }, 'Where Are You?'), pl, el('label', { for: 'wr-pc-line' }, 'Your Line'), ln, el('label', { for: 'wr-pc-own' }, 'Or Write Your Own Line In Hebrew'), own,
+      el('label', { for: 'wr-pc-signoff' }, 'Sign-Off'), so, el('label', { for: 'wr-pc-from' }, 'Your Name'), from, card,
+      el('div', { class: 'wr-row' }, el('button', { type: 'button', class: 'btn', id: 'wr-pc-save', onclick: save }, 'Save My Postcard')), note);
+  }
+
   const views = {
-    journal, copy: copyWork, portfolio: myWriting, story,
+    journal, copy: copyWork, portfolio: myWriting, story, postcard: postcardPart,
     gym: () => drill('gym', gymItems(pack), (item) => [el('h2', {}, 'Translate Into Hebrew'), el('p', { class: 'wr-he', lang: 'en' }, item.en)]),
     errors: () => drill('errors', errorItems(pack), (item) => [el('h2', {}, 'One Thing Is Wrong. Type It Right.'), heText(item.wrong, 'alef-he wr-he'), el('p', { class: 'muted' }, `It should mean: ${item.en}`)]),
     answer: () => drill('answer', freeTextItems(pack), (item) => [el('h2', {}, 'Say It In Hebrew'), el('p', { class: 'wr-he', lang: 'en' }, item.en)]),

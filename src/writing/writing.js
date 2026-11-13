@@ -205,12 +205,12 @@ export function copyItems(pack) {
 }
 
 // ---- the portfolio --------------------------------------------------------------------------------------------------------------
-export const PORTFOLIO_KIND = Object.freeze({ journal: 'Journal', answer: 'Typed Answer', rewrite: 'Rewrite', copy: 'Copy-Work', gym: 'Translation', errors: 'Correction', story: 'Story Ending' });
+export const PORTFOLIO_KIND = Object.freeze({ journal: 'Journal', answer: 'Typed Answer', rewrite: 'Rewrite', copy: 'Copy-Work', gym: 'Translation', errors: 'Correction', story: 'Story Ending', postcard: 'Postcard' });
 /** Everything the learner has written, newest first: journal entries and every typed line. @returns {{at:number, day:string, kind:string, text:string, ok:boolean|null}[]} */
 export function portfolio(state) {
   const s = normalizeState(state);
   const out = s.entries.map((e) => ({ at: e.at, day: e.day, kind: 'journal', text: e.text, ok: null }));
-  for (const a of s.answers) out.push({ at: a.at, day: dayKey(a.at), kind: PORTFOLIO_KIND[a.drill] ? a.drill : 'answer', text: a.typed, ok: a.drill === 'story' ? null : a.ok });
+  for (const a of s.answers) out.push({ at: a.at, day: dayKey(a.at), kind: PORTFOLIO_KIND[a.drill] ? a.drill : 'answer', text: a.typed, ok: a.drill === 'story' || a.drill === 'postcard' ? null : a.ok });
   return out.sort((x, y) => y.at - x.at);
 }
 /** The items that hold the words searched for (any language, vowel points ignored), or all of them for an empty search. */
@@ -264,4 +264,29 @@ export function saveEnding(state, { at, bookId, text }) {
   const s = normalizeState(state); const body = String(text || '').trim().slice(0, 600);
   const rest = s.answers.filter((a) => !(a.drill === 'story' && a.ask === bookId));
   return body ? { ...s, answers: [{ at, drill: 'story', ask: bookId, typed: body, ok: true }, ...rest].slice(0, MAX_ANSWERS) } : { ...s, answers: rest };
+}
+
+// ---- postcards -------------------------------------------------------------------------------------------------------------------
+const POSTCARD = { greeting: ['t-hello', 't-morning', 't-evening'], line: ['t-all-good', 't-delicious', 't-food-excellent', 't-like-it', 't-learning-hebrew', 't-speak-little'], signoff: ['t-bye', 't-see-tomorrow', 't-thanks-much'] };
+const ISRAEL_PLACES = ['jerusalem', 'tel aviv', 'haifa', 'eilat', 'beer sheva', 'tiberias', 'safed', 'the dead sea', 'nazareth'];
+/** What a postcard can be made of: stored greetings, places in Israel, stored lines and stored sign-offs. Nothing is composed that the app does not store. */
+export function postcardChoices(pack) {
+  const by = new Map(((pack && pack.phrases) || []).map((p) => [p.id, p])); const place = new Map(((pack && pack.places) || []).map((p) => [p.en[0], p.he]));
+  const pick = (ids) => ids.map((id) => by.get(id)).filter(Boolean).map((p) => ({ id: p.id, he: p.he, en: p.en[0] }));
+  const more = ((pack && pack.phrases) || []).filter((p) => p.cat === 'smalltalk' && !POSTCARD.line.includes(p.id) && !/\?/.test(p.he)).slice(0, 8).map((p) => ({ id: p.id, he: p.he, en: p.en[0] }));
+  return { greeting: pick(POSTCARD.greeting), place: ISRAEL_PLACES.filter((n) => place.has(n)).map((n) => ({ id: n, he: place.get(n), en: n.replace(/\b[a-z]/g, (c) => c.toUpperCase()) })), line: [...pick(POSTCARD.line), ...more], signoff: pick(POSTCARD.signoff) };
+}
+/**
+ * The lines of a postcard, top to bottom: the greeting (with who it is for), the place, the learner's line, the sign-off and the name.
+ * @param {{greeting:string, place:string, line:string, signoff:string}} picks ids from postcardChoices
+ * @param {{to?:string, from?:string, own?:string}} [words] typed by the learner; `own` replaces the chosen line
+ * @returns {{he:string[], en:string[]}|null}
+ */
+export function postcard(choices, picks, words = {}) {
+  const get = (k) => (choices[k] || []).find((x) => x.id === picks[k]);
+  const g = get('greeting'), p = get('place'), l = get('line'), s = get('signoff');
+  const clean = (x, n) => showName(String(x || '').replace(/\s+/g, ' ').trim().slice(0, n));
+  const own = clean(words.own, 80), to = clean(words.to, 30), from = clean(words.from, 30);
+  if (!g || !p || !s || !(own || l)) return null;
+  return { he: [to ? `${g.he}, ${to}!` : `${g.he}!`, p.he, own || l.he, s.he, from].filter(Boolean), en: [g.en, p.en, own ? '' : l.en, s.en].filter(Boolean) };
 }

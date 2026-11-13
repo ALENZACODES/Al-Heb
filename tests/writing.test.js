@@ -163,3 +163,41 @@ test('the screen: a copied line is marked and kept, and shows up under My Writin
   assert.match(host.querySelector('#wr-count').textContent, /^1 of 1 piece\./); assert.match(host.querySelector('#wr-portfolio').textContent, /Copy-Work, not yet/);
   unmount();
 });
+
+test('translation gym, error-spotting and story endings', async () => {
+  const W = await import('../src/writing/writing.js');
+  const gym = W.gymItems(pack); assert.ok(gym.length >= 50); for (const g of gym) assert.ok(heKey(g.he).split(' ').length >= 4);
+  const errs = W.errorItems(pack); assert.ok(errs.length >= 50);
+  for (const e of errs) { assert.notEqual(heKey(e.wrong), heKey(e.he)); assert.equal(gradeHebrew(e.he, e).kind, 'exact'); assert.equal(gradeHebrew(e.wrong, e).ok, false, e.id); assert.ok(W.ERROR_RULE[e.rule]); }
+  const t = errs.find((e) => e.id === 'e-כרטיס-number'); assert.equal(t.wrong, 'יש לי שני כרטיס'); assert.equal(t.he, 'יש לי שני כרטיסים'); assert.equal(t.en, 'I have two tickets.');
+  const f = errs.find((e) => e.id === 'e-קערה-gender'); assert.equal(f.wrong, 'יש לי שני קערות'); assert.equal(f.he, 'יש לי שתי קערות');
+  let opened = 0;
+  for (let n = 1; n <= 62; n++) {
+    let book; try { book = json(`data/books/book${n}.json`); } catch { continue; }
+    const cut = W.storyCut(book); if (!cut) continue; opened++;
+    assert.equal(cut.lines.length, book.pages.filter((p) => p.he && p.en).length - 1); assert.ok(cut.ending.he && cut.ending.en);
+    assert.ok(![...cut.lines, cut.ending].some((l) => l.he.replace(/[֑-ׇ]/g, '').includes(NAME)), `book ${n}`);
+  }
+  assert.ok(opened >= 55, `${opened} books can be cut`); assert.equal(W.storyCut({ pages: [{ he: 'א', en: 'a' }] }), null);
+  let s = W.saveEnding(normalizeState(null), { at: 5, bookId: 'book1', text: ' And they all went home. ' });
+  s = W.saveEnding(s, { at: 9, bookId: 'book1', text: 'And they slept.' });
+  assert.equal(s.answers.length, 1); assert.equal(s.answers[0].typed, 'And they slept.');
+  assert.deepEqual(W.portfolio(s).map((x) => [x.kind, x.ok]), [['story', null]]); assert.equal(W.saveEnding(s, { at: 10, bookId: 'book1', text: '' }).answers.length, 0);
+});
+
+test('the screen: a story is cut one line early, the learner\'s ending is saved, then the real ending is shown', async () => {
+  const { createDocument, ev, flush } = await import('./rimon.fakedom.js');
+  const doc = createDocument(); globalThis.document = doc;
+  const { mount } = await import('../src/writing/writing.view.js');
+  const mem = {}; const store = { get: (k) => mem[k], set: (k, v) => { mem[k] = JSON.parse(JSON.stringify(v)); } };
+  const host = doc.createElement('div'); doc.body.append(host); const book = json('data/books/book1.json');
+  const unmount = await mount(host, { store, writingData: { prompts, pack, books: { 1: book } }, clock: { now: () => at(2026, 11, 13) }, query: { part: 'story', book: '1' } });
+  await flush(10);
+  const last = book.pages[book.pages.length - 1];
+  assert.ok(!host.textContent.includes(last.en), 'the last line is kept back');
+  host.querySelector('#wr-ending').value = 'Everyone is happy.'; host.querySelector('#wr-story-show').dispatchEvent(ev('click')); await flush(10);
+  assert.ok(host.querySelector('#wr-story-end').textContent.includes(last.en)); assert.equal(mem[WRITING_KEY].answers[0].drill, 'story'); assert.equal(mem[WRITING_KEY].answers[0].ask, book.id);
+  host.querySelector('[data-tab=errors]').dispatchEvent(ev('click')); await flush(5);
+  assert.equal(host.querySelector('h2').textContent, 'One Thing Is Wrong. Type It Right.');
+  unmount();
+});

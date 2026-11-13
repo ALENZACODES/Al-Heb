@@ -6,13 +6,14 @@
 // Nothing leaves the device. Store key: writing.v1. Tests inject ctx.writingData {prompts, pack}, ctx.clock {now}, ctx.rng.
 import { el, heText, storeGet, storeSet } from '../curriculum/dom.js';
 import { loadJSON } from '../curriculum/data.js';
-import { WRITING_KEY, normalizeState, promptFor, saveEntry, journalStreak, exportText, dayKey, showName, gradeHebrew, freeTextItems, rewriteItems, pickRound, recordAnswer, REWRITE_ASK, copyCheck, copySpeed, copyItems, portfolio, searchPortfolio, portfolioText, PORTFOLIO_KIND } from './writing.js';
+import { WRITING_KEY, normalizeState, promptFor, saveEntry, journalStreak, exportText, dayKey, showName, gradeHebrew, freeTextItems, rewriteItems, pickRound, recordAnswer, REWRITE_ASK, copyCheck, copySpeed, copyItems, portfolio, searchPortfolio, portfolioText, PORTFOLIO_KIND, gymItems, errorItems, storyCut, saveEnding } from './writing.js';
 
 export const ROUND = 8;
 export const COPY = Object.freeze({
   title: 'Writing',
   lead: 'Write a few lines each day, and practise typing Hebrew from memory. What you write stays on this device.',
-  journal: 'Journal', answer: 'Type The Answer', rewrite: 'Rewrite', copy: 'Copy-Work', portfolio: 'My Writing',
+  journal: 'Journal', answer: 'Type The Answer', rewrite: 'Rewrite', copy: 'Copy-Work', portfolio: 'My Writing', gym: 'Translation Gym', errors: 'Find The Error', story: 'Finish The Story',
+  storyHint: 'Write the last line yourself, in Hebrew or in English. Then see how the book ends.',
   copyHint: 'Type the line exactly as it is shown. Vowel points are not needed.',
   nothingYet: 'Nothing here yet. What you write on the other parts of this page collects here.',
   journalHint: 'Write in any language. A line or two is enough.',
@@ -53,7 +54,7 @@ export async function mount(root, ctx = {}) {
   const tabs = {};
   const show = (name) => { for (const [k, b] of Object.entries(tabs)) b.setAttribute('aria-pressed', String(k === name)); panel.replaceChildren(views[name]()); };
   const bar = el('div', { class: 'wr-tabs', role: 'group', 'aria-label': 'Parts of Writing' });
-  for (const name of ['journal', 'answer', 'rewrite', 'copy', 'portfolio']) { tabs[name] = el('button', { type: 'button', class: 'btn secondary', 'data-tab': name, 'aria-pressed': 'false', onclick: () => show(name) }, COPY[name]); bar.append(tabs[name]); }
+  for (const name of ['journal', 'answer', 'gym', 'rewrite', 'errors', 'copy', 'story', 'portfolio']) { tabs[name] = el('button', { type: 'button', class: 'btn secondary', 'data-tab': name, 'aria-pressed': 'false', onclick: () => show(name) }, COPY[name]); bar.append(tabs[name]); }
   wrap.append(bar, panel);
 
   function journal() {
@@ -153,8 +154,37 @@ export async function mount(root, ctx = {}) {
     return el('div', { class: 'wr-card' }, el('h2', {}, 'Everything You Have Written'), el('label', { for: 'wr-find' }, 'Search Your Writing'), find, el('div', { class: 'wr-row' }, save), count, note, list);
   }
 
+  const BOOKS = 62;
+  function story() {
+    const host = el('div', { class: 'wr-card' });
+    const open = async (n) => {
+      host.replaceChildren(el('p', { role: 'status' }, 'Opening the book\u2026'));
+      const book = (data.books && data.books[n]) || await loadJSON(`data/books/book${n}.json`).catch(() => null);
+      if (!alive) return;
+      const cut = storyCut(book);
+      if (!cut) { host.replaceChildren(el('p', {}, 'That book could not be opened.'), el('button', { type: 'button', class: 'btn', id: 'wr-story-other', onclick: () => open(1 + (n % BOOKS)) }, 'Try Another Book')); return; }
+      const mine = state.answers.find((a) => a.drill === 'story' && a.ask === cut.id);
+      const box = el('textarea', { id: 'wr-ending', dir: 'auto', maxlength: '600', 'aria-describedby': 'wr-story-hint' }); box.value = mine ? mine.typed : '';
+      const out = el('div', { id: 'wr-story-end', role: 'status', 'aria-live': 'polite' });
+      const reveal = async () => {
+        if (!box.value.trim()) { out.replaceChildren(el('p', {}, 'Write your ending first.')); return; }
+        await keep(saveEnding(state, { at: now(), bookId: cut.id, text: box.value }));
+        out.replaceChildren(el('h3', {}, 'How The Book Ends'), heText(cut.ending.he, 'alef-he wr-he'), el('p', {}, cut.ending.en), el('p', { class: 'muted' }, 'Your ending is saved under My Writing.'));
+      };
+      host.replaceChildren(el('h2', {}, cut.title, ' ', heText(cut.titleHe)), el('ol', {}, cut.lines.map((l) => el('li', {}, heText(l.he, 'alef-he wr-he'), el('span', { class: 'muted' }, l.en)))),
+        el('label', { for: 'wr-ending' }, 'Your Last Line'), box, el('p', { id: 'wr-story-hint', class: 'muted' }, COPY.storyHint),
+        el('div', { class: 'wr-row' }, el('button', { type: 'button', class: 'btn', id: 'wr-story-show', onclick: reveal }, 'Save Mine And Show The Ending'), el('button', { type: 'button', class: 'btn secondary', id: 'wr-story-other', onclick: () => open(1 + (n % BOOKS)) }, 'Another Book')), out);
+    };
+    const done = new Set(state.answers.filter((a) => a.drill === 'story').map((a) => String(a.ask)));
+    let first = 1; for (let n = 1; n <= BOOKS; n++) if (!done.has(`book${n}`) && !done.has(String(n))) { first = n; break; }
+    open(ctx.query && Number(ctx.query.book) >= 1 ? Number(ctx.query.book) : first);
+    return host;
+  }
+
   const views = {
-    journal, copy: copyWork, portfolio: myWriting,
+    journal, copy: copyWork, portfolio: myWriting, story,
+    gym: () => drill('gym', gymItems(pack), (item) => [el('h2', {}, 'Translate Into Hebrew'), el('p', { class: 'wr-he', lang: 'en' }, item.en)]),
+    errors: () => drill('errors', errorItems(pack), (item) => [el('h2', {}, 'One Thing Is Wrong. Type It Right.'), heText(item.wrong, 'alef-he wr-he'), el('p', { class: 'muted' }, `It should mean: ${item.en}`)]),
     answer: () => drill('answer', freeTextItems(pack), (item) => [el('h2', {}, 'Say It In Hebrew'), el('p', { class: 'wr-he', lang: 'en' }, item.en)]),
     rewrite: () => drill('rewrite', rewriteItems(pack), (item) => [el('h2', {}, REWRITE_ASK[item.kind]), heText(item.from, 'alef-he wr-he'), el('p', { class: 'muted' }, item.en)]),
   };

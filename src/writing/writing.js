@@ -205,12 +205,12 @@ export function copyItems(pack) {
 }
 
 // ---- the portfolio --------------------------------------------------------------------------------------------------------------
-export const PORTFOLIO_KIND = Object.freeze({ journal: 'Journal', answer: 'Typed Answer', rewrite: 'Rewrite', copy: 'Copy-Work' });
+export const PORTFOLIO_KIND = Object.freeze({ journal: 'Journal', answer: 'Typed Answer', rewrite: 'Rewrite', copy: 'Copy-Work', gym: 'Translation', errors: 'Correction', story: 'Story Ending' });
 /** Everything the learner has written, newest first: journal entries and every typed line. @returns {{at:number, day:string, kind:string, text:string, ok:boolean|null}[]} */
 export function portfolio(state) {
   const s = normalizeState(state);
   const out = s.entries.map((e) => ({ at: e.at, day: e.day, kind: 'journal', text: e.text, ok: null }));
-  for (const a of s.answers) out.push({ at: a.at, day: dayKey(a.at), kind: PORTFOLIO_KIND[a.drill] ? a.drill : 'answer', text: a.typed, ok: a.ok });
+  for (const a of s.answers) out.push({ at: a.at, day: dayKey(a.at), kind: PORTFOLIO_KIND[a.drill] ? a.drill : 'answer', text: a.typed, ok: a.drill === 'story' ? null : a.ok });
   return out.sort((x, y) => y.at - x.at);
 }
 /** The items that hold the words searched for (any language, vowel points ignored), or all of them for an empty search. */
@@ -221,4 +221,47 @@ export function searchPortfolio(items, query) {
 /** The portfolio as plain text to keep. */
 export function portfolioText(items) {
   return ['My Aleph Writing', '', ...items.map((x) => `${x.day}  ${PORTFOLIO_KIND[x.kind]}${x.ok === null ? '' : x.ok ? '  (right)' : '  (not yet)'}\n${x.text}\n`)].join('\n');
+}
+
+// ---- translation gym: whole sentences ----------------------------------------------------------------------------------------------
+/** Longer stored lines (four Hebrew words or more) to translate from English, with every stored wording accepted. */
+export function gymItems(pack) { return freeTextItems(pack).filter((x) => heKey(x.he).split(' ').length >= 4); }
+
+// ---- error-spotting --------------------------------------------------------------------------------------------------------------
+export const ERROR_RULE = Object.freeze({
+  number: 'After "two" the noun is in the plural.',
+  gender: 'The word for "two" follows the noun: שני before a masculine noun, שתי before a feminine one.',
+});
+const pluralEn = (w) => ({ knife: 'knives', glass: 'glasses' }[w] || (/(s|x|ch|sh)$/.test(w) ? `${w}es` : /[^aeiou]y$/.test(w) ? `${w.slice(0, -1)}ies` : `${w}s`));
+/**
+ * Sentences with exactly one planted error, built from stored forms: a countable noun, its stored plural and its gender.
+ * The learner types the sentence put right.
+ * @returns {{id:string, rule:'number'|'gender', wrong:string, he:string, en:string, accept:string[], strict:boolean, answerEn:string}[]}
+ */
+export function errorItems(pack) {
+  const out = [];
+  for (const n of (pack && pack.nouns) || []) {
+    const en = n.en?.[0];
+    if (!en || !n.pl || n.def || /\s/.test(n.he) || /\s/.test(n.pl) || /\s/.test(en) || (n.g && n.g !== 'f')) continue;
+    const two = n.g === 'f' ? 'שתי' : 'שני', other = n.g === 'f' ? 'שני' : 'שתי';
+    const right = `יש לי ${two} ${n.pl}`; const meaning = `I have two ${pluralEn(en)}.`;
+    out.push({ id: `e-${n.he}-number`, rule: 'number', wrong: `יש לי ${two} ${n.he}`, he: right, en: meaning, accept: [], strict: true, answerEn: ERROR_RULE.number });
+    out.push({ id: `e-${n.he}-gender`, rule: 'gender', wrong: `יש לי ${other} ${n.pl}`, he: right, en: meaning, accept: [], strict: true, answerEn: ERROR_RULE.gender });
+  }
+  return out;
+}
+
+// ---- story completer -------------------------------------------------------------------------------------------------------------
+/** A little book cut one line early: every page but the last, and the real last line kept back. Lines that hold the Name are shown as ה׳. */
+export function storyCut(book) {
+  const pages = ((book && book.pages) || []).filter((p) => p && p.he && p.en);
+  if (pages.length < 3) return null;
+  const last = pages[pages.length - 1];
+  return { id: book.id, title: book.titleEn || '', titleHe: showName(book.titleHe || ''), lines: pages.slice(0, -1).map((p) => ({ he: showName(p.he), en: p.en })), ending: { he: showName(last.he), en: last.en } };
+}
+/** Saves the learner's own ending of a story (one per story; writing it again replaces it). */
+export function saveEnding(state, { at, bookId, text }) {
+  const s = normalizeState(state); const body = String(text || '').trim().slice(0, 600);
+  const rest = s.answers.filter((a) => !(a.drill === 'story' && a.ask === bookId));
+  return body ? { ...s, answers: [{ at, drill: 'story', ask: bookId, typed: body, ok: true }, ...rest].slice(0, MAX_ANSWERS) } : { ...s, answers: rest };
 }

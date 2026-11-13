@@ -15,8 +15,8 @@ const ISO = /^\d{4}-\d\d-\d\d$/;
 const iso = (v) => (typeof v === 'string' && ISO.test(v) ? v : null);
 const arr = (v, cap, ok = () => true) => (Array.isArray(v) ? v.filter(ok).slice(-cap) : []);
 const tri = (v) => (v === true || v === false ? v : null);
-const SHOP_THEME_IDS = new Set(['sepia', 'dusk']);
-const SHOP_OUTFIT_IDS = new Set(['scarf', 'ribbon', 'glasses']);
+const SHOP_THEME_IDS = new Set(['sepia', 'dusk', 'ink', 'olive', 'type']);
+const SHOP_OUTFIT_IDS = new Set(['scarf', 'ribbon', 'glasses', 'pin', 'badge']);
 const SHOP_AUDIO_IDS = new Set(['blessings']);
 const shopIds = (v, allow) => arr(v, 12, (s) => typeof s === 'string' && allow.has(s));
 const pickShop = (v, allow, owned) => (typeof v === 'string' && allow.has(v) && owned.includes(v) ? v : null);
@@ -40,8 +40,9 @@ export function defaults(now = Date.now(), installId = newInstallId()) {
     league: { enabled: null, tier: 1, weekId: null, weekXp: 0, carry: 0, joined: false, settled: null, history: [], resultUnseen: null },
     sessions: [], lastTz: null, lastBootDay: null,
     notify: { optedIn: false, tone: 'kind', asks: 0, lastAskAtLesson: 0, denied: false, sent: [], stopped: false, periodicSync: false },
-    shop: { themes: [], themeActive: null, outfits: [], outfitActive: null, audio: [], gameLevels: 0, shields: { held: 0, used: [] } },
+    shop: { themes: [], themeActive: null, outfits: [], outfitActive: null, earnedOutfits: [], audio: [], gameLevels: 0, shields: { held: 0, used: [] } },
     mysteries: { opened: [] },
+    expedition: null,
   };
 }
 
@@ -79,6 +80,7 @@ export function normalize(raw, now = Date.now()) {
       sent: arr(n.sent, CAPS.sent, (e) => isObj(e) && typeof e.id === 'string'), stopped: n.stopped === true, periodicSync: n.periodicSync === true },
     shop: normalizeShop(r.shop),
     mysteries: { opened: arr((isObj(r.mysteries) ? r.mysteries.opened : r.mysteries), 12, (s) => s === 'meltdown' || s === 'songs') },
+    expedition: normalizeExpedition(r.expedition),
   };
 }
 
@@ -88,12 +90,26 @@ function normalizeShop(raw) {
   const themes = shopIds(s.themes, SHOP_THEME_IDS);
   const outfits = shopIds(s.outfits, SHOP_OUTFIT_IDS);
   const audio = shopIds(s.audio, SHOP_AUDIO_IDS);
+  const earnedOutfits = shopIds(s.earnedOutfits, SHOP_OUTFIT_IDS).filter((id) => outfits.includes(id));
   return {
     themes, themeActive: pickShop(s.themeActive, SHOP_THEME_IDS, themes),
     outfits, outfitActive: pickShop(s.outfitActive, SHOP_OUTFIT_IDS, outfits),
+    earnedOutfits,
     audio,
     gameLevels: Math.min(nat(s.gameLevels), 2),
     shields: { held: Math.min(nat(sh.held), 2), used: arr(sh.used, CAPS.used, iso) },
+  };
+}
+
+function normalizeExpedition(raw) {
+  if (!isObj(raw) || typeof raw.id !== 'string' || !iso(raw.start)) return null;
+  const allow = new Set(['blessing', 'market']);
+  const stops = {};
+  if (isObj(raw.stops)) for (const k of Object.keys(raw.stops)) if (iso(k) && (raw.stops[k] === 'done' || raw.stops[k] === 'rest')) stops[k] = raw.stops[k];
+  return {
+    id: allow.has(raw.id) ? raw.id : 'blessing', start: raw.start, stops,
+    review: nat(raw.review), reviewDay: iso(raw.reviewDay), paid: raw.paid === true,
+    finished: arr(raw.finished, 12, (s) => s === 'blessing' || s === 'market'),
   };
 }
 

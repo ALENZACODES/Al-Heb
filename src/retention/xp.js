@@ -5,7 +5,7 @@ import { dayKey } from './clock.js';
 import { earn, EARN } from './gems.js';
 import { addLeagueXp, LEAGUE } from './leagues.js';
 import { HEARTS } from './hearts.js';
-import { QUESTS } from './quests.js';
+import { QUESTS, EXPEDITION } from './quests.js';
 import { xpToday as countXpToday, xpGoal } from '../lib/counts.js';
 
 /** Daily goal choices shown to the learner. */
@@ -87,6 +87,7 @@ export function unlockedBy(rec, before, after) {
   const crossed = (n) => before < n && after >= n, out = [];
   if (crossed(QUESTS.unlockLessons)) out.push('quests');
   if (crossed(HEARTS.unlockLessons) && rec.hearts.enabled !== false) out.push('hearts');
+  if (crossed(EXPEDITION.unlockLessons)) out.push('expeditions');
   if (crossed(LEAGUE.unlockLessons) && rec.league.enabled !== false) out.push('league');
   return out;
 }

@@ -56,6 +56,8 @@ jobs:
         run: node tools/deploy/check-buttons.mjs
       - name: Accessibility gate (named fields, alt on images, reduced motion)
         run: node tools/deploy/check-a11y.mjs
+      - name: Pinned alef-tools code matches data/alef-tools.lock.json (every vendored file, by SHA-256; no network)
+        run: node tools/alef-tools/sync.mjs --check
       - name: Precache manifest is current
         run: node tools/build-precache.mjs && git diff --exit-code precache-manifest.js
   build-dist:

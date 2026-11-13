@@ -56,6 +56,7 @@ const ON_DEMAND_PREFIXES = ['data/vocab/', 'data/roots/', 'data/knownwords/', 'd
   'assets/game-art/', 'assets/letter-cartoons/', 'assets/books/', 'assets/speak-hold/', 'assets/speak-candidates/',
   // Lazy preview-route code + book content + image indexes: fetched on first view, runtime-cached (fix #4; #8 groups).
   'src/games/', 'src/books/', 'data/books/', 'data/images/',
+  'src/words/', // word notes (tap a Hebrew word): card, tap handling and the lesson section, fetched when a lesson first shows its Word Notes
   'src/bridge/', // lane 6: Reading Without Vowels (#/bridge), view, model and loader, fetched on first open
   'src/readlab/', 'data/readlab/', // reading lane: Reading Tools (#/readlab), code and its two lookup files, fetched on first open
   // Camera Translator (preview route /camera): view code, word list and config are fetched when the screen first opens, runtime-cached.
@@ -207,7 +208,9 @@ const ON_DEMAND_FILES = new Set([
   // Cursive display font: only fetched when the cursive script setting is on (font-display: swap falls back otherwise).
   'assets/fonts/web/gveret-levin.woff2',
   // Star of David light stylesheet: loaded when #/light first opens, runtime-cached.
-  'assets/css/light.css']);
+  'assets/css/light.css',
+  // Word notes stylesheet: loaded with the first Word Notes section, runtime-cached.
+  'assets/css/words.css']);
 export const isOnDemand = (rel) => !KEEP_DATA.has(rel) && (isToolCode(rel) || ON_DEMAND_FILES.has(rel) || /^data\/curriculum\/resource-concepts-/.test(rel) || ON_DEMAND_PREFIXES.some((p) => rel.startsWith(p)));
 const DATA_ONLY_JSON = (rel) => !rel.startsWith('data/') || rel.endsWith('.json');
 

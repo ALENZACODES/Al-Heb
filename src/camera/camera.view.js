@@ -270,8 +270,12 @@ export function mount(root, ctx = {}) {
   armPack().finally(() => { if (alive) wrap.dataset.pack = packReady ? 'ready' : 'none'; });
   wrap.dataset.mode = 'device';
 
+  // Word notes on tapped Hebrew: only when the Words language pack is already on this device (src/words/anywhere.js, lazy).
+  let offWords = () => {};
+  import('../words/anywhere.js').then((m) => m.armIfPackReady(root, h)).then((off) => { if (alive) offWords = off; else off(); }).catch(() => {});
+
   return () => {
-    alive = false;
+    alive = false; offWords();
     takeInput.removeEventListener('change', onTake); chooseInput.removeEventListener('change', onChoose);
     try { win?.speechSynthesis?.cancel(); } catch { /* ignore */ }
     try { engine?.terminate?.(); } catch { /* ignore */ }

@@ -38,11 +38,11 @@ const lastSessionEnd = (ret) => (ret.sessions.length ? ret.sessions[ret.sessions
 /**
  * Day rollover for retention. Run at boot, when the app becomes visible, and at local midnight. Idempotent.
  * Judges each missed day ONCE (freezes.evaluatedThrough), so buying a freeze after a break never repairs it.
- * Freezes are all-or-nothing: if they cannot cover every missed day none is spent.
+ * Freezes and shop shields are all-or-nothing together: if they cannot cover every missed day none is spent. Shields are used after freezes.
  * @param {object} streakRaw the stored "streak" record (any version)
  * @param {object} ret normalized retention record
  * @param {{tz?:string}} [opt] tz = the device zone now (travel grace compares it with ret.lastTz)
- * @returns {{streak:object, ret:object, events:string[]}} events: 'freeze_used' | 'streak_broken' | 'rest_covered' | 'travel_covered'
+ * @returns {{streak:object, ret:object, events:string[]}} events: 'freeze_used' | 'shield_used' | 'streak_broken' | 'rest_covered' | 'travel_covered'
  */
 export function applyRollover(streakRaw, ret, now = Date.now(), opt = {}) {
   const events = []; let r = clone(ret);
@@ -70,9 +70,20 @@ export function applyRollover(streakRaw, ret, now = Date.now(), opt = {}) {
   }
   // 3. Freezes, all or nothing. 4. Otherwise the streak is broken and a repair window opens.
   if (missed.length && wasAlive && !tooLong) {
-    if (missed.length <= r.freezes.held) {
+    const heldF = r.freezes.held, heldS = (r.shop && r.shop.shields && r.shop.shields.held) || 0;
+    if (missed.length <= heldF + heldS) {
       for (const d of missed) streak = withDeclaredRest(streak, d, true);
-      r.freezes.held -= missed.length; r.freezes.used = [...r.freezes.used, ...missed].slice(-CAPS.used); r.freezes.unseen = true; events.push('freeze_used');
+      let left = missed.length;
+      const useF = Math.min(heldF, left); left -= useF;
+      const useS = left;
+      if (useF) { r.freezes.held -= useF; r.freezes.used = [...r.freezes.used, ...missed.slice(0, useF)].slice(-CAPS.used); r.freezes.unseen = true; events.push('freeze_used'); }
+      if (useS) {
+        r.shop = r.shop || { shields: { held: 0, used: [] } };
+        r.shop.shields = r.shop.shields || { held: 0, used: [] };
+        r.shop.shields.held -= useS;
+        r.shop.shields.used = [...(r.shop.shields.used || []), ...missed.slice(useF)].slice(-CAPS.used);
+        events.push('shield_used');
+      }
     } else {
       events.push('streak_broken');
       r.repair = rec.count >= STREAK.repairMinStreak && missed.length <= STREAK.repairMaxDays

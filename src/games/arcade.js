@@ -15,6 +15,8 @@ import { ARCADE_KEY, LEVELS, BADGES, applyResult, applyArcade, emptyRecord, seed
 import { ARCADE_GAMES, HANUKKAH_GAMES } from './arcade.catalog.js';
 import { roundMode, afterRound, tournamentRandom } from './round-extras.js';
 import { ENV_WEBP } from './env-webp.js'; // backdrops added 2026-11-12 are WebP // daily challenge, tournament runs, last-score ledger
+import { load as loadRetention } from '../retention/state.js';
+import { arcadeBoost } from '../retention/gems.js';
 
 const WORDS_URL = new URL('../../data/games/firstwords.json', import.meta.url);
 const LETTERS_URL = new URL('../../data/letters/letters.json', import.meta.url);
@@ -76,7 +78,9 @@ export async function createArcade(root, ctx, spec) {
   const untimed = setting('untimed') === true || setting('calmMode') === true || spec.timed === false;
   const showStreak = setting('showStreak') !== false && setting('calmMode') !== true;
   let record = { ...emptyRecord(), ...(get(storeKey) || {}) };
-  let level = Math.min(record.unlocked || 1, Math.max(1, Number(ctx?.route?.query?.level) || record.unlocked || 1));
+  const earnedUnlock = record.unlocked || 1;
+  const cap = Math.min((spec.levels || LEVELS || { length: 5 }).length || 5, earnedUnlock + (ctx?.store ? arcadeBoost(loadRetention(ctx.store)) : 0));
+  let level = Math.min(cap, Math.max(1, Number(ctx?.route?.query?.level) || earnedUnlock));
   const mode = roundMode(ctx, spec.id); // ?daily=1 opens on the daily board; ?tournament=1 plays the open tournament run at level 1
   if (mode.level) level = mode.level;
   let daily = mode.daily, rnd = Math.random, roundSetup = null, alive = true;
@@ -126,7 +130,7 @@ export async function createArcade(root, ctx, spec) {
 
   function renderLevels() {
     levelBar.replaceChildren(...LEVELS.map((l) => {
-      const locked = l > (record.unlocked || 1);
+      const locked = l > cap;
       const lv = record.levels?.[l];
       const stars = lv ? '★'.repeat(lv.stars) + '☆'.repeat(3 - lv.stars) : '☆☆☆';
       return h('button', {

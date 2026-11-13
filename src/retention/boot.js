@@ -8,6 +8,7 @@ import { load, save, RETENTION_KEY } from './state.js';
 import { dayKey, deviceZone, localAt, addDaysISO } from './clock.js';
 import { applyRollover, completeLessonDay, afterDayCompleted, streakStatus, weekDots, freezeNoteSeen, freezeNoteShown as markFreezeNote } from './streak.js';
 import { award, lessonPayout, todayXp, XP, lessonAward, unlockedBy } from './xp.js';
+import { applyShopLook } from './gems.js';
 import { heartsOn, loseHeart, practiceCard, refillByTime, startLesson, canStartLesson, isLessonHash, heartCount, HEARTS } from './hearts.js';
 import { settle, leagueOn, leagueView } from './leagues.js';
 import { logSession, createScheduler, readShown, recordSent, registerPeriodicSync, daysAway } from './notify.js';
@@ -37,7 +38,7 @@ export function retention(ctx, g = globalThis) {
   const update = (fn) => { const r = save(store, fn, now()); emit(); return r; };
   const streakRaw = () => { try { return store.get(STREAK_KEY) ?? null; } catch { return null; } };
   const calm = () => calmOn(ctx);
-  const emit = () => { try { doc.dispatchEvent(new CustomEvent('alef:retention')); } catch { /* no listeners */ } };
+  const emit = () => { try { applyShopLook(get()); } catch { /* look is optional */ } try { doc.dispatchEvent(new CustomEvent('alef:retention')); } catch { /* no listeners */ } };
   const say = (text) => { try { doc.dispatchEvent(new CustomEvent('alef:retention-say', { detail: { text } })); } catch { /* optional */ } };
   const opts = () => ({ calm: calm(), hash: g.location?.hash || '' });
   const later = (fn, ms) => g.setTimeout(() => { try { fn(); } catch { /* Rimon is optional */ } }, ms);

@@ -4,6 +4,16 @@
  "entries": [
   {
    "date": "2026-11-12",
+   "hash": "3f4261d7c",
+   "text": "Seven Level 1–2 arcade games (Letter Twins, Look-Alike Sorter, Letter Drop, Vowel Stack, Word Builder, Meltdown, Letter Bingo) get Rimon beside Ari or Noa on their own picture, on…"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "1e4041b25",
+   "text": "Release build: precache list and change list rebuilt"
+  },
+  {
+   "date": "2026-11-12",
    "hash": "a3ebfdbce",
    "text": "The 64 newer and leftover games (Hanukkah, Torah, g1–g5 lanes and 17 older games) each get their own picture of Ari, Noa and/or Rimon, on the card and inside the game, above the…"
   },
@@ -191,16 +201,6 @@
    "date": "2026-11-12",
    "hash": "30c79e53f",
    "text": "Checkpoint tests (#/checkpoints): one per 10 lessons of each path, one question from each lesson with the lesson pass rule."
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "ff50b7423",
-   "text": "Lesson Badges (H9): #/lesson-badges awards count and path badges only for verified lessons (passing first-try score kept, recomputed with the certificate's pass rule)."
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "0fc1ea87a",
-   "text": "My Week (H6, H7, J3): #/my-week reports the last 7 days from the existing weekly summary plus XP and books finished, lets the learner set their own weekly XP, minutes and lesson…"
   }
  ]
 }

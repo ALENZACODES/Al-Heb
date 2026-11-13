@@ -4,10 +4,9 @@
  "engine": "google-cloud-tts",
  "voiceId": "he-IL-Wavenet-B",
  "tradition": "israeli",
- "inputText": "בֵית",
- "inputSha256": "9cc69860f2fefdf175d9d14471899e0292a1074986335abb577557f8d88fc497",
+ "inputText": "וֵט",
  "ingestedAt": null,
  "licence": "customer-owned",
- "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
+ "note": "Re-recorded 2026-11-13 (letter audit): the old clip said \"beit\" with a b; this one says \"vet\". Take name-vet-wm-2.mp3 from tools/audio/render_letter_takes.py; heard back correctly by the sound-level listener, not yet by a person.",
  "inputTextKind": "hebrew"
 }

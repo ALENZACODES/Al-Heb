@@ -4,9 +4,9 @@
  "engine": "google-cloud-tts",
  "voiceId": "he-IL-Wavenet-A",
  "tradition": "israeli",
- "inputText": "וַ",
+ "inputText": "וָו וָ",
  "ingestedAt": null,
  "licence": "customer-owned",
- "note": "Letter sound replaced 2026-11-08 by the vav-a syllable (וַ): the old clip was rendered from the bare letter, which the voice read as a clipped letter name (shin heard as 'shi'). Copied from audio/f/israeli/syllable/vav-a.mp3; heard back as the syllable by tools/audio/asr-check.",
+ "note": "Re-recorded 2026-11-13 (letter audit): the old clip said \"wa\" or \"wow\". This is the second syllable cut from take sound-va-b-wf-6.mp3 (tools/audio/render_letter_takes.py); heard back as \"va\" by the sound-level listener, not yet by a person.",
  "inputTextKind": "hebrew"
 }

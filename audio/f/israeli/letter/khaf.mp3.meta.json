@@ -4,10 +4,9 @@
  "engine": "google-cloud-tts",
  "voiceId": "he-IL-Wavenet-A",
  "tradition": "israeli",
- "inputText": "כַף",
- "inputSha256": "597bf1d24a0e4ce1ef2b8ff807dd042cda3a64ee1b140217e846ad965bfb583c",
+ "inputText": "חַף",
  "ingestedAt": null,
  "licence": "customer-owned",
- "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
+ "note": "Re-recorded 2026-11-13 (letter audit): the old clip said \"kaf\"; this one says \"khaf\". Take name-khaf-wf-2.mp3 from tools/audio/render_letter_takes.py; heard back correctly by the sound-level listener, not yet by a person.",
  "inputTextKind": "hebrew"
 }

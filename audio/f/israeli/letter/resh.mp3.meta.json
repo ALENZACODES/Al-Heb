@@ -4,10 +4,9 @@
  "engine": "google-cloud-tts",
  "voiceId": "he-IL-Wavenet-A",
  "tradition": "israeli",
- "inputText": "רֵישׁ",
- "inputSha256": "a1ed895a69eae9f9e4ca70dc0925010f574da2f512ff8e4153f50a7528f129c6",
+ "inputText": "רֵשׁ",
  "ingestedAt": null,
  "licence": "customer-owned",
- "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
+ "note": "Re-recorded 2026-11-13 (letter audit): the old clip was heard as two syllables, \"re-ish\"; this one says \"resh\". Take name-resh-wf-2.mp3 from tools/audio/render_letter_takes.py; heard back correctly by the sound-level listener, not yet by a person.",
  "inputTextKind": "hebrew"
 }

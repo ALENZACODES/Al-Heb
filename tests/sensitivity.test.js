@@ -73,7 +73,35 @@ test('englishGod: off by default; on writes G-d only for the capitalised word', 
 test('isNameVocabItem', () => {
   assert.equal(isNameVocabItem({ he: NAME }), true);
   assert.equal(isNameVocabItem({ he: SPOKEN_NAME }), false);
+  assert.equal(isNameVocabItem({ he: NAME_ABBREV }), true);
   assert.equal(isNameVocabItem(null), false);
+});
+
+test('the two Name headwords are shown as ה׳ and have no sound in the clip list', () => {
+  const words = JSON.parse(fs.readFileSync(path.join(root, 'data/vocab/words.json'), 'utf8')).words;
+  const byId = new Map(words.map((w) => [w.id, w]));
+  for (const id of ['p6584b7dc', 'p7cb5e293']) {
+    const w = byId.get(id);
+    assert.ok(w, id);
+    assert.equal(displayHebrew(w.he, 'abbrev'), NAME_ABBREV, id);
+    assert.equal(isNameVocabItem(w), true, id);
+  }
+  const lessons = JSON.parse(fs.readFileSync(path.join(root, 'data/curriculum/lessons.json'), 'utf8')).lessons;
+  const r15 = lessons.find((l) => l.id === 'r15');
+  const r34 = lessons.find((l) => l.id === 'r34');
+  assert.equal(displayHebrew(r15.words[1].he, 'abbrev'), NAME_ABBREV);
+  assert.equal(displayHebrew(r34.words[0].he, 'abbrev'), NAME_ABBREV);
+  const clips = JSON.parse(fs.readFileSync(path.join(root, 'data/vocab/clip-lookup.json'), 'utf8'));
+  const blob = JSON.stringify(clips);
+  assert.ok(!blob.includes('p6584b7dc') && !blob.includes('p7cb5e293'));
+  const sk = (s) => String(s).replace(/[֑-ׇ]/g, '');
+  const walk = (o, acc = []) => {
+    if (typeof o === 'string') { if (sk(o).includes('יהוה') || o === 'יהוה') acc.push(o); }
+    else if (Array.isArray(o)) o.forEach((v) => walk(v, acc));
+    else if (o && typeof o === 'object') Object.values(o).forEach((v) => walk(v, acc));
+    return acc;
+  };
+  assert.deepEqual(walk(clips), []);
 });
 
 test('versionLabel: says one version is shown when movements vary or are unchecked', () => {

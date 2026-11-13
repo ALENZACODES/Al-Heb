@@ -139,7 +139,7 @@
     ],
     [
      "src/curriculum/audio-ui.js",
-     4636,
+     4897,
      1
     ],
     [
@@ -259,12 +259,12 @@
     ],
     [
      "src/curriculum/lesson.parts.js",
-     14192,
+     14325,
      1
     ],
     [
      "src/curriculum/lesson.view.js",
-     21995,
+     22128,
      1
     ],
     [
@@ -314,7 +314,7 @@
     ],
     [
      "src/curriculum/scaffold.view.js",
-     5819,
+     5895,
      0
     ],
     [
@@ -389,12 +389,12 @@
     ],
     [
      "src/lib/counts.generated.js",
-     2273,
+     2374,
      1
     ],
     [
      "src/lib/counts.js",
-     22462,
+     24004,
      1
     ],
     [
@@ -449,7 +449,7 @@
     ],
     [
      "src/shell/audio-access.js",
-     13915,
+     14570,
      1
     ],
     [
@@ -504,12 +504,12 @@
     ],
     [
      "src/shell/names.js",
-     9261,
+     9355,
      1
     ],
     [
      "src/shell/nav-model.js",
-     12783,
+     12792,
      1
     ],
     [
@@ -574,7 +574,7 @@
     ],
     [
      "src/shell/router.js",
-     49206,
+     49456,
      1
     ],
     [
@@ -751,12 +751,12 @@
     ],
     [
      "src/lib/counts.generated.js",
-     2273,
+     2374,
      1
     ],
     [
      "src/lib/counts.js",
-     22462,
+     24004,
      1
     ],
     [
@@ -811,7 +811,7 @@
     ],
     [
      "src/shell/audio-access.js",
-     13915,
+     14570,
      1
     ],
     [
@@ -826,7 +826,7 @@
     ],
     [
      "src/shell/names.js",
-     9261,
+     9355,
      1
     ],
     [
@@ -978,7 +978,7 @@
     ],
     [
      "src/curriculum/audio-ui.js",
-     4636,
+     4897,
      1
     ],
     [
@@ -1123,12 +1123,12 @@
     ],
     [
      "src/lib/counts.generated.js",
-     2273,
+     2374,
      1
     ],
     [
      "src/lib/counts.js",
-     22462,
+     24004,
      1
     ],
     [
@@ -1173,7 +1173,7 @@
     ],
     [
      "src/shell/audio-access.js",
-     13915,
+     14570,
      1
     ],
     [
@@ -1208,7 +1208,7 @@
     ],
     [
      "src/shell/names.js",
-     9261,
+     9355,
      1
     ],
     [

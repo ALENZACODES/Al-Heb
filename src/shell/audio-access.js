@@ -6,11 +6,22 @@
 // Pure of the DOM except audioButton(), which takes a `h` element factory.
 import { fileLabel, STATUS_LABELS } from './audio-labels.js';
 import { isAudioFree } from './audiofree.js';
+import { isNameWord, NAME_ABBREV } from './names.js';
 export const DEVICE_LABEL = 'device voice, not recorded yet'; // the phone or browser reads it: say so, never a teacher's name or 'Israeli voice'
 export const NO_AUDIO = STATUS_LABELS.missing;
 /** S-11: a clip held back for review (data/lab/clip-holds.json) is never played; the screen says so and says what plays instead. */
 export const HELD_DEVICE = 'This recording is held for review, so your device voice reads it instead';
 export const HELD_NONE = 'This recording is held for review, so it does not play yet';
+/** The four-letter Name (or ה׳) is never played, including by the device voice. */
+export const NAME_NOT_PLAYED = 'This is the Name, shown as ה׳. It is not played aloud.';
+
+/** True when the play text itself is the Name or the ה׳ abbreviation (not a longer line already prepared for speech). */
+export function isHeldNameText(t) {
+  const s = String(t || '').trim();
+  if (!s) return false;
+  if (s === NAME_ABBREV) return true;
+  return isNameWord(s);
+}
 
 /** 'yes' | 'no' | 'unknown' for a he-IL browser voice. getVoices() is often empty until the browser loads them: 'unknown'. */
 export function deviceVoiceState(speech = globalThis.speechSynthesis, Utt = globalThis.SpeechSynthesisUtterance) {
@@ -109,6 +120,7 @@ export async function playWithState(ctx, btn, kind, id, opts) {
 export function audioButton(h, ctx, o) {
   const { kind, id, label = 'Listen', respelling } = o;
   if (isAudioFree(ctx)) return h('span', { class: 'audio-off', hidden: '' }); // "I do not use audio": no button, no "No audio yet" line
+  if (isHeldNameText(o.text)) return h('span', { class: o.noneClass || 'audio-none muted', 'data-audio-state': 'held' }, NAME_NOT_PLAYED);
   const opt = {}; if (o.voice) opt.voice = o.voice; if (o.tradition) opt.tradition = o.tradition;
   if (typeof o.text === 'string' && o.text.trim()) opt.text = o.text;
   const a = audioAccess(ctx && ctx.audio, kind, id, opt);

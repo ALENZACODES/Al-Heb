@@ -203,6 +203,8 @@ export const ROUTES = [
   // lane 4: move progress between own devices (merge, no server); own certificate
   { name: 'move', pattern: '/move', module: '../sync/move.view.js', title: 'Move to another device', owner: 'sync', optional: true },
   { name: 'certificate', pattern: '/certificate', module: '../sync/certificate.view.js', title: 'Certificate of lessons completed', owner: 'sync', optional: true },
+  // alef-tools lane 7 (12 Nov): Language packs, a lazy route (src/settings/ and the vendored loader are on demand)
+  { name: 'packs', pattern: '/packs', module: '../settings/packs.view.js', title: 'Language Packs', owner: 'packs', optional: true },
   { name: 'offline', pattern: '/offline', module: './offline.view.js', tier: 'v0', title: 'Use Aleph offline', owner: 'offline', optional: true, group: 'learn', quick: 'nav.offline' },
   { name: 'vocab-themes', pattern: '/vocab/themes', module: '../vocab/themes.view.js', title: 'Theme packs', owner: 'vocab', optional: true, group: 'learn', quick: 'nav.vocab-themes' },
   { name: 'talk', pattern: '/talk', module: '../talk/talk.view.js', title: 'Talk', owner: 'talk', optional: true, quick: 'nav.talk' },

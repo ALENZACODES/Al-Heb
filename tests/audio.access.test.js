@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { createAudio } from '../src/audio/player.js';
-import { audioAccess, deviceVoiceState, bannerText, wireSoundBar, soundBarDismissed, audioButton, DEVICE_LABEL, NO_AUDIO } from '../src/shell/audio-access.js';
+import { audioAccess, deviceVoiceState, bannerText, wireSoundBar, soundBarDismissed, audioButton, DEVICE_LABEL, NO_AUDIO, NAME_NOT_PLAYED, isHeldNameText } from '../src/shell/audio-access.js';
 
 class Utt { constructor(t) { this.text = t; } }
 const speech = (voices) => ({ getVoices: () => voices, speak(u) { queueMicrotask(() => u.onend?.()); }, cancel() {} });
@@ -132,4 +132,15 @@ test('audioButton passes caller text through: a device button for an item missin
   assert.equal(without.attrs['data-audio-state'], 'none');
   const withText = audioButton(h, ctx, { kind: 'word', id: 'not-in-list', text: 'שָׁלוֹם' });
   assert.equal(withText.kids[0].tag, 'button'); assert.equal(withText.kids[0].attrs['data-audio-state'], 'device');
+});
+test('audioButton holds the Name and ה׳: no play button and no device voice', () => {
+  assert.equal(isHeldNameText('יהוה'), true);
+  assert.equal(isHeldNameText('יְהוָה'), true);
+  assert.equal(isHeldNameText('ה׳'), true);
+  assert.equal(isHeldNameText('שָׁלוֹם'), false);
+  const ctx = { audio: mk(speech([{ lang: 'he-IL' }])) };
+  const held = audioButton(h, ctx, { kind: 'word', id: 'p6584b7dc', text: 'ה׳' });
+  assert.equal(held.attrs['data-audio-state'], 'held');
+  assert.match(held.kids.join(''), new RegExp(NAME_NOT_PLAYED));
+  assert.ok(!held.kids.some((k) => k && k.tag === 'button'));
 });

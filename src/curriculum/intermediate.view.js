@@ -19,7 +19,7 @@ import { sequenceExercises, fairProduceOptions, createSession, feedbackText, fir
 import { passed as passedCheck, passMark, passRuleText, CHECKS_KEY, withCheck } from "./passmark.js";
 import { progressBar, summaryNode } from "./exercises.ui.js";
 import { respell } from "../pronunciation/forTradition.js";
-import { uiEnglish } from "../shell/names.js";
+import { uiEnglish, displayHebrew } from "../shell/names.js";
 import { signalRimon } from "../shell/rimon-events.js";
 
 /** English shown to the learner honours the writeGodAsGd setting (display only; grading uses the raw data). */
@@ -51,18 +51,18 @@ const tradition = (ctx, lesson) => (lesson.track === "israel" ? "israeli" : ctx?
 export const pronLine = (w, trad) => w?.pronunciation?.[trad] || (trad === "israeli" ? "" : respell(w?.he, trad)) || w?.pronunciation?.israeli || w?.translit || "";
 const wordFor = (lesson, he) => { const i = lesson.words.findIndex((w) => A.heKey(w.he) === A.heKey(he)); return i < 0 ? null : { w: lesson.words[i], n: i + 1 }; };
 
-function playBtn(ctx, kind, id, label, note, lesson) {
+function playBtn(ctx, kind, id, label, note, lesson, text) {
   // Shared audioButton: file, labelled device voice (Israeli-style only), or one "No audio yet" line. It carries its own status chip.
-  return audioButton(el, ctx, { kind, id, voice: settingVoice(ctx), tradition: tradition(ctx, lesson), label: "Listen", name: label.replace(/^Listen to /, ""), class: "btn secondary alef-play" });
+  return audioButton(el, ctx, { kind, id, voice: settingVoice(ctx), tradition: tradition(ctx, lesson), label: "Listen", name: label.replace(/^Listen to /, ""), class: "btn secondary alef-play", text });
 }
 
 /** Hebrew + optional pronunciation line + optional audio, as one row. */
 function heRow(ctx, lesson, note, he, { audio } = {}) {
   const hit = wordFor(lesson, he);
   const id = audio?.id ?? (hit ? wordAudioId(lesson.id, hit.n) : null);
-  return el("div", { class: "alef-int-he row" }, heText(he, "alef-he alef-word"),
+  return el("div", { class: "alef-int-he row" }, heText(displayHebrew(he, "abbrev"), "alef-he alef-word"),
     hit ? el("span", { class: "alef-pron muted", "data-pron": "1" }, pronLine(hit.w, tradition(ctx, lesson))) : null,
-    id ? playBtn(ctx, audio?.kind ?? "word", id, `Listen to ${G(ctx, hit?.w.en || he)}`, note, lesson) : null);
+    id ? playBtn(ctx, audio?.kind ?? "word", id, `Listen to ${G(ctx, hit?.w.en || he)}`, note, lesson, he) : null);
 }
 
 // ------------------------------------------------------------------------------------------------ exercise renderers
@@ -287,9 +287,9 @@ function mountLesson(root, ctx, id) {
       el("section", { class: "card", "aria-labelledby": "i-goals" }, el("h2", { id: "i-goals" }, "Goals"), el("ul", {}, ...lesson.goals.map((g) => el("li", {}, G(ctx, g))))),
       el("section", { class: "card", "aria-labelledby": "i-words" }, el("h2", { id: "i-words" }, "Words"),
         el("p", { class: "muted" }, lesson.track === "israel" ? "Pronunciation lines are the Israeli form." : `Pronunciation lines follow your tradition setting (${trad}).`),
-        el("ul", { class: "alef-items" }, ...lesson.words.map((w, i) => el("li", { class: "alef-item" }, heText(w.he, "alef-he alef-word"),
+        el("ul", { class: "alef-items" }, ...lesson.words.map((w, i) => el("li", { class: "alef-item" }, heText(displayHebrew(w.he, "abbrev"), "alef-he alef-word"),
           el("div", { class: "alef-item-body" }, el("span", {}, G(ctx, w.en)), el("div", { class: "alef-pron muted", "data-pron": "1" }, pronLine(w, trad))),
-          el("div", { class: "alef-item-actions" }, playBtn(ctx, "word", wordAudioId(lesson.id, i + 1), `Listen to ${G(ctx, w.en)}`, note, lesson)))))),
+          el("div", { class: "alef-item-actions" }, playBtn(ctx, "word", wordAudioId(lesson.id, i + 1), `Listen to ${G(ctx, w.en)}`, note, lesson, w.he)))))),
       (() => { const gs = el("div", { class: "alef-spotlight-slot" }); import("../coursemap/spotlight.js").then((m) => alive && m.mountSpotlight(gs, lesson.id)).catch(() => {}); return gs; })(), // C9: grammar spotlight, on demand
       note,
       el("div", { class: "row alef-actions" }, el("button", { type: "button", class: "btn", id: "alef-int-start", disabled: exs.length ? null : "", onclick: () => { started = true; offKeys(); begin(); show(); } }, mine.done ? "Practice again" : Object.keys(results).length ? "Continue" : "Start exercises"),

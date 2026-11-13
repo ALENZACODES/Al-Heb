@@ -16,7 +16,7 @@ import { visibleRecords } from './loader.js';
 import { addCards, VOCAB_CARDS_KEY, POS_LABEL } from './model.js';
 import { DRAFT_NOTICE } from './vocab.view.js';
 import { audioButton } from '../shell/audio-access.js';
-import { uiEnglish } from '../shell/names.js';
+import { uiEnglish, displayHebrew } from '../shell/names.js';
 import { sourcesLine, exampleCredit } from '../shell/sources.js';
 import { mountQueue, readinessNote, ensureStyle as ensureListenStyle } from '../audiolab/ui.js';
 
@@ -103,12 +103,12 @@ export function mount(root, ctx) {
     // pointed text (Israeli only, labelled), else "No audio yet". The button carries its own status line.
     const listen = audioButton(el, ctx, { kind: 'word', id: w.id, text: String(w.he || '').replace(/־/g, ' '), label: 'Listen', name: w.en });
     const ex = w.example ? el('blockquote', { class: 'th-ex' },
-      heText(w.example.he), w.example.en ? el('div', {}, uiEnglish(ctx, w.example.en)) : null,
+      heText(displayHebrew(w.example.he, 'abbrev')), w.example.en ? el('div', {}, uiEnglish(ctx, w.example.en)) : null,
       el('div', { class: 'th-muted' }, `From the ${SOURCE_LABEL[w.example.source?.channel] || 'Aleph texts'} (${w.example.source?.ref ?? ''}). ${SENSE_NOTE}`), exampleCredit(el, w.example)) : el('p', { class: 'th-muted' }, 'No example line: this word does not appear in a full line of Aleph\'s texts.');
     const flags = w.flags?.includes('exampleSpellingShared') ? el('p', { class: 'th-muted' }, 'The spelling is shared with another word, so the line may show that other word.') : null;
     return el('li', { class: 'th-word', 'data-id': w.id },
       ctx.img?.(el, { kind: 'word', id: w.id, class: 'th-pic', width: 400 }),
-      el('div', { class: 'th-he' }, heText(w.he)),
+      el('div', { class: 'th-he' }, heText(displayHebrew(w.he, 'abbrev'))),
       el('div', {}, [w.translit, `${uiEnglish(ctx, w.en)}`, POS_LABEL[w.pos] || w.pos].filter(Boolean).join(' · ')),
       listen, ex, flags);
   }

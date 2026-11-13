@@ -45,7 +45,7 @@ export const SECTION_ROUTES = {
   read: ['readhub', 'read', 'text', 'torahread', 'torahreadsec', 'torahreader', 'ask', 'service', 'shabbat' /* lane 5 */, 'prayer-practice' /* siddur-speaking lane */, 'trope', 'timedread', 'morning', 'scan', 'camera', 'books', 'book', 'listen-shelf', 'synagogues', 'synagogue'],
   speak: ['speakhub', 'speak', 'talk', 'listen', 'listen-practice', 'songs', 'compare', 'tradition-quiz', 'read-my-way', 'traditions', 'traditions-guide', 'traditions-hear', 'record-compare', 'speak-studio' /* siddur-speaking lane */],
   progress: ['progress', 'awards', 'placement', 'calendar', 'day', 'festivals', 'festival', 'reminders', 'share', 'classsummary', 'syllabus', 'time-budget', 'daily'],
-  more: ['search', 'settings', 'accessibility', 'help', 'workbook', 'light', 'install', 'offline', 'about', 'data-health', 'how', 'credits', 'privacy', 'terms', 'welcome'],
+  more: ['search', 'settings', 'accessibility', 'help', 'workbook', 'light', 'install', 'offline', 'packs', 'about', 'data-health', 'how', 'credits', 'privacy', 'terms', 'welcome'],
 };
 
 // lane g2: words by topic, hub-only (PREVIEW_HIDDEN)

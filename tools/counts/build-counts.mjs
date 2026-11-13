@@ -35,6 +35,13 @@ export async function computeTotals(root = ROOT) {
   const isHidden = (r) => { const f = r && r.flags; return Array.isArray(f) ? f.includes('hidden') : !!(f && typeof f === 'object' && f.hidden === true); };
   const vocab = allVocab.filter((r) => !isHidden(r)), hiddenCount = allVocab.length - vocab.length;
   const words = vocab.filter((e) => !e.isForm);
+  const rareSense = words.filter((e) => hasTag(e, 'rare-sense')).length;
+  // words.json is the full dictionary data (6,303 entries). The Dictionary page lists the 5,000-word
+  // learner packs only, so the generated totals also record how the two counts relate (they are not the same list).
+  const catalog = fs.existsSync(path.join(root, 'data/vocab/words.json')) ? list(rd(root, 'data/vocab/words.json'), 'words') : [];
+  const sourceEntries = catalog.length;
+  const beyondRank = catalog.filter((e) => e && e.frequencyRank != null && e.frequencyRank > 5000).length;
+  const unranked = catalog.filter((e) => e && e.frequencyRank == null).length;
   const fam = rd(root, 'data/roots/families.json').coverage || {};
   const verbs = rd(root, 'data/roots/verbs.json');
   const audio = { total: 0, synthetic: 0, recorded: 0, files: {} };
@@ -60,7 +67,11 @@ export async function computeTotals(root = ROOT) {
     service,
     books: list(rd(root, 'data/books/index.json'), 'books').length,
     bookPictured: list(rd(root, 'data/books/index.json'), 'books').reduce((a, b) => a + (Number(b.picturedPages) || 0), 0),
-    dictionary: { entries: vocab.length, words: words.length, forms: vocab.length - words.length, addable: words.filter((e) => !hasTag(e, 'rare-sense')).length, hidden: hiddenCount },
+    dictionary: {
+      sourceEntries, listed: allVocab.length, entries: vocab.length, words: words.length,
+      forms: vocab.length - words.length, rareSense, addable: words.length - rareSense, hidden: hiddenCount,
+      beyondList: Math.max(0, sourceEntries - allVocab.length), beyondRank, unranked,
+    },
     firstWords: list(rd(root, 'data/games/firstwords.json'), 'words').length,
     buildWords: list(rd(root, 'data/builder_words.json'), 'words').length,
     lessons: { core, reading: track('read'), israel: track('israel'), all: lessons.length },

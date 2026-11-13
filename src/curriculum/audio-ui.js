@@ -3,6 +3,7 @@ import { audioAccess, NO_AUDIO, ladderStep, playWithState, voiceName } from "../
 import { isSyntheticStatus, fileLabel } from "../shell/audio-labels.js";
 import { REASONS } from "../shell/audio.js";
 import { isAudioFree } from "../shell/audiofree.js";
+import { isHeldNameText, NAME_NOT_PLAYED } from "../shell/audio-access.js";
 
 /** Human wording for a play() failure code (e.g. "speech-error"); unknown codes pass through unchanged. */
 export function reasonText(code) { return REASONS[code] || code || "unavailable"; }
@@ -18,6 +19,7 @@ export function describePlay(r) {
 /** A play button, or an empty hidden span when the learner turned on "I do not use audio". `note` is an element whose text receives the honest source/status message. */
 export function playButton(ctx, kind, id, label, note, extra = {}) {
   if (isAudioFree(ctx)) return el("span", { class: "alef-play-off", hidden: "" }); // "I do not use audio": no Listen button; the written text next to it carries the lesson
+  if (isHeldNameText(extra.text)) return el("span", { class: "muted alef-name-held", "data-audio-state": "held-name" }, NAME_NOT_PLAYED);
   const acc = audioAccess(ctx?.audio, kind, id, extra);
   if (acc.level === "none" && !acc.checking) {
     // U-02 ladder: no clip in the learner's own voice/tradition is not a dead
@@ -50,6 +52,7 @@ export function playButton(ctx, kind, id, label, note, extra = {}) {
  */
 export function slowButton(ctx, kind, id, label, note, extra = {}) {
   if (isAudioFree(ctx)) return null;
+  if (isHeldNameText(extra.text)) return null;
   const acc = audioAccess(ctx?.audio, kind, id, extra);
   if (acc.level === "none") return null;
   const btn = el("button", { type: "button", class: "alef-play alef-play-slow", "aria-label": `${label}, slowly`,

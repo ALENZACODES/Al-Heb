@@ -1,6 +1,7 @@
 // Game 15 — structured rental listings from existing Hebrew property word records.
 import { h, heSpan } from '../shell/ui.js';
-import { createSession, shuffled, loadGameImages, envNode, castEnvNode, GAME_ENV, imgOf, resultsCard } from './engine.js';
+import { createSession, shuffled, loadGameImages, envNode, GAME_ENV, imgOf, resultsCard } from './engine.js';
+import { castEnvNode } from './cast-env.js';
 import { sfx } from '../audio/sfx.js';
 import { loadJson } from '../grammar/loader.js';
 export const STORE_KEY='games.rentalagent.v1';

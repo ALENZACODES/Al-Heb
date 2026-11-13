@@ -1,6 +1,7 @@
 // Game 21 — rhyme keys are computed from source transliteration, no fabricated phonology.
 import { h, heSpan } from '../shell/ui.js';
-import { createSession, shuffled, loadGameImages, envNode, castEnvNode, GAME_ENV, imgOf, hasRecordedClip, playRecordedClip, resultsCard, roundStatus } from './engine.js';
+import { createSession, shuffled, loadGameImages, envNode, GAME_ENV, imgOf, hasRecordedClip, playRecordedClip, resultsCard, roundStatus } from './engine.js';
+import { castEnvNode } from './cast-env.js';
 import { sfx } from '../audio/sfx.js';
 import { loadJson } from '../grammar/loader.js';
 export const STORE_KEY = 'games.rhymelab.v1';

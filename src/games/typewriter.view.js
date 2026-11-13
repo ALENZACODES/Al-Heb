@@ -1,6 +1,7 @@
 // Game 5 — conveyor typing reuses the app's SI-1452 keyboard deck builder and checker.
 import { h, heSpan } from '../shell/ui.js';
-import { createSession, shuffled, loadGameImages, imgOf, resultsCard, envNode, castEnvNode, GAME_ENV, placeBoard } from './engine.js';
+import { createSession, shuffled, loadGameImages, imgOf, resultsCard, envNode, GAME_ENV, placeBoard } from './engine.js';
+import { castEnvNode } from './cast-env.js';
 import { sfx } from '../audio/sfx.js';
 import { loadJson } from '../grammar/loader.js';
 import { screenRows, buildRound, checkAnswer } from '../typing/typing.js';

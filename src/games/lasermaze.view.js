@@ -1,7 +1,8 @@
 // Game 2 — Laser Mirror Maze: the beam must traverse actual Hebrew letters in RTL order.
 // (Title corrected Nov 7 2026: it previously read "Laser Mirror Laser Maze".)
 import { h, heSpan } from '../shell/ui.js';
-import { createSession, shuffled, loadGameImages, imgOf, resultsCard, envNode, castEnvNode, GAME_ENV, roundStatus, placeBoard } from './engine.js';
+import { createSession, shuffled, loadGameImages, imgOf, resultsCard, envNode, GAME_ENV, roundStatus, placeBoard } from './engine.js';
+import { castEnvNode } from './cast-env.js';
 import { sfx } from '../audio/sfx.js';
 import { loadJson } from '../grammar/loader.js';
 export const STORE_KEY = 'games.lasermaze.v1';

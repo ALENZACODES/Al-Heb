@@ -1,6 +1,7 @@
 // Game 11 — Shuk Taxi: road signs use only attested Hebrew direction phrases.
 import { h, heSpan } from '../shell/ui.js';
-import { createSession, shuffled, loadGameImages, speak, resultsCard, envNode, castEnvNode, GAME_ENV, roundStatus } from './engine.js';
+import { createSession, shuffled, loadGameImages, speak, resultsCard, envNode, GAME_ENV, roundStatus } from './engine.js';
+import { castEnvNode } from './cast-env.js';
 import { sfx } from '../audio/sfx.js';
 import { loadJson } from '../grammar/loader.js';
 export const STORE_KEY = 'games.shuktaxi.v1';

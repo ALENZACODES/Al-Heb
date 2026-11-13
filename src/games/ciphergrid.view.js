@@ -1,6 +1,7 @@
 // Game 20 — point-to-unpointed cipher over source-verified corpus lines.
 import { h, heSpan } from '../shell/ui.js';
-import { createSession, shuffled, resultsCard, roundStatus, loadGameImages, envNode, castEnvNode, GAME_ENV } from './engine.js';
+import { createSession, shuffled, resultsCard, roundStatus, loadGameImages, envNode, GAME_ENV } from './engine.js';
+import { castEnvNode } from './cast-env.js';
 import { sfx } from '../audio/sfx.js';
 import { loadJson } from '../grammar/loader.js';
 import { stripPoints } from '../typing/typing.js';

@@ -1,6 +1,7 @@
 // Game 10. Cast and production voices stay untouched.
 import { h, heSpan } from '../shell/ui.js';
-import { createSession, shuffled, loadGameImages, imgOf, speak, resultsCard, castEnvNode } from './engine.js';
+import { createSession, shuffled, loadGameImages, imgOf, speak, resultsCard } from './engine.js';
+import { castEnvNode } from './cast-env.js';
 import { loadGrammarData, loadJson } from '../grammar/loader.js';
 import { buildTopics } from '../grammar/model.js';
 import { sfx } from '../audio/sfx.js';

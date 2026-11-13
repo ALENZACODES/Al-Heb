@@ -1,0 +1,2443 @@
+{
+ "schema": "alef.talk.heldout.results.v1",
+ "summary": {
+  "file": "tests/fixtures/talk.heldout.json",
+  "mode": "hybrid",
+  "beams": 2,
+  "pack": "he-en-hq for Hebrew to English",
+  "memory": true,
+  "all": {
+   "lines": 240,
+   "strict": 81,
+   "accepted": 96.3,
+   "exact": 212,
+   "refused": 0
+  },
+  "en-he": {
+   "lines": 120,
+   "strict": 84.7,
+   "accepted": 97.9,
+   "exact": 112,
+   "refused": 0
+  },
+  "he-en": {
+   "lines": 120,
+   "strict": 77.4,
+   "accepted": 94.6,
+   "exact": 100,
+   "refused": 0
+  },
+  "byMethod": {
+   "model": 229,
+   "pattern": 11
+  },
+  "chrF": {
+   "all": 80.1,
+   "en-he": 87.1,
+   "he-en": 75.4
+  },
+  "secondsPerLine": 0.6
+ },
+ "rows": [
+  {
+   "id": "x-en-001",
+   "direction": "en-he",
+   "source": "Which bus goes to the central station?",
+   "translation": "איזה אוטובוס הולך לתחנה המרכזית?",
+   "ok": true,
+   "method": "model",
+   "strict": 0.8,
+   "accepted": 0.8
+  },
+  {
+   "id": "x-en-002",
+   "direction": "en-he",
+   "source": "The train was cancelled this morning.",
+   "translation": "הרכבת בוטלה הבוקר.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-003",
+   "direction": "en-he",
+   "source": "I missed my train.",
+   "translation": "פספסתי את הרכבת שלי.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-004",
+   "direction": "en-he",
+   "source": "How far is the beach from here?",
+   "translation": "כמה רחוק החוף מכאן?",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-005",
+   "direction": "en-he",
+   "source": "Please stop at the next corner.",
+   "translation": "בבקשה תעצור בפינה הבאה.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.5,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-006",
+   "direction": "en-he",
+   "source": "The flight is delayed by two hours.",
+   "translation": "הטיסה מתעכבת בשעתיים.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-007",
+   "direction": "en-he",
+   "source": "I would like to rent a car for three days.",
+   "translation": "אני רוצה לשכור מכונית לשלושה ימים.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.8333,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-008",
+   "direction": "en-he",
+   "source": "My phone battery is dead.",
+   "translation": "הסוללה של הטלפון שלי מתה.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.8,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-009",
+   "direction": "en-he",
+   "source": "Does this train stop in Haifa?",
+   "translation": "הרכבת הזאת עוצרת בחיפה?",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-010",
+   "direction": "en-he",
+   "source": "We are lost.",
+   "translation": "אנחנו אבודים.",
+   "ok": true,
+   "method": "model",
+   "strict": 0,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-011",
+   "direction": "en-he",
+   "source": "Cross the street and walk two blocks.",
+   "translation": "לחצות את הרחוב וללכת שני רחובות.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.5,
+   "accepted": 0.6667
+  },
+  {
+   "id": "x-en-012",
+   "direction": "en-he",
+   "source": "My luggage did not arrive.",
+   "translation": "המטען שלי לא הגיע.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.5,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-013",
+   "direction": "en-he",
+   "source": "We want to visit the old market tomorrow.",
+   "translation": "אנחנו רוצים לבקר בשוק הישן מחר.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-014",
+   "direction": "en-he",
+   "source": "I need a taxi to the airport at five in the morning.",
+   "translation": "אני צריך מונית לשדה התעופה בחמש בבוקר.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-015",
+   "direction": "en-he",
+   "source": "Is the museum open on Saturday?",
+   "translation": "האם המוזיאון פתוח בשבת?",
+   "ok": true,
+   "method": "model",
+   "strict": 0.6667,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-016",
+   "direction": "en-he",
+   "source": "The road is closed because of the rain.",
+   "translation": "הדרך סגורה בגלל הגשם.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.5,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-017",
+   "direction": "en-he",
+   "source": "How many stops until Jerusalem?",
+   "translation": "כמה עצירות עד ירושלים?",
+   "ok": true,
+   "method": "model",
+   "strict": 0.75,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-018",
+   "direction": "en-he",
+   "source": "I left my bag on the bus.",
+   "translation": "השארתי את התיק שלי באוטובוס.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-019",
+   "direction": "en-he",
+   "source": "Could you write that down for me?",
+   "translation": "תוכל לרשום לי את זה?",
+   "ok": true,
+   "method": "model",
+   "strict": 0.6,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-020",
+   "direction": "en-he",
+   "source": "We arrived yesterday evening.",
+   "translation": "הגענו אתמול בערב.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-021",
+   "direction": "en-he",
+   "source": "I don't eat eggs or cheese.",
+   "translation": "אני לא אוכל ביצים או גבינה.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-022",
+   "direction": "en-he",
+   "source": "Could we get more bread?",
+   "translation": "אפשר לקבל עוד לחם?",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-023",
+   "direction": "en-he",
+   "source": "The soup is cold.",
+   "translation": "המרק קר.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-024",
+   "direction": "en-he",
+   "source": "Which dish is the most popular?",
+   "translation": "איזו מנה הכי פופולרית?",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-025",
+   "direction": "en-he",
+   "source": "We did not order this.",
+   "translation": "לא הזמנו את זה.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-026",
+   "direction": "en-he",
+   "source": "I would like my coffee without sugar.",
+   "translation": "אני רוצה את הקפה שלי בלי סוכר",
+   "ok": true,
+   "method": "pattern",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-027",
+   "direction": "en-he",
+   "source": "Is the fish fresh today?",
+   "translation": "הדג טרי היום?",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-028",
+   "direction": "en-he",
+   "source": "A table by the window, please.",
+   "translation": "שולחן ליד החלון, בבקשה.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-029",
+   "direction": "en-he",
+   "source": "The waiter forgot our drinks.",
+   "translation": "המלצר שכח את המשקאות שלנו.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-030",
+   "direction": "en-he",
+   "source": "Do you take dollars?",
+   "translation": "אתה מקבל דולרים?",
+   "ok": true,
+   "method": "model",
+   "strict": 0.3333,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-031",
+   "direction": "en-he",
+   "source": "The children want ice cream.",
+   "translation": "הילדים רוצים גלידה.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-032",
+   "direction": "en-he",
+   "source": "I'm still hungry.",
+   "translation": "אני עדיין רעב.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-033",
+   "direction": "en-he",
+   "source": "This is too spicy for me.",
+   "translation": "זה חריף מדי בשבילי.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-034",
+   "direction": "en-he",
+   "source": "Do you have anything without gluten?",
+   "translation": "יש לך משהו בלי גלוטן?",
+   "ok": true,
+   "method": "model",
+   "strict": 0.8,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-035",
+   "direction": "en-he",
+   "source": "We'll share one dessert.",
+   "translation": "נחלוק קינוח אחד.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.3333,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-036",
+   "direction": "en-he",
+   "source": "A glass of red wine, please.",
+   "translation": "כוס יין אדום, בבקשה.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-037",
+   "direction": "en-he",
+   "source": "The kitchen closes at ten.",
+   "translation": "המטבח נסגר בעשר.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-038",
+   "direction": "en-he",
+   "source": "My wife is a vegetarian.",
+   "translation": "אשתי צמחונית.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-039",
+   "direction": "en-he",
+   "source": "Everything was delicious, thank you.",
+   "translation": "הכל היה טעים, תודה.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.75,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-040",
+   "direction": "en-he",
+   "source": "I'll have the same as him.",
+   "translation": "אני אקח אותו דבר כמוהו.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-041",
+   "direction": "en-he",
+   "source": "Do you have this in a larger size?",
+   "translation": "יש לך את זה במידה גדולה יותר?",
+   "ok": true,
+   "method": "model",
+   "strict": 0.8571,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-042",
+   "direction": "en-he",
+   "source": "This bag is too heavy.",
+   "translation": "התיק הזה כבד מדי.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-043",
+   "direction": "en-he",
+   "source": "I am looking for a birthday present for my husband.",
+   "translation": "אני מחפשת מתנת יום הולדת לבעלי.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-044",
+   "direction": "en-he",
+   "source": "Do you have a smaller one?",
+   "translation": "יש לך אחד קטן יותר?",
+   "ok": true,
+   "method": "model",
+   "strict": 0.5,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-045",
+   "direction": "en-he",
+   "source": "Somebody took my seat.",
+   "translation": "מישהו לקח את המושב שלי.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.8,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-046",
+   "direction": "en-he",
+   "source": "Can you give me a discount?",
+   "translation": "אתה יכול לתת לי הנחה?",
+   "ok": true,
+   "method": "model",
+   "strict": 0,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-047",
+   "direction": "en-he",
+   "source": "I want to return this shirt.",
+   "translation": "אני רוצה להחזיר את החולצה הזאת.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-048",
+   "direction": "en-he",
+   "source": "Do you sell stamps?",
+   "translation": "אתה מוכר בולים?",
+   "ok": true,
+   "method": "model",
+   "strict": 0.3333,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-049",
+   "direction": "en-he",
+   "source": "The store opens at nine.",
+   "translation": "החנות נפתחת בתשע.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-050",
+   "direction": "en-he",
+   "source": "I need a receipt.",
+   "translation": "אני צריך קבלה",
+   "ok": true,
+   "method": "pattern",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-051",
+   "direction": "en-he",
+   "source": "How much are the tomatoes per kilo?",
+   "translation": "כמה עולים העגבניות לקילו?",
+   "ok": true,
+   "method": "model",
+   "strict": 0.75,
+   "accepted": 0.75
+  },
+  {
+   "id": "x-en-052",
+   "direction": "en-he",
+   "source": "I only have cash.",
+   "translation": "יש לי רק מזומן.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-053",
+   "direction": "en-he",
+   "source": "It doesn't fit me.",
+   "translation": "זה לא מתאים לי.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-054",
+   "direction": "en-he",
+   "source": "I'll take two of these.",
+   "translation": "אני אקח שניים מאלה.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.75,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-055",
+   "direction": "en-he",
+   "source": "Is there a supermarket near the hotel?",
+   "translation": "יש סופרמרקט ליד המלון?",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-056",
+   "direction": "en-he",
+   "source": "My son has a fever.",
+   "translation": "לבן שלי יש חום.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-057",
+   "direction": "en-he",
+   "source": "I need to see a doctor today.",
+   "translation": "אני צריך לראות רופא היום",
+   "ok": true,
+   "method": "pattern",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-058",
+   "direction": "en-he",
+   "source": "My daughter swallowed a coin.",
+   "translation": "הבת שלי בלעה מטבע.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-059",
+   "direction": "en-he",
+   "source": "His leg is bleeding.",
+   "translation": "הרגל שלו מדממת.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-060",
+   "direction": "en-he",
+   "source": "We need help right now.",
+   "translation": "אנחנו צריכים עזרה עכשיו.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-061",
+   "direction": "en-he",
+   "source": "She fell and cannot walk.",
+   "translation": "היא נפלה ולא יכולה ללכת.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.6667,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-062",
+   "direction": "en-he",
+   "source": "I can't find my glasses.",
+   "translation": "אני לא מוצאת את המשקפיים שלי.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.8333,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-063",
+   "direction": "en-he",
+   "source": "I take this medicine every morning.",
+   "translation": "אני לוקח את התרופה הזאת כל בוקר.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-064",
+   "direction": "en-he",
+   "source": "She has trouble breathing.",
+   "translation": "היא מתקשה לנשום.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.3333,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-065",
+   "direction": "en-he",
+   "source": "I cut my finger.",
+   "translation": "חתכתי את האצבע שלי.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.6667,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-066",
+   "direction": "en-he",
+   "source": "He is not breathing.",
+   "translation": "הוא לא נושם.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-067",
+   "direction": "en-he",
+   "source": "I lost my passport at the market.",
+   "translation": "איבדתי את הדרכון שלי בשוק.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-068",
+   "direction": "en-he",
+   "source": "Do I need a prescription?",
+   "translation": "אני צריך מרשם?",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-069",
+   "direction": "en-he",
+   "source": "There is a fire in the building.",
+   "translation": "יש שריפה בבניין.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.6667,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-070",
+   "direction": "en-he",
+   "source": "The window in our room does not close.",
+   "translation": "החלון בחדר שלנו לא נסגר.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-071",
+   "direction": "en-he",
+   "source": "The air conditioner is not working.",
+   "translation": "המזגן לא עובד.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-072",
+   "direction": "en-he",
+   "source": "Can I get another pillow?",
+   "translation": "אפשר לקבל עוד כרית?",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-073",
+   "direction": "en-he",
+   "source": "We are staying for four nights.",
+   "translation": "אנחנו נשארים במשך ארבעה לילות.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.5,
+   "accepted": 0.75
+  },
+  {
+   "id": "x-en-074",
+   "direction": "en-he",
+   "source": "There is no hot water in the shower.",
+   "translation": "אין מים חמים במקלחת.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-075",
+   "direction": "en-he",
+   "source": "Could we have a quieter room?",
+   "translation": "אפשר לקבל חדר שקט יותר?",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-076",
+   "direction": "en-he",
+   "source": "I forgot my key in the room.",
+   "translation": "שכחתי את המפתח שלי בחדר.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.75,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-077",
+   "direction": "en-he",
+   "source": "Is breakfast included in the price?",
+   "translation": "ארוחת הבוקר כלולה במחיר?",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-078",
+   "direction": "en-he",
+   "source": "The room is very noisy.",
+   "translation": "החדר רועש מאוד.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.3333,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-079",
+   "direction": "en-he",
+   "source": "Can you wake me at six?",
+   "translation": "אתה יכול להעיר אותי בשש?",
+   "ok": true,
+   "method": "model",
+   "strict": 0.5,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-080",
+   "direction": "en-he",
+   "source": "We booked a room with a sea view.",
+   "translation": "הזמנו חדר עם נוף לים.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-081",
+   "direction": "en-he",
+   "source": "How old are your children?",
+   "translation": "בני כמה הילדים שלך?",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-082",
+   "direction": "en-he",
+   "source": "I grew up in a small town.",
+   "translation": "גדלתי בעיירה קטנה.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-083",
+   "direction": "en-he",
+   "source": "We met at university.",
+   "translation": "נפגשנו באוניברסיטה.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-084",
+   "direction": "en-he",
+   "source": "Please speak more slowly.",
+   "translation": "בבקשה תדבר יותר לאט.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.25,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-085",
+   "direction": "en-he",
+   "source": "I did not understand the question.",
+   "translation": "לא הבנתי את השאלה.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-086",
+   "direction": "en-he",
+   "source": "My daughter is seven years old.",
+   "translation": "הבת שלי בת שבע.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-087",
+   "direction": "en-he",
+   "source": "We live in Toronto.",
+   "translation": "אנחנו גרים בטורונטו.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-088",
+   "direction": "en-he",
+   "source": "It was nice to meet you.",
+   "translation": "היה נעים להכיר אותך.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-089",
+   "direction": "en-he",
+   "source": "What do you do for work?",
+   "translation": "במה אתה עובד?",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-090",
+   "direction": "en-he",
+   "source": "I'll call you tomorrow.",
+   "translation": "אני אתקשר אליך מחר.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-091",
+   "direction": "en-he",
+   "source": "She is my sister.",
+   "translation": "היא אחותי.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-092",
+   "direction": "en-he",
+   "source": "Do you have children?",
+   "translation": "יש לך ילדים?",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-093",
+   "direction": "en-he",
+   "source": "We are waiting for our friends.",
+   "translation": "אנחנו מחכים לחברים שלנו.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-094",
+   "direction": "en-he",
+   "source": "I forgot to call my mother.",
+   "translation": "שכחתי להתקשר לאמא שלי.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-095",
+   "direction": "en-he",
+   "source": "What are you doing this evening?",
+   "translation": "מה אתה עושה הערב?",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-096",
+   "direction": "en-he",
+   "source": "I love this city.",
+   "translation": "אני אוהב את העיר הזאת.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-097",
+   "direction": "en-he",
+   "source": "He works at the hospital.",
+   "translation": "הוא עובד בבית החולים.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-098",
+   "direction": "en-he",
+   "source": "The weather is beautiful today.",
+   "translation": "מזג האוויר יפה היום.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-099",
+   "direction": "en-he",
+   "source": "It will rain tomorrow.",
+   "translation": "מחר ירד גשם.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-100",
+   "direction": "en-he",
+   "source": "I don't know yet.",
+   "translation": "אני עדיין לא יודע.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.75,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-101",
+   "direction": "en-he",
+   "source": "Can you help me with the bags?",
+   "translation": "אתה יכול לעזור לי עם התיקים?",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-102",
+   "direction": "en-he",
+   "source": "My parents are coming next week.",
+   "translation": "ההורים שלי באים בשבוע הבא.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-103",
+   "direction": "en-he",
+   "source": "I have never been to Israel.",
+   "translation": "מעולם לא הייתי בישראל.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.6,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-104",
+   "direction": "en-he",
+   "source": "Tell him I am on my way.",
+   "translation": "תגיד לו שאני בדרך.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-105",
+   "direction": "en-he",
+   "source": "That's a good idea.",
+   "translation": "זה רעיון טוב.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-106",
+   "direction": "en-he",
+   "source": "What time do services start on Friday night?",
+   "translation": "באיזו שעה שירותים מתחילים ביום שישי בערב?",
+   "ok": true,
+   "method": "model",
+   "strict": 0,
+   "accepted": 0.7143
+  },
+  {
+   "id": "x-en-107",
+   "direction": "en-he",
+   "source": "Where can I find a prayer book?",
+   "translation": "איפה אפשר למצוא סידור?",
+   "ok": true,
+   "method": "pattern",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-108",
+   "direction": "en-he",
+   "source": "Happy holiday to you and your family.",
+   "translation": "חג שמח לך ולמשפחתך.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-109",
+   "direction": "en-he",
+   "source": "We light candles before sunset.",
+   "translation": "אנחנו מדליקים נרות לפני השקיעה.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-110",
+   "direction": "en-he",
+   "source": "My son's bar mitzvah is in June.",
+   "translation": "הבר מצווה של הבן שלי ביוני.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.6667,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-111",
+   "direction": "en-he",
+   "source": "The rabbi gave a beautiful sermon.",
+   "translation": "הרב נשא דרשה יפה.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.75,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-112",
+   "direction": "en-he",
+   "source": "Is the synagogue open to visitors?",
+   "translation": "האם בית הכנסת פתוח למבקרים?",
+   "ok": true,
+   "method": "model",
+   "strict": 0.75,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-113",
+   "direction": "en-he",
+   "source": "We are reading the Torah portion of the week.",
+   "translation": "אנחנו קוראים את החלק של התורה בשבוע.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.2,
+   "accepted": 0.2
+  },
+  {
+   "id": "x-en-114",
+   "direction": "en-he",
+   "source": "I would like to say Kaddish for my father.",
+   "translation": "אני רוצה לומר קדיש לאבא שלי.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.6667,
+   "accepted": 0.8333
+  },
+  {
+   "id": "x-en-115",
+   "direction": "en-he",
+   "source": "Shabbat ends after dark.",
+   "translation": "שבת מסתיימת לאחר רדת החשכה.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.4,
+   "accepted": 0.8
+  },
+  {
+   "id": "x-en-116",
+   "direction": "en-he",
+   "source": "Where do the women sit?",
+   "translation": "איפה הנשים יושבות?",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-117",
+   "direction": "en-he",
+   "source": "May I come in?",
+   "translation": "אפשר להיכנס?",
+   "ok": true,
+   "method": "pattern",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-118",
+   "direction": "en-he",
+   "source": "We fast on Yom Kippur.",
+   "translation": "אנחנו צמים ביום כיפור.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-119",
+   "direction": "en-he",
+   "source": "The choir sings every Friday.",
+   "translation": "המקהלה שרה כל יום שישי.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-en-120",
+   "direction": "en-he",
+   "source": "Thank you for inviting us.",
+   "translation": "תודה שהזמנת אותנו.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.6667,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-001",
+   "direction": "he-en",
+   "source": "האוטובוס הבא יוצא בעוד רבע שעה.",
+   "translation": "The next bus leaves in 15 minutes.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.8571,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-002",
+   "direction": "he-en",
+   "source": "תרד בתחנה השלישית.",
+   "translation": "Get off at the third stop.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-003",
+   "direction": "he-en",
+   "source": "אין לי מושג איפה אנחנו.",
+   "translation": "I have no idea where we are.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-004",
+   "direction": "he-en",
+   "source": "הרכבת לתל אביב יוצאת מרציף שתיים.",
+   "translation": "The train to Tel Aviv departs from Platform Two.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.8889,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-005",
+   "direction": "he-en",
+   "source": "כמה זמן לוקח להגיע לשם ברגל?",
+   "translation": "How long does it take to get there on foot?",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-006",
+   "direction": "he-en",
+   "source": "תמשיך ישר עד הרמזור.",
+   "translation": "Keep straight to the light.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.5,
+   "accepted": 0.7143
+  },
+  {
+   "id": "x-he-007",
+   "direction": "he-en",
+   "source": "החניה כאן בתשלום?",
+   "translation": "Parking here is paid?",
+   "ok": true,
+   "method": "model",
+   "strict": 0.5,
+   "accepted": 0.5
+  },
+  {
+   "id": "x-he-008",
+   "direction": "he-en",
+   "source": "נסענו לים המלח בשבוע שעבר.",
+   "translation": "We went to the Dead Sea last week.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-009",
+   "direction": "he-en",
+   "source": "המטוס נוחת בשמונה בערב.",
+   "translation": "The plane lands at 8 p.m.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.5,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-010",
+   "direction": "he-en",
+   "source": "איפה אפשר לקנות כרטיס לרכבת הקלה?",
+   "translation": "Where can I buy a ticket for the light rail?",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-011",
+   "direction": "he-en",
+   "source": "הנהג אמר שזה קרוב.",
+   "translation": "The driver said it was close.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.8333,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-012",
+   "direction": "he-en",
+   "source": "יש פקק גדול בכביש.",
+   "translation": "There's a big traffic jam on the road.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.8889,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-013",
+   "direction": "he-en",
+   "source": "שכחתי את המטען בבית.",
+   "translation": "I left the luggage at home.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.6667,
+   "accepted": 0.8333
+  },
+  {
+   "id": "x-he-014",
+   "direction": "he-en",
+   "source": "אנחנו טסים הביתה ביום ראשון.",
+   "translation": "We're flying home on Sunday.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.8333,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-015",
+   "direction": "he-en",
+   "source": "המונית מחכה בחוץ.",
+   "translation": "The taxi is waiting outside.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-016",
+   "direction": "he-en",
+   "source": "איך מגיעים מכאן לעיר העתיקה?",
+   "translation": "How do you get from here to the Old City?",
+   "ok": true,
+   "method": "model",
+   "strict": 0.5,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-017",
+   "direction": "he-en",
+   "source": "הגשר סגור לתנועה.",
+   "translation": "The bridge is closed to traffic.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-018",
+   "direction": "he-en",
+   "source": "אל תשכח את הדרכון.",
+   "translation": "Don't forget your passport.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-019",
+   "direction": "he-en",
+   "source": "ירדנו בתחנה הלא נכונה.",
+   "translation": "We got off at the wrong stop.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-020",
+   "direction": "he-en",
+   "source": "זה במרחק הליכה מכאן.",
+   "translation": "It's within walking distance of here.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.7143,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-021",
+   "direction": "he-en",
+   "source": "אפשר לקבל את התפריט?",
+   "translation": "Can I get the menu?",
+   "ok": true,
+   "method": "pattern",
+   "strict": 0.8,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-022",
+   "direction": "he-en",
+   "source": "אני לא אוכלת מוצרי חלב.",
+   "translation": "I don't eat dairy",
+   "ok": true,
+   "method": "pattern",
+   "strict": 0.8333,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-023",
+   "direction": "he-en",
+   "source": "המנה הזאת חריפה?",
+   "translation": "Is this dish spicy?",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-024",
+   "direction": "he-en",
+   "source": "נשמח לקבל עוד מים.",
+   "translation": "We'd love more water.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.5,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-025",
+   "direction": "he-en",
+   "source": "הזמנתי סלט בלי בצל.",
+   "translation": "I ordered a salad without onions.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.8333,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-026",
+   "direction": "he-en",
+   "source": "החשבון לא נכון.",
+   "translation": "The account is incorrect.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.5,
+   "accepted": 0.75
+  },
+  {
+   "id": "x-he-027",
+   "direction": "he-en",
+   "source": "יש לכם מנות לילדים?",
+   "translation": "Do you have any rations for the kids?",
+   "ok": true,
+   "method": "model",
+   "strict": 0,
+   "accepted": 0.5714
+  },
+  {
+   "id": "x-he-028",
+   "direction": "he-en",
+   "source": "הקפה הזה מצוין.",
+   "translation": "This coffee is excellent.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-029",
+   "direction": "he-en",
+   "source": "אני מעדיף תה עם נענע.",
+   "translation": "I prefer tea with mint.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-030",
+   "direction": "he-en",
+   "source": "אכלנו במסעדה הזאת אתמול.",
+   "translation": "We ate at this restaurant yesterday.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-031",
+   "direction": "he-en",
+   "source": "מה יש לקינוח?",
+   "translation": "What's for dessert?",
+   "ok": true,
+   "method": "model",
+   "strict": 0.75,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-032",
+   "direction": "he-en",
+   "source": "בלי קרח, בבקשה.",
+   "translation": "No ice, please",
+   "ok": true,
+   "method": "pattern",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-033",
+   "direction": "he-en",
+   "source": "האוכל מגיע תוך עשר דקות.",
+   "translation": "The food arrives in ten minutes.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.8333,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-034",
+   "direction": "he-en",
+   "source": "אני צמא מאוד.",
+   "translation": "I'm very thirsty.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.75,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-035",
+   "direction": "he-en",
+   "source": "הלחם עדיין חם.",
+   "translation": "The bread is still warm.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-036",
+   "direction": "he-en",
+   "source": "שתינו יותר מדי יין.",
+   "translation": "We had too much wine.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.8,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-037",
+   "direction": "he-en",
+   "source": "יש כאן שוק ביום שישי?",
+   "translation": "Is there a market here on Friday?",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-038",
+   "direction": "he-en",
+   "source": "הפירות האלה מתוקים.",
+   "translation": "These fruits are sweet.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-039",
+   "direction": "he-en",
+   "source": "תביא לנו שתי כוסות, בבקשה.",
+   "translation": "Bring us two glasses, please.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-040",
+   "direction": "he-en",
+   "source": "אני מזמין את כולם לארוחת ערב.",
+   "translation": "I'm inviting everyone to dinner.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.8333,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-041",
+   "direction": "he-en",
+   "source": "כמה עולה החולצה הכחולה?",
+   "translation": "How much does the blue shirt cost?",
+   "ok": true,
+   "method": "model",
+   "strict": 0.6667,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-042",
+   "direction": "he-en",
+   "source": "זה במבצע השבוע.",
+   "translation": "It's on sale this week.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.8333,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-043",
+   "direction": "he-en",
+   "source": "אין לנו את זה במלאי.",
+   "translation": "We don't have it in stock.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-044",
+   "direction": "he-en",
+   "source": "אפשר לקבל שקית?",
+   "translation": "Can I get a shopping bag?",
+   "ok": true,
+   "method": "pattern",
+   "strict": 0.6,
+   "accepted": 0.8
+  },
+  {
+   "id": "x-he-045",
+   "direction": "he-en",
+   "source": "החנות סגורה בשבת.",
+   "translation": "The store is closed on Saturday.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-046",
+   "direction": "he-en",
+   "source": "קניתי מתנה לאמא שלי.",
+   "translation": "I bought a present for my mother.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.8571,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-047",
+   "direction": "he-en",
+   "source": "הנעליים האלה קטנות עליי.",
+   "translation": "These shoes are small on me.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.7143,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-048",
+   "direction": "he-en",
+   "source": "איפה אפשר למדוד את המכנסיים?",
+   "translation": "Where can I measure my pants?",
+   "ok": true,
+   "method": "model",
+   "strict": 0.5714,
+   "accepted": 0.6667
+  },
+  {
+   "id": "x-he-049",
+   "direction": "he-en",
+   "source": "המחיר כולל מע\"מ?",
+   "translation": "Does the price include VAT?",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-050",
+   "direction": "he-en",
+   "source": "אני מחפשת מתנה לחבר.",
+   "translation": "I am looking for a gift to the friend",
+   "ok": true,
+   "method": "pattern",
+   "strict": 0.7778,
+   "accepted": 0.7778
+  },
+  {
+   "id": "x-he-051",
+   "direction": "he-en",
+   "source": "תן לי חצי קילו גבינה.",
+   "translation": "Give me a pound of cheese.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.7143,
+   "accepted": 0.7143
+  },
+  {
+   "id": "x-he-052",
+   "direction": "he-en",
+   "source": "הכרטיס שלי לא עובר.",
+   "translation": "My card doesn't pass.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.3333,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-053",
+   "direction": "he-en",
+   "source": "יש לך עודף ממאה?",
+   "translation": "Do you have change of 100?",
+   "ok": true,
+   "method": "model",
+   "strict": 0.5714,
+   "accepted": 0.8333
+  },
+  {
+   "id": "x-he-054",
+   "direction": "he-en",
+   "source": "זה זול יותר בשוק.",
+   "translation": "It's cheaper on the market.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.6667,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-055",
+   "direction": "he-en",
+   "source": "אני רוצה להחליף את זה.",
+   "translation": "I want to change this",
+   "ok": true,
+   "method": "pattern",
+   "strict": 0.8,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-056",
+   "direction": "he-en",
+   "source": "אני מרגיש הרבה יותר טוב היום.",
+   "translation": "I feel much better today.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-057",
+   "direction": "he-en",
+   "source": "כואבת לי הבטן מאתמול.",
+   "translation": "My stomach hurt yesterday.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.6667,
+   "accepted": 0.6667
+  },
+  {
+   "id": "x-he-058",
+   "direction": "he-en",
+   "source": "הוא נפל מהאופניים.",
+   "translation": "He fell off the bike.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-059",
+   "direction": "he-en",
+   "source": "צריך להזמין משטרה.",
+   "translation": "Police should be called.",
+   "ok": true,
+   "method": "model",
+   "strict": 0,
+   "accepted": 0.5
+  },
+  {
+   "id": "x-he-060",
+   "direction": "he-en",
+   "source": "יש לה אלרגיה לפניצילין.",
+   "translation": "She has a penicillin allergy.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.2,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-061",
+   "direction": "he-en",
+   "source": "איפה חדר המיון?",
+   "translation": "Where's the emergency room?",
+   "ok": true,
+   "method": "model",
+   "strict": 0.8,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-062",
+   "direction": "he-en",
+   "source": "נגמרו לי התרופות.",
+   "translation": "I'm out of drugs.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.5,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-063",
+   "direction": "he-en",
+   "source": "הילדה בולעת בקושי.",
+   "translation": "The girl barely swallows.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.6,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-064",
+   "direction": "he-en",
+   "source": "תתרחקו מהחלון!",
+   "translation": "Get away from the window!",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-065",
+   "direction": "he-en",
+   "source": "נשברה לי השן.",
+   "translation": "My tooth is broken.",
+   "ok": true,
+   "method": "model",
+   "strict": 0,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-066",
+   "direction": "he-en",
+   "source": "אני בהריון.",
+   "translation": "I'm pregnant.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.6667,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-067",
+   "direction": "he-en",
+   "source": "הוא איבד את ההכרה.",
+   "translation": "He lost consciousness.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-068",
+   "direction": "he-en",
+   "source": "מישהו פרץ לדירה שלנו.",
+   "translation": "Someone broke into our apartment.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-069",
+   "direction": "he-en",
+   "source": "קח את הכדור הזה פעמיים ביום.",
+   "translation": "Take this ball twice a day.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.8333,
+   "accepted": 0.8333
+  },
+  {
+   "id": "x-he-070",
+   "direction": "he-en",
+   "source": "אל תזוז, האמבולנס בדרך.",
+   "translation": "Don't move. The ambulance is on its way.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-071",
+   "direction": "he-en",
+   "source": "המפתח לא פותח את הדלת.",
+   "translation": "The key doesn't open the door.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.7143,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-072",
+   "direction": "he-en",
+   "source": "אפשר להשאיר את המזוודות בקבלה?",
+   "translation": "Can we leave the luggage at the front desk?",
+   "ok": true,
+   "method": "model",
+   "strict": 0.4286,
+   "accepted": 0.8889
+  },
+  {
+   "id": "x-he-073",
+   "direction": "he-en",
+   "source": "המעלית מקולקלת.",
+   "translation": "The elevator is broken.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-074",
+   "direction": "he-en",
+   "source": "החדר שלנו בקומה השלישית.",
+   "translation": "Our room is on the third floor.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-075",
+   "direction": "he-en",
+   "source": "שילמנו מראש על שלושה לילות.",
+   "translation": "We paid in advance for three nights.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-076",
+   "direction": "he-en",
+   "source": "אין מגבות נקיות בחדר.",
+   "translation": "No clean towels in the room.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.75,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-077",
+   "direction": "he-en",
+   "source": "מישהו יכול לתקן את הטלוויזיה?",
+   "translation": "Can anyone fix the TV?",
+   "ok": true,
+   "method": "model",
+   "strict": 0.6,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-078",
+   "direction": "he-en",
+   "source": "אנחנו עוזבים מחר בבוקר.",
+   "translation": "We leave tomorrow morning.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.6,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-079",
+   "direction": "he-en",
+   "source": "הבריכה פתוחה עד שבע.",
+   "translation": "The pool is open until seven.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-080",
+   "direction": "he-en",
+   "source": "תוכלו להזמין לנו מונית?",
+   "translation": "Can you call us a cab?",
+   "ok": true,
+   "method": "model",
+   "strict": 0.6667,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-081",
+   "direction": "he-en",
+   "source": "מה שלום ההורים שלך?",
+   "translation": "How are your parents?",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-082",
+   "direction": "he-en",
+   "source": "לא ראיתי אותך הרבה זמן.",
+   "translation": "I haven't seen you in a long time.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-083",
+   "direction": "he-en",
+   "source": "אנחנו נשואים עשרים שנה.",
+   "translation": "We've been married 20 years.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.5714,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-084",
+   "direction": "he-en",
+   "source": "הבן שלי לומד באוניברסיטה.",
+   "translation": "My son goes to university.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.5,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-085",
+   "direction": "he-en",
+   "source": "מתי נפגשים מחר?",
+   "translation": "When will we meet tomorrow?",
+   "ok": true,
+   "method": "model",
+   "strict": 0.6,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-086",
+   "direction": "he-en",
+   "source": "אני גר כאן כבר חמש שנים.",
+   "translation": "I've lived here for five years.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.8571,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-087",
+   "direction": "he-en",
+   "source": "היא מדברת עברית שוטפת.",
+   "translation": "She speaks fluent Hebrew.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-088",
+   "direction": "he-en",
+   "source": "תמסור ד\"ש למשפחה.",
+   "translation": "Say hi to the family.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.8,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-089",
+   "direction": "he-en",
+   "source": "אני מתגעגע הביתה.",
+   "translation": "I miss home.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-090",
+   "direction": "he-en",
+   "source": "הם עברו לחיפה לפני שנה.",
+   "translation": "They moved to Haifa a year ago.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-091",
+   "direction": "he-en",
+   "source": "נדבר על זה אחר כך.",
+   "translation": "We'll talk about it later.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.8333,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-092",
+   "direction": "he-en",
+   "source": "אני מסכים איתך לגמרי.",
+   "translation": "I completely agree with you.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-093",
+   "direction": "he-en",
+   "source": "יום ההולדת שלה בשבוע הבא.",
+   "translation": "Her birthday's next week.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.8,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-094",
+   "direction": "he-en",
+   "source": "אתה רוצה לבוא איתנו לסרט?",
+   "translation": "Do you want to go to the movies with us?",
+   "ok": true,
+   "method": "model",
+   "strict": 0.7,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-095",
+   "direction": "he-en",
+   "source": "סליחה, לא שמעתי.",
+   "translation": "Sorry, I didn't hear.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-096",
+   "direction": "he-en",
+   "source": "החברים שלי גרים בירושלים.",
+   "translation": "My friends live in Jerusalem.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-097",
+   "direction": "he-en",
+   "source": "אני עובד מהבית בימי שני.",
+   "translation": "I work from home on Mondays.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-098",
+   "direction": "he-en",
+   "source": "אחותי מתחתנת בקיץ.",
+   "translation": "My sister's getting married in the summer.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.875,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-099",
+   "direction": "he-en",
+   "source": "הכלב שלנו ברח אתמול.",
+   "translation": "Our dog ran off yesterday.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.8,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-100",
+   "direction": "he-en",
+   "source": "אין לי זמן עכשיו.",
+   "translation": "I don't have time now.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.8571,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-101",
+   "direction": "he-en",
+   "source": "התפילה מתחילה בשש וחצי.",
+   "translation": "Prayer begins at 6:30.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.1667,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-102",
+   "direction": "he-en",
+   "source": "איפה אפשר לקנות חלות לשבת?",
+   "translation": "Where can I buy Shabbat challahs?",
+   "ok": true,
+   "method": "model",
+   "strict": 0.5714,
+   "accepted": 0.5714
+  },
+  {
+   "id": "x-he-103",
+   "direction": "he-en",
+   "source": "הרב מדבר אחרי קריאת התורה.",
+   "translation": "The rabbi speaks after the Torah reading.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-104",
+   "direction": "he-en",
+   "source": "אנחנו חוגגים את פסח עם כל המשפחה.",
+   "translation": "We celebrate Passover with the whole family.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-105",
+   "direction": "he-en",
+   "source": "שנה טובה ומתוקה.",
+   "translation": "Happy New Year.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.2,
+   "accepted": 0.6
+  },
+  {
+   "id": "x-he-106",
+   "direction": "he-en",
+   "source": "הבת שלי קוראת בתורה בשבת הבאה.",
+   "translation": "My daughter's taking turns next Saturday.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.3333,
+   "accepted": 0.625
+  },
+  {
+   "id": "x-he-107",
+   "direction": "he-en",
+   "source": "צריך כיפה כדי להיכנס?",
+   "translation": "Do you need a kippah to get in?",
+   "ok": true,
+   "method": "model",
+   "strict": 0.75,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-108",
+   "direction": "he-en",
+   "source": "בית הכנסת נמצא מול הפארק.",
+   "translation": "The synagogue is opposite the park.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.7143,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-109",
+   "direction": "he-en",
+   "source": "הדלקנו נרות חנוכה עם הילדים.",
+   "translation": "We lit Hanukkah candles with the children.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-110",
+   "direction": "he-en",
+   "source": "סבא שלי היה חזן.",
+   "translation": "My grandfather was a cantor.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-111",
+   "direction": "he-en",
+   "source": "מותר לצלם בפנים?",
+   "translation": "Can I take a picture inside?",
+   "ok": true,
+   "method": "model",
+   "strict": 0.1429,
+   "accepted": 0.6
+  },
+  {
+   "id": "x-he-112",
+   "direction": "he-en",
+   "source": "הקידוש יהיה באולם.",
+   "translation": "The kiddush will be in the hall.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-113",
+   "direction": "he-en",
+   "source": "אנחנו בונים סוכה בחצר.",
+   "translation": "We're building a sukkah in the yard.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.875,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-114",
+   "direction": "he-en",
+   "source": "מה הברכה על היין?",
+   "translation": "What is the blessing on wine?",
+   "ok": true,
+   "method": "model",
+   "strict": 0.7143,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-115",
+   "direction": "he-en",
+   "source": "צום קל ומועיל.",
+   "translation": "Light and useful fasting.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.1667,
+   "accepted": 0.6
+  },
+  {
+   "id": "x-he-116",
+   "direction": "he-en",
+   "source": "הטקס מתחיל אחרי השקיעה.",
+   "translation": "The ceremony begins after sunset.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.8,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-117",
+   "direction": "he-en",
+   "source": "תרמנו לבית הכנסת לזכר אמא.",
+   "translation": "We donated to the Mother's Memorial Synagogue.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.4444,
+   "accepted": 0.5
+  },
+  {
+   "id": "x-he-118",
+   "direction": "he-en",
+   "source": "יש שיעור תורה בכל יום שלישי.",
+   "translation": "There's a Torah class every Tuesday.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.8571,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-119",
+   "direction": "he-en",
+   "source": "ברוכים הבאים לקהילה שלנו.",
+   "translation": "Welcome to our community.",
+   "ok": true,
+   "method": "model",
+   "strict": 1,
+   "accepted": 1
+  },
+  {
+   "id": "x-he-120",
+   "direction": "he-en",
+   "source": "שבת שלום לכל המשפחה.",
+   "translation": "Good Sabbath to the whole family.",
+   "ok": true,
+   "method": "model",
+   "strict": 0.6667,
+   "accepted": 1
+  }
+ ]
+}

@@ -34,3 +34,22 @@ export async function loadDirection(direction, device = 'wasm') {
   const ort = await loadOrt();
   return createRuntime({ ort, pack, device, read: async (p) => { const b = readFileSync(join(NMT, p)); return b.buffer.slice(b.byteOffset, b.byteOffset + b.byteLength); } });
 }
+
+/**
+ * A pack that is not carried by the site (the high-quality pack lives on the pack host): loaded from a folder written by
+ * alef-tools packages/translate/scripts/pack.mjs (<dir>/<name>/pack.json and its parts).
+ * @param {string} dir @param {string} name @param {'wasm'|'float'} [device]
+ */
+export async function loadPackFrom(dir, name, device = 'wasm') {
+  const pack = JSON.parse(readFileSync(join(dir, name, 'pack.json'), 'utf8'));
+  const ort = await loadOrt();
+  return createRuntime({ ort, pack, device, read: async (p) => { const b = readFileSync(join(dir, p)); return b.buffer.slice(b.byteOffset, b.byteOffset + b.byteLength); } });
+}
+
+/** The sentence memory of data/talk/tm, read from disk (the browser fetches the same files). */
+export async function fileMemory() {
+  const { createMemory } = await import('../../../src/talk/nmt/memory.js');
+  const base = 'file:///tm/';
+  const fetchFile = async (url) => { try { return new Response(readFileSync(join(root, 'data', 'talk', 'tm', String(url).slice(base.length)))); } catch { return new Response('', { status: 404 }); } };
+  return createMemory({ base, fetch: fetchFile });
+}

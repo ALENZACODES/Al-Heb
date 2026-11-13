@@ -2,7 +2,7 @@
  "schema": "alef.tools.lock.v1",
  "note": "The alef-tools version this app is built with. Written by tools/alef-tools/sync.mjs; do not edit by hand.",
  "repo": "ALENZACODES/alef-tools",
- "ref": "36a4b282cee0e460be521f05db8f2cb14ebe464d",
+ "ref": "10c6577d58edb92c843bfb8de8b3657604236bfd",
  "contract": 1,
  "packages": {
   "loader": {
@@ -50,14 +50,65 @@
      "sha256": "f619e2d13306f1e51e23e729c32f6ed941915bdf5b735572371a24969d798e16"
     }
    ]
+  },
+  "translate": {
+   "version": "0.1.0",
+   "path": "assets/vendor/_alef-tools/translate@0.1.0",
+   "files": [
+    {
+     "path": "client.js",
+     "bytes": 4883,
+     "sha256": "28371a621a8ccdd08fbe1fa2d17f93917bbc9f29af375e719a4a9c9ef2649189"
+    },
+    {
+     "path": "decode.js",
+     "bytes": 3588,
+     "sha256": "7553b6f1095b94bd7c2af4b7ec6bd3ab3daf496704e72ce7a8110232ff9a080a"
+    },
+    {
+     "path": "index.js",
+     "bytes": 1831,
+     "sha256": "56824939adca556c5b88a1cba9d3cc8b1f56b760ef04b3ba77176e5de405fef0"
+    },
+    {
+     "path": "pack.js",
+     "bytes": 6154,
+     "sha256": "14273ec11189bb8e9991c080b47d3ce179228b39b2a9063cd2e0c11584bdb886"
+    },
+    {
+     "path": "runtime.js",
+     "bytes": 2437,
+     "sha256": "4b954ec7e6a658fa1040d2a718dfc558a360a54d123a784bb269bf930f2e4c02"
+    },
+    {
+     "path": "scoring.js",
+     "bytes": 3648,
+     "sha256": "33b888ca29e657e0e78df266aa69b32efe698b0b9a68745052d65a366be6d527"
+    },
+    {
+     "path": "tm.js",
+     "bytes": 2264,
+     "sha256": "c0b00e4f9c9603c126abaff343f95578522f56e2f6fd1d18e8c9bb55b6e465fd"
+    },
+    {
+     "path": "tokenizer.js",
+     "bytes": 2257,
+     "sha256": "ed9c8bdd07613c129a3b486f8c67510d0ae9e7b27aaea9a466034ea771213063"
+    },
+    {
+     "path": "worker.js",
+     "bytes": 5873,
+     "sha256": "e3cd63563711f1fb3ae09ccc0f0d3280032352120e47d019f29e1e198cd82f9f"
+    }
+   ]
   }
  },
  "manifest": {
-  "sha256": "1973ee726e6c46fbf676260de416d1ed3ae5e1e458158650e082f2096b542680",
+  "sha256": "5de62450816230da992fca70bc72561787b7a65954faa53793546e62897bf26a",
   "checked": "2026-11-12"
  },
  "generated": {
-  "src/settings/alef-tools.generated.js": "e2c9a7aae8a5acf883f77d562ef3113d6f421a1df74c0ce42bc31fb9547005c4",
-  "data/packs/catalog.json": "62a1b596d1cd46d9bfd90c63f717fa2338174eb14dd466b649b49b0283b21c6a"
+  "src/settings/alef-tools.generated.js": "3f8491b113335da6c70838268b5a31085516b54297b60cee43a171c2d2459fcf",
+  "data/packs/catalog.json": "b54cb0a278f9435521d90e839df2daf52328324c3dbb45e826550ba16e0de9c1"
  }
 }

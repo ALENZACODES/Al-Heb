@@ -347,6 +347,7 @@ Home shows a backup reminder after three finished lessons (`docs/progress/BACKUP
 | `quizladder-duo` | hide | Quiz Ladder for Two (lane games-books); reached from the games hub's More Games section, and search finds it by name. |
 | `dreidel-duo` | hide | Dreidel for two to four players (lane games-books); reached from the games hub's More Games section, and search finds it by name. |
 | `parashah` | keep | This Week's Parashah (lane games-books, 12 Nov): the calendar's portion with its aliyot, self-marked reading progress and a weekly goal. |
+| `my-prayer-book` | keep | My Prayer Book (idea N4, 12 Nov): pick prayers from the three service outlines, order them and print them with the learner's own progress marks. Texts come from the registry by id; marks are self-reported. |
 | `torah-search` | keep | Torah Search (lane games-books, 12 Nov): find a Hebrew word, or the words the app's root data lists under a root, in every verse; results open the reader at the verse. |
 | `verse-notebook` | keep | Verse Notebook (lane games-books, 12 Nov): saved verses with the learner's own notes, kept on the device, exportable as a file. |
 | `reading-challenge` | keep | Reading Challenges (lane games-books, 12 Nov): a learner-chosen number of little books in a month or a week, counted from books finished with the story check. |

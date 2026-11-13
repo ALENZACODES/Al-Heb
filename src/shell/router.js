@@ -11,6 +11,7 @@
  */
 /** @type {RouteDef[]} Module paths are relative to src/shell/. */
 import { G4_ROUTES } from './g4-routes.js'; // lane 4 (g4)
+import { COMMUNITY_ROUTES } from './community-routes.js'; // prayer and community: My Prayer Book
 import { PLATFORM_ROUTES } from './platform-routes.js'; // lane platform
 import { GB_ROUTES } from './gb-routes.js';
 import { COURSE_ROUTES } from './course-routes.js'; // course lane: course map, checkpoints, mixed review, rules
@@ -260,6 +261,7 @@ export const ROUTES = [
   { name: 'trope-families', pattern: '/trope/families', module: '../trope/practice.view.js', title: 'Trope Families', owner: 'lane6', group: 'learn', quick: 'nav.route.trope-families' },
   { name: 'trope-family', pattern: '/trope/families/:id', module: '../trope/practice.view.js', title: 'Trope Families', owner: 'lane6', paramQuery: { id: 'id' } },
   ...COURSE_ROUTES,
+  ...COMMUNITY_ROUTES,
   { name: 'trope-aliyah', pattern: '/trope/aliyah', module: '../trope/practice.view.js', title: 'Trope Practice by Aliyah', owner: 'lane6', group: 'learn', quick: 'nav.route.trope-aliyah', query: { sec: 'aliyah' } },
   ...PLATFORM_ROUTES, // lane platform (12 Nov): What's New, My Data, Mastery Map, Cram, My Week, Keyboard Shortcuts
   ...GB_ROUTES, // lane games-books

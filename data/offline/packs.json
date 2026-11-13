@@ -478,6 +478,11 @@
      1
     ],
     [
+     "src/shell/community-routes.js",
+     810,
+     1
+    ],
+    [
      "src/shell/course-routes.js",
      1691,
      1
@@ -509,7 +514,7 @@
     ],
     [
      "src/shell/nav-model.js",
-     12727,
+     12866,
      1
     ],
     [
@@ -574,7 +579,7 @@
     ],
     [
      "src/shell/router.js",
-     48933,
+     49054,
      1
     ],
     [

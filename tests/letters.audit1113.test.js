@@ -17,7 +17,7 @@ test('every letter shows a picture, and Dalet shows the diving board its story d
   }
   assert.equal(R.resolve('letter', 'dalet').id, 'L04_dalet_quirky');
   assert.match(R.resolve('letter', 'dalet').alt, /diving board/);
-  assert.equal(R.resolve('letter', 'dalet', { role: 'meet' }), null, 'the T-shaped Dalet picture stays on hold');
+  assert.match(R.resolve('letter', 'dalet', { role: 'meet' }).alt, /Meet Dalet/, 'the Dalet meet picture is the new letter card');
 });
 
 test('builder letter names are the checked letter recordings and cannot be re-rendered', () => {

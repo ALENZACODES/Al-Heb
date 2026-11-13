@@ -99,13 +99,25 @@ Still open:
 - The Aleph video cuts its sound line off mid-word ("like the pause in 'uh").
 - Dalet's leg sits further left than most teaching fonts draw it (it follows the DejaVu outline), which makes it look a little like a T. Letter shapes in all 27 videos are otherwise correct.
 
+## Fourth Pass: The Rest
+
+Done without the owner's computer (it was offline, so no new recordings were possible):
+- Builder words: the ten flagged words (delet, peri, kir, neyar, dov, esh, katan, ragu'a, me'ushar, perach) now use the lesson recordings of the same words in both voices. Each was heard back correctly before it was copied.
+- Ashkenazi Final Mem, both voices: rebuilt as "mem sofis" by joining the checked "mem" to a "sofis" cut from the Final Kaf clip. Heard back as "mem sofis".
+- "Meet" pictures for Dalet, Ayin, Pe and Final Nun: new letter cards drawn from the app's own font, so the letter is right. They are plain cards, not illustrated scenes with Ari and Noa. The old files are kept in `assets/img/held/`.
+- Video captions: the caption no longer runs under the mascot badge. Rebuilt in both voices: Aleph, Kaf, Ayin, Shin and the five final letters.
+
+Still open, needs the owner's computer online for new recordings:
+- Ashkenazi Vet says "beis" (should be "veis").
+- Ashkenazi Mem and Resh say "mem" and "resh" (the app's Ashkenazi spelling is "meim" and "reish").
+
 ## Still Wrong: Needs A Decision Or New Art
 
 - Final Nun old memory picture is a nail with a crossbar. It reads as a cross. It is on hold with the others; it should not come back.
 - Gimel old picture is a giraffe. Giraffe starts with a J sound in English and in Hebrew. On hold.
 - Shin word picture 3 is Shabbat candles labelled "nerot shabbat". The first word starts with Nun. Still shown.
 - Seven "meet" pictures (Tsadi, Qof, Resh, Shin, Tav, Final Pe, Final Tsadi) are in a different style with child characters, not Ari and Noa. Still shown.
-- Dalet, Ayin, Pe and Final Nun now have no "meet" picture. New ones are needed, with the correct letter.
+- Dalet, Ayin, Pe and Final Nun have plain letter cards as their "meet" picture (fourth pass). Illustrated ones in the style of the rest are still to be made.
 - The spoken letter lectures (`audio/*/israeli/letter-lecture/*-explain-*`) are not used by the app. They should stay unused: the English one is read by a Hebrew voice and is hard to follow, the Hebrew one has English words inside it, and they teach a third set of pictures (Dalet as a table corner).
 - Three memory-chain stories do not link the picture to the word: Lamed (lamp and bread), Nun (cat and candle), Mem (mailbox and water). The Hebrew is correct; the stories are weak.
 

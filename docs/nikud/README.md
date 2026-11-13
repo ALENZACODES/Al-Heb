@@ -81,6 +81,19 @@ npm run serve        # open #/talk, press Get Vowel Marks, type a Hebrew line, p
 
 `assets/vendor/_packs/` must not be committed (a test fails if it exists in the tree).
 
+## Vowel-mark fading and Word Trace
+
+Two practice pages use this work. Neither fetches anything until the learner presses a button.
+
+- **Vowel-mark fading (`#/nikkud-fade`), Whole Lines.** `src/nikkudfade/lines.js` picks 3 to 8 word lines from the `lessons` unit
+  file and fades them to the learner's stage. Only lines with source `checked` or `book` are used, so every mark shown is one the
+  lesson text already had; lines whose marks were added by the offline build are left out. The page still only removes marks. A
+  line read is not saved and does not move the stage.
+- **Word Trace (`#/words/trace`), Trace Your Own Word.** A typed word is looked up in the word list first. A word typed with its
+  own marks is traced as typed. A bare word outside the list is given marks by the vowel mark pack, and only when that pack is
+  already on the device (the page links to Settings otherwise; it never starts a download). Such a word carries a note that its
+  marks have not been checked by a person, is not saved to the retrace list, and is not played aloud. The Name is refused.
+
 ## Credits
 
 Dicta's DictaBERT-large-char-menaked (CC BY 4.0, converted to 8-bit ONNX) and Phonikud (MIT) are listed

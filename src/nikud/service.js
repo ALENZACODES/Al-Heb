@@ -80,6 +80,11 @@ export async function addMarks(text, o = {}) {
 /** Build-time vowel marks for the app's own lines (one small file per unit, fetched when first asked for). */
 let units = null;
 export function builtUnits() { return (units ||= nikud.createUnits(new URL('nikud/', NIKUD_FOLDER).href)); }
+/** One whole built unit file, for pages that pick lines from it. Fetched only when asked for. @param {string} unit */
+export async function builtDoc(unit) {
+  if (!/^[a-z0-9-]+$/.test(unit)) return null;
+  try { const r = await fetch(new URL(`nikud/${unit}.json`, NIKUD_FOLDER)); return r.ok ? await r.json() : null; } catch { return null; }
+}
 export const SOURCE_NOTE = nikud.SOURCE_NOTE;
 export const megabytes = loader.megabytes;
 export const errorCode = loader.codeOf;

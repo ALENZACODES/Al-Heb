@@ -43,3 +43,8 @@ In `src/shell/router.js`, add to ROUTES (after the `atlas` line):
 { name: 'wordtrace', pattern: '/words/trace', module: '../wordtrace/wordtrace.view.js', title: 'Trace words', owner: 'lane2', optional: true, quick: 'nav.wordtrace' },
 ```
 In `src/shell/i18n.js` add `'nav.wordtrace': 'Trace words'`. Then run `node tools/build-precache.mjs` so `views.generated.js` lists `wordtrace/wordtrace.view.js` (the optional route stays hidden until that file is in the list) and the service worker precaches `data/wordtrace/words.json` and `src/wordtrace/*.js`.
+
+## Trace Your Own Word
+
+The pick screen has a box for one word of the learner's own (2 to 8 letters). See `docs/nikud/README.md` for where its vowel marks
+come from. Own words are not saved to `wordtrace.cards` or `wordtrace.progress`, and the Name is never offered.

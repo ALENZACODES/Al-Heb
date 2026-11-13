@@ -8,7 +8,7 @@ import { sourcesLine } from '../shell/sources.js';
 import { audioButton } from '../shell/audio-access.js';
 import { createProgress } from '../letters/progress.js';
 import { cellsOf } from '../curriculum/hebrew.js';
-import { LEVELS, eligibleWords, knownLetters, pickNext, suggestLevel, FINAL_OF } from './bank.js';
+import { LEVELS, eligibleWords, knownLetters, pickNext, suggestLevel, FINAL_OF, tidyOwn, ownWord, bankMatch } from './bank.js';
 import { createFade, GUIDES, rateWord, saveOutcome, dueWordIds, sget, CARDS_KEY, PROGRESS_KEY, cardId } from './flow.js';
 import { createBoard, composeCell, MARKS, markLabel, hasNiqqud } from './niqqud.js';
 
@@ -175,8 +175,63 @@ export function mount(root, ctx = {}) {
       nodes.push(h('p', { class: 'muted' }, t('wt.orChoose', 'Or choose a word:')));
       nodes.push(h('ul', { class: 'words', 'aria-label': t('wt.wordList', 'Words') }, ...list.map(w => h('li', {}, h('button', { 'data-word': w.he, lang: 'he', dir: 'rtl', 'aria-label': `${w.he} (${w.en})${due.has(w.he) ? ', ' + t('wt.due', 'due for retrace') : ''}`, onclick: () => startWord(w) }, w.he, due.has(w.he) ? ' ↻' : '')))));
     }
+    nodes.push(ownBox());
     set(nodes);
   }
+
+  // ------------------------------------------------------------ a word of the learner's own
+  // A typed word is looked up in the word list first. A word with its own vowel marks is traced as typed. A bare word outside the
+  // list needs the vowel mark pack, and only if the learner already put it on this device in Settings: nothing is fetched from here.
+  const OWN = {
+    title: t('wt.ownTitle', 'Trace Your Own Word'),
+    lead: t('wt.ownLead', 'Type one Hebrew word of two to eight letters. Words from the list use the list. A word outside it needs its vowel marks: type them, or use the vowel mark pack if it is on this device.'),
+    go: t('wt.ownGo', 'Trace This Word'),
+    shape: t('wt.ownShape', 'Type one Hebrew word of two to eight letters, with no spaces.'),
+    name: t('wt.ownName', 'Aleph does not offer the Name for tracing.'),
+    bare: t('wt.ownBare', 'No vowel marks came back for this word, so there is nothing to place in the vowel step. Try typing the marks yourself.'),
+    final: t('wt.ownFinal', 'A final letter is in the wrong place in this word.'),
+    pack: t('wt.ownPack', 'This word is not in the list and has no vowel marks. The vowel mark pack is not on this device.'),
+    failed: t('wt.ownFailed', 'The vowel marks could not be added just now. Nothing was lost.'),
+    busy: t('wt.ownBusy', 'Adding vowel marks on this device...')
+  };
+  async function deviceMarks(text) {
+    if (ctx.wordtraceMarks) return ctx.wordtraceMarks(text);
+    const svc = await import('../nikud/service.js');
+    if (!svc.canRunPacks() || !(await svc.hasPack('nikud'))) return null;
+    return svc.addMarks(text);
+  }
+  function ownBox() {
+    const input = h('input', { type: 'text', id: 'wt-own', lang: 'he', dir: 'rtl', inputmode: 'text', autocomplete: 'off', autocapitalize: 'off', spellcheck: 'false', maxlength: '40', 'data-act': 'own-input', style: 'min-block-size:48px;font-size:1.4rem' });
+    const note = h('p', { role: 'status', 'aria-live': 'polite', 'data-role': 'own-note' });
+    const more = h('p', { 'data-role': 'own-more' });
+    const tell = (msg, pack) => { note.textContent = msg; more.textContent = ''; if (pack) more.appendChild(h('a', { href: '#/settings', style: 'display:inline-flex;align-items:center;min-block-size:48px;min-inline-size:48px' }, t('wt.ownSettings', 'Vowel Mark Packs In Settings'))); };
+    const fail = (why) => tell(OWN[why] || OWN.shape, false);
+    const go = async () => {
+      const typed = tidyOwn(input.value);
+      if (!typed) return fail('shape');
+      const first = ownWord(typed);
+      if (!first.ok && (first.why === 'name' || first.why === 'shape' || first.why === 'final')) return fail(first.why);
+      const listed = bankMatch(S.bank, typed);
+      if (listed) return startWord(listed);
+      if (first.ok) return startWord(first.word);
+      tell(OWN.busy, false);
+      let r = null;
+      try { r = await deviceMarks(typed); } catch (e) { if (!unmounted) tell(OWN.failed, false); return; }
+      if (unmounted || S.phase !== 'pick') return;
+      if (!r) return tell(OWN.pack, true);
+      if (r.name) return fail('name');
+      const made = ownWord(tidyOwn(r.text), { source: 'device' });
+      if (!made.ok) return fail(made.why);
+      startWord(made.word);
+    };
+    return h('section', { class: 'wt-own', 'aria-labelledby': 'wt-own-title' },
+      h('h2', { id: 'wt-own-title' }, OWN.title), h('p', { class: 'muted' }, OWN.lead),
+      h('div', { class: 'row' }, h('label', { for: 'wt-own' }, t('wt.ownLabel', 'Your word')), input,
+        h('button', { 'data-act': 'own-go', onclick: () => { go(); } }, OWN.go)),
+      note, more);
+  }
+  const OWN_NOTE = { 'on-device': t('wt.ownDevice', 'These vowel marks were added on this device and have not been checked by a person. This word is not saved to your retrace list.'), typed: t('wt.ownTyped', 'These are the vowel marks you typed. Aleph has not checked them. This word is not saved to your retrace list.') };
+  const ownNote = () => (S.word && S.word.src === 'own' ? h('p', { class: 'notice', role: 'note', 'data-role': 'own-source' }, OWN_NOTE[S.word.pointing] || OWN_NOTE.typed) : null);
   const isFinalOnly = (l, k) => !!FINAL_OF[l.id]; // count regular letters only in the "known" figure
 
   // ------------------------------------------------------------ trace phase
@@ -219,7 +274,7 @@ export function mount(root, ctx = {}) {
       ...header(),
       h('div', { class: 'row' }, h('button', { 'data-act': 'back', onclick: () => renderPick() }, t('wt.back', 'Back to words')),
         S.word.audio ? audioButton(h, ctx, { kind: 'word', id: S.word.audio, text: S.word.he, label: t('wt.listen', 'Hear the word'), class: 'alef-play' }) : null),
-      h('div', { class: 'target', dir: 'rtl', lang: 'he', 'data-role': 'target' }, w.he),
+      h('div', { class: 'target', dir: 'rtl', lang: 'he', 'data-role': 'target' }, w.he), ownNote(),
       h('p', { 'data-role': 'round' }, `${t('wt.round', 'Round')} ${roundNo}: `, h('strong', {}, t('wt.guide.' + guide, { solid: 'solid guide', dotted: 'dotted guide', blank: 'no guide' }[guide])), ` (${GUIDES.indexOf(guide) + 1} / ${GUIDES.length}). ${w.en ? w.en + '.' : ''}`),
       h('p', { class: 'muted' }, S.mode === 'step' ? t('wt.stepHelp', 'Press "Next stroke" to have each stroke drawn for you in order. Drawing practice is not checked in this mode.') : t('wt.drawHelp', 'Trace the letters from the right, one after another. The orange border shows the letter to trace.')),
       finals.length ? h('p', { class: 'muted', 'data-role': 'sofit' }, ...finals.map(c => [he(S.letters[c.base].he), ` ${t('wt.sofitNote', 'is the final form of')} `, he(S.letters[FINAL_OF[c.base]].he), `: ${t('wt.sofitUse', 'it is used only as the last letter of a word.')} `])) : null,
@@ -308,7 +363,7 @@ export function mount(root, ctx = {}) {
         h('span', { class: 'g', dir: 'rtl', lang: 'he', 'aria-hidden': 'true' }, '◌' + MARKS[m].char), h('small', {}, MARKS[m].name.split(' (')[0]))));
     const nodes = [
       ...header(),
-      h('p', { 'data-role': 'phase' }, h('strong', {}, t('wt.vowelStep', 'Vowel marks')), `: ${S.word.en || ''}`),
+      h('p', { 'data-role': 'phase' }, h('strong', {}, t('wt.vowelStep', 'Vowel marks')), S.word.en ? `: ${S.word.en}` : ''), ownNote(),
       h('div', { class: 'target', dir: 'rtl', lang: 'he', 'aria-hidden': 'true' }, cells.map(c => c.text.replace(/[ְ-ּׁׂ]/g, '')).join('')),
       h('p', { class: 'muted' }, t('wt.nqHelp', 'Choose a mark from the tray, then tap the letter it goes on. Tap a placed mark again to remove it. Marks sit under, over, or inside the letter; the letter shows where it lands.')),
       tray, strip,
@@ -340,18 +395,19 @@ export function mount(root, ctx = {}) {
   async function finishWord(niqqud) {
     const st = S.fade.stats();
     const rating = rateWord({ missedRounds: S.totals.missedRounds, assistedRounds: S.totals.assistedRounds, skipped: S.skipped || !S.fade.finished, niqqud });
-    const saved = await saveOutcome(ctx.store, { he: S.word.he, script: S.script, rating }, Date.now());
+    const own = S.word.src === 'own';
+    const saved = own ? { progress: S.progress, card: null } : await saveOutcome(ctx.store, { he: S.word.he, script: S.script, rating }, Date.now());
     if (unmounted) return;
     S.progress = saved.progress;
     if (saved.card) S.cards = { ...S.cards, [cardId(S.script, S.word.he)]: saved.card };
     S.phase = 'result'; focusNext = true; S.result = { rating, niqqud, stats: st };
-    playWord();
+    if (!own) playWord();
     const retrace = rating < 3;
     const days = saved.card && saved.card.due ? Math.max(0, Math.round((saved.card.due - Date.now()) / 86400000)) : null;
     const words = eligible();
     set([
       ...header(),
-      h('div', { class: 'target', dir: 'rtl', lang: 'he' }, S.word.he),
+      h('div', { class: 'target', dir: 'rtl', lang: 'he' }, S.word.he), ownNote(),
       h('p', { role: 'status', 'data-role': 'result', 'data-rating': String(rating) },
         rating === 3 ? t('wt.res3', 'Well done: clean tracing and the right vowels.') : rating === 2 ? t('wt.res2', 'Finished, with help or a few vowel marks to review.') : t('wt.res1', 'This one needs more practice.'),
         niqqud ? ` ${t('wt.vowelScore', 'Vowel letters right:')} ${niqqud.correct} / ${niqqud.total}.` : ''),

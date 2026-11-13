@@ -1,6 +1,7 @@
-// Thin wrappers around three browser APIs used by "Say it". Every constructor is injectable so tests run in Node.
+// Thin wrappers around three browser APIs used by "Say it", and the choice between listening on this device and the browser's
+// recognizer (createListener). Every constructor is injectable so tests run in Node.
 // Nothing starts until the learner presses a button; nothing is uploaded by Aleph. The browser's SpeechRecognition may itself
-// send audio to the browser vendor's servers (Chromium does); the screen says so before the first use.
+// send audio to the browser vendor's servers (Chromium does); it is used only as a fallback, and the screen says so.
 // Aleph has not measured how well any browser recognizer hears Hebrew: treat its text as a hint.
 
 import { speechText } from '../shell/names.js';
@@ -44,6 +45,81 @@ export function createRecognizer(o = {}) {
   }
   function stop() { const r = rec, f = finish; if (r) { try { r.abort?.(); } catch { /* ignore */ } } if (f) f({ ok: false, error: 'aborted', alternatives: [] }); }
   return { supported: !!Ctor, listen, stop, get listening() { return !!rec; } };
+}
+
+// ---- Listening on this device ----------------------------------------------------------------------------------------
+// When a listening pack is on the device (downloaded on the Language Packs page, #/packs), speech is recognized here and the
+// browser's recognizer is not used. Only the pack's name is read at this point; the code that runs it (./ondevice.js) is loaded on
+// the first listen. Without a pack, or if the pack cannot run, the browser's recognizer is the fallback and the screens say so.
+export const PACK_KEY = 'alef.listen.pack';
+export const LISTEN_PACKS = Object.freeze(['listen-lite', 'listen-best']);
+export const DEVICE_NOTE = 'Listening happens on this device, with the listening pack you downloaded. Nothing you say leaves it, and nothing is kept. Treat what it writes as a hint, not a grade.';
+export const FALLBACK_NOTE = 'Fallback: this check uses your browser\'s own recognizer, and your browser may send the audio to its maker. To keep listening on this device, get a listening pack on the Language Packs page.';
+export const PACKS_ROUTE = '#/packs';
+
+export const PRON_KEY = 'alef.pron.pack';
+/** True when the precise pronunciation pack was downloaded to this device (so "Check my letters" is offered). */
+export function pronReady(win = g()) { try { return win?.localStorage?.getItem(PRON_KEY) === '1' && !!win?.navigator?.mediaDevices?.getUserMedia; } catch { return false; } }
+/** The listening pack on this device ('' when there is none, or when the browser cannot record). */
+export function devicePack(win = g()) {
+  try {
+    const v = win?.localStorage?.getItem(PACK_KEY);
+    return LISTEN_PACKS.includes(v) && win?.navigator?.mediaDevices?.getUserMedia && (win.AudioContext || win.webkitAudioContext) ? v : '';
+  } catch { return ''; }
+}
+
+const PACK_CACHES = /^alef-pack-(listen-lite|listen-best|pron-check)-v1$/;
+/**
+ * Brings the two small notes above in step with what is really on the device (packs come and go on the Language Packs page).
+ * When no listening pack was ever downloaded this is one look at the cache names: nothing is loaded and nothing is fetched.
+ * @returns {Promise<boolean>} true when a note changed
+ */
+export async function refreshPacks(win = g(), load = () => import('./ondevice.js')) {
+  try {
+    const names = await win.caches.keys();
+    if (names.some((n) => PACK_CACHES.test(n))) return await (await load()).syncPackNotes();
+    const had = win.localStorage.getItem(PACK_KEY) || win.localStorage.getItem(PRON_KEY);
+    win.localStorage.removeItem(PACK_KEY); win.localStorage.removeItem(PRON_KEY);
+    return !!had;
+  } catch { return false; }
+}
+
+/**
+ * The recognizer the screens use: this device first, the browser's recognizer as the labelled fallback.
+ * Same interface as createRecognizer, plus `engine` ('device' | 'browser' | 'none') and `note` (the line to show the learner).
+ * Every result carries `engine`, so a screen can say which one answered.
+ * @param {{pack?:string, language?:string, loadDevice?:()=>Promise<any>} & Record<string, any>} [o] the rest goes to createRecognizer
+ */
+export function createListener(o = {}) {
+  const browser = createRecognizer(o);
+  const fixed = o.pack !== undefined;
+  let pack = fixed ? o.pack : devicePack();
+  const load = o.loadDevice || (() => import('./ondevice.js'));
+  let dev = null, lost = !pack, active = null;
+  // a pack downloaded or deleted since the note was written: look once, before the first take
+  const ready = fixed ? Promise.resolve(false) : refreshPacks(g(), load).then((changed) => { if (changed) { pack = devicePack(); lost = !pack; dev = null; } return changed; });
+  const viaBrowser = async (opts) => ({ ...(await browser.listen(opts)), engine: 'browser' });
+  async function listen(opts = {}) {
+    await ready;
+    if (lost) return viaBrowser(opts);
+    try { dev ||= (await load()).createDeviceRecognizer({ pack, language: o.language }); } catch { lost = true; return viaBrowser(opts); }
+    active = dev;
+    const r = await dev.listen(opts);
+    active = null;
+    // the pack is gone or cannot run here: from now on the browser's recognizer answers, and the screens show the fallback line
+    if (!r.ok && (r.error === 'pack-missing' || r.error === 'pack-failed')) { lost = true; return browser.supported ? viaBrowser(opts) : { ok: false, error: 'unsupported', alternatives: [], engine: 'none' }; }
+    return r;
+  }
+  return {
+    listen,
+    /** Resolves true when a look at the device changed which recognizer is used (a screen may then redraw its note). */
+    ready,
+    stop() { try { active?.stop(); } catch { /* ignore */ } browser.stop(); },
+    get supported() { return !lost || browser.supported; },
+    get engine() { return !lost ? 'device' : browser.supported ? 'browser' : 'none'; },
+    get note() { return !lost ? DEVICE_NOTE : browser.supported ? FALLBACK_NOTE : ''; },
+    get listening() { return !!active?.listening || browser.listening; },
+  };
 }
 
 /**

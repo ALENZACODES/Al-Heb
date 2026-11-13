@@ -163,6 +163,9 @@ const ON_DEMAND_FILES = new Set([
   // Speaking score (word-by-word scoring from the browser recognizer) and the small check control used by the practical units' speaking cards:
   // imported by speak.js and loaded by practical.view.js on first use, runtime-cached.
   'src/speak/score.js', 'src/speak/check.js',
+  // Listening on this device (speech lane): the glue and the letter check are fetched the first time a screen listens with a pack;
+  // sw.js runtime-caches them. The packs themselves are never listed anywhere here.
+  'src/speak/ondevice.js', 'src/speak/lettercheck.js',
   // Talk screen (preview route /talk): route code and its on-device phrase engine, fetched on first open and runtime-cached (keeps first install under 3.95 MiB). Its sentence pairs are data/talk/.
   'src/talk/talk.view.js', 'src/talk/talk.model.js', 'src/talk/engine.js', 'src/talk/data.js', 'src/talk/speech.js',
   // Talk language pack code (tokenizer, decoding loop, downloader, worker): fetched with the Talk screen, runtime-cached. The packs themselves

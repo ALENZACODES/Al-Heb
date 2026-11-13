@@ -216,7 +216,7 @@ function fillCheck(ctx, intro, slots) {
     const o = ctx?.speakCheck || {};
     const caps = o.caps || undefined;
     if (intro) intro.textContent = m.checkIntro(caps);
-    for (const [slot, he, id] of slots) { const c = m.checkControl(he, { ...o, caps, id }); if (c) slot.replaceChildren(c); }
+    for (const [slot, he, id] of slots) { const c = m.checkControl(he, { ...o, caps, id, tradition: ctx?.settings?.get?.('congregation') }); if (c) slot.replaceChildren(c); }
   }).catch(() => { /* the check is optional: the cards work without it */ });
 }
 

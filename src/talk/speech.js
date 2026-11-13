@@ -1,7 +1,8 @@
 // @ts-check
-// Talk: listening through the browser's own speech recognition (Web Speech API). Aleph has no speech service of its own
-// and uploads nothing itself. How the browser turns sound into text is the browser's business: some do it on the device,
-// some send the sound to the browser maker. The screen says so before the first use.
+// Talk: listening. With a listening pack on this device (Settings) the sound is recognized here and goes nowhere.
+// Without one, the fallback is the browser's own speech recognition (Web Speech API): how the browser turns sound into text
+// is the browser's business; some do it on the device, some send the sound to the browser maker. The screen says which is in use.
+// Aleph has no speech service of its own and uploads nothing itself.
 // Not every browser has it (Firefox does not), and Hebrew is not offered everywhere: callers must handle `supported: false`
 // and the 'language-not-supported' error by falling back to typing.
 
@@ -12,7 +13,32 @@ export function recognitionCtor(win = globalThis) {
   return /** @type {any} */ (win)?.SpeechRecognition || /** @type {any} */ (win)?.webkitSpeechRecognition || null;
 }
 
-export const canListen = (win = globalThis) => !!recognitionCtor(win);
+import { devicePack } from '../speak/recognizer.js';
+
+/** True when this page can listen at all: a listening pack on this device, or the browser's own recognizer. */
+export const canListen = (win = globalThis) => !!devicePack(win) || !!recognitionCtor(win);
+/** Where listening happens for Talk right now: 'device' (a listening pack), 'browser' (the fallback) or 'none'. */
+export const listenEngine = (win = globalThis) => (devicePack(win) ? 'device' : recognitionCtor(win) ? 'browser' : 'none');
+/** The language each direction is spoken in, for a listening pack. */
+export const DEVICE_LANG = Object.freeze({ 'en-he': 'en', 'he-en': 'he' });
+
+/** One utterance on this device. Same callbacks as listenOnce. If the pack cannot answer, `fallback()` is tried once. */
+function listenOnDevice(o, pack, fallback) {
+  let rec = null, stopped = false, inner = null;
+  (async () => {
+    try {
+      rec = (await (o.loadDevice || (() => import('../speak/ondevice.js')))()).createDeviceRecognizer({ pack, language: DEVICE_LANG[o.direction] || 'en' });
+      if (stopped) return;
+      const r = await rec.listen({ timeoutMs: 15000 });
+      if (r.ok) { try { o.onFinal(r.alternatives[0]); } catch { /* ignore */ } }
+      else if ((r.error === 'pack-missing' || r.error === 'pack-failed') && !stopped && (inner = fallback())) return; // the browser's recognizer takes over and ends the turn itself
+      else if (r.error !== 'aborted') { const msg = listenError(r.error === 'pack-missing' || r.error === 'pack-failed' ? 'error' : r.error); if (msg) { try { o.onError?.(msg, r.error); } catch { /* ignore */ } } }
+    } catch { try { o.onError?.(listenError('error'), 'error'); } catch { /* ignore */ } }
+    try { o.onEnd?.(); } catch { /* ignore */ }
+  })();
+  // stop: finish the take and answer with what was said so far (the browser recognizer's stop() does the same)
+  return { stop: () => { stopped = true; try { inner ? inner.stop() : rec?.finish?.(); } catch { /* ended */ } }, engine: 'device' };
+}
 
 /** Plain words for a recognition error code. */
 export function listenError(code) {
@@ -23,16 +49,20 @@ export function listenError(code) {
     case 'network': return 'This browser needs to be online to listen. You can type instead; typing works offline.';
     case 'language-not-supported': return 'This browser cannot listen in that language. You can type instead.';
     case 'aborted': return '';
+    case 'unsupported': return 'This browser cannot listen here. You can type instead.';
     default: return 'Listening stopped. You can try again or type instead.';
   }
 }
 
 /**
  * Listen for one utterance.
- * @param {{direction:'en-he'|'he-en', onPartial?:(text:string)=>void, onFinal:(text:string)=>void, onError?:(message:string, code:string)=>void, onEnd?:()=>void, win?:any}} o
+ * @param {{direction:'en-he'|'he-en', onPartial?:(text:string)=>void, onFinal:(text:string)=>void, onError?:(message:string, code:string)=>void, onEnd?:()=>void, win?:any, pack?:string, loadDevice?:()=>Promise<any>, browserOnly?:boolean}} o
+ *   On this device there are no partial results: the text arrives when the speaker stops.
  * @returns {{stop:()=>void}|null} null when the browser cannot listen
  */
 export function listenOnce(o) {
+  const pack = o.pack !== undefined ? o.pack : devicePack(o.win);
+  if (pack && !o.browserOnly) return listenOnDevice(o, pack, () => listenOnce({ ...o, browserOnly: true }));
   const SR = recognitionCtor(o.win);
   if (!SR) return null;
   let rec;

@@ -312,6 +312,7 @@ async function show(match, ctxBase, { quiet = false } = {}) {
     // Superseded while mounting: this view's cleanup would never be registered (unmount now belongs to the newer navigation), so run it here.
     if (token !== navToken) { if (typeof u === 'function') { try { u(); } catch (e) { console.warn('unmount failed', e); } } return; }
     if (typeof u === 'function') unmount = u;
+    import('./collection/heart.js').then((m) => token === navToken && m.attach(root, route, ctx)).catch(() => {}); // save button on every page, fetched after the page shows
   } catch (err) {
     if (token !== navToken) { console.warn(`view ${route.name} failed after being superseded`, err); return; }
     console.error(`view ${route.name} failed`, err);

@@ -3,7 +3,7 @@
 import { retrievability, MS_DAY } from '../curriculum/srs.js';
 
 export const DECKS = Object.freeze([
-  ['srs.cards', 'Lessons'], ['srs.vocab', 'Dictionary and Word Sprint'], ['wordtrace.cards', 'Word tracing'], ['israel.cards', 'Sound like a local'],
+  ['srs.cards', 'Lessons'], ['srs.vocab', 'Dictionary and Word Sprint'], ['wordtrace.cards', 'Word tracing'], ['israel.cards', 'Sound like a local'], ['collection.cards', 'My Collection decks'],
 ]);
 /** Interval buckets: [lowest whole days, label]. */
 export const BUCKETS = Object.freeze([

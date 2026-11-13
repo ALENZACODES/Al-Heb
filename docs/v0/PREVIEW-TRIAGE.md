@@ -349,6 +349,11 @@ Home shows a backup reminder after three finished lessons (`docs/progress/BACKUP
 | `parashah` | keep | This Week's Parashah (lane games-books, 12 Nov): the calendar's portion with its aliyot, self-marked reading progress and a weekly goal. |
 | `torah-search` | keep | Torah Search (lane games-books, 12 Nov): find a Hebrew word, or the words the app's root data lists under a root, in every verse; results open the reader at the verse. |
 | `verse-notebook` | keep | Verse Notebook (lane games-books, 12 Nov): saved verses with the learner's own notes, kept on the device, exportable as a file. |
+| `collection` | keep | My Collection (group S, 12 Nov): everything the learner saved, in folders they name; favorites, their own dictionary, folders as review decks, saved searches, a folder as a file. |
+| `shelf` | keep | Reading Shelf (group S, 12 Nov): every text in progress with "Continue reading". |
+| `timeline` | keep | My Timeline (group S, 12 Nov): a day-by-day diary from the device's own records, with the learner's notes. |
+| `my-hebrew` | keep | My Hebrew (group S, 12 Nov): one summary page counted from local data. |
+| `paths` | keep | Interest Paths (group S, 12 Nov): ordered walks through existing pages by interest. |
 | `reading-challenge` | keep | Reading Challenges (lane games-books, 12 Nov): a learner-chosen number of little books in a month or a week, counted from books finished with the story check. |
 | `course-map` | keep | Course Map (course lane, 12 Nov): every lesson of both paths drawn from its prerequisites, with done/open/locked and where the learner is. Preview until learners have used it. |
 | `mixed-review` | keep | Mixed Review (course lane): a short quick-check set from the weakest reviewed cards; updates review cards. |

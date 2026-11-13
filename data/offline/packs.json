@@ -404,7 +404,7 @@
     ],
     [
      "src/platform/sched-state.js",
-     3698,
+     3743,
      0
     ],
     [
@@ -473,6 +473,11 @@
      1
     ],
     [
+     "src/shell/collection-routes.js",
+     579,
+     1
+    ],
+    [
      "src/shell/comfort.js",
      4382,
      1
@@ -509,7 +514,7 @@
     ],
     [
      "src/shell/nav-model.js",
-     12727,
+     12862,
      1
     ],
     [
@@ -574,7 +579,7 @@
     ],
     [
      "src/shell/router.js",
-     48933,
+     49017,
      1
     ],
     [
@@ -1133,7 +1138,7 @@
     ],
     [
      "src/platform/sched-state.js",
-     3698,
+     3743,
      0
     ],
     [

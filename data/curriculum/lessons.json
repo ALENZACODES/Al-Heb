@@ -555,10 +555,10 @@
      "translit": null
     },
     {
-     "he": "יְהוָה",
-     "en": "the Name (read aloud as Adonai)",
-     "translit": null,
-     "note": "Never pronounce the four letters as written; say Adonai"
+     "he": "ה׳",
+     "en": "the Name (shown as ה׳, never voiced)",
+     "translit": "Adonai",
+     "note": "The four-letter Name is shown as ה׳ and is never voiced."
     },
     {
      "he": "וְיִשְׁמְרֶךָ",
@@ -1287,9 +1287,10 @@
    "vowels": [],
    "words": [
     {
-     "he": "יהוה",
-     "en": "the Name (unpointed) -> Adonai",
-     "translit": null
+     "he": "ה׳",
+     "en": "the Name (shown as ה׳, never voiced)",
+     "translit": "Adonai",
+     "note": "The Name is shown as ה׳ (he and geresh) and is never voiced."
     },
     {
      "he": "אדני",

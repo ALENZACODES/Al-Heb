@@ -23,9 +23,9 @@ import { DICTIONARY, fmt } from '../lib/counts.js';
 export const ALL_WORDS_LABEL = `All ${fmt(DICTIONARY.words)} words`;
 /** What the title's number counts, said once on the page (M-01): entries, head-words, word forms, and what "Add" can add. */
 export const SCOPE_NOTE = `The list holds ${fmt(DICTIONARY.entries)} entries: ${fmt(DICTIONARY.words)} words, shown below, and ${fmt(DICTIONARY.forms)} word forms, shown when you tick "Show word forms". ${fmt(DICTIONARY.words - DICTIONARY.addable)} rare-sense words are left out of "Add all" (each card can still add its own word).${DICTIONARY.hidden ? ` ${fmt(DICTIONARY.hidden)} more ${DICTIONARY.hidden === 1 ? 'entry is' : 'entries are'} hidden while ${DICTIONARY.hidden === 1 ? 'its meaning is' : 'their meanings are'} checked.` : ''}`;
-import { NO_AUDIO, DEVICE_LABEL } from '../shell/audio-access.js';
+import { NO_AUDIO, DEVICE_LABEL, NAME_NOT_PLAYED } from '../shell/audio-access.js';
 import { isAudioFree } from '../shell/audiofree.js';
-import { uiEnglish } from '../shell/names.js';
+import { uiEnglish, displayHebrew, isNameWord, NAME_ABBREV } from '../shell/names.js';
 import { sourcesLine } from '../shell/sources.js';
 import { loadJson } from '../speak/loader.js';
 import { lookupClip, alternateClip, planIsExactFile, clipCaption, unavailableLine, CLIP_RATES, SPEED_BUTTONS, CHECKING } from './clips.js';
@@ -212,8 +212,12 @@ export function mount(root, ctx) {
       }, label)),
       note);
   };
-  const listenButton = (e) => soundControls(String(e.pointed || e.lemma || ''), e.gloss || '', translitFor(e, tradition()) || '');
-  const heWord = (e, cls) => e.pointed ? heText(e.pointed, cls) : heText(e.lemma, cls);
+  const listenButton = (e) => {
+    const text = String(e.pointed || e.lemma || '');
+    if (isNameWord(text) || text === NAME_ABBREV) return el('span', { class: 'audio-none muted', 'data-audio-state': 'held' }, NAME_NOT_PLAYED);
+    return soundControls(text, e.gloss || '', translitFor(e, tradition()) || '');
+  };
+  const heWord = (e, cls) => heText(displayHebrew(e.pointed || e.lemma || '', 'abbrev'), cls);
   const translitLine = (e) => {
     const tl = translitFor(e, tradition());
     return el('p', { class: 'vc-meta' }, `Say it (${TRAD[tradition()]}): `, tl ? el('i', {}, tl) : '(not available: this word has no vowel points yet)');

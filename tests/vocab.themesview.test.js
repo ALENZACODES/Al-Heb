@@ -22,6 +22,7 @@ class N {
 }
 globalThis.document = { createElement: (t) => new N(t), createTextNode: (d) => ({ nodeType: 3, data: String(d), parent: undefined }) };
 import { waitFor } from './helpers/waitfor.js';
+import { displayHebrew } from '../src/shell/names.js';
 const tick = (ms = 60) => new Promise((r) => setTimeout(r, ms));
 const memStore = () => { const m = {}; return { get: (k) => m[k], set: (k, v) => { m[k] = v; }, m }; };
 
@@ -66,7 +67,7 @@ test('opening a pack lists its words with a listen button (or an honest no-audio
     // shared audio button: a Listen button when sound is possible (here: the recorded word), else one honest "No audio yet" line
     const hasBtn = li.find((n) => n.tag === 'button' && /Listen/.test(n.text)).length === 1;
     assert.ok(i === 0 ? hasBtn : (hasBtn || /No audio yet/.test(li.text)), `word ${i}: a Listen button or "No audio yet"`);
-    if (w.example) { assert.ok(li.text.includes(w.example.he), 'verbatim example shown'); assert.ok(li.text.includes(SENSE_NOTE)); }
+    if (w.example) { assert.ok(li.text.includes(displayHebrew(w.example.he, 'abbrev')), 'verbatim example shown'); assert.ok(li.text.includes(SENSE_NOTE)); }
     else assert.ok(/No example line/.test(li.text));
   });
   assert.ok(lis[0].text.includes('Listen') && !/computer voice/.test(lis[0].find((n) => n.tag === 'button')[0].text), 'recorded word is not labelled computer voice');

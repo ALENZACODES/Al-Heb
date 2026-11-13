@@ -35,9 +35,9 @@ function fakeEnv({ serve = true } = {}) {
 
 test('vendored alef-tools files match the lock, and the paths the app uses match the lock', () => {
   assert.deepEqual(checkVendored(lock), []);
-  assert.match(lock.commit, /^[0-9a-f]{40}$/);
-  assert.ok(HANDWRITING.endsWith(lock.packages.handwriting.folder));
-  assert.ok(OCR_FIX.endsWith(lock.packages['ocr-fix'].folder));
+  assert.match(lock.ref, /^[0-9a-f]{40}$/); // the shared lock (tools/alef-tools/sync.mjs) calls the pinned commit `ref` and each folder `path`
+  assert.ok(HANDWRITING.endsWith(lock.packages.handwriting.path + '/'));
+  assert.ok(OCR_FIX.endsWith(lock.packages['ocr-fix'].path + '/'));
   assert.ok(existsSync(new URL(OCR_WORDS)));
 });
 

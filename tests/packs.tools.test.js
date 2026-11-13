@@ -100,7 +100,7 @@ test('first install: nothing of alef-tools is installed up front; the loader cod
   const m = computeManifest();
   const installed = new Set(m.files);
   for (const f of m.files) assert.ok(!/assets\/vendor\/|src\/settings\/|data\/packs\/|alef-tools/.test(f), `${f} must not be in the first install`);
-  for (const f of lock.packages.loader.files) { const rel = `${lock.packages.loader.path}/${f.path}`; assert.ok(isToolCode(rel) && isOnDemand(rel) && m.onDemand.includes(rel), `${rel} is fetched on demand`); }
+  for (const f of lock.packages.loader.files.filter((x) => x.path.endsWith('.js'))) { const rel = `${lock.packages.loader.path}/${f.path}`; assert.ok(isToolCode(rel) && isOnDemand(rel) && m.onDemand.includes(rel), `${rel} is fetched on demand`); }
   for (const f of ['src/settings/packs.view.js', 'src/settings/packs.model.js', 'src/settings/shabbat.js', 'src/settings/tools.js', SHIM, CATALOG]) assert.ok(m.onDemand.includes(f) && !installed.has(f), f);
   const listed = [...m.files, ...m.onDemand];
   assert.ok(!listed.some((f) => /_nmt|_ort|_packs/.test(f)), 'language packs and their runtime are never listed, not even for "Download everything"');

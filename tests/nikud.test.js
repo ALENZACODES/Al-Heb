@@ -61,7 +61,8 @@ test('the vendored alef-tools files are exactly what the lock pins', () => {
   assert.equal(nikud.version, lock.packages.nikud.version);
   assert.equal(loader.VERSION, lock.packages.loader.version);
   assert.ok(NIKUD_FOLDER.endsWith(`/assets/vendor/_alef-tools/nikud@${nikud.version}/`));
-  assert.ok(read('src/nikud/vendor.js').includes(lock.commit));
+  // Integration (lanes together): one pin for the whole app; the generated tools file carries its commit.
+  assert.ok(read('src/settings/alef-tools.generated.js').includes(lock.commit));
 });
 
 test('each vendored package matches its own dist.json, and the nikud package has the shape the loader expects', () => {
@@ -98,7 +99,9 @@ test('the screens reach the vowel-mark code only through a lazy import', () => {
 test('no weights and no pack parts are in the repository', () => {
   const walk = (dir) => readdirSync(dir, { withFileTypes: true }).flatMap((e) => (e.isDirectory() ? walk(new URL(e.name + '/', dir)) : [e.name]));
   assert.deepEqual(walk(new URL('../assets/vendor/_alef-tools/', import.meta.url)).filter((n) => /\.(onnx|bin|safetensors|wasm)$|\.p\d{3}$/.test(n)), []);
-  assert.equal(existsSync(new URL('../assets/vendor/_packs/', import.meta.url)), false, 'packs are served by the pack host, not kept in git');
+  // Integration (lanes together): the handwriting lane keeps its small letter-check pack (1.3 MB) with the site, so the folder
+  // exists. The vowel-mark packs are large and are still served by the pack host only.
+  for (const pack of ['nikud', 'phonemes']) assert.equal(existsSync(new URL(`../assets/vendor/_packs/${pack}/`, import.meta.url)), false, `${pack} is served by the pack host, not kept in git`);
 });
 
 // ---- packs: where they come from, how they are kept

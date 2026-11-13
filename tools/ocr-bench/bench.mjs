@@ -89,7 +89,7 @@ const FIX = args.includes('--fix');
 let fixer = null;
 if (FIX) {
   const lock = JSON.parse(readFileSync(join(root, 'data/alef-tools.lock.json'), 'utf8'));
-  const mod = await import(join(root, lock.packages['ocr-fix'].folder, 'index.js'));
+  const mod = await import(join(root, lock.packages['ocr-fix'].path, 'index.js'));
   const given = opt('fix', ''); const lexFile = given && !given.startsWith('--') ? resolve(given) : join(root, 'assets/vendor/_packs/ocr-words/lexicon.json');
   fixer = await mod.load({ lexicon: JSON.parse(readFileSync(lexFile, 'utf8')) });
   console.error(`tidy-up: ocr-fix ${mod.version}, ${fixer.size} words from ${lexFile}`);

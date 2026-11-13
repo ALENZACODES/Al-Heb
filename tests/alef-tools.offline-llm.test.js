@@ -40,7 +40,10 @@ test('the vendored build is exactly the pinned alef-tools commit, file for file'
 test('none of it is in the first install: the vendored files are not listed at all, and the reader is on demand', () => {
   const pre = read('precache-manifest.js');
   const first = pre.slice(pre.indexOf('self.ALEF_PRECACHE'), pre.indexOf('self.ALEF_ON_DEMAND'));
-  assert.doesNotMatch(pre, /_alef-tools/, 'assets/vendor is never precached');
+  // Integration (lanes together): the shared rule lists vendored alef-tools CODE as on demand, so a screen that imports it still
+  // opens offline. Nothing of it is installed up front, and this lane's data files (the index and its numbers) are not listed at all.
+  assert.doesNotMatch(first, /_alef-tools/, 'assets/vendor is never installed up front');
+  assert.doesNotMatch(pre, /_alef-tools\/offline-llm@[^"]*\.(json|vec)/, 'the search index is never listed');
   assert.doesNotMatch(first, /src\/alef-tools\//);
   assert.ok(isOnDemand('src/alef-tools/offline-llm.js'));
   for (const f of ['src/ask/ask.view.js', 'src/curriculum/practical.view.js']) assert.doesNotMatch(first, new RegExp(f.replace(/[/.]/g, '\\$&')), f + ' stays out of the first install');

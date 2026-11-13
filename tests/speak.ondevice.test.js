@@ -315,7 +315,8 @@ test('the vendored alef-tools files are the pinned ones, and none of this is in 
   for (const f of ['src/speak/ondevice.js', 'src/speak/lettercheck.js', 'src/settings/tools.js', 'data/packs/catalog.json']) assert.equal(installed.has(f) || installed.has('./' + f) || installed.has('/' + f), false, `${f} must not be installed up front`);
   assert.equal([...installed].some((f) => String(f).includes('assets/vendor/')), false);
   // no model weights came along with the vendored code
-  for (const p of Object.values(lock.packages)) for (const f of p.files) assert.match(f.path, /\.(js|json)$/);
+  // (Integration: the offline-search package brings a small file of numbers, .vec, which is data, not a model.)
+  for (const p of Object.values(lock.packages)) for (const f of p.files) { assert.match(f.path, /\.(js|json|txt|vec)$/); assert.doesNotMatch(f.path, /\.(onnx|bin|safetensors|wasm|pt|gguf)$|\.p\d{3}$/); }
   const speechPacks = JSON.parse(readFileSync(new URL('../data/packs/catalog.json', import.meta.url), 'utf8')).packs.filter((p) => ['listen-lite', 'listen-best', 'pron-check'].includes(p.name));
   assert.equal(speechPacks.length, 3); assert.ok(speechPacks.every((p) => p.published === false), 'not offered until the parts are on the pack host');
   assert.match(readFileSync(new URL('../.gitignore', import.meta.url), 'utf8'), /^assets\/vendor\/_packs\/$/m, 'pack parts staged for a local try-out can never be committed');

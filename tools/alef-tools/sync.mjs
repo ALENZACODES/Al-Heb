@@ -28,7 +28,7 @@ export const REPO = 'ALENZACODES/alef-tools';
 /** The site's own folder for packs a deploy chooses to carry; tried before the pack host. */
 export const SITE_PACKS = 'assets/vendor/_packs/';
 const SAFE_PATH = /^(?!\/)(?!.*\.\.)[A-Za-z0-9._/-]+$/;
-const ALLOWED = /\.(js|mjs|json|txt)$/; // code, small data and licence texts; anything else (weights above all) is refused
+const ALLOWED = /\.(js|mjs|json|txt|vec)$/; // code, small data (JSON, the search index's .vec numbers) and licence texts; anything else (weights above all) is refused
 const MAX_FILE = 512 * 1024, MAX_VENDORED = 4 * 1024 * 1024;
 const sha = (buf) => createHash('sha256').update(buf).digest('hex');
 const json = (text) => JSON.parse(text);
@@ -100,7 +100,10 @@ export async function sync({ root = ROOT, ref, add = [], from, fetchImpl } = {})
     const vendorRoot = join(root, VENDOR);
     if (existsSync(vendorRoot)) for (const n of readdirSync(vendorRoot)) if (n.startsWith(`${id}@`)) rmSync(join(vendorRoot, n), { recursive: true, force: true });
     for (const f of got) { mkdirSync(dirname(join(root, path, f.path)), { recursive: true }); writeFileSync(join(root, path, f.path), f.buf); }
-    packages[id] = { version: listing.version, path, files: got.map(({ path: p, bytes, sha256 }) => ({ path: p, bytes, sha256 })) };
+    // the package's own listing travels with it (lanes read it to learn what a build holds); it is locked like every other file
+    const listingBuf = await src.read(`packages/${id}/dist/dist.json`);
+    writeFileSync(join(root, path, 'dist.json'), listingBuf);
+    packages[id] = { version: listing.version, path, files: [...got.map(({ path: p, bytes, sha256 }) => ({ path: p, bytes, sha256 })), { path: 'dist.json', bytes: listingBuf.length, sha256: sha(listingBuf) }] };
   }
   const manifestBuf = await src.read('models.manifest.json');
   const manifest = json(manifestBuf.toString('utf8'));
@@ -134,7 +137,7 @@ export function check({ root = ROOT } = {}) {
       if (!have.delete(f.path)) { out.push(`${p.path}/${f.path} is missing`); continue; }
       const buf = readFileSync(join(dir, f.path));
       // git may hand text files back with CRLF on Windows; the lock names the LF bytes
-      const norm = buf.includes(13) ? Buffer.from(buf.toString('utf8').replace(/\r\n/g, '\n')) : buf;
+      const norm = /\.(js|mjs|json|txt)$/.test(f.path) && buf.includes(13) ? Buffer.from(buf.toString('utf8').replace(/\r\n/g, '\n')) : buf; // never a binary file
       if (norm.length !== f.bytes || sha(norm) !== f.sha256) out.push(`${p.path}/${f.path} does not match the lock (size or SHA-256)`);
     }
     for (const extra of have) out.push(`${p.path}/${extra} is not in the lock`);

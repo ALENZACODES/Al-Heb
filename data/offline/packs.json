@@ -509,7 +509,7 @@
     ],
     [
      "src/shell/nav-model.js",
-     12727,
+     12887,
      1
     ],
     [
@@ -574,7 +574,12 @@
     ],
     [
      "src/shell/router.js",
-     48933,
+     49072,
+     1
+    ],
+    [
+     "src/shell/study-routes.js",
+     1234,
      1
     ],
     [

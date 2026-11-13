@@ -73,6 +73,7 @@ export const ENUMERATE = {
   '/grammar/:topic': async () => { const t = rd('data/grammar/notes.json').topics; return Array.isArray(t) ? ids(t) : Object.keys(t || {}); },
   '/read/:textId': async () => ids(arr(rd('data/corpus/registry.json'), 'texts', 'entries')),
   '/torahread/:section': async () => ids((await import(pathToFileURL(join(root, 'src/torahread/torahread.view.js')).href)).SECTIONS),
+  '/word-study/:id': async () => ids(arr(rd('data/corpus/torah/index.json'), 'parshiyot')), // Word by Word: one page per portion
 };
 
 /** Fill a pattern's parameters, in order, with one value (a string) or several (an array). */

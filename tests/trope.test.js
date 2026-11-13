@@ -53,7 +53,7 @@ test('view: accessible, answers update store trope.v1, unmount works', async () 
   assert.equal(sel(root, 'section').getAttribute('aria-labelledby'), 'view-title');
   assert.ok(sel(root, 'h1'));
   const he = sel(root, '[lang=he]'); assert.equal(he.getAttribute('dir'), 'rtl');
-  assert.ok(root.textContent.includes(DRAFT_NOTICE) && root.textContent.includes('no audio yet'.slice(0, 8)) && root.textContent.includes(MELODY_NOTE));
+  assert.ok(root.textContent.includes(DRAFT_NOTICE) && root.textContent.includes('no recorded audio') && root.textContent.includes(MELODY_NOTE));
   assert.ok(sel(root, '#trope-level') && sel(root, 'label[for=trope-level]') || all(root, (n) => n.tagName === 'LABEL').length);
   const opts = all(root, (n) => n.tagName === 'BUTTON' && n.getAttribute('data-id'));
   assert.equal(opts.length, 4);

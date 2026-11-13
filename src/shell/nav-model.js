@@ -8,6 +8,7 @@ import { ROUTES } from './router.js'; // lane g1
 import { G4_NAMES } from './g4-routes.js'; // lane 4 (g4)
 import { PLATFORM_ROUTES } from './platform-routes.js';
 import { GB_SECTION, GB_HIDDEN, GB_PARENT } from './gb-routes.js';
+import { STUDY_SECTION, STUDY_PARENT } from './study-routes.js';
 import { COURSE_SECTIONS } from './course-routes.js'; // course lane
 export const SECTIONS = [
   { id: 'learn',    labelKey: 'nav.section.learn',    descKey: 'nav.section.learn.desc',    heKey: 'nav.learn', primary: ['learn'] },
@@ -59,6 +60,7 @@ SECTION_ROUTES.read.push('trope-families', 'trope-family', 'trope-aliyah');
 for (const r of PLATFORM_ROUTES) SECTION_ROUTES[r.section].push(r.name); // lane platform (12 Nov)
 SECTION_ROUTES.learn.push('readlab', 'readlab-tool'); // reading lane (12 Nov): Reading Tools
 SECTION_ROUTES.learn.push(...GB_SECTION('learn')); SECTION_ROUTES.read.push(...GB_SECTION('read'));
+SECTION_ROUTES.read.push(...STUDY_SECTION('read')); // Torah and text study
 
 /** Route name -> section id. */
 export const ROUTE_SECTION = Object.fromEntries(Object.entries(SECTION_ROUTES).flatMap(([s, names]) => names.map((n) => [n, s])));
@@ -71,6 +73,7 @@ export const PARENT = {
   'bridge-sec': 'bridge', 'bridge-text': 'bridge', 'trope-family': 'trope-families', // lane 6
   'readlab-tool': 'readlab', // reading lane
   ...GB_PARENT,
+  ...STUDY_PARENT,
 };
 
 /** Hidden from the menu (still searchable): first-run onboarding. */

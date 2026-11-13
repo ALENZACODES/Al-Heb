@@ -323,6 +323,7 @@ export const STORE_KEYS = [
   ['books.challenge.v1', 'Reading challenge you chose', 'src/books/challenge.js'],
   ['torah.week.v1', 'Weekly parashah goal and sections marked read', 'src/torahstudy/week.js'],
   ['torah.notebook.v1', 'Verse notebook: saved verses and notes', 'src/torahstudy/notebook.js'],
+  ['torah.wordstudy.v1', 'Word by Word: the portions you opened and the aliyah you were on', 'src/torahstudy/wordstudy.js'],
 ];
 
 const table = (caption, head, rows) => h('div', { class: 'table-wrap', role: 'region', 'aria-label': caption, tabindex: '0' }, h('table', { class: 'priv-table' }, h('caption', {}, caption),

@@ -290,3 +290,33 @@ export function hotelCard(steps, picks, guest) {
   const got = steps.filter((s) => picks[s.id] === s.right);
   return { name, nights, right: got.length, of: steps.length, lines: [`Guest: ${name}`, `Nights: ${nights}`, ...got.map((s) => s.reply)] };
 }
+
+// ---- the airport ------------------------------------------------------------------------------------------------------------------
+/** Arriving and leaving: what the traveller needs, the stored line that says it, two stored lines that do not, and what happens. Same shape as hotelSteps. */
+export function airportSteps() {
+  return [
+    { id: 'tourist', goal: 'You have just landed. Someone asks who you are. Say you are a tourist.', right: 't-tourist', wrong: ['t-lost-passport', 't-buy-ticket'], reply: 'They nod and wave you on.' },
+    { id: 'suitcase', goal: 'Your suitcase is too heavy. Ask for help with it.', right: 't-help-suitcase', wrong: ['t-need-bag', 't-taxi-airport'], reply: 'A porter comes over with a trolley.' },
+    { id: 'ticket', goal: 'You want the train into town. Ask where to buy a ticket.', right: 't-buy-ticket', wrong: ['t-how-many-tickets', 't-how-much-airport'], reply: 'They point to the machine by the door.' },
+    { id: 'taxi', goal: 'Your last day. Ask the hotel desk for a taxi to the airport.', right: 't-taxi-airport', wrong: ['t-buy-ticket', 't-tourist'], reply: 'The desk calls one for you.' },
+    { id: 'price', goal: 'The taxi is here. Ask the driver what the ride to the airport costs.', right: 't-how-much-airport', wrong: ['t-how-long', 't-how-many-tickets'], reply: 'The driver tells you the price.' },
+    { id: 'go', goal: 'You get in. Tell the driver where to go.', right: 't-to-airport', wrong: ['t-how-long', 't-help-suitcase'], reply: 'The driver pulls out.' },
+  ];
+}
+
+// ---- the map ----------------------------------------------------------------------------------------------------------------------
+// Where each stored place is, as latitude and longitude. Used only to put a dot on the screen.
+const WHERE = { 'jerusalem': [31.78, 35.22], 'tel aviv': [32.08, 34.78], 'haifa': [32.79, 34.99], 'eilat': [29.56, 34.95], 'beer sheva': [31.25, 34.79], 'tiberias': [32.79, 35.53], 'safed': [32.96, 35.50], 'the dead sea': [31.50, 35.47], 'nazareth': [32.70, 35.30] };
+const MAP_BOX = { north: 33.2, south: 29.3, west: 34.2, east: 35.9 };
+/** The stored places in Israel with a spot on the map: x and y are per cent across and down, north at the top. Numbered north to south. */
+export function mapPlaces(pack) {
+  const he = new Map(((pack && pack.places) || []).map((p) => [p.en[0], p.he]));
+  return Object.entries(WHERE).filter(([n]) => he.has(n)).sort((a, b) => b[1][0] - a[1][0] || a[1][1] - b[1][1]).map(([n, [lat, lon]], i) => ({
+    id: n.replace(/\s+/g, '-'), n: i + 1, he: he.get(n), en: n.replace(/\b[a-z]/g, (c) => c.toUpperCase()),
+    x: Math.round(((lon - MAP_BOX.west) / (MAP_BOX.east - MAP_BOX.west)) * 1000) / 10, y: Math.round(((MAP_BOX.north - lat) / (MAP_BOX.north - MAP_BOX.south)) * 1000) / 10 }));
+}
+/** The order the places are asked in for one round: every place once. */
+export function mapRound(places, rng = Math.random) {
+  const ids = places.map((p) => p.id); for (let i = ids.length - 1; i > 0; i--) { const j = Math.floor(rng() * (i + 1)); [ids[i], ids[j]] = [ids[j], ids[i]]; }
+  return ids;
+}

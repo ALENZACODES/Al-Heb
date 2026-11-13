@@ -240,3 +240,42 @@ test('the screen: emergency lines are listed; a check-in is played to its card; 
   assert.equal(host.querySelector('#tp-signs-score').textContent, '6 of 8 signs read.');
   unmount();
 });
+
+test('the airport and the map use stored Hebrew only; every place has its own spot', async () => {
+  const T = await import('../src/trip/trip.js'); const byId = new Map(pack.phrases.map((p) => [p.id, p]));
+  const steps = T.airportSteps(); assert.equal(steps.length, 6);
+  for (const s of steps) { for (const id of [s.right, ...s.wrong]) assert.ok(byId.has(id), id); assert.ok(!s.wrong.includes(s.right)); assert.equal(T.hotelChoices(pack, s, seeded(3)).length, 3); }
+  const places = T.mapPlaces(pack); const names = new Set(pack.places.map((p) => p.he));
+  assert.equal(places.length, 9); assert.deepEqual(places.map((p) => p.n), [1, 2, 3, 4, 5, 6, 7, 8, 9]);
+  for (const p of places) { assert.ok(names.has(p.he)); assert.ok(p.x > 5 && p.x < 95 && p.y > 3 && p.y < 97, p.id); }
+  assert.equal(places[0].id, 'safed'); assert.equal(places[8].id, 'eilat');
+  const at = (id) => places.find((p) => p.id === id);
+  assert.ok(at('haifa').y < at('tel-aviv').y && at('tel-aviv').y < at('beer-sheva').y && at('tel-aviv').x < at('jerusalem').x && at('jerusalem').x < at('the-dead-sea').x);
+  for (const a of places) for (const b of places) if (a !== b) assert.ok(Math.hypot((a.x - b.x) * 3.04, (a.y - b.y) * 7.36) > 32, `${a.id} and ${b.id} overlap`);
+  const round = T.mapRound(places, seeded(4)); assert.deepEqual([...round].sort(), places.map((p) => p.id).sort());
+});
+
+test('the screen: the airport is played to its score; the map is played to its score', async () => {
+  const { createDocument, ev, flush } = await import('./rimon.fakedom.js');
+  const doc = createDocument(); globalThis.document = doc;
+  const { mount } = await import('../src/trip/trip.view.js'); const T = await import('../src/trip/trip.js');
+  const host = doc.createElement('div'); doc.body.append(host);
+  const press = async (n) => { n.dispatchEvent(ev('click')); await flush(5); };
+  const unmount = await mount(host, { tripData: { pack }, rng: seeded(11), query: { part: 'airport' } });
+  const steps = T.airportSteps();
+  for (let i = 0; i < 6; i++) {
+    const st = steps.find((s) => s.goal === host.querySelector('#tp-air-goal').textContent);
+    await press(host.querySelector(`[data-line=${i === 2 ? st.wrong[0] : st.right}]`));
+    if (i === 2) assert.ok(host.querySelector('#tp-air-reply').textContent.includes('The line was'));
+    await press(host.querySelector('#tp-air-next'));
+  }
+  assert.equal(host.querySelector('#tp-air-score').textContent, '5 of 6 said the right way.');
+  await press(host.querySelector('[data-tab=map]'));
+  const places = T.mapPlaces(pack); assert.equal(host.querySelectorAll('[data-place]').length, 9);
+  for (let i = 0; i < 9; i++) {
+    const want = places.find((p) => p.he === host.querySelector('#tp-map-ask').textContent); const other = places.find((p) => p !== want);
+    await press(host.querySelector(`[data-place=${i < 7 ? want.id : other.id}]`)); await press(host.querySelector('#tp-map-next'));
+  }
+  assert.equal(host.querySelector('#tp-map-score').textContent, '7 of 9 places found.');
+  unmount();
+});

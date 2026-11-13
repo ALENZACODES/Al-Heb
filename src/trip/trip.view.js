@@ -7,12 +7,12 @@
 // Tests inject ctx.tripData {pack}, ctx.rng.
 import { el, heText, storeGet, storeSet } from '../curriculum/dom.js';
 import { loadJSON } from '../curriculum/data.js';
-import { TRIP_KEY, STOPS, MAX_DAYS, israelPlaces, linesFor, normalizePlan, addDay, removeDay, toggleStop, planText, menu, line, newVisit, readOrder, heardAs, bill, checkVisit, newBoard, board, COINS, newMoneyTask, checkCoins, newStall, stallMove, stallResult, stallLine, signItems, signQuestion, emergencyCards, hotelSteps, hotelChoices, hotelCard } from './trip.js';
+import { TRIP_KEY, STOPS, MAX_DAYS, israelPlaces, linesFor, normalizePlan, addDay, removeDay, toggleStop, planText, menu, line, newVisit, readOrder, heardAs, bill, checkVisit, newBoard, board, COINS, newMoneyTask, checkCoins, newStall, stallMove, stallResult, stallLine, signItems, signQuestion, emergencyCards, hotelSteps, hotelChoices, hotelCard, airportSteps, mapPlaces, mapRound } from './trip.js';
 
 export const COPY = Object.freeze({
   title: 'Israel Trip',
   lead: 'Plan your days and take the Hebrew you will need for each stop. Then practise ordering a meal.',
-  planner: 'Trip Planner', restaurant: 'At The Restaurant', station: 'At The Station', money: 'Shekels And Coins', market: 'At The Market', signs: 'Street Signs', hotel: 'Hotel Check-In', emergency: 'In An Emergency',
+  planner: 'Trip Planner', restaurant: 'At The Restaurant', station: 'At The Station', money: 'Shekels And Coins', market: 'At The Market', signs: 'Street Signs', hotel: 'Hotel Check-In', emergency: 'In An Emergency', airport: 'At The Airport', map: 'Map Of Places',
   emergencyLead: 'The lines to have ready. Where a woman says it differently, her form is beside it.',
   stationHint: 'Read the board and press the line you would board.',
   noDays: 'No days yet. Pick a place and add your first day.',
@@ -53,7 +53,7 @@ export async function mount(root, ctx = {}) {
   const panel = el('div', { id: 'tp-panel' }); const tabs = {};
   const show = (name) => { for (const [k, b] of Object.entries(tabs)) b.setAttribute('aria-pressed', String(k === name)); panel.replaceChildren(views[name]()); };
   const bar = el('div', { class: 'tp-tabs', role: 'group', 'aria-label': 'Parts of Israel Trip' });
-  for (const name of ['planner', 'emergency', 'restaurant', 'station', 'money', 'market', 'hotel', 'signs']) { tabs[name] = el('button', { type: 'button', class: 'btn secondary', 'data-tab': name, 'aria-pressed': 'false', onclick: () => show(name) }, COPY[name]); bar.append(tabs[name]); }
+  for (const name of ['planner', 'emergency', 'airport', 'restaurant', 'station', 'money', 'market', 'hotel', 'signs', 'map']) { tabs[name] = el('button', { type: 'button', class: 'btn secondary', 'data-tab': name, 'aria-pressed': 'false', onclick: () => show(name) }, COPY[name]); bar.append(tabs[name]); }
   wrap.append(bar, panel);
 
   function planner() {
@@ -258,7 +258,42 @@ export async function mount(root, ctx = {}) {
     return host;
   }
 
-  const views = { planner, restaurant, station, money, market, emergency, hotel, signs };
+  function airport() {
+    const steps = airportSteps(); let at = 0, right = 0;
+    const host = el('div', { class: 'tp-card' });
+    const step = () => {
+      if (at >= steps.length) { host.replaceChildren(el('h2', {}, 'You Made Your Flight'), el('p', { id: 'tp-air-score', role: 'status' }, `${right} of ${steps.length} said the right way.`), el('button', { type: 'button', class: 'btn', onclick: () => show('airport') }, 'Go Again')); return; }
+      const st = steps[at]; const out = el('div', { id: 'tp-air-reply', role: 'status', 'aria-live': 'polite' }); let done = false;
+      const choose = (c) => { if (done) return; done = true; at++; if (c.id === st.right) right++;
+        const good = hotelChoices(pack, { right: st.right, wrong: [] })[0];
+        out.replaceChildren(el('p', {}, c.id === st.right ? st.reply : 'They look puzzled. That was not what you needed here.'), c.id === st.right ? el('p', { class: 'muted' }, c.en) : el('p', {}, 'The line was: ', heText(good.he, 'alef-he tp-he'), ` (${good.en})`),
+          el('button', { type: 'button', class: 'btn', id: 'tp-air-next', onclick: step }, at >= steps.length ? 'Finish' : 'Go On')); };
+      host.replaceChildren(el('h2', {}, `Step ${at + 1} Of ${steps.length}`), el('p', { id: 'tp-air-goal' }, st.goal),
+        el('div', { class: 'tp-row', style: 'flex-direction:column' }, hotelChoices(pack, st, rng).map((c) => el('button', { type: 'button', class: 'btn secondary', 'data-line': c.id, onclick: () => choose(c) }, heText(c.he, 'alef-he tp-he')))), out);
+    };
+    step();
+    return host;
+  }
+
+  function map() {
+    const places = mapPlaces(pack); if (!places.length) return el('p', {}, 'This part could not load its places. Check your connection and open the page again.');
+    const order = mapRound(places, rng); let at = 0, right = 0, done = false; const by = new Map(places.map((p) => [p.id, p]));
+    const ask = el('p', { id: 'tp-map-ask', class: 'tp-he', dir: 'rtl', lang: 'he', style: 'font-size:1.6rem' }); const out = el('p', { id: 'tp-map-out', role: 'status', 'aria-live': 'polite' });
+    const next = el('button', { type: 'button', class: 'btn', id: 'tp-map-next', hidden: true, onclick: () => turn() }, 'Next Place');
+    const dots = places.map((p) => el('button', { type: 'button', class: 'btn secondary', 'data-place': p.id, 'aria-label': `${p.n}: ${p.en}`, style: `position:absolute;left:${p.x}%;top:${p.y}%;transform:translate(-50%,-50%);min-width:2rem;width:2rem;height:2rem;padding:0;border-radius:50%`, onclick: () => choose(p.id) }, String(p.n)));
+    const turn = () => {
+      if (at >= order.length) { ask.textContent = ''; next.hidden = true; out.textContent = `${right} of ${order.length} places found.`; out.id = 'tp-map-score'; return; }
+      done = false; next.hidden = true; out.textContent = ''; ask.textContent = by.get(order[at]).he;
+    };
+    const choose = (id) => { if (done || at >= order.length) return; done = true; const want = by.get(order[at]); at++; if (id === want.id) right++;
+      out.textContent = id === want.id ? `Yes. ${want.he} is ${want.en}, dot ${want.n}.` : `Not that one. ${want.he} is ${want.en}, dot ${want.n}.`; next.hidden = false; next.textContent = at >= order.length ? 'See My Score' : 'Next Place'; };
+    turn();
+    return el('div', { class: 'tp-card' }, el('h2', {}, 'Where Is It?'), el('p', {}, 'Read the name, then tap its dot. North is at the top.'), ask,
+      el('div', { id: 'tp-map', style: 'position:relative;width:min(100%,19rem);height:46rem;margin:1rem auto;border:1px solid var(--border,#999);border-radius:12px' }, dots), out, next,
+      el('ul', { class: 'tp-lines', id: 'tp-map-key' }, places.map((p) => el('li', {}, `${p.n}. ${p.en}`))));
+  }
+
+  const views = { planner, restaurant, station, money, market, emergency, hotel, signs, airport, map };
   root.replaceChildren(wrap);
   show(ctx.query && views[ctx.query.part] ? ctx.query.part : 'planner');
   return () => { alive = false; };

@@ -1,0 +1,777 @@
+{
+ "note": "Owner, 2026-11-12 9:18 PM ET: every remaining game whose tile or in-game backdrop had no cast (scenery only, or a generic/shared picture) gets its own picture of Ari, Noa and/or Rimon on that game's approved art. Never flipped, including Hebrew letters. Metadata stripped with exiftool. Rimon stays gender-neutral. The 17 older pages (bg + cast) are built with: CFG=tools/images/cast-new-games.json python3 tools/images/cast-onto-envs.py (inventory-only lane rows are skipped). The 47 lane games are built with: ONLY=<ids> python3 tools/images/lane-envs.py from the matching items in tools/images/lane-envs.json.",
+ "games": {
+  "wordfinder": {
+   "bg": "GAME_wordfinder_env",
+   "y_align": 0.55,
+   "who": "Ari, Rimon, Noa",
+   "cast": [
+    {
+     "id": "CHAR_ari_celebrate",
+     "cx": 0.08,
+     "h": 470
+    },
+    {
+     "id": "rimon-010-magnifying-glass",
+     "cx": 0.36,
+     "h": 340
+    },
+    {
+     "id": "CHAR_noa_listen",
+     "cx": 0.92,
+     "h": 470
+    }
+   ]
+  },
+  "archbuilder": {
+   "bg": "GAME_arch_builder_env",
+   "y_align": 0.55,
+   "who": "Ari, Rimon",
+   "cast": [
+    {
+     "id": "CHAR_ari_listen",
+     "cx": 0.08,
+     "h": 470
+    },
+    {
+     "id": "rimon-174-keystone-arch",
+     "cx": 0.36,
+     "h": 340
+    }
+   ]
+  },
+  "vowelcatcher": {
+   "bg": "GAME_vowel_catcher_env",
+   "y_align": 0.55,
+   "who": "Rimon, Noa",
+   "cast": [
+    {
+     "id": "rimon-047-star-overhead",
+     "cx": 0.62,
+     "h": 340
+    },
+    {
+     "id": "CHAR_noa_neutral",
+     "cx": 0.92,
+     "h": 470
+    }
+   ]
+  },
+  "pinball": {
+   "bg": "GAME_pinball_table",
+   "y_align": 0.55,
+   "who": "Ari, Rimon, Noa",
+   "cast": [
+    {
+     "id": "CHAR_ari_neutral",
+     "cx": 0.08,
+     "h": 470
+    },
+    {
+     "id": "rimon-194-game-controller",
+     "cx": 0.36,
+     "h": 340
+    },
+    {
+     "id": "CHAR_noa_celebrate",
+     "cx": 0.92,
+     "h": 470
+    }
+   ]
+  },
+  "memorypalace": {
+   "bg": "GAME_memory_palace_courtyard",
+   "y_align": 0.55,
+   "who": "Ari, Rimon",
+   "cast": [
+    {
+     "id": "CHAR_ari_celebrate",
+     "cx": 0.08,
+     "h": 470
+    },
+    {
+     "id": "rimon-036-idea-bulb",
+     "cx": 0.36,
+     "h": 340
+    }
+   ]
+  },
+  "letterbridge": {
+   "bg": "GAME_letterbridge_env",
+   "y_align": 0.55,
+   "who": "Rimon, Noa",
+   "cast": [
+    {
+     "id": "rimon-187-gear-wrench",
+     "cx": 0.62,
+     "h": 340
+    },
+    {
+     "id": "CHAR_noa_speak",
+     "cx": 0.92,
+     "h": 470
+    }
+   ]
+  },
+  "shadowcraft": {
+   "bg": "GAME_shadow_craft_env",
+   "y_align": 0.55,
+   "who": "Ari, Rimon, Noa",
+   "cast": [
+    {
+     "id": "CHAR_ari_speak",
+     "cx": 0.08,
+     "h": 470
+    },
+    {
+     "id": "rimon-181-flashlight",
+     "cx": 0.36,
+     "h": 340
+    },
+    {
+     "id": "CHAR_noa_neutral",
+     "cx": 0.92,
+     "h": 470
+    }
+   ]
+  },
+  "tugowar": {
+   "bg": "GAME_tugowar_env",
+   "y_align": 0.55,
+   "who": "Ari, Rimon",
+   "cast": [
+    {
+     "id": "CHAR_ari_neutral",
+     "cx": 0.08,
+     "h": 470
+    },
+    {
+     "id": "rimon-029-flex",
+     "cx": 0.36,
+     "h": 340
+    }
+   ]
+  },
+  "petclinic": {
+   "bg": "GAME_petclinic_env",
+   "y_align": 0.55,
+   "who": "Rimon, Noa",
+   "cast": [
+    {
+     "id": "rimon-148-clipboard-thumbs-up",
+     "cx": 0.62,
+     "h": 340
+    },
+    {
+     "id": "CHAR_noa_listen",
+     "cx": 0.92,
+     "h": 470
+    }
+   ]
+  },
+  "roottree": {
+   "bg": "GAME_roottree_env",
+   "y_align": 0.55,
+   "who": "Ari, Rimon, Noa",
+   "cast": [
+    {
+     "id": "CHAR_ari_listen",
+     "cx": 0.08,
+     "h": 470
+    },
+    {
+     "id": "rimon-197-root-sprout",
+     "cx": 0.36,
+     "h": 340
+    },
+    {
+     "id": "CHAR_noa_speak",
+     "cx": 0.92,
+     "h": 470
+    }
+   ]
+  },
+  "barter": {
+   "bg": "GAME_barter_env",
+   "y_align": 0.55,
+   "who": "Ari, Rimon",
+   "cast": [
+    {
+     "id": "CHAR_ari_speak",
+     "cx": 0.08,
+     "h": 470
+    },
+    {
+     "id": "rimon-162-sunhat-falafel",
+     "cx": 0.36,
+     "h": 340
+    }
+   ]
+  },
+  "letterchomp": {
+   "bg": "arcade:letterchomp",
+   "y_align": 0.55,
+   "who": "Rimon, Noa",
+   "cast": [
+    {
+     "id": "rimon-003-curious-letter-tile",
+     "cx": 0.62,
+     "h": 340
+    },
+    {
+     "id": "CHAR_noa_celebrate",
+     "cx": 0.92,
+     "h": 470
+    }
+   ]
+  },
+  "fallingletters": {
+   "bg": "arcade:fallingletters",
+   "y_align": 0.55,
+   "who": "Ari, Rimon, Noa",
+   "cast": [
+    {
+     "id": "CHAR_ari_celebrate",
+     "cx": 0.08,
+     "h": 470
+    },
+    {
+     "id": "rimon-138-flip-tile",
+     "cx": 0.36,
+     "h": 340
+    },
+    {
+     "id": "CHAR_noa_listen",
+     "cx": 0.92,
+     "h": 470
+    }
+   ]
+  },
+  "soundsnap": {
+   "bg": "arcade:soundsnap",
+   "y_align": 0.55,
+   "who": "Ari, Rimon",
+   "cast": [
+    {
+     "id": "CHAR_ari_listen",
+     "cx": 0.08,
+     "h": 470
+    },
+    {
+     "id": "rimon-139-headphones-listen",
+     "cx": 0.36,
+     "h": 340
+    }
+   ]
+  },
+  "finalfive": {
+   "bg": "arcade:finalfive",
+   "y_align": 0.55,
+   "who": "Rimon, Noa",
+   "cast": [
+    {
+     "id": "rimon-143-counting-fingers",
+     "cx": 0.62,
+     "h": 340
+    },
+    {
+     "id": "CHAR_noa_neutral",
+     "cx": 0.92,
+     "h": 470
+    }
+   ]
+  },
+  "syllablesnake": {
+   "bg": "arcade:syllablesnake",
+   "y_align": 0.55,
+   "who": "Ari, Rimon, Noa",
+   "cast": [
+    {
+     "id": "CHAR_ari_neutral",
+     "cx": 0.08,
+     "h": 470
+    },
+    {
+     "id": "rimon-049-skip",
+     "cx": 0.36,
+     "h": 340
+    },
+    {
+     "id": "CHAR_noa_celebrate",
+     "cx": 0.92,
+     "h": 470
+    }
+   ]
+  },
+  "flapvowel": {
+   "bg": "arcade:flapvowel",
+   "y_align": 0.55,
+   "who": "Ari, Rimon",
+   "cast": [
+    {
+     "id": "CHAR_ari_celebrate",
+     "cx": 0.08,
+     "h": 470
+    },
+    {
+     "id": "rimon-020-hop-arms-up",
+     "cx": 0.36,
+     "h": 340
+    }
+   ]
+  },
+  "tg-tilepairs": {
+   "built_by": "tools/images/lane-envs.py",
+   "who": "Ari, Noa, Rimon",
+   "items": [
+    "CHAR_ari_celebrate",
+    "GAME_art_08",
+    "rimon-190-peek-in-box",
+    "CHAR_noa_listen"
+   ]
+  },
+  "tg-numerals": {
+   "built_by": "tools/images/lane-envs.py",
+   "who": "Ari, Rimon",
+   "items": [
+    "CHAR_ari_listen",
+    "VOC_numbers_09",
+    "rimon-142-abacus"
+   ]
+  },
+  "tg-wordguess": {
+   "built_by": "tools/images/lane-envs.py",
+   "who": "Noa, Rimon",
+   "items": [
+    "GAME_art_06",
+    "rimon-036-idea-bulb",
+    "CHAR_noa_neutral"
+   ]
+  },
+  "tg-verbslots": {
+   "built_by": "tools/images/lane-envs.py",
+   "who": "Ari, Noa, Rimon",
+   "items": [
+    "CHAR_ari_neutral",
+    "CRAFT_haftarah_08",
+    "rimon-178-checklist",
+    "CHAR_noa_celebrate"
+   ]
+  },
+  "tg-storyorder": {
+   "built_by": "tools/images/lane-envs.py",
+   "who": "Ari, Rimon",
+   "items": [
+    "CHAR_ari_synagogue",
+    "STORY_creation_07",
+    "STORY_jacob_03",
+    "STORY_joseph_01",
+    "rimon-155-book-held-high"
+   ]
+  },
+  "g1-dagesh": {
+   "built_by": "tools/images/lane-envs.py",
+   "who": "Noa, Rimon",
+   "items": [
+    "VOC_numbers_09",
+    "rimon-137-binoculars",
+    "CHAR_noa_speak"
+   ]
+  },
+  "g1-shva": {
+   "built_by": "tools/images/lane-envs.py",
+   "who": "Ari, Noa, Rimon",
+   "items": [
+    "CHAR_ari_speak",
+    "CRAFT_practice_10",
+    "rimon-103-gentle-bow",
+    "CHAR_noa_neutral"
+   ]
+  },
+  "g2-sortrush": {
+   "built_by": "tools/images/lane-envs.py",
+   "who": "Ari, Rimon",
+   "items": [
+    "CHAR_ari_neutral",
+    "BG_market",
+    "rimon-140-quick-read-stopwatch"
+   ]
+  },
+  "g2-bodymap": {
+   "built_by": "tools/images/lane-envs.py",
+   "who": "Noa, Rimon",
+   "items": [
+    "VOC_body_04",
+    "VOC_body_02",
+    "VOC_body_03",
+    "rimon-078-side-stretch",
+    "CHAR_noa_listen"
+   ]
+  },
+  "g2-paintpots": {
+   "built_by": "tools/images/lane-envs.py",
+   "who": "Ari, Noa, Rimon",
+   "items": [
+    "CHAR_ari_listen",
+    "VOC_colours_01",
+    "VOC_colours_03",
+    "VOC_colours_02",
+    "rimon-023-twirl",
+    "CHAR_noa_speak"
+   ]
+  },
+  "g2-lineup": {
+   "built_by": "tools/images/lane-envs.py",
+   "who": "Ari, Rimon",
+   "items": [
+    "CHAR_ari_speak",
+    "VOC_colours_09",
+    "VOC_colours_10",
+    "rimon-179-big-calendar"
+   ]
+  },
+  "g2-snap": {
+   "built_by": "tools/images/lane-envs.py",
+   "who": "Noa, Rimon",
+   "items": [
+    "GAME_art_09",
+    "rimon-027-high-five",
+    "CHAR_noa_celebrate"
+   ]
+  },
+  "g2-chain": {
+   "built_by": "tools/images/lane-envs.py",
+   "who": "Ari, Noa, Rimon",
+   "items": [
+    "CHAR_ari_celebrate",
+    "CRAFT_practice_10",
+    "rimon-106-paper-chain",
+    "CHAR_noa_listen"
+   ]
+  },
+  "g2-dominoes": {
+   "built_by": "tools/images/lane-envs.py",
+   "who": "Ari, Rimon",
+   "items": [
+    "CHAR_ari_listen",
+    "GAME_art_06",
+    "GRAM_place_09",
+    "rimon-069-sipping-tea"
+   ]
+  },
+  "g2-street": {
+   "built_by": "tools/images/lane-envs.py",
+   "who": "Noa, Rimon",
+   "items": [
+    "FINALE_set_02",
+    "rimon-093-shabbat-stroll",
+    "CHAR_noa_neutral"
+   ]
+  },
+  "g2-dayafter": {
+   "built_by": "tools/images/lane-envs.py",
+   "who": "Ari, Noa, Rimon",
+   "items": [
+    "CHAR_ari_neutral",
+    "VOC_colours_09",
+    "rimon-145-calendar-page",
+    "CHAR_noa_celebrate"
+   ]
+  },
+  "g2-trail": {
+   "built_by": "tools/images/lane-envs.py",
+   "who": "Ari, Rimon",
+   "items": [
+    "CHAR_ari_celebrate",
+    "STORY_creation_09",
+    "rimon-006-plan-map"
+   ]
+  },
+  "g2-fourgroups": {
+   "built_by": "tools/images/lane-envs.py",
+   "who": "Noa, Rimon",
+   "items": [
+    "GAME_art_08",
+    "rimon-196-puzzle-pieces",
+    "CHAR_noa_speak"
+   ]
+  },
+  "g2-hive": {
+   "built_by": "tools/images/lane-envs.py",
+   "who": "Ari, Noa, Rimon",
+   "items": [
+    "CHAR_ari_speak",
+    "VOC_market_08",
+    "rimon-074-butterfly",
+    "CHAR_noa_neutral"
+   ]
+  },
+  "g2-ladder": {
+   "built_by": "tools/images/lane-envs.py",
+   "who": "Ari, Rimon",
+   "items": [
+    "CHAR_ari_neutral",
+    "CRAFT_haftarah_08",
+    "rimon-149-step-up"
+   ]
+  },
+  "g3-conveyor": {
+   "built_by": "tools/images/lane-envs.py",
+   "who": "Noa, Rimon",
+   "items": [
+    "GAME_art_09",
+    "rimon-141-lever",
+    "CHAR_noa_listen"
+   ]
+  },
+  "g3-lostfound": {
+   "built_by": "tools/images/lane-envs.py",
+   "who": "Ari, Noa, Rimon",
+   "items": [
+    "CHAR_ari_listen",
+    "GRAM_move_02",
+    "GRAM_link_04",
+    "rimon-190-peek-in-box",
+    "CHAR_noa_speak"
+   ]
+  },
+  "g3-onetwomany": {
+   "built_by": "tools/images/lane-envs.py",
+   "who": "Ari, Rimon",
+   "items": [
+    "CHAR_ari_speak",
+    "VOC_numbers_02",
+    "VOC_numbers_03",
+    "VOC_numbers_08",
+    "rimon-143-counting-fingers"
+   ]
+  },
+  "g3-grid": {
+   "built_by": "tools/images/lane-envs.py",
+   "who": "Noa, Rimon",
+   "items": [
+    "GAME_art_08",
+    "rimon-148-clipboard-thumbs-up",
+    "CHAR_noa_celebrate"
+   ]
+  },
+  "g3-swapfix": {
+   "built_by": "tools/images/lane-envs.py",
+   "who": "Ari, Noa, Rimon",
+   "items": [
+    "CHAR_ari_celebrate",
+    "GAME_art_06",
+    "rimon-187-gear-wrench",
+    "CHAR_noa_listen"
+   ]
+  },
+  "g3-shop": {
+   "built_by": "tools/images/lane-envs.py",
+   "who": "Ari, Rimon",
+   "items": [
+    "CHAR_ari_listen",
+    "GRAM_link_09",
+    "VOC_market_10",
+    "rimon-142-abacus"
+   ]
+  },
+  "g4-signs": {
+   "built_by": "tools/images/lane-envs.py",
+   "who": "Noa, Rimon",
+   "items": [
+    "PLACE_everyday_07",
+    "rimon-195-map-pin",
+    "CHAR_noa_neutral"
+   ]
+  },
+  "g4-change": {
+   "built_by": "tools/images/lane-envs.py",
+   "who": "Ari, Noa, Rimon",
+   "items": [
+    "CHAR_ari_neutral",
+    "VOC_cafe_10",
+    "VOC_market_04",
+    "rimon-143-counting-fingers",
+    "CHAR_noa_celebrate"
+   ]
+  },
+  "g4-weather": {
+   "built_by": "tools/images/lane-envs.py",
+   "who": "Ari, Rimon",
+   "items": [
+    "CHAR_ari_celebrate",
+    "GRAM_link_04",
+    "rimon-185-packing-suitcase"
+   ]
+  },
+  "g4-shuk": {
+   "built_by": "tools/images/lane-envs.py",
+   "who": "Noa, Rimon",
+   "items": [
+    "CTX_food_01",
+    "rimon-162-sunhat-falafel",
+    "CHAR_noa_speak"
+   ]
+  },
+  "g4-menu": {
+   "built_by": "tools/images/lane-envs.py",
+   "who": "Ari, Noa, Rimon",
+   "items": [
+    "CHAR_ari_speak",
+    "CTX_food_02",
+    "rimon-160-phrasebook",
+    "CHAR_noa_neutral"
+   ]
+  },
+  "g4-tone": {
+   "built_by": "tools/images/lane-envs.py",
+   "who": "Ari, Rimon",
+   "items": [
+    "CHAR_ari_neutral",
+    "FINALE_set_04",
+    "rimon-189-nice-to-meet-you"
+   ]
+  },
+  "g4-week": {
+   "built_by": "tools/images/lane-envs.py",
+   "who": "Noa, Rimon",
+   "items": [
+    "VOC_numbers_07",
+    "rimon-178-checklist",
+    "CHAR_noa_listen"
+   ]
+  },
+  "g5-table": {
+   "built_by": "tools/images/lane-envs.py",
+   "who": "Ari, Noa, Rimon",
+   "items": [
+    "CHAR_ari_synagogue",
+    "BG_shabbat",
+    "rimon-089-carrying-challah",
+    "CHAR_noa_synagogue"
+   ]
+  },
+  "g5-omer": {
+   "built_by": "tools/images/lane-envs.py",
+   "who": "Ari, Rimon",
+   "items": [
+    "CHAR_ari_synagogue",
+    "STORY_joseph_02",
+    "rimon-145-calendar-page"
+   ]
+  },
+  "g5-steps": {
+   "built_by": "tools/images/lane-envs.py",
+   "who": "Noa, Rimon",
+   "items": [
+    "STORY_jacob_08",
+    "rimon-121-seder-plate",
+    "CHAR_noa_synagogue"
+   ]
+  },
+  "g5-stars": {
+   "built_by": "tools/images/lane-envs.py",
+   "who": "Ari, Noa, Rimon",
+   "items": [
+    "CHAR_ari_celebrate",
+    "VOC_colours_10",
+    "rimon-095-havdalah",
+    "CHAR_noa_listen"
+   ]
+  },
+  "g5-readings": {
+   "built_by": "tools/images/lane-envs.py",
+   "who": "Ari, Rimon",
+   "items": [
+    "CHAR_ari_synagogue",
+    "CRAFT_bimah_02",
+    "rimon-153-reading-on-books"
+   ]
+  },
+  "hanukkah-candles": {
+   "built_by": "tools/images/lane-envs.py",
+   "who": "Noa, Rimon",
+   "items": [
+    "VOC_numbers_07",
+    "rimon-110-hanukkah-lights",
+    "CHAR_noa_neutral"
+   ]
+  },
+  "hanukkah-count": {
+   "built_by": "tools/images/lane-envs.py",
+   "who": "Ari, Noa, Rimon",
+   "items": [
+    "CHAR_ari_neutral",
+    "VOC_numbers_08",
+    "rimon-110-hanukkah-lights",
+    "CHAR_noa_celebrate"
+   ]
+  },
+  "hanukkah-pairs": {
+   "built_by": "tools/images/lane-envs.py",
+   "who": "Ari, Rimon",
+   "items": [
+    "CHAR_ari_celebrate",
+    "rimon-110-hanukkah-lights",
+    "GAME_art_09"
+   ]
+  },
+  "hanukkah-colour": {
+   "built_by": "tools/images/lane-envs.py",
+   "who": "Noa, Rimon",
+   "items": [
+    "VOC_colours_02",
+    "rimon-112-sufganiyah",
+    "VOC_colours_03",
+    "CHAR_noa_speak"
+   ]
+  },
+  "hanukkah-gelthunt": {
+   "built_by": "tools/images/lane-envs.py",
+   "who": "Ari, Noa, Rimon",
+   "items": [
+    "CHAR_ari_speak",
+    "VOC_cafe_10",
+    "rimon-170-treasure-map",
+    "CHAR_noa_neutral"
+   ]
+  },
+  "hanukkah-slide": {
+   "built_by": "tools/images/lane-envs.py",
+   "who": "Ari, Rimon",
+   "items": [
+    "CHAR_ari_neutral",
+    "GAME_art_08",
+    "rimon-111-dreidel"
+   ]
+  },
+  "hanukkah-hiddenlights": {
+   "built_by": "tools/images/lane-envs.py",
+   "who": "Noa, Rimon",
+   "items": [
+    "VOC_numbers_07",
+    "rimon-181-flashlight",
+    "CHAR_noa_listen"
+   ]
+  },
+  "hanukkah-jumble": {
+   "built_by": "tools/images/lane-envs.py",
+   "who": "Ari, Noa, Rimon",
+   "items": [
+    "CHAR_ari_listen",
+    "VOC_market_08",
+    "rimon-113-latkes",
+    "CHAR_noa_speak"
+   ]
+  },
+  "hanukkah-saveflame": {
+   "built_by": "tools/images/lane-envs.py",
+   "who": "Ari, Rimon",
+   "items": [
+    "CHAR_ari_speak",
+    "VOC_numbers_07",
+    "rimon-090-beside-candles"
+   ]
+  }
+ }
+}

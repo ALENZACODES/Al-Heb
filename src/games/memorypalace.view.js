@@ -1,6 +1,7 @@
 // Game 25. Indexed letter-picture stations; no invented geographic map.
 import { h, heSpan } from '../shell/ui.js';
 import { createSession, shuffled, loadGameImages, imgOf, speak, resultsCard } from './engine.js';
+import { castEnvNode } from './cast-env.js';
 import { loadJson } from '../grammar/loader.js';
 import { sfx } from '../audio/sfx.js';
 
@@ -90,7 +91,9 @@ export function mount(root, ctx) {
     } else {
       status.replaceChildren(`Recall stop ${index + 1} of ${route.length}: `, heSpan(route[index].he));
     }
-    board.replaceChildren(...nodes);
+    // Cast picture sits above the courtyard so the station buttons keep the approved play-surface art.
+    const backdrop = castEnvNode(h, R, 'memorypalace', 'GAME_memory_palace_courtyard');
+    board.replaceChildren(...[backdrop, ...nodes].filter(Boolean));
   }
   Promise.all([loadJson('data/letters/letters.json'), loadGameImages(ctx)]).then(([letters, images]) => {
     if (!alive) return;

@@ -144,7 +144,7 @@ export const NAV_EN = {
   'nav.route.syllabus': 'Syllabus and goals',
   'nav.route.time-budget': 'Time budget',
   'nav.route.daily': 'Daily goal and quests',
-  'nav.route.app-rules': 'How hearts, streaks, minutes and passing work', 'nav.route.course-map': 'Course map', 'nav.route.mixed-review': 'Mixed review', 'nav.route.five-minutes': 'Daily five-minute set', 'nav.route.checkpoints': 'Checkpoint tests', 'nav.route.benchmarks': 'Benchmark map', // course lane
+  'nav.route.app-rules': 'How hearts, streaks, minutes and passing work', 'nav.route.course-map': 'Course map', 'nav.route.mixed-review': 'Mixed review', 'nav.route.trip': 'Israel trip', 'nav.route.five-minutes': 'Daily five-minute set', 'nav.route.checkpoints': 'Checkpoint tests', 'nav.route.benchmarks': 'Benchmark map', // course lane
   'nav.route.firstwin': 'Build Hebrew words',
   'nav.accessibility': 'Accessibility',
   'nav.route.welcome': 'Welcome', 'nav.route.how': 'How this works', 'nav.route.search': 'Search',

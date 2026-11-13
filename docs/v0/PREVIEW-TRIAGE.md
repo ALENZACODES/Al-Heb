@@ -38,6 +38,7 @@ decision, so the More sheet stays short and the first session stays coherent (we
 | `reminders` | keep | Study reminders. |
 | `typing` | keep | Typing practice. |
 | `festivals` | keep | Calendar content. |
+| `trip` | keep | Israel Trip: the Trip Planner and the restaurant scene. |
 | `listen` | keep | Needs audio; useful once recordings exist. |
 | `trope` | keep | Names of the marks only; no audio claims. |
 | `tradition-quiz` | keep | Needs audio to be worth much; keep as preview. |

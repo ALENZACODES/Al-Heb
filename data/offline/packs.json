@@ -139,7 +139,7 @@
     ],
     [
      "src/curriculum/audio-ui.js",
-     4636,
+     4897,
      1
     ],
     [
@@ -259,12 +259,12 @@
     ],
     [
      "src/curriculum/lesson.parts.js",
-     14192,
+     14325,
      1
     ],
     [
      "src/curriculum/lesson.view.js",
-     21995,
+     22128,
      1
     ],
     [
@@ -314,7 +314,7 @@
     ],
     [
      "src/curriculum/scaffold.view.js",
-     5819,
+     5895,
      0
     ],
     [
@@ -449,7 +449,7 @@
     ],
     [
      "src/shell/audio-access.js",
-     13915,
+     14570,
      1
     ],
     [
@@ -504,7 +504,7 @@
     ],
     [
      "src/shell/names.js",
-     9261,
+     9355,
      1
     ],
     [
@@ -811,7 +811,7 @@
     ],
     [
      "src/shell/audio-access.js",
-     13915,
+     14570,
      1
     ],
     [
@@ -826,7 +826,7 @@
     ],
     [
      "src/shell/names.js",
-     9261,
+     9355,
      1
     ],
     [
@@ -978,7 +978,7 @@
     ],
     [
      "src/curriculum/audio-ui.js",
-     4636,
+     4897,
      1
     ],
     [
@@ -1173,7 +1173,7 @@
     ],
     [
      "src/shell/audio-access.js",
-     13915,
+     14570,
      1
     ],
     [
@@ -1208,7 +1208,7 @@
     ],
     [
      "src/shell/names.js",
-     9261,
+     9355,
      1
     ],
     [

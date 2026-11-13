@@ -1,6 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { waitFor } from './helpers/waitfor.js';
+import { displayHebrew } from '../src/shell/names.js';
 
 // Fake DOM in the style of the other curriculum view tests (strict replaceChildren).
 class Node_ {
@@ -253,7 +254,7 @@ test("spot and fade exercises show the registry line named by lineIndex (1-based
         assert.ok(shown.every((t) => A.heKey(expected).includes(A.heKey(t))), `${ex.id}: every shown word is from the expected line`);
       } else {
         fades++;
-        assert.ok(rawText(node).includes(expected), `${ex.id}: fade shows line ${ex.lineIndex ?? 1}`);
+        assert.ok(rawText(node).includes(displayHebrew(expected, 'abbrev')), `${ex.id}: fade shows line ${ex.lineIndex ?? 1}`);
         if (r.lines > 1) assert.ok(node.find((n) => n.attrs["data-audio"]).some((b) => b.attrs["data-audio"] === `line/${r.id}-l${ex.lineIndex ?? 1}`), `${ex.id}: audio id`);
       }
     }

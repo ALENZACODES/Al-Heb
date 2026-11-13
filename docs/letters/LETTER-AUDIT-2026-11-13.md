@@ -53,21 +53,51 @@ Set to `hold`:
 
 The letter name for Pe and Final Pe was written פֵא (reads "fe"). Now פֵּא in `data/letters/letters.json`, `data/videos/letters.json`, `src/letters/roster.js` and `tools/letters/build_letters.py`.
 
-## Still Wrong: Needs A New Recording
+## Second Pass, Same Day: Re-Recorded With The Google Key
 
-These cannot be fixed without the Google voice key.
+Takes were recorded on the owner's computer with `RUN-LETTER-RETAKES.cmd` (`tools/audio/render_letter_takes.py`, 328 takes). Each take was listened to, the best was used, and the clip was listened to again in its final place. Takes used are kept in `audio-takes/letter-audit/`.
 
-| Clip | Heard | Should be | How |
-|---|---|---|---|
-| Vet name (`letter/vet.mp3`, both voices) | beit | vet | `python tools/audio/asr-check/letter_takes.py vet` |
-| Khaf name (`letter/khaf.mp3`, both voices) | kaf | khaf | `python tools/audio/asr-check/letter_takes.py khaf` |
-| Vav sound and Vet sound (`letter/vav-sound.mp3`, `vet-sound.mp3`, and `syllable/vav-a.mp3`) | "wa" or "wow" | va | new take needed |
-| Dagesh sound (`vowel/dagesh.mp3`) | bu | b | new take needed |
-| Builder vowel and dot names, 15 marks, both voices | sheva = "sheso", qamats = "kemets", patah = "patoch", tsere = "tsei rei", holam = "cholem", dagesh = "degesh" | the pointed names | `node tools/audio/render-builder.mjs --execute` (30 clips, under one cent). They are now set to render in the WaveNet voices. Listen after rendering. |
+| Clip | Was | Now |
+|---|---|---|
+| Vet name, both voices | beit | vet |
+| Khaf name, both voices | kaf | khaf |
+| Resh name, Noa | re-ish | resh |
+| Shin name, Ari | shim | shin |
+| Vav sound, Vet sound, and the va syllable, both voices | wa / wow | va (cut from a "vav va" take) |
+| Dagesh sound, both voices | bu | ba (the Bet sound clip) |
+| Builder vowel and dot names, 15 marks, both voices | mostly misread | read from the points, WaveNet voices |
+| Sephardi letter names and sounds, 56 clips | English letter names or other words (H sound as "aitch", Qof spelled out "kay oh ef", Yod as "yad", Aleph as "elef") | copies of the Israeli clip of the same voice, under the existing same-reading rule |
 
-Listen by ear (the machine was unsure): Noa's Resh name, Noa's Gimel name (stress), Ari's Shin name, Ari's Resh sound, Noa's Pe, Samekh, Fe and Yod sounds.
+Listen by ear before launch:
+- Noa's sheva says "sheva"; Ari's says "shva". Both are used; pick one.
+- Noa's "nekudat shin" and "nekudat sin" were heard right at full quality and unclear after shrinking to builder size.
+- Noa's Gimel name is still heard with the stress on the end in every take.
 
-The Dalet letter name and sound in the letter lessons were heard correctly (DA-let, da) in both voices.
+## A Correction To The First Table
+
+The listener is reliable on the WaveNet voices (letter lessons). On the Chirp voices (word builder) it often hears "a" as "e" (aba as "abe", yam as "yem"). So in the first table, "elef" for Aleph and "lemED" for Lamed may be the listener's error, not the clip's. The builder clips that were wrong at the level of consonants or whole words stand: Dalet (Noa), Resh, Pe, Tav, sheva, tsere. All builder letter names now use the WaveNet clips either way.
+
+## Still Wrong
+
+### Ashkenazi letter clips (not changed: needs a decision)
+
+Heard right: olef, beis, cheis, doles, somekh, tsodi, vov, tov, "sofis" for the final forms.
+
+Heard wrong, both voices unless noted:
+- Letter sounds that say an English letter name: H sound "aitch", D "dee", T (Tet) "tee", V "vee", K (Qof) "kay".
+- The Tav sound clip says "samekh".
+- Letter sounds that say the whole letter name: Gimel, Lamed, Mem, Nun, Zayin, Tsadi, Shin, Sin, Yod, Resh, Chet.
+- Names: Mem "mi-im", Resh "ri-ish", Yod "yad", Qof spelled out (Ari), Final Mem (Noa). Noa's Pe name and Pe and Fe sounds are silent or empty.
+
+An earlier automatic review had passed many of these. Two ways to fix: let Ashkenazi letter sounds play the Israeli sound clips (all the same except undotted Tav), and re-record the names from pointed Ashkenazi spellings.
+
+### Letter videos (need a rebuild on a computer with Playwright)
+
+- Pe and Final Pe videos show the name as פֵא (Fe). The data is fixed; the videos are not rebuilt.
+- Noa's Resh video and Ari's Shin video still carry the old name clips.
+- `python tools/video/letter_videos.py --voice f pe pe-final resh` and `python tools/video/letter_videos.py --voice m pe pe-final shin`
+- The Aleph video cuts its sound line off mid-word ("like the pause in 'uh").
+- Letter shapes in all 27 videos are correct. Dalet's leg sits further left than most teaching fonts draw it (it follows the DejaVu outline), which makes it look a little like a T.
 
 ## Still Wrong: Needs A Decision Or New Art
 
@@ -86,9 +116,13 @@ The Dalet letter name and sound in the letter lessons were heard correctly (DA-l
 - Israeli letter-name clips for both voices, apart from the ones listed above.
 - Israeli vowel sound clips for both voices, apart from Dagesh.
 
-## Not Checked In This Pass
+## Checked In The Second Pass, No Change Made
 
-- The 162 builder words and the lesson vocabulary, word by word. The earlier word check in `tools/audio/asr-check/` covers spelling-level errors only.
-- Sephardi and Ashkenazi letter clips, apart from Dalet. Their bare letter-sound clips for Dalet were heard as "di" and "bi".
-- Cursive letter pictures and stroke shapes.
-- The letter videos.
+- Print and cursive stroke shapes for all 27 letters were drawn out and looked at. No wrong letter was found. They are still marked draft and still need a native reader's eye; this was not an expert check.
+- Builder words: 47 of the 162 were listened to (both voices) before the pass was stopped. Because of the "a" heard as "e" problem above, vowel results on these clips cannot be trusted. Worth a listen: delet (heard "dalat", both voices), lechem (Ari, heard as two words), peri (Ari, heard "bari"), dag (heard "dug"), yeled (Ari, heard "yaled").
+
+## Not Checked
+
+- The other 115 builder words and the lesson vocabulary.
+- Sephardi and Ashkenazi syllable, vowel, word and prayer clips.
+- Cursive letter pictures (none are in the shown set).

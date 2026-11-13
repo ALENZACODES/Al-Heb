@@ -1,0 +1,32 @@
+name: letter-takes
+# Fresh takes of letter names for the letter audit (tools/audio/render_letter_takes.py), in the Israeli WaveNet and Chirp voices.
+# Runs when tools/audio/letter-takes-queue.txt changes on the audit branch, or by hand. Needs the repository secret GOOGLE_TTS_API_KEY.
+# Takes are pushed to the branch john/letter-takes; nothing in the app changes until they are listened to and picked.
+on:
+  push:
+    branches: ['claude/letter-audit-2026-11-13']
+    paths: ['tools/audio/letter-takes-queue.txt']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: letter-takes
+  cancel-in-progress: false
+jobs:
+  record:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    env:
+      GOOGLE_TTS_API_KEY: ${{ secrets.GOOGLE_TTS_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Record takes
+        run: python3 tools/audio/render_letter_takes.py
+      - name: Push takes to john/letter-takes
+        run: |
+          git config user.name "John Khan"
+          git config user.email "johnnykhan1@gmail.com"
+          git checkout -q -B john/letter-takes
+          git add -f audio-takes/letter-audit
+          git commit -q -m "Letter takes: $(ls audio-takes/letter-audit/*.mp3 | wc -l) files"
+          git push -q --force origin HEAD:refs/heads/john/letter-takes

@@ -83,14 +83,14 @@ test('the two Name headwords are shown as ה׳ and have no sound in the clip lis
   for (const id of ['p6584b7dc', 'p7cb5e293']) {
     const w = byId.get(id);
     assert.ok(w, id);
-    assert.equal(w.he, NAME_ABBREV, id);
+    assert.equal(displayHebrew(w.he, 'abbrev'), NAME_ABBREV, id);
     assert.equal(isNameVocabItem(w), true, id);
   }
   const lessons = JSON.parse(fs.readFileSync(path.join(root, 'data/curriculum/lessons.json'), 'utf8')).lessons;
   const r15 = lessons.find((l) => l.id === 'r15');
   const r34 = lessons.find((l) => l.id === 'r34');
-  assert.equal(r15.words[1].he, NAME_ABBREV);
-  assert.equal(r34.words[0].he, NAME_ABBREV);
+  assert.equal(displayHebrew(r15.words[1].he, 'abbrev'), NAME_ABBREV);
+  assert.equal(displayHebrew(r34.words[0].he, 'abbrev'), NAME_ABBREV);
   const clips = JSON.parse(fs.readFileSync(path.join(root, 'data/vocab/clip-lookup.json'), 'utf8'));
   const blob = JSON.stringify(clips);
   assert.ok(!blob.includes('p6584b7dc') && !blob.includes('p7cb5e293'));

@@ -12,8 +12,7 @@
   "ipa": 23,
   "added": 6,
   "patched": 36,
-  "rank": 12,
-  "he": 2
+  "rank": 12
  },
  "corrections": [
   {
@@ -4802,20 +4801,6 @@
     "note": "Wiktionary (en.wiktionary.org/wiki/פורנו, retrieved 12 Nov 2026) lists פּוֹרְנוֹ (porno) as a masculine noun, informal 'porn, porno'. The gender already on the entry is kept and cited; it was not invented."
    },
    "reason": "lemma-accuracy (12 Nov 2026): A second source now states the gender as masculine, confirming the value already on the entry."
-  },
-  {
-   "id": "p6584b7dc",
-   "field": "he",
-   "old": "יְהוָה",
-   "new": "ה׳",
-   "reason": "The four-letter Name is shown as ה׳ and is never voiced."
-  },
-  {
-   "id": "p7cb5e293",
-   "field": "he",
-   "old": "יהוה",
-   "new": "ה׳",
-   "reason": "The four-letter Name is shown as ה׳ and is never voiced."
   }
  ]
 }

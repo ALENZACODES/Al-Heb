@@ -8,6 +8,7 @@ import { transliterate } from "../pronunciation/transliterate.js";
 import { draftNotice, onKeys } from "./ex-ui.js";
 import { due } from "./srs.js";
 import { playButton } from "./audio-ui.js";
+import { displayHebrew } from "../shell/names.js";
 import { wordAudioId } from "./progress.js";
 
 const RATINGS = [[1, "Again"], [2, "Hard"], [3, "Good"], [4, "Easy"]];
@@ -70,7 +71,7 @@ export function mountScaffold(root, ctx) {
       paint();
       replaceKeepingFocus(wrap, h1, head,
         el("p", { class: "muted", role: "status" }, `Word ${pos + 1} of ${queue.length}. Latin help: ${LEVEL_NAMES[level]}${pinned ? " (pinned)" : ""} (stored level ${entry?.level ?? startLevel(start)} of 3).`),
-        el("div", { class: "card alef-card" }, el("p", { class: "muted" }, "Read this word aloud."), heText(w.he, "alef-he alef-word-big"), latinBox, tapBtn, show, answer, ratings, pin),
+        el("div", { class: "card alef-card" }, el("p", { class: "muted" }, "Read this word aloud."), heText(displayHebrew(w.he, "abbrev"), "alef-he alef-word-big"), latinBox, tapBtn, show, answer, ratings, pin),
         el("p", { class: "muted alef-keys" }, "Keyboard: after showing the meaning, press 1 Again, 2 Hard, 3 Good, 4 Easy."));
       if (!alive) return;
     }

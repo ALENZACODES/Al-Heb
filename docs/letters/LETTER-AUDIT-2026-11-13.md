@@ -55,7 +55,7 @@ The letter name for Pe and Final Pe was written פֵא (reads "fe"). Now פֵּ�
 
 ## Second Pass, Same Day: Re-Recorded With The Google Key
 
-Takes were recorded on the owner's computer with `RUN-LETTER-RETAKES.cmd` (`tools/audio/render_letter_takes.py`, 328 takes). Each take was listened to, the best was used, and the clip was listened to again in its final place. Takes used are kept in `audio-takes/letter-audit/`.
+Takes were recorded on the owner's computer with `RUN-LETTER-RETAKES.cmd` (`tools/audio/render_letter_takes.py`, three runs). Each take was listened to, the best was used, and the clip was listened to again in its final place. Takes used are kept in `audio-takes/letter-audit/`.
 
 | Clip | Was | Now |
 |---|---|---|
@@ -79,25 +79,25 @@ The listener is reliable on the WaveNet voices (letter lessons). On the Chirp vo
 
 ## Still Wrong
 
-### Ashkenazi letter clips (not changed: needs a decision)
+### Ashkenazi letter clips (third pass: mostly fixed)
 
-Heard right: olef, beis, cheis, doles, somekh, tsodi, vov, tov, "sofis" for the final forms.
+Fixed:
+- Letter sounds, both voices: every clip that said an English letter name ("aitch", "dee", "tee", "vee", "kay") or the whole Hebrew name now plays the Israeli sound clip. The Tav sound plays the s sound.
+- Names re-recorded from pointed Ashkenazi spellings: Fe ("fei"), Ari's Pe ("pei"), Lamed ("lomed"), Ari's Resh.
+- Names now using the Israeli clip: Mem, Yod, Khaf, Noa's Resh, Ari's Qof, Gimel and Shin.
 
-Heard wrong, both voices unless noted:
-- Letter sounds that say an English letter name: H sound "aitch", D "dee", T (Tet) "tee", V "vee", K (Qof) "kay".
-- The Tav sound clip says "samekh".
-- Letter sounds that say the whole letter name: Gimel, Lamed, Mem, Nun, Zayin, Tsadi, Shin, Sin, Yod, Resh, Chet.
-- Names: Mem "mi-im", Resh "ri-ish", Yod "yad", Qof spelled out (Ari), Final Mem (Noa). Noa's Pe name and Pe and Fe sounds are silent or empty.
+Not fixed:
+- Vet still says "beis". Every take of "veis" came out "weis".
+- Final Mem still says "me-im sofis" (Ari) or "meyim sof dis" (Noa). No take said it cleanly.
+- Mem says "mem", not "meim", and Resh says "resh", not "reish": no take said the "ei" forms as one syllable.
 
-An earlier automatic review had passed many of these. Two ways to fix: let Ashkenazi letter sounds play the Israeli sound clips (all the same except undotted Tav), and re-record the names from pointed Ashkenazi spellings.
+### Letter videos
 
-### Letter videos (need a rebuild on a computer with Playwright)
+Rebuilt in the third pass: Pe and Final Pe (both voices, the name now shows its dot), Noa's Resh, Ari's Shin, and Vav in both voices (new V sound).
 
-- Pe and Final Pe videos show the name as פֵא (Fe). The data is fixed; the videos are not rebuilt.
-- Noa's Resh video and Ari's Shin video still carry the old name clips.
-- `python tools/video/letter_videos.py --voice f pe pe-final resh` and `python tools/video/letter_videos.py --voice m pe pe-final shin`
+Still open:
 - The Aleph video cuts its sound line off mid-word ("like the pause in 'uh").
-- Letter shapes in all 27 videos are correct. Dalet's leg sits further left than most teaching fonts draw it (it follows the DejaVu outline), which makes it look a little like a T.
+- Dalet's leg sits further left than most teaching fonts draw it (it follows the DejaVu outline), which makes it look a little like a T. Letter shapes in all 27 videos are otherwise correct.
 
 ## Still Wrong: Needs A Decision Or New Art
 
@@ -119,10 +119,10 @@ An earlier automatic review had passed many of these. Two ways to fix: let Ashke
 ## Checked In The Second Pass, No Change Made
 
 - Print and cursive stroke shapes for all 27 letters were drawn out and looked at. No wrong letter was found. They are still marked draft and still need a native reader's eye; this was not an expert check.
-- Builder words: 47 of the 162 were listened to (both voices) before the pass was stopped. Because of the "a" heard as "e" problem above, vowel results on these clips cannot be trusted. Worth a listen: delet (heard "dalat", both voices), lechem (Ari, heard as two words), peri (Ari, heard "bari"), dag (heard "dug"), yeled (Ari, heard "yaled").
+- Builder words: all 162 words, both voices (324 clips), were listened to. Vowels cannot be judged on these voices (see the correction above), so only consonants were compared. 308 clips matched. These did not, and are worth a listen: peri (Ari, heard "bari"), kir (Ari), neyar (Noa), dov (Noa, heard "tov"), esh (Noa), katan (Noa), me'ushar (Noa), perach (both voices, heard "brach"), ragu'a (Ari, heard said twice). From the vowel side, delet was heard as "dalat" in both voices. No builder word clip was changed.
 
 ## Not Checked
 
-- The other 115 builder words and the lesson vocabulary.
+- The lesson vocabulary outside the builder.
 - Sephardi and Ashkenazi syllable, vowel, word and prayer clips.
 - Cursive letter pictures (none are in the shown set).

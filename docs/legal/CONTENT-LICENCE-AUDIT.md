@@ -65,6 +65,8 @@ Read directly on 2026-11-04:
 | `practice-data-from-vocab` | `data/roots/*`, `data/gender/templates.json`, `data/nikkudfade/*`, `data/speak/minimal-pairs.json` | roots, gender, vowel-fade, record-and-compare pairs | derived from `data/vocab/words.json`, so CC BY-SA 4.0 | Yes-with-conditions | Yes, as the vocabulary data | Yes: as Wiktionary | partly-verified |
 | `reference-only-sites` | Pealim, Chabad.org, BJPA | cited by URL only | not open | n/a | n/a | n/a | not-present |
 | `hhd-handwriting` | HHD_v0 handwriting dataset (Rabaev, Kurar Barakat, Churkin, El-Sana), Zenodo 10.5281/zenodo.4287442 | part of the training data for the letter check model (`assets/vendor/_packs/handwriting`); no dataset image is in the app | CC BY 4.0 | Yes-with-conditions | No | Yes: one credit line | verified-primary |
+| `dicta-language-tools` | Dicta (the Israel Center for Text Analysis): NeoDictaBERT-bilingual-embed, DictaBERT-HeQ, DictaBERT-joint | build-time only, in the alef-tools repository: vectors and attached words of the Ask the Torah search index (`assets/vendor/_alef-tools/offline-llm@0.1.0/search/`); span finding and a grammar check whose results are not in the app yet | CC BY 4.0 (licence tag on each model's Hub page) | Yes-with-conditions | None | Yes: credit line on the credits page | partly-verified |
+| `opus-mt-tc-big-he-en` | Helsinki-NLP OPUS-MT tc-big-he-en | build-time only: Hebrew to English round-trip check on draft sentences; no output of it is in the app | CC BY 4.0 (licence tag on the model's Hub page) | Yes-with-conditions | None | Yes: credit line on the credits page | partly-verified |
 
 ## 3. Per-source notes
 
@@ -148,6 +150,12 @@ Linked, not copied (per the repo's own source notes). No attribution duty is cre
 
 ### hhd-handwriting
 Added 2026-11-12 with the letter check on the tracing screens (`assets/vendor/_packs/handwriting/`, built in the alef-tools repo, `packages/handwriting`). The model file was trained for this app from three sources: letters drawn from 21 font families under the SIL Open Font License 1.1 (pinned list with each copyright line in alef-tools `packages/handwriting/fonts/LICENSES.md`; no font file was added to the app), this app's own letter stroke models, and the HHD_v0 handwriting dataset (I. Rabaev, B. Kurar Barakat, A. Churkin and J. El-Sana, "The HHD Dataset", ICFHR 2020). The Zenodo record (https://doi.org/10.5281/zenodo.4287442) states Creative Commons Attribution 4.0 International; read 2026-11-12. No image from the dataset is in the app. The word list for the photo-text tidy-up (`assets/vendor/_packs/ocr-words/lexicon.json`) is built only from this app's own dictionary, sign list and phrasebook, so it adds no outside source.
+
+### dicta-language-tools
+Added 2026-11-12 with the pinned alef-tools build (`tools/alef-tools/pin.json`). What was read: the `license:cc-by-4.0` tag returned by the Hub for `dicta-il/neodictabert-bilingual-embed`, `dicta-il/dictabert-heq` and `dicta-il/dictabert-joint` on 2026-11-12, with the revision of each recorded in the alef-tools file `models.manifest.json`. The licence text inside each model repository was not read line by line, hence partly-verified. None of these runs in the app and no weights are in this repository. What reaches the app from NeoDictaBERT-bilingual-embed is derived data only: one 32-number vector per search entry and the choice of which Hebrew and English words are attached to an entry. Nothing made with DictaBERT-HeQ or DictaBERT-joint is in the app yet (no draft answer or sentence has passed the build's gate). The credit line is shown on the credits page.
+
+### opus-mt-tc-big-he-en
+Added 2026-11-12. `license:cc-by-4.0` tag read from the Hub for `Helsinki-NLP/opus-mt-tc-big-he-en` on 2026-11-12; the model card's licence section was not read line by line, hence partly-verified. Used only as a check while content is built; none of its output is in the app. Credited because the plan for these tools credits every CC BY tool that was used.
 
 ## 4. Share-alike: what it covers and what is open
 

@@ -80,7 +80,7 @@ export const ON_DEMAND_GROUPS = Object.freeze([
   { id: "od-images", label: "Picture approvals and word cues", test: /^data\/images\//, approxMB: 0.20 },
   { id: "od-letters", label: "Letter art concepts and keyboard layout", test: /^data\/letters\//, approxMB: 0.08 },
   { id: "od-home", label: "Home prayers and morning verses", test: /^(data\/homepage\/|data\/morning-verses\.json)/, approxMB: 0.09 },
-  { id: "od-ask", label: "Ask the Torah: the checked answers", test: /^(data\/ask\/|src\/ask\/)/, approxMB: 2.8 },
+  { id: "od-ask", label: "Ask the Torah: the checked answers", test: /^(data\/ask\/|src\/ask\/|src\/alef-tools\/)/, approxMB: 2.8 },
   { id: "od-firstday", label: "First-day minute-one data and the word builder", test: /^(data\/builder_symbols\.json$|data\/firstday\/|src\/firstday\/minuteone\.view\.js$|data\/builder_words\.json$)/, approxMB: 0.2 },
   { id: "od-fonts", label: "Cursive display font (used only with the cursive script setting)", test: /^assets\/fonts\//, approxMB: 0.03 },
   { id: "od-traditions-code", label: "Traditions pages (preview-route code)", test: /^src\/traditions\//, approxMB: 0.04 },

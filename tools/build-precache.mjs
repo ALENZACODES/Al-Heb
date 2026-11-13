@@ -58,6 +58,7 @@ const ON_DEMAND_PREFIXES = ['data/vocab/', 'data/roots/', 'data/knownwords/', 'd
   // Lazy preview-route code + book content + image indexes: fetched on first view, runtime-cached (fix #4; #8 groups).
   'src/games/', 'src/books/', 'data/books/', 'data/images/',
   'src/words/', // word notes (tap a Hebrew word): card, tap handling and the lesson section, fetched when a lesson first shows its Word Notes
+  'src/alef-tools/', // reader for the pinned alef-tools build in assets/vendor/_alef-tools/ (search index, checked extras): loaded when Ask the Torah or a unit page needs it
   'src/bridge/', // lane 6: Reading Without Vowels (#/bridge), view, model and loader, fetched on first open
   'src/handcheck/', // letter check for the tracing screens and the photo-text tidy-up: hooks, pack handling and vendored-tool paths, fetched on first use
   'src/readlab/', 'data/readlab/', // reading lane: Reading Tools (#/readlab), code and its two lookup files, fetched on first open

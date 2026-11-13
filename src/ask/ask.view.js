@@ -45,6 +45,7 @@ function passageBlock(p) {
   return h('div', { class: 'ask-passage' },
     h('p', {}, h('strong', {}, p.ref || '')),
     p.he ? h('p', { class: 'ask-he', lang: 'he', dir: 'rtl' }, noName(p.he)) : null,
+    p.quote ? h('p', { class: 'ask-quote' }, 'The words that answer: ', h('span', { class: 'ask-he', lang: 'he', dir: 'rtl' }, noName(p.quote))) : null,
     p.en ? h('p', {}, p.en) : null,
     href ? h('p', {}, h('a', { href, class: 'alef-link' }, p.link_label || (href.startsWith('#/') ? 'Read this passage in Aleph' : 'Read this passage on Sefaria'))) : null);
 }
@@ -55,6 +56,14 @@ function laterBlock(p) {
     p.text ? h('p', {}, noName(p.text)) : null,
     p.note ? h('p', { class: 'muted' }, noName(p.note)) : null,
     href ? h('p', {}, h('a', { href, class: 'alef-link', target: ext ? '_blank' : null, rel: ext ? 'noopener' : null }, 'Open the cited source')) : null);
+}
+export const CLOSEST = 'I don’t have a checked answer to that exact question. These are the closest:';
+const KIND = { lesson: 'Lesson', unit: 'Practical unit', word: 'Dictionary' };
+/** The closest checked entries: a checked question is asked on tap; a lesson, unit or word is a link. */
+export function closestView(list, ask) {
+  return h('div', {}, h('p', {}, CLOSEST), h('ul', { class: 'ask-starters' }, ...list.map((r) => h('li', {}, r.type === 'ask'
+    ? h('button', { type: 'button', class: 'ask-starter', onclick: () => ask(r.title) }, r.title)
+    : h('a', { class: 'alef-link', href: r.href }, `${KIND[r.type] || 'Page'}: `, /[\u05D0-\u05EA]/.test(r.title) ? heSpan(r.title) : r.title)))));
 }
 /** One answer from the bank, with the vetted question it came from when the learner's words were different. */
 export function answerView(ans, { from = null } = {}) {
@@ -107,6 +116,17 @@ export async function mount(root, ctx) {
     } catch { return null; }
   };
 
+  // Past the bank: a checked answer or a checked Hebrew wording from the pinned alef-tools build (src/alef-tools/offline-llm.js),
+  // else the closest checked entries for the learner to pick from. A verse is still never guessed: the learner chooses.
+  async function beyondBank(q) {
+    const tools = await (ctx?.askTools ? ctx.askTools() : import('../alef-tools/offline-llm.js'));
+    const x = await tools.askExtra(q, ctx?.fetchTools).catch(() => null);
+    if (x?.answer) return answerView(x.answer);
+    if (x?.answerId) { const ans = await answerById(x.answerId); if (ans) return answerView(ans); }
+    const near = await tools.closest(q, { limit: 3, fetchImpl: ctx?.fetchTools });
+    return near.length ? closestView(near, ask) : null;
+  }
+
   async function ask(q) {
     q = String(q || '').trim();
     if (!q || !ix) return;
@@ -119,6 +139,7 @@ export async function mount(root, ctx) {
       if (m?.verseId) node = await verseView(m.verseId);
       else if (m?.answerId) { const ans = await answerById(m.answerId); node = ans ? answerView(ans, { from: m.exact || m.topic || !m.question || m.question.toLowerCase() === q.toLowerCase() ? null : m.question }) : null; }
     } catch { node = null; }
+    if (!node) node = await beyondBank(q).catch(() => null);
     history.push(q); if (history.length > 4) history.shift();
     if (!alive) return;
     pending.replaceChildren(node || h('p', {}, NO_ANSWER));

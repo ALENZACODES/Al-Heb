@@ -214,9 +214,6 @@ export async function translateOnDevice(photo, { glossary, dictionaryLoader, tra
     }
     if (!r.en) r.partial = true;
   }
-  // Lines the word list does not hold are first tidied against the app's own dictionary words (look-alike letters put right),
-  // then offered to the word list once more. `fixer` comes from ../handcheck/ocr-fix.js; without it this step is skipped.
-  const tidied = fixer ? await fixRegions(regions, glossary, fixer) : 0;
   // Lines the word list does not hold go to the Hebrew to English language pack when it is on this device (the same pack the
   // Talk screen uses). Only a line that was read cleanly and with confidence is sent: a guess built on a misread line would look
   // just as fluent as a right one. A held line, a partly read line and a line behind a bar are never sent.
@@ -231,6 +228,10 @@ export async function translateOnDevice(photo, { glossary, dictionaryLoader, tra
     } catch { /* the pack could not answer: the dictionary below still may */ }
   }
   let dictionary = null;
+  // Lines still untranslated that the reader was unsure of are tidied against the app's own dictionary words (look-alike letters
+  // put right) and offered to the word list once more, before the word-for-word step. The language pack above only takes lines
+  // read with confidence, so the two rarely meet. `fixer` comes from ../handcheck/ocr-fix.js; without it this step is skipped.
+  const tidied = fixer ? await fixRegions(regions, glossary, fixer) : 0;
   if (dictionaryLoader && regions.some((r) => !r.held && !r.en)) {
     try { dictionary = await dictionaryLoader(); } catch { dictionary = null; }
     if (dictionary) for (const r of regions) {

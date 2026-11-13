@@ -161,7 +161,9 @@ export function uiEnglish(ctx, text) {
 
 /** True for a vocabulary item that would ask the learner to pronounce the four-letter name (exact or prefixed Hebrew). */
 export function isNameVocabItem(item) {
-  return !!item && typeof item.he === 'string' && findName(item.he).length > 0;
+  if (!item || typeof item.he !== 'string') return false;
+  if (item.he === NAME_ABBREV || item.he.includes(NAME_ABBREV)) return true;
+  return findName(item.he).length > 0;
 }
 
 /**

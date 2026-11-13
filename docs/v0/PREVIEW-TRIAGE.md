@@ -84,6 +84,7 @@ decision, so the More sheet stays short and the first session stays coherent (we
 | `daily` | keep | Daily goal and quests. |
 | `awards` | keep | Practice-game activity and a sample beginner certificate. Not a lesson score. |
 | `certificate` | keep | The learner's own record of lessons passed under the pass rule, with first-try scores and dates, and a link that recomputes it. Self-issued, not reviewed; says what it cannot prove. (lane 4, 12 Nov) |
+| `packs` | keep | Language Packs: every optional download in plain words, its size, whether it is on this device, download and delete, "Only download on Wi-Fi" and a storage limit. Nothing downloads by itself; on Shabbat and holidays only a download the learner starts goes ahead. Lists only packs that exist (today the two Talk translation packs). (alef-tools lane 7, 12 Nov) |
 | `move` | keep | Move progress to another of the learner's own devices by link, QR code or file; the import merges, never overwrites. No account, no server. (lane 4, 12 Nov) |
 | `phrases` | keep | Common phrases and sentences; supports the speaking goal. |
 | `books` | keep | The little-books shelf; listed in the Preview group so the books can be found. |

@@ -1,6 +1,6 @@
 // @ts-check
 // Talk translation pack: the page's side. One shared instance serves the Talk screen and the Camera Translator.
-import { loadManifest, packFiles, packState, downloadPack, removePacks, hasGraphics, PACK_CACHE, NMT_BASE, ORT_LOCAL } from './pack.js';
+import { loadManifest, packFiles, packState, downloadPack, removePacks, removePack, hasGraphics, PACK_CACHE, NMT_BASE, ORT_LOCAL } from './pack.js';
 
 /** Longest line handed to the pack; longer text is cut at a sentence end by the caller. */
 export const MAX_LINE = 400;
@@ -81,6 +81,8 @@ export function createPackClient(cfg = {}) {
       return m.text || '';
     },
     async remove() { this.dispose(); return removePacks(env); },
+    /** Removes one direction from the device (Language packs page). The other direction, if kept, loads again when it is next needed. */
+    async removeOne(direction) { const m = await manifest(); this.dispose(); return removePack(m, direction, env); },
     dispose() { try { worker?.terminate(); } catch { /* gone */ } worker = null; loaded.clear(); for (const k of Object.keys(loading)) delete loading[k]; for (const w of waiting.values()) w.reject(new Error('stopped')); waiting.clear(); },
   };
 }

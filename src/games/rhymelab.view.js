@@ -1,6 +1,7 @@
 // Game 21 — rhyme keys are computed from source transliteration, no fabricated phonology.
 import { h, heSpan } from '../shell/ui.js';
 import { createSession, shuffled, loadGameImages, envNode, GAME_ENV, imgOf, hasRecordedClip, playRecordedClip, resultsCard, roundStatus } from './engine.js';
+import { castEnvNode } from './cast-env.js';
 import { sfx } from '../audio/sfx.js';
 import { loadJson } from '../grammar/loader.js';
 export const STORE_KEY = 'games.rhymelab.v1';
@@ -33,7 +34,7 @@ export function mount(root,ctx) {
   // never a word cue). A missing picture leaves the page as it was.
   loadGameImages(ctx).then((R) => {
     if (!alive) return;
-    const env = envNode(h, R, GAME_ENV.rhymelab);
+    const env = castEnvNode(h, R, 'rhymelab', GAME_ENV.rhymelab);
     if (env) article.insertBefore(env, status);
   }).catch(() => {});
   function paint(feedback){

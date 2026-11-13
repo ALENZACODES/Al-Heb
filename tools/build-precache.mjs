@@ -76,6 +76,8 @@ const ON_DEMAND_PREFIXES = ['data/vocab/', 'data/roots/', 'data/knownwords/', 'd
   // lane 4 (12 Nov): Move to another device and the learner's certificate (route code, fetched on first open), and the
   // offline pack lists read by the Use Aleph offline page (data/offline/packs.json, built by tools/offline-packs.mjs).
   'src/sync/', 'data/offline/',
+  // Data health inventory (builder page #/about/data): fetched on first open, not in the first install.
+  'data/dev/',
   // audio lane (12 Nov): playback bar, play-all queues, listening drills, tradition compare, karaoke and audio packs: loaded after boot or on first open.
   'src/audiolab/',
   // siddur-speaking lane (12 Nov, CODER-100 G): Speaking Studio route code, fetched when #/speak-studio first opens.
@@ -183,6 +185,7 @@ const ON_DEMAND_FILES = new Set([
   'src/curriculum/calendar.view.js',
   // Privacy screen (26 KB): loaded on first open, runtime-cached; offline group od-preview-pages.
   'src/shell/privacy.view.js',
+  'src/shell/data-health.view.js',
   // English read-aloud helper (~4 KB): imported when "Hear ... in English" is first pressed, then runtime-cached.
   'src/shell/speak-english.js',
   // Preview-route view code only (their models and data stay as they were): the word builder (#/firstwin, its data was already on demand),

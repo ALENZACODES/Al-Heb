@@ -250,6 +250,8 @@ export const ROUTES = [
   { name: 'daily', pattern: '/daily', module: '../../preview/loops/daily.view.js', tier: 'preview', title: 'Daily goal and quests', owner: 'loops', group: 'progress', quick: 'nav.route.daily' },
   { name: 'search',   pattern: '/search',         module: './search.view.js', tier: 'v0',                    title: 'Search', owner: 'nav' },
   { name: 'about',    pattern: '/about',          module: './about.view.js', tier: 'v0',                     nav: 'nav.about',    title: 'About', owner: 'lane8' },
+  // Builder page, not on the learner's main path: every data file, its counts, and any 404.
+  { name: 'data-health', pattern: '/about/data', module: './data-health.view.js', title: 'Data health', owner: 'main', optional: true },
   // lane 6 (12 Nov round 2): unvocalized bridge (#16) and trope families / per-aliyah practice (#13); views load on first open
   { name: 'bridge', pattern: '/bridge', module: '../bridge/bridge.view.js', title: 'Reading Without Vowels', owner: 'lane6', group: 'learn', quick: 'nav.route.bridge' },
   { name: 'bridge-sec', pattern: '/bridge/:sec', module: '../bridge/bridge.view.js', title: 'Reading Without Vowels', owner: 'lane6', paramQuery: { sec: 'sec' } },

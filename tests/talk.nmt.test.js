@@ -140,10 +140,10 @@ test('download: part by part with rising progress, a wrong part is refused and n
   const fetch = async (url) => { fetched.push(url); const k = url.includes('a.bin') ? 'a' : url.includes('b.bin') ? 'b' : 'rt'; const text = k === 'b' && corrupt ? 'bbbbbbbbbbbX' : body[k]; return new Response(text); };
   assert.deepEqual(await packState(mini, 'he-en', { caches }), { ready: false, gpu: false, have: 0, total: 27, missing: 27 });
   const seen = [];
-  await assert.rejects(downloadPack(mini, 'he-en', { caches, fetch, subtle: globalThis.crypto.subtle, onProgress: (h) => seen.push(h) }), /hash-mismatch/);
+  await assert.rejects(downloadPack(mini, 'he-en', { userStarted: true, caches, fetch, subtle: globalThis.crypto.subtle, onProgress: (h) => seen.push(h) }), /hash-mismatch/);
   assert.deepEqual((await packState(mini, 'he-en', { caches })).have, 15, 'the two good files are kept, the bad part is not');
   corrupt = false; fetched.length = 0;
-  const done = await downloadPack(mini, 'he-en', { caches, fetch, subtle: globalThis.crypto.subtle, onProgress: (h) => seen.push(h) });
+  const done = await downloadPack(mini, 'he-en', { userStarted: true, caches, fetch, subtle: globalThis.crypto.subtle, onProgress: (h) => seen.push(h) });
   assert.equal(done.ready, true); assert.equal(fetched.length, 1, 'only the missing part is fetched again');
   assert.equal(seen[seen.length - 1], 27);
   assert.equal((await packState(mini, 'he-en', { caches })).ready, true);

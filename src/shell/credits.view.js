@@ -54,6 +54,9 @@ export async function mount(root, ctx) {
     return () => {};
   }
   const entries = data.entries || [];
+  // Language packs whose licence asks for a credit line (CC BY): read from the pack list, for the packs a learner can download.
+  let packCredits = [];
+  try { const r = await ((ctx && ctx.fetch) || globalThis.fetch)(new URL('../../data/packs/catalog.json', import.meta.url)); if (r.ok) packCredits = [...new Set(((await r.json()).packs || []).filter((p) => p.published).flatMap((p) => p.credits || []))]; } catch { /* no list on this device yet: nothing to add */ }
   const known = new Set(GROUPS.map((g) => g[0]));
   const groups = GROUPS.concat([...new Set(entries.map((e) => e.group))].filter((g) => !known.has(g)).map((g) => [g, g]));
   const counts = entries.reduce((a, e) => { a[e.status] = (a[e.status] || 0) + 1; return a; }, {});
@@ -77,6 +80,7 @@ export async function mount(root, ctx) {
         h('a', { href: 'https://www.wiktionary.org/', rel: 'noopener' }, 'Wiktionary'), ' · ',
         h('a', { href: 'https://kaikki.org/', rel: 'noopener' }, 'kaikki.org'))),
     ...sections,
+    packCredits.length ? h('section', { class: 'card', 'aria-labelledby': 'cg-packs' }, h('h2', { id: 'cg-packs' }, 'Language packs'), h('ul', { class: 'credits', 'aria-label': 'Language packs' }, ...packCredits.map((c) => h('li', {}, c)))) : null,
     h('p', {}, h('a', { class: 'btn secondary', href: '#/terms' }, 'Terms'), ' ', h('a', { class: 'btn secondary', href: '#/privacy' }, 'Privacy'), ' ', h('a', { class: 'btn secondary', href: '#/about' }, 'About'), ' ', h('a', { class: 'btn secondary', href: '#/how' }, 'How this works'))));
   return () => {};
 }

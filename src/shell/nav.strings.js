@@ -1,6 +1,7 @@
 // Navigation and search strings (English). Merged into the shared `en` table by nav-model consumers (nav.js, menu.js, search.view.js)
 // so the table in i18n.js stays untouched. Hebrew is NOT added here: no new Hebrew was written for this lane. The only Hebrew shown in
 // the menu is what already exists in i18n.js `he` (looked up with tHe); sections without an existing label show English only.
+import { COMMUNITY_LABELS } from './community-routes.js';
 import { en } from './i18n.js';
 import { ROUTES } from './router.js'; // lane g1 labels
 import { G4_ROUTES } from './g4-routes.js'; // lane 4 (g4)
@@ -24,6 +25,7 @@ export const NAV_EN = {
   'nav.route.awards': 'Awards and certificate',
   'nav.route.move': 'Move to another device', 'nav.route.certificate': 'Certificate of lessons completed', // lane 4 (12 Nov)
   'nav.route.whats-new': "What's New", 'nav.route.my-data': 'My Data', 'nav.route.cram': 'Cram', 'nav.route.mastery': 'Mastery Map', 'nav.route.my-week': 'My Week', 'nav.route.lesson-badges': 'Lesson Badges', 'nav.route.shortcuts': 'Keyboard Shortcuts', 'nav.route.worksheet': 'Printable Worksheet', 'nav.route.focus': 'Focus Mode', // lane platform (12 Nov)
+  ...COMMUNITY_LABELS, // prayer and community
   'nav.route.songs': 'Songs',
   'nav.route.camera': 'Camera Translator',
   // games hub and every game

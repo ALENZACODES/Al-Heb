@@ -1,0 +1,7 @@
+{
+ "schema": "alef-synagogue-sources/1",
+ "note": "One entry per country file of the synagogue directory. To add the United States: write data/synagogues/usa.json with tools/synagogues/import-directory.mjs, which also adds its entry here.",
+ "files": [
+  { "country": "CA", "file": "data/synagogues/canada.json" }
+ ]
+}

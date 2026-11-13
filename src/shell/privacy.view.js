@@ -289,6 +289,7 @@ export const STORE_KEYS = [
   ['recordcompare.v1', 'Record-and-compare: counts of your own answers (no recordings are stored)', 'src/recordcompare/model.js'],
   // siddur-speaking lane (12 Nov, CODER-100 F and G)
   ['recordcompare.blind.v1', 'Record-and-compare blind check: how many blind checks you did and how many times you named your own take (no recordings are stored)', 'src/recordcompare/model.js'],
+  ['service.mybook.v1', 'My Prayer Book: the prayers you picked, their order, the name on the cover and what to print', 'src/service/prayerbook.model.js'],
   ['service.practice', 'Prayer Practice: lines you marked as read, words you marked as known and the fluency-ladder steps you marked, per service', 'src/lib/counts.js'],
   ['service.shabbatMode', 'Shabbat Companion: whether Shabbat Mode (menu hidden on that page) is on', 'src/service/shabbat.view.js'],
   ['voice.v1', 'Speaking Studio: your own 1-3 ratings per line (vowels, stress, fluency), how many recordings you made each day, and your weekly speaking goal (no recordings are stored here)', 'src/voice/voice.model.js'],

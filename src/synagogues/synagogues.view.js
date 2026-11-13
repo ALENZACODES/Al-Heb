@@ -4,11 +4,13 @@
  *   (none)   the directory: every congregation grouped by province, west to east, with a picture where one is held
  *   <id>     one congregation: pictures, its history in a few paragraphs, visiting and contact details, and sources
  * mount(root, ctx) -> unmount. ctx: { query?, hasRoute?, route? } plus optional `synagoguesData` for tests.
- * Data: data/synagogues/canada.json; pictures: assets/synagogues/<id>/ (full) and assets/synagogues/<id>/thumb/.
+ * Data: the country files listed in data/synagogues/sources.json (today data/synagogues/canada.json only), merged into one
+ * searchable directory by ./directory.js; pictures: assets/synagogues/<id>/ (full) and assets/synagogues/<id>/thumb/.
  * Offline once visited: the data and pictures are runtime-cached, not installed up front (tools/build-precache.mjs).
  */
 import { h, heSpan } from "../shell/ui.js";
 import { loadJSON } from "../curriculum/data.js";
+import { SOURCES_FILE, normaliseSources, mergeDirectories, searchDirectory, directoryTitle, regionWords, countLine } from "./directory.js";
 
 const DATA = "data/synagogues/canada.json";
 const IMG = (id, file, thumb = false) => `assets/synagogues/${id}/${thumb ? "thumb/" : ""}${file}`;
@@ -83,8 +85,15 @@ function mapLinks(c, { both = false } = {}) {
 const sinceText = (c) => { if (!nz(c.founded)) return ""; const f = c.founded.replace(/\s*\(.*\)/, ""); return `since ${/^\d/.test(f) ? f : "the " + f}`; };
 const FORMER = "Former congregation";
 
+/** One merged directory. Tests pass one country file as ctx.synagoguesData, or a ready list as ctx.synagogueFiles. */
 async function loadData(ctx) {
-  return ctx?.synagoguesData || loadJSON(DATA);
+  if (ctx?.synagogueFiles) return mergeDirectories(ctx.synagogueFiles);
+  if (ctx?.synagoguesData) return mergeDirectories([{ country: "CA", data: ctx.synagoguesData }]);
+  const sources = normaliseSources(await loadJSON(SOURCES_FILE).catch(() => null));
+  // A country file that is listed but does not load is left out; the rest of the directory still opens.
+  const files = (await Promise.all(sources.files.map((f) => loadJSON(f.file).then((data) => ({ country: f.country, data })).catch(() => null)))).filter(Boolean);
+  if (!files.length) files.push({ country: "CA", data: await loadJSON(DATA) });
+  return mergeDirectories(files);
 }
 
 function tile(ctx, c) {
@@ -105,11 +114,36 @@ function listView(ctx, D) {
   const parts = [];
   parts.push(h("section", { class: "syn-card", "data-part": "intro" },
     h("p", { class: "syn-lead" }, heSpan("בֵּית כְּנֶסֶת"), " ", h("em", {}, "beit knesset"), " means a house of gathering. It is the Hebrew word for a synagogue."),
-    h("p", {}, "Find a Reform synagogue near you, from Vancouver to Montreal. Open any congregation to read its history, see its building and get directions.")));
-  const current = D.congregations.filter((c) => c.status !== "legacy");
-  const former = D.congregations.filter((c) => c.status === "legacy");
+    h("p", {}, D.countries.length > 1 ? "Find a Reform synagogue near you. Open any congregation to read about it and get directions." : "Find a Reform synagogue near you, from Vancouver to Montreal. Open any congregation to read its history, see its building and get directions.")));
+  // Search (idea N9): one box over every country file; a country picker appears once a second country is listed.
+  const many = D.countries.length > 1, words = regionWords(D);
+  const input = h("input", { type: "search", id: "syn-q", autocomplete: "off", enterkeyhint: "search", style: "min-block-size:48px;inline-size:100%;font:inherit" });
+  const pick = many ? h("select", { id: "syn-country", "aria-label": "Country", style: "min-block-size:48px;font:inherit" },
+    h("option", { value: "" }, "All Countries"), ...D.countries.map((c) => h("option", { value: c.code }, c.name.replace(/^the /, "")))) : null;
+  const count = h("p", { id: "syn-count", role: "status", "aria-live": "polite", class: "syn-muted" });
+  const results = h("div", { class: "syn", "data-part": "results" });
+  const draw = () => {
+    const q = String(input.value ?? ""), country = pick ? String(pick.value ?? "") : "";
+    const found = searchDirectory(D, { q, country });
+    count.textContent = countLine(found.length, D.congregations.length, !!(q.trim() || country), words.split(" or ")[0]);
+    results.replaceChildren(...groups(ctx, D, found));
+  };
+  input.addEventListener("input", draw);
+  if (pick) pick.addEventListener("change", draw);
+  parts.push(h("section", { class: "syn-card", "data-part": "search", role: "search", "aria-label": "Search the directory" },
+    h("label", { for: "syn-q", style: "display:block;font-weight:600;margin-block-end:.3rem" }, `Search by name, city or ${words}`), input, pick, count));
+  parts.push(results);
+  draw();
+  return parts;
+}
+
+/** The found congregations grouped by province or state in the files' order, then the former congregations. */
+function groups(ctx, D, found) {
+  const parts = [];
+  const current = found.filter((c) => c.status !== "legacy");
+  const former = found.filter((c) => c.status === "legacy");
   for (const prov of D.provinces) {
-    const items = current.filter((c) => c.province === prov.code);
+    const items = current.filter((c) => c.province === prov.code && c.country === prov.country);
     if (!items.length) continue;
     parts.push(h("section", { class: "syn-card", "data-part": "province", "data-province": prov.code, "aria-labelledby": `syn-h-${prov.code}` },
       h("h2", { id: `syn-h-${prov.code}` }, prov.name),
@@ -165,15 +199,16 @@ function detailView(ctx, D, c) {
   const i = D.congregations.indexOf(c);
   const prev = D.congregations[i - 1], next = D.congregations[i + 1];
   const parts = [];
-  const place = `${c.city}, ${(D.provinces.find((p) => p.code === c.province) || {}).name || c.province}`;
+  const place = `${c.city}, ${(D.provinces.find((p) => p.code === c.province && p.country === c.country) || {}).name || c.province}`;
   parts.push(h("p", { class: "syn-muted" }, [place, sinceText(c)].filter(Boolean).join(" · "), c.status === "legacy" ? h("span", { class: "syn-badge" }, FORMER) : null));
   if (c.summary) parts.push(h("p", { class: "syn-lead" }, c.summary));
   parts.push(mapLinks(c, { both: true }));
   const g = gallery(c);
   parts.push(g || h("div", { "data-part": "gallery" }, h("div", { class: "syn-photo-soon" }, h("p", {}, "Photo to come"))));
-  parts.push(h("section", { class: "syn-card syn-story", "data-part": "story", "aria-labelledby": "syn-h-story" },
+  // A congregation imported with contact details only has no history yet: the section is left out rather than shown empty.
+  if (c.story?.length) parts.push(h("section", { class: "syn-card syn-story", "data-part": "story", "aria-labelledby": "syn-h-story" },
     h("h2", { id: "syn-h-story" }, "History"),
-    ...(c.story || []).map((p) => h("p", {}, p))));
+    ...c.story.map((p) => h("p", {}, p))));
   parts.push(facts(c));
   if (c.sources?.length) parts.push(h("details", { class: "syn-src", "data-part": "sources" },
     h("summary", {}, "Sources"),
@@ -195,7 +230,7 @@ export async function mount(root, ctx) {
   try {
     const D = await loadData(ctx);
     if (!alive) return () => {};
-    if (!id) { body.replaceChildren(...listView(ctx, D)); return () => { alive = false; }; }
+    if (!id) { title.textContent = directoryTitle(D); body.replaceChildren(...listView(ctx, D)); return () => { alive = false; }; }
     const c = D.congregations.find((x) => x.id === id);
     if (!c) {
       body.replaceChildren(h("p", { role: "alert" }, "We could not find that congregation."), hasRoute(ctx)("synagogues") ? h("p", {}, h("a", { class: "btn", href: "#/synagogues" }, "All Synagogues")) : null);

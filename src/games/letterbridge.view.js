@@ -1,6 +1,7 @@
 // Game 17 — plural bridge: only the source-attested plural completes the span.
 import { h, heSpan } from '../shell/ui.js';
-import { createSession, shuffled, loadGameImages, envNode, GAME_ENV, imgOf, resultsCard, roundStatus } from './engine.js';
+import { createSession, shuffled, loadGameImages, GAME_ENV, imgOf, resultsCard, roundStatus } from './engine.js';
+import { castEnvNode } from './cast-env.js';
 import { sfx } from '../audio/sfx.js';
 import { loadJson } from '../grammar/loader.js';
 export const STORE_KEY = 'games.letterbridge.v1';
@@ -32,7 +33,7 @@ export function mount(root, ctx) {
   // never a word cue). A missing picture leaves the page as it was.
   loadGameImages(ctx).then((R) => {
     if (!alive) return;
-    const env = envNode(h, R, GAME_ENV.letterbridge);
+    const env = castEnvNode(h, R, 'letterbridge', GAME_ENV.letterbridge);
     if (env) article.insertBefore(env, status);
   }).catch(() => {});
   function paint(feedback) {

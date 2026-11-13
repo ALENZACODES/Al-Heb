@@ -1,6 +1,7 @@
 # Letter Check And Photo Text Tidy-Up
 
 Two additions, both built in the alef-tools repo and pulled in here at a fixed commit (`data/alef-tools.lock.json`).
+This branch is built on the shared language-pack work (the loader, the sync tool and the Language Packs page).
 Neither adds anything to the first install beyond two small hooks and one credit line (1,741 bytes in all; 512 bytes gzipped).
 
 ## Letter check (tracing screens)
@@ -69,11 +70,11 @@ To switch the step off: pass `photoFix: false` (photo reader) or `cameraFixer: n
 
 ## Updating the vendored packages
 
+The packages come in through the shared sync tool (`tools/alef-tools/sync.mjs`, see `docs/ALEF-TOOLS.md`), which also writes the
+lock and the generated list of package folders that `src/handcheck/tools.js` reads.
+
 ```sh
-node tools/alef-tools/sync.mjs --from ../alef-tools --only handwriting,ocr-fix    # copies dist/, checks SHA-256, rewrites the lock
-node tools/alef-tools/sync.mjs --check                                             # what the tests run
+node tools/alef-tools/sync.mjs --ref <alef-tools commit> --add handwriting --add ocr-fix
+node tools/alef-tools/sync.mjs --check
 node tools/build-precache.mjs
 ```
-
-`tools/alef-tools/sync.mjs` is a small stand-in for the shared sync tool in the alef-tools contract; it uses the same
-folders and lock file so the shared tool can replace it.

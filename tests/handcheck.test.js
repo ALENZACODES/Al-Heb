@@ -34,10 +34,10 @@ function fakeEnv({ serve = true } = {}) {
 }
 
 test('vendored alef-tools files match the lock, and the paths the app uses match the lock', () => {
-  assert.deepEqual(checkVendored(lock), []);
-  assert.match(lock.commit, /^[0-9a-f]{40}$/);
-  assert.ok(HANDWRITING.endsWith(lock.packages.handwriting.folder));
-  assert.ok(OCR_FIX.endsWith(lock.packages['ocr-fix'].folder));
+  assert.deepEqual(checkVendored(), []);
+  assert.match(lock.ref, /^[0-9a-f]{40}$/);
+  assert.ok(HANDWRITING.endsWith(lock.packages.handwriting.path + '/'));
+  assert.ok(OCR_FIX.endsWith(lock.packages['ocr-fix'].path + '/'));
   assert.ok(existsSync(new URL(OCR_WORDS)));
 });
 

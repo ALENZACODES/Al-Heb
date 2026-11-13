@@ -1,11 +1,13 @@
 {
- "schema": "alef.tools-lock.v1",
- "repo": "https://github.com/ALENZACODES/alef-tools",
- "commit": "242870d8228ea6824d7a8417f7fb14cb32e4ab1a",
+ "schema": "alef.tools.lock.v1",
+ "note": "The alef-tools version this app is built with. Written by tools/alef-tools/sync.mjs; do not edit by hand.",
+ "repo": "ALENZACODES/alef-tools",
+ "ref": "ae00c49f466b83af7dfb64790da2d70a20558648",
+ "contract": 1,
  "packages": {
   "handwriting": {
    "version": "0.1.0",
-   "folder": "assets/vendor/_alef-tools/handwriting@0.1.0/",
+   "path": "assets/vendor/_alef-tools/handwriting@0.1.0",
    "files": [
     {
      "path": "classify.js",
@@ -29,9 +31,55 @@
     }
    ]
   },
+  "loader": {
+   "version": "0.1.0",
+   "path": "assets/vendor/_alef-tools/loader@0.1.0",
+   "files": [
+    {
+     "path": "budget.js",
+     "bytes": 1956,
+     "sha256": "234529264502855a6f4a96b423f21759cef79bcc487034a175e79016fcd119e2"
+    },
+    {
+     "path": "cache.js",
+     "bytes": 3617,
+     "sha256": "e966a26f184725d83b68ddab27776ff1d716f7e7e366fe2de777fd062e63a66a"
+    },
+    {
+     "path": "device.js",
+     "bytes": 2029,
+     "sha256": "0a07081ca60c5b8af63761fb6fdd75f7ec05346a2aaf8a8adbe597cd1ffd84c8"
+    },
+    {
+     "path": "errors.js",
+     "bytes": 492,
+     "sha256": "d29ce80a220e93de0331ea299fd8d6cd382d120d43d35718de5a5bcf94d2634f"
+    },
+    {
+     "path": "index.js",
+     "bytes": 1694,
+     "sha256": "abb734b84c4e99aa2b3676bd545486bb9c5e2e00d2dafa550333a134f45ecbeb"
+    },
+    {
+     "path": "loader.js",
+     "bytes": 6646,
+     "sha256": "4af61cdfed3814020d2ed65d53e8538ba4c3fa527782cde03f9139887aee1725"
+    },
+    {
+     "path": "shabbat.js",
+     "bytes": 829,
+     "sha256": "8bb532eaa91d0f68ce44edd48e9918292200e7abcd37e1ffdc7730ba3373d37a"
+    },
+    {
+     "path": "worker-host.js",
+     "bytes": 2072,
+     "sha256": "f619e2d13306f1e51e23e729c32f6ed941915bdf5b735572371a24969d798e16"
+    }
+   ]
+  },
   "ocr-fix": {
    "version": "0.1.0",
-   "folder": "assets/vendor/_alef-tools/ocr-fix@0.1.0/",
+   "path": "assets/vendor/_alef-tools/ocr-fix@0.1.0",
    "files": [
     {
      "path": "correct.js",
@@ -45,5 +93,13 @@
     }
    ]
   }
+ },
+ "manifest": {
+  "sha256": "f5f6d597729ebe1f8f0aa5c78f7058419aad158d11971da124fe6a3cdbe7893b",
+  "checked": "2026-11-12"
+ },
+ "generated": {
+  "src/settings/alef-tools.generated.js": "6669aff3426895736a9423faeb4098ae2af0d082e40d3d1f8ae2e8da0ed70f37",
+  "data/packs/catalog.json": "727854b57d84e4720572ad4599aa0e68d61fc27b8a68c19a3a578f9ac343f68a"
  }
 }

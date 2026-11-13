@@ -156,6 +156,13 @@ export function castLine(text, pics = ['rimon-face', 'ari-side', 'noa-side']) {
  * The page for a turn-based or party game (the arcade games use createArcade instead).
  * Returns the parts a game fills: { article, status, board, controls, results, destroy }.
  */
+/** The game's own cast picture (assets/games/arcade/<id>/env.webp), a plain block above the status line, never behind a control.
+ * The page had no backdrop before, so if the file cannot load the picture simply goes away. */
+function envPicture(id) {
+  const img = h('img', { class: 'game-env arc-env', alt: '', src: `assets/games/arcade/${id}/env.webp`, width: 1600, height: 600, loading: 'lazy', decoding: 'async', 'data-cast-env': id });
+  img.addEventListener('error', () => img.remove());
+  return img;
+}
 export function createPage(root, ctx, { id, title, titleHe, blurb, howTo = [], cast = '' }) {
   injectStyles();
   const leaveSfx = sfx.enter(ctx);
@@ -170,7 +177,7 @@ export function createPage(root, ctx, { id, title, titleHe, blurb, howTo = [], c
     cast ? castLine(cast) : null,
     h('p', { class: 'arc-blurb' }, blurb),
     howTo.length ? h('details', { class: 'arc-howto', open: best?.plays ? undefined : true }, h('summary', {}, 'How to Play'), h('ol', {}, ...howTo.map((s) => h('li', {}, s)))) : null,
-    status, board, controls, results,
+    envPicture(id), status, board, controls, results,
     h('p', { class: 'muted arc-foot' }, best?.plays ? `Your best on this device: ${best.best} (played ${best.plays} time${best.plays === 1 ? '' : 's'}).` : 'Scores are saved on this device.'));
   root.replaceChildren(article);
   return {

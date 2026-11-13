@@ -336,6 +336,7 @@ Home shows a backup reminder after three finished lessons (`docs/progress/BACKUP
 | `cram` | keep | Cram (lane platform, 12 Nov): a lesson review sized to the minutes available. |
 | `mastery` | keep | Mastery Map (lane platform, 12 Nov): every review card as new, learning, known or mastered by stated thresholds. |
 | `my-week` | keep | My Week (lane platform, 12 Nov): weekly report, the learner's own weekly goals and a shareable picture card. |
+| `my-year` | keep | My Year (lane platform, 13 Nov): year in review beside the weekly report; lessons, XP, little books and new words in the civil year through today, plus firsts; a shareable picture card. |
 | `lesson-badges` | keep | Lesson Badges (lane platform, 12 Nov): badges from verified lessons only; the unverified era listed. |
 | `shortcuts` | keep | Keyboard Shortcuts (lane platform, 12 Nov): the shortcuts that exist, each checked against its code. |
 | `worksheet` | keep | Printable Worksheet (lane platform, 12 Nov): a practice sheet from a lesson's own letters and words. |

@@ -4,6 +4,16 @@
  "entries": [
   {
    "date": "2026-11-12",
+   "hash": "a3ebfdbce",
+   "text": "The 64 newer and leftover games (Hanukkah, Torah, g1–g5 lanes and 17 older games) each get their own picture of Ari, Noa and/or Rimon, on the card and inside the game, above the…"
+  },
+  {
+   "date": "2026-11-12",
+   "hash": "e03002514",
+   "text": "Release build: precache list and change list rebuilt"
+  },
+  {
+   "date": "2026-11-12",
    "hash": "d16c812c1",
    "text": "Cast backdrop helper moves to its own file (src/games/cast-env.js) so Brain Lab's download stays under its budget."
   },
@@ -191,16 +201,6 @@
    "date": "2026-11-12",
    "hash": "0fc1ea87a",
    "text": "My Week (H6, H7, J3): #/my-week reports the last 7 days from the existing weekly summary plus XP and books finished, lets the learner set their own weekly XP, minutes and lesson…"
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "0e13d99c7",
-   "text": "Course map (#/course-map): every lesson of both paths drawn from its prerequisites, with done, open and locked states, where the learner is, and the same graph as a list."
-  },
-  {
-   "date": "2026-11-12",
-   "hash": "f574bb40d",
-   "text": "Cram, leeches and Mastery Map (H3, H4, H5): #/cram sizes a lesson review to 5 to 30 minutes from the learner's own measured pace (an estimate of 12 seconds a card until 20 cards…"
   }
  ]
 }

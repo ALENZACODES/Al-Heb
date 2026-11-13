@@ -24,7 +24,7 @@ export function mount(root, ctx) {
   const status = h('p', { role: 'status', 'aria-live': 'polite', class: 'muted' }, 'Loading the Torah index…');
   const body = h('div', {});
   root.replaceChildren(h('article', { class: 'card parashah' }, h('h1', { id: 'view-title', tabindex: '-1' }, 'This Week\'s Parashah'), status, body,
-    h('p', { class: 'muted' }, CALENDAR_NOTE), h('p', {}, h('a', { href: '#/torahreader' }, 'Torah reader'), ' · ', h('a', { href: '#/torah-search' }, 'Torah Search'), ' · ', h('a', { href: '#/verse-notebook' }, 'Verse notebook'))));
+    h('p', { class: 'muted' }, CALENDAR_NOTE), h('p', {}, h('a', { href: '#/torahreader' }, 'Torah reader'), ' · ', h('a', { href: '#/torah-search' }, 'Torah Search'), ' · ', h('a', { href: '#/verse-notebook' }, 'Verse notebook'), ' · ', h('a', { href: '#/word-study' }, 'Word by Word'))));
   (async () => {
     let index;
     try { index = await load(ctx, 'data/corpus/torah/index.json'); } catch { if (alive) status.textContent = 'The Torah index did not load. Check the connection and open this page again.'; return; }

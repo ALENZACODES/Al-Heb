@@ -1,0 +1,830 @@
+{
+ "schema": "alef-trope-melody/1",
+ "tradition": "ashkenazi",
+ "reading": "Torah, ordinary Shabbat and weekday reading",
+ "label": "Draft melody, waiting for a cantor’s check",
+ "checked": false,
+ "checkedBy": null,
+ "provenance": "Every pattern below is a draft. Each one records where it came from in its own \"source\" field. None was transcribed from a recording or a printed score, and no cantor has checked any of them. To correct a pattern, edit its notes here; when a cantor has approved one, set its \"checked\" to true and name the cantor in \"checkedBy\". The app keeps showing the draft label until every pattern is checked.",
+ "scale": "notes are [semitones above the home note, length in beats]. 0 is the home note (do of a major scale), 2 re, 4 mi, 5 fa, 7 sol, 9 la, 12 the octave; negative numbers lie below the home note.",
+ "homeHz": 220,
+ "beatSec": 0.34,
+ "unmarked": {
+  "notes": [
+   [
+    4,
+    1
+   ]
+  ],
+  "note": "A word with no mark of its own (it leans on the next word) is held on one note.",
+  "source": "Convention of this file, not a traditional motif.",
+  "checked": false
+ },
+ "patterns": {
+  "mercha": {
+   "notes": [
+    [
+     -5,
+     0.5
+    ],
+    [
+     0,
+     0.5
+    ],
+    [
+     2,
+     1
+    ]
+   ],
+   "note": "Short rise from below into the next stop.",
+   "source": "Common North American Ashkenazi Torah tune (the tradition printed in A. W. Binder, Biblical Chant, 1959, and Portnoy and Wolff, The Art of Torah Cantillation, 2000), written out as remembered. Not copied from or compared with a printed source.",
+   "checked": false,
+   "before": {
+    "siluk": [
+     [
+      0,
+      0.5
+     ],
+     [
+      2,
+      1
+     ]
+    ],
+    "tevir": [
+     [
+      4,
+      0.5
+     ],
+     [
+      2,
+      1
+     ]
+    ]
+   }
+  },
+  "tipcha": {
+   "notes": [
+    [
+     4,
+     0.5
+    ],
+    [
+     2,
+     0.5
+    ],
+    [
+     0,
+     1
+    ]
+   ],
+   "note": "Falls by step to the home note.",
+   "source": "Common North American Ashkenazi Torah tune (the tradition printed in A. W. Binder, Biblical Chant, 1959, and Portnoy and Wolff, The Art of Torah Cantillation, 2000), written out as remembered. Not copied from or compared with a printed source.",
+   "checked": false
+  },
+  "munach": {
+   "notes": [
+    [
+     0,
+     0.5
+    ],
+    [
+     5,
+     1
+    ]
+   ],
+   "note": "Leans upward into the stop that follows.",
+   "source": "Common North American Ashkenazi Torah tune (the tradition printed in A. W. Binder, Biblical Chant, 1959, and Portnoy and Wolff, The Art of Torah Cantillation, 2000), written out as remembered. Not copied from or compared with a printed source.",
+   "checked": false,
+   "before": {
+    "zakef-katan": [
+     [
+      7,
+      1
+     ]
+    ],
+    "zakef-gadol": [
+     [
+      7,
+      1
+     ]
+    ],
+    "revia": [
+     [
+      4,
+      0.5
+     ],
+     [
+      2,
+      1
+     ]
+    ],
+    "zarka": [
+     [
+      4,
+      1
+     ]
+    ],
+    "segol": [
+     [
+      4,
+      1
+     ]
+    ],
+    "legarmeh": [
+     [
+      4,
+      1
+     ]
+    ],
+    "pazer": [
+     [
+      4,
+      0.5
+     ],
+     [
+      7,
+      1
+     ]
+    ],
+    "telisha-gedolah": [
+     [
+      7,
+      1
+     ]
+    ]
+   }
+  },
+  "etnachta": {
+   "notes": [
+    [
+     4,
+     0.5
+    ],
+    [
+     2,
+     0.5
+    ],
+    [
+     0,
+     1.5
+    ]
+   ],
+   "note": "The half-verse rest: falls to the home note and holds.",
+   "source": "Common North American Ashkenazi Torah tune (the tradition printed in A. W. Binder, Biblical Chant, 1959, and Portnoy and Wolff, The Art of Torah Cantillation, 2000), written out as remembered. Not copied from or compared with a printed source.",
+   "checked": false
+  },
+  "siluk": {
+   "notes": [
+    [
+     2,
+     0.5
+    ],
+    [
+     4,
+     0.5
+    ],
+    [
+     2,
+     0.5
+    ],
+    [
+     0,
+     2
+    ]
+   ],
+   "note": "The verse ending: a small turn, then a long home note.",
+   "source": "Common North American Ashkenazi Torah tune (the tradition printed in A. W. Binder, Biblical Chant, 1959, and Portnoy and Wolff, The Art of Torah Cantillation, 2000), written out as remembered. Not copied from or compared with a printed source.",
+   "checked": false
+  },
+  "kadma": {
+   "notes": [
+    [
+     0,
+     0.5
+    ],
+    [
+     4,
+     0.5
+    ],
+    [
+     7,
+     1
+    ]
+   ],
+   "note": "Rises.",
+   "source": "Common North American Ashkenazi Torah tune (the tradition printed in A. W. Binder, Biblical Chant, 1959, and Portnoy and Wolff, The Art of Torah Cantillation, 2000), written out as remembered. Not copied from or compared with a printed source.",
+   "checked": false
+  },
+  "mahpach": {
+   "notes": [
+    [
+     7,
+     0.5
+    ],
+    [
+     4,
+     0.5
+    ],
+    [
+     5,
+     1
+    ]
+   ],
+   "note": "Dips and turns back up toward pashta.",
+   "source": "Common North American Ashkenazi Torah tune (the tradition printed in A. W. Binder, Biblical Chant, 1959, and Portnoy and Wolff, The Art of Torah Cantillation, 2000), written out as remembered. Not copied from or compared with a printed source.",
+   "checked": false
+  },
+  "pashta": {
+   "notes": [
+    [
+     5,
+     0.5
+    ],
+    [
+     7,
+     0.5
+    ],
+    [
+     9,
+     1
+    ]
+   ],
+   "note": "Rises to the upper note.",
+   "source": "Common North American Ashkenazi Torah tune (the tradition printed in A. W. Binder, Biblical Chant, 1959, and Portnoy and Wolff, The Art of Torah Cantillation, 2000), written out as remembered. Not copied from or compared with a printed source.",
+   "checked": false
+  },
+  "yetiv": {
+   "notes": [
+    [
+     7,
+     0.5
+    ],
+    [
+     4,
+     1
+    ]
+   ],
+   "note": "A short fall; stands where pashta would on a word stressed at its start.",
+   "source": "Common North American Ashkenazi Torah tune (the tradition printed in A. W. Binder, Biblical Chant, 1959, and Portnoy and Wolff, The Art of Torah Cantillation, 2000), written out as remembered. Not copied from or compared with a printed source.",
+   "checked": false
+  },
+  "zakef-katan": {
+   "notes": [
+    [
+     9,
+     0.5
+    ],
+    [
+     7,
+     0.5
+    ],
+    [
+     4,
+     0.5
+    ],
+    [
+     7,
+     1.5
+    ]
+   ],
+   "note": "Falls and lifts again to rest on the fifth.",
+   "source": "Common North American Ashkenazi Torah tune (the tradition printed in A. W. Binder, Biblical Chant, 1959, and Portnoy and Wolff, The Art of Torah Cantillation, 2000), written out as remembered. Not copied from or compared with a printed source.",
+   "checked": false
+  },
+  "zakef-gadol": {
+   "notes": [
+    [
+     4,
+     0.5
+    ],
+    [
+     7,
+     0.5
+    ],
+    [
+     9,
+     0.5
+    ],
+    [
+     7,
+     0.5
+    ],
+    [
+     4,
+     1.5
+    ]
+   ],
+   "note": "A whole zakef phrase on one word.",
+   "source": "Common North American Ashkenazi Torah tune (the tradition printed in A. W. Binder, Biblical Chant, 1959, and Portnoy and Wolff, The Art of Torah Cantillation, 2000), written out as remembered. Not copied from or compared with a printed source.",
+   "checked": false
+  },
+  "revia": {
+   "notes": [
+    [
+     7,
+     0.5
+    ],
+    [
+     5,
+     0.5
+    ],
+    [
+     4,
+     0.5
+    ],
+    [
+     2,
+     0.5
+    ],
+    [
+     4,
+     1.5
+    ]
+   ],
+   "note": "A wavering fall that settles on the third.",
+   "source": "Common North American Ashkenazi Torah tune (the tradition printed in A. W. Binder, Biblical Chant, 1959, and Portnoy and Wolff, The Art of Torah Cantillation, 2000), written out as remembered. Not copied from or compared with a printed source.",
+   "checked": false
+  },
+  "legarmeh": {
+   "notes": [
+    [
+     4,
+     0.5
+    ],
+    [
+     7,
+     0.5
+    ],
+    [
+     4,
+     1.5
+    ]
+   ],
+   "note": "Munach with the upright bar: a short stop of its own before revia.",
+   "source": "Common North American Ashkenazi Torah tune (the tradition printed in A. W. Binder, Biblical Chant, 1959, and Portnoy and Wolff, The Art of Torah Cantillation, 2000), written out as remembered. Not copied from or compared with a printed source.",
+   "checked": false
+  },
+  "darga": {
+   "notes": [
+    [
+     7,
+     0.25
+    ],
+    [
+     5,
+     0.25
+    ],
+    [
+     4,
+     0.25
+    ],
+    [
+     2,
+     0.25
+    ],
+    [
+     0,
+     0.5
+    ]
+   ],
+   "note": "A quick stepwise run downward, like its staircase shape.",
+   "source": "Common North American Ashkenazi Torah tune (the tradition printed in A. W. Binder, Biblical Chant, 1959, and Portnoy and Wolff, The Art of Torah Cantillation, 2000), written out as remembered. Not copied from or compared with a printed source.",
+   "checked": false
+  },
+  "tevir": {
+   "notes": [
+    [
+     4,
+     0.5
+    ],
+    [
+     2,
+     0.5
+    ],
+    [
+     0,
+     0.5
+    ],
+    [
+     -1,
+     0.5
+    ],
+    [
+     0,
+     1
+    ]
+   ],
+   "note": "Falls just under the home note and returns.",
+   "source": "Common North American Ashkenazi Torah tune (the tradition printed in A. W. Binder, Biblical Chant, 1959, and Portnoy and Wolff, The Art of Torah Cantillation, 2000), written out as remembered. Not copied from or compared with a printed source.",
+   "checked": false
+  },
+  "mercha-kefulah": {
+   "notes": [
+    [
+     2,
+     0.5
+    ],
+    [
+     0,
+     0.5
+    ],
+    [
+     2,
+     0.5
+    ],
+    [
+     0,
+     1
+    ]
+   ],
+   "note": "Double mercha: written here as mercha’s step taken twice.",
+   "source": "Placeholder contour. This mark is rare in the Torah and the shape here only follows the usual description of it (see the pattern note). Among the least certain patterns in this file.",
+   "checked": false
+  },
+  "geresh": {
+   "notes": [
+    [
+     7,
+     0.5
+    ],
+    [
+     9,
+     0.5
+    ],
+    [
+     7,
+     0.5
+    ],
+    [
+     4,
+     1
+    ]
+   ],
+   "note": "Up and over, then down (called azla after kadma).",
+   "source": "Common North American Ashkenazi Torah tune (the tradition printed in A. W. Binder, Biblical Chant, 1959, and Portnoy and Wolff, The Art of Torah Cantillation, 2000), written out as remembered. Not copied from or compared with a printed source.",
+   "checked": false
+  },
+  "geresh-mukdam": {
+   "notes": [
+    [
+     7,
+     0.5
+    ],
+    [
+     9,
+     0.5
+    ],
+    [
+     7,
+     0.5
+    ],
+    [
+     4,
+     1
+    ]
+   ],
+   "note": "The same motif as geresh; only the place of the sign differs.",
+   "source": "Common North American Ashkenazi Torah tune (the tradition printed in A. W. Binder, Biblical Chant, 1959, and Portnoy and Wolff, The Art of Torah Cantillation, 2000), written out as remembered. Not copied from or compared with a printed source.",
+   "checked": false
+  },
+  "gershayim": {
+   "notes": [
+    [
+     9,
+     0.5
+    ],
+    [
+     7,
+     0.5
+    ],
+    [
+     9,
+     0.5
+    ],
+    [
+     7,
+     0.5
+    ],
+    [
+     4,
+     1
+    ]
+   ],
+   "note": "Geresh with its turn taken twice.",
+   "source": "Common North American Ashkenazi Torah tune (the tradition printed in A. W. Binder, Biblical Chant, 1959, and Portnoy and Wolff, The Art of Torah Cantillation, 2000), written out as remembered. Not copied from or compared with a printed source.",
+   "checked": false
+  },
+  "zarka": {
+   "notes": [
+    [
+     4,
+     0.5
+    ],
+    [
+     5,
+     0.5
+    ],
+    [
+     7,
+     0.5
+    ],
+    [
+     9,
+     0.5
+    ],
+    [
+     7,
+     0.5
+    ],
+    [
+     5,
+     1
+    ]
+   ],
+   "note": "A curling rise and fall, like the sign.",
+   "source": "Common North American Ashkenazi Torah tune (the tradition printed in A. W. Binder, Biblical Chant, 1959, and Portnoy and Wolff, The Art of Torah Cantillation, 2000), written out as remembered. Not copied from or compared with a printed source.",
+   "checked": false
+  },
+  "segol": {
+   "notes": [
+    [
+     7,
+     0.5
+    ],
+    [
+     4,
+     0.5
+    ],
+    [
+     5,
+     0.5
+    ],
+    [
+     4,
+     1.5
+    ]
+   ],
+   "note": "Closes the zarka phrase on the third.",
+   "source": "Common North American Ashkenazi Torah tune (the tradition printed in A. W. Binder, Biblical Chant, 1959, and Portnoy and Wolff, The Art of Torah Cantillation, 2000), written out as remembered. Not copied from or compared with a printed source.",
+   "checked": false
+  },
+  "telisha-ketanah": {
+   "notes": [
+    [
+     4,
+     0.5
+    ],
+    [
+     7,
+     0.5
+    ],
+    [
+     5,
+     0.5
+    ],
+    [
+     4,
+     0.5
+    ],
+    [
+     2,
+     1
+    ]
+   ],
+   "note": "A small loop that leads on.",
+   "source": "Common North American Ashkenazi Torah tune (the tradition printed in A. W. Binder, Biblical Chant, 1959, and Portnoy and Wolff, The Art of Torah Cantillation, 2000), written out as remembered. Not copied from or compared with a printed source.",
+   "checked": false
+  },
+  "telisha-gedolah": {
+   "notes": [
+    [
+     7,
+     0.5
+    ],
+    [
+     9,
+     0.5
+    ],
+    [
+     12,
+     0.5
+    ],
+    [
+     9,
+     0.5
+    ],
+    [
+     7,
+     1
+    ]
+   ],
+   "note": "A larger loop up to the octave and back.",
+   "source": "Common North American Ashkenazi Torah tune (the tradition printed in A. W. Binder, Biblical Chant, 1959, and Portnoy and Wolff, The Art of Torah Cantillation, 2000), written out as remembered. Not copied from or compared with a printed source.",
+   "checked": false
+  },
+  "pazer": {
+   "notes": [
+    [
+     4,
+     0.5
+    ],
+    [
+     7,
+     0.5
+    ],
+    [
+     9,
+     0.5
+    ],
+    [
+     12,
+     0.5
+    ],
+    [
+     11,
+     0.5
+    ],
+    [
+     12,
+     1.5
+    ]
+   ],
+   "note": "A climbing run that ends high.",
+   "source": "Common North American Ashkenazi Torah tune (the tradition printed in A. W. Binder, Biblical Chant, 1959, and Portnoy and Wolff, The Art of Torah Cantillation, 2000), written out as remembered. Not copied from or compared with a printed source.",
+   "checked": false
+  },
+  "shalshelet": {
+   "notes": [
+    [
+     0,
+     0.25
+    ],
+    [
+     2,
+     0.25
+    ],
+    [
+     4,
+     0.25
+    ],
+    [
+     5,
+     0.25
+    ],
+    [
+     7,
+     0.5
+    ],
+    [
+     5,
+     0.25
+    ],
+    [
+     4,
+     0.25
+    ],
+    [
+     2,
+     0.25
+    ],
+    [
+     4,
+     0.25
+    ],
+    [
+     5,
+     0.25
+    ],
+    [
+     7,
+     0.25
+    ],
+    [
+     9,
+     0.5
+    ],
+    [
+     7,
+     0.25
+    ],
+    [
+     5,
+     0.25
+    ],
+    [
+     4,
+     0.25
+    ],
+    [
+     5,
+     0.25
+    ],
+    [
+     7,
+     0.25
+    ],
+    [
+     9,
+     0.25
+    ],
+    [
+     12,
+     0.5
+    ],
+    [
+     9,
+     0.25
+    ],
+    [
+     7,
+     0.25
+    ],
+    [
+     4,
+     0.25
+    ],
+    [
+     2,
+     0.25
+    ],
+    [
+     0,
+     1.5
+    ]
+   ],
+   "note": "Four times in the Torah. Usually described as a long wave taken three times; that description is all this follows.",
+   "source": "Placeholder contour. This mark is rare in the Torah and the shape here only follows the usual description of it (see the pattern note). Among the least certain patterns in this file.",
+   "checked": false
+  },
+  "karnei-parah": {
+   "notes": [
+    [
+     4,
+     0.5
+    ],
+    [
+     7,
+     0.5
+    ],
+    [
+     9,
+     0.5
+    ],
+    [
+     12,
+     0.5
+    ],
+    [
+     9,
+     0.5
+    ],
+    [
+     7,
+     0.5
+    ],
+    [
+     9,
+     0.5
+    ],
+    [
+     12,
+     0.5
+    ],
+    [
+     9,
+     0.5
+    ],
+    [
+     7,
+     1
+    ]
+   ],
+   "note": "Once in the Torah (Numbers 35:5). Written here as the two telisha loops joined.",
+   "source": "Placeholder contour. This mark is rare in the Torah and the shape here only follows the usual description of it (see the pattern note). Among the least certain patterns in this file.",
+   "checked": false
+  },
+  "yerach-ben-yomo": {
+   "notes": [
+    [
+     4,
+     0.5
+    ],
+    [
+     7,
+     0.5
+    ],
+    [
+     5,
+     0.5
+    ],
+    [
+     7,
+     1
+    ]
+   ],
+   "note": "Once in the Torah (Numbers 35:5), before karnei parah.",
+   "source": "Placeholder contour. This mark is rare in the Torah and the shape here only follows the usual description of it (see the pattern note). Among the least certain patterns in this file.",
+   "checked": false
+  }
+ }
+}

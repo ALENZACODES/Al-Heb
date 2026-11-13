@@ -87,7 +87,10 @@ const ON_DEMAND_PREFIXES = ['data/vocab/', 'data/roots/', 'data/knownwords/', 'd
   // src/speak/dss.model.js; only its tests do): 44 KB moved out of the first install by lane platform (12 Nov) to pay for its route entries.
   'src/grammar/', 'src/speak/dss.model.js',
   // lane games-books (12 Nov): This Week's Parashah, Torah Search (its 0.7 MB letters-only index) and the Verse Notebook, fetched on first open.
-  'src/torahstudy/', 'data/torahstudy/'];
+  'src/torahstudy/', 'data/torahstudy/',
+  // Torah and text study: the Trope Melody page, its note patterns and tone player, fetched when #/trope/melody first opens.
+  // (Word by Word and Cross-References live in src/torahstudy/ above.)
+  'src/chant/'];
 const ON_DEMAND_FILES = new Set([
   // lane games-books (12 Nov): Word Sprint's model and loader and the known-word validator are imported only by lazy views (Word Sprint,
   // Known-word checker, the little books' word marks), so they are fetched on first use, runtime-cached (frees about 16 KB of first install).

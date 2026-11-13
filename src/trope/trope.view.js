@@ -2,7 +2,7 @@
  * Trope trainer (#/trope): a word from the Numbers 6:22-27 or Deuteronomy 6:4-9 corpus passages is shown with its cantillation mark
  * and the learner picks the mark's name from four choices. Levels are by how often the mark occurs in those passages. Names follow
  * data/corpus/trope/table.json (Ashkenazi or Sephardi/Mizrahi, from the congregation setting). Progress: store key "trope.v1".
- * DRAFT: machine parse, not reviewed by a cantor. No audio exists yet. ctx extras for tests: ctx.tropeData {table,passages,levels}, ctx.rng.
+ * DRAFT: machine parse, not reviewed by a cantor. No recorded audio; the draft tone melody lives at #/trope/melody (src/chant/). ctx extras for tests: ctx.tropeData {table,passages,levels}, ctx.rng.
  */
 import { el, heText, storeGet, storeSet } from '../curriculum/dom.js';
 import { loadTropeData } from './loader.js';
@@ -10,7 +10,7 @@ import { SETTING_LABELS } from '../traditions/model.js';
 import { STORE_KEY, systemFor, nameMap, collectWords, frequency, buildQuestion, normaliseState, applyAnswer } from './model.js';
 
 export const DRAFT_NOTICE = 'Draft, unreviewed: the words and mark names come from a machine parse of the Leningrad Codex text (UXLC). No cantor or Hebrew teacher has checked them yet.';
-export const MELODY_NOTE = 'Melodies differ by community, and this trainer teaches only the names of the marks, not how they sound. There is no audio yet; ask your cantor or teacher for the tune your community uses.';
+export const MELODY_NOTE = 'Melodies differ by community, and this trainer teaches only the names of the marks. There is no recorded audio. The Trope Melody page plays a draft melody in plain tones that is waiting for a cantor’s check; ask your cantor or teacher for the tune your community uses.';
 const CSS = `
 .alef-trope{max-inline-size:36rem;margin-inline:auto;overflow-wrap:anywhere}
 .alef-trope *{box-sizing:border-box;max-inline-size:100%}
@@ -39,7 +39,7 @@ export function mount(root, ctx) {
   const status = el('div', { class: 'tr-status', role: 'status', 'aria-live': 'polite' });
   const footer = el('footer', {}, el('p', { class: 'draft-flag', role: 'note' }, DRAFT_NOTICE), el('p', { role: 'note' }, MELODY_NOTE),
     el('p', {}, 'Hebrew text with cantillation: Unicode/XML Leningrad Codex (UXLC), Tanach.us Inc., copy without restriction.'),
-    el('p', {}, el('a', { href: '#/trope/families' }, 'Trope Families'), ' · ', el('a', { href: '#/trope/aliyah' }, 'Trope Practice by Aliyah'))); // lane 6 (#13)
+    el('p', {}, el('a', { href: '#/trope/families' }, 'Trope Families'), ' · ', el('a', { href: '#/trope/aliyah' }, 'Trope Practice by Aliyah'), ' · ', el('a', { href: '#/trope/melody' }, 'Trope Melody (Draft)'))); // lane 6 (#13)
   wrap.append(h1, body, status, footer);
   root.append(wrap);
 

@@ -437,6 +437,20 @@
       "auditRef": "CONTENT-LICENCE-AUDIT.md#ts-fsrs-weights"
     },
     {
+      "id": "hhd-handwriting",
+      "name": "HHD_v0 handwriting dataset (I. Rabaev, B. Kurar Barakat, A. Churkin, J. El-Sana)",
+      "group": "software",
+      "usedFor": "Part of the training data for the letter check on the tracing screens (assets/vendor/_packs/handwriting). No image from the dataset is in the app.",
+      "licence": "CC BY 4.0 (as stated on the Zenodo record)",
+      "licenceUrl": "https://doi.org/10.5281/zenodo.4287442",
+      "commercialUse": "yes-with-conditions",
+      "shareAlike": false,
+      "attributionText": "Letter check trained in part on the HHD_v0 handwriting dataset by I. Rabaev, B. Kurar Barakat, A. Churkin and J. El-Sana, CC BY 4.0.",
+      "perItemCredit": false,
+      "status": "verified-primary",
+      "auditRef": "CONTENT-LICENCE-AUDIT.md#hhd-handwriting"
+    },
+    {
       "id": "reference-only-sites",
       "name": "Pealim, Chabad.org, Berman Jewish Policy Archive (cited by URL only)",
       "group": "traditions",

@@ -1,0 +1,31 @@
+{
+ "schema": "alef.pack.v1",
+ "pack": "handwriting",
+ "version": "1",
+ "files": [
+  {
+   "name": "letters.onnx",
+   "bytes": 1311488,
+   "sha256": "697ea98a7104ecb9db76a3effaa7f4787b8b23b4e51ef37ef1487c3e95dcec98",
+   "parts": [
+    {
+     "path": "letters.onnx.p000",
+     "bytes": 1311488,
+     "sha256": "697ea98a7104ecb9db76a3effaa7f4787b8b23b4e51ef37ef1487c3e95dcec98"
+    }
+   ]
+  },
+  {
+   "name": "model.json",
+   "bytes": 833,
+   "sha256": "8646e231fa3196463e976e6662f6ddaeea90b59245a9721dbfc9fa0ee583a2dc",
+   "parts": [
+    {
+     "path": "model.json.p000",
+     "bytes": 833,
+     "sha256": "8646e231fa3196463e976e6662f6ddaeea90b59245a9721dbfc9fa0ee583a2dc"
+    }
+   ]
+  }
+ ]
+}

@@ -58,7 +58,7 @@ export const ON_DEMAND_GROUPS = Object.freeze([
   { id: "od-listen-tools", label: "Playback bar, Listening Practice, play-all lists and audio packs", test: /^src\/audiolab\//, approxMB: 0.1 }, // audio lane
   { id: "od-audio-index", label: "Audio clip list (core)", test: /^data\/audio\//, approxMB: 2.6 },
   { id: "od-pronunciation", label: "Sounds and pronunciation data", test: /^data\/pronunciation\//, approxMB: 0.8 },
-  { id: "od-speak", label: "Speaking, Israel dialogues, everyday phrases, listening, typing, word tracing", test: /^(data\/(speak|israel|listen|typing|wordtrace)\/|src\/(wordtrace|typing)\/|src\/israel\/israel\.view\.js$|src\/phrases\/phrases\.view\.js$)/, approxMB: 0.53 },
+  { id: "od-speak", label: "Speaking, Israel dialogues, everyday phrases, listening, typing, word tracing", test: /^(data\/(speak|israel|listen|typing|wordtrace)\/|src\/(wordtrace|typing|handcheck)\/|src\/israel\/israel\.view\.js$|src\/phrases\/phrases\.view\.js$)/, approxMB: 0.53 },
   { id: "od-reading", label: "Reading, festivals, calendar, grammar and pronunciation-style data", test: /^data\/((corpus|torahread|festivals|calendar|grammar|traditions|trope-trainer)\/|torah-quotes\.json$)/, approxMB: 0.5 },
   { id: "od-intermediate", label: "Intermediate lessons and class track", test: /^data\/curriculum\//, approxMB: 0.6 },
   { id: "od-letter-pictures", label: "Letter memory pictures (the rest of the alphabet)", test: /^assets\/letters\/morph\//, approxMB: 0.09 },

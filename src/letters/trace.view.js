@@ -302,11 +302,12 @@ export function mount(root, ctx = {}) {
     const fb = h('div', { class: 'feedback', role: 'status', 'aria-live': 'polite' }, t('trace.start', 'Press Animate to see the order, then trace it.'));
     body.appendChild(stage); body.appendChild(fb);
     const progress = h('div', { class: 'row', role: 'status', 'aria-live': 'polite' });
+    let hand = null; let good = []; // optional letter check (src/handcheck, fetched on first use); good = strokes the tracer accepted
     const setProgress = () => { const s = tracer.getState(); const n = s.done ? s.total : s.index; progress.textContent = t('trace.strokeCount', 'Stroke ') + n + t('trace.strokeOf', ' of ') + s.total + t('trace.strokeDone', ' done'); };
     try {
       tracer = createTracer(stage, letter, state.script, Object.assign({}, state.strict ? MODES.strict : MODES.forgiving, {
         showOutline: state.outline,
-        onStrokeResult: r => { if (r.forced) assistedRun = true; /* the correct stroke was shown for you: not independent drawing */ fb.textContent = r.forced ? t('trace.shown', 'Here is the correct stroke.') : t('trace.good', 'Good!'); setProgress(); },
+        onStrokeResult: r => { if (!r.forced && attempt.length) good.push(attempt[attempt.length - 1]); if (r.forced) assistedRun = true; /* the correct stroke was shown for you: not independent drawing */ fb.textContent = r.forced ? t('trace.shown', 'Here is the correct stroke.') : t('trace.good', 'Good!'); setProgress(); },
         onUserStroke: pts => { attempt.push(pts); if (attempt.length > 6) attempt.shift(); },
         onInputWhileDone: () => { fb.textContent = t('trace.finishedTap', 'This letter is finished. Press Start over to trace it again.'); },
         onMistake: m => {
@@ -316,6 +317,7 @@ export function mount(root, ctx = {}) {
               const r = matchLetter(attempt, state.letters, state.script, { targetId: letter.id, ignoreDirection: true });
               if (r.looksLikeTarget) fb.textContent += ' ' + t('trace.shapeOk', 'Your overall shape looks like this letter; check the stroke order and direction (press Animate).');
             } catch (e) { /* hint is optional */ }
+            if (hand) hand.check({ strokes: good.concat(attempt.slice(-1)), letter, script: state.script, fb });
           }
         },
         onComplete: c => {
@@ -328,6 +330,7 @@ export function mount(root, ctx = {}) {
               return;
             }
             progress0.record(letter.id, state.script, c);
+            if (hand) hand.check({ strokes: good, letter, script: state.script, fb, done: true }); good = [];
             const cur = body.querySelector('.grid button[aria-pressed=true]');
             if (cur && !cur.querySelector('.badge')) { cur.setAttribute('data-completed', '1'); cur.appendChild(h('span', { class: 'badge', 'aria-hidden': 'true' }, '\u2713')); }
           } catch (e) { /* progress is best-effort */ }
@@ -347,9 +350,10 @@ export function mount(root, ctx = {}) {
         assistedRun = true; // set first: submit() can complete the letter synchronously
         tracer.submit(block.strokes[s.index].median.map(p => [p[0], p[1]]));
       } }, t('trace.nextStroke', 'Next stroke')) : null,
-      h('button', { 'data-act': 'reset', onclick: () => { attempt = []; assistedRun = false; tracer.reset(); fb.textContent = t('trace.start', 'Press Animate to see the order, then trace it.'); setProgress(); } }, t('trace.reset', 'Start over'))));
+      h('button', { 'data-act': 'reset', onclick: () => { attempt = []; good = []; assistedRun = false; tracer.reset(); fb.textContent = t('trace.start', 'Press Animate to see the order, then trace it.'); setProgress(); } }, t('trace.reset', 'Start over'))));
     body.appendChild(progress); setProgress();
     body.appendChild(strokeWordsPanel(letter));
+    import('../handcheck/hook.js').then(m => { if (!unmounted && body.isConnected !== false) hand = m.attach({ host: body, h, t, letters: state.letters }); }).catch(() => {});
     { const svg = stage.querySelector && stage.querySelector('svg'); // the drawing is drag-on-canvas: point a screen reader to the text version
       if (svg) svg.setAttribute('aria-describedby', 'sw-hint'); }
   }

@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
-"""Cast pictures for the 28 older Level 3–9 games: Ari, Noa and Rimon composed onto each game's
-approved background. Sources are only pictures already in the app (tools/images/cast-onto-envs.json).
+"""Cast pictures of Ari, Noa and/or Rimon composed onto each game's approved background.
+Sources are only pictures already in the app. Default config: tools/images/cast-onto-envs.json (the 28
+Level 3–9 games). The later 17 (wordfinder, pinball, and the other older pages without a cast picture)
+live in tools/images/cast-new-games.json — run with CFG=tools/images/cast-new-games.json; entries that
+are only inventory for the lane-envs builder (no bg/cast) are skipped.
 Never flipped or redrawn. Writes assets/games/arcade/<id>/env.webp (1600x600) and
 assets/img/arcade-thumbs/<id>.{480,800}.webp; metadata stripped with exiftool. Run from the repo root.
 Set ONLY=id,id to rebuild a subset. Set OUT_DIR to write somewhere else (for a preview)."""
@@ -10,7 +13,7 @@ from pathlib import Path
 from PIL import Image, ImageFilter
 import numpy as np
 
-CFG = json.load(open('tools/images/cast-onto-envs.json'))
+CFG = json.load(open(os.environ.get('CFG', 'tools/images/cast-onto-envs.json')))
 W, H = 1600, 600
 OUT = Path(os.environ.get('OUT_DIR', '.'))
 
@@ -116,9 +119,12 @@ def save(im, path, w, q):
     subprocess.run(['exiftool', '-all=', '-overwrite_original', '-q', str(path)], check=True)
 
 only = set(os.environ.get('ONLY', '').split(',')) - {''}
+built = []
 for gid, spec in CFG['games'].items():
     if only and gid not in only:
         continue
+    if 'bg' not in spec or 'cast' not in spec:
+        continue  # inventory-only row (lane games are built by tools/images/lane-envs.py)
     bg = load_bg(spec['bg'], spec.get('y_align', 0.5)).convert('RGBA')
     for ch in spec['cast']:
         paste(bg, load_sprite(ch['id']), ch['cx'], ch['h'], ch.get('yb', 1.0), ch.get('margin', 8))
@@ -127,4 +133,5 @@ for gid, spec in CFG['games'].items():
     for w in (480, 800):
         save(env, f'assets/img/arcade-thumbs/{gid}.{w}.webp', w, 74)
     print(gid, spec.get('who', ''))
-print(len([g for g in CFG['games'] if not only or g in only]), 'cast pictures')
+    built.append(gid)
+print(len(built), 'cast pictures')

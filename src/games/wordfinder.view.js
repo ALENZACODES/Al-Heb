@@ -3,7 +3,8 @@ import { signalRimon } from '../shell/rimon-events.js';
 // One tap to hear, one tap to find. No timers, typing, lives or penalties.
 import { h, heSpan } from '../shell/ui.js';
 import { FIRST_WORDS } from '../lib/counts.js';
-import { speak, loadGameImages, envNode, GAME_ENV, playRecordedClip, hasRecordedClip } from './engine.js';
+import { speak, loadGameImages, GAME_ENV, playRecordedClip, hasRecordedClip } from './engine.js';
+import { castEnvNode } from './cast-env.js';
 import { recordScore } from './scores.js';
 import { sfx } from '../audio/sfx.js';
 import { isAudioFree } from '../shell/audiofree.js';
@@ -46,7 +47,7 @@ export function mount(root, ctx) {
   // only — never a word cue). A missing picture leaves the page as it was.
   loadGameImages(ctx).then((R) => {
     if (!alive) return;
-    const env = envNode(h, R, GAME_ENV.wordfinder);
+    const env = castEnvNode(h, R, 'wordfinder', GAME_ENV.wordfinder);
     const host = status.parentElement;
     if (env && host) host.insertBefore(env, status);
   }).catch(() => {});

@@ -210,7 +210,14 @@ export function applyCorrections(root = ROOT, { dry = false } = {}) {
   for (const [id, r] of rowOf) {
     const w = newById.get(id);
     for (const n of ['pos', 'level', 'frequencyRank']) if (col(n) >= 0 && !eq(r[col(n)], w[n] ?? null)) { r[col(n)] = w[n] ?? null; rowEdits++; }
-    if (todoSet.has(id)) for (const [fld, v] of Object.entries(todoSet.get(id))) if (fld !== 'frequencyRank' && col(fld) >= 0 && r[col(fld)] !== v) { r[col(fld)] = v; rowEdits++; }
+    if (todoSet.has(id)) {
+      for (const [fld, v] of Object.entries(todoSet.get(id))) if (fld !== 'frequencyRank' && col(fld) >= 0 && r[col(fld)] !== v) { r[col(fld)] = v; rowEdits++; }
+      // The index "en" column is the gloss plus any alt glosses (see ADD below). Refresh it when alt or en changes.
+      if (col('en') >= 0) {
+        const en = w.en + (w.alt && w.alt.length ? '; ' + w.alt.join('; ') : '');
+        if (r[col('en')] !== en) { r[col('en')] = en; rowEdits++; }
+      }
+    }
   }
   for (const c of todoAdd) {
     const w = newById.get(c.id);

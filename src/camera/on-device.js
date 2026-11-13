@@ -6,6 +6,7 @@
 import { deskew } from '../photo/preprocess.js';
 import { regionsFromBoxes, chooseAlignment, fitText, boxColours, readerImage, wordForWord, boxOnOriginal, findOccluders, besideBar, lineHadNoise, lineForPack, signCase, LINE_HEIGHT } from './camera-model.js';
 import { isHebrew } from '../photo/hebrew.js';
+import { fixRegions } from '../handcheck/ocr-fix.js';
 
 const FONT_STACK = '"Alef", "Heebo", system-ui, -apple-system, "Segoe UI", sans-serif';
 export const READER_TARGET_SIDE = 1200;   // first reading: the photo's long side is brought to this (never more than 3x)
@@ -157,11 +158,11 @@ export async function retryLines(levelled, eng, regions, glossary, doc) {
 
 /**
  * @param {Blob} photo a metadata-free JPEG (see cleanPhoto in camera.view.js)
- * @param {{glossary:object, dictionaryLoader?:()=>Promise<object>, onProgress?:Function, doc?:Document, engine?:{ocr:Function}, readerMode?:string}} o
+ * @param {{glossary:object, dictionaryLoader?:()=>Promise<object>, onProgress?:Function, doc?:Document, engine?:{ocr:Function}, readerMode?:string, fixer?:{correctLine:Function}|null}} o
  *   `engine` is injectable for tests; `dictionaryLoader` is called at most once, and only if a line is still untranslated.
  * @returns {Promise<{width:number,height:number,regions:object[],blob:Blob|null,notices:string[],engine:object,levelled:{applied:boolean,angle:number},dictionary:object|null}>}
  */
-export async function translateOnDevice(photo, { glossary, dictionaryLoader, translator, onProgress, doc = globalThis.document, engine, readerMode, targetSide, secondSize, lineRetry = true, occluders = true } = {}) {
+export async function translateOnDevice(photo, { glossary, dictionaryLoader, translator, onProgress, doc = globalThis.document, engine, readerMode, targetSide, secondSize, lineRetry = true, occluders = true, fixer = null } = {}) {
   let eng = engine;
   if (!eng) {
     const { createBrowserTesseract } = await import('../photo/engines/tesseract-browser.js');
@@ -227,6 +228,10 @@ export async function translateOnDevice(photo, { glossary, dictionaryLoader, tra
     } catch { /* the pack could not answer: the dictionary below still may */ }
   }
   let dictionary = null;
+  // Lines still untranslated that the reader was unsure of are tidied against the app's own dictionary words (look-alike letters
+  // put right) and offered to the word list once more, before the word-for-word step. The language pack above only takes lines
+  // read with confidence, so the two rarely meet. `fixer` comes from ../handcheck/ocr-fix.js; without it this step is skipped.
+  const tidied = fixer ? await fixRegions(regions, glossary, fixer) : 0;
   if (dictionaryLoader && regions.some((r) => !r.held && !r.en)) {
     try { dictionary = await dictionaryLoader(); } catch { dictionary = null; }
     if (dictionary) for (const r of regions) {
@@ -242,5 +247,5 @@ export async function translateOnDevice(photo, { glossary, dictionaryLoader, tra
   else if (!regions.some((r) => r.drawn)) notices.push('Hebrew was found, but none of it could be translated on this device.');
   if (levelled.applied && regions.some((r) => r.drawn)) notices.push('The sign was tilted, so the translated photo has been straightened.');
   const blob = regions.some((r) => r.drawn) ? await toBlob(canvas, 'image/jpeg', 0.9) : null;
-  return { width: canvas.width, height: canvas.height, regions, blob, notices, engine: eng, levelled, dictionary, bars: hidden.bars, packUsed };
+  return { width: canvas.width, height: canvas.height, regions, blob, notices, engine: eng, levelled, dictionary, bars: hidden.bars, packUsed, tidied };
 }

@@ -2,9 +2,35 @@
  "schema": "alef.tools.lock.v1",
  "note": "The alef-tools version this app is built with. Written by tools/alef-tools/sync.mjs; do not edit by hand.",
  "repo": "ALENZACODES/alef-tools",
- "ref": "36a4b282cee0e460be521f05db8f2cb14ebe464d",
+ "ref": "ae00c49f466b83af7dfb64790da2d70a20558648",
  "contract": 1,
  "packages": {
+  "handwriting": {
+   "version": "0.1.0",
+   "path": "assets/vendor/_alef-tools/handwriting@0.1.0",
+   "files": [
+    {
+     "path": "classify.js",
+     "bytes": 6770,
+     "sha256": "927b5f250db92295e0cf190934cc199747c87e41bdea0044875d41dd49b5cad9"
+    },
+    {
+     "path": "feedback.js",
+     "bytes": 7400,
+     "sha256": "518039c52b94da3173751130f6656c84eefa1fd2acff26c03874901d8a4402b1"
+    },
+    {
+     "path": "index.js",
+     "bytes": 3472,
+     "sha256": "7c373bcc647575d16512e6d29d4f3b42bbd3d19a52fc6b30b230080a58e2a2a0"
+    },
+    {
+     "path": "preprocess.js",
+     "bytes": 5426,
+     "sha256": "9403f0b0cca742aa68ff8ea0373bacea16535f517f371dff3ef19b47b0bac36b"
+    }
+   ]
+  },
   "loader": {
    "version": "0.1.0",
    "path": "assets/vendor/_alef-tools/loader@0.1.0",
@@ -50,14 +76,30 @@
      "sha256": "f619e2d13306f1e51e23e729c32f6ed941915bdf5b735572371a24969d798e16"
     }
    ]
+  },
+  "ocr-fix": {
+   "version": "0.1.0",
+   "path": "assets/vendor/_alef-tools/ocr-fix@0.1.0",
+   "files": [
+    {
+     "path": "correct.js",
+     "bytes": 9308,
+     "sha256": "4f9dd3a5017466a474003a467346a3f3f1b20301a484f04043aa035fc4ebd6c3"
+    },
+    {
+     "path": "index.js",
+     "bytes": 1311,
+     "sha256": "8bb207c058310308377b7fd57fc238a06e1fe27a446a767a15b8fda55ff72944"
+    }
+   ]
   }
  },
  "manifest": {
-  "sha256": "1973ee726e6c46fbf676260de416d1ed3ae5e1e458158650e082f2096b542680",
+  "sha256": "f5f6d597729ebe1f8f0aa5c78f7058419aad158d11971da124fe6a3cdbe7893b",
   "checked": "2026-11-12"
  },
  "generated": {
-  "src/settings/alef-tools.generated.js": "e2c9a7aae8a5acf883f77d562ef3113d6f421a1df74c0ce42bc31fb9547005c4",
-  "data/packs/catalog.json": "62a1b596d1cd46d9bfd90c63f717fa2338174eb14dd466b649b49b0283b21c6a"
+  "src/settings/alef-tools.generated.js": "6669aff3426895736a9423faeb4098ae2af0d082e40d3d1f8ae2e8da0ed70f37",
+  "data/packs/catalog.json": "727854b57d84e4720572ad4599aa0e68d61fc27b8a68c19a3a578f9ac343f68a"
  }
 }

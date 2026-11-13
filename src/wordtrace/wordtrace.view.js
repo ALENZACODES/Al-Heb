@@ -11,6 +11,7 @@ import { cellsOf } from '../curriculum/hebrew.js';
 import { LEVELS, eligibleWords, knownLetters, pickNext, suggestLevel, FINAL_OF } from './bank.js';
 import { createFade, GUIDES, rateWord, saveOutcome, dueWordIds, sget, CARDS_KEY, PROGRESS_KEY, cardId } from './flow.js';
 import { createBoard, composeCell, MARKS, markLabel, hasNiqqud } from './niqqud.js';
+import { loadChecker, hintFor } from '../handcheck/hook.js'; // letter check: used only when its pack is already on this device
 
 const DATA = (name) => new URL('../../data/' + name, import.meta.url).href;
 async function loadJson(url) { const r = await fetch(url); if (!r.ok) throw new Error('HTTP ' + r.status + ' for ' + url); return r.json(); }
@@ -82,6 +83,7 @@ export function mount(root, ctx = {}) {
   };
   let unmounted = false;
   /** @type {any[]} */ let tracers = [];
+  let hand = null; loadChecker().then(a => { hand = a; }).catch(() => {}); // never downloads; null unless the learner already has the letter-check pack
   const progressStore = createProgress(ctx.store);
 
   root.textContent = '';
@@ -201,14 +203,22 @@ export function mount(root, ctx = {}) {
     cells.forEach((c, i) => {
       const letter = S.letters[c.base];
       const box = h('div', { class: 'box' });
+      const drawn = []; let lastStroke = null; // strokes of this letter the tracer accepted, for the letter check
       const cell = h('div', { class: 'cell', 'data-index': String(i), 'data-active': String(i === 0), 'data-done': 'false', role: 'group', 'aria-label': cellLabel(letter, i, n) }, box,
         h('div', { class: 'cap', dir: 'ltr' }, `${i + 1}. ${letter.name}`, isFinal(letter.id) ? [' ', h('span', { class: 'tag' }, t('wt.finalTag', 'final form'))] : null));
       strip.appendChild(cell); cellEls.push(cell);
       const tr = createTracer(box, letter, S.script, Object.assign({}, S.strict ? MODES.strict : MODES.forgiving, {
         showOutline: guide !== 'blank',
         onMistake: m => { S.round.mistakes++; say(t(m.feedback.key, m.feedback.text)); },
-        onStrokeResult: r => { if (r.forced) S.round.forced++; say(`${letter.name}: ${t('wt.stroke', 'stroke')} ${r.strokeNum + 1} / ${r.total}`); },
-        onComplete: () => cellDone(i, cellEls)
+        onUserStroke: pts => { lastStroke = pts; },
+        onStrokeResult: r => { if (r.forced) S.round.forced++; else if (lastStroke) drawn.push(lastStroke); say(`${letter.name}: ${t('wt.stroke', 'stroke')} ${r.strokeNum + 1} / ${r.total}`); },
+        onComplete: () => {
+          cellDone(i, cellEls);
+          // one hint at most, about the letter just finished, and only if the learner drew every stroke of it
+          if (hand && drawn.length === (letter[S.script]?.strokes?.length || 0)) hintFor(hand, { strokes: drawn, letter, script: S.script, letters: S.lettersList.length ? S.lettersList : Object.values(S.letters), done: true }).then(text => {
+            const el = body.querySelector('.feedback'); if (text && el) el.textContent += ` ${t('wt.aboutYour', 'About your')} ${letter.name}: ${text}`;
+          }).catch(() => {});
+        }
       }));
       if (tr.svg) { tr.svg.setAttribute('data-guide', guide); tr.svg.style.pointerEvents = i === 0 ? 'auto' : 'none'; }
       tracers.push(tr);

@@ -5,12 +5,10 @@
 //   node tools/ocr-bench/bench.mjs data/photo/_benchmark                 # synthetic set
 //   node tools/ocr-bench/bench.mjs data/photo/real --engines tess-cli-best,tess-browser
 //   options: --engines a,b,c   --best-dir DIR --fast-dir DIR (folders holding heb.traineddata)   --out file.json
-//
-// Engines: tess-cli-fast (system tesseract + its tessdata), tess-cli-best (tessdata_best heb), tess-browser / tess-browser-nopre (the
-// shipped src/photo/engines/tesseract-browser.js running tesseract.js 7 WASM inside headless Chromium, with / without preprocessing).
-// (tesseract.js under plain Node crashed here with a missing-SIMD-symbol error, so it is not benchmarked in Node.) The tessdata folders default to /tmp/tessdata-fast and /tmp/tessdata-best; fetch them from
-// raw.githubusercontent.com/tesseract-ocr/tessdata_{fast,best}/main/heb.traineddata.
-// Every number printed is measured on THE DATASET YOU POINT IT AT. For the synthetic set that is rendered text, not photos.
+//            --fix [lexicon.json]   also score every engine a second time as "<engine>+fix": the same OCR boxes passed through the
+//                                   word-list tidy-up (assets/vendor/_alef-tools/ocr-fix@…, the module the app loads). Default list:
+//                                   assets/vendor/_packs/ocr-words/lexicon.json. The OCR itself is run once per image. The tidy-up
+//                                   goes by the reader's own confidence per word, so it needs a live OCR run (recorded text has none).
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
 import { spawnSync } from 'node:child_process';
 import { join, dirname, resolve } from 'node:path';
@@ -86,6 +84,22 @@ const ENGINES = {
   'tess-cli-best': { desc: 'tesseract 5.3.4 CLI, tessdata_best heb (3.7 MB), same psm', run: cli(BEST, psmFor) },
 };
 
+// ---------- optional word-list tidy-up (--fix) ----------
+const FIX = args.includes('--fix');
+let fixer = null;
+if (FIX) {
+  const lock = JSON.parse(readFileSync(join(root, 'data/alef-tools.lock.json'), 'utf8'));
+  const mod = await import(join(root, lock.packages['ocr-fix'].folder, 'index.js'));
+  const given = opt('fix', ''); const lexFile = given && !given.startsWith('--') ? resolve(given) : join(root, 'assets/vendor/_packs/ocr-words/lexicon.json');
+  fixer = await mod.load({ lexicon: JSON.parse(readFileSync(lexFile, 'utf8')) });
+  console.error(`tidy-up: ocr-fix ${mod.version}, ${fixer.size} words from ${lexFile}`);
+  for (const name of Object.keys(ENGINES)) {
+    const base = ENGINES[name]; const seen = new Map();
+    const once = async (file, it) => { if (!seen.has(file)) seen.set(file, await base.run(file, it)); return seen.get(file); };
+    ENGINES[name] = { ...base, run: once };
+    ENGINES[`${name}+fix`] = { desc: `${base.desc} + word-list tidy-up`, run: async (file, it) => { const r = await once(file, it); const t0 = performance.now(); const boxes = await fixer.correctBoxes(r.boxes); return { boxes, ms: r.ms + (performance.now() - t0) }; } };
+  }
+}
 // ---------- metrics ----------
 function lev(a, b) {
   const m = a.length, n = b.length; if (!m) return n; if (!n) return m;
@@ -183,9 +197,10 @@ function aggregate(rows) {
 }
 
 const results = { dataset: datasetDir, synthetic: !!gt.synthetic, count: items.length, date: new Date().toISOString(), engines: {} };
-for (const name of wanted) {
+const runList = FIX ? wanted.flatMap((n) => [n, `${n}+fix`]) : wanted;
+for (const name of runList) {
   if (!ENGINES[name]) { console.error('unknown engine', name); continue; }
-  const dirOk = name.startsWith('tess-browser') ? existsSync(join(root, 'assets/vendor/_tesseract/heb.traineddata')) : name.endsWith('best') ? existsSync(join(BEST, 'heb.traineddata')) : existsSync(join(FAST, 'heb.traineddata'));
+  const dirOk = name.startsWith('tess-browser') ? existsSync(join(root, 'assets/vendor/_tesseract/heb.traineddata')) : name.replace('+fix', '').endsWith('best') ? existsSync(join(BEST, 'heb.traineddata')) : existsSync(join(FAST, 'heb.traineddata'));
   if (!dirOk) { console.error(`skip ${name}: heb.traineddata not found`); continue; }
   console.error(`running ${name} on ${items.length} images ...`);
   const rows = await evalEngine(name);
@@ -199,5 +214,18 @@ console.log(`${results.synthetic ? 'SYNTHETIC (rendered text, not photos)' : 'da
 for (const [n, e] of Object.entries(results.engines)) {
   const a = e.summary.all;
   console.log(`${n.padEnd(14)} charAcc ${a.charAccuracyPct}%  wordRecall ${a.wordRecallPct}%  exactLine ${a.exactLinePct}%  niqqudKept ${a.niqqudKeptPct}%  ms p50 ${a.msMedian} p95 ${a.msP95}  errors ${e.summary.errors}`);
+}
+if (FIX) {
+  console.log('\nword-list tidy-up, before -> after (word recall %; "worst" = the image that lost the most, in points):');
+  for (const [n, e] of Object.entries(results.engines)) {
+    const f = results.engines[`${n}+fix`]; if (n.endsWith('+fix') || !f) continue;
+    const by = (k) => `${e.summary.byKind[k]?.wordRecallPct ?? '-'} -> ${f.summary.byKind[k]?.wordRecallPct ?? '-'}`;
+    const after = new Map(f.perImage.map((r) => [r.id, r]));
+    let worst = { id: null, d: 0 }; let better = 0; let worse = 0;
+    for (const r of e.perImage) { const a2 = after.get(r.id); if (!a2 || r.error || a2.error || !r.refWords) continue; const d = (a2.wordsMatched - r.wordsMatched) / r.refWords * 100; if (d > 0) better++; if (d < 0) worse++; if (d < worst.d) worst = { id: r.id, d: Math.round(d * 10) / 10 }; }
+    e.summary.fix = { signWordRecall: [e.summary.byKind.sign?.wordRecallPct ?? null, f.summary.byKind.sign?.wordRecallPct ?? null], allWordRecall: [e.summary.all.wordRecallPct, f.summary.all.wordRecallPct], imagesBetter: better, imagesWorse: worse, worstImage: worst };
+    console.log(`${n.padEnd(22)} all ${e.summary.all.wordRecallPct} -> ${f.summary.all.wordRecallPct}   sign ${by('sign')}   siddur-line ${by('siddur-line')}   siddur-page ${by('siddur-page')}   images better ${better}, worse ${worse}, worst ${worst.id || 'none'} ${worst.d}`);
+  }
+  writeFileSync(outFile, JSON.stringify(results, null, 1));
 }
 console.log('wrote', outFile);

@@ -1,0 +1,62 @@
+{
+ "schema": "alef.handwriting.model.v1",
+ "version": "1",
+ "file": "letters.onnx",
+ "bytes": 1311488,
+ "sha256": "697ea98a7104ecb9db76a3effaa7f4787b8b23b4e51ef37ef1487c3e95dcec98",
+ "input": {
+  "name": "input",
+  "shape": [
+   1,
+   1,
+   32,
+   32
+  ],
+  "format": "norm32: 1 = ink, ink box fitted to 24 px, centred"
+ },
+ "output": {
+  "name": "logits",
+  "classes": 28
+ },
+ "arch": {
+  "convs": 6,
+  "poolAfter": [
+   0,
+   2,
+   4
+  ],
+  "width": "m"
+ },
+ "classes": [
+  "alef",
+  "bet",
+  "gimel",
+  "dalet",
+  "he",
+  "vav",
+  "zayin",
+  "chet",
+  "tet",
+  "yod",
+  "kaf",
+  "lamed",
+  "mem",
+  "nun",
+  "samekh",
+  "ayin",
+  "pe",
+  "tsadi",
+  "qof",
+  "resh",
+  "shin",
+  "tav",
+  "kaf-final",
+  "mem-final",
+  "nun-final",
+  "pe-final",
+  "tsadi-final",
+  "not-a-letter"
+ ],
+ "parameters": 328036,
+ "checkpointEpoch": 49
+}

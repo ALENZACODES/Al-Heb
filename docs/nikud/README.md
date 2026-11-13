@@ -95,6 +95,13 @@ Two practice pages use this work. Neither fetches anything until the learner pre
   already on the device (the page links to Settings otherwise; it never starts a download). Such a word carries a note that its
   marks have not been checked by a person, is not saved to the retrace list, and is not played aloud. The Name is refused.
 
+## Checking the real packs in a browser
+
+`tools/alef-tools/pack-browser-check.mjs` is run by hand. With the built packs placed at `assets/vendor/_packs/`, it opens the
+real app in headless Chromium, downloads each pack the way Settings does, adds marks to a few lines, traces a bare word in Word
+Trace, and removes the packs. It is not in the test tiers because the packs (about 600 MiB) are not in this repo. The record of
+the 13 November 2026 run is in alef-tools at `packages/nikud/review/e2e-browser.json`.
+
 ## Credits
 
 Dicta's DictaBERT-large-char-menaked (CC BY 4.0, converted to 8-bit ONNX) and Phonikud (MIT) are listed

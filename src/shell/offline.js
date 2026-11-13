@@ -96,6 +96,7 @@ export const ON_DEMAND_GROUPS = Object.freeze([
   { id: "od-light", label: "Star of David light (page, style and printable stencil)", test: /^(src\/light\/|assets\/light\/|assets\/css\/light\.css$)/, approxMB: 0.02 },
   // Lane 1 (M-08, 12 Nov): the code for About's Held Recordings list (its data file is in "Audio clip list" above).
   { id: "od-held", label: "Held Recordings list on About", test: /^src\/shell\/held-recordings\.js$/, approxMB: 0.01 },
+  { id: "od-data-health", label: "Data health (the file-check page)", test: /^(data\/dev\/|src\/shell\/data-health\.view\.js$)/, approxMB: 0.22 },
   // alef-tools lane 7 (12 Nov): the Language Packs page and the pack downloader. Code only: a pack itself is downloaded on that page, on request.
   { id: "od-packs", label: "Language Packs page and the pack downloader (the packs themselves are downloaded on that page)", test: /^(src\/settings\/|data\/packs\/|assets\/vendor\/_alef-tools\/)/, approxMB: 0.05 },
   { id: "od-sync", label: "Move to another device, your certificate and the offline pack lists", test: /^(src\/sync\/|data\/offline\/)/, approxMB: 0.08 }, // lane 4 (12 Nov)

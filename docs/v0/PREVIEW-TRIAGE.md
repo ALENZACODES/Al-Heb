@@ -21,6 +21,7 @@ decision, so the More sheet stays short and the first session stays coherent (we
 | `wordtrace` | keep | Extends letter tracing (a v0 page). |
 | `israel` | keep | Israel goal path. |
 | `israelunits` | hide | Merged into the live Practical course; old #/israel-units routes redirect there. |
+| `data-health` | hide | Builder page for checking data files; reached from About. Not a learner page. |
 | `traditions` | keep | Target for `traditions-guide` and `traditions-hear`. |
 | `traditions-guide` | merge | Into `traditions` (already a tab there). |
 | `traditions-hear` | merge | Into `traditions` (already a tab there); no recorded audio yet. |

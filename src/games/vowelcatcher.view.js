@@ -11,7 +11,8 @@
 // when the stage leaves the document, and mount returns a cleanup.
 
 import { h, heSpan } from '../shell/ui.js';
-import { createSession, speak, loadGameImages, imgOf, resultsCard, envNode, GAME_ENV } from './engine.js';
+import { createSession, speak, loadGameImages, imgOf, resultsCard, GAME_ENV } from './engine.js';
+import { castEnvNode } from './cast-env.js';
 import { sfx } from '../audio/sfx.js';
 
 /** Best score, play count, last star rating. Device-local, listed on the privacy page. */
@@ -223,7 +224,7 @@ export function mount(root, ctx) {
       announce.textContent = 'Vowel data unavailable. Try again when the course data is loaded.';
       return;
     }
-    const skyline = envNode(h, images, GAME_ENV.vowels);
+    const skyline = castEnvNode(h, images, 'vowelcatcher', GAME_ENV.vowels);
     if (skyline) envHost.replaceChildren(skyline);
     letter = LETTERS[Math.floor(Math.random() * LETTERS.length)];
     basket.replaceChildren(heSpan(letter.glyph));

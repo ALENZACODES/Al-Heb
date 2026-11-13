@@ -1,6 +1,7 @@
 // Game 1 — Hebrew Arch-Builder: authentic letter print strokes from the canonical deck.
 import { h, heSpan } from '../shell/ui.js';
-import { createSession, shuffled, loadGameImages, imgOf, resultsCard, envNode, GAME_ENV, placeBoard } from './engine.js';
+import { createSession, shuffled, loadGameImages, imgOf, resultsCard, GAME_ENV, placeBoard } from './engine.js';
+import { castEnvNode } from './cast-env.js';
 import { sfx } from '../audio/sfx.js';
 import { loadJson } from '../grammar/loader.js';
 
@@ -77,7 +78,7 @@ export function mount(root, ctx) {
           else paint('Incorrect stroke: the arch cannot lock.');
         } }, miniature);
     });
-    placeBoard(board, envNode(h, images, GAME_ENV.arch), reference, diagram, h('p', {}, 'Stroke ' + (step + 1) + ' of ' + letter.strokes.length),
+    placeBoard(board, castEnvNode(h, images, 'archbuilder', GAME_ENV.arch), reference, diagram, h('p', {}, 'Stroke ' + (step + 1) + ' of ' + letter.strokes.length),
       h('div', { class: 'game-choices' }, ...choices));
   }
   Promise.all([loadJson('data/letters/letters.json'), loadGameImages(ctx)]).then(([data, R]) => {

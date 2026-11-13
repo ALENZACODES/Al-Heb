@@ -38,7 +38,7 @@ export function defaults(now = Date.now(), installId = newInstallId()) {
     repair: null, travelCovered: [],
     hearts: { enabled: null, n: 5, lastRefillAt: 0, lost: [], refillProgress: 0, refillRight: 0 },
     league: { enabled: null, tier: 1, weekId: null, weekXp: 0, carry: 0, joined: false, settled: null, history: [], resultUnseen: null },
-    sessions: [], lastTz: null, lastBootDay: null,
+    sessions: [], lastTz: null, lastBootDay: null, loginDays: [], loginPaid: {},
     notify: { optedIn: false, tone: 'kind', asks: 0, lastAskAtLesson: 0, denied: false, sent: [], stopped: false, periodicSync: false },
     shop: { themes: [], themeActive: null, outfits: [], outfitActive: null, earnedOutfits: [], audio: [], gameLevels: 0, shields: { held: 0, used: [] } },
     mysteries: { opened: [] },
@@ -76,6 +76,8 @@ export function normalize(raw, now = Date.now()) {
       history: arr(l.history, CAPS.history, (e) => isObj(e) && iso(e.week)), resultUnseen: iso(l.resultUnseen) },
     sessions: arr(r.sessions, CAPS.sessions, (s) => isObj(s) && Number.isFinite(s.s) && Number.isFinite(s.e)),
     lastTz: typeof r.lastTz === 'string' ? r.lastTz : null, lastBootDay: iso(r.lastBootDay),
+    loginDays: arr(r.loginDays, 400, iso),
+    loginPaid: normalizeLoginPaid(r.loginPaid),
     notify: { ...n, optedIn: n.optedIn === true, tone: n.tone === 'playful' ? 'playful' : 'kind', asks: nat(n.asks), lastAskAtLesson: nat(n.lastAskAtLesson), denied: n.denied === true,
       sent: arr(n.sent, CAPS.sent, (e) => isObj(e) && typeof e.id === 'string'), stopped: n.stopped === true, periodicSync: n.periodicSync === true },
     shop: normalizeShop(r.shop),
@@ -99,6 +101,15 @@ function normalizeShop(raw) {
     gameLevels: Math.min(nat(s.gameLevels), 2),
     shields: { held: Math.min(nat(sh.held), 2), used: arr(sh.used, CAPS.used, iso) },
   };
+}
+
+function normalizeLoginPaid(raw) {
+  if (!isObj(raw)) return {};
+  const out = {};
+  for (const k of Object.keys(raw).filter((k) => /^\d{4}-\d\d$/.test(k)).sort().slice(-24)) {
+    out[k] = arr(raw[k], 3, (s) => s === 'd7' || s === 'd14' || s === 'month');
+  }
+  return out;
 }
 
 function normalizeExpedition(raw) {

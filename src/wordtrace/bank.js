@@ -176,3 +176,40 @@ export function buildBank(src) {
   for (const l of src.lessons) if ((l.letters || []).length) lessonLetters[l.id] = l.letters;
   return { schema: 'alef-wordtrace-bank/1', levels: LEVELS.map(l => l.id), lessonLetters, words };
 }
+
+/** Bare letters of the Name, which is never offered for tracing. */
+const NAME_PLAIN = '\u05d9\u05d4\u05d5\u05d4';
+export const OWN_MIN = 2, OWN_MAX = 8;
+
+/** What the learner typed, tidied: trimmed, composed, one final form at the end. Empty when it is not one Hebrew word. @param {string} raw */
+export function tidyOwn(raw) {
+  const s = String(raw ?? '').normalize('NFC').trim().replace(/[\u0591-\u05af\u05bd\u05be\u05c0\u05c3-\u05c7]/g, '');
+  return isSimpleWord(s) ? applyFinalForm(s) : '';
+}
+
+/**
+ * A word the learner brought, checked before it can be traced. `he` must already carry its vowel marks.
+ * why: 'shape' not one Hebrew word of 2 to 8 letters; 'name' the Name; 'bare' no vowel marks; 'final' a final letter in the wrong place.
+ * @param {string} he @param {{source?:'typed'|'device'}} [o]
+ * @returns {{ok:true, word:any}|{ok:false, why:'shape'|'name'|'bare'|'final'}}
+ */
+export function ownWord(he, o = {}) {
+  const w = String(he ?? '').normalize('NFC').trim();
+  if (!isSimpleWord(w)) return { ok: false, why: 'shape' };
+  const letters = letterIds(w), plain = plainOf(w);
+  if (letters.length < OWN_MIN || letters.length > OWN_MAX) return { ok: false, why: 'shape' };
+  if (plain.includes(NAME_PLAIN) || EXCLUDED.includes(w)) return { ok: false, why: 'name' };
+  if (vowelMarkCount(w) < 1) return { ok: false, why: 'bare' };
+  if (sofitProblems(w).length) return { ok: false, why: 'final' };
+  return { ok: true, word: { he: w, plain, en: '', letters, n: letters.length, level: 'own', src: 'own', pointing: o.source === 'device' ? 'on-device' : 'typed' } };
+}
+
+/** The bank word for what was typed: the same marked form, or the only bank word with those letters. @param {{words:any[]}} bank @param {string} typed */
+export function bankMatch(bank, typed) {
+  const w = String(typed ?? '').normalize('NFC');
+  const exact = bank.words.find((x) => x.he.normalize('NFC') === w);
+  if (exact) return exact;
+  if (vowelMarkCount(w) > 0) return null;
+  const same = bank.words.filter((x) => x.plain === plainOf(w));
+  return same.length === 1 ? same[0] : null;
+}

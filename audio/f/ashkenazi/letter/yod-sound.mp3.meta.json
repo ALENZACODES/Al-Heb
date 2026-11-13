@@ -4,11 +4,10 @@
  "engine": "google",
  "voiceId": "he-IL-Wavenet-A",
  "tradition": "ashkenazi",
- "inputText": "י",
- "inputSha256": "72b4d9ab59b4b2e8647f0d189ca79e72dd8520f3e07b1b8441d2232dc7c0d4ab",
+ "inputText": "יַ",
  "ingestedAt": "2026-11-12T14:43:01.036Z",
  "licence": "customer-owned",
- "note": "Synthetic voice: the Israeli woman voice reading the ashkenazi reading written in pointed Hebrew letters (tools/audio/ashkenazi_script.mjs). Not a human recording; no human has listened to it. Licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel.",
+ "note": "Replaced 2026-11-13 (letter audit): the old clip said an English letter name or the whole Hebrew letter name, not the sound. Now a copy of the Israeli clip of the same voice, which says the same thing in the Ashkenazi reading. Synthetic voice; no person has listened to it.",
  "renderedAt": "2026-11-12T14:43:01.036Z",
  "redistributionCleared": false,
  "spokenText": "י",
@@ -28,5 +27,6 @@
   "after": 1.0080045351473923,
   "israeliSec": 0.88,
   "israeliRef": "audio/f/israeli/letter/yod-sound.mp3"
- }
+ },
+ "copyOf": "audio/f/israeli/letter/yod-sound.mp3"
 }

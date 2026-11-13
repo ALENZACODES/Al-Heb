@@ -4,11 +4,10 @@
  "engine": "google",
  "voiceId": "he-IL-Wavenet-B",
  "tradition": "ashkenazi",
- "inputText": "ו",
- "inputSha256": "3a03f2d417ac6aff3a13aad94eb39f413c4d66d5521205811c2d057687fa551f",
+ "inputText": "וָו וָ",
  "ingestedAt": "2026-11-12T07:00:28.387Z",
  "licence": "customer-owned",
- "note": "Synthetic voice: the Israeli man voice reading the ashkenazi English-letter respelling, not pointed Hebrew. Not a human recording; no human has listened to it. Licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel.",
+ "note": "Replaced 2026-11-13 (letter audit): the old clip said an English letter name or the whole Hebrew letter name, not the sound. Now a copy of the Israeli clip of the same voice, which says the same thing in the Ashkenazi reading. Synthetic voice; no person has listened to it.",
  "renderedAt": "2026-11-12T07:00:28.387Z",
  "redistributionCleared": false,
  "spokenText": "v",
@@ -27,5 +26,6 @@
   "after": 0.5169160997732426,
   "israeliSec": 0.4050113378684807,
   "israeliRef": "audio/m/israeli/letter/vav-sound.mp3"
- }
+ },
+ "copyOf": "audio/m/israeli/letter/vav-sound.mp3"
 }

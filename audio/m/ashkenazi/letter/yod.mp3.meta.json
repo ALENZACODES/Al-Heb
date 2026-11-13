@@ -5,10 +5,9 @@
  "voiceId": "he-IL-Wavenet-B",
  "tradition": "ashkenazi",
  "inputText": "יוֹד",
- "inputSha256": "ff3455e9f01aa6e403e3735979cecc8d759de412b0eaae57c048131474740445",
  "ingestedAt": "2026-11-12T07:00:30.744Z",
  "licence": "customer-owned",
- "note": "Synthetic voice: the Israeli man voice reading the ashkenazi English-letter respelling, not pointed Hebrew. Not a human recording; no human has listened to it. Licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel.",
+ "note": "Replaced 2026-11-13 (letter audit): the old clip said \"yad\". Now a copy of the Israeli clip of the same voice, which says the same thing in the Ashkenazi reading. Synthetic voice; no person has listened to it.",
  "renderedAt": "2026-11-12T07:00:30.744Z",
  "redistributionCleared": false,
  "spokenText": "yod",
@@ -27,5 +26,6 @@
   "after": 0.6960090702947845,
   "israeliSec": 0.9040136054421769,
   "israeliRef": "audio/m/israeli/letter/yod.mp3"
- }
+ },
+ "copyOf": "audio/m/israeli/letter/yod.mp3"
 }

@@ -4,11 +4,10 @@
  "engine": "google",
  "voiceId": "he-IL-Wavenet-B",
  "tradition": "ashkenazi",
- "inputText": "ד",
- "inputSha256": "055ea365c61d216182790605aaba0599095092abdecb55e9ad6b843835205f2a",
+ "inputText": "דַ",
  "ingestedAt": "2026-11-12T07:00:36.731Z",
  "licence": "customer-owned",
- "note": "Synthetic voice: the Israeli man voice reading the ashkenazi English-letter respelling, not pointed Hebrew. Not a human recording; no human has listened to it. Licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel.",
+ "note": "Replaced 2026-11-13 (letter audit): the old clip said an English letter name or the whole Hebrew letter name, not the sound. Now a copy of the Israeli clip of the same voice, which says the same thing in the Ashkenazi reading. Synthetic voice; no person has listened to it.",
  "renderedAt": "2026-11-12T07:00:36.731Z",
  "redistributionCleared": false,
  "spokenText": "d",
@@ -27,5 +26,6 @@
   "after": 0.6240136054421769,
   "israeliSec": 0.76,
   "israeliRef": "audio/m/israeli/letter/dalet-sound.mp3"
- }
+ },
+ "copyOf": "audio/m/israeli/letter/dalet-sound.mp3"
 }

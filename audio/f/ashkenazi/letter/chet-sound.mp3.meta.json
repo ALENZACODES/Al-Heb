@@ -4,11 +4,10 @@
  "engine": "google",
  "voiceId": "he-IL-Wavenet-A",
  "tradition": "ashkenazi",
- "inputText": "ח",
- "inputSha256": "9a05e2d3d6867996902cd5b1f9370b8f85dcdb10ebb8a813e3edd03317493c70",
+ "inputText": "חַ",
  "ingestedAt": "2026-11-12T14:41:39.865Z",
  "licence": "customer-owned",
- "note": "Synthetic voice: the Israeli woman voice reading the ashkenazi reading written in pointed Hebrew letters (tools/audio/ashkenazi_script.mjs). Not a human recording; no human has listened to it. Licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel.",
+ "note": "Replaced 2026-11-13 (letter audit): the old clip said an English letter name or the whole Hebrew letter name, not the sound. Now a copy of the Israeli clip of the same voice, which says the same thing in the Ashkenazi reading. Synthetic voice; no person has listened to it.",
  "renderedAt": "2026-11-12T14:41:39.865Z",
  "redistributionCleared": false,
  "spokenText": "ח",
@@ -28,5 +27,6 @@
   "after": 0.9840136054421769,
   "israeliSec": 0.88,
   "israeliRef": "audio/f/israeli/letter/chet-sound.mp3"
- }
+ },
+ "copyOf": "audio/f/israeli/letter/chet-sound.mp3"
 }

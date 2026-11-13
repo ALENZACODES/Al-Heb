@@ -4,11 +4,10 @@
  "engine": "google",
  "voiceId": "he-IL-Wavenet-B",
  "tradition": "ashkenazi",
- "inputText": "כַף",
- "inputSha256": "597bf1d24a0e4ce1ef2b8ff807dd042cda3a64ee1b140217e846ad965bfb583c",
+ "inputText": "חַף.",
  "ingestedAt": "2026-11-12T14:07:45.184Z",
  "licence": "customer-owned",
- "note": "Synthetic voice: the Israeli man voice reading the ashkenazi reading written in pointed Hebrew letters (tools/audio/ashkenazi_script.mjs). Not a human recording; no human has listened to it. Licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel.",
+ "note": "Replaced 2026-11-13 (letter audit): the old clip said \"kaf\". Now a copy of the Israeli clip of the same voice, which says the same thing in the Ashkenazi reading. Synthetic voice; no person has listened to it.",
  "renderedAt": "2026-11-12T14:07:45.184Z",
  "redistributionCleared": false,
  "spokenText": "כַף",
@@ -27,5 +26,6 @@
   "after": 0.7919954648526077,
   "israeliSec": 0.9519954648526077,
   "israeliRef": "audio/m/israeli/letter/khaf.mp3"
- }
+ },
+ "copyOf": "audio/m/israeli/letter/khaf.mp3"
 }

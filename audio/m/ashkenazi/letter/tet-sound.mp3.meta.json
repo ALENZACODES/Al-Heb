@@ -4,11 +4,10 @@
  "engine": "google",
  "voiceId": "he-IL-Wavenet-B",
  "tradition": "ashkenazi",
- "inputText": "ט",
- "inputSha256": "a916b43ba278465bfac52259eb00ad0a3c7a330a2ade894dfe27c09e106fe502",
+ "inputText": "טַ",
  "ingestedAt": "2026-11-12T07:00:37.747Z",
  "licence": "customer-owned",
- "note": "Synthetic voice: the Israeli man voice reading the ashkenazi English-letter respelling, not pointed Hebrew. Not a human recording; no human has listened to it. Licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel.",
+ "note": "Replaced 2026-11-13 (letter audit): the old clip said an English letter name or the whole Hebrew letter name, not the sound. Now a copy of the Israeli clip of the same voice, which says the same thing in the Ashkenazi reading. Synthetic voice; no person has listened to it.",
  "renderedAt": "2026-11-12T07:00:37.747Z",
  "redistributionCleared": false,
  "spokenText": "t",
@@ -27,5 +26,6 @@
   "after": 0.5760090702947845,
   "israeliSec": 0.7360090702947846,
   "israeliRef": "audio/m/israeli/letter/tet-sound.mp3"
- }
+ },
+ "copyOf": "audio/m/israeli/letter/tet-sound.mp3"
 }

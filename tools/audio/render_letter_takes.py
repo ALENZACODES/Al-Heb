@@ -43,6 +43,14 @@ TARGETS = {
     'sound-va-b': ('va', ['וַע', 'וָע', 'ואה', 'וָאה', 'וַ', 'וָו וָ']),
     'name-khaf-b': ('khaf', ['חַאף', 'חָאף', 'חַף.', 'כָף סוֹפִית']),
     'mark-sheva-b': ('shva', ['שְׁוָה', 'שְבָא', 'שְׁוַא', 'שְׁוָא.', 'הַשְּׁוָא']),
+    # Ashkenazi letter names, written the way tools/audio/ashkenazi_script.mjs writes them (tzere as "ei", kamatz as "o", soft tav as s)
+    'ashk-mem': ('meim', ['מֵיְם', 'מֵים', 'מֶיְם']),
+    'ashk-resh': ('reish', ['רֵיְשׁ', 'רֶיְשׁ', 'רֵיש']),
+    'ashk-vet': ('veis', ['וֵיס', 'וֵיְס', 'וֶיְס']),
+    'ashk-pe': ('pei', ['פֵּי', 'פֵּיְ', 'פֶּיְ']),
+    'ashk-fe': ('fei', ['פֵי', 'פֵיְ', 'פֶיְ', 'פֵיי']),
+    'ashk-lamed': ('lomed', ['לוֹמֶד', 'לֹמֶד']),
+    'ashk-mem-final': ('meim sofis', ['מֵיְם סוֹפִיס', 'מֵים סוֹפִיס', 'מֶיְם סוֹפִיס']),
     'mark-shin-dot-b': ('nekudat shin', ['נקודת שין', 'נְקֻדַּת שין', 'נְקֻדַּת שִׁן', 'נְקֻדָּה שִׁין', 'נְקֻדַּת, שִׁין']),
 }
 

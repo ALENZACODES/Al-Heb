@@ -280,6 +280,7 @@ export const STORE_KEYS = [
   ['talk.settings', 'Talk choices: direction, read aloud, vowel marks, who is speaking', 'src/talk/talk.model.js'],
   ['sprint.last', 'Last word sprint', 'src/sprint/model.js'],
   ['typing.v1', 'Typing practice results', 'src/typing/typing.js'],
+  ['trip.v1', 'Your Israel trip plan and your best restaurant score', 'src/trip/trip.js'],
   ['trope.v1', 'Chanting-mark trainer results', 'src/trope/trope.view.js'],
   ['nikkudfade.v1', 'Vowel-fade practice progress (which words you saw pointed, and which you revealed)', 'src/nikkudfade/model.js'],
   ['roots.v1', 'Word-roots drill counts', 'src/roots/model.js'],

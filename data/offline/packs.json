@@ -509,7 +509,7 @@
     ],
     [
      "src/shell/nav-model.js",
-     12727,
+     12911,
      1
     ],
     [
@@ -574,12 +574,17 @@
     ],
     [
      "src/shell/router.js",
-     48933,
+     49093,
      1
     ],
     [
      "src/shell/transient.js",
      1592,
+     1
+    ],
+    [
+     "src/shell/trip-routes.js",
+     561,
      1
     ],
     [

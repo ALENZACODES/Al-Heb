@@ -42,7 +42,7 @@ const ON_DEMAND_PREFIXES = ['data/vocab/', 'data/roots/', 'data/knownwords/', 'd
   'data/curriculum/practical-pages/', // Practical course outline and written pages: not read at first install
   'assets/screens/', 'assets/screenshots/', 'assets/letters/morph/',
   // course lane (12 Nov): every course-map page (syllabus, time budget, map, checkpoints, mixed review, daily set, benchmarks, rules) is a lazy route; fetched on first open.
-  'src/coursemap/',
+  'src/coursemap/', 'src/trip/',
   // Light WebP copies of Rimon's animated sheets and still sprite (originals stay as PNG under assets/img/rimon/ and are not listed).
   'assets/img/rimon/web/',
   // Large image sets: runtime-cached on first view (and listed for "Download everything"), never installed up front (fix #4 / R39).

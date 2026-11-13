@@ -237,7 +237,8 @@ export const STORE_KEYS = [
   ['backup.reminder.v1', 'When you last downloaded a backup file, and "Not now" on the backup reminder', 'src/shell/backup-reminder.js'],
   ['placement.v1', 'Placement check result', 'src/placement/placement.view.js'],
   // lane 6 (12 Nov round 2)
-  ['bridge.v1', 'Reading without vowels: your stage for each book and prayer line, and your word and modern-text reads', 'src/bridge/model.js'],
+  ['bridge.v1', 'Reading without vowels: your stage for each book and prayer line, the day you passed each reading stage, and your word and modern-text reads', 'src/bridge/model.js'],
+  ['importer.v1', 'Read Your Own Text: the dictionary words you marked "I know this word". The text you paste is never saved', 'src/importer/model.js'],
   ['readlab.v1', 'Reading Tools: your vowel-mark level for stories, prayers and Torah, Three Versions and Fade Challenge reads, and drill set counts', 'src/readlab/model.js'], // reading lane (12 Nov)
   ['trope.practice.v1', 'Trope practice by aliyah: the portion, aliyah and phrase you were on', 'src/trope/families.js'],
   ['curriculum.progress', 'Completed lessons', 'src/curriculum/dom.js'],

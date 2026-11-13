@@ -117,6 +117,7 @@ export function mount(root, ctx) {
   const footer = el('footer', {});
   wrap.append(h1, el('details', { class: 'trd-notice-d' }, el('summary', {}, 'About This Text'), el('p', { class: 'trd-notice' }, NOTICE)), body, status, footer);
   root.append(wrap);
+  import('../bridge/chip.js').then((m) => m.attachChip(root, ctx)).catch(() => { /* the screen works without the stage line */ }); // your reading-ladder stage, on every reading screen
 
   let alive = true, data = null, state = { ...DEFAULT_STATE }, error = null;
   let items = [], idx = null, btns = new Map(), cur = null, sel = null, timer = null, legendOnlyHere = false, ctlOpen = false;

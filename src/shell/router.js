@@ -255,6 +255,8 @@ export const ROUTES = [
   { name: 'bridge-sec', pattern: '/bridge/:sec', module: '../bridge/bridge.view.js', title: 'Reading Without Vowels', owner: 'lane6', paramQuery: { sec: 'sec' } },
   { name: 'bridge-text', pattern: '/bridge/:sec/:id', module: '../bridge/bridge.view.js', title: 'Reading Without Vowels', owner: 'lane6', paramQuery: { sec: 'sec', id: 'id' } },
   // reading lane (12 Nov): Reading Tools hub and its five tools (src/readlab, loaded on first open)
+  // group Q (12 Nov): Q10 Read Your Own Text (src/importer, loaded on first open)
+  { name: 'import', pattern: '/import', module: '../importer/importer.view.js', title: 'Read Your Own Text', owner: 'group-q', group: 'learn', quick: 'nav.route.import' },
   { name: 'readlab', pattern: '/readlab', module: '../readlab/readlab.view.js', title: 'Reading Tools', owner: 'reading', group: 'learn', quick: 'nav.route.readlab' },
   { name: 'readlab-tool', pattern: '/readlab/:tool', module: '../readlab/readlab.view.js', title: 'Reading Tools', owner: 'reading', paramQuery: { tool: 'tool' } },
   { name: 'trope-families', pattern: '/trope/families', module: '../trope/practice.view.js', title: 'Trope Families', owner: 'lane6', group: 'learn', quick: 'nav.route.trope-families' },

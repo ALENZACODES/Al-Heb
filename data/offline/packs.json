@@ -509,7 +509,7 @@
     ],
     [
      "src/shell/nav-model.js",
-     12727,
+     12804,
      1
     ],
     [
@@ -574,7 +574,7 @@
     ],
     [
      "src/shell/router.js",
-     48933,
+     49188,
      1
     ],
     [
@@ -705,6 +705,21 @@
      0
     ],
     [
+     "src/bridge/chip.js",
+     1339,
+     0
+    ],
+    [
+     "src/bridge/model.js",
+     12100,
+     0
+    ],
+    [
+     "src/bridge/progress.js",
+     6439,
+     0
+    ],
+    [
      "src/corpus/corpus.js",
      8064,
      1
@@ -716,7 +731,7 @@
     ],
     [
      "src/corpus/read.view.js",
-     37296,
+     37481,
      1
     ],
     [
@@ -735,8 +750,23 @@
      1
     ],
     [
+     "src/curriculum/fade.js",
+     5582,
+     1
+    ],
+    [
+     "src/curriculum/hebrew.js",
+     1331,
+     1
+    ],
+    [
      "src/curriculum/ranks.js",
      5499,
+     1
+    ],
+    [
+     "src/curriculum/spotit.js",
+     4377,
      1
     ],
     [
@@ -757,6 +787,11 @@
     [
      "src/lib/counts.js",
      22462,
+     1
+    ],
+    [
+     "src/nikkudfade/model.js",
+     8526,
      1
     ],
     [

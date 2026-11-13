@@ -124,6 +124,7 @@ export async function mount(root, ctx = /** @type {any} */ ({})) {
   const style = el('style', { id: 'crp-style' }); style.textContent = CSS;
   const wrap = el('section', { class: 'crp', 'aria-labelledby': 'view-title' });
   root.replaceChildren(style, wrap);
+  import('../bridge/chip.js').then((m) => m.attachChip(root, ctx)).catch(() => { /* the screen works without the stage line */ }); // your reading-ladder stage, on every reading screen
   wrap.append(el('h1', { id: 'view-title', tabindex: '-1' }, 'Read'), el('p', { role: 'status' }, 'Loading texts...'));
 
   let corpus;

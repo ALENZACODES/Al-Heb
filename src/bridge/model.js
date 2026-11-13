@@ -34,7 +34,7 @@ export function present(level, text) {
 }
 
 const num = (x) => (Number.isFinite(x) && x >= 0 ? Math.floor(x) : 0);
-export const defaultState = () => ({ v: 1, texts: {}, words: {}, modern: {} });
+export const defaultState = () => ({ v: 1, texts: {}, words: {}, modern: {}, stages: {} });
 /** Anything read back from storage -> a valid state (never throws). */
 export function normalizeState(raw) {
   const s = defaultState();
@@ -42,6 +42,8 @@ export function normalizeState(raw) {
   for (const [id, t] of Object.entries(raw.texts && typeof raw.texts === 'object' ? raw.texts : {}).slice(0, 2000)) {
     if (t && typeof t === 'object') s.texts[id] = { level: clampLevel(t.level), done: t.done === true, doneAt: num(t.doneAt), tries: num(t.tries), unaided: Math.min(num(t.unaided), num(t.tries)) };
   }
+  // the day each reading stage was first passed (src/bridge/progress.js); kept for good once written
+  for (const level of [4, 5, 6]) { const at = num(raw.stages?.[level]); if (at > 0) s.stages[level] = at; }
   for (const key of ['words', 'modern']) {
     for (const [id, w] of Object.entries(raw[key] && typeof raw[key] === 'object' ? raw[key] : {}).slice(0, 5000)) {
       if (w && typeof w === 'object') { const seen = num(w.seen); s[key][id] = { seen, firstTry: Math.min(num(w.firstTry), seen) }; }

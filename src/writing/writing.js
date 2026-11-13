@@ -183,3 +183,42 @@ export function recordAnswer(state, a) {
   const s = normalizeState(state);
   return { ...s, answers: [{ at: a.at, drill: a.drill, ask: a.ask, typed: String(a.typed || '').slice(0, 300), ok: !!a.ok }, ...s.answers].slice(0, MAX_ANSWERS) };
 }
+
+// ---- copy-work ------------------------------------------------------------------------------------------------------------------
+const tidy = (s) => String(s || '').normalize('NFKC').replace(MARKS, '').replace(/\s+/g, ' ').trim();
+/**
+ * Compares a copied line with the line shown, letter by letter (vowel points are not asked for; everything else is, punctuation included).
+ * @returns {{exact:boolean, accuracy:number, marks:{ch:string, ok:boolean}[], missing:number, extra:number}} accuracy is 0 to 100
+ */
+export function copyCheck(typed, target) {
+  const a = [...tidy(typed)], b = [...tidy(target)];
+  const marks = a.map((ch, i) => ({ ch, ok: ch === b[i] }));
+  const right = marks.filter((m) => m.ok).length;
+  const accuracy = b.length ? Math.round((100 * right) / Math.max(a.length, b.length)) : 0;
+  return { exact: a.length === b.length && right === b.length, accuracy, marks, missing: Math.max(0, b.length - a.length), extra: Math.max(0, a.length - b.length) };
+}
+/** Letters a minute for a copied line. @param {number} letters @param {number} ms */
+export const copySpeed = (letters, ms) => (ms > 0 ? Math.round((letters * 60000) / ms) : 0);
+/** Lines to copy: stored everyday lines of three to seven words. */
+export function copyItems(pack) {
+  return ((pack && pack.phrases) || []).filter((p) => p.id && p.en?.[0] && !p.he.includes('יהוה') && heKey(p.he).split(' ').length >= 3 && heKey(p.he).split(' ').length <= 7).map((p) => ({ id: p.id, he: p.he, en: p.en[0] }));
+}
+
+// ---- the portfolio --------------------------------------------------------------------------------------------------------------
+export const PORTFOLIO_KIND = Object.freeze({ journal: 'Journal', answer: 'Typed Answer', rewrite: 'Rewrite', copy: 'Copy-Work' });
+/** Everything the learner has written, newest first: journal entries and every typed line. @returns {{at:number, day:string, kind:string, text:string, ok:boolean|null}[]} */
+export function portfolio(state) {
+  const s = normalizeState(state);
+  const out = s.entries.map((e) => ({ at: e.at, day: e.day, kind: 'journal', text: e.text, ok: null }));
+  for (const a of s.answers) out.push({ at: a.at, day: dayKey(a.at), kind: PORTFOLIO_KIND[a.drill] ? a.drill : 'answer', text: a.typed, ok: a.ok });
+  return out.sort((x, y) => y.at - x.at);
+}
+/** The items that hold the words searched for (any language, vowel points ignored), or all of them for an empty search. */
+export function searchPortfolio(items, query) {
+  const q = tidy(query).toLowerCase();
+  return q ? items.filter((x) => tidy(x.text).toLowerCase().includes(q)) : items;
+}
+/** The portfolio as plain text to keep. */
+export function portfolioText(items) {
+  return ['My Aleph Writing', '', ...items.map((x) => `${x.day}  ${PORTFOLIO_KIND[x.kind]}${x.ok === null ? '' : x.ok ? '  (right)' : '  (not yet)'}\n${x.text}\n`)].join('\n');
+}

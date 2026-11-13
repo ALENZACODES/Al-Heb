@@ -6,13 +6,15 @@
 // Nothing leaves the device. Store key: writing.v1. Tests inject ctx.writingData {prompts, pack}, ctx.clock {now}, ctx.rng.
 import { el, heText, storeGet, storeSet } from '../curriculum/dom.js';
 import { loadJSON } from '../curriculum/data.js';
-import { WRITING_KEY, normalizeState, promptFor, saveEntry, journalStreak, exportText, dayKey, showName, gradeHebrew, freeTextItems, rewriteItems, pickRound, recordAnswer, REWRITE_ASK } from './writing.js';
+import { WRITING_KEY, normalizeState, promptFor, saveEntry, journalStreak, exportText, dayKey, showName, gradeHebrew, freeTextItems, rewriteItems, pickRound, recordAnswer, REWRITE_ASK, copyCheck, copySpeed, copyItems, portfolio, searchPortfolio, portfolioText, PORTFOLIO_KIND } from './writing.js';
 
 export const ROUND = 8;
 export const COPY = Object.freeze({
   title: 'Writing',
   lead: 'Write a few lines each day, and practise typing Hebrew from memory. What you write stays on this device.',
-  journal: 'Journal', answer: 'Type The Answer', rewrite: 'Rewrite',
+  journal: 'Journal', answer: 'Type The Answer', rewrite: 'Rewrite', copy: 'Copy-Work', portfolio: 'My Writing',
+  copyHint: 'Type the line exactly as it is shown. Vowel points are not needed.',
+  nothingYet: 'Nothing here yet. What you write on the other parts of this page collects here.',
   journalHint: 'Write in any language. A line or two is enough.',
   saved: 'Saved on this device.', removed: 'Today’s entry was removed.',
   none: 'No entries yet. Today’s will be the first.',
@@ -51,7 +53,7 @@ export async function mount(root, ctx = {}) {
   const tabs = {};
   const show = (name) => { for (const [k, b] of Object.entries(tabs)) b.setAttribute('aria-pressed', String(k === name)); panel.replaceChildren(views[name]()); };
   const bar = el('div', { class: 'wr-tabs', role: 'group', 'aria-label': 'Parts of Writing' });
-  for (const name of ['journal', 'answer', 'rewrite']) { tabs[name] = el('button', { type: 'button', class: 'btn secondary', 'data-tab': name, 'aria-pressed': 'false', onclick: () => show(name) }, COPY[name]); bar.append(tabs[name]); }
+  for (const name of ['journal', 'answer', 'rewrite', 'copy', 'portfolio']) { tabs[name] = el('button', { type: 'button', class: 'btn secondary', 'data-tab': name, 'aria-pressed': 'false', onclick: () => show(name) }, COPY[name]); bar.append(tabs[name]); }
   wrap.append(bar, panel);
 
   function journal() {
@@ -112,8 +114,47 @@ export async function mount(root, ctx = {}) {
     return host;
   }
 
+  function copyWork() {
+    const items = copyItems(pack);
+    if (!items.length) return el('p', {}, 'This part could not load its lines. Check your connection and open the page again.');
+    const seen = new Set(state.answers.filter((a) => a.drill === 'copy').map((a) => a.ask));
+    const item = pickRound(items, 1, ctx.rng || Math.random, seen)[0];
+    let started = 0;
+    const input = /** @type {HTMLInputElement} */ (el('input', { type: 'text', id: 'wr-copy', lang: 'he', dir: 'rtl', autocomplete: 'off', autocapitalize: 'off', spellcheck: 'false', 'aria-describedby': 'wr-copy-hint' }));
+    input.addEventListener('input', () => { if (!started) started = now(); });
+    const out = el('div', { id: 'wr-copy-result', role: 'status', 'aria-live': 'polite' });
+    const check = async () => {
+      if (!input.value.trim()) { out.replaceChildren(el('p', {}, COPY.empty)); return; }
+      const r = copyCheck(input.value, item.he); const speed = copySpeed(r.marks.length, now() - (started || now()));
+      const shown = el('p', { class: 'alef-he wr-he', dir: 'rtl', lang: 'he', 'aria-label': 'Your line, with the letters that differ marked' }, r.marks.map((m) => (m.ok ? m.ch : el('mark', {}, m.ch === ' ' ? '\u00A0' : m.ch))));
+      const notes = [r.exact ? 'Exact.' : `${r.accuracy} in 100 letters right.`, r.missing ? `${r.missing} ${r.missing === 1 ? 'letter is' : 'letters are'} missing at the end.` : '', r.extra ? `${r.extra} ${r.extra === 1 ? 'letter' : 'letters'} too many.` : '', speed ? `${speed} letters a minute.` : ''].filter(Boolean).join(' ');
+      out.replaceChildren(el('p', {}, el('strong', {}, notes)), shown, el('button', { type: 'button', class: 'btn', id: 'wr-copy-next', onclick: () => show('copy') }, 'Another Line'));
+      await keep(recordAnswer(state, { at: now(), drill: 'copy', ask: item.id, typed: input.value, ok: r.exact }));
+    };
+    return el('div', { class: 'wr-card' }, el('h2', {}, 'Copy This Line'), heText(item.he, 'alef-he wr-he'), el('p', { class: 'muted' }, item.en), el('label', { for: 'wr-copy' }, 'Type It Here'), input,
+      el('p', { id: 'wr-copy-hint', class: 'muted' }, COPY.copyHint), el('div', { class: 'wr-row' }, el('button', { type: 'button', class: 'btn', id: 'wr-copy-check', onclick: check }, 'Check')), out);
+  }
+
+  function myWriting() {
+    const all = portfolio(state);
+    const list = el('div', { id: 'wr-portfolio' }); const count = el('p', { id: 'wr-count', role: 'status', 'aria-live': 'polite' });
+    const find = /** @type {HTMLInputElement} */ (el('input', { type: 'text', id: 'wr-find', dir: 'auto', autocomplete: 'off' }));
+    const note = el('p', { class: 'muted', role: 'status', 'aria-live': 'polite' });
+    const paint = () => {
+      const hits = searchPortfolio(all, find.value);
+      count.textContent = all.length ? `${hits.length} of ${all.length} ${all.length === 1 ? 'piece' : 'pieces'}.` : COPY.nothingYet;
+      list.replaceChildren(...hits.slice(0, 200).map((x) => el('div', { class: 'wr-entry', 'data-kind': x.kind }, el('strong', {}, x.day), ' ', el('span', { class: 'muted' }, PORTFOLIO_KIND[x.kind], x.ok === null ? '' : x.ok ? ', right' : ', not yet'), el('p', { dir: 'auto' }, x.text))));
+    };
+    find.addEventListener('input', paint);
+    const save = el('button', { type: 'button', class: 'btn secondary', id: 'wr-portfolio-save', hidden: !all.length, onclick: () => {
+      try { const a = el('a', { href: URL.createObjectURL(new Blob([portfolioText(searchPortfolio(all, find.value))], { type: 'text/plain;charset=utf-8' })), download: 'aleph-writing.txt' }); a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 2000); note.textContent = 'Your writing was saved as a text file.'; } catch { note.textContent = 'This browser could not save a file.'; }
+    } }, 'Save What Is Shown As A File');
+    paint();
+    return el('div', { class: 'wr-card' }, el('h2', {}, 'Everything You Have Written'), el('label', { for: 'wr-find' }, 'Search Your Writing'), find, el('div', { class: 'wr-row' }, save), count, note, list);
+  }
+
   const views = {
-    journal,
+    journal, copy: copyWork, portfolio: myWriting,
     answer: () => drill('answer', freeTextItems(pack), (item) => [el('h2', {}, 'Say It In Hebrew'), el('p', { class: 'wr-he', lang: 'en' }, item.en)]),
     rewrite: () => drill('rewrite', rewriteItems(pack), (item) => [el('h2', {}, REWRITE_ASK[item.kind]), heText(item.from, 'alef-he wr-he'), el('p', { class: 'muted' }, item.en)]),
   };

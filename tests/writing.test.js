@@ -127,3 +127,39 @@ test('the screen: an entry is saved and listed; a typed answer is checked, shown
   assert.ok(Object.values(REWRITE_ASK).includes(host.querySelector('h2').textContent));
   unmount();
 });
+
+test('copy-work: letter by letter, with missing and extra letters counted and a speed in letters a minute', async () => {
+  const { copyCheck, copySpeed, copyItems } = await import('../src/writing/writing.js');
+  assert.deepEqual((({ exact, accuracy, missing, extra }) => ({ exact, accuracy, missing, extra }))(copyCheck('שלום עולם', 'שָׁלוֹם  עוֹלָם')), { exact: true, accuracy: 100, missing: 0, extra: 0 });
+  const r = copyCheck('שלום עילם', 'שלום עולם'); assert.equal(r.exact, false); assert.deepEqual(r.marks.filter((m) => !m.ok).map((m) => m.ch), ['י']); assert.equal(r.accuracy, 89);
+  assert.equal(copyCheck('שלום', 'שלום עולם').missing, 5); assert.equal(copyCheck('שלום עולם!!', 'שלום עולם').extra, 2); assert.equal(copyCheck('תודה', 'תודה.').exact, false, 'punctuation is part of the line');
+  assert.equal(copySpeed(30, 30000), 60); assert.equal(copySpeed(30, 0), 0);
+  const items = copyItems(pack); assert.ok(items.length >= 100); for (const it of items) assert.equal(copyCheck(it.he, it.he).exact, true);
+});
+
+test('the portfolio: journal entries and every typed line in one dated list, searchable, saved as text', async () => {
+  const { portfolio, searchPortfolio, portfolioText } = await import('../src/writing/writing.js');
+  let s = saveEntry(normalizeState(null), { ms: at(2026, 11, 9), prompt: { id: 'm01', kind: 'morning' }, text: 'Thankful for coffee.' });
+  s = recordAnswer(s, { at: at(2026, 11, 10), drill: 'answer', ask: 'a', typed: 'קפה, בבקשה', ok: true });
+  s = recordAnswer(s, { at: at(2026, 11, 11), drill: 'copy', ask: 'b', typed: 'שלום עילם', ok: false });
+  const all = portfolio(s);
+  assert.deepEqual(all.map((x) => [x.day, x.kind, x.ok]), [['2026-11-11', 'copy', false], ['2026-11-10', 'answer', true], ['2026-11-09', 'journal', null]]);
+  assert.equal(searchPortfolio(all, 'COFFEE').length, 1); assert.equal(searchPortfolio(all, 'קָפֶה')[0].kind, 'answer'); assert.equal(searchPortfolio(all, '').length, 3); assert.equal(searchPortfolio(all, 'zebra').length, 0);
+  const text = portfolioText(all); assert.match(text, /^My Aleph Writing\n\n2026-11-11 {2}Copy-Work {2}\(not yet\)\nשלום עילם\n/); assert.match(text, /2026-11-09 {2}Journal\nThankful for coffee\./);
+});
+
+test('the screen: a copied line is marked and kept, and shows up under My Writing', async () => {
+  const { createDocument, ev, flush } = await import('./rimon.fakedom.js');
+  const doc = createDocument(); globalThis.document = doc;
+  const { mount } = await import('../src/writing/writing.view.js');
+  const mem = {}; const store = { get: (k) => mem[k], set: (k, v) => { mem[k] = JSON.parse(JSON.stringify(v)); } };
+  const host = doc.createElement('div'); doc.body.append(host); let t = at(2026, 11, 11, 9);
+  const press = async (n) => { n.dispatchEvent(ev('click')); await flush(10); };
+  const unmount = await mount(host, { store, writingData: { prompts, pack }, clock: { now: () => (t += 1000) }, rng: () => 0.3, query: { part: 'copy' } });
+  const box = host.querySelector('#wr-copy'); box.value = 'שלום'; box.dispatchEvent(ev('input'));
+  await press(host.querySelector('#wr-copy-check'));
+  assert.match(host.querySelector('#wr-copy-result').textContent, /letters a minute/); assert.equal(mem[WRITING_KEY].answers[0].drill, 'copy'); assert.equal(mem[WRITING_KEY].answers[0].typed, 'שלום');
+  await press(host.querySelector('[data-tab=portfolio]'));
+  assert.match(host.querySelector('#wr-count').textContent, /^1 of 1 piece\./); assert.match(host.querySelector('#wr-portfolio').textContent, /Copy-Work, not yet/);
+  unmount();
+});

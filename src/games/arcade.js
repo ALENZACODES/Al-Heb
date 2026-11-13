@@ -45,7 +45,8 @@ export async function loadLetters(ctx) {
 export function art(game, name, alt = '', cls = 'arc-art') {
   const ext = name === 'env' && ENV_WEBP.has(game) ? 'webp' : 'png';
   const img = h('img', { class: cls, alt, src: `${ART_BASE}/${game}/${name}.${ext}`, loading: 'lazy', decoding: 'async' });
-  img.addEventListener('error', () => img.remove());
+  // A cast backdrop (env.webp) that cannot load falls back to the game's earlier env.png, then removes itself.
+  img.addEventListener('error', () => { if (ext === 'webp' && !img.dataset.fellBack) { img.dataset.fellBack = '1'; img.src = `${ART_BASE}/${game}/${name}.png`; } else img.remove(); });
   return img;
 }
 /** Shared cast art under assets/games/arcade/cast/<name>.png (rimon-*, ari-*, noa-*); removes itself when absent. */

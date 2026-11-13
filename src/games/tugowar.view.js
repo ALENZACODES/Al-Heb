@@ -12,7 +12,8 @@
 // text-only (the picture removes itself, like the arcade art). Docs: docs/games/TUGOWAR-COMMANDS.md.
 
 import { h, heSpan } from '../shell/ui.js';
-import { createSession, loadGameImages, envNode, GAME_ENV, imgOf, pull, shuffled, resultsCard, speak } from './engine.js';
+import { createSession, loadGameImages, GAME_ENV, imgOf, pull, shuffled, resultsCard, speak } from './engine.js';
+import { castEnvNode } from './cast-env.js';
 import { sfx } from '../audio/sfx.js';
 import { BANK } from './tugowar.bank.js';
 
@@ -227,7 +228,7 @@ export function mount(root, ctx) {
   loadGameImages(ctx).then((r) => {
     if (!alive) return;
     R = r;
-    const env = envNode(h, R, GAME_ENV.tugowar);
+    const env = castEnvNode(h, R, 'tugowar', GAME_ENV.tugowar);
     if (env) stage.insertBefore(env, status);
     refreshPicture();
   });

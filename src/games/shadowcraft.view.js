@@ -1,6 +1,7 @@
 // Game 4 — source glyph silhouette: exactly the same Hebrew glyph, CSS-filtered.
 import { h, heSpan } from '../shell/ui.js';
-import { createSession, shuffled, loadGameImages, resultsCard, envNode, GAME_ENV, roundStatus, placeBoard } from './engine.js';
+import { createSession, shuffled, loadGameImages, resultsCard, GAME_ENV, roundStatus, placeBoard } from './engine.js';
+import { castEnvNode } from './cast-env.js';
 import { sfx } from '../audio/sfx.js';
 import { loadJson } from '../grammar/loader.js';
 export const STORE_KEY = 'games.shadowcraft.v1';
@@ -39,7 +40,7 @@ export function mount(root,ctx) {
       if(ok){round++;paint();}
       else paint('That is a different letter shape.');
     }},heSpan(x.he,'he game-he-sm'),h('span',{},x.name)));
-    placeBoard(board,envNode(h,images,GAME_ENV.shadow),stage,h('p',{},'Which letter casts this exact shadow?'),h('div',{class:'game-choices'},...options));
+    placeBoard(board,castEnvNode(h, images, 'shadowcraft', GAME_ENV.shadow),stage,h('p',{},'Which letter casts this exact shadow?'),h('div',{class:'game-choices'},...options));
   }
   Promise.all([loadJson('data/letters/letters.json'),loadJson('data/roots/families.json'),loadGameImages(ctx)]).then(([letters,families,R])=>{
     if(!alive||!article.isConnected)return;deck=shuffled(buildShadowDeck(letters,families));images=R;

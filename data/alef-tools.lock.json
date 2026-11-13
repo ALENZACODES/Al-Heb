@@ -1,0 +1,114 @@
+{
+ "schema": "alef.tools.lock.v1",
+ "note": "The alef-tools version this app is built with. Written by tools/alef-tools/sync.mjs; do not edit by hand.",
+ "repo": "ALENZACODES/alef-tools",
+ "ref": "10c6577d58edb92c843bfb8de8b3657604236bfd",
+ "contract": 1,
+ "packages": {
+  "loader": {
+   "version": "0.1.0",
+   "path": "assets/vendor/_alef-tools/loader@0.1.0",
+   "files": [
+    {
+     "path": "budget.js",
+     "bytes": 1956,
+     "sha256": "234529264502855a6f4a96b423f21759cef79bcc487034a175e79016fcd119e2"
+    },
+    {
+     "path": "cache.js",
+     "bytes": 3617,
+     "sha256": "e966a26f184725d83b68ddab27776ff1d716f7e7e366fe2de777fd062e63a66a"
+    },
+    {
+     "path": "device.js",
+     "bytes": 2029,
+     "sha256": "0a07081ca60c5b8af63761fb6fdd75f7ec05346a2aaf8a8adbe597cd1ffd84c8"
+    },
+    {
+     "path": "errors.js",
+     "bytes": 492,
+     "sha256": "d29ce80a220e93de0331ea299fd8d6cd382d120d43d35718de5a5bcf94d2634f"
+    },
+    {
+     "path": "index.js",
+     "bytes": 1694,
+     "sha256": "abb734b84c4e99aa2b3676bd545486bb9c5e2e00d2dafa550333a134f45ecbeb"
+    },
+    {
+     "path": "loader.js",
+     "bytes": 6646,
+     "sha256": "4af61cdfed3814020d2ed65d53e8538ba4c3fa527782cde03f9139887aee1725"
+    },
+    {
+     "path": "shabbat.js",
+     "bytes": 829,
+     "sha256": "8bb532eaa91d0f68ce44edd48e9918292200e7abcd37e1ffdc7730ba3373d37a"
+    },
+    {
+     "path": "worker-host.js",
+     "bytes": 2072,
+     "sha256": "f619e2d13306f1e51e23e729c32f6ed941915bdf5b735572371a24969d798e16"
+    }
+   ]
+  },
+  "translate": {
+   "version": "0.1.0",
+   "path": "assets/vendor/_alef-tools/translate@0.1.0",
+   "files": [
+    {
+     "path": "client.js",
+     "bytes": 4883,
+     "sha256": "28371a621a8ccdd08fbe1fa2d17f93917bbc9f29af375e719a4a9c9ef2649189"
+    },
+    {
+     "path": "decode.js",
+     "bytes": 3588,
+     "sha256": "7553b6f1095b94bd7c2af4b7ec6bd3ab3daf496704e72ce7a8110232ff9a080a"
+    },
+    {
+     "path": "index.js",
+     "bytes": 1831,
+     "sha256": "56824939adca556c5b88a1cba9d3cc8b1f56b760ef04b3ba77176e5de405fef0"
+    },
+    {
+     "path": "pack.js",
+     "bytes": 6154,
+     "sha256": "14273ec11189bb8e9991c080b47d3ce179228b39b2a9063cd2e0c11584bdb886"
+    },
+    {
+     "path": "runtime.js",
+     "bytes": 2437,
+     "sha256": "4b954ec7e6a658fa1040d2a718dfc558a360a54d123a784bb269bf930f2e4c02"
+    },
+    {
+     "path": "scoring.js",
+     "bytes": 3648,
+     "sha256": "33b888ca29e657e0e78df266aa69b32efe698b0b9a68745052d65a366be6d527"
+    },
+    {
+     "path": "tm.js",
+     "bytes": 2264,
+     "sha256": "c0b00e4f9c9603c126abaff343f95578522f56e2f6fd1d18e8c9bb55b6e465fd"
+    },
+    {
+     "path": "tokenizer.js",
+     "bytes": 2257,
+     "sha256": "ed9c8bdd07613c129a3b486f8c67510d0ae9e7b27aaea9a466034ea771213063"
+    },
+    {
+     "path": "worker.js",
+     "bytes": 5873,
+     "sha256": "e3cd63563711f1fb3ae09ccc0f0d3280032352120e47d019f29e1e198cd82f9f"
+    }
+   ]
+  }
+ },
+ "manifest": {
+  "sha256": "5de62450816230da992fca70bc72561787b7a65954faa53793546e62897bf26a",
+  "checked": "2026-11-12"
+ },
+ "generated": {
+  "src/settings/alef-tools.generated.js": "3f8491b113335da6c70838268b5a31085516b54297b60cee43a171c2d2459fcf",
+  "data/packs/catalog.json": "b54cb0a278f9435521d90e839df2daf52328324c3dbb45e826550ba16e0de9c1"
+ }
+}

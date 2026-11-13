@@ -66,22 +66,36 @@ export function mount(root, ctx = {}) {
   let glossary = null; let engine = null; let photo = null; let result = null; let showing = 'english'; let selected = null; let alive = true;
 
   // The Hebrew to English language pack (shared with the Talk screen): used when it is already on this device; never downloaded from here.
-  /** @type {((he:string)=>Promise<string>)|null} */
+  /** @type {((he:string)=>Promise<string|{en:string, source:string}>)|null} */
   let translator = ctx.cameraTranslator || null;
+  let packReady = !!ctx.cameraTranslator;
   const packNote = h('p', { class: 'muted camera-pack', role: 'note', hidden: true });
   const armPack = async () => {
-    if (translator || typeof Worker !== 'function' || typeof caches === 'undefined') return;
+    if (translator || typeof fetch !== 'function') return;
+    // Sentences of the lessons with their English (data/talk/tm): answered with or without a pack. Fetched only when a line is looked up.
+    /** @type {any} */ let memory = null;
+    try { memory = (await import('../talk/nmt/memory.js')).sharedMemory(); } catch { memory = null; }
+    const fromMemory = async (he) => { const hit = memory ? await memory.lookup(he) : null; return hit && hit.en ? { en: hit.en, source: 'lesson-sentence' } : null; };
+    if (memory) translator = async (he) => (await fromMemory(he)) || '';
+    if (typeof Worker !== 'function' || typeof caches === 'undefined') return;
     try {
-      const [{ sharedPack }, { finishLine }] = await Promise.all([import('../talk/nmt/client.js'), import('../talk/nmt/postedit.js')]);
+      const [{ sharedPack }, { finishLine }, { HQ_PACK }] = await Promise.all([import('../talk/nmt/client.js'), import('../talk/nmt/postedit.js'), import('../talk/nmt/pack.js')]);
       const pack = sharedPack();
-      const st = await pack.state('he-en');
+      // The high-quality pack answers when it is on this device; otherwise the ordinary one. Neither is downloaded from here.
+      let ready = false;
+      try { const hq = await pack.state(HQ_PACK); if (hq.ready && hq.offered !== false) ready = await pack.load(HQ_PACK); } catch { /* no such pack in the list */ }
       if (!alive) return;
-      if (!st.ready) { packNote.hidden = false; packNote.replaceChildren(PACK_MISSING_NOTE + ' ', h('a', { href: '#/talk' }, 'Open Talk')); return; }
-      if (!(await pack.load('he-en')) || !alive) return;
+      if (!ready) {
+        const st = await pack.state('he-en');
+        if (!alive) return;
+        if (!st.ready) { packNote.hidden = false; packNote.replaceChildren(PACK_MISSING_NOTE + ' ', h('a', { href: '#/talk' }, 'Open Talk')); return; }
+        if (!(await pack.load('he-en')) || !alive) return;
+      }
       let terms = null; try { terms = await (await fetch(new URL('../../data/talk/terms.json', import.meta.url))).json(); } catch { /* optional */ }
-      translator = async (he) => finishLine(await pack.translate('he-en', he), he, 'he-en', terms);
+      translator = async (he) => (await fromMemory(he)) || finishLine(await pack.translate('he-en', he), he, 'he-en', terms);
+      packReady = true;
       packNote.hidden = false; packNote.textContent = PACK_READY_NOTE;
-    } catch { /* no pack list (offline and nothing kept): the word list and the dictionary still work */ }
+    } catch { /* no pack list (offline and nothing kept): the word list, the lesson sentences and the dictionary still work */ }
   };
   const status = h('p', { class: 'camera-status', role: 'status', 'aria-live': 'polite' });
   const modeNote = h('p', { class: 'note camera-mode', role: 'note' }, ON_DEVICE_NOTICE);
@@ -253,7 +267,7 @@ export function mount(root, ctx = {}) {
     sampleBtn.removeAttribute('disabled');
   });
 
-  armPack().finally(() => { if (alive) wrap.dataset.pack = translator ? 'ready' : 'none'; });
+  armPack().finally(() => { if (alive) wrap.dataset.pack = packReady ? 'ready' : 'none'; });
   wrap.dataset.mode = 'device';
 
   return () => {

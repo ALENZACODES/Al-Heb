@@ -11,7 +11,13 @@ const repoRoot = join(fileURLToPath(new URL('.', import.meta.url)), '..');
 const INCLUDE_DIRS = ['src', 'assets', 'data'];
 // Files bigger than this are runtime-cached (or not cached) instead of installed up front, so first install stays small.
 export const MAX_FILE_BYTES = 2 * 1024 * 1024;
-const SKIP = (rel) => (rel.startsWith('assets/img/') && !rel.startsWith('assets/img/rimon/web/')) || rel.startsWith('assets/images/') || rel.startsWith('data/images/sheets/') || rel.startsWith('assets/vendor/') /* OCR engine + language data: opt-in, runtime-cached */
+// alef-tools lane 7 (12 Nov): the pinned alef-tools code (assets/vendor/_alef-tools/<pkg>@<version>/*.js, small ES modules) is the one
+// thing under assets/vendor/ that is listed, and only ON DEMAND: fetched the first time a screen needs it, or by "Download everything",
+// so Talk still opens offline. Never installed up front. A package's own vendor/ folder (a third-party runtime) and every language
+// pack (assets/vendor/_nmt, _ort, _packs) stay unlisted: packs are downloaded only on the learner's tap, into their own caches.
+export const isToolCode = (rel) => /^assets\/vendor\/_alef-tools\/[a-z0-9-]+@\d+\.\d+\.\d+\/(?!vendor\/)[A-Za-z0-9._/-]+\.js$/.test(rel);
+const SKIP = (rel) => !isToolCode(rel) && SKIP_REST(rel);
+const SKIP_REST = (rel) => (rel.startsWith('assets/img/') && !rel.startsWith('assets/img/rimon/web/')) || rel.startsWith('assets/images/') || rel.startsWith('data/images/sheets/') || rel.startsWith('assets/vendor/') /* OCR engine + language data: opt-in, runtime-cached */
   || rel.startsWith('assets/workbook/') /* printable PDFs (several MB): downloaded on demand */ || /\.pdf$/i.test(rel)
   || rel.startsWith('data/vocab/packs/') /* ~150 pack files: fetched when a pack is opened, then cached at runtime */ /* big, runtime-cached */ || rel.split('/').some((p) => p.startsWith('_') || p === 'node_modules')
   || rel.endsWith('.py') || rel.endsWith('.md') || (rel.startsWith('src/') && rel.endsWith('.mjs')) /* node build/dev scripts that live under src/ (data builders, tier splitter): run by hand, never loaded by the app */
@@ -20,6 +26,7 @@ const SKIP = (rel) => (rel.startsWith('assets/img/') && !rel.startsWith('assets/
   || (rel.startsWith('data/images/') && rel !== 'data/images/approvals.json' && rel !== 'data/images/word-cues.json' /* read live by the image resolver */) || rel === 'data/corpus/source-snapshot.json' || rel === 'data/audio/tts-prices.json'
   || rel.startsWith('data/tts/') /* respelling files for the offline TTS factory: build-time inputs, never fetched by the app */
   || /^data\/audio\/manifest-words-[a-z]+\.json$/.test(rel)
+  || rel === 'data/alef-tools.lock.json' /* the alef-tools pin: read by tools/alef-tools/sync.mjs, never by the app */
   || rel === 'data/curriculum/practical/gcloud-results.json' || rel.endsWith('/_gcloud-checkpoint.json'); /* lazy per-tradition word shards: fetched after first paint, runtime-cached by sw.js */ /* tts-prices: build-time cost plan input */ // build-time inputs, not fetched by the app
 // ON-DEMAND (not installed up front): data that only preview routes read, plus the audio manifest (every clip is still "missing", so it
 // buys nothing offline). sw.js already stale-while-revalidates every same-origin non-media GET into the runtime cache, so these files
@@ -86,6 +93,8 @@ const ON_DEMAND_PREFIXES = ['data/vocab/', 'data/roots/', 'data/knownwords/', 'd
   // Grammar notes (optional preview route /grammar; its data was already on demand) and the unused speaking-check model (no screen imports
   // src/speak/dss.model.js; only its tests do): 44 KB moved out of the first install by lane platform (12 Nov) to pay for its route entries.
   'src/grammar/', 'src/speak/dss.model.js',
+  // alef-tools lane 7 (12 Nov): the Language packs page (#/packs), the Shabbat-safe check and the list of packs, fetched on first open.
+  'src/settings/', 'data/packs/',
   // lane games-books (12 Nov): This Week's Parashah, Torah Search (its 0.7 MB letters-only index) and the Verse Notebook, fetched on first open.
   'src/torahstudy/', 'data/torahstudy/'];
 const ON_DEMAND_FILES = new Set([
@@ -158,7 +167,7 @@ const ON_DEMAND_FILES = new Set([
   'src/talk/talk.view.js', 'src/talk/talk.model.js', 'src/talk/engine.js', 'src/talk/data.js', 'src/talk/speech.js',
   // Talk language pack code (tokenizer, decoding loop, downloader, worker): fetched with the Talk screen, runtime-cached. The packs themselves
   // (assets/vendor/_nmt, about 80 MB a direction) and their runtime (assets/vendor/_ort) are never listed here: assets/vendor/ is skipped above.
-  'src/talk/hybrid.js', 'src/talk/nmt/tokenizer.js', 'src/talk/nmt/decode.js', 'src/talk/nmt/runtime.js', 'src/talk/nmt/postedit.js', 'src/talk/nmt/pack.js', 'src/talk/nmt/worker.js', 'src/talk/nmt/client.js',
+  'src/talk/hybrid.js', 'src/talk/nmt/tokenizer.js', 'src/talk/nmt/decode.js', 'src/talk/nmt/runtime.js', 'src/talk/nmt/postedit.js', 'src/talk/nmt/pack.js', 'src/talk/nmt/worker.js', 'src/talk/nmt/client.js', 'src/talk/nmt/memory.js', 'src/talk/nmt/tools.js',
   // Torah reader view: route code only (the router loads views lazily; its model/loader files stay installed), fetched when the reader first opens, runtime-cached by sw.js (keeps first install under 3.95 MiB after the full-Torah reader landed).
   'src/torahreader/torahreader.view.js',
   // Ask the Torah (#/ask): route code only, fetched on first open, runtime-cached (keeps first install under 3.95 MiB).
@@ -199,7 +208,7 @@ const ON_DEMAND_FILES = new Set([
   'assets/fonts/web/gveret-levin.woff2',
   // Star of David light stylesheet: loaded when #/light first opens, runtime-cached.
   'assets/css/light.css']);
-export const isOnDemand = (rel) => !KEEP_DATA.has(rel) && (ON_DEMAND_FILES.has(rel) || /^data\/curriculum\/resource-concepts-/.test(rel) || ON_DEMAND_PREFIXES.some((p) => rel.startsWith(p)));
+export const isOnDemand = (rel) => !KEEP_DATA.has(rel) && (isToolCode(rel) || ON_DEMAND_FILES.has(rel) || /^data\/curriculum\/resource-concepts-/.test(rel) || ON_DEMAND_PREFIXES.some((p) => rel.startsWith(p)));
 const DATA_ONLY_JSON = (rel) => !rel.startsWith('data/') || rel.endsWith('.json');
 
 function walk(dir, out = [], root = repoRoot) {

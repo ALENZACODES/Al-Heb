@@ -14,7 +14,7 @@ import { canListen, listenOnce } from './speech.js';
 import { translateLine } from './hybrid.js';
 import { maskName, showsName } from './nmt/postedit.js';
 import { sharedPack } from './nmt/client.js';
-import { DIRECTIONS, DIRECTION_LABEL, megabytes, connectionKind, tooFull } from './nmt/pack.js';
+import { DIRECTIONS, DIRECTION_LABEL, megabytes, connectionKind, tooFull, whyNot, wifiOnly } from './nmt/pack.js';
 import { loadJSON } from '../curriculum/data.js';
 
 export const METHOD_LABEL = Object.freeze({
@@ -33,6 +33,8 @@ export const PACK_OFFER = 'Aleph has no stored line for that. A language pack ca
 export const PACK_CELLULAR = 'You seem to be on mobile data. Wait for Wi-Fi if your plan is limited.';
 export const PACK_SAVER = 'Data saving is on in this browser. Wait for Wi-Fi, or turn it off for this download.';
 export const PACK_FULL = 'This device reports too little free space for the pack.';
+export const PACK_WIFI_ONLY = 'Only on Wi-Fi is switched on, and this does not look like Wi-Fi. You can change that on the Language packs page in Settings.';
+export const PACK_OVER_LIMIT = 'That would pass the storage limit you set for language packs. You can change it on the Language packs page in Settings.';
 export const PACK_FAILED = 'The download stopped. What arrived is kept; press the button again to carry on.';
 export const PACK_CANNOT_RUN = 'This browser could not start the language pack. Stored lines still work.';
 export const ENGINE_WORDS = Object.freeze({ webgpu: 'the graphics chip', wasm: 'the processor' });
@@ -154,7 +156,7 @@ export function mount(root, ctx = {}) {
     packBox.append(row);
   }
   const packSpeed = h('button', { type: 'button', class: 'btn secondary', hidden: true, onclick: speedCheck }, 'Check Translation Speed');
-  packBox.append(packNote, h('div', { class: 'talk-pack-row' }, packSpeed, packRemove));
+  packBox.append(packNote, h('div', { class: 'talk-pack-row' }, packSpeed, packRemove), h('p', { class: 'talk-small' }, h('a', { href: '#/packs', id: 'talk-packs-link' }, 'Language packs and storage')));
 
   const suggestTitle = h('h2', { hidden: true }, 'Lines Aleph Knows');
   const suggest = h('ul', { class: 'talk-list', hidden: true });
@@ -269,11 +271,12 @@ export function mount(root, ctx = {}) {
       const st = await pack.state(d);
       if (await tooFull(st.missing)) { packNote.textContent = PACK_FULL; return; }
       const kind = connectionKind();
+      if (kind && st.missing > 0 && wifiOnly()) { packNote.textContent = PACK_WIFI_ONLY; return; }
       if (kind && !p.btn.dataset.asked) { p.btn.dataset.asked = '1'; packNote.textContent = `${kind === 'saver' ? PACK_SAVER : PACK_CELLULAR} Press the button again to download about ${megabytes(st.missing)} MB now.`; return; }
       p.busy = true; p.stop = new AbortController();
       p.bar.hidden = false; p.bar.value = 0; p.btn.textContent = 'Stop';
       let shown = -1;
-      await pack.download(d, { signal: p.stop.signal, onProgress: (have, total) => {
+      await pack.download(d, { userStarted: true, signal: p.stop.signal, onProgress: (have, total) => {
         if (!alive) return;
         const pct = total ? Math.floor((100 * have) / total) : 0;
         if (pct === shown) return; shown = pct;
@@ -289,7 +292,9 @@ export function mount(root, ctx = {}) {
       if (ok && last && last.needsPack === d) run(last.source, last.direction);
     } catch (e) {
       p.busy = false; p.stop = null; p.bar.hidden = true;
-      if (alive) { packNote.textContent = /** @type {any} */ (e)?.message === 'no-storage' ? PACK_NONE : PACK_FAILED; paintPack(); }
+      // why it stopped, in the shared loader's short codes (src/talk/nmt/pack.js whyNot)
+      const why = whyNot(e);
+      if (alive) { packNote.textContent = why === 'no-storage' ? PACK_NONE : why === 'wifi-only' ? PACK_WIFI_ONLY : why === 'too-full' || why === 'quota' ? PACK_FULL : why === 'over-limit' ? PACK_OVER_LIMIT : PACK_FAILED; paintPack(); }
     }
   }
 
@@ -439,8 +444,12 @@ export function mount(root, ctx = {}) {
     if (alive) status.textContent = 'The stored lines could not be loaded. Check your connection once and open this screen again; after that it works offline.';
   });
 
+  // Word notes on tapped Hebrew: only when the Words language pack is already on this device (src/words/anywhere.js, lazy).
+  let offWords = () => {};
+  import('../words/anywhere.js').then((m) => m.armIfPackReady(root, h)).then((off) => { if (alive) offWords = off; else off(); }).catch(() => {});
+
   return () => {
-    alive = false;
+    alive = false; offWords();
     for (const d of DIRECTIONS) packRows[d].stop?.abort(); // parts that arrived are kept; the rest waits for the next visit
     stopListening();
     stopEnglish();

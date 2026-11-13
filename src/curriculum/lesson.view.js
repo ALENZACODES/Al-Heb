@@ -35,7 +35,7 @@ export function mountLesson(root, ctx, lessonId) {
   const testOut = ctx?.query?.testout === "1";
   // Short sessions and calm mode: the lesson comes in small parts (lesson.parts.js)
   if (!testOut && (chunkedLessons(ctx) || ctx?.query?.quick === "1") && byId[lessonId]) return mountChunkedLesson(root, ctx, lessonId); // ?quick=1: the 3-minute lesson uses the same short parts
-  let alive = true, offQuiz = () => {};
+  let alive = true, offQuiz = () => {}, offWords = () => {};
   const wrap = el("article", { class: "alef-lesson-page", "aria-labelledby": "view-title" });
   root.append(wrap);
   const lesson = byId[lessonId];
@@ -138,6 +138,8 @@ export function mountLesson(root, ctx, lessonId) {
             r ? slowButton(ctx, "line", r.lines > 1 ? `${id}-l1` : id, `Listen to ${r.title}`, note) : null,
             el("a", { class: "alef-link", href: `#/read/${id}` }, "Read")));
       }))));
+    const wordSlot = el("div", { class: "alef-wordnotes-slot" });
+    if (teach) parts.push(wordSlot);
     parts.push(note);
     if (teach) { const gs = el("div", { class: "alef-spotlight-slot" }); parts.push(gs); import("../coursemap/spotlight.js").then((m) => alive && m.mountSpotlight(gs, lesson.id)).catch(() => {}); } // C9: grammar spotlight, on demand
 
@@ -237,6 +239,8 @@ export function mountLesson(root, ctx, lessonId) {
     }
 
     replaceKeepingFocus(wrap, h1, ...parts);
+    // Word Notes (tap a Hebrew word): the code and this lesson's notes are fetched now, after the lesson is on screen (src/words/, lazy).
+    if (teach) import("../words/lesson-notes.js").then((m) => m.mountWordNotes(wordSlot, wrap, ctx, lesson, el)).then((off) => { if (alive) offWords = off; else off(); }).catch(() => {});
     if (!visited && lastPart && typeof IntersectionObserver === 'function') {
       try {
         const io = new IntersectionObserver((es) => { if (es.some((e) => e.isIntersecting)) { visited = true; try { io.disconnect(); } catch { /* ignore */ } syncGate(); } }, { rootMargin: '0px 0px -10% 0px' });
@@ -244,5 +248,5 @@ export function mountLesson(root, ctx, lessonId) {
       } catch { visited = true; syncGate(); }
     }
   })().catch((e) => { wrap.replaceChildren(h1, el("p", { role: "alert" }, "This lesson did not load. Please reload the page and try again.")); });
-  return () => { alive = false; offQuiz(); wrap.remove(); };
+  return () => { alive = false; offQuiz(); offWords(); wrap.remove(); };
 }

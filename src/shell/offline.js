@@ -96,6 +96,10 @@ export const ON_DEMAND_GROUPS = Object.freeze([
   { id: "od-light", label: "Star of David light (page, style and printable stencil)", test: /^(src\/light\/|assets\/light\/|assets\/css\/light\.css$)/, approxMB: 0.02 },
   // Lane 1 (M-08, 12 Nov): the code for About's Held Recordings list (its data file is in "Audio clip list" above).
   { id: "od-held", label: "Held Recordings list on About", test: /^src\/shell\/held-recordings\.js$/, approxMB: 0.01 },
+  // Word notes (12 Nov): the per-lesson notes and the card code. Listed before the Language Packs group, which would otherwise claim the tools folder.
+  { id: "od-words", label: "Word notes for every lesson (tap a Hebrew word)", test: /^(src\/words\/|assets\/vendor\/_alef-tools\/morph@|assets\/css\/words\.css$)/, approxMB: 1.2 },
+  // alef-tools lane 7 (12 Nov): the Language Packs page and the pack downloader. Code only: a pack itself is downloaded on that page, on request.
+  { id: "od-packs", label: "Language Packs page and the pack downloader (the packs themselves are downloaded on that page)", test: /^(src\/settings\/|data\/packs\/|assets\/vendor\/_alef-tools\/)/, approxMB: 0.05 },
   { id: "od-sync", label: "Move to another device, your certificate and the offline pack lists", test: /^(src\/sync\/|data\/offline\/)/, approxMB: 0.08 }, // lane 4 (12 Nov)
   // lane 6 (12 Nov round 2): Reading Without Vowels, the placement check page, trope families and per-aliyah practice (route code)
   { id: "od-bridge-trope-placement", label: "Reading without vowels, the placement check, trope families and aliyah practice (route code)", test: /^src\/(bridge\/|placement\/(placement\.view|model|loader)\.js$|trope\/(families|practice\.view)\.js$)/, approxMB: 0.07 },

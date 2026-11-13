@@ -57,6 +57,7 @@ Read directly on 2026-11-04:
 | `generated-images` | image tools | illustrations (pipeline built, repo says none ingested for real yet) | tool terms; copyright in machine-made images uncertain | Unknown | No | Disclosure line recommended in the repo | unverified |
 | `audio-voices` | recordings / synthetic speech | 87 synthetic word clips from an outside generator under `audio/` (0 recorded by a person); counts as of 2026-11-05 from `cat data/audio/summary.json`; this row's older "0 of 16,290" came from `docs/voices/coverage.md` before they were added | unknown: generator, model and voice terms not known to the repo | Unknown | No | n/a | unverified (recorded as "unknown: not cleared") |
 | `ts-fsrs-weights` | ts-fsrs 6.0.0 (open-spaced-repetition) | 21 default FSRS-6 weights in `src/fsrs/fsrs6.js` | MIT | Yes-with-conditions | No | Keep the MIT notice (`docs/licenses/MIT-ts-fsrs.txt`) | partly-verified |
+| `dictabert` | DictaBERT joint and tiny-joint (Dicta) | word notes in lessons (built ahead of time) and the optional Word helper language pack | CC BY 4.0 | Yes-with-conditions | No | Credit Dicta, name the licence, say the tiny one was changed in size and format | verified-primary (licence tag read on both Hugging Face pages, 2026-11-12) |
 | `project-original` | Project-written text and code | phrasebook, glosses, guides, code | owner's; none chosen | n/a | No | n/a | project-owned |
 | `lessons-unstated-licence` | `data/curriculum/lessons.json` | 117 records merged into the vocabulary set | none stated | Unknown | They sit inside a CC BY-SA data set without a stated basis | n/a | unverified |
 | `morph-pictures` | Letter-memory pictures (`assets/letters/morph/*.svg`) | the picture for each letter | original works by John Khan, no third-party sources (owner's statement); letter outlines inside come from DejaVu Sans | n/a | No (but see dejavu-outlines notice) | n/a | project-owned |
@@ -137,6 +138,9 @@ Each file names `data/vocab/words.json` as its source and copies Hebrew, pointin
 
 ### ts-fsrs-weights
 The weights are copied from the published defaults of ts-fsrs 6.0.0 (MIT, per `docs/research/B2-fsrs6.md`). The exact copyright line in the project's LICENSE file was not read; the notice file marks that line as to be replaced. The algorithm code is a hand port.
+
+### dictabert
+Two pages on Hugging Face were read on 2026-11-12: `dicta-il/dictabert-joint` (commit 7b1256fc0846e22d1af431eae299e2dcecee2778) and `dicta-il/dictabert-tiny-joint` (commit 708026b7297ffde293f14a3a592f8cf649f12c38). Both carry the tag `license:cc-by-4.0`. What the app holds: per-lesson word notes worked out ahead of time with dictabert-joint, and the reader code for an optional download (the Word helper language pack, not offered yet), which is dictabert-tiny-joint stored in smaller numbers and another file format. CC BY 4.0 asks for credit, the licence name and a note of changes; the credits page row carries all three. The pinned commits are in the tools repo (`models.manifest.json`; the pack's file hashes in `packages/morph/pack/pack.json`), and the tools commit itself is pinned in `data/alef-tools.lock.json` here. Hebrew-language tools from another group that carry no licence on their pages were left out.
 
 ### reference-only-sites
 Linked, not copied (per the repo's own source notes). No attribution duty is created by a link.

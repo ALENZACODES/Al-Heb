@@ -350,6 +350,272 @@
    "note": "Shekel is masculine, so prices take the masculine set. (One shekel and two shekels are said differently, so this line starts at three.)",
    "tplHe": "{m} שְׁקָלִים",
    "tplEn": "{n} shekels"
+  },
+  "teens": {
+   "values": [
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+   ],
+   "english": [
+    "eleven",
+    "twelve",
+    "thirteen",
+    "fourteen",
+    "fifteen",
+    "sixteen",
+    "seventeen",
+    "eighteen",
+    "nineteen"
+   ],
+   "m": [
+    "אַחַד עָשָׂר",
+    "שְׁנֵים עָשָׂר",
+    "שְׁלוֹשָׁה עָשָׂר",
+    "אַרְבָּעָה עָשָׂר",
+    "חֲמִשָּׁה עָשָׂר",
+    "שִׁשָּׁה עָשָׂר",
+    "שִׁבְעָה עָשָׂר",
+    "שְׁמוֹנָה עָשָׂר",
+    "תִּשְׁעָה עָשָׂר"
+   ],
+   "f": [
+    "אַחַת עֶשְׂרֵה",
+    "שְׁתֵּים עֶשְׂרֵה",
+    "שְׁלוֹשׁ עֶשְׂרֵה",
+    "אַרְבַּע עֶשְׂרֵה",
+    "חֲמֵשׁ עֶשְׂרֵה",
+    "שֵׁשׁ עֶשְׂרֵה",
+    "שְׁבַע עֶשְׂרֵה",
+    "שְׁמוֹנֶה עֶשְׂרֵה",
+    "תְּשַׁע עֶשְׂרֵה"
+   ],
+   "note": "Eleven to nineteen are two words: the unit, then a word for ten. With a masculine noun the ten word is asar; with a feminine noun it is esreh and the unit is the short one."
+  },
+  "tens": {
+   "values": [
+    20,
+    30,
+    40,
+    50,
+    60,
+    70,
+    80,
+    90,
+    100,
+    1000
+   ],
+   "english": [
+    "twenty",
+    "thirty",
+    "forty",
+    "fifty",
+    "sixty",
+    "seventy",
+    "eighty",
+    "ninety",
+    "a hundred",
+    "a thousand"
+   ],
+   "he": [
+    "עֶשְׂרִים",
+    "שְׁלוֹשִׁים",
+    "אַרְבָּעִים",
+    "חֲמִשִּׁים",
+    "שִׁשִּׁים",
+    "שִׁבְעִים",
+    "שְׁמוֹנִים",
+    "תִּשְׁעִים",
+    "מֵאָה",
+    "אֶלֶף"
+   ],
+   "note": "The tens have one form for both kinds of noun."
+  },
+  "and": {
+   "note": "From twenty-one on: the ten, then \"and\" joined to the unit. Only the unit changes with the noun. The joined \"and\" is said ve-, u- or va- depending on the sound after it, so each joined form is listed whole.",
+   "m": [
+    "וְאֶחָד",
+    "וּשְׁנַיִם",
+    "וּשְׁלוֹשָׁה",
+    "וְאַרְבָּעָה",
+    "וַחֲמִשָּׁה",
+    "וְשִׁשָּׁה",
+    "וְשִׁבְעָה",
+    "וּשְׁמוֹנָה",
+    "וְתִשְׁעָה"
+   ],
+   "f": [
+    "וְאַחַת",
+    "וּשְׁתַּיִם",
+    "וְשָׁלוֹשׁ",
+    "וְאַרְבַּע",
+    "וְחָמֵשׁ",
+    "וְשֵׁשׁ",
+    "וְשֶׁבַע",
+    "וּשְׁמוֹנֶה",
+    "וְתֵשַׁע"
+   ],
+   "samples": [
+    21,
+    32,
+    43,
+    54,
+    65,
+    76,
+    87,
+    98
+   ]
+  },
+  "dates": {
+   "note": "A date is the day number from the masculine set, then \"in\" joined to the month. The first six days of the week are \"day\" plus first, second and so on; the seventh has its own name.",
+   "days": [
+    {
+     "en": "Sunday",
+     "he": "יוֹם רִאשׁוֹן"
+    },
+    {
+     "en": "Monday",
+     "he": "יוֹם שֵׁנִי"
+    },
+    {
+     "en": "Tuesday",
+     "he": "יוֹם שְׁלִישִׁי"
+    },
+    {
+     "en": "Wednesday",
+     "he": "יוֹם רְבִיעִי"
+    },
+    {
+     "en": "Thursday",
+     "he": "יוֹם חֲמִישִׁי"
+    },
+    {
+     "en": "Friday",
+     "he": "יוֹם שִׁשִּׁי"
+    },
+    {
+     "en": "Saturday",
+     "he": "שַׁבָּת"
+    }
+   ],
+   "months": [
+    {
+     "en": "January",
+     "he": "יָנוּאָר",
+     "in": "בְּיָנוּאָר"
+    },
+    {
+     "en": "February",
+     "he": "פֶבְּרוּאָר",
+     "in": "בְּפֶבְּרוּאָר"
+    },
+    {
+     "en": "March",
+     "he": "מֶרְץ",
+     "in": "בְּמֶרְץ"
+    },
+    {
+     "en": "April",
+     "he": "אַפְּרִיל",
+     "in": "בְּאַפְּרִיל"
+    },
+    {
+     "en": "May",
+     "he": "מַאי",
+     "in": "בְּמַאי"
+    },
+    {
+     "en": "June",
+     "he": "יוּנִי",
+     "in": "בְּיוּנִי"
+    },
+    {
+     "en": "July",
+     "he": "יוּלִי",
+     "in": "בְּיוּלִי"
+    },
+    {
+     "en": "August",
+     "he": "אוֹגוּסְט",
+     "in": "בְּאוֹגוּסְט"
+    },
+    {
+     "en": "September",
+     "he": "סֶפְּטֶמְבֶּר",
+     "in": "בְּסֶפְּטֶמְבֶּר"
+    },
+    {
+     "en": "October",
+     "he": "אוֹקְטוֹבֶּר",
+     "in": "בְּאוֹקְטוֹבֶּר"
+    },
+    {
+     "en": "November",
+     "he": "נוֹבֶמְבֶּר",
+     "in": "בְּנוֹבֶמְבֶּר"
+    },
+    {
+     "en": "December",
+     "he": "דֵּצֶמְבֶּר",
+     "in": "בְּדֵצֶמְבֶּר"
+    }
+   ],
+   "samples": [
+    [
+     1,
+     0
+    ],
+    [
+     14,
+     1
+    ],
+    [
+     8,
+     2
+    ],
+    [
+     23,
+     3
+    ],
+    [
+     5,
+     4
+    ],
+    [
+     30,
+     5
+    ],
+    [
+     4,
+     6
+    ],
+    [
+     19,
+     7
+    ],
+    [
+     11,
+     8
+    ],
+    [
+     27,
+     9
+    ],
+    [
+     2,
+     10
+    ],
+    [
+     31,
+     11
+    ]
+   ]
   }
  },
  "questions": {
@@ -819,7 +1085,16 @@
    "עָלֶיהָ",
    "אֵלַיִךְ",
    "אֵלֶיהָ",
-   "אֶצְלָהּ"
+   "אֶצְלָהּ",
+   "אַחַד",
+   "שְׁנֵים",
+   "עֶשְׂרֵה",
+   "שְׁתֵּים",
+   "שְׁלוֹשׁ",
+   "חֲמֵשׁ",
+   "שְׁבַע",
+   "תְּשַׁע",
+   "יוּנִי"
   ]
  }
 }

@@ -1,0 +1,674 @@
+{
+ "schema": "alef-grammar-examples/1",
+ "note": "Made by tools/grammar/examples.mjs. Sentences are copied whole from the lesson data; do not edit by hand.",
+ "sources": [
+  "data/curriculum/lessons.json",
+  "data/curriculum/dialogues.json",
+  "data/curriculum/lessons-intermediate/",
+  "data/curriculum/practical/"
+ ],
+ "words": {
+  "אֲנִי": [
+   {
+    "he": "אֲנִי לֹא יוֹדֵעַ",
+    "en": "I don't know"
+   },
+   {
+    "he": "אֲנִי לֹא מֵבִין",
+    "en": "I don't understand (m.)"
+   }
+  ],
+  "אֲנַחְנוּ": [
+   {
+    "he": "הַנֵּרוֹת הַלָּלוּ אֲנַחְנוּ מַדְלִיקִין",
+    "en": "We light these lights"
+   }
+  ],
+  "אֲרוּחַת": [
+   {
+    "he": "מָתַי אֲרוּחַת הַבֹּקֶר?",
+    "en": "When is breakfast?"
+   }
+  ],
+  "אִתְּךָ": [
+   {
+    "he": "הַכֹּל בְּסֵדֶר אִתְּךָ?",
+    "en": "are you OK?"
+   }
+  ],
+  "אֵיךְ": [
+   {
+    "he": "סְלִיחָה, אֵיךְ מַגִּיעִים לַתַּחֲנָה הַמֶּרְכָּזִית?",
+    "en": "Excuse me, how do I get to the central station?"
+   }
+  ],
+  "אֵין": [
+   {
+    "he": "אֵין בַּעַד מָה",
+    "en": "you're welcome (lit. nothing for what)"
+   },
+   {
+    "he": "אֵין לִי סוֹלְלָה",
+    "en": "I have no battery"
+   }
+  ],
+  "אֵיפֹה": [
+   {
+    "he": "אֵיפֹה בֵּית הַחוֹלִים?",
+    "en": "where is the hospital?"
+   },
+   {
+    "he": "אֵיפֹה בֵּית הַמִּרְקַחַת?",
+    "en": "where is the pharmacy?"
+   }
+  ],
+  "אֶחָד": [
+   {
+    "he": "אֶפְשָׁר עוֹד אֶחָד?",
+    "en": "can I have another one?"
+   },
+   {
+    "he": "כֵּן, יֶלֶד אֶחָד.",
+    "en": "Yes, one boy."
+   }
+  ],
+  "אַרְבָּעִים": [
+   {
+    "he": "אַרְבָּעִים וּשְׁמוֹנָה שְׁקָלִים.",
+    "en": "Forty-eight shekels."
+   }
+  ],
+  "אַרְבָּעָה": [
+   {
+    "he": "אַרְבָּעָה אֲלָפִים שְׁקָלִים.",
+    "en": "Four thousand shekels."
+   }
+  ],
+  "אַתְּ": [
+   {
+    "he": "הַכֹּל טוֹב. מֵאֵיפֹה אַתְּ?",
+    "en": "All good. Where are you from?"
+   }
+  ],
+  "אַתֶּם": [
+   {
+    "he": "מָתַי אַתֶּם סוֹגְרִים?",
+    "en": "when do you close?"
+   },
+   {
+    "he": "מָתַי אַתֶּם סוֹגְרִים הַיּוֹם?",
+    "en": "When do you close today?"
+   }
+  ],
+  "אַתָּה": [
+   {
+    "he": "אַתָּה מְדַבֵּר אַנְגְּלִית?",
+    "en": "do you speak English?"
+   },
+   {
+    "he": "בֶּן כַּמָּה אַתָּה?",
+    "en": "how old are you? (lit. son of how much)"
+   }
+  ],
+  "אֹכֶל": [
+   {
+    "he": "לָקַחַת פַּעֲמַיִם בְּיוֹם, אַחֲרֵי אֹכֶל.",
+    "en": "To take twice a day, after food."
+   }
+  ],
+  "בְּיוֹם": [
+   {
+    "he": "שָׁלוֹשׁ פְּעָמִים בְּיוֹם, עִם מַיִם",
+    "en": "Three times a day, with water"
+   },
+   {
+    "he": "אַתָּה רוֹצֶה לָבוֹא לֶאֱכֹל בְּיוֹם שִׁשִּׁי?",
+    "en": "Do you want to come to eat on Friday (night)?"
+   }
+  ],
+  "בֵּית": [
+   {
+    "he": "זֶה מוּל הַתַּחֲנָה, עַל יַד בֵּית הַחוֹלִים",
+    "en": "It's opposite the station, next to the hospital"
+   },
+   {
+    "he": "אֵיפֹה בֵּית הַחוֹלִים?",
+    "en": "where is the hospital?"
+   }
+  ],
+  "בָּהּ": [
+   {
+    "he": "עֵץ חַיִּים הִיא לַמַּחֲזִיקִים בָּהּ",
+    "en": "It is a tree of life to those who hold fast to it"
+   }
+  ],
+  "גְּדוֹלָה": [
+   {
+    "he": "יֵשׁ מִדָּה גְּדוֹלָה יוֹתֵר?",
+    "en": "is there a bigger size?"
+   }
+  ],
+  "גַּן": [
+   {
+    "he": "אֵיפֹה יֵשׁ גַּן?",
+    "en": "Where is the kindergarten?"
+   }
+  ],
+  "גָּדוֹל": [
+   {
+    "he": "קָפֶה הָפוּךְ גָּדוֹל, בְּלִי סֻכָּר.",
+    "en": "A large hafuch, without sugar."
+   }
+  ],
+  "דִּירָה": [
+   {
+    "he": "אֲנִי מְחַפֵּשׂ דִּירָה",
+    "en": "I'm looking for an apartment"
+   },
+   {
+    "he": "שָׁלוֹם, אֲנִי מְחַפֵּשׂ דִּירָה. כַּמָּה חֲדָרִים יֵשׁ?",
+    "en": "Hello, I'm looking for an apartment. How many rooms are there?"
+   }
+  ],
+  "הִיא": [
+   {
+    "he": "עֵץ חַיִּים הִיא לַמַּחֲזִיקִים בָּהּ",
+    "en": "It is a tree of life to those who hold fast to it"
+   }
+  ],
+  "הַבַּיִת": [
+   {
+    "he": "לֵךְ יָשָׁר, זֶה עַל יַד הַבַּיִת.",
+    "en": "Go straight, it's next to the house."
+   }
+  ],
+  "הַחֶדֶר": [
+   {
+    "he": "הַחֶדֶר בַּקּוֹמָה הַשְּׁנִיָּה. הִנֵּה הַמַּפְתֵּחַ.",
+    "en": "The room is on the second floor. Here is the key."
+   }
+  ],
+  "הַשָּׁעָה": [
+   {
+    "he": "מָחָר, הַשָּׁעָה עֶשֶׂר.",
+    "en": "Tomorrow, at ten o'clock."
+   }
+  ],
+  "הוּא": [
+   {
+    "he": "הַקָּדוֹשׁ בָּרוּךְ הוּא",
+    "en": "the Holy One, blessed is he"
+   },
+   {
+    "he": "שְׁמֵהּ דְקוּדְשָׁא בְּרִיךְ הוּא",
+    "en": "the name of the Holy One, blessed is he"
+   }
+  ],
+  "וּשְׁמוֹנָה": [
+   {
+    "he": "אַרְבָּעִים וּשְׁמוֹנָה שְׁקָלִים.",
+    "en": "Forty-eight shekels."
+   }
+  ],
+  "זְמַן": [
+   {
+    "he": "כַּמָּה זְמַן זֶה לוֹקֵחַ?",
+    "en": "How long does it take?"
+   },
+   {
+    "he": "דֹּאַר אֲוִיר. כַּמָּה זְמַן זֶה לוֹקֵחַ?",
+    "en": "Air mail. How long does it take?"
+   }
+  ],
+  "זֶה": [
+   {
+    "he": "אֶקַּח אֶת זֶה",
+    "en": "I'll take this"
+   },
+   {
+    "he": "אֶקַּח אֶת זֶה.",
+    "en": "I'll take this."
+   }
+  ],
+  "זֹאת": [
+   {
+    "he": "זֹאת הַפַּעַם הָרִאשׁוֹנָה שֶׁלִּי בְּיִשְׂרָאֵל",
+    "en": "It's my first time in Israel"
+   }
+  ],
+  "זוֹל": [
+   {
+    "he": "יֵשׁ יוֹתֵר זוֹל?",
+    "en": "Is there (anything) cheaper?"
+   }
+  ],
+  "חֲדַר": [
+   {
+    "he": "בֶּטַח. חֲדַר הַלְבָּשָׁה שָׁם.",
+    "en": "Of course. The fitting room is there."
+   }
+  ],
+  "חֲדָרִים": [
+   {
+    "he": "שְׁלוֹשָׁה חֲדָרִים עִם מִרְפֶּסֶת",
+    "en": "Three rooms with a balcony"
+   },
+   {
+    "he": "שְׁלוֹשָׁה חֲדָרִים, קוֹמָה רִאשׁוֹנָה, עִם מִרְפֶּסֶת.",
+    "en": "Three rooms, first floor, with a balcony."
+   }
+  ],
+  "חֲדָשׁוֹת": [
+   {
+    "he": "יֵשׁ חֲדָשׁוֹת הַיּוֹם?",
+    "en": "Is there news today?"
+   }
+  ],
+  "חֲמִשָּׁה": [
+   {
+    "he": "בְּסֵדֶר, חֲמִשָּׁה עָשָׂר.",
+    "en": "OK, fifteen."
+   }
+  ],
+  "חַם": [
+   {
+    "he": "חַם מְאֹד בַּחוּץ",
+    "en": "It's very hot outside"
+   },
+   {
+    "he": "חַם מְאֹד, יֵשׁ שֶׁמֶשׁ.",
+    "en": "Very hot, it's sunny."
+   }
+  ],
+  "חָמֵשׁ": [
+   {
+    "he": "לֹא, חָמֵשׁ דַּקּוֹת.",
+    "en": "No, five minutes."
+   }
+  ],
+  "טוֹב": [
+   {
+    "he": "שֶׁגְּמָלַנִי כָּל טוֹב",
+    "en": "who has bestowed every good on me"
+   },
+   {
+    "he": "שָׁבוּעַ טוֹב, לְהִתְרָאוֹת!",
+    "en": "A good week, see you!"
+   }
+  ],
+  "טוֹבָה": [
+   {
+    "he": "גְּמַר חֲתִימָה טוֹבָה",
+    "en": "a good final sealing (Yom Kippur greeting)"
+   },
+   {
+    "he": "שִׂים שָׁלוֹם טוֹבָה וּבְרָכָה חֵן וָחֶסֶד וְרַחֲמִים",
+    "en": "Grant peace, goodness and blessing, grace, kindness and mercy"
+   }
+  ],
+  "טוֹבוֹת": [
+   {
+    "he": "הַגּוֹמֵל לְחַיָּבִים טוֹבוֹת",
+    "en": "who bestows good things on the undeserving"
+   },
+   {
+    "he": "הַגּוֹמֵל לְחַיָּבִים טוֹבוֹת שֶׁגְּמָלַנִי כָּל טוֹב",
+    "en": "who bestows good things on the undeserving, and has bestowed every good on me"
+   }
+  ],
+  "יְלָדִים": [
+   {
+    "he": "יֵשׁ לְךָ יְלָדִים?",
+    "en": "Do you have children?"
+   }
+  ],
+  "יֵשׁ": [
+   {
+    "he": "אֵיפֹה יֵשׁ דֶּלֶק?",
+    "en": "Where is there fuel?"
+   },
+   {
+    "he": "אֵיפֹה יֵשׁ חֲנָיָה?",
+    "en": "Where is there parking?"
+   }
+  ],
+  "יָקָר": [
+   {
+    "he": "זֶה יָקָר מְאֹד",
+    "en": "That's very expensive"
+   },
+   {
+    "he": "זֶה יָקָר. יֵשׁ הַנָּחָה?",
+    "en": "That's expensive. Is there a discount?"
+   }
+  ],
+  "יוֹם": [
+   {
+    "he": "תּוֹדָה, יוֹם נָעִים!",
+    "en": "Thanks, have a nice day!"
+   },
+   {
+    "he": "הִנֵּה, תּוֹדָה. יוֹם טוֹב!",
+    "en": "Here you go, thanks. Have a good day!"
+   }
+  ],
+  "יוֹתֵר": [
+   {
+    "he": "יוֹתֵר לְאַט, בְּבַקָּשָׁה",
+    "en": "Slower, please"
+   },
+   {
+    "he": "יֵשׁ יוֹתֵר זוֹל?",
+    "en": "Is there (anything) cheaper?"
+   }
+  ],
+  "כִּי": [
+   {
+    "he": "כִּי לְעוֹלָם חַסְדּוֹ",
+    "en": "for his kindness is for ever (the Hallel refrain)"
+   },
+   {
+    "he": "כִּי מִצִּיּוֹן תֵּצֵא תוֹרָה",
+    "en": "For from Zion will go forth Torah"
+   }
+  ],
+  "כֶּסֶף": [
+   {
+    "he": "אֲנִי רוֹצֶה לִמְשֹׁךְ כֶּסֶף",
+    "en": "I want to withdraw money"
+   }
+  ],
+  "כַּמָּה": [
+   {
+    "he": "כַּמָּה אֲנִי חַיָּב?",
+    "en": "How much do I owe?"
+   },
+   {
+    "he": "כַּמָּה הַחֻלְצָה הַזֹּאת?",
+    "en": "How much is this shirt?"
+   }
+  ],
+  "כּוֹס": [
+   {
+    "he": "כּוֹס יְשׁוּעוֹת אֶשָּׂא",
+    "en": "I will lift the cup of salvation"
+   }
+  ],
+  "לְךָ": [
+   {
+    "he": "יֵשׁ לְךָ חֹם?",
+    "en": "Do you have a fever?"
+   },
+   {
+    "he": "יֵשׁ לְךָ מַטְעֵן?",
+    "en": "Do you have a charger?"
+   }
+  ],
+  "לִי": [
+   {
+    "he": "אָבַד לִי הַדַּרְכּוֹן",
+    "en": "I lost my passport"
+   },
+   {
+    "he": "אָבַד לִי הַטֶּלֶפוֹן",
+    "en": "I lost my phone"
+   }
+  ],
+  "לֶחֶם": [
+   {
+    "he": "אֵיפֹה יֵשׁ לֶחֶם?",
+    "en": "Where is the bread?"
+   },
+   {
+    "he": "הַמּוֹצִיא לֶחֶם מִן הָאָרֶץ",
+    "en": "who brings forth bread from the earth"
+   }
+  ],
+  "לָהּ": [
+   {
+    "he": "אֵל נָא רְפָא נָא לָהּ",
+    "en": "God, please heal her"
+   }
+  ],
+  "מִי": [
+   {
+    "he": "מִי שֶׁבֵּרַךְ אֲבוֹתֵינוּ אַבְרָהָם יִצְחָק וְיַעֲקֹב",
+    "en": "He who blessed our ancestors Abraham, Isaac and Jacob"
+   },
+   {
+    "he": "מִי שֶׁגְּמָלְךָ טוֹב הוּא יִגְמָלְךָ כָּל־טוֹב",
+    "en": "May the one who bestowed good on you bestow on you every good"
+   }
+  ],
+  "מִן": [
+   {
+    "he": "מִן הַמֵּצַר קָרָאתִי יָּהּ",
+    "en": "from the narrow place I called on the LORD"
+   },
+   {
+    "he": "הַמּוֹצִיא לֶחֶם מִן הָאָרֶץ",
+    "en": "who brings forth bread from the earth"
+   }
+  ],
+  "מֵאָה": [
+   {
+    "he": "מֵאָה וַעֲשָׂרָה שְׁקָלִים.",
+    "en": "A hundred and ten shekels."
+   }
+  ],
+  "מַיִם": [
+   {
+    "he": "יֵשׁ מַיִם קָרִים?",
+    "en": "Is there cold water?"
+   },
+   {
+    "he": "מַיִם קָרִים, בְּבַקָּשָׁה",
+    "en": "Cold water, please"
+   }
+  ],
+  "מָה": [
+   {
+    "he": "אֵין מָה לַעֲשׂוֹת",
+    "en": "there's nothing to be done"
+   },
+   {
+    "he": "אַחִי, מָה הַמַּצָּב?",
+    "en": "Bro, how's it going?"
+   }
+  ],
+  "מָתַי": [
+   {
+    "he": "מָתַי אֶפְשָׁר לִרְאוֹת?",
+    "en": "When can I see (it)?"
+   },
+   {
+    "he": "מָתַי אֶפְשָׁר לָבוֹא?",
+    "en": "When can I come?"
+   }
+  ],
+  "עֶשְׂרִים": [
+   {
+    "he": "בְּעֵרֶךְ עֶשְׂרִים דַּקּוֹת.",
+    "en": "About twenty minutes."
+   }
+  ],
+  "עֶשֶׂר": [
+   {
+    "he": "מִשֶּׁבַע עַד עֶשֶׂר.",
+    "en": "From seven to ten."
+   },
+   {
+    "he": "מָחָר, הַשָּׁעָה עֶשֶׂר.",
+    "en": "Tomorrow, at ten o'clock."
+   }
+  ],
+  "עַל": [
+   {
+    "he": "חֲבָל עַל הַזְּמַן",
+    "en": "awesome (lit. a waste of the time)"
+   },
+   {
+    "he": "תִּשְׁמְרִי עַל עַצְמֵךְ",
+    "en": "take care of yourself (said to a woman)"
+   }
+  ],
+  "עָלֵינוּ": [
+   {
+    "he": "עָלֵינוּ לְשַׁבֵּחַ לַאֲדוֹן הַכֹּל",
+    "en": "It is upon us to praise the Master of all"
+   },
+   {
+    "he": "עֹשֶׂה שָׁלוֹם בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ",
+    "en": "He who makes peace in his heights, may he make peace for us"
+   }
+  ],
+  "עָשָׂר": [
+   {
+    "he": "בְּסֵדֶר, חֲמִשָּׁה עָשָׂר.",
+    "en": "OK, fifteen."
+   }
+  ],
+  "עוֹלֶה": [
+   {
+    "he": "כַּמָּה זֶה עוֹלֶה",
+    "en": "how much does this cost"
+   },
+   {
+    "he": "כַּמָּה זֶה עוֹלֶה?",
+    "en": "how much does it cost?"
+   }
+  ],
+  "עוּגָה": [
+   {
+    "he": "כֵּן, גַּם עוּגָה. כַּמָּה זֶה?",
+    "en": "Yes, a cake too. How much is it?"
+   }
+  ],
+  "פֹּה": [
+   {
+    "he": "בְּבַקָּשָׁה, פֹּה. הִנֵּה הַתַּפְרִיט.",
+    "en": "Please, here. Here is the menu."
+   }
+  ],
+  "קְטַנָּה": [
+   {
+    "he": "יֵשׁ מִדָּה קְטַנָּה?",
+    "en": "Do you have a small size?"
+   }
+  ],
+  "קָפֶה": [
+   {
+    "he": "אֲנִי רוֹצֶה קָפֶה",
+    "en": "I would like a coffee"
+   },
+   {
+    "he": "קָפֶה עִם חָלָב",
+    "en": "coffee with milk"
+   }
+  ],
+  "קָרִים": [
+   {
+    "he": "יֵשׁ מַיִם קָרִים?",
+    "en": "Is there cold water?"
+   },
+   {
+    "he": "מַיִם קָרִים, בְּבַקָּשָׁה",
+    "en": "Cold water, please"
+   }
+  ],
+  "רִאשׁוֹנָה": [
+   {
+    "he": "שְׁלוֹשָׁה חֲדָרִים, קוֹמָה רִאשׁוֹנָה, עִם מִרְפֶּסֶת.",
+    "en": "Three rooms, first floor, with a balcony."
+   }
+  ],
+  "רֹאשׁ": [
+   {
+    "he": "יֵשׁ לִי כְּאֵב רֹאשׁ",
+    "en": "I have a headache"
+   }
+  ],
+  "רוֹאֶה": [
+   {
+    "he": "כֵּן, אֲנִי רוֹאֶה. שְׁלוֹשָׁה לֵילוֹת.",
+    "en": "Yes, I see it. Three nights."
+   }
+  ],
+  "שְׁלוֹשָׁה": [
+   {
+    "he": "שְׁלוֹשָׁה חֲדָרִים עִם מִרְפֶּסֶת",
+    "en": "Three rooms with a balcony"
+   },
+   {
+    "he": "כֵּן, אֲנִי רוֹאֶה. שְׁלוֹשָׁה לֵילוֹת.",
+    "en": "Yes, I see it. Three nights."
+   }
+  ],
+  "שְׁקָלִים": [
+   {
+    "he": "אַרְבָּעָה אֲלָפִים שְׁקָלִים.",
+    "en": "Four thousand shekels."
+   },
+   {
+    "he": "מֵאָה וַעֲשָׂרָה שְׁקָלִים.",
+    "en": "A hundred and ten shekels."
+   }
+  ],
+  "שִׁשִּׁי": [
+   {
+    "he": "אַתָּה רוֹצֶה לָבוֹא לֶאֱכֹל בְּיוֹם שִׁשִּׁי?",
+    "en": "Do you want to come to eat on Friday (night)?"
+   }
+  ],
+  "שֶׁלְּךָ": [
+   {
+    "he": "מָה הַשֵּׁם שֶׁלְּךָ?",
+    "en": "What is your name?"
+   },
+   {
+    "he": "אֶפְשָׁר לְהִשְׁתַּמֵּשׁ בַּטֶּלֶפוֹן שֶׁלְּךָ?",
+    "en": "Can I use your phone?"
+   }
+  ],
+  "שֶׁלִּי": [
+   {
+    "he": "זֹאת הַפַּעַם הָרִאשׁוֹנָה שֶׁלִּי בְּיִשְׂרָאֵל",
+    "en": "It's my first time in Israel"
+   }
+  ],
+  "שַׁבָּת": [
+   {
+    "he": "שַׁבָּת שָׁלוֹם! לְחַיִּים!",
+    "en": "Shabbat shalom! Cheers!"
+   },
+   {
+    "he": "שַׁבָּת שָׁלוֹם! אֶפְשָׁר לְקַדֵּשׁ?",
+    "en": "Shabbat shalom! May we make Kiddush?"
+   }
+  ],
+  "שָׁלוֹשׁ": [
+   {
+    "he": "שָׁלוֹשׁ פְּעָמִים בְּיוֹם, עִם מַיִם",
+    "en": "Three times a day, with water"
+   }
+  ],
+  "שֻׁלְחָן": [
+   {
+    "he": "שֻׁלְחָן לִשְׁנַיִם, בְּבַקָּשָׁה",
+    "en": "a table for two, please"
+   }
+  ],
+  "תְּמוּנָה": [
+   {
+    "he": "אֲנִי שׁוֹלֵחַ לְךָ תְּמוּנָה.",
+    "en": "I'm sending you a picture."
+   }
+  ],
+  "תַּחֲנַת": [
+   {
+    "he": "אֵיפֹה תַּחֲנַת הָאוֹטוֹבּוּס?",
+    "en": "where is the bus stop?"
+   }
+  ]
+ }
+}

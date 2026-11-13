@@ -2,7 +2,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { TABS, PERSON_ORDER, DRAFT_NOTE, tablesFor, drill, have, adjFor, describe, compare, allHebrew } from '../src/grammar/tables.js';
+import { TABS, PERSON_ORDER, DRAFT_NOTE, tablesFor, drill, have, adjFor, describe, compare, allHebrew, numberHe, numberEn, dateHe, examplesFor, tableExamples, sameMarks } from '../src/grammar/tables.js';
+import { build as buildExamples, tableWords } from '../tools/grammar/examples.mjs';
 
 const read = (rel) => readFileSync(new URL(`../${rel}`, import.meta.url), 'utf8');
 const d = JSON.parse(read('data/grammar/tables.json'));
@@ -17,6 +18,7 @@ function typedWords() {
   for (const k of Object.values(d.pronouns)) out.push(...Object.values(k.forms));
   for (const p of d.prepositions) out.push(p.base, ...Object.values(p.forms));
   out.push(...d.numbers.cardinal.m, ...d.numbers.cardinal.f, ...d.numbers.ordinal.m, ...d.numbers.ordinal.f);
+  out.push(...[...d.numbers.teens.m, ...d.numbers.teens.f, ...d.numbers.dates.days.map((x) => x.he)].flatMap((x) => x.split(' ')), ...d.numbers.tens.he, ...d.numbers.dates.months.map((x) => x.he));
   out.push(...d.questions.words.map((w) => w.he), d.existence.yes, d.existence.no, ...d.existence.things.map((t) => t.he));
   for (const a of d.agreement.adjectives) out.push(a.ms, a.fs, a.mp, a.fp);
   for (const n of d.agreement.nouns) out.push(n.s, n.p);
@@ -100,6 +102,65 @@ test('"of" pairs: each pair shows the change its rule names', () => {
   for (const id of Object.keys(d.construct.rules)) assert.ok(d.construct.pairs.some((c) => c.rule === id), id);
 });
 
+test('numbers above ten: teens are two words, tens have one form, and joined numbers use whole typed words', () => {
+  const n = d.numbers;
+  assert.equal(n.teens.m.length, 9); assert.equal(n.teens.f.length, 9); assert.equal(n.tens.he.length, 10); assert.equal(n.and.m.length, 9); assert.equal(n.and.f.length, 9);
+  n.teens.m.forEach((m, i) => { assert.ok(m.endsWith(' ' + n.teens.m[0].split(' ')[1])); assert.ok(n.teens.f[i].endsWith(' ' + n.teens.f[0].split(' ')[1])); assert.notEqual(m, n.teens.f[i]); });
+  for (const i of [2, 3, 4, 5, 6, 7, 8]) assert.equal(n.teens.m[i].split(' ')[0], n.cardinal.m[i], 'masculine teens keep the masculine unit');
+  // the joined "and" forms are the plain unit with one letter in front (the tav of nine loses its dot there)
+  for (const g of ['m', 'f']) n.and[g].forEach((w, i) => { assert.equal(bare(w), '\u05d5' + bare(n.cardinal[g][i])); assert.ok(/^\u05d5[\u05b0\u05b7\u05bc]/.test(w), w); });
+  assert.equal(numberHe(d, 21, 'm'), `${n.tens.he[0]} ${n.and.m[0]}`); assert.equal(numberHe(d, 99, 'f'), `${n.tens.he[7]} ${n.and.f[8]}`);
+  assert.equal(numberHe(d, 20, 'm'), numberHe(d, 20, 'f')); assert.equal(numberHe(d, 10, 'f'), n.cardinal.f[9]); assert.equal(numberHe(d, 15, 'm'), n.teens.m[4]);
+  for (const bad of [0, 101, 2.5, -3]) assert.equal(numberHe(d, bad, 'm'), '');
+  const seenM = new Set(), seenF = new Set();
+  for (let v = 1; v <= 99; v++) { const m = numberHe(d, v, 'm'), f = numberHe(d, v, 'f'); assert.ok(m && f && numberEn(d, v), String(v)); seenM.add(m); seenF.add(f); if (v % 10 && v !== 0) assert.notEqual(m, f, `${v} differs by noun`); }
+  assert.equal(seenM.size, 99); assert.equal(seenF.size, 99);
+  assert.equal(numberEn(d, 43), 'forty-three'); assert.equal(numberEn(d, 100), 'a hundred');
+});
+
+test('dates: seven days, twelve months taken from the 5,000-word list, "in" joined to each month', () => {
+  const dt = d.numbers.dates;
+  assert.equal(dt.days.length, 7); assert.equal(dt.months.length, 12);
+  for (let i = 0; i < 6; i++) assert.equal(dt.days[i].he, `${dt.days[0].he.split(' ')[0]} ${d.numbers.ordinal.m[i]}`, 'day plus first to sixth');
+  const list = JSON.parse(read('data/vocab/vocab5000.json')).entries.filter((e) => e.topic === 'Months');
+  for (const m of dt.months) {
+    assert.ok(list.some((e) => e.pointed === m.he && e.gloss.startsWith(m.en)), `${m.en} matches the word list`);
+    const inside = m.in.replace(/^\u05d1[\u05b0\u05bc]+/, ''); // after bet with its shva
+    assert.ok(/^\u05d1[\u05b0\u05bc]{2}/.test(m.in)); assert.equal(bare(inside), bare(m.he));
+    assert.ok(inside === m.he || inside === m.he.replace('\u05bc', ''), `${m.in}: only a first-letter dot may drop`);
+  }
+  assert.deepEqual(dateHe(d, 5, 4), { he: `${d.numbers.cardinal.m[4]} ${dt.months[4].in}`, en: 'May 5' });
+  for (const [day, m] of dt.samples) assert.ok(day >= 1 && day <= 31 && dateHe(d, day, m).he.split(' ').length >= 2);
+  const titles = tablesFor(d, 'numbers').map((t) => t.title);
+  for (const t of ['Eleven To Nineteen', 'Tens, A Hundred, A Thousand', 'Twenty-One To Ninety-Nine', 'Days Of The Week', 'Months', 'Dates']) assert.ok(titles.includes(t), t);
+  const kinds = new Set(); for (let seed = 1; seed <= 12; seed++) for (const q of drill(d, 'numbers', seed, 8)) kinds.add(/day is/.test(q.prompt) ? 'day' : /date/.test(q.prompt) ? 'date' : 'number');
+  assert.deepEqual([...kinds].sort(), ['date', 'day', 'number']);
+});
+
+test('lesson sentences: the file matches its tool, every sentence is a real lesson line holding the word with the same marks', () => {
+  const ex = JSON.parse(read('data/grammar/examples.json'));
+  assert.deepEqual(ex, JSON.parse(JSON.stringify(buildExamples())), 'run node tools/grammar/examples.mjs');
+  const known = new Set(tableWords(d));
+  const sources = ex.sources.flatMap((s) => (s.endsWith('/') ? [] : [read(s)]));
+  let n = 0;
+  for (const [w, list] of Object.entries(ex.words)) {
+    assert.ok(known.has(w), `${w} is a table word`); assert.ok(list.length >= 1 && list.length <= 2);
+    for (const e of list) {
+      n++;
+      assert.ok(e.he.replace(/[^\u05d0-\u05ea\u05b0-\u05bc\u05c1\u05c2\u05c7\s\u05be]/g, '').split(/[\s\u05be]+/).map(sameMarks).includes(sameMarks(w)), `${w} in ${e.he}`);
+      assert.ok(e.en && !/\.\.\./.test(e.he + e.en)); assert.equal(/\u05d9\u05d4\u05d5\u05d4/.test(bare(e.he)), false);
+    }
+  }
+  assert.ok(n >= 100, `${n} sentences`);
+  assert.ok(Object.values(ex.words).flat().some((e) => sources.some((s) => s.includes(JSON.stringify(e.he).slice(1, -1)))), 'sentences are found verbatim in the lesson files');
+  assert.deepEqual(examplesFor(null, 'x'), []); assert.deepEqual(examplesFor(ex, ''), []);
+  const first = Object.keys(ex.words)[0];
+  assert.deepEqual(examplesFor(ex, first, 1), ex.words[first].slice(0, 1));
+  assert.ok(tableExamples(ex, tablesFor(d, 'pronouns')[0]).length >= 1);
+  const view = read('src/grammar/tables.view.js'); assert.ok(view.includes('In The Lessons') && view.includes('tableExamples('));
+  assert.ok(read('src/grammar/grammar.view.js').includes("loadJson('data/grammar/examples.json').catch("), 'the page still works without the sentences file');
+});
+
 test('all eight tabs have tables to show and a practice set that can be answered', () => {
   assert.equal(TABS.length, 8);
   for (const [tab, label] of TABS) {
@@ -136,5 +197,5 @@ test('wording and loading: says the tables are unchecked, loads on the press, in
   assert.ok(read('src/grammar/tables.view.js').includes('audioButton('));
   const self = {}; new Function('self', read('precache-manifest.js'))(self);
   assert.deepEqual(self.ALEF_PRECACHE.filter((f) => /grammar\/tables/.test(f)), []);
-  for (const f of ['src/grammar/tables.js', 'src/grammar/tables.view.js', 'data/grammar/tables.json']) assert.ok(self.ALEF_ON_DEMAND.includes(f), f);
+  for (const f of ['src/grammar/tables.js', 'src/grammar/tables.view.js', 'data/grammar/tables.json', 'data/grammar/examples.json']) assert.ok(self.ALEF_ON_DEMAND.includes(f), f);
 });

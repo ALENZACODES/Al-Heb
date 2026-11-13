@@ -76,7 +76,7 @@ export function mount(root, ctx) {
     const box = el('div', { class: 'gr-lab-box' });
     const open = el('button', { class: 'btn', type: 'button', onclick: () => {
       open.disabled = true;
-      Promise.all([import('./tables.view.js'), loadJson('data/grammar/tables.json')]).then(([m, data]) => { if (alive) box.replaceChildren(m.tablesSection(el, ctx, data, { say })); })
+      Promise.all([import('./tables.view.js'), loadJson('data/grammar/tables.json'), loadJson('data/grammar/examples.json').catch(() => null)]).then(([m, data, examples]) => { if (alive) box.replaceChildren(m.tablesSection(el, ctx, data, { say, examples })); })
         .catch(() => { open.disabled = false; say('The tables could not be loaded. Check your connection and press again.'); });
     } }, 'Tables And Drills');
     box.append(el('p', {}, 'Pronouns, prepositions with their endings, numbers, question words, "there is" and "I have", describing words, comparing, and "of" pairs: each as a table you can hear, with a practice set.'), open);

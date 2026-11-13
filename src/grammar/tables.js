@@ -35,6 +35,37 @@ export function compare(d, patternId, a, b, adj) {
   return { he: fill(p.tplHe, { A: a.the, B: b ? b.the : '', adj: adjFor(adj, a, false) }).trim(), en: fill(p.tplEn, { a: `the ${plain(a.en)}`, b: b ? `the ${plain(b.en)}` : '', q: plain(adj.en), er: adj.er, est: adj.est }) };
 }
 
+// ---- numbers above ten
+const ONES = ['', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
+/** English name of 1 to 99, 100 or 1000. */
+export function numberEn(d, v) {
+  const n = d.numbers;
+  if (v >= 1 && v <= 10) return n.english[v - 1];
+  if (v >= 11 && v <= 19) return n.teens.english[v - 11];
+  const t = n.tens.values.indexOf(v);
+  if (t >= 0) return n.tens.english[t];
+  if (v > 20 && v < 100) return `${n.tens.english[Math.floor(v / 10) - 2]}-${ONES[v % 10]}`;
+  return '';
+}
+/** Hebrew for 1 to 99, 100 or 1000, for a masculine ('m') or feminine ('f') noun. Whole typed words only; '' outside the range. */
+export function numberHe(d, v, g) {
+  const n = d.numbers, k = g === 'f' ? 'f' : 'm';
+  if (!Number.isInteger(v)) return '';
+  if (v >= 1 && v <= 10) return n.cardinal[k][v - 1];
+  if (v >= 11 && v <= 19) return n.teens[k][v - 11];
+  const t = n.tens.values.indexOf(v);
+  if (t >= 0) return n.tens.he[t];
+  if (v > 20 && v < 100) return `${n.tens.he[Math.floor(v / 10) - 2]} ${n.and[k][(v % 10) - 1]}`;
+  return '';
+}
+/** A date: day number (masculine set) then the month with "in". @param {number} day 1 to 31 @param {number} month 0 to 11 */
+export function dateHe(d, day, month) {
+  const m = d.numbers.dates.months[month];
+  return { he: `${numberHe(d, day, 'm')} ${m.in}`, en: `${m.en} ${day}` };
+}
+/** Marks in one order, so two spellings of the same pointing compare equal. */
+export const sameMarks = (w) => { let out = '', marks = []; for (const ch of String(w).normalize('NFC')) { if (ch >= '\u0591' && ch <= '\u05c7' && ch !== '\u05be') marks.push(ch); else { out += marks.sort().join('') + ch; marks = []; } } return out + marks.sort().join(''); };
+
 // ---- tables for the screen: {title, note?, head:[...], rows:[{cells:[{text?, he?}], say?:string}]}
 const personTable = (d, title, forms, extra) => ({ title, head: ['Who', 'Hebrew', ...(extra ? ['In a line'] : [])], rows: PERSON_ORDER.map((p) => ({ cells: [{ text: d.persons[p] }, { he: forms[p] }, ...(extra ? [{ he: extra(p) }] : [])], say: forms[p] })) });
 
@@ -47,7 +78,13 @@ export function tablesFor(d, tab) {
     const two = (title, set, names) => ({ title, head: ['', 'With a masculine noun', 'With a feminine noun'], rows: n.values.map((v, i) => ({ cells: [{ text: `${v}, ${names[i]}` }, { he: set.m[i] }, { he: set.f[i] }], say: set.m[i] })) });
     return [{ ...two('Counting Numbers', n.cardinal, n.english), note: n.rule }, two('First, Second, Third', n.ordinal, n.ordinalEnglish),
       { title: 'Telling The Time', note: n.time.note, head: ['English', 'Hebrew'], rows: n.values.map((v, i) => ({ cells: [{ text: fill(n.time.tplEn, { n: n.english[i] }) }, { he: fill(n.time.tplHe, { f: n.cardinal.f[i] }) }], say: fill(n.time.tplHe, { f: n.cardinal.f[i] }) })) },
-      { title: 'Prices', note: n.money.note, head: ['English', 'Hebrew'], rows: n.values.filter((v) => v >= n.money.from).map((v) => ({ cells: [{ text: fill(n.money.tplEn, { n: n.english[v - 1] }) }, { he: fill(n.money.tplHe, { m: n.cardinal.m[v - 1] }) }], say: fill(n.money.tplHe, { m: n.cardinal.m[v - 1] }) })) }];
+      { title: 'Prices', note: n.money.note, head: ['English', 'Hebrew'], rows: n.values.filter((v) => v >= n.money.from).map((v) => ({ cells: [{ text: fill(n.money.tplEn, { n: n.english[v - 1] }) }, { he: fill(n.money.tplHe, { m: n.cardinal.m[v - 1] }) }], say: fill(n.money.tplHe, { m: n.cardinal.m[v - 1] }) })) },
+      { title: 'Eleven To Nineteen', note: n.teens.note, head: ['', 'With a masculine noun', 'With a feminine noun'], rows: n.teens.values.map((v, i) => ({ cells: [{ text: `${v}, ${n.teens.english[i]}` }, { he: n.teens.m[i] }, { he: n.teens.f[i] }], say: n.teens.m[i] })) },
+      { title: 'Tens, A Hundred, A Thousand', note: n.tens.note, head: ['', 'Hebrew'], rows: n.tens.values.map((v, i) => ({ cells: [{ text: `${v}, ${n.tens.english[i]}` }, { he: n.tens.he[i] }], say: n.tens.he[i] })) },
+      { title: 'Twenty-One To Ninety-Nine', note: n.and.note, head: ['', 'With a masculine noun', 'With a feminine noun'], rows: n.and.samples.map((v) => ({ cells: [{ text: `${v}, ${numberEn(d, v)}` }, { he: numberHe(d, v, 'm') }, { he: numberHe(d, v, 'f') }], say: numberHe(d, v, 'm') })) },
+      { title: 'Days Of The Week', note: n.dates.note, head: ['English', 'Hebrew'], rows: n.dates.days.map((x) => ({ cells: [{ text: x.en }, { he: x.he }], say: x.he })) },
+      { title: 'Months', head: ['English', 'Hebrew', 'In that month'], rows: n.dates.months.map((x) => ({ cells: [{ text: x.en }, { he: x.he }, { he: x.in }], say: x.he })) },
+      { title: 'Dates', head: ['English', 'Hebrew'], rows: n.dates.samples.map(([day, m]) => { const x = dateHe(d, day, m); return { cells: [{ text: x.en }, { he: x.he }], say: x.he }; }) }];
   }
   if (tab === 'questions') return [{ title: 'The Question Words', head: ['English', 'Hebrew'], rows: d.questions.words.map((w) => ({ cells: [{ text: w.en }, { he: w.he }], say: w.he })) },
     { title: 'A Question And Its Answer', head: ['Question', 'Answer'], rows: d.questions.pairs.map((p) => ({ cells: [{ he: p.q, text: p.qEn }, { he: p.a, text: p.aEn }], say: p.q })) }];
@@ -74,7 +111,7 @@ export function tablesFor(d, tab) {
 }
 
 // ---- drills: {prompt, show?:Hebrew, options:[{he?, text?}], answer:index}
-const item = (r, prompt, right, wrong, show) => { const opts = shuffle(r, [right, ...wrong.filter((w) => (w.he || w.text) !== (right.he || right.text)).slice(0, 3)]); return { prompt, show: show || '', options: opts, answer: opts.indexOf(right) }; };
+const item = (r, prompt, right, wrong, show) => { const key = (w) => w.he || w.text; const seen = new Set([key(right)]); const opts = shuffle(r, [right, ...wrong.filter((w) => key(w) && !seen.has(key(w)) && seen.add(key(w))).slice(0, 3)]); return { prompt, show: show || '', options: opts, answer: opts.indexOf(right) }; };
 const others = (r, list, not, n = 3) => shuffle(r, [...new Set(list)].filter((x) => x !== not)).slice(0, n);
 
 /** A set of questions for one tab. The same seed gives the same set. @returns {{prompt:string, show:string, options:{he?:string,text?:string}[], answer:number}[]} */
@@ -85,8 +122,14 @@ export function drill(d, tab, seed = 1, count = 8) {
     const p = pick(r, PERSON_ORDER);
     if (tab === 'pronouns') { const k = pick(r, Object.values(d.pronouns)); out.push(item(r, `${k.title}: which word is "${d.persons[p]}"?`, { he: k.forms[p] }, others(r, Object.values(k.forms), k.forms[p]).map((he) => ({ he })))); }
     else if (tab === 'prepositions') { const k = pick(r, d.prepositions); out.push(item(r, `${k.en}: which form is for "${d.persons[p]}"?`, { he: k.forms[p] }, others(r, Object.values(k.forms), k.forms[p]).map((he) => ({ he })), k.base)); }
-    else if (tab === 'numbers') { const n = d.numbers; const v = Math.floor(r() * 8) + 2; const g = r() < 0.5 ? 'm' : 'f'; const right = n.cardinal[g][v];
-      out.push(item(r, `"${n.english[v]}" with a ${g === 'm' ? 'masculine' : 'feminine'} noun`, { he: right }, [n.cardinal[g === 'm' ? 'f' : 'm'][v], n.cardinal[g][(v + 1) % 10], n.cardinal[g][(v + 9) % 10]].map((he) => ({ he })))); }
+    else if (tab === 'numbers') { const n = d.numbers; const kind = r(); const g = r() < 0.5 ? 'm' : 'f'; const other = g === 'm' ? 'f' : 'm'; const noun = g === 'm' ? 'masculine' : 'feminine';
+      if (kind < 0.3) { const v = Math.floor(r() * 9) + 2; out.push(item(r, `"${numberEn(d, v)}" with a ${noun} noun`, { he: numberHe(d, v, g) }, [numberHe(d, v, other), numberHe(d, v === 10 ? 9 : v + 1, g), numberHe(d, v - 1, g)].map((he) => ({ he })))); }
+      else if (kind < 0.5) { const v = Math.floor(r() * 9) + 11; out.push(item(r, `"${numberEn(d, v)}" with a ${noun} noun`, { he: numberHe(d, v, g) }, [numberHe(d, v, other), numberHe(d, v === 19 ? 18 : v + 1, g), numberHe(d, v === 11 ? 12 : v - 1, other)].map((he) => ({ he })))); }
+      else if (kind < 0.7) { const v = (Math.floor(r() * 8) + 2) * 10 + Math.floor(r() * 9) + 1; const swap = (v % 10) * 10 + Math.floor(v / 10);
+        out.push(item(r, `"${numberEn(d, v)}" with a ${noun} noun`, { he: numberHe(d, v, g) }, [numberHe(d, v, other), numberHe(d, v - (v % 10), g), numberHe(d, swap > 20 && swap % 10 ? swap : v + (v % 10 === 9 ? -1 : 1), g)].map((he) => ({ he })))); }
+      else if (kind < 0.85) { const days = n.dates.days; const x = pick(r, days); out.push(item(r, `Which day is ${x.en}?`, { he: x.he }, others(r, days.map((y) => y.he), x.he).map((he) => ({ he })))); }
+      else { const m = Math.floor(r() * 12); const day = Math.floor(r() * 28) + 1; const x = dateHe(d, day, m);
+        out.push(item(r, `How do you say the date "${x.en}"?`, { he: x.he }, [dateHe(d, day, (m + 1) % 12).he, dateHe(d, day === 28 ? 27 : day + 1, m).he, `${numberHe(d, day, 'f')} ${n.dates.months[m].in}`].map((he) => ({ he })))); } }
     else if (tab === 'questions') { const q = pick(r, d.questions.pairs); const ask = r() < 0.5;
       out.push(ask ? item(r, 'Which question gets this answer?', { he: q.q }, others(r, d.questions.pairs.map((x) => x.q), q.q).map((he) => ({ he })), q.a)
         : item(r, 'Which answer fits this question?', { he: q.a }, others(r, d.questions.pairs.map((x) => x.a), q.a).map((he) => ({ he })), q.q)); }
@@ -103,6 +146,19 @@ export function drill(d, tab, seed = 1, count = 8) {
     const last = out[out.length - 1];
     if (last.options.length < 2 || out.slice(0, -1).some((x) => x.prompt === last.prompt && x.show === last.show)) out.pop();
   }
+  return out;
+}
+
+/** Lesson sentences for a word or short phrase: the first of its words that has any. @param {any} ex data/grammar/examples.json or null */
+export function examplesFor(ex, he, max = 2) {
+  if (!ex || !ex.words || !he) return [];
+  for (const w of String(he).split(/[\s\u05be]+/).filter(Boolean)) { const hit = ex.words[w]; if (hit && hit.length) return hit.slice(0, max); }
+  return [];
+}
+/** Up to `max` different lesson sentences for the words of one table. */
+export function tableExamples(ex, table, max = 3) {
+  const out = [], seen = new Set();
+  for (const row of table.rows) for (const c of row.cells) if (c.he) for (const e of examplesFor(ex, c.he, 1)) { if (!seen.has(e.he) && out.length < max) { seen.add(e.he); out.push(e); } }
   return out;
 }
 

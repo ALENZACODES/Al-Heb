@@ -32,7 +32,7 @@ export function verbTable(verb) {
   const rows = FORM_KEYS.filter((k) => typeof forms[k] === 'string' && forms[k]).map((k) => ({ key: k, label: FORM_LABELS[k], he: forms[k] }));
   const missing = FORM_KEYS.filter((k) => !forms[k]);
   return { id: verb?.id, he: verb?.he, translit: verb?.translit, en: verb?.en, binyan: verb?.binyan || null, root: verb?.root || null, rows, missing,
-    notes: [PAST_NOTE, 'Only one form per tense is in the data: other persons, genders and plurals are not listed, and the app does not make them up.'], needsReview: !!verb?.needsReview };
+    notes: [PAST_NOTE, 'Only one form per tense is in the data. For a regular verb, Show Every Form builds the other persons, genders and plurals by rule and says so; for every other verb they are not listed, and the app does not make them up.'], needsReview: !!verb?.needsReview };
 }
 
 /** Binyan order on the family page: the seven taught patterns, then any other label the data has, then verbs with none. */

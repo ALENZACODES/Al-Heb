@@ -26,7 +26,7 @@ export const SECTION_ROUTES = {
   learn: ['home', 'firstday', 'firstwin', 'wordfinder', 'learn', 'curriculum', 'letters', 'atlas', 'letter', 'sounds', 'rules', 'rules-page', 'loanwords', 'loanword', 'spotit', 'checkpoint',
     'ladder', 'fade', 'fadeline', 'scaffold', 'gender', 'roles', 'firstday-ladder', 'vocab', 'vocab-themes', 'sprint', 'wordtrace', 'dialogues', 'dialogue', 'phrases', 'phrase',
     'israel', 'israelsec', 'israelunits', 'israelunit', 'intermediate', 'intermediatelesson', 'practical', 'practicalunit', 'practicalpage', 'grammar', 'grammartopic', 'typing', 'classtrack', 'classtrackweek', 'classtrackmode',
-    'soundgap', 'vowelboard', 'niqquddial', 'dottile', 'syllablechips', 'nikkud-fade', 'roots', 'gender-drill', 'scheduler', 'known-words',
+    'soundgap', 'vowelboard', 'niqquddial', 'dottile', 'syllablechips', 'nikkud-fade', 'roots', 'pairs', 'gender-drill', 'scheduler', 'known-words',
     // Brain Lab (daily drills) and the Library (articles, letter videos), with their detail pages
     'lab', 'labgame', 'library', 'libraryarticle',
     // Retention: weekly practice league and the streak-freeze shop

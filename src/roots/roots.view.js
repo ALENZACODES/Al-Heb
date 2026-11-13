@@ -3,24 +3,24 @@
  * Everything shown is copied from data/roots/*.json (built from the vocabulary data). The app does not make up roots, patterns or forms;
  * where the data has none, the page says so. Drill answers are checked against the same data. Store key roots.v1 (drill counts only).
  * No root is confirmed by a Hebrew reader yet (data/roots/verified.json), so the page says "family letters", never "root", for a group.
+ * Family tree (word families explorer): browse every family by its first letter and open one as a tree; ?mode=tree&letters=<family letters>.
  * Deep links (lane 3, 12 Nov): ?letters=<family letters> opens that family, ?verb=<id> opens a verb's forms, ?mode=binyanim&b=<key>
  * opens a pattern page. ctx extras for tests: ctx.rootsData = {families, verbs}, ctx.clipLookup.
  */
 import { el, heText, storeGet, storeSet } from '../curriculum/dom.js';
 import { sourcesLine } from '../shell/sources.js';
 import { mixed } from '../hebrewtext/mixed.js';
-import { isAudioFree } from '../shell/audiofree.js';
-import { loadJson } from '../speak/loader.js';
-import { lookupClip, alternateClip, planIsExactFile, clipCaption, unavailableLine, CHECKING } from '../vocab/clips.js';
+import { createListen } from './listen.js';
 import { loadFamilies, loadVerbs } from './loader.js';
 import { STORE_KEY, binyanName, BINYAN, verbTable, groupFamily, searchFamilies, searchVerbs, coverageText, buildQuiz, gradeAnswer, normalizeProgress, familyBadge } from './model.js';
 import { SEVEN, binyanPage, binyanDrill, observationText, NO_SIGN, REVIEW_NOTE } from './binyanim.js';
 import { rootsCoverage } from '../lib/counts.js';
+import { TREE_NOTE, familyTree, treeSummary, wordCard, letterIndex, familiesByLetter, neighbours, firstLetter } from './tree.js';
 
 export const DRAFT_NOTE = 'Draft and unreviewed: family letters and patterns come from a dictionary-based word list, and no Hebrew teacher has checked them. Some links between words may be loose.';
 export const POS_LABEL = { verb: 'Verbs', noun: 'Nouns', adj: 'Adjectives', adv: 'Adverbs', prep: 'Prepositions', num: 'Numbers' };
 export const VERB_FORMS_NOTE = 'Each row is a form the word list holds for this verb, copied as it is. Nothing here is made by a pattern rule. A Listen button appears only where the app has a clip of that exact pointed form.';
-const MODES = [['families', 'Word families'], ['binyanim', 'Seven patterns'], ['verbs', 'Verb forms'], ['drill', 'Drill'], ['bdrill', 'Pattern drill']];
+const MODES = [['families', 'Word families'], ['tree', 'Family tree'], ['binyanim', 'Seven patterns'], ['verbs', 'Verb forms'], ['drill', 'Drill'], ['bdrill', 'Pattern drill']];
 
 /** @param {HTMLElement} root @param {any} ctx @returns {() => void} unmount */
 export function mount(root, ctx) {
@@ -34,6 +34,7 @@ export function mount(root, ctx) {
   const qy = ctx?.query || {};
   let alive = true, fam = null, verbs = null, prog = normalizeProgress(null), q = '', selRoot = null, selVerb = null, quiz = [], qi = 0, picked = null, round = 0;
   let mode = MODES.some(([m]) => m === qy.mode) ? qy.mode : qy.letters ? 'families' : qy.verb ? 'verbs' : qy.b ? 'binyanim' : 'families';
+  let treeLetter = null, treeWord = null;
   let selBinyan = SEVEN.includes(qy.b) ? qy.b : null, bquiz = [], bqi = 0, bpicked = null, bround = 0, missingLetters = null;
   const say = (t) => { status.textContent = t; };
   const btn = (label, onclick, extra = {}) => el('button', { class: 'btn', type: 'button', style: 'min-height:44px;min-width:44px', onclick, ...extra }, label);
@@ -43,51 +44,11 @@ export function mount(root, ctx) {
     return el('div', {}, el('label', { for: id }, label), input);
   };
 
-  // ---- audio: a clip of the exact pointed form, when the app has one (the Dictionary's lookup and player checks) ----
-  let clipLookup = ctx?.clipLookup || null, clipPromise = null;
-  const ensureClips = () => {
-    if (clipLookup || !ctx?.audio) return Promise.resolve(clipLookup);
-    if (!clipPromise) clipPromise = loadJson('data/vocab/clip-lookup.json').then((j) => { clipLookup = j; return j; }).catch(() => { clipPromise = null; return null; });
-    return clipPromise;
-  };
-  const voice = () => { const v = ctx?.settings?.get?.('voice'); return v === 'm' ? 'm' : 'f'; };
-  const trad = () => { const c = ctx?.settings?.get?.('congregation'); return ['israeli', 'sephardi', 'ashkenazi'].includes(c) ? c : 'israeli'; };
-  let dictAudio = null;
-  const loadDictionaryAudio = () => {
-    if (!dictAudio) dictAudio = loadJson('data/vocab/audio-dictionary.json').then((list) => { ctx.audio?.extend?.(list); return true; }).catch(() => { dictAudio = null; return false; });
-    return dictAudio;
-  };
-  function listen(he, name) {
-    if (isAudioFree(ctx) || !ctx?.audio) return null;
-    const cell = el('span', { class: 'rt-audio', 'data-audio-state': 'checking' }, 'Checking audio...');
-    ensureClips().then(() => {
-      if (!alive) return;
-      const v = voice(), t = trad();
-      const clip = clipLookup && (lookupClip(clipLookup, he, v, t) || alternateClip(clipLookup, he, v, t));
-      if (!clip) { cell.replaceChildren('No clip for this form.'); cell.setAttribute?.('data-audio-state', 'none'); return; }
-      const note = el('span', { class: 'muted' }, clipCaption(clip));
-      const play = async () => {
-        const want = { voice: clip.voice, tradition: clip.tradition, id: clip.id }, opts = { voice: clip.voice, tradition: clip.tradition, allowMismatchedTts: false };
-        try {
-          if (ctx.audio.ensureManifest) await ctx.audio.ensureManifest();
-          let plan = ctx.audio.status?.(clip.kind, clip.id, opts);
-          if (plan?.reason === CHECKING && ctx.audio.ensureManifest) { await ctx.audio.ensureManifest(); plan = ctx.audio.status?.(clip.kind, clip.id, opts); }
-          if (!planIsExactFile(plan, want) && String(clip.id).startsWith('dict-')) { await loadDictionaryAudio(); plan = ctx.audio.status?.(clip.kind, clip.id, opts); }
-          if (!planIsExactFile(plan, want) && typeof globalThis.alefShards?.load === 'function') { try { await globalThis.alefShards.load(); } catch { /* honest line below */ } plan = ctx.audio.status?.(clip.kind, clip.id, opts); }
-          if (!planIsExactFile(plan, want)) { note.textContent = unavailableLine(clip.voice, clip.tradition); return; }
-          try { ctx.audio.stop?.(); } catch { /* ignore */ }
-          const r = await ctx.audio.play(clip.kind, clip.id, { ...opts, rate: 'normal' });
-          if (!r || r.source === 'none' || r.fileError) note.textContent = unavailableLine(clip.voice, clip.tradition);
-        } catch { note.textContent = unavailableLine(clip.voice, clip.tradition); }
-      };
-      cell.setAttribute?.('data-audio-state', 'file');
-      cell.replaceChildren(btn('Listen', play, { class: 'btn secondary', 'aria-label': `Listen: ${name}`, 'data-audio': `${clip.kind}/${clip.id}` }), ' ', note);
-    });
-    return cell;
-  }
+  // ---- audio: a clip of the exact pointed form, when the app has one (src/roots/listen.js) ----
+  const listen = createListen(ctx, () => alive);
 
   function renderTabs() {
-    tabs.replaceChildren(...MODES.map(([m, label]) => btn(label, () => { mode = m; selRoot = null; selVerb = null; selBinyan = null; missingLetters = null; q = ''; render(); say(`${label} opened.`); }, { class: 'btn secondary', 'aria-pressed': String(mode === m) })));
+    tabs.replaceChildren(...MODES.map(([m, label]) => btn(label, () => { mode = m; selRoot = null; selVerb = null; selBinyan = null; missingLetters = null; treeLetter = null; treeWord = null; q = ''; render(); say(`${label} opened.`); }, { class: 'btn secondary', 'aria-pressed': String(mode === m) })));
   }
   /** The verb conjugator (#15c): the forms the data holds, one row each, with a clip where the exact form has one. */
   function table(v) {
@@ -121,9 +82,45 @@ export function mount(root, ctx) {
       detail.replaceChildren(el('h2', { tabindex: '-1', id: 'rt-family' }, 'Words Listed Under the Letters ', heText(f.root), ` (${f.size} words)`), el('p', { class: 'rt-badge' }, familyBadge(f)),
         ...groupFamily(f).flatMap((g) => (g.byBinyan
           ? [el('h3', {}, `${POS_LABEL.verb}, by Pattern`), ...g.byBinyan.flatMap((b) => [el('h4', {}, b.binyan ? binyanName(b.binyan) : 'Pattern Not Listed'), el('ul', {}, ...b.words.map((w) => wordLine(w, loose(w))))])]
-          : [el('h3', {}, POS_LABEL[g.pos] || g.pos), el('ul', {}, ...g.words.map((w) => wordLine(w, loose(w))))])));
+          : [el('h3', {}, POS_LABEL[g.pos] || g.pos), el('ul', {}, ...g.words.map((w) => wordLine(w, loose(w))))])),
+        btn('See this family as a tree', () => { mode = 'tree'; treeLetter = null; treeWord = null; render(); }, { class: 'btn secondary' }));
     }
     nodes.push(list, detail); body.replaceChildren(...nodes); renderList();
+  }
+
+  /** Family tree: every family by first letter, one family as a tree, each word opens its meaning and sound. */
+  function renderTree() {
+    const letters = el('div', { role: 'group', 'aria-label': 'First family letter', class: 'rt-letters' }), list = el('div', { class: 'rt-list' }), detail = el('div', { class: 'rt-detail' });
+    const index = letterIndex(fam.families);
+    if (!treeLetter) treeLetter = selRoot ? firstLetter(selRoot) : index.find((x) => x.count)?.letter || 'א';
+    const open = (root, announce) => { selRoot = root; treeWord = null; draw(); if (announce) say(announce); };
+    function draw() {
+      letters.replaceChildren(...index.map((x) => btn(heText(x.letter), () => { treeLetter = x.letter; selRoot = null; treeWord = null; draw(); say(`${x.count} word families start with this letter.`); },
+        { class: 'btn secondary', disabled: !x.count, 'aria-pressed': String(treeLetter === x.letter), 'aria-label': `Families starting with ${x.letter}, ${x.count}` })));
+      const fams = familiesByLetter(fam.families, treeLetter);
+      list.replaceChildren(el('p', {}, `${fams.length} word families start with `, heText(treeLetter), '.'),
+        el('ul', { class: 'rt-roots' }, ...fams.map((f) => el('li', {}, btn([heText(f.root), ` (${f.size} words)`], () => open(f.root, `Tree of ${f.size} words opened.`), { 'aria-pressed': String(selRoot === f.root), 'aria-label': `Open the tree for the letters ${f.root}, ${f.size} words` })))));
+      const f = fam.families.find((x) => x.root === selRoot);
+      if (!f) { detail.replaceChildren(...(missingLetters ? [el('p', { role: 'note' }, 'No other word in the word list is listed under the letters ', heText(missingLetters), ', so there is no tree to show.')] : [el('p', { class: 'muted' }, 'Pick family letters to see their tree.')])); return; }
+      const tree = familyTree(f), near = neighbours(fam.families, f.root), loose = (w) => f.ruleChecked && !(f.checkedIds || []).includes(w.id);
+      const node = (w) => {
+        const isOpen = treeWord === w.id, card = isOpen ? wordCard(w, loose(w)) : null;
+        return el('li', { 'data-word': w.id }, btn([heText(w.he), ` ${w.en}`], () => { treeWord = isOpen ? null : w.id; draw(); }, { class: 'btn secondary', 'aria-expanded': String(isOpen), 'aria-label': `${w.translit}: ${w.en}` }),
+          card ? el('div', { class: 'rt-card', style: 'margin:.25rem 0 .75rem;padding-inline-start:.75rem;border-inline-start:3px solid currentColor' },
+            el('p', {}, heText(card.he)), el('ul', {}, ...card.lines.map((l) => el('li', {}, l))), listen(w.he, w.translit) || '',
+            card.hasForms ? btn('Verb forms', () => { mode = 'verbs'; selVerb = w.id; q = ''; render(); }, { 'aria-label': `Verb forms for ${w.translit}` }) : null) : null);
+      };
+      detail.replaceChildren(
+        el('h2', { tabindex: '-1', id: 'rt-tree' }, 'Family Tree for the Letters ', heText(f.root)), el('p', { class: 'rt-badge' }, familyBadge(f)), el('p', {}, treeSummary(tree)),
+        el('ul', { class: 'rt-tree', style: 'list-style:none;padding-inline-start:0' }, ...tree.branches.map((b) => el('li', { 'data-branch': b.key, style: 'margin-block:.5rem;padding-inline-start:.75rem;border-inline-start:2px solid currentColor' },
+          el('h3', {}, b.label), b.gist ? el('p', { class: 'muted' }, `Usual meaning shift: ${b.gist}.`) : null, el('ul', { style: 'list-style:none;padding-inline-start:.75rem' }, ...b.words.map(node))))),
+        el('p', { class: 'muted' }, TREE_NOTE),
+        el('p', {}, `Family ${near.index + 1} of ${near.of} under this letter. `),
+        near.prev ? btn(['Previous: ', heText(near.prev.root)], () => open(near.prev.root, 'Previous family opened.')) : null,
+        near.next ? btn(['Next: ', heText(near.next.root)], () => open(near.next.root, 'Next family opened.')) : null,
+        btn('Same family as a plain list', () => { mode = 'families'; q = ''; render(); }, { class: 'btn secondary' }));
+    }
+    body.replaceChildren(el('h2', {}, 'Family Tree'), el('p', {}, `Browse all ${fam.families.length.toLocaleString('en-US')} word families by their first letter, then open one as a tree.`), letters, list, detail); draw();
   }
 
   function renderVerbs() {
@@ -200,7 +197,7 @@ export function mount(root, ctx) {
 
   function render() {
     renderTabs();
-    if (mode === 'families') renderFamilies(); else if (mode === 'verbs') renderVerbs(); else if (mode === 'binyanim') renderBinyanim(); else if (mode === 'bdrill') renderBinyanDrill(); else renderDrill();
+    if (mode === 'families') renderFamilies(); else if (mode === 'tree') renderTree(); else if (mode === 'verbs') renderVerbs(); else if (mode === 'binyanim') renderBinyanim(); else if (mode === 'bdrill') renderBinyanDrill(); else renderDrill();
   }
 
   (async () => {

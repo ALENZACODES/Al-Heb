@@ -74,6 +74,7 @@ copies and 764 draft animation poses, none approved and none wired into the app)
 | [`mobile/`](mobile/) | 1 | Mobile findings (2026-11-04) (`FINDINGS.md`) |
 | [`morning/`](morning/) | 2 | Streak: one record, one number (`MIGRATION.md`) |
 | [`nav/`](nav/) | 1 | Navigation model (information architecture lane) (`NAV.md`) |
+| [`nikud/`](nikud/) | 1 | Vowel marks on this device (`src/nikud`) (`README.md`) |
 | [`notify/`](notify/) | 1 | Study reminders: route entry (not wired) (`ROUTES.md`) |
 | [`offline/`](offline/) | 3 | Offline readiness: what exists (`README.md`) |
 | [`onboarding/`](onboarding/) | 2 | First-run flow (onboarding) — DRAFT, untested with learners (`FLOW.md`) |

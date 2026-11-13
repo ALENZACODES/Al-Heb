@@ -51,6 +51,8 @@ Read directly on 2026-11-04:
 | `dejavu-outlines` | DejaVu Sans outlines | letter outline path data | Bitstream Vera licence; DejaVu changes public domain | Yes-with-conditions | No | Carry the Bitstream notice | partly-verified (upstream LICENSE header read; full Vera terms not read in full) |
 | `tesseract-js` | tesseract.js and core 7.0.0 | in-browser OCR, shipped lazily | Apache-2.0 (licence files are in the repo) | Yes-with-conditions | No | Keep licence and notices | partly-verified (repo files read, upstream not re-fetched) |
 | `tessdata-heb` | Tesseract Hebrew model | OCR language data | Apache-2.0 per repo README | Yes-with-conditions | No | Keep notice | unverified |
+| `dictabert-menaked` | DictaBERT-large-char-menaked (Dicta) | optional Vowel Marks pack and build-time vowel marks, shipped lazily | CC BY 4.0 (model page) | Yes-with-conditions | No | Credit Dicta and say it was converted to 8-bit ONNX | verified-primary (model page read 2026-11-12, revision 4dfc20b) |
+| `phonikud-onnx` | Phonikud ONNX 1.0 | optional Sounds And Stress pack and build-time sound lines, shipped lazily | MIT (model page) | Yes-with-conditions | No | Keep the MIT notice; credit Dicta for the base model | verified-primary (model page read 2026-11-12, revision b806189) |
 | `hebcal-fixtures` | Hebcal output snapshot | test fixtures; file is listed in `precache-manifest.js`, so it appears to ship | CC BY 4.0 (site-wide statement) | Yes-with-conditions | No | Credit Hebcal | partly-verified (site statement read; the fixture file's own source note repeats it) |
 | `wikipedia-paraphrase` | Wikipedia articles on Hebrew traditions | paraphrased facts in `data/traditions` | CC BY-SA 4.0 | Yes-with-conditions | The repo treats the notes as adaptations offered under CC BY-SA as a precaution; whether bare facts need it is a legal question | Yes if treated as adaptation | partly-verified |
 | `xkb-si1452` | xkeyboard-config il layout | keyboard layout data | X11-style permissive (repo note) | Yes-with-conditions | No | Keep notice | unverified |
@@ -105,6 +107,15 @@ All six families carry OFL 1.1 headers upstream (read today). OFL permits sellin
 
 ### tesseract
 The vendored licence files are Apache-2.0 text. Apache-2.0 requires keeping the licence and notices when redistributing. The Hebrew model licence rests on the repo README only.
+
+### nikud-packs
+
+Two optional language packs for vowel marks and sound lines, added 2026-11-12. Neither is in the first install; the learner downloads a pack from Settings or the Talk screen.
+
+- **DictaBERT-large-char-menaked** (`dicta-il/dictabert-large-char-menaked`, revision `4dfc20b94565d7868e1c8c00bf039d38c071a062`). The model page states CC BY 4.0. The app uses a copy converted to ONNX with 8-bit weights by the alef-tools nikud package (`scripts/export_menaked.py`); CC BY asks that the credit says the material was changed, and the credit line does. The model card says it is trained for modern Hebrew prose and is not meant for Biblical or Rabbinic text, so the app never runs it over Torah or prayer text.
+- **Phonikud** (`Phonikud/phonikud-onnx`, revision `b806189fe1fc0085b1012b7560ffb5e8ecfd72a2`, file `phonikud-1.0.int8.onnx`). The model page states MIT. It is a fine-tune of the Dicta model above, so Dicta is credited too. The separate training repository `Phonikud/phonikud` says only "cc" and is not used.
+
+The model licences and pinned revisions are recorded in `models.manifest.json` of ALENZACODES/alef-tools.
 
 ### hebcal-fixtures
 Used by tests, but `data/calendar/hebcal-fixtures.json` is listed in `precache-manifest.js`, so it appears to be in the shipped bundle. Credit Hebcal in-app (or stop shipping the file). The file's own note says "Hebcal output is CC BY 4.0, credit Hebcal".

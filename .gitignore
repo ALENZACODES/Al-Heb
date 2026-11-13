@@ -20,4 +20,5 @@ tools/ask-torah/**/__pycache__/
 data/curriculum/practical/_gcloud-checkpoint.json
 
 # Language pack parts staged for a local try-out (see docs/speech/ON-DEVICE.md). Never committed: packs are served from the pack host.
+# language packs copied next to the site for a local try-out (never committed; see docs/nikud/README.md)
 assets/vendor/_packs/

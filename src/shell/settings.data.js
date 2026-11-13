@@ -55,6 +55,7 @@ export async function wipeAllData(o) {
   // alef-retention (which reminders were already shown) are removed with the rest of the learner's data.
   // alef-talk-pack-v1 (the Talk language packs, a large download with nothing of the learner's in it) stays with the app copy.
   // So do the listening packs (alef-pack-<name>-v1): the same kind of download; the Language Packs page has their Delete buttons.
+  // So do alef-pack-nikud-v1 and alef-pack-phonemes-v1 (the vowel-mark packs; removed from Settings, Vowel mark packs).
   try { const c = o.caches; if (c?.keys) { for (const k of await c.keys()) { if (!o.unregisterServiceWorker && /^alef-(shell|runtime|talk-pack|pack)-/.test(k)) continue; if (await c.delete(k)) rep.caches++; } } } catch (e) { rep.errors.push('offline copies: ' + (/** @type {any} */ (e)?.message || e)); }
   // the Speaking Studio voice journal (the only on-device database; recordings the learner chose to keep): removed with the rest
   try { const j = await import('../voice/journal.js'); if (await j.deleteJournal(o.journalDb)) rep.journal = true; } catch (e) { rep.errors.push('voice journal: ' + (/** @type {any} */ (e)?.message || e)); }

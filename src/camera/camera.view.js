@@ -181,8 +181,18 @@ export function mount(root, ctx = {}) {
     const wordsBox = h('div', { class: 'camera-words', 'aria-live': 'polite' });
     const say = await sayIt(r);
     if (!alive || selected !== r.id) return;
+    // Vowel marks from the optional packs (src/nikud): offered for a line that came without points, when a pack is on this device.
+    const heLine = h('p', {}, heSpan(r.pointed || r.he));
+    const marksBox = h('div', { class: 'camera-marks' });
+    if (!r.pointed && !isPointed(r.he)) import('../nikud/panel.js').then((m) => {
+      if (!alive || selected !== r.id) return;
+      const sounds = h('div', {});
+      const c = m.marksControl({ getText: () => r.he, settings: ctx.settings,
+        show: (got) => { heLine.replaceChildren(heSpan(got.text)); sounds.replaceChildren(...m.soundLines(got)); } });
+      marksBox.append(c.el, sounds); c.refresh();
+    }).catch(() => { /* no vowel-mark code in this copy of the site */ });
     detail.replaceChildren(...[
-      h('p', {}, heSpan(r.pointed || r.he)),
+      heLine, marksBox,
       say ? h('p', {}, h('strong', {}, 'Sounds like: '), say) : h('p', { class: 'muted' }, 'This line has no vowel points and is not in the built-in word list, so a reliable way to say it cannot be shown.'),
       r.en ? h('p', {}, h('strong', {}, 'English: '), r.en) : h('p', {}, 'No English is available for this line here.'),
       r.en ? h('p', { class: 'muted' }, sourceLabel(r.translationSource)) : null,

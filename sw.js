@@ -221,6 +221,12 @@ self.addEventListener('fetch', (event) => {
     event.respondWith((async () => (await caches.match(req.url)) || fetch(req))());
     return;
   }
+  // The same for language packs in the newer layout (assets/vendor/_packs/<name>/, only when a deploy carries them): the pack
+  // loader keeps each in its own cache (alef-pack-<name>-v1), so a part is never copied into the per-version cache as well.
+  if (/\/assets\/vendor\/_packs\//.test(url.pathname)) {
+    event.respondWith((async () => (await caches.match(req.url)) || fetch(req))());
+    return;
+  }
   if (/\/data\/audio\/manifest-words-[a-z]+\.json$/.test(url.pathname)) {
     event.respondWith((async () => {
       const hit = await caches.match(req);

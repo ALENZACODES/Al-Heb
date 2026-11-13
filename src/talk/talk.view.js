@@ -123,7 +123,13 @@ export function mount(root, ctx = {}) {
   const btnSay = h('button', { type: 'button', class: 'btn secondary', disabled: true, onclick: () => speak(true) }, 'Say It');
   const btnCopy = h('button', { type: 'button', class: 'btn secondary', disabled: true, onclick: copy }, 'Copy');
   const said = h('span', { class: 'muted talk-small', role: 'status' });
-  const paneMe = h('div', { class: 'talk-pane talk-pane-me' }, srcEl, trEl, badge, note, variants, h('div', { class: 'row' }, btnSay, btnCopy), said);
+  // Vowel marks from the optional packs (src/nikud, loaded only here): a button under the Hebrew line when a pack is on this device.
+  const marksBox = h('div', { class: 'talk-marks' });
+  const marksSounds = h('div', { class: 'talk-marks-sounds' });
+  /** @type {any} */ let marks = null;
+  /** @type {any} */ let built = null;
+  const hebrewPane = () => [trEl, srcEl].find((el) => hasHebrew(el.textContent || '')) || null;
+  const paneMe = h('div', { class: 'talk-pane talk-pane-me' }, srcEl, trEl, marksBox, marksSounds, badge, note, variants, h('div', { class: 'row' }, btnSay, btnCopy), said);
   const themTr = h('div', { class: 'talk-translation' });
   const paneThem = h('div', { class: 'talk-pane talk-pane-them', hidden: true, 'aria-hidden': 'true' }, themTr);
   const face = h('div', { class: 'talk-face' }, paneThem, paneMe);
@@ -187,8 +193,28 @@ export function mount(root, ctx = {}) {
   const tryList = h('ul', { class: 'talk-list' });
   tryPick.addEventListener('change', paintExamples);
 
+  const marksPacks = h('div', { class: 'talk-marks-packs' });
+  import('../nikud/panel.js').then((m) => {
+    if (!alive) return;
+    marks = m.marksControl({
+      getText: () => (last && last.held ? '' : hebrewPane()?.textContent || ''),
+      settings: ctx.settings,
+      show: (r) => { const el = hebrewPane(); if (!el) return; setText(el, r.text); if (el === trEl) setText(themTr, r.text); marksSounds.replaceChildren(...m.soundLines(r)); },
+    });
+    marksBox.append(marks.el);
+    built = async (r, text) => {
+      const hit = await m.builtLine('talk', text);
+      if (!alive || last !== r || !hit) return;
+      setText(trEl, hit.p); setText(themTr, hit.p);
+      marksSounds.replaceChildren(...m.builtLines(hit));
+      marks.refresh();
+    };
+    marksPacks.append(m.packRows({ onChange: () => marks.refresh() }));
+    marks.refresh();
+  }).catch(() => { /* this copy of the site does not carry the vowel-mark code: the screen works without it */ });
+
   root.replaceChildren(h('section', { class: 'talk-screen', 'aria-labelledby': 'view-title' },
-    title, hero, lead, status, langs, face, mics, err, input, listenNote, suggestTitle, suggest, packBox, toggles, tryTitle, tryPick, tryList, histTitle, hist, clear));
+    title, hero, lead, status, langs, face, mics, err, input, listenNote, suggestTitle, suggest, packBox, marksPacks, toggles, tryTitle, tryPick, tryList, histTitle, hist, clear));
 
   function save() { write(SETTINGS_KEY, settings); }
 
@@ -328,6 +354,10 @@ export function mount(root, ctx = {}) {
     const sug = !r.ok && !r.held ? (r.suggestions || []) : [];
     suggestTitle.hidden = !sug.length; suggest.hidden = !sug.length;
     suggest.replaceChildren(...sug.map((s) => lineButton(s)));
+    marksSounds.replaceChildren();
+    if (r.held) { if (marks) marks.el.hidden = true; } else if (marks) { marks.el.hidden = false; marks.refresh(); }
+    // a stored line Aleph has no checked vowel marks for: the marks made ahead of time, when the learner has asked to see vowel marks
+    if (built && r.ok && !r.held && toHe && settings.nikkud && !r.pointed) built(r, text);
   }
 
   async function run(text, forced) {

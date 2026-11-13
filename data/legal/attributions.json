@@ -283,6 +283,34 @@
       "auditRef": "CONTENT-LICENCE-AUDIT.md#tesseract"
     },
     {
+      "id": "dictabert-menaked",
+      "name": "DictaBERT-large-char-menaked (Dicta)",
+      "group": "software",
+      "usedFor": "The optional Vowel Marks pack (adds vowel marks to bare Hebrew on this device) and the vowel marks made ahead of time for stored lines (assets/vendor/_alef-tools). Converted to 8-bit ONNX by the alef-tools nikud package; not part of the first install.",
+      "licence": "CC BY 4.0 (stated on the model's own page, read 2026-11-12)",
+      "licenceUrl": "https://huggingface.co/dicta-il/dictabert-large-char-menaked",
+      "commercialUse": "yes-with-conditions",
+      "shareAlike": false,
+      "attributionText": "Vowel marks: DictaBERT-large-char-menaked by Dicta (dicta-il), CC BY 4.0. Changed: converted to ONNX with 8-bit weights.",
+      "perItemCredit": false,
+      "status": "verified-primary",
+      "auditRef": "CONTENT-LICENCE-AUDIT.md#nikud-packs"
+    },
+    {
+      "id": "phonikud-onnx",
+      "name": "Phonikud (phonikud-onnx 1.0)",
+      "group": "software",
+      "usedFor": "The optional Sounds And Stress pack (a sound line with the stressed part marked, on this device) and the sound lines made ahead of time for stored lines. Not part of the first install.",
+      "licence": "MIT (stated on the model's own page, read 2026-11-12)",
+      "licenceUrl": "https://huggingface.co/Phonikud/phonikud-onnx",
+      "commercialUse": "yes-with-conditions",
+      "shareAlike": false,
+      "attributionText": "Sounds and stress: Phonikud (phonikud-onnx, by thewh1teagle and the Phonikud project), MIT licence. Built on Dicta's DictaBERT-large-char-menaked, CC BY 4.0.",
+      "perItemCredit": false,
+      "status": "verified-primary",
+      "auditRef": "CONTENT-LICENCE-AUDIT.md#nikud-packs"
+    },
+    {
       "id": "hebcal-fixtures",
       "name": "Hebcal output (test fixtures and the Hebcal-derived parsha schedule)",
       "group": "calendar",

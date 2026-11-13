@@ -11,6 +11,26 @@ import { FLIPS } from '../src/shell/rimon-flips.js';
 
 const HAVE = RIMON_STILLS_AVAILABLE;
 
+// CI runners use UTC. After 18:00 UTC on Friday, isShabbatQuiet(new Date()) is true, and mount()
+// (which does not take a clock) would treat a "correct" moment as a quiet Shabbat one. These two
+// tests freeze the clock to midweek noon, the same instant the planMoment tests already use.
+const MIDWEEK = new Date(2026, 10, 10, 12);
+function withMidweekClock(fn) {
+  const RealDate = globalThis.Date;
+  const mid = MIDWEEK.getTime();
+  const FrozenDate = function Date(...args) {
+    if (new.target) return args.length ? new RealDate(...args) : new RealDate(mid);
+    return RealDate(...args);
+  };
+  FrozenDate.now = () => mid;
+  FrozenDate.UTC = RealDate.UTC;
+  FrozenDate.parse = RealDate.parse;
+  FrozenDate.prototype = RealDate.prototype;
+  globalThis.Date = FrozenDate;
+  try { return fn(); } finally { globalThis.Date = RealDate; }
+}
+
+
 test('every mapped still id is a three-digit (optional letter) slug', () => {
   for (const [sit, ids] of Object.entries(SITUATIONS)) {
     assert.ok(ids.length, sit);
@@ -156,7 +176,7 @@ function fakeDoc({ reduceMotion = false, hash = '#/' } = {}) {
   return { doc, win, body, listeners };
 }
 
-test('mount shows a still on alef:rimon and hides it when the image errors', () => {
+test('mount shows a still on alef:rimon and hides it when the image errors', () => withMidweekClock(() => {
   const { doc } = fakeDoc();
   const m = mountRimonStills({ doc, holdMs: 50, base: 'data/images/rimon/' });
   assert.equal(doc.body.children.length, 1);
@@ -176,7 +196,7 @@ test('mount shows a still on alef:rimon and hides it when the image errors', () 
   assert.equal(img.src, undefined);
   m.destroy();
   assert.equal(doc.body.children.includes(fig), false);
-});
+}));
 
 test('reduced motion and Shabbat skip the entrance animation; a missing situation is a no-op', () => {
   const { doc } = fakeDoc({ reduceMotion: true });
@@ -236,7 +256,7 @@ test('idle and offline can appear using fallback stills before later catalogue f
   assert.equal(off.flip, 'peek');
 });
 
-test("big moments take their picture from Rimon's stage when it runs, and stay away when it says no Rimon now", () => {
+test("big moments take their picture from Rimon's stage when it runs, and stay away when it says no Rimon now", () => withMidweekClock(() => {
   const saved = globalThis.alefRimonStage;
   try {
     const { doc } = fakeDoc();
@@ -254,7 +274,7 @@ test("big moments take their picture from Rimon's stage when it runs, and stay a
     assert.match(img.src, /rimon-\d{3}[a-z]?(-[a-z0-9-]+)?\.webp$/, 'null: this module picks its own still (drawn set or v2 by name)');
     m.destroy();
   } finally { globalThis.alefRimonStage = saved; }
-});
+}));
 
 test('held catalogue stills are never offered by the big-moment pictures either', async () => {
   for (const id of Object.keys(HOLD)) assert.ok(!RIMON_STILLS_AVAILABLE.has(`v2:${id.slice(1)}`), id);

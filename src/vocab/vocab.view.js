@@ -18,11 +18,11 @@ import { TIER_LABEL, POS_LABEL, VOCAB_CARDS_KEY, stripPoints, addCards, cardId, 
 import { aliasHits, aliasNote } from './aliases.js';
 import { isFunction } from './vocab.js';
 import { plural } from '../shell/plural.js';
-import { DICTIONARY, fmt } from '../lib/counts.js';
+import { DICTIONARY, fmt, dictionaryScopeNote } from '../lib/counts.js';
 /** The browse total, the same number as the page title (src/lib/counts.js, counted from the served word packs). */
 export const ALL_WORDS_LABEL = `All ${fmt(DICTIONARY.words)} words`;
-/** What the title's number counts, said once on the page (M-01): entries, head-words, word forms, and what "Add" can add. */
-export const SCOPE_NOTE = `The list holds ${fmt(DICTIONARY.entries)} entries: ${fmt(DICTIONARY.words)} words, shown below, and ${fmt(DICTIONARY.forms)} word forms, shown when you tick "Show word forms". ${fmt(DICTIONARY.words - DICTIONARY.addable)} rare-sense words are left out of "Add all" (each card can still add its own word).${DICTIONARY.hidden ? ` ${fmt(DICTIONARY.hidden)} more ${DICTIONARY.hidden === 1 ? 'entry is' : 'entries are'} hidden while ${DICTIONARY.hidden === 1 ? 'its meaning is' : 'their meanings are'} checked.` : ''}`;
+/** What the title's number counts, said once on the page (M-01): the learner list plus how it sits inside the full data file. */
+export const SCOPE_NOTE = dictionaryScopeNote();
 import { NO_AUDIO, DEVICE_LABEL, NAME_NOT_PLAYED } from '../shell/audio-access.js';
 import { isAudioFree } from '../shell/audiofree.js';
 import { uiEnglish, displayHebrew, isNameWord, NAME_ABBREV } from '../shell/names.js';

@@ -11,7 +11,7 @@ export function mount(root, ctx) {
       h('p', {}, 'This is an early version. A Hebrew speaker or rabbi has not yet checked the Hebrew labels or the prayer text. ', h('a', { href: '#/how' }, 'How this works'), ' lists what is and is not finished.'),
       audioTruthNode(h, { id: 'about-audio-truth', fetchFn: ctx.readinessFetch }), // counts read from data/audio/summary.json
       // Course totals and the audio catalogue from src/lib/counts.js (counted from the served data at build time), and the build stamp.
-      h('p', { id: 'about-counts' }, `The course: ${LESSONS.all} ${SCOPE.all} (${LESSONS.reading} reading, ${LESSONS.israel} Israel), ${fmt(BOOKS)} story books and a ${fmt(DICTIONARY.words)}-word dictionary. ${aboutAudioSentence(AUDIO_CATALOGUE)}`),
+      h('p', { id: 'about-counts' }, `The course: ${LESSONS.all} ${SCOPE.all} (${LESSONS.reading} reading, ${LESSONS.israel} Israel), ${fmt(BOOKS)} story books and a ${fmt(DICTIONARY.words)}-word learner dictionary (${fmt(DICTIONARY.sourceEntries)} entries in the data). ${aboutAudioSentence(AUDIO_CATALOGUE)}`),
       h('p', { id: 'about-build', 'data-version': BUILD.version, 'data-built': BUILD.builtAt }, buildStamp()),
       h('p', {}, 'Made by John Khan. Aleph is \u00a9 2026 John Khan. All rights reserved.')),
     readinessNode(h, { open: true, fetchFn: ctx.readinessFetch }),

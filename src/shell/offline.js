@@ -100,7 +100,7 @@ export const ON_DEMAND_GROUPS = Object.freeze([
   // lane 6 (12 Nov round 2): Reading Without Vowels, the placement check page, trope families and per-aliyah practice (route code)
   { id: "od-bridge-trope-placement", label: "Reading without vowels, the placement check, trope families and aliyah practice (route code)", test: /^src\/(bridge\/|placement\/(placement\.view|model|loader)\.js$|trope\/(families|practice\.view)\.js$)/, approxMB: 0.07 },
   // lane platform (12 Nov): its pages and models (scheduler state and fit, what's new, my data, mastery, cram, my week, shortcuts) and the change list
-  { id: "od-platform", label: "Review scheduler details, What's New, My Data, Mastery Map, Cram, My Week and Keyboard Shortcuts (route code and the change list)", test: /^(src\/platform\/|data\/platform\/|src\/fsrs\/fsrs6\.js$)/, approxMB: 0.06 },
+  { id: "od-platform", label: "Review scheduler details, What's New, My Data, Mastery Map, Cram, My Week and Keyboard Shortcuts (route code and the change list)", test: /^(src\/(platform|collection)\/|data\/platform\/|src\/fsrs\/fsrs6\.js$)/, approxMB: 0.06 },
   { id: "od-grammar", label: "Grammar notes (route code) and a speaking-check model", test: /^src\/(grammar\/|speak\/dss\.model\.js$)/, approxMB: 0.05 },
   // reading lane (12 Nov): Reading Tools (#/readlab), its code and its two word lookups (family letters and patterns; stress)
   { id: "od-readlab", label: "Reading Tools: code, family-letter and stress word lists", test: /^(src|data)\/readlab\//, approxMB: 0.6 },

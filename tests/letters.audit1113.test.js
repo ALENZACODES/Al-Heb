@@ -15,8 +15,9 @@ test('every letter shows a picture, and Dalet shows the diving board its story d
     assert.ok(hit, `${l.id} has a memory picture`);
     assert.ok(existsSync(new URL('../' + hit.src, import.meta.url)), hit.src);
   }
-  assert.equal(R.resolve('letter', 'dalet').id, 'L04_dalet_quirky');
-  assert.match(R.resolve('letter', 'dalet').alt, /diving board/);
+  const story = R.resolve('letter', 'dalet', { variant: 'print', role: 'mnemonic' });
+  assert.equal(story.id, 'L04_dalet_quirky');
+  assert.match(story.alt, /diving board/);
   assert.match(R.resolve('letter', 'dalet', { role: 'meet' }).alt, /Meet Dalet/, 'the Dalet meet picture is the new letter card');
 });
 

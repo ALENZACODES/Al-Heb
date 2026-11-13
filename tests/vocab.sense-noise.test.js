@@ -103,12 +103,15 @@ test('prior March, garlic, cucumber, sandek, blue, and the 370 earlier correctio
   assert.equal(byW.get('hd91e4a26').en, 'cucumber');
   assert.equal(byW.get('h1782f762').en, 'sandek (the person who holds the baby at a circumcision)');
   const corr = read('data/vocab/corrections.json');
-  // Later rounds append their own corrections (S-01 learner-text gate, 12 Nov: 8); this lane's 410 stay first and unchanged.
+  // Later rounds append their own corrections (S-01 learner-text gate, 12 Nov: 8; lemma-accuracy, 12 Nov: 10);
+  // this lane's 410 stay first and unchanged.
   const later = corr.corrections.filter((c) => String(c.reason).startsWith('learner-text gate'));
-  const prior = corr.corrections.filter((c) => !String(c.reason).includes('sense-noise lane') && !later.includes(c));
+  const lemma = corr.corrections.filter((c) => String(c.reason).startsWith('lemma-accuracy'));
+  const prior = corr.corrections.filter((c) => !String(c.reason).includes('sense-noise lane') && !later.includes(c) && !lemma.includes(c));
   assert.equal(prior.length, 373);
-  assert.equal(corr.corrections.length - later.length, 410);
+  assert.equal(corr.corrections.length - later.length - lemma.length, 410);
   assert.equal(later.length, 8);
+  assert.equal(lemma.length, 10);
 });
 
 test('disposition sheet counts 279 rows, 34 applied, 245 held, and matches the built glosses', () => {
@@ -183,5 +186,5 @@ test('a second apply of the correction chain is a no-op', async () => {
   const report = applyCorrections(ROOT, { dry: true });
   assert.equal(report.conflicts.length, 0);
   assert.equal(report.applied.length, 0);
-  assert.equal(report.already.length, 418); // 410 + the 8 learner-text gate corrections (S-01, 12 Nov)
+  assert.equal(report.already.length, 428); // 410 + 8 learner-text gate + 10 lemma-accuracy (12 Nov)
 });

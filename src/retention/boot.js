@@ -16,7 +16,7 @@ import { restNow } from './quiet.js';
 import { showRimon } from './rimon.js';
 import { questProgress, questView, questsOn, expeditionProgress, expeditionView, expeditionOn } from './quests.js';
 import { monthProgress, monthView } from './month.js';
-import { welcomeBack, isComebackDay, recapDue, recapSeen, lastWeek, markLogin, loginView } from './recap.js';
+import { welcomeBack, isComebackDay, recapDue, recapSeen, lastWeek, markLogin, loginView, comebackView } from './recap.js';
 import { read as readCounts, xpToday, lessonsFinished, lessonsFinishedToday, weekDays } from '../lib/counts.js';
 
 const STREAK_KEY = 'streak';
@@ -217,7 +217,7 @@ export function retention(ctx, g = globalThis) {
     status: () => streakStatus(streakRaw(), get(), now()), streakShown: () => streakVisible(ctx), heartsShown: () => heartsOn(get(), { calm: calm() }), leagueShown: () => leagueOn(get(), { calm: calm() }),
     setStreak: (v) => { muteStreakSub = true; try { store.set(STREAK_KEY, v); } finally { muteStreakSub = false; } lastCount = projectStreak(v, now()).count; emit(); },
     rearm: () => scheduler?.arm(), quietOpt: () => quietOpt, say, ctx, revealed,
-    comeback: () => { const r = get(); return isComebackDay(r, now()) && todayXp(r, now()) === 0 ? { days: r.comebackAway || 7 } : null; },
+    comeback: () => { const r = get(); return isComebackDay(r, now()) && todayXp(r, now()) === 0 ? comebackView(r, now()) : null; },
     recap: () => (recapDue(get(), now(), { calm: calm() }) ? lastWeek(get(), now()) : null), recapSeen: () => update((r) => recapSeen(r, now())),
     loginView: () => loginView(get(), now()),
     monthView: () => monthView(get(), now(), { calm: calm() }),

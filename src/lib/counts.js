@@ -202,9 +202,27 @@ export const booksFinished = (rec) => Object.values(obj(rec)).filter((v) => v &&
 /** The Book Finisher badge counts the first five books (book1 to book5) of the shelf. */
 export const BOOK_FINISHER_BOOKS = 5;
 export const bookFinisherScope = () => `any ${BOOK_FINISHER_BOOKS} of the ${BOOKS} little books on the shelf (each read to its last page, with its story question answered)`;
-/** Dictionary: entries in the list, head-words the browser shows, word forms (shown with "Show word forms"), words "Add all" can add. */
+/** Dictionary: the learner list the page shows, plus how it sits inside the full data file (sourceEntries). */
 export const DICTIONARY = Object.freeze({ ...TOTALS.dictionary });
 export const dictionaryTitle = () => `Dictionary (${fmt(DICTIONARY.words)} words)`;
+/**
+ * One consistent account of the Dictionary numbers (M-01). Rare-sense words are a subset of the words shown, not an extra leftover.
+ * The 5,000-word learner list is what the page loads; words.json holds more entries that stay in the data and are not listed here.
+ */
+export function dictionaryScopeNote(d = DICTIONARY) {
+  const rare = nat(d.rareSense) || Math.max(0, nat(d.words) - nat(d.addable));
+  const listed = nat(d.listed) || (nat(d.entries) + nat(d.hidden));
+  const source = nat(d.sourceEntries) || listed;
+  const beyond = nat(d.beyondList) || Math.max(0, source - listed);
+  const beyondRank = nat(d.beyondRank);
+  const unranked = nat(d.unranked) || Math.max(0, beyond - beyondRank);
+  let s = `The dictionary data holds ${fmt(source)} entries. This page lists the ${fmt(listed)}-word learner list: ${fmt(d.words)} words, shown below`;
+  if (nat(d.forms)) s += `, and ${fmt(d.forms)} word forms, shown when you tick "Show word forms"`;
+  s += `. ${fmt(rare)} rare-sense word${rare === 1 ? ' is' : 's are'} already in that word count and ${rare === 1 ? 'is' : 'are'} left out of "Add all" (each card can still add its own word).`;
+  if (nat(d.hidden)) s += ` ${fmt(d.hidden)} more ${d.hidden === 1 ? 'entry is' : 'entries are'} hidden while ${d.hidden === 1 ? 'its meaning is' : 'their meanings are'} checked.`;
+  if (beyond) s += ` The other ${fmt(beyond)} entries in the data (${fmt(beyondRank)} with a frequency rank above 5,000 and ${fmt(unranked)} unranked lesson or phrase items) stay in the data file and are not on this list.`;
+  return s;
+}
 export const FIRST_WORDS = TOTALS.firstWords;
 export const BUILD_WORDS = TOTALS.buildWords;
 export const ROOTS = Object.freeze({ ...TOTALS.roots });

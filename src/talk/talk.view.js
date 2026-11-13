@@ -444,8 +444,12 @@ export function mount(root, ctx = {}) {
     if (alive) status.textContent = 'The stored lines could not be loaded. Check your connection once and open this screen again; after that it works offline.';
   });
 
+  // Word notes on tapped Hebrew: only when the Words language pack is already on this device (src/words/anywhere.js, lazy).
+  let offWords = () => {};
+  import('../words/anywhere.js').then((m) => m.armIfPackReady(root, h)).then((off) => { if (alive) offWords = off; else off(); }).catch(() => {});
+
   return () => {
-    alive = false;
+    alive = false; offWords();
     for (const d of DIRECTIONS) packRows[d].stop?.abort(); // parts that arrived are kept; the rest waits for the next visit
     stopListening();
     stopEnglish();

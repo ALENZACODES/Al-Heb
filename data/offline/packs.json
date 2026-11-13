@@ -264,7 +264,7 @@
     ],
     [
      "src/curriculum/lesson.view.js",
-     21995,
+     22458,
      1
     ],
     [
@@ -443,6 +443,26 @@
      1
     ],
     [
+     "src/settings/alef-tools.generated.js",
+     672,
+     0
+    ],
+    [
+     "src/settings/packs.model.js",
+     6687,
+     0
+    ],
+    [
+     "src/settings/shabbat.js",
+     1970,
+     0
+    ],
+    [
+     "src/settings/tools.js",
+     452,
+     0
+    ],
+    [
      "src/shell/answer-band.js",
      3769,
      1
@@ -586,6 +606,26 @@
      "src/shell/ui.js",
      7210,
      1
+    ],
+    [
+     "src/words/card.js",
+     3772,
+     0
+    ],
+    [
+     "src/words/lesson-notes.js",
+     2600,
+     0
+    ],
+    [
+     "src/words/morph.js",
+     2015,
+     0
+    ],
+    [
+     "src/words/tap.js",
+     5676,
+     0
     ]
    ]
   },

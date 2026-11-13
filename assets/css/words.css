@@ -1,0 +1,15 @@
+/* Word notes (src/words/): loaded the first time a lesson shows its Word Notes. House colours come from the theme variables. */
+.alef-lesson-page [lang="he"]:not(button [lang="he"]):not(a [lang="he"]) { cursor: pointer; }
+.alef-wordcard { margin: .5rem 0 1rem; border-inline-start: .3rem solid var(--gold, #c8a24a); }
+.alef-wordcard:focus { outline: 3px solid var(--focus, #c8a24a); outline-offset: 2px; }
+.alef-wc-title { margin: 0 0 .5rem; }
+.alef-wc-lines { margin: 0 0 .5rem; }
+.alef-wc-row { display: grid; grid-template-columns: minmax(7rem, 11rem) 1fr; gap: .25rem .75rem; padding: .3rem 0; border-top: 1px solid var(--line, rgba(128, 128, 128, .3)); }
+.alef-wc-row dt { font-weight: 600; }
+.alef-wc-row dd { margin: 0; }
+.alef-wc-he { font-size: 1.25em; }
+.alef-wordnotes-list { padding-inline-start: 1.1rem; }
+.alef-wordnotes-list li { margin: .35rem 0; }
+.alef-wordpick { min-height: 44px; min-width: 44px; }
+@media (max-width: 30rem) { .alef-wc-row { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: no-preference) { .alef-wordcard { animation: none; } }

@@ -15,8 +15,8 @@ const ISO = /^\d{4}-\d\d-\d\d$/;
 const iso = (v) => (typeof v === 'string' && ISO.test(v) ? v : null);
 const arr = (v, cap, ok = () => true) => (Array.isArray(v) ? v.filter(ok).slice(-cap) : []);
 const tri = (v) => (v === true || v === false ? v : null);
-const SHOP_THEME_IDS = new Set(['sepia', 'dusk']);
-const SHOP_OUTFIT_IDS = new Set(['scarf', 'ribbon', 'glasses']);
+const SHOP_THEME_IDS = new Set(['sepia', 'dusk', 'ink', 'olive', 'type']);
+const SHOP_OUTFIT_IDS = new Set(['scarf', 'ribbon', 'glasses', 'pin', 'badge']);
 const SHOP_AUDIO_IDS = new Set(['blessings']);
 const shopIds = (v, allow) => arr(v, 12, (s) => typeof s === 'string' && allow.has(s));
 const pickShop = (v, allow, owned) => (typeof v === 'string' && allow.has(v) && owned.includes(v) ? v : null);
@@ -31,7 +31,7 @@ export function newInstallId(g = globalThis) {
 /** A fresh record. */
 export function defaults(now = Date.now(), installId = newInstallId()) {
   return {
-    v: RETENTION_V, installId, createdAt: dayKey(now), lessonsFinished: 0, goal: 20,
+    v: RETENTION_V, installId, createdAt: dayKey(now), lessonsFinished: 0, perfectLessons: 0, goal: 20,
     xp: { total: 0, days: {}, recentIds: [], capDay: null, capReview: 0, capGame: 0 },
     gems: { balance: 0, ledger: [], paidMilestones: [], goalPaidDay: null },
     freezes: { held: 0, used: [], evaluatedThrough: null, unseen: false },
@@ -40,7 +40,9 @@ export function defaults(now = Date.now(), installId = newInstallId()) {
     league: { enabled: null, tier: 1, weekId: null, weekXp: 0, carry: 0, joined: false, settled: null, history: [], resultUnseen: null },
     sessions: [], lastTz: null, lastBootDay: null, loginDays: [], loginPaid: {},
     notify: { optedIn: false, tone: 'kind', asks: 0, lastAskAtLesson: 0, denied: false, sent: [], stopped: false, periodicSync: false },
-    shop: { themes: [], themeActive: null, outfits: [], outfitActive: null, audio: [], gameLevels: 0, shields: { held: 0, used: [] } },
+    shop: { themes: [], themeActive: null, outfits: [], outfitActive: null, earnedOutfits: [], audio: [], gameLevels: 0, shields: { held: 0, used: [] } },
+    mysteries: { opened: [] },
+    expedition: null,
   };
 }
 
@@ -64,7 +66,7 @@ export function normalize(raw, now = Date.now()) {
   const rep = isObj(r.repair) && Array.isArray(r.repair.days) && r.repair.days.every(iso) && r.repair.days.length ? { days: r.repair.days.slice(0, 7), prev: nat(r.repair.prev), last: iso(r.repair.last), until: nat(r.repair.until) } : null;
   return {
     ...r, v: typeof r.v === 'number' && r.v > RETENTION_V ? r.v : RETENTION_V, installId: d.installId, createdAt: iso(r.createdAt) || d.createdAt,
-    lessonsFinished: nat(r.lessonsFinished), goal: GOAL_CHOICES.includes(r.goal) ? r.goal : 20,
+    lessonsFinished: nat(r.lessonsFinished), perfectLessons: nat(r.perfectLessons), goal: GOAL_CHOICES.includes(r.goal) ? r.goal : 20,
     xp: { ...x, total: nat(x.total), days, recentIds: arr(x.recentIds, CAPS.recentIds, (s) => typeof s === 'string'), capDay: iso(x.capDay), capReview: nat(x.capReview), capGame: nat(x.capGame) },
     gems: { ...g, balance: nat(g.balance), ledger: arr(g.ledger, CAPS.ledger, (e) => isObj(e) && Number.isFinite(e.d)), paidMilestones: arr(g.paidMilestones, 20, Number.isInteger), goalPaidDay: iso(g.goalPaidDay) },
     freezes: { ...f, held: Math.min(nat(f.held), 2), used: arr(f.used, CAPS.used, iso), evaluatedThrough: iso(f.evaluatedThrough), unseen: f.unseen === true },
@@ -79,6 +81,8 @@ export function normalize(raw, now = Date.now()) {
     notify: { ...n, optedIn: n.optedIn === true, tone: n.tone === 'playful' ? 'playful' : 'kind', asks: nat(n.asks), lastAskAtLesson: nat(n.lastAskAtLesson), denied: n.denied === true,
       sent: arr(n.sent, CAPS.sent, (e) => isObj(e) && typeof e.id === 'string'), stopped: n.stopped === true, periodicSync: n.periodicSync === true },
     shop: normalizeShop(r.shop),
+    mysteries: { opened: arr((isObj(r.mysteries) ? r.mysteries.opened : r.mysteries), 12, (s) => s === 'meltdown' || s === 'songs') },
+    expedition: normalizeExpedition(r.expedition),
   };
 }
 
@@ -88,9 +92,11 @@ function normalizeShop(raw) {
   const themes = shopIds(s.themes, SHOP_THEME_IDS);
   const outfits = shopIds(s.outfits, SHOP_OUTFIT_IDS);
   const audio = shopIds(s.audio, SHOP_AUDIO_IDS);
+  const earnedOutfits = shopIds(s.earnedOutfits, SHOP_OUTFIT_IDS).filter((id) => outfits.includes(id));
   return {
     themes, themeActive: pickShop(s.themeActive, SHOP_THEME_IDS, themes),
     outfits, outfitActive: pickShop(s.outfitActive, SHOP_OUTFIT_IDS, outfits),
+    earnedOutfits,
     audio,
     gameLevels: Math.min(nat(s.gameLevels), 2),
     shields: { held: Math.min(nat(sh.held), 2), used: arr(sh.used, CAPS.used, iso) },
@@ -104,6 +110,18 @@ function normalizeLoginPaid(raw) {
     out[k] = arr(raw[k], 3, (s) => s === 'd7' || s === 'd14' || s === 'month');
   }
   return out;
+}
+
+function normalizeExpedition(raw) {
+  if (!isObj(raw) || typeof raw.id !== 'string' || !iso(raw.start)) return null;
+  const allow = new Set(['blessing', 'market']);
+  const stops = {};
+  if (isObj(raw.stops)) for (const k of Object.keys(raw.stops)) if (iso(k) && (raw.stops[k] === 'done' || raw.stops[k] === 'rest')) stops[k] = raw.stops[k];
+  return {
+    id: allow.has(raw.id) ? raw.id : 'blessing', start: raw.start, stops,
+    review: nat(raw.review), reviewDay: iso(raw.reviewDay), paid: raw.paid === true,
+    finished: arr(raw.finished, 12, (s) => s === 'blessing' || s === 'market'),
+  };
 }
 
 /** Deep copy for the pure modules (each returns a new record and leaves its input alone). */

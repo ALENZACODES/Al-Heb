@@ -37,3 +37,25 @@ test('reaching the target pays 50 gems once; the next month starts fresh; closed
   assert.equal(monthOn(fresh({ lessonsFinished: 4 })), false); assert.equal(monthOn(fresh(), { calm: true }), false);
   assert.equal(monthProgress(fresh({ lessonsFinished: 4 }), now).completed, false);
 });
+
+test('seasons rotate existing catalogue games with the Hebrew month; Kislev is one instance', async () => {
+  const { seasonOf, monthView } = await import('../../src/retention/month.js');
+  const kislev = seasonOf(T('2026-11-13T10:00'));
+  assert.equal(kislev.id, 'lights');
+  assert.equal(kislev.month, 'Kislev');
+  assert.deepEqual(kislev.items.map((x) => x.href), ['#/hanukkah-dreidel1', '#/hanukkah-candles']);
+  assert.match(kislev.text, /leave when the month ends/);
+  const v = monthView(fresh(), T('2026-11-13T10:00'));
+  assert.equal(v.title, 'Kislev Challenge');
+  assert.equal(v.season.id, 'lights');
+  const tevet = seasonOf(T('2026-12-11T10:00'));
+  assert.equal(tevet.id, 'tevet');
+  assert.equal(tevet.items.length, 0);
+  const tishrei = seasonOf(T('2026-09-20T10:00'));
+  assert.equal(tishrei.id, 'tishrei');
+  assert.ok(tishrei.items.some((x) => x.href === '#/g5-shofar'));
+  const adar2 = seasonOf(T('2027-03-20T10:00'));
+  assert.equal(adar2.id, 'adar');
+  assert.ok(adar2.items.some((x) => x.href === '#/g5-grogger'));
+  assert.equal(seasonOf(T('2026-11-10T23:00')).id, 'cheshvan');
+});

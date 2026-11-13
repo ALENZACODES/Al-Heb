@@ -1,6 +1,7 @@
 // Game 20 — point-to-unpointed cipher over source-verified corpus lines.
 import { h, heSpan } from '../shell/ui.js';
 import { createSession, shuffled, resultsCard, roundStatus, loadGameImages, envNode, GAME_ENV } from './engine.js';
+import { castEnvNode } from './cast-env.js';
 import { sfx } from '../audio/sfx.js';
 import { loadJson } from '../grammar/loader.js';
 import { stripPoints } from '../typing/typing.js';
@@ -27,7 +28,7 @@ export function mount(root, ctx) {
   // only — never a cue). A missing picture leaves the page as it was.
   loadGameImages(ctx).then((R) => {
     if (!alive) return;
-    const env = envNode(h, R, GAME_ENV.ciphergrid);
+    const env = castEnvNode(h, R, 'ciphergrid', GAME_ENV.ciphergrid);
     if (env) article.insertBefore(env, status);
   }).catch(() => {});
   function paint(feedback) {

@@ -84,6 +84,7 @@ export function mount(root, ctx) {
   const status = el('p', { role: 'status', 'aria-live': 'polite', class: 'rl-status' });
   wrap.append(h1, el('p', { class: 'draft-flag', role: 'note' }, DRAFT_NOTE), body, status);
   root.append(wrap);
+  import('../bridge/chip.js').then((m) => m.attachChip(root, ctx)).catch(() => { /* the screen works without the stage line */ }); // your reading-ladder stage, on every reading screen
   let alive = true, st = normalizeState(null);
   const say = (t) => { status.textContent = t; };
   const save = () => storeSet(ctx, STORE_KEY, st);

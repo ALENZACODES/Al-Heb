@@ -46,6 +46,7 @@ export async function mount(root, ctx) {
   }
   root.append(h("p", {}, h("a", { href: "#/books" }, "← All books")));
   root.append(h("h1", {}, book.titleEn));
+  import('../bridge/chip.js').then((m) => m.attachChip(root, ctx)).catch(() => { /* the screen works without the stage line */ }); // your reading-ladder stage, on every reading screen
   const num = shelfNumber(id, shelfBooks);
   root.append(h("p", { class: "muted" }, `${num ? `Book ${num} of ${shelfBooks.length} · ` : ""}${book.titleTranslit} · ${book.level} · ${book.pages.length} pages`));
   // A7: how many pages have audio in the learner's voice, from the book's own page list

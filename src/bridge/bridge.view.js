@@ -15,6 +15,7 @@ import { shelfOrder } from '../books/order.js';
 import { FILES, bookFile, loaderFor } from './loader.js';
 import { STORE_KEY, DRAFT_NOTE, SPELLING_NOTE, BRIDGE_STAGES, LADDER, FIRST_BRIDGE, normalizeState, levelOf, isDone, present, recordText, bookTextId, lineTextId,
   bookShelf, prayerLines, drillWords, pickWords, wordQuestion, recordWord, wordSummary, modernShelf, recordModern, showName, stageOf } from './model.js';
+import { ladderProgress, stampStages, stageOpen, lockedReason, proof, recallCounts, chipText, READS_TO_PASS, SELF_GRADED } from './progress.js';
 
 export const TITLE = 'Reading Without Vowels';
 
@@ -38,22 +39,59 @@ export function mount(root, ctx) {
   const tradition = () => congregationOf(ctx?.settings);
   const failed = () => set(el('p', { role: 'alert' }, 'This practice could not be loaded. If you are offline, open it once while online. Nothing was lost.'));
 
-  function ladderList(level) {
-    return el('ol', { class: 'br-ladder', start: '0', 'aria-label': 'The reading ladder' }, ...LADDER.map((s) => el('li', { 'aria-current': s.level === level ? 'step' : null },
-      el('strong', {}, s.name), `: ${s.help}`, s.kind === 'fade' ? el('span', { class: 'muted' }, ' (Fade-out recall)') : null)));
+  function ladderList(level, recall = null) {
+    const prog = ladderProgress(st);
+    const state = (s) => {
+      if (s.kind === 'fade') return recall ? ` (Fade-out recall: ${recall[s.level]} line${recall[s.level] === 1 ? '' : 's'} reached this stage)` : ' (Fade-out recall)';
+      const g = prog.stages.find((x) => x.level === s.level);
+      return g.passed ? ' (done)' : g.open ? ` (open: ${g.reads} of ${g.need} texts read without help)` : ' (closed)';
+    };
+    return el('ol', { class: 'br-ladder', start: '0', 'aria-label': 'The reading ladder' }, ...LADDER.map((s) => el('li', { 'aria-current': s.level === level ? 'step' : null, 'data-stage': String(s.level) },
+      el('strong', {}, s.name), `: ${s.help}`, el('span', { class: 'muted' }, state(s)))));
+  }
+
+  /** Where the learner stands: the stage, what opens the next one, and the record of what was done. */
+  function progressPanel(names) {
+    const prog = ladderProgress(st);
+    const rows = prog.stages.map((g) => el('li', { 'data-stage-row': String(g.level), 'data-state': g.passed ? 'done' : g.open ? 'open' : 'closed' },
+      el('strong', {}, `Stage ${g.level}: ${g.name}. `),
+      g.passed ? 'Done.' : g.open ? `${g.reads} of ${g.need} texts read without help. ` : lockedReason(st, g.level, ''),
+      !g.passed && g.open ? el('progress', { max: String(g.need), value: String(g.reads), 'aria-label': `Stage ${g.level}: ${g.reads} of ${g.need} texts` }) : null));
+    const done = proof(st, names);
+    return el('section', { class: 'card br-progress', 'aria-labelledby': 'br-progress-h' },
+      el('h2', { id: 'br-progress-h' }, 'Your Stage'),
+      el('p', { id: 'br-stage-line' }, el('strong', {}, chipText(st))),
+      el('p', {}, `Read ${READS_TO_PASS} different texts at a stage without help and the next stage opens. A book or a prayer line each count as one text. A stage you have passed stays passed.`),
+      el('ol', { class: 'br-stage-rows', start: '4' }, ...rows),
+      done.length ? el('details', { class: 'br-proof', id: 'br-proof' }, el('summary', {}, 'What you have done'),
+        ...done.map((d) => el('div', {}, el('p', {}, d.line), el('ul', {}, ...d.texts.map((t) => el('li', {}, t)))))) : null,
+      el('p', { class: 'muted' }, SELF_GRADED));
   }
 
   // ---------- hub ----------
-  function hub() {
+  async function hub() {
+    // titles for the record, and the recall counts, when they can be read; the page works without them
+    let names = (id) => id, recall = null;
+    try {
+      const [shelf, reg, cards] = await Promise.all([load(FILES.shelf).catch(() => null), load(FILES.registry).catch(() => null), storeGet(ctx, CARDS_KEY, {})]);
+      const title = new Map();
+      for (const b of shelf?.books || []) if (b?.id) title.set(bookTextId(b.id), `Book: ${b.titleEn || b.id}`);
+      for (const e of reg?.entries || []) if (e?.id) title.set(lineTextId(e.id), `Line: ${e.title || e.id}`);
+      names = (id) => title.get(id) || id;
+      recall = recallCounts(cards);
+    } catch { /* counts only */ }
+    if (!alive) return;
     set(
       el('p', {}, 'Real Hebrew is printed without vowel marks. This ladder carries on from Fade-out recall: after the four recall stages come three reading stages, kept separately for each text you read.'),
-      ladderList(-1),
+      progressPanel(names),
+      ladderList(ladderProgress(st).current, recall),
       el('h2', {}, 'Practice'),
       el('ul', { class: 'br-shelves' },
         el('li', {}, el('a', { href: '#/bridge/books' }, 'Little books without vowels'), ': the books you have already read with vowels come first.'),
         el('li', {}, el('a', { href: '#/bridge/lines' }, 'Prayer lines without vowels'), ': the lines from Fade-out recall.'),
         el('li', {}, el('a', { href: '#/bridge/words' }, 'Word recognition'), ': a word without its vowels; the vowelled form is one tap away.'),
         el('li', {}, el('a', { href: '#/bridge/modern' }, 'Modern texts shelf'), ': signs, menus and short messages, the way Israel shows them.'),
+        el('li', {}, el('a', { href: '#/import' }, 'Your own text'), ': paste any Hebrew and read it with the dictionary beside it.'),
         el('li', {}, el('a', { href: '#/readlab/texts' }, 'Three versions'), ': one text with all vowel marks, then some, then none; each version opens when you read the one before it without help.')),
       el('p', { class: 'muted' }, 'Earlier stages: ', el('a', { href: '#/learn?fade=1' }, 'Fade-out recall'), '.'));
   }
@@ -83,7 +121,10 @@ export function mount(root, ctx) {
         el('span', { class: 'muted' }, 'Self-graded: the app cannot hear you.'));
       set(back(backHref, backLabel), el('h2', {}, title), sub ? el('p', { class: 'muted' }, sub) : null,
         el('p', {}, `Your level for this text: stage ${saved}, ${stageOf(saved).name}.${isDone(st, id) ? ' You have read it at every stage.' : ''}`),
-        el('div', { class: 'row', role: 'group', 'aria-label': 'Stage to read at' }, ...BRIDGE_STAGES.map((s) => btn(`${s.level}: ${s.name}`, () => { played = s.level; helped = new Set(); answered = false; draw(); say(`${s.name}. ${s.level === saved ? 'This is your saved stage.' : 'Practice only: your saved stage moves only when you read at it.'}`); }, { class: 'btn secondary', 'aria-pressed': String(s.level === played) }))),
+        el('div', { class: 'row', role: 'group', 'aria-label': 'Stage to read at' }, ...BRIDGE_STAGES.map((s) => !stageOpen(st, s.level, id)
+          ? btn(`${s.level}: ${s.name} (closed)`, () => say(lockedReason(st, s.level, id)), { class: 'btn secondary', 'aria-disabled': 'true', 'data-locked': String(s.level), title: lockedReason(st, s.level, id) })
+          : btn(`${s.level}: ${s.name}`, () => { played = s.level; helped = new Set(); answered = false; draw(); say(`${s.name}. ${s.level === saved ? 'This is your saved stage.' : 'Practice only: your saved stage moves only when you read at it.'}`); }, { class: 'btn secondary', 'aria-pressed': String(s.level === played) }))),
+        el('p', { class: 'muted', id: 'br-chip' }, chipText(st), ' ', el('a', { href: '#/bridge' }, 'Your stage')),
         el('p', { class: 'muted' }, `${stage.name}: ${stage.help}`),
         fadeHref ? el('p', { class: 'muted' }, 'Stages 0 to 3 for this line: ', el('a', { href: fadeHref }, 'Fade-out recall'), '.') : null,
         !stage.vowels ? el('p', { class: 'muted br-spelling', role: 'note' }, SPELLING_NOTE) : null,
@@ -93,15 +134,17 @@ export function mount(root, ctx) {
       if (answered) return; answered = true;
       const unaided = said && helped.size === 0, before = levelOf(st, id);
       const r = recordText(st, id, played, unaided, Date.now());
-      st = r.state; saved = levelOf(st, id); await save();
+      const stamped = stampStages(r.state, Date.now());
+      st = stamped.state; saved = levelOf(st, id); await save();
       if (!alive) return;
       const res = r.result;
-      say(played !== before ? 'Saved. You practiced another stage, so your saved stage did not change.'
+      const opened = stamped.opened.length ? ` You have passed stage ${stamped.opened.at(-1)}${stamped.opened.at(-1) < 6 ? `: stage ${stamped.opened.at(-1) + 1} is now open for every text.` : ', the last one. You read Hebrew the way it is printed.'}` : '';
+      say((played !== before ? 'Saved. You practiced another stage, so your saved stage did not change.'
         : said && helped.size ? `Saved as read with help: you opened help on ${helped.size} line${helped.size === 1 ? '' : 's'}.${res.moved ? ` This text goes back to stage ${res.level}.` : ''}`
         : res.finished ? 'Saved. You have read this text at the last stage, with no vowel marks and no transliteration.'
         : res.moved && unaided ? `Saved. Next time this text is at stage ${res.level}, ${stageOf(res.level).name}.`
         : res.moved ? `Saved. This text goes back to stage ${res.level}, ${stageOf(res.level).name}.`
-        : 'Saved. Your stage for this text stays where it is.');
+        : 'Saved. Your stage for this text stays where it is.') + opened);
       draw();
     }
     draw();
@@ -238,7 +281,7 @@ export function mount(root, ctx) {
       else if (sec === 'line' && id) await line(id);
       else if (sec === 'words') await words();
       else if (sec === 'modern') await modern();
-      else hub();
+      else await hub();
     } catch { if (alive) failed(); }
   })();
   return () => { alive = false; wrap.remove?.(); };

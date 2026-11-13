@@ -58,7 +58,7 @@ test('per-text level: only a read at the saved stage moves it; 6 read unaided fi
   assert.equal(B.isDone(st, 'book:book1'), true); assert.equal(st.texts['book:book1'].doneAt, 13); assert.equal(st.texts['book:book1'].unaided, 3);
   const back = B.normalizeState(JSON.parse(JSON.stringify(st)));
   assert.deepEqual(back, st);
-  assert.deepEqual(B.normalizeState({ texts: { a: { level: 9 }, b: 'x' }, words: { w: { seen: 2, firstTry: 5 } } }), { v: 1, texts: { a: { level: 4, done: false, doneAt: 0, tries: 0, unaided: 0 } }, words: { w: { seen: 2, firstTry: 2 } }, modern: {} });
+  assert.deepEqual(B.normalizeState({ texts: { a: { level: 9 }, b: 'x' }, words: { w: { seen: 2, firstTry: 5 } } }), { v: 1, texts: { a: { level: 4, done: false, doneAt: 0, tries: 0, unaided: 0 } }, words: { w: { seen: 2, firstTry: 2 } }, modern: {}, stages: {} });
 });
 
 test('book shelf: books read with vowels come first (finished, then started), then the rest in shelf order; all 63 listed', () => {

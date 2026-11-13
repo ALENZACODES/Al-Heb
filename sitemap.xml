@@ -1161,6 +1161,10 @@
     <changefreq>weekly</changefreq>
   </url>
   <url>
+    <loc>https://alef-review.onrender.com/#/import</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://alef-review.onrender.com/#/readlab</loc>
     <changefreq>weekly</changefreq>
   </url>

@@ -49,6 +49,7 @@ const ON_DEMAND_PREFIXES = ['data/vocab/', 'data/roots/', 'data/knownwords/', 'd
   'assets/game-art/', 'assets/letter-cartoons/', 'assets/books/', 'assets/speak-hold/', 'assets/speak-candidates/',
   // Lazy preview-route code + book content + image indexes: fetched on first view, runtime-cached (fix #4; #8 groups).
   'src/games/', 'src/books/', 'data/books/', 'data/images/',
+  'src/importer/', // group Q: Read Your Own Text (#/import), fetched on first open
   'src/bridge/', // lane 6: Reading Without Vowels (#/bridge), view, model and loader, fetched on first open
   'src/readlab/', 'data/readlab/', // reading lane: Reading Tools (#/readlab), code and its two lookup files, fetched on first open
   // Camera Translator (preview route /camera): view code, word list and config are fetched when the screen first opens, runtime-cached.

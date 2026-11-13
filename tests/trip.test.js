@@ -199,3 +199,44 @@ test('the screen: coins are picked and checked; a stall is bargained to a sale',
   assert.match(host.querySelector('#tp-market-result').textContent, /You paid \d+ shekels, \d+ less than the first price/);
   unmount();
 });
+
+test('street signs, emergency lines and the hotel desk speak stored Hebrew only', async () => {
+  const T = await import('../src/trip/trip.js');
+  const glossary = JSON.parse(readFileSync(join(root, 'data/camera/sign-glossary.json'), 'utf8'));
+  const items = T.signItems(glossary); assert.ok(items.length >= 100); assert.equal(new Set(items.map((x) => x.en)).size, items.length);
+  for (let seed = 1; seed <= 100; seed++) { const q = T.signQuestion(items, seeded(seed)); assert.equal(q.options.length, 4); assert.equal(new Set(q.options).size, 4); assert.equal(q.options.filter((o) => o === q.sign.en).length, 1); }
+  const groups = T.emergencyCards(pack); assert.deepEqual(groups.map((g) => g.id), ['help', 'doctor', 'pharmacy', 'lost']);
+  for (const g of groups) { assert.ok(g.lines.length >= 4, g.id); for (const l of g.lines) { assert.ok(stored.has(l.he), l.he); assert.ok(l.en); } }
+  assert.ok(groups[1].lines.some((l) => l.f), 'a line a woman says differently carries her form');
+  for (const booked of [true, false]) {
+    const steps = T.hotelSteps(booked); assert.equal(steps.length, 5);
+    const byId = new Map(pack.phrases.map((p) => [p.id, p]));
+    for (const s of steps) { for (const id of [s.right, ...s.wrong]) assert.ok(byId.has(id), id); assert.ok(!s.wrong.includes(s.right)); const c = T.hotelChoices(pack, s, seeded(5)); assert.equal(c.length, 3); assert.ok(c.every((x) => stored.has(x.he))); assert.equal(c.filter((x) => x.id === s.right).length, 1); }
+    const all = Object.fromEntries(steps.map((s) => [s.id, s.right])); const card = T.hotelCard(steps, all, { name: '  Dana  ', nights: '3' });
+    assert.deepEqual([card.name, card.nights, card.right, card.of], ['Dana', 3, 5, 5]); assert.equal(card.lines.length, 7); assert.match(card.lines[6], /11:00/);
+    const none = T.hotelCard(steps, {}, { name: '', nights: 'x' }); assert.deepEqual([none.name, none.nights, none.right, none.lines.length], ['Guest', 1, 0, 2]);
+  }
+});
+
+test('the screen: emergency lines are listed; a check-in is played to its card; signs are read and scored', async () => {
+  const { createDocument, ev, flush } = await import('./rimon.fakedom.js');
+  const doc = createDocument(); globalThis.document = doc;
+  const { mount } = await import('../src/trip/trip.view.js'); const T = await import('../src/trip/trip.js');
+  const glossary = JSON.parse(readFileSync(join(root, 'data/camera/sign-glossary.json'), 'utf8'));
+  const host = doc.createElement('div'); doc.body.append(host);
+  const press = async (n) => { n.dispatchEvent(ev('click')); await flush(5); };
+  const unmount = await mount(host, { tripData: { pack, signs: glossary }, rng: seeded(31), query: { part: 'emergency' } });
+  assert.ok(host.textContent.includes('הצילו!')); assert.equal(host.querySelectorAll('[data-group]').length, 4);
+  await press(host.querySelector('[data-tab=hotel]'));
+  host.querySelector('#tp-guest').value = 'Dana'; host.querySelector('#tp-nights').value = '2'; await press(host.querySelector('#tp-hotel-go'));
+  const steps = [...T.hotelSteps(true), ...T.hotelSteps(false)];
+  for (let i = 0; i < 5; i++) {
+    const goal = host.querySelector('#tp-hotel-goal').textContent; const st = steps.find((s) => s.goal === goal);
+    await press(host.querySelector(`[data-line=${i === 1 ? st.wrong[0] : st.right}]`)); await press(host.querySelector('#tp-hotel-next'));
+  }
+  assert.equal(host.querySelector('#tp-hotel-score').textContent, '4 of 5 asked the right way.'); assert.match(host.querySelector('#tp-hotel-card').textContent, /Guest: Dana/);
+  await press(host.querySelector('[data-tab=signs]')); await flush(20);
+  for (let i = 0; i < 8; i++) { await press(host.querySelector(i < 6 ? '[data-right=true]' : '[data-right=false]')); await press(host.querySelector('#tp-sign-next')); }
+  assert.equal(host.querySelector('#tp-signs-score').textContent, '6 of 8 signs read.');
+  unmount();
+});

@@ -7,12 +7,13 @@
 // Tests inject ctx.tripData {pack}, ctx.rng.
 import { el, heText, storeGet, storeSet } from '../curriculum/dom.js';
 import { loadJSON } from '../curriculum/data.js';
-import { TRIP_KEY, STOPS, MAX_DAYS, israelPlaces, linesFor, normalizePlan, addDay, removeDay, toggleStop, planText, menu, line, newVisit, readOrder, heardAs, bill, checkVisit, newBoard, board, COINS, newMoneyTask, checkCoins, newStall, stallMove, stallResult, stallLine } from './trip.js';
+import { TRIP_KEY, STOPS, MAX_DAYS, israelPlaces, linesFor, normalizePlan, addDay, removeDay, toggleStop, planText, menu, line, newVisit, readOrder, heardAs, bill, checkVisit, newBoard, board, COINS, newMoneyTask, checkCoins, newStall, stallMove, stallResult, stallLine, signItems, signQuestion, emergencyCards, hotelSteps, hotelChoices, hotelCard } from './trip.js';
 
 export const COPY = Object.freeze({
   title: 'Israel Trip',
   lead: 'Plan your days and take the Hebrew you will need for each stop. Then practise ordering a meal.',
-  planner: 'Trip Planner', restaurant: 'At The Restaurant', station: 'At The Station', money: 'Shekels And Coins', market: 'At The Market',
+  planner: 'Trip Planner', restaurant: 'At The Restaurant', station: 'At The Station', money: 'Shekels And Coins', market: 'At The Market', signs: 'Street Signs', hotel: 'Hotel Check-In', emergency: 'In An Emergency',
+  emergencyLead: 'The lines to have ready. Where a woman says it differently, her form is beside it.',
   stationHint: 'Read the board and press the line you would board.',
   noDays: 'No days yet. Pick a place and add your first day.',
   full: `A plan holds up to ${MAX_DAYS} days.`,
@@ -52,7 +53,7 @@ export async function mount(root, ctx = {}) {
   const panel = el('div', { id: 'tp-panel' }); const tabs = {};
   const show = (name) => { for (const [k, b] of Object.entries(tabs)) b.setAttribute('aria-pressed', String(k === name)); panel.replaceChildren(views[name]()); };
   const bar = el('div', { class: 'tp-tabs', role: 'group', 'aria-label': 'Parts of Israel Trip' });
-  for (const name of ['planner', 'restaurant', 'station', 'money', 'market']) { tabs[name] = el('button', { type: 'button', class: 'btn secondary', 'data-tab': name, 'aria-pressed': 'false', onclick: () => show(name) }, COPY[name]); bar.append(tabs[name]); }
+  for (const name of ['planner', 'emergency', 'restaurant', 'station', 'money', 'market', 'hotel', 'signs']) { tabs[name] = el('button', { type: 'button', class: 'btn secondary', 'data-tab': name, 'aria-pressed': 'false', onclick: () => show(name) }, COPY[name]); bar.append(tabs[name]); }
   wrap.append(bar, panel);
 
   function planner() {
@@ -205,7 +206,59 @@ export async function mount(root, ctx = {}) {
     return host;
   }
 
-  const views = { planner, restaurant, station, money, market };
+  function emergency() {
+    return el('div', {}, el('p', {}, COPY.emergencyLead), emergencyCards(pack).map((g) => el('div', { class: 'tp-card', 'data-group': g.id }, el('h2', {}, g.label),
+      el('ul', { class: 'tp-lines' }, g.lines.map((l) => el('li', {}, heText(l.he, 'alef-he tp-he'), l.f ? heText(l.f, 'alef-he tp-he') : null, el('span', { class: 'muted' }, l.en)))))));
+  }
+
+  function hotel() {
+    const steps = hotelSteps(rng() < 0.5); const picks = {}; let at = 0;
+    const host = el('div', { class: 'tp-card' });
+    const name = /** @type {HTMLInputElement} */ (el('input', { type: 'text', id: 'tp-guest', maxlength: '60', dir: 'auto', autocomplete: 'off' }));
+    const nights = /** @type {HTMLInputElement} */ (el('input', { type: 'text', id: 'tp-nights', inputmode: 'numeric', autocomplete: 'off' }));
+    const start = () => host.replaceChildren(el('h2', {}, 'At The Desk'), el('label', { for: 'tp-guest' }, 'Your Name'), name, el('label', { for: 'tp-nights' }, 'How Many Nights'), nights,
+      el('div', { class: 'tp-row' }, el('button', { type: 'button', class: 'btn', id: 'tp-hotel-go', onclick: step }, 'Go To The Desk')));
+    const step = () => {
+      if (at >= steps.length) { finish(); return; }
+      const st = steps[at]; const out = el('div', { id: 'tp-hotel-reply', role: 'status', 'aria-live': 'polite' }); let done = false;
+      const choose = (id) => { if (done) return; done = true; picks[st.id] = id; at++;
+        out.replaceChildren(el('p', {}, el('strong', {}, 'Desk: '), id === st.right ? st.reply : 'The clerk looks puzzled. That was not what you needed here.'), el('button', { type: 'button', class: 'btn', id: 'tp-hotel-next', onclick: step }, at >= steps.length ? 'Get My Card' : 'Go On')); };
+      host.replaceChildren(el('h2', {}, `Step ${at + 1} Of ${steps.length}`), el('p', { id: 'tp-hotel-goal' }, st.goal),
+        el('div', { class: 'tp-row', style: 'flex-direction:column' }, hotelChoices(pack, st, rng).map((c) => el('button', { type: 'button', class: 'btn secondary', 'data-line': c.id, onclick: () => choose(c.id) }, heText(c.he, 'alef-he tp-he')))), out);
+    };
+    const finish = () => {
+      const card = hotelCard(steps, picks, { name: name.value, nights: nights.value });
+      host.replaceChildren(el('h2', {}, 'Your Check-In Card'), el('p', { id: 'tp-hotel-score', role: 'status' }, `${card.right} of ${card.of} asked the right way.`),
+        el('ul', { class: 'tp-lines', id: 'tp-hotel-card' }, card.lines.map((l) => el('li', { dir: 'auto' }, l))), el('button', { type: 'button', class: 'btn', onclick: () => show('hotel') }, 'Check In Again'));
+    };
+    start();
+    return host;
+  }
+
+  function signs() {
+    const host = el('div', { class: 'tp-card' }); const ROUNDS = 8;
+    host.replaceChildren(el('p', { role: 'status' }, 'Putting up the signs\u2026'));
+    (async () => {
+      const glossary = (ctx.tripData && ctx.tripData.signs) || await loadJSON('data/camera/sign-glossary.json').catch(() => null);
+      if (!alive) return;
+      const items = signItems(glossary);
+      if (items.length < 8) { host.replaceChildren(el('p', {}, 'The signs could not load. Check your connection and open the page again.')); return; }
+      let n = 0, right = 0;
+      const round = () => {
+        if (n >= ROUNDS) { host.replaceChildren(el('h2', {}, 'How It Went'), el('p', { id: 'tp-signs-score', role: 'status' }, `${right} of ${ROUNDS} signs read.`), el('button', { type: 'button', class: 'btn', onclick: () => show('signs') }, 'Another Eight')); return; }
+        const q = signQuestion(items, rng); const out = el('div', { id: 'tp-sign-result', role: 'status', 'aria-live': 'polite' }); let done = false;
+        const pickIt = (o) => { if (done) return; done = true; n++; if (o === q.sign.en) right++;
+          out.replaceChildren(...kids(el('p', {}, el('strong', {}, o === q.sign.en ? 'Right.' : `It says: ${q.sign.en}.`)), q.sign.pointed ? el('p', {}, 'With vowel points: ', heText(q.sign.pointed)) : null, el('button', { type: 'button', class: 'btn', id: 'tp-sign-next', onclick: round }, n >= ROUNDS ? 'See My Score' : 'Next Sign'))); };
+        host.replaceChildren(el('h2', {}, 'What Does This Sign Say?'), el('p', { class: 'muted' }, `Sign ${n + 1} of ${ROUNDS}`),
+          el('p', { id: 'tp-sign', style: 'border:4px solid currentColor;border-radius:10px;padding:1rem;text-align:center' }, heText(q.sign.he, 'alef-he tp-he')),
+          el('div', { class: 'tp-row', style: 'flex-direction:column' }, q.options.map((o) => el('button', { type: 'button', class: 'btn secondary', 'data-right': String(o === q.sign.en), onclick: () => pickIt(o) }, o))), out);
+      };
+      round();
+    })();
+    return host;
+  }
+
+  const views = { planner, restaurant, station, money, market, emergency, hotel, signs };
   root.replaceChildren(wrap);
   show(ctx.query && views[ctx.query.part] ? ctx.query.part : 'planner');
   return () => { alive = false; };

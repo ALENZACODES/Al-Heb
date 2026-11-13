@@ -238,3 +238,55 @@ export function stallResult(s) {
   const off = s.open - s.paid;
   return off <= 0 ? `You paid the first price, ${s.paid} shekels. Try asking for less next time.` : `You paid ${s.paid} shekels, ${off} less than the first price.${s.paid === s.floor ? ' That was the lowest the keeper would go.' : ''}`;
 }
+
+// ---- street signs ----------------------------------------------------------------------------------------------------------------
+/** Signs to read, from the camera translator's sign list (data/camera/sign-glossary.json): Hebrew as printed, and what it says. */
+export function signItems(glossary) {
+  const seen = new Set();
+  return ((glossary && glossary.entries) || []).filter((e) => e && e.he && e.en && !heKey(e.he).includes('יהוה') && !seen.has(e.en) && seen.add(e.en)).map((e) => ({ he: e.he, pointed: e.pointed || '', en: e.en }));
+}
+/** One sign and four meanings to choose from, one of them right. */
+export function signQuestion(items, rng = Math.random) {
+  const sign = items[Math.floor(rng() * items.length)]; const options = [sign.en];
+  for (let guard = 0; options.length < 4 && guard < 200; guard++) { const o = items[Math.floor(rng() * items.length)].en; if (!options.includes(o)) options.push(o); }
+  for (let i = options.length - 1; i > 0; i--) { const j = Math.floor(rng() * (i + 1)); [options[i], options[j]] = [options[j], options[i]]; }
+  return { sign, options };
+}
+
+// ---- emergency lines -------------------------------------------------------------------------------------------------------------
+const EMERGENCY = [
+  { id: 'help', label: 'Help', ids: ['t-help', 't-need-help', 't-can-you-help', 't-emergency', 't-fire', 't-be-careful'] },
+  { id: 'doctor', label: 'Doctor', ids: ['t-need-doctor', 't-call-doctor', 't-call-ambulance', 't-where-hospital', 't-not-well', 't-sick', 't-hurts-here', 't-headache', 't-stomach', 't-fever', 't-dizzy', 't-cant-breathe', 't-pregnant'] },
+  { id: 'pharmacy', label: 'Pharmacy', ids: ['t-where-pharmacy', 't-headache', 't-stomach', 't-fever'] },
+  { id: 'lost', label: 'Lost Or Stolen', ids: ['t-call-police', 't-lost-passport', 't-lost-phone', 't-lost-wallet', 't-stolen-passport', 't-stolen-phone', 't-stolen-wallet', 't-accident'] },
+];
+/** The emergency lines the app stores, in four groups. A line with a woman's form carries it. */
+export function emergencyCards(pack) {
+  const by = new Map(((pack && pack.phrases) || []).map((p) => [p.id, p]));
+  return EMERGENCY.map((g) => ({ id: g.id, label: g.label, lines: g.ids.map((id) => by.get(id)).filter(Boolean).map((p) => ({ id: p.id, he: p.he, f: p.f || '', en: p.en[0] })) })).filter((g) => g.lines.length);
+}
+
+// ---- hotel check-in --------------------------------------------------------------------------------------------------------------
+/** The steps of a check-in: what the guest needs, the stored line that asks for it, two stored lines that do not, and the desk's answer. */
+export function hotelSteps(booked = true) {
+  return [
+    booked ? { id: 'arrive', goal: 'You booked a room. Tell the desk.', right: 't-room', wrong: ['t-room-free', 't-checkout'], reply: 'Welcome. Your room is 12, on the first floor.' }
+      : { id: 'arrive', goal: 'You have no booking. Ask for a room for tonight.', right: 't-room-tonight', wrong: ['t-room', 't-checkout'], reply: 'Yes, we have one. Room 12, on the first floor.' },
+    { id: 'breakfast', goal: 'Find out if breakfast comes with the room.', right: 't-breakfast-included', wrong: ['t-breakfast-time', 't-no-hot-water'], reply: 'Yes, breakfast is included.' },
+    { id: 'breakfast-time', goal: 'Ask when breakfast is.', right: 't-breakfast-time', wrong: ['t-checkout', 't-breakfast-included'], reply: 'From 7:00 to 10:00.' },
+    { id: 'wifi', goal: 'Ask for the wifi password.', right: 't-wifi-password', wrong: ['t-charge-where', 't-doesnt-work'], reply: 'It is on your key card.' },
+    { id: 'checkout', goal: 'Ask when you must leave the room on the last day.', right: 't-checkout', wrong: ['t-breakfast-time', 't-room-tonight'], reply: 'Checkout is at 11:00.' },
+  ];
+}
+/** The three stored lines offered at a step, in a mixed order. */
+export function hotelChoices(pack, step, rng = Math.random) {
+  const by = new Map(((pack && pack.phrases) || []).map((p) => [p.id, p]));
+  const ids = [step.right, ...step.wrong]; for (let i = ids.length - 1; i > 0; i--) { const j = Math.floor(rng() * (i + 1)); [ids[i], ids[j]] = [ids[j], ids[i]]; }
+  return ids.map((id) => ({ id, he: by.get(id)?.he || '', en: by.get(id)?.en[0] || '' }));
+}
+/** The card the desk hands over at the end: the guest's name and nights, the room, and each answer the guest managed to get. */
+export function hotelCard(steps, picks, guest) {
+  const name = String(guest?.name || '').trim().slice(0, 60) || 'Guest'; const nights = Math.max(1, Math.min(30, Math.floor(Number(guest?.nights)) || 1));
+  const got = steps.filter((s) => picks[s.id] === s.right);
+  return { name, nights, right: got.length, of: steps.length, lines: [`Guest: ${name}`, `Nights: ${nights}`, ...got.map((s) => s.reply)] };
+}

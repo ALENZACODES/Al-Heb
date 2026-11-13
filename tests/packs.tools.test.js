@@ -73,6 +73,8 @@ test('sync: fetches the pinned commit from the raw file host only, checks every 
   const ref = 'a'.repeat(40);
   const serve = (table) => { const urls = []; const f = async (url) => { urls.push(url); const k = url.replace(`https://raw.githubusercontent.com/${REPO}/${ref}/`, ''); return k in table ? new Response(table[k]) : new Response('', { status: 404 }); }; f.urls = urls; return f; };
   const table = { 'packages/loader/dist/dist.json': listing(entries), 'packages/loader/dist/index.js': body['index.js'], 'packages/loader/dist/cache.js': body['cache.js'], 'models.manifest.json': JSON.stringify(manifest) };
+  // every other package the lock pins is served the same way, so this test does not depend on how many lanes are vendored
+  for (const pkg of Object.keys(lock.packages)) if (pkg !== 'loader') { table[`packages/${pkg}/dist/dist.json`] = listing(entries).replace('"name":"loader"', `"name":"${pkg}"`); for (const [path, text] of Object.entries(body)) table[`packages/${pkg}/dist/${path}`] = text; }
   const dir = scratch();
   // this test serves the loader alone: a scratch copy that pins only the loader
   { const only = JSON.parse(readFileSync(join(dir, LOCK), 'utf8')); for (const name of Object.keys(only.packages)) if (name !== 'loader') { rmSync(join(dir, only.packages[name].path), { recursive: true, force: true }); delete only.packages[name]; } writeFileSync(join(dir, LOCK), JSON.stringify(only, null, 1) + '\n'); }

@@ -12,11 +12,11 @@ import { showName } from '../games/tg-core.js';
 import { loadCorpus } from '../corpus/corpus.js';
 import { loadServiceData, ORDER_IDS } from '../service/model.js';
 import { serviceLines } from '../service/practice.model.js';
-import { createRecorder, createRecognizer } from '../speak/recognizer.js';
+import { createRecorder, createListener } from '../speak/recognizer.js';
 import { KEY as TIMED_KEY } from '../timedread/model.js';
 import { openJournal } from './journal.js';
 import {
-  STORE_KEY, AXES, RATING, SELF_LABEL, MACHINE_NOTE, FLUENCY_NOTE, GAP_FACTORS, GOAL_DAYS, normalizeState, addRating, addRecordingDay, setGoal,
+  STORE_KEY, AXES, RATING, SELF_LABEL, MACHINE_NOTE, MACHINE_NOTE_DEVICE, FLUENCY_NOTE, GAP_FACTORS, GOAL_DAYS, normalizeState, addRating, addRecordingDay, setGoal,
   ratingsByWeek, weakestAxis, gymSet, turnMs, peaks, machineSentence, fluencyByWeek, speakingDays, speakingStreak, weekGoal, journalSeries,
   journalPassages, dayKey,
 } from './voice.model.js';
@@ -81,7 +81,7 @@ export async function mount(root, ctx) {
 
   const tradition = congregationOf(ctx.settings);
   const recorder = inj.recorder || createRecorder({ maxMs: 20000 });
-  const recognizer = inj.recognizer || createRecognizer();
+  const recognizer = inj.recognizer || createListener(); // this device first; the browser's recognizer only as the labelled fallback
   const journal = inj.journal || openJournal();
   const decode = inj.decode || decodeDefault;
   const makeAudio = inj.makeAudio || ((url) => (typeof Audio === 'function' ? new Audio(url) : null));
@@ -173,7 +173,7 @@ export async function mount(root, ctx) {
     }
     if (recognizer.supported) {
       out.push(h('section', { class: 'card', 'aria-labelledby': 'vs-mc-h' }, h('h2', { id: 'vs-mc-h' }, 'Machine Check'),
-        h('p', { class: 'small' }, MACHINE_NOTE),
+        h('p', { class: 'small' }, recognizer.engine === 'device' ? MACHINE_NOTE_DEVICE : MACHINE_NOTE),
         h('button', { type: 'button', class: 'btn secondary', id: 'vs-machine', onclick: async () => {
           stopAll(); say('Listening: read the line aloud now.');
           const r = await recognizer.listen();

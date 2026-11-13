@@ -1,7 +1,8 @@
 // @ts-check
 // Talk: an English <-> Hebrew conversation helper that runs entirely on this device.
 // Lazy-loaded by the router at #/talk. There is no server: the sentence pairs are files of the site itself
-// (src/talk/data.js), listening is the browser's own speech recognition (src/talk/speech.js) and the voice is the
+// (src/talk/data.js), listening is on this device when a listening pack is there, else the browser's own speech recognition
+// as the labelled fallback (src/talk/speech.js), and the voice is the
 // device voice. Where the browser cannot listen, typing still works, online or offline.
 import { h, medal } from '../shell/ui.js';
 import { rimonSays } from '../shell/rimon-inline.js';
@@ -10,7 +11,7 @@ import {
   hasHebrew, pushHistory, stripNikkud, uid, HISTORY_KEY, SETTINGS_KEY, loadSettings, loadHistory,
 } from './talk.model.js';
 import { loadEngine } from './data.js';
-import { canListen, listenOnce } from './speech.js';
+import { canListen, listenOnce, listenEngine } from './speech.js';
 import { translateLine } from './hybrid.js';
 import { maskName, showsName } from './nmt/postedit.js';
 import { sharedPack } from './nmt/client.js';
@@ -43,6 +44,8 @@ export const PACK_CANNOT_RUN = 'This browser could not start the language pack. 
 export const ENGINE_WORDS = Object.freeze({ webgpu: 'the graphics chip', wasm: 'the processor' });
 export const PACK_NONE = 'Language packs are not available on this browser. Stored lines still work.';
 export const LISTEN_NOTE = 'Listening uses your browser’s own speech service. Some browsers send the sound to the browser maker to turn it into text. Aleph sends nothing anywhere and keeps only the text of your last lines on this device.';
+export const LISTEN_NOTE_DEVICE = 'Listening happens on this device, with the listening pack you downloaded. Nothing you say leaves it. Aleph keeps only the text of your last lines on this device.';
+export const LISTEN_FALLBACK = 'Fallback in use: to keep listening on this device, get a listening pack on the Language Packs page.';
 export const NO_LISTEN = 'This browser cannot listen. Type your line instead; on most phones the keyboard has its own microphone key.';
 export const DEVICE_VOICE = 'Read aloud by your device voice, not by a recorded teacher.';
 export const VOICE_KEEP = 'Speaking the translation in your own voice is a future feature.';
@@ -135,7 +138,8 @@ export function mount(root, ctx = {}) {
   const micHe = h('button', { type: 'button', class: 'btn', 'aria-pressed': 'false', lang: 'he', dir: 'rtl', onclick: () => toggleListen('he-en') }, 'דַּבְּרוּ עִבְרִית');
   micHe.setAttribute('aria-label', 'דַּבְּרוּ עִבְרִית (Speak Hebrew)'); // the spoken name starts with the words on the button
   const mics = h('div', { class: 'talk-mics', hidden: !hearing }, micEn, micHe);
-  const listenNote = h('p', { class: 'muted talk-small' }, hearing ? LISTEN_NOTE : NO_LISTEN);
+  const onDevice = listenEngine() === 'device';
+  const listenNote = h('p', { class: 'muted talk-small', 'data-engine': hearing ? listenEngine() : 'none' }, ...(!hearing ? [NO_LISTEN] : onDevice ? [LISTEN_NOTE_DEVICE] : [LISTEN_NOTE, ' ', LISTEN_FALLBACK, ' ', h('a', { href: '#/packs' }, 'Language Packs')]));
   const err = h('p', { role: 'alert', hidden: true });
 
   const ta = h('textarea', { rows: 2, 'aria-label': 'Type a line in English or Hebrew', placeholder: 'Type a line…', dir: 'auto' });

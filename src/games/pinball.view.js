@@ -1,6 +1,7 @@
 // Game 6. DOM physics only; scoring requires an explicitly aimed flipper shot.
 import { h, heSpan } from '../shell/ui.js';
 import { createSession, shuffled, loadGameImages, imgOf, speak, resultsCard } from './engine.js';
+import { castEnvNode } from './cast-env.js';
 import { loadJson } from '../grammar/loader.js';
 import { sfx } from '../audio/sfx.js';
 
@@ -108,7 +109,9 @@ export function mount(root, ctx) {
     table.replaceChildren(targets, marble);
     const image = imgOf(R, 'id', 'GAME_pinball_table');
     if (image) table.style.backgroundImage = `url("${image.src}")`;
-    board.replaceChildren(controls, table); newRound();
+    // Cast picture sits above the table so Ari, Noa and Rimon never sit under a control. The table keeps its approved play-surface art.
+    const backdrop = castEnvNode(h, R, 'pinball', 'GAME_pinball_table');
+    board.replaceChildren(...[backdrop, controls, table].filter(Boolean)); newRound();
     revealTable();
     watchSoundBar();
     cancelAnimationFrame(raf); raf = requestAnimationFrame(tick);

@@ -1,7 +1,9 @@
 // @ts-check
-// Daily quests: three small goals a day, the same three all day, chosen on the device from a seeded shuffle.
-// Each pays a few gems; finishing all three opens a small chest. No quests on Saturday or Yom Tov (a rest day has
-// nothing to chase), none in calm mode, and they appear only after the learner's 2nd finished lesson. Pure functions.
+// Daily quests: three small goals a day, the same three all day. A generator picks them from templates plus the
+// learner's state (variety, a one-day chain, and a higher target as you learn). dailyQuests() stays as a
+// backward-compatible shuffle for tests and older callers. Each pays a few gems; finishing all three opens a
+// small chest. No quests on Saturday or Yom Tov (a rest day has nothing to chase), none in calm mode, and they
+// appear only after the learner's 2nd finished lesson. Pure functions.
 import { clone } from './state.js';
 import { dayKey, addDaysISO, weekdayOf } from './clock.js';
 import { earn } from './gems.js';
@@ -11,31 +13,60 @@ import { isRestDay } from '../curriculum/streak.js';
 export const QUESTS = Object.freeze({ perDay: 3, gemsEach: 5, chestGems: 10, unlockLessons: 2 });
 /** kind = what is counted. `max` kinds keep the best value reached (a run of right answers); the rest add up. */
 export const POOL = Object.freeze([
-  { id: 'xp', targets: [15, 20, 30], text: (n) => `Earn ${n} XP` },
-  { id: 'lesson', targets: [1, 2], text: (n) => (n === 1 ? 'Finish a lesson' : `Finish ${n} lessons`) },
-  { id: 'review', targets: [5, 10], text: (n) => `Review ${n} old cards` },
-  { id: 'combo', targets: [5, 8], max: true, text: (n) => `Get ${n} right in a row` },
-  { id: 'sharp', targets: [1], text: () => 'Finish a lesson with 90% or better' },
-  { id: 'game', targets: [1, 2], text: (n) => (n === 1 ? 'Play a game round' : `Play ${n} game rounds`) },
+  { id: 'xp', targets: [15, 20, 30], ladder: [15, 20, 30], text: (n) => `Earn ${n} XP` },
+  { id: 'lesson', targets: [1, 2], ladder: [1, 2], text: (n) => (n === 1 ? 'Finish a lesson' : `Finish ${n} lessons`) },
+  { id: 'review', targets: [5, 10], ladder: [5, 10, 15], text: (n) => `Review ${n} old cards` },
+  { id: 'combo', targets: [5, 8], ladder: [5, 8, 12], max: true, text: (n) => `Get ${n} right in a row` },
+  { id: 'sharp', targets: [1], ladder: [1, 2], text: (n) => (n <= 1 ? 'Finish a lesson with 90% or better' : `Finish ${n} lessons with 90% or better`) },
+  { id: 'game', targets: [1, 2], ladder: [1, 2, 3], text: (n) => (n === 1 ? 'Play a game round' : `Play ${n} game rounds`) },
 ]);
 const def = (id) => POOL.find((q) => q.id === id);
 export const questText = (item) => def(item.id)?.text(item.n) || '';
 
-/** The day's three quests for an install: "Earn XP" first (always reachable), then two more from the pool. Deterministic. */
+/** The day's three quests for an install: "Earn XP" first (always reachable), then two more from the pool. Deterministic. Kept for older callers and tests; Home uses generateQuests(). */
 export function dailyQuests(installId, day) {
   const rand = mulberry32(fnv1a(`${installId}|quests|${day}`));
   const rest = POOL.filter((q) => q.id !== 'xp').map((q) => [rand(), q]).sort((a, b) => a[0] - b[0]).map((x) => x[1]).slice(0, QUESTS.perDay - 1);
   return [def('xp'), ...rest].map((q) => ({ id: q.id, n: q.targets[Math.floor(rand() * q.targets.length)], p: 0, paid: false }));
 }
+
+/** Pick a target from a template's ladder: earlier learners get the first step, later learners a higher one; a chain from yesterday steps up once more. */
+export function questRung(q, { lessons = 0, chained = false } = {}) {
+  const steps = (q && (q.ladder || q.targets)) || [];
+  if (!steps.length) return 0;
+  let i = lessons >= 20 ? steps.length - 1 : lessons >= 8 ? Math.min(1, steps.length - 1) : 0;
+  if (chained) i = Math.min(i + 1, steps.length - 1);
+  return steps[i];
+}
+
+/**
+ * Today's three quests from the templates plus the learner's state.
+ * "Earn XP" stays first. The other two prefer quests that were not finished yesterday (variety), and a finished
+ * quest from yesterday can raise today's target for the same kind (a one-day chain). Deterministic for the same record and day.
+ */
+export function generateQuests(rec, day, opt = {}) {
+  const yesterday = Array.isArray(opt.yesterday) ? opt.yesterday : [];
+  const lessons = Number.isFinite(opt.lessons) ? opt.lessons : (rec.lessonsFinished || 0);
+  const rand = mulberry32(fnv1a(`${rec.installId || ''}|quest-gen|${day}`));
+  const others = POOL.filter((q) => q.id !== 'xp');
+  const fresh = others.filter((q) => !yesterday.includes(q.id));
+  const pickFrom = (fresh.length >= QUESTS.perDay - 1 ? fresh : others);
+  const rest = pickFrom.map((q) => [rand(), q]).sort((a, b) => a[0] - b[0]).map((x) => x[1]).slice(0, QUESTS.perDay - 1);
+  return [def('xp'), ...rest].map((q) => ({ id: q.id, n: questRung(q, { lessons, chained: yesterday.includes(q.id) }), p: 0, paid: false }));
+}
 export function questsOn(rec, { calm = false } = {}) { return !calm && rec.lessonsFinished >= QUESTS.unlockLessons; }
 const valid = (q, day) => !!q && q.day === day && Array.isArray(q.items) && q.items.every((i) => i && def(i.id) && Number.isFinite(i.n) && Number.isFinite(i.p));
 
-/** Today's quests on the record (made on first use each day). A rest day has none. Returns a new record when it changed. */
+/** Today's quests on the record (made on first use each day, from generateQuests). A rest day has none. Returns a new record when it changed. */
 export function ensureQuests(rec, now = Date.now(), mode = 'reform') {
   const day = dayKey(now);
   if (valid(rec.quests, day)) return rec;
   const r = clone(rec);
-  r.quests = { day, items: isRestDay(day, mode) ? [] : dailyQuests(rec.installId, day), chest: false, rest: isRestDay(day, mode) };
+  const prev = rec.quests;
+  const yesterday = prev && prev.day === addDaysISO(day, -1) && Array.isArray(prev.items)
+    ? prev.items.filter((i) => i && i.paid).map((i) => i.id)
+    : [];
+  r.quests = { day, items: isRestDay(day, mode) ? [] : generateQuests(rec, day, { yesterday }), chest: false, rest: isRestDay(day, mode) };
   return r;
 }
 /** Quests whose progress is a count the app already keeps (src/lib/counts.js): XP today and lessons finished today.

@@ -51,7 +51,11 @@ Set to `hold`:
 
 ### 4. Pe was spelled as Fe
 
-Decision, 14 Nov 2026: Final Pe is named פֵּא סוֹפִית ("pe sofit"), not פֵא סוֹפִית ("fe sofit"). The app names every final letter after its base letter with the dot (Final Kaf is כַּף סוֹפִית, "kaf sofit"), and the Final Pe clips already say "pe sofit". The F sound of the final form is taught in its sound line.
+Decision, 14 Nov 2026: Final Pe is named פֵּא סוֹפִית ("pe sofit"), not פֵא סוֹפִית ("fe sofit"). The app names every final letter after its base letter with the dot (Final Kaf is כַּף סוֹפִית, "kaf sofit"), and the Final Pe clips already say "pe sofit". Its sound line was wrong, and so was Final Kaf's: both said "same as pe" and "same as kaf", which teaches P and K. At the end of a word these letters are read F and KH. Fixed on 14 Nov 2026:
+- `data/letters/letters.json` and `tools/letters/build_letters.py`: Final Kaf "kh, like khaf: kaf at the end of a word" (χ); Final Pe "f, like fe: pe at the end of a word" (f).
+- The lesson sound clips for Final Kaf and Final Pe said "ka" and "pa"; they are now copies of the Khaf and Fe sound clips. They are not played in the app today.
+- `data/tts/soundwords.israeli.json`: the source text for those clips and their English and Hebrew explanations now say kh and f (כף רפה, פא רפה). The explanation clips were not re-recorded.
+- The Final Kaf and Final Pe videos, both voices, rebuilt with the new caption. They already played the right sounds.
 
 The letter name for Pe and Final Pe was written פֵא (reads "fe"). Now פֵּא in `data/letters/letters.json`, `data/videos/letters.json`, `src/letters/roster.js` and `tools/letters/build_letters.py`.
 

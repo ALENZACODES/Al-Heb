@@ -34,10 +34,10 @@ META = [
  ("resh","Resh","רֵישׁ","ר",200,"ʁ","back-of-throat r, like French r"),
  ("shin","Shin","שִׁין","ש",300,"ʃ","sh as in ship (sin, dot on the left, is s)"),
  ("tav","Tav","תָּו","ת",400,"t","t as in top"),
- ("kaf-final","Final Kaf","כַּף סוֹפִית","ך",500,"k ~ χ","same as kaf, only at the end of a word"),
+ ("kaf-final","Final Kaf","כַּף סוֹפִית","ך",500,"χ","kh, like khaf: kaf at the end of a word"),
  ("mem-final","Final Mem","מֵם סוֹפִית","ם",600,"m","same as mem, only at the end of a word"),
  ("nun-final","Final Nun","נוּן סוֹפִית","ן",700,"n","same as nun, only at the end of a word"),
- ("pe-final","Final Pe","פֵּא סוֹפִית","ף",800,"p ~ f","same as pe, only at the end of a word"),
+ ("pe-final","Final Pe","פֵּא סוֹפִית","ף",800,"f","f, like fe: pe at the end of a word"),
  ("tsadi-final","Final Tsadi","צָדִי סוֹפִית","ץ",900,"ts","same as tsadi, only at the end of a word"),
 ]
 FINAL_OF = {"kaf-final":"kaf","mem-final":"mem","nun-final":"nun","pe-final":"pe","tsadi-final":"tsadi"}

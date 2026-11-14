@@ -11867,9 +11867,9 @@
   "gematriaIsConvention": true,
   "gematriaNote": "500-900 for final forms is a widely cited convention; no fetched source confirmed it. Verify before printing.",
   "sound": {
-   "ipa": "k ~ χ",
+   "ipa": "χ",
    "tradition": "israeli",
-   "en": "same as kaf, only at the end of a word"
+   "en": "kh, like khaf: kaf at the end of a word"
   },
   "confusableWith": [
    "dalet",
@@ -13010,9 +13010,9 @@
   "gematriaIsConvention": true,
   "gematriaNote": "500-900 for final forms is a widely cited convention; no fetched source confirmed it. Verify before printing.",
   "sound": {
-   "ipa": "p ~ f",
+   "ipa": "f",
    "tradition": "israeli",
-   "en": "same as pe, only at the end of a word"
+   "en": "f, like fe: pe at the end of a word"
   },
   "confusableWith": [
    "tsadi-final"

@@ -1,31 +1,21 @@
 {
  "status": "synthetic-unreviewed",
- "source": "tts-respelled-israeli-voice",
+ "source": "israeli-clip-same-reading",
  "engine": "google",
  "voiceId": "he-IL-Wavenet-A",
  "tradition": "ashkenazi",
- "inputText": "מ",
- "inputSha256": "d8850d2035c0b055fb9f387e3d1323712b473491aa3022a5ae18b450a6ddd674",
+ "inputText": "מַ",
  "ingestedAt": "2026-11-12T14:07:42.359Z",
  "licence": "customer-owned",
- "note": "Synthetic voice: the Israeli woman voice reading the ashkenazi reading written in pointed Hebrew letters (tools/audio/ashkenazi_script.mjs). Not a human recording; no human has listened to it. Licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel.",
- "renderedAt": "2026-11-12T14:07:42.359Z",
+ "note": "Replaced 2026-11-13 (letter audit): the old clip said an English letter name or the whole Hebrew letter name, not the sound. Now a copy of the Israeli clip of the same voice, which says the same thing in the Ashkenazi reading. Synthetic voice; no person has listened to it.",
  "redistributionCleared": false,
- "spokenText": "מ",
- "normalized": true,
  "provider": "google",
- "madeFrom": "hebrew-script",
+ "madeFrom": "israeli-clip",
  "voiceName": "he-IL-Wavenet-A",
  "languageCode": "he-IL",
  "hebrew": "מ",
  "israeliRef": "audio/f/israeli/letter/mem-sound.mp3",
- "tempo": {
-  "applied": false,
-  "factor": 1,
-  "cap": 1.26,
-  "before": 0.84,
-  "after": 0.84,
-  "israeliSec": 0.88,
-  "israeliRef": "audio/f/israeli/letter/mem-sound.mp3"
- }
+ "copyOf": "audio/f/israeli/letter/mem-sound.mp3",
+ "inputSha256": "cdc46290bcd4f9ffef2399b618edca0d5d7824412977a63e8ebc5fdf583d161a",
+ "respelledFrom": "מ"
 }

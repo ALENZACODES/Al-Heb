@@ -1,31 +1,21 @@
 {
  "status": "synthetic-unreviewed",
- "source": "tts-respelled-israeli-voice",
+ "source": "israeli-clip-same-reading",
  "engine": "google",
  "voiceId": "he-IL-Wavenet-B",
  "tradition": "ashkenazi",
- "inputText": "ה",
- "inputSha256": "5e03e16a405c9c0f5e2a25a8c6dc7f865d98cd15f4afc656f852c4eadb9415dc",
+ "inputText": "הַ",
  "ingestedAt": "2026-11-12T07:02:09.482Z",
  "licence": "customer-owned",
- "note": "Synthetic voice: the Israeli man voice reading the ashkenazi English-letter respelling, not pointed Hebrew. Not a human recording; no human has listened to it. Licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel.",
- "renderedAt": "2026-11-12T07:02:09.482Z",
+ "note": "Replaced 2026-11-13 (letter audit): the old clip said an English letter name or the whole Hebrew letter name, not the sound. Now a copy of the Israeli clip of the same voice, which says the same thing in the Ashkenazi reading. Synthetic voice; no person has listened to it.",
  "redistributionCleared": false,
- "spokenText": "h",
- "normalized": true,
  "provider": "google",
- "madeFrom": "respelling",
+ "madeFrom": "israeli-clip",
  "voiceName": "he-IL-Wavenet-B",
  "languageCode": "he-IL",
  "hebrew": "ה",
  "israeliRef": "audio/m/israeli/letter/he-sound.mp3",
- "tempo": {
-  "applied": false,
-  "factor": 1,
-  "cap": 1.26,
-  "before": 0.8640136054421769,
-  "after": 0.8640136054421769,
-  "israeliSec": 0.7119954648526077,
-  "israeliRef": "audio/m/israeli/letter/he-sound.mp3"
- }
+ "copyOf": "audio/m/israeli/letter/he-sound.mp3",
+ "inputSha256": "6d3868b84ca3655fe32a264e4959a9900c7651c8681f5c89bb85dd5dab89b44c",
+ "respelledFrom": "ה"
 }

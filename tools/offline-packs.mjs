@@ -22,7 +22,8 @@ export const PACKS = [
     data: ['data/curriculum/lessons.json', 'data/curriculum/lessons-index.json', 'data/curriculum/lesson-lexicon.json', 'data/curriculum/hints.json', 'data/curriculum/prompts.json', 'data/curriculum/word-vocab-map.json',
       'data/letters/letters.json', 'data/letters/confusables.json', 'data/letters/mnemonics.json', 'data/letters/memory-chain.json', 'data/pronunciation/niqqud.json', 'data/pronunciation/consonants.json'] },
   { id: 'core-prayers', label: 'Core prayers', blurb: 'The Read page for every prayer in the app, Follow the Service, and the prayer reading notes.',
-    entries: ['src/corpus/read.view.js', 'src/service/service.view.js'],
+    // tg-core.js: Follow the Service shows the divine name through its showName; src/games/ is otherwise outside the walk, so name it here
+    entries: ['src/corpus/read.view.js', 'src/service/service.view.js', 'src/games/tg-core.js'],
     data: ['data/corpus/registry.json', 'data/corpus/prayer-meta.json', 'data/corpus/gaps.json', 'data/service/orders.json', 'data/homepage/prayers.json', 'data/calendar/prayer-cards.json', 'data/corpus/torah-service-guide.json'],
     dataDirs: ['data/corpus/reader/', 'data/corpus/trope/'] },
   { id: 'due-review', label: 'Your due reviews', blurb: 'The review screen and the data its cards use, plus the letter pictures for the memory cards that are due on this device.',

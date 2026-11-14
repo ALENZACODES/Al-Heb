@@ -1,31 +1,21 @@
 {
  "status": "synthetic-unreviewed",
- "source": "tts-respelled-israeli-voice",
+ "source": "israeli-clip-same-reading",
  "engine": "google",
  "voiceId": "he-IL-Wavenet-B",
  "tradition": "ashkenazi",
- "inputText": "ח",
- "inputSha256": "9a05e2d3d6867996902cd5b1f9370b8f85dcdb10ebb8a813e3edd03317493c70",
+ "inputText": "חַ",
  "ingestedAt": "2026-11-12T15:40:57.428Z",
  "licence": "customer-owned",
- "note": "Synthetic voice: the Israeli man voice reading the ashkenazi reading written in pointed Hebrew letters (tools/audio/ashkenazi_script.mjs). Not a human recording; no human has listened to it. Licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel.",
- "renderedAt": "2026-11-12T15:40:57.428Z",
+ "note": "Replaced 2026-11-13 (letter audit): the old clip said an English letter name or the whole Hebrew letter name, not the sound. Now a copy of the Israeli clip of the same voice, which says the same thing in the Ashkenazi reading. Synthetic voice; no person has listened to it.",
  "redistributionCleared": false,
- "spokenText": "ח",
- "normalized": true,
  "provider": "google",
- "madeFrom": "hebrew-script",
+ "madeFrom": "israeli-clip",
  "voiceName": "he-IL-Wavenet-B",
  "languageCode": "he-IL",
  "hebrew": "ח",
  "israeliRef": "audio/m/israeli/letter/chet-sound.mp3",
- "tempo": {
-  "applied": false,
-  "factor": 1,
-  "cap": 1.26,
-  "before": 0.7919954648526077,
-  "after": 0.7919954648526077,
-  "israeliSec": 0.76,
-  "israeliRef": "audio/m/israeli/letter/chet-sound.mp3"
- }
+ "copyOf": "audio/m/israeli/letter/chet-sound.mp3",
+ "inputSha256": "44ed6f1097280ca8d950458ae2d89b9313eec115d322643772c7f2d4ffe409d6",
+ "respelledFrom": "ח"
 }

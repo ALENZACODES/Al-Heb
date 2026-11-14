@@ -34,8 +34,10 @@ test('owner decision A: Sephardi rows given the Israeli clip are only rows whose
   const rows = loadManifestFull().filter((e) => e.source === 'israeli-clip-same-reading');
   if (!rows.length) return;
   for (const e of rows.slice(0, 400)) {
-    assert.equal(e.tradition, 'sephardi', e.path); assert.equal(e.status, 'synthetic-unreviewed', e.path);
-    assert.equal(respell(e.text, 'sephardi'), respell(e.text, 'israeli'), e.path);
+    // 13 Nov 2026 letter audit: an Ashkenazi letter clip that said the wrong thing may also be a copy of the Israeli clip.
+    const ashkenaziLetter = e.tradition === 'ashkenazi' && e.kind === 'letter';
+    assert.ok(e.tradition === 'sephardi' || ashkenaziLetter, e.path); assert.equal(e.status, 'synthetic-unreviewed', e.path);
+    if (!ashkenaziLetter) assert.equal(respell(e.text, 'sephardi'), respell(e.text, 'israeli'), e.path);
     const meta = JSON.parse(fs.readFileSync(`${e.path}.meta.json`, 'utf8'));
     assert.ok(fs.readFileSync(e.path).equals(fs.readFileSync(meta.copyOf)), e.path);
   }

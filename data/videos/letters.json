@@ -165,7 +165,7 @@
   {
    "id": "pe",
    "name": "Pe",
-   "nameHe": "פֵא",
+   "nameHe": "פֵּא",
    "he": "פ",
    "voice": "f",
    "seconds": 6.6,
@@ -255,7 +255,7 @@
   {
    "id": "pe-final",
    "name": "Final Pe",
-   "nameHe": "פֵא סוֹפִית",
+   "nameHe": "פֵּא סוֹפִית",
    "he": "ף",
    "voice": "f",
    "seconds": 7.2,
@@ -435,7 +435,7 @@
   {
    "id": "pe",
    "name": "Pe",
-   "nameHe": "פֵא",
+   "nameHe": "פֵּא",
    "he": "פ",
    "voice": "m",
    "seconds": 6.9,
@@ -525,7 +525,7 @@
   {
    "id": "pe-final",
    "name": "Final Pe",
-   "nameHe": "פֵא סוֹפִית",
+   "nameHe": "פֵּא סוֹפִית",
    "he": "ף",
    "voice": "m",
    "seconds": 6.9,

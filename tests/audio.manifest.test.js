@@ -52,7 +52,7 @@ test('synthetic clips have files and explicit provenance; none is a human record
       continue;
     }
     assert.ok(['tts', 'synthetic-unreviewed'].includes(e.status), e.path);
-    assert.ok(e.source === 'outside-synthetic' || e.source === 'paid-cloud' || /^tts[:-]/.test(e.source) || (e.source === 'israeli-clip-same-reading' && e.tradition === 'sephardi'), `${e.path} source ${e.source}`);   // the last: owner decision A, 12 Nov 2026
+    assert.ok(e.source === 'outside-synthetic' || e.source === 'paid-cloud' || /^tts[:-]/.test(e.source) || (e.source === 'israeli-clip-same-reading' && (e.tradition === 'sephardi' || (e.tradition === 'ashkenazi' && e.kind === 'letter'))), `${e.path} source ${e.source}`);   // the last: owner decision A, 12 Nov 2026; Ashkenazi letters that are a copy of the Israeli clip, 13 Nov 2026
     assert.notEqual(e.synth?.reviewed, true, `${e.path} claims a review that has not happened`);
     if (e.status === 'synthetic-unreviewed') {
       // Ingested clips: outside-synthetic, tts-respelled, tts-hebrew (tools/tts/lib.mjs SOURCES), and the two admitted

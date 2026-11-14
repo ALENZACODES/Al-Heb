@@ -1,31 +1,20 @@
 {
  "status": "synthetic-unreviewed",
- "source": "tts-respelled-israeli-voice",
+ "source": "israeli-clip-same-reading",
  "engine": "google",
  "voiceId": "he-IL-Wavenet-B",
  "tradition": "ashkenazi",
  "inputText": "שִׁין",
- "inputSha256": "b980973045ce47d2dd6f7970d6c1f086f3ca1c10c22e5c3ef7a7a1c525bdaba3",
  "ingestedAt": "2026-11-12T07:02:13.065Z",
  "licence": "customer-owned",
- "note": "Synthetic voice: the Israeli man voice reading the ashkenazi English-letter respelling, not pointed Hebrew. Not a human recording; no human has listened to it. Licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel.",
- "renderedAt": "2026-11-12T07:02:13.065Z",
+ "note": "Replaced 2026-11-13 (letter audit): the old clip was heard as \"shim\". Now a copy of the Israeli clip of the same voice, which says the same thing in the Ashkenazi reading. Synthetic voice; no person has listened to it.",
  "redistributionCleared": false,
- "spokenText": "shin",
- "normalized": true,
  "provider": "google",
- "madeFrom": "respelling",
+ "madeFrom": "israeli-clip",
  "voiceName": "he-IL-Wavenet-B",
  "languageCode": "he-IL",
  "hebrew": "שִׁין",
  "israeliRef": "audio/m/israeli/letter/shin.mp3",
- "tempo": {
-  "applied": false,
-  "factor": 1,
-  "cap": 1.26,
-  "before": 0.7440136054421769,
-  "after": 0.7440136054421769,
-  "israeliSec": 0.72,
-  "israeliRef": "audio/m/israeli/letter/shin.mp3"
- }
+ "copyOf": "audio/m/israeli/letter/shin.mp3",
+ "inputSha256": "b980973045ce47d2dd6f7970d6c1f086f3ca1c10c22e5c3ef7a7a1c525bdaba3"
 }

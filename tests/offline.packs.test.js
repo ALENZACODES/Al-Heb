@@ -34,7 +34,8 @@ test('each pack holds its screens and data, every file exists, and every size is
     const paths = p.files.map((f) => f[0]);
     for (const f of files) assert.ok(paths.includes(f), `${id} has ${f}`);
     for (const [f, n] of p.files) { assert.ok(existsSync(join(root, f)), f); assert.equal(n, statSync(join(root, f)).size, f); }
-    assert.ok(!paths.some((f) => /^src\/(games|retention|synagogues)\//.test(f)), `${id} does not pull in unrelated screens`);
+    // src/games/tg-core.js is the one shared helper allowed: Follow the Service imports its showName, and without it the screen cannot open offline
+    assert.ok(!paths.some((f) => /^src\/(games|retention|synagogues)\//.test(f) && f !== 'src/games/tg-core.js'), `${id} does not pull in unrelated screens`);
     assert.ok(!paths.some((f) => f.startsWith('audio/')), 'no voice clips (the card says so)');
   }
   for (const [, [f, n]] of Object.entries(packs.letterPictures)) assert.equal(n, statSync(join(root, f)).size);

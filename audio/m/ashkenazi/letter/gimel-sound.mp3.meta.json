@@ -1,31 +1,20 @@
 {
  "status": "synthetic-unreviewed",
- "source": "tts-respelled-israeli-voice",
+ "source": "israeli-clip-same-reading",
  "engine": "google",
  "voiceId": "he-IL-Wavenet-B",
  "tradition": "ashkenazi",
  "inputText": "ג",
- "inputSha256": "93ac3bdd7235b58b15c4929eadc16e8137c60ba613fd252ed7fb265689ec80af",
  "ingestedAt": "2026-11-12T15:41:10.689Z",
  "licence": "customer-owned",
- "note": "Synthetic voice: the Israeli man voice reading the ashkenazi reading written in pointed Hebrew letters (tools/audio/ashkenazi_script.mjs). Not a human recording; no human has listened to it. Licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel.",
- "renderedAt": "2026-11-12T15:41:10.689Z",
+ "note": "Replaced 2026-11-13 (letter audit): the old clip said an English letter name or the whole Hebrew letter name, not the sound. Now a copy of the Israeli clip of the same voice, which says the same thing in the Ashkenazi reading. Synthetic voice; no person has listened to it.",
  "redistributionCleared": false,
- "spokenText": "ג",
- "normalized": true,
  "provider": "google",
- "madeFrom": "hebrew-script",
+ "madeFrom": "israeli-clip",
  "voiceName": "he-IL-Wavenet-B",
  "languageCode": "he-IL",
  "hebrew": "ג",
  "israeliRef": "audio/m/israeli/letter/gimel-sound.mp3",
- "tempo": {
-  "applied": true,
-  "factor": 1.1428751394737788,
-  "cap": 1.26,
-  "before": 0.8640136054421769,
-  "after": 0.7594784580498867,
-  "israeliSec": 0.6,
-  "israeliRef": "audio/m/israeli/letter/gimel-sound.mp3"
- }
+ "copyOf": "audio/m/israeli/letter/gimel-sound.mp3",
+ "inputSha256": "93ac3bdd7235b58b15c4929eadc16e8137c60ba613fd252ed7fb265689ec80af"
 }

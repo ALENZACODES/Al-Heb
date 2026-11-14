@@ -4,10 +4,11 @@
  "engine": "google-cloud-tts",
  "voiceId": "he-IL-Wavenet-A",
  "tradition": "israeli",
- "inputText": "בּ",
- "inputSha256": "f151aa4f84adf8c30d6ff6a04dabc127357e3bacb393f904b70ac115c2e359b5",
+ "inputText": "בַּ",
  "ingestedAt": null,
  "licence": "customer-owned",
- "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
- "inputTextKind": "hebrew"
+ "note": "Replaced 2026-11-13 (letter audit): the old clip said \"bu\". Copied from audio/f/israeli/letter/bet-sound.mp3 (\"ba\"), like the other consonant sounds.",
+ "inputTextKind": "hebrew",
+ "inputSha256": "6f9bd8c0627a86cb9587f4a3af380b7aa798c482a77c24fc7c03cdf14bd4fe49",
+ "respelledFrom": "בּ"
 }

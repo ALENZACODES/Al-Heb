@@ -4,11 +4,10 @@
  "engine": "google",
  "voiceId": "he-IL-Wavenet-B",
  "tradition": "ashkenazi",
- "inputText": "רֵישׁ",
- "inputSha256": "a1ed895a69eae9f9e4ca70dc0925010f574da2f512ff8e4153f50a7528f129c6",
+ "inputText": "רֵיְשׁ",
  "ingestedAt": "2026-11-12T07:00:39.912Z",
  "licence": "customer-owned",
- "note": "Synthetic voice: the Israeli man voice reading the ashkenazi English-letter respelling, not pointed Hebrew. Not a human recording; no human has listened to it. Licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel.",
+ "note": "Re-recorded 2026-11-13 (letter audit): the old clip said \"ri-ish\"; this one says \"resh\". Take ashk-resh-wm-1.mp3 (tools/audio/render_letter_takes.py), the Ashkenazi name written in pointed Hebrew for the Israeli voice. Heard back by the sound-level listener, not yet by a person.",
  "renderedAt": "2026-11-12T07:00:39.912Z",
  "redistributionCleared": false,
  "spokenText": "reish",
@@ -27,5 +26,7 @@
   "after": 0.9119954648526077,
   "israeliSec": 1.0480045351473923,
   "israeliRef": "audio/m/israeli/letter/resh.mp3"
- }
+ },
+ "inputSha256": "ccc3259ac2f0bbd1bb66818c3d5f8ea9a96512391dcd65163c83d30c3a780de3",
+ "respelledFrom": "רֵישׁ"
 }

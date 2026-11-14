@@ -1,31 +1,21 @@
 {
  "status": "synthetic-unreviewed",
- "source": "tts-respelled-israeli-voice",
+ "source": "israeli-clip-same-reading",
  "engine": "google",
  "voiceId": "he-IL-Wavenet-B",
  "tradition": "ashkenazi",
- "inputText": "י",
- "inputSha256": "72b4d9ab59b4b2e8647f0d189ca79e72dd8520f3e07b1b8441d2232dc7c0d4ab",
+ "inputText": "יַ",
  "ingestedAt": "2026-11-12T15:40:54.491Z",
  "licence": "customer-owned",
- "note": "Synthetic voice: the Israeli man voice reading the ashkenazi reading written in pointed Hebrew letters (tools/audio/ashkenazi_script.mjs). Not a human recording; no human has listened to it. Licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel.",
- "renderedAt": "2026-11-12T15:40:54.491Z",
+ "note": "Replaced 2026-11-13 (letter audit): the old clip said an English letter name or the whole Hebrew letter name, not the sound. Now a copy of the Israeli clip of the same voice, which says the same thing in the Ashkenazi reading. Synthetic voice; no person has listened to it.",
  "redistributionCleared": false,
- "spokenText": "י",
- "normalized": true,
  "provider": "google",
- "madeFrom": "hebrew-script",
+ "madeFrom": "israeli-clip",
  "voiceName": "he-IL-Wavenet-B",
  "languageCode": "he-IL",
  "hebrew": "י",
  "israeliRef": "audio/m/israeli/letter/yod-sound.mp3",
- "tempo": {
-  "applied": false,
-  "factor": 1,
-  "cap": 1.26,
-  "before": 0.7440136054421769,
-  "after": 0.7440136054421769,
-  "israeliSec": 0.7360090702947846,
-  "israeliRef": "audio/m/israeli/letter/yod-sound.mp3"
- }
+ "copyOf": "audio/m/israeli/letter/yod-sound.mp3",
+ "inputSha256": "2acd3a4424a20f62508c4a1fe4e9120e5cc781cb8c2bd11435c6c414394cff3f",
+ "respelledFrom": "י"
 }

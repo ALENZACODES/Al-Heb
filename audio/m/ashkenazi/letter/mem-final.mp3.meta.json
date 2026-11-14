@@ -4,11 +4,10 @@
  "engine": "google",
  "voiceId": "he-IL-Wavenet-B",
  "tradition": "ashkenazi",
- "inputText": "מֵם סוֹפִית",
- "inputSha256": "086ccee95365c7a6db70cd333f2edde300ebe60e21029b3363c216ed9369f399",
+ "inputText": "מֵם סוֹפִיס",
  "ingestedAt": "2026-11-12T07:02:13.633Z",
  "licence": "customer-owned",
- "note": "Synthetic voice: the Israeli man voice reading the ashkenazi English-letter respelling, not pointed Hebrew. Not a human recording; no human has listened to it. Licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel.",
+ "note": "Rebuilt 2026-11-13 (letter audit): the old clip was garbled. Joined from two recordings of the same voice: \"mem\" (audio/m/israeli/letter/mem.mp3) and \"sofis\" cut from audio/m/ashkenazi/letter/kaf-final.mp3. Heard back as \"mem sofis\" by the sound-level listener, not yet by a person.",
  "renderedAt": "2026-11-12T07:02:13.633Z",
  "redistributionCleared": false,
  "spokenText": "meim sofis",
@@ -27,5 +26,7 @@
   "after": 1.2960090702947846,
   "israeliSec": 1.36,
   "israeliRef": "audio/m/israeli/letter/mem-final.mp3"
- }
+ },
+ "inputSha256": "479915a08397b6b8e054d9865b5da866b1bf913b180741fa10af0084ceafdbd4",
+ "respelledFrom": "מֵם סוֹפִית"
 }

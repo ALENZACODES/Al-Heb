@@ -1,0 +1,570 @@
+{
+  "title": "ALEF Brain Lab per-game image orders",
+  "date": "2026-11-09",
+  "basedOn": "fix/brain-lab-loading-2026-11-09 at 2199c020 (PR #40)",
+  "status": "orders only; nothing here is drawn, wired, merged or deployed",
+  "houseStyle": "Same as docs/images/COMMERCIAL-ORDERS-2026-11-09.md (paste once).",
+  "alreadyOrdered": "LAB_v2_hero (hub header) and LAB_v2_<game id> (56 px drill tokens), in the commercial orders, rank 9.",
+  "count": 32,
+  "games": [
+    {
+      "id": "hunt",
+      "title": "Letter Hunt",
+      "skill": "Attention",
+      "howItPlays": "A grid of letters; tap every copy of the target letter while look-alikes hide among them.",
+      "images": [
+        {
+          "id": "LAB_v2_hunt_cover",
+          "file": "LAB_v2_hunt_cover.png",
+          "role": "cover",
+          "size": "1536x1024",
+          "shape": "3:2",
+          "transparent": false,
+          "shows": "Noa and Rimon lean over a market stall at golden hour, searching a tray of small blank cream tiles with a big gold magnifying glass; under the glass one tile glows gold. Baskets of olives and pomegranates at the sides, a striped deep-green and cream awning overhead. Keep every character and the key object inside the band y=128 to y=896 (the app crops it to 2:1).",
+          "style": "House style.",
+          "screen": "Intro card above the drill title (lab.view.js intro(), 2:1 crop, full card width) and the drill card in the hub \"All Drills\" grid (2:1 thumbnail)",
+          "references": [
+            "assets/img/gen/CHAR_noa_sheet.800.webp",
+            "assets/img/gen/MASCOT_rimon.800.webp"
+          ],
+          "prompt": "Noa and Rimon lean over a market stall at golden hour, searching a tray of small blank cream tiles with a big gold magnifying glass; under the glass one tile glows gold. Baskets of olives and pomegranates at the sides, a striped deep-green and cream awning overhead. Keep every character and the key object inside the band y=128 to y=896 (the app crops it to 2:1). House style. Attach as reference: assets/img/gen/CHAR_noa_sheet.800.webp, assets/img/gen/MASCOT_rimon.800.webp. Size: 1536x1024 (3:2). No text, letters or numerals anywhere."
+        },
+        {
+          "id": "LAB_v2_hunt_play",
+          "file": "LAB_v2_hunt_play.png",
+          "role": "in-game",
+          "size": "1024x1536",
+          "shape": "2:3",
+          "transparent": false,
+          "shows": "Top-down view of a wooden market table of warm olive-wood planks. Along the outer edges only: small baskets of olives and pomegranates, a folded striped cloth, a coil of rope. Board mat, portrait. Decoration only in the outer 12% on every side; the centre 76% is one plain, evenly lit surface with no objects, no pattern and no strong shadows (game tiles with Hebrew letters sit on top of it).",
+          "style": "House style. No characters. Calm and low in contrast so the Hebrew on top stays easy to read.",
+          "screen": "Behind the game board (.lab-board background, cover-fitted); hidden under prefers-contrast: more and forced colours",
+          "references": [],
+          "prompt": "Top-down view of a wooden market table of warm olive-wood planks. Along the outer edges only: small baskets of olives and pomegranates, a folded striped cloth, a coil of rope. Board mat, portrait. Decoration only in the outer 12% on every side; the centre 76% is one plain, evenly lit surface with no objects, no pattern and no strong shadows (game tiles with Hebrew letters sit on top of it). House style. No characters. Calm and low in contrast so the Hebrew on top stays easy to read. Size: 1024x1536 (2:3). No text, letters or numerals anywhere."
+        },
+        {
+          "id": "LAB_v2_hunt_win",
+          "file": "LAB_v2_hunt_win.png",
+          "role": "results",
+          "size": "1024x1024",
+          "shape": "1:1",
+          "transparent": true,
+          "shows": "Rimon holding a big gold magnifying glass high in triumph, grinning, with three small blank gold tiles floating around him.",
+          "style": "House style. Transparent background (PNG with alpha).",
+          "screen": "Results card above the score (lab.view.js results(), about 180 px)",
+          "references": [
+            "assets/img/gen/MASCOT_rimon.800.webp"
+          ],
+          "prompt": "Rimon holding a big gold magnifying glass high in triumph, grinning, with three small blank gold tiles floating around him. House style. Transparent background (PNG with alpha). Attach as reference: assets/img/gen/MASCOT_rimon.800.webp. Size: 1024x1024 (1:1). No text, letters or numerals anywhere."
+        }
+      ]
+    },
+    {
+      "id": "matrix",
+      "title": "Letter Matrix",
+      "skill": "Memory",
+      "howItPlays": "Letters flash on a grid, then the tiles turn face-down (deep green); tap every place the target letter was.",
+      "images": [
+        {
+          "id": "LAB_v2_matrix_cover",
+          "file": "LAB_v2_matrix_cover.png",
+          "role": "cover",
+          "size": "1536x1024",
+          "shape": "3:2",
+          "transparent": false,
+          "shows": "Ari at a deep-green card table under a warm hanging lamp, studying a 4 by 4 grid of cream tiles; half of the tiles are face-down and show a gold pomegranate tile-back. Rimon peeks over the table edge, eyes wide, concentrating. Keep every character and the key object inside the band y=128 to y=896 (the app crops it to 2:1).",
+          "style": "House style.",
+          "screen": "Intro card above the drill title (lab.view.js intro(), 2:1 crop, full card width) and the drill card in the hub \"All Drills\" grid (2:1 thumbnail)",
+          "references": [
+            "assets/img/gen/CHAR_ari_sheet.800.webp",
+            "assets/img/gen/MASCOT_rimon.800.webp"
+          ],
+          "prompt": "Ari at a deep-green card table under a warm hanging lamp, studying a 4 by 4 grid of cream tiles; half of the tiles are face-down and show a gold pomegranate tile-back. Rimon peeks over the table edge, eyes wide, concentrating. Keep every character and the key object inside the band y=128 to y=896 (the app crops it to 2:1). House style. Attach as reference: assets/img/gen/CHAR_ari_sheet.800.webp, assets/img/gen/MASCOT_rimon.800.webp. Size: 1536x1024 (3:2). No text, letters or numerals anywhere."
+        },
+        {
+          "id": "LAB_v2_matrix_play",
+          "file": "LAB_v2_matrix_play.png",
+          "role": "in-game",
+          "size": "1024x1024",
+          "shape": "1:1",
+          "transparent": false,
+          "shows": "The back face of a memory tile, full-bleed square with no background around it: deep green #1E4634 field, a thin warm-gold inset border 6% from the edge, and in the centre a simple gold pomegranate emblem with three small olive leaves. Symmetric, bold, flat; it must read at 64 px.",
+          "style": "House style. No characters. Bold and simple: no letter is ever shown on this face.",
+          "screen": "Face of every hidden tile (.lab-cell.is-hidden background, shown at about 64 to 90 px)",
+          "references": [],
+          "prompt": "The back face of a memory tile, full-bleed square with no background around it: deep green #1E4634 field, a thin warm-gold inset border 6% from the edge, and in the centre a simple gold pomegranate emblem with three small olive leaves. Symmetric, bold, flat; it must read at 64 px. House style. No characters. Bold and simple: no letter is ever shown on this face. Size: 1024x1024 (1:1). No text, letters or numerals anywhere."
+        },
+        {
+          "id": "LAB_v2_matrix_win",
+          "file": "LAB_v2_matrix_win.png",
+          "role": "results",
+          "size": "1024x1024",
+          "shape": "1:1",
+          "transparent": true,
+          "shows": "Rimon juggling three blank cream tiles with a proud grin; one tile in the air shows the gold pomegranate tile-back.",
+          "style": "House style. Transparent background (PNG with alpha).",
+          "screen": "Results card above the score (lab.view.js results(), about 180 px)",
+          "references": [
+            "assets/img/gen/MASCOT_rimon.800.webp"
+          ],
+          "prompt": "Rimon juggling three blank cream tiles with a proud grin; one tile in the air shows the gold pomegranate tile-back. House style. Transparent background (PNG with alpha). Attach as reference: assets/img/gen/MASCOT_rimon.800.webp. Size: 1024x1024 (1:1). No text, letters or numerals anywhere."
+        }
+      ]
+    },
+    {
+      "id": "soundmatch",
+      "title": "Sound Match",
+      "skill": "Speed",
+      "howItPlays": "A syllable plays (or is shown in English letters when sound is off); tap the syllable you heard before time runs out.",
+      "images": [
+        {
+          "id": "LAB_v2_soundmatch_cover",
+          "file": "LAB_v2_soundmatch_cover.png",
+          "role": "cover",
+          "size": "1536x1024",
+          "shape": "3:2",
+          "transparent": false,
+          "shows": "Noa wearing simple round headphones, eyes closed, smiling as she listens; soft gold sound waves flow from a small wooden speaker toward three blank cream tiles; Rimon taps the middle tile, which glows. Keep every character and the key object inside the band y=128 to y=896 (the app crops it to 2:1).",
+          "style": "House style.",
+          "screen": "Intro card above the drill title (lab.view.js intro(), 2:1 crop, full card width) and the drill card in the hub \"All Drills\" grid (2:1 thumbnail)",
+          "references": [
+            "assets/img/gen/CHAR_noa_sheet.800.webp",
+            "assets/img/gen/MASCOT_rimon.800.webp"
+          ],
+          "prompt": "Noa wearing simple round headphones, eyes closed, smiling as she listens; soft gold sound waves flow from a small wooden speaker toward three blank cream tiles; Rimon taps the middle tile, which glows. Keep every character and the key object inside the band y=128 to y=896 (the app crops it to 2:1). House style. Attach as reference: assets/img/gen/CHAR_noa_sheet.800.webp, assets/img/gen/MASCOT_rimon.800.webp. Size: 1536x1024 (3:2). No text, letters or numerals anywhere."
+        },
+        {
+          "id": "LAB_v2_soundmatch_play",
+          "file": "LAB_v2_soundmatch_play.png",
+          "role": "in-game",
+          "size": "1024x1024",
+          "shape": "1:1",
+          "transparent": true,
+          "shows": "Rimon wearing round gold headphones, eyes closed, listening carefully, one hand on the headphones, three small gold sound arcs at his side.",
+          "style": "House style. Transparent background (PNG with alpha).",
+          "screen": "Beside the prompt while the syllable plays (lab.games.js Sound Match trial, about 96 px)",
+          "references": [
+            "assets/img/gen/MASCOT_rimon.800.webp"
+          ],
+          "prompt": "Rimon wearing round gold headphones, eyes closed, listening carefully, one hand on the headphones, three small gold sound arcs at his side. House style. Transparent background (PNG with alpha). Attach as reference: assets/img/gen/MASCOT_rimon.800.webp. Size: 1024x1024 (1:1). No text, letters or numerals anywhere."
+        },
+        {
+          "id": "LAB_v2_soundmatch_win",
+          "file": "LAB_v2_soundmatch_win.png",
+          "role": "results",
+          "size": "1024x1024",
+          "shape": "1:1",
+          "transparent": true,
+          "shows": "Rimon dancing happily with gold headphones around his neck, gold sparkles and small sound arcs around him.",
+          "style": "House style. Transparent background (PNG with alpha).",
+          "screen": "Results card above the score (lab.view.js results(), about 180 px)",
+          "references": [
+            "assets/img/gen/MASCOT_rimon.800.webp"
+          ],
+          "prompt": "Rimon dancing happily with gold headphones around his neck, gold sparkles and small sound arcs around him. House style. Transparent background (PNG with alpha). Attach as reference: assets/img/gen/MASCOT_rimon.800.webp. Size: 1024x1024 (1:1). No text, letters or numerals anywhere."
+        }
+      ]
+    },
+    {
+      "id": "siddurflash",
+      "title": "Siddur Flash",
+      "skill": "Speed",
+      "howItPlays": "Prayer words flash one at a time in a box; tap Now! the moment the target word appears.",
+      "images": [
+        {
+          "id": "LAB_v2_siddurflash_cover",
+          "file": "LAB_v2_siddurflash_cover.png",
+          "role": "cover",
+          "size": "1536x1024",
+          "shape": "3:2",
+          "transparent": false,
+          "shows": "Ari in his synagogue look at a wooden reading desk with a closed deep-green prayer book with gold-edged pages; a small gold lightning spark above the book; a tall arched window with soft gold light behind; Rimon beside the desk pointing at the spark, excited. No writing anywhere. Keep every character and the key object inside the band y=128 to y=896 (the app crops it to 2:1).",
+          "style": "House style.",
+          "screen": "Intro card above the drill title (lab.view.js intro(), 2:1 crop, full card width) and the drill card in the hub \"All Drills\" grid (2:1 thumbnail)",
+          "references": [
+            "assets/img/gen/CHAR_ari_sheet.800.webp",
+            "assets/img/gen/CHAR_ari_synagogue.800.webp",
+            "assets/img/gen/MASCOT_rimon.800.webp"
+          ],
+          "prompt": "Ari in his synagogue look at a wooden reading desk with a closed deep-green prayer book with gold-edged pages; a small gold lightning spark above the book; a tall arched window with soft gold light behind; Rimon beside the desk pointing at the spark, excited. No writing anywhere. Keep every character and the key object inside the band y=128 to y=896 (the app crops it to 2:1). House style. Attach as reference: assets/img/gen/CHAR_ari_sheet.800.webp, assets/img/gen/CHAR_ari_synagogue.800.webp, assets/img/gen/MASCOT_rimon.800.webp. Size: 1536x1024 (3:2). No text, letters or numerals anywhere."
+        },
+        {
+          "id": "LAB_v2_siddurflash_play",
+          "file": "LAB_v2_siddurflash_play.png",
+          "role": "in-game",
+          "size": "1536x1024",
+          "shape": "3:2",
+          "transparent": false,
+          "shows": "Front view of an open book lying flat: two wide blank cream pages with no lines and no writing, a thin deep-green and gold binding along the outer edge, a gold ribbon bookmark at the bottom. The pages fill the picture from side to side; the middle of the spread is plain.",
+          "style": "House style. No characters. Calm and low in contrast so the Hebrew on top stays easy to read.",
+          "screen": "Behind the flashing word (.lab-flash background; the word is real type on top)",
+          "references": [],
+          "prompt": "Front view of an open book lying flat: two wide blank cream pages with no lines and no writing, a thin deep-green and gold binding along the outer edge, a gold ribbon bookmark at the bottom. The pages fill the picture from side to side; the middle of the spread is plain. House style. No characters. Calm and low in contrast so the Hebrew on top stays easy to read. Size: 1536x1024 (3:2). No text, letters or numerals anywhere."
+        },
+        {
+          "id": "LAB_v2_siddurflash_win",
+          "file": "LAB_v2_siddurflash_win.png",
+          "role": "results",
+          "size": "1024x1024",
+          "shape": "1:1",
+          "transparent": true,
+          "shows": "Rimon holding a closed deep-green prayer book carefully to his chest with both arms, smiling, small gold sparkles around him.",
+          "style": "House style. Transparent background (PNG with alpha).",
+          "screen": "Results card above the score (lab.view.js results(), about 180 px)",
+          "references": [
+            "assets/img/gen/MASCOT_rimon.800.webp"
+          ],
+          "prompt": "Rimon holding a closed deep-green prayer book carefully to his chest with both arms, smiling, small gold sparkles around him. House style. Transparent background (PNG with alpha). Attach as reference: assets/img/gen/MASCOT_rimon.800.webp. Size: 1024x1024 (1:1). No text, letters or numerals anywhere."
+        }
+      ]
+    },
+    {
+      "id": "switch",
+      "title": "Rule Switch",
+      "skill": "Flexibility",
+      "howItPlays": "One big letter on a card; the question switches between \"Does it have a dot inside?\" and \"Is it an end-of-word letter?\"; answer Yes or No.",
+      "images": [
+        {
+          "id": "LAB_v2_switch_cover",
+          "file": "LAB_v2_switch_cover.png",
+          "role": "cover",
+          "size": "1536x1024",
+          "shape": "3:2",
+          "transparent": false,
+          "shows": "Rimon at a fork in a garden path between olive trees, flipping a gold signpost whose two blank arrow signs point different ways, one gold and one deep green; Ari walks down the gold path and Noa down the green path, both looking back and smiling. The signs are blank. Keep every character and the key object inside the band y=128 to y=896 (the app crops it to 2:1).",
+          "style": "House style.",
+          "screen": "Intro card above the drill title (lab.view.js intro(), 2:1 crop, full card width) and the drill card in the hub \"All Drills\" grid (2:1 thumbnail)",
+          "references": [
+            "assets/img/gen/CHAR_ari_sheet.800.webp",
+            "assets/img/gen/CHAR_noa_sheet.800.webp",
+            "assets/img/gen/MASCOT_rimon.800.webp"
+          ],
+          "prompt": "Rimon at a fork in a garden path between olive trees, flipping a gold signpost whose two blank arrow signs point different ways, one gold and one deep green; Ari walks down the gold path and Noa down the green path, both looking back and smiling. The signs are blank. Keep every character and the key object inside the band y=128 to y=896 (the app crops it to 2:1). House style. Attach as reference: assets/img/gen/CHAR_ari_sheet.800.webp, assets/img/gen/CHAR_noa_sheet.800.webp, assets/img/gen/MASCOT_rimon.800.webp. Size: 1536x1024 (3:2). No text, letters or numerals anywhere."
+        },
+        {
+          "id": "LAB_v2_switch_play",
+          "file": "LAB_v2_switch_play.png",
+          "role": "in-game",
+          "size": "1024x1536",
+          "shape": "2:3",
+          "transparent": false,
+          "shows": "A single tall playing-card frame, upright, filling the whole picture: warm white #FFFAF0 centre, a double border in warm gold and deep green, small olive-leaf ornaments in the four corners. The centre 70% is plain (a large letter is shown there by the app).",
+          "style": "House style. No characters. Calm and low in contrast so the Hebrew on top stays easy to read.",
+          "screen": "Behind the big letter on the rule card (.lab-card background; the rule colour stays on the card border)",
+          "references": [],
+          "prompt": "A single tall playing-card frame, upright, filling the whole picture: warm white #FFFAF0 centre, a double border in warm gold and deep green, small olive-leaf ornaments in the four corners. The centre 70% is plain (a large letter is shown there by the app). House style. No characters. Calm and low in contrast so the Hebrew on top stays easy to read. Size: 1024x1536 (2:3). No text, letters or numerals anywhere."
+        },
+        {
+          "id": "LAB_v2_switch_win",
+          "file": "LAB_v2_switch_win.png",
+          "role": "results",
+          "size": "1024x1024",
+          "shape": "1:1",
+          "transparent": true,
+          "shows": "Rimon balancing on one foot with both arms out, a small blank gold flag in one hand and a small blank deep-green flag in the other, grinning.",
+          "style": "House style. Transparent background (PNG with alpha).",
+          "screen": "Results card above the score (lab.view.js results(), about 180 px)",
+          "references": [
+            "assets/img/gen/MASCOT_rimon.800.webp"
+          ],
+          "prompt": "Rimon balancing on one foot with both arms out, a small blank gold flag in one hand and a small blank deep-green flag in the other, grinning. House style. Transparent background (PNG with alpha). Attach as reference: assets/img/gen/MASCOT_rimon.800.webp. Size: 1024x1024 (1:1). No text, letters or numerals anywhere."
+        }
+      ]
+    },
+    {
+      "id": "gematria",
+      "title": "Gematria",
+      "skill": "Problem Solving",
+      "howItPlays": "Letter tiles (with their values at low levels); tap letters whose values add up to the target number.",
+      "images": [
+        {
+          "id": "LAB_v2_gematria_cover",
+          "file": "LAB_v2_gematria_cover.png",
+          "role": "cover",
+          "size": "1536x1024",
+          "shape": "3:2",
+          "transparent": false,
+          "shows": "Ari at a wooden table with a brass balance scale; Rimon places a blank cream tile on one pan while more blank tiles wait in a row; small gold beads glow on the other pan; warm lamplight. No coins, no numbers. Keep every character and the key object inside the band y=128 to y=896 (the app crops it to 2:1).",
+          "style": "House style.",
+          "screen": "Intro card above the drill title (lab.view.js intro(), 2:1 crop, full card width) and the drill card in the hub \"All Drills\" grid (2:1 thumbnail)",
+          "references": [
+            "assets/img/gen/CHAR_ari_sheet.800.webp",
+            "assets/img/gen/MASCOT_rimon.800.webp"
+          ],
+          "prompt": "Ari at a wooden table with a brass balance scale; Rimon places a blank cream tile on one pan while more blank tiles wait in a row; small gold beads glow on the other pan; warm lamplight. No coins, no numbers. Keep every character and the key object inside the band y=128 to y=896 (the app crops it to 2:1). House style. Attach as reference: assets/img/gen/CHAR_ari_sheet.800.webp, assets/img/gen/MASCOT_rimon.800.webp. Size: 1536x1024 (3:2). No text, letters or numerals anywhere."
+        },
+        {
+          "id": "LAB_v2_gematria_play",
+          "file": "LAB_v2_gematria_play.png",
+          "role": "in-game",
+          "size": "1024x1024",
+          "shape": "1:1",
+          "transparent": true,
+          "shows": "A brass balance scale with both pans level, a few blank cream tiles in the left pan and gold beads in the right pan.",
+          "style": "House style. Transparent background (PNG with alpha).",
+          "screen": "Beside \"Your total\" under the tiles (lab.games.js Gematria trial, about 110 px)",
+          "references": [],
+          "prompt": "A brass balance scale with both pans level, a few blank cream tiles in the left pan and gold beads in the right pan. House style. Transparent background (PNG with alpha). Size: 1024x1024 (1:1). No text, letters or numerals anywhere."
+        },
+        {
+          "id": "LAB_v2_gematria_win",
+          "file": "LAB_v2_gematria_win.png",
+          "role": "results",
+          "size": "1024x1024",
+          "shape": "1:1",
+          "transparent": true,
+          "shows": "Rimon standing on the base of a perfectly balanced brass scale, arms raised in triumph, gold sparkles around him.",
+          "style": "House style. Transparent background (PNG with alpha).",
+          "screen": "Results card above the score (lab.view.js results(), about 180 px)",
+          "references": [
+            "assets/img/gen/MASCOT_rimon.800.webp"
+          ],
+          "prompt": "Rimon standing on the base of a perfectly balanced brass scale, arms raised in triumph, gold sparkles around him. House style. Transparent background (PNG with alpha). Attach as reference: assets/img/gen/MASCOT_rimon.800.webp. Size: 1024x1024 (1:1). No text, letters or numerals anywhere."
+        }
+      ]
+    },
+    {
+      "id": "countup",
+      "title": "Count Up",
+      "skill": "Speed",
+      "howItPlays": "Hebrew number words, shuffled on tiles; tap them from smallest to largest.",
+      "images": [
+        {
+          "id": "LAB_v2_countup_cover",
+          "file": "LAB_v2_countup_cover.png",
+          "role": "cover",
+          "size": "1536x1024",
+          "shape": "3:2",
+          "transparent": false,
+          "shows": "Noa climbing a staircase of cream stone steps that rise from left to right, each a little higher, toward a golden olive tree on a hill; Rimon cheers from the top step. The steps are blank. Keep every character and the key object inside the band y=128 to y=896 (the app crops it to 2:1).",
+          "style": "House style.",
+          "screen": "Intro card above the drill title (lab.view.js intro(), 2:1 crop, full card width) and the drill card in the hub \"All Drills\" grid (2:1 thumbnail)",
+          "references": [
+            "assets/img/gen/CHAR_noa_sheet.800.webp",
+            "assets/img/gen/MASCOT_rimon.800.webp"
+          ],
+          "prompt": "Noa climbing a staircase of cream stone steps that rise from left to right, each a little higher, toward a golden olive tree on a hill; Rimon cheers from the top step. The steps are blank. Keep every character and the key object inside the band y=128 to y=896 (the app crops it to 2:1). House style. Attach as reference: assets/img/gen/CHAR_noa_sheet.800.webp, assets/img/gen/MASCOT_rimon.800.webp. Size: 1536x1024 (3:2). No text, letters or numerals anywhere."
+        },
+        {
+          "id": "LAB_v2_countup_play",
+          "file": "LAB_v2_countup_play.png",
+          "role": "in-game",
+          "size": "1024x1536",
+          "shape": "2:3",
+          "transparent": false,
+          "shows": "Soft paper-cream ground with a low staircase of cream stone steps rising from the bottom-left corner along the bottom edge and up the right edge, olive leaves in the corners. Board mat, portrait. Decoration only in the outer 12% on every side; the centre 76% is one plain, evenly lit surface with no objects, no pattern and no strong shadows (game tiles with Hebrew letters sit on top of it).",
+          "style": "House style. No characters. Calm and low in contrast so the Hebrew on top stays easy to read.",
+          "screen": "Behind the game board (.lab-board background, cover-fitted); hidden under prefers-contrast: more and forced colours",
+          "references": [],
+          "prompt": "Soft paper-cream ground with a low staircase of cream stone steps rising from the bottom-left corner along the bottom edge and up the right edge, olive leaves in the corners. Board mat, portrait. Decoration only in the outer 12% on every side; the centre 76% is one plain, evenly lit surface with no objects, no pattern and no strong shadows (game tiles with Hebrew letters sit on top of it). House style. No characters. Calm and low in contrast so the Hebrew on top stays easy to read. Size: 1024x1536 (2:3). No text, letters or numerals anywhere."
+        },
+        {
+          "id": "LAB_v2_countup_win",
+          "file": "LAB_v2_countup_win.png",
+          "role": "results",
+          "size": "1024x1024",
+          "shape": "1:1",
+          "transparent": true,
+          "shows": "Rimon on top of a small stack of cream steps, both arms raised, a small blank gold flag planted beside him.",
+          "style": "House style. Transparent background (PNG with alpha).",
+          "screen": "Results card above the score (lab.view.js results(), about 180 px)",
+          "references": [
+            "assets/img/gen/MASCOT_rimon.800.webp"
+          ],
+          "prompt": "Rimon on top of a small stack of cream steps, both arms raised, a small blank gold flag planted beside him. House style. Transparent background (PNG with alpha). Attach as reference: assets/img/gen/MASCOT_rimon.800.webp. Size: 1024x1024 (1:1). No text, letters or numerals anywhere."
+        }
+      ]
+    },
+    {
+      "id": "numberear",
+      "title": "Number Ear",
+      "skill": "Attention",
+      "howItPlays": "A Hebrew number plays (or is shown when sound is off); tap the matching digits.",
+      "images": [
+        {
+          "id": "LAB_v2_numberear_cover",
+          "file": "LAB_v2_numberear_cover.png",
+          "role": "cover",
+          "size": "1536x1024",
+          "shape": "3:2",
+          "transparent": false,
+          "shows": "Ari leaning toward a vintage gold radio on a wooden shelf, a hand cupped to his ear, smiling; three blank cream tiles float in front of the radio in soft gold sound waves; Rimon sits on the shelf swinging his legs. Keep every character and the key object inside the band y=128 to y=896 (the app crops it to 2:1).",
+          "style": "House style.",
+          "screen": "Intro card above the drill title (lab.view.js intro(), 2:1 crop, full card width) and the drill card in the hub \"All Drills\" grid (2:1 thumbnail)",
+          "references": [
+            "assets/img/gen/CHAR_ari_sheet.800.webp",
+            "assets/img/gen/MASCOT_rimon.800.webp"
+          ],
+          "prompt": "Ari leaning toward a vintage gold radio on a wooden shelf, a hand cupped to his ear, smiling; three blank cream tiles float in front of the radio in soft gold sound waves; Rimon sits on the shelf swinging his legs. Keep every character and the key object inside the band y=128 to y=896 (the app crops it to 2:1). House style. Attach as reference: assets/img/gen/CHAR_ari_sheet.800.webp, assets/img/gen/MASCOT_rimon.800.webp. Size: 1536x1024 (3:2). No text, letters or numerals anywhere."
+        },
+        {
+          "id": "LAB_v2_numberear_play",
+          "file": "LAB_v2_numberear_play.png",
+          "role": "in-game",
+          "size": "1024x1024",
+          "shape": "1:1",
+          "transparent": true,
+          "shows": "A small vintage radio in warm gold and deep green with a round speaker grille, two knobs and a blank dial window, soft gold sound arcs on one side.",
+          "style": "House style. Transparent background (PNG with alpha).",
+          "screen": "Beside the prompt while the number plays (lab.games.js Number Ear trial, about 96 px)",
+          "references": [],
+          "prompt": "A small vintage radio in warm gold and deep green with a round speaker grille, two knobs and a blank dial window, soft gold sound arcs on one side. House style. Transparent background (PNG with alpha). Size: 1024x1024 (1:1). No text, letters or numerals anywhere."
+        },
+        {
+          "id": "LAB_v2_numberear_win",
+          "file": "LAB_v2_numberear_win.png",
+          "role": "results",
+          "size": "1024x1024",
+          "shape": "1:1",
+          "transparent": true,
+          "shows": "Rimon dancing beside the small gold radio, arms up, with sound arcs and sparkles around him.",
+          "style": "House style. Transparent background (PNG with alpha).",
+          "screen": "Results card above the score (lab.view.js results(), about 180 px)",
+          "references": [
+            "assets/img/gen/MASCOT_rimon.800.webp"
+          ],
+          "prompt": "Rimon dancing beside the small gold radio, arms up, with sound arcs and sparkles around him. House style. Transparent background (PNG with alpha). Attach as reference: assets/img/gen/MASCOT_rimon.800.webp. Size: 1024x1024 (1:1). No text, letters or numerals anywhere."
+        }
+      ]
+    },
+    {
+      "id": "calendar",
+      "title": "Calendar Puzzle",
+      "skill": "Memory",
+      "howItPlays": "Hebrew months and holy days: which day falls on a date, or when a holy day falls; tap the answer from a list.",
+      "images": [
+        {
+          "id": "LAB_v2_calendar_cover",
+          "file": "LAB_v2_calendar_cover.png",
+          "role": "cover",
+          "size": "1536x1024",
+          "shape": "3:2",
+          "transparent": false,
+          "shows": "Noa and Ari in front of a large wooden wall calendar under an evening sky with a gold crescent moon; the calendar page is a grid of blank cream squares with one square glowing gold; Rimon holds up a tiny gold crescent moon like a lantern. No numbers on the calendar. Keep every character and the key object inside the band y=128 to y=896 (the app crops it to 2:1).",
+          "style": "House style.",
+          "screen": "Intro card above the drill title (lab.view.js intro(), 2:1 crop, full card width) and the drill card in the hub \"All Drills\" grid (2:1 thumbnail)",
+          "references": [
+            "assets/img/gen/CHAR_ari_sheet.800.webp",
+            "assets/img/gen/CHAR_noa_sheet.800.webp",
+            "assets/img/gen/MASCOT_rimon.800.webp"
+          ],
+          "prompt": "Noa and Ari in front of a large wooden wall calendar under an evening sky with a gold crescent moon; the calendar page is a grid of blank cream squares with one square glowing gold; Rimon holds up a tiny gold crescent moon like a lantern. No numbers on the calendar. Keep every character and the key object inside the band y=128 to y=896 (the app crops it to 2:1). House style. Attach as reference: assets/img/gen/CHAR_ari_sheet.800.webp, assets/img/gen/CHAR_noa_sheet.800.webp, assets/img/gen/MASCOT_rimon.800.webp. Size: 1536x1024 (3:2). No text, letters or numerals anywhere."
+        },
+        {
+          "id": "LAB_v2_calendar_play",
+          "file": "LAB_v2_calendar_play.png",
+          "role": "in-game",
+          "size": "1024x1536",
+          "shape": "2:3",
+          "transparent": false,
+          "shows": "A wooden calendar board seen from the front: a strip of eight small gold moon phases (new, growing, full, shrinking) along the top edge, small olive sprigs in the bottom corners. Board mat, portrait. Decoration only in the outer 12% on every side; the centre 76% is one plain, evenly lit surface with no objects, no pattern and no strong shadows (game tiles with Hebrew letters sit on top of it).",
+          "style": "House style. No characters. Calm and low in contrast so the Hebrew on top stays easy to read.",
+          "screen": "Behind the game board (.lab-board background, cover-fitted); hidden under prefers-contrast: more and forced colours",
+          "references": [],
+          "prompt": "A wooden calendar board seen from the front: a strip of eight small gold moon phases (new, growing, full, shrinking) along the top edge, small olive sprigs in the bottom corners. Board mat, portrait. Decoration only in the outer 12% on every side; the centre 76% is one plain, evenly lit surface with no objects, no pattern and no strong shadows (game tiles with Hebrew letters sit on top of it). House style. No characters. Calm and low in contrast so the Hebrew on top stays easy to read. Size: 1024x1536 (2:3). No text, letters or numerals anywhere."
+        },
+        {
+          "id": "LAB_v2_calendar_win",
+          "file": "LAB_v2_calendar_win.png",
+          "role": "results",
+          "size": "1024x1024",
+          "shape": "1:1",
+          "transparent": true,
+          "shows": "Rimon holding up a gold crescent moon like a trophy, a few small gold stars around him.",
+          "style": "House style. Transparent background (PNG with alpha).",
+          "screen": "Results card above the score (lab.view.js results(), about 180 px)",
+          "references": [
+            "assets/img/gen/MASCOT_rimon.800.webp"
+          ],
+          "prompt": "Rimon holding up a gold crescent moon like a trophy, a few small gold stars around him. House style. Transparent background (PNG with alpha). Attach as reference: assets/img/gen/MASCOT_rimon.800.webp. Size: 1024x1024 (1:1). No text, letters or numerals anywhere."
+        }
+      ]
+    },
+    {
+      "id": "pattern",
+      "title": "Letter Pattern",
+      "skill": "Problem Solving",
+      "howItPlays": "Three root letters in order; tap every word that carries them (word families).",
+      "images": [
+        {
+          "id": "LAB_v2_pattern_cover",
+          "file": "LAB_v2_pattern_cover.png",
+          "role": "cover",
+          "size": "1536x1024",
+          "shape": "3:2",
+          "transparent": false,
+          "shows": "Noa and Rimon kneel beside a golden olive tree whose ground is cut away to show its roots; three of the roots glow gold and twist together into one strand; small blank cream tiles hang from the low branches like tags. Keep every character and the key object inside the band y=128 to y=896 (the app crops it to 2:1).",
+          "style": "House style.",
+          "screen": "Intro card above the drill title (lab.view.js intro(), 2:1 crop, full card width) and the drill card in the hub \"All Drills\" grid (2:1 thumbnail)",
+          "references": [
+            "assets/img/gen/CHAR_noa_sheet.800.webp",
+            "assets/img/gen/MASCOT_rimon.800.webp",
+            "assets/img/gen/HERO_home_tree.webp"
+          ],
+          "prompt": "Noa and Rimon kneel beside a golden olive tree whose ground is cut away to show its roots; three of the roots glow gold and twist together into one strand; small blank cream tiles hang from the low branches like tags. Keep every character and the key object inside the band y=128 to y=896 (the app crops it to 2:1). House style. Attach as reference: assets/img/gen/CHAR_noa_sheet.800.webp, assets/img/gen/MASCOT_rimon.800.webp, assets/img/gen/HERO_home_tree.webp. Size: 1536x1024 (3:2). No text, letters or numerals anywhere."
+        },
+        {
+          "id": "LAB_v2_pattern_play",
+          "file": "LAB_v2_pattern_play.png",
+          "role": "in-game",
+          "size": "1024x1536",
+          "shape": "2:3",
+          "transparent": false,
+          "shows": "Paper-cream ground with olive-tree roots in gold and olive spreading along the bottom edge and up the two side edges; three of the roots are a brighter gold. Board mat, portrait. Decoration only in the outer 12% on every side; the centre 76% is one plain, evenly lit surface with no objects, no pattern and no strong shadows (game tiles with Hebrew letters sit on top of it).",
+          "style": "House style. No characters. Calm and low in contrast so the Hebrew on top stays easy to read.",
+          "screen": "Behind the game board (.lab-board background, cover-fitted); hidden under prefers-contrast: more and forced colours",
+          "references": [],
+          "prompt": "Paper-cream ground with olive-tree roots in gold and olive spreading along the bottom edge and up the two side edges; three of the roots are a brighter gold. Board mat, portrait. Decoration only in the outer 12% on every side; the centre 76% is one plain, evenly lit surface with no objects, no pattern and no strong shadows (game tiles with Hebrew letters sit on top of it). House style. No characters. Calm and low in contrast so the Hebrew on top stays easy to read. Size: 1024x1536 (2:3). No text, letters or numerals anywhere."
+        },
+        {
+          "id": "LAB_v2_pattern_win",
+          "file": "LAB_v2_pattern_win.png",
+          "role": "results",
+          "size": "1024x1024",
+          "shape": "1:1",
+          "transparent": true,
+          "shows": "Rimon watering a young olive sapling whose three small roots glow gold below the soil line, beaming.",
+          "style": "House style. Transparent background (PNG with alpha).",
+          "screen": "Results card above the score (lab.view.js results(), about 180 px)",
+          "references": [
+            "assets/img/gen/MASCOT_rimon.800.webp"
+          ],
+          "prompt": "Rimon watering a young olive sapling whose three small roots glow gold below the soil line, beaming. House style. Transparent background (PNG with alpha). Attach as reference: assets/img/gen/MASCOT_rimon.800.webp. Size: 1024x1024 (1:1). No text, letters or numerals anywhere."
+        }
+      ]
+    }
+  ],
+  "shared": [
+    {
+      "id": "LAB_v2_workout_done",
+      "file": "LAB_v2_workout_done.png",
+      "size": "1536x1024",
+      "shape": "3:2",
+      "transparent": false,
+      "shows": "Ari, Noa and Rimon give a three-way high-five under the golden olive tree in evening light; three round gold medallion tokens with plain empty centres hang from a branch above them; a few small gold stars. Keep every character and the key object inside the band y=128 to y=896 (the app crops it to 2:1).",
+      "style": "House style.",
+      "screen": "Brain Lab hub, Today's Workout card when all three drills are done (lab.view.js hub(), prog.complete); other days show LAB_v2_hero from the commercial orders",
+      "references": [
+        "assets/img/gen/CHAR_ari_sheet.800.webp",
+        "assets/img/gen/CHAR_noa_sheet.800.webp",
+        "assets/img/gen/MASCOT_rimon.800.webp",
+        "assets/img/gen/HERO_home_tree.webp"
+      ],
+      "prompt": "Ari, Noa and Rimon give a three-way high-five under the golden olive tree in evening light; three round gold medallion tokens with plain empty centres hang from a branch above them; a few small gold stars. Keep every character and the key object inside the band y=128 to y=896 (the app crops it to 2:1). House style. Attach as reference: assets/img/gen/CHAR_ari_sheet.800.webp, assets/img/gen/CHAR_noa_sheet.800.webp, assets/img/gen/MASCOT_rimon.800.webp, assets/img/gen/HERO_home_tree.webp. Size: 1536x1024 (3:2). No text, letters or numerals anywhere."
+    },
+    {
+      "id": "LAB_v2_new_best",
+      "file": "LAB_v2_new_best.png",
+      "size": "1024x1024",
+      "shape": "1:1",
+      "transparent": true,
+      "shows": "A gold ribbon rosette: a ring of olive leaves around a plain empty gold centre, two short ribbon tails, small gold sparkles. No text, no numbers.",
+      "style": "House style. Transparent background (PNG with alpha).",
+      "screen": "Results card beside \"A new best score!\" (lab.view.js results(), isBest), about 96 px",
+      "references": [
+        "assets/img/gen/BADGE_streak-7.800.webp"
+      ],
+      "prompt": "A gold ribbon rosette: a ring of olive leaves around a plain empty gold centre, two short ribbon tails, small gold sparkles. No text, no numbers. House style. Transparent background (PNG with alpha). Attach as reference: assets/img/gen/BADGE_streak-7.800.webp. Size: 1024x1024 (1:1). No text, letters or numerals anywhere."
+    }
+  ]
+}

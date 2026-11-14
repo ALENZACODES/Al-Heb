@@ -51,6 +51,8 @@ Set to `hold`:
 
 ### 4. Pe was spelled as Fe
 
+Decision, 14 Nov 2026: Final Pe is named פֵּא סוֹפִית ("pe sofit"), not פֵא סוֹפִית ("fe sofit"). The app names every final letter after its base letter with the dot (Final Kaf is כַּף סוֹפִית, "kaf sofit"), and the Final Pe clips already say "pe sofit". The F sound of the final form is taught in its sound line.
+
 The letter name for Pe and Final Pe was written פֵא (reads "fe"). Now פֵּא in `data/letters/letters.json`, `data/videos/letters.json`, `src/letters/roster.js` and `tools/letters/build_letters.py`.
 
 ## Second Pass, Same Day: Re-Recorded With The Google Key

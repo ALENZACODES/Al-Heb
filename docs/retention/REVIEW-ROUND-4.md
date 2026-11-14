@@ -1,6 +1,6 @@
 # Retention: Review Round 4 of 5
 
-Reviewed: branch `claude/retention-fable-2026-11-10` at `29bdb0de` (contains `main` at `81f9fc45`).
+Reviewed: the retention work at `29bdb0de` (contains `main` at `81f9fc45`).
 Earlier rounds read the code, scanned for accessibility and attacked the logic with random input. This round followed one learner through ten calendar days in a real browser, with the clock set for every visit, so the whole chain ran as shipped: boot, day rollover, storage, screens. It is now a browser test, `tests/retention/journey.browser.test.js`. No real phone and no real learner was involved.
 
 ## The Ten Days

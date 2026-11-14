@@ -45,7 +45,7 @@ Adapters: `node src/photo/engines/web.js --dry` prints what each would send. The
 | Azure Read | cloud OCR | Believed Hebrew print; F0 ~5,000 tx/month | UNVERIFIED, no adapter |
 | AWS Textract | cloud OCR | Believed Latin-only | UNVERIFIED, not planned |
 | Apple Vision `VNRecognizeTextRequest` | iOS OCR | Believed no Hebrew through iOS 18 | UNVERIFIED; check `supportedRecognitionLanguages` at runtime on a device |
-| Vision LLMs (GPT, Gemini and similar) | OCR | Print read well, niqqud inconsistent (anecdotal) | UNMEASURED |
+| Hosted vision readers | OCR | Print read well, niqqud inconsistent (anecdotal) | UNMEASURED |
 | Dicta Nakdan API | vowelizer | Endpoint used by nakdan.dicta.org.il | Removed 2026-11-07 (fix #16): its host was blocked by the site CSP and no terms could be read. Was run live 2026-11-04: shape confirmed, 94.4% agreement with phrasebook pointing (30 phrases); the measurement is kept in BENCHMARK.md |
 | nakdimon / unikud (MIT) | self-hosted vowelizer | Exist | Not wired |
 | Phonikud | IPA + stress | CC BY 4.0 code, ONNX + Python; no JS runtime | Placeholder only (`createPhonikudPlaceholder`, inert) |
@@ -69,7 +69,7 @@ Known behaviour to remember: pointed text from the sign path is machine-generate
 
 **Corpus (50 photos, taken by the team on real phones, no web images):** 20 siddur/Chumash pages (print, vowelled; mix of Ashkenaz/Sefard siddurim and two fonts families; include taamim pages), 15 street/shop signs (outdoor, glare, angle), 10 menus/price lists (mixed Hebrew + Latin + digits), 5 hard cases (curved page, low light, shadow). For each photo store: JPEG, hand-typed ground truth per line (consonants only, plus pointed text for siddur pages), and the correct English gloss for signs/menus.
 
-**Conditions:** same photo through each candidate OCR (Tesseract.js `heb`, paddleocr-hebrew ONNX, Google Vision if a key is available, optionally a vision LLM), with and without a simple preprocessing step (deskew + contrast), on the target device class (mid-range Android and an iPhone) for latency.
+**Conditions:** same photo through each candidate OCR (Tesseract.js `heb`, paddleocr-hebrew ONNX, Google Vision if a key is available, optionally a hosted vision reader), with and without a simple preprocessing step (deskew + contrast), on the target device class (mid-range Android and an iPhone) for latency.
 
 **Metrics per photo and engine:**
 - Character error rate on consonant skeleton (after `consonantSkeleton`) and word error rate.

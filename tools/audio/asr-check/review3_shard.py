@@ -59,7 +59,7 @@ def main():
     ap.add_argument('--of', type=int, default=1)
     ap.add_argument('--out', required=True)
     ap.add_argument('--probe', action='store_true', help='one request only, to see whether the API is enabled')
-    ap.add_argument('--engine', default='google', choices=['google', 'whisper'], help='whisper: OpenAI Whisper large-v3, free, on the runner')
+    ap.add_argument('--engine', default='google', choices=['google', 'whisper'], help='whisper: Whisper large-v3, free, on the runner')
     a = ap.parse_args()
     if a.engine == 'whisper':
         return whisper_main(a)

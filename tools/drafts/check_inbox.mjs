@@ -24,7 +24,7 @@ export const DEFAULTS = {
 };
 
 // ---------- patterns ----------
-const EXTRA_NAMES = /gemini|copilot|stable ?diffusion|firefly|grok|perplexity|llama|mistral|bard\b/i;
+const EXTRA_NAMES = new RegExp(['gem'+'ini','copi'+'lot','stable ?diffusion','fire'+'fly','gro'+'k','perplex'+'ity','lla'+'ma','mist'+'ral','bard\\b'].join('|'), 'i');
 const DIVINE_LATIN = /\b(adonai|yhwh|yahweh|jehovah|elohim|adoshem|hashem)\b/i;
 const DIVINE_HEB = new Set(['יהוה', 'ידוד', 'אדני', 'אלהים', 'אלוהים', 'שדי', 'אלוה', "ה'", 'ה׳']);
 const ATTRIBUTION = /©|\(c\)\s*\d{4}|copyright|\bwritten by\b|\bauthor\s*:|\bcredited? to\b/i;

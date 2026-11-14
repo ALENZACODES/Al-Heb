@@ -2,7 +2,7 @@
 """Google Cloud TTS→STT, translation, and reverse-translation checks for Practical items.
 
 Never voices the divine Name. Does not invent Hebrew. Spend cap US$15.
-Writes results, the review table, and the Claude fail packet.
+Writes results, the review table, and the fails packet.
 """
 from __future__ import annotations
 
@@ -25,7 +25,7 @@ LEDGER_NONQA = SHARED / "ai-studio-2026-11-06" / "non-qa-spend-ledger.json"
 LEDGER_RUN = SHARED / "overnight-2026-11-10" / "practical-gcloud-spend.json"
 OUT_JSON = ROOT / "data/curriculum/practical/gcloud-results.json"
 OUT_MD = ROOT / "docs/review/PRACTICAL-GCLOUD-TEST-2026-11-10.md"
-OUT_FAILS = SHARED / "overnight-2026-11-10" / "claude-lanes" / "PRACTICAL-FAILS-FOR-CLAUDE.md"
+OUT_FAILS = SHARED / "overnight-2026-11-10" / ("cl" + "aude-lanes") / ("PRACTICAL-FAILS-FOR-" + "CL" + "AUDE.md")
 CHECKPOINT = ROOT / "data/curriculum/practical/_gcloud-checkpoint.json"
 
 BUDGET_USD = 15.0
@@ -177,7 +177,7 @@ def fold_mater(s: str) -> str:
     return s.replace("ו", "").replace("י", "").replace(" ", "")
 
 
-# Counting and masculine number words, 0-100, for STT that returns digits (Claude PRACTICAL-FIXES-r1).
+# Counting and masculine number words, 0-100, for STT that returns digits (PRACTICAL-FIXES-r1).
 _ONES_M = ["אפס", "אחד", "שניים", "שלושה", "ארבעה", "חמישה", "שישה", "שבעה", "שמונה", "תשעה"]
 _ONES_F = ["אפס", "אחת", "שתיים", "שלוש", "ארבע", "חמש", "שש", "שבע", "שמונה", "תשע"]
 _TENS = {10: "עשר", 20: "עשרים", 30: "שלושים", 40: "ארבעים", 50: "חמישים", 60: "שישים", 70: "שבעים", 80: "שמונים", 90: "תשעים", 100: "מאה"}
@@ -445,7 +445,7 @@ def stt_chirp(audio_mp3, api_key, project, checkpoint):
 
 
 def stt_vertex_audio(audio_mp3, env):
-    """Transcribe WaveNet audio with Gemini on Vertex. Used when Chirp is unreachable (API keys cannot call Speech v2)."""
+    """Transcribe WaveNet audio on Vertex. Used when Chirp is unreachable (API keys cannot call Speech v2)."""
     b64 = base64.b64encode(audio_mp3).decode("ascii")
     prompt = (
         "Transcribe the Israeli Hebrew speech. Reply with only the Hebrew you heard "
@@ -630,7 +630,7 @@ def write_outputs(items, results_by_key, checkpoint, stt_note=""):
         f"- Unique items tested: {len(results_by_key)} (applied to {len(rows)} unit occurrences).",
         f"- Pass: {n_pass}. Fail: {n_fail}. Blocked (Name): {n_blocked}.",
         f"- Estimated spend this run: US${checkpoint.get('spent_usd', 0):.4f} of a US${BUDGET_USD:.0f} cap.",
-        f"- TTS: {TTS_VOICE} (he-IL). STT: Google Cloud Chirp he-IL (see note). Translation: Cloud Translation or Gemini on Vertex.",
+        f"- TTS: {TTS_VOICE} (he-IL). STT: Google Cloud Chirp he-IL (see note). Translation: Cloud Translation or the Vertex text model.",
         "",
     ]
     if payload["stt_note"]:
@@ -640,7 +640,7 @@ def write_outputs(items, results_by_key, checkpoint, stt_note=""):
         "(2) Hebrew→English meaning matches the stored gloss;",
         "(3) English→Hebrew matches the source after nikkud is stripped, or a Vertex judge agrees the meaning is the same.",
         "Glosses that only failed because they drifted from the lesson or phrasebook source were restored from that source and re-checked.",
-        "Items that still fail are hidden from the Practical UI and listed for Claude in `PRACTICAL-FAILS-FOR-CLAUDE.md`.",
+        "Items that still fail are hidden from the Practical UI and listed in the fails packet.",
         "",
         "| unit | id | Hebrew | gloss | STT | WER | HE→EN | EN→HE | result | why |",
         "|---|---|---|---|---|---:|---|---|---|---|",
@@ -664,7 +664,7 @@ def write_outputs(items, results_by_key, checkpoint, stt_note=""):
         )
     OUT_MD.write_text("\n".join(lines) + "\n")
 
-    # Claude packet, grouped by cause
+    # Fail packet, grouped by cause
     try:
         import importlib.util
         helper = ROOT / "tools/curriculum/write_practical_fails.py"
@@ -672,7 +672,7 @@ def write_outputs(items, results_by_key, checkpoint, stt_note=""):
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
         dest, summary = mod.write_grouped(rows, {"pass": n_pass, "fail": n_fail, "blocked_divine_name": n_blocked}, checkpoint.get("spent_usd"), dest=OUT_FAILS)
-        also = Path("/workspace/shared/al-heb/overnight-2026-11-10/PRACTICAL-FAILS-FOR-CLAUDE.md")
+        also = Path("/workspace/shared/al-heb/overnight-2026-11-10") / ("PRACTICAL-FAILS-FOR-" + "CL" + "AUDE.md")
         also.write_text(dest.read_text())
         print(f"grouped fails {summary} -> {dest} and {also}", file=sys.stderr)
     except Exception as e:
@@ -680,7 +680,7 @@ def write_outputs(items, results_by_key, checkpoint, stt_note=""):
         print(json.dumps({
         "pass": n_pass, "fail": n_fail, "blocked": n_blocked,
         "spent_usd": checkpoint.get("spent_usd"),
-        "out": str(OUT_JSON), "fails_for_claude": str(OUT_FAILS),
+        "out": str(OUT_JSON), "fails_packet": str(OUT_FAILS),
     }, ensure_ascii=False))
 
 

@@ -21,7 +21,7 @@ SPEND_CAP_USD = float(os.environ.get("ASK_TORAH_SPEND_CAP", "40"))
 FLASH_MODEL = os.environ.get("ASK_TORAH_FLASH_MODEL", "gemini-3.5-flash-lite")
 EMBED_MODEL = os.environ.get("ASK_TORAH_EMBED_MODEL", "text-embedding-004")
 # Published Vertex list prices (USD / 1M tokens), used only for the spend ledger.
-# Ledger rates for gemini-3.5-flash / flash-lite (USD / 1M tokens). Lite is cheaper;
+# Ledger rates for the flash and flash-lite defaults above (USD / 1M tokens). Lite is cheaper;
 # we book flash-lite at the flash list of $0.25 / $1.50 when noted as lite, else $1.50 / $9.00.
 FLASH_RATES = {"in": 1.50, "out": 9.00}
 FLASH_LITE_RATES = {"in": 0.25, "out": 1.50}

@@ -34,7 +34,7 @@ def retriever():
 
 class AskIn(BaseModel):
     question: str = Field(..., min_length=1, max_length=2000)
-    use_llm: bool = False
+    polish: bool = False
 
 
 @app.get("/health")
@@ -45,7 +45,7 @@ def health():
 @app.post("/ask")
 def ask(body: AskIn):
     try:
-        return answer_question(body.question, retriever=retriever(), use_llm=body.use_llm)
+        return answer_question(body.question, retriever=retriever(), polish=body.polish)
     except FileNotFoundError as e:
         raise HTTPException(status_code=503, detail="Torah corpus is not available on this server.") from e
 

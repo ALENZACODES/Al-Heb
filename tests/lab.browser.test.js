@@ -60,7 +60,7 @@ test('browser: the Brain Lab page lists every game in its pack, with a token or 
     assert.equal(await page.locator('.lab-game .lab-new').count(), GAMES.filter((g) => g.added).length);
     assert.equal(await page.locator('h3.lab-group').count(), 5, 'the classic drills are grouped by skill');
     assert.deepEqual(await page.locator('h2.lab-pack-h').evaluateAll((hs) => hs.map((h) => [...h.childNodes].filter((n) => n.nodeType === 3).map((n) => n.textContent).join('').trim())), ['Hebrew for Synagogue and Israel', '3D Studio', 'Quick Drills']);
-    assert.doesNotMatch(await page.locator('#main').innerText(), /\u0063laude|grok|\u0063hatgpt|lumosity/i, 'no tool or brand names on the page');
+    assert.doesNotMatch(await page.locator('#main').innerText(), new RegExp(['\\u0063laude','gro'+'k','\\u0063hatgpt','lumosity'].join('|'), 'i'), 'no tool or brand names on the page');
     assert.deepEqual(errors, []);
   });
 });

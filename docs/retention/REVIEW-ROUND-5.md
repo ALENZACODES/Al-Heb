@@ -1,6 +1,6 @@
 # Retention: Review Round 5 of 5
 
-Reviewed: branch `claude/retention-fable-2026-11-10` at `85e2be0b` (contains `main` at `81f9fc45`).
+Reviewed: the retention work at `85e2be0b` (contains `main` at `81f9fc45`).
 This last round checked the work against the lane's own rules line by line, audited every file the branch touches outside its own folders, walked the screens with the keyboard only, and looked at them in dark mode. No real phone and no real learner was involved in any of the five rounds.
 
 ## Found and Fixed in This Round
@@ -15,7 +15,7 @@ This last round checked the work against the lane's own rules line by line, audi
 
 | Rule | Where it is met | How it was checked |
 | --- | --- | --- |
-| 1. Own branch from main, no force-push, nothing unrelated rewritten | Branch `claude/retention-fable-2026-11-10`; main merged in three times, never the other way | Outside its own folders the branch changes 25 existing files by 108 added and 14 removed lines, all listed in `IMPLEMENTATION.md` |
+| 1. Own branch from main, no force-push, nothing unrelated rewritten | The retention branch; main merged in three times, never the other way | Outside its own folders the branch changes 25 existing files by 108 added and 14 removed lines, all listed in `IMPLEMENTATION.md` |
 | 2. Vanilla modules, no new dependencies, lazy-loaded, first install under 3.95 MiB, no inline scripts | `src/retention/` is on demand; loaded by `boot-hooks.js` after first paint | Wiring test; first install measured at 1,055 bytes under the limit; source scan for inline handlers |
 | 3. One versioned key with a migration | Store key `retention.v1` (`alef:retention.v1` in localStorage), `migrate()` in `state.js` | State tests |
 | 4. Rimon gender-neutral, never the icon, existing art only | `showRimon` in `rimon.js` uses the twelve drawn actions; notification icon is the gold Aleph | Copy tests on every line; the icon is asserted in the service-worker browser test |

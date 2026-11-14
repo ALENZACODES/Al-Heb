@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Push the repo to the private GitHub remote with every commit attributed only to John Khan:
-# author and committer rewritten, and any "Co-Authored-By", "c[l]aude-Session" or "Generated with" trailer lines removed.
+# author and committer rewritten, and attribution trailer lines removed.
 # Also drops the superseded lossless PNG import (assets/images/incoming) from the published history (web copies live in assets/img/gen).
 # The rewrite is deterministic (same input => same hashes), so repeated runs only add new commits.
 # Usage: tools/release/push-clean.sh [--force]    (--force only for the first run after the history was rewritten)

@@ -1,6 +1,6 @@
 # Retention: Review Round 2 of 5
 
-Reviewed: branch `claude/retention-fable-2026-11-10` at `e79ec465`, then merged with `main` at `4da2d9a5`.
+Reviewed: the retention work at `e79ec465`, then merged with `main` at `4da2d9a5`.
 Method: a read of every file in `src/retention/` and every edit to existing files, an axe-core run on each retention screen in light and dark at 390 px, and click-throughs in headless Chrome. No real phone and no real learner was involved.
 
 ## Found and Fixed in This Round

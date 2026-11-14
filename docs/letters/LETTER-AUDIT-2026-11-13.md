@@ -55,7 +55,7 @@ The letter name for Pe and Final Pe was written פֵא (reads "fe"). Now פֵּ�
 
 ## Second Pass, Same Day: Re-Recorded With The Google Key
 
-Takes were recorded on the owner's computer with `RUN-LETTER-RETAKES.cmd` (`tools/audio/render_letter_takes.py`, three runs). Each take was listened to, the best was used, and the clip was listened to again in its final place. Takes used are kept in `audio-takes/letter-audit/`.
+Takes were recorded on the owner's computer with `tools/audio/RUN-LETTER-RETAKES.cmd` (`tools/audio/render_letter_takes.py`, three runs). Each take was listened to, the best was used, and the clip was listened to again in its final place. The takes are on the branch `john/letter-takes`, in `audio-takes/letter-audit/`; they are not part of the app.
 
 | Clip | Was | Now |
 |---|---|---|
@@ -107,7 +107,7 @@ Done without the owner's computer (it was offline, so no new recordings were pos
 - "Meet" pictures for Dalet, Ayin, Pe and Final Nun: new letter cards drawn from the app's own font, so the letter is right. They are plain cards, not illustrated scenes with Ari and Noa. The old files are kept in `assets/img/held/`.
 - Video captions: the caption no longer runs under the mascot badge. Rebuilt in both voices: Aleph, Kaf, Ayin, Shin and the five final letters.
 
-Fifth pass, with the Google key stored as a repository secret (workflow `letter-takes`, takes on branch `john/letter-takes`):
+Fifth pass, recorded with the Google key stored as a repository secret (takes on branch `john/letter-takes`; the one-off workflow that recorded them was removed afterwards):
 - Ashkenazi Vet, both voices: now says "veis". Cut from a take that said "vav-eis".
 
 Left as they are:

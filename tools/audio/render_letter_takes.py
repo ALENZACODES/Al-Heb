@@ -4,6 +4,7 @@
 Each target is recorded from a few spellings in four voices (the Israeli WaveNet pair the letter lessons use, and the
 Chirp 3 HD pair the word builder uses). Files go to audio-takes/letter-audit/ with an index, takes.json.
 Nothing in the app changes here: the takes are listened to afterwards and only the best one of each is used.
+The takes of 13 Nov 2026 are kept on the branch john/letter-takes, not on main.
 
 The key is read from the GOOGLE_TTS_API_KEY environment variable (or a .env file in the repo root) and is never
 printed or written anywhere.

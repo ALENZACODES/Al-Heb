@@ -3486,7 +3486,7 @@
       "fingerprint": "0adadc0a8914c126577322f5be021f078e2b16420550a8ca272f28749554d857",
       "bytes": 4464,
       "sha256": "d8248c5734fa2dbc80c86d4fa5eddbf867226240f07a437a0939fa73fcaf9ce7",
-      "source": "audio-takes/letter-audit/mark-sheva-wm-1.mp3"
+      "source": "branch john/letter-takes: audio-takes/letter-audit/mark-sheva-wm-1.mp3"
     },
     {
       "id": "sheva",
@@ -3496,7 +3496,7 @@
       "fingerprint": "72e1cdf5c61497bad0fa91a500fe60ca7f69f8052778e231f22b65bb0a010e63",
       "bytes": 5472,
       "sha256": "ec3712ea62ccca69a3030ed6cdb82283e7d6bc094fef30950fd39895e500ca5c",
-      "source": "audio-takes/letter-audit/mark-sheva-b-wf-2.mp3"
+      "source": "branch john/letter-takes: audio-takes/letter-audit/mark-sheva-b-wf-2.mp3"
     },
     {
       "id": "hataf-segol",
@@ -3506,7 +3506,7 @@
       "fingerprint": "36d796f6a8ddc3b1202c2cc70ec37f982841bd188b9175bbcf8cdf9fad1b336c",
       "bytes": 7632,
       "sha256": "3c54bc9d8c6a4a9c09064c9b2919c5b1f0f54f269eff679e946de001e8d26e78",
-      "source": "audio-takes/letter-audit/mark-hataf-segol-wm-1.mp3"
+      "source": "branch john/letter-takes: audio-takes/letter-audit/mark-hataf-segol-wm-1.mp3"
     },
     {
       "id": "hataf-segol",
@@ -3516,7 +3516,7 @@
       "fingerprint": "c93566c4cc34ae098e384331799dbe792aaa60ffa1596f2bc4861eede4b5b94f",
       "bytes": 8784,
       "sha256": "de7a16c3b17e64de04591e755d5f530dcdd4fd7e666d06bb8987a345b6749191",
-      "source": "audio-takes/letter-audit/mark-hataf-segol-wf-1.mp3"
+      "source": "branch john/letter-takes: audio-takes/letter-audit/mark-hataf-segol-wf-1.mp3"
     },
     {
       "id": "hataf-patah",
@@ -3526,7 +3526,7 @@
       "fingerprint": "7c749e029955e69e3a5002456de51f1491bf7eb96b363179bd1c74a31a2c03d5",
       "bytes": 8208,
       "sha256": "3114a4ee0820237292c818baf154c055a0454d847b7b534dbd4c9f3eab1dd7e6",
-      "source": "audio-takes/letter-audit/mark-hataf-patah-wm-1.mp3"
+      "source": "branch john/letter-takes: audio-takes/letter-audit/mark-hataf-patah-wm-1.mp3"
     },
     {
       "id": "hataf-patah",
@@ -3536,7 +3536,7 @@
       "fingerprint": "de9b8cf1ee995877fbaac61e89019850a981edf4a1cb546fd199ac7584392003",
       "bytes": 9216,
       "sha256": "1a5725cb9cef999c9cd6e0e9da9433ad941ca47896b0cef65fab45a35f0ca360",
-      "source": "audio-takes/letter-audit/mark-hataf-patah-wf-1.mp3"
+      "source": "branch john/letter-takes: audio-takes/letter-audit/mark-hataf-patah-wf-1.mp3"
     },
     {
       "id": "hataf-qamats",
@@ -3546,7 +3546,7 @@
       "fingerprint": "2f49f2bbc389c3fb782b23e51f63ae0641c8e856b735e9c8769e4a3a3dac5163",
       "bytes": 8208,
       "sha256": "9abc2330fe9d40fe44d87c73bda106f654bfa4f43618699e0f37243a24e0d70a",
-      "source": "audio-takes/letter-audit/mark-hataf-qamats-wm-1.mp3"
+      "source": "branch john/letter-takes: audio-takes/letter-audit/mark-hataf-qamats-wm-1.mp3"
     },
     {
       "id": "hataf-qamats",
@@ -3556,7 +3556,7 @@
       "fingerprint": "3ea19aa9bf298ec2ca1723973636e967f7db4a5c775b6b03d7606484c03101a2",
       "bytes": 9216,
       "sha256": "9695eccca2d7e99d2d8577fcdd3086a7d14f8fb84fcb378dc49bba7341fa1fca",
-      "source": "audio-takes/letter-audit/mark-hataf-qamats-wf-1.mp3"
+      "source": "branch john/letter-takes: audio-takes/letter-audit/mark-hataf-qamats-wf-1.mp3"
     },
     {
       "id": "hiriq",
@@ -3566,7 +3566,7 @@
       "fingerprint": "83b7eb6eb3ce9211c93181966edf6ca458abad741c82aeca5b95559d2f4cfc54",
       "bytes": 5472,
       "sha256": "0dabfb4601239740a3f62fffe853a46d2b67d311cb39d5edd9833c58944ce121",
-      "source": "audio-takes/letter-audit/mark-hiriq-wm-1.mp3"
+      "source": "branch john/letter-takes: audio-takes/letter-audit/mark-hiriq-wm-1.mp3"
     },
     {
       "id": "hiriq",
@@ -3576,7 +3576,7 @@
       "fingerprint": "776e229bc82938fe4451f0f2cf372ca485a23b2430032895ec12d7f15e95f8c3",
       "bytes": 6192,
       "sha256": "8b7ef5360ba1f073b6cadc35564be6424d94164d3f403fea170f6eeb7e5ccc4d",
-      "source": "audio-takes/letter-audit/mark-hiriq-wf-1.mp3"
+      "source": "branch john/letter-takes: audio-takes/letter-audit/mark-hiriq-wf-1.mp3"
     },
     {
       "id": "tsere",
@@ -3586,7 +3586,7 @@
       "fingerprint": "2ebbca51473c74762530734729ae9280eefcab58eb531ee7b0452cbc174b2ec7",
       "bytes": 4752,
       "sha256": "e4132e13d6377385aedea1189f2905a5d2b48326f155604440815b3424e88376",
-      "source": "audio-takes/letter-audit/mark-tsere-wm-1.mp3"
+      "source": "branch john/letter-takes: audio-takes/letter-audit/mark-tsere-wm-1.mp3"
     },
     {
       "id": "tsere",
@@ -3596,7 +3596,7 @@
       "fingerprint": "abfba18ae9a824da4004dcd0d507947e849d520215f03b1d4d1a3e225418866e",
       "bytes": 5328,
       "sha256": "9c900531f20abf21a4f171472d61542e8e30030d438b017ece7732e56212ecc6",
-      "source": "audio-takes/letter-audit/mark-tsere-wf-1.mp3"
+      "source": "branch john/letter-takes: audio-takes/letter-audit/mark-tsere-wf-1.mp3"
     },
     {
       "id": "segol",
@@ -3606,7 +3606,7 @@
       "fingerprint": "a463a435f8a6baf0055e42606c1c4830c2e23b48f66f0369030539d5ec0f6ba5",
       "bytes": 5472,
       "sha256": "eed981b3b7f03ef891cceab203684d23035632a1954fef9989667712e1a53a31",
-      "source": "audio-takes/letter-audit/mark-segol-wm-1.mp3"
+      "source": "branch john/letter-takes: audio-takes/letter-audit/mark-segol-wm-1.mp3"
     },
     {
       "id": "segol",
@@ -3616,7 +3616,7 @@
       "fingerprint": "0682119a0b75a64a50e716e59c87b281acbc1d91c30c46a4c064a27d33fe2948",
       "bytes": 6192,
       "sha256": "e2aea8ac42c783ac62bced26c852dd8e4908aa72e31e693a7739c6fa00cfd925",
-      "source": "audio-takes/letter-audit/mark-segol-wf-1.mp3"
+      "source": "branch john/letter-takes: audio-takes/letter-audit/mark-segol-wf-1.mp3"
     },
     {
       "id": "patah",
@@ -3626,7 +3626,7 @@
       "fingerprint": "73b56d6c803fad7984226a2b8cb561004594d6743537a398d62c0fc4508dc80b",
       "bytes": 5760,
       "sha256": "e7df47667582c5b65cce549a29eb37875d824a59ee55851b9683debb2ad23235",
-      "source": "audio-takes/letter-audit/mark-patah-wm-1.mp3"
+      "source": "branch john/letter-takes: audio-takes/letter-audit/mark-patah-wm-1.mp3"
     },
     {
       "id": "patah",
@@ -3636,7 +3636,7 @@
       "fingerprint": "79e0b16e10a52a981573581626f0d7d6c6afdd7861645da69c6d461d7c248f97",
       "bytes": 6336,
       "sha256": "66b17345e0d5b5212a72cee340ad028f289c4b27586719654538165582e101a7",
-      "source": "audio-takes/letter-audit/mark-patah-wf-1.mp3"
+      "source": "branch john/letter-takes: audio-takes/letter-audit/mark-patah-wf-1.mp3"
     },
     {
       "id": "qamats",
@@ -3646,7 +3646,7 @@
       "fingerprint": "df09fa986c078e8ecaeeb678cb04e43c44a083d3ef8c2c0c8ac3f13d5c36c3f8",
       "bytes": 5616,
       "sha256": "347ea3c6f365be8dc0c7d8e97b37e20317b6ef77cf412ac9d5f4745f1a2b28c7",
-      "source": "audio-takes/letter-audit/mark-qamats-wm-1.mp3"
+      "source": "branch john/letter-takes: audio-takes/letter-audit/mark-qamats-wm-1.mp3"
     },
     {
       "id": "qamats",
@@ -3656,7 +3656,7 @@
       "fingerprint": "d2b3b7708138deb82c5239b2e155e21fc9810a52381a914c151cce53853f86f0",
       "bytes": 6192,
       "sha256": "482a9f4f57a1be2be7471ba1fae7cede8599737bfbb0f051f789bc72bda40c5f",
-      "source": "audio-takes/letter-audit/mark-qamats-wf-1.mp3"
+      "source": "branch john/letter-takes: audio-takes/letter-audit/mark-qamats-wf-1.mp3"
     },
     {
       "id": "holam",
@@ -3666,7 +3666,7 @@
       "fingerprint": "ce53da86227348e025dbc05e792c6d7fb33910dea1715c53eb22a5d23bf46031",
       "bytes": 5472,
       "sha256": "58357ab34e3902fe8ccd44c6839021b31c5ac2fcc543f384b861cfe98a3552bd",
-      "source": "audio-takes/letter-audit/mark-holam-wm-1.mp3"
+      "source": "branch john/letter-takes: audio-takes/letter-audit/mark-holam-wm-1.mp3"
     },
     {
       "id": "holam",
@@ -3676,7 +3676,7 @@
       "fingerprint": "974f2f209af2cb40093d9fe2f063b05ab342e868d97dc4e79d6ce8ee48111750",
       "bytes": 6192,
       "sha256": "43bfaf3a1a5fa34d1daf699ab4d641778926a57b735c8e1f069ef6e996019716",
-      "source": "audio-takes/letter-audit/mark-holam-wf-1.mp3"
+      "source": "branch john/letter-takes: audio-takes/letter-audit/mark-holam-wf-1.mp3"
     },
     {
       "id": "qubuts",
@@ -3686,7 +3686,7 @@
       "fingerprint": "08e1241669b75dd2a5813c06a42f924268c3c0ac3e294fd9ed5e6ede88a4450d",
       "bytes": 5904,
       "sha256": "8c7acde0e0dd8443e1439c04c3714d58e4f2ce4d872660d3b8caa08faefbc11e",
-      "source": "audio-takes/letter-audit/mark-qubuts-wm-1.mp3"
+      "source": "branch john/letter-takes: audio-takes/letter-audit/mark-qubuts-wm-1.mp3"
     },
     {
       "id": "qubuts",
@@ -3696,7 +3696,7 @@
       "fingerprint": "da85b1fe94e695e0e3ed265818f31edb137b45ff53e63bc465949ddc0cc03dcd",
       "bytes": 6336,
       "sha256": "3c0c2022be242bf71b231f02ba9635193669f81e959541bbd7bffe47f78a2a86",
-      "source": "audio-takes/letter-audit/mark-qubuts-wf-1.mp3"
+      "source": "branch john/letter-takes: audio-takes/letter-audit/mark-qubuts-wf-1.mp3"
     },
     {
       "id": "dagesh",
@@ -3706,7 +3706,7 @@
       "fingerprint": "785957d7f28c7d80520b5fa11ee3098577c948528ceb32dbe87374e0665804d1",
       "bytes": 6048,
       "sha256": "22b8bcfb9ca0021139f13249a1b69d60af45d207bd0a5297717d4f76edd5d7b4",
-      "source": "audio-takes/letter-audit/mark-dagesh-wm-1.mp3"
+      "source": "branch john/letter-takes: audio-takes/letter-audit/mark-dagesh-wm-1.mp3"
     },
     {
       "id": "dagesh",
@@ -3716,7 +3716,7 @@
       "fingerprint": "06a4040cba7dd531562761a3a2130295c46f4474fea5329af7a7b7318fb4afe5",
       "bytes": 6768,
       "sha256": "e906a83050fa8fc0ff9fb26268c6df26f755f13f6a720e4b13fec9641e7d93a0",
-      "source": "audio-takes/letter-audit/mark-dagesh-wf-1.mp3"
+      "source": "branch john/letter-takes: audio-takes/letter-audit/mark-dagesh-wf-1.mp3"
     },
     {
       "id": "shin-dot",
@@ -3726,7 +3726,7 @@
       "fingerprint": "d0ce42b9b63474c5fde014ea045523d6d61e6406fea4319f5923a5665182f2ea",
       "bytes": 9072,
       "sha256": "2cbdf162dbe1f22e55ba0d1e0cd680f612d2f91f2eca2b19016e148d4edeb564",
-      "source": "audio-takes/letter-audit/mark-shin-dot-b-wm-5.mp3"
+      "source": "branch john/letter-takes: audio-takes/letter-audit/mark-shin-dot-b-wm-5.mp3"
     },
     {
       "id": "shin-dot",
@@ -3736,7 +3736,7 @@
       "fingerprint": "87271101085cb5e01405f50455c39d05ec618b0c04c3708172a5343910b57a7a",
       "bytes": 10080,
       "sha256": "72912bab77ada8e2133b8919fbbc099234bb2d5396615d041d97e015b12d19b9",
-      "source": "audio-takes/letter-audit/mark-shin-dot-b-wf-5.mp3"
+      "source": "branch john/letter-takes: audio-takes/letter-audit/mark-shin-dot-b-wf-5.mp3"
     },
     {
       "id": "sin-dot",
@@ -3746,7 +3746,7 @@
       "fingerprint": "eb549094acdce7d10b2dd56af1c0a9f01c311ad9040e24a56ebac2adfa0bce75",
       "bytes": 7920,
       "sha256": "52f0dc313a41c3d044c402722d91babc8bfdafd60686bb3c395a762c5fddceba",
-      "source": "audio-takes/letter-audit/mark-sin-dot-wm-1.mp3"
+      "source": "branch john/letter-takes: audio-takes/letter-audit/mark-sin-dot-wm-1.mp3"
     },
     {
       "id": "sin-dot",
@@ -3756,7 +3756,7 @@
       "fingerprint": "9f838501993f820267f8a46affe5c14bde97590c49033c12c5499074c35f9830",
       "bytes": 8784,
       "sha256": "e5469ab32bd24a38260efacc6b1d3d369b7789023b85220143d44e8c22116015",
-      "source": "audio-takes/letter-audit/mark-sin-dot-wf-1.mp3"
+      "source": "branch john/letter-takes: audio-takes/letter-audit/mark-sin-dot-wf-1.mp3"
     },
     {
       "id": "qamats-qatan",
@@ -3766,7 +3766,7 @@
       "fingerprint": "4bea187b7115479cf1d2a1978427eed957a6bfb9b919c08a06a89952644be805",
       "bytes": 7488,
       "sha256": "7846565c28a54a7a7531972eebcab40c63e16c3647cdad28326a842acb27af38",
-      "source": "audio-takes/letter-audit/mark-qamats-qatan-wm-1.mp3"
+      "source": "branch john/letter-takes: audio-takes/letter-audit/mark-qamats-qatan-wm-1.mp3"
     },
     {
       "id": "qamats-qatan",
@@ -3776,7 +3776,7 @@
       "fingerprint": "09fb738b7976c1cf7e029848885707860383f9444de5939ee8805a8aaf12546e",
       "bytes": 8496,
       "sha256": "771428cef82a0f0798c1676eda53b2b3e646f5013f782aaed84dd47d9a349c8e",
-      "source": "audio-takes/letter-audit/mark-qamats-qatan-wf-1.mp3"
+      "source": "branch john/letter-takes: audio-takes/letter-audit/mark-qamats-qatan-wf-1.mp3"
     }
   ]
 }

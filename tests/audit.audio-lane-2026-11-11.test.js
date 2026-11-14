@@ -2,6 +2,7 @@
 // S-04 (the Moses pages that say the divine name are held and say so), S-10 (no clip file outside the catalogue is shipped),
 // S-11 (a held clip never plays on any screen, and the screen says what plays instead), M-11 (service lines have clips).
 import test from 'node:test';
+import { createHash } from 'node:crypto';
 import assert from 'node:assert/strict';
 import { readFileSync, existsSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
@@ -165,9 +166,16 @@ test('C-01/C-05: an accent clip made for a row that played the Israeli clip ship
       else assert.ok(r.reviewersFailing <= 1, r.path);
       // 13 Nov 2026 letter audit: a passed Sephardi letter clip was later replaced by a copy of the Israeli clip (same reading), because
       // the respelled clip said an English letter name or another word (docs/letters/LETTER-AUDIT-2026-11-13.md).
-      const replacedLetter = e.source === 'israeli-clip-same-reading' && e.tradition === 'sephardi' && e.kind === 'letter';
+      // The same was done for Ashkenazi letter clips. Such a row must name the clip it copies and hold exactly its bytes.
+      const replacedLetter = e.source === 'israeli-clip-same-reading' && ['sephardi', 'ashkenazi'].includes(e.tradition) && e.kind === 'letter';
       assert.equal(e.status, 'synthetic-unreviewed', r.path); assert.ok(e.source === 'tts-respelled-israeli-voice' || replacedLetter, r.path);
       assert.ok(existsSync(join(ROOT, r.path)) && existsSync(join(ROOT, `${r.path}.meta.json`)), r.path);
+      if (replacedLetter) {
+        const { copyOf } = JSON.parse(readFileSync(join(ROOT, `${r.path}.meta.json`), 'utf8'));
+        assert.ok(copyOf && new RegExp(`^audio/${e.voice}/israeli/letter/`).test(copyOf) && existsSync(join(ROOT, copyOf)), `${r.path} copyOf`);
+        const sha = (rel) => createHash('sha256').update(readFileSync(join(ROOT, rel))).digest('hex');
+        assert.equal(sha(r.path), sha(copyOf), `${r.path} is not the Israeli clip it names`);
+      }
     } else if (e.source === 'israeli-clip-same-reading') {
       // owner decision A: a held Sephardi clip's row may carry a copy of the Israeli clip instead (same reading in this app)
       held++; assert.equal(e.tradition, 'sephardi', r.path);

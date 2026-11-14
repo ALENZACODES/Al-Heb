@@ -26,5 +26,7 @@
   "after": 0.9119954648526077,
   "israeliSec": 1.0480045351473923,
   "israeliRef": "audio/m/israeli/letter/resh.mp3"
- }
+ },
+ "inputSha256": "ccc3259ac2f0bbd1bb66818c3d5f8ea9a96512391dcd65163c83d30c3a780de3",
+ "respelledFrom": "רֵישׁ"
 }

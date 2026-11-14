@@ -12,5 +12,8 @@
  "copyOf": "audio/f/israeli/letter/qof-sound.mp3",
  "madeFrom": "israeli-clip",
  "sephardiReading": "k",
- "copiedAt": "2026-11-13T18:48:18.498Z"
+ "copiedAt": "2026-11-13T18:48:18.498Z",
+ "inputSha256": "ec87aef02b2dcb748f05566215182892c9ce85bd85139f87a776ece2a74b1512",
+ "respelledFrom": "ק",
+ "redistributionCleared": false
 }

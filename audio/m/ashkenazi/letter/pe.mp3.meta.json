@@ -26,5 +26,7 @@
   "after": 0.6960090702947845,
   "israeliSec": 0.7119954648526077,
   "israeliRef": "audio/m/israeli/letter/pe.mp3"
- }
+ },
+ "inputSha256": "1df76861f63f748d4ee93781568e566ee3ad5886c1bd27a345e9ee786517d6a0",
+ "respelledFrom": "פֵּא"
 }

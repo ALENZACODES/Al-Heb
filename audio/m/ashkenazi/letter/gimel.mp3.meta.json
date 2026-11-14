@@ -1,6 +1,6 @@
 {
  "status": "synthetic-unreviewed",
- "source": "tts-respelled-israeli-voice",
+ "source": "israeli-clip-same-reading",
  "engine": "google",
  "voiceId": "he-IL-Wavenet-B",
  "tradition": "ashkenazi",
@@ -8,24 +8,13 @@
  "ingestedAt": "2026-11-12T07:02:09.009Z",
  "licence": "customer-owned",
  "note": "Replaced 2026-11-13 (letter audit): the old clip said \"gim-al\". Now a copy of the Israeli clip of the same voice, which says the same thing in the Ashkenazi reading. Synthetic voice; no person has listened to it.",
- "renderedAt": "2026-11-12T07:02:09.009Z",
  "redistributionCleared": false,
- "spokenText": "gimel",
- "normalized": true,
  "provider": "google",
- "madeFrom": "respelling",
+ "madeFrom": "israeli-clip",
  "voiceName": "he-IL-Wavenet-B",
  "languageCode": "he-IL",
  "hebrew": "גִּימֶל",
  "israeliRef": "audio/m/israeli/letter/gimel.mp3",
- "tempo": {
-  "applied": false,
-  "factor": 1,
-  "cap": 1.26,
-  "before": 0.8640136054421769,
-  "after": 0.8640136054421769,
-  "israeliSec": 1,
-  "israeliRef": "audio/m/israeli/letter/gimel.mp3"
- },
- "copyOf": "audio/m/israeli/letter/gimel.mp3"
+ "copyOf": "audio/m/israeli/letter/gimel.mp3",
+ "inputSha256": "8fb49afa9fdda2d44a4afde460be45dd47b03b153dc038cc0ad8208066137824"
 }

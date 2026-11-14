@@ -26,5 +26,7 @@
   "after": 1.2960090702947846,
   "israeliSec": 1.36,
   "israeliRef": "audio/m/israeli/letter/mem-final.mp3"
- }
+ },
+ "inputSha256": "479915a08397b6b8e054d9865b5da866b1bf913b180741fa10af0084ceafdbd4",
+ "respelledFrom": "מֵם סוֹפִית"
 }

@@ -12,5 +12,7 @@
  "copyOf": "audio/m/israeli/letter/shin.mp3",
  "madeFrom": "israeli-clip",
  "sephardiReading": "shin",
- "copiedAt": "2026-11-13T18:48:18.498Z"
+ "copiedAt": "2026-11-13T18:48:18.498Z",
+ "inputSha256": "b980973045ce47d2dd6f7970d6c1f086f3ca1c10c22e5c3ef7a7a1c525bdaba3",
+ "redistributionCleared": false
 }

@@ -8,5 +8,7 @@
  "ingestedAt": null,
  "licence": "customer-owned",
  "note": "Re-recorded 2026-11-13 (letter audit): the old clip said \"kaf\"; this one says \"khaf\". Take name-khaf-wf-2.mp3 from tools/audio/render_letter_takes.py; heard back correctly by the sound-level listener, not yet by a person.",
- "inputTextKind": "hebrew"
+ "inputTextKind": "hebrew",
+ "inputSha256": "15e4cead596c21e6add76d3aafd2dc8b40211373a100399c4030cf6f103272ed",
+ "respelledFrom": "כַף"
 }

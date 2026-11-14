@@ -8,5 +8,7 @@
  "ingestedAt": null,
  "licence": "customer-owned",
  "note": "Re-recorded 2026-11-13 (letter audit): the old clip said \"wa\" or \"wow\". This is the second syllable cut from take sound-va-b-wm-6.mp3 (tools/audio/render_letter_takes.py); heard back as \"va\" by the sound-level listener, not yet by a person.",
- "inputTextKind": "hebrew"
+ "inputTextKind": "hebrew",
+ "inputSha256": "9e258205018aa0c4598a032fe675cc4b5f777f65ffb2deab5ce5e80c400eb699",
+ "respelledFrom": "וַ"
 }

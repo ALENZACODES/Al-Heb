@@ -26,5 +26,7 @@
   "after": 1.0080045351473923,
   "israeliSec": 1.0960090702947847,
   "israeliRef": "audio/f/israeli/letter/vet.mp3"
- }
+ },
+ "inputSha256": "43d3bc9929527028bd2bf62cd1c486e09a750c5fbaf4eab9fab9e1e4b6e40716",
+ "respelledFrom": "בֵית"
 }

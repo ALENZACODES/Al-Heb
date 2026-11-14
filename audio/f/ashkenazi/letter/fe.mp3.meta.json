@@ -26,5 +26,7 @@
   "after": 0.7591609977324263,
   "israeliSec": 0.6,
   "israeliRef": "audio/f/israeli/letter/fe.mp3"
- }
+ },
+ "inputSha256": "89132a1db8cf66baa7639a33bab47a1b45ef1ef9bd137f5f12f480b6a7739b79",
+ "respelledFrom": "פֵא"
 }

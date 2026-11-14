@@ -26,5 +26,7 @@
   "after": 0.7440136054421769,
   "israeliSec": 1,
   "israeliRef": "audio/m/israeli/letter/lamed.mp3"
- }
+ },
+ "inputSha256": "806609f77c1767731f7a0edeb9341763ae40f2e43a9b3b82905a8123a662c78c",
+ "respelledFrom": "לָמֶד"
 }

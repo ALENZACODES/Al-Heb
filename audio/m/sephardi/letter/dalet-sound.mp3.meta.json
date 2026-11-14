@@ -12,5 +12,8 @@
  "copyOf": "audio/m/israeli/letter/dalet-sound.mp3",
  "madeFrom": "israeli-clip",
  "sephardiReading": "d",
- "copiedAt": "2026-11-13T18:48:18.498Z"
+ "copiedAt": "2026-11-13T18:48:18.498Z",
+ "inputSha256": "7f9a550b682a255679727bcb0364377f4ebc47b662c37c24a2dd2f29de4252ed",
+ "respelledFrom": "ד",
+ "redistributionCleared": false
 }

@@ -12,5 +12,8 @@
  "copyOf": "audio/f/israeli/letter/khaf.mp3",
  "madeFrom": "israeli-clip",
  "sephardiReading": "khaf",
- "copiedAt": "2026-11-13T18:48:18.498Z"
+ "copiedAt": "2026-11-13T18:48:18.498Z",
+ "inputSha256": "15e4cead596c21e6add76d3aafd2dc8b40211373a100399c4030cf6f103272ed",
+ "respelledFrom": "כַף",
+ "redistributionCleared": false
 }

@@ -12,5 +12,8 @@
  "copyOf": "audio/m/israeli/letter/tet-sound.mp3",
  "madeFrom": "israeli-clip",
  "sephardiReading": "t",
- "copiedAt": "2026-11-13T18:48:18.498Z"
+ "copiedAt": "2026-11-13T18:48:18.498Z",
+ "inputSha256": "c37fbf4401b6d105b426fdef84ae4afb736258548dde7c23a3a8a127137b1b72",
+ "respelledFrom": "ט",
+ "redistributionCleared": false
 }

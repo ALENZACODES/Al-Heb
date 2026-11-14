@@ -8,5 +8,7 @@
  "ingestedAt": null,
  "licence": "customer-owned",
  "note": "Re-recorded 2026-11-13 (letter audit): the old clip was heard as two syllables, \"re-ish\"; this one says \"resh\". Take name-resh-wf-2.mp3 from tools/audio/render_letter_takes.py; heard back correctly by the sound-level listener, not yet by a person.",
- "inputTextKind": "hebrew"
+ "inputTextKind": "hebrew",
+ "inputSha256": "d1e3bfb672f16d1dd97bdb8660de4e04a74787a23b3f0b5b8f25104d108dfa0f",
+ "respelledFrom": "רֵישׁ"
 }

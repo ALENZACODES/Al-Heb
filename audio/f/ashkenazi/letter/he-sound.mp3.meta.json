@@ -1,6 +1,6 @@
 {
  "status": "synthetic-unreviewed",
- "source": "tts-respelled-israeli-voice",
+ "source": "israeli-clip-same-reading",
  "engine": "google",
  "voiceId": "he-IL-Wavenet-A",
  "tradition": "ashkenazi",
@@ -8,24 +8,14 @@
  "ingestedAt": "2026-11-12T07:00:19.913Z",
  "licence": "customer-owned",
  "note": "Replaced 2026-11-13 (letter audit): the old clip said an English letter name or the whole Hebrew letter name, not the sound. Now a copy of the Israeli clip of the same voice, which says the same thing in the Ashkenazi reading. Synthetic voice; no person has listened to it.",
- "renderedAt": "2026-11-12T07:00:19.913Z",
  "redistributionCleared": false,
- "spokenText": "h",
- "normalized": true,
  "provider": "google",
- "madeFrom": "respelling",
+ "madeFrom": "israeli-clip",
  "voiceName": "he-IL-Wavenet-A",
  "languageCode": "he-IL",
  "hebrew": "ה",
  "israeliRef": "audio/f/israeli/letter/he-sound.mp3",
- "tempo": {
-  "applied": false,
-  "factor": 1,
-  "cap": 1.26,
-  "before": 0.9119954648526077,
-  "after": 0.9119954648526077,
-  "israeliSec": 0.8319954648526077,
-  "israeliRef": "audio/f/israeli/letter/he-sound.mp3"
- },
- "copyOf": "audio/f/israeli/letter/he-sound.mp3"
+ "copyOf": "audio/f/israeli/letter/he-sound.mp3",
+ "inputSha256": "6d3868b84ca3655fe32a264e4959a9900c7651c8681f5c89bb85dd5dab89b44c",
+ "respelledFrom": "ה"
 }

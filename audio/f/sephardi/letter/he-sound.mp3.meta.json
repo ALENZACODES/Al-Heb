@@ -12,5 +12,8 @@
  "copyOf": "audio/f/israeli/letter/he-sound.mp3",
  "madeFrom": "israeli-clip",
  "sephardiReading": "h",
- "copiedAt": "2026-11-13T18:48:18.498Z"
+ "copiedAt": "2026-11-13T18:48:18.498Z",
+ "inputSha256": "6d3868b84ca3655fe32a264e4959a9900c7651c8681f5c89bb85dd5dab89b44c",
+ "respelledFrom": "ה",
+ "redistributionCleared": false
 }

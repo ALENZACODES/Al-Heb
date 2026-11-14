@@ -1,6 +1,6 @@
 {
  "status": "synthetic-unreviewed",
- "source": "tts-respelled-israeli-voice",
+ "source": "israeli-clip-same-reading",
  "engine": "google",
  "voiceId": "he-IL-Wavenet-B",
  "tradition": "ashkenazi",
@@ -8,24 +8,14 @@
  "ingestedAt": "2026-11-12T14:08:04.388Z",
  "licence": "customer-owned",
  "note": "Replaced 2026-11-13 (letter audit): the old clip said the letter name \"samekh\". The Ashkenazi sound of Tav without a dot is s. Now a copy of the Israeli clip of the same voice, which says the same thing in the Ashkenazi reading. Synthetic voice; no person has listened to it.",
- "renderedAt": "2026-11-12T14:08:04.388Z",
  "redistributionCleared": false,
- "spokenText": "ס",
- "normalized": true,
  "provider": "google",
- "madeFrom": "hebrew-script",
+ "madeFrom": "israeli-clip",
  "voiceName": "he-IL-Wavenet-B",
  "languageCode": "he-IL",
  "hebrew": "ת",
  "israeliRef": "audio/m/israeli/letter/tav-sound.mp3",
- "tempo": {
-  "applied": true,
-  "factor": 1.0093141124011789,
-  "cap": 1.26,
-  "before": 0.9360090702947845,
-  "after": 0.9274603174603174,
-  "israeliSec": 0.7360090702947846,
-  "israeliRef": "audio/m/israeli/letter/tav-sound.mp3"
- },
- "copyOf": "audio/m/israeli/letter/samekh-sound.mp3"
+ "copyOf": "audio/m/israeli/letter/samekh-sound.mp3",
+ "inputSha256": "d6d99810d929f801ab290a315e19c1fd63a4fdef1118f7e910f24fe7305e65c6",
+ "respelledFrom": "ת"
 }

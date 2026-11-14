@@ -1,6 +1,6 @@
 {
  "status": "synthetic-unreviewed",
- "source": "tts-respelled-israeli-voice",
+ "source": "israeli-clip-same-reading",
  "engine": "google",
  "voiceId": "he-IL-Wavenet-B",
  "tradition": "ashkenazi",
@@ -8,24 +8,14 @@
  "ingestedAt": "2026-11-12T07:00:28.387Z",
  "licence": "customer-owned",
  "note": "Replaced 2026-11-13 (letter audit): the old clip said an English letter name or the whole Hebrew letter name, not the sound. Now a copy of the Israeli clip of the same voice, which says the same thing in the Ashkenazi reading. Synthetic voice; no person has listened to it.",
- "renderedAt": "2026-11-12T07:00:28.387Z",
  "redistributionCleared": false,
- "spokenText": "v",
- "normalized": true,
  "provider": "google",
- "madeFrom": "respelling",
+ "madeFrom": "israeli-clip",
  "voiceName": "he-IL-Wavenet-B",
  "languageCode": "he-IL",
  "hebrew": "ו",
  "israeliRef": "audio/m/israeli/letter/vav-sound.mp3",
- "tempo": {
-  "applied": true,
-  "factor": 1.3168266765489767,
-  "cap": 1.26,
-  "before": 0.6719954648526077,
-  "after": 0.5169160997732426,
-  "israeliSec": 0.4050113378684807,
-  "israeliRef": "audio/m/israeli/letter/vav-sound.mp3"
- },
- "copyOf": "audio/m/israeli/letter/vav-sound.mp3"
+ "copyOf": "audio/m/israeli/letter/vav-sound.mp3",
+ "inputSha256": "9e258205018aa0c4598a032fe675cc4b5f777f65ffb2deab5ce5e80c400eb699",
+ "respelledFrom": "ו"
 }

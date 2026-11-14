@@ -12,5 +12,8 @@
  "copyOf": "audio/f/israeli/letter/resh.mp3",
  "madeFrom": "israeli-clip",
  "sephardiReading": "reish",
- "copiedAt": "2026-11-13T18:48:18.498Z"
+ "copiedAt": "2026-11-13T18:48:18.498Z",
+ "inputSha256": "d1e3bfb672f16d1dd97bdb8660de4e04a74787a23b3f0b5b8f25104d108dfa0f",
+ "respelledFrom": "רֵישׁ",
+ "redistributionCleared": false
 }

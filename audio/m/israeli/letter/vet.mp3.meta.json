@@ -8,5 +8,7 @@
  "ingestedAt": null,
  "licence": "customer-owned",
  "note": "Re-recorded 2026-11-13 (letter audit): the old clip said \"beit\" with a b; this one says \"vet\". Take name-vet-wm-2.mp3 from tools/audio/render_letter_takes.py; heard back correctly by the sound-level listener, not yet by a person.",
- "inputTextKind": "hebrew"
+ "inputTextKind": "hebrew",
+ "inputSha256": "38f5858979033ad75c72c1b1d5d0bcf1d4191821c7e57e5a89596aab9e63ffbc",
+ "respelledFrom": "בֵית"
 }

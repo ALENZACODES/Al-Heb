@@ -8,5 +8,6 @@
  "ingestedAt": null,
  "licence": "customer-owned",
  "note": "Re-recorded 2026-11-13 (letter audit): the old clip was heard as \"shim\"; this one says \"shin\". Take name-shin-wm-1.mp3 from tools/audio/render_letter_takes.py; heard back correctly by the sound-level listener, not yet by a person.",
- "inputTextKind": "hebrew"
+ "inputTextKind": "hebrew",
+ "inputSha256": "b980973045ce47d2dd6f7970d6c1f086f3ca1c10c22e5c3ef7a7a1c525bdaba3"
 }

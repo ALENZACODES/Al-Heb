@@ -1,7 +1,8 @@
 // @ts-check
 // Weekly recap and the welcome back. Pure functions.
 //   Recap: from Sunday, one card on Home sums up the week that just ended (XP, days studied, best day, league result).
-//   Welcome back: after 7 or more days away the learner is met with full hearts and a small first step, never a scolding.
+//   Welcome back: after 7 or more days away the learner is met with full hearts, a gem reward once, and a refresher
+//   set sized to the gap, never a scolding and never a word about a broken streak.
 import { clone } from './state.js';
 import { dayKey, addDaysISO, weekIdOf, weekdayOf, inShabbatWindow } from './clock.js';
 import { HEARTS } from './hearts.js';
@@ -10,6 +11,20 @@ import { lastSessionStart } from './notify.js';
 import { earn } from './gems.js';
 
 export const RECAP = Object.freeze({ comebackDays: 7 });
+/** Gems and a suggested warm-up size, by how long the learner was away. Short = 7–13 days, mid = 14–29, long = 30 or more. */
+export const COMEBACK = Object.freeze({
+  gems: { short: 10, mid: 15, long: 20 },
+  review: { short: 5, mid: 10, long: 15 },
+});
+export function comebackTier(days) {
+  const n = Math.max(0, Math.floor(Number(days) || 0));
+  return n >= 30 ? 'long' : n >= 14 ? 'mid' : 'short';
+}
+/** The welcome-back reward and refresher size for a gap of `days` (whole days away). */
+export function comebackReward(days) {
+  const tier = comebackTier(days);
+  return { days: Math.max(0, Math.floor(Number(days) || 0)), tier, gems: COMEBACK.gems[tier], review: COMEBACK.review[tier] };
+}
 const DAY = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
 /** XP per day for the week starting on `weekId` (a Sunday): seven entries. */
@@ -46,18 +61,28 @@ export function daysSinceStudy(rec, now = Date.now()) {
   return Math.max(0, Math.round((Date.UTC(+b.slice(0, 4), +b.slice(5, 7) - 1, +b.slice(8, 10)) - Date.UTC(+a.slice(0, 4), +a.slice(5, 7) - 1, +a.slice(8, 10))) / 86400000));
 }
 /**
- * The learner is back after a week or more: hearts are filled for free and today is marked, so Home can offer a small
- * first step. Runs once per return. @returns {{rec:object, back:boolean, days:number}}
+ * The learner is back after a week or more: hearts are filled for free, a welcome-back gem reward is paid once, and
+ * today is marked so Home can offer a refresher sized to the gap. Runs once per return. Never mentions a streak.
+ * @returns {{rec:object, back:boolean, days:number, gems:number, review:number}}
  */
 export function welcomeBack(rec, now = Date.now()) {
-  const days = daysSinceStudy(rec, now), today = dayKey(now);
-  if (days < RECAP.comebackDays || rec.comebackDay === today) return { rec, back: false, days };
-  const r = clone(rec); r.comebackDay = today; r.comebackAway = days;
+  const days = daysSinceStudy(rec, now), today = dayKey(now), reward = comebackReward(days);
+  if (days < RECAP.comebackDays || rec.comebackDay === today) return { rec, back: false, days, gems: 0, review: reward.review };
+  let r = clone(rec);
   r.hearts.n = HEARTS.max; r.hearts.lastRefillAt = 0; r.notify.stopped = false;
-  return { rec: r, back: true, days };
+  r = earn(r, reward.gems, 'comeback', now);
+  r.comebackDay = today; r.comebackAway = days; r.comebackGems = reward.gems; r.comebackReview = reward.review;
+  return { rec: r, back: true, days, gems: reward.gems, review: reward.review };
 }
 /** Is today the day the learner came back? (Home shows the welcome card that day, until a lesson is finished.) */
 export const isComebackDay = (rec, now = Date.now()) => rec.comebackDay === dayKey(now);
+/** What the welcome-back card draws: days away, gems paid, and how many old cards to start with. */
+export function comebackView(rec, now = Date.now()) {
+  if (!isComebackDay(rec, now)) return null;
+  const days = rec.comebackAway || daysSinceStudy(rec, now);
+  const reward = comebackReward(days);
+  return { days, gems: rec.comebackGems || reward.gems, review: rec.comebackReview || reward.review, href: '#/learn?review=1' };
+}
 
 // ---------- Daily login calendar (T7): a monthly grid of days the app was opened, including the gaps. Not the streak. ----------
 export const LOGIN = Object.freeze({ gems7: 5, gems14: 10, gemsMonth: 20 });

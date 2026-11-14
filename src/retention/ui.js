@@ -106,14 +106,16 @@ export async function downloadReminder(R) {
 const onIphoneTab = (g = globalThis) => { try { const n = g.navigator, ua = String(n?.userAgent || ''); const ios = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && (n?.maxTouchPoints || 0) > 1); return ios && !(n?.standalone === true || g.matchMedia?.('(display-mode: standalone)')?.matches); } catch { return false; } };
 
 // ---------- welcome back and weekly recap (Home) ----------
-/** After a week or more away: a warm card with one small step. Gone once any XP is earned today. */
+/** After a week or more away: a warm card with a refresher sized to the gap and a welcome-back reward. Gone once any XP is earned today. Never mentions a streak. */
 export function comebackNode(R) {
   const wrap = h('section', { class: 'card ret-comeback alef-retention', 'aria-labelledby': 'ret-back-h' });
   const draw = () => {
     const c = R.comeback(); wrap.hidden = !c; if (!c || wrap.childNodes.length) return;
+    const n = c.review || 5, gems = c.gems || 0;
     setKids(wrap, h('h2', { id: 'ret-back-h' }, 'Welcome Back'),
-      h('p', {}, "Good to see you. Your hearts are full, and nothing you learned is lost. Start small: a few old words bring it all back."),
-      h('div', { class: 'row' }, h('a', { class: 'btn', href: '#/learn?review=1' }, 'Warm up with old words'), h('a', { class: 'btn secondary', href: '#/learn' }, 'Go to lessons')));
+      h('p', {}, `Good to see you. Your hearts are full, and nothing you learned is lost. Here is a short warm-up of ${n} old cards, sized to the time away.`),
+      gems ? h('p', {}, `+${gemsText(gems)}.`) : null,
+      h('div', { class: 'row' }, h('a', { class: 'btn', href: c.href || '#/learn?review=1' }, `Warm up with ${n} old words`), h('a', { class: 'btn secondary', href: '#/learn' }, 'Go to lessons')));
   };
   const on = () => { if (wrap.isConnected) { try { draw(); } catch { /* keep */ } } else document.removeEventListener('alef:retention', on); };
   document.addEventListener('alef:retention', on); draw();

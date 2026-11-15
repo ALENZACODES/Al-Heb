@@ -16,7 +16,7 @@ async function open(hold) {
   const server = createAppServer({ root, prefix: '/' }); await new Promise((r) => server.listen(0, r));
   const browser = await chromium.launch();
   const ctx = await browser.newContext({ viewport: { width: 390, height: 844 }, serviceWorkers: 'block' });
-  await ctx.addInitScript(() => localStorage.setItem('alef:settings', JSON.stringify({ onboarded: true })));
+  await ctx.addInitScript(() => localStorage.setItem('alef:settings', JSON.stringify({ onboarded: true, veilOptOut: true })));
   const held = { manifest: [], shard: [] };
   const gates = { manifest: false, shard: false };
   // Once released, allow dependent Israeli playback shard requests through too.

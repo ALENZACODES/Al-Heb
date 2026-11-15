@@ -210,7 +210,8 @@ test('view: Seven patterns lists seven pages; a page shows sign, counted letters
   const root = new N('main'); const store = memStore();
   const un = V.mount(root, { store, rootsData: data }); await tick();
   await btn(root, /^Seven patterns$/).click(); await tick();
-  const opens = root.all((n) => n.tag === 'button' && /^Open the /.test(n.attrs['aria-label'] || ''));
+  // Pattern buttons are named by their visible text (label in name), e.g. "Pa'al: ... (1,234 verbs)"; no aria-label overrides it.
+  const opens = root.all((n) => n.tag === 'button' && /\(\d[\d,]* verbs\)$/.test(text(n)) && !n.attrs['aria-label']);
   assert.equal(opens.length, 7);
   await opens[2].click(); await tick();
   assert.match(text(root), /Pi'el/); assert.match(text(root), /Pattern sign: the present starts with מ/);

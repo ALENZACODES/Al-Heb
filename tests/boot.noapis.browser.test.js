@@ -28,7 +28,7 @@ async function visit(browser, base, init, routes, { onboarded }) {
   const ctx = await browser.newContext({ viewport: { width: 390, height: 844 }, serviceWorkers: 'block' });
   const page = await ctx.newPage();
   const errors = []; page.on('pageerror', (e) => errors.push(e.message));
-  if (onboarded) await page.addInitScript(() => { try { localStorage.setItem('alef:settings', JSON.stringify({ onboarded: true })); } catch (e) {} });
+  if (onboarded) await page.addInitScript(() => { try { localStorage.setItem('alef:settings', JSON.stringify({ onboarded: true, veilOptOut: true })); } catch (e) {} });
   await page.addInitScript(init);
   const seen = {};
   for (const r of routes) {
@@ -75,7 +75,7 @@ test('late audio manifest: refresh waits while a field has focus, then re-render
     for (const edit of [false, true]) {
       const ctx = await browser.newContext({ serviceWorkers: 'block' });
       const page = await ctx.newPage();
-      await page.addInitScript(() => { try { localStorage.setItem('alef:settings', JSON.stringify({ onboarded: true })); } catch (e) {} });
+      await page.addInitScript(() => { try { localStorage.setItem('alef:settings', JSON.stringify({ onboarded: true, veilOptOut: true })); } catch (e) {} });
       let release; const gate = new Promise((r) => { release = r; });
       await page.route('**/data/audio/manifest.json', async (route) => { await gate; await route.continue(); });
       await page.goto(base + '#/search'); await page.waitForSelector('body[data-ready="1"]');
@@ -107,7 +107,7 @@ test('audio manifest and word shard are lazy: home and search never request them
     const ctx = await browser.newContext({ viewport: { width: 390, height: 844 }, serviceWorkers: 'block' });
     const page = await ctx.newPage(); const errors = []; const urls = [];
     page.on('pageerror', (e) => errors.push(e.message)); page.on('request', (r) => urls.push(r.url().replace(base, '')));
-    await page.addInitScript(() => { try { localStorage.setItem('alef:settings', JSON.stringify({ onboarded: true })); } catch (e) {} });
+    await page.addInitScript(() => { try { localStorage.setItem('alef:settings', JSON.stringify({ onboarded: true, veilOptOut: true })); } catch (e) {} });
     const audioReqs = () => urls.filter((u) => /^data\/audio\//.test(u));
     for (const r of ['#/', '#/search']) { await page.goto(base + r); await page.waitForSelector('body[data-ready="1"]'); await page.waitForTimeout(2500); }
     assert.deepEqual(audioReqs(), [], 'no audio data on routes that need no clip');

@@ -145,7 +145,7 @@ export function mount(root, ctx) {
     if (!selBinyan) {
       body.replaceChildren(el('h2', {}, 'The Seven Verb Patterns'), el('p', {}, 'Most Hebrew verbs set their family letters into one of seven patterns (binyanim). Each pattern has its own shape and often shifts the meaning in a usual way. Open a pattern to see its signs and verbs from the word list.'),
         el('p', { class: 'muted' }, REVIEW_NOTE),
-        el('ul', {}, ...SEVEN.map((b) => el('li', {}, btn(`${binyanName(b)}: ${BINYAN[b].gist} (${(c.byBinyan[b]?.verbs || 0).toLocaleString('en-US')} verbs)`, () => { selBinyan = b; renderBinyanim(); say(`${binyanName(b)} opened.`); }, { 'aria-label': `Open the ${binyanName(b)} pattern` })))),
+        el('ul', {}, ...SEVEN.map((b) => el('li', {}, btn(`${binyanName(b)}: ${BINYAN[b].gist} (${(c.byBinyan[b]?.verbs || 0).toLocaleString('en-US')} verbs)`, () => { selBinyan = b; renderBinyanim(); say(`${binyanName(b)} opened.`); })  /* the visible text is the name: an aria-label that starts differently fails label-in-name (WCAG 2.5.3) */))),
         btn('Practise: pick the pattern from a form', () => { mode = 'bdrill'; render(); }));
       return;
     }

@@ -43,7 +43,7 @@ export const MEDAL_FOR = Object.freeze({
   calendar: ['home', 'calendar'], sounds: ['home', 'sounds'], scan: ['home', 'scan'], workbook: ['home', 'workbook'],
   ask: ['home', 'ask'], talk: ['home', 'talk'], camera: ['home', 'camera'], light: ['home', 'light'],
   games: ['home', 'games'], books: ['home', 'books'], lab: ['home', 'lab'], learn: ['home', 'learn'],
-  speak: ['home', 'speak'], firstday: ['home', 'firstday'], morning: ['home', 'firstday'],
+  speak: ['home', 'speak'], firstday: ['home', 'firstday'],
   wordfinder: ['home', 'vocab'],
   readhub: ['home', 'read'], speakhub: ['home', 'speak'], practical: ['home', 'talk'], practicalunit: ['home', 'talk'], curriculum: ['home', 'learn'],
   tugowar: ['word', 'tugowar'], vowelcatcher: ['word', 'vowelcatcher'], pinball: ['word', 'pinball'],

@@ -14,10 +14,6 @@
       "reason": "Allowlist file: quotes the false-positive word it excuses."
     },
     {
-      "path": "tools/meta/text-allowlist.json",
-      "reason": "This allowlist: its reasons name the words."
-    },
-    {
       "path": "tools/release/push-clean.sh",
       "reason": "Filter patterns that strip attribution trailers from commits before publishing; must name them."
     },
@@ -58,14 +54,6 @@
       "reason": "Code that calls the vendor Images API; endpoint, env var and model ids are functional."
     },
     {
-      "path": "tests/curriculum.intermediate.test.js",
-      "reason": "Test guarding against machine-specific paths (/home/assistant)."
-    },
-    {
-      "path": "tools/youtube/fetch-slow.py",
-      "reason": "Machine path of a local research folder (user name in path); not published content."
-    },
-    {
       "path": "docs/TOOLING.md",
       "reason": "Documents the scan tool and the names it searches for."
     },
@@ -75,10 +63,6 @@
     },
     {
       "path": "tests/images.blockj.test.js",
-      "reason": "Test asserts that no tool names appear in generated output: quotes the patterns it forbids."
-    },
-    {
-      "path": "tests/images.review.test.js",
       "reason": "Test asserts that no tool names appear in generated output: quotes the patterns it forbids."
     },
     {
@@ -120,6 +104,42 @@
     {
       "path": "assets/vendor/_nmt/*/vocab.json",
       "reason": "Translation word tables: tens of thousands of word pieces, some of which happen to spell a tool name."
+    },
+    {
+      "path": "tests/ask.test.js",
+      "reason": "Guard test: its pattern lists the tool names that learner copy must never contain."
+    },
+    {
+      "path": "tests/audio.music.test.js",
+      "reason": "Guard test: its pattern lists the tool names that learner copy must never contain."
+    },
+    {
+      "path": "tests/games.g1.test.js",
+      "reason": "Guard test: its pattern lists the tool names that learner copy must never contain."
+    },
+    {
+      "path": "tests/games.g2.test.js",
+      "reason": "Guard test: its pattern lists the tool names that learner copy must never contain."
+    },
+    {
+      "path": "tests/lane6.bridge.test.js",
+      "reason": "Guard test: its pattern lists the tool names that learner copy must never contain."
+    },
+    {
+      "path": "tests/lane6.trope.test.js",
+      "reason": "Guard test: its pattern lists the tool names that learner copy must never contain."
+    },
+    {
+      "path": "tests/talk.test.js",
+      "reason": "Guard test: its pattern lists the tool names that learner copy must never contain."
+    },
+    {
+      "path": "data/packs/catalog.json",
+      "reason": "Licence trail: each pack names the open model it was ported from and that model's licence."
+    },
+    {
+      "path": "tools/audio/asr-check/review3_shard.py",
+      "reason": "Offline audio check: the --engine option names the open speech model it can run."
     }
   ]
 }

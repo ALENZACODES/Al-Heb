@@ -101,7 +101,7 @@ test('browser /daily: the ring and the badge pictures are not read twice, and th
       summary: document.querySelector('#lp-heat-text').textContent, firstRow: document.querySelector('.lp table tbody tr th').textContent, caption: document.querySelector('.lp table caption').textContent,
       names: [...document.querySelectorAll('#lp-badges .bd-name')].length,
     }));
-    assert.equal(r.ringHidden, true); assert.match(r.ringText, /of 50 points today/);
+    assert.equal(r.ringHidden, true); assert.match(r.ringText, /of 50 XP today/);
     assert.equal(r.imgs, 0, 'the pictures beside a text name are decorative'); assert.ok(r.art >= 15 && r.artHidden);
     assert.ok(r.names >= 15, 'each badge keeps its text name');
     assert.equal(r.rows, r.weeks, 'one table row per drawn week'); assert.equal(r.weeks, 26);
@@ -163,7 +163,7 @@ test('browser /daily: empty, corrupt and storage-blocked states render without e
   await withApp(async (env) => {
     for (const [seed, scheme, settings] of [['empty', 'light', {}], ['corrupt', 'dark', {}], ['mid', 'light', {}], ['allbadges', 'dark', { textSize: 'largest' }], ['newbadges', 'light', { calmMode: true }]]) {
       const { ctx, page, errors } = await open(env, '/daily', { seed, scheme, settings });
-      assert.match(await page.locator('#lp-ring-text').textContent(), /of \d+ points today/);
+      assert.match(await page.locator('#lp-ring-text').textContent(), /of \d+ XP today/);
       assert.deepEqual(errors, [], `${seed} console errors`);
       if (haveAxe) {
         await page.evaluate(axeSrc);

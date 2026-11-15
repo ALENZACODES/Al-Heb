@@ -305,10 +305,12 @@ export function serviceRing(orderId, practice, companion, cards, itemIds = []) {
 
 // ---------- everything at once ----------
 /** Read every stored record the counts need. Never throws. @param {{get:Function}} store */
+/** No retention record yet: carry the goal picked on the older Daily page (loops.v1), as src/retention/state.js load() does. */
+const carriedRetention = (g) => { const l = obj(g('loops.v1')); return XP_GOALS.includes(l.goal) ? { goal: l.goal } : null; };
 export function read(store) {
   const g = (k) => { try { return store?.get?.(k) ?? null; } catch { return null; } };
   const prog = obj(g(KEYS.progress)), st = obj(g(KEYS.progressState));
-  return { completed: obj(prog.completed), cards: g(KEYS.cards) || {}, vocab: g(KEYS.vocab) || {}, streak: g(KEYS.streak), retention: g(KEYS.retention),
+  return { completed: obj(prog.completed), cards: g(KEYS.cards) || {}, vocab: g(KEYS.vocab) || {}, streak: g(KEYS.streak), retention: g(KEYS.retention) ?? carriedRetention(g),
     dailyGoal: g(KEYS.dailyGoal), books: g(KEYS.books), rest: Array.isArray(st.rest) ? st.rest.filter((d) => typeof d === 'string') : [] };
 }
 /** Every per-learner count for `now`, from one read of the store. */

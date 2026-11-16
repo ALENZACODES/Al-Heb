@@ -1,37 +1,16 @@
 verdict,matched,hearings,should_sound,heard,kind,id,text,file,same_audio_files
 listen,0,5,xaf,k'af / k'af / k'af / k'af / k'af,letter,khaf,כַף,audio/f/israeli/letter/khaf.mp3,1
-listen,1,5,pesofit,besof'it / besof'it / p'esofit / besof'it / besof'it,letter,pe-final,פֵּא סוֹפִית,audio/f/israeli/letter/pe-final.mp3,1
-listen,2,5,Sa,s'e / s'a / s'a / S'a / S'a,letter,shin-sound,שַׁ,audio/f/israeli/letter/shin-sound.mp3,3
-listen,2,5,ta,qat'a / qat'a / t'a / t'a / qat'a,letter,tet-sound,טַ,audio/f/israeli/letter/tet-sound.mp3,2
 listen,1,5,va,q'a / u'a / va / q'a / q'a,letter,vav-sound,וַ,audio/f/israeli/letter/vav-sound.mp3,4
 listen,0,5,vet,b'et / b'et / b'et / b'et / b'et,letter,vet,בֵית,audio/f/israeli/letter/vet.mp3,1
-listen,2,5,ya,j'a / qij'a / j'a / qij'a / qij'a,letter,yod-sound,יַ,audio/f/israeli/letter/yod-sound.mp3,2
-listen,1,5,bu,b'o / b'u / m'u / m'u / m'u,syllable,bet-u,בֻּ,audio/f/israeli/syllable/bet-u.mp3,1
-listen,1,5,gi,j'i / n'i / j'i / g'i / n'i,syllable,gimel-i,גִ,audio/f/israeli/syllable/gimel-i.mp3,1
 listen,0,5,gu,dZ'u / dZ'u / dZ'o / dZ'o / dZ'o,syllable,gimel-u,גֻ,audio/f/israeli/syllable/gimel-u.mp3,1
-listen,2,5,ro,r'o / qor'o / r'o / qor'o / qor'o,syllable,resh-o,רֹ,audio/f/israeli/syllable/resh-o.mp3,1
-listen,0,5,su,suj'i / suj'i / suq'i / suh'i / suj'i,syllable,samekh-u,סֻ,audio/f/israeli/syllable/samekh-u.mp3,1
-listen,0,5,Su,S'uv / s'u / s'u / S'uv / S'uv,syllable,shin-u,שֻׁ,audio/f/israeli/syllable/shin-u.mp3,1
-listen,0,5,cu,tsuj'i / tsuj'i / tsuj'i / suh'i / tsuj'i,syllable,tsadi-u,צֻ,audio/f/israeli/syllable/tsadi-u.mp3,1
 listen,1,5,ye,j'e / jihj'e / jihj'e / jihj'e / jihj'e,syllable,yod-e,יֶ,audio/f/israeli/syllable/yod-e.mp3,1
-listen,0,5,e,tsad'i / q'a / q'a / q'a / q'a,vowel,segol,אֶ,audio/f/israeli/vowel/segol.mp3,1
 listen,0,5,v,b'e / b'e / b'e / b'e / b'e,vowel,shva,בְ,audio/f/israeli/vowel/shva.mp3,1
-listen,1,5,ba,b'a / b'at / b'at / b'at / b'at,letter,bet-sound,בַּ,audio/m/israeli/letter/bet-sound.mp3,3
-listen,0,5,he,h'a / h'a / h'a / h'a / h'a,letter,he,הֵא,audio/m/israeli/letter/he.mp3,1
 listen,0,5,xaf,k'af / k'af / k'af / k'af / k'af,letter,khaf,כַף,audio/m/israeli/letter/khaf.mp3,1
 listen,0,5,v,v'ad / vad'a / vad'a / v'ad. / vad'a,letter,vav-sound,ו,audio/m/israeli/letter/vav-sound.mp3,3
 listen,0,5,vet,b'ejt / b'ejt / b'ejt / b'et / b'et,letter,vet,בֵית,audio/m/israeli/letter/vet.mp3,1
-listen,2,5,za,z'e / z'e / z'a / z'e / z'a,letter,zayin-sound,זַ,audio/m/israeli/letter/zayin-sound.mp3,2
-listen,0,5,gu,dZ'u / dZ'u / dZ'u / dZ'u / dZ'u,syllable,gimel-u,גֻ,audio/m/israeli/syllable/gimel-u.mp3,1
 listen,2,5,he,h'a / h'e / h'a / h'e / h'a,syllable,he-e,הֶ,audio/m/israeli/syllable/he-e.mp3,1
-listen,2,5,ku,h'u / h'u / k'u / k'u / k'ur,syllable,kaf-u,כֻּ,audio/m/israeli/syllable/kaf-u.mp3,1
-listen,2,5,pa,q'hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh / p'a / p'a / f'a / q'hhhhhhhhhhhhhhhhhhhhhhhhhhhh,syllable,pe-a,פַּ,audio/m/israeli/syllable/pe-a.mp3,1
 listen,2,5,pu,p'u / p'o / p'o / f'u / p'u,syllable,pe-u,פֻּ,audio/m/israeli/syllable/pe-u.mp3,1
 listen,2,5,ke,ke / ke'a / k'a / k'a / k'e.,syllable,qof-e,קֶ,audio/m/israeli/syllable/qof-e.mp3,1
-listen,1,5,ku,h'u / x'u / h'u / h'u / k'u,syllable,qof-u,קֻ,audio/m/israeli/syllable/qof-u.mp3,1
-listen,1,5,ru,bar'u / r'u / r'o / h'u / r'o,syllable,resh-u,רֻ,audio/m/israeli/syllable/resh-u.mp3,1
-listen,0,5,su,suj'i / suq'i / tsuj'i / suq'i / tsuq'i,syllable,samekh-u,סֻ,audio/m/israeli/syllable/samekh-u.mp3,1
-listen,0,5,cu,tsuj'i / tsuj'i / tsuj'i / tsuj'i / tsuq'i,syllable,tsadi-u,צֻ,audio/m/israeli/syllable/tsadi-u.mp3,1
 listen,0,5,va,u'a / w'a / w'at / w'a / w'a,syllable,vav-a,וַ,audio/m/israeli/syllable/vav-a.mp3,1
 listen,2,5,ye,jihj'e / j'e / jihj'e / j'e / jihj'e,syllable,yod-e,יֶ,audio/m/israeli/syllable/yod-e.mp3,1
 listen,2,5,zu,z'o / z'o / z'u / z'o / z'u,syllable,zayin-u,זֻ,audio/m/israeli/syllable/zayin-u.mp3,1
@@ -39,9 +18,14 @@ listen,0,5,v,b'e / b'e / b'e / b'e / b'e,vowel,shva,בְ,audio/m/israeli/vowel/s
 majority,4,5,alef,q'alf / q'alef / q'alef / q'al'ef / q'al'ef,letter,alef,אָלֶף,audio/f/israeli/letter/alef.mp3,1
 majority,3,5,ba,b'a / m'a? / b'a / b'a / m'a?,letter,bet-sound,בַּ,audio/f/israeli/letter/bet-sound.mp3,3
 majority,4,5,kafsofit,sof'it / k'afsof'it / k'afsof'it / k'afsof'it / k'afsof'it,letter,kaf-final,כַּף סוֹפִית,audio/f/israeli/letter/kaf-final.mp3,1
+majority,3,5,pesofit,sof'it / p'esof'it / besof'it / p'esof'it / p'esof'it,letter,pe-final,"פֵּא, סוֹפִית",audio/f/israeli/letter/pe-final.mp3,1
+majority,4,5,Sa,S'a / S'a / S'a / s'a / S'a,letter,shin-sound,שַׁ,audio/f/israeli/letter/shin-sound.mp3,3
 majority,4,5,cadi,k'af / ts'adi / ts'adi / ts'adi / ts'adq'i,letter,tsadi,צָדִי,audio/f/israeli/letter/tsadi.mp3,1
+majority,4,5,ya,j'a / j'a / j'a / j'a / qij'a,letter,yod-sound,יָה,audio/f/israeli/letter/yod-sound.mp3,2
 majority,4,5,u,q'e / q'u / q'u / q'u / q'u,syllable,ayin-u,עֻ,audio/f/israeli/syllable/ayin-u.mp3,1
 majority,4,5,be,b'e / b'a / b'e / b'e / b'e,syllable,bet-e,בֶּ,audio/f/israeli/syllable/bet-e.mp3,1
+majority,3,5,bu,b'u / b'u / b'u / b'o / b'o,syllable,bet-u,בּוּ,audio/f/israeli/syllable/bet-u.mp3,1
+majority,4,5,gi,g'i / n'i / g'i / g'i / g'i,syllable,gimel-i,גִ,audio/f/israeli/syllable/gimel-i.mp3,1
 majority,3,5,le,l'a / l'e / l'a / l'e / l'e,syllable,lamed-e,לֶ,audio/f/israeli/syllable/lamed-e.mp3,1
 majority,3,5,lu,l'u / n'u / l'u / l'u / n'u,syllable,lamed-u,לֻ,audio/f/israeli/syllable/lamed-u.mp3,1
 majority,4,5,me,m'a / m'e / m'e / m'e / m'e,syllable,mem-e,מֶ,audio/f/israeli/syllable/mem-e.mp3,1
@@ -49,19 +33,27 @@ majority,3,5,mo,m'o / qim'o / m'o / m'o / qim'o,syllable,mem-o,מֹ,audio/f/isra
 majority,4,5,pe,p'e / f'e / p'e / p'e / p'e,syllable,pe-e,פֶּ,audio/f/israeli/syllable/pe-e.mp3,1
 majority,3,5,po,b'o / p'o / p'o / b'o / p'o,syllable,pe-o,פֹּ,audio/f/israeli/syllable/pe-o.mp3,1
 majority,3,5,ke,k'e / k'a / k'a / k'e / k'e,syllable,qof-e,קֶ,audio/f/israeli/syllable/qof-e.mp3,1
+majority,4,5,su,s'u / s'u / ts'u / s'u / s'u,syllable,samekh-u,סוּ.,audio/f/israeli/syllable/samekh-u.mp3,1
+majority,3,5,Su,S'u / S'u / s'u / S'u / s'u,syllable,shin-u,שֻׁ,audio/f/israeli/syllable/shin-u.mp3,1
 majority,4,5,zu,z'u / z'o / z'u / z'u / z'u,syllable,zayin-u,זֻ,audio/f/israeli/syllable/zayin-u.mp3,1
 majority,3,5,b,m'u / b'u / b'o / b'u / m'u,vowel,dagesh,בּ,audio/f/israeli/vowel/dagesh.mp3,1
 majority,3,5,g,j'a! / g'at / g'a / g'a / g'a,letter,gimel-sound,ג,audio/m/israeli/letter/gimel-sound.mp3,1
+majority,3,5,he,h'aj / h'ej / h'ej / h'aj / h'ej,letter,he,הֵי,audio/m/israeli/letter/he.mp3,1
 majority,3,5,Sa,S'a / s'a / S'a / s'a / S'a,letter,shin-sound,שַׁ,audio/m/israeli/letter/shin-sound.mp3,3
 majority,4,5,Sin,S'in / s'e / S'in / S'in / S'in,letter,shin,שִׁין,audio/m/israeli/letter/shin.mp3,1
 majority,4,5,ga,g'a / g'at / g'a / g'a / g'a,syllable,gimel-a,גַ,audio/m/israeli/syllable/gimel-a.mp3,1
+majority,3,5,gu,g'u / g'u / g'u / g'ur / g'ur,syllable,gimel-u,גוּ.,audio/m/israeli/syllable/gimel-u.mp3,1
 majority,4,5,ho,h'o / h'u / h'o / h'o / h'o,syllable,he-o,הֹ,audio/m/israeli/syllable/he-o.mp3,1
 majority,4,5,ke,k'e / k'a / k'e / k'e / k'e,syllable,kaf-e,כֶּ,audio/m/israeli/syllable/kaf-e.mp3,1
+majority,4,5,ku,k'u / k'u / k'u / k'u / k'ur,syllable,kaf-u,כֻּ.,audio/m/israeli/syllable/kaf-u.mp3,1
 majority,4,5,me,m'e / m'a / m'e / m'e / m'e,syllable,mem-e,מֶ,audio/m/israeli/syllable/mem-e.mp3,1
 majority,4,5,ni,m'i / n'i / n'i / n'i / n'i,syllable,nun-i,נִ,audio/m/israeli/syllable/nun-i.mp3,1
+majority,4,5,pa,x'at / p'a / p'a / p'a / p'a,syllable,pe-a,פַּ,audio/m/israeli/syllable/pe-a.mp3,1
+majority,4,5,ku,k'u / k'u / k'u / k'ur / k'u,syllable,qof-u,קוּ,audio/m/israeli/syllable/qof-u.mp3,1
 majority,4,5,re,r'e / q'a / r'e / r'e / r'e,syllable,resh-e,רֶ,audio/m/israeli/syllable/resh-e.mp3,1
 majority,3,5,ri,vej'i / r'i / r'i / r'i / vej'i,syllable,resh-i,רִ,audio/m/israeli/syllable/resh-i.mp3,1
 majority,4,5,ro,qor'o / r'o / r'o / r'o / r'o,syllable,resh-o,רֹ,audio/m/israeli/syllable/resh-o.mp3,1
+majority,3,5,ru,q'u / r'o / r'u / r'u / r'u,syllable,resh-u,רֻ.,audio/m/israeli/syllable/resh-u.mp3,1
 majority,3,5,to,t'ov. / t'ov. / t'o / t'o / t'o,syllable,tav-o,תֹ,audio/m/israeli/syllable/tav-o.mp3,1
 majority,4,5,ve,v'e / j'e / v'e / v'e / v'e,syllable,vav-e,וֶ,audio/m/israeli/syllable/vav-e.mp3,1
 majority,4,5,e,q'a / q'e / q'e / q'e / q'e,vowel,segol,אֶ,audio/m/israeli/vowel/segol.mp3,1
@@ -103,6 +95,7 @@ agree,2,2,s,s'a / s'a,letter,sin-sound,שׂ,audio/f/israeli/letter/sin-sound.mp3
 agree,2,2,sin,s'in / s'in,letter,sin,שִׂין,audio/f/israeli/letter/sin.mp3,1
 agree,2,2,ta,t'a / t'a,letter,tav-sound,תַ,audio/f/israeli/letter/tav-sound.mp3,2
 agree,2,2,tav,t'av / t'av,letter,tav,תָּו,audio/f/israeli/letter/tav.mp3,1
+agree,5,5,ta,t'a / t'a / t'a / t'a / t'a,letter,tet-sound,טַ,audio/f/israeli/letter/tet-sound.mp3,2
 agree,2,2,tet,t'et / t'et,letter,tet,טֵית,audio/f/israeli/letter/tet.mp3,1
 agree,2,2,cadisofit,ts'adissof'it / ts'adissof'it,letter,tsadi-final,צָדִי סוֹפִית,audio/f/israeli/letter/tsadi-final.mp3,1
 agree,2,2,ca,ts'a / ts'a,letter,tsadi-sound,צַ,audio/f/israeli/letter/tsadi-sound.mp3,2
@@ -150,6 +143,7 @@ agree,2,2,ko,k'o / k'o,syllable,qof-o,קֹ,audio/f/israeli/syllable/qof-o.mp3,1
 agree,2,2,ku,k'u / k'u,syllable,qof-u,קֻ,audio/f/israeli/syllable/qof-u.mp3,1
 agree,2,2,re,r'e / r'e,syllable,resh-e,רֶ,audio/f/israeli/syllable/resh-e.mp3,1
 agree,2,2,ri,r'i / r'i,syllable,resh-i,רִ,audio/f/israeli/syllable/resh-i.mp3,1
+agree,5,5,ro,r'o / r'o / r'o / r'o / r'o,syllable,resh-o,רֹ.,audio/f/israeli/syllable/resh-o.mp3,1
 agree,2,2,ru,r'u / r'u,syllable,resh-u,רֻ,audio/f/israeli/syllable/resh-u.mp3,1
 agree,2,2,se,s'e / s'e,syllable,samekh-e,סֶ,audio/f/israeli/syllable/samekh-e.mp3,1
 agree,2,2,si,s'i / s'i,syllable,samekh-i,סִ,audio/f/israeli/syllable/samekh-i.mp3,1
@@ -168,6 +162,7 @@ agree,2,2,tu,t'u / t'u,syllable,tet-u,טֻ,audio/f/israeli/syllable/tet-u.mp3,1
 agree,2,2,ce,ts'e / ts'e,syllable,tsadi-e,צֶ,audio/f/israeli/syllable/tsadi-e.mp3,1
 agree,2,2,ci,ts'i / ts'i,syllable,tsadi-i,צִ,audio/f/israeli/syllable/tsadi-i.mp3,1
 agree,2,2,co,ts'o / ts'o,syllable,tsadi-o,צֹ,audio/f/israeli/syllable/tsadi-o.mp3,1
+agree,5,5,cu,ts'u / ts'u / ts'u / ts'u / ts'u,syllable,tsadi-u,צוּ.,audio/f/israeli/syllable/tsadi-u.mp3,1
 agree,2,2,ve,v'e / v'e,syllable,vav-e,וֶ,audio/f/israeli/syllable/vav-e.mp3,1
 agree,2,2,vi,v'i / v'i,syllable,vav-i,וִ,audio/f/israeli/syllable/vav-i.mp3,1
 agree,2,2,vo,v'o / v'o,syllable,vav-o,וֹ,audio/f/israeli/syllable/vav-o.mp3,1
@@ -186,6 +181,7 @@ agree,2,2,o,q'o / q'o,vowel,cholam,אֹ,audio/f/israeli/vowel/cholam.mp3,1
 agree,2,2,a,q'a / q'a.,vowel,kamatz,אָ,audio/f/israeli/vowel/kamatz.mp3,1
 agree,2,2,u,q'u / q'u,vowel,kubutz,אֻ,audio/f/israeli/vowel/kubutz.mp3,2
 agree,2,2,a,q'a / q'a,vowel,patach,אַ,audio/f/israeli/vowel/patach.mp3,1
+agree,5,5,e,q'e / q'ej / q'e / q'e / q'ej,vowel,segol,אֶה,audio/f/israeli/vowel/segol.mp3,1
 agree,2,2,S,S'in / S'in,vowel,shin-dot,שׁ,audio/f/israeli/vowel/shin-dot.mp3,1
 agree,2,2,u,q'u / q'u,vowel,shuruk,וּ,audio/f/israeli/vowel/shuruk.mp3,1
 agree,2,2,s,s'in / s'in,vowel,sin-dot,שׂ,audio/f/israeli/vowel/sin-dot.mp3,1
@@ -194,6 +190,7 @@ agree,2,2,a,q'a / q'a,letter,alef-sound,אַ,audio/m/israeli/letter/alef-sound.m
 agree,2,2,alef,q'alef / q'alef,letter,alef,אָלֶף,audio/m/israeli/letter/alef.mp3,1
 agree,2,2,a,q'a / q'a,letter,ayin-sound,עַ,audio/m/israeli/letter/ayin-sound.mp3,2
 agree,2,2,ayin,q'ajin / q'ajin,letter,ayin,עַיִן,audio/m/israeli/letter/ayin.mp3,1
+agree,5,5,ba,b'a / b'a / b'a / b'a / b'a,letter,bet-sound,בַּ,audio/m/israeli/letter/bet-sound.mp3,3
 agree,2,2,bet,b'ejt / b'et,letter,bet,בֵּית,audio/m/israeli/letter/bet.mp3,1
 agree,2,2,xa,x'a / x'a,letter,chet-sound,חַ,audio/m/israeli/letter/chet-sound.mp3,2
 agree,2,2,xet,x'et / x'et,letter,chet,חֵית,audio/m/israeli/letter/chet.mp3,1
@@ -236,6 +233,7 @@ agree,2,2,cadi,ts'adqi / ts'adi,letter,tsadi,צָדִי,audio/m/israeli/letter/t
 agree,2,2,vav,v'av / v'av,letter,vav,וָו,audio/m/israeli/letter/vav.mp3,1
 agree,2,2,ya,j'a / j'a,letter,yod-sound,יַ,audio/m/israeli/letter/yod-sound.mp3,2
 agree,2,2,yod,j'od / j'od,letter,yod,יוֹד,audio/m/israeli/letter/yod.mp3,1
+agree,5,5,za,z'a / z'a / z'a / z'a / z'a,letter,zayin-sound,זַ,audio/m/israeli/letter/zayin-sound.mp3,2
 agree,2,2,zayin,z'ajin / z'ajin,letter,zayin,זַיִן,audio/m/israeli/letter/zayin.mp3,1
 agree,2,2,e,q'e / q'e,syllable,alef-e,אֶ,audio/m/israeli/syllable/alef-e.mp3,1
 agree,2,2,e,q'e / q'e,syllable,ayin-e,עֶ,audio/m/israeli/syllable/ayin-e.mp3,1
@@ -279,6 +277,7 @@ agree,2,2,ko,k'o / k'o,syllable,qof-o,קֹ,audio/m/israeli/syllable/qof-o.mp3,1
 agree,2,2,se,s'e / s'e,syllable,samekh-e,סֶ,audio/m/israeli/syllable/samekh-e.mp3,1
 agree,2,2,si,s'i / s'i,syllable,samekh-i,סִ,audio/m/israeli/syllable/samekh-i.mp3,1
 agree,2,2,so,s'o / s'o,syllable,samekh-o,סֹ,audio/m/israeli/syllable/samekh-o.mp3,1
+agree,5,5,su,s'u / s'u / s'u / s'u / s'u,syllable,samekh-u,סוּ,audio/m/israeli/syllable/samekh-u.mp3,1
 agree,2,2,Se,S'e / S'e,syllable,shin-e,שֶׁ,audio/m/israeli/syllable/shin-e.mp3,1
 agree,2,2,Si,S'i / S'i,syllable,shin-i,שִׁ,audio/m/israeli/syllable/shin-i.mp3,1
 agree,2,2,So,S'o / S'o,syllable,shin-o,שֹׁ,audio/m/israeli/syllable/shin-o.mp3,1
@@ -293,6 +292,7 @@ agree,2,2,tu,t'u / t'u,syllable,tet-u,טֻ,audio/m/israeli/syllable/tet-u.mp3,1
 agree,2,2,ce,ts'e / ts'e,syllable,tsadi-e,צֶ,audio/m/israeli/syllable/tsadi-e.mp3,1
 agree,2,2,ci,ts'i / ts'i,syllable,tsadi-i,צִ,audio/m/israeli/syllable/tsadi-i.mp3,1
 agree,2,2,co,ts'o / ts'o,syllable,tsadi-o,צֹ,audio/m/israeli/syllable/tsadi-o.mp3,1
+agree,5,5,cu,ts'u / ts'u / ts'u / ts'u / ts'u,syllable,tsadi-u,צוּ,audio/m/israeli/syllable/tsadi-u.mp3,1
 agree,2,2,vi,v'i / v'i,syllable,vav-i,וִ,audio/m/israeli/syllable/vav-i.mp3,1
 agree,2,2,vo,v'o / v'o,syllable,vav-o,וֹ,audio/m/israeli/syllable/vav-o.mp3,1
 agree,2,2,vu,v'u / v'u,syllable,vav-u,וֻ,audio/m/israeli/syllable/vav-u.mp3,1

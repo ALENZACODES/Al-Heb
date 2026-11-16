@@ -5,6 +5,7 @@ as a commoner word. The sound model does not guess words. Each clip left in plac
 passed) is heard by it once and compared with the sounds the pointed word should make.
 
   python tools/audio/asr-check/sound_second_opinion.py --model /path/to/phoneme-ct2 docs/audio/word-fix/r2-*.jsonl
+  python tools/audio/asr-check/sound_second_opinion.py --model ... --flagged docs/audio/gpu-flagged-after-2026-11-16.json
 Output: docs/audio/word-fix/second-opinion.csv (sounds matched per clip) and a printed tally. Resumable.
 A machine opinion: "sounds match" means both models would have to be wrong the same way for the clip to be wrong.
 """
@@ -19,13 +20,22 @@ OUT = os.path.join(ROOT, 'docs', 'audio', 'word-fix', 'second-opinion.csv')
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument('logs', nargs='+')
+    ap.add_argument('logs', nargs='*')
+    ap.add_argument('--flagged', help='a gpu-flagged-*.json list: hear these clips too')
     ap.add_argument('--model', required=True)
     a = ap.parse_args()
     gate = os.path.join(os.path.dirname(__file__), 'sound-gate-log.jsonl')
     back = {r['file'] for r in map(json.loads, open(gate, encoding='utf-8')) if r['decision'] != 'kept'}
     rows = [json.loads(l) for f in sorted(g for x in a.logs for g in glob.glob(x)) for l in open(f, encoding='utf-8')]
     rows = [r for r in rows if r['outcome'].startswith('no take') or (r['outcome'] == 'replaced' and r['file'] in back)]
+    if a.flagged:
+        import scan as S
+        lst = json.load(open(os.path.join(ROOT, a.flagged), encoding='utf-8'))
+        want = {f + i + '.mp3' for g in ('fail', 'unsure', 'borderline') for f, ids in lst.get(g, {}).items() for i in ids.split()}
+        have = {r['file'] for r in rows}
+        for j in S.jobs(('word', 'builder', 'dictionary')):
+            if j['file'] in want and j['file'] not in have:
+                rows.append({'file': j['file'], 'hebrew': j['he'], 'heard_now': [], 'paths': j['paths']})
     done = {}
     if os.path.exists(OUT):
         done = {r['file']: r for r in csv.DictReader(open(OUT, encoding='utf-8'))}

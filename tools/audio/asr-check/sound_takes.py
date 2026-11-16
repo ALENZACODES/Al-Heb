@@ -32,15 +32,20 @@ import scan_sounds as S  # noqa: E402
 ROOT = S.ROOT
 OUT = os.path.join(ROOT, 'audio-takes', 'sound-check')
 VOICE = {'m': 'he-IL-Wavenet-B', 'f': 'he-IL-Wavenet-A'}
+# Third round: for a syllable no WaveNet take fixed, also the Chirp 3 HD voice of the same speaker (Ari Charon, Noa Kore),
+# and slower readings. A slightly different voice is better than a wrong sound.
+HD = {'m': 'he-IL-Chirp3-HD-Charon', 'f': 'he-IL-Chirp3-HD-Kore'}
 HELPER = {'ַ': ['ָה', 'ַא'], 'ָ': ['ָה'], 'ֶ': ['ֶה'], 'ֵ': ['ֵה', 'ֵי'], 'ִ': ['ִי'], 'ֹ': ['וֹ'], 'ֻ': ['וּ']}
 # Letter names and other clips that are not one letter plus one vowel: spellings to try, by clip id.
 NAMED = {'he': ['הֵא', 'הֵא.', 'הֵי', 'הֶא'], 'pe-final': ['פֵּא סוֹפִית', 'פֵּה סוֹפִית', 'פֵּי סוֹפִית', 'פֵּא, סוֹפִית'],
-         'segol': ['אֶ', 'אֶה', 'אֶ.', 'אֶה.']}
+         'segol': ['אֶ', 'אֶה', 'אֶ.', 'אֶה.'],
+         # Sheva card: the mark under bet without a dot, read as Israelis read a spoken sheva, "ve"
+         'shva': ['בְ', 'בֶ', 'וֶ', 'וֶה', 'בֶה', 'וֶ.']}
 # Second round: more spellings for the syllables no first-round take fixed (dagesh, a silent alef or a tsere in place of segol).
 EXTRA = {'gimel-u': ['גּוּ', 'גּוּ.', 'גוּא', 'גּוּא'], 'yod-e': ['יֵה', 'יֵ', 'יֶא', 'יֵא', 'יֶהּ'], 'he-e': ['הֶא', 'הֵה', 'הֵ', 'הֶהּ'],
          'pe-u': ['פּוּא', 'פּוּ,', 'פּוּה'], 'qof-e': ['קֶא', 'קֵה', 'קֵ', 'קֵא'], 'zayin-u': ['זוּא', 'זוּ,', 'זוּה']}
 # Fixed already on the letter audit branch (claude/letter-audit-2026-11-13), or waiting for a decision on what the clip should say.
-SKIP = {'khaf', 'vet', 'vav-sound', 'vet-sound', 'vav-a', 'resh', 'shin', 'dagesh', 'shva'}
+SKIP = {'khaf', 'vet', 'vav-sound', 'vet-sound', 'vav-a', 'resh', 'shin', 'dagesh'}
 
 
 def spellings(row):
@@ -73,7 +78,7 @@ def targets():
     for c, row, want, verdict, n, hs in S.judged():
         if verdict == 'listen' and row['id'] not in SKIP:
             if not (set(want) & S.VOWELS):
-                want = want + 'a'
+                want = want + ('e' if row['id'] == 'shva' else 'a')
             out.append({'voice': c['voice'], 'id': row['id'], 'kind': row['kind'], 'want': want, 'files': c['files'], 'spellings': spellings(row)})
     return sorted(out, key=lambda t: (t['voice'], t['kind'], t['id']))
 
@@ -86,14 +91,23 @@ def record():
     os.makedirs(OUT, exist_ok=True)
     index = []
     for t in targets():
-        for i, text in enumerate(t['spellings'], 1):
-            name = f"{t['voice']}-{t['kind']}-{t['id']}-{hashlib.sha1(text.encode()).hexdigest()[:6]}.mp3"
+        plans = [(text, VOICE[t['voice']], 1.0) for text in t['spellings']]
+        if (t['kind'] == 'syllable' and t['id'] in EXTRA) or t['id'] == 'shva':
+            plans += [(text, HD[t['voice']], 1.0) for text in t['spellings']]
+            plans += [(text, VOICE[t['voice']], 0.8) for text in t['spellings'][:4]]
+        for text, engine, rate in plans:
+            tag = hashlib.sha1(f'{text}|{engine}|{rate}'.encode()).hexdigest()[:6]
+            name = f"{t['voice']}-{t['kind']}-{t['id']}-{tag}.mp3"
             dst = os.path.join(OUT, name)
             if not os.path.exists(dst):
-                open(dst, 'wb').write(F.synth_rate(text, VOICE[t['voice']], key))
+                try:
+                    open(dst, 'wb').write(F.synth_rate(text, engine, key, rate))
+                except Exception as e:  # noqa: BLE001 - one refused take must not stop the run
+                    print('refused', engine, text, str(e)[:120], flush=True)
+                    continue
             index.append({'take': 'audio-takes/sound-check/' + name, 'voice': t['voice'], 'kind': t['kind'], 'id': t['id'], 'text': text,
-                          'engine': VOICE[t['voice']], 'want': t['want'], 'files': t['files']})
-            print(name, text, flush=True)
+                          'engine': engine, 'rate': rate, 'want': t['want'], 'files': t['files']})
+            print(name, engine, rate, text, flush=True)
     with open(os.path.join(OUT, 'takes.json'), 'w', encoding='utf-8', newline='\n') as f:
         f.write(json.dumps(index, ensure_ascii=False, indent=1) + '\n')
     print(f'{len(index)} takes in audio-takes/sound-check/')

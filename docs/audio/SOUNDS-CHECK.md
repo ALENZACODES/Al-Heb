@@ -26,7 +26,7 @@ Entries that name a mark with no sound of its own (not scored): 0.
 | listen | v | v'ad / vad'a / vad'a / v'ad. / vad'a | ו | `audio/m/israeli/letter/vav-sound.mp3` |
 | listen | vet | b'ejt / b'ejt / b'ejt / b'et / b'et | בֵית | `audio/m/israeli/letter/vet.mp3` |
 | listen | he | h'a / h'e / h'a / h'e / h'a | הֶ | `audio/m/israeli/syllable/he-e.mp3` |
-| listen | pu | p'o / p'o / p'o / p'o / p'o | פּוּ | `audio/m/israeli/syllable/pe-u.mp3` |
+| listen | pu | p'u / p'o / p'o / f'u / p'u | פֻּ | `audio/m/israeli/syllable/pe-u.mp3` |
 | listen | ke | ke / ke'a / k'a / k'a / k'e. | קֶ | `audio/m/israeli/syllable/qof-e.mp3` |
 | listen | va | u'a / w'a / w'at / w'a / w'a | וַ | `audio/m/israeli/syllable/vav-a.mp3` |
 | listen | ye | jihj'e / j'e / jihj'e / j'e / jihj'e | יֶ | `audio/m/israeli/syllable/yod-e.mp3` |

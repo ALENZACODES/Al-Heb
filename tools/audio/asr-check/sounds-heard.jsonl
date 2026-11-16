@@ -933,8 +933,3 @@
 {"sha": "465a7df526f126756640c9008d3dbb24c035923c66e103650ded3cdfe7e678d2", "file": "audio/m/israeli/letter/he.mp3", "pass": 4, "how": "row", "heard": "h'ej"}
 {"sha": "3ebd070ddfa74f287fcbda6ecb8db6dc1631ed6891171cf9cb3dc1fca6bc4662", "file": "audio/m/israeli/syllable/kaf-u.mp3", "pass": 4, "how": "row", "heard": "k'ur"}
 {"sha": "b9dcf77ed9b3ae315b802e1d4efc8a347927a840ad6f457be81d50d9b8bd2990", "file": "audio/m/israeli/syllable/gimel-u.mp3", "pass": 4, "how": "row", "heard": "g'ur"}
-{"sha": "4745409f4d385cd4cecd749d04ab1e6e5b90356f48fc65b3220ff673af1a038c", "file": "audio/m/israeli/syllable/pe-u.mp3", "pass": 0, "how": "row", "heard": "p'o"}
-{"sha": "4745409f4d385cd4cecd749d04ab1e6e5b90356f48fc65b3220ff673af1a038c", "file": "audio/m/israeli/syllable/pe-u.mp3", "pass": 1, "how": "row", "heard": "p'o"}
-{"sha": "4745409f4d385cd4cecd749d04ab1e6e5b90356f48fc65b3220ff673af1a038c", "file": "audio/m/israeli/syllable/pe-u.mp3", "pass": 2, "how": "row", "heard": "p'o"}
-{"sha": "4745409f4d385cd4cecd749d04ab1e6e5b90356f48fc65b3220ff673af1a038c", "file": "audio/m/israeli/syllable/pe-u.mp3", "pass": 3, "how": "row", "heard": "p'o"}
-{"sha": "4745409f4d385cd4cecd749d04ab1e6e5b90356f48fc65b3220ff673af1a038c", "file": "audio/m/israeli/syllable/pe-u.mp3", "pass": 4, "how": "row", "heard": "p'o"}

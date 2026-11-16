@@ -1,0 +1,60 @@
+name: word-fix
+# Re-record the word, builder and dictionary clips a full hearing flagged (the list named in
+# tools/audio/asr-check/word-fix-queue.txt), keeping a new take only when it is heard right twice
+# (tools/audio/asr-check/fix_list.py). Runs when the queue file changes on the sound-check branch or on main, or by hand.
+# Needs the repository secret GOOGLE_TTS_API_KEY.
+# Results: one branch per slice, john/word-fix-r<run>-<n>, holding the replaced clips and the log. Nothing in the app
+# changes until those are brought into a branch and merged.
+on:
+  push:
+    branches: [main, 'claude/sound-check-builder-words-2026-11-16']
+    paths: ['tools/audio/asr-check/word-fix-queue.txt']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: word-fix
+  cancel-in-progress: false
+jobs:
+  fix:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3, 4, 5]
+    env:
+      LANG: C.UTF-8
+      GOOGLE_TTS_API_KEY: ${{ secrets.GOOGLE_TTS_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            tools/audio
+            data/vocab
+            docs/audio
+            audio/builder
+            audio/f/israeli/word
+            audio/m/israeli/word
+            audio/f/israeli/dictionary
+            audio/m/israeli/dictionary
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
+        with: { python-version: '3.12' }
+      - run: (sudo apt-get -qq update && sudo apt-get -qq install -y --no-install-recommends ffmpeg) || (pip install -q imageio-ffmpeg && sudo ln -sf "$(python -c 'import imageio_ffmpeg;print(imageio_ffmpeg.get_ffmpeg_exe())')" /usr/local/bin/ffmpeg) && pip install -q numpy faster-whisper
+      - name: Hear and re-record slice ${{ matrix.shard }} of 6
+        run: |
+          list=$(tail -n 1 tools/audio/asr-check/word-fix-queue.txt | cut -d' ' -f1)
+          python tools/audio/asr-check/fix_list.py --list "$list" --execute --shard ${{ matrix.shard }} --of 6 --log /tmp/fix-list-log-${{ matrix.shard }}.jsonl
+      - name: Push the replaced clips and the log
+        if: always()
+        run: |
+          [ -f /tmp/fix-list-log-${{ matrix.shard }}.jsonl ] || exit 0
+          b=john/word-fix-r${{ github.run_number }}-${{ matrix.shard }}
+          auth=$(git config --get http.https://github.com/.extraheader)
+          rm -rf /tmp/out && mkdir -p /tmp/out/docs/audio/word-fix
+          cp /tmp/fix-list-log-${{ matrix.shard }}.jsonl /tmp/out/docs/audio/word-fix/r${{ github.run_number }}-${{ matrix.shard }}.jsonl
+          git status --porcelain | awk '{print $2}' | grep '\.mp3$' | while read f; do mkdir -p "/tmp/out/$(dirname "$f")"; cp "$f" "/tmp/out/$f"; done
+          cd /tmp/out
+          git init -q && git checkout -q -b "$b" && git config user.name "John Khan" && git config user.email "309250657+ALENZACODES@users.noreply.github.com"
+          git add -A && git commit -q -m "Word fix: slice ${{ matrix.shard }} ($(find audio -name '*.mp3' 2>/dev/null | wc -l) clips replaced)"
+          for i in 1 2 3 4 5; do git -c http.https://github.com/.extraheader="$auth" push -q --force "https://github.com/${{ github.repository }}.git" HEAD:refs/heads/$b && break; sleep $((i*20)); done

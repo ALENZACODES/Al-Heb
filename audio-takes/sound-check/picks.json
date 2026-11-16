@@ -1,0 +1,182 @@
+[
+ {
+  "voice": "f",
+  "kind": "syllable",
+  "id": "gimel-u",
+  "want": "gu",
+  "pick": "audio-takes/sound-check/f-syllable-gimel-u-818516.mp3",
+  "text": "גוּ",
+  "right": 5,
+  "of": 5,
+  "heard": [
+   "g'u",
+   "g'u",
+   "g'u,",
+   "g'u",
+   "g'u"
+  ],
+  "files": [
+   "audio/f/israeli/syllable/gimel-u.mp3"
+  ]
+ },
+ {
+  "voice": "f",
+  "kind": "syllable",
+  "id": "yod-e",
+  "want": "ye",
+  "pick": "audio-takes/sound-check/f-syllable-yod-e-58b357.mp3",
+  "text": "יֶה",
+  "right": 4,
+  "of": 5,
+  "heard": [
+   "j'e",
+   "j'e.",
+   "j'e",
+   "j'a",
+   "j'e"
+  ],
+  "files": [
+   "audio/f/israeli/syllable/yod-e.mp3"
+  ]
+ },
+ {
+  "voice": "f",
+  "kind": "vowel",
+  "id": "shva",
+  "want": "ve",
+  "pick": "audio-takes/sound-check/f-vowel-shva-09c06d.mp3",
+  "text": "וֶ",
+  "right": 5,
+  "of": 5,
+  "heard": [
+   "v'e",
+   "v'e",
+   "v'e",
+   "v'e",
+   "v'e"
+  ],
+  "files": [
+   "audio/f/israeli/vowel/shva.mp3"
+  ]
+ },
+ {
+  "voice": "m",
+  "kind": "syllable",
+  "id": "he-e",
+  "want": "he",
+  "pick": "audio-takes/sound-check/m-syllable-he-e-797f52.mp3",
+  "text": "הֶ",
+  "right": 5,
+  "of": 5,
+  "heard": [
+   "h'e",
+   "h'e",
+   "h'e",
+   "h'e",
+   "h'e"
+  ],
+  "files": [
+   "audio/m/israeli/syllable/he-e.mp3"
+  ]
+ },
+ {
+  "voice": "m",
+  "kind": "syllable",
+  "id": "pe-u",
+  "want": "pu",
+  "pick": "audio-takes/sound-check/m-syllable-pe-u-09fa42.mp3",
+  "text": "פּוּ",
+  "right": 5,
+  "of": 5,
+  "heard": [
+   "p'u",
+   "p'u",
+   "p'u",
+   "p'u",
+   "p'u"
+  ],
+  "files": [
+   "audio/m/israeli/syllable/pe-u.mp3"
+  ]
+ },
+ {
+  "voice": "m",
+  "kind": "syllable",
+  "id": "qof-e",
+  "want": "ke",
+  "pick": "audio-takes/sound-check/m-syllable-qof-e-71f547.mp3",
+  "text": "קֵה",
+  "right": 4,
+  "of": 5,
+  "heard": [
+   "k'a",
+   "k'e.",
+   "k'e.",
+   "k'e",
+   "k'e."
+  ],
+  "files": [
+   "audio/m/israeli/syllable/qof-e.mp3"
+  ]
+ },
+ {
+  "voice": "m",
+  "kind": "syllable",
+  "id": "yod-e",
+  "want": "ye",
+  "pick": "audio-takes/sound-check/m-syllable-yod-e-f368aa.mp3",
+  "text": "יֶ.",
+  "right": 4,
+  "of": 5,
+  "heard": [
+   "j'e",
+   "j'a",
+   "j'e",
+   "j'e",
+   "j'e"
+  ],
+  "files": [
+   "audio/m/israeli/syllable/yod-e.mp3"
+  ]
+ },
+ {
+  "voice": "m",
+  "kind": "syllable",
+  "id": "zayin-u",
+  "want": "zu",
+  "pick": "audio-takes/sound-check/m-syllable-zayin-u-e64252.mp3",
+  "text": "זוּ",
+  "right": 4,
+  "of": 5,
+  "heard": [
+   "z'u",
+   "z'o",
+   "z'u",
+   "z'u",
+   "z'u"
+  ],
+  "files": [
+   "audio/m/israeli/syllable/zayin-u.mp3"
+  ]
+ },
+ {
+  "voice": "m",
+  "kind": "vowel",
+  "id": "shva",
+  "want": "ve",
+  "pick": "audio-takes/sound-check/m-vowel-shva-2c6312.mp3",
+  "text": "וֶ",
+  "right": 5,
+  "of": 5,
+  "heard": [
+   "v'e",
+   "v'e",
+   "v'e",
+   "ve",
+   "v'e"
+  ],
+  "files": [
+   "audio/m/israeli/vowel/shva.mp3"
+  ]
+ }
+]

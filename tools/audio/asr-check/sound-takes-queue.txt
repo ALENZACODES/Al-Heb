@@ -1,1 +1,2 @@
 run 1: clips at 'listen' in docs/audio/SOUNDS-CHECK.md, 2026-11-16
+run 2: second-round spellings for the seven syllables no first take fixed, 2026-11-16

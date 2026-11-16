@@ -23,7 +23,7 @@ writes the sidecar. Then run scan_sounds.py again, and tools/deploy/media-hosts.
 
 --list prints what would be recorded, without a key.
 """
-import csv, json, os, random, re, sys
+import csv, hashlib, json, os, random, re, sys
 from collections import Counter
 
 sys.path.insert(0, os.path.dirname(__file__))
@@ -36,6 +36,9 @@ HELPER = {'ַ': ['ָה', 'ַא'], 'ָ': ['ָה'], 'ֶ': ['ֶה'], 'ֵ': ['ֵה',
 # Letter names and other clips that are not one letter plus one vowel: spellings to try, by clip id.
 NAMED = {'he': ['הֵא', 'הֵא.', 'הֵי', 'הֶא'], 'pe-final': ['פֵּא סוֹפִית', 'פֵּה סוֹפִית', 'פֵּי סוֹפִית', 'פֵּא, סוֹפִית'],
          'segol': ['אֶ', 'אֶה', 'אֶ.', 'אֶה.']}
+# Second round: more spellings for the syllables no first-round take fixed (dagesh, a silent alef or a tsere in place of segol).
+EXTRA = {'gimel-u': ['גּוּ', 'גּוּ.', 'גוּא', 'גּוּא'], 'yod-e': ['יֵה', 'יֵ', 'יֶא', 'יֵא', 'יֶהּ'], 'he-e': ['הֶא', 'הֵה', 'הֵ', 'הֶהּ'],
+         'pe-u': ['פּוּא', 'פּוּ,', 'פּוּה'], 'qof-e': ['קֶא', 'קֵה', 'קֵ', 'קֵא'], 'zayin-u': ['זוּא', 'זוּ,', 'זוּה']}
 # Fixed already on the letter audit branch (claude/letter-audit-2026-11-13), or waiting for a decision on what the clip should say.
 SKIP = {'khaf', 'vet', 'vav-sound', 'vet-sound', 'vav-a', 'resh', 'shin', 'dagesh', 'shva'}
 
@@ -56,6 +59,8 @@ def spellings(row):
             base = text.replace(mk, '')                           # the letter with its dagesh or shin/sin dot
             for h in HELPER[mk]:
                 out += [base + h, base + h + '.']
+    if row['kind'] == 'syllable':
+        out += EXTRA.get(row['id'], [])
     seen = []
     for t in out:
         if t not in seen:
@@ -82,7 +87,7 @@ def record():
     index = []
     for t in targets():
         for i, text in enumerate(t['spellings'], 1):
-            name = f"{t['voice']}-{t['kind']}-{t['id']}-{i}.mp3"
+            name = f"{t['voice']}-{t['kind']}-{t['id']}-{hashlib.sha1(text.encode()).hexdigest()[:6]}.mp3"
             dst = os.path.join(OUT, name)
             if not os.path.exists(dst):
                 open(dst, 'wb').write(F.synth_rate(text, VOICE[t['voice']], key))

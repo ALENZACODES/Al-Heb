@@ -224,6 +224,7 @@ if __name__ == '__main__':
     ap.add_argument('--passes', type=int, default=3)
     ap.add_argument('--first-pass', type=int, default=0, help='number of the first pass (to add passes later)')
     ap.add_argument('--disputed', action='store_true', help='hear again only the clips not at "agree"')
+    ap.add_argument('--new', action='store_true', help='hear only the recordings that have no hearing yet')
     ap.add_argument('--report-only', action='store_true')
     a = ap.parse_args()
     if not a.report_only:
@@ -232,5 +233,8 @@ if __name__ == '__main__':
         only = None
         if a.disputed:                                  # more hearings, only for clips the passes so far do not agree on
             only = {c['sha'] for c, row, want, verdict, n, hs in judged() if verdict in ('listen', 'split', 'majority')}
+        if a.new:                                       # only recordings with no hearing yet (clips replaced since the last run)
+            seen = {json.loads(l)['sha'] for l in open(HEARD, encoding='utf-8')} if os.path.exists(HEARD) else set()
+            only = {c['sha'] for c in clips() if c['sha'] not in seen}
         listen(a.model, a.passes, a.first_pass, only)
     report()

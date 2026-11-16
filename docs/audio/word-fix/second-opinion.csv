@@ -1,0 +1,254 @@
+file,pointed_hebrew,word_model_heard,sound_model_heard,should_sound,sounds_matched,same_audio_files
+audio/f/israeli/dictionary/dict-v05a297de.mp3,סָנַט,סנאט / סנאט,sanˈat,sanat,1.0,1
+audio/f/israeli/dictionary/dict-v0a92c26e.mp3,הִשְׁקִיעַ,השקיעה / השקיעה,hiʃkˈiʔa,hiskia,1.0,1
+audio/f/israeli/dictionary/dict-v11122fe7.mp3,פָּן,פאן / פאן,fˈan,pan,0.667,1
+audio/f/israeli/dictionary/dict-v17d329a2.mp3,פָּרוּר,ברור / ברור,paʁˈuʁ,parur,1.0,1
+audio/f/israeli/dictionary/dict-v236feefa.mp3,רִקֵּעַ,ריקאה / ריקאה,ʁikˈeʔa,rikea,1.0,1
+audio/f/israeli/dictionary/dict-v30c853cb.mp3,כַּן,כאן / כאן,kˈan,kan,1.0,1
+audio/f/israeli/dictionary/dict-v4a11c7a0.mp3,אוֹמָה,או מה? / או מה?,ʔˈo mˈa?,oma,1.0,1
+audio/f/israeli/dictionary/dict-v5c71fdb5.mp3,הֵינִיק,היי ניק / היי ניק,hejnˈik,henik,0.909,1
+audio/f/israeli/dictionary/dict-v627d068b.mp3,הִפּוּךְ,כיפור / כיפור,hipˈuʁ,hipux,0.8,1
+audio/f/israeli/dictionary/dict-v66cc5393.mp3,הִבְקִיעַ,הבקיעה / הבקיעה,hivkˈiʔa,hivkia,1.0,1
+audio/f/israeli/dictionary/dict-v7b8bf406.mp3,קָץ,קאץ / קאץ,kˈats,kac,1.0,1
+audio/f/israeli/dictionary/dict-v82c8082d.mp3,קָרַן,קרן / קראן,kaʁˈan,karan,1.0,1
+audio/f/israeli/dictionary/dict-v8b326f31.mp3,סָכַר,שכר / שכר,saχˈaʁ,saxar,1.0,1
+audio/f/israeli/dictionary/dict-v9d74021c.mp3,עִבָּה,היא באה / היא באה,hˈi bˈa.,iba,0.857,1
+audio/f/israeli/dictionary/dict-va592f974.mp3,פֶּרֶא,תראה / תראה,tˈeʁe,pere,0.75,1
+audio/f/israeli/dictionary/dict-vdd9e2334.mp3,הׇאֳרַק,הורק / הורק,hoʁˈak,hoorak,0.909,1
+audio/f/israeli/dictionary/dict-vf3c09f43.mp3,צָד,צעד / צעד,tsˈad,cad,1.0,1
+audio/f/israeli/word/brich-shmei-w13.mp3,לְעָלַם,להלם / להלם,leʔalˈam,lalam,0.909,1
+audio/f/israeli/word/h14bf163a.mp3,אֲפֵר,עשר / עשר,ʔafˈeʁ,afer,1.0,1
+audio/f/israeli/word/h432cf2d0.mp3,הֲ־,אה. / אה.,hˈa!,ha,1.0,1
+audio/f/israeli/word/h888649f8.mp3,עָלָה,אללה / אללה,ʔalˈa,ala,1.0,1
+audio/f/israeli/word/shema-vahavta-w29.mp3,בַדֶּרֶךְ,ודרך / ודרך,vadˈeʁeχ,vaderex,1.0,3
+audio/m/israeli/dictionary/dict-v0adc7d97.mp3,הִשְׁתִּין,אשתים / אשתים,hiʃtˈim,histin,0.833,1
+audio/m/israeli/dictionary/dict-v11122fe7.mp3,פָּן,פאן / פאן,kˈan,pan,0.667,1
+audio/m/israeli/dictionary/dict-v14a31f1d.mp3,אֹרַס,הורס / הורס,hoʁˈas,oras,0.889,1
+audio/m/israeli/dictionary/dict-v236feefa.mp3,רִקֵּעַ,ריקאה / ריקאה,ʁikˈaʔa,rikea,0.8,1
+audio/m/israeli/dictionary/dict-v2aa896cd.mp3,הִבְרִיק,עברית / עברית,ʔivʁˈit,hivrik,0.727,1
+audio/m/israeli/dictionary/dict-v389daff0.mp3,קָט,קאט / כת,kˈat,kat,1.0,1
+audio/m/israeli/dictionary/dict-v55e1d7cf.mp3,סִנְכְרֵן,סינקרן / סינקרן,sinkʁˈen,sinxren,0.857,1
+audio/m/israeli/dictionary/dict-v717699fd.mp3,תָּר,טער / טר,tˈaʁ,tar,1.0,1
+audio/m/israeli/dictionary/dict-v81437014.mp3,סָכָל,שחל / שחל,saχˈal,saxal,1.0,1
+audio/m/israeli/dictionary/dict-v8d16ce68.mp3,עָלַז,אלעז / אלעז,ʔalˈaz,alaz,1.0,1
+audio/m/israeli/dictionary/dict-vada9e769.mp3,תְּאוֹם,תהום / תהום,teʔˈom,tom,0.857,1
+audio/m/israeli/dictionary/dict-vb75ed959.mp3,הֵד,Head / Head,hˈed,hed,1.0,1
+audio/m/israeli/dictionary/dict-vc9883424.mp3,עַקְרָב,הקרב / הקרב,hakʁˈav,akrav,0.909,1
+audio/m/israeli/dictionary/dict-vd6be87a0.mp3,אָטַם,אדם / אדם,ʔadˈam,atam,0.75,1
+audio/m/israeli/dictionary/dict-vdd9e2334.mp3,הׇאֳרַק,או רק. / הורק,hoʁˈak,hoorak,0.909,1
+audio/m/israeli/dictionary/dict-ve5f182ae.mp3,רִתֵּךְ,פריטך / ריתך,ʁitˈeχ,ritex,1.0,1
+audio/m/israeli/dictionary/dict-vfbc8fdb6.mp3,קַת,קאט / קאט,kˈat,kat,1.0,1
+audio/m/israeli/word/aleinu-1-w6.mp3,גְּדֻלָּה,נדולה / נדולה,nidulˈa,gdula,0.727,1
+audio/m/israeli/word/brich-shmei-w43.mp3,וְיַת־כָּל־דִּי־לִי,ויד קל דילי. / ויד קל דילי,vejˈad kˈal dˈili.,vejat kal di li,0.917,1
+audio/m/israeli/word/kaddish-1-w33.mp3,וְיִתְהַדָּר,והתהדר. / והתהדר.,vehithadˈaʁ.,vejithadar,0.9,1
+audio/m/israeli/word/mi-chamocha-1-w6.mp3,נֶאְדָּר,נהדר! / נהדר!,naʔadˈaʁ,nedar,0.727,2
+audio/f/israeli/dictionary/dict-v068d00f5.mp3,יַעַד,יד / יד,jˈaʔad,jaad,1.0,1
+audio/f/israeli/dictionary/dict-v1abae804.mp3,תָּג,טאג / טאג,tˈaɡ,tag,1.0,1
+audio/f/israeli/dictionary/dict-v2433d20b.mp3,שָׁקַט,שקט / שקעת,ʃakˈat,sakat,1.0,1
+audio/f/israeli/dictionary/dict-v3228345c.mp3,נוּר,נו / נו,nˈuʁ,nur,1.0,1
+audio/f/israeli/dictionary/dict-v47224aa8.mp3,הִכְנִיעַ,הכניעה / הכניעה,hiχnˈiʔa,hixnia,1.0,1
+audio/f/israeli/dictionary/dict-v4dc5d298.mp3,פַּרְעוֹשׁ,פרוש / פרוש,paʁˈoʃ,paros,1.0,1
+audio/f/israeli/dictionary/dict-v55e1d7cf.mp3,סִנְכְרֵן,סינקרן / סינקרן,sinkʁˈen,sinxren,0.857,1
+audio/f/israeli/dictionary/dict-v6d94573f.mp3,אִפֵר,היפר / היתר,hitˈeʁ,ifer,0.667,1
+audio/f/israeli/dictionary/dict-v7f95515b.mp3,עַיִט,היית / היית,ʔˈajit,ajit,1.0,1
+audio/f/israeli/dictionary/dict-v8d16ce68.mp3,עָלַז,אלעז / אלעז,ʔalˈaz,alaz,1.0,1
+audio/f/israeli/dictionary/dict-va68ecfe2.mp3,נָס,נאס / נאס,nˈas,nas,1.0,1
+audio/f/israeli/dictionary/dict-vae5ac99e.mp3,אָרַג,הרג / אראג,haʁˈaɡ,arag,0.889,1
+audio/f/israeli/dictionary/dict-vd549b2f6.mp3,אַיָּה,היה. / היה,ʔajˈa.,aja,1.0,1
+audio/f/israeli/dictionary/dict-vf983d985.mp3,עֲזָרָה,אזהרה / אזהרה,ʔazaʁˈa,azara,1.0,1
+audio/f/israeli/word/amidah-lips-w4.mp3,וּפִי,אופי / אופי,ʔufˈi,ufi,1.0,1
+audio/f/israeli/word/ashrei-145-1-3-w6.mp3,וַאֲבָרֲכָה,והברכה. / והברכה.,veʔˈav ʔaʁaχˈa,vaavaraxa,0.889,1
+audio/f/israeli/word/brich-shmei-w48.mp3,זָן,זאן / זאן,zˈan,zan,1.0,1
+audio/f/israeli/word/hf76c8cd2.mp3,אָכֹם,עקם / אקאם,ʔakˈam,axom,0.5,1
+audio/f/israeli/word/i-10-w11.mp3,יְבָרֶכְךָ,יברך. / יברך.,jevaʁeχˈa,jvarexxa,0.875,1
+audio/f/israeli/word/kaddish-1-w25.mp3,לְעָלַם,להלם / להלם,leʔalˈam,lalam,0.909,1
+audio/m/israeli/dictionary/dict-v1d5d18fe.mp3,נִעְנֵעַ,נהניה / מייניה,mijanˈeha,ninea,0.615,1
+audio/m/israeli/dictionary/dict-v2468947f.mp3,אֻכַּל,הוא קל. / הוא קל.,hˈu kˈal.,ukal,0.889,1
+audio/m/israeli/dictionary/dict-v3cc1992c.mp3,נָם,נאם / נאם,nˈam,nam,1.0,1
+audio/m/israeli/dictionary/dict-v55e2c8a5.mp3,אָסַר,עשר / עשר,ʔasˈaʁ,asar,1.0,1
+audio/m/israeli/dictionary/dict-v5f3681a3.mp3,יֵאֵשׁ,‫יש. / יעש,jˈeʔeʃ.,jees,1.0,1
+audio/m/israeli/dictionary/dict-v65697bc0.mp3,הִשְׁעָה,תשעה / תשעה,hiʃʔˈat,hisa,0.889,1
+audio/m/israeli/dictionary/dict-v81f6e097.mp3,בְּתוּלִים,גדולים / גדולים,ɡdolˈim,btulim,0.5,1
+audio/m/israeli/dictionary/dict-v88c94bb1.mp3,נָמַס,נמאס / נמאס,namˈas,namas,1.0,1
+audio/m/israeli/dictionary/dict-v900fc491.mp3,נִזַּר,ניזהר / ניזהר,nizʔˈaʁ,nizar,1.0,1
+audio/m/israeli/dictionary/dict-v983aaf3a.mp3,יָצוּעַ,יצואה / יצואה,jatsˈua.,jacua,1.0,1
+audio/m/israeli/dictionary/dict-va8b52d4d.mp3,יִוֵּן,איבן / איבן,ʔivˈen,jiven,0.889,1
+audio/m/israeli/dictionary/dict-vb9c8a2b6.mp3,וִיסְקִי,וויסקי / וויסקי,wˈiski,viski,0.8,1
+audio/m/israeli/dictionary/dict-vc361a16f.mp3,עִוָּה,היבה / איבה,hivˈa,iva,0.857,1
+audio/m/israeli/dictionary/dict-vd1dc7040.mp3,צָפָה,שפה / שפה,tsafˈa,cafa,1.0,1
+audio/m/israeli/dictionary/dict-vd9e64de1.mp3,יִשֵּׂם,איסם / איסם,jisˈem.,jisem,1.0,1
+audio/m/israeli/dictionary/dict-vf2bb3587.mp3,שָׁ,שעה / שעה,ʃˈa.,sa,1.0,1
+audio/m/israeli/word/birkat-hamazon-1-w12.mp3,בְּחֵן,וכן / וכן,veχˈen,bxen,0.667,1
+audio/m/israeli/word/brich-shmei-w13.mp3,לְעָלַם,להלם / להלם,leʔalˈam,lalam,0.909,1
+audio/m/israeli/word/brich-shmei-w48.mp3,זָן,זאן / זן,zˈan,zan,1.0,1
+audio/m/israeli/word/brich-shmei-w93.mp3,טָבְוָן,טוואן / טוואן,tavˈan,tavvan,0.909,1
+audio/m/israeli/word/h0cc80aed.mp3,טַף,ת׳ / ת׳,tˈaf,taf,1.0,1
+audio/m/israeli/word/h29a2e2b8.mp3,וָו,ו. / ו.,vˈav,vav,1.0,1
+audio/m/israeli/word/h4fa970c1.mp3,לָן,לאן / לאן,lˈan,lan,1.0,1
+audio/m/israeli/word/h77ef11e1.mp3,לָשׁ,לאש / לאש,lˈaʃ,las,1.0,1
+audio/m/israeli/word/hffd88aa2.mp3,עָקַב,הקו / הקו,hakˈav,akav,0.889,1
+audio/m/israeli/word/kaddish-1-w25.mp3,לְעָלַם,להלם / להלם,leʔalˈam,lalam,0.909,1
+audio/m/israeli/word/kiddush-shabbat-eve-w11.mp3,בָנוּ,באנו. / באנו.,bˈanu,vanu,0.75,2
+audio/m/israeli/word/yigdal-w4.mp3,וְיִשְׁתַּבַּח,והשתבח. / וישתבח.,vehiʃtabˈaχ.,vejistabax,0.9,1
+audio/f/israeli/dictionary/dict-v0764bb03.mp3,הַזְהָרָה,אזהרה / אזהרה,hazhaʁˈa,hazhara,1.0,1
+audio/f/israeli/dictionary/dict-v0db67d59.mp3,תֻּיַּק,טויק / טויאק,tujˈak,tujak,1.0,1
+audio/f/israeli/dictionary/dict-v1cd61372.mp3,שָׁד,שעד / שעד,ʃˈaʔad,sad,0.857,1
+audio/f/israeli/dictionary/dict-v2468947f.mp3,אֻכַּל,הוא קל / הוא קל.,hˈu kˈal,ukal,0.889,1
+audio/f/israeli/dictionary/dict-v323d1bb3.mp3,מָאַס,מעש / מעש,maʔˈas,maas,1.0,1
+audio/f/israeli/dictionary/dict-v3cc1992c.mp3,נָם,נאם / נאם,nˈam,nam,1.0,1
+audio/f/israeli/dictionary/dict-v4f069a9b.mp3,זֵד,Z / Z,zˈed,zed,1.0,1
+audio/f/israeli/dictionary/dict-v55e2c8a5.mp3,אָסַר,השר / עשר,hasˈaʁ,asar,0.889,1
+audio/f/israeli/dictionary/dict-v5f3681a3.mp3,יֵאֵשׁ,יהיה אש / ‫יש.,jeʔˈeʃ.,jees,1.0,1
+audio/f/israeli/dictionary/dict-v81437014.mp3,סָכָל,שחל / שחל,saχˈal,saxal,1.0,1
+audio/f/israeli/dictionary/dict-v84da75c3.mp3,קֶטְשׁוֹפּ,קצ'ופ / קצ'ופ,ketʃˈop,kecop,1.0,1
+audio/f/israeli/dictionary/dict-va6fd2f59.mp3,גּוּשׁ,בוש / גוש,bˈuʃ,gus,0.667,1
+audio/f/israeli/dictionary/dict-vaac207f7.mp3,הִתְנִיעַ,התניעה / התניעה,hitnijˈa,hitnia,0.923,1
+audio/f/israeli/dictionary/dict-vba0e9abb.mp3,אִחֵד,ייחד / ייחד,jiχˈed,ixed,0.889,1
+audio/f/israeli/dictionary/dict-vc614b204.mp3,תֹּף,צוף / צוף,tsˈof,tof,0.667,1
+audio/f/israeli/dictionary/dict-vcc721cac.mp3,עָצָב,הצו / עצב,ʔatsˈav,acav,1.0,1
+audio/f/israeli/dictionary/dict-vd6be87a0.mp3,אָטַם,אטאם / אטם,ʔatˈam,atam,1.0,1
+audio/f/israeli/dictionary/dict-ve5070ea3.mp3,אִפֵּר,היפר / היפר,hipˈeʁ,iper,0.889,1
+audio/f/israeli/word/h4b14c918.mp3,לַק,לאק / לאק,lˈak,lak,1.0,1
+audio/f/israeli/word/h731d1356.mp3,שָׂשׂ,סאס / סאס,sˈas,sas,1.0,1
+audio/f/israeli/word/hffd88aa2.mp3,עָקַב,הקו / עקב,hakˈav,akav,0.889,1
+audio/f/israeli/word/i-10-w7.mp3,אֵל נָא רְפָא נָא לָהּ,אל נאר אפה נאלה / אל נא רפא נאללה,ʔˈel nˈa ʁefˈa nˈala.,el na rfa na la,0.957,1
+audio/f/israeli/word/kaddish-1-w26.mp3,וּלְעָלְמֵי,אולאל מי / אולאל מי,ʔulˈal mˈej.,ulalmej,1.0,1
+audio/f/israeli/word/r15-w1.mp3,יְבָרֶכְךָ,יברכה. / יברך,jevaʁeχˈa,jvarexxa,0.875,1
+audio/f/israeli/word/shir-hamaalot-w39.mp3,וּבָכֹה,ובחור / ובחור,uvaχˈo,uvaxo,1.0,1
+audio/m/israeli/dictionary/dict-v0764bb03.mp3,הַזְהָרָה,אזהרה / אזהרה,hazhaʁˈa,hazhara,1.0,1
+audio/m/israeli/dictionary/dict-v0f8b084a.mp3,בַּג,באג / באג,bˈaɡ,bag,1.0,1
+audio/m/israeli/dictionary/dict-v16740928.mp3,זַן,זאן / זאן,zˈan,zan,1.0,1
+audio/m/israeli/dictionary/dict-v1e9e22a6.mp3,אִבְחֵן,אבחן / יבחן.,jivχˈen,ivxen,0.909,1
+audio/m/israeli/dictionary/dict-v2de98b56.mp3,בַּז,באז / באז,bˈaz,baz,1.0,1
+audio/m/israeli/dictionary/dict-v3ed914f4.mp3,בִּקֵּעַ,ביקאה / ביקאה,bikˈeʔa,bikea,1.0,1
+audio/m/israeli/dictionary/dict-v4f069a9b.mp3,זֵד,Z / Z,zˈed,zed,1.0,1
+audio/m/israeli/dictionary/dict-v580e08ee.mp3,יִדֵּעַ,אידאה / אידאה,hidˈeʔa,jidea,0.8,1
+audio/m/israeli/dictionary/dict-v60d8c2a7.mp3,עָרַל,אראל / אראל,ʔaʁˈal,aral,1.0,1
+audio/m/israeli/dictionary/dict-v695c7550.mp3,רִפָּה,ריפה / קריפה,ʁipˈa,ripa,1.0,1
+audio/m/israeli/dictionary/dict-v71e544bf.mp3,סֻנְכְרַן,סונקרן / סונקרן,sunkʁˈan,sunxran,0.857,1
+audio/m/israeli/dictionary/dict-v8242b1b0.mp3,חָמַס,חמאס / חמאס,χamˈas,xamas,1.0,1
+audio/m/israeli/dictionary/dict-v9fd8edbe.mp3,הִזְהִיר,He's here. / He's here,hizhˈiʁ,hizhir,1.0,1
+audio/m/israeli/dictionary/dict-vaa07c984.mp3,אֲוָז,אבאז / אווז,ʔavˈaz,avaz,1.0,1
+audio/m/israeli/dictionary/dict-vb242d8f4.mp3,הׇעֳבַר,הורובר / הורובר,hoʁovˈaʁ,hoovar,0.923,1
+audio/m/israeli/dictionary/dict-ve0f02922.mp3,רֵחַיִם,ברכיים / פרחיים,bʁeχˈajim,rexajim,0.933,1
+audio/m/israeli/dictionary/dict-ve8865de4.mp3,שְׁעוּעִית,שהווית / שהווית,ʃehuʔˈit,suit,0.8,1
+audio/m/israeli/dictionary/dict-veb3ae675.mp3,פָּאבּ,קאב / קאב,tˈab,pab,0.667,1
+audio/m/israeli/dictionary/dict-vf64ecd57.mp3,עָרֵל,הראל / הראל,ʔaʁʔˈel,arel,1.0,1
+audio/f/israeli/dictionary/dict-v08d9c6ed.mp3,זֵעָה,זהה. / זהה.,zeʔˈa,zea,1.0,1
+audio/f/israeli/dictionary/dict-v0f8b084a.mp3,בַּג,באג / באג,bˈaɡ,bag,1.0,1
+audio/f/israeli/dictionary/dict-v1348133a.mp3,מֶם,מ. / מ.,mˈem,mem,1.0,1
+audio/f/israeli/dictionary/dict-v1e9e22a6.mp3,אִבְחֵן,יבחן. / יבחן,jivχˈen,ivxen,0.909,1
+audio/f/israeli/dictionary/dict-v2bdece38.mp3,אֵיְדְּס,אייטס / אייטס,ʔˈejts,ejds,0.571,1
+audio/f/israeli/dictionary/dict-v3ed914f4.mp3,בִּקֵּעַ,ביקע / ביקעה,bikˈeʔa,bikea,1.0,1
+audio/f/israeli/dictionary/dict-v4f199720.mp3,הִרְגִּיעַ,הרגיעה / הרגיעה,hiʁɡˈiʔa,hirgia,1.0,1
+audio/f/israeli/dictionary/dict-v569f2630.mp3,אֱוִיל,אוויר / אוויר,ʔevˈil,evil,1.0,1
+audio/f/israeli/dictionary/dict-v60d8c2a7.mp3,עָרַל,אראל / אראל,ʔaʁˈal,aral,1.0,1
+audio/f/israeli/dictionary/dict-v65697bc0.mp3,הִשְׁעָה,אישה / אישה,hiʃʔˈa,hisa,1.0,1
+audio/f/israeli/dictionary/dict-v717699fd.mp3,תָּר,טאר / טאר,tˈaʔaʁ,tar,0.857,1
+audio/f/israeli/dictionary/dict-v76e88ba2.mp3,הִלּוּךְ,הילור / הילור,hilˈuʁ,hilux,0.8,1
+audio/f/israeli/dictionary/dict-v858164ba.mp3,פָּרַק,ברק / ברק,paʁˈak,parak,1.0,1
+audio/f/israeli/dictionary/dict-v900fc491.mp3,נִזַּר,ניזהר / ניזהר,nizʔˈaʁ,nizar,1.0,1
+audio/f/israeli/dictionary/dict-va149eef9.mp3,שָׁט,שעת / שעת,ʃˈat,sat,1.0,1
+audio/f/israeli/dictionary/dict-va748bd68.mp3,בֵּיאֵס,בייס / בייס,bejˈes,bees,0.889,1
+audio/f/israeli/dictionary/dict-vb259c350.mp3,סָפַן,שפן / שפן,safˈan,safan,1.0,1
+audio/f/israeli/dictionary/dict-vc76c6e59.mp3,אַחְזָקָה,החזקה / החזקה,haχzakˈa,axzaka,0.923,1
+audio/f/israeli/dictionary/dict-vcd9714c3.mp3,הִבִּיעַ,הביעה / הביעה,hibˈia,hibia,1.0,1
+audio/f/israeli/dictionary/dict-vdab4e390.mp3,חָמָס,חמאס / חמאס,χamˈas,xamas,1.0,1
+audio/f/israeli/dictionary/dict-ve8865de4.mp3,שְׁעוּעִית,שהוהית / שאוהית,ʃeʔujˈit,suit,0.8,1
+audio/f/israeli/word/bless-priestly-1-w1.mp3,יְבָרֶכְךָ,יברך. / יברך.,jevaʁeχˈa,jvarexxa,0.875,1
+audio/f/israeli/word/brich-shmei-w31.mp3,לָן,לאן / לאן,lˈan,lan,1.0,1
+audio/f/israeli/word/h29a2e2b8.mp3,וָו,ו. / ו.,vˈav,vav,1.0,1
+audio/f/israeli/word/h4fa970c1.mp3,לָן,לאן / לאן,lˈan,lan,1.0,1
+audio/f/israeli/word/h743b589d.mp3,צַר,צער / צער,tsˈaʔaʁ,car,0.857,1
+audio/f/israeli/word/h9a35778f.mp3,שַׂק,סאק / סאק,sˈak,sak,1.0,1
+audio/f/israeli/word/hcd00a615.mp3,הָא,אה? / הא?,hˈa?,ha,1.0,1
+audio/f/israeli/word/kaddish-1-w27.mp3,עָלְמַיָּא,אלמאיה / אלמאיה,ʔˈal mˈaja,almaja,1.0,1
+audio/m/israeli/dictionary/dict-v03706504.mp3,פַּת,פאט / פאט,pˈat,pat,1.0,1
+audio/m/israeli/dictionary/dict-v1232a343.mp3,יִעֵר,אי-אר / אי אר,hiʔˈeʁ,jier,0.75,1
+audio/m/israeli/dictionary/dict-v17d329a2.mp3,פָּרוּר,ברור / ברור,baʁˈuʁ,parur,0.8,1
+audio/m/israeli/dictionary/dict-v1f934820.mp3,שָׁמַט,שמעת / שמעת,ʃamˈat,samat,1.0,1
+audio/m/israeli/dictionary/dict-v789927af.mp3,פָּרַם,פארם / פארם,paʁˈam,param,1.0,1
+audio/m/israeli/dictionary/dict-v8ab32435.mp3,כַּת,קאט / קאט,kˈat,kat,1.0,1
+audio/m/israeli/dictionary/dict-va4b7d8ca.mp3,הֵא,‫ה. / ה.,hˈa,he,0.5,1
+audio/m/israeli/dictionary/dict-vaac207f7.mp3,הִתְנִיעַ,התמיה / התניעה,hitnˈija.,hitnia,0.923,1
+audio/m/israeli/dictionary/dict-vb259c350.mp3,סָפַן,שפן / שפן,safˈan,safan,1.0,1
+audio/m/israeli/dictionary/dict-vc4b2b486.mp3,כְּ־,כן. / כן.,kˈen.,k,0.5,1
+audio/m/israeli/dictionary/dict-ve8caca46.mp3,הִטְבִּיעַ,התביעה / התביעה,hitbˈia,hitbia,1.0,1
+audio/m/israeli/word/brich-shmei-w59.mp3,עַל־מַלְכַיָּא,אל-מלקאיה / אלמלקאיה,ʔˈal malkajˈa,al malxaja,0.889,1
+audio/m/israeli/word/h69a35691.mp3,פַּר,פער / פר,tˈaʁ,par,0.667,1
+audio/m/israeli/word/hcfc3bd6e.mp3,אֵם,M / M,ʔˈem,em,1.0,1
+audio/m/israeli/word/i-09-w15.mp3,וְאָעִירָה,ואהירה. / ואיירא.,vehaʔˈiʁa.,veaira,0.923,1
+audio/m/israeli/word/i-35-w11.mp3,וַיְקַדְּשֵׁהוּ,וואי קדשהו / וייקדשהו,wˈaj kadʃehˈu.,vajkadsehu,0.9,1
+audio/m/israeli/word/kaddish-1-w27.mp3,עָלְמַיָּא,אלמאיה / אלמאיה,ʔˈal mˈajja,almaja,0.923,1
+audio/m/israeli/word/numbers-13.mp3,חֲמִשִּׁים,חמישיסים / חמישיסים,χamiʃisˈim,xamisim,0.875,1
+audio/f/israeli/dictionary/dict-v03706504.mp3,פַּת,פאט / פאט,pˈat,pat,1.0,1
+audio/f/israeli/dictionary/dict-v0fd4bc97.mp3,מִיהוּ,מי הוא? / מי הוא?,mˈi hˈu?,mihu,1.0,1
+audio/f/israeli/dictionary/dict-v2de98b56.mp3,בַּז,באז / באז,bˈaz,baz,1.0,1
+audio/f/israeli/dictionary/dict-v42a3e89e.mp3,כַּד,קאד / קאד,kˈad,kad,1.0,1
+audio/f/israeli/dictionary/dict-v509a73fc.mp3,תַּן,טאן / טאן,tˈan,tan,1.0,1
+audio/f/israeli/dictionary/dict-v580e08ee.mp3,יִדֵּעַ,אידאה / אידאה,jidˈeʔa.,jidea,1.0,1
+audio/f/israeli/dictionary/dict-v61830b9a.mp3,עָרַג,אראג / אראג,haʁˈaɡ,arag,0.889,1
+audio/f/israeli/dictionary/dict-v71c26bc6.mp3,בָּז,באז / באז,bˈaz,baz,1.0,1
+audio/f/israeli/dictionary/dict-v7a8759b4.mp3,שְׁוָא,שוואה / שוואה,ʃuvˈa,sva,0.857,1
+audio/f/israeli/dictionary/dict-v8242b1b0.mp3,חָמַס,חמאס / חמאס,χamˈas,xamas,1.0,1
+audio/f/israeli/dictionary/dict-v88c94bb1.mp3,נָמַס,נמאס / נמאס,namˈas,namas,1.0,1
+audio/f/israeli/dictionary/dict-vc81e8706.mp3,אִתֵּר,איתר / יתר,hitˈeʁ,iter,0.889,1
+audio/f/israeli/dictionary/dict-vd1dc7040.mp3,צָפָה,שפה / שפה,tsafˈa,cafa,1.0,1
+audio/f/israeli/dictionary/dict-vdb91a4c3.mp3,תַּיִשׁ,תא איש / תא איש,tˈajis,tajis,1.0,1
+audio/f/israeli/dictionary/dict-ve8caca46.mp3,הִטְבִּיעַ,התביעה / הטביע,hitbˈia,hitbia,1.0,1
+audio/f/israeli/dictionary/dict-vef83ef55.mp3,יִשֵּׁר,יישאר / יישר.,jiʃˈeʁ,jiser,1.0,1
+audio/f/israeli/word/anchor-pe.mp3,פֶּה,תה / תה,tˈe,pe,0.5,1
+audio/f/israeli/word/avot-1-w27.mp3,וּמֵבִיא,הוא מביא / הוא מביא,hˈu mevˈi,umevi,0.909,1
+audio/f/israeli/word/h60b16793.mp3,פֶּה,תה / ו.,tˈe,pe,0.5,2
+audio/f/israeli/word/h7715384f.mp3,שָׁת,שעת / שעת,ʃˈat,sat,1.0,1
+audio/f/israeli/word/kiddush-shabbat-eve-w11.mp3,בָנוּ,באנו / באנו,bˈanu,vanu,0.75,2
+audio/f/israeli/word/r35-w3.mp3,ברוך,ברור. / ברור.,baʁˈuʁ.,vrx,0.25,1
+audio/m/israeli/dictionary/dict-v0a80d86b.mp3,גֵּו,גב / גב,ɡˈev,gev,1.0,1
+audio/m/israeli/dictionary/dict-v1348133a.mp3,מֶם,מ. / מ.,mˈam,mem,0.667,1
+audio/m/israeli/dictionary/dict-v1ab9d8fb.mp3,נָסַךְ,מסך / מסך,nasˈaχ,nasax,1.0,1
+audio/m/israeli/dictionary/dict-v28359347.mp3,הוֹקִי,אוקי / אוקי,hokˈi,hoki,1.0,1
+audio/m/israeli/dictionary/dict-v30c853cb.mp3,כַּן,כאן / כאן.,kˈan,kan,1.0,1
+audio/m/israeli/dictionary/dict-v5cc09009.mp3,גָּלָה,גאלה / גאלה,ɡˈala,gala,1.0,1
+audio/m/israeli/dictionary/dict-v8b326f31.mp3,סָכַר,שכר / שכר,saχˈaʁ,saxar,1.0,1
+audio/m/israeli/dictionary/dict-va6d10c9e.mp3,יִעֵץ,היא עץ. / אי עץ,jiʔˈets,jiec,1.0,1
+audio/m/israeli/dictionary/dict-vc614b204.mp3,תֹּף,טוב. / טוב.,tˈov,tof,0.667,1
+audio/m/israeli/dictionary/dict-vdbd69ec8.mp3,אָיֹם,היום / היום,ʔajˈom,ajom,1.0,1
+audio/m/israeli/dictionary/dict-ve5070ea3.mp3,אִפֵּר,היפר / היפר,ʔipˈeʁ,iper,1.0,1
+audio/m/israeli/dictionary/dict-veed16b07.mp3,מַעַן,מן / מן,mˈan,maan,0.857,1
+audio/f/israeli/dictionary/dict-v0a80d86b.mp3,גֵּו,גב / גב,ɡˈev,gev,1.0,1
+audio/f/israeli/dictionary/dict-v10c77c9b.mp3,עָמַס,עמאס / עמאס,ʔamˈas,amas,1.0,1
+audio/f/israeli/dictionary/dict-v16740928.mp3,זַן,זאן / זאן,zˈan,zan,1.0,1
+audio/f/israeli/dictionary/dict-v1f934820.mp3,שָׁמַט,שמעת / שמעת,ʃamˈat,samat,1.0,1
+audio/f/israeli/dictionary/dict-v389daff0.mp3,קָט,קאט / קאט,kˈat,kat,1.0,1
+audio/f/israeli/dictionary/dict-v662825f2.mp3,אֻזְכַּר,הוזכר / הוזכר,ʔuzkˈaʁ,uzkar,1.0,1
+audio/f/israeli/dictionary/dict-v824b57b1.mp3,רוֹשֵׁשׁ,ראש אש / ראש אש,ʁoʃˈeʃ,roses,1.0,1
+audio/f/israeli/dictionary/dict-v8ab32435.mp3,כַּת,קאט / קאט,kˈat,kat,1.0,1
+audio/f/israeli/dictionary/dict-va4b7d8ca.mp3,הֵא,אה / ‫ה.,hˈa,he,0.5,1
+audio/f/israeli/dictionary/dict-va8b52d4d.mp3,יִוֵּן,איבן / איבן,ʔivˈen,jiven,0.889,1
+audio/f/israeli/dictionary/dict-vacffb7a9.mp3,הִתְאַוָּה,התהווה / התהווה,hitʔavˈa.,hitava,1.0,1
+audio/f/israeli/dictionary/dict-vdbd69ec8.mp3,אָיֹם,היום / היום,hajˈom,ajom,0.889,1
+audio/f/israeli/dictionary/dict-vf2bb3587.mp3,שָׁ,שעה / שעה,ʃˈa,sa,1.0,1
+audio/f/israeli/word/amidah-elohai-netzor-w51.mp3,פִי,סי / סי,sˈi,fi,0.5,2
+audio/f/israeli/word/brich-shmei-w39.mp3,לְמִרְחַם,למלחם / למלחם,lemilχˈam,lmirxam,0.8,1
+audio/f/israeli/word/brich-shmei-w85.mp3,אֱלָהָא,אלא ה... / אלא ה...,ʔˈela hˈa.,elaha,1.0,1
+audio/f/israeli/word/i-09-w15.mp3,וְאָעִירָה,ואיירא / ואיירא,vehaʔiʁˈa.,veaira,0.923,1
+audio/f/israeli/word/lecha-hashem-w9.mp3,כֹל,קול / קול,kˈol,xol,0.667,1
+audio/m/israeli/dictionary/dict-v05a297de.mp3,סָנַט,סנאט / סנאט,sanˈat,sanat,1.0,1
+audio/m/israeli/dictionary/dict-v22ec94e4.mp3,בִּכָּה,בקעה / בקעה,bikˈa,bika,1.0,1
+audio/m/israeli/dictionary/dict-v3228345c.mp3,נוּר,נו / נו,nˈuʁ,nur,1.0,1
+audio/m/israeli/dictionary/dict-v4c56dac4.mp3,בְּדָל,מדל / דל,medˈal,bdal,0.667,1
+audio/m/israeli/dictionary/dict-v509a73fc.mp3,תַּן,טאן / טאן,tˈan,tan,1.0,1
+audio/m/israeli/dictionary/dict-v7d4f1ab2.mp3,הֵמֵס,אמס / אמס,hemˈes,hemes,1.0,1
+audio/m/israeli/dictionary/dict-v84da75c3.mp3,קֶטְשׁוֹפּ,קצ'ופ / קצ'ופ,ketʃˈop,kecop,1.0,1
+audio/m/israeli/dictionary/dict-v9d74021c.mp3,עִבָּה,היא באה / היא בא.,hibˈa.,iba,0.857,1
+audio/m/israeli/dictionary/dict-va748bd68.mp3,בֵּיאֵס,ב-yes / ב-yes,bejˈes,bees,0.889,1
+audio/m/israeli/dictionary/dict-vc81e8706.mp3,אִתֵּר,היתר / יתר,hitˈeʁ,iter,0.889,1
+audio/m/israeli/dictionary/dict-vd549b2f6.mp3,אַיָּה,היה. / היה.,ʔajˈa.,aja,1.0,1
+audio/m/israeli/dictionary/dict-ve591ed9d.mp3,לֵץ,let's / let's,lˈets,lec,1.0,1
+audio/m/israeli/dictionary/dict-vef83ef55.mp3,יִשֵּׁר,אישר / אישר,ʔiʃˈeʁ,jiser,0.889,1
+audio/m/israeli/dictionary/dict-vf983d985.mp3,עֲזָרָה,אזהרה / אזהרה,ʔazaʁˈa.,azara,1.0,1
+audio/m/israeli/word/brich-shmei-w111.mp3,מִשְׁאֲלִין,מישלין / מישלין,miʃalˈim,misalin,0.857,1
+audio/m/israeli/word/brich-shmei-w32.mp3,חַיִּין,חיים / חיין,χajˈim,xajin,0.8,1
+audio/m/israeli/word/h1797f84f.mp3,צָר,צער / צער,tsˈaʔaʁ,car,0.857,1
+audio/m/israeli/word/kaddish-1-w32.mp3,וְיִתְנַשֵּׂא,והתנסה. / והתנסה.,vehitnasˈe.,vejitnase,0.889,1
+audio/m/israeli/word/lecha-hashem-w9.mp3,כֹל,קול / קול,kˈol,xol,0.667,1

@@ -2444,11 +2444,12 @@
     {
       "id": "h8633259a",
       "text": "מְאֻשָּׁר",
-      "voice": "he-IL-Chirp3-HD-Kore",
+      "voice": "he-IL-Wavenet-A",
       "path": "audio/builder/h8633259a_noa.mp3",
       "fingerprint": "94a48ceb66e662733d35c476d0c8b3050a4b18cc13ed17e9a8dac2d37a4c13a1",
-      "bytes": 10892,
-      "sha256": "7c778146952ff749c309fade66ef9ca4fbcc6774669cdd954de537f0bf6b075c"
+      "bytes": 8307,
+      "sha256": "015f03e7f1d630c005d8913b96082fb4ecef4363b63842d9c3c233ec300ef597",
+      "source": "audio/f/israeli/word/h8633259a.mp3"
     },
     {
       "id": "h3c6a06b3",

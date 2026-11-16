@@ -1,0 +1,142 @@
+[
+ {
+  "voice": "f",
+  "kind": "syllable",
+  "id": "gimel-u",
+  "want": "gu",
+  "pick": null,
+  "text": "גוּ",
+  "right": 1,
+  "of": 5,
+  "heard": [
+   "n'u",
+   "b'u",
+   "g'u",
+   "b'u",
+   "n'u"
+  ],
+  "files": [
+   "audio/f/israeli/syllable/gimel-u.mp3"
+  ]
+ },
+ {
+  "voice": "f",
+  "kind": "syllable",
+  "id": "yod-e",
+  "want": "ye",
+  "pick": null,
+  "text": "יֶ",
+  "right": 1,
+  "of": 5,
+  "heard": [
+   "jihj'e",
+   "jihj'e",
+   "j'e",
+   "jihj'e",
+   "jihj'e"
+  ],
+  "files": [
+   "audio/f/israeli/syllable/yod-e.mp3"
+  ]
+ },
+ {
+  "voice": "m",
+  "kind": "syllable",
+  "id": "he-e",
+  "want": "he",
+  "pick": null,
+  "text": "הֶא",
+  "right": 2,
+  "of": 5,
+  "heard": [
+   "h'e",
+   "h'a",
+   "h'a",
+   "h'e",
+   "h'a"
+  ],
+  "files": [
+   "audio/m/israeli/syllable/he-e.mp3"
+  ]
+ },
+ {
+  "voice": "m",
+  "kind": "syllable",
+  "id": "pe-u",
+  "want": "pu",
+  "pick": "audio-takes/sound-check/m-syllable-pe-u-118dfe.mp3",
+  "text": "פּוּ",
+  "right": 5,
+  "of": 5,
+  "heard": [
+   "p'u",
+   "p'u",
+   "p'u",
+   "p'u",
+   "p'u"
+  ],
+  "files": [
+   "audio/m/israeli/syllable/pe-u.mp3"
+  ]
+ },
+ {
+  "voice": "m",
+  "kind": "syllable",
+  "id": "qof-e",
+  "want": "ke",
+  "pick": null,
+  "text": "קֵא",
+  "right": 3,
+  "of": 5,
+  "heard": [
+   "k'e",
+   "k'e",
+   "k'e",
+   "k'en.",
+   "k'en."
+  ],
+  "files": [
+   "audio/m/israeli/syllable/qof-e.mp3"
+  ]
+ },
+ {
+  "voice": "m",
+  "kind": "syllable",
+  "id": "yod-e",
+  "want": "ye",
+  "pick": null,
+  "text": "יֶ",
+  "right": 3,
+  "of": 5,
+  "heard": [
+   "j'e",
+   "jihj'e",
+   "jihj'e",
+   "j'e",
+   "j'e"
+  ],
+  "files": [
+   "audio/m/israeli/syllable/yod-e.mp3"
+  ]
+ },
+ {
+  "voice": "m",
+  "kind": "syllable",
+  "id": "zayin-u",
+  "want": "zu",
+  "pick": null,
+  "text": "זֻ.",
+  "right": 3,
+  "of": 5,
+  "heard": [
+   "z'o",
+   "z'o",
+   "z'u",
+   "z'u",
+   "z'u"
+  ],
+  "files": [
+   "audio/m/israeli/syllable/zayin-u.mp3"
+  ]
+ }
+]

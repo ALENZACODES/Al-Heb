@@ -2,12 +2,11 @@
  "status": "tts",
  "source": "paid-cloud",
  "engine": "google-cloud-tts",
- "voiceId": "he-IL-Wavenet-B",
+ "voiceId": "he-IL-Chirp3-HD-Charon",
  "tradition": "israeli",
- "inputText": "וּבְיוֹמֵיכוֹן",
- "inputSha256": "0c37050528e6e1517d3b611c3b169eb52905541aa09008202d398d103a8c11e9",
+ "inputText": "וביומיכון",
  "ingestedAt": null,
  "licence": "customer-owned",
- "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
+ "note": "Re-recorded 2026-11-16 after the full hearing flagged the clip (docs/audio/gpu-flagged-2026-11-16.json): read from וביומיכון, heard right twice (וביום יחון. / וביום ייחון.) by tools/audio/asr-check/fix_list.py.",
  "inputTextKind": "hebrew"
 }

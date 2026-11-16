@@ -4,10 +4,9 @@
  "engine": "google-cloud-tts",
  "voiceId": "he-IL-Wavenet-B",
  "tradition": "israeli",
- "inputText": "הָעַמִּים",
- "inputSha256": "b739e7cd65e7515dee637f2429d641b4e848c8a8f1aa7f21fabb4b6c3df6eac1",
+ "inputText": "הָעַמִּים.",
  "ingestedAt": null,
  "licence": "customer-owned",
- "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
+ "note": "Re-recorded 2026-11-16 after the full hearing flagged the clip (docs/audio/gpu-flagged-2026-11-16.json): read from הָעַמִּים., heard right twice (העמים / העמים) by tools/audio/asr-check/fix_list.py.",
  "inputTextKind": "hebrew"
 }

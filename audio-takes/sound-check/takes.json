@@ -1,0 +1,1532 @@
+[
+ {
+  "take": "audio-takes/sound-check/f-letter-pe-final-1.mp3",
+  "voice": "f",
+  "kind": "letter",
+  "id": "pe-final",
+  "text": "פֵּא סוֹפִית",
+  "engine": "he-IL-Wavenet-A",
+  "want": "pesofit",
+  "files": [
+   "audio/f/israeli/letter/pe-final.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-letter-pe-final-2.mp3",
+  "voice": "f",
+  "kind": "letter",
+  "id": "pe-final",
+  "text": "פֵּה סוֹפִית",
+  "engine": "he-IL-Wavenet-A",
+  "want": "pesofit",
+  "files": [
+   "audio/f/israeli/letter/pe-final.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-letter-pe-final-3.mp3",
+  "voice": "f",
+  "kind": "letter",
+  "id": "pe-final",
+  "text": "פֵּי סוֹפִית",
+  "engine": "he-IL-Wavenet-A",
+  "want": "pesofit",
+  "files": [
+   "audio/f/israeli/letter/pe-final.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-letter-pe-final-4.mp3",
+  "voice": "f",
+  "kind": "letter",
+  "id": "pe-final",
+  "text": "פֵּא, סוֹפִית",
+  "engine": "he-IL-Wavenet-A",
+  "want": "pesofit",
+  "files": [
+   "audio/f/israeli/letter/pe-final.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-letter-shin-sound-1.mp3",
+  "voice": "f",
+  "kind": "letter",
+  "id": "shin-sound",
+  "text": "שַׁ",
+  "engine": "he-IL-Wavenet-A",
+  "want": "Sa",
+  "files": [
+   "audio/f/israeli/letter/shin-sound.mp3",
+   "audio/f/israeli/syllable/shin-a.mp3",
+   "audio/f/israeli/syllable/dot-shin-sin-0.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-letter-shin-sound-2.mp3",
+  "voice": "f",
+  "kind": "letter",
+  "id": "shin-sound",
+  "text": "שַׁ.",
+  "engine": "he-IL-Wavenet-A",
+  "want": "Sa",
+  "files": [
+   "audio/f/israeli/letter/shin-sound.mp3",
+   "audio/f/israeli/syllable/shin-a.mp3",
+   "audio/f/israeli/syllable/dot-shin-sin-0.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-letter-shin-sound-3.mp3",
+  "voice": "f",
+  "kind": "letter",
+  "id": "shin-sound",
+  "text": "שָׁה",
+  "engine": "he-IL-Wavenet-A",
+  "want": "Sa",
+  "files": [
+   "audio/f/israeli/letter/shin-sound.mp3",
+   "audio/f/israeli/syllable/shin-a.mp3",
+   "audio/f/israeli/syllable/dot-shin-sin-0.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-letter-shin-sound-4.mp3",
+  "voice": "f",
+  "kind": "letter",
+  "id": "shin-sound",
+  "text": "שָׁה.",
+  "engine": "he-IL-Wavenet-A",
+  "want": "Sa",
+  "files": [
+   "audio/f/israeli/letter/shin-sound.mp3",
+   "audio/f/israeli/syllable/shin-a.mp3",
+   "audio/f/israeli/syllable/dot-shin-sin-0.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-letter-shin-sound-5.mp3",
+  "voice": "f",
+  "kind": "letter",
+  "id": "shin-sound",
+  "text": "שַׁא",
+  "engine": "he-IL-Wavenet-A",
+  "want": "Sa",
+  "files": [
+   "audio/f/israeli/letter/shin-sound.mp3",
+   "audio/f/israeli/syllable/shin-a.mp3",
+   "audio/f/israeli/syllable/dot-shin-sin-0.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-letter-shin-sound-6.mp3",
+  "voice": "f",
+  "kind": "letter",
+  "id": "shin-sound",
+  "text": "שַׁא.",
+  "engine": "he-IL-Wavenet-A",
+  "want": "Sa",
+  "files": [
+   "audio/f/israeli/letter/shin-sound.mp3",
+   "audio/f/israeli/syllable/shin-a.mp3",
+   "audio/f/israeli/syllable/dot-shin-sin-0.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-letter-tet-sound-1.mp3",
+  "voice": "f",
+  "kind": "letter",
+  "id": "tet-sound",
+  "text": "טַ",
+  "engine": "he-IL-Wavenet-A",
+  "want": "ta",
+  "files": [
+   "audio/f/israeli/letter/tet-sound.mp3",
+   "audio/f/israeli/syllable/tet-a.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-letter-tet-sound-2.mp3",
+  "voice": "f",
+  "kind": "letter",
+  "id": "tet-sound",
+  "text": "טַ.",
+  "engine": "he-IL-Wavenet-A",
+  "want": "ta",
+  "files": [
+   "audio/f/israeli/letter/tet-sound.mp3",
+   "audio/f/israeli/syllable/tet-a.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-letter-tet-sound-3.mp3",
+  "voice": "f",
+  "kind": "letter",
+  "id": "tet-sound",
+  "text": "טָה",
+  "engine": "he-IL-Wavenet-A",
+  "want": "ta",
+  "files": [
+   "audio/f/israeli/letter/tet-sound.mp3",
+   "audio/f/israeli/syllable/tet-a.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-letter-tet-sound-4.mp3",
+  "voice": "f",
+  "kind": "letter",
+  "id": "tet-sound",
+  "text": "טָה.",
+  "engine": "he-IL-Wavenet-A",
+  "want": "ta",
+  "files": [
+   "audio/f/israeli/letter/tet-sound.mp3",
+   "audio/f/israeli/syllable/tet-a.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-letter-tet-sound-5.mp3",
+  "voice": "f",
+  "kind": "letter",
+  "id": "tet-sound",
+  "text": "טַא",
+  "engine": "he-IL-Wavenet-A",
+  "want": "ta",
+  "files": [
+   "audio/f/israeli/letter/tet-sound.mp3",
+   "audio/f/israeli/syllable/tet-a.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-letter-tet-sound-6.mp3",
+  "voice": "f",
+  "kind": "letter",
+  "id": "tet-sound",
+  "text": "טַא.",
+  "engine": "he-IL-Wavenet-A",
+  "want": "ta",
+  "files": [
+   "audio/f/israeli/letter/tet-sound.mp3",
+   "audio/f/israeli/syllable/tet-a.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-letter-yod-sound-1.mp3",
+  "voice": "f",
+  "kind": "letter",
+  "id": "yod-sound",
+  "text": "יַ",
+  "engine": "he-IL-Wavenet-A",
+  "want": "ya",
+  "files": [
+   "audio/f/israeli/letter/yod-sound.mp3",
+   "audio/f/israeli/syllable/yod-a.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-letter-yod-sound-2.mp3",
+  "voice": "f",
+  "kind": "letter",
+  "id": "yod-sound",
+  "text": "יַ.",
+  "engine": "he-IL-Wavenet-A",
+  "want": "ya",
+  "files": [
+   "audio/f/israeli/letter/yod-sound.mp3",
+   "audio/f/israeli/syllable/yod-a.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-letter-yod-sound-3.mp3",
+  "voice": "f",
+  "kind": "letter",
+  "id": "yod-sound",
+  "text": "יָה",
+  "engine": "he-IL-Wavenet-A",
+  "want": "ya",
+  "files": [
+   "audio/f/israeli/letter/yod-sound.mp3",
+   "audio/f/israeli/syllable/yod-a.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-letter-yod-sound-4.mp3",
+  "voice": "f",
+  "kind": "letter",
+  "id": "yod-sound",
+  "text": "יָה.",
+  "engine": "he-IL-Wavenet-A",
+  "want": "ya",
+  "files": [
+   "audio/f/israeli/letter/yod-sound.mp3",
+   "audio/f/israeli/syllable/yod-a.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-letter-yod-sound-5.mp3",
+  "voice": "f",
+  "kind": "letter",
+  "id": "yod-sound",
+  "text": "יַא",
+  "engine": "he-IL-Wavenet-A",
+  "want": "ya",
+  "files": [
+   "audio/f/israeli/letter/yod-sound.mp3",
+   "audio/f/israeli/syllable/yod-a.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-letter-yod-sound-6.mp3",
+  "voice": "f",
+  "kind": "letter",
+  "id": "yod-sound",
+  "text": "יַא.",
+  "engine": "he-IL-Wavenet-A",
+  "want": "ya",
+  "files": [
+   "audio/f/israeli/letter/yod-sound.mp3",
+   "audio/f/israeli/syllable/yod-a.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-syllable-bet-u-1.mp3",
+  "voice": "f",
+  "kind": "syllable",
+  "id": "bet-u",
+  "text": "בֻּ",
+  "engine": "he-IL-Wavenet-A",
+  "want": "bu",
+  "files": [
+   "audio/f/israeli/syllable/bet-u.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-syllable-bet-u-2.mp3",
+  "voice": "f",
+  "kind": "syllable",
+  "id": "bet-u",
+  "text": "בֻּ.",
+  "engine": "he-IL-Wavenet-A",
+  "want": "bu",
+  "files": [
+   "audio/f/israeli/syllable/bet-u.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-syllable-bet-u-3.mp3",
+  "voice": "f",
+  "kind": "syllable",
+  "id": "bet-u",
+  "text": "בּוּ",
+  "engine": "he-IL-Wavenet-A",
+  "want": "bu",
+  "files": [
+   "audio/f/israeli/syllable/bet-u.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-syllable-bet-u-4.mp3",
+  "voice": "f",
+  "kind": "syllable",
+  "id": "bet-u",
+  "text": "בּוּ.",
+  "engine": "he-IL-Wavenet-A",
+  "want": "bu",
+  "files": [
+   "audio/f/israeli/syllable/bet-u.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-syllable-gimel-i-1.mp3",
+  "voice": "f",
+  "kind": "syllable",
+  "id": "gimel-i",
+  "text": "גִ",
+  "engine": "he-IL-Wavenet-A",
+  "want": "gi",
+  "files": [
+   "audio/f/israeli/syllable/gimel-i.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-syllable-gimel-i-2.mp3",
+  "voice": "f",
+  "kind": "syllable",
+  "id": "gimel-i",
+  "text": "גִ.",
+  "engine": "he-IL-Wavenet-A",
+  "want": "gi",
+  "files": [
+   "audio/f/israeli/syllable/gimel-i.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-syllable-gimel-i-3.mp3",
+  "voice": "f",
+  "kind": "syllable",
+  "id": "gimel-i",
+  "text": "גִי",
+  "engine": "he-IL-Wavenet-A",
+  "want": "gi",
+  "files": [
+   "audio/f/israeli/syllable/gimel-i.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-syllable-gimel-i-4.mp3",
+  "voice": "f",
+  "kind": "syllable",
+  "id": "gimel-i",
+  "text": "גִי.",
+  "engine": "he-IL-Wavenet-A",
+  "want": "gi",
+  "files": [
+   "audio/f/israeli/syllable/gimel-i.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-syllable-gimel-u-1.mp3",
+  "voice": "f",
+  "kind": "syllable",
+  "id": "gimel-u",
+  "text": "גֻ",
+  "engine": "he-IL-Wavenet-A",
+  "want": "gu",
+  "files": [
+   "audio/f/israeli/syllable/gimel-u.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-syllable-gimel-u-2.mp3",
+  "voice": "f",
+  "kind": "syllable",
+  "id": "gimel-u",
+  "text": "גֻ.",
+  "engine": "he-IL-Wavenet-A",
+  "want": "gu",
+  "files": [
+   "audio/f/israeli/syllable/gimel-u.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-syllable-gimel-u-3.mp3",
+  "voice": "f",
+  "kind": "syllable",
+  "id": "gimel-u",
+  "text": "גוּ",
+  "engine": "he-IL-Wavenet-A",
+  "want": "gu",
+  "files": [
+   "audio/f/israeli/syllable/gimel-u.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-syllable-gimel-u-4.mp3",
+  "voice": "f",
+  "kind": "syllable",
+  "id": "gimel-u",
+  "text": "גוּ.",
+  "engine": "he-IL-Wavenet-A",
+  "want": "gu",
+  "files": [
+   "audio/f/israeli/syllable/gimel-u.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-syllable-resh-o-1.mp3",
+  "voice": "f",
+  "kind": "syllable",
+  "id": "resh-o",
+  "text": "רֹ",
+  "engine": "he-IL-Wavenet-A",
+  "want": "ro",
+  "files": [
+   "audio/f/israeli/syllable/resh-o.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-syllable-resh-o-2.mp3",
+  "voice": "f",
+  "kind": "syllable",
+  "id": "resh-o",
+  "text": "רֹ.",
+  "engine": "he-IL-Wavenet-A",
+  "want": "ro",
+  "files": [
+   "audio/f/israeli/syllable/resh-o.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-syllable-resh-o-3.mp3",
+  "voice": "f",
+  "kind": "syllable",
+  "id": "resh-o",
+  "text": "רוֹ",
+  "engine": "he-IL-Wavenet-A",
+  "want": "ro",
+  "files": [
+   "audio/f/israeli/syllable/resh-o.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-syllable-resh-o-4.mp3",
+  "voice": "f",
+  "kind": "syllable",
+  "id": "resh-o",
+  "text": "רוֹ.",
+  "engine": "he-IL-Wavenet-A",
+  "want": "ro",
+  "files": [
+   "audio/f/israeli/syllable/resh-o.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-syllable-samekh-u-1.mp3",
+  "voice": "f",
+  "kind": "syllable",
+  "id": "samekh-u",
+  "text": "סֻ",
+  "engine": "he-IL-Wavenet-A",
+  "want": "su",
+  "files": [
+   "audio/f/israeli/syllable/samekh-u.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-syllable-samekh-u-2.mp3",
+  "voice": "f",
+  "kind": "syllable",
+  "id": "samekh-u",
+  "text": "סֻ.",
+  "engine": "he-IL-Wavenet-A",
+  "want": "su",
+  "files": [
+   "audio/f/israeli/syllable/samekh-u.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-syllable-samekh-u-3.mp3",
+  "voice": "f",
+  "kind": "syllable",
+  "id": "samekh-u",
+  "text": "סוּ",
+  "engine": "he-IL-Wavenet-A",
+  "want": "su",
+  "files": [
+   "audio/f/israeli/syllable/samekh-u.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-syllable-samekh-u-4.mp3",
+  "voice": "f",
+  "kind": "syllable",
+  "id": "samekh-u",
+  "text": "סוּ.",
+  "engine": "he-IL-Wavenet-A",
+  "want": "su",
+  "files": [
+   "audio/f/israeli/syllable/samekh-u.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-syllable-shin-u-1.mp3",
+  "voice": "f",
+  "kind": "syllable",
+  "id": "shin-u",
+  "text": "שֻׁ",
+  "engine": "he-IL-Wavenet-A",
+  "want": "Su",
+  "files": [
+   "audio/f/israeli/syllable/shin-u.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-syllable-shin-u-2.mp3",
+  "voice": "f",
+  "kind": "syllable",
+  "id": "shin-u",
+  "text": "שֻׁ.",
+  "engine": "he-IL-Wavenet-A",
+  "want": "Su",
+  "files": [
+   "audio/f/israeli/syllable/shin-u.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-syllable-shin-u-3.mp3",
+  "voice": "f",
+  "kind": "syllable",
+  "id": "shin-u",
+  "text": "שׁוּ",
+  "engine": "he-IL-Wavenet-A",
+  "want": "Su",
+  "files": [
+   "audio/f/israeli/syllable/shin-u.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-syllable-shin-u-4.mp3",
+  "voice": "f",
+  "kind": "syllable",
+  "id": "shin-u",
+  "text": "שׁוּ.",
+  "engine": "he-IL-Wavenet-A",
+  "want": "Su",
+  "files": [
+   "audio/f/israeli/syllable/shin-u.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-syllable-tsadi-u-1.mp3",
+  "voice": "f",
+  "kind": "syllable",
+  "id": "tsadi-u",
+  "text": "צֻ",
+  "engine": "he-IL-Wavenet-A",
+  "want": "cu",
+  "files": [
+   "audio/f/israeli/syllable/tsadi-u.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-syllable-tsadi-u-2.mp3",
+  "voice": "f",
+  "kind": "syllable",
+  "id": "tsadi-u",
+  "text": "צֻ.",
+  "engine": "he-IL-Wavenet-A",
+  "want": "cu",
+  "files": [
+   "audio/f/israeli/syllable/tsadi-u.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-syllable-tsadi-u-3.mp3",
+  "voice": "f",
+  "kind": "syllable",
+  "id": "tsadi-u",
+  "text": "צוּ",
+  "engine": "he-IL-Wavenet-A",
+  "want": "cu",
+  "files": [
+   "audio/f/israeli/syllable/tsadi-u.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-syllable-tsadi-u-4.mp3",
+  "voice": "f",
+  "kind": "syllable",
+  "id": "tsadi-u",
+  "text": "צוּ.",
+  "engine": "he-IL-Wavenet-A",
+  "want": "cu",
+  "files": [
+   "audio/f/israeli/syllable/tsadi-u.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-syllable-yod-e-1.mp3",
+  "voice": "f",
+  "kind": "syllable",
+  "id": "yod-e",
+  "text": "יֶ",
+  "engine": "he-IL-Wavenet-A",
+  "want": "ye",
+  "files": [
+   "audio/f/israeli/syllable/yod-e.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-syllable-yod-e-2.mp3",
+  "voice": "f",
+  "kind": "syllable",
+  "id": "yod-e",
+  "text": "יֶ.",
+  "engine": "he-IL-Wavenet-A",
+  "want": "ye",
+  "files": [
+   "audio/f/israeli/syllable/yod-e.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-syllable-yod-e-3.mp3",
+  "voice": "f",
+  "kind": "syllable",
+  "id": "yod-e",
+  "text": "יֶה",
+  "engine": "he-IL-Wavenet-A",
+  "want": "ye",
+  "files": [
+   "audio/f/israeli/syllable/yod-e.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-syllable-yod-e-4.mp3",
+  "voice": "f",
+  "kind": "syllable",
+  "id": "yod-e",
+  "text": "יֶה.",
+  "engine": "he-IL-Wavenet-A",
+  "want": "ye",
+  "files": [
+   "audio/f/israeli/syllable/yod-e.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-vowel-segol-1.mp3",
+  "voice": "f",
+  "kind": "vowel",
+  "id": "segol",
+  "text": "אֶ",
+  "engine": "he-IL-Wavenet-A",
+  "want": "e",
+  "files": [
+   "audio/f/israeli/vowel/segol.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-vowel-segol-2.mp3",
+  "voice": "f",
+  "kind": "vowel",
+  "id": "segol",
+  "text": "אֶה",
+  "engine": "he-IL-Wavenet-A",
+  "want": "e",
+  "files": [
+   "audio/f/israeli/vowel/segol.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-vowel-segol-3.mp3",
+  "voice": "f",
+  "kind": "vowel",
+  "id": "segol",
+  "text": "אֶ.",
+  "engine": "he-IL-Wavenet-A",
+  "want": "e",
+  "files": [
+   "audio/f/israeli/vowel/segol.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-vowel-segol-4.mp3",
+  "voice": "f",
+  "kind": "vowel",
+  "id": "segol",
+  "text": "אֶה.",
+  "engine": "he-IL-Wavenet-A",
+  "want": "e",
+  "files": [
+   "audio/f/israeli/vowel/segol.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-letter-bet-sound-1.mp3",
+  "voice": "m",
+  "kind": "letter",
+  "id": "bet-sound",
+  "text": "בַּ",
+  "engine": "he-IL-Wavenet-B",
+  "want": "ba",
+  "files": [
+   "audio/m/israeli/letter/bet-sound.mp3",
+   "audio/m/israeli/syllable/bet-a.mp3",
+   "audio/m/israeli/syllable/dot-bet-vet-0.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-letter-bet-sound-2.mp3",
+  "voice": "m",
+  "kind": "letter",
+  "id": "bet-sound",
+  "text": "בַּ.",
+  "engine": "he-IL-Wavenet-B",
+  "want": "ba",
+  "files": [
+   "audio/m/israeli/letter/bet-sound.mp3",
+   "audio/m/israeli/syllable/bet-a.mp3",
+   "audio/m/israeli/syllable/dot-bet-vet-0.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-letter-bet-sound-3.mp3",
+  "voice": "m",
+  "kind": "letter",
+  "id": "bet-sound",
+  "text": "בָּה",
+  "engine": "he-IL-Wavenet-B",
+  "want": "ba",
+  "files": [
+   "audio/m/israeli/letter/bet-sound.mp3",
+   "audio/m/israeli/syllable/bet-a.mp3",
+   "audio/m/israeli/syllable/dot-bet-vet-0.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-letter-bet-sound-4.mp3",
+  "voice": "m",
+  "kind": "letter",
+  "id": "bet-sound",
+  "text": "בָּה.",
+  "engine": "he-IL-Wavenet-B",
+  "want": "ba",
+  "files": [
+   "audio/m/israeli/letter/bet-sound.mp3",
+   "audio/m/israeli/syllable/bet-a.mp3",
+   "audio/m/israeli/syllable/dot-bet-vet-0.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-letter-bet-sound-5.mp3",
+  "voice": "m",
+  "kind": "letter",
+  "id": "bet-sound",
+  "text": "בַּא",
+  "engine": "he-IL-Wavenet-B",
+  "want": "ba",
+  "files": [
+   "audio/m/israeli/letter/bet-sound.mp3",
+   "audio/m/israeli/syllable/bet-a.mp3",
+   "audio/m/israeli/syllable/dot-bet-vet-0.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-letter-bet-sound-6.mp3",
+  "voice": "m",
+  "kind": "letter",
+  "id": "bet-sound",
+  "text": "בַּא.",
+  "engine": "he-IL-Wavenet-B",
+  "want": "ba",
+  "files": [
+   "audio/m/israeli/letter/bet-sound.mp3",
+   "audio/m/israeli/syllable/bet-a.mp3",
+   "audio/m/israeli/syllable/dot-bet-vet-0.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-letter-he-1.mp3",
+  "voice": "m",
+  "kind": "letter",
+  "id": "he",
+  "text": "הֵא",
+  "engine": "he-IL-Wavenet-B",
+  "want": "he",
+  "files": [
+   "audio/m/israeli/letter/he.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-letter-he-2.mp3",
+  "voice": "m",
+  "kind": "letter",
+  "id": "he",
+  "text": "הֵא.",
+  "engine": "he-IL-Wavenet-B",
+  "want": "he",
+  "files": [
+   "audio/m/israeli/letter/he.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-letter-he-3.mp3",
+  "voice": "m",
+  "kind": "letter",
+  "id": "he",
+  "text": "הֵי",
+  "engine": "he-IL-Wavenet-B",
+  "want": "he",
+  "files": [
+   "audio/m/israeli/letter/he.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-letter-he-4.mp3",
+  "voice": "m",
+  "kind": "letter",
+  "id": "he",
+  "text": "הֶא",
+  "engine": "he-IL-Wavenet-B",
+  "want": "he",
+  "files": [
+   "audio/m/israeli/letter/he.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-letter-zayin-sound-1.mp3",
+  "voice": "m",
+  "kind": "letter",
+  "id": "zayin-sound",
+  "text": "זַ",
+  "engine": "he-IL-Wavenet-B",
+  "want": "za",
+  "files": [
+   "audio/m/israeli/letter/zayin-sound.mp3",
+   "audio/m/israeli/syllable/zayin-a.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-letter-zayin-sound-2.mp3",
+  "voice": "m",
+  "kind": "letter",
+  "id": "zayin-sound",
+  "text": "זַ.",
+  "engine": "he-IL-Wavenet-B",
+  "want": "za",
+  "files": [
+   "audio/m/israeli/letter/zayin-sound.mp3",
+   "audio/m/israeli/syllable/zayin-a.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-letter-zayin-sound-3.mp3",
+  "voice": "m",
+  "kind": "letter",
+  "id": "zayin-sound",
+  "text": "זָה",
+  "engine": "he-IL-Wavenet-B",
+  "want": "za",
+  "files": [
+   "audio/m/israeli/letter/zayin-sound.mp3",
+   "audio/m/israeli/syllable/zayin-a.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-letter-zayin-sound-4.mp3",
+  "voice": "m",
+  "kind": "letter",
+  "id": "zayin-sound",
+  "text": "זָה.",
+  "engine": "he-IL-Wavenet-B",
+  "want": "za",
+  "files": [
+   "audio/m/israeli/letter/zayin-sound.mp3",
+   "audio/m/israeli/syllable/zayin-a.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-letter-zayin-sound-5.mp3",
+  "voice": "m",
+  "kind": "letter",
+  "id": "zayin-sound",
+  "text": "זַא",
+  "engine": "he-IL-Wavenet-B",
+  "want": "za",
+  "files": [
+   "audio/m/israeli/letter/zayin-sound.mp3",
+   "audio/m/israeli/syllable/zayin-a.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-letter-zayin-sound-6.mp3",
+  "voice": "m",
+  "kind": "letter",
+  "id": "zayin-sound",
+  "text": "זַא.",
+  "engine": "he-IL-Wavenet-B",
+  "want": "za",
+  "files": [
+   "audio/m/israeli/letter/zayin-sound.mp3",
+   "audio/m/israeli/syllable/zayin-a.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-gimel-u-1.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "gimel-u",
+  "text": "גֻ",
+  "engine": "he-IL-Wavenet-B",
+  "want": "gu",
+  "files": [
+   "audio/m/israeli/syllable/gimel-u.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-gimel-u-2.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "gimel-u",
+  "text": "גֻ.",
+  "engine": "he-IL-Wavenet-B",
+  "want": "gu",
+  "files": [
+   "audio/m/israeli/syllable/gimel-u.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-gimel-u-3.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "gimel-u",
+  "text": "גוּ",
+  "engine": "he-IL-Wavenet-B",
+  "want": "gu",
+  "files": [
+   "audio/m/israeli/syllable/gimel-u.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-gimel-u-4.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "gimel-u",
+  "text": "גוּ.",
+  "engine": "he-IL-Wavenet-B",
+  "want": "gu",
+  "files": [
+   "audio/m/israeli/syllable/gimel-u.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-he-e-1.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "he-e",
+  "text": "הֶ",
+  "engine": "he-IL-Wavenet-B",
+  "want": "he",
+  "files": [
+   "audio/m/israeli/syllable/he-e.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-he-e-2.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "he-e",
+  "text": "הֶ.",
+  "engine": "he-IL-Wavenet-B",
+  "want": "he",
+  "files": [
+   "audio/m/israeli/syllable/he-e.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-he-e-3.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "he-e",
+  "text": "הֶה",
+  "engine": "he-IL-Wavenet-B",
+  "want": "he",
+  "files": [
+   "audio/m/israeli/syllable/he-e.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-he-e-4.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "he-e",
+  "text": "הֶה.",
+  "engine": "he-IL-Wavenet-B",
+  "want": "he",
+  "files": [
+   "audio/m/israeli/syllable/he-e.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-kaf-u-1.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "kaf-u",
+  "text": "כֻּ",
+  "engine": "he-IL-Wavenet-B",
+  "want": "ku",
+  "files": [
+   "audio/m/israeli/syllable/kaf-u.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-kaf-u-2.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "kaf-u",
+  "text": "כֻּ.",
+  "engine": "he-IL-Wavenet-B",
+  "want": "ku",
+  "files": [
+   "audio/m/israeli/syllable/kaf-u.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-kaf-u-3.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "kaf-u",
+  "text": "כּוּ",
+  "engine": "he-IL-Wavenet-B",
+  "want": "ku",
+  "files": [
+   "audio/m/israeli/syllable/kaf-u.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-kaf-u-4.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "kaf-u",
+  "text": "כּוּ.",
+  "engine": "he-IL-Wavenet-B",
+  "want": "ku",
+  "files": [
+   "audio/m/israeli/syllable/kaf-u.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-pe-a-1.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "pe-a",
+  "text": "פַּ",
+  "engine": "he-IL-Wavenet-B",
+  "want": "pa",
+  "files": [
+   "audio/m/israeli/syllable/pe-a.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-pe-a-2.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "pe-a",
+  "text": "פַּ.",
+  "engine": "he-IL-Wavenet-B",
+  "want": "pa",
+  "files": [
+   "audio/m/israeli/syllable/pe-a.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-pe-a-3.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "pe-a",
+  "text": "פָּה",
+  "engine": "he-IL-Wavenet-B",
+  "want": "pa",
+  "files": [
+   "audio/m/israeli/syllable/pe-a.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-pe-a-4.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "pe-a",
+  "text": "פָּה.",
+  "engine": "he-IL-Wavenet-B",
+  "want": "pa",
+  "files": [
+   "audio/m/israeli/syllable/pe-a.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-pe-a-5.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "pe-a",
+  "text": "פַּא",
+  "engine": "he-IL-Wavenet-B",
+  "want": "pa",
+  "files": [
+   "audio/m/israeli/syllable/pe-a.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-pe-a-6.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "pe-a",
+  "text": "פַּא.",
+  "engine": "he-IL-Wavenet-B",
+  "want": "pa",
+  "files": [
+   "audio/m/israeli/syllable/pe-a.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-pe-u-1.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "pe-u",
+  "text": "פֻּ",
+  "engine": "he-IL-Wavenet-B",
+  "want": "pu",
+  "files": [
+   "audio/m/israeli/syllable/pe-u.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-pe-u-2.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "pe-u",
+  "text": "פֻּ.",
+  "engine": "he-IL-Wavenet-B",
+  "want": "pu",
+  "files": [
+   "audio/m/israeli/syllable/pe-u.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-pe-u-3.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "pe-u",
+  "text": "פּוּ",
+  "engine": "he-IL-Wavenet-B",
+  "want": "pu",
+  "files": [
+   "audio/m/israeli/syllable/pe-u.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-pe-u-4.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "pe-u",
+  "text": "פּוּ.",
+  "engine": "he-IL-Wavenet-B",
+  "want": "pu",
+  "files": [
+   "audio/m/israeli/syllable/pe-u.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-qof-e-1.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "qof-e",
+  "text": "קֶ",
+  "engine": "he-IL-Wavenet-B",
+  "want": "ke",
+  "files": [
+   "audio/m/israeli/syllable/qof-e.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-qof-e-2.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "qof-e",
+  "text": "קֶ.",
+  "engine": "he-IL-Wavenet-B",
+  "want": "ke",
+  "files": [
+   "audio/m/israeli/syllable/qof-e.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-qof-e-3.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "qof-e",
+  "text": "קֶה",
+  "engine": "he-IL-Wavenet-B",
+  "want": "ke",
+  "files": [
+   "audio/m/israeli/syllable/qof-e.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-qof-e-4.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "qof-e",
+  "text": "קֶה.",
+  "engine": "he-IL-Wavenet-B",
+  "want": "ke",
+  "files": [
+   "audio/m/israeli/syllable/qof-e.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-qof-u-1.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "qof-u",
+  "text": "קֻ",
+  "engine": "he-IL-Wavenet-B",
+  "want": "ku",
+  "files": [
+   "audio/m/israeli/syllable/qof-u.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-qof-u-2.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "qof-u",
+  "text": "קֻ.",
+  "engine": "he-IL-Wavenet-B",
+  "want": "ku",
+  "files": [
+   "audio/m/israeli/syllable/qof-u.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-qof-u-3.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "qof-u",
+  "text": "קוּ",
+  "engine": "he-IL-Wavenet-B",
+  "want": "ku",
+  "files": [
+   "audio/m/israeli/syllable/qof-u.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-qof-u-4.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "qof-u",
+  "text": "קוּ.",
+  "engine": "he-IL-Wavenet-B",
+  "want": "ku",
+  "files": [
+   "audio/m/israeli/syllable/qof-u.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-resh-u-1.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "resh-u",
+  "text": "רֻ",
+  "engine": "he-IL-Wavenet-B",
+  "want": "ru",
+  "files": [
+   "audio/m/israeli/syllable/resh-u.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-resh-u-2.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "resh-u",
+  "text": "רֻ.",
+  "engine": "he-IL-Wavenet-B",
+  "want": "ru",
+  "files": [
+   "audio/m/israeli/syllable/resh-u.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-resh-u-3.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "resh-u",
+  "text": "רוּ",
+  "engine": "he-IL-Wavenet-B",
+  "want": "ru",
+  "files": [
+   "audio/m/israeli/syllable/resh-u.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-resh-u-4.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "resh-u",
+  "text": "רוּ.",
+  "engine": "he-IL-Wavenet-B",
+  "want": "ru",
+  "files": [
+   "audio/m/israeli/syllable/resh-u.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-samekh-u-1.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "samekh-u",
+  "text": "סֻ",
+  "engine": "he-IL-Wavenet-B",
+  "want": "su",
+  "files": [
+   "audio/m/israeli/syllable/samekh-u.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-samekh-u-2.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "samekh-u",
+  "text": "סֻ.",
+  "engine": "he-IL-Wavenet-B",
+  "want": "su",
+  "files": [
+   "audio/m/israeli/syllable/samekh-u.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-samekh-u-3.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "samekh-u",
+  "text": "סוּ",
+  "engine": "he-IL-Wavenet-B",
+  "want": "su",
+  "files": [
+   "audio/m/israeli/syllable/samekh-u.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-samekh-u-4.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "samekh-u",
+  "text": "סוּ.",
+  "engine": "he-IL-Wavenet-B",
+  "want": "su",
+  "files": [
+   "audio/m/israeli/syllable/samekh-u.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-tsadi-u-1.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "tsadi-u",
+  "text": "צֻ",
+  "engine": "he-IL-Wavenet-B",
+  "want": "cu",
+  "files": [
+   "audio/m/israeli/syllable/tsadi-u.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-tsadi-u-2.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "tsadi-u",
+  "text": "צֻ.",
+  "engine": "he-IL-Wavenet-B",
+  "want": "cu",
+  "files": [
+   "audio/m/israeli/syllable/tsadi-u.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-tsadi-u-3.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "tsadi-u",
+  "text": "צוּ",
+  "engine": "he-IL-Wavenet-B",
+  "want": "cu",
+  "files": [
+   "audio/m/israeli/syllable/tsadi-u.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-tsadi-u-4.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "tsadi-u",
+  "text": "צוּ.",
+  "engine": "he-IL-Wavenet-B",
+  "want": "cu",
+  "files": [
+   "audio/m/israeli/syllable/tsadi-u.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-yod-e-1.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "yod-e",
+  "text": "יֶ",
+  "engine": "he-IL-Wavenet-B",
+  "want": "ye",
+  "files": [
+   "audio/m/israeli/syllable/yod-e.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-yod-e-2.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "yod-e",
+  "text": "יֶ.",
+  "engine": "he-IL-Wavenet-B",
+  "want": "ye",
+  "files": [
+   "audio/m/israeli/syllable/yod-e.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-yod-e-3.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "yod-e",
+  "text": "יֶה",
+  "engine": "he-IL-Wavenet-B",
+  "want": "ye",
+  "files": [
+   "audio/m/israeli/syllable/yod-e.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-yod-e-4.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "yod-e",
+  "text": "יֶה.",
+  "engine": "he-IL-Wavenet-B",
+  "want": "ye",
+  "files": [
+   "audio/m/israeli/syllable/yod-e.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-zayin-u-1.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "zayin-u",
+  "text": "זֻ",
+  "engine": "he-IL-Wavenet-B",
+  "want": "zu",
+  "files": [
+   "audio/m/israeli/syllable/zayin-u.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-zayin-u-2.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "zayin-u",
+  "text": "זֻ.",
+  "engine": "he-IL-Wavenet-B",
+  "want": "zu",
+  "files": [
+   "audio/m/israeli/syllable/zayin-u.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-zayin-u-3.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "zayin-u",
+  "text": "זוּ",
+  "engine": "he-IL-Wavenet-B",
+  "want": "zu",
+  "files": [
+   "audio/m/israeli/syllable/zayin-u.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-zayin-u-4.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "zayin-u",
+  "text": "זוּ.",
+  "engine": "he-IL-Wavenet-B",
+  "want": "zu",
+  "files": [
+   "audio/m/israeli/syllable/zayin-u.mp3"
+  ]
+ }
+]

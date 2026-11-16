@@ -4,9 +4,9 @@
  "engine": "google-cloud-tts",
  "voiceId": "he-IL-Wavenet-B",
  "tradition": "israeli",
- "inputText": "יתגדל",
+ "inputText": "יִתְגַּדַּל",
  "ingestedAt": null,
  "licence": "customer-owned",
- "note": "Re-recorded 2026-11-16 after the full hearing flagged the clip (docs/audio/gpu-flagged-2026-11-16.json): read from יתגדל, heard right twice (יתגדל / יתגדל) by tools/audio/asr-check/fix_list.py.",
+ "note": "Re-recorded 2026-11-16 after the full hearing flagged the clip (docs/audio/gpu-flagged-2026-11-16.json): read from יִתְגַּדַּל at rate 0.9, heard right twice (יתגדל / יתגדל) by tools/audio/asr-check/fix_list.py.",
  "inputTextKind": "hebrew"
 }

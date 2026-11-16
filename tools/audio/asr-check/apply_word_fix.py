@@ -18,10 +18,11 @@ ROOT = F.ROOT
 
 
 def main():
-    logs = [f for a in sys.argv[1:] for f in glob.glob(a)]
+    nogate = '--no-gate' in sys.argv          # a run whose takes were already checked by sound (fix_list.py --sound-model)
+    logs = [f for a in sys.argv[1:] if a != '--no-gate' for f in glob.glob(a)]
     tally, copies, human = collections.Counter(), 0, []
     gate = os.path.join(os.path.dirname(__file__), 'sound-gate-log.jsonl')      # replacements the sound check sent back
-    back = {r['file'] for r in map(json.loads, open(gate, encoding='utf-8')) if r['decision'] != 'kept'} if os.path.exists(gate) else set()
+    back = {r['file'] for r in map(json.loads, open(gate, encoding='utf-8')) if r['decision'] != 'kept'} if os.path.exists(gate) and not nogate else set()
     for lf in sorted(logs):
         for line in open(lf, encoding='utf-8'):
             r = json.loads(line)

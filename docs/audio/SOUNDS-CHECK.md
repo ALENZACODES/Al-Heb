@@ -6,9 +6,9 @@ Each recording was heard several times by a sound model (renikud/whisper-he-ipa)
 |---|---|---|---|---|---|---|
 | letter name | 62 | 56 | 6 | 0 | 0 | 100.0% |
 | letter sound | 50 | 45 | 5 | 0 | 0 | 100.0% |
-| syllable | 173 | 137 | 29 | 0 | 7 | 96.0% |
-| vowel | 30 | 26 | 2 | 0 | 2 | 93.3% |
-| **all** | **315** | **264** | **42** | **0** | **9** | **97.1%** |
+| syllable | 173 | 140 | 31 | 0 | 2 | 98.8% |
+| vowel | 30 | 28 | 2 | 0 | 0 | 100.0% |
+| **all** | **315** | **269** | **44** | **0** | **2** | **99.4%** |
 
 Entries that name a mark with no sound of its own (not scored): 2.
 
@@ -16,15 +16,8 @@ Entries that name a mark with no sound of its own (not scored): 2.
 
 | verdict | should sound | heard (each pass) | text | clip |
 |---|---|---|---|---|
-| listen | gu | dZ'u / dZ'u / dZ'o / dZ'o / dZ'o | גֻ | `audio/f/israeli/syllable/gimel-u.mp3` |
 | listen | ye | j'e / jihj'e / jihj'e / jihj'e / jihj'e | יֶ | `audio/f/israeli/syllable/yod-e.mp3` |
-| listen | v | b'e / b'e / b'e / b'e / b'e | בְ | `audio/f/israeli/vowel/shva.mp3` |
-| listen | he | h'a / h'e / h'a / h'e / h'a | הֶ | `audio/m/israeli/syllable/he-e.mp3` |
-| listen | pu | p'u / p'o / p'o / f'u / p'u | פֻּ | `audio/m/israeli/syllable/pe-u.mp3` |
-| listen | ke | ke / ke'a / k'a / k'a / k'e. | קֶ | `audio/m/israeli/syllable/qof-e.mp3` |
 | listen | ye | jihj'e / j'e / jihj'e / j'e / jihj'e | יֶ | `audio/m/israeli/syllable/yod-e.mp3` |
-| listen | zu | z'o / z'o / z'u / z'o / z'u | זֻ | `audio/m/israeli/syllable/zayin-u.mp3` |
-| listen | v | b'e / b'e / b'e / b'e / b'e | בְ | `audio/m/israeli/vowel/shva.mp3` |
 | majority | alef | q'alf / q'alef / q'alef / q'al'ef / q'al'ef | אָלֶף | `audio/f/israeli/letter/alef.mp3` |
 | majority | ba | b'a / m'a? / b'a / b'a / m'a? | בַּ | `audio/f/israeli/letter/bet-sound.mp3` |
 | majority | kafsofit | sof'it / k'afsof'it / k'afsof'it / k'afsof'it / k'afsof'it | כַּף סוֹפִית | `audio/f/israeli/letter/kaf-final.mp3` |
@@ -53,12 +46,14 @@ Entries that name a mark with no sound of its own (not scored): 2.
 | majority | Sin | S'in / s'e / S'in / S'in / S'in | שִׁין | `audio/m/israeli/letter/shin.mp3` |
 | majority | ga | g'a / g'at / g'a / g'a / g'a | גַ | `audio/m/israeli/syllable/gimel-a.mp3` |
 | majority | gu | g'u / g'u / g'u / g'ur / g'ur | גוּ. | `audio/m/israeli/syllable/gimel-u.mp3` |
+| majority | he | h'e / h'e / h'e / h'e / h'a? | הֶ | `audio/m/israeli/syllable/he-e.mp3` |
 | majority | ho | h'o / h'u / h'o / h'o / h'o | הֹ | `audio/m/israeli/syllable/he-o.mp3` |
 | majority | ke | k'e / k'a / k'e / k'e / k'e | כֶּ | `audio/m/israeli/syllable/kaf-e.mp3` |
 | majority | ku | k'u / k'u / k'u / k'u / k'ur | כֻּ. | `audio/m/israeli/syllable/kaf-u.mp3` |
 | majority | me | m'e / m'a / m'e / m'e / m'e | מֶ | `audio/m/israeli/syllable/mem-e.mp3` |
 | majority | ni | m'i / n'i / n'i / n'i / n'i | נִ | `audio/m/israeli/syllable/nun-i.mp3` |
 | majority | pa | x'at / p'a / p'a / p'a / p'a | פַּ | `audio/m/israeli/syllable/pe-a.mp3` |
+| majority | ke | kej'a / k'e / k'e / k'e. / k'e? | קֵה | `audio/m/israeli/syllable/qof-e.mp3` |
 | majority | ku | k'u / k'u / k'u / k'ur / k'u | קוּ | `audio/m/israeli/syllable/qof-u.mp3` |
 | majority | re | r'e / q'a / r'e / r'e / r'e | רֶ | `audio/m/israeli/syllable/resh-e.mp3` |
 | majority | ri | vej'i / r'i / r'i / r'i / vej'i | רִ | `audio/m/israeli/syllable/resh-i.mp3` |

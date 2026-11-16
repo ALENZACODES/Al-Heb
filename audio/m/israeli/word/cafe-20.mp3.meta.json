@@ -5,9 +5,8 @@
  "voiceId": "he-IL-Wavenet-B",
  "tradition": "israeli",
  "inputText": "סָלָט",
- "inputSha256": "eabf8905b3816a5dc9ab862b1a275cb933a4b0843beaa025dd9fd49e1ee5935a",
  "ingestedAt": null,
  "licence": "customer-owned",
- "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
+ "note": "Re-recorded 2026-11-16 after the full hearing flagged the clip (docs/audio/gpu-flagged-2026-11-16.json): read from סָלָט, heard right twice (סלט / סלט) by tools/audio/asr-check/fix_list.py.",
  "inputTextKind": "hebrew"
 }

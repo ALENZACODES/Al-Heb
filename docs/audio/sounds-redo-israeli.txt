@@ -1,9 +1,2 @@
-audio/f/israeli/syllable/gimel-u.mp3
 audio/f/israeli/syllable/yod-e.mp3
-audio/f/israeli/vowel/shva.mp3
-audio/m/israeli/syllable/he-e.mp3
-audio/m/israeli/syllable/pe-u.mp3
-audio/m/israeli/syllable/qof-e.mp3
 audio/m/israeli/syllable/yod-e.mp3
-audio/m/israeli/syllable/zayin-u.mp3
-audio/m/israeli/vowel/shva.mp3

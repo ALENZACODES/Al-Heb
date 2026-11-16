@@ -129,6 +129,8 @@ def should(row):
     if one and ipa and not (set(fold(ipa)) & VOWELS):               # a letter sound rendered as letter + vowel
         v = next((VOWEL_OF[ch] for ch in row['input'] if ch in VOWEL_OF), '')
         return fold(ipa) + v
+    if row['kind'] == 'letter' and ipa and not (set(fold(ipa)) & VOWELS) and pointed(row['input']) and not one:
+        return fold(ipa) + 'a'                                    # a letter sound cut from a longer take (וָו וָ: "va")
     if pointed(row['input']) and not one:
         return fold(phonemize(row['input']))
     if ipa:

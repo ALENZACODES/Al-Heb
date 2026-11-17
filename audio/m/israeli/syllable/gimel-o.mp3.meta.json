@@ -1,0 +1,13 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "google-cloud-tts",
+ "voiceId": "de-DE-Chirp3-HD-Charon",
+ "tradition": "israeli",
+ "inputText": "[ɡo] (IPA)",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "Re-recorded 17 Nov 2026: the israeli reading \"go\" given to the voice as exact sounds [ɡo] (IPA) (Google Chirp HD, de-DE setting, which accepts IPA); heard by three listeners as whisper: g'o; w2v: ɡ oː / ɡ o / ɡ o; xlsr: ɡ o / ɡ o / ɡ o. Synthetic, not a human recording.",
+ "inputTextKind": "ipa",
+ "madeFrom": "ipa"
+}

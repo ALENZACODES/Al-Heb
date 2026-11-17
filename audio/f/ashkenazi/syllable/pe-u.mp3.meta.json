@@ -1,0 +1,31 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-respelled-israeli-voice",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-C",
+ "tradition": "ashkenazi",
+ "inputText": "פּוּ",
+ "ingestedAt": "2026-11-12T15:41:04.899Z",
+ "licence": "customer-owned",
+ "note": "Re-recorded 17 Nov 2026: the ashkenazi reading \"pu\" written in pointed Hebrew (פּוּ) and read by the Israeli voice; heard by three listeners as whisper: p'u; w2v: p u5 / p u5 / p uː; xlsr: f u5 / p uː / p uː. Synthetic, not a human recording.",
+ "renderedAt": "2026-11-12T15:41:04.899Z",
+ "redistributionCleared": false,
+ "spokenText": "פֻּ",
+ "normalized": true,
+ "provider": "google",
+ "madeFrom": "hebrew-script",
+ "voiceName": "he-IL-Wavenet-A",
+ "languageCode": "he-IL",
+ "hebrew": "פֻּ",
+ "israeliRef": "audio/f/israeli/syllable/pe-u.mp3",
+ "tempo": {
+  "applied": false,
+  "factor": 1,
+  "cap": 1.26,
+  "before": 0.6960090702947845,
+  "after": 0.6960090702947845,
+  "israeliSec": 0.8560090702947846,
+  "israeliRef": "audio/f/israeli/syllable/pe-u.mp3"
+ },
+ "inputTextKind": "hebrew"
+}

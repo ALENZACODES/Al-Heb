@@ -1,0 +1,16 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "israeli-clip-same-reading",
+ "engine": "google-cloud-tts",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "sephardi",
+ "inputText": "צַ.",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "Re-recorded 17 Nov 2026: the sephardi reading \"tz\" written in pointed Hebrew (צַ.) and read by the Israeli voice; the sound model heard it as ts'a / ts'a / ts'a. Synthetic, not a human recording.",
+ "inputTextKind": "hebrew",
+ "copyOf": "audio/m/israeli/letter/tsadi-sound.mp3",
+ "madeFrom": "hebrew-script",
+ "sephardiReading": "tz",
+ "copiedAt": "2026-11-12T15:35:53.867Z"
+}

@@ -1,0 +1,16 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "israeli-clip-same-reading",
+ "engine": "google-cloud-tts",
+ "voiceId": "he-IL-Chirp3-HD-Charon",
+ "tradition": "sephardi",
+ "inputText": "רִ",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "Re-recorded 17 Nov 2026: the sephardi reading \"ri\" written in pointed Hebrew (רִ) and read by the Israeli voice; the sound model heard it as r'i / r'i / r'i. Synthetic, not a human recording.",
+ "inputTextKind": "hebrew",
+ "copyOf": "audio/m/israeli/syllable/resh-i.mp3",
+ "madeFrom": "hebrew-script",
+ "sephardiReading": "ri",
+ "copiedAt": "2026-11-12T15:35:53.867Z"
+}

@@ -1,0 +1,31 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-respelled-israeli-voice",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "ashkenazi",
+ "inputText": "צַ.",
+ "ingestedAt": "2026-11-12T15:41:32.082Z",
+ "licence": "customer-owned",
+ "note": "Re-recorded 17 Nov 2026: the ashkenazi reading \"tz\" written in pointed Hebrew (צַ.) and read by the Israeli voice; the sound model heard it as ts'a / ts'a / ts'a. Synthetic, not a human recording.",
+ "renderedAt": "2026-11-12T15:41:32.082Z",
+ "redistributionCleared": false,
+ "spokenText": "צ",
+ "normalized": true,
+ "provider": "google",
+ "madeFrom": "hebrew-script",
+ "voiceName": "he-IL-Wavenet-B",
+ "languageCode": "he-IL",
+ "hebrew": "צ",
+ "israeliRef": "audio/m/israeli/letter/tsadi-sound.mp3",
+ "tempo": {
+  "applied": false,
+  "factor": 1,
+  "cap": 1.26,
+  "before": 0.7919954648526077,
+  "after": 0.7919954648526077,
+  "israeliSec": 0.7847392290249433,
+  "israeliRef": "audio/m/israeli/letter/tsadi-sound.mp3"
+ },
+ "inputTextKind": "hebrew"
+}

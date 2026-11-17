@@ -1,0 +1,7 @@
+{
+ "voiceId": "he-IL-Wavenet-A",
+ "inputText": "פַ.",
+ "inputTextKind": "hebrew",
+ "madeFrom": "hebrew-script",
+ "note": "Re-recorded 17 Nov 2026: the israeli reading \"f\" written in pointed Hebrew (פַ.) and read by the Israeli voice; the sound model heard it as f'a / f'a / f'a. Synthetic, not a human recording."
+}

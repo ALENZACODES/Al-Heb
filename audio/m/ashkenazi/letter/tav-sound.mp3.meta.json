@@ -1,0 +1,31 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-respelled-israeli-voice",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "ashkenazi",
+ "inputText": "תַ",
+ "ingestedAt": "2026-11-12T14:08:04.388Z",
+ "licence": "customer-owned",
+ "note": "Copied 17 Nov 2026 from audio/m/israeli/letter/tav-sound.mp3: the app's ashkenazi reading \"t\" is the Israeli reading letter for letter, and the earlier clip (the Israeli voice reading English letters) was heard wrong by the sound check.",
+ "renderedAt": "2026-11-12T14:08:04.388Z",
+ "redistributionCleared": false,
+ "spokenText": "ס",
+ "normalized": true,
+ "provider": "google",
+ "madeFrom": "israeli-clip-same-reading",
+ "voiceName": "he-IL-Wavenet-B",
+ "languageCode": "he-IL",
+ "hebrew": "ת",
+ "israeliRef": "audio/m/israeli/letter/tav-sound.mp3",
+ "tempo": {
+  "applied": true,
+  "factor": 1.0093141124011789,
+  "cap": 1.26,
+  "before": 0.9360090702947845,
+  "after": 0.9274603174603174,
+  "israeliSec": 0.7360090702947846,
+  "israeliRef": "audio/m/israeli/letter/tav-sound.mp3"
+ },
+ "inputTextKind": "hebrew"
+}

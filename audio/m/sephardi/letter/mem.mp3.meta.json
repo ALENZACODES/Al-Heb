@@ -1,0 +1,31 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-respelled-israeli-voice",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "sephardi",
+ "inputText": "מֵם.",
+ "ingestedAt": "2026-11-12T07:00:39.728Z",
+ "licence": "customer-owned",
+ "note": "Re-recorded 17 Nov 2026: the sephardi reading \"mem\" written in pointed Hebrew (מֵם.) and read by the Israeli voice; heard by three listeners as whisper: m'em; w2v: m eː m / m eː m / m eː m; xlsr: m ɛ m / m ɛ m / m ɛ m. Synthetic, not a human recording.",
+ "renderedAt": "2026-11-12T07:00:39.728Z",
+ "redistributionCleared": false,
+ "spokenText": "mem",
+ "normalized": true,
+ "provider": "google",
+ "madeFrom": "hebrew-script",
+ "voiceName": "he-IL-Wavenet-B",
+ "languageCode": "he-IL",
+ "hebrew": "מֵם",
+ "israeliRef": "audio/m/israeli/letter/mem.mp3",
+ "tempo": {
+  "applied": false,
+  "factor": 1,
+  "cap": 1.26,
+  "before": 0.72,
+  "after": 0.72,
+  "israeliSec": 0.88,
+  "israeliRef": "audio/m/israeli/letter/mem.mp3"
+ },
+ "inputTextKind": "hebrew"
+}

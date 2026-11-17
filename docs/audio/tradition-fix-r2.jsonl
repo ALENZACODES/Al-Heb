@@ -1,0 +1,147 @@
+{"file": "audio/f/ashkenazi/letter/ayin.mp3", "tradition": "ashkenazi", "text": "עַיִן", "say": "ayin", "script": "עַיִן", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/f/ashkenazi/letter/chet-sound.mp3", "tradition": "ashkenazi", "text": "ח", "say": "ch", "script": "ח", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/f/ashkenazi/letter/gimel-sound.mp3", "tradition": "ashkenazi", "text": "ג", "say": "g", "script": "ג", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/f/ashkenazi/letter/he-sound.mp3", "tradition": "ashkenazi", "text": "ה", "say": "h", "script": "ה", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/f/ashkenazi/letter/khaf.mp3", "tradition": "ashkenazi", "text": "כַף", "say": "khaf", "script": "כַף", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/f/ashkenazi/letter/lamed-sound.mp3", "tradition": "ashkenazi", "text": "ל", "say": "l", "script": "ל", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/f/ashkenazi/letter/lamed.mp3", "tradition": "ashkenazi", "text": "לָמֶד", "say": "lomed", "script": "לֹמֶד", "tried": [{"voice": "he-IL-Wavenet-A", "text": "לֹמֶד", "rate": 1.0, "heard": ["lom'ed", "lom'ed", "lom'ed"], "right": 3}], "outcome": "replaced"}
+{"file": "audio/f/ashkenazi/letter/mem-sound.mp3", "tradition": "ashkenazi", "text": "מ", "say": "m", "script": "מ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/f/ashkenazi/letter/mem.mp3", "tradition": "ashkenazi", "text": "מֵם", "say": "meim", "script": "מֵים", "tried": [{"voice": "he-IL-Wavenet-A", "text": "מֵים", "rate": 1.0, "heard": ["m'ejim", "m'ejim", "m'ejim"], "right": 3}], "outcome": "replaced"}
+{"file": "audio/f/ashkenazi/letter/nun-sound.mp3", "tradition": "ashkenazi", "text": "נ", "say": "n", "script": "נ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/f/ashkenazi/letter/resh-sound.mp3", "tradition": "ashkenazi", "text": "ר", "say": "r", "script": "ר", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/f/ashkenazi/letter/resh.mp3", "tradition": "ashkenazi", "text": "רֵישׁ", "say": "reish", "script": "רֵישׁ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/f/ashkenazi/letter/samekh-sound.mp3", "tradition": "ashkenazi", "text": "ס", "say": "s", "script": "ס", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/f/ashkenazi/letter/shin-sound.mp3", "tradition": "ashkenazi", "text": "שׁ", "say": "sh", "script": "שׁ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/f/ashkenazi/letter/sin-sound.mp3", "tradition": "ashkenazi", "text": "שׂ", "say": "s", "script": "שׂ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/f/ashkenazi/letter/tav-sound.mp3", "tradition": "ashkenazi", "text": "ת", "say": "s", "script": "ס", "tried": [{"voice": "he-IL-Wavenet-A", "text": "סַ", "rate": 1.0, "heard": ["s'a", "s'a", "s'a"], "right": 3}], "outcome": "replaced"}
+{"file": "audio/f/ashkenazi/letter/tsadi-sound.mp3", "tradition": "ashkenazi", "text": "צ", "say": "tz", "script": "צ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/f/ashkenazi/letter/vet.mp3", "tradition": "ashkenazi", "text": "בֵית", "say": "veis", "script": "בֵיס", "tried": [{"voice": "he-IL-Wavenet-A", "text": "בֵיס", "rate": 1.0, "heard": ["b'ejs", "b'ejs", "b'ejs"], "right": 0}, {"voice": "he-IL-Wavenet-A", "text": "בֵיס.", "rate": 1.0, "heard": ["b'ejs", "b'ejs", "b'ejs"], "right": 0}, {"voice": "he-IL-Wavenet-A", "text": "בֵיס", "rate": 0.9, "heard": ["b'ejs", "b'ejs", "b'ejs"], "right": 0}, {"voice": "he-IL-Chirp3-HD-Kore", "text": "בֵיס", "rate": 1.0, "heard": ["b'ejs", "b'ejs", "b'ejs"], "right": 0}, {"voice": "he-IL-Chirp3-HD-Kore", "text": "בֵיס.", "rate": 1.0, "heard": ["b'ejs", "b'ejs", "b'ejs"], "right": 0}, {"voice": "he-IL-Wavenet-A", "text": "בֵיס,", "rate": 0.85, "heard": ["b'ejs", "b'ejs", "b'ejs"], "right": 0}], "outcome": "no take heard right: needs a human voice"}
+{"file": "audio/f/ashkenazi/letter/yod-sound.mp3", "tradition": "ashkenazi", "text": "י", "say": "y", "script": "י", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/f/ashkenazi/letter/zayin-sound.mp3", "tradition": "ashkenazi", "text": "ז", "say": "z", "script": "ז", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/f/ashkenazi/syllable/alef-i.mp3", "tradition": "ashkenazi", "text": "אִ", "say": "i", "script": "אִ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/f/ashkenazi/syllable/alef-u.mp3", "tradition": "ashkenazi", "text": "אֻ", "say": "u", "script": "אֻ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/f/ashkenazi/syllable/ayin-i.mp3", "tradition": "ashkenazi", "text": "עִ", "say": "i", "script": "עִ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/f/ashkenazi/syllable/ayin-u.mp3", "tradition": "ashkenazi", "text": "עֻ", "say": "u", "script": "עֻ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/f/ashkenazi/syllable/bet-i.mp3", "tradition": "ashkenazi", "text": "בִּ", "say": "bi", "script": "בִּ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/f/ashkenazi/syllable/bet-u.mp3", "tradition": "ashkenazi", "text": "בֻּ", "say": "bu", "script": "בֻּ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/f/ashkenazi/syllable/he-i.mp3", "tradition": "ashkenazi", "text": "הִ", "say": "hi", "script": "הִ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/f/ashkenazi/syllable/kaf-u.mp3", "tradition": "ashkenazi", "text": "כֻּ", "say": "ku", "script": "כֻּ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/f/ashkenazi/syllable/mem-e.mp3", "tradition": "ashkenazi", "text": "מֶ", "say": "me", "script": "מֶ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/f/ashkenazi/syllable/mem-u.mp3", "tradition": "ashkenazi", "text": "מֻ", "say": "mu", "script": "מֻ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/f/ashkenazi/syllable/pe-i.mp3", "tradition": "ashkenazi", "text": "פִּ", "say": "pi", "script": "פִּ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/f/ashkenazi/syllable/shin-e.mp3", "tradition": "ashkenazi", "text": "שֶׁ", "say": "she", "script": "שֶׁ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/f/ashkenazi/syllable/shin-o.mp3", "tradition": "ashkenazi", "text": "שֹׁ", "say": "sho", "script": "שֹׁ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/f/ashkenazi/syllable/shin-u.mp3", "tradition": "ashkenazi", "text": "שֻׁ", "say": "shu", "script": "שֻׁ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/f/ashkenazi/syllable/tav-u.mp3", "tradition": "ashkenazi", "text": "תֻ", "say": "su", "script": "סֻ", "tried": [{"voice": "he-IL-Wavenet-A", "text": "סֻ", "rate": 1.0, "heard": ["suj'i", "suj'i", "suj'i"], "right": 0}, {"voice": "he-IL-Wavenet-A", "text": "סֻ.", "rate": 1.0, "heard": ["suj'i", "suj'i", "suj'i"], "right": 0}, {"voice": "he-IL-Wavenet-A", "text": "סֻ", "rate": 0.9, "heard": ["suj'i", "suj'i", "suj'i"], "right": 0}, {"voice": "he-IL-Chirp3-HD-Kore", "text": "סֻ", "rate": 1.0, "heard": ["s'a", "s'a", "s'a"], "right": 0}, {"voice": "he-IL-Chirp3-HD-Kore", "text": "סֻ.", "rate": 1.0, "heard": ["q'hhhhhhhhhhhhhhhhhhhhhhhhhhhh", "q'hhhhhhhhhhhhhhhhhhhhhhhhhhhh", "q'hhhhhhhhhhhhhhhhhhhhhhhhhhhh"], "right": 0}, {"voice": "he-IL-Wavenet-A", "text": "סֻ,", "rate": 0.85, "heard": ["suj'i", "suj'i", "suj'i"], "right": 0}], "outcome": "no take heard right: needs a human voice"}
+{"file": "audio/f/ashkenazi/syllable/tsadi-u.mp3", "tradition": "ashkenazi", "text": "צֻ", "say": "tzu", "script": "צֻ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/f/ashkenazi/syllable/vav-e.mp3", "tradition": "ashkenazi", "text": "וֶ", "say": "ve", "script": "וֶ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/f/ashkenazi/syllable/yod-e.mp3", "tradition": "ashkenazi", "text": "יֶ", "say": "ye", "script": "יֶ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/f/ashkenazi/vowel/chirik.mp3", "tradition": "ashkenazi", "text": "אִ", "say": "i", "script": "אִ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/f/ashkenazi/vowel/kubutz.mp3", "tradition": "ashkenazi", "text": "אֻ", "say": "u", "script": "אֻ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/f/ashkenazi/vowel/shuruk.mp3", "tradition": "ashkenazi", "text": "וּ", "say": "u", "script": "וּ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/f/ashkenazi/vowel/shva.mp3", "tradition": "ashkenazi", "text": "בְ", "say": "ve", "script": "בְ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/f/sephardi/letter/ayin.mp3", "tradition": "sephardi", "text": "עַיִן", "say": "ayin", "script": "עַיִן", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/f/sephardi/letter/fe-sound.mp3", "tradition": "sephardi", "text": "פ", "say": "f", "script": "פ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/f/sephardi/letter/he-sound.mp3", "tradition": "sephardi", "text": "ה", "say": "h", "script": "ה", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/f/sephardi/letter/he.mp3", "tradition": "sephardi", "text": "הֵא", "say": "he", "script": "הֵא", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/f/sephardi/letter/khaf.mp3", "tradition": "sephardi", "text": "כַף", "say": "khaf", "script": "כַף", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/f/sephardi/letter/lamed.mp3", "tradition": "sephardi", "text": "לָמֶד", "say": "lamed", "script": "לָמֶד", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/f/sephardi/letter/resh.mp3", "tradition": "sephardi", "text": "רֵישׁ", "say": "reish", "script": "רֵישׁ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/f/sephardi/letter/vet.mp3", "tradition": "sephardi", "text": "בֵית", "say": "veit", "script": "בֵית", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/f/sephardi/syllable/alef-i.mp3", "tradition": "sephardi", "text": "אִ", "say": "i", "script": "אִ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/f/sephardi/syllable/alef-u.mp3", "tradition": "sephardi", "text": "אֻ", "say": "u", "script": "אֻ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/f/sephardi/syllable/ayin-i.mp3", "tradition": "sephardi", "text": "עִ", "say": "i", "script": "עִ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/f/sephardi/syllable/ayin-u.mp3", "tradition": "sephardi", "text": "עֻ", "say": "u", "script": "עֻ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/f/sephardi/syllable/bet-i.mp3", "tradition": "sephardi", "text": "בִּ", "say": "bi", "script": "בִּ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/f/sephardi/syllable/bet-u.mp3", "tradition": "sephardi", "text": "בֻּ", "say": "bu", "script": "בֻּ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/f/sephardi/syllable/dalet-u.mp3", "tradition": "sephardi", "text": "דֻ", "say": "du", "script": "דֻ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/f/sephardi/syllable/he-e.mp3", "tradition": "sephardi", "text": "הֶ", "say": "he", "script": "הֶ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/f/sephardi/syllable/he-i.mp3", "tradition": "sephardi", "text": "הִ", "say": "hi", "script": "הִ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/f/sephardi/syllable/kaf-u.mp3", "tradition": "sephardi", "text": "כֻּ", "say": "ku", "script": "כֻּ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/f/sephardi/syllable/mem-e.mp3", "tradition": "sephardi", "text": "מֶ", "say": "me", "script": "מֶ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/f/sephardi/syllable/pe-e.mp3", "tradition": "sephardi", "text": "פֶּ", "say": "pe", "script": "פֶּ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/f/sephardi/syllable/pe-i.mp3", "tradition": "sephardi", "text": "פִּ", "say": "pi", "script": "פִּ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/f/sephardi/syllable/shin-e.mp3", "tradition": "sephardi", "text": "שֶׁ", "say": "she", "script": "שֶׁ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/f/sephardi/syllable/vav-e.mp3", "tradition": "sephardi", "text": "וֶ", "say": "ve", "script": "וֶ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/f/sephardi/syllable/yod-e.mp3", "tradition": "sephardi", "text": "יֶ", "say": "ye", "script": "יֶ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/f/sephardi/vowel/chirik.mp3", "tradition": "sephardi", "text": "אִ", "say": "i", "script": "אִ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/f/sephardi/vowel/kubutz.mp3", "tradition": "sephardi", "text": "אֻ", "say": "u", "script": "אֻ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/f/sephardi/vowel/shuruk.mp3", "tradition": "sephardi", "text": "וּ", "say": "u", "script": "וּ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/ashkenazi/letter/ayin.mp3", "tradition": "ashkenazi", "text": "עַיִן", "say": "ayin", "script": "עַיִן", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/ashkenazi/letter/chet-sound.mp3", "tradition": "ashkenazi", "text": "ח", "say": "ch", "script": "ח", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/ashkenazi/letter/chet.mp3", "tradition": "ashkenazi", "text": "חֵית", "say": "cheis", "script": "חֵיס", "tried": [{"voice": "he-IL-Wavenet-B", "text": "חֵיס", "rate": 1.0, "heard": ["x'ejs", "x'ejs", "x'ejs"], "right": 3}], "outcome": "replaced"}
+{"file": "audio/m/ashkenazi/letter/fe-sound.mp3", "tradition": "ashkenazi", "text": "פ", "say": "f", "script": "פ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/ashkenazi/letter/gimel-sound.mp3", "tradition": "ashkenazi", "text": "ג", "say": "g", "script": "ג", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/ashkenazi/letter/he-sound.mp3", "tradition": "ashkenazi", "text": "ה", "say": "h", "script": "ה", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/ashkenazi/letter/khaf.mp3", "tradition": "ashkenazi", "text": "כַף", "say": "khaf", "script": "כַף", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/ashkenazi/letter/lamed-sound.mp3", "tradition": "ashkenazi", "text": "ל", "say": "l", "script": "ל", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/ashkenazi/letter/lamed.mp3", "tradition": "ashkenazi", "text": "לָמֶד", "say": "lomed", "script": "לֹמֶד", "tried": [{"voice": "he-IL-Wavenet-B", "text": "לֹמֶד", "rate": 1.0, "heard": ["lom'ed", "lom'ed", "lom'ed"], "right": 3}], "outcome": "replaced"}
+{"file": "audio/m/ashkenazi/letter/mem-final.mp3", "tradition": "ashkenazi", "text": "מֵם סוֹפִית", "say": "meim sofis", "script": "מֵים סוֹפִיס", "tried": [{"voice": "he-IL-Wavenet-B", "text": "מֵים סוֹפִיס", "rate": 1.0, "heard": ["m'ejmsof'is", "m'ejmsof'is", "m'ejmsof'is"], "right": 3}], "outcome": "replaced"}
+{"file": "audio/m/ashkenazi/letter/mem-sound.mp3", "tradition": "ashkenazi", "text": "מ", "say": "m", "script": "מ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/ashkenazi/letter/mem.mp3", "tradition": "ashkenazi", "text": "מֵם", "say": "meim", "script": "מֵים", "tried": [{"voice": "he-IL-Wavenet-B", "text": "מֵים", "rate": 1.0, "heard": ["meq'im", "meq'im", "meq'im"], "right": 3}], "outcome": "replaced"}
+{"file": "audio/m/ashkenazi/letter/nun-sound.mp3", "tradition": "ashkenazi", "text": "נ", "say": "n", "script": "נ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/ashkenazi/letter/pe-sound.mp3", "tradition": "ashkenazi", "text": "פ", "say": "f", "script": "פ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/ashkenazi/letter/pe.mp3", "tradition": "ashkenazi", "text": "פֵּא", "say": "pei", "script": "פֵּיא", "tried": [{"voice": "he-IL-Wavenet-B", "text": "פֵּיא", "rate": 1.0, "heard": ["t'ej", "t'ej", "t'ej"], "right": 0}, {"voice": "he-IL-Wavenet-B", "text": "פֵּיא.", "rate": 1.0, "heard": ["p'e", "p'e", "p'e"], "right": 3}], "outcome": "replaced"}
+{"file": "audio/m/ashkenazi/letter/resh-sound.mp3", "tradition": "ashkenazi", "text": "ר", "say": "r", "script": "ר", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/ashkenazi/letter/resh.mp3", "tradition": "ashkenazi", "text": "רֵישׁ", "say": "reish", "script": "רֵישׁ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/ashkenazi/letter/samekh-sound.mp3", "tradition": "ashkenazi", "text": "ס", "say": "s", "script": "ס", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/ashkenazi/letter/shin-sound.mp3", "tradition": "ashkenazi", "text": "שׁ", "say": "sh", "script": "שׁ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/ashkenazi/letter/sin-sound.mp3", "tradition": "ashkenazi", "text": "שׂ", "say": "s", "script": "שׂ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/ashkenazi/letter/tav-sound.mp3", "tradition": "ashkenazi", "text": "ת", "say": "s", "script": "ס", "tried": [{"voice": "he-IL-Wavenet-B", "text": "סַ", "rate": 1.0, "heard": ["s'a", "s'a", "s'a"], "right": 3}], "outcome": "replaced"}
+{"file": "audio/m/ashkenazi/letter/tsadi-sound.mp3", "tradition": "ashkenazi", "text": "צ", "say": "tz", "script": "צ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/ashkenazi/letter/vet.mp3", "tradition": "ashkenazi", "text": "בֵית", "say": "veis", "script": "בֵיס", "tried": [{"voice": "he-IL-Wavenet-B", "text": "בֵיס", "rate": 1.0, "heard": ["b'ejs", "b'ejs", "b'ejs"], "right": 0}, {"voice": "he-IL-Wavenet-B", "text": "בֵיס.", "rate": 1.0, "heard": ["b'ejs", "b'ejs", "b'ejs"], "right": 0}, {"voice": "he-IL-Wavenet-B", "text": "בֵיס", "rate": 0.9, "heard": ["b'ejs", "b'ejs", "b'ejs"], "right": 0}, {"voice": "he-IL-Chirp3-HD-Charon", "text": "בֵיס", "rate": 1.0, "heard": ["b'ejs", "b'ejs", "b'ejs"], "right": 0}, {"voice": "he-IL-Chirp3-HD-Charon", "text": "בֵיס.", "rate": 1.0, "heard": ["b'ejs", "b'ejs", "b'ejs"], "right": 0}, {"voice": "he-IL-Wavenet-B", "text": "בֵיס,", "rate": 0.85, "heard": ["b'ejs", "b'ejs", "b'ejs"], "right": 0}], "outcome": "no take heard right: needs a human voice"}
+{"file": "audio/m/ashkenazi/letter/yod-sound.mp3", "tradition": "ashkenazi", "text": "י", "say": "y", "script": "י", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/ashkenazi/letter/yod.mp3", "tradition": "ashkenazi", "text": "יוֹד", "say": "yod", "script": "יוֹד", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/ashkenazi/letter/zayin-sound.mp3", "tradition": "ashkenazi", "text": "ז", "say": "z", "script": "ז", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/ashkenazi/syllable/alef-i.mp3", "tradition": "ashkenazi", "text": "אִ", "say": "i", "script": "אִ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/ashkenazi/syllable/alef-u.mp3", "tradition": "ashkenazi", "text": "אֻ", "say": "u", "script": "אֻ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/ashkenazi/syllable/ayin-i.mp3", "tradition": "ashkenazi", "text": "עִ", "say": "i", "script": "עִ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/ashkenazi/syllable/ayin-u.mp3", "tradition": "ashkenazi", "text": "עֻ", "say": "u", "script": "עֻ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/ashkenazi/syllable/bet-e.mp3", "tradition": "ashkenazi", "text": "בֶּ", "say": "be", "script": "בֶּ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/ashkenazi/syllable/bet-i.mp3", "tradition": "ashkenazi", "text": "בִּ", "say": "bi", "script": "בִּ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/ashkenazi/syllable/bet-u.mp3", "tradition": "ashkenazi", "text": "בֻּ", "say": "bu", "script": "בֻּ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/ashkenazi/syllable/he-i.mp3", "tradition": "ashkenazi", "text": "הִ", "say": "hi", "script": "הִ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/ashkenazi/syllable/lamed-e.mp3", "tradition": "ashkenazi", "text": "לֶ", "say": "le", "script": "לֶ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/ashkenazi/syllable/mem-e.mp3", "tradition": "ashkenazi", "text": "מֶ", "say": "me", "script": "מֶ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/ashkenazi/syllable/mem-u.mp3", "tradition": "ashkenazi", "text": "מֻ", "say": "mu", "script": "מֻ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/ashkenazi/syllable/pe-i.mp3", "tradition": "ashkenazi", "text": "פִּ", "say": "pi", "script": "פִּ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/ashkenazi/syllable/pe-u.mp3", "tradition": "ashkenazi", "text": "פֻּ", "say": "pu", "script": "פֻּ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/ashkenazi/syllable/shin-e.mp3", "tradition": "ashkenazi", "text": "שֶׁ", "say": "she", "script": "שֶׁ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/ashkenazi/syllable/tav-u.mp3", "tradition": "ashkenazi", "text": "תֻ", "say": "su", "script": "סֻ", "tried": [{"voice": "he-IL-Wavenet-B", "text": "סֻ", "rate": 1.0, "heard": ["tsuj'i", "tsuj'i", "tsuj'i"], "right": 0}, {"voice": "he-IL-Wavenet-B", "text": "סֻ.", "rate": 1.0, "heard": ["tsuj'i", "tsuj'i", "tsuj'i"], "right": 0}, {"voice": "he-IL-Wavenet-B", "text": "סֻ", "rate": 0.9, "heard": ["tsuj'i", "tsuj'i", "tsuj'i"], "right": 0}, {"voice": "he-IL-Chirp3-HD-Charon", "text": "סֻ", "rate": 1.0, "heard": ["s'a", "s'a", "s'a"], "right": 0}, {"voice": "he-IL-Chirp3-HD-Charon", "text": "סֻ.", "rate": 1.0, "heard": ["ts'a", "ts'a", "ts'a"], "right": 0}, {"voice": "he-IL-Wavenet-B", "text": "סֻ,", "rate": 0.85, "heard": ["tsuj'i", "tsuj'i", "tsuj'i"], "right": 0}], "outcome": "no take heard right: needs a human voice"}
+{"file": "audio/m/ashkenazi/syllable/tsadi-u.mp3", "tradition": "ashkenazi", "text": "צֻ", "say": "tzu", "script": "צֻ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/ashkenazi/syllable/vav-a.mp3", "tradition": "ashkenazi", "text": "וַ", "say": "va", "script": "וַ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/ashkenazi/syllable/yod-e.mp3", "tradition": "ashkenazi", "text": "יֶ", "say": "ye", "script": "יֶ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/ashkenazi/syllable/zayin-u.mp3", "tradition": "ashkenazi", "text": "זֻ", "say": "zu", "script": "זֻ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/ashkenazi/vowel/chirik.mp3", "tradition": "ashkenazi", "text": "אִ", "say": "i", "script": "אִ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/ashkenazi/vowel/kubutz.mp3", "tradition": "ashkenazi", "text": "אֻ", "say": "u", "script": "אֻ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/ashkenazi/vowel/shuruk.mp3", "tradition": "ashkenazi", "text": "וּ", "say": "u", "script": "וּ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/sephardi/letter/ayin.mp3", "tradition": "sephardi", "text": "עַיִן", "say": "ayin", "script": "עַיִן", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/sephardi/letter/bet-sound.mp3", "tradition": "sephardi", "text": "בַּ", "say": "ba", "script": "בַּ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/sephardi/letter/he-sound.mp3", "tradition": "sephardi", "text": "ה", "say": "h", "script": "ה", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/sephardi/letter/he.mp3", "tradition": "sephardi", "text": "הֵא", "say": "he", "script": "הֵא", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/sephardi/letter/pe-sound.mp3", "tradition": "sephardi", "text": "פ", "say": "f", "script": "פ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/sephardi/letter/resh.mp3", "tradition": "sephardi", "text": "רֵישׁ", "say": "reish", "script": "רֵישׁ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/sephardi/letter/vet.mp3", "tradition": "sephardi", "text": "בֵית", "say": "veit", "script": "בֵית", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/sephardi/letter/yod.mp3", "tradition": "sephardi", "text": "יוֹד", "say": "yod", "script": "יוֹד", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/sephardi/letter/zayin-sound.mp3", "tradition": "sephardi", "text": "זַ", "say": "za", "script": "זַ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/sephardi/syllable/alef-e.mp3", "tradition": "sephardi", "text": "אֶ", "say": "e", "script": "אֶ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/sephardi/syllable/alef-i.mp3", "tradition": "sephardi", "text": "אִ", "say": "i", "script": "אִ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/sephardi/syllable/alef-u.mp3", "tradition": "sephardi", "text": "אֻ", "say": "u", "script": "אֻ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/sephardi/syllable/ayin-i.mp3", "tradition": "sephardi", "text": "עִ", "say": "i", "script": "עִ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/sephardi/syllable/ayin-u.mp3", "tradition": "sephardi", "text": "עֻ", "say": "u", "script": "עֻ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/sephardi/syllable/bet-e.mp3", "tradition": "sephardi", "text": "בֶּ", "say": "be", "script": "בֶּ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/sephardi/syllable/bet-i.mp3", "tradition": "sephardi", "text": "בִּ", "say": "bi", "script": "בִּ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/sephardi/syllable/bet-u.mp3", "tradition": "sephardi", "text": "בֻּ", "say": "bu", "script": "בֻּ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/sephardi/syllable/he-e.mp3", "tradition": "sephardi", "text": "הֶ", "say": "he", "script": "הֶ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/sephardi/syllable/he-i.mp3", "tradition": "sephardi", "text": "הִ", "say": "hi", "script": "הִ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/sephardi/syllable/mem-e.mp3", "tradition": "sephardi", "text": "מֶ", "say": "me", "script": "מֶ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/sephardi/syllable/mem-u.mp3", "tradition": "sephardi", "text": "מֻ", "say": "mu", "script": "מֻ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/sephardi/syllable/pe-e.mp3", "tradition": "sephardi", "text": "פֶּ", "say": "pe", "script": "פֶּ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/sephardi/syllable/pe-i.mp3", "tradition": "sephardi", "text": "פִּ", "say": "pi", "script": "פִּ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/sephardi/syllable/resh-i.mp3", "tradition": "sephardi", "text": "רִ", "say": "ri", "script": "רִ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/sephardi/syllable/shin-e.mp3", "tradition": "sephardi", "text": "שֶׁ", "say": "she", "script": "שֶׁ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/sephardi/syllable/vav-a.mp3", "tradition": "sephardi", "text": "וַ", "say": "va", "script": "וַ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/sephardi/syllable/yod-e.mp3", "tradition": "sephardi", "text": "יֶ", "say": "ye", "script": "יֶ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/sephardi/vowel/chirik.mp3", "tradition": "sephardi", "text": "אִ", "say": "i", "script": "אִ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/sephardi/vowel/kubutz.mp3", "tradition": "sephardi", "text": "אֻ", "say": "u", "script": "אֻ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/m/sephardi/vowel/shuruk.mp3", "tradition": "sephardi", "text": "וּ", "say": "u", "script": "וּ", "outcome": "copied the Israeli clip (same reading)"}

@@ -1,0 +1,13 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "google-cloud-tts",
+ "voiceId": "de-DE-Chirp3-HD-Kore",
+ "tradition": "israeli",
+ "inputText": "[to] (IPA)",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "Re-recorded 17 Nov 2026: the israeli reading \"to\" given to the voice as exact sounds [to] (IPA) (Google Chirp HD, de-DE setting, which accepts IPA); heard by three listeners as whisper: t'or; w2v: t ɑu5 / t ɑ / t ɑ; xlsr: t ɑu5 / t ɑ / t ɑ. Synthetic, not a human recording.",
+ "inputTextKind": "ipa",
+ "madeFrom": "ipa"
+}

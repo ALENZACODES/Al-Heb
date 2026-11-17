@@ -1,0 +1,13 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "google-cloud-tts",
+ "voiceId": "he-IL-Wavenet-D",
+ "tradition": "israeli",
+ "inputText": "מֶ",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "Re-recorded 17 Nov 2026: the israeli reading \"me\" written in pointed Hebrew (מֶ) and read by the Israeli voice; heard by three listeners as whisper: m'e; w2v: m eː / m eː / m eː; xlsr: m e / m e / m e. Synthetic, not a human recording.",
+ "inputTextKind": "hebrew",
+ "madeFrom": "hebrew-script"
+}

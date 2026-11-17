@@ -1,0 +1,31 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-respelled-israeli-voice",
+ "engine": "google",
+ "voiceId": "he-IL-Chirp3-HD-Charon",
+ "tradition": "ashkenazi",
+ "inputText": "טֵיס.",
+ "ingestedAt": "2026-11-12T14:08:13.561Z",
+ "licence": "customer-owned",
+ "note": "Re-recorded 17 Nov 2026: the ashkenazi reading \"teis\" written in pointed Hebrew (טֵיס.) and read by the Israeli voice; heard by three listeners as whisper: t'ejst; w2v: t eɪ s / t eɪ s / t eɪ s; xlsr: t eɪ s / t eɪ s / t eɪ s. Synthetic, not a human recording.",
+ "renderedAt": "2026-11-12T14:08:13.561Z",
+ "redistributionCleared": false,
+ "spokenText": "טֵיס",
+ "normalized": true,
+ "provider": "google",
+ "madeFrom": "hebrew-script",
+ "voiceName": "he-IL-Wavenet-B",
+ "languageCode": "he-IL",
+ "hebrew": "טֵית",
+ "israeliRef": "audio/m/israeli/letter/tet.mp3",
+ "tempo": {
+  "applied": false,
+  "factor": 1,
+  "cap": 1.26,
+  "before": 0.8640136054421769,
+  "after": 0.8640136054421769,
+  "israeliSec": 0.9280045351473923,
+  "israeliRef": "audio/m/israeli/letter/tet.mp3"
+ },
+ "inputTextKind": "hebrew"
+}

@@ -1,0 +1,13 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "google-cloud-tts",
+ "voiceId": "de-DE-Chirp3-HD-Charon",
+ "tradition": "israeli",
+ "inputText": "[tejt] (IPA)",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "Re-recorded 17 Nov 2026: the israeli reading \"teit\" given to the voice as exact sounds [tejt] (IPA) (Google Chirp HD, de-DE setting, which accepts IPA); heard by three listeners as whisper: t'ejt; w2v: t eɪ t / t eɪ t / t eɪ t; xlsr: t eɪ t / t eɪ t / t eɪ t. Synthetic, not a human recording.",
+ "inputTextKind": "ipa",
+ "madeFrom": "ipa"
+}

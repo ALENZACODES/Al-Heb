@@ -2,11 +2,12 @@
  "status": "tts",
  "source": "paid-cloud",
  "engine": "google-cloud-tts",
- "voiceId": "he-IL-Wavenet-A",
+ "voiceId": "de-DE-Chirp3-HD-Kore",
  "tradition": "israeli",
- "inputText": "גִ",
+ "inputText": "[ɡi] (IPA)",
  "ingestedAt": null,
  "licence": "customer-owned",
- "note": "Re-recorded after the sound check (docs/audio/SOUNDS-CHECK.md): read from גִ, heard right 5 times in 5 by tools/audio/asr-check/sound_takes.py.",
- "inputTextKind": "hebrew"
+ "note": "Re-recorded 17 Nov 2026: the israeli reading \"gi\" given to the voice as exact sounds [ɡi] (IPA) (Google Chirp HD, de-DE setting, which accepts IPA); heard by three listeners as whisper: g'i; w2v: ɡ iː / ɡ iː / ɡ iː; xlsr: ɡ iː / ɡ iː / ɡ iː. Synthetic, not a human recording.",
+ "inputTextKind": "ipa",
+ "madeFrom": "ipa"
 }

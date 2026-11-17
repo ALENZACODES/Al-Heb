@@ -5,9 +5,9 @@
  "voiceId": "he-IL-Wavenet-B",
  "tradition": "israeli",
  "inputText": "רַ",
- "inputSha256": "8e7d2beec32941bd23894ca46286932891c34db444913d23045405f862bdaa24",
  "ingestedAt": null,
  "licence": "customer-owned",
- "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
- "inputTextKind": "hebrew"
+ "note": "Re-recorded 17 Nov 2026: the israeli reading \"ra\" written in pointed Hebrew (רַ) and read by the Israeli voice; heard by three listeners as whisper: r'an; w2v: v aː / r a / b z a; xlsr: ð a / ð a / ð a. Synthetic, not a human recording.",
+ "inputTextKind": "hebrew",
+ "madeFrom": "hebrew-script"
 }

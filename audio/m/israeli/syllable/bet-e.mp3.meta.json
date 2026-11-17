@@ -2,12 +2,12 @@
  "status": "tts",
  "source": "paid-cloud",
  "engine": "google-cloud-tts",
- "voiceId": "he-IL-Wavenet-B",
+ "voiceId": "de-DE-Chirp3-HD-Charon",
  "tradition": "israeli",
- "inputText": "בֶּ",
- "inputSha256": "91ff3e155f8159c68ea2ed2f7b360b9c381ff628b57e1f16f48cd7bc6e4a1296",
+ "inputText": "[be] (IPA)",
  "ingestedAt": null,
  "licence": "customer-owned",
- "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
- "inputTextKind": "hebrew"
+ "note": "Re-recorded 17 Nov 2026: the israeli reading \"be\" given to the voice as exact sounds [be] (IPA) (Google Chirp HD, de-DE setting, which accepts IPA); heard by three listeners as whisper: b'e; w2v: b ɛ / b ɛ / b ɛ; xlsr: b ɛ / b ɛ / b ɛ. Synthetic, not a human recording.",
+ "inputTextKind": "ipa",
+ "madeFrom": "ipa"
 }

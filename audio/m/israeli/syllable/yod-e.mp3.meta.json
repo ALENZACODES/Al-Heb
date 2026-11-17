@@ -2,12 +2,12 @@
  "status": "tts",
  "source": "paid-cloud",
  "engine": "google-cloud-tts",
- "voiceId": "he-IL-Wavenet-B",
+ "voiceId": "he-IL-Wavenet-D",
  "tradition": "israeli",
  "inputText": "יֶ",
- "inputSha256": "dd1045bfccf06e53bdac51aec1c630f16e383eee3dea3e2f7c1d7858fae3c94e",
  "ingestedAt": null,
  "licence": "customer-owned",
- "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
- "inputTextKind": "hebrew"
+ "note": "Re-recorded 17 Nov 2026: the israeli reading \"ye\" written in pointed Hebrew (יֶ) and read by the Israeli voice; heard by three listeners as whisper: j'e; w2v: j e / j e / j e; xlsr: j e / j e / j e. Synthetic, not a human recording.",
+ "inputTextKind": "hebrew",
+ "madeFrom": "hebrew-script"
 }

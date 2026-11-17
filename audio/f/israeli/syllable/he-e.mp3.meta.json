@@ -2,12 +2,12 @@
  "status": "tts",
  "source": "paid-cloud",
  "engine": "google-cloud-tts",
- "voiceId": "he-IL-Wavenet-C",
+ "voiceId": "de-DE-Chirp3-HD-Kore",
  "tradition": "israeli",
- "inputText": "הֶ",
+ "inputText": "[he] (IPA)",
  "ingestedAt": null,
  "licence": "customer-owned",
- "note": "Re-recorded 17 Nov 2026: the israeli reading \"he\" written in pointed Hebrew (הֶ) and read by the Israeli voice; the sound model heard it as h'e / h'e / h'e. Synthetic, not a human recording.",
- "inputTextKind": "hebrew",
- "madeFrom": "hebrew-script"
+ "note": "Re-recorded 17 Nov 2026: the israeli reading \"he\" given to the voice as exact sounds [he] (IPA) (Google Chirp HD, de-DE setting, which accepts IPA); heard by three listeners as whisper: h'ej!; w2v: ħ eː / h eː / h eː; xlsr: h eː / h eː / h eː. Synthetic, not a human recording.",
+ "inputTextKind": "ipa",
+ "madeFrom": "ipa"
 }

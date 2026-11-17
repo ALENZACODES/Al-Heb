@@ -2,11 +2,12 @@
  "status": "tts",
  "source": "paid-cloud",
  "engine": "google-cloud-tts",
- "voiceId": "he-IL-Wavenet-A",
+ "voiceId": "de-DE-Chirp3-HD-Kore",
  "tradition": "israeli",
- "inputText": "בַּ",
+ "inputText": "[ba] (IPA)",
  "ingestedAt": null,
  "licence": "customer-owned",
- "note": "Letter sound replaced 2026-11-08 by the bet-a syllable (בַּ): the old clip was rendered from the bare letter, which the voice read as a clipped letter name (shin heard as 'shi'). Copied from audio/f/israeli/syllable/bet-a.mp3; heard back as the syllable by tools/audio/asr-check.",
- "inputTextKind": "hebrew"
+ "note": "Re-recorded 17 Nov 2026: the israeli reading \"b\" given to the voice as exact sounds [ba] (IPA) (Google Chirp HD, de-DE setting, which accepts IPA); heard by three listeners as whisper: b'a; w2v: b a / b a / b a; xlsr: b a / b a / b a. Synthetic, not a human recording.",
+ "inputTextKind": "ipa",
+ "madeFrom": "ipa"
 }

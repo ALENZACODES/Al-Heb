@@ -1,22 +1,18 @@
-# Letters, Vowels and Syllables in All Three Traditions (17 Nov 2026)
+# Letters, Vowels and Syllables in All Three Traditions: Full Check (17 Nov 2026, after fix run 4)
 
-Each clip was checked against the reading the app shows for its own tradition (`src/pronunciation/forTradition.js`), by the sound model (renikud/whisper-he-ipa, five hearings each among different neighbours) on a Kaggle GPU, with Meta MMS letters alongside. **wrong** means most hearings missed the reading. A machine check.
+All 1,055 clips heard on a Kaggle GPU by the sound model (renikud/whisper-he-ipa), five hearings each among different neighbours, against each card's own sound, with the stricter rule (no more than one extra sound). A machine check; no person has listened.
 
 | tradition | kind | clips | right | wrong | right % |
 |---|---|---|---|---|---|
-| ashkenazi | letter | 99 | 53 | 46 | 53.5% |
-| ashkenazi | syllable | 202 | 165 | 37 | 81.7% |
-| ashkenazi | vowel | 25 | 14 | 11 | 56.0% |
-| israeli | letter | 114 | 107 | 7 | 93.9% |
-| israeli | syllable | 236 | 207 | 29 | 87.7% |
-| israeli | vowel | 30 | 24 | 6 | 80.0% |
-| sephardi | letter | 114 | 97 | 17 | 85.1% |
-| sephardi | syllable | 205 | 171 | 34 | 83.4% |
-| sephardi | vowel | 30 | 20 | 10 | 66.7% |
-| **all** | | **1,055** | **858** | **197** | **81.3%** |
+| ashkenazi | letter | 99 | 93 | 6 | 93.9% |
+| ashkenazi | syllable | 202 | 197 | 5 | 97.5% |
+| ashkenazi | vowel | 25 | 24 | 1 | 96.0% |
+| israeli | letter | 114 | 112 | 2 | 98.2% |
+| israeli | syllable | 236 | 226 | 10 | 95.8% |
+| israeli | vowel | 30 | 29 | 1 | 96.7% |
+| sephardi | letter | 114 | 110 | 4 | 96.5% |
+| sephardi | syllable | 205 | 198 | 7 | 96.6% |
+| sephardi | vowel | 30 | 30 | 0 | 100.0% |
+| **all** | | **1,055** | **1,019** | **36** | **96.6%** |
 
-What the wrong ones are:
-- **Sephardi and Ashkenazi**: most were made by the Israeli voice reading an English-letter respelling, and it reads the English letters: "i" as "ai" (bi heard "bai", hi "hai"), "u" as "yu", Lamed as "lei-imd", Vet as "vayit", Ashkenazi Vet as "beis", letter-sound cards reading the whole letter name.
-- **Israeli**: this check is stricter than `SOUNDS-CHECK.md` (it compares with the app's reading, not a looser match), so some Israeli rows it lists passed there. Some are the checker: the mark cards (shin dot, sin dot) say the letter's name; the vav sound clips are cut from "vav va".
-
-List: `docs/audio/traditions-wrong.txt`. Fixer: `tools/audio/asr-check/tradition_fix.py` (workflow `tradition-fix`).
+The morning check (before the fixes) was 858 of 1,055 (81.3%). The 36 still flagged are in `traditions-wrong.txt`; fix run 6 works on them. The CPU check used between runs heard some of them differently (it passed several the GPU fails and the other way round): the two hearings disagree on short sounds, so this table, the fuller of the two, is the one to go by.

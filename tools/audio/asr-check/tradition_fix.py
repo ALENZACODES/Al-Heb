@@ -2,8 +2,9 @@
 
 Those clips were made by the Israeli voice reading an English-letter respelling ("lamed", "beis"), which a Hebrew voice reads badly.
 For each flagged clip:
-  - Sephardi, where the app's Sephardi reading is letter for letter the Israeli one: the Israeli clip of the same voice is copied
-    (owner decision A, 12 Nov 2026; the Israeli clips passed the sound check);
+  - where the app's reading for the tradition is letter for letter the Israeli one: the Israeli clip of the same voice is copied
+    (owner decision A, 12 Nov 2026, for Sephardi; the same reasoning for Ashkenazi rows with the same reading; the Israeli clips
+    passed the sound check);
   - otherwise new takes are read from pointed Hebrew written for that tradition (tradition-expect.json "script": Ashkenazi rules
     applied to the Hebrew itself, tools/audio/ashkenazi_script.mjs), in the same voice, and a take is kept only when the sound model
     hears the tradition's reading in at least 2 of 3 hearings.
@@ -34,7 +35,8 @@ def main():
     a = ap.parse_args()
     exp = json.load(open(T.EXPECT, encoding='utf-8'))
     paths = [l.strip() for l in open(os.path.join(ROOT, a.list), encoding='utf-8') if l.strip().startswith('audio/')]
-    paths = [p for p in paths if exp.get(p, {}).get('tradition') in ('sephardi', 'ashkenazi')]
+    paths = [p for p in paths if exp.get(p, {}).get('tradition') in ('sephardi', 'ashkenazi')
+             and exp[p]['id'] not in ('shin-dot', 'sin-dot')]      # mark cards say the letter's name; the check expects the bare sound
     print(len(paths), 'Sephardi/Ashkenazi clips to fix', flush=True)
     key = os.environ.get('GOOGLE_TTS_API_KEY')
     if a.execute and not key:
@@ -49,13 +51,28 @@ def main():
         want = T.say_to_sounds(e['say'])
         rec = {'file': p, 'tradition': e['tradition'], 'text': e['text'], 'say': e['say'], 'script': e['script']}
         isr = p.replace(f"/{e['tradition']}/", '/israeli/')
-        if e['tradition'] == 'sephardi' and e['say'] == e['israeliSay'] and os.path.exists(os.path.join(ROOT, isr)):
+        if e['say'] == e['israeliSay'] and os.path.exists(os.path.join(ROOT, isr)):
+            # the tradition's reading is letter for letter the Israeli one: the checked Israeli clip of the same voice says it
             rec['outcome'] = 'copied the Israeli clip (same reading)'
             if a.execute:
                 shutil.copyfile(os.path.join(ROOT, isr), os.path.join(ROOT, p))
+                mp = os.path.join(ROOT, p) + '.meta.json'
+                meta = json.load(open(mp, encoding='utf-8')) if os.path.exists(mp) else {}
+                im = os.path.join(ROOT, isr) + '.meta.json'
+                imeta = json.load(open(im, encoding='utf-8')) if os.path.exists(im) else {}
+                meta.update({'voiceId': imeta.get('voiceId', meta.get('voiceId')), 'inputText': imeta.get('inputText', e['text']), 'madeFrom': 'israeli-clip-same-reading',
+                             'note': f"Copied 17 Nov 2026 from {isr}: the app's {e['tradition']} reading \"{e['say']}\" is the Israeli reading letter for letter, "
+                                     "and the earlier clip (the Israeli voice reading English letters) was heard wrong by the sound check."})
+                meta.pop('inputSha256', None)
+                with open(mp, 'w', encoding='utf-8', newline='\n') as f:
+                    f.write(json.dumps(meta, ensure_ascii=False, indent=1) + '\n')
         elif not a.execute:
             rec['outcome'] = 'would record takes'
         else:
+            script = e['script']
+            if e['group'] == 'letter-sound' and e['tradition'] == 'ashkenazi' and e['say'] == 's':
+                script = 'סַ'                        # Ashkenazi tav without dagesh sounds "s"
+            e = dict(e, script=script)
             plans = [(VOICE[e['voice']], e['script'], 1.0), (VOICE[e['voice']], e['script'] + '.', 1.0), (VOICE[e['voice']], e['script'], 0.9),
                      (HD[e['voice']], e['script'], 1.0), (HD[e['voice']], e['script'] + '.', 1.0), (VOICE[e['voice']], e['script'] + ',', 0.85)]
             tried, kept = [], None

@@ -1,0 +1,3 @@
+{"file": "audio/f/israeli/syllable/yod-u.mp3", "tradition": "israeli", "text": "יֻ", "say": "yu", "script": "יֻ", "tried": [{"voice": "de-DE-Chirp3-HD-Kore", "text": "[ju] (IPA)", "rate": 1.0, "heard": {"whisper": ["j'u"], "w2v": ["j uː", "j uː", "j uː"], "xlsr": ["j uː", "j uː", "j"]}, "calls": {"whisper": true, "w2v": true, "xlsr": true}, "right": 3}], "outcome": "replaced"}
+{"file": "audio/f/ashkenazi/syllable/yod-u.mp3", "tradition": "ashkenazi", "text": "יֻ", "say": "yu", "script": "יֻ", "outcome": "copied the Israeli clip (same reading)"}
+{"file": "audio/f/sephardi/syllable/yod-u.mp3", "tradition": "sephardi", "text": "יֻ", "say": "yu", "script": "יֻ", "outcome": "copied the Israeli clip (same reading)"}

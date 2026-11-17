@@ -5,6 +5,9 @@ name: tradition-fix
 # branch or on main, or by hand. Needs the repository secret GOOGLE_TTS_API_KEY.
 # Takes and picks are pushed to the branch john/sound-takes-r<run>; nothing in the app changes until a pick is applied.
 on:
+  push:
+    branches: [main, 'claude/audio-round4-2026-11-17']
+    paths: ['docs/audio/traditions-wrong.txt']
   workflow_dispatch:
 permissions:
   contents: write

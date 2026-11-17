@@ -195,3 +195,4 @@ audio/m/sephardi/vowel/kubutz.mp3
 audio/m/sephardi/vowel/shin-dot.mp3
 audio/m/sephardi/vowel/shuruk.mp3
 audio/m/sephardi/vowel/sin-dot.mp3
+# run 1, 17 Nov 2026

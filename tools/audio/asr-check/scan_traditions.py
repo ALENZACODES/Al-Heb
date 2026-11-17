@@ -61,9 +61,13 @@ def main():
     ap.add_argument('--passes', type=int, default=3)
     ap.add_argument('--mms', action='store_true')
     ap.add_argument('--out', default=os.path.join(ROOT, 'docs', 'audio'))
+    ap.add_argument('--only', help='file listing the clip paths to hear (one per line)')
     a = ap.parse_args()
     exp = json.load(open(EXPECT, encoding='utf-8'))
     rows = [dict(path=p, **v) for p, v in exp.items() if os.path.exists(os.path.join(ROOT, p))]
+    if a.only:
+        keep = {l.strip() for l in open(a.only, encoding='utf-8') if l.strip() and not l.startswith('#')}
+        rows = [r for r in rows if r['path'] in keep]
     os.makedirs(a.out, exist_ok=True)
     heard = collections.defaultdict(list)
     hear_row = S.hearer(a.model)

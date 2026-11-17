@@ -4,11 +4,10 @@
  "engine": "google",
  "voiceId": "he-IL-Wavenet-B",
  "tradition": "ashkenazi",
- "inputText": "חֵית",
- "inputSha256": "9138f96ab7da709e3cf594d3475e77d0d88c06bccfe67603f66eeeb9864a3645",
+ "inputText": "חֵיס",
  "ingestedAt": "2026-11-12T14:08:54.550Z",
  "licence": "customer-owned",
- "note": "Synthetic voice: the Israeli man voice reading the ashkenazi reading written in pointed Hebrew letters (tools/audio/ashkenazi_script.mjs). Not a human recording; no human has listened to it. Licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel.",
+ "note": "Re-recorded 17 Nov 2026: the ashkenazi reading \"cheis\" written in pointed Hebrew (חֵיס) and read by the Israeli voice; the sound model heard it as x'ejs / x'ejs / x'ejs. Synthetic, not a human recording.",
  "renderedAt": "2026-11-12T14:08:54.550Z",
  "redistributionCleared": false,
  "spokenText": "חֵיס",
@@ -27,5 +26,6 @@
   "after": 0.9119954648526077,
   "israeliSec": 0.9519954648526077,
   "israeliRef": "audio/m/israeli/letter/chet.mp3"
- }
+ },
+ "inputTextKind": "hebrew"
 }

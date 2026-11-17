@@ -1,0 +1,2 @@
+# Torah verses to re-record at a steady pace (pace.py)
+genesis 1

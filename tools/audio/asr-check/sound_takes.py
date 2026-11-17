@@ -44,6 +44,9 @@ NAMED = {'he': ['הֵא', 'הֵא.', 'הֵי', 'הֶא'], 'pe-final': ['פֵּא
 # Second round: more spellings for the syllables no first-round take fixed (dagesh, a silent alef or a tsere in place of segol).
 EXTRA = {'gimel-u': ['גּוּ', 'גּוּ.', 'גוּא', 'גּוּא'], 'yod-e': ['יֵה', 'יֵ', 'יֶא', 'יֵא', 'יֶהּ'], 'he-e': ['הֶא', 'הֵה', 'הֵ', 'הֶהּ'],
          'pe-u': ['פּוּא', 'פּוּ,', 'פּוּה'], 'qof-e': ['קֶא', 'קֵה', 'קֵ', 'קֵא'], 'zayin-u': ['זוּא', 'זוּ,', 'זוּה']}
+# Round 4: syllables no lone take fixed, read inside a short phrase (the voice reads a lone ye as the word yihye).
+CARRIED = {'yod-e'}
+CARRIED_PHRASES = [('הַהֲבָרָה', None), ('תַּגִּיד', 'וְעוֹד'), ('אוֹמְרִים', None)]
 # Fixed already on the letter audit branch (claude/letter-audit-2026-11-13), or waiting for a decision on what the clip should say.
 SKIP = {'khaf', 'vet', 'vav-sound', 'vet-sound', 'vav-a', 'resh', 'shin', 'dagesh'}
 
@@ -95,18 +98,28 @@ def record():
         if (t['kind'] == 'syllable' and t['id'] in EXTRA) or t['id'] == 'shva':
             plans += [(text, HD[t['voice']], 1.0) for text in t['spellings']]
             plans += [(text, VOICE[t['voice']], 0.8) for text in t['spellings'][:4]]
-        for text, engine, rate in plans:
-            tag = hashlib.sha1(f'{text}|{engine}|{rate}'.encode()).hexdigest()[:6]
+        if t['id'] in CARRIED:                   # round 4: the syllable read inside a phrase, cut out at the pauses
+            plans = [(text, eng, 1.0, c) for text in t['spellings'][:3] for eng in (VOICE[t['voice']], HD[t['voice']]) for c in CARRIED_PHRASES]
+        for plan in plans:
+            text, engine, rate = plan[:3]
+            carrier = plan[3] if len(plan) > 3 else None
+            tag = hashlib.sha1(f'{text}|{engine}|{rate}|{carrier}'.encode()).hexdigest()[:6]
             name = f"{t['voice']}-{t['kind']}-{t['id']}-{tag}.mp3"
             dst = os.path.join(OUT, name)
             if not os.path.exists(dst):
                 try:
-                    open(dst, 'wb').write(F.synth_rate(text, engine, key, rate))
+                    if carrier:
+                        import fix_list as X, subprocess, tempfile
+                        wav = tempfile.mktemp(suffix='.wav')
+                        open(wav, 'wb').write(X.synth_in_carrier(text, engine, key, carrier[0], carrier[1], rate))
+                        subprocess.run(['ffmpeg', '-nostdin', '-y', '-v', 'error', '-i', wav, '-b:a', '96k', dst], check=True)
+                    else:
+                        open(dst, 'wb').write(F.synth_rate(text, engine, key, rate))
                 except Exception as e:  # noqa: BLE001 - one refused take must not stop the run
                     print('refused', engine, text, str(e)[:120], flush=True)
                     continue
             index.append({'take': 'audio-takes/sound-check/' + name, 'voice': t['voice'], 'kind': t['kind'], 'id': t['id'], 'text': text,
-                          'engine': engine, 'rate': rate, 'want': t['want'], 'files': t['files']})
+                          'engine': engine, 'rate': rate, 'carrier': carrier, 'want': t['want'], 'files': t['files']})
             print(name, engine, rate, text, flush=True)
     with open(os.path.join(OUT, 'takes.json'), 'w', encoding='utf-8', newline='\n') as f:
         f.write(json.dumps(index, ensure_ascii=False, indent=1) + '\n')

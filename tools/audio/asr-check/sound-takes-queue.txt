@@ -1,3 +1,4 @@
 run 1: clips at 'listen' in docs/audio/SOUNDS-CHECK.md, 2026-11-16
 run 2: second-round spellings for the seven syllables no first take fixed, 2026-11-16
 run 3: Chirp 3 HD and slower takes for the seven syllables, and the sheva card, 2026-11-16
+run 4: yod-e read inside a short phrase and cut out, 2026-11-17

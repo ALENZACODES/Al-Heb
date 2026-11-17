@@ -1,0 +1,13 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "google-cloud-tts",
+ "voiceId": "de-DE-Chirp3-HD-Kore",
+ "tradition": "israeli",
+ "inputText": "[du] (IPA)",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "Re-recorded 17 Nov 2026: the israeli reading \"du\" given to the voice as exact sounds [du] (IPA) (Google Chirp HD, de-DE setting, which accepts IPA); heard by three listeners as whisper: d'u; w2v: d u / d uː / d uː; xlsr: d uː / d uː / d uː. Synthetic, not a human recording.",
+ "inputTextKind": "ipa",
+ "madeFrom": "ipa"
+}

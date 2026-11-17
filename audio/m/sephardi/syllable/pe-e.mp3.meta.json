@@ -1,0 +1,31 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-respelled-israeli-voice",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "sephardi",
+ "inputText": "הַמִּלָּה [פֶּ]",
+ "ingestedAt": "2026-11-12T07:01:05.433Z",
+ "licence": "customer-owned",
+ "note": "Re-recorded 17 Nov 2026: the sephardi reading \"pe\" written in pointed Hebrew (הַמִּלָּה [פֶּ]) and read by the Israeli voice; heard by three listeners as whisper: p'e; w2v: p eː / p eː / p eː; xlsr: p e / p e / p e. Synthetic, not a human recording.",
+ "renderedAt": "2026-11-12T07:01:05.433Z",
+ "redistributionCleared": false,
+ "spokenText": "pe",
+ "normalized": true,
+ "provider": "google",
+ "madeFrom": "hebrew-script",
+ "voiceName": "he-IL-Wavenet-B",
+ "languageCode": "he-IL",
+ "hebrew": "פֶּ",
+ "israeliRef": "audio/m/israeli/syllable/pe-e.mp3",
+ "tempo": {
+  "applied": false,
+  "factor": 1,
+  "cap": 1.26,
+  "before": 0.6960090702947845,
+  "after": 0.6960090702947845,
+  "israeliSec": 0.7119954648526077,
+  "israeliRef": "audio/m/israeli/syllable/pe-e.mp3"
+ },
+ "inputTextKind": "hebrew"
+}

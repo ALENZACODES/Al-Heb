@@ -1,0 +1,13 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "google-cloud-tts",
+ "voiceId": "de-DE-Chirp3-HD-Charon",
+ "tradition": "israeli",
+ "inputText": "[ʁa] (IPA)",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "Re-recorded 17 Nov 2026: the israeli reading \"ra\" given to the voice as exact sounds [ʁa] (IPA) (Google Chirp HD, de-DE setting, which accepts IPA); heard by three listeners as whisper: r'a; w2v: r a / r a / r a; xlsr: b r a / b r a / r a. Synthetic, not a human recording.",
+ "inputTextKind": "ipa",
+ "madeFrom": "ipa"
+}

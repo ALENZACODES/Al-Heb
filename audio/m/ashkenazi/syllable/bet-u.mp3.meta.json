@@ -1,0 +1,31 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-respelled-israeli-voice",
+ "engine": "google",
+ "voiceId": "de-DE-Chirp3-HD-Charon",
+ "tradition": "ashkenazi",
+ "inputText": "[bu] (IPA)",
+ "ingestedAt": "2026-11-12T07:00:27.739Z",
+ "licence": "customer-owned",
+ "note": "Re-recorded 17 Nov 2026: the ashkenazi reading \"bu\" given to the voice as exact sounds [bu] (IPA) (Google Chirp HD, de-DE setting, which accepts IPA); heard by three listeners as whisper: b'u; w2v: b uː / b u / b u; xlsr: b u / b uː / b u. Synthetic, not a human recording.",
+ "renderedAt": "2026-11-12T07:00:27.739Z",
+ "redistributionCleared": false,
+ "spokenText": "bu",
+ "normalized": true,
+ "provider": "google",
+ "madeFrom": "ipa",
+ "voiceName": "he-IL-Wavenet-B",
+ "languageCode": "he-IL",
+ "hebrew": "בֻּ",
+ "israeliRef": "audio/m/israeli/syllable/bet-u.mp3",
+ "tempo": {
+  "applied": false,
+  "factor": 1,
+  "cap": 1.26,
+  "before": 0.8640136054421769,
+  "after": 0.8640136054421769,
+  "israeliSec": 0.7847392290249433,
+  "israeliRef": "audio/m/israeli/syllable/bet-u.mp3"
+ },
+ "inputTextKind": "ipa"
+}

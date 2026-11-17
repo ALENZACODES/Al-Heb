@@ -1,0 +1,31 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-respelled-israeli-voice",
+ "engine": "google",
+ "voiceId": "de-DE-Chirp3-HD-Charon",
+ "tradition": "ashkenazi",
+ "inputText": "[hu] (IPA)",
+ "ingestedAt": "2026-11-12T15:41:12.502Z",
+ "licence": "customer-owned",
+ "note": "Re-recorded 17 Nov 2026: the ashkenazi reading \"hu\" given to the voice as exact sounds [hu] (IPA) (Google Chirp HD, de-DE setting, which accepts IPA); heard by three listeners as whisper: h'u?; w2v: h uː / h uː / h uː; xlsr: h uː / h uː / h uː. Synthetic, not a human recording.",
+ "renderedAt": "2026-11-12T15:41:12.502Z",
+ "redistributionCleared": false,
+ "spokenText": "הֻ",
+ "normalized": true,
+ "provider": "google",
+ "madeFrom": "ipa",
+ "voiceName": "he-IL-Wavenet-B",
+ "languageCode": "he-IL",
+ "hebrew": "הֻ",
+ "israeliRef": "audio/m/israeli/syllable/he-u.mp3",
+ "tempo": {
+  "applied": false,
+  "factor": 1,
+  "cap": 1.26,
+  "before": 0.5760090702947845,
+  "after": 0.5760090702947845,
+  "israeliSec": 0.7360090702947846,
+  "israeliRef": "audio/m/israeli/syllable/he-u.mp3"
+ },
+ "inputTextKind": "ipa"
+}

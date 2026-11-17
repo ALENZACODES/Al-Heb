@@ -1,0 +1,30 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-respelled-israeli-voice",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "ashkenazi",
+ "inputText": "זַ",
+ "ingestedAt": "2026-11-12T15:41:26.084Z",
+ "licence": "customer-owned",
+ "note": "Copied 17 Nov 2026 from audio/f/israeli/letter/zayin-sound.mp3: the app's ashkenazi reading \"z\" is the Israeli reading letter for letter, and the earlier clip (the Israeli voice reading English letters) was heard wrong by the sound check.",
+ "renderedAt": "2026-11-12T15:41:26.084Z",
+ "redistributionCleared": false,
+ "spokenText": "ז",
+ "normalized": true,
+ "provider": "google",
+ "madeFrom": "israeli-clip-same-reading",
+ "voiceName": "he-IL-Wavenet-A",
+ "languageCode": "he-IL",
+ "hebrew": "ז",
+ "israeliRef": "audio/f/israeli/letter/zayin-sound.mp3",
+ "tempo": {
+  "applied": false,
+  "factor": 1,
+  "cap": 1.26,
+  "before": 0.9840136054421769,
+  "after": 0.9840136054421769,
+  "israeliSec": 0.9040136054421769,
+  "israeliRef": "audio/f/israeli/letter/zayin-sound.mp3"
+ }
+}

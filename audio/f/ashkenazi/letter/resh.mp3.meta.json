@@ -1,0 +1,30 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-respelled-israeli-voice",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "ashkenazi",
+ "inputText": "רֵישׁ",
+ "ingestedAt": "2026-11-12T07:00:42.521Z",
+ "licence": "customer-owned",
+ "note": "Copied 17 Nov 2026 from audio/f/israeli/letter/resh.mp3: the app's ashkenazi reading \"reish\" is the Israeli reading letter for letter, and the earlier clip (the Israeli voice reading English letters) was heard wrong by the sound check.",
+ "renderedAt": "2026-11-12T07:00:42.521Z",
+ "redistributionCleared": false,
+ "spokenText": "reish",
+ "normalized": true,
+ "provider": "google",
+ "madeFrom": "israeli-clip-same-reading",
+ "voiceName": "he-IL-Wavenet-A",
+ "languageCode": "he-IL",
+ "hebrew": "רֵישׁ",
+ "israeliRef": "audio/f/israeli/letter/resh.mp3",
+ "tempo": {
+  "applied": false,
+  "factor": 1,
+  "cap": 1.26,
+  "before": 1.0319954648526077,
+  "after": 1.0319954648526077,
+  "israeliSec": 1.1440136054421768,
+  "israeliRef": "audio/f/israeli/letter/resh.mp3"
+ }
+}

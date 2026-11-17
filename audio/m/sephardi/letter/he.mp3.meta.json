@@ -1,0 +1,30 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-respelled-israeli-voice",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "sephardi",
+ "inputText": "הֵי",
+ "ingestedAt": "2026-11-12T07:00:28.158Z",
+ "licence": "customer-owned",
+ "note": "Copied 17 Nov 2026 from audio/m/israeli/letter/he.mp3: the app's sephardi reading \"he\" is the Israeli reading letter for letter, and the earlier clip (the Israeli voice reading English letters) was heard wrong by the sound check.",
+ "renderedAt": "2026-11-12T07:00:28.158Z",
+ "redistributionCleared": false,
+ "spokenText": "he",
+ "normalized": true,
+ "provider": "google",
+ "madeFrom": "israeli-clip-same-reading",
+ "voiceName": "he-IL-Wavenet-B",
+ "languageCode": "he-IL",
+ "hebrew": "הֵא",
+ "israeliRef": "audio/m/israeli/letter/he.mp3",
+ "tempo": {
+  "applied": false,
+  "factor": 1,
+  "cap": 1.26,
+  "before": 0.6,
+  "after": 0.6,
+  "israeliSec": 0.7119954648526077,
+  "israeliRef": "audio/m/israeli/letter/he.mp3"
+ }
+}

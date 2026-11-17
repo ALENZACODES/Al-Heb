@@ -1,0 +1,30 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-respelled-israeli-voice",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "sephardi",
+ "inputText": "אִ",
+ "ingestedAt": "2026-11-12T07:01:32.265Z",
+ "licence": "customer-owned",
+ "note": "Copied 17 Nov 2026 from audio/f/israeli/syllable/alef-i.mp3: the app's sephardi reading \"i\" is the Israeli reading letter for letter, and the earlier clip (the Israeli voice reading English letters) was heard wrong by the sound check.",
+ "renderedAt": "2026-11-12T07:01:32.265Z",
+ "redistributionCleared": false,
+ "spokenText": "i",
+ "normalized": true,
+ "provider": "google",
+ "madeFrom": "israeli-clip-same-reading",
+ "voiceName": "he-IL-Wavenet-A",
+ "languageCode": "he-IL",
+ "hebrew": "אִ",
+ "israeliRef": "audio/f/israeli/syllable/alef-i.mp3",
+ "tempo": {
+  "applied": false,
+  "factor": 1,
+  "cap": 1.26,
+  "before": 0.8160090702947845,
+  "after": 0.8160090702947845,
+  "israeliSec": 0.8080045351473923,
+  "israeliRef": "audio/f/israeli/syllable/alef-i.mp3"
+ }
+}

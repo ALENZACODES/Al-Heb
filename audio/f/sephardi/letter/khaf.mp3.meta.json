@@ -1,0 +1,30 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-respelled-israeli-voice",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "sephardi",
+ "inputText": "חַף",
+ "ingestedAt": "2026-11-12T07:00:19.862Z",
+ "licence": "customer-owned",
+ "note": "Copied 17 Nov 2026 from audio/f/israeli/letter/khaf.mp3: the app's sephardi reading \"khaf\" is the Israeli reading letter for letter, and the earlier clip (the Israeli voice reading English letters) was heard wrong by the sound check.",
+ "renderedAt": "2026-11-12T07:00:19.862Z",
+ "redistributionCleared": false,
+ "spokenText": "khaf",
+ "normalized": true,
+ "provider": "google",
+ "madeFrom": "israeli-clip-same-reading",
+ "voiceName": "he-IL-Wavenet-A",
+ "languageCode": "he-IL",
+ "hebrew": "כַף",
+ "israeliRef": "audio/f/israeli/letter/khaf.mp3",
+ "tempo": {
+  "applied": false,
+  "factor": 1,
+  "cap": 1.26,
+  "before": 0.96,
+  "after": 0.96,
+  "israeliSec": 1.0480045351473923,
+  "israeliRef": "audio/f/israeli/letter/khaf.mp3"
+ }
+}

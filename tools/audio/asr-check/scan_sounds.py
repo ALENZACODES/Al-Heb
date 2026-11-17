@@ -53,7 +53,13 @@ def hearer(model_dir):
     """Returns hear_row(paths) -> [(heard, how)]: one row of clips with pauses between; clips heard alone if the row does not split."""
     from faster_whisper import WhisperModel
     import numpy as np
-    m = WhisperModel(model_dir, device='cpu', compute_type='int8', cpu_threads=os.cpu_count() or 2)
+    try:
+        import ctranslate2
+        gpu = ctranslate2.get_cuda_device_count() > 0
+    except Exception:  # noqa: BLE001
+        gpu = False
+    m = WhisperModel(model_dir, device='cuda' if gpu else 'cpu', compute_type='int8_float16' if gpu else 'int8',
+                     cpu_threads=os.cpu_count() or 2)
     gap = np.zeros(int(GAP * L.SR), np.float32)
 
     def tr(a, n=1):

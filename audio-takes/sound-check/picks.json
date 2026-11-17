@@ -1,0 +1,42 @@
+[
+ {
+  "voice": "f",
+  "kind": "syllable",
+  "id": "yod-e",
+  "want": "ye",
+  "pick": null,
+  "text": "יֶ",
+  "right": 0,
+  "of": 5,
+  "heard": [
+   "jihj'e",
+   "jihj'e",
+   "jihj'e",
+   "jihj'e",
+   "jihj'e"
+  ],
+  "files": [
+   "audio/f/israeli/syllable/yod-e.mp3"
+  ]
+ },
+ {
+  "voice": "m",
+  "kind": "syllable",
+  "id": "yod-e",
+  "want": "ye",
+  "pick": "audio-takes/sound-check/m-syllable-yod-e-561b22.mp3",
+  "text": "יֵה",
+  "right": 5,
+  "of": 5,
+  "heard": [
+   "j'e",
+   "j'e",
+   "j'e",
+   "j'e",
+   "j'e"
+  ],
+  "files": [
+   "audio/m/israeli/syllable/yod-e.mp3"
+  ]
+ }
+]

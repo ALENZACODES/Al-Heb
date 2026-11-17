@@ -1,0 +1,574 @@
+[
+ {
+  "take": "audio-takes/sound-check/f-syllable-yod-e-43aced.mp3",
+  "voice": "f",
+  "kind": "syllable",
+  "id": "yod-e",
+  "text": "יֶ",
+  "engine": "he-IL-Wavenet-A",
+  "rate": 1.0,
+  "want": "ye",
+  "files": [
+   "audio/f/israeli/syllable/yod-e.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-syllable-yod-e-2c28a5.mp3",
+  "voice": "f",
+  "kind": "syllable",
+  "id": "yod-e",
+  "text": "יֶ.",
+  "engine": "he-IL-Wavenet-A",
+  "rate": 1.0,
+  "want": "ye",
+  "files": [
+   "audio/f/israeli/syllable/yod-e.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-syllable-yod-e-46b121.mp3",
+  "voice": "f",
+  "kind": "syllable",
+  "id": "yod-e",
+  "text": "יֶה",
+  "engine": "he-IL-Wavenet-A",
+  "rate": 1.0,
+  "want": "ye",
+  "files": [
+   "audio/f/israeli/syllable/yod-e.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-syllable-yod-e-931f4a.mp3",
+  "voice": "f",
+  "kind": "syllable",
+  "id": "yod-e",
+  "text": "יֶה.",
+  "engine": "he-IL-Wavenet-A",
+  "rate": 1.0,
+  "want": "ye",
+  "files": [
+   "audio/f/israeli/syllable/yod-e.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-syllable-yod-e-0f916e.mp3",
+  "voice": "f",
+  "kind": "syllable",
+  "id": "yod-e",
+  "text": "יֵה",
+  "engine": "he-IL-Wavenet-A",
+  "rate": 1.0,
+  "want": "ye",
+  "files": [
+   "audio/f/israeli/syllable/yod-e.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-syllable-yod-e-27722c.mp3",
+  "voice": "f",
+  "kind": "syllable",
+  "id": "yod-e",
+  "text": "יֵ",
+  "engine": "he-IL-Wavenet-A",
+  "rate": 1.0,
+  "want": "ye",
+  "files": [
+   "audio/f/israeli/syllable/yod-e.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-syllable-yod-e-b83dfc.mp3",
+  "voice": "f",
+  "kind": "syllable",
+  "id": "yod-e",
+  "text": "יֶא",
+  "engine": "he-IL-Wavenet-A",
+  "rate": 1.0,
+  "want": "ye",
+  "files": [
+   "audio/f/israeli/syllable/yod-e.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-syllable-yod-e-d57fa7.mp3",
+  "voice": "f",
+  "kind": "syllable",
+  "id": "yod-e",
+  "text": "יֵא",
+  "engine": "he-IL-Wavenet-A",
+  "rate": 1.0,
+  "want": "ye",
+  "files": [
+   "audio/f/israeli/syllable/yod-e.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-syllable-yod-e-33dbb4.mp3",
+  "voice": "f",
+  "kind": "syllable",
+  "id": "yod-e",
+  "text": "יֶהּ",
+  "engine": "he-IL-Wavenet-A",
+  "rate": 1.0,
+  "want": "ye",
+  "files": [
+   "audio/f/israeli/syllable/yod-e.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-syllable-yod-e-0b2b11.mp3",
+  "voice": "f",
+  "kind": "syllable",
+  "id": "yod-e",
+  "text": "יֶ",
+  "engine": "he-IL-Chirp3-HD-Kore",
+  "rate": 1.0,
+  "want": "ye",
+  "files": [
+   "audio/f/israeli/syllable/yod-e.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-syllable-yod-e-02bb1e.mp3",
+  "voice": "f",
+  "kind": "syllable",
+  "id": "yod-e",
+  "text": "יֶ.",
+  "engine": "he-IL-Chirp3-HD-Kore",
+  "rate": 1.0,
+  "want": "ye",
+  "files": [
+   "audio/f/israeli/syllable/yod-e.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-syllable-yod-e-58b357.mp3",
+  "voice": "f",
+  "kind": "syllable",
+  "id": "yod-e",
+  "text": "יֶה",
+  "engine": "he-IL-Chirp3-HD-Kore",
+  "rate": 1.0,
+  "want": "ye",
+  "files": [
+   "audio/f/israeli/syllable/yod-e.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-syllable-yod-e-ee9471.mp3",
+  "voice": "f",
+  "kind": "syllable",
+  "id": "yod-e",
+  "text": "יֶה.",
+  "engine": "he-IL-Chirp3-HD-Kore",
+  "rate": 1.0,
+  "want": "ye",
+  "files": [
+   "audio/f/israeli/syllable/yod-e.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-syllable-yod-e-7164eb.mp3",
+  "voice": "f",
+  "kind": "syllable",
+  "id": "yod-e",
+  "text": "יֵה",
+  "engine": "he-IL-Chirp3-HD-Kore",
+  "rate": 1.0,
+  "want": "ye",
+  "files": [
+   "audio/f/israeli/syllable/yod-e.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-syllable-yod-e-7ade82.mp3",
+  "voice": "f",
+  "kind": "syllable",
+  "id": "yod-e",
+  "text": "יֵ",
+  "engine": "he-IL-Chirp3-HD-Kore",
+  "rate": 1.0,
+  "want": "ye",
+  "files": [
+   "audio/f/israeli/syllable/yod-e.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-syllable-yod-e-3fe404.mp3",
+  "voice": "f",
+  "kind": "syllable",
+  "id": "yod-e",
+  "text": "יֶא",
+  "engine": "he-IL-Chirp3-HD-Kore",
+  "rate": 1.0,
+  "want": "ye",
+  "files": [
+   "audio/f/israeli/syllable/yod-e.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-syllable-yod-e-a094a9.mp3",
+  "voice": "f",
+  "kind": "syllable",
+  "id": "yod-e",
+  "text": "יֵא",
+  "engine": "he-IL-Chirp3-HD-Kore",
+  "rate": 1.0,
+  "want": "ye",
+  "files": [
+   "audio/f/israeli/syllable/yod-e.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-syllable-yod-e-92c8e2.mp3",
+  "voice": "f",
+  "kind": "syllable",
+  "id": "yod-e",
+  "text": "יֶהּ",
+  "engine": "he-IL-Chirp3-HD-Kore",
+  "rate": 1.0,
+  "want": "ye",
+  "files": [
+   "audio/f/israeli/syllable/yod-e.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-syllable-yod-e-b1f61b.mp3",
+  "voice": "f",
+  "kind": "syllable",
+  "id": "yod-e",
+  "text": "יֶ",
+  "engine": "he-IL-Wavenet-A",
+  "rate": 0.8,
+  "want": "ye",
+  "files": [
+   "audio/f/israeli/syllable/yod-e.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-syllable-yod-e-64fcc3.mp3",
+  "voice": "f",
+  "kind": "syllable",
+  "id": "yod-e",
+  "text": "יֶ.",
+  "engine": "he-IL-Wavenet-A",
+  "rate": 0.8,
+  "want": "ye",
+  "files": [
+   "audio/f/israeli/syllable/yod-e.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-syllable-yod-e-9b6747.mp3",
+  "voice": "f",
+  "kind": "syllable",
+  "id": "yod-e",
+  "text": "יֶה",
+  "engine": "he-IL-Wavenet-A",
+  "rate": 0.8,
+  "want": "ye",
+  "files": [
+   "audio/f/israeli/syllable/yod-e.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/f-syllable-yod-e-a37772.mp3",
+  "voice": "f",
+  "kind": "syllable",
+  "id": "yod-e",
+  "text": "יֶה.",
+  "engine": "he-IL-Wavenet-A",
+  "rate": 0.8,
+  "want": "ye",
+  "files": [
+   "audio/f/israeli/syllable/yod-e.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-yod-e-6a2e19.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "yod-e",
+  "text": "יֶ",
+  "engine": "he-IL-Wavenet-B",
+  "rate": 1.0,
+  "want": "ye",
+  "files": [
+   "audio/m/israeli/syllable/yod-e.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-yod-e-d5a1a4.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "yod-e",
+  "text": "יֶ.",
+  "engine": "he-IL-Wavenet-B",
+  "rate": 1.0,
+  "want": "ye",
+  "files": [
+   "audio/m/israeli/syllable/yod-e.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-yod-e-3b3cbd.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "yod-e",
+  "text": "יֶה",
+  "engine": "he-IL-Wavenet-B",
+  "rate": 1.0,
+  "want": "ye",
+  "files": [
+   "audio/m/israeli/syllable/yod-e.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-yod-e-7b3ff3.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "yod-e",
+  "text": "יֶה.",
+  "engine": "he-IL-Wavenet-B",
+  "rate": 1.0,
+  "want": "ye",
+  "files": [
+   "audio/m/israeli/syllable/yod-e.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-yod-e-333a63.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "yod-e",
+  "text": "יֵה",
+  "engine": "he-IL-Wavenet-B",
+  "rate": 1.0,
+  "want": "ye",
+  "files": [
+   "audio/m/israeli/syllable/yod-e.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-yod-e-20032a.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "yod-e",
+  "text": "יֵ",
+  "engine": "he-IL-Wavenet-B",
+  "rate": 1.0,
+  "want": "ye",
+  "files": [
+   "audio/m/israeli/syllable/yod-e.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-yod-e-810d58.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "yod-e",
+  "text": "יֶא",
+  "engine": "he-IL-Wavenet-B",
+  "rate": 1.0,
+  "want": "ye",
+  "files": [
+   "audio/m/israeli/syllable/yod-e.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-yod-e-ba4c9d.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "yod-e",
+  "text": "יֵא",
+  "engine": "he-IL-Wavenet-B",
+  "rate": 1.0,
+  "want": "ye",
+  "files": [
+   "audio/m/israeli/syllable/yod-e.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-yod-e-18e063.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "yod-e",
+  "text": "יֶהּ",
+  "engine": "he-IL-Wavenet-B",
+  "rate": 1.0,
+  "want": "ye",
+  "files": [
+   "audio/m/israeli/syllable/yod-e.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-yod-e-c421d8.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "yod-e",
+  "text": "יֶ",
+  "engine": "he-IL-Chirp3-HD-Charon",
+  "rate": 1.0,
+  "want": "ye",
+  "files": [
+   "audio/m/israeli/syllable/yod-e.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-yod-e-f368aa.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "yod-e",
+  "text": "יֶ.",
+  "engine": "he-IL-Chirp3-HD-Charon",
+  "rate": 1.0,
+  "want": "ye",
+  "files": [
+   "audio/m/israeli/syllable/yod-e.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-yod-e-8492c7.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "yod-e",
+  "text": "יֶה",
+  "engine": "he-IL-Chirp3-HD-Charon",
+  "rate": 1.0,
+  "want": "ye",
+  "files": [
+   "audio/m/israeli/syllable/yod-e.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-yod-e-ad79cd.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "yod-e",
+  "text": "יֶה.",
+  "engine": "he-IL-Chirp3-HD-Charon",
+  "rate": 1.0,
+  "want": "ye",
+  "files": [
+   "audio/m/israeli/syllable/yod-e.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-yod-e-561b22.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "yod-e",
+  "text": "יֵה",
+  "engine": "he-IL-Chirp3-HD-Charon",
+  "rate": 1.0,
+  "want": "ye",
+  "files": [
+   "audio/m/israeli/syllable/yod-e.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-yod-e-6da6d3.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "yod-e",
+  "text": "יֵ",
+  "engine": "he-IL-Chirp3-HD-Charon",
+  "rate": 1.0,
+  "want": "ye",
+  "files": [
+   "audio/m/israeli/syllable/yod-e.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-yod-e-654b30.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "yod-e",
+  "text": "יֶא",
+  "engine": "he-IL-Chirp3-HD-Charon",
+  "rate": 1.0,
+  "want": "ye",
+  "files": [
+   "audio/m/israeli/syllable/yod-e.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-yod-e-720c90.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "yod-e",
+  "text": "יֵא",
+  "engine": "he-IL-Chirp3-HD-Charon",
+  "rate": 1.0,
+  "want": "ye",
+  "files": [
+   "audio/m/israeli/syllable/yod-e.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-yod-e-238276.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "yod-e",
+  "text": "יֶהּ",
+  "engine": "he-IL-Chirp3-HD-Charon",
+  "rate": 1.0,
+  "want": "ye",
+  "files": [
+   "audio/m/israeli/syllable/yod-e.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-yod-e-3d8cae.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "yod-e",
+  "text": "יֶ",
+  "engine": "he-IL-Wavenet-B",
+  "rate": 0.8,
+  "want": "ye",
+  "files": [
+   "audio/m/israeli/syllable/yod-e.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-yod-e-217762.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "yod-e",
+  "text": "יֶ.",
+  "engine": "he-IL-Wavenet-B",
+  "rate": 0.8,
+  "want": "ye",
+  "files": [
+   "audio/m/israeli/syllable/yod-e.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-yod-e-d77544.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "yod-e",
+  "text": "יֶה",
+  "engine": "he-IL-Wavenet-B",
+  "rate": 0.8,
+  "want": "ye",
+  "files": [
+   "audio/m/israeli/syllable/yod-e.mp3"
+  ]
+ },
+ {
+  "take": "audio-takes/sound-check/m-syllable-yod-e-bf6bdc.mp3",
+  "voice": "m",
+  "kind": "syllable",
+  "id": "yod-e",
+  "text": "יֶה.",
+  "engine": "he-IL-Wavenet-B",
+  "rate": 0.8,
+  "want": "ye",
+  "files": [
+   "audio/m/israeli/syllable/yod-e.mp3"
+  ]
+ }
+]

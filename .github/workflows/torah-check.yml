@@ -52,13 +52,14 @@ jobs:
       - name: Check slice ${{ matrix.shard }} of 20
         run: |
           mkdir -p docs/torah/audio-verification/check
-          python tools/torah/audio/check_shard.py --shard ${{ matrix.shard }} --of 20 --model phoneme-ct2 \
+          rm -f docs/torah/audio-verification/check/shard-${{ matrix.shard }}.jsonl   # start fresh: the clips were re-recorded
+          python tools/torah/audio/check_shard.py --shard ${{ matrix.shard }} --of 24 --model phoneme-ct2 \
             --out docs/torah/audio-verification/check/shard-${{ matrix.shard }}.jsonl
       - name: Push the results to john/torah-check-${{ matrix.shard }}
         if: always()
         run: |
           git config user.name "John Khan"
-          git config user.email "johnnykhan1@gmail.com"
+          git config user.email "309250657+ALENZACODES@users.noreply.github.com"
           f=docs/torah/audio-verification/check/shard-${{ matrix.shard }}.jsonl
           [ -f "$f" ] || exit 0
           cp "$f" /tmp/result.jsonl

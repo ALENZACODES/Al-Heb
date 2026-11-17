@@ -11,6 +11,9 @@ sys.path.insert(0, os.path.join(ROOT, 'tools', 'audio', 'asr-check'))
 import scan_lines as S, phoneme_review as P
 sys.path.insert(0, os.path.dirname(__file__))
 from fix_shard import spoken
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'ipa'))
+import pace as PACE   # third check: syllables a second of speech (pace.py)
+_SYL = {v['id']: PACE.syllables(v) for v in json.load(open(os.path.join(os.path.dirname(__file__), 'ipa', 'ipa.json'), encoding='utf-8'))}
 
 
 def main():
@@ -40,8 +43,9 @@ def main():
             ipa = P.hear(f, a.model, max_tokens=300)
             ratio, ws = P.review(text, ipa)
             weak = [w['word'] for w in ws if w['match'] < 0.6]
+            pace = round(PACE.pace_of(PACE.decode(f), _SYL[cid]), 2) if cid in _SYL else None
             r = {'file': rel, 'sha': hashlib.sha256(open(f, 'rb').read()).hexdigest(), 'text': text, 'words': nw,
-                 'word_heard': heard, 'word_issues': [i['say'] for i in iss], 'sound_ipa': ipa, 'sound_ratio': ratio, 'sound_weak': weak}
+                 'word_heard': heard, 'word_issues': [i['say'] for i in iss], 'sound_ipa': ipa, 'sound_ratio': ratio, 'sound_weak': weak, 'pace': pace}
             out.write(json.dumps(r, ensure_ascii=False) + '\n'); out.flush()
             if n % 25 == 0:
                 print(f'{n}/{len(mine)}', flush=True)

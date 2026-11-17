@@ -23,7 +23,14 @@ def model():
     global _model
     if _model is None:
         from faster_whisper import WhisperModel
-        _model = WhisperModel(MODEL_ID, device='cpu', compute_type='int8', cpu_threads=os.cpu_count() or 2)
+        if os.environ.get('ALEF_DEVICE') == 'cuda':      # a GPU (Kaggle); falls back to the CPU if CUDA cannot load
+            try:
+                _model = WhisperModel(MODEL_ID, device='cuda', compute_type='float16')
+            except Exception as ex:  # noqa: BLE001
+                print('GPU not usable, CPU instead:', str(ex)[:120], flush=True)
+                _model = None
+        if _model is None:
+            _model = WhisperModel(MODEL_ID, device='cpu', compute_type='int8', cpu_threads=os.cpu_count() or 2)
     return _model
 
 

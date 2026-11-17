@@ -12,7 +12,7 @@ For each flagged clip:
   python tools/audio/asr-check/tradition_fix.py --list docs/audio/traditions-wrong.txt --model /path/to/phoneme-ct2 [--execute]
 Needs GOOGLE_TTS_API_KEY for new takes. Log: --log (default tools/audio/asr-check/tradition-fix-log.jsonl).
 """
-import argparse, json, os, shutil, sys, tempfile
+import argparse, json, os, re, shutil, sys, tempfile
 
 sys.path.insert(0, os.path.dirname(__file__))
 import numpy as np  # noqa: E402
@@ -31,6 +31,52 @@ CARRIERS = [('הַמִּלָּה', None), (None, 'וְעוֹד')]
 # also read from the same sound spelled the way the voice reads it (ו for v, ח for kh, אוּ / וּ for u, ס for the Ashkenazi s).
 SPOKEN = [('בֵית', 'וֵיס'), ('בֵיס', 'וֵיס'), ('ב\u05b0', 'ו\u05b0'), ('ב\u05b7', 'ו\u05b7'), ('ב\u05b8', 'ו\u05b8'), ('ב\u05b6', 'ו\u05b6'), ('ב\u05b5', 'ו\u05b5'),
           ('ב\u05b4', 'ו\u05b4'), ('ב\u05b9', 'ו\u05b9'), ('ב\u05bb', 'וּ'), ('כ\u05b7', 'ח\u05b7'), ('כ\u05b8', 'ח\u05b8')]
+
+
+TORAH = os.path.join(ROOT, 'tools', 'torah', 'audio', 'ipa')
+sys.path.insert(0, TORAH)
+import plan as TP  # noqa: E402  (latin labels, syllables and the de-DE IPA form, as for the Torah verses)
+IPA_VOICE = {'m': 'de-DE-Chirp3-HD-Charon', 'f': 'de-DE-Chirp3-HD-Kore'}
+UNITS = [('tz', 'ts'), ('ts', 'ts'), ('kh', 'χ'), ('ch', 'χ'), ('sh', 'ʃ'), ('ei', 'ej'), ('ai', 'aj'), ('oi', 'oj'), ('y', 'j'),
+         ('r', 'ʁ'), ('g', 'ɡ')]
+
+
+def say_to_ipa(say, tradition):
+    """The app's respelling of a card ("veis", "khaf", "tz") as IPA for Google, one entry per word, with stress:
+    a lone consonant gets "a" after it (the cards' sound practice says "ba"); Ashkenazi words take the stress on the
+    next-to-last syllable, the others on the last."""
+    out = []
+    for w in re.sub(r"[^a-z ]", '', say.lower()).split():
+        i, ipa = 0, ''
+        while i < len(w):
+            for a, b in UNITS:
+                if w.startswith(a, i):
+                    ipa += b; i += len(a); break
+            else:
+                ipa += w[i]; i += 1
+        if not any(c in 'aeiou' for c in ipa):
+            ipa += 'a'
+        vs = [k for k, c in enumerate(ipa) if c in 'aeiou' and (k == 0 or ipa[k - 1] not in 'aeiou')]
+        if len(vs) > 1:
+            k = vs[-2] if tradition == 'ashkenazi' else vs[-1]
+            ipa = ipa[:k] + 'ˈ' + ipa[k:]
+        out.append(ipa)
+    return out
+
+
+def synth_ipa(words, voice, key):
+    import base64, urllib.request
+    labels, prons = [], []
+    for k, w in enumerate(words):
+        lab = TP.latin(w) + ('h' * k if TP.latin(w) in labels else '')
+        labels.append(lab)
+        prons.append({'phrase': lab, 'phoneticEncoding': 'PHONETIC_ENCODING_IPA', 'pronunciation': TP.for_google(TP.syllabify(w))})
+    body = {'input': {'text': ' '.join(labels) + '.', 'customPronunciations': {'pronunciations': prons}},
+            'voice': {'languageCode': 'de-DE', 'name': voice}, 'audioConfig': {'audioEncoding': 'MP3', 'sampleRateHertz': 24000}}
+    req = urllib.request.Request('https://texttospeech.googleapis.com/v1/text:synthesize', data=json.dumps(body, ensure_ascii=False).encode(),
+                                 method='POST', headers={'Content-Type': 'application/json; charset=utf-8', 'X-Goog-Api-Key': key})
+    with urllib.request.urlopen(req, timeout=90) as r:
+        return base64.b64decode(json.load(r)['audioContent'])
 
 
 def spoken(script, say):
@@ -75,7 +121,8 @@ def main():
     if a.execute and not key:
         sys.exit('Set GOOGLE_TTS_API_KEY first.')
     from faster_whisper import WhisperModel
-    hear_row = S.hearer(a.model)
+    from listeners import Listeners
+    LS = Listeners(a.model)
     gap = np.zeros(int(S.GAP * L.SR), np.float32)
     tmp = tempfile.mkdtemp(prefix='alef-trad-')
     tally = {}
@@ -119,11 +166,17 @@ def main():
             if e.get('taken') and e['tradition'] == 'israeli' and e['taken'] not in (sc, sc + '.'):
                 plans.insert(2, (VOICE[g], e['taken'], 1.0, None))
             plans += [(v, sc, 1.0, c) for v in (VOICE[g], HD[g]) for c in CARRIERS]
+            # first: the exact sounds (IPA) through the Chirp HD voices, so the voice cannot swap b for v or read a word it knows
+            ipa = say_to_ipa(e['say'], e['tradition'])
+            plans = [(IPA_VOICE[g], ' '.join(ipa), 1.0, 'ipa'), (IPA_VOICE[g], ' '.join(ipa), 1.0, 'ipa')] + plans
             tried, kept, best2 = [], None, None
             for i, (voice, text, rate, carrier) in enumerate(plans):
-                raw, enc = os.path.join(tmp, f't{i}.' + ('wav' if carrier else 'mp3')), os.path.join(tmp, f't{i}e.mp3')
+                raw, enc = os.path.join(tmp, f't{i}.' + ('wav' if carrier and carrier != 'ipa' else 'mp3')), os.path.join(tmp, f't{i}e.mp3')
                 try:
-                    if carrier:
+                    if carrier == 'ipa':
+                        open(raw, 'wb').write(synth_ipa(text.split(), voice, key))
+                        text = '[' + text + '] (IPA)'
+                    elif carrier:
                         open(raw, 'wb').write(FL.synth_in_carrier(text, voice, key, carrier[0], carrier[1], rate))
                         text = f'{carrier[0] or ""} [{text}] {carrier[1] or ""}'.strip()
                     else:
@@ -131,10 +184,11 @@ def main():
                     F.encode(raw, enc, False)
                 except Exception as ex:  # noqa: BLE001
                     tried.append({'voice': voice, 'text': text, 'error': str(ex)[:120]}); continue
-                hs = [h for h, _ in hear_row([enc])] + [h for h, _ in hear_row([enc])] + [h for h, _ in hear_row([enc])]
-                ok = sum(T.close(want, h) for h in hs)
-                tried.append({'voice': voice, 'text': text, 'rate': rate, 'heard': hs, 'right': ok})
-                if ok == 3 or (ok == 2 and i >= len(plans) - 1):
+                v = LS.verdict(enc, want)                 # three listeners (listeners.py): two of three must hear it
+                hs = [f"{k}: {' / '.join(x) if isinstance(x, list) else x}" for k, x in v['heard'].items()]
+                ok = sum(v['calls'].values())
+                tried.append({'voice': voice, 'text': text, 'rate': rate, 'heard': v['heard'], 'calls': v['calls'], 'right': ok})
+                if ok == 3:
                     kept = (enc, voice, text, rate, hs); break
                 if ok == 2 and not best2:
                     best2 = (enc, voice, text, rate, hs)
@@ -145,9 +199,12 @@ def main():
                 shutil.copyfile(kept[0], os.path.join(ROOT, p))
                 mp = os.path.join(ROOT, p) + '.meta.json'
                 meta = json.load(open(mp, encoding='utf-8')) if os.path.exists(mp) else {}
-                meta.update({'voiceId': kept[1], 'inputText': kept[2], 'inputTextKind': 'hebrew', 'madeFrom': 'hebrew-script',
-                             'note': f"Re-recorded 17 Nov 2026: the {e['tradition']} reading \"{e['say']}\" written in pointed Hebrew ({kept[2]}) and read by the "
-                                     f"Israeli voice; the sound model heard it as {' / '.join(kept[4])}. Synthetic, not a human recording."})
+                by_ipa = kept[2].endswith('(IPA)')
+                meta.update({'voiceId': kept[1], 'inputText': kept[2], 'inputTextKind': 'ipa' if by_ipa else 'hebrew', 'madeFrom': 'ipa' if by_ipa else 'hebrew-script',
+                             'note': (f"Re-recorded 17 Nov 2026: the {e['tradition']} reading \"{e['say']}\" given to the voice as exact sounds {kept[2]} "
+                                      f"(Google Chirp HD, de-DE setting, which accepts IPA)" if by_ipa else
+                                      f"Re-recorded 17 Nov 2026: the {e['tradition']} reading \"{e['say']}\" written in pointed Hebrew ({kept[2]}) and read by the Israeli voice")
+                                     + f"; heard by three listeners as {'; '.join(kept[4])}. Synthetic, not a human recording."})
                 meta.pop('inputSha256', None)
                 with open(mp, 'w', encoding='utf-8', newline='\n') as f:
                     f.write(json.dumps(meta, ensure_ascii=False, indent=1) + '\n')

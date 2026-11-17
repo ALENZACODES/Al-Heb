@@ -1,0 +1,60 @@
+name: multi-check
+# Hears every letter, vowel and syllable clip with three listeners (tools/audio/asr-check/listeners.py) in 8 parallel shards,
+# then joins them into docs/audio/TRADITIONS-MULTI.md. Results go to john/multi-check-r<run>. Started by hand or when
+# tools/audio/asr-check/multi-check-queue.txt changes.
+on:
+  push:
+    branches: [main, 'claude/audio-round4-2026-11-17']
+    paths: ['tools/audio/asr-check/multi-check-queue.txt']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  hear:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3, 4, 5, 6, 7]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            tools/audio
+            audio/f/israeli/letter
+            audio/f/israeli/vowel
+            audio/f/israeli/syllable
+            audio/m/israeli/letter
+            audio/m/israeli/vowel
+            audio/m/israeli/syllable
+            audio/f/sephardi
+            audio/m/sephardi
+            audio/f/ashkenazi
+            audio/m/ashkenazi
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
+        with: { python-version: '3.12' }
+      - run: sudo apt-get -qq update && sudo apt-get -qq install -y --no-install-recommends ffmpeg espeak-ng
+      - run: |
+          pip install -q torch --index-url https://download.pytorch.org/whl/cpu
+          pip install -q transformers ctranslate2==4.8.5 faster-whisper numpy phonemizer "git+https://github.com/thewh1teagle/phonikud"
+          ct2-transformers-converter --model renikud/whisper-he-ipa --revision e709a907f8e0e6ebcb83340b8563818dd1bc3bee \
+            --output_dir /tmp/phoneme-ct2 --quantization int8 --copy_files tokenizer.json preprocessor_config.json
+      - run: python tools/audio/asr-check/scan_multi.py --model /tmp/phoneme-ct2 --shard ${{ matrix.shard }} --shards 8 --out /tmp/out
+      - uses: actions/upload-artifact@v4
+        with: { name: 'multi-${{ matrix.shard }}', path: /tmp/out/traditions-multi-${{ matrix.shard }}.jsonl }
+  join:
+    needs: hear
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/download-artifact@v4
+        with: { path: /tmp/in, merge-multiple: true }
+      - name: Push the hearings
+        run: |
+          b=john/multi-check-r${{ github.run_number }}
+          auth=$(git config --global --get http.https://github.com/.extraheader || true)
+          mkdir -p /tmp/repo && cd /tmp/repo && git init -q && git checkout -q -b "$b"
+          mkdir -p docs/audio/multi && cp /tmp/in/*.jsonl docs/audio/multi/
+          git config user.name "John Khan"; git config user.email "309250657+ALENZACODES@users.noreply.github.com"
+          git add . && git commit -q -m "Three-listener hearings, run ${{ github.run_number }}"
+          git push -q --force "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" "$b"

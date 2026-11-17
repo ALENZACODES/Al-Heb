@@ -10,7 +10,7 @@
  "note": "Copied 17 Nov 2026 from audio/f/israeli/letter/fe-sound.mp3: the app's sephardi reading \"f\" is the Israeli reading letter for letter, and the earlier clip (the Israeli voice reading English letters) was heard wrong by the sound check.",
  "inputTextKind": "hebrew",
  "copyOf": "audio/f/israeli/letter/fe-sound.mp3",
- "madeFrom": "israeli-clip-same-reading",
+ "madeFrom": "israeli-clip",
  "sephardiReading": "f",
  "copiedAt": "2026-11-12T15:35:53.867Z"
 }

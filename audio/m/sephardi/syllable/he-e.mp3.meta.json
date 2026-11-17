@@ -10,7 +10,7 @@
  "note": "Copied 17 Nov 2026 from audio/m/israeli/syllable/he-e.mp3: the app's sephardi reading \"he\" is the Israeli reading letter for letter, and the earlier clip (the Israeli voice reading English letters) was heard wrong by the sound check.",
  "inputTextKind": "hebrew",
  "copyOf": "audio/m/israeli/syllable/he-e.mp3",
- "madeFrom": "israeli-clip-same-reading",
+ "madeFrom": "israeli-clip",
  "sephardiReading": "he",
  "copiedAt": "2026-11-12T15:35:53.867Z"
 }

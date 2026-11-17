@@ -4,13 +4,12 @@
  "engine": "google-cloud-tts",
  "voiceId": "he-IL-Wavenet-B",
  "tradition": "sephardi",
- "inputText": "צַ.",
+ "inputText": "צַ",
  "ingestedAt": null,
  "licence": "customer-owned",
- "note": "Re-recorded 17 Nov 2026: the sephardi reading \"tz\" written in pointed Hebrew (צַ.) and read by the Israeli voice; the sound model heard it as ts'a / ts'a / ts'a. Synthetic, not a human recording.",
+ "note": "Copy of the Israeli clip (owner decision A: the Sephardi reading \"tz\" is the Israeli reading). A re-recording of 17 Nov was put back: this row was held by the accent review, so only the copy may ship.",
  "inputTextKind": "hebrew",
- "copyOf": "audio/m/israeli/letter/tsadi-sound.mp3",
- "madeFrom": "hebrew-script",
+ "madeFrom": "israeli-clip",
  "sephardiReading": "tz",
- "copiedAt": "2026-11-12T15:35:53.867Z"
+ "copyOf": "audio/m/israeli/letter/tsadi-sound.mp3"
 }

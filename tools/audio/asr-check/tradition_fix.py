@@ -60,6 +60,17 @@ def main():
     paths.sort(key=lambda p: exp[p]['tradition'] != 'israeli')      # Israeli first: the other traditions may copy the fixed clip
     print(len(paths), 'clips to fix', flush=True)
     fixed, nogood = set(), set()
+    # Sephardi rows the accent review held (docs/audio/fill/accent-r*.jsonl, never passed) may ship only as the Israeli copy
+    # (owner decision A; tests/audit.audio-lane-2026-11-11.test.js), so they are never re-recorded here
+    import glob
+    held = {}
+    for f in sorted(glob.glob(os.path.join(ROOT, 'docs/audio/fill/accent-r*-*.jsonl')), key=lambda f: int(os.path.basename(f).split('-')[1][1:])):
+        for l in open(f, encoding='utf-8'):
+            if l.strip():
+                r = json.loads(l)
+                if r.get('tradition') and r['tradition'] != 'israeli' and held.get(r['path']) != 'pass':
+                    held[r['path']] = r.get('decision')
+    held = {k for k, v in held.items() if v != 'pass'}
     key = os.environ.get('GOOGLE_TTS_API_KEY')
     if a.execute and not key:
         sys.exit('Set GOOGLE_TTS_API_KEY first.')
@@ -91,6 +102,8 @@ def main():
                 meta.pop('inputSha256', None)
                 with open(mp, 'w', encoding='utf-8', newline='\n') as f:
                     f.write(json.dumps(meta, ensure_ascii=False, indent=1) + '\n')
+        elif p in held:
+            rec['outcome'] = 'held by the accent review: left as it is (only the Israeli copy may ship)'
         elif not a.execute:
             rec['outcome'] = 'would record takes'
         else:

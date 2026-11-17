@@ -65,6 +65,7 @@ def main():
     ap.add_argument('--files', help='a text file of clip paths, one per line, instead of the groups in --list')
     ap.add_argument('--sound-model', help='converted renikud/whisper-he-ipa folder: every take must also match by sound')
     ap.add_argument('--sound-keep', type=float, default=0.85)
+    ap.add_argument('--always-retake', action='store_true', help='record takes even when the clip passes this hearing (the GPU hearing flagged it)')
     a = ap.parse_args()
     if a.files:
         want = {l.strip() for l in open(os.path.join(ROOT, a.files), encoding='utf-8') if l.strip() and not l.startswith('#')}
@@ -90,7 +91,7 @@ def main():
     for n, j in enumerate(jobs, 1):
         now = hear_twice(os.path.join(ROOT, j['file']))
         rec = {'file': j['file'], 'paths': j['paths'], 'kind': j['kind'], 'hebrew': j['he'], 'heard_now': now}
-        if right(j['he'], now):
+        if right(j['he'], now) and not a.always_retake:
             rec['outcome'] = 'left: heard right twice'
             tally['left'] += 1
         else:
@@ -99,7 +100,8 @@ def main():
             plain = L.plain(pointed)
             if a.sound_model:          # round 2: pointed text only (unpointed takes came back with wrong vowels)
                 takes = [(wavenet, pointed, 1.0), (wavenet, pointed + '.', 1.0), (wavenet, pointed, 0.9), (wavenet, pointed, 0.8),
-                         (wavenet, pointed + ',', 0.9), (hd, pointed, 1.0), (hd, pointed + '.', 0.9)]
+                         (wavenet, pointed + ',', 0.9), (hd, pointed, 1.0), (hd, pointed + '.', 0.9),
+                         (wavenet, pointed + '.', 0.85), (wavenet, pointed, 0.75), (hd, pointed, 0.85), (hd, pointed + ',', 1.0)]
             else:
                 takes = [(wavenet, pointed, 1.0), (wavenet, plain, 1.0), (wavenet, pointed + '.', 1.0), (wavenet, pointed, 0.9),
                          (hd, plain, 1.0), (hd, pointed, 1.0)]

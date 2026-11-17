@@ -53,7 +53,7 @@ jobs:
         run: |
           list=$(tail -n 1 tools/audio/asr-check/word-fix-queue.txt | cut -d' ' -f1)
           case "$list" in
-            *.txt) how="--files $list --sound-model /tmp/phoneme-ct2" ;;
+            *.txt) how="--files $list --sound-model /tmp/phoneme-ct2 --always-retake" ;;
             *) how="--list $list" ;;
           esac
           python tools/audio/asr-check/fix_list.py $how --execute --shard ${{ matrix.shard }} --of 6 --log /tmp/fix-list-log-${{ matrix.shard }}.jsonl

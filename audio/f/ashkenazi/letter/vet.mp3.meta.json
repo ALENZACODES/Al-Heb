@@ -1,0 +1,31 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-respelled-israeli-voice",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "ashkenazi",
+ "inputText": "ווֵיס",
+ "ingestedAt": "2026-11-12T14:08:11.490Z",
+ "licence": "customer-owned",
+ "note": "Re-recorded 17 Nov 2026: the ashkenazi reading \"veis\" written in pointed Hebrew (ווֵיס) and read by the Israeli voice; the sound model heard it as vav'ejs / vav'ejs / vav'ejs. Synthetic, not a human recording.",
+ "renderedAt": "2026-11-12T14:08:11.490Z",
+ "redistributionCleared": false,
+ "spokenText": "בֵיס",
+ "normalized": true,
+ "provider": "google",
+ "madeFrom": "hebrew-script",
+ "voiceName": "he-IL-Wavenet-A",
+ "languageCode": "he-IL",
+ "hebrew": "בֵית",
+ "israeliRef": "audio/f/israeli/letter/vet.mp3",
+ "tempo": {
+  "applied": false,
+  "factor": 1,
+  "cap": 1.26,
+  "before": 1.0080045351473923,
+  "after": 1.0080045351473923,
+  "israeliSec": 1.0960090702947847,
+  "israeliRef": "audio/f/israeli/letter/vet.mp3"
+ },
+ "inputTextKind": "hebrew"
+}

@@ -1,0 +1,31 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-respelled-israeli-voice",
+ "engine": "google",
+ "voiceId": "de-DE-Chirp3-HD-Kore",
+ "tradition": "ashkenazi",
+ "inputText": "[vejs] (IPA)",
+ "ingestedAt": "2026-11-12T14:08:11.490Z",
+ "licence": "customer-owned",
+ "note": "Re-recorded 17 Nov 2026: the ashkenazi reading \"veis\" given to the voice as exact sounds [vejs] (IPA) (Google Chirp HD, de-DE setting, which accepts IPA); heard by three listeners as whisper: v'ejs; w2v: v eɪ s / v eɪ s / v eɪ s; xlsr: v eɪ s / v eɪ s / v eɪ s. Synthetic, not a human recording.",
+ "renderedAt": "2026-11-12T14:08:11.490Z",
+ "redistributionCleared": false,
+ "spokenText": "בֵיס",
+ "normalized": true,
+ "provider": "google",
+ "madeFrom": "ipa",
+ "voiceName": "he-IL-Wavenet-A",
+ "languageCode": "he-IL",
+ "hebrew": "בֵית",
+ "israeliRef": "audio/f/israeli/letter/vet.mp3",
+ "tempo": {
+  "applied": false,
+  "factor": 1,
+  "cap": 1.26,
+  "before": 1.0080045351473923,
+  "after": 1.0080045351473923,
+  "israeliSec": 1.0960090702947847,
+  "israeliRef": "audio/f/israeli/letter/vet.mp3"
+ },
+ "inputTextKind": "ipa"
+}

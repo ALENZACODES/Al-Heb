@@ -1,4 +1,4 @@
-"""Fix the Sephardi and Ashkenazi letter, vowel and syllable clips the three-tradition check flags (traditions-wrong.txt).
+"""Fix the letter, vowel and syllable clips of all three traditions the three-tradition check flags (traditions-wrong.txt).
 
 Those clips were made by the Israeli voice reading an English-letter respelling ("lamed", "beis"), which a Hebrew voice reads badly.
 For each flagged clip:
@@ -20,10 +20,13 @@ import scan_sounds as S  # noqa: E402
 import scan_traditions as T  # noqa: E402
 import check_lib as L  # noqa: E402
 import fix as F  # noqa: E402
+import fix_list as FL  # noqa: E402
 
 ROOT = S.ROOT
 VOICE = {'m': 'he-IL-Wavenet-B', 'f': 'he-IL-Wavenet-A'}
 HD = {'m': 'he-IL-Chirp3-HD-Charon', 'f': 'he-IL-Chirp3-HD-Kore'}
+OTHER = {'m': 'he-IL-Wavenet-D', 'f': 'he-IL-Wavenet-C'}
+CARRIERS = [('הַמִּלָּה', None), (None, 'וְעוֹד')]
 
 
 def main():
@@ -35,9 +38,11 @@ def main():
     a = ap.parse_args()
     exp = json.load(open(T.EXPECT, encoding='utf-8'))
     paths = [l.strip() for l in open(os.path.join(ROOT, a.list), encoding='utf-8') if l.strip().startswith('audio/')]
-    paths = [p for p in paths if exp.get(p, {}).get('tradition') in ('sephardi', 'ashkenazi')
-             and exp[p]['id'] not in ('shin-dot', 'sin-dot')]      # mark cards say the letter's name; the check expects the bare sound
-    print(len(paths), 'Sephardi/Ashkenazi clips to fix', flush=True)
+    paths = [p for p in paths if p in exp]
+    todo = set(paths)
+    paths.sort(key=lambda p: exp[p]['tradition'] != 'israeli')      # Israeli first: the other traditions may copy the fixed clip
+    print(len(paths), 'clips to fix', flush=True)
+    fixed = set()
     key = os.environ.get('GOOGLE_TTS_API_KEY')
     if a.execute and not key:
         sys.exit('Set GOOGLE_TTS_API_KEY first.')
@@ -51,9 +56,12 @@ def main():
         want = T.say_to_sounds(e['say'])
         rec = {'file': p, 'tradition': e['tradition'], 'text': e['text'], 'say': e['say'], 'script': e['script']}
         isr = p.replace(f"/{e['tradition']}/", '/israeli/')
-        if e['say'] == e['israeliSay'] and os.path.exists(os.path.join(ROOT, isr)):
+        same_file = os.path.exists(os.path.join(ROOT, isr)) and open(os.path.join(ROOT, isr), 'rb').read() == open(os.path.join(ROOT, p), 'rb').read()
+        isr_good = isr != p and os.path.exists(os.path.join(ROOT, isr)) and (isr not in todo or isr in fixed) and not same_file
+        if e['tradition'] != 'israeli' and e['say'] == e['israeliSay'] and isr_good:
             # the tradition's reading is letter for letter the Israeli one: the checked Israeli clip of the same voice says it
             rec['outcome'] = 'copied the Israeli clip (same reading)'
+            fixed.add(p)
             if a.execute:
                 shutil.copyfile(os.path.join(ROOT, isr), os.path.join(ROOT, p))
                 mp = os.path.join(ROOT, p) + '.meta.json'
@@ -69,25 +77,33 @@ def main():
         elif not a.execute:
             rec['outcome'] = 'would record takes'
         else:
-            script = e['script']
-            if e['group'] == 'letter-sound' and e['tradition'] == 'ashkenazi' and e['say'] == 's':
-                script = 'סַ'                        # Ashkenazi tav without dagesh sounds "s"
-            e = dict(e, script=script)
-            plans = [(VOICE[e['voice']], e['script'], 1.0), (VOICE[e['voice']], e['script'] + '.', 1.0), (VOICE[e['voice']], e['script'], 0.9),
-                     (HD[e['voice']], e['script'], 1.0), (HD[e['voice']], e['script'] + '.', 1.0), (VOICE[e['voice']], e['script'] + ',', 0.85)]
-            tried, kept = [], None
-            for i, (voice, text, rate) in enumerate(plans):
-                raw, enc = os.path.join(tmp, f't{i}.mp3'), os.path.join(tmp, f't{i}e.mp3')
+            sc, g = e['script'], e['voice']
+            plans = [(VOICE[g], sc, 1.0, None), (VOICE[g], sc + '.', 1.0, None), (HD[g], sc, 1.0, None), (HD[g], sc + '.', 1.0, None),
+                     (VOICE[g], sc, 0.85, None), (OTHER[g], sc, 1.0, None), (OTHER[g], sc + '.', 1.0, None)]
+            if e.get('taken') and e['tradition'] == 'israeli' and e['taken'] not in (sc, sc + '.'):
+                plans.insert(2, (VOICE[g], e['taken'], 1.0, None))
+            plans += [(v, sc, 1.0, c) for v in (VOICE[g], HD[g]) for c in CARRIERS]
+            tried, kept, best2 = [], None, None
+            for i, (voice, text, rate, carrier) in enumerate(plans):
+                raw, enc = os.path.join(tmp, f't{i}.' + ('wav' if carrier else 'mp3')), os.path.join(tmp, f't{i}e.mp3')
                 try:
-                    open(raw, 'wb').write(F.synth_rate(text, voice, key, rate))
+                    if carrier:
+                        open(raw, 'wb').write(FL.synth_in_carrier(text, voice, key, carrier[0], carrier[1], rate))
+                        text = f'{carrier[0] or ""} [{text}] {carrier[1] or ""}'.strip()
+                    else:
+                        open(raw, 'wb').write(F.synth_rate(text, voice, key, rate))
                     F.encode(raw, enc, False)
                 except Exception as ex:  # noqa: BLE001
                     tried.append({'voice': voice, 'text': text, 'error': str(ex)[:120]}); continue
                 hs = [h for h, _ in hear_row([enc])] + [h for h, _ in hear_row([enc])] + [h for h, _ in hear_row([enc])]
                 ok = sum(T.close(want, h) for h in hs)
                 tried.append({'voice': voice, 'text': text, 'rate': rate, 'heard': hs, 'right': ok})
-                if ok >= 2:
+                if ok == 3 or (ok == 2 and i >= len(plans) - 1):
                     kept = (enc, voice, text, rate, hs); break
+                if ok == 2 and not best2:
+                    best2 = (enc, voice, text, rate, hs)
+            if not kept and best2:
+                kept = best2
             rec['tried'] = tried
             if kept:
                 shutil.copyfile(kept[0], os.path.join(ROOT, p))
@@ -100,6 +116,7 @@ def main():
                 with open(mp, 'w', encoding='utf-8', newline='\n') as f:
                     f.write(json.dumps(meta, ensure_ascii=False, indent=1) + '\n')
                 rec['outcome'] = 'replaced'
+                fixed.add(p)
             else:
                 rec['outcome'] = 'no take heard right: needs a human voice'
         tally[rec['outcome']] = tally.get(rec['outcome'], 0) + 1

@@ -151,6 +151,9 @@ def main():
         return
     ids = {l.strip() for l in open(a.ids)} if a.ids else None
     todo = [v for v in verses if (not a.book or v['book'] == a.book) and (not a.chapter or v['chapter'] == a.chapter) and (ids is None or v['id'] in ids)]
+    if a.skip:
+        skip = {l.strip() for l in open(a.skip) if l.strip()}
+        todo = [v for v in todo if v['id'] not in skip]
     jobs = [(v, g) for v in todo for g in a.voices]
     jobs = jobs[a.shard::a.shards]
     print(len(jobs), 'clips', flush=True)
@@ -160,7 +163,7 @@ def main():
             print(json.dumps(request(v, P.VOICES['ari' if g == 'm' else 'noa'][1])['input']['text'], ensure_ascii=False))
         return
     if a.stretch_existing:
-        skip = {l.strip() for l in open(a.skip)} if a.skip else set()
+        skip = set()
         for n, (v, g) in enumerate(jobs, 1):
             dest = ROOT / f"audio/{g}/israeli/line/{v['id']}.mp3"
             if v['id'] in skip or not dest.exists():

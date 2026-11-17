@@ -18,7 +18,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        shard: [0, 1, 2, 3]
+        shard: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
     env:
       LANG: C.UTF-8
       GOOGLE_TTS_API_KEY: ${{ secrets.GOOGLE_TTS_API_KEY }}
@@ -31,8 +31,9 @@ jobs:
         run: |
           set -eu
           cd tools/torah/audio/ipa
+          touch pace-skip.txt
           grep -v '^\s*#' pace-queue.txt | sed '/^\s*$/d' | while read -r book chapter; do
-            args="--shard ${{ matrix.shard }} --shards 4 --execute --log pace-log-${{ matrix.shard }}.jsonl"
+            args="--shard ${{ matrix.shard }} --shards 12 --execute --skip pace-skip.txt --log pace-log-${{ matrix.shard }}.jsonl"
             if [ "$book" != "all" ]; then args="$args --book $book"; fi
             if [ -n "${chapter:-}" ]; then args="$args --chapter $chapter"; fi
             python3 pace.py $args

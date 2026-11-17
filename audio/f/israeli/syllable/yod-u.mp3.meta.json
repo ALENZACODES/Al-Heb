@@ -1,0 +1,13 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "google-cloud-tts",
+ "voiceId": "he-IL-Wavenet-C",
+ "tradition": "israeli",
+ "inputText": "יוּ",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "Re-recorded 17 Nov 2026: the israeli reading \"yu\" written in pointed Hebrew (יוּ) and read by the Israeli voice; heard by three listeners as whisper: j'u; w2v: j uː / j uː / j uː; xlsr: j uː / j uː / j uː. Synthetic, not a human recording.",
+ "inputTextKind": "hebrew",
+ "madeFrom": "hebrew-script"
+}

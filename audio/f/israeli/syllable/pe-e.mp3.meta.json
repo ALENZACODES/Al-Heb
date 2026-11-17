@@ -1,0 +1,13 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "google-cloud-tts",
+ "voiceId": "he-IL-Wavenet-C",
+ "tradition": "israeli",
+ "inputText": "פֶּ",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "Re-recorded 17 Nov 2026: the israeli reading \"pe\" written in pointed Hebrew (פֶּ) and read by the Israeli voice; heard by three listeners as whisper: p'e; w2v: f eː / p eː / p eː; xlsr: p e / p eː / p eː. Synthetic, not a human recording.",
+ "inputTextKind": "hebrew",
+ "madeFrom": "hebrew-script"
+}

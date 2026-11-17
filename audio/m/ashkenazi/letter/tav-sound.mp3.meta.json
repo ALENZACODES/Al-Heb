@@ -4,11 +4,10 @@
  "engine": "google",
  "voiceId": "he-IL-Wavenet-B",
  "tradition": "ashkenazi",
- "inputText": "ת",
- "inputSha256": "22c65f7a10326ab3061e73ef73d7bd8441c8ce900d90812dc267098e5d8dc56c",
+ "inputText": "סַ",
  "ingestedAt": "2026-11-12T14:08:04.388Z",
  "licence": "customer-owned",
- "note": "Synthetic voice: the Israeli man voice reading the ashkenazi reading written in pointed Hebrew letters (tools/audio/ashkenazi_script.mjs). Not a human recording; no human has listened to it. Licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel.",
+ "note": "Re-recorded 17 Nov 2026: the ashkenazi reading \"s\" written in pointed Hebrew (סַ) and read by the Israeli voice; the sound model heard it as s'a / s'a / s'a. Synthetic, not a human recording.",
  "renderedAt": "2026-11-12T14:08:04.388Z",
  "redistributionCleared": false,
  "spokenText": "ס",
@@ -27,5 +26,6 @@
   "after": 0.9274603174603174,
   "israeliSec": 0.7360090702947846,
   "israeliRef": "audio/m/israeli/letter/tav-sound.mp3"
- }
+ },
+ "inputTextKind": "hebrew"
 }

@@ -4,17 +4,16 @@
  "engine": "google",
  "voiceId": "he-IL-Wavenet-B",
  "tradition": "ashkenazi",
- "inputText": "לָמֶד",
- "inputSha256": "90e6d522e4a9490ba812e0d3514f8e728056c8b3cdd11ff4e6293b7f73c7db5c",
+ "inputText": "לֹמֶד",
  "ingestedAt": "2026-11-12T07:00:38.273Z",
  "licence": "customer-owned",
- "note": "Synthetic voice: the Israeli man voice reading the ashkenazi English-letter respelling, not pointed Hebrew. Not a human recording; no human has listened to it. Licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel.",
+ "note": "Re-recorded 17 Nov 2026: the ashkenazi reading \"lomed\" written in pointed Hebrew (לֹמֶד) and read by the Israeli voice; the sound model heard it as lom'ed / lom'ed / lom'ed. Synthetic, not a human recording.",
  "renderedAt": "2026-11-12T07:00:38.273Z",
  "redistributionCleared": false,
  "spokenText": "lomed",
  "normalized": true,
  "provider": "google",
- "madeFrom": "respelling",
+ "madeFrom": "hebrew-script",
  "voiceName": "he-IL-Wavenet-B",
  "languageCode": "he-IL",
  "hebrew": "לָמֶד",
@@ -27,5 +26,6 @@
   "after": 0.7440136054421769,
   "israeliSec": 1,
   "israeliRef": "audio/m/israeli/letter/lamed.mp3"
- }
+ },
+ "inputTextKind": "hebrew"
 }

@@ -42,6 +42,59 @@ def hear_twice(path):
     return out
 
 
+CARRIERS = [('הַמִּלָּה', None), ('תַּגִּיד', None), ('הַמִּלָּה', 'שׁוּב'), (None, 'וְעוֹד')]
+
+
+def synth_in_carrier(word, voice, key, before, after, rate=1.0):
+    """Read the word inside a short carrier phrase with long pauses around it, then cut the word out at the pauses.
+    A lone rare word is often misread; in a phrase the voice reads it as a word of the sentence."""
+    import base64, urllib.request
+    parts = ['<speak>']
+    if before:
+        parts += [before, '<break time="900ms"/>']
+    parts.append(word)
+    if after:
+        parts += ['<break time="900ms"/>', after]
+    parts.append('</speak>')
+    audio = {'audioEncoding': 'LINEAR16', 'sampleRateHertz': 24000}
+    if rate != 1.0:
+        audio['speakingRate'] = rate
+    body = json.dumps({'input': {'ssml': ' '.join(parts)}, 'voice': {'languageCode': 'he-IL', 'name': voice},
+                       'audioConfig': audio}).encode()
+    req = urllib.request.Request('https://texttospeech.googleapis.com/v1/text:synthesize', data=body, method='POST',
+                                 headers={'Content-Type': 'application/json', 'X-Goog-Api-Key': key})
+    with urllib.request.urlopen(req, timeout=90) as r:
+        raw = base64.b64decode(json.load(r)['audioContent'])
+    a = np.frombuffer(raw[44:], dtype='<i2').astype(np.float32) / 32768
+    sr = 24000
+    win = sr // 100                                                  # 10 ms frames
+    loud = np.array([np.abs(a[i:i + win]).max() for i in range(0, len(a) - win, win)]) > 0.02
+    runs, start = [], None                                           # spans of sound
+    for i, v in enumerate(loud):
+        if v and start is None:
+            start = i
+        if not v and start is not None:
+            runs.append([start, i]); start = None
+    if start is not None:
+        runs.append([start, len(loud)])
+    groups = []                                                      # join spans split by gaps under 400 ms
+    for r in runs:
+        if groups and r[0] - groups[-1][1] < 40:
+            groups[-1][1] = r[1]
+        else:
+            groups.append(r)
+    if len(groups) < (1 + bool(before) + bool(after)):
+        raise ValueError(f'could not find the pauses ({len(groups)} parts)')
+    g = groups[1] if before else groups[0]
+    s0, s1 = max(0, g[0] * win - sr // 20), min(len(a), g[1] * win + sr // 10)
+    out = (a[s0:s1] * 32767).astype('<i2').tobytes()
+    import io, wave
+    buf = io.BytesIO()
+    with wave.open(buf, 'wb') as w:
+        w.setnchannels(1); w.setsampwidth(2); w.setframerate(sr); w.writeframes(out)
+    return buf.getvalue()
+
+
 def sound_ratio(hebrew, path, model_dir):
     import phoneme_review as P
     try:
@@ -65,6 +118,7 @@ def main():
     ap.add_argument('--files', help='a text file of clip paths, one per line, instead of the groups in --list')
     ap.add_argument('--sound-model', help='converted renikud/whisper-he-ipa folder: every take must also match by sound')
     ap.add_argument('--sound-keep', type=float, default=0.85)
+    ap.add_argument('--carrier', action='store_true', help='round 4: read each word inside a short phrase and cut it out')
     ap.add_argument('--always-retake', action='store_true', help='record takes even when the clip passes this hearing (the GPU hearing flagged it)')
     a = ap.parse_args()
     if a.files:
@@ -102,23 +156,30 @@ def main():
                 takes = [(wavenet, pointed, 1.0), (wavenet, pointed + '.', 1.0), (wavenet, pointed, 0.9), (wavenet, pointed, 0.8),
                          (wavenet, pointed + ',', 0.9), (hd, pointed, 1.0), (hd, pointed + '.', 0.9),
                          (wavenet, pointed + '.', 0.85), (wavenet, pointed, 0.75), (hd, pointed, 0.85), (hd, pointed + ',', 1.0)]
+                if a.carrier:          # round 4: the word read inside a short phrase and cut out at the pauses
+                    takes = [(v, pointed, 1.0, c) for v in (wavenet, hd) for c in CARRIERS] + [(wavenet, pointed, 0.9, c) for c in CARRIERS[:2]]
             else:
                 takes = [(wavenet, pointed, 1.0), (wavenet, plain, 1.0), (wavenet, pointed + '.', 1.0), (wavenet, pointed, 0.9),
                          (hd, plain, 1.0), (hd, pointed, 1.0)]
             tried, kept = [], None
-            for i, (voice, text, rate) in enumerate(takes):
-                raw, enc = os.path.join(tmp, f't{i}.mp3'), os.path.join(tmp, f't{i}-enc.mp3')
+            for i, take in enumerate(takes):
+                voice, text, rate = take[:3]
+                carrier = take[3] if len(take) > 3 else None
+                raw, enc = os.path.join(tmp, f't{i}.' + ('wav' if carrier else 'mp3')), os.path.join(tmp, f't{i}-enc.mp3')
                 try:
-                    open(raw, 'wb').write(F.synth_rate(text, voice, key, rate))
+                    if carrier:
+                        open(raw, 'wb').write(synth_in_carrier(text, voice, key, carrier[0], carrier[1], rate))
+                    else:
+                        open(raw, 'wb').write(F.synth_rate(text, voice, key, rate))
                     F.encode(raw, enc, j['file'].startswith('audio/builder/'))
                 except Exception as e:  # noqa: BLE001 - one bad take must not stop the batch
                     tried.append({'voice': voice, 'text': text, 'rate': rate, 'error': str(e)[:160]})
                     continue
                 heard = hear_twice(enc)
                 snd = sound_ratio(j['he'], enc, a.sound_model) if a.sound_model else None
-                tried.append({'voice': voice, 'text': text, 'rate': rate, 'heard': heard, 'sound': snd})
+                tried.append({'voice': voice, 'text': text, 'rate': rate, 'carrier': carrier, 'heard': heard, 'sound': snd})
                 if right(j['he'], heard) and (not a.sound_model or snd is None or snd >= a.sound_keep):
-                    kept = (enc, voice, text, rate, heard)
+                    kept = (enc, voice, text if not carrier else f'{text} (cut from: {carrier[0] or ""} … {carrier[1] or ""})', rate, heard)
                     break
             rec['tried'] = tried
             if kept:

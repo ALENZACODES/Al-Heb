@@ -1,0 +1,2 @@
+{"file": "audio/f/israeli/letter/resh-sound.mp3", "tradition": "israeli", "text": "ר", "say": "r", "script": "רַ", "tried": [{"voice": "de-DE-Chirp3-HD-Kore", "text": "[ʁa] (IPA)", "rate": 1.0, "heard": {"whisper": ["r'a"], "w2v": ["z a", "r a", "r a"], "xlsr": ["r a", "r a", "r a"]}, "calls": {"whisper": true, "w2v": true, "xlsr": true}, "right": 3}], "outcome": "replaced"}
+{"file": "audio/f/sephardi/letter/resh-sound.mp3", "tradition": "sephardi", "text": "ר", "say": "r", "script": "רַ", "outcome": "copied the Israeli clip (same reading)"}

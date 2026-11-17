@@ -1,0 +1,31 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-respelled-israeli-voice",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "sephardi",
+ "inputText": "קִ.",
+ "ingestedAt": "2026-11-12T07:01:43.071Z",
+ "licence": "customer-owned",
+ "note": "Re-recorded 17 Nov 2026: the sephardi reading \"ki\" written in pointed Hebrew (קִ.) and read by the Israeli voice; heard by three listeners as whisper: k'i; w2v: x i5 / k i / k i; xlsr: iː / k iː / k iː. Synthetic, not a human recording.",
+ "renderedAt": "2026-11-12T07:01:43.071Z",
+ "redistributionCleared": false,
+ "spokenText": "ki",
+ "normalized": true,
+ "provider": "google",
+ "madeFrom": "hebrew-script",
+ "voiceName": "he-IL-Wavenet-A",
+ "languageCode": "he-IL",
+ "hebrew": "קִ",
+ "israeliRef": "audio/f/israeli/syllable/qof-i.mp3",
+ "tempo": {
+  "applied": false,
+  "factor": 1,
+  "cap": 1.26,
+  "before": 0.7440136054421769,
+  "after": 0.7440136054421769,
+  "israeliSec": 0.8560090702947846,
+  "israeliRef": "audio/f/israeli/syllable/qof-i.mp3"
+ },
+ "inputTextKind": "hebrew"
+}

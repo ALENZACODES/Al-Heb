@@ -1,0 +1,31 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-respelled-israeli-voice",
+ "engine": "google",
+ "voiceId": "de-DE-Chirp3-HD-Charon",
+ "tradition": "ashkenazi",
+ "inputText": "[kof] (IPA)",
+ "ingestedAt": "2026-11-12T07:00:22.787Z",
+ "licence": "customer-owned",
+ "note": "Re-recorded 17 Nov 2026: the ashkenazi reading \"kof\" given to the voice as exact sounds [kof] (IPA) (Google Chirp HD, de-DE setting, which accepts IPA); heard by three listeners as whisper: k'of; w2v: k ɔ f / k ɑ f / k ɑ f; xlsr: k ʌ f / k ɑ f / k ɑ f. Synthetic, not a human recording.",
+ "renderedAt": "2026-11-12T07:00:22.787Z",
+ "redistributionCleared": false,
+ "spokenText": "kof",
+ "normalized": true,
+ "provider": "google",
+ "madeFrom": "ipa",
+ "voiceName": "he-IL-Wavenet-B",
+ "languageCode": "he-IL",
+ "hebrew": "קוֹף",
+ "israeliRef": "audio/m/israeli/letter/qof.mp3",
+ "tempo": {
+  "applied": false,
+  "factor": 1,
+  "cap": 1.26,
+  "before": 1.1519954648526076,
+  "after": 1.1519954648526076,
+  "israeliSec": 0.9760090702947846,
+  "israeliRef": "audio/m/israeli/letter/qof.mp3"
+ },
+ "inputTextKind": "ipa"
+}

@@ -17,6 +17,7 @@ What this does for each verse and voice:
 
   python3 tools/torah/audio/ipa/pace.py --measure [paths...]          # report the pace of existing clips (no key needed)
   python3 tools/torah/audio/ipa/pace.py --book genesis --chapter 1 [--shard 0 --shards 4] --execute
+  python3 tools/torah/audio/ipa/pace.py --stretch-existing [--skip ids.txt] [--shard 0 --shards 2]   # free: no new recordings
 Needs GOOGLE_TTS_API_KEY and ffmpeg for --execute. Log: tools/torah/audio/ipa/pace-log.jsonl
 """
 import argparse, base64, io, json, os, subprocess, sys, tempfile, time, urllib.request, wave
@@ -110,7 +111,7 @@ def synth(body, key):
             time.sleep(3 * (attempt + 1))
 
 
-def finish(a, factor, dest):
+def finish(a, factor, dest, stretch='atempo'):
     """Trim to the speech, set the lead-in and tail, apply the tempo factor, write the MP3."""
     _, s0, s1 = speech_span(a)
     a = a[max(0, s0 - int(0.03 * SR)):min(len(a), s1 + int(0.05 * SR))]
@@ -118,7 +119,8 @@ def finish(a, factor, dest):
     src = os.path.join(tmp, 'in.wav')
     with wave.open(src, 'wb') as w:
         w.setnchannels(1); w.setsampwidth(2); w.setframerate(SR); w.writeframes((np.clip(a, -1, 1) * 32767).astype('<i2').tobytes())
-    filt = (f'atempo={factor:.4f},' if abs(factor - 1) > 0.005 else '') + f'adelay={int(LEAD * 1000)},apad=pad_dur={TAIL}'
+    tempo = (f'atempo={factor:.4f},' if stretch == 'atempo' else f'rubberband=tempo={factor:.4f}:transients=smooth:detector=soft:window=standard,')
+    filt = (tempo if abs(factor - 1) > 0.005 else '') + f'adelay={int(LEAD * 1000)},apad=pad_dur={TAIL}'
     dest.parent.mkdir(parents=True, exist_ok=True)
     subprocess.run(['ffmpeg', '-nostdin', '-y', '-v', 'error', '-i', src, '-af', filt, '-map_metadata', '-1', '-ac', '1', '-ar', str(SR),
                     '-b:a', '32k', '-codec:a', 'libmp3lame', str(dest)], check=True)
@@ -133,6 +135,9 @@ def main():
     ap.add_argument('--shard', type=int, default=0); ap.add_argument('--shards', type=int, default=1)
     ap.add_argument('--takes', type=int, default=4)
     ap.add_argument('--execute', action='store_true')
+    ap.add_argument('--stretch-existing', action='store_true',
+                    help='no new recordings: bring each existing clip to the target pace (rubberband, pitch kept, 0.7x to 1.4x) and even its silences')
+    ap.add_argument('--skip', help='file of verse ids to leave alone (already re-recorded)')
     ap.add_argument('--log', default=str(HERE / 'pace-log.jsonl'))
     a = ap.parse_args()
     verses = json.loads((HERE / 'ipa.json').read_text(encoding='utf8'))
@@ -150,9 +155,25 @@ def main():
     jobs = jobs[a.shard::a.shards]
     print(len(jobs), 'clips', flush=True)
     key = os.environ.get('GOOGLE_TTS_API_KEY')
-    if not a.execute:
+    if not a.execute and not a.stretch_existing:
         for v, g in jobs[:3]:
             print(json.dumps(request(v, P.VOICES['ari' if g == 'm' else 'noa'][1])['input']['text'], ensure_ascii=False))
+        return
+    if a.stretch_existing:
+        skip = {l.strip() for l in open(a.skip)} if a.skip else set()
+        for n, (v, g) in enumerate(jobs, 1):
+            dest = ROOT / f"audio/{g}/israeli/line/{v['id']}.mp3"
+            if v['id'] in skip or not dest.exists():
+                continue
+            syl, audio = syllables(v), decode(dest)
+            before = pace_of(audio, syl)
+            factor = 1.0 if not before or abs(before / TARGET - 1) <= 0.05 else min(1.4, max(0.7, TARGET / before))
+            finish(audio, factor, dest, 'rubberband')
+            rec = {'id': v['id'], 'voice': g, 'syllables': syl, 'before': round(before, 2), 'tempo': round(factor, 3), 'after': round(pace_of(decode(dest), syl), 2)}
+            with open(a.log, 'a', encoding='utf-8') as f:
+                f.write(json.dumps(rec) + '\n')
+            if n % 200 == 0:
+                print(f'[{n}/{len(jobs)}]', flush=True)
         return
     if not key:
         sys.exit('Set GOOGLE_TTS_API_KEY first.')

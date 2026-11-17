@@ -42,13 +42,17 @@ jobs:
             --output_dir /tmp/phoneme-ct2 --quantization int8 --copy_files tokenizer.json preprocessor_config.json
       - run: python tools/audio/asr-check/scan_multi.py --model /tmp/phoneme-ct2 --shard ${{ matrix.shard }} --shards 8 --out /tmp/out
       - uses: actions/upload-artifact@v4
-        with: { name: 'multi-${{ matrix.shard }}', path: /tmp/out/traditions-multi-${{ matrix.shard }}.jsonl }
+        with:
+          name: multi-${{ matrix.shard }}
+          path: /tmp/out/traditions-multi-${{ matrix.shard }}.jsonl
   join:
     needs: hear
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/download-artifact@v4
-        with: { path: /tmp/in, merge-multiple: true }
+        with:
+          path: /tmp/in
+          merge-multiple: true
       - name: Push the hearings
         run: |
           b=john/multi-check-r${{ github.run_number }}

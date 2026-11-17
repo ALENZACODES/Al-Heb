@@ -1,0 +1,13 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "google-cloud-tts",
+ "voiceId": "he-IL-Chirp3-HD-Kore",
+ "tradition": "israeli",
+ "inputText": "[גִ] וְעוֹד",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "Re-recorded 17 Nov 2026: the israeli reading \"gi\" written in pointed Hebrew ([גִ] וְעוֹד) and read by the Israeli voice; heard by three listeners as whisper: g'im; w2v: ɡ i m / ɡ i m / ɡ i m; xlsr: ɡ i m / ɡ i m / ɡ i m. Synthetic, not a human recording.",
+ "inputTextKind": "hebrew",
+ "madeFrom": "hebrew-script"
+}

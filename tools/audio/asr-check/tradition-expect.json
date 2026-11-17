@@ -585,7 +585,7 @@
   "say": "he",
   "israeliSay": "he",
   "script": "הֵא",
-  "taken": "הֵא"
+  "taken": "הֵא."
  },
  "audio/f/ashkenazi/letter/he.mp3": {
   "tradition": "ashkenazi",
@@ -1808,7 +1808,7 @@
   "text": "נוּן",
   "say": "nun",
   "israeliSay": "nun",
-  "script": "נוּןַ",
+  "script": "נוּן",
   "taken": "נוּן"
  },
  "audio/m/sephardi/letter/nun.mp3": {
@@ -1820,7 +1820,7 @@
   "text": "נוּן",
   "say": "nun",
   "israeliSay": "nun",
-  "script": "נוּןַ",
+  "script": "נוּן",
   "taken": "נוּן"
  },
  "audio/m/ashkenazi/letter/nun.mp3": {
@@ -1832,7 +1832,7 @@
   "text": "נוּן",
   "say": "nun",
   "israeliSay": "nun",
-  "script": "נוּןַ",
+  "script": "נוּן",
   "taken": "נוּן"
  },
  "audio/f/israeli/letter/nun.mp3": {
@@ -1844,7 +1844,7 @@
   "text": "נוּן",
   "say": "nun",
   "israeliSay": "nun",
-  "script": "נוּןַ",
+  "script": "נוּן",
   "taken": "נוּן"
  },
  "audio/f/sephardi/letter/nun.mp3": {
@@ -1856,7 +1856,7 @@
   "text": "נוּן",
   "say": "nun",
   "israeliSay": "nun",
-  "script": "נוּןַ",
+  "script": "נוּן",
   "taken": "נוּן"
  },
  "audio/f/ashkenazi/letter/nun.mp3": {
@@ -1868,7 +1868,7 @@
   "text": "נוּן",
   "say": "nun",
   "israeliSay": "nun",
-  "script": "נוּןַ",
+  "script": "נוּן",
   "taken": "נוּן"
  },
  "audio/m/israeli/letter/nun-sound.mp3": {
@@ -2421,7 +2421,7 @@
   "say": "tz",
   "israeliSay": "tz",
   "script": "צַ",
-  "taken": "צַ"
+  "taken": "צַ."
  },
  "audio/m/ashkenazi/letter/tsadi-sound.mp3": {
   "tradition": "ashkenazi",
@@ -2433,7 +2433,7 @@
   "say": "tz",
   "israeliSay": "tz",
   "script": "צַ",
-  "taken": "צַ"
+  "taken": "צַ."
  },
  "audio/f/israeli/letter/tsadi-sound.mp3": {
   "tradition": "israeli",
@@ -2841,7 +2841,7 @@
   "say": "sh",
   "israeliSay": "sh",
   "script": "שַׁ",
-  "taken": "שַׁ"
+  "taken": "שַׁ"
  },
  "audio/m/sephardi/letter/shin-sound.mp3": {
   "tradition": "sephardi",
@@ -3009,7 +3009,7 @@
   "say": "t",
   "israeliSay": "t",
   "script": "תַּ",
-  "taken": "סַ"
+  "taken": "תַ"
  },
  "audio/f/israeli/letter/tav-sound.mp3": {
   "tradition": "israeli",
@@ -3045,7 +3045,7 @@
   "say": "t",
   "israeliSay": "t",
   "script": "תַּ",
-  "taken": "סַ"
+  "taken": "תַ"
  },
  "audio/m/israeli/letter/kaf-final.mp3": {
   "tradition": "israeli",
@@ -3765,7 +3765,7 @@
   "say": "f",
   "israeliSay": "f",
   "script": "פַ",
-  "taken": ""
+  "taken": "פַ."
  },
  "audio/f/sephardi/letter/fe-sound.mp3": {
   "tradition": "sephardi",
@@ -3777,7 +3777,7 @@
   "say": "f",
   "israeliSay": "f",
   "script": "פַ",
-  "taken": ""
+  "taken": "פַ."
  },
  "audio/m/israeli/letter/sin.mp3": {
   "tradition": "israeli",
@@ -4353,7 +4353,7 @@
   "say": "u",
   "israeliSay": "u",
   "script": "אֻ",
-  "taken": "אֻ"
+  "taken": "הַמִּלָּה [אֻ]"
  },
  "audio/m/ashkenazi/vowel/kubutz.mp3": {
   "tradition": "ashkenazi",
@@ -4412,7 +4412,7 @@
   "text": "וּ",
   "say": "u",
   "israeliSay": "u",
-  "script": "וַּ",
+  "script": "וּ",
   "taken": "וּ"
  },
  "audio/m/sephardi/vowel/shuruk.mp3": {
@@ -4424,7 +4424,7 @@
   "text": "וּ",
   "say": "u",
   "israeliSay": "u",
-  "script": "וַּ",
+  "script": "וּ",
   "taken": "וּ"
  },
  "audio/m/ashkenazi/vowel/shuruk.mp3": {
@@ -4436,7 +4436,7 @@
   "text": "וּ",
   "say": "u",
   "israeliSay": "u",
-  "script": "וַּ",
+  "script": "וּ",
   "taken": "וּ"
  },
  "audio/f/israeli/vowel/shuruk.mp3": {
@@ -4448,7 +4448,7 @@
   "text": "וּ",
   "say": "u",
   "israeliSay": "u",
-  "script": "וַּ",
+  "script": "וּ",
   "taken": "וּ"
  },
  "audio/f/sephardi/vowel/shuruk.mp3": {
@@ -4460,7 +4460,7 @@
   "text": "וּ",
   "say": "u",
   "israeliSay": "u",
-  "script": "וַּ",
+  "script": "וּ",
   "taken": "וּ"
  },
  "audio/f/ashkenazi/vowel/shuruk.mp3": {
@@ -4472,7 +4472,7 @@
   "text": "וּ",
   "say": "u",
   "israeliSay": "u",
-  "script": "וַּ",
+  "script": "וּ",
   "taken": "וּ"
  },
  "audio/m/israeli/vowel/shva.mp3": {
@@ -4809,7 +4809,7 @@
   "say": "sh",
   "israeliSay": "sh",
   "script": "שַׁ",
-  "taken": "שׁ"
+  "taken": "שַׁ"
  },
  "audio/m/sephardi/vowel/shin-dot.mp3": {
   "tradition": "sephardi",
@@ -4821,7 +4821,7 @@
   "say": "sh",
   "israeliSay": "sh",
   "script": "שַׁ",
-  "taken": "שׁ"
+  "taken": "שַׁ"
  },
  "audio/m/ashkenazi/vowel/shin-dot.mp3": {
   "tradition": "ashkenazi",
@@ -4833,7 +4833,7 @@
   "say": "sh",
   "israeliSay": "sh",
   "script": "שַׁ",
-  "taken": "שׁ"
+  "taken": "שַׁ"
  },
  "audio/f/israeli/vowel/shin-dot.mp3": {
   "tradition": "israeli",
@@ -4845,7 +4845,7 @@
   "say": "sh",
   "israeliSay": "sh",
   "script": "שַׁ",
-  "taken": "שׁ"
+  "taken": "שַׁ"
  },
  "audio/f/sephardi/vowel/shin-dot.mp3": {
   "tradition": "sephardi",
@@ -4857,7 +4857,7 @@
   "say": "sh",
   "israeliSay": "sh",
   "script": "שַׁ",
-  "taken": "שׁ"
+  "taken": "שַׁ"
  },
  "audio/f/ashkenazi/vowel/shin-dot.mp3": {
   "tradition": "ashkenazi",
@@ -4869,7 +4869,7 @@
   "say": "sh",
   "israeliSay": "sh",
   "script": "שַׁ",
-  "taken": "שׁ"
+  "taken": "שַׁ"
  },
  "audio/m/israeli/vowel/sin-dot.mp3": {
   "tradition": "israeli",
@@ -4881,7 +4881,7 @@
   "say": "s",
   "israeliSay": "s",
   "script": "שַׂ",
-  "taken": "שׂ"
+  "taken": "שַׂ"
  },
  "audio/m/sephardi/vowel/sin-dot.mp3": {
   "tradition": "sephardi",
@@ -4893,7 +4893,7 @@
   "say": "s",
   "israeliSay": "s",
   "script": "שַׂ",
-  "taken": "שׂ"
+  "taken": "שַׂ"
  },
  "audio/m/ashkenazi/vowel/sin-dot.mp3": {
   "tradition": "ashkenazi",
@@ -4905,7 +4905,7 @@
   "say": "s",
   "israeliSay": "s",
   "script": "שַׂ",
-  "taken": "שׂ"
+  "taken": "שַׂ"
  },
  "audio/f/israeli/vowel/sin-dot.mp3": {
   "tradition": "israeli",
@@ -4917,7 +4917,7 @@
   "say": "s",
   "israeliSay": "s",
   "script": "שַׂ",
-  "taken": "שׂ"
+  "taken": "שַׂ"
  },
  "audio/f/sephardi/vowel/sin-dot.mp3": {
   "tradition": "sephardi",
@@ -4929,7 +4929,7 @@
   "say": "s",
   "israeliSay": "s",
   "script": "שַׂ",
-  "taken": "שׂ"
+  "taken": "שַׂ"
  },
  "audio/f/ashkenazi/vowel/sin-dot.mp3": {
   "tradition": "ashkenazi",
@@ -4941,7 +4941,7 @@
   "say": "s",
   "israeliSay": "s",
   "script": "שַׂ",
-  "taken": "שׂ"
+  "taken": "שַׂ"
  },
  "audio/m/israeli/syllable/alef-a.mp3": {
   "tradition": "israeli",
@@ -5217,7 +5217,7 @@
   "say": "u",
   "israeliSay": "u",
   "script": "אֻ",
-  "taken": "אֻ"
+  "taken": "הַמִּלָּה [אֻ]"
  },
  "audio/m/sephardi/syllable/alef-u.mp3": {
   "tradition": "sephardi",
@@ -5229,7 +5229,7 @@
   "say": "u",
   "israeliSay": "u",
   "script": "אֻ",
-  "taken": "אֻ"
+  "taken": "הַמִּלָּה [אֻ]"
  },
  "audio/m/ashkenazi/syllable/alef-u.mp3": {
   "tradition": "ashkenazi",
@@ -5241,7 +5241,7 @@
   "say": "u",
   "israeliSay": "u",
   "script": "אֻ",
-  "taken": "אֻ"
+  "taken": "הַמִּלָּה [אֻ]"
  },
  "audio/f/israeli/syllable/alef-u.mp3": {
   "tradition": "israeli",
@@ -11157,7 +11157,7 @@
   "say": "ke",
   "israeliSay": "ke",
   "script": "קֶ",
-  "taken": "קֵה"
+  "taken": "קֶ"
  },
  "audio/m/sephardi/syllable/qof-e.mp3": {
   "tradition": "sephardi",
@@ -12609,7 +12609,7 @@
   "say": "f",
   "israeliSay": "f",
   "script": "פַ",
-  "taken": ""
+  "taken": "פַ."
  },
  "audio/m/israeli/syllable/dot-shin-sin-0.mp3": {
   "tradition": "israeli",

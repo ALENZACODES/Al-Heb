@@ -27,6 +27,23 @@ VOICE = {'m': 'he-IL-Wavenet-B', 'f': 'he-IL-Wavenet-A'}
 HD = {'m': 'he-IL-Chirp3-HD-Charon', 'f': 'he-IL-Chirp3-HD-Kore'}
 OTHER = {'m': 'he-IL-Wavenet-D', 'f': 'he-IL-Wavenet-C'}
 CARRIERS = [('הַמִּלָּה', None), (None, 'וְעוֹד')]
+# The voice reads letters, not the dots that soften them: a ב without dagesh is still "b" to it, a lone וּ is "va". So a take is
+# also read from the same sound spelled the way the voice reads it (ו for v, ח for kh, אוּ / וּ for u, ס for the Ashkenazi s).
+SPOKEN = [('בֵית', 'וֵיס'), ('בֵיס', 'וֵיס'), ('ב\u05b0', 'ו\u05b0'), ('ב\u05b7', 'ו\u05b7'), ('ב\u05b8', 'ו\u05b8'), ('ב\u05b6', 'ו\u05b6'), ('ב\u05b5', 'ו\u05b5'),
+          ('ב\u05b4', 'ו\u05b4'), ('ב\u05b9', 'ו\u05b9'), ('ב\u05bb', 'וּ'), ('כ\u05b7', 'ח\u05b7'), ('כ\u05b8', 'ח\u05b8')]
+
+
+def spoken(script, say):
+    s = script
+    if s in ('וּ', 'וּ.'):
+        return 'אוּ'
+    for a, b in SPOKEN:
+        s = s.replace(a, b)
+    if '\u05bb' in s:                                     # kubutz: spell the u with a vav (shuruk), which the voice reads "u"
+        s = s.replace('\u05bb', '') + 'וּ'
+    if say and say.startswith('s') and s.startswith('ת'):    # Ashkenazi sav
+        s = 'ס' + s[1:]
+    return s
 
 
 def main():
@@ -42,7 +59,7 @@ def main():
     todo = set(paths)
     paths.sort(key=lambda p: exp[p]['tradition'] != 'israeli')      # Israeli first: the other traditions may copy the fixed clip
     print(len(paths), 'clips to fix', flush=True)
-    fixed = set()
+    fixed, nogood = set(), set()
     key = os.environ.get('GOOGLE_TTS_API_KEY')
     if a.execute and not key:
         sys.exit('Set GOOGLE_TTS_API_KEY first.')
@@ -58,7 +75,7 @@ def main():
         isr = p.replace(f"/{e['tradition']}/", '/israeli/')
         same_file = os.path.exists(os.path.join(ROOT, isr)) and open(os.path.join(ROOT, isr), 'rb').read() == open(os.path.join(ROOT, p), 'rb').read()
         isr_good = isr != p and os.path.exists(os.path.join(ROOT, isr)) and (isr not in todo or isr in fixed) and not same_file
-        if e['tradition'] != 'israeli' and e['say'] == e['israeliSay'] and isr_good:
+        if e['tradition'] != 'israeli' and e['say'] == e['israeliSay'] and isr_good and isr not in nogood:
             # the tradition's reading is letter for letter the Israeli one: the checked Israeli clip of the same voice says it
             rec['outcome'] = 'copied the Israeli clip (same reading)'
             fixed.add(p)
@@ -80,6 +97,9 @@ def main():
             sc, g = e['script'], e['voice']
             plans = [(VOICE[g], sc, 1.0, None), (VOICE[g], sc + '.', 1.0, None), (HD[g], sc, 1.0, None), (HD[g], sc + '.', 1.0, None),
                      (VOICE[g], sc, 0.85, None), (OTHER[g], sc, 1.0, None), (OTHER[g], sc + '.', 1.0, None)]
+            alt = spoken(sc, e['say'])
+            if alt != sc:
+                plans = [(VOICE[g], alt, 1.0, None), (VOICE[g], alt + '.', 1.0, None), (HD[g], alt, 1.0, None), (OTHER[g], alt, 1.0, None)] + plans
             if e.get('taken') and e['tradition'] == 'israeli' and e['taken'] not in (sc, sc + '.'):
                 plans.insert(2, (VOICE[g], e['taken'], 1.0, None))
             plans += [(v, sc, 1.0, c) for v in (VOICE[g], HD[g]) for c in CARRIERS]
@@ -119,6 +139,7 @@ def main():
                 fixed.add(p)
             else:
                 rec['outcome'] = 'no take heard right: needs a human voice'
+                nogood.add(p)
         tally[rec['outcome']] = tally.get(rec['outcome'], 0) + 1
         with open(a.log, 'a', encoding='utf-8') as f:
             f.write(json.dumps(rec, ensure_ascii=False) + '\n')

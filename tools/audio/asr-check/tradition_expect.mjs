@@ -31,7 +31,7 @@ for (const r of man) {
   // script: pointed Hebrew for the Israeli voice to read this tradition's reading (Ashkenazi rules; Sephardi reads as written);
   // a lone consonant gets a patach so the voice says it ("ba"), the check allows the one vowel after a bare consonant
   let script = r.tradition === 'ashkenazi' ? ashkenaziScript(text) : text;
-  if (!/[\u05B0-\u05BB\u05C7]/.test(script) && say) script += '\u05B7';
+  if (!/[\u05B0-\u05BB\u05C7]/.test(script) && !/\u05D5\u05BC/.test(script) && say) script += '\u05B7';   // וּ is itself a vowel
   const taken = /[\u05B0-\u05C7]/.test(meta.inputText || '') ? meta.inputText : '';
   out[r.path] = { tradition: r.tradition, kind: r.kind, group: r.group || '', id: r.id, voice: r.voice, text, say, israeliSay, script, taken };
 }

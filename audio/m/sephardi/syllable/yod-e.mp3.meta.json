@@ -2,15 +2,15 @@
  "status": "synthetic-unreviewed",
  "source": "israeli-clip-same-reading",
  "engine": "google-cloud-tts",
- "voiceId": "he-IL-Wavenet-B",
+ "voiceId": "he-IL-Wavenet-D",
  "tradition": "sephardi",
  "inputText": "יֶ",
  "ingestedAt": null,
  "licence": "customer-owned",
- "note": "Copied 17 Nov 2026 from audio/m/israeli/syllable/yod-e.mp3: the app's sephardi reading \"ye\" is the Israeli reading letter for letter, and the earlier clip (the Israeli voice reading English letters) was heard wrong by the sound check.",
+ "note": "Re-recorded 17 Nov 2026: the sephardi reading \"ye\" written in pointed Hebrew (יֶ) and read by the Israeli voice; the sound model heard it as j'e / j'e / j'e. Synthetic, not a human recording.",
  "inputTextKind": "hebrew",
  "copyOf": "audio/m/israeli/syllable/yod-e.mp3",
- "madeFrom": "israeli-clip-same-reading",
+ "madeFrom": "hebrew-script",
  "sephardiReading": "ye",
  "copiedAt": "2026-11-12T15:35:53.867Z"
 }

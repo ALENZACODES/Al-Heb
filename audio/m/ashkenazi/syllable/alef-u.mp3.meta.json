@@ -4,7 +4,7 @@
  "engine": "google",
  "voiceId": "he-IL-Wavenet-B",
  "tradition": "ashkenazi",
- "inputText": "אֻ",
+ "inputText": "הַמִּלָּה [אֻ]",
  "ingestedAt": "2026-11-12T07:00:27.246Z",
  "licence": "customer-owned",
  "note": "Copied 17 Nov 2026 from audio/m/israeli/syllable/alef-u.mp3: the app's ashkenazi reading \"u\" is the Israeli reading letter for letter, and the earlier clip (the Israeli voice reading English letters) was heard wrong by the sound check.",

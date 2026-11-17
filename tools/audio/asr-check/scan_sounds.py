@@ -51,6 +51,8 @@ def clips():
 
 def hearer(model_dir):
     """Returns hear_row(paths) -> [(heard, how)]: one row of clips with pauses between; clips heard alone if the row does not split."""
+    if model_dir.startswith('hf:'):                   # the transformers model on a GPU (Kaggle), e.g. hf:renikud/whisper-he-ipa
+        return hf_hearer(model_dir[3:])
     from faster_whisper import WhisperModel
     import numpy as np
     try:
@@ -84,6 +86,34 @@ def hearer(model_dir):
         if len(toks) == len(paths):
             return [(t, 'row') for t in toks]
         return [(''.join(tr(np.concatenate([gap, L.load(f), gap]))), 'alone') for f in paths]
+    return hear_row
+
+
+def hf_hearer(name, revision='e709a907f8e0e6ebcb83340b8563818dd1bc3bee'):
+    import numpy as np, torch
+    from transformers import WhisperForConditionalGeneration, WhisperProcessor
+    dev = 'cuda' if torch.cuda.is_available() else 'cpu'
+    proc = WhisperProcessor.from_pretrained(name, revision=revision)
+    model = WhisperForConditionalGeneration.from_pretrained(name, revision=revision,
+                                                            torch_dtype=torch.float16 if dev == 'cuda' else torch.float32).to(dev).eval()
+    print('sound model on', dev, flush=True)
+    gap = np.zeros(int(GAP * L.SR), np.float32)
+
+    def tr(audios, n):
+        feats = proc(audios, sampling_rate=L.SR, return_tensors='pt')
+        with torch.no_grad():
+            ids = model.generate(feats.input_features.to(dev, model.dtype), max_new_tokens=14 * n, num_beams=1, do_sample=False)
+        return [t.split() for t in proc.batch_decode(ids, skip_special_tokens=True)]
+
+    def hear_row(paths):
+        buf = [gap[:len(gap) // 4]]
+        for f in paths:
+            buf += [L.load(f), gap]
+        toks = tr([np.concatenate(buf)], len(paths))[0]
+        if len(toks) == len(paths):
+            return [(t, 'row') for t in toks]
+        alone = tr([np.concatenate([gap, L.load(f), gap]) for f in paths], 1)
+        return [(''.join(t), 'alone') for t in alone]
     return hear_row
 
 

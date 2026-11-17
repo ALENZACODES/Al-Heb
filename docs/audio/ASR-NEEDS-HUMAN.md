@@ -105,3 +105,41 @@
 - כְּ־: `audio/m/israeli/dictionary/dict-vc4b2b486.mp3`, no synthetic take was heard right twice (16 Nov 2026)
 - גְּדֻלָּה: `audio/m/israeli/word/aleinu-1-w6.mp3`, no synthetic take was heard right twice (16 Nov 2026)
 - יְבָרֶכְךָ: `audio/m/israeli/word/bless-priestly-1-w1.mp3`, no synthetic take was heard right twice (16 Nov 2026)
+
+## After Round 3 (17 Nov 2026): Still Wrong By Both Checks
+
+No synthetic take of these passed both the word check (twice) and the sound check in three rounds. Record them with a human voice, or play them for a teacher.
+
+- אָכֹם: `audio/f/israeli/word/hf76c8cd2.mp3`
+- בָנוּ: `audio/f/israeli/word/kiddush-shabbat-eve-w11.mp3`
+- בָנוּ: `audio/m/israeli/word/kiddush-shabbat-eve-w11.mp3`
+- ברוך: `audio/f/israeli/word/r35-w3.mp3`
+- גְּדֻלָּה: `audio/m/israeli/word/aleinu-1-w6.mp3`
+- גְּדֻלָּה: `audio/m/israeli/word/i-08-w4.mp3`
+- גְדֻלָּתוֹ: `audio/m/israeli/word/yigdal-w42.mp3`
+- הֵא: `audio/f/israeli/dictionary/dict-va4b7d8ca.mp3`
+- הֵא: `audio/m/israeli/dictionary/dict-va4b7d8ca.mp3`
+- וִיסְקִי: `audio/m/israeli/dictionary/dict-vb9c8a2b6.mp3`
+- וַאֲהַלְלָה: `audio/f/israeli/word/ashrei-145-1-3-w12.mp3`
+- וּפִי: `audio/m/israeli/word/amidah-lips-w4.mp3`
+- חַיִּין: `audio/m/israeli/word/brich-shmei-w32.mp3`
+- יְבָרֶכְךָ: `audio/m/israeli/word/bless-priestly-1-w1.mp3`
+- כְּ־: `audio/f/israeli/dictionary/dict-vc4b2b486.mp3`
+- כְּ־: `audio/m/israeli/dictionary/dict-vc4b2b486.mp3`
+- כֹל: `audio/f/israeli/word/lecha-hashem-w9.mp3`
+- כֹל: `audio/m/israeli/word/lecha-hashem-w9.mp3`
+- לְטָב: `audio/f/israeli/word/brich-shmei-w116.mp3`
+- לֹא אִירָא: `audio/f/israeli/word/i-09-w16.mp3`
+- מְצַוְּךָ: `audio/m/israeli/word/shema-vahavta-w19.mp3`
+- מְצַוְּךָ: `audio/m/israeli/word/vahavta-2-w6.mp3`
+- מֶם: `audio/m/israeli/dictionary/dict-v1348133a.mp3`
+- מָאַס: `audio/m/israeli/dictionary/dict-v323d1bb3.mp3`
+- נִעְנֵעַ: `audio/m/israeli/dictionary/dict-v1d5d18fe.mp3`
+- נֶאְדָּר: `audio/m/israeli/word/mi-chamocha-1-w6.mp3`
+- פֶּה: `audio/f/israeli/word/h60b16793.mp3`
+- פַּר: `audio/m/israeli/word/h69a35691.mp3`
+- פָּן: `audio/m/israeli/dictionary/dict-v11122fe7.mp3`
+- פָּרוּר: `audio/m/israeli/dictionary/dict-v17d329a2.mp3`
+- שְׁעוּעִית: `audio/f/israeli/dictionary/dict-ve8865de4.mp3`
+- שְׁעוּעִית: `audio/m/israeli/dictionary/dict-ve8865de4.mp3`
+- מַטְעֵן: `audio/f/israeli/word/i-16-w8.mp3` and `audio/m/israeli/word/i-16-w8.mp3`, the clip follows the lesson; `audio/INDEX.csv` still says מִטְעָן and needs fixing

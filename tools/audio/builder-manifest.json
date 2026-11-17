@@ -467,8 +467,8 @@
       "voice": "he-IL-Chirp3-HD-Kore",
       "path": "audio/builder/h1a3574d3_noa.mp3",
       "fingerprint": "11e2dc8eb4f7b62cbdf750eb7e0e39288d346136da36c0b2818a07f39df6224f",
-      "bytes": 9452,
-      "sha256": "7149d75c6e908cbb703b2c03b0f9160fdb77f8f0bf79b1962aa14b1cf4e7c3db"
+      "bytes": 5709,
+      "sha256": "84ac6312c1f6b0afa6770e8a527c48a9be3578b870504ca0fc382293dceb34a5"
     },
     {
       "id": "h50cf3648",
@@ -1052,8 +1052,8 @@
       "voice": "he-IL-Chirp3-HD-Charon",
       "path": "audio/builder/h63142367_ari.mp3",
       "fingerprint": "820f3673425d02d6499aa9fa0766bb5de57326dd066b83707bae7a0330c56f51",
-      "bytes": 8012,
-      "sha256": "c425e89662dffc7ba49c075b4514700ac39fd9765ad5c1f488418e4b5ac601be"
+      "bytes": 5565,
+      "sha256": "93675e20a03db0e9d13c34098ce8d388be66f8febec9a28ebdd2b070692cb80f"
     },
     {
       "id": "h63142367",
@@ -1106,8 +1106,8 @@
       "voice": "he-IL-Chirp3-HD-Charon",
       "path": "audio/builder/h470d40b1_ari.mp3",
       "fingerprint": "2290a9dd47d22a7abcef99a3eb014bec12ed08724ff73c5b1c50f4c09848071f",
-      "bytes": 6572,
-      "sha256": "ca2fa37df444b036aff47a9d88e9ce2a9595233e3fc540b8f4d5f385942d978e"
+      "bytes": 5133,
+      "sha256": "f8cccb89a705d8601d7c0afc6b67385730b2b18f70003e094cc64351942b3389"
     },
     {
       "id": "h470d40b1",
@@ -1907,8 +1907,8 @@
       "voice": "he-IL-Chirp3-HD-Kore",
       "path": "audio/builder/hbb3bc5fd_noa.mp3",
       "fingerprint": "1b3dfafd5061bbbc3b9e51352634d553423cf1ea8186fe0402270acc0debbc64",
-      "bytes": 5708,
-      "sha256": "5ce6216c6228265f3f6b6060eff60b561a5453b5a0d4b72d9719ae1d22bf7f7a"
+      "bytes": 5565,
+      "sha256": "8d97823de89954856c3c88c2c87cd6824341478b965c47fe5d724380ee977fef"
     },
     {
       "id": "h1b39a6b6",
@@ -2087,8 +2087,8 @@
       "voice": "he-IL-Chirp3-HD-Kore",
       "path": "audio/builder/h4589871d_noa.mp3",
       "fingerprint": "33494e32fb90fd89146930fab7ed285ac43c5525cd25f9d9f48c96768c61cb9a",
-      "bytes": 8732,
-      "sha256": "090ff0ac06d34db93e8ba7d389cca33637edd84002f0dfea2c65dd5852c8fad3"
+      "bytes": 6141,
+      "sha256": "0671de4b2566017eeb0c08e1206367c01941a0fdb0600eafd5b35328ba36c814"
     },
     {
       "id": "h2d27796a",
@@ -2159,8 +2159,8 @@
       "voice": "he-IL-Chirp3-HD-Kore",
       "path": "audio/builder/h26154c1a_noa.mp3",
       "fingerprint": "f6a0ee24bc8f7c9324a8b39e8cc27a1b65b6bd463b0d4369312d7dab4ab22728",
-      "bytes": 7868,
-      "sha256": "617b3e5564d5c934b8b74be1f4c1f194addcca8554e3f4ff3b163fd9e8f25db8"
+      "bytes": 6285,
+      "sha256": "416bf3569cf30a86547c0178f1f5af752e78725ea35e7b66e0e8ebfe098dd0bb"
     },
     {
       "id": "h3739ff77",

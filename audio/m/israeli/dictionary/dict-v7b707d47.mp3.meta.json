@@ -1,16 +1,16 @@
 {
  "status": "tts",
  "source": "tts:google",
- "engine": "google",
+ "engine": "google-cloud-tts",
  "voiceId": "he-IL-Wavenet-B",
  "tradition": "israeli",
  "inputText": "הֶחֱוָה",
- "inputSha256": "d3676bc1017e45993335f371134da26a278d673387ac52f16b4798dccf78e04c",
  "ingestedAt": "2026-11-09T01:14:30.613Z",
  "licence": "customer-owned",
- "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "note": "Re-recorded 2026-11-16 after the full hearing flagged the clip (docs/audio/gpu-flagged-2026-11-16.json): read from הֶחֱוָה at rate 0.9, heard right twice (החווה / החווה) by tools/audio/asr-check/fix_list.py.",
  "renderedAt": "2026-11-09T01:14:30.613Z",
  "redistributionCleared": false,
  "spokenText": "הֶחֱוָה",
- "normalized": true
+ "normalized": true,
+ "inputTextKind": "hebrew"
 }

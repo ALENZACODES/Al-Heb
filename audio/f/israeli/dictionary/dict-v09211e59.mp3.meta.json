@@ -1,16 +1,16 @@
 {
  "status": "tts",
  "source": "tts:google",
- "engine": "google",
- "voiceId": "he-IL-Wavenet-A",
+ "engine": "google-cloud-tts",
+ "voiceId": "he-IL-Chirp3-HD-Kore",
  "tradition": "israeli",
- "inputText": "עַמֹּנִי",
- "inputSha256": "fcea3f185de39b2a9ba24e214f13a688fb7ed4f3b6dfcd1a2a9dfcde25b01dce",
+ "inputText": "עמני",
  "ingestedAt": "2026-11-09T01:31:39.722Z",
  "licence": "customer-owned",
- "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "note": "Re-recorded 2026-11-16 after the full hearing flagged the clip (docs/audio/gpu-flagged-2026-11-16.json): read from עמני, heard right twice (אמני / אמני) by tools/audio/asr-check/fix_list.py.",
  "renderedAt": "2026-11-09T01:31:39.722Z",
  "redistributionCleared": false,
  "spokenText": "עַמֹּנִי",
- "normalized": true
+ "normalized": true,
+ "inputTextKind": "hebrew"
 }

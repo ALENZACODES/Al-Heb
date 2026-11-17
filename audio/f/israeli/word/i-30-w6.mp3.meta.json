@@ -5,9 +5,8 @@
  "voiceId": "he-IL-Wavenet-A",
  "tradition": "israeli",
  "inputText": "בּוֹרֵא פְּרִי הַגָּפֶן",
- "inputSha256": "0d5183b45621c904b5f506aa76d5eb970f1915ebbcef8055361b2a073ad4dbbc",
  "ingestedAt": null,
  "licence": "customer-owned",
- "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
+ "note": "Re-recorded 2026-11-16 after the full hearing flagged the clip (docs/audio/gpu-flagged-2026-11-16.json): read from בּוֹרֵא פְּרִי הַגָּפֶן, heard right twice (בורא פרי הגפן / בורא פרי הגפן) by tools/audio/asr-check/fix_list.py.",
  "inputTextKind": "hebrew"
 }

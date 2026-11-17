@@ -1,0 +1,2 @@
+audio/f/israeli/syllable/yod-e.mp3
+audio/m/israeli/syllable/yod-e.mp3

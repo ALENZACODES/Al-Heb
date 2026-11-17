@@ -1,0 +1,9 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "google-cloud-tts",
+ "voiceId": "he-IL-Wavenet-A",
+ "inputText": "שַׁ",
+ "inputTextKind": "hebrew",
+ "note": "Re-recorded after the sound check (docs/audio/SOUNDS-CHECK.md): read from שַׁ, heard right 5 times in 5 by tools/audio/asr-check/sound_takes.py."
+}

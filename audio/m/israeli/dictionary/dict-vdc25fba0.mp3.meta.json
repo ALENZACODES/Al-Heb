@@ -1,16 +1,16 @@
 {
  "status": "tts",
  "source": "tts:google",
- "engine": "google",
- "voiceId": "he-IL-Wavenet-B",
+ "engine": "google-cloud-tts",
+ "voiceId": "he-IL-Chirp3-HD-Charon",
  "tradition": "israeli",
  "inputText": "אִחֵל",
- "inputSha256": "f0465e999eac7e2e92080a7c4d00feb9ca4f361ae5a4f74cb045d43036385357",
  "ingestedAt": "2026-11-09T01:26:52.444Z",
  "licence": "customer-owned",
- "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "note": "Re-recorded 2026-11-16 after the full hearing flagged the clip (docs/audio/gpu-flagged-2026-11-16.json): read from אִחֵל, heard right twice (איכל / איחל) by tools/audio/asr-check/fix_list.py.",
  "renderedAt": "2026-11-09T01:26:52.444Z",
  "redistributionCleared": false,
  "spokenText": "אִחֵל",
- "normalized": true
+ "normalized": true,
+ "inputTextKind": "hebrew"
 }

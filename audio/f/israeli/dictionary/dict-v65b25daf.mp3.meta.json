@@ -1,16 +1,16 @@
 {
  "status": "tts",
  "source": "tts:google",
- "engine": "google",
- "voiceId": "he-IL-Wavenet-A",
+ "engine": "google-cloud-tts",
+ "voiceId": "he-IL-Chirp3-HD-Kore",
  "tradition": "israeli",
- "inputText": "זָנָה",
- "inputSha256": "adc3ca9fcff9ccacc255d9e8e91c588367435132dd435daa4aa5c6bc3c1223f9",
+ "inputText": "זנה",
  "ingestedAt": "2026-11-09T01:11:52.830Z",
  "licence": "customer-owned",
- "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "note": "Re-recorded 2026-11-16 after the full hearing flagged the clip (docs/audio/gpu-flagged-2026-11-16.json): read from זנה, heard right twice (זה נא. / זה נא.) by tools/audio/asr-check/fix_list.py.",
  "renderedAt": "2026-11-09T01:11:52.830Z",
  "redistributionCleared": false,
  "spokenText": "זָנָה",
- "normalized": true
+ "normalized": true,
+ "inputTextKind": "hebrew"
 }

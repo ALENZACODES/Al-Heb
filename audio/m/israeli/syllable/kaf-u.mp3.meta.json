@@ -4,10 +4,9 @@
  "engine": "google-cloud-tts",
  "voiceId": "he-IL-Wavenet-B",
  "tradition": "israeli",
- "inputText": "כֻּ",
- "inputSha256": "3b777cfa5fdfdf42f6bd797e31e0c9ed11c1254bd88361b4e429011e54de7230",
+ "inputText": "כֻּ.",
  "ingestedAt": null,
  "licence": "customer-owned",
- "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
+ "note": "Re-recorded after the sound check (docs/audio/SOUNDS-CHECK.md): read from כֻּ., heard right 5 times in 5 by tools/audio/asr-check/sound_takes.py.",
  "inputTextKind": "hebrew"
 }

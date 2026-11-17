@@ -60,4 +60,33 @@ The report lists each word as pass, borderline or fail; `fix.py` tries up to fou
 - The scorer allows spelling-only differences (ו/י vowel letters, ט/ת, כ/ק, ע/א, ס/ש, a final א/ה), so true homophones
   (לוֹ / לֹא) cannot be told apart.
 - Rare prayer forms the model has not heard much can come back respelled as a common word; those show as **borderline**, check by ear.
-- Letters, vowels and syllables are not scanned: speech-to-text is not reliable on sounds that are not words.
+- Letters, vowels and syllables are not scanned here: speech-to-text is not reliable on sounds that are not words. They have their own check, below.
+
+## Letters, vowels and syllables (sound check)
+
+```
+python tools/audio/asr-check/scan_sounds.py --model /path/to/phoneme-ct2                                   # every clip, 3 hearings
+python tools/audio/asr-check/scan_sounds.py --model /path/to/phoneme-ct2 --disputed --first-pass 3 --passes 2   # more hearings for unsure clips
+```
+
+A sound model (renikud/whisper-he-ipa, converted once as in `.github/workflows/fill-clips.yml`) writes down the sounds it hears.
+One half-second clip heard alone is not reliable (the same clip came back "ba" or "ma"), so each clip is heard several times,
+each time in a different row of eight clips, and judged on the majority. Report: `docs/audio/SOUNDS-CHECK.md`,
+`docs/audio/sounds-check.csv`; clips to re-record: `docs/audio/sounds-redo-israeli.txt`.
+
+Fresh takes for the "listen" clips: `tools/audio/RUN-SOUND-RETAKES.cmd` (or `sound_takes.py --record`, needs the voice key), then
+`sound_takes.py --pick --model ...` and, after listening, `sound_takes.py --apply`. `sound_takes.py` alone lists what it would record.
+
+## Stale verdicts
+
+`results.jsonl` is keyed by file. A clip re-recorded after the scan keeps its old verdict until it is heard again:
+
+```
+python tools/audio/asr-check/rehear_flagged.py     # hears every flagged word and builder clip again, one at a time
+python tools/audio/asr-check/scan.py --report-only
+```
+
+## Builder words
+
+`python tools/audio/asr-check/builder_swap.py --execute` replaces a home-page builder word that still fails with the checked
+lesson recording of the same word in the same voice, where one exists. Both clips are heard again before anything is replaced.

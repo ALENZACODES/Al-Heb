@@ -45,6 +45,8 @@ def phone_close(want, heard):
     tone digits; ɑ written for o as well as a; ts heard as plain s; a catch before a first vowel written as p, t, h or k;
     y before a vowel written as i; and the Hebrew r (ʁ), which these mostly-English models hear as ð, b, v, ɹ...: for a card
     with r they check everything else and leave the r itself to the Hebrew-trained Whisper model."""
+    if not want:                                         # a silent letter card (alef, ayin) has no sound of its own to check
+        return True
     raw = re.sub(r'[0-9]', '', heard or '')
     raws = {raw}
     wants = {want, want.replace('c', 's')}

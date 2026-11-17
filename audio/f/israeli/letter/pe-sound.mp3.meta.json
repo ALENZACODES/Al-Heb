@@ -2,11 +2,12 @@
  "status": "tts",
  "source": "paid-cloud",
  "engine": "google-cloud-tts",
- "voiceId": "he-IL-Wavenet-A",
+ "voiceId": "he-IL-Chirp3-HD-Kore",
  "tradition": "israeli",
- "inputText": "פַּ",
+ "inputText": "פַּ",
  "ingestedAt": null,
  "licence": "customer-owned",
- "note": "Letter sound replaced 2026-11-08 by the pe-a syllable (פַּ): the old clip was rendered from the bare letter, which the voice read as a clipped letter name (shin heard as 'shi'). Copied from audio/f/israeli/syllable/pe-a.mp3; heard back as the syllable by tools/audio/asr-check.",
- "inputTextKind": "hebrew"
+ "note": "Re-recorded 17 Nov 2026: the israeli reading \"p\" written in pointed Hebrew (פַּ) and read by the Israeli voice; heard by three listeners as whisper: p'a; w2v: p ɑ5 / p a / p a; xlsr: p a / p a / p a. Synthetic, not a human recording.",
+ "inputTextKind": "hebrew",
+ "madeFrom": "hebrew-script"
 }

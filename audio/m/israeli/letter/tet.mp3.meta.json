@@ -2,12 +2,12 @@
  "status": "tts",
  "source": "paid-cloud",
  "engine": "google-cloud-tts",
- "voiceId": "he-IL-Wavenet-B",
+ "voiceId": "de-DE-Chirp3-HD-Charon",
  "tradition": "israeli",
- "inputText": "טֵית",
- "inputSha256": "73f1ff6655452a12c98e2621db4d04dd585af4c26e20ac626b74be5e29b3b96b",
+ "inputText": "[tejt] (IPA)",
  "ingestedAt": null,
  "licence": "customer-owned",
- "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
- "inputTextKind": "hebrew"
+ "note": "Re-recorded 17 Nov 2026: the israeli reading \"teit\" given to the voice as exact sounds [tejt] (IPA) (Google Chirp HD, de-DE setting, which accepts IPA); heard by three listeners as whisper: t'ejt; w2v: t eɪ t / t eɪ t / t eɪ t; xlsr: t eɪ t / t eɪ t / t eɪ t. Synthetic, not a human recording.",
+ "inputTextKind": "ipa",
+ "madeFrom": "ipa"
 }

@@ -2,18 +2,18 @@
  "status": "synthetic-unreviewed",
  "source": "tts-respelled-israeli-voice",
  "engine": "google",
- "voiceId": "he-IL-Wavenet-A",
+ "voiceId": "de-DE-Chirp3-HD-Kore",
  "tradition": "ashkenazi",
- "inputText": "רַ",
+ "inputText": "[ʁa] (IPA)",
  "ingestedAt": "2026-11-12T15:41:43.350Z",
  "licence": "customer-owned",
- "note": "Copied 17 Nov 2026 from audio/f/israeli/letter/resh-sound.mp3: the app's ashkenazi reading \"r\" is the Israeli reading letter for letter, and the earlier clip (the Israeli voice reading English letters) was heard wrong by the sound check.",
+ "note": "Re-recorded 17 Nov 2026: the ashkenazi reading \"r\" given to the voice as exact sounds [ʁa] (IPA) (Google Chirp HD, de-DE setting, which accepts IPA); heard by three listeners as whisper: r'a; w2v: r a / r a / r a; xlsr: r a / r a / r a. Synthetic, not a human recording.",
  "renderedAt": "2026-11-12T15:41:43.350Z",
  "redistributionCleared": false,
  "spokenText": "ר",
  "normalized": true,
  "provider": "google",
- "madeFrom": "israeli-clip-same-reading",
+ "madeFrom": "ipa",
  "voiceName": "he-IL-Wavenet-A",
  "languageCode": "he-IL",
  "hebrew": "ר",
@@ -26,5 +26,6 @@
   "after": 0.9840136054421769,
   "israeliSec": 0.88,
   "israeliRef": "audio/f/israeli/letter/resh-sound.mp3"
- }
+ },
+ "inputTextKind": "ipa"
 }

@@ -2,7 +2,7 @@
  "status": "synthetic-unreviewed",
  "source": "israeli-clip-same-reading",
  "engine": "google-cloud-tts",
- "voiceId": "he-IL-Wavenet-B",
+ "voiceId": "he-IL-Wavenet-D",
  "tradition": "sephardi",
  "inputText": "יֶ",
  "ingestedAt": null,

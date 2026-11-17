@@ -2,7 +2,7 @@
  "status": "synthetic-unreviewed",
  "source": "tts-respelled-israeli-voice",
  "engine": "google",
- "voiceId": "he-IL-Wavenet-B",
+ "voiceId": "he-IL-Wavenet-D",
  "tradition": "ashkenazi",
  "inputText": "מֶ",
  "ingestedAt": "2026-11-12T07:00:49.956Z",

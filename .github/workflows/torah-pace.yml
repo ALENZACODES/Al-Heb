@@ -1,0 +1,50 @@
+name: torah-pace
+# Re-records Hebrew Torah verse clips at one steady pace with pauses at the main breaks (tools/torah/audio/ipa/pace.py).
+# Lines of tools/torah/audio/ipa/pace-queue.txt: "genesis 1", "genesis" or "all". Results go to john/torah-pace-r<run>-<shard>.
+on:
+  push:
+    branches: [main, 'claude/audio-round4-2026-11-17']
+    paths: ['tools/torah/audio/ipa/pace-queue.txt']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: torah-pace
+  cancel-in-progress: false
+jobs:
+  record:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 340
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3]
+    env:
+      LANG: C.UTF-8
+      GOOGLE_TTS_API_KEY: ${{ secrets.GOOGLE_TTS_API_KEY }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+      - name: Tools
+        run: sudo apt-get update -y && sudo apt-get install -y --no-install-recommends ffmpeg && pip install --break-system-packages numpy
+      - name: Record
+        shell: bash
+        run: |
+          set -eu
+          cd tools/torah/audio/ipa
+          grep -v '^\s*#' pace-queue.txt | sed '/^\s*$/d' | while read -r book chapter; do
+            args="--shard ${{ matrix.shard }} --shards 4 --execute --log pace-log-${{ matrix.shard }}.jsonl"
+            if [ "$book" != "all" ]; then args="$args --book $book"; fi
+            if [ -n "${chapter:-}" ]; then args="$args --chapter $chapter"; fi
+            python3 pace.py $args
+          done
+      - name: Push the clips
+        if: always()
+        shell: bash
+        run: |
+          git config user.name "John Khan"
+          git config user.email "309250657+ALENZACODES@users.noreply.github.com"
+          git add audio tools/torah/audio/ipa/pace-log-*.jsonl
+          if ! git diff --cached --quiet; then
+            git commit -q -m "Torah verses at one steady pace (shard ${{ matrix.shard }})"
+            git push --force origin HEAD:refs/heads/john/torah-pace-r${{ github.run_number }}-${{ matrix.shard }}
+          fi

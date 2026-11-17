@@ -36,7 +36,8 @@ def close(want, heard):
         return True
     if not (set(want) & S.VOWELS):                    # a bare consonant: any vowel after it is fine
         return h.startswith(want) and len(h) <= len(want) + 1
-    return difflib.SequenceMatcher(None, want, h).ratio() >= 0.75
+    # close in sound, and no more than one extra sound: "vaveis" for "veis" is a different word, not a near miss
+    return difflib.SequenceMatcher(None, want, h).ratio() >= 0.75 and len(h) <= len(want) + 1
 
 
 def mms_hearer():

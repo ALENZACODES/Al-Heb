@@ -60,6 +60,13 @@ def hearer(model_dir):
         gpu = False
     m = WhisperModel(model_dir, device='cuda' if gpu else 'cpu', compute_type='int8_float16' if gpu else 'int8',
                      cpu_threads=os.cpu_count() or 2)
+    if gpu:
+        try:                                            # a GPU without the CUDA libraries ctranslate2 needs: use the CPU
+            import numpy as _np
+            list(m.transcribe(_np.zeros(L.SR, _np.float32), language='he', without_timestamps=True)[0])
+        except Exception as e:  # noqa: BLE001
+            print('GPU not usable, using the CPU:', str(e)[:120], flush=True)
+            m = WhisperModel(model_dir, device='cpu', compute_type='int8', cpu_threads=os.cpu_count() or 2)
     gap = np.zeros(int(GAP * L.SR), np.float32)
 
     def tr(a, n=1):

@@ -7,10 +7,9 @@
  "inputText": "צַ",
  "ingestedAt": null,
  "licence": "customer-owned",
- "note": "A copy of the Israeli clip of the same voice: in this app the Sephardi reading is letter for letter the Israeli one (owner decision, 12 Nov 2026). Synthetic voice, not a Sephardi reader; no human has listened to it.",
+ "note": "Copy of the Israeli clip (owner decision A: the Sephardi reading \"tz\" is the Israeli reading). A re-recording of 17 Nov was put back: this row was held by the accent review, so only the copy may ship.",
  "inputTextKind": "hebrew",
- "copyOf": "audio/m/israeli/letter/tsadi-sound.mp3",
  "madeFrom": "israeli-clip",
  "sephardiReading": "tz",
- "copiedAt": "2026-11-12T15:35:53.867Z"
+ "copyOf": "audio/m/israeli/letter/tsadi-sound.mp3"
 }

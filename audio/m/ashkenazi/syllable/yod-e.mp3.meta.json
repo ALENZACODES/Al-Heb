@@ -2,18 +2,18 @@
  "status": "synthetic-unreviewed",
  "source": "tts-respelled-israeli-voice",
  "engine": "google",
- "voiceId": "he-IL-Wavenet-B",
+ "voiceId": "he-IL-Wavenet-D",
  "tradition": "ashkenazi",
  "inputText": "יֶ",
  "ingestedAt": "2026-11-12T15:40:59.129Z",
  "licence": "customer-owned",
- "note": "Copied 17 Nov 2026 from audio/m/israeli/syllable/yod-e.mp3: the app's ashkenazi reading \"ye\" is the Israeli reading letter for letter, and the earlier clip (the Israeli voice reading English letters) was heard wrong by the sound check.",
+ "note": "Re-recorded 17 Nov 2026: the ashkenazi reading \"ye\" written in pointed Hebrew (יֶ) and read by the Israeli voice; the sound model heard it as j'e / j'e / j'e. Synthetic, not a human recording.",
  "renderedAt": "2026-11-12T15:40:59.129Z",
  "redistributionCleared": false,
  "spokenText": "יֶ",
  "normalized": true,
  "provider": "google",
- "madeFrom": "israeli-clip-same-reading",
+ "madeFrom": "hebrew-script",
  "voiceName": "he-IL-Wavenet-B",
  "languageCode": "he-IL",
  "hebrew": "יֶ",
@@ -26,5 +26,6 @@
   "after": 0.5760090702947845,
   "israeliSec": 0.7360090702947846,
   "israeliRef": "audio/m/israeli/syllable/yod-e.mp3"
- }
+ },
+ "inputTextKind": "hebrew"
 }

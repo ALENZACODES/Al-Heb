@@ -97,11 +97,15 @@ def main():
     ap.add_argument('--list', required=True)
     ap.add_argument('--model', required=True)
     ap.add_argument('--execute', action='store_true')
+    ap.add_argument('--shard', type=int, default=0); ap.add_argument('--shards', type=int, default=1)
     ap.add_argument('--log', default=os.path.join(os.path.dirname(__file__), 'tradition-fix-log.jsonl'))
     a = ap.parse_args()
     exp = json.load(open(T.EXPECT, encoding='utf-8'))
     paths = [l.strip() for l in open(os.path.join(ROOT, a.list), encoding='utf-8') if l.strip().startswith('audio/')]
     paths = [p for p in paths if p in exp]
+    import zlib                                   # an Israeli clip and its Sephardi/Ashkenazi copies stay in one shard
+    grp = lambda p: zlib.crc32(re.sub(r'/(sephardi|ashkenazi)/', '/israeli/', p).encode()) % a.shards
+    paths = [p for p in paths if grp(p) == a.shard]
     todo = set(paths)
     paths.sort(key=lambda p: exp[p]['tradition'] != 'israeli')      # Israeli first: the other traditions may copy the fixed clip
     print(len(paths), 'clips to fix', flush=True)

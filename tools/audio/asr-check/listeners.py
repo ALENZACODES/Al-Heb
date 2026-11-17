@@ -36,6 +36,33 @@ def fold(s):
     return S.fold(s)
 
 
+ONSETS = 'pthkq'
+R_LIKE = 'rɹʁɣʀðvbwʋβʉ'
+
+
+def phone_close(want, heard):
+    """scan_traditions.close for a phoneme model's hearing, allowing only what these models cannot write or tell apart:
+    tone digits; ɑ written for o as well as a; ts heard as plain s; a catch before a first vowel written as p, t, h or k;
+    y before a vowel written as i; and the Hebrew r (ʁ), which these mostly-English models hear as ð, b, v, ɹ...: for a card
+    with r they check everything else and leave the r itself to the Hebrew-trained Whisper model."""
+    raw = re.sub(r'[0-9]', '', heard or '')
+    raws = {raw}
+    wants = {want, want.replace('c', 's')}
+    if 'r' in want and not set(want) & set('vbw'):
+        raws.add(''.join(c for c in raw if c not in R_LIKE))
+        wants |= {w.replace('r', '') for w in wants}
+    out = set()
+    for r in raws:
+        for x in (r.replace('ɑ', 'a'), r.replace('ɑ', 'o')):
+            f = fold(x)
+            out.add(f)
+            if len(f) > 1 and f[0] in ONSETS and f[1] in 'aeiou':
+                out.add(f[1:])
+            if f[:1] == 'i' and f[1:2] in 'aeou':
+                out.add('y' + f[1:])
+    return any(T.close(w, f) for w in wants if w for f in out if f) or ('' in wants and any(not f for f in out))
+
+
 def load(path):
     raw = subprocess.run(['ffmpeg', '-nostdin', '-v', 'error', '-i', path, '-ac', '1', '-ar', str(SR), '-f', 's16le', '-'],
                          capture_output=True, check=True).stdout
@@ -75,7 +102,7 @@ class Listeners:
         xl = self.hear_w2v(a, self.xproc, self.xlsr)
         call = {
             'whisper': sum(T.close(want, h) for h in wh) * 2 > len(wh),
-            'w2v': sum(T.close(want, fold(h)) for h in w2 if h) >= 2,
-            'xlsr': sum(T.close(want, fold(h)) for h in xl if h) >= 2,
+            'w2v': sum(phone_close(want, h) for h in w2 if h) >= 2,
+            'xlsr': sum(phone_close(want, h) for h in xl if h) >= 2,
         }
         return {'heard': {'whisper': wh, 'w2v': w2, 'xlsr': xl}, 'calls': call, 'right': sum(call.values()) >= 2}

@@ -17,6 +17,10 @@ concurrency:
 jobs:
   record:
     runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3, 4, 5]
     timeout-minutes: 90
     env:
       LANG: C.UTF-8
@@ -49,14 +53,14 @@ jobs:
           ct2-transformers-converter --model renikud/whisper-he-ipa --revision e709a907f8e0e6ebcb83340b8563818dd1bc3bee \
             --output_dir /tmp/phoneme-ct2 --quantization int8 --copy_files tokenizer.json preprocessor_config.json
       - name: Fix the flagged clips (exact-sound takes first, three listeners)
-        run: python tools/audio/asr-check/tradition_fix.py --list docs/audio/traditions-wrong.txt --model /tmp/phoneme-ct2 --execute --log /tmp/tradition-fix-log.jsonl
+        run: python tools/audio/asr-check/tradition_fix.py --list docs/audio/traditions-wrong.txt --model /tmp/phoneme-ct2 --execute --log /tmp/tradition-fix-log.jsonl --shard ${{ matrix.shard }} --shards 6
       - name: Push the fixed clips and the log
         if: always()
         run: |
           [ -f /tmp/tradition-fix-log.jsonl ] || exit 0
-          b=john/tradition-fix-r${{ github.run_number }}
+          b=john/tradition-fix-r${{ github.run_number }}-${{ matrix.shard }}
           auth=$(git config --get http.https://github.com/.extraheader)
-          rm -rf /tmp/out && mkdir -p /tmp/out/docs/audio && cp /tmp/tradition-fix-log.jsonl /tmp/out/docs/audio/tradition-fix-r${{ github.run_number }}.jsonl
+          rm -rf /tmp/out && mkdir -p /tmp/out/docs/audio && cp /tmp/tradition-fix-log.jsonl /tmp/out/docs/audio/tradition-fix-r${{ github.run_number }}-${{ matrix.shard }}.jsonl
           git status --porcelain | awk '{print $2}' | grep -E '\.mp3(\.meta\.json)?$' | while read f; do mkdir -p "/tmp/out/$(dirname "$f")"; cp "$f" "/tmp/out/$f"; done
           cd /tmp/out
           git init -q && git checkout -q -b "$b" && git config user.name "John Khan" && git config user.email "309250657+ALENZACODES@users.noreply.github.com"

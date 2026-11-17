@@ -7,9 +7,10 @@
  "inputText": "יֶ",
  "ingestedAt": null,
  "licence": "customer-owned",
- "note": "Copy of the Israeli clip (owner decision A: the Sephardi reading \"ye\" is the Israeli reading). The 17 Nov re-recording was put back: this row was held by the accent review, so only the copy may ship.",
+ "note": "Copied 17 Nov 2026 from audio/m/israeli/syllable/yod-e.mp3: the app's sephardi reading \"ye\" is the Israeli reading letter for letter, and the earlier clip (the Israeli voice reading English letters) was heard wrong by the sound check.",
  "inputTextKind": "hebrew",
+ "copyOf": "audio/m/israeli/syllable/yod-e.mp3",
  "madeFrom": "israeli-clip",
  "sephardiReading": "ye",
- "copyOf": "audio/m/israeli/syllable/yod-e.mp3"
+ "copiedAt": "2026-11-12T15:35:53.867Z"
 }

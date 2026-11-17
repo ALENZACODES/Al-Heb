@@ -1,13 +1,3 @@
-# run 4, 17 Nov 2026: still wrong after run 3 (re-heard); soft letters now spelled the way the voice reads them
+# run 5, 17 Nov 2026: Ashkenazi Vet, other spellings of "veis"
 audio/f/ashkenazi/letter/vet.mp3
-audio/f/ashkenazi/syllable/tav-u.mp3
-audio/f/israeli/syllable/dot-bet-vet-1.mp3
-audio/f/israeli/syllable/qof-e.mp3
 audio/m/ashkenazi/letter/vet.mp3
-audio/m/ashkenazi/syllable/yod-e.mp3
-audio/m/ashkenazi/vowel/shuruk.mp3
-audio/m/israeli/syllable/alef-u.mp3
-audio/m/israeli/syllable/dot-bet-vet-1.mp3
-audio/m/israeli/vowel/shuruk.mp3
-audio/m/sephardi/syllable/yod-e.mp3
-audio/m/sephardi/vowel/shuruk.mp3

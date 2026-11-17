@@ -111,8 +111,11 @@ def main():
             plans = [(VOICE[g], sc, 1.0, None), (VOICE[g], sc + '.', 1.0, None), (HD[g], sc, 1.0, None), (HD[g], sc + '.', 1.0, None),
                      (VOICE[g], sc, 0.85, None), (OTHER[g], sc, 1.0, None), (OTHER[g], sc + '.', 1.0, None)]
             alt = spoken(sc, e['say'])
-            if alt != sc:
-                plans = [(VOICE[g], alt, 1.0, None), (VOICE[g], alt + '.', 1.0, None), (HD[g], alt, 1.0, None), (OTHER[g], alt, 1.0, None)] + plans
+            alts = [alt] if alt != sc else []
+            if alt.startswith('וֵיס') or alt.startswith('וֵית'):              # read "wais" by the voice: other spellings of "veis"
+                alts += ['וֵייס', 'ווֵיס', 'וֶייס', 'ווֵייס']
+            for al in reversed(alts):
+                plans = [(VOICE[g], al, 1.0, None), (VOICE[g], al + '.', 1.0, None), (HD[g], al, 1.0, None), (OTHER[g], al, 1.0, None)] + plans
             if e.get('taken') and e['tradition'] == 'israeli' and e['taken'] not in (sc, sc + '.'):
                 plans.insert(2, (VOICE[g], e['taken'], 1.0, None))
             plans += [(v, sc, 1.0, c) for v in (VOICE[g], HD[g]) for c in CARRIERS]

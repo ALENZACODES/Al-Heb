@@ -71,6 +71,45 @@ is the text scan the docs must pass.
 
 Before publishing, `node tools/build-precache.mjs` regenerates `precache-manifest.js` (see [docs/DEPLOY.md](docs/DEPLOY.md)).
 
+## Project structure
+
+```text
+Al-Heb/
+├── .github/              # CI workflows (19 files)
+├── assets/               # Fonts, images and screenshots (5692 files)
+├── audio/                # Recorded word, letter and prayer clips (83115 files)
+├── audio-takes/          # Raw recording takes (372 files)
+├── audit/                # Audit notes (1 file)
+├── book/                 # Companion book sources and build scripts (34 files)
+├── data/                 # Lessons, vocabulary, corpus, calendar and legal data (1641 files)
+├── docs/                 # Documentation; start at docs/INDEX.md (4725 files)
+├── preview/              # Preview pages (14 files)
+├── src/                  # App code: shell, router and feature modules (775 files)
+├── synagogues/           # Synagogue directory page (1 file)
+├── tests/                # node --test suites (566 files)
+├── tools/                # Build, deploy, QA and content scripts (598 files)
+├── .gitattributes
+├── .gitignore
+├── .mailmap
+├── 404.html              # Not-found page
+├── 404.js
+├── _headers
+├── CONTRIBUTING.md       # How to contribute
+├── index.html            # App entry page
+├── LICENSE               # Licence
+├── manifest.webmanifest  # Web app manifest
+├── media-hosts.js
+├── offline.html          # Offline fallback page
+├── package.json          # npm scripts and dependencies
+├── precache-manifest.js  # Generated precache list
+├── README.md             # This file
+├── render.yaml           # Render deploy settings
+├── robots.txt
+├── SECURITY.md
+├── sitemap.xml
+└── sw.js                 # Service worker for offline use
+```
+
 ## Repo map
 
 Folder-by-folder guide to the docs: [docs/INDEX.md](docs/INDEX.md).

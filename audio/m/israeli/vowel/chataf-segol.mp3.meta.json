@@ -1,0 +1,13 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "google-cloud-tts",
+ "voiceId": "he-IL-Wavenet-D",
+ "tradition": "israeli",
+ "inputText": "אֱ",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "Re-recorded 17 Nov 2026: the israeli reading \"e\" written in pointed Hebrew (אֱ) and read by the Israeli voice; heard by three listeners as whisper: q'ej; w2v: a / eː / eː; xlsr: eː / eː / b eː. Synthetic, not a human recording.",
+ "inputTextKind": "hebrew",
+ "madeFrom": "hebrew-script"
+}

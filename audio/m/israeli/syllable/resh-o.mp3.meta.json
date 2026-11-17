@@ -1,0 +1,13 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "google-cloud-tts",
+ "voiceId": "he-IL-Wavenet-D",
+ "tradition": "israeli",
+ "inputText": "רֹ",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "Re-recorded 17 Nov 2026: the israeli reading \"ro\" written in pointed Hebrew (רֹ) and read by the Israeli voice; heard by three listeners as whisper: r'o; w2v: q o / q o / o; xlsr: q o / p o o / p o. Synthetic, not a human recording.",
+ "inputTextKind": "hebrew",
+ "madeFrom": "hebrew-script"
+}

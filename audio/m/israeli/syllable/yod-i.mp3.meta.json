@@ -1,0 +1,13 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "google-cloud-tts",
+ "voiceId": "he-IL-Chirp3-HD-Charon",
+ "tradition": "israeli",
+ "inputText": "הַמִּלָּה [יִ]",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "Re-recorded 17 Nov 2026: the israeli reading \"yi\" written in pointed Hebrew (הַמִּלָּה [יִ]) and read by the Israeli voice; heard by three listeners as whisper: j'i; w2v: j i / j i / j i; xlsr: j i / j i / j i. Synthetic, not a human recording.",
+ "inputTextKind": "hebrew",
+ "madeFrom": "hebrew-script"
+}

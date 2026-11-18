@@ -132,7 +132,14 @@ let warnedNewer = false;
 export function load(store, now = Date.now()) {
   let raw; try { raw = store.get(RETENTION_KEY); } catch { raw = undefined; }
   if (raw != null && !isObj(raw)) { try { if (store.get(RETENTION_KEY + '.corrupt') == null) store.set(RETENTION_KEY + '.corrupt', raw); } catch { /* keep going */ } }
+  // Carry over the daily goal a learner picked on the older Daily page (loops.v1, "points a day") the first time, so their
+  // choice is not silently replaced by the default. Only when no retention record exists yet; a saved record always wins.
+  if (raw == null) { const g = carriedGoal(store); if (g) return normalize({ ...defaults(now), goal: g }, now); }
   return normalize(raw, now);
+}
+/** The older loops.v1 daily goal, when it is one of today's choices; otherwise 0. */
+export function carriedGoal(store) {
+  try { const l = store.get('loops.v1'); return isObj(l) && GOAL_CHOICES.includes(l.goal) ? l.goal : 0; } catch { return 0; }
 }
 /** Read-modify-write. `fn(rec)` returns the new record (or undefined to leave it). Never writes over a newer app's record. */
 export function save(store, fn, now = Date.now()) {

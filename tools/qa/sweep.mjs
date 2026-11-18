@@ -30,7 +30,7 @@ const axeSource = readFileSync(join(root, 'tools/a11y/node_modules/axe-core/axe.
 const { ROUTES } = await import(pathToFileURL(join(root, 'src/shell/router.js')).href);
 // One sample per path parameter name; a few routes need a real id to avoid testing only the "not found" card.
 const BY_ROUTE = { letter: 'bet', dialogue: 'd-cafe', fadeline: 'bless-priestly-1', festival: 'hanukkah', 'rules-page': 'kamatz', intermediatelesson: 'I-01', torahreadsec: 'aliyah', israelsec: 'say', loanword: 'lw1', spotit: 'bet', text: 'bless-priestly-1', classtrackweek: '1', classtrackmode: 'handout' };
-const SAMPLE = { id: 'x', letter: 'bet', group: 'lw1', textId: 'bless-priestly-1', sec: 'say', section: 'aliyah', week: '1', mode: 'handout', rule: 'kamatz', topic: 'article' };
+const SAMPLE = { id: 'x', letter: 'bet', group: 'lw1', textId: 'bless-priestly-1', sec: 'say', section: 'aliyah', week: '1', mode: 'handout', rule: 'kamatz', topic: 'article', game: 'hunt', tool: 'shva' };
 const sampleFor = (r) => r.pattern.replace(/:(\w+)/g, (_, k) => BY_ROUTE[r.name] ?? SAMPLE[k] ?? 'x');
 let ALL = ROUTES.map((r) => ({ path: sampleFor(r), name: r.name, module: r.module, owner: r.owner }));
 if (arg('--routes')) { const want = arg('--routes').split(','); ALL = want.map((p) => ALL.find((r) => r.path === p) || { path: p, name: 'custom', module: null, owner: '?' }); }

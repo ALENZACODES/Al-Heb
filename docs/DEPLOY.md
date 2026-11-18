@@ -2,7 +2,9 @@
 
 ## The live host: Render
 
-The review site is https://alef-review.onrender.com/. Render publishes `main` only: every push to `main` triggers a deploy, and the served build is the one whose `precache-manifest.js` carries `ALEF_VERSION` (compare it with the committed `precache-manifest.js` to tell whether the live site has caught up with `main`). No branch is ever switched on the host; a deploy that has not flipped yet is a Render lag, not a new build.
+The review site is https://alef-review.onrender.com/. Render publishes `main` only. Auto-deploy is off on the live service (build minutes ran out on 2026-11-09), so a deploy happens only when John presses Deploy latest commit; the served build is the one whose `precache-manifest.js` carries `ALEF_VERSION` (compare it with the committed `precache-manifest.js` to tell whether the live site has caught up with `main`). No branch is ever switched on the host; a deploy that has not flipped yet is a Render lag, not a new build.
+
+`node tools/deploy/check-live.mjs` does that comparison in one step: it compares `ALEF_VERSION`, the bytes of every precached file, and the response headers against `render.yaml`, and exits 1 on any difference. It only reads; it never deploys.
 
 **Render ignores the repo `_headers` file.** Measured 2026-11-07 (fix #15) and again 2026-11-07 19:26 EST: every live 200 returns Render's uniform `Cache-Control: public, max-age=0, s-maxage=300`, including files the `_headers` rules mark `no-cache` or one-week. The `_headers` rules are correct and shipped, but they have no observable effect on the live site; host-native header configuration is the follow-up, not another `_headers` edit. What the live site does send (measured 2026-11-07 19:26 EST with `curl -sI`): `x-content-type-options: nosniff` and `strict-transport-security: max-age=315360000; includeSubdomains; preload` on `/`; **no `content-security-policy` response header** (the `_headers` CSP is not applied); `/manifest.webmanifest` is served as `binary/octet-stream`, not `application/manifest+json`.
 

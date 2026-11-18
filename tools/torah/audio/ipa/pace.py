@@ -138,6 +138,8 @@ def main():
     ap.add_argument('--stretch-existing', action='store_true',
                     help='no new recordings: bring each existing clip to the target pace (rubberband, pitch kept, 0.7x to 1.4x) and even its silences')
     ap.add_argument('--skip', help='file of verse ids to leave alone (already re-recorded)')
+    ap.add_argument('--push-branch', help='commit and push the clips made so far to this branch every --push-every clips (CI)')
+    ap.add_argument('--push-every', type=int, default=50)
     ap.add_argument('--log', default=str(HERE / 'pace-log.jsonl'))
     a = ap.parse_args()
     verses = json.loads((HERE / 'ipa.json').read_text(encoding='utf8'))
@@ -180,6 +182,20 @@ def main():
         return
     if not key:
         sys.exit('Set GOOGLE_TTS_API_KEY first.')
+    refused = 0
+
+    def save(final=False):
+        # save as it goes, so a stop (time limit, refused key, failed upload) loses at most --push-every clips
+        if not a.push_branch:
+            return
+        for attempt in range(4):
+            r = subprocess.run(f'git add -A {ROOT}/audio {os.path.abspath(a.log)} && (git diff --cached --quiet || git commit -q -m "Torah verses at one steady pace with pauses (saved as they are made)") '
+                               f'&& git -c http.postBuffer=524288000 push -q --force origin HEAD:refs/heads/{a.push_branch}', shell=True, cwd=str(ROOT))
+            if r.returncode == 0:
+                return
+            time.sleep(15 * (attempt + 1))
+        print('could not save to', a.push_branch, flush=True)
+
     for n, (v, g) in enumerate(jobs, 1):
         voice = P.VOICES['ari' if g == 'm' else 'noa'][1]
         body, syl = request(v, voice), syllables(v)
@@ -195,6 +211,7 @@ def main():
                 break
         good = [t for t in takes if 'audio' in t and t['pace']]
         rec = {'id': v['id'], 'voice': g, 'syllables': syl, 'takes': [t.get('pace', t.get('error')) for t in takes]}
+        refused = refused + 1 if takes and all('403' in str(t.get('error', '')) for t in takes) else 0
         if good:
             best = min(good, key=lambda t: abs(t['pace'] / TARGET - 1))
             factor = min(1 + MAX_STRETCH, max(1 - MAX_STRETCH, TARGET / best['pace']))
@@ -206,6 +223,12 @@ def main():
         with open(a.log, 'a', encoding='utf-8') as f:
             f.write(json.dumps(rec) + '\n')
         print(f"[{n}/{len(jobs)}] {v['id']} {g} takes {rec['takes']} -> {rec.get('after')}", flush=True)
+        if n % a.push_every == 0:
+            save()
+        if refused >= 3:                 # the key is refused (billing off, quota): stop instead of retrying for hours
+            save(final=True)
+            sys.exit('Google refused 3 verses in a row (403). Stopped; the clips made so far are saved.')
+    save(final=True)
 
 
 if __name__ == '__main__':

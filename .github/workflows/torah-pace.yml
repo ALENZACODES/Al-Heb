@@ -30,14 +30,16 @@ jobs:
         shell: bash
         run: |
           set -eu
+          git config --global user.name "John Khan"
+          git config --global user.email "309250657+ALENZACODES@users.noreply.github.com"
           cd tools/torah/audio/ipa
           touch pace-skip.txt
           if [ -s pace-ids.txt ]; then       # a re-record round: only the verse ids listed (from the three checks)
-            python3 pace.py --ids pace-ids.txt --shard ${{ matrix.shard }} --shards 12 --execute --log pace-log-${{ matrix.shard }}.jsonl
+            python3 pace.py --ids pace-ids.txt --shard ${{ matrix.shard }} --shards 12 --execute --log pace-log-${{ matrix.shard }}.jsonl --push-branch john/torah-pace-r${{ github.run_number }}-${{ matrix.shard }}
             exit 0
           fi
           grep -v '^\s*#' pace-queue.txt | sed '/^\s*$/d' | while read -r book chapter; do
-            args="--shard ${{ matrix.shard }} --shards 12 --execute --skip pace-skip.txt --log pace-log-${{ matrix.shard }}.jsonl"
+            args="--shard ${{ matrix.shard }} --shards 12 --execute --skip pace-skip.txt --log pace-log-${{ matrix.shard }}.jsonl --push-branch john/torah-pace-r${{ github.run_number }}-${{ matrix.shard }}"
             if [ "$book" != "all" ]; then args="$args --book $book"; fi
             if [ -n "${chapter:-}" ]; then args="$args --chapter $chapter"; fi
             python3 pace.py $args

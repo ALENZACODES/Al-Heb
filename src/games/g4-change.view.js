@@ -41,7 +41,7 @@ function setup(A) {
   const T = begin(A), cfg = A.cfg, rnd = A.rnd;
   const sale = A.h('div', { class: 'g4-scene' }), tray = A.h('div', { class: 'g4-tray', 'aria-live': 'polite', 'aria-label': 'Change on the counter' });
   const till = A.h('div', { class: 'g4-tray', role: 'group', 'aria-label': 'Till' }), act = A.h('div', { class: 'row' }), sum = A.h('p', { class: 'arc-prompt' });
-  A.board.replaceChildren(host(A, 'ari', 'Count out the change, please.'), sale, sum, tray, till, act, draftNote(A, 'Item names from the app\'s lessons and phrasebook. Prices are made up for the game.'));
+  A.board.replaceChildren(host(A, 'ari', 'Count out the change, please.'), sale, sum, tray, till, act, draftNote(A, 'Prices are made up for the game.'));
   withBank(A, T, (B) => {
     pick(B, Object.keys(GOODS), 'm.change', 'm.shekel');
     let n = 0, s = null, given = [];

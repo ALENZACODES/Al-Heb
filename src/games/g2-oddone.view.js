@@ -2,7 +2,7 @@
 // add more words and borrow the outsider from a topic that is easy to confuse (a fork among the food, a sleeve among the body).
 import { mountArcade } from './arcade.js';
 import { oddSet } from './g2-core.js';
-import { start, host, grade, numberKeys, draftNote, word, say } from './g2-ui.js';
+import { start, host, grade, numberKeys, word, say } from './g2-ui.js';
 
 export const STORE_KEY = 'games.g2-oddone.v1';
 const ROUNDS = 10;
@@ -28,8 +28,7 @@ function setup(A) {
   const prompt = A.h('p', { class: 'arc-prompt' });
   const row = A.h('div', { class: 'g2-row', role: 'group', 'aria-label': 'Words' });
   const after = A.h('p', { class: 'muted', 'aria-live': 'polite' });
-  A.board.replaceChildren(host(A, 'noa', 'One of these is not like the others.'), prompt, row, after,
-    draftNote(A, 'Words and topics come from the app\'s word lists. A native reader has not checked them yet.'));
+  A.board.replaceChildren(host(A, 'noa', 'One of these is not like the others.'), prompt, row, after);
   numberKeys(A, () => row);
   start(A, (D, T) => {
     let n = 0;

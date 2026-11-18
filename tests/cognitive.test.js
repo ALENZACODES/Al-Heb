@@ -464,7 +464,7 @@ test("plain-language pass: same strings, shorter sentences, fewer long words; ev
   assert.ok(r.after.grade <= r.before.grade, `grade ${r.before.grade} -> ${r.after.grade}`);
   for (const x of r.rows) assert.ok(x.after.avgSentence <= 13, `${x.id}: ${x.after.avgSentence} words per sentence`);
   const { PLAIN, plain } = await import("../src/shell/plain-copy.js");
-  assert.equal(plain("closingSolid", { n: 3 }), "Good work. 3 to look at again. They are in your review.");
+  assert.equal(plain("closingSolid", { n: 3 }), "Nice work! 3 to look at again. They are in your review.");
   assert.match(plain("wipeHelp", { word: "DELETE" }), /Type DELETE to turn on the button\.$/);
   for (const [k, v] of Object.entries(PLAIN)) assert.ok(!/\{(?!n\}|word\})/.test(v), k);
   const m = R.measure("It is a cat. It sat on a mat and looked at the sun today.");

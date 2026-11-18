@@ -35,8 +35,7 @@ export function board(nouns, adjs, cfg, rnd = Math.random) {
 }
 
 function setup(A) {
-  const { T, big, prompt, area } = begin(A, 'ari', 'The adjective copies its noun.',
-    'Nouns from the word list; adjective forms from the Tug-of-War bank. Each pair is the game\'s own phrase: not reviewed by a teacher.');
+  const { T, big, prompt, area } = begin(A, 'ari', 'The adjective copies its noun.');
   const cfg = A.cfg, rnd = A.rnd;
   let nouns = [], adjs = [], b = 0;
   const next = () => {

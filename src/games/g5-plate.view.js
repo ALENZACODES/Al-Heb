@@ -1,7 +1,7 @@
 // Seder Plate: six foods, six places on the plate. Pick a food from the tray, then tap its place. The early levels label
 // each place with what its food stands for; the top level shows the full plate for a moment, then asks you to set it
 // from memory. The layout is one common arrangement (the Ari's); many families lay their plate another way.
-import { mountG5, host, track, grade, draftNote, card, button, lock } from './g5-ui.js';
+import { mountG5, host, track, grade, card, button, lock } from './g5-ui.js';
 import { loadData, g5Data, shuffle } from './g5-core.js';
 
 export const STORE_KEY = 'games.g5-plate.v1';
@@ -29,8 +29,7 @@ function setup(A) {
   const plate = A.h('div', { class: 'g5-plate', dir: 'ltr', role: 'group', 'aria-label': 'The seder plate' });
   const tray = A.h('div', { class: 'g5-grid', role: 'group', 'aria-label': 'Foods to place' });
   const after = A.h('p', { class: 'muted', 'aria-live': 'polite' });
-  A.board.replaceChildren(host(A, 'noa', 'Pick a food, then its place.'), prompt, plate, tray, after,
-    draftNote(A, 'The foods and three of their meanings are from the app\'s article Pesach and the Seder. The layout and the other meanings await a teacher\'s check.'));
+  A.board.replaceChildren(host(A, 'noa', 'Pick a food, then its place.'), prompt, plate, tray, after);
   loadData(A.ctx, g5Data('seder')).then((d) => {
     if (!T.live()) return;
     const items = d.plate;

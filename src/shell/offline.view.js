@@ -99,7 +99,7 @@ export function mount(root, ctx) {
         el("ul", {}, items),
         el("h3", {}, "Optional downloads"),
         el("ul", { id: "of-extras" }, optMissing.map(({ g, miss }) => el("li", { "data-extra": g.id }, `${g.label}: ${miss === 0 ? "saved" : `${miss} of ${g.urls.length} not saved, about ${g.approxMB} MB`}`))),
-        el("p", { class: "muted" }, "Ari's and Noa's voice clips are not part of this download (Audio Packs below save them on purpose). A clip is stored on this device after it plays once while you are online (up to the 600 most recent) and then plays without a connection, so play a lesson once online before using it offline. Speech in your device's own voice is not a recording; it works offline only if your device supports it.")));
+        el("p", { class: "muted" }, "Ari's and Noa's voice clips are not part of this download; use Audio Packs below to save them. A clip is stored on this device after it plays once while you are online (up to the 600 most recent), so play a lesson once online before using it offline. Your device's own Hebrew voice works offline only if your device supports it.")));
     }
 
     // download

@@ -1,7 +1,7 @@
 // Seder Steps: the seder's fifteen steps, Kadesh to Nirtzah, with some missing. Choose an empty step (the first one is
 // chosen for you) and tap the card that belongs there. Higher levels leave more gaps, drop the English and slip in cards
 // that are not seder steps at all.
-import { mountG5, host, track, grade, draftNote, numberKeys, card, button, lock } from './g5-ui.js';
+import { mountG5, host, track, grade, numberKeys, card, button, lock } from './g5-ui.js';
 import { loadData, g5Data, shuffle, gaps, shortEn } from './g5-core.js';
 
 export const STORE_KEY = 'games.g5-steps.v1';
@@ -27,8 +27,7 @@ function setup(A) {
   const list = A.h('ol', { class: 'g5-grid', 'aria-label': 'The fifteen steps' });
   const tray = A.h('div', { class: 'g5-grid', role: 'group', 'aria-label': 'Cards' });
   const after = A.h('p', { class: 'muted', 'aria-live': 'polite' });
-  A.board.replaceChildren(host(A, 'rimon', 'Kadesh, Urchatz... what comes next?'), prompt, list, tray, after,
-    draftNote(A, 'The fifteen traditional steps the app\'s Pesach article mentions. Step names other than matzah, maror and Hallel await a teacher\'s check.'));
+  A.board.replaceChildren(host(A, 'rimon', 'Kadesh, Urchatz... what comes next?'), prompt, list, tray, after);
   numberKeys(A, () => tray);
   loadData(A.ctx, g5Data('seder')).then((d) => {
     if (!T.live()) return;

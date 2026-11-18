@@ -2,7 +2,7 @@
 // early as you can: the less of it you needed, the more it scores. Look-alikes are among the choices.
 import { mountArcade } from './arcade.js';
 import { strokeLetters, revealPlan, shuffle } from './g1-core.js';
-import { host, track, draftNote, ensureStyle, loadLetterStrokes, letterSvg, series, numberKeys, choiceButtons, he } from './g1-ui.js';
+import { host, track, ensureStyle, loadLetterStrokes, letterSvg, series, numberKeys, choiceButtons, he } from './g1-ui.js';
 
 export const STORE_KEY = 'games.g1-reveal.v1';
 
@@ -37,8 +37,7 @@ function setup(A) {
   const prompt = A.h('p', { class: 'arc-prompt' });
   const pic = A.h('div', { 'aria-live': 'polite' });
   const area = A.h('div', {});
-  A.board.replaceChildren(host(A, 'noa-side', 'Do not wait for all of it. Trust your eyes.'), prompt, pic, area,
-    draftNote(A, 'The strokes come from the app\'s letter data; a teacher has not checked the script forms yet.'));
+  A.board.replaceChildren(host(A, 'noa-side', 'Do not wait for all of it. Trust your eyes.'), prompt, pic, area);
   numberKeys(A, () => area.querySelector('.arc-choices'));
   let more = null;
   A.keys((k) => { if (k === 'enter' && more && !more.disabled) { more.click(); return true; } return false; });

@@ -3,7 +3,7 @@
 // From level 2 the questions alternate: Hebrew to English, then English to Hebrew.
 import { mountArcade } from './arcade.js';
 import { pickTopics, deck, options, chainValue } from './g2-core.js';
-import { start, host, grade, numberKeys, draftNote, word, say, he } from './g2-ui.js';
+import { start, host, grade, numberKeys, word, say, he } from './g2-ui.js';
 
 export const STORE_KEY = 'games.g2-chain.v1';
 const QUESTIONS = 20, LIVES = 3;
@@ -32,8 +32,7 @@ function setup(A) {
   const chainEl = A.h('p', { class: 'arc-prompt', 'aria-live': 'polite' });
   const bank = A.h('button', { type: 'button', class: 'btn' }, 'Bank');
   const after = A.h('p', { class: 'muted', 'aria-live': 'polite' });
-  A.board.replaceChildren(host(A, 'ari', 'Keep the chain going, but bank it in time.'), prompt, big, area, chainEl, A.h('div', { class: 'g2-row' }, bank), after,
-    draftNote(A, 'Words come from the app\'s word lists. A native reader has not checked them yet.'));
+  A.board.replaceChildren(host(A, 'ari', 'Keep the chain going, but bank it in time.'), prompt, big, area, chainEl, A.h('div', { class: 'g2-row' }, bank), after);
   numberKeys(A, () => area.querySelector('.arc-choices'));
   start(A, (D, T) => {
     A.setLives(LIVES);

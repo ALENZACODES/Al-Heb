@@ -61,7 +61,7 @@ function setup(A) {
   const verseEl = A.h('div', { class: 'tg-verse', lang: 'he', dir: 'rtl', style: 'font-size:1.7rem' });
   const after = A.h('p', { class: 'muted', 'aria-live': 'polite' });
   A.board.replaceChildren(host(A, 'ari', 'Find the mark. It tells the reader where to pause.'), legend, prompt, verseEl, after,
-    draftNote(A, 'Marks from a machine reading of the Leningrad Codex text; not checked by a cantor. Verses with the divine name are left out here. Melodies differ by community.'));
+    draftNote(A, 'Verses with the divine name are left out. Melodies differ by community.'));
   let names = {}, pool = [], n = 0;
   const nameOf = (m) => { const r = names[m.id]; return r ? (r.ashkenazi === r.sephardi ? r.ashkenazi : `${r.ashkenazi} (Sephardi: ${r.sephardi})`) : m.id; };
   const next = () => {

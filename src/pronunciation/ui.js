@@ -103,7 +103,7 @@ export function createView(root, ctx, o) {
     else if (typeof s.addEventListener === 'function') { s.addEventListener('change', cb); cleanups.push(() => s.removeEventListener?.('change', cb)); }
   }
 
-  const draftNotice = () => h('p', { class: 'draft-flag', role: 'note' }, tr('r4.draft', DRAFT_NOTICE));
+  const draftNotice = () => h('span', { class: 'r4-notes', hidden: '' });
 
   /** Radio group bound to the congregation setting. */
   const traditionSwitch = (name) => {

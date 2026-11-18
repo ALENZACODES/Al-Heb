@@ -2,7 +2,7 @@
 // the wrong letter, or the right letter in the wrong topic. Level 4 asks for the last letter instead (final forms and all).
 import { mountArcade, choiceRow } from './arcade.js';
 import { letterQuestion } from './g2-core.js';
-import { start, host, grade, numberKeys, draftNote, word, topicName, say, he } from './g2-ui.js';
+import { start, host, grade, numberKeys, word, topicName, say, he } from './g2-ui.js';
 
 export const STORE_KEY = 'games.g2-firstletter.v1';
 const ROUNDS = 10;
@@ -29,8 +29,7 @@ function setup(A) {
   const big = A.h('div', { class: 'g2-big' });
   const area = A.h('div');
   const after = A.h('p', { class: 'muted', 'aria-live': 'polite' });
-  A.board.replaceChildren(host(A, 'noa', 'It has to fit both clues.'), prompt, big, area, after,
-    draftNote(A, 'Words and topics come from the app\'s word lists. A native reader has not checked them yet.'));
+  A.board.replaceChildren(host(A, 'noa', 'It has to fit both clues.'), prompt, big, area, after);
   numberKeys(A, () => area.querySelector('.arc-choices'));
   start(A, (D, T) => {
     let n = 0;

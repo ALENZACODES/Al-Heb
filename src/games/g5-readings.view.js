@@ -32,7 +32,7 @@ function setup(A) {
   const opts = A.h('div', { class: 'g5-grid', role: 'group', 'aria-label': 'Choices' });
   const after = A.h('p', { class: 'muted', 'aria-live': 'polite' });
   A.board.replaceChildren(host(A, 'ari', 'Which day is this read on?'), desk, prompt, opts, after,
-    draftNote(A, 'Readings as the app\'s calendar pages give them (Reform practice where communities differ). Verses from the app\'s Torah text.'));
+    draftNote(A, 'Where communities differ, the readings follow Reform practice.'));
   numberKeys(A, () => opts);
   loadData(ctx, g5Data('readings')).then(async (d) => {
     if (!T.live()) return;

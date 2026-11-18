@@ -2,7 +2,7 @@
 // the signs lose their vowel points, the way Israeli streets print them.
 import { mountArcade } from './arcade.js';
 import { pick, sample, shuffle, stripPoints } from './g4-core.js';
-import { begin, withBank, host, heText, say, grade, numberKeys, draftNote } from './g4-ui.js';
+import { begin, withBank, host, heText, say, grade, numberKeys } from './g4-ui.js';
 
 export const STORE_KEY = 'games.g4-signs.v1';
 const ROUNDS = 10;
@@ -59,7 +59,7 @@ const spec = {
 function setup(A) {
   const T = begin(A), cfg = A.cfg, rnd = A.rnd;
   const prompt = A.h('div', { class: 'g4-scene' }), wall = A.h('div', { class: 'g4-wall', role: 'group', 'aria-label': 'Signs on the street' });
-  A.board.replaceChildren(host(A, 'ari', 'What are you looking for?'), prompt, wall, draftNote(A, 'Sign words from the app\'s lessons and word list. Not yet checked by a native speaker.'));
+  A.board.replaceChildren(host(A, 'ari', 'What are you looking for?'), prompt, wall);
   numberKeys(A, () => wall);
   withBank(A, T, (B) => {
     pick(B, WALL);

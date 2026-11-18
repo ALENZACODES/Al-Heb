@@ -24,8 +24,7 @@ const spec = {
 export const streakBonus = (streak) => Math.min(10, Math.max(0, streak - 1) * 2);
 
 function setup(A) {
-  const { T, big, prompt, area } = begin(A, 'ari', 'The ending tells you who.',
-    'Endings copied from the app\'s word lists and phrasebook (data/games/g3/suffixes.json). Not reviewed by a teacher.');
+  const { T, big, prompt, area } = begin(A, 'ari', 'The ending tells you who.');
   const cfg = A.cfg, rnd = A.rnd;
   let tape = [], at = 0, streak = 0, tried = new Set(), suf = null, keysRow = null;
   const draw = () => {

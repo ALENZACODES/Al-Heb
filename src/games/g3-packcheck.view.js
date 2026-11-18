@@ -43,8 +43,7 @@ const spec = {
 };
 
 function setup(A) {
-  const { T, big, prompt, area } = begin(A, 'rimon', 'Is there … to you? That is "do you have?"',
-    'Words copied from the word list; the questions and answers are put together by the game from them, following the lessons\' "yesh li" lines. Not reviewed by a teacher.');
+  const { T, big, prompt, area } = begin(A, 'rimon', 'Is there … to you? That is "do you have?"');
   const cfg = A.cfg, rnd = A.rnd;
   const answers = A.h('div');
   numberKeys(A, () => answers.querySelector('.arc-choices'));

@@ -3,7 +3,7 @@
 // pick its Hebrew word.
 import { mountArcade, choiceRow } from './arcade.js';
 import { shuffle, options } from './g2-core.js';
-import { start, host, grade, numberKeys, draftNote, word, say, he } from './g2-ui.js';
+import { start, host, grade, numberKeys, word, say, he } from './g2-ui.js';
 
 export const STORE_KEY = 'games.g2-bodymap.v1';
 const ROUNDS = 10;
@@ -31,8 +31,7 @@ function setup(A) {
   const maps = A.h('div', { class: 'g2-row' });
   const area = A.h('div');
   const after = A.h('p', { class: 'muted', 'aria-live': 'polite' });
-  A.board.replaceChildren(host(A, 'noa', 'Touch the part of the body.'), prompt, big, area, maps, after,
-    draftNote(A, 'Words come from the app\'s word lists; a native reader has not checked them yet.'));
+  A.board.replaceChildren(host(A, 'noa', 'Touch the part of the body.'), prompt, big, area, maps, after);
   numberKeys(A, () => area.querySelector('.arc-choices'));
   start(A, (D, T) => {
     const parts = cfg.maps.flatMap((m) => (D.sets.body?.[m] || []).map((p) => ({ ...p, map: m, w: D.word(p.he) })));

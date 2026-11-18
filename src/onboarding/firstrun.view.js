@@ -219,7 +219,7 @@ export function mount(root, ctx) {
     body.replaceChildren(h('p', { class: 'ob-lede' }, 'Let’s find a comfortable place to begin. Tell us what you can read now, then choose what you want to learn.'),
       h('p', { class: 'ob-home-link' }, h('a', { href: '#/', class: 'btn secondary', onclick: (e) => { e.preventDefault(); goHome(); } }, 'Look around first: go to Home'), ' Every lesson, test and game is open from there.'),
       form,
-      h('p', { class: 'muted ob-fine' }, 'Your answer is saved only on this device. ', h('a', { href: '#/privacy' }, 'Privacy'), ' · ', h('a', { href: '#/terms' }, 'Terms'), '. ', h('a', { href: '#/how' }, 'How this works'), '. ', h('a', { href: '#/accessibility', id: 'ob-a11y-link' }, 'Accessibility options'), '.'));
+      h('p', { class: 'muted ob-fine' }, 'Your answer is saved only on this device. ', h('a', { href: '#/privacy' }, 'Privacy'), ' · ', h('a', { href: '#/terms' }, 'Terms'), '. ', h('a', { href: '#/how' }, 'How Aleph works'), '. ', h('a', { href: '#/accessibility', id: 'ob-a11y-link' }, 'Accessibility options'), '.'));
     showPage(page);
   }
 

@@ -2,7 +2,7 @@
 // Match a letter with its name (later its Hebrew name, look-alikes and finals, and its number) to clear the stack.
 import { mountArcade } from './arcade.js';
 import { LETTER_VALUES, shuffle } from './tg-core.js';
-import { host, track, grade, draftNote, ensureStyle } from './tg-ui.js';
+import { host, track, grade, ensureStyle } from './tg-ui.js';
 
 export const STORE_KEY = 'games.tg-tilepairs.v1';
 
@@ -64,8 +64,7 @@ function setup(A) {
   const cols = Math.max(...pos.map((p) => p.c)) + 1, rows = Math.max(...pos.map((p) => p.r)) + 1;
   const stage = A.h('div', { class: 'tg-stack', role: 'group', 'aria-label': 'Tile stack', style: `position:relative;inline-size:${cols * W + 0.6}rem;block-size:${rows * H + 0.6}rem;margin:.5rem auto;max-inline-size:100%` });
   const prompt = A.h('p', { class: 'arc-prompt' });
-  A.board.replaceChildren(host(A, 'rimon', 'Two that belong together. Take them off the top.'), prompt, stage,
-    draftNote(A, 'Letter names follow the app\'s letter list. Values are the standard ones.'));
+  A.board.replaceChildren(host(A, 'rimon', 'Two that belong together. Take them off the top.'), prompt, stage);
   const chosen = pickLetters(A.letters, cfg.set, cfg.pairs, rnd);
   if (chosen.length < 2) { A.announce('The letters did not load. Press Start again.'); return; }
   const faceOf = (l) => (cfg.face === 'value' ? String(LETTER_VALUES[l.he] || '') : cfg.face === 'nameHe' ? l.nameHe : l.name);

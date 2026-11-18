@@ -2,7 +2,7 @@
 // is in the right place, somewhere else in the word, or not in it. Letters only, no vowel points, read right to left.
 import { mountArcade } from './arcade.js';
 import { loadData, bare, toBase, scoreGuess, withFinal, betterMark, shuffle, ALPHABET } from './tg-core.js';
-import { host, track, draftNote, ensureStyle, roundKeys } from './tg-ui.js';
+import { host, track, ensureStyle, roundKeys } from './tg-ui.js';
 
 export const STORE_KEY = 'games.tg-wordguess.v1';
 const WORDS = 3;
@@ -37,8 +37,7 @@ function setup(A) {
   const rowsEl = A.h('div', { class: 'tg-rows', role: 'list', 'aria-label': 'Your guesses' });
   const keysEl = A.h('div', { class: 'tg-keys', role: 'group', 'aria-label': 'Hebrew letters' });
   const actions = A.h('div', { class: 'row' });
-  A.board.replaceChildren(host(A, 'ari', 'A hidden word. Six tries.'), prompt, clue, rowsEl, keysEl, actions,
-    draftNote(A, 'Words come from the app\'s word list (meanings from its dictionary source).'));
+  A.board.replaceChildren(host(A, 'ari', 'A hidden word. Six tries.'), prompt, clue, rowsEl, keysEl, actions);
   let answers = [], dict = new Set(), wi = 0, guesses = [], typed = [], keyMarks = {}, answer = null;
   const target = () => [...bare(answer.he)].map(toBase);
   const tile = (ch, mark) => A.h('span', { class: `tg-tile ${mark || ''}`, role: 'img', 'aria-label': mark ? `${ch}, ${SAY[mark]}` : ch || 'empty' },

@@ -2,7 +2,7 @@
 // Fewer clues and more places to choose from as the levels climb; level 4 shows the clues one at a time.
 import { mountArcade, choiceRow } from './arcade.js';
 import { shuffle, options } from './g2-core.js';
-import { start, host, grade, numberKeys, draftNote, word, say } from './g2-ui.js';
+import { start, host, grade, numberKeys, word, say } from './g2-ui.js';
 
 export const STORE_KEY = 'games.g2-whereami.v1';
 const ROUNDS = 8;
@@ -30,8 +30,7 @@ function setup(A) {
   const more = A.h('button', { type: 'button', class: 'btn secondary' }, 'Another clue');
   const area = A.h('div');
   const after = A.h('p', { class: 'muted', 'aria-live': 'polite' });
-  A.board.replaceChildren(host(A, 'noa', 'Look around. Where are we?'), prompt, list, A.h('div', { class: 'g2-row' }, more), area, after,
-    draftNote(A, 'Words come from the app\'s word lists; which things go with which place is the game\'s own choice. A native reader has not checked the words yet.'));
+  A.board.replaceChildren(host(A, 'noa', 'Look around. Where are we?'), prompt, list, A.h('div', { class: 'g2-row' }, more), area, after);
   numberKeys(A, () => area.querySelector('.arc-choices'));
   start(A, (D, T) => {
     const places = D.sets.places || [];

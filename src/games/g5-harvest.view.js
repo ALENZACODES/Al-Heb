@@ -31,7 +31,7 @@ function setup(A) {
   const area = A.h('div', { class: 'g5-row', role: 'group', 'aria-label': 'Keep or toss' });
   const basket = A.h('p', { class: 'muted', 'aria-live': 'polite' });
   A.board.replaceChildren(host(A, 'ari', 'Only the seven go in the basket.'), prompt, item, area, basket,
-    draftNote(A, 'The seven species as the app\'s Tu BiShvat page lists them; the verse is Deuteronomy 8:8 from the app\'s Torah text.'));
+    draftNote(A, 'The verse is Deuteronomy 8:8.'));
   numberKeys(A, () => area);
   let press = null;
   roundKeys(A, (k) => { const key = String(k).toLowerCase(); if (press && (key === 'k' || key === 't')) { press(key === 'k'); return true; } return false; });

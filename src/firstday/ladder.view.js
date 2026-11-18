@@ -9,7 +9,7 @@ import { wordLabel } from '../letters/shapetext.js';
 import { congregationOf } from '../pronunciation/forTradition.js';
 import { loadLadder } from './loader.js';
 import { uiEnglish } from '../shell/names.js';
-import { DRAFT_NOTICE, unpointedScore, playHook, audioEntries } from './model.js';
+import { unpointedScore, playHook, audioEntries } from './model.js';
 
 export const LADDER_KEY = 'firstday.ladder';
 export const emptyLadderState = () => ({ n: 1, answers: {}, hinted: {} });
@@ -25,7 +25,7 @@ export function mount(root, ctx) {
   const h1 = el('h1', { id: 'ladder-title', tabindex: '-1' }, 'Pointed to unpointed ladder');
   const body = el('div', { class: 'fd-body' });
   const status = el('div', { role: 'status', 'aria-live': 'polite' });
-  wrap.append(h1, el('p', { class: 'fd-draft' }, DRAFT_NOTICE), body, status);
+  wrap.append(h1, body, status);
   root.append(wrap);
   let alive = true, ladder = null, st = emptyLadderState(), revealed = false;
   const say = (t) => { status.textContent = t; };

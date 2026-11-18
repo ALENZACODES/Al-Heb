@@ -24,8 +24,7 @@ const spec = {
 };
 
 function setup(A) {
-  const { T, big, prompt, area } = begin(A, 'rimon', 'Masculine nouns get the number with -a. Yes, really.',
-    'Number words from the phrasebook; nouns and their genders from the word list. The number-and-noun order line is the game\'s own: not reviewed by a teacher.');
+  const { T, big, prompt, area } = begin(A, 'rimon', 'Masculine nouns get the number with -a. Yes, really.');
   const cfg = A.cfg, rnd = A.rnd;
   numberKeys(A, () => area.querySelector('.arc-choices'));
   let nums = [], nouns = [], n = 0;

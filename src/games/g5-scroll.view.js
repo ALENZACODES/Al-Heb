@@ -41,7 +41,7 @@ function setup(A) {
   const pad = A.h('div', { class: 'g5-row', role: 'group', 'aria-label': 'Roll the scroll' });
   const after = A.h('p', { class: 'muted' });
   A.board.replaceChildren(host(A, 'rimon', 'Roll it back to the beginning!'), prompt, target, strip, here, pad, after,
-    draftNote(A, 'Places and verses from the app\'s Torah text; captions are short summaries.'));
+    draftNote(A, 'Captions are short summaries, not translations.'));
   loadData(ctx, g5Data('scroll')).then((d) => {
     if (!T.live()) return;
     const list = plan(d.targets, cfg.n, cfg.near, rnd);

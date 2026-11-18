@@ -1,5 +1,5 @@
 /**
- * First 10 minutes (#/firstday): DRAFT, unreviewed. The on-ramp: five baby steps, one screen each, about 2 minutes each
+ * First 10 minutes (#/firstday). The on-ramp: five baby steps, one screen each, about 2 minutes each
  * (data/firstday/onramp.json): one letter, a second letter, one vowel sign, one syllable, one real word. It is lesson r01 taken one
  * piece at a time; the last win saves r01's quick-check answers (saveQuickCheck), so r01 counts as complete and its review cards exist.
  * Each win also counts the day as active the way a finished lesson does (recordActivity).
@@ -12,7 +12,7 @@ import { el, heText, heLabeled, storeGet, storeSet, showSaveFailure, STREAK_KEY 
 import { recordActivity } from '../curriculum/progress.js';
 import { currentStreak } from '../curriculum/state.js';
 import { loadFirst10, loadLadder, loadOnramp } from './loader.js';
-import { DRAFT_NOTICE, PROGRESS_KEY, advance, markRead, wordById, buildCheck, gradeCheck, audioEntries, playHook, totalMinutes } from './model.js';
+import { PROGRESS_KEY, advance, markRead, wordById, buildCheck, gradeCheck, audioEntries, playHook, totalMinutes } from './model.js';
 import { migrateProgress, winStep, recordAnswer, stepQuestions, stepIndex, onrampDone, totalMinutes as onrampMinutes } from './onramp.model.js';
 import { loadMemoryChain, entryFor, buildMemoryCard } from '../letters/memorycard.js';
 import { vowelSound, respell, congregationOf, audioNote, saySound, playLine, audioSupport, LABELS } from '../pronunciation/forTradition.js';
@@ -23,7 +23,6 @@ import { rimonInline } from '../shell/rimon-inline.js';
 import { streakVisible } from '../shell/comfort.js';
 
 const PREVIEW_SOURCES = 'Hebrew copied from existing course data; nothing new.';
-const SHORT_NOTICE = 'Draft, unreviewed: no Hebrew teacher has checked it and no learner has tried it yet.';
 
 /** Extra audio ids for the syllable and the word (no recording: the device voice says the text). */
 export function onrampAudioEntries(onramp) {
@@ -51,7 +50,7 @@ export function mount(root, ctx) {
   const top = el('div', { class: 'fd-top' }, el('a', { class: 'fd-x', href: '#/', 'aria-label': 'Leave the lesson. Your progress is saved.' }, '✕'), meter);
   const foot = el('div', { class: 'fd-foot' });
   h1.className = 'visually-hidden';
-  wrap.append(top, h1, body, el('div', { class: 'fd-meta' }, styleLine, el('p', { class: 'fd-draft muted small', title: DRAFT_NOTICE }, SHORT_NOTICE)), status, foot);
+  wrap.append(top, h1, body, el('div', { class: 'fd-meta' }, styleLine), status, foot);
   root.append(wrap);
   const bodyEl = globalThis.document?.body; try { bodyEl?.classList?.add('fd-player'); } catch { /* minimal DOMs */ }
   let alive = true, data = null, onramp = null, content = null, lessonQs = [], lesson = null, nextLesson = null;
@@ -133,10 +132,10 @@ export function mount(root, ctx) {
     // memory hooks and explanations stay behind "Why?"
     const why = [];
     // the chain is the one story for a letter that has an entry; the old story prints only once the chain is known to lack it (upgradeCard adds it if the file arrives later without the letter)
-    if (M) why.push(el('p', {}, M.shape), !me && chain !== undefined ? el('p', { 'data-old-story': '1' }, M.story) : null, el('p', { class: 'muted small' }, 'A memory hook written for this course: a teaching aid, not history.'));
+    if (M) why.push(el('p', {}, M.shape), !me && chain !== undefined ? el('p', { 'data-old-story': '1' }, M.story) : null, el('p', { class: 'muted small' }, 'Memory hooks are little stories to help you remember, not history.'));
     if (V) why.push(el('p', {}, V.position ? `Where it sits: ${V.position}.` : ''), el('p', {}, V.notes || ''));
     if (s.kind === 'syllable') why.push(el('p', {}, 'Hebrew reads right to left. The vowel mark sits under its letter. Read the letter and its mark together as one sound.'));
-    if (s.kind === 'word') why.push(el('p', {}, 'Bet with no dot inside is the soft sound (v). The dot that makes it b is the next lesson.'), el('p', { class: 'muted small' }, `The vowel marks and the English meaning are draft course data. The English-letter spelling follows your ${LABELS[tradition]} setting, made by rules.`));
+    if (s.kind === 'word') why.push(el('p', {}, 'Bet with no dot inside is the soft sound (v). The dot that makes it b is the next lesson.'), el('p', { class: 'muted small' }, `The English letters follow your ${LABELS[tradition]} style.`));
     if (s.kind === 'letter' && ctx?.hasRoute?.('learn') !== false) why.push(el('p', { class: 'fd-spot' }, 'Optional: ', el('a', { class: 'btn secondary', href: `#/learn?spotit=${s.letter}` }, `Spot It: ${L?.name || s.letter}`)));
     if (why.length) nodes.push(el('details', { class: 'fd-why' }, el('summary', {}, 'Why?'), ...why));
     body.replaceChildren(...nodes);

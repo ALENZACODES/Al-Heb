@@ -3,7 +3,7 @@
 // are left out, because those dots are not a dagesh.
 import { mountArcade } from './arcade.js';
 import { dageshEligible, dageshTargets, shortEn, shuffle, letterClusters } from './g1-core.js';
-import { host, track, grade, draftNote, ensureStyle, series, markButton, loadWords } from './g1-ui.js';
+import { host, track, grade, ensureStyle, series, markButton, loadWords } from './g1-ui.js';
 
 export const STORE_KEY = 'games.g1-dagesh.v1';
 
@@ -33,8 +33,7 @@ function setup(A) {
   const wordEl = A.h('div', {});
   const meaning = A.h('p', { class: 'muted' });
   const actions = A.h('div', { class: 'row' });
-  A.board.replaceChildren(host(A, 'ari', 'Look inside the letters. Some hold a dot.'), prompt, wordEl, meaning, actions,
-    draftNote(A, 'Words from the app\'s word list.'));
+  A.board.replaceChildren(host(A, 'ari', 'Look inside the letters. Some hold a dot.'), prompt, wordEl, meaning, actions);
   const run = (words) => series(A, T, Math.min(cfg.count, words.length), (i, done) => {
     const w = words[i - 1], want = new Set(dageshTargets(w.he, cfg.soundOnly));
     let found = 0;

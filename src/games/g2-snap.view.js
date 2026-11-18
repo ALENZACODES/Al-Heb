@@ -2,7 +2,7 @@
 // The cards change on their own after a few seconds; a pair that goes by without a snap is a miss.
 import { mountArcade } from './arcade.js';
 import { pickTopics, shuffle } from './g2-core.js';
-import { start, host, grade, roundKeys, draftNote, word, say } from './g2-ui.js';
+import { start, host, grade, roundKeys, word, say } from './g2-ui.js';
 
 export const STORE_KEY = 'games.g2-snap.v1';
 const DEALS = 16;
@@ -41,8 +41,7 @@ function setup(A) {
   const snapBtn = A.h('button', { type: 'button', class: 'btn' }, 'Snap!');
   const passBtn = A.h('button', { type: 'button', class: 'btn secondary' }, 'Not a pair');
   const after = A.h('p', { class: 'muted', 'aria-live': 'polite' });
-  A.board.replaceChildren(host(A, 'ari', 'Same topic? Snap!'), prompt, table, A.h('div', { class: 'g2-row' }, snapBtn, passBtn), after,
-    draftNote(A, 'Words and topics come from the app\'s word lists. A native reader has not checked them yet.'));
+  A.board.replaceChildren(host(A, 'ari', 'Same topic? Snap!'), prompt, table, A.h('div', { class: 'g2-row' }, snapBtn, passBtn), after);
   start(A, (D, T) => {
     const ids = pickTopics(D, cfg.close ? 3 : 5, rnd, cfg.close);
     let n = 0, cur = null, left = 0, busy = false;

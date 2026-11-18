@@ -2,7 +2,7 @@
 // Four mistakes and the round is over. Higher levels put look-alike topics side by side.
 import { mountArcade } from './arcade.js';
 import { pickGroups, shuffle } from './g2-core.js';
-import { start, host, grade, draftNote, word, topicName, say } from './g2-ui.js';
+import { start, host, grade, word, topicName, say } from './g2-ui.js';
 
 export const STORE_KEY = 'games.g2-fourgroups.v1';
 
@@ -38,8 +38,7 @@ function setup(A) {
   const check = A.h('button', { type: 'button', class: 'btn' }, 'Check');
   const clear = A.h('button', { type: 'button', class: 'btn secondary' }, 'Clear');
   const after = A.h('p', { class: 'muted', 'aria-live': 'polite' });
-  A.board.replaceChildren(host(A, 'ari', 'Which words belong together?'), prompt, solved, grid, A.h('div', { class: 'g2-row' }, check, clear), after,
-    draftNote(A, 'Words and topics come from the app\'s word lists. A native reader has not checked them yet.'));
+  A.board.replaceChildren(host(A, 'ari', 'Which words belong together?'), prompt, solved, grid, A.h('div', { class: 'g2-row' }, check, clear), after);
   start(A, (D, T) => {
     A.setLives(cfg.lives);
     const groups = pickGroups(D, cfg.groups, cfg.size, rnd, cfg.close);

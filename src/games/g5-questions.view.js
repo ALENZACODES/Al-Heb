@@ -28,7 +28,7 @@ function setup(A) {
   const area = A.h('div');
   const after = A.h('p', { class: 'muted', 'aria-live': 'polite' });
   A.board.replaceChildren(host(A, 'rimon', 'Why is this night different?'), opening, prompt, area, after,
-    draftNote(A, 'English wording written for this game. The Hebrew line and the order await a teacher\'s check; Sephardi haggadot ask the dipping question first.'));
+    draftNote(A, 'Sephardi haggadot ask the dipping question first.'));
   numberKeys(A, () => area.querySelector('.g5-grid, .tg-tray'));
   loadData(A.ctx, g5Data('seder')).then((d) => {
     if (!T.live()) return;

@@ -1,7 +1,7 @@
 // Independence Fireworks: Yom HaAtzmaut words burst in the night sky and fade. Read the clue and tap the burst with the
 // right word before it fades. More bursts and shorter fades as the levels go up; at the top level the clue is only
 // how the word sounds.
-import { mountG5, host, track, grade, draftNote, numberKeys, card, button, lock } from './g5-ui.js';
+import { mountG5, host, track, grade, numberKeys, card, button, lock } from './g5-ui.js';
 import { loadData, g5Data, shuffle, shortEn } from './g5-core.js';
 
 export const STORE_KEY = 'games.g5-fireworks.v1';
@@ -34,8 +34,7 @@ function setup(A) {
   const sky = A.h('div', { class: 'g5-sky', role: 'group', 'aria-label': 'Fireworks' });
   const clue = A.h('p', { class: 'arc-prompt', 'aria-live': 'polite' });
   const after = A.h('p', { class: 'muted' });
-  A.board.replaceChildren(host(A, 'ari', 'Quick, before it fades!'), sky, clue, after,
-    draftNote(A, 'Words from the app\'s Yom HaAtzmaut page and its word list.'));
+  A.board.replaceChildren(host(A, 'ari', 'Quick, before it fades!'), sky, clue, after);
   numberKeys(A, () => sky);
   loadData(A.ctx, g5Data('fireworks')).then((d) => {
     if (!T.live()) return;

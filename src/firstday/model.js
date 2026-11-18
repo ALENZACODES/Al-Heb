@@ -1,5 +1,4 @@
-// First 10 minutes model (DRAFT, unreviewed): pure functions, no DOM, no clock. Data: data/firstday/*.json.
-export const DRAFT_NOTICE = 'Draft and unreviewed: no Hebrew teacher has checked this lesson and no learner has tried it yet.';
+// First 10 minutes model: pure functions, no DOM, no clock. Data: data/firstday/*.json.
 export const PROGRESS_KEY = 'firstday.progress';
 export const BUDGET_MIN = 10;
 

@@ -2,7 +2,7 @@
 // early, not too late. From level 3, tell the driver you are getting off, in the form for the rider (Ari or Noa).
 import { mountArcade } from './arcade.js';
 import { pick, sample, options, stripPoints } from './g4-core.js';
-import { begin, withBank, host, heItem, heText, say, grade, draftNote, roundKeys, buttons, ticker, numberKeys } from './g4-ui.js';
+import { begin, withBank, host, heItem, heText, say, grade, roundKeys, buttons, ticker, numberKeys } from './g4-ui.js';
 
 export const STORE_KEY = 'games.g4-bell.v1';
 const RIDES = 5;
@@ -36,7 +36,7 @@ function setup(A) {
   const T = begin(A), cfg = A.cfg, rnd = A.rnd;
   const task = A.h('div', { class: 'g4-scene' }), screen = A.h('div', { class: 'g4-dark', role: 'status', 'aria-live': 'polite' });
   const area = A.h('div'), line = A.h('ol', { class: 'g4-route', 'aria-label': 'Stops passed' });
-  A.board.replaceChildren(host(A, 'rimon', 'Watch the screen. Ring for your stop!'), task, screen, line, area, draftNote(A, 'Place words from the app\'s lessons and word list. Not yet checked by a native speaker.'));
+  A.board.replaceChildren(host(A, 'rimon', 'Watch the screen. Ring for your stop!'), task, screen, line, area);
   numberKeys(A, () => area.querySelector('.arc-choices'));
   withBank(A, T, (B) => {
     pick(B, STOPS, 'b.next', 'b.offM', 'b.offF');

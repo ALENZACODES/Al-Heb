@@ -2,7 +2,7 @@
 // More topics and shorter fuses as the levels climb; level 5 puts look-alike topics side by side (food and home, clothes and body).
 import { mountArcade } from './arcade.js';
 import { pickTopics, deck } from './g2-core.js';
-import { start, host, grade, numberKeys, draftNote, word, topicName, say } from './g2-ui.js';
+import { start, host, grade, numberKeys, word, topicName, say } from './g2-ui.js';
 
 export const STORE_KEY = 'games.g2-sortrush.v1';
 const CARDS = 14;
@@ -31,8 +31,7 @@ function setup(A) {
   const prompt = A.h('p', { class: 'arc-prompt' });
   const bins = A.h('div', { class: 'tg-bins', role: 'group', 'aria-label': 'Topics' });
   const after = A.h('p', { class: 'muted', 'aria-live': 'polite' });
-  A.board.replaceChildren(host(A, 'rimon', 'Quick! Which topic does this word belong to?'), big, fuse, prompt, bins, after,
-    draftNote(A, 'Words and topics come from the app\'s word lists. A native reader has not checked them yet.'));
+  A.board.replaceChildren(host(A, 'rimon', 'Quick! Which topic does this word belong to?'), big, fuse, prompt, bins, after);
   numberKeys(A, () => bins);
   start(A, (D, T) => {
     const ids = pickTopics(D, cfg.bins, rnd, cfg.close);

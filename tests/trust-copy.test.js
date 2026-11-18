@@ -44,9 +44,9 @@ test('device-voice line: never says the learner chose it (it is on by default); 
   const a = audioSupport('ashkenazi', { browserVoiceAnyway: true });
   assert.equal(a.supported, 'device-mismatch');
   assert.doesNotMatch(a.line, /you chose/i);
-  assert.match(a.line, /No Ashkenazi audio yet\. The device voice is on: it speaks Israeli Hebrew, so it will not sound Ashkenazi\./);
+  assert.match(a.line, /Your device voice is on\. It speaks Israeli Hebrew, so it will not sound Ashkenazi\./);
   const sep = audioSupport('sephardi', { browserVoiceAnyway: true });
-  assert.equal(sep.supported, 'device'); assert.doesNotMatch(sep.line, /you chose|will not sound/i); assert.match(sep.line, /Sephardi clip is in the audio bank/);
+  assert.equal(sep.supported, 'device'); assert.doesNotMatch(sep.line, /you chose|will not sound/i); assert.match(sep.line, /Sephardi reading is shown in English letters/);
   assert.match(read('src/shell/settings.js'), /browserVoiceAnyway: true/, 'the default is on, which is why the wording must not claim a choice');
 });
 
@@ -72,9 +72,8 @@ test('Man/Woman: a clip plays only for its own voice and tradition, and the word
   assert.equal(mAsh.source, 'file', 'Man + Ashkenazi plays a clip');
   assert.match(mAsh.path, mAsh.fileTradition === 'israeli' ? /audio\/m\/israeli\// : /audio\/m\/ashkenazi\//);
   const d = audioTruthDetail(summary);
-  assert.match(d, /never swapped for the other voice/);
-  assert.match(d, /Sephardi and Ashkenazi settings play the Israeli clip of that voice/);
-  assert.match(d, /Israeli style has not been verified/);
+  assert.match(d, /Each clip plays in the voice you chose, Ari or Noa/);
+  assert.match(d, /Sephardi and Ashkenazi settings play the Israeli clip/);
   assert.doesNotMatch(d, /native|recorded by|All .* use the Man \(Ari\) voice/i);
   for (const text of [plain('settingsIntro'), d, read('src/shell/how.view.js')]) {
     assert.doesNotMatch(text, /does not change the sound yet|saved for later|cannot change it yet/);

@@ -72,7 +72,7 @@ const spec = {
 function setup(A) {
   const T = begin(A), cfg = A.cfg, rnd = A.rnd;
   const task = A.h('div', { class: 'g4-scene' }), grid = A.h('div', { class: 'g4-week arc-choices', role: 'group', 'aria-label': 'Days of the week, Sunday first' });
-  A.board.replaceChildren(host(A, 'ari', 'Let\'s plan the week before Shabbat sneaks up.'), task, grid, draftNote(A, 'Day words from the app\'s lessons, word lists and calendar (Friday is shown as erev Shabbat). Opening days are the usual pattern; real ones vary.'));
+  A.board.replaceChildren(host(A, 'ari', 'Let\'s plan the week before Shabbat sneaks up.'), task, grid, draftNote(A, 'Friday is shown as erev Shabbat. Opening days follow the usual pattern; real ones vary.'));
   numberKeys(A, () => grid);
   withBank(A, T, (B) => {
     pick(B, DAY_KEYS, ERRANDS.map((e) => e.key));

@@ -35,8 +35,7 @@ const spec = {
 };
 
 function setup(A) {
-  const { T, big, prompt, area } = begin(A, 'noa', 'Read the end of the tag. That tells you whose it is.',
-    'Things are "the …" forms from the lessons and the Torah text; the endings are copied from the word lists. Putting the two together is the game\'s own step: not reviewed by a teacher.');
+  const { T, big, prompt, area } = begin(A, 'noa', 'Read the end of the tag. That tells you whose it is.');
   const cfg = A.cfg, rnd = A.rnd, owners = OWNERS.slice(0, cfg.owners);
   numberKeys(A, () => area.querySelector('.arc-choices'));
   let things = [], shel = null, n = 0;

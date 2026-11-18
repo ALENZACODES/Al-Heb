@@ -1,7 +1,7 @@
 // @ts-check
 // One place for "what does the learner's tradition change here?". Pure helpers, no DOM, no fetch.
 // Views adopt these instead of each re-implementing the congregation lookup, the fallback and the write.
-// Every Latin respelling comes from transliterate.js (rule-generated, not checked by a native speaker).
+// Every Latin respelling comes from transliterate.js.
 //
 // Honest limits, repeated in docs/accents/PLAN.md:
 //  - 'israeli' and 'sephardi' give identical Latin letters; only IPA and the English vowel wording differ.
@@ -79,12 +79,12 @@ export function letterSound(rec, tradition, { dagesh, fallbackEn = '' } = {}) {
   return { en: pick(src.english) || fallbackEn, ipa: pick(src.ipa), changes: !!rec.changesSound };
 }
 
-/** Honest line about what the device voice does with the chosen setting. */
+/** One line about what the learner hears with the chosen setting. */
 export function audioNote(tradition, { hasRecording = false } = {}) {
   const t = normalize(tradition);
   if (hasRecording) return '';
-  if (t === 'israeli') return 'If a word has no recording yet, your device reads it in Israeli Hebrew.';
-  if (t === 'sephardi' || t === 'ashkenazi') { const art = t === 'ashkenazi' ? 'an' : 'a'; return `When ${art} ${LABELS[t]} clip is in the audio bank, you hear that file. If there is none, you hear the Israeli clip, and the ${LABELS[t]} reading is shown in English letters.` + (t === 'ashkenazi' ? ' If a word has no clip in either bank, nothing plays: read the English letters.' : ''); }
+  if (t === 'israeli') return 'If a word has no audio yet, your device reads it in Israeli Hebrew.';
+  if (t === 'sephardi' || t === 'ashkenazi') return `You hear the Israeli clip, and the ${LABELS[t]} reading is shown in English letters.` + (t === 'ashkenazi' ? ' If a word has no audio yet, read the English letters.' : '');
 }
 
 /** Tradition for content that exists only in Modern Israeli Hebrew (phrasebook, Israel track): never the congregation. */
@@ -100,20 +100,20 @@ export function playLine(r, tradition, what = 'this') {
   const t = normalize(tradition);
   if (r && r.source === 'file') {
     const other = r.fileTradition && r.fileTradition !== t
-      ? (t === 'sephardi' && normalize(r.fileTradition) === 'israeli' ? ' It is the Israeli voice; the Sephardi reading is shown in English letters.' : ` It is the ${LABELS[normalize(r.fileTradition)]} reading, used here as a stand-in for ${LABELS[t]}.`)
+      ? (t === 'sephardi' && normalize(r.fileTradition) === 'israeli' ? ' The Sephardi reading is shown in English letters.' : ` The ${LABELS[t]} reading is shown in English letters.`)
       : '';
     return `Playing ${what}: ${fileLabel(r.entryStatus, r.fileTradition || t, r.entrySource)}.${other}`;
   }
-  if (r && r.source === 'tts-fallback') return `Playing ${what} with the browser voice: a computer voice, not a person. ${t === 'israeli' ? 'It speaks Israeli Hebrew' : t === 'sephardi' ? 'It speaks Israeli Hebrew (if no Sephardi or Israeli file is present, the Sephardi reading is still shown in English letters)' : `It speaks Israeli Hebrew, not ${LABELS[t]}`} and may ignore the vowel points.`;
-  if (r && r.source === 'none' && r.reason === 'tts-pronunciation-mismatch') return `Not played: ${audioNote(t)}`;
-  if (r && (r.source === 'none' || r.played === false || r.ok === false)) return `No audio for ${what} (${r.reason || r.error || 'unavailable'}).`;
+  if (r && r.source === 'tts-fallback') return `Playing ${what} with your device's Hebrew voice${t === 'israeli' ? '' : `, in Israeli Hebrew. The ${LABELS[t]} reading is shown in English letters`}.`;
+  if (r && r.source === 'none' && r.reason === 'tts-pronunciation-mismatch') return `No ${LABELS[t]} audio for ${what} yet. Read the English letters.`;
+  if (r && (r.source === 'none' || r.played === false || r.ok === false)) return `No audio for ${what} yet.`;
   return `Played ${what}.`;
 }
 
 /** Line for views that cannot know whether a recording exists: names the setting and what is shown instead. */
 export function settingLine(tradition) {
   const t = normalize(tradition);
-  return `Your setting: ${LABELS[t]}. The English-letter spelling below follows it${t === 'israeli' ? '' : ` (made by rules, not checked by a native ${LABELS[t]} speaker)`}.`;
+  return `Your style: ${LABELS[t]}. The English letters below follow it.`;
 }
 
 /**
@@ -136,10 +136,10 @@ export function saySound(rec, tradition, { fallbackEn = '' } = {}) {
 export function audioSupport(tradition, { browserVoiceAnyway = false, audioFree = false, recorded = 0 } = {}) {
   const t = normalize(tradition); const L = LABELS[t];
   const base = { tradition: t, recorded: recorded > 0 };
-  if (audioFree) return { ...base, deviceVoice: false, supported: 'off', line: 'Sound is off: you chose to learn without audio. Every step can be done by reading.' };
+  if (audioFree) return { ...base, deviceVoice: false, supported: 'off', line: 'Sound is off, as you chose. Every step works by reading.' };
   if (recorded > 0) return { ...base, deviceVoice: t === 'israeli', supported: 'recorded', line: `Some items have recorded audio. Anything else is read by your device voice, which is Israeli Hebrew${t === 'israeli' ? '' : `, not ${L}`}.` };
   if (t === 'israeli') return { ...base, deviceVoice: true, supported: 'device', line: 'Ari and Noa read every word aloud in Israeli Hebrew.' };
-  if (t === 'sephardi') return { ...base, deviceVoice: true, supported: 'device', line: 'When a Sephardi clip is in the audio bank, you hear that file. If there is none, you hear the Israeli clip, and the Sephardi reading is shown in English letters.' };
-  if (browserVoiceAnyway) return { ...base, deviceVoice: true, supported: 'device-mismatch', line: `No ${L} audio yet. The device voice is on: it speaks Israeli Hebrew, so it will not sound ${L}.` };
-  return { ...base, deviceVoice: false, supported: 'none', line: `When an ${L} clip is in the audio bank, you hear that file. If there is none, you hear the Israeli clip, and the ${L} reading is shown in English letters.` };
+  if (t === 'sephardi') return { ...base, deviceVoice: true, supported: 'device', line: 'Ari and Noa read in Israeli Hebrew, and the Sephardi reading is shown in English letters.' };
+  if (browserVoiceAnyway) return { ...base, deviceVoice: true, supported: 'device-mismatch', line: `Your device voice is on. It speaks Israeli Hebrew, so it will not sound ${L}.` };
+  return { ...base, deviceVoice: false, supported: 'none', line: `Ari and Noa read in Israeli Hebrew, and the ${L} reading is shown in English letters.` };
 }

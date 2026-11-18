@@ -46,7 +46,7 @@ function setup(A) {
   const T = begin(A), cfg = A.cfg, rnd = A.rnd;
   const task = A.h('div', { class: 'g4-scene' }), clock = A.h('p', { class: 'g4-dark', 'aria-live': 'off' });
   const table = A.h('div', { class: 'g4-dark arc-choices', role: 'group', 'aria-label': 'Departures' }), area = A.h('div');
-  A.board.replaceChildren(host(A, 'noa', 'Which one do we take?'), task, clock, table, area, draftNote(A, 'Place words from the app\'s lessons and word list. Lines and times are made up for the game.'));
+  A.board.replaceChildren(host(A, 'noa', 'Which one do we take?'), task, clock, table, area, draftNote(A, 'Bus lines and times are made up for the game.'));
   numberKeys(A, () => (area.querySelector('.arc-choices') || table));
   withBank(A, T, (B) => {
     pick(B, PLACES, cfg.train ? 's.train' : 's.bus', 's.platform');

@@ -26,8 +26,7 @@ const spec = {
 export const heDecoys = (verbs) => verbs.filter((v) => /^ה[ִֵ]|^הוֹ|^הוּ/.test(v.he));
 
 function setup(A) {
-  const { T, big, prompt, area } = begin(A, 'rimon', 'Only "the" words. Leave the others.',
-    '"The" forms are written as they are in the lessons, the phrasebook and the Torah text; the plain words are from the word list and the verb list. Not reviewed by a teacher.');
+  const { T, big, prompt, area } = begin(A, 'rimon', 'Only "the" words. Leave the others.');
   big.textContent = '';
   const cfg = A.cfg, rnd = A.rnd;
   let targets = [], decoys = [], hits = 0, t = 0;

@@ -51,7 +51,7 @@ function setup(A) {
   const area = A.h('div', {});
   const meaning = A.h('p', { class: 'muted' });
   A.board.replaceChildren(host(A, 'rimon', 'Start on the right, end on the left.'), prompt, wordEl, meaning, area,
-    draftNote(A, 'Words from the app\'s word list. Sounds are Israeli.'));
+    draftNote(A, 'Sounds are Israeli.'));
   let buttons = [];
   roundKeys(A, (k) => { const i = { 1: 0, 2: 1, 3: 2, right: 0, left: 2, up: 1, down: 1 }[k]; const b = buttons[i]; if (b && !b.disabled) { b.click(); return true; } return false; });
   const show = (qs) => series(A, T, qs.length, (i, done) => {

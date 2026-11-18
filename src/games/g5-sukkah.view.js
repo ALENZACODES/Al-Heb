@@ -33,7 +33,7 @@ function setup(A) {
   const built = A.h('ol', { class: 'tg-line', 'aria-label': 'Your sukkah so far' });
   const after = A.h('p', { class: 'muted', 'aria-live': 'polite' });
   A.board.replaceChildren(host(A, 'ari', 'Let\'s build a sukkah.'), prompt, rules, area, built, after,
-    draftNote(A, 'Traditional rules in plain words, awaiting a teacher\'s check. Communities differ on the details; your own rabbi\'s guidance comes first.'));
+    draftNote(A, 'These are the traditional rules in plain words. Communities differ on the details, so your own rabbi\'s guidance comes first.'));
   numberKeys(A, () => area);
   loadData(ctx, g5Data('sukkah')).then(async (d) => {
     if (!T.live()) return;

@@ -3,7 +3,7 @@
 // The opposite pairs are copied from the Antonym Tug-of-War bank (src/games/tugowar.bank.js).
 import { mountArcade } from './arcade.js';
 import { dominoHand, oppositeMap, shuffle } from './g2-core.js';
-import { start, host, grade, draftNote, word, he } from './g2-ui.js';
+import { start, host, grade, word, he } from './g2-ui.js';
 
 export const STORE_KEY = 'games.g2-dominoes.v1';
 const MOVES = 8;
@@ -31,8 +31,7 @@ function setup(A) {
   const open = A.h('div', { class: 'g2-big' });
   const hand = A.h('div', { class: 'g2-row', role: 'group', 'aria-label': 'Your tiles' });
   const after = A.h('p', { class: 'muted', 'aria-live': 'polite' });
-  A.board.replaceChildren(host(A, 'rimon', 'Find the opposite of the open end.'), prompt, line, open, hand, after,
-    draftNote(A, 'Opposite pairs from the Antonym Tug-of-War bank. A native reader has not checked them yet.'));
+  A.board.replaceChildren(host(A, 'rimon', 'Find the opposite of the open end.'), prompt, line, open, hand, after);
   start(A, (D, T) => {
     const pairs = D.sets.opposites || [];
     const opp = oppositeMap(pairs);

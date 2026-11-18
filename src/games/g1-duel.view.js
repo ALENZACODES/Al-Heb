@@ -3,7 +3,7 @@
 // Pairs come from each letter's look-alike list in the app's letter data.
 import { mountArcade } from './arcade.js';
 import { lookalikePairs, shuffle } from './g1-core.js';
-import { host, track, grade, draftNote, ensureStyle, he, markButton, roundKeys, series } from './g1-ui.js';
+import { host, track, grade, ensureStyle, he, markButton, roundKeys, series } from './g1-ui.js';
 
 export const STORE_KEY = 'games.g1-duel.v1';
 
@@ -34,8 +34,7 @@ function setup(A) {
   const T = track(A), cfg = A.cfg, rnd = A.rnd;
   const prompt = A.h('p', { class: 'arc-prompt', 'aria-live': 'polite' });
   const area = A.h('div', {});
-  A.board.replaceChildren(host(A, 'ari', 'One is called. Pick your side.'), prompt, area,
-    draftNote(A, 'Look-alike pairs and sounds come from the app\'s letter data.'));
+  A.board.replaceChildren(host(A, 'ari', 'One is called. Pick your side.'), prompt, area);
   let sides = [];
   roundKeys(A, (k) => { const b = k === 'left' ? sides[0] : k === 'right' ? sides[1] : null; if (b && !b.disabled) { b.click(); return true; } return false; });
   const callOf = (l, how) => (how === 'nameHe' ? he(A, l.nameHe) : how === 'sound' ? `the letter that says: ${l.sound}` : l.name);

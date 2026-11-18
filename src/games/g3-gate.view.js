@@ -34,8 +34,7 @@ export function gateQueue(verbs, targetAt, n, form, rnd = Math.random) {
 }
 
 function setup(A) {
-  const { T, big, prompt, area } = begin(A, 'ari', 'Only my pattern gets in.',
-    'Verbs and pattern labels from the app\'s verb list (from its dictionary source; not checked by a teacher).');
+  const { T, big, prompt, area } = begin(A, 'ari', 'Only my pattern gets in.');
   const cfg = A.cfg, rnd = A.rnd;
   let queue = [], at = 0, waited = 0;
   const sign = A.h('p', { class: 'g3-tag', role: 'status' });

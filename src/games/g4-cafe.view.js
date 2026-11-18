@@ -3,7 +3,7 @@
 // Every line is the app's own: the café and restaurant dialogues, the phrasebook and the register ladder.
 import { mountArcade } from './arcade.js';
 import { pick, options, sample } from './g4-core.js';
-import { begin, withBank, host, heItem, say, grade, numberKeys, buttons, draftNote } from './g4-ui.js';
+import { begin, withBank, host, heItem, say, grade, numberKeys, buttons } from './g4-ui.js';
 
 export const STORE_KEY = 'games.g4-cafe.v1';
 const DRINKS = ['c.hafuch', 'c.espresso', 'c.black', 'c.milk', 'c.mint', 'c.coldwater'];
@@ -53,8 +53,7 @@ const spec = {
 function setup(A) {
   const T = begin(A), cfg = A.cfg, rnd = A.rnd;
   const card = A.h('div', { class: 'g4-scene', 'aria-label': 'Your order card' }), talk = A.h('div'), area = A.h('div');
-  A.board.replaceChildren(host(A, 'rimon', 'Your card says what you want. Answer the server.'), card, talk, area,
-    draftNote(A, 'Lines from the app\'s café and restaurant dialogues, phrasebook and register ladder. Not yet checked by a native speaker.'));
+  A.board.replaceChildren(host(A, 'rimon', 'Your card says what you want. Answer the server.'), card, talk, area);
   numberKeys(A, () => area.querySelector('.arc-choices'));
   withBank(A, T, (B) => {
     pick(B, LINES, 'c.help', 'c.whatlike', 'c.herego', 'c.anything', 'c.price48', 'c.sure', 'c.rude', 'c.stiff', 'r.howmany', 'r.menu', 'r.drink', 'r.moment');

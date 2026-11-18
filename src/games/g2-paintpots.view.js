@@ -34,7 +34,7 @@ function setup(A) {
   const area = A.h('div');
   const after = A.h('p', { class: 'muted', 'aria-live': 'polite' });
   A.board.replaceChildren(host(A, 'rimon', 'Pots of paint, ready to go.'), prompt, big, area, after,
-    draftNote(A, 'Colour words come from the app\'s word lists; the mixes are the usual paint-box ones. A native reader has not checked the words yet.'));
+    draftNote(A, 'The colour mixes are the usual paint-box ones.'));
   numberKeys(A, () => area.querySelector('.arc-choices, .g2-row'));
   start(A, (D, T) => {
     const colours = D.items('colours');

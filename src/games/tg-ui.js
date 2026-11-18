@@ -63,7 +63,8 @@ export function grade(A, ok, { right = '', wrong = '', points = 10 } = {}) {
 }
 
 /** A short draft line under the board. */
-export const draftNote = (A, text) => A.h('p', { class: 'muted arc-foot tg-note' }, text);
+/** A short footnote under a game board; nothing when there is no text. */
+export const draftNote = (A, text) => (text ? A.h('p', { class: 'muted arc-foot tg-note' }, text) : '');
 
 /**
  * Tap-in-order board: items shuffled into a tray; tapping the next one in order moves it to the line.

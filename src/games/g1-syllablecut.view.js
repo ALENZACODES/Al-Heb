@@ -3,7 +3,7 @@
 // comes from the app's syllable rules, worked out ahead in data/games/g1/words.json.
 import { mountArcade } from './arcade.js';
 import { cutsOf, cutEligible, shortEn, shuffle, letterClusters } from './g1-core.js';
-import { host, track, grade, draftNote, ensureStyle, he, series, markButton, loadWords } from './g1-ui.js';
+import { host, track, grade, ensureStyle, he, series, markButton, loadWords } from './g1-ui.js';
 
 export const STORE_KEY = 'games.g1-syllablecut.v1';
 
@@ -34,8 +34,7 @@ function setup(A) {
   const wordEl = A.h('div', {});
   const meaning = A.h('p', { class: 'muted' });
   const actions = A.h('div', { class: 'row' });
-  A.board.replaceChildren(host(A, 'rimon', 'Clap it out: one beat per vowel.'), prompt, wordEl, meaning, actions,
-    draftNote(A, 'Splits come from the app\'s syllable rules; a teacher has not checked every word.'));
+  A.board.replaceChildren(host(A, 'rimon', 'Clap it out: one beat per vowel.'), prompt, wordEl, meaning, actions);
   const run = (words) => series(A, T, Math.min(cfg.count, words.length), (i, done) => {
     const w = words[i - 1], cl = letterClusters(w.he), want = new Set(cutsOf(w.syl)), made = new Set();
     const total = Math.min(cfg.count, words.length);

@@ -39,7 +39,7 @@ function setup(A) {
   const yours = A.h('p', { class: 'muted', 'aria-live': 'polite' });
   const verseLine = A.h('p', { class: 'muted' });
   A.board.replaceChildren(host(A, 'ari', 'Watch the calls, then sound them back.'), prompt, pattern, pad, yours, verseLine,
-    draftNote(A, 'Rhythms as many Ashkenazi communities sound them; other communities differ. Call names other than teruah are not in the app\'s word list yet.'));
+    draftNote(A, 'These are the rhythms many Ashkenazi communities use. Other communities differ.'));
   numberKeys(A, () => pad);
   loadData(ctx, g5Data('shofar')).then(async (d) => {
     if (!T.live()) return;

@@ -3,7 +3,7 @@
 // Real words from the app's word list; the rule set is g1-core.js helperTargets (words it does not cover are left out).
 import { mountArcade } from './arcade.js';
 import { helperTargets, shortEn, shuffle, letterClusters } from './g1-core.js';
-import { host, track, grade, draftNote, ensureStyle, series, markButton, loadWords } from './g1-ui.js';
+import { host, track, grade, ensureStyle, series, markButton, loadWords } from './g1-ui.js';
 
 export const STORE_KEY = 'games.g1-helpers.v1';
 
@@ -57,8 +57,7 @@ function setup(A) {
   const wordEl = A.h('div', {});
   const meaning = A.h('p', { class: 'muted' });
   const actions = A.h('div', { class: 'row' });
-  A.board.replaceChildren(host(A, 'ari-side', 'Some letters help quietly. Spot them.'), prompt, wordEl, meaning, actions,
-    draftNote(A, 'Helpers are found by a simple rule set over the app\'s pointed words; a teacher has not checked every word.'));
+  A.board.replaceChildren(host(A, 'ari-side', 'Some letters help quietly. Spot them.'), prompt, wordEl, meaning, actions);
   const run = (words) => series(A, T, words.length, (i, done) => {
     const w = words[i - 1], cl = letterClusters(w.he), want = new Set(helperTargets(w.he));
     let found = 0;

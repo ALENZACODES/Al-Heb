@@ -38,7 +38,7 @@ function setup(A) {
   const pic = A.h('div', {});
   const area = A.h('div', {});
   A.board.replaceChildren(host(A, 'noa', 'Write it the way your hand would: first stroke first.'), prompt, pic, area,
-    draftNote(A, 'Stroke order follows the app\'s letter data; a teacher has not checked it yet. Some writers use another order.'));
+    draftNote(A, 'Some writers use a different order.'));
   numberKeys(A, () => area.querySelector('.arc-choices'));
   const round = (items) => series(A, T, Math.min(cfg.count, items.length), (i, done) => {
     const { letter, hand } = items[i - 1];

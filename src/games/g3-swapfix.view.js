@@ -27,7 +27,7 @@ export const swapPoints = (used, least) => Math.max(4, 14 - 2 * Math.max(0, used
 
 function setup(A) {
   const { T, big, prompt, area } = begin(A, 'ari', 'Swap two words at a time.',
-    'Lines from the lessons, units, dialogues and phrasebook. The game asks for the line as the app writes it; another order can be good Hebrew too. Not reviewed by a teacher.');
+    'The game asks for the line as written here; another word order can be good Hebrew too.');
   const cfg = A.cfg, rnd = A.rnd;
   let lines = [], n = 0;
   const next = () => { if (n >= ROUNDS || !lines.length) { T.end({ won: true }); return; } n += 1; ask(lines[(n - 1) % lines.length]); };

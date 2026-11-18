@@ -32,7 +32,7 @@ function setup(A) {
   const basket = A.h('div', { class: 'g2-row', role: 'group', 'aria-label': 'Basket of words' });
   const after = A.h('p', { class: 'muted', 'aria-live': 'polite' });
   A.board.replaceChildren(host(A, 'ari', 'Who goes where on your family tree?'), prompt, tree, A.h('h3', {}, 'Basket'), basket, after,
-    draftNote(A, 'Words come from the app\'s word lists; a native reader has not checked them yet. Families come in every shape; this tree is just one.'));
+    draftNote(A, 'Families come in every shape. This tree is just one.'));
   numberKeys(A, () => basket);
   start(A, (D, T) => {
     const slots = (D.sets.family || []).filter((s) => cfg.slots.includes(s.he));

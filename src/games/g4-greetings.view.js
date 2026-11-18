@@ -2,7 +2,7 @@
 // a toast) and you pick what to say, fast. Greetings are the phrasebook's own lines (data/games/g4/bank.json).
 import { mountArcade } from './arcade.js';
 import { pick, options, sample } from './g4-core.js';
-import { begin, withBank, host, heItem, say, grade, numberKeys, buttons, draftNote } from './g4-ui.js';
+import { begin, withBank, host, heItem, say, grade, numberKeys, buttons } from './g4-ui.js';
 
 export const STORE_KEY = 'games.g4-greetings.v1';
 const ROUNDS = 10;
@@ -70,7 +70,7 @@ function setup(A) {
   const T = begin(A), cfg = A.cfg, rnd = A.rnd;
   const scene = A.h('div', { class: 'g4-scene' });
   const area = A.h('div');
-  A.board.replaceChildren(host(A, 'noa', 'Quick, what do you say?'), scene, area, draftNote(A, 'Greetings from the app\'s phrasebook and lessons. Not yet checked by a native speaker.'));
+  A.board.replaceChildren(host(A, 'noa', 'Quick, what do you say?'), scene, area);
   numberKeys(A, () => area.querySelector('.arc-choices'));
   withBank(A, T, (B) => {
     const deck = deckFor(A.level, rnd);

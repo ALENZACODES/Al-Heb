@@ -3,7 +3,7 @@
 // you also say it in your own form, as Ari or as Noa. Encounters are read straight from data/israel/scenarios.json.
 import { mountArcade } from './arcade.js';
 import { loadIsrael, sample, shuffle, stripPoints } from './g4-core.js';
-import { begin, withBank, host, heText, enText, grade, draftNote, buttons, numberKeys } from './g4-ui.js';
+import { begin, withBank, host, heText, enText, grade, buttons, numberKeys } from './g4-ui.js';
 
 export const STORE_KEY = 'games.g4-tone.v1';
 
@@ -38,7 +38,7 @@ const spec = {
 function setup(A) {
   const T = begin(A), cfg = A.cfg, rnd = A.rnd;
   const scene = A.h('div', { class: 'g4-scene' }), area = A.h('div'), after = A.h('p', { 'aria-live': 'polite' });
-  A.board.replaceChildren(host(A, 'noa', 'A whole day out. Sound like a local!'), scene, area, after, draftNote(A, 'Encounters from the app\'s Israel scenarios. Tone labels are general impressions, not yet checked by a native speaker.'));
+  A.board.replaceChildren(host(A, 'noa', 'A whole day out. Sound like a local!'), scene, area, after);
   numberKeys(A, () => area.querySelector('.arc-choices'));
   withBank(A, T, (_B, data) => {
     A.setLives(4);

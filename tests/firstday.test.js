@@ -6,9 +6,9 @@ const M = await import("../src/firstday/model.js");
 const first10 = await L.loadFirst10();
 const ladder = await L.loadLadder();
 
-test("content is marked draft and unreviewed", () => {
+test("content is marked draft and unreviewed in the data (review status lives in the data, not on the screen)", () => {
   for (const d of [first10, ladder]) { assert.equal(d.status, "draft"); assert.equal(d.proofread, false); assert.match(d.reviewNote, /unreviewed/i); }
-  assert.match(M.DRAFT_NOTICE, /unreviewed/);
+  assert.equal(M.DRAFT_NOTICE, undefined);
 });
 
 test("5 letters, 2 vowels, 3 words; every read step uses only taught letters and vowels", () => {

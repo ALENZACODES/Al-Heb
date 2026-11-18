@@ -42,7 +42,7 @@ function setup(A) {
   const area = A.h('div');
   const letterOf = (c) => A.letters.find((l) => l.he === c);
   A.board.replaceChildren(host(A, 'ari', 'Letters count too. Aleph is one.'), big, prompt, area,
-    draftNote(A, 'Standard values. Final letters count like their plain letter here; a few books use them for 500 to 900.'));
+    draftNote(A, 'Final letters count like their plain letter here; a few books use them for 500 to 900.'));
   numberKeys(A, () => area.querySelector('.arc-choices'));
   let n = 0;
   const next = () => { if (n >= ROUNDS) { T.end({ won: true }); return; } n += 1; ask(); };

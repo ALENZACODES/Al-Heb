@@ -51,20 +51,20 @@ function audioFor(congregation) {
   return { has: (k, i) => mk(k, i).has(k, i), play: (k, i, o) => mk(k, i).play(k, i, o), stop() {} };
 }
 
-test('playLine: one honest sentence per player result, for each tradition', () => {
+test('playLine: one plain sentence per player result, for each tradition', () => {
   assert.match(playLine({ source: 'file', entryStatus: 'recorded' }, 'ashkenazi', 'this word'), /Recorded by a human reader/);
   assert.match(playLine({ source: 'file', entryStatus: 'tts' }, 'israeli'), /Israeli voice/);
   // Owner decision 2026-11-07: the Sephardi setting plays Israeli sound and shows the Sephardi reading in English letters
-  assert.match(playLine({ source: 'file', entryStatus: 'tts', fileTradition: 'israeli' }, 'sephardi'), /It is the Israeli voice; the Sephardi reading is shown in English letters\./);
-  assert.match(playLine({ source: 'file', entryStatus: 'recorded', fileTradition: 'israeli' }, 'ashkenazi'), /Israeli reading, used here as a stand-in for Ashkenazi/);
-  assert.match(playLine({ source: 'tts-fallback' }, 'israeli'), /not a person\. It speaks Israeli Hebrew and may ignore/);
-  assert.match(playLine({ source: 'tts-fallback' }, 'sephardi'), /Israeli Hebrew \(if no Sephardi or Israeli file is present, the Sephardi reading is still shown in English letters\)/);
-  assert.match(audioNote('sephardi'), /When a Sephardi clip is in the audio bank, you hear that file/);
+  assert.match(playLine({ source: 'file', entryStatus: 'tts', fileTradition: 'israeli' }, 'sephardi'), /Israeli voice\. The Sephardi reading is shown in English letters\./);
+  assert.match(playLine({ source: 'file', entryStatus: 'recorded', fileTradition: 'israeli' }, 'ashkenazi'), /The Ashkenazi reading is shown in English letters/);
+  assert.equal(playLine({ source: 'tts-fallback' }, 'israeli'), "Playing this with your device's Hebrew voice.");
+  assert.match(playLine({ source: 'tts-fallback' }, 'sephardi'), /in Israeli Hebrew\. The Sephardi reading is shown in English letters/);
+  assert.match(audioNote('sephardi'), /You hear the Israeli clip, and the Sephardi reading is shown in English letters/);
   for (const t of ['ashkenazi']) {
-    assert.match(playLine({ source: 'tts-fallback' }, t), new RegExp(`Israeli Hebrew, not ${LABELS[t]}`));
-    assert.equal(playLine({ source: 'none', reason: 'tts-pronunciation-mismatch' }, t), `Not played: ${audioNote(t)}`);
+    assert.match(playLine({ source: 'tts-fallback' }, t), new RegExp(`in Israeli Hebrew\\. The ${LABELS[t]} reading`));
+    assert.equal(playLine({ source: 'none', reason: 'tts-pronunciation-mismatch' }, t), `No ${LABELS[t]} audio for this yet. Read the English letters.`);
   }
-  assert.match(playLine({ source: 'none', reason: 'no-speech-synthesis' }, 'israeli'), /No audio .*no-speech-synthesis/);
+  assert.equal(playLine({ source: 'none', reason: 'no-speech-synthesis' }, 'israeli'), 'No audio for this yet.');
 });
 
 // ---- torah reader ---------------------------------------------------------------------------------------------------------------
@@ -86,8 +86,8 @@ test('torah reader: respelling and the Hear-it label follow the tradition; only 
     un();
   }
   assert.match(out.ashkenazi.status, /Recorded by a human reader/);
-  assert.match(out.sephardi.status, /browser voice: a computer voice, not a person\. It speaks Israeli Hebrew \(if no Sephardi or Israeli file is present/);
-  assert.match(out.israeli.status, /browser voice: a computer voice, not a person\. It speaks Israeli Hebrew and may ignore/);
+  assert.match(out.sephardi.status, /device's Hebrew voice, in Israeli Hebrew\. The Sephardi reading is shown in English letters/);
+  assert.match(out.israeli.status, /with your device's Hebrew voice\./);
   for (const t of ['sephardi', 'israeli']) assert.doesNotMatch(out[t].status, /Recorded by a human/);
   assert.notEqual(out.ashkenazi.say, out.israeli.say, 'respelling differs for Ashkenazi on the first word');
   assert.equal(out.israeli.say, out.sephardi.say, 'Israeli and Sephardi respell alike (stated in PLAN.md)');
@@ -119,7 +119,7 @@ test('listen: clip count and honesty notes follow the tradition (clips exist for
   for (const t of ['sephardi', 'israeli']) {
     const r = await open(t);
     assert.match(r.root.textContent, /Audio not recorded yet/); assert.doesNotMatch(r.root.textContent, /words have audio/);
-    if (t === 'sephardi') assert.match(r.root.textContent, /When a Sephardi clip is in the audio bank, you hear that file/);
+    if (t === 'sephardi') assert.match(r.root.textContent, /the Sephardi reading is shown in English letters/);
     else assert.doesNotMatch(r.root.textContent, /recording yet\. The device voice/);
     r.un();
   }
@@ -143,8 +143,7 @@ test('speak read aloud and shadowing: respelling line, setting line and Listen n
     const rs = byId(root, `${tab}-respell`).textContent;
     assert.equal(rs.replace(/\s+/g, ' ').trim(), respell(line, t).replace(/\s+/g, ' ').trim(), `${tab}/${t}`);
     assert.ok(rs.length > 0);
-    assert.match(byId(root, `${tab}-setting`).textContent, new RegExp(`Your setting: ${LABELS[t]}`));
-    assert.equal(/made by rules/.test(byId(root, `${tab}-setting`).textContent), t !== 'israeli');
+    assert.match(byId(root, `${tab}-setting`).textContent, new RegExp(`Your style: ${LABELS[t]}`));
     byId(root, `${tab}-listen`).click();
     const st = () => root.find((n) => n.attrs.role === 'status').map((n) => n.textContent).join(' ');
     await waitFor(() => /Played the browser/.test(st()));

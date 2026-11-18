@@ -34,8 +34,7 @@ export function negLines(sent, gender) {
 }
 
 function setup(A) {
-  const { T, big, prompt, area } = begin(A, 'noa', 'Lo before the word it cancels; ein for "there is no".',
-    'Lines from the lessons, units, phrasebook and gender pairs, as written there. Not reviewed by a teacher.');
+  const { T, big, prompt, area } = begin(A, 'noa', 'Lo before the word it cancels; ein for "there is no".');
   const cfg = A.cfg, rnd = A.rnd;
   numberKeys(A, () => area.querySelector('.arc-choices'));
   let lines = [], n = 0;

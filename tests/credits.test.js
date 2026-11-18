@@ -28,19 +28,17 @@ test('credits: every attribution id renders once, in a group section, with licen
     assert.ok(li, e.id);
     assert.ok(text(li).includes(e.name), `${e.id} name`);
     assert.ok(text(li).includes(e.licence), `${e.id} licence`);
-    assert.ok(text(li).includes('status:'), `${e.id} status`);
+    assert.ok(!text(li).includes('status:'), `${e.id}: the licence check status is not learner copy`);
     assert.equal(li.getAttribute('data-status'), e.status);
   }
   assert.ok(all(root, (e) => e.tagName === 'H2').length >= 8);
 });
 
-test('credits: unverified rows carry an honest flag; links are https only; not-legal-advice is stated', async () => {
+test('credits: every row keeps its licence check status as data; links are https only; not-legal-advice is stated', async () => {
   const root = newRoot(doc); await credits.mount(root, ctx);
-  for (const e of att.entries.filter((x) => x.status === 'unverified')) assert.match(text(root.querySelector(`#credit-${e.id}`)), /status: unverified/);
+  for (const e of att.entries) assert.equal(root.querySelector(`#credit-${e.id}`).getAttribute('data-status'), e.status);
   for (const a of all(root, (n) => n.tagName === 'A' && n.getAttribute('href') && !n.getAttribute('href').startsWith('#'))) assert.match(a.getAttribute('href'), /^https:\/\//);
   assert.match(text(root), /not legal advice/i);
-  const verified = att.entries.filter((x) => x.status === 'verified-primary').length;
-  assert.ok(text(root).includes(`${verified} verified`));
 });
 
 test('credits: hebcal credit line is shown and exported for the calendar screens', async () => {
@@ -151,8 +149,9 @@ test('privacy: scroll position is session-only, nothing uses IndexedDB or upload
   assert.doesNotMatch(body, /fetch\(|sendBeacon|XMLHttpRequest|FormData|Storage/);
   assert.match(body, /createObjectURL/); assert.match(body, /revokeObjectURL/);
   const root = newRoot(doc); privacy.mount(root, { t: (k) => k }); const t = text(root);
-  assert.match(t, /Record and compare/); assert.match(t, /microphone=\(self\)/); assert.match(t, /sessionStorage/);
-  assert.match(t, /IndexedDB .*for one thing only: the Speaking Studio voice journal/); assert.match(t, /Delete all my data removes them/);
+  assert.match(t, /Record and Compare uses the microphone only when you press Record/); assert.match(t, /never saved or uploaded/); assert.match(t, /sessionStorage/);
+  assert.match(t, /lasts only until you close the tab/);
+  assert.match(t, /voice journal are saved in the browser's own database on this device, and Delete all my data removes them/);
 });
 
 test('credits: new practice screens carry the Sources line', () => {

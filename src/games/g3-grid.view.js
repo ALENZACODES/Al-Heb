@@ -30,8 +30,7 @@ export function gridCells(preps, persons, share, rnd = Math.random) {
 }
 
 function setup(A) {
-  const { T, big, prompt, area } = begin(A, 'noa', 'Rows are people, columns are words.',
-    'Endings are copied from the app\'s word lists and phrasebook (data/games/g3/suffixes.json). Not reviewed by a teacher.');
+  const { T, big, prompt, area } = begin(A, 'noa', 'Rows are people, columns are words.');
   big.textContent = '';
   const cfg = A.cfg, rnd = A.rnd;
   let suf = null, g = 0, picked = null, left = 0;

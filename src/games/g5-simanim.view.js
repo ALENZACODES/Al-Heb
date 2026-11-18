@@ -27,7 +27,7 @@ function setup(A) {
   const table = A.h('div', { class: 'g5-grid', role: 'group', 'aria-label': 'Foods on the table' });
   const after = A.h('p', { class: 'muted', 'aria-live': 'polite' });
   A.board.replaceChildren(host(A, 'noa', 'Which food carries this wish?'), wish, quote, table, after,
-    draftNote(A, 'Apples in honey and the round challah are on the app\'s Rosh Hashanah page; the other foods are widely kept customs, and families differ.'));
+    draftNote(A, 'Apples in honey and round challah are the best known. The other foods are widely kept customs, and families differ.'));
   numberKeys(A, () => table);
   const fail = () => A.announce('The table did not load. Check the connection and press Start again.');
   loadData(ctx, g5Data('simanim')).then(async (d) => {

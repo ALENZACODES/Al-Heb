@@ -25,7 +25,7 @@ const spec = {
 
 function setup(A) {
   const { T, big, prompt, area } = begin(A, 'noa', 'Look for the marks the pattern leaves.',
-    'Verbs and their pattern labels come from the app\'s verb list (from its dictionary source; not checked by a teacher). The pattern hints are the usual textbook summaries.');
+    'The pattern hints are the usual textbook summaries.');
   big.textContent = '';
   const cfg = A.cfg, rnd = A.rnd, pats = BINYANIM.filter((b) => cfg.patterns.includes(b.key));
   let deck = [], n = 0, v = null, shown = 0, wrong = new Set();

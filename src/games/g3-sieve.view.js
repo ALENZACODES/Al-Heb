@@ -25,8 +25,7 @@ const spec = {
 };
 
 function setup(A) {
-  const { T, big, prompt, area } = begin(A, 'noa', 'Keep the family, drop the pattern.',
-    'Verbs and their listed letters come from the app\'s verb list (dictionary source); forms where the letters could be found in more than one way are left out. Not reviewed by a teacher.');
+  const { T, big, prompt, area } = begin(A, 'noa', 'Keep the family, drop the pattern.');
   const cfg = A.cfg, rnd = A.rnd;
   let deck = [], n = 0, item = null, at = 0, clusters = [], marks = [];
   const row = binRow(A, [{ key: 'keep', label: 'Keep', sub: 'a family letter' }, { key: 'drop', label: 'Let it fall', sub: 'a pattern letter' }], (k) => judge(k === 'keep'), { label: 'Sieve' });

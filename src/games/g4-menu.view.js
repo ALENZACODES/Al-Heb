@@ -53,7 +53,7 @@ const spec = {
 function setup(A) {
   const T = begin(A), cfg = A.cfg, rnd = A.rnd;
   const who = A.h('div', { class: 'g4-scene' }), bill = A.h('p', { 'aria-live': 'polite' }), area = A.h('div');
-  A.board.replaceChildren(host(A, 'noa', 'Who are we ordering for?'), who, area, bill, draftNote(A, 'Food and diet lines from the app\'s phrasebook, lessons and word list. Not yet checked by a native speaker. Prices are made up.'));
+  A.board.replaceChildren(host(A, 'noa', 'Who are we ordering for?'), who, area, bill, draftNote(A, 'Prices are made up for the game.'));
   numberKeys(A, () => area.querySelector('.arc-choices'));
   withBank(A, T, (B) => {
     pick(B, Object.keys(MENU), 'r.veg', 'r.vegan', 'm.menu');

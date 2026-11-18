@@ -2,7 +2,7 @@
 // The board keeps a few words showing at a time; a tapped or expired word makes room for a new one somewhere else.
 import { mountArcade } from './arcade.js';
 import { pickTopics, shuffle } from './g2-core.js';
-import { start, host, grade, draftNote, word, topicName, say } from './g2-ui.js';
+import { start, host, grade, word, topicName, say } from './g2-ui.js';
 
 export const STORE_KEY = 'games.g2-popup.v1';
 const GOAL = 12;
@@ -35,8 +35,7 @@ function setup(A) {
   const head = A.h('p', { class: 'arc-prompt' });
   const grid = A.h('div', { class: 'g2-grid', role: 'group', 'aria-label': 'Pantry doors', style: `grid-template-columns:repeat(${cfg.size},auto)` });
   const after = A.h('p', { class: 'muted', 'aria-live': 'polite' });
-  A.board.replaceChildren(host(A, 'rimon', 'Only the words of the target topic!'), head, grid, after,
-    draftNote(A, 'Words and topics come from the app\'s word lists. A native reader has not checked them yet.'));
+  A.board.replaceChildren(host(A, 'rimon', 'Only the words of the target topic!'), head, grid, after);
   start(A, (D, T) => {
     const ids = cfg.close ? pickTopics(D, 3, rnd, true) : cfg.target ? [cfg.target, ...pickTopics(D, 4, rnd).filter((x) => x !== cfg.target)].slice(0, 4) : pickTopics(D, 4, rnd);
     let target = ids[0], hits = 0;

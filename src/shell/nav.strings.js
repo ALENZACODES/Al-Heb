@@ -147,7 +147,7 @@ export const NAV_EN = {
   'nav.route.app-rules': 'How hearts, streaks, minutes and passing work', 'nav.route.course-map': 'Course map', 'nav.route.mixed-review': 'Mixed review', 'nav.route.five-minutes': 'Daily five-minute set', 'nav.route.checkpoints': 'Checkpoint tests', 'nav.route.benchmarks': 'Benchmark map', // course lane
   'nav.route.firstwin': 'Build Hebrew words',
   'nav.accessibility': 'Accessibility',
-  'nav.route.welcome': 'Welcome', 'nav.route.how': 'How this works', 'nav.route.search': 'Search',
+  'nav.route.welcome': 'Welcome', 'nav.route.how': 'How Aleph works', 'nav.route.search': 'Search',
   'nav.route.books': 'Little books', 'nav.route.book': 'Read a book', 'nav.route.games': 'All the games',
   'nav.route.listen-shelf': 'Sacred Listen', 'nav.route.wordfinder': 'Hebrew Word Finder',
   'nav.route.tugowar': 'Antonym Tug-of-War', 'nav.route.vowelcatcher': 'Vowel Catcher',
@@ -174,16 +174,16 @@ export const NAV_EN = {
   'search.loaded': 'Searched {n} words.', 'search.error': 'Letters and words did not load, but you can still search pages.',
   'search.count': '{n} results', 'search.preview': 'Preview',
   // Release tiers (docs/v0/SCOPE.md): the collapsed Preview group in the More sheet, its per-section notes, and the page banner.
-  'nav.preview.title': 'Preview (unreviewed, work in progress)',
-  'nav.preview.desc': 'Pages that are not part of the first release yet. They work, but nobody has reviewed them and they may change or move.',
+  'nav.preview.title': 'Preview',
+  'nav.preview.desc': 'New pages we are still polishing. Try them out; they may change.',
   'nav.preview.section': 'Preview: {s}',
-  'nav.preview.note.learn': 'Extra lessons and drills. Not reviewed yet; wording, order and exercises may change.',
-  'nav.preview.note.read': 'Texts, Torah reading, the service and chanting marks. Not reviewed yet; texts and audio may change.',
-  'nav.preview.note.speak': 'Speaking, listening and pronunciation-style pages. Not reviewed yet; pronunciation notes may change.',
-  'nav.preview.note.progress': 'Placement, calendar, reminders and sharing. Not reviewed yet; dates and scores may change.',
-  'nav.preview.note.more': 'Other pages. Not reviewed yet; may change or move.',
-  'nav.preview.banner': 'Preview: unreviewed, may change',
-  'nav.preview.banner.more': 'This page is not part of the first release yet. It works, but it has not been reviewed and may change or move.',
+  'nav.preview.note.learn': 'Extra lessons and drills.',
+  'nav.preview.note.read': 'Texts, Torah reading, the service and chanting marks.',
+  'nav.preview.note.speak': 'Speaking, listening and pronunciation styles.',
+  'nav.preview.note.progress': 'Placement, calendar, reminders and sharing.',
+  'nav.preview.note.more': 'Other pages.',
+  'nav.preview.banner': 'Preview',
+  'nav.preview.banner.more': 'This page is new and may change.',
 };
 for (const r of ROUTES) if (r.name.startsWith('g5-')) NAV_EN['nav.route.' + r.name] = r.title;
 for (const [k, v] of Object.entries(NAV_EN)) if (!(k in en)) en[k] = v;

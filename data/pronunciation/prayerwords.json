@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "proofread": false,
- "description": "Ten of the most frequent prayer words as an Israeli, an American-synagogue and a traditional Ashkenazi speaker would say them. Respellings are English approximations I wrote by hand from the vowel and consonant rules in niqqud.json and consonants.json, NOT recorded or native-checked. Capitals mark the stressed syllable. 'American' means the usual American-synagogue habit: Sephardi vowel values on American English sounds, English r, ch for chet/khaf.",
+ "description": "Ten of the most frequent prayer words as an Israeli, an American-synagogue and a traditional Ashkenazi speaker would say them. Respellings are close English spellings, and capitals mark the stressed syllable. 'American' means the usual American-synagogue habit: Sephardi vowels with American English sounds, an English r, and ch for chet and khaf.",
  "americanHabits": [
   "Vowels are often longer or glide (ay in HAY-nu) where Israelis use a short pure e.",
   "Resh is the English r; Israelis use a back-of-the-throat r.",

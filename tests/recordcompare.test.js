@@ -113,7 +113,7 @@ test('view: switching reading style changes the pairs offered; empty selection s
 test('M-12: the page says why it gives no score, and the reason holds for the shipped pairs', async () => {
   const V = await import('../src/recordcompare/recordcompare.view.js');
   const root = new N('main'), { ctx } = mk(); const un = V.mount(root, ctx); await tick();
-  assert.match(root.textContent, /Why there is no score here/); assert.match(root.textContent, /Say it page/);
+  assert.match(root.textContent, /Why there is no score/); assert.match(root.textContent, /Say It page/);
   un();
   // "in most of these pairs both words have the same letters": letters-only, as a recognizer writes them.
   const { normalizeHe } = await import('../src/speak/model.js');

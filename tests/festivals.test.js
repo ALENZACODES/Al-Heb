@@ -228,7 +228,7 @@ test("home view: portion, next festival, candle time for the chosen city, ten pa
   assert.equal(root.queryAll('[data-part="packs"] a').length, 10);
   assert.ok(hrefs(root).includes("#/festivals/shabbat-ready")); assert.ok(hrefs(root).includes("#/festivals/hanukkah")); assert.ok(hrefs(root).includes("#/read/hanukkah-candle"));
   for (const he of root.queryAll("span")) if (he.attrs.lang === "he") assert.equal(he.attrs.dir, "rtl");
-  assert.match(root.textContent, /Draft\. Nobody has proofread/); assert.match(root.textContent, /not authoritative/);
+  assert.match(root.textContent, /Check local times with your community/);
   un();
 });
 test("home view: with no festival routes in the build there are no festival links; with no city a Calendar prompt", async () => {

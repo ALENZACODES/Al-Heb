@@ -37,7 +37,7 @@ function setup(A) {
   const links = A.h('div', { class: 'g5-links' });
   const after = A.h('p', { class: 'muted', 'aria-live': 'polite' });
   A.board.replaceChildren(host(A, 'ari', 'What is this blessing for?'), prompt, formula, links, after,
-    draftNote(A, 'Words quoted from the app\'s prayer texts; the divine name is shown as ה׳ and never said aloud. Moments are the app\'s titles for each text.'));
+    draftNote(A, 'The divine name is shown as ה׳ and never said aloud.'));
   loadData(A.ctx, g5Data('siddur')).then((d) => {
     if (!T.live()) return;
     if (cfg.formula) formula.replaceChildren('Each one starts: ', heText(A, d.formula.he), ' ...');

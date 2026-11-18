@@ -7,7 +7,7 @@ import { capabilities } from './model.js';
 import { createRecognizer } from './recognizer.js';
 import { scoreSpeech, scoreLine, scoringStatus, STATUS_TEXT } from './score.js';
 
-export const CHECK_NOTE = 'The check uses your browser\'s speech recognizer set to Hebrew; your browser may send the audio to its maker to do this. The score counts words recognized; it does not measure your accent or vowels.';
+export const CHECK_NOTE = 'The check uses your browser\'s Hebrew speech recognition, which may send the audio to your browser\'s maker. The score counts the words it recognized; it does not check your accent or vowels.';
 const ERR = {
   'not-allowed': 'The microphone was not allowed, so there is no score.',
   'service-not-allowed': 'The browser\'s recognizer is not allowed here, so there is no score.',

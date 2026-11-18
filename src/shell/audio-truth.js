@@ -1,15 +1,14 @@
 // @ts-check
-// The one plain statement about what sound the app has. Every count comes from data/audio/summary.json (copied into
-// src/lib/counts.generated.js at build time; fetched at run time only as a fallback),
-// never from text typed here. Two words are never used for the synthetic clips: "native" and "recorded". They are computer-made
-// and no native speaker has listened to them (docs/audio/INGEST-REPORT-83.md, -88.md; docs/review/STATUS.md).
+// The one plain statement about what sound the app has (shown on About). Every count comes from data/audio/summary.json
+// (copied into src/lib/counts.generated.js at build time; fetched at run time only as a fallback), never from text typed here.
+// The clips are computer-made, so two words are never used for them: "native" and "recorded".
 
 import { TOTALS } from '../lib/counts.generated.js';
 
 const n = (x) => Number(x).toLocaleString('en-US');
 
 /** What every screen may say when the clip count is not known (offline, first load, file unreadable). No number, no promise. */
-export const AUDIO_UNKNOWN = 'The clip count could not be checked right now. There is no recorded teacher; the clips are synthetic, and the app uses your device voice when it has a Hebrew voice.';
+export const AUDIO_UNKNOWN = "Ari and Noa's voices are computer-generated. Where a word has no audio yet, your device's own Hebrew voice reads it, if it has one.";
 
 /** True when the summary has a usable count. @param {any} a */
 export const hasAudioCounts = (a) => !!a && Number.isFinite(a.total) && Number.isFinite(a.recorded) && Number.isFinite(a.tts);
@@ -28,19 +27,20 @@ export function clipCoverage(a) {
 }
 
 /**
- * The statement. With synthetic clips and no human recording this is exactly:
- * "<N> Hebrew clips in a synthetic voice (a man's and a woman's; no recorded teacher, unreviewed by native speakers) cover letters, vowels,
- * syllables, words, lines, prayers, book pages and games; where none exists the app uses your device voice when it has a Hebrew voice."
- * (<N> and the covered kinds are read from the summary: spoken and kinds/extra; an older file without them gives the tts count and no list.) If human recordings are ever counted, the line stops claiming "no recorded teacher" and says to update it.
+ * The statement. With computer-generated clips and no human recording this is exactly:
+ * "Ari and Noa read <N> Hebrew clips: letters, vowels, syllables, words, lines, prayers, book pages and games. Their voices are
+ * computer-generated. Where a word has no audio yet, your device's own Hebrew voice reads it, if it has one."
+ * (<N> and the covered kinds are read from the summary: spoken and kinds/extra; an older file without them gives the tts count and no list.)
+ * If human recordings are ever counted, the line names them and stops calling every voice computer-generated.
  * @param {{total?:number, recorded?:number, tts?:number, spoken?:number}|null|undefined} a
  */
 export function audioTruthLine(a) {
   if (!hasAudioCounts(a)) return AUDIO_UNKNOWN;
   const rec = /** @type {number} */ (a.recorded), spoken = spokenClips(a);
-  if (rec > 0) return `${n(rec)} recorded ${rec === 1 ? 'clip' : 'clips'} and ${n(spoken)} with a synthetic voice (unreviewed by native speakers); where none exists the app uses your device voice when it has a Hebrew voice.`;
+  if (rec > 0) return `${n(rec)} recorded ${rec === 1 ? 'clip' : 'clips'} and ${n(spoken)} computer-generated ${spoken === 1 ? 'clip' : 'clips'}. Where a word has no audio yet, your device's own Hebrew voice reads it, if it has one.`;
   const cover = clipCoverage(a);
-  if (spoken > 0) return `${n(spoken)} Hebrew ${spoken === 1 ? 'clip' : 'clips'} in a synthetic voice (a man's and a woman's; no recorded teacher, unreviewed by native speakers)${cover ? ` cover ${cover}` : ''}; where none exists the app uses your device voice when it has a Hebrew voice.`;
-  return `No audio clips are included; no recorded teacher; the app uses your device voice when it has a Hebrew voice.`;
+  if (spoken > 0) return `Ari and Noa read ${n(spoken)} Hebrew ${spoken === 1 ? 'clip' : 'clips'}${cover ? `: ${cover}` : ''}. Their voices are computer-generated. Where a word has no audio yet, your device's own Hebrew voice reads it, if it has one.`;
+  return "Aleph has no audio clips yet. Your device's own Hebrew voice reads each word, if it has one.";
 }
 
 /** Second sentence for About and Settings: how the clips are labelled (in their manifest entries and sidecars). Only said when clips exist. @param {any} a */
@@ -49,7 +49,7 @@ export function audioTruthDetail(a) {
   // settings play the Israeli clip of that voice when they have none of their own (owner rule, 7 November 2026).
   // tests/trust-copy.test.js fails if a clip is handed to a different voice.
   return hasAudioCounts(a) && a.recorded === 0 && spokenClips(a) > 0
-    ? `A clip plays only in the voice you selected (man or woman); it is never swapped for the other voice. The Sephardi and Ashkenazi settings play the Israeli clip of that voice, and show their own reading in English letters. The Israeli style has not been verified. Where no clip exists, nothing is spoken unless this device has a Hebrew voice, and that voice is not a recording.`
+    ? `Each clip plays in the voice you chose, Ari or Noa. The Sephardi and Ashkenazi settings play the Israeli clip and show their own reading in English letters.`
     : '';
 }
 

@@ -3,7 +3,7 @@
 // not been confirmed by a native reader, so the game says the words share letters, not that they share a root.
 import { mountArcade, choiceRow } from './arcade.js';
 import { loadData, rootLetters, rootPositions, tappedSpellsRoot, letterClusters, bare, toBase, shuffle, options } from './tg-core.js';
-import { host, track, numberKeys, grade, draftNote, ensureStyle } from './tg-ui.js';
+import { host, track, numberKeys, grade, ensureStyle } from './tg-ui.js';
 
 export const STORE_KEY = 'games.tg-family.v1';
 const ROUNDS = 8;
@@ -44,8 +44,7 @@ function setup(A) {
   const hint = A.h('p', { class: 'muted' });
   const wordEl = A.h('div', { class: 'tg-verse', lang: 'he', dir: 'rtl' });
   const area = A.h('div');
-  A.board.replaceChildren(host(A, 'ari', 'Three letters hold a word family together.'), prompt, hint, wordEl, area,
-    draftNote(A, 'Families come from the app\'s word list and dictionary source. A native reader has not confirmed them yet.'));
+  A.board.replaceChildren(host(A, 'ari', 'Three letters hold a word family together.'), prompt, hint, wordEl, area);
   numberKeys(A, () => area.querySelector('.arc-choices'));
   let families = [], items = [], n = 0;
   const next = () => { if (n >= ROUNDS || !items.length) { T.end({ won: true }); return; } n += 1; cfg.mode === 'belongs' ? belongs() : tap(); };

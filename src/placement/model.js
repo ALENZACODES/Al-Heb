@@ -133,11 +133,11 @@ export function recommend(items, answers, config, lessons) {
     frontier = byId.get(answers[i].id); break;
   }
   let lesson, reason;
-  if (frontier) { lesson = frontier.lesson; reason = `first item you missed (${frontier.cat}) is taught in ${lesson}`; }
+  if (frontier) { lesson = frontier.lesson; reason = `The first thing you missed (${frontier.cat}) is taught in ${lesson}`; }
   else if (answers.length) {
     const top = Math.max(...answers.map((a) => order.get(byId.get(a.id).lesson)));
-    lesson = ids[Math.min(top + 1, ids.length - 1)]; reason = 'no confirmed miss; starting after the hardest item you answered';
-  } else { lesson = config.firstLesson; reason = 'no answers'; }
+    lesson = ids[Math.min(top + 1, ids.length - 1)]; reason = 'You made no clear misses, so you start just after the hardest item you answered';
+  } else { lesson = config.firstLesson; reason = 'You did not answer any questions'; }
   if (!order.has(lesson)) lesson = config.firstLesson;
   const correct = answers.filter((a) => a.correct).length;
   return { lesson, reason, asked: answers.length, correct, confidence: answers.length < 10 ? 'low' : 'untested', draft: true };

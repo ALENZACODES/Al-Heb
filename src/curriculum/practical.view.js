@@ -25,7 +25,7 @@ export const RESULTS_URL = "data/curriculum/practical/gcloud-results.json";
 export const HIDDEN_URL = "data/curriculum/practical/hidden-items.json";
 export const CLIP_MAP_URL = "data/curriculum/practical/clip-map.json";
 export const COVERS_URL = "data/curriculum/practical/covers.json";
-export const DRAFT_TEXT = "Short practice pages for real situations. They add practice to your lessons and do not change them. A native speaker has not checked them yet.";
+export const DRAFT_TEXT = "Short practice pages for real situations, to use alongside your lessons.";
 /** Sentences of a draft note that describe where the data came from, not the Hebrew. Learners never see them. */
 const FILE_TALK = /\b[a-z]+(?:-[a-z]+)*-\d{2}\b|data\/|\.json|stored in|already in the sources|only name forms|copied from|phrasebook|first line:/i;
 /** A draft grammar note with its file-talk sentences removed ("" if nothing is left). */

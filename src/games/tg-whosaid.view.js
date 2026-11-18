@@ -34,7 +34,7 @@ function setup(A) {
   const area = A.h('div');
   const after = A.h('p', { class: 'muted', 'aria-live': 'polite' });
   A.board.replaceChildren(host(A, 'ari', 'Who said that?'), prompt, quote, area, after,
-    draftNote(A, 'Lines from the Torah text in this app (Leningrad Codex); the English after each answer is the JPS 1917 translation. The divine name is shown as ה׳.'));
+    draftNote(A, 'The English after each answer is from the JPS 1917 translation. The divine name is shown as ה׳.'));
   numberKeys(A, () => area.querySelector('.arc-choices'));
   let data = null, names = new Map(), deck = [], n = 0;
   const label = (sp) => (cfg.names === 'he' ? names.get(sp.id) : cfg.names === 'both' ? `${names.get(sp.id)} · ${sp.en}` : sp.en);

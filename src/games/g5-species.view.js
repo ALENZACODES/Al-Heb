@@ -29,7 +29,7 @@ function setup(A) {
   const bundle = A.h('p', { 'aria-live': 'polite' });
   const after = A.h('p', { class: 'muted' });
   A.board.replaceChildren(host(A, 'noa', 'Four plants for the bundle.'), prompt, clue, garden, bundle, after,
-    draftNote(A, 'Which words mean which plant is the traditional reading of Leviticus 23:40. Names from the app\'s Sukkot page and word lists.'));
+    draftNote(A, 'The plants follow the traditional reading of Leviticus 23:40.'));
   numberKeys(A, () => garden);
   loadData(ctx, g5Data('species')).then(async (d) => {
     if (!T.live()) return;

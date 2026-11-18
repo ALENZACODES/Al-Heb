@@ -107,7 +107,7 @@ export function mount(root, ctx) {
   }
 
   function renderFamilies() {
-    const nodes = [el('p', { 'data-coverage': '1' }, coverageText(rootsCoverage())), field('rt-q', 'Find family letters (Hebrew) or a word (English or sounds-like)', q, (v) => { q = v; selRoot = null; missingLetters = null; renderList(); })];
+    const nodes = [el('details', { class: 'muted' }, el('summary', {}, 'About the word list'), el('p', { 'data-coverage': '1' }, coverageText(rootsCoverage()))), field('rt-q', 'Find family letters (Hebrew) or a word (English or sounds-like)', q, (v) => { q = v; selRoot = null; missingLetters = null; renderList(); })];
     const list = el('div', { class: 'rt-list' }), detail = el('div', { class: 'rt-detail' });
     function renderList() {
       const res = searchFamilies(fam.families, q, 30);

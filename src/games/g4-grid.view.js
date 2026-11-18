@@ -2,7 +2,7 @@
 // directions step by step, then from memory, then give directions yourself, then work out where a route ends.
 import { mountArcade } from './arcade.js';
 import { pick, sample, stripPoints, walk, randomRoute, CMD_KEY } from './g4-core.js';
-import { begin, withBank, host, heItem, heText, say, grade, draftNote, buttons, numberKeys } from './g4-ui.js';
+import { begin, withBank, host, heItem, heText, say, grade, buttons, numberKeys } from './g4-ui.js';
 
 export const STORE_KEY = 'games.g4-grid.v1';
 const ROUNDS = 6, SIZE = 5;
@@ -52,7 +52,7 @@ const spec = {
 function setup(A) {
   const T = begin(A), cfg = A.cfg, rnd = A.rnd;
   const info = A.h('div', { class: 'g4-scene' }), map = A.h('div'), area = A.h('div');
-  A.board.replaceChildren(host(A, 'rimon', 'Which way? Right depends on where you face!'), info, map, area, draftNote(A, 'Directions from the app\'s phrasebook. Not yet checked by a native speaker.'));
+  A.board.replaceChildren(host(A, 'rimon', 'Which way? Right depends on where you face!'), info, map, area);
   numberKeys(A, () => area.querySelector('.arc-choices') || map.querySelector('.arc-choices'));
   withBank(A, T, (B) => {
     pick(B, Object.values(CMD_KEY), PLACES);

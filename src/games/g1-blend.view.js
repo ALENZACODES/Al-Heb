@@ -3,7 +3,7 @@
 // data/games/g1/words.json (the app's word list, split by the app's own syllable rules).
 import { mountArcade } from './arcade.js';
 import { shortEn, shuffle } from './g1-core.js';
-import { host, track, draftNote, ensureStyle, he, series, choiceButtons, numberKeys, loadWords } from './g1-ui.js';
+import { host, track, ensureStyle, he, series, choiceButtons, numberKeys, loadWords } from './g1-ui.js';
 
 export const STORE_KEY = 'games.g1-blend.v1';
 
@@ -39,8 +39,7 @@ function setup(A) {
   const cards = A.h('div', { class: 'g1-row g1-rtl', 'aria-live': 'polite' });
   const area = A.h('div', {});
   const after = A.h('p', { class: 'muted' });
-  A.board.replaceChildren(host(A, 'rimon', 'Piece by piece, then all together!'), prompt, cards, area, after,
-    draftNote(A, 'Syllables are split by the app\'s rules; a teacher has not checked every split.'));
+  A.board.replaceChildren(host(A, 'rimon', 'Piece by piece, then all together!'), prompt, cards, area, after);
   numberKeys(A, () => area.querySelector('.arc-choices'));
   const run = (words) => series(A, T, Math.min(cfg.count, words.length), (i, done) => {
     const w = words[i - 1];

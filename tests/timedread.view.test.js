@@ -20,7 +20,7 @@ test('full flow: pick, start, stop, mark words, save; honest copy; a11y attribut
   const store = await knowing(); const now = clockAt();
   const root = new N('div');
   const un = await mount(root, { store, now, query: {} });
-  assert.match(root.textContent, /Self-reported, not measured by the app/);
+  assert.match(root.textContent, /You mark the words that tripped you up; Aleph keeps the time/);
   assert.match(root.textContent, /Compare yourself with yourself/);
   const sel = root.querySelector('#tdr-pick');
   if (!sel) { assert.match(root.textContent, /No line is fully readable/); un(); return; }
@@ -45,7 +45,7 @@ test('full flow: pick, start, stop, mark words, save; honest copy; a11y attribut
   await btn(root, /Save with my marked words/).click();
   const saved = store.m[KEY].reads;
   assert.equal(saved.length, 1); assert.equal(saved[0].ms, 4000); assert.equal(saved[0].stumbled, 1); assert.deepEqual(saved[0].stumbledIdx, [0]);
-  assert.match(root.textContent, /Saved/); assert.match(root.textContent, /Self-reported\./);
+  assert.match(root.textContent, /Saved/); assert.match(root.textContent, /without a stumble\)/);
   assert.match(root.textContent, /Your last 1 read|Your 1 read/);
   assert.match(root.textContent, /About speech recognition/);
   assert.ok(!/leaderboard|rank(ed|ing)? \d|score:/i.test(root.textContent.replace('no ranking and no single fluency score', '')));

@@ -31,7 +31,7 @@ function setup(A) {
   const hint = A.h('p', { class: 'muted' });
   const after = A.h('p', { class: 'muted', 'aria-live': 'polite' });
   A.board.replaceChildren(host(A, 'noa', 'Swap the words back into place.'), prompt, row, hint, after,
-    draftNote(A, 'First lines of the app\'s prayer texts (Hebrew from the corpus registry). The divine name is shown as ה׳ and never said aloud.'));
+    draftNote(A, 'The divine name is shown as ה׳ and never said aloud.'));
   loadData(A.ctx, g5Data('siddur')).then((d) => {
     if (!T.live()) return;
     const pool = shuffle(linesFor(d.lines, cfg), rnd);

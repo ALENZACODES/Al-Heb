@@ -26,7 +26,7 @@ export function validISO(iso) {
 /** Keys of data/calendar/days.json that are not holiday ids. */
 export const GENERIC_KEYS = Object.freeze(["shabbat", "erev-shabbat", "rosh-chodesh", "erev-festival"]);
 
-export const CALC_NOTE = "Dates and times are calculated, not authoritative. Check with your community.";
+export const CALC_NOTE = "Dates and times are calculated. Check local times with your community.";
 
 /** The day's observances, markers and whether it has a page worth opening. Used by the grid as well as the page. */
 export function dayFacts(iso, { mode = "reform", israel = false, done = null } = {}) {

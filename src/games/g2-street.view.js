@@ -2,7 +2,7 @@
 // the word for "cat"? Level 4 asks for the whole street in order instead.
 import { mountArcade } from './arcade.js';
 import { pickTopics, deck, shuffle } from './g2-core.js';
-import { start, host, grade, draftNote, word, say, orderBoard } from './g2-ui.js';
+import { start, host, grade, word, say, orderBoard } from './g2-ui.js';
 
 export const STORE_KEY = 'games.g2-street.v1';
 const STREETS = 2;
@@ -30,8 +30,7 @@ function setup(A) {
   const street = A.h('div', { class: 'g2-houses', role: 'group', 'aria-label': 'Houses' });
   const area = A.h('div');
   const after = A.h('p', { class: 'muted', 'aria-live': 'polite' });
-  A.board.replaceChildren(host(A, 'rimon', 'Look closely at every window.'), prompt, clue, street, area, after,
-    draftNote(A, 'Words come from the app\'s word lists. A native reader has not checked them yet.'));
+  A.board.replaceChildren(host(A, 'rimon', 'Look closely at every window.'), prompt, clue, street, area, after);
   start(A, (D, T) => {
     let s = 0;
     const walk = () => {

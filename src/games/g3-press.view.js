@@ -25,8 +25,7 @@ const spec = {
 const FORM_EN = { past: 'dictionary form (he did)', infinitive: 'to … form', present: 'present', future: 'future (he will)' };
 
 function setup(A) {
-  const { T, big, prompt, area } = begin(A, 'rimon', 'Letters in, pattern on, verb out.',
-    'Verbs, their listed letters and pattern labels come from the app\'s verb list (dictionary source). A Hebrew reader has not yet confirmed which letters belong together. Not reviewed by a teacher.');
+  const { T, big, prompt, area } = begin(A, 'rimon', 'Letters in, pattern on, verb out.');
   const cfg = A.cfg, rnd = A.rnd;
   numberKeys(A, () => area.querySelector('.arc-choices'));
   let verbs = [], deck = [], n = 0;

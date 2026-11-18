@@ -446,7 +446,7 @@ test('M-11: the coverage tab shows line coverage, rounded down, and a held clip 
   assert.ok(total, 'the coverage tab carries the line coverage');
   const [have, of] = total.attrs['data-sv-audio-total'].split('/').map(Number);
   assert.equal(have, of);
-  assert.match(total.textContent, new RegExp(`^Line coverage: ${have} of the ${of} service lines Aleph holds have a clip you can play \\(100%\\), in a synthetic voice, Ashkenazi pronunciation\\.$`));
+  assert.match(total.textContent, new RegExp(`^All ${of} service lines have audio\\.$`));
   // withhold one of those clips: it stops counting
   const orders = json('data/service/orders.json'), reg = json('data/corpus/registry.json');
   const byId = new Map((reg.entries || reg).map((e) => [e.id, e]));

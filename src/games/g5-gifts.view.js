@@ -1,7 +1,7 @@
 // Mishloach Manot: on Purim, friends send each other gifts of food, at least two kinds of ready-to-eat food.
 // Each friend leaves a note with a wish (something sweet, no dairy, exactly three things). Pack a basket from the
 // shelf that meets the rule and the note, then send it.
-import { mountG5, host, track, grade, draftNote, card, button, lock } from './g5-ui.js';
+import { mountG5, host, track, grade, card, button, lock } from './g5-ui.js';
 import { loadData, g5Data, shuffle, shortEn, basketProblems } from './g5-core.js';
 
 export const STORE_KEY = 'games.g5-gifts.v1';
@@ -46,8 +46,7 @@ function setup(A) {
   const basket = A.h('p', { 'aria-live': 'polite' });
   const send = A.h('div', { class: 'g5-row' });
   const after = A.h('p', { class: 'muted' });
-  A.board.replaceChildren(host(A, 'noa', 'Who is the next basket for?'), note, shelf, basket, send, after,
-    draftNote(A, 'The rule is from the app\'s Purim article. Foods are from the app\'s word list; hamantasch is from the Purim page.'));
+  A.board.replaceChildren(host(A, 'noa', 'Who is the next basket for?'), note, shelf, basket, send, after);
   loadData(A.ctx, g5Data('purim')).then((d) => {
     if (!T.live()) return;
     const friends = shuffle(FRIENDS, rnd).slice(0, cfg.friends);

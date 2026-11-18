@@ -170,7 +170,7 @@ test("day view: Shabbat Hanukkah in Toronto renders both sections, key words tab
   assert.match(t, /Saturday 5 December 2026/); assert.match(t, /25 Kislev 5787/);
   assert.match(t, /Hanukkah, day 1 of 8/); assert.match(t, /What it is/); assert.match(t, /What people do/); assert.match(t, /Key words/); assert.match(t, /Prayers and readings/);
   assert.match(t, /Havdalah17:28 America\/Toronto/); assert.match(t, /Vayeshev/);
-  assert.match(t, /Dates and times are calculated, not authoritative/);
+  assert.match(t, /Dates and times are calculated\. Check local times with your community/);
   const hrefs = root.find((n) => n.tag === "a").map((n) => n.attrs.href);
   for (const h of ["#/read/hanukkah-candle", "#/learn?lesson=I-32", "#/festivals/hanukkah", "#/festivals/shabbat-ready", "#/torahread", "#/day/2026-12-04", "#/day/2026-12-06", "#/day/2026-12-10", "#/calendar"]) assert.ok(hrefs.includes(h), h);
   for (const n of root.find((x) => x.attrs.lang === "he")) assert.equal(n.attrs.dir, "rtl");

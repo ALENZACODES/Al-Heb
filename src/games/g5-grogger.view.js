@@ -2,7 +2,7 @@
 // (the noisemaker) every time Haman's name comes up, and keep it still for every other word. Later levels go faster
 // and bring in words that look like his name. The Book of Esther itself is not in the app's data yet, so this is a
 // word stream, not the Megillah text.
-import { mountG5, host, track, draftNote, roundKeys, heText, button } from './g5-ui.js';
+import { mountG5, host, track, roundKeys, heText, button } from './g5-ui.js';
 import { loadData, g5Data, deal } from './g5-core.js';
 
 export const STORE_KEY = 'games.g5-grogger.v1';
@@ -34,8 +34,7 @@ function setup(A) {
   const sub = A.h('p', { class: 'muted' });
   const meter = A.h('p', { class: 'arc-prompt', 'aria-live': 'polite' });
   const shake = button(A, 'Shake the grogger', () => hit(), 'btn arc-choice');
-  A.board.replaceChildren(host(A, 'rimon', 'Ready with the grogger? Only for Haman!'), word, sub, A.h('div', { class: 'g5-row' }, shake), meter,
-    draftNote(A, 'Words from the app\'s Purim page and Purim word pack. Haman\'s name is copied from the page\'s word for hamantasch, אֹזֶן הָמָן.'));
+  A.board.replaceChildren(host(A, 'rimon', 'Ready with the grogger? Only for Haman!'), word, sub, A.h('div', { class: 'g5-row' }, shake), meter);
   roundKeys(A, (k) => { if (k === 'space') { hit(); return true; } return false; });
   let cards = [], i = -1, pressed = false, hits = 0, haman = 0;
   function hit() {

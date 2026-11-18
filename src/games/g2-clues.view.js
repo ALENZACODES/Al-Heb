@@ -3,7 +3,7 @@
 // At level 5 the meaning never comes: the other clues are enough.
 import { mountArcade } from './arcade.js';
 import { clueBoard } from './g2-core.js';
-import { start, host, grade, draftNote, word, say, he } from './g2-ui.js';
+import { start, host, grade, word, say, he } from './g2-ui.js';
 
 export const STORE_KEY = 'games.g2-clues.v1';
 const ROUNDS = 6;
@@ -31,8 +31,7 @@ function setup(A) {
   const nextClue = A.h('button', { type: 'button', class: 'btn secondary' }, 'Next clue');
   const grid = A.h('div', { class: 'g2-grid', role: 'group', 'aria-label': 'Cards', style: 'grid-template-columns:repeat(3,auto)' });
   const after = A.h('p', { class: 'muted', 'aria-live': 'polite' });
-  A.board.replaceChildren(host(A, 'ari', 'I am thinking of one of these words…'), prompt, clueList, A.h('div', { class: 'g2-row' }, nextClue), grid, after,
-    draftNote(A, 'Words, topics and genders come from the app\'s word lists. A native reader has not checked them yet.'));
+  A.board.replaceChildren(host(A, 'ari', 'I am thinking of one of these words…'), prompt, clueList, A.h('div', { class: 'g2-row' }, nextClue), grid, after);
   start(A, (D, T) => {
     let n = 0, board = null, shown = 0;
     const showClues = () => {

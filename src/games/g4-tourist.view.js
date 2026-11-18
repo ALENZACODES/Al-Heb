@@ -3,7 +3,7 @@
 // follow-up question too. Items are read straight from data/israel/giveaways.json.
 import { mountArcade } from './arcade.js';
 import { loadIsrael, sample, shuffle, stripPoints } from './g4-core.js';
-import { begin, withBank, host, heText, enText, grade, draftNote, buttons, numberKeys } from './g4-ui.js';
+import { begin, withBank, host, heText, enText, grade, buttons, numberKeys } from './g4-ui.js';
 
 export const STORE_KEY = 'games.g4-tourist.v1';
 /** Categories each level adds. Notes on these are context ("said by a woman"); on sound items they describe the slip. */
@@ -35,7 +35,7 @@ const spec = {
 function setup(A) {
   const T = begin(A), cfg = A.cfg, rnd = A.rnd;
   const scene = A.h('div', { class: 'g4-scene' }), area = A.h('div'), after = A.h('div', { 'aria-live': 'polite' });
-  A.board.replaceChildren(host(A, 'rimon', 'Who is the tourist? Who sounds local?'), scene, area, after, draftNote(A, 'Items from the app\'s "gives you away" list. Not yet checked by a native speaker.'));
+  A.board.replaceChildren(host(A, 'rimon', 'Who is the tourist? Who sounds local?'), scene, area, after);
   numberKeys(A, () => area.querySelector('.arc-choices'));
   withBank(A, T, (_B, data) => {
     const pool = data.items.filter((x) => LEVEL_CATS[A.level - 1].includes(x.category) && x.wrong?.translit && x.right?.translit);

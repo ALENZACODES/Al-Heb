@@ -80,7 +80,7 @@ test('compare: choose a prayer word and see hand-written respellings with stress
   assert.match(t, /ba-RUKH/);
   assert.match(t, /BO-rukh/);
   assert.match(t, /stress: last/);
-  assert.match(t, /Engine respelling: borukh/);
+  assert.match(t, /Aleph's respelling: borukh/);
 });
 
 test('compare: word list shows only differing words until "Show all words" is ticked', async () => {

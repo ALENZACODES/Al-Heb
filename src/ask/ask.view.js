@@ -79,7 +79,7 @@ export async function mount(root, ctx) {
   const status = h('p', { class: 'muted ask-status', role: 'status' }, LOADING);
   const startersList = h('ul', { class: 'ask-starters', 'aria-label': 'Questions to start with' });
   const empty = h('section', { class: 'ask-empty', 'aria-labelledby': 'ask-try' }, h('h2', { id: 'ask-try' }, 'Try one of these'), startersList,
-    h('p', { class: 'muted ask-note' }, 'Every answer here was checked before it was added. If a question has no checked answer yet, this page says so instead of guessing.'));
+    h('p', { class: 'muted ask-note' }, 'Answers quote the Torah itself. If a question has no answer yet, this page says so.'));
 
   const add = (who, node) => {
     const el = h('div', { class: `ask-msg ${who}` }, node);

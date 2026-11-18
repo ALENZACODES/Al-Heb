@@ -2,7 +2,7 @@
 // first with the words in view, then in groups that hide, and at the end read a number out yourself, word by word.
 import { mountArcade } from './arcade.js';
 import { pick, shuffle, stripPoints } from './g4-core.js';
-import { begin, withBank, host, heItem, heText, say, grade, draftNote, roundKeys } from './g4-ui.js';
+import { begin, withBank, host, heItem, heText, say, grade, roundKeys } from './g4-ui.js';
 
 export const STORE_KEY = 'games.g4-phone.v1';
 const ROUNDS = 5;
@@ -39,7 +39,7 @@ function setup(A) {
   const T = begin(A), cfg = A.cfg, rnd = A.rnd;
   const top = A.h('div', { class: 'g4-scene' }), words = A.h('p', { class: 'g4-chips', 'aria-live': 'polite' }), typed = A.h('p', { class: 'g4-dark g4-big', 'aria-live': 'polite' });
   const pad = A.h('div', { class: 'arc-choices', role: 'group', 'aria-label': cfg.mode === 'say' ? 'Hebrew digit words' : 'Number pad' });
-  A.board.replaceChildren(host(A, 'ari', 'Halo? Write this number down.'), top, words, typed, pad, draftNote(A, 'Digits are the counting numbers from lesson il04, with zero from the word list. Not yet checked by a native speaker.'));
+  A.board.replaceChildren(host(A, 'ari', 'Halo? Write this number down.'), top, words, typed, pad);
   withBank(A, T, (B) => {
     pick(B, DIGIT_KEYS, 'p.hello', 'p.number');
     const word = (d) => (cfg.plain ? heText(A, stripPoints(B.get('nf' + d).he)) : heItem(A, B.get('nf' + d)));

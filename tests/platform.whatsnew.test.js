@@ -37,11 +37,13 @@ test('What\'s New page marks the newest entry seen; About shows the list without
   const entries = await loadChangelog();
   assert.equal(store.m[SEEN_KEY], entries[0].hash);
   assert.equal(root.queryAll('h1').length, 1);
-  assert.match(root.textContent, /recent changes/);
+  assert.match(root.textContent, /recent updates/);
+  assert.doesNotMatch(root.textContent, /Release build|precache|docs\/|\(J\d+\)|#\//);
+  for (const e of entries) assert.ok(!root.textContent.includes(e.hash), 'no commit hashes on the learner page');
   un();
-  const about = readFileSync(new URL('../src/shell/about.view.js', import.meta.url), 'utf8');
-  assert.match(about, /What Changed Recently/);
-  assert.match(about, /platform\/whatsnew\.js/);
+  const page = readFileSync(new URL('../src/shell/data-health.view.js', import.meta.url), 'utf8'); // the change list sits on the builder page, not on About
+  assert.match(page, /What Changed Recently/);
+  assert.match(page, /platform\/whatsnew\.js/);
   assert.doesNotMatch(readFileSync(new URL('../src/platform/whatsnew.js', import.meta.url), 'utf8').split('export async function fillAbout')[1], /store\?\.set/, 'About never moves the marker');
   assert.match(readFileSync(new URL('../package.json', import.meta.url), 'utf8'), /tools\/release\/changelog\.mjs && node tools\/build-precache\.mjs --stamp/, 'release regenerates the list before the precache hash');
 });

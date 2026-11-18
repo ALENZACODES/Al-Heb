@@ -67,7 +67,7 @@ function setup(A) {
   const verseEl = A.h('div', { class: 'tg-verse', lang: 'he', dir: 'rtl' });
   const refEl = A.h('p', { class: 'muted' });
   A.board.replaceChildren(host(A, 'noa', cfg.mode === 'word' ? 'Find the word in the prayer.' : 'Find every one. Some are hiding.'), prompt, verseEl, refEl,
-    draftNote(A, 'Verses from the Torah text in this app (Leningrad Codex). Siddur lines from the app\'s prayer texts. The divine name is shown as ה׳.'));
+    draftNote(A, 'The divine name is shown as ה׳.'));
   let queue = [], n = 0;
   const loadBoards = async () => {
     if (cfg.mode === 'word') {

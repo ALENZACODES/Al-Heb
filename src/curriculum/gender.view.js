@@ -10,7 +10,6 @@ import { draftNotice, voiceSelector, voiceButton, audioStatus, settingVoice } fr
 import { isAudioFree, SKIP_NOTE } from "../shell/audiofree.js";
 
 const WHO = { m: "man", f: "woman" };
-const GRAMMAR_NOTE = "These sentences and forms are drafts; the Hebrew has not been checked by a native speaker.";
 
 /** The Hebrew with the differing clusters highlighted (spans with class alef-diff); structure only, no extra letters. */
 function highlighted(he, diffIdx) {
@@ -34,7 +33,6 @@ export function mountGender(root, ctx, mode = "pairs", q = {}) {
   root.append(wrap);
   const sel = voiceSelector(ctx, settingVoice(ctx));
   const note = el("p", { class: "alef-audio-note muted", role: "status", "aria-live": "polite" });
-  const voiceHonesty = "Voices: Man (Ari) and Woman (Noa) are the planned narrators. No recorded teacher exists. A button only plays when the audio manifest has a clip or the browser can speak that item; if it says \"No audio yet\", there is nothing to play.";
 
   (async () => {
     const [g, saved] = await Promise.all([loadGender(), storeGet(ctx, GENDER_KEY, {})]);
@@ -42,7 +40,7 @@ export function mountGender(root, ctx, mode = "pairs", q = {}) {
     const shared = ctx?.settings?.get?.("gender"); // the shared Settings choice wins; "both" or unset only affects which form is listed first (both forms are always shown)
     let iAm = shared === "f" || shared === "m" ? shared : saved?.iAm === "f" ? "f" : "m";
     const countLine = () => el("p", { class: "muted", "data-gender-counts": "1" }, genderCountText(genderInventory(g.pairs, g.paradigms)));
-    const head = () => [draftNotice(ctx, GRAMMAR_NOTE, voiceHonesty), countLine(), el("div", { class: "row" }, sel.node, iAmChooser())];
+    const head = () => [draftNotice(ctx), countLine(), el("div", { class: "row" }, sel.node, iAmChooser())];
     function iAmChooser() {
       return el("div", { class: "alef-iam row", role: "radiogroup", "aria-label": "I am" }, el("span", { class: "muted" }, "I am: "),
         ...["m", "f"].map((v) => el("button", { type: "button", class: "btn secondary", role: "radio", "aria-checked": String(iAm === v), "data-iam": v,
@@ -81,7 +79,7 @@ export function mountGender(root, ctx, mode = "pairs", q = {}) {
         let body;
         if (qu.type === "which") {
           const label = p.who === "speaker" ? "said by" : "said to";
-          const prompt = qu.mode === "listen" ? `Listen, then say who it is ${label}.` : `No audio yet for this item, so this is a reading question. Who is it ${label}?`;
+          const prompt = qu.mode === "listen" ? `Listen, then say who it is ${label}.` : `No audio yet for this one, so read it instead. Who is it ${label}?`;
           const btns = ["m", "f"].map((v) => el("button", { type: "button", class: "btn secondary alef-opt", "data-answer": v, onclick: () => { btns.forEach((b) => { b.disabled = true; }); finish(v === qu.answer); } }, `${v === "m" ? "1" : "2"}. A ${WHO[v]}`));
           const written = el("div", { class: "alef-written-alt" });
           const showWritten = () => { written.replaceChildren(heText(p.forms[qu.form].he, "alef-he alef-word-big")); showBtn.hidden = true; };
@@ -104,7 +102,7 @@ export function mountGender(root, ctx, mode = "pairs", q = {}) {
         await saveGender(ctx, results);
         if (!alive) return;
         const right = results.filter((r) => r.good).length;
-        replaceKeepingFocus(wrap, h1, draftNotice(ctx, GRAMMAR_NOTE), el("h2", {}, "Quiz done"), el("p", {}, `${right} of ${results.length} right. Misses were sent to your review queue.`),
+        replaceKeepingFocus(wrap, h1, draftNotice(ctx), el("h2", {}, "Quiz done"), el("p", {}, `${right} of ${results.length} right. Misses were sent to your review queue.`),
           el("div", { class: "row" }, el("a", { class: "btn", href: "#/learn?gender=pairs&quiz=1" }, "Another quiz"), el("a", { class: "btn secondary", href: "#/learn?gender=pairs" }, "Pair cards"), el("a", { class: "btn secondary", href: "#/learn?review=1" }, "Review now")));
       }
       ask();

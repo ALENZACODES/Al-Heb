@@ -38,7 +38,7 @@ function setup(A) {
   const area = A.h('div');
   const after = A.h('p', { class: 'muted', 'aria-live': 'polite' });
   A.board.replaceChildren(host(A, 'rimon', 'What happened first?'), prompt, area, after,
-    draftNote(A, 'Quotes from the Torah text in this app (Leningrad Codex); English lines are short summaries. The divine name is shown as ה׳.'));
+    draftNote(A, 'English lines are short summaries. The divine name is shown as ה׳.'));
   numberKeys(A, () => area.querySelector('.tg-tray'));
   let stories = [], s = 0;
   const next = async () => {

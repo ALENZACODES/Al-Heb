@@ -53,7 +53,7 @@ function setup(A) {
   const meaning = A.h('p', { class: 'muted' });
   const area = A.h('div', {});
   A.board.replaceChildren(host(A, 'noa-side', 'Small dot, big difference.'), prompt, shown, meaning, area,
-    draftNote(A, 'The b/v, k/kh and p/f pairs and sh/s are the same in Israeli, Sephardi and Ashkenazi reading.'));
+    draftNote(A, 'The b/v, k/kh, p/f and sh/s pairs sound the same in Israeli, Sephardi and Ashkenazi reading.'));
   roundKeys(A, (k) => { const i = { 1: 0, 2: 1, left: 0, right: 1 }[k]; const b = area.querySelectorAll('button')[i]; if (b && !b.disabled) { b.click(); return true; } return false; });
   let syllables = [];
   const ask = (items) => series(A, T, items.length, (i, done) => {

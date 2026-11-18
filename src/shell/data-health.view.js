@@ -6,6 +6,7 @@
  */
 import { h } from './ui.js';
 import { fmt } from '../lib/counts.js';
+import { readinessNode } from './readiness.js';
 
 export const HEALTH_URL = 'data/dev/health.json';
 
@@ -48,7 +49,11 @@ export function mount(root, ctx) {
   const nav = h('p', {}, h('a', { href: '#/' }, 'Home'), ' · ', h('a', { href: '#/about' }, 'About'), ' · ', h('a', { href: '#/vocab' }, 'Dictionary'));
   const status = h('p', { id: 'dh-status', role: 'status' }, 'Loading the file list…');
   const body = h('div', { id: 'dh-body' });
-  root.replaceChildren(h('article', { class: 'stack dh-page' }, title, intro, nav, status, body));
+  const extra = { readinessFetch: (u) => fetchFn(u) };
+  root.replaceChildren(h('article', { class: 'stack dh-page' }, title, intro, nav, status, body,
+    readinessNode(h, { open: false, fetchFn: extra.readinessFetch }),
+    heldSection(extra), // M-08: Held Recordings, loaded on demand
+    changesSection(extra))); // I10: what changed, from data/platform/changelog.json (generated from the git history)
 
   let doc = ctx?.health || null;
   const show = (d) => {
@@ -116,4 +121,21 @@ export function mount(root, ctx) {
     .catch(() => { status.textContent = 'The file list could not be loaded. Open this page again when you are online, or rebuild it with the data-health tool.'; });
 
   return () => {};
+}
+
+/** I10: the newest changes, code and list loaded on demand (src/platform/whatsnew.js). */
+function changesSection(ctx) {
+  const sec = h('section', { class: 'card', id: 'changes', 'aria-labelledby': 'changes-h' }, h('h2', { id: 'changes-h' }, 'What Changed Recently'));
+  sec.append(h('p', { class: 'muted' }, 'Loading the list of changes…'));
+  import('../platform/whatsnew.js').then((m) => m.fillAbout(sec, h, { fetchFn: ctx.readinessFetch || globalThis.fetch, store: ctx.store })).catch(() => sec.replaceChildren(sec.firstChild, h('p', {}, 'The list of changes did not load. Open this page again while online to see it.')));
+  return sec;
+}
+
+/** M-08: Held Recordings; code and list load on demand (held-recordings.js). */
+function heldSection(ctx) {
+  const sec = h('section', { class: 'card', id: 'held', 'aria-labelledby': 'held-h' }, h('h2', { id: 'held-h' }, 'Held Recordings'),
+    h('p', { class: 'muted', role: 'status' }, 'Loading the list of held recordings…'));
+  import('./held-recordings.js').then((m) => m.fillHeld(sec, h, { fetchFn: ctx.readinessFetch || globalThis.fetch }))
+    .catch(() => sec.replaceChildren(sec.firstChild, h('p', { role: 'status' }, 'The list of held recordings did not load. Open this page again while online to see it.')));
+  return sec;
 }

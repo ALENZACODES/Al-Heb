@@ -63,7 +63,7 @@ const spec = {
 function setup(A) {
   const T = begin(A), cfg = A.cfg, rnd = A.rnd;
   const stall = A.h('div', { class: 'g4-scene' }), seller = A.h('p', { 'aria-live': 'polite' }), area = A.h('div', { class: 'arc-choices', role: 'group', 'aria-label': 'What you say' });
-  A.board.replaceChildren(host(A, 'ari', 'My list for the shuk. Let\'s bargain!'), stall, seller, area, draftNote(A, 'Lines from the app\'s phrasebook, register ladder and scenarios. Not yet checked by a native speaker. Prices are made up.'));
+  A.board.replaceChildren(host(A, 'ari', 'My list for the shuk. Let\'s bargain!'), stall, seller, area, draftNote(A, 'Prices are made up for the game.'));
   numberKeys(A, () => area);
   withBank(A, T, (B) => {
     pick(B, Object.keys(GOODS), Object.values(MOVES).flatMap((m) => m.keys));

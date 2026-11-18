@@ -37,7 +37,7 @@ function setup(A) {
   const area = A.h('div');
   const fact = A.h('p', { class: 'muted' });
   A.board.replaceChildren(host(A, 'noa', 'These words are on every page of a Chumash.'), big, prompt, area, fact,
-    draftNote(A, 'Counts are of written spellings in the Leningrad Codex text, so a prefix makes a separate entry. Meanings are short and written for this app; not reviewed by a teacher.'));
+    draftNote(A, 'Counts are of written spellings, so a word with a prefix counts on its own.'));
   numberKeys(A, () => area.querySelector('.arc-choices'));
   let all = [], pool = [], n = 0;
   const next = () => { if (n >= ROUNDS) { T.end({ won: true }); return; } n += 1; ask(); };

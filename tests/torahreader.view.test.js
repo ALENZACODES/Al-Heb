@@ -140,8 +140,8 @@ test('audio: registry ids for registry verses, text-only ids for the framing ver
   
   for (const [audio, re] of [
     [undefined, /No audio for this word: this build has no audio player/],
-    [{ has: () => false, play: async () => ({ source: 'none', reason: 'unknown-item' }) }, /No audio for this word \(unknown-item\)/],
-    [{ has: () => false, play: async () => ({ source: 'tts-fallback' }) }, /browser voice: a computer voice, not a person/],
+    [{ has: () => false, play: async () => ({ source: 'none', reason: 'unknown-item' }) }, /No audio for this word yet/],
+    [{ has: () => false, play: async () => ({ source: 'tts-fallback' }) }, /device's Hebrew voice, in Israeli Hebrew/],
     [{ has: () => true, play: async () => ({ source: 'file', entryStatus: 'tts' }) }, /Sephardi voice/],
     [{ has: () => true, play: async () => { throw new Error('boom'); } }, /Audio error for this word: boom/],
   ]) {

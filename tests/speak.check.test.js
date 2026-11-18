@@ -27,7 +27,7 @@ const off = { recognition: false, recording: false, secure: true };
 
 test('checkIntro: says plainly when this browser cannot score, and what the score measures when it can', () => {
   assert.match(C.checkIntro(off), /No score in this browser: it has no speech recognition \(Firefox/);
-  assert.match(C.checkIntro(on), /does not measure your accent/);
+  assert.match(C.checkIntro(on), /does not check your accent/);
 });
 test('checkControl: no recognizer = no button and no score', () => {
   assert.equal(C.checkControl('שָׁלוֹם', { caps: off }), null);

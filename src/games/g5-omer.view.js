@@ -35,7 +35,7 @@ function setup(A) {
   const after = A.h('p', { class: 'muted', 'aria-live': 'polite' });
   const torah = A.h('p', { class: 'muted' });
   A.board.replaceChildren(host(A, 'ari', 'Seven days make a week.'), prompt, area, after, torah,
-    draftNote(A, 'The game counts days only. When and how to count is for your community.'));
+    draftNote(A, 'The game counts days only. When and how to count is up to your community.'));
   numberKeys(A, () => area.querySelector('.g5-grid'));
   loadData(ctx, g5Data('omer')).then(async (d) => {
     if (!T.live()) return;

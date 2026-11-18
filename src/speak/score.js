@@ -16,7 +16,7 @@ import { normalizeHe, spokenTarget, skeleton, similarity } from './model.js';
 export const NEAR = 0.7;
 export const CLOSE = 0.7;
 
-export const SCORE_MEANS = 'What the score measures: how many of the printed words your browser\'s speech recognizer wrote back as that word. Vowel points are not checked, and it does not measure your accent or how natural you sound. Aleph has not verified how well the recognizer hears Hebrew, so treat the score as a guide, not a grade.';
+export const SCORE_MEANS = 'The score counts how many printed words your browser\'s speech recognition heard correctly. It does not check vowel points or your accent, so treat it as a guide.';
 export const SELF_CHECK_NOTE = 'Self-check: you compare what you said with the model and mark it yourself. There is no score for a self-check.';
 
 // ---- Normalization for scoring --------------------------------------------------------------------------------------

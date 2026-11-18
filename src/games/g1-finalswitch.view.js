@@ -37,7 +37,7 @@ function setup(A) {
   const wordsEl = A.h('div', {});
   const actions = A.h('div', { class: 'row' });
   A.board.replaceChildren(host(A, 'noa', 'Five letters change coats at the end of a word.'), prompt, wordsEl, actions,
-    draftNote(A, 'Words from the app\'s word list, shown with the everyday letter shapes on purpose.'));
+    draftNote(A, 'The words start with everyday letter shapes on purpose.'));
   const show = (pool) => series(A, T, cfg.boards, (i, done) => {
     const ws = Array.from({ length: cfg.words }, () => { const p = rnd() < cfg.mix && pool.middles.length ? pool.middles : pool.ends; return p[Math.floor(rnd() * p.length)]; });
     const found = ws.map(() => new Set());

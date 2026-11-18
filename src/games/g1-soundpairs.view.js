@@ -29,7 +29,7 @@ function setup(A) {
   const prompt = A.h('p', { class: 'arc-prompt' });
   const grid = A.h('div', {});
   A.board.replaceChildren(host(A, 'noa', 'Two spellings, one sound. Find the partners.'), prompt, grid,
-    draftNote(A, 'Israeli sounds. In Ashkenazi reading some of these pairs sound different (kamatz and patach, tav without a dot).'));
+    draftNote(A, 'Sounds are Israeli. In Ashkenazi reading, some of these pairs sound different (kamatz and patach, tav without a dot).'));
   let syllables = [], n = 0;
   const board = () => {
     if (!T.live()) return;

@@ -118,7 +118,7 @@ export async function mount(root, ctx = /** @type {any} */ ({})) {
     if (S.phase === 'done' && S.lastRead) {
       const r = S.lastRead;
       return el('section', { 'aria-labelledby': 'tdr-ln' }, el('h2', { id: 'tdr-ln', tabindex: '-1' }, 'Saved'),
-        el('p', {}, `${seconds(r)} seconds, ${f1(wpm(r))} words a minute, ${r.stumbled} of ${r.words} words stumbled on (${pct(accuracy(r))} without a stumble). Self-reported.`),
+        el('p', {}, `${seconds(r)} seconds, ${f1(wpm(r))} words a minute, ${r.stumbled} of ${r.words} words stumbled on (${pct(accuracy(r))} without a stumble).`),
         el('div', { class: 'tdr-row' }, el('button', { type: 'button', class: 'btn', id: 'tdr-again', onclick: () => { S.phase = 'ready'; render(); } }, 'Read this line again'), el('button', { type: 'button', class: 'btn', id: 'tdr-other', onclick: () => { S.item = null; S.phase = 'pick'; render(); } }, 'Choose another line')));
     }
     return null;

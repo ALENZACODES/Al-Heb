@@ -1,6 +1,6 @@
 // Holiday Greetings: the calendar flips to a day of the Jewish year and a neighbour waves. Pick the greeting that fits
 // the day. From level 4 it turns around: the neighbour greets you in Hebrew and you name the day.
-import { mountG5, host, track, grade, draftNote, numberKeys, card, heText, button, lock } from './g5-ui.js';
+import { mountG5, host, track, grade, numberKeys, card, heText, button, lock } from './g5-ui.js';
 import { loadData, g5Data, shuffle, shortEn } from './g5-core.js';
 
 export const STORE_KEY = 'games.g5-greet.v1';
@@ -38,8 +38,7 @@ function setup(A) {
   const prompt = A.h('p', { class: 'arc-prompt' });
   const opts = A.h('div', { class: 'g5-grid', role: 'group', 'aria-label': 'Choices' });
   const after = A.h('p', { class: 'muted', 'aria-live': 'polite' });
-  A.board.replaceChildren(host(A, 'ari', 'Your neighbour is waving!'), page, prompt, opts, after,
-    draftNote(A, 'Greetings from the app\'s calendar pages, phrasebook and lessons. Dates are the usual Hebrew dates.'));
+  A.board.replaceChildren(host(A, 'ari', 'Your neighbour is waving!'), page, prompt, opts, after);
   numberKeys(A, () => opts);
   loadData(A.ctx, g5Data('greetings')).then((d) => {
     if (!T.live()) return;

@@ -1,17 +1,14 @@
 /** Shared bits for the round-4 exercise screens (ladder, fade-out, gender, scaffold). Plain DOM, no dependencies. */
-import { plain } from "../shell/plain-copy.js";
 import { el, tr } from "./dom.js";
 import { audioButton } from "../shell/audio-access.js";
 import { fileLabel } from "../shell/audio-labels.js";
 import { isAudioFree } from "../shell/audiofree.js";
 import { shortcutsOn } from "../shell/motor.js";
 
-/** Draft / unreviewed notice shown on every exercise screen. `extra` adds screen-specific honesty lines. */
+/** Screen-specific notes at the top of an exercise screen (for example the no-audio note); empty when there are none. */
 export function draftNotice(ctx, ...extra) {
-  return el("div", { class: "alef-draft-notice card", role: "note" },
-    el("p", {}, el("strong", {}, tr(ctx, "ex.draft", "Draft. ")),
-      plain("exDraft")),
-    ...extra.filter(Boolean).map((t) => el("p", { class: "muted" }, t)));
+  const lines = extra.filter(Boolean);
+  return el("div", { class: "alef-notes" }, ...lines.map((t) => el("p", { class: "muted" }, t)));
 }
 
 export const VOICE_NAMES = { m: "Man (Ari)", f: "Woman (Noa)" };

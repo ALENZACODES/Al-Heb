@@ -42,7 +42,7 @@ function setup(A) {
     line.textContent = raceLine(you, ari);
   };
   A.board.replaceChildren(host(A, 'ari-caller', 'Ready, steady… listen!'), lanes, line, prompt, area,
-    draftNote(A, 'Israeli sounds. Tet and tav both say t, and kaf with a dot and qof both say k, so they never race on the same board.'));
+    draftNote(A, 'Sounds are Israeli. Tet and tav both say t, and kaf with a dot and qof both say k, so they never race on the same board.'));
   numberKeys(A, () => area.querySelector('.arc-choices'));
   drawRace();
   if (!A.untimed) A.loop(() => { if (!T.live()) return; ari += 1; drawRace(); if (ari >= FINISH) { A.announce('Ari crossed the line first. Try again, you were close!'); T.end({ won: false }); } }, cfg.ariMs);

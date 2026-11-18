@@ -20,7 +20,7 @@ export function mount(root, ctx) {
   const article = h('article', { class: 'card game-card game-roottree' },
     h('h1', { id: 'view-title' }, 'Root Tree'),
     h('p', {}, 'Grow a branch only with a verb listed under the displayed Hebrew root.'),
-    h('p', { class: 'muted' }, 'Family assignments are dictionary-derived and await Hebrew-editor review.'), status, board);
+    status, board);
   root.replaceChildren(article);
   // The root-tree backdrop made for this game (approved art, decorative only —
   // never a word cue). A missing picture leaves the page as it was.

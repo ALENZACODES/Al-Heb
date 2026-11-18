@@ -3,7 +3,7 @@
 // Letters count as written (the vowel points can change too); final forms count as their plain letter.
 import { mountArcade } from './arcade.js';
 import { ladderDistractors, changedAt, letterClusters, shuffle } from './g2-core.js';
-import { start, host, grade, numberKeys, draftNote, word, say, he } from './g2-ui.js';
+import { start, host, grade, numberKeys, word, say, he } from './g2-ui.js';
 
 export const STORE_KEY = 'games.g2-ladder.v1';
 
@@ -36,8 +36,7 @@ function setup(A) {
   const rungs = A.h('ol', { class: 'g2-rungs', 'aria-label': 'The ladder so far' });
   const area = A.h('div', { class: 'g2-row', role: 'group', 'aria-label': 'Next rung' });
   const after = A.h('p', { class: 'muted', 'aria-live': 'polite' });
-  A.board.replaceChildren(host(A, 'ari', 'One letter at a time.'), prompt, rungs, area, after,
-    draftNote(A, 'Ladder words are dictionary entries from the app\'s word lists; some are less common. A native reader has not checked them yet.'));
+  A.board.replaceChildren(host(A, 'ari', 'One letter at a time.'), prompt, rungs, area, after);
   numberKeys(A, () => area);
   start(A, (D, T) => {
     const all = [...(D.sets.ladders?.['3'] || []), ...(D.sets.ladders?.['4'] || [])];

@@ -51,7 +51,7 @@ export function mount(root, ctx = {}) {
       const cols = h('div', { class: 'cols' });
       for (const f of fams()) {
         const col = h('section', { class: 'card', 'aria-label': `Family ${f.family}, ${f.count} signs` },
-          h('h3', {}, FAMILY_NAMES[f.family], h('span', { class: 'badge' }, `${f.count} ${f.count === 1 ? 'sign' : 'signs'}`)));
+          h('h3', { 'data-case': 'keep' }, FAMILY_NAMES[f.family], h('span', { class: 'badge' }, `${f.count} ${f.count === 1 ? 'sign' : 'signs'}`)));
         const ul = h('ul', { style: 'list-style:none;padding:0;margin:0' });
         for (const id of f.signs) {
           const rec = signRec(id);
@@ -59,7 +59,7 @@ export function mount(root, ctx = {}) {
         }
         col.append(ul);
         const vs = variantSigns(niqqud, ui.tradition).filter((v) => v.family === f.family);
-        for (const v of vs) col.append(h('p', { class: 'muted' }, `Variant: ${v.id} `, ui.he(v.shape, 'he-small'), ' (same family; rare, memorised word list, unverified)'));
+        for (const v of vs) col.append(h('p', { class: 'muted' }, `Variant: ${v.id} `, ui.he(v.shape, 'he-small'), ' (same family; found in a few words)'));
         // spellings row
         const sp = plene.families[f.family];
         const row = h('div', {}, h('h4', {}, 'Spellings (same sound)'));
@@ -113,7 +113,7 @@ export function mount(root, ctx = {}) {
             else { ui.status.textContent = `Not the ${f} family. Try again.`; ui.recordMiss('vowelboard', rec.id); }
             redraw();
           });
-          cols.append(h('section', { class: 'card' }, h('h3', {}, FAMILY_NAMES[f]), b, h('div', {}, ...mine.map((id) => ui.he(signRec(id).shape, 'he-small')))));
+          cols.append(h('section', { class: 'card' }, h('h3', { 'data-case': 'keep' }, FAMILY_NAMES[f]), b, h('div', {}, ...mine.map((id) => ui.he(signRec(id).shape, 'he-small')))));
         }
       };
       redraw();

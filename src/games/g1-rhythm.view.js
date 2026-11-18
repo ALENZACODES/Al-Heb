@@ -38,7 +38,7 @@ function setup(A) {
   const prompt = A.h('p', { class: 'arc-prompt', 'aria-live': 'polite' });
   const padsEl = A.h('div', { class: 'g1-pads', role: 'group', 'aria-label': 'Letter pads' });
   A.board.replaceChildren(host(A, 'noa-conductor', 'Watch the pattern, then play it back.'), prompt, padsEl,
-    draftNote(A, 'With sound on, each letter\'s name is said as it lights, where a recording exists.'));
+    draftNote(A, 'With sound on, you hear each letter\'s name as it lights up.'));
   numberKeys(A, () => padsEl);
   const letters = padLetters(A.letters, cfg.pads, cfg.alike, rnd);
   let song = 0, seq = [], at = 0, slips = 0, listening = false;

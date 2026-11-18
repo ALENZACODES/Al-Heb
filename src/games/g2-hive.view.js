@@ -3,7 +3,7 @@
 // in kaf, mem, nun, pe or tsadi is shown with its final form once it is found.
 import { mountArcade } from './arcade.js';
 import { hiveWord, letters, shuffle, toBase } from './g2-core.js';
-import { start, host, grade, roundKeys, draftNote, word, say, he } from './g2-ui.js';
+import { start, host, grade, roundKeys, word, say, he } from './g2-ui.js';
 
 export const STORE_KEY = 'games.g2-hive.v1';
 
@@ -33,8 +33,7 @@ function setup(A) {
   const mix = A.h('button', { type: 'button', class: 'btn secondary' }, 'Mix');
   const hints = A.h('p', { class: 'muted' });
   const found = A.h('ul', { class: 'g2-found', 'aria-label': 'Words found' });
-  A.board.replaceChildren(host(A, 'rimon', 'Buzz! Use the middle letter every time.'), prompt, entry, hive, A.h('div', { class: 'g2-row' }, del, enter, mix), hints, found,
-    draftNote(A, 'The hive words are dictionary entries from the app\'s word lists; some are less common. A native reader has not checked them yet.'));
+  A.board.replaceChildren(host(A, 'rimon', 'Buzz! Use the middle letter every time.'), prompt, entry, hive, A.h('div', { class: 'g2-row' }, del, enter, mix), hints, found);
   start(A, (D, T) => {
     const h = shuffle(D.sets.hives || [], rnd)[0];
     const goal = Math.min(cfg.goal, h.words.length);

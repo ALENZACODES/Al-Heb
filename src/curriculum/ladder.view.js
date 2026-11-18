@@ -6,7 +6,6 @@ import { LADDER_KEY, saveLadder } from "./actions.js";
 import { draftNotice, audioStatus, onKeys } from "./ex-ui.js";
 import { audioButton } from "../shell/audio-access.js";
 import { describePlay } from "./audio-ui.js";
-import { SETTING_LABELS } from "../traditions/model.js";
 import { isAudioFree, SKIP_NOTE, AUDIO_FREE_NOTE, syllableByName } from "../shell/audiofree.js";
 
 export function mountLadder(root, ctx, q = {}) {
@@ -28,9 +27,7 @@ export function mountLadder(root, ctx, q = {}) {
     const fb = el("div", { class: "alef-feedback", role: "status", "aria-live": "polite" });
     
 
-    const intro = [draftNotice(ctx,
-      silent ? AUDIO_FREE_NOTE : `Sounds come from your tradition setting (${SETTING_LABELS[congregation] || congregation}). No recorded teacher exists: if there is no clip, you hear your browser's built-in voice or nothing, and the note under the cards says which.`,
-      "")];
+    const intro = [draftNotice(ctx, silent ? AUDIO_FREE_NOTE : "")];
 
     function glyphWithHighlight(item) {
       // letter-by-letter breakdown shown after an answer: letter, then the vowel family it carries

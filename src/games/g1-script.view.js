@@ -42,7 +42,7 @@ function setup(A) {
   const prompt = A.h('p', { class: 'arc-prompt' });
   const area = A.h('div', {});
   A.board.replaceChildren(host(A, 'ari-side', 'Same letter, two outfits. Match them up.'), prompt, area,
-    draftNote(A, 'Script shapes from the app\'s letter data; a teacher has not checked them yet. Handwriting varies from person to person.'));
+    draftNote(A, 'Handwriting varies from person to person.'));
   let letters = [], n = 0;
   const board = () => {
     if (!T.live()) return;

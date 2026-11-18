@@ -30,7 +30,7 @@ function setup(A) {
   const trainEl = A.h('div', { class: 'g1-train', role: 'list', 'aria-label': 'The train, engine first' });
   const tray = A.h('div', {});
   A.board.replaceChildren(host(A, 'rimon', 'All aboard! Some carriages lost their letters.'), prompt, trainEl, tray,
-    draftNote(A, 'The order is the alphabet of 22 letters. Final forms are not separate carriages.'));
+    draftNote(A, 'The train follows the 22 letters of the alphabet. Final forms do not get their own carriage.'));
   numberKeys(A, () => tray.querySelector('.arc-choices'));
   series(A, T, cfg.trains, (i, done) => {
     const dir = rnd() < cfg.back ? -1 : 1;

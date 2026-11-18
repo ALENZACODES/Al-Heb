@@ -40,10 +40,11 @@ test('M-08: the section says what is held, why, and what plays instead, in the p
   assert.match(text, /Syllables \(\d+\)/);
 });
 
-test('M-08: About shows the section, loading until the list arrives; a failed load says so', async () => {
-  const about = read('src/shell/about.view.js');
-  assert.match(about, /h\('h2', \{ id: 'held-h' \}, 'Held Recordings'\)/);
-  assert.match(about, /import\('\.\/held-recordings\.js'\)/, 'the code loads on demand');
+test('M-08: Data health shows the section, loading until the list arrives; a failed load says so', async () => {
+  const page = read('src/shell/data-health.view.js');
+  assert.match(page, /h\('h2', \{ id: 'held-h' \}, 'Held Recordings'\)/);
+  assert.match(page, /import\('\.\/held-recordings\.js'\)/, 'the code loads on demand');
+  assert.doesNotMatch(read('src/shell/about.view.js'), /held-recordings/, 'About is for learners; the held list is on the builder page');
   const sec = { kids: [], firstChild: null, querySelector: () => ({ heading: true }), replaceChildren(...k) { this.kids = k; } };
   await fillHeld(sec, fakeH, { fetchFn: async () => ({ ok: true, json: async () => list }) });
   assert.ok(sec.kids[0].heading);

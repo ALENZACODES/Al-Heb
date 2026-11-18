@@ -13,7 +13,7 @@ import { unlockLesson } from '../curriculum/unlock.js';
 import { isAudioFree } from '../shell/audiofree.js';
 import { loadFailureText } from '../shell/load-error.js';
 
-export const DRAFT_NOTE = 'Draft, unreviewed: no Hebrew teacher has checked this check and no learner has tried it. The cutoffs that pick your starting lesson are untested guesses. You can always start at lesson r01 or pick any lesson yourself.';
+export const DRAFT_NOTE = 'The check suggests a starting lesson. You can always start at lesson r01 or pick any lesson yourself.';
 
 export function mount(root, ctx) {
   const wrap = el('section', { class: 'alef-placement', 'aria-labelledby': 'view-title' });
@@ -38,7 +38,7 @@ export function mount(root, ctx) {
     set(
       ctx.img?.(el, { kind: 'id', id: 'CHAR_ari_neutral', decorative: true, width: 300, class: 'pl-pic' }),
       ctx.img?.(el, { kind: 'id', id: 'CHAR_noa_neutral', decorative: true, width: 300, class: 'pl-pic' }),
-      el('p', { class: 'draft-flag', role: 'note' }, DRAFT_NOTE),
+      el('p', { class: 'muted', role: 'note' }, DRAFT_NOTE),
       el('p', {}, `About ${P.config.maxMinutes || 10} minutes: up to ${items.length} short questions, easiest first, from letters and vowels to words, prayer lines and words with no vowel marks. It stops early if several answers in a row are missed, and at ${P.config.maxMinutes || 10} minutes. "Not sure" is always fine.`),
       el('p', {}, 'Your result becomes your starting lesson. Nothing is marked as done, and every earlier lesson stays open.'),
       prev ? el('p', {}, `Last result: lesson ${prev.start || prev.lesson}${prev.applied ? ' (your starting lesson now)' : ''}.`) : null,
@@ -91,8 +91,8 @@ export function mount(root, ctx) {
       el('p', { id: 'placement-start-lesson' }, `Lesson ${start.id}: ${startLesson?.title || ''}`),
       start.id !== result.lesson ? el('p', {}, `Your answers pointed to lesson ${result.lesson}: ${lesson?.title || ''}. You have already finished it, so you start at the next open lesson.`) : null,
       el('p', {}, `Saved: Home and your week plan now start here, and this lesson is open. The lessons before it are not marked as done and stay open to you.${stoppedForTime ? ` The check stopped at ${P.config.maxMinutes} minutes.` : ''}`),
-      el('p', {}, `${result.correct} of ${result.asked} answers matched. The result rests on this: ${result.reason}. A short, untested check cannot show how much you know, so treat it as a rough guess.`),
-      el('p', { class: 'draft-flag', role: 'note' }, DRAFT_NOTE),
+      el('p', {}, `${result.correct} of ${result.asked} answers were right. ${result.reason}. A short check is only a starting point, so move up or down whenever you like.`),
+      el('p', { class: 'muted', role: 'note' }, DRAFT_NOTE),
       el('a', { class: 'btn', id: 'placement-go', href: '#/learn?lesson=' + start.id }, `Start lesson ${start.id}`),
       fromWelcome ? el('a', { class: 'btn secondary', id: 'placement-week', href: '#/welcome' }, 'See your week') : null,
       el('button', { type: 'button', class: 'btn secondary', id: 'placement-undo', onclick: async () => { await storeSet(ctx, STORE_KEY, record(false)); status.textContent = 'Undone: Home goes back to the first open lesson. Lesson ' + start.id + ' stays open.'; } }, 'Start at the beginning instead'),

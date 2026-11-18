@@ -49,7 +49,7 @@ function setup(A) {
   const prompt = A.h('p', { class: 'arc-prompt' });
   const riverEl = A.h('div', { class: 'g1-river', style: `--cols:${cfg.cols}` });
   A.board.replaceChildren(host(A, 'rimon-fly', 'Wish me luck. Call the stones!'), prompt, riverEl,
-    draftNote(A, 'The far bank is at the top. Israeli sounds.'));
+    draftNote(A, 'The far bank is at the top. Sounds are Israeli.'));
   let syllables = [], n = 0;
   const river = () => {
     if (!T.live()) return;

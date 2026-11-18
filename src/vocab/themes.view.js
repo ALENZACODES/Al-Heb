@@ -92,7 +92,7 @@ export function mount(root, ctx) {
       return el('li', {}, el('button', { type: 'button', class: 'btn secondary th-card', 'data-pack': t.id, onclick: () => openPack(t.id) },
         el('strong', {}, t.title), ' ', el('span', { class: 'th-muted' }, `${plural(t.size, 'word', 'words')}, ${t.withExample} with an example line${sent ? ', sent to your review deck' : ''}`)));
     });
-    setBody(el('p', {}, `${data.count} packs of up to ${data.themeSize} words, grouped by topic and ordered by how often the word appears in Aleph's own texts. Choose one to open it.`), el('ul', { class: 'th-list', 'aria-label': 'Theme packs' }, ...items));
+    setBody(el('p', {}, `${data.count} packs of up to ${data.themeSize} words, grouped by topic, with the most common words first. Choose one to open it.`), el('ul', { class: 'th-list', 'aria-label': 'Theme packs' }, ...items));
     say('');
     state.last = null; save();
     focusNode(h1);

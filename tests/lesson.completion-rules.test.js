@@ -77,7 +77,7 @@ test("pass mark: about 70% right on the first try, rounded to the nearest questi
   assert.equal(P.passed(0, 3), false); assert.equal(P.passed(1, 3), false); assert.equal(P.passed(2, 3), true);
   assert.equal(P.passed(7, 10), true); assert.equal(P.passed(6, 10), false); assert.equal(P.passed(0, 0), false);
   assert.match(P.passRuleText(8), /at least 6 of 8 right on the first try \(75%\)/);
-  assert.match(P.passRuleText(8), /not marked done/); assert.match(P.passRuleText(8), /review cards are still updated/);
+  assert.match(P.passRuleText(8), /not marked done/); assert.match(P.passRuleText(8), /review cards still update/);
   assert.equal(S.passMark, P.passMark, "the lesson loop re-exports the same rule");
 });
 
@@ -88,7 +88,7 @@ test("C-01: a lesson answered 0% on the first try is NOT done: no 'Lesson comple
   const qs = S.buildChoiceQuestions(byId.r04, { ...content, wordPool }, { seed: 1 + lessons.findIndex((l) => l.id === "r04"), tradition: "sephardi" });
   // S-13: the rule and the way to the check sit at the top, before the lesson content
   const rule = root.find((n) => n.attrs.id === "alef-check-rule")[0];
-  assert.ok(rule, "the rule is on the page"); assert.match(rule.text, /To pass: at least \d+ of \d+ right on the first try/);
+  assert.ok(rule, "the rule is on the page"); assert.match(rule.text, /To pass, get at least \d+ of \d+ right on the first try/);
   const ruleAt = root.children[0].children.indexOf(rule), firstSection = root.children[0].children.findIndex((n) => n.tag === "section");
   assert.ok(firstSection < 0 || ruleAt < firstSection, "the rule comes before the lesson's sections");
   const go = by(root, (b) => b.attrs.id === "alef-go-check")[0]; assert.ok(go, "a way straight to the check");
@@ -118,7 +118,7 @@ test("C-01: Test out is a real short test: the lesson content is not shown, the 
   await waitFor(() => by(root, (b) => b.attrs.id === "alef-quick-start")[0]);
   assert.match(root.find((n) => n.tag === "h1")[0].text, /^Test out: /);
   assert.equal(root.find((n) => n.tag === "section" && /^l-/.test(n.attrs["aria-labelledby"] || "")).length, 0, "no lesson sections in a test-out");
-  assert.match(root.text, /To pass: at least \d+ of \d+ right on the first try/);
+  assert.match(root.text, /To pass, get at least \d+ of \d+ right on the first try/);
   const start = by(root, (b) => b.attrs.id === "alef-quick-start")[0];
   assert.equal(start.text, "Start the test"); assert.equal(start.disabled, false, "nothing to scroll through first");
   const qs = questionsFor("r02");
@@ -145,7 +145,8 @@ test("C-01: the Learn list no longer offers 'Mark complete without studying it'"
 test("C-01: the Awards disclaimer states the new rule honestly and still says it is not a reviewed certificate", async () => {
   const { EVIDENCE_SUMMARY } = await import("../src/awards/trust.js");
   assert.match(EVIDENCE_SUMMARY, /70% of its quick check, rounded to the nearest whole question, right on the first try/);
-  assert.match(EVIDENCE_SUMMARY, /review is not done, so nothing on this page is a reviewed certificate/);
+  const { SAMPLE_PAGE_NOTES } = await import("../src/awards/certificate.js");
+  assert.match(SAMPLE_PAGE_NOTES.join(" "), /not an earned certificate/);
   assert.doesNotMatch(EVIDENCE_SUMMARY, /can be stored as complete after wrong answers/);
 });
 

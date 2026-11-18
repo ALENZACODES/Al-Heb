@@ -64,7 +64,7 @@ h8a97b4ba,vocab,נֵזֶר,possible-segolate,nezer,neizer,ne.ˈzeʁ,
 h9d857007,vocab,אֹנֶס,possible-segolate,ones,oynes,o.ˈnes,
 h285cb36d,vocab,צָפוּן,ipa-differs-from-words.json,tzafun,tzofun,tsa.ˈfun,words.json ipa /t͡saˈfon/ vs rules tsa.ˈfun
 h2c50b9c9,vocab,גָּוֶן,possible-segolate,gaven,goven,ɡa.ˈven,
-h63142367,vocab,נְיָר,ipa-differs-from-words.json,neyar,neyor,ne.ˈjaʁ,words.json ipa /niˈjaʁ/ vs rules ne.ˈjaʁ
+h63142367,vocab,נְיָר,ipa-differs-from-words.json,neyar,neyar,ne.ˈjaʁ,words.json ipa /niˈjaʁ/ vs rules ne.ˈjaʁ
 h55a56675,vocab,נָחָשׁ,ipa-differs-from-words.json,nachash,nochosh,na.ˈχaʃ,words.json ipa [naˈχaʃ] vs rules na.ˈχaʃ
 hb629c4c6,vocab,אֵבֶל,possible-segolate,evel,eivel,e.ˈvel,
 hea95e081,vocab,שָׁמַן,ipa-differs-from-words.json,shaman,shoman,ˈʃa.man,words.json ipa /ˈʃe.men/ vs rules ˈʃa.man
@@ -197,7 +197,7 @@ hfb812638,vocab,מָרִיחוּאָנָה,ipa-differs-from-words.json words-ipa
 he2211f78,vocab,אֶרֶס,possible-segolate,eres,eres,e.ˈʁes,
 h6dc83467,vocab,הַלָּךְ,ipa-differs-from-words.json,halakh,halokh,ˈha.laχ,words.json ipa /ˈhe.leχ/ vs rules ˈha.laχ
 hbd2cfc0b,vocab,בַּרְמֶן,possible-segolate,barmen,barmen,baʁ.ˈmen,
-h06440deb,vocab,קָפֶה,possible-segolate,kafeh,kofeh,ka.ˈfe,
+h06440deb,vocab,קָפֶה,possible-segolate,kafeh,kafeh,ka.ˈfe,
 hc863f3a7,vocab,מַחֲבַת,ipa-differs-from-words.json,machavat,machavas,ma.χa.ˈvat,words.json ipa /maχ(a)ˈvat/ vs rules ma.χa.ˈvat
 h6d407969,vocab,כֶּתֶם,possible-segolate,ketem,kesem,ke.ˈtem,
 hea0f73f0,vocab,מִקְנֶה,possible-segolate,mikneh,mikneh,mik.ˈne,
@@ -315,10 +315,10 @@ p311a94b2,vocab,צָהֳרַיִם טוֹבִים,kamatz-katan-before-chataf,tzo
 pcb5e8938,vocab,מָה קוֹרֶה?,possible-segolate,mah koreh?,moh koyreh?,ˈma ko.ˈʁe,
 p74d8e456,vocab,יִהְיֶה בְּסֵדֶר,possible-segolate,yihyeh beseder,yihyeh beseider,jih.ˈje be.se.ˈdeʁ,
 p8e0e58db,vocab,אֵיךְ אוֹמְרִים ... בְּעִבְרִית?,non-hebrew-token,eikh omerim ... be'ivrit?,eikh oymerim ... be'ivris?,ˈeχ o.me.ˈʁim be.iv.ˈʁit,
-pcbc8364a,vocab,אֲנִי רוֹצֶה קָפֶה,possible-segolate,ani rotzeh kafeh,ani roytzeh kofeh,a.ˈni ʁo.ˈtse ka.ˈfe,
-p80064ddc,vocab,קָפֶה הָפוּךְ,possible-segolate,kafeh hafukh,kofeh hofukh,ka.ˈfe ha.ˈfuχ,
-pce477866,vocab,קָפֶה שָׁחוֹר,possible-segolate,kafeh shachor,kofeh shochoyr,ka.ˈfe ʃa.ˈχoʁ,
-p7ec62c43,vocab,קָפֶה עִם חָלָב,possible-segolate,kafeh im chalav,kofeh im cholov,ka.ˈfe ˈim χa.ˈlav,
+pcbc8364a,vocab,אֲנִי רוֹצֶה קָפֶה,possible-segolate,ani rotzeh kafeh,ani roytzeh kafeh,a.ˈni ʁo.ˈtse ka.ˈfe,
+p80064ddc,vocab,קָפֶה הָפוּךְ,possible-segolate,kafeh hafukh,kafeh hofukh,ka.ˈfe ha.ˈfuχ,
+pce477866,vocab,קָפֶה שָׁחוֹר,possible-segolate,kafeh shachor,kafeh shochoyr,ka.ˈfe ʃa.ˈχoʁ,
+p7ec62c43,vocab,קָפֶה עִם חָלָב,possible-segolate,kafeh im chalav,kafeh im cholov,ka.ˈfe ˈim χa.ˈlav,
 p7db1a1b9,vocab,כַּמָּה זֶה עוֹלֶה?,possible-segolate,kamah zeh oleh?,kameh zeh oyleh?,ka.ˈma ˈze o.ˈle,
 p9e16b6d4,vocab,יֵשׁ לָכֶם ...?,non-hebrew-token possible-segolate,yesh lakhem ...?,yeish lokhem ...?,ˈjeʃ la.ˈχem,
 pce7dc6f5,vocab,אֵיזֶה אוֹטוֹבּוּס הוֹלֵךְ לְ...?,possible-segolate,eizeh otobus holekh le...?,eizeh oytoybus hoyleikh le...?,e.ˈze ˈo.to.bus ho.ˈleχ ˈle,
@@ -334,10 +334,10 @@ greetings-04,phrasebook,צָהֳרַיִם טוֹבִים,kamatz-katan-before-ch
 greetings-13,phrasebook,מָה קוֹרֶה?,possible-segolate,mah koreh?,moh koyreh?,ˈma ko.ˈʁe,
 politeness-22,phrasebook,יִהְיֶה בְּסֵדֶר,possible-segolate,yihyeh beseder,yihyeh beseider,jih.ˈje be.se.ˈdeʁ,
 fillers-22,phrasebook,אֵיךְ אוֹמְרִים ... בְּעִבְרִית?,non-hebrew-token,eikh omerim ... be'ivrit?,eikh oymerim ... be'ivris?,ˈeχ o.me.ˈʁim be.iv.ˈʁit,
-cafe-03,phrasebook,אֲנִי רוֹצֶה קָפֶה,possible-segolate,ani rotzeh kafeh,ani roytzeh kofeh,a.ˈni ʁo.ˈtse ka.ˈfe,
-cafe-04,phrasebook,קָפֶה הָפוּךְ,possible-segolate,kafeh hafukh,kofeh hofukh,ka.ˈfe ha.ˈfuχ,
-cafe-06,phrasebook,קָפֶה שָׁחוֹר,possible-segolate,kafeh shachor,kofeh shochoyr,ka.ˈfe ʃa.ˈχoʁ,
-cafe-07,phrasebook,קָפֶה עִם חָלָב,possible-segolate,kafeh im chalav,kofeh im cholov,ka.ˈfe ˈim χa.ˈlav,
+cafe-03,phrasebook,אֲנִי רוֹצֶה קָפֶה,possible-segolate,ani rotzeh kafeh,ani roytzeh kafeh,a.ˈni ʁo.ˈtse ka.ˈfe,
+cafe-04,phrasebook,קָפֶה הָפוּךְ,possible-segolate,kafeh hafukh,kafeh hofukh,ka.ˈfe ha.ˈfuχ,
+cafe-06,phrasebook,קָפֶה שָׁחוֹר,possible-segolate,kafeh shachor,kafeh shochoyr,ka.ˈfe ʃa.ˈχoʁ,
+cafe-07,phrasebook,קָפֶה עִם חָלָב,possible-segolate,kafeh im chalav,kafeh im cholov,ka.ˈfe ˈim χa.ˈlav,
 shop-01,phrasebook,כַּמָּה זֶה עוֹלֶה?,possible-segolate,kamah zeh oleh?,kameh zeh oyleh?,ka.ˈma ˈze o.ˈle,
 shop-08,phrasebook,יֵשׁ לָכֶם ...?,non-hebrew-token possible-segolate,yesh lakhem ...?,yeish lokhem ...?,ˈjeʃ la.ˈχem,
 taxi-11,phrasebook,אֵיזֶה אוֹטוֹבּוּס הוֹלֵךְ לְ...?,possible-segolate,eizeh otobus holekh le...?,eizeh oytoybus hoyleikh le...?,e.ˈze ˈo.to.bus ho.ˈleχ ˈle,

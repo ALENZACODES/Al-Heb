@@ -26,8 +26,7 @@ const PEOPLE = { m: 'Ari', f: 'Noa' };
 export const mirrorItems = (items, cfg) => items.filter((x) => { const d = genderDiff(x.m, x.f); return d && d.length && cfg.who.includes(x.who) && (!cfg.max || d.length <= cfg.max) && (!cfg.min || d.length >= cfg.min); });
 
 function setup(A) {
-  const { T, big, prompt, area } = begin(A, 'noa', 'Same line, other person. What changes?',
-    'Lines from the gender pairs and the phrasebook, both forms as written there. Not reviewed by a teacher.');
+  const { T, big, prompt, area } = begin(A, 'noa', 'Same line, other person. What changes?');
   const cfg = A.cfg, rnd = A.rnd;
   let items = [], n = 0;
   const next = () => { if (n >= ROUNDS || !items.length) { T.end({ won: true }); return; } n += 1; ask(items[(n - 1) % items.length]); };

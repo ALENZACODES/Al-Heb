@@ -19,18 +19,16 @@ test('no learner-facing text calls self-rating or completion measured mastery', 
   }
 });
 
-test('every place that speaks about voices says no recordings exist and that browser speech is not a recording', () => {
+test('the voices are described once, plainly: About says they are computer-generated; nothing calls them human recordings', () => {
   const must = [
     ['src/shell/plain-copy.js', /Ari \(man\) or Noa \(woman\)/], // was /does not change the sound yet/, which was false for Man + Israeli
-    ['src/shell/about.view.js', /audioTruthNode/], // the about line (no recorded teacher, synthetic clips) is built in src/shell/audio-truth.js; tests/audio.truth.test.js
+    ['src/shell/about.view.js', /audioTruthNode/], // the about line (computer-generated voices) is built in src/shell/audio-truth.js; tests/audio.truth.test.js
     ['src/shell/settings.view.js', /href: '#\/about'/], // Settings links to About, where the sound statement lives (one place for notes)
-    ['src/shell/audio-truth.js', /no recorded teacher/],
-    ['src/shell/how.view.js', /No human or studio recordings exist yet/],
-    ['src/shell/offline.view.js', /not a recording/],
-    ['src/shell/a11y.statement.js', /no recorded voices ship yet/],
-    ['src/app.js', /No recordings\./],
+    ['src/shell/audio-truth.js', /computer-generated/],
+    ['src/shell/a11y.statement.js', /computer-generated/],
   ];
   for (const [f, re] of must) assert.match(read(f), re, f);
+  for (const f of ['src/shell/how.view.js', 'src/shell/offline.view.js', 'src/app.js']) assert.doesNotMatch(read(f), /recorded teacher|native[- ]recorded|human[- ]recorded/i, f);
   // the audio labels keep the two apart
   const lab = read('src/shell/audio-labels.js');
   assert.match(lab, /Recorded by a human reader/);

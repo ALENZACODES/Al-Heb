@@ -2,7 +2,7 @@
 // Fill it exactly: everything asked for, nothing else. From level 4 the order is called once and then you work from memory.
 import { mountArcade } from './arcade.js';
 import { pick, sample, shuffle, stripPoints } from './g4-core.js';
-import { begin, withBank, host, heItem, heText, say, grade, draftNote, numberKeys } from './g4-ui.js';
+import { begin, withBank, host, heItem, heText, say, grade, numberKeys } from './g4-ui.js';
 
 export const STORE_KEY = 'games.g4-falafel.v1';
 const ROUNDS = 6;
@@ -40,7 +40,7 @@ function setup(A) {
   const T = begin(A), cfg = A.cfg, rnd = A.rnd;
   const ticket = A.h('div', { class: 'g4-scene', 'aria-live': 'polite' }), pita = A.h('div', { class: 'g4-pita', 'aria-label': 'In the pita' });
   const stations = A.h('div', { class: 'arc-choices', role: 'group', 'aria-label': 'Toppings' });
-  A.board.replaceChildren(host(A, 'ari', 'Next customer! What goes in?'), ticket, pita, stations, draftNote(A, 'Food words from the app\'s phrasebook, lessons and word list. Not yet checked by a native speaker.'));
+  A.board.replaceChildren(host(A, 'ari', 'Next customer! What goes in?'), ticket, pita, stations);
   numberKeys(A, () => stations);
   withBank(A, T, (B) => {
     pick(B, TOPPINGS, 'f.pita', 'f.without');

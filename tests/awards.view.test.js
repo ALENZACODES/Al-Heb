@@ -23,16 +23,15 @@ async function show(init = {}, extra = {}) {
 
 test('first visit explains evidence, locks mastery, and watermarks the sample', async () => {
   const { root, store, text } = await show();
-  assert.match(text, /First visit to Awards on this browser/);
-  assert.match(text, /no sign-in/);
-  assert.match(text, /Evidence missing/);
-  assert.match(text, /Confirmed criteria: none/);
-  assert.match(text, /awaiting-review/);
+  assert.match(text, /Earn badges as you practice/);
+  assert.match(text, /no account needed/);
+  assert.match(text, /Not yet\./);
+  assert.match(text, /40 skills from the White belt and Yellow belt lessons/);
+  assert.match(text, /This badge is not open yet/);
   assert.match(text, /Design proof/);
   assert.match(text, /Type your name/);
-  assert.match(text, /Name panel empty/);
-  assert.match(text, /Approved artwork: 0/);
-  assert.match(text, /Name panel empty/);
+  assert.match(text, /Your name here/);
+  assert.doesNotMatch(text, /Approved artwork|awaiting-review|Evidence missing|streak engine|src\/[a-z]/);
   const face = root.querySelector('#award-certificate').textContent;
   assert.match(face, /Design proof/);
   assert.doesNotMatch(face, /SAMPLE \/ NOT EARNED/);
@@ -47,11 +46,10 @@ test('first visit explains evidence, locks mastery, and watermarks the sample', 
   assert.doesNotMatch(face, /CE#|Accreditation No|SAMPLE-0001|continuing-education|continuing education/);
   assert.doesNotMatch(face, /tamper-proof|verification website|seal of office/);
   const notes = root.querySelector('#award-sample-notes').textContent;
-  assert.match(notes, /Approved artwork: 0/);
-  assert.match(notes, /verification website/);
+  assert.match(notes, /not an earned certificate/);
+  assert.match(notes, /no website that checks certificates/);
   assert.match(notes, /tamper-proof/);
-  assert.match(text, /Activity, not mastery|activity, not mastery/);
-  assert.match(text, /Email is not offered/);
+  assert.match(text, /Badges celebrate your practice, not test scores/);
   assert.doesNotMatch(text, /mailto:|Sign in|signed in|FMVA|\bCFI\b/);
   assert.doesNotMatch(text, /is an accredited|accredited by/);
   const locked = [...root.queryAll('li[data-state="locked"]'), ...root.queryAll('p[data-state="locked"]')];
@@ -96,9 +94,9 @@ test('a typed name is escaped, a saved name survives reload, and the sample stay
   await root.querySelector('#award-save-name').click();
   assert.equal(store.m[AWARDS_KEY].displayName, '<img src=x onerror=alert(1)> & "quotes"');
   assert.equal(store.m[AWARDS_KEY].certificateEarned, undefined);
-  assert.match(root.querySelector('#award-status').textContent, /not an account and not a certificate/);
+  assert.match(root.querySelector('#award-status').textContent, /Name saved for the sample/);
   const again = await show({}, { store });
-  assert.match(again.root.querySelector('#award-visit').textContent, /opened Awards on this browser before/);
+  assert.match(again.root.querySelector('#award-visit').textContent, /Welcome back/);
   assert.equal(again.root.querySelector('[data-cert-name]').textContent, '<img src=x onerror=alert(1)> & "quotes"');
   assert.equal(again.root.querySelector('.aw-name-empty'), null);
   await again.root.querySelector('#award-jump').click();
@@ -113,7 +111,7 @@ test('wrong answers, self-marks, and legacy completion never certify; games reco
   };
   const { root, store, text } = await show(init);
   assert.match(text, /Earned/);
-  assert.match(text, /Activity, not mastery/);
+  assert.match(text, /Earned\. You finished a practice game/);
   assert.equal(root.querySelector('[data-badge="game-session"]').getAttribute('data-state'), 'earned');
   assert.equal(root.querySelector('[data-badge="game-return"]').getAttribute('data-state'), 'earned');
   assert.equal(root.querySelector('[data-badge="beginner-completion"]').getAttribute('data-state'), 'locked');
@@ -139,7 +137,7 @@ test('wrong answers, self-marks, and legacy completion never certify; games reco
   assert.match(pdf, /841\.89 595\.28/);
   assert.equal(shared.length, 1);
   assert.match(shared[0].text, /Design proof/);
-  assert.match(shared[0].text, /has not been assessed/);
+  assert.match(shared[0].text, /not an earned one/);
   assert.equal(shared[0].files, undefined);
   assert.equal(again.store.m[AWARDS_KEY].certificateEarned, undefined);
 });
@@ -148,7 +146,7 @@ test('storage denied and a second reload do not invent an earned certificate', a
   const store = { persistent: false, get() { return null; }, set() { throw new Error('denied'); } };
   const { root, text } = await show({}, { store });
   assert.match(text, /refused to save/);
-  assert.match(text, /Nothing new was marked earned/);
+  assert.match(text, /nothing new was marked earned/);
   assert.equal(root.querySelector('[data-badge="game-session"]').getAttribute('data-state'), 'locked');
   assert.match(text, /Design proof/);
   const src = readFileSync(new URL('../src/awards/gallery.view.js', import.meta.url), 'utf8');

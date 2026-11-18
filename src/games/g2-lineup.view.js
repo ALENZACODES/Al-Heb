@@ -2,7 +2,7 @@
 // grandfather to grandson, a fly to an elephant. Tap them in order; the line fills from the right.
 import { mountArcade } from './arcade.js';
 import { shuffle, lineupItems, stepIn } from './g2-core.js';
-import { start, host, grade, numberKeys, draftNote, word, orderBoard } from './g2-ui.js';
+import { start, host, grade, numberKeys, word, orderBoard } from './g2-ui.js';
 
 export const STORE_KEY = 'games.g2-lineup.v1';
 
@@ -37,8 +37,7 @@ function setup(A) {
   const prompt = A.h('p', { class: 'arc-prompt' });
   const area = A.h('div');
   const after = A.h('p', { class: 'muted', 'aria-live': 'polite' });
-  A.board.replaceChildren(host(A, 'ari', 'Everything in its place.'), prompt, area, after,
-    draftNote(A, 'Words come from the app\'s word lists (Friday from the reading books). A native reader has not checked them yet.'));
+  A.board.replaceChildren(host(A, 'ari', 'Everything in its place.'), prompt, area, after);
   numberKeys(A, () => area.querySelector('.tg-tray'));
   start(A, (D, T) => {
     const lines = shuffle(cfg.sets, rnd);

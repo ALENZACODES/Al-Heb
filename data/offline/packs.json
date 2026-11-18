@@ -89,12 +89,12 @@
     ],
     [
      "data/letters/memory-chain.json",
-     39600,
+     40770,
      1
     ],
     [
      "data/letters/mnemonics.json",
-     29336,
+     28739,
      1
     ],
     [
@@ -139,7 +139,7 @@
     ],
     [
      "src/curriculum/audio-ui.js",
-     4897,
+     4859,
      1
     ],
     [
@@ -194,7 +194,7 @@
     ],
     [
      "src/curriculum/ex-ui.js",
-     4591,
+     4458,
      1
     ],
     [
@@ -224,7 +224,7 @@
     ],
     [
      "src/curriculum/gender.view.js",
-     12139,
+     11709,
      0
     ],
     [
@@ -249,12 +249,12 @@
     ],
     [
      "src/curriculum/ladder.view.js",
-     7820,
+     7516,
      0
     ],
     [
      "src/curriculum/learn.view.js",
-     17961,
+     17894,
      1
     ],
     [
@@ -289,7 +289,7 @@
     ],
     [
      "src/curriculum/passmark.js",
-     2301,
+     2284,
      1
     ],
     [
@@ -379,7 +379,7 @@
     ],
     [
      "src/letters/memorycard.js",
-     26834,
+     27261,
      1
     ],
     [
@@ -413,8 +413,13 @@
      0
     ],
     [
+     "src/pronunciation/everyday.js",
+     2442,
+     1
+    ],
+    [
      "src/pronunciation/forTradition.js",
-     9913,
+     9134,
      1
     ],
     [
@@ -439,7 +444,7 @@
     ],
     [
      "src/pronunciation/transliterate.js",
-     13087,
+     13464,
      1
     ],
     [
@@ -459,7 +464,7 @@
     ],
     [
      "src/shell/audio-truth.js",
-     6162,
+     5740,
      1
     ],
     [
@@ -519,7 +524,7 @@
     ],
     [
      "src/shell/plain-copy.js",
-     3437,
+     3104,
      1
     ],
     [
@@ -574,7 +579,7 @@
     ],
     [
      "src/shell/router.js",
-     49456,
+     49457,
      1
     ],
     [
@@ -716,7 +721,7 @@
     ],
     [
      "src/corpus/read.view.js",
-     37296,
+     37070,
      1
     ],
     [
@@ -746,7 +751,7 @@
     ],
     [
      "src/firstday/model.js",
-     5324,
+     5176,
      1
     ],
     [
@@ -771,12 +776,17 @@
     ],
     [
      "src/progress/model.js",
-     30506,
+     30228,
+     1
+    ],
+    [
+     "src/pronunciation/everyday.js",
+     2442,
      1
     ],
     [
      "src/pronunciation/forTradition.js",
-     9913,
+     9134,
      1
     ],
     [
@@ -796,7 +806,7 @@
     ],
     [
      "src/pronunciation/transliterate.js",
-     13087,
+     13464,
      1
     ],
     [
@@ -806,7 +816,7 @@
     ],
     [
      "src/service/service.view.js",
-     12590,
+     12585,
      0
     ],
     [
@@ -861,7 +871,7 @@
     ],
     [
      "src/timedread/model.js",
-     6010,
+     5982,
      1
     ],
     [
@@ -928,12 +938,12 @@
     ],
     [
      "data/letters/memory-chain.json",
-     39600,
+     40770,
      1
     ],
     [
      "data/letters/mnemonics.json",
-     29336,
+     28739,
      1
     ],
     [
@@ -978,7 +988,7 @@
     ],
     [
      "src/curriculum/audio-ui.js",
-     4897,
+     4859,
      1
     ],
     [
@@ -1048,7 +1058,7 @@
     ],
     [
      "src/curriculum/passmark.js",
-     2301,
+     2284,
      1
     ],
     [
@@ -1113,7 +1123,7 @@
     ],
     [
      "src/letters/memorycard.js",
-     26834,
+     27261,
      1
     ],
     [
@@ -1142,8 +1152,13 @@
      0
     ],
     [
+     "src/pronunciation/everyday.js",
+     2442,
+     1
+    ],
+    [
      "src/pronunciation/forTradition.js",
-     9913,
+     9134,
      1
     ],
     [
@@ -1163,7 +1178,7 @@
     ],
     [
      "src/pronunciation/transliterate.js",
-     13087,
+     13464,
      1
     ],
     [
@@ -1183,7 +1198,7 @@
     ],
     [
      "src/shell/audio-truth.js",
-     6162,
+     5740,
      1
     ],
     [
@@ -1213,7 +1228,7 @@
     ],
     [
      "src/shell/plain-copy.js",
-     3437,
+     3104,
      1
     ],
     [

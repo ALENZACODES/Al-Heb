@@ -77,7 +77,7 @@ test('vowelSound / letterSound read the tradition from the pronunciation data', 
 test('audioNote never claims a non-Israeli voice', () => {
   assert.match(FT.audioNote('israeli'), /reads it in Israeli Hebrew/);
   for (const t of ['ashkenazi']) { const n = FT.audioNote(t); assert.match(n, /Israeli clip/); assert.match(n, /Ashkenazi reading is shown in English letters/); assert.doesNotMatch(n, /Ashkenazi recording|certified Ashkenazi/); }
-  const sep = FT.audioNote('sephardi'); assert.match(sep, /Sephardi clip is in the audio bank/); assert.match(sep, /Israeli clip/); assert.doesNotMatch(sep, /Sephardi recording exists|certified Sephardi/);
+  const sep = FT.audioNote('sephardi'); assert.match(sep, /Sephardi reading is shown in English letters/); assert.match(sep, /Israeli clip/); assert.doesNotMatch(sep, /Sephardi recording exists|certified Sephardi/);
   assert.equal(FT.audioNote('ashkenazi', { hasRecording: true }), '');
   assert.equal(FT.israeliOnly(), 'israeli');
 });
@@ -134,7 +134,7 @@ test('no pronunciation file calls settings.set("congregation", ...) with the wro
 test('audioSupport: never promises recorded or non-Israeli sound that does not exist', () => {
   assert.equal(FT.audioSupport('israeli').supported, 'device');
   const sep = FT.audioSupport('sephardi');
-  assert.equal(sep.supported, 'device'); assert.match(sep.line, /Sephardi clip is in the audio bank/);
+  assert.equal(sep.supported, 'device'); assert.match(sep.line, /Sephardi reading is shown in English letters/);
   for (const t of ['ashkenazi']) {
     const s = FT.audioSupport(t);
     assert.equal(s.supported, 'none'); assert.equal(s.deviceVoice, false); assert.match(s.line, /English letters/);

@@ -38,7 +38,7 @@ export const RIMON_LINES = Object.freeze({
 /** Screens in the first run, in order: the progress bar counts these. Israel skips the pronunciation screen. */
 export const firstRunPages = (goal) => (goal === 'israel' ? ['level', 'goal', 'daily', 'plan'] : ['level', 'goal', 'daily', 'congregation', 'plan']);
 
-export const DRAFT_NOTE = 'Draft: no learner has tried this plan yet. The minutes are goals, not measurements. The plan has one lesson a day and starts with the lesson shown on Home. It updates as you finish lessons.';
+export const DRAFT_NOTE = 'Your plan has one lesson a day, starting with the lesson shown on Home. The minutes are goals, and the plan updates as you finish lessons.';
 
 export function mount(root, ctx) {
   const { settings, store } = ctx;
@@ -143,7 +143,7 @@ export function mount(root, ctx) {
       if (real && page !== 'daily') { nextPage(); return; }
       submit();
     } },
-      pageBox('level', levelFs, h('p', { class: 'muted' }, 'Not sure? Choose “Starting from zero” for a gentle introduction. Or skip the questions: press “Skip the questions and start” under Continue.')),
+      pageBox('level', levelFs, h('p', { class: 'muted' }, 'Not sure? Choose “I’m new to Hebrew”. Or skip the questions with “Skip the questions and start” below.')),
       pageBox('goal', goalFs),
       pageBox('daily', dailyFs),
       next,
@@ -170,7 +170,7 @@ export function mount(root, ctx) {
     function askForLevel() {
       // Said next to the button AND shown at the question, which is scrolled into view: the learner sees what is missing, not an unchanged page.
       say('Choose one answer to continue.');
-      next.textContent = 'First, choose how much Hebrew you can read today (question 1, above). Not sure? Choose “Starting from zero”.';
+      next.textContent = 'First, choose how much Hebrew you can read today (question 1, above). Not sure? Choose “I’m new to Hebrew”.';
       if (page !== 'level') showPage('level');
       const first = form.querySelector('#ob-letters-none');
       try { first?.closest?.('fieldset')?.scrollIntoView?.({ block: 'start', behavior: 'smooth' }); } catch { /* old browsers */ }
@@ -190,7 +190,7 @@ export function mount(root, ctx) {
       go(israelNow ? 'plan' : 'congregation');
     };
     // Lane 6 (points plan #17): "Not a beginner? Find your level" goes straight to the placement check (about 10 minutes). The level answer
-    // is the one picked, or "I recognize some letters" when none is picked (every answer but "Starting from zero" leads to the same check).
+    // is the one picked, or "I know some letters" when none is picked (every answer but "I'm new to Hebrew" leads to the same check).
     function findLevel() {
       rec = answerLetters(rec, picked && picked !== 'none' ? picked : 'some', nowISO());
       if (DAILY_GOALS.includes(daily)) { rec = { ...rec, minutesPerDay: daily }; try { store.set(DAILY_GOAL_KEY, daily); } catch { /* best effort */ } }
@@ -217,9 +217,9 @@ export function mount(root, ctx) {
       if (typeof ctx.route === 'function') ctx.route('/'); else { try { globalThis.location.hash = '#/'; } catch { /* tests */ } }
     }
     body.replaceChildren(h('p', { class: 'ob-lede' }, 'Let’s find a comfortable place to begin. Tell us what you can read now, then choose what you want to learn.'),
-      h('p', { class: 'ob-home-link' }, h('a', { href: '#/', class: 'btn secondary', onclick: (e) => { e.preventDefault(); goHome(); } }, 'Look around first: go to Home'), ' Every lesson, test and game is open from there.'),
+      h('p', { class: 'ob-home-link' }, h('a', { href: '#/', class: 'btn secondary', onclick: (e) => { e.preventDefault(); goHome(); } }, 'Look around first'), ' Every lesson, test and game is open from Home.'),
       form,
-      h('p', { class: 'muted ob-fine' }, 'Your answer is saved only on this device. ', h('a', { href: '#/privacy' }, 'Privacy'), ' · ', h('a', { href: '#/terms' }, 'Terms'), '. ', h('a', { href: '#/how' }, 'How this works'), '. ', h('a', { href: '#/accessibility', id: 'ob-a11y-link' }, 'Accessibility options'), '.'));
+      h('p', { class: 'muted ob-fine' }, 'Your answer is saved only on this device. ', h('a', { href: '#/privacy' }, 'Privacy'), ' · ', h('a', { href: '#/terms' }, 'Terms'), '. ', h('a', { href: '#/how' }, 'How Aleph works'), '. ', h('a', { href: '#/accessibility', id: 'ob-a11y-link' }, 'Accessibility options'), '.'));
     showPage(page);
   }
 
@@ -239,7 +239,7 @@ export function mount(root, ctx) {
     const denomFs = fieldset('Which branch of Judaism are you part of? (optional)', 'Optional. It does not change your lessons.',
       ...DENOMINATIONS.map((d) => radio('denomination', d.id, d.label, d.changes, denom === d.id, onDenom)));
     const denomMore = h('details', { class: 'ob-more' }, h('summary', {}, 'Optional: your branch of Judaism'), denomFs); // kept out of the first screen so Continue and Skip stay visible
-    const pronFs = fieldset('Which pronunciation style do you want?', 'It changes the sounds you hear and read. Change it any time in Settings.',
+    const pronFs = fieldset('Which pronunciation style do you want?', 'It sets how Hebrew is written in English letters. Change it any time in Settings.',
       ...PRONUNCIATIONS.map((p) => { const l = radio('pron', p.id, p.label, p.changes, pron === p.id, (v) => { pron = v; pronPicked = true; refreshSound(); }); pronInputs[p.id] = l.querySelector(`#ob-pron-${p.id}`) || l.children?.[0]; return l; }));
     const note = soundNote(pron);
     const refreshSound = () => { const s2 = supportOf(pron); note.textContent = s2.line; note.setAttribute('data-audio-support', s2.supported); };
@@ -295,7 +295,7 @@ export function mount(root, ctx) {
     const weekCard = plan
       ? h('section', { class: 'card ob-plan', 'aria-labelledby': 'ob-plan-h' },
         h('h2', { id: 'ob-plan-h' }, 'Your week'),
-        h('p', { class: 'draft-flag', role: 'note' }, DRAFT_NOTE),
+        h('p', { class: 'muted', role: 'note' }, DRAFT_NOTE),
         h('p', {}, `Your goal is ${plan.minutesPerDay} minutes a day. Some lessons take longer than that: stop whenever you like, and the lesson opens where you stopped.${plan.source === 'placement' || /placement/.test(plan.note) ? ' ' + plan.note : ''}`),
         h('ol', { class: 'ob-days' }, ...plan.days.map(dayNode)))
       : h('p', { role: 'note' }, loadError ? 'The plan did not load, so there is no week plan yet. Your starting point still works.' : 'Building your week...');

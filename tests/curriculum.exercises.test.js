@@ -120,7 +120,7 @@ test("ladder view: plays the sound, two RTL cards, keyboard answers, saves level
   played.length = 0;
   const store = memStore(); const root = new Node_("div");
   const un = mountLearn(root, ctxFor(store, { ladder: "1", seed: "4" })); await waitFor(() => /Level 1 of 30/.test(root.text) && played.length > 0 && root.find((n) => n.attrs["data-option"]).length === 2, { message: "/Level 1 of 30/.test(root.text) && played.length > 0 && root.find((n) => n.attrs[\"data-option\"]).length === 2" });
-  assert.match(root.text, /Draft/); assert.match(root.text, /Level 1 of 30/);
+  assert.doesNotMatch(root.text, /Draft/); assert.match(root.text, /Level 1 of 30/);
   assert.equal(played[0][0], "syllable");
   const cards = root.find((n) => n.attrs["data-option"]);
   assert.equal(cards.length, 2);
@@ -279,7 +279,7 @@ test("gender pairs view: own form first, voice selector passes the voice to ctx.
   const audio = audioMock((k, i) => i === "gp-04-m" || i === "gp-04-f"); // pretend one authored pair has files
   const store = memStore(); const root = new Node_("div");
   const un = mountLearn(root, ctxFor(store, { gender: "pairs" }, { audio })); await waitFor(() => /No audio yet/.test(root.text), { message: "/No audio yet/.test(root.text)" });
-  assert.match(root.text, /Draft/); assert.match(root.text, /No audio yet/);
+  assert.doesNotMatch(root.text, /Draft/); assert.match(root.text, /No audio yet/);
   assert.match(root.text, /pair cards:/); assert.match(root.text, /paradigms, counted separately/);
   assert.doesNotMatch(root.text, /70\s*\+/);
   const first = root.find((n) => n.attrs["data-pair"] === "gp-04")[0];
@@ -302,7 +302,7 @@ test("gender quiz view: reading questions when there is no audio, tap question g
   assert.match(root.text, /Question 1 of 8/);
   for (let i = 0; i < 8; i++) {
     const which = root.find((n) => n.attrs["data-answer"]);
-    if (which.length) { assert.match(root.text, /No audio yet/); await which[0].click(); }
+    if (which.length) { assert.match(root.text, /Listen, then say who it is|No audio yet for this one/); await which[0].click(); }
     else { assert.ok(root.find((n) => n.attrs["data-cluster"] !== undefined).length >= 3); await btn(root, /^Check/).click(); }
     await waitFor(() => btn(root, /^(Next|See results)/), { message: "Next/See results never shown" });
     await btn(root, /^(Next|See results)/).click();
@@ -360,7 +360,7 @@ test("scaffold wiring: rating a word card in review updates the stored scaffold;
   // view: stored level 1 = faint
   const s2 = memStore({ "srs.cards": { "word:r01:1": { ...card } }, "curriculum.scaffold": { "word:r01:1": { level: 3, pinned: false, advancedOn: null } } });
   const root = new Node_("div"); mountLearn(root, ctxW(s2)); await waitFor(() => /Latin help: Hidden/.test(root.text), { message: "/Latin help: Hidden/.test(root.text)" });
-  assert.match(root.text, /Draft/); assert.match(root.text, /Latin help: Hidden/);
+  assert.doesNotMatch(root.text, /Draft/); assert.match(root.text, /Latin help: Hidden/);
   assert.equal(root.find((n) => /alef-latin/.test(n.className))[0].text, "");
   await btn(root, /Pin the Latin letters on/).click(); await waitFor(() => /Latin help: Shown \(pinned\)/.test(root.text), { message: "/Latin help: Shown \\(pinned\\)/.test(root.text)" });
   assert.match(root.text, /Latin help: Shown \(pinned\)/);

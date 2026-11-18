@@ -73,33 +73,34 @@ test('every counted clip has its mp3 on disk, and there is no mp3 the summary do
 });
 
 test('the statement: exact wording, count and coverage read from the summary', () => {
-  assert.equal(audioTruthLine(summary), `${summary.spoken.toLocaleString('en-US')} Hebrew clips in a synthetic voice (a man's and a woman's; no recorded teacher, unreviewed by native speakers) cover letters, vowels, syllables, words, lines, prayers, book pages and games; where none exists the app uses your device voice when it has a Hebrew voice.`);
+  assert.equal(audioTruthLine(summary), `Ari and Noa read ${summary.spoken.toLocaleString('en-US')} Hebrew clips: letters, vowels, syllables, words, lines, prayers, book pages and games. Their voices are computer-generated. Where a word has no audio yet, your device's own Hebrew voice reads it, if it has one.`);
   assert.equal(clipCoverage(summary), 'letters, vowels, syllables, words, lines, prayers, book pages and games');
   for (const k of ['letter', 'vowel', 'syllable', 'word', 'line', 'prayer']) assert.ok(summary.kinds[k] > 0, `${k} clips exist, so the list may name them`);
   for (const k of ['book', 'games']) assert.ok(summary.extra[k] > 0, `${k} clips exist, so the list may name them`);
-  assert.equal(audioTruthLine({ total: 10, recorded: 0, tts: 3 }), "3 Hebrew clips in a synthetic voice (a man's and a woman's; no recorded teacher, unreviewed by native speakers); where none exists the app uses your device voice when it has a Hebrew voice.");
-  assert.match(audioTruthLine({ total: 10, recorded: 0, tts: 1 }), /^1 Hebrew clip in /);
+  assert.equal(audioTruthLine({ total: 10, recorded: 0, tts: 3 }), "Ari and Noa read 3 Hebrew clips. Their voices are computer-generated. Where a word has no audio yet, your device's own Hebrew voice reads it, if it has one.");
+  assert.match(audioTruthLine({ total: 10, recorded: 0, tts: 1 }), /^Ari and Noa read 1 Hebrew clip\./);
   assert.equal(clipCoverage({ kinds: { word: 2 }, extra: { games: 1 } }), 'words and games');
   assert.equal(clipCoverage({ kinds: { word: 2 } }), 'words');
-  assert.match(audioTruthLine({ total: 10, recorded: 0, tts: 0 }), /^No audio clips are included; no recorded teacher/);
+  assert.match(audioTruthLine({ total: 10, recorded: 0, tts: 0 }), /^Aleph has no audio clips yet/);
 });
 
-test('the statement never claims more: unknown counts give no number; recordings stop the "no recorded teacher" claim', () => {
+test('the statement never claims more: unknown counts give no number; recordings are named only when they exist', () => {
   for (const bad of [null, undefined, {}, { total: 5 }, { total: 5, recorded: 0 }, { total: 'x', recorded: 0, tts: 1 }]) { assert.equal(audioTruthLine(bad), AUDIO_UNKNOWN); assert.doesNotMatch(AUDIO_UNKNOWN, /\d/); }
   const withRec = audioTruthLine({ total: 10, recorded: 2, tts: 3 });
-  assert.doesNotMatch(withRec, /no recorded teacher/); assert.match(withRec, /2 recorded clips/);
+  assert.doesNotMatch(withRec, /Their voices are computer-generated/); assert.match(withRec, /2 recorded clips/);
   const lines = [audioTruthLine(summary), audioTruthDetail(summary), AUDIO_UNKNOWN, bannerText(summary, 'yes')].join(' ');
   assert.doesNotMatch(lines, /audio (is )?available|native[- ](speaker )?(recorded|voice)|recorded by (a )?native|\bnative audio\b|human[- ]recorded|professionally/i);
-  assert.match(audioTruthDetail(summary), /Israeli style has not been verified/);
+  assert.match(audioTruthLine(summary), /computer-generated/);
+  assert.match(audioTruthDetail(summary), /Sephardi and Ashkenazi settings play the Israeli clip/);
   assert.equal(audioTruthDetail({ total: 10, recorded: 0, tts: 0 }), '');
 });
 
 test('readiness audio line takes every number from the data it is given', () => {
   const a = readinessLines({ audio: { total: 1234, recorded: 0, tts: 7 } }).find((l) => l.id === 'audio').text;
-  assert.match(a, /^Audio: not ready\. 7 Hebrew clips in a synthetic voice/); assert.match(a, /7 of 1,234 planned clips exist, and none is a person recording/);
+  assert.match(a, /^Audio: not ready\. Ari and Noa read 7 Hebrew clips/); assert.match(a, /7 of 1,234 planned clips exist, and none is a person recording/);
   assert.doesNotMatch(a, /outside that plan/, 'no extra clips were given, so none are claimed');
   const b = readinessLines({ audio: { total: 99, recorded: 0, tts: 2 } }).find((l) => l.id === 'audio').text;
-  assert.match(b, /^Audio: not ready\. 2 Hebrew clips/); assert.match(b, /2 of 99 planned/); assert.doesNotMatch(b, /\b7\b|1,234/);
+  assert.match(b, /^Audio: not ready\. Ari and Noa read 2 Hebrew clips/); assert.match(b, /2 of 99 planned/); assert.doesNotMatch(b, /\b7\b|1,234/);
   const c = readinessLines({ audio: summary }).find((l) => l.id === 'audio').text;
   assert.ok(c.includes(summary.total.toLocaleString('en-US')) && c.includes(`${summary.spoken.toLocaleString('en-US')} Hebrew clips`));
   assert.ok(c.includes(`${(summary.spoken - summary.tts).toLocaleString('en-US')} more clips (book pages, arcade lines and opening prayers) are outside that plan`), c);
@@ -119,15 +120,15 @@ test('audioTruthNode: one source — the build-time totals (counts.generated.js,
   const n = audioTruthNode(h, { fetchFn: async () => { fetched++; return { ok: false }; } });
   const sm = TOTALS.audio.summary;
   assert.ok(sm && Number.isFinite(sm.spoken), 'the generated totals carry the summary figures');
-  assert.match(n.textContent, new RegExp(`^Sound: ${sm.spoken.toLocaleString('en-US')} Hebrew clips in a synthetic voice`));
+  assert.match(n.textContent, new RegExp(`^Sound: Ari and Noa read ${sm.spoken.toLocaleString('en-US')} Hebrew clips`));
   await new Promise((r) => setTimeout(r, 0));
   assert.equal(fetched, 0, 'no run-time read of summary.json when the generated totals have it');
   assert.deepEqual(Object.fromEntries(['total', 'recorded', 'tts', 'spoken'].map((k) => [k, sm[k]])), Object.fromEntries(['total', 'recorded', 'tts', 'spoken'].map((k) => [k, JSON.parse(read('data/audio/summary.json'))[k]])), 'generated copy matches summary.json');
   assert.equal(await loadAudioSummary(async () => ({ ok: false })), null);
 });
 
-test('about and how screens use the data-driven node, not typed counts; settings links to About instead of repeating it', () => {
-  for (const f of ['src/shell/about.view.js', 'src/shell/how.view.js']) assert.match(read(f), /audioTruthNode\(/, f);
+test('About uses the data-driven node, not typed counts; settings links to About instead of repeating it', () => {
+  assert.match(read('src/shell/about.view.js'), /audioTruthNode\(/);
   assert.match(read('src/shell/settings.view.js'), /href: '#\/about'/);
   assert.doesNotMatch(read('src/shell/settings.view.js'), /\d{1,3},\d{3} Hebrew clips/);
   assert.doesNotMatch(read('src/shell/how.view.js'), /no synthetic voice files exist/i);

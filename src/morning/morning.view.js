@@ -86,7 +86,6 @@ export async function mount(root, ctx) {
       v ? el("section", { "aria-labelledby": "mrn-vh" }, el("h2", { id: "mrn-vh" }, "A Verse for the Morning"), hebrewLine(v.hebrew, v.tr, v.english_jps1917), el("p", { class: "mrn-ref" }, v.source_ref, " (JPS 1917)"))
         : el("section", {}, el("p", {}, problem ? "Today's verse is unavailable right now." : "Loading...")),
       modeh ? el("section", { "aria-labelledby": "mrn-mh" }, el("h2", { id: "mrn-mh" }, "Modeh Ani"), hebrewLine(modeh.he, modeh.tr, modeh.english),
-        modeh.needsCheck ? el("p", { class: "mrn-flag" }, "The feminine form is derived and not yet checked by a Hebrew educator.") : null,
         audioButton(el, ctx, { kind: "line", id: MODEH_ANI_ID, text: modeh.he, label: "Play", class: "btn alef-play" })) : null,
       streakVisible(ctx) ? el("section", { "aria-labelledby": "mrn-sh" }, el("h2", { id: "mrn-sh" }, "Your streak"), streakPanel(model)) : null,
       settings);

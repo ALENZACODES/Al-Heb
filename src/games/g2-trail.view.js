@@ -3,7 +3,7 @@
 // that lead to dead ends; step back to try another way.
 import { mountArcade } from './arcade.js';
 import { trailPath, adjacent, shuffle } from './g2-core.js';
-import { start, host, grade, draftNote, word, topicName, say } from './g2-ui.js';
+import { start, host, grade, word, topicName, say } from './g2-ui.js';
 
 export const STORE_KEY = 'games.g2-trail.v1';
 const BOARDS = 3;
@@ -44,8 +44,7 @@ function setup(A) {
   const grid = A.h('div', { class: 'g2-grid', role: 'group', 'aria-label': 'The river: the first column is on the right', style: `grid-template-columns:repeat(${cfg.cols},auto)` });
   const back = A.h('button', { type: 'button', class: 'btn secondary' }, 'Step back');
   const after = A.h('p', { class: 'muted', 'aria-live': 'polite' });
-  A.board.replaceChildren(host(A, 'noa', 'Only the topic stones hold you up.'), prompt, grid, A.h('div', { class: 'g2-row' }, back), after,
-    draftNote(A, 'Words and topics come from the app\'s word lists. A native reader has not checked them yet.'));
+  A.board.replaceChildren(host(A, 'noa', 'Only the topic stones hold you up.'), prompt, grid, A.h('div', { class: 'g2-row' }, back), after);
   start(A, (D, T) => {
     let b = 0, steps = [], target = null, board = null, buttons = [], earned = new Set();
     const draw = () => {

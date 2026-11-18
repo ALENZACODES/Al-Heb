@@ -39,7 +39,7 @@ function setup(A) {
   const area = A.h('div');
   const after = A.h('p', { class: 'muted', 'aria-live': 'polite' });
   A.board.replaceChildren(host(A, 'rimon', 'Which holiday does this belong to?'), big, prompt, area, after,
-    draftNote(A, 'Words and names from the app\'s calendar day pages. Customs vary between communities; your own community\'s practice comes first.'));
+    draftNote(A, 'Customs vary between communities. Your own community\'s practice comes first.'));
   numberKeys(A, () => area.querySelector('.tg-bins, .tg-tray'));
   let days = {}, plan = null, n = 0;
   const label = (id) => A.h('span', {}, A.h('span', { lang: 'he', dir: 'rtl', class: 'he' }, days[id].he), A.h('small', {}, shortEn(days[id].en)));

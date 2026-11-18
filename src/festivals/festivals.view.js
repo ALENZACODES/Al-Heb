@@ -15,7 +15,7 @@ import { CAL_PREFS_KEY } from "../curriculum/calendar.locations.js";
 import { weekCard, linksFor, shabbatReady, packById, PACK_OF } from "./model.js";
 
 export const DRAFT_NOTICE = "Draft. Nobody has proofread these words or lines. Words come from Aleph's vocabulary list and lines are copied from its own texts; whether a word means the same in the festival or in a line was not checked.";
-export const CALC_NOTE = "Dates and times are calculated, not authoritative. Check with your community.";
+export const CALC_NOTE = "Dates and times are calculated. Check local times with your community.";
 const CSS = `
 .fv{display:grid;gap:var(--gap,1rem);max-inline-size:40rem;margin-inline:auto;overflow-wrap:anywhere}
 .fv *{box-sizing:border-box;max-inline-size:100%}
@@ -156,7 +156,7 @@ export async function mount(root, ctx) {
     else if (PACK_OF[id] === id || packById(D.vocab, id)) { const p = packById(D.vocab, id); parts = p ? packView(ctx, D, p) : [h("p", {}, "No such festival pack.")]; }
     else parts = [h("p", {}, "No such festival pack.")];
     if (!alive) return () => {};
-    body.replaceChildren(...[...parts, h("footer", { class: "fv-muted" }, h("p", { class: "draft-flag" }, DRAFT_NOTICE), h("p", {}, CALC_NOTE)),
+    body.replaceChildren(...[...parts, h("footer", { class: "fv-muted" }, h("p", {}, CALC_NOTE)),
       id && hasRoute(ctx)("festivals") ? h("p", {}, h("a", { class: "btn secondary", href: "#/festivals" }, "Back to this week")) : null].filter(Boolean));
   } catch (e) {
     body.replaceChildren(h("p", { role: "alert" }, "This screen could not load its data. Nothing was lost."));

@@ -24,7 +24,7 @@ const spec = {
 
 function setup(A) {
   const { T, big, prompt, area } = begin(A, 'rimon', 'Read the front form, pick the chute.',
-    'Forms come from the app\'s verb list. "He did" is the dictionary form; the present is the masculine singular. Not reviewed by a teacher.');
+    '"He did" is the dictionary form; the present tense is the masculine singular.');
   const cfg = A.cfg, rnd = A.rnd, bins = TENSES.filter((t) => cfg.keys.includes(t.key));
   let deck = [], at = 0, waited = 0, tried = new Set();
   const belt = A.h('div', { class: 'g3-belt', 'aria-hidden': 'true' });

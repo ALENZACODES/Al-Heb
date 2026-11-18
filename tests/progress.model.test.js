@@ -255,7 +255,7 @@ test('readNowSummary: fresh learner has every row at zero, with the measurement 
   assert.deepEqual(rows.filter((r) => r.measured === 'self').map((r) => r.id), ['timedread', 'firstday']);
   assert.match(rows[0].value, /^0 of 27 letters, 0 of 15 signs$/);
   assert.match(rows.find((r) => r.id === 'vocab').value, /none started/); assert.match(rows.find((r) => r.id === 'timedread').value, /none yet/);
-  assert.match(rows.find((r) => r.id === 'siddur').value, /^0% of the lines Aleph holds$/); assert.match(rows.find((r) => r.id === 'firstday').value, /not started/);
+  assert.match(rows.find((r) => r.id === 'siddur').value, /^0% of the lines$/); assert.match(rows.find((r) => r.id === 'firstday').value, /not started/);
   assert.ok(!rows.some((r) => /fluen(t|cy) (score|rating)/i.test(r.value)));
 });
 test('readNowSummary: every source feeds its row', () => {
@@ -272,7 +272,7 @@ test('readNowSummary: every source feeds its row', () => {
   assert.equal(by.letters.have, 27 + 15);
   assert.ok(by.lines.have > 0 && by.lines.have <= by.lines.need);
   assert.match(by.vocab.value, /^2 started, 1 mature$/); // band needs 10 started cards, so no "working in"
-  assert.match(by.timedread.value, /^2 reads of 2 texts, about 90 clean words a minute on (shema-1|avot-1)$/);
+  assert.match(by.timedread.value, /^2 reads of 2 texts, about 90 clean words a minute on your most-read text$/);
   assert.match(by.siddur.label, /Friday evening/); assert.ok(by.siddur.have > 0);
   assert.match(by.firstday.value, /^2 first-day words marked read; ladder 2 of 8 unpointed words marked read$/); // step 1 is pointed; 15 is counted as said
   assert.equal(by.firstday.href, '#/firstday/ladder');

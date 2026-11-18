@@ -12,7 +12,7 @@ import { loadTemplates, loadParadigms } from './loader.js';
 import { learnerGender, setLearnerGenderSetting } from '../shell/settings.js';
 import { STORE_KEY, LEGACY_STORE_KEY, SPEAKERS, SPEAKER_LABEL, normalizePrefs, setSpeaker, buildDrill, isChoice, grade } from './model.js';
 
-export const DRAFT_NOTE = 'Draft and unreviewed: no Hebrew teacher has checked these forms. Words and vowel marks come from the word list. The sentences are simple: "I / you / he / she" plus a word. The word list has no feminine adjectives, so adjectives that change with gender are not drilled here.';
+export const DRAFT_NOTE = 'The sentences are simple: "I / you / he / she" plus a word. Adjectives that change with gender are not drilled here.';
 
 /** @param {HTMLElement} root @param {any} ctx @returns {() => void} unmount */
 export function mount(root, ctx) {

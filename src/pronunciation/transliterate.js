@@ -32,12 +32,14 @@
 //
 // Furtive patach: final chet / mappiq he + patach after a vowel puts the 'a' before the consonant (ruach).
 // Divine name: a word whose consonants are exactly יהוה is read as Adonai / Adonoy (convention).
+// Everyday modern words listed in everyday.js (אַבָּא, תֵּה) are spelled the Israeli way in every tradition.
 // Kamatz katan: U+05C7, the tiny unverified list in kamatz-katan.js, or a kamatz immediately before chataf-kamatz.
 
 import { parseWord, MARK, stripTaamim } from './hebrew.js';
 import { classifyShvas } from './shva.js';
 import { kamatzKatanStemStart } from './kamatz-katan.js';
 import { speechText } from '../shell/names.js';
+import { isEveryday } from './everyday.js';
 
 /** @typedef {import('./hebrew.js').Cluster} Cluster */
 
@@ -137,6 +139,8 @@ const hasFull = (c) => !!c && !!c.vowel && c.vowel !== 'shva';
  * @param {ReturnType<typeof resolveOptions>} o
  */
 function transliterateWord(word, o) {
+  // Everyday modern words (אַבָּא, תֵּה, מוֹנִית) have no older reading: every style spells them as said today.
+  if (o.ashk && isEveryday(word)) o = { ...o, ashk: false, tradition: 'israeli' };
   const clean = stripTaamim(word);
   const clusters = parseWord(word);
   const n = clusters.length;

@@ -1,6 +1,6 @@
 // Quiet Words: the words of Yom Kippur, learned slowly. One word at a time, pick its meaning; later levels turn it round.
 // Out of respect for the day this game has no clock, no lives, no buzzer and no flashing: a wrong choice simply fades.
-import { mountG5, host, track, draftNote, numberKeys, card, heText, button, lock } from './g5-ui.js';
+import { mountG5, host, track, numberKeys, card, heText, button, lock } from './g5-ui.js';
 import { loadData, g5Data, shuffle, shortEn } from './g5-core.js';
 
 export const STORE_KEY = 'games.g5-kippur.v1';
@@ -26,8 +26,7 @@ function setup(A) {
   const prompt = A.h('p', { class: 'arc-prompt' });
   const opts = A.h('div', { class: 'g5-grid', role: 'group', 'aria-label': 'Meanings' });
   const after = A.h('p', { class: 'muted', 'aria-live': 'polite' });
-  A.board.replaceChildren(host(A, 'noa', 'Take your time with each word.'), prompt, shown, opts, after,
-    draftNote(A, 'Words from the app\'s Yom Kippur page and festival word pack.'));
+  A.board.replaceChildren(host(A, 'noa', 'Take your time with each word.'), prompt, shown, opts, after);
   numberKeys(A, () => opts);
   loadData(A.ctx, g5Data('kippur')).then((d) => {
     if (!T.live()) return;

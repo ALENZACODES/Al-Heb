@@ -36,7 +36,7 @@ export function mount(root, ctx) {
   }
   root.append(h('section', { class: 'card', 'aria-labelledby': 'view-title' },
     h('h1', { id: 'view-title', tabindex: '-1' }, 'Mastery Map'),
-    h('p', {}, `Every review card on this device. New: never answered. Learning: missed the last time, or it lasts under ${KNOWN_DAYS} days. Known: the scheduler expects you to remember it for ${KNOWN_DAYS} to ${MASTERED_DAYS - 1} days. Mastered: ${MASTERED_DAYS} days or more. These are Aleph's own thresholds on the scheduler's numbers, not a test result.`),
+    h('p', {}, `Every review card on this device. New: never answered. Learning: missed the last time, or it lasts under ${KNOWN_DAYS} days. Known: the scheduler expects you to remember it for ${KNOWN_DAYS} to ${MASTERED_DAYS - 1} days. Mastered: ${MASTERED_DAYS} days or more.`),
     status, body, h('p', {}, h('a', { class: 'btn secondary', href: '#/cram' }, 'Cram the weak ones'), ' ', h('a', { class: 'btn secondary', href: '#/scheduler' }, 'How reviews are spaced'))));
   render();
   return () => {};

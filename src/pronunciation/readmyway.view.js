@@ -53,7 +53,7 @@ export function mount(root, ctx) {
 
   const title = h('h1', { id: 'view-title', tabindex: '-1' }, 'Read it my way');
   const area = h('textarea', { id: 'rmw-text', dir: 'rtl', lang: 'he', rows: '5', spellcheck: 'false', 'aria-describedby': 'rmw-help' });
-  const help = h('p', { id: 'rmw-help' }, 'Paste Hebrew with vowel points, one or more lines. Words not in the table are listed and left out; nothing is guessed.');
+  const help = h('p', { id: 'rmw-help' }, 'Paste Hebrew with vowel points, one or more lines. Words Aleph does not know yet are listed and left out.');
   const sel = h('select', { id: 'rmw-trad' }, TRADITIONS.map((t) => h('option', { value: t }, TRADITION_LABELS[t])));
   sel.value = tradition;
   const all3 = h('input', { type: 'checkbox', id: 'rmw-all' });

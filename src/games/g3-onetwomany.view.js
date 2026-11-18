@@ -25,8 +25,7 @@ const spec = {
 const FORM_EN = { one: 'one', two: 'two (the -ayim word)', many: 'many' };
 
 function setup(A) {
-  const { T, big, prompt, area } = begin(A, 'ari', 'Two has its own word. Count first.',
-    'Forms from the word list; the two-forms come from the Torah text, a lesson and two little books where the list has none. Not reviewed by a teacher.');
+  const { T, big, prompt, area } = begin(A, 'ari', 'Two has its own word. Count first.');
   const cfg = A.cfg, rnd = A.rnd;
   numberKeys(A, () => area.querySelector('.arc-choices'));
   let sets = [], n = 0;

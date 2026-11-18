@@ -35,8 +35,7 @@ export function chainTiles(c, all, rnd = Math.random) {
 }
 
 function setup(A) {
-  const { T, big, prompt, area } = begin(A, 'ari', 'No word for "of". The nouns hold hands.',
-    'Chains as written in the lessons, units and phrasebook; the stand-alone nouns from the word list. Not reviewed by a teacher.');
+  const { T, big, prompt, area } = begin(A, 'ari', 'No word for "of". The nouns hold hands.');
   const cfg = A.cfg, rnd = A.rnd;
   let all = [], deck = [], n = 0;
   const next = () => { if (n >= ROUNDS || !deck.length) { T.end({ won: true }); return; } n += 1; ask(deck[(n - 1) % deck.length]); };

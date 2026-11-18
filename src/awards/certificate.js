@@ -105,7 +105,7 @@ export function certificateReference(name, now) {
 export const MAIL_OFFER = Object.freeze({
   available: false,
   reason: 'no-mail-backend',
-  text: 'Email is not offered. This app has no mail service, and Awards does not open a mail program.',
+  text: 'Aleph does not send email. Download the PDF to share it yourself.',
 });
 
 /**
@@ -137,20 +137,16 @@ export function sampleModel(o = {}) {
 
 /** Long notes for the page and the docs. They are not drawn on the certificate face or the PDF. */
 export const SAMPLE_PAGE_NOTES = Object.freeze([
-  'Approved artwork: 0. No image file has been accepted. The eggshell ground and the crimson seal are a temporary layout, not final art.',
-  'The sheet is marked Design proof. That label does not mean a certificate was issued.',
-  'Cert # is a sample internal reference built from the display name and the America/Toronto date of this preview. The same name and date share it. It is not unique, not checked, and not an accreditation number.',
-  'This sample does not say the named person can read Hebrew, finished the White belt · P0 and Yellow belt · P1 lessons, or passed a checked assessment. Saving or printing it does not store an earned certificate.',
-  'The name is a label you typed. It is not a signature and not an account.',
-  'No teacher, rabbi, or examiner has signed this sample. The seal is a temporary geometric drawing, not a seal of office.',
-  'There is no verification website, and this sample has no code that could prove it.',
-  'A saved PDF stays in your files. Aleph does not keep a copy on a server. The file is not a secure or tamper-proof document.',
-  ART_NOTE,
+  'This is a sample design, marked Design proof. It is not an earned certificate and does not say that anyone passed a test.',
+  'The Cert # is a sample reference made from the name and today’s date. It is not a unique number.',
+  'The name is a label you typed, not a signature or an account. Nobody has signed the sample, and the seal is a drawing.',
+  'There is no website that checks certificates, and a saved PDF is not tamper-proof.',
+  'A saved PDF stays in your own files. Aleph does not keep a copy.',
 ]);
 
 /** Learner-facing share blurb. Ignores any caller watermark. */
 export function shareText(_model) {
-  return `${DESIGN_PROOF}. Not an earned certificate. Completion has not been assessed or awarded. Aleph does not email this and does not upload it.`;
+  return `${DESIGN_PROOF}: a sample Aleph certificate, not an earned one.`;
 }
 
 export function shareAvailability(nav) {
@@ -565,7 +561,7 @@ export function renderCertificate(h, _model) {
   const name = h('p', { class: 'aw-name', 'data-cert-name': '1' });
   name.textContent = model.displayName || '';
   const panelKids = [name];
-  if (!model.nameEntered) panelKids.push(h('p', { class: 'aw-name-empty' }, 'Name panel empty'));
+  if (!model.nameEntered) panelKids.push(h('p', { class: 'aw-name-empty' }, 'Your name here'));
   return h('article', {
     class: 'aw-cert',
     id: 'award-certificate',

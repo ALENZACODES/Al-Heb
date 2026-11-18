@@ -37,7 +37,7 @@ const spec = {
 
 function setup(A) {
   const { T, big, prompt, area } = begin(A, 'rimon', 'Follow the arrow. Who is it for?',
-    'Endings copied from the app\'s word lists and phrasebook. Rimon has no gender, so the game never needs a "you" or "him" for Rimon. Not reviewed by a teacher.');
+    'Rimon has no gender, so the game never needs a "you" or "him" for Rimon.');
   const cfg = A.cfg, rnd = A.rnd;
   numberKeys(A, () => area.querySelector('.arc-choices'));
   let preps = [], n = 0;

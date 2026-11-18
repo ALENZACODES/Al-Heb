@@ -225,7 +225,7 @@ export const ROUTES = [
   { name: 'settings', pattern: '/settings',       module: './settings.view.js', tier: 'v0',                  nav: 'nav.settings', title: 'Settings', owner: 'lane8' },
   { name: 'accessibility', pattern: '/accessibility', module: './a11y.view.js', tier: 'preview', title: 'Accessibility', owner: 'a11y', quick: 'nav.accessibility' },
   { name: 'welcome', pattern: '/welcome',        module: './onboarding.view.js', tier: 'v0',                title: 'Welcome', owner: 'lane8' },
-  { name: 'how',      pattern: '/how',            module: './how.view.js',                       title: 'How this works', owner: 'lane8' },
+  { name: 'how',      pattern: '/how',            module: './how.view.js',                       title: 'How Aleph works', owner: 'lane8' },
   { name: 'help',     pattern: '/help',           module: './help.view.js',        tier: 'v0', nav: 'nav.help',     title: 'Help', owner: 'lane8' },
   // Optional routes: other lanes add these view files over time. When the file is missing the route is hidden from nav/quick
   // links (see probeRoutes) and a direct visit shows the "not available yet" card; nothing else breaks.

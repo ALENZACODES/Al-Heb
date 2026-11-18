@@ -47,10 +47,10 @@ export function tabFromLocation(query, hash) {
   return 'say';
 }
 export const PRAYER_NOTE = 'Prayer text comes from Aleph\'s corpus (Sefaria, Metsudah siddur, CC-BY). It was compared with its source by a program and has not been proofread by a Hebrew educator.';
-export const TRADITION_NOTE = 'The browser recognizer and the browser voice expect modern Israeli pronunciation. If you read in a Sephardi or Ashkenazi style, a "miss" may only mean the recognizer is used to another accent.';
+export const TRADITION_NOTE = 'Speech recognition expects modern Israeli pronunciation. If you read in a Sephardi or Ashkenazi style, a miss may only mean it expected a different accent.';
 
 export const DRAFT = 'Draft, not yet reviewed: the words, their vowel points and transliterations were built by a program from the vocabulary list and no Hebrew teacher has checked them.';
-export const RECOGNIZER_NOTE = 'The speech check uses your browser\'s own recognizer set to Hebrew (he-IL). Aleph has not verified how well it hears Hebrew, so treat its verdict as a hint, not a grade. Your browser may send the audio to its maker\'s servers to do the recognition; Aleph itself sends nothing anywhere.';
+export const RECOGNIZER_NOTE = 'The speech check uses your browser\'s Hebrew speech recognition, so treat its verdict as a guide. Your browser may send the audio to its maker\'s servers to recognize it; Aleph itself sends nothing.';
 export const RECORD_NOTE = 'Recordings stay in this page\'s memory and are discarded when you leave; nothing is uploaded.';
 const MODE_LABEL = { asr: 'Let the browser listen and compare (speech recognition)', record: 'Record me and play it back; I judge it', self: 'No microphone: I just say whether I said it' };
 const CSS = `
@@ -100,7 +100,7 @@ const ERRORS = {
   'language-not-supported': 'This browser\'s recognizer does not offer Hebrew.',
 };
 const errorText = (e) => ERRORS[e] || `The browser reported: ${e}.`;
-export const SCORE_SHORT = 'The score counts words the recognizer wrote back as printed; it does not measure your accent or vowels. A hint from the browser\'s recognizer, which is unverified for Hebrew.';
+export const SCORE_SHORT = 'The score counts the printed words that speech recognition heard. It does not check your accent or vowels, so treat it as a guide.';
 /** Each printed word with its status in words (never colour alone): heard right, close (with what was heard) or not heard. */
 function wordList(r, id) {
   return el('ul', { class: 'sk-words', id, 'aria-label': 'Word by word' }, r.words.map((w) => el('li', { 'data-status': w.status, class: w.status === 'hit' ? null : `w-${w.status}` },

@@ -46,7 +46,7 @@ function setup(A) {
   const prompt = A.h('p', { class: 'arc-prompt' });
   const area = A.h('div');
   A.board.replaceChildren(host(A, 'noa', 'Same verb, different jobs.'), big, prompt, area,
-    draftNote(A, 'Forms come from the app\'s word list. The present is the dictionary form (masculine singular). Not reviewed by a teacher.'));
+    draftNote(A, 'The present tense is shown in its dictionary form (masculine singular).'));
   numberKeys(A, () => area.querySelector('.arc-choices'));
   let verbs = [], deck = [], n = 0;
   const gloss = (v) => v.en.split(/[;(]/)[0].trim();

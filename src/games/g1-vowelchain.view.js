@@ -36,7 +36,7 @@ function setup(A) {
   const handEl = A.h('div', {});
   const actions = A.h('div', { class: 'row' });
   A.board.replaceChildren(host(A, 'ari', 'Same letter or same vowel sound: play it on the end.'), prompt, chainEl, handEl, actions,
-    draftNote(A, 'Israeli sounds. In Ashkenazi reading kamatz and tsere sound different from patach and segol.'));
+    draftNote(A, 'Sounds are Israeli. In Ashkenazi reading, kamatz and tzere sound different from patach and segol.'));
   numberKeys(A, () => handEl);
   let syllables = [];
   const randomTile = () => tile(SOUND_CARDS[Math.floor(rnd() * SOUND_CARDS.length)], marks[Math.floor(rnd() * marks.length)]);

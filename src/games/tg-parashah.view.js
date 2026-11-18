@@ -3,7 +3,7 @@
 import { uiEnglish } from '../shell/names.js';
 import { mountArcade, choiceRow } from './arcade.js';
 import { loadData, loadVerse, tokens, showName, refText, BOOKS, bookEn, options, shuffle } from './tg-core.js';
-import { host, track, numberKeys, grade, draftNote, ensureStyle, orderBoard } from './tg-ui.js';
+import { host, track, numberKeys, grade, ensureStyle, orderBoard } from './tg-ui.js';
 
 export const STORE_KEY = 'games.tg-parashah.v1';
 const ROUNDS = 10;
@@ -44,8 +44,7 @@ function setup(A) {
   const prompt = A.h('p', { class: 'arc-prompt' });
   const area = A.h('div');
   const after = A.h('p', { class: 'muted', 'aria-live': 'polite' });
-  A.board.replaceChildren(host(A, 'noa', 'One portion a week, the whole Torah in a year.'), big, prompt, area, after,
-    draftNote(A, 'Order and books follow the app\'s Torah index. Hebrew names are copied from each portion\'s opening verse; a few appear there with a prefix or a shorter spelling, and the game says so.'));
+  A.board.replaceChildren(host(A, 'noa', 'One portion a week, the whole Torah in a year.'), big, prompt, area, after);
   numberKeys(A, () => area.querySelector('.arc-choices'));
   let list = [], books = [], n = 0, deck = [];
   const nameNote = (p) => (p.asInVerse ? ' (as written in its opening verse)' : '');

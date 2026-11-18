@@ -29,7 +29,7 @@ test('siddur coverage line: fresh learner shows 0% for Shabbat morning (the serv
   assert.equal(line.attrs['data-pct'], '0'); assert.equal(line.attrs['data-order'], 'shabbat-morning');
   assert.match(line.textContent, /^Prayer book coverage: 0% of the phrases in Shabbat morning use signs you have practiced/);
   assert.equal(line.queryAll('a')[0].attrs.href, '#/service');
-  assert.match(section(root, 'pg-h-read').textContent, /content coverage, not a reading assessment/);
+  assert.match(section(root, 'pg-h-read').textContent, /use only letters and signs you have learned/);
 });
 
 test('siddur coverage line follows the saved service choice and rises with completed lessons', async () => {
@@ -51,7 +51,7 @@ test('belts and ranks: Krav Maga style ladder in text; earned only by lessons; t
   const badge = b0.querySelector('.alef-rank'); assert.ok(badge.attrs.title && /White belt, Practitioner 0/.test(badge.attrs.title), 'accessible description, not colour alone');
   const { root } = await show(allRead());
   const belts = section(root, 'pg-h-belts');
-  assert.match(belts.textContent, /The Brown belt · G5 and Black belt · E5 skill checks include timed read-alouds, which you time and mark yourself \(self-reported, not measured by the app\)\. They do not earn or hold back a rank\./);
+  assert.match(belts.textContent, /The Brown belt · G5 and Black belt · E5 skill checks include timed read-alouds that you time and mark yourself\. They do not affect your rank\./);
   const gate = belts.queryAll('[data-gate="timedRead"]')[0];
   assert.match(gate.textContent, /self-reported.*0 of 3 \(needs 3 timed reads of one text with 8\+ words\)/);
   assert.equal(gate.queryAll('a')[0].attrs.href, '#/timedread');
@@ -71,11 +71,11 @@ test('belts: the timed-read link is hidden when the route is not in this build',
 test('numbers: reading speed is self-reported and absent until a timed read exists', async () => {
   const { root } = await show();
   const num = section(root, 'pg-h-num').textContent;
-  assert.match(num, /Timed reads \(self-reported\)none yet/); assert.match(num, /Reading speed \(self-reported\)not measured/);
+  assert.match(num, /Timed reads \(self-reported\)none yet/); assert.match(num, /Reading speed \(self-reported\)none yet/);
   const { root: r2 } = await show({ 'timedread.v1': { v: 1, reads: [read(), read({ ms: 12000 })] } });
   const n2 = section(r2, 'pg-h-num').textContent;
-  assert.match(n2, /2 reads of 1 text/); assert.match(n2, /about 75 clean words a minute on shema-1, median of your last reads/);
-  assert.match(n2, /the app measures nothing but the clock/);
+  assert.match(n2, /2 reads of 1 text/); assert.match(n2, /about 75 clean words a minute on your most-read text, the median of your latest reads/);
+  assert.match(n2, /Aleph keeps the time, and you mark the words that tripped you up/);
 });
 
 test('no wording claims the app measures reading', async () => {
@@ -95,7 +95,7 @@ test('unified section comes first, has one row per source, marks self-reported r
   assert.equal(rows.filter((r) => r.queryAll('.pg-self').length).map((r) => r.attrs['data-now']).join(), 'timedread,firstday');
   assert.match(rows[0].textContent, /27 of 27 letters, 15 of 15 signs/); assert.match(rows[3].textContent, /1 read of 1 text, about 90 clean words a minute/);
   assert.match(rows[5].textContent, /1 first-day word marked read; ladder 0 of 8/);
-  assert.match(first.textContent, /None of it is a fluency score/);
+  assert.match(first.textContent, /Everything you have practiced, in one place/);
   assert.match(root.queryAll('section.card')[1].textContent, /^Lines and words using signs you have practiced/);
 });
 test('unified section hides the links of routes missing from this build and still renders every row', async () => {
@@ -188,7 +188,7 @@ test('this week card: engaged days, floor minutes, streak, honored rest days and
   assert.equal(wrap.attrs['data-series'], '0,0,0,0,0,0,0,1');
   assert.match(wrap.innerHTML, /^<svg [^>]*role="img"[^>]*aria-label="Dated activity per week, oldest to newest: 0, 0, 0, 0, 0, 0, 0, 1"/);
   assert.match(sec.querySelector('[data-w="series"]').textContent, /Oldest week to this week: 0, 0, 0, 0, 0, 0, 0, 1 \(1 in all\)/);
-  assert.match(sec.textContent, /at least/i); assert.match(sec.textContent, /This is activity, not a measure of how well you read/);
+  assert.match(sec.textContent, /at least/i); assert.match(sec.textContent, /the weekly minutes are a minimum/);
   assert.doesNotMatch(sec.textContent, /fluen(t|cy) (score|level)/i);
 });
 
@@ -206,7 +206,7 @@ test('milestones list: certificate-free, shows reached ones with dates and the r
   const init = { ...allRead(), 'timedread.v1': { v: 1, reads: [read({ textId: sp, lineId: sp, at: noon('2026-11-03') })] } };
   const { root, store } = await showAt(init);
   const sec = section(root, 'pg-h-ms');
-  assert.match(sec.textContent, /no certificate, badge or level/);
+  assert.match(sec.textContent, /Personal milestones along the way/);
   const row = (id) => sec.querySelector(`[data-ms="${id}"]`);
   assert.equal(row('prayer-read').attrs['data-done'], '1'); assert.match(row('prayer-read').textContent, /Reached.*\(2026-11-03\)/);
   assert.equal(row('siddur-25').attrs['data-done'], '1'); assert.match(row('siddur-25').textContent, /\(first noticed 2026-11-10\)/);

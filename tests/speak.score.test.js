@@ -95,7 +95,7 @@ test('scoreSpeech: nothing heard scores 0; an empty target scores 0 and is never
 test('scoreLine says what the number counts', () => {
   assert.equal(S.scoreLine(S.scoreSpeech('בָּרְכוּ אֶת יְהוָה הַמְבֹרָךְ', 'ברכו את המברך')), 'Score 75%: 3 of 4 words recognized.');
   assert.equal(S.scoreLine(S.scoreSpeech('מַחְבֶּרֶת', 'מחבר')), 'Score 50%: 0 of 1 word recognized, 1 close.');
-  assert.match(S.SCORE_MEANS, /not measure your accent/);
+  assert.match(S.SCORE_MEANS, /does not check vowel points or your accent/);
 });
 
 // ---- availability ----------------------------------------------------------------------------------------------------

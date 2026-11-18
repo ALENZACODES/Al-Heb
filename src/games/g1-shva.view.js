@@ -3,7 +3,7 @@
 // asked (src/pronunciation/shva.js, worked out ahead in data/games/g1/words.json). Levels 4 and 5 also ask why.
 import { mountArcade } from './arcade.js';
 import { shortEn, shuffle, letterClusters } from './g1-core.js';
-import { host, track, draftNote, ensureStyle, series, choiceButtons, numberKeys, loadWords } from './g1-ui.js';
+import { host, track, ensureStyle, series, choiceButtons, numberKeys, loadWords } from './g1-ui.js';
 
 export const STORE_KEY = 'games.g1-shva.v1';
 /** Plain reasons, by where the shva sits. */
@@ -46,8 +46,7 @@ function setup(A) {
   const wordEl = A.h('div', { class: 'g1-word', lang: 'he', dir: 'rtl' });
   const meaning = A.h('p', { class: 'muted' });
   const area = A.h('div', {});
-  A.board.replaceChildren(host(A, 'noa', 'Two little dots: say them, or keep quiet?'), prompt, wordEl, meaning, area,
-    draftNote(A, 'Verdicts come from the app\'s shva rules; only shvas where the simple and the full rules agree are asked. A teacher has not checked every word.'));
+  A.board.replaceChildren(host(A, 'noa', 'Two little dots: say them, or keep quiet?'), prompt, wordEl, meaning, area);
   numberKeys(A, () => area.querySelector('.arc-choices'));
   const run = (qs) => series(A, T, qs.length, (i, done) => {
     const q = qs[i - 1], cl = letterClusters(q.word.he);

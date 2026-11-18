@@ -50,7 +50,7 @@ const spec = {
 function setup(A) {
   const T = begin(A), cfg = A.cfg, rnd = A.rnd;
   const scene = A.h('div', { class: 'g4-scene' }), area = A.h('div');
-  A.board.replaceChildren(host(A, 'noa', 'Stay calm. Who can help?'), scene, area, draftNote(A, 'Words from the app\'s lessons and phrasebook. Not yet checked by a native speaker. A game, not advice.'));
+  A.board.replaceChildren(host(A, 'noa', 'Stay calm. Who can help?'), scene, area, draftNote(A, 'This is a game, not safety advice.'));
   numberKeys(A, () => area.querySelector('.arc-choices'));
   withBank(A, T, (B) => {
     pick(B, SERVICES, CASES.map((c) => c.key), SAYINGS);

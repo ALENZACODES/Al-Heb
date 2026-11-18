@@ -41,7 +41,7 @@ function setup(A) {
   const area = A.h('div', {});
   const split = A.h('p', { class: 'muted' });
   A.board.replaceChildren(host(A, 'noa', 'No meaning to lean on. Just read it.'), prompt, word, split, area,
-    draftNote(A, 'Made-up words, joined from the app\'s syllable table; Israeli sounds. Some may happen to be real words.'));
+    draftNote(A, 'These are made-up words built from real syllables, with Israeli sounds. A few may turn out to be real words.'));
   numberKeys(A, () => area.querySelector('.arc-choices'));
   loadSyllables(A.ctx).then((syllables) => {
     if (!T.live()) return;

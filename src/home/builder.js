@@ -1,6 +1,5 @@
 import { reactRimon } from '../shell/rimon-events.js';
 import { h, heSpan } from '../shell/ui.js';
-import { FIRST_WORDS } from '../lib/counts.js';
 import { createSession } from '../games/engine.js';
 import { BUILDER_KEY, GAME_KEY, wordsFor, trayFor, tokensFor, phonetics, clipFor, recordWord } from './builder-model.js';
 
@@ -30,17 +29,17 @@ export function builderNode(ctx = {}) {
   const button = (text, action, attrs = {}) => h('button', { type: 'button', class: 'btn secondary', onclick: action, ...attrs }, text);
   const controls = row => h('span', { class: 'builder-audio' },
     button('▶ Play', () => play(row), { 'aria-label': 'Play ' + (row.translit_israeli || row.translit) }),
-    button('Slow · 0.6×', () => play(row, 0.6), { 'aria-label': 'Slow · 0.6× — Play slowly ' + (row.translit_israeli || row.translit) }));
+    button('Slow · 0.6×', () => play(row, 0.6), { 'aria-label': 'Play slowly: ' + (row.translit_israeli || row.translit) }));
   const symbolInfo = h('div', { class: 'builder-symbol-info', 'aria-live': 'polite' });
   function describe(s, speak = false) {
-    symbolInfo.replaceChildren(heSpan(s.nikud), h('span', {}, s.translit + ' — ' + s.meaning_en), controls(s));
+    symbolInfo.replaceChildren(heSpan(s.nikud), h('span', {}, s.translit + ': ' + s.meaning_en), controls(s));
     if (speak) play(s);
   }
   function symbolButton(s) {
     const mark = !/[א-ת]/.test(s.glyph);
     const b = button('', () => { clearTimeout(hoverTimer); if (held) { held = false; return; } place(s.glyph); }, {
-      class: 'builder-key', 'data-glyph': s.glyph, title: s.translit + ' — ' + s.meaning_en,
-      'aria-label': (mark ? '◌' : '') + s.glyph + s.translit + ' — Add to your word',
+      class: 'builder-key', 'data-glyph': s.glyph, title: s.translit + ': ' + s.meaning_en,
+      'aria-label': (mark ? '◌' : '') + s.glyph + ' ' + s.translit + ': add to your word',
       onmouseenter: () => { describe(s); clearTimeout(hoverTimer); hoverTimer = setTimeout(() => describe(s,true),650); },
       onmouseleave: () => clearTimeout(hoverTimer),
       onfocus: () => describe(s),
@@ -60,13 +59,14 @@ export function builderNode(ctx = {}) {
   const voiceSelect = h('select', { 'aria-label': 'Builder voice', onchange: () => { voice=voiceSelect.value; stop(); ctx.settings?.set({voice}); } },
     h('option',{value:'m'},'Ari'),h('option',{value:'f'},'Noa'));
   voiceSelect.value = voice;
-  const traditionSelect = h('select', { 'aria-label': 'Phonetic style', onchange: () => { tradition=traditionSelect.value; ctx.settings?.set({congregation:tradition}); drawTarget(); } },
+  const traditionSelect = h('select', { 'aria-label': 'Phonetic style', onchange: () => { tradition=traditionSelect.value; ctx.settings?.set({congregation:tradition}); relabel(); drawTarget(); } },
     ...['israeli','sephardi','ashkenazi'].map(t=>h('option',{value:t},t[0].toUpperCase()+t.slice(1))));
   traditionSelect.value = tradition;
   const tally = h('p',{class:'builder-tally'});
   function drawTally() {
     const saved = ctx.store?.get(BUILDER_KEY) || {};
-    tally.textContent = `${Object.keys(saved.built || {}).length} different words built · ${saved.points || 0} points`;
+    const n = Object.keys(saved.built || {}).length;
+    tally.textContent = `${n} ${n === 1 ? 'word' : 'words'} built · ${saved.points || 0} points`;
   }
   function drawTarget() {
     if (!word) return;
@@ -85,18 +85,22 @@ export function builderNode(ctx = {}) {
     drawTarget(); drawSlots();
     status.textContent = withVowels ? 'Build right to left. Add each letter, then its vowel and dots.' : 'Build right to left. Tap the letters; vowel marks are added for you.';
   }
+  /** The word list follows the chosen style, like the word itself. */
+  function relabel() {
+    for (const o of wordSelect.options || []) { const w = words.find((x) => x.id === o.value); if (w) o.textContent = phonetics(w, tradition) + ' (' + w.meaning_en + ')'; }
+  }
   function drawChoices() {
     const available = wordsFor(words,level);
-    wordSelect.replaceChildren(...available.map(w=>h('option',{value:w.id},w.translit_israeli+' — '+w.meaning_en)));
+    wordSelect.replaceChildren(...available.map(w=>h('option',{value:w.id},phonetics(w,tradition)+' ('+w.meaning_en+')')));
     tray.replaceChildren(...trayFor(level).map(g=>symbolButton(symbols.letters.find(s=>s.glyph===g))));
     choose(available.find(w=>w.hebrew==='אבא') || available[0]);
   }
   function place(glyph) {
     if(done || !word) return;
     const tokens=tokensFor(word,withVowels);
-    if(tokens[placed]!==glyph) { reactRimon('sad'); mistakes++; const needed=[...symbols.letters,...symbols.marks].find(s=>s.glyph===tokens[placed]); status.textContent='Try '+(needed?.translit || 'the next mark')+' next. You can do it.'; return; }
+    if(tokens[placed]!==glyph) { reactRimon('sad'); mistakes++; const needed=[...symbols.letters,...symbols.marks].find(s=>s.glyph===tokens[placed]); status.textContent='Not that one. Try '+(needed?.translit || 'the next mark')+'.'; return; }
     placed++; drawSlots();
-    if(placed<tokens.length) { status.textContent=`Good — ${tokens.length-placed} ${withVowels?'letters or marks':'letters'} to go.`; return; }
+    if(placed<tokens.length) { const left=tokens.length-placed; status.textContent=`Good! ${left} ${withVowels?(left===1?'letter or mark':'letters or marks'):(left===1?'letter':'letters')} to go.`; return; }
     done=true;
     play(word);
     try {
@@ -113,7 +117,7 @@ export function builderNode(ctx = {}) {
           if (!disposed && award.newly.includes('yolo')) status.textContent += ' First-attempt badge earned!';
         }).catch(() => {});
       }
-      status.textContent=`You built ${phonetics(word,tradition)} — ${word.meaning_en}. ${result.fresh?'+10 points.':'Already counted; great practice!'}${badge}`;
+      status.textContent=`You built ${phonetics(word,tradition)} (${word.meaning_en})! ${result.fresh?'+10 points.':'Already counted. Great practice!'}${badge}`;
       drawTally();
     } catch { status.textContent='Word complete! Your progress could not be saved on this device.'; }
   }
@@ -123,16 +127,16 @@ export function builderNode(ctx = {}) {
     if(disposed) return;
     words=loadedWords; symbols=loadedSymbols;
     const mode=h('input',{type:'checkbox',onchange:()=>{withVowels=mode.checked;vowels.open=withVowels;choose(word);}});
-    vowels.append(h('summary',{},'Vowel marks and dots'),h('p',{},'Turn on “Practice vowel marks” to place these yourself.'),
+    vowels.append(h('summary',{},'Vowel marks and dots'),h('p',{},'Turn on “Practice vowel marks” to place them yourself.'),
       h('div',{class:'builder-tray',dir:'rtl'},...symbols.marks.map(symbolButton)));
-    host.replaceChildren(h('h2',{},'Build a Hebrew word'),h('p',{},`${words.length} words to build from tiles (a separate list from the ${FIRST_WORDS} first words in Word Finder). Start small and choose a higher level when you are ready.`),
+    host.replaceChildren(h('h2',{},'Build a Hebrew word'),h('p',{},`Build ${words.length} words from letter tiles. Start at Level 1 and move up when you are ready.`),
       h('div',{class:'builder-options'},h('label',{},'Level ',levelSelect),h('label',{},'Voice ',voiceSelect),h('label',{},'Phonetics ',traditionSelect)),
-      h('p',{class:'builder-audio-note'},'Both voices read Israeli Hebrew. Phonetic style changes only the English letters.'),
+      h('p',{class:'builder-audio-note'},'Ari and Noa read in Israeli Hebrew. The style changes only the English letters.'),
       h('label',{class:'builder-choice'},'Choose a word ',wordSelect),target,slots,tray,
       h('label',{class:'builder-mode'},mode,' Practice vowel marks'),vowels,symbolInfo,status,
       h('div',{class:'builder-actions'},button('Start over',()=>choose(word)),button('Next word',()=>{const list=wordsFor(words,level);choose(list[(list.findIndex(w=>w.id===word.id)+1)%list.length]);}),h('a',{href:'#/awards',class:'btn secondary'},'My badges')),tally);
     drawChoices(); drawTally();
-    unsubscribe=ctx.settings?.subscribe(()=>{voice=ctx.settings.get('voice');tradition=ctx.settings.get('congregation');voiceSelect.value=voice;traditionSelect.value=tradition;drawTarget();});
+    unsubscribe=ctx.settings?.subscribe(()=>{voice=ctx.settings.get('voice');tradition=ctx.settings.get('congregation');voiceSelect.value=voice;traditionSelect.value=tradition;relabel();drawTarget();});
     observer=new MutationObserver(()=>{if(!host.isConnected)dispose();});
     observer.observe(document.body,{childList:true,subtree:true});
   }).catch(()=>{if(!disposed)status.textContent='The word list could not load. Reload this page to try again.';});

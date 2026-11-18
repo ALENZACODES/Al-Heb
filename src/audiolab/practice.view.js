@@ -36,7 +36,7 @@ export function mount(root, ctx) {
   const live = el('p', { class: 'muted', role: 'status', 'aria-live': 'polite', id: 'lp-status' });
   const say = (t) => { live.textContent = t; };
   root.append(el('section', { class: 'al-practice' }, h1,
-    el('p', { class: 'muted' }, 'Practice with the app\'s own clips. Sound pairs (bet or vet, shin or sin) are under ', el('a', { href: '#/speak?tab=drills' }, 'Say It: drills'), '.'),
+    el('p', { class: 'muted' }, 'For sound pairs like bet and vet or shin and sin, try ', el('a', { href: '#/speak?tab=drills' }, 'Say It: Drills'), '.'),
     tabsRow, body, live));
   const stopAll = () => { gen++; try { ctx?.audio?.stop?.(); } catch { /* nothing playing */ } };
   const drawTabs = () => {

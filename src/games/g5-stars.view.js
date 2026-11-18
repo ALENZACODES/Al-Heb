@@ -31,7 +31,7 @@ function setup(A) {
   const area = A.h('div', { class: 'g5-grid', role: 'group', 'aria-label': 'Blessings' });
   const after = A.h('p', { class: 'muted', 'aria-live': 'polite' });
   A.board.replaceChildren(host(A, 'noa', 'From the candles to the braided flame.'), prompt, line, area, after,
-    draftNote(A, 'Orders as the app\'s service guide gives them. Kabbalat Shabbat (with Lecha Dodi) is sung in the synagogue between candles and Kiddush.'));
+    draftNote(A, 'Kabbalat Shabbat (with Lecha Dodi) is sung in the synagogue between candle lighting and Kiddush.'));
   numberKeys(A, () => area);
   loadData(A.ctx, g5Data('prayers')).then((d) => {
     if (!T.live()) return;

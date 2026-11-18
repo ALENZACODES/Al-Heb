@@ -75,7 +75,7 @@ export function readinessLines({ audio = null, imagesApproved = null, images = n
     const extra = outside > 0 ? ` ${outside.toLocaleString('en-US')} more clips (book pages, arcade lines and opening prayers) are outside that plan.` : '';
     lines.push({ id: 'audio', ready: false, text: `Audio: not ready. ${audioTruthLine(audio)} ${planned}${extra}` });
   } else {
-    lines.push({ id: 'audio', ready: false, text: `Audio: ${audioTruthLine(null)}` });
+    lines.push({ id: 'audio', ready: false, text: `Audio: the clip count could not be checked right now. ${audioTruthLine(null)}` });
   }
   lines.push({ id: 'review', ready: false, text: 'Hebrew content: unreviewed draft. No native Hebrew speaker, teacher, cantor or rabbi has checked the lessons, words, respellings or prayer text yet.' });
   const img = images || (imagesApproved == null ? null : { catalogued: null, ingested: null, shown: null, approved: imagesApproved, pending: null });
@@ -109,5 +109,5 @@ export function readinessNode(h, { open = false, facts, fetchFn } = {}) {
     h('summary', {}, h('strong', {}, READINESS_TITLE)),
     h('p', { class: 'muted' }, 'This is an early, unfinished version. Here is plainly where it stands.'),
     list,
-    h('p', { class: 'muted' }, h('a', { href: '#/how' }, 'How this works'), '. ', h('a', { href: '#/credits' }, 'Credits and licences'), '.'));
+    h('p', { class: 'muted' }, h('a', { href: '#/how' }, 'How Aleph works'), '. ', h('a', { href: '#/credits' }, 'Credits and licences'), '.'));
 }

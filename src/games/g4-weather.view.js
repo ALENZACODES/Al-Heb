@@ -2,7 +2,7 @@
 // Weather and clothing words come from the weather and beach lessons and the word list.
 import { mountArcade } from './arcade.js';
 import { pick, sample, shuffle, stripPoints } from './g4-core.js';
-import { begin, withBank, host, heItem, heText, say, grade, draftNote, roundKeys } from './g4-ui.js';
+import { begin, withBank, host, heItem, heText, say, grade, roundKeys } from './g4-ui.js';
 
 export const STORE_KEY = 'games.g4-weather.v1';
 const ROUNDS = 6;
@@ -45,7 +45,7 @@ const spec = {
 function setup(A) {
   const T = begin(A), cfg = A.cfg, rnd = A.rnd;
   const card = A.h('div', { class: 'g4-scene' }), bag = A.h('p', { class: 'g4-chips', 'aria-live': 'polite' }), area = A.h('div');
-  A.board.replaceChildren(host(A, 'noa', 'What do we pack?'), card, area, bag, draftNote(A, 'Weather and clothing words from the app\'s lessons and word lists. Not yet checked by a native speaker.'));
+  A.board.replaceChildren(host(A, 'noa', 'What do we pack?'), card, area, bag);
   withBank(A, T, (B) => {
     pick(B, Object.keys(NEEDS), ITEMS, 'w.weather', 'day.today', 'day.tomorrow');
     const w = (k) => heText(A, cfg.plain ? stripPoints(B.get(k).he) : B.get(k).he);

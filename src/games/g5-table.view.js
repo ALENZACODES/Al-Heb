@@ -39,7 +39,7 @@ function setup(A) {
   const after = A.h('p', { class: 'muted', 'aria-live': 'polite' });
   const ready = A.h('div', { class: 'g5-row' });
   A.board.replaceChildren(host(A, 'noa', 'Let\'s set the table.'), prompt, list, shelf, table, ready, after,
-    draftNote(A, 'From the app\'s article Shabbat at Home. Many homes light more than two candles; your family\'s custom comes first.'));
+    draftNote(A, 'Many homes light more than two candles. Your family\'s custom comes first.'));
   loadData(A.ctx, g5Data('shabbat')).then((d) => {
     if (!T.live()) return;
     let t = 0;

@@ -3,7 +3,7 @@
 // Genders are the dictionary's tags in data/vocab/words.json; words that are used both ways are left out.
 import { mountArcade } from './arcade.js';
 import { endingOf, predictedGender, breaksRule, genderPool, shuffle } from './g2-core.js';
-import { start, host, grade, numberKeys, draftNote, say, he } from './g2-ui.js';
+import { start, host, grade, numberKeys, say, he } from './g2-ui.js';
 
 export const STORE_KEY = 'games.g2-endings.v1';
 const WORDS = 12;
@@ -40,8 +40,7 @@ function setup(A) {
   const big = A.h('div', { class: 'g2-big', lang: 'he', dir: 'rtl' });
   const row = A.h('div', { class: 'g2-row', role: 'group', 'aria-label': 'Answers' });
   const after = A.h('p', { class: 'muted', 'aria-live': 'polite' });
-  A.board.replaceChildren(host(A, 'noa', 'Look at the end of the word.'), prompt, big, row, after,
-    draftNote(A, 'Genders are the dictionary\'s tags in the app\'s word list. A native reader has not checked them yet.'));
+  A.board.replaceChildren(host(A, 'noa', 'Look at the end of the word.'), prompt, big, row, after);
   numberKeys(A, () => row);
   start(A, (D, T) => {
     const words = endingDeck(D, WORDS, cfg.breakers, rnd);

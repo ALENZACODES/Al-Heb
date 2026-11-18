@@ -2,7 +2,7 @@
 // Friday, the season after summer. The week and the year go round, so the day after Shabbat is Sunday.
 import { mountArcade, choiceRow } from './arcade.js';
 import { cycle, stepIn, options } from './g2-core.js';
-import { start, host, grade, numberKeys, draftNote, word, say } from './g2-ui.js';
+import { start, host, grade, numberKeys, word, say } from './g2-ui.js';
 
 export const STORE_KEY = 'games.g2-dayafter.v1';
 const ROUNDS = 10;
@@ -40,8 +40,7 @@ function setup(A) {
   const big = A.h('div', { class: 'g2-big' });
   const area = A.h('div');
   const after = A.h('p', { class: 'muted', 'aria-live': 'polite' });
-  A.board.replaceChildren(host(A, 'rimon', 'Round and round the calendar.'), prompt, big, area, after,
-    draftNote(A, 'Day, month and season words come from the app\'s word lists (Friday from the reading books). A native reader has not checked them yet.'));
+  A.board.replaceChildren(host(A, 'rimon', 'Round and round the calendar.'), prompt, big, area, after);
   numberKeys(A, () => area.querySelector('.arc-choices'));
   start(A, (D, T) => {
     let n = 0;

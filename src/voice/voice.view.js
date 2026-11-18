@@ -172,7 +172,7 @@ export async function mount(root, ctx) {
           : h('p', { class: 'small muted' }, 'This browser cannot keep recordings, so the voice journal is off here.')));
     }
     if (recognizer.supported) {
-      out.push(h('section', { class: 'card', 'aria-labelledby': 'vs-mc-h' }, h('h2', { id: 'vs-mc-h' }, 'Machine Check'),
+      out.push(h('section', { class: 'card', 'aria-labelledby': 'vs-mc-h' }, h('h2', { id: 'vs-mc-h' }, 'Speech Check'),
         h('p', { class: 'small' }, MACHINE_NOTE),
         h('button', { type: 'button', class: 'btn secondary', id: 'vs-machine', onclick: async () => {
           stopAll(); say('Listening: read the line aloud now.');
@@ -181,7 +181,7 @@ export async function mount(root, ctx) {
           st.machine = r.ok ? showName(r.alternatives[0]) : '';
           if (!r.ok && r.error !== 'no-speech') { say('The recognizer did not work just now.'); }
           render('vs-machine-out');
-        } }, 'Read it to the machine'),
+        } }, 'Read it aloud to check'),
         st.machine == null ? null : h('p', { id: 'vs-machine-out', tabindex: '-1', 'data-machine': '' }, ...(st.machine
           ? ['The machine heard: ', heSpan(st.machine), '. The line is: ', heSpan(l.plain), '. A machine guess, not a grade.']
           : [machineSentence('', l.plain)]))));

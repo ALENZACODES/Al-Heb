@@ -26,8 +26,7 @@ const spec = {
 export const jobCard = (who, g) => (who === 'speaker' ? `${PEOPLE[g]} is talking.` : `${PEOPLE[g === 'm' ? 'f' : 'm']} is talking to ${PEOPLE[g]}.`);
 
 function setup(A) {
-  const { T, big, prompt, area } = begin(A, 'noa', 'One word does not fit. Find it, fix it.',
-    'Lines from the gender pairs and the phrasebook; the broken line swaps in the word from the other form of the same line. Not reviewed by a teacher.');
+  const { T, big, prompt, area } = begin(A, 'noa', 'One word does not fit. Find it, fix it.');
   const cfg = A.cfg, rnd = A.rnd;
   let items = [], n = 0;
   const next = () => { if (n >= ROUNDS || !items.length) { T.end({ won: true }); return; } n += 1; ask(items[(n - 1) % items.length]); };

@@ -64,4 +64,4 @@ export const TRUST_LIMITS = Object.freeze([
   },
 ]);
 
-export const EVIDENCE_SUMMARY = 'Lesson completion marks, the Test out button, quick-check results, self-reported hearing, tracing and reading, and points are not used. Streaks are used only for the daily and milestone medallions, never for a certificate. A lesson now counts as complete only after a pass: 70% of its quick check, rounded to the nearest whole question, right on the first try (Test out uses the same short test). That pass mark is the app’s own rule; the questions and the mark have not been reviewed by a qualified Hebrew teacher, and several practice screens still ask you to say that you heard or read something. A certificate needs objective checked answers and criteria that have been reviewed. The review is not done, so nothing on this page is a reviewed certificate.';
+export const EVIDENCE_SUMMARY = 'Badges celebrate your practice, not test scores. A lesson counts as passed when you get 70% of its quick check, rounded to the nearest whole question, right on the first try. Test out uses the same check.';

@@ -2,7 +2,7 @@
 // word a local would put there. From level 4, also say how casual it is. Lines are read straight from data/israel/fillers.json.
 import { mountArcade } from './arcade.js';
 import { loadIsrael, options, sample, stripPoints } from './g4-core.js';
-import { begin, withBank, host, heText, enText, grade, numberKeys, buttons, draftNote } from './g4-ui.js';
+import { begin, withBank, host, heText, enText, grade, numberKeys, buttons } from './g4-ui.js';
 
 export const STORE_KEY = 'games.g4-slang.v1';
 const ROUNDS = 10;
@@ -39,7 +39,7 @@ const spec = {
 function setup(A) {
   const T = begin(A), cfg = A.cfg, rnd = A.rnd;
   const line = A.h('div', { class: 'g4-scene' }), area = A.h('div'), after = A.h('p', { class: 'muted', 'aria-live': 'polite' });
-  A.board.replaceChildren(host(A, 'noa', 'Which little word goes here?'), line, area, after, draftNote(A, 'Lines from the app\'s fillers file, written for this course. Not yet checked by a native speaker.'));
+  A.board.replaceChildren(host(A, 'noa', 'Which little word goes here?'), line, area, after);
   numberKeys(A, () => area.querySelector('.arc-choices'));
   withBank(A, T, (_B, data) => {
     const all = data.fillers.filter((f) => gapped(f));

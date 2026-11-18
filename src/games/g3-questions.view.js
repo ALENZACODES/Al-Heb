@@ -24,8 +24,7 @@ const spec = {
 };
 
 function setup(A) {
-  const { T, big, prompt, area } = begin(A, 'ari', 'The question word leads. Find it.',
-    'Question words from the word list (the phrasebook for three of them); questions from the lessons, units and phrasebook. Not reviewed by a teacher.');
+  const { T, big, prompt, area } = begin(A, 'ari', 'The question word leads. Find it.');
   const cfg = A.cfg, rnd = A.rnd;
   numberKeys(A, () => area.querySelector('.arc-choices'));
   let qwords = [], questions = [], n = 0;

@@ -3,7 +3,7 @@
 // the course has (lesson il04); 11 and 12 are left out until their Hebrew is in the app's data.
 import { mountArcade } from './arcade.js';
 import { pick, hourPhrase, hourAngle, minuteAngle, options, sample } from './g4-core.js';
-import { begin, withBank, host, heText, heItem, enText, say, grade, numberKeys, buttons, draftNote } from './g4-ui.js';
+import { begin, withBank, host, heText, heItem, enText, say, grade, numberKeys, buttons } from './g4-ui.js';
 
 export const STORE_KEY = 'games.g4-clock.v1';
 const ROUNDS = 10;
@@ -48,8 +48,7 @@ export function face(A, h, m, { onNumber = null, hands = true } = {}) {
 function setup(A) {
   const T = begin(A), cfg = A.cfg, rnd = A.rnd;
   const top = A.h('div'), area = A.h('div'), after = A.h('p', { class: 'muted', 'aria-live': 'polite' });
-  A.board.replaceChildren(host(A, 'ari', 'Ma hasha\'a? What time is it?'), top, area, after,
-    draftNote(A, 'Each time is the phrasebook\'s "hasha\'a" with a counting number from lesson il04, put side by side. Not yet checked by a native speaker.'));
+  A.board.replaceChildren(host(A, 'ari', 'Ma hasha\'a? What time is it?'), top, area, after);
   numberKeys(A, () => area.querySelector('.arc-choices'));
   withBank(A, T, (B) => {
     const hours = hoursFor(cfg.max, rnd);

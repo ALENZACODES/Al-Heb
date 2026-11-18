@@ -19,28 +19,31 @@ const privacy = await import('../src/shell/privacy.view.js');
 const ctx = { t: (k) => k, attributions: att };
 const text = (n) => n.textContent;
 
-test('credits: every attribution id renders once, in a group section, with licence and status text', async () => {
+test('credits: every third-party source renders once, in a group section, with its credit line; Aleph\'s own work is covered by the copyright line', async () => {
   const root = newRoot(doc); await credits.mount(root, ctx);
   const rendered = all(root, (e) => e.getAttribute('data-credit-id'));
-  assert.deepEqual(rendered.map((e) => e.getAttribute('data-credit-id')).sort(), att.entries.map((e) => e.id).sort());
-  for (const e of att.entries) {
+  const pub = att.entries.filter(credits.isPublicCredit);
+  assert.ok(pub.length >= 20);
+  assert.deepEqual(rendered.map((e) => e.getAttribute('data-credit-id')).sort(), pub.map((e) => e.id).sort());
+  for (const e of att.entries.filter((x) => !credits.isPublicCredit(x))) assert.equal(root.querySelector(`#credit-${e.id}`), null, e.id);
+  assert.match(text(root), /© 2026 John Khan/);
+  for (const e of pub) {
     const li = root.querySelector(`#credit-${e.id}`);
     assert.ok(li, e.id);
-    assert.ok(text(li).includes(e.name), `${e.id} name`);
-    assert.ok(text(li).includes(e.licence), `${e.id} licence`);
-    assert.ok(text(li).includes('status:'), `${e.id} status`);
+    assert.ok(text(li).includes(credits.publicName(e)), `${e.id} name`);
+    if (e.attributionText) assert.ok(text(li).includes(e.attributionText), `${e.id} credit line`);
+    assert.doesNotMatch(text(li), /data\/|src\/|tools\//, `${e.id}: no file paths on the page`);
+    assert.ok(!text(li).includes('status:'), `${e.id}: the licence check status is not learner copy`);
     assert.equal(li.getAttribute('data-status'), e.status);
   }
   assert.ok(all(root, (e) => e.tagName === 'H2').length >= 8);
 });
 
-test('credits: unverified rows carry an honest flag; links are https only; not-legal-advice is stated', async () => {
+test('credits: every row keeps its licence check status as data; links are https only; not-legal-advice is stated', async () => {
   const root = newRoot(doc); await credits.mount(root, ctx);
-  for (const e of att.entries.filter((x) => x.status === 'unverified')) assert.match(text(root.querySelector(`#credit-${e.id}`)), /status: unverified/);
+  for (const e of att.entries.filter(credits.isPublicCredit)) assert.equal(root.querySelector(`#credit-${e.id}`).getAttribute('data-status'), e.status);
   for (const a of all(root, (n) => n.tagName === 'A' && n.getAttribute('href') && !n.getAttribute('href').startsWith('#'))) assert.match(a.getAttribute('href'), /^https:\/\//);
   assert.match(text(root), /not legal advice/i);
-  const verified = att.entries.filter((x) => x.status === 'verified-primary').length;
-  assert.ok(text(root).includes(`${verified} verified`));
 });
 
 test('credits: hebcal credit line is shown and exported for the calendar screens', async () => {
@@ -53,7 +56,7 @@ test('credits: hebcal credit line is shown and exported for the calendar screens
 test('credits: loads via ctx.fetch, and shows an alert (not a blank page) if loading fails', async () => {
   const ok = newRoot(doc);
   await credits.mount(ok, { t: (k) => k, fetch: async () => ({ ok: true, json: async () => att }) });
-  assert.equal(all(ok, (e) => e.getAttribute('data-credit-id')).length, att.entries.length);
+  assert.equal(all(ok, (e) => e.getAttribute('data-credit-id')).length, att.entries.filter(credits.isPublicCredit).length);
   const bad = newRoot(doc);
   await credits.mount(bad, { t: (k) => k, fetch: async () => ({ ok: false, status: 404 }) });
   assert.ok(bad.querySelector('[role=alert]'));
@@ -151,8 +154,9 @@ test('privacy: scroll position is session-only, nothing uses IndexedDB or upload
   assert.doesNotMatch(body, /fetch\(|sendBeacon|XMLHttpRequest|FormData|Storage/);
   assert.match(body, /createObjectURL/); assert.match(body, /revokeObjectURL/);
   const root = newRoot(doc); privacy.mount(root, { t: (k) => k }); const t = text(root);
-  assert.match(t, /Record and compare/); assert.match(t, /microphone=\(self\)/); assert.match(t, /sessionStorage/);
-  assert.match(t, /IndexedDB .*for one thing only: the Speaking Studio voice journal/); assert.match(t, /Delete all my data removes them/);
+  assert.match(t, /Record and Compare uses the microphone only when you press Record/); assert.match(t, /never saved or uploaded/); assert.match(t, /sessionStorage/);
+  assert.match(t, /lasts only until you close the tab/);
+  assert.match(t, /voice journal are saved in the browser's own database on this device, and Delete all my data removes them/);
 });
 
 test('credits: new practice screens carry the Sources line', () => {

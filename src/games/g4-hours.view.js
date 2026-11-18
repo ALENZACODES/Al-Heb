@@ -54,7 +54,7 @@ const spec = {
 function setup(A) {
   const T = begin(A), cfg = A.cfg, rnd = A.rnd;
   const top = A.h('div'), doors = A.h('div', { class: 'g4-wall' }), area = A.h('div');
-  A.board.replaceChildren(host(A, 'rimon', 'Can we still go in?'), top, doors, area, draftNote(A, 'Day and shop words from the app\'s lessons, word lists and calendar. Opening hours are made up for the game; real ones vary.'));
+  A.board.replaceChildren(host(A, 'rimon', 'Can we still go in?'), top, doors, area, draftNote(A, 'Opening hours are made up for the game. Real ones vary.'));
   numberKeys(A, () => area.querySelector('.arc-choices') || doors);
   withBank(A, T, (B) => {
     pick(B, DAY_KEYS, SIGNS.map((s) => s.key), 's.open', 's.closed');

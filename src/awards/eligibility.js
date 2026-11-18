@@ -31,15 +31,15 @@ export const PRACTICE_BADGES = Object.freeze([
     id: 'game-session',
     category: 'practice',
     name: 'Practice game session',
-    requirement: 'Finish one practice game on this device so the game saves a play count. This records a session, not a lesson and not a winning score. Opening Awards does not count.',
-    lockedText: 'Locked. Finish one practice game: Antonym Tug-of-War, Vowel Catcher, Hebrew Pinball, Prefix Blast, or Memory Palace. A visit to this page does not count.',
+    requirement: 'Finish a practice game.',
+    lockedText: 'Locked. Try Antonym Tug-of-War, Vowel Catcher, Hebrew Pinball, Prefix Blast or Memory Palace.',
   },
   {
     id: 'game-return',
     category: 'practice',
     name: 'Returned to a practice game',
-    requirement: 'The same practice game has a saved play count of at least 2. This is a return to a game, not a sign-in and not a lesson completion. Two different games, once each, do not count.',
-    lockedText: 'Locked. Play the same practice game again until its saved play count is at least 2.',
+    requirement: 'Play the same practice game a second time.',
+    lockedText: 'Locked. Go back to a game you have played and finish it again.',
   },
 ]);
 
@@ -69,8 +69,8 @@ const ladderBadge = (days, name, art) => ({
   section: 'ladder',
   name,
   art,
-  requirement: `Your longest streak on this device reached ${days} days. Shabbat and festival days are frozen by the streak engine and do not break the chain.`,
-  lockedText: `Locked. Build a streak of ${days} counted days. Rest days the streak engine freezes do not break it.`,
+  requirement: `Reach a ${days}-day streak.`,
+  lockedText: `Locked. Study for at least 5 minutes a day, ${days} days in a row.`,
 });
 
 export const MILESTONE_BADGES = Object.freeze([
@@ -90,112 +90,112 @@ export const MILESTONE_BADGES = Object.freeze([
     category: 'milestones',
     section: 'mastery',
     name: 'First Steps',
-    requirement: 'The streak record shows a completed study day on this device: a day with at least 5 engaged minutes, counted by the streak engine.',
-    lockedText: 'Locked. Finish a study day: 5 engaged minutes makes the day count. Home shows the streak.',
+    requirement: 'Finish your first study day.',
+    lockedText: 'Locked. Study for 5 minutes in one day.',
   },
   {
     id: 'goal-met',
     category: 'milestones',
     section: 'mastery',
     name: 'Daily Goal',
-    requirement: 'Engaged study time in one day reached your daily goal (the minutes goal set on Home; 5 minutes if you have not set one). Stamped on the day it is reached.',
-    lockedText: 'Locked. Reach your daily goal of engaged minutes in a single day.',
+    requirement: 'Reach your daily goal.',
+    lockedText: 'Locked. Study for your daily goal in one day. The goal is 5 minutes unless you change it on Home.',
   },
   {
     id: 'games-5',
     category: 'milestones',
     section: 'mastery',
     name: 'Gamer',
-    requirement: 'Each of the five practice games Awards watches (Antonym Tug-of-War, Vowel Catcher, Hebrew Pinball, Prefix Blast, Memory Palace) has a saved play on this device.',
-    lockedText: 'Locked. Play each of the five practice games at least once: Tug-of-War, Vowel Catcher, Pinball, Prefix Blast, and Memory Palace.',
+    requirement: 'Play all five practice games.',
+    lockedText: 'Locked. Play Antonym Tug-of-War, Vowel Catcher, Hebrew Pinball, Prefix Blast and Memory Palace at least once each.',
   },
   {
     id: 'yolo',
     category: 'milestones',
     section: 'mastery',
     name: 'YOLO',
-    requirement: 'A game on this device has a saved record of exactly one finished session, and that first session earned three stars. The trace exists only until a second session is saved, so this is read from the one moment the record can prove it.',
-    lockedText: 'Locked. Finish a game on your first-ever try at it and earn three stars. Only the first saved session can prove it.',
+    requirement: 'Earn three stars the first time you finish a game.',
+    lockedText: 'Locked. Pick a game you have not played yet and go for three stars.',
   },
   {
     id: 'cafe-master',
     category: 'milestones',
     section: 'mastery',
     name: 'Cafe Master',
-    requirement: 'The café dialogue (At the cafe) is recorded as finished on this device.',
-    lockedText: 'Locked. The dialogue pages do not yet record a finished dialogue, so this medallion cannot be earned yet. Reading a dialogue does not count.',
+    requirement: 'Finish the café dialogue, At the Café.',
+    lockedText: 'Locked. This badge cannot be earned yet.',
   },
   {
     id: 'market-master',
     category: 'milestones',
     section: 'mastery',
     name: 'Market Master',
-    requirement: 'The Market Bargains game (Barter at the Shuk) has a saved finished session on this device: its full market set played to the end card.',
-    lockedText: 'Locked. Finish the Market Bargains game once, all the way to its end card.',
+    requirement: 'Finish the Market Bargains game, Barter at the Shuk.',
+    lockedText: 'Locked. Play Market Bargains all the way to the end.',
   },
   {
     id: 'letter-master',
     category: 'milestones',
     section: 'mastery',
     name: 'Letter Master',
-    requirement: 'Your review deck holds a card for each of the 27 letters the lessons teach, including the five final forms. A card appears when a lesson or checkpoint brings that letter into your deck.',
-    lockedText: 'Locked. Bring all 27 letters into your review deck by working through the lessons.',
+    requirement: 'Collect all 27 letters, including the five final forms, in your review deck.',
+    lockedText: 'Locked. Keep going with the lessons. Each new letter joins your review deck.',
   },
   {
     id: 'word-collector',
     category: 'milestones',
     section: 'mastery',
     name: 'Word Collector',
-    requirement: 'Your review decks hold 500 word cards between them: lesson word cards and vocabulary cards you added. A card means the word is in your deck for review, not that it is mastered.',
-    lockedText: 'Locked. Grow your review decks to 500 word cards.',
+    requirement: 'Collect 500 word cards in your review decks.',
+    lockedText: 'Locked. Add words through your lessons and vocabulary practice.',
   },
   {
     id: 'prayer-voice',
     category: 'milestones',
     section: 'mastery',
     name: 'Prayer Voice',
-    requirement: 'The opening prayer on the home screen was played and heard 10 times on this device. Only a play that actually starts is counted; a failed play never counts.',
-    lockedText: 'Locked. Use Listen on the opening prayer and hear 10 prayers.',
+    requirement: 'Listen to the opening prayer on Home 10 times.',
+    lockedText: 'Locked. Tap Listen on the opening prayer on Home.',
   },
   {
     id: 'cantorial-fan',
     category: 'milestones',
     section: 'mastery',
     name: 'Cantorial Fan',
-    requirement: 'Five different historic recordings on the Sacred Listen shelf are recorded as played on this device.',
-    lockedText: 'Locked. The Sacred Listen shelf does not yet record which recordings were played, so this medallion cannot be earned yet. The shelf still plays everything.',
+    requirement: 'Play five different recordings on the Sacred Listen shelf.',
+    lockedText: 'Locked. This badge cannot be earned yet.',
   },
   {
     id: 'book-finisher',
     category: 'milestones',
     section: 'mastery',
     name: 'Book Finisher',
-    requirement: `Finish ${bookFinisherScope()}, recorded on this device.`,
-    lockedText: `Locked. Finish ${bookFinisherScope()}.`,
+    requirement: `Finish ${bookFinisherScope()}.`,
+    lockedText: 'Locked. Read a little book to its last page and answer its story question.',
   },
   {
     id: 'early-bird',
     category: 'milestones',
     section: 'mastery',
     name: 'Early Bird',
-    requirement: 'A counted study day on this device began before 8 in the morning: the day-start stamp (the first app opening of that day) is before 8:00 and the streak engine counts that day as completed.',
-    lockedText: 'Locked. Start a study day before 8 AM and finish it: 5 engaged minutes makes the day count.',
+    requirement: 'Start your study day before 8 AM.',
+    lockedText: 'Locked. Open Aleph before 8 AM, then study for 5 minutes that day.',
   },
   {
     id: 'night-owl',
     category: 'milestones',
     section: 'mastery',
     name: 'Night Owl',
-    requirement: 'A counted study day on this device began after 10 at night: the day-start stamp (the first app opening of that day) is 22:00 or later and the streak engine counts that day as completed.',
-    lockedText: 'Locked. Start a study day at 10 PM or later and finish it: 5 engaged minutes makes the day count.',
+    requirement: 'Start your study day at 10 PM or later.',
+    lockedText: 'Locked. Make your first visit of the day at 10 PM or later, then study for 5 minutes.',
   },
   {
     id: 'root-digger',
     category: 'milestones',
     section: 'mastery',
     name: 'Root Digger',
-    requirement: 'The Root Tree game has a saved finished session on this device: its full root practice set played to the end card.',
-    lockedText: 'Locked. Finish the Root Tree game once, all the way to its end card.',
+    requirement: 'Finish the Root Tree game.',
+    lockedText: 'Locked. Play Root Tree all the way to the end.',
   },
 ]);
 
@@ -214,7 +214,7 @@ export function masterySlots() {
     state: 'locked',
     stateText: 'Locked',
     category: 'mastery-layout',
-    requirement: `${finish.label} opens once Aleph has a proper reading check, which is still being built. Visits and practice games do not count toward it.`,
+    requirement: `The ${finish.label.toLowerCase()} finish is not open yet.`,
   }));
 }
 
@@ -334,18 +334,18 @@ export function evidenceLabel(item, evidence) {
   const rows = (evidence || []).filter((e) => e && e.itemId === item.id);
   const pass = rows.some((e) => e.correct === true && e.trust === 'objective' && e.rubricId === RUBRIC_ID);
   const fail = rows.some((e) => e.correct === false && e.rubricId === RUBRIC_ID);
-  if (pass) return { state: 'recorded', text: 'Objective correct answer recorded. The criteria are still awaiting review, so this does not earn a certificate.' };
-  if (fail) return { state: 'not-correct', text: 'An objective answer was recorded as not correct. That does not earn this item. Evidence missing for a pass.' };
-  return { state: 'missing', text: 'Evidence missing.' };
+  if (pass) return { state: 'recorded', text: 'Done.' };
+  if (fail) return { state: 'not-correct', text: 'Not yet. The last answer was not correct.' };
+  return { state: 'missing', text: 'Not yet.' };
 }
 
 export function completionText(decision) {
   const n = decision ? decision.satisfied : 0;
   const need = decision ? decision.required : 0;
   if (decision && decision.required > 0 && decision.satisfied === decision.required) {
-    return `Locked. Objective answers are recorded for all ${need} proposed items. The criteria are still awaiting review, so this badge stays locked and no certificate is issued. Visits and lesson ticks do not unlock it.`;
+    return `Locked. All ${need} checklist skills are done, but this badge is not open yet.`;
   }
-  return `Locked. Answers so far: ${n} of ${need}. This badge opens once Aleph has a proper reading check, which is still being built. Visits, games, lesson ticks and self-marked reading do not count toward it.`;
+  return `Locked. Checklist skills done: ${n} of ${need}. This badge is not open yet.`;
 }
 
 export function badgeRows(record, games, decision) {
@@ -380,58 +380,58 @@ export function badgeRows(record, games, decision) {
 function earnedMilestoneDetail(badge, record) {
   const basis = (record.awards[badge.id] || {}).basis || {};
   if (badge.id === 'goal-met') {
-    return `Earned. Activity, not mastery. Engaged study time in one day reached your daily goal of ${basis.goalMinutes || 5} minutes on this device.`;
+    return `Earned. You reached your daily goal of ${basis.goalMinutes || 5} minutes.`;
   }
   if (badge.id === 'games-5') {
-    return 'Earned. Activity, not mastery. All five practice games have a saved play on this device.';
+    return 'Earned. You played all five practice games.';
   }
   if (badge.id === 'first-day') {
-    return 'Earned. Activity, not mastery. A completed study day is recorded on this device by the streak engine.';
+    return 'Earned. You finished your first study day.';
   }
   if (badge.id === 'yolo') {
-    return 'Earned. Activity, not mastery. One game on this device shows exactly one saved session, and that first session earned three stars.';
+    return 'Earned. Three stars on your first try.';
   }
   if (badge.id === 'cafe-master') {
-    return 'Earned. Activity, not mastery. The café dialogue is recorded as finished on this device.';
+    return 'Earned. You finished the café dialogue.';
   }
   if (badge.id === 'market-master') {
-    return 'Earned. Activity, not mastery. The Market Bargains game has a saved finished session on this device.';
+    return 'Earned. You finished Market Bargains.';
   }
   if (badge.id === 'root-digger') {
-    return 'Earned. Activity, not mastery. The Root Tree game has a saved finished session on this device.';
+    return 'Earned. You finished Root Tree.';
   }
   if (badge.id === 'letter-master') {
-    return `Earned. Activity, not mastery. Your review deck holds cards for ${basis.count || 27} letters on this device.`;
+    return `Earned. Your review deck holds all ${basis.count || 27} letters.`;
   }
   if (badge.id === 'word-collector') {
-    return `Earned. Activity, not mastery. Your review decks hold ${basis.count || 500} word cards on this device.`;
+    return `Earned. Your review decks hold ${basis.count || 500} word cards.`;
   }
   if (badge.id === 'prayer-voice') {
-    return `Earned. Activity, not mastery. The opening prayer was played and heard ${basis.count || 10} times on this device.`;
+    return `Earned. You listened to the opening prayer ${basis.count || 10} times.`;
   }
   if (badge.id === 'cantorial-fan') {
-    return `Earned. Activity, not mastery. ${basis.count || 5} different historic recordings are recorded as played on this device.`;
+    return `Earned. You played ${basis.count || 5} different recordings.`;
   }
   if (badge.id === 'book-finisher') {
-    return `Earned. Activity, not mastery. ${basis.count || BOOK_FINISHER_TARGET} of the ${BOOK_SHELF_COUNT} little books are recorded as finished (last page and story question) on this device.`;
+    return `Earned. You finished ${basis.count || BOOK_FINISHER_TARGET} of the ${BOOK_SHELF_COUNT} little books.`;
   }
   if (badge.id === 'early-bird' || badge.id === 'night-owl') {
-    const when = Number.isInteger(basis.hour) && basis.hour >= 0 ? ` at ${basis.hour}:00 or within that hour` : '';
-    return `Earned. Activity, not mastery. A counted study day on this device began${when} (day-start stamp ${basis.date || ''}).`.replace('  ', ' ');
+    const when = Number.isInteger(basis.hour) && basis.hour >= 0 ? ` between ${basis.hour}:00 and ${basis.hour + 1}:00` : '';
+    return `Earned. Your study day began${when}${basis.date ? ` on ${basis.date}` : ''}.`;
   }
   if (Number.isInteger(basis.best)) {
-    return `Earned. Activity, not mastery. Your longest recorded streak reached ${basis.best} days on this device. Frozen rest days did not break it.`;
+    return `Earned. Your longest streak reached ${basis.best} days.`;
   }
-  return 'Earned. Activity, not mastery. The streak record on this device supports this medallion. Frozen rest days did not break the chain.';
+  return 'Earned. Your streak reached this step.';
 }
 
 function earnedDetail(badge, record, games) {
   const live = (games && games.sessions ? games.sessions : []).map((s) => `${s.title} ${s.plays}`).join(', ');
-  const tail = live ? ` Saved play counts now: ${live}.` : '';
+  const tail = live ? ` Games played: ${live}.` : '';
   if (badge.id === 'game-return') {
-    return `Earned. Activity, not mastery. The same practice game has been saved more than once on this device. This is not a lesson result.${tail}`;
+    return `Earned. You came back to a practice game.${tail}`;
   }
-  return `Earned. Activity, not mastery. A practice game on this device saved a play. That records the session, not a lesson and not a winning score.${tail}`;
+  return `Earned. You finished a practice game.${tail}`;
 }
 
 /**

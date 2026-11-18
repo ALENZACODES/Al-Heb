@@ -22,7 +22,7 @@ function ensureCss() {
   link.id = "alef-curriculum-css"; link.rel = "stylesheet"; link.href = CSS_HREF;
   doc.head.append(link);
 }
-export const DRAFT_NOTE = "The order is the course's own draft. No Hebrew teacher has reviewed it yet.";
+export const DRAFT_NOTE = "Follow the stages in order, or jump to any lesson you like.";
 
 const plural = (n, one, many) => `${n} ${n === 1 ? one : many}`;
 
@@ -54,7 +54,7 @@ function unitRow(u, pagesDone) {
   const n = u.pages.filter((p) => pagesDone.has(pageKey(u.id, p.id))).length;
   return el("li", { class: "alef-path-unit", "data-unit": u.id },
     el("a", { class: "alef-path-unit-name", href: `#/practical/${encodeURIComponent(u.id)}` }, u.title),
-    el("span", { class: "alef-path-meta" }, `${n} of ${plural(u.pages.length, "page", "pages")} done${u.short ? " · shorter draft pages" : ""}`),
+    el("span", { class: "alef-path-meta" }, `${n} of ${plural(u.pages.length, "page", "pages")} done${u.short ? " · shorter pages" : ""}`),
     el("ol", { class: "alef-path-pages", "aria-label": `Pages of ${u.title}` },
       ...u.pages.map((p, i) => {
         const done = pagesDone.has(pageKey(u.id, p.id));

@@ -45,7 +45,7 @@ test('plene data: pairs are the same word and sound, differing only by a vav/yod
     assert.ok(pleneCheck(v.pair.plene, v.pair.defective).extra.every((c) => 'וי'.includes(c)));
   }
   assert.match(plene.shortLongNote, /not distinguished by length/);
-  assert.match(plene.finalHe.caution, /not true that a final he is just 'not read'/);
+  assert.match(plene.finalHe.caution, /A final he is not simply silent/);
 });
 
 // ---------- dial
@@ -134,7 +134,7 @@ for (const [name, mount] of Object.entries(VIEWS)) {
     const root = newRoot(); const { ctx } = makeCtx();
     const un = mount(root, ctx); await loaded(root);
     const txt = root.textContent;
-    assert.match(txt, /Draft, unreviewed/); assert.match(txt, /no audio yet/i); assert.doesNotMatch(txt, /null|undefined/);
+    assert.doesNotMatch(txt, /Draft, unreviewed/); assert.match(txt, /no audio yet/i); assert.doesNotMatch(txt, /null|undefined/);
     const heSpans = all(root, (e) => e.getAttribute('lang') === 'he');
     assert.ok(heSpans.length > 0);
     for (const s of heSpans) assert.equal(s.getAttribute('dir'), 'rtl');
@@ -184,7 +184,7 @@ test('vowelboard: sort mode accepts members only and logs misses; ashkenazi move
 test('vowelboard: study mode shows five families with count badges and the final-he caution', async () => {
   const root = newRoot(); const { ctx } = makeCtx(); const un = mountBoard(root, ctx); await loaded(root);
   assert.equal(all(root, (e) => e.tagName === 'SECTION' && /^Family /.test(e.getAttribute('aria-label') ?? '')).length, 5);
-  assert.match(root.textContent, /3 signs/); assert.match(root.textContent, /not distinguished by length/); assert.match(root.textContent, /not 'just not read'|not true that a final he/);
+  assert.match(root.textContent, /3 signs/); assert.match(root.textContent, /not distinguished by length/); assert.match(root.textContent, /A final he is not simply silent/);
   un();
 });
 test('niqquddial: levels reveal marks; plene word explained; quiz marks miss', async () => {

@@ -123,12 +123,12 @@ class Doc { createElement(t) { return new El(t, this); } createTextNode(s) { ret
 const all = (n, pred, r = []) => { if (n.nodeType === 1 && pred(n)) r.push(n); for (const c of n.children ?? []) all(c, pred, r); return r; };
 import { waitFor } from './helpers/waitfor.js';
 
-test('view renders every gap, shows not-proofread badge, no audio buttons when audio.has is false', async () => {
+test('view renders every gap, no not-proofread badge, no audio buttons when audio.has is false', async () => {
   const root = new El('div', new Doc());
   const un = mount(root, { settings: { congregation: 'israeli' }, audio: { has: () => false, play() { throw new Error('should not play'); } }, soundgapData: { soundgap, prayerwords } });
   await waitFor(() => all(root, (e) => e.tagName === 'DETAILS').length === 8, { message: "all(root, (e) => e.tagName === 'DETAILS').length === 8" });
   assert.equal(all(root, (e) => e.tagName === 'DETAILS').length, 8);
-  assert.match(root.textContent, /not proofread/);
+  assert.doesNotMatch(root.textContent, /not proofread/);
   assert.equal(all(root, (e) => e.tagName === 'BUTTON').length, 0);
   assert.match(root.textContent, /no audio yet/i);
   for (const e of all(root, (e) => e.attrs.lang === 'he')) assert.equal(e.attrs.dir, 'rtl');

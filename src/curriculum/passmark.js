@@ -17,7 +17,7 @@ export const passMarkText = (n) => (n > 0 ? `${passMark(n)} of ${n} (${passPerce
 export function passRuleText(n) {
   if (!n) return "";
   const need = passMark(n);
-  return `To pass: at least ${need} of ${n} right on the first try (${passPercent(n)}%). Below that the lesson is not marked done, and no lesson XP is given; your review cards are still updated, and you can try again.`;
+  return `To pass, get at least ${need} of ${n} right on the first try (${passPercent(n)}%). If you don't pass, the lesson is not marked done, but your review cards still update and you can try again.`;
 }
 /** "1 retry so far" / "2 retries so far" (empty for none). */
 export const retryText = (n) => (n > 0 ? `${n} ${n === 1 ? "retry" : "retries"} so far` : "");

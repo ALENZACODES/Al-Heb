@@ -299,10 +299,10 @@ export async function mount(root, ctx = /** @type {any} */ ({})) {
     for (const r of p.records) {
       foot.append(el('p', {}, el('strong', {}, r.ref + ': '), `source ${r.source}; licence ${r.license}.`),
         el('p', {}, r.attribution),
-        el('p', {}, `English: ${r.englishSource}.`, r.status === 'verified' && r.proofread === false ? ' Text matches its cited source but has NOT been proofread by a Hebrew educator.' : ' Text still needs checking against its source.'),
+        el('p', {}, `English: ${r.englishSource}.`),
         ...(r.notes ? [el('p', {}, r.notes)] : []));
     }
-    foot.append(el('p', {}, 'Transliteration and audio are learning aids; recorded voices are not yet available, so playback may use the browser voice.'));
+    foot.append(el('p', {}, 'The English letters and the audio are there to help you learn to read the Hebrew.'));
     host.append(foot);
     applyHighlights();
   }

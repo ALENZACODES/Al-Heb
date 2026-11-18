@@ -84,7 +84,7 @@ export async function mount(root, ctx) {
         h('progress', { max: '100', value: String(c.pct), 'aria-label': `${o.title}: share of lines ready to read` }),
         h('p', {}, coverageSentence(o.title, c)),
         (() => { const a = audioCoverage(ctx.audio, buildCards(S.orders, oid, S.byId, st.tradition), st.tradition);
-          return a.lines ? h('p', { class: 'small', 'data-sv-audio': `${a.withClip}/${a.lines}` }, `Sound: ${a.withClip} of ${a.lines} lines have a clip you can play, in Ari's and Noa's synthetic voices (${a.pct}%).`) : null; })(),
+          return a.lines ? h('p', { class: 'small', 'data-sv-audio': `${a.withClip}/${a.lines}` }, a.withClip === a.lines ? `Sound: every line has audio in Ari's and Noa's voices.` : `Sound: ${a.withClip} of ${a.lines} lines have audio in Ari's and Noa's voices.`) : null; })(),
         h('p', { class: 'small' }, `Words: ${c.wordsFull} of ${c.words} different words in these lines are ready to read (${c.wordsPct}%). Whole texts: ${c.textsFull} of ${c.texts}.`),
         (() => { // CODER-100 F8: the one service ring (same denominators as Progress and Prayer Practice, from the counts module)
           let r = null; try { r = serviceRing(oid, store.get(SERVICE_KEYS.practice, null), store.get(SERVICE_KEYS.companion, null), readSnapshot(store).cards, o.items.map((x) => x.id)); } catch { r = null; }
@@ -99,7 +99,7 @@ export async function mount(root, ctx) {
     // M-11: line coverage for the whole Siddur Aleph holds, in the tradition and voice set now: the share of service lines with a clip
     const all = audioCoverageAll(ctx.audio, S.orders, S.byId, ORDER_IDS, st.tradition);
     const total = all.lines ? h('p', { class: 'small', 'data-sv-audio-total': `${all.withClip}/${all.lines}` },
-      `Line coverage: ${all.withClip} of the ${all.lines} service lines Aleph holds have a clip you can play (${all.pct}%), in a synthetic voice, ${TRADITION_LABELS[st.tradition] || st.tradition} pronunciation.`) : null;
+      all.withClip === all.lines ? `All ${all.lines} service lines have audio.` : `${all.withClip} of the ${all.lines} service lines have audio (${all.pct}%).`) : null;
     return [h('p', { class: 'small' }, COVERAGE_NOTE), total, ...sections].filter(Boolean);
   }
 

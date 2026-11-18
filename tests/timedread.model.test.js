@@ -33,7 +33,7 @@ test('ranges cover the last 5 reads of ONE text and never mix texts', () => {
   const r = rangeFor(s, 't1');
   assert.equal(r.count, 5); assert.equal(r.wpm.min, 40); assert.equal(r.wpm.max, 100); assert.equal(rangeFor(s, 't2').count, 1);
   assert.equal(rangeFor(s, 'none'), null);
-  assert.match(describeRange(r), /40 to 100 words a minute.*Self-reported/);
+  assert.match(describeRange(r), /40 to 100 words a minute.*from the words you marked/);
   assert.ok(!('score' in r));
 });
 test('tricky words rank by how often they were marked', () => {

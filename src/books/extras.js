@@ -172,7 +172,7 @@ export function bookPage(h, heSpan, ctx, { id, book, shelfBooks, onChange }) {
       const series = levelSeries(id, shelfBooks), next = nextInSeries(id, shelfBooks);
       return h('div', { class: 'book-series' },
         h('p', {}, h('a', { class: 'btn', href: `#/book-card/${id}` }, 'Your completion card')),
-        series.length ? h('p', { class: 'muted' }, `${seriesLine(book.level, series.map((b) => b.id), done)}. ${SERIES_NOTE}`) : null,
+        series.length ? h('p', { class: 'muted' }, `${seriesLine(book.level, series.map((b) => b.id), done)}.`) : null,
         next ? h('p', {}, h('a', { class: 'btn secondary', href: `#/book/${next.id}` }, `Next in ${book.level}: ${next.titleTranslit} — ${next.titleEn}`)) : null);
     },
   };

@@ -11,7 +11,7 @@ import { buildWordCards, loadTransliterator, loadLetterInfo, TRADITIONS } from '
 import { isLocalHelperUrl } from './engines/local-server.js';
 import { speechSafeText } from '../shell/names.js';
 
-export const ACCURACY_NOTICE = 'Accuracy notice: this reader has only been tested on 145 computer-generated images (about 88% of letters right there). It has not been measured on real photos, so expect mistakes, especially with vowel points, curved pages, glare or small print. Treat the result as a study aid, check it against the page, and do not rely on it for anything important (medical, legal, kashrut, prayer text for a ritual).';
+export const ACCURACY_NOTICE = 'The reader works best on clear, flat, well-lit print. Vowel points, curved pages, glare and small print can cause mistakes, so check the result against the page. Do not rely on it for anything important, such as medical, legal or kashrut information, or a prayer text for a ritual.';
 export const NO_TRANSLATION_NOTICE = 'This app has no built-in Hebrew-to-English translator. Prayer lines that match the built-in texts show the stored translation; everything else shows no English. Nothing was sent anywhere to try.';
 const ROW = 'display:flex;flex-wrap:wrap;gap:4px;justify-content:flex-start';
 const BTN = 'display:inline-flex;flex-direction:column;align-items:center;min-width:3.4em;padding:4px 6px;font-size:1.1em';

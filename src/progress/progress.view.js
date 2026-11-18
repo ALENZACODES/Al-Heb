@@ -257,9 +257,9 @@ export async function mount(root, ctx) {
       g.note && g.measurable ? h('span', { class: 'muted' }, ` (${g.note})`) : null,
       g.kind === 'timedRead' && !g.done && has('timedread') ? h('span', {}, ' ', h('a', { href: '#/timedread' }, 'Time a read')) : null);
     sections.push(h('section', { class: 'card', 'aria-labelledby': 'pg-h-belts' }, h('h2', { id: 'pg-h-belts' }, 'Belts and ranks'),
-      h('p', { class: 'small muted' }, 'Krav Maga style belts on the Reading and prayer track: White, Yellow, Orange, Green, Blue, Brown and Black, each with rank patches P (Practitioner), G (Graduate) and E (Expert). Each rank is a run of lessons in course order, and you earn it only by finishing those lessons, one rank after another. These are Aleph\'s own ranks, not a Krav Maga or outside grade. The Israel track has no belts; it uses Stage 1 to 3.'),
+      h('p', { class: 'small muted' }, 'On the reading track you earn Krav Maga\u2013style belts from White to Black, each with rank patches P (Practitioner), G (Graduate) and E (Expert). Finish a rank\u2019s lessons to earn it. These are Aleph\u2019s own ranks, not an official Krav Maga grade. The Israel track uses Stages 1 to 3.'),
       h('p', { class: 'pg-rank-now', role: 'status' }, 'Your rank: ', top ? rankBadge(h, top) : 'none yet', cur ? h('span', {}, ' · next: ', rankBadge(h, cur), ` (${cur.doneCount} of ${cur.total} lessons)`) : h('span', {}, ' · every rank earned')),
-      timedRanks.length ? h('p', { class: 'small muted' }, `The ${timedRanks.map((b) => b.label).join(' and ')} skill checks include timed read-alouds, which you time and mark yourself (self-reported, not measured by the app). They do not earn or hold back a rank.`) : null,
+      timedRanks.length ? h('p', { class: 'small muted' }, `The ${timedRanks.map((b) => b.label).join(' and ')} skill checks include timed read-alouds that you time and mark yourself. They do not affect your rank.`) : null,
       h('ol', { class: 'pg-ranks' }, ...belts.map((b) => h('li', { 'data-rank': b.id, 'data-state': b.state },
         h('details', { open: b.state === 'current' ? true : null }, h('summary', {}, rankBadge(h, b), `: ${stateText[b.state]}`, h('span', { class: 'small muted' }, ` (lessons ${b.range}, ${b.doneCount} of ${b.total} done)`)),
           h('p', { class: 'small' }, b.gate),
@@ -292,8 +292,8 @@ export async function mount(root, ctx) {
         ...row('Spot It clean rounds', sp.cleanAtLeast === null ? 'no rounds yet' : `at least ${Math.round(sp.cleanAtLeast * 100)}% of ${sp.trials}`),
         ...row('Look-alike checkpoints passed', cp.passed.length ? cp.passed.map((n) => `${n}`).join(', ') + ' of 1, 2, 3' : 'none yet'),
         ...row('Timed reads (self-reported)', tr.reads ? `${plural(tr.reads, 'read', 'reads')} of ${plural(tr.texts, 'text', 'texts')}` : 'none yet'),
-        ...row('Reading speed (self-reported)', tr.best ? `about ${tr.best.medianWpm} clean words a minute on ${tr.best.textId}, median of your last reads` : 'not measured')),
-      h('p', { class: 'small muted' }, 'Review cards come back after longer and longer gaps while you keep remembering them. "Well known" means a card you should remember for 21 days or more. "Learning" is every other card you have started. Reading speed comes only from timed reads you timed and marked yourself; the app measures nothing but the clock.')));
+        ...row('Reading speed (self-reported)', tr.best ? `about ${tr.best.medianWpm} clean words a minute on your most-read text, the median of your latest reads` : 'none yet')),
+      h('p', { class: 'small muted' }, 'Review cards come back after longer and longer gaps while you keep remembering them. "Well known" means a card you should remember for 21 days or more. "Learning" is every other card you have started. Reading speed comes from your timed reads: Aleph keeps the time, and you mark the words that tripped you up.')));
 
     sections.push(backupSection());
 

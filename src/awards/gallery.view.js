@@ -4,15 +4,15 @@
 // has one for the badge id (BADGE_<id>); the temporary vector is the fallback
 // and stays wherever no approved picture resolves. Certificate artwork: none yet.
 import { h } from '../shell/ui.js';
-import { count, SCOPE, readCounts } from '../lib/counts.js';
+import { count, readCounts } from '../lib/counts.js';
 import { load, save } from '../retention/state.js';
 import { grantMysteries, mysteryView } from '../retention/xp.js';
 import { GAME_STORE_KEYS } from './observe.js';
-import { ART_NOTE, renderMedallion } from './icons.js';
+import { renderMedallion } from './icons.js';
 import { loadBeginnerRubric } from './rubric.js';
 import { img as imgEl } from '../img/resolve.js';
 import { loadImageResolver } from '../img/index.js';
-import { EVIDENCE_SUMMARY, TRUST_LIMITS } from './trust.js';
+import { EVIDENCE_SUMMARY } from './trust.js';
 import { readAwards, withDisplayName, writeAwards } from './record.js';
 import {
   badgeRows, certificateDecision, completionText, evidenceLabel, masterySlots, settleAwards,
@@ -138,9 +138,9 @@ async function fillBadgeArt(rootEl, ctx, h, alive) {
 }
 
 function storageLine(save) {
-  if (!save || save.saved === false) return 'This browser refused to save Awards. Nothing new was marked earned. You can still read this page.';
-  if (save.persistent === false) return 'Saved for this visit only. If this browser is blocking storage, it is dropped when you close the tab. Awards still work offline while the tab stays open.';
-  return 'Saved on this device. Awards work offline. There is no account, and nothing is sent to a server.';
+  if (!save || save.saved === false) return 'This browser refused to save Awards, so nothing new was marked earned. You can still look around.';
+  if (save.persistent === false) return 'Saved for this visit only. This browser is blocking storage, so your awards will be gone when you close the tab.';
+  return 'Saved on this device. Awards work offline, with no account needed.';
 }
 
 function gameCode(games, badgeId) {
@@ -164,9 +164,9 @@ export async function mount(root, ctx) {
   let rubric = null;
   let rubricError = '';
   try { rubric = ctx?.rubric || await (ctx?.loadRubric ? ctx.loadRubric() : loadBeginnerRubric()); }
-  catch (e) { rubricError = 'The beginner checklist could not be read from this copy of Aleph. No certificate is issued.'; }
+  catch (e) { rubricError = 'The beginner checklist could not be loaded. Try again later.'; }
   if (!alive) return () => {};
-  if (rubric && rubric.ok === false) rubricError = 'The beginner checklist did not match the shipped lessons. No certificate is issued.';
+  if (rubric && rubric.ok === false) rubricError = 'The beginner checklist could not be loaded. Try again later.';
 
   const settled = settleAwards(ctx?.store, rubric, now);
   const input = h('input', {
@@ -237,9 +237,9 @@ export async function mount(root, ctx) {
         a.click();
         a.remove();
         setTimeout(() => URL.revokeObjectURL(url), 1500);
-        status.textContent = 'Download started on this device. The file is marked Design proof. Nothing was sent.' + (pdfNameNote(m.displayName) ? ' ' + pdfNameNote(m.displayName) : '');
+        status.textContent = 'Download started. The file is marked Design proof.' + (pdfNameNote(m.displayName) ? ' ' + pdfNameNote(m.displayName) : '');
       } catch {
-        status.textContent = 'Download is not available here. You can use Print and choose Save as PDF in the dialog.';
+        status.textContent = 'Download is not available here. Use Print and choose Save as PDF instead.';
       }
     },
   }, 'Download PDF');
@@ -249,7 +249,7 @@ export async function mount(root, ctx) {
     onclick: () => {
       const fn = ctx?.print || globalThis.print;
       if (typeof fn !== 'function') { status.textContent = 'Printing is not available here. Download the PDF instead.'; return; }
-      try { fn(); status.textContent = 'The print dialog was requested. Choose Save as PDF there if you want a file. Aleph does not upload it.'; }
+      try { fn(); status.textContent = 'Opening the print dialog. Choose Save as PDF there to keep a file.'; }
       catch { status.textContent = 'Printing did not open. Download the PDF instead.'; }
     },
   }, 'Print or save as PDF');
@@ -265,7 +265,7 @@ export async function mount(root, ctx) {
       const next = withDisplayName(settled.record, input.value, now);
       const save = writeAwards(ctx?.store, { ...settled.record, ...next });
       if (!save.saved) {
-        status.textContent = 'The name could not be saved. The sample can show it during this visit, but it will not be kept. Nothing was marked earned.';
+        status.textContent = 'The name could not be saved, so it only shows during this visit.';
         paintCertificate();
         return;
       }
@@ -274,8 +274,8 @@ export async function mount(root, ctx) {
       input.value = settled.record.displayName || '';
       paintCertificate();
       status.textContent = settled.record.displayName
-        ? 'Name saved on this device for the sample only. It is not an account and not a certificate.'
-        : 'The sample name was cleared on this device. Nothing was marked earned.';
+        ? 'Name saved for the sample.'
+        : 'Name cleared.';
     },
   }, 'Save name');
 
@@ -284,20 +284,19 @@ export async function mount(root, ctx) {
 
   const rows = badgeRows(settled.record, settled.games, settled.decision);
   const visit = settled.visit === 'return'
-    ? 'You have opened Awards on this browser before. There is no account and no sign-in.'
-    : 'First visit to Awards on this browser. There is no account and no sign-in.';
+    ? 'Welcome back. Keep practicing to earn more.'
+    : 'Earn badges as you practice. Locked badges show what to do next.';
   const unsaved = settled.unsaved?.length
-    ? ' New activity was seen, but it could not be saved, so the badge was not marked earned.'
+    ? ' New progress could not be saved, so no new badge was marked earned.'
     : '';
   status.textContent = storageLine(settled.save) + unsaved;
 
   const checklist = rubricError
     ? h('p', { role: 'alert' }, rubricError)
     : h('div', {},
-      h('p', {}, `Confirmed criteria: none. Proposed criteria: ${rubric.items.length} items from lessons ${rubric.lessonIds[0]}–${rubric.lessonIds[rubric.lessonIds.length - 1]}. Review status: ${rubric.reviewStatus}. These are not a passing score.`),
-      h('p', {}, rubric.graphNote || ''),
-      h('p', {}, rubric.belt ? `Covers ${rubric.belt.name} (lessons ${rubric.belt.lessons}). White belt · P0 sentence from the shipped belt file: ${rubric.belt.gate}` : ''),
-      ...['letter', 'vowel', 'word', 'line'].map((kind) => {
+      h('p', {}, `${rubric.items.length} skills from the White belt and Yellow belt lessons.`),
+      rubric.belt && rubric.belt.gate ? h('p', {}, `White belt goal: ${rubric.belt.gate}`) : null,
+      h('details', {}, h('summary', {}, `See all ${rubric.items.length} skills`), ...['letter', 'vowel', 'word', 'line'].map((kind) => {
         const items = rubric.items.filter((it) => it.kind === kind);
         if (!items.length) return null;
         const title = kind === 'letter' ? 'Letters' : kind === 'vowel' ? 'Vowel signs' : kind === 'word' ? 'Words' : 'Lines';
@@ -311,7 +310,7 @@ export async function mount(root, ctx) {
               h('p', { class: 'aw-req' }, it.requirement),
               h('p', { 'data-evidence': ev.state }, ev.text));
           })));
-      }));
+      })));
 
 
   let mysteryItems = [];
@@ -324,7 +323,7 @@ export async function mount(root, ctx) {
   } catch { mysteryItems = []; }
   const mysterySection = h('section', { 'aria-labelledby': 'award-h-mystery', 'data-shop': 'mysteries' },
     h('h2', { id: 'award-h-mystery' }, 'Mysteries'),
-    h('p', {}, 'A few things already in Aleph stay quietly out of sight until you earn them. Nothing new is downloaded.'),
+    h('p', {}, 'A few surprises stay hidden until you earn them.'),
     h('ul', { class: 'aw-mystery' }, ...mysteryItems.map((item) => h('li', { 'data-mystery': item.id, 'data-open': String(item.open) },
       h('h3', {}, item.open ? item.title : 'A surprise is waiting'),
       h('p', {}, item.open ? item.text : item.needLine),
@@ -333,16 +332,14 @@ export async function mount(root, ctx) {
   page.append(
     h('h1', { id: 'view-title', tabindex: '-1' }, 'Awards'),
     h('p', { id: 'award-visit', 'data-visit': settled.visit }, visit),
-    h('p', {}, 'Awards are decided on this device. They do not need a connection. ' + ART_NOTE),
-    h('p', {}, 'These awards record activity, not mastery. Locked and earned are written in words, not by colour alone.'),
     h('p', { class: 'aw-note' }, EVIDENCE_SUMMARY),
     // One labelled count (M-01): badges here, not the path milestones Progress counts.
-    h('p', { id: 'award-count', 'data-earned': String(rows.filter((r) => r.state === 'earned').length) }, `${count(rows.filter((r) => r.state === 'earned').length, 'badge')} earned. Counted: ${SCOPE.badges}.`),
+    h('p', { id: 'award-count', 'data-earned': String(rows.filter((r) => r.state === 'earned').length) }, `${count(rows.filter((r) => r.state === 'earned').length, 'badge')} earned.`),
     status,
     mysterySection,
     h('section', { 'aria-labelledby': 'award-h-badges' },
       h('h2', { id: 'award-h-badges' }, 'Activity'),
-      h('p', {}, 'These medallions record a saved practice-game session. The picture is a temporary enamel stand-in with a mark for the game that saved the play.'),
+      h('p', {}, 'Play the practice games to earn these.'),
       h('ul', { class: 'aw-gallery' }, ...rows.filter((r) => r.category === 'practice').map((row) => h('li', {
         class: 'aw-badge', 'data-state': row.state, 'data-badge': row.id, 'data-category': 'activity',
       },
@@ -359,11 +356,11 @@ export async function mount(root, ctx) {
           h('span', {}, 'Activity')),
         h('p', { class: 'aw-req' }, row.requirement),
         h('p', {}, row.detail))))),
-      h('p', {}, 'Only these five games already save a play count. Other games are not badge sources here.'),
+      h('p', {}, 'These five games count:'),
       h('ul', { class: 'aw-links' }, ...GAME_STORE_KEYS.map((g) => h('li', {}, h('a', { class: 'aw-link', href: g.href }, g.title))))),
     h('section', { 'aria-labelledby': 'award-h-ladder' },
       h('h2', { id: 'award-h-ladder' }, 'Streak ladder'),
-      h('p', {}, 'One medallion per rung, from two counted days to a full year. The picture grows like a tree instead of showing a number. Days are counted by the streak engine, with Shabbat and festival days frozen so they never break the chain.'),
+      h('p', {}, 'One badge for each step of your streak, from 2 days to a full year. The picture grows like a tree as your streak grows. Shabbat and festival days never break your streak.'),
       h('ul', { class: 'aw-gallery' }, ...rows.filter((r) => r.category === 'milestones' && r.section === 'ladder').map((row) => h('li', {
         class: 'aw-badge', 'data-state': row.state, 'data-badge': row.id, 'data-category': 'ladder',
       },
@@ -376,8 +373,8 @@ export async function mount(root, ctx) {
         h('p', { class: 'aw-req' }, row.requirement),
         h('p', {}, row.detail)))))),
     h('section', { 'aria-labelledby': 'award-h-milestones' },
-      h('h2', { id: 'award-h-milestones' }, 'Milestones and mastery'),
-      h('p', {}, 'These medallions record things the app itself counted: a first study day, your daily goal, prayers heard, letters and words in your review decks, sets finished, and days that started early or late. A medallion whose record does not exist yet says so and stays locked.'),
+      h('h2', { id: 'award-h-milestones' }, 'Milestones'),
+      h('p', {}, 'Badges for moments along the way, like your first study day, your daily goal, and the letters and words you collect.'),
       h('ul', { class: 'aw-gallery' }, ...rows.filter((r) => r.category === 'milestones' && r.section !== 'ladder').map((row) => h('li', {
         class: 'aw-badge', 'data-state': row.state, 'data-badge': row.id, 'data-category': 'milestones',
       },
@@ -390,8 +387,8 @@ export async function mount(root, ctx) {
         h('p', { class: 'aw-req' }, row.requirement),
         h('p', {}, row.detail)))))),
     h('section', { 'aria-labelledby': 'award-h-mastery' },
-      h('h2', { id: 'award-h-mastery' }, 'Beginner checklist finishes'),
-      h('p', {}, 'Matte, polished and foil open once Aleph has a proper reading check, which is still being built. Games, visits and lesson ticks do not count toward them.'),
+      h('h2', { id: 'award-h-mastery' }, 'Beginner checklist'),
+      h('p', {}, 'This badge is not open yet. It comes in three finishes: matte, polished and foil.'),
       h('ul', { class: 'aw-slots' }, ...masterySlots().map((slot) => h('li', {
         class: 'aw-slot', 'data-state': 'locked', 'data-finish': slot.finish, 'data-slot': slot.id,
       },
@@ -404,25 +401,20 @@ export async function mount(root, ctx) {
     h('section', { 'aria-labelledby': 'award-h-cert' },
       h('h2', { id: 'award-h-cert' }, 'Sample certificate'),
       // lane 4 (12 Nov): the record of passed lessons is its own page, with its own limits stated there
-      h('p', { id: 'award-lesson-record' }, 'This sample is a design only. For a printable list of the lessons you passed, with each first-try score and date, see ', h('a', { href: '#/certificate' }, 'Certificate of Lessons Completed'), '. It is self-issued from your own records, not reviewed.'),
-      h('p', {}, 'Type your name to see your certificate.'),
-      h('p', { id: 'award-art-count' }, 'Approved artwork: 0. No final artwork is accepted.'),
-      h('p', {}, MAIL_OFFER.text),
+      h('p', { id: 'award-lesson-record' }, 'This is a sample design. For a printable list of the lessons you passed, with each first-try score and date, see ', h('a', { href: '#/certificate' }, 'Certificate of Lessons Completed'), '.'),
+      h('p', {}, 'Type your name to see it on the sample.'),
       h('div', { class: 'aw-noprint' },
         h('label', { for: 'award-name' }, 'Name to show on the sample'),
         h('div', {}, input, ' ', saveName),
         h('div', { class: 'aw-actions' }, jump, printBtn, downloadBtn, shareBtn),
-        shareOk.shareSheet ? null : h('p', {}, 'Share is not available in this browser. Download the PDF and share the file yourself. Aleph does not send it.')),
+        shareOk.shareSheet ? null : h('p', {}, 'Sharing is not available in this browser. ' + MAIL_OFFER.text)),
       certHost,
       h('details', { id: 'award-sample-notes', class: 'aw-noprint' },
-        h('summary', {}, 'Record, storage, and what this sample is not'),
+        h('summary', {}, 'About this sample'),
         h('ul', {}, ...SAMPLE_PAGE_NOTES.map((line) => h('li', {}, line))))),
     h('section', { 'aria-labelledby': 'award-h-why' },
-      h('h2', { id: 'award-h-why' }, 'Why lesson marks are not used'),
-      checklist,
-      h('details', {},
-        h('summary', {}, 'Where those marks are written'),
-        h('ul', {}, ...TRUST_LIMITS.map((row) => h('li', {}, h('p', {}, row.limit), h('p', {}, `${row.path} (${row.symbol})`)))))),
+      h('h2', { id: 'award-h-why' }, 'Skills on the Checklist'),
+      checklist),
   );
 
   fillBadgeArt(page, ctx, h, () => alive).catch(() => { /* the vector fallback stays */ });

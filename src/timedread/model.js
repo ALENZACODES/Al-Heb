@@ -8,7 +8,7 @@ export const MAX_READS = 500;
 /** Faster than this cannot be reading aloud (it is a mis-tap on Stop); such a read is refused, not saved. */
 export const MAX_PLAUSIBLE_WPM = 300;
 export const MIN_MS = 1500;
-export const HONEST_NOTE = 'Self-reported, not measured by the app. The app only keeps the time; you say which words tripped you.';
+export const HONEST_NOTE = 'You mark the words that tripped you up; Aleph keeps the time.';
 
 /** Words in a Hebrew line, same splitter Progress uses (maqaf-joined words count as one, sof-pasuq alone is not a word). @param {string} he */
 export const wordList = (he) => splitWords(String(he ?? ''));
@@ -81,7 +81,7 @@ export function describeRange(r) {
   const w = r.wpm.min === r.wpm.max ? `${f(r.wpm.min)}` : `${f(r.wpm.min)} to ${f(r.wpm.max)}`;
   const a = r.accuracy;
   const p = a.min === a.max ? `${Math.round(a.min * 100)}%` : `${Math.round(a.min * 100)}% to ${Math.round(a.max * 100)}%`;
-  return `${r.count === 1 ? 'Your 1 read' : `Your last ${r.count} reads`}: ${w} words a minute, ${p} of words without a stumble. Self-reported.`;
+  return `${r.count === 1 ? 'Your 1 read' : `Your last ${r.count} reads`}: ${w} words a minute, ${p} of words without a stumble, from the words you marked.`;
 }
 
 /**

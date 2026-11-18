@@ -15,8 +15,8 @@ const fetchJson = async (ctx, url) => {
 export async function mount(root, ctx) {
   root.append(h("h1", {}, "Little books"));
   root.append(h("p", { class: "muted" },
-    "Little Hebrew story books, read along page by page. Big print, full vowels, and a voice on the pages that have a recording. Start at Beginner 1 — the shelf is grouped by level."));
-  root.append(h("p", {}, h("a", { href: "#/practical" }, "Practice these places"), "."));
+    "Little Hebrew story books to read along, page by page, with big print, full vowels and audio. Start at Beginner 1; the shelf is grouped by level."));
+  root.append(h("p", {}, "For everyday places like the café, the bank or the airport, try the ", h("a", { href: "#/practical" }, "Practical pages"), "."));
   const wrap = h("div", { class: "book-groups" }, h("p", { class: "muted", role: "status" }, "Loading the bookshelf…")); // plan 4.9: no empty shelf while it loads
   root.append(wrap);
   const data = await fetchJson(ctx, "data/books/index.json").catch(() => null);
@@ -76,11 +76,11 @@ export async function mount(root, ctx) {
   }
   // lane games-books (E1, E9, E10): difficulty and known-word share on each card, finished count per level, reading challenge line
   try {
-    const [{ decorateShelf, SERIES_NOTE }, { CHALLENGE_KEY, challengeProgress }] = await Promise.all([import("./extras.js"), import("./challenge.js")]);
+    const [{ decorateShelf }, { CHALLENGE_KEY, challengeProgress }] = await Promise.all([import("./extras.js"), import("./challenge.js")]);
     let rec = null; try { rec = await ctx.store.get(CHALLENGE_KEY); } catch { rec = null; }
     const p = challengeProgress(rec, data.books, places);
     wrap.prepend(h("p", { class: "book-challenge-line" }, p ? `Reading challenge: ${p.text} ` : "", h("a", { href: "#/reading-challenge" }, p ? "Change it" : "Set a reading challenge"),
-      h("span", { class: "muted" }, ` · ${SERIES_NOTE}`)));
+      null));
     await decorateShelf(h, wrap, data.books, ctx, places);
   } catch { /* the shelf works without its extras */ }
 }

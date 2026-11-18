@@ -61,7 +61,7 @@ test('G8: fluency by week is median words per minute and self-reported stumbles 
   const w = V.fluencyByWeek(reads);
   assert.deepEqual(w.map((x) => x.week), ['2026-11-09', '2026-11-16']);
   assert.equal(w[0].wpm, 90); assert.equal(w[0].stumblesPer100, 5); assert.equal(w[1].wpm, 20);
-  assert.match(V.FLUENCY_NOTE, /not pronunciation accuracy/);
+  assert.match(V.FLUENCY_NOTE, /speed and smoothness, not pronunciation/);
 });
 
 test('G9: speaking days from the studio and from Say it recordings; streak tolerates no take yet today; weekly goal', () => {
@@ -164,7 +164,7 @@ test('page: gym, fluency, speaking days and journal tabs', async () => {
   assert.equal(root.querySelector('[data-weak]').attrs['data-weak'], 'fluency');
   assert.ok(root.querySelector('[data-gym="shema-1"]'));
   await root.querySelector('#vs-tab-fluency').click();
-  assert.match(root.textContent, /not pronunciation accuracy/);
+  assert.match(root.textContent, /speed and smoothness, not pronunciation/);
   assert.ok(root.querySelector('[data-week="2026-11-09"]'));
   await root.querySelector('#vs-tab-streak').click();
   assert.equal(root.querySelector('[data-speak-streak]').attrs['data-speak-streak'], '1');

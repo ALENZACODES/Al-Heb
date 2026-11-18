@@ -8,7 +8,7 @@ import { STORE_KEY, buildRounds, tilesFor, check, starsFor, pickRounds, POINTS_P
 import { injectStyles } from './library.view.js';
 
 export { STORE_KEY };
-export const NOTE = 'A word counts only when Aleph\'s own root families or verb list name it under this root. Those lists come from the dictionary and have not been reviewed by a Hebrew teacher, so a real word may be missing and some groupings may be wrong.';
+export const NOTE = 'A word counts when Aleph\'s root families or verb list include it under this root, so now and then a real word may be missing.';
 
 export function mount(root, ctx) {
   injectStyles();

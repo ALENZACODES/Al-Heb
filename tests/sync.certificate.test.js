@@ -77,11 +77,11 @@ test('wording: says what it certifies and what it cannot prove; no verified, acc
   for (const t of [words, view]) assert.ok(!/verif|accredit|endorse|official|guarantee/i.test(t), 'no overclaiming words');
   assert.match(COPY.what(''), /70% of the lesson's quick check, rounded to the nearest whole question, right on the first try/);
   assert.match(COPY.what(''), /first-try score/); assert.match(COPY.what(''), /own records/);
-  assert.match(COPY.limits, /no server and no signature/); assert.match(COPY.limits, /not a proctored assessment/); assert.match(COPY.limits, /A teacher can check the rule and each lesson/);
-  // the same limit the Awards page states about the pass mark
-  assert.match(EVIDENCE_SUMMARY, /have not been reviewed by a qualified Hebrew teacher/); assert.match(COPY.limits, /have not been reviewed by a qualified Hebrew teacher/);
+  assert.match(COPY.limits, /no server and does not sign records/); assert.match(COPY.limits, /not a proctored assessment/); assert.match(COPY.limits, /A teacher can check the pass rule and each lesson/);
+  // the same pass rule the Awards page states
+  assert.match(EVIDENCE_SUMMARY, /70% of its quick check, rounded to the nearest whole question, right on the first try/);
   const gallery = readFileSync(new URL('../src/awards/gallery.view.js', import.meta.url), 'utf8');
-  assert.match(gallery, /#\/certificate/); assert.match(gallery, /self-issued from your own records, not reviewed/);
+  assert.match(gallery, /#\/certificate/); assert.match(COPY.limits, /learner\u2019s own device/);
 });
 
 test('the page prints only the sheet', () => {
@@ -99,7 +99,7 @@ test('view: the learner\'s own record shows the table, the limits and a link tha
   assert.equal(root.querySelectorAll('tr[data-status="meets"]').length, 2);
   assert.equal(root.querySelectorAll('tr[data-status="unscored"]').length, 1);
   assert.match(root.querySelector('#lc-summary').textContent, /2 lessons meet the pass rule, with 10 of 14 quick-check questions right on the first try/);
-  assert.match(root.querySelector('#lc-limits').textContent, /cannot prove/);
+  assert.match(root.querySelector('#lc-limits').textContent, /not a proctored assessment/);
   Object.defineProperty(globalThis, 'navigator', { configurable: true, value: { clipboard: { writeText: async () => {} } } });
   Object.defineProperty(globalThis, 'location', { configurable: true, value: { href: 'https://alef-review.onrender.com/#/certificate' } });
   const nameIn = root.querySelector('#lc-name-input'); assert.equal(nameIn.getAttribute('value'), 'Dana', 'the Awards name is offered');
@@ -109,7 +109,7 @@ test('view: the learner\'s own record shows the table, the limits and a link tha
   const code = /[?&]r=([A-Za-z0-9_-]+)/.exec(href)[1];
   const root2 = newRoot(doc); mount(root2, { store: createStore({ storage: createMemoryStorage(), window: null }), query: { r: code } });
   await tick(50);
-  assert.match(root2.querySelector('#lc-checking').textContent, /worked out every pass again/);
+  assert.match(root2.querySelector('#lc-checking').textContent, /checked each pass again/);
   assert.equal(root2.querySelectorAll('tr[data-status="meets"]').length, 2);
   assert.equal(root2.querySelector('#lc-name').textContent, 'Dana');
   const root3 = newRoot(doc); mount(root3, { store: s, query: { r: (await pack({ nope: 1 })).code } }); await tick(50);

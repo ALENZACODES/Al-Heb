@@ -278,7 +278,7 @@ test('with a recognizer: asr is the default mode and the privacy/unverified note
   const { Rec } = fakeRecognition([]);
   const { root } = await boot({ Rec });
   assert.ok(root.text.includes(RECOGNIZER_NOTE));
-  assert.match(RECOGNIZER_NOTE, /not verified/); assert.match(RECOGNIZER_NOTE, /may send the audio/);
+  assert.match(RECOGNIZER_NOTE, /treat its verdict as a guide/); assert.match(RECOGNIZER_NOTE, /may send the audio/);
   const radios = root.find((n) => n.tag === 'input' && n.attrs.type === 'radio');
   assert.equal(radios.find((r) => r.attrs.value === 'asr').attrs.checked, '');
   assert.equal(radios.find((r) => r.attrs.value === 'asr').attrs.disabled, undefined);
@@ -325,7 +325,7 @@ test('asr mode: match settles the item; a miss shows what was heard and offers s
   assert.match(statusText(root), /Listening/);
   await waitFor(() => byId(root, 'speak-next'));
   assert.equal(made[0].lang, 'he-IL');
-  assert.match(byId(root, 'speak-verdict').text, /matched the target/); assert.match(byId(root, 'speak-verdict').text, /unverified for Hebrew/);
+  assert.match(byId(root, 'speak-verdict').text, /matched the target/); assert.match(byId(root, 'speak-verdict').text, /treat it as a guide/);
   let a = store.m['speak.v1'].attempts.at(-1);
   assert.equal(a.outcome, 'match'); assert.equal(a.mode, 'asr'); assert.equal(a.heard, first);
   byId(root, 'speak-next').click();
@@ -604,7 +604,7 @@ test('read aloud with a recognizer: missed word underlined and listed, stored wi
   assert.match(byId(root, 'read-verdict').text, /Score 75%: 3 of 4 words recognized/);
   assert.equal(byId(root, 'read-missed').text.includes('יְהוָה'), true);
   assert.ok(byId(root, 'read-said') && byId(root, 'read-notyet'), 'self-judging offered after a miss');
-  assert.match(byId(root, 'read-verdict').text, /unverified for Hebrew/);
+  assert.match(byId(root, 'read-verdict').text, /treat it as a guide/);
   let a = store.m['speak.v1'].attempts.at(-1);
   assert.equal(a.kind, 'read'); assert.equal(a.set, 'torah-barchu'); assert.equal(a.itemId, '0'); assert.equal(a.outcome, 'close'); assert.deepEqual(a.missedWords, ['יהוה']); assert.equal(a.mode, 'asr');
   byId(root, 'read-next').click();
@@ -818,7 +818,7 @@ test('M-12 asr: a near miss lists every word with its status in words, shows the
   const { Rec } = fakeRecognition([{ alternatives: [heard] }]);
   const { root, store } = await boot({ Rec, query: { set: 'speak-survival-greetings-1' } });
   assert.ok(byId(root, 'speak-score-means'), 'start screen explains the score');
-  assert.match(byId(root, 'speak-score-means').text, /not measure your accent/);
+  assert.match(byId(root, 'speak-score-means').text, /does not check vowel points or your accent/);
   byId(root, 'speak-start').click();
   await waitFor(() => byId(root, 'speak-mic'));
   assert.equal(byId(root, 'speak-noscore'), undefined, 'no "no score" note when the recognizer is on');
@@ -826,7 +826,7 @@ test('M-12 asr: a near miss lists every word with its status in words, shows the
   await waitFor(() => byId(root, 'speak-next'));
   const v = byId(root, 'speak-verdict').text;
   assert.match(v, /Score \d+%: \d+ of \d+ words? recognized/);
-  assert.match(v, /does not measure your accent/);
+  assert.match(v, /does not check your accent/);
   const list = byId(root, 'speak-words');
   assert.equal(list.children.length, words.length, 'one row per printed word');
   for (const li of list.children) assert.match(li.text, / - (heard right|close|not heard)/);

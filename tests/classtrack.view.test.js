@@ -57,13 +57,13 @@ test('listen-only weeks show no Hebrew text to read', async () => {
   assert.equal(root.find((n) => n.attrs.lang === 'he').length, 0);
 });
 
-test('handout: print sheet with checkboxes, a print button and the draft line', async () => {
+test('handout: print sheet with checkboxes, a print button and the plan footer', async () => {
   const { root } = await go({ week: '4', mode: 'handout' });
   const sheet = root.find((n) => /ct-sheet/.test(n.className));
   assert.equal(sheet.length, 1);
   assert.ok(sheet[0].find((n) => n.className === 'ct-box').length >= 5);
   assert.ok(root.find((n) => n.tag === 'button' && /Print/.test(n.text)).length === 1);
-  assert.match(sheet[0].text, /not reviewed by an educator|Draft/);
+  assert.match(sheet[0].text, /From the Aleph study plan/);
   const style = root.find((n) => n.tag === 'style')[0];
   assert.match(style.textContent, /@media print/);
   assert.doesNotMatch(style.textContent, /https?:\/\//);

@@ -20,7 +20,7 @@ test("before: the authors' goals word for word, what the check asks, and the com
   assert.match(o.checks, new RegExp(`asks ${qs.length} questions`));
   assert.match(o.checks, new RegExp(`${P.passMark(qs.length)} of ${qs.length} right on the first try \\(${P.passPercent(qs.length)}%\\)`));
   const card = O.objectiveCard(el, byId.r02, qs, null);
-  assert.match(card.text, /What You Will Learn/); assert.match(card.text, /draft goals/); assert.doesNotMatch(card.text, /Your record/, "no record line without history");
+  assert.match(card.text, /What You Will Learn/); assert.doesNotMatch(card.text, /draft goals/); assert.doesNotMatch(card.text, /Your record/, "no record line without history");
 });
 
 test("after: only what was asked and right on the first try; below the pass mark nothing is 'proved'", () => {

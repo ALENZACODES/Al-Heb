@@ -138,7 +138,7 @@ export function mount(root, ctx) {
     const why = h('section', { 'aria-labelledby': 'cmp-why' },
       h('h2', { id: 'cmp-why' }, 'What differs and why'),
       diff.same && !diff.sentences.length ? h('p', {}, 'By these rules the three readings do not differ for this text.') : h('ul', {}, diff.sentences.map((s) => h('li', {}, s))),
-      h('p', { class: 'cmp-note' }, 'The underlined syllable is stressed. These explanations describe the spelling rules used to make the readings; they are rule-generated and unverified.'));
+      h('p', { class: 'cmp-note' }, 'The underlined syllable is stressed. The notes explain the spelling rule behind each reading.'));
     const miss = unknown.length ? h('p', { role: 'alert', class: 'cmp-flag' }, `Not in the table, so left out: ${unknown.map((t) => t.he).join(', ')}. ${unknown.some((t) => !t.pointed) ? 'Words need vowel points to be compared. ' : ''}This view cannot sound out new words.`) : null;
     results.replaceChildren(...[h('p', { dir: 'rtl', lang: 'he', class: 'cmp-ipa', style: 'direction:rtl' }, known.map((k) => k.he).join(' ')), miss, h('div', { class: 'cmp-grid' }, cards), why].filter(Boolean));
   }

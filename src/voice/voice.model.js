@@ -15,8 +15,8 @@ export const AXES = Object.freeze([
 export const RATING = Object.freeze([[1, '1 Not yet'], [2, '2 Nearly'], [3, '3 Like the model']]);
 export const SELF_LABEL = 'Self-assessment: your own rating, not a score from Aleph.';
 export const MACHINE_LABEL = 'A machine guess, not a grade.';
-export const MACHINE_NOTE = 'This uses your browser\'s own speech recognizer set to Hebrew. Aleph has not measured how well it hears Hebrew, and it writes without vowel points. Your browser may send the sound to its maker to do the recognition; Aleph itself sends nothing.';
-export const FLUENCY_NOTE = 'Words per minute and the stumbles you marked yourself, from Timed read-aloud. This is speed and smoothness, not pronunciation accuracy.';
+export const MACHINE_NOTE = 'This uses your browser\'s Hebrew speech recognition, which writes without vowel points. Your browser may send the sound to its maker to recognize it; Aleph itself sends nothing.';
+export const FLUENCY_NOTE = 'Words per minute and the stumbles you marked in Timed Read-Aloud. It shows speed and smoothness, not pronunciation.';
 export const GAP_FACTORS = Object.freeze([1, 1.25, 1.5, 2]);
 export const MIN_TURN_MS = 1000, MAX_TURN_MS = 20000;
 export const GOAL_DAYS = Object.freeze([1, 2, 3, 4, 5, 6, 7]);

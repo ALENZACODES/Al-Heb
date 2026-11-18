@@ -35,6 +35,6 @@ test('Lesson Badges page shows earned badges and the unverified era', async () =
   store.m['lesson.checks.v1'] = withCheck(null, 'r01', 3, 4, 10);
   const root = new N('main'); V.mount(root, { store }); await tick(80);
   assert.match(root.textContent, /First Verified Lesson: earned/);
-  assert.match(root.textContent, /Unverified Era/);
+  assert.match(root.textContent, /Earlier Lessons/);
   assert.match(root.textContent, /1 lesson was marked complete without a kept passing score/);
 });

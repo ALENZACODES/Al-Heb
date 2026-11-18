@@ -19,15 +19,20 @@ const privacy = await import('../src/shell/privacy.view.js');
 const ctx = { t: (k) => k, attributions: att };
 const text = (n) => n.textContent;
 
-test('credits: every attribution id renders once, in a group section, with licence and status text', async () => {
+test('credits: every third-party source renders once, in a group section, with its credit line; Aleph\'s own work is covered by the copyright line', async () => {
   const root = newRoot(doc); await credits.mount(root, ctx);
   const rendered = all(root, (e) => e.getAttribute('data-credit-id'));
-  assert.deepEqual(rendered.map((e) => e.getAttribute('data-credit-id')).sort(), att.entries.map((e) => e.id).sort());
-  for (const e of att.entries) {
+  const pub = att.entries.filter(credits.isPublicCredit);
+  assert.ok(pub.length >= 20);
+  assert.deepEqual(rendered.map((e) => e.getAttribute('data-credit-id')).sort(), pub.map((e) => e.id).sort());
+  for (const e of att.entries.filter((x) => !credits.isPublicCredit(x))) assert.equal(root.querySelector(`#credit-${e.id}`), null, e.id);
+  assert.match(text(root), /© 2026 John Khan/);
+  for (const e of pub) {
     const li = root.querySelector(`#credit-${e.id}`);
     assert.ok(li, e.id);
-    assert.ok(text(li).includes(e.name), `${e.id} name`);
-    assert.ok(text(li).includes(e.licence), `${e.id} licence`);
+    assert.ok(text(li).includes(credits.publicName(e)), `${e.id} name`);
+    if (e.attributionText) assert.ok(text(li).includes(e.attributionText), `${e.id} credit line`);
+    assert.doesNotMatch(text(li), /data\/|src\/|tools\//, `${e.id}: no file paths on the page`);
     assert.ok(!text(li).includes('status:'), `${e.id}: the licence check status is not learner copy`);
     assert.equal(li.getAttribute('data-status'), e.status);
   }
@@ -36,7 +41,7 @@ test('credits: every attribution id renders once, in a group section, with licen
 
 test('credits: every row keeps its licence check status as data; links are https only; not-legal-advice is stated', async () => {
   const root = newRoot(doc); await credits.mount(root, ctx);
-  for (const e of att.entries) assert.equal(root.querySelector(`#credit-${e.id}`).getAttribute('data-status'), e.status);
+  for (const e of att.entries.filter(credits.isPublicCredit)) assert.equal(root.querySelector(`#credit-${e.id}`).getAttribute('data-status'), e.status);
   for (const a of all(root, (n) => n.tagName === 'A' && n.getAttribute('href') && !n.getAttribute('href').startsWith('#'))) assert.match(a.getAttribute('href'), /^https:\/\//);
   assert.match(text(root), /not legal advice/i);
 });
@@ -51,7 +56,7 @@ test('credits: hebcal credit line is shown and exported for the calendar screens
 test('credits: loads via ctx.fetch, and shows an alert (not a blank page) if loading fails', async () => {
   const ok = newRoot(doc);
   await credits.mount(ok, { t: (k) => k, fetch: async () => ({ ok: true, json: async () => att }) });
-  assert.equal(all(ok, (e) => e.getAttribute('data-credit-id')).length, att.entries.length);
+  assert.equal(all(ok, (e) => e.getAttribute('data-credit-id')).length, att.entries.filter(credits.isPublicCredit).length);
   const bad = newRoot(doc);
   await credits.mount(bad, { t: (k) => k, fetch: async () => ({ ok: false, status: 404 }) });
   assert.ok(bad.querySelector('[role=alert]'));

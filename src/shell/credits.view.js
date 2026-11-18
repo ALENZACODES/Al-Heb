@@ -17,13 +17,29 @@ export function hebcalCredit(entries) {
 }
 
 export function renderEntry(e) {
+  const licence = publicLicence(e);
   return h('li', { class: 'credit', id: `credit-${e.id}`, 'data-credit-id': e.id, 'data-status': e.status },
-    h('strong', {}, e.name),
-    h('span', { class: 'block' }, h('span', { class: 'muted' }, 'Used for: '), e.usedFor),
-    h('span', { class: 'block' }, h('span', { class: 'muted' }, 'Licence: '), e.licence, e.shareAlike ? ' (share-alike)' : '', ' ',
-      isHttp(e.licenceUrl) ? h('a', { href: e.licenceUrl, rel: 'noopener' }, 'Source page') : null),
-    e.attributionText ? h('span', { class: 'block' }, h('span', { class: 'muted' }, 'Credit: '), e.attributionText) : null);
-  // The licence check status (data-status) stays in data/legal/attributions.json and the audit; it is not learner copy.
+    h('strong', {}, publicName(e)),
+    e.attributionText ? h('span', { class: 'block' }, e.attributionText) : null,
+    licence || isHttp(e.licenceUrl) ? h('span', { class: 'block' }, licence ? [h('span', { class: 'muted' }, 'Licence: '), licence, ' '] : null,
+      isHttp(e.licenceUrl) ? h('a', { href: e.licenceUrl, rel: 'noopener' }, 'Source page') : null) : null);
+  // "Used for" and the licence check status stay in data/legal/attributions.json and the audit; they are not learner copy.
+}
+
+/** Third-party sources are credited on the page; Aleph's own work and its working notes are covered by the copyright line. */
+export const isPublicCredit = (e) => !!e && !['project', 'images', 'audio'].includes(e.group) && e.status !== 'not-present';
+
+/** The licence as a learner reads it: the audit's working notes in brackets are left out. */
+export function publicLicence(e) {
+  const l = String(e?.licence || '');
+  if (/not read|not re-read|not stated/i.test(l) && !/^(CC|MIT|Apache|SIL|Public)/i.test(l)) return '';
+  const clean = l.replace(/\s*\([^()]*(label|states|stated|recorded|read|vendored|README|notes)[^()]*\)/gi, '').trim();
+  return clean.length > 120 ? clean.split(/(?<=\.)\s/)[0] : clean;
+}
+
+/** A source's name without the file paths the audit adds in brackets. */
+export function publicName(e) {
+  return String(e?.name || '').replace(/\s*\([^()]*\/[^()]*\)/g, '').trim();
 }
 
 async function load(ctx) {
@@ -50,7 +66,7 @@ export async function mount(root, ctx) {
   const known = new Set(GROUPS.map((g) => g[0]));
   const groups = GROUPS.concat([...new Set(entries.map((e) => e.group))].filter((g) => !known.has(g)).map((g) => [g, g]));
   const sections = groups.map(([g, label]) => {
-    const rows = entries.filter((e) => e.group === g);
+    const rows = entries.filter((e) => e.group === g && isPublicCredit(e));
     if (!rows.length) return null;
     return h('section', { class: 'card', 'aria-labelledby': `cg-${g}` }, h('h2', { id: `cg-${g}` }, label), h('ul', { class: 'credits', 'aria-label': label }, ...rows.map(renderEntry)));
   });

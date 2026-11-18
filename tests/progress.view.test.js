@@ -51,7 +51,7 @@ test('belts and ranks: Krav Maga style ladder in text; earned only by lessons; t
   const badge = b0.querySelector('.alef-rank'); assert.ok(badge.attrs.title && /White belt, Practitioner 0/.test(badge.attrs.title), 'accessible description, not colour alone');
   const { root } = await show(allRead());
   const belts = section(root, 'pg-h-belts');
-  assert.match(belts.textContent, /The Brown belt · G5 and Black belt · E5 skill checks include timed read-alouds, which you time and mark yourself \(self-reported, not measured by the app\)\. They do not earn or hold back a rank\./);
+  assert.match(belts.textContent, /The Brown belt · G5 and Black belt · E5 skill checks include timed read-alouds that you time and mark yourself\. They do not affect your rank\./);
   const gate = belts.queryAll('[data-gate="timedRead"]')[0];
   assert.match(gate.textContent, /self-reported.*0 of 3 \(needs 3 timed reads of one text with 8\+ words\)/);
   assert.equal(gate.queryAll('a')[0].attrs.href, '#/timedread');
@@ -71,11 +71,11 @@ test('belts: the timed-read link is hidden when the route is not in this build',
 test('numbers: reading speed is self-reported and absent until a timed read exists', async () => {
   const { root } = await show();
   const num = section(root, 'pg-h-num').textContent;
-  assert.match(num, /Timed reads \(self-reported\)none yet/); assert.match(num, /Reading speed \(self-reported\)not measured/);
+  assert.match(num, /Timed reads \(self-reported\)none yet/); assert.match(num, /Reading speed \(self-reported\)none yet/);
   const { root: r2 } = await show({ 'timedread.v1': { v: 1, reads: [read(), read({ ms: 12000 })] } });
   const n2 = section(r2, 'pg-h-num').textContent;
-  assert.match(n2, /2 reads of 1 text/); assert.match(n2, /about 75 clean words a minute on shema-1, median of your last reads/);
-  assert.match(n2, /the app measures nothing but the clock/);
+  assert.match(n2, /2 reads of 1 text/); assert.match(n2, /about 75 clean words a minute on your most-read text, the median of your latest reads/);
+  assert.match(n2, /Aleph keeps the time, and you mark the words that tripped you up/);
 });
 
 test('no wording claims the app measures reading', async () => {

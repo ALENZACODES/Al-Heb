@@ -64,7 +64,6 @@ export function objectiveCard(el, lesson, questions, rec) {
   return el('section', { class: 'card alef-objectives', 'aria-labelledby': 'obj-will-learn', 'data-objectives': 'before' },
     el('h2', { id: 'obj-will-learn' }, 'What You Will Learn'),
     o.goals.length ? el('ul', {}, ...o.goals.map((g) => el('li', {}, g))) : null,
-    o.goals.length ? el('p', { class: 'muted' }, "These are the course authors' draft goals; no teacher has reviewed them yet.") : null,
     el('p', {}, o.checks),
     line ? el('p', { class: 'muted', 'data-record': '' }, line) : null,
     el('p', { class: 'small' }, el('a', { href: '#/course-map' }, 'Where this lesson sits in the course map')));

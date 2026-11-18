@@ -201,7 +201,7 @@ test('first day follows the chosen tradition: a style line before step 1, and th
   assert.match(style.textContent, /Ashkenazi reading is shown in English letters/);
   const hear = btns(root, /Hear it/)[0]; assert.ok(hear);
   await hear.fire('click');
-  await waitFor(() => /browser voice/.test(root.queryAll('div').find((d) => d.getAttribute('id') === 'fd-status')?.textContent || ''), { message: 'no play line' });
-  assert.match(root.textContent, /It speaks Israeli Hebrew, not Ashkenazi/);
+  await waitFor(() => /device's Hebrew voice/.test(root.queryAll('div').find((d) => d.getAttribute('id') === 'fd-status')?.textContent || ''), { message: 'no play line' });
+  assert.match(root.textContent, /in Israeli Hebrew\. The Ashkenazi reading is shown in English letters/);
   un?.();
 });

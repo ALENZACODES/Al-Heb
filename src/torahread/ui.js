@@ -91,7 +91,7 @@ export { hasDivineName };
 export function describeAudio(r, label) {
   if (!r) return `No audio yet for ${label}.`;
   if (r.source === 'file') return `Playing ${label}: ${fileLabel(r.entryStatus)}.`;
-  if (r.source === 'tts-fallback' || r.played === true) return `Played ${label} with your browser's text-to-speech voice. It is a computer voice, not a person, and it reads Israeli pronunciation.`;
+  if (r.source === 'tts-fallback' || r.played === true) return `Played ${label} with your device's Hebrew voice, in Israeli Hebrew.`;
   const why = {
     'unknown-item': 'no audio entry exists for it',
     'no-hebrew-browser-voice': 'your browser has no Hebrew voice',

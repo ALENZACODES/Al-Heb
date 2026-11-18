@@ -272,7 +272,7 @@ test('readNowSummary: every source feeds its row', () => {
   assert.equal(by.letters.have, 27 + 15);
   assert.ok(by.lines.have > 0 && by.lines.have <= by.lines.need);
   assert.match(by.vocab.value, /^2 started, 1 mature$/); // band needs 10 started cards, so no "working in"
-  assert.match(by.timedread.value, /^2 reads of 2 texts, about 90 clean words a minute on (shema-1|avot-1)$/);
+  assert.match(by.timedread.value, /^2 reads of 2 texts, about 90 clean words a minute on your most-read text$/);
   assert.match(by.siddur.label, /Friday evening/); assert.ok(by.siddur.have > 0);
   assert.match(by.firstday.value, /^2 first-day words marked read; ladder 2 of 8 unpointed words marked read$/); // step 1 is pointed; 15 is counted as said
   assert.equal(by.firstday.href, '#/firstday/ladder');

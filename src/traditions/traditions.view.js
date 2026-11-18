@@ -232,14 +232,14 @@ export function mount(root, ctx = {}) {
     content);
 
   const americanNote = () => h('p', { class: 'muted' },
-    tr('trad.sameLetters', 'Same letters as Israeli: the respelling engine writes both the same. The difference is in how English speakers say it. '),
+    tr('trad.sameLetters', 'Same spelling as Israeli. The difference is in how English speakers tend to say it. '),
     (data.prayerwords?.americanHabits ?? []).join(' '));
 
   const alsoNote = () => {
     const b = h('button', { type: 'button' }, tr('trad.seeSounds', 'See the sound table'));
     on(b, 'click', () => go('sounds'));
     return h('p', { class: 'muted' }, h('strong', {}, tr('trad.also', 'Also exists: ')),
-      'Yemenite and other Mizrahi or Sephardi readings (for example a throaty het and ayin). Aleph has no respelling or audio for them. ', b);
+      'Yemenite and other Mizrahi or Sephardi readings (for example a throaty het and ayin). Aleph does not include respellings or audio for them. ', b);
   };
 
   const soundChips = (he) => {
@@ -268,7 +268,7 @@ export function mount(root, ctx = {}) {
       settingCard('sephardi', [lineBlock('sephardi'), americanNote(), audioControl(entry, 'sephardi')]),
       settingCard('ashkenazi', [lineBlock('ashkenazi'), audioControl(entry, 'ashkenazi')]),
     ));
-    body.append(h('p', { class: 'muted' }, tr('trad.respellNote', 'Respellings are the app\'s own approximations (siddur style, no stress marks), not recordings and not a standard.')));
+    body.append(h('p', { class: 'muted' }, tr('trad.respellNote', 'Respellings are close English spellings in siddur style, without stress marks.')));
     body.append(alsoNote());
     const chips = soundChips(entry.he);
     if (chips) body.append(chips);
@@ -300,14 +300,14 @@ export function mount(root, ctx = {}) {
       h('h3', {}, w.id, ' ', h('span', { class: 'muted' }, `- ${uiEnglish(ctx, w.gloss)}`)),
       h('p', { class: 'he-big', dir: 'rtl', lang: 'he' }, w.he));
     const stressNote = (s) => (s ? h('small', { class: 'muted' }, ` stress: ${s}`) : null);
-    const engine = (t) => h('p', { class: 'muted', lang: 'en' }, `Engine respelling: ${respellLines(w.he, t)[0]}`);
+    const engine = (t) => h('p', { class: 'muted', lang: 'en' }, `Aleph\'s respelling: ${respellLines(w.he, t)[0]}`);
     const entryLike = { id: w.id, title: w.id, he: w.he };
     body.append(h('div', { class: 'cards' },
       settingCard('israeli', [h('p', { class: 'say', lang: 'en' }, w.israeli.say, stressNote(w.israeli.stress)), engine('israeli'), audioControl(entryLike, 'israeli')]),
       settingCard('sephardi', [h('p', { class: 'say', lang: 'en' }, w.american.say, stressNote(w.american.stress)), engine('sephardi'), americanNote(), audioControl(entryLike, 'sephardi')]),
       settingCard('ashkenazi', [h('p', { class: 'say', lang: 'en' }, w.ashkenazi.say, stressNote(w.ashkenazi.stress)), engine('ashkenazi'), audioControl(entryLike, 'ashkenazi')]),
     ));
-    body.append(h('p', { class: 'muted' }, 'Capitals mark the stressed syllable. These hand-written respellings come from data/pronunciation/prayerwords.json and are unreviewed.'), alsoNote());
+    body.append(h('p', { class: 'muted' }, 'Capitals mark the stressed syllable.'), alsoNote());
     const chips = soundChips(row.he);
     if (chips) body.append(chips);
   };

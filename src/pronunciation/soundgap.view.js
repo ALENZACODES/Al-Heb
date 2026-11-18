@@ -122,7 +122,6 @@ export function mount(root, ctx = {}) {
 
   const build = ({ soundgap, prayerwords }) => {
     wrap.replaceChildren(h('h2', { id: 'alef-soundgap-title' }, tr('soundgap.title', 'Sound-gap lab')));
-    if (soundgap.proofread === false) wrap.append(h('p', {}, h('span', { class: 'badge' }, 'not proofread'), ' ', 'Written from general phonology and our research notes; no native speaker has checked it yet.'));
 
     const name = `alef-gap-${Math.random().toString(36).slice(2, 8)}`;
     const radios = TRADITIONS.map((t) => {

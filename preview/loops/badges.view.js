@@ -93,7 +93,7 @@ export function shelfNode(h, s, { onCopy } = {}) {
   return h('section', { class: 'card', 'aria-labelledby': 'lp-h-badges', id: 'lp-badges' }, h('h2', { id: 'lp-h-badges' }, 'Badges'),
     h('p', {}, 'Badges are earned, never lost, never bought and never compared with anyone. Each has three levels: First, Steady and Deep. The frame shape and the dots show the level, and the words say it too.'),
     tierBlock, ...fams,
-    h('p', { class: 'muted' }, 'A few quiet badges are not listed until you earn them. Tiers and thresholds are early guesses and have not been tried with learners.'),
+    h('p', { class: 'muted' }, 'A few surprise badges stay hidden until you earn them.'),
     h('details', {}, h('summary', {}, 'Share my badges as text'),
       h('p', {}, 'A plain-text summary you can copy. Nothing is uploaded.'),
       h('textarea', { id: 'bd-text', readonly: '', rows: String(Math.min(14, text.split('\n').length + 1)), 'aria-label': 'Badge summary text' }, text),

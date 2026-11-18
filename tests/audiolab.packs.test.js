@@ -74,5 +74,5 @@ test('the card on Use Aleph offline: choose a book, see the clip count and what 
 test('Use Aleph offline loads the Audio Packs card on demand and no longer says clips cannot be saved', () => {
   const v = readFileSync(new URL('../src/shell/offline.view.js', import.meta.url), 'utf8');
   assert.match(v, /import\("\.\.\/audiolab\/packs\.card\.js"\)/);
-  assert.match(v, /Audio Packs below save them on purpose/);
+  assert.match(v, /use Audio Packs below to save them/);
 });

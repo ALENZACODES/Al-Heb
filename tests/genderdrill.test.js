@@ -96,7 +96,7 @@ test('view: with no stored choice nothing is drilled; choosing saves and shows o
   const V = await import('../src/genderdrill/genderdrill.view.js');
   const root = new N('main'), store = memStore();
   const un = V.mount(root, { store, genderData: { templates: T, paradigms: PARS } }); await tick();
-  assert.match(root.textContent, /Draft and unreviewed/); assert.match(root.textContent, /does not guess your gender/);
+  assert.match(root.textContent, /Adjectives that change with gender are not drilled here/); assert.match(root.textContent, /does not guess your gender/);
   assert.ok(root.all((n) => n.tag === 'button' && n.attrs['aria-pressed'] === 'true').length === 0, 'nothing preselected');
   for (const b of root.all((n) => n.tag === 'button')) assert.match(b.attrs.style || '', /min-height:44px/);
   await btn(root, /^I am a woman/).click(); await tick();

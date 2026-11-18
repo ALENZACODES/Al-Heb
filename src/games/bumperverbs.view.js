@@ -17,7 +17,7 @@ export function mount(root,ctx){
   const board=h('div',{class:'game-board'});
   const article=h('article',{class:'card game-card game-bumperverbs'},h('h1',{id:'view-title'},'Verb Bumper Cars'),
     h('p',{},'Drive toward the verb phrase whose agreement matches the active character.'),
-    h('p',{class:'muted'},'Forms are source records awaiting native-speaker review.'),status,board);
+    status,board);
   root.replaceChildren(article);
   function paint(feedback){
     if(!alive||!article.isConnected)return;

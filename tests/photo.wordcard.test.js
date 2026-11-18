@@ -56,7 +56,7 @@ test('audio hook is null for fuzzy / unmatched lines', () => {
   assert.equal(wordAudioId({ matched: true, source: 'fixture', id: 'x', lineIndex: 0 }, registry, 0), null);
 });
 test('notices are honest: synthetic-only, real photos unmeasured; translation unavailable stated; helper URL must be local', () => {
-  assert.match(ACCURACY_NOTICE, /145 computer-generated/); assert.match(ACCURACY_NOTICE, /not been measured on real photos/);
+  assert.match(ACCURACY_NOTICE, /check the result against the page/); assert.match(ACCURACY_NOTICE, /Do not rely on it for anything important/);
   assert.match(NO_TRANSLATION_NOTICE, /no built-in Hebrew-to-English translator/); assert.match(NO_TRANSLATION_NOTICE, /Nothing was sent/);
   assert.ok(isLocalHelperUrl('http://127.0.0.1:8787')); assert.ok(isLocalHelperUrl('http://localhost:8787'));
   assert.ok(!isLocalHelperUrl('https://translate.example.com')); assert.ok(!isLocalHelperUrl('http://127.0.0.1.evil.com')); assert.ok(!isLocalHelperUrl('nonsense'));

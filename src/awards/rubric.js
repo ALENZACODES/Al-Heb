@@ -6,6 +6,13 @@ import { loadJSON } from '../curriculum/data.js';
 import { resolveRanks } from '../curriculum/ranks.js';
 
 export const RUBRIC_ID = 'beginner-white-v1';
+const LINE_NAMES = Object.freeze({ 'bless-priestly': 'Priestly Blessing' });
+/** A reader-facing name for a prayer-line id: bless-priestly-2 -> Priestly Blessing, line 2. */
+export function lineLabel(id) {
+  const m = /^(.*)-(\d+)$/.exec(String(id));
+  if (m && LINE_NAMES[m[1]]) return `${LINE_NAMES[m[1]]}, line ${m[2]}`;
+  return 'Prayer line ' + id;
+}
 /** Shipped review state. There is no setter. A later review would change this constant in source. */
 export const REVIEW_STATUS = 'awaiting-review';
 export const CRITERIA_REVIEWED = false;
@@ -74,7 +81,7 @@ export function deriveBeginnerRubric(lessonsFile, beltsFile) {
           kind: 'letter',
           lessonIds: [lesson.id],
           label: 'Letter ' + id,
-          requirement: `A checked question on the name or sound of ${id}, scored by the assessment. Marking lesson ${lesson.id} complete does not count, including when answers were wrong.`,
+          requirement: `Answer a checked question on the name or sound of ${id}.`,
         });
         letterSeen.set(id, row);
         items.push(row);
@@ -88,7 +95,7 @@ export function deriveBeginnerRubric(lessonsFile, beltsFile) {
           kind: 'vowel',
           lessonIds: [lesson.id],
           label: 'Vowel sign ' + id,
-          requirement: `A checked question on the sound of the vowel sign ${id}, scored by the assessment. Saying you heard it, or tracing a letter, does not count.`,
+          requirement: `Answer a checked question on the sound of ${id}.`,
         });
         vowelSeen.set(id, row);
         items.push(row);
@@ -106,7 +113,7 @@ export function deriveBeginnerRubric(lessonsFile, beltsFile) {
           label: 'Word',
           he,
           gloss: word.en || '',
-          requirement: `A checked reading or matching question for this word, scored by the assessment. A lesson-complete flag does not count.`,
+          requirement: 'Read or match this word in a checked question.',
         });
         wordSeen.set(he, row);
         items.push(row);
@@ -119,8 +126,8 @@ export function deriveBeginnerRubric(lessonsFile, beltsFile) {
           id: 'line:' + id,
           kind: 'line',
           lessonIds: [lesson.id],
-          label: 'Line ' + id,
-          requirement: `A checked recognition question for line ${id}. The Yellow belt · P1 lesson (r05) asks the learner to listen and spot letters already met. Tapping that you heard it does not count. Full decoding of these lines is a later lesson, so this item is recognition only, and it is still only proposed.`,
+          label: lineLabel(id),
+          requirement: 'Listen to this line and spot the letters you know, in a checked question.',
         });
         lineSeen.set(id, row);
         items.push(row);
@@ -140,7 +147,7 @@ export function deriveBeginnerRubric(lessonsFile, beltsFile) {
     lessonIds: lessons.map((l) => l.id),
     problems,
     items,
-    graphNote: 'The White belt · P0 sentence in data/curriculum/belts.json is a short summary. This checklist follows every letter, vowel, word and prayer-line id on the shipped lessons of White belt · P0 and Yellow belt · P1 (r01-r09). It is a proposal awaiting review, not a confirmed score.',
+    graphNote: 'The checklist covers every letter, vowel, word and prayer line in the White belt and Yellow belt lessons.',
   };
 }
 

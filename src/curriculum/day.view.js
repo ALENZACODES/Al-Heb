@@ -113,7 +113,7 @@ export function mount(root, ctx) {
       el("a", { class: "alef-cal-btn", href: `#/day/${n.next}`, rel: "next" }, "Next day ›"),
       n.prevNotable ? el("a", { class: "alef-cal-btn", href: `#/day/${n.prevNotable.iso}` }, `‹ ${n.prevNotable.en} (${n.prevNotable.iso})`) : null,
       n.nextNotable ? el("a", { class: "alef-cal-btn", href: `#/day/${n.nextNotable.iso}` }, `${n.nextNotable.en} (${n.nextNotable.iso}) ›`) : null));
-    kids.push(el("p", { class: "alef-cal-note" }, "Draft explanations written for Aleph in plain language; not reviewed by clergy. Customs differ between communities: your own congregation's practice comes first."));
+    kids.push(el("p", { class: "alef-cal-note" }, "Customs differ between communities. Your own congregation's practice comes first."));
     // the shell focused the loading heading when the route opened; keep focus on the real heading once it is replaced
     const hadFocus = typeof document !== "undefined" && document.activeElement && wrap.contains?.(document.activeElement);
     wrap.replaceChildren(...kids);

@@ -92,7 +92,7 @@ export async function mount(root, ctx) {
         h('li', { 'data-part': 'lines' }, `Lines read: ${r.lines.have} of ${r.lines.of}`),
         h('li', { 'data-part': 'words' }, `Words known: ${r.words.have} of ${r.words.of}`),
         h('li', { 'data-part': 'prayers' }, `Prayers followed: ${r.prayers.have} of ${r.prayers.of}`)),
-      h('p', { class: 'small muted' }, `The ring is the average of the three shares. Each part is your own mark, not a test. It covers only the texts Aleph holds: ${r.gaps} typical ${r.gaps === 1 ? 'part is' : 'parts are'} not in Aleph yet.`));
+      h('p', { class: 'small muted' }, `The ring is the average of the three parts, each marked by you.`));
   }
 
   function tabs() {
@@ -142,7 +142,7 @@ export async function mount(root, ctx) {
       h('div', { class: 'pp-row' },
         h('button', { type: 'button', class: 'btn secondary', id: 'pp-prev', disabled: st.i === 0 ? true : null, onclick: () => go(-1) }, 'Previous line'),
         h('button', { type: 'button', class: 'btn secondary', id: 'pp-next', disabled: st.i === list.length - 1 ? true : null, onclick: () => go(1) }, 'Next line')),
-      h('p', { class: 'small muted' }, `${SELF_CHECK} Transliteration is made by rule, in your Settings pronunciation; it is an approximation.`),
+      h('p', { class: 'small muted' }, `${SELF_CHECK} The English letters follow your pronunciation style.`),
       live];
   }
 

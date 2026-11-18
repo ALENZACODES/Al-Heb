@@ -53,7 +53,7 @@ export const en = {
   'settings.redo': 'Run the first-time setup again',
   // Krav Maga style belts and rank patches (data/curriculum/belts.json). Every rank is shown as text too, e.g. "Yellow belt · P2".
   'learn.belt': 'Your rank', 'learn.belt.none': 'none yet', 'learn.belt.next': 'next', 'learn.belt.all': 'every rank earned; keep practicing',
-  'learn.belt.note': 'Krav Maga style belts and patches, Aleph\'s own ranks. Each rank is a run of lessons in course order; finish them to earn it.',
+  'learn.belt.note': 'Finish a rank\u2019s lessons to earn its Krav Maga\u2013style belt.',
 };
 /** Hebrew UI labels. FLAGGED: machine-assisted drafts, need native-speaker review. */
 export const he = {

@@ -150,7 +150,7 @@ export function mount(root, ctx) {
       cardBlock("morning", g, slot === "morning", "alef-prompt-m"),
       el("section", { "aria-labelledby": "alef-shabbat-h" },
         el("h2", { id: "alef-shabbat-h" }, tr(ctx, "cal.candles", "Shabbat candle lighting")),
-        el("p", { class: "alef-parsha" }, sp ? ["Torah portion this Shabbat (", isoDate(nextSat), "): ", el("strong", {}, el("a", { href: "#/torahread", "aria-label": `Read about the Torah portion ${sp.en}` }, sp.en)), " ", heText(sp.he), " ", el("span", { class: "muted" }, "(The full portion text is not in Aleph yet; the link opens the Torah reading page.)")] : `Shabbat ${isoDate(nextSat)}: no regular Torah portion (festival Shabbat).`),
+        el("p", { class: "alef-parsha" }, sp ? ["Torah portion this Shabbat (", isoDate(nextSat), "): ", el("strong", {}, el("a", { href: "#/torahread", "aria-label": `Read about the Torah portion ${sp.en}` }, sp.en)), " ", heText(sp.he), " ",] : `Shabbat ${isoDate(nextSat)}: no regular Torah portion (festival Shabbat).`),
         timesBlock(g, l)),
       el("section", { "aria-labelledby": "alef-up-h" },
         el("h2", { id: "alef-up-h" }, tr(ctx, "cal.upcoming", "Coming up")),

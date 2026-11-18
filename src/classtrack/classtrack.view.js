@@ -198,13 +198,14 @@ export function mount(root, ctx = {}) {
           h('h3', {}, 'Homework'), h('ul', { class: 'ct-checks' }, ...w.homework.map((x) => h('li', {}, h('span', { class: 'ct-box', 'aria-hidden': 'true' }), `${x.label} (about ${x.minutes} min)`))),
           h('h3', {}, 'Can you...'), h('ul', { class: 'ct-checks' }, ...w.canYou.map((c) => h('li', {}, h('span', { class: 'ct-box', 'aria-hidden': 'true' }), `...${c}?`))),
           h('p', { class: 'small' }, 'Culture note: ', w.culture),
-          h('p', { class: 'small' }, 'Aleph class track: original plan, draft, not reviewed by an educator.')));
+          h('p', { class: 'small' }, 'From the Aleph study plan.')));
     }
 
+    const KIND_TITLES = { 'confusable-pair': 'Look-alike letters', 'wrong-vowel': 'Vowel signs', 'direction-slip': 'Reading direction', 'silent-letter': 'Silent letters', 'final-form': 'Final forms', 'missing-short-vowels': 'Missing vowels' };
     /** Help for this week: sounds English speakers mix up, common slips, and where to practise them. */
     function helpBox(i) {
       const w = weeks[i], er = commonErrors(d, w);
-      const tips = [...er.gaps.map((g) => `${g.title}: ${g.trap}`), ...er.kinds.map((k) => `${k.kind}: ${k.hint}`)];
+      const tips = [...er.gaps.map((g) => `${g.title}: ${g.trap}`), ...er.kinds.map((k) => `${KIND_TITLES[k.kind] || 'Common slip'}: ${k.hint}`)];
       return h('section', { class: 'ct-help', 'aria-labelledby': `ct-help-${w.week}` },
         h('h3', { id: `ct-help-${w.week}` }, 'Need help this week?'),
         tips.length ? h('div', {}, h('p', { class: 'small' }, 'Watch out for:'), list(tips)) : null,

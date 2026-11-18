@@ -57,7 +57,8 @@ test('proposed rubric follows the shipped white-belt lessons and is not confirme
   assert.ok(!rubric.lessonIds.includes('r10'));
   assert.ok(rubric.items.length > 20);
   assert.match(rubric.belt.gate, /Shabbat Shalom/);
-  assert.match(rubric.graphNote, /awaiting review/);
+  assert.match(rubric.graphNote, /White belt and Yellow belt lessons/);
+  assert.equal(rubric.items.find((it) => it.id === 'line:bless-priestly-1').label, 'Priestly Blessing, line 1');
 });
 
 test('assessment adapter rejects completion flags, self-marks, legacy progress, and wrong answers do not satisfy', () => {
@@ -408,7 +409,7 @@ test('milestones: settleAwards reads the streak record and stamps the daily goal
   const rows = badgeRows(settled.record, settled.games, settled.decision);
   const week = rows.find((r) => r.id === 'streak-7');
   assert.equal(week.state, 'earned');
-  assert.match(week.detail, /longest recorded streak reached 7 days/);
+  assert.match(week.detail, /longest streak reached 7 days/);
   const monthRow = rows.find((r) => r.id === 'streak-30');
   assert.equal(monthRow.state, 'locked');
 });
@@ -518,9 +519,9 @@ test('honest locks: themed badges with no writer yet grant nothing from unrelate
     assert.equal(settled.record.awards[id], undefined, id + ' stays locked without its record');
   }
   const rows = badgeRows(settled.record, settled.games, settled.decision);
-  assert.match(rows.find((r) => r.id === 'cafe-master').detail, /do not yet record/);
+  assert.match(rows.find((r) => r.id === 'cafe-master').detail, /cannot be earned yet/);
   assert.match(rows.find((r) => r.id === 'book-finisher').detail, /last page/);
-  assert.match(rows.find((r) => r.id === 'cantorial-fan').detail, /does not yet record/);
+  assert.match(rows.find((r) => r.id === 'cantorial-fan').detail, /cannot be earned yet/);
 });
 
 test('future writers: when the named records land, the same readers grant without new code', () => {
@@ -600,5 +601,5 @@ test('gallery source: medallion art comes from the resolver with the vector as f
   assert.match(src, /data-badge-art/);
   assert.match(src, /renderMedallion/);
   assert.match(src, /Streak ladder/);
-  assert.match(src, /Milestones and mastery/);
+  assert.match(src, /'Milestones'/);
 });

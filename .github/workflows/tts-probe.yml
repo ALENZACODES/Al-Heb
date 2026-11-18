@@ -1,0 +1,15 @@
+name: tts-probe
+on:
+  push:
+    branches: ['claude/audio-round4-2026-11-17']
+    paths: ['tools/torah/audio/ipa/tts_probe.py']
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 tools/torah/audio/ipa/tts_probe.py
+        env:
+          GOOGLE_TTS_API_KEY: ${{ secrets.GOOGLE_TTS_API_KEY }}

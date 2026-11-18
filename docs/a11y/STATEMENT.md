@@ -23,12 +23,12 @@ Written 2026-11-04. This statement describes what has been checked so far. It is
 ## What was not tested with real people or devices
 
 - No screen reader (VoiceOver, TalkBack, NVDA, JAWS) was used, so how the screens sound is unknown. No braille display, voice control or switch access was used.
-- No switch device, eye tracker, head pointer or voice-control software was used, and no person with a motor disability tried the app. Target sizes are CSS pixels in an emulator, not measured on a finger.
+- No eye tracker or head pointer was used, and no person with a motor disability has tried the app yet. Tap-target sizes were measured in an emulator, not on a real touch screen.
 - No real phone or tablet (iOS or Android) and no physical keyboard was used; checks ran in desktop Chromium, some at an emulated phone size.
 - Nobody with dyslexia, ADHD, memory difficulties, anxiety, sensory sensitivity, migraine or low literacy tried the calm mode, short sessions or reading settings, and no photosensitivity analyser was used.
 - No person with a disability, and no person who is deaf, blind, colour-blind, has limited movement or finds screens overwhelming, tried the app for this statement. Whether a setting helps a given person is not known.
 - Pinch zoom was not tested; narrow-width layout was used as a stand-in.
-- Hebrew labels in the interface were not proofread by a Hebrew speaker.
+- The Hebrew labels in the interface have not yet been proofread by a native Hebrew speaker.
 
 ## Known gaps
 

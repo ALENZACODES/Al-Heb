@@ -2,27 +2,27 @@
 
 Every Hebrew Torah verse clip the app plays (both voices), heard by machines: **words** (ivrit-ai Whisper hears every word of the verse), **sounds** (renikud/whisper-he-ipa hears every word's sounds, 0.6 or better), **pace** (speech within 12% of 4.6 syllables a second). These are the steady-pace clips of 17 Nov, plus Genesis 1 re-recorded with pauses. No person has listened.
 
-**Partial:** 9,744 of the 11,692 clips (20 of 24 slices). Slices 5, 16, 20 and 21 were still running at 12:41 UTC (slices 20 and 21 were also checked on Kaggle GPUs).
+**Partial:** 11,205 of the 11,692 clips (23 of 24 slices). Slice 21 was still running at 13:23 UTC (Kaggle GPUs also checked it).
 
 | | clips | share |
 |---|---|---|
-| checked | 9744 | |
-| **all three right** | **6042** | **62.0%** |
-| words right | 6269 | 64.3% |
-| sounds right | 9253 | 95.0% |
-| pace right | 9692 | 99.5% |
-| fail sounds or pace (likely a real fault) | 541 | 5.6% |
-| fail words only (often the recognizer's spelling) | 3161 | 32.4% |
+| checked | 11205 | |
+| **all three right** | **6957** | **62.1%** |
+| words right | 7219 | 64.4% |
+| sounds right | 10652 | 95.1% |
+| pace right | 11144 | 99.5% |
+| fail sounds or pace (likely a real fault) | 612 | 5.5% |
+| fail words only (often the recognizer's spelling) | 3636 | 32.4% |
 
-The Name: in 142 clips the only weak sound was the Name; the phoneme model heard "adonai" in 124 of them, so those count as right.
+The Name: in 162 clips the only weak sound was the Name; the phoneme model heard "adonai" in 142 of them, so those count as right.
 
 | book | clips | all three right |
 |---|---|---|
-| deuteronomy | 1594 | 972 (61.0%) |
-| exodus | 2016 | 1307 (64.8%) |
-| genesis | 2555 | 1517 (59.4%) |
-| leviticus | 1431 | 912 (63.7%) |
-| numbers | 2148 | 1334 (62.1%) |
+| deuteronomy | 1833 | 1119 (61.0%) |
+| exodus | 2319 | 1491 (64.3%) |
+| genesis | 2938 | 1757 (59.8%) |
+| leviticus | 1646 | 1064 (64.6%) |
+| numbers | 2469 | 1526 (61.8%) |
 
 ## Fail sounds or pace (likely real)
 
@@ -32,6 +32,7 @@ The Name: in 142 clips the only weak sound was the Name; the phoneme model heard
 | deuteronomy-1-16 | Noa (f) | ✗ | ✓ 4.25 | הַהִוא | הַהִוא |
 | deuteronomy-1-30 | Noa (f) | ✗ | ✓ 4.59 | אֲשֶׁר |  |
 | deuteronomy-11-25 | Noa (f) | ✗ | ✓ 4.27 | אֲדֹנָי, בָהּ |  |
+| deuteronomy-12-24 | Noa (f) | ✗ | ✓ 4.66 | לֹא |  |
 | deuteronomy-12-27 | Noa (f) | ✗ | ✓ 4.47 | אֲדֹנָי, אֲדֹנָי |  |
 | deuteronomy-14-24 | Noa (f) | ✗ | ✓ 4.61 | כִּי | יִרְבֶּה, יִרְחַק |
 | deuteronomy-15-10 | Noa (f) | ✗ | ✓ 4.63 | אֲדֹנָי | לְבָבְךָ, בְּתִתְּךָ |
@@ -42,6 +43,7 @@ The Name: in 142 clips the only weak sound was the Name; the phoneme model heard
 | deuteronomy-19-6 | Noa (f) | ✗ | ✓ 4.6 | הוּא | וְהִכָּהוּ, הוּא |
 | deuteronomy-2-18 | Noa (f) | ✓ | ✗ 3.94 |  |  |
 | deuteronomy-2-20 | Noa (f) | ✗ | ✓ 4.67 | אַף, בָהּ |  |
+| deuteronomy-2-29 | Noa (f) | ✗ | ✓ 4.6 | עֵשָׂו | בְּעָר |
 | deuteronomy-2-34 | Noa (f) | ✗ | ✓ 4.35 | הַהִוא | כָּל, עָרָיו, הַהִוא, כָּל, שָׂרִיד |
 | deuteronomy-2-4 | Noa (f) | ✗ | ✓ 4.6 | עֵשָׂו | צַו, עֵשָׂו |
 | deuteronomy-2-8 | Noa (f) | ✗ | ✓ 4.75 | גָּבֶר | וַנַּעֲבֹר, בְנֵי עֵשָׂו, בְּשֵׂעִיר, גָּבֶר, וַנַּעֲבֹר, מִדְבַּר |
@@ -54,14 +56,17 @@ The Name: in 142 clips the only weak sound was the Name; the phoneme model heard
 | deuteronomy-21-4 | Noa (f) | ✗ | ✓ 4.33 | הַהִוא | הַהִוא |
 | deuteronomy-21-5 | Noa (f) | ✗ | ✓ 4.6 | כִּי | וְנִגְּשׁוּ, בָם, וְכָל |
 | deuteronomy-22-13 | Noa (f) | ✗ | ✓ 4.61 | כִּי | כִּי יִקַּח אִישׁ אִשָּׁה וּבָא אֵלֶיהָ וּשְׂנֵאָהּ |
+| deuteronomy-22-18 | Noa (f) | ✗ | ✓ 4.59 | הַהִוא | הַהִוא, וְיִסְּרוּ |
 | deuteronomy-23-12 | Noa (f) | ✗ | ✓ 4.63 | אֶל |  |
 | deuteronomy-23-14 | Noa (f) | ✗ | ✓ 4.58 | בָהּ |  |
 | deuteronomy-23-23 | Noa (f) | ✓ | ✗ 3.87 |  |  |
 | deuteronomy-25-16 | Noa (f) | ✗ | ✓ 4.59 | אֵלֶּה | אֵלֶּה כֹּל |
 | deuteronomy-25-4 | Noa (f) | ✓ | ✗ 4.02 |  |  |
 | deuteronomy-26-1 | Noa (f) | ✗ | ✓ 4.87 | בָּהּ |  |
+| deuteronomy-26-18 | Noa (f) | ✗ | ✓ 4.59 | הֶאֱמִירְךָ | מִצְוֹתָיו |
 | deuteronomy-28-48 | Noa (f) | ✗ | ✓ 4.61 | אֹתָךְ |  |
 | deuteronomy-29-22 | Noa (f) | ✗ | ✓ 4.67 | בָהּ | וָמֶלַח, בָהּ כָּל, כְּמַהְפֵּכַת, וַעֲמֹרָה אַדְמָה וּצְבוֹיִם |
+| deuteronomy-29-27 | Noa (f) | ✗ | ✓ 4.39 | וַיִּתְּשֵׁם, אֲדֹנָי |  |
 | deuteronomy-29-3 | Noa (f) | ✗ | ✓ 4.6 | וְלֹא | לִשְׁמֹעַ |
 | deuteronomy-3-12 | Noa (f) | ✗ | ✓ 4.48 | הַהִוא | הַהִוא, מֵעֲרֹעֵר, וְעָרָיו |
 | deuteronomy-30-12 | Noa (f) | ✗ | ✓ 4.59 | הִוא | הִוא |
@@ -77,16 +82,21 @@ The Name: in 142 clips the only weak sound was the Name; the phoneme model heard
 | deuteronomy-4-32 | Noa (f) | ✗ | ✓ 4.59 | אוֹ | כִּי שְׁאַל |
 | deuteronomy-4-33 | Noa (f) | ✗ | ✓ 4.36 | וַיֶּחִי | וַיֶּחִי |
 | deuteronomy-4-6 | Noa (f) | ✗ | ✓ 4.29 | הִוא | הִוא, כָּל |
+| deuteronomy-5-19 | Noa (f) | ✗ | ✓ 4.69 | עַל |  |
 | deuteronomy-7-1 | Noa (f) | ✗ | ✓ 4.51 | בָא |  |
 | deuteronomy-7-16 | Noa (f) | ✗ | ✓ 4.59 | הוּא | כָּל |
 | deuteronomy-8-6 | Noa (f) | ✗ | ✓ 4.62 | אֶת | וּלְיִרְאָה |
+| deuteronomy-9-6 | Noa (f) | ✗ | ✓ 4.75 | כִּי |  |
 | exodus-10-20 | Noa (f) | ✗ | ✓ 4.59 | יִשְׂרָאֵל |  |
 | exodus-10-21 | Noa (f) | ✗ | ✓ 4.59 | אֲדֹנָי |  |
 | exodus-10-29 | Noa (f) | ✗ | ✓ 4.64 | וַיֹּאמֶר |  |
 | exodus-11-8 | Noa (f) | ✗ | ✓ 4.64 | אָף | אַתָּה וְכָל |
+| exodus-12-5 | Noa (f) | ✗ | ✓ 4.6 | שֶׂה |  |
 | exodus-12-8 | Noa (f) | ✗ | ✓ 4.45 | יֹאכְלֻהוּ |  |
 | exodus-13-3 | Noa (f) | ✗ | ✓ 4.3 | אֲדֹנָי |  |
+| exodus-16-28 | Noa (f) | ✗ | ✓ 4.44 | אֲדֹנָי | מִצְוֹתַי |
 | exodus-17-16 | Noa (f) | ✗ | ✓ 4.62 | יָהּ | יָהּ, מִלְחָמָה |
+| exodus-17-2 | Noa (f) | ✗ | ✓ 4.59 | עִם | עִמָּדִי |
 | exodus-18-20 | Noa (f) | ✗ | ✓ 4.56 | בָהּ |  |
 | exodus-18-26 | Noa (f) | ✗ | ✓ 4.72 | עֵת | בְּכָל עֵת |
 | exodus-18-9 | Noa (f) | ✗ | ✓ 4.42 | וַיִּחַדְּ | וַיִּחַדְּ |
@@ -96,22 +106,30 @@ The Name: in 142 clips the only weak sound was the Name; the phoneme model heard
 | exodus-20-4 | Noa (f) | ✗ | ✓ 4.78 | לֹא |  |
 | exodus-21-2 | Noa (f) | ✗ | ✓ 4.4 | כִּי |  |
 | exodus-21-21 | Noa (f) | ✗ | ✓ 4.57 | אוֹ |  |
+| exodus-21-24 | Noa (f) | ✓ | ✗ 3.6 |  |  |
 | exodus-21-26 | Noa (f) | ✓ | ✗ 3.96 |  |  |
 | exodus-21-33 | Noa (f) | ✗ | ✓ 4.61 | אִישׁ, אִישׁ | אִישׁ בּוֹר |
 | exodus-21-8 | Noa (f) | ✗ | ✓ 4.58 | בָהּ | וְהֶפְדָּהּ |
+| exodus-22-30 | Noa (f) | ✗ | ✓ 4.59 | וְאַנְשֵׁי |  |
+| exodus-23-15 | Noa (f) | ✗ | ✓ 4.59 | בוֹ |  |
 | exodus-24-1 | Noa (f) | ✗ | ✓ 4.68 | אֶל, אֲדֹנָי | נָדָב, וַאֲבִיהוּא, וְשִׁבְעִים |
+| exodus-24-4 | Noa (f) | ✗ | ✓ 4.62 | וַיִּבֶן |  |
 | exodus-25-35 | Noa (f) | ✗ | ✓ 4.32 | וְכַפְתֹּר, תַּחַת, שְׁנֵי, הַקָּנִים, מִמֶּנָּה, וְכַפְתֹּר, תַּחַת, שְׁנֵי, הַקָּנִים, מִמֶּנָּה, לְשֵׁשֶׁת, הַקָּנִים, הַיֹּצְאִים, מִן, הַמְּנֹרָה |  |
+| exodus-26-3 | Noa (f) | ✗ | ✓ 4.52 | וְחָמֵשׁ, יְרִיעֹת, חֹבְרֹת, אִשָּׁה, אֶל, אֲחֹתָהּ | הַיְרִיעֹת, יְרִיעֹת |
 | exodus-27-15 | Noa (f) | ✗ | ✓ 4.64 | עֶשְׂרֵה |  |
 | exodus-29-12 | Noa (f) | ✗ | ✓ 4.7 | כָּל |  |
 | exodus-30-31 | Noa (f) | ✗ | ✓ 4.61 | זֶה |  |
+| exodus-30-32 | Noa (f) | ✗ | ✓ 4.58 | יִהְיֶה | וּבְמַתְכֻּנְתּוֹ, יִהְיֶה |
 | exodus-30-34 | Noa (f) | ✗ | ✓ 4.39 | יִהְיֶה |  |
 | exodus-31-14 | Noa (f) | ✗ | ✓ 4.58 | כִּי, בָהּ | הִוא, הַהִוא |
 | exodus-31-7 | Noa (f) | ✗ | ✓ 4.6 | וְאֵת | וְאֵת |
 | exodus-32-15 | Noa (f) | ✗ | ✓ 4.58 | וַיִּפֶן | לֻחֹת, לֻחֹת |
+| exodus-32-33 | Noa (f) | ✗ | ✓ 4.61 | אֲשֶׁר | אֲשֶׁר, חָטָא |
 | exodus-32-5 | Noa (f) | ✗ | ✓ 4.52 | וַיִּבֶן, לַאדֹנָי |  |
 | exodus-34-27 | Noa (f) | ✗ | ✓ 4.49 | אִתְּךָ | כָּרַתִּי |
 | exodus-34-3 | Noa (f) | ✓ | ✗ 4.04 |  |  |
 | exodus-34-33 | Noa (f) | ✗ | ✓ 4.62 | וַיְכַל | וַיְכַל |
+| exodus-35-4 | Noa (f) | ✗ | ✓ 4.59 | וַיֹּאמֶר |  |
 | exodus-36-20 | Noa (f) | ✗ | ✓ 4.55 | וַיַּעַשׂ | וַיַּעַשׂ |
 | exodus-37-11 | Noa (f) | ✓ | ✗ 4.01 |  |  |
 | exodus-37-21 | Noa (f) | ✗ | ✓ 4.31 | וְכַפְתֹּר, תַּחַת, שְׁנֵי, הַקָּנִים, מִמֶּנָּה |  |
@@ -120,8 +138,10 @@ The Name: in 142 clips the only weak sound was the Name; the phoneme model heard
 | exodus-38-17 | Noa (f) | ✗ | ✓ 4.75 | וָוֵי |  |
 | exodus-4-16 | Noa (f) | ✗ | ✓ 4.59 | וְדִבֶּר, וְהָיָה |  |
 | exodus-4-3 | Noa (f) | ✗ | ✓ 4.57 | וַיַּשְׁלִיכֵהוּ, אַרְצָה, וַיְהִי |  |
+| exodus-40-10 | Noa (f) | ✗ | ✓ 4.62 | כָּל |  |
 | exodus-40-16 | Noa (f) | ✗ | ✓ 4.44 | אֲדֹנָי |  |
 | exodus-5-15 | Noa (f) | ✗ | ✓ 4.95 | יִשְׂרָאֵל | כֹה |
+| exodus-5-2 | Noa (f) | ✗ | ✓ 4.82 | מִי | לְשַׁלַּח |
 | exodus-5-9 | Noa (f) | ✗ | ✓ 4.58 | בָהּ |  |
 | exodus-6-4 | Noa (f) | ✗ | ✓ 4.61 | אֶת | (nothing) |
 | exodus-6-7 | Noa (f) | ✗ | ✓ 4.6 | לִי | מִצְרָיִם |
@@ -131,7 +151,9 @@ The Name: in 142 clips the only weak sound was the Name; the phoneme model heard
 | genesis-1-18 | Noa (f) | ✗ | ✓ 4.59 | וַיַּרְא | וַיַּרְא |
 | genesis-1-2 | Noa (f) | ✗ | ✓ 4.78 | וְחֹשֶׁךְ | וְחֹשֶׁךְ |
 | genesis-1-21 | Noa (f) | ✗ | ✓ 4.59 | עוֹף | הַחַיָּה, וַיַּרְא |
+| genesis-1-22 | Noa (f) | ✗ | ✓ 4.73 | וּרְבוּ | וַיְבָרֶךְ, לֵאמֹר, יִרֶב |
 | genesis-1-29 | Noa (f) | ✗ | ✓ 5.1 | עֵץ | בּוֹ פְרִי עֵץ, לְאָכְלָה |
+| genesis-1-30 | Noa (f) | ✗ | ✓ 4.62 | וּלְכָל, וַיְהִי |  |
 | genesis-1-31 | Noa (f) | ✗ | ✓ 4.55 | וַיַּרְא, בֹקֶר | וַיַּרְא |
 | genesis-1-4 | Noa (f) | ✗ | ✓ 4.6 | הָאוֹר, הָאוֹר | וַיַּרְא, כִּי, טוֹב, וַיַּבְדֵּל |
 | genesis-10-21 | Noa (f) | ✓ | ✗ 4.03 |  | אֲחִי |
@@ -144,6 +166,7 @@ The Name: in 142 clips the only weak sound was the Name; the phoneme model heard
 | genesis-14-2 | Noa (f) | ✗ | ✓ 4.57 | הִיא | שִׁנְאָב, הִיא, צֹעַר |
 | genesis-14-21 | Noa (f) | ✓ | ✗ 3.77 |  | אַבְרָם |
 | genesis-15-7 | Noa (f) | ✗ | ✓ 4.7 | מֵאוּר | כַּשְׂדִּים |
+| genesis-16-1 | Noa (f) | ✓ | ✗ 3.98 |  | אַבְרָם |
 | genesis-16-12 | Noa (f) | ✓ | ✗ 3.88 |  | בַכֹּל |
 | genesis-17-13 | Noa (f) | ✗ | ✓ 4.26 | יִמּוֹל | יִמּוֹל |
 | genesis-18-2 | Noa (f) | ✗ | ✓ 4.61 | וַיִּשְׁתַּחוּ | הָאֹהֶל, וַיִּשְׁתַּחוּ |
@@ -171,6 +194,7 @@ The Name: in 142 clips the only weak sound was the Name; the phoneme model heard
 | genesis-24-52 | Noa (f) | ✗ | ✓ 4.58 | לַאדֹנָי | וַיִּשְׁתַּחוּ |
 | genesis-24-57 | Noa (f) | ✗ | ✓ 4.88 | וַיֹּאמְרוּ | לַנַּעֲרָ |
 | genesis-25-26 | Noa (f) | ✗ | ✓ 4.6 | אָחִיו, אֹחֶזֶת | אֹחֶזֶת, בַּעֲקֵב, וַיִּקְרָא |
+| genesis-25-30 | Noa (f) | ✗ | ✓ 4.59 | עַל |  |
 | genesis-25-34 | Noa (f) | ✗ | ✓ 4.59 | וְיַעֲקֹב, וַיֵּלַךְ | וְיַעֲקֹב, וּנְזִיד, וַיֵּלַךְ, וַיִּבֶז |
 | genesis-25-5 | Noa (f) | ✗ | ✓ 4.52 | לוֹ |  |
 | genesis-26-12 | Noa (f) | ✗ | ✓ 4.61 | הַהִוא | הַהִוא, הַהִוא, וַיְבָרֲכֵהוּ |
@@ -179,8 +203,10 @@ The Name: in 142 clips the only weak sound was the Name; the phoneme model heard
 | genesis-26-25 | Noa (f) | ✗ | ✓ 4.43 | וַיִּבֶן |  |
 | genesis-28-18 | Noa (f) | ✗ | ✓ 4.61 | עַל | (nothing), מְרַאֲשֹׁתָיו וַיָּשֶׂם אֹתָהּ מַצֵּבָה וַיִּצֹק |
 | genesis-28-19 | Noa (f) | ✗ | ✓ 4.58 | אֵל |  |
+| genesis-29-25 | Noa (f) | ✗ | ✓ 4.11 | הִוא | הִוא, בְרָחֵל |
 | genesis-29-7 | Noa (f) | ✓ | ✗ 3.96 |  | הַשְׁקוּ |
 | genesis-3-20 | Noa (f) | ✗ | ✓ 4.61 | הִוא | שֵׁם אִשְׁתּוֹ |
+| genesis-30-15 | Noa (f) | ✗ | ✓ 4.56 | לָהּ |  |
 | genesis-30-8 | Noa (f) | ✗ | ✓ 4.72 | שְׁמוֹ |  |
 | genesis-31-36 | Noa (f) | ✗ | ✓ 4.52 | וַיִּחַר | וַיִּחַר |
 | genesis-32-20 | Noa (f) | ✗ | ✓ 4.33 | עֵשָׂו | וַיְצַו |
@@ -188,14 +214,17 @@ The Name: in 142 clips the only weak sound was the Name; the phoneme model heard
 | genesis-32-7 | Noa (f) | ✗ | ✓ 4.82 | עֵשָׂו | וְאַרְבַּע |
 | genesis-34-15 | Noa (f) | ✗ | ✓ 4.61 | כָּל | כָמֹנוּ לְהִמֹּל לָכֶם כָּל זָכָר |
 | genesis-34-19 | Noa (f) | ✗ | ✓ 4.59 | כִּי |  |
+| genesis-36-10 | Noa (f) | ✗ | ✓ 4.61 | עֵשָׂו | עֵשָׂו, אֱלִיפַז, עָדָה, עֵשָׂו, רְעוּאֵל, עֵשָׂו |
 | genesis-36-9 | Noa (f) | ✗ | ✓ 4.55 | עֵשָׂו |  |
 | genesis-37-11 | Noa (f) | ✗ | ✓ 4.6 | בוֹ | שָׁמַר |
+| genesis-37-15 | Noa (f) | ✗ | ✓ 4.59 | מַה | וַיִּמְצָאֵהוּ, תֹעֶה, לֵאמֹר מַה תְּבַקֵּשׁ |
 | genesis-38-11 | Noa (f) | ✗ | ✓ 4.61 | בְנְי |  |
 | genesis-38-16 | Noa (f) | ✗ | ✓ 4.6 | כִּי | וַיֵּט, וַיֹּאמֶר, הָבָה, כִּי כַלָּתוֹ הִוא וַתֹּאמֶר מַה תִּתֶּן, אֵלָי |
 | genesis-38-21 | Noa (f) | ✗ | ✓ 4.59 | בָזֶה | הִוא |
 | genesis-38-24 | Noa (f) | ✗ | ✓ 4.62 | וַיֻּגַּד |  |
 | genesis-38-25 | Noa (f) | ✗ | ✓ 4.41 | הִוא | (nothing) |
 | genesis-4-12 | Noa (f) | ✗ | ✓ 4.96 | לֹא | תֵּת כֹּחָהּ לָךְ |
+| genesis-4-21 | Noa (f) | ✓ | ✗ 4.01 |  |  |
 | genesis-4-23 | Noa (f) | ✗ | ✓ 4.6 | אִישׁ | עָדָה, כִּי אִישׁ הָרַגְתִּי |
 | genesis-41-45 | Noa (f) | ✗ | ✓ 4.81 | אֹן | פַרְעֹה שֵׁם, צָפְנַת פַּעְנֵחַ, פּוֹטִי, כֹּהֵן אֹן לְאִשָּׁה וַיֵּצֵא, מִצְרָיִם |
 | genesis-41-47 | Noa (f) | ✗ | ✓ 4.57 | וַתַּעַשׂ | וַתַּעַשׂ |
@@ -209,6 +238,7 @@ The Name: in 142 clips the only weak sound was the Name; the phoneme model heard
 | genesis-44-30 | Noa (f) | ✗ | ✓ 4.49 | עַבְדְּךָ | בְנַפְשׁוֹ |
 | genesis-45-12 | Noa (f) | ✗ | ✓ 4.56 | כִּי |  |
 | genesis-46-23 | Noa (f) | ✓ | ✗ 3.25 |  |  |
+| genesis-47-12 | Noa (f) | ✓ | ✗ 3.88 |  |  |
 | genesis-47-17 | Noa (f) | ✗ | ✓ 4.6 | הַהִוא | וַיְנַהֲלֵם, הַהִוא |
 | genesis-47-23 | Noa (f) | ✗ | ✓ 4.27 | הֵא |  |
 | genesis-47-30 | Noa (f) | ✗ | ✓ 4.67 | וַיֹּאמַר | וְשָׁכַבְתִּי, וּנְשָׂאתַנִי, וּקְבַרְתַּנִי, וַיֹּאמַר, אֶעֱשֶׂה, כִדְבָרֶךָ |
@@ -223,6 +253,7 @@ The Name: in 142 clips the only weak sound was the Name; the phoneme model heard
 | genesis-7-23 | Noa (f) | ✗ | ✓ 4.6 | וַיִּמַח |  |
 | genesis-8-5 | Noa (f) | ✗ | ✓ 4.81 | עַד | וְחָסוֹר |
 | genesis-9-7 | Noa (f) | ✗ | ✓ 4.57 | בָהּ |  |
+| leviticus-10-1 | Noa (f) | ✗ | ✓ 4.6 | אֵשׁ | וַאֲבִיהוּא |
 | leviticus-10-12 | Noa (f) | ✗ | ✓ 4.34 | הִוא | וְאִכְלוּהָ, הִוא |
 | leviticus-10-13 | Noa (f) | ✗ | ✓ 4.61 | הִוא | הִוא |
 | leviticus-10-17 | Noa (f) | ✗ | ✓ 4.5 | הִוא | עֲוֹן |
@@ -230,18 +261,24 @@ The Name: in 142 clips the only weak sound was the Name; the phoneme model heard
 | leviticus-11-22 | Noa (f) | ✗ | ✓ 4.59 | אֵלֶּה | הַסָּלְעָם |
 | leviticus-11-23 | Noa (f) | ✗ | ✓ 4.59 | הוּא |  |
 | leviticus-11-45 | Noa (f) | ✗ | ✓ 4.57 | כִּי |  |
+| leviticus-12-2 | Noa (f) | ✗ | ✓ 4.6 | כִּי | דְּוֹתָהּ |
 | leviticus-12-4 | Noa (f) | ✗ | ✓ 4.61 | עַד | עַד מְלֹאת |
+| leviticus-12-6 | Noa (f) | ✗ | ✓ 4.37 | אֹהֶל | אֹהֶל |
 | leviticus-13-11 | Noa (f) | ✗ | ✓ 4.61 | הוּא | צָרַעַת, הִוא בְּעוֹר, הַכֹּהֵן, יַסְגִּרֶנּוּ, הוּא |
 | leviticus-13-14 | Noa (f) | ✗ | ✓ 4.55 | הֵרָאוֹת | וּבְיוֹם, הֵרָאוֹת, בּוֹ |
+| leviticus-13-25 | Noa (f) | ✗ | ✓ 4.67 | הִוא, הִוא | הִוא, הִוא |
 | leviticus-13-27 | Noa (f) | ✗ | ✓ 4.43 | הִוא | הִוא |
 | leviticus-13-28 | Noa (f) | ✗ | ✓ 4.6 | הִוא, הִוא | וְהִוא כֵהָה שְׂאֵת, הִוא, הִוא |
 | leviticus-13-38 | Noa (f) | ✗ | ✓ 4.62 | אוֹ | אוֹ, בְעוֹר |
 | leviticus-13-42 | Noa (f) | ✗ | ✓ 4.46 | הִוא | בַקָּרַחַת, בַגַּבַּחַת, הִוא בְּקָרַחְתּוֹ, בְגַבַּחְתּוֹ |
 | leviticus-13-55 | Noa (f) | ✗ | ✓ 4.4 | הִוא | הֻכַּבֵּס, פְּחֶתֶת, הִוא |
 | leviticus-15-3 | Noa (f) | ✗ | ✓ 4.4 | הִוא | (nothing) |
+| leviticus-15-32 | Noa (f) | ✗ | ✓ 4.67 | בָהּ |  |
 | leviticus-16-4 | Noa (f) | ✗ | ✓ 4.27 | וּלְבֵשָׁם | וּבְאַבְנֵט |
 | leviticus-18-14 | Noa (f) | ✗ | ✓ 4.09 | הִוא | (nothing) |
 | leviticus-18-17 | Noa (f) | ✗ | ✓ 4.58 | הִוא | (nothing), זִמָּה, הִוא |
+| leviticus-18-22 | Noa (f) | ✗ | ✓ 4.6 | הִוא | הִוא |
+| leviticus-19-35 | Noa (f) | ✗ | ✓ 4.63 | לֹא |  |
 | leviticus-19-4 | Noa (f) | ✗ | ✓ 4.59 | אַל | הָאֱלִילִים, לָכֶם |
 | leviticus-19-8 | Noa (f) | ✗ | ✓ 4.56 | הַהִוא | עֲוֹנוֹ, הַהִוא |
 | leviticus-2-15 | Noa (f) | ✗ | ✓ 4.59 | הִוא | הִוא |
@@ -284,19 +321,24 @@ The Name: in 142 clips the only weak sound was the Name; the phoneme model heard
 | numbers-10-13 | Noa (f) | ✓ | ✗ 5.26 |  | וַיִּסְעוּ בָּרִאשֹׁנָה |
 | numbers-10-28 | Noa (f) | ✗ | ✓ 4.59 | וַיִּסָּעוּ |  |
 | numbers-11-33 | Noa (f) | ✗ | ✓ 4.58 | אֲדֹנָי, חָרָה, אֲדֹנָי | וַיַּךְ |
+| numbers-12-11 | Noa (f) | ✗ | ✓ 4.6 | בִּי |  |
 | numbers-12-13 | Noa (f) | ✓ | ✗ 3.85 |  |  |
 | numbers-12-6 | Noa (f) | ✗ | ✓ 4.61 | נָא | בַּמַּרְאָה |
+| numbers-13-10 | Noa (f) | ✗ | ✓ 4.58 | זְבוּלֻן | זְבוּלֻן |
 | numbers-13-27 | Noa (f) | ✗ | ✓ 4.73 | אֲשֶׁר, הִוא | וְזֶה פִּרְיָהּ |
 | numbers-14-11 | Noa (f) | ✗ | ✓ 4.53 | בִי |  |
 | numbers-14-41 | Noa (f) | ✗ | ✓ 4.53 | אֲדֹנָי |  |
 | numbers-14-7 | Noa (f) | ✗ | ✓ 4.42 | בָהּ | עֲדַת |
+| numbers-16-33 | Noa (f) | ✗ | ✓ 4.61 | וַיֵּרְדוּ |  |
 | numbers-16-8 | Noa (f) | ✗ | ✓ 4.57 | אֶל | שִׁמְעוּ נָא בְּנֵי לֵוִי |
 | numbers-16-9 | Noa (f) | ✗ | ✓ 4.59 | אֲדֹנָי |  |
 | numbers-17-10 | Noa (f) | ✗ | ✓ 4.7 | הֵרֹמּוּ | הֵרֹמּוּ |
 | numbers-18-19 | Noa (f) | ✗ | ✓ 4.48 | הִוא | הִוא, וּלְזַרְעֲךָ |
 | numbers-19-15 | Noa (f) | ✓ | ✗ 3.91 |  | פָּתִיל |
+| numbers-19-20 | Noa (f) | ✗ | ✓ 4.25 | הַהִוא | יִתְחַטָּא |
 | numbers-19-9 | Noa (f) | ✗ | ✓ 4.61 | הִוא | הִוא |
 | numbers-20-6 | Noa (f) | ✗ | ✓ 4.46 | וַיֵּרָא, אֲדֹנָי |  |
+| numbers-21-19 | Noa (f) | ✓ | ✗ 5.25 |  | נַחֲלִיאֵל |
 | numbers-21-26 | Noa (f) | ✗ | ✓ 4.6 | הִוא | הִוא |
 | numbers-21-35 | Noa (f) | ✓ | ✗ 3.91 |  | וַיִּירְשׁוּ |
 | numbers-22-6 | Noa (f) | ✗ | ✓ 4.6 | הוּא | לְכָה נָּא אָרָה, תָּאֹר, יוּאָר |
@@ -312,6 +354,7 @@ The Name: in 142 clips the only weak sound was the Name; the phoneme model heard
 | numbers-26-41 | Noa (f) | ✗ | ✓ 4.62 | בְנֵי |  |
 | numbers-26-46 | Noa (f) | ✓ | ✗ 3.72 |  | שָׂרַח |
 | numbers-26-51 | Noa (f) | ✗ | ✓ 4.81 | וָאָלֶף | יִשְׂרָאֵל, שֵׁשׁ, וָאָלֶף |
+| numbers-26-61 | Noa (f) | ✗ | ✓ 4.59 | אֵשׁ |  |
 | numbers-28-23 | Noa (f) | ✗ | ✓ 4.58 | עֹלַת | מִלְּבַד, הַתָּמִיד |
 | numbers-3-9 | Noa (f) | ✗ | ✓ 4.64 | לוֹ | הֵמָּה לוֹ מֵאֵת בְּנֵי |
 | numbers-30-1 | Noa (f) | ✗ | ✓ 4.6 | אֶל |  |
@@ -321,11 +364,14 @@ The Name: in 142 clips the only weak sound was the Name; the phoneme model heard
 | numbers-32-19 | Noa (f) | ✗ | ✓ 4.61 | כִּי | כִּי לֹא נִנְחַל אִתָּם, בָאָה |
 | numbers-32-29 | Noa (f) | ✗ | ✓ 4.54 | וּנְתַתֶּם |  |
 | numbers-32-36 | Noa (f) | ✓ | ✗ 4.02 |  | עָרֵי |
+| numbers-32-9 | Noa (f) | ✗ | ✓ 4.53 | בֹא |  |
 | numbers-33-43 | Noa (f) | ✓ | ✗ 5.37 |  | בְּאֹבֹת |
 | numbers-34-8 | Noa (f) | ✗ | ✓ 4.55 | תְּתָאוּ | מֵהֹר |
 | numbers-35-22 | Noa (f) | ✗ | ✓ 4.61 | אוֹ |  |
 | numbers-36-7 | Noa (f) | ✗ | ✓ 4.58 | אִישׁ | אִישׁ |
+| numbers-4-5 | Noa (f) | ✗ | ✓ 4.71 | בָהּ |  |
 | numbers-5-24 | Noa (f) | ✗ | ✓ 4.66 | בָהּ |  |
+| numbers-5-27 | Noa (f) | ✗ | ✓ 4.6 | בָהּ | וַתִּמְעֹל |
 | numbers-5-31 | Noa (f) | ✗ | ✓ 4.29 | הַהִוא | מֵעָוֹן, עֲוֹנָהּ |
 | numbers-7-63 | Noa (f) | ✗ | ✓ 4.32 | אַיִל |  |
 | numbers-8-1 | Noa (f) | ✗ | ✓ 4.62 | וַיְדַבֵּר | וַיְדַבֵּר, לֵּאמֹר |
@@ -338,6 +384,7 @@ The Name: in 142 clips the only weak sound was the Name; the phoneme model heard
 | deuteronomy-11-3 | Ari (m) | ✗ | ✓ 4.59 | אֹתֹתָיו |  |
 | deuteronomy-14-4 | Ari (m) | ✓ | ✗ 4.04 |  | שֵׂה, וְשֵׂה |
 | deuteronomy-16-7 | Ari (m) | ✗ | ✓ 4.59 | בּוֹ, בַבֹּקֶר | בּוֹ |
+| deuteronomy-17-8 | Ari (m) | ✗ | ✓ 4.59 | אֲדֹנָי |  |
 | deuteronomy-18-7 | Ari (m) | ✗ | ✓ 4.49 | אֶחָיו |  |
 | deuteronomy-2-10 | Ari (m) | ✗ | ✓ 4.61 | בָהּ |  |
 | deuteronomy-2-20 | Ari (m) | ✗ | ✓ 4.85 | בָהּ | בָהּ |
@@ -350,17 +397,21 @@ The Name: in 142 clips the only weak sound was the Name; the phoneme model heard
 | deuteronomy-22-13 | Ari (m) | ✗ | ✓ 4.58 | אִישׁ |  |
 | deuteronomy-22-18 | Ari (m) | ✗ | ✓ 4.61 | הַהִוא | הַהִוא, וְיִסְּרוּ |
 | deuteronomy-23-14 | Ari (m) | ✗ | ✓ 4.51 | בָהּ |  |
+| deuteronomy-24-4 | Ari (m) | ✗ | ✓ 4.41 | הִוא | הִוא |
 | deuteronomy-25-11 | Ari (m) | ✗ | ✓ 4.59 | כִּי |  |
 | deuteronomy-26-19 | Ari (m) | ✗ | ✓ 4.62 | לַאדֹנָי |  |
 | deuteronomy-26-6 | Ari (m) | ✗ | ✓ 5.12 | וַיָּרֵעוּ | וַיְעַנּוּנוּ |
 | deuteronomy-27-9 | Ari (m) | ✗ | ✓ 4.6 | לֵאמֹר | לְעָם, לַאדֹנָי |
+| deuteronomy-29-22 | Ari (m) | ✗ | ✓ 4.61 | בָהּ |  |
 | deuteronomy-29-23 | Ari (m) | ✗ | ✓ 4.56 | מֶה | מֶה עָשָׂה |
 | deuteronomy-3-24 | Ari (m) | ✗ | ✓ 4.53 | מִי |  |
 | deuteronomy-30-11 | Ari (m) | ✗ | ✓ 4.59 | הִוא, הִוא | מִמְּךָ, (nothing) |
 | deuteronomy-31-11 | Ari (m) | ✗ | ✓ 4.58 | כָל |  |
 | deuteronomy-31-30 | Ari (m) | ✗ | ✓ 4.79 | עַד | בְּאָזְנֵי |
 | deuteronomy-32-32 | Ari (m) | ✗ | ✓ 4.6 | כִּי | עֲנָבֵמוֹ עִנְּבֵי רוֹשׁ |
+| deuteronomy-32-48 | Ari (m) | ✓ | ✗ 5.2 |  |  |
 | deuteronomy-4-21 | Ari (m) | ✗ | ✓ 4.6 | בֹא |  |
+| deuteronomy-4-6 | Ari (m) | ✗ | ✓ 4.59 | הִוא | הִוא |
 | deuteronomy-5-1 | Ari (m) | ✗ | ✓ 4.6 | וַיִּקְרָא | וַיִּקְרָא |
 | deuteronomy-5-5 | Ari (m) | ✗ | ✓ 4.6 | הַהִוא | הַהִוא |
 | deuteronomy-5-8 | Ari (m) | ✗ | ✓ 4.59 | אֲשֶׁר |  |
@@ -369,23 +420,30 @@ The Name: in 142 clips the only weak sound was the Name; the phoneme model heard
 | exodus-1-1 | Ari (m) | ✗ | ✓ 4.85 | אֵת |  |
 | exodus-1-16 | Ari (m) | ✗ | ✓ 4.71 | וְאִם | בְּיַלֶּדְכֶן, וּרְאִיתֶן |
 | exodus-1-20 | Ari (m) | ✗ | ✓ 4.59 | הָעָם | וַיִּרֶב, הָעָם |
+| exodus-1-7 | Ari (m) | ✗ | ✓ 4.6 | וַיִּרְבּוּ | וַיִּרְבּוּ, בִּמְאֹד |
 | exodus-10-6 | Ari (m) | ✗ | ✓ 4.57 | עַד | הַזֶּה |
 | exodus-10-9 | Ari (m) | ✗ | ✓ 4.6 | כִּי |  |
+| exodus-12-15 | Ari (m) | ✗ | ✓ 4.59 | עַד | אַךְ |
 | exodus-12-8 | Ari (m) | ✗ | ✓ 4.45 | יֹאכְלֻהוּ |  |
 | exodus-16-25 | Ari (m) | ✗ | ✓ 4.75 | לַאדֹנָי | אִכְלֻהוּ |
 | exodus-17-14 | Ari (m) | ✗ | ✓ 4.61 | אֶמְחֶה | אֶמְחֶה, אֶת |
 | exodus-17-5 | Ari (m) | ✗ | ✓ 4.52 | אִתְּךָ | וּמַטְּךָ |
 | exodus-17-7 | Ari (m) | ✗ | ✓ 4.6 | אֲדֹנָי, אֲדֹנָי, אָיִן |  |
+| exodus-18-11 | Ari (m) | ✗ | ✓ 4.61 | כִּי | מִכָּל |
 | exodus-18-20 | Ari (m) | ✗ | ✓ 4.63 | בָהּ |  |
 | exodus-21-17 | Ari (m) | ✓ | ✗ 5.34 |  | אָבִיו |
 | exodus-21-26 | Ari (m) | ✗ | ✓ 4.44 | אֶת, עֵין |  |
+| exodus-21-8 | Ari (m) | ✗ | ✓ 4.6 | בָהּ |  |
 | exodus-22-26 | Ari (m) | ✗ | ✓ 4.57 | הִוא | כִּי הִוא כְסוּתוֹ |
+| exodus-22-3 | Ari (m) | ✗ | ✓ 4.6 | עַד, שֶׂה | הִמָּצֵא, הַגְּנֵבָה, עַד שֶׂה, שְׁנַיִם |
 | exodus-23-18 | Ari (m) | ✓ | ✗ 4.0 |  |  |
 | exodus-23-6 | Ari (m) | ✓ | ✗ 4.04 |  |  |
+| exodus-25-35 | Ari (m) | ✗ | ✓ 4.58 | וְכַפְתֹּר, תַּחַת, שְׁנֵי, הַקָּנִים, מִמֶּנָּה |  |
 | exodus-25-37 | Ari (m) | ✗ | ✓ 4.92 | עַל |  |
 | exodus-26-31 | Ari (m) | ✗ | ✓ 4.66 | פָרֹכֶת |  |
 | exodus-3-13 | Ari (m) | ✗ | ✓ 4.88 | בָא | אָנֹכִי בָא |
 | exodus-3-2 | Ari (m) | ✗ | ✓ 4.82 | וַיֵּרָא | וַיֵּרָא, מַלְאַךְ, וַיַּרְא |
+| exodus-3-6 | Ari (m) | ✗ | ✓ 4.63 | יָרֵא |  |
 | exodus-30-5 | Ari (m) | ✗ | ✓ 4.59 | עֲצֵי |  |
 | exodus-31-13 | Ari (m) | ✗ | ✓ 4.43 | הִוא | הִוא |
 | exodus-31-14 | Ari (m) | ✗ | ✓ 4.56 | בָהּ | הִוא |
@@ -450,6 +508,7 @@ The Name: in 142 clips the only weak sound was the Name; the phoneme model heard
 | genesis-35-3 | Ari (m) | ✗ | ✓ 4.81 | אֵל |  |
 | genesis-35-6 | Ari (m) | ✗ | ✓ 4.58 | הָעָם, אֲשֶׁר | הִוא, הוּא וְכָל הָעָם אֲשֶׁר |
 | genesis-36-19 | Ari (m) | ✗ | ✓ 4.57 | עֵשָׂו |  |
+| genesis-36-2 | Ari (m) | ✗ | ✓ 4.58 | עֵשָׂו | אָהֳלִיבָמָה, הַחִוִּי |
 | genesis-36-28 | Ari (m) | ✗ | ✓ 4.72 | עוּץ | דִישָׁן עוּץ וַאֲרָן |
 | genesis-36-5 | Ari (m) | ✗ | ✓ 4.4 | עֵשָׂו | וְאָהֳלִיבָמָה |
 | genesis-36-9 | Ari (m) | ✗ | ✓ 4.6 | עֵשָׂו |  |
@@ -473,6 +532,7 @@ The Name: in 142 clips the only weak sound was the Name; the phoneme model heard
 | genesis-47-23 | Ari (m) | ✗ | ✓ 4.6 | הֵן | לְפַרְעֹה, הֵא |
 | genesis-47-30 | Ari (m) | ✗ | ✓ 4.61 | אֶעֱשֶׂה | אֲבֹתַי, וּנְשָׂאתַנִי, וּקְבַרְתַּנִי, אֶעֱשֶׂה, כִדְבָרֶךָ |
 | genesis-48-20 | Ari (m) | ✗ | ✓ 4.58 | לֵאמוֹר, לֵאמֹר | וְכִמְנַשֶּׁה, אֶפְרַיִם |
+| genesis-49-27 | Ari (m) | ✗ | ✓ 4.64 | עַד |  |
 | genesis-5-4 | Ari (m) | ✗ | ✓ 4.62 | וַיִּהְיוּ | וַיִּהְיוּ, הוֹלִידוֹ |
 | genesis-50-17 | Ari (m) | ✗ | ✓ 4.6 | כֹּה, וַיֵּבְךְּ | וַיֵּבְךְּ |
 | genesis-6-17 | Ari (m) | ✗ | ✓ 4.68 | בּוֹ |  |
@@ -495,6 +555,7 @@ The Name: in 142 clips the only weak sound was the Name; the phoneme model heard
 | leviticus-14-23 | Ari (m) | ✗ | ✓ 4.58 | אֲדֹנָי |  |
 | leviticus-14-30 | Ari (m) | ✗ | ✓ 4.58 | יָדוֹ | וְעָשָׂה |
 | leviticus-14-44 | Ari (m) | ✗ | ✓ 4.62 | הִוא | צָרַעַת, מַמְאֶרֶת, הוּא |
+| leviticus-14-5 | Ari (m) | ✗ | ✓ 4.59 | אֶל |  |
 | leviticus-15-25 | Ari (m) | ✗ | ✓ 4.57 | כִי | וְאִשָּׁה, יָזוּב, תָזוּב, טֻמְאָתָהּ, טְמֵאָה |
 | leviticus-18-17 | Ari (m) | ✗ | ✓ 4.33 | הִוא | (nothing) |
 | leviticus-18-19 | Ari (m) | ✗ | ✓ 4.66 | לֹא | בְּנִדַּת, טֻמְאָתָהּ, לֹא |
@@ -505,6 +566,7 @@ The Name: in 142 clips the only weak sound was the Name; the phoneme model heard
 | leviticus-22-8 | Ari (m) | ✗ | ✓ 4.57 | בָהּ, אֲדֹנָי |  |
 | leviticus-23-36 | Ari (m) | ✗ | ✓ 4.59 | הִוא | אִשֶּׁה, לַאדֹנָי, אִשֶּׁה, לַאדֹנָי |
 | leviticus-24-3 | Ari (m) | ✗ | ✓ 4.6 | עַד | מוֹעֵד |
+| leviticus-25-11 | Ari (m) | ✗ | ✓ 4.4 | הִוא | הִוא |
 | leviticus-25-14 | Ari (m) | ✗ | ✓ 4.61 | אִישׁ |  |
 | leviticus-25-17 | Ari (m) | ✗ | ✓ 4.76 | אֲדֹנָי |  |
 | leviticus-25-2 | Ari (m) | ✗ | ✓ 4.59 | דַּבֵּר |  |
@@ -517,6 +579,7 @@ The Name: in 142 clips the only weak sound was the Name; the phoneme model heard
 | leviticus-4-22 | Ari (m) | ✗ | ✓ 4.76 | וְאָשֵׁם | מִכָּל, מִצְוֹת, וְאָשֵׁם |
 | leviticus-4-25 | Ari (m) | ✗ | ✓ 4.47 | אֶל | וְלָקַח, (nothing), דָּמוֹ יִשְׁפֹּךְ אֶל |
 | leviticus-5-26 | Ari (m) | ✗ | ✓ 4.71 | בָהּ | בָהּ |
+| leviticus-6-18 | Ari (m) | ✗ | ✓ 4.59 | וְאֶל | אַהֲרֹן |
 | leviticus-6-6 | Ari (m) | ✓ | ✗ 3.94 |  |  |
 | leviticus-7-21 | Ari (m) | ✗ | ✓ 4.3 | הַהִוא, מֵעַמֶּיהָ | הַהִוא, מֵעַמֶּיהָ |
 | leviticus-8-12 | Ari (m) | ✗ | ✓ 4.6 | עַל | עַל רֹאשׁ |
@@ -529,6 +592,9 @@ The Name: in 142 clips the only weak sound was the Name; the phoneme model heard
 | numbers-11-7 | Ari (m) | ✓ | ✗ 4.02 |  |  |
 | numbers-13-12 | Ari (m) | ✓ | ✗ 5.45 |  |  |
 | numbers-13-19 | Ari (m) | ✗ | ✓ 4.51 | בָּהּ | הִוא |
+| numbers-13-8 | Ari (m) | ✗ | ✓ 4.66 | נוּן |  |
+| numbers-14-11 | Ari (m) | ✗ | ✓ 4.71 | בִי |  |
+| numbers-14-2 | Ari (m) | ✗ | ✓ 4.69 | לוּ, הַזֶּה, לוּ | וַיִּלֹּנוּ |
 | numbers-14-7 | Ari (m) | ✗ | ✓ 4.71 | בָהּ |  |
 | numbers-15-12 | Ari (m) | ✗ | ✓ 4.85 | אֲשֶׁר |  |
 | numbers-15-31 | Ari (m) | ✗ | ✓ 4.52 | בָהּ |  |
@@ -541,6 +607,7 @@ The Name: in 142 clips the only weak sound was the Name; the phoneme model heard
 | numbers-20-8 | Ari (m) | ✗ | ✓ 4.6 | אֶת | בְּעִירָם |
 | numbers-21-19 | Ari (m) | ✓ | ✗ 5.63 |  |  |
 | numbers-21-26 | Ari (m) | ✗ | ✓ 4.59 | הִוא |  |
+| numbers-24-22 | Ari (m) | ✗ | ✓ 4.57 | אַשּׁוּר, תִּשְׁבֶּךָּ | יִהְיֶה לְבָעֵר קָיִן עַד מָה אַשּׁוּר תִּשְׁבֶּךָּ |
 | numbers-24-24 | Ari (m) | ✗ | ✓ 4.67 | הוּא |  |
 | numbers-25-8 | Ari (m) | ✗ | ✓ 4.44 | אֶל | קֳבָתָהּ |
 | numbers-26-46 | Ari (m) | ✓ | ✗ 3.89 |  |  |
@@ -551,6 +618,8 @@ The Name: in 142 clips the only weak sound was the Name; the phoneme model heard
 | numbers-3-13 | Ari (m) | ✗ | ✓ 4.57 | כָל, עַד | כִּי לִי כָּל בְּכוֹר, בְּכוֹר, לִי כָל בְּכוֹר |
 | numbers-3-40 | Ari (m) | ✗ | ✓ 4.7 | וְשָׂא |  |
 | numbers-31-44 | Ari (m) | ✗ | ✓ 4.63 | וּבָקָר | וּבָקָר |
+| numbers-31-48 | Ari (m) | ✓ | ✗ 5.46 |  |  |
+| numbers-32-34 | Ari (m) | ✓ | ✗ 5.34 |  | דִּיבֹן |
 | numbers-32-4 | Ari (m) | ✗ | ✓ 4.59 | הִוא | עֲדַת, הִוא |
 | numbers-32-5 | Ari (m) | ✗ | ✓ 4.63 | אַל |  |
 | numbers-32-9 | Ari (m) | ✗ | ✓ 4.62 | בֹא |  |
@@ -560,11 +629,13 @@ The Name: in 142 clips the only weak sound was the Name; the phoneme model heard
 | numbers-35-33 | Ari (m) | ✗ | ✓ 4.6 | אִם |  |
 | numbers-4-5 | Ari (m) | ✗ | ✓ 4.83 | בָהּ | בִּנְסֹעַ, אֲרֹן |
 | numbers-5-18 | Ari (m) | ✗ | ✓ 4.48 | הִוא | הִוא |
+| numbers-5-24 | Ari (m) | ✗ | ✓ 4.7 | בָהּ |  |
 | numbers-5-27 | Ari (m) | ✗ | ✓ 4.62 | בָהּ | וַתִּמְעֹל |
 | numbers-5-4 | Ari (m) | ✗ | ✓ 4.6 | עָשׂוּ |  |
 | numbers-7-14 | Ari (m) | ✓ | ✗ 5.51 |  | אַחַת, עֲשָׂרָה |
 | numbers-7-20 | Ari (m) | ✓ | ✗ 5.51 |  | אַחַת, עֲשָׂרָה |
 | numbers-7-38 | Ari (m) | ✓ | ✗ 5.51 |  | אַחַת, עֲשָׂרָה |
+| numbers-7-62 | Ari (m) | ✓ | ✗ 5.51 |  | אַחַת, עֲשָׂרָה |
 | numbers-8-13 | Ari (m) | ✗ | ✓ 4.6 | לַאדֹנָי |  |
 | numbers-8-22 | Ari (m) | ✗ | ✓ 4.59 | עַל |  |
 | numbers-8-4 | Ari (m) | ✗ | ✓ 4.58 | הִוא | הִוא |
@@ -581,32 +652,40 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | deuteronomy-1-23 | Noa (f) | וָאֶקַּח, לַשָּׁבֶט |
 | deuteronomy-1-26 | Noa (f) | אֲבִיתֶם |
 | deuteronomy-1-27 | Noa (f) | (nothing) |
+| deuteronomy-1-28 | Noa (f) | הֵמַסּוּ |
 | deuteronomy-1-3 | Noa (f) | בְּעַשְׁתֵּי |
 | deuteronomy-1-33 | Noa (f) | הַהֹלֵךְ |
+| deuteronomy-1-36 | Noa (f) | יִרְאֶנָּה |
 | deuteronomy-1-40 | Noa (f) | וּסְעוּ, סוּף |
+| deuteronomy-1-46 | Noa (f) | בְקָדֵשׁ |
 | deuteronomy-1-7 | Noa (f) | וּסְעוּ |
 | deuteronomy-10-1 | Noa (f) | פְּסָל |
 | deuteronomy-10-11 | Noa (f) | וְיִרְשׁוּ |
 | deuteronomy-10-13 | Noa (f) | מִצְוֹת |
 | deuteronomy-10-14 | Noa (f) | הֵן, לַאדֹנָי |
 | deuteronomy-10-15 | Noa (f) | מִכָּל |
+| deuteronomy-10-16 | Noa (f) | וְעָרְפְּכֶם |
 | deuteronomy-10-22 | Noa (f) | לָרֹב |
 | deuteronomy-10-3 | Noa (f) | וָאַעַשׂ, וָאַעַל |
 | deuteronomy-10-4 | Noa (f) | בָּהָר, בְּיוֹם |
+| deuteronomy-10-6 | Noa (f) | נָסְעוּ, יַעֲקָן |
 | deuteronomy-10-7 | Noa (f) | נָסְעוּ |
 | deuteronomy-11-12 | Noa (f) | מֵרֵשִׁית |
 | deuteronomy-11-13 | Noa (f) | מִצְוֹתַי |
 | deuteronomy-11-14 | Noa (f) | דְגָנֶךָ וְתִירֹשְׁךָ וְיִצְהָרֶךָ |
 | deuteronomy-11-16 | Noa (f) | הִשָּׁמְרוּ לָכֶם |
 | deuteronomy-11-19 | Noa (f) | וְלִמַּדְתֶּם |
+| deuteronomy-11-28 | Noa (f) | מִצְוֹת |
 | deuteronomy-11-29 | Noa (f) | יְבִיאֲךָ, בָא |
 | deuteronomy-11-3 | Noa (f) | וּלְכָל |
 | deuteronomy-11-6 | Noa (f) | וַתִּבְלָעֵם, אָהֳלֵיהֶם |
 | deuteronomy-11-8 | Noa (f) | כָּל |
 | deuteronomy-11-9 | Noa (f) | וּלְזַרְעָם |
+| deuteronomy-12-10 | Noa (f) | מִכָּל |
 | deuteronomy-12-11 | Noa (f) | כָּל |
 | deuteronomy-12-15 | Noa (f) | אַוַּת, וְכָאַיָּל |
 | deuteronomy-12-17 | Noa (f) | וְנִדְבֹתֶיךָ |
+| deuteronomy-12-20 | Noa (f) | תְאַוֶּה, אַוַּת |
 | deuteronomy-12-21 | Noa (f) | יִבְחַר |
 | deuteronomy-12-22 | Noa (f) | יַחְדָּו |
 | deuteronomy-12-26 | Noa (f) | יִבְחַר |
@@ -627,20 +706,26 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | deuteronomy-14-17 | Noa (f) | וְהַקָּאָת |
 | deuteronomy-14-20 | Noa (f) | כָּל עוֹף |
 | deuteronomy-14-21 | Noa (f) | עַם |
+| deuteronomy-14-22 | Noa (f) | זַרְעֶךָ |
 | deuteronomy-14-25 | Noa (f) | בַּכָּסֶף |
 | deuteronomy-14-26 | Noa (f) | תְּאַוֶּה, תִּשְׁאָלְךָ |
 | deuteronomy-14-28 | Noa (f) | כָּל |
 | deuteronomy-14-29 | Noa (f) | וּבָא, הַלֵּוִי, וְאָכְלוּ, יְבָרֶכְךָ |
 | deuteronomy-14-5 | Noa (f) | וּתְאוֹ, וָזָמֶר |
 | deuteronomy-15-13 | Noa (f) | מֵעִמָּךְ |
+| deuteronomy-15-14 | Noa (f) | וּמִיִּקְבֶךָ |
+| deuteronomy-15-18 | Noa (f) | וּבֵרַכְךָ |
 | deuteronomy-15-20 | Noa (f) | בְשָׁנָה |
 | deuteronomy-15-23 | Noa (f) | תִּשְׁפְּכֶנּוּ |
 | deuteronomy-15-6 | Noa (f) | וְהַעֲבַטְתָּ, תַעֲבֹט |
 | deuteronomy-15-8 | Noa (f) | תַּעֲבִיטֶנּוּ |
 | deuteronomy-16-10 | Noa (f) | יְבָרֶכְךָ |
+| deuteronomy-16-15 | Noa (f) | יְבָרֶכְךָ |
 | deuteronomy-16-20 | Noa (f) | תִּחְיֶה, לָךְ |
 | deuteronomy-16-3 | Noa (f) | בְחִפָּזוֹן |
+| deuteronomy-16-7 | Noa (f) | וּבִשַּׁלְתָּ |
 | deuteronomy-17-12 | Noa (f) | בְזָדוֹן, לְבִלְתִּי |
+| deuteronomy-17-20 | Noa (f) | רוּם |
 | deuteronomy-17-5 | Noa (f) | וּסְקַלְתָּם |
 | deuteronomy-18-11 | Noa (f) | וְיִדְּעֹנִי |
 | deuteronomy-18-18 | Noa (f) | וְדִבֶּר |
@@ -650,11 +735,14 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | deuteronomy-19-18 | Noa (f) | בְאָחִיו |
 | deuteronomy-19-21 | Noa (f) | וְלֹא, עֵינֶךָ |
 | deuteronomy-19-5 | Noa (f) | בַיַּעַר, בַגַּרְזֶן, וָחָי |
+| deuteronomy-19-7 | Noa (f) | עָרִים |
 | deuteronomy-2-1 | Noa (f) | וַנִּסַּע |
 | deuteronomy-2-10 | Noa (f) | וָרָם |
+| deuteronomy-2-15 | Noa (f) | לְהֻמָּם |
 | deuteronomy-2-22 | Noa (f) | (nothing) |
 | deuteronomy-2-23 | Noa (f) | וְהָעַוִּים |
 | deuteronomy-2-24 | Noa (f) | רָשׁ, וְהִתְגָּר |
+| deuteronomy-2-25 | Noa (f) | וְיִרְאָתְךָ |
 | deuteronomy-2-26 | Noa (f) | סִיחוֹן |
 | deuteronomy-2-28 | Noa (f) | בְרַגְלָי |
 | deuteronomy-2-30 | Noa (f) | אָבָה |
@@ -662,18 +750,23 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | deuteronomy-2-32 | Noa (f) | יָהְצָה |
 | deuteronomy-2-33 | Noa (f) | כָּל |
 | deuteronomy-2-36 | Noa (f) | מֵעֲרֹעֵר |
+| deuteronomy-2-37 | Noa (f) | הָהָר |
 | deuteronomy-2-5 | Noa (f) | כִּי |
 | deuteronomy-2-9 | Noa (f) | עָר |
 | deuteronomy-20-1 | Noa (f) | עִמָּךְ, הַמַּעַלְךָ |
 | deuteronomy-20-14 | Noa (f) | בָעִיר |
 | deuteronomy-20-6 | Noa (f) | יְחַלְּלֶנּוּ |
+| deuteronomy-20-7 | Noa (f) | אֵרַשׂ |
 | deuteronomy-21-14 | Noa (f) | עִנִּיתָהּ |
 | deuteronomy-21-18 | Noa (f) | סוֹרֵר |
+| deuteronomy-21-20 | Noa (f) | שֹׁמֵעַ, וְסֹבֵא |
 | deuteronomy-21-22 | Noa (f) | בְאִישׁ, וְהוּמָת |
 | deuteronomy-21-3 | Noa (f) | הַהִוא |
 | deuteronomy-21-6 | Noa (f) | הַהִוא, בַנָּחַל |
+| deuteronomy-21-8 | Noa (f) | פָּדִיתָ |
 | deuteronomy-21-9 | Noa (f) | הַדָּם |
 | deuteronomy-22-1 | Noa (f) | תְּשִׁיבֵם |
+| deuteronomy-22-21 | Noa (f) | וּסְקָלוּהָ |
 | deuteronomy-22-24 | Noa (f) | הַהִוא |
 | deuteronomy-22-28 | Noa (f) | אֹרָשָׂה |
 | deuteronomy-22-29 | Noa (f) | עִנָּהּ, שַׁלְּחָה, כָּל |
@@ -681,10 +774,12 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | deuteronomy-22-9 | Noa (f) | פֶּן |
 | deuteronomy-23-21 | Noa (f) | בָא |
 | deuteronomy-23-22 | Noa (f) | מֵעִמָּךְ |
+| deuteronomy-23-25 | Noa (f) | שָׂבְעֶךָ |
 | deuteronomy-23-26 | Noa (f) | וְקָטַפְתָּ |
 | deuteronomy-23-8 | Noa (f) | בְאַרְצוֹ |
 | deuteronomy-24-1 | Noa (f) | וּבְעָלָהּ, חֵן, מָצָא, בָהּ, וְכָתַב לָהּ סֵפֶר כְּרִיתֻת |
 | deuteronomy-24-10 | Noa (f) | בְרֵעֲךָ |
+| deuteronomy-24-15 | Noa (f) | שְׂכָרוֹ |
 | deuteronomy-24-19 | Noa (f) | בְשָׂדֶךָ |
 | deuteronomy-24-4 | Noa (f) | שִׁלְּחָהּ, לְאִשָּׁה, אַחֲרֵי, הֻטַּמָּאָה, תַחֲטִיא, לְךָ נַחֲלָה |
 | deuteronomy-24-6 | Noa (f) | חֹבֵל |
@@ -703,20 +798,24 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | deuteronomy-27-1 | Noa (f) | וַיְצַו |
 | deuteronomy-27-10 | Noa (f) | מִצְוֹתָו |
 | deuteronomy-27-11 | Noa (f) | וַיְצַו |
+| deuteronomy-27-12 | Noa (f) | וְיִשָּׂשכָר |
 | deuteronomy-27-14 | Noa (f) | קוֹל רָם |
 | deuteronomy-27-17 | Noa (f) | מַסִּיג |
+| deuteronomy-27-26 | Noa (f) | אָרוּר |
 | deuteronomy-27-8 | Noa (f) | בַּאֵר |
 | deuteronomy-28-1 | Noa (f) | מִצְוֹתָיו |
 | deuteronomy-28-13 | Noa (f) | מִצְוֹת |
 | deuteronomy-28-14 | Noa (f) | מִכָּל |
 | deuteronomy-28-15 | Noa (f) | כָּל, מִצְוֹתָיו, כָּל |
 | deuteronomy-28-18 | Noa (f) | אֲלָפֶיךָ |
+| deuteronomy-28-20 | Noa (f) | הַמְּאֵרָה |
 | deuteronomy-28-21 | Noa (f) | בָא |
 | deuteronomy-28-30 | Noa (f) | תְאָרֵשׂ, תִּטַּע |
 | deuteronomy-28-38 | Noa (f) | הָאַרְבֶּה |
 | deuteronomy-28-40 | Noa (f) | יִשַּׁל |
 | deuteronomy-28-45 | Noa (f) | מִצְוֹתָיו |
 | deuteronomy-28-51 | Noa (f) | הִשָּׁמְדָךְ, אֲלָפֶיךָ |
+| deuteronomy-28-54 | Noa (f) | בְאָחִיו |
 | deuteronomy-28-55 | Noa (f) | אֹיִבְךָ |
 | deuteronomy-28-56 | Noa (f) | וּבְבִתָּהּ |
 | deuteronomy-28-57 | Noa (f) | הַיּוֹצֵת |
@@ -742,16 +841,20 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | deuteronomy-3-14 | Noa (f) | חַוֹּת |
 | deuteronomy-3-17 | Noa (f) | (nothing) |
 | deuteronomy-3-18 | Noa (f) | וָאֲצַו |
+| deuteronomy-3-2 | Noa (f) | כָּל עַמּוֹ |
 | deuteronomy-3-21 | Noa (f) | הַהִוא, כָּל |
+| deuteronomy-3-23 | Noa (f) | הַהִוא |
 | deuteronomy-3-25 | Noa (f) | וְאֶרְאֶה |
 | deuteronomy-3-26 | Noa (f) | וַיִּתְעַבֵּר |
 | deuteronomy-3-27 | Noa (f) | בְעֵינֶיךָ |
 | deuteronomy-3-28 | Noa (f) | וְצַו אֶת |
 | deuteronomy-3-4 | Noa (f) | עָרָיו, הַהִוא |
+| deuteronomy-3-5 | Noa (f) | דְּלָתַיִם |
 | deuteronomy-3-8 | Noa (f) | הַהִוא |
 | deuteronomy-30-10 | Noa (f) | מִצְוֹתָיו, בְּכָל |
 | deuteronomy-30-13 | Noa (f) | הִוא |
 | deuteronomy-30-16 | Noa (f) | מִצְוֹתָיו, בָא, לְרִשְׁתָּהּ |
+| deuteronomy-30-19 | Noa (f) | וְזַרְעֶךָ |
 | deuteronomy-30-3 | Noa (f) | מִכָּל |
 | deuteronomy-30-5 | Noa (f) | וְהִרְבְּךָ |
 | deuteronomy-30-6 | Noa (f) | וּמָל |
@@ -768,6 +871,7 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | deuteronomy-31-25 | Noa (f) | וַיְצַו |
 | deuteronomy-31-27 | Noa (f) | עָרְפְּךָ |
 | deuteronomy-31-29 | Noa (f) | לְהַכְעִיסוֹ |
+| deuteronomy-31-30 | Noa (f) | קְהַל |
 | deuteronomy-31-7 | Noa (f) | וֶאֱמָץ |
 | deuteronomy-31-8 | Noa (f) | תֵחָת |
 | deuteronomy-31-9 | Noa (f) | אֲרוֹן, בְּרִית, יִשְׂרָאֵל |
@@ -797,6 +901,7 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | deuteronomy-33-23 | Noa (f) | שְׂבַע |
 | deuteronomy-33-25 | Noa (f) | דָּבְאֶךָ |
 | deuteronomy-33-28 | Noa (f) | יַעַרְפוּ |
+| deuteronomy-33-5 | Noa (f) | בִישֻׁרוּן |
 | deuteronomy-33-6 | Noa (f) | מְתָיו |
 | deuteronomy-33-8 | Noa (f) | וּלְלֵוִי |
 | deuteronomy-34-12 | Noa (f) | כָּל |
@@ -806,12 +911,14 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | deuteronomy-34-9 | Noa (f) | סָמַךְ |
 | deuteronomy-4-10 | Noa (f) | וְאַשְׁמִעֵם |
 | deuteronomy-4-12 | Noa (f) | הָאֵשׁ |
+| deuteronomy-4-2 | Noa (f) | מִצְוֹת |
 | deuteronomy-4-23 | Noa (f) | כָּרַת |
 | deuteronomy-4-25 | Noa (f) | לְהַכְעִיסוֹ |
 | deuteronomy-4-29 | Noa (f) | וּבִקַּשְׁתֶּם, וּבְכָל |
 | deuteronomy-4-30 | Noa (f) | וְשָׁמַעְתָּ |
 | deuteronomy-4-36 | Noa (f) | הֶרְאֲךָ |
 | deuteronomy-4-37 | Noa (f) | וְתַחַת |
+| deuteronomy-4-38 | Noa (f) | לַהֲבִיאֲךָ |
 | deuteronomy-4-40 | Noa (f) | מִצְוֹתָיו |
 | deuteronomy-4-47 | Noa (f) | עוֹג |
 | deuteronomy-4-48 | Noa (f) | מֵעֲרֹעֵר, שִׂיאֹן |
@@ -831,13 +938,16 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | deuteronomy-7-14 | Noa (f) | מִכָּל |
 | deuteronomy-7-15 | Noa (f) | מַדְוֵי |
 | deuteronomy-7-18 | Noa (f) | זָכֹר תִּזְכֹּר |
+| deuteronomy-7-20 | Noa (f) | הַצִּרְעָה |
 | deuteronomy-7-22 | Noa (f) | וְנָשַׁל |
 | deuteronomy-7-23 | Noa (f) | הִשָּׁמְדָם |
 | deuteronomy-7-24 | Noa (f) | הִשְׁמִדְךָ |
+| deuteronomy-7-7 | Noa (f) | מִכָּל, מִכָּל |
 | deuteronomy-7-9 | Noa (f) | מִצְוֹתָיו |
 | deuteronomy-8-12 | Noa (f) | וְשָׂבָעְתָּ |
 | deuteronomy-8-14 | Noa (f) | מִצְרַיִם |
 | deuteronomy-8-16 | Noa (f) | יָדְעוּן |
+| deuteronomy-8-19 | Noa (f) | הַעִדֹתִי |
 | deuteronomy-8-2 | Noa (f) | הֹלִיכֲךָ, מִצְוֹתָיו |
 | deuteronomy-8-20 | Noa (f) | מַאֲבִיד, בְּקוֹל |
 | deuteronomy-8-3 | Noa (f) | וַיְעַנְּךָ, וַיַּרְעִבֶךָ, יָדְעוּן |
@@ -848,6 +958,7 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | exodus-1-11 | Noa (f) | שָׂרֵי, עָרֵי, רַעַמְסֵס |
 | exodus-1-15 | Noa (f) | לַמְיַלְּדֹת |
 | exodus-1-17 | Noa (f) | עָשׂוּ |
+| exodus-1-18 | Noa (f) | הַדָּבָר |
 | exodus-1-22 | Noa (f) | וַיְצַו, הַיְאֹרָה |
 | exodus-1-7 | Noa (f) | בִּמְאֹד |
 | exodus-10-13 | Noa (f) | וְכָל, הָאַרְבֶּה |
@@ -855,12 +966,14 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | exodus-10-17 | Noa (f) | וְהַעְתִּירוּ |
 | exodus-10-18 | Noa (f) | וַיֶּעְתַּר |
 | exodus-10-19 | Noa (f) | הָאַרְבֶּה, אַרְבֶּה |
+| exodus-10-2 | Noa (f) | הִתְעַלַּלְתִּי, בָם וִידַעְתֶּם כִּי |
 | exodus-10-23 | Noa (f) | הָיָה אוֹר |
 | exodus-10-24 | Noa (f) | פַרְעֹה, יֻצָּג |
 | exodus-10-4 | Noa (f) | אַרְבֶּה |
 | exodus-10-6 | Noa (f) | מֵעִם |
 | exodus-11-7 | Noa (f) | תֵּדְעוּן |
 | exodus-12-15 | Noa (f) | הָרִאשֹׁן |
+| exodus-12-16 | Noa (f) | לְכָל, הוּא |
 | exodus-12-19 | Noa (f) | וּבְאֶזְרַח |
 | exodus-12-27 | Noa (f) | וַיִּקֹּד, וַיִּשְׁתַּחֲוּוּ |
 | exodus-12-3 | Noa (f) | כָּל, עֲדַת |
@@ -870,13 +983,18 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | exodus-12-47 | Noa (f) | עֲדַת |
 | exodus-12-6 | Noa (f) | עֲדַת |
 | exodus-12-7 | Noa (f) | וְלָקְחוּ |
+| exodus-13-13 | Noa (f) | בְשֶׂה |
 | exodus-13-14 | Noa (f) | יִשְׁאָלְךָ |
 | exodus-13-15 | Noa (f) | הִקְשָׁה, פַרְעֹה |
+| exodus-13-17 | Noa (f) | מִצְרָיְמָה |
 | exodus-13-19 | Noa (f) | מִזֶּה אִתְּכֶם |
 | exodus-13-20 | Noa (f) | וַיִּסְעוּ |
 | exodus-14-12 | Noa (f) | בְמִצְרַיִם |
+| exodus-14-15 | Noa (f) | וְיִסָּעוּ |
 | exodus-14-17 | Noa (f) | וְאִכָּבְדָה |
+| exodus-14-19 | Noa (f) | וַיִּסַּע, וַיִּסַּע |
 | exodus-14-22 | Noa (f) | חֹמָה, מִימִינָם |
+| exodus-14-27 | Noa (f) | נָסִים |
 | exodus-14-29 | Noa (f) | בַיַּבָּשָׁה |
 | exodus-14-4 | Noa (f) | וְאִכָּבְדָה |
 | exodus-14-8 | Noa (f) | וַיִּרְדֹּף |
@@ -893,6 +1011,7 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | exodus-15-26 | Noa (f) | לְמִצְוֹתָיו, רֹפְאֶךָ |
 | exodus-15-4 | Noa (f) | שָׁלִשָׁיו |
 | exodus-15-5 | Noa (f) | בִמְצוֹלֹת, אָבֶן |
+| exodus-15-6 | Noa (f) | נֶאְדָּרִי |
 | exodus-15-7 | Noa (f) | גְּאוֹנְךָ תַּהֲרֹס קָמֶיךָ תְּשַׁלַּח חֲרֹנְךָ יֹאכְלֵמוֹ |
 | exodus-16-12 | Noa (f) | דַּבֵּר, הָעַרְבַּיִם, וִידַעְתֶּם |
 | exodus-16-13 | Noa (f) | בָעֶרֶב, הַשְּׂלָו |
@@ -900,9 +1019,11 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | exodus-16-15 | Noa (f) | הוּא וַיֹּאמֶר |
 | exodus-16-16 | Noa (f) | בְּאָהֳלוֹ |
 | exodus-16-17 | Noa (f) | וְהַמַּמְעִיט |
+| exodus-16-18 | Noa (f) | וְהַמַּמְעִיט |
 | exodus-16-19 | Noa (f) | אִישׁ אַל |
 | exodus-16-2 | Noa (f) | עֲדַת |
 | exodus-16-3 | Noa (f) | בְיַד, כָּל |
+| exodus-16-31 | Noa (f) | בִּדְבָשׁ |
 | exodus-16-35 | Noa (f) | כְּנָעַן |
 | exodus-16-36 | Noa (f) | עֲשִׂרִית |
 | exodus-16-8 | Noa (f) | בְּתֵת |
@@ -913,8 +1034,10 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | exodus-17-12 | Noa (f) | בְיָדָיו |
 | exodus-17-4 | Noa (f) | וַיִּצְעַק, מֹשֶׁה, אֶל, וּסְקָלֻנִי |
 | exodus-17-5 | Noa (f) | וּמַטְּךָ, הַיְאֹר |
+| exodus-17-6 | Noa (f) | הִנְנִי, לְפָנֶיךָ שָּׁם עַל הַצּוּר, בַצּוּר, וְשָׁתָה הָעָם, כֵּן |
 | exodus-18-1 | Noa (f) | כָּל |
 | exodus-18-11 | Noa (f) | בַדָּבָר |
+| exodus-18-14 | Noa (f) | כָּל |
 | exodus-18-19 | Noa (f) | אִיעָצְךָ |
 | exodus-18-21 | Noa (f) | מִכָּל |
 | exodus-18-22 | Noa (f) | בְּכָל |
@@ -926,14 +1049,19 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | exodus-19-19 | Noa (f) | מְאֹד |
 | exodus-19-2 | Noa (f) | וַיִּחַן |
 | exodus-19-23 | Noa (f) | בָּנוּ |
+| exodus-19-25 | Noa (f) | וַיֵּרֶד |
 | exodus-2-16 | Noa (f) | צֹאן אֲבִיהֶן |
+| exodus-2-20 | Noa (f) | וְאַיּוֹ לָמָּה זֶּה, קִרְאֶן |
 | exodus-2-23 | Noa (f) | בַיָּמִים, שַׁוְעָתָם |
+| exodus-2-24 | Noa (f) | נַאֲקָתָם |
 | exodus-2-3 | Noa (f) | בַחֵמָר |
 | exodus-2-5 | Noa (f) | אֲמָתָהּ |
 | exodus-20-13 | Noa (f) | בְרֵעֲךָ, עֵד |
 | exodus-20-15 | Noa (f) | עָשֵׁן |
 | exodus-20-16 | Noa (f) | פֶּן |
+| exodus-20-2 | Noa (f) | מֵאֶרֶץ |
 | exodus-20-22 | Noa (f) | וַתְּחַלְלֶהָ |
+| exodus-20-23 | Noa (f) | בְמַעֲלֹת |
 | exodus-20-5 | Noa (f) | עֲוֹן, רִבֵּעִים |
 | exodus-21-12 | Noa (f) | מַכֵּה, אִישׁ, יוּמָת |
 | exodus-21-13 | Noa (f) | אִנָּה |
@@ -945,10 +1073,12 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | exodus-21-22 | Noa (f) | אֲנָשִׁים |
 | exodus-21-29 | Noa (f) | וְהוּעַד |
 | exodus-21-3 | Noa (f) | וְיָצְאָה |
+| exodus-21-32 | Noa (f) | יִסָּקֵל |
 | exodus-21-34 | Noa (f) | לִבְעָלָיו |
 | exodus-21-4 | Noa (f) | בְגַפּוֹ |
 | exodus-21-6 | Noa (f) | אָזְנוֹ |
 | exodus-21-7 | Noa (f) | הָעֲבָדִים |
+| exodus-21-9 | Noa (f) | יִיעָדֶנָּה |
 | exodus-22-11 | Noa (f) | מֵעִמּוֹ, לִבְעָלָיו |
 | exodus-22-14 | Noa (f) | (nothing), שָׂכִיר, בָּא, בִּשְׂכָרוֹ |
 | exodus-22-15 | Noa (f) | אֹרָשָׂה, יִמְהָרֶנָּה |
@@ -972,6 +1102,7 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | exodus-23-4 | Noa (f) | (nothing), תֹּעֶה, תְּשִׁיבֶנּוּ |
 | exodus-24-10 | Noa (f) | וּכְעֶצֶם, לָטֹהַר |
 | exodus-24-12 | Noa (f) | וְאֶתְּנָה, לְהוֹרֹתָם |
+| exodus-24-17 | Noa (f) | כְּאֵשׁ אֹכֶלֶת בְּרֹאשׁ |
 | exodus-24-6 | Noa (f) | בָּאַגָּנֹת |
 | exodus-24-9 | Noa (f) | וַאֲבִיהוּא |
 | exodus-25-10 | Noa (f) | אַמָּתַיִם |
@@ -982,17 +1113,21 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | exodus-25-28 | Noa (f) | בָם |
 | exodus-25-5 | Noa (f) | מְאָדָּמִים |
 | exodus-26-1 | Noa (f) | יְרִיעֹת |
+| exodus-26-11 | Noa (f) | נְחֹשֶׁת, וְחִבַּרְתָּ |
 | exodus-26-13 | Noa (f) | יְרִיעֹת, סָרוּחַ |
 | exodus-26-14 | Noa (f) | מִלְמָעְלָה |
 | exodus-26-16 | Noa (f) | הָאַמָּה |
 | exodus-26-18 | Noa (f) | לִפְאַת |
+| exodus-26-2 | Noa (f) | הַיְרִיעָה, הַיְרִיעָה, הַיְרִיעֹת |
 | exodus-26-20 | Noa (f) | לִפְאַת |
 | exodus-26-24 | Noa (f) | הָאֶחָת |
 | exodus-26-7 | Noa (f) | יְרִיעֹת, עַשְׁתֵּי, יְרִיעֹת |
+| exodus-26-8 | Noa (f) | הַיְרִיעָה, הַיְרִיעָה, לְעַשְׁתֵּי, יְרִיעֹת |
 | exodus-26-9 | Noa (f) | הַיְרִיעֹת, הַיְרִיעֹת, הַיְרִיעָה |
 | exodus-27-11 | Noa (f) | לִפְאַת |
 | exodus-27-13 | Noa (f) | לִפְאַת |
 | exodus-27-14 | Noa (f) | אַמָּה |
+| exodus-27-18 | Noa (f) | בָאַמָּה, מָשְׁזָר |
 | exodus-27-7 | Noa (f) | אֹתוֹ |
 | exodus-27-9 | Noa (f) | לִפְאַת, בָאַמָּה |
 | exodus-28-1 | Noa (f) | בָּנָיו, וַאֲבִיהוּא, אֶלְעָזָר, וְאִיתָמָר |
@@ -1002,33 +1137,43 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | exodus-28-3 | Noa (f) | כָּל |
 | exodus-28-38 | Noa (f) | עֲוֹן |
 | exodus-28-40 | Noa (f) | וְלִבְנֵי, וְעָשִׂיתָ, לְכָבוֹד |
+| exodus-28-42 | Noa (f) | בָד |
 | exodus-28-43 | Noa (f) | עָוֹן |
 | exodus-28-6 | Noa (f) | הָאֵפֹד |
 | exodus-29-10 | Noa (f) | וְסָמַךְ |
+| exodus-29-15 | Noa (f) | וְסָמְכוּ |
 | exodus-29-18 | Noa (f) | אִשֶּׁה |
 | exodus-29-19 | Noa (f) | וְסָמַךְ |
 | exodus-29-21 | Noa (f) | אַהֲרֹן, הוּא |
+| exodus-29-25 | Noa (f) | הוּא לַאדֹנָי |
+| exodus-29-29 | Noa (f) | בָם |
 | exodus-29-32 | Noa (f) | בַּסָּל |
 | exodus-29-40 | Noa (f) | וְעִשָּׂרֹן |
 | exodus-29-42 | Noa (f) | אִוָּעֵד |
 | exodus-29-45 | Noa (f) | בְּנֵי |
 | exodus-29-46 | Noa (f) | לְשָׁכְנִי בְתוֹכָם |
+| exodus-29-5 | Noa (f) | אַהֲרֹן |
 | exodus-3-11 | Noa (f) | אוֹצִיא |
 | exodus-3-19 | Noa (f) | וְלֹא, בְּיָד |
 | exodus-3-4 | Noa (f) | סָר |
+| exodus-3-7 | Noa (f) | רָאֹה, מַכְאֹבָיו |
 | exodus-3-8 | Noa (f) | זָבַת, וּדְבָשׁ, וְהַחִוִּי |
+| exodus-30-10 | Noa (f) | הוּא, לַאדֹנָי |
 | exodus-30-15 | Noa (f) | יַמְעִיט |
 | exodus-30-18 | Noa (f) | כִּיּוֹר |
 | exodus-30-2 | Noa (f) | (nothing), אָרְכּוֹ וְאַמָּה רָחְבּוֹ רָבוּעַ יִהְיֶה וְאַמָּתַיִם |
 | exodus-30-21 | Noa (f) | וּלְזַרְעוֹ |
 | exodus-30-26 | Noa (f) | וּמָשַׁחְתָּ, בוֹ |
 | exodus-30-27 | Noa (f) | הַקְּטֹרֶת |
+| exodus-30-29 | Noa (f) | יִקְדָּשׁ |
 | exodus-30-35 | Noa (f) | וְעָשִׂיתָ, טָהוֹר, קֹדֶשׁ |
 | exodus-30-36 | Noa (f) | אִוָּעֵד |
 | exodus-30-4 | Noa (f) | צַלְעֹתָיו |
+| exodus-30-6 | Noa (f) | אִוָּעֵד |
 | exodus-31-15 | Noa (f) | שַׁבָּתוֹן |
 | exodus-31-17 | Noa (f) | אוֹת, הִוא |
 | exodus-31-2 | Noa (f) | חוּר לְמַטֵּה |
+| exodus-31-3 | Noa (f) | וּבִתְבוּנָה |
 | exodus-31-6 | Noa (f) | צִוִּיתִךָ |
 | exodus-32-1 | Noa (f) | וַיַּרְא הָעָם כִּי, (nothing), הָעָם, אַהֲרֹן, קוּם עֲשֵׂה, מֶה הָיָה לוֹ |
 | exodus-32-10 | Noa (f) | וְיִחַר |
@@ -1039,6 +1184,7 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | exodus-32-2 | Noa (f) | בְּנֵיכֶם |
 | exodus-32-22 | Noa (f) | כִּי בְרָע הוּא |
 | exodus-32-24 | Noa (f) | וָאַשְׁלִכֵהוּ, בָאֵשׁ |
+| exodus-32-25 | Noa (f) | פְרָעֹה |
 | exodus-32-28 | Noa (f) | מִן הָעָם |
 | exodus-32-30 | Noa (f) | אֶעֱלֶה, אֲדֹנָי, אֲכַפְּרָה |
 | exodus-32-8 | Noa (f) | סָרוּ |
@@ -1050,15 +1196,18 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | exodus-33-20 | Noa (f) | יִרְאַנִי |
 | exodus-33-21 | Noa (f) | הִנֵּה, מָקוֹם |
 | exodus-33-22 | Noa (f) | כְּבֹדִי וְשַׂמְתִּיךָ |
+| exodus-33-23 | Noa (f) | וַהֲסִרֹתִי, כַּפִּי |
 | exodus-33-3 | Noa (f) | אֶעֱלֶה |
 | exodus-33-4 | Noa (f) | וַיִּתְאַבָּלוּ |
 | exodus-33-5 | Noa (f) | אֶעֱלֶה, וְאֵדְעָה |
 | exodus-33-6 | Noa (f) | וַיִּתְנַצְּלוּ |
 | exodus-33-8 | Noa (f) | אָהֳלוֹ |
 | exodus-34-10 | Noa (f) | כָּל, בְכָל |
+| exodus-34-12 | Noa (f) | הִשָּׁמֶר |
 | exodus-34-15 | Noa (f) | פֶּן, תִּכְרֹת |
 | exodus-34-20 | Noa (f) | בְשֶׂה |
 | exodus-34-30 | Noa (f) | קָרַן |
+| exodus-34-34 | Noa (f) | וּבְבֹא |
 | exodus-34-35 | Noa (f) | קָרַן |
 | exodus-34-9 | Noa (f) | לַעֲוֹנֵנוּ |
 | exodus-35-1 | Noa (f) | וַיַּקְהֵל, עֲדַת |
@@ -1069,6 +1218,7 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | exodus-35-21 | Noa (f) | וּלְכָל |
 | exodus-35-22 | Noa (f) | (nothing), זָהָב וְכָל |
 | exodus-35-23 | Noa (f) | אֵילִם, מְאָדָּמִים, תְּחָשִׁים |
+| exodus-35-28 | Noa (f) | וּלְשֶׁמֶן |
 | exodus-35-31 | Noa (f) | וּבְכָל |
 | exodus-35-34 | Noa (f) | וְאָהֳלִיאָב, אֲחִיסָמָךְ |
 | exodus-35-35 | Noa (f) | וְאֹרֵג |
@@ -1077,6 +1227,7 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | exodus-36-1 | Noa (f) | וְאָהֳלִיאָב |
 | exodus-36-10 | Noa (f) | הַיְרִיעֹת, יְרִיעֹת |
 | exodus-36-11 | Noa (f) | הַיְרִיעָה, הַיְרִיעָה |
+| exodus-36-14 | Noa (f) | יְרִיעֹת, עַשְׁתֵּי, יְרִיעֹת |
 | exodus-36-15 | Noa (f) | לְעַשְׁתֵּי |
 | exodus-36-16 | Noa (f) | הַיְרִיעֹת, הַיְרִיעֹת |
 | exodus-36-2 | Noa (f) | אָהֳלִיאָב |
@@ -1084,6 +1235,7 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | exodus-36-25 | Noa (f) | וּלְצֶלַע, לִפְאַת |
 | exodus-36-31 | Noa (f) | הָאֶחָת |
 | exodus-36-33 | Noa (f) | וַיַּעַשׂ |
+| exodus-36-36 | Noa (f) | לָהּ אַרְבָּעָה, אַרְבָּעָה, כָסֶף |
 | exodus-36-38 | Noa (f) | וָוֵיהֶם, וְצִפָּה, רָאשֵׁיהֶם |
 | exodus-36-7 | Noa (f) | וְהוֹתֵר |
 | exodus-36-8 | Noa (f) | וַיַּעֲשׂוּ, כָל, יְרִיעֹת |
@@ -1092,15 +1244,19 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | exodus-37-10 | Noa (f) | אַמָּתַיִם |
 | exodus-37-16 | Noa (f) | הַקְּשָׂוֹת |
 | exodus-37-25 | Noa (f) | וְאַמָּתַיִם |
+| exodus-37-27 | Noa (f) | צַלְעֹתָיו |
 | exodus-37-29 | Noa (f) | טָהוֹר |
 | exodus-37-6 | Noa (f) | אַמָּתַיִם |
+| exodus-37-9 | Noa (f) | סֹכְכִים |
 | exodus-38-11 | Noa (f) | בָאַמָּה |
 | exodus-38-15 | Noa (f) | הֶחָצֵר |
 | exodus-38-18 | Noa (f) | בְרֹחַב |
 | exodus-38-21 | Noa (f) | הַלְוִּיִּם |
+| exodus-38-22 | Noa (f) | כָּל |
 | exodus-38-24 | Noa (f) | וְעֶשְׂרִים, וּשְׁבַע, מֵאוֹת |
 | exodus-38-28 | Noa (f) | הָאֶלֶף, וַחֲמִשָּׁה, עָשָׂה וָוִים |
 | exodus-38-29 | Noa (f) | וְאַלְפַּיִם |
+| exodus-38-30 | Noa (f) | אֹהֶל |
 | exodus-38-5 | Noa (f) | הַקְּצָוֹת |
 | exodus-38-6 | Noa (f) | הַבַּדִּים |
 | exodus-38-9 | Noa (f) | מֵאָה בָּאַמָּה |
@@ -1118,12 +1274,14 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | exodus-4-12 | Noa (f) | אֶהְיֶה |
 | exodus-4-18 | Noa (f) | אֵלֲכָה |
 | exodus-4-26 | Noa (f) | אָמְרָה חֲתַן, לַמּוּלֹת |
+| exodus-4-29 | Noa (f) | כָּל |
 | exodus-4-31 | Noa (f) | עָנְיָם |
 | exodus-4-6 | Noa (f) | כַּשָּׁלֶג |
 | exodus-4-9 | Noa (f) | בַּיַּבָּשֶׁת |
 | exodus-40-2 | Noa (f) | מִשְׁכַּן, אֹהֶל |
 | exodus-40-3 | Noa (f) | הַפָּרֹכֶת |
 | exodus-40-34 | Noa (f) | הֶעָנָן |
+| exodus-40-36 | Noa (f) | יִסְעוּ, מַסְעֵיהֶם |
 | exodus-40-38 | Noa (f) | מַסְעֵיהֶם |
 | exodus-40-9 | Noa (f) | כָּל, כָּל |
 | exodus-5-14 | Noa (f) | פַרְעֹה, כִלִּיתֶם |
@@ -1136,6 +1294,7 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | exodus-6-23 | Noa (f) | אֲבִיהוּא |
 | exodus-6-29 | Noa (f) | כָּל |
 | exodus-6-3 | Noa (f) | וָאֵרָא אֶל |
+| exodus-6-5 | Noa (f) | נַאֲקַת |
 | exodus-6-9 | Noa (f) | שָׁמְעוּ |
 | exodus-7-10 | Noa (f) | וַיְהִי |
 | exodus-7-17 | Noa (f) | בַּיְאֹר |
@@ -1145,6 +1304,7 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | exodus-7-25 | Noa (f) | הַיְאֹר |
 | exodus-7-4 | Noa (f) | יִשְׁמַע, בִּשְׁפָטִים |
 | exodus-8-1 | Noa (f) | בְּמַטֶּךָ, וְהַעַל |
+| exodus-8-10 | Noa (f) | וַיִּצְבְּרוּ, וַתִּבְאַשׁ |
 | exodus-8-11 | Noa (f) | וַיַּרְא, פַּרְעֹה, הָרְוָחָה וְהַכְבֵּד |
 | exodus-8-13 | Noa (f) | בְמַטֵּהוּ, הָיָה כִנִּים בְּכָל |
 | exodus-8-17 | Noa (f) | וּבְעַמְּךָ |
@@ -1153,12 +1313,14 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | exodus-8-24 | Noa (f) | אֲשַׁלַּח |
 | exodus-8-25 | Noa (f) | וְסָר |
 | exodus-8-26 | Noa (f) | וַיֶּעְתַּר |
+| exodus-8-7 | Noa (f) | וְסָרוּ, בַּיְאֹר |
 | exodus-9-16 | Noa (f) | הַרְאֹתְךָ, בְּכָל |
 | exodus-9-17 | Noa (f) | עוֹדְךָ |
 | exodus-9-2 | Noa (f) | וְעוֹדְךָ |
 | exodus-9-24 | Noa (f) | בְּכָל |
 | exodus-9-3 | Noa (f) | הוֹיָה |
 | exodus-9-31 | Noa (f) | גִּבְעֹל |
+| exodus-9-32 | Noa (f) | אֲפִילֹת |
 | genesis-1-10 | Noa (f) | וּלְמִקְוֵה, וַיַּרְא |
 | genesis-1-14 | Noa (f) | וְהָיוּ |
 | genesis-1-15 | Noa (f) | לִמְאוֹרֹת בִּרְקִיעַ, לְהָאִיר עַל |
@@ -1173,13 +1335,16 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | genesis-1-8 | Noa (f) | שָׁמָיִם |
 | genesis-1-9 | Noa (f) | יִקָּווּ |
 | genesis-10-10 | Noa (f) | וְכַלְנֵה, שִׁנְעָר |
+| genesis-10-12 | Noa (f) | (nothing) |
 | genesis-10-15 | Noa (f) | חֵת |
 | genesis-10-19 | Noa (f) | וּצְבֹיִם, לָשַׁע |
 | genesis-10-2 | Noa (f) | וְיָוָן |
 | genesis-10-22 | Noa (f) | וְאַרְפַּכְשַׁד |
 | genesis-10-23 | Noa (f) | עוּץ |
+| genesis-10-24 | Noa (f) | וְאַרְפַּכְשַׁד |
 | genesis-10-25 | Noa (f) | בְיָמָיו |
 | genesis-10-31 | Noa (f) | לִלְשֹׁנֹתָם |
+| genesis-10-5 | Noa (f) | לִלְשֹׁנוֹ |
 | genesis-10-6 | Noa (f) | וּכְנָעַן |
 | genesis-10-7 | Noa (f) | סְבָא |
 | genesis-11-10 | Noa (f) | אַרְפַּכְשָׁד |
@@ -1187,8 +1352,11 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | genesis-11-13 | Noa (f) | אַרְפַּכְשַׁד |
 | genesis-11-18 | Noa (f) | רְעוּ |
 | genesis-11-2 | Noa (f) | בְּנָסְעָם, (nothing), בִקְעָה, בְּאֶרֶץ, שִׁנְעָר, וַיֵּשְׁבוּ |
+| genesis-11-27 | Noa (f) | אַבְרָם, לוֹט |
 | genesis-11-29 | Noa (f) | אַבְרָם, אַבְרָם, יִסְכָּה |
+| genesis-11-30 | Noa (f) | עֲקָרָה, אֵין |
 | genesis-11-7 | Noa (f) | רֵעֵהוּ |
+| genesis-12-1 | Noa (f) | אַבְרָם, אַרְאֶךָּ |
 | genesis-12-10 | Noa (f) | אַבְרָם, לָגוּר |
 | genesis-12-12 | Noa (f) | יְחַיּוּ |
 | genesis-12-13 | Noa (f) | אֲחֹתִי אָתְּ |
@@ -1196,6 +1364,7 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | genesis-12-20 | Noa (f) | וַיְצַו, כָּל |
 | genesis-12-3 | Noa (f) | וַאֲבָרֲכָה, אָאֹר |
 | genesis-12-4 | Noa (f) | אַבְרָם, מֵחָרָן |
+| genesis-12-5 | Noa (f) | אַבְרָם |
 | genesis-12-7 | Noa (f) | אַבְרָם, לְזַרְעֲךָ |
 | genesis-12-8 | Noa (f) | וַיַּעְתֵּק, מִקֶּדֶם, אָהֳלֹה, בֵּית, אֵל, מִקֶּדֶם |
 | genesis-12-9 | Noa (f) | אַבְרָם |
@@ -1210,21 +1379,26 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | genesis-13-3 | Noa (f) | אָהֳלוֹ |
 | genesis-13-4 | Noa (f) | אַבְרָם |
 | genesis-13-5 | Noa (f) | אַבְרָם |
+| genesis-13-7 | Noa (f) | אַבְרָם |
 | genesis-13-8 | Noa (f) | אַבְרָם, לוֹט אַל נָא |
 | genesis-13-9 | Noa (f) | וְאַשְׂמְאִילָה |
 | genesis-14-1 | Noa (f) | מֶלֶךְ שִׁנְעָר אַרְיוֹךְ מֶלֶךְ אֶלָּסָר כְּדָרְלָעֹמֶר מֶלֶךְ, וְתִדְעָל |
+| genesis-14-10 | Noa (f) | נָּסוּ |
 | genesis-14-12 | Noa (f) | אַבְרָם |
 | genesis-14-13 | Noa (f) | אַבְרָם |
 | genesis-14-14 | Noa (f) | אַבְרָם |
+| genesis-14-19 | Noa (f) | וַיְבָרְכֵהוּ, אַבְרָם, שָׁמַיִם, וָאָרֶץ |
 | genesis-14-20 | Noa (f) | וַיִּתֶּן |
 | genesis-14-22 | Noa (f) | אַבְרָם |
 | genesis-14-23 | Noa (f) | אַבְרָם |
 | genesis-14-24 | Noa (f) | עָנֵר |
 | genesis-14-3 | Noa (f) | הַשִּׂדִּים הוּא |
 | genesis-14-5 | Noa (f) | וּבְאַרְבַּע |
+| genesis-14-7 | Noa (f) | עֵין |
 | genesis-14-8 | Noa (f) | אַדְמָה, הִוא, וַיַּעַרְכוּ, הַשִּׂדִּים |
 | genesis-14-9 | Noa (f) | מֶלֶךְ שִׁנְעָר וְאַרְיוֹךְ מֶלֶךְ אֶלָּסָר |
 | genesis-15-1 | Noa (f) | אַבְרָם, אַבְרָם, שְׂכָרְךָ |
+| genesis-15-10 | Noa (f) | כָּל |
 | genesis-15-12 | Noa (f) | אַבְרָם |
 | genesis-15-16 | Noa (f) | עֲוֹן |
 | genesis-15-18 | Noa (f) | אַבְרָם |
@@ -1242,12 +1416,14 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | genesis-16-3 | Noa (f) | אַבְרָם, אַבְרָם |
 | genesis-16-5 | Noa (f) | אַבְרָם, הָרָתָה, בֵּינִי, וּבֵינֶיךָ |
 | genesis-16-6 | Noa (f) | אַבְרָם |
+| genesis-16-7 | Noa (f) | וַיִּמְצָאָהּ |
 | genesis-16-8 | Noa (f) | בָאת |
 | genesis-17-1 | Noa (f) | אַבְרָם, אַבְרָם |
 | genesis-17-12 | Noa (f) | יִמּוֹל, מִזַּרְעֲךָ |
 | genesis-17-14 | Noa (f) | וְעָרֵל, עָרְלָתוֹ, הֵפַר |
 | genesis-17-16 | Noa (f) | עַמִּים |
 | genesis-17-2 | Noa (f) | וְאֶתְּנָה, בִּמְאֹד |
+| genesis-17-20 | Noa (f) | בִּמְאֹד |
 | genesis-17-23 | Noa (f) | עָרְלָתָם |
 | genesis-17-24 | Noa (f) | עָרְלָתוֹ |
 | genesis-17-3 | Noa (f) | אַבְרָם |
@@ -1260,8 +1436,10 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | genesis-18-15 | Noa (f) | יָרֵאָה |
 | genesis-18-21 | Noa (f) | אֵדָעָה |
 | genesis-18-25 | Noa (f) | כַצַדִּיק כָּרָשָׁע |
+| genesis-18-26 | Noa (f) | לְכָל, הַמָּקוֹם |
 | genesis-18-30 | Noa (f) | יִחַר |
 | genesis-18-32 | Noa (f) | עֲשָׂרָה, הָעֲשָׂרָה |
+| genesis-18-6 | Noa (f) | סְאִים |
 | genesis-19-11 | Noa (f) | וַיִּלְאוּ |
 | genesis-19-14 | Noa (f) | צְּאוּ |
 | genesis-19-15 | Noa (f) | בַּעֲוֹן |
@@ -1275,9 +1453,11 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | genesis-19-30 | Noa (f) | מִצּוֹעַר, בְּצוֹעַר |
 | genesis-19-38 | Noa (f) | הוּא |
 | genesis-19-4 | Noa (f) | מִנַּעַר |
+| genesis-19-5 | Noa (f) | אַיֵּה, וְנֵדְעָה |
 | genesis-19-7 | Noa (f) | אַחַי |
 | genesis-19-9 | Noa (f) | בָאִישׁ |
 | genesis-2-14 | Noa (f) | פְרָת |
+| genesis-2-15 | Noa (f) | בְגַן |
 | genesis-2-16 | Noa (f) | וַיְצַו |
 | genesis-2-17 | Noa (f) | וָרָע |
 | genesis-2-21 | Noa (f) | מִצַּלְעֹתָיו |
@@ -1298,6 +1478,7 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | genesis-21-17 | Noa (f) | מַה לָּךְ |
 | genesis-21-19 | Noa (f) | הַנָּעַר |
 | genesis-21-20 | Noa (f) | קַשָּׁת |
+| genesis-21-23 | Noa (f) | הִשָּׁבְעָה |
 | genesis-21-33 | Noa (f) | וַיִּטַּע |
 | genesis-21-7 | Noa (f) | הֵינִיקָה, לִזְקֻנָיו |
 | genesis-21-8 | Noa (f) | הִגָּמֵל |
@@ -1306,6 +1487,7 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | genesis-22-17 | Noa (f) | אֲבָרֶכְךָ, וְהַרְבָּה |
 | genesis-22-18 | Noa (f) | בְזַרְעֲךָ |
 | genesis-22-20 | Noa (f) | לְנָחוֹר |
+| genesis-22-22 | Noa (f) | יִדְלָף |
 | genesis-22-23 | Noa (f) | שְׁמֹנָה אֵלֶּה |
 | genesis-22-24 | Noa (f) | (nothing) |
 | genesis-22-6 | Noa (f) | וַיֵּלְכוּ, שְׁנֵיהֶם |
@@ -1314,11 +1496,14 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | genesis-23-12 | Noa (f) | וַיִּשְׁתַּחוּ |
 | genesis-23-13 | Noa (f) | אִם אַתָּה לוּ, וְאֶקְבְּרָה |
 | genesis-23-20 | Noa (f) | חֵת |
+| genesis-23-4 | Noa (f) | וְאֶקְבְּרָה |
 | genesis-24-13 | Noa (f) | יֹצְאֹת |
+| genesis-24-14 | Noa (f) | כַדֵּךְ |
 | genesis-24-17 | Noa (f) | הַגְמִיאִינִי |
 | genesis-24-20 | Noa (f) | וַתְּעַר, וַתִּשְׁאַב |
 | genesis-24-21 | Noa (f) | הַהִצְלִיחַ |
 | genesis-24-24 | Noa (f) | מִלְכָּה |
+| genesis-24-26 | Noa (f) | הָאִישׁ |
 | genesis-24-3 | Noa (f) | וְאַשְׁבִּיעֲךָ |
 | genesis-24-30 | Noa (f) | כִּרְאֹת |
 | genesis-24-45 | Noa (f) | הָעַיְנָה |
@@ -1342,15 +1527,19 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | genesis-26-16 | Noa (f) | עָצַמְתָּ |
 | genesis-26-18 | Noa (f) | וַיְסַתְּמוּם |
 | genesis-26-3 | Noa (f) | וְאֶהְיֶה |
+| genesis-26-31 | Noa (f) | וַיִּשָּׁבְעוּ |
 | genesis-26-5 | Noa (f) | וַיִּשְׁמֹר, מִצְוֹתַי |
 | genesis-26-6 | Noa (f) | בִּגְרָר |
 | genesis-26-7 | Noa (f) | הִוא |
 | genesis-26-9 | Noa (f) | אִשְׁתְּךָ הִוא וְאֵיךְ, הִוא, אָמוּת |
 | genesis-27-1 | Noa (f) | מֵרְאֹת |
 | genesis-27-10 | Noa (f) | בַּעֲבֻר, יְבָרֶכְךָ |
+| genesis-27-11 | Noa (f) | שָׂעִר |
 | genesis-27-13 | Noa (f) | וְלֵךְ |
 | genesis-27-2 | Noa (f) | וַיֹּאמֶר הִנֵּה נָא |
 | genesis-27-20 | Noa (f) | הִקְרָה |
+| genesis-27-21 | Noa (f) | וַאֲמֻשְׁךָ |
+| genesis-27-25 | Noa (f) | תְּבָרֶכְךָ |
 | genesis-27-27 | Noa (f) | בֵּרֲכוֹ אֲדֹנָי |
 | genesis-27-3 | Noa (f) | וְעַתָּה שָׂא נָא כֵלֶיךָ תֶּלְיְךָ וְקַשְׁתֶּךָ וְצֵא, לִּי צָיִד |
 | genesis-27-30 | Noa (f) | אַךְ יָצֹא |
@@ -1361,18 +1550,22 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | genesis-27-40 | Noa (f) | עֻלּוֹ |
 | genesis-27-41 | Noa (f) | אֵבֶל, וְאַהַרְגָה |
 | genesis-27-46 | Noa (f) | בְחַיַּי |
+| genesis-27-5 | Noa (f) | בְּדַבֵּר |
 | genesis-27-7 | Noa (f) | מַטְעַמִּים |
 | genesis-28-14 | Noa (f) | וּבְזַרְעֶךָ |
 | genesis-28-16 | Noa (f) | יָדָעְתִּי |
 | genesis-28-2 | Noa (f) | בְתוּאֵל |
 | genesis-28-20 | Noa (f) | אִם |
 | genesis-28-22 | Noa (f) | אֲעַשְּׂרֶנּוּ |
+| genesis-28-3 | Noa (f) | עַמִּים |
 | genesis-28-5 | Noa (f) | אֲרָם, אֵם |
 | genesis-28-6 | Noa (f) | וַיְצַו |
+| genesis-28-7 | Noa (f) | וְאֶל |
 | genesis-28-9 | Noa (f) | נָשָׁיו |
 | genesis-29-11 | Noa (f) | וַיִּשַּׁק, וַיִּשָּׂא, וַיֵּבְךְּ |
 | genesis-29-12 | Noa (f) | הוּא וְכִי, הוּא וַתָּרָץ |
 | genesis-29-13 | Noa (f) | וַיְבִיאֵהוּ |
+| genesis-29-15 | Noa (f) | אָחִי |
 | genesis-29-18 | Noa (f) | וַיֶּאֱהַב, אֶעֱבָדְךָ |
 | genesis-29-2 | Noa (f) | הַהִוא |
 | genesis-29-20 | Noa (f) | בְעֵינָיו |
@@ -1380,6 +1573,7 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | genesis-29-26 | Noa (f) | הַצְּעִירָה |
 | genesis-29-27 | Noa (f) | וְנִתְּנָה |
 | genesis-29-28 | Noa (f) | שְׁבֻעַ |
+| genesis-29-29 | Noa (f) | בִּלְהָה |
 | genesis-29-30 | Noa (f) | וַיֶּאֱהַב |
 | genesis-29-31 | Noa (f) | עֲקָרָה |
 | genesis-29-32 | Noa (f) | יֶאֱהָבַנִי |
@@ -1387,7 +1581,9 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | genesis-29-9 | Noa (f) | (nothing) |
 | genesis-3-10 | Noa (f) | וָאִירָא |
 | genesis-3-12 | Noa (f) | (nothing) |
+| genesis-3-15 | Noa (f) | זַרְעָהּ |
 | genesis-3-16 | Noa (f) | אַרְבֶּה, וְהֵרֹנֵךְ |
+| genesis-3-19 | Noa (f) | עָפָר, תָּשׁוּב |
 | genesis-30-1 | Noa (f) | הָבָה |
 | genesis-30-16 | Noa (f) | בְּדוּדָאֵי |
 | genesis-30-18 | Noa (f) | שְׂכָרִי, יִשָׂשכָר |
@@ -1399,7 +1595,9 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | genesis-30-35 | Noa (f) | וְהַטְּלֻאִים |
 | genesis-30-39 | Noa (f) | וַתֵּלַדְןָ הַצֹּאן, וּטְלֻאִים |
 | genesis-30-4 | Noa (f) | בִּלְהָה |
+| genesis-30-40 | Noa (f) | עֲדָרִים |
 | genesis-30-6 | Noa (f) | (nothing), וַיִּתֶּן |
+| genesis-31-1 | Noa (f) | כָּל, לְאָבִינוּ, לְאָבִינוּ, כָּל |
 | genesis-31-20 | Noa (f) | הָאֲרַמִּי |
 | genesis-31-25 | Noa (f) | אָהֳלוֹ |
 | genesis-31-28 | Noa (f) | הִסְכַּלְתָּ |
@@ -1417,8 +1615,10 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | genesis-32-11 | Noa (f) | וּמִכָּל, בְמַקְלִי |
 | genesis-32-12 | Noa (f) | פֶּן |
 | genesis-32-13 | Noa (f) | אֵיטִיב |
+| genesis-32-14 | Noa (f) | בְיָדוֹ, לְעֵשָׂו |
 | genesis-32-15 | Noa (f) | וּתְיָשִׁים |
 | genesis-32-16 | Noa (f) | וַעְיָרִם |
+| genesis-32-18 | Noa (f) | וַיְצַו, וִשְׁאֵלְךָ |
 | genesis-32-2 | Noa (f) | לְדַרְכּוֹ |
 | genesis-32-25 | Noa (f) | עֲלוֹת |
 | genesis-32-29 | Noa (f) | וַתּוּכָל |
@@ -1435,6 +1635,7 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | genesis-34-2 | Noa (f) | וַיְעַנֶּהָ |
 | genesis-34-25 | Noa (f) | בַיּוֹם |
 | genesis-34-30 | Noa (f) | עֲכַרְתֶּם, וְהִכּוּנִי |
+| genesis-34-7 | Noa (f) | כְּשָׁמְעָם, וַיִּתְעַצְּבוּ, וַיִּחַר, בְיִשְׂרָאֵל |
 | genesis-35-11 | Noa (f) | גּוֹיִם, וּמְלָכִים |
 | genesis-35-19 | Noa (f) | הִוא |
 | genesis-35-2 | Noa (f) | וְהִטַּהֲרוּ |
@@ -1455,10 +1656,12 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | genesis-36-2 | Noa (f) | אָהֳלִיבָמָה |
 | genesis-36-21 | Noa (f) | הַחֹרִי |
 | genesis-36-23 | Noa (f) | עַלְוָן |
+| genesis-36-24 | Noa (f) | וְאַיָּה |
 | genesis-36-26 | Noa (f) | דִישָׁן, חֶמְדָּן, וְיִתְרָן, וּכְרָן |
 | genesis-36-27 | Noa (f) | וְזַעֲוָן, וַעֲקָן |
 | genesis-36-28 | Noa (f) | דִישָׁן עוּץ וַאֲרָן |
 | genesis-36-30 | Noa (f) | הַחֹרִי |
+| genesis-36-32 | Noa (f) | דִּנְהָבָה |
 | genesis-36-38 | Noa (f) | וַיָּמָת שָׁאוּל וַיִּמְלֹךְ, בַּעַל, עַכְבּוֹר |
 | genesis-36-40 | Noa (f) | עַלְוָה, יְתֵת |
 | genesis-36-41 | Noa (f) | אָהֳלִיבָמָה |
@@ -1467,12 +1670,15 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | genesis-37-18 | Noa (f) | לַהֲמִיתוֹ |
 | genesis-37-20 | Noa (f) | וְנַשְׁלִכֵהוּ |
 | genesis-37-23 | Noa (f) | אֲשֶׁר עָלָיו |
+| genesis-37-25 | Noa (f) | לֶאֱכָל, אֹרְחַת יִשְׁמְעֵאלִים |
 | genesis-37-27 | Noa (f) | אָחִינוּ |
 | genesis-37-32 | Noa (f) | הִוא |
 | genesis-37-33 | Noa (f) | אֲכָלָתְהוּ |
 | genesis-37-35 | Noa (f) | וַיְמָאֵן, וַיֵּבְךְּ |
+| genesis-37-4 | Noa (f) | מִכָּל |
 | genesis-38-1 | Noa (f) | וַיֵּרֶד, מֵאֵת, עַד |
 | genesis-38-12 | Noa (f) | שׁוּעַ |
+| genesis-38-14 | Noa (f) | וַתָּסַר, תִּמְנָתָה, וְהִוא |
 | genesis-38-17 | Noa (f) | אֲשַׁלַּח |
 | genesis-38-22 | Noa (f) | וַיָּשָׁב, וַיֹּאמֶר, וְגַם אַנְשֵׁי הַמָּקוֹם |
 | genesis-38-28 | Noa (f) | בְלִדְתָּהּ, שָׁנִי |
@@ -1484,6 +1690,7 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | genesis-39-19 | Noa (f) | וַיִּחַר, אַפּוֹ |
 | genesis-39-7 | Noa (f) | אֶל |
 | genesis-39-9 | Noa (f) | מְאוּמָה |
+| genesis-4-13 | Noa (f) | עֲוֹנִי |
 | genesis-4-17 | Noa (f) | וַתַּהַר |
 | genesis-4-18 | Noa (f) | עִירָד, וְעִירָד, לָמֶךְ |
 | genesis-4-20 | Noa (f) | הָיָה אֲבִי |
@@ -1491,12 +1698,14 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | genesis-4-5 | Noa (f) | שָׁעָה |
 | genesis-4-6 | Noa (f) | קָיִן |
 | genesis-40-10 | Noa (f) | אַשְׁכְּלֹתֶיהָ |
+| genesis-40-11 | Noa (f) | וָאֶקַּח, וָאֶשְׂחַט |
 | genesis-40-13 | Noa (f) | יִשָּׂא, הָיִיתָ, מַשְׁקֵהוּ |
 | genesis-40-23 | Noa (f) | הַמַּשְׁקִים |
 | genesis-40-5 | Noa (f) | וְהָאֹפֶה, אֲסוּרִים |
 | genesis-40-7 | Noa (f) | סְרִיסֵי, בְמִשְׁמַר |
 | genesis-41-15 | Noa (f) | אֵין |
 | genesis-41-18 | Noa (f) | הַיְאֹר |
+| genesis-41-20 | Noa (f) | הַבְּרִיאֹת |
 | genesis-41-21 | Noa (f) | רַע כַּאֲשֶׁר בַּתְּחִלָּה וָאִיקָץ |
 | genesis-41-25 | Noa (f) | הִגִּיד |
 | genesis-41-32 | Noa (f) | הִשָּׁנוֹת |
@@ -1505,12 +1714,16 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | genesis-41-48 | Noa (f) | בֶּעָרִים |
 | genesis-41-5 | Noa (f) | בְּרִיאוֹת |
 | genesis-41-50 | Noa (f) | אוֹן |
+| genesis-41-52 | Noa (f) | הִפְרַנִי |
 | genesis-41-53 | Noa (f) | מִצְרָיִם |
 | genesis-41-55 | Noa (f) | לְכָל |
+| genesis-42-12 | Noa (f) | כִּי עֶרְוַת |
 | genesis-42-16 | Noa (f) | פַרְעֹה |
 | genesis-42-19 | Noa (f) | יֵאָסֵר |
+| genesis-42-22 | Noa (f) | בַיֶּלֶד |
 | genesis-42-24 | Noa (f) | וַיֵּבְךְּ |
 | genesis-42-25 | Noa (f) | וַיְצַו |
+| genesis-42-34 | Noa (f) | וְאֵדְעָה |
 | genesis-42-36 | Noa (f) | שִׁכַּלְתֶּם, כֻלָּנָה |
 | genesis-42-8 | Noa (f) | וַיַּכֵּר |
 | genesis-43-11 | Noa (f) | עֲשׂוּ |
@@ -1518,6 +1731,7 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | genesis-43-15 | Noa (f) | בְיָדָם |
 | genesis-43-16 | Noa (f) | וְהָכֵן |
 | genesis-43-18 | Noa (f) | בְּאַמְתְּחֹתֵינוּ |
+| genesis-43-21 | Noa (f) | אַמְתְּחֹתֵינוּ, אַמְתַּחְתּוֹ |
 | genesis-43-23 | Noa (f) | בְּאַמְתְּחֹתֵיכֶם |
 | genesis-43-25 | Noa (f) | הַמִּנְחָה |
 | genesis-43-30 | Noa (f) | וַיֵּבְךְּ |
@@ -1527,9 +1741,11 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | genesis-44-1 | Noa (f) | וַיְצַו, אַמְתְּחֹת, יוּכְלוּן, אַמְתַּחְתּוֹ |
 | genesis-44-16 | Noa (f) | עֲוֹן, הִנֶּנּוּ |
 | genesis-44-2 | Noa (f) | גְּבִיעַ |
+| genesis-44-22 | Noa (f) | וָמֵת |
 | genesis-44-28 | Noa (f) | וָאֹמַר |
 | genesis-44-3 | Noa (f) | הֵמָּה |
 | genesis-44-32 | Noa (f) | עָרַב, אֲבִיאֶנּוּ |
+| genesis-44-34 | Noa (f) | אֶעֱלֶה, בָרָע, יִמְצָא |
 | genesis-44-5 | Noa (f) | הֲרֵעֹתֶם |
 | genesis-44-8 | Noa (f) | אַמְתְּחֹתֵינוּ, הֱשִׁיבֹנוּ |
 | genesis-45-11 | Noa (f) | וְכִלְכַּלְתִּי |
@@ -1543,12 +1759,15 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | genesis-45-26 | Noa (f) | בְּכָל |
 | genesis-45-4 | Noa (f) | מִצְרָיְמָה |
 | genesis-45-5 | Noa (f) | יִחַר, שְׁלָחַנִי |
+| genesis-46-1 | Noa (f) | וַיִּסַּע |
 | genesis-46-16 | Noa (f) | עֵרִי, וַאֲרוֹדִי, וְאַרְאֵלִי |
 | genesis-46-17 | Noa (f) | בְרִיעָה |
 | genesis-46-20 | Noa (f) | אֹן |
 | genesis-46-27 | Noa (f) | בְמִצְרַיִם |
 | genesis-46-29 | Noa (f) | וַיֶּאְסֹר, וַיֵּבְךְּ |
 | genesis-46-3 | Noa (f) | אֲשִׂימְךָ |
+| genesis-46-31 | Noa (f) | אֶעֱלֶה |
+| genesis-46-4 | Noa (f) | אַעַלְךָ, עָלֹה |
 | genesis-46-6 | Noa (f) | וְכָל זַרְעוֹ |
 | genesis-46-9 | Noa (f) | וּפַלּוּא |
 | genesis-47-11 | Noa (f) | רַעְמְסֵס כַּאֲשֶׁר |
@@ -1557,6 +1776,7 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | genesis-47-21 | Noa (f) | לֶעָרִים |
 | genesis-47-29 | Noa (f) | תִקְבְּרֵנִי |
 | genesis-47-31 | Noa (f) | הִשָּׁבְעָה |
+| genesis-47-6 | Noa (f) | הִוא, הוֹשֵׁב |
 | genesis-48-11 | Noa (f) | רְאֹה, זַרְעֶךָ |
 | genesis-48-21 | Noa (f) | יִשְׂרָאֵל |
 | genesis-49-10 | Noa (f) | יִקְּהַת, עַמִּים |
@@ -1591,12 +1811,14 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | genesis-6-13 | Noa (f) | בָּשָׂר, כִּי, מָלְאָה |
 | genesis-6-14 | Noa (f) | בַּכֹּפֶר |
 | genesis-6-16 | Noa (f) | שְׁנִיִּם |
+| genesis-6-6 | Noa (f) | וַיִּתְעַצֵּב |
 | genesis-6-8 | Noa (f) | וְנֹחַ |
 | genesis-7-11 | Noa (f) | בְּשִׁבְעָה |
 | genesis-7-17 | Noa (f) | וַיִּרְבּוּ |
 | genesis-7-4 | Noa (f) | כָּל |
 | genesis-8-16 | Noa (f) | וּנְשֵׁי |
 | genesis-8-19 | Noa (f) | וְכָל |
+| genesis-8-4 | Noa (f) | אֲרָרָט |
 | genesis-9-14 | Noa (f) | וְנִרְאֲתָה |
 | genesis-9-2 | Noa (f) | בְּיֶדְכֶם |
 | genesis-9-20 | Noa (f) | וַיִּטַּע |
@@ -1604,6 +1826,7 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | genesis-9-22 | Noa (f) | כְנַעַן |
 | genesis-9-24 | Noa (f) | (nothing) |
 | genesis-9-25 | Noa (f) | לְאֶחָיו |
+| genesis-9-26 | Noa (f) | וִיהִי, עֶבֶד, לָמוֹ |
 | genesis-9-27 | Noa (f) | בְּאָהֳלֵי, כְנַעַן |
 | genesis-9-8 | Noa (f) | אִתּוֹ, לֵאמֹר |
 | leviticus-1-16 | Noa (f) | מֻרְאָתוֹ |
@@ -1618,13 +1841,16 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | leviticus-10-9 | Noa (f) | תֵּשְׁתְּ אַתָּה וּבָנֶיךָ אִתָּךְ בְּבֹאֲכֶם |
 | leviticus-11-10 | Noa (f) | שֶׁקֶץ, הֵם |
 | leviticus-11-11 | Noa (f) | וְשֶׁקֶץ, יִהְיוּ |
+| leviticus-11-13 | Noa (f) | הָעָזְנִיָּה |
 | leviticus-11-18 | Noa (f) | הַקָּאָת |
 | leviticus-11-2 | Noa (f) | מִכָּל |
+| leviticus-11-21 | Noa (f) | כְרָעַיִם |
 | leviticus-11-24 | Noa (f) | תִּטַּמָּאוּ |
 | leviticus-11-26 | Noa (f) | שֹׁסַעַת |
 | leviticus-11-27 | Noa (f) | אַרְבַּע |
 | leviticus-11-3 | Noa (f) | שֶׁסַע, פְּרָסֹת |
 | leviticus-11-30 | Noa (f) | וְהָאֲנָקָה, וְהַחֹמֶט וְהַתִּנְשָׁמֶת |
+| leviticus-11-31 | Noa (f) | יִטְמָא עַד הָעָרֶב |
 | leviticus-11-34 | Noa (f) | הָאֹכֶל |
 | leviticus-11-39 | Noa (f) | הִיא |
 | leviticus-11-42 | Noa (f) | וְכֹל |
@@ -1660,12 +1886,14 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | leviticus-14-28 | Noa (f) | הָאָשָׁם |
 | leviticus-14-3 | Noa (f) | הַצָּרַעַת |
 | leviticus-14-36 | Noa (f) | כָּל |
+| leviticus-14-37 | Noa (f) | וּמַרְאֵיהֶן |
 | leviticus-14-44 | Noa (f) | מַמְאֶרֶת, הִוא |
 | leviticus-14-46 | Noa (f) | יִטְמָא |
 | leviticus-14-53 | Noa (f) | הַצִפֹּר |
 | leviticus-14-8 | Noa (f) | לְאָהֳלוֹ |
 | leviticus-14-9 | Noa (f) | בַיּוֹם |
 | leviticus-15-12 | Noa (f) | הַזָּב, וְכָל כְּלִי |
+| leviticus-15-19 | Noa (f) | בְנִדָּתָהּ |
 | leviticus-15-2 | Noa (f) | הוּא |
 | leviticus-15-20 | Noa (f) | תִּשְׁכַּב |
 | leviticus-15-22 | Noa (f) | בְּכָל כְּלִי |
@@ -1688,6 +1916,7 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | leviticus-16-33 | Noa (f) | כָּל |
 | leviticus-16-5 | Noa (f) | עֲדַת, וְאַיִל |
 | leviticus-17-10 | Noa (f) | וְהִכְרַתִּי, עַמָּהּ |
+| leviticus-17-11 | Noa (f) | הִוא, נְתַתִּיו |
 | leviticus-17-14 | Noa (f) | בְנַפְשׁוֹ, הוּא |
 | leviticus-17-3 | Noa (f) | כֶשֶׂב |
 | leviticus-17-4 | Noa (f) | הֱבִיאוֹ |
@@ -1700,6 +1929,7 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | leviticus-18-25 | Noa (f) | עֲוֹנָהּ |
 | leviticus-18-28 | Noa (f) | קָאָה |
 | leviticus-18-3 | Noa (f) | וּבְחֻקֹּתֵיהֶם |
+| leviticus-18-30 | Noa (f) | תִטַּמְּאוּ |
 | leviticus-18-6 | Noa (f) | שְׁאֵר |
 | leviticus-18-7 | Noa (f) | הִוא |
 | leviticus-19-1 | Noa (f) | וַיְדַבֵּר |
@@ -1715,27 +1945,33 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | leviticus-2-14 | Noa (f) | אָבִיב |
 | leviticus-2-5 | Noa (f) | בַשֶּׁמֶן |
 | leviticus-2-8 | Noa (f) | מֵאֵלֶּה |
+| leviticus-20-12 | Noa (f) | יִשְׁכַּב |
 | leviticus-20-16 | Noa (f) | לְרִבְעָה |
 | leviticus-20-17 | Noa (f) | וְנִכְרְתוּ, עֲוֹנוֹ |
 | leviticus-20-18 | Noa (f) | הֶעֱרָה |
 | leviticus-20-19 | Noa (f) | עֲוֹנָם |
 | leviticus-20-2 | Noa (f) | עַם, (nothing) |
+| leviticus-20-20 | Noa (f) | חֶטְאָם, יִשָּׂאוּ |
 | leviticus-20-21 | Noa (f) | (nothing) |
 | leviticus-20-27 | Noa (f) | אוֹב, (nothing) |
 | leviticus-20-3 | Noa (f) | וְהִכְרַתִּי, מִזַּרְעוֹ |
 | leviticus-20-5 | Noa (f) | וְהִכְרַתִּי |
+| leviticus-20-6 | Noa (f) | הַיִּדְּעֹנִים, וְהִכְרַתִּי |
 | leviticus-21-13 | Noa (f) | בִבְתוּלֶיהָ |
 | leviticus-21-2 | Noa (f) | לְאִמּוֹ, וּלְאָבִיו |
 | leviticus-21-3 | Noa (f) | יִטַּמָּא |
 | leviticus-21-5 | Noa (f) | (nothing), קָרְחָה בְּרֹאשָׁם, שָׂרָטֶת |
 | leviticus-21-9 | Noa (f) | הִיא |
+| leviticus-22-1 | Noa (f) | וַיְדַבֵּר |
 | leviticus-22-11 | Noa (f) | בְלַחְמוֹ |
 | leviticus-22-12 | Noa (f) | הִוא |
 | leviticus-22-16 | Noa (f) | עֲוֹן, אַשְׁמָה, קָדְשֵׁיהֶם כִּי |
 | leviticus-22-27 | Noa (f) | כֶשֶׂב |
+| leviticus-22-31 | Noa (f) | מִצְוֹתַי |
 | leviticus-22-4 | Noa (f) | יִטְהָר |
 | leviticus-22-5 | Noa (f) | בְאָדָם, טֻמְאָתוֹ |
 | leviticus-22-6 | Noa (f) | וְטָמְאָה |
+| leviticus-23-1 | Noa (f) | וַיְדַבֵּר |
 | leviticus-23-12 | Noa (f) | הֲנִיפְכֶם, הָעֹמֶר |
 | leviticus-23-13 | Noa (f) | בַשֶּׁמֶן, נִיחֹחַ, וְנִסְכֹּה |
 | leviticus-23-14 | Noa (f) | וְקָלִי, הֲבִיאֲכֶם |
@@ -1750,24 +1986,30 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | leviticus-24-2 | Noa (f) | צַו |
 | leviticus-25-12 | Noa (f) | הִוא קֹדֶשׁ תִּהְיֶה לָכֶם |
 | leviticus-25-18 | Noa (f) | וִישַׁבְתֶּם |
+| leviticus-25-28 | Noa (f) | מָצְאָה |
 | leviticus-25-33 | Noa (f) | הִוא |
 | leviticus-25-37 | Noa (f) | אָכְלֶךָ |
 | leviticus-25-39 | Noa (f) | עֲבֹדַת, (nothing) |
 | leviticus-25-42 | Noa (f) | עָבֶד |
+| leviticus-25-46 | Noa (f) | וּבְאַחֵיכֶם |
 | leviticus-25-49 | Noa (f) | מִשְּׁאֵר |
+| leviticus-25-5 | Noa (f) | סְפִיחַ |
 | leviticus-25-54 | Noa (f) | בִּשְׁנַת |
 | leviticus-25-7 | Noa (f) | לֶאֱכֹל |
 | leviticus-26-13 | Noa (f) | עֻלְּכֶם, וָאוֹלֵךְ |
 | leviticus-26-14 | Noa (f) | הַמִּצְוֹת |
 | leviticus-26-15 | Noa (f) | תִּמְאָסוּ, לְבִלְתִּי, מִצְוֹתַי |
+| leviticus-26-18 | Noa (f) | עַד |
 | leviticus-26-23 | Noa (f) | תִוָּסְרוּ |
 | leviticus-26-25 | Noa (f) | חֶרֶב |
 | leviticus-26-28 | Noa (f) | וְיִסַּרְתִּי |
+| leviticus-26-3 | Noa (f) | מִצְוֹתַי |
 | leviticus-26-30 | Noa (f) | וְהִשְׁמַדְתִּי, בָּמֹתֵיכֶם |
 | leviticus-26-33 | Noa (f) | אֱזָרֶה, בַגּוֹיִם, וְעָרֵיכֶם |
 | leviticus-26-37 | Noa (f) | אָיִן |
 | leviticus-26-39 | Noa (f) | בַּעֲוֹנָם, בַּעֲוֹנֹת |
 | leviticus-26-41 | Noa (f) | יִרְצוּ, עֲוֹנָם |
+| leviticus-26-43 | Noa (f) | מָאָסוּ |
 | leviticus-26-6 | Noa (f) | וְהִשְׁבַּתִּי |
 | leviticus-27-15 | Noa (f) | כֶּסֶף, עֶרְכְּךָ |
 | leviticus-27-18 | Noa (f) | מֵעֶרְכֶּךָ |
@@ -1779,16 +2021,19 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | leviticus-3-13 | Noa (f) | וְסָמַךְ |
 | leviticus-3-17 | Noa (f) | וְכָל |
 | leviticus-3-2 | Noa (f) | וְסָמַךְ |
+| leviticus-3-7 | Noa (f) | כֶּשֶׂב |
 | leviticus-3-8 | Noa (f) | וְסָמַךְ |
 | leviticus-3-9 | Noa (f) | אִשֶּׁה, לַאדֹנָי |
 | leviticus-4-10 | Noa (f) | וְהִקְטִירָם |
 | leviticus-4-13 | Noa (f) | עֲדַת, יִשְׁגּוּ, מִצְוֹת, וְאָשֵׁמוּ |
 | leviticus-4-15 | Noa (f) | וְסָמְכוּ |
+| leviticus-4-17 | Noa (f) | וְטָבַל, הַכֹּהֵן |
 | leviticus-4-2 | Noa (f) | בִשְׁגָגָה, מִצְוֹת |
 | leviticus-4-22 | Noa (f) | מִכָּל, וְאָשֵׁם |
 | leviticus-4-23 | Noa (f) | אוֹ |
 | leviticus-4-24 | Noa (f) | וְסָמַךְ |
 | leviticus-4-28 | Noa (f) | אוֹ |
+| leviticus-4-29 | Noa (f) | וְסָמַךְ |
 | leviticus-4-31 | Noa (f) | כַּאֲשֶׁר הוּסַר |
 | leviticus-4-32 | Noa (f) | לְחַטָּאת |
 | leviticus-4-33 | Noa (f) | וְסָמַךְ |
@@ -1811,8 +2056,10 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | leviticus-6-2 | Noa (f) | צַו |
 | leviticus-6-22 | Noa (f) | זָכָר |
 | leviticus-6-4 | Noa (f) | (nothing) |
+| leviticus-6-6 | Noa (f) | תּוּקַד |
 | leviticus-7-13 | Noa (f) | תּוֹדַת |
 | leviticus-7-15 | Noa (f) | תּוֹדַת |
+| leviticus-7-18 | Noa (f) | עֲוֹנָהּ |
 | leviticus-7-20 | Noa (f) | וְטֻמְאָתוֹ, וְנִכְרְתָה, מֵעַמֶּיהָ |
 | leviticus-7-25 | Noa (f) | מֵעַמֶּיהָ |
 | leviticus-7-26 | Noa (f) | לָעוֹף |
@@ -1834,6 +2081,7 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | leviticus-8-35 | Noa (f) | וָלַיְלָה, שִׁבְעַת |
 | leviticus-9-15 | Noa (f) | וַיְחַטְּאֵהוּ |
 | leviticus-9-24 | Noa (f) | וַיָּרֹנּוּ |
+| leviticus-9-4 | Noa (f) | בַשָּׁמֶן |
 | numbers-1-10 | Noa (f) | עַמִּיהוּד, פְּדָהצוּר |
 | numbers-1-13 | Noa (f) | פַּגְעִיאֵל |
 | numbers-1-14 | Noa (f) | דְּעוּאֵל |
@@ -1842,6 +2090,7 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | numbers-1-45 | Noa (f) | כָּל, כָּל |
 | numbers-1-5 | Noa (f) | שְׁדֵיאוּר |
 | numbers-1-8 | Noa (f) | צוּעָר |
+| numbers-10-10 | Noa (f) | עֹלֹתֵיכֶם, וְעַל |
 | numbers-10-14 | Noa (f) | וַיִּסַּע |
 | numbers-10-15 | Noa (f) | צוּעָר |
 | numbers-10-18 | Noa (f) | וְנָסַע, שְׁדֵיאוּר |
@@ -1857,13 +2106,16 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | numbers-10-36 | Noa (f) | וּבְנֻחֹה |
 | numbers-10-7 | Noa (f) | וּבְהַקְהִיל |
 | numbers-10-9 | Noa (f) | הַצַּר |
+| numbers-11-1 | Noa (f) | וַיִּחַר, בָּם אֵשׁ |
 | numbers-11-10 | Noa (f) | וַיִּחַר, וּבְעֵינֵי |
 | numbers-11-11 | Noa (f) | מָצָתִי |
 | numbers-11-12 | Noa (f) | כִּי תֹאמַר |
 | numbers-11-26 | Noa (f) | וַיִּתְנַבְּאוּ |
 | numbers-11-29 | Noa (f) | לִי, כָּל עַם |
 | numbers-11-3 | Noa (f) | בָם אֵשׁ |
+| numbers-11-31 | Noa (f) | נָסַע, וּכְאַמָּתַיִם |
 | numbers-11-32 | Noa (f) | וְכָל, הַשְּׂלָו, אָסַף |
+| numbers-11-35 | Noa (f) | נָסְעוּ |
 | numbers-11-7 | Noa (f) | וְעֵינוֹ |
 | numbers-12-10 | Noa (f) | סָר, כַּשָּׁלֶג |
 | numbers-12-12 | Noa (f) | בְשָׂרוֹ |
@@ -1872,19 +2124,24 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | numbers-13-13 | Noa (f) | אָשֵׁר, סְתוּר |
 | numbers-13-14 | Noa (f) | וָפְסִי |
 | numbers-13-18 | Noa (f) | הִוא |
+| numbers-13-19 | Noa (f) | הִוא |
 | numbers-13-20 | Noa (f) | וּמָה, הִוא |
 | numbers-13-23 | Noa (f) | (nothing), בַמּוֹט |
 | numbers-13-26 | Noa (f) | עֲדַת |
+| numbers-13-29 | Noa (f) | וְהַיְבוּסִי |
 | numbers-13-30 | Noa (f) | עָלֹה |
+| numbers-13-32 | Noa (f) | בָהּ, הָעָם |
 | numbers-14-1 | Noa (f) | הָעֵדָה |
 | numbers-14-12 | Noa (f) | אַכֶּנּוּ, וְאוֹרִשֶׁנּוּ |
 | numbers-14-18 | Noa (f) | עָוֹן, עֲוֹן, רִבֵּעִים |
 | numbers-14-21 | Noa (f) | וְיִמָּלֵא |
 | numbers-14-22 | Noa (f) | וַיְנַסּוּ |
+| numbers-14-24 | Noa (f) | וַהֲבִיאֹתִיו |
 | numbers-14-29 | Noa (f) | מִסְפַּרְכֶם |
 | numbers-14-39 | Noa (f) | וַיִּתְאַבְּלוּ |
 | numbers-14-4 | Noa (f) | מִצְרָיְמָה |
 | numbers-14-44 | Noa (f) | וַאֲרוֹן |
+| numbers-14-5 | Noa (f) | עֲדַת בְּנֵי |
 | numbers-14-9 | Noa (f) | בַּאדֹנָי, סָר |
 | numbers-15-10 | Noa (f) | לַנֶּסֶךְ |
 | numbers-15-11 | Noa (f) | בַכְּבָשִׂים, בָעִזִּים |
@@ -1894,9 +2151,11 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | numbers-15-24 | Noa (f) | וְנִסְכּוֹ, לְחַטָּת |
 | numbers-15-25 | Noa (f) | עֲדַת, (nothing), אִשֶּׁה, לַאדֹנָי |
 | numbers-15-26 | Noa (f) | עֲדַת |
+| numbers-15-27 | Noa (f) | בִשְׁגָגָה |
 | numbers-15-3 | Noa (f) | בִנְדָבָה |
 | numbers-15-31 | Noa (f) | עֲוֹנָה בָהּ |
 | numbers-15-33 | Noa (f) | כָּל |
+| numbers-15-35 | Noa (f) | בָאֲבָנִים |
 | numbers-15-39 | Noa (f) | מִצְוֹת |
 | numbers-15-4 | Noa (f) | עִשָּׂרוֹן |
 | numbers-15-40 | Noa (f) | כָּל, מִצְוֹתָי, קְדֹשִׁים |
@@ -1917,17 +2176,22 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | numbers-17-28 | Noa (f) | לִגְוֹעַ |
 | numbers-17-3 | Noa (f) | מַחְתּוֹת, הִקְרִיבֻם |
 | numbers-17-4 | Noa (f) | אֶלְעָזָר הַכֹּהֵן, וַיְרַקְּעוּם |
+| numbers-17-6 | Noa (f) | עֲדַת |
 | numbers-18-1 | Noa (f) | עֲוֹן, עֲוֹן |
 | numbers-18-13 | Noa (f) | בְּאַרְצָם |
 | numbers-18-17 | Noa (f) | תַּקְטִיר |
+| numbers-18-2 | Noa (f) | (nothing), שֵׁבֶט אָבִיךָ הַקְרֵב אִתָּךְ וְיִלָּווּ עָלֶיךָ וִישָׁרְתוּךָ |
 | numbers-18-23 | Noa (f) | עֲוֹנָם |
 | numbers-18-25 | Noa (f) | וַיְדַבֵּר |
 | numbers-18-27 | Noa (f) | הַיָּקֶב |
 | numbers-18-30 | Noa (f) | יָקֶב |
+| numbers-18-9 | Noa (f) | אֲשָׁמָם |
 | numbers-19-11 | Noa (f) | בְּמֵת |
+| numbers-19-12 | Noa (f) | יִתְחַטָּא, יִתְחַטָּא |
 | numbers-19-16 | Noa (f) | בְמֵת, בְקָבֶר |
 | numbers-19-19 | Noa (f) | וְחִטְּאוֹ |
 | numbers-19-8 | Noa (f) | הָעָרֶב |
+| numbers-2-10 | Noa (f) | שְׁדֵיאוּר |
 | numbers-2-12 | Noa (f) | שַׁדָּי |
 | numbers-2-16 | Noa (f) | יִסָּעוּ |
 | numbers-2-17 | Noa (f) | וְנָסַע, יִסָּעוּ |
@@ -1939,6 +2203,7 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | numbers-2-29 | Noa (f) | אֲחִירַע |
 | numbers-2-31 | Noa (f) | יִסְעוּ |
 | numbers-2-34 | Noa (f) | נָסָעוּ |
+| numbers-2-5 | Noa (f) | צוּעָר |
 | numbers-2-9 | Noa (f) | יִסָּעוּ |
 | numbers-20-11 | Noa (f) | וַתֵּשְׁתְּ |
 | numbers-20-16 | Noa (f) | עִיר קְצֵה גְבוּלֶךָ |
@@ -1950,24 +2215,31 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | numbers-21-16 | Noa (f) | הִוא, הַבְּאֵר |
 | numbers-21-17 | Noa (f) | בְאֵר |
 | numbers-21-21 | Noa (f) | סִיחֹן |
+| numbers-21-22 | Noa (f) | בְאֵר |
 | numbers-21-28 | Noa (f) | עָר |
 | numbers-21-29 | Noa (f) | כְּמוֹשׁ, נָתַן |
+| numbers-21-30 | Noa (f) | דִּיבוֹן |
 | numbers-21-34 | Noa (f) | כָּל |
 | numbers-21-4 | Noa (f) | מֵהֹר |
 | numbers-21-7 | Noa (f) | הִתְפַּלֵּל |
+| numbers-22-12 | Noa (f) | בִּלְעָם |
 | numbers-22-19 | Noa (f) | בָזֶה, וְאֵדְעָה |
+| numbers-22-20 | Noa (f) | בִּלְעָם |
 | numbers-22-22 | Noa (f) | וַיִּחַר |
 | numbers-22-27 | Noa (f) | וַיִּחַר |
 | numbers-22-28 | Noa (f) | לְבִלְעָם |
 | numbers-22-29 | Noa (f) | בִּי לוּ יֶשׁ |
+| numbers-22-30 | Noa (f) | הַהַסְכֵּן |
 | numbers-22-32 | Noa (f) | וַיֹּאמֶר, אֲתֹנְךָ, זֶה |
 | numbers-22-33 | Noa (f) | וַתִּרְאַנִי |
+| numbers-22-34 | Noa (f) | אָשׁוּבָה |
 | numbers-22-38 | Noa (f) | אוּכַל |
 | numbers-22-39 | Noa (f) | חֻצוֹת |
 | numbers-22-4 | Noa (f) | כָּל |
 | numbers-22-40 | Noa (f) | לְבִלְעָם |
 | numbers-22-7 | Noa (f) | בָלָק |
 | numbers-22-8 | Noa (f) | דָּבָר, כַּאֲשֶׁר |
+| numbers-23-15 | Noa (f) | הִתְיַצֵּב, אִקָּרֶה |
 | numbers-23-23 | Noa (f) | פָּעַל |
 | numbers-23-26 | Noa (f) | בִּלְעָם |
 | numbers-23-29 | Noa (f) | וְהָכֵן |
@@ -1977,6 +2249,7 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | numbers-23-8 | Noa (f) | קַבֹּה אֵל, אֶזְעֹם |
 | numbers-23-9 | Noa (f) | אֶרְאֶנּוּ |
 | numbers-24-10 | Noa (f) | וַיִּחַר |
+| numbers-24-13 | Noa (f) | אֲדַבֵּר |
 | numbers-24-15 | Noa (f) | בְעֹר, הָעָיִן |
 | numbers-24-17 | Noa (f) | אֶרְאֶנּוּ |
 | numbers-24-19 | Noa (f) | וְהֶאֱבִיד, שָׂרִיד |
@@ -1990,24 +2263,30 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | numbers-25-2 | Noa (f) | אֱלֹהֵיהֶן, לֵאלֹהֵיהֶן |
 | numbers-25-3 | Noa (f) | וַיִּחַר |
 | numbers-26-12 | Noa (f) | לְמִשְׁפְּחֹתָם לִנְמוּאֵל |
+| numbers-26-14 | Noa (f) | וְעֶשְׂרִים |
 | numbers-26-17 | Noa (f) | לַאֲרוֹד |
 | numbers-26-2 | Noa (f) | עֲדַת |
 | numbers-26-25 | Noa (f) | יִשָּׂשכָר, אַרְבָּעָה |
+| numbers-26-26 | Noa (f) | הַסַּרְדִּי |
 | numbers-26-30 | Noa (f) | אִיעֶזֶר, הָאִיעֶזְרִי |
 | numbers-26-44 | Noa (f) | לִבְרִיעָה |
 | numbers-26-45 | Noa (f) | בְרִיעָה |
 | numbers-26-52 | Noa (f) | וַיְדַבֵּר |
 | numbers-26-54 | Noa (f) | וְלַמְעַט |
 | numbers-26-56 | Noa (f) | לִמְעָט |
+| numbers-26-58 | Noa (f) | וּקְהָת |
 | numbers-26-60 | Noa (f) | אֲבִיהוּא |
 | numbers-26-65 | Noa (f) | נוּן |
 | numbers-26-8 | Noa (f) | פַלּוּא, אֱלִיאָב |
 | numbers-26-9 | Noa (f) | הִצּוּ |
+| numbers-27-10 | Noa (f) | אַחִים, וּנְתַתֶּם |
 | numbers-27-17 | Noa (f) | עֲדַת |
 | numbers-27-18 | Noa (f) | וְסָמַכְתָּ |
+| numbers-27-20 | Noa (f) | כָּל, עֲדַת |
 | numbers-27-21 | Noa (f) | וְשָׁאַל, הוּא וְכָל, הָעֵדָה |
 | numbers-27-22 | Noa (f) | כָּל |
 | numbers-27-23 | Noa (f) | (nothing) |
+| numbers-27-3 | Noa (f) | הָעֵדָה, קֹרַח כִּי בְחֶטְאוֹ מֵת |
 | numbers-28-10 | Noa (f) | וְנִסְכָּהּ |
 | numbers-28-12 | Noa (f) | בַשֶּׁמֶן, בַשֶּׁמֶן |
 | numbers-28-13 | Noa (f) | וְעִשָּׂרֹן, עִשָּׂרוֹן, בַשֶּׁמֶן |
@@ -2015,6 +2294,7 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | numbers-28-15 | Noa (f) | וְנִסְכּוֹ |
 | numbers-28-2 | Noa (f) | צַו |
 | numbers-28-20 | Noa (f) | בַשָּׁמֶן |
+| numbers-28-21 | Noa (f) | עִשָּׂרוֹן, עִשָּׂרוֹן |
 | numbers-28-24 | Noa (f) | וְנִסְכּוֹ |
 | numbers-28-28 | Noa (f) | בַשָּׁמֶן |
 | numbers-28-3 | Noa (f) | הָאִשֶּׁה |
@@ -2026,21 +2306,25 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | numbers-29-11 | Noa (f) | וְנִסְכֵּיהֶם |
 | numbers-29-13 | Noa (f) | אֵילִם, אַרְבָּעָה |
 | numbers-29-14 | Noa (f) | בַשָּׁמֶן |
+| numbers-29-15 | Noa (f) | וְעִשָּׂרוֹן, עִשָּׂרוֹן |
 | numbers-29-16 | Noa (f) | (nothing), וְנִסְכָּהּ |
 | numbers-29-17 | Noa (f) | אַרְבָּעָה |
 | numbers-29-18 | Noa (f) | וְנִסְכֵּיהֶם |
+| numbers-29-19 | Noa (f) | וְנִסְכֵּיהֶם |
 | numbers-29-20 | Noa (f) | עַשְׁתֵּי, אַרְבָּעָה |
 | numbers-29-21 | Noa (f) | וְנִסְכֵּיהֶם |
 | numbers-29-22 | Noa (f) | וְנִסְכָּהּ |
 | numbers-29-24 | Noa (f) | וְנִסְכֵּיהֶם |
 | numbers-29-25 | Noa (f) | (nothing), וְנִסְכָּהּ |
 | numbers-29-26 | Noa (f) | אֵילִם |
+| numbers-29-27 | Noa (f) | וְנִסְכֵּיהֶם |
 | numbers-29-28 | Noa (f) | וְנִסְכָּהּ |
 | numbers-29-3 | Noa (f) | בַשָּׁמֶן |
 | numbers-29-30 | Noa (f) | וְנִסְכֵּיהֶם |
 | numbers-29-33 | Noa (f) | וְנִסְכֵּהֶם |
 | numbers-29-34 | Noa (f) | (nothing), וְנִסְכָּהּ |
 | numbers-29-36 | Noa (f) | אִשֵּׁה רֵיחַ, פַּר, אֶחָד, אֶחָד, שִׁבְעָה, תְּמִימִם |
+| numbers-29-37 | Noa (f) | וְנִסְכֵּיהֶם |
 | numbers-29-38 | Noa (f) | וּמִנְחָתָהּ וְנִסְכָּהּ |
 | numbers-29-39 | Noa (f) | וּלְנִסְכֵּיכֶם |
 | numbers-29-4 | Noa (f) | וְעִשָּׂרוֹן |
@@ -2048,24 +2332,31 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | numbers-29-8 | Noa (f) | תְּמִימִם |
 | numbers-29-9 | Noa (f) | בַשָּׁמֶן |
 | numbers-3-12 | Noa (f) | כָּל |
+| numbers-3-13 | Noa (f) | כָּל |
 | numbers-3-2 | Noa (f) | וַאֲבִיהוּא |
 | numbers-3-25 | Noa (f) | בְּאֹהֶל |
+| numbers-3-27 | Noa (f) | הַקְּהָתִי |
 | numbers-3-30 | Noa (f) | וּנְשִׂיא בֵית אָב לְמִשְׁפְּחֹת הַקְּהָתִי אֶלִיצָפָן |
+| numbers-3-35 | Noa (f) | (nothing), יֶרֶךְ |
 | numbers-3-39 | Noa (f) | אָלֶף |
 | numbers-3-4 | Noa (f) | וַאֲבִיהוּא, וַיְכַהֵן אֶלְעָזָר וְאִיתָמָר |
 | numbers-3-48 | Noa (f) | הָעֹדְפִים |
+| numbers-3-49 | Noa (f) | הָעֹדְפִים, פְּדוּיֵי |
 | numbers-30-11 | Noa (f) | אִסָּר |
 | numbers-30-13 | Noa (f) | וּלְאִסַּר |
 | numbers-30-16 | Noa (f) | עֲוֹנָהּ |
 | numbers-30-3 | Noa (f) | הִשָּׁבַע, לֶאְסֹר, אִסָּר |
 | numbers-30-4 | Noa (f) | תִדֹּר, אִסָּר |
+| numbers-30-5 | Noa (f) | וֶאֱסָרָהּ |
 | numbers-30-6 | Noa (f) | אָבִיהָ, וֶאֱסָרֶיהָ, אָבִיהָ |
 | numbers-30-8 | Noa (f) | וֶאֱסָרֶהָ |
 | numbers-31-10 | Noa (f) | כָּל, כָּל |
+| numbers-31-27 | Noa (f) | כָּל |
 | numbers-31-3 | Noa (f) | אֲנָשִׁים |
 | numbers-31-32 | Noa (f) | הַמַּלְקוֹחַ |
 | numbers-31-35 | Noa (f) | הַנָּשִׁים, אָלֶף |
 | numbers-31-38 | Noa (f) | אָלֶף |
+| numbers-31-39 | Noa (f) | וַחֲמֹרִים, וּמִכְסָם |
 | numbers-31-40 | Noa (f) | אָלֶף |
 | numbers-31-41 | Noa (f) | תְּרוּמַת |
 | numbers-31-44 | Noa (f) | אָלֶף |
@@ -2073,12 +2364,14 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | numbers-31-50 | Noa (f) | אֶצְעָדָה, וְכוּמָז לְכַפֵּר |
 | numbers-31-7 | Noa (f) | וַיִּצְבְּאוּ |
 | numbers-32-10 | Noa (f) | וַיִּחַר |
+| numbers-32-11 | Noa (f) | יִרְאוּ, כִּי לֹא |
 | numbers-32-15 | Noa (f) | תְשׁוּבֻן |
 | numbers-32-20 | Noa (f) | וַיֹּאמֶר, אֲלֵיהֶם |
 | numbers-32-27 | Noa (f) | וַעֲבָדֶיךָ |
 | numbers-32-28 | Noa (f) | וַיְצַו |
 | numbers-32-3 | Noa (f) | וְדִיבֹן, וְאֶלְעָלֵה וּשְׂבָם וּנְבוֹ וּבְעֹן |
 | numbers-32-32 | Noa (f) | נַחְנוּ |
+| numbers-32-33 | Noa (f) | סִיחֹן, לְעָרֶיהָ, עָרֵי |
 | numbers-32-34 | Noa (f) | דִּיבֹן, עֲרֹעֵר |
 | numbers-32-35 | Noa (f) | עַטְרֹת |
 | numbers-32-39 | Noa (f) | וַיִּלְכְּדֻהָ |
@@ -2109,6 +2402,7 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | numbers-34-12 | Noa (f) | הַיַּרְדֵּנָה |
 | numbers-34-13 | Noa (f) | וַיְצַו |
 | numbers-34-17 | Noa (f) | לָכֶם |
+| numbers-34-2 | Noa (f) | צַו |
 | numbers-34-20 | Noa (f) | עַמִּיהוּד |
 | numbers-34-22 | Noa (f) | וּלְמַטֵּה בְנֵי דָן נָשִׂיא |
 | numbers-34-27 | Noa (f) | אֲחִיהוּד |
@@ -2124,6 +2418,7 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | numbers-35-20 | Noa (f) | בִּצְדִיָּה |
 | numbers-35-21 | Noa (f) | הִכָּהוּ, בְיָדוֹ |
 | numbers-35-23 | Noa (f) | אוֹ בְכָל |
+| numbers-35-27 | Noa (f) | (nothing) |
 | numbers-35-5 | Noa (f) | וּמַדֹּתֶם, לָהֶם |
 | numbers-35-8 | Noa (f) | תַּמְעִיטוּ, מֵעָרָיו |
 | numbers-36-13 | Noa (f) | הַמִּצְוֹת |
@@ -2135,18 +2430,21 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | numbers-4-12 | Noa (f) | עַל הַמּוֹט |
 | numbers-4-14 | Noa (f) | כָּל |
 | numbers-4-15 | Noa (f) | בִּנְסֹעַ |
+| numbers-4-16 | Noa (f) | וְכָל |
 | numbers-4-23 | Noa (f) | לִצְבֹא |
 | numbers-4-25 | Noa (f) | יְרִיעֹת, וְאֶת |
 | numbers-4-37 | Noa (f) | הַקְּהָתִי |
 | numbers-4-44 | Noa (f) | פְקֻדֵיהֶם |
 | numbers-5-13 | Noa (f) | וְהִוא |
 | numbers-5-14 | Noa (f) | וְקִנֵּא, וְקִנֵּא |
+| numbers-5-15 | Noa (f) | עֲשִׂירִת, עָוֹן |
 | numbers-5-18 | Noa (f) | וְהֶעֱמִיד, מִנְחַת, מִנְחַת, הִוא, וּבְיַד |
 | numbers-5-21 | Noa (f) | בְּתֵת |
 | numbers-5-28 | Noa (f) | נִטְמְאָה, הָאִשָּׁה, וּטְהֹרָה, הִוא, וְנִזְרְעָה |
 | numbers-5-3 | Noa (f) | יְטַמְּאוּ |
 | numbers-5-6 | Noa (f) | מִכָּל, הַהִוא |
 | numbers-5-7 | Noa (f) | וְהִתְוַדּוּ, וַחֲמִישִׁתוֹ |
+| numbers-6-12 | Noa (f) | וְהִזִּיר |
 | numbers-6-15 | Noa (f) | בְּלוּלֹת, וְנִסְכֵּיהֶם |
 | numbers-6-17 | Noa (f) | נִסְכּוֹ |
 | numbers-6-23 | Noa (f) | אָמוֹר לָהֶם |
@@ -2161,6 +2459,7 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | numbers-7-29 | Noa (f) | אֵילִם |
 | numbers-7-3 | Noa (f) | עֲגָלָה |
 | numbers-7-30 | Noa (f) | שְׁדֵיאוּר |
+| numbers-7-31 | Noa (f) | בַשֶּׁמֶן |
 | numbers-7-35 | Noa (f) | שְׁדֵיאוּר |
 | numbers-7-37 | Noa (f) | בַשֶּׁמֶן |
 | numbers-7-39 | Noa (f) | אַיִל |
@@ -2168,16 +2467,21 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | numbers-7-45 | Noa (f) | אַיִל |
 | numbers-7-47 | Noa (f) | אֵילִם, דְּעוּאֵל |
 | numbers-7-49 | Noa (f) | בַשֶּׁמֶן |
+| numbers-7-53 | Noa (f) | אֵילִם, אֱלִישָׁמָע, עַמִּיהוּד |
 | numbers-7-55 | Noa (f) | בַשֶּׁמֶן |
 | numbers-7-59 | Noa (f) | אֵילִם |
+| numbers-7-61 | Noa (f) | בַשֶּׁמֶן |
 | numbers-7-67 | Noa (f) | בַשֶּׁמֶן |
+| numbers-7-71 | Noa (f) | עַמִּישַׁדָּי |
 | numbers-7-72 | Noa (f) | עַשְׁתֵּי, פַּגְעִיאֵל |
 | numbers-7-73 | Noa (f) | בַשֶּׁמֶן |
 | numbers-7-77 | Noa (f) | וּלְזֶבַח, זֶה קָרְבַּן פַּגְעִיאֵל |
 | numbers-7-79 | Noa (f) | בַשֶּׁמֶן |
+| numbers-7-83 | Noa (f) | אֵילִם |
 | numbers-7-87 | Noa (f) | לְחַטָּאת |
 | numbers-7-89 | Noa (f) | וּבְבֹא |
 | numbers-8-10 | Noa (f) | וְסָמְכוּ |
+| numbers-8-12 | Noa (f) | יִסְמְכוּ |
 | numbers-8-14 | Noa (f) | וְהִבְדַּלְתָּ |
 | numbers-8-7 | Noa (f) | תַעַר, וְכִבְּסוּ |
 | numbers-8-8 | Noa (f) | סֹלֶת, בַשָּׁמֶן, לְחַטָּאת |
@@ -2188,8 +2492,10 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | numbers-9-18 | Noa (f) | יִסְעוּ |
 | numbers-9-19 | Noa (f) | יִסָּעוּ |
 | numbers-9-20 | Noa (f) | יִסָּעוּ |
+| numbers-9-22 | Noa (f) | יִסָּעוּ, יִסָּעוּ |
 | numbers-9-23 | Noa (f) | יִסָּעוּ |
 | deuteronomy-1-12 | Ari (m) | לְבַדִּי, טָרְחֲכֶם, וְרִיבְכֶם |
+| deuteronomy-1-15 | Ari (m) | וָאֶקַּח |
 | deuteronomy-1-17 | Ari (m) | וּשְׁמַעְתִּיו |
 | deuteronomy-1-19 | Ari (m) | וַנִּסַּע |
 | deuteronomy-1-21 | Ari (m) | תֵּחָת |
@@ -2199,10 +2505,12 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | deuteronomy-1-28 | Ari (m) | הֵמַסּוּ |
 | deuteronomy-1-3 | Ari (m) | בְּעַשְׁתֵּי |
 | deuteronomy-1-31 | Ari (m) | רָאִיתָ |
+| deuteronomy-1-33 | Ari (m) | לָתוּר, לַחֲנֹתְכֶם, לַרְאֹתְכֶם, תֵּלְכוּ בָהּ |
 | deuteronomy-1-34 | Ari (m) | לֵאמֹר |
 | deuteronomy-1-36 | Ari (m) | יִרְאֶנָּה |
 | deuteronomy-1-40 | Ari (m) | פְּנוּ, וּסְעוּ |
 | deuteronomy-1-46 | Ari (m) | בְקָדֵשׁ |
+| deuteronomy-10-13 | Ari (m) | מִצְוֹת |
 | deuteronomy-10-16 | Ari (m) | וְעָרְפְּכֶם |
 | deuteronomy-10-3 | Ari (m) | וָאַעַל |
 | deuteronomy-10-6 | Ari (m) | נָסְעוּ |
@@ -2211,6 +2519,8 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | deuteronomy-10-9 | Ari (m) | לְלֵוִי, הוּא |
 | deuteronomy-11-10 | Ari (m) | בְרַגְלְךָ |
 | deuteronomy-11-13 | Ari (m) | מִצְוֹתַי |
+| deuteronomy-11-19 | Ari (m) | בְּנֵיכֶם |
+| deuteronomy-11-27 | Ari (m) | מִצְוֹת |
 | deuteronomy-11-28 | Ari (m) | מִצְוֹת |
 | deuteronomy-11-6 | Ari (m) | וַתִּבְלָעֵם |
 | deuteronomy-11-9 | Ari (m) | וּלְזַרְעָם |
@@ -2221,21 +2531,26 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | deuteronomy-12-29 | Ari (m) | בָא |
 | deuteronomy-12-31 | Ari (m) | יִשְׂרְפוּ |
 | deuteronomy-13-11 | Ari (m) | וּסְקַלְתּוֹ, בָאֲבָנִים |
+| deuteronomy-13-13 | Ari (m) | עָרֶיךָ, אֲשֶׁר |
 | deuteronomy-13-15 | Ari (m) | אֱמֶת נָכוֹן |
 | deuteronomy-13-17 | Ari (m) | בָאֵשׁ |
 | deuteronomy-13-19 | Ari (m) | מִצְוֹתָיו |
 | deuteronomy-13-3 | Ari (m) | וְנָעָבְדֵם |
 | deuteronomy-13-4 | Ari (m) | מְנַסֶּה, הֲיִשְׁכֶם |
 | deuteronomy-13-5 | Ari (m) | מִצְוֹתָיו |
+| deuteronomy-13-6 | Ari (m) | אוֹ, סָרָה, וְהַפֹּדְךָ |
 | deuteronomy-13-7 | Ari (m) | כִּי יְסִיתְךָ אָחִיךָ בֶן אִמֶּךָ, לֵאמֹר נֵלְכָה וְנַעַבְדָה |
 | deuteronomy-14-22 | Ari (m) | זַרְעֶךָ |
 | deuteronomy-14-23 | Ari (m) | לְיִרְאָה |
 | deuteronomy-14-26 | Ari (m) | הַכֶּסֶף בְּכֹל אֲשֶׁר תְּאַוֶּה נַפְשְׁךָ |
+| deuteronomy-14-5 | Ari (m) | אַיָּל, וְאַקּוֹ, וּתְאוֹ |
+| deuteronomy-15-13 | Ari (m) | מֵעִמָּךְ |
 | deuteronomy-15-14 | Ari (m) | וּמִיִּקְבֶךָ |
 | deuteronomy-15-18 | Ari (m) | וּבֵרַכְךָ |
 | deuteronomy-15-2 | Ari (m) | יַשֶּׁה, בְּרֵעֵהוּ |
 | deuteronomy-15-20 | Ari (m) | בְשָׁנָה |
 | deuteronomy-15-4 | Ari (m) | יְבָרֶכְךָ |
+| deuteronomy-15-6 | Ari (m) | וְהַעֲבַטְתָּ, תַעֲבֹט |
 | deuteronomy-15-8 | Ari (m) | תַּעֲבִיטֶנּוּ |
 | deuteronomy-15-9 | Ari (m) | בְלִיַּעַל |
 | deuteronomy-16-10 | Ari (m) | יְבָרֶכְךָ |
@@ -2249,11 +2564,14 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | deuteronomy-17-20 | Ari (m) | רוּם |
 | deuteronomy-17-3 | Ari (m) | אוֹ, אוֹ |
 | deuteronomy-17-5 | Ari (m) | (nothing), וּסְקַלְתָּם |
+| deuteronomy-18-11 | Ari (m) | וְיִדְּעֹנִי |
 | deuteronomy-18-16 | Ari (m) | אֶרְאֶה |
 | deuteronomy-18-19 | Ari (m) | אָנֹכִי אֶדְרֹשׁ מֵעִמּוֹ |
+| deuteronomy-18-2 | Ari (m) | וְנַחֲלָה, יִהְיֶה, דִּבֶּר |
 | deuteronomy-18-3 | Ari (m) | שֶׂה |
 | deuteronomy-18-4 | Ari (m) | דְּגָנְךָ |
 | deuteronomy-18-8 | Ari (m) | מִמְכָּרָיו |
+| deuteronomy-19-13 | Ari (m) | תָחוֹס, וּבִעַרְתָּ |
 | deuteronomy-19-16 | Ari (m) | בְּאִישׁ, סָרָה |
 | deuteronomy-19-18 | Ari (m) | בְאָחִיו |
 | deuteronomy-19-4 | Ari (m) | בִּבְלִי |
@@ -2264,21 +2582,26 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | deuteronomy-2-15 | Ari (m) | לְהֻמָּם |
 | deuteronomy-2-18 | Ari (m) | מוֹאָב אֶת |
 | deuteronomy-2-21 | Ari (m) | (nothing) |
+| deuteronomy-2-24 | Ari (m) | רָשׁ, וְהִתְגָּר |
 | deuteronomy-2-25 | Ari (m) | אָחֵל |
 | deuteronomy-2-26 | Ari (m) | סִיחוֹן, לֵאמֹר |
 | deuteronomy-2-27 | Ari (m) | אֶעְבְּרָה |
 | deuteronomy-2-28 | Ari (m) | וְשָׁתִיתִי |
 | deuteronomy-2-3 | Ari (m) | פְּנוּ |
 | deuteronomy-2-31 | Ari (m) | הַחִלֹּתִי |
+| deuteronomy-2-34 | Ari (m) | הַהִוא וַנַּחֲרֵם אֶת כָּל |
 | deuteronomy-2-36 | Ari (m) | מֵעֲרֹעֵר |
+| deuteronomy-2-4 | Ari (m) | צַו, בְּשֵׂעִיר |
 | deuteronomy-2-6 | Ari (m) | מֵאִתָּם, מֵאִתָּם |
 | deuteronomy-2-9 | Ari (m) | בָּם, עָר |
 | deuteronomy-20-14 | Ari (m) | בָעִיר |
 | deuteronomy-20-16 | Ari (m) | מֵעָרֵי |
 | deuteronomy-20-20 | Ari (m) | וְכָרָתָּ |
+| deuteronomy-20-4 | Ari (m) | אֱלֹהֵיכֶם |
 | deuteronomy-20-6 | Ari (m) | פֶּן, יְחַלְּלֶנּוּ |
 | deuteronomy-21-1 | Ari (m) | לְרִשְׁתָּהּ |
 | deuteronomy-21-14 | Ari (m) | עִנִּיתָהּ |
+| deuteronomy-21-16 | Ari (m) | יִהְיֶה |
 | deuteronomy-21-17 | Ari (m) | הַשְּׂנוּאָה, יַכִּיר |
 | deuteronomy-21-18 | Ari (m) | וְיסְּרוּ |
 | deuteronomy-21-20 | Ari (m) | סוֹרֵר, וְסֹבֵא |
@@ -2286,6 +2609,7 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | deuteronomy-21-22 | Ari (m) | בְאִישׁ |
 | deuteronomy-21-23 | Ari (m) | תָלִין |
 | deuteronomy-21-3 | Ari (m) | הַהִוא, עֶגְלַת |
+| deuteronomy-21-5 | Ari (m) | בָם |
 | deuteronomy-21-6 | Ari (m) | בַנָּחַל |
 | deuteronomy-22-14 | Ari (m) | בְּתוּלִים |
 | deuteronomy-22-2 | Ari (m) | דְּרֹשׁ |
@@ -2297,7 +2621,9 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | deuteronomy-22-7 | Ari (m) | וְהַאֲרַכְתָּ |
 | deuteronomy-23-20 | Ari (m) | לְאָחִיךָ |
 | deuteronomy-23-21 | Ari (m) | יְבָרֶכְךָ |
+| deuteronomy-23-22 | Ari (m) | מֵעִמָּךְ, בְךָ, חֵטְא |
 | deuteronomy-23-25 | Ari (m) | שָׂבְעֶךָ |
+| deuteronomy-23-26 | Ari (m) | וְקָטַפְתָּ |
 | deuteronomy-23-4 | Ari (m) | וּמוֹאָבִי |
 | deuteronomy-23-8 | Ari (m) | בְאַרְצוֹ |
 | deuteronomy-24-1 | Ari (m) | וּבְעָלָהּ וְהָיָה, תִמְצָא, בָהּ, וְכָתַב לָהּ סֵפֶר כְּרִיתֻת |
@@ -2310,13 +2636,16 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | deuteronomy-24-6 | Ari (m) | רֵחַיִם |
 | deuteronomy-24-8 | Ari (m) | הַצָּרַעַת |
 | deuteronomy-25-19 | Ari (m) | מִכָּל, עֲמָלֵק |
+| deuteronomy-25-5 | Ari (m) | וְיִבְּמָהּ |
 | deuteronomy-25-7 | Ari (m) | יַבְּמִי |
 | deuteronomy-26-10 | Ari (m) | רֵאשִׁית, הָאֲדָמָה, אֲשֶׁר |
 | deuteronomy-26-11 | Ari (m) | בְכָל |
 | deuteronomy-26-14 | Ari (m) | בְאֹנִי, צִוִּיתָנִי |
+| deuteronomy-26-17 | Ari (m) | וּמִצְוֹתָיו |
 | deuteronomy-26-18 | Ari (m) | מִצְוֹתָיו |
 | deuteronomy-26-2 | Ari (m) | בַטֶּנֶא |
 | deuteronomy-26-9 | Ari (m) | וַיְבִאֵנוּ |
+| deuteronomy-27-1 | Ari (m) | וַיְצַו |
 | deuteronomy-27-10 | Ari (m) | מִצְוֹתָו |
 | deuteronomy-27-11 | Ari (m) | וַיְצַו |
 | deuteronomy-27-12 | Ari (m) | וְיִשָּׂשכָר |
@@ -2333,10 +2662,12 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | deuteronomy-28-45 | Ari (m) | מִצְוֹתָיו |
 | deuteronomy-28-46 | Ari (m) | וּלְמוֹפֵת |
 | deuteronomy-28-48 | Ari (m) | וּבְעֵירֹם |
+| deuteronomy-28-51 | Ari (m) | אֲלָפֶיךָ וְעַשְׁתְּרֹת צֹאנֶךָ |
 | deuteronomy-28-54 | Ari (m) | בְאָחִיו |
 | deuteronomy-28-57 | Ari (m) | הַיּוֹצֵת, וּבְבָנֶיהָ |
 | deuteronomy-28-59 | Ari (m) | זַרְעֶךָ, וָחֳלָיִם |
 | deuteronomy-28-60 | Ari (m) | מַדְוֵה, יָגֹרְתָּ |
+| deuteronomy-28-63 | Ari (m) | בָא |
 | deuteronomy-28-64 | Ari (m) | בְּכָל |
 | deuteronomy-28-66 | Ari (m) | תְּלֻאִים |
 | deuteronomy-28-7 | Ari (m) | וּבְשִׁבְעָה |
@@ -2351,12 +2682,15 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | deuteronomy-29-3 | Ari (m) | וְאָזְנַיִם |
 | deuteronomy-29-4 | Ari (m) | וָאוֹלֵךְ |
 | deuteronomy-29-6 | Ari (m) | סִיחֹן |
+| deuteronomy-29-7 | Ari (m) | וַנִּקַּח, וַנִּתְּנָהּ |
+| deuteronomy-3-10 | Ari (m) | וְאֶדְרֶעִי |
 | deuteronomy-3-12 | Ari (m) | מֵעֲרֹעֵר, וְעָרָיו |
 | deuteronomy-3-14 | Ari (m) | וַיִּקְרָא, חַוֹּת |
 | deuteronomy-3-18 | Ari (m) | וָאֲצַו |
 | deuteronomy-3-21 | Ari (m) | הַהִוא |
 | deuteronomy-3-25 | Ari (m) | אֶעְבְּרָה |
 | deuteronomy-3-28 | Ari (m) | וְצַו |
+| deuteronomy-3-29 | Ari (m) | פְּעוֹר |
 | deuteronomy-3-4 | Ari (m) | עָרָיו, (nothing) |
 | deuteronomy-3-5 | Ari (m) | הַרְבֵּה מְאֹד |
 | deuteronomy-30-10 | Ari (m) | מִצְוֹתָיו |
@@ -2370,6 +2704,7 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | deuteronomy-31-14 | Ari (m) | וַיִּתְיַצְּבוּ |
 | deuteronomy-31-16 | Ari (m) | שֹׁכֵב, וְקָם, בָא, בְּרִיתִי, כָּרַתִּי |
 | deuteronomy-31-17 | Ari (m) | וּמְצָאֻהוּ |
+| deuteronomy-31-18 | Ari (m) | הַסְתֵּר |
 | deuteronomy-31-20 | Ari (m) | אֲבִיאֶנּוּ, וְהֵפֵר |
 | deuteronomy-31-23 | Ari (m) | וַיְצַו |
 | deuteronomy-31-25 | Ari (m) | וַיְצַו |
@@ -2385,7 +2720,9 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | deuteronomy-32-2 | Ari (m) | כִּשְׂעִירִם |
 | deuteronomy-32-20 | Ari (m) | אַסְתִּירָה |
 | deuteronomy-32-21 | Ari (m) | אַכְעִיסֵם |
+| deuteronomy-32-22 | Ari (m) | בְאַפִּי |
 | deuteronomy-32-25 | Ari (m) | אֵימָה |
+| deuteronomy-32-26 | Ari (m) | אַפְאֵיהֶם, אַשְׁבִּיתָה |
 | deuteronomy-32-38 | Ari (m) | וְיַעְזְרֻכֶם |
 | deuteronomy-32-4 | Ari (m) | הַצּוּר, דְּרָכָיו |
 | deuteronomy-32-42 | Ari (m) | פַּרְעוֹת |
@@ -2404,13 +2741,17 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | deuteronomy-33-8 | Ari (m) | וּלְלֵוִי |
 | deuteronomy-33-9 | Ari (m) | יִנְצֹרוּ |
 | deuteronomy-34-1 | Ari (m) | מוֹאָב, וַיַּרְאֵהוּ |
+| deuteronomy-34-3 | Ari (m) | צֹעַר |
 | deuteronomy-34-4 | Ari (m) | הֶרְאִיתִיךָ, בְעֵינֶיךָ |
 | deuteronomy-34-6 | Ari (m) | מוֹאָב |
+| deuteronomy-34-7 | Ari (m) | נָס לֵחֹה |
 | deuteronomy-34-9 | Ari (m) | סָמַךְ |
 | deuteronomy-4-10 | Ari (m) | וְאַשְׁמִעֵם |
 | deuteronomy-4-17 | Ari (m) | אֲשֶׁר, צִפּוֹר, אֲשֶׁר |
 | deuteronomy-4-2 | Ari (m) | לִשְׁמֹר |
 | deuteronomy-4-23 | Ari (m) | כָּרַת |
+| deuteronomy-4-25 | Ari (m) | לְהַכְעִיסוֹ |
+| deuteronomy-4-29 | Ari (m) | וּבְכָל |
 | deuteronomy-4-30 | Ari (m) | הָאֵלֶּה |
 | deuteronomy-4-36 | Ari (m) | הֶרְאֲךָ |
 | deuteronomy-4-40 | Ari (m) | מִצְוֹתָיו |
@@ -2423,6 +2764,7 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | deuteronomy-5-20 | Ari (m) | כְּשָׁמְעֲכֶם |
 | deuteronomy-5-26 | Ari (m) | מִצְוֹתַי |
 | deuteronomy-5-27 | Ari (m) | לְאָהֳלֵיכֶם |
+| deuteronomy-5-28 | Ari (m) | כָּל |
 | deuteronomy-5-3 | Ari (m) | פֹה |
 | deuteronomy-5-6 | Ari (m) | מִצְרַיִם |
 | deuteronomy-6-10 | Ari (m) | לָתֶת |
@@ -2445,7 +2787,9 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | deuteronomy-7-24 | Ari (m) | הִשְׁמִדְךָ |
 | deuteronomy-7-9 | Ari (m) | מִצְוֹתָיו |
 | deuteronomy-8-11 | Ari (m) | מִצְוֹתָיו |
+| deuteronomy-8-16 | Ari (m) | יָדְעוּן |
 | deuteronomy-8-19 | Ari (m) | הַעִדֹתִי |
+| deuteronomy-8-2 | Ari (m) | הֹלִיכֲךָ, מִצְוֹתָיו |
 | deuteronomy-8-3 | Ari (m) | וַיְעַנְּךָ, וַיַּרְעִבֶךָ, יָדְעוּן |
 | deuteronomy-8-6 | Ari (m) | מִצְוֹת |
 | deuteronomy-9-16 | Ari (m) | וָאֵרֶא |
@@ -2453,12 +2797,15 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | deuteronomy-9-19 | Ari (m) | (nothing) |
 | deuteronomy-9-20 | Ari (m) | (nothing) |
 | deuteronomy-9-22 | Ari (m) | מַקְצִפִים |
+| deuteronomy-9-23 | Ari (m) | מִקָּדֵשׁ, אֲדֹנָי אֱלֹהֵיכֶם וְלֹא הֶאֱמַנְתֶּם לוֹ וְלֹא שְׁמַעְתֶּם בְּקֹלוֹ |
 | deuteronomy-9-26 | Ari (m) | פָּדִיתָ |
 | deuteronomy-9-28 | Ari (m) | הוֹצֵאתָנוּ, הוֹצִיאָם |
+| deuteronomy-9-5 | Ari (m) | לְבָבְךָ אַתָּה בָא |
 | deuteronomy-9-7 | Ari (m) | הִקְצַפְתָּ |
 | deuteronomy-9-8 | Ari (m) | וַיִּתְאַנַּף |
 | exodus-1-10 | Ari (m) | וְנוֹסַף, עַל שֹׂנְאֵינוּ |
 | exodus-1-11 | Ari (m) | עָרֵי, רַעַמְסֵס |
+| exodus-1-15 | Ari (m) | פּוּעָה |
 | exodus-1-17 | Ari (m) | דִּבֶּר |
 | exodus-1-22 | Ari (m) | וַיְצַו, הַיְאֹרָה |
 | exodus-1-3 | Ari (m) | יִשָּׂשכָר |
@@ -2467,17 +2814,21 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | exodus-10-13 | Ari (m) | הָאַרְבֶּה |
 | exodus-10-14 | Ari (m) | אַרְבֶּה |
 | exodus-10-16 | Ari (m) | וּלְאַהֲרֹן |
+| exodus-10-17 | Ari (m) | נָא חַטָּאתִי אַךְ הַפַּעַם |
 | exodus-10-18 | Ari (m) | וַיֶּעְתַּר |
 | exodus-10-2 | Ari (m) | בָם |
+| exodus-10-20 | Ari (m) | פַּרְעֹה |
 | exodus-10-24 | Ari (m) | פַרְעֹה |
 | exodus-10-3 | Ari (m) | לֵעָנֹת |
 | exodus-10-4 | Ari (m) | אַרְבֶּה |
+| exodus-11-7 | Ari (m) | תֵּדְעוּן |
 | exodus-11-9 | Ari (m) | וַיֹּאמֶר, פַּרְעֹה |
 | exodus-12-11 | Ari (m) | מָתְנֵיכֶם |
 | exodus-12-12 | Ari (m) | וְעָבַרְתִּי |
 | exodus-12-18 | Ari (m) | בְּאַרְבָּעָה |
 | exodus-12-19 | Ari (m) | וּבְאֶזְרַח |
 | exodus-12-2 | Ari (m) | רִאשׁוֹן הוּא לָכֶם |
+| exodus-12-29 | Ari (m) | וַאדֹנָי |
 | exodus-12-35 | Ari (m) | וַיִּשְׁאֲלוּ, וּשְׂמָלֹת |
 | exodus-12-36 | Ari (m) | וַיַּשְׁאִלוּם |
 | exodus-12-41 | Ari (m) | וְאַרְבַּע |
@@ -2493,6 +2844,7 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | exodus-14-17 | Ari (m) | וְאִכָּבְדָה |
 | exodus-14-19 | Ari (m) | וַיִּסַּע, וַיִּסַּע |
 | exodus-14-27 | Ari (m) | נָסִים |
+| exodus-14-28 | Ari (m) | בַּיָּם |
 | exodus-14-4 | Ari (m) | וְאִכָּבְדָה |
 | exodus-15-1 | Ari (m) | אָשִׁירָה, גָאֹה, גָּאָה, בַיָּם |
 | exodus-15-10 | Ari (m) | נָשַׁפְתָּ בְרוּחֲךָ כִּסָּמוֹ |
@@ -2504,10 +2856,12 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | exodus-15-17 | Ari (m) | תְּבִאֵמוֹ |
 | exodus-15-19 | Ari (m) | וּבְפָרָשָׁיו, בַיַּבָּשָׁה |
 | exodus-15-2 | Ari (m) | יָהּ, וַאֲרֹמְמֶנְהוּ |
+| exodus-15-21 | Ari (m) | גָאֹה, בַיָּם |
 | exodus-15-24 | Ari (m) | וַיִּלֹּנוּ הָעָם, לֵּאמֹר מַה נִּשְׁתֶּה |
 | exodus-15-25 | Ari (m) | נִסָּהוּ |
 | exodus-15-26 | Ari (m) | רֹפְאֶךָ |
 | exodus-15-4 | Ari (m) | פַּרְעֹה |
+| exodus-15-5 | Ari (m) | כְּמוֹ, אָבֶן |
 | exodus-15-6 | Ari (m) | נֶאְדָּרִי |
 | exodus-15-9 | Ari (m) | תִּמְלָאֵמוֹ |
 | exodus-16-12 | Ari (m) | דַּבֵּר, וִידַעְתֶּם |
@@ -2515,14 +2869,17 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | exodus-16-16 | Ari (m) | בְּאָהֳלוֹ |
 | exodus-16-17 | Ari (m) | וְהַמַּמְעִיט |
 | exodus-16-18 | Ari (m) | וַיָּמֹדּוּ, בָעֹמֶר |
+| exodus-16-19 | Ari (m) | אִישׁ אַל |
 | exodus-16-21 | Ari (m) | כְּפִי, אָכְלוֹ |
 | exodus-16-24 | Ari (m) | הִבְאִישׁ |
 | exodus-16-26 | Ari (m) | תִּלְקְטֻהוּ |
+| exodus-16-27 | Ari (m) | מָצָאוּ |
 | exodus-16-28 | Ari (m) | מִצְוֹתַי |
 | exodus-16-3 | Ari (m) | בְיַד |
 | exodus-16-32 | Ari (m) | בַּמִּדְבָּר |
 | exodus-16-35 | Ari (m) | בֹּאָם, בֹּאָם |
 | exodus-16-36 | Ari (m) | הָאֵיפָה |
+| exodus-16-8 | Ari (m) | בְּתֵת |
 | exodus-17-1 | Ari (m) | וַיִּסְעוּ |
 | exodus-17-12 | Ari (m) | בְיָדָיו |
 | exodus-17-3 | Ari (m) | הֶעֱלִיתָנוּ |
@@ -2530,6 +2887,7 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | exodus-18-12 | Ari (m) | לֶאֱכָל |
 | exodus-18-14 | Ari (m) | כָּל |
 | exodus-18-19 | Ari (m) | אִיעָצְךָ |
+| exodus-18-23 | Ari (m) | בְשָׁלוֹם |
 | exodus-18-26 | Ari (m) | בְּכָל |
 | exodus-18-7 | Ari (m) | וַיִּשַּׁק, לְרֵעֵהוּ |
 | exodus-18-8 | Ari (m) | לְחֹתְנוֹ |
@@ -2564,6 +2922,7 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | exodus-21-22 | Ari (m) | אֲנָשִׁים |
 | exodus-21-28 | Ari (m) | סָקוֹל |
 | exodus-21-32 | Ari (m) | אוֹ, אָמָה |
+| exodus-21-33 | Ari (m) | אִישׁ בּוֹר |
 | exodus-21-4 | Ari (m) | בְגַפּוֹ |
 | exodus-21-9 | Ari (m) | יִיעָדֶנָּה |
 | exodus-22-11 | Ari (m) | מֵעִמּוֹ |
@@ -2574,12 +2933,14 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | exodus-22-27 | Ari (m) | וְנָשִׂיא, תָאֹר |
 | exodus-22-4 | Ari (m) | יַבְעֶר, אוֹ כֶרֶם |
 | exodus-23-1 | Ari (m) | חָמָס |
+| exodus-23-16 | Ari (m) | בְּאָסְפְּךָ |
 | exodus-23-19 | Ari (m) | בַּחֲלֵב |
 | exodus-23-21 | Ari (m) | הִשָּׁמֶר |
 | exodus-23-23 | Ari (m) | וֶהֱבִיאֲךָ, הַחִוִּי, וְהִכְחַדְתִּיו |
 | exodus-23-26 | Ari (m) | וַעֲקָרָה, אֲמַלֵּא |
 | exodus-23-28 | Ari (m) | הַצִּרְעָה, הַחִוִּי |
 | exodus-23-32 | Ari (m) | בְּרִית |
+| exodus-23-4 | Ari (m) | תֹּעֶה, תְּשִׁיבֶנּוּ |
 | exodus-23-5 | Ari (m) | מַשָּׂאוֹ |
 | exodus-24-1 | Ari (m) | וַאֲבִיהוּא |
 | exodus-24-4 | Ari (m) | הָהָר |
@@ -2588,9 +2949,11 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | exodus-24-9 | Ari (m) | וַאֲבִיהוּא |
 | exodus-25-10 | Ari (m) | וְאַמָּה, וְאַמָּה |
 | exodus-25-12 | Ari (m) | הַשֵּׁנִית |
+| exodus-25-13 | Ari (m) | בַדֵּי |
 | exodus-25-15 | Ari (m) | הָאָרֹן |
 | exodus-25-17 | Ari (m) | אַמָּתַיִם |
 | exodus-25-20 | Ari (m) | בְּכַנְפֵיהֶם |
+| exodus-25-21 | Ari (m) | הָאָרֹן, הָאָרֹן |
 | exodus-25-23 | Ari (m) | אַמָּתַיִם |
 | exodus-25-28 | Ari (m) | בָם |
 | exodus-25-3 | Ari (m) | וָכֶסֶף |
@@ -2601,6 +2964,8 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | exodus-26-16 | Ari (m) | וַחֲצִי, הָאַמָּה |
 | exodus-26-18 | Ari (m) | לִפְאַת |
 | exodus-26-2 | Ari (m) | הַיְרִיעָה, הַיְרִיעָה, הַיְרִיעֹת |
+| exodus-26-20 | Ari (m) | וּלְצֶלַע, לִפְאַת |
+| exodus-26-5 | Ari (m) | בַּיְרִיעָה, הַיְרִיעָה |
 | exodus-26-7 | Ari (m) | עַשְׁתֵּי |
 | exodus-26-8 | Ari (m) | לְעַשְׁתֵּי |
 | exodus-27-11 | Ari (m) | לִפְאַת |
@@ -2615,14 +2980,17 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | exodus-28-1 | Ari (m) | וַאֲבִיהוּא |
 | exodus-28-14 | Ari (m) | אֹתָם |
 | exodus-28-17 | Ari (m) | אֹדֶם |
+| exodus-28-2 | Ari (m) | לְאַהֲרֹן |
 | exodus-28-21 | Ari (m) | שָׁבֶט |
 | exodus-28-25 | Ari (m) | כִּתְפוֹת |
 | exodus-28-26 | Ari (m) | טַבְּעוֹת |
 | exodus-28-27 | Ari (m) | טַבְּעוֹת |
 | exodus-28-28 | Ari (m) | מִטַּבְּעֹתָיו |
 | exodus-28-29 | Ari (m) | בְּבֹאוֹ |
+| exodus-28-3 | Ari (m) | בִּגְדֵי, לְכַהֲנוֹ |
 | exodus-28-30 | Ari (m) | הָאוּרִים |
 | exodus-28-32 | Ari (m) | פִי, אֹרֵג |
+| exodus-28-33 | Ari (m) | שׁוּלָיו, שׁוּלָיו |
 | exodus-28-35 | Ari (m) | וְנִשְׁמַע |
 | exodus-28-38 | Ari (m) | עֲוֹן |
 | exodus-28-40 | Ari (m) | אַבְנֵטִים, וּמִגְבָּעוֹת, לְכָבוֹד |
@@ -2637,14 +3005,17 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | exodus-29-40 | Ari (m) | וְעִשָּׂרֹן |
 | exodus-29-42 | Ari (m) | אִוָּעֵד |
 | exodus-29-44 | Ari (m) | מוֹעֵד |
+| exodus-29-46 | Ari (m) | בְתוֹכָם |
 | exodus-29-5 | Ari (m) | אַהֲרֹן |
 | exodus-3-11 | Ari (m) | אוֹצִיא |
 | exodus-3-12 | Ari (m) | בְּהוֹצִיאֲךָ |
+| exodus-3-14 | Ari (m) | אֶהְיֶה, אֶהְיֶה |
 | exodus-3-22 | Ari (m) | בֵּיתָהּ |
 | exodus-3-7 | Ari (m) | רָאֹה |
 | exodus-3-9 | Ari (m) | וְעַתָּה |
 | exodus-30-12 | Ari (m) | בִּפְקֹד, בִּפְקֹד |
 | exodus-30-18 | Ari (m) | כִּיּוֹר, מוֹעֵד |
+| exodus-30-2 | Ari (m) | וְאַמָּתַיִם |
 | exodus-30-29 | Ari (m) | יִקְדָּשׁ |
 | exodus-30-36 | Ari (m) | אִוָּעֵד |
 | exodus-30-37 | Ari (m) | לָכֶם |
@@ -2662,12 +3033,17 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | exodus-32-22 | Ari (m) | כִּי בְרָע הוּא |
 | exodus-32-23 | Ari (m) | מֶה הָיָה |
 | exodus-32-24 | Ari (m) | הִתְפָּרָקוּ, בָאֵשׁ |
+| exodus-32-30 | Ari (m) | אֶעֱלֶה |
+| exodus-32-34 | Ari (m) | יֵלֵךְ |
 | exodus-32-8 | Ari (m) | סָרוּ |
+| exodus-33-10 | Ari (m) | אָהֳלוֹ |
 | exodus-33-12 | Ari (m) | בְשֵׁם |
 | exodus-33-13 | Ari (m) | וְאֵדָעֲךָ |
 | exodus-33-16 | Ari (m) | וְנִפְלֵינוּ |
 | exodus-33-17 | Ari (m) | וָאֵדָעֲךָ |
 | exodus-33-19 | Ari (m) | בְשֵׁם |
+| exodus-33-20 | Ari (m) | יִרְאַנִי |
+| exodus-33-3 | Ari (m) | אֶעֱלֶה |
 | exodus-33-6 | Ari (m) | וַיִּתְנַצְּלוּ |
 | exodus-33-8 | Ari (m) | אָהֳלוֹ, בֹּאוֹ |
 | exodus-34-15 | Ari (m) | מִזִּבְחוֹ |
@@ -2679,7 +3055,9 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | exodus-34-7 | Ari (m) | עָוֹן, עֲוֹן |
 | exodus-34-9 | Ari (m) | לַעֲוֹנֵנוּ |
 | exodus-35-1 | Ari (m) | עֲדַת |
+| exodus-35-15 | Ari (m) | בַּדָּיו |
 | exodus-35-17 | Ari (m) | מָסַךְ שַׁעַר |
+| exodus-35-23 | Ari (m) | מְאָדָּמִים |
 | exodus-35-28 | Ari (m) | וְלִקְטֹרֶת הַסַּמִּים |
 | exodus-35-31 | Ari (m) | בִּתְבוּנָה |
 | exodus-35-34 | Ari (m) | וְאָהֳלִיאָב, אֲחִיסָמָךְ |
@@ -2698,28 +3076,36 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | exodus-36-6 | Ari (m) | וַיְצַו |
 | exodus-36-9 | Ari (m) | הַיְרִיעָה, הַיְרִיעָה, הַיְרִיעֹת |
 | exodus-37-1 | Ari (m) | אַמָּתַיִם |
+| exodus-37-10 | Ari (m) | אַמָּתַיִם |
+| exodus-37-14 | Ari (m) | לַבַּדִּים |
 | exodus-37-16 | Ari (m) | הַקְּשָׂוֹת |
 | exodus-37-20 | Ari (m) | גְבִעִים |
 | exodus-37-25 | Ari (m) | וְאַמָּתַיִם |
 | exodus-37-3 | Ari (m) | וַיִּצֹק, הַשֵּׁנִית |
 | exodus-37-4 | Ari (m) | (nothing) |
+| exodus-37-6 | Ari (m) | אַמָּתַיִם |
 | exodus-37-9 | Ari (m) | סֹכְכִים |
 | exodus-38-11 | Ari (m) | בָאַמָּה |
+| exodus-38-18 | Ari (m) | בְרֹחַב |
 | exodus-38-23 | Ari (m) | אָהֳלִיאָב |
+| exodus-38-28 | Ari (m) | עָשָׂה וָוִים |
 | exodus-38-29 | Ari (m) | וְאַלְפַּיִם |
 | exodus-38-5 | Ari (m) | הַקְּצָוֹת |
 | exodus-38-8 | Ari (m) | בְּמַרְאֹת, הַצֹּבְאֹת |
 | exodus-38-9 | Ari (m) | לִפְאַת, בָּאַמָּה |
 | exodus-39-1 | Ari (m) | עָשׂוּ |
+| exodus-39-11 | Ari (m) | וְהַטּוּר |
 | exodus-39-14 | Ari (m) | שָׁבֶט |
 | exodus-39-19 | Ari (m) | בָּיְתָה |
 | exodus-39-20 | Ari (m) | וַיִּתְּנֻם |
+| exodus-39-21 | Ari (m) | מִטַּבְּעֹתָיו |
 | exodus-39-22 | Ari (m) | וַיַּעַשׂ |
 | exodus-39-27 | Ari (m) | אֹרֵג, וּלְבָנָיו |
 | exodus-39-30 | Ari (m) | צִיץ |
 | exodus-39-34 | Ari (m) | הַמְאָדָּמִים |
 | exodus-4-18 | Ari (m) | אֵלֲכָה |
 | exodus-4-24 | Ari (m) | וַיִּפְגְּשֵׁהוּ |
+| exodus-4-3 | Ari (m) | לְנָחָשׁ |
 | exodus-4-6 | Ari (m) | הָבֵא |
 | exodus-4-9 | Ari (m) | בַּיַּבָּשֶׁת |
 | exodus-40-34 | Ari (m) | מוֹעֵד |
@@ -2740,11 +3126,15 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | exodus-6-23 | Ari (m) | לְאִשָּׁה, אֲבִיהוּא |
 | exodus-6-24 | Ari (m) | וַאֲבִיאָסָף |
 | exodus-6-28 | Ari (m) | דִּבֶּר |
+| exodus-6-3 | Ari (m) | וָאֵרָא |
 | exodus-6-30 | Ari (m) | עֲרַל |
+| exodus-7-14 | Ari (m) | פַּרְעֹה |
 | exodus-7-17 | Ari (m) | בַּיְאֹר |
 | exodus-7-20 | Ari (m) | בַּיְאֹר, בַּיְאֹר |
 | exodus-7-21 | Ari (m) | הַדָּם |
+| exodus-7-28 | Ari (m) | הַיְאֹר |
 | exodus-7-4 | Ari (m) | בִּשְׁפָטִים |
+| exodus-8-1 | Ari (m) | בְּמַטֶּךָ, וְהַעַל |
 | exodus-8-11 | Ari (m) | פַּרְעֹה, וְהַכְבֵּד |
 | exodus-8-13 | Ari (m) | בְמַטֵּהוּ, כִנִּים |
 | exodus-8-15 | Ari (m) | (nothing), לֵב פַּרְעֹה |
@@ -2758,20 +3148,26 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | exodus-8-7 | Ari (m) | וְסָרוּ, בַּיְאֹר |
 | exodus-9-10 | Ari (m) | אֲבַעְבֻּעֹת |
 | exodus-9-14 | Ari (m) | בְּכָל |
+| exodus-9-16 | Ari (m) | הַרְאֹתְךָ |
 | exodus-9-17 | Ari (m) | עוֹדְךָ |
+| exodus-9-2 | Ari (m) | מָאֵן |
 | exodus-9-3 | Ari (m) | הוֹיָה |
 | exodus-9-35 | Ari (m) | בְּיַד |
+| exodus-9-6 | Ari (m) | לֹא מֵת |
 | exodus-9-8 | Ari (m) | פַרְעֹה |
 | exodus-9-9 | Ari (m) | פֹּרֵחַ |
 | genesis-1-12 | Ari (m) | וַתּוֹצֵא, עֵשֶׂב, מַזְרִיעַ, זֶרַע, בוֹ, וַיַּרְא |
 | genesis-1-15 | Ari (m) | בִּרְקִיעַ, לְהָאִיר |
+| genesis-1-18 | Ari (m) | וַיַּרְא |
 | genesis-1-20 | Ari (m) | יִשְׁרְצוּ, שֶׁרֶץ |
 | genesis-1-21 | Ari (m) | וַיַּרְא |
 | genesis-1-22 | Ari (m) | וַיְבָרֶךְ |
 | genesis-1-25 | Ari (m) | וַיַּעַשׂ, וַיַּרְא |
 | genesis-1-26 | Ari (m) | בִדְגַת |
 | genesis-1-27 | Ari (m) | זָכָר, וּנְקֵבָה |
+| genesis-1-28 | Ari (m) | בִּדְגַת, חַיָּה |
 | genesis-1-30 | Ari (m) | וַיְהִי |
+| genesis-1-31 | Ari (m) | וַיַּרְא, מְאֹד, עֶרֶב |
 | genesis-1-5 | Ari (m) | לָיְלָה |
 | genesis-1-8 | Ari (m) | שָׁמָיִם |
 | genesis-1-9 | Ari (m) | יִקָּווּ |
@@ -2780,8 +3176,10 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | genesis-10-15 | Ari (m) | צִידֹן, חֵת |
 | genesis-10-17 | Ari (m) | הַחִוִּי |
 | genesis-10-19 | Ari (m) | לָשַׁע |
+| genesis-10-21 | Ari (m) | אֲחִי |
 | genesis-10-22 | Ari (m) | וְאַרְפַּכְשַׁד |
 | genesis-10-24 | Ari (m) | וְאַרְפַּכְשַׁד |
+| genesis-10-25 | Ari (m) | בְיָמָיו |
 | genesis-10-28 | Ari (m) | עוֹבָל |
 | genesis-10-31 | Ari (m) | לְגוֹיֵהֶם |
 | genesis-10-5 | Ari (m) | בְּגוֹיֵהֶם |
@@ -2794,12 +3192,15 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | genesis-11-21 | Ari (m) | הוֹלִידוֹ |
 | genesis-11-23 | Ari (m) | הוֹלִידוֹ |
 | genesis-11-25 | Ari (m) | הוֹלִידוֹ |
+| genesis-11-26 | Ari (m) | אַבְרָם |
 | genesis-11-27 | Ari (m) | אַבְרָם, לוֹט |
 | genesis-11-29 | Ari (m) | אַבְרָם, אַבְרָם, יִסְכָּה |
 | genesis-11-30 | Ari (m) | עֲקָרָה, אֵין |
 | genesis-11-31 | Ari (m) | אַבְרָם, אַבְרָם |
 | genesis-12-1 | Ari (m) | אַבְרָם, אַרְאֶךָּ |
+| genesis-12-10 | Ari (m) | אַבְרָם |
 | genesis-12-17 | Ari (m) | וַיְנַגַּע אֲדֹנָי אֶת פַּרְעֹה נְגָעִים, בֵּיתוֹ עַל דְּבַר |
+| genesis-12-19 | Ari (m) | (nothing) |
 | genesis-12-20 | Ari (m) | וַיְצַו, אֲנָשִׁים |
 | genesis-12-3 | Ari (m) | וַאֲבָרֲכָה, אָאֹר |
 | genesis-12-4 | Ari (m) | אַבְרָם |
@@ -2809,8 +3210,10 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | genesis-12-8 | Ari (m) | וַיַּעְתֵּק, אָהֳלֹה, בֵּית, אֵל, וְהָעַי |
 | genesis-12-9 | Ari (m) | אַבְרָם |
 | genesis-13-1 | Ari (m) | אַבְרָם |
+| genesis-13-10 | Ari (m) | צֹעַר |
 | genesis-13-11 | Ari (m) | וַיִּסַּע |
 | genesis-13-12 | Ari (m) | אַבְרָם, בְּעָרֵי, וַיֶּאֱהַל |
+| genesis-13-14 | Ari (m) | אַבְרָם, מֵעִמּוֹ |
 | genesis-13-18 | Ari (m) | אַבְרָם |
 | genesis-13-2 | Ari (m) | וְאַבְרָם |
 | genesis-13-3 | Ari (m) | אָהֳלוֹ |
@@ -2824,6 +3227,7 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | genesis-14-13 | Ari (m) | אַבְרָם |
 | genesis-14-14 | Ari (m) | אַבְרָם |
 | genesis-14-15 | Ari (m) | וַעֲבָדָיו, (nothing), לְדַמָּשֶׂק |
+| genesis-14-2 | Ari (m) | שִׁנְאָב, צֹעַר |
 | genesis-14-21 | Ari (m) | אַבְרָם |
 | genesis-14-22 | Ari (m) | אַבְרָם |
 | genesis-14-23 | Ari (m) | אַבְרָם |
@@ -2834,9 +3238,11 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | genesis-15-1 | Ari (m) | אַבְרָם, אַבְרָם, שְׂכָרְךָ |
 | genesis-15-11 | Ari (m) | אַבְרָם |
 | genesis-15-12 | Ari (m) | אַבְרָם |
+| genesis-15-16 | Ari (m) | עֲוֹן |
 | genesis-15-17 | Ari (m) | וַיְהִי |
 | genesis-15-18 | Ari (m) | פְּרָת |
 | genesis-15-19 | Ari (m) | הַקֵּינִי |
+| genesis-15-2 | Ari (m) | אַבְרָם |
 | genesis-15-3 | Ari (m) | אַבְרָם |
 | genesis-15-5 | Ari (m) | זַרְעֶךָ |
 | genesis-15-8 | Ari (m) | אִירָשֶׁנָּה |
@@ -2851,16 +3257,19 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | genesis-16-5 | Ari (m) | אַבְרָם |
 | genesis-16-6 | Ari (m) | אַבְרָם, וַתְּעַנֶּהָ |
 | genesis-16-7 | Ari (m) | וַיִּמְצָאָהּ, שׁוּר |
+| genesis-16-8 | Ari (m) | בָאת |
 | genesis-17-1 | Ari (m) | אַבְרָם, אַבְרָם |
 | genesis-17-10 | Ari (m) | הִמּוֹל |
 | genesis-17-14 | Ari (m) | וְעָרֵל |
 | genesis-17-15 | Ari (m) | אִשְׁתְּךָ |
+| genesis-17-16 | Ari (m) | יִהְיוּ |
 | genesis-17-2 | Ari (m) | וְאֶתְּנָה, בֵּינִי, בִּמְאֹד |
 | genesis-17-20 | Ari (m) | בִּמְאֹד |
 | genesis-17-21 | Ari (m) | אָקִים |
 | genesis-17-24 | Ari (m) | עָרְלָתוֹ |
 | genesis-17-25 | Ari (m) | עֶשְׂרֵה |
 | genesis-17-3 | Ari (m) | אַבְרָם |
+| genesis-17-5 | Ari (m) | אַבְרָם |
 | genesis-17-8 | Ari (m) | לֵאלֹהִים |
 | genesis-18-15 | Ari (m) | יָרֵאָה |
 | genesis-18-19 | Ari (m) | יְדַעְתִּיו |
@@ -2870,22 +3279,27 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | genesis-18-8 | Ari (m) | וְחָלָב |
 | genesis-18-9 | Ari (m) | בָאֹהֶל |
 | genesis-19-11 | Ari (m) | וַיִּלְאוּ |
+| genesis-19-15 | Ari (m) | בַּעֲוֹן |
 | genesis-19-16 | Ari (m) | וַיֹּצִאֻהוּ |
 | genesis-19-22 | Ari (m) | הִמָּלֵט, צוֹעַר |
 | genesis-19-3 | Ari (m) | אָפָה |
 | genesis-19-30 | Ari (m) | מִצּוֹעַר, בְּצוֹעַר |
+| genesis-19-37 | Ari (m) | מוֹאָב, מוֹאָב |
 | genesis-19-4 | Ari (m) | מִנַּעַר |
 | genesis-19-5 | Ari (m) | וְנֵדְעָה |
 | genesis-19-8 | Ari (m) | אוֹצִיאָה |
 | genesis-19-9 | Ari (m) | בָאִישׁ |
 | genesis-2-1 | Ari (m) | וַיְכֻלּוּ, וְכָל צְבָאָם |
 | genesis-2-12 | Ari (m) | הַהִוא |
+| genesis-2-14 | Ari (m) | פְרָת |
 | genesis-2-16 | Ari (m) | וַיְצַו |
 | genesis-2-19 | Ari (m) | וַיָּבֵא |
 | genesis-2-21 | Ari (m) | מִצַּלְעֹתָיו |
 | genesis-2-22 | Ari (m) | וַיְבִאֶהָ |
 | genesis-2-4 | Ari (m) | בְּהִבָּרְאָם |
+| genesis-2-5 | Ari (m) | בָאָרֶץ |
 | genesis-20-12 | Ari (m) | וַתְּהִי לִי לְאִשָּׁה |
+| genesis-20-13 | Ari (m) | הוּא |
 | genesis-20-17 | Ari (m) | וְאַמְהֹתָיו |
 | genesis-20-2 | Ari (m) | (nothing) |
 | genesis-20-5 | Ari (m) | אָמְרָה, וּבְנִקְיֹן כַּפַּי |
@@ -2896,12 +3310,16 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | genesis-21-16 | Ari (m) | וַתֵּבְךְּ |
 | genesis-21-17 | Ari (m) | מַה לָּךְ |
 | genesis-21-18 | Ari (m) | אֲשִׂימֶנּוּ |
+| genesis-21-19 | Ari (m) | הַנָּעַר |
 | genesis-21-20 | Ari (m) | קַשָּׁת |
 | genesis-21-21 | Ari (m) | פָּארָן |
 | genesis-21-23 | Ari (m) | הִשָּׁבְעָה |
 | genesis-21-27 | Ari (m) | בְּרִית |
+| genesis-21-29 | Ari (m) | מָה הֵנָּה |
+| genesis-21-32 | Ari (m) | בִּבְאֵר |
 | genesis-21-7 | Ari (m) | הֵינִיקָה |
 | genesis-21-9 | Ari (m) | מְצַחֵק |
+| genesis-22-1 | Ari (m) | נִסָּה |
 | genesis-22-12 | Ari (m) | יְרֵא |
 | genesis-22-13 | Ari (m) | (nothing) |
 | genesis-22-17 | Ari (m) | אַרְבֶּה |
@@ -2914,22 +3332,27 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | genesis-23-11 | Ari (m) | לְךָ |
 | genesis-23-13 | Ari (m) | וְאֶקְבְּרָה |
 | genesis-23-19 | Ari (m) | קָבַר |
+| genesis-23-2 | Ari (m) | (nothing) |
 | genesis-23-20 | Ari (m) | חֵת |
 | genesis-23-4 | Ari (m) | וְאֶקְבְּרָה |
+| genesis-23-5 | Ari (m) | חֵת |
 | genesis-24-1 | Ari (m) | בָּא, בַּיָּמִים |
 | genesis-24-14 | Ari (m) | כַדֵּךְ |
 | genesis-24-15 | Ari (m) | כִּלָּה |
 | genesis-24-17 | Ari (m) | הַגְמִיאִינִי |
 | genesis-24-20 | Ari (m) | וַתְּעַר, לְכָל |
+| genesis-24-27 | Ari (m) | מֵעִם |
 | genesis-24-3 | Ari (m) | וְאַשְׁבִּיעֲךָ, בַּאדֹנָי |
 | genesis-24-34 | Ari (m) | וַיֹּאמַר |
 | genesis-24-46 | Ari (m) | הִשְׁקָתָה |
 | genesis-24-51 | Ari (m) | הִנֵּה, וָלֵךְ, וּתְהִי, אִשָּׁה, לְבֶן |
 | genesis-24-54 | Ari (m) | בַבֹּקֶר |
+| genesis-24-67 | Ari (m) | וַיְבִאֶהָ, וַיֶּאֱהָבֶהָ |
 | genesis-25-13 | Ari (m) | בִּשְׁמֹתָם, וְאַדְבְּאֵל |
 | genesis-25-21 | Ari (m) | וַיֶּעְתַּר, לְנֹכַח, עֲקָרָה, וַיֵּעָתֶר, וַתַּהַר |
 | genesis-25-23 | Ari (m) | מִלְאֹם |
 | genesis-25-25 | Ari (m) | וַיֵּצֵא |
+| genesis-25-28 | Ari (m) | צַיִד |
 | genesis-25-29 | Ari (m) | עָיֵף |
 | genesis-25-30 | Ari (m) | הַלְעִיטֵנִי |
 | genesis-25-33 | Ari (m) | הִשָּׁבְעָה לִּי כַּיּוֹם, וַיִּמְכֹּר |
@@ -2940,8 +3363,10 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | genesis-26-4 | Ari (m) | בְזַרְעֲךָ |
 | genesis-26-5 | Ari (m) | וַיִּשְׁמֹר, מִצְוֹתַי |
 | genesis-26-7 | Ari (m) | כִּי |
+| genesis-26-9 | Ari (m) | וְאֵיךְ, וַיֹּאמֶר |
 | genesis-27-1 | Ari (m) | מֵרְאֹת |
 | genesis-27-10 | Ari (m) | יְבָרֶכְךָ |
+| genesis-27-20 | Ari (m) | הִקְרָה |
 | genesis-27-21 | Ari (m) | גְּשָׁה, עֵשָׂו אִם |
 | genesis-27-25 | Ari (m) | תְּבָרֶכְךָ, וַיֵּשְׁתְּ |
 | genesis-27-3 | Ari (m) | וְעַתָּה שָׂא נָא כֵלֶיךָ תֶּלְיְךָ וְקַשְׁתֶּךָ וְצֵא הַשָּׂדֶה וְצוּדָה לִּי צָיִד |
@@ -2955,8 +3380,10 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | genesis-27-46 | Ari (m) | בְחַיַּי |
 | genesis-28-1 | Ari (m) | וַיְצַוֵּהוּ וַיֹּאמֶר |
 | genesis-28-12 | Ari (m) | וַיַּחֲלֹם |
+| genesis-28-14 | Ari (m) | וּבְזַרְעֶךָ |
 | genesis-28-19 | Ari (m) | לוּז |
 | genesis-28-21 | Ari (m) | בְשָׁלוֹם |
+| genesis-28-22 | Ari (m) | אֲעַשְּׂרֶנּוּ |
 | genesis-28-4 | Ari (m) | אִתָּךְ, לְרִשְׁתְּךָ |
 | genesis-28-9 | Ari (m) | נָשָׁיו |
 | genesis-29-11 | Ari (m) | וַיֵּבְךְּ |
@@ -2997,44 +3424,56 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | genesis-30-6 | Ari (m) | קָרְאָה |
 | genesis-30-9 | Ari (m) | לֵאָה כִּי עָמְדָה |
 | genesis-31-1 | Ari (m) | לְאָבִינוּ, לְאָבִינוּ |
+| genesis-31-10 | Ari (m) | וָאֵרֶא |
 | genesis-31-17 | Ari (m) | וַיָּקָם, וַיִּשָּׂא |
 | genesis-31-2 | Ari (m) | וַיַּרְא |
 | genesis-31-21 | Ari (m) | וְכָל, (nothing) |
 | genesis-31-28 | Ari (m) | הִסְכַּלְתָּ |
+| genesis-31-29 | Ari (m) | אֲבִיכֶם |
 | genesis-31-3 | Ari (m) | וְאֶהְיֶה |
 | genesis-31-34 | Ari (m) | וַתְּשִׂמֵם |
 | genesis-31-37 | Ari (m) | כֹּה נֶגֶד |
 | genesis-31-4 | Ari (m) | וּלְלֵאָה |
+| genesis-31-40 | Ari (m) | חֹרֶב, וַתִּדַּד |
 | genesis-31-42 | Ari (m) | אָמֶשׁ |
 | genesis-31-47 | Ari (m) | גַּלְעֵד |
 | genesis-31-48 | Ari (m) | גַּלְעֵד |
 | genesis-31-49 | Ari (m) | בֵּינִי |
 | genesis-31-5 | Ari (m) | שִׁלְשֹׁם, וֵאלֹהֵי |
+| genesis-31-54 | Ari (m) | לֶאֱכָל |
 | genesis-31-7 | Ari (m) | לְהָרַע |
 | genesis-31-8 | Ari (m) | שְׂכָרֶךָ, עֲקֻדִּים, שְׂכָרֶךָ, עֲקֻדִּים |
 | genesis-32-11 | Ari (m) | הָיִיתִי |
+| genesis-32-13 | Ari (m) | אֵיטִיב |
 | genesis-32-14 | Ari (m) | בְיָדוֹ |
 | genesis-32-16 | Ari (m) | וַעְיָרִם |
 | genesis-32-18 | Ari (m) | וַיְצַו, וִשְׁאֵלְךָ |
 | genesis-32-20 | Ari (m) | וַיְצַו |
+| genesis-32-23 | Ari (m) | יַבֹּק |
 | genesis-32-29 | Ari (m) | יֵאָמֵר, וַתּוּכָל |
 | genesis-32-33 | Ari (m) | הַזֶּה כִּי |
 | genesis-32-4 | Ari (m) | עֵשָׂו |
+| genesis-32-5 | Ari (m) | וַיְצַו |
 | genesis-33-10 | Ari (m) | כִּרְאֹת |
 | genesis-33-11 | Ari (m) | וַיִּפְצַר |
 | genesis-33-12 | Ari (m) | נִסְעָה |
 | genesis-33-13 | Ari (m) | וּדְפָקוּם |
+| genesis-33-15 | Ari (m) | אַצִּיגָה |
 | genesis-33-18 | Ari (m) | וַיִּחַן |
+| genesis-33-19 | Ari (m) | אָהֳלוֹ |
 | genesis-34-1 | Ari (m) | בַּת לֵאָה |
 | genesis-34-10 | Ari (m) | וּסְחָרוּהָ |
 | genesis-34-12 | Ari (m) | וְאֶתְּנָה |
 | genesis-34-14 | Ari (m) | הַדָּבָר, עָרְלָה |
 | genesis-34-2 | Ari (m) | הַחִוִּי, וַיְעַנֶּהָ |
+| genesis-34-22 | Ari (m) | בְּהִמּוֹל |
 | genesis-34-25 | Ari (m) | אֲחֵי |
+| genesis-34-30 | Ari (m) | עֲכַרְתֶּם |
 | genesis-34-4 | Ari (m) | אָבִיו |
 | genesis-34-6 | Ari (m) | חֲמוֹר |
 | genesis-34-7 | Ari (m) | כְּשָׁמְעָם, וַיִּתְעַצְּבוּ, וַיִּחַר, בְיִשְׂרָאֵל |
 | genesis-35-1 | Ari (m) | בְּבָרְחֲךָ |
+| genesis-35-16 | Ari (m) | וַיִּסְעוּ |
 | genesis-35-2 | Ari (m) | וְהַחֲלִיפוּ |
 | genesis-35-20 | Ari (m) | (nothing) |
 | genesis-35-21 | Ari (m) | מֵהָלְאָה |
@@ -3056,12 +3495,15 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | genesis-36-35 | Ari (m) | מוֹאָב, עֲוִית |
 | genesis-36-36 | Ari (m) | שַׂמְלָה מִמַּשְׂרֵקָה |
 | genesis-36-40 | Ari (m) | יְתֵת |
+| genesis-36-41 | Ari (m) | אָהֳלִיבָמָה, פִּינֹן |
 | genesis-37-15 | Ari (m) | וַיִּשְׁאָלֵהוּ |
 | genesis-37-2 | Ari (m) | נַעַר |
 | genesis-37-20 | Ari (m) | וְנַשְׁלִכֵהוּ, אֲכָלָתְהוּ |
+| genesis-37-24 | Ari (m) | וַיַּשְׁלִכוּ |
 | genesis-37-25 | Ari (m) | לֶאֱכָל |
 | genesis-37-30 | Ari (m) | אָנָה אֲנִי בָא |
 | genesis-37-32 | Ari (m) | הַכֶּר |
+| genesis-37-34 | Ari (m) | וַיִּתְאַבֵּל |
 | genesis-37-35 | Ari (m) | וַיְמָאֵן, וַיֵּבְךְּ |
 | genesis-38-1 | Ari (m) | (nothing), עֲדֻלָּמִי |
 | genesis-38-11 | Ari (m) | לְתָמָר כַּלָּתוֹ, בֵית אָבִיךְ, אָמַר, כְּאֶחָיו |
@@ -3070,6 +3512,7 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | genesis-38-19 | Ari (m) | וַתָּסַר, צְעִיפָהּ |
 | genesis-38-21 | Ari (m) | בָזֶה |
 | genesis-38-22 | Ari (m) | בָזֶה |
+| genesis-38-27 | Ari (m) | לִדְתָּהּ |
 | genesis-38-5 | Ari (m) | בֵּן, וְהָיָה, בִכְזִיב |
 | genesis-39-15 | Ari (m) | כְשָׁמְעוֹ |
 | genesis-39-19 | Ari (m) | וַיִּחַר |
@@ -3080,13 +3523,16 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | genesis-4-10 | Ari (m) | מִן |
 | genesis-4-13 | Ari (m) | עֲוֹנִי |
 | genesis-4-15 | Ari (m) | אוֹת |
+| genesis-4-22 | Ari (m) | (nothing) |
 | genesis-4-25 | Ari (m) | וַתֵּלֶד, אַחֵר |
 | genesis-4-5 | Ari (m) | וַיִּחַר |
 | genesis-4-6 | Ari (m) | קָיִן |
 | genesis-40-2 | Ari (m) | סָרִיסָיו |
 | genesis-40-7 | Ari (m) | בְמִשְׁמַר |
+| genesis-40-8 | Ari (m) | הֲלוֹא |
 | genesis-41-19 | Ari (m) | תֹּאַר |
 | genesis-41-20 | Ari (m) | הַבְּרִיאֹת |
+| genesis-41-21 | Ari (m) | בָאוּ, וָאִיקָץ |
 | genesis-41-24 | Ari (m) | וַתִּבְלַעְןָ |
 | genesis-41-29 | Ari (m) | שָׂבָע |
 | genesis-41-32 | Ari (m) | הִשָּׁנוֹת |
@@ -3098,6 +3544,7 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | genesis-41-7 | Ari (m) | וַתִּבְלַעְנָה |
 | genesis-41-8 | Ari (m) | וְאֵין |
 | genesis-42-11 | Ari (m) | נָחְנוּ |
+| genesis-42-13 | Ari (m) | שְׁנֵים |
 | genesis-42-16 | Ari (m) | הֵאָסְרוּ, פַרְעֹה |
 | genesis-42-18 | Ari (m) | עֲשׂוּ |
 | genesis-42-22 | Ari (m) | בַיֶּלֶד |
@@ -3110,25 +3557,32 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | genesis-43-16 | Ari (m) | הָבֵא |
 | genesis-43-17 | Ari (m) | בֵּיתָה |
 | genesis-43-18 | Ari (m) | בְּאַמְתְּחֹתֵינוּ |
+| genesis-43-19 | Ari (m) | וַיְדַבְּרוּ, הַבָּיִת |
 | genesis-43-21 | Ari (m) | אַמְתְּחֹתֵינוּ, אַמְתַּחְתּוֹ |
 | genesis-43-24 | Ari (m) | בֵּיתָה |
 | genesis-43-28 | Ari (m) | וַיִּשְׁתַּחֲוֻּו |
+| genesis-43-30 | Ari (m) | וַיֵּבְךְּ |
 | genesis-43-34 | Ari (m) | מַשְׂאֹת |
 | genesis-43-6 | Ari (m) | הֲרֵעֹתֶם |
 | genesis-43-9 | Ari (m) | אֶעֶרְבֶנּוּ |
+| genesis-44-1 | Ari (m) | וַיְצַו, אַמְתְּחֹת, יוּכְלוּן, אַמְתַּחְתּוֹ |
 | genesis-44-16 | Ari (m) | עֲוֹן |
 | genesis-44-18 | Ari (m) | בְּאָזְנֵי, כְּפַרְעֹה |
 | genesis-44-32 | Ari (m) | עָרַב, אֲבִיאֶנּוּ |
 | genesis-44-8 | Ari (m) | אַמְתְּחֹתֵינוּ |
 | genesis-45-11 | Ari (m) | וְכִלְכַּלְתִּי |
+| genesis-45-12 | Ari (m) | וְעֵינֵי |
 | genesis-45-14 | Ari (m) | וַיֵּבְךְּ |
 | genesis-45-15 | Ari (m) | וַיֵּבְךְּ |
 | genesis-45-16 | Ari (m) | אֲחֵי, וַיִּיטַב |
 | genesis-45-18 | Ari (m) | וְאֶתְּנָה, וְאִכְלוּ |
 | genesis-45-19 | Ari (m) | עֲשׂוּ |
 | genesis-45-21 | Ari (m) | עֲגָלוֹת |
+| genesis-45-22 | Ari (m) | וְחָמֵשׁ |
+| genesis-45-26 | Ari (m) | לֵאמֹר עוֹד |
 | genesis-45-28 | Ari (m) | וְאֶרְאֶנּוּ |
 | genesis-45-7 | Ari (m) | שְׁאֵרִית |
+| genesis-45-9 | Ari (m) | אַל |
 | genesis-46-1 | Ari (m) | וַיִּסַּע, וְכָל |
 | genesis-46-13 | Ari (m) | יִשָׂשכָר |
 | genesis-46-16 | Ari (m) | וְחַגִּי, וְאַרְאֵלִי |
@@ -3136,6 +3590,7 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | genesis-46-27 | Ari (m) | בְמִצְרַיִם |
 | genesis-46-29 | Ari (m) | וַיֶּאְסֹר, וַיֵּבְךְּ |
 | genesis-46-3 | Ari (m) | אֲשִׂימְךָ |
+| genesis-46-30 | Ari (m) | אָמוּתָה |
 | genesis-46-31 | Ari (m) | אֶעֱלֶה |
 | genesis-46-4 | Ari (m) | אַעַלְךָ |
 | genesis-46-9 | Ari (m) | וּפַלּוּא |
@@ -3143,11 +3598,14 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | genesis-47-15 | Ari (m) | הָבָה |
 | genesis-47-16 | Ari (m) | וְאֶתְּנָה |
 | genesis-47-17 | Ari (m) | וַיְנַהֲלֵם, בְּכָל, (nothing) |
+| genesis-47-21 | Ari (m) | לֶעָרִים |
 | genesis-47-27 | Ari (m) | מִצְרַיִם, וַיֵּאָחֲזוּ, וַיִּפְרוּ וַיִּרְבּוּ מְאֹד |
 | genesis-47-29 | Ari (m) | תִקְבְּרֵנִי |
+| genesis-47-31 | Ari (m) | הִשָּׁבְעָה |
 | genesis-47-6 | Ari (m) | הִוא |
 | genesis-48-11 | Ari (m) | רְאֹה, זַרְעֶךָ |
 | genesis-48-14 | Ari (m) | אֶפְרַיִם, וְאֶת, שְׂמֹאלוֹ |
+| genesis-48-5 | Ari (m) | לְךָ בְּאֶרֶץ מִצְרַיִם עַד |
 | genesis-48-7 | Ari (m) | בְּעוֹד, וָאֶקְבְּרֶהָ |
 | genesis-49-16 | Ari (m) | דָּן יָדִין |
 | genesis-49-18 | Ari (m) | קִוִּיתִי |
@@ -3161,25 +3619,30 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | genesis-49-6 | Ari (m) | בְאַפָּם, עִקְּרוּ |
 | genesis-49-7 | Ari (m) | אֲחַלְּקֵם |
 | genesis-5-13 | Ari (m) | וַיּוֹלֶד |
+| genesis-5-19 | Ari (m) | וּבָנוֹת |
 | genesis-5-2 | Ari (m) | הִבָּרְאָם |
 | genesis-5-24 | Ari (m) | וַיִּתְהַלֵּךְ, חֲנוֹךְ |
 | genesis-5-26 | Ari (m) | הוֹלִידוֹ |
 | genesis-5-3 | Ari (m) | שֵׁת |
 | genesis-5-32 | Ari (m) | יָפֶת |
 | genesis-50-1 | Ari (m) | וַיֵּבְךְּ |
+| genesis-50-15 | Ari (m) | יִשְׂטְמֵנוּ |
 | genesis-50-2 | Ari (m) | וַיְצַו |
 | genesis-50-22 | Ari (m) | מֵאָה, וָעֶשֶׂר |
+| genesis-50-23 | Ari (m) | וַיַּרְא |
 | genesis-50-3 | Ari (m) | וַיִּמְלְאוּ |
 | genesis-50-5 | Ari (m) | אֶעֱלֶה, וְאֶקְבְּרָה |
 | genesis-6-10 | Ari (m) | יָפֶת |
 | genesis-6-3 | Ari (m) | בָאָדָם |
 | genesis-6-4 | Ari (m) | בָאָרֶץ |
 | genesis-6-5 | Ari (m) | רַע, כָּל |
+| genesis-7-11 | Ari (m) | בְּשִׁבְעָה, וַאֲרֻבֹּת |
 | genesis-7-18 | Ari (m) | וַיִּרְבּוּ |
 | genesis-7-2 | Ari (m) | הִוא |
 | genesis-8-17 | Ari (m) | אִתְּךָ, בָאָרֶץ |
 | genesis-8-19 | Ari (m) | וְכָל, יָצְאוּ |
 | genesis-8-4 | Ari (m) | אֲרָרָט |
+| genesis-9-17 | Ari (m) | (nothing), וּבֵין כָּל |
 | genesis-9-20 | Ari (m) | וַיִּטַּע |
 | genesis-9-21 | Ari (m) | אָהֳלֹה |
 | genesis-9-24 | Ari (m) | מִיֵּינוֹ |
@@ -3195,8 +3658,10 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | leviticus-10-6 | Ari (m) | וּלְאִיתָמָר |
 | leviticus-11-13 | Ari (m) | הָעָזְנִיָּה |
 | leviticus-11-21 | Ari (m) | כְרָעַיִם |
+| leviticus-11-22 | Ari (m) | הַסָּלְעָם |
 | leviticus-11-26 | Ari (m) | הִוא, מַפְרֶסֶת |
 | leviticus-11-3 | Ari (m) | מַפְרֶסֶת |
+| leviticus-11-30 | Ari (m) | וְהָאֲנָקָה |
 | leviticus-11-33 | Ari (m) | תִשְׁבֹּרוּ |
 | leviticus-11-39 | Ari (m) | הִיא |
 | leviticus-11-4 | Ari (m) | הוּא לָכֶם |
@@ -3206,11 +3671,13 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | leviticus-11-6 | Ari (m) | (nothing), לָכֶם |
 | leviticus-12-2 | Ari (m) | דְּוֹתָהּ |
 | leviticus-13-11 | Ari (m) | (nothing), וְטִמְּאוֹ |
+| leviticus-13-16 | Ari (m) | אוֹ |
 | leviticus-13-18 | Ari (m) | בְעֹרוֹ |
 | leviticus-13-2 | Ari (m) | בְעוֹר, בְעוֹר |
 | leviticus-13-23 | Ari (m) | הַשְּׁחִין |
 | leviticus-13-27 | Ari (m) | פָּשֹׂה, הִוא |
 | leviticus-13-3 | Ari (m) | וְשֵׂעָר |
+| leviticus-13-38 | Ari (m) | בְעוֹר |
 | leviticus-13-4 | Ari (m) | הִוא |
 | leviticus-13-41 | Ari (m) | יִמָּרֵט |
 | leviticus-13-43 | Ari (m) | לְבָנָה, אֲדַמְדֶּמֶת |
@@ -3221,6 +3688,7 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | leviticus-13-51 | Ari (m) | מַמְאֶרֶת, הוּא |
 | leviticus-13-52 | Ari (m) | מַמְאֶרֶת, הִוא |
 | leviticus-13-54 | Ari (m) | הַנָּגַע |
+| leviticus-13-56 | Ari (m) | וְאִם, הֻכַּבֵּס, וְקָרַע |
 | leviticus-13-58 | Ari (m) | וְסָר |
 | leviticus-14-10 | Ari (m) | בַשֶּׁמֶן |
 | leviticus-14-15 | Ari (m) | הַשְּׂמָאלִית |
@@ -3228,6 +3696,7 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | leviticus-14-26 | Ari (m) | הַשְּׂמָאלִית |
 | leviticus-14-3 | Ari (m) | נִרְפָּא |
 | leviticus-14-32 | Ari (m) | בְּטָהֳרָתוֹ |
+| leviticus-14-36 | Ari (m) | יִטְמָא |
 | leviticus-14-38 | Ari (m) | וְהִסְגִּיר |
 | leviticus-14-55 | Ari (m) | וּלְצָרַעַת |
 | leviticus-14-57 | Ari (m) | הַצָּרָעַת |
@@ -3242,15 +3711,18 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | leviticus-15-31 | Ari (m) | בְּטַמְּאָם |
 | leviticus-15-32 | Ari (m) | זֹאת, הַזָּב, לְטָמְאָה |
 | leviticus-15-33 | Ari (m) | וְהַזָּב |
+| leviticus-15-8 | Ari (m) | הַזָּב |
 | leviticus-16-14 | Ari (m) | בְאֶצְבָּעוֹ |
 | leviticus-16-17 | Ari (m) | כָּל |
 | leviticus-16-19 | Ari (m) | מִטֻּמְאֹת |
+| leviticus-16-2 | Ari (m) | בְכָל, הָאָרֹן |
 | leviticus-16-21 | Ari (m) | וְסָמַךְ, עֲוֹנֹת |
 | leviticus-16-22 | Ari (m) | עֲוֹנֹתָם |
 | leviticus-16-23 | Ari (m) | מוֹעֵד |
 | leviticus-16-27 | Ari (m) | בָאֵשׁ |
 | leviticus-16-30 | Ari (m) | בַיּוֹם |
 | leviticus-16-31 | Ari (m) | לָכֶם, וְעִנִּיתֶם |
+| leviticus-16-33 | Ari (m) | כָּל |
 | leviticus-16-4 | Ari (m) | וּבְאַבְנֵט |
 | leviticus-16-5 | Ari (m) | עֲדַת |
 | leviticus-16-9 | Ari (m) | חַטָּאת |
@@ -3265,10 +3737,12 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | leviticus-18-16 | Ari (m) | עֶרְוַת, עֶרְוַת |
 | leviticus-18-21 | Ari (m) | וּמִזַּרְעֲךָ |
 | leviticus-18-25 | Ari (m) | עֲוֹנָהּ |
+| leviticus-18-28 | Ari (m) | כַּאֲשֶׁר קָאָה אֶת |
 | leviticus-18-30 | Ari (m) | תִטַּמְּאוּ |
 | leviticus-18-6 | Ari (m) | שְׁאֵר |
 | leviticus-18-9 | Ari (m) | אֲחוֹתְךָ, אָבִיךָ אוֹ בַת אִמֶּךָ |
 | leviticus-19-10 | Ari (m) | תְעוֹלֵל |
+| leviticus-19-12 | Ari (m) | בִשְׁמִי, לַשָּׁקֶר |
 | leviticus-19-13 | Ari (m) | תָלִין |
 | leviticus-19-17 | Ari (m) | חֵטְא |
 | leviticus-19-20 | Ari (m) | (nothing), יוּמְתוּ |
@@ -3277,18 +3751,24 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | leviticus-19-31 | Ari (m) | הַיִּדְּעֹנִים |
 | leviticus-19-7 | Ari (m) | הֵאָכֹל |
 | leviticus-19-8 | Ari (m) | עֲוֹנוֹ, הַהִוא |
+| leviticus-2-10 | Ari (m) | מֵאִשֵּׁי |
+| leviticus-2-14 | Ari (m) | אָבִיב |
 | leviticus-2-3 | Ari (m) | מֵאִשֵּׁי |
 | leviticus-2-5 | Ari (m) | בְּלוּלָה, בַשֶּׁמֶן |
 | leviticus-2-9 | Ari (m) | אַזְכָּרָתָהּ |
 | leviticus-20-14 | Ari (m) | (nothing), אִמָּהּ זִמָּה הִוא בָּאֵשׁ יִשְׂרְפוּ אֹתוֹ וְאֶתְהֶן וְלֹא |
 | leviticus-20-16 | Ari (m) | לְרִבְעָה |
 | leviticus-20-17 | Ari (m) | עֲוֹנוֹ |
+| leviticus-20-18 | Ari (m) | יִשְׁכַּב |
 | leviticus-20-19 | Ari (m) | עֲוֹנָם |
+| leviticus-20-21 | Ari (m) | אָחִיו, עֶרְוַת, אָחִיו |
 | leviticus-20-3 | Ari (m) | וְהִכְרַתִּי, מִזַּרְעוֹ |
+| leviticus-20-5 | Ari (m) | וְהִכְרַתִּי |
 | leviticus-20-6 | Ari (m) | וְהִכְרַתִּי |
 | leviticus-21-11 | Ari (m) | יִטַּמָּא |
 | leviticus-21-17 | Ari (m) | מִזַּרְעֲךָ |
 | leviticus-21-3 | Ari (m) | וְלַאֲחֹתוֹ |
+| leviticus-21-5 | Ari (m) | (nothing), קָרְחָה בְּרֹאשָׁם, שָׂרָטֶת |
 | leviticus-22-11 | Ari (m) | בְלַחְמוֹ |
 | leviticus-22-16 | Ari (m) | עֲוֹן |
 | leviticus-22-21 | Ari (m) | לְפַלֵּא |
@@ -3308,24 +3788,30 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | leviticus-23-18 | Ari (m) | וְנִסְכֵּיהֶם |
 | leviticus-23-21 | Ari (m) | יִהְיֶה |
 | leviticus-23-3 | Ari (m) | מִקְרָא |
+| leviticus-23-32 | Ari (m) | בְּתִשְׁעָה, לַחֹדֶשׁ |
 | leviticus-23-43 | Ari (m) | בְּהוֹצִיאִי |
 | leviticus-23-5 | Ari (m) | בְּאַרְבָּעָה |
 | leviticus-24-12 | Ari (m) | בַּמִּשְׁמָר |
+| leviticus-24-14 | Ari (m) | וְסָמְכוּ |
 | leviticus-24-2 | Ari (m) | צַו |
 | leviticus-24-9 | Ari (m) | מֵאִשֵּׁי |
 | leviticus-25-10 | Ari (m) | תָּשֻׁבוּ |
 | leviticus-25-12 | Ari (m) | קֹדֶשׁ תִּהְיֶה לָכֶם, תְּבוּאָתָהּ |
 | leviticus-25-26 | Ari (m) | גְאֻלָּתוֹ |
+| leviticus-25-33 | Ari (m) | וַאֲשֶׁר, יִגְאַל, וְיָצָא מִמְכַּר בַּיִת וְעִיר |
 | leviticus-25-35 | Ari (m) | וּמָטָה |
 | leviticus-25-46 | Ari (m) | וּבְאַחֵיכֶם |
 | leviticus-25-5 | Ari (m) | סְפִיחַ, עִנְּבֵי |
 | leviticus-25-53 | Ari (m) | יִהְיֶה |
+| leviticus-25-55 | Ari (m) | מֵאֶרֶץ, מִצְרָיִם |
 | leviticus-26-13 | Ari (m) | עֻלְּכֶם, וָאוֹלֵךְ |
 | leviticus-26-15 | Ari (m) | מִצְוֹתַי |
 | leviticus-26-16 | Ari (m) | בֶּהָלָה |
 | leviticus-26-23 | Ari (m) | תִוָּסְרוּ |
 | leviticus-26-28 | Ari (m) | וְיִסַּרְתִּי |
+| leviticus-26-30 | Ari (m) | וְהִכְרַתִּי |
 | leviticus-26-33 | Ari (m) | בַגּוֹיִם |
+| leviticus-26-39 | Ari (m) | בַּעֲוֹנָם, בַּעֲוֹנֹת |
 | leviticus-26-41 | Ari (m) | עֲוֹנָם |
 | leviticus-26-43 | Ari (m) | בָּהְּשַׁמָּה, מָאָסוּ, גָּעֲלָה |
 | leviticus-26-6 | Ari (m) | וְהִשְׁבַּתִּי |
@@ -3338,6 +3824,7 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | leviticus-3-15 | Ari (m) | הַכְּלָיֹת, הַחֵלֶב, הַכְּלָיֹת |
 | leviticus-3-17 | Ari (m) | וְכָל |
 | leviticus-3-2 | Ari (m) | וְסָמַךְ |
+| leviticus-3-8 | Ari (m) | וְסָמַךְ |
 | leviticus-4-11 | Ari (m) | בְּשָׂרוֹ |
 | leviticus-4-15 | Ari (m) | וְסָמְכוּ |
 | leviticus-4-24 | Ari (m) | וְסָמַךְ |
@@ -3350,11 +3837,13 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | leviticus-5-1 | Ari (m) | עֲוֹנוֹ |
 | leviticus-5-15 | Ari (m) | תִמְעֹל |
 | leviticus-5-17 | Ari (m) | מִצְוֹת, עֲוֹנוֹ |
+| leviticus-5-2 | Ari (m) | וְאָשֵׁם |
 | leviticus-5-21 | Ari (m) | בַּעֲמִיתוֹ, עָשַׁק |
 | leviticus-5-22 | Ari (m) | אוֹ |
 | leviticus-5-23 | Ari (m) | וְאָשֵׁם |
 | leviticus-5-24 | Ari (m) | אוֹ |
 | leviticus-5-3 | Ari (m) | וְאָשֵׁם |
+| leviticus-5-4 | Ari (m) | בִּשְׁבֻעָה, וְאָשֵׁם |
 | leviticus-5-7 | Ari (m) | שֶׂה וְהֵבִיא |
 | leviticus-6-10 | Ari (m) | חָמֵץ, אֹתָהּ, מֵאִשָּׁי, הִוא כַּחַטָּאת וְכָאָשָׁם |
 | leviticus-6-11 | Ari (m) | מֵאִשֵּׁי |
@@ -3364,10 +3853,12 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | leviticus-6-8 | Ari (m) | בְּקֻמְצוֹ |
 | leviticus-6-9 | Ari (m) | תֵּאָכֵל, בַּחֲצַר |
 | leviticus-7-10 | Ari (m) | בְלוּלָה, בַשֶּׁמֶן |
+| leviticus-7-15 | Ari (m) | זֶבַח |
 | leviticus-7-16 | Ari (m) | זִבְחוֹ |
 | leviticus-7-18 | Ari (m) | הֵאָכֹל, עֲוֹנָהּ |
 | leviticus-7-20 | Ari (m) | מִזֶּבַח, הַשְּׁלָמִים, וְטֻמְאָתוֹ, וְנִכְרְתָה |
 | leviticus-7-24 | Ari (m) | וְאָכֹל |
+| leviticus-7-27 | Ari (m) | הַהִוא |
 | leviticus-7-35 | Ari (m) | מֵאִשֵּׁי |
 | leviticus-7-38 | Ari (m) | צַוֹּתוֹ |
 | leviticus-7-5 | Ari (m) | אִשֶּׁה, אָשָׁם |
@@ -3385,6 +3876,7 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | leviticus-9-24 | Ari (m) | וַיָּרֹנּוּ |
 | leviticus-9-4 | Ari (m) | בַשָּׁמֶן |
 | numbers-1-10 | Ari (m) | פְּדָהצוּר |
+| numbers-1-13 | Ari (m) | פַּגְעִיאֵל |
 | numbers-1-14 | Ari (m) | דְּעוּאֵל |
 | numbers-1-2 | Ari (m) | עֲדַת |
 | numbers-1-21 | Ari (m) | וַחֲמֵשׁ |
@@ -3396,13 +3888,16 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | numbers-10-14 | Ari (m) | וַיִּסַּע |
 | numbers-10-18 | Ari (m) | וְנָסַע, שְׁדֵיאוּר |
 | numbers-10-19 | Ari (m) | שִׁמְעוֹן |
+| numbers-10-2 | Ari (m) | חֲצוֹצְרֹת |
 | numbers-10-20 | Ari (m) | דְּעוּאֵל |
 | numbers-10-21 | Ari (m) | וְנָסְעוּ |
 | numbers-10-22 | Ari (m) | וְנָסַע |
 | numbers-10-25 | Ari (m) | וְנָסַע |
 | numbers-10-26 | Ari (m) | פַּגְעִיאֵל |
+| numbers-10-3 | Ari (m) | אֹהֶל |
 | numbers-10-35 | Ari (m) | בִּנְסֹעַ |
 | numbers-10-5 | Ari (m) | תְּרוּעָה, וְנָסְעוּ |
+| numbers-10-9 | Ari (m) | הַצַּר, מֵאֹיְבֵיכֶם |
 | numbers-11-11 | Ari (m) | מָצָתִי |
 | numbers-11-26 | Ari (m) | וַיִּתְנַבְּאוּ |
 | numbers-11-28 | Ari (m) | כְּלָאֵם |
@@ -3411,10 +3906,12 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | numbers-11-35 | Ari (m) | נָסְעוּ |
 | numbers-11-4 | Ari (m) | הִתְאַוּוּ, תַּאֲוָה |
 | numbers-12-10 | Ari (m) | סָר, כַּשָּׁלֶג |
+| numbers-12-12 | Ari (m) | בְשָׂרוֹ |
 | numbers-12-15 | Ari (m) | נָסַע |
 | numbers-12-8 | Ari (m) | בְחִידֹת, בְמֹשֶׁה |
 | numbers-12-9 | Ari (m) | וַיִּחַרְאַף |
 | numbers-13-23 | Ari (m) | אֶחָד |
+| numbers-13-28 | Ari (m) | וְהֶעָרִים, בְּצֻרוֹת |
 | numbers-13-3 | Ari (m) | פָּארָן |
 | numbers-13-30 | Ari (m) | כָּלֵב אֶת, עָלֹה |
 | numbers-13-32 | Ari (m) | עָבַרְנוּ בָהּ לָתוּר, וְכָל הָעָם אֲשֶׁר |
@@ -3430,10 +3927,12 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | numbers-14-44 | Ari (m) | וַיַּעְפִּלוּ, וַאֲרוֹן |
 | numbers-14-5 | Ari (m) | קְהַל |
 | numbers-14-9 | Ari (m) | בַּאדֹנָי, סָר |
+| numbers-15-10 | Ari (m) | נִיחֹחַ |
 | numbers-15-11 | Ari (m) | לַשֶּׂה, בַכְּבָשִׂים |
 | numbers-15-13 | Ari (m) | נִיחֹחַ |
 | numbers-15-20 | Ari (m) | עֲרִסֹתֵכֶם |
 | numbers-15-21 | Ari (m) | עֲרִסֹתֵיכֶם |
+| numbers-15-22 | Ari (m) | הַמִּצְוֹת |
 | numbers-15-24 | Ari (m) | וְעָשׂוּ, וְנִסְכּוֹ, כַּמִּשְׁפָּט, לְחַטָּת |
 | numbers-15-25 | Ari (m) | וְכִפֶּר, עֲדַת, וְחַטָּאתָם |
 | numbers-15-26 | Ari (m) | עֲדַת |
@@ -3457,6 +3956,7 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | numbers-16-9 | Ari (m) | מֵעֲדַת |
 | numbers-17-13 | Ari (m) | וַיַּעֲמֹד |
 | numbers-17-17 | Ari (m) | מֵאִתָּם |
+| numbers-17-19 | Ari (m) | אִוָּעֵד |
 | numbers-17-2 | Ari (m) | הַמַּחְתֹּת |
 | numbers-17-27 | Ari (m) | גָּוַעְנוּ |
 | numbers-17-28 | Ari (m) | לִגְוֹעַ |
@@ -3469,6 +3969,7 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | numbers-18-23 | Ari (m) | עֲוֹנָם |
 | numbers-18-27 | Ari (m) | הַיָּקֶב |
 | numbers-18-30 | Ari (m) | בַּהֲרִימְכֶם, יָקֶב |
+| numbers-18-8 | Ari (m) | תְּרוּמֹתָי |
 | numbers-19-11 | Ari (m) | בְּמֵת |
 | numbers-19-16 | Ari (m) | בְמֵת |
 | numbers-19-2 | Ari (m) | עֹל |
@@ -3477,10 +3978,13 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | numbers-2-10 | Ari (m) | שְׁדֵיאוּר |
 | numbers-2-12 | Ari (m) | וְנָשִׂיא, שַׁדָּי |
 | numbers-2-16 | Ari (m) | יִסָּעוּ |
+| numbers-2-2 | Ari (m) | בְאֹתֹת |
 | numbers-2-20 | Ari (m) | פְּדָהצוּר |
+| numbers-2-23 | Ari (m) | וְאַרְבַּע |
 | numbers-2-25 | Ari (m) | עַמִּישַׁדָּי |
 | numbers-2-27 | Ari (m) | פַּגְעִיאֵל |
 | numbers-2-29 | Ari (m) | אֲחִירַע |
+| numbers-2-31 | Ari (m) | יִסְעוּ |
 | numbers-2-34 | Ari (m) | נָסָעוּ |
 | numbers-2-4 | Ari (m) | וּצְבָאוֹ |
 | numbers-2-5 | Ari (m) | צוּעָר |
@@ -3498,7 +4002,9 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | numbers-21-17 | Ari (m) | בְאֵר עֱנוּ |
 | numbers-21-22 | Ari (m) | אֶעְבְּרָה, בְאֵר |
 | numbers-21-23 | Ari (m) | יָהְצָה |
+| numbers-21-28 | Ari (m) | עָר, מוֹאָב |
 | numbers-21-30 | Ari (m) | דִּיבוֹן |
+| numbers-21-31 | Ari (m) | וַיֵּשֶׁב |
 | numbers-21-33 | Ari (m) | עוֹג |
 | numbers-21-4 | Ari (m) | מֵהֹר |
 | numbers-21-7 | Ari (m) | הִתְפַּלֵּל |
@@ -3508,13 +4014,16 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | numbers-22-20 | Ari (m) | וַיֹּאמֶר לוֹ אִם |
 | numbers-22-27 | Ari (m) | וַיִּחַר |
 | numbers-22-28 | Ari (m) | לְבִלְעָם |
+| numbers-22-3 | Ari (m) | מְאֹד |
 | numbers-22-30 | Ari (m) | הַהַסְכֵּן |
 | numbers-22-33 | Ari (m) | וַתִּרְאַנִי, וַתֵּט |
 | numbers-22-34 | Ari (m) | בִּלְעָם |
 | numbers-22-38 | Ari (m) | אוּכַל |
+| numbers-22-4 | Ari (m) | יְלַחֲכוּ, כִּלְחֹךְ |
 | numbers-22-40 | Ari (m) | לְבִלְעָם |
 | numbers-22-41 | Ari (m) | (nothing) |
 | numbers-22-5 | Ari (m) | פְּתוֹרָה |
+| numbers-22-6 | Ari (m) | תָּאֹר |
 | numbers-22-8 | Ari (m) | פֹה |
 | numbers-23-1 | Ari (m) | וְהָכֵן |
 | numbers-23-12 | Ari (m) | אֶשְׁמֹר |
@@ -3523,7 +4032,9 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | numbers-23-19 | Ari (m) | וְיִתְנֶחָם |
 | numbers-23-22 | Ari (m) | רְאֵם |
 | numbers-23-26 | Ari (m) | אֶעֱשֶׂה |
+| numbers-23-28 | Ari (m) | הַפְּעוֹר |
 | numbers-23-7 | Ari (m) | בָלָק, קֶדֶם, אָרָה, זֹעֲמָה |
+| numbers-23-9 | Ari (m) | אֶרְאֶנּוּ |
 | numbers-24-1 | Ari (m) | בִּלְעָם |
 | numbers-24-14 | Ari (m) | אִיעָצְךָ |
 | numbers-24-15 | Ari (m) | בְעֹר |
@@ -3532,13 +4043,17 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | numbers-24-3 | Ari (m) | בְעֹר |
 | numbers-24-4 | Ari (m) | שַׁדַּי |
 | numbers-24-7 | Ari (m) | מֵאֲגַג |
+| numbers-24-8 | Ari (m) | רְאֵם |
 | numbers-25-11 | Ari (m) | בְּקַנְאוֹ, בְּקִנְאָתִי |
+| numbers-25-18 | Ari (m) | בְיוֹם |
 | numbers-25-3 | Ari (m) | וַיִּחַר |
+| numbers-25-5 | Ari (m) | לְבַעַל, פְּעוֹר |
 | numbers-26-14 | Ari (m) | וְעֶשְׂרִים |
 | numbers-26-2 | Ari (m) | עֲדַת |
 | numbers-26-26 | Ari (m) | לְסֶרֶד, הַסַּרְדִּי |
 | numbers-26-31 | Ari (m) | וְאַשְׂרִיאֵל, הָאַשְׂרִאֵלִי |
 | numbers-26-34 | Ari (m) | וּפְקֻדֵיהֶם |
+| numbers-26-35 | Ari (m) | הַשֻּׁתַלְחִי, הַבַּכְרִי |
 | numbers-26-37 | Ari (m) | וַחֲמֵשׁ |
 | numbers-26-43 | Ari (m) | הַשּׁוּחָמִי, לִפְקֻדֵיהֶם, אַרְבָּעָה |
 | numbers-26-51 | Ari (m) | וָאָלֶף |
@@ -3549,13 +4064,17 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | numbers-26-61 | Ari (m) | וַאֲבִיהוּא |
 | numbers-26-9 | Ari (m) | הִצּוּ |
 | numbers-27-10 | Ari (m) | וּנְתַתֶּם |
+| numbers-27-11 | Ari (m) | וְיָרַשׁ |
 | numbers-27-14 | Ari (m) | בַמַּיִם |
 | numbers-27-18 | Ari (m) | וְסָמַכְתָּ |
 | numbers-27-3 | Ari (m) | בַּעֲדַת |
+| numbers-27-9 | Ari (m) | לְאֶחָיו |
 | numbers-28-10 | Ari (m) | בְּשַׁבַּתּוֹ, וְנִסְכָּהּ |
+| numbers-28-12 | Ari (m) | בַשֶּׁמֶן, בַשֶּׁמֶן |
 | numbers-28-14 | Ari (m) | וְנִסְכֵּיהֶם |
 | numbers-28-15 | Ari (m) | וְנִסְכּוֹ |
 | numbers-28-2 | Ari (m) | צַו, לְאִשַּׁי |
+| numbers-28-20 | Ari (m) | בַשָּׁמֶן |
 | numbers-28-21 | Ari (m) | לַכֶּבֶשׂ |
 | numbers-28-24 | Ari (m) | וְנִסְכּוֹ |
 | numbers-28-28 | Ari (m) | בְּלוּלָה, בַשָּׁמֶן |
@@ -3567,14 +4086,17 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | numbers-28-9 | Ari (m) | בַשֶּׁמֶן, וְנִסְכּוֹ |
 | numbers-29-10 | Ari (m) | עִשָּׂרוֹן, עִשָּׂרוֹן |
 | numbers-29-11 | Ari (m) | וְנִסְכֵּיהֶם |
+| numbers-29-14 | Ari (m) | בְּלוּלָה, בַשָּׁמֶן |
 | numbers-29-15 | Ari (m) | וְעִשָּׂרוֹן, עִשָּׂרוֹן |
 | numbers-29-16 | Ari (m) | וְנִסְכָּהּ |
 | numbers-29-19 | Ari (m) | וְנִסְכֵּיהֶם |
 | numbers-29-2 | Ari (m) | אַיִל |
 | numbers-29-20 | Ari (m) | עַשְׁתֵּי |
 | numbers-29-22 | Ari (m) | וְנִסְכָּהּ |
+| numbers-29-24 | Ari (m) | וְנִסְכֵּיהֶם |
 | numbers-29-26 | Ari (m) | אֵילִם |
 | numbers-29-27 | Ari (m) | וְנִסְכֵּיהֶם |
+| numbers-29-28 | Ari (m) | וְנִסְכָּהּ |
 | numbers-29-3 | Ari (m) | בַשָּׁמֶן |
 | numbers-29-31 | Ari (m) | מִנְחָתָהּ וּנְסָכֶיהָ |
 | numbers-29-33 | Ari (m) | וְנִסְכֵּהֶם |
@@ -3595,15 +4117,18 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | numbers-3-46 | Ari (m) | הָעֹדְפִים |
 | numbers-3-48 | Ari (m) | הָעֹדְפִים |
 | numbers-3-49 | Ari (m) | הָעֹדְפִים |
+| numbers-30-11 | Ari (m) | אִסָּר |
 | numbers-30-13 | Ari (m) | שָׁמְעוֹ, וּלְאִסַּר |
 | numbers-30-15 | Ari (m) | אֱסָרֶיהָ |
 | numbers-30-16 | Ari (m) | עֲוֹנָהּ |
 | numbers-30-3 | Ari (m) | הִשָּׁבַע, לֶאְסֹר, אִסָּר |
+| numbers-30-4 | Ari (m) | וְאִשָּׁה כִּי תִדֹּר נֶדֶר לַאדֹנָי וְאָסְרָה אִסָּר, בִּנְעֻרֶיהָ |
 | numbers-30-5 | Ari (m) | וֶאֱסָרָהּ |
 | numbers-30-6 | Ari (m) | אָבִיהָ, וֶאֱסָרֶיהָ, אָבִיהָ |
 | numbers-30-7 | Ari (m) | אוֹ |
 | numbers-30-8 | Ari (m) | וֶאֱסָרֶהָ |
 | numbers-31-12 | Ari (m) | מוֹאָב |
+| numbers-31-14 | Ari (m) | הָאֲלָפִים |
 | numbers-31-23 | Ari (m) | יָבֹא, וְטָהֵר, יִתְחַטָּא, יָבֹא |
 | numbers-31-24 | Ari (m) | בִּגְדֵיכֶם |
 | numbers-31-29 | Ari (m) | לְאֶלְעָזָר |
@@ -3621,6 +4146,7 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | numbers-32-26 | Ari (m) | מִקְנֵנוּ |
 | numbers-32-28 | Ari (m) | וַיְצַו |
 | numbers-32-3 | Ari (m) | וְדִיבֹן |
+| numbers-32-30 | Ari (m) | בְתֹכְכֶם |
 | numbers-32-32 | Ari (m) | נַחְנוּ |
 | numbers-32-33 | Ari (m) | עָרֵי |
 | numbers-32-36 | Ari (m) | עָרֵי |
@@ -3631,11 +4157,13 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | numbers-32-8 | Ari (m) | בְּשָׁלְחִי |
 | numbers-33-12 | Ari (m) | וַיִּסְעוּ |
 | numbers-33-13 | Ari (m) | וַיִּסְעוּ מִדָּפְקָה |
+| numbers-33-14 | Ari (m) | וַיִּסְעוּ, מֵאָלוּשׁ |
 | numbers-33-21 | Ari (m) | וַיַּחֲנוּ |
 | numbers-33-22 | Ari (m) | וַיִּסְעוּ |
 | numbers-33-25 | Ari (m) | בְּמַקְהֵלֹת |
 | numbers-33-31 | Ari (m) | וַיִּסְעוּ, מִמֹּסֵרוֹת, בִּבְנֵי, יַעֲקָן |
 | numbers-33-33 | Ari (m) | וַיִּסְעוּ |
+| numbers-33-36 | Ari (m) | מֵעֶצְיוֹן, בְמִדְבַּר צִן הִוא |
 | numbers-33-37 | Ari (m) | בְּהֹר |
 | numbers-33-39 | Ari (m) | בְּהֹר |
 | numbers-33-41 | Ari (m) | מֵהֹר |
@@ -3647,7 +4175,9 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | numbers-33-52 | Ari (m) | מַשְׂכִּיֹּתָם |
 | numbers-33-53 | Ari (m) | וְהוֹרַשְׁתֶּם, לָכֶם |
 | numbers-33-54 | Ari (m) | וְלַמְעַט |
+| numbers-33-7 | Ari (m) | וַיִּסְעוּ |
 | numbers-33-8 | Ari (m) | בְּמָרָה |
+| numbers-34-10 | Ari (m) | מֵחֲצַר |
 | numbers-34-13 | Ari (m) | וַיְצַו |
 | numbers-34-16 | Ari (m) | וַיְדַבֵּר |
 | numbers-34-2 | Ari (m) | צַו |
@@ -3667,8 +4197,11 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | numbers-35-20 | Ari (m) | בִּצְדִיָּה |
 | numbers-35-21 | Ari (m) | אוֹ, הִכָּהוּ |
 | numbers-35-22 | Ari (m) | צְדִיָּה |
+| numbers-35-24 | Ari (m) | גֹּאֵל |
 | numbers-35-27 | Ari (m) | (nothing) |
+| numbers-35-28 | Ari (m) | בְעִיר |
 | numbers-35-30 | Ari (m) | וְעֵד |
+| numbers-35-5 | Ari (m) | וּמַדֹּתֶם, הֶעָרִים |
 | numbers-35-8 | Ari (m) | מֵעָרָיו |
 | numbers-36-10 | Ari (m) | עָשׂוּ |
 | numbers-36-13 | Ari (m) | הַמִּצְוֹת |
@@ -3677,39 +4210,50 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | numbers-4-10 | Ari (m) | הַמּוֹט |
 | numbers-4-11 | Ari (m) | בַּדָּיו |
 | numbers-4-12 | Ari (m) | בָם |
+| numbers-4-15 | Ari (m) | בִּנְסֹעַ |
 | numbers-4-19 | Ari (m) | עֲשׂוּ |
 | numbers-4-24 | Ari (m) | הַגֵּרְשֻׁנִּי |
+| numbers-4-29 | Ari (m) | אֹתָם |
 | numbers-4-30 | Ari (m) | הַבָּא |
+| numbers-4-37 | Ari (m) | מוֹעֵד |
 | numbers-4-41 | Ari (m) | מוֹעֵד |
 | numbers-4-9 | Ari (m) | כָּל כְּלֵי |
 | numbers-5-13 | Ari (m) | וְהִוא |
+| numbers-5-14 | Ari (m) | (nothing) |
 | numbers-5-15 | Ari (m) | קְנָאֹת הוּא, עָוֹן |
 | numbers-5-17 | Ari (m) | חָרֶשׂ |
 | numbers-5-19 | Ari (m) | הִנָּקִי |
 | numbers-5-2 | Ari (m) | צַו |
 | numbers-5-25 | Ari (m) | הַקְּנָאֹת |
+| numbers-5-28 | Ari (m) | (nothing) |
 | numbers-5-31 | Ari (m) | מֵעָוֹן, עֲוֹנָהּ |
 | numbers-5-5 | Ari (m) | וַיְדַבֵּר, לֵּאמֹר |
 | numbers-6-12 | Ari (m) | וְהִזִּיר |
 | numbers-6-15 | Ari (m) | וּמִנְחָתָם, וְנִסְכֵּיהֶם |
 | numbers-6-2 | Ari (m) | כִּי יַפְלִא לִנְדֹּר |
 | numbers-6-3 | Ari (m) | יִשְׁתֶּה, יִשְׁתֶּה, וִיבֵשִׁים |
+| numbers-6-5 | Ari (m) | נִזְרוֹ, תַּעַר, יַזִּיר |
 | numbers-7-13 | Ari (m) | בַשֶּׁמֶן |
 | numbers-7-18 | Ari (m) | צוּעָר נְשִׂיא יִשָּׂשכָר |
+| numbers-7-19 | Ari (m) | בַשֶּׁמֶן |
 | numbers-7-22 | Ari (m) | לְחַטָּאת |
 | numbers-7-23 | Ari (m) | אֵילִם |
 | numbers-7-25 | Ari (m) | בַשֶּׁמֶן |
 | numbers-7-29 | Ari (m) | אֵילִם |
 | numbers-7-31 | Ari (m) | בַשֶּׁמֶן |
 | numbers-7-35 | Ari (m) | אֵילִם, שְׁדֵיאוּר |
+| numbers-7-37 | Ari (m) | אֶחָד, בְּלוּלָה, לְמִנְחָה |
+| numbers-7-40 | Ari (m) | לְחַטָּאת |
 | numbers-7-43 | Ari (m) | בַשֶּׁמֶן |
 | numbers-7-46 | Ari (m) | לְחַטָּאת |
 | numbers-7-47 | Ari (m) | אֵילִם, דְּעוּאֵל |
+| numbers-7-49 | Ari (m) | בְּשֶׁקֶל, בַשֶּׁמֶן |
 | numbers-7-5 | Ari (m) | מֵאִתָּם |
 | numbers-7-50 | Ari (m) | מְלֵאָה, קְטֹרֶת |
 | numbers-7-53 | Ari (m) | אֵילִם |
 | numbers-7-55 | Ari (m) | בַשֶּׁמֶן |
 | numbers-7-58 | Ari (m) | לְחַטָּאת |
+| numbers-7-59 | Ari (m) | אֵילִם |
 | numbers-7-61 | Ari (m) | בַשֶּׁמֶן |
 | numbers-7-65 | Ari (m) | אֵילִם |
 | numbers-7-67 | Ari (m) | בְּשֶׁקֶל, בַשֶּׁמֶן |
@@ -3728,6 +4272,7 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | numbers-8-6 | Ari (m) | הַלְוִיִּם |
 | numbers-8-7 | Ari (m) | תַעַר |
 | numbers-8-8 | Ari (m) | בְּלוּלָה, בַשָּׁמֶן |
+| numbers-9-1 | Ari (m) | מֵאֶרֶץ |
 | numbers-9-10 | Ari (m) | אוֹ, בְדֶרֶךְ, אוֹ |
 | numbers-9-13 | Ari (m) | וְנִכְרְתָה |
 | numbers-9-17 | Ari (m) | יִסְעוּ |
@@ -3736,4 +4281,5 @@ The sound and pace checks pass; the word recognizer wrote some words differently
 | numbers-9-20 | Ari (m) | יִסָּעוּ |
 | numbers-9-21 | Ari (m) | וְנָסָעוּ, וְנָסָעוּ |
 | numbers-9-22 | Ari (m) | יִסָּעוּ, יִסָּעוּ |
+| numbers-9-23 | Ari (m) | יִסָּעוּ |
 | numbers-9-8 | Ari (m) | וְאֶשְׁמְעָה |

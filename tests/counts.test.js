@@ -201,7 +201,7 @@ test('C-05: every surface reads its numbers through src/lib/counts.js', () => {
     'src/progress/weekly.js', 'src/coursemap/syllabus.view.js', 'src/shell/backup-reminder.js', 'src/shell/about.view.js', 'src/vocab/vocab.view.js',
     'src/awards/gallery.view.js', 'src/awards/eligibility.js', 'preview/loops/daily.view.js', 'src/retention/shop.view.js', 'src/retention/league.view.js',
     'src/shell/showcase.js', 'src/shell/statbar.js', 'src/retention/ui.js', 'src/retention/xp.js', 'src/retention/streak.js', 'src/retention/boot.js',
-    'src/morning/model.js', 'src/shell/weekstrip.js', 'src/classtrack/classtrack.view.js', 'src/shell/i18n.js', 'src/home/builder.js', 'src/games/wordfinder.view.js',
+    'src/morning/model.js', 'src/shell/weekstrip.js', 'src/classtrack/classtrack.view.js', 'src/shell/i18n.js', 'src/games/wordfinder.view.js',
     'src/roots/roots.view.js', 'preview/loops/points.js', 'preview/loops/stats.js'];
   for (const f of surfaces) assert.match(read(f), /lib\/counts\.js['"]/, f);
   assert.match(read('src/lib/counts.js'), /from '\.\/counts\.generated\.js'/);

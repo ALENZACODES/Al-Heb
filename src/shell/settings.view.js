@@ -146,18 +146,18 @@ export function mount(root, ctx) {
     labelled('lineLength', 'Line length', { normal: 'Normal', narrow: 'Short lines' })];
   root.replaceChildren(h('article', { class: 'card' },
     h('h1', { id: 'view-title', tabindex: '-1' }, t('settings.title')),
-    h('p', {}, h('a', { href: '#/accessibility', id: 's-a11y-link' }, 'Accessibility: text, sound, colour, touch and calm settings'), ' · ', h('a', { href: '#/shop' }, 'Streak, hearts and reminders'), ' · ', h('a', { href: '#/help', id: 's-help-link' }, 'Help: how Aleph works, in plain words')),
+    h('p', {}, h('a', { href: '#/accessibility', id: 's-a11y-link' }, 'Accessibility: text, sound, colour, touch and calm settings'), ' · ', h('a', { href: '#/shop' }, 'Streak, hearts and reminders'), ' · ', h('a', { href: '#/help', id: 's-help-link' }, 'Help: answers to common questions')),
     h('p', { class: 'muted' }, plain('settingsIntro')),
     // The sound statement and the "what is ready" list live on About (one place for notes about the app), linked here.
-    h('p', { class: 'small muted' }, 'About the voices and what is still being built: ', h('a', { href: '#/about' }, 'About Aleph'), '.'),
+    h('p', { class: 'small muted' }, 'More about the voices: ', h('a', { href: '#/about' }, 'About Aleph'), '.'),
     h('p', { class: 'small muted' }, h('a', { href: '#/privacy', id: 's-privacy-link' }, 'Privacy'), ' · ', h('a', { href: '#/terms', id: 's-terms-link' }, 'Terms & sources'), '.'),
     h('p', { class: 'small muted' }, h('a', { href: '#/packs', id: 's-packs-link' }, 'Language packs'), ': optional downloads that work on this device. See, download or delete them.'),
     status, // right under the backup buttons so a confirmation is visible without scrolling
     radioGroup('voice', 'settings.voice'),
     h('div', { class: 'teacher-row', id: 's-teachers' },
-      h('figure', { class: 'teacher' }, ctx.img?.(h, { kind: 'id', id: 'CHAR_noa_listen', width: 300, class: 'teacher-pic' }) ?? null, h('figcaption', {}, 'Noa — the woman’s voice')),
-      h('figure', { class: 'teacher' }, ctx.img?.(h, { kind: 'id', id: 'CHAR_ari_listen', width: 300, class: 'teacher-pic' }) ?? null, h('figcaption', {}, 'Ari — the man’s voice'))),
-    h('p', { class: 'muted', id: 's-pron-help' }, 'Pronunciation style is the way Hebrew sounds are said. It changes the sounds you hear and read. Pick the one your synagogue or teacher uses.'),
+      h('figure', { class: 'teacher' }, ctx.img?.(h, { kind: 'id', id: 'CHAR_noa_listen', width: 300, class: 'teacher-pic' }) ?? null, h('figcaption', {}, 'Noa, the woman’s voice')),
+      h('figure', { class: 'teacher' }, ctx.img?.(h, { kind: 'id', id: 'CHAR_ari_listen', width: 300, class: 'teacher-pic' }) ?? null, h('figcaption', {}, 'Ari, the man’s voice'))),
+    h('p', { class: 'muted', id: 's-pron-help' }, 'Your pronunciation style sets how Hebrew is written in English letters, such as Shabbat or Shabbos. Pick the one your synagogue or teacher uses.'),
     radioGroup('congregation', 'settings.congregation'),
     radioGroup('goal', 'settings.goal'),
     // Progressive disclosure: only the three basic choices are open. Each group below opens on its own, so no screen shows a long list at once.

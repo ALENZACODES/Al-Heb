@@ -17,7 +17,7 @@ const routeOf = (href) => matchRoute(href).route;
 test('stage 1: five reading levels map to the agreed routes and are stored under onboarding.v1', () => {
   assert.equal(M.STORE_KEY, 'onboarding.v1');
   assert.deepEqual(M.LETTER_ANSWERS.map((a) => [a.label, a.start]), [
-    ['Starting from zero — I do not know the letters', '/firstday'], ['I recognize some letters', '/placement'], ['I know the letters, but cannot read words yet', '/placement'], ['I can read simple words with vowel marks', '/placement'], ['I can read words and sentences comfortably', '/placement']]);
+    ['I\'m new to Hebrew', '/firstday'], ['I know some letters', '/placement'], ['I know the letters, but can\'t read words yet', '/placement'], ['I can read simple words with vowel marks', '/placement'], ['I can read words and sentences comfortably', '/placement']]);
   for (const a of M.LETTER_ANSWERS) assert.equal(routeOf('#' + a.start)?.name, a.start.slice(1));
   const r = M.answerLetters(null, 'none', '2026-11-04T00:00:00.000Z');
   assert.equal(r.v, 1); assert.equal(r.letters, 'none'); assert.equal(r.start, '/firstday'); assert.equal(r.step, 'congregation');
@@ -61,9 +61,9 @@ test('buildPlan: 7 days, day 1 is the starting point, every item links to an exi
   assert.equal(p.days[6].items[0].kind, 'review');
   assert.equal(p.source, 'default');
 });
-test('buildPlan: "some" without a placement result starts with the check and says the lessons are a placeholder', () => {
+test('buildPlan: "some" without a placement result starts with the check and says the plan is rebuilt after it', () => {
   const p = M.buildPlan({ record: rec('some'), lessons: D.lessons, plans: D.plans });
-  assert.equal(p.days[0].items[0].href, '#/placement'); assert.match(p.note, /placeholder/);
+  assert.equal(p.days[0].items[0].href, '#/placement'); assert.match(p.note, /for now. Take the placement check/);
   assert.equal(p.startLesson, 'r01');
 });
 test('buildPlan: a placement result moves the start lesson and drops the check; unknown lessons are ignored', () => {
@@ -75,7 +75,7 @@ test('buildPlan: a placement result moves the start lesson and drops the check; 
   assert.ok(!M.planHrefs(p).includes('#/placement'));
   assert.equal(p.days[0].items[0].lesson, 'r07');
   const bad = M.buildPlan({ record: rec('vowels', 20), placement: placement('zzz'), lessons: D.lessons, plans: D.plans });
-  assert.equal(bad.startLesson, 'r01'); assert.match(bad.note, /placeholder/);
+  assert.equal(bad.startLesson, 'r01'); assert.match(bad.note, /for now. Take the placement check/);
   const israelOnly = M.placementLesson(placement(D.lessons.find((l) => l.track === 'israel')?.id || 'i01'), read);
   assert.equal(israelOnly, null);
 });
@@ -308,7 +308,7 @@ test('view, stage 2: the sound line follows the picked pronunciation, and "Start
   await check(root, 'pron', 'ashkenazi');
   // "Use my browser's voice anyway" is on by default: the line says the device voice will not sound Ashkenazi
   assert.equal(note().getAttribute('data-audio-support'), 'device-mismatch');
-  assert.match(note().textContent, /No Ashkenazi audio yet.*Israeli Hebrew, so it will not sound Ashkenazi/);
+  assert.match(note().textContent, /Your device voice is on.*Israeli Hebrew, so it will not sound Ashkenazi/);
   assert.doesNotMatch(note().textContent, /recorded teacher clips? (is|are) ready|Ashkenazi voice/i);
   const box = root.querySelector('#ob-silent'); box.checked = true; await box.fire('change');
   assert.equal(settings.get('audioFree'), true);

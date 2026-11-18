@@ -11,7 +11,7 @@
 import { plain } from "../shell/plain-copy.js";
 import { lessonSummaries as lessons, ranks, rankOf } from "./lessons-index.js";
 import { rankSummary, rankBadge } from "./ranks.js";
-import { reviewsDue, minutesGoal, LESSONS, SCOPE, scopeOfTrack, daysText } from "../lib/counts.js";
+import { reviewsDue, minutesGoal, scopeOfTrack, daysText } from "../lib/counts.js";
 import { plural } from "../shell/plural.js";
 import { el, heText, tr, replaceKeepingFocus, levelLabel } from "./dom.js";
 import { loadState } from "./actions.js";
@@ -89,7 +89,7 @@ function mountMap(root, ctx) {
       ctx?.hasRoute?.("library") ? el("p", { class: "alef-plan-link" }, el("a", { href: "#/library" }, "Library"), ": short reads on Shabbat, the holidays and prayer, each with its Hebrew words.") : null,
       ctx?.hasRoute?.("lab") ? el("p", { class: "alef-plan-link" }, el("a", { href: "#/lab" }, "Brain Lab"), ": today’s three quick drills for your Hebrew eyes, ears and memory.") : null,
       // Scope named on the page (M-01): this is one track; the whole course and the ten-week plan count other sets (src/lib/counts.js SCOPE).
-      el("p", { class: "alef-progress", role: "status", "data-scope": scopeOfTrack(track) }, `${doneInTrack} / ${list.length} ${tr(ctx, "learn.lessonsDone", "lessons done")} `, el("span", { class: "muted" }, `(${SCOPE[scopeOfTrack(track)]}; ${LESSONS.all} ${SCOPE.all})`)),
+      el("p", { class: "alef-progress", role: "status", "data-scope": scopeOfTrack(track) }, `${doneInTrack} of ${list.length} ${tr(ctx, "learn.lessonsDone", "lessons done")} `, el("span", { class: "muted" }, track === "israel" ? "on the Israel track" : "on the reading track")),
       el("p", { class: "alef-due", role: "status" }, dueCount
         ? dueCount === 1 ? "1 review due" : `${dueCount} ${tr(ctx, "learn.dueReviews", "reviews due")}`
         : tr(ctx, "learn.noDue", "No reviews due"), " ",
@@ -184,7 +184,7 @@ function mountMap(root, ctx) {
       highest ? rankBadge(el, highest) : tr(ctx, "learn.belt.none", "none yet"),
       current ? [` · ${tr(ctx, "learn.belt.next", "next")}: `, rankBadge(el, current), ` (${current.lessons.filter((id) => done.has(id)).length} of ${current.lessons.length} ${tr(ctx, "learn.lessonsDone", "lessons done")})`]
         : ` · ${tr(ctx, "learn.belt.all", "every rank earned; keep practicing")}`,
-      ". ", el("span", { class: "muted" }, tr(ctx, "learn.belt.note", "Krav Maga style belts and patches, Aleph's own ranks. Each rank is a run of lessons in course order; finish them to earn it.")));
+      ". ", el("span", { class: "muted" }, tr(ctx, "learn.belt.note", "Finish a rank\u2019s lessons to earn its Krav Maga\u2013style belt.")));
   }
   render();
   return () => { alive = false; wrap.remove(); };

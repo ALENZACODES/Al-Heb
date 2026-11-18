@@ -50,7 +50,7 @@ test("recommendation always exists in the real curriculum, for many simulated le
 test("a lone slip is forgiven; a confirmed miss is not", () => {
   const lone = items.slice(0, 8).map((i, k) => ({ id: i.id, correct: k !== 2 }));
   const r1 = M.recommend(items, lone, config, data.lessons);
-  assert.match(r1.reason, /no confirmed miss/);
+  assert.match(r1.reason, /no clear misses/);
   const r2 = M.recommend(items, items.slice(0, 5).map((i, k) => ({ id: i.id, correct: k < 2 })), config, data.lessons);
   assert.equal(r2.lesson, items[2].lesson);
 });
@@ -84,7 +84,7 @@ test("view: mounts, flags draft, runs to a result, saves placement.v1, unmounts"
   const played = [];
   const un = mount(root, { store, placementData: P, audio: { play: async (k, i) => { played.push([k, i]); return { ok: true }; } }, clock: { now: () => 1 } });
   const start = await waitFor(() => find(root, (n) => n.attrs.id === "placement-start"));
-  assert.match(root.text, /Draft, unreviewed/); assert.ok(DRAFT_NOTE.includes("untested guesses"));
+  assert.match(root.text, /You can always start at lesson r01/); assert.doesNotMatch(root.text, /Draft, unreviewed|untested guess/);
   start.click();
   for (let guard = 0; guard < 25 && !find(root, (n) => n.attrs.id === "placement-go"); guard++) {
     const he = find(root, (n) => n.attrs.lang === "he").text;

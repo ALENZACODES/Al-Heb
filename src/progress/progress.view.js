@@ -122,13 +122,12 @@ export async function mount(root, ctx) {
   function build() {
     const s = readSnapshot(store), c = makeContext(s, d, now());
     const sections = [heroSlot];
-    sections.push(h('p', { class: 'draft-flag', role: 'note' }, 'Draft: the milestones and levels here are Aleph\'s own, and no expert has reviewed them. A native Hebrew speaker has not yet checked the vowel marks.'));
 
     // 1. what can I read now: one summary over every lane (letters, lines, vocabulary, timed reads, siddur, first day)
     const HREF_ROUTE = { '#/learn': 'learn', '#/read': 'read', '#/vocab': 'vocab', '#/timedread': 'timedread', '#/service': 'service', '#/firstday': 'firstday', '#/firstday/ladder': 'firstday-ladder' };
     const nowRows = readNowSummary(s, d, c);
     sections.push(h('section', { class: 'card', 'aria-labelledby': 'pg-h-now' }, h('h2', { id: 'pg-h-now' }, 'What have I practiced?'),
-      h('p', { class: 'small muted' }, 'One view across the app. "Taught" rows come from lessons and tracing; "self-reported" rows are what you told the app about your own reading. None of it is a fluency score.'),
+      h('p', { class: 'small muted' }, 'Everything you have practiced, in one place. Rows marked self-reported come from your own notes about your reading.'),
       h('ul', { class: 'pg-now' }, ...nowRows.map((row) => h('li', { 'data-now': row.id },
         h('span', {}, row.label, row.measured === 'self' ? h('span', { class: 'pg-self' }, 'self-reported') : null),
         h('span', { class: 'pg-now-v' }, row.value),
@@ -144,7 +143,7 @@ export async function mount(root, ctx) {
     } else {
       const totalLines = r.lines.length;
       readSec.append(h('p', { class: 'pg-big' }, `${plural(r.linesFull.length, 'line', 'lines')} of ${totalLines} prayer and Torah lines, and ${plural(r.words.full.length.toLocaleString('en-US'), 'word', 'words')}, use only signs you have met.`),
-        h('p', { class: 'small muted' }, `Based on ${c.know.letters.size} of ${ALL_LETTERS.length} letters (from completed lessons and finished tracing) and ${c.know.signs.size} of ${ALL_SIGNS.length} signs (from completed lessons). This records practice activity; it does not assess recognition or fluent reading.`));
+        h('p', { class: 'small muted' }, `Based on the ${c.know.letters.size} of ${ALL_LETTERS.length} letters and ${c.know.signs.size} of ${ALL_SIGNS.length} vowel signs you have learned in lessons and tracing.`));
       const pick = (arr, n) => arr.filter((l) => l.words >= 2).sort((a, b) => a.words - b.words || a.id.localeCompare(b.id)).slice(0, n);
       const lineHref = (l) => `#/read/${encodeURIComponent(l.entryId)}${l.n > 1 ? `?line=${l.n}` : ''}`;
       const full = pick(r.linesFull, 4);
@@ -162,10 +161,10 @@ export async function mount(root, ctx) {
     const sc = siddurCoverage(s, d, c);
     if (sc) readSec.append(h('p', { class: 'pg-siddur', 'data-pct': String(sc.pct), 'data-order': sc.orderId },
       `Prayer book coverage: ${sc.pct}% of the phrases in ${sc.title} use signs you have practiced`, ' ', h('a', { href: '#/service' }, 'See the service')),
-      h('p', { class: 'small muted' }, `${sc.full} of the ${sc.lines} lines Aleph holds for ${sc.title.toLowerCase()} use only letters and signs from your completed activities. This is content coverage, not a reading assessment; ${plural(sc.gaps, 'part', 'parts')} of a typical service ${sc.gaps === 1 ? 'is' : 'are'} not in Aleph yet.`));
+      h('p', { class: 'small muted' }, `${sc.full} of the ${sc.lines} lines of ${sc.title.toLowerCase()} in Aleph use only letters and signs you have learned.`));
     // CODER-100 F8: the same service ring Prayer Practice and the Service page show, from the counts module's denominators
     const ring = sc ? (() => { try { return serviceRing(sc.orderId, store.get(SERVICE_KEYS.practice, null), store.get(SERVICE_KEYS.companion, null), s.cards, (d.orders?.orders?.[sc.orderId]?.items ?? []).map((x) => x.id)); } catch { return null; } })() : null;
-    if (ring) readSec.append(h('p', { class: 'small pg-ring', 'data-ring': `${ring.orderId}:${ring.pct}` }, `Service ring, ${ring.text} Your own marks, not a test. `, h('a', { href: `#/prayer-practice?order=${ring.orderId}` }, 'Prayer Practice')));
+    if (ring) readSec.append(h('p', { class: 'small pg-ring', 'data-ring': `${ring.orderId}:${ring.pct}` }, `Service ring, ${ring.text} `, h('a', { href: `#/prayer-practice?order=${ring.orderId}` }, 'Prayer Practice')));
     sections.push(readSec);
 
     // 2. today, then this week
@@ -174,13 +173,13 @@ export async function mount(root, ctx) {
     const spark = h('div', { class: 'pg-spark-wrap', 'data-series': wk.series.join(',') });
     spark.innerHTML = sparklineSVG(wk.series);
     sections.push(h('section', { class: 'card', 'aria-labelledby': 'pg-h-week', 'data-week': '1' }, h('h2', { id: 'pg-h-week' }, 'This week'),
-      h('p', { class: 'small muted' }, `${wk.from} to ${wk.to}. Counted from what the app stored; where it cannot be exact the line says "at least".`),
+      h('p', { class: 'small muted' }, `${wk.from} to ${wk.to}.`),
       h('ul', { class: 'pg-week' },
         h('li', { 'data-w': 'minutes' }, ws.minutes), h('li', { 'data-w': 'days' }, ws.days), h('li', { 'data-w': 'words' }, ws.words),
         h('li', { 'data-w': 'reviews' }, ws.reviews), h('li', { 'data-w': 'reads' }, ws.reads), h('li', { 'data-w': 'streak' }, ws.streak), h('li', { 'data-w': 'rest' }, ws.rest[0].toUpperCase() + ws.rest.slice(1))),
       h('h3', {}, `Dated activity, last ${WEEKS} weeks`), spark,
       h('p', { class: 'small', 'data-w': 'series' }, `Oldest week to this week: ${wk.series.join(', ')} (${wk.seriesTotal} in all).`),
-      h('p', { class: 'small muted' }, 'Minutes: the app keeps today\'s time and which past days reached the 5-minute goal, so past days count as 5 minutes each and the total is a floor. Review cards keep only their latest review, so cards reviewed and new words are floors too. The graph counts lessons finished, timed reads, speaking-practice attempts, checkpoints and loanword marks; review cards are left out because older reviews are not dated. Rest days appear only when your Shabbat and Yom Tov setting or you froze them. This is activity, not a measure of how well you read.')));
+      h('p', { class: 'small muted' }, 'The graph counts lessons, timed reads, speaking practice, checkpoints and loanword marks. Each past day that reached your goal counts as 5 minutes, so the weekly minutes are a minimum.')));
 
     // 2a. tomorrow: a small plan for the next visit, computed only from what
     // this device has already saved (U-14 interim; the fuller "Your path"
@@ -199,7 +198,7 @@ export async function mount(root, ctx) {
       const bookSlot = h('li', {}, 'Little books: ', h('a', { href: '#/books' }, 'pick one to read'));
       lines.push(bookSlot);
       const tomorrowSec = h('section', { class: 'card', 'aria-labelledby': 'pg-h-tomorrow' }, h('h2', { id: 'pg-h-tomorrow' }, 'Tomorrow'),
-        h('p', { class: 'small muted' }, 'For your next visit, from what this device has saved so far:'),
+        h('p', { class: 'small muted' }, 'Ideas for your next visit:'),
         h('ul', {}, ...lines));
       sections.push(tomorrowSec);
       // A book left mid-read replaces the generic books line, once its place
@@ -215,10 +214,10 @@ export async function mount(root, ctx) {
             const r = await (ctx.fetchFn ?? fetch)('data/books/index.json');
             const idx = r && r.ok !== false ? await r.json() : null;
             const b = idx?.books?.find((x) => x.id === bookId);
-            if (b) title = `${b.titleTranslit} — ${b.titleEn}`;
+            if (b) title = `${b.titleTranslit} (${b.titleEn})`;
           } catch { /* the generic line still works */ }
           if (!alive) return;
-          bookSlot.replaceChildren('Continue ', h('a', { href: `#/book/${bookId}` }, title), h('span', { class: 'small muted' }, ` — you left it on page ${place.lastPage + 1}`));
+          bookSlot.replaceChildren('Continue ', h('a', { href: `#/book/${bookId}` }, title), h('span', { class: 'small muted' }, ` (you stopped on page ${place.lastPage + 1})`));
         } catch { /* the generic books line stays */ }
       })();
     }
@@ -229,7 +228,7 @@ export async function mount(root, ctx) {
       try { recordMilestones(store, evals, now()); } catch { /* the list still shows; the dates just are not kept this time */ }
       const rows = milestoneRows(evals, readSnapshot(store).milestonesStore);
       sections.push(h('section', { class: 'card', 'aria-labelledby': 'pg-h-ms' }, h('h2', { id: 'pg-h-ms' }, 'Milestones'),
-        h('p', { class: 'small muted' }, 'Personal markers only: no certificate, badge or level. "Started" words are cards you have reviewed at least once, a timed read is self-reported, and coverage means you have been taught the letters and signs, not that you read the lines well.'),
+        h('p', { class: 'small muted' }, 'Personal milestones along the way. A word counts as started once you have reviewed it.'),
         h('ul', { class: 'pg-ms' }, ...rows.map((m) => h('li', { 'data-ms': m.id, 'data-done': m.achieved ? '1' : '0' },
           h('span', { class: `pg-tag ${m.achieved ? 'done' : ''}` }, m.achieved ? 'Reached' : 'Not yet'), m.label,
           m.achieved ? h('span', { class: 'small muted' }, ` (${m.dateText})`) : h('span', { class: 'small muted' }, m.need > 1 ? ` (${m.have} of ${m.need})` : ''),

@@ -29,7 +29,7 @@ export function reviewNotice(letter, script, t = (k, f) => f) {
   const block = letter && letter[script];
   if (!block) return { level: 'none', text: '' };
   if ((HIGH_DOUBT[letter.id] || []).includes(script)) {
-    return { level: 'high', text: t('trace.highDoubt', 'Caution: the ' + script + ' form of this letter may not be the one Israeli schools teach, and its stroke order is an unreviewed draft. Do not learn it from here until a teacher has confirmed it.') };
+    return { level: 'high', text: t('trace.highDoubt', 'Note: this ' + script + ' form may not be the one Israeli schools teach. Check it with a teacher if you can.') };
   }
   if (block.validated === false || block.needsNativeReview) {
     return { level: 'draft', text: t('trace.draftStrokes', 'Follow the arrows to write the letter.') };
@@ -287,7 +287,7 @@ export function mount(root, ctx = {}) {
         h('p', {}, h('strong', {}, t('trace.why', 'Why this name: ')), mn.reason),
         h('p', {}, h('strong', {}, t('trace.lookalike', 'Do not confuse with: ')), mn.lookalike),
         chained ? null : h('p', { dir: 'rtl', lang: 'he' }, mn.word, ' ', h('span', { dir: 'ltr' }, '(' + mn.wordSound + ' = ' + mn.wordMeaning + ')')),
-        h('p', { class: 'muted' }, t('trace.mnDraft', 'Draft memory hook: not yet checked by a Hebrew teacher.'))));
+        h('p', { class: 'muted' }, t('trace.mnDraft', 'Memory hooks are little stories to help you remember, not history.'))));
     }
     if (cardHost && !cardHost.first) body.appendChild(cardHost.el);
     assistedRun = false;

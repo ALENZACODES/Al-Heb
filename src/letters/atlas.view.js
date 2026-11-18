@@ -138,7 +138,7 @@ export function mount(root, ctx = {}) {
       const r = await ctx.audio.play('letter', audioId);
       if (unmounted) return;
       if (!r || r.source === 'none') say(t('atlas.noClip', 'No audio for this one yet.'));
-      else if (r.source === 'tts-fallback') say(t('atlas.tts', 'Playing a computer voice (no recording yet).'));
+      else if (r.source === 'tts-fallback') say(t('atlas.tts', 'Playing your device\'s Hebrew voice.'));
       else say('');
     } catch (e) { say(t('atlas.noClip', 'No audio for this one yet.')); }
   }
@@ -237,7 +237,7 @@ export function mount(root, ctx = {}) {
         m.story && !chained ? h('p', {}, h('strong', {}, t('atlas.story', 'Story: ')), state.alt && m.altStory ? m.altStory : m.story) : null,
         m.lookalike ? h('p', {}, h('strong', {}, t('atlas.lookalikeLabel', 'Do not confuse with: ')), m.lookalike) : null,
         m.word && !chained ? h('p', { dir: 'rtl', lang: 'he' }, m.word, ' ', h('span', { dir: 'ltr' }, '(' + m.wordSound + ' = ' + m.wordMeaning + ')')) : null,
-        h('p', { class: 'muted' }, t('atlas.draft', 'Draft memory hooks: sound-alike stories, not history, and not yet checked by a Hebrew teacher.')),
+        h('p', { class: 'muted' }, t('atlas.draft', 'Memory hooks are sound-alike stories to help you remember, not history.')),
         ctx.route ? h('p', {}, h('button', { onclick: () => { try { ctx.route('/letters/' + (sel.parent || sel.id)); } catch (e) { /* ignore */ } } }, t('atlas.trace', 'Trace this letter'))) : null);
       body.appendChild(panel);
     }

@@ -19,11 +19,11 @@ export const GOAL_CHOICES = Object.freeze([
 export const LETTERS_QUESTION = '1. How much Hebrew can you read today?';
 /** Stage 1 answers. `start` is the route each answer leads to. */
 export const LETTER_ANSWERS = Object.freeze([
-  { id: 'none', label: 'Starting from zero — I do not know the letters', start: '/firstday', desc: 'Meet your first letters and their sounds. No Hebrew knowledge needed.' },
-  { id: 'some', label: 'I recognize some letters', start: '/placement', desc: 'I still need help recognizing the alphabet and remembering its sounds.' },
-  { id: 'letters', label: 'I know the letters, but cannot read words yet', start: '/placement', desc: 'I want to combine letter sounds and vowel marks to sound out words.' },
-  { id: 'vowels', label: 'I can read simple words with vowel marks', start: '/placement', desc: 'I want to build vocabulary and move on to longer words and short sentences.' },
-  { id: 'sentences', label: 'I can read words and sentences comfortably', start: '/placement', desc: 'I want to understand more of what I read and work toward longer passages.' },
+  { id: 'none', label: 'I\'m new to Hebrew', start: '/firstday', desc: 'Meet your first letters and their sounds. No Hebrew needed.' },
+  { id: 'some', label: 'I know some letters', start: '/placement', desc: 'I still need help with the alphabet and its sounds.' },
+  { id: 'letters', label: 'I know the letters, but can\'t read words yet', start: '/placement', desc: 'I want to put letters and vowel marks together to sound out words.' },
+  { id: 'vowels', label: 'I can read simple words with vowel marks', start: '/placement', desc: 'I want more words, then longer words and short sentences.' },
+  { id: 'sentences', label: 'I can read words and sentences comfortably', start: '/placement', desc: 'I want to understand more of what I read and take on longer passages.' },
 ]);
 export const STEPS = Object.freeze(['letters', 'congregation', 'minutes', 'plan']);
 
@@ -132,9 +132,9 @@ export function buildPlan(o) {
   }
   const firstLessonItem = days.flatMap((d) => d.items).find((i) => i.kind === 'lesson');
   const note = needsPlacement
-    ? `Lessons from ${plans.firstLesson} are a placeholder until you take the placement check; this plan is rebuilt from its result.`
+    ? `The plan starts at ${plans.firstLesson} for now. Take the placement check and it will be rebuilt from your result.`
     : open && open.locked ? `The placement check fit you to ${open.wanted}, which is locked until earlier lessons are done, so lessons start at ${placed}.`
-    : placed ? `Lessons start at ${placed}, the placement check's suggestion (a draft guess).` : firstLessonItem ? `The first lesson is "${firstLessonItem.title}".` : `Lessons start at ${plans.firstLesson}.`;
+    : placed ? `Lessons start at ${placed}, as the placement check suggested.` : firstLessonItem ? `The first lesson is "${firstLessonItem.title}".` : `Lessons start at ${plans.firstLesson}.`;
   return { v: 1, draft: true, minutesPerDay: minutes, startLesson, source: placed ? 'placement' : 'default', letters: rec.letters, days, totalMinutes: days.reduce((a, x) => a + x.minutes, 0), note };
 }
 

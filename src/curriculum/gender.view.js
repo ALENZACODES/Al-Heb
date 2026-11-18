@@ -79,7 +79,7 @@ export function mountGender(root, ctx, mode = "pairs", q = {}) {
         let body;
         if (qu.type === "which") {
           const label = p.who === "speaker" ? "said by" : "said to";
-          const prompt = qu.mode === "listen" ? `Listen, then say who it is ${label}.` : `No audio yet for this item, so this is a reading question. Who is it ${label}?`;
+          const prompt = qu.mode === "listen" ? `Listen, then say who it is ${label}.` : `No audio yet for this one, so read it instead. Who is it ${label}?`;
           const btns = ["m", "f"].map((v) => el("button", { type: "button", class: "btn secondary alef-opt", "data-answer": v, onclick: () => { btns.forEach((b) => { b.disabled = true; }); finish(v === qu.answer); } }, `${v === "m" ? "1" : "2"}. A ${WHO[v]}`));
           const written = el("div", { class: "alef-written-alt" });
           const showWritten = () => { written.replaceChildren(heText(p.forms[qu.form].he, "alef-he alef-word-big")); showBtn.hidden = true; };

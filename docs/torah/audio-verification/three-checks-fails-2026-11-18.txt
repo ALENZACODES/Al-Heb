@@ -1,6 +1,7 @@
 audio/f/israeli/line/torah-deuteronomy-1-12.mp3	real
 audio/f/israeli/line/torah-deuteronomy-1-16.mp3	real
 audio/f/israeli/line/torah-deuteronomy-1-30.mp3	real
+audio/f/israeli/line/torah-deuteronomy-11-10.mp3	real
 audio/f/israeli/line/torah-deuteronomy-11-25.mp3	real
 audio/f/israeli/line/torah-deuteronomy-12-24.mp3	real
 audio/f/israeli/line/torah-deuteronomy-12-27.mp3	real
@@ -57,6 +58,7 @@ audio/f/israeli/line/torah-deuteronomy-7-1.mp3	real
 audio/f/israeli/line/torah-deuteronomy-7-16.mp3	real
 audio/f/israeli/line/torah-deuteronomy-8-6.mp3	real
 audio/f/israeli/line/torah-deuteronomy-9-6.mp3	real
+audio/f/israeli/line/torah-exodus-10-12.mp3	real
 audio/f/israeli/line/torah-exodus-10-20.mp3	real
 audio/f/israeli/line/torah-exodus-10-21.mp3	real
 audio/f/israeli/line/torah-exodus-10-29.mp3	real
@@ -67,6 +69,7 @@ audio/f/israeli/line/torah-exodus-13-3.mp3	real
 audio/f/israeli/line/torah-exodus-16-28.mp3	real
 audio/f/israeli/line/torah-exodus-17-16.mp3	real
 audio/f/israeli/line/torah-exodus-17-2.mp3	real
+audio/f/israeli/line/torah-exodus-17-7.mp3	real
 audio/f/israeli/line/torah-exodus-18-20.mp3	real
 audio/f/israeli/line/torah-exodus-18-26.mp3	real
 audio/f/israeli/line/torah-exodus-18-9.mp3	real
@@ -207,16 +210,19 @@ audio/f/israeli/line/torah-genesis-43-24.mp3	real
 audio/f/israeli/line/torah-genesis-44-10.mp3	real
 audio/f/israeli/line/torah-genesis-44-30.mp3	real
 audio/f/israeli/line/torah-genesis-45-12.mp3	real
+audio/f/israeli/line/torah-genesis-45-18.mp3	real
 audio/f/israeli/line/torah-genesis-46-23.mp3	real
 audio/f/israeli/line/torah-genesis-47-12.mp3	real
 audio/f/israeli/line/torah-genesis-47-17.mp3	real
 audio/f/israeli/line/torah-genesis-47-23.mp3	real
+audio/f/israeli/line/torah-genesis-47-27.mp3	real
 audio/f/israeli/line/torah-genesis-47-30.mp3	real
 audio/f/israeli/line/torah-genesis-48-7.mp3	real
 audio/f/israeli/line/torah-genesis-50-22.mp3	real
 audio/f/israeli/line/torah-genesis-6-19.mp3	real
 audio/f/israeli/line/torah-genesis-6-2.mp3	real
 audio/f/israeli/line/torah-genesis-6-3.mp3	real
+audio/f/israeli/line/torah-genesis-6-7.mp3	real
 audio/f/israeli/line/torah-genesis-7-16.mp3	real
 audio/f/israeli/line/torah-genesis-7-18.mp3	real
 audio/f/israeli/line/torah-genesis-7-2.mp3	real
@@ -248,6 +254,7 @@ audio/f/israeli/line/torah-leviticus-16-4.mp3	real
 audio/f/israeli/line/torah-leviticus-18-14.mp3	real
 audio/f/israeli/line/torah-leviticus-18-17.mp3	real
 audio/f/israeli/line/torah-leviticus-18-22.mp3	real
+audio/f/israeli/line/torah-leviticus-18-23.mp3	real
 audio/f/israeli/line/torah-leviticus-19-35.mp3	real
 audio/f/israeli/line/torah-leviticus-19-4.mp3	real
 audio/f/israeli/line/torah-leviticus-19-8.mp3	real
@@ -258,6 +265,7 @@ audio/f/israeli/line/torah-leviticus-20-14.mp3	real
 audio/f/israeli/line/torah-leviticus-20-22.mp3	real
 audio/f/israeli/line/torah-leviticus-20-26.mp3	real
 audio/f/israeli/line/torah-leviticus-20-9.mp3	real
+audio/f/israeli/line/torah-leviticus-22-10.mp3	real
 audio/f/israeli/line/torah-leviticus-22-20.mp3	real
 audio/f/israeli/line/torah-leviticus-22-7.mp3	real
 audio/f/israeli/line/torah-leviticus-22-8.mp3	real
@@ -282,6 +290,7 @@ audio/f/israeli/line/torah-leviticus-7-21.mp3	real
 audio/f/israeli/line/torah-leviticus-7-23.mp3	real
 audio/f/israeli/line/torah-leviticus-7-24.mp3	real
 audio/f/israeli/line/torah-leviticus-7-8.mp3	real
+audio/f/israeli/line/torah-leviticus-8-9.mp3	real
 audio/f/israeli/line/torah-leviticus-9-2.mp3	real
 audio/f/israeli/line/torah-numbers-1-2.mp3	real
 audio/f/israeli/line/torah-numbers-1-25.mp3	real
@@ -320,7 +329,9 @@ audio/f/israeli/line/torah-numbers-24-20.mp3	real
 audio/f/israeli/line/torah-numbers-24-22.mp3	real
 audio/f/israeli/line/torah-numbers-24-6.mp3	real
 audio/f/israeli/line/torah-numbers-25-8.mp3	real
+audio/f/israeli/line/torah-numbers-26-19.mp3	real
 audio/f/israeli/line/torah-numbers-26-38.mp3	real
+audio/f/israeli/line/torah-numbers-26-40.mp3	real
 audio/f/israeli/line/torah-numbers-26-41.mp3	real
 audio/f/israeli/line/torah-numbers-26-46.mp3	real
 audio/f/israeli/line/torah-numbers-26-51.mp3	real
@@ -349,10 +360,12 @@ audio/f/israeli/line/torah-numbers-8-18.mp3	real
 audio/f/israeli/line/torah-numbers-8-26.mp3	real
 audio/f/israeli/line/torah-numbers-8-4.mp3	real
 audio/f/israeli/line/torah-numbers-9-13.mp3	real
+audio/m/israeli/line/torah-deuteronomy-1-16.mp3	real
 audio/m/israeli/line/torah-deuteronomy-11-12.mp3	real
 audio/m/israeli/line/torah-deuteronomy-11-25.mp3	real
 audio/m/israeli/line/torah-deuteronomy-11-3.mp3	real
 audio/m/israeli/line/torah-deuteronomy-14-4.mp3	real
+audio/m/israeli/line/torah-deuteronomy-15-7.mp3	real
 audio/m/israeli/line/torah-deuteronomy-16-7.mp3	real
 audio/m/israeli/line/torah-deuteronomy-17-8.mp3	real
 audio/m/israeli/line/torah-deuteronomy-18-7.mp3	real
@@ -369,6 +382,7 @@ audio/m/israeli/line/torah-deuteronomy-22-18.mp3	real
 audio/m/israeli/line/torah-deuteronomy-23-14.mp3	real
 audio/m/israeli/line/torah-deuteronomy-24-4.mp3	real
 audio/m/israeli/line/torah-deuteronomy-25-11.mp3	real
+audio/m/israeli/line/torah-deuteronomy-26-1.mp3	real
 audio/m/israeli/line/torah-deuteronomy-26-19.mp3	real
 audio/m/israeli/line/torah-deuteronomy-26-6.mp3	real
 audio/m/israeli/line/torah-deuteronomy-27-9.mp3	real
@@ -386,6 +400,7 @@ audio/m/israeli/line/torah-deuteronomy-5-1.mp3	real
 audio/m/israeli/line/torah-deuteronomy-5-5.mp3	real
 audio/m/israeli/line/torah-deuteronomy-5-8.mp3	real
 audio/m/israeli/line/torah-deuteronomy-6-15.mp3	real
+audio/m/israeli/line/torah-deuteronomy-7-22.mp3	real
 audio/m/israeli/line/torah-deuteronomy-9-21.mp3	real
 audio/m/israeli/line/torah-exodus-1-1.mp3	real
 audio/m/israeli/line/torah-exodus-1-16.mp3	real
@@ -401,6 +416,7 @@ audio/m/israeli/line/torah-exodus-17-5.mp3	real
 audio/m/israeli/line/torah-exodus-17-7.mp3	real
 audio/m/israeli/line/torah-exodus-18-11.mp3	real
 audio/m/israeli/line/torah-exodus-18-20.mp3	real
+audio/m/israeli/line/torah-exodus-21-12.mp3	real
 audio/m/israeli/line/torah-exodus-21-17.mp3	real
 audio/m/israeli/line/torah-exodus-21-26.mp3	real
 audio/m/israeli/line/torah-exodus-21-8.mp3	real
@@ -443,6 +459,7 @@ audio/m/israeli/line/torah-genesis-1-17.mp3	real
 audio/m/israeli/line/torah-genesis-1-24.mp3	real
 audio/m/israeli/line/torah-genesis-1-29.mp3	real
 audio/m/israeli/line/torah-genesis-1-3.mp3	real
+audio/m/israeli/line/torah-genesis-1-4.mp3	real
 audio/m/israeli/line/torah-genesis-10-16.mp3	real
 audio/m/israeli/line/torah-genesis-11-4.mp3	real
 audio/m/israeli/line/torah-genesis-12-14.mp3	real
@@ -456,6 +473,7 @@ audio/m/israeli/line/torah-genesis-18-3.mp3	real
 audio/m/israeli/line/torah-genesis-18-30.mp3	real
 audio/m/israeli/line/torah-genesis-18-32.mp3	real
 audio/m/israeli/line/torah-genesis-19-12.mp3	real
+audio/m/israeli/line/torah-genesis-19-2.mp3	real
 audio/m/israeli/line/torah-genesis-19-20.mp3	real
 audio/m/israeli/line/torah-genesis-19-23.mp3	real
 audio/m/israeli/line/torah-genesis-19-38.mp3	real
@@ -463,9 +481,11 @@ audio/m/israeli/line/torah-genesis-2-18.mp3	real
 audio/m/israeli/line/torah-genesis-22-7.mp3	real
 audio/m/israeli/line/torah-genesis-23-15.mp3	real
 audio/m/israeli/line/torah-genesis-24-26.mp3	real
+audio/m/israeli/line/torah-genesis-25-10.mp3	real
 audio/m/israeli/line/torah-genesis-25-26.mp3	real
 audio/m/israeli/line/torah-genesis-27-15.mp3	real
 audio/m/israeli/line/torah-genesis-27-24.mp3	real
+audio/m/israeli/line/torah-genesis-28-15.mp3	real
 audio/m/israeli/line/torah-genesis-28-6.mp3	real
 audio/m/israeli/line/torah-genesis-28-7.mp3	real
 audio/m/israeli/line/torah-genesis-29-9.mp3	real
@@ -503,6 +523,7 @@ audio/m/israeli/line/torah-genesis-47-23.mp3	real
 audio/m/israeli/line/torah-genesis-47-30.mp3	real
 audio/m/israeli/line/torah-genesis-48-20.mp3	real
 audio/m/israeli/line/torah-genesis-49-27.mp3	real
+audio/m/israeli/line/torah-genesis-5-23.mp3	real
 audio/m/israeli/line/torah-genesis-5-4.mp3	real
 audio/m/israeli/line/torah-genesis-50-17.mp3	real
 audio/m/israeli/line/torah-genesis-6-17.mp3	real
@@ -514,6 +535,7 @@ audio/m/israeli/line/torah-genesis-9-7.mp3	real
 audio/m/israeli/line/torah-leviticus-10-13.mp3	real
 audio/m/israeli/line/torah-leviticus-10-4.mp3	real
 audio/m/israeli/line/torah-leviticus-10-7.mp3	real
+audio/m/israeli/line/torah-leviticus-11-45.mp3	real
 audio/m/israeli/line/torah-leviticus-13-20.mp3	real
 audio/m/israeli/line/torah-leviticus-13-25.mp3	real
 audio/m/israeli/line/torah-leviticus-13-28.mp3	real
@@ -542,6 +564,7 @@ audio/m/israeli/line/torah-leviticus-25-17.mp3	real
 audio/m/israeli/line/torah-leviticus-25-2.mp3	real
 audio/m/israeli/line/torah-leviticus-25-22.mp3	real
 audio/m/israeli/line/torah-leviticus-25-43.mp3	real
+audio/m/israeli/line/torah-leviticus-26-1.mp3	real
 audio/m/israeli/line/torah-leviticus-26-26.mp3	real
 audio/m/israeli/line/torah-leviticus-26-40.mp3	real
 audio/m/israeli/line/torah-leviticus-4-13.mp3	real
@@ -590,6 +613,7 @@ audio/m/israeli/line/torah-numbers-3-40.mp3	real
 audio/m/israeli/line/torah-numbers-31-44.mp3	real
 audio/m/israeli/line/torah-numbers-31-48.mp3	real
 audio/m/israeli/line/torah-numbers-32-34.mp3	real
+audio/m/israeli/line/torah-numbers-32-35.mp3	real
 audio/m/israeli/line/torah-numbers-32-4.mp3	real
 audio/m/israeli/line/torah-numbers-32-5.mp3	real
 audio/m/israeli/line/torah-numbers-32-9.mp3	real
@@ -616,12 +640,14 @@ audio/f/israeli/line/torah-deuteronomy-1-23.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-1-26.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-1-27.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-1-28.mp3	words-only
+audio/f/israeli/line/torah-deuteronomy-1-29.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-1-3.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-1-33.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-1-36.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-1-40.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-1-46.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-1-7.mp3	words-only
+audio/f/israeli/line/torah-deuteronomy-1-9.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-10-1.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-10-11.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-10-13.mp3	words-only
@@ -641,6 +667,7 @@ audio/f/israeli/line/torah-deuteronomy-11-19.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-11-28.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-11-29.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-11-3.mp3	words-only
+audio/f/israeli/line/torah-deuteronomy-11-32.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-11-6.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-11-8.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-11-9.mp3	words-only
@@ -660,6 +687,7 @@ audio/f/israeli/line/torah-deuteronomy-13-10.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-13-11.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-13-16.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-13-17.mp3	words-only
+audio/f/israeli/line/torah-deuteronomy-13-19.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-13-4.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-13-5.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-13-6.mp3	words-only
@@ -699,6 +727,7 @@ audio/f/israeli/line/torah-deuteronomy-19-18.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-19-21.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-19-5.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-19-7.mp3	words-only
+audio/f/israeli/line/torah-deuteronomy-19-8.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-2-1.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-2-10.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-2-15.mp3	words-only
@@ -723,6 +752,7 @@ audio/f/israeli/line/torah-deuteronomy-20-7.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-21-14.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-21-18.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-21-20.mp3	words-only
+audio/f/israeli/line/torah-deuteronomy-21-21.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-21-22.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-21-3.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-21-6.mp3	words-only
@@ -730,11 +760,13 @@ audio/f/israeli/line/torah-deuteronomy-21-8.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-21-9.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-22-1.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-22-21.mp3	words-only
+audio/f/israeli/line/torah-deuteronomy-22-22.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-22-24.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-22-28.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-22-29.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-22-6.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-22-9.mp3	words-only
+audio/f/israeli/line/torah-deuteronomy-23-18.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-23-21.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-23-22.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-23-25.mp3	words-only
@@ -765,6 +797,7 @@ audio/f/israeli/line/torah-deuteronomy-27-12.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-27-14.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-27-17.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-27-26.mp3	words-only
+audio/f/israeli/line/torah-deuteronomy-27-3.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-27-8.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-28-1.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-28-13.mp3	words-only
@@ -773,6 +806,7 @@ audio/f/israeli/line/torah-deuteronomy-28-15.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-28-18.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-28-20.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-28-21.mp3	words-only
+audio/f/israeli/line/torah-deuteronomy-28-25.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-28-30.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-28-38.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-28-40.mp3	words-only
@@ -807,6 +841,7 @@ audio/f/israeli/line/torah-deuteronomy-3-18.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-3-2.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-3-21.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-3-23.mp3	words-only
+audio/f/israeli/line/torah-deuteronomy-3-24.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-3-25.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-3-26.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-3-27.mp3	words-only
@@ -818,6 +853,7 @@ audio/f/israeli/line/torah-deuteronomy-30-10.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-30-13.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-30-16.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-30-19.mp3	words-only
+audio/f/israeli/line/torah-deuteronomy-30-2.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-30-3.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-30-5.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-30-6.mp3	words-only
@@ -831,6 +867,7 @@ audio/f/israeli/line/torah-deuteronomy-31-16.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-31-17.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-31-18.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-31-20.mp3	words-only
+audio/f/israeli/line/torah-deuteronomy-31-23.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-31-25.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-31-27.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-31-29.mp3	words-only
@@ -842,6 +879,7 @@ audio/f/israeli/line/torah-deuteronomy-32-10.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-32-14.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-32-15.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-32-16.mp3	words-only
+audio/f/israeli/line/torah-deuteronomy-32-18.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-32-2.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-32-20.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-32-21.mp3	words-only
@@ -852,6 +890,7 @@ audio/f/israeli/line/torah-deuteronomy-32-28.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-32-32.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-32-33.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-32-38.mp3	words-only
+audio/f/israeli/line/torah-deuteronomy-32-4.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-32-41.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-32-42.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-32-45.mp3	words-only
@@ -898,6 +937,7 @@ audio/f/israeli/line/torah-deuteronomy-6-11.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-6-19.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-6-2.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-6-8.mp3	words-only
+audio/f/israeli/line/torah-deuteronomy-7-13.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-7-14.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-7-15.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-7-18.mp3	words-only
@@ -907,6 +947,7 @@ audio/f/israeli/line/torah-deuteronomy-7-23.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-7-24.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-7-7.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-7-9.mp3	words-only
+audio/f/israeli/line/torah-deuteronomy-8-11.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-8-12.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-8-14.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-8-16.mp3	words-only
@@ -918,6 +959,7 @@ audio/f/israeli/line/torah-deuteronomy-9-12.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-9-18.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-9-24.mp3	words-only
 audio/f/israeli/line/torah-deuteronomy-9-8.mp3	words-only
+audio/f/israeli/line/torah-exodus-1-10.mp3	words-only
 audio/f/israeli/line/torah-exodus-1-11.mp3	words-only
 audio/f/israeli/line/torah-exodus-1-15.mp3	words-only
 audio/f/israeli/line/torah-exodus-1-17.mp3	words-only
@@ -956,6 +998,7 @@ audio/f/israeli/line/torah-exodus-14-12.mp3	words-only
 audio/f/israeli/line/torah-exodus-14-15.mp3	words-only
 audio/f/israeli/line/torah-exodus-14-17.mp3	words-only
 audio/f/israeli/line/torah-exodus-14-19.mp3	words-only
+audio/f/israeli/line/torah-exodus-14-2.mp3	words-only
 audio/f/israeli/line/torah-exodus-14-22.mp3	words-only
 audio/f/israeli/line/torah-exodus-14-27.mp3	words-only
 audio/f/israeli/line/torah-exodus-14-29.mp3	words-only
@@ -964,6 +1007,7 @@ audio/f/israeli/line/torah-exodus-14-8.mp3	words-only
 audio/f/israeli/line/torah-exodus-15-1.mp3	words-only
 audio/f/israeli/line/torah-exodus-15-10.mp3	words-only
 audio/f/israeli/line/torah-exodus-15-11.mp3	words-only
+audio/f/israeli/line/torah-exodus-15-13.mp3	words-only
 audio/f/israeli/line/torah-exodus-15-14.mp3	words-only
 audio/f/israeli/line/torah-exodus-15-16.mp3	words-only
 audio/f/israeli/line/torah-exodus-15-17.mp3	words-only
@@ -976,6 +1020,7 @@ audio/f/israeli/line/torah-exodus-15-4.mp3	words-only
 audio/f/israeli/line/torah-exodus-15-5.mp3	words-only
 audio/f/israeli/line/torah-exodus-15-6.mp3	words-only
 audio/f/israeli/line/torah-exodus-15-7.mp3	words-only
+audio/f/israeli/line/torah-exodus-16-10.mp3	words-only
 audio/f/israeli/line/torah-exodus-16-12.mp3	words-only
 audio/f/israeli/line/torah-exodus-16-13.mp3	words-only
 audio/f/israeli/line/torah-exodus-16-14.mp3	words-only
@@ -1077,6 +1122,7 @@ audio/f/israeli/line/torah-exodus-25-28.mp3	words-only
 audio/f/israeli/line/torah-exodus-25-5.mp3	words-only
 audio/f/israeli/line/torah-exodus-26-1.mp3	words-only
 audio/f/israeli/line/torah-exodus-26-11.mp3	words-only
+audio/f/israeli/line/torah-exodus-26-12.mp3	words-only
 audio/f/israeli/line/torah-exodus-26-13.mp3	words-only
 audio/f/israeli/line/torah-exodus-26-14.mp3	words-only
 audio/f/israeli/line/torah-exodus-26-16.mp3	words-only
@@ -1091,6 +1137,7 @@ audio/f/israeli/line/torah-exodus-27-11.mp3	words-only
 audio/f/israeli/line/torah-exodus-27-13.mp3	words-only
 audio/f/israeli/line/torah-exodus-27-14.mp3	words-only
 audio/f/israeli/line/torah-exodus-27-18.mp3	words-only
+audio/f/israeli/line/torah-exodus-27-3.mp3	words-only
 audio/f/israeli/line/torah-exodus-27-7.mp3	words-only
 audio/f/israeli/line/torah-exodus-27-9.mp3	words-only
 audio/f/israeli/line/torah-exodus-28-1.mp3	words-only
@@ -1110,6 +1157,7 @@ audio/f/israeli/line/torah-exodus-29-19.mp3	words-only
 audio/f/israeli/line/torah-exodus-29-21.mp3	words-only
 audio/f/israeli/line/torah-exodus-29-25.mp3	words-only
 audio/f/israeli/line/torah-exodus-29-29.mp3	words-only
+audio/f/israeli/line/torah-exodus-29-3.mp3	words-only
 audio/f/israeli/line/torah-exodus-29-32.mp3	words-only
 audio/f/israeli/line/torah-exodus-29-40.mp3	words-only
 audio/f/israeli/line/torah-exodus-29-42.mp3	words-only
@@ -1154,6 +1202,7 @@ audio/f/israeli/line/torah-exodus-32-8.mp3	words-only
 audio/f/israeli/line/torah-exodus-33-10.mp3	words-only
 audio/f/israeli/line/torah-exodus-33-12.mp3	words-only
 audio/f/israeli/line/torah-exodus-33-14.mp3	words-only
+audio/f/israeli/line/torah-exodus-33-16.mp3	words-only
 audio/f/israeli/line/torah-exodus-33-18.mp3	words-only
 audio/f/israeli/line/torah-exodus-33-19.mp3	words-only
 audio/f/israeli/line/torah-exodus-33-20.mp3	words-only
@@ -1168,10 +1217,12 @@ audio/f/israeli/line/torah-exodus-33-8.mp3	words-only
 audio/f/israeli/line/torah-exodus-34-10.mp3	words-only
 audio/f/israeli/line/torah-exodus-34-12.mp3	words-only
 audio/f/israeli/line/torah-exodus-34-15.mp3	words-only
+audio/f/israeli/line/torah-exodus-34-17.mp3	words-only
 audio/f/israeli/line/torah-exodus-34-20.mp3	words-only
 audio/f/israeli/line/torah-exodus-34-30.mp3	words-only
 audio/f/israeli/line/torah-exodus-34-34.mp3	words-only
 audio/f/israeli/line/torah-exodus-34-35.mp3	words-only
+audio/f/israeli/line/torah-exodus-34-7.mp3	words-only
 audio/f/israeli/line/torah-exodus-34-9.mp3	words-only
 audio/f/israeli/line/torah-exodus-35-1.mp3	words-only
 audio/f/israeli/line/torah-exodus-35-10.mp3	words-only
@@ -1193,6 +1244,7 @@ audio/f/israeli/line/torah-exodus-36-11.mp3	words-only
 audio/f/israeli/line/torah-exodus-36-14.mp3	words-only
 audio/f/israeli/line/torah-exodus-36-15.mp3	words-only
 audio/f/israeli/line/torah-exodus-36-16.mp3	words-only
+audio/f/israeli/line/torah-exodus-36-19.mp3	words-only
 audio/f/israeli/line/torah-exodus-36-2.mp3	words-only
 audio/f/israeli/line/torah-exodus-36-23.mp3	words-only
 audio/f/israeli/line/torah-exodus-36-25.mp3	words-only
@@ -1200,6 +1252,7 @@ audio/f/israeli/line/torah-exodus-36-31.mp3	words-only
 audio/f/israeli/line/torah-exodus-36-33.mp3	words-only
 audio/f/israeli/line/torah-exodus-36-36.mp3	words-only
 audio/f/israeli/line/torah-exodus-36-38.mp3	words-only
+audio/f/israeli/line/torah-exodus-36-6.mp3	words-only
 audio/f/israeli/line/torah-exodus-36-7.mp3	words-only
 audio/f/israeli/line/torah-exodus-36-8.mp3	words-only
 audio/f/israeli/line/torah-exodus-36-9.mp3	words-only
@@ -1216,6 +1269,7 @@ audio/f/israeli/line/torah-exodus-38-15.mp3	words-only
 audio/f/israeli/line/torah-exodus-38-18.mp3	words-only
 audio/f/israeli/line/torah-exodus-38-21.mp3	words-only
 audio/f/israeli/line/torah-exodus-38-22.mp3	words-only
+audio/f/israeli/line/torah-exodus-38-23.mp3	words-only
 audio/f/israeli/line/torah-exodus-38-24.mp3	words-only
 audio/f/israeli/line/torah-exodus-38-28.mp3	words-only
 audio/f/israeli/line/torah-exodus-38-29.mp3	words-only
@@ -1245,10 +1299,12 @@ audio/f/israeli/line/torah-exodus-40-2.mp3	words-only
 audio/f/israeli/line/torah-exodus-40-3.mp3	words-only
 audio/f/israeli/line/torah-exodus-40-34.mp3	words-only
 audio/f/israeli/line/torah-exodus-40-36.mp3	words-only
+audio/f/israeli/line/torah-exodus-40-37.mp3	words-only
 audio/f/israeli/line/torah-exodus-40-38.mp3	words-only
 audio/f/israeli/line/torah-exodus-40-9.mp3	words-only
 audio/f/israeli/line/torah-exodus-5-14.mp3	words-only
 audio/f/israeli/line/torah-exodus-5-16.mp3	words-only
+audio/f/israeli/line/torah-exodus-5-3.mp3	words-only
 audio/f/israeli/line/torah-exodus-5-6.mp3	words-only
 audio/f/israeli/line/torah-exodus-5-7.mp3	words-only
 audio/f/israeli/line/torah-exodus-6-1.mp3	words-only
@@ -1270,6 +1326,7 @@ audio/f/israeli/line/torah-exodus-8-1.mp3	words-only
 audio/f/israeli/line/torah-exodus-8-10.mp3	words-only
 audio/f/israeli/line/torah-exodus-8-11.mp3	words-only
 audio/f/israeli/line/torah-exodus-8-13.mp3	words-only
+audio/f/israeli/line/torah-exodus-8-15.mp3	words-only
 audio/f/israeli/line/torah-exodus-8-17.mp3	words-only
 audio/f/israeli/line/torah-exodus-8-18.mp3	words-only
 audio/f/israeli/line/torah-exodus-8-20.mp3	words-only
@@ -1300,6 +1357,7 @@ audio/f/israeli/line/torah-genesis-1-9.mp3	words-only
 audio/f/israeli/line/torah-genesis-10-10.mp3	words-only
 audio/f/israeli/line/torah-genesis-10-12.mp3	words-only
 audio/f/israeli/line/torah-genesis-10-15.mp3	words-only
+audio/f/israeli/line/torah-genesis-10-17.mp3	words-only
 audio/f/israeli/line/torah-genesis-10-19.mp3	words-only
 audio/f/israeli/line/torah-genesis-10-2.mp3	words-only
 audio/f/israeli/line/torah-genesis-10-22.mp3	words-only
@@ -1318,6 +1376,7 @@ audio/f/israeli/line/torah-genesis-11-2.mp3	words-only
 audio/f/israeli/line/torah-genesis-11-27.mp3	words-only
 audio/f/israeli/line/torah-genesis-11-29.mp3	words-only
 audio/f/israeli/line/torah-genesis-11-30.mp3	words-only
+audio/f/israeli/line/torah-genesis-11-31.mp3	words-only
 audio/f/israeli/line/torah-genesis-11-7.mp3	words-only
 audio/f/israeli/line/torah-genesis-12-1.mp3	words-only
 audio/f/israeli/line/torah-genesis-12-10.mp3	words-only
@@ -1328,6 +1387,7 @@ audio/f/israeli/line/torah-genesis-12-20.mp3	words-only
 audio/f/israeli/line/torah-genesis-12-3.mp3	words-only
 audio/f/israeli/line/torah-genesis-12-4.mp3	words-only
 audio/f/israeli/line/torah-genesis-12-5.mp3	words-only
+audio/f/israeli/line/torah-genesis-12-6.mp3	words-only
 audio/f/israeli/line/torah-genesis-12-7.mp3	words-only
 audio/f/israeli/line/torah-genesis-12-8.mp3	words-only
 audio/f/israeli/line/torah-genesis-12-9.mp3	words-only
@@ -1362,6 +1422,7 @@ audio/f/israeli/line/torah-genesis-14-8.mp3	words-only
 audio/f/israeli/line/torah-genesis-14-9.mp3	words-only
 audio/f/israeli/line/torah-genesis-15-1.mp3	words-only
 audio/f/israeli/line/torah-genesis-15-10.mp3	words-only
+audio/f/israeli/line/torah-genesis-15-11.mp3	words-only
 audio/f/israeli/line/torah-genesis-15-12.mp3	words-only
 audio/f/israeli/line/torah-genesis-15-16.mp3	words-only
 audio/f/israeli/line/torah-genesis-15-18.mp3	words-only
@@ -1397,6 +1458,7 @@ audio/f/israeli/line/torah-genesis-18-11.mp3	words-only
 audio/f/israeli/line/torah-genesis-18-12.mp3	words-only
 audio/f/israeli/line/torah-genesis-18-13.mp3	words-only
 audio/f/israeli/line/torah-genesis-18-15.mp3	words-only
+audio/f/israeli/line/torah-genesis-18-19.mp3	words-only
 audio/f/israeli/line/torah-genesis-18-21.mp3	words-only
 audio/f/israeli/line/torah-genesis-18-25.mp3	words-only
 audio/f/israeli/line/torah-genesis-18-26.mp3	words-only
@@ -1458,11 +1520,13 @@ audio/f/israeli/line/torah-genesis-22-8.mp3	words-only
 audio/f/israeli/line/torah-genesis-22-9.mp3	words-only
 audio/f/israeli/line/torah-genesis-23-12.mp3	words-only
 audio/f/israeli/line/torah-genesis-23-13.mp3	words-only
+audio/f/israeli/line/torah-genesis-23-15.mp3	words-only
 audio/f/israeli/line/torah-genesis-23-20.mp3	words-only
 audio/f/israeli/line/torah-genesis-23-4.mp3	words-only
 audio/f/israeli/line/torah-genesis-24-13.mp3	words-only
 audio/f/israeli/line/torah-genesis-24-14.mp3	words-only
 audio/f/israeli/line/torah-genesis-24-17.mp3	words-only
+audio/f/israeli/line/torah-genesis-24-19.mp3	words-only
 audio/f/israeli/line/torah-genesis-24-20.mp3	words-only
 audio/f/israeli/line/torah-genesis-24-21.mp3	words-only
 audio/f/israeli/line/torah-genesis-24-24.mp3	words-only
@@ -1480,6 +1544,7 @@ audio/f/israeli/line/torah-genesis-24-64.mp3	words-only
 audio/f/israeli/line/torah-genesis-24-67.mp3	words-only
 audio/f/israeli/line/torah-genesis-25-13.mp3	words-only
 audio/f/israeli/line/torah-genesis-25-21.mp3	words-only
+audio/f/israeli/line/torah-genesis-25-23.mp3	words-only
 audio/f/israeli/line/torah-genesis-25-27.mp3	words-only
 audio/f/israeli/line/torah-genesis-25-28.mp3	words-only
 audio/f/israeli/line/torah-genesis-25-29.mp3	words-only
@@ -1491,6 +1556,7 @@ audio/f/israeli/line/torah-genesis-26-16.mp3	words-only
 audio/f/israeli/line/torah-genesis-26-18.mp3	words-only
 audio/f/israeli/line/torah-genesis-26-3.mp3	words-only
 audio/f/israeli/line/torah-genesis-26-31.mp3	words-only
+audio/f/israeli/line/torah-genesis-26-4.mp3	words-only
 audio/f/israeli/line/torah-genesis-26-5.mp3	words-only
 audio/f/israeli/line/torah-genesis-26-6.mp3	words-only
 audio/f/israeli/line/torah-genesis-26-7.mp3	words-only
@@ -1550,6 +1616,7 @@ audio/f/israeli/line/torah-genesis-3-19.mp3	words-only
 audio/f/israeli/line/torah-genesis-30-1.mp3	words-only
 audio/f/israeli/line/torah-genesis-30-16.mp3	words-only
 audio/f/israeli/line/torah-genesis-30-18.mp3	words-only
+audio/f/israeli/line/torah-genesis-30-2.mp3	words-only
 audio/f/israeli/line/torah-genesis-30-20.mp3	words-only
 audio/f/israeli/line/torah-genesis-30-3.mp3	words-only
 audio/f/israeli/line/torah-genesis-30-30.mp3	words-only
@@ -1562,6 +1629,7 @@ audio/f/israeli/line/torah-genesis-30-40.mp3	words-only
 audio/f/israeli/line/torah-genesis-30-6.mp3	words-only
 audio/f/israeli/line/torah-genesis-31-1.mp3	words-only
 audio/f/israeli/line/torah-genesis-31-20.mp3	words-only
+audio/f/israeli/line/torah-genesis-31-24.mp3	words-only
 audio/f/israeli/line/torah-genesis-31-25.mp3	words-only
 audio/f/israeli/line/torah-genesis-31-28.mp3	words-only
 audio/f/israeli/line/torah-genesis-31-29.mp3	words-only
@@ -1588,6 +1656,7 @@ audio/f/israeli/line/torah-genesis-32-29.mp3	words-only
 audio/f/israeli/line/torah-genesis-32-30.mp3	words-only
 audio/f/israeli/line/torah-genesis-32-5.mp3	words-only
 audio/f/israeli/line/torah-genesis-32-9.mp3	words-only
+audio/f/israeli/line/torah-genesis-33-10.mp3	words-only
 audio/f/israeli/line/torah-genesis-33-11.mp3	words-only
 audio/f/israeli/line/torah-genesis-33-12.mp3	words-only
 audio/f/israeli/line/torah-genesis-33-17.mp3	words-only
@@ -1595,6 +1664,7 @@ audio/f/israeli/line/torah-genesis-33-19.mp3	words-only
 audio/f/israeli/line/torah-genesis-33-4.mp3	words-only
 audio/f/israeli/line/torah-genesis-34-10.mp3	words-only
 audio/f/israeli/line/torah-genesis-34-12.mp3	words-only
+audio/f/israeli/line/torah-genesis-34-14.mp3	words-only
 audio/f/israeli/line/torah-genesis-34-2.mp3	words-only
 audio/f/israeli/line/torah-genesis-34-25.mp3	words-only
 audio/f/israeli/line/torah-genesis-34-30.mp3	words-only
@@ -1620,6 +1690,7 @@ audio/f/israeli/line/torah-genesis-36-2.mp3	words-only
 audio/f/israeli/line/torah-genesis-36-21.mp3	words-only
 audio/f/israeli/line/torah-genesis-36-23.mp3	words-only
 audio/f/israeli/line/torah-genesis-36-24.mp3	words-only
+audio/f/israeli/line/torah-genesis-36-25.mp3	words-only
 audio/f/israeli/line/torah-genesis-36-26.mp3	words-only
 audio/f/israeli/line/torah-genesis-36-27.mp3	words-only
 audio/f/israeli/line/torah-genesis-36-28.mp3	words-only
@@ -1635,6 +1706,7 @@ audio/f/israeli/line/torah-genesis-37-20.mp3	words-only
 audio/f/israeli/line/torah-genesis-37-23.mp3	words-only
 audio/f/israeli/line/torah-genesis-37-25.mp3	words-only
 audio/f/israeli/line/torah-genesis-37-27.mp3	words-only
+audio/f/israeli/line/torah-genesis-37-3.mp3	words-only
 audio/f/israeli/line/torah-genesis-37-32.mp3	words-only
 audio/f/israeli/line/torah-genesis-37-33.mp3	words-only
 audio/f/israeli/line/torah-genesis-37-35.mp3	words-only
@@ -1643,6 +1715,7 @@ audio/f/israeli/line/torah-genesis-38-1.mp3	words-only
 audio/f/israeli/line/torah-genesis-38-12.mp3	words-only
 audio/f/israeli/line/torah-genesis-38-14.mp3	words-only
 audio/f/israeli/line/torah-genesis-38-17.mp3	words-only
+audio/f/israeli/line/torah-genesis-38-19.mp3	words-only
 audio/f/israeli/line/torah-genesis-38-22.mp3	words-only
 audio/f/israeli/line/torah-genesis-38-28.mp3	words-only
 audio/f/israeli/line/torah-genesis-38-5.mp3	words-only
@@ -1654,6 +1727,7 @@ audio/f/israeli/line/torah-genesis-39-19.mp3	words-only
 audio/f/israeli/line/torah-genesis-39-7.mp3	words-only
 audio/f/israeli/line/torah-genesis-39-9.mp3	words-only
 audio/f/israeli/line/torah-genesis-4-13.mp3	words-only
+audio/f/israeli/line/torah-genesis-4-14.mp3	words-only
 audio/f/israeli/line/torah-genesis-4-17.mp3	words-only
 audio/f/israeli/line/torah-genesis-4-18.mp3	words-only
 audio/f/israeli/line/torah-genesis-4-20.mp3	words-only
@@ -1686,6 +1760,7 @@ audio/f/israeli/line/torah-genesis-42-19.mp3	words-only
 audio/f/israeli/line/torah-genesis-42-22.mp3	words-only
 audio/f/israeli/line/torah-genesis-42-24.mp3	words-only
 audio/f/israeli/line/torah-genesis-42-25.mp3	words-only
+audio/f/israeli/line/torah-genesis-42-27.mp3	words-only
 audio/f/israeli/line/torah-genesis-42-34.mp3	words-only
 audio/f/israeli/line/torah-genesis-42-36.mp3	words-only
 audio/f/israeli/line/torah-genesis-42-8.mp3	words-only
@@ -1746,6 +1821,7 @@ audio/f/israeli/line/torah-genesis-49-10.mp3	words-only
 audio/f/israeli/line/torah-genesis-49-11.mp3	words-only
 audio/f/israeli/line/torah-genesis-49-15.mp3	words-only
 audio/f/israeli/line/torah-genesis-49-2.mp3	words-only
+audio/f/israeli/line/torah-genesis-49-22.mp3	words-only
 audio/f/israeli/line/torah-genesis-49-23.mp3	words-only
 audio/f/israeli/line/torah-genesis-49-25.mp3	words-only
 audio/f/israeli/line/torah-genesis-49-26.mp3	words-only
@@ -1760,6 +1836,7 @@ audio/f/israeli/line/torah-genesis-49-8.mp3	words-only
 audio/f/israeli/line/torah-genesis-49-9.mp3	words-only
 audio/f/israeli/line/torah-genesis-5-2.mp3	words-only
 audio/f/israeli/line/torah-genesis-5-25.mp3	words-only
+audio/f/israeli/line/torah-genesis-5-7.mp3	words-only
 audio/f/israeli/line/torah-genesis-50-1.mp3	words-only
 audio/f/israeli/line/torah-genesis-50-12.mp3	words-only
 audio/f/israeli/line/torah-genesis-50-13.mp3	words-only
@@ -1770,6 +1847,7 @@ audio/f/israeli/line/torah-genesis-50-2.mp3	words-only
 audio/f/israeli/line/torah-genesis-50-21.mp3	words-only
 audio/f/israeli/line/torah-genesis-50-23.mp3	words-only
 audio/f/israeli/line/torah-genesis-50-26.mp3	words-only
+audio/f/israeli/line/torah-genesis-50-5.mp3	words-only
 audio/f/israeli/line/torah-genesis-50-7.mp3	words-only
 audio/f/israeli/line/torah-genesis-6-13.mp3	words-only
 audio/f/israeli/line/torah-genesis-6-14.mp3	words-only
@@ -1782,6 +1860,7 @@ audio/f/israeli/line/torah-genesis-7-4.mp3	words-only
 audio/f/israeli/line/torah-genesis-8-16.mp3	words-only
 audio/f/israeli/line/torah-genesis-8-19.mp3	words-only
 audio/f/israeli/line/torah-genesis-8-4.mp3	words-only
+audio/f/israeli/line/torah-genesis-8-9.mp3	words-only
 audio/f/israeli/line/torah-genesis-9-14.mp3	words-only
 audio/f/israeli/line/torah-genesis-9-2.mp3	words-only
 audio/f/israeli/line/torah-genesis-9-20.mp3	words-only
@@ -1831,11 +1910,13 @@ audio/f/israeli/line/torah-leviticus-13-20.mp3	words-only
 audio/f/israeli/line/torah-leviticus-13-21.mp3	words-only
 audio/f/israeli/line/torah-leviticus-13-22.mp3	words-only
 audio/f/israeli/line/torah-leviticus-13-26.mp3	words-only
+audio/f/israeli/line/torah-leviticus-13-3.mp3	words-only
 audio/f/israeli/line/torah-leviticus-13-4.mp3	words-only
 audio/f/israeli/line/torah-leviticus-13-40.mp3	words-only
 audio/f/israeli/line/torah-leviticus-13-43.mp3	words-only
 audio/f/israeli/line/torah-leviticus-13-48.mp3	words-only
 audio/f/israeli/line/torah-leviticus-13-49.mp3	words-only
+audio/f/israeli/line/torah-leviticus-13-51.mp3	words-only
 audio/f/israeli/line/torah-leviticus-13-52.mp3	words-only
 audio/f/israeli/line/torah-leviticus-13-53.mp3	words-only
 audio/f/israeli/line/torah-leviticus-13-54.mp3	words-only
@@ -1855,6 +1936,7 @@ audio/f/israeli/line/torah-leviticus-14-46.mp3	words-only
 audio/f/israeli/line/torah-leviticus-14-53.mp3	words-only
 audio/f/israeli/line/torah-leviticus-14-8.mp3	words-only
 audio/f/israeli/line/torah-leviticus-14-9.mp3	words-only
+audio/f/israeli/line/torah-leviticus-15-11.mp3	words-only
 audio/f/israeli/line/torah-leviticus-15-12.mp3	words-only
 audio/f/israeli/line/torah-leviticus-15-19.mp3	words-only
 audio/f/israeli/line/torah-leviticus-15-2.mp3	words-only
@@ -1881,6 +1963,7 @@ audio/f/israeli/line/torah-leviticus-16-5.mp3	words-only
 audio/f/israeli/line/torah-leviticus-17-10.mp3	words-only
 audio/f/israeli/line/torah-leviticus-17-11.mp3	words-only
 audio/f/israeli/line/torah-leviticus-17-14.mp3	words-only
+audio/f/israeli/line/torah-leviticus-17-16.mp3	words-only
 audio/f/israeli/line/torah-leviticus-17-3.mp3	words-only
 audio/f/israeli/line/torah-leviticus-17-4.mp3	words-only
 audio/f/israeli/line/torah-leviticus-18-12.mp3	words-only
@@ -1903,6 +1986,7 @@ audio/f/israeli/line/torah-leviticus-19-20.mp3	words-only
 audio/f/israeli/line/torah-leviticus-19-23.mp3	words-only
 audio/f/israeli/line/torah-leviticus-19-3.mp3	words-only
 audio/f/israeli/line/torah-leviticus-19-31.mp3	words-only
+audio/f/israeli/line/torah-leviticus-19-6.mp3	words-only
 audio/f/israeli/line/torah-leviticus-19-7.mp3	words-only
 audio/f/israeli/line/torah-leviticus-2-10.mp3	words-only
 audio/f/israeli/line/torah-leviticus-2-14.mp3	words-only
@@ -1947,6 +2031,7 @@ audio/f/israeli/line/torah-leviticus-23-42.mp3	words-only
 audio/f/israeli/line/torah-leviticus-24-12.mp3	words-only
 audio/f/israeli/line/torah-leviticus-24-14.mp3	words-only
 audio/f/israeli/line/torah-leviticus-24-2.mp3	words-only
+audio/f/israeli/line/torah-leviticus-24-7.mp3	words-only
 audio/f/israeli/line/torah-leviticus-25-12.mp3	words-only
 audio/f/israeli/line/torah-leviticus-25-18.mp3	words-only
 audio/f/israeli/line/torah-leviticus-25-28.mp3	words-only
@@ -1963,6 +2048,7 @@ audio/f/israeli/line/torah-leviticus-26-13.mp3	words-only
 audio/f/israeli/line/torah-leviticus-26-14.mp3	words-only
 audio/f/israeli/line/torah-leviticus-26-15.mp3	words-only
 audio/f/israeli/line/torah-leviticus-26-18.mp3	words-only
+audio/f/israeli/line/torah-leviticus-26-22.mp3	words-only
 audio/f/israeli/line/torah-leviticus-26-23.mp3	words-only
 audio/f/israeli/line/torah-leviticus-26-25.mp3	words-only
 audio/f/israeli/line/torah-leviticus-26-28.mp3	words-only
@@ -2002,6 +2088,7 @@ audio/f/israeli/line/torah-leviticus-4-32.mp3	words-only
 audio/f/israeli/line/torah-leviticus-4-33.mp3	words-only
 audio/f/israeli/line/torah-leviticus-4-4.mp3	words-only
 audio/f/israeli/line/torah-leviticus-5-1.mp3	words-only
+audio/f/israeli/line/torah-leviticus-5-11.mp3	words-only
 audio/f/israeli/line/torah-leviticus-5-12.mp3	words-only
 audio/f/israeli/line/torah-leviticus-5-17.mp3	words-only
 audio/f/israeli/line/torah-leviticus-5-18.mp3	words-only
@@ -2020,6 +2107,7 @@ audio/f/israeli/line/torah-leviticus-6-2.mp3	words-only
 audio/f/israeli/line/torah-leviticus-6-22.mp3	words-only
 audio/f/israeli/line/torah-leviticus-6-4.mp3	words-only
 audio/f/israeli/line/torah-leviticus-6-6.mp3	words-only
+audio/f/israeli/line/torah-leviticus-7-10.mp3	words-only
 audio/f/israeli/line/torah-leviticus-7-13.mp3	words-only
 audio/f/israeli/line/torah-leviticus-7-15.mp3	words-only
 audio/f/israeli/line/torah-leviticus-7-18.mp3	words-only
@@ -2061,6 +2149,7 @@ audio/f/israeli/line/torah-numbers-10-2.mp3	words-only
 audio/f/israeli/line/torah-numbers-10-21.mp3	words-only
 audio/f/israeli/line/torah-numbers-10-22.mp3	words-only
 audio/f/israeli/line/torah-numbers-10-23.mp3	words-only
+audio/f/israeli/line/torah-numbers-10-25.mp3	words-only
 audio/f/israeli/line/torah-numbers-10-26.mp3	words-only
 audio/f/israeli/line/torah-numbers-10-27.mp3	words-only
 audio/f/israeli/line/torah-numbers-10-31.mp3	words-only
@@ -2079,6 +2168,7 @@ audio/f/israeli/line/torah-numbers-11-3.mp3	words-only
 audio/f/israeli/line/torah-numbers-11-31.mp3	words-only
 audio/f/israeli/line/torah-numbers-11-32.mp3	words-only
 audio/f/israeli/line/torah-numbers-11-35.mp3	words-only
+audio/f/israeli/line/torah-numbers-11-4.mp3	words-only
 audio/f/israeli/line/torah-numbers-11-7.mp3	words-only
 audio/f/israeli/line/torah-numbers-12-10.mp3	words-only
 audio/f/israeli/line/torah-numbers-12-12.mp3	words-only
@@ -2094,17 +2184,20 @@ audio/f/israeli/line/torah-numbers-13-26.mp3	words-only
 audio/f/israeli/line/torah-numbers-13-29.mp3	words-only
 audio/f/israeli/line/torah-numbers-13-30.mp3	words-only
 audio/f/israeli/line/torah-numbers-13-32.mp3	words-only
+audio/f/israeli/line/torah-numbers-13-33.mp3	words-only
 audio/f/israeli/line/torah-numbers-14-1.mp3	words-only
 audio/f/israeli/line/torah-numbers-14-12.mp3	words-only
 audio/f/israeli/line/torah-numbers-14-18.mp3	words-only
 audio/f/israeli/line/torah-numbers-14-21.mp3	words-only
 audio/f/israeli/line/torah-numbers-14-22.mp3	words-only
 audio/f/israeli/line/torah-numbers-14-24.mp3	words-only
+audio/f/israeli/line/torah-numbers-14-25.mp3	words-only
 audio/f/israeli/line/torah-numbers-14-29.mp3	words-only
 audio/f/israeli/line/torah-numbers-14-39.mp3	words-only
 audio/f/israeli/line/torah-numbers-14-4.mp3	words-only
 audio/f/israeli/line/torah-numbers-14-44.mp3	words-only
 audio/f/israeli/line/torah-numbers-14-5.mp3	words-only
+audio/f/israeli/line/torah-numbers-14-6.mp3	words-only
 audio/f/israeli/line/torah-numbers-14-9.mp3	words-only
 audio/f/israeli/line/torah-numbers-15-10.mp3	words-only
 audio/f/israeli/line/torah-numbers-15-11.mp3	words-only
@@ -2115,6 +2208,7 @@ audio/f/israeli/line/torah-numbers-15-24.mp3	words-only
 audio/f/israeli/line/torah-numbers-15-25.mp3	words-only
 audio/f/israeli/line/torah-numbers-15-26.mp3	words-only
 audio/f/israeli/line/torah-numbers-15-27.mp3	words-only
+audio/f/israeli/line/torah-numbers-15-28.mp3	words-only
 audio/f/israeli/line/torah-numbers-15-3.mp3	words-only
 audio/f/israeli/line/torah-numbers-15-31.mp3	words-only
 audio/f/israeli/line/torah-numbers-15-33.mp3	words-only
@@ -2136,6 +2230,7 @@ audio/f/israeli/line/torah-numbers-16-6.mp3	words-only
 audio/f/israeli/line/torah-numbers-17-12.mp3	words-only
 audio/f/israeli/line/torah-numbers-17-19.mp3	words-only
 audio/f/israeli/line/torah-numbers-17-20.mp3	words-only
+audio/f/israeli/line/torah-numbers-17-24.mp3	words-only
 audio/f/israeli/line/torah-numbers-17-28.mp3	words-only
 audio/f/israeli/line/torah-numbers-17-3.mp3	words-only
 audio/f/israeli/line/torah-numbers-17-4.mp3	words-only
@@ -2151,11 +2246,13 @@ audio/f/israeli/line/torah-numbers-18-30.mp3	words-only
 audio/f/israeli/line/torah-numbers-18-9.mp3	words-only
 audio/f/israeli/line/torah-numbers-19-11.mp3	words-only
 audio/f/israeli/line/torah-numbers-19-12.mp3	words-only
+audio/f/israeli/line/torah-numbers-19-13.mp3	words-only
 audio/f/israeli/line/torah-numbers-19-16.mp3	words-only
 audio/f/israeli/line/torah-numbers-19-19.mp3	words-only
 audio/f/israeli/line/torah-numbers-19-8.mp3	words-only
 audio/f/israeli/line/torah-numbers-2-10.mp3	words-only
 audio/f/israeli/line/torah-numbers-2-12.mp3	words-only
+audio/f/israeli/line/torah-numbers-2-15.mp3	words-only
 audio/f/israeli/line/torah-numbers-2-16.mp3	words-only
 audio/f/israeli/line/torah-numbers-2-17.mp3	words-only
 audio/f/israeli/line/torah-numbers-2-18.mp3	words-only
@@ -2179,6 +2276,7 @@ audio/f/israeli/line/torah-numbers-21-16.mp3	words-only
 audio/f/israeli/line/torah-numbers-21-17.mp3	words-only
 audio/f/israeli/line/torah-numbers-21-21.mp3	words-only
 audio/f/israeli/line/torah-numbers-21-22.mp3	words-only
+audio/f/israeli/line/torah-numbers-21-23.mp3	words-only
 audio/f/israeli/line/torah-numbers-21-28.mp3	words-only
 audio/f/israeli/line/torah-numbers-21-29.mp3	words-only
 audio/f/israeli/line/torah-numbers-21-30.mp3	words-only
@@ -2186,6 +2284,7 @@ audio/f/israeli/line/torah-numbers-21-34.mp3	words-only
 audio/f/israeli/line/torah-numbers-21-4.mp3	words-only
 audio/f/israeli/line/torah-numbers-21-7.mp3	words-only
 audio/f/israeli/line/torah-numbers-22-12.mp3	words-only
+audio/f/israeli/line/torah-numbers-22-13.mp3	words-only
 audio/f/israeli/line/torah-numbers-22-19.mp3	words-only
 audio/f/israeli/line/torah-numbers-22-20.mp3	words-only
 audio/f/israeli/line/torah-numbers-22-22.mp3	words-only
@@ -2213,6 +2312,7 @@ audio/f/israeli/line/torah-numbers-23-8.mp3	words-only
 audio/f/israeli/line/torah-numbers-23-9.mp3	words-only
 audio/f/israeli/line/torah-numbers-24-10.mp3	words-only
 audio/f/israeli/line/torah-numbers-24-13.mp3	words-only
+audio/f/israeli/line/torah-numbers-24-14.mp3	words-only
 audio/f/israeli/line/torah-numbers-24-15.mp3	words-only
 audio/f/israeli/line/torah-numbers-24-17.mp3	words-only
 audio/f/israeli/line/torah-numbers-24-19.mp3	words-only
@@ -2222,6 +2322,7 @@ audio/f/israeli/line/torah-numbers-24-3.mp3	words-only
 audio/f/israeli/line/torah-numbers-24-4.mp3	words-only
 audio/f/israeli/line/torah-numbers-24-5.mp3	words-only
 audio/f/israeli/line/torah-numbers-24-7.mp3	words-only
+audio/f/israeli/line/torah-numbers-25-13.mp3	words-only
 audio/f/israeli/line/torah-numbers-25-18.mp3	words-only
 audio/f/israeli/line/torah-numbers-25-2.mp3	words-only
 audio/f/israeli/line/torah-numbers-25-3.mp3	words-only
@@ -2291,6 +2392,7 @@ audio/f/israeli/line/torah-numbers-29-37.mp3	words-only
 audio/f/israeli/line/torah-numbers-29-38.mp3	words-only
 audio/f/israeli/line/torah-numbers-29-39.mp3	words-only
 audio/f/israeli/line/torah-numbers-29-4.mp3	words-only
+audio/f/israeli/line/torah-numbers-29-6.mp3	words-only
 audio/f/israeli/line/torah-numbers-29-7.mp3	words-only
 audio/f/israeli/line/torah-numbers-29-8.mp3	words-only
 audio/f/israeli/line/torah-numbers-29-9.mp3	words-only
@@ -2330,6 +2432,7 @@ audio/f/israeli/line/torah-numbers-32-10.mp3	words-only
 audio/f/israeli/line/torah-numbers-32-11.mp3	words-only
 audio/f/israeli/line/torah-numbers-32-15.mp3	words-only
 audio/f/israeli/line/torah-numbers-32-20.mp3	words-only
+audio/f/israeli/line/torah-numbers-32-26.mp3	words-only
 audio/f/israeli/line/torah-numbers-32-27.mp3	words-only
 audio/f/israeli/line/torah-numbers-32-28.mp3	words-only
 audio/f/israeli/line/torah-numbers-32-3.mp3	words-only
@@ -2350,6 +2453,7 @@ audio/f/israeli/line/torah-numbers-33-22.mp3	words-only
 audio/f/israeli/line/torah-numbers-33-23.mp3	words-only
 audio/f/israeli/line/torah-numbers-33-28.mp3	words-only
 audio/f/israeli/line/torah-numbers-33-29.mp3	words-only
+audio/f/israeli/line/torah-numbers-33-31.mp3	words-only
 audio/f/israeli/line/torah-numbers-33-32.mp3	words-only
 audio/f/israeli/line/torah-numbers-33-33.mp3	words-only
 audio/f/israeli/line/torah-numbers-33-36.mp3	words-only
@@ -2357,6 +2461,7 @@ audio/f/israeli/line/torah-numbers-33-37.mp3	words-only
 audio/f/israeli/line/torah-numbers-33-41.mp3	words-only
 audio/f/israeli/line/torah-numbers-33-45.mp3	words-only
 audio/f/israeli/line/torah-numbers-33-46.mp3	words-only
+audio/f/israeli/line/torah-numbers-33-53.mp3	words-only
 audio/f/israeli/line/torah-numbers-33-54.mp3	words-only
 audio/f/israeli/line/torah-numbers-33-55.mp3	words-only
 audio/f/israeli/line/torah-numbers-33-8.mp3	words-only
@@ -2378,6 +2483,7 @@ audio/f/israeli/line/torah-numbers-35-14.mp3	words-only
 audio/f/israeli/line/torah-numbers-35-16.mp3	words-only
 audio/f/israeli/line/torah-numbers-35-17.mp3	words-only
 audio/f/israeli/line/torah-numbers-35-18.mp3	words-only
+audio/f/israeli/line/torah-numbers-35-2.mp3	words-only
 audio/f/israeli/line/torah-numbers-35-20.mp3	words-only
 audio/f/israeli/line/torah-numbers-35-21.mp3	words-only
 audio/f/israeli/line/torah-numbers-35-23.mp3	words-only
@@ -2402,6 +2508,7 @@ audio/f/israeli/line/torah-numbers-5-13.mp3	words-only
 audio/f/israeli/line/torah-numbers-5-14.mp3	words-only
 audio/f/israeli/line/torah-numbers-5-15.mp3	words-only
 audio/f/israeli/line/torah-numbers-5-18.mp3	words-only
+audio/f/israeli/line/torah-numbers-5-2.mp3	words-only
 audio/f/israeli/line/torah-numbers-5-21.mp3	words-only
 audio/f/israeli/line/torah-numbers-5-28.mp3	words-only
 audio/f/israeli/line/torah-numbers-5-3.mp3	words-only
@@ -2446,6 +2553,7 @@ audio/f/israeli/line/torah-numbers-7-89.mp3	words-only
 audio/f/israeli/line/torah-numbers-8-10.mp3	words-only
 audio/f/israeli/line/torah-numbers-8-12.mp3	words-only
 audio/f/israeli/line/torah-numbers-8-14.mp3	words-only
+audio/f/israeli/line/torah-numbers-8-17.mp3	words-only
 audio/f/israeli/line/torah-numbers-8-7.mp3	words-only
 audio/f/israeli/line/torah-numbers-8-8.mp3	words-only
 audio/f/israeli/line/torah-numbers-8-9.mp3	words-only
@@ -2523,6 +2631,7 @@ audio/m/israeli/line/torah-deuteronomy-16-19.mp3	words-only
 audio/m/israeli/line/torah-deuteronomy-16-20.mp3	words-only
 audio/m/israeli/line/torah-deuteronomy-16-22.mp3	words-only
 audio/m/israeli/line/torah-deuteronomy-16-3.mp3	words-only
+audio/m/israeli/line/torah-deuteronomy-16-9.mp3	words-only
 audio/m/israeli/line/torah-deuteronomy-17-12.mp3	words-only
 audio/m/israeli/line/torah-deuteronomy-17-20.mp3	words-only
 audio/m/israeli/line/torah-deuteronomy-17-3.mp3	words-only
@@ -2535,6 +2644,7 @@ audio/m/israeli/line/torah-deuteronomy-18-3.mp3	words-only
 audio/m/israeli/line/torah-deuteronomy-18-4.mp3	words-only
 audio/m/israeli/line/torah-deuteronomy-18-8.mp3	words-only
 audio/m/israeli/line/torah-deuteronomy-19-13.mp3	words-only
+audio/m/israeli/line/torah-deuteronomy-19-14.mp3	words-only
 audio/m/israeli/line/torah-deuteronomy-19-16.mp3	words-only
 audio/m/israeli/line/torah-deuteronomy-19-18.mp3	words-only
 audio/m/israeli/line/torah-deuteronomy-19-4.mp3	words-only
@@ -2555,6 +2665,7 @@ audio/m/israeli/line/torah-deuteronomy-2-31.mp3	words-only
 audio/m/israeli/line/torah-deuteronomy-2-34.mp3	words-only
 audio/m/israeli/line/torah-deuteronomy-2-36.mp3	words-only
 audio/m/israeli/line/torah-deuteronomy-2-4.mp3	words-only
+audio/m/israeli/line/torah-deuteronomy-2-5.mp3	words-only
 audio/m/israeli/line/torah-deuteronomy-2-6.mp3	words-only
 audio/m/israeli/line/torah-deuteronomy-2-9.mp3	words-only
 audio/m/israeli/line/torah-deuteronomy-20-14.mp3	words-only
@@ -2574,6 +2685,7 @@ audio/m/israeli/line/torah-deuteronomy-21-23.mp3	words-only
 audio/m/israeli/line/torah-deuteronomy-21-3.mp3	words-only
 audio/m/israeli/line/torah-deuteronomy-21-5.mp3	words-only
 audio/m/israeli/line/torah-deuteronomy-21-6.mp3	words-only
+audio/m/israeli/line/torah-deuteronomy-22-1.mp3	words-only
 audio/m/israeli/line/torah-deuteronomy-22-14.mp3	words-only
 audio/m/israeli/line/torah-deuteronomy-22-2.mp3	words-only
 audio/m/israeli/line/torah-deuteronomy-22-21.mp3	words-only
@@ -2615,6 +2727,7 @@ audio/m/israeli/line/torah-deuteronomy-27-12.mp3	words-only
 audio/m/israeli/line/torah-deuteronomy-27-17.mp3	words-only
 audio/m/israeli/line/torah-deuteronomy-27-24.mp3	words-only
 audio/m/israeli/line/torah-deuteronomy-28-1.mp3	words-only
+audio/m/israeli/line/torah-deuteronomy-28-12.mp3	words-only
 audio/m/israeli/line/torah-deuteronomy-28-13.mp3	words-only
 audio/m/israeli/line/torah-deuteronomy-28-14.mp3	words-only
 audio/m/israeli/line/torah-deuteronomy-28-20.mp3	words-only
@@ -2647,6 +2760,7 @@ audio/m/israeli/line/torah-deuteronomy-29-4.mp3	words-only
 audio/m/israeli/line/torah-deuteronomy-29-6.mp3	words-only
 audio/m/israeli/line/torah-deuteronomy-29-7.mp3	words-only
 audio/m/israeli/line/torah-deuteronomy-3-10.mp3	words-only
+audio/m/israeli/line/torah-deuteronomy-3-11.mp3	words-only
 audio/m/israeli/line/torah-deuteronomy-3-12.mp3	words-only
 audio/m/israeli/line/torah-deuteronomy-3-14.mp3	words-only
 audio/m/israeli/line/torah-deuteronomy-3-18.mp3	words-only
@@ -2663,6 +2777,7 @@ audio/m/israeli/line/torah-deuteronomy-30-18.mp3	words-only
 audio/m/israeli/line/torah-deuteronomy-30-19.mp3	words-only
 audio/m/israeli/line/torah-deuteronomy-30-3.mp3	words-only
 audio/m/israeli/line/torah-deuteronomy-30-8.mp3	words-only
+audio/m/israeli/line/torah-deuteronomy-31-10.mp3	words-only
 audio/m/israeli/line/torah-deuteronomy-31-13.mp3	words-only
 audio/m/israeli/line/torah-deuteronomy-31-14.mp3	words-only
 audio/m/israeli/line/torah-deuteronomy-31-16.mp3	words-only
@@ -2708,6 +2823,7 @@ audio/m/israeli/line/torah-deuteronomy-34-3.mp3	words-only
 audio/m/israeli/line/torah-deuteronomy-34-4.mp3	words-only
 audio/m/israeli/line/torah-deuteronomy-34-6.mp3	words-only
 audio/m/israeli/line/torah-deuteronomy-34-7.mp3	words-only
+audio/m/israeli/line/torah-deuteronomy-34-8.mp3	words-only
 audio/m/israeli/line/torah-deuteronomy-34-9.mp3	words-only
 audio/m/israeli/line/torah-deuteronomy-4-10.mp3	words-only
 audio/m/israeli/line/torah-deuteronomy-4-17.mp3	words-only
@@ -2728,6 +2844,7 @@ audio/m/israeli/line/torah-deuteronomy-5-20.mp3	words-only
 audio/m/israeli/line/torah-deuteronomy-5-26.mp3	words-only
 audio/m/israeli/line/torah-deuteronomy-5-27.mp3	words-only
 audio/m/israeli/line/torah-deuteronomy-5-28.mp3	words-only
+audio/m/israeli/line/torah-deuteronomy-5-29.mp3	words-only
 audio/m/israeli/line/torah-deuteronomy-5-3.mp3	words-only
 audio/m/israeli/line/torah-deuteronomy-5-6.mp3	words-only
 audio/m/israeli/line/torah-deuteronomy-6-10.mp3	words-only
@@ -2770,6 +2887,7 @@ audio/m/israeli/line/torah-exodus-1-10.mp3	words-only
 audio/m/israeli/line/torah-exodus-1-11.mp3	words-only
 audio/m/israeli/line/torah-exodus-1-15.mp3	words-only
 audio/m/israeli/line/torah-exodus-1-17.mp3	words-only
+audio/m/israeli/line/torah-exodus-1-2.mp3	words-only
 audio/m/israeli/line/torah-exodus-1-22.mp3	words-only
 audio/m/israeli/line/torah-exodus-1-3.mp3	words-only
 audio/m/israeli/line/torah-exodus-1-8.mp3	words-only
@@ -2792,6 +2910,7 @@ audio/m/israeli/line/torah-exodus-12-18.mp3	words-only
 audio/m/israeli/line/torah-exodus-12-19.mp3	words-only
 audio/m/israeli/line/torah-exodus-12-2.mp3	words-only
 audio/m/israeli/line/torah-exodus-12-29.mp3	words-only
+audio/m/israeli/line/torah-exodus-12-3.mp3	words-only
 audio/m/israeli/line/torah-exodus-12-35.mp3	words-only
 audio/m/israeli/line/torah-exodus-12-36.mp3	words-only
 audio/m/israeli/line/torah-exodus-12-41.mp3	words-only
@@ -2833,6 +2952,7 @@ audio/m/israeli/line/torah-exodus-16-16.mp3	words-only
 audio/m/israeli/line/torah-exodus-16-17.mp3	words-only
 audio/m/israeli/line/torah-exodus-16-18.mp3	words-only
 audio/m/israeli/line/torah-exodus-16-19.mp3	words-only
+audio/m/israeli/line/torah-exodus-16-2.mp3	words-only
 audio/m/israeli/line/torah-exodus-16-21.mp3	words-only
 audio/m/israeli/line/torah-exodus-16-24.mp3	words-only
 audio/m/israeli/line/torah-exodus-16-26.mp3	words-only
@@ -2843,12 +2963,14 @@ audio/m/israeli/line/torah-exodus-16-32.mp3	words-only
 audio/m/israeli/line/torah-exodus-16-35.mp3	words-only
 audio/m/israeli/line/torah-exodus-16-36.mp3	words-only
 audio/m/israeli/line/torah-exodus-16-8.mp3	words-only
+audio/m/israeli/line/torah-exodus-16-9.mp3	words-only
 audio/m/israeli/line/torah-exodus-17-1.mp3	words-only
 audio/m/israeli/line/torah-exodus-17-12.mp3	words-only
 audio/m/israeli/line/torah-exodus-17-3.mp3	words-only
 audio/m/israeli/line/torah-exodus-17-6.mp3	words-only
 audio/m/israeli/line/torah-exodus-18-12.mp3	words-only
 audio/m/israeli/line/torah-exodus-18-14.mp3	words-only
+audio/m/israeli/line/torah-exodus-18-16.mp3	words-only
 audio/m/israeli/line/torah-exodus-18-19.mp3	words-only
 audio/m/israeli/line/torah-exodus-18-23.mp3	words-only
 audio/m/israeli/line/torah-exodus-18-26.mp3	words-only
@@ -2886,6 +3008,7 @@ audio/m/israeli/line/torah-exodus-21-22.mp3	words-only
 audio/m/israeli/line/torah-exodus-21-28.mp3	words-only
 audio/m/israeli/line/torah-exodus-21-32.mp3	words-only
 audio/m/israeli/line/torah-exodus-21-33.mp3	words-only
+audio/m/israeli/line/torah-exodus-21-34.mp3	words-only
 audio/m/israeli/line/torah-exodus-21-4.mp3	words-only
 audio/m/israeli/line/torah-exodus-21-9.mp3	words-only
 audio/m/israeli/line/torah-exodus-22-11.mp3	words-only
@@ -2973,6 +3096,7 @@ audio/m/israeli/line/torah-exodus-29-5.mp3	words-only
 audio/m/israeli/line/torah-exodus-3-11.mp3	words-only
 audio/m/israeli/line/torah-exodus-3-12.mp3	words-only
 audio/m/israeli/line/torah-exodus-3-14.mp3	words-only
+audio/m/israeli/line/torah-exodus-3-19.mp3	words-only
 audio/m/israeli/line/torah-exodus-3-22.mp3	words-only
 audio/m/israeli/line/torah-exodus-3-7.mp3	words-only
 audio/m/israeli/line/torah-exodus-3-9.mp3	words-only
@@ -2990,6 +3114,7 @@ audio/m/israeli/line/torah-exodus-31-6.mp3	words-only
 audio/m/israeli/line/torah-exodus-32-1.mp3	words-only
 audio/m/israeli/line/torah-exodus-32-10.mp3	words-only
 audio/m/israeli/line/torah-exodus-32-11.mp3	words-only
+audio/m/israeli/line/torah-exodus-32-13.mp3	words-only
 audio/m/israeli/line/torah-exodus-32-15.mp3	words-only
 audio/m/israeli/line/torah-exodus-32-19.mp3	words-only
 audio/m/israeli/line/torah-exodus-32-21.mp3	words-only
@@ -3007,6 +3132,7 @@ audio/m/israeli/line/torah-exodus-33-17.mp3	words-only
 audio/m/israeli/line/torah-exodus-33-19.mp3	words-only
 audio/m/israeli/line/torah-exodus-33-20.mp3	words-only
 audio/m/israeli/line/torah-exodus-33-3.mp3	words-only
+audio/m/israeli/line/torah-exodus-33-4.mp3	words-only
 audio/m/israeli/line/torah-exodus-33-6.mp3	words-only
 audio/m/israeli/line/torah-exodus-33-8.mp3	words-only
 audio/m/israeli/line/torah-exodus-34-15.mp3	words-only
@@ -3033,6 +3159,7 @@ audio/m/israeli/line/torah-exodus-36-15.mp3	words-only
 audio/m/israeli/line/torah-exodus-36-2.mp3	words-only
 audio/m/israeli/line/torah-exodus-36-25.mp3	words-only
 audio/m/israeli/line/torah-exodus-36-26.mp3	words-only
+audio/m/israeli/line/torah-exodus-36-28.mp3	words-only
 audio/m/israeli/line/torah-exodus-36-31.mp3	words-only
 audio/m/israeli/line/torah-exodus-36-33.mp3	words-only
 audio/m/israeli/line/torah-exodus-36-38.mp3	words-only
@@ -3048,6 +3175,7 @@ audio/m/israeli/line/torah-exodus-37-3.mp3	words-only
 audio/m/israeli/line/torah-exodus-37-4.mp3	words-only
 audio/m/israeli/line/torah-exodus-37-6.mp3	words-only
 audio/m/israeli/line/torah-exodus-37-9.mp3	words-only
+audio/m/israeli/line/torah-exodus-38-10.mp3	words-only
 audio/m/israeli/line/torah-exodus-38-11.mp3	words-only
 audio/m/israeli/line/torah-exodus-38-18.mp3	words-only
 audio/m/israeli/line/torah-exodus-38-23.mp3	words-only
@@ -3085,12 +3213,14 @@ audio/m/israeli/line/torah-exodus-5-21.mp3	words-only
 audio/m/israeli/line/torah-exodus-5-3.mp3	words-only
 audio/m/israeli/line/torah-exodus-5-6.mp3	words-only
 audio/m/israeli/line/torah-exodus-6-1.mp3	words-only
+audio/m/israeli/line/torah-exodus-6-12.mp3	words-only
 audio/m/israeli/line/torah-exodus-6-14.mp3	words-only
 audio/m/israeli/line/torah-exodus-6-23.mp3	words-only
 audio/m/israeli/line/torah-exodus-6-24.mp3	words-only
 audio/m/israeli/line/torah-exodus-6-28.mp3	words-only
 audio/m/israeli/line/torah-exodus-6-3.mp3	words-only
 audio/m/israeli/line/torah-exodus-6-30.mp3	words-only
+audio/m/israeli/line/torah-exodus-6-7.mp3	words-only
 audio/m/israeli/line/torah-exodus-7-14.mp3	words-only
 audio/m/israeli/line/torah-exodus-7-17.mp3	words-only
 audio/m/israeli/line/torah-exodus-7-20.mp3	words-only
@@ -3119,6 +3249,7 @@ audio/m/israeli/line/torah-exodus-9-35.mp3	words-only
 audio/m/israeli/line/torah-exodus-9-6.mp3	words-only
 audio/m/israeli/line/torah-exodus-9-8.mp3	words-only
 audio/m/israeli/line/torah-exodus-9-9.mp3	words-only
+audio/m/israeli/line/torah-genesis-1-10.mp3	words-only
 audio/m/israeli/line/torah-genesis-1-12.mp3	words-only
 audio/m/israeli/line/torah-genesis-1-15.mp3	words-only
 audio/m/israeli/line/torah-genesis-1-18.mp3	words-only
@@ -3143,6 +3274,7 @@ audio/m/israeli/line/torah-genesis-10-21.mp3	words-only
 audio/m/israeli/line/torah-genesis-10-22.mp3	words-only
 audio/m/israeli/line/torah-genesis-10-24.mp3	words-only
 audio/m/israeli/line/torah-genesis-10-25.mp3	words-only
+audio/m/israeli/line/torah-genesis-10-26.mp3	words-only
 audio/m/israeli/line/torah-genesis-10-28.mp3	words-only
 audio/m/israeli/line/torah-genesis-10-31.mp3	words-only
 audio/m/israeli/line/torah-genesis-10-5.mp3	words-only
@@ -3233,6 +3365,7 @@ audio/m/israeli/line/torah-genesis-17-24.mp3	words-only
 audio/m/israeli/line/torah-genesis-17-25.mp3	words-only
 audio/m/israeli/line/torah-genesis-17-3.mp3	words-only
 audio/m/israeli/line/torah-genesis-17-5.mp3	words-only
+audio/m/israeli/line/torah-genesis-17-6.mp3	words-only
 audio/m/israeli/line/torah-genesis-17-8.mp3	words-only
 audio/m/israeli/line/torah-genesis-18-15.mp3	words-only
 audio/m/israeli/line/torah-genesis-18-19.mp3	words-only
@@ -3261,6 +3394,7 @@ audio/m/israeli/line/torah-genesis-2-21.mp3	words-only
 audio/m/israeli/line/torah-genesis-2-22.mp3	words-only
 audio/m/israeli/line/torah-genesis-2-4.mp3	words-only
 audio/m/israeli/line/torah-genesis-2-5.mp3	words-only
+audio/m/israeli/line/torah-genesis-2-6.mp3	words-only
 audio/m/israeli/line/torah-genesis-20-12.mp3	words-only
 audio/m/israeli/line/torah-genesis-20-13.mp3	words-only
 audio/m/israeli/line/torah-genesis-20-17.mp3	words-only
@@ -3280,6 +3414,7 @@ audio/m/israeli/line/torah-genesis-21-23.mp3	words-only
 audio/m/israeli/line/torah-genesis-21-27.mp3	words-only
 audio/m/israeli/line/torah-genesis-21-29.mp3	words-only
 audio/m/israeli/line/torah-genesis-21-32.mp3	words-only
+audio/m/israeli/line/torah-genesis-21-33.mp3	words-only
 audio/m/israeli/line/torah-genesis-21-7.mp3	words-only
 audio/m/israeli/line/torah-genesis-21-9.mp3	words-only
 audio/m/israeli/line/torah-genesis-22-1.mp3	words-only
@@ -3318,6 +3453,7 @@ audio/m/israeli/line/torah-genesis-25-25.mp3	words-only
 audio/m/israeli/line/torah-genesis-25-28.mp3	words-only
 audio/m/israeli/line/torah-genesis-25-29.mp3	words-only
 audio/m/israeli/line/torah-genesis-25-30.mp3	words-only
+audio/m/israeli/line/torah-genesis-25-32.mp3	words-only
 audio/m/israeli/line/torah-genesis-25-33.mp3	words-only
 audio/m/israeli/line/torah-genesis-25-5.mp3	words-only
 audio/m/israeli/line/torah-genesis-26-12.mp3	words-only
@@ -3352,6 +3488,7 @@ audio/m/israeli/line/torah-genesis-28-9.mp3	words-only
 audio/m/israeli/line/torah-genesis-29-11.mp3	words-only
 audio/m/israeli/line/torah-genesis-29-13.mp3	words-only
 audio/m/israeli/line/torah-genesis-29-15.mp3	words-only
+audio/m/israeli/line/torah-genesis-29-17.mp3	words-only
 audio/m/israeli/line/torah-genesis-29-18.mp3	words-only
 audio/m/israeli/line/torah-genesis-29-2.mp3	words-only
 audio/m/israeli/line/torah-genesis-29-20.mp3	words-only
@@ -3460,6 +3597,7 @@ audio/m/israeli/line/torah-genesis-36-36.mp3	words-only
 audio/m/israeli/line/torah-genesis-36-40.mp3	words-only
 audio/m/israeli/line/torah-genesis-36-41.mp3	words-only
 audio/m/israeli/line/torah-genesis-37-15.mp3	words-only
+audio/m/israeli/line/torah-genesis-37-17.mp3	words-only
 audio/m/israeli/line/torah-genesis-37-2.mp3	words-only
 audio/m/israeli/line/torah-genesis-37-20.mp3	words-only
 audio/m/israeli/line/torah-genesis-37-24.mp3	words-only
@@ -3496,6 +3634,7 @@ audio/m/israeli/line/torah-genesis-40-8.mp3	words-only
 audio/m/israeli/line/torah-genesis-41-19.mp3	words-only
 audio/m/israeli/line/torah-genesis-41-20.mp3	words-only
 audio/m/israeli/line/torah-genesis-41-21.mp3	words-only
+audio/m/israeli/line/torah-genesis-41-22.mp3	words-only
 audio/m/israeli/line/torah-genesis-41-24.mp3	words-only
 audio/m/israeli/line/torah-genesis-41-29.mp3	words-only
 audio/m/israeli/line/torah-genesis-41-32.mp3	words-only
@@ -3522,6 +3661,7 @@ audio/m/israeli/line/torah-genesis-43-17.mp3	words-only
 audio/m/israeli/line/torah-genesis-43-18.mp3	words-only
 audio/m/israeli/line/torah-genesis-43-19.mp3	words-only
 audio/m/israeli/line/torah-genesis-43-21.mp3	words-only
+audio/m/israeli/line/torah-genesis-43-23.mp3	words-only
 audio/m/israeli/line/torah-genesis-43-24.mp3	words-only
 audio/m/israeli/line/torah-genesis-43-28.mp3	words-only
 audio/m/israeli/line/torah-genesis-43-30.mp3	words-only
@@ -3532,6 +3672,7 @@ audio/m/israeli/line/torah-genesis-44-1.mp3	words-only
 audio/m/israeli/line/torah-genesis-44-16.mp3	words-only
 audio/m/israeli/line/torah-genesis-44-18.mp3	words-only
 audio/m/israeli/line/torah-genesis-44-32.mp3	words-only
+audio/m/israeli/line/torah-genesis-44-5.mp3	words-only
 audio/m/israeli/line/torah-genesis-44-8.mp3	words-only
 audio/m/israeli/line/torah-genesis-45-11.mp3	words-only
 audio/m/israeli/line/torah-genesis-45-12.mp3	words-only
@@ -3543,6 +3684,7 @@ audio/m/israeli/line/torah-genesis-45-19.mp3	words-only
 audio/m/israeli/line/torah-genesis-45-21.mp3	words-only
 audio/m/israeli/line/torah-genesis-45-22.mp3	words-only
 audio/m/israeli/line/torah-genesis-45-26.mp3	words-only
+audio/m/israeli/line/torah-genesis-45-27.mp3	words-only
 audio/m/israeli/line/torah-genesis-45-28.mp3	words-only
 audio/m/israeli/line/torah-genesis-45-7.mp3	words-only
 audio/m/israeli/line/torah-genesis-45-9.mp3	words-only
@@ -3590,6 +3732,7 @@ audio/m/israeli/line/torah-genesis-5-3.mp3	words-only
 audio/m/israeli/line/torah-genesis-5-32.mp3	words-only
 audio/m/israeli/line/torah-genesis-50-1.mp3	words-only
 audio/m/israeli/line/torah-genesis-50-15.mp3	words-only
+audio/m/israeli/line/torah-genesis-50-16.mp3	words-only
 audio/m/israeli/line/torah-genesis-50-2.mp3	words-only
 audio/m/israeli/line/torah-genesis-50-22.mp3	words-only
 audio/m/israeli/line/torah-genesis-50-23.mp3	words-only
@@ -3602,6 +3745,7 @@ audio/m/israeli/line/torah-genesis-6-5.mp3	words-only
 audio/m/israeli/line/torah-genesis-7-11.mp3	words-only
 audio/m/israeli/line/torah-genesis-7-18.mp3	words-only
 audio/m/israeli/line/torah-genesis-7-2.mp3	words-only
+audio/m/israeli/line/torah-genesis-8-16.mp3	words-only
 audio/m/israeli/line/torah-genesis-8-17.mp3	words-only
 audio/m/israeli/line/torah-genesis-8-19.mp3	words-only
 audio/m/israeli/line/torah-genesis-8-4.mp3	words-only
@@ -3611,6 +3755,7 @@ audio/m/israeli/line/torah-genesis-9-21.mp3	words-only
 audio/m/israeli/line/torah-genesis-9-24.mp3	words-only
 audio/m/israeli/line/torah-genesis-9-27.mp3	words-only
 audio/m/israeli/line/torah-genesis-9-6.mp3	words-only
+audio/m/israeli/line/torah-leviticus-1-13.mp3	words-only
 audio/m/israeli/line/torah-leviticus-1-16.mp3	words-only
 audio/m/israeli/line/torah-leviticus-1-4.mp3	words-only
 audio/m/israeli/line/torah-leviticus-1-8.mp3	words-only
@@ -3635,12 +3780,14 @@ audio/m/israeli/line/torah-leviticus-11-6.mp3	words-only
 audio/m/israeli/line/torah-leviticus-12-2.mp3	words-only
 audio/m/israeli/line/torah-leviticus-13-11.mp3	words-only
 audio/m/israeli/line/torah-leviticus-13-16.mp3	words-only
+audio/m/israeli/line/torah-leviticus-13-17.mp3	words-only
 audio/m/israeli/line/torah-leviticus-13-18.mp3	words-only
 audio/m/israeli/line/torah-leviticus-13-2.mp3	words-only
 audio/m/israeli/line/torah-leviticus-13-23.mp3	words-only
 audio/m/israeli/line/torah-leviticus-13-27.mp3	words-only
 audio/m/israeli/line/torah-leviticus-13-3.mp3	words-only
 audio/m/israeli/line/torah-leviticus-13-38.mp3	words-only
+audio/m/israeli/line/torah-leviticus-13-39.mp3	words-only
 audio/m/israeli/line/torah-leviticus-13-4.mp3	words-only
 audio/m/israeli/line/torah-leviticus-13-41.mp3	words-only
 audio/m/israeli/line/torah-leviticus-13-43.mp3	words-only
@@ -3653,6 +3800,7 @@ audio/m/israeli/line/torah-leviticus-13-52.mp3	words-only
 audio/m/israeli/line/torah-leviticus-13-54.mp3	words-only
 audio/m/israeli/line/torah-leviticus-13-56.mp3	words-only
 audio/m/israeli/line/torah-leviticus-13-58.mp3	words-only
+audio/m/israeli/line/torah-leviticus-13-7.mp3	words-only
 audio/m/israeli/line/torah-leviticus-14-10.mp3	words-only
 audio/m/israeli/line/torah-leviticus-14-15.mp3	words-only
 audio/m/israeli/line/torah-leviticus-14-21.mp3	words-only
@@ -3669,12 +3817,14 @@ audio/m/israeli/line/torah-leviticus-14-9.mp3	words-only
 audio/m/israeli/line/torah-leviticus-15-11.mp3	words-only
 audio/m/israeli/line/torah-leviticus-15-12.mp3	words-only
 audio/m/israeli/line/torah-leviticus-15-18.mp3	words-only
+audio/m/israeli/line/torah-leviticus-15-20.mp3	words-only
 audio/m/israeli/line/torah-leviticus-15-27.mp3	words-only
 audio/m/israeli/line/torah-leviticus-15-3.mp3	words-only
 audio/m/israeli/line/torah-leviticus-15-31.mp3	words-only
 audio/m/israeli/line/torah-leviticus-15-32.mp3	words-only
 audio/m/israeli/line/torah-leviticus-15-33.mp3	words-only
 audio/m/israeli/line/torah-leviticus-15-8.mp3	words-only
+audio/m/israeli/line/torah-leviticus-16-12.mp3	words-only
 audio/m/israeli/line/torah-leviticus-16-14.mp3	words-only
 audio/m/israeli/line/torah-leviticus-16-17.mp3	words-only
 audio/m/israeli/line/torah-leviticus-16-19.mp3	words-only
@@ -3730,6 +3880,7 @@ audio/m/israeli/line/torah-leviticus-20-5.mp3	words-only
 audio/m/israeli/line/torah-leviticus-20-6.mp3	words-only
 audio/m/israeli/line/torah-leviticus-21-11.mp3	words-only
 audio/m/israeli/line/torah-leviticus-21-17.mp3	words-only
+audio/m/israeli/line/torah-leviticus-21-2.mp3	words-only
 audio/m/israeli/line/torah-leviticus-21-3.mp3	words-only
 audio/m/israeli/line/torah-leviticus-21-5.mp3	words-only
 audio/m/israeli/line/torah-leviticus-22-11.mp3	words-only
@@ -3773,6 +3924,7 @@ audio/m/israeli/line/torah-leviticus-26-16.mp3	words-only
 audio/m/israeli/line/torah-leviticus-26-23.mp3	words-only
 audio/m/israeli/line/torah-leviticus-26-28.mp3	words-only
 audio/m/israeli/line/torah-leviticus-26-30.mp3	words-only
+audio/m/israeli/line/torah-leviticus-26-31.mp3	words-only
 audio/m/israeli/line/torah-leviticus-26-33.mp3	words-only
 audio/m/israeli/line/torah-leviticus-26-39.mp3	words-only
 audio/m/israeli/line/torah-leviticus-26-41.mp3	words-only
@@ -3841,6 +3993,7 @@ audio/m/israeli/line/torah-leviticus-9-4.mp3	words-only
 audio/m/israeli/line/torah-numbers-1-10.mp3	words-only
 audio/m/israeli/line/torah-numbers-1-13.mp3	words-only
 audio/m/israeli/line/torah-numbers-1-14.mp3	words-only
+audio/m/israeli/line/torah-numbers-1-18.mp3	words-only
 audio/m/israeli/line/torah-numbers-1-2.mp3	words-only
 audio/m/israeli/line/torah-numbers-1-21.mp3	words-only
 audio/m/israeli/line/torah-numbers-1-27.mp3	words-only
@@ -3848,6 +4001,7 @@ audio/m/israeli/line/torah-numbers-1-29.mp3	words-only
 audio/m/israeli/line/torah-numbers-1-34.mp3	words-only
 audio/m/israeli/line/torah-numbers-1-46.mp3	words-only
 audio/m/israeli/line/torah-numbers-1-5.mp3	words-only
+audio/m/israeli/line/torah-numbers-10-12.mp3	words-only
 audio/m/israeli/line/torah-numbers-10-14.mp3	words-only
 audio/m/israeli/line/torah-numbers-10-18.mp3	words-only
 audio/m/israeli/line/torah-numbers-10-19.mp3	words-only
@@ -3858,6 +4012,7 @@ audio/m/israeli/line/torah-numbers-10-22.mp3	words-only
 audio/m/israeli/line/torah-numbers-10-25.mp3	words-only
 audio/m/israeli/line/torah-numbers-10-26.mp3	words-only
 audio/m/israeli/line/torah-numbers-10-3.mp3	words-only
+audio/m/israeli/line/torah-numbers-10-34.mp3	words-only
 audio/m/israeli/line/torah-numbers-10-35.mp3	words-only
 audio/m/israeli/line/torah-numbers-10-5.mp3	words-only
 audio/m/israeli/line/torah-numbers-10-9.mp3	words-only
@@ -3944,6 +4099,7 @@ audio/m/israeli/line/torah-numbers-2-16.mp3	words-only
 audio/m/israeli/line/torah-numbers-2-2.mp3	words-only
 audio/m/israeli/line/torah-numbers-2-20.mp3	words-only
 audio/m/israeli/line/torah-numbers-2-23.mp3	words-only
+audio/m/israeli/line/torah-numbers-2-24.mp3	words-only
 audio/m/israeli/line/torah-numbers-2-25.mp3	words-only
 audio/m/israeli/line/torah-numbers-2-27.mp3	words-only
 audio/m/israeli/line/torah-numbers-2-29.mp3	words-only
@@ -3975,6 +4131,7 @@ audio/m/israeli/line/torah-numbers-22-10.mp3	words-only
 audio/m/israeli/line/torah-numbers-22-14.mp3	words-only
 audio/m/israeli/line/torah-numbers-22-19.mp3	words-only
 audio/m/israeli/line/torah-numbers-22-20.mp3	words-only
+audio/m/israeli/line/torah-numbers-22-22.mp3	words-only
 audio/m/israeli/line/torah-numbers-22-27.mp3	words-only
 audio/m/israeli/line/torah-numbers-22-28.mp3	words-only
 audio/m/israeli/line/torah-numbers-22-3.mp3	words-only
@@ -3987,6 +4144,7 @@ audio/m/israeli/line/torah-numbers-22-40.mp3	words-only
 audio/m/israeli/line/torah-numbers-22-41.mp3	words-only
 audio/m/israeli/line/torah-numbers-22-5.mp3	words-only
 audio/m/israeli/line/torah-numbers-22-6.mp3	words-only
+audio/m/israeli/line/torah-numbers-22-7.mp3	words-only
 audio/m/israeli/line/torah-numbers-22-8.mp3	words-only
 audio/m/israeli/line/torah-numbers-23-1.mp3	words-only
 audio/m/israeli/line/torah-numbers-23-12.mp3	words-only
@@ -3996,6 +4154,7 @@ audio/m/israeli/line/torah-numbers-23-19.mp3	words-only
 audio/m/israeli/line/torah-numbers-23-22.mp3	words-only
 audio/m/israeli/line/torah-numbers-23-26.mp3	words-only
 audio/m/israeli/line/torah-numbers-23-28.mp3	words-only
+audio/m/israeli/line/torah-numbers-23-29.mp3	words-only
 audio/m/israeli/line/torah-numbers-23-7.mp3	words-only
 audio/m/israeli/line/torah-numbers-23-9.mp3	words-only
 audio/m/israeli/line/torah-numbers-24-1.mp3	words-only
@@ -4003,6 +4162,7 @@ audio/m/israeli/line/torah-numbers-24-14.mp3	words-only
 audio/m/israeli/line/torah-numbers-24-15.mp3	words-only
 audio/m/israeli/line/torah-numbers-24-17.mp3	words-only
 audio/m/israeli/line/torah-numbers-24-21.mp3	words-only
+audio/m/israeli/line/torah-numbers-24-23.mp3	words-only
 audio/m/israeli/line/torah-numbers-24-3.mp3	words-only
 audio/m/israeli/line/torah-numbers-24-4.mp3	words-only
 audio/m/israeli/line/torah-numbers-24-7.mp3	words-only
@@ -4034,6 +4194,7 @@ audio/m/israeli/line/torah-numbers-27-3.mp3	words-only
 audio/m/israeli/line/torah-numbers-27-9.mp3	words-only
 audio/m/israeli/line/torah-numbers-28-10.mp3	words-only
 audio/m/israeli/line/torah-numbers-28-12.mp3	words-only
+audio/m/israeli/line/torah-numbers-28-13.mp3	words-only
 audio/m/israeli/line/torah-numbers-28-14.mp3	words-only
 audio/m/israeli/line/torah-numbers-28-15.mp3	words-only
 audio/m/israeli/line/torah-numbers-28-2.mp3	words-only
@@ -4045,6 +4206,7 @@ audio/m/israeli/line/torah-numbers-28-29.mp3	words-only
 audio/m/israeli/line/torah-numbers-28-3.mp3	words-only
 audio/m/israeli/line/torah-numbers-28-31.mp3	words-only
 audio/m/israeli/line/torah-numbers-28-4.mp3	words-only
+audio/m/israeli/line/torah-numbers-28-7.mp3	words-only
 audio/m/israeli/line/torah-numbers-28-8.mp3	words-only
 audio/m/israeli/line/torah-numbers-28-9.mp3	words-only
 audio/m/israeli/line/torah-numbers-29-10.mp3	words-only
@@ -4060,6 +4222,7 @@ audio/m/israeli/line/torah-numbers-29-24.mp3	words-only
 audio/m/israeli/line/torah-numbers-29-26.mp3	words-only
 audio/m/israeli/line/torah-numbers-29-27.mp3	words-only
 audio/m/israeli/line/torah-numbers-29-28.mp3	words-only
+audio/m/israeli/line/torah-numbers-29-29.mp3	words-only
 audio/m/israeli/line/torah-numbers-29-3.mp3	words-only
 audio/m/israeli/line/torah-numbers-29-31.mp3	words-only
 audio/m/israeli/line/torah-numbers-29-33.mp3	words-only
@@ -4075,6 +4238,7 @@ audio/m/israeli/line/torah-numbers-3-2.mp3	words-only
 audio/m/israeli/line/torah-numbers-3-21.mp3	words-only
 audio/m/israeli/line/torah-numbers-3-29.mp3	words-only
 audio/m/israeli/line/torah-numbers-3-33.mp3	words-only
+audio/m/israeli/line/torah-numbers-3-37.mp3	words-only
 audio/m/israeli/line/torah-numbers-3-39.mp3	words-only
 audio/m/israeli/line/torah-numbers-3-4.mp3	words-only
 audio/m/israeli/line/torah-numbers-3-46.mp3	words-only
@@ -4099,10 +4263,12 @@ audio/m/israeli/line/torah-numbers-31-32.mp3	words-only
 audio/m/israeli/line/torah-numbers-31-33.mp3	words-only
 audio/m/israeli/line/torah-numbers-31-35.mp3	words-only
 audio/m/israeli/line/torah-numbers-31-38.mp3	words-only
+audio/m/israeli/line/torah-numbers-31-40.mp3	words-only
 audio/m/israeli/line/torah-numbers-31-46.mp3	words-only
 audio/m/israeli/line/torah-numbers-31-47.mp3	words-only
 audio/m/israeli/line/torah-numbers-31-50.mp3	words-only
 audio/m/israeli/line/torah-numbers-32-10.mp3	words-only
+audio/m/israeli/line/torah-numbers-32-13.mp3	words-only
 audio/m/israeli/line/torah-numbers-32-17.mp3	words-only
 audio/m/israeli/line/torah-numbers-32-19.mp3	words-only
 audio/m/israeli/line/torah-numbers-32-24.mp3	words-only
@@ -4207,6 +4373,7 @@ audio/m/israeli/line/torah-numbers-7-31.mp3	words-only
 audio/m/israeli/line/torah-numbers-7-35.mp3	words-only
 audio/m/israeli/line/torah-numbers-7-37.mp3	words-only
 audio/m/israeli/line/torah-numbers-7-40.mp3	words-only
+audio/m/israeli/line/torah-numbers-7-41.mp3	words-only
 audio/m/israeli/line/torah-numbers-7-43.mp3	words-only
 audio/m/israeli/line/torah-numbers-7-46.mp3	words-only
 audio/m/israeli/line/torah-numbers-7-47.mp3	words-only

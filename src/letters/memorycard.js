@@ -74,6 +74,18 @@ export function soundLineFor(entry, tradition) {
   return String(per || s.line || '');
 }
 
+/**
+ * What the card says about the sound: the hook line ("D like Dive."), plus one plain sentence when the learner's
+ * style sounds different (data: sound.notes). Older files without a hook line fall back to the style's own line.
+ */
+export function soundShownFor(entry, tradition) {
+  const s = entry && entry.sound; if (!s) return '';
+  const t = normalize(tradition);
+  if (!s.line) return soundLineFor(entry, tradition).replace(/^Same sound:\s*/i, '');
+  const note = s.notes && typeof s.notes === 'object' && s.notes[t] ? String(s.notes[t]) : '';
+  return note ? `${s.line} ${note}` : String(s.line);
+}
+
 /** The example word for a tradition: Hebrew as stored, the rule-generated respelling (src/pronunciation/forTradition.js), the gloss. */
 export function wordFor(entry, tradition) {
   const w = entry && entry.word; if (!w || !w.he) return null;
@@ -279,8 +291,7 @@ export function buildMemoryCard(o) {
   const pic = entry.picture || {};
   const word = wordFor(entry, tradition);
   const hookText = (entry.sound && entry.sound.hook) || '';
-  // the data lines open with "Same sound: " which a first-time reader cannot place (same as what?): show the rest, after the hook
-  const line = o.hideSoundLine ? '' : soundLineFor(entry, tradition).replace(/^Same sound:\s*/i, '');
+  const line = o.hideSoundLine ? '' : soundShownFor(entry, tradition);
 
   const svgBox = h('span', { class: 'mc-svg', 'aria-hidden': 'true' });
   const glyphEl = h('span', { class: 'mc-glyph', dir: 'rtl', lang: 'he', 'aria-hidden': 'true' }, glyph);
@@ -368,7 +379,7 @@ export function buildMemoryCard(o) {
       row.unshift(btn('mc-hear-letter', t('mc.hearLetter', 'Listen: the letter'), () => hear('letter', entry.id, entry.name)),
         word && word.vocabId ? btn('mc-hear-word', t('mc.hearWord', 'Listen: the word'), () => hear('word', word.vocabId, word.gloss || 'the word')) : null);
       steps.appendChild(h('li', {}, h('div', { class: 'mc-row' }, ...row.filter(Boolean)),
-        more ? h('p', { class: 'mc-small' }, t('mc.draft', 'Draft memory hook: a teaching aid, not history, and not yet checked by a Hebrew teacher.')) : null));
+        more ? h('p', { class: 'mc-small' }, t('mc.draft', 'Memory hooks are little stories to help you remember, not history.')) : null));
     }
     note.textContent = status;
   }

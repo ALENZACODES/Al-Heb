@@ -80,7 +80,7 @@ export function build() {
       const ok = s.hookPosition === 'initial' ? hl.startsWith(s.hookHas.toLowerCase()) : hl.includes(s.hookHas.toLowerCase());
       if (!ok) err(s.id, `hook "${hook}" does not ${s.hookPosition === 'initial' ? 'start with' : 'contain'} "${s.hookHas}"`);
     }
-    const perTradition = {}, matches = {};
+    const perTradition = {}, matches = {}, notes = {};
     for (const t of TRADS) {
       const status = s.trad[t];
       const line = C.english[t];
@@ -91,15 +91,19 @@ export function build() {
         if (status === 'same-with-dot' && !(s.diff && s.diff[t])) err(s.id, `${t}: same-with-dot needs a diff note`);
         perTradition[t] = (status === 'same' ? 'Same sound: ' : 'Same for this word: ') + line + (s.diff && s.diff[t] ? '. ' + s.diff[t] : '');
         matches[t] = true;
+        if (status === 'same-with-dot') notes[t] = s.diff[t];
       } else if (status === 'differs') {
         if (hit) err(s.id, `${t}: claimed differs but consonants.json line matches the hook sound: "${line}"`);
         if (!(s.diff && s.diff[t])) err(s.id, `${t}: differs needs a diff note`);
         perTradition[t] = 'Differs: ' + line + '. ' + s.diff[t];
         matches[t] = false;
+        notes[t] = s.diff[t];
       } else if (status === 'cue-only') {
         if (!hit) err(s.id, `${t}: cue-only check expects consonants.json to mention r: "${line}"`);
         perTradition[t] = 'Hook is a spelling cue only. Real sound: ' + line;
         matches[t] = false;
+        // the hook line already describes the Israeli sound; the other styles get their own plain sentence
+        if (t !== 'israeli' && C.say && C.say[t]) notes[t] = C.say[t];
       } else err(s.id, `${t}: unknown status ${status}`);
     }
     if (s.soundClass === 'silent' && !/silent|glottal/i.test(C.english.israeli)) err(s.id, 'silent claim not in consonants.json');
@@ -120,7 +124,7 @@ export function build() {
     out.push({
       id: s.id, hebrew: L.he, name: L.name,
       picture: { idea: s.picture.idea, alt: s.picture.alt, svg: `assets/letters/morph/${s.id}.svg` },
-      sound: { hook, hookPosition: s.hookPosition, line: s.line, perTradition, matches },
+      sound: { hook, hookPosition: s.hookPosition, line: s.line, perTradition, matches, notes },
       word: { he: w.he, vocabId: w.id, rank: w.frequencyRank, gloss, translit: w.translit, position },
       story, storyByTradition: Object.fromEntries(TRADS.map((t) => [t, storyFor(story, w.translit, w.he, t)])), tip: s.tip, risk,
     });

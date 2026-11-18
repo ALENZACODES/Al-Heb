@@ -27,6 +27,7 @@ import { parseWord, stripTaamim } from '../../src/pronunciation/hebrew.js';
 import { classifyShvas } from '../../src/pronunciation/shva.js';
 import { kamatzKatanStemStart } from '../../src/pronunciation/kamatz-katan.js';
 import { transliterate } from '../../src/pronunciation/transliterate.js';
+import { isEveryday } from '../../src/pronunciation/everyday.js';
 import { syllabifyWord, STRESS_EXCEPTIONS, DIVINE_NAME_READING } from '../../src/photo/syllabify.js';
 
 export const ROOT = join(fileURLToPath(new URL('.', import.meta.url)), '..', '..');
@@ -290,12 +291,15 @@ export function renderWord(he, ctx) {
     if (isReduced(headOf(syls[i]))) ash = { index: n - 1, rule: 'final (no full-vowel syllable before it)' };
     else ash = { index: i, rule: 'default penultimate (Ashkenazi natural register)' };
   }
+  // Everyday modern words (src/pronunciation/everyday.js) have no older reading: Ashkenazi = Israeli.
+  const everyday = isEveryday(w);
+  if (everyday) ash = { ...isr };
   const stressFor = { israeli: isr, sephardi: { ...isr }, ashkenazi: ash };
 
   // --- Ashkenazi final-syllable reduction: unstressed open final syllable written kamatz + he (or silent alef) -> [ə]
   const lastHead = headOf(syls[n - 1]);
   const lastLetter = syls[n - 1].letters[syls[n - 1].letters.length - 1];
-  const ashReduce = n > 1 && ash.index !== n - 1 && lastHead.vowel === 'kamatz' && !lastHead.katan && isOpen(syls[n - 1])
+  const ashReduce = !everyday && n > 1 && ash.index !== n - 1 && lastHead.vowel === 'kamatz' && !lastHead.katan && isOpen(syls[n - 1])
     && lastLetter !== lastHead && ((lastLetter.letter === 'ה' && lastLetter.mater) || (lastLetter.letter === 'א' && lastLetter.silent));
   if (ashReduce) flags.add('ashk-final-kamatz-reduced');
 
@@ -303,13 +307,13 @@ export function renderWord(he, ctx) {
   const variants = {};
   for (const trad of TRADITIONS) {
     const st = stressFor[trad];
-    const pieces = sylIpa(trad, { reduceLast: trad === 'ashkenazi' && ashReduce });
+    const pieces = sylIpa(everyday && trad === 'ashkenazi' ? 'israeli' : trad, { reduceLast: trad === 'ashkenazi' && ashReduce });
     variants[trad] = { ipa: pieces.map((p, si) => (si === st.index ? 'ˈ' : '') + p).join('.'), simple: '', stress: { syllable: st.index + 1, of: n, rule: st.rule } };
   }
 
   // --- simple Latin (existing transliterator)
   const simpleIS = transliterate(w, { scheme: 'siddur', geminate: GEMINATE, finalHe: 'show' });
-  let simpleA = transliterate(w, { scheme: 'ashkenazi-siddur', cholam: 'oy', geminate: GEMINATE, finalHe: 'show' }).replace(/oyy/g, 'oy');
+  let simpleA = everyday ? simpleIS : transliterate(w, { scheme: 'ashkenazi-siddur', cholam: 'oy', geminate: GEMINATE, finalHe: 'show' }).replace(/oyy/g, 'oy');
   if (ashReduce) {
     if (/oh$/.test(simpleA)) simpleA = simpleA.replace(/oh$/, 'eh');
     else if (/o$/.test(simpleA)) simpleA = simpleA.replace(/o$/, 'eh');

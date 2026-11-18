@@ -214,12 +214,20 @@ test('memory card: the word is asked for with its Hebrew text (a word missing fr
   assert.match(body(c.el), /No recording yet: using your device's Hebrew voice\.$/);
 });
 
-test('memory card: "Same sound:" prefix is not shown; hideSoundLine drops the line (first-day step has its own)', async () => {
-  const e = { ...fixture.letters[1], sound: { ...fixture.letters[1].sound, perTradition: { sephardi: 'Same sound: b with dagesh, v without' } } };
+test('memory card: the hook line is shown, not the "Same sound:" data line; hideSoundLine drops it (first-day step has its own)', async () => {
+  const e = { ...fixture.letters[1], sound: { ...fixture.letters[1].sound, line: 'B like Ball. No dot: V.', perTradition: { sephardi: 'Same sound: b with dagesh, v without' } } };
   const c = M.buildMemoryCard({ entry: e, glyph: 'ב', tradition: 'sephardi', svg: M.sanitizeSvg(SVG) }); await act(c.el, 'mc-art').click();
-  assert.doesNotMatch(body(c.el), /Same sound/); assert.match(body(c.el), /: b with dagesh, v without/);
+  assert.doesNotMatch(body(c.el), /Same sound/); assert.match(body(c.el), /: B like Ball\. No dot: V\./);
   const d = M.buildMemoryCard({ entry: e, glyph: 'ב', tradition: 'sephardi', hideSoundLine: true, svg: M.sanitizeSvg(SVG) }); await act(d.el, 'mc-art').click();
-  assert.doesNotMatch(body(d.el), /dagesh/);
+  assert.doesNotMatch(body(d.el), /B like Ball/);
+});
+
+test('soundShownFor: hook line, plus the style note only where the style sounds different', () => {
+  const e = { sound: { line: 'Ch like loch.', notes: { sephardi: 'Deeper in the throat.' }, perTradition: { israeli: 'Same sound: ch' } } };
+  assert.equal(M.soundShownFor(e, 'israeli'), 'Ch like loch.');
+  assert.equal(M.soundShownFor(e, 'sephardi'), 'Ch like loch. Deeper in the throat.');
+  assert.equal(M.soundShownFor({ sound: { perTradition: { israeli: 'Same sound: ch' } } }, 'israeli'), 'ch');
+  assert.equal(M.soundShownFor({}, 'israeli'), '');
 });
 
 // WCAG 2.5.3 (label in name): the picture button's visible words, when there are any, are inside its accessible name.

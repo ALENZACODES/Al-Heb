@@ -54,8 +54,8 @@
     "hebrew": "תודה",
     "nikud": "תּוֹדָה",
     "translit_israeli": "todah",
-    "translit_sephardi": "toda",
-    "translit_ashkenazi": "toydo",
+    "translit_sephardi": "todah",
+    "translit_ashkenazi": "todah",
     "meaning_en": "thank you",
     "letters": [
       "ת",
@@ -72,8 +72,8 @@
     "hebrew": "בבקשה",
     "nikud": "בְּבַקָּשָׁה",
     "translit_israeli": "bevakashah",
-    "translit_sephardi": "bevakasha",
-    "translit_ashkenazi": "bevakosho",
+    "translit_sephardi": "bevakashah",
+    "translit_ashkenazi": "bevakashah",
     "meaning_en": "please / you're welcome",
     "letters": [
       "ב",
@@ -92,7 +92,7 @@
     "nikud": "אַבָּא",
     "translit_israeli": "aba",
     "translit_sephardi": "aba",
-    "translit_ashkenazi": "abo",
+    "translit_ashkenazi": "aba",
     "meaning_en": "dad",
     "letters": [
       "א",
@@ -109,8 +109,8 @@
     "nikud": "אִמָּא",
     "translit_israeli": "ima",
     "translit_sephardi": "ima",
-    "translit_ashkenazi": "imo",
-    "meaning_en": "mum",
+    "translit_ashkenazi": "ima",
+    "meaning_en": "mom",
     "letters": [
       "א",
       "מ",
@@ -228,8 +228,8 @@
     "hebrew": "תה",
     "nikud": "תֵּה",
     "translit_israeli": "teh",
-    "translit_sephardi": "te",
-    "translit_ashkenazi": "tei",
+    "translit_sephardi": "teh",
+    "translit_ashkenazi": "teh",
     "meaning_en": "tea",
     "letters": [
       "ת",
@@ -367,7 +367,7 @@
     "translit_israeli": "delet",
     "translit_sephardi": "delet",
     "translit_ashkenazi": "deles",
-    "meaning_en": "door (portal of entry)",
+    "meaning_en": "door",
     "letters": [
       "ד",
       "ל",
@@ -516,8 +516,8 @@
     "nikud": "אוֹקֵי",
     "translit_israeli": "okei",
     "translit_sephardi": "okei",
-    "translit_ashkenazi": "oykei",
-    "meaning_en": "OK, okay",
+    "translit_ashkenazi": "okei",
+    "meaning_en": "OK",
     "letters": [
       "א",
       "ו",
@@ -549,8 +549,8 @@
     "hebrew": "אחלה",
     "nikud": "אַחְלָה",
     "translit_israeli": "achlah",
-    "translit_sephardi": "achla",
-    "translit_ashkenazi": "achlo",
+    "translit_sephardi": "achlah",
+    "translit_ashkenazi": "achlah",
     "meaning_en": "great",
     "letters": [
       "א",
@@ -586,7 +586,7 @@
     "translit_israeli": "ana",
     "translit_sephardi": "ana",
     "translit_ashkenazi": "ono",
-    "meaning_en": "please",
+    "meaning_en": "please (in prayer)",
     "letters": [
       "א",
       "נ",
@@ -620,8 +620,8 @@
     "nikud": "סַבָּא",
     "translit_israeli": "saba",
     "translit_sephardi": "saba",
-    "translit_ashkenazi": "sabo",
-    "meaning_en": "grandfather",
+    "translit_ashkenazi": "saba",
+    "meaning_en": "grandpa",
     "letters": [
       "ס",
       "ב",
@@ -638,7 +638,7 @@
     "translit_israeli": "yeled",
     "translit_sephardi": "yeled",
     "translit_ashkenazi": "yeled",
-    "meaning_en": "child, a kid, a boy",
+    "meaning_en": "boy / child",
     "letters": [
       "י",
       "ל",
@@ -655,7 +655,7 @@
     "translit_israeli": "yaldah",
     "translit_sephardi": "yalda",
     "translit_ashkenazi": "yaldo",
-    "meaning_en": "girl (female child)",
+    "meaning_en": "girl",
     "letters": [
       "י",
       "ל",
@@ -726,7 +726,7 @@
     "translit_israeli": "chaver",
     "translit_sephardi": "chaver",
     "translit_ashkenazi": "choveir",
-    "meaning_en": "a (male) friend",
+    "meaning_en": "friend (male)",
     "letters": [
       "ח",
       "ב",
@@ -743,7 +743,7 @@
     "translit_israeli": "am",
     "translit_sephardi": "am",
     "translit_ashkenazi": "am",
-    "meaning_en": "a nation, a people",
+    "meaning_en": "people / nation",
     "letters": [
       "ע",
       "ם"
@@ -777,7 +777,7 @@
     "translit_israeli": "rofe",
     "translit_sephardi": "rofe",
     "translit_ashkenazi": "royfei",
-    "meaning_en": "medical doctor, physician",
+    "meaning_en": "doctor",
     "letters": [
       "ר",
       "ו",
@@ -846,8 +846,8 @@
     "hebrew": "מסעדה",
     "nikud": "מִסְעָדָה",
     "translit_israeli": "mis'adah",
-    "translit_sephardi": "mis'ada",
-    "translit_ashkenazi": "mis'odo",
+    "translit_sephardi": "mis'adah",
+    "translit_ashkenazi": "mis'adah",
     "meaning_en": "restaurant",
     "letters": [
       "מ",
@@ -904,7 +904,7 @@
     "translit_israeli": "matok",
     "translit_sephardi": "matok",
     "translit_ashkenazi": "mosoyk",
-    "meaning_en": "Sweet",
+    "meaning_en": "sweet",
     "letters": [
       "מ",
       "ת",
@@ -1007,7 +1007,7 @@
     "nikud": "נְיָר",
     "translit_israeli": "neyar",
     "translit_sephardi": "neyar",
-    "translit_ashkenazi": "neyor",
+    "translit_ashkenazi": "neyar",
     "meaning_en": "paper",
     "letters": [
       "נ",
@@ -1057,9 +1057,9 @@
     "hebrew": "ספה",
     "nikud": "סַפָּה",
     "translit_israeli": "sapah",
-    "translit_sephardi": "sapa",
-    "translit_ashkenazi": "sapo",
-    "meaning_en": "a sofa",
+    "translit_sephardi": "sapah",
+    "translit_ashkenazi": "sapah",
+    "meaning_en": "sofa",
     "letters": [
       "ס",
       "פ",
@@ -1076,7 +1076,7 @@
     "translit_israeli": "et",
     "translit_sephardi": "et",
     "translit_ashkenazi": "eit",
-    "meaning_en": "a pen",
+    "meaning_en": "pen",
     "letters": [
       "ע",
       "ט"
@@ -1110,7 +1110,7 @@
     "translit_israeli": "sakin",
     "translit_sephardi": "sakin",
     "translit_ashkenazi": "sakin",
-    "meaning_en": "knife, blade",
+    "meaning_en": "knife",
     "letters": [
       "ס",
       "כ",
@@ -1128,7 +1128,7 @@
     "translit_israeli": "ner",
     "translit_sephardi": "ner",
     "translit_ashkenazi": "neir",
-    "meaning_en": "oil lamp, candle",
+    "meaning_en": "candle",
     "letters": [
       "נ",
       "ר"
@@ -1229,7 +1229,7 @@
     "translit_israeli": "kof",
     "translit_sephardi": "kof",
     "translit_ashkenazi": "koyf",
-    "meaning_en": "monkey, ape",
+    "meaning_en": "monkey",
     "letters": [
       "ק",
       "ו",
@@ -1246,7 +1246,7 @@
     "translit_israeli": "gefen",
     "translit_sephardi": "gefen",
     "translit_ashkenazi": "gefen",
-    "meaning_en": "vine, grapevine",
+    "meaning_en": "grapevine",
     "letters": [
       "ג",
       "פ",
@@ -1263,7 +1263,7 @@
     "translit_israeli": "giv'ah",
     "translit_sephardi": "giv'a",
     "translit_ashkenazi": "giv'o",
-    "meaning_en": "a hill",
+    "meaning_en": "hill",
     "letters": [
       "ג",
       "ב",
@@ -1298,7 +1298,7 @@
     "translit_israeli": "yareach",
     "translit_sephardi": "yareach",
     "translit_ashkenazi": "yoreiach",
-    "meaning_en": "Moon",
+    "meaning_en": "moon",
     "letters": [
       "י",
       "ר",
@@ -1383,7 +1383,7 @@
     "translit_israeli": "ruach",
     "translit_sephardi": "ruach",
     "translit_ashkenazi": "ruach",
-    "meaning_en": "wind, a wind",
+    "meaning_en": "wind / spirit",
     "letters": [
       "ר",
       "ו",
@@ -1467,7 +1467,7 @@
     "translit_israeli": "chof",
     "translit_sephardi": "chof",
     "translit_ashkenazi": "choyf",
-    "meaning_en": "beach, shore, coast",
+    "meaning_en": "beach",
     "letters": [
       "ח",
       "ו",
@@ -1501,7 +1501,7 @@
     "translit_israeli": "derekh",
     "translit_sephardi": "derekh",
     "translit_ashkenazi": "derekh",
-    "meaning_en": "a road, a path, a way",
+    "meaning_en": "way / road",
     "letters": [
       "ד",
       "ר",
@@ -1535,7 +1535,7 @@
     "nikud": "מְכוֹנִית",
     "translit_israeli": "mekhonit",
     "translit_sephardi": "mekhonit",
-    "translit_ashkenazi": "mekhoynis",
+    "translit_ashkenazi": "mekhonit",
     "meaning_en": "car",
     "letters": [
       "מ",
@@ -1555,8 +1555,8 @@
     "nikud": "אוֹטוֹבּוּס",
     "translit_israeli": "otobus",
     "translit_sephardi": "otobus",
-    "translit_ashkenazi": "oytoybus",
-    "meaning_en": "a bus (vehicle)",
+    "translit_ashkenazi": "otobus",
+    "meaning_en": "bus",
     "letters": [
       "א",
       "ו",
@@ -1576,8 +1576,8 @@
     "nikud": "מוֹנִית",
     "translit_israeli": "monit",
     "translit_sephardi": "monit",
-    "translit_ashkenazi": "moynis",
-    "meaning_en": "taxi, cab, taxicab",
+    "translit_ashkenazi": "monit",
+    "meaning_en": "taxi",
     "letters": [
       "מ",
       "ו",
@@ -1630,7 +1630,7 @@
     "translit_israeli": "karov",
     "translit_sephardi": "karov",
     "translit_ashkenazi": "koroyv",
-    "meaning_en": "a relative, a family member",
+    "meaning_en": "near",
     "letters": [
       "ק",
       "ר",
@@ -1648,7 +1648,7 @@
     "translit_israeli": "rachok",
     "translit_sephardi": "rachok",
     "translit_ashkenazi": "rochoyk",
-    "meaning_en": "far, distant",
+    "meaning_en": "far",
     "letters": [
       "ר",
       "ח",
@@ -1700,9 +1700,9 @@
     "hebrew": "שמאלה",
     "nikud": "שְׂמֹאלָה",
     "translit_israeli": "semolah",
-    "translit_sephardi": "semola",
-    "translit_ashkenazi": "semoylo",
-    "meaning_en": "left",
+    "translit_sephardi": "semolah",
+    "translit_ashkenazi": "semolah",
+    "meaning_en": "to the left",
     "letters": [
       "ש",
       "מ",
@@ -1721,7 +1721,7 @@
     "translit_israeli": "eretz",
     "translit_sephardi": "eretz",
     "translit_ashkenazi": "eretz",
-    "meaning_en": "country, land",
+    "meaning_en": "country / land",
     "letters": [
       "א",
       "ר",
@@ -1737,7 +1737,7 @@
     "nikud": "מָלוֹן",
     "translit_israeli": "malon",
     "translit_sephardi": "malon",
-    "translit_ashkenazi": "moloyn",
+    "translit_ashkenazi": "malon",
     "meaning_en": "hotel",
     "letters": [
       "מ",
@@ -1773,7 +1773,7 @@
     "translit_israeli": "erev",
     "translit_sephardi": "erev",
     "translit_ashkenazi": "erev",
-    "meaning_en": "evening, night",
+    "meaning_en": "evening",
     "letters": [
       "ע",
       "ר",
@@ -1807,7 +1807,7 @@
     "translit_israeli": "shavu'a",
     "translit_sephardi": "shavu'a",
     "translit_ashkenazi": "shovu'a",
-    "meaning_en": "week, period of seven days",
+    "meaning_en": "week",
     "letters": [
       "ש",
       "ב",
@@ -1823,8 +1823,8 @@
     "hebrew": "דקה",
     "nikud": "דַּקָּה",
     "translit_israeli": "dakah",
-    "translit_sephardi": "daka",
-    "translit_ashkenazi": "dako",
+    "translit_sephardi": "dakah",
+    "translit_ashkenazi": "dakah",
     "meaning_en": "minute",
     "letters": [
       "ד",
@@ -1860,7 +1860,7 @@
     "nikud": "עַכְשָׁו",
     "translit_israeli": "akhshav",
     "translit_sephardi": "akhshav",
-    "translit_ashkenazi": "akhshov",
+    "translit_ashkenazi": "akhshav",
     "meaning_en": "now",
     "letters": [
       "ע",
@@ -2063,7 +2063,7 @@
     "translit_israeli": "me'ah",
     "translit_sephardi": "me'a",
     "translit_ashkenazi": "mei'o",
-    "meaning_en": "hundred, one hundred",
+    "meaning_en": "a hundred",
     "letters": [
       "מ",
       "א",
@@ -2080,7 +2080,7 @@
     "translit_israeli": "elef",
     "translit_sephardi": "elef",
     "translit_ashkenazi": "elef",
-    "meaning_en": "thousand, one thousand",
+    "meaning_en": "a thousand",
     "letters": [
       "א",
       "ל",
@@ -2114,7 +2114,7 @@
     "translit_israeli": "tzohorayim",
     "translit_sephardi": "tzohorayim",
     "translit_ashkenazi": "tzohorayim",
-    "meaning_en": "Noon, midday",
+    "meaning_en": "noon",
     "letters": [
       "צ",
       "ה",
@@ -2224,7 +2224,7 @@
     "translit_israeli": "gadol",
     "translit_sephardi": "gadol",
     "translit_ashkenazi": "godoyl",
-    "meaning_en": "big, large",
+    "meaning_en": "big",
     "letters": [
       "ג",
       "ד",
@@ -2242,7 +2242,7 @@
     "translit_israeli": "katan",
     "translit_sephardi": "katan",
     "translit_ashkenazi": "koton",
-    "meaning_en": "little, small, diminutive",
+    "meaning_en": "small",
     "letters": [
       "ק",
       "ט",
@@ -2259,7 +2259,7 @@
     "translit_israeli": "yafeh",
     "translit_sephardi": "yafe",
     "translit_ashkenazi": "yofe",
-    "meaning_en": "beautiful, comely, fair, goodly, pleasant",
+    "meaning_en": "beautiful",
     "letters": [
       "י",
       "פ",
@@ -2276,7 +2276,7 @@
     "translit_israeli": "amiti",
     "translit_sephardi": "amiti",
     "translit_ashkenazi": "amiti",
-    "meaning_en": "real, true, actual",
+    "meaning_en": "real / true",
     "letters": [
       "א",
       "מ",
@@ -2328,7 +2328,7 @@
     "translit_israeli": "kal",
     "translit_sephardi": "kal",
     "translit_ashkenazi": "kal",
-    "meaning_en": "light (of low weight)",
+    "meaning_en": "light / easy",
     "letters": [
       "ק",
       "ל"
@@ -2343,8 +2343,8 @@
     "nikud": "רָגוּעַ",
     "translit_israeli": "ragu'a",
     "translit_sephardi": "ragu'a",
-    "translit_ashkenazi": "rogu'a",
-    "meaning_en": "relaxed, calm",
+    "translit_ashkenazi": "ragu'a",
+    "meaning_en": "calm",
     "letters": [
       "ר",
       "ג",
@@ -2362,7 +2362,7 @@
     "translit_israeli": "me'ushar",
     "translit_sephardi": "me'ushar",
     "translit_ashkenazi": "me'ushor",
-    "meaning_en": "Happy, content",
+    "meaning_en": "happy",
     "letters": [
       "מ",
       "א",
@@ -2398,7 +2398,7 @@
     "translit_israeli": "regesh",
     "translit_sephardi": "regesh",
     "translit_ashkenazi": "regesh",
-    "meaning_en": "emotion, feeling",
+    "meaning_en": "feeling",
     "letters": [
       "ר",
       "ג",
@@ -2468,7 +2468,7 @@
     "translit_israeli": "nakhon",
     "translit_sephardi": "nakhon",
     "translit_ashkenazi": "nokhoyn",
-    "meaning_en": "right, correct",
+    "meaning_en": "correct / right",
     "letters": [
       "נ",
       "כ",
@@ -2518,8 +2518,8 @@
     "nikud": "כָּאן",
     "translit_israeli": "kan",
     "translit_sephardi": "kan",
-    "translit_ashkenazi": "kon",
-    "meaning_en": "here, at this place",
+    "translit_ashkenazi": "kan",
+    "meaning_en": "here",
     "letters": [
       "כ",
       "א",
@@ -2536,7 +2536,7 @@
     "translit_israeli": "atah",
     "translit_sephardi": "ata",
     "translit_ashkenazi": "ato",
-    "meaning_en": "now",
+    "meaning_en": "now (formal)",
     "letters": [
       "ע",
       "ת",
@@ -2570,7 +2570,7 @@
     "translit_israeli": "me'od",
     "translit_sephardi": "me'od",
     "translit_ashkenazi": "me'oyd",
-    "meaning_en": "very, quite",
+    "meaning_en": "very",
     "letters": [
       "מ",
       "א",
@@ -2588,7 +2588,7 @@
     "translit_israeli": "le'an",
     "translit_sephardi": "le'an",
     "translit_ashkenazi": "le'on",
-    "meaning_en": "whither",
+    "meaning_en": "where to?",
     "letters": [
       "ל",
       "א",
@@ -2605,7 +2605,7 @@
     "translit_israeli": "tamid",
     "translit_sephardi": "tamid",
     "translit_ashkenazi": "tomid",
-    "meaning_en": "always, regularly",
+    "meaning_en": "always",
     "letters": [
       "ת",
       "מ",
@@ -2705,7 +2705,7 @@
     "translit_israeli": "beten",
     "translit_sephardi": "beten",
     "translit_ashkenazi": "beten",
-    "meaning_en": "abdomen, belly",
+    "meaning_en": "belly",
     "letters": [
       "ב",
       "ט",
@@ -2739,7 +2739,7 @@
     "translit_israeli": "or",
     "translit_sephardi": "or",
     "translit_ashkenazi": "oyr",
-    "meaning_en": "to shine, be illuminated",
+    "meaning_en": "light",
     "letters": [
       "א",
       "ו",
@@ -2789,7 +2789,7 @@
     "nikud": "חָתוּל",
     "translit_israeli": "chatul",
     "translit_sephardi": "chatul",
-    "translit_ashkenazi": "chosul",
+    "translit_ashkenazi": "chatul",
     "meaning_en": "cat",
     "letters": [
       "ח",

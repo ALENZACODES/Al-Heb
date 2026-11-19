@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run the Ask pipeline on the 10k set. Automatic checks first; optional LLM judge on misses."""
+"""Run the Ask pipeline on the 10k set. Automatic checks first; optional second-pass judge on misses."""
 from __future__ import annotations
 
 import argparse
@@ -122,7 +122,7 @@ def main() -> None:
     corpus = retr.corpus
     results = []
     for i, row in enumerate(rows, 1):
-        ans = answer_question(row["question"], retriever=retr, use_llm=False)
+        ans = answer_question(row["question"], retriever=retr, polish=False)
         results.append(score_one(row, ans, corpus))
         if i % 500 == 0:
             s = summarize(results)

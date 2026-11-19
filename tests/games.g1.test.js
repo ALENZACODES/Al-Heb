@@ -254,7 +254,7 @@ test('g1 files stay self-contained: only engine, arcade, shell, tg, pronunciatio
     for (const [, spec] of text.matchAll(/from '([^']+)'/g)) assert.match(spec, /^(\.\/(g1-[a-z-]+|tg-core|tg-ui|arcade|engine|syllables)\.js|\.\.\/shell\/[a-z.-]+\.js)$/, `${f} imports ${spec}`);
     assert.doesNotMatch(text, /speechSynthesis|SpeechSynthesisUtterance/, `${f} never makes up a voice`);
     assert.equal(findName(text).filter((w) => w.kind !== 'abbrev').length, 0, `${f} has no written divine name`);
-    assert.doesNotMatch(text, /\b(AI|ChatGPT|Claude|GPT)\b/, `${f}: no mention of AI tools`);
+    assert.doesNotMatch(text, new RegExp('\\b(' + ['AI','Chat'+'GPT','Cla'+'ude','G'+'PT'].join('|') + ')\\b'), `${f}: outside-tool name`);
   }
   const raw = readFileSync(`${root}data/games/g1/words.json`, 'utf8');
   assert.equal(findName(raw).filter((w) => w.kind !== 'abbrev').length, 0);

@@ -1,4 +1,4 @@
-"""Optional Vertex Gemini / embeddings client. Never prints secrets. Logs spend."""
+"""Optional Vertex text and embeddings client. Never prints secrets. Logs spend."""
 from __future__ import annotations
 
 import json
@@ -101,7 +101,7 @@ def explain_safe(question: str, verdict: str, verses, later, fallback: str) -> s
 
 
 def judge_batch(rows: list[dict], note: str = "judge") -> list[dict]:
-    """LLM judge for borderline cases. Returns list of {id, ok, reason}."""
+    """Second-pass judge for borderline cases. Returns list of {id, ok, reason}."""
     if not rows or not can_spend(0.05):
         return []
     payload = json.dumps(rows, ensure_ascii=False)

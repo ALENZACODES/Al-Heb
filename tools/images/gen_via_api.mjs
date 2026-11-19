@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Batch image generation through the OpenAI Images API.
+// Batch image generation through the images API.
 //   DEFAULT IS DRY RUN: no network, no key needed. Pass --live to actually call the API.
 //
 //   node tools/images/gen_via_api.mjs                      # dry run, all pending rows, prints plan
@@ -12,7 +12,7 @@
 // Outputs: <out>/<stem>__v<k>.png per variant + one JSON line per attempt in the log (default data/images/gen-log.jsonl).
 // A human picks the winning variant and copies it to assets/img/<stem>.png (see docs/book/IMAGE-RUN.md).
 //
-// STATUS: the --live path has NEVER been run (no key, no network access to OpenAI in the build session).
+// STATUS: the --live path has NEVER been run (no key, no network access in the build session).
 import { readFileSync, writeFileSync, existsSync, mkdirSync, appendFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';

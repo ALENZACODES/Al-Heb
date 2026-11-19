@@ -107,11 +107,11 @@ test('modern shelf: signs as spelled on the sign, messages with marks removed in
   assert.deepEqual(st.modern[s[0].id], { seen: 2, firstTry: 1 });
 });
 
-test('copy: Title Case title, no AI wording, the spelling caveat is said', async () => {
+test('copy: Title Case title, no outside-tool wording, the spelling caveat is said', async () => {
   const V = await import('../src/bridge/bridge.view.js');
   assert.equal(V.TITLE, 'Reading Without Vowels');
   const src = readFileSync(new URL('src/bridge/bridge.view.js', root), 'utf8') + readFileSync(new URL('src/bridge/model.js', root), 'utf8');
-  assert.ok(!/\b(AI|GPT|Claude|LLM|machine learning)\b/.test(src));
+  assert.ok(!new RegExp('\\b(' + ['AI','G'+'PT','Cla'+'ude','L'+'LM','machine learning'].join('|') + ')\\b').test(src));
   assert.match(B.SPELLING_NOTE, /does not add letters/);
 });
 

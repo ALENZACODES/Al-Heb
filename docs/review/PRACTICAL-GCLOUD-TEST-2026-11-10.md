@@ -6,7 +6,7 @@ The divine Name was never sent to text-to-speech.
 - Unique items tested: 702 (applied to 750 unit occurrences).
 - Pass: 673. Fail: 77. Blocked (Name): 0.
 - Estimated spend this run: US$0.4644 of a US$15 cap.
-- TTS: he-IL-Wavenet-B (he-IL). STT: Google Cloud Chirp he-IL (see note). Translation: Cloud Translation or Gemini on Vertex.
+- TTS: he-IL-Wavenet-B (he-IL). STT: Google Cloud Chirp he-IL (see note). Translation: Cloud Translation or the Vertex text model.
 
 **STT note:** Google Cloud STT Chirp (Speech-to-Text v2) is not callable with the existing API keys (v2 requires OAuth; Speech v1 is blocked on the TTS key). Each WaveNet he-IL clip was instead transcribed on Vertex by gemini-3.5-flash.
 

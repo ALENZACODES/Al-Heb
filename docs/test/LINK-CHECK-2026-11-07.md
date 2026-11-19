@@ -100,8 +100,8 @@ recorded; the player never plays them), 552 book pages in `data/books/book17..62
 (the books list shows "Pictures coming" and draws no `<img>`), and the three image-pipeline inventories in `data/images/`
 (`provenance.json`, `prompt-groups.json`, `next1000-groups.json`), whose own notes say the PNG originals are not in git.
 
-External: 339 distinct URLs probed from the shell (HEAD, then GET with a browser user agent on 403/404/405/406/5xx; the shell
-could reach the network, so WebFetch was not needed). 300 reachable. The 39 not reachable:
+External: 339 distinct URLs were probed from the shell; this copy of the log omits 6 vendor-terms URLs and lists 333 (HEAD, then GET with a browser user agent on 403/404/405/406/5xx; the shell
+could reach the network, so WebFetch was not needed). 297 reachable in this copy. The 36 not reachable:
 
 | Group | URLs | Reading |
 |---|---|---|
@@ -109,7 +109,7 @@ could reach the network, so WebFetch was not needed). 300 reachable. The 39 not 
 | expected 404 in `docs/deploy/GO-LIVE-CHECKLIST.md` | `alef-review.onrender.com/nope.js` | the checklist probes for a 404 |
 | private repo (unauthenticated 404) | 3 x `github.com/ALENZACODES/Al-Heb/...` | fine |
 | API endpoints that need a body or key | `vision.googleapis.com/...:annotate` (404), `texttospeech.googleapis.com/v1/voices` (403), `nakdan-u2-1a...dicta.org.il/api` (500) | fine |
-| bot protection (Cloudflare "Just a moment" / "Access denied" with a browser UA too) | opensiddur.org x5, nli.org.il x2, openai.com x2, adobe.com, helpx.adobe.com, docs.midjourney.com, help.sefaria.org, tandfonline.com, urj.org | could not verify from this network |
+| bot protection (Cloudflare "Just a moment" / "Access denied" with a browser UA too) | opensiddur.org x5, nli.org.il x2, adobe.com, helpx.adobe.com, help.sefaria.org, tandfonline.com, urj.org | could not verify from this network |
 | timeouts | azure.microsoft.com pricing x3 | could not verify from this network |
 | dead or moved, in research/strategy docs | `clozemaster.com/blog/?p=7597`, `?p=7907` (404), `hebcal.com/home/about/terms` (404; the doc row itself records it as a 404 finding), `prod.sefaria.org.il/sheets/228381` and `red.ks32.dev/...` and `www.hebrewwithben.com` (DNS), `web.ma.utexas.edu/.../DuoHebrew.pdf` (503) | citations in docs; not changed |
 

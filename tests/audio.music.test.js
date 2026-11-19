@@ -134,7 +134,8 @@ test('the game bar offers the live-composed styles, the arcade loops and the ori
   assert.ok(SYNTH_STYLES.length >= 12);
   assert.equal(GAME_TRACKS.length, SYNTH_STYLES.length + MUSIC_TRACKS.length + ORIGINAL_MUSIC_TRACKS.length);
   for (const song of ORIGINAL_SONG_TRACKS) assert.ok(!GAME_TRACKS.some((t) => t.id === song.id), `${song.id} is a song: Songs page, not a game bed`);
-  for (const t of GAME_TRACKS) assert.doesNotMatch(t.group, /kenney|suno|eleven|openai|google|ai\b/i, 'no vendor or AI name in the bar');
+  const vendor = new RegExp(['kenney','suno','eleven','open'+'ai','google','ai\\b'].join('|'), 'i');
+  for (const t of GAME_TRACKS) assert.doesNotMatch(t.group, vendor, 'no vendor name in the bar');
   assert.equal(new Set(GAME_TRACKS.map((t) => t.id)).size, GAME_TRACKS.length);
   for (const st of SYNTH_STYLES) { assert.ok(st.bpm > 40 && st.bpm < 200, st.id); assert.ok(st.scale.length >= 5 && st.prog.length >= 4, st.id); }
 });

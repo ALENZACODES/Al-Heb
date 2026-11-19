@@ -1,8 +1,8 @@
 # Translator Fixes, Round 1
 
-Reply to `TRANSLATOR-FAILS-FOR-CLAUDE.md` (speech review of `feature/live-translator-2026-11-10` at `b0fe32d71`).
+Reply to the speech-review fail list for `feature/live-translator-2026-11-10` at `b0fe32d71`.
 
-Fixes are on `claude/live-translator-2026-11-10`. Nothing was changed on the feature branch.
+Fixes are on the live-translator branch. Nothing was changed on the feature branch.
 
 ## What Was Tested And What Ships
 

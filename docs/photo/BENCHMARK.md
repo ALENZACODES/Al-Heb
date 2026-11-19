@@ -21,7 +21,7 @@
 | tesseract.js 7.0.0 WASM in headless Chromium, tessdata_fast, via the shipped `src/photo/engines/tesseract-browser.js`, with and without preprocessing | ran (this is the app engine) |
 | tesseract.js under plain Node | crashed (`missing function DotProductSSE`), dropped; the Chromium run covers WASM |
 | paddleocr-hebrew (RivoksLab, Apache-2.0) ONNX word recognizers | ran **recognizer only, sign images only, no detector** (see below); not wired |
-| Surya, EasyOCR, kraken, Google Vision, Azure, vision LLMs | NOT run (torch/weights not attempted, or needs a key). Unknown. |
+| Surya, EasyOCR, kraken, Google Vision, Azure, hosted vision readers | NOT run (torch/weights not attempted, or needs a key). Unknown. |
 
 Metrics: consonant character accuracy = 1 - Levenshtein(consonant skeleton of truth, of OCR) / truth length, pooled over all characters (finals folded, marks and punctuation ignored, reading order rebuilt with `orderLines` from OCR word boxes); word recall = LCS of consonant words / truth words; exact line = consonant skeleton identical; niqqud kept = share of the truth's vowel points that appear in the OCR text (bag count, generous: it does not check they sit on the right letter).
 
@@ -92,4 +92,4 @@ Run: `node tools/ocr-bench/bench.mjs --engines tess-browser,tess-browser-deskew,
 
 ## What is and is not verified
 Verified by running: the figures above; the removed vowelizer was reachable and correct on 9 + 30 public inputs when it was tested 2026-11-04 (see the historical section above); Argos output on 30 phrases; the full browser path (`#/scan` upload -> WASM OCR -> corpus match -> cards) on two synthetic images (`tests/photo.scan-e2e.test.js`, screenshot `docs/screens/scan-real.png`).
-Not verified: anything on real photos; phones; Safari/Firefox (only headless Chromium); WASM SIMD fallback on old browsers (only the SIMD core is vendored); offline reload from the service worker cache (the SW's runtime cache should store the vendored files, but this was not tested); Argos model licence; any Surya/vision-LLM/cloud OCR.
+Not verified: anything on real photos; phones; Safari/Firefox (only headless Chromium); WASM SIMD fallback on old browsers (only the SIMD core is vendored); offline reload from the service worker cache (the SW's runtime cache should store the vendored files, but this was not tested); Argos model licence; any Surya, hosted vision reader, or cloud OCR.

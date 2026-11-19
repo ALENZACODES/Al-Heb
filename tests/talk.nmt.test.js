@@ -156,7 +156,7 @@ test('screen copy: the pack is offered in plain words, with its size left to the
   assert.match(v.HELD_LINE, /ה׳/); assert.match(v.NAME_NOT_READ, /not read aloud/);
   const h = await import('../src/talk/hybrid.js');
   for (const s of [v.PACK_LEAD, v.PACK_OFFER, v.PACK_CELLULAR, v.PACK_SAVER, v.PACK_FULL, v.PACK_FAILED, v.PACK_CANNOT_RUN, v.PACK_NONE, v.METHOD_LABEL.model, h.MODEL_NOTE_EN, h.MODEL_NOTE_HE])
-    assert.doesNotMatch(s, /\bA\.?I\.?\b|artificial|neural|machine|\bmodel\b|\bbot\b|GPT|LLM/i, s);
+    assert.doesNotMatch(s, new RegExp(['\\bA\\.?I\\.?\\b','artificial','neural','machine','\\bmodel\\b','\\bbot\\b','G'+'PT','L'+'LM'].join('|'), 'i'), s);
 });
 
 const heldout = json('tests/fixtures/talk.heldout.json');

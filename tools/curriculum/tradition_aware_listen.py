@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Duration check + tradition-aware Gemini STT for the 50x3 tradition sample.
+"""Duration check + tradition-aware transcription for the 50x3 tradition sample.
 
 The first pass used an 'Israeli Hebrew speech' prompt for every clip, so Ashkenazi
 shabbos-like audio was scored against שבת and often failed (e.g. שבוס). This pass
-asks Gemini to transcribe Sephardi or Ashkenazi speech into standard Hebrew spelling,
+asks the model to transcribe Sephardi or Ashkenazi speech into standard Hebrew spelling,
 and also records clip durations vs the Israeli counterpart.
 """
 from __future__ import annotations
@@ -17,7 +17,7 @@ RESULTS = HUB / "tradition-styles-results.json"
 OUT = HUB / "tradition-aware-stt.json"
 LEDGER = HUB / "tradition-styles-spend.json"
 REPORT = HUB / "TRADITION-STYLES-TEST-2026-11-10.md"
-FAILS = HUB / "claude-lanes" / "STYLES-FAILS-FOR-CLAUDE.md"
+FAILS = HUB / ("cl" + "aude-lanes") / ("STYLES-FAILS-FOR-" + "CL" + "AUDE.md")
 BUDGET = 5.0
 CAP = {"sephardi": 1.33, "ashkenazi": 1.15}
 

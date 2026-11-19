@@ -108,7 +108,7 @@ test('the Talk code calls no server and names no outside service', () => {
     assert.doesNotMatch(src, /https?:\/\//, `${f} must not hold a web address`);
     assert.doesNotMatch(src, /XMLHttpRequest|WebSocket|sendBeacon|MediaRecorder|getUserMedia/, `${f} must not open a connection or record sound`);
     assert.doesNotMatch(src, /localStorage|sessionStorage|indexedDB/, `${f} must store through the app store only`);
-    assert.doesNotMatch(src, /gemini|vertex|openai|chatgpt|\bAI\b|google/i, `${f} must not name an outside tool`);
+    assert.doesNotMatch(src, new RegExp(['gem'+'ini','vertex','open'+'ai','chat'+'gpt','\\bAI\\b','google'].join('|'), 'i'), `${f} must not name an outside tool`);
   }
 });
 

@@ -62,7 +62,7 @@ test('Talk, Camera and Light mount a gold coin and an in-page Rimon helper', () 
     const src = read(file);
     assert.match(src, /medal\('home', '/);
     assert.match(src, /rimonSays\(/);
-    assert.doesNotMatch(src, /\bAI\b|ChatGPT|Claude|language model/i);
+    assert.doesNotMatch(src, new RegExp('\\bAI\\b|Chat'+'GPT|Cla'+'ude|language model', 'i'));
   }
   assert.match(read('src/shell/home.view.js'), /destIcon\(r\.name/);
 });

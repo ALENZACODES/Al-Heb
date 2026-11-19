@@ -250,7 +250,7 @@ Reflection prompts in `prompts.json` should be read for §3/§4 ("What really ma
 
 Chrome in these areas was recently rewritten in `main` and is mostly plain. Watch for leftover preview-banner legalese on learner pages (a prior commit moved draft notes to About, Terms, and Credits). Do not put review-status jargon back on learner screens.
 
-Rimon the mascot (`src/shell/rimon-speech.js`) shouts in all caps (`GREAT JOB!`, `YOU ARE AWESOME!`). That is arcade pep, not typical LLM prose. Leave it unless John wants a quieter mascot. Do not replace it with "You're doing an amazing job on your learning journey."
+Rimon the mascot (`src/shell/rimon-speech.js`) shouts in all caps (`GREAT JOB!`, `YOU ARE AWESOME!`). That is arcade pep, not essay prose. Leave it unless John wants a quieter mascot. Do not replace it with "You're doing an amazing job on your learning journey."
 
 ### A15. README and other public repo docs
 

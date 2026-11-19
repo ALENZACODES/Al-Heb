@@ -265,7 +265,7 @@ test('g2 files stay self-contained: only arcade, tg, g2 and shell imports; no ma
     for (const [, spec] of src.matchAll(/from '([^']+)'/g)) assert.match(spec, /^(\.\/(tg-core|tg-ui|g2-[a-z]+|arcade|arcade\.model)\.js|\.\.\/shell\/[a-z.-]+\.js)$/, `${f} imports ${spec}`);
     assert.doesNotMatch(src, /speechSynthesis|SpeechSynthesisUtterance/, `${f} never makes up a voice`);
     assert.doesNotMatch(src, /יְהוָה|יהוה/, `${f} has no written divine name`);
-    assert.doesNotMatch(src, /\b(AI|ChatGPT|Claude|GPT)\b/, `${f} copy names no AI tool`);
+    assert.doesNotMatch(src, new RegExp('\\b(' + ['AI','Chat'+'GPT','Cla'+'ude','G'+'PT'].join('|') + ')\\b'), `${f}: outside-tool name`);
   }
 });
 

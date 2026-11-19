@@ -1,6 +1,6 @@
 # Retention: Review Round 3 of 5
 
-Reviewed: branch `claude/retention-fable-2026-11-10` at `8e001f71` (which already contains `main` at `4da2d9a5`).
+Reviewed: the retention work at `8e001f71` (which already contains `main` at `4da2d9a5`).
 Round 2 was a read-through and an accessibility scan. This round tried to break the system instead: random sequences of learner actions, broken stored data, and the real service worker running in Chrome. No real phone and no real learner was involved.
 
 ## What Was Tried

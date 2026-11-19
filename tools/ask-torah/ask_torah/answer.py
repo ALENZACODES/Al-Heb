@@ -178,7 +178,7 @@ def _hebrew_word_note(question: str, chosen: list[Verse]) -> str:
     return " ".join(out)
 
 
-def answer_question(question: str, retriever: Retriever | None = None, use_llm: bool = False, history: list[str] | None = None) -> dict[str, Any]:
+def answer_question(question: str, retriever: Retriever | None = None, polish: bool = False, history: list[str] | None = None) -> dict[str, Any]:
     q = (question or "").strip()
     retriever = retriever or default_retriever()
     corpus = retriever.corpus
@@ -396,8 +396,8 @@ def answer_question(question: str, retriever: Retriever | None = None, use_llm: 
     if note:
         explanation = (explanation or "").rstrip() + " " + note
 
-    # Optional LLM polish is applied by vertex.explain_safe, if requested.
-    if use_llm:
+    # Optional polish is applied by vertex.explain_safe, if requested.
+    if polish:
         try:
             from .vertex import explain_safe
             polished = explain_safe(q, verdict, chosen, later, explanation)

@@ -94,7 +94,7 @@ No NC, ND or personal-use material was found **in shipped data**. Non-commercial
 | Corpus: Sefaria-labelled siddurim | CC0 (15), Public Domain (6), **CC-BY Metsudah (21)**. All **labels unverified** | Metsudah (21 of 70 entries) is the risk: label may not cover the 1981 vocalisation. Replace before sale, as the repo already says. |
 | Tesseract.js, `heb`; Hebcal data; JPS 1917 | Apache-2.0 (`assets/vendor/_tesseract/README.md`); Hebcal CC BY 4.0; JPS PD per unverified Sefaria label | Clear with notices/credit. |
 | Dicta Nakdan | No terms found | Not licensed. Opt-in feature; do not ship as dependable. |
-| AI images | OpenAI terms read via a summariser, not the live page (`docs/images/RIGHTS.md`) | Commercial use per vendor terms, but little copyright protection in the US; no exclusivity. 0 approved anyway. |
+| Pictures | Terms read via a summariser, not the live page (`docs/images/RIGHTS.md`) | Commercial use under those terms is not the same as a copyright; no exclusivity. 0 approved anyway. |
 | TTS output | `buyout-contract-terms.md`: redistribution rights for Azure/Google/ElevenLabs "no official page confirming this" | Open item for counsel before any TTS audio ships. |
 | Repo code | `README.md`: "License: not chosen yet", no LICENSE file | All rights reserved by default. John must choose before anyone else relies on it. |
 

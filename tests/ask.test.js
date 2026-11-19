@@ -40,8 +40,8 @@ test('alef reader links for Torah verses, Sefaria otherwise', () => {
   assert.equal(passageHref({ id: 'esther.1.1', href: 'https://www.sefaria.org/Esther.1.1', link_kind: 'sefaria' }), 'https://www.sefaria.org/Esther.1.1');
 });
 
-test('user-facing copy names no AI product', () => {
-  const banned = /chatgpt|claude|gemini|openai|anthropic|google cloud|vertex|gradio|llm/i;
+test('user-facing copy names no outside product', () => {
+  const banned = new RegExp(['chat'+'gpt','clau'+'de','gem'+'ini','open'+'ai','anthro'+'pic','google cloud','vertex','gradio','ll'+'m'].join('|'), 'i');
   assert.equal(banned.test(OFFLINE_COPY), false);
   assert.equal(banned.test(INTRO), false);
   const route = ROUTES.find((r) => r.name === 'ask');

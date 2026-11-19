@@ -5,13 +5,13 @@ Purpose: decide, with a fresh test on Aleph's actual content, which provider (if
 ## Ground facts this test must respect
 - Only Modern Israeli pronunciation can be tested. No TTS provider found offers Ashkenazi (or liturgical Sephardi) pronunciation: Ashkenazi audio is a human-recording task.
 - Google Chirp 3 HD documentation states custom pronunciations and pause control are NOT available for he-IL, so you cannot fix a mispronounced word with a pronunciation override on Google. `<phoneme>` is listed among Chirp SSML tags but the page does not say it works for Hebrew; test it, do not assume.
-- Azure SSML phoneme/IPA support for he-IL is unverified. ElevenLabs and OpenAI have no documented Hebrew phoneme control.
+- Azure SSML phoneme/IPA support for he-IL is unverified. ElevenLabs has no documented Hebrew phoneme control, and neither does gpt-4o-mini-tts.
 - Whether each engine honours niqqud in input is undocumented. The test must establish it.
-- The earlier independent test (Rosehill, March 2025) is one person's qualitative snapshot; models have changed since (ElevenLabs v4, Gemini 3.1 TTS preview). Treat it as a prior, not a result.
+- The earlier independent test (Rosehill, March 2025) is one person's qualitative snapshot; models have changed since (ElevenLabs v4, and later preview speech engines). Treat it as a prior, not a result.
 - Redistribution rights of Azure/Google TTS output are unconfirmed (counsel). Do not ship test audio.
 
 ## Candidates
-Azure he-IL-AvriNeural (m) / he-IL-HilaNeural (f); Google he-IL Chirp 3 HD (try several of the 16 male / 14 female names, e.g. Charon, Kore) and Wavenet B/D (m), A/C (f); ElevenLabs v3 with language_code "he" and a few voices. Optional: Gemini-TTS (Preview), OpenAI gpt-4o-mini-tts (unevaluated for Hebrew).
+Azure he-IL-AvriNeural (m) / he-IL-HilaNeural (f); Google he-IL Chirp 3 HD (try several of the 16 male / 14 female names, e.g. Charon, Kore) and Wavenet B/D (m), A/C (f); ElevenLabs v3 with language_code "he" and a few voices. Optional and unevaluated for Hebrew: gpt-4o-mini-tts.
 
 ## Stimuli (build from the corpus once lane 5 data lands)
 1. 30 words spanning every letter, every vowel, and the five foreigner-marker traps (resh, pure vowels, final stress, shva clusters, pharyngeals).

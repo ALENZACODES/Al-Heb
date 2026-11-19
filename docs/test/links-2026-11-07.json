@@ -756,16 +756,6 @@
    ]
   },
   {
-   "url": "https://docs.midjourney.com/docs/terms-of-service",
-   "status": 403,
-   "ok": false,
-   "method": "GET (browser user agent)",
-   "final": "https://docs.midjourney.com/hc/en-us/articles/32083055291277-Terms-of-Service",
-   "where": [
-    "docs/verification/VERIFICATION.md:173"
-   ]
-  },
-  {
    "url": "https://duolingodata.com/dat/hefen96.html",
    "status": 200,
    "ok": true,
@@ -1304,28 +1294,6 @@
    ]
   },
   {
-   "url": "https://openai.com/policies/row-terms-of-use/",
-   "status": 403,
-   "ok": false,
-   "method": "GET (browser user agent)",
-   "final": "",
-   "where": [
-    "docs/verification/VERIFICATION.md:169"
-   ]
-  },
-  {
-   "url": "https://openai.com/policies/terms-of-use/",
-   "status": 403,
-   "ok": false,
-   "method": "GET (browser user agent)",
-   "final": "",
-   "where": [
-    "docs/images/RIGHTS.md:6",
-    "docs/verification/DATA-FIXES.md:32",
-    "docs/verification/VERIFICATION.md:168"
-   ]
-  },
-  {
    "url": "https://opensiddur.org/",
    "status": 403,
    "ok": false,
@@ -1363,39 +1331,6 @@
    "final": "",
    "where": [
     "docs/corpus/RESOURCE-METSUDAH.md:113"
-   ]
-  },
-  {
-   "url": "https://platform.openai.com/docs/guides/image-generation",
-   "status": 200,
-   "ok": true,
-   "method": "HEAD",
-   "final": "https://developers.openai.com/api/docs/guides/image-generation",
-   "where": [
-    "docs/verification/DATA-FIXES.md:10",
-    "docs/verification/VERIFICATION.md:170",
-    "docs/verification/VERIFICATION.md:172",
-    "docs/verification/VERIFICATION.md:184"
-   ]
-  },
-  {
-   "url": "https://platform.openai.com/docs/guides/text-to-speech",
-   "status": 200,
-   "ok": true,
-   "method": "HEAD",
-   "final": "https://developers.openai.com/api/docs/guides/text-to-speech",
-   "where": [
-    "docs/verification/VERIFICATION.md:132"
-   ]
-  },
-  {
-   "url": "https://platform.openai.com/docs/pricing",
-   "status": 200,
-   "ok": true,
-   "method": "HEAD",
-   "final": "https://developers.openai.com/api/docs/pricing",
-   "where": [
-    "docs/verification/VERIFICATION.md:171"
    ]
   },
   {

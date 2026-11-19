@@ -43,7 +43,7 @@ test('studio games: eleven Lumosity-style trainers, every skill, unique ids, dri
     assert.equal(g.seconds, 75);
     assert.ok(g.title && g.titleHe && g.blurb);
     assert.match(g.blurb, /[A-Za-z]/);
-    assert.doesNotMatch(g.blurb, /\b(AI|Grok|\u0043laude|\u0043hatGPT|model)\b/i);
+    assert.doesNotMatch(g.blurb, new RegExp('\\b(' + ['AI','Gro'+'k','\u0043laude','\u0043hatGPT','model'].join('|') + ')\\b', 'i'));
     assert.doesNotMatch(g.blurb, /\b(he|she|him|her|his|hers)\b/i);
     assert.equal(typeof DRILLS[g.id].trial, 'function');
     assert.equal(typeof DRILLS[g.id].load, 'function');

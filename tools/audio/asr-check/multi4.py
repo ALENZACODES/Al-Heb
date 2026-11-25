@@ -38,10 +38,10 @@ class Listeners:
             t0 = time.time()
             if n == 'whisper-v3':
                 from faster_whisper import WhisperModel
-                self.m[n] = WhisperModel('large-v3', device='cpu', compute_type='int8')
+                self.m[n] = WhisperModel('large-v3', device='cpu', compute_type='int8', cpu_threads=os.cpu_count() or 4)
             elif n == 'ivrit-turbo':
                 from faster_whisper import WhisperModel
-                self.m[n] = WhisperModel('ivrit-ai/whisper-large-v3-turbo-ct2', device='cpu', compute_type='int8')
+                self.m[n] = WhisperModel('ivrit-ai/whisper-large-v3-turbo-ct2', device='cpu', compute_type='int8', cpu_threads=os.cpu_count() or 4)
             elif n == 'mms-1b':
                 from transformers import AutoProcessor, Wav2Vec2ForCTC
                 p = AutoProcessor.from_pretrained('facebook/mms-1b-all', target_lang='heb')
@@ -54,10 +54,13 @@ class Listeners:
                 self.m[n] = (p, m)
             print(f'loaded {n} in {time.time() - t0:.0f}s', flush=True)
 
-    def hear(self, name, a):
+    def hear(self, name, a, short=False):
         m = self.m[name]
+        a = np.concatenate([np.zeros(4000, np.float32), a, np.zeros(8000, np.float32)])  # as check_lib.hear: a little silence around
         if name in ('whisper-v3', 'ivrit-turbo'):
-            segs, _ = m.transcribe(a, language='he', beam_size=5, vad_filter=False, condition_on_previous_text=False)
+            kw = dict(max_new_tokens=48) if short else {}
+            segs, _ = m.transcribe(a, language='he', beam_size=5, vad_filter=False, condition_on_previous_text=False,
+                                   without_timestamps=True, **kw)
             return ' '.join(s.text.strip() for s in segs).strip()
         p, model = m
         out = []
@@ -69,7 +72,7 @@ class Listeners:
                     out.append(p.decode(ids))
                 else:
                     x = p(audios=c, sampling_rate=16000, return_tensors='pt')
-                    ids = model.generate(**x, tgt_lang='heb', num_beams=3, max_new_tokens=400)[0]
+                    ids = model.generate(**x, tgt_lang='heb', num_beams=3, max_new_tokens=40 if short else 400)[0]
                     out.append(p.decode(ids, skip_special_tokens=True))
         return ' '.join(o.strip() for o in out).strip()
 
@@ -99,7 +102,7 @@ def main():
             lis = Listeners([name])
             for i, o in enumerate(todo, 1):
                 t0 = time.time()
-                heard = lis.hear(name, audio[o['file']])
+                heard = lis.hear(name, audio[o['file']], short=o['kind'] == 'word')
                 r = {'file': o['file'], 'model': name, 'heard': heard}
                 if o['kind'] == 'word':
                     s = L.score(o['want'], heard)

@@ -11,4 +11,6 @@ if [ "$1" = test ]; then echo audio/f/israeli/word/hf76c8cd2.mp3 > /tmp/t1.txt; 
 else L=tools/audio/asr-check/multi4-rerecord.txt; O=~/aleph-takes; fi
 python3 tools/audio/asr-check/chirp_takes.py --list $L --out $O --project "$P"
 find $O -name '*.mp3' | wc -l; du -sh $O; find $O -name '*.mp3' -size -2k
+tar czf ~/aleph-takes.tgz -C $(dirname $O) $(basename $O) && ls -la ~/aleph-takes.tgz
+cloudshell download ~/aleph-takes.tgz || true
 echo CS-DONE

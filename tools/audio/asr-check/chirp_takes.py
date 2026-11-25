@@ -75,7 +75,7 @@ def main():
     ap.add_argument('--out', required=True)
     ap.add_argument('--project', default=subprocess.run(['gcloud', 'config', 'get-value', 'project'], capture_output=True, text=True).stdout.strip())
     a = ap.parse_args()
-    want = {o['file']: o['want'] for o in json.load(open(a.queue, encoding='utf-8'))}
+    want = {o['file']: re.sub(r'\s*\(cut from:.*\)\s*$', '', o['want']) for o in json.load(open(a.queue, encoding='utf-8'))}
     files = [l.strip() for l in open(a.list, encoding='utf-8') if l.startswith('audio/')]
     tts = TTS(a.project)
     print(f'project {a.project}: {len(files)} clips', flush=True)

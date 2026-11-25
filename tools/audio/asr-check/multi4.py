@@ -71,7 +71,7 @@ class Listeners:
                     ids = model(**x).logits.argmax(-1)[0]
                     out.append(p.decode(ids))
                 else:
-                    x = p(audios=c, sampling_rate=16000, return_tensors='pt')
+                    x = p(audio=c, sampling_rate=16000, return_tensors='pt')
                     ids = model.generate(**x, tgt_lang='heb', num_beams=3, max_new_tokens=40 if short else 400)[0]
                     out.append(p.decode(ids, skip_special_tokens=True))
         return ' '.join(o.strip() for o in out).strip()

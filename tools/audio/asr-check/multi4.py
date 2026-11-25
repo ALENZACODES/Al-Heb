@@ -83,11 +83,12 @@ def main():
     ap.add_argument('--queue', required=True)
     ap.add_argument('--out', default='.')
     ap.add_argument('--models', default='ivrit-turbo,whisper-v3,mms-1b,seamless-v2')
+    ap.add_argument('--shard', type=int, default=0); ap.add_argument('--shards', type=int, default=1)
     a = ap.parse_args()
     sys.path.insert(0, os.path.join(a.root, 'tools', 'audio', 'asr-check'))
     import check_lib as L
     import scan_lines as S
-    q = json.load(open(a.queue, encoding='utf-8'))
+    q = json.load(open(a.queue, encoding='utf-8'))[a.shard::a.shards]
     names = a.models.split(',')
     res_path = os.path.join(a.out, 'multi4-hearings.jsonl')
     done = set()

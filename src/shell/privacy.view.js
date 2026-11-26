@@ -35,6 +35,7 @@ export const STORE_KEYS = [
   ['listen.shelf.v1', 'Listening shelf progress, read by Awards', 'src/awards/observe.js'],
   ['home.builder.v1', 'Built word ids, timestamps and points', 'src/home/builder-model.js'],
   ['games.homebuilder.v1', 'Home word builder game results', 'src/home/builder-model.js'],
+  ['alef.staleReload', 'Session only, never backed up: the page that just reloaded to finish an update, so it cannot reload twice in a row', 'src/shell/update.js'],
   ['rimon.dismissed', 'Whether you hid Rimon; included in your backup', 'src/shell/rimon.js'],
   ['rimon.seen.v1', 'Rimon: which one-time moments have already been shown (first answer, streak milestones, daily greetings) and the day you last visited, so nothing repeats', 'src/shell/rimon-stage.js'],
 

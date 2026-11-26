@@ -218,3 +218,17 @@ export function startUpdateBanner(opt = {}) {
     return { handle, remove() { rmB(); rmN(); } };
   } catch { return { handle: null, remove() {} }; }
 }
+
+/**
+ * Loop guard for the stale-build recovery in src/app.js: true the first time an address asks to reload within a minute, false
+ * after that, so a screen that still fails after the update shows its card instead of reloading again. Session storage only
+ * (gone when the tab closes); without it the guard still allows exactly one try per page load.
+ */
+export const STALE_RELOAD_KEY = 'alef.staleReload';
+let staleMemo = null;
+export function staleReloadAllowed(path, now = Date.now(), ss = (() => { try { return globalThis.sessionStorage || null; } catch { return null; } })()) {
+  let last = staleMemo; try { last = JSON.parse(ss?.getItem(STALE_RELOAD_KEY) || 'null') || staleMemo; } catch { /* keep the memo */ }
+  if (last && last.path === path && now - last.at < 60000) return false;
+  staleMemo = { path, at: now }; try { ss?.setItem(STALE_RELOAD_KEY, JSON.stringify(staleMemo)); } catch { /* memo only */ }
+  return true;
+}

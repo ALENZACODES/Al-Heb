@@ -474,11 +474,10 @@ function startUpdate() {
  * this device's runtime copies of the app's code and reload once. A session flag stops a loop: a second failure on the same
  * address within a minute just leaves the card.
  */
-const STALE_KEY = 'alef.staleReload';
 function recoverStaleBuild(root, path) {
-  let last = null; try { last = JSON.parse(sessionStorage.getItem(STALE_KEY) || 'null'); } catch { last = null; }
-  if (last && last.path === path && Date.now() - last.at < 60000) return;
-  try { sessionStorage.setItem(STALE_KEY, JSON.stringify({ path, at: Date.now() })); } catch { /* no session storage: still try once */ }
+  startUpdate().then((m) => { if (m.staleReloadAllowed(path)) finishStaleUpdate(root, path); }).catch(() => {});
+}
+function finishStaleUpdate(root, path) {
   const note = h('p', { class: 'muted', role: 'status' }, t('stale.updating'));
   try { const card = root.querySelector('.alef-unavailable'); card?.querySelector('h1')?.after(note); } catch { /* the note is a courtesy */ }
   const hardReload = async () => {

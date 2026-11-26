@@ -56,7 +56,7 @@ export function mount(root, ctx) {
   const bodyEl = globalThis.document?.body; try { bodyEl?.classList?.add('fd-player'); } catch { /* minimal DOMs */ }
   let alive = true, data = null, onramp = null, content = null, lessonQs = [], lesson = null, nextLesson = null;
   let chain, memCard = null; // chain: undefined while loading (never blocks the step), null when unavailable, else the file
-  let progress = migrateProgress(null), check = null, picked = null, answered = null;
+  let progress = migrateProgress(null), check = null, picked = null, answered = null, resumeShown = false;
   // U-03: a finished on-ramp can be practised again. Practice runs on a
   // throwaway copy of the progress: nothing is saved, the recorded first
   // completion (its answers, cards and streak) is never touched.
@@ -112,7 +112,11 @@ export function mount(root, ctx) {
     const me = s.kind === 'letter' ? entryFor(chain, s.letter) : null; // memory card: the big letter turns into its picture; the chain follows
     if (me) memCard = buildMemoryCard({ entry: me, glyph: he, tradition, audio: ctx?.audio, compact: true, hideSoundLine: true });
     setMeter(unitsBefore(i), stepLabel);
-    const nodes = [el('p', { class: 'fd-steplabel' }, `${stepLabel} · about ${s.minutes} min`), kicker(KIND_LABEL[s.kind] || 'Learn'), el('h2', { class: 'fd-q', 'data-case': 'keep' }, s.title),
+    // Resuming past step 1 says so and offers step 1 (25 Nov 2026 audit: "Start with one letter" opened on Step 3 of 5 with no word why).
+    const resumeNote = i > 0 && !resumeShown ? el('p', { class: 'fd-resume muted small', role: 'note', 'data-resume': '1' }, `Picking up where you left off: steps 1 to ${i} are done. `,
+      el('button', { class: 'btn secondary', type: 'button', id: 'fd-from-start', onclick: () => { practice = true; progress = migrateProgress(null); answered = null; stage = 'learn'; verdict = null; sel = null; say('Starting again from step 1. What you finished before stays finished.'); renderStep(); focus(); } }, 'Go back to step 1')) : null;
+    resumeShown = true;
+    const nodes = [resumeNote, el('p', { class: 'fd-steplabel' }, `${stepLabel} · about ${s.minutes} min`), kicker(KIND_LABEL[s.kind] || 'Learn'), el('h2', { class: 'fd-q', 'data-case': 'keep' }, s.title),
       memCard && (he || me?.hebrew) ? el('p', { class: 'fd-hero-glyph', 'data-hero-glyph': '1' }, heText(he || me.hebrew, 'alef-he')) : null, // the new letter, large, before its picture (the chain entry carries it when course content is still loading)
       memCard ? memCard.el : el('p', { class: 'fd-card alef-card', 'data-glyph-slot': '1' }, heText(he, 'alef-he alef-huge fd-big'))].filter(Boolean);
     if (s.kind === 'letter' && chain === null) nodes.push(el('p', { class: 'mc-fallback muted small', role: 'status', 'data-memory-fallback': '1' }, 'The picture and word hint did not load. Check your connection, then open the letter again.'));
@@ -267,7 +271,7 @@ export function mount(root, ctx) {
     const acc = vals.length ? Math.round((vals.filter(Boolean).length / vals.length) * 100) : null;
     const mins = Math.max(1, Math.round((Date.now() - startedAt) / 60000));
     setMeter(units(), 'Lesson complete');
-    const stat = (big, small) => el('li', { class: 'fd-stat' }, el('span', { class: 'fd-stat-big' }, big), el('span', { class: 'fd-stat-small' }, small));
+    const stat = (big, small) => el('li', { class: 'fd-stat' }, el('span', { class: 'fd-stat-big' }, big), ' ', el('span', { class: 'fd-stat-small' }, small));
     body.replaceChildren(
       el('div', { class: 'fd-done' },
         cheer ? el('div', { class: 'fd-cheer' }, cheer.el) : el('div', { class: 'fd-medal', 'aria-hidden': 'true' }, el('span', {}, '✓')),

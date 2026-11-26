@@ -44,17 +44,12 @@ export function mount(root, ctx) {
   const fullRest = () => {
     return [
     ctx.hasRoute?.('progress') ? h('p', {}, h('a', { class: 'btn secondary', href: '#/progress' }, 'See your progress')) : null,
-    h('nav', { class: 'card', 'aria-labelledby': 'h-quick' }, h('h2', { id: 'h-quick' }, t('home.quick')),
-      // U-19: no destination twice on one screen — the quick wall skips any
-      // target the five-destination row above already shows (Letters, Read
-      // and Calendar used to appear in both, reading as duplicate tiles).
-      h('ul', { class: 'tiles' }, ...QUICK.filter(([, href]) => !DESTS.some(([, r]) => '#/' + r === href)).map(([k, href]) => h('li', {}, h('a', { class: 'tile', href }, (medalFor(k, 48) || medal('home', k, 48)), h('span', {}, t('nav.' + k)), tHe('nav.' + k) ? heSpan(tHe('nav.' + k)) : null))),
-        // optional views from other lanes: only listed when their file exists in this build
-        ...ROUTES.filter((r) => r.optional && r.quick && !r.group && !PREVIEW_HIDDEN.has(r.name) && (ctx.hasRoute?.(r.name) ?? false)).map((r) => h('li', {}, h('a', { class: 'tile', href: '#' + r.pattern }, destIcon(r.name, 48, sectionOf(r.name)), h('span', {}, t(r.quick))))))),
-    ROUTES.some((r) => r.group === 'learn' && r.quick && !r.pattern.includes(':') && !PREVIEW_HIDDEN.has(r.name) && ctx.hasRoute?.(r.name))
-      ? h('nav', { class: 'card', 'aria-labelledby': 'h-more' }, h('details', { id: 'home-more-box' }, h('summary', {}, h('h2', { id: 'h-more', style: 'display:inline;margin:0' }, t('home.more'))), h('p', { class: 'muted' }, t('home.more.hint')),
-        h('ul', { class: 'tiles' }, ...ROUTES.filter((r) => r.group === 'learn' && r.quick && !r.pattern.includes(':') && !PREVIEW_HIDDEN.has(r.name) && ctx.hasRoute?.(r.name)).map((r) => h('li', {}, h('a', { class: 'tile', href: '#' + r.pattern }, destIcon(r.name, 48, sectionOf(r.name)), h('span', {}, t(r.quick)), tHe(r.quick) ? heSpan(tHe(r.quick)) : null))))))
-      : null,
+    // One way to every page (25 Nov 2026 critique, item 11: the top bar, the More menu and a 37-link "Go to" wall on Home were three
+    // overlapping menus). Home keeps its five destinations above and sends everything else to the More menu, which lists every page
+    // by section, with the unfinished ones in their own closed group at the bottom.
+    h('nav', { class: 'card', 'aria-labelledby': 'h-quick', id: 'home-all-pages' }, h('h2', { id: 'h-quick' }, t('home.quick')),
+      h('p', {}, 'Every page is in one place, by section: the More menu. Unfinished pages sit in their own closed Preview group at the bottom.'),
+      h('p', {}, h('button', { class: 'btn secondary', type: 'button', id: 'home-all', 'aria-controls': 'nav-more', onclick: openMenu }, 'All pages'))),
     h('section', { class: 'card', 'aria-labelledby': 'h-ref' }, h('h2', { id: 'h-ref' }, t('home.reflect')),
       h('a', { class: 'btn secondary', href: '#/calendar' }, t('home.reflect.link'))),
     h('p', {}, h('a', { href: '#/how' }, t('home.how'))),

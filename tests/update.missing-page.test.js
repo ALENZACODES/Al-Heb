@@ -61,3 +61,20 @@ test('offline card: says the screen needs a connection the first time, with the 
     assert.match(root2.textContent, /This screen did not load/);
   } finally { globalThis.document = saved; }
 });
+
+test('stale-build errors are recognised, ordinary errors are not', async () => {
+  const { isStaleBuildError } = await import('../src/shell/ui.js');
+  for (const m of ["The requested module '../audio/player.js' does not provide an export named 'isPlayableOwnClip'", 'isPlayableOwnClip not exported', 'Failed to fetch dynamically imported module: https://x/src/vocab/vocab.view.js', 'Importing a module script failed.'])
+    assert.equal(isStaleBuildError(new Error(m)), true, m);
+  const se = new SyntaxError("import not found: isPlayableOwnClip"); assert.equal(isStaleBuildError(se), true);
+  for (const m of ['Cannot read properties of undefined', 'module has no mount(root, ctx) export', ''])
+    assert.equal(isStaleBuildError(new Error(m)), false, m);
+});
+
+test('updateForMissingPage calls onTimeout when no update arrives, never after one is applied', () => {
+  let timeouts = 0, fire = null; const handle = { supported: true, state: () => 'idle', onChange: () => () => {}, check: async () => false, apply() {} };
+  updateForMissingPage(handle, { onTimeout: () => timeouts++, setTimeout: (f) => { fire = f; return 1; }, clearTimeout() {} });
+  fire(); assert.equal(timeouts, 1);
+  let applied = 0; const ready = { supported: true, state: () => 'waiting', onChange: () => () => {}, check: async () => true, apply() { applied++; } };
+  updateForMissingPage(ready, { onTimeout: () => timeouts++, setTimeout: () => 1, clearTimeout() {} }); assert.equal(applied, 1); assert.equal(timeouts, 1);
+});

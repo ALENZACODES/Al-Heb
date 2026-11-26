@@ -10,7 +10,9 @@
 .book-badges { font-size: .85rem; color: var(--muted); }
 
 .book-stage { display: grid; gap: .75rem; justify-items: center; text-align: center; }
-.book-page-img { width: 100%; max-inline-size: 44rem; aspect-ratio: 7 / 4; object-fit: cover; border-radius: var(--radius); border: 1px solid var(--border); background: var(--card); }
+.book-page-img { display: block; margin-inline: auto; width: 100%; max-inline-size: 44rem; aspect-ratio: 7 / 4; max-block-size: min(52vh, 30rem); object-fit: cover; border-radius: var(--radius); border: 1px solid var(--border); background: var(--card); }
+/* A picture cut to its drawing (src/books/focus.js) is narrower than the column: centred, with its height capped so the line stays in view. */
+.book-page-img[data-focus] { width: auto; max-inline-size: 100%; block-size: min(44vh, 26rem); }
 .book-page-pending { display: grid; place-items: center; align-content: center; gap: .5rem; }
 .book-line { font-size: 2rem; line-height: 1.5; font-weight: 700; }
 .book-translit { font-size: 1.1rem; margin: 0; }

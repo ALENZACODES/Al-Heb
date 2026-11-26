@@ -69,7 +69,9 @@ export function createTrainer(layout, opts = {}) {
   if (!pool.length) throw new Error('createTrainer: empty pool');
   const weight = new Map(pool.map(id => [id, 1]));
   const stats = { asked: 0, correct: 0, missed: /** @type {Record<string,number>} */ ({}) };
-  /** @type {{kind:'letter'|'niqqud', id:string}} */ let current = pick(null);
+  // The first letter asked is a regular one, never a final form (25 Nov 2026 audit: a beginner was handed a final first, unexplained).
+  const firstPool = kind === 'letter' ? pool.filter((id) => !/-final$/.test(id)) : [];
+  /** @type {{kind:'letter'|'niqqud', id:string}} */ let current = firstPool.length && firstPool.length < pool.length ? { kind, id: firstPool[Math.min(firstPool.length - 1, Math.floor(rng() * firstPool.length))] } : pick(null);
 
   function pick(avoid) {
     let total = 0; for (const id of pool) total += (pool.length > 1 && id === avoid) ? 0 : weight.get(id);

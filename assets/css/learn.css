@@ -103,6 +103,8 @@
 .alef-fb { font-weight: 600; margin-block: .5rem .25rem; }
 .alef-why { margin-block: 0 .5rem; }
 .alef-int-opt { min-height: var(--tap); min-width: var(--tap); }
+/* Hebrew answer choices at reading size (25 Nov 2026 audit: quick-check glyphs drew at about 20px while letters elsewhere are huge). */
+.alef-int-opt[lang="he"] { font-size: clamp(1.8rem, 6vw, 2.4rem); line-height: 1.25; min-width: 4.5rem; padding-inline: .9rem; }
 .alef-summary-stats { display: flex; flex-wrap: wrap; gap: 1rem 2rem; margin: .75rem 0; }
 .alef-summary-stats dt { color: var(--muted); font-size: .85rem; }
 .alef-summary-stats dd { margin: 0; font-weight: 600; font-size: 1.25rem; }

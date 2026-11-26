@@ -134,6 +134,22 @@ export async function mount(root, ctx) {
         h('span', { class: 'pg-now-v' }, row.value),
         h('span', { class: 'small muted pg-now-d' }, row.detail, has(HREF_ROUTE[row.href] ?? '') ? h('span', {}, ' ', h('a', { href: row.href }, 'Open')) : null))))));
 
+    // 1b. games (25 Nov 2026 audit: Progress showed no game data at all). Same played / mastered rule and ledger as the Games
+    // Library (src/games/scores.js), loaded on demand so the page does not wait for the game catalogue.
+    const gamesSlot = h('section', { class: 'card', 'aria-labelledby': 'pg-h-games' }, h('h2', { id: 'pg-h-games' }, 'Games'), h('p', { class: 'small muted' }, 'Loading your game scores...'));
+    Promise.all([import('../games/library.catalog.js'), import('../games/scores.js')]).then(([cat, sc]) => {
+      if (!alive) return;
+      const list = cat.allGames(); let led = {}; try { led = store.get(sc.SCORES_KEY) || {}; } catch { led = {}; }
+      const rows = list.map((g) => ({ g, st: sc.readGameState(store, g.id, led) })).filter((x) => x.st.played);
+      const mastered = rows.filter((x) => x.st.mastered).length, plays = rows.reduce((n, x) => n + x.st.plays, 0);
+      const recent = rows.filter((x) => led[x.g.id]?.lastAt).sort((a, b) => led[b.g.id].lastAt - led[a.g.id].lastAt).slice(0, 5);
+      gamesSlot.replaceChildren(h('h2', { id: 'pg-h-games' }, 'Games'),
+        rows.length ? h('p', {}, `${plural(rows.length, 'game', 'games')} played of ${list.length}, ${mastered} mastered, ${plural(plays, 'round', 'rounds')} in all.`)
+          : h('p', {}, 'No games played yet on this device.'),
+        recent.length ? h('ul', { class: 'pg-now' }, ...recent.map(({ g, st }) => h('li', {}, h('span', {}, g.title), h('span', { class: 'pg-now-v' }, sc.scoreLine(st)), h('span', { class: 'small muted pg-now-d' }, st.mastered ? 'Mastered' : 'Played', has(g.id) ? h('span', {}, ' ', h('a', { href: `#/${g.id}` }, 'Play')) : null)))) : null,
+        h('p', { class: 'small muted' }, sc.MASTERED_RULE, ' ', has('game-library') ? h('a', { href: '#/game-library' }, 'Games Library') : h('a', { href: '#/games' }, 'All games')));
+    }).catch(() => { gamesSlot.querySelector('p')?.replaceChildren('Game scores could not load. Your games are not affected.'); });
+
     // 2. lines and words in detail (the hook)
     const r = c.read, cnt = lessonCounts(s, d.lessons);
     const ringSlot = h('div', { class: 'pg-course-ring-slot' }); // C6: one course ring, loaded on demand
@@ -296,6 +312,7 @@ export async function mount(root, ctx) {
         ...row('Reading speed (self-reported)', tr.best ? `about ${tr.best.medianWpm} clean words a minute on ${tr.best.textId}, median of your last reads` : 'not measured')),
       h('p', { class: 'small muted' }, 'Review cards come back after longer and longer gaps while you keep remembering them. "Well known" means a card you should remember for 21 days or more. "Learning" is every other card you have started. Reading speed comes only from timed reads you timed and marked yourself; the app measures nothing but the clock.')));
 
+    sections.push(gamesSlot); // games sit after the learning cards, before backup
     sections.push(backupSection());
 
     main.replaceChildren(...sections);

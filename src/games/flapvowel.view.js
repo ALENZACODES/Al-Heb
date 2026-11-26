@@ -9,7 +9,7 @@ export const STORE_KEY = 'games.flapvowel.v1';
 const spec = {
   id: 'flapvowel', title: 'Flap the Vowel', titleHe: 'עוּף!',
   blurb: 'Rimon flies toward a gate with three or four openings, each marked with a vowel. A sound is called. Flap so Rimon passes through the opening whose mark makes that sound.',
-  howTo: ['Tap the board, press space or press up to flap. Rimon drifts down between flaps.', 'Read the sound called at the top (for example "bo").', 'Fly through the opening whose vowel mark gives that sound.', 'Ten gates finish the level; a wrong opening costs a life.'],
+  howTo: ['Tap the board, press space or press up to flap. Rimon drifts down between flaps.', 'Read the sound called at the top (for example "bo").', 'Fly through the opening whose vowel mark gives that sound.', 'Fly through every gate to finish the level (8 to 14, more at each level; the counter shows how many); a wrong opening costs a life.'],
   levels: [
     { name: '3 openings, slow', lanes: 3, gates: 8, speed: 90, sounds: ['a', 'i', 'o'] },
     { name: '3 openings', lanes: 3, gates: 10, speed: 78, sounds: ['a', 'e', 'o'] },

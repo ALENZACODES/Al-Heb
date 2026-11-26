@@ -87,6 +87,8 @@ const CSS = `
 .alef-trace .chip{display:inline-block;background:#e3f6e8;color:#14582a;border:1px solid #9bd3ab;border-radius:999px;padding:1px 10px;font-size:.85rem;margin-inline-start:6px}
 .alef-trace .opts{display:flex;gap:10px;flex-wrap:wrap}
 .alef-trace .opts button{font-size:2.4rem;min-width:72px}
+.alef-trace .opts button.is-good{outline:3px solid #2e9d58;background:color-mix(in srgb,#2e9d58 22%,transparent)}
+.alef-trace .opts button.is-bad{outline:3px solid #c0392b;opacity:.75}
 .alef-trace .strokewords{border:1px solid #ccd;border-radius:8px;padding:6px 10px;margin:8px 0}
 .alef-trace .strokewords summary{min-height:44px;display:flex;align-items:center;cursor:pointer}
 .alef-trace .sw-now{min-height:2.4em;font-weight:600}
@@ -389,7 +391,7 @@ export function mount(root, ctx = {}) {
         s.letters.map(id => (letterById(id) || {}).he).join(' ')))));
     // question: which glyph is <name>?
     const ids = set.letters;
-    if (!state.drillQ || !ids.includes(state.drillQ.target)) state.drillQ = { target: ids[Math.floor(Math.random() * ids.length)], answered: null, score: (state.drillQ && state.drillQ.score) || { ok: 0, n: 0 } };
+    if (!state.drillQ || !ids.includes(state.drillQ.target)) state.drillQ = { target: ids[Math.floor(Math.random() * ids.length)], answered: (state.drillQ && state.drillQ.answered) || null, score: (state.drillQ && state.drillQ.score) || { ok: 0, n: 0 } };
     const q = state.drillQ; const tl = letterById(q.target);
     body.appendChild(h('p', {}, t('trace.find', 'Find: ') + tl.name + ' '), );
     body.lastChild.appendChild(he(tl.nameHe));
@@ -400,9 +402,12 @@ export function mount(root, ctx = {}) {
       // the question names the target, so naming each option would hand over the answer: a screen reader gets each option's SHAPE in words (its name when there is no shape text)
       opts.appendChild(h('button', { lang: 'he', 'aria-label': shapeLabel(l, state.mnemonics && state.mnemonics[l.id]) || l.name, onclick: () => {
         q.score.n++;
-        if (id === q.target) { q.score.ok++; fb.textContent = t('trace.good', 'Good!') + ' ' + l.name; state.drillQ = { target: null, score: q.score }; setTimeout(() => { if (!unmounted && state.tab === 'drill') render(); }, 900); }
-        else { const w = warningAfterWrongTap(q.target, id, state.interference, state.confusables); fb.textContent = t('trace.notThat', 'That is ') + l.name + '.' + (w ? ' ' + w.hint : ''); } // look-alike hint only after a wrong tap
+        // Right and wrong are both shown on the button and in words, and "Right" stays above the next question (25 Nov 2026 audit:
+        // a right answer only nudged the score).
+        if (id === q.target) { q.score.ok++; btn.classList.add('is-good'); btn.textContent = '✓ ' + l.he; fb.textContent = '✓ ' + t('trace.good', 'Good!') + ' ' + l.name; state.drillQ = { target: null, score: q.score, answered: '✓ ' + t('trace.right', 'Right: that was ') + l.name + '.' }; setTimeout(() => { if (!unmounted && state.tab === 'drill') render(); }, 900); }
+        else { btn.classList.add('is-bad'); btn.setAttribute('aria-disabled', 'true'); const w = warningAfterWrongTap(q.target, id, state.interference, state.confusables); fb.textContent = '✗ ' + t('trace.notThat', 'That is ') + l.name + '.' + (w ? ' ' + w.hint : ''); } // look-alike hint only after a wrong tap
       } }, l.he));
+      const btn = opts.lastChild;
     }
     body.appendChild(opts); body.appendChild(fb);
     body.appendChild(h('p', {}, t('trace.score', 'Score: ') + q.score.ok + ' / ' + q.score.n));

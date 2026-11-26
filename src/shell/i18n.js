@@ -43,6 +43,7 @@ export const en = {
   'offline.body': 'This screen is not saved on this device yet. Connect to the internet and open it once. After that it works offline too.',
   'notfound.title': 'Page not found',
   'notfound.updating': 'A newer version has this page. Updating now…',
+  'stale.updating': 'Aleph was half way through an update. Finishing it now, this takes a moment…',
   'about.title': 'About Aleph',
   'how.title': 'How this works',
   'welcome.title': 'Welcome to Aleph',

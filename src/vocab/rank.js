@@ -114,3 +114,43 @@ export function keepBand(band, query, broad) {
   if (broad) return true;
   return !isShortQuery(query);
 }
+
+/** Edit distance (insert, delete, change, swap of two neighbours), stopping early past `max`. */
+export function editDistance(a, b, max = 2) {
+  if (a === b) return 0;
+  if (Math.abs(a.length - b.length) > max) return max + 1;
+  let prev2 = null, prev = Array.from({ length: b.length + 1 }, (_, j) => j);
+  for (let i = 1; i <= a.length; i++) {
+    const cur = [i]; let low = i;
+    for (let j = 1; j <= b.length; j++) {
+      let v = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+      if (prev2 && i > 1 && j > 1 && a[i - 1] === b[j - 2] && a[i - 2] === b[j - 1]) v = Math.min(v, prev2[j - 2] + 1);
+      cur.push(v); if (v < low) low = v;
+    }
+    if (low > max) return max + 1;
+    prev2 = prev; prev = cur;
+  }
+  return prev[b.length];
+}
+
+/**
+ * "Did you mean": close spellings when a search finds nothing (25 Nov 2026 audit: "shlom" gave "No words match" with no help).
+ * Compares the folded query with each entry's transliteration, its gloss senses and its unpointed Hebrew; one slip allowed for
+ * short queries, two from seven letters. Returns up to `max` distinct suggestions {text, kind}, closest first, then most frequent.
+ * @param {any[]} entries @param {string} query @param {(e:any)=>string} [translitOf] @param {number} [max]
+ */
+export function suggestSpellings(entries, query, translitOf = () => '', max = 5) {
+  const q = fold(query);
+  if (q.length < 3) return [];
+  const he = HEBREW_LETTERS.test(q), limit = q.length >= 7 ? 2 : 1;
+  const best = new Map();
+  const note = (text, kind, d, rank) => { if (!text || text === q || d > limit) return; const was = best.get(text); if (!was || d < was.d || (d === was.d && rank < was.rank)) best.set(text, { text, kind, d, rank }); };
+  (entries || []).forEach((e, i) => {
+    const rank = Number(e?.rank ?? e?.freq ?? i) || i;
+    if (he) { const w = fold(e?.lemma || e?.he || ''); if (w && !w.includes(' ')) note(w, 'hebrew', editDistance(q, w, limit), rank); return; }
+    const tl = fold(translitOf(e) || e?.translit || '');
+    if (tl) note(tl, 'transliteration', editDistance(q, tl, limit), rank);
+    for (const part of partsOf(e?.gloss ?? e?.en ?? '')) if (!part.includes(' ') || part.length <= q.length + 2) note(part, 'English', editDistance(q, part, limit), rank);
+  });
+  return [...best.values()].sort((a, b) => a.d - b.d || a.rank - b.rank).slice(0, max).map(({ text, kind }) => ({ text, kind }));
+}

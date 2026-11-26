@@ -2,7 +2,7 @@
 // #/certificate: the learner's own Certificate of Lessons Completed, and #/certificate?r=<code> to read one from a link.
 // Lane 4 (12 Nov). Wording lives in certificate.js COPY; nothing here claims a review, an assessment or a signature.
 import { h } from '../shell/ui.js';
-import { summaryById } from '../curriculum/lessons-index.js';
+import { summaryById, lessonSummaries } from '../curriculum/lessons-index.js';
 import { CHECKS_KEY } from '../curriculum/passmark.js';
 import { buildRecord, evaluate, dateText, recordCode, recordFromCode, recordLink, cleanName, COPY } from './certificate.js';
 
@@ -34,6 +34,27 @@ const STATUS = {
   'unknown-lesson': 'Not a lesson in this copy of Aleph: not counted',
 };
 
+const BELT_NAME = { white: 'White belt', yellow: 'Yellow belt', orange: 'Orange belt', green: 'Green belt', blue: 'Blue belt', brown: 'Brown belt', black: 'Black belt', intermediate: 'Intermediate', A1: 'Speak in Israel A1', A2: 'Speak in Israel A2', B1: 'Speak in Israel B1' };
+/**
+ * Belts on a record (25 Nov 2026 critique, item 14: "name, belt, date"): for each belt with at least one lesson meeting the pass rule,
+ * how many of its lessons do, and the date the last of them was completed when the belt is whole. Counted from the same rows as the
+ * table, so it can never say more than the table does.
+ * @param {{rows:{id:string,status:string,completedAt?:number}[]}} ev @param {{id:string,level?:string}[]} [all]
+ */
+export function beltRows(ev, all = lessonSummaries) {
+  const byBelt = new Map();
+  for (const l of all) if (l.level && BELT_NAME[l.level]) { if (!byBelt.has(l.level)) byBelt.set(l.level, []); byBelt.get(l.level).push(l.id); }
+  const met = new Map(ev.rows.filter((r) => r.status === 'meets').map((r) => [r.id, r]));
+  const out = [];
+  for (const [belt, ids] of byBelt) {
+    const done = ids.filter((id) => met.has(id));
+    if (!done.length) continue;
+    const whole = done.length === ids.length;
+    out.push({ belt, name: BELT_NAME[belt], done: done.length, of: ids.length, whole, on: whole ? Math.max(...done.map((id) => Number(met.get(id).completedAt) || 0)) || null : null });
+  }
+  return out;
+}
+
 /** The printable sheet for one record. */
 export function sheet(rec, ev, { checking = false } = {}) {
   const n = rec.name || 'The learner';
@@ -44,6 +65,8 @@ export function sheet(rec, ev, { checking = false } = {}) {
       ev.firstTryPct != null ? `, with ${ev.right} of ${ev.of} quick-check questions right on the first try across those lessons (${ev.firstTryPct}%).` : '.',
       ev.unscored ? ` ${ev.unscored} more completed lesson${ev.unscored === 1 ? ' has' : 's have'} no score kept and ${ev.unscored === 1 ? 'is' : 'are'} not counted.` : '',
       ev.problems ? ` ${ev.problems} row${ev.problems === 1 ? '' : 's'} could not be counted (see the table).` : ''),
+    (() => { const belts = beltRows(ev); return belts.length ? h('ul', { id: 'lc-belts', 'aria-label': 'Belts' }, ...belts.map((b) => h('li', { 'data-belt': b.belt, 'data-whole': b.whole ? '1' : '0' },
+      h('strong', {}, b.name), b.whole ? `: completed, all ${b.of} lessons${b.on ? `, ${dateText(b.on)}` : ''}` : `: ${b.done} of ${b.of} lessons`))) : null; })(),
     ev.ruleChanged ? h('p', { class: 'lc-flag', role: 'note' }, 'The record was made with a different pass rule from this copy of Aleph; every row below uses this copy’s rule.') : null,
     h('table', { id: 'lc-table' },
       h('caption', { class: 'visually-hidden' }, `Lessons ${n} completed`),

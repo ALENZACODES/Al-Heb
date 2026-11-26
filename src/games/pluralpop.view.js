@@ -9,7 +9,7 @@ const EXTRA_URL = new URL('../../data/games/arcade-extra.json', import.meta.url)
 const spec = {
   id: 'pluralpop', title: 'Plural Pop', titleHe: 'רַבִּים',
   blurb: 'One book, many books: סֵפֶר, סְפָרִים. A singular noun appears and balloons rise with possible plurals. Pop the right one. ים for most masculine, ות for most feminine, and a few famous rebels.',
-  howTo: ['Read the singular noun and its meaning.', 'Balloons rise carrying plural forms. Tap the right one.', 'Wrong balloons pop with a hint; letting the right one float away costs a life.', 'Fifteen nouns per round; level 4 adds the irregular plurals.'],
+  howTo: ['Read the singular noun and its meaning.', 'Balloons rise carrying plural forms. Tap the right one.', 'Wrong balloons pop with a hint; letting the right one float away costs a life.', 'Each level sets how many nouns (12 to 18); the counter shows where you are. Level 4 adds the irregular plurals.'],
   levels: [
     { name: 'Ending only: ים or ות', count: 12, mode: 'ending', speed: 95 },
     { name: 'Pick the full plural, 2 balloons', count: 14, mode: 'full', options: 2, speed: 85 },

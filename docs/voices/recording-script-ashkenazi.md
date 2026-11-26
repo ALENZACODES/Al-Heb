@@ -113,7 +113,7 @@ Takes per clip: 3. Clips: 15.
 | chataf-patach | ashkenazi/vowel/chataf-patach.mp3 | אֲ | [a] | (as above) |
 | chataf-segol | ashkenazi/vowel/chataf-segol.mp3 | אֱ | [e] | (as above) |
 | chataf-kamatz | ashkenazi/vowel/chataf-kamatz.mp3 | אֳ | [ɔ] | (as above) |
-| dagesh | ashkenazi/vowel/dagesh.mp3 | בּ | hardens bet/kaf/pe to [b][k][p]; (gemination not covered by the sources fetched) | (as above) |
+| dagesh | ashkenazi/vowel/dagesh.mp3 | בּ | hardens bet/kaf/pe to [b][k][p] | (as above) |
 | shin-dot | ashkenazi/vowel/shin-dot.mp3 | שׁ | [ʃ] | (as above) |
 | sin-dot | ashkenazi/vowel/sin-dot.mp3 | שׂ | [s] | (as above) |
 

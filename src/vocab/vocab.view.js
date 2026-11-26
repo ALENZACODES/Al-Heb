@@ -16,6 +16,8 @@ import { loadTier, TIER_BANDS } from './loader.js';
 import { translitFor, TRAD } from './model.js';
 import { TIER_LABEL, POS_LABEL, VOCAB_CARDS_KEY, stripPoints, addCards, cardId, CARD_PREFIX, rankEntries, isExactBand, isShortQuery, keepBand, fold, BAND } from './model.js';
 import { aliasHits, aliasNote } from './aliases.js';
+import { suggestSpellings } from './rank.js';
+import { chipsFor, hyphenated } from '../pronunciation/syllables.js';
 import { isFunction } from './vocab.js';
 import { plural } from '../shell/plural.js';
 import { DICTIONARY, fmt, dictionaryScopeNote } from '../lib/counts.js';
@@ -89,6 +91,9 @@ const CSS = `
 .alef-vocab .vc-badge{display:inline-block;border:1px solid currentColor;border-radius:6px;padding:0 .4rem;font-size:.85rem;font-weight:700}
 .alef-vocab .vc-forms{display:flex;flex-wrap:wrap;gap:.25rem .75rem;align-items:baseline}
 .alef-vocab .vc-forms span[lang=he]{font-size:1.2rem}
+.alef-vocab .vc-example{border-inline-start:3px solid var(--accent,#2a6);padding-inline-start:.6rem;margin-block:.3rem}
+.alef-vocab .vc-example p{margin:.1rem 0}
+.alef-vocab .vc-example [lang=he]{font-size:1.3rem}
 .alef-vocab footer{margin-block-start:1.5rem;font-size:.85rem;color:var(--muted,#555)}
 `;
 function injectStyle() {
@@ -124,6 +129,7 @@ export function mount(root, ctx) {
 
   /** @type {Record<string, any>} */
   let cards = {};
+  const STARTER = 20;
   const vocabCards = () => Object.values(cards).filter((c) => c && String(c.id).startsWith(CARD_PREFIX));
   const dueNow = () => due(vocabCards(), Date.now());
   const refreshModeLabel = () => { const n = dueNow().length; modeReview.textContent = n ? `Review (${n} due)` : 'Review'; };
@@ -218,11 +224,30 @@ export function mount(root, ctx) {
     return soundControls(text, e.gloss || '', translitFor(e, tradition()) || '');
   };
   const heWord = (e, cls) => heText(displayHebrew(e.pointed || e.lemma || '', 'abbrev'), cls);
+  // Stress (25 Nov 2026 critique, item 9: "stress marks in CAPS as planned"): the app's syllable model splits the pointed word and
+  // puts the stressed syllable in capitals, sha-LOM. Stress is the last syllable unless data/pronunciation/stress.json lists the
+  // word; for Ashkenazi reading it is shown only where it was checked. Nothing is shown when the split is not certain.
+  let stressData = null;
+  fetch(new URL('../../data/pronunciation/stress.json', import.meta.url)).then((r) => (r.ok ? r.json() : null)).then((x) => { stressData = x; }).catch(() => {});
+  const stressed = (e) => {
+    if (!e.pointed || e.needsPointing || /\s/.test(e.pointed)) return '';
+    try { const r = chipsFor(e.pointed, { tradition: tradition(), stress: stressData, pos: e.pos, patterns: true }); return r.ok && r.latinOk && r.checked && r.syllables.length > 1 ? hyphenated(r) : ''; } catch { return ''; }
+  };
   const translitLine = (e) => {
     const tl = translitFor(e, tradition());
-    return el('p', { class: 'vc-meta' }, `Say it (${TRAD[tradition()]}): `, tl ? el('i', {}, tl) : '(not available: this word has no vowel points yet)');
+    const st = tl ? stressed(e) : '';
+    return el('p', { class: 'vc-meta' }, `Say it (${TRAD[tradition()]}): `, tl ? el('i', {}, tl) : '(not available: this word has no vowel points yet)',
+      st ? el('span', { class: 'vc-stress', title: 'Capitals mark the stressed syllable. Worked out by rule, not yet checked by a teacher.' }, ' · stress: ', el('b', {}, st)) : null);
   };
   const known = new Map(); // id -> entry, for every tier loaded so far (cross-references)
+  // Example sentences: real lines from the story books and dialogues, each with its own English (tools/vocab/build-examples.mjs;
+  // 25 Nov 2026 critique: entries had no example sentences). Loaded once; cards drawn before it arrives get theirs on the next draw.
+  let examples = {};
+  let onExamples = () => {};
+  fetch(new URL('../../data/vocab/examples.json', import.meta.url)).then((r) => (r.ok ? r.json() : {})).then((x) => { examples = x || {}; onExamples(); }).catch(() => {});
+  const exampleLines = (e) => (examples[e.id] || []).map((x) => el('div', { class: 'vc-meta vc-example' },
+    el('p', {}, heText(displayHebrew(x.he, 'abbrev'), ''), ' ', el('span', {}, x.en)),
+    el('p', { class: 'small muted' }, x.book ? el('a', { href: `#/book/${x.book}` }, `${x.title}, page ${x.page}`) : `Dialogue: ${x.title}`)));
   // ---- lane 3 (12 Nov, #15a/#15d): family letters and verb forms for a word (data/roots/dict-links.json, loaded on demand) ----
   let links = ctx?.dictLinks || null, linksMod = null, linksPromise = null;
   const ensureLinks = () => {
@@ -354,7 +379,7 @@ export function mount(root, ctx) {
         heWord(e, 'vc-he'), el('p', { tabindex: '-1', class: 'vc-gloss' }, ...glossNodes(e.gloss)),
         alias ? el('p', { class: 'vc-alias' }, aliasNote(alias)) : null,
         band === BAND.translit ? el('p', { class: 'vc-meta' }, 'Transliteration match. This is not an English gloss.') : null,
-        metaLine(e), ...noteLines(e), familyLine(e), translitLine(e),
+        metaLine(e), ...noteLines(e), ...exampleLines(e), familyLine(e), translitLine(e),
         el('div', { class: 'row' }, listenButton(e), add));
     };
     const updateAdd = () => {
@@ -399,6 +424,13 @@ export function mount(root, ctx) {
       heading.hidden = !heading.textContent;
       list.replaceChildren(...ranked.slice(0, shown).map(cardItem));
       status.textContent = statusText();
+      // Nothing found: offer close spellings as buttons that run the search again (src/vocab/rank.js suggestSpellings).
+      if (!ranked.length && !hiddenNoise && sel.query.trim()) {
+        const tips = suggestSpellings(all, sel.query, translitOf);
+        if (tips.length) list.replaceChildren(el('li', { class: 'vc-suggest' }, el('p', {}, 'Did you mean: '),
+          ...tips.map((tip) => el('button', { type: 'button', class: 'btn secondary', lang: tip.kind === 'hebrew' ? 'he' : null, dir: tip.kind === 'hebrew' ? 'rtl' : null,
+            onclick: () => { search.value = tip.text; search.dispatchEvent(new Event('input', { bubbles: true })); search.focus(); } }, tip.text, tip.kind === 'hebrew' ? '' : ` (${tip.kind})`))));
+      }
       moreRow.replaceChildren(...(shown < ranked.length ? [el('button', { type: 'button', class: 'btn secondary', id: 'vc-more', onclick: () => {
         const from = shown; shown = Math.min(shown + PAGE, ranked.length);
         list.append(...ranked.slice(from, shown).map(cardItem));
@@ -429,6 +461,7 @@ export function mount(root, ctx) {
     tierSel.addEventListener('change', () => { sel.tier = tierSel.value; sel.topic = ''; reload(); });
     topicSel.addEventListener('change', () => { sel.topic = topicSel.value; refilter(); });
     search.addEventListener('input', () => { sel.query = search.value; refilter(); });
+    onExamples = () => { if (alive) refilter(); }; // redraw once the example sentences arrive
     gen = my; reload();
   }
 
@@ -441,8 +474,9 @@ export function mount(root, ctx) {
     const total = vocabCards();
     if (!total.length) {
       body.replaceChildren(el('div', { class: 'card' }, el('h2', {}, 'No words in your reviews yet'),
-        el('p', {}, 'Open Browse, pick a tier or topic, and choose "Add ... to reviews". Words you add come back here on a spaced schedule.'),
-        el('button', { type: 'button', class: 'btn', onclick: () => setMode('browse') }, 'Browse words')));
+        el('p', {}, `Start with the ${STARTER} most common words, or open Browse, pick a tier or topic, and choose "Add ... to reviews". Words you add come back here on a spaced schedule.`),
+        el('div', { class: 'row' }, el('button', { type: 'button', class: 'btn', id: 'vc-starter', onclick: startStarter }, `Start with the ${STARTER} most common words`),
+          el('button', { type: 'button', class: 'btn secondary', onclick: () => setMode('browse') }, 'Browse words'))));
       return;
     }
     // lane 3 (12 Nov, #15d): the learner can review due words grouped by family letters (same cards, same count, new order)
@@ -459,6 +493,15 @@ export function mount(root, ctx) {
     const queue = queueCards.map((c) => c.id).filter((id) => byTier[id.slice(CARD_PREFIX.length)]);
     rv = { queue, pos: 0, revealed: false, stats: { 1: 0, 2: 0, 3: 0, 4: 0 }, byTier, requeued: new Set(), grouped, groupOf };
     showCard();
+  }
+  /** Starter deck (25 Nov 2026 audit: review began empty with no preset deck): the STARTER most frequent words of the first tier (no word forms, no rare senses, no function words), then review them. */
+  async function startStarter() {
+    try {
+      const first = await load(TIER_BANDS[0]);
+      const picks = (first || []).filter((e) => !skippedInBulk(e) && !isFunction(e)).slice(0, STARTER);
+      const r = addCards(cards, picks, Date.now(), STARTER); await saveCards(r.cards);
+      renderReview();
+    } catch { body.append(el('p', { role: 'alert' }, 'Could not load the starter words. Check your connection, then try again.')); }
   }
   function summary() {
     const s = rv.stats, n = s[1] + s[2] + s[3] + s[4], left = dueNow().length;
@@ -491,7 +534,7 @@ export function mount(root, ctx) {
   function showAnswer(prompt, reveal) {
     const e = rv.current; rv.revealed = true;
     reveal.remove?.();
-    const answer = el('div', { class: 'vc-answer', 'aria-live': 'polite' }, ctx.img?.(el, { kind: 'word', id: e.id, class: 'vc-pic', width: 400 }), el('p', { class: 'vc-gloss', tabindex: '-1', id: 'vc-a' }, ...glossNodes(e.gloss)), metaLine(e), ...noteLines(e), familyLine(e), translitLine(e), el('div', { class: 'row' }, listenButton(e)));
+    const answer = el('div', { class: 'vc-answer', 'aria-live': 'polite' }, ctx.img?.(el, { kind: 'word', id: e.id, class: 'vc-pic', width: 400 }), el('p', { class: 'vc-gloss', tabindex: '-1', id: 'vc-a' }, ...glossNodes(e.gloss)), metaLine(e), ...noteLines(e), ...exampleLines(e), familyLine(e), translitLine(e), el('div', { class: 'row' }, listenButton(e)));
     const rate = el('div', { class: 'vc-rate', role: 'group', 'aria-label': 'How well did you remember it?' },
       ...RATINGS.map(([r, name, hint]) => el('button', { type: 'button', class: 'btn' + (r === 3 ? '' : ' secondary'), 'data-rating': String(r), 'aria-label': `${name} (${r}): ${hint}`, onclick: () => rate_(r) }, `${name} (${r})`)));
     prompt.append(answer); body.append(rate);

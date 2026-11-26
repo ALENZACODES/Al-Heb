@@ -18,7 +18,10 @@ const COUNTED = [/^\/learn(\b|$)/, /^\/ladder/, /^\/fade/, /^\/spotit\//, /^\/ch
   /^\/mixed-review$/, /^\/five-minutes$/, /^\/checkpoints$/]; // course lane: practice sets and checkpoint tests
 /** @param {string} hash e.g. "#/learn?review=1" */
 export function isCountedRoute(hash) {
-  const p = String(hash || "").replace(/^#/, "").split("?")[0];
+  const [p, q = ""] = String(hash || "").replace(/^#/, "").split("?");
+  // The bare lesson list (#/learn with no lesson, review or drill open) is a menu, not practice (25 Nov 2026 audit: the daily goal and
+  // the streak could be earned by wandering the menus).
+  if (/^\/learn\/?$/.test(p) && !q) return false;
   return COUNTED.some((re) => re.test(p));
 }
 

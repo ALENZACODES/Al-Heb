@@ -158,6 +158,14 @@ export function bareLetters(he) {
 export const FINAL_TO_BASE = Object.freeze({ 'ך': 'כ', 'ם': 'מ', 'ן': 'נ', 'ף': 'פ', 'ץ': 'צ' });
 export const BASE_TO_FINAL = Object.freeze({ 'כ': 'ך', 'מ': 'ם', 'נ': 'ן', 'פ': 'ף', 'צ': 'ץ' });
 export const ALPHABET = Object.freeze([...'אבגדהוזחטיכלמנסעפצקרשת']);
+/** A letter's 22-key form: a final (ך ם ן ף ץ) becomes its regular letter, anything else is unchanged. */
+export const baseLetter = (ch) => FINAL_TO_BASE[ch] || ch;
+/**
+ * Final-form rule shared by the games that use the 22-key keyboard (Meltdown, Mini Crossword): a final and its regular letter
+ * count as the same key, so a word ending in ם is winnable from the מ key and from a physical ם key. Speed Type keeps its full
+ * 27-key Israeli layout and checks exact shapes on purpose (typing practice); Final Five teaches the difference.
+ */
+export const sameKey = (a, b) => baseLetter(a) === baseLetter(b);
 
 /** The 27 shapes as they appear in words (22 base letters and the 5 finals). */
 export const ALL_SHAPES = Object.freeze([...ALPHABET, ...Object.values(BASE_TO_FINAL)]);

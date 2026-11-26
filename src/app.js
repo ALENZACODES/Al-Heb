@@ -14,7 +14,7 @@ import { createShellAudio } from './shell/audio.js';
 import { createShardLoader, warmShardAfterInstall } from './shell/audio-shards.js';
 import { isRealProgressWrite } from './shell/persist-gate.js';
 import { fetchFullManifest, fetchAudioSummary, afterPaint } from './shell/audio-manifest.js';
-import { h, heSpan, unavailableCard } from './shell/ui.js';
+import { h, heSpan, unavailableCard, isStaleBuildError } from './shell/ui.js';
 import { holdMain, rememberPage, watchFallbackHeading } from './shell/loading-contract.js';
 import { loadImageResolver, img as imgEl } from './img/resolve.js';
 import { updateCompanions } from './shell/companions.js';
@@ -296,6 +296,7 @@ async function show(match, ctxBase, { quiet = false } = {}) {
     if (token !== navToken) return;
     // Offline and the screen's code is not on this device yet (an on-demand page never opened online): say that, not "did not load".
     unavailableCard(root, { title: route.title, t, module: route.module, error: err?.message, kind: globalThis.navigator?.onLine === false ? 'offline' : 'error' });
+    if (globalThis.navigator?.onLine !== false && isStaleBuildError(err)) recoverStaleBuild(root, path);
     root.removeAttribute('aria-busy'); return finish();
   }
   if (token !== navToken) return;
@@ -316,6 +317,7 @@ async function show(match, ctxBase, { quiet = false } = {}) {
     if (token !== navToken) { console.warn(`view ${route.name} failed after being superseded`, err); return; }
     console.error(`view ${route.name} failed`, err);
     unavailableCard(root, { title: route.title, t, module: route.module, error: err?.message, kind: 'error' });
+    if (isStaleBuildError(err)) recoverStaleBuild(root, path);
   }
   if (route.name === 'letter' && params?.id && token === navToken) { // "Letter Bet - Aleph" rather than a generic title; falls back to the id, then to the route title
     let nm = '';
@@ -466,15 +468,35 @@ function startUpdate() {
   if (!updateStarted) { updateStarted = import('./shell/update.js').then((m) => { window.alef.update = m.startUpdateBanner().handle; return m; }); updateStarted.catch(() => { updateStarted = null; }); }
   return updateStarted;
 }
+/**
+ * A screen failed because its code came from two builds (isStaleBuildError). Say so in plain words on the error card, then finish
+ * the update: apply a waiting or newly found worker at once (nothing is in progress on an error card), and if none turns up, drop
+ * this device's runtime copies of the app's code and reload once. A session flag stops a loop: a second failure on the same
+ * address within a minute just leaves the card.
+ */
+function recoverStaleBuild(root, path) {
+  startUpdate().then((m) => { if (m.staleReloadAllowed(path)) finishStaleUpdate(root, path); }).catch(() => {});
+}
+function finishStaleUpdate(root, path) {
+  const note = h('p', { class: 'muted', role: 'status' }, t('stale.updating'));
+  try { const card = root.querySelector('.alef-unavailable'); card?.querySelector('h1')?.after(note); } catch { /* the note is a courtesy */ }
+  const hardReload = async () => {
+    try { for (const k of await caches.keys()) if (k.startsWith('alef-data-')) { const c = await caches.open(k); for (const r of await c.keys()) if (/\/src\/.+\.js$/.test(new URL(r.url).pathname)) await c.delete(r); } } catch { /* no Cache Storage */ }
+    location.reload();
+  };
+  if (!swContainer()) { hardReload(); return; }
+  updateForMissingPage(path, () => { note.textContent = t('stale.updating'); }, { onNone: hardReload });
+}
 let missingPageStop = () => {};
-function updateForMissingPage(path, onUpdating) {
+function updateForMissingPage(path, onUpdating, { onNone = null } = {}) {
   missingPageStop(); missingPageStop = () => {};
   const handleNow = () => window.alef?.update;
   const waitHandle = async () => { for (let i = 0; i < 20 && !handleNow(); i++) await new Promise((r) => setTimeout(r, 250)); return handleNow(); };
   startUpdate().then(async (m) => {
     const handle = await waitHandle();
-    if (!handle || location.hash.split('?')[0] !== '#' + path) return; // the learner has moved on
-    missingPageStop = m.updateForMissingPage(handle, { onUpdating });
+    if (location.hash.split('?')[0] !== '#' + path) return; // the learner has moved on
+    if (!handle) { if (onNone) onNone(); return; }
+    missingPageStop = m.updateForMissingPage(handle, { onUpdating, onTimeout: onNone || undefined });
     const stopOnLeave = () => { window.removeEventListener('hashchange', stopOnLeave); missingPageStop(); };
     window.addEventListener('hashchange', stopOnLeave);
   }).catch(() => {});

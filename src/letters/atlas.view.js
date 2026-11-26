@@ -210,9 +210,12 @@ export function mount(root, ctx = {}) {
       list.appendChild(h('li', {}, h('button', {
         class: cls, 'data-tile': tile.id, 'aria-pressed': !q && state.selected === tile.id, 'aria-label': q ? tile.glyph + ' ' + tile.name : null,
         onclick: () => onTile(tile)
-      }, h('span', { class: 'g', dir: 'rtl', lang: 'he' }, tile.glyph), h('span', { class: 'n' }, q ? '' : tile.name), h('span', { class: 's' }, q || !tile.ipa ? '' : '/' + tile.ipa + '/'))));
+      }, h('span', { class: 'g', dir: 'rtl', lang: 'he' }, tile.glyph), h('span', { class: 'n' }, q ? '' : tile.name), h('span', { class: 's', title: !q && !tile.ipa ? tile.soundEn || null : null }, q ? '' : tile.ipa ? '/' + tile.ipa + '/' : 'see card'))));
     }
     body.appendChild(list);
+    // A tile with no symbol is a choice, not a gap (25 Nov 2026 audit read Chet, Khaf, Ayin, Resh and Final Kaf as missing): the stored
+    // IPA for this reading style differs from the Israeli one or is given only in words, so the tile points to the card's own description.
+    if (!q && state.tiles.some((x) => !x.ipa)) body.appendChild(h('p', { class: 'muted small', 'data-atlas-ipa-note': '1' }, '"See card": in your reading style this letter sounds different from Israeli Hebrew and no symbol is stored for it yet. Tap it to read how it is said.'));
 
     const sel = !q && state.selected && tileById(state.selected);
     if (sel) {

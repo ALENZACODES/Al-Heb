@@ -1,0 +1,5 @@
+Aleph IMAGE RUN - BLOCK K (game playfields, Rimon reactions, workbook covers)
+
+This run makes 23 images in 5 commands. Keep this one conversation for the whole run.
+I will paste one command at a time (k-01 to k-05). For each, make exactly the images listed, each as its own PNG, named exactly as given, then list the filenames and wait for "next".
+Style, characters and rules are repeated inside every command. Reply "ready" and wait for the first command.

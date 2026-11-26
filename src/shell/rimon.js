@@ -2,7 +2,7 @@ import { mountSpeechBubble } from './rimon-speech.js';
 import { projectStreak } from '../curriculum/streak.js';
 /** Rimon pictures that screens draw into the page themselves: the corner Rimon steps aside while one is there, and the stage keeps
  * its pop-ups away (src/shell/rimon-stage.js). The in-page animation, the Learn card, the lesson cheer and the Brain Lab pictures that show Rimon. */
-export const IN_PAGE_RIMON=Object.freeze(['.rimon-inline','.alef-continue-rimon','.alef-celebrate-rimon','.lab-rimon','.lab-art.hero','.lab-art.win','.lab-art.done']);
+export const IN_PAGE_RIMON=Object.freeze(['.rimon-inline','.alef-continue-rimon','.alef-celebrate-rimon','.lab-rimon','.lab-art.hero','.lab-art.win','.lab-art.done','.arcade .arc-board']); // arcade games draw Rimon on the board; the corner bubble covered the playfield (25 Nov audit)
 /** Retention's once-a-day greetings (src/retention/boot.js): their line is dropped when Rimon's stage already greeted today. */
 export const GREETING_SITUATIONS=Object.freeze(['shabbat','chag','shavua_tov','welcome_back']);
 // Twelve drawings per action: start, ten in-betweens, finish.

@@ -18,6 +18,7 @@ const CSS = `
 .alef-nowbar .nb-prog{display:flex;gap:.5rem;align-items:center}
 .alef-nowbar progress{flex:1;block-size:.5rem;accent-color:#d4a647}
 .alef-nowbar .nb-time{font-variant-numeric:tabular-nums;font-size:.85rem}
+body.alef-nowbar-on main{padding-block-end:calc(10rem + env(safe-area-inset-bottom))}html:has(body.alef-nowbar-on){scroll-padding-block-end:calc(10rem + env(safe-area-inset-bottom))}
 body.alef-nowbar-on .alef-now-playing{position:fixed!important;inline-size:1px!important;block-size:1px!important;overflow:hidden!important;clip-path:inset(50%)!important;padding:0!important;border:0!important}
 @media (prefers-reduced-motion:reduce){.alef-nowbar{transition:none}}
 `;

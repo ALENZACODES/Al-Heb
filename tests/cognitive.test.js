@@ -155,6 +155,9 @@ test("motion audit: animations match the reviewed inventory, loops are slow, and
     'alef-continue-bob', 'alef-pulse', 'alef-burst', 'alef-hop', 'alef-rimon-burst',
     // Brain Lab (src/lab/lab.view.js): a 0.3 s one-shot shake on a wrong tile, never looping; reduced motion switches it off
     'lab-shake',
+    // Arcade board reactions (assets/css/arcade.css, 2026-11-26): Rimon hops once (0.6 s) on a right answer and shakes once (0.45 s) on a
+    // wrong one, never looping; reduced motion and calm mode (quiet) switch them off.
+    'arc-cheer', 'arc-oops',
     // First-minute pass (assets/css/polish.css, 2026-11-10), reviewed: the welcome page slides in once (0.22 s), Rimon's bubble pops in
     // once (0.42 s), the first letter grows in once, the streak flame pops once when the day lights; the current lesson on the path
     // rises 3 px every 2.4 s (transform only, no colour or brightness change). The global reduced-motion and calm rules switch all off.

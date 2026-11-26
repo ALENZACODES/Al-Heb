@@ -6,7 +6,7 @@ import { uiEnglish, MORNING_TITLE } from './names.js';
 import { h, heSpan, destIcon } from './ui.js';
 import { astralTreeNode } from './astral-tree.js';
 import { builderNode } from '../home/builder.js';
-import { BOOKS, BOOK_PICTURED_PAGES, FIRST_WORDS, fmt, dictionaryTitle } from '../lib/counts.js';
+import { BOOKS, BOOK_PICTURED_PAGES, FIRST_WORDS, GAMES_ALL, fmt, dictionaryTitle } from '../lib/counts.js';
 
 export const TILES = [
   ['firstday', '#/firstday', 'Your First 10 Minutes', 'עֲשָׂרָה', 'Build your first word, letter by letter'],
@@ -80,7 +80,7 @@ export function showcaseNode(ctx) {
       heroText),
     portalsNode(has),
     builderNode(ctx),
-    h('p', { class: 'show-stats' }, `Games across 9 levels · ${fmt(FIRST_WORDS)} first words · ${fmt(BOOKS)} story books · 3 Hebrew traditions`), // src/lib/counts.js
+    h('p', { class: 'show-stats' }, `${GAMES_ALL.total ? fmt(GAMES_ALL.total) + ' games' : 'Games across 9 levels'} · ${fmt(FIRST_WORDS)} first words · ${fmt(BOOKS)} story books · 3 Hebrew traditions`), // src/lib/counts.js
     h('details', { class: 'show-all-destinations' }, // closed: the full list is one tap away, so the page opens small (depth revealed, not dumped)
       h('summary', {}, 'Explore all Aleph destinations'),
       h('ul', { class: 'show-grid' }, ...tiles)));

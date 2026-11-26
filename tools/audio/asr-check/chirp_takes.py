@@ -26,17 +26,32 @@ def plain(h):
     return re.sub(r'\s+', ' ', NIQQUD.sub('', str(h).replace('־', ' '))).strip(' .:׃')
 
 
-def pieces(text, limit=1500):
-    """Split long prayers at sentence/clause marks so every request stays well under the API's size limit."""
-    if len(text.encode()) <= limit * 2:
-        return [text]
-    out, cur = [], ''
+def ktiv_male(h):
+    """Full spelling, the way Israelis write without points: holam and shuruk/kubbutz as ו, hiriq as י, a consonant vav
+    doubled. Keeps the points too, so the voice has both the letters and the vowels."""
+    out = []
+    for w in str(h).split():
+        # dagesh and shin/sin dots first in each letter's marks, so the vowel rules below see one order
+        w = re.sub('([\u05B0-\u05BB]+)([\u05BC\u05C1\u05C2]+)', lambda m: m.group(2) + m.group(1), w)
+        w = re.sub('(?<=[\u05D0-\u05EA\u05B0-\u05C2])\u05D5(?=[\u05B0-\u05B8\u05BC]*[\u05B0-\u05B8])(?!\u05B9)', '\u05D5\u05D5', w)   # consonant vav -> וו
+        w = re.sub('([\u05D0-\u05D4\u05D6-\u05EA][\u05BC\u05C1\u05C2]*)\u05B9(?!\u05D5)', '\\1\u05D5\u05B9', w)   # holam -> וֹ
+        w = re.sub('([\u05D0-\u05EA][\u05BC\u05C1\u05C2]*)\u05BB', '\\1\u05D5\u05BC', w)                 # kubbutz -> וּ
+        w = re.sub('([\u05D0-\u05EA][\u05BC\u05C1\u05C2]*)\u05B4(?![\u05D9])', '\\1\u05B4\u05D9', w)    # hiriq -> ִי
+        out.append(w)
+    return ' '.join(out)
+
+
+ALT = {'m': ['he-IL-Chirp3-HD-Puck', 'he-IL-Chirp3-HD-Fenrir', 'he-IL-Chirp3-HD-Orus'],
+       'f': ['he-IL-Chirp3-HD-Aoede', 'he-IL-Chirp3-HD-Leda', 'he-IL-Chirp3-HD-Zephyr']}
+
+
+def pieces(text, max_words=18):
+    """Chirp 3 HD refuses very long sentences: split at clause marks, then into groups of at most max_words words."""
+    out = []
     for part in re.split(r'(?<=[.,;:׃])\s+', text):
-        if cur and len((cur + ' ' + part).encode()) > limit * 2:
-            out.append(cur); cur = part
-        else:
-            cur = (cur + ' ' + part).strip()
-    return out + ([cur] if cur else [])
+        w = part.split()
+        out += [' '.join(w[i:i + max_words]) for i in range(0, len(w), max_words)]
+    return [p for p in out if p]
 
 
 class TTS:
@@ -73,8 +88,11 @@ def main():
     ap.add_argument('--list', required=True, help='clip paths, one per line')
     ap.add_argument('--queue', default=os.path.join(HERE, 'multi4-queue.json'))
     ap.add_argument('--out', required=True)
+    ap.add_argument('--takes', default='c-pt,c-pt-90,c-pl,c-pl-90,w-pt')
+    ap.add_argument('--problems', help='JSON {clip: [problem words]}: lines get those words in full spelling only (c-sel)')
     ap.add_argument('--project', default=subprocess.run(['gcloud', 'config', 'get-value', 'project'], capture_output=True, text=True).stdout.strip())
     a = ap.parse_args()
+    probs = json.load(open(a.problems, encoding='utf-8')) if a.problems else {}
     want = {o['file']: re.sub(r'\s*\(cut from:.*\)\s*$', '', o['want']) for o in json.load(open(a.queue, encoding='utf-8'))}
     files = [l.strip() for l in open(a.list, encoding='utf-8') if l.startswith('audio/')]
     tts = TTS(a.project)
@@ -86,8 +104,24 @@ def main():
         d = os.path.join(a.out, f[:-4])
         os.makedirs(d, exist_ok=True)
         json.dump({'file': f, 'want': want[f]}, open(os.path.join(d, 'want.json'), 'w', encoding='utf-8'), ensure_ascii=False)
-        for tid, text, voice, rate in (('c-pt', pt, chirp, 1.0), ('c-pt-90', pt, chirp, 0.9), ('c-pl', pl, chirp, 1.0),
-                                       ('c-pl-90', pl, chirp, 0.9), ('w-pt', pt, wavenet, 1.0)):
+        km = ktiv_male(speakable(want[f]))
+        plan = [('c-pt', pt, chirp, 1.0), ('c-pt-90', pt, chirp, 0.9), ('c-pl', pl, chirp, 1.0), ('c-pl-90', pl, chirp, 0.9),
+                ('w-pt', pt, wavenet, 1.0), ('c-km', km, chirp, 1.0), ('c-kmpl', plain(km), chirp, 1.0)]
+        if len(pt.split()) <= 2:   # single words: say it inside a short carrier phrase; it is cut out afterwards (c-car)
+            plan += [('c-car', 'הַמִּלָּה, ' + pt + '.', chirp, 1.0), ('c-carkm', 'הַמִּלָּה, ' + km + '.', chirp, 1.0)]
+        if len(pt.split()) > 2:    # lines: Chirp reads prayers fast (5-6 syl/s); 0.8 brings them to a natural reading pace
+            plan += [('c-pt-80', pt, chirp, 0.8), ('c-pl-80', pl, chirp, 0.8)]
+        if len(pt.split()) <= 2:
+            pass
+        elif probs.get(f):         # lines: only the problem words in full spelling, the rest as pointed
+            bad = {re.sub(r'[\u0591-\u05C7]', '', w) for w in probs[f]}
+            sel = ' '.join(ktiv_male(w) if re.sub(r'[\u0591-\u05C7]', '', w) in bad else w for w in pt.split())
+            plan += [('c-sel', sel, chirp, 1.0), ('c-sel-80', sel, chirp, 0.8)]
+        if len(pt.split()) <= 2:   # single words only: other Chirp voices of the same sex
+            plan += [(f'a{i}-pt', pt, v, 1.0) for i, v in enumerate(ALT[g])] + [(f'a{i}-km', km, v, 1.0) for i, v in enumerate(ALT[g])]
+        for tid, text, voice, rate in plan:
+            if tid not in a.takes.split(','):
+                continue
             dst = os.path.join(d, tid + '.mp3')
             if os.path.exists(dst):
                 continue

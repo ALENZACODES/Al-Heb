@@ -174,7 +174,7 @@ export const NAV_EN = {
   'search.loaded': 'Searched {n} words.', 'search.error': 'Letters and words did not load, but you can still search pages.',
   'search.count': '{n} results', 'search.preview': 'Preview',
   // Release tiers (docs/v0/SCOPE.md): the collapsed Preview group in the More sheet, its per-section notes, and the page banner.
-  'nav.preview.title': 'Unfinished pages (lab)',
+  'nav.preview.title': 'Preview (unreviewed, work in progress)',
   'nav.preview.desc': 'Work in progress, not part of the first release and not reviewed by a teacher yet. They work, but their Hebrew, wording and order may be wrong or change. Start with the sections above.',
   'nav.preview.section': 'Preview: {s}',
   'nav.preview.note.learn': 'Extra lessons and drills. Not reviewed yet; wording, order and exercises may change.',

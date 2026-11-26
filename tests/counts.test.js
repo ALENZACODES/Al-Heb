@@ -143,7 +143,7 @@ test('S-02: plurals come from one helper', () => {
   assert.deepEqual([count(1, 'page'), count(2, 'page'), count(1, 'badge'), count(0, 'gem'), plural(1, 'day')], ['1 page', '2 pages', '1 badge', '0 gems', 'day']);
   assert.equal(C.streakText(1), '1-day streak'); assert.equal(C.daysText(1), '1 day'); assert.equal(C.gemsText(3), '3 gems');
   assert.match(read('src/shell/workbook.view.js'), /count\(f\.pages, 'page'\)/);
-  assert.match(read('src/games/arcade.js'), /count\(a\.totalBadges \|\| 0, 'badge'\)/);
+  assert.match(read('src/games/arcade.js'), /count\(a\.totalBadges \|\| 0, 'game badge'\)/); // named game badges so they do not read as the Awards count (critique item 6)
   assert.doesNotMatch(read('src/timedread/timedread.view.js'), /Practise/);
 });
 

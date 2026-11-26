@@ -48,7 +48,7 @@ export function mount(root, ctx) {
     // overlapping menus). Home keeps its five destinations above and sends everything else to the More menu, which lists every page
     // by section, with the unfinished ones in their own closed group at the bottom.
     h('nav', { class: 'card', 'aria-labelledby': 'h-quick', id: 'home-all-pages' }, h('h2', { id: 'h-quick' }, t('home.quick')),
-      h('p', {}, 'Every page is in one place, by section: the More menu. Unfinished pages sit in their own closed group at the bottom.'),
+      h('p', {}, 'Every page is in one place, by section: the More menu. Unfinished pages sit in their own closed Preview group at the bottom.'),
       h('p', {}, h('button', { class: 'btn secondary', type: 'button', id: 'home-all', 'aria-controls': 'nav-more', onclick: openMenu }, 'All pages'))),
     h('section', { class: 'card', 'aria-labelledby': 'h-ref' }, h('h2', { id: 'h-ref' }, t('home.reflect')),
       h('a', { class: 'btn secondary', href: '#/calendar' }, t('home.reflect.link'))),

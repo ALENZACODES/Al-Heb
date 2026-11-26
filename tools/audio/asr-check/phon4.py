@@ -99,6 +99,8 @@ def main():
     ap.add_argument('--out', default='.')
     ap.add_argument('--models', default=','.join(MODELS))
     ap.add_argument('--shard', type=int, default=0); ap.add_argument('--shards', type=int, default=1)
+    ap.add_argument('--gate', action='store_true', help='single words: the three CTC models first; renikud (slow on CPU, '
+                    '~10 s a clip) only hears clips all three hear, and the clips in use now (take "cur")')
     a = ap.parse_args()
     sys.path.insert(0, os.path.join(a.root, 'tools', 'audio', 'asr-check'))
     import check_lib as L
@@ -111,8 +113,23 @@ def main():
         done = {(r['file'], r['model']) for r in map(json.loads, open(res, encoding='utf-8'))}
     audio = {o['file']: L.load(os.path.join(a.root, o['file'])) for o in q}
     with open(res, 'a', encoding='utf-8') as f:
-        for name in a.models.split(','):
+        names = a.models.split(',')
+        if a.gate:
+            names = [n for n in names if n != 'renikud'] + ['renikud']
+        heard = {}
+        for name in names:
             todo = [o for o in q if (o['file'], name) not in done]
+            if a.gate and name == 'renikud':
+                if os.path.exists(res):
+                    for r in map(json.loads, open(res, encoding='utf-8')):
+                        if r['model'] != 'renikud' and r.get('ipa') is not None:
+                            heard.setdefault(r['file'], {})[r['model']] = r['ipa']
+                want = {o['file']: o['want'] for o in q}
+                def ctc_ok(f):
+                    m = heard.get(f, {})
+                    return len(m) >= 3 and all(review2(want[f], ipa)[1][0]['match'] >= WORD_OK for ipa in m.values())
+                todo = [o for o in todo if o.get('take') == 'cur' or ctc_ok(o['file'])]
+                print(f'gate: renikud hears {len(todo)} of {len(q)} clips', flush=True)
             if not todo:
                 continue
             try:

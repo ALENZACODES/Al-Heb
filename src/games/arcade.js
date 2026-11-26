@@ -163,7 +163,7 @@ export async function createArcade(root, ctx, spec) {
   function renderStreak() {
     const a = get(ARCADE_KEY);
     if (!showStreak || !a?.streak) { streakEl.textContent = ''; return; }
-    streakEl.textContent = `Arcade streak: ${count(a.streak, 'day')} in a row · ${count(a.totalBadges || 0, 'badge')} across all games.`;
+    streakEl.textContent = `Arcade streak: ${count(a.streak, 'day')} in a row · ${count(a.totalBadges || 0, 'game badge')} across all games (Awards lists them too).`;
   }
   function toggleDaily() {
     daily = !daily;

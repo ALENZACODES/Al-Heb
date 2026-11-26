@@ -246,7 +246,10 @@ const numWord = (n) => NUM_WORDS[n] || String(n);
 export function hubSummary(items) {
   const shown = items.filter((x) => LEVEL_BY_GAME[x.id] >= 1 && LEVEL_BY_GAME[x.id] <= LEVEL_DESCRIPTIONS.length);
   const levels = new Set(shown.map((x) => LEVEL_BY_GAME[x.id])).size;
-  return `${shown.length} games across ${levels} levels.`;
+  // One number for "how many games" everywhere (25 Nov 2026 audit saw 22, 67 and 186 on three pages): the whole catalogue first,
+  // then how many of them sit on the level path.
+  const all = GAMES_ALL?.total || shown.length;
+  return all > shown.length ? `${all} games in all; ${shown.length} of them are on the ${levels}-level path below.` : `${shown.length} games across ${levels} levels.`;
 }
 /** The arcade strip: today's featured quick game, the learner's streak, and the count of arcade games. */
 function arcadeCard(ctx, total = 0) {

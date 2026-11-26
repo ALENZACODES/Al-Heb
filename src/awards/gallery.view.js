@@ -338,6 +338,9 @@ export async function mount(root, ctx) {
     h('p', { class: 'aw-note' }, EVIDENCE_SUMMARY),
     // One labelled count (M-01): badges here, not the path milestones Progress counts.
     h('p', { id: 'award-count', 'data-earned': String(rows.filter((r) => r.state === 'earned').length) }, `${count(rows.filter((r) => r.state === 'earned').length, 'badge')} earned. Counted: ${SCOPE.badges}.`),
+    // Game badges live in the arcade's own record; say how many, here too, so the two counters never look like they disagree
+    // (25 Nov 2026 audit: arcade badges, Awards and the Games Library each showed a different count).
+    (() => { let n = 0; try { n = Number(ctx?.store?.get?.('games.arcade.v1')?.totalBadges) || 0; } catch { n = 0; } return h('p', { id: 'award-game-badges', 'data-game-badges': String(n) }, `Plus ${count(n, 'game badge')} from the arcade games (perfect rounds, fast rounds and streaks), counted on the `, h('a', { href: '#/games' }, 'Games page'), '. Played and mastered games are counted on the ', h('a', { href: '#/game-library' }, 'Games Library'), ' and on ', h('a', { href: '#/progress' }, 'Progress'), ', from the same record.'); })(),
     status,
     mysterySection,
     h('section', { 'aria-labelledby': 'award-h-badges' },

@@ -20,7 +20,9 @@ PHON = ['renikud', 'lv60', 'xlsr53', 'ipa1000']
 
 
 
-FIT_OK = 0.5        # forced alignment: mean probability of the word's letters along the path (set from the data)
+# forced alignment as a vote: off. Measured on words every phonetic check agrees on, its score does not separate them
+# (median 0.50 for words all four hear, 0.45 for words at most one hears); it is used to cut words, not to judge them
+FIT_OK = None
 EXTRA_WORD = ('w2v-he', 'google-chirp_3', 'google-chirp')
 
 
@@ -72,7 +74,7 @@ def verdicts(o, Wf, Pf, Xf=None, phon_models=None):
             seen[p] += 1
         votes = [v >= phon4.WORD_OK for v in matches.values()]
         fu = [fit[p].pop(0) for p in parts if fit.get(p)]
-        if fu:
+        if fu and FIT_OK is not None:
             votes.append(min(fu) >= FIT_OK)
         n_s, n_ok = len(votes), sum(votes)
         n_w, n_wrong = len(word_models), len(wrong.get(u, {}))

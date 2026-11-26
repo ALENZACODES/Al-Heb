@@ -38,7 +38,7 @@ function setup(A) {
   }
   A.board.replaceChildren(prompt, lanesEl);
   A.setLives(3);
-  const drawBasket = () => baskets.forEach((b, i) => { if (i === basket) b.replaceChildren(A.cast('noa-basket', 'Noa with the basket', 'arc-sprite-inline'), '🧺'); else b.replaceChildren(); });
+  const drawBasket = () => baskets.forEach((b, i) => { laneEls[i].classList.toggle('is-basket', i === basket); if (i === basket) b.replaceChildren(A.cast('noa-basket', 'Noa with the basket', 'arc-sprite-inline'), '🧺'); else b.replaceChildren(); });
   const newTarget = () => { target = pool[randInt(rnd, pool.length)]; prompt.replaceChildren(`Catch: ${target.name} `, A.heSpan(target.he)); A.sayLetter(target); };
   const spawn = () => {
     const lane = randInt(rnd, cfg.lanes);

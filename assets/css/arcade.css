@@ -1,5 +1,11 @@
 /* Arcade games: shared layout for src/games/arcade.js. No keyframes; motion is JS-stepped and off under reduced motion. */
-.arcade { --arc-cell: clamp(2.6rem, 8vw, 3.4rem); }
+.arcade { --arc-cell: clamp(2.6rem, 8vw, 3.4rem);
+  /* Board colours that hold up in every theme (25 Nov 2026 audit: in the dark theme --ink and --card are the page colour, so maze
+     walls, the snake's head and the well vanished). Each is mixed from the theme's accent, so it contrasts on light and dark pages. */
+  --arc-surface: #f3f0e8; --arc-surface: color-mix(in srgb, var(--accent, #2a6) 9%, var(--card, #f3f0e8));
+  --arc-edge: #8a8a8a66; --arc-edge: color-mix(in srgb, var(--accent, #2a6) 45%, transparent);
+  --arc-wall: #2b2b2b; --arc-wall: color-mix(in srgb, var(--accent, #2a6) 62%, var(--card, #2b2b2b));
+  --arc-body: #2a6; --arc-body: color-mix(in srgb, var(--accent, #2a6) 55%, var(--card, #fff)); }
 .arc-eyebrow { font-size: .78rem; letter-spacing: .08em; opacity: .75; }
 .arc-env { display: block; width: 100%; max-height: 180px; object-fit: cover; border-radius: 12px; margin: .5rem 0; }
 .arc-blurb { margin: .25rem 0 .5rem; }
@@ -20,10 +26,10 @@
 .arc-status { min-height: 1.5em; margin: .25rem 0; }
 .arc-board { position: relative; margin: .5rem auto; max-width: 100%; user-select: none; -webkit-user-select: none; touch-action: manipulation; }
 .arc-grid { display: grid; gap: 3px; direction: rtl; justify-content: center; }
-.arc-cell { display: grid; place-items: center; width: var(--arc-cell); height: var(--arc-cell); border-radius: 8px; background: var(--card, #f3f0e8); border: 1px solid var(--line, #8a8a8a44); font-size: calc(var(--arc-cell) * .58); line-height: 1; padding: 0; color: inherit; }
+.arc-cell { display: grid; place-items: center; width: var(--arc-cell); height: var(--arc-cell); border-radius: 8px; background: var(--arc-surface); border: 1px solid var(--arc-edge); font-size: calc(var(--arc-cell) * .58); line-height: 1; padding: 0; color: inherit; }
 button.arc-cell { cursor: pointer; }
 button.arc-cell:focus-visible { outline: 3px solid var(--accent, #2a6); outline-offset: 1px; }
-.arc-cell.is-wall { background: var(--ink, #2b2b2b); border-color: transparent; }
+.arc-cell.is-wall { background: var(--arc-wall); border-color: transparent; background-image: repeating-linear-gradient(45deg, transparent 0 6px, rgba(0,0,0,.14) 6px 9px); }
 .arc-cell.is-target { box-shadow: inset 0 0 0 3px var(--accent, #2a6); }
 .arc-cell.is-found, .arc-cell.is-good { background: var(--good, #cfeedd); }
 .arc-cell.is-bad { background: var(--bad, #f6d3d3); }
@@ -56,9 +62,11 @@ button.arc-cell:focus-visible { outline: 3px solid var(--accent, #2a6); outline-
 .arc-big { font-size: clamp(2rem, 9vw, 3.4rem); text-align: center; margin: .4rem 0; line-height: 1.3; }
 .arc-prompt { text-align: center; font-size: 1.15rem; margin: .4rem 0; }
 .arc-lanes { display: grid; direction: rtl; gap: 4px; }
-.arc-lane { position: relative; height: 300px; border-radius: 10px; background: var(--card, #f3f0e8); border: 1px solid var(--line, #8a8a8a44); overflow: hidden; }
-.arc-faller { position: absolute; left: 0; right: 0; text-align: center; font-size: 2rem; line-height: 1; }
-.arc-basket { position: absolute; bottom: 4px; left: 0; right: 0; text-align: center; font-size: 1.6rem; }
+.arc-lane { position: relative; height: 300px; border-radius: 10px; background: var(--arc-surface); border: 1px solid var(--arc-edge); overflow: hidden; color: inherit; font: inherit; }
+.arc-lane.is-basket { box-shadow: inset 0 -4px 0 var(--accent, #2a6); }
+.arc-faller { position: absolute; left: 0; right: 0; text-align: center; font-size: 2.6rem; line-height: 1; font-weight: 700; }
+.arc-basket { position: absolute; bottom: 4px; left: 0; right: 0; height: 3.4rem; display: grid; place-items: center; font-size: 2.4rem; line-height: 1; }
+.arc-basket .arc-sprite-inline { inset: 0; margin: auto; width: auto; height: 100%; max-width: 100%; }
 .arc-bar { height: 12px; border-radius: 6px; background: var(--line, #8a8a8a44); overflow: hidden; margin: .4rem 0; }
 .arc-bar > span { display: block; height: 100%; background: var(--accent, #2a6); }
 .arc-tablets { display: grid; grid-template-columns: 1fr 1fr; gap: .6rem; direction: rtl; }
@@ -74,8 +82,8 @@ button.arc-cell:focus-visible { outline: 3px solid var(--accent, #2a6); outline-
 .arc-bin { min-height: 64px; border-radius: 12px; border: 2px dashed var(--line, #8a8a8a66); display: grid; place-items: center; padding: .4rem; font-size: 1.1rem; cursor: pointer; background: var(--card, transparent); color: inherit; }
 .arc-bin.is-good { background: var(--good, #cfeedd); }
 .arc-bin.is-bad { background: var(--bad, #f6d3d3); }
-.arc-snake-cell.is-snake { background: var(--accent, #2a6); color: #fff; }
-.arc-snake-cell.is-head { background: var(--ink, #2b2b2b); color: #fff; }
+.arc-snake-cell.is-snake { background: var(--arc-body); color: #fff; }
+.arc-snake-cell.is-head { background: var(--accent, #2a6); color: #fff; box-shadow: inset 0 0 0 3px currentColor; }
 .arc-ice { font-size: 3rem; text-align: center; line-height: 1; }
 .arc-word-slots { display: flex; direction: rtl; gap: .35rem; justify-content: center; font-size: 1.8rem; margin: .4rem 0; }
 .arc-word-slots > span { min-width: 1.6rem; border-bottom: 3px solid currentColor; text-align: center; }

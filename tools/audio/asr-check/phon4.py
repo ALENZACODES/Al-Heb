@@ -30,9 +30,15 @@ class Hearer:
         self.torch, self.name = torch, name
         t0 = time.time()
         if name == 'renikud':
-            from transformers import WhisperProcessor, WhisperForConditionalGeneration
-            self.p = WhisperProcessor.from_pretrained('renikud/whisper-he-ipa')
-            self.m = WhisperForConditionalGeneration.from_pretrained('renikud/whisper-he-ipa').eval()
+            ct2 = os.environ.get('RENIKUD_CT2', '/kaggle/temp/phoneme-ct2')
+            if os.path.isdir(ct2):   # converted once (as in the 17 Nov notebooks): much faster on CPU
+                from faster_whisper import WhisperModel
+                self.fw = WhisperModel(ct2, device='cpu', compute_type='int8', cpu_threads=os.cpu_count() or 4)
+            else:
+                from transformers import WhisperProcessor, WhisperForConditionalGeneration
+                self.fw = None
+                self.p = WhisperProcessor.from_pretrained('renikud/whisper-he-ipa')
+                self.m = WhisperForConditionalGeneration.from_pretrained('renikud/whisper-he-ipa').eval()
         else:
             from transformers import AutoProcessor, Wav2Vec2ForCTC
             mid = {'lv60': 'facebook/wav2vec2-lv-60-espeak-cv-ft', 'xlsr53': 'facebook/wav2vec2-xlsr-53-espeak-cv-ft',
@@ -44,6 +50,13 @@ class Hearer:
     def hear(self, a):
         a = np.concatenate([np.zeros(4000, np.float32), a, np.zeros(8000, np.float32)])
         out = []
+        if self.name == 'renikud' and self.fw is not None:
+            segs, _ = self.fw.transcribe(a, language='he', task='transcribe', beam_size=1, best_of=1, temperature=0,
+                                         condition_on_previous_text=False, vad_filter=False, suppress_tokens=[], without_timestamps=True)
+            t = ' '.join(s.text.strip() for s in segs)
+            for s_, d in [('dZ', 'dʒ'), ('tS', 'tʃ'), ('S', 'ʃ'), ('Z', 'ʒ'), ('q', 'ʔ'), ("'", 'ˈ'), ('r', 'ʁ'), ('x', 'χ'), ('g', 'ɡ')]:
+                t = t.replace(s_, d)
+            return t
         with self.torch.inference_mode():
             for c in chunks(a):
                 if self.name == 'renikud':

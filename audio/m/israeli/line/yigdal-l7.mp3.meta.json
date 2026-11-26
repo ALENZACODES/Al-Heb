@@ -1,17 +1,28 @@
 {
  "status": "tts",
  "source": "tts:google",
- "engine": "google",
+ "engine": "stitched-from-word-clips",
  "voiceId": "he-IL-Chirp3-HD-Charon",
  "tradition": "israeli",
  "inputText": "לֹא קָם בְּיִשְׂרָאֵל כְּמֹשֶׁה עוֹד נָבִיא וּמַבִּיט אֶת־תְּמוּנָתוֹ׃",
  "inputSha256": "bf80dd490a72b960ef13ae93dfb0a715d96455fa7b59ff81e49a415977305c5c",
  "ingestedAt": null,
  "licence": "customer-owned",
- "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
+ "note": "Joined from its word clips (round 5): 0 unconfirmed words by every check against 1 in the whole-sentence recording.",
  "inputTextKind": "hebrew",
  "spokenText": "לא קם בישראל כמשה עוד נביא ומביט את תמונתו",
  "renderedAt": "2026-11-26T03:24:47.000Z",
  "speakingRate": 1.0,
- "checkedBy": "four-listener ASR check (docs/audio/multi4), machine check only"
+ "checkedBy": "four-listener ASR check (docs/audio/multi4), machine check only",
+ "stitchedFromText": "לֹא קָם בְּיִשְׂרָאֵל כְּמֹשֶׁה עוֹד נָבִיא וּמַבִּיט אֶת־תְּמוּנָתוֹ׃",
+ "stitchedFrom": [
+  "audio/m/israeli/word/aleinu-1-w29.mp3",
+  "audio/m/israeli/word/h7ef1471c.mp3",
+  "audio/m/israeli/word/yigdal-w53.mp3",
+  "audio/m/israeli/word/yigdal-w54.mp3",
+  "audio/m/israeli/word/aleinu-1-w56.mp3",
+  "audio/m/israeli/word/h8b8a2576.mp3",
+  "audio/m/israeli/word/yigdal-w57.mp3",
+  "audio/m/israeli/word/yigdal-w58.mp3"
+ ]
 }

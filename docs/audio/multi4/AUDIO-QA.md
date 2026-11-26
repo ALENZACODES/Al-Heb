@@ -1,6 +1,6 @@
 # Audio checks (no model): is each recording whole and clean?
 
-Recordings: **135**. With a problem: **15**.
+Recordings: **135**. With a problem: **11**.
 
 truncated     too little speech for the text (more than 7 syllables a second): the voice dropped the end
 pace          outside the natural band (Torah: the verse pace; other lines: 4.14 syllables a second +-25%)
@@ -12,16 +12,12 @@ pair          the male and female clips of the same text differ in speech length
 
 | clip | check | detail |
 |---|---|---|
-| `audio/f/israeli/line/haftarah-after-l3.mp3` | pace | 3.1 syllables/s (natural 4.14) |
-| `audio/f/israeli/line/havdalah-opening.mp3` | pace | 3.1 syllables/s (natural 4.14) |
 | `audio/f/israeli/line/kedushah-yimloch.mp3` | pace | 3.0 syllables/s (natural 4.14) |
 | `audio/f/israeli/line/torah-exodus-16-28.mp3` | loudness | -6.5 dB from the median |
 | `audio/f/israeli/line/torah-genesis-10-15.mp3` | loudness | -7.5 dB from the median |
 | `audio/f/israeli/line/torah-leviticus-14-43.mp3` | loudness | -6.4 dB from the median |
 | `audio/f/israeli/line/torah-leviticus-27-18.mp3` | loudness | -7.8 dB from the median |
 | `audio/f/israeli/line/torah-numbers-32-39.mp3` | loudness | -7.0 dB from the median |
-| `audio/f/israeli/prayer/haftarah-after.mp3` | pace | 3.1 syllables/s (natural 4.14) |
-| `audio/f/israeli/prayer/havdalah-opening.mp3` | pace | 3.1 syllables/s (natural 4.14) |
 | `audio/f/israeli/prayer/yehalelu.mp3` | pace | 3.1 syllables/s (natural 4.14) |
 | `audio/f/israeli/prayer/yigdal.mp3` | pace | 3.1 syllables/s (natural 4.14) |
 | `audio/m/israeli/line/torah-genesis-10-15.mp3` | loudness | -6.1 dB from the median |

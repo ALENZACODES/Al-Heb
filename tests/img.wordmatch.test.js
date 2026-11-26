@@ -86,7 +86,8 @@ test('every cue matches its vocabulary entry, one picture per word, and rejected
     for (const id of [row.wordId, ...(row.also || [])]) {
       const hit = R.resolve('word', id);
       assert.notEqual(hit?.id, row.asset, `${id} must not use ${row.asset}`);
-      if (!book.cues[id]) assert.equal(hit, null, id);
+      // A row may name the word's own reviewed Block J picture (own); anything else must stay unmapped.
+      if (!book.cues[id]) assert.equal(hit?.id ?? null, (id === row.wordId && row.own) || null, id);
     }
   }
   for (const gap of book.gaps) assert.equal([...byAsset.keys()].includes(gap.asset), false, gap.asset);

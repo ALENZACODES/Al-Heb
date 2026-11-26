@@ -92,6 +92,8 @@ const ON_DEMAND_PREFIXES = ['data/vocab/', 'data/roots/', 'data/knownwords/', 'd
   // lane platform (12 Nov, CODER-100 H, I, J): its screens and models (scheduler state and fit, cram, mastery, weekly report, goals,
   // badges, data export, shortcuts, what's new) live under src/platform/ and are fetched on first open, runtime-cached.
   'src/platform/', 'data/platform/',
+  // Printable workbooks per belt (src/workbook/, 25 Nov 2026 critique): only the Workbook page imports them.
+  'src/workbook/', 'src/shell/workbook.view.js',
   // Grammar notes (optional preview route /grammar; its data was already on demand) and the unused speaking-check model (no screen imports
   // src/speak/dss.model.js; only its tests do): 44 KB moved out of the first install by lane platform (12 Nov) to pay for its route entries.
   'src/grammar/', 'src/speak/dss.model.js',

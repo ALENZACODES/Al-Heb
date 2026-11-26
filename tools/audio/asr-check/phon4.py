@@ -114,7 +114,7 @@ def main():
     audio = {o['file']: L.load(os.path.join(a.root, o['file'])) for o in q}
     with open(res, 'a', encoding='utf-8') as f:
         names = a.models.split(',')
-        if 'round6w' in a.queue:      # the round 6 notebooks were imported before the flag existed
+        if 'round6' in a.queue:       # the round 6 notebooks were imported before the flag existed
             a.gate = True
         if a.gate:
             names = [n for n in names if n != 'renikud'] + ['renikud']

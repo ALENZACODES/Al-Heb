@@ -403,6 +403,10 @@ export async function mount(root, ctx) {
       h('p', { 'data-badge': 'beginner-completion', 'data-state': 'locked' }, completionText(rubric ? settled.decision : { satisfied: 0, required: 0 }))),
     h('section', { 'aria-labelledby': 'award-h-cert' },
       h('h2', { id: 'award-h-cert' }, 'Sample certificate'),
+      // The real record comes first (25 Nov 2026 critique: the page read as a construction site): lessons passed and belts, printable
+      // and checkable from a link. The design sample below stays, folded away, with every limit it states.
+      h('p', { id: 'award-cert-real' }, h('a', { class: 'btn', href: '#/certificate' }, 'Your certificate: lessons and belts completed'), ' ', h('span', { class: 'muted' }, 'Print it, or copy a link anyone can open to check it.')),
+      h('details', { id: 'award-cert-sample' }, h('summary', {}, 'The certificate design we are working on (a sample, not issued)'),
       // lane 4 (12 Nov): the record of passed lessons is its own page, with its own limits stated there
       h('p', { id: 'award-lesson-record' }, 'This sample is a design only. For a printable list of the lessons you passed, with each first-try score and date, see ', h('a', { href: '#/certificate' }, 'Certificate of Lessons Completed'), '. It is self-issued from your own records, not reviewed.'),
       h('p', {}, 'Type your name to see your certificate.'),
@@ -416,13 +420,14 @@ export async function mount(root, ctx) {
       certHost,
       h('details', { id: 'award-sample-notes', class: 'aw-noprint' },
         h('summary', {}, 'Record, storage, and what this sample is not'),
-        h('ul', {}, ...SAMPLE_PAGE_NOTES.map((line) => h('li', {}, line))))),
+        h('ul', {}, ...SAMPLE_PAGE_NOTES.map((line) => h('li', {}, line)))))),
+    h('details', { id: 'award-why', class: 'aw-noprint' }, h('summary', {}, 'For the curious: why lesson marks are not used for the certificate yet'),
     h('section', { 'aria-labelledby': 'award-h-why' },
       h('h2', { id: 'award-h-why' }, 'Why lesson marks are not used'),
       checklist,
       h('details', {},
         h('summary', {}, 'Where those marks are written'),
-        h('ul', {}, ...TRUST_LIMITS.map((row) => h('li', {}, h('p', {}, row.limit), h('p', {}, `${row.path} (${row.symbol})`)))))),
+        h('ul', {}, ...TRUST_LIMITS.map((row) => h('li', {}, h('p', {}, row.limit), h('p', {}, `${row.path} (${row.symbol})`))))))),
   );
 
   fillBadgeArt(page, ctx, h, () => alive).catch(() => { /* the vector fallback stays */ });

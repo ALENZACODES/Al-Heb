@@ -46,6 +46,36 @@ def dur(path):
                                 capture_output=True, text=True).stdout or 0)
 
 
+
+RESPELL = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'round4-respell.json')
+PROBLEMS = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'round3-problems.json')
+
+
+def take_source(f, g, tid, want):
+    """(voice, text sent to the voice) for a take id, as chirp_takes.py made it."""
+    chirp, wavenet = C.VOICES[g]
+    pt, pl = C.speakable(want), C.plain(want)
+    km = C.ktiv_male(pt)
+    base = re.sub(r'-(90|80|ph|cut)$', '', re.sub(r'-cut$', '', tid))
+    base = re.sub(r'-(90|80|ph)$', '', base)
+    if re.match(r's\d', tid):                                   # round 4: the word respelled
+        sp = json.load(open(RESPELL, encoding='utf-8'))[f][int(tid[1])]
+        voice = C.ALT[g][0] if base.endswith('-a') else chirp
+        return voice, ('הַמִּלָּה, ' + sp + '.' if 'car' in tid else sp)
+    if re.match(r'a\d', tid):
+        return C.ALT[g][int(tid[1])], (km if base.endswith('-km') else pt)
+    voice = wavenet if tid.startswith('w-') else chirp
+    if base == 'c-sel':
+        bad = {re.sub(r'[\u0591-\u05C7]', '', w) for w in json.load(open(PROBLEMS, encoding='utf-8')).get(f, [])}
+        return voice, ' '.join(C.ktiv_male(w) if re.sub(r'[\u0591-\u05C7]', '', w) in bad else w for w in pt.split())
+    if base in ('c-car', 'c-carkm'):
+        return voice, 'הַמִּלָּה, ' + (km if base == 'c-carkm' else pt) + '.'
+    if base == 'c-km':
+        return voice, km
+    if base == 'c-kmpl':
+        return voice, C.plain(km)
+    return voice, (pl if base.endswith('-pl') else pt)
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--clips', default=os.path.join(ROOT, 'docs', 'audio', 'multi4', 'multi4-hearings.jsonl'))
@@ -81,6 +111,14 @@ def main():
                 r = phon4.rescore(r, q[orig]['want'])          # corrected expected sounds, Israeli R
             PH[r['file']][r['model']] = {w['word']: w['match'] for w in r['words']}
 
+    def phon_mean(path):
+        """mean share of sounds heard over the phonetic checks (single words), or None"""
+        d = PH.get(path)
+        if not d:
+            return None
+        vals = [v for ws in d.values() for v in ws.values()]
+        return sum(vals) / len(vals) if vals else None
+
     def phon_ok(path):
         """{word: number of phonetic checks hearing >=75% of its sounds}, or None without data"""
         d = PH.get(path)
@@ -114,9 +152,14 @@ def main():
                 po4 = phon_ok(f) if PH else None
                 # said alone, a word the word checks cannot place: all four phonetic checks hearing it is enough,
                 # if they did not all hear the clip it replaces
-                if not good and pt4 and pt4[1] >= 4 and all(v == pt4[1] for v in pt4[0].values()) and not (
-                        po4 and po4[1] >= 4 and all(v == po4[1] for v in po4[0].values())):
+                if not good and pt4 and pt4[1] >= 4 and all(v == pt4[1] for v in pt4[0].values()):
                     good = True
+                # a single word only replaces the clip when the phonetic checks hear it better on average
+                # (a one-sound slip still passes 75% on a short word: 'banu' for 'vanu')
+                mt, mo = (phon_mean('takes/' + f[:-4] + '/' + tid + '.mp3'), phon_mean(f)) if PH else (None, None)
+                orig_ok = po4 and po4[1] >= 4 and all(v == po4[1] for v in po4[0].values())
+                if good and mt is not None and mo is not None and mt <= mo + (0.1 if orig_ok else 0):
+                    good = False; notes.append(f'{tid}: phonetic checks hear it no better than the clip ({mt:.2f} vs {mo:.2f})')
             else:
                 good = key[:2] < key0[:2] and len(s['b3']) <= len(s0['b3']) and len(s['b2']) <= len(s0['b2']) + len(s0['b3'])
             if good and PH:
@@ -150,11 +193,11 @@ def main():
                 meta = json.load(open(mp, encoding='utf-8')) if os.path.exists(mp) else {}
                 g = f.split('/')[1]
                 chirp, wavenet = C.VOICES[g]
-                voice = wavenet if tid.startswith('w-') else chirp if tid.startswith('c-') else C.ALT[g][int(tid[1])]
-                text = {'c-km': C.ktiv_male(C.speakable(M.clean(o['want']))), 'c-kmpl': C.plain(C.ktiv_male(C.speakable(M.clean(o['want']))))}.get(tid) or (C.plain(M.clean(o['want'])) if '-pl' in tid else C.ktiv_male(C.speakable(M.clean(o['want']))) if tid.endswith('-km') else C.speakable(M.clean(o['want'])))
+                voice, text = take_source(f, g, tid, M.clean(o['want']))
                 meta.update(status='tts', source='tts:google', engine='google', voiceId=voice,
                             tradition='israeli', inputText=M.clean(o['want']), spokenText=text, renderedAt=now,
-                            speakingRate=0.9 if tid.endswith('-90') else 1.0,
+                            speakingRate=0.8 if '-80' in tid else 0.9 if '-90' in tid else 1.0,
+                            **({'tempo': round(factor, 3)} if abs(factor - 1) > 0.005 else {}),
                             checkedBy='four-listener ASR check (docs/audio/multi4), machine check only')
                 json.dump(meta, open(mp, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
         rows.append(row)

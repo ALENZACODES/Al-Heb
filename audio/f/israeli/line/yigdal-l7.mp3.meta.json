@@ -13,5 +13,6 @@
  "spokenText": "לא קם בישראל כמשה עוד נביא ומביט את תמונתו",
  "renderedAt": "2026-11-26T07:19:09.000Z",
  "speakingRate": 1.0,
- "checkedBy": "four-listener ASR check (docs/audio/multi4), machine check only"
+ "checkedBy": "four-listener ASR check (docs/audio/multi4), machine check only",
+ "tempo": 0.779
 }

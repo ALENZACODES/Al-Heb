@@ -2,15 +2,17 @@
  "status": "tts",
  "source": "tts:google",
  "engine": "google",
- "voiceId": "he-IL-Wavenet-A",
+ "voiceId": "he-IL-Chirp3-HD-Aoede",
  "tradition": "israeli",
  "inputText": "הֵא",
  "inputSha256": "a53cb10d639ff1a0c835b10b0d0388b46d75adc57a99fab89cce2e503f8fc75f",
  "ingestedAt": "2026-11-09T01:45:35.059Z",
  "licence": "customer-owned",
  "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
- "renderedAt": "2026-11-09T01:45:35.059Z",
+ "renderedAt": "2026-11-26T09:21:12.000Z",
  "redistributionCleared": false,
- "spokenText": "הֵא",
- "normalized": true
+ "spokenText": "הֵי",
+ "normalized": true,
+ "speakingRate": 1.0,
+ "checkedBy": "four-listener ASR check (docs/audio/multi4), machine check only"
 }

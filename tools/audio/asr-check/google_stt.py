@@ -8,7 +8,9 @@ longest pause near the middle (the API's quick method takes under a minute of au
 """
 import argparse, base64, json, os, subprocess, sys, time, urllib.request, urllib.error
 
-TRY = [('chirp_3', 'us'), ('chirp', 'us-central1')]
+TRY = [('chirp_3', 'us', True), ('chirp_3', 'us', False), ('chirp_2', 'us-central1', False), ('chirp', 'us-central1', False)]
+# (model, region, word confidence): Hebrew does not offer word confidence on every model; without it the transcript is
+# scored like the other word checks
 MAX_S = 55.0
 
 
@@ -44,11 +46,11 @@ def pieces(path):
     return out
 
 
-def recognize(audio, model, loc, proj, tok):
+def recognize(audio, model, loc, proj, tok, conf=True):
     host = 'speech.googleapis.com' if loc == 'global' else f'{loc}-speech.googleapis.com'
     url = f'https://{host}/v2/projects/{proj}/locations/{loc}/recognizers/_:recognize'
     body = {'config': {'autoDecodingConfig': {}, 'languageCodes': ['iw-IL'], 'model': model,
-                       'features': {'enableWordConfidence': True}},
+                       **({'features': {'enableWordConfidence': True}} if conf else {})},
             'content': base64.b64encode(audio).decode()}
     req = urllib.request.Request(url, data=json.dumps(body).encode(), method='POST',
                                  headers={'Authorization': 'Bearer ' + tok, 'Content-Type': 'application/json',
@@ -83,10 +85,10 @@ def main():
             if time.time() - t_tok > 1800:
                 tok, t_tok = token(), time.time()
             parts = pieces(os.path.join(a.root, o['file']))
-            for m, loc in ([model] if model else TRY):
+            for m, loc, conf in ([model] if model else TRY):
                 try:
-                    got = [recognize(p, m, loc, proj, tok) for p in parts]
-                    model = (m, loc)
+                    got = [recognize(p, m, loc, proj, tok, conf) for p in parts]
+                    model = (m, loc, conf)
                     break
                 except urllib.error.HTTPError as e:
                     print(f'{m}@{loc}: {e.code} {e.read()[:300]!r}', flush=True)

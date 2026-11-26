@@ -120,6 +120,7 @@ def main():
                                             '(w-rs WaveNet pointed, c-rspl-80 Chirp unpointed at 0.8, c-rs Chirp for single words)')
     ap.add_argument('--words5', help='round5-words.json: single problem words of stitched lines, in the WaveNet voice the '
                                      'lines are stitched from (w as written, w-rs respelled, w-rs-car in a carrier phrase)')
+    ap.add_argument('--words6', help='round6-words.json: every word of the non-Torah lines (w/w-car/w-rs WaveNet, c/c-car/c-rs Chirp)')
     ap.add_argument('--project', default=subprocess.run(['gcloud', 'config', 'get-value', 'project'], capture_output=True, text=True).stdout.strip())
     a = ap.parse_args()
     probs = json.load(open(a.problems, encoding='utf-8')) if a.problems else {}
@@ -128,6 +129,42 @@ def main():
     want = {o['file']: re.sub(r'\s*\(cut from:.*\)\s*$', '', o['want']) for o in json.load(open(a.queue, encoding='utf-8'))}
     files = [l.strip() for l in open(a.list, encoding='utf-8') if l.startswith('audio/')]
     tts = TTS(a.project)
+    if a.words6:
+        # round 6: every word of the non-Torah lines, in both voice families, as written and respelled
+        from concurrent.futures import ThreadPoolExecutor
+        items = json.load(open(a.words6, encoding='utf-8'))['items']
+        jobs = []
+        for key, it in sorted(items.items()):
+            chirp, wavenet = VOICES[it['g']]
+            w = speakable(it['word']); rs = respell(it['word'])
+            d = os.path.join(a.out, 'w6', it['g'], it['slug'])
+            os.makedirs(d, exist_ok=True)
+            json.dump(it, open(os.path.join(d, 'want.json'), 'w', encoding='utf-8'), ensure_ascii=False)
+            plan = [('w', w, wavenet), ('w-car', 'הַמִּלָּה, ' + w + '.', wavenet),
+                    ('c', w, chirp), ('c-car', 'הַמִּלָּה, ' + w + '.', chirp)]
+            if rs != it['word']:
+                plan += [('w-rs', rs, wavenet), ('c-rs', rs, chirp)]
+            jobs += [(key, os.path.join(d, tid + '.mp3'), text, v) for tid, text, v in plan]
+        jobs = [j for j in jobs if not os.path.exists(j[1])]
+        print(f'{len(items)} words, {len(jobs)} takes to record', flush=True)
+        done = [0]
+
+        def one(j):
+            key, dst, text, voice = j
+            for attempt in range(6):
+                try:
+                    open(dst, 'wb').write(tts.synth(text, voice)); break
+                except Exception as e:
+                    if attempt == 5 or not str(e).startswith(('429', '500', '503')):
+                        print(f'  {key} {os.path.basename(dst)}: {e}', flush=True); break
+                    time.sleep(10 * (attempt + 1))
+            done[0] += 1
+            if done[0] % 200 == 0:
+                print(f'[{done[0]}/{len(jobs)}]', flush=True)
+        tts.token()
+        with ThreadPoolExecutor(8) as ex:
+            list(ex.map(one, jobs))
+        return
     if a.words5:
         items = json.load(open(a.words5, encoding='utf-8'))['items']
         for n, (key, it) in enumerate(sorted(items.items()), 1):

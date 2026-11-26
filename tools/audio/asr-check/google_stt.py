@@ -28,17 +28,17 @@ def pieces(path):
                                           path], text=True).strip() or 0)
     if dur <= MAX_S:
         return [open(path, 'rb').read()]
-    n = int(dur // MAX_S) + 1
-    # silences from ffmpeg, cut at the one nearest each even split point
+    # silences from ffmpeg; walk through the clip cutting at the last pause before each MAX_S mark
     log = subprocess.run(['ffmpeg', '-i', path, '-af', 'silencedetect=n=-35dB:d=0.25', '-f', 'null', '-'],
                          capture_output=True, text=True).stderr
-    mids = [float(l.split('silence_end: ')[1].split()[0]) - float(l.split('silence_duration: ')[1]) / 2
-            for l in log.splitlines() if 'silence_end' in l]
-    cuts = []
-    for k in range(1, n):
-        want = dur * k / n
-        cuts.append(min(mids, key=lambda m: abs(m - want)) if mids else want)
-    edges = [0.0] + sorted(set(cuts)) + [dur]
+    mids = sorted(float(l.split('silence_end: ')[1].split()[0]) - float(l.split('silence_duration: ')[1]) / 2
+                  for l in log.splitlines() if 'silence_end' in l)
+    cuts, start = [], 0.0
+    while dur - start > MAX_S:
+        ok = [m for m in mids if start + 5 < m <= start + MAX_S]
+        start = ok[-1] if ok else start + MAX_S
+        cuts.append(start)
+    edges = [0.0] + cuts + [dur]
     out = []
     for s, e in zip(edges, edges[1:]):
         out.append(subprocess.check_output(['ffmpeg', '-v', 'error', '-ss', f'{s:.3f}', '-to', f'{e:.3f}', '-i', path,
@@ -93,6 +93,8 @@ def main():
                 except urllib.error.HTTPError as e:
                     print(f'{m}@{loc}: {e.code} {e.read()[:300]!r}', flush=True)
             else:
+                if model:                       # a model works; this clip failed: note it and go on
+                    print(f'skipped {o["file"]}', flush=True); continue
                 print('no Google model answered; stopping', flush=True); sys.exit(1)
             heard = ' '.join(t for t, _ in got).strip()
             words = [w for _, ws in got for w in ws]

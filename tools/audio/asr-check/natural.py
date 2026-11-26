@@ -107,16 +107,16 @@ def write_mp3(a, dest, torah, factor=1.0):
     src = os.path.join(tmp, 'in.wav')
     with wave.open(src, 'wb') as w:
         w.setnchannels(1); w.setsampwidth(2); w.setframerate(SR); w.writeframes((np.clip(a, -1, 1) * 32767).astype('<i2').tobytes())
+    # every clip: cut the silence the voice left around the speech, then the same short lead and tail
+    loud, win = frames(a)
+    idx = np.flatnonzero(loud)
+    a0, a1 = (idx[0] * win, (idx[-1] + 1) * win) if len(idx) else (0, len(a))
+    filt = f'atrim=start_sample={max(0, a0 - int(0.03 * SR))}:end_sample={min(len(a), a1 + int(0.05 * SR))},asetpts=N/SR/TB,'
+    filt += (f'atempo={factor:.4f},' if abs(factor - 1) > 0.005 else '') + f'adelay={int(LEAD * 1000)},apad=pad_dur={TAIL}'
     if torah:
-        loud, win = frames(a)
-        idx = np.flatnonzero(loud)
-        a0, a1 = (idx[0] * win, (idx[-1] + 1) * win) if len(idx) else (0, len(a))
-        filt = f'atrim=start_sample={max(0, a0 - int(0.03 * SR))}:end_sample={min(len(a), a1 + int(0.05 * SR))},asetpts=N/SR/TB,'
-        filt += (f'atempo={factor:.4f},' if abs(factor - 1) > 0.005 else '') + f'adelay={int(LEAD * 1000)},apad=pad_dur={TAIL}'
         args = ['-af', filt, '-ar', str(SR), '-b:a', '32k']
     else:
-        tempo = f'atempo={factor:.4f},' if abs(factor - 1) > 0.005 else ''
-        args = ['-af', tempo + 'loudnorm=I=-16:TP=-1.5:LRA=11', '-ar', '44100', '-b:a', '96k']
+        args = ['-af', filt + ',loudnorm=I=-16:TP=-1.5:LRA=11', '-ar', '44100', '-b:a', '96k']
     subprocess.run(['ffmpeg', '-nostdin', '-y', '-v', 'error', '-i', src, '-map_metadata', '-1', '-ac', '1', *args,
                     '-codec:a', 'libmp3lame', dest], check=True)
 

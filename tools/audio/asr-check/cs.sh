@@ -9,6 +9,12 @@ cd Al-Heb && git sparse-checkout set tools/audio/asr-check && git log -1 --forma
 gcloud services enable texttospeech.googleapis.com --project "$P"
 if [ "$1" = test ]; then echo audio/f/israeli/word/hf76c8cd2.mp3 > /tmp/t1.txt; L=/tmp/t1.txt; O=~/takes-test
 elif [ "$1" = r3 ]; then L=tools/audio/asr-check/round3-list.txt; O=~/aleph-takes-r3; X="--takes c-car,c-carkm,c-sel,c-sel-80,c-pt-80,c-pl-80 --problems tools/audio/asr-check/round3-problems.json"
+elif [ "$1" = stt ]; then
+  git sparse-checkout set --no-cone --stdin < tools/audio/asr-check/${3:-extra-paths.txt}; find audio -name '*.mp3' | wc -l
+  gcloud services enable speech.googleapis.com --project "$P"
+  command -v ffmpeg >/dev/null || sudo apt-get -qq install -y ffmpeg >/dev/null
+  python3 tools/audio/asr-check/google_stt.py --root . --queue tools/audio/asr-check/${2:-extra-queue.json} --out ~/stt-hearings.jsonl
+  cloudshell download ~/stt-hearings.jsonl || true; echo CS-DONE; exit 0
 elif [ "$1" = r5 ]; then L=tools/audio/asr-check/round5-list.txt; O=~/aleph-takes-r5; X="--takes none --respell-lines tools/audio/asr-check/round5-respell-lines.json"
 elif [ "$1" = r4 ]; then L=tools/audio/asr-check/round4-list.txt; O=~/aleph-takes-r4; X="--takes none --respell tools/audio/asr-check/round4-respell.json"
 elif [ "$1" = r2 ]; then L=tools/audio/asr-check/round2-list.txt; O=~/aleph-takes-r2; X="--takes c-km,c-kmpl,a0-pt,a1-pt,a2-pt,a0-km,a1-km,a2-km"

@@ -213,5 +213,6 @@
    0
   ],
   "source": "data/corpus/registry.json lines and sentence breaks, cut at word boundaries"
- }
+ },
+ "tempo": 0.998
 }

@@ -31,5 +31,6 @@
   "voiceId": "he-IL-Wavenet-B",
   "engine": "stitched-from-word-clips",
   "renderedAt": null
- }
+ },
+ "tempo": 0.873
 }

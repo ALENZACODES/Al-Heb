@@ -33,5 +33,6 @@
   "engine": "google-tts standard",
   "renderedAt": null
  },
- "checkedBy": "four-listener ASR check (docs/audio/multi4), machine check only"
+ "checkedBy": "four-listener ASR check (docs/audio/multi4), machine check only",
+ "tempo": 0.993
 }

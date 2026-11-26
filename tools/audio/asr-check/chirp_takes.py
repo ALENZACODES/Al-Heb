@@ -155,7 +155,7 @@ def main():
                 try:
                     open(dst, 'wb').write(tts.synth(text, voice)); break
                 except Exception as e:
-                    if attempt == 5 or not str(e).startswith(('429', '500', '503')):
+                    if attempt == 5 or str(e)[:3].isdigit() and not str(e).startswith(('429', '500', '503')):
                         print(f'  {key} {os.path.basename(dst)}: {e}', flush=True); break
                     time.sleep(10 * (attempt + 1))
             done[0] += 1

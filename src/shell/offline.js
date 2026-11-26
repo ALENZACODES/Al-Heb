@@ -54,6 +54,7 @@ export function optionalGroups(tradition = "sephardi") {
  */
 export const ON_DEMAND_GROUPS = Object.freeze([
   { id: "od-practice", label: "Vowel-point, root, gender, known-word and record-and-compare practice data", test: /^(data\/(nikkudfade|roots|gender|knownwords)\/|src\/(recordcompare|roots|nikkudfade|genderdrill|knownwords|fsrs)\/[a-z]+\.view\.js$|src\/roots\/(model|binyanim|links)\.js$)/, approxMB: 1.3 }, // lane 3 (12 Nov): + binyanim.js, links.js, dict-links.json
+  { id: "od-picture-index", label: "Picture index (which picture goes with which word, letter and lesson)", test: /^data\/img\/index\.json$/, approxMB: 0.26 },
   { id: "od-vocab", label: "Vocabulary data and theme packs", test: /^(data\/vocab\/|data\/img\/word-aliases\.json$)/, approxMB: 5.9 }, // the aliases let the dictionary find its word pictures
   { id: "od-listen-tools", label: "Playback bar, Listening Practice, play-all lists and audio packs", test: /^src\/audiolab\//, approxMB: 0.1 }, // audio lane
   { id: "od-audio-index", label: "Audio clip list (core)", test: /^data\/audio\//, approxMB: 2.6 },

@@ -291,8 +291,11 @@ test('precache: first install is the v0 core only (under 4 MiB); preview data an
   // what every v0 route reads offline stays installed: lesson data, letters, first-day, progress, credits, onboarding, search letters, images index
   for (const f of ['data/curriculum/lessons.json', 'data/curriculum/belts.json', 'data/curriculum/hints.json', 'data/letters/letters.json', 'data/letters/confusables.json', 'data/letters/mnemonics.json', 'data/letters/interference.json',
     'data/pronunciation/consonants.json', 'data/pronunciation/niqqud.json', 'data/firstday/first10.json', 'data/firstday/onramp.json', 'data/firstday/ladder.json', 'data/progress/milestones.json', 'data/progress/belt-gates.json',
-    'data/onboarding/plans.json', 'data/legal/attributions.json', 'data/corpus/registry.json', 'data/corpus/phrasebook.json', 'data/img/index.json', 'data/calendar/locations.json', 'data/placement/config.json',
+    'data/onboarding/plans.json', 'data/legal/attributions.json', 'data/corpus/registry.json', 'data/corpus/phrasebook.json', 'data/calendar/locations.json', 'data/placement/config.json',
     'data/service/orders.json', 'data/timedread/gates.json', 'src/curriculum/lesson.view.js', 'src/letters/trace.view.js', 'src/shell/offline.view.js']) assert.ok(m.files.includes(f), `v0 file not installed: ${f}`);
+  // The picture index moved to on demand on 26 Nov 2026: every picture it points to (assets/img/gen) is runtime-cached, never installed, so an
+  // installed index showed nothing offline that the pictures themselves did not; it is cached with the first picture-showing page.
+  assert.ok(m.onDemand.includes('data/img/index.json') && !m.files.includes('data/img/index.json'), 'picture index is on demand');
 });
 
 test('precache: letter memory chain: data + code installed, only first-day pictures installed, the rest of the pictures on demand', async () => {

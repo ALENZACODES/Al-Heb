@@ -18,7 +18,9 @@ export const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 export const INDEX_PATH = 'data/img/index.json';
 // Size cap on the serialized index (loaded lazily by src/img/resolve.js, not on first paint). Raised from 150 KB to 256 KB on
 // Nov 4, 2026 when the 1000 Run 3 ids (data/images/run3.csv, carried in via the altText map) joined the index: alt text is the bulk.
-export const MAX_BYTES = 256 * 1024;
+// Raised to 384 KB on Nov 26, 2026: the index is now fetched on demand (tools/build-precache.mjs ON_DEMAND_FILES), not installed
+// up front, and grows by a few bytes per approved picture as the Block J run comes back.
+export const MAX_BYTES = 384 * 1024;
 // The word-id aliases (x) are written to their own file, downloaded with the dictionary (on demand), not installed up front.
 export const ALIASES_PATH = 'data/img/word-aliases.json';
 

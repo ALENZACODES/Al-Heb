@@ -5,7 +5,7 @@ import { join } from 'node:path';
 import { buildIndex, buildIndexFrom, serialize, splitIndex, parseCsv, ROOT, INDEX_PATH, ALIASES_PATH, MAX_BYTES } from '../tools/img/build_index.mjs';
 import { createImageResolver } from '../src/img/resolve.js';
 
-test('data/img/index.json is in sync with the manifests (regenerate and compare) and within MAX_BYTES (256 KB); word aliases in their own file', () => {
+test('data/img/index.json is in sync with the manifests (regenerate and compare) and within MAX_BYTES (384 KB); word aliases in their own file', () => {
   assert.ok(existsSync(join(ROOT, INDEX_PATH)), 'run node tools/img/build_index.mjs');
   const disk = readFileSync(join(ROOT, INDEX_PATH), 'utf8');
   const { index, aliases } = splitIndex(buildIndex(ROOT));

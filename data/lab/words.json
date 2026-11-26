@@ -29,7 +29,7 @@
 {"id":"p2de095da","he":"תֵּה עִם נַעֲנָע","tr":"teh im na'ana","en":"tea with mint","tier":2,"clip":{"kind":"word","id":"i-13-w5"},"pic":"LAB_v2_menu_tea-with-mint"},
 {"id":"h7631737e","he":"סֻכָּר","tr":"sukar","en":"sugar","tier":2,"clip":{"kind":"word","id":"h7631737e"},"pic":"LAB_v2_menu_sugar"},
 {"id":"h4ef6ec03","he":"גְּבִינָה","tr":"gevinah","en":"cheese","tier":2,"clip":{"kind":"word","id":"dial-gvina"},"pic":"LAB_v2_menu_cheese"},
-{"id":"h08c16650","he":"כָּרִיךְ","tr":"karikh","en":"sandwich","tier":2,"clip":{"kind":"word","id":"h08c16650"},"pic":"LAB_v2_menu_sandwich"},
+{"id":"h08c16650","he":"כָּרִיךְ","tr":"karikh","en":"sandwich","tier":2,"clip":{"kind":"word","id":"h08c16650"}},
 {"id":"h8417ff6d","he":"לִימוֹנָדָה","tr":"limonadah","en":"lemonade","tier":2,"clip":{"kind":"word","id":"h8417ff6d"},"pic":"LAB_v2_menu_lemonade"},
 {"id":"h95d4df2c","he":"חַלָּה","tr":"chalah","en":"challah","tier":2,"clip":{"kind":"word","id":"h95d4df2c"}}
 ],

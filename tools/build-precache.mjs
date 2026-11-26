@@ -102,6 +102,13 @@ const ON_DEMAND_PREFIXES = ['data/vocab/', 'data/roots/', 'data/knownwords/', 'd
   // lane games-books (12 Nov): This Week's Parashah, Torah Search (its 0.7 MB letters-only index) and the Verse Notebook, fetched on first open.
   'src/torahstudy/', 'data/torahstudy/'];
 const ON_DEMAND_FILES = new Set([
+  // Word-id aliases (26 Nov): lets the dictionary page (on demand itself) find Block J pictures under their older word ids.
+  // Only word pictures use it, and those pictures are on demand too, so it is fetched on first use (about 18 KB).
+  'data/img/word-aliases.json',
+  // The picture index (26 Nov): about 250 KB and growing with every approved picture. Every picture it points to is fetched
+  // on demand already, so installing the index up front bought nothing offline that the pictures themselves did not; it is
+  // fetched with the first picture-showing page and runtime-cached (frees about 250 KB of first install).
+  'data/img/index.json',
   // lane games-books (12 Nov): Word Sprint's model and loader and the known-word validator are imported only by lazy views (Word Sprint,
   // Known-word checker, the little books' word marks), so they are fetched on first use, runtime-cached (frees about 16 KB of first install).
   'src/sprint/model.js', 'src/sprint/loader.js', 'src/knownwords/validate.js',

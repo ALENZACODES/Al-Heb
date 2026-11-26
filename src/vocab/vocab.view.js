@@ -17,6 +17,7 @@ import { translitFor, TRAD } from './model.js';
 import { TIER_LABEL, POS_LABEL, VOCAB_CARDS_KEY, stripPoints, addCards, cardId, CARD_PREFIX, rankEntries, isExactBand, isShortQuery, keepBand, fold, BAND } from './model.js';
 import { aliasHits, aliasNote } from './aliases.js';
 import { suggestSpellings } from './rank.js';
+import { chipsFor, hyphenated } from '../pronunciation/syllables.js';
 import { isFunction } from './vocab.js';
 import { plural } from '../shell/plural.js';
 import { DICTIONARY, fmt, dictionaryScopeNote } from '../lib/counts.js';
@@ -223,9 +224,20 @@ export function mount(root, ctx) {
     return soundControls(text, e.gloss || '', translitFor(e, tradition()) || '');
   };
   const heWord = (e, cls) => heText(displayHebrew(e.pointed || e.lemma || '', 'abbrev'), cls);
+  // Stress (25 Nov 2026 critique, item 9: "stress marks in CAPS as planned"): the app's syllable model splits the pointed word and
+  // puts the stressed syllable in capitals, sha-LOM. Stress is the last syllable unless data/pronunciation/stress.json lists the
+  // word; for Ashkenazi reading it is shown only where it was checked. Nothing is shown when the split is not certain.
+  let stressData = null;
+  fetch(new URL('../../data/pronunciation/stress.json', import.meta.url)).then((r) => (r.ok ? r.json() : null)).then((x) => { stressData = x; }).catch(() => {});
+  const stressed = (e) => {
+    if (!e.pointed || e.needsPointing || /\s/.test(e.pointed)) return '';
+    try { const r = chipsFor(e.pointed, { tradition: tradition(), stress: stressData, pos: e.pos, patterns: true }); return r.ok && r.latinOk && r.checked && r.syllables.length > 1 ? hyphenated(r) : ''; } catch { return ''; }
+  };
   const translitLine = (e) => {
     const tl = translitFor(e, tradition());
-    return el('p', { class: 'vc-meta' }, `Say it (${TRAD[tradition()]}): `, tl ? el('i', {}, tl) : '(not available: this word has no vowel points yet)');
+    const st = tl ? stressed(e) : '';
+    return el('p', { class: 'vc-meta' }, `Say it (${TRAD[tradition()]}): `, tl ? el('i', {}, tl) : '(not available: this word has no vowel points yet)',
+      st ? el('span', { class: 'vc-stress', title: 'Capitals mark the stressed syllable. Worked out by rule, not yet checked by a teacher.' }, ' · stress: ', el('b', {}, st)) : null);
   };
   const known = new Map(); // id -> entry, for every tier loaded so far (cross-references)
   // Example sentences: real lines from the story books and dialogues, each with its own English (tools/vocab/build-examples.mjs;

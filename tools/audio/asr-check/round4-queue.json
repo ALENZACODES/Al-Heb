@@ -1,0 +1,604 @@
+[
+{
+"file": "takes/audio/f/israeli/dictionary/dict-va4b7d8ca/s0-90.mp3",
+"kind": "word",
+"want": "הֵא",
+"orig": "audio/f/israeli/dictionary/dict-va4b7d8ca.mp3",
+"take": "s0-90"
+},
+{
+"file": "takes/audio/f/israeli/dictionary/dict-va4b7d8ca/s0-a.mp3",
+"kind": "word",
+"want": "הֵא",
+"orig": "audio/f/israeli/dictionary/dict-va4b7d8ca.mp3",
+"take": "s0-a"
+},
+{
+"file": "takes/audio/f/israeli/dictionary/dict-va4b7d8ca/s0.mp3",
+"kind": "word",
+"want": "הֵא",
+"orig": "audio/f/israeli/dictionary/dict-va4b7d8ca.mp3",
+"take": "s0"
+},
+{
+"file": "takes/audio/f/israeli/dictionary/dict-va4b7d8ca/s1-90.mp3",
+"kind": "word",
+"want": "הֵא",
+"orig": "audio/f/israeli/dictionary/dict-va4b7d8ca.mp3",
+"take": "s1-90"
+},
+{
+"file": "takes/audio/f/israeli/dictionary/dict-va4b7d8ca/s1-a.mp3",
+"kind": "word",
+"want": "הֵא",
+"orig": "audio/f/israeli/dictionary/dict-va4b7d8ca.mp3",
+"take": "s1-a"
+},
+{
+"file": "takes/audio/f/israeli/dictionary/dict-va4b7d8ca/s1-car-cut.mp3",
+"kind": "word",
+"want": "הֵא",
+"orig": "audio/f/israeli/dictionary/dict-va4b7d8ca.mp3",
+"take": "s1-car-cut"
+},
+{
+"file": "takes/audio/f/israeli/dictionary/dict-va4b7d8ca/s1.mp3",
+"kind": "word",
+"want": "הֵא",
+"orig": "audio/f/israeli/dictionary/dict-va4b7d8ca.mp3",
+"take": "s1"
+},
+{
+"file": "takes/audio/f/israeli/dictionary/dict-va4b7d8ca/s2-90.mp3",
+"kind": "word",
+"want": "הֵא",
+"orig": "audio/f/israeli/dictionary/dict-va4b7d8ca.mp3",
+"take": "s2-90"
+},
+{
+"file": "takes/audio/f/israeli/dictionary/dict-va4b7d8ca/s2-a.mp3",
+"kind": "word",
+"want": "הֵא",
+"orig": "audio/f/israeli/dictionary/dict-va4b7d8ca.mp3",
+"take": "s2-a"
+},
+{
+"file": "takes/audio/f/israeli/dictionary/dict-va4b7d8ca/s2.mp3",
+"kind": "word",
+"want": "הֵא",
+"orig": "audio/f/israeli/dictionary/dict-va4b7d8ca.mp3",
+"take": "s2"
+},
+{
+"file": "takes/audio/f/israeli/word/kiddush-shabbat-eve-w11/s0-90.mp3",
+"kind": "word",
+"want": "בָנוּ",
+"orig": "audio/f/israeli/word/kiddush-shabbat-eve-w11.mp3",
+"take": "s0-90"
+},
+{
+"file": "takes/audio/f/israeli/word/kiddush-shabbat-eve-w11/s0-a.mp3",
+"kind": "word",
+"want": "בָנוּ",
+"orig": "audio/f/israeli/word/kiddush-shabbat-eve-w11.mp3",
+"take": "s0-a"
+},
+{
+"file": "takes/audio/f/israeli/word/kiddush-shabbat-eve-w11/s0-car-cut.mp3",
+"kind": "word",
+"want": "בָנוּ",
+"orig": "audio/f/israeli/word/kiddush-shabbat-eve-w11.mp3",
+"take": "s0-car-cut"
+},
+{
+"file": "takes/audio/f/israeli/word/kiddush-shabbat-eve-w11/s0.mp3",
+"kind": "word",
+"want": "בָנוּ",
+"orig": "audio/f/israeli/word/kiddush-shabbat-eve-w11.mp3",
+"take": "s0"
+},
+{
+"file": "takes/audio/f/israeli/word/kiddush-shabbat-eve-w11/s1-90.mp3",
+"kind": "word",
+"want": "בָנוּ",
+"orig": "audio/f/israeli/word/kiddush-shabbat-eve-w11.mp3",
+"take": "s1-90"
+},
+{
+"file": "takes/audio/f/israeli/word/kiddush-shabbat-eve-w11/s1-a.mp3",
+"kind": "word",
+"want": "בָנוּ",
+"orig": "audio/f/israeli/word/kiddush-shabbat-eve-w11.mp3",
+"take": "s1-a"
+},
+{
+"file": "takes/audio/f/israeli/word/kiddush-shabbat-eve-w11/s1-car-cut.mp3",
+"kind": "word",
+"want": "בָנוּ",
+"orig": "audio/f/israeli/word/kiddush-shabbat-eve-w11.mp3",
+"take": "s1-car-cut"
+},
+{
+"file": "takes/audio/f/israeli/word/kiddush-shabbat-eve-w11/s1.mp3",
+"kind": "word",
+"want": "בָנוּ",
+"orig": "audio/f/israeli/word/kiddush-shabbat-eve-w11.mp3",
+"take": "s1"
+},
+{
+"file": "takes/audio/f/israeli/word/kiddush-shabbat-eve-w11/s2-90.mp3",
+"kind": "word",
+"want": "בָנוּ",
+"orig": "audio/f/israeli/word/kiddush-shabbat-eve-w11.mp3",
+"take": "s2-90"
+},
+{
+"file": "takes/audio/f/israeli/word/kiddush-shabbat-eve-w11/s2-a.mp3",
+"kind": "word",
+"want": "בָנוּ",
+"orig": "audio/f/israeli/word/kiddush-shabbat-eve-w11.mp3",
+"take": "s2-a"
+},
+{
+"file": "takes/audio/f/israeli/word/kiddush-shabbat-eve-w11/s2-car-cut.mp3",
+"kind": "word",
+"want": "בָנוּ",
+"orig": "audio/f/israeli/word/kiddush-shabbat-eve-w11.mp3",
+"take": "s2-car-cut"
+},
+{
+"file": "takes/audio/f/israeli/word/kiddush-shabbat-eve-w11/s2.mp3",
+"kind": "word",
+"want": "בָנוּ",
+"orig": "audio/f/israeli/word/kiddush-shabbat-eve-w11.mp3",
+"take": "s2"
+},
+{
+"file": "takes/audio/f/israeli/word/lecha-hashem-w9/s0-90.mp3",
+"kind": "word",
+"want": "כֹל",
+"orig": "audio/f/israeli/word/lecha-hashem-w9.mp3",
+"take": "s0-90"
+},
+{
+"file": "takes/audio/f/israeli/word/lecha-hashem-w9/s0-a.mp3",
+"kind": "word",
+"want": "כֹל",
+"orig": "audio/f/israeli/word/lecha-hashem-w9.mp3",
+"take": "s0-a"
+},
+{
+"file": "takes/audio/f/israeli/word/lecha-hashem-w9/s0-car-cut.mp3",
+"kind": "word",
+"want": "כֹל",
+"orig": "audio/f/israeli/word/lecha-hashem-w9.mp3",
+"take": "s0-car-cut"
+},
+{
+"file": "takes/audio/f/israeli/word/lecha-hashem-w9/s0.mp3",
+"kind": "word",
+"want": "כֹל",
+"orig": "audio/f/israeli/word/lecha-hashem-w9.mp3",
+"take": "s0"
+},
+{
+"file": "takes/audio/f/israeli/word/lecha-hashem-w9/s1-90.mp3",
+"kind": "word",
+"want": "כֹל",
+"orig": "audio/f/israeli/word/lecha-hashem-w9.mp3",
+"take": "s1-90"
+},
+{
+"file": "takes/audio/f/israeli/word/lecha-hashem-w9/s1-a.mp3",
+"kind": "word",
+"want": "כֹל",
+"orig": "audio/f/israeli/word/lecha-hashem-w9.mp3",
+"take": "s1-a"
+},
+{
+"file": "takes/audio/f/israeli/word/lecha-hashem-w9/s1-car-cut.mp3",
+"kind": "word",
+"want": "כֹל",
+"orig": "audio/f/israeli/word/lecha-hashem-w9.mp3",
+"take": "s1-car-cut"
+},
+{
+"file": "takes/audio/f/israeli/word/lecha-hashem-w9/s1.mp3",
+"kind": "word",
+"want": "כֹל",
+"orig": "audio/f/israeli/word/lecha-hashem-w9.mp3",
+"take": "s1"
+},
+{
+"file": "takes/audio/m/israeli/dictionary/dict-v17d329a2/s0-90.mp3",
+"kind": "word",
+"want": "פָּרוּר",
+"orig": "audio/m/israeli/dictionary/dict-v17d329a2.mp3",
+"take": "s0-90"
+},
+{
+"file": "takes/audio/m/israeli/dictionary/dict-v17d329a2/s0-a.mp3",
+"kind": "word",
+"want": "פָּרוּר",
+"orig": "audio/m/israeli/dictionary/dict-v17d329a2.mp3",
+"take": "s0-a"
+},
+{
+"file": "takes/audio/m/israeli/dictionary/dict-v17d329a2/s0-car-cut.mp3",
+"kind": "word",
+"want": "פָּרוּר",
+"orig": "audio/m/israeli/dictionary/dict-v17d329a2.mp3",
+"take": "s0-car-cut"
+},
+{
+"file": "takes/audio/m/israeli/dictionary/dict-v17d329a2/s0.mp3",
+"kind": "word",
+"want": "פָּרוּר",
+"orig": "audio/m/israeli/dictionary/dict-v17d329a2.mp3",
+"take": "s0"
+},
+{
+"file": "takes/audio/m/israeli/dictionary/dict-v17d329a2/s1-90.mp3",
+"kind": "word",
+"want": "פָּרוּר",
+"orig": "audio/m/israeli/dictionary/dict-v17d329a2.mp3",
+"take": "s1-90"
+},
+{
+"file": "takes/audio/m/israeli/dictionary/dict-v17d329a2/s1-a.mp3",
+"kind": "word",
+"want": "פָּרוּר",
+"orig": "audio/m/israeli/dictionary/dict-v17d329a2.mp3",
+"take": "s1-a"
+},
+{
+"file": "takes/audio/m/israeli/dictionary/dict-v17d329a2/s1-car-cut.mp3",
+"kind": "word",
+"want": "פָּרוּר",
+"orig": "audio/m/israeli/dictionary/dict-v17d329a2.mp3",
+"take": "s1-car-cut"
+},
+{
+"file": "takes/audio/m/israeli/dictionary/dict-v17d329a2/s1.mp3",
+"kind": "word",
+"want": "פָּרוּר",
+"orig": "audio/m/israeli/dictionary/dict-v17d329a2.mp3",
+"take": "s1"
+},
+{
+"file": "takes/audio/m/israeli/dictionary/dict-v17d329a2/s2-90.mp3",
+"kind": "word",
+"want": "פָּרוּר",
+"orig": "audio/m/israeli/dictionary/dict-v17d329a2.mp3",
+"take": "s2-90"
+},
+{
+"file": "takes/audio/m/israeli/dictionary/dict-v17d329a2/s2-a.mp3",
+"kind": "word",
+"want": "פָּרוּר",
+"orig": "audio/m/israeli/dictionary/dict-v17d329a2.mp3",
+"take": "s2-a"
+},
+{
+"file": "takes/audio/m/israeli/dictionary/dict-v17d329a2/s2-car-cut.mp3",
+"kind": "word",
+"want": "פָּרוּר",
+"orig": "audio/m/israeli/dictionary/dict-v17d329a2.mp3",
+"take": "s2-car-cut"
+},
+{
+"file": "takes/audio/m/israeli/dictionary/dict-v17d329a2/s2.mp3",
+"kind": "word",
+"want": "פָּרוּר",
+"orig": "audio/m/israeli/dictionary/dict-v17d329a2.mp3",
+"take": "s2"
+},
+{
+"file": "takes/audio/m/israeli/dictionary/dict-va4b7d8ca/s0-90.mp3",
+"kind": "word",
+"want": "הֵא",
+"orig": "audio/m/israeli/dictionary/dict-va4b7d8ca.mp3",
+"take": "s0-90"
+},
+{
+"file": "takes/audio/m/israeli/dictionary/dict-va4b7d8ca/s0-a.mp3",
+"kind": "word",
+"want": "הֵא",
+"orig": "audio/m/israeli/dictionary/dict-va4b7d8ca.mp3",
+"take": "s0-a"
+},
+{
+"file": "takes/audio/m/israeli/dictionary/dict-va4b7d8ca/s0-car-cut.mp3",
+"kind": "word",
+"want": "הֵא",
+"orig": "audio/m/israeli/dictionary/dict-va4b7d8ca.mp3",
+"take": "s0-car-cut"
+},
+{
+"file": "takes/audio/m/israeli/dictionary/dict-va4b7d8ca/s0.mp3",
+"kind": "word",
+"want": "הֵא",
+"orig": "audio/m/israeli/dictionary/dict-va4b7d8ca.mp3",
+"take": "s0"
+},
+{
+"file": "takes/audio/m/israeli/dictionary/dict-va4b7d8ca/s1-90.mp3",
+"kind": "word",
+"want": "הֵא",
+"orig": "audio/m/israeli/dictionary/dict-va4b7d8ca.mp3",
+"take": "s1-90"
+},
+{
+"file": "takes/audio/m/israeli/dictionary/dict-va4b7d8ca/s1-a.mp3",
+"kind": "word",
+"want": "הֵא",
+"orig": "audio/m/israeli/dictionary/dict-va4b7d8ca.mp3",
+"take": "s1-a"
+},
+{
+"file": "takes/audio/m/israeli/dictionary/dict-va4b7d8ca/s1-car-cut.mp3",
+"kind": "word",
+"want": "הֵא",
+"orig": "audio/m/israeli/dictionary/dict-va4b7d8ca.mp3",
+"take": "s1-car-cut"
+},
+{
+"file": "takes/audio/m/israeli/dictionary/dict-va4b7d8ca/s1.mp3",
+"kind": "word",
+"want": "הֵא",
+"orig": "audio/m/israeli/dictionary/dict-va4b7d8ca.mp3",
+"take": "s1"
+},
+{
+"file": "takes/audio/m/israeli/dictionary/dict-va4b7d8ca/s2-90.mp3",
+"kind": "word",
+"want": "הֵא",
+"orig": "audio/m/israeli/dictionary/dict-va4b7d8ca.mp3",
+"take": "s2-90"
+},
+{
+"file": "takes/audio/m/israeli/dictionary/dict-va4b7d8ca/s2-a.mp3",
+"kind": "word",
+"want": "הֵא",
+"orig": "audio/m/israeli/dictionary/dict-va4b7d8ca.mp3",
+"take": "s2-a"
+},
+{
+"file": "takes/audio/m/israeli/dictionary/dict-va4b7d8ca/s2-car-cut.mp3",
+"kind": "word",
+"want": "הֵא",
+"orig": "audio/m/israeli/dictionary/dict-va4b7d8ca.mp3",
+"take": "s2-car-cut"
+},
+{
+"file": "takes/audio/m/israeli/dictionary/dict-va4b7d8ca/s2.mp3",
+"kind": "word",
+"want": "הֵא",
+"orig": "audio/m/israeli/dictionary/dict-va4b7d8ca.mp3",
+"take": "s2"
+},
+{
+"file": "takes/audio/m/israeli/dictionary/dict-ve8865de4/s0-90.mp3",
+"kind": "word",
+"want": "שְׁעוּעִית",
+"orig": "audio/m/israeli/dictionary/dict-ve8865de4.mp3",
+"take": "s0-90"
+},
+{
+"file": "takes/audio/m/israeli/dictionary/dict-ve8865de4/s0-a.mp3",
+"kind": "word",
+"want": "שְׁעוּעִית",
+"orig": "audio/m/israeli/dictionary/dict-ve8865de4.mp3",
+"take": "s0-a"
+},
+{
+"file": "takes/audio/m/israeli/dictionary/dict-ve8865de4/s0-car-cut.mp3",
+"kind": "word",
+"want": "שְׁעוּעִית",
+"orig": "audio/m/israeli/dictionary/dict-ve8865de4.mp3",
+"take": "s0-car-cut"
+},
+{
+"file": "takes/audio/m/israeli/dictionary/dict-ve8865de4/s0.mp3",
+"kind": "word",
+"want": "שְׁעוּעִית",
+"orig": "audio/m/israeli/dictionary/dict-ve8865de4.mp3",
+"take": "s0"
+},
+{
+"file": "takes/audio/m/israeli/dictionary/dict-ve8865de4/s1-90.mp3",
+"kind": "word",
+"want": "שְׁעוּעִית",
+"orig": "audio/m/israeli/dictionary/dict-ve8865de4.mp3",
+"take": "s1-90"
+},
+{
+"file": "takes/audio/m/israeli/dictionary/dict-ve8865de4/s1-a.mp3",
+"kind": "word",
+"want": "שְׁעוּעִית",
+"orig": "audio/m/israeli/dictionary/dict-ve8865de4.mp3",
+"take": "s1-a"
+},
+{
+"file": "takes/audio/m/israeli/dictionary/dict-ve8865de4/s1-car-cut.mp3",
+"kind": "word",
+"want": "שְׁעוּעִית",
+"orig": "audio/m/israeli/dictionary/dict-ve8865de4.mp3",
+"take": "s1-car-cut"
+},
+{
+"file": "takes/audio/m/israeli/dictionary/dict-ve8865de4/s1.mp3",
+"kind": "word",
+"want": "שְׁעוּעִית",
+"orig": "audio/m/israeli/dictionary/dict-ve8865de4.mp3",
+"take": "s1"
+},
+{
+"file": "takes/audio/m/israeli/dictionary/dict-ve8865de4/s2-90.mp3",
+"kind": "word",
+"want": "שְׁעוּעִית",
+"orig": "audio/m/israeli/dictionary/dict-ve8865de4.mp3",
+"take": "s2-90"
+},
+{
+"file": "takes/audio/m/israeli/dictionary/dict-ve8865de4/s2-a.mp3",
+"kind": "word",
+"want": "שְׁעוּעִית",
+"orig": "audio/m/israeli/dictionary/dict-ve8865de4.mp3",
+"take": "s2-a"
+},
+{
+"file": "takes/audio/m/israeli/dictionary/dict-ve8865de4/s2-car-cut.mp3",
+"kind": "word",
+"want": "שְׁעוּעִית",
+"orig": "audio/m/israeli/dictionary/dict-ve8865de4.mp3",
+"take": "s2-car-cut"
+},
+{
+"file": "takes/audio/m/israeli/dictionary/dict-ve8865de4/s2.mp3",
+"kind": "word",
+"want": "שְׁעוּעִית",
+"orig": "audio/m/israeli/dictionary/dict-ve8865de4.mp3",
+"take": "s2"
+},
+{
+"file": "takes/audio/m/israeli/word/h69a35691/s0-90.mp3",
+"kind": "word",
+"want": "פַּר (cut from: הַמִּלָּה … שׁוּב)",
+"orig": "audio/m/israeli/word/h69a35691.mp3",
+"take": "s0-90"
+},
+{
+"file": "takes/audio/m/israeli/word/h69a35691/s0-a.mp3",
+"kind": "word",
+"want": "פַּר (cut from: הַמִּלָּה … שׁוּב)",
+"orig": "audio/m/israeli/word/h69a35691.mp3",
+"take": "s0-a"
+},
+{
+"file": "takes/audio/m/israeli/word/h69a35691/s0-car-cut.mp3",
+"kind": "word",
+"want": "פַּר (cut from: הַמִּלָּה … שׁוּב)",
+"orig": "audio/m/israeli/word/h69a35691.mp3",
+"take": "s0-car-cut"
+},
+{
+"file": "takes/audio/m/israeli/word/h69a35691/s0.mp3",
+"kind": "word",
+"want": "פַּר (cut from: הַמִּלָּה … שׁוּב)",
+"orig": "audio/m/israeli/word/h69a35691.mp3",
+"take": "s0"
+},
+{
+"file": "takes/audio/m/israeli/word/h69a35691/s1-90.mp3",
+"kind": "word",
+"want": "פַּר (cut from: הַמִּלָּה … שׁוּב)",
+"orig": "audio/m/israeli/word/h69a35691.mp3",
+"take": "s1-90"
+},
+{
+"file": "takes/audio/m/israeli/word/h69a35691/s1-a.mp3",
+"kind": "word",
+"want": "פַּר (cut from: הַמִּלָּה … שׁוּב)",
+"orig": "audio/m/israeli/word/h69a35691.mp3",
+"take": "s1-a"
+},
+{
+"file": "takes/audio/m/israeli/word/h69a35691/s1-car-cut.mp3",
+"kind": "word",
+"want": "פַּר (cut from: הַמִּלָּה … שׁוּב)",
+"orig": "audio/m/israeli/word/h69a35691.mp3",
+"take": "s1-car-cut"
+},
+{
+"file": "takes/audio/m/israeli/word/h69a35691/s1.mp3",
+"kind": "word",
+"want": "פַּר (cut from: הַמִּלָּה … שׁוּב)",
+"orig": "audio/m/israeli/word/h69a35691.mp3",
+"take": "s1"
+},
+{
+"file": "takes/audio/m/israeli/word/h69a35691/s2-90.mp3",
+"kind": "word",
+"want": "פַּר (cut from: הַמִּלָּה … שׁוּב)",
+"orig": "audio/m/israeli/word/h69a35691.mp3",
+"take": "s2-90"
+},
+{
+"file": "takes/audio/m/israeli/word/h69a35691/s2-a.mp3",
+"kind": "word",
+"want": "פַּר (cut from: הַמִּלָּה … שׁוּב)",
+"orig": "audio/m/israeli/word/h69a35691.mp3",
+"take": "s2-a"
+},
+{
+"file": "takes/audio/m/israeli/word/h69a35691/s2-car-cut.mp3",
+"kind": "word",
+"want": "פַּר (cut from: הַמִּלָּה … שׁוּב)",
+"orig": "audio/m/israeli/word/h69a35691.mp3",
+"take": "s2-car-cut"
+},
+{
+"file": "takes/audio/m/israeli/word/h69a35691/s2.mp3",
+"kind": "word",
+"want": "פַּר (cut from: הַמִּלָּה … שׁוּב)",
+"orig": "audio/m/israeli/word/h69a35691.mp3",
+"take": "s2"
+},
+{
+"file": "takes/audio/m/israeli/word/lecha-hashem-w9/s0-90.mp3",
+"kind": "word",
+"want": "כֹל",
+"orig": "audio/m/israeli/word/lecha-hashem-w9.mp3",
+"take": "s0-90"
+},
+{
+"file": "takes/audio/m/israeli/word/lecha-hashem-w9/s0-a.mp3",
+"kind": "word",
+"want": "כֹל",
+"orig": "audio/m/israeli/word/lecha-hashem-w9.mp3",
+"take": "s0-a"
+},
+{
+"file": "takes/audio/m/israeli/word/lecha-hashem-w9/s0-car-cut.mp3",
+"kind": "word",
+"want": "כֹל",
+"orig": "audio/m/israeli/word/lecha-hashem-w9.mp3",
+"take": "s0-car-cut"
+},
+{
+"file": "takes/audio/m/israeli/word/lecha-hashem-w9/s0.mp3",
+"kind": "word",
+"want": "כֹל",
+"orig": "audio/m/israeli/word/lecha-hashem-w9.mp3",
+"take": "s0"
+},
+{
+"file": "takes/audio/m/israeli/word/lecha-hashem-w9/s1-90.mp3",
+"kind": "word",
+"want": "כֹל",
+"orig": "audio/m/israeli/word/lecha-hashem-w9.mp3",
+"take": "s1-90"
+},
+{
+"file": "takes/audio/m/israeli/word/lecha-hashem-w9/s1-a.mp3",
+"kind": "word",
+"want": "כֹל",
+"orig": "audio/m/israeli/word/lecha-hashem-w9.mp3",
+"take": "s1-a"
+},
+{
+"file": "takes/audio/m/israeli/word/lecha-hashem-w9/s1-car-cut.mp3",
+"kind": "word",
+"want": "כֹל",
+"orig": "audio/m/israeli/word/lecha-hashem-w9.mp3",
+"take": "s1-car-cut"
+},
+{
+"file": "takes/audio/m/israeli/word/lecha-hashem-w9/s1.mp3",
+"kind": "word",
+"want": "כֹל",
+"orig": "audio/m/israeli/word/lecha-hashem-w9.mp3",
+"take": "s1"
+}
+]

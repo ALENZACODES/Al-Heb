@@ -131,5 +131,49 @@ def main():
             import gc; gc.collect()
 
 
+# --- corrections to the expected sounds (Phonikud's base model gets these wrong) -----------------------------------
+# kamatz katan in כל (kol, not kal), the word written without points, and syllables it drops. Folded letters:
+# x = kh, S = sh, c = ts. Applied when hearings are scored again (rescore), so no model has to listen twice.
+SAY = {
+    'כָּל': 'kol', 'כׇּל': 'kol', 'בְּכָל': 'bexol', 'וְכָל': 'vexol', 'לְכָל': 'lexol', 'מִכָּל': 'mikol', 'דְכָל': 'dexol',
+    'כָּל־': 'kol', 'בְּכָל־': 'bexol', 'וְכָל־': 'vexol', 'לְכָל־': 'lexol',
+    'ברוך': 'barux', 'יְבָרֶכְךָ': 'jevarexexa', 'שְׁעוּעִית': 'Seuit',
+}
+
+
+def expected2(text):
+    import phoneme_review as P
+    P.fold = fold2
+    ws, exp = P.expected(text)
+    clean = lambda w: P.S.PUNCT.sub('', w)
+    return ws, [SAY.get(clean(w), e) for w, e in zip(ws, exp)]
+
+
+def review2(text, heard_ipa):
+    """As phoneme_review.review, with the corrected expected sounds, and the Israeli R (uvular, which the
+    English-trained phoneme models write as g or a gh sound) counted as r."""
+    import difflib
+    ws, exp = expected2(text)
+    r_as = lambda s: s.replace('g', 'r')
+    got = r_as(fold2(heard_ipa).replace(' ', ''))
+    target = r_as(''.join(exp))
+    sm = difflib.SequenceMatcher(a=target, b=got, autojunk=False)
+    hit = [False] * len(target)
+    for a0, b0, n in sm.get_matching_blocks():
+        for k in range(a0, a0 + n):
+            hit[k] = True
+    out, pos = [], 0
+    for w, e in zip(ws, exp):
+        seg = hit[pos:pos + len(e)]; pos += len(e)
+        out.append({'word': w, 'should': latin(e), 'match': round(sum(seg) / max(1, len(seg)), 2)})
+    return round(sm.ratio(), 3), out
+
+
+def rescore(rec, want):
+    """A stored hearing scored again against the corrected expected sounds."""
+    ratio, ws = review2(re.sub(r'\s*\(cut from:.*\)\s*$', '', want), rec['ipa'])
+    return dict(rec, ratio=ratio, words=ws)
+
+
 if __name__ == '__main__':
     main()

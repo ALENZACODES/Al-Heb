@@ -1,0 +1,13 @@
+tools/audio/asr-check/
+takes/audio/m/israeli/prayer/brich-shmei/c-pt.mp3
+takes/audio/m/israeli/prayer/brich-shmei/c-pl.mp3
+takes/audio/m/israeli/prayer/yigdal/c-pt.mp3
+takes/audio/m/israeli/prayer/yigdal/c-pl.mp3
+takes/audio/m/israeli/line/brich-shmei/c-pt.mp3
+takes/audio/m/israeli/line/brich-shmei/c-pl.mp3
+takes/audio/f/israeli/prayer/brich-shmei/c-pt.mp3
+takes/audio/f/israeli/prayer/brich-shmei/c-pl.mp3
+takes/audio/f/israeli/prayer/yigdal/c-pt.mp3
+takes/audio/f/israeli/prayer/yigdal/c-pl.mp3
+takes/audio/f/israeli/line/brich-shmei/c-pt.mp3
+takes/audio/f/israeli/line/brich-shmei/c-pl.mp3

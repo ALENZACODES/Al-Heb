@@ -19,6 +19,7 @@ export function workbookCss(paper = 'a4') {
 .wb-he{font-family:'Frank Ruhl Libre','Heebo',serif;direction:rtl;unicode-bidi:isolate}
 .wb-cover{text-align:center;padding-block:3rem}
 .wb-cover .wb-big{font-size:4.5rem;line-height:1.2}
+.wb-cover-art{display:block;margin:0 auto 1rem;max-block-size:42vh;max-inline-size:70%;object-fit:contain}
 .wb-line{border-block-end:1px solid #999;block-size:2.6rem;margin-block:.2rem .9rem}
 .wb-row{display:flex;gap:.4rem;flex-wrap:wrap;direction:rtl;align-items:flex-end}
 .wb-box{inline-size:3.8rem;block-size:4rem;border:1px solid #aaa;border-radius:4px;display:grid;place-items:center;font-size:2.4rem;line-height:1;position:relative}
@@ -125,7 +126,12 @@ const BODY = { letters: lettersChapter, vowels: vowelsChapter, build: buildChapt
  * @param {ReturnType<import('./model.js').buildWorkbook>} wb @param {{ status?: string, styleLabel?: string }} [opt]
  */
 export function renderWorkbook(wb, opt = {}) {
+  // Cover picture per belt: assets/workbook/covers/<belt>.png (docs/images/paste/k-06.txt). Until it exists, the cover is type only.
+  const coverFile = wb.belt.track === 'israel' ? 'israel' : wb.belt.id;
+  const coverImg = h('img', { class: 'wb-cover-art', alt: '', src: `assets/workbook/covers/${coverFile}.png` });
+  coverImg.addEventListener('error', () => coverImg.remove(), { once: true });
   const cover = h('section', { class: 'wb-cover' },
+    coverImg,
     h('p', { class: 'wb-big wb-he', lang: 'he' }, 'אָלֶף'),
     h('h2', {}, `Aleph workbook: ${wb.belt.label}`),
     h('p', {}, `Reading style: ${opt.styleLabel || wb.tradition}.`),

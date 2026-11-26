@@ -100,3 +100,25 @@ button.arc-cell:focus-visible { outline: 3px solid var(--accent, #2a6); outline-
 .arc-host .arc-sprite-inline, .g1-lane .arc-sprite-inline { position: static; inset: auto; width: auto; height: auto; max-height: 72px; }
 .arc-host .arc-cast { flex: 0 0 auto; }
 .g1-lane-cast { max-height: 40px; margin: 0; display: inline-block; vertical-align: middle; }
+
+/* Rimon on the board: cheers on a right answer, winces on a wrong one (src/games/arcade.js boardReact). */
+.arc-hud { position: relative; }
+.arc-react { inline-size: 3rem; block-size: 3rem; object-fit: contain; vertical-align: middle; margin-inline-start: .4rem; }
+.arc-react.is-on[data-kind="cheer"] { animation: arc-cheer .6s ease-out; }
+.arc-react.is-on[data-kind="oops"] { animation: arc-oops .45s ease-in-out; }
+@keyframes arc-cheer { 0% { transform: translateY(0) scale(.8); } 40% { transform: translateY(-10px) scale(1.1); } 100% { transform: translateY(0) scale(1); } }
+@keyframes arc-oops { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-5px) rotate(-6deg); } 75% { transform: translateX(5px) rotate(6deg); } }
+@media (prefers-reduced-motion: reduce) { .arc-react.is-on { animation: none !important; } }
+
+/* Drawn playfields (critique item 8; art in docs/images/paste/k-*.txt). Each picture is optional: a missing file leaves the
+   flat board colours above, so nothing breaks before the art lands. */
+.arcade[data-game="letterchomp"] .arc-cell.is-wall, .arcade[data-game="wordmaze"] .arc-cell.is-wall { background-image: url("../games/arcade/board/wall.png"), repeating-linear-gradient(45deg, transparent 0 6px, rgba(0,0,0,.14) 6px 9px); background-size: cover, auto; }
+.arcade[data-game="letterchomp"] .arc-cell:not(.is-wall), .arcade[data-game="wordmaze"] .arc-cell:not(.is-wall) { background-image: url("../games/arcade/board/path.png"); background-size: cover; }
+.arcade[data-game="syllablesnake"] .arc-snake-cell { background-image: url("../games/arcade/board/grass.png"); background-size: cover; }
+.arcade[data-game="syllablesnake"] .arc-snake-cell.is-snake { background: var(--arc-body) url("../games/arcade/board/snake-body.png") center / contain no-repeat; }
+.arcade[data-game="syllablesnake"] .arc-snake-cell.is-head { background: var(--accent, #2a6) url("../games/arcade/board/snake-head.png") center / contain no-repeat; }
+.arcade[data-game="fallingletters"] .arc-grid { background: url("../games/arcade/board/well.png") center / cover no-repeat; border-radius: 12px; padding: .4rem; }
+.arcade[data-game="letterdrop"] .arc-lanes { background: url("../games/arcade/board/sky.png") center / cover no-repeat; border-radius: 12px; padding: .3rem; }
+.arcade[data-game="letterdrop"] .arc-lane { background-color: color-mix(in srgb, var(--arc-surface) 55%, transparent); }
+.arc-train-art { block-size: 3.2rem; inline-size: auto; vertical-align: middle; }
+.arc-ice-art { block-size: 7rem; inline-size: auto; display: block; margin-inline: auto; }

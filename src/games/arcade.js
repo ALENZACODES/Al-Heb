@@ -98,7 +98,23 @@ export async function createArcade(root, ctx, spec) {
   const hudBest = h('span', { class: 'arc-hud-item muted' });
   const hudLives = h('span', { class: 'arc-hud-item' });
   const hudTime = h('span', { class: 'arc-hud-item', role: 'timer', 'aria-live': 'off' });
-  const hud = h('div', { class: 'arc-hud' }, hudScore, ' · ', hudBest, ' · ', hudLives, ' ', hudTime); // separators: copied or read as text the HUD said "Score 13No best yet" (25 Nov audit)
+  // Rimon on the board reacts to right and wrong answers (25 Nov 2026 critique, item 8). Art: cast/rimon-cheer.png and
+  // cast/rimon-oops.png (docs/images/paste/k-01.txt); until they exist the shipped rimon-face.png stands in, bouncing or shaking.
+  const reactImg = h('img', { class: 'arc-react', alt: '', 'aria-hidden': 'true', hidden: '', decoding: 'async' });
+  let reactTimer = null;
+  const boardReact = (kind) => {
+    if (quiet) return;
+    try { // decoration only: never let it stop a game
+      const want = `${ART_BASE}/cast/${kind === 'cheer' ? 'rimon-cheer' : 'rimon-oops'}.png`;
+      reactImg.onerror = () => { reactImg.onerror = () => { reactImg.hidden = true; }; reactImg.setAttribute('src', `${ART_BASE}/cast/rimon-face.png`); };
+      if (reactImg.dataset?.kind !== kind) reactImg.setAttribute('src', want);
+      if (reactImg.dataset) reactImg.dataset.kind = kind;
+      reactImg.setAttribute('data-kind', kind); reactImg.hidden = false;
+      reactImg.classList?.remove('is-on'); void reactImg.offsetWidth; reactImg.classList?.add('is-on');
+      clearTimeout(reactTimer); reactTimer = setTimeout(() => { reactImg.hidden = true; }, 1100);
+    } catch { /* no picture */ }
+  };
+  const hud = h('div', { class: 'arc-hud' }, hudScore, ' · ', hudBest, ' · ', hudLives, ' ', hudTime, reactImg); // separators: copied or read as text the HUD said "Score 13No best yet" (25 Nov audit)
   const status = h('p', { class: 'arc-status', role: 'status', 'aria-live': 'polite' }, 'Loading…');
   const board = h('div', { class: 'arc-board', id: `arc-${spec.id}-board` });
   const controls = h('div', { class: 'arc-controls' });
@@ -206,11 +222,11 @@ export async function createArcade(root, ctx, spec) {
     get paused() { return paused; },
     cast: castArt,
     announce(text) { status.textContent = text; },
-    addScore(n) { if(n > 0) reactRimon('bounce'); score = Math.max(0, score + n); hudScore.textContent = `Score ${score}`; },
+    addScore(n) { if (n > 0) { reactRimon('bounce'); boardReact('cheer'); } score = Math.max(0, score + n); hudScore.textContent = `Score ${score}`; },
     setLives(n) { lives = n; hudLives.textContent = n > 0 ? '♥'.repeat(Math.min(n, 5)) + (n > 5 ? `+${n - 5}` : '') : ''; },
     /** M-03: a wrong answer or guess that does not fail the item (no life lost). It still rules out the Perfect badge. */
-    slip() { slips += 1; },
-    miss() { reactRimon('sad'); misses += 1; if (lives > 0) { A.setLives(lives - 1); if (lives === 0) { A.finish({ reason: 'lives' }); return true; } } return false; },
+    slip() { slips += 1; boardReact('oops'); },
+    miss() { reactRimon('sad'); boardReact('oops'); misses += 1; if (lives > 0) { A.setLives(lives - 1); if (lives === 0) { A.finish({ reason: 'lives' }); return true; } } return false; },
     sfx(name) { try { if (!quiet) sfx.play(name); } catch { /* sound is optional */ } },
     /** Recorded Hebrew word clip when present (never a non-Hebrew voice); the text always stays on screen. */
     async sayWord(word) {

@@ -36,7 +36,13 @@ function setup(A) {
   const keys = A.h('div', { class: 'arc-keyboard', role: 'group', 'aria-label': 'Letters' });
   A.board.replaceChildren(host, clue, dashes, melt, keys);
   const drawWord = () => dashes.replaceChildren(...letters.map((ch) => A.h('span', {}, found.has(baseLetter(ch)) ? ch : ' ')));
-  const drawIce = () => { ice.textContent = STAGES[Math.min(STAGES.length - 1, Math.round((wrong / cfg.melt) * (STAGES.length - 1)))]; melt.textContent = `${cfg.melt - wrong} wrong guess${cfg.melt - wrong === 1 ? '' : 'es'} left before the pop melts.`; };
+  // The pop melts in five drawn stages (cast/icepop-1..5.png, docs/images/paste/k-04.txt); the emoji stand in until they exist.
+  let iceArt = true;
+  const drawIce = () => {
+    const step = Math.min(STAGES.length - 1, Math.round((wrong / cfg.melt) * (STAGES.length - 1)));
+    const stage = Math.min(5, 1 + Math.round((wrong / cfg.melt) * 4));
+    if (iceArt) { const img = A.h('img', { class: 'arc-ice-art', alt: '', src: `assets/games/arcade/cast/icepop-${stage}.png` }); img.addEventListener('error', () => { iceArt = false; ice.textContent = STAGES[step]; }, { once: true }); ice.replaceChildren(img); }
+    else ice.textContent = STAGES[step]; melt.textContent = `${cfg.melt - wrong} wrong guess${cfg.melt - wrong === 1 ? '' : 'es'} left before the pop melts.`; };
   const next = () => {
     if (k >= queue.length) { A.finish({ won: true }); return; }
     word = queue[k++]; letters = [...bareLetters(word.he)]; found = new Set(); wrong = 0;

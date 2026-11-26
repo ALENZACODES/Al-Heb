@@ -1,0 +1,29 @@
+Aleph IMAGE RUN - BLOCK K COMMAND 3: Snake and train
+
+No attachments are needed; everything is described in words below.
+
+STYLE GUIDE v1 (applies to EVERY image below):
+STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left.
+
+CHARACTERS (keep identical across images):
+CHARACTER SHEET A 'Ari': a friendly Israeli man around 35, short dark curly hair, trimmed beard, warm brown skin tone, navy T-shirt, simple silver chain; expression open and encouraging; no kippah by default.
+CHARACTER SHEET B 'Noa': a friendly Israeli woman around 32, shoulder-length wavy dark hair, olive skin, terracotta blouse, small gold hoop earrings; expression warm and confident.
+MASCOT 'Rimon': a small round pomegranate-red sprite with a gold crown-shaped calyx on top, two olive-green leaf ears, big friendly dot eyes, tiny arms and feet, thick charcoal outline; expressive but never any writing.
+
+BACKGROUND SCENES (when a prompt mentions BG_...): BG_telaviv = a blank Tel Aviv seaside street scene (white modernist buildings, palms, no signs).
+
+TRANSPARENCY: items marked TRANSPARENT must be a PNG with a fully transparent background (no cream fill, no white box, no ground shadow). Items marked TILE must repeat seamlessly in both directions.
+
+TASK: generate 3 separate images in STYLE GUIDE v1, in this order. Each item gives the exact filename (label the image with it in your reply, never inside the image), the size hint and the full prompt.
+
+1. FILENAME: K-snake-head.png | SIZE: use 1:1 | TRANSPARENT
+   PROMPT: A cute round caterpillar HEAD seen from straight above, facing right: a pomegranate-red circle (#B0373B) with two big friendly dot eyes near the right side, two short olive-green antennae, thick charcoal outline. Head only, no body. Transparent background, centred, filling about 85% of the frame. No text, letters or numerals anywhere in the image.
+2. FILENAME: K-snake-body.png | SIZE: use 1:1 | TRANSPARENT
+   PROMPT: One BODY SEGMENT of the same cute caterpillar, seen from straight above: a plain round pomegranate-red circle (#B0373B) with a slightly lighter centre spot and a thick charcoal outline. No face, no legs. Transparent background, centred, filling about 85% of the frame. No text, letters or numerals anywhere in the image.
+3. FILENAME: K-train-engine.png | SIZE: use 3:2 (landscape) | TRANSPARENT
+   PROMPT: A small friendly toy-style steam engine seen from the side, FACING LEFT (the chimney and front are on the left, the cab on the right), deep sea blue body (#1F3A5F) with warm gold trim (#D9A441) and pomegranate-red wheels, a puff of white smoke above the chimney. No driver, no rails, no ground, no numbers, no name plate text. Transparent background, centred. No text, letters or numerals anywhere in the image.
+
+RULES (again):
+- NEVER put any text in any image: no Hebrew, no nikkud, no Latin letters, no numerals, no logos.
+- Generate exactly 3 separate images, one per numbered item, each as its own image (never a collage or grid). Do not skip or merge items.
+- When done, list the filenames you made and wait for "next".

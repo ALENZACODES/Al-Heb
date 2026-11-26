@@ -2,7 +2,7 @@
   "version": 1,
   "note": "APPROVED generated images only (see docs/images/RIGHTS.md). Files live in assets/img/gen/. Built by tools/images/ingest.mjs; do not edit by hand.",
   "dir": "gen",
-  "count": 1333,
+  "count": 1374,
   "images": {
     "BADGE_01": {
       "w": 512,
@@ -4537,6 +4537,486 @@
           "file": "I-12-img1.1536.webp",
           "w": 1536,
           "h": 1024
+        }
+      ]
+    },
+    "ICON_back": {
+      "w": 512,
+      "h": 512,
+      "files": [
+        {
+          "edge": 512,
+          "file": "ICON_back.512.webp",
+          "w": 512,
+          "h": 512
+        }
+      ]
+    },
+    "ICON_bookmark": {
+      "w": 512,
+      "h": 512,
+      "files": [
+        {
+          "edge": 512,
+          "file": "ICON_bookmark.512.webp",
+          "w": 512,
+          "h": 512
+        }
+      ]
+    },
+    "ICON_cafe": {
+      "w": 512,
+      "h": 512,
+      "files": [
+        {
+          "edge": 512,
+          "file": "ICON_cafe.512.webp",
+          "w": 512,
+          "h": 512
+        }
+      ]
+    },
+    "ICON_calendar": {
+      "w": 512,
+      "h": 512,
+      "files": [
+        {
+          "edge": 512,
+          "file": "ICON_calendar.512.webp",
+          "w": 512,
+          "h": 512
+        }
+      ]
+    },
+    "ICON_camera": {
+      "w": 512,
+      "h": 512,
+      "files": [
+        {
+          "edge": 512,
+          "file": "ICON_camera.512.webp",
+          "w": 512,
+          "h": 512
+        }
+      ]
+    },
+    "ICON_check": {
+      "w": 512,
+      "h": 512,
+      "files": [
+        {
+          "edge": 512,
+          "file": "ICON_check.512.webp",
+          "w": 512,
+          "h": 512
+        }
+      ]
+    },
+    "ICON_download": {
+      "w": 512,
+      "h": 512,
+      "files": [
+        {
+          "edge": 512,
+          "file": "ICON_download.512.webp",
+          "w": 512,
+          "h": 512
+        }
+      ]
+    },
+    "ICON_help": {
+      "w": 512,
+      "h": 512,
+      "files": [
+        {
+          "edge": 512,
+          "file": "ICON_help.512.webp",
+          "w": 512,
+          "h": 512
+        }
+      ]
+    },
+    "ICON_hint": {
+      "w": 512,
+      "h": 512,
+      "files": [
+        {
+          "edge": 512,
+          "file": "ICON_hint.512.webp",
+          "w": 512,
+          "h": 512
+        }
+      ]
+    },
+    "ICON_home": {
+      "w": 512,
+      "h": 512,
+      "files": [
+        {
+          "edge": 512,
+          "file": "ICON_home.512.webp",
+          "w": 512,
+          "h": 512
+        }
+      ]
+    },
+    "ICON_letters": {
+      "w": 512,
+      "h": 512,
+      "files": [
+        {
+          "edge": 512,
+          "file": "ICON_letters.512.webp",
+          "w": 512,
+          "h": 512
+        }
+      ]
+    },
+    "ICON_lock": {
+      "w": 512,
+      "h": 512,
+      "files": [
+        {
+          "edge": 512,
+          "file": "ICON_lock.512.webp",
+          "w": 512,
+          "h": 512
+        }
+      ]
+    },
+    "ICON_man_voice": {
+      "w": 512,
+      "h": 512,
+      "files": [
+        {
+          "edge": 512,
+          "file": "ICON_man_voice.512.webp",
+          "w": 512,
+          "h": 512
+        }
+      ]
+    },
+    "ICON_map": {
+      "w": 512,
+      "h": 512,
+      "files": [
+        {
+          "edge": 512,
+          "file": "ICON_map.512.webp",
+          "w": 512,
+          "h": 512
+        }
+      ]
+    },
+    "ICON_microphone": {
+      "w": 512,
+      "h": 512,
+      "files": [
+        {
+          "edge": 512,
+          "file": "ICON_microphone.512.webp",
+          "w": 512,
+          "h": 512
+        }
+      ]
+    },
+    "ICON_next": {
+      "w": 512,
+      "h": 512,
+      "files": [
+        {
+          "edge": 512,
+          "file": "ICON_next.512.webp",
+          "w": 512,
+          "h": 512
+        }
+      ]
+    },
+    "ICON_pause": {
+      "w": 512,
+      "h": 512,
+      "files": [
+        {
+          "edge": 512,
+          "file": "ICON_pause.512.webp",
+          "w": 512,
+          "h": 512
+        }
+      ]
+    },
+    "ICON_play": {
+      "w": 512,
+      "h": 512,
+      "files": [
+        {
+          "edge": 512,
+          "file": "ICON_play.512.webp",
+          "w": 512,
+          "h": 512
+        }
+      ]
+    },
+    "ICON_profile": {
+      "w": 512,
+      "h": 512,
+      "files": [
+        {
+          "edge": 512,
+          "file": "ICON_profile.512.webp",
+          "w": 512,
+          "h": 512
+        }
+      ]
+    },
+    "ICON_read": {
+      "w": 512,
+      "h": 512,
+      "files": [
+        {
+          "edge": 512,
+          "file": "ICON_read.512.webp",
+          "w": 512,
+          "h": 512
+        }
+      ]
+    },
+    "ICON_replay": {
+      "w": 512,
+      "h": 512,
+      "files": [
+        {
+          "edge": 512,
+          "file": "ICON_replay.512.webp",
+          "w": 512,
+          "h": 512
+        }
+      ]
+    },
+    "ICON_retry": {
+      "w": 512,
+      "h": 512,
+      "files": [
+        {
+          "edge": 512,
+          "file": "ICON_retry.512.webp",
+          "w": 512,
+          "h": 512
+        }
+      ]
+    },
+    "ICON_search": {
+      "w": 512,
+      "h": 512,
+      "files": [
+        {
+          "edge": 512,
+          "file": "ICON_search.512.webp",
+          "w": 512,
+          "h": 512
+        }
+      ]
+    },
+    "ICON_settings": {
+      "w": 512,
+      "h": 512,
+      "files": [
+        {
+          "edge": 512,
+          "file": "ICON_settings.512.webp",
+          "w": 512,
+          "h": 512
+        }
+      ]
+    },
+    "ICON_shabbat_candles": {
+      "w": 512,
+      "h": 512,
+      "files": [
+        {
+          "edge": 512,
+          "file": "ICON_shabbat_candles.512.webp",
+          "w": 512,
+          "h": 512
+        }
+      ]
+    },
+    "ICON_share": {
+      "w": 512,
+      "h": 512,
+      "files": [
+        {
+          "edge": 512,
+          "file": "ICON_share.512.webp",
+          "w": 512,
+          "h": 512
+        }
+      ]
+    },
+    "ICON_slow": {
+      "w": 512,
+      "h": 512,
+      "files": [
+        {
+          "edge": 512,
+          "file": "ICON_slow.512.webp",
+          "w": 512,
+          "h": 512
+        }
+      ]
+    },
+    "ICON_sound_off": {
+      "w": 512,
+      "h": 512,
+      "files": [
+        {
+          "edge": 512,
+          "file": "ICON_sound_off.512.webp",
+          "w": 512,
+          "h": 512
+        }
+      ]
+    },
+    "ICON_sound_on": {
+      "w": 512,
+      "h": 512,
+      "files": [
+        {
+          "edge": 512,
+          "file": "ICON_sound_on.512.webp",
+          "w": 512,
+          "h": 512
+        }
+      ]
+    },
+    "ICON_speak": {
+      "w": 512,
+      "h": 512,
+      "files": [
+        {
+          "edge": 512,
+          "file": "ICON_speak.512.webp",
+          "w": 512,
+          "h": 512
+        }
+      ]
+    },
+    "ICON_star": {
+      "w": 512,
+      "h": 512,
+      "files": [
+        {
+          "edge": 512,
+          "file": "ICON_star.512.webp",
+          "w": 512,
+          "h": 512
+        }
+      ]
+    },
+    "ICON_streak_flame": {
+      "w": 512,
+      "h": 512,
+      "files": [
+        {
+          "edge": 512,
+          "file": "ICON_streak_flame.512.webp",
+          "w": 512,
+          "h": 512
+        }
+      ]
+    },
+    "ICON_synagogue": {
+      "w": 512,
+      "h": 512,
+      "files": [
+        {
+          "edge": 512,
+          "file": "ICON_synagogue.512.webp",
+          "w": 512,
+          "h": 512
+        }
+      ]
+    },
+    "ICON_trace": {
+      "w": 512,
+      "h": 512,
+      "files": [
+        {
+          "edge": 512,
+          "file": "ICON_trace.512.webp",
+          "w": 512,
+          "h": 512
+        }
+      ]
+    },
+    "ICON_translate": {
+      "w": 512,
+      "h": 512,
+      "files": [
+        {
+          "edge": 512,
+          "file": "ICON_translate.512.webp",
+          "w": 512,
+          "h": 512
+        }
+      ]
+    },
+    "ICON_trophy": {
+      "w": 512,
+      "h": 512,
+      "files": [
+        {
+          "edge": 512,
+          "file": "ICON_trophy.512.webp",
+          "w": 512,
+          "h": 512
+        }
+      ]
+    },
+    "ICON_unlock": {
+      "w": 512,
+      "h": 512,
+      "files": [
+        {
+          "edge": 512,
+          "file": "ICON_unlock.512.webp",
+          "w": 512,
+          "h": 512
+        }
+      ]
+    },
+    "ICON_vowels": {
+      "w": 512,
+      "h": 512,
+      "files": [
+        {
+          "edge": 512,
+          "file": "ICON_vowels.512.webp",
+          "w": 512,
+          "h": 512
+        }
+      ]
+    },
+    "ICON_woman_voice": {
+      "w": 512,
+      "h": 512,
+      "files": [
+        {
+          "edge": 512,
+          "file": "ICON_woman_voice.512.webp",
+          "w": 512,
+          "h": 512
+        }
+      ]
+    },
+    "ICON_write": {
+      "w": 512,
+      "h": 512,
+      "files": [
+        {
+          "edge": 512,
+          "file": "ICON_write.512.webp",
+          "w": 512,
+          "h": 512
         }
       ]
     },
@@ -15100,6 +15580,24 @@
         }
       ]
     },
+    "PLACE_telaviv_10": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "PLACE_telaviv_10.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "PLACE_telaviv_10.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
     "PLACE_tzfat_01": {
       "w": 512,
       "h": 293,
@@ -23464,6 +23962,46 @@
     "I-49-img2": "Illustration: A hand scrolling a phone screen beside a cup of coffee, blurred cafe behind.",
     "I-50-img1": "Illustration: Neighbours greeting each other on a street with flowers and holiday decorations.",
     "I-50-img2": "Illustration: A table with a honey jar, an apple, a candle and a card, set for a festive greeting.",
+    "ICON_back": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: back.",
+    "ICON_bookmark": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: bookmark.",
+    "ICON_cafe": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: cafe.",
+    "ICON_calendar": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: calendar.",
+    "ICON_camera": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: camera.",
+    "ICON_check": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: check.",
+    "ICON_download": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: download.",
+    "ICON_help": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: help.",
+    "ICON_hint": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: hint.",
+    "ICON_home": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: home.",
+    "ICON_letters": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: letters.",
+    "ICON_lock": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: lock.",
+    "ICON_man_voice": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: man voice.",
+    "ICON_map": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: map.",
+    "ICON_microphone": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: microphone.",
+    "ICON_next": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: next.",
+    "ICON_pause": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: pause.",
+    "ICON_play": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: play.",
+    "ICON_profile": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: profile.",
+    "ICON_read": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: read.",
+    "ICON_replay": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: replay.",
+    "ICON_retry": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: retry.",
+    "ICON_search": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: search.",
+    "ICON_settings": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: settings.",
+    "ICON_shabbat_candles": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: shabbat candles.",
+    "ICON_share": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: share.",
+    "ICON_slow": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: slow.",
+    "ICON_sound_off": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: sound off.",
+    "ICON_sound_on": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: sound on.",
+    "ICON_speak": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: speak.",
+    "ICON_star": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: star.",
+    "ICON_streak_flame": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: streak flame.",
+    "ICON_synagogue": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: synagogue.",
+    "ICON_trace": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: trace.",
+    "ICON_translate": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: translate.",
+    "ICON_trophy": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: trophy.",
+    "ICON_unlock": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: unlock.",
+    "ICON_vowels": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: vowels.",
+    "ICON_woman_voice": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: woman voice.",
+    "ICON_write": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: write.",
     "J-0001": "Flat illustration for the Hebrew word meaning \"soldier\".",
     "J-0002": "Flat illustration for the Hebrew word meaning \"horseman\".",
     "J-0003": "Flat illustration for the Hebrew word meaning \"gong\".",

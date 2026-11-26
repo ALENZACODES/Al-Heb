@@ -1,6 +1,6 @@
 # Calendar art: green and gold
 
-Order sheet: `docs/images/calendar-art.csv` (13 rows: 1 header, 12 markers). The pictures are made in the outside picture studio and saved to the paths in the `path` column; `node tools/images/ingest_queue.mjs` (see `docs/images/QUEUE-2026-11-07.md`) checks the size, resizes if needed, strips metadata and writes them in place. Nothing in this sheet has been drawn yet.
+Order sheet: `docs/images/calendar-art.csv` (13 rows: 1 header, 12 markers). The pictures are made in the outside picture studio and saved to the paths in the `path` column; `node tools/images/ingest_queue.mjs` (see `docs/images/QUEUE-2026-11-07.md`) checks the size, resizes if needed, strips metadata and writes them in place. All 13 were drawn, reviewed and written in place on 2026-11-26 (`node tools/images/ingest_queue.mjs`); `src/curriculum/calendar.markers.js` and `day.view.js` pick them up automatically.
 
 ## Why
 

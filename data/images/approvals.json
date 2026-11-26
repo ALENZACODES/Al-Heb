@@ -7620,6 +7620,217 @@
       "status": "rejected",
       "at": "2026-11-26T16:58:24.443Z",
       "note": "Off brief: two whole men in ancient robes instead of a close-up of two hands exchanging coins and a paper bag of fruit; period costume does not fit the modern market lesson. Redo."
+    },
+    "ICON_back": {
+      "status": "approved",
+      "at": "2026-11-26T17:03:41.886Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; OCR flag on ICON_cafe / ICON_map was a false positive (steam lines, map folds)"
+    },
+    "ICON_bookmark": {
+      "status": "approved",
+      "at": "2026-11-26T17:03:41.886Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; OCR flag on ICON_cafe / ICON_map was a false positive (steam lines, map folds)"
+    },
+    "ICON_cafe": {
+      "status": "approved",
+      "at": "2026-11-26T17:03:41.886Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; OCR flag on ICON_cafe / ICON_map was a false positive (steam lines, map folds)",
+      "forcedDespite": [
+        "contains_text"
+      ]
+    },
+    "ICON_calendar": {
+      "status": "approved",
+      "at": "2026-11-26T17:03:41.886Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; OCR flag on ICON_cafe / ICON_map was a false positive (steam lines, map folds)"
+    },
+    "ICON_camera": {
+      "status": "approved",
+      "at": "2026-11-26T17:03:41.886Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; OCR flag on ICON_cafe / ICON_map was a false positive (steam lines, map folds)"
+    },
+    "ICON_check": {
+      "status": "approved",
+      "at": "2026-11-26T17:03:41.886Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; OCR flag on ICON_cafe / ICON_map was a false positive (steam lines, map folds)"
+    },
+    "ICON_download": {
+      "status": "approved",
+      "at": "2026-11-26T17:03:41.886Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; OCR flag on ICON_cafe / ICON_map was a false positive (steam lines, map folds)"
+    },
+    "ICON_help": {
+      "status": "approved",
+      "at": "2026-11-26T17:03:41.886Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; OCR flag on ICON_cafe / ICON_map was a false positive (steam lines, map folds)"
+    },
+    "ICON_hint": {
+      "status": "approved",
+      "at": "2026-11-26T17:03:41.886Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; OCR flag on ICON_cafe / ICON_map was a false positive (steam lines, map folds)"
+    },
+    "ICON_home": {
+      "status": "approved",
+      "at": "2026-11-26T17:03:41.886Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; OCR flag on ICON_cafe / ICON_map was a false positive (steam lines, map folds)"
+    },
+    "ICON_letters": {
+      "status": "approved",
+      "at": "2026-11-26T17:03:41.886Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; OCR flag on ICON_cafe / ICON_map was a false positive (steam lines, map folds)"
+    },
+    "ICON_lock": {
+      "status": "approved",
+      "at": "2026-11-26T17:03:41.886Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; OCR flag on ICON_cafe / ICON_map was a false positive (steam lines, map folds)"
+    },
+    "ICON_man_voice": {
+      "status": "approved",
+      "at": "2026-11-26T17:03:41.886Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; OCR flag on ICON_cafe / ICON_map was a false positive (steam lines, map folds)"
+    },
+    "ICON_map": {
+      "status": "approved",
+      "at": "2026-11-26T17:03:41.886Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; OCR flag on ICON_cafe / ICON_map was a false positive (steam lines, map folds)",
+      "forcedDespite": [
+        "contains_text"
+      ]
+    },
+    "ICON_microphone": {
+      "status": "approved",
+      "at": "2026-11-26T17:03:41.886Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; OCR flag on ICON_cafe / ICON_map was a false positive (steam lines, map folds)"
+    },
+    "ICON_next": {
+      "status": "approved",
+      "at": "2026-11-26T17:03:41.886Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; OCR flag on ICON_cafe / ICON_map was a false positive (steam lines, map folds)"
+    },
+    "ICON_pause": {
+      "status": "approved",
+      "at": "2026-11-26T17:03:41.886Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; OCR flag on ICON_cafe / ICON_map was a false positive (steam lines, map folds)"
+    },
+    "ICON_play": {
+      "status": "approved",
+      "at": "2026-11-26T17:03:41.886Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; OCR flag on ICON_cafe / ICON_map was a false positive (steam lines, map folds)"
+    },
+    "ICON_profile": {
+      "status": "approved",
+      "at": "2026-11-26T17:03:41.886Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; OCR flag on ICON_cafe / ICON_map was a false positive (steam lines, map folds)"
+    },
+    "ICON_read": {
+      "status": "approved",
+      "at": "2026-11-26T17:03:41.886Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; OCR flag on ICON_cafe / ICON_map was a false positive (steam lines, map folds)"
+    },
+    "ICON_replay": {
+      "status": "approved",
+      "at": "2026-11-26T17:03:41.886Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; OCR flag on ICON_cafe / ICON_map was a false positive (steam lines, map folds)"
+    },
+    "ICON_retry": {
+      "status": "approved",
+      "at": "2026-11-26T17:03:41.886Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; OCR flag on ICON_cafe / ICON_map was a false positive (steam lines, map folds)"
+    },
+    "ICON_search": {
+      "status": "approved",
+      "at": "2026-11-26T17:03:41.886Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; OCR flag on ICON_cafe / ICON_map was a false positive (steam lines, map folds)"
+    },
+    "ICON_settings": {
+      "status": "approved",
+      "at": "2026-11-26T17:03:41.886Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; OCR flag on ICON_cafe / ICON_map was a false positive (steam lines, map folds)"
+    },
+    "ICON_shabbat_candles": {
+      "status": "approved",
+      "at": "2026-11-26T17:03:41.886Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; OCR flag on ICON_cafe / ICON_map was a false positive (steam lines, map folds)"
+    },
+    "ICON_share": {
+      "status": "approved",
+      "at": "2026-11-26T17:03:41.886Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; OCR flag on ICON_cafe / ICON_map was a false positive (steam lines, map folds)"
+    },
+    "ICON_slow": {
+      "status": "approved",
+      "at": "2026-11-26T17:03:41.886Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; OCR flag on ICON_cafe / ICON_map was a false positive (steam lines, map folds)"
+    },
+    "ICON_sound_off": {
+      "status": "approved",
+      "at": "2026-11-26T17:03:41.886Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; OCR flag on ICON_cafe / ICON_map was a false positive (steam lines, map folds)"
+    },
+    "ICON_sound_on": {
+      "status": "approved",
+      "at": "2026-11-26T17:03:41.886Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; OCR flag on ICON_cafe / ICON_map was a false positive (steam lines, map folds)"
+    },
+    "ICON_speak": {
+      "status": "approved",
+      "at": "2026-11-26T17:03:41.886Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; OCR flag on ICON_cafe / ICON_map was a false positive (steam lines, map folds)"
+    },
+    "ICON_star": {
+      "status": "approved",
+      "at": "2026-11-26T17:03:41.886Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; OCR flag on ICON_cafe / ICON_map was a false positive (steam lines, map folds)"
+    },
+    "ICON_streak_flame": {
+      "status": "approved",
+      "at": "2026-11-26T17:03:41.886Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; OCR flag on ICON_cafe / ICON_map was a false positive (steam lines, map folds)"
+    },
+    "ICON_synagogue": {
+      "status": "approved",
+      "at": "2026-11-26T17:03:41.886Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; OCR flag on ICON_cafe / ICON_map was a false positive (steam lines, map folds)"
+    },
+    "ICON_trace": {
+      "status": "approved",
+      "at": "2026-11-26T17:03:41.886Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; OCR flag on ICON_cafe / ICON_map was a false positive (steam lines, map folds)"
+    },
+    "ICON_translate": {
+      "status": "approved",
+      "at": "2026-11-26T17:03:41.886Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; OCR flag on ICON_cafe / ICON_map was a false positive (steam lines, map folds)"
+    },
+    "ICON_trophy": {
+      "status": "approved",
+      "at": "2026-11-26T17:03:41.886Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; OCR flag on ICON_cafe / ICON_map was a false positive (steam lines, map folds)"
+    },
+    "ICON_unlock": {
+      "status": "approved",
+      "at": "2026-11-26T17:03:41.886Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; OCR flag on ICON_cafe / ICON_map was a false positive (steam lines, map folds)"
+    },
+    "ICON_vowels": {
+      "status": "approved",
+      "at": "2026-11-26T17:03:41.886Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; OCR flag on ICON_cafe / ICON_map was a false positive (steam lines, map folds)"
+    },
+    "ICON_woman_voice": {
+      "status": "approved",
+      "at": "2026-11-26T17:03:41.886Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; OCR flag on ICON_cafe / ICON_map was a false positive (steam lines, map folds)"
+    },
+    "ICON_write": {
+      "status": "approved",
+      "at": "2026-11-26T17:03:41.886Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; OCR flag on ICON_cafe / ICON_map was a false positive (steam lines, map folds)"
+    },
+    "PLACE_telaviv_10": {
+      "status": "approved",
+      "at": "2026-11-26T17:03:41.886Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; OCR flag on ICON_cafe / ICON_map was a false positive (steam lines, map folds)"
     }
   }
 }

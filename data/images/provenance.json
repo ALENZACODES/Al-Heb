@@ -77991,6 +77991,2123 @@
     "aspect_substituted"
    ],
    "humanApproved": true
+  },
+  "ICON_back": {
+   "id": "ICON_back",
+   "file": "ICON_back.png",
+   "command": 98,
+   "set": "icons",
+   "block": "F",
+   "prompt": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: back.",
+   "promptSha256": "d82b189b93566f9353bab9a931122c52e7e6641471375b405aa35b7c2e78ab16",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T17:02:11.164Z",
+   "sourceFile": "ICON_back.png",
+   "sourceFileDate": "2026-11-26T17:00:11.825Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "0b6ba655ed77add457c0a72301ee51febce3d2772b14888141a5f996290e7dcd",
+   "originalFormat": "PNG",
+   "originalBytes": 16589,
+   "originalFile": "ICON_back.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 512,
+    "h": 512
+   },
+   "aspect": "exact",
+   "hasAlpha": true,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "ICON_back.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 6514
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "ICON_bookmark": {
+   "id": "ICON_bookmark",
+   "file": "ICON_bookmark.png",
+   "command": 98,
+   "set": "icons",
+   "block": "F",
+   "prompt": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: bookmark.",
+   "promptSha256": "ddfa90577fdfe8877f4ff24a984ba65b75cf7d4519780d4aa58da5f28ac9469f",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T17:02:11.164Z",
+   "sourceFile": "ICON_bookmark.png",
+   "sourceFileDate": "2026-11-26T17:00:12.049Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "ef2d003d52cbf18f353dd2e347d6c7cd70e7745e78fed51c7a207d0e08316c8f",
+   "originalFormat": "PNG",
+   "originalBytes": 19088,
+   "originalFile": "ICON_bookmark.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 512,
+    "h": 512
+   },
+   "aspect": "exact",
+   "hasAlpha": true,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "ICON_bookmark.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 9840
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "ICON_cafe": {
+   "id": "ICON_cafe",
+   "file": "ICON_cafe.png",
+   "command": 98,
+   "set": "icons",
+   "block": "F",
+   "prompt": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: cafe.",
+   "promptSha256": "66079e5eb363d2d297c9e180a3e01fd57662271ecd72c1cba05b3fccfa887200",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T17:02:11.164Z",
+   "sourceFile": "ICON_cafe.png",
+   "sourceFileDate": "2026-11-26T17:00:12.887Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "1a6d93ecce941c4b592ca9a6ee057b5d0f39169dd7871aaf20733bd30f0ce56c",
+   "originalFormat": "PNG",
+   "originalBytes": 27526,
+   "originalFile": "ICON_cafe.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 512,
+    "h": 512
+   },
+   "aspect": "exact",
+   "hasAlpha": true,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "ICON_cafe.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 14552
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 1,
+    "blobs": [
+     {
+      "t": "222",
+      "conf": 89.7,
+      "lang": "eng"
+     }
+    ],
+    "possibleLetters": []
+   },
+   "flags": [
+    "contains_text"
+   ],
+   "humanApproved": true
+  },
+  "ICON_calendar": {
+   "id": "ICON_calendar",
+   "file": "ICON_calendar.png",
+   "command": 98,
+   "set": "icons",
+   "block": "F",
+   "prompt": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: calendar.",
+   "promptSha256": "84d065c8381f918966c1651e318bde49897fddc6bd501801d628014a7bb29cb5",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T17:02:11.164Z",
+   "sourceFile": "ICON_calendar.png",
+   "sourceFileDate": "2026-11-26T17:00:12.293Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "7f26759c2cdcff2fa9c7b18bad552db4c584d93b9f2368c405337cec79c18d27",
+   "originalFormat": "PNG",
+   "originalBytes": 36557,
+   "originalFile": "ICON_calendar.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 512,
+    "h": 512
+   },
+   "aspect": "exact",
+   "hasAlpha": true,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "ICON_calendar.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 21280
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "ICON_camera": {
+   "id": "ICON_camera",
+   "file": "ICON_camera.png",
+   "command": 98,
+   "set": "icons",
+   "block": "F",
+   "prompt": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: camera.",
+   "promptSha256": "7527180fdb14fe49337373ab97b7b25f8ecb1d0e63ccbde3bff35967c349625f",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T17:02:11.164Z",
+   "sourceFile": "ICON_camera.png",
+   "sourceFileDate": "2026-11-26T17:00:12.513Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "4c807aee366e8d54597f08be4d1b7e8b0e2b142e3b57bc0023c85d0926fcffe0",
+   "originalFormat": "PNG",
+   "originalBytes": 27216,
+   "originalFile": "ICON_camera.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 512,
+    "h": 512
+   },
+   "aspect": "exact",
+   "hasAlpha": true,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "ICON_camera.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 14092
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "ICON_check": {
+   "id": "ICON_check",
+   "file": "ICON_check.png",
+   "command": 98,
+   "set": "icons",
+   "block": "F",
+   "prompt": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: check.",
+   "promptSha256": "e7a53b4917d3fd10d12de42eef48fc3764fc2153c5c43e8957d440f493ce35dc",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T17:02:11.164Z",
+   "sourceFile": "ICON_check.png",
+   "sourceFileDate": "2026-11-26T17:00:12.665Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "fda3a4935266e7619da23cadbd33db16fdbde720240b638b444ab0951bd07c3f",
+   "originalFormat": "PNG",
+   "originalBytes": 17016,
+   "originalFile": "ICON_check.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 512,
+    "h": 512
+   },
+   "aspect": "exact",
+   "hasAlpha": true,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "ICON_check.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 7010
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "ICON_download": {
+   "id": "ICON_download",
+   "file": "ICON_download.png",
+   "command": 98,
+   "set": "icons",
+   "block": "F",
+   "prompt": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: download.",
+   "promptSha256": "4602f1149757ff78c5b704af1fbf4d59df783e6288cf4f587f9ad7e5a42a6760",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T17:02:11.164Z",
+   "sourceFile": "ICON_download.png",
+   "sourceFileDate": "2026-11-26T17:00:12.825Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "fc141c63e36d771b1159cd9f08857cd0e6c668cc47c0f432b7ce10e5c1c4bc8f",
+   "originalFormat": "PNG",
+   "originalBytes": 20017,
+   "originalFile": "ICON_download.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 512,
+    "h": 512
+   },
+   "aspect": "exact",
+   "hasAlpha": true,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "ICON_download.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 9914
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "ICON_help": {
+   "id": "ICON_help",
+   "file": "ICON_help.png",
+   "command": 98,
+   "set": "icons",
+   "block": "F",
+   "prompt": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: help.",
+   "promptSha256": "7a3e1500966145a9d6850d5bbd15360cea2064a9ac9f5cb85f0ee14770fd0358",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T17:02:11.164Z",
+   "sourceFile": "ICON_help.png",
+   "sourceFileDate": "2026-11-26T17:00:12.961Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "5a2a6574073684708179505aab3e81882edca26933dd685108882b03d52d6339",
+   "originalFormat": "PNG",
+   "originalBytes": 38604,
+   "originalFile": "ICON_help.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 512,
+    "h": 512
+   },
+   "aspect": "exact",
+   "hasAlpha": true,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "ICON_help.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 19772
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "ICON_hint": {
+   "id": "ICON_hint",
+   "file": "ICON_hint.png",
+   "command": 98,
+   "set": "icons",
+   "block": "F",
+   "prompt": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: hint.",
+   "promptSha256": "fe02fd0434982b5085f80985e2cd5538a44bc539aab940872f8c9640bf957e4a",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T17:02:11.164Z",
+   "sourceFile": "ICON_hint.png",
+   "sourceFileDate": "2026-11-26T17:00:13.149Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "881f2c601859cd057229b754d29263024403189e784e3fed03d5d564a86c6264",
+   "originalFormat": "PNG",
+   "originalBytes": 24282,
+   "originalFile": "ICON_hint.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 512,
+    "h": 512
+   },
+   "aspect": "exact",
+   "hasAlpha": true,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "ICON_hint.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 12310
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "ICON_home": {
+   "id": "ICON_home",
+   "file": "ICON_home.png",
+   "command": 98,
+   "set": "icons",
+   "block": "F",
+   "prompt": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: home.",
+   "promptSha256": "5c6fea97336af88aa95d5435afe5e0b39759cee2394d8926b4c6f86795b90831",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T17:02:11.164Z",
+   "sourceFile": "ICON_home.png",
+   "sourceFileDate": "2026-11-26T17:00:13.117Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "7bfa84ea7acfb09c01a2aaf2da33aa70cdd62a5cc763deac369805bcd065b252",
+   "originalFormat": "PNG",
+   "originalBytes": 22937,
+   "originalFile": "ICON_home.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 512,
+    "h": 512
+   },
+   "aspect": "exact",
+   "hasAlpha": true,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "ICON_home.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 11200
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "ICON_letters": {
+   "id": "ICON_letters",
+   "file": "ICON_letters.png",
+   "command": 98,
+   "set": "icons",
+   "block": "F",
+   "prompt": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: letters.",
+   "promptSha256": "07b71b76c6e63ec7aeacf24c69b85714ffb8d42582a3eae397db58d868ab3990",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T17:02:11.164Z",
+   "sourceFile": "ICON_letters.png",
+   "sourceFileDate": "2026-11-26T17:00:13.277Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "4bada9d29c24a40d09b694bb01e6df09faad3dcf5b6f99ebebd41f9a51c3dde7",
+   "originalFormat": "PNG",
+   "originalBytes": 27051,
+   "originalFile": "ICON_letters.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 512,
+    "h": 512
+   },
+   "aspect": "exact",
+   "hasAlpha": true,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "ICON_letters.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 14464
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "ICON_lock": {
+   "id": "ICON_lock",
+   "file": "ICON_lock.png",
+   "command": 98,
+   "set": "icons",
+   "block": "F",
+   "prompt": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: lock.",
+   "promptSha256": "98c867ec909bcaec41b3d12bbea32ccb3ad454d2123e8af1b8d0608345202fc1",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T17:02:11.164Z",
+   "sourceFile": "ICON_lock.png",
+   "sourceFileDate": "2026-11-26T17:00:13.573Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "871bd2eb95c10dbf9c124983e72c1f39dcfa65f6c8f6fd9b1eff6cc6cfc7170c",
+   "originalFormat": "PNG",
+   "originalBytes": 21683,
+   "originalFile": "ICON_lock.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 512,
+    "h": 512
+   },
+   "aspect": "exact",
+   "hasAlpha": true,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "ICON_lock.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 11314
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "ICON_man_voice": {
+   "id": "ICON_man_voice",
+   "file": "ICON_man_voice.png",
+   "command": 98,
+   "set": "icons",
+   "block": "F",
+   "prompt": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: man voice.",
+   "promptSha256": "e2d723a8db291dc9dc83aa8ac1a70ca8050bc6139cd8960ad52488686249d7de",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T17:02:11.164Z",
+   "sourceFile": "ICON_man_voice.png",
+   "sourceFileDate": "2026-11-26T17:00:13.533Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "dfcb16c183aaa9f97cc8a04cf0fd80a2c9f2421d6204fc05bd01ed8cbda3b8d8",
+   "originalFormat": "PNG",
+   "originalBytes": 40113,
+   "originalFile": "ICON_man_voice.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 512,
+    "h": 512
+   },
+   "aspect": "exact",
+   "hasAlpha": true,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "ICON_man_voice.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 21666
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "ICON_map": {
+   "id": "ICON_map",
+   "file": "ICON_map.png",
+   "command": 98,
+   "set": "icons",
+   "block": "F",
+   "prompt": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: map.",
+   "promptSha256": "8815c3005f0c50aab3a89a0098dba92c22b2685aa89f0de8b2c0397a3debd795",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T17:02:11.164Z",
+   "sourceFile": "ICON_map.png",
+   "sourceFileDate": "2026-11-26T17:00:13.585Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "6fd9a8e705bd6176a4a96186fecd89851a8cb1eca53b05fcb89866bc99cb5947",
+   "originalFormat": "PNG",
+   "originalBytes": 31500,
+   "originalFile": "ICON_map.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 512,
+    "h": 512
+   },
+   "aspect": "exact",
+   "hasAlpha": true,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "ICON_map.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 17762
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 1,
+    "blobs": [
+     {
+      "t": "וטו",
+      "conf": 71.5,
+      "lang": "heb"
+     }
+    ],
+    "possibleLetters": []
+   },
+   "flags": [
+    "contains_text"
+   ],
+   "humanApproved": true
+  },
+  "ICON_microphone": {
+   "id": "ICON_microphone",
+   "file": "ICON_microphone.png",
+   "command": 98,
+   "set": "icons",
+   "block": "F",
+   "prompt": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: microphone.",
+   "promptSha256": "693906daade013dccd7e8830ecb054d1ff8eacff1260c084de260597653e9812",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T17:02:11.164Z",
+   "sourceFile": "ICON_microphone.png",
+   "sourceFileDate": "2026-11-26T17:00:13.669Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "f806d0fbb439b3ca1fef712f880ae2196a94b60afcfa5e39c16bfef37416a078",
+   "originalFormat": "PNG",
+   "originalBytes": 25055,
+   "originalFile": "ICON_microphone.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 512,
+    "h": 512
+   },
+   "aspect": "exact",
+   "hasAlpha": true,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "ICON_microphone.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 13044
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "ICON_next": {
+   "id": "ICON_next",
+   "file": "ICON_next.png",
+   "command": 98,
+   "set": "icons",
+   "block": "F",
+   "prompt": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: next.",
+   "promptSha256": "64fce0a3e90744d1c0ddc4012bbb013e03384d121c56e10fc892f7d1e0edade8",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T17:02:11.164Z",
+   "sourceFile": "ICON_next.png",
+   "sourceFileDate": "2026-11-26T17:00:13.925Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "445deef99853d455c93f6b6d97735bb353378d4e4137ee0e9c388e562164b0d4",
+   "originalFormat": "PNG",
+   "originalBytes": 17262,
+   "originalFile": "ICON_next.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 512,
+    "h": 512
+   },
+   "aspect": "exact",
+   "hasAlpha": true,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "ICON_next.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 6624
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "ICON_pause": {
+   "id": "ICON_pause",
+   "file": "ICON_pause.png",
+   "command": 98,
+   "set": "icons",
+   "block": "F",
+   "prompt": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: pause.",
+   "promptSha256": "4e0e9e04417e4a74d9fae04d732dfb72732db77a4bbf408d51c7b7d8653c4db2",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T17:02:11.164Z",
+   "sourceFile": "ICON_pause.png",
+   "sourceFileDate": "2026-11-26T17:00:14.085Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "e956908b375ed73051828060c830ab33dc38579d0440516e446b0fca63f3baf1",
+   "originalFormat": "PNG",
+   "originalBytes": 14157,
+   "originalFile": "ICON_pause.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 512,
+    "h": 512
+   },
+   "aspect": "exact",
+   "hasAlpha": true,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "ICON_pause.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 8104
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "ICON_play": {
+   "id": "ICON_play",
+   "file": "ICON_play.png",
+   "command": 98,
+   "set": "icons",
+   "block": "F",
+   "prompt": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: play.",
+   "promptSha256": "3e41359e5b40db49a43c4dad9efa12570692522d64947a063f94f599bb1664c8",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T17:02:11.164Z",
+   "sourceFile": "ICON_play.png",
+   "sourceFileDate": "2026-11-26T17:00:14.105Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "c9eaa383c946c733106efab343372fa1237ce59fd9e72768e5cc859d55bb3350",
+   "originalFormat": "PNG",
+   "originalBytes": 23830,
+   "originalFile": "ICON_play.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 512,
+    "h": 512
+   },
+   "aspect": "exact",
+   "hasAlpha": true,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "ICON_play.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 11858
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "ICON_profile": {
+   "id": "ICON_profile",
+   "file": "ICON_profile.png",
+   "command": 98,
+   "set": "icons",
+   "block": "F",
+   "prompt": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: profile.",
+   "promptSha256": "3f5d73943cd6715149183a81d99b44a7e2b19aac20b33e9f0b1973f91e416578",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T17:02:11.164Z",
+   "sourceFile": "ICON_profile.png",
+   "sourceFileDate": "2026-11-26T17:00:14.177Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "f4a1e49dbf7810fe232bcb319d555eb12a71e37e1f4daeb53e15af27785cf771",
+   "originalFormat": "PNG",
+   "originalBytes": 27348,
+   "originalFile": "ICON_profile.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 512,
+    "h": 512
+   },
+   "aspect": "exact",
+   "hasAlpha": true,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "ICON_profile.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 13778
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "ICON_read": {
+   "id": "ICON_read",
+   "file": "ICON_read.png",
+   "command": 98,
+   "set": "icons",
+   "block": "F",
+   "prompt": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: read.",
+   "promptSha256": "9ea800fd6043a64d4ab65609db574f22d0b670068ecd088c64d8e86c6272ad73",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T17:02:11.164Z",
+   "sourceFile": "ICON_read.png",
+   "sourceFileDate": "2026-11-26T17:00:14.769Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "296e973658ae09d19230c3f5be58d2b75d63f76eba5ee7097153e30134cbd834",
+   "originalFormat": "PNG",
+   "originalBytes": 19679,
+   "originalFile": "ICON_read.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 512,
+    "h": 512
+   },
+   "aspect": "exact",
+   "hasAlpha": true,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "ICON_read.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 11140
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "ICON_replay": {
+   "id": "ICON_replay",
+   "file": "ICON_replay.png",
+   "command": 98,
+   "set": "icons",
+   "block": "F",
+   "prompt": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: replay.",
+   "promptSha256": "65ca8852ade81f62b49e4d34684266719547826132cbbad2d51be90edacc4e1f",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T17:02:11.164Z",
+   "sourceFile": "ICON_replay.png",
+   "sourceFileDate": "2026-11-26T17:00:14.341Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "49cf01e8129500c161f1f979f973ef941e3a03960d1a26a513813ecebf4f2320",
+   "originalFormat": "PNG",
+   "originalBytes": 31063,
+   "originalFile": "ICON_replay.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 512,
+    "h": 512
+   },
+   "aspect": "exact",
+   "hasAlpha": true,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "ICON_replay.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 15842
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "ICON_retry": {
+   "id": "ICON_retry",
+   "file": "ICON_retry.png",
+   "command": 98,
+   "set": "icons",
+   "block": "F",
+   "prompt": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: retry.",
+   "promptSha256": "19710aa261b0c5caddcf6349ef3bf6ee82da5149b927267336e517ee6a168758",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T17:02:11.164Z",
+   "sourceFile": "ICON_retry.png",
+   "sourceFileDate": "2026-11-26T17:00:14.425Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "6b7ce1967b99e3858617da85f5e369201e1cdc893457c2974d2ff8c5c31089c3",
+   "originalFormat": "PNG",
+   "originalBytes": 29598,
+   "originalFile": "ICON_retry.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 512,
+    "h": 512
+   },
+   "aspect": "exact",
+   "hasAlpha": true,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "ICON_retry.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 15378
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "ICON_search": {
+   "id": "ICON_search",
+   "file": "ICON_search.png",
+   "command": 98,
+   "set": "icons",
+   "block": "F",
+   "prompt": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: search.",
+   "promptSha256": "3ccb052b2ba325b493df96fce94b0c0aabaccda227dce801b26b2b7280434186",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T17:02:11.164Z",
+   "sourceFile": "ICON_search.png",
+   "sourceFileDate": "2026-11-26T17:00:14.661Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "1b88b4c7799dc72de669710d4bcfbc3aaf0da19a2851dd5eeda420a46b7ea044",
+   "originalFormat": "PNG",
+   "originalBytes": 25691,
+   "originalFile": "ICON_search.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 512,
+    "h": 512
+   },
+   "aspect": "exact",
+   "hasAlpha": true,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "ICON_search.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 12076
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "ICON_settings": {
+   "id": "ICON_settings",
+   "file": "ICON_settings.png",
+   "command": 98,
+   "set": "icons",
+   "block": "F",
+   "prompt": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: settings.",
+   "promptSha256": "204001a282e7d341de2fada83c94afeada0588da8850b6234714a193f7a1ef2f",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T17:02:11.164Z",
+   "sourceFile": "ICON_settings.png",
+   "sourceFileDate": "2026-11-26T17:00:14.649Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "ea57da20509acf45ba82897938a54cc498efbcf92fc4363d1267a8562665dd06",
+   "originalFormat": "PNG",
+   "originalBytes": 36034,
+   "originalFile": "ICON_settings.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 512,
+    "h": 512
+   },
+   "aspect": "exact",
+   "hasAlpha": true,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "ICON_settings.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 18472
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "ICON_shabbat_candles": {
+   "id": "ICON_shabbat_candles",
+   "file": "ICON_shabbat_candles.png",
+   "command": 98,
+   "set": "icons",
+   "block": "F",
+   "prompt": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: shabbat candles.",
+   "promptSha256": "a6b980f1ecf84ab53b3b449857b4dae596cf76cd01929b5799d7ed244fedc10a",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T17:02:11.164Z",
+   "sourceFile": "ICON_shabbat_candles.png",
+   "sourceFileDate": "2026-11-26T17:00:14.873Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "41a589f5e724f86318bb1f922b0dd40a15450439f17b4221ad52324daf8d4864",
+   "originalFormat": "PNG",
+   "originalBytes": 28127,
+   "originalFile": "ICON_shabbat_candles.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 512,
+    "h": 512
+   },
+   "aspect": "exact",
+   "hasAlpha": true,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "ICON_shabbat_candles.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 15634
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "ICON_share": {
+   "id": "ICON_share",
+   "file": "ICON_share.png",
+   "command": 98,
+   "set": "icons",
+   "block": "F",
+   "prompt": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: share.",
+   "promptSha256": "138c63ae62451547ebb4e8642362827f8f0540eb6be96b57a9a8d6b058b609c7",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T17:02:11.164Z",
+   "sourceFile": "ICON_share.png",
+   "sourceFileDate": "2026-11-26T17:00:14.897Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "913e7080eec5dabd7e650f64f570fee9fd7c2157d412a123dcc596808c07f238",
+   "originalFormat": "PNG",
+   "originalBytes": 26522,
+   "originalFile": "ICON_share.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 512,
+    "h": 512
+   },
+   "aspect": "exact",
+   "hasAlpha": true,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "ICON_share.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 13056
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "ICON_slow": {
+   "id": "ICON_slow",
+   "file": "ICON_slow.png",
+   "command": 98,
+   "set": "icons",
+   "block": "F",
+   "prompt": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: slow.",
+   "promptSha256": "9c44266ef6dcce7079a301f78c9eb5df7f25b907918766bd4b391c014b61a8c0",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T17:02:11.164Z",
+   "sourceFile": "ICON_slow.png",
+   "sourceFileDate": "2026-11-26T17:00:15.101Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "531143d6a4bb7c83fc7abf4848f1e3721f092c7a3128b51d6656986964152cc8",
+   "originalFormat": "PNG",
+   "originalBytes": 31521,
+   "originalFile": "ICON_slow.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 512,
+    "h": 512
+   },
+   "aspect": "exact",
+   "hasAlpha": true,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "ICON_slow.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 17506
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "ICON_sound_off": {
+   "id": "ICON_sound_off",
+   "file": "ICON_sound_off.png",
+   "command": 98,
+   "set": "icons",
+   "block": "F",
+   "prompt": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: sound off.",
+   "promptSha256": "6862ca182c1a70e701e8e40b1206fb9bf758be1f3cdb4c3034fbbd05d6fa423d",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T17:02:11.164Z",
+   "sourceFile": "ICON_sound_off.png",
+   "sourceFileDate": "2026-11-26T17:00:15.213Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "d5849d9e9412abf3f54cd5d4dcc29318f22b2f220a048f0a40be30654fe81753",
+   "originalFormat": "PNG",
+   "originalBytes": 29147,
+   "originalFile": "ICON_sound_off.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 512,
+    "h": 512
+   },
+   "aspect": "exact",
+   "hasAlpha": true,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "ICON_sound_off.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 13688
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "ICON_sound_on": {
+   "id": "ICON_sound_on",
+   "file": "ICON_sound_on.png",
+   "command": 98,
+   "set": "icons",
+   "block": "F",
+   "prompt": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: sound on.",
+   "promptSha256": "95f3b02abe3ffe1e7958f3a210040869717ec7c9c617652748b51a53b47e0b15",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T17:02:11.164Z",
+   "sourceFile": "ICON_sound_on.png",
+   "sourceFileDate": "2026-11-26T17:00:15.401Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "736a4174e546eb9d80bf5c76b9d7e78cef244f8f70e27ecc9957b1ef23948183",
+   "originalFormat": "PNG",
+   "originalBytes": 26480,
+   "originalFile": "ICON_sound_on.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 512,
+    "h": 512
+   },
+   "aspect": "exact",
+   "hasAlpha": true,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "ICON_sound_on.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 13522
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "ICON_speak": {
+   "id": "ICON_speak",
+   "file": "ICON_speak.png",
+   "command": 98,
+   "set": "icons",
+   "block": "F",
+   "prompt": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: speak.",
+   "promptSha256": "6eb112212f80211bc12cf8f76784554a02683b7de7b2f09057ac68dcf0453f96",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T17:02:11.164Z",
+   "sourceFile": "ICON_speak.png",
+   "sourceFileDate": "2026-11-26T17:00:15.401Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "0ebc22e30ba8efe539096f4b26595a4412cd7be77cfe804b4bafdf8062087298",
+   "originalFormat": "PNG",
+   "originalBytes": 26483,
+   "originalFile": "ICON_speak.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 512,
+    "h": 512
+   },
+   "aspect": "exact",
+   "hasAlpha": true,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "ICON_speak.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 13868
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "ICON_star": {
+   "id": "ICON_star",
+   "file": "ICON_star.png",
+   "command": 98,
+   "set": "icons",
+   "block": "F",
+   "prompt": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: star.",
+   "promptSha256": "1726776695a8fd9ac922685ceb1e1c0cebe2c2ec291a4a392776427bcb925632",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T17:02:11.164Z",
+   "sourceFile": "ICON_star.png",
+   "sourceFileDate": "2026-11-26T17:00:15.889Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "9ae421ab1ece77c9c35975af2d643c115a058a1e5ffd2d97b3c1bf8d6d220b85",
+   "originalFormat": "PNG",
+   "originalBytes": 29238,
+   "originalFile": "ICON_star.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 512,
+    "h": 512
+   },
+   "aspect": "exact",
+   "hasAlpha": true,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "ICON_star.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 15150
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "ICON_streak_flame": {
+   "id": "ICON_streak_flame",
+   "file": "ICON_streak_flame.png",
+   "command": 98,
+   "set": "icons",
+   "block": "F",
+   "prompt": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: streak flame.",
+   "promptSha256": "fcdc32980005f5550d604334a18aaf633575f49ada541317e454da274faaf6d6",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T17:02:11.164Z",
+   "sourceFile": "ICON_streak_flame.png",
+   "sourceFileDate": "2026-11-26T17:00:17.013Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "2fc2f642624bd7ceebafd825345f9c6bc1bd671139557a378a30ab00480e17f0",
+   "originalFormat": "PNG",
+   "originalBytes": 30910,
+   "originalFile": "ICON_streak_flame.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 512,
+    "h": 512
+   },
+   "aspect": "exact",
+   "hasAlpha": true,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "ICON_streak_flame.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 16088
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "ICON_synagogue": {
+   "id": "ICON_synagogue",
+   "file": "ICON_synagogue.png",
+   "command": 98,
+   "set": "icons",
+   "block": "F",
+   "prompt": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: synagogue.",
+   "promptSha256": "63cb900b051196ba8466c37075154e9cbdae6f3fe1ec4b6561f01fb5e64cf431",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T17:02:11.164Z",
+   "sourceFile": "ICON_synagogue.png",
+   "sourceFileDate": "2026-11-26T17:00:17.753Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "591ae4f10da16be1d9b1f1a054da2bc5ecf0ca3c1ffccc87f5d2ddf125fba268",
+   "originalFormat": "PNG",
+   "originalBytes": 33263,
+   "originalFile": "ICON_synagogue.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 512,
+    "h": 512
+   },
+   "aspect": "exact",
+   "hasAlpha": true,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "ICON_synagogue.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 19418
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "ICON_trace": {
+   "id": "ICON_trace",
+   "file": "ICON_trace.png",
+   "command": 98,
+   "set": "icons",
+   "block": "F",
+   "prompt": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: trace.",
+   "promptSha256": "1fdc79448e99ca45f9672876125c1d66fd77faece2ddfee19fe0ce8f00a76493",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T17:02:11.164Z",
+   "sourceFile": "ICON_trace.png",
+   "sourceFileDate": "2026-11-26T17:00:17.141Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "2577c71cbfa66ae453547da261c1d6758018808336a4f841287568c8808e9405",
+   "originalFormat": "PNG",
+   "originalBytes": 28713,
+   "originalFile": "ICON_trace.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 512,
+    "h": 512
+   },
+   "aspect": "exact",
+   "hasAlpha": true,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "ICON_trace.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 14872
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "ICON_translate": {
+   "id": "ICON_translate",
+   "file": "ICON_translate.png",
+   "command": 98,
+   "set": "icons",
+   "block": "F",
+   "prompt": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: translate.",
+   "promptSha256": "6153d9b9970538da1271b5d9b239dc274c2e2f8ca5b37a60940467b056b0c7bc",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T17:02:11.164Z",
+   "sourceFile": "ICON_translate.png",
+   "sourceFileDate": "2026-11-26T17:00:17.433Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "58e067a1a913ada65c7fd6edc4ee54fce94e6142ab889e51a7f07b107364ea4e",
+   "originalFormat": "PNG",
+   "originalBytes": 21224,
+   "originalFile": "ICON_translate.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 512,
+    "h": 512
+   },
+   "aspect": "exact",
+   "hasAlpha": true,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "ICON_translate.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 11016
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "ICON_trophy": {
+   "id": "ICON_trophy",
+   "file": "ICON_trophy.png",
+   "command": 98,
+   "set": "icons",
+   "block": "F",
+   "prompt": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: trophy.",
+   "promptSha256": "6d131f5edc677a130c09d9f7ca3f3e71a2cf8c06a93ba3fa20a325f190059aac",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T17:02:11.164Z",
+   "sourceFile": "ICON_trophy.png",
+   "sourceFileDate": "2026-11-26T17:00:17.409Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "814391950ae9b56ae9e32a9081a69a297844ae96d52afa783ad0c32af82aef74",
+   "originalFormat": "PNG",
+   "originalBytes": 24503,
+   "originalFile": "ICON_trophy.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 512,
+    "h": 512
+   },
+   "aspect": "exact",
+   "hasAlpha": true,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "ICON_trophy.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 12900
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "ICON_unlock": {
+   "id": "ICON_unlock",
+   "file": "ICON_unlock.png",
+   "command": 98,
+   "set": "icons",
+   "block": "F",
+   "prompt": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: unlock.",
+   "promptSha256": "17de5d77964cecacf4eddc0ffed2deea90357564a3ffe36c07c9121b44f0369c",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T17:02:11.164Z",
+   "sourceFile": "ICON_unlock.png",
+   "sourceFileDate": "2026-11-26T17:00:17.469Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "2337795af2df69cf8c0abab6ab5f1c8078762ac07d0df203504221822ef30492",
+   "originalFormat": "PNG",
+   "originalBytes": 20573,
+   "originalFile": "ICON_unlock.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 512,
+    "h": 512
+   },
+   "aspect": "exact",
+   "hasAlpha": true,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "ICON_unlock.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 10794
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "ICON_vowels": {
+   "id": "ICON_vowels",
+   "file": "ICON_vowels.png",
+   "command": 98,
+   "set": "icons",
+   "block": "F",
+   "prompt": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: vowels.",
+   "promptSha256": "73060d40a915ab782a202fee52378730047d5715ed60994effa779783a02bcc5",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T17:02:11.164Z",
+   "sourceFile": "ICON_vowels.png",
+   "sourceFileDate": "2026-11-26T17:00:17.669Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "4661412174277d58b699a3b4201a3ab7ce316f6e635ec73ef51395c9be2d4e70",
+   "originalFormat": "PNG",
+   "originalBytes": 10811,
+   "originalFile": "ICON_vowels.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 512,
+    "h": 512
+   },
+   "aspect": "exact",
+   "hasAlpha": true,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "ICON_vowels.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 5500
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "ICON_woman_voice": {
+   "id": "ICON_woman_voice",
+   "file": "ICON_woman_voice.png",
+   "command": 98,
+   "set": "icons",
+   "block": "F",
+   "prompt": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: woman voice.",
+   "promptSha256": "e8f2c5402807c16d521783ff52355a4899e3b7817fbcce40f4d752c747c49bcf",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T17:02:11.164Z",
+   "sourceFile": "ICON_woman_voice.png",
+   "sourceFileDate": "2026-11-26T17:00:17.865Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "e8dd5a05f8d3db66eba08f181b819bb112cca5a21c17bb1d145f188bd0daab06",
+   "originalFormat": "PNG",
+   "originalBytes": 39301,
+   "originalFile": "ICON_woman_voice.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 512,
+    "h": 512
+   },
+   "aspect": "exact",
+   "hasAlpha": true,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "ICON_woman_voice.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 21152
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "ICON_write": {
+   "id": "ICON_write",
+   "file": "ICON_write.png",
+   "command": 98,
+   "set": "icons",
+   "block": "F",
+   "prompt": "Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: write.",
+   "promptSha256": "7726d056af0be15e0c5a4f7f818defae442c273155623e72a323d0d44d242dd6",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T17:02:11.164Z",
+   "sourceFile": "ICON_write.png",
+   "sourceFileDate": "2026-11-26T17:00:19.045Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "1eb929d0b5570c7149db64a36af4dc6b1dc4b46443b18ef15fcb426576ab9da3",
+   "originalFormat": "PNG",
+   "originalBytes": 28292,
+   "originalFile": "ICON_write.png",
+   "width": 512,
+   "height": 512,
+   "expected": {
+    "w": 512,
+    "h": 512
+   },
+   "aspect": "exact",
+   "hasAlpha": true,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 512,
+     "file": "ICON_write.512.webp",
+     "width": 512,
+     "height": 512,
+     "bytes": 13316
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "PLACE_telaviv_10": {
+   "id": "PLACE_telaviv_10",
+   "file": "PLACE_telaviv_10.png",
+   "command": 201,
+   "set": "Tel Aviv–Jaffa",
+   "block": "N",
+   "prompt": "Command 201 (Tel Aviv–Jaffa): A white Bauhaus building with curved balconies; a beach boulevard with palms and cyclists; an old port with fishing boats (Jaffa side); a clock tower on a rise above old streets (clock face blank, hands only); a flea-market lane of furniture and rugs (no signs); a boulevard of ficus trees with benches; a beach at sunset with a lifeguard tower; a modern tower cluster seen from the beach (distant, generic); a café row under awnings at night with string lights; a hilltop view where the old port meets the new skyline across the bay. Image 10 of 10: a hilltop view where the old port meets the new skyline across the bay. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "f73a4ddd86804bcdcd98d900b5f51756ec177803a2858e66ec18df4b895f419f",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T17:02:11.164Z",
+   "sourceFile": "PLACE_telaviv_10.png",
+   "sourceFileDate": "2026-11-26T17:02:11.130Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "9c1bd694936f01618fb7798120b9e5579b8cb2b73d2a23f70a5fb197cbcbf893",
+   "originalFormat": "PNG",
+   "originalBytes": 2032493,
+   "originalFile": "PLACE_telaviv_10.png",
+   "width": 1536,
+   "height": 1024,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "substituted",
+   "aspectNote": "manifest asks 1792x1024; got 1536x1024 (native landscape aspect). Not cropped or stretched.",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "PLACE_telaviv_10.800.webp",
+     "width": 800,
+     "height": 533,
+     "bytes": 98654
+    },
+    {
+     "edge": 1536,
+     "file": "PLACE_telaviv_10.1536.webp",
+     "width": 1536,
+     "height": 1024,
+     "bytes": 228356
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [
+    "aspect_substituted"
+   ],
+   "humanApproved": true
   }
  }
 }

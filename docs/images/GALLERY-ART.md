@@ -1,6 +1,6 @@
 # Aleph Gallery art: green and gold
 
-Order sheet: `docs/images/gallery-art.csv` (6 rows: 1 header, 5 pictures). Nothing in this sheet has been drawn yet.
+Order sheet: `docs/images/gallery-art.csv` (6 rows: 1 header, 5 pictures). All five were drawn and reviewed on 2026-11-26 and saved in `assets/img/gallery/` (PNG plus a WebP copy); the gallery page itself is not in this repo, so wiring them in is still to do there.
 
 ## Why
 

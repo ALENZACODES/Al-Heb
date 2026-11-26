@@ -125,7 +125,9 @@ def main():
     rows = []
     for f in files:
         o = q[f]
-        for v in verdicts(o, W[f], SEG.get(f) or P[f], X.get(f, {}), phon_models):
+        # lines: the word-by-word hearing of each phonetic check where it ran, the whole-line hearing for the others
+        Pf = dict(P[f]); Pf.update(SEG.get(f, {}))
+        for v in verdicts(o, W[f], Pf, X.get(f, {}), phon_models):
             total += 1
             confirmed += bool(v['ok'])
             if not v['ok']:

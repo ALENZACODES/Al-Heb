@@ -12,7 +12,7 @@ elif [ "$1" = r3 ]; then L=tools/audio/asr-check/round3-list.txt; O=~/aleph-take
 elif [ "$1" = stt ]; then
   git sparse-checkout set --no-cone --stdin < tools/audio/asr-check/${3:-extra-paths.txt}; find audio -name '*.mp3' | wc -l
   gcloud services enable speech.googleapis.com --project "$P"
-  command -v ffmpeg >/dev/null || sudo apt-get -qq install -y ffmpeg >/dev/null
+  command -v ffmpeg >/dev/null || { sudo apt-get -qq update >/dev/null 2>&1; sudo apt-get -qq install -y ffmpeg >/dev/null 2>&1; }
   python3 tools/audio/asr-check/google_stt.py --root . --queue tools/audio/asr-check/${2:-extra-queue.json} --out ~/stt-hearings.jsonl
   cloudshell download ~/stt-hearings.jsonl || true; echo CS-DONE; exit 0
 elif [ "$1" = r5 ]; then L=tools/audio/asr-check/round5-list.txt; O=~/aleph-takes-r5; X="--takes none --words5 tools/audio/asr-check/round5-words.json"

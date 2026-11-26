@@ -49,6 +49,7 @@ def dur(path):
 
 RESPELL = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'round4-respell.json')
 PROBLEMS = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'round3-problems.json')
+RESPELL_LINES = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'round5-respell-lines.json')
 
 
 def take_source(f, g, tid, want):
@@ -58,6 +59,14 @@ def take_source(f, g, tid, want):
     km = C.ktiv_male(pt)
     base = re.sub(r'-(90|80|ph|cut)$', '', re.sub(r'-cut$', '', tid))
     base = re.sub(r'-(90|80|ph)$', '', base)
+    if '-rs' in tid:                                              # round 5: problem words respelled for the voice
+        bad = {re.sub(r'[\u0591-\u05C7]', '', w) for w in json.load(open(RESPELL_LINES, encoding='utf-8')).get(f, [])}
+        rs = ' '.join(C.respell(w) if re.sub(r'[\u0591-\u05C7]', '', w) in bad else w for w in pt.split())
+        if tid.startswith('w-'):
+            return wavenet, rs
+        if 'rspl' in tid:
+            return chirp, C.plain(rs)
+        return chirp, ('הַמִּלָּה, ' + rs + '.' if 'car' in tid else rs)
     if re.match(r's\d', tid):                                   # round 4: the word respelled
         sp = json.load(open(RESPELL, encoding='utf-8'))[f][int(tid[1])]
         voice = C.ALT[g][0] if base.endswith('-a') else chirp
@@ -162,6 +171,8 @@ def main():
                     good = False; notes.append(f'{tid}: phonetic checks hear it no better than the clip ({mt:.2f} vs {mo:.2f})')
             else:
                 good = key[:2] < key0[:2] and len(s['b3']) <= len(s0['b3']) and len(s['b2']) <= len(s0['b2']) + len(s0['b3'])
+                if not good:
+                    notes.append(f"{tid}: word checks no better ({len(s['b3'])}+{len(s['b2'])} vs {len(s0['b3'])}+{len(s0['b2'])} misheard by 3+/2)")
             if good and PH:
                 po, pt_ = phon_ok(f), phon_ok('takes/' + f[:-4] + '/' + tid + '.mp3')
                 if pt_ is None:
@@ -201,6 +212,7 @@ def main():
                             checkedBy='four-listener ASR check (docs/audio/multi4), machine check only')
                 json.dump(meta, open(mp, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
         rows.append(row)
+    json.dump(rows, open(a.out + '.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1, default=str)
 
     def fmt(kind, s):
         ph = f" ({s['phon']})" if s.get('phon') else ''

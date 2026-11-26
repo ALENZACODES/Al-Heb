@@ -83,6 +83,30 @@ class TTS:
                 raise RuntimeError(f'{e.code} {msg}')
 
 
+
+# --- round 5: a problem word written the way it should sound, for the voice only ------------------------------------
+DAGESH, KAMATZ, HOLAM = '\u05BC', '\u05B8', '\u05B9'
+SAY_AS = {'מְצַוְּךָ': 'מְצַוֶּוְךָ'}
+
+
+def respell(w):
+    """The voices ignore the soft/hard letter rule and the kamatz katan: soft ב -> ו, soft כ (not final) -> ח,
+    כָּל -> כֹּל. The clip's text stays the real word; only what is sent to the voice changes."""
+    if w in SAY_AS:
+        return SAY_AS[w]
+    cl = re.findall(r'[\u05D0-\u05EA][\u0591-\u05C7]*|[^\u05D0-\u05EA]+', w)     # letter + its marks
+    out = []
+    for i, c in enumerate(cl):
+        base, marks = c[0], c[1:]
+        if base == 'כ' and KAMATZ in marks and i + 1 < len(cl) and cl[i + 1][0] == 'ל' and (
+                i + 2 == len(cl) or not re.match(r'[\u05D0-\u05EA]', cl[i + 2][0])):
+            marks = marks.replace(KAMATZ, HOLAM)                                    # כָּל, וְכָל, דְכָל: kol
+        if base in 'בכ' and DAGESH not in marks and not (base == 'כ' and i == len(cl) - 1):
+            base = {'ב': 'ו', 'כ': 'ח'}[base]
+        out.append(base + marks)
+    return ''.join(out)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--list', required=True, help='clip paths, one per line')
@@ -92,10 +116,13 @@ def main():
     ap.add_argument('--problems', help='JSON {clip: [problem words]}: lines get those words in full spelling only (c-sel)')
     ap.add_argument('--respell', help='JSON {clip: [spellings]}: a single word Chirp misreads, written the way it should sound '
                                       '(s<i>, s<i>-90, s<i>-a other voice, s<i>-car inside the carrier phrase)')
+    ap.add_argument('--respell-lines', help='JSON {clip: [problem words]}: the clip with those words respelled for the voice '
+                                            '(w-rs WaveNet pointed, c-rspl-80 Chirp unpointed at 0.8, c-rs Chirp for single words)')
     ap.add_argument('--project', default=subprocess.run(['gcloud', 'config', 'get-value', 'project'], capture_output=True, text=True).stdout.strip())
     a = ap.parse_args()
     probs = json.load(open(a.problems, encoding='utf-8')) if a.problems else {}
     resp = json.load(open(a.respell, encoding='utf-8')) if a.respell else {}
+    rsl = json.load(open(a.respell_lines, encoding='utf-8')) if a.respell_lines else {}
     want = {o['file']: re.sub(r'\s*\(cut from:.*\)\s*$', '', o['want']) for o in json.load(open(a.queue, encoding='utf-8'))}
     files = [l.strip() for l in open(a.list, encoding='utf-8') if l.startswith('audio/')]
     tts = TTS(a.project)
@@ -127,8 +154,14 @@ def main():
             for i, sp in enumerate(resp[f]):
                 plan += [(f's{i}', sp, chirp, 1.0), (f's{i}-90', sp, chirp, 0.9), (f's{i}-a', sp, ALT[g][0], 1.0),
                          (f's{i}-car', 'הַמִּלָּה, ' + sp + '.', chirp, 1.0)]
+        if f in rsl:               # round 5: problem words respelled, the rest as written
+            bad = {re.sub(r'[\u0591-\u05C7]', '', w) for w in rsl[f]}
+            rs = ' '.join(respell(w) if re.sub(r'[\u0591-\u05C7]', '', w) in bad else w for w in pt.split())
+            plan = [('w-rs', rs, wavenet, 1.0), ('c-rspl-80', plain(rs), chirp, 0.8)]
+            if len(pt.split()) <= 2:
+                plan = [('w-rs', rs, wavenet, 1.0), ('c-rs', rs, chirp, 1.0), ('c-rs-car', 'הַמִּלָּה, ' + rs + '.', chirp, 1.0)]
         for tid, text, voice, rate in plan:
-            if tid not in a.takes.split(',') and not (f in resp and tid.startswith('s')):
+            if tid not in a.takes.split(',') and not (f in resp and tid.startswith('s')) and not (f in rsl and '-rs' in tid):
                 continue
             dst = os.path.join(d, tid + '.mp3')
             if os.path.exists(dst):

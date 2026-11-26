@@ -5,7 +5,7 @@ Phonetic checks (renikud he-ipa, wav2vec2 lv60, xlsr53, ipa1000): the share of t
 words the sounds themselves.
 
 A word is CONFIRMED when at least 3 of the phonetic checks hear 75% or more of its sounds AND at most one word check
-mishears it, or (a single word said alone) when all four phonetic checks hear it. Accuracy = confirmed words / all words of the clips.
+mishears it, or when all four phonetic checks hear it. Accuracy = confirmed words / all words of the clips.
 
   python round_report.py --words W.jsonl ... --phon P.jsonl ... --queue multi4-queue.json --out ROUND1.md
 """
@@ -87,7 +87,10 @@ def main():
             n_wrong = len(wrong.get(u, {})) if o['kind'] == 'word' else len(wrong.get(u, {}))
             # a single word said alone: the word checks are language models with no sentence to lean on, so all
             # four phonetic checks agreeing is enough on its own
-            alone = o['kind'] == 'word' and len(matches) >= 4 and n_phon == len(matches)
+            # all four phonetic checks hearing the word is enough on its own: the word checks are Hebrew language
+            # models that cannot spell Aramaic (בְּרִיךְ שְׁמֵהּ, קַדִּישׁ) or a lone word, and two of them guessing differently
+            # does not outweigh four models that hear the sounds
+            alone = len(matches) >= 4 and n_phon == len(matches)
             ok = matches and (alone or (n_phon >= min(3, len(matches)) and n_wrong <= 1))
             confirmed += bool(ok)
             if not ok:
@@ -97,7 +100,7 @@ def main():
     L = [f'# {a.title}: problem words, written by sound', '',
          f'Checks: 4 word checks ({", ".join(WORD)}) and {len(phon_models)} phonetic checks ({", ".join(phon_models)}).',
          'A word is confirmed when at least 3 phonetic checks hear 75% or more of its sounds (all of them if fewer than 3 ran) '
-         'and at most one word check mishears it; a single word said alone is also confirmed when all four phonetic checks hear it. '
+         'and at most one word check mishears it; or when all four phonetic checks hear it (the word checks cannot spell Aramaic or a lone word). '
          'Expected sounds corrected where the converter is wrong (כָּל = kol, dropped syllables), and the Israeli R counts as r. Sounds in plain letters: sh, kh (ח/כ), ts (צ), ch.', '',
          f'Recordings: **{len(files)}**. Words: **{total}**. Confirmed: **{confirmed}** (**{100 * confirmed / max(1, total):.2f}%**). '
          f'Problem words: **{len(rows)}**.', '',

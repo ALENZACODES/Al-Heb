@@ -154,7 +154,8 @@ def review2(text, heard_ipa):
     English-trained phoneme models write as g or a gh sound) counted as r."""
     import difflib
     ws, exp = expected2(text)
-    r_as = lambda s: s.replace('g', 'r')
+    # Israeli R heard as g; the y-glide after a vowel written as a vowel by English-trained models (adonai / adonaj)
+    r_as = lambda s: re.sub(r'(?<=[aeiou])j', 'i', s.replace('g', 'r'))
     got = r_as(fold2(heard_ipa).replace(' ', ''))
     target = r_as(''.join(exp))
     sm = difflib.SequenceMatcher(a=target, b=got, autojunk=False)

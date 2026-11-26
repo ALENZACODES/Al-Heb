@@ -459,7 +459,7 @@ export async function mount(root, ctx = /** @type {any} */ ({})) {
       const he = f ? f.he : p.he; const tr = f ? f.translit : p.translit;
       const card = el('div', { class: 'crp-card' },
         heEl('div', he, 'crp-he'),
-        el('div', { class: 'meta' }, el('div', {}, el('strong', {}, p.en), el('span', { class: 'crp-badge' }, p.register), p.register === 'slang' ? el('span', { class: 'crp-badge' }, 'native review needed') : null),
+        el('div', { class: 'meta' }, el('div', {}, el('strong', {}, p.en), el('span', { class: 'crp-badge' }, p.register), ' ', p.register === 'slang' ? el('span', { class: 'crp-badge' }, 'native review needed') : null),
           state.translit ? el('div', { class: 'crp-tr' }, tr) : null,
           p.notes ? el('div', { class: 'crp-gl' }, p.notes) : null),
         audioButton(el, ctx, { kind: /\s/.test(he) ? 'line' : 'word', id: p.gendered ? `${p.id}-${state.gender}` : p.id, text: speechText(he), class: 'crp-play', label: 'Play', name: p.en }));

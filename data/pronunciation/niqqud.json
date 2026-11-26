@@ -764,8 +764,8 @@
    "israeliQuality": "mark",
    "ipa": {
     "israeli": "hardens bet/kaf/pe to [b][k][p]; gemination absent",
-    "sephardi": "hardens bet/kaf/pe to [b][k][p]; (gemination not covered by the sources fetched)",
-    "ashkenazi": "hardens bet/kaf/pe to [b][k][p]; (gemination not covered by the sources fetched)"
+    "sephardi": "hardens bet/kaf/pe to [b][k][p]",
+    "ashkenazi": "hardens bet/kaf/pe to [b][k][p]"
    },
    "english": {
     "israeli": "no sound of its own; makes b, k, p instead of v, kh, f",

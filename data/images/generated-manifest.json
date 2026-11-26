@@ -2,8 +2,26 @@
   "version": 1,
   "note": "APPROVED generated images only (see docs/images/RIGHTS.md). Files live in assets/img/gen/. Built by tools/images/ingest.mjs; do not edit by hand.",
   "dir": "gen",
-  "count": 1872,
+  "count": 1935,
   "images": {
+    "AWD_pin_01": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "AWD_pin_01.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "AWD_pin_01.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
     "AWD_pin_03": {
       "w": 1024,
       "h": 1024,
@@ -1786,6 +1804,60 @@
         }
       ]
     },
+    "CTX_clothes_01": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "CTX_clothes_01.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "CTX_clothes_01.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "CTX_clothes_02": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "CTX_clothes_02.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "CTX_clothes_02.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "CTX_clothes_03": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "CTX_clothes_03.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "CTX_clothes_03.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
     "CTX_clothes_04": {
       "w": 512,
       "h": 293,
@@ -1795,6 +1867,24 @@
           "file": "CTX_clothes_04.512.webp",
           "w": 512,
           "h": 293
+        }
+      ]
+    },
+    "CTX_clothes_05": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "CTX_clothes_05.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "CTX_clothes_05.1536.webp",
+          "w": 1536,
+          "h": 1024
         }
       ]
     },
@@ -1937,6 +2027,24 @@
         {
           "edge": 1536,
           "file": "CTX_food_07.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "CTX_food_08": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "CTX_food_08.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "CTX_food_08.1536.webp",
           "w": 1536,
           "h": 1024
         }
@@ -5998,6 +6106,114 @@
         }
       ]
     },
+    "HOL_roshhashana_03": {
+      "w": 1792,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "HOL_roshhashana_03.800.webp",
+          "w": 800,
+          "h": 457
+        },
+        {
+          "edge": 1600,
+          "file": "HOL_roshhashana_03.1600.webp",
+          "w": 1600,
+          "h": 914
+        }
+      ]
+    },
+    "HOL_roshhashana_05": {
+      "w": 1792,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "HOL_roshhashana_05.800.webp",
+          "w": 800,
+          "h": 457
+        },
+        {
+          "edge": 1600,
+          "file": "HOL_roshhashana_05.1600.webp",
+          "w": 1600,
+          "h": 914
+        }
+      ]
+    },
+    "HOL_yomkippur_01": {
+      "w": 1792,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "HOL_yomkippur_01.800.webp",
+          "w": 800,
+          "h": 457
+        },
+        {
+          "edge": 1600,
+          "file": "HOL_yomkippur_01.1600.webp",
+          "w": 1600,
+          "h": 914
+        }
+      ]
+    },
+    "HOL_yomkippur_02": {
+      "w": 1792,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "HOL_yomkippur_02.800.webp",
+          "w": 800,
+          "h": 457
+        },
+        {
+          "edge": 1600,
+          "file": "HOL_yomkippur_02.1600.webp",
+          "w": 1600,
+          "h": 914
+        }
+      ]
+    },
+    "HOL_yomkippur_03": {
+      "w": 1792,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "HOL_yomkippur_03.800.webp",
+          "w": 800,
+          "h": 457
+        },
+        {
+          "edge": 1600,
+          "file": "HOL_yomkippur_03.1600.webp",
+          "w": 1600,
+          "h": 914
+        }
+      ]
+    },
+    "HOL_yomkippur_04": {
+      "w": 1792,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "HOL_yomkippur_04.800.webp",
+          "w": 800,
+          "h": 457
+        },
+        {
+          "edge": 1600,
+          "file": "HOL_yomkippur_04.1600.webp",
+          "w": 1600,
+          "h": 914
+        }
+      ]
+    },
     "I-01-img1": {
       "w": 1536,
       "h": 1024,
@@ -7559,6 +7775,150 @@
         {
           "edge": 1536,
           "file": "I-45-img1.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "I-45-img2": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "I-45-img2.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "I-45-img2.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "I-46-img1": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "I-46-img1.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "I-46-img1.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "I-46-img2": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "I-46-img2.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "I-46-img2.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "I-47-img1": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "I-47-img1.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "I-47-img1.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "I-47-img2": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "I-47-img2.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "I-47-img2.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "I-48-img1": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "I-48-img1.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "I-48-img1.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "I-48-img2": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "I-48-img2.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "I-48-img2.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "I-49-img2": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "I-49-img2.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "I-49-img2.1536.webp",
           "w": 1536,
           "h": 1024
         }
@@ -12706,6 +13066,24 @@
         }
       ]
     },
+    "J-0261": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0261.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0261.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
     "J-0262": {
       "w": 1024,
       "h": 1024,
@@ -12737,6 +13115,42 @@
         {
           "edge": 1024,
           "file": "J-0263.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0264": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0264.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0264.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0265": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0265.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0265.1024.webp",
           "w": 1024,
           "h": 1024
         }
@@ -12814,6 +13228,276 @@
         }
       ]
     },
+    "J-0270": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0270.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0270.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0271": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0271.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0271.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0272": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0272.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0272.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0273": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0273.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0273.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0274": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0274.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0274.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0275": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0275.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0275.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0276": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0276.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0276.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0277": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0277.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0277.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0278": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0278.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0278.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0279": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0279.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0279.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0280": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0280.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0280.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0281": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0281.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0281.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0282": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0282.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0282.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0594": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0594.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "J-0594.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0595": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0595.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0595.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
     "J-0596": {
       "w": 1024,
       "h": 1024,
@@ -12832,6 +13516,96 @@
         }
       ]
     },
+    "J-0597": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0597.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "J-0597.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0598": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0598.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0598.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0599": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0599.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0599.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0600": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0600.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "J-0600.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0980": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0980.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0980.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
     "J-0981": {
       "w": 1024,
       "h": 1024,
@@ -12845,6 +13619,96 @@
         {
           "edge": 1024,
           "file": "J-0981.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0982": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0982.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0982.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0983": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0983.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0983.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0984": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0984.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0984.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0985": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0985.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0985.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0986": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0986.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0986.1024.webp",
           "w": 1024,
           "h": 1024
         }
@@ -16180,6 +17044,24 @@
         }
       ]
     },
+    "L14_nun_cursive_mnemonic": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L14_nun_cursive_mnemonic.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "L14_nun_cursive_mnemonic.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
     "L14_nun_cursive_postcard": {
       "w": 1024,
       "h": 1024,
@@ -16414,6 +17296,42 @@
         }
       ]
     },
+    "L15_samekh_cursive_postcard": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L15_samekh_cursive_postcard.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "L15_samekh_cursive_postcard.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "L15_samekh_cursive_silhouette": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L15_samekh_cursive_silhouette.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "L15_samekh_cursive_silhouette.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
     "L15_samekh_print_ari": {
       "w": 1254,
       "h": 1254,
@@ -16591,6 +17509,60 @@
           "file": "L15_samekh_print_v3.1254.webp",
           "w": 1254,
           "h": 1254
+        }
+      ]
+    },
+    "L16_ayin_cursive_mnemonic": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L16_ayin_cursive_mnemonic.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "L16_ayin_cursive_mnemonic.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "L16_ayin_cursive_postcard": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L16_ayin_cursive_postcard.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "L16_ayin_cursive_postcard.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "L16_ayin_cursive_silhouette": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L16_ayin_cursive_silhouette.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "L16_ayin_cursive_silhouette.1024.webp",
+          "w": 1024,
+          "h": 1024
         }
       ]
     },
@@ -16774,6 +17746,24 @@
         }
       ]
     },
+    "L17_pe_cursive_mnemonic": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L17_pe_cursive_mnemonic.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "L17_pe_cursive_mnemonic.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
     "L17_pe_print_ari": {
       "w": 1254,
       "h": 1254,
@@ -16829,20 +17819,20 @@
       ]
     },
     "L17_pe_print_s1": {
-      "w": 1254,
-      "h": 1254,
+      "w": 1536,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
           "file": "L17_pe_print_s1.800.webp",
           "w": 800,
-          "h": 800
+          "h": 533
         },
         {
-          "edge": 1254,
-          "file": "L17_pe_print_s1.1254.webp",
-          "w": 1254,
-          "h": 1254
+          "edge": 1536,
+          "file": "L17_pe_print_s1.1536.webp",
+          "w": 1536,
+          "h": 1024
         }
       ]
     },
@@ -16865,20 +17855,20 @@
       ]
     },
     "L17_pe_print_s3": {
-      "w": 1254,
-      "h": 1254,
+      "w": 1536,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
           "file": "L17_pe_print_s3.800.webp",
           "w": 800,
-          "h": 800
+          "h": 533
         },
         {
-          "edge": 1254,
-          "file": "L17_pe_print_s3.1254.webp",
-          "w": 1254,
-          "h": 1254
+          "edge": 1536,
+          "file": "L17_pe_print_s3.1536.webp",
+          "w": 1536,
+          "h": 1024
         }
       ]
     },
@@ -17027,56 +18017,56 @@
       ]
     },
     "L18_tsadi_print_s1": {
-      "w": 1254,
-      "h": 1254,
+      "w": 1536,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
           "file": "L18_tsadi_print_s1.800.webp",
           "w": 800,
-          "h": 800
+          "h": 533
         },
         {
-          "edge": 1254,
-          "file": "L18_tsadi_print_s1.1254.webp",
-          "w": 1254,
-          "h": 1254
+          "edge": 1536,
+          "file": "L18_tsadi_print_s1.1536.webp",
+          "w": 1536,
+          "h": 1024
         }
       ]
     },
     "L18_tsadi_print_s2": {
-      "w": 1254,
-      "h": 1254,
+      "w": 1536,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
           "file": "L18_tsadi_print_s2.800.webp",
           "w": 800,
-          "h": 800
+          "h": 533
         },
         {
-          "edge": 1254,
-          "file": "L18_tsadi_print_s2.1254.webp",
-          "w": 1254,
-          "h": 1254
+          "edge": 1536,
+          "file": "L18_tsadi_print_s2.1536.webp",
+          "w": 1536,
+          "h": 1024
         }
       ]
     },
     "L18_tsadi_print_s3": {
-      "w": 1254,
-      "h": 1254,
+      "w": 1536,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
           "file": "L18_tsadi_print_s3.800.webp",
           "w": 800,
-          "h": 800
+          "h": 533
         },
         {
-          "edge": 1254,
-          "file": "L18_tsadi_print_s3.1254.webp",
-          "w": 1254,
-          "h": 1254
+          "edge": 1536,
+          "file": "L18_tsadi_print_s3.1536.webp",
+          "w": 1536,
+          "h": 1024
         }
       ]
     },
@@ -17207,20 +18197,20 @@
       ]
     },
     "L19_qof_print_s1": {
-      "w": 1254,
-      "h": 1254,
+      "w": 1536,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
           "file": "L19_qof_print_s1.800.webp",
           "w": 800,
-          "h": 800
+          "h": 533
         },
         {
-          "edge": 1254,
-          "file": "L19_qof_print_s1.1254.webp",
-          "w": 1254,
-          "h": 1254
+          "edge": 1536,
+          "file": "L19_qof_print_s1.1536.webp",
+          "w": 1536,
+          "h": 1024
         }
       ]
     },
@@ -19030,6 +20020,60 @@
         }
       ]
     },
+    "MTH_mouth_02": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "MTH_mouth_02.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "MTH_mouth_02.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "MTH_mouth_04": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "MTH_mouth_04.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "MTH_mouth_04.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "MTH_mouth_06": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "MTH_mouth_06.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "MTH_mouth_06.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
     "MTH_mouth_08": {
       "w": 1024,
       "h": 1024,
@@ -19061,6 +20105,24 @@
         {
           "edge": 1024,
           "file": "MTH_mouth_09.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "MTH_mouth_10": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "MTH_mouth_10.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "MTH_mouth_10.1024.webp",
           "w": 1024,
           "h": 1024
         }
@@ -23501,20 +24563,20 @@
       ]
     },
     "STORY_abraham_06": {
-      "w": 1659,
-      "h": 948,
+      "w": 1536,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
           "file": "STORY_abraham_06.800.webp",
           "w": 800,
-          "h": 457
+          "h": 533
         },
         {
-          "edge": 1600,
-          "file": "STORY_abraham_06.1600.webp",
-          "w": 1600,
-          "h": 914
+          "edge": 1536,
+          "file": "STORY_abraham_06.1536.webp",
+          "w": 1536,
+          "h": 1024
         }
       ]
     },
@@ -24077,20 +25139,20 @@
       ]
     },
     "STORY_joseph_08": {
-      "w": 1659,
-      "h": 948,
+      "w": 1536,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
           "file": "STORY_joseph_08.800.webp",
           "w": 800,
-          "h": 457
+          "h": 533
         },
         {
-          "edge": 1600,
-          "file": "STORY_joseph_08.1600.webp",
-          "w": 1600,
-          "h": 914
+          "edge": 1536,
+          "file": "STORY_joseph_08.1536.webp",
+          "w": 1536,
+          "h": 1024
         }
       ]
     },
@@ -24113,20 +25175,20 @@
       ]
     },
     "STORY_joseph_10": {
-      "w": 1659,
-      "h": 948,
+      "w": 1536,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
           "file": "STORY_joseph_10.800.webp",
           "w": 800,
-          "h": 457
+          "h": 533
         },
         {
-          "edge": 1600,
-          "file": "STORY_joseph_10.1600.webp",
-          "w": 1600,
-          "h": 914
+          "edge": 1536,
+          "file": "STORY_joseph_10.1536.webp",
+          "w": 1536,
+          "h": 1024
         }
       ]
     },
@@ -24545,20 +25607,20 @@
       ]
     },
     "STORY_moses1_04": {
-      "w": 1659,
-      "h": 948,
+      "w": 1536,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
           "file": "STORY_moses1_04.800.webp",
           "w": 800,
-          "h": 457
+          "h": 533
         },
         {
-          "edge": 1600,
-          "file": "STORY_moses1_04.1600.webp",
-          "w": 1600,
-          "h": 914
+          "edge": 1536,
+          "file": "STORY_moses1_04.1536.webp",
+          "w": 1536,
+          "h": 1024
         }
       ]
     },
@@ -24617,20 +25679,20 @@
       ]
     },
     "STORY_moses1_08": {
-      "w": 1659,
-      "h": 948,
+      "w": 1536,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
           "file": "STORY_moses1_08.800.webp",
           "w": 800,
-          "h": 457
+          "h": 533
         },
         {
-          "edge": 1600,
-          "file": "STORY_moses1_08.1600.webp",
-          "w": 1600,
-          "h": 914
+          "edge": 1536,
+          "file": "STORY_moses1_08.1536.webp",
+          "w": 1536,
+          "h": 1024
         }
       ]
     },
@@ -26044,6 +27106,42 @@
         }
       ]
     },
+    "TALK_shabbat_01": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "TALK_shabbat_01.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "TALK_shabbat_01.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "TALK_shabbat_02": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "TALK_shabbat_02.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "TALK_shabbat_02.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
     "TALK_taxi_01": {
       "w": 1536,
       "h": 1024,
@@ -26165,6 +27263,42 @@
         {
           "edge": 1536,
           "file": "TALK_taxi_08.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "TALK_taxi_09": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "TALK_taxi_09.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "TALK_taxi_09.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "TALK_taxi_10": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "TALK_taxi_10.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "TALK_taxi_10.1536.webp",
           "w": 1536,
           "h": 1024
         }
@@ -32370,6 +33504,7 @@
     }
   },
   "altText": {
+    "AWD_pin_01": "Square 1024x1024 image: a first-lesson badge: a small green sprout. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank.",
     "AWD_pin_02": "Square 1024x1024 image: a week-complete badge: seven small gold dots in a ring. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank.",
     "AWD_pin_03": "Square 1024x1024 image: a vowel-master badge: a row of five rounded gold dots. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank.",
     "AWD_pin_04": "Square 1024x1024 image: a reading-fluency badge: an open book with a gold bookmark, blank pages. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank.",
@@ -32867,6 +34002,12 @@
     "HERO_week_10": "Rimon waving at a calendar page left blank on a kitchen wall (Motzei Shabbat & the week opening).",
     "HOL_roshhashana_01": "Wide 1792x1024 scene: apple slices being dipped in honey, several family hands reaching in. Any other people are simple small figures with plain friendly faces. Any sign, screen, page, book, label.",
     "HOL_roshhashana_02": "Wide 1792x1024 scene: a round challah with raisins on a plate beside a small honey jar. Any other people are simple small figures with plain friendly faces. Any sign, screen, page, book, label.",
+    "HOL_roshhashana_03": "Wide 1792x1024 scene: a pomegranate cut open on a table with seeds spilling. Any other people are simple small figures with plain friendly faces. Any sign, screen, page, book, label, scroll or.",
+    "HOL_roshhashana_05": "Wide 1792x1024 scene: tashlich: people at a river at sunset shaking out their pockets over the water. Any other people are simple small figures with plain friendly faces. Any sign, screen, page.",
+    "HOL_yomkippur_01": "Wide 1792x1024 scene: a congregation dressed in white standing before the open ark. Any other people are simple small figures with plain friendly faces. Any sign, screen, page, book, label, scroll.",
+    "HOL_yomkippur_02": "Wide 1792x1024 scene: a quiet empty street with a few people in white walking to synagogue. Any other people are simple small figures with plain friendly faces. Any sign, screen, page, book, label.",
+    "HOL_yomkippur_03": "Wide 1792x1024 scene: a break-fast table with bagels, eggs, fruit and a water jug. Any other people are simple small figures with plain friendly faces. Any sign, screen, page, book, label, scroll or.",
+    "HOL_yomkippur_04": "Wide 1792x1024 scene: neilah: the ark open, last light through a high window, a shofar raised. Any other people are simple small figures with plain friendly faces. Any sign, screen, page, book.",
     "I-01-img1": "Illustration: A congregation standing, one hand over the eyes, during the Shema, seen from behind in a warm sanctuary.",
     "I-01-img2": "Illustration: A prayer book open on a wooden stand beside a pair of reading glasses, soft window light.",
     "I-02-img1": "Illustration: A worshipper standing alone with feet together in quiet prayer facing a plain stone wall.",
@@ -34180,6 +35321,7 @@
     "L13_mem_print_v1": "Water (Hebrew: mayim), a vocabulary picture for the Hebrew letter Mem.",
     "L13_mem_print_v2": "King (Hebrew: melech), a vocabulary picture for the Hebrew letter Mem.",
     "L13_mem_print_v3": "Family (Hebrew: mishpacha), a vocabulary picture for the Hebrew letter Mem.",
+    "L14_nun_cursive_mnemonic": "The keyword object a fishing hook, drawn so its outline echoes silhouette (REF_cursive_nun.png). Draw the object only, never the letter.",
     "L14_nun_cursive_postcard": "The attached object (a fishing hook) on a blank postcard pinned to a fridge, postcard blank.",
     "L14_nun_cursive_silhouette": "The attached object (a fishing hook) as a bold charcoal silhouette on cream.",
     "L14_nun_print_ari": "Ari points at nail bent at the top, the memory picture for the Hebrew letter Nun.",
@@ -34193,6 +35335,8 @@
     "L14_nun_print_v2": "River (Hebrew: nahar), a vocabulary picture for the Hebrew letter Nun.",
     "L14_nun_print_v3": "Miracle, shooting star (Hebrew: nes), a vocabulary picture for the Hebrew letter Nun.",
     "L15_samekh_cursive_mnemonic": "The keyword object the sun, drawn so its outline echoes silhouette (REF_cursive_samekh.png). Draw the object only, never the letter.",
+    "L15_samekh_cursive_postcard": "The attached object (the sun) on a blank postcard pinned to a fridge, postcard blank.",
+    "L15_samekh_cursive_silhouette": "The attached object (the sun) as a bold charcoal silhouette on cream.",
     "L15_samekh_print_ari": "Ari points at sun, the memory picture for the Hebrew letter Samekh.",
     "L15_samekh_print_mnemonic": "Sun, drawn so its outline echoes the shape of the Hebrew letter Samekh: a closed round loop.",
     "L15_samekh_print_noa": "Noa points at sun, the memory picture for the Hebrew letter Samekh.",
@@ -34203,6 +35347,9 @@
     "L15_samekh_print_v1": "Book (Hebrew: sefer), a vocabulary picture for the Hebrew letter Samekh.",
     "L15_samekh_print_v2": "Horse (Hebrew: sus), a vocabulary picture for the Hebrew letter Samekh.",
     "L15_samekh_print_v3": "Salad (Hebrew: salat), a vocabulary picture for the Hebrew letter Samekh.",
+    "L16_ayin_cursive_mnemonic": "The keyword object a tulip with two leaves, drawn so its outline echoes silhouette (REF_cursive_ayin.png). Draw the object only, never the letter.",
+    "L16_ayin_cursive_postcard": "The attached object (a tulip with two leaves) on a blank postcard pinned to a fridge, postcard blank.",
+    "L16_ayin_cursive_silhouette": "The attached object (a tulip with two leaves) as a bold charcoal silhouette on cream.",
     "L16_ayin_print_ari": "Ari points at eye (ayin), the memory picture for the Hebrew letter Ayin.",
     "L16_ayin_print_mnemonic": "Eye (ayin), drawn so its outline echoes the shape of the Hebrew letter Ayin: a Y with the left branch curling.",
     "L16_ayin_print_noa": "Noa points at eye (ayin), the memory picture for the Hebrew letter Ayin.",
@@ -34213,6 +35360,7 @@
     "L16_ayin_print_v1": "Eye (Hebrew: ayin), a vocabulary picture for the Hebrew letter Ayin.",
     "L16_ayin_print_v2": "Tree (Hebrew: etz), a vocabulary picture for the Hebrew letter Ayin.",
     "L16_ayin_print_v3": "City skyline (Hebrew: ir), a vocabulary picture for the Hebrew letter Ayin.",
+    "L17_pe_cursive_mnemonic": "The keyword object a snail shell, drawn so its outline echoes silhouette (REF_cursive_pe.png). Draw the object only, never the letter.",
     "L17_pe_print_ari": "Ari points at pie in an open mouth, the memory picture for the Hebrew letter Pe / Fe.",
     "L17_pe_print_mnemonic": "Pie in an open mouth, drawn so its outline echoes the shape of the Hebrew letter Pe / Fe: a coiled mouth with a tooth inside.",
     "L17_pe_print_noa": "Noa points at pie in an open mouth, the memory picture for the Hebrew letter Pe / Fe.",
@@ -34366,9 +35514,15 @@
     "MOUTH_none": "Close-up mouth shape for the vowel sound none.",
     "MOUTH_oh": "Close-up mouth shape for the vowel sound 'oh' (rounded).",
     "MOUTH_oo": "Close-up mouth shape for the vowel sound 'oo' (rounded tight).",
+    "MTH_mouth_02": "Square 1024x1024 image: lips rounded into a small circle with the tongue pulled back and raised. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank.",
+    "MTH_mouth_03": "Square 1024x1024 image: lips spread in a smile with the tongue high and forward. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank.",
+    "MTH_mouth_04": "Square 1024x1024 image: lips relaxed and slightly open with the tongue in the middle. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank.",
+    "MTH_mouth_05": "Square 1024x1024 image: lips rounded and slightly open with the tongue mid-back. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank.",
+    "MTH_mouth_06": "Square 1024x1024 image: the tongue tip touching the ridge behind the upper teeth. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank.",
     "MTH_mouth_07": "Square 1024x1024 image: the back of the tongue lifted to touch the soft palate. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank.",
     "MTH_mouth_08": "Square 1024x1024 image: lips pressed together while air builds behind them. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank.",
     "MTH_mouth_09": "Square 1024x1024 image: the tongue tip between the teeth with a gentle breath of air. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank.",
+    "MTH_mouth_10": "Square 1024x1024 image: the throat narrowed with the tongue root pulled back, a gentle rasp of air. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank.",
     "NUM_day_01": "Sunrise over rooftops (Day & routine).",
     "NUM_day_02": "Noa stretching at a window (Day & routine).",
     "NUM_day_03": "A breakfast table with eggs and coffee (Day & routine).",

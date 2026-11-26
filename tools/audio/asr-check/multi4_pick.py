@@ -127,6 +127,7 @@ def main():
                     cnt, n = pt_
                     need = min(3, n)
                     probs = set(s0.get('b3', []) + s0.get('b2', [])) if o['kind'] == 'sentence' else set(cnt)
+                    probs = {w for w in probs if not w.startswith('(')}     # '(nothing)': an extra word heard, not a word of the text
                     weak = [w for w in probs if cnt.get(w, 0) < need]
                     tot_t = sum(v >= need for v in cnt.values())
                     tot_o = sum(v >= min(3, po[1]) for v in po[0].values()) if po else 0

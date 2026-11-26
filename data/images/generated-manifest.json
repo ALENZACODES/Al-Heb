@@ -2,7 +2,7 @@
   "version": 1,
   "note": "APPROVED generated images only (see docs/images/RIGHTS.md). Files live in assets/img/gen/. Built by tools/images/ingest.mjs; do not edit by hand.",
   "dir": "gen",
-  "count": 2024,
+  "count": 2080,
   "images": {
     "AWD_pin_01": {
       "w": 1024,
@@ -4535,20 +4535,20 @@
       ]
     },
     "HERO_amidah1_07": {
-      "w": 1659,
-      "h": 948,
+      "w": 1536,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
           "file": "HERO_amidah1_07.800.webp",
           "w": 800,
-          "h": 457
+          "h": 533
         },
         {
-          "edge": 1600,
-          "file": "HERO_amidah1_07.1600.webp",
-          "w": 1600,
-          "h": 914
+          "edge": 1536,
+          "file": "HERO_amidah1_07.1536.webp",
+          "w": 1536,
+          "h": 1024
         }
       ]
     },
@@ -4661,20 +4661,20 @@
       ]
     },
     "HERO_amidah2_04": {
-      "w": 1659,
-      "h": 948,
+      "w": 1536,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
           "file": "HERO_amidah2_04.800.webp",
           "w": 800,
-          "h": 457
+          "h": 533
         },
         {
-          "edge": 1600,
-          "file": "HERO_amidah2_04.1600.webp",
-          "w": 1600,
-          "h": 914
+          "edge": 1536,
+          "file": "HERO_amidah2_04.1536.webp",
+          "w": 1536,
+          "h": 1024
         }
       ]
     },
@@ -4715,20 +4715,20 @@
       ]
     },
     "HERO_amidah2_07": {
-      "w": 1659,
-      "h": 948,
+      "w": 1536,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
           "file": "HERO_amidah2_07.800.webp",
           "w": 800,
-          "h": 457
+          "h": 533
         },
         {
-          "edge": 1600,
-          "file": "HERO_amidah2_07.1600.webp",
-          "w": 1600,
-          "h": 914
+          "edge": 1536,
+          "file": "HERO_amidah2_07.1536.webp",
+          "w": 1536,
+          "h": 1024
         }
       ]
     },
@@ -5009,20 +5009,20 @@
       ]
     },
     "HERO_grace_05": {
-      "w": 1659,
-      "h": 948,
+      "w": 1536,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
           "file": "HERO_grace_05.800.webp",
           "w": 800,
-          "h": 457
+          "h": 533
         },
         {
-          "edge": 1600,
-          "file": "HERO_grace_05.1600.webp",
-          "w": 1600,
-          "h": 914
+          "edge": 1536,
+          "file": "HERO_grace_05.1536.webp",
+          "w": 1536,
+          "h": 1024
         }
       ]
     },
@@ -5135,20 +5135,20 @@
       ]
     },
     "HERO_morning_02": {
-      "w": 1659,
-      "h": 948,
+      "w": 1536,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
           "file": "HERO_morning_02.800.webp",
           "w": 800,
-          "h": 457
+          "h": 533
         },
         {
-          "edge": 1600,
-          "file": "HERO_morning_02.1600.webp",
-          "w": 1600,
-          "h": 914
+          "edge": 1536,
+          "file": "HERO_morning_02.1536.webp",
+          "w": 1536,
+          "h": 1024
         }
       ]
     },
@@ -13552,6 +13552,24 @@
         }
       ]
     },
+    "J-0287": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0287.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0287.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
     "J-0288": {
       "w": 1024,
       "h": 1024,
@@ -14627,6 +14645,636 @@
         {
           "edge": 1024,
           "file": "J-0347.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0348": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0348.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0348.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0349": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0349.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0349.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0350": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0350.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0350.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0351": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0351.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0351.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0352": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0352.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0352.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0353": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0353.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0353.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0354": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0354.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0354.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0355": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0355.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0355.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0356": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0356.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0356.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0357": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0357.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0357.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0358": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0358.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0358.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0359": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0359.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0359.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0360": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0360.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0360.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0361": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0361.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0361.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0362": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0362.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0362.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0363": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0363.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0363.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0364": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0364.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0364.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0365": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0365.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0365.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0366": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0366.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0366.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0367": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0367.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0367.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0368": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0368.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0368.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0369": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0369.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0369.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0370": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0370.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0370.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0371": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0371.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0371.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0372": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0372.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0372.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0373": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0373.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0373.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0374": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0374.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0374.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0375": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0375.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0375.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0377": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0377.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0377.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0378": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0378.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0378.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0379": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0379.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0379.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0380": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0380.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0380.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0382": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0382.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0382.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0385": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0385.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0385.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0391": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0391.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0391.1024.webp",
           "w": 1024,
           "h": 1024
         }
@@ -15766,6 +16414,24 @@
         }
       ]
     },
+    "L02_bet_cursive_ari": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L02_bet_cursive_ari.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "L02_bet_cursive_ari.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
     "L02_bet_cursive_mnemonic": {
       "w": 1024,
       "h": 1024,
@@ -15815,6 +16481,24 @@
         {
           "edge": 1024,
           "file": "L02_bet_cursive_silhouette.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "L02_bet_cursive_trace": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L02_bet_cursive_trace.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "L02_bet_cursive_trace.1024.webp",
           "w": 1024,
           "h": 1024
         }
@@ -16013,6 +16697,24 @@
         {
           "edge": 1024,
           "file": "L02_bet_quirky_vet.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "L03_gimel_cursive_ari": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L03_gimel_cursive_ari.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "L03_gimel_cursive_ari.1024.webp",
           "w": 1024,
           "h": 1024
         }
@@ -16265,6 +16967,24 @@
         {
           "edge": 1024,
           "file": "L04_dalet_cursive_mnemonic.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "L04_dalet_cursive_noa": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L04_dalet_cursive_noa.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "L04_dalet_cursive_noa.1024.webp",
           "w": 1024,
           "h": 1024
         }
@@ -17008,6 +17728,24 @@
         }
       ]
     },
+    "L07_zayin_cursive_trace": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L07_zayin_cursive_trace.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "L07_zayin_cursive_trace.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
     "L07_zayin_print_ari": {
       "w": 1024,
       "h": 1024,
@@ -17254,6 +17992,24 @@
         }
       ]
     },
+    "L08_chet_cursive_trace": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L08_chet_cursive_trace.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "L08_chet_cursive_trace.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
     "L08_chet_print_ari": {
       "w": 1254,
       "h": 1254,
@@ -17483,6 +18239,24 @@
         {
           "edge": 1024,
           "file": "L09_tet_cursive_silhouette.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "L09_tet_cursive_trace": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L09_tet_cursive_trace.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "L09_tet_cursive_trace.1024.webp",
           "w": 1024,
           "h": 1024
         }
@@ -18209,6 +18983,24 @@
         {
           "edge": 1024,
           "file": "L12_lamed_cursive_silhouette.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "L12_lamed_cursive_trace": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L12_lamed_cursive_trace.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "L12_lamed_cursive_trace.1024.webp",
           "w": 1024,
           "h": 1024
         }
@@ -19348,6 +20140,42 @@
         }
       ]
     },
+    "L17_pe_cursive_postcard": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L17_pe_cursive_postcard.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "L17_pe_cursive_postcard.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "L17_pe_cursive_silhouette": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L17_pe_cursive_silhouette.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "L17_pe_cursive_silhouette.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
     "L17_pe_print_ari": {
       "w": 1254,
       "h": 1254,
@@ -19546,6 +20374,60 @@
         }
       ]
     },
+    "L18_tsadi_cursive_mnemonic": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L18_tsadi_cursive_mnemonic.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "L18_tsadi_cursive_mnemonic.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "L18_tsadi_cursive_postcard": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L18_tsadi_cursive_postcard.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "L18_tsadi_cursive_postcard.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "L18_tsadi_cursive_silhouette": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L18_tsadi_cursive_silhouette.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "L18_tsadi_cursive_silhouette.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
     "L18_tsadi_print_ari": {
       "w": 1254,
       "h": 1254,
@@ -19726,6 +20608,60 @@
         }
       ]
     },
+    "L19_qof_cursive_mnemonic": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L19_qof_cursive_mnemonic.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "L19_qof_cursive_mnemonic.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "L19_qof_cursive_postcard": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L19_qof_cursive_postcard.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "L19_qof_cursive_postcard.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "L19_qof_cursive_silhouette": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L19_qof_cursive_silhouette.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "L19_qof_cursive_silhouette.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
     "L19_qof_print_ari": {
       "w": 1254,
       "h": 1254,
@@ -19817,20 +20753,20 @@
       ]
     },
     "L19_qof_print_s3": {
-      "w": 1254,
-      "h": 1254,
+      "w": 1536,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
           "file": "L19_qof_print_s3.800.webp",
           "w": 800,
-          "h": 800
+          "h": 533
         },
         {
-          "edge": 1254,
-          "file": "L19_qof_print_s3.1254.webp",
-          "w": 1254,
-          "h": 1254
+          "edge": 1536,
+          "file": "L19_qof_print_s3.1536.webp",
+          "w": 1536,
+          "h": 1024
         }
       ]
     },
@@ -19903,6 +20839,60 @@
           "file": "L19_qof_print_v3.1254.webp",
           "w": 1254,
           "h": 1254
+        }
+      ]
+    },
+    "L20_resh_cursive_mnemonic": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L20_resh_cursive_mnemonic.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "L20_resh_cursive_mnemonic.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "L20_resh_cursive_postcard": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L20_resh_cursive_postcard.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "L20_resh_cursive_postcard.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "L20_resh_cursive_silhouette": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L20_resh_cursive_silhouette.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "L20_resh_cursive_silhouette.1024.webp",
+          "w": 1024,
+          "h": 1024
         }
       ]
     },
@@ -20083,6 +21073,24 @@
           "file": "L20_resh_print_v3.1254.webp",
           "w": 1254,
           "h": 1254
+        }
+      ]
+    },
+    "L21_shin_cursive_mnemonic": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L21_shin_cursive_mnemonic.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "L21_shin_cursive_mnemonic.1024.webp",
+          "w": 1024,
+          "h": 1024
         }
       ]
     },
@@ -20387,20 +21395,20 @@
       ]
     },
     "L22_tav_print_s3": {
-      "w": 1254,
-      "h": 1254,
+      "w": 1536,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
           "file": "L22_tav_print_s3.800.webp",
           "w": 800,
-          "h": 800
+          "h": 533
         },
         {
-          "edge": 1254,
-          "file": "L22_tav_print_s3.1254.webp",
-          "w": 1254,
-          "h": 1254
+          "edge": 1536,
+          "file": "L22_tav_print_s3.1536.webp",
+          "w": 1536,
+          "h": 1024
         }
       ]
     },
@@ -20909,20 +21917,20 @@
       ]
     },
     "L25_nun_final_print_s2": {
-      "w": 1254,
-      "h": 1254,
+      "w": 1536,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
           "file": "L25_nun_final_print_s2.800.webp",
           "w": 800,
-          "h": 800
+          "h": 533
         },
         {
-          "edge": 1254,
-          "file": "L25_nun_final_print_s2.1254.webp",
-          "w": 1254,
-          "h": 1254
+          "edge": 1536,
+          "file": "L25_nun_final_print_s2.1536.webp",
+          "w": 1536,
+          "h": 1024
         }
       ]
     },
@@ -21767,8 +22775,8 @@
       ]
     },
     "NUM_day_03": {
-      "w": 1254,
-      "h": 1254,
+      "w": 1024,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
@@ -21777,10 +22785,10 @@
           "h": 800
         },
         {
-          "edge": 1254,
-          "file": "NUM_day_03.1254.webp",
-          "w": 1254,
-          "h": 1254
+          "edge": 1024,
+          "file": "NUM_day_03.1024.webp",
+          "w": 1024,
+          "h": 1024
         }
       ]
     },
@@ -22145,38 +23153,38 @@
       ]
     },
     "NUM_months1_04": {
-      "w": 1254,
-      "h": 1254,
+      "w": 1536,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
           "file": "NUM_months1_04.800.webp",
           "w": 800,
-          "h": 800
+          "h": 533
         },
         {
-          "edge": 1254,
-          "file": "NUM_months1_04.1254.webp",
-          "w": 1254,
-          "h": 1254
+          "edge": 1536,
+          "file": "NUM_months1_04.1536.webp",
+          "w": 1536,
+          "h": 1024
         }
       ]
     },
     "NUM_months1_05": {
-      "w": 1254,
-      "h": 1254,
+      "w": 1536,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
           "file": "NUM_months1_05.800.webp",
           "w": 800,
-          "h": 800
+          "h": 533
         },
         {
-          "edge": 1254,
-          "file": "NUM_months1_05.1254.webp",
-          "w": 1254,
-          "h": 1254
+          "edge": 1536,
+          "file": "NUM_months1_05.1536.webp",
+          "w": 1536,
+          "h": 1024
         }
       ]
     },
@@ -22217,56 +23225,56 @@
       ]
     },
     "NUM_months1_08": {
-      "w": 1659,
-      "h": 948,
+      "w": 1024,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
           "file": "NUM_months1_08.800.webp",
           "w": 800,
-          "h": 457
+          "h": 800
         },
         {
-          "edge": 1600,
-          "file": "NUM_months1_08.1600.webp",
-          "w": 1600,
-          "h": 914
+          "edge": 1024,
+          "file": "NUM_months1_08.1024.webp",
+          "w": 1024,
+          "h": 1024
         }
       ]
     },
     "NUM_months1_09": {
-      "w": 1659,
-      "h": 948,
+      "w": 1024,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
           "file": "NUM_months1_09.800.webp",
           "w": 800,
-          "h": 457
+          "h": 800
         },
         {
-          "edge": 1600,
-          "file": "NUM_months1_09.1600.webp",
-          "w": 1600,
-          "h": 914
+          "edge": 1024,
+          "file": "NUM_months1_09.1024.webp",
+          "w": 1024,
+          "h": 1024
         }
       ]
     },
     "NUM_months1_10": {
-      "w": 1659,
-      "h": 948,
+      "w": 1024,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
           "file": "NUM_months1_10.800.webp",
           "w": 800,
-          "h": 457
+          "h": 800
         },
         {
-          "edge": 1600,
-          "file": "NUM_months1_10.1600.webp",
-          "w": 1600,
-          "h": 914
+          "edge": 1024,
+          "file": "NUM_months1_10.1024.webp",
+          "w": 1024,
+          "h": 1024
         }
       ]
     },
@@ -22397,8 +23405,8 @@
       ]
     },
     "NUM_months2_08": {
-      "w": 1254,
-      "h": 1254,
+      "w": 1024,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
@@ -22407,10 +23415,10 @@
           "h": 800
         },
         {
-          "edge": 1254,
-          "file": "NUM_months2_08.1254.webp",
-          "w": 1254,
-          "h": 1254
+          "edge": 1024,
+          "file": "NUM_months2_08.1024.webp",
+          "w": 1024,
+          "h": 1024
         }
       ]
     },
@@ -23495,8 +24503,8 @@
       ]
     },
     "OPP_two_09": {
-      "w": 1254,
-      "h": 1254,
+      "w": 1024,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
@@ -23505,10 +24513,10 @@
           "h": 800
         },
         {
-          "edge": 1254,
-          "file": "OPP_two_09.1254.webp",
-          "w": 1254,
-          "h": 1254
+          "edge": 1024,
+          "file": "OPP_two_09.1024.webp",
+          "w": 1024,
+          "h": 1024
         }
       ]
     },
@@ -31319,8 +32327,8 @@
       ]
     },
     "VERB_eat_all_08": {
-      "w": 1254,
-      "h": 1254,
+      "w": 1024,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
@@ -31329,10 +32337,10 @@
           "h": 800
         },
         {
-          "edge": 1254,
-          "file": "VERB_eat_all_08.1254.webp",
-          "w": 1254,
-          "h": 1254
+          "edge": 1024,
+          "file": "VERB_eat_all_08.1024.webp",
+          "w": 1024,
+          "h": 1024
         }
       ]
     },
@@ -31607,8 +32615,8 @@
       ]
     },
     "VERB_home_04": {
-      "w": 1254,
-      "h": 1254,
+      "w": 1024,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
@@ -31617,10 +32625,10 @@
           "h": 800
         },
         {
-          "edge": 1254,
-          "file": "VERB_home_04.1254.webp",
-          "w": 1254,
-          "h": 1254
+          "edge": 1024,
+          "file": "VERB_home_04.1024.webp",
+          "w": 1024,
+          "h": 1024
         }
       ]
     },
@@ -32237,8 +33245,8 @@
       ]
     },
     "VERB_move_09": {
-      "w": 1254,
-      "h": 1254,
+      "w": 1024,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
@@ -32247,10 +33255,10 @@
           "h": 800
         },
         {
-          "edge": 1254,
-          "file": "VERB_move_09.1254.webp",
-          "w": 1254,
-          "h": 1254
+          "edge": 1024,
+          "file": "VERB_move_09.1024.webp",
+          "w": 1024,
+          "h": 1024
         }
       ]
     },
@@ -32345,8 +33353,8 @@
       ]
     },
     "VERB_talk_05": {
-      "w": 1254,
-      "h": 1254,
+      "w": 1024,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
@@ -32355,10 +33363,10 @@
           "h": 800
         },
         {
-          "edge": 1254,
-          "file": "VERB_talk_05.1254.webp",
-          "w": 1254,
-          "h": 1254
+          "edge": 1024,
+          "file": "VERB_talk_05.1024.webp",
+          "w": 1024,
+          "h": 1024
         }
       ]
     },
@@ -36753,6 +37761,7 @@
     "L01_alef_cursive_mnemonic": "The keyword object a person leaning on a walking pole, drawn so its outline echoes silhouette (REF_cursive_alef.png). Draw the object only, never the letter.",
     "L01_alef_cursive_postcard": "The attached object (a person leaning on a walking pole) on a blank postcard pinned to a fridge, postcard blank.",
     "L01_alef_cursive_silhouette": "The attached object (a person leaning on a walking pole) as a bold charcoal silhouette on cream.",
+    "L01_alef_cursive_trace": "Close-up of an index finger tracing on a tablet screen that shows only a faint dotted guide area, no letter.",
     "L01_alef_print_ari": "Ari points at ox head, the memory picture for the Hebrew letter Aleph.",
     "L01_alef_print_mnemonic": "Ox head, drawn so its outline echoes the shape of the Hebrew letter Aleph: two diagonal horns joined by a slanted body.",
     "L01_alef_print_noa": "Noa points at ox head, the memory picture for the Hebrew letter Aleph.",
@@ -36763,9 +37772,12 @@
     "L01_alef_print_v1": "Dad (Hebrew: aba), a vocabulary picture for the Hebrew letter Aleph.",
     "L01_alef_print_v2": "Mom (Hebrew: ima), a vocabulary picture for the Hebrew letter Aleph.",
     "L01_alef_print_v3": "Light (Hebrew: or), a vocabulary picture for the Hebrew letter Aleph.",
+    "L02_bet_cursive_ari": "Ari writing on a blank notepad, pen mid-stroke, page empty.",
     "L02_bet_cursive_mnemonic": "The keyword object a swan gliding, drawn so its outline echoes silhouette (REF_cursive_bet.png). Draw the object only, never the letter.",
+    "L02_bet_cursive_noa": "Noa writing on a blank cafe order pad, pen mid-stroke, page empty.",
     "L02_bet_cursive_postcard": "The attached object (a swan gliding) on a blank postcard pinned to a fridge, postcard blank.",
     "L02_bet_cursive_silhouette": "The attached object (a swan gliding) as a bold charcoal silhouette on cream.",
+    "L02_bet_cursive_trace": "Close-up of an index finger tracing on a tablet screen that shows only a faint dotted guide area, no letter.",
     "L02_bet_print_ari": "Ari points at bed inside a house, the memory picture for the Hebrew letter Bet / Vet.",
     "L02_bet_print_mnemonic": "Bed inside a house, drawn so its outline echoes the shape of the Hebrew letter Bet / Vet: a box open to the left with a dot inside.",
     "L02_bet_print_noa": "Noa points at bed inside a house, the memory picture for the Hebrew letter Bet / Vet.",
@@ -36777,9 +37789,12 @@
     "L02_bet_print_v2": "Banana (Hebrew: banana), a vocabulary picture for the Hebrew letter Bet / Vet.",
     "L02_bet_print_v3": "Sunrise (Hebrew: boker), a vocabulary picture for the Hebrew letter Bet / Vet.",
     "L02_bet_quirky_vet": "QUIRKY ADDENDUM: a funny, slightly absurd cartoon in the same flat-vector style, one hero subject only (plus at most one small prop), a cheeky expression or pose, the same line weight and the same.",
+    "L03_gimel_cursive_ari": "Ari writing on a blank notepad, pen mid-stroke, page empty.",
     "L03_gimel_cursive_mnemonic": "The keyword object a curled shrimp, drawn so its outline echoes silhouette (REF_cursive_gimel.png). Draw the object only, never the letter.",
+    "L03_gimel_cursive_noa": "Noa writing on a blank cafe order pad, pen mid-stroke, page empty.",
     "L03_gimel_cursive_postcard": "The attached object (a curled shrimp) on a blank postcard pinned to a fridge, postcard blank.",
     "L03_gimel_cursive_silhouette": "The attached object (a curled shrimp) as a bold charcoal silhouette on cream.",
+    "L03_gimel_cursive_trace": "Close-up of an index finger tracing on a tablet screen that shows only a faint dotted guide area, no letter.",
     "L03_gimel_print_ari": "Ari points at giraffe mid-stride, the memory picture for the Hebrew letter Gimel.",
     "L03_gimel_print_mnemonic": "Giraffe mid-stride, drawn so its outline echoes the shape of the Hebrew letter Gimel: a tall stroke with a short foot kicking out to the left.",
     "L03_gimel_print_noa": "Noa points at giraffe mid-stride, the memory picture for the Hebrew letter Gimel.",
@@ -36791,8 +37806,10 @@
     "L03_gimel_print_v2": "Garden (Hebrew: gan), a vocabulary picture for the Hebrew letter Gimel.",
     "L03_gimel_print_v3": "Carrot (Hebrew: gezer), a vocabulary picture for the Hebrew letter Gimel.",
     "L04_dalet_cursive_mnemonic": "The keyword object a duck's head and neck, drawn so its outline echoes silhouette (REF_cursive_dalet.png). Draw the object only, never the letter.",
+    "L04_dalet_cursive_noa": "Noa writing on a blank cafe order pad, pen mid-stroke, page empty.",
     "L04_dalet_cursive_postcard": "The attached object (a duck's head and neck) on a blank postcard pinned to a fridge, postcard blank.",
     "L04_dalet_cursive_silhouette": "The attached object (a duck's head and neck) as a bold charcoal silhouette on cream.",
+    "L04_dalet_cursive_trace": "Close-up of an index finger tracing on a tablet screen that shows only a faint dotted guide area, no letter.",
     "L04_dalet_print_ari": "Ari points at door frame, the memory picture for the Hebrew letter Dalet.",
     "L04_dalet_print_mnemonic": "Door frame, drawn so its outline echoes the shape of the Hebrew letter Dalet: a flat lintel with one post hanging from its right end.",
     "L04_dalet_print_noa": "Noa points at door frame, the memory picture for the Hebrew letter Dalet.",
@@ -36806,6 +37823,7 @@
     "L05_he_cursive_mnemonic": "The keyword object a horse clearing a jump, drawn so its outline echoes silhouette (REF_cursive_he.png). Draw the object only, never the letter.",
     "L05_he_cursive_postcard": "The attached object (a horse clearing a jump) on a blank postcard pinned to a fridge, postcard blank.",
     "L05_he_cursive_silhouette": "The attached object (a horse clearing a jump) as a bold charcoal silhouette on cream.",
+    "L05_he_cursive_trace": "Close-up of an index finger tracing on a tablet screen that shows only a faint dotted guide area, no letter.",
     "L05_he_print_ari": "Ari points at house with an open window, the memory picture for the Hebrew letter He.",
     "L05_he_print_mnemonic": "House with an open window, drawn so its outline echoes the shape of the Hebrew letter He: a lintel with a right post and a short detached left post leaving a gap at the top.",
     "L05_he_print_noa": "Noa points at house with an open window, the memory picture for the Hebrew letter He.",
@@ -36819,6 +37837,7 @@
     "L06_vav_cursive_mnemonic": "The keyword object a single vine stake, drawn so its outline echoes silhouette (REF_cursive_vav.png). Draw the object only, never the letter.",
     "L06_vav_cursive_postcard": "The attached object (a single vine stake) on a blank postcard pinned to a fridge, postcard blank.",
     "L06_vav_cursive_silhouette": "The attached object (a single vine stake) as a bold charcoal silhouette on cream.",
+    "L06_vav_cursive_trace": "Close-up of an index finger tracing on a tablet screen that shows only a faint dotted guide area, no letter.",
     "L06_vav_print_ari": "Ari points at vine on a stake, the memory picture for the Hebrew letter Vav.",
     "L06_vav_print_mnemonic": "Vine on a stake, drawn so its outline echoes the shape of the Hebrew letter Vav: one straight vertical with a tiny hook at top.",
     "L06_vav_print_noa": "Noa points at vine on a stake, the memory picture for the Hebrew letter Vav.",
@@ -36832,6 +37851,7 @@
     "L07_zayin_cursive_mnemonic": "The keyword object a zigzag lightning bolt, drawn so its outline echoes silhouette (REF_cursive_zayin.png). Draw the object only, never the letter.",
     "L07_zayin_cursive_postcard": "The attached object (a zigzag lightning bolt) on a blank postcard pinned to a fridge, postcard blank.",
     "L07_zayin_cursive_silhouette": "The attached object (a zigzag lightning bolt) as a bold charcoal silhouette on cream.",
+    "L07_zayin_cursive_trace": "Close-up of an index finger tracing on a tablet screen that shows only a faint dotted guide area, no letter.",
     "L07_zayin_print_ari": "Ari points at zipper pull, the memory picture for the Hebrew letter Zayin.",
     "L07_zayin_print_mnemonic": "Zipper pull, drawn so its outline echoes the shape of the Hebrew letter Zayin: a vertical with a small crossbar crown.",
     "L07_zayin_print_noa": "Noa points at zipper pull, the memory picture for the Hebrew letter Zayin.",
@@ -36846,6 +37866,7 @@
     "L08_chet_cursive_mnemonic": "The keyword object a stone archway, drawn so its outline echoes silhouette (REF_cursive_chet.png). Draw the object only, never the letter.",
     "L08_chet_cursive_postcard": "The attached object (a stone archway) on a blank postcard pinned to a fridge, postcard blank.",
     "L08_chet_cursive_silhouette": "The attached object (a stone archway) as a bold charcoal silhouette on cream.",
+    "L08_chet_cursive_trace": "Close-up of an index finger tracing on a tablet screen that shows only a faint dotted guide area, no letter.",
     "L08_chet_print_ari": "Ari points at hut doorway, the memory picture for the Hebrew letter Chet.",
     "L08_chet_print_mnemonic": "Hut doorway, drawn so its outline echoes the shape of the Hebrew letter Chet: a gateway: two posts with a flat roof, no gap.",
     "L08_chet_print_noa": "Noa points at hut doorway, the memory picture for the Hebrew letter Chet.",
@@ -36859,6 +37880,7 @@
     "L09_tet_cursive_mnemonic": "The keyword object a tadpole curled on itself, drawn so its outline echoes silhouette (REF_cursive_tet.png). Draw the object only, never the letter.",
     "L09_tet_cursive_postcard": "The attached object (a tadpole curled on itself) on a blank postcard pinned to a fridge, postcard blank.",
     "L09_tet_cursive_silhouette": "The attached object (a tadpole curled on itself) as a bold charcoal silhouette on cream.",
+    "L09_tet_cursive_trace": "Close-up of an index finger tracing on a tablet screen that shows only a faint dotted guide area, no letter.",
     "L09_tet_print_ari": "Ari points at teacup with a curled handle, the memory picture for the Hebrew letter Tet.",
     "L09_tet_print_mnemonic": "Teacup with a curled handle, drawn so its outline echoes the shape of the Hebrew letter Tet: a bowl whose left rim curls inward.",
     "L09_tet_print_noa": "Noa points at teacup with a curled handle, the memory picture for the Hebrew letter Tet.",
@@ -36872,6 +37894,7 @@
     "L10_yod_cursive_mnemonic": "The keyword object a yo-yo at the end of its string, drawn so its outline echoes silhouette (REF_cursive_yod.png). Draw the object only, never the letter.",
     "L10_yod_cursive_postcard": "The attached object (a yo-yo at the end of its string) on a blank postcard pinned to a fridge, postcard blank.",
     "L10_yod_cursive_silhouette": "The attached object (a yo-yo at the end of its string) as a bold charcoal silhouette on cream.",
+    "L10_yod_cursive_trace": "Close-up of an index finger tracing on a tablet screen that shows only a faint dotted guide area, no letter.",
     "L10_yod_print_ari": "Ari points at yo-yo on a short string, the memory picture for the Hebrew letter Yod.",
     "L10_yod_print_mnemonic": "Yo-yo on a short string, drawn so its outline echoes the shape of the Hebrew letter Yod: a small comma hanging at the top of the line.",
     "L10_yod_print_noa": "Noa points at yo-yo on a short string, the memory picture for the Hebrew letter Yod.",
@@ -36886,6 +37909,7 @@
     "L11_kaf_cursive_mnemonic": "The keyword object a cupped hand, drawn so its outline echoes silhouette (REF_cursive_kaf.png). Draw the object only, never the letter.",
     "L11_kaf_cursive_postcard": "The attached object (a cupped hand) on a blank postcard pinned to a fridge, postcard blank.",
     "L11_kaf_cursive_silhouette": "The attached object (a cupped hand) as a bold charcoal silhouette on cream.",
+    "L11_kaf_cursive_trace": "Close-up of an index finger tracing on a tablet screen that shows only a faint dotted guide area, no letter.",
     "L11_kaf_print_ari": "Ari points at cupped palm, the memory picture for the Hebrew letter Kaf / Khaf.",
     "L11_kaf_print_mnemonic": "Cupped palm, drawn so its outline echoes the shape of the Hebrew letter Kaf / Khaf: a rounded bracket open to the left, like a cupped hand.",
     "L11_kaf_print_noa": "Noa points at cupped palm, the memory picture for the Hebrew letter Kaf / Khaf.",
@@ -36900,6 +37924,7 @@
     "L12_lamed_cursive_mnemonic": "The keyword object a lighthouse with a spiral stair, drawn so its outline echoes silhouette (REF_cursive_lamed.png). Draw the object only, never the letter.",
     "L12_lamed_cursive_postcard": "The attached object (a lighthouse with a spiral stair) on a blank postcard pinned to a fridge, postcard blank.",
     "L12_lamed_cursive_silhouette": "The attached object (a lighthouse with a spiral stair) as a bold charcoal silhouette on cream.",
+    "L12_lamed_cursive_trace": "Close-up of an index finger tracing on a tablet screen that shows only a faint dotted guide area, no letter.",
     "L12_lamed_print_ari": "Ari points at lighthouse / shepherd's staff, the memory picture for the Hebrew letter Lamed.",
     "L12_lamed_print_mnemonic": "Lighthouse / shepherd's staff, drawn so its outline echoes the shape of the Hebrew letter Lamed: the tallest letter, a staff rising above the line with a hooked foot.",
     "L12_lamed_print_noa": "Noa points at lighthouse / shepherd's staff, the memory picture for the Hebrew letter Lamed.",
@@ -36913,6 +37938,7 @@
     "L13_mem_cursive_mnemonic": "The keyword object twin mountain peaks, drawn so its outline echoes silhouette (REF_cursive_mem.png). Draw the object only, never the letter.",
     "L13_mem_cursive_postcard": "The attached object (twin mountain peaks) on a blank postcard pinned to a fridge, postcard blank.",
     "L13_mem_cursive_silhouette": "The attached object (twin mountain peaks) as a bold charcoal silhouette on cream.",
+    "L13_mem_cursive_trace": "Close-up of an index finger tracing on a tablet screen that shows only a faint dotted guide area, no letter.",
     "L13_mem_print_ari": "Ari points at mountain over water (mayim), the memory picture for the Hebrew letter Mem.",
     "L13_mem_print_mnemonic": "Mountain over water (mayim), drawn so its outline echoes the shape of the Hebrew letter Mem: a square with a gap at bottom left and a wave-like top.",
     "L13_mem_print_noa": "Noa points at mountain over water (mayim), the memory picture for the Hebrew letter Mem.",
@@ -36926,6 +37952,7 @@
     "L14_nun_cursive_mnemonic": "The keyword object a fishing hook, drawn so its outline echoes silhouette (REF_cursive_nun.png). Draw the object only, never the letter.",
     "L14_nun_cursive_postcard": "The attached object (a fishing hook) on a blank postcard pinned to a fridge, postcard blank.",
     "L14_nun_cursive_silhouette": "The attached object (a fishing hook) as a bold charcoal silhouette on cream.",
+    "L14_nun_cursive_trace": "Close-up of an index finger tracing on a tablet screen that shows only a faint dotted guide area, no letter.",
     "L14_nun_print_ari": "Ari points at nail bent at the top, the memory picture for the Hebrew letter Nun.",
     "L14_nun_print_mnemonic": "Nail bent at the top, drawn so its outline echoes the shape of the Hebrew letter Nun: a short bent stroke like a seed or a fish.",
     "L14_nun_print_noa": "Noa points at nail bent at the top, the memory picture for the Hebrew letter Nun.",
@@ -36952,6 +37979,7 @@
     "L16_ayin_cursive_mnemonic": "The keyword object a tulip with two leaves, drawn so its outline echoes silhouette (REF_cursive_ayin.png). Draw the object only, never the letter.",
     "L16_ayin_cursive_postcard": "The attached object (a tulip with two leaves) on a blank postcard pinned to a fridge, postcard blank.",
     "L16_ayin_cursive_silhouette": "The attached object (a tulip with two leaves) as a bold charcoal silhouette on cream.",
+    "L16_ayin_cursive_trace": "Close-up of an index finger tracing on a tablet screen that shows only a faint dotted guide area, no letter.",
     "L16_ayin_print_ari": "Ari points at eye (ayin), the memory picture for the Hebrew letter Ayin.",
     "L16_ayin_print_mnemonic": "Eye (ayin), drawn so its outline echoes the shape of the Hebrew letter Ayin: a Y with the left branch curling.",
     "L16_ayin_print_noa": "Noa points at eye (ayin), the memory picture for the Hebrew letter Ayin.",
@@ -36963,6 +37991,8 @@
     "L16_ayin_print_v2": "Tree (Hebrew: etz), a vocabulary picture for the Hebrew letter Ayin.",
     "L16_ayin_print_v3": "City skyline (Hebrew: ir), a vocabulary picture for the Hebrew letter Ayin.",
     "L17_pe_cursive_mnemonic": "The keyword object a snail shell, drawn so its outline echoes silhouette (REF_cursive_pe.png). Draw the object only, never the letter.",
+    "L17_pe_cursive_postcard": "The attached object (a snail shell) on a blank postcard pinned to a fridge, postcard blank.",
+    "L17_pe_cursive_silhouette": "The attached object (a snail shell) as a bold charcoal silhouette on cream.",
     "L17_pe_print_ari": "Ari points at pie in an open mouth, the memory picture for the Hebrew letter Pe / Fe.",
     "L17_pe_print_mnemonic": "Pie in an open mouth, drawn so its outline echoes the shape of the Hebrew letter Pe / Fe: a coiled mouth with a tooth inside.",
     "L17_pe_print_noa": "Noa points at pie in an open mouth, the memory picture for the Hebrew letter Pe / Fe.",
@@ -36974,6 +38004,9 @@
     "L17_pe_print_v2": "Elephant (Hebrew: pil), a vocabulary picture for the Hebrew letter Pe / Fe.",
     "L17_pe_print_v3": "Pita (Hebrew: pita), a vocabulary picture for the Hebrew letter Pe / Fe.",
     "L17_pe_quirky_fe": "QUIRKY ADDENDUM: a funny, slightly absurd cartoon in the same flat-vector style, one hero subject only (plus at most one small prop), a cheeky expression or pose, the same line weight and the same.",
+    "L18_tsadi_cursive_mnemonic": "The keyword object a cat curled up asleep, drawn so its outline echoes silhouette (REF_cursive_tsadi.png). Draw the object only, never the letter.",
+    "L18_tsadi_cursive_postcard": "The attached object (a cat curled up asleep) on a blank postcard pinned to a fridge, postcard blank.",
+    "L18_tsadi_cursive_silhouette": "The attached object (a cat curled up asleep) as a bold charcoal silhouette on cream.",
     "L18_tsadi_print_ari": "Ari points at cat sitting (ts of 'cats'), the memory picture for the Hebrew letter Tsadi.",
     "L18_tsadi_print_mnemonic": "Cat sitting (ts of 'cats'), drawn so its outline echoes the shape of the Hebrew letter Tsadi: a sitting cat with pointed ears on a flat base.",
     "L18_tsadi_print_noa": "Noa points at cat sitting (ts of 'cats'), the memory picture for the Hebrew letter Tsadi.",
@@ -36984,6 +38017,9 @@
     "L18_tsadi_print_v1": "Bird (Hebrew: tsipor), a vocabulary picture for the Hebrew letter Tsadi.",
     "L18_tsadi_print_v2": "Yellow, swatch (Hebrew: tsahov), a vocabulary picture for the Hebrew letter Tsadi.",
     "L18_tsadi_print_v3": "Frog (Hebrew: tsfardea), a vocabulary picture for the Hebrew letter Tsadi.",
+    "L19_qof_cursive_mnemonic": "The keyword object a kangaroo with its tail down, drawn so its outline echoes silhouette (REF_cursive_qof.png). Draw the object only, never the letter.",
+    "L19_qof_cursive_postcard": "The attached object (a kangaroo with its tail down) on a blank postcard pinned to a fridge, postcard blank.",
+    "L19_qof_cursive_silhouette": "The attached object (a kangaroo with its tail down) as a bold charcoal silhouette on cream.",
     "L19_qof_print_ari": "Ari points at kangaroo tail / monkey (kof) hanging, the memory picture for the Hebrew letter Kof.",
     "L19_qof_print_mnemonic": "Kangaroo tail / monkey (kof) hanging, drawn so its outline echoes the shape of the Hebrew letter Kof: a rounded top with a long tail dropping below the line.",
     "L19_qof_print_noa": "Noa points at kangaroo tail / monkey (kof) hanging, the memory picture for the Hebrew letter Kof.",
@@ -36994,6 +38030,9 @@
     "L19_qof_print_v1": "Coffee (Hebrew: kafe), a vocabulary picture for the Hebrew letter Kof.",
     "L19_qof_print_v2": "Voice, speech bubble, empty (Hebrew: kol), a vocabulary picture for the Hebrew letter Kof.",
     "L19_qof_print_v3": "Small (Hebrew: katan), a vocabulary picture for the Hebrew letter Kof.",
+    "L20_resh_cursive_mnemonic": "The keyword object a rainbow arc, drawn so its outline echoes silhouette (REF_cursive_resh.png). Draw the object only, never the letter.",
+    "L20_resh_cursive_postcard": "The attached object (a rainbow arc) on a blank postcard pinned to a fridge, postcard blank.",
+    "L20_resh_cursive_silhouette": "The attached object (a rainbow arc) as a bold charcoal silhouette on cream.",
     "L20_resh_print_ari": "Ari points at rainbow arc / head (rosh), the memory picture for the Hebrew letter Resh.",
     "L20_resh_print_mnemonic": "Rainbow arc / head (rosh), drawn so its outline echoes the shape of the Hebrew letter Resh: a single rounded corner, like a bowed head.",
     "L20_resh_print_noa": "Noa points at rainbow arc / head (rosh), the memory picture for the Hebrew letter Resh.",
@@ -37004,6 +38043,9 @@
     "L20_resh_print_v1": "Head (Hebrew: rosh), a vocabulary picture for the Hebrew letter Resh.",
     "L20_resh_print_v2": "Foot (Hebrew: regel), a vocabulary picture for the Hebrew letter Resh.",
     "L20_resh_print_v3": "Train (Hebrew: rakevet), a vocabulary picture for the Hebrew letter Resh.",
+    "L21_shin_cursive_mnemonic": "The keyword object a breaking wave, drawn so its outline echoes silhouette (REF_cursive_shin.png). Draw the object only, never the letter.",
+    "L21_shin_cursive_postcard": "The attached object (a breaking wave) on a blank postcard pinned to a fridge, postcard blank.",
+    "L21_shin_cursive_silhouette": "The attached object (a breaking wave) as a bold charcoal silhouette on cream.",
     "L21_shin_print_ari": "Ari points at shark teeth / three flames, the memory picture for the Hebrew letter Shin / Sin.",
     "L21_shin_print_mnemonic": "Shark teeth / three flames, drawn so its outline echoes the shape of the Hebrew letter Shin / Sin: three prongs rising from a base.",
     "L21_shin_print_noa": "Noa points at shark teeth / three flames, the memory picture for the Hebrew letter Shin / Sin.",

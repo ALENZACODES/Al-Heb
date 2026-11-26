@@ -12,6 +12,7 @@ import { estimateWordTimings, wordAt, bookReadiness, readinessLine } from "../au
 import { ensureStyle as ensureListenStyle } from "../audiolab/ui.js";
 /** A8: the read-along highlight uses estimated word timings (there are no measured ones for book pages); the page says so. */
 export const ESTIMATED_NOTE = "Read along: the highlighted word follows estimated timings (shared out by word length), not measured ones.";
+import { applyFocus, loadFocus } from "./focus.js"; // the drawn part of a picture that sits on a wide blank sheet (25 Nov 2026 audit)
 import { bookPage } from "./extras.js"; // lane games-books: difficulty, new-word marks, English per line, completion card, next in level
 /** S-04: a page held back because it says the divine name; nothing plays, and the page says why. */
 export const HELD_PAGE = "This page's recording is held for review: the checks heard words in it wrongly. Read it from the page.";
@@ -200,6 +201,7 @@ export async function mount(root, ctx) {
       // hasImg comes from the build; if the file is still missing on the host, swap the broken picture for the notice.
       const img = h("img", { class: "book-page-img", src: p.img, alt: p.illustration || "" });
       img.addEventListener("error", () => { if (img.isConnected) img.replaceWith(pending()); }, { once: true });
+      loadFocus().then((f) => applyFocus(img, f)).catch(() => {});
       stage.append(img);
     } else {
       stage.append(pending());

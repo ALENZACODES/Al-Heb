@@ -54,7 +54,9 @@ def main():
     S, W = load(a, want)
 
     def stat(f):
-        m = S.get(f, {})
+        m = dict(S.get(f, {}))
+        if len(m) == 3 and 'renikud' not in m:   # renikud only heard clips all three CTC models hear (phon4 --gate)
+            m['renikud'] = 0.0
         if len(m) < 4:
             return None
         return (sum(v >= phon4.WORD_OK for v in m.values()), round(sum(m.values()) / 4, 3), W.get(f, False))

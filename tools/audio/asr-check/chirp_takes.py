@@ -109,10 +109,14 @@ def main():
                 ('w-pt', pt, wavenet, 1.0), ('c-km', km, chirp, 1.0), ('c-kmpl', plain(km), chirp, 1.0)]
         if len(pt.split()) <= 2:   # single words: say it inside a short carrier phrase; it is cut out afterwards (c-car)
             plan += [('c-car', 'הַמִּלָּה, ' + pt + '.', chirp, 1.0), ('c-carkm', 'הַמִּלָּה, ' + km + '.', chirp, 1.0)]
+        if len(pt.split()) > 2:    # lines: Chirp reads prayers fast (5-6 syl/s); 0.8 brings them to a natural reading pace
+            plan += [('c-pt-80', pt, chirp, 0.8), ('c-pl-80', pl, chirp, 0.8)]
+        if len(pt.split()) <= 2:
+            pass
         elif probs.get(f):         # lines: only the problem words in full spelling, the rest as pointed
             bad = {re.sub(r'[\u0591-\u05C7]', '', w) for w in probs[f]}
             sel = ' '.join(ktiv_male(w) if re.sub(r'[\u0591-\u05C7]', '', w) in bad else w for w in pt.split())
-            plan += [('c-sel', sel, chirp, 1.0)]
+            plan += [('c-sel', sel, chirp, 1.0), ('c-sel-80', sel, chirp, 0.8)]
         if len(pt.split()) <= 2:   # single words only: other Chirp voices of the same sex
             plan += [(f'a{i}-pt', pt, v, 1.0) for i, v in enumerate(ALT[g])] + [(f'a{i}-km', km, v, 1.0) for i, v in enumerate(ALT[g])]
         for tid, text, voice, rate in plan:

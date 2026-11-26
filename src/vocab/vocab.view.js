@@ -16,6 +16,7 @@ import { loadTier, TIER_BANDS } from './loader.js';
 import { translitFor, TRAD } from './model.js';
 import { TIER_LABEL, POS_LABEL, VOCAB_CARDS_KEY, stripPoints, addCards, cardId, CARD_PREFIX, rankEntries, isExactBand, isShortQuery, keepBand, fold, BAND } from './model.js';
 import { aliasHits, aliasNote } from './aliases.js';
+import { suggestSpellings } from './rank.js';
 import { isFunction } from './vocab.js';
 import { plural } from '../shell/plural.js';
 import { DICTIONARY, fmt, dictionaryScopeNote } from '../lib/counts.js';
@@ -124,6 +125,7 @@ export function mount(root, ctx) {
 
   /** @type {Record<string, any>} */
   let cards = {};
+  const STARTER = 20;
   const vocabCards = () => Object.values(cards).filter((c) => c && String(c.id).startsWith(CARD_PREFIX));
   const dueNow = () => due(vocabCards(), Date.now());
   const refreshModeLabel = () => { const n = dueNow().length; modeReview.textContent = n ? `Review (${n} due)` : 'Review'; };
@@ -399,6 +401,13 @@ export function mount(root, ctx) {
       heading.hidden = !heading.textContent;
       list.replaceChildren(...ranked.slice(0, shown).map(cardItem));
       status.textContent = statusText();
+      // Nothing found: offer close spellings as buttons that run the search again (src/vocab/rank.js suggestSpellings).
+      if (!ranked.length && !hiddenNoise && sel.query.trim()) {
+        const tips = suggestSpellings(all, sel.query, translitOf);
+        if (tips.length) list.replaceChildren(el('li', { class: 'vc-suggest' }, el('p', {}, 'Did you mean: '),
+          ...tips.map((tip) => el('button', { type: 'button', class: 'btn secondary', lang: tip.kind === 'hebrew' ? 'he' : null, dir: tip.kind === 'hebrew' ? 'rtl' : null,
+            onclick: () => { search.value = tip.text; search.dispatchEvent(new Event('input', { bubbles: true })); search.focus(); } }, tip.text, tip.kind === 'hebrew' ? '' : ` (${tip.kind})`))));
+      }
       moreRow.replaceChildren(...(shown < ranked.length ? [el('button', { type: 'button', class: 'btn secondary', id: 'vc-more', onclick: () => {
         const from = shown; shown = Math.min(shown + PAGE, ranked.length);
         list.append(...ranked.slice(from, shown).map(cardItem));
@@ -441,8 +450,9 @@ export function mount(root, ctx) {
     const total = vocabCards();
     if (!total.length) {
       body.replaceChildren(el('div', { class: 'card' }, el('h2', {}, 'No words in your reviews yet'),
-        el('p', {}, 'Open Browse, pick a tier or topic, and choose "Add ... to reviews". Words you add come back here on a spaced schedule.'),
-        el('button', { type: 'button', class: 'btn', onclick: () => setMode('browse') }, 'Browse words')));
+        el('p', {}, `Start with the ${STARTER} most common words, or open Browse, pick a tier or topic, and choose "Add ... to reviews". Words you add come back here on a spaced schedule.`),
+        el('div', { class: 'row' }, el('button', { type: 'button', class: 'btn', id: 'vc-starter', onclick: startStarter }, `Start with the ${STARTER} most common words`),
+          el('button', { type: 'button', class: 'btn secondary', onclick: () => setMode('browse') }, 'Browse words'))));
       return;
     }
     // lane 3 (12 Nov, #15d): the learner can review due words grouped by family letters (same cards, same count, new order)
@@ -459,6 +469,15 @@ export function mount(root, ctx) {
     const queue = queueCards.map((c) => c.id).filter((id) => byTier[id.slice(CARD_PREFIX.length)]);
     rv = { queue, pos: 0, revealed: false, stats: { 1: 0, 2: 0, 3: 0, 4: 0 }, byTier, requeued: new Set(), grouped, groupOf };
     showCard();
+  }
+  /** Starter deck (25 Nov 2026 audit: review began empty with no preset deck): the STARTER most frequent words of the first tier (no word forms, no rare senses, no function words), then review them. */
+  async function startStarter() {
+    try {
+      const first = await load(TIER_BANDS[0]);
+      const picks = (first || []).filter((e) => !skippedInBulk(e) && !isFunction(e)).slice(0, STARTER);
+      const r = addCards(cards, picks, Date.now(), STARTER); await saveCards(r.cards);
+      renderReview();
+    } catch { body.append(el('p', { role: 'alert' }, 'Could not load the starter words. Check your connection, then try again.')); }
   }
   function summary() {
     const s = rv.stats, n = s[1] + s[2] + s[3] + s[4], left = dueNow().length;

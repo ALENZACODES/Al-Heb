@@ -92,6 +92,8 @@ def main():
                 else:
                     heard = []
                     for c in phon4.chunks(audio[o['file']]):          # 20 s pieces
+                        if len(c) < 1600:                             # an empty tail piece crashed the model
+                            continue
                         x = proc(c, sampling_rate=16000, return_tensors='pt')
                         with torch.inference_mode():
                             ids = model(**x).logits.argmax(-1)

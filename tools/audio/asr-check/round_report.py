@@ -50,11 +50,16 @@ def verdicts(o, Wf, Pf, Xf=None, phon_models=None):
             for i in issues:
                 for w in i['say'].split():
                     wrong[w][m] = i['heard']
-    pm, should = collections.defaultdict(dict), {}
+    pm, should = collections.defaultdict(lambda: collections.defaultdict(list)), {}     # word -> model -> [match by occurrence]
     for m in phon_models:
         for wd in (Pf.get(m) or {}).get('words', []):
-            pm[wd['word']].setdefault(m, wd['match'])
+            pm[wd['word']][m].append(wd['match'])
             should.setdefault(wd['word'], wd['should'])
+    seen = collections.Counter()
+
+    def at(p, m):
+        lst = pm[p].get(m) or []
+        return lst[min(seen[p], len(lst) - 1)] if lst else None
     fit = collections.defaultdict(list)
     for wd in (Xf.get('mms-align') or {}).get('words', []):
         if wd.get('fit') is not None:
@@ -62,7 +67,9 @@ def verdicts(o, Wf, Pf, Xf=None, phon_models=None):
     out = []
     for u in ([' '.join(words)] if o['kind'] == 'word' else words):
         parts = u.split()
-        matches = {m: min(pm[p].get(m, 0) for p in parts) for m in phon_models if all(m in pm[p] for p in parts)}
+        matches = {m: min(at(p, m) for p in parts) for m in phon_models if all(at(p, m) is not None for p in parts)}
+        for p in parts:
+            seen[p] += 1
         votes = [v >= phon4.WORD_OK for v in matches.values()]
         fu = [fit[p].pop(0) for p in parts if fit.get(p)]
         if fu:
@@ -80,6 +87,7 @@ def main():
     ap.add_argument('--words', nargs='+', required=True)
     ap.add_argument('--phon', nargs='+', required=True)
     ap.add_argument('--queue', required=True)
+    ap.add_argument('--seg', nargs='*', default=[], help='word-by-word phonetic hearings of lines (segment_checks.py)')
     ap.add_argument('--extra', nargs='*', default=[], help='extra checks: mms-align, w2v-he, google (extra_checks.py, google_stt.py)')
     ap.add_argument('--files', help='only these recordings (one per line)')
     ap.add_argument('--out', required=True)
@@ -105,13 +113,17 @@ def main():
     for fn in a.extra:
         for l in open(fn, encoding='utf-8'):
             r = json.loads(l); X[r['file']][r['model']] = r
+    SEG = collections.defaultdict(dict)
+    for fn in a.seg:
+        for l in open(fn, encoding='utf-8'):
+            r = json.loads(l); SEG[r['file']][r['model']] = r
     phon_models = [m for m in PHON if any(m in v for v in P.values())]
     files = [f for f in q if (keep is None or f in keep) and f in W]
     total = confirmed = 0
     rows = []
     for f in files:
         o = q[f]
-        for v in verdicts(o, W[f], P[f], X.get(f, {}), phon_models):
+        for v in verdicts(o, W[f], SEG.get(f) or P[f], X.get(f, {}), phon_models):
             total += 1
             confirmed += bool(v['ok'])
             if not v['ok']:

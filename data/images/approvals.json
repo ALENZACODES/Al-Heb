@@ -6358,6 +6358,424 @@
       "status": "approved",
       "at": "2026-11-08T05:27:10.158Z",
       "note": "Agent visual review: scene matches prompt; no visible text. User requested generation and publication."
+    },
+    "J-0001": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0002": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0003": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0004": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0005": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0006": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0007": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0008": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0009": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0011": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0012": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0013": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0014": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0015": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0017": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0018": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0019": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0020": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0021": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0022": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0023": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0024": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0025": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0026": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0027": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0028": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0029": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0030": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0031": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0032": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0033": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0034": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0035": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0036": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0037": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0038": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0039": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0040": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0041": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0042": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0043": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0044": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0045": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0046": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0047": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0048": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0049": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0050": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0051": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0052": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0054": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0055": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.758Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text; OCR flag was a false positive (frets, tassels, ripples, wood grain)"
+    },
+    "J-0056": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0057": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0060": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0061": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0062": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0063": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0064": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0065": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0067": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0068": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0069": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0070": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0071": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0072": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0073": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0074": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0075": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0076": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0077": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0078": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0080": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0089": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.559Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text"
+    },
+    "J-0010": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.758Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text; OCR flag was a false positive (frets, tassels, ripples, wood grain)",
+      "forcedDespite": [
+        "contains_text"
+      ]
+    },
+    "J-0016": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.758Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text; OCR flag was a false positive (frets, tassels, ripples, wood grain)",
+      "forcedDespite": [
+        "contains_text"
+      ]
+    },
+    "J-0053": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.758Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text; OCR flag was a false positive (frets, tassels, ripples, wood grain)",
+      "forcedDespite": [
+        "contains_text"
+      ]
+    },
+    "J-0058": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.758Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text; OCR flag was a false positive (frets, tassels, ripples, wood grain)",
+      "forcedDespite": [
+        "contains_text"
+      ]
+    },
+    "J-0059": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.758Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text; OCR flag was a false positive (frets, tassels, ripples, wood grain)",
+      "forcedDespite": [
+        "contains_text"
+      ]
+    },
+    "J-0066": {
+      "status": "approved",
+      "at": "2026-11-26T16:12:30.758Z",
+      "note": "Owner-requested review: picture checked by eye against its word; no visible text; OCR flag was a false positive (frets, tassels, ripples, wood grain)",
+      "forcedDespite": [
+        "contains_text"
+      ]
     }
   }
 }

@@ -72,8 +72,10 @@ test('every cue matches its vocabulary entry, one picture per word, and rejected
     assert.equal(cue.pos, entry.pos, id);
     assert.equal(HE.test(cue.alt), false, cue.alt);
     const hit = R.resolve('word', id);
-    assert.equal(hit?.id, cue.asset, id);
-    assert.equal(hit.alt, cue.alt);
+    // A word whose own picture has since been approved (Block J) shows that picture; the cue is only the stand-in.
+    const own = plain.resolve('word', id);
+    if (own) assert.equal(hit?.id, own.id, id);
+    else { assert.equal(hit?.id, cue.asset, id); assert.equal(hit.alt, cue.alt); }
     assert.equal(approvals.approvals[cue.asset]?.status, 'approved', cue.asset);
     const group = byAsset.get(cue.asset) || [];
     group.push(bare(cue.he));

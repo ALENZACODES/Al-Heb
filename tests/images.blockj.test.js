@@ -35,7 +35,11 @@ test('block J: part counts add up', () => {
 test('block J: no duplicate prompts or scene cores, none repeat existing CSVs', () => {
   assert.equal(new Set(B.rows.map((r) => r.prompt)).size, 1000);
   assert.equal(new Set(B.rows.map((r) => r.core)).size, 1000);
-  const existing = ['data/images/manifest.csv', 'data/images/next1000.csv', 'data/images/inter-pending.csv'].flatMap((p) => parseCsv(read(p))).map((r) => r.prompt);
+  // Block J rows are appended to manifest.csv as their pictures come back (tools/images/append_manifest_rows.mjs); those are
+  // the block's own rows, not repeats, so they are left out here.
+  const own = new Set(B.rows.map((r) => r.file));
+  const existing = ['data/images/manifest.csv', 'data/images/next1000.csv', 'data/images/inter-pending.csv'].flatMap((p) => parseCsv(read(p)))
+    .filter((r) => !own.has(r.file)).map((r) => r.prompt);
   const set = new Set(existing);
   for (const r of B.rows) { assert.ok(!set.has(r.prompt), r.id); assert.ok(!existing.some((e) => e.includes(r.core)), `${r.id} repeats an existing prompt`); }
 });

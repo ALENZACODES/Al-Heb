@@ -2,7 +2,7 @@
   "version": 1,
   "note": "APPROVED generated images only (see docs/images/RIGHTS.md). Files live in assets/img/gen/. Built by tools/images/ingest.mjs; do not edit by hand.",
   "dir": "gen",
-  "count": 1104,
+  "count": 1184,
   "images": {
     "BADGE_01": {
       "w": 512,
@@ -3979,6 +3979,1446 @@
           "file": "HERO_week_08.512.webp",
           "w": 512,
           "h": 293
+        }
+      ]
+    },
+    "J-0001": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0001.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0001.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0002": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0002.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0002.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0003": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0003.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0003.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0004": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0004.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0004.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0005": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0005.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0005.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0006": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0006.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0006.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0007": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0007.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0007.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0008": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0008.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0008.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0009": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0009.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0009.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0010": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0010.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0010.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0011": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0011.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0011.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0012": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0012.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0012.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0013": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0013.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0013.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0014": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0014.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0014.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0015": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0015.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0015.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0016": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0016.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0016.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0017": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0017.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0017.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0018": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0018.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0018.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0019": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0019.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0019.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0020": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0020.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0020.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0021": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0021.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0021.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0022": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0022.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0022.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0023": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0023.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0023.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0024": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0024.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0024.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0025": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0025.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0025.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0026": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0026.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0026.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0027": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0027.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0027.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0028": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0028.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0028.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0029": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0029.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0029.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0030": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0030.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0030.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0031": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0031.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0031.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0032": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0032.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0032.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0033": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0033.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0033.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0034": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0034.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0034.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0035": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0035.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0035.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0036": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0036.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0036.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0037": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0037.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0037.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0038": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0038.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0038.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0039": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0039.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0039.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0040": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0040.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0040.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0041": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0041.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0041.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0042": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0042.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0042.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0043": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0043.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0043.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0044": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0044.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0044.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0045": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0045.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0045.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0046": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0046.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0046.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0047": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0047.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0047.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0048": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0048.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0048.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0049": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0049.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0049.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0050": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0050.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0050.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0051": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0051.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0051.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0052": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0052.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0052.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0053": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0053.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0053.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0054": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0054.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0054.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0055": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0055.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0055.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0056": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0056.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0056.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0057": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0057.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0057.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0058": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0058.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0058.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0059": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0059.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0059.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0060": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0060.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0060.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0061": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0061.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0061.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0062": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0062.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0062.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0063": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0063.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0063.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0064": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0064.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0064.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0065": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0065.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0065.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0066": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0066.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0066.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0067": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0067.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0067.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0068": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0068.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0068.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0069": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0069.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0069.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0070": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0070.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0070.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0071": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0071.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0071.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0072": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0072.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0072.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0073": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0073.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0073.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0074": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0074.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0074.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0075": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0075.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0075.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0076": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0076.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0076.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0077": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0077.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0077.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0078": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0078.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0078.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0080": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0080.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0080.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0089": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0089.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0089.1024.webp",
+          "w": 1024,
+          "h": 1024
         }
       ]
     },
@@ -19629,109 +21069,109 @@
     "J-0285": "Flat illustration for the Hebrew word meaning \"bucket\".",
     "J-0286": "Flat illustration for the Hebrew word meaning \"thorn\".",
     "J-0287": "Flat illustration for the Hebrew word meaning \"cannon\".",
-    "J-0288": "Flat illustration for the Hebrew word meaning \"spacecraft\".",
-    "J-0289": "Flat illustration for the Hebrew word meaning \"tablet\".",
-    "J-0290": "Flat illustration for the Hebrew word meaning \"fortress\".",
-    "J-0291": "Flat illustration for the Hebrew word meaning \"hawk\".",
-    "J-0292": "Flat illustration for the Hebrew word meaning \"newscaster\".",
-    "J-0293": "Flat illustration for the Hebrew word meaning \"robot\".",
-    "J-0294": "Flat illustration for the Hebrew word meaning \"pole\".",
-    "J-0295": "Flat illustration for the Hebrew word meaning \"pulpit\".",
-    "J-0296": "Flat illustration for the Hebrew word meaning \"hazel\".",
-    "J-0297": "Flat illustration for the Hebrew word meaning \"necktie\".",
-    "J-0298": "Flat illustration for the Hebrew word meaning \"boot\".",
-    "J-0299": "Flat illustration for the Hebrew word meaning \"vault\".",
-    "J-0300": "Flat illustration for the Hebrew word meaning \"moustache\".",
-    "J-0301": "Flat illustration for the Hebrew word meaning \"sapphire\".",
-    "J-0302": "Flat illustration for the Hebrew word meaning \"scales\".",
-    "J-0303": "Flat illustration for the Hebrew word meaning \"thunder\".",
-    "J-0304": "Flat illustration for the Hebrew word meaning \"hut\".",
-    "J-0305": "Flat illustration for the Hebrew word meaning \"cypress\".",
-    "J-0306": "Flat illustration for the Hebrew word meaning \"spider\".",
-    "J-0307": "Flat illustration for the Hebrew word meaning \"strawberry\".",
-    "J-0308": "Flat illustration for the Hebrew word meaning \"magician\".",
-    "J-0309": "Flat illustration for the Hebrew word meaning \"pillow\".",
-    "J-0310": "Flat illustration for the Hebrew word meaning \"dwarf\".",
-    "J-0311": "Flat illustration for the Hebrew word meaning \"waterskin\".",
-    "J-0312": "Flat illustration for the Hebrew word meaning \"bracelet\".",
-    "J-0313": "Flat illustration for the Hebrew word meaning \"forehead\".",
-    "J-0314": "Flat illustration for the Hebrew word meaning \"biceps\".",
-    "J-0315": "Flat illustration for the Hebrew word meaning \"cream\".",
-    "J-0316": "Flat illustration for the Hebrew word meaning \"ambassador\".",
-    "J-0317": "Flat illustration for the Hebrew word meaning \"laser\".",
-    "J-0318": "Flat illustration for the Hebrew word meaning \"sensor\".",
-    "J-0319": "Flat illustration for the Hebrew word meaning \"mushroom\".",
-    "J-0320": "Flat illustration for the Hebrew word meaning \"underwear\".",
-    "J-0321": "Flat illustration for the Hebrew word meaning \"steel\".",
-    "J-0322": "Flat illustration for the Hebrew word meaning \"scorpion\".",
-    "J-0323": "Flat illustration for the Hebrew word meaning \"alley\".",
-    "J-0324": "Flat illustration for the Hebrew word meaning \"eagle\".",
-    "J-0325": "Flat illustration for the Hebrew word meaning \"cocktail\".",
-    "J-0326": "Flat illustration for the Hebrew word meaning \"ditch\".",
-    "J-0327": "Flat illustration for the Hebrew word meaning \"toilet bowl\".",
-    "J-0328": "Flat illustration for the Hebrew word meaning \"bartender\".",
-    "J-0329": "Flat illustration for the Hebrew word meaning \"rubber\".",
-    "J-0330": "Flat illustration for the Hebrew word meaning \"cigar\".",
-    "J-0331": "Flat illustration for the Hebrew word meaning \"brick\".",
-    "J-0332": "Flat illustration for the Hebrew word meaning \"fur\".",
-    "J-0333": "Flat illustration for the Hebrew word meaning \"bearded vulture\".",
-    "J-0334": "Flat illustration for the Hebrew word meaning \"toast\".",
-    "J-0335": "Flat illustration for the Hebrew word meaning \"stew\".",
-    "J-0336": "Flat illustration for the Hebrew word meaning \"dinosaur\".",
-    "J-0337": "Flat illustration for the Hebrew word meaning \"goatskin\".",
-    "J-0338": "Flat illustration for the Hebrew word meaning \"robe\".",
-    "J-0339": "Flat illustration for the Hebrew word meaning \"bubble\".",
-    "J-0340": "Flat illustration for the Hebrew word meaning \"eyelid\".",
-    "J-0341": "Flat illustration for the Hebrew word meaning \"farmer\".",
-    "J-0342": "Flat illustration for the Hebrew word meaning \"flame\".",
-    "J-0343": "Flat illustration for the Hebrew word meaning \"scarf\".",
-    "J-0344": "Flat illustration for the Hebrew word meaning \"bat\".",
-    "J-0345": "Flat illustration for the Hebrew word meaning \"bee\".",
-    "J-0346": "Flat illustration for the Hebrew word meaning \"squirrel\".",
-    "J-0347": "Flat illustration for the Hebrew word meaning \"torso\".",
-    "J-0348": "Flat illustration for the Hebrew word meaning \"glider\".",
-    "J-0349": "Flat illustration for the Hebrew word meaning \"kitten\".",
-    "J-0350": "Flat illustration for the Hebrew word meaning \"bedsheet\".",
-    "J-0351": "Flat illustration for the Hebrew word meaning \"beehive\".",
-    "J-0352": "Flat illustration for the Hebrew word meaning \"coal\".",
-    "J-0353": "Flat illustration for the Hebrew word meaning \"babysitter\".",
-    "J-0354": "Flat illustration for the Hebrew word meaning \"claw\".",
-    "J-0355": "Flat illustration for the Hebrew word meaning \"teddy bear\".",
-    "J-0356": "Flat illustration for the Hebrew word meaning \"bandage\".",
-    "J-0357": "Flat illustration for the Hebrew word meaning \"chimney\".",
-    "J-0358": "Flat illustration for the Hebrew word meaning \"tray\".",
-    "J-0359": "Flat illustration for the Hebrew word meaning \"maze\".",
-    "J-0360": "Flat illustration for the Hebrew word meaning \"avalanche\".",
-    "J-0361": "Flat illustration for the Hebrew word meaning \"jar\".",
-    "J-0362": "Flat illustration for the Hebrew word meaning \"villa\".",
-    "J-0363": "Flat illustration for the Hebrew word meaning \"sieve\".",
-    "J-0364": "Flat illustration for the Hebrew word meaning \"scythe\".",
-    "J-0365": "Flat illustration for the Hebrew word meaning \"shelf\".",
-    "J-0366": "Flat illustration for the Hebrew word meaning \"grasshopper\".",
-    "J-0367": "Flat illustration for the Hebrew word meaning \"jet\".",
-    "J-0368": "Flat illustration for the Hebrew word meaning \"magnet\".",
-    "J-0369": "Flat illustration for the Hebrew word meaning \"live coal\".",
-    "J-0370": "Flat illustration for the Hebrew word meaning \"pigtail\".",
-    "J-0371": "Flat illustration for the Hebrew word meaning \"ponytail\".",
-    "J-0372": "Flat illustration for the Hebrew word meaning \"collar\".",
-    "J-0373": "Flat illustration for the Hebrew word meaning \"pearl\".",
-    "J-0374": "Flat illustration for the Hebrew word meaning \"bead\".",
-    "J-0375": "Flat illustration for the Hebrew word meaning \"wax\".",
-    "J-0376": "Flat illustration for the Hebrew word meaning \"spaghetti\".",
-    "J-0377": "Flat illustration for the Hebrew word meaning \"balsam\".",
-    "J-0378": "Flat illustration for the Hebrew word meaning \"iceberg\".",
-    "J-0379": "Flat illustration for the Hebrew word meaning \"papyrus\".",
-    "J-0380": "Flat illustration for the Hebrew word meaning \"pie\".",
-    "J-0381": "Flat illustration for the Hebrew word meaning \"beetle\".",
-    "J-0382": "Flat illustration for the Hebrew word meaning \"seagull\".",
-    "J-0383": "Flat illustration for the Hebrew word meaning \"aspirin\".",
-    "J-0384": "Flat illustration for the Hebrew word meaning \"berry\".",
-    "J-0385": "Flat illustration for the Hebrew word meaning \"garlic\".",
-    "J-0386": "Flat illustration for the Hebrew word meaning \"vanilla\".",
-    "J-0387": "Flat illustration for the Hebrew word meaning \"coconut\".",
-    "J-0388": "Flat illustration for the Hebrew word meaning \"scroll\".",
-    "J-0389": "Flat illustration for the Hebrew word meaning \"lipstick\".",
-    "J-0390": "Flat illustration for the Hebrew word meaning \"thumb\".",
+    "J-0288": "Flat illustration for the Hebrew word meaning \"duck\".",
+    "J-0289": "Flat illustration for the Hebrew word meaning \"spacecraft\".",
+    "J-0290": "Flat illustration for the Hebrew word meaning \"tablet\".",
+    "J-0291": "Flat illustration for the Hebrew word meaning \"fortress\".",
+    "J-0292": "Flat illustration for the Hebrew word meaning \"hawk\".",
+    "J-0293": "Flat illustration for the Hebrew word meaning \"newscaster\".",
+    "J-0294": "Flat illustration for the Hebrew word meaning \"robot\".",
+    "J-0295": "Flat illustration for the Hebrew word meaning \"pole\".",
+    "J-0296": "Flat illustration for the Hebrew word meaning \"pulpit\".",
+    "J-0297": "Flat illustration for the Hebrew word meaning \"hazel\".",
+    "J-0298": "Flat illustration for the Hebrew word meaning \"necktie\".",
+    "J-0299": "Flat illustration for the Hebrew word meaning \"boot\".",
+    "J-0300": "Flat illustration for the Hebrew word meaning \"vault\".",
+    "J-0301": "Flat illustration for the Hebrew word meaning \"moustache\".",
+    "J-0302": "Flat illustration for the Hebrew word meaning \"sapphire\".",
+    "J-0303": "Flat illustration for the Hebrew word meaning \"scales\".",
+    "J-0304": "Flat illustration for the Hebrew word meaning \"thunder\".",
+    "J-0305": "Flat illustration for the Hebrew word meaning \"hut\".",
+    "J-0306": "Flat illustration for the Hebrew word meaning \"cypress\".",
+    "J-0307": "Flat illustration for the Hebrew word meaning \"spider\".",
+    "J-0308": "Flat illustration for the Hebrew word meaning \"strawberry\".",
+    "J-0309": "Flat illustration for the Hebrew word meaning \"magician\".",
+    "J-0310": "Flat illustration for the Hebrew word meaning \"sandwich\".",
+    "J-0311": "Flat illustration for the Hebrew word meaning \"pillow\".",
+    "J-0312": "Flat illustration for the Hebrew word meaning \"dwarf\".",
+    "J-0313": "Flat illustration for the Hebrew word meaning \"waterskin\".",
+    "J-0314": "Flat illustration for the Hebrew word meaning \"bracelet\".",
+    "J-0315": "Flat illustration for the Hebrew word meaning \"forehead\".",
+    "J-0316": "Flat illustration for the Hebrew word meaning \"biceps\".",
+    "J-0317": "Flat illustration for the Hebrew word meaning \"cream\".",
+    "J-0318": "Flat illustration for the Hebrew word meaning \"ambassador\".",
+    "J-0319": "Flat illustration for the Hebrew word meaning \"laser\".",
+    "J-0320": "Flat illustration for the Hebrew word meaning \"sensor\".",
+    "J-0321": "Flat illustration for the Hebrew word meaning \"mushroom\".",
+    "J-0322": "Flat illustration for the Hebrew word meaning \"underwear\".",
+    "J-0323": "Flat illustration for the Hebrew word meaning \"steel\".",
+    "J-0324": "Flat illustration for the Hebrew word meaning \"scorpion\".",
+    "J-0325": "Flat illustration for the Hebrew word meaning \"alley\".",
+    "J-0326": "Flat illustration for the Hebrew word meaning \"eagle\".",
+    "J-0327": "Flat illustration for the Hebrew word meaning \"cocktail\".",
+    "J-0328": "Flat illustration for the Hebrew word meaning \"ditch\".",
+    "J-0329": "Flat illustration for the Hebrew word meaning \"toilet bowl\".",
+    "J-0330": "Flat illustration for the Hebrew word meaning \"bartender\".",
+    "J-0331": "Flat illustration for the Hebrew word meaning \"diary\".",
+    "J-0332": "Flat illustration for the Hebrew word meaning \"cigar\".",
+    "J-0333": "Flat illustration for the Hebrew word meaning \"brick\".",
+    "J-0334": "Flat illustration for the Hebrew word meaning \"fur\".",
+    "J-0335": "Flat illustration for the Hebrew word meaning \"bearded vulture\".",
+    "J-0336": "Flat illustration for the Hebrew word meaning \"toast\".",
+    "J-0337": "Flat illustration for the Hebrew word meaning \"stew\".",
+    "J-0338": "Flat illustration for the Hebrew word meaning \"dinosaur\".",
+    "J-0339": "Flat illustration for the Hebrew word meaning \"goatskin\".",
+    "J-0340": "Flat illustration for the Hebrew word meaning \"robe\".",
+    "J-0341": "Flat illustration for the Hebrew word meaning \"bubble\".",
+    "J-0342": "Flat illustration for the Hebrew word meaning \"eyelid\".",
+    "J-0343": "Flat illustration for the Hebrew word meaning \"flame\".",
+    "J-0344": "Flat illustration for the Hebrew word meaning \"scarf\".",
+    "J-0345": "Flat illustration for the Hebrew word meaning \"bat\".",
+    "J-0346": "Flat illustration for the Hebrew word meaning \"bee\".",
+    "J-0347": "Flat illustration for the Hebrew word meaning \"squirrel\".",
+    "J-0348": "Flat illustration for the Hebrew word meaning \"torso\".",
+    "J-0349": "Flat illustration for the Hebrew word meaning \"glider\".",
+    "J-0350": "Flat illustration for the Hebrew word meaning \"kitten\".",
+    "J-0351": "Flat illustration for the Hebrew word meaning \"bedsheet\".",
+    "J-0352": "Flat illustration for the Hebrew word meaning \"beehive\".",
+    "J-0353": "Flat illustration for the Hebrew word meaning \"coal\".",
+    "J-0354": "Flat illustration for the Hebrew word meaning \"babysitter\".",
+    "J-0355": "Flat illustration for the Hebrew word meaning \"claw\".",
+    "J-0356": "Flat illustration for the Hebrew word meaning \"teddy bear\".",
+    "J-0357": "Flat illustration for the Hebrew word meaning \"bandage\".",
+    "J-0358": "Flat illustration for the Hebrew word meaning \"chimney\".",
+    "J-0359": "Flat illustration for the Hebrew word meaning \"tray\".",
+    "J-0360": "Flat illustration for the Hebrew word meaning \"maze\".",
+    "J-0361": "Flat illustration for the Hebrew word meaning \"avalanche\".",
+    "J-0362": "Flat illustration for the Hebrew word meaning \"jar\".",
+    "J-0363": "Flat illustration for the Hebrew word meaning \"villa\".",
+    "J-0364": "Flat illustration for the Hebrew word meaning \"sieve\".",
+    "J-0365": "Flat illustration for the Hebrew word meaning \"scythe\".",
+    "J-0366": "Flat illustration for the Hebrew word meaning \"shelf\".",
+    "J-0367": "Flat illustration for the Hebrew word meaning \"grasshopper\".",
+    "J-0368": "Flat illustration for the Hebrew word meaning \"jet\".",
+    "J-0369": "Flat illustration for the Hebrew word meaning \"magnet\".",
+    "J-0370": "Flat illustration for the Hebrew word meaning \"live coal\".",
+    "J-0371": "Flat illustration for the Hebrew word meaning \"pigtail\".",
+    "J-0372": "Flat illustration for the Hebrew word meaning \"ponytail\".",
+    "J-0373": "Flat illustration for the Hebrew word meaning \"collar\".",
+    "J-0374": "Flat illustration for the Hebrew word meaning \"pearl\".",
+    "J-0375": "Flat illustration for the Hebrew word meaning \"bead\".",
+    "J-0376": "Flat illustration for the Hebrew word meaning \"farmer\".",
+    "J-0377": "Flat illustration for the Hebrew word meaning \"wax\".",
+    "J-0378": "Flat illustration for the Hebrew word meaning \"spaghetti\".",
+    "J-0379": "Flat illustration for the Hebrew word meaning \"balsam\".",
+    "J-0380": "Flat illustration for the Hebrew word meaning \"iceberg\".",
+    "J-0381": "Flat illustration for the Hebrew word meaning \"papyrus\".",
+    "J-0382": "Flat illustration for the Hebrew word meaning \"pie\".",
+    "J-0383": "Flat illustration for the Hebrew word meaning \"beetle\".",
+    "J-0384": "Flat illustration for the Hebrew word meaning \"seagull\".",
+    "J-0385": "Flat illustration for the Hebrew word meaning \"aspirin\".",
+    "J-0386": "Flat illustration for the Hebrew word meaning \"berry\".",
+    "J-0387": "Flat illustration for the Hebrew word meaning \"garlic\".",
+    "J-0388": "Flat illustration for the Hebrew word meaning \"vanilla\".",
+    "J-0389": "Flat illustration for the Hebrew word meaning \"coconut\".",
+    "J-0390": "Flat illustration for the Hebrew word meaning \"scroll\".",
     "J-0391": "Flat illustration for the Hebrew word meaning \"armpit\".",
     "J-0392": "Flat illustration for the Hebrew word meaning \"stadium\".",
     "J-0393": "Flat illustration for the Hebrew word meaning \"seaman\".",
@@ -20342,16 +21782,16 @@
     "J-0998": "Flat illustration for the Hebrew word meaning \"hurry\".",
     "J-0999": "Flat illustration for the Hebrew word meaning \"mule\".",
     "J-1000": "Flat illustration for the Hebrew word meaning \"hot\".",
-    "L01_alef_print_ari": "Ari points at ox head, the memory picture for the Hebrew letter Alef.",
-    "L01_alef_print_mnemonic": "Ox head, drawn so its outline echoes the shape of the Hebrew letter Alef: two diagonal horns joined by a slanted body.",
-    "L01_alef_print_noa": "Noa points at ox head, the memory picture for the Hebrew letter Alef.",
-    "L01_alef_print_s1": "Dad (Hebrew: aba) in a Jerusalem stone courtyard at golden hour, a vocabulary scene for the Hebrew letter Alef.",
-    "L01_alef_print_s2": "Mom (Hebrew: ima) in a Carmel Market fruit stall, a vocabulary scene for the Hebrew letter Alef.",
-    "L01_alef_print_s3": "Light (Hebrew: or) in the Tel Aviv beachfront boulevard, a vocabulary scene for the Hebrew letter Alef.",
-    "L01_alef_print_silhouette": "Solid charcoal silhouette of ox head, the memory picture for the Hebrew letter Alef.",
-    "L01_alef_print_v1": "Dad (Hebrew: aba), a vocabulary picture for the Hebrew letter Alef.",
-    "L01_alef_print_v2": "Mom (Hebrew: ima), a vocabulary picture for the Hebrew letter Alef.",
-    "L01_alef_print_v3": "Light (Hebrew: or), a vocabulary picture for the Hebrew letter Alef.",
+    "L01_alef_print_ari": "Ari points at ox head, the memory picture for the Hebrew letter Aleph.",
+    "L01_alef_print_mnemonic": "Ox head, drawn so its outline echoes the shape of the Hebrew letter Aleph: two diagonal horns joined by a slanted body.",
+    "L01_alef_print_noa": "Noa points at ox head, the memory picture for the Hebrew letter Aleph.",
+    "L01_alef_print_s1": "Dad (Hebrew: aba) in a Jerusalem stone courtyard at golden hour, a vocabulary scene for the Hebrew letter Aleph.",
+    "L01_alef_print_s2": "Mom (Hebrew: ima) in a Carmel Market fruit stall, a vocabulary scene for the Hebrew letter Aleph.",
+    "L01_alef_print_s3": "Light (Hebrew: or) in the Tel Aviv beachfront boulevard, a vocabulary scene for the Hebrew letter Aleph.",
+    "L01_alef_print_silhouette": "Solid charcoal silhouette of ox head, the memory picture for the Hebrew letter Aleph.",
+    "L01_alef_print_v1": "Dad (Hebrew: aba), a vocabulary picture for the Hebrew letter Aleph.",
+    "L01_alef_print_v2": "Mom (Hebrew: ima), a vocabulary picture for the Hebrew letter Aleph.",
+    "L01_alef_print_v3": "Light (Hebrew: or), a vocabulary picture for the Hebrew letter Aleph.",
     "L02_bet_print_ari": "Ari points at bed inside a house, the memory picture for the Hebrew letter Bet / Vet.",
     "L02_bet_print_mnemonic": "Bed inside a house, drawn so its outline echoes the shape of the Hebrew letter Bet / Vet: a box open to the left with a dot inside.",
     "L02_bet_print_noa": "Noa points at bed inside a house, the memory picture for the Hebrew letter Bet / Vet.",

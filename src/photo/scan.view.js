@@ -65,7 +65,13 @@ export function mount(root, ctx = {}) {
   const modeSel = el('select', { 'aria-label': 'Mode' }, el('option', { value: 'prayer' }, 'Prayer page'), el('option', { value: 'sign' }, 'Sign or menu'));
   const input = el('input', { type: 'file', accept: 'image/*', capture: 'environment', 'aria-label': 'Take or choose a photo' });
   const out = el('div', { class: 'photo-out', 'aria-live': 'polite' });
-  wrap.append(modeSel, input, status, out);
+  const liveWin = root.ownerDocument?.defaultView || globalThis;
+  // Same test as liveCameraAvailable() in live-capture.js, inline so that module loads only when Live camera is pressed.
+  const liveOk = ctx.liveCapture !== false && (ctx.liveCapture || (!!liveWin?.navigator?.mediaDevices?.getUserMedia && liveWin?.isSecureContext !== false));
+  const liveBtn = liveOk ? el('button', { type: 'button', class: 'photo-live' }, 'Live camera') : null;
+  const liveSlot = el('div', { class: 'photo-live-slot' });
+  let live = null;
+  wrap.append(modeSel, ...(liveBtn ? [liveBtn] : []), input, liveSlot, status, out);
   // U-21: a first-run sample, so a beginner can see what the reader does
   // before pointing it at a real page. The sample is one of the
   // computer-generated benchmark images the accuracy notice cites — labelled
@@ -208,10 +214,22 @@ export function mount(root, ctx = {}) {
     run(image);
   };
   input.addEventListener('change', onChange);
+  const onLive = async () => {
+    if (live) return;
+    liveBtn.disabled = true;
+    try {
+      const open = ctx.liveCapture?.open || (await import('./live-capture.js')).openLiveCapture;
+      live = await open({ doc: root.ownerDocument || document, announce: (t) => { status.textContent = t; },
+        onPhoto: (blob) => { live = null; liveBtn.disabled = false; out.dataset.done = ''; run(blob); },
+        onClose: () => { live = null; liveBtn.disabled = false; } });
+      liveSlot.replaceChildren(live.el);
+    } catch (e) { live = null; liveBtn.disabled = false; status.textContent = e?.message || 'The camera could not be opened. You can still take or choose a photo.'; }
+  };
+  liveBtn?.addEventListener('click', onLive);
   // Demo engine: show the canned sample straight away so the UI is not empty.
   if (forced?.demo) run({ demo: true });
   modeSel.addEventListener('change', () => { if (forced?.demo) run({ demo: true }); });
-  return () => { input.removeEventListener('change', onChange); activeEngines?.terminate?.(); root.textContent = ''; };
+  return () => { try { live?.close(); } catch { /* ignore */ } live = null; liveBtn?.removeEventListener('click', onLive); input.removeEventListener('change', onChange); activeEngines?.terminate?.(); root.textContent = ''; };
 }
 
 /** R-05: the reading engine's progress in plain words. The first use downloads about 5 MB once; after that it is cached on this device. */

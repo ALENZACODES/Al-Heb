@@ -2,6 +2,8 @@
 
 23 images in 5 commands, for the 25 Nov 2026 critique (item 8, game graphics) and the printable workbooks. Every picture is optional: the app already runs without it and switches to it as soon as the file is in place.
 
+**Status (26 Nov 2026): all 23 made and filed** (ingested from the run in `Aleph-Block-K.zip`, palette-reduced to about 1.2 MB in all).
+
 ## How to run
 
 1. Open one image conversation and paste `docs/images/paste/K-MASTER.txt`.

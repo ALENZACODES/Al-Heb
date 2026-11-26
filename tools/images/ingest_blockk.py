@@ -7,6 +7,7 @@ For each item it finds <folder>/<FILENAME> (case-insensitive; .png, .webp or .jp
 - for a TRANSPARENT item that came back on a cream or white background, clears the background colour that touches the edges
   (a flood fill from the border, so cream inside the picture stays);
 - for a TILE item, checks how far the left edge is from the right edge and the top from the bottom, and warns when the seam shows;
+- reduces it to a 96 or 128 colour palette (flat art keeps its look at a fraction of the size);
 - writes a PNG to the item's destination, creating folders.
 Missing files are listed and skipped. Needs Pillow.
 """
@@ -92,6 +93,9 @@ def main():
                 if lr > 18 or tb > 18:
                     note += f' WARNING: the seam may show when tiled (edge difference {lr:.0f}/{tb:.0f}); ask for a seamless redo if it looks wrong'
                 im = im.convert('RGB')
+            # Flat vector art keeps its look with a small palette, at a fraction of the size (full-colour covers were ~900 KB each).
+            colors = 128 if max(w, h) > 400 else 96
+            im = im.quantize(colors=colors, method=Image.Quantize.FASTOCTREE) if im.mode == 'RGBA' else im.convert('RGB').quantize(colors=colors, method=Image.Quantize.MEDIANCUT)
             dest = os.path.join(ROOT, it['dest'])
             print(f"{it['name']} -> {it['dest']} {w}x{h}{note}")
             if not dry:

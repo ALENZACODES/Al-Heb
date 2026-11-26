@@ -11,6 +11,7 @@ import { isAudioFree } from '../shell/audiofree.js';
 import { quietNow } from '../shell/comfort.js';
 import { uiEnglish } from '../shell/names.js';
 import { playRecordedClip, hasRecordedClip } from './engine.js';
+import { recordScore } from './scores.js';
 import { ARCADE_KEY, LEVELS, BADGES, applyResult, applyArcade, emptyRecord, seededRandom, seedFrom, dayKey, bestLine, starsFor, mistakesLine } from './arcade.model.js';
 import { ARCADE_GAMES, HANUKKAH_GAMES } from './arcade.catalog.js';
 import { roundMode, afterRound, tournamentRandom } from './round-extras.js';
@@ -278,6 +279,7 @@ export async function createArcade(root, ctx, spec) {
       const previousBest = record.best;
       const out = applyResult(record, { level, score, par, misses, slips, timeMs, daily, day: dayKey() });
       record = out.record; set(storeKey, record);
+      recordScore(ctx?.store, spec.id, score, out.stars); // last score and played state for the library and the games page (src/games/scores.js)
       const arc = applyArcade(get(ARCADE_KEY), { gameId: spec.id, day: dayKey(), badgesEarned: out.newBadges.length });
       const streakNew = arc.streakBadges.filter((b) => !record.earned.includes(b));
       for (const b of streakNew) record.earned.push(b);
@@ -309,6 +311,11 @@ export async function createArcade(root, ctx, spec) {
       try { results.querySelector('h2')?.focus?.(); } catch { /* no focus in small DOM */ }
     },
     destroy() {
+      // Leaving in the middle of a round the learner actually played still counts as a play (25 Nov 2026 audit: the Library said
+      // "Not played yet" for 27 of 30 games that had been played). No stars or badges: those need a finished round.
+      if (startedAt && Date.now() >= readyAt && (score !== 0 || misses || slips)) {
+        try { record = { ...record, plays: (record.plays || 0) + 1 }; set(storeKey, record); recordScore(ctx?.store, spec.id, Math.max(0, score), 0); } catch { /* saving a partial play is best effort */ }
+      }
       alive = false; startedAt = 0; clearLoops();
       window.removeEventListener('keydown', onKey);
       try { ctx?.audio?.stop?.(); } catch { /* already gone */ }

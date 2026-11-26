@@ -1,4 +1,5 @@
 import test from 'node:test';
+import { readFileSync } from 'node:fs';
 import assert from 'node:assert/strict';
 import { waitFor } from './helpers/waitfor.js';
 import { N, tick } from './torahread.fakedom.js';
@@ -233,4 +234,9 @@ test('F8 ring: Progress shows the same service ring as the Service page, for the
   const p = root.querySelector('.pg-ring');
   assert.ok(p, 'ring line shown');
   assert.match(p.textContent, /Weekday morning: \d+%\. Lines read 0 of 37, words known 0 of 353, prayers followed 1 of 23\./);
+});
+
+test('Progress has a Games card built from the same played / mastered ledger as the Games Library (25 Nov audit)', () => {
+  const src = readFileSync(new URL('../src/progress/progress.view.js', import.meta.url), 'utf8');
+  assert.match(src, /aria-labelledby': 'pg-h-games'/); assert.match(src, /sc\.readGameState\(store, g\.id, led\)/);
 });

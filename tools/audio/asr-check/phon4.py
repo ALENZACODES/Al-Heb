@@ -4,7 +4,7 @@ text is scored by how many of its sounds were heard (Phonikud gives the Israeli 
   renikud    renikud/whisper-he-ipa                              Hebrew-trained, writes IPA
   lv60       facebook/wav2vec2-lv-60-espeak-cv-ft                phoneme model, no words at all
   xlsr53     facebook/wav2vec2-xlsr-53-espeak-cv-ft              phoneme model, trained differently
-  ipa1000    ctaguchi/wav2vec2-large-xlsr-japlmthufiel-ipa1000-ns  IPA from about 1,000 languages
+  ipa1000    ctaguchi/wav2vec2-large-xlsr-japlmthufielta-ipa1000-ns  IPA from about 1,000 languages
 
 A word is heard right by one listener when at least 75% of its sounds are matched in order.
 
@@ -42,7 +42,7 @@ class Hearer:
         else:
             from transformers import AutoProcessor, Wav2Vec2ForCTC
             mid = {'lv60': 'facebook/wav2vec2-lv-60-espeak-cv-ft', 'xlsr53': 'facebook/wav2vec2-xlsr-53-espeak-cv-ft',
-                   'ipa1000': 'ctaguchi/wav2vec2-large-xlsr-japlmthufiel-ipa1000-ns'}[name]
+                   'ipa1000': 'ctaguchi/wav2vec2-large-xlsr-japlmthufielta-ipa1000-ns'}[name]
             self.p = AutoProcessor.from_pretrained(mid)
             self.m = Wav2Vec2ForCTC.from_pretrained(mid).eval()
         print(f'loaded {name} in {time.time() - t0:.0f}s', flush=True)

@@ -16,6 +16,7 @@ import multi4_merge as M   # rescoring (also patches check_lib.score)
 import scan_lines as S
 import chirp_takes as C
 import natural as N
+import phon4
 
 ROOT = os.path.abspath(os.path.join(HERE, '..', '..', '..'))
 ORDER = ['c-pt', 'c-pt-ph', 'c-pl', 'c-pl-ph', 'c-pt-90', 'c-pl-90', 'w-pt', 'w-pt-ph']
@@ -74,7 +75,11 @@ def main():
     PH = collections.defaultdict(dict)
     for fn in a.phon:
         for l in open(fn, encoding='utf-8'):
-            r = json.loads(l); PH[r['file']][r['model']] = {w['word']: w['match'] for w in r['words']}
+            r = json.loads(l)
+            orig = re.sub(r'^takes/(.+)/[^/]+\.mp3$', r'\1.mp3', r['file'])
+            if orig in q and r.get('ipa') is not None:
+                r = phon4.rescore(r, q[orig]['want'])          # corrected expected sounds, Israeli R
+            PH[r['file']][r['model']] = {w['word']: w['match'] for w in r['words']}
 
     def phon_ok(path):
         """{word: number of phonetic checks hearing >=75% of its sounds}, or None without data"""
@@ -105,6 +110,13 @@ def main():
                 notes.append(f'{tid}: {why}'); continue
             if o['kind'] == 'word':
                 good = s['ok'] >= 3 and s['ok'] > s0['ok']
+                pt4 = phon_ok('takes/' + f[:-4] + '/' + tid + '.mp3') if PH else None
+                po4 = phon_ok(f) if PH else None
+                # said alone, a word the word checks cannot place: all four phonetic checks hearing it is enough,
+                # if they did not all hear the clip it replaces
+                if not good and pt4 and pt4[1] >= 4 and all(v == pt4[1] for v in pt4[0].values()) and not (
+                        po4 and po4[1] >= 4 and all(v == po4[1] for v in po4[0].values())):
+                    good = True
             else:
                 good = key[:2] < key0[:2] and len(s['b3']) <= len(s0['b3']) and len(s['b2']) <= len(s0['b2']) + len(s0['b3'])
             if good and PH:

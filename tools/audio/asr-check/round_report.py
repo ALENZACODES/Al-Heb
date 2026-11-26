@@ -5,7 +5,7 @@ Phonetic checks (renikud he-ipa, wav2vec2 lv60, xlsr53, ipa1000): the share of t
 words the sounds themselves.
 
 A word is CONFIRMED when at least 3 of the phonetic checks hear 75% or more of its sounds AND at most one word check
-mishears it. Accuracy = confirmed words / all words of the clips.
+mishears it, or (a single word said alone) when all four phonetic checks hear it. Accuracy = confirmed words / all words of the clips.
 
   python round_report.py --words W.jsonl ... --phon P.jsonl ... --queue multi4-queue.json --out ROUND1.md
 """
@@ -39,7 +39,11 @@ def main():
     P = collections.defaultdict(dict)
     for fn in a.phon:
         for l in open(fn, encoding='utf-8'):
-            r = json.loads(l); P[r['file']][r['model']] = r
+            r = json.loads(l)
+            orig = re.sub(r'^takes/(.+)/[^/]+\.mp3$', r'\1.mp3', r['file'])
+            if orig in q and r.get('ipa') is not None:
+                r = phon4.rescore(r, q[orig]['want'])          # corrected expected sounds, Israeli R
+            P[r['file']][r['model']] = r
     phon_models = [m for m in PHON if any(m in v for v in P.values())]
     files = [f for f in q if (keep is None or f in keep) and f in W]
     total = confirmed = 0
@@ -81,7 +85,10 @@ def main():
             matches = {m: min(pm[p].get(m, 0) for p in parts) for m in phon_models if all(m in pm[p] for p in parts)}
             n_phon = sum(v >= phon4.WORD_OK for v in matches.values())
             n_wrong = len(wrong.get(u, {})) if o['kind'] == 'word' else len(wrong.get(u, {}))
-            ok = n_phon >= min(3, len(matches)) and n_wrong <= 1 and matches
+            # a single word said alone: the word checks are language models with no sentence to lean on, so all
+            # four phonetic checks agreeing is enough on its own
+            alone = o['kind'] == 'word' and len(matches) >= 4 and n_phon == len(matches)
+            ok = matches and (alone or (n_phon >= min(3, len(matches)) and n_wrong <= 1))
             confirmed += bool(ok)
             if not ok:
                 rows.append({'file': f, 'word': u, 'should': ' '.join(should.get(p, '?') for p in parts),
@@ -90,7 +97,8 @@ def main():
     L = [f'# {a.title}: problem words, written by sound', '',
          f'Checks: 4 word checks ({", ".join(WORD)}) and {len(phon_models)} phonetic checks ({", ".join(phon_models)}).',
          'A word is confirmed when at least 3 phonetic checks hear 75% or more of its sounds (all of them if fewer than 3 ran) '
-         'and at most one word check mishears it. Sounds in plain letters: sh, kh (ח/כ), ts (צ), ch.', '',
+         'and at most one word check mishears it; a single word said alone is also confirmed when all four phonetic checks hear it. '
+         'Expected sounds corrected where the converter is wrong (כָּל = kol, dropped syllables), and the Israeli R counts as r. Sounds in plain letters: sh, kh (ח/כ), ts (צ), ch.', '',
          f'Recordings: **{len(files)}**. Words: **{total}**. Confirmed: **{confirmed}** (**{100 * confirmed / max(1, total):.2f}%**). '
          f'Problem words: **{len(rows)}**.', '',
          '| clip | word | should sound | word checks that misheard it (what they wrote) | phonetic checks (share of sounds heard) |',

@@ -1,13 +1,17 @@
 {
  "status": "tts",
- "source": "paid-cloud",
- "engine": "google-cloud-tts",
- "voiceId": "he-IL-Wavenet-B",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Chirp3-HD-Charon",
  "tradition": "israeli",
  "inputText": "יְבָרֶכְךָ",
  "inputSha256": "bddb06e6298604b42a5b0bef3cc9bea6baf78e31eebcd2427ada7ce361a579e6",
  "ingestedAt": null,
  "licence": "customer-owned",
  "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
- "inputTextKind": "hebrew"
+ "inputTextKind": "hebrew",
+ "spokenText": "יברכך",
+ "renderedAt": "2026-11-26T07:19:09.000Z",
+ "speakingRate": 0.9,
+ "checkedBy": "four-listener ASR check (docs/audio/multi4), machine check only"
 }

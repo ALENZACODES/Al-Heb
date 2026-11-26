@@ -260,10 +260,14 @@ export function createShellAudio({ settings, manifest, loadManifest, loadSummary
           let heldNow = false;
           try { heldNow = !!inner.status?.(kind, id, o2)?.held; } catch { heldNow = false; }
           const r = await inner.play(kind, id, { ...o2, onMedia(ev) {
+            // A word boundary from the device voice is for followers only: it is not a status change.
+            if (ev?.type === 'boundary') { if (epoch === playEpoch && typeof o?.onMedia === 'function') { try { o.onMedia(ev); } catch { /* ignore */ } } return; }
             fromMedia = true;
             if (ev?.type === 'playing') emitPlay({ phase: 'playing', token });
             if (epoch !== playEpoch) return;
             publish(playbackLine(heldNow ? { ...ev, held: true } : ev));
+            // The caller's own listener (for example the Torah reader's word follower) hears the same events.
+            if (typeof o?.onMedia === 'function') { try { o.onMedia(ev); } catch { /* a listener must not break playback */ } }
           } });
           if (epoch !== playEpoch || r?.stopped) { phase = 'stopped'; return { ...r, stopped: true }; }
           if (!fromMedia || r?.source === 'tts-fallback' || r?.source === 'none' || r?.fileError) publish(describeResult(r));

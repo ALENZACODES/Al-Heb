@@ -88,6 +88,12 @@ export function mount(root, ctx = {}) {
   const takeInput = h('input', { type: 'file', accept: 'image/*', capture: 'environment', 'aria-label': 'Take a photo' });
   const chooseInput = h('input', { type: 'file', accept: 'image/jpeg,image/png,image/webp', 'aria-label': 'Choose a photo' });
   const sampleBtn = h('button', { type: 'button', class: 'btn secondary', id: 'camera-sample' }, 'Try A Sample Sign');
+  // Live camera: a viewfinder that says what to fix and takes the photo once it is sharp and steady (src/photo/live-capture.js).
+  // Same test as liveCameraAvailable() in live-capture.js, inline so that module loads only when Live Camera is pressed.
+  const liveOk = ctx.liveCapture !== false && (ctx.liveCapture || (!!win?.navigator?.mediaDevices?.getUserMedia && win?.isSecureContext !== false));
+  const liveBtn = liveOk ? h('button', { type: 'button', class: 'btn', id: 'camera-live' }, 'Live Camera') : null;
+  const liveSlot = h('div', { class: 'camera-live' });
+  let live = null;
   const out = h('div', { class: 'camera-out' });
   const helper = rimonSays('Point me at a sign. We will read it together.', { action: 'point', size: 96 });
   const wrap = h('section', { class: 'card camera-tr', 'aria-labelledby': 'view-title' },
@@ -96,10 +102,11 @@ export function mount(root, ctx = {}) {
     h('p', {}, 'Take a photo of a Hebrew sign or menu. The English is drawn over the Hebrew, right on your photo. Tap any line to hear the Hebrew and see how to say it.'),
     modeNote, packNote,
     h('div', { class: 'row' },
+      liveBtn,
       h('label', { class: 'btn pick' }, 'Take A Photo', takeInput),
       h('label', { class: 'btn secondary pick' }, 'Choose A Photo', chooseInput),
       sampleBtn),
-    status, out,
+    liveSlot, status, out,
     h('p', { class: 'muted camera-accuracy', role: 'note' }, ACCURACY_NOTICE));
   root.replaceChildren(wrap);
 
@@ -243,6 +250,18 @@ export function mount(root, ctx = {}) {
   const onTake = () => { take(takeInput.files?.[0]); takeInput.value = ''; };
   const onChoose = () => { take(chooseInput.files?.[0]); chooseInput.value = ''; };
   takeInput.addEventListener('change', onTake); chooseInput.addEventListener('change', onChoose);
+  liveBtn?.addEventListener('click', async () => {
+    if (live) return;
+    liveBtn.setAttribute('disabled', '');
+    try {
+      const open = ctx.liveCapture?.open || (await import('../photo/live-capture.js')).openLiveCapture;
+      live = await open({ doc, announce: (t) => { status.textContent = t; },
+        onPhoto: (blob) => { live = null; liveBtn.removeAttribute('disabled'); take(blob); },
+        onClose: () => { live = null; liveBtn.removeAttribute('disabled'); liveBtn.focus?.(); } });
+      if (!alive) { live.close(); live = null; return; }
+      liveSlot.replaceChildren(live.el);
+    } catch (e) { live = null; liveBtn.removeAttribute('disabled'); status.textContent = e?.message || 'The camera could not be opened. You can still take or choose a photo.'; }
+  });
   sampleBtn.addEventListener('click', async () => {
     sampleBtn.setAttribute('disabled', '');
     try {
@@ -258,6 +277,7 @@ export function mount(root, ctx = {}) {
 
   return () => {
     alive = false;
+    try { live?.close(); } catch { /* ignore */ } live = null;
     takeInput.removeEventListener('change', onTake); chooseInput.removeEventListener('change', onChoose);
     try { win?.speechSynthesis?.cancel(); } catch { /* ignore */ }
     try { engine?.terminate?.(); } catch { /* ignore */ }

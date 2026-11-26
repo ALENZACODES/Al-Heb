@@ -316,12 +316,14 @@ export function createAudio(opts) {
     return !!(vs && vs.length && !vs.some((v) => /^he([-_]|$)/i.test(v.lang || '')));
   }
 
-  function emitMedia(p, type) {
+  // extra: { clock } for a file (where playback is now, for a reading follower) or { charIndex } for a speech word boundary.
+  function emitMedia(p, type, extra) {
     try {
       p.onMedia?.({
         type, rate: p.rate, source: p.source, voice: p.voice,
         tradition: p.fileTradition || p.tradition, fileTradition: p.fileTradition,
         entryStatus: p.entryStatus, entrySource: p.entrySource,
+        ...(extra || {}),
       });
     } catch { /* a listener must not break playback */ }
   }
@@ -341,7 +343,9 @@ export function createAudio(opts) {
         const rate = chapterPlaybackRate(value);
         try { a.playbackRate = rate; p.rate = rate; emitMedia(p, 'playing'); return rate; } catch { return null; }
       };
-      a.onplaying = () => emitMedia(p, 'playing');
+      // clock(): { ms, durMs } read from the element itself, so a follower stays in step through pauses, rate changes and stalls.
+      const clock = () => { const ms = Number(a.currentTime) * 1000, durMs = Number(a.duration) * 1000; return { ms: Number.isFinite(ms) ? ms : 0, durMs: Number.isFinite(durMs) && durMs > 0 ? durMs : null }; };
+      a.onplaying = () => emitMedia(p, 'playing', { clock });
       a.onended = () => { emitMedia(p, 'ended'); finish({ ok: true, ended: true }); };
       a.onerror = () => { emitMedia(p, 'error'); finish({ ok: false, error: 'file-error' }); };
       try {
@@ -360,7 +364,9 @@ export function createAudio(opts) {
       u.lang = voice && /^he([-_]|$)/i.test(voice.lang || '') ? voice.lang : 'he-IL';
       if (voice) { try { u.voice = voice; } catch { /* a fake utterance may be frozen */ } }
       u.rate = p.rate;
-      try { u.onstart = () => emitMedia(p, 'playing'); } catch { /* ignore */ }
+      try { u.onstart = () => emitMedia(p, 'playing', { spoken: safe.text }); } catch { /* ignore */ }
+      // Word boundaries from the device voice (where the engine reports them): a follower can move word by word with no estimate.
+      try { u.onboundary = (ev) => { if (!ev || ev.name === 'sentence') return; emitMedia(p, 'boundary', { charIndex: ev.charIndex, spoken: safe.text }); }; } catch { /* ignore */ }
       current = { speech: true, stop: () => { try { speech.cancel(); } catch { /* ignore */ } emitMedia(p, 'stopped'); resolve({ ok: true, stopped: true }); } };
       u.onend = () => { emitMedia(p, 'ended'); resolve({ ok: true, ended: true }); };
       u.onerror = () => { emitMedia(p, 'error'); resolve({ ok: false, error: 'speech-error' }); };

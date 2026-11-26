@@ -90,7 +90,7 @@ const CSS = FINGER_CSS + `
 .alef-trd .trd-card h2,.alef-trd .trd-card h3{margin-block:.1rem .3rem;font-size:1.05rem}
 .alef-trd .trd-row{display:grid;gap:.15rem .9rem;margin-block:.55rem;padding:.45rem .5rem;border:1px solid var(--border,#bbb);border-radius:8px}
 @media(min-width:720px){.alef-trd .trd-row{grid-template-columns:1fr 1fr}.alef-trd .trd-row .trd-cell-en{grid-column:1;grid-row:1}.alef-trd .trd-row .trd-cell-he{grid-column:2;grid-row:1}}
-.alef-trd .trd-row.trd-playing{border-inline-start:6px solid var(--accent,#1e4634);background:var(--hl,#ffe9a8)}
+.alef-trd .trd-row.trd-playing{border-inline-start:6px solid var(--accent,#1e4634);background:var(--hl,#ffe9a8);color:var(--hl-ink,#000)}
 .alef-trd .trd-row.trd-target{outline:3px solid var(--accent,#1e4634);outline-offset:2px}
 .alef-trd .trd-hebrew{direction:rtl;font-size:calc(1.5rem * var(--trd-scale,1));line-height:1.8;margin:.1rem 0}
 .alef-trd .trd-vnum{font-weight:700;font-size:.9rem}
@@ -316,7 +316,7 @@ export function mount(root, ctx) {
       const v = list[i];
       markPlaying(v.n);
       let r;
-      try { r = await ctx.audio.play('line', torahVerseId(state.book, state.chapter, v.n), { text: spokenText(v.he), tradition: 'israeli', rate: chapterRate }); }
+      try { r = await ctx.audio.play('line', torahVerseId(state.book, state.chapter, v.n), { text: spokenText(v.he), tradition: 'israeli', rate: chapterRate, onMedia: followFor(v) }); }
       catch (e) { if (alive && request === chapterRequest) { stopChapterAudio(); say(`Audio error for ${ref}:${v.n}: ${e?.message || e}`); } return; }
       if (!alive || request !== chapterRequest) return;
       if (r?.stopped) { stopChapterAudio(); say('Chapter audio stopped.'); return; }
@@ -326,7 +326,12 @@ export function mount(root, ctx) {
   }
   async function playTorahVerse(v) {
     stopChapterAudio();
-    await playAudio('line', torahVerseId(state.book, state.chapter, v.n), spokenText(v.he), `${chapterData.ref}:${v.n} in Hebrew`, { tradition: 'israeli' });
+    await playAudio('line', torahVerseId(state.book, state.chapter, v.n), spokenText(v.he), `${chapterData.ref}:${v.n} in Hebrew`, { tradition: 'israeli', onMedia: followFor(v) });
+  }
+  /** The finger guide's follower for one verse clip; real per-word times (v.wordMs[voice], from an offline alignment) win over the estimate. */
+  function followFor(v) {
+    const aligned = v?.wordMs && Array.isArray(v.wordMs[voiceOf()]) ? v.wordMs[voiceOf()] : null;
+    return fingerGuide.followVerse(v.n, aligned ? { aligned } : {});
   }
 
   /** English prayer read aloud by the device's own English voice (no recorded English clip exists for these lines). */
@@ -687,7 +692,7 @@ export function mount(root, ctx) {
         for (const button of rateButtons) button.setAttribute('aria-pressed', String(Number(button.getAttribute('data-recording-rate')) === rate));
         ctx?.audio?.setPlaybackRate?.(rate);
         if (chapterMedia) chapterMedia.playbackRate = rate;
-        say(`Recording speed: ${rate}×. The visual finger guide has its own pace.`);
+        say(`Recording speed: ${rate}×. When the finger guide follows a verse recording it keeps to this speed; its own pacing buttons set its pace otherwise.`);
       },
     }, rate === 0.75 ? 'Slower 0.75×' : rate === 1 ? 'Normal 1×' : 'Faster 1.25×'));
     return [voiceBar, el('div', { class: 'trd-bar trd-audiobar', role: 'group', 'aria-label': 'Chapter audio' },

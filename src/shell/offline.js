@@ -65,7 +65,7 @@ export const ON_DEMAND_GROUPS = Object.freeze([
   { id: "od-screens", label: "Install-prompt screenshots", test: /^assets\/screen(s|shots)\//, approxMB: 0.5 },
   { id: "od-pictures", label: "Book, story and speaking-practice pictures", test: /^assets\/(game-art|letter-cartoons|books|speak-hold|speak-candidates)\//, approxMB: 123.45 },
   { id: "od-games", label: "Games (preview-game code, word data and arcade art)", test: /^(src\/games\/|data\/games\/|assets\/games\/)/, approxMB: 1.4 },
-  { id: "od-camera", label: "Camera Translator (code and sign word list)", test: /^(src\/camera|data\/camera)\//, approxMB: 0.07 },
+  { id: "od-camera", label: "Camera Translator and the live camera (code and sign word list)", test: /^((src\/camera|data\/camera)\/|src\/photo\/live-capture\.js$)/, approxMB: 0.08 },
   { id: "od-books", label: "Little books (code and book texts)", test: /^(src\/books|data\/books)\//, approxMB: 0.04 },
   { id: "od-synagogues", label: "Reform Synagogues in Canada", test: /^(src\/synagogues|data\/synagogues|assets\/synagogues)\//, approxMB: 14 },
   { id: "od-library", label: "Library articles", test: /^(src\/library|data\/library)\//, approxMB: 0.07 },
@@ -74,7 +74,7 @@ export const ON_DEMAND_GROUPS = Object.freeze([
   { id: "od-retention", label: "Streak, gems, hearts and practice league", test: /^src\/retention\//, approxMB: 0.1 },
   { id: "od-service", label: "Follow the Service, the Shabbat Companion and Prayer Practice", test: /^(src\/service\/|data\/service\/companion\.json$)/, approxMB: 0.1 }, // lane 5: Shabbat Companion data
   { id: "od-awards", label: "Awards gallery and certificate", test: /^src\/awards\/(?:gallery\.view|proof-font|certificate|icons)\.js$/, approxMB: 0.11 },
-  { id: "od-torahreader", label: "Torah reader page and its Hebrew recording index", test: /^src\/(torahreader\/torahreader\.view|shell\/torah-he-index)\.js$/, approxMB: 0.05 },
+  { id: "od-torahreader", label: "Torah reader page, its Hebrew recording index and the finger guide's word timing", test: /^src\/(torahreader\/(torahreader\.view|word-timing)|shell\/torah-he-index)\.js$/, approxMB: 0.06 },
   { id: "od-preview-pages", label: "Class track, pronunciation comparison, Sound like a local, the calendar, the privacy screen, Sounds, Scan a photo, Word Sprint and Timed read-aloud (route code)", test: /^src\/(classtrack\/classtrack|pronunciation\/compare|israel\/israel|curriculum\/calendar|shell\/privacy|photo\/scan|pronunciation\/sounds|sprint\/sprint|timedread\/timedread)\.view\.js$/, approxMB: 0.09 },
   { id: "od-rimon", label: "Rimon's stills (code, styles and light WebP sheets)", test: /^(src\/shell\/(rimon-(stage|triggers|stills\.generated|model)|mascot)\.js|assets\/css\/rimon-stills.css|assets\/img\/rimon\/web\/)/, approxMB: 1.6 },
   { id: "od-images", label: "Picture approvals and word cues", test: /^data\/images\//, approxMB: 0.20 },

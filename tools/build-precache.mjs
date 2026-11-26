@@ -143,6 +143,9 @@ const ON_DEMAND_FILES = new Set([
   // optional Awards gallery. Cache them on first gallery visit, preserving
   // the existing 3.95 MiB first-install target and its 0.05 MiB headroom.
   'src/awards/proof-font.js', 'src/awards/certificate.js', 'src/awards/icons.js',
+  // Live camera viewfinder (Scan, Camera Translator) and the finger guide's word timing: each is imported only when first used
+  // (Live camera pressed; a verse played with the guide on), runtime-cached by sw.js (keeps first install headroom).
+  'src/photo/live-capture.js', 'src/torahreader/word-timing.js',
   // Day page (preview route /day/<date>): its view and model are loaded lazily by the router when a day is opened, runtime-cached by sw.js; the markers module stays installed because the Calendar (v0) draws them. Morning screen view (optional route /morning): route code only, its verses/model files stay installed. Both moved here when the day pages landed (keeps first install under 3.95 MiB).
   'src/curriculum/day.view.js', 'src/curriculum/calendar.day.js', 'src/morning/morning.view.js',
   'src/curriculum/calendar.addpanel.js', 'src/curriculum/calendar.quickadd.js' /* calendar quick-add box: loaded when the Calendar opens */,

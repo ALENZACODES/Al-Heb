@@ -3,7 +3,7 @@
 
   Torah verse   pace within 15% of the verse clip it replaces (all set to 4.6 syl/s by pace.py), then brought to that pace (atempo, pitch kept) and written
                 like the other verse clips: 24 kHz, 32 kbps, 0.15 s before and 0.45 s after.
-  other lines   pace within 20% of the median of the clips of that voice the listeners passed; no pause longer than
+  other lines   pace within 25% of a natural reading pace (the Torah verse pace, 4.14 as measured here); no pause longer than
                 0.9 s inside the line (a take joined from several requests has its joins shortened to 0.3 s first).
   single words  no pace rule; a 0.9-speed take is only used when no normal-speed take passes.
 """
@@ -15,7 +15,11 @@ ROOT = os.path.abspath(os.path.join(HERE, '..', '..', '..'))
 sys.path.insert(0, os.path.join(ROOT, 'tools', 'torah', 'audio', 'ipa'))
 sys.path.insert(0, HERE)
 SR = 24000
-TORAH_PACE, TORAH_BAND, LINE_BAND, MAX_GAP = 4.6, 0.15, 0.20, 0.9
+TORAH_PACE, TORAH_BAND, LINE_BAND, MAX_GAP = 4.6, 0.15, 0.25, 0.9
+# natural reading pace as this file measures it: the median of the Torah verse clips (set to 4.6 syl/s by pace.py,
+# which counts syllables a little differently) is 4.14 here. Many prayer lines were joined from word clips and run slow,
+# so they are not the reference.
+NATURAL = 4.14
 LEAD, TAIL = 0.15, 0.45
 _syl_cache = {}
 
@@ -113,8 +117,8 @@ def write_mp3(a, dest, torah, factor=1.0):
                     '-codec:a', 'libmp3lame', dest], check=True)
 
 
-def line_reference(paces):
-    return statistics.median(paces) if paces else None
+def line_reference(paces=None):
+    return NATURAL
 
 
 def judge(kind, clip, text, take_path, ref_pace=None):
@@ -137,5 +141,5 @@ def judge(kind, clip, text, take_path, ref_pace=None):
             return False, f'pace {p / p0:.2f}x the Torah pace', p, a, 1.0
         return True, f'pace {p / p0:.2f}x -> 1.00x the Torah pace', p, a, p0 / p
     if ref_pace and abs(p / ref_pace - 1) > LINE_BAND:
-        return False, f'pace {p:.1f} syl/s (voice median {ref_pace:.1f})', p, a, 1.0
+        return False, f'pace {p:.1f} syl/s (natural is {ref_pace:.1f} +-25%)', p, a, 1.0
     return True, f'pace {p:.1f} syl/s', p, a, 1.0

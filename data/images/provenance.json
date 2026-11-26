@@ -10415,24 +10415,24 @@
    "block": "B",
    "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. eye placed naturally in the attached background scene (BG_jerusalem). No text, letters or numerals anywhere in the image.",
    "promptSha256": "6f0d1a0b4d52697ef47b86d62558d83b6d9f3e8376fa69e736c876d2cd033f4c",
-   "tool": "Codex image generation (OpenAI), manual run",
+   "tool": "image generator (manual run, files uploaded by the author)",
    "model": null,
-   "ingestedAt": "2026-11-04T04:27:05.357Z",
+   "ingestedAt": "2026-11-26T18:29:43.015Z",
    "sourceFile": "L16_ayin_print_s1.png",
-   "sourceFileDate": "2026-11-04T04:26:50.976Z",
+   "sourceFileDate": "2026-11-26T18:29:42.960Z",
    "matchedBy": "exact-name",
-   "originalSha256": "fe315e0da3a0d02e625120ce9731517f6667c826cc9aa4be1dbad13b480249be",
+   "originalSha256": "a6c1666bce898f80d9ae5a48bb0cf7caa9aa12506032ab7503e9181bcdfa8e4b",
    "originalFormat": "PNG",
-   "originalBytes": 1730390,
+   "originalBytes": 1827293,
    "originalFile": "L16_ayin_print_s1.png",
-   "width": 1254,
-   "height": 1254,
+   "width": 1536,
+   "height": 1024,
    "expected": {
     "w": 1792,
     "h": 1024
    },
-   "aspect": "mismatch",
-   "aspectNote": "got 1254x1254 (aspect 1.000), manifest wants 1792x1024 (aspect 1.750) or the native landscape shape",
+   "aspect": "substituted",
+   "aspectNote": "manifest asks 1792x1024; got 1536x1024 (native landscape aspect). Not cropped or stretched.",
    "hasAlpha": false,
    "c2paMarker": true,
    "metadataStripped": true,
@@ -10442,15 +10442,15 @@
      "edge": 800,
      "file": "L16_ayin_print_s1.800.webp",
      "width": 800,
-     "height": 800,
-     "bytes": 99338
+     "height": 533,
+     "bytes": 67926
     },
     {
-     "edge": 1254,
-     "file": "L16_ayin_print_s1.1254.webp",
-     "width": 1254,
-     "height": 1254,
-     "bytes": 167702
+     "edge": 1536,
+     "file": "L16_ayin_print_s1.1536.webp",
+     "width": 1536,
+     "height": 1024,
+     "bytes": 150244
     }
    ],
    "ocr": {
@@ -10462,15 +10462,15 @@
     "blobCount": 1,
     "blobs": [
      {
-      "t": "Wan",
-      "conf": 90.3,
+      "t": "jot",
+      "conf": 62.2,
       "lang": "eng"
      }
     ],
     "possibleLetters": []
    },
    "flags": [
-    "aspect_mismatch_allowed",
+    "aspect_substituted",
     "contains_text"
    ],
    "humanApproved": true
@@ -10483,24 +10483,24 @@
    "block": "B",
    "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. tree placed naturally in the attached background scene (BG_market). No text, letters or numerals anywhere in the image.",
    "promptSha256": "5f204eb89701becec4940b39e16ef1a3df8693c460d82082b3218c985beebad0",
-   "tool": "Codex image generation (OpenAI), manual run",
+   "tool": "image generator (manual run, files uploaded by the author)",
    "model": null,
-   "ingestedAt": "2026-11-04T04:27:05.357Z",
+   "ingestedAt": "2026-11-26T18:29:43.015Z",
    "sourceFile": "L16_ayin_print_s2.png",
-   "sourceFileDate": "2026-11-04T04:26:50.981Z",
+   "sourceFileDate": "2026-11-26T18:29:42.962Z",
    "matchedBy": "exact-name",
-   "originalSha256": "c3013a370aac57ffd940b1af231f80566add4aba171db82b88e2983bb6fe14e6",
+   "originalSha256": "89f155f7c9766faaae43985b462d4d941dce2c1ca8174fdd39f97ad0690dbde8",
    "originalFormat": "PNG",
-   "originalBytes": 1493342,
+   "originalBytes": 1835147,
    "originalFile": "L16_ayin_print_s2.png",
-   "width": 1254,
-   "height": 1254,
+   "width": 1536,
+   "height": 1024,
    "expected": {
     "w": 1792,
     "h": 1024
    },
-   "aspect": "mismatch",
-   "aspectNote": "got 1254x1254 (aspect 1.000), manifest wants 1792x1024 (aspect 1.750) or the native landscape shape",
+   "aspect": "substituted",
+   "aspectNote": "manifest asks 1792x1024; got 1536x1024 (native landscape aspect). Not cropped or stretched.",
    "hasAlpha": false,
    "c2paMarker": true,
    "metadataStripped": true,
@@ -10510,79 +10510,15 @@
      "edge": 800,
      "file": "L16_ayin_print_s2.800.webp",
      "width": 800,
-     "height": 800,
-     "bytes": 62292
+     "height": 533,
+     "bytes": 95330
     },
     {
-     "edge": 1254,
-     "file": "L16_ayin_print_s2.1254.webp",
-     "width": 1254,
-     "height": 1254,
-     "bytes": 103842
-    }
-   ],
-   "ocr": {
-    "ran": true,
-    "langs": [
-     "heb",
-     "eng"
-    ],
-    "blobCount": 0,
-    "blobs": [],
-    "possibleLetters": [
-     "ו"
-    ]
-   },
-   "flags": [
-    "aspect_mismatch_allowed",
-    "possible_text"
-   ],
-   "humanApproved": true
-  },
-  "L16_ayin_print_s3": {
-   "id": "L16_ayin_print_s3",
-   "file": "L16_ayin_print_s3.png",
-   "command": 26,
-   "set": "letter_16_ayin_print",
-   "block": "B",
-   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. city skyline placed naturally in the attached background scene (BG_telaviv). No text, letters or numerals anywhere in the image.",
-   "promptSha256": "5b5acc2afb2f23ecc8121c64e6fca73372ed436af5c26a41d7fb82b8e685f994",
-   "tool": "Codex image generation (OpenAI), manual run",
-   "model": null,
-   "ingestedAt": "2026-11-04T04:27:05.357Z",
-   "sourceFile": "L16_ayin_print_s3.png",
-   "sourceFileDate": "2026-11-04T04:26:51.055Z",
-   "matchedBy": "exact-name",
-   "originalSha256": "b38424237651efd3abfedd187c5e59eab3dcb36b72afb6fecd5dee5e80443b37",
-   "originalFormat": "PNG",
-   "originalBytes": 1486382,
-   "originalFile": "L16_ayin_print_s3.png",
-   "width": 1254,
-   "height": 1254,
-   "expected": {
-    "w": 1792,
-    "h": 1024
-   },
-   "aspect": "mismatch",
-   "aspectNote": "got 1254x1254 (aspect 1.000), manifest wants 1792x1024 (aspect 1.750) or the native landscape shape",
-   "hasAlpha": false,
-   "c2paMarker": true,
-   "metadataStripped": true,
-   "iccConvertedToSrgb": false,
-   "variants": [
-    {
-     "edge": 800,
-     "file": "L16_ayin_print_s3.800.webp",
-     "width": 800,
-     "height": 800,
-     "bytes": 70200
-    },
-    {
-     "edge": 1254,
-     "file": "L16_ayin_print_s3.1254.webp",
-     "width": 1254,
-     "height": 1254,
-     "bytes": 119590
+     "edge": 1536,
+     "file": "L16_ayin_print_s2.1536.webp",
+     "width": 1536,
+     "height": 1024,
+     "bytes": 209272
     }
    ],
    "ocr": {
@@ -10596,7 +10532,95 @@
     "possibleLetters": []
    },
    "flags": [
-    "aspect_mismatch_allowed"
+    "aspect_substituted"
+   ],
+   "humanApproved": true
+  },
+  "L16_ayin_print_s3": {
+   "id": "L16_ayin_print_s3",
+   "file": "L16_ayin_print_s3.png",
+   "command": 26,
+   "set": "letter_16_ayin_print",
+   "block": "B",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. city skyline placed naturally in the attached background scene (BG_telaviv). No text, letters or numerals anywhere in the image.",
+   "promptSha256": "5b5acc2afb2f23ecc8121c64e6fca73372ed436af5c26a41d7fb82b8e685f994",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T18:29:43.015Z",
+   "sourceFile": "L16_ayin_print_s3.png",
+   "sourceFileDate": "2026-11-26T18:29:42.965Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "cec54ed46c101c4314b6ed97a23291d327852a55eef4012b33a282d5305f9226",
+   "originalFormat": "PNG",
+   "originalBytes": 1769468,
+   "originalFile": "L16_ayin_print_s3.png",
+   "width": 1536,
+   "height": 1024,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "substituted",
+   "aspectNote": "manifest asks 1792x1024; got 1536x1024 (native landscape aspect). Not cropped or stretched.",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "L16_ayin_print_s3.800.webp",
+     "width": 800,
+     "height": 533,
+     "bytes": 97090
+    },
+    {
+     "edge": 1536,
+     "file": "L16_ayin_print_s3.1536.webp",
+     "width": 1536,
+     "height": 1024,
+     "bytes": 208498
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 5,
+    "blobs": [
+     {
+      "t": "ווו",
+      "conf": 85.3,
+      "lang": "heb"
+     },
+     {
+      "t": "ווו",
+      "conf": 84.5,
+      "lang": "heb"
+     },
+     {
+      "t": "ווו",
+      "conf": 83.1,
+      "lang": "heb"
+     },
+     {
+      "t": "all",
+      "conf": 77.3,
+      "lang": "eng"
+     },
+     {
+      "t": "ווו",
+      "conf": 75.1,
+      "lang": "heb"
+     }
+    ],
+    "possibleLetters": []
+   },
+   "flags": [
+    "aspect_substituted",
+    "contains_text"
    ],
    "humanApproved": true
   },
@@ -11087,24 +11111,24 @@
    "block": "B",
    "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. elephant placed naturally in the attached background scene (BG_market). No text, letters or numerals anywhere in the image.",
    "promptSha256": "0584ea9e86cfe3a08e314b4ae5eeffc7b5bea8198e6bf95e4c00e2e5f64923a9",
-   "tool": "Codex image generation (OpenAI), manual run",
+   "tool": "image generator (manual run, files uploaded by the author)",
    "model": null,
-   "ingestedAt": "2026-11-04T04:27:05.357Z",
+   "ingestedAt": "2026-11-26T18:29:43.015Z",
    "sourceFile": "L17_pe_print_s2.png",
-   "sourceFileDate": "2026-11-04T04:26:51.894Z",
+   "sourceFileDate": "2026-11-26T18:29:42.967Z",
    "matchedBy": "exact-name",
-   "originalSha256": "df87c55c2a7ae800c4c31b51b53c83abc1b8b9be19ddbe5defd5f118a59ea1bd",
+   "originalSha256": "bd5daa58f4662bda9089be91f859503c3025800eef3c65be4e835ff61e885377",
    "originalFormat": "PNG",
-   "originalBytes": 1749193,
+   "originalBytes": 1990766,
    "originalFile": "L17_pe_print_s2.png",
-   "width": 1254,
-   "height": 1254,
+   "width": 1536,
+   "height": 1024,
    "expected": {
     "w": 1792,
     "h": 1024
    },
-   "aspect": "mismatch",
-   "aspectNote": "got 1254x1254 (aspect 1.000), manifest wants 1792x1024 (aspect 1.750) or the native landscape shape",
+   "aspect": "substituted",
+   "aspectNote": "manifest asks 1792x1024; got 1536x1024 (native landscape aspect). Not cropped or stretched.",
    "hasAlpha": false,
    "c2paMarker": true,
    "metadataStripped": true,
@@ -11114,15 +11138,15 @@
      "edge": 800,
      "file": "L17_pe_print_s2.800.webp",
      "width": 800,
-     "height": 800,
-     "bytes": 79954
+     "height": 533,
+     "bytes": 88192
     },
     {
-     "edge": 1254,
-     "file": "L17_pe_print_s2.1254.webp",
-     "width": 1254,
-     "height": 1254,
-     "bytes": 135466
+     "edge": 1536,
+     "file": "L17_pe_print_s2.1536.webp",
+     "width": 1536,
+     "height": 1024,
+     "bytes": 194298
     }
    ],
    "ocr": {
@@ -11131,12 +11155,19 @@
      "heb",
      "eng"
     ],
-    "blobCount": 0,
-    "blobs": [],
+    "blobCount": 1,
+    "blobs": [
+     {
+      "t": "aap",
+      "conf": 78.7,
+      "lang": "eng"
+     }
+    ],
     "possibleLetters": []
    },
    "flags": [
-    "aspect_mismatch_allowed"
+    "aspect_substituted",
+    "contains_text"
    ],
    "humanApproved": true
   },
@@ -32275,23 +32306,24 @@
    "block": "J",
    "prompt": "Command 160 (Creation & Eden): Light over water; land and sea dividing; sun and moon in one sky; plants rising; fish and birds; animals on grass; a garden with a great tree; two figures resting under the tree (seen from behind, modest); a river leaving the garden; stars over the quiet garden at night. Image 7 of 10: a garden with a great tree. Wide 1792x1024. No text of any kind anywhere in the image.",
    "promptSha256": "4cda9698ded78268065cbe5bf91fec627548e34a7fb8ac42ebe486899db5bde5",
-   "tool": "image tool (manual run; hashed originals identified by the maps in the originals folder)",
+   "tool": "image generator (manual run, files uploaded by the author)",
    "model": null,
-   "ingestedAt": "2026-11-04T19:01:41.949Z",
+   "ingestedAt": "2026-11-26T18:29:43.015Z",
    "sourceFile": "STORY_creation_07.png",
-   "sourceFileDate": "2026-11-04T16:19:21.235Z",
+   "sourceFileDate": "2026-11-26T18:29:42.969Z",
    "matchedBy": "exact-name",
-   "originalSha256": "56bdb5d80c9caceba32b873df55b5dc166a819a89b63fbe6581fab106d9dccee",
+   "originalSha256": "f848054bff0c4293702ae82f23703e0c8208542470c618c72e953c33a7bbdca0",
    "originalFormat": "PNG",
-   "originalBytes": 1683719,
+   "originalBytes": 1797325,
    "originalFile": "STORY_creation_07.png",
-   "width": 1659,
-   "height": 948,
+   "width": 1536,
+   "height": 1024,
    "expected": {
     "w": 1792,
     "h": 1024
    },
-   "aspect": "exact",
+   "aspect": "substituted",
+   "aspectNote": "manifest asks 1792x1024; got 1536x1024 (native landscape aspect). Not cropped or stretched.",
    "hasAlpha": false,
    "c2paMarker": true,
    "metadataStripped": true,
@@ -32301,15 +32333,15 @@
      "edge": 800,
      "file": "STORY_creation_07.800.webp",
      "width": 800,
-     "height": 457,
-     "bytes": 66710
+     "height": 533,
+     "bytes": 93250
     },
     {
-     "edge": 1600,
-     "file": "STORY_creation_07.1600.webp",
-     "width": 1600,
-     "height": 914,
-     "bytes": 150932
+     "edge": 1536,
+     "file": "STORY_creation_07.1536.webp",
+     "width": 1536,
+     "height": 1024,
+     "bytes": 200744
     }
    ],
    "ocr": {
@@ -32318,18 +32350,12 @@
      "heb",
      "eng"
     ],
-    "blobCount": 1,
-    "blobs": [
-     {
-      "t": "קוו",
-      "conf": 61.5,
-      "lang": "heb"
-     }
-    ],
+    "blobCount": 0,
+    "blobs": [],
     "possibleLetters": []
    },
    "flags": [
-    "contains_text"
+    "aspect_substituted"
    ],
    "humanApproved": true
   },
@@ -32927,23 +32953,24 @@
    "block": "J",
    "prompt": "Command 163 (Jacob): Twin babies in two blankets (red and blue); a bowl of red stew traded for a birthright token (a blank seal); a ladder reaching from stones to stars in a dream; a stone pillow at dawn; a well with a great stone and flocks; two sisters at a wedding feast (veils, festive, gentle); speckled flocks at a trough; a night river crossing with a lone figure and a staff; a ladder of light revisited — the same stones, years later, with a family; a caravan returning over hills. Image 8 of 10: a night river crossing with a lone figure and a staff. Wide 1792x1024. No text of any kind anywhere in the image.",
    "promptSha256": "136c685a852f3a36ff7acf408dc144362826e977a91ec4dcf5c94ef2128e4b8e",
-   "tool": "image tool (manual run; hashed originals identified by the maps in the originals folder)",
+   "tool": "image generator (manual run, files uploaded by the author)",
    "model": null,
-   "ingestedAt": "2026-11-04T19:01:41.949Z",
+   "ingestedAt": "2026-11-26T18:29:43.015Z",
    "sourceFile": "STORY_jacob_08.png",
-   "sourceFileDate": "2026-11-04T16:19:21.416Z",
+   "sourceFileDate": "2026-11-26T18:29:42.972Z",
    "matchedBy": "exact-name",
-   "originalSha256": "943ad931e1f6c93feb51131280dabba1579f9dccded1a4603c5341d44e80a2fa",
+   "originalSha256": "cf8c73e005b51aa6b9f72086ad61454a5e04c6b003e04dd96511e4c19bd62243",
    "originalFormat": "PNG",
-   "originalBytes": 1447404,
+   "originalBytes": 1625396,
    "originalFile": "STORY_jacob_08.png",
-   "width": 1659,
-   "height": 948,
+   "width": 1536,
+   "height": 1024,
    "expected": {
     "w": 1792,
     "h": 1024
    },
-   "aspect": "exact",
+   "aspect": "substituted",
+   "aspectNote": "manifest asks 1792x1024; got 1536x1024 (native landscape aspect). Not cropped or stretched.",
    "hasAlpha": false,
    "c2paMarker": true,
    "metadataStripped": true,
@@ -32953,15 +32980,15 @@
      "edge": 800,
      "file": "STORY_jacob_08.800.webp",
      "width": 800,
-     "height": 457,
-     "bytes": 36982
+     "height": 533,
+     "bytes": 68408
     },
     {
-     "edge": 1600,
-     "file": "STORY_jacob_08.1600.webp",
-     "width": 1600,
-     "height": 914,
-     "bytes": 86116
+     "edge": 1536,
+     "file": "STORY_jacob_08.1536.webp",
+     "width": 1536,
+     "height": 1024,
+     "bytes": 143854
     }
    ],
    "ocr": {
@@ -32973,14 +33000,15 @@
     "blobCount": 1,
     "blobs": [
      {
-      "t": "6000",
-      "conf": 73.1,
-      "lang": "heb"
+      "t": "AYE",
+      "conf": 69.8,
+      "lang": "eng"
      }
     ],
     "possibleLetters": []
    },
    "flags": [
+    "aspect_substituted",
     "contains_text"
    ],
    "humanApproved": true
@@ -33051,23 +33079,24 @@
    "block": "J",
    "prompt": "Command 163 (Jacob): Twin babies in two blankets (red and blue); a bowl of red stew traded for a birthright token (a blank seal); a ladder reaching from stones to stars in a dream; a stone pillow at dawn; a well with a great stone and flocks; two sisters at a wedding feast (veils, festive, gentle); speckled flocks at a trough; a night river crossing with a lone figure and a staff; a ladder of light revisited — the same stones, years later, with a family; a caravan returning over hills. Image 10 of 10: a caravan returning over hills. Wide 1792x1024. No text of any kind anywhere in the image.",
    "promptSha256": "4a1c0f2a4d093d2b56eb645489bd611bad962b860bd0a931857d2f775b8ea873",
-   "tool": "image tool (manual run; hashed originals identified by the maps in the originals folder)",
+   "tool": "image generator (manual run, files uploaded by the author)",
    "model": null,
-   "ingestedAt": "2026-11-04T19:01:41.949Z",
+   "ingestedAt": "2026-11-26T18:29:43.015Z",
    "sourceFile": "STORY_jacob_10.png",
-   "sourceFileDate": "2026-11-04T16:19:21.418Z",
+   "sourceFileDate": "2026-11-26T18:29:42.974Z",
    "matchedBy": "exact-name",
-   "originalSha256": "95955568670d9b8240af17bbcbac117ac92658ac79b690799497bd7859d3ba09",
+   "originalSha256": "14612b4c76b7ec113fcb261ec2f98089e1288c8c1574ea16fa5d6e513165edd9",
    "originalFormat": "PNG",
-   "originalBytes": 1641178,
+   "originalBytes": 1812278,
    "originalFile": "STORY_jacob_10.png",
-   "width": 1659,
-   "height": 948,
+   "width": 1536,
+   "height": 1024,
    "expected": {
     "w": 1792,
     "h": 1024
    },
-   "aspect": "exact",
+   "aspect": "substituted",
+   "aspectNote": "manifest asks 1792x1024; got 1536x1024 (native landscape aspect). Not cropped or stretched.",
    "hasAlpha": false,
    "c2paMarker": true,
    "metadataStripped": true,
@@ -33077,15 +33106,15 @@
      "edge": 800,
      "file": "STORY_jacob_10.800.webp",
      "width": 800,
-     "height": 457,
-     "bytes": 56394
+     "height": 533,
+     "bytes": 92638
     },
     {
-     "edge": 1600,
-     "file": "STORY_jacob_10.1600.webp",
-     "width": 1600,
-     "height": 914,
-     "bytes": 138438
+     "edge": 1536,
+     "file": "STORY_jacob_10.1536.webp",
+     "width": 1536,
+     "height": 1024,
+     "bytes": 202140
     }
    ],
    "ocr": {
@@ -33094,18 +33123,12 @@
      "heb",
      "eng"
     ],
-    "blobCount": 1,
-    "blobs": [
-     {
-      "t": "Power",
-      "conf": 25.2,
-      "lang": "eng"
-     }
-    ],
+    "blobCount": 0,
+    "blobs": [],
     "possibleLetters": []
    },
    "flags": [
-    "contains_text"
+    "aspect_substituted"
    ],
    "humanApproved": true
   },
@@ -36541,23 +36564,24 @@
    "block": "J",
    "prompt": "Command 161 (Noah): A large wooden boat on a scaffold; animals walking two by two up a ramp (gentle, stylised); rain beginning over hills; the boat on open water under a grey sky; a dove leaving the boat; a dove returning with an olive leaf; the boat resting on a green mountain; a rainbow over wet fields; animals leaving across a meadow; a new vineyard being planted. Image 9 of 10: animals leaving across a meadow. Wide 1792x1024. No text of any kind anywhere in the image.",
    "promptSha256": "1292cb93b0d1a5be30a65a984a67132f67323a4b8f95ecf6c4c5bda99affe850",
-   "tool": "image tool (manual run; hashed originals identified by the maps in the originals folder)",
+   "tool": "image generator (manual run, files uploaded by the author)",
    "model": null,
-   "ingestedAt": "2026-11-04T19:05:30.454Z",
+   "ingestedAt": "2026-11-26T18:29:43.015Z",
    "sourceFile": "STORY_noah_09.png",
-   "sourceFileDate": "2026-11-04T16:19:21.375Z",
+   "sourceFileDate": "2026-11-26T18:29:42.976Z",
    "matchedBy": "exact-name",
-   "originalSha256": "f2319558f1e2fd242e40920a1d4d17a2579c9e5383014f95493458856afcc203",
+   "originalSha256": "6182fe1e89d8688e842902b4ccda2977598fa2d6e8a72dbeec66ce8183ef6a66",
    "originalFormat": "PNG",
-   "originalBytes": 1517947,
+   "originalBytes": 1669217,
    "originalFile": "STORY_noah_09.png",
-   "width": 1659,
-   "height": 948,
+   "width": 1536,
+   "height": 1024,
    "expected": {
     "w": 1792,
     "h": 1024
    },
-   "aspect": "exact",
+   "aspect": "substituted",
+   "aspectNote": "manifest asks 1792x1024; got 1536x1024 (native landscape aspect). Not cropped or stretched.",
    "hasAlpha": false,
    "c2paMarker": true,
    "metadataStripped": true,
@@ -36567,15 +36591,15 @@
      "edge": 800,
      "file": "STORY_noah_09.800.webp",
      "width": 800,
-     "height": 457,
-     "bytes": 48364
+     "height": 533,
+     "bytes": 70970
     },
     {
-     "edge": 1600,
-     "file": "STORY_noah_09.1600.webp",
-     "width": 1600,
-     "height": 914,
-     "bytes": 107032
+     "edge": 1536,
+     "file": "STORY_noah_09.1536.webp",
+     "width": 1536,
+     "height": 1024,
+     "bytes": 152108
     }
    ],
    "ocr": {
@@ -36584,18 +36608,12 @@
      "heb",
      "eng"
     ],
-    "blobCount": 1,
-    "blobs": [
-     {
-      "t": "TAS",
-      "conf": 77,
-      "lang": "eng"
-     }
-    ],
+    "blobCount": 0,
+    "blobs": [],
     "possibleLetters": []
    },
    "flags": [
-    "contains_text"
+    "aspect_substituted"
    ],
    "humanApproved": true
   },
@@ -36607,23 +36625,24 @@
    "block": "J",
    "prompt": "Command 161 (Noah): A large wooden boat on a scaffold; animals walking two by two up a ramp (gentle, stylised); rain beginning over hills; the boat on open water under a grey sky; a dove leaving the boat; a dove returning with an olive leaf; the boat resting on a green mountain; a rainbow over wet fields; animals leaving across a meadow; a new vineyard being planted. Image 10 of 10: a new vineyard being planted. Wide 1792x1024. No text of any kind anywhere in the image.",
    "promptSha256": "d2dbe275e2e73b6f3dfb69c7d6e40d5c26da9cac850d47d3f775d67695224d19",
-   "tool": "image tool (manual run; hashed originals identified by the maps in the originals folder)",
+   "tool": "image generator (manual run, files uploaded by the author)",
    "model": null,
-   "ingestedAt": "2026-11-04T19:05:30.454Z",
+   "ingestedAt": "2026-11-26T18:29:43.015Z",
    "sourceFile": "STORY_noah_10.png",
-   "sourceFileDate": "2026-11-04T16:19:21.376Z",
+   "sourceFileDate": "2026-11-26T18:29:42.978Z",
    "matchedBy": "exact-name",
-   "originalSha256": "d0cdb64b06ecc63697bc619af75d3c5e9add9ebe298b1a30f13d42b7cae89c98",
+   "originalSha256": "1fa07e174411032303f29fe74f57153d2b95bdd1552a45ad4e120fa5d45e5e22",
    "originalFormat": "PNG",
-   "originalBytes": 1526215,
+   "originalBytes": 2157009,
    "originalFile": "STORY_noah_10.png",
-   "width": 1659,
-   "height": 948,
+   "width": 1536,
+   "height": 1024,
    "expected": {
     "w": 1792,
     "h": 1024
    },
-   "aspect": "exact",
+   "aspect": "substituted",
+   "aspectNote": "manifest asks 1792x1024; got 1536x1024 (native landscape aspect). Not cropped or stretched.",
    "hasAlpha": false,
    "c2paMarker": true,
    "metadataStripped": true,
@@ -36633,15 +36652,15 @@
      "edge": 800,
      "file": "STORY_noah_10.800.webp",
      "width": 800,
-     "height": 457,
-     "bytes": 44852
+     "height": 533,
+     "bytes": 113522
     },
     {
-     "edge": 1600,
-     "file": "STORY_noah_10.1600.webp",
-     "width": 1600,
-     "height": 914,
-     "bytes": 102078
+     "edge": 1536,
+     "file": "STORY_noah_10.1536.webp",
+     "width": 1536,
+     "height": 1024,
+     "bytes": 266122
     }
    ],
    "ocr": {
@@ -36650,20 +36669,12 @@
      "heb",
      "eng"
     ],
-    "blobCount": 1,
-    "blobs": [
-     {
-      "t": "Col",
-      "conf": 66.8,
-      "lang": "eng"
-     }
-    ],
-    "possibleLetters": [
-     "ו"
-    ]
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
    },
    "flags": [
-    "contains_text"
+    "aspect_substituted"
    ],
    "humanApproved": true
   },
@@ -109373,6 +109384,3108 @@
    },
    "flags": [
     "aspect_substituted"
+   ],
+   "humanApproved": true
+  },
+  "CTX_food_07": {
+   "id": "CTX_food_07",
+   "file": "CTX_food_07.png",
+   "command": 230,
+   "set": "Food in context",
+   "block": "Q",
+   "prompt": "Command 230 (Food in context): A falafel being assembled at a stall counter; shakshuka served in its pan at a table; a sabich-style stuffed pita held in two hands over a market crate; soup with dumplings steaming at a family table; a mezze spread seen from above (many small bowls); olives in oil on a bakery counter; a pomegranate being opened over a bowl, seeds falling; halvah blocks stacked at a market stall; a mint-tea glass on a saucer by a window; a Friday pot of slow stew on a low flame (steam, warm light). Image 7 of 10: a pomegranate being opened over a bowl, seeds falling. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "6b4a5609865c7aedecb2c38b3e5a7bc06c4de4eccd41b7c6d346e896fce45ded",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T18:28:12.098Z",
+   "sourceFile": "CTX_food_07.png",
+   "sourceFileDate": "2026-11-26T18:28:12.031Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "2f0dfab152588957776347df1bc584923697436205872e320de48dbf9f87d9f8",
+   "originalFormat": "PNG",
+   "originalBytes": 1565235,
+   "originalFile": "CTX_food_07.png",
+   "width": 1536,
+   "height": 1024,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "substituted",
+   "aspectNote": "manifest asks 1792x1024; got 1536x1024 (native landscape aspect). Not cropped or stretched.",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "CTX_food_07.800.webp",
+     "width": 800,
+     "height": 533,
+     "bytes": 59740
+    },
+    {
+     "edge": 1536,
+     "file": "CTX_food_07.1536.webp",
+     "width": 1536,
+     "height": 1024,
+     "bytes": 121340
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [
+    "aspect_substituted"
+   ],
+   "humanApproved": true
+  },
+  "CTX_food_09": {
+   "id": "CTX_food_09",
+   "file": "CTX_food_09.png",
+   "command": 230,
+   "set": "Food in context",
+   "block": "Q",
+   "prompt": "Command 230 (Food in context): A falafel being assembled at a stall counter; shakshuka served in its pan at a table; a sabich-style stuffed pita held in two hands over a market crate; soup with dumplings steaming at a family table; a mezze spread seen from above (many small bowls); olives in oil on a bakery counter; a pomegranate being opened over a bowl, seeds falling; halvah blocks stacked at a market stall; a mint-tea glass on a saucer by a window; a Friday pot of slow stew on a low flame (steam, warm light). Image 9 of 10: a mint-tea glass on a saucer by a window. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "d9c4fbb54f074b84664ce3fcfc03598770df0e278ee7edc8911c8858e822fd35",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T18:28:12.098Z",
+   "sourceFile": "CTX_food_09.png",
+   "sourceFileDate": "2026-11-26T18:28:12.031Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "95e503f7f0af1c8137fe92ced332bab5ca0d911c34fd065b9814d528a63b644d",
+   "originalFormat": "PNG",
+   "originalBytes": 1449586,
+   "originalFile": "CTX_food_09.png",
+   "width": 1536,
+   "height": 1024,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "substituted",
+   "aspectNote": "manifest asks 1792x1024; got 1536x1024 (native landscape aspect). Not cropped or stretched.",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "CTX_food_09.800.webp",
+     "width": 800,
+     "height": 533,
+     "bytes": 46318
+    },
+    {
+     "edge": 1536,
+     "file": "CTX_food_09.1536.webp",
+     "width": 1536,
+     "height": 1024,
+     "bytes": 96448
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 1,
+    "blobs": [
+     {
+      "t": "regal",
+      "conf": 29.4,
+      "lang": "eng"
+     }
+    ],
+    "possibleLetters": []
+   },
+   "flags": [
+    "aspect_substituted",
+    "contains_text"
+   ],
+   "humanApproved": true
+  },
+  "CTX_food_10": {
+   "id": "CTX_food_10",
+   "file": "CTX_food_10.png",
+   "command": 230,
+   "set": "Food in context",
+   "block": "Q",
+   "prompt": "Command 230 (Food in context): A falafel being assembled at a stall counter; shakshuka served in its pan at a table; a sabich-style stuffed pita held in two hands over a market crate; soup with dumplings steaming at a family table; a mezze spread seen from above (many small bowls); olives in oil on a bakery counter; a pomegranate being opened over a bowl, seeds falling; halvah blocks stacked at a market stall; a mint-tea glass on a saucer by a window; a Friday pot of slow stew on a low flame (steam, warm light). Image 10 of 10: a Friday pot of slow stew on a low flame (steam, warm light). Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "8e4ed6ded63e81e278760e469f0f8d816803e2dad108ac29b82d7a4bf6ac63f0",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T18:28:12.098Z",
+   "sourceFile": "CTX_food_10.png",
+   "sourceFileDate": "2026-11-26T18:28:12.032Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "47529ced0e06f1772a9ab660103e18e75d7c6f107f381d125d78e6412354d2c4",
+   "originalFormat": "PNG",
+   "originalBytes": 1539634,
+   "originalFile": "CTX_food_10.png",
+   "width": 1536,
+   "height": 1024,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "substituted",
+   "aspectNote": "manifest asks 1792x1024; got 1536x1024 (native landscape aspect). Not cropped or stretched.",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "CTX_food_10.800.webp",
+     "width": 800,
+     "height": 533,
+     "bytes": 58184
+    },
+    {
+     "edge": 1536,
+     "file": "CTX_food_10.1536.webp",
+     "width": 1536,
+     "height": 1024,
+     "bytes": 122020
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [
+    "aspect_substituted"
+   ],
+   "humanApproved": true
+  },
+  "GRAM_time_10": {
+   "id": "GRAM_time_10",
+   "file": "GRAM_time_10.png",
+   "command": 218,
+   "set": "Past, present, future scenes",
+   "block": "O",
+   "prompt": "Command 218 (Past, present, future scenes): The same café table in three lights — morning empty (past panel feel: a finished cup), noon busy (present), evening set for tomorrow (future) (3 images); a seed, a sprout, a tree in identical pots (3); a child, the same person grown, the same person old with a cane (3, same coat colour to link them); one image — a road with three signpost shapes left blank pointing back, here, and forward. Image 10 of 10: one image — a road with three signpost shapes left blank pointing back, here, and forward. Square 1024x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "ef2fcc27bd88a5eb39ba4c3e211d085f9ce78bfe0f33c35f44ab191cc87c7395",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T18:28:12.098Z",
+   "sourceFile": "GRAM_time_10.png",
+   "sourceFileDate": "2026-11-26T18:28:12.032Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "143005fdeb52c75b696bceed90e14e392de4828c361a040e21a12617339b15a8",
+   "originalFormat": "PNG",
+   "originalBytes": 1206494,
+   "originalFile": "GRAM_time_10.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "GRAM_time_10.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 46786
+    },
+    {
+     "edge": 1024,
+     "file": "GRAM_time_10.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 61024
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "HOL_roshhashana_01": {
+   "id": "HOL_roshhashana_01",
+   "file": "HOL_roshhashana_01.png",
+   "command": 106,
+   "set": "next_hol_rosh_yomkippur",
+   "block": "H",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. Wide 1792x1024 scene: apple slices being dipped in honey, several family hands reaching in. Any other people are simple small figures with plain friendly faces. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank. No text, letters or numerals anywhere in the image.",
+   "promptSha256": "75cd2131c1bc61c4b92732e9608a96cdc19dfc1479aac4ffffbb3f9cbb56cb8e",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T18:28:12.098Z",
+   "sourceFile": "HOL_roshhashana_01.png",
+   "sourceFileDate": "2026-11-26T18:28:12.033Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "f5890b388d743f89cab7661d431fbfda155d8cdaf6acddbb459614fcda3d7a3d",
+   "originalFormat": "PNG",
+   "originalBytes": 3178772,
+   "originalFile": "HOL_roshhashana_01.png",
+   "width": 1792,
+   "height": 1024,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "HOL_roshhashana_01.800.webp",
+     "width": 800,
+     "height": 457,
+     "bytes": 76264
+    },
+    {
+     "edge": 1600,
+     "file": "HOL_roshhashana_01.1600.webp",
+     "width": 1600,
+     "height": 914,
+     "bytes": 166564
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "HOL_roshhashana_02": {
+   "id": "HOL_roshhashana_02",
+   "file": "HOL_roshhashana_02.png",
+   "command": 106,
+   "set": "next_hol_rosh_yomkippur",
+   "block": "H",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. Wide 1792x1024 scene: a round challah with raisins on a plate beside a small honey jar. Any other people are simple small figures with plain friendly faces. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank. No text, letters or numerals anywhere in the image.",
+   "promptSha256": "110df598ecab4f5cb8ef7f5f0482fb6c0e07c302054b5ae9904f72ea175bb0ac",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T18:28:12.098Z",
+   "sourceFile": "HOL_roshhashana_02.png",
+   "sourceFileDate": "2026-11-26T18:28:12.034Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "7fcea313a6a1540a07e17b6dd7e2b86c62fc81a9033cd8a5af8fc789a733117c",
+   "originalFormat": "PNG",
+   "originalBytes": 2749286,
+   "originalFile": "HOL_roshhashana_02.png",
+   "width": 1792,
+   "height": 1024,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "HOL_roshhashana_02.800.webp",
+     "width": 800,
+     "height": 457,
+     "bytes": 64542
+    },
+    {
+     "edge": 1600,
+     "file": "HOL_roshhashana_02.1600.webp",
+     "width": 1600,
+     "height": 914,
+     "bytes": 137982
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "I-43-img1": {
+   "id": "I-43-img1",
+   "file": "I-43-img1.png",
+   "command": 205,
+   "set": "intermediate_I-43",
+   "block": "I",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. Wide scene, flat vector illustration (not a photograph): A supermarket aisle with a full trolley and shelves of bread, milk and fruit. Wide 3:2, clearly wider than tall, never square. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank. No real people, no individual faces; sacred books and scrolls stay blank.",
+   "promptSha256": "975e2cc77a952cc3204334e2a2d6b4ee4ca42f0ea90e42bf68c89748ce672bc3",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T18:28:12.098Z",
+   "sourceFile": "I-43-img1.png",
+   "sourceFileDate": "2026-11-26T18:28:12.034Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "330839a5bbb93f80cf376277301044a5fc2946af7779b667aaf7e296979b0d4f",
+   "originalFormat": "PNG",
+   "originalBytes": 1975304,
+   "originalFile": "I-43-img1.png",
+   "width": 1536,
+   "height": 1024,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "substituted",
+   "aspectNote": "manifest asks 1792x1024; got 1536x1024 (native landscape aspect). Not cropped or stretched.",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "I-43-img1.800.webp",
+     "width": 800,
+     "height": 533,
+     "bytes": 112072
+    },
+    {
+     "edge": 1536,
+     "file": "I-43-img1.1536.webp",
+     "width": 1536,
+     "height": 1024,
+     "bytes": 255766
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 1,
+    "blobs": [
+     {
+      "t": "SEX",
+      "conf": 69.3,
+      "lang": "eng"
+     }
+    ],
+    "possibleLetters": [
+     "ש",
+     "בר"
+    ]
+   },
+   "flags": [
+    "aspect_substituted",
+    "contains_text"
+   ],
+   "humanApproved": true
+  },
+  "I-43-img2": {
+   "id": "I-43-img2",
+   "file": "I-43-img2.png",
+   "command": 205,
+   "set": "intermediate_I-43",
+   "block": "I",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. Wide scene, flat vector illustration (not a photograph): A checkout belt with groceries and a hand holding out a card. Wide 3:2, clearly wider than tall, never square. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank. No real people, no individual faces; sacred books and scrolls stay blank.",
+   "promptSha256": "1d7c8b7e0d791a8c3a1e9ab3b0260258638edafed874a1acf83de27add21eb5e",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T18:28:12.098Z",
+   "sourceFile": "I-43-img2.png",
+   "sourceFileDate": "2026-11-26T18:28:12.035Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "babe9a168cd24afd6005dc80e5592c132c785d92c47e58a573fdbbf8d4dbca75",
+   "originalFormat": "PNG",
+   "originalBytes": 1723872,
+   "originalFile": "I-43-img2.png",
+   "width": 1536,
+   "height": 1024,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "substituted",
+   "aspectNote": "manifest asks 1792x1024; got 1536x1024 (native landscape aspect). Not cropped or stretched.",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "I-43-img2.800.webp",
+     "width": 800,
+     "height": 533,
+     "bytes": 76408
+    },
+    {
+     "edge": 1536,
+     "file": "I-43-img2.1536.webp",
+     "width": 1536,
+     "height": 1024,
+     "bytes": 158272
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [
+    "aspect_substituted"
+   ],
+   "humanApproved": true
+  },
+  "I-44-img1": {
+   "id": "I-44-img1",
+   "file": "I-44-img1.png",
+   "command": 205,
+   "set": "intermediate_I-44",
+   "block": "I",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. Wide scene, flat vector illustration (not a photograph): A landlord and tenant looking at a broken fridge with the door hanging open. Wide 3:2, clearly wider than tall, never square. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank. No real people, no individual faces; sacred books and scrolls stay blank.",
+   "promptSha256": "cbee9a5f57f4743a522eb9a8ec4f55ed5d9ec8cdbef7637ce68e7866b7698d5a",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T18:28:12.098Z",
+   "sourceFile": "I-44-img1.png",
+   "sourceFileDate": "2026-11-26T18:28:12.036Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "e54008d11b9a34544df0f8fe5134af68a6393b5c735961ce2bf22549880da777",
+   "originalFormat": "PNG",
+   "originalBytes": 1653405,
+   "originalFile": "I-44-img1.png",
+   "width": 1536,
+   "height": 1024,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "substituted",
+   "aspectNote": "manifest asks 1792x1024; got 1536x1024 (native landscape aspect). Not cropped or stretched.",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "I-44-img1.800.webp",
+     "width": 800,
+     "height": 533,
+     "bytes": 64676
+    },
+    {
+     "edge": 1536,
+     "file": "I-44-img1.1536.webp",
+     "width": 1536,
+     "height": 1024,
+     "bytes": 143592
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [
+    "aspect_substituted"
+   ],
+   "humanApproved": true
+  },
+  "I-44-img2": {
+   "id": "I-44-img2",
+   "file": "I-44-img2.png",
+   "command": 205,
+   "set": "intermediate_I-44",
+   "block": "I",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. Wide scene, flat vector illustration (not a photograph): An electrician on a stool with a torch inspecting a ceiling light. Wide 3:2, clearly wider than tall, never square. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank. No real people, no individual faces; sacred books and scrolls stay blank.",
+   "promptSha256": "7fbc64d243fb4db63d26af91cb5caf59f3e93152f97c506ff718e225aa1d4bba",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T18:28:12.098Z",
+   "sourceFile": "I-44-img2.png",
+   "sourceFileDate": "2026-11-26T18:28:12.037Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "0d9c67b8ec771ffa96a546173df036520647005578e1eb6b678c5fd783200bc0",
+   "originalFormat": "PNG",
+   "originalBytes": 1682554,
+   "originalFile": "I-44-img2.png",
+   "width": 1536,
+   "height": 1024,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "substituted",
+   "aspectNote": "manifest asks 1792x1024; got 1536x1024 (native landscape aspect). Not cropped or stretched.",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "I-44-img2.800.webp",
+     "width": 800,
+     "height": 533,
+     "bytes": 72762
+    },
+    {
+     "edge": 1536,
+     "file": "I-44-img2.1536.webp",
+     "width": 1536,
+     "height": 1024,
+     "bytes": 157220
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 1,
+    "blobs": [
+     {
+      "t": "CES",
+      "conf": 72.4,
+      "lang": "eng"
+     }
+    ],
+    "possibleLetters": [
+     "זו"
+    ]
+   },
+   "flags": [
+    "aspect_substituted",
+    "contains_text"
+   ],
+   "humanApproved": true
+  },
+  "I-45-img1": {
+   "id": "I-45-img1",
+   "file": "I-45-img1.png",
+   "command": 205,
+   "set": "intermediate_I-45",
+   "block": "I",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. Wide scene, flat vector illustration (not a photograph): A delivery rider on a scooter arriving at an apartment block at night with a box on the back. Wide 3:2, clearly wider than tall, never square. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank. No real people, no individual faces; sacred books and scrolls stay blank.",
+   "promptSha256": "c2204cb765f2669984a8297f2bbc1ce0c67ac44bf5a25749f5fba6e351a98ce7",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T18:28:12.098Z",
+   "sourceFile": "I-45-img1.png",
+   "sourceFileDate": "2026-11-26T18:28:12.037Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "498b049850737001fda5b528c1a5d2b585822234478e26f0360ae142598a844d",
+   "originalFormat": "PNG",
+   "originalBytes": 1549283,
+   "originalFile": "I-45-img1.png",
+   "width": 1536,
+   "height": 1024,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "substituted",
+   "aspectNote": "manifest asks 1792x1024; got 1536x1024 (native landscape aspect). Not cropped or stretched.",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "I-45-img1.800.webp",
+     "width": 800,
+     "height": 533,
+     "bytes": 62332
+    },
+    {
+     "edge": 1536,
+     "file": "I-45-img1.1536.webp",
+     "width": 1536,
+     "height": 1024,
+     "bytes": 128830
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 1,
+    "blobs": [
+     {
+      "t": "ממורשו",
+      "conf": 22,
+      "lang": "heb"
+     }
+    ],
+    "possibleLetters": []
+   },
+   "flags": [
+    "aspect_substituted",
+    "contains_text"
+   ],
+   "humanApproved": true
+  },
+  "J-0252": {
+   "id": "J-0252",
+   "file": "J-0252.png",
+   "command": 320,
+   "set": "j_vocab_general-things-set04",
+   "block": "J",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. A single flag, drawn as one clear, instantly recognisable object centred on the plain background, nothing else competing. Square 1:1. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank. No real people, no individual faces; sacred books and scrolls stay blank.",
+   "promptSha256": "d982bd1eeb194095016263bf87dc2036d51d6620ffeb1ad3957014bb61351a0c",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T18:28:12.098Z",
+   "sourceFile": "J-0252.png",
+   "sourceFileDate": "2026-11-26T18:28:12.038Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "3d8a49f6f93086dfa036a684f4854dd8b6cd77a644b150efb4866e599ae56b40",
+   "originalFormat": "PNG",
+   "originalBytes": 903897,
+   "originalFile": "J-0252.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "J-0252.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 17728
+    },
+    {
+     "edge": 1024,
+     "file": "J-0252.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 23538
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": false
+  },
+  "J-0258": {
+   "id": "J-0258",
+   "file": "J-0258.png",
+   "command": 321,
+   "set": "j_vocab_general-things-set04",
+   "block": "J",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. A single ocean, drawn as one clear, instantly recognisable object centred on the plain background, nothing else competing. Square 1:1. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank. No real people, no individual faces; sacred books and scrolls stay blank.",
+   "promptSha256": "c66629abb439b511742a4a9b5ee9c4eb63d4de2bd939fc371505df4526ff6d0c",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T18:28:12.098Z",
+   "sourceFile": "J-0258.png",
+   "sourceFileDate": "2026-11-26T18:28:12.038Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "e4ff534b13dbaaf27b03502050124928c02df5af7076ad4be922a50150751a1b",
+   "originalFormat": "PNG",
+   "originalBytes": 1087403,
+   "originalFile": "J-0258.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "J-0258.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 35810
+    },
+    {
+     "edge": 1024,
+     "file": "J-0258.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 46992
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "J-0259": {
+   "id": "J-0259",
+   "file": "J-0259.png",
+   "command": 321,
+   "set": "j_vocab_general-things-set04",
+   "block": "J",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. A single frog, drawn as one clear, instantly recognisable object centred on the plain background, nothing else competing. Square 1:1. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank. No real people, no individual faces; sacred books and scrolls stay blank.",
+   "promptSha256": "1771e695a510e634b07b4f57859b2d8f63b560e9d13e4af59be52608780bae70",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T18:28:12.098Z",
+   "sourceFile": "J-0259.png",
+   "sourceFileDate": "2026-11-26T18:28:12.038Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "7cb625984f802a4cc7f476a86f061e1df9a148aefb496a4369c1469b474fa218",
+   "originalFormat": "PNG",
+   "originalBytes": 1071801,
+   "originalFile": "J-0259.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "J-0259.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 34828
+    },
+    {
+     "edge": 1024,
+     "file": "J-0259.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 43550
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "J-0260": {
+   "id": "J-0260",
+   "file": "J-0260.png",
+   "command": 321,
+   "set": "j_vocab_general-things-set04",
+   "block": "J",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. A single ice cream, drawn as one clear, instantly recognisable object centred on the plain background, nothing else competing. Square 1:1. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank. No real people, no individual faces; sacred books and scrolls stay blank.",
+   "promptSha256": "f807a8134b9efb83b63468730a8788f93f44e57bc5e0817b2a8e2a7cf8998476",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T18:28:12.098Z",
+   "sourceFile": "J-0260.png",
+   "sourceFileDate": "2026-11-26T18:28:12.039Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "5303a3bbb73b3228ed2c2310a69ec6542ec05f73f7718988cf377a4e7f1575a0",
+   "originalFormat": "PNG",
+   "originalBytes": 997883,
+   "originalFile": "J-0260.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "J-0260.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 25786
+    },
+    {
+     "edge": 1024,
+     "file": "J-0260.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 34474
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "J-0262": {
+   "id": "J-0262",
+   "file": "J-0262.png",
+   "command": 321,
+   "set": "j_vocab_general-things-set04",
+   "block": "J",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. A single coriander, drawn as one clear, instantly recognisable object centred on the plain background, nothing else competing. Square 1:1. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank. No real people, no individual faces; sacred books and scrolls stay blank.",
+   "promptSha256": "4113bb9129d3a86c6070908fcad1e8cbbb0ab1d01d723ec6a813eb74bb8dc6cb",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T18:28:12.098Z",
+   "sourceFile": "J-0262.png",
+   "sourceFileDate": "2026-11-26T18:28:12.039Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "c556dc579ed01d1ac071dd740a02807f5e56198fb21876232bb625786040d643",
+   "originalFormat": "PNG",
+   "originalBytes": 1292386,
+   "originalFile": "J-0262.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "J-0262.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 49132
+    },
+    {
+     "edge": 1024,
+     "file": "J-0262.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 64152
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "J-0263": {
+   "id": "J-0263",
+   "file": "J-0263.png",
+   "command": 321,
+   "set": "j_vocab_general-things-set04",
+   "block": "J",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. A single glasses, drawn as one clear, instantly recognisable object centred on the plain background, nothing else competing. Square 1:1. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank. No real people, no individual faces; sacred books and scrolls stay blank.",
+   "promptSha256": "dbd641c91bfe6b6392086e08003aaff38add7167272aa6a6719d05af324a7ad7",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T18:28:12.098Z",
+   "sourceFile": "J-0263.png",
+   "sourceFileDate": "2026-11-26T18:28:12.040Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "1b909f29dff23abbcaacbacc0313cb0bfe48b3bdba41137d4f619da39dc2759c",
+   "originalFormat": "PNG",
+   "originalBytes": 989861,
+   "originalFile": "J-0263.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "J-0263.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 28716
+    },
+    {
+     "edge": 1024,
+     "file": "J-0263.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 38512
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "J-0266": {
+   "id": "J-0266",
+   "file": "J-0266.png",
+   "command": 321,
+   "set": "j_vocab_general-things-set05",
+   "block": "J",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. A single fleece, drawn as one clear, instantly recognisable object centred on the plain background, nothing else competing. Square 1:1. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank. No real people, no individual faces; sacred books and scrolls stay blank.",
+   "promptSha256": "fe66a8b4512100b425ebfa4c5ce69fb03fb5160ea91773b005506368ea364dfc",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T18:28:12.098Z",
+   "sourceFile": "J-0266.png",
+   "sourceFileDate": "2026-11-26T18:28:12.040Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "466cbb0996c4ea15f9118d9729da0a82814c4dc97157af2de8eaef7428bc4abb",
+   "originalFormat": "PNG",
+   "originalBytes": 1034181,
+   "originalFile": "J-0266.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "J-0266.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 29208
+    },
+    {
+     "edge": 1024,
+     "file": "J-0266.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 36986
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "J-0267": {
+   "id": "J-0267",
+   "file": "J-0267.png",
+   "command": 321,
+   "set": "j_vocab_general-things-set05",
+   "block": "J",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. A single shower, drawn as one clear, instantly recognisable object centred on the plain background, nothing else competing. Square 1:1. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank. No real people, no individual faces; sacred books and scrolls stay blank.",
+   "promptSha256": "7d471baa05ffb03641f93905372ea09ad362d120976cc8856dd386b2464be6d1",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T18:28:12.098Z",
+   "sourceFile": "J-0267.png",
+   "sourceFileDate": "2026-11-26T18:28:12.041Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "4606f8facb7d2099219429958434da4ef774f260e076546e8a66667425a00136",
+   "originalFormat": "PNG",
+   "originalBytes": 1233286,
+   "originalFile": "J-0267.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "J-0267.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 34200
+    },
+    {
+     "edge": 1024,
+     "file": "J-0267.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 43488
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "J-0268": {
+   "id": "J-0268",
+   "file": "J-0268.png",
+   "command": 321,
+   "set": "j_vocab_general-things-set05",
+   "block": "J",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. A single screw, drawn as one clear, instantly recognisable object centred on the plain background, nothing else competing. Square 1:1. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank. No real people, no individual faces; sacred books and scrolls stay blank.",
+   "promptSha256": "d6c285d8287492c6b64a4b48d8f87e5e1c0b8bac05a188085dd1c7c06427e5c4",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T18:28:12.098Z",
+   "sourceFile": "J-0268.png",
+   "sourceFileDate": "2026-11-26T18:28:12.041Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "026090687ebac3e2d90955a3cb5889dad62f2911027f731abf2d03b1b9942674",
+   "originalFormat": "PNG",
+   "originalBytes": 957641,
+   "originalFile": "J-0268.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "J-0268.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 27916
+    },
+    {
+     "edge": 1024,
+     "file": "J-0268.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 35976
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "J-0269": {
+   "id": "J-0269",
+   "file": "J-0269.png",
+   "command": 321,
+   "set": "j_vocab_general-things-set05",
+   "block": "J",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. A single lantern, drawn as one clear, instantly recognisable object centred on the plain background, nothing else competing. Square 1:1. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank. No real people, no individual faces; sacred books and scrolls stay blank.",
+   "promptSha256": "580fb248c1b217eb860dc34e7cb6b2788b6546a9c3a919d0deb056c623b3d97b",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T18:28:12.098Z",
+   "sourceFile": "J-0269.png",
+   "sourceFileDate": "2026-11-26T18:28:12.042Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "a3b65f355fb1b64c6cd687b0eb1bcf96ca3d29f92c24eef464ccdf0bdaf4112c",
+   "originalFormat": "PNG",
+   "originalBytes": 1182958,
+   "originalFile": "J-0269.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "J-0269.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 41630
+    },
+    {
+     "edge": 1024,
+     "file": "J-0269.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 54982
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "J-0596": {
+   "id": "J-0596",
+   "file": "J-0596.png",
+   "command": 347,
+   "set": "j_festival_hanukkah",
+   "block": "J",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. A pile of gold foil-wrapped chocolate coins spilling from a small cloth bag. Square 1:1. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank. No real people, no individual faces; sacred books and scrolls stay blank.",
+   "promptSha256": "e5d173d127c7c56ccc9aebe7bcd4f869a3b612f059bf88fcbc4bc052d7c91173",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T18:28:12.098Z",
+   "sourceFile": "J-0596.png",
+   "sourceFileDate": "2026-11-26T18:28:12.042Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "a842dcc573f99a246da0fe9cc200e04a70a203dc9e7bc31d7f9c009667cdced8",
+   "originalFormat": "PNG",
+   "originalBytes": 1475091,
+   "originalFile": "J-0596.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "J-0596.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 63560
+    },
+    {
+     "edge": 1024,
+     "file": "J-0596.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 84046
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "J-0981": {
+   "id": "J-0981",
+   "file": "J-0981.png",
+   "command": 377,
+   "set": "j_srs",
+   "block": "J",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. Two plain objects that make the quality \"broken\" obvious at a glance (one clearly broken, one clearly the opposite), no people. Square 1:1. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank. No real people, no individual faces; sacred books and scrolls stay blank.",
+   "promptSha256": "90d3d8763538bf6f66fe665cbe6f63e84222452cf24af149a6d216c3d74df26c",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T18:28:12.098Z",
+   "sourceFile": "J-0981.png",
+   "sourceFileDate": "2026-11-26T18:28:12.043Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "8aacaad451f0633771a56c3a6c9c7c8c2f54d1bc1340b805ed7c9b89999494d6",
+   "originalFormat": "PNG",
+   "originalBytes": 1004774,
+   "originalFile": "J-0981.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "J-0981.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 25718
+    },
+    {
+     "edge": 1024,
+     "file": "J-0981.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 32722
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "J-0987": {
+   "id": "J-0987",
+   "file": "J-0987.png",
+   "command": 377,
+   "set": "j_srs",
+   "block": "J",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. One plain, bold object in a single saturated brown colour, centred, so the colour is the whole point. Square 1:1. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank. No real people, no individual faces; sacred books and scrolls stay blank.",
+   "promptSha256": "ea62b447ff61c9ccdaca383908a74e6ef3eba9c7f155615c527023464141b305",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T18:28:12.098Z",
+   "sourceFile": "J-0987.png",
+   "sourceFileDate": "2026-11-26T18:28:12.043Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "4fa0b6fba9227a09a779cf0b5968b2f2e205f4fe58b9cbf6515e98a50c8eaaec",
+   "originalFormat": "PNG",
+   "originalBytes": 1533483,
+   "originalFile": "J-0987.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "J-0987.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 75104
+    },
+    {
+     "edge": 1024,
+     "file": "J-0987.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 96374
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": [
+     "ש",
+     "ש"
+    ]
+   },
+   "flags": [
+    "possible_text"
+   ],
+   "humanApproved": false
+  },
+  "J-0988": {
+   "id": "J-0988",
+   "file": "J-0988.png",
+   "command": 377,
+   "set": "j_srs",
+   "block": "J",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. A single matzo, drawn as one clear, instantly recognisable object centred on the plain background, nothing else competing. Square 1:1. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank. No real people, no individual faces; sacred books and scrolls stay blank.",
+   "promptSha256": "bafefc6ce04547f22b8839239945b900761e890446a25c9ccaed56d82fbfb5e9",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T18:28:12.098Z",
+   "sourceFile": "J-0988.png",
+   "sourceFileDate": "2026-11-26T18:28:12.044Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "e3223f9998b160b6e4023110c496f60b86d27a54b7942b4f45d0f7a90736686a",
+   "originalFormat": "PNG",
+   "originalBytes": 1339198,
+   "originalFile": "J-0988.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "J-0988.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 46348
+    },
+    {
+     "edge": 1024,
+     "file": "J-0988.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 62436
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "J-0990": {
+   "id": "J-0990",
+   "file": "J-0990.png",
+   "command": 377,
+   "set": "j_srs",
+   "block": "J",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. A generic stylised figure, seen from behind or from a distance with no individual face, clearly performing the action \"bow\" in an everyday setting. Square 1:1. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank. No real people, no individual faces; sacred books and scrolls stay blank.",
+   "promptSha256": "ca399dc920f14c2981fbd1d927f441933d88e0b621424507fb2d7b1c23ab03f3",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T18:28:12.098Z",
+   "sourceFile": "J-0990.png",
+   "sourceFileDate": "2026-11-26T18:28:12.044Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "b6c91137c53c4c2d4ff95aba0ae7985570754e28525101278600deaa890b0785",
+   "originalFormat": "PNG",
+   "originalBytes": 1372155,
+   "originalFile": "J-0990.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "J-0990.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 45542
+    },
+    {
+     "edge": 1024,
+     "file": "J-0990.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 57490
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "J-0991": {
+   "id": "J-0991",
+   "file": "J-0991.png",
+   "command": 378,
+   "set": "j_srs",
+   "block": "J",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. Two plain objects that make the quality \"sour\" obvious at a glance (one clearly sour, one clearly the opposite), no people. Square 1:1. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank. No real people, no individual faces; sacred books and scrolls stay blank.",
+   "promptSha256": "3231d19958cf77804b4a1dc776d586928f408f2ddd7d84b74d12df63dc871ec7",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T18:28:12.098Z",
+   "sourceFile": "J-0991.png",
+   "sourceFileDate": "2026-11-26T18:28:12.045Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "2643e636dbbf421331c238b2521894f1c06d1e25b95eaae94b7ba0e1dcbdb379",
+   "originalFormat": "PNG",
+   "originalBytes": 1189326,
+   "originalFile": "J-0991.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "J-0991.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 46272
+    },
+    {
+     "edge": 1024,
+     "file": "J-0991.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 60002
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "J-0992": {
+   "id": "J-0992",
+   "file": "J-0992.png",
+   "command": 378,
+   "set": "j_srs",
+   "block": "J",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. Two plain objects that make the quality \"warm\" obvious at a glance (one clearly warm, one clearly the opposite), no people. Square 1:1. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank. No real people, no individual faces; sacred books and scrolls stay blank.",
+   "promptSha256": "a0eaf11e68c2c369818853513c4f37f1a3939fad8afb7055737e86c4eea48b1f",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T18:28:12.098Z",
+   "sourceFile": "J-0992.png",
+   "sourceFileDate": "2026-11-26T18:28:12.045Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "1fe12ae30d6428c549988f2c4c001dfb0ce9330ee0c84cdd9198e65dc5719065",
+   "originalFormat": "PNG",
+   "originalBytes": 1182239,
+   "originalFile": "J-0992.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "J-0992.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 46268
+    },
+    {
+     "edge": 1024,
+     "file": "J-0992.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 61078
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "J-0993": {
+   "id": "J-0993",
+   "file": "J-0993.png",
+   "command": 378,
+   "set": "j_srs",
+   "block": "J",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. A generic stylised figure, seen from behind or from a distance with no individual face, clearly performing the action \"knead\" in an everyday setting. Square 1:1. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank. No real people, no individual faces; sacred books and scrolls stay blank.",
+   "promptSha256": "973d4bb8e3b4556289dd87ee5ac054ebe203ec9c8e7d2e04a0f6505482f26aad",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T18:28:12.098Z",
+   "sourceFile": "J-0993.png",
+   "sourceFileDate": "2026-11-26T18:28:12.046Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "37970fa5529056b848fb124473ec7b438f77c38d501215fa6d2de65c04c03c1f",
+   "originalFormat": "PNG",
+   "originalBytes": 1607294,
+   "originalFile": "J-0993.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "J-0993.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 70158
+    },
+    {
+     "edge": 1024,
+     "file": "J-0993.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 91134
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "L12_lamed_cursive_silhouette": {
+   "id": "L12_lamed_cursive_silhouette",
+   "file": "L12_lamed_cursive_silhouette.png",
+   "command": 49,
+   "set": "letter_12_lamed_cursive",
+   "block": "C",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. The attached object (a lighthouse with a spiral stair) as a bold charcoal silhouette on cream. No text, letters or numerals anywhere in the image.",
+   "promptSha256": "3f16a654dd704150db4698c4a9764c8a230f1f15ae4204379db9af7d9ae50c9f",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T18:28:12.098Z",
+   "sourceFile": "L12_lamed_cursive_silhouette.png",
+   "sourceFileDate": "2026-11-26T18:28:12.047Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "ddd25e2489efc21a1afd827f681f9a27f77817fb60a8d4e6db46f63ef013b348",
+   "originalFormat": "PNG",
+   "originalBytes": 864077,
+   "originalFile": "L12_lamed_cursive_silhouette.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "L12_lamed_cursive_silhouette.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 11724
+    },
+    {
+     "edge": 1024,
+     "file": "L12_lamed_cursive_silhouette.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 15636
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "L13_mem_cursive_postcard": {
+   "id": "L13_mem_cursive_postcard",
+   "file": "L13_mem_cursive_postcard.png",
+   "command": 50,
+   "set": "letter_13_mem_cursive",
+   "block": "C",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. The attached object (twin mountain peaks) on a blank postcard pinned to a fridge, postcard blank. No text, letters or numerals anywhere in the image.",
+   "promptSha256": "d7a93704a7db4498b8ea778bfed006da54da93e92effd0daa6c7dee715db16ee",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T18:28:12.098Z",
+   "sourceFile": "L13_mem_cursive_postcard.png",
+   "sourceFileDate": "2026-11-26T18:28:12.047Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "9476f54507da42a1a841dbe85a1dd18f5c48bc88605a0836ab3afed2dc29d693",
+   "originalFormat": "PNG",
+   "originalBytes": 1224703,
+   "originalFile": "L13_mem_cursive_postcard.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "L13_mem_cursive_postcard.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 19684
+    },
+    {
+     "edge": 1024,
+     "file": "L13_mem_cursive_postcard.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 26238
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "L13_mem_cursive_silhouette": {
+   "id": "L13_mem_cursive_silhouette",
+   "file": "L13_mem_cursive_silhouette.png",
+   "command": 50,
+   "set": "letter_13_mem_cursive",
+   "block": "C",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. The attached object (twin mountain peaks) as a bold charcoal silhouette on cream. No text, letters or numerals anywhere in the image.",
+   "promptSha256": "aefd2a6589ed4214af4cca496b6a96d5d624975c09c2fe82a585675f32ff8081",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T18:28:12.098Z",
+   "sourceFile": "L13_mem_cursive_silhouette.png",
+   "sourceFileDate": "2026-11-26T18:28:12.048Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "f89b53bc8ecd9d6daf518b9c3452242066c0ddbc4cf605f4a625b018734e2c69",
+   "originalFormat": "PNG",
+   "originalBytes": 766615,
+   "originalFile": "L13_mem_cursive_silhouette.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "L13_mem_cursive_silhouette.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 6448
+    },
+    {
+     "edge": 1024,
+     "file": "L13_mem_cursive_silhouette.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 9248
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "L14_nun_cursive_postcard": {
+   "id": "L14_nun_cursive_postcard",
+   "file": "L14_nun_cursive_postcard.png",
+   "command": 51,
+   "set": "letter_14_nun_cursive",
+   "block": "C",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. The attached object (a fishing hook) on a blank postcard pinned to a fridge, postcard blank. No text, letters or numerals anywhere in the image.",
+   "promptSha256": "b45b6fc5235c756ee7cbfbbedfa9101d937da8eba69d30ff39fc9c6fc041545c",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T18:28:12.098Z",
+   "sourceFile": "L14_nun_cursive_postcard.png",
+   "sourceFileDate": "2026-11-26T18:28:12.048Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "314fbe4a88e07f2c94cc19e0e1dd704343081bf9af28056134e24830737812fb",
+   "originalFormat": "PNG",
+   "originalBytes": 1110159,
+   "originalFile": "L14_nun_cursive_postcard.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "L14_nun_cursive_postcard.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 17680
+    },
+    {
+     "edge": 1024,
+     "file": "L14_nun_cursive_postcard.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 22926
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "L14_nun_cursive_silhouette": {
+   "id": "L14_nun_cursive_silhouette",
+   "file": "L14_nun_cursive_silhouette.png",
+   "command": 51,
+   "set": "letter_14_nun_cursive",
+   "block": "C",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. The attached object (a fishing hook) as a bold charcoal silhouette on cream. No text, letters or numerals anywhere in the image.",
+   "promptSha256": "4c8691c1582fd881e35bd721ed5dd843a6aa66993658a5ffdb7b1b5012e3abac",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T18:28:12.098Z",
+   "sourceFile": "L14_nun_cursive_silhouette.png",
+   "sourceFileDate": "2026-11-26T18:28:12.048Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "f2c892b502492bf482df2e0eb9ecd7a930d36541c77c2b92ae2dea2b652a1d7f",
+   "originalFormat": "PNG",
+   "originalBytes": 777558,
+   "originalFile": "L14_nun_cursive_silhouette.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "L14_nun_cursive_silhouette.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 8654
+    },
+    {
+     "edge": 1024,
+     "file": "L14_nun_cursive_silhouette.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 12174
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "L15_samekh_cursive_mnemonic": {
+   "id": "L15_samekh_cursive_mnemonic",
+   "file": "L15_samekh_cursive_mnemonic.png",
+   "command": 52,
+   "set": "letter_15_samekh_cursive",
+   "block": "C",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. The keyword object the sun, drawn so its outline echoes the attached silhouette (REF_cursive_samekh.png). Draw the object only, never the letter. No text, letters or numerals anywhere in the image.",
+   "promptSha256": "16c06a90ce81903b698e8c5ba65edf21ed90dfb1d1a56281dd22114da68cc561",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T18:28:12.098Z",
+   "sourceFile": "L15_samekh_cursive_mnemonic.png",
+   "sourceFileDate": "2026-11-26T18:28:12.049Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "982b3c1e436487dc583c20bf577be811df05414535e8776fd783a1917dca9119",
+   "originalFormat": "PNG",
+   "originalBytes": 1176717,
+   "originalFile": "L15_samekh_cursive_mnemonic.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "L15_samekh_cursive_mnemonic.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 46898
+    },
+    {
+     "edge": 1024,
+     "file": "L15_samekh_cursive_mnemonic.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 60936
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "MTH_mouth_07": {
+   "id": "MTH_mouth_07",
+   "file": "MTH_mouth_07.png",
+   "command": 148,
+   "set": "next_mth_vowels",
+   "block": "H",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. Square 1024x1024 image: the back of the tongue lifted to touch the soft palate. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank. No text, letters or numerals anywhere in the image.",
+   "promptSha256": "4d3cf0b460bd3d0aca484b913f971cac368184e5832cdcb4979d9b151ce7bfe8",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T18:28:12.098Z",
+   "sourceFile": "MTH_mouth_07.png",
+   "sourceFileDate": "2026-11-26T18:28:12.049Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "0836bb887fdac3620c51d8fd4672075962082b5105e85f1e2635baa358090ec9",
+   "originalFormat": "PNG",
+   "originalBytes": 1276422,
+   "originalFile": "MTH_mouth_07.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "MTH_mouth_07.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 42870
+    },
+    {
+     "edge": 1024,
+     "file": "MTH_mouth_07.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 55332
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": false
+  },
+  "MTH_mouth_08": {
+   "id": "MTH_mouth_08",
+   "file": "MTH_mouth_08.png",
+   "command": 148,
+   "set": "next_mth_vowels",
+   "block": "H",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. Square 1024x1024 image: lips pressed together while air builds behind them. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank. No text, letters or numerals anywhere in the image.",
+   "promptSha256": "bca98c989b69f1d370868e19de4f4832ef7ee03c0404713c60eb96655ee8ba05",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T18:28:12.098Z",
+   "sourceFile": "MTH_mouth_08.png",
+   "sourceFileDate": "2026-11-26T18:28:12.050Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "8dc1c05fa51e41b3a546e064e0c43ca014d6d1fbc43e8fd68e3b4a070a2c51c5",
+   "originalFormat": "PNG",
+   "originalBytes": 1227007,
+   "originalFile": "MTH_mouth_08.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "MTH_mouth_08.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 46838
+    },
+    {
+     "edge": 1024,
+     "file": "MTH_mouth_08.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 60656
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "MTH_mouth_09": {
+   "id": "MTH_mouth_09",
+   "file": "MTH_mouth_09.png",
+   "command": 148,
+   "set": "next_mth_vowels",
+   "block": "H",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. Square 1024x1024 image: the tongue tip between the teeth with a gentle breath of air. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank. No text, letters or numerals anywhere in the image.",
+   "promptSha256": "3b78fd715f4dbb47f01782850230f0bf10777ee42138053281cb4b3c7b50b061",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T18:28:12.098Z",
+   "sourceFile": "MTH_mouth_09.png",
+   "sourceFileDate": "2026-11-26T18:28:12.050Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "8ed9aa8add8edc4e925575c03f665974accf2e901c0a218e4e4618b43f65e5f5",
+   "originalFormat": "PNG",
+   "originalBytes": 1295064,
+   "originalFile": "MTH_mouth_09.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "MTH_mouth_09.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 47048
+    },
+    {
+     "edge": 1024,
+     "file": "MTH_mouth_09.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 58994
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "SCN_havdalah_07": {
+   "id": "SCN_havdalah_07",
+   "file": "SCN_havdalah_07.png",
+   "command": 105,
+   "set": "next_scn_havdalah",
+   "block": "H",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. Wide 1792x1024 scene: the braided candle dipped into spilled wine, flame hissing and steam rising. Any other people are simple small figures with plain friendly faces. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank. No text, letters or numerals anywhere in the image.",
+   "promptSha256": "053ae28a035a10e41868c47b0aa199f67b4774a87abbb191ed01ad3610c1b9f4",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T18:28:12.098Z",
+   "sourceFile": "SCN_havdalah_07.png",
+   "sourceFileDate": "2026-11-26T18:28:12.051Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "47ab77589a33667dd3504e297d75f417cd6b9b7a8df9c480e87285695e7b349f",
+   "originalFormat": "PNG",
+   "originalBytes": 2977554,
+   "originalFile": "SCN_havdalah_07.png",
+   "width": 1792,
+   "height": 1024,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "SCN_havdalah_07.800.webp",
+     "width": 800,
+     "height": 457,
+     "bytes": 67738
+    },
+    {
+     "edge": 1600,
+     "file": "SCN_havdalah_07.1600.webp",
+     "width": 1600,
+     "height": 914,
+     "bytes": 150724
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "SCN_havdalah_08": {
+   "id": "SCN_havdalah_08",
+   "file": "SCN_havdalah_08.png",
+   "command": 105,
+   "set": "next_scn_havdalah",
+   "block": "H",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. Wide 1792x1024 scene: hands cupped toward the flame, fingernails catching the light. Any other people are simple small figures with plain friendly faces. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank. No text, letters or numerals anywhere in the image.",
+   "promptSha256": "2345fdd80b186eb8be9322971735c786efb747dc6a5a80a579731c1c044b1690",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T18:28:12.098Z",
+   "sourceFile": "SCN_havdalah_08.png",
+   "sourceFileDate": "2026-11-26T18:28:12.052Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "4b21e3cc9001371e72a8dfb6b730319d641fbfc9f216029a9de1e14fda12c16d",
+   "originalFormat": "PNG",
+   "originalBytes": 3773863,
+   "originalFile": "SCN_havdalah_08.png",
+   "width": 1792,
+   "height": 1024,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "SCN_havdalah_08.800.webp",
+     "width": 800,
+     "height": 457,
+     "bytes": 90006
+    },
+    {
+     "edge": 1600,
+     "file": "SCN_havdalah_08.1600.webp",
+     "width": 1600,
+     "height": 914,
+     "bytes": 201916
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": false
+  },
+  "SCN_havdalah_09": {
+   "id": "SCN_havdalah_09",
+   "file": "SCN_havdalah_09.png",
+   "command": 105,
+   "set": "next_scn_havdalah",
+   "block": "H",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. Wide 1792x1024 scene: a family hugging goodbye to Shabbat with candle smoke curling above them. Any other people are simple small figures with plain friendly faces. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank. No text, letters or numerals anywhere in the image.",
+   "promptSha256": "65ffeb5176f70d581f2ce0cb88aef5c40549ba3c5f310ed15ab03a1865a99a61",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T18:28:12.098Z",
+   "sourceFile": "SCN_havdalah_09.png",
+   "sourceFileDate": "2026-11-26T18:28:12.053Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "753751ffdbeb455416aa2b71a9cb80c9bf6608c459a8aeb97741e9a50af4e356",
+   "originalFormat": "PNG",
+   "originalBytes": 2751159,
+   "originalFile": "SCN_havdalah_09.png",
+   "width": 1792,
+   "height": 1024,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "SCN_havdalah_09.800.webp",
+     "width": 800,
+     "height": 457,
+     "bytes": 64700
+    },
+    {
+     "edge": 1600,
+     "file": "SCN_havdalah_09.1600.webp",
+     "width": 1600,
+     "height": 914,
+     "bytes": 137830
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "SCN_havdalah_10": {
+   "id": "SCN_havdalah_10",
+   "file": "SCN_havdalah_10.png",
+   "command": 105,
+   "set": "next_scn_havdalah",
+   "block": "H",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. Wide 1792x1024 scene: a phone with a blank screen lighting up on a table as a calendar page turns to a new week. Any other people are simple small figures with plain friendly faces. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank. No text, letters or numerals anywhere in the image.",
+   "promptSha256": "cf90ff44fd09d97ce41f4b395c9e1bcdd5eb7166546909d3ca831f6776598813",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T18:28:12.098Z",
+   "sourceFile": "SCN_havdalah_10.png",
+   "sourceFileDate": "2026-11-26T18:28:12.055Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "daa7baa42bc3487445c601eb19dcf2455c54cecd58551cea53e76d994beafcb4",
+   "originalFormat": "PNG",
+   "originalBytes": 2983928,
+   "originalFile": "SCN_havdalah_10.png",
+   "width": 1792,
+   "height": 1024,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "SCN_havdalah_10.800.webp",
+     "width": 800,
+     "height": 457,
+     "bytes": 70940
+    },
+    {
+     "edge": 1600,
+     "file": "SCN_havdalah_10.1600.webp",
+     "width": 1600,
+     "height": 914,
+     "bytes": 155932
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "TALK_room_08": {
+   "id": "TALK_room_08",
+   "file": "TALK_room_08.png",
+   "command": 223,
+   "set": "Renting a room",
+   "block": "P",
+   "prompt": "Command 223 (Renting a room): Noa meets a landlady (new character: woman around 65, cardigan) outside a small building; they climb the stairs together; a door opens on a sunny room; Noa checks the window view; opens a tap — water runs (good); tries a light switch — the lamp stays dark (problem face); the landlady nods and writes in a small blank notebook (the fix-it promise); they shake hands; a key changes hands; Noa alone in the room at dusk, suitcase open, smiling. Image 8 of 10: they shake hands. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "f0a4f6ac3ccd63627305691b14487fde1bbd8979ca223b7b234f825a724f8cd7",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T18:28:12.098Z",
+   "sourceFile": "TALK_room_08.png",
+   "sourceFileDate": "2026-11-26T18:28:12.056Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "4d51dfe1e348f4de60b0ae43c248cffa491f233cd2037d55888a07e6b25d3935",
+   "originalFormat": "PNG",
+   "originalBytes": 2954731,
+   "originalFile": "TALK_room_08.png",
+   "width": 1536,
+   "height": 1024,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "substituted",
+   "aspectNote": "manifest asks 1792x1024; got 1536x1024 (native landscape aspect). Not cropped or stretched.",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "TALK_room_08.800.webp",
+     "width": 800,
+     "height": 533,
+     "bytes": 128264
+    },
+    {
+     "edge": 1536,
+     "file": "TALK_room_08.1536.webp",
+     "width": 1536,
+     "height": 1024,
+     "bytes": 388620
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 1,
+    "blobs": [
+     {
+      "t": "roy",
+      "conf": 62.4,
+      "lang": "eng"
+     }
+    ],
+    "possibleLetters": []
+   },
+   "flags": [
+    "aspect_substituted",
+    "contains_text"
+   ],
+   "humanApproved": true
+  },
+  "TALK_taxi_01": {
+   "id": "TALK_taxi_01",
+   "file": "TALK_taxi_01.png",
+   "command": 224,
+   "set": "The taxi ride",
+   "block": "P",
+   "prompt": "Command 224 (The taxi ride): Rain — Ari flags a taxi at a kerb; shows the driver a phone with a blank map and a gold pin shape; the driver nods and gestures \"get in\"; traffic — both looking at a long line of cars; the driver takes a side street with a flourish; Ari points — \"here\" — at a corner; the taxi stops; the meter is a blank rectangle (no digits) and Ari hands over a blank banknote; change is returned with a smile; Ari under a doorway awning waves the taxi off into the rain. Image 1 of 10: Rain — Ari flags a taxi at a kerb. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "a29eed73fe65d0dd46cb8714c83d5fac83bde4db2a33f0b9e540f52000b93764",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T18:28:12.098Z",
+   "sourceFile": "TALK_taxi_01.png",
+   "sourceFileDate": "2026-11-26T18:28:12.057Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "6eb7e8461c2b12b97989f5340017fedb05bb1a2124a386d4cfcf69af463dd6a2",
+   "originalFormat": "PNG",
+   "originalBytes": 2542212,
+   "originalFile": "TALK_taxi_01.png",
+   "width": 1536,
+   "height": 1024,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "substituted",
+   "aspectNote": "manifest asks 1792x1024; got 1536x1024 (native landscape aspect). Not cropped or stretched.",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "TALK_taxi_01.800.webp",
+     "width": 800,
+     "height": 533,
+     "bytes": 128312
+    },
+    {
+     "edge": 1536,
+     "file": "TALK_taxi_01.1536.webp",
+     "width": 1536,
+     "height": 1024,
+     "bytes": 308274
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 1,
+    "blobs": [
+     {
+      "t": "הדיריו",
+      "conf": 15.3,
+      "lang": "heb"
+     }
+    ],
+    "possibleLetters": []
+   },
+   "flags": [
+    "aspect_substituted",
+    "contains_text"
+   ],
+   "humanApproved": true
+  },
+  "TALK_taxi_02": {
+   "id": "TALK_taxi_02",
+   "file": "TALK_taxi_02.png",
+   "command": 224,
+   "set": "The taxi ride",
+   "block": "P",
+   "prompt": "Command 224 (The taxi ride): Rain — Ari flags a taxi at a kerb; shows the driver a phone with a blank map and a gold pin shape; the driver nods and gestures \"get in\"; traffic — both looking at a long line of cars; the driver takes a side street with a flourish; Ari points — \"here\" — at a corner; the taxi stops; the meter is a blank rectangle (no digits) and Ari hands over a blank banknote; change is returned with a smile; Ari under a doorway awning waves the taxi off into the rain. Image 2 of 10: shows the driver a phone with a blank map and a gold pin shape. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "a2ca40551e8217b5810eba1cf295b62ef802052b8927ef0cff47648dd5b5a961",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T18:28:12.098Z",
+   "sourceFile": "TALK_taxi_02.png",
+   "sourceFileDate": "2026-11-26T18:28:12.058Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "b85291ce9ed380110260176e5662b075ad702f5849c4685b13ea473b398fe3a6",
+   "originalFormat": "PNG",
+   "originalBytes": 2670198,
+   "originalFile": "TALK_taxi_02.png",
+   "width": 1536,
+   "height": 1024,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "substituted",
+   "aspectNote": "manifest asks 1792x1024; got 1536x1024 (native landscape aspect). Not cropped or stretched.",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "TALK_taxi_02.800.webp",
+     "width": 800,
+     "height": 533,
+     "bytes": 112678
+    },
+    {
+     "edge": 1536,
+     "file": "TALK_taxi_02.1536.webp",
+     "width": 1536,
+     "height": 1024,
+     "bytes": 290162
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [
+    "aspect_substituted"
+   ],
+   "humanApproved": true
+  },
+  "TALK_taxi_03": {
+   "id": "TALK_taxi_03",
+   "file": "TALK_taxi_03.png",
+   "command": 224,
+   "set": "The taxi ride",
+   "block": "P",
+   "prompt": "Command 224 (The taxi ride): Rain — Ari flags a taxi at a kerb; shows the driver a phone with a blank map and a gold pin shape; the driver nods and gestures \"get in\"; traffic — both looking at a long line of cars; the driver takes a side street with a flourish; Ari points — \"here\" — at a corner; the taxi stops; the meter is a blank rectangle (no digits) and Ari hands over a blank banknote; change is returned with a smile; Ari under a doorway awning waves the taxi off into the rain. Image 3 of 10: the driver nods and gestures \"get in\". Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "0f1dbd0b6f0af8a9c2332ce29f160f78cf6eab616bcb39f82a1399c20477dfa5",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T18:28:12.098Z",
+   "sourceFile": "TALK_taxi_03.png",
+   "sourceFileDate": "2026-11-26T18:28:12.059Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "74035fc287843160095bb11e1d067f51460eebc5c51c6cf4596677e51133cba3",
+   "originalFormat": "PNG",
+   "originalBytes": 2547810,
+   "originalFile": "TALK_taxi_03.png",
+   "width": 1536,
+   "height": 1024,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "substituted",
+   "aspectNote": "manifest asks 1792x1024; got 1536x1024 (native landscape aspect). Not cropped or stretched.",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "TALK_taxi_03.800.webp",
+     "width": 800,
+     "height": 533,
+     "bytes": 126098
+    },
+    {
+     "edge": 1536,
+     "file": "TALK_taxi_03.1536.webp",
+     "width": 1536,
+     "height": 1024,
+     "bytes": 297088
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 1,
+    "blobs": [
+     {
+      "t": "pip",
+      "conf": 62.5,
+      "lang": "eng"
+     }
+    ],
+    "possibleLetters": []
+   },
+   "flags": [
+    "aspect_substituted",
+    "contains_text"
+   ],
+   "humanApproved": true
+  },
+  "TALK_taxi_04": {
+   "id": "TALK_taxi_04",
+   "file": "TALK_taxi_04.png",
+   "command": 224,
+   "set": "The taxi ride",
+   "block": "P",
+   "prompt": "Command 224 (The taxi ride): Rain — Ari flags a taxi at a kerb; shows the driver a phone with a blank map and a gold pin shape; the driver nods and gestures \"get in\"; traffic — both looking at a long line of cars; the driver takes a side street with a flourish; Ari points — \"here\" — at a corner; the taxi stops; the meter is a blank rectangle (no digits) and Ari hands over a blank banknote; change is returned with a smile; Ari under a doorway awning waves the taxi off into the rain. Image 4 of 10: traffic — both looking at a long line of cars. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "a62447b0cbf4d739bceba3fc50bc13638bc66ad95ecff9c544a72abfaebcd292",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T18:28:12.098Z",
+   "sourceFile": "TALK_taxi_04.png",
+   "sourceFileDate": "2026-11-26T18:28:12.060Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "2296b15a4e88782158e771f38e1086203fede9be13c0c99299420e0ca848461e",
+   "originalFormat": "PNG",
+   "originalBytes": 2605890,
+   "originalFile": "TALK_taxi_04.png",
+   "width": 1536,
+   "height": 1024,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "substituted",
+   "aspectNote": "manifest asks 1792x1024; got 1536x1024 (native landscape aspect). Not cropped or stretched.",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "TALK_taxi_04.800.webp",
+     "width": 800,
+     "height": 533,
+     "bytes": 109770
+    },
+    {
+     "edge": 1536,
+     "file": "TALK_taxi_04.1536.webp",
+     "width": 1536,
+     "height": 1024,
+     "bytes": 284762
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 2,
+    "blobs": [
+     {
+      "t": "OKOKG",
+      "conf": 53.8,
+      "lang": "eng"
+     },
+     {
+      "t": "Baron",
+      "conf": 21.2,
+      "lang": "eng"
+     }
+    ],
+    "possibleLetters": []
+   },
+   "flags": [
+    "aspect_substituted",
+    "contains_text"
+   ],
+   "humanApproved": true
+  },
+  "TALK_taxi_05": {
+   "id": "TALK_taxi_05",
+   "file": "TALK_taxi_05.png",
+   "command": 224,
+   "set": "The taxi ride",
+   "block": "P",
+   "prompt": "Command 224 (The taxi ride): Rain — Ari flags a taxi at a kerb; shows the driver a phone with a blank map and a gold pin shape; the driver nods and gestures \"get in\"; traffic — both looking at a long line of cars; the driver takes a side street with a flourish; Ari points — \"here\" — at a corner; the taxi stops; the meter is a blank rectangle (no digits) and Ari hands over a blank banknote; change is returned with a smile; Ari under a doorway awning waves the taxi off into the rain. Image 5 of 10: the driver takes a side street with a flourish. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "822964bdf7db7e2a8d46f53d9378ce3cbe375e4e48e04334becc49f7ea0f015a",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T18:28:12.098Z",
+   "sourceFile": "TALK_taxi_05.png",
+   "sourceFileDate": "2026-11-26T18:28:12.061Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "fab2fb2bfb4c2281f8025869b099eb2efa434b62b17c4400f1f20379c680e22c",
+   "originalFormat": "PNG",
+   "originalBytes": 3010087,
+   "originalFile": "TALK_taxi_05.png",
+   "width": 1536,
+   "height": 1024,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "substituted",
+   "aspectNote": "manifest asks 1792x1024; got 1536x1024 (native landscape aspect). Not cropped or stretched.",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "TALK_taxi_05.800.webp",
+     "width": 800,
+     "height": 533,
+     "bytes": 141526
+    },
+    {
+     "edge": 1536,
+     "file": "TALK_taxi_05.1536.webp",
+     "width": 1536,
+     "height": 1024,
+     "bytes": 414554
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": [
+     "ש"
+    ]
+   },
+   "flags": [
+    "aspect_substituted",
+    "possible_text"
+   ],
+   "humanApproved": true
+  },
+  "TALK_taxi_06": {
+   "id": "TALK_taxi_06",
+   "file": "TALK_taxi_06.png",
+   "command": 224,
+   "set": "The taxi ride",
+   "block": "P",
+   "prompt": "Command 224 (The taxi ride): Rain — Ari flags a taxi at a kerb; shows the driver a phone with a blank map and a gold pin shape; the driver nods and gestures \"get in\"; traffic — both looking at a long line of cars; the driver takes a side street with a flourish; Ari points — \"here\" — at a corner; the taxi stops; the meter is a blank rectangle (no digits) and Ari hands over a blank banknote; change is returned with a smile; Ari under a doorway awning waves the taxi off into the rain. Image 6 of 10: Ari points — \"here\" — at a corner. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "216f2f391b914a4ec65920d7103e91b666faf0ea8ddfcb6476cf205d0c1876d9",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T18:28:12.098Z",
+   "sourceFile": "TALK_taxi_06.png",
+   "sourceFileDate": "2026-11-26T18:28:12.063Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "1cf1dbb8cc711d4932754b8b8ac2d9f56a13ae2fd32f5b12af52f9c921f2ec92",
+   "originalFormat": "PNG",
+   "originalBytes": 2516767,
+   "originalFile": "TALK_taxi_06.png",
+   "width": 1536,
+   "height": 1024,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "substituted",
+   "aspectNote": "manifest asks 1792x1024; got 1536x1024 (native landscape aspect). Not cropped or stretched.",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "TALK_taxi_06.800.webp",
+     "width": 800,
+     "height": 533,
+     "bytes": 111288
+    },
+    {
+     "edge": 1536,
+     "file": "TALK_taxi_06.1536.webp",
+     "width": 1536,
+     "height": 1024,
+     "bytes": 287562
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 2,
+    "blobs": [
+     {
+      "t": "man",
+      "conf": 62.7,
+      "lang": "eng"
+     },
+     {
+      "t": "וו|משש",
+      "conf": 26,
+      "lang": "heb"
+     }
+    ],
+    "possibleLetters": []
+   },
+   "flags": [
+    "aspect_substituted",
+    "contains_text"
+   ],
+   "humanApproved": true
+  },
+  "TALK_taxi_07": {
+   "id": "TALK_taxi_07",
+   "file": "TALK_taxi_07.png",
+   "command": 224,
+   "set": "The taxi ride",
+   "block": "P",
+   "prompt": "Command 224 (The taxi ride): Rain — Ari flags a taxi at a kerb; shows the driver a phone with a blank map and a gold pin shape; the driver nods and gestures \"get in\"; traffic — both looking at a long line of cars; the driver takes a side street with a flourish; Ari points — \"here\" — at a corner; the taxi stops; the meter is a blank rectangle (no digits) and Ari hands over a blank banknote; change is returned with a smile; Ari under a doorway awning waves the taxi off into the rain. Image 7 of 10: the taxi stops. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "937167710254a9ebd2921d689d8e26eb52628d3dac945f5e312a95438cbf44d2",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T18:28:12.098Z",
+   "sourceFile": "TALK_taxi_07.png",
+   "sourceFileDate": "2026-11-26T18:28:12.063Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "9d88b51567f12e2cb1b3924da3a22301e06f7da0e1dd23f941d21dc488003a2f",
+   "originalFormat": "PNG",
+   "originalBytes": 2711716,
+   "originalFile": "TALK_taxi_07.png",
+   "width": 1536,
+   "height": 1024,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "substituted",
+   "aspectNote": "manifest asks 1792x1024; got 1536x1024 (native landscape aspect). Not cropped or stretched.",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "TALK_taxi_07.800.webp",
+     "width": 800,
+     "height": 533,
+     "bytes": 113220
+    },
+    {
+     "edge": 1536,
+     "file": "TALK_taxi_07.1536.webp",
+     "width": 1536,
+     "height": 1024,
+     "bytes": 311600
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [
+    "aspect_substituted"
+   ],
+   "humanApproved": false
+  },
+  "TALK_taxi_08": {
+   "id": "TALK_taxi_08",
+   "file": "TALK_taxi_08.png",
+   "command": 224,
+   "set": "The taxi ride",
+   "block": "P",
+   "prompt": "Command 224 (The taxi ride): Rain — Ari flags a taxi at a kerb; shows the driver a phone with a blank map and a gold pin shape; the driver nods and gestures \"get in\"; traffic — both looking at a long line of cars; the driver takes a side street with a flourish; Ari points — \"here\" — at a corner; the taxi stops; the meter is a blank rectangle (no digits) and Ari hands over a blank banknote; change is returned with a smile; Ari under a doorway awning waves the taxi off into the rain. Image 8 of 10: the meter is a blank rectangle (no digits) and Ari hands over a blank banknote. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "21b651f112f227302dc5f283c6bc79bebeaf6034b74885123107e2429922fe2b",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T18:28:12.098Z",
+   "sourceFile": "TALK_taxi_08.png",
+   "sourceFileDate": "2026-11-26T18:28:12.065Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "51fdd238efe6e64eef49bdb69834c6abe46c95be5e1c56e528d1ee6004b5d3cb",
+   "originalFormat": "PNG",
+   "originalBytes": 2818207,
+   "originalFile": "TALK_taxi_08.png",
+   "width": 1536,
+   "height": 1024,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "substituted",
+   "aspectNote": "manifest asks 1792x1024; got 1536x1024 (native landscape aspect). Not cropped or stretched.",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "TALK_taxi_08.800.webp",
+     "width": 800,
+     "height": 533,
+     "bytes": 110230
+    },
+    {
+     "edge": 1536,
+     "file": "TALK_taxi_08.1536.webp",
+     "width": 1536,
+     "height": 1024,
+     "bytes": 332284
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 1,
+    "blobs": [
+     {
+      "t": "ואש",
+      "conf": 61.3,
+      "lang": "heb"
+     }
+    ],
+    "possibleLetters": []
+   },
+   "flags": [
+    "aspect_substituted",
+    "contains_text"
    ],
    "humanApproved": true
   }

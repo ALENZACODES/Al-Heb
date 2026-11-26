@@ -116385,6 +116385,1170 @@
     "contains_text"
    ],
    "humanApproved": true
+  },
+  "J-0501": {
+   "id": "J-0501",
+   "file": "J-0501.png",
+   "command": 339,
+   "set": "j_vocab_school-learning-set01",
+   "block": "J",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. A single dictionary, drawn as one clear, instantly recognisable object centred on the plain background, nothing else competing. Square 1:1. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank. No real people, no individual faces; sacred books and scrolls stay blank.",
+   "promptSha256": "cbf341dce9a3668396c130f73e6e0c2736f7066e09d9ebed8686db3e352efadb",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T19:23:08.901Z",
+   "sourceFile": "J-0501.png",
+   "sourceFileDate": "2026-11-26T19:22:46.777Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "7b760de42539699851d3488647bc50293528bb1835fa2ad70cdbd8c366c2d57a",
+   "originalFormat": "PNG",
+   "originalBytes": 1107863,
+   "originalFile": "J-0501.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "J-0501.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 38930
+    },
+    {
+     "edge": 1024,
+     "file": "J-0501.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 51368
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "J-0502": {
+   "id": "J-0502",
+   "file": "J-0502.png",
+   "command": 339,
+   "set": "j_vocab_science-ideas-set01",
+   "block": "J",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. A generic stylised figure, seen from behind or from a distance with no individual face, clearly performing the action \"dance\" in an everyday setting. Square 1:1. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank. No real people, no individual faces; sacred books and scrolls stay blank.",
+   "promptSha256": "629af720507ed05f1ef0e3696a455f7d170d9b9fa2f8a948620bb57e4ee04be2",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T19:23:08.901Z",
+   "sourceFile": "J-0502.png",
+   "sourceFileDate": "2026-11-26T19:22:46.787Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "82937fb21cba06db9dcdbd88de86ac2a8f71733622943809459f4789fa5a19a2",
+   "originalFormat": "PNG",
+   "originalBytes": 1583548,
+   "originalFile": "J-0502.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "J-0502.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 70904
+    },
+    {
+     "edge": 1024,
+     "file": "J-0502.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 92838
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": [
+     "כ="
+    ]
+   },
+   "flags": [
+    "possible_text"
+   ],
+   "humanApproved": true
+  },
+  "J-0503": {
+   "id": "J-0503",
+   "file": "J-0503.png",
+   "command": 339,
+   "set": "j_vocab_science-ideas-set01",
+   "block": "J",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. A single rain, drawn as one clear, instantly recognisable object centred on the plain background, nothing else competing. Square 1:1. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank. No real people, no individual faces; sacred books and scrolls stay blank.",
+   "promptSha256": "833ad798a2782f0f16788fd0a3a4f6089370154f6ed59fe14d12e8c372f3a910",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T19:23:08.901Z",
+   "sourceFile": "J-0503.png",
+   "sourceFileDate": "2026-11-26T19:22:46.792Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "c10ab3f4b89a6c7ab970c3207284d6b5ee15de7e2b832cb9e8c6631c1d11d349",
+   "originalFormat": "PNG",
+   "originalBytes": 1024723,
+   "originalFile": "J-0503.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "J-0503.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 35208
+    },
+    {
+     "edge": 1024,
+     "file": "J-0503.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 47514
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "J-0504": {
+   "id": "J-0504",
+   "file": "J-0504.png",
+   "command": 340,
+   "set": "j_vocab_science-ideas-set01",
+   "block": "J",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. A single rib, drawn as one clear, instantly recognisable object centred on the plain background, nothing else competing. Square 1:1. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank. No real people, no individual faces; sacred books and scrolls stay blank.",
+   "promptSha256": "1ded650b5e952a20d96d592a801f0a3e95bc107f1c9007ce63724c571d48eb34",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T19:23:08.901Z",
+   "sourceFile": "J-0504.png",
+   "sourceFileDate": "2026-11-26T19:22:46.798Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "59d3f5c34f92095f4336caa254117ee5c24ff589bc62e52b1c49bf4023926614",
+   "originalFormat": "PNG",
+   "originalBytes": 919486,
+   "originalFile": "J-0504.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "J-0504.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 19246
+    },
+    {
+     "edge": 1024,
+     "file": "J-0504.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 25534
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "J-0505": {
+   "id": "J-0505",
+   "file": "J-0505.png",
+   "command": 340,
+   "set": "j_vocab_science-ideas-set01",
+   "block": "J",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. A single wolf, drawn as one clear, instantly recognisable object centred on the plain background, nothing else competing. Square 1:1. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank. No real people, no individual faces; sacred books and scrolls stay blank.",
+   "promptSha256": "df7085aaa6fd3a18983bac1a8a5e13199a42851df9fdb9fec9858eeeef4aed24",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T19:23:08.901Z",
+   "sourceFile": "J-0505.png",
+   "sourceFileDate": "2026-11-26T19:22:46.805Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "4455a7571f3a0e7f4aea7b531b52032f8bda71f6b455b363abe822f343f7a451",
+   "originalFormat": "PNG",
+   "originalBytes": 1140085,
+   "originalFile": "J-0505.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "J-0505.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 38144
+    },
+    {
+     "edge": 1024,
+     "file": "J-0505.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 49526
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "J-0506": {
+   "id": "J-0506",
+   "file": "J-0506.png",
+   "command": 340,
+   "set": "j_vocab_science-ideas-set01",
+   "block": "J",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. A single ostrich, drawn as one clear, instantly recognisable object centred on the plain background, nothing else competing. Square 1:1. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank. No real people, no individual faces; sacred books and scrolls stay blank.",
+   "promptSha256": "7715b30d6144c307d16a189b9217a608f294a0d6893f3814864fff2497f5b152",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T19:23:08.901Z",
+   "sourceFile": "J-0506.png",
+   "sourceFileDate": "2026-11-26T19:22:46.810Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "55bd6e231292e5c366a6be0e62f35fb59938f28b9cb2aa0a214846e948247035",
+   "originalFormat": "PNG",
+   "originalBytes": 1057332,
+   "originalFile": "J-0506.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "J-0506.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 31648
+    },
+    {
+     "edge": 1024,
+     "file": "J-0506.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 41490
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "J-0507": {
+   "id": "J-0507",
+   "file": "J-0507.png",
+   "command": 340,
+   "set": "j_vocab_science-ideas-set01",
+   "block": "J",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. A single trunk, drawn as one clear, instantly recognisable object centred on the plain background, nothing else competing. Square 1:1. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank. No real people, no individual faces; sacred books and scrolls stay blank.",
+   "promptSha256": "02116ed20dc74bcbd569f795b87fa7ccd399524b9cdfe5b287d16febe0395793",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T19:23:08.901Z",
+   "sourceFile": "J-0507.png",
+   "sourceFileDate": "2026-11-26T19:22:46.817Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "2d6da1510d8356d7440ab9a8014297a699a7f34964d5d581ae2c516c0b7f4ed3",
+   "originalFormat": "PNG",
+   "originalBytes": 1276279,
+   "originalFile": "J-0507.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "J-0507.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 45910
+    },
+    {
+     "edge": 1024,
+     "file": "J-0507.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 58894
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "J-0508": {
+   "id": "J-0508",
+   "file": "J-0508.png",
+   "command": 340,
+   "set": "j_vocab_science-ideas-set01",
+   "block": "J",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. A single metal, drawn as one clear, instantly recognisable object centred on the plain background, nothing else competing. Square 1:1. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank. No real people, no individual faces; sacred books and scrolls stay blank.",
+   "promptSha256": "2b19adc9a1065d507d558794cf06ff14bbda992e709f002f8176b7a7b131392f",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T19:23:08.901Z",
+   "sourceFile": "J-0508.png",
+   "sourceFileDate": "2026-11-26T19:22:46.823Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "34285502adf64077bd1a52c4bcfefa772f178495da0d2b4eadd0a2c148fd23f5",
+   "originalFormat": "PNG",
+   "originalBytes": 899974,
+   "originalFile": "J-0508.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "J-0508.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 16296
+    },
+    {
+     "edge": 1024,
+     "file": "J-0508.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 21890
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "J-0509": {
+   "id": "J-0509",
+   "file": "J-0509.png",
+   "command": 340,
+   "set": "j_vocab_science-ideas-set01",
+   "block": "J",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. A single football, drawn as one clear, instantly recognisable object centred on the plain background, nothing else competing. Square 1:1. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank. No real people, no individual faces; sacred books and scrolls stay blank.",
+   "promptSha256": "92b147b3624df42be6ebbadc35e53d61eaf352139cee833e10eb334b14e18a2a",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T19:23:08.901Z",
+   "sourceFile": "J-0509.png",
+   "sourceFileDate": "2026-11-26T19:22:46.828Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "e7431db15db2673d8652b45356c26f262c7aa7d2c64df436019d07fec198f67e",
+   "originalFormat": "PNG",
+   "originalBytes": 989908,
+   "originalFile": "J-0509.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "J-0509.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 23662
+    },
+    {
+     "edge": 1024,
+     "file": "J-0509.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 30500
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "J-0510": {
+   "id": "J-0510",
+   "file": "J-0510.png",
+   "command": 340,
+   "set": "j_vocab_science-ideas-set01",
+   "block": "J",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. A single skull, drawn as one clear, instantly recognisable object centred on the plain background, nothing else competing. Square 1:1. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank. No real people, no individual faces; sacred books and scrolls stay blank.",
+   "promptSha256": "beddf6c78699edb01944211c86774e48ee38187f45407840411665062936711b",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T19:23:08.901Z",
+   "sourceFile": "J-0510.png",
+   "sourceFileDate": "2026-11-26T19:22:46.833Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "40108be90a027ec41c52c746122574fad546f8571478ae5433cf814b4d3859af",
+   "originalFormat": "PNG",
+   "originalBytes": 1038962,
+   "originalFile": "J-0510.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "J-0510.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 32274
+    },
+    {
+     "edge": 1024,
+     "file": "J-0510.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 42366
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "J-0511": {
+   "id": "J-0511",
+   "file": "J-0511.png",
+   "command": 340,
+   "set": "j_vocab_science-ideas-set01",
+   "block": "J",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. A single grass, drawn as one clear, instantly recognisable object centred on the plain background, nothing else competing. Square 1:1. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank. No real people, no individual faces; sacred books and scrolls stay blank.",
+   "promptSha256": "3f7f0712c6e60b682ba65a9869ecc08d260b1331f71b6f53398136fe48fd3565",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T19:23:08.901Z",
+   "sourceFile": "J-0511.png",
+   "sourceFileDate": "2026-11-26T19:22:46.839Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "03ff53471281e37e9cbf73b8ed90fd4dc8d5094e4f211f31bbf7ac15a3339cb1",
+   "originalFormat": "PNG",
+   "originalBytes": 1038190,
+   "originalFile": "J-0511.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "J-0511.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 31008
+    },
+    {
+     "edge": 1024,
+     "file": "J-0511.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 40426
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "J-0512": {
+   "id": "J-0512",
+   "file": "J-0512.png",
+   "command": 340,
+   "set": "j_vocab_small-words-set01",
+   "block": "J",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. A ball and a box arranged so the relation \"on\" is unmistakable, no people. Square 1:1. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank. No real people, no individual faces; sacred books and scrolls stay blank.",
+   "promptSha256": "accaf6b85e3d08c7b28f68edbe36e527a386826bf4eb32170033abe41518a8a3",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T19:23:08.901Z",
+   "sourceFile": "J-0512.png",
+   "sourceFileDate": "2026-11-26T19:22:46.845Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "584cd615b421519bc2e794ac4c7da9c43e0fd733131ff15e14982d0e6182e6a6",
+   "originalFormat": "PNG",
+   "originalBytes": 932325,
+   "originalFile": "J-0512.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "J-0512.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 22014
+    },
+    {
+     "edge": 1024,
+     "file": "J-0512.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 28764
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "J-0513": {
+   "id": "J-0513",
+   "file": "J-0513.png",
+   "command": 340,
+   "set": "j_vocab_small-words-set01",
+   "block": "J",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. A ball and a box arranged so the relation \"in\" is unmistakable, no people. Square 1:1. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank. No real people, no individual faces; sacred books and scrolls stay blank.",
+   "promptSha256": "e65e057c67ccb9deb7ef4052fd44b682709b364366fa5d8b31fbb3be34743d85",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T19:23:08.901Z",
+   "sourceFile": "J-0513.png",
+   "sourceFileDate": "2026-11-26T19:22:46.851Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "618d017fac2b0a617232b47a40f46e6d0c3f9f42ce9a6eb28ceee249a29e11d5",
+   "originalFormat": "PNG",
+   "originalBytes": 1032343,
+   "originalFile": "J-0513.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "J-0513.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 31992
+    },
+    {
+     "edge": 1024,
+     "file": "J-0513.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 41286
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "J-0514": {
+   "id": "J-0514",
+   "file": "J-0514.png",
+   "command": 340,
+   "set": "j_vocab_small-words-set01",
+   "block": "J",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. A ball and a box arranged so the relation \"between\" is unmistakable, no people. Square 1:1. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank. No real people, no individual faces; sacred books and scrolls stay blank.",
+   "promptSha256": "3aec2d6ef2af3e19d05cc585c71544f4f505e4eb8bae75eb804c0f0a30cddfe1",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T19:23:08.901Z",
+   "sourceFile": "J-0514.png",
+   "sourceFileDate": "2026-11-26T19:22:46.856Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "9ac03636d578ec5de8a84fb82fd3a019cb371f73823e5a93e2e4ef3e92944ad0",
+   "originalFormat": "PNG",
+   "originalBytes": 907013,
+   "originalFile": "J-0514.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "J-0514.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 19300
+    },
+    {
+     "edge": 1024,
+     "file": "J-0514.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 25124
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "J-0515": {
+   "id": "J-0515",
+   "file": "J-0515.png",
+   "command": 340,
+   "set": "j_vocab_small-words-set01",
+   "block": "J",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. A ball and a box arranged so the relation \"below\" is unmistakable, no people. Square 1:1. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank. No real people, no individual faces; sacred books and scrolls stay blank.",
+   "promptSha256": "377fd7835a33e861543c03019c69e45d69642655e8cf49441e210fd3c1f9fcd7",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T19:23:08.901Z",
+   "sourceFile": "J-0515.png",
+   "sourceFileDate": "2026-11-26T19:22:46.862Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "1ff6d1ec664d1c00369ce1f1a9916477e14cb378360babd61faaf06c54bd50e2",
+   "originalFormat": "PNG",
+   "originalBytes": 910433,
+   "originalFile": "J-0515.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "J-0515.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 18194
+    },
+    {
+     "edge": 1024,
+     "file": "J-0515.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 23838
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "J-0516": {
+   "id": "J-0516",
+   "file": "J-0516.png",
+   "command": 340,
+   "set": "j_vocab_small-words-set01",
+   "block": "J",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. A ball and a box arranged so the relation \"through\" is unmistakable, no people. Square 1:1. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank. No real people, no individual faces; sacred books and scrolls stay blank.",
+   "promptSha256": "10330e31f71dfc7c630a5aa91a5f4e3b2aa2d8b15b126087179db516dc247cdc",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T19:23:08.901Z",
+   "sourceFile": "J-0516.png",
+   "sourceFileDate": "2026-11-26T19:22:46.867Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "29ad8ea3c808e379a681a182c54dd905811b39c7969a2abe56edfebc09484290",
+   "originalFormat": "PNG",
+   "originalBytes": 949162,
+   "originalFile": "J-0516.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "J-0516.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 26342
+    },
+    {
+     "edge": 1024,
+     "file": "J-0516.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 35008
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "J-0517": {
+   "id": "J-0517",
+   "file": "J-0517.png",
+   "command": 341,
+   "set": "j_vocab_small-words-set01",
+   "block": "J",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. A ball and a box arranged so the relation \"inside\" is unmistakable, no people. Square 1:1. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank. No real people, no individual faces; sacred books and scrolls stay blank.",
+   "promptSha256": "7a92fcd081060f3a4775aa0e45e207dcdce6fabdb8280e387e585dc7283025b1",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T19:23:08.901Z",
+   "sourceFile": "J-0517.png",
+   "sourceFileDate": "2026-11-26T19:22:46.873Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "c3a734b9571b718b4e8aed5b8b2bf96e7b6343681f228f235a45b5cf4f2f97ef",
+   "originalFormat": "PNG",
+   "originalBytes": 1104054,
+   "originalFile": "J-0517.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "J-0517.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 31254
+    },
+    {
+     "edge": 1024,
+     "file": "J-0517.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 41544
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "J-0518": {
+   "id": "J-0518",
+   "file": "J-0518.png",
+   "command": 341,
+   "set": "j_vocab_small-words-set01",
+   "block": "J",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. A ball and a box arranged so the relation \"behind\" is unmistakable, no people. Square 1:1. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank. No real people, no individual faces; sacred books and scrolls stay blank.",
+   "promptSha256": "dc612c6690e0f89e96af7e5aa2416fc13af7fd626a0dde5f33d8e93c8d6a70b5",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T19:23:08.901Z",
+   "sourceFile": "J-0518.png",
+   "sourceFileDate": "2026-11-26T19:22:46.879Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "791b18eb5dd3d9e85070d9a705a12a63d43147107ca1f04f62373516e56380f2",
+   "originalFormat": "PNG",
+   "originalBytes": 953834,
+   "originalFile": "J-0518.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "J-0518.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 20792
+    },
+    {
+     "edge": 1024,
+     "file": "J-0518.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 26550
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "J-0519": {
+   "id": "J-0519",
+   "file": "J-0519.png",
+   "command": 341,
+   "set": "j_vocab_small-words-set01",
+   "block": "J",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. A ball and a box arranged so the relation \"beside\" is unmistakable, no people. Square 1:1. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank. No real people, no individual faces; sacred books and scrolls stay blank.",
+   "promptSha256": "5d519a4a02042c72d95e9d116ef9262c75906dd33816deb364a6e1e938ef867b",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T19:23:08.901Z",
+   "sourceFile": "J-0519.png",
+   "sourceFileDate": "2026-11-26T19:22:46.884Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "639627e1664f563f603e80d1cee9ae5b95b85d448c259d10a3eac3dfe91e121c",
+   "originalFormat": "PNG",
+   "originalBytes": 948474,
+   "originalFile": "J-0519.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "J-0519.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 23428
+    },
+    {
+     "edge": 1024,
+     "file": "J-0519.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 30432
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "J-0520": {
+   "id": "J-0520",
+   "file": "J-0520.png",
+   "command": 341,
+   "set": "j_vocab_society-work-law-set01",
+   "block": "J",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. A single princess, drawn as one clear, instantly recognisable object centred on the plain background, nothing else competing. Square 1:1. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank. No real people, no individual faces; sacred books and scrolls stay blank.",
+   "promptSha256": "a74402bd8fbbfbf6b07ca03c293957a1e855632e9238f436e8c3376e5c09dccb",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-26T19:23:08.901Z",
+   "sourceFile": "J-0520.png",
+   "sourceFileDate": "2026-11-26T19:22:46.890Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "fd69121c22db649907ce2f8635ea397ae474b8355bdcfa40f2f806d048df6461",
+   "originalFormat": "PNG",
+   "originalBytes": 1244275,
+   "originalFile": "J-0520.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "J-0520.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 50126
+    },
+    {
+     "edge": 1024,
+     "file": "J-0520.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 64704
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
   }
  }
 }

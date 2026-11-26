@@ -12,6 +12,8 @@ import { estimateWordTimings, wordAt, bookReadiness, readinessLine } from "../au
 import { ensureStyle as ensureListenStyle } from "../audiolab/ui.js";
 /** A8: the read-along highlight uses estimated word timings (there are no measured ones for book pages); the page says so. */
 export const ESTIMATED_NOTE = "Read along: the highlighted word follows estimated timings (shared out by word length), not measured ones.";
+/** Pages whose clip was timed from its recording (data/books/timings, tools/books/build_timings.py; 25 Nov 2026 critique, item 13). */
+export const MEASURED_NOTE = "Read along: the highlighted word follows timings taken from the pauses in this recording. They can still be a word early or late.";
 import { applyFocus, loadFocus } from "./focus.js"; // the drawn part of a picture that sits on a wide blank sheet (25 Nov 2026 audit)
 import { bookPage } from "./extras.js"; // lane games-books: difficulty, new-word marks, English per line, completion card, next in level
 /** S-04: a page held back because it says the divine name; nothing plays, and the page says why. */
@@ -146,8 +148,13 @@ export async function mount(root, ctx) {
   const ALONG_KEY = "books.readAlong";
   let readAlong = false, wordSpans = [], timings = null;
   try { readAlong = ctx.store?.get?.(ALONG_KEY, false) === true; } catch { readAlong = false; }
+  // Measured timings for this book, loaded once; a page or voice without them falls back to the estimate (and the note says which).
+  let measured = null;
+  fetchJson(ctx, `data/books/timings/${id}.json`).then((x) => { measured = x && x.pages ? x.pages : null; if (readAlong) render(); }).catch(() => { measured = null; });
+  const measuredFor = (n, v) => { const t = measured?.[String(n)]?.[v]; return Array.isArray(t) && t.length === wordSpans.length ? t.map(([start, end]) => ({ start, end })) : null; };
   const lightWord = () => {
     if (!readAlong || !wordSpans.length) return;
+    if (!timings) timings = measuredFor(book.pages[page]?.n, voiceNow || prefVoice());
     if (!timings && audioEl.duration > 0) timings = estimateWordTimings(wordSpans.map((x) => x.textContent), audioEl.duration);
     const at = timings ? wordAt(timings, audioEl.currentTime) : -1;
     wordSpans.forEach((x, i) => x.setAttribute("data-on", i === at ? "1" : "0"));
@@ -241,7 +248,7 @@ export async function mount(root, ctx) {
     stage.append(p.audioHeld
       ? h("div", { class: "book-listen-row book-held" }, h("p", { class: "muted", role: "note" }, HELD_PAGE))
       : h("div", { class: "book-listen-row" }, listen("f", "▶ Listen (Noa)"), listen("m", "▶ Listen (Ari)"), slower, along, audioState));
-    if (readAlong && !p.audioHeld) stage.append(h("p", { class: "muted al-est book-along-note" }, ESTIMATED_NOTE));
+    if (readAlong && !p.audioHeld) stage.append(h("p", { class: "muted al-est book-along-note" }, measured?.[String(p.n)]?.[voiceNow || prefVoice()] ? MEASURED_NOTE : ESTIMATED_NOTE));
 
     const prev = h("button", { type: "button", class: "btn", onclick: () => { if (page > 0) { page--; render(); } } }, "← Previous");
     const next = h("button", { type: "button", class: "btn primary", onclick: () => { if (page < book.pages.length - 1) { page++; render(); } } },

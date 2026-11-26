@@ -11100,11 +11100,6 @@
       "at": "2026-11-26T19:32:26.485Z",
       "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
     },
-    "J-0318": {
-      "status": "approved",
-      "at": "2026-11-26T19:32:26.485Z",
-      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
-    },
     "J-0319": {
       "status": "approved",
       "at": "2026-11-26T19:32:26.485Z",
@@ -11443,9 +11438,14 @@
       "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
     },
     "J-0315": {
-      "status": "rejected",
-      "at": "2026-11-26T19:32:26.777Z",
-      "note": "A whole child's face with nothing pointing to the forehead, so it reads as 'face'. Redo: a simple head in profile or three-quarter view with the forehead clearly marked (e.g. a hand resting on it or a soft highlight), no other features competing."
+      "status": "approved",
+      "at": "2026-11-26T19:39:09.719Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "J-0318": {
+      "status": "approved",
+      "at": "2026-11-26T19:39:09.719Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
     }
   }
 }

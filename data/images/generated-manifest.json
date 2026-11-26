@@ -2,7 +2,7 @@
   "version": 1,
   "note": "APPROVED generated images only (see docs/images/RIGHTS.md). Files live in assets/img/gen/. Built by tools/images/ingest.mjs; do not edit by hand.",
   "dir": "gen",
-  "count": 2023,
+  "count": 2024,
   "images": {
     "AWD_pin_01": {
       "w": 1024,
@@ -14033,6 +14033,24 @@
         {
           "edge": 1024,
           "file": "J-0314.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0315": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0315.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0315.1024.webp",
           "w": 1024,
           "h": 1024
         }

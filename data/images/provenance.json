@@ -119387,13 +119387,13 @@
    "promptSha256": "3a97e7fd47a9712b4b6f6ae428aa1bad11c5ffdc567603057637f26ce47d3a53",
    "tool": "image generator (manual run, files uploaded by the author)",
    "model": null,
-   "ingestedAt": "2026-11-26T19:30:55.897Z",
+   "ingestedAt": "2026-11-26T19:39:08.561Z",
    "sourceFile": "J-0315.png",
-   "sourceFileDate": "2026-11-26T19:30:55.644Z",
+   "sourceFileDate": "2026-11-26T19:38:54.799Z",
    "matchedBy": "exact-name",
-   "originalSha256": "410a505a2ef0ead1bcdb4f0352c61058688635ea03cba1aea0742f73c227d9b6",
+   "originalSha256": "4ed0e3b9e458f2d9d1f02f27ac5c621794536e4f0ed570c3c72ff9af3b5634ee",
    "originalFormat": "PNG",
-   "originalBytes": 1099147,
+   "originalBytes": 374247,
    "originalFile": "J-0315.png",
    "width": 1024,
    "height": 1024,
@@ -119412,14 +119412,14 @@
      "file": "J-0315.800.webp",
      "width": 800,
      "height": 800,
-     "bytes": 33400
+     "bytes": 36244
     },
     {
      "edge": 1024,
      "file": "J-0315.1024.webp",
      "width": 1024,
      "height": 1024,
-     "bytes": 43226
+     "bytes": 48076
     }
    ],
    "ocr": {
@@ -119430,10 +119430,14 @@
     ],
     "blobCount": 0,
     "blobs": [],
-    "possibleLetters": []
+    "possibleLetters": [
+     "כ"
+    ]
    },
-   "flags": [],
-   "humanApproved": false
+   "flags": [
+    "possible_text"
+   ],
+   "humanApproved": true
   },
   "J-0316": {
    "id": "J-0316",
@@ -119561,13 +119565,13 @@
    "promptSha256": "fcaf8d4468bf4b8c70b584cc2362c4123945c63d1ab265f1203c86490fa21e64",
    "tool": "image generator (manual run, files uploaded by the author)",
    "model": null,
-   "ingestedAt": "2026-11-26T19:30:55.897Z",
+   "ingestedAt": "2026-11-26T19:39:08.561Z",
    "sourceFile": "J-0318.png",
-   "sourceFileDate": "2026-11-26T19:30:55.645Z",
+   "sourceFileDate": "2026-11-26T19:38:54.799Z",
    "matchedBy": "exact-name",
-   "originalSha256": "ef836180407383e5436d1ecc28170be760547610dc54c48018c8a97ff425d77e",
+   "originalSha256": "c99aee4d475b5380710d629845852795763b1021ba3ad25d0d890c292b075626",
    "originalFormat": "PNG",
-   "originalBytes": 1212747,
+   "originalBytes": 441382,
    "originalFile": "J-0318.png",
    "width": 1024,
    "height": 1024,
@@ -119586,14 +119590,14 @@
      "file": "J-0318.800.webp",
      "width": 800,
      "height": 800,
-     "bytes": 43938
+     "bytes": 46754
     },
     {
      "edge": 1024,
      "file": "J-0318.1024.webp",
      "width": 1024,
      "height": 1024,
-     "bytes": 57446
+     "bytes": 60030
     }
    ],
    "ocr": {

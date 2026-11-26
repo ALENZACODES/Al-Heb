@@ -59,7 +59,7 @@ class TTS:
         self.project, self.tok, self.t = project, None, 0
 
     def token(self):
-        if not self.tok or time.time() - self.t > 1800:
+        if not self.tok or time.time() - self.t > 600:
             self.tok = subprocess.run(['gcloud', 'auth', 'print-access-token'], capture_output=True, text=True, check=True).stdout.strip()
             self.t = time.time()
         return self.tok
@@ -78,6 +78,8 @@ class TTS:
                     return base64.b64decode(json.load(r)['audioContent'])
             except urllib.error.HTTPError as e:
                 msg = e.read().decode()[:300]
+                if e.code == 401 and attempt < 3:
+                    self.tok = None; time.sleep(2); continue
                 if e.code in (429, 500, 503) and attempt < 3:
                     time.sleep(5 * (attempt + 1)); continue
                 raise RuntimeError(f'{e.code} {msg}')

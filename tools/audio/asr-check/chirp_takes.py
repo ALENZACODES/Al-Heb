@@ -147,7 +147,7 @@ def main():
             if rs != it['word']:
                 plan += [('w-rs', rs, wavenet), ('c-rs', rs, chirp)]
             jobs += [(key, os.path.join(d, tid + '.mp3'), text, v) for tid, text, v in plan]
-        jobs = [j for j in jobs if not os.path.exists(j[1])]
+        jobs = [j for j in jobs if not os.path.exists(j[1]) or os.path.getsize(j[1]) < 1000]
         print(f'{len(items)} words, {len(jobs)} takes to record', flush=True)
         done = [0]
 
@@ -155,7 +155,8 @@ def main():
             key, dst, text, voice = j
             for attempt in range(6):
                 try:
-                    open(dst, 'wb').write(tts.synth(text, voice)); break
+                    data = tts.synth(text, voice)
+                    open(dst, 'wb').write(data); break
                 except Exception as e:
                     if attempt == 5 or str(e)[:3].isdigit() and not str(e).startswith(('429', '500', '503')):
                         print(f'  {key} {os.path.basename(dst)}: {e}', flush=True); break

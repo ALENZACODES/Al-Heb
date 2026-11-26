@@ -2,8 +2,98 @@
   "version": 1,
   "note": "APPROVED generated images only (see docs/images/RIGHTS.md). Files live in assets/img/gen/. Built by tools/images/ingest.mjs; do not edit by hand.",
   "dir": "gen",
-  "count": 1693,
+  "count": 1826,
   "images": {
+    "AWD_pin_03": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "AWD_pin_03.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "AWD_pin_03.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "AWD_pin_04": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "AWD_pin_04.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "AWD_pin_04.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "AWD_pin_06": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "AWD_pin_06.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "AWD_pin_06.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "AWD_pin_07": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "AWD_pin_07.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "AWD_pin_07.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "AWD_pin_08": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "AWD_pin_08.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "AWD_pin_08.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
     "BADGE_01": {
       "w": 512,
       "h": 512,
@@ -562,21 +652,75 @@
         }
       ]
     },
-    "CRAFT_bimah_01": {
-      "w": 1659,
-      "h": 948,
+    "CLS_classroom_06": {
+      "w": 1536,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
-          "file": "CRAFT_bimah_01.800.webp",
+          "file": "CLS_classroom_06.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "CLS_classroom_06.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "CLS_classroom_07": {
+      "w": 1792,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "CLS_classroom_07.800.webp",
           "w": 800,
           "h": 457
         },
         {
           "edge": 1600,
-          "file": "CRAFT_bimah_01.1600.webp",
+          "file": "CLS_classroom_07.1600.webp",
           "w": 1600,
           "h": 914
+        }
+      ]
+    },
+    "CLS_classroom_08": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "CLS_classroom_08.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "CLS_classroom_08.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "CRAFT_bimah_01": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "CRAFT_bimah_01.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "CRAFT_bimah_01.1536.webp",
+          "w": 1536,
+          "h": 1024
         }
       ]
     },
@@ -725,20 +869,20 @@
       ]
     },
     "CRAFT_bimah_10": {
-      "w": 1659,
-      "h": 948,
+      "w": 1536,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
           "file": "CRAFT_bimah_10.800.webp",
           "w": 800,
-          "h": 457
+          "h": 533
         },
         {
-          "edge": 1600,
-          "file": "CRAFT_bimah_10.1600.webp",
-          "w": 1600,
-          "h": 914
+          "edge": 1536,
+          "file": "CRAFT_bimah_10.1536.webp",
+          "w": 1536,
+          "h": 1024
         }
       ]
     },
@@ -1283,8 +1427,8 @@
       ]
     },
     "CRAFT_scroll_01": {
-      "w": 1254,
-      "h": 1254,
+      "w": 1024,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
@@ -1293,10 +1437,10 @@
           "h": 800
         },
         {
-          "edge": 1254,
-          "file": "CRAFT_scroll_01.1254.webp",
-          "w": 1254,
-          "h": 1254
+          "edge": 1024,
+          "file": "CRAFT_scroll_01.1024.webp",
+          "w": 1024,
+          "h": 1024
         }
       ]
     },
@@ -1741,6 +1885,42 @@
           "file": "CTX_food_04.1600.webp",
           "w": 1600,
           "h": 914
+        }
+      ]
+    },
+    "CTX_food_05": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "CTX_food_05.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "CTX_food_05.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "CTX_food_06": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "CTX_food_06.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "CTX_food_06.1536.webp",
+          "w": 1536,
+          "h": 1024
         }
       ]
     },
@@ -2734,6 +2914,24 @@
         }
       ]
     },
+    "GRAM_compare_03": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "GRAM_compare_03.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "GRAM_compare_03.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
     "GRAM_compare_04": {
       "w": 1024,
       "h": 1024,
@@ -2752,6 +2950,42 @@
         }
       ]
     },
+    "GRAM_compare_05": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "GRAM_compare_05.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "GRAM_compare_05.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "GRAM_compare_06": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "GRAM_compare_06.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "GRAM_compare_06.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
     "GRAM_compare_07": {
       "w": 512,
       "h": 293,
@@ -2761,6 +2995,24 @@
           "file": "GRAM_compare_07.512.webp",
           "w": 512,
           "h": 293
+        }
+      ]
+    },
+    "GRAM_compare_08": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "GRAM_compare_08.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "GRAM_compare_08.1024.webp",
+          "w": 1024,
+          "h": 1024
         }
       ]
     },
@@ -2884,6 +3136,24 @@
         }
       ]
     },
+    "GRAM_link_08": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "GRAM_link_08.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "GRAM_link_08.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
     "GRAM_link_09": {
       "w": 512,
       "h": 512,
@@ -2959,6 +3229,42 @@
           "file": "GRAM_modals_04.512.webp",
           "w": 512,
           "h": 512
+        }
+      ]
+    },
+    "GRAM_modals_05": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "GRAM_modals_05.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "GRAM_modals_05.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "GRAM_modals_06": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "GRAM_modals_06.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "GRAM_modals_06.1024.webp",
+          "w": 1024,
+          "h": 1024
         }
       ]
     },
@@ -3658,6 +3964,42 @@
         }
       ]
     },
+    "GRAM_there_05": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "GRAM_there_05.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "GRAM_there_05.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "GRAM_there_06": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "GRAM_there_06.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "GRAM_there_06.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
     "GRAM_there_07": {
       "w": 512,
       "h": 512,
@@ -3679,6 +4021,24 @@
           "file": "GRAM_there_08.512.webp",
           "w": 512,
           "h": 512
+        }
+      ]
+    },
+    "GRAM_there_09": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "GRAM_there_09.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "GRAM_there_09.1024.webp",
+          "w": 1024,
+          "h": 1024
         }
       ]
     },
@@ -6677,6 +7037,330 @@
         {
           "edge": 1536,
           "file": "I-33-img2.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "I-34-img1": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "I-34-img1.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "I-34-img1.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "I-34-img2": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "I-34-img2.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "I-34-img2.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "I-35-img1": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "I-35-img1.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "I-35-img1.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "I-35-img2": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "I-35-img2.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "I-35-img2.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "I-36-img1": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "I-36-img1.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "I-36-img1.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "I-36-img2": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "I-36-img2.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "I-36-img2.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "I-37-img1": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "I-37-img1.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "I-37-img1.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "I-37-img2": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "I-37-img2.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "I-37-img2.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "I-38-img1": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "I-38-img1.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "I-38-img1.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "I-38-img2": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "I-38-img2.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "I-38-img2.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "I-39-img1": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "I-39-img1.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "I-39-img1.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "I-39-img2": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "I-39-img2.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "I-39-img2.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "I-40-img1": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "I-40-img1.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "I-40-img1.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "I-40-img2": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "I-40-img2.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "I-40-img2.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "I-41-img1": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "I-41-img1.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "I-41-img1.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "I-41-img2": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "I-41-img2.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "I-41-img2.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "I-42-img1": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "I-42-img1.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "I-42-img1.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "I-42-img2": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "I-42-img2.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "I-42-img2.1536.webp",
           "w": 1536,
           "h": 1024
         }
@@ -11284,6 +11968,636 @@
         }
       ]
     },
+    "J-0230": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0230.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0230.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0231": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0231.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0231.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0232": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0232.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0232.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0233": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0233.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0233.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0234": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0234.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0234.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0235": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0235.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0235.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0236": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0236.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0236.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0237": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0237.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0237.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0238": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0238.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0238.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0239": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0239.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0239.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0240": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0240.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0240.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0241": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0241.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0241.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0242": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0242.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0242.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0243": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0243.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0243.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0244": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0244.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0244.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0245": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0245.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0245.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0246": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0246.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0246.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0247": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0247.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0247.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0248": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0248.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0248.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0249": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0249.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0249.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0250": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0250.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0250.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0251": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0251.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0251.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0253": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0253.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0253.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0254": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0254.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0254.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0255": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0255.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0255.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0256": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0256.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0256.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0257": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0257.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0257.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0989": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0989.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0989.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0994": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0994.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0994.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0995": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0995.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0995.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0996": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0996.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0996.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0997": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0997.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0997.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0998": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0998.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0998.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0999": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0999.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0999.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-1000": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-1000.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-1000.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
     "L01_alef_cursive_mnemonic": {
       "w": 1024,
       "h": 1024,
@@ -12238,6 +13552,42 @@
         }
       ]
     },
+    "L05_he_cursive_mnemonic": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L05_he_cursive_mnemonic.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "L05_he_cursive_mnemonic.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "L05_he_cursive_postcard": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L05_he_cursive_postcard.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "L05_he_cursive_postcard.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
     "L05_he_cursive_silhouette": {
       "w": 1024,
       "h": 1024,
@@ -12436,6 +13786,60 @@
         }
       ]
     },
+    "L06_vav_cursive_mnemonic": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L06_vav_cursive_mnemonic.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "L06_vav_cursive_mnemonic.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "L06_vav_cursive_postcard": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L06_vav_cursive_postcard.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "L06_vav_cursive_postcard.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "L06_vav_cursive_silhouette": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L06_vav_cursive_silhouette.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "L06_vav_cursive_silhouette.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
     "L06_vav_print_ari": {
       "w": 1254,
       "h": 1254,
@@ -12613,6 +14017,60 @@
           "file": "L06_vav_print_v3.1254.webp",
           "w": 1254,
           "h": 1254
+        }
+      ]
+    },
+    "L07_zayin_cursive_mnemonic": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L07_zayin_cursive_mnemonic.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "L07_zayin_cursive_mnemonic.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "L07_zayin_cursive_postcard": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L07_zayin_cursive_postcard.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "L07_zayin_cursive_postcard.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "L07_zayin_cursive_silhouette": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L07_zayin_cursive_silhouette.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "L07_zayin_cursive_silhouette.1024.webp",
+          "w": 1024,
+          "h": 1024
         }
       ]
     },
@@ -12808,6 +14266,60 @@
         }
       ]
     },
+    "L08_chet_cursive_mnemonic": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L08_chet_cursive_mnemonic.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "L08_chet_cursive_mnemonic.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "L08_chet_cursive_postcard": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L08_chet_cursive_postcard.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "L08_chet_cursive_postcard.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "L08_chet_cursive_silhouette": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L08_chet_cursive_silhouette.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "L08_chet_cursive_silhouette.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
     "L08_chet_print_ari": {
       "w": 1254,
       "h": 1254,
@@ -12988,6 +14500,60 @@
         }
       ]
     },
+    "L09_tet_cursive_mnemonic": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L09_tet_cursive_mnemonic.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "L09_tet_cursive_mnemonic.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "L09_tet_cursive_postcard": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L09_tet_cursive_postcard.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "L09_tet_cursive_postcard.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "L09_tet_cursive_silhouette": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L09_tet_cursive_silhouette.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "L09_tet_cursive_silhouette.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
     "L09_tet_print_ari": {
       "w": 1254,
       "h": 1254,
@@ -13079,20 +14645,20 @@
       ]
     },
     "L09_tet_print_s3": {
-      "w": 1254,
-      "h": 1254,
+      "w": 1536,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
           "file": "L09_tet_print_s3.800.webp",
           "w": 800,
-          "h": 800
+          "h": 533
         },
         {
-          "edge": 1254,
-          "file": "L09_tet_print_s3.1254.webp",
-          "w": 1254,
-          "h": 1254
+          "edge": 1536,
+          "file": "L09_tet_print_s3.1536.webp",
+          "w": 1536,
+          "h": 1024
         }
       ]
     },
@@ -13168,6 +14734,60 @@
         }
       ]
     },
+    "L10_yod_cursive_mnemonic": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L10_yod_cursive_mnemonic.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "L10_yod_cursive_mnemonic.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "L10_yod_cursive_postcard": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L10_yod_cursive_postcard.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "L10_yod_cursive_postcard.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "L10_yod_cursive_silhouette": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L10_yod_cursive_silhouette.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "L10_yod_cursive_silhouette.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
     "L10_yod_print_ari": {
       "w": 1254,
       "h": 1254,
@@ -13223,56 +14843,56 @@
       ]
     },
     "L10_yod_print_s1": {
-      "w": 1254,
-      "h": 1254,
+      "w": 1536,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
           "file": "L10_yod_print_s1.800.webp",
           "w": 800,
-          "h": 800
+          "h": 533
         },
         {
-          "edge": 1254,
-          "file": "L10_yod_print_s1.1254.webp",
-          "w": 1254,
-          "h": 1254
+          "edge": 1536,
+          "file": "L10_yod_print_s1.1536.webp",
+          "w": 1536,
+          "h": 1024
         }
       ]
     },
     "L10_yod_print_s2": {
-      "w": 1254,
-      "h": 1254,
+      "w": 1536,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
           "file": "L10_yod_print_s2.800.webp",
           "w": 800,
-          "h": 800
+          "h": 533
         },
         {
-          "edge": 1254,
-          "file": "L10_yod_print_s2.1254.webp",
-          "w": 1254,
-          "h": 1254
+          "edge": 1536,
+          "file": "L10_yod_print_s2.1536.webp",
+          "w": 1536,
+          "h": 1024
         }
       ]
     },
     "L10_yod_print_s3": {
-      "w": 1254,
-      "h": 1254,
+      "w": 1536,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
           "file": "L10_yod_print_s3.800.webp",
           "w": 800,
-          "h": 800
+          "h": 533
         },
         {
-          "edge": 1254,
-          "file": "L10_yod_print_s3.1254.webp",
-          "w": 1254,
-          "h": 1254
+          "edge": 1536,
+          "file": "L10_yod_print_s3.1536.webp",
+          "w": 1536,
+          "h": 1024
         }
       ]
     },
@@ -13372,6 +14992,42 @@
         }
       ]
     },
+    "L11_kaf_cursive_postcard": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L11_kaf_cursive_postcard.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "L11_kaf_cursive_postcard.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "L11_kaf_cursive_silhouette": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L11_kaf_cursive_silhouette.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "L11_kaf_cursive_silhouette.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
     "L11_kaf_print_ari": {
       "w": 1254,
       "h": 1254,
@@ -13427,56 +15083,56 @@
       ]
     },
     "L11_kaf_print_s1": {
-      "w": 1254,
-      "h": 1254,
+      "w": 1536,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
           "file": "L11_kaf_print_s1.800.webp",
           "w": 800,
-          "h": 800
+          "h": 533
         },
         {
-          "edge": 1254,
-          "file": "L11_kaf_print_s1.1254.webp",
-          "w": 1254,
-          "h": 1254
+          "edge": 1536,
+          "file": "L11_kaf_print_s1.1536.webp",
+          "w": 1536,
+          "h": 1024
         }
       ]
     },
     "L11_kaf_print_s2": {
-      "w": 1254,
-      "h": 1254,
+      "w": 1536,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
           "file": "L11_kaf_print_s2.800.webp",
           "w": 800,
-          "h": 800
+          "h": 533
         },
         {
-          "edge": 1254,
-          "file": "L11_kaf_print_s2.1254.webp",
-          "w": 1254,
-          "h": 1254
+          "edge": 1536,
+          "file": "L11_kaf_print_s2.1536.webp",
+          "w": 1536,
+          "h": 1024
         }
       ]
     },
     "L11_kaf_print_s3": {
-      "w": 1254,
-      "h": 1254,
+      "w": 1536,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
           "file": "L11_kaf_print_s3.800.webp",
           "w": 800,
-          "h": 800
+          "h": 533
         },
         {
-          "edge": 1254,
-          "file": "L11_kaf_print_s3.1254.webp",
-          "w": 1254,
-          "h": 1254
+          "edge": 1536,
+          "file": "L11_kaf_print_s3.1536.webp",
+          "w": 1536,
+          "h": 1024
         }
       ]
     },
@@ -13570,6 +15226,42 @@
         }
       ]
     },
+    "L12_lamed_cursive_mnemonic": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L12_lamed_cursive_mnemonic.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "L12_lamed_cursive_mnemonic.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "L12_lamed_cursive_postcard": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L12_lamed_cursive_postcard.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "L12_lamed_cursive_postcard.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
     "L12_lamed_print_ari": {
       "w": 1254,
       "h": 1254,
@@ -13625,56 +15317,56 @@
       ]
     },
     "L12_lamed_print_s1": {
-      "w": 1254,
-      "h": 1254,
+      "w": 1536,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
           "file": "L12_lamed_print_s1.800.webp",
           "w": 800,
-          "h": 800
+          "h": 533
         },
         {
-          "edge": 1254,
-          "file": "L12_lamed_print_s1.1254.webp",
-          "w": 1254,
-          "h": 1254
+          "edge": 1536,
+          "file": "L12_lamed_print_s1.1536.webp",
+          "w": 1536,
+          "h": 1024
         }
       ]
     },
     "L12_lamed_print_s2": {
-      "w": 1254,
-      "h": 1254,
+      "w": 1536,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
           "file": "L12_lamed_print_s2.800.webp",
           "w": 800,
-          "h": 800
+          "h": 533
         },
         {
-          "edge": 1254,
-          "file": "L12_lamed_print_s2.1254.webp",
-          "w": 1254,
-          "h": 1254
+          "edge": 1536,
+          "file": "L12_lamed_print_s2.1536.webp",
+          "w": 1536,
+          "h": 1024
         }
       ]
     },
     "L12_lamed_print_s3": {
-      "w": 1254,
-      "h": 1254,
+      "w": 1536,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
           "file": "L12_lamed_print_s3.800.webp",
           "w": 800,
-          "h": 800
+          "h": 533
         },
         {
-          "edge": 1254,
-          "file": "L12_lamed_print_s3.1254.webp",
-          "w": 1254,
-          "h": 1254
+          "edge": 1536,
+          "file": "L12_lamed_print_s3.1536.webp",
+          "w": 1536,
+          "h": 1024
         }
       ]
     },
@@ -13750,6 +15442,24 @@
         }
       ]
     },
+    "L13_mem_cursive_mnemonic": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "L13_mem_cursive_mnemonic.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "L13_mem_cursive_mnemonic.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
     "L13_mem_print_ari": {
       "w": 1254,
       "h": 1254,
@@ -13805,56 +15515,56 @@
       ]
     },
     "L13_mem_print_s1": {
-      "w": 1254,
-      "h": 1254,
+      "w": 1536,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
           "file": "L13_mem_print_s1.800.webp",
           "w": 800,
-          "h": 800
+          "h": 533
         },
         {
-          "edge": 1254,
-          "file": "L13_mem_print_s1.1254.webp",
-          "w": 1254,
-          "h": 1254
+          "edge": 1536,
+          "file": "L13_mem_print_s1.1536.webp",
+          "w": 1536,
+          "h": 1024
         }
       ]
     },
     "L13_mem_print_s2": {
-      "w": 1254,
-      "h": 1254,
+      "w": 1536,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
           "file": "L13_mem_print_s2.800.webp",
           "w": 800,
-          "h": 800
+          "h": 533
         },
         {
-          "edge": 1254,
-          "file": "L13_mem_print_s2.1254.webp",
-          "w": 1254,
-          "h": 1254
+          "edge": 1536,
+          "file": "L13_mem_print_s2.1536.webp",
+          "w": 1536,
+          "h": 1024
         }
       ]
     },
     "L13_mem_print_s3": {
-      "w": 1254,
-      "h": 1254,
+      "w": 1536,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
           "file": "L13_mem_print_s3.800.webp",
           "w": 800,
-          "h": 800
+          "h": 533
         },
         {
-          "edge": 1254,
-          "file": "L13_mem_print_s3.1254.webp",
-          "w": 1254,
-          "h": 1254
+          "edge": 1536,
+          "file": "L13_mem_print_s3.1536.webp",
+          "w": 1536,
+          "h": 1024
         }
       ]
     },
@@ -13985,56 +15695,56 @@
       ]
     },
     "L14_nun_print_s1": {
-      "w": 1254,
-      "h": 1254,
+      "w": 1536,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
           "file": "L14_nun_print_s1.800.webp",
           "w": 800,
-          "h": 800
+          "h": 533
         },
         {
-          "edge": 1254,
-          "file": "L14_nun_print_s1.1254.webp",
-          "w": 1254,
-          "h": 1254
+          "edge": 1536,
+          "file": "L14_nun_print_s1.1536.webp",
+          "w": 1536,
+          "h": 1024
         }
       ]
     },
     "L14_nun_print_s2": {
-      "w": 1254,
-      "h": 1254,
+      "w": 1536,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
           "file": "L14_nun_print_s2.800.webp",
           "w": 800,
-          "h": 800
+          "h": 533
         },
         {
-          "edge": 1254,
-          "file": "L14_nun_print_s2.1254.webp",
-          "w": 1254,
-          "h": 1254
+          "edge": 1536,
+          "file": "L14_nun_print_s2.1536.webp",
+          "w": 1536,
+          "h": 1024
         }
       ]
     },
     "L14_nun_print_s3": {
-      "w": 1254,
-      "h": 1254,
+      "w": 1536,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
           "file": "L14_nun_print_s3.800.webp",
           "w": 800,
-          "h": 800
+          "h": 533
         },
         {
-          "edge": 1254,
-          "file": "L14_nun_print_s3.1254.webp",
-          "w": 1254,
-          "h": 1254
+          "edge": 1536,
+          "file": "L14_nun_print_s3.1536.webp",
+          "w": 1536,
+          "h": 1024
         }
       ]
     },
@@ -14165,56 +15875,56 @@
       ]
     },
     "L15_samekh_print_s1": {
-      "w": 1254,
-      "h": 1254,
+      "w": 1536,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
           "file": "L15_samekh_print_s1.800.webp",
           "w": 800,
-          "h": 800
+          "h": 533
         },
         {
-          "edge": 1254,
-          "file": "L15_samekh_print_s1.1254.webp",
-          "w": 1254,
-          "h": 1254
+          "edge": 1536,
+          "file": "L15_samekh_print_s1.1536.webp",
+          "w": 1536,
+          "h": 1024
         }
       ]
     },
     "L15_samekh_print_s2": {
-      "w": 1254,
-      "h": 1254,
+      "w": 1536,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
           "file": "L15_samekh_print_s2.800.webp",
           "w": 800,
-          "h": 800
+          "h": 533
         },
         {
-          "edge": 1254,
-          "file": "L15_samekh_print_s2.1254.webp",
-          "w": 1254,
-          "h": 1254
+          "edge": 1536,
+          "file": "L15_samekh_print_s2.1536.webp",
+          "w": 1536,
+          "h": 1024
         }
       ]
     },
     "L15_samekh_print_s3": {
-      "w": 1254,
-      "h": 1254,
+      "w": 1536,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
           "file": "L15_samekh_print_s3.800.webp",
           "w": 800,
-          "h": 800
+          "h": 533
         },
         {
-          "edge": 1254,
-          "file": "L15_samekh_print_s3.1254.webp",
-          "w": 1254,
-          "h": 1254
+          "edge": 1536,
+          "file": "L15_samekh_print_s3.1536.webp",
+          "w": 1536,
+          "h": 1024
         }
       ]
     },
@@ -18796,6 +20506,24 @@
         }
       ]
     },
+    "PLACE_eilat_10": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "PLACE_eilat_10.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "PLACE_eilat_10.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
     "PLACE_everyday_01": {
       "w": 512,
       "h": 293,
@@ -18808,6 +20536,24 @@
         }
       ]
     },
+    "PLACE_everyday_02": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "PLACE_everyday_02.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "PLACE_everyday_02.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
     "PLACE_everyday_03": {
       "w": 512,
       "h": 293,
@@ -18817,6 +20563,24 @@
           "file": "PLACE_everyday_03.512.webp",
           "w": 512,
           "h": 293
+        }
+      ]
+    },
+    "PLACE_everyday_04": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "PLACE_everyday_04.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "PLACE_everyday_04.1536.webp",
+          "w": 1536,
+          "h": 1024
         }
       ]
     },
@@ -18865,6 +20629,42 @@
           "file": "PLACE_everyday_08.512.webp",
           "w": 512,
           "h": 293
+        }
+      ]
+    },
+    "PLACE_everyday_09": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "PLACE_everyday_09.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "PLACE_everyday_09.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "PLACE_everyday_10": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "PLACE_everyday_10.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "PLACE_everyday_10.1536.webp",
+          "w": 1536,
+          "h": 1024
         }
       ]
     },
@@ -19468,6 +21268,24 @@
         }
       ]
     },
+    "PLACE_seasons_01": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "PLACE_seasons_01.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "PLACE_seasons_01.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
     "PLACE_seasons_02": {
       "w": 512,
       "h": 293,
@@ -19501,6 +21319,24 @@
           "file": "PLACE_seasons_04.512.webp",
           "w": 512,
           "h": 293
+        }
+      ]
+    },
+    "PLACE_seasons_05": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "PLACE_seasons_05.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "PLACE_seasons_05.1536.webp",
+          "w": 1536,
+          "h": 1024
         }
       ]
     },
@@ -19561,6 +21397,24 @@
           "file": "PLACE_seasons_09.512.webp",
           "w": 512,
           "h": 293
+        }
+      ]
+    },
+    "PLACE_seasons_10": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "PLACE_seasons_10.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "PLACE_seasons_10.1536.webp",
+          "w": 1536,
+          "h": 1024
         }
       ]
     },
@@ -20128,6 +21982,96 @@
         }
       ]
     },
+    "SCN_havdalah_01": {
+      "w": 1792,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "SCN_havdalah_01.800.webp",
+          "w": 800,
+          "h": 457
+        },
+        {
+          "edge": 1600,
+          "file": "SCN_havdalah_01.1600.webp",
+          "w": 1600,
+          "h": 914
+        }
+      ]
+    },
+    "SCN_havdalah_02": {
+      "w": 1792,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "SCN_havdalah_02.800.webp",
+          "w": 800,
+          "h": 457
+        },
+        {
+          "edge": 1600,
+          "file": "SCN_havdalah_02.1600.webp",
+          "w": 1600,
+          "h": 914
+        }
+      ]
+    },
+    "SCN_havdalah_04": {
+      "w": 1792,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "SCN_havdalah_04.800.webp",
+          "w": 800,
+          "h": 457
+        },
+        {
+          "edge": 1600,
+          "file": "SCN_havdalah_04.1600.webp",
+          "w": 1600,
+          "h": 914
+        }
+      ]
+    },
+    "SCN_havdalah_05": {
+      "w": 1792,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "SCN_havdalah_05.800.webp",
+          "w": 800,
+          "h": 457
+        },
+        {
+          "edge": 1600,
+          "file": "SCN_havdalah_05.1600.webp",
+          "w": 1600,
+          "h": 914
+        }
+      ]
+    },
+    "SCN_havdalah_06": {
+      "w": 1792,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "SCN_havdalah_06.800.webp",
+          "w": 800,
+          "h": 457
+        },
+        {
+          "edge": 1600,
+          "file": "SCN_havdalah_06.1600.webp",
+          "w": 1600,
+          "h": 914
+        }
+      ]
+    },
     "SCN_service_01": {
       "w": 1792,
       "h": 1024,
@@ -20182,6 +22126,132 @@
         }
       ]
     },
+    "SCN_service_05": {
+      "w": 1792,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "SCN_service_05.800.webp",
+          "w": 800,
+          "h": 457
+        },
+        {
+          "edge": 1600,
+          "file": "SCN_service_05.1600.webp",
+          "w": 1600,
+          "h": 914
+        }
+      ]
+    },
+    "SCN_service_06": {
+      "w": 1792,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "SCN_service_06.800.webp",
+          "w": 800,
+          "h": 457
+        },
+        {
+          "edge": 1600,
+          "file": "SCN_service_06.1600.webp",
+          "w": 1600,
+          "h": 914
+        }
+      ]
+    },
+    "SCN_service_07": {
+      "w": 1792,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "SCN_service_07.800.webp",
+          "w": 800,
+          "h": 457
+        },
+        {
+          "edge": 1600,
+          "file": "SCN_service_07.1600.webp",
+          "w": 1600,
+          "h": 914
+        }
+      ]
+    },
+    "SCN_service_08": {
+      "w": 1792,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "SCN_service_08.800.webp",
+          "w": 800,
+          "h": 457
+        },
+        {
+          "edge": 1600,
+          "file": "SCN_service_08.1600.webp",
+          "w": 1600,
+          "h": 914
+        }
+      ]
+    },
+    "SCN_service_09": {
+      "w": 1792,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "SCN_service_09.800.webp",
+          "w": 800,
+          "h": 457
+        },
+        {
+          "edge": 1600,
+          "file": "SCN_service_09.1600.webp",
+          "w": 1600,
+          "h": 914
+        }
+      ]
+    },
+    "SCN_service_10": {
+      "w": 1792,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "SCN_service_10.800.webp",
+          "w": 800,
+          "h": 457
+        },
+        {
+          "edge": 1600,
+          "file": "SCN_service_10.1600.webp",
+          "w": 1600,
+          "h": 914
+        }
+      ]
+    },
+    "SCN_shabbat_01": {
+      "w": 1792,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "SCN_shabbat_01.800.webp",
+          "w": 800,
+          "h": 457
+        },
+        {
+          "edge": 1600,
+          "file": "SCN_shabbat_01.1600.webp",
+          "w": 1600,
+          "h": 914
+        }
+      ]
+    },
     "SCN_shabbat_02": {
       "w": 1792,
       "h": 1024,
@@ -20195,6 +22265,24 @@
         {
           "edge": 1600,
           "file": "SCN_shabbat_02.1600.webp",
+          "w": 1600,
+          "h": 914
+        }
+      ]
+    },
+    "SCN_shabbat_03": {
+      "w": 1792,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "SCN_shabbat_03.800.webp",
+          "w": 800,
+          "h": 457
+        },
+        {
+          "edge": 1600,
+          "file": "SCN_shabbat_03.1600.webp",
           "w": 1600,
           "h": 914
         }
@@ -20215,6 +22303,96 @@
           "file": "SCN_shabbat_04.1536.webp",
           "w": 1536,
           "h": 1024
+        }
+      ]
+    },
+    "SCN_shabbat_05": {
+      "w": 1792,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "SCN_shabbat_05.800.webp",
+          "w": 800,
+          "h": 457
+        },
+        {
+          "edge": 1600,
+          "file": "SCN_shabbat_05.1600.webp",
+          "w": 1600,
+          "h": 914
+        }
+      ]
+    },
+    "SCN_shabbat_06": {
+      "w": 1792,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "SCN_shabbat_06.800.webp",
+          "w": 800,
+          "h": 457
+        },
+        {
+          "edge": 1600,
+          "file": "SCN_shabbat_06.1600.webp",
+          "w": 1600,
+          "h": 914
+        }
+      ]
+    },
+    "SCN_shabbat_07": {
+      "w": 1792,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "SCN_shabbat_07.800.webp",
+          "w": 800,
+          "h": 457
+        },
+        {
+          "edge": 1600,
+          "file": "SCN_shabbat_07.1600.webp",
+          "w": 1600,
+          "h": 914
+        }
+      ]
+    },
+    "SCN_shabbat_08": {
+      "w": 1792,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "SCN_shabbat_08.800.webp",
+          "w": 800,
+          "h": 457
+        },
+        {
+          "edge": 1600,
+          "file": "SCN_shabbat_08.1600.webp",
+          "w": 1600,
+          "h": 914
+        }
+      ]
+    },
+    "SCN_shabbat_09": {
+      "w": 1792,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "SCN_shabbat_09.800.webp",
+          "w": 800,
+          "h": 457
+        },
+        {
+          "edge": 1600,
+          "file": "SCN_shabbat_09.1600.webp",
+          "w": 1600,
+          "h": 914
         }
       ]
     },
@@ -20375,6 +22553,24 @@
         {
           "edge": 1600,
           "file": "SCN_torah_08.1600.webp",
+          "w": 1600,
+          "h": 914
+        }
+      ]
+    },
+    "SCN_torah_10": {
+      "w": 1792,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "SCN_torah_10.800.webp",
+          "w": 800,
+          "h": 457
+        },
+        {
+          "edge": 1600,
+          "file": "SCN_torah_10.1600.webp",
           "w": 1600,
           "h": 914
         }
@@ -20873,20 +23069,20 @@
       ]
     },
     "STORY_creation_10": {
-      "w": 1659,
-      "h": 948,
+      "w": 1536,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
           "file": "STORY_creation_10.800.webp",
           "w": 800,
-          "h": 457
+          "h": 533
         },
         {
-          "edge": 1600,
-          "file": "STORY_creation_10.1600.webp",
-          "w": 1600,
-          "h": 914
+          "edge": 1536,
+          "file": "STORY_creation_10.1536.webp",
+          "w": 1536,
+          "h": 1024
         }
       ]
     },
@@ -22948,6 +25144,204 @@
         }
       ]
     },
+    "TALK_clinic_09": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "TALK_clinic_09.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "TALK_clinic_09.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "TALK_clinic_10": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "TALK_clinic_10.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "TALK_clinic_10.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "TALK_room_01": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "TALK_room_01.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "TALK_room_01.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "TALK_room_02": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "TALK_room_02.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "TALK_room_02.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "TALK_room_03": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "TALK_room_03.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "TALK_room_03.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "TALK_room_04": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "TALK_room_04.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "TALK_room_04.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "TALK_room_05": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "TALK_room_05.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "TALK_room_05.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "TALK_room_06": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "TALK_room_06.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "TALK_room_06.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "TALK_room_07": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "TALK_room_07.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "TALK_room_07.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "TALK_room_09": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "TALK_room_09.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "TALK_room_09.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "TALK_room_10": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "TALK_room_10.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "TALK_room_10.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
     "TEST_consistency_1": {
       "w": 1536,
       "h": 1024,
@@ -22985,20 +25379,20 @@
       ]
     },
     "TROPE_etnachta_card": {
-      "w": 1122,
-      "h": 1402,
+      "w": 1024,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
           "file": "TROPE_etnachta_card.800.webp",
-          "w": 640,
+          "w": 800,
           "h": 800
         },
         {
-          "edge": 1402,
-          "file": "TROPE_etnachta_card.1402.webp",
-          "w": 1122,
-          "h": 1402
+          "edge": 1024,
+          "file": "TROPE_etnachta_card.1024.webp",
+          "w": 1024,
+          "h": 1024
         }
       ]
     },
@@ -23201,20 +25595,20 @@
       ]
     },
     "TROPE_kadma_card": {
-      "w": 1122,
-      "h": 1402,
+      "w": 1024,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
           "file": "TROPE_kadma_card.800.webp",
-          "w": 640,
+          "w": 800,
           "h": 800
         },
         {
-          "edge": 1402,
-          "file": "TROPE_kadma_card.1402.webp",
-          "w": 1122,
-          "h": 1402
+          "edge": 1024,
+          "file": "TROPE_kadma_card.1024.webp",
+          "w": 1024,
+          "h": 1024
         }
       ]
     },
@@ -23237,20 +25631,20 @@
       ]
     },
     "TROPE_karney_para_card": {
-      "w": 1122,
-      "h": 1402,
+      "w": 1024,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
           "file": "TROPE_karney_para_card.800.webp",
-          "w": 640,
+          "w": 800,
           "h": 800
         },
         {
-          "edge": 1402,
-          "file": "TROPE_karney_para_card.1402.webp",
-          "w": 1122,
-          "h": 1402
+          "edge": 1024,
+          "file": "TROPE_karney_para_card.1024.webp",
+          "w": 1024,
+          "h": 1024
         }
       ]
     },
@@ -23273,20 +25667,20 @@
       ]
     },
     "TROPE_mahapakh_card": {
-      "w": 1122,
-      "h": 1402,
+      "w": 1024,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
           "file": "TROPE_mahapakh_card.800.webp",
-          "w": 640,
+          "w": 800,
           "h": 800
         },
         {
-          "edge": 1402,
-          "file": "TROPE_mahapakh_card.1402.webp",
-          "w": 1122,
-          "h": 1402
+          "edge": 1024,
+          "file": "TROPE_mahapakh_card.1024.webp",
+          "w": 1024,
+          "h": 1024
         }
       ]
     },
@@ -23309,20 +25703,20 @@
       ]
     },
     "TROPE_mercha_card": {
-      "w": 1122,
-      "h": 1402,
+      "w": 1024,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
           "file": "TROPE_mercha_card.800.webp",
-          "w": 640,
+          "w": 800,
           "h": 800
         },
         {
-          "edge": 1402,
-          "file": "TROPE_mercha_card.1402.webp",
-          "w": 1122,
-          "h": 1402
+          "edge": 1024,
+          "file": "TROPE_mercha_card.1024.webp",
+          "w": 1024,
+          "h": 1024
         }
       ]
     },
@@ -23345,20 +25739,20 @@
       ]
     },
     "TROPE_munach_card": {
-      "w": 1122,
-      "h": 1402,
+      "w": 1024,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
           "file": "TROPE_munach_card.800.webp",
-          "w": 640,
+          "w": 800,
           "h": 800
         },
         {
-          "edge": 1402,
-          "file": "TROPE_munach_card.1402.webp",
-          "w": 1122,
-          "h": 1402
+          "edge": 1024,
+          "file": "TROPE_munach_card.1024.webp",
+          "w": 1024,
+          "h": 1024
         }
       ]
     },
@@ -23381,20 +25775,20 @@
       ]
     },
     "TROPE_pashta_card": {
-      "w": 1122,
-      "h": 1402,
+      "w": 1024,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
           "file": "TROPE_pashta_card.800.webp",
-          "w": 640,
+          "w": 800,
           "h": 800
         },
         {
-          "edge": 1402,
-          "file": "TROPE_pashta_card.1402.webp",
-          "w": 1122,
-          "h": 1402
+          "edge": 1024,
+          "file": "TROPE_pashta_card.1024.webp",
+          "w": 1024,
+          "h": 1024
         }
       ]
     },
@@ -23417,20 +25811,20 @@
       ]
     },
     "TROPE_pazer_card": {
-      "w": 1122,
-      "h": 1402,
+      "w": 1024,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
           "file": "TROPE_pazer_card.800.webp",
-          "w": 640,
+          "w": 800,
           "h": 800
         },
         {
-          "edge": 1402,
-          "file": "TROPE_pazer_card.1402.webp",
-          "w": 1122,
-          "h": 1402
+          "edge": 1024,
+          "file": "TROPE_pazer_card.1024.webp",
+          "w": 1024,
+          "h": 1024
         }
       ]
     },
@@ -23453,20 +25847,20 @@
       ]
     },
     "TROPE_segolta_card": {
-      "w": 1122,
-      "h": 1402,
+      "w": 1024,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
           "file": "TROPE_segolta_card.800.webp",
-          "w": 640,
+          "w": 800,
           "h": 800
         },
         {
-          "edge": 1402,
-          "file": "TROPE_segolta_card.1402.webp",
-          "w": 1122,
-          "h": 1402
+          "edge": 1024,
+          "file": "TROPE_segolta_card.1024.webp",
+          "w": 1024,
+          "h": 1024
         }
       ]
     },
@@ -23525,20 +25919,20 @@
       ]
     },
     "TROPE_telisha_card": {
-      "w": 1122,
-      "h": 1402,
+      "w": 1024,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
           "file": "TROPE_telisha_card.800.webp",
-          "w": 640,
+          "w": 800,
           "h": 800
         },
         {
-          "edge": 1402,
-          "file": "TROPE_telisha_card.1402.webp",
-          "w": 1122,
-          "h": 1402
+          "edge": 1024,
+          "file": "TROPE_telisha_card.1024.webp",
+          "w": 1024,
+          "h": 1024
         }
       ]
     },
@@ -23633,20 +26027,20 @@
       ]
     },
     "TROPE_zakef_katan_card": {
-      "w": 1122,
-      "h": 1402,
+      "w": 1024,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
           "file": "TROPE_zakef_katan_card.800.webp",
-          "w": 640,
+          "w": 800,
           "h": 800
         },
         {
-          "edge": 1402,
-          "file": "TROPE_zakef_katan_card.1402.webp",
-          "w": 1122,
-          "h": 1402
+          "edge": 1024,
+          "file": "TROPE_zakef_katan_card.1024.webp",
+          "w": 1024,
+          "h": 1024
         }
       ]
     },
@@ -23669,20 +26063,20 @@
       ]
     },
     "TROPE_zarka_card": {
-      "w": 1122,
-      "h": 1402,
+      "w": 1024,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
           "file": "TROPE_zarka_card.800.webp",
-          "w": 640,
+          "w": 800,
           "h": 800
         },
         {
-          "edge": 1402,
-          "file": "TROPE_zarka_card.1402.webp",
-          "w": 1122,
-          "h": 1402
+          "edge": 1024,
+          "file": "TROPE_zarka_card.1024.webp",
+          "w": 1024,
+          "h": 1024
         }
       ]
     },
@@ -24731,8 +27125,8 @@
       ]
     },
     "V12_chataf_segol_keyword": {
-      "w": 1254,
-      "h": 1254,
+      "w": 1024,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
@@ -24741,10 +27135,10 @@
           "h": 800
         },
         {
-          "edge": 1254,
-          "file": "V12_chataf_segol_keyword.1254.webp",
-          "w": 1254,
-          "h": 1254
+          "edge": 1024,
+          "file": "V12_chataf_segol_keyword.1024.webp",
+          "w": 1024,
+          "h": 1024
         }
       ]
     },
@@ -29148,6 +31542,16 @@
     }
   },
   "altText": {
+    "AWD_pin_02": "Square 1024x1024 image: a week-complete badge: seven small gold dots in a ring. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank.",
+    "AWD_pin_03": "Square 1024x1024 image: a vowel-master badge: a row of five rounded gold dots. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank.",
+    "AWD_pin_04": "Square 1024x1024 image: a reading-fluency badge: an open book with a gold bookmark, blank pages. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank.",
+    "AWD_pin_05": "Square 1024x1024 image: a listening badge: a pair of headphones with sound ripples. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank.",
+    "AWD_pin_06": "Square 1024x1024 image: a speaking badge: a speech bubble, blank, with a gold star. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank.",
+    "AWD_pin_07": "Square 1024x1024 image: a holiday-explorer badge: a gold candle and a small leaf. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank.",
+    "AWD_pin_08": "Square 1024x1024 image: a Shabbat-keeper badge: two candles with a loaf. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank.",
+    "AWD_pin_09": "Square 1024x1024 image: a market-ready badge: a basket of fruit. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank.",
+    "AWD_pin_10": "Square 1024x1024 image: a comeback badge: a flame rising from a small pot. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank.",
+    "AWD_pin_11": "Square 1024x1024 image: a grand-finish badge: a laurel wreath around a gold pomegranate. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank.",
     "BADGE_01": "Round enamel-pin style level badge 1 of 8: a single candle. Same ring and ribbon on every badge; colour progression cream > gold > blue > red across levels (level 1).",
     "BADGE_01_locked": "The attached badge as a greyed-out 'locked' version (desaturated, same shape).",
     "BADGE_02": "Round enamel-pin style level badge 2 of 8: two candles. Same ring and ribbon on every badge; colour progression cream > gold > blue > red across levels (level 2).",
@@ -29198,6 +31602,9 @@
     "CHAR_noa_speak": "Noa, head-and-shoulders portrait, \"say it with me\", mouth open mid-vowel.",
     "CHAR_noa_synagogue": "Noa with a tallit over her shoulders.",
     "CHAR_noa_telaviv": "Noa holding an iced coffee at a cafe.",
+    "CLS_classroom_06": "Wide 1792x1024 scene: Ari with Rimon the small round pomegranate-red sprite with a gold crown calyx and olive leaf ears sitting on his desk, both looking at a blank flashcard. Any other people are.",
+    "CLS_classroom_07": "Wide 1792x1024 scene: Noa high-fiving Rimon the small round pomegranate-red sprite with a gold crown calyx and olive leaf ears after finishing a page. Any other people are simple small figures with.",
+    "CLS_classroom_08": "Wide 1792x1024 scene: Ari and Noa laughing as Rimon the small round pomegranate-red sprite with a gold crown calyx and olive leaf ears hides behind a stack of books. Any other people are simple.",
     "CRAFT_bimah_01": "The scroll carried around the congregation (backs of people, small) (At the bimah).",
     "CRAFT_bimah_02": "A reader following a blank column with a yad (At the bimah).",
     "CRAFT_bimah_03": "The gabbai standing beside the reader holding a blank book (At the bimah).",
@@ -30823,6 +33230,8 @@
     "L04_dalet_print_v1": "Door (Hebrew: delet), a vocabulary picture for the Hebrew letter Dalet.",
     "L04_dalet_print_v2": "Fish (Hebrew: dag), a vocabulary picture for the Hebrew letter Dalet.",
     "L04_dalet_print_v3": "Honey (Hebrew: dvash), a vocabulary picture for the Hebrew letter Dalet.",
+    "L05_he_cursive_mnemonic": "The keyword object a horse clearing a jump, drawn so its outline echoes silhouette (REF_cursive_he.png). Draw the object only, never the letter.",
+    "L05_he_cursive_postcard": "The attached object (a horse clearing a jump) on a blank postcard pinned to a fridge, postcard blank.",
     "L05_he_cursive_silhouette": "The attached object (a horse clearing a jump) as a bold charcoal silhouette on cream.",
     "L05_he_print_ari": "Ari points at house with an open window, the memory picture for the Hebrew letter He.",
     "L05_he_print_mnemonic": "House with an open window, drawn so its outline echoes the shape of the Hebrew letter He: a lintel with a right post and a short detached left post leaving a gap at the top.",
@@ -30834,6 +33243,9 @@
     "L05_he_print_v1": "Mountain (Hebrew: har), a vocabulary picture for the Hebrew letter He.",
     "L05_he_print_v2": "Sun and calendar day, today (Hebrew: hayom), a vocabulary picture for the Hebrew letter He.",
     "L05_he_print_v3": "Balloon (Hebrew: balon), a vocabulary picture for the Hebrew letter He.",
+    "L06_vav_cursive_mnemonic": "The keyword object a single vine stake, drawn so its outline echoes silhouette (REF_cursive_vav.png). Draw the object only, never the letter.",
+    "L06_vav_cursive_postcard": "The attached object (a single vine stake) on a blank postcard pinned to a fridge, postcard blank.",
+    "L06_vav_cursive_silhouette": "The attached object (a single vine stake) as a bold charcoal silhouette on cream.",
     "L06_vav_print_ari": "Ari points at vine on a stake, the memory picture for the Hebrew letter Vav.",
     "L06_vav_print_mnemonic": "Vine on a stake, drawn so its outline echoes the shape of the Hebrew letter Vav: one straight vertical with a tiny hook at top.",
     "L06_vav_print_noa": "Noa points at vine on a stake, the memory picture for the Hebrew letter Vav.",
@@ -30844,6 +33256,9 @@
     "L06_vav_print_v1": "Rose (Hebrew: vered), a vocabulary picture for the Hebrew letter Vav.",
     "L06_vav_print_v2": "Curtain (Hebrew: vilon), a vocabulary picture for the Hebrew letter Vav.",
     "L06_vav_print_v3": "Waffle (Hebrew: waffle), a vocabulary picture for the Hebrew letter Vav.",
+    "L07_zayin_cursive_mnemonic": "The keyword object a zigzag lightning bolt, drawn so its outline echoes silhouette (REF_cursive_zayin.png). Draw the object only, never the letter.",
+    "L07_zayin_cursive_postcard": "The attached object (a zigzag lightning bolt) on a blank postcard pinned to a fridge, postcard blank.",
+    "L07_zayin_cursive_silhouette": "The attached object (a zigzag lightning bolt) as a bold charcoal silhouette on cream.",
     "L07_zayin_print_ari": "Ari points at zipper pull, the memory picture for the Hebrew letter Zayin.",
     "L07_zayin_print_mnemonic": "Zipper pull, drawn so its outline echoes the shape of the Hebrew letter Zayin: a vertical with a small crossbar crown.",
     "L07_zayin_print_noa": "Noa points at zipper pull, the memory picture for the Hebrew letter Zayin.",
@@ -30855,6 +33270,9 @@
     "L07_zayin_print_v2": "Gold (Hebrew: zahav), a vocabulary picture for the Hebrew letter Zayin.",
     "L07_zayin_print_v3": "Clock (Hebrew: sha'on; time = zman), a vocabulary picture for the Hebrew letter Zayin.",
     "L07_zayin_quirky": "QUIRKY ADDENDUM: a funny, slightly absurd cartoon in the same flat-vector style, one hero subject only (plus at most one small prop), a cheeky expression or pose, the same line weight and the same.",
+    "L08_chet_cursive_mnemonic": "The keyword object a stone archway, drawn so its outline echoes silhouette (REF_cursive_chet.png). Draw the object only, never the letter.",
+    "L08_chet_cursive_postcard": "The attached object (a stone archway) on a blank postcard pinned to a fridge, postcard blank.",
+    "L08_chet_cursive_silhouette": "The attached object (a stone archway) as a bold charcoal silhouette on cream.",
     "L08_chet_print_ari": "Ari points at hut doorway, the memory picture for the Hebrew letter Chet.",
     "L08_chet_print_mnemonic": "Hut doorway, drawn so its outline echoes the shape of the Hebrew letter Chet: a gateway: two posts with a flat roof, no gap.",
     "L08_chet_print_noa": "Noa points at hut doorway, the memory picture for the Hebrew letter Chet.",
@@ -30865,6 +33283,9 @@
     "L08_chet_print_v1": "Milk (Hebrew: chalav), a vocabulary picture for the Hebrew letter Chet.",
     "L08_chet_print_v2": "Challah (Hebrew: challah), a vocabulary picture for the Hebrew letter Chet.",
     "L08_chet_print_v3": "Cat (Hebrew: chatul), a vocabulary picture for the Hebrew letter Chet.",
+    "L09_tet_cursive_mnemonic": "The keyword object a tadpole curled on itself, drawn so its outline echoes silhouette (REF_cursive_tet.png). Draw the object only, never the letter.",
+    "L09_tet_cursive_postcard": "The attached object (a tadpole curled on itself) on a blank postcard pinned to a fridge, postcard blank.",
+    "L09_tet_cursive_silhouette": "The attached object (a tadpole curled on itself) as a bold charcoal silhouette on cream.",
     "L09_tet_print_ari": "Ari points at teacup with a curled handle, the memory picture for the Hebrew letter Tet.",
     "L09_tet_print_mnemonic": "Teacup with a curled handle, drawn so its outline echoes the shape of the Hebrew letter Tet: a bowl whose left rim curls inward.",
     "L09_tet_print_noa": "Noa points at teacup with a curled handle, the memory picture for the Hebrew letter Tet.",
@@ -30875,6 +33296,9 @@
     "L09_tet_print_v1": "Good, thumbs up (Hebrew: tov), a vocabulary picture for the Hebrew letter Tet.",
     "L09_tet_print_v2": "Hike (Hebrew: tiyul), a vocabulary picture for the Hebrew letter Tet.",
     "L09_tet_print_v3": "Telephone (Hebrew: telefon), a vocabulary picture for the Hebrew letter Tet.",
+    "L10_yod_cursive_mnemonic": "The keyword object a yo-yo at the end of its string, drawn so its outline echoes silhouette (REF_cursive_yod.png). Draw the object only, never the letter.",
+    "L10_yod_cursive_postcard": "The attached object (a yo-yo at the end of its string) on a blank postcard pinned to a fridge, postcard blank.",
+    "L10_yod_cursive_silhouette": "The attached object (a yo-yo at the end of its string) as a bold charcoal silhouette on cream.",
     "L10_yod_print_ari": "Ari points at yo-yo on a short string, the memory picture for the Hebrew letter Yod.",
     "L10_yod_print_mnemonic": "Yo-yo on a short string, drawn so its outline echoes the shape of the Hebrew letter Yod: a small comma hanging at the top of the line.",
     "L10_yod_print_noa": "Noa points at yo-yo on a short string, the memory picture for the Hebrew letter Yod.",
@@ -30887,6 +33311,8 @@
     "L10_yod_print_v3": "Boy (Hebrew: yeled), a vocabulary picture for the Hebrew letter Yod.",
     "L10_yod_quirky": "QUIRKY ADDENDUM: a funny, slightly absurd cartoon in the same flat-vector style, one hero subject only (plus at most one small prop), a cheeky expression or pose, the same line weight and the same.",
     "L11_kaf_cursive_mnemonic": "The keyword object a cupped hand, drawn so its outline echoes silhouette (REF_cursive_kaf.png). Draw the object only, never the letter.",
+    "L11_kaf_cursive_postcard": "The attached object (a cupped hand) on a blank postcard pinned to a fridge, postcard blank.",
+    "L11_kaf_cursive_silhouette": "The attached object (a cupped hand) as a bold charcoal silhouette on cream.",
     "L11_kaf_print_ari": "Ari points at cupped palm, the memory picture for the Hebrew letter Kaf / Khaf.",
     "L11_kaf_print_mnemonic": "Cupped palm, drawn so its outline echoes the shape of the Hebrew letter Kaf / Khaf: a rounded bracket open to the left, like a cupped hand.",
     "L11_kaf_print_noa": "Noa points at cupped palm, the memory picture for the Hebrew letter Kaf / Khaf.",
@@ -30898,6 +33324,8 @@
     "L11_kaf_print_v2": "Cup (Hebrew: kos), a vocabulary picture for the Hebrew letter Kaf / Khaf.",
     "L11_kaf_print_v3": "Kippah (Hebrew: kipa), a vocabulary picture for the Hebrew letter Kaf / Khaf.",
     "L11_kaf_quirky_khaf": "QUIRKY ADDENDUM: a funny, slightly absurd cartoon in the same flat-vector style, one hero subject only (plus at most one small prop), a cheeky expression or pose, the same line weight and the same.",
+    "L12_lamed_cursive_mnemonic": "The keyword object a lighthouse with a spiral stair, drawn so its outline echoes silhouette (REF_cursive_lamed.png). Draw the object only, never the letter.",
+    "L12_lamed_cursive_postcard": "The attached object (a lighthouse with a spiral stair) on a blank postcard pinned to a fridge, postcard blank.",
     "L12_lamed_print_ari": "Ari points at lighthouse / shepherd's staff, the memory picture for the Hebrew letter Lamed.",
     "L12_lamed_print_mnemonic": "Lighthouse / shepherd's staff, drawn so its outline echoes the shape of the Hebrew letter Lamed: the tallest letter, a staff rising above the line with a hooked foot.",
     "L12_lamed_print_noa": "Noa points at lighthouse / shepherd's staff, the memory picture for the Hebrew letter Lamed.",
@@ -30908,6 +33336,7 @@
     "L12_lamed_print_v1": "Bread (Hebrew: lechem), a vocabulary picture for the Hebrew letter Lamed.",
     "L12_lamed_print_v2": "Night (Hebrew: layla), a vocabulary picture for the Hebrew letter Lamed.",
     "L12_lamed_print_v3": "Lemon (Hebrew: limon), a vocabulary picture for the Hebrew letter Lamed.",
+    "L13_mem_cursive_mnemonic": "The keyword object twin mountain peaks, drawn so its outline echoes silhouette (REF_cursive_mem.png). Draw the object only, never the letter.",
     "L13_mem_print_ari": "Ari points at mountain over water (mayim), the memory picture for the Hebrew letter Mem.",
     "L13_mem_print_mnemonic": "Mountain over water (mayim), drawn so its outline echoes the shape of the Hebrew letter Mem: a square with a gap at bottom left and a wave-like top.",
     "L13_mem_print_noa": "Noa points at mountain over water (mayim), the memory picture for the Hebrew letter Mem.",
@@ -31065,8 +33494,16 @@
     "L27_tsadi_final_print_v2": "Land (Hebrew: eretz), a vocabulary picture for the Hebrew letter Tsadi sofit.",
     "L27_tsadi_final_print_v3": "Summer (Hebrew: kayitz), a vocabulary picture for the Hebrew letter Tsadi sofit.",
     "MAS_rimon_01": "MASCOT 'Rimon': a small round pomegranate-red sprite with a gold crown-shaped calyx on top, two olive-green leaf ears, big friendly dot eyes, tiny arms and feet, thick charcoal outline; expressive.",
+    "MAS_rimon_02": "MASCOT 'Rimon': a small round pomegranate-red sprite with a gold crown-shaped calyx on top, two olive-green leaf ears, big friendly dot eyes, tiny arms and feet, thick charcoal outline; expressive.",
     "MAS_rimon_03": "MASCOT 'Rimon': a small round pomegranate-red sprite with a gold crown-shaped calyx on top, two olive-green leaf ears, big friendly dot eyes, tiny arms and feet, thick charcoal outline; expressive.",
     "MAS_rimon_04": "MASCOT 'Rimon': a small round pomegranate-red sprite with a gold crown-shaped calyx on top, two olive-green leaf ears, big friendly dot eyes, tiny arms and feet, thick charcoal outline; expressive.",
+    "MAS_rimon_05": "MASCOT 'Rimon': a small round pomegranate-red sprite with a gold crown-shaped calyx on top, two olive-green leaf ears, big friendly dot eyes, tiny arms and feet, thick charcoal outline; expressive.",
+    "MAS_rimon_06": "MASCOT 'Rimon': a small round pomegranate-red sprite with a gold crown-shaped calyx on top, two olive-green leaf ears, big friendly dot eyes, tiny arms and feet, thick charcoal outline; expressive.",
+    "MAS_rimon_07": "MASCOT 'Rimon': a small round pomegranate-red sprite with a gold crown-shaped calyx on top, two olive-green leaf ears, big friendly dot eyes, tiny arms and feet, thick charcoal outline; expressive.",
+    "MAS_rimon_08": "MASCOT 'Rimon': a small round pomegranate-red sprite with a gold crown-shaped calyx on top, two olive-green leaf ears, big friendly dot eyes, tiny arms and feet, thick charcoal outline; expressive.",
+    "MAS_rimon_09": "MASCOT 'Rimon': a small round pomegranate-red sprite with a gold crown-shaped calyx on top, two olive-green leaf ears, big friendly dot eyes, tiny arms and feet, thick charcoal outline; expressive.",
+    "MAS_rimon_10": "MASCOT 'Rimon': a small round pomegranate-red sprite with a gold crown-shaped calyx on top, two olive-green leaf ears, big friendly dot eyes, tiny arms and feet, thick charcoal outline; expressive.",
+    "MAS_rimon_11": "MASCOT 'Rimon': a small round pomegranate-red sprite with a gold crown-shaped calyx on top, two olive-green leaf ears, big friendly dot eyes, tiny arms and feet, thick charcoal outline; expressive.",
     "MAS_states_01": "Rimon with a tiny knitted kippah (Rimon — full state sheet II).",
     "MAS_states_02": "Rimon with a small tallit (Rimon — full state sheet II).",
     "MAS_states_03": "Rimon holding a shofar nearly as big as itself (Rimon — full state sheet II).",
@@ -31308,12 +33745,30 @@
     "PRAY_track_08": "Square scene: a row of people bowing (Aleinu).",
     "PRAY_track_09": "Square scene: a shofar blown at sunrise.",
     "PRAY_track_10": "Square scene: a tent village seen from a hill at dawn (Mah Tovu).",
+    "SCN_havdalah_01": "Wide 1792x1024 scene: cooking for Shabbat: pots on a stove and braided dough rising on a tray. Any other people are simple small figures with plain friendly faces. Any sign, screen, page, book.",
+    "SCN_havdalah_02": "Wide 1792x1024 scene: a tidy-up before sundown with a broom and a basket of folded laundry. Any other people are simple small figures with plain friendly faces. Any sign, screen, page, book, label.",
+    "SCN_havdalah_04": "Wide 1792x1024 scene: a braided multi-wick candle being lit by a child with a grown-up steadying the hand. Any other people are simple small figures with plain friendly faces. Any sign, screen.",
+    "SCN_havdalah_05": "Wide 1792x1024 scene: a spice box held out and sniffed, eyes closed. Any other people are simple small figures with plain friendly faces. Any sign, screen, page, book, label, scroll or parchment in.",
+    "SCN_havdalah_06": "Wide 1792x1024 scene: a full wine cup overflowing slightly onto a saucer. Any other people are simple small figures with plain friendly faces. Any sign, screen, page, book, label, scroll or.",
     "SCN_service_01": "Wide 1792x1024 scene: Ari at the sanctuary door taking a kippah from a basket. Any other people are simple small figures with plain friendly faces. Match character sheet(s) exactly. Any sign.",
     "SCN_service_02": "Wide 1792x1024 scene: Noa wrapping a tallit around her shoulders with both hands. Any other people are simple small figures with plain friendly faces. Match character sheet(s) exactly. Any sign.",
     "SCN_service_03": "Wide 1792x1024 scene: a vestibule with coats and umbrellas on hooks and two closed prayer books with blank covers on a shelf. Any other people are simple small figures with plain friendly faces. Any.",
     "SCN_service_04": "Wide 1792x1024 scene: Ari and Noa choosing seats while an usher gestures with an open palm. Any other people are simple small figures with plain friendly faces. Match character sheet(s) exactly. Any.",
+    "SCN_service_05": "Wide 1792x1024 scene: the congregation standing together, backs to the viewer, facing the ark. Any other people are simple small figures with plain friendly faces. Any sign, screen, page, book.",
+    "SCN_service_06": "Wide 1792x1024 scene: a worshipper taking three steps back, only feet and floor shown. Any other people are simple small figures with plain friendly faces. Any sign, screen, page, book, label.",
+    "SCN_service_07": "Wide 1792x1024 scene: a seated mourner rising with a hand on a friend's shoulder, a small memorial candle lit in a wall niche. Any other people are simple small figures with plain friendly faces..",
+    "SCN_service_08": "Wide 1792x1024 scene: a cantor at the front with hands open and the congregation swaying behind. Any other people are simple small figures with plain friendly faces. Any sign, screen, page, book.",
+    "SCN_service_09": "Wide 1792x1024 scene: a child kissing the corner of a closed prayer book, parent smiling beside. Any other people are simple small figures with plain friendly faces. Any sign, screen, page, book.",
+    "SCN_service_10": "Wide 1792x1024 scene: a kiddush table after services with wine cups, challah and cake, people mingling. Any other people are simple small figures with plain friendly faces. Any sign, screen, page.",
+    "SCN_shabbat_01": "Wide 1792x1024 scene: a family laying a white tablecloth together on Friday afternoon, flowers waiting in a vase. Any other people are simple small figures with plain friendly faces. Any sign.",
     "SCN_shabbat_02": "Wide 1792x1024 scene: Noa lighting two candles, hands circling toward her face. Any other people are simple small figures with plain friendly faces. Match character sheet(s) exactly. Any sign.",
+    "SCN_shabbat_03": "Wide 1792x1024 scene: a parent blessing a child with a hand on the head while siblings wait. Any other people are simple small figures with plain friendly faces. Any sign, screen, page, book, label.",
     "SCN_shabbat_04": "Wide 1792x1024 scene: Ari raising the kiddush cup with the family standing around the table. Any other people are simple small figures with plain friendly faces. Match character sheet(s) exactly..",
+    "SCN_shabbat_05": "Wide 1792x1024 scene: hands being washed from a two-handled cup at a kitchen sink, towel on a shoulder. Any other people are simple small figures with plain friendly faces. Any sign, screen, page.",
+    "SCN_shabbat_06": "Wide 1792x1024 scene: a challah under its cover being uncovered, a knife hovering over it. Any other people are simple small figures with plain friendly faces. Any sign, screen, page, book, label.",
+    "SCN_shabbat_07": "Wide 1792x1024 scene: a steaming bowl of chicken soup being ladled around the table. Any other people are simple small figures with plain friendly faces. Any sign, screen, page, book, label, scroll.",
+    "SCN_shabbat_08": "Wide 1792x1024 scene: the family singing at the table with mouths open, a child tapping the table. Any other people are simple small figures with plain friendly faces. Any sign, screen, page, book.",
+    "SCN_shabbat_09": "Wide 1792x1024 scene: grace after the meal: people seated with closed books, candles burned low. Any other people are simple small figures with plain friendly faces. Any sign, screen, page, book.",
     "SCN_shabbat_10": "Wide 1792x1024 scene: Ari asleep on a sofa on Saturday afternoon with a closed book on his chest, tea cooling beside him. Any other people are simple small figures with plain friendly faces. Match.",
     "SCN_torah_01": "Wide 1792x1024 scene: the ark curtain being drawn open by a congregant, the gold-lit ark interior with scrolls in their mantles. Any other people are simple small figures with plain friendly faces..",
     "SCN_torah_02": "Wide 1792x1024 scene: the Torah procession (hakafah) circling the sanctuary, people reaching out with the corners of closed prayer books, seen from above. Any other people are simple small figures.",
@@ -31324,6 +33779,7 @@
     "SCN_torah_07": "Wide 1792x1024 scene: Ari and Noa in the pews, a small child between them on tiptoe to see the scroll. Any other people are simple small figures with plain friendly faces. Match character sheet(s).",
     "SCN_torah_08": "Wide 1792x1024 scene: the Torah being carried back to the ark while the congregation faces it and sings. Any other people are simple small figures with plain friendly faces. Any sign, screen, page.",
     "SCN_torah_09": "Wide 1792x1024 scene: the ark closing, the curtain falling, a red-gold eternal-light lamp glowing above. Any other people are simple small figures with plain friendly faces. Any sign, screen, page.",
+    "SCN_torah_10": "Wide 1792x1024 scene: dressing the Torah: velvet mantle, silver breastplate and crown laid out on a table, one hand fixing the pointer chain. Any other people are simple small figures with plain.",
     "SHARE_bg_01": "Confetti shapes over the café background (Share-card backgrounds).",
     "SHARE_bg_02": "Gold stars over the synagogue interior (Share-card backgrounds).",
     "SHARE_bg_03": "Pomegranate seeds scattering over cream like confetti (Share-card backgrounds).",

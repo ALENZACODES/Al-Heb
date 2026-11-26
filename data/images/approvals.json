@@ -380,11 +380,6 @@
       "at": "2026-11-06T12:18:27.982Z",
       "note": "Owner approval for reviewer site"
     },
-    "L09_tet_print_s3": {
-      "status": "approved",
-      "at": "2026-11-06T12:18:27.982Z",
-      "note": "Owner approval for reviewer site"
-    },
     "L09_tet_print_silhouette": {
       "status": "approved",
       "at": "2026-11-06T12:18:27.982Z",
@@ -411,11 +406,6 @@
       "note": "Owner approval for reviewer site"
     },
     "L10_yod_print_noa": {
-      "status": "approved",
-      "at": "2026-11-06T12:18:27.982Z",
-      "note": "Owner approval for reviewer site"
-    },
-    "L10_yod_print_s2": {
       "status": "approved",
       "at": "2026-11-06T12:18:27.982Z",
       "note": "Owner approval for reviewer site"
@@ -455,21 +445,6 @@
       "at": "2026-11-06T12:18:27.982Z",
       "note": "Owner approval for reviewer site"
     },
-    "L11_kaf_print_s1": {
-      "status": "approved",
-      "at": "2026-11-06T12:18:27.982Z",
-      "note": "Owner approval for reviewer site"
-    },
-    "L11_kaf_print_s2": {
-      "status": "approved",
-      "at": "2026-11-06T12:18:27.982Z",
-      "note": "Owner approval for reviewer site"
-    },
-    "L11_kaf_print_s3": {
-      "status": "approved",
-      "at": "2026-11-06T12:18:27.982Z",
-      "note": "Owner approval for reviewer site"
-    },
     "L11_kaf_print_silhouette": {
       "status": "approved",
       "at": "2026-11-06T12:18:27.982Z",
@@ -501,21 +476,6 @@
       "note": "Owner approval for reviewer site"
     },
     "L12_lamed_print_noa": {
-      "status": "approved",
-      "at": "2026-11-06T12:18:27.982Z",
-      "note": "Owner approval for reviewer site"
-    },
-    "L12_lamed_print_s1": {
-      "status": "approved",
-      "at": "2026-11-06T12:18:27.982Z",
-      "note": "Owner approval for reviewer site"
-    },
-    "L12_lamed_print_s2": {
-      "status": "approved",
-      "at": "2026-11-06T12:18:27.982Z",
-      "note": "Owner approval for reviewer site"
-    },
-    "L12_lamed_print_s3": {
       "status": "approved",
       "at": "2026-11-06T12:18:27.982Z",
       "note": "Owner approval for reviewer site"
@@ -555,21 +515,6 @@
       "at": "2026-11-06T12:18:27.982Z",
       "note": "Owner approval for reviewer site"
     },
-    "L13_mem_print_s1": {
-      "status": "approved",
-      "at": "2026-11-06T12:18:27.982Z",
-      "note": "Owner approval for reviewer site"
-    },
-    "L13_mem_print_s2": {
-      "status": "approved",
-      "at": "2026-11-06T12:18:27.982Z",
-      "note": "Owner approval for reviewer site"
-    },
-    "L13_mem_print_s3": {
-      "status": "approved",
-      "at": "2026-11-06T12:18:27.982Z",
-      "note": "Owner approval for reviewer site"
-    },
     "L13_mem_print_silhouette": {
       "status": "approved",
       "at": "2026-11-06T12:18:27.982Z",
@@ -596,11 +541,6 @@
       "note": "Owner approval for reviewer site"
     },
     "L14_nun_print_noa": {
-      "status": "approved",
-      "at": "2026-11-06T12:18:27.982Z",
-      "note": "Owner approval for reviewer site"
-    },
-    "L14_nun_print_s1": {
       "status": "approved",
       "at": "2026-11-06T12:18:27.982Z",
       "note": "Owner approval for reviewer site"
@@ -636,11 +576,6 @@
       "note": "Owner approval for reviewer site"
     },
     "L15_samekh_print_noa": {
-      "status": "approved",
-      "at": "2026-11-06T12:18:27.982Z",
-      "note": "Owner approval for reviewer site"
-    },
-    "L15_samekh_print_s2": {
       "status": "approved",
       "at": "2026-11-06T12:18:27.982Z",
       "note": "Owner approval for reviewer site"
@@ -2655,11 +2590,6 @@
       "at": "2026-11-06T12:18:27.982Z",
       "note": "Owner approval for reviewer site"
     },
-    "TROPE_etnachta_card": {
-      "status": "approved",
-      "at": "2026-11-06T12:18:27.982Z",
-      "note": "Owner approval for reviewer site"
-    },
     "TROPE_etnachta_mnemonic": {
       "status": "approved",
       "at": "2026-11-06T12:18:27.982Z",
@@ -2715,17 +2645,7 @@
       "at": "2026-11-06T12:18:27.982Z",
       "note": "Owner approval for reviewer site"
     },
-    "TROPE_kadma_card": {
-      "status": "approved",
-      "at": "2026-11-06T12:18:27.982Z",
-      "note": "Owner approval for reviewer site"
-    },
     "TROPE_kadma_mnemonic": {
-      "status": "approved",
-      "at": "2026-11-06T12:18:27.982Z",
-      "note": "Owner approval for reviewer site"
-    },
-    "TROPE_karney_para_card": {
       "status": "approved",
       "at": "2026-11-06T12:18:27.982Z",
       "note": "Owner approval for reviewer site"
@@ -2735,17 +2655,7 @@
       "at": "2026-11-06T12:18:27.982Z",
       "note": "Owner approval for reviewer site"
     },
-    "TROPE_mahapakh_card": {
-      "status": "approved",
-      "at": "2026-11-06T12:18:27.982Z",
-      "note": "Owner approval for reviewer site"
-    },
     "TROPE_mahapakh_mnemonic": {
-      "status": "approved",
-      "at": "2026-11-06T12:18:27.982Z",
-      "note": "Owner approval for reviewer site"
-    },
-    "TROPE_mercha_card": {
       "status": "approved",
       "at": "2026-11-06T12:18:27.982Z",
       "note": "Owner approval for reviewer site"
@@ -2755,17 +2665,7 @@
       "at": "2026-11-06T12:18:27.982Z",
       "note": "Owner approval for reviewer site"
     },
-    "TROPE_munach_card": {
-      "status": "approved",
-      "at": "2026-11-06T12:18:27.982Z",
-      "note": "Owner approval for reviewer site"
-    },
     "TROPE_munach_mnemonic": {
-      "status": "approved",
-      "at": "2026-11-06T12:18:27.982Z",
-      "note": "Owner approval for reviewer site"
-    },
-    "TROPE_pashta_card": {
       "status": "approved",
       "at": "2026-11-06T12:18:27.982Z",
       "note": "Owner approval for reviewer site"
@@ -2775,17 +2675,7 @@
       "at": "2026-11-06T12:18:27.982Z",
       "note": "Owner approval for reviewer site"
     },
-    "TROPE_pazer_card": {
-      "status": "approved",
-      "at": "2026-11-06T12:18:27.982Z",
-      "note": "Owner approval for reviewer site"
-    },
     "TROPE_pazer_mnemonic": {
-      "status": "approved",
-      "at": "2026-11-06T12:18:27.982Z",
-      "note": "Owner approval for reviewer site"
-    },
-    "TROPE_segolta_card": {
       "status": "approved",
       "at": "2026-11-06T12:18:27.982Z",
       "note": "Owner approval for reviewer site"
@@ -2796,11 +2686,6 @@
       "note": "Owner approval for reviewer site"
     },
     "TROPE_sof_pasuk_mnemonic": {
-      "status": "approved",
-      "at": "2026-11-06T12:18:27.982Z",
-      "note": "Owner approval for reviewer site"
-    },
-    "TROPE_telisha_card": {
       "status": "approved",
       "at": "2026-11-06T12:18:27.982Z",
       "note": "Owner approval for reviewer site"
@@ -2820,17 +2705,7 @@
       "at": "2026-11-06T12:18:27.982Z",
       "note": "Owner approval for reviewer site"
     },
-    "TROPE_zakef_katan_card": {
-      "status": "approved",
-      "at": "2026-11-06T12:18:27.982Z",
-      "note": "Owner approval for reviewer site"
-    },
     "TROPE_zakef_katan_mnemonic": {
-      "status": "approved",
-      "at": "2026-11-06T12:18:27.982Z",
-      "note": "Owner approval for reviewer site"
-    },
-    "TROPE_zarka_card": {
       "status": "approved",
       "at": "2026-11-06T12:18:27.982Z",
       "note": "Owner approval for reviewer site"
@@ -4046,54 +3921,6 @@
         "contains_text"
       ]
     },
-    "L10_yod_print_s1": {
-      "status": "approved",
-      "at": "2026-11-06T12:21:14.615Z",
-      "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
-      "forcedDespite": [
-        "contains_text"
-      ]
-    },
-    "L10_yod_print_s3": {
-      "status": "approved",
-      "at": "2026-11-06T12:21:14.615Z",
-      "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
-      "forcedDespite": [
-        "contains_text"
-      ]
-    },
-    "L14_nun_print_s2": {
-      "status": "approved",
-      "at": "2026-11-06T12:21:14.615Z",
-      "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
-      "forcedDespite": [
-        "contains_text"
-      ]
-    },
-    "L14_nun_print_s3": {
-      "status": "approved",
-      "at": "2026-11-06T12:21:14.615Z",
-      "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
-      "forcedDespite": [
-        "contains_text"
-      ]
-    },
-    "L15_samekh_print_s1": {
-      "status": "approved",
-      "at": "2026-11-06T12:21:14.615Z",
-      "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
-      "forcedDespite": [
-        "contains_text"
-      ]
-    },
-    "L15_samekh_print_s3": {
-      "status": "approved",
-      "at": "2026-11-06T12:21:14.615Z",
-      "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
-      "forcedDespite": [
-        "contains_text"
-      ]
-    },
     "L16_ayin_print_s1": {
       "status": "approved",
       "at": "2026-11-06T12:21:14.615Z",
@@ -4190,14 +4017,6 @@
         "contains_text"
       ]
     },
-    "CRAFT_bimah_01": {
-      "status": "approved",
-      "at": "2026-11-06T12:21:14.615Z",
-      "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
-      "forcedDespite": [
-        "contains_text"
-      ]
-    },
     "CRAFT_bimah_08": {
       "status": "approved",
       "at": "2026-11-06T12:21:14.615Z",
@@ -4207,22 +4026,6 @@
       ]
     },
     "CRAFT_bimah_09": {
-      "status": "approved",
-      "at": "2026-11-06T12:21:14.615Z",
-      "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
-      "forcedDespite": [
-        "contains_text"
-      ]
-    },
-    "CRAFT_bimah_10": {
-      "status": "approved",
-      "at": "2026-11-06T12:21:14.615Z",
-      "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
-      "forcedDespite": [
-        "contains_text"
-      ]
-    },
-    "CRAFT_scroll_01": {
       "status": "approved",
       "at": "2026-11-06T12:21:14.615Z",
       "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
@@ -4342,14 +4145,6 @@
         "contains_text"
       ]
     },
-    "STORY_creation_10": {
-      "status": "approved",
-      "at": "2026-11-06T12:21:14.615Z",
-      "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
-      "forcedDespite": [
-        "contains_text"
-      ]
-    },
     "STORY_jacob_08": {
       "status": "approved",
       "at": "2026-11-06T12:21:14.615Z",
@@ -4431,14 +4226,6 @@
       ]
     },
     "STORY_noah_10": {
-      "status": "approved",
-      "at": "2026-11-06T12:21:14.615Z",
-      "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
-      "forcedDespite": [
-        "contains_text"
-      ]
-    },
-    "V12_chataf_segol_keyword": {
       "status": "approved",
       "at": "2026-11-06T12:21:14.615Z",
       "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
@@ -9619,6 +9406,994 @@
       "status": "rejected",
       "at": "2026-11-26T17:57:07.763Z",
       "note": "Wrong subject: shows the biblical Ark of the Covenant with priests in white, not a synagogue ark closing behind its curtain with an eternal lamp. Redo."
+    },
+    "AWD_pin_03": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "AWD_pin_04": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "AWD_pin_06": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "AWD_pin_07": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "AWD_pin_08": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "CLS_classroom_06": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive",
+      "forcedDespite": [
+        "contains_text"
+      ]
+    },
+    "CLS_classroom_07": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive",
+      "forcedDespite": [
+        "contains_text"
+      ]
+    },
+    "CLS_classroom_08": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "CTX_food_05": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "CTX_food_06": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive",
+      "forcedDespite": [
+        "contains_text"
+      ]
+    },
+    "GRAM_compare_03": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "GRAM_compare_05": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "GRAM_compare_06": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "GRAM_compare_08": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "GRAM_link_08": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "GRAM_modals_05": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "GRAM_modals_06": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "GRAM_there_05": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "GRAM_there_06": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "GRAM_there_09": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "I-34-img1": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "I-34-img2": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "I-35-img1": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "I-35-img2": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "I-36-img1": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive",
+      "forcedDespite": [
+        "contains_text"
+      ]
+    },
+    "I-36-img2": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "I-37-img1": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "I-37-img2": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive",
+      "forcedDespite": [
+        "contains_text"
+      ]
+    },
+    "I-38-img1": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "I-38-img2": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "I-39-img1": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "I-39-img2": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive",
+      "forcedDespite": [
+        "contains_text"
+      ]
+    },
+    "I-40-img1": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "I-40-img2": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "I-41-img1": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "I-41-img2": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "I-42-img1": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive",
+      "forcedDespite": [
+        "contains_text"
+      ]
+    },
+    "I-42-img2": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "J-0230": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "J-0231": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "J-0232": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "J-0233": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "J-0234": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "J-0235": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "J-0236": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "J-0237": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "J-0238": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "J-0239": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "J-0240": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "J-0241": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "J-0242": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "J-0243": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "J-0244": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "J-0245": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "J-0246": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "J-0247": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "J-0248": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "J-0249": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "J-0250": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "J-0251": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "J-0253": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "J-0254": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive",
+      "forcedDespite": [
+        "contains_text"
+      ]
+    },
+    "J-0255": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "J-0256": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "J-0257": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "J-0989": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "J-0994": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "J-0995": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "J-0996": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "J-0997": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "J-0998": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "J-0999": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "J-1000": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "L05_he_cursive_mnemonic": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "L05_he_cursive_postcard": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "L06_vav_cursive_mnemonic": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "L06_vav_cursive_postcard": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "L06_vav_cursive_silhouette": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "L07_zayin_cursive_mnemonic": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "L07_zayin_cursive_postcard": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "L07_zayin_cursive_silhouette": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "L08_chet_cursive_mnemonic": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "L08_chet_cursive_postcard": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "L08_chet_cursive_silhouette": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "L09_tet_cursive_mnemonic": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "L09_tet_cursive_postcard": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "L09_tet_cursive_silhouette": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "L10_yod_cursive_mnemonic": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "L10_yod_cursive_postcard": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "L10_yod_cursive_silhouette": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "L11_kaf_cursive_postcard": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "L11_kaf_cursive_silhouette": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "L12_lamed_cursive_mnemonic": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "L12_lamed_cursive_postcard": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive",
+      "forcedDespite": [
+        "contains_text"
+      ]
+    },
+    "L13_mem_cursive_mnemonic": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "PLACE_eilat_10": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "PLACE_everyday_02": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "PLACE_everyday_04": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "PLACE_everyday_09": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "PLACE_everyday_10": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "PLACE_seasons_01": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive",
+      "forcedDespite": [
+        "contains_text"
+      ]
+    },
+    "PLACE_seasons_05": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "PLACE_seasons_10": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "SCN_havdalah_01": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive",
+      "forcedDespite": [
+        "contains_text"
+      ]
+    },
+    "SCN_havdalah_02": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "SCN_havdalah_04": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "SCN_havdalah_05": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "SCN_havdalah_06": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "SCN_service_05": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "SCN_service_06": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "SCN_service_07": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "SCN_service_08": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "SCN_service_09": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "SCN_service_10": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive",
+      "forcedDespite": [
+        "contains_text"
+      ]
+    },
+    "SCN_shabbat_01": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "SCN_shabbat_03": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "SCN_shabbat_05": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive",
+      "forcedDespite": [
+        "contains_text"
+      ]
+    },
+    "SCN_shabbat_06": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "SCN_shabbat_07": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "SCN_shabbat_08": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive",
+      "forcedDespite": [
+        "contains_text"
+      ]
+    },
+    "SCN_shabbat_09": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "SCN_torah_10": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "TALK_clinic_09": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "TALK_clinic_10": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "TALK_room_01": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive",
+      "forcedDespite": [
+        "contains_text"
+      ]
+    },
+    "TALK_room_02": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "TALK_room_03": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive",
+      "forcedDespite": [
+        "contains_text"
+      ]
+    },
+    "TALK_room_04": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "TALK_room_05": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "TALK_room_06": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "TALK_room_07": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "TALK_room_09": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive",
+      "forcedDespite": [
+        "contains_text"
+      ]
+    },
+    "TALK_room_10": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "CRAFT_bimah_01": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "CRAFT_bimah_10": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "CRAFT_scroll_01": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "L09_tet_print_s3": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "L10_yod_print_s1": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "L10_yod_print_s2": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive",
+      "forcedDespite": [
+        "contains_text"
+      ]
+    },
+    "L10_yod_print_s3": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "L11_kaf_print_s1": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "L11_kaf_print_s2": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "L11_kaf_print_s3": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "L12_lamed_print_s1": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "L12_lamed_print_s2": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "L12_lamed_print_s3": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "L13_mem_print_s1": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive",
+      "forcedDespite": [
+        "contains_text"
+      ]
+    },
+    "L13_mem_print_s2": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "L13_mem_print_s3": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "L14_nun_print_s1": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive",
+      "forcedDespite": [
+        "contains_text"
+      ]
+    },
+    "L14_nun_print_s2": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive",
+      "forcedDespite": [
+        "contains_text"
+      ]
+    },
+    "L14_nun_print_s3": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "L15_samekh_print_s1": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "L15_samekh_print_s2": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "L15_samekh_print_s3": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "STORY_creation_10": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "TROPE_etnachta_card": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "TROPE_kadma_card": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "TROPE_karney_para_card": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "TROPE_mahapakh_card": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "TROPE_mercha_card": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "TROPE_munach_card": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "TROPE_pashta_card": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "TROPE_pazer_card": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "TROPE_segolta_card": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "TROPE_telisha_card": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "TROPE_zakef_katan_card": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "TROPE_zarka_card": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "V12_chataf_segol_keyword": {
+      "status": "approved",
+      "at": "2026-11-26T18:19:49.921Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "AWD_pin_02": {
+      "status": "rejected",
+      "at": "2026-11-26T18:19:50.133Z",
+      "note": "Week-complete badge asks for seven gold dots in a ring; there are eight (counted). Redo with exactly seven."
+    },
+    "AWD_pin_05": {
+      "status": "rejected",
+      "at": "2026-11-26T18:19:50.349Z",
+      "note": "Drawn as a loose object with no badge form; the other award pins (02 to 04, 06 to 08) are framed badges (rosette or ring). Redo inside the same badge frame."
+    },
+    "AWD_pin_09": {
+      "status": "rejected",
+      "at": "2026-11-26T18:19:50.349Z",
+      "note": "Drawn as a loose object with no badge form; the other award pins (02 to 04, 06 to 08) are framed badges (rosette or ring). Redo inside the same badge frame."
+    },
+    "AWD_pin_10": {
+      "status": "rejected",
+      "at": "2026-11-26T18:19:50.349Z",
+      "note": "Drawn as a loose object with no badge form; the other award pins (02 to 04, 06 to 08) are framed badges (rosette or ring). Redo inside the same badge frame."
+    },
+    "AWD_pin_11": {
+      "status": "rejected",
+      "at": "2026-11-26T18:19:50.349Z",
+      "note": "Drawn as a loose object with no badge form; the other award pins (02 to 04, 06 to 08) are framed badges (rosette or ring). Redo inside the same badge frame."
+    },
+    "GRAM_time_04": {
+      "status": "rejected",
+      "at": "2026-11-26T18:19:50.566Z",
+      "note": "A three-part sequence (seed, sprout, tree; first/second/third of 3), but each image shows all three stages, so the three are near-duplicates. Redo one stage per image: 04 seed in a pot, 05 sprout, 06 tree, same pot each time (as GRAM_time_07 to 09 do)."
+    },
+    "GRAM_time_05": {
+      "status": "rejected",
+      "at": "2026-11-26T18:19:50.566Z",
+      "note": "A three-part sequence (seed, sprout, tree; first/second/third of 3), but each image shows all three stages, so the three are near-duplicates. Redo one stage per image: 04 seed in a pot, 05 sprout, 06 tree, same pot each time (as GRAM_time_07 to 09 do)."
+    },
+    "GRAM_time_06": {
+      "status": "rejected",
+      "at": "2026-11-26T18:19:50.566Z",
+      "note": "A three-part sequence (seed, sprout, tree; first/second/third of 3), but each image shows all three stages, so the three are near-duplicates. Redo one stage per image: 04 seed in a pot, 05 sprout, 06 tree, same pot each time (as GRAM_time_07 to 09 do)."
+    },
+    "MAS_rimon_02": {
+      "status": "rejected",
+      "at": "2026-11-26T18:19:50.792Z",
+      "note": "Does not match the mascot set: Rimon alone on plain cream in the mascot-sheet design (leaf ears, crown, no sash), as in the live MAS_states_05 to 08. These add Ari and Noa and/or a sash. Redo Rimon alone."
+    },
+    "MAS_rimon_05": {
+      "status": "rejected",
+      "at": "2026-11-26T18:19:50.792Z",
+      "note": "Does not match the mascot set: Rimon alone on plain cream in the mascot-sheet design (leaf ears, crown, no sash), as in the live MAS_states_05 to 08. These add Ari and Noa and/or a sash. Redo Rimon alone."
+    },
+    "MAS_rimon_06": {
+      "status": "rejected",
+      "at": "2026-11-26T18:19:50.792Z",
+      "note": "Does not match the mascot set: Rimon alone on plain cream in the mascot-sheet design (leaf ears, crown, no sash), as in the live MAS_states_05 to 08. These add Ari and Noa and/or a sash. Redo Rimon alone."
+    },
+    "MAS_rimon_07": {
+      "status": "rejected",
+      "at": "2026-11-26T18:19:50.792Z",
+      "note": "Does not match the mascot set: Rimon alone on plain cream in the mascot-sheet design (leaf ears, crown, no sash), as in the live MAS_states_05 to 08. These add Ari and Noa and/or a sash. Redo Rimon alone."
+    },
+    "MAS_rimon_08": {
+      "status": "rejected",
+      "at": "2026-11-26T18:19:50.792Z",
+      "note": "Does not match the mascot set: Rimon alone on plain cream in the mascot-sheet design (leaf ears, crown, no sash), as in the live MAS_states_05 to 08. These add Ari and Noa and/or a sash. Redo Rimon alone."
+    },
+    "MAS_rimon_09": {
+      "status": "rejected",
+      "at": "2026-11-26T18:19:50.792Z",
+      "note": "Does not match the mascot set: Rimon alone on plain cream in the mascot-sheet design (leaf ears, crown, no sash), as in the live MAS_states_05 to 08. These add Ari and Noa and/or a sash. Redo Rimon alone."
+    },
+    "MAS_rimon_10": {
+      "status": "rejected",
+      "at": "2026-11-26T18:19:50.792Z",
+      "note": "Does not match the mascot set: Rimon alone on plain cream in the mascot-sheet design (leaf ears, crown, no sash), as in the live MAS_states_05 to 08. These add Ari and Noa and/or a sash. Redo Rimon alone."
+    },
+    "MAS_rimon_11": {
+      "status": "rejected",
+      "at": "2026-11-26T18:19:50.792Z",
+      "note": "Does not match the mascot set: Rimon alone on plain cream in the mascot-sheet design (leaf ears, crown, no sash), as in the live MAS_states_05 to 08. These add Ari and Noa and/or a sash. Redo Rimon alone."
     }
   }
 }

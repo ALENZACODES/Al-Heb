@@ -35,7 +35,7 @@ function setup(A) {
   const melt = A.h('p', { class: 'muted arc-prompt', role: 'status' });
   const keys = A.h('div', { class: 'arc-keyboard', role: 'group', 'aria-label': 'Letters' });
   A.board.replaceChildren(host, clue, dashes, melt, keys);
-  const drawWord = () => dashes.replaceChildren(...letters.map((ch) => A.h('span', {}, found.has(ch) ? ch : ' ')));
+  const drawWord = () => dashes.replaceChildren(...letters.map((ch) => A.h('span', {}, found.has(baseLetter(ch)) ? ch : ' ')));
   const drawIce = () => { ice.textContent = STAGES[Math.min(STAGES.length - 1, Math.round((wrong / cfg.melt) * (STAGES.length - 1)))]; melt.textContent = `${cfg.melt - wrong} wrong guess${cfg.melt - wrong === 1 ? '' : 'es'} left before the pop melts.`; };
   const next = () => {
     if (k >= queue.length) { A.finish({ won: true }); return; }

@@ -19,6 +19,7 @@ test('a word with a final is winnable from the 22 keys (אָדָם)', () => {
 test('Meltdown and Mini Crossword use the shared rule; physical final keys press their regular key', () => {
   const m = readFileSync(new URL('../src/games/meltdown.view.js', import.meta.url), 'utf8');
   assert.match(m, /found\.has\(baseLetter\(l\)\)/); assert.match(m, /const want = baseLetter\(e\.key\)/);
+  assert.match(m, /drawWord = \(\) => [^\n]*found\.has\(baseLetter\(ch\)\)/, 'a final letter shows once its regular key is found');
   const c = readFileSync(new URL('../src/games/minicross.view.js', import.meta.url), 'utf8');
   assert.match(c, /sameKey\(have, want\)/);
 });

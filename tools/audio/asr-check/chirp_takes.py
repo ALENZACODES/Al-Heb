@@ -26,17 +26,13 @@ def plain(h):
     return re.sub(r'\s+', ' ', NIQQUD.sub('', str(h).replace('־', ' '))).strip(' .:׃')
 
 
-def pieces(text, limit=1500):
-    """Split long prayers at sentence/clause marks so every request stays well under the API's size limit."""
-    if len(text.encode()) <= limit * 2:
-        return [text]
-    out, cur = [], ''
+def pieces(text, max_words=18):
+    """Chirp 3 HD refuses very long sentences: split at clause marks, then into groups of at most max_words words."""
+    out = []
     for part in re.split(r'(?<=[.,;:׃])\s+', text):
-        if cur and len((cur + ' ' + part).encode()) > limit * 2:
-            out.append(cur); cur = part
-        else:
-            cur = (cur + ' ' + part).strip()
-    return out + ([cur] if cur else [])
+        w = part.split()
+        out += [' '.join(w[i:i + max_words]) for i in range(0, len(w), max_words)]
+    return [p for p in out if p]
 
 
 class TTS:
@@ -73,6 +69,7 @@ def main():
     ap.add_argument('--list', required=True, help='clip paths, one per line')
     ap.add_argument('--queue', default=os.path.join(HERE, 'multi4-queue.json'))
     ap.add_argument('--out', required=True)
+    ap.add_argument('--takes', default='c-pt,c-pt-90,c-pl,c-pl-90,w-pt')
     ap.add_argument('--project', default=subprocess.run(['gcloud', 'config', 'get-value', 'project'], capture_output=True, text=True).stdout.strip())
     a = ap.parse_args()
     want = {o['file']: re.sub(r'\s*\(cut from:.*\)\s*$', '', o['want']) for o in json.load(open(a.queue, encoding='utf-8'))}
@@ -88,6 +85,8 @@ def main():
         json.dump({'file': f, 'want': want[f]}, open(os.path.join(d, 'want.json'), 'w', encoding='utf-8'), ensure_ascii=False)
         for tid, text, voice, rate in (('c-pt', pt, chirp, 1.0), ('c-pt-90', pt, chirp, 0.9), ('c-pl', pl, chirp, 1.0),
                                        ('c-pl-90', pl, chirp, 0.9), ('w-pt', pt, wavenet, 1.0)):
+            if tid not in a.takes.split(','):
+                continue
             dst = os.path.join(d, tid + '.mp3')
             if os.path.exists(dst):
                 continue

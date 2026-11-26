@@ -1,0 +1,7 @@
+audio/f/israeli/line/brich-shmei.mp3
+audio/f/israeli/prayer/brich-shmei.mp3
+audio/f/israeli/prayer/haftarah-after.mp3
+audio/f/israeli/prayer/yigdal.mp3
+audio/m/israeli/line/brich-shmei.mp3
+audio/m/israeli/prayer/brich-shmei.mp3
+audio/m/israeli/prayer/yigdal.mp3

@@ -52,7 +52,8 @@ class Hearer:
         out = []
         if self.name == 'renikud' and self.fw is not None:
             segs, _ = self.fw.transcribe(a, language='he', task='transcribe', beam_size=1, best_of=1, temperature=0,
-                                         condition_on_previous_text=False, vad_filter=False, suppress_tokens=[], without_timestamps=True)
+                                         condition_on_previous_text=False, vad_filter=False, suppress_tokens=[], without_timestamps=True,
+                                         max_new_tokens=int(12 + 22 * len(a) / 16000))   # no runaway repeats on short clips
             t = ' '.join(s.text.strip() for s in segs)
             for s_, d in [('dZ', 'dʒ'), ('tS', 'tʃ'), ('S', 'ʃ'), ('Z', 'ʒ'), ('q', 'ʔ'), ("'", 'ˈ'), ('r', 'ʁ'), ('x', 'χ'), ('g', 'ɡ')]:
                 t = t.replace(s_, d)

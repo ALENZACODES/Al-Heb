@@ -349,6 +349,8 @@ export async function mount(root, ctx = /** @type {any} */ ({})) {
     return p.records.flatMap((rec) => { const ls = rec.he.split('\n'); return ls.map((l, i) => ({ kind: 'line', id: ls.length === 1 ? rec.id : `${rec.id}-l${i + 1}`, he: l, text: speechText(l), label: ls.length > 1 ? `${rec.ref} line ${i + 1}` : rec.ref })); });
   }
   async function playAll(p) {
+    // Say what is playing now (25 Nov 2026 audit: after Play all on Maoz Tzur the status still read "Played Siddur: HaMotzi").
+    say(`Playing all lines of ${p.title}.`);
     // Play all with a progress list the learner can tap into (src/audiolab/ui.js, on demand); the plain loop below if it cannot load.
     try { const m = await import('../audiolab/ui.js'); const qh = wrap.querySelector('#crp-queue'); if (qh) { seq++; const q = m.mountQueue(ctx, lineItems(p), { title: 'Play All Lines', noun: 'lines' }); qh.replaceChildren(q.node); q.playFrom(0); return; } } catch { /* offline before first use */ }
     const mine = ++seq;

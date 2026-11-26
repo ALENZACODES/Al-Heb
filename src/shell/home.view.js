@@ -44,13 +44,14 @@ export function mount(root, ctx) {
   const fullRest = () => {
     return [
     ctx.hasRoute?.('progress') ? h('p', {}, h('a', { class: 'btn secondary', href: '#/progress' }, 'See your progress')) : null,
-    h('nav', { class: 'card', 'aria-labelledby': 'h-quick' }, h('h2', { id: 'h-quick' }, t('home.quick')),
+    // The long "Go to" wall is folded (25 Nov 2026 critique: a 37-link list made Home long and busy); the five destinations above stay open.
+    h('nav', { class: 'card', 'aria-labelledby': 'h-quick' }, h('details', { id: 'home-quick-box' }, h('summary', {}, h('h2', { id: 'h-quick', style: 'display:inline;margin:0' }, t('home.quick'))),
       // U-19: no destination twice on one screen — the quick wall skips any
       // target the five-destination row above already shows (Letters, Read
       // and Calendar used to appear in both, reading as duplicate tiles).
       h('ul', { class: 'tiles' }, ...QUICK.filter(([, href]) => !DESTS.some(([, r]) => '#/' + r === href)).map(([k, href]) => h('li', {}, h('a', { class: 'tile', href }, (medalFor(k, 48) || medal('home', k, 48)), h('span', {}, t('nav.' + k)), tHe('nav.' + k) ? heSpan(tHe('nav.' + k)) : null))),
         // optional views from other lanes: only listed when their file exists in this build
-        ...ROUTES.filter((r) => r.optional && r.quick && !r.group && !PREVIEW_HIDDEN.has(r.name) && (ctx.hasRoute?.(r.name) ?? false)).map((r) => h('li', {}, h('a', { class: 'tile', href: '#' + r.pattern }, destIcon(r.name, 48, sectionOf(r.name)), h('span', {}, t(r.quick))))))),
+        ...ROUTES.filter((r) => r.optional && r.quick && !r.group && !PREVIEW_HIDDEN.has(r.name) && (ctx.hasRoute?.(r.name) ?? false)).map((r) => h('li', {}, h('a', { class: 'tile', href: '#' + r.pattern }, destIcon(r.name, 48, sectionOf(r.name)), h('span', {}, t(r.quick)))))))),
     ROUTES.some((r) => r.group === 'learn' && r.quick && !r.pattern.includes(':') && !PREVIEW_HIDDEN.has(r.name) && ctx.hasRoute?.(r.name))
       ? h('nav', { class: 'card', 'aria-labelledby': 'h-more' }, h('details', { id: 'home-more-box' }, h('summary', {}, h('h2', { id: 'h-more', style: 'display:inline;margin:0' }, t('home.more'))), h('p', { class: 'muted' }, t('home.more.hint')),
         h('ul', { class: 'tiles' }, ...ROUTES.filter((r) => r.group === 'learn' && r.quick && !r.pattern.includes(':') && !PREVIEW_HIDDEN.has(r.name) && ctx.hasRoute?.(r.name)).map((r) => h('li', {}, h('a', { class: 'tile', href: '#' + r.pattern }, destIcon(r.name, 48, sectionOf(r.name)), h('span', {}, t(r.quick)), tHe(r.quick) ? heSpan(tHe(r.quick)) : null))))))

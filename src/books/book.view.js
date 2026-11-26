@@ -141,7 +141,11 @@ export async function mount(root, ctx) {
   applyReaderRate(audioEl, readerSlow()); // normal unless Slower was chosen earlier this session
   let audioState = h("span", { class: "muted book-audio-state", role: "status" });
   // A8 read along: this visit only. The voice turns the page by itself at the end of each page and the word sounding now is highlighted.
+  // Read along is one choice for every book, remembered (25 Nov 2026 audit: Book 1 turned its pages during playback and Book 20 did
+  // not, because the switch was per visit). Off until the learner turns it on.
+  const ALONG_KEY = "books.readAlong";
   let readAlong = false, wordSpans = [], timings = null;
+  try { readAlong = ctx.store?.get?.(ALONG_KEY, false) === true; } catch { readAlong = false; }
   const lightWord = () => {
     if (!readAlong || !wordSpans.length) return;
     if (!timings && audioEl.duration > 0) timings = estimateWordTimings(wordSpans.map((x) => x.textContent), audioEl.duration);
@@ -221,8 +225,8 @@ export async function mount(root, ctx) {
     }, label);
     const along = h("button", {
       type: "button", class: "btn secondary book-along", "aria-pressed": String(readAlong),
-      onclick: () => { readAlong = !readAlong; along.setAttribute("aria-pressed", String(readAlong)); render(); audioState.textContent = readAlong ? "Read along is on: press Listen and the pages turn by themselves." : "Read along is off."; },
-    }, "Read along");
+      onclick: () => { readAlong = !readAlong; try { ctx.store?.set?.(ALONG_KEY, readAlong); } catch { /* this visit only */ } along.setAttribute("aria-pressed", String(readAlong)); render(); audioState.textContent = readAlong ? "Read along is on for every book: press Listen and the pages turn by themselves." : "Read along is off: each page stops at its end."; },
+    }, readAlong ? "Read along: on" : "Read along: off");
     // Slower: the learner's choice, kept for this visit only; never a default
     const slower = h("button", {
       type: "button", class: "btn secondary book-slower", "aria-pressed": readerSlow(),

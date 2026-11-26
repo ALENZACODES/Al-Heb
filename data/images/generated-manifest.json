@@ -2,7 +2,7 @@
   "version": 1,
   "note": "APPROVED generated images only (see docs/images/RIGHTS.md). Files live in assets/img/gen/. Built by tools/images/ingest.mjs; do not edit by hand.",
   "dir": "gen",
-  "count": 2861,
+  "count": 2892,
   "images": {
     "AWD_pin_01": {
       "w": 1024,
@@ -4433,6 +4433,24 @@
         {
           "edge": 1536,
           "file": "FINALE_set_07.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "FINALE_set_09": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "FINALE_set_09.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "FINALE_set_09.1536.webp",
           "w": 1536,
           "h": 1024
         }
@@ -23218,6 +23236,24 @@
         }
       ]
     },
+    "J-0661": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0661.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0661.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
     "J-0662": {
       "w": 1024,
       "h": 1024,
@@ -23614,6 +23650,24 @@
         }
       ]
     },
+    "J-0686": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0686.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "J-0686.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
     "J-0688": {
       "w": 1536,
       "h": 1024,
@@ -23686,6 +23740,42 @@
         }
       ]
     },
+    "J-0695": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0695.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "J-0695.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0696": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0696.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "J-0696.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
     "J-0698": {
       "w": 1536,
       "h": 1024,
@@ -23699,6 +23789,24 @@
         {
           "edge": 1536,
           "file": "J-0698.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0699": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0699.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "J-0699.1536.webp",
           "w": 1536,
           "h": 1024
         }
@@ -23736,6 +23844,402 @@
           "edge": 1536,
           "file": "J-0704.1536.webp",
           "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0710": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0710.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "J-0710.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0713": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0713.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "J-0713.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0714": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0714.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "J-0714.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0715": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0715.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "J-0715.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0716": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0716.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "J-0716.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0717": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0717.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "J-0717.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0718": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0718.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "J-0718.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0719": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0719.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "J-0719.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0720": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0720.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "J-0720.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0721": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0721.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "J-0721.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0722": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0722.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "J-0722.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0723": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0723.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "J-0723.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0724": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0724.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "J-0724.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0725": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0725.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "J-0725.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0726": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0726.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "J-0726.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0727": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0727.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "J-0727.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0728": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0728.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "J-0728.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0729": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0729.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "J-0729.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0772": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0772.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0772.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0775": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0775.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0775.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0777": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0777.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0777.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "J-0778": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0778.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0778.1024.webp",
+          "w": 1024,
           "h": 1024
         }
       ]
@@ -34222,6 +34726,24 @@
         }
       ]
     },
+    "OBJ_body_09": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "OBJ_body_09.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "OBJ_body_09.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
     "OBJ_body_10": {
       "w": 1024,
       "h": 1024,
@@ -34636,6 +35158,24 @@
         }
       ]
     },
+    "OBJ_family_03": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "OBJ_family_03.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "OBJ_family_03.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
     "OBJ_family_04": {
       "w": 1024,
       "h": 1024,
@@ -34919,6 +35459,24 @@
         {
           "edge": 1024,
           "file": "OBJ_fruit_10.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "OBJ_rooms_01": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "OBJ_rooms_01.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "OBJ_rooms_01.1024.webp",
           "w": 1024,
           "h": 1024
         }
@@ -52467,6 +53025,7 @@
     "OBJ_body_05": "Square 1024x1024 image: a leg in a stride. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank.",
     "OBJ_body_06": "Square 1024x1024 image: a back with a backpack. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank.",
     "OBJ_body_08": "Square 1024x1024 image: a shoulder with a bag strap. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank.",
+    "OBJ_body_09": "Square 1024x1024 image: a stomach with hands on it. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank.",
     "OBJ_body_10": "Square 1024x1024 image: a knee with a bandage. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank.",
     "OBJ_dishes_01": "Square 1024x1024 image: a schnitzel with a lemon wedge. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank.",
     "OBJ_dishes_02": "Square 1024x1024 image: a pita sandwich of eggplant and egg. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank.",
@@ -52490,6 +53049,7 @@
     "OBJ_drinks_10": "Square 1024x1024 image: a small Turkish coffee cup on a saucer. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank.",
     "OBJ_family_01": "Square 1024x1024 image: a grandmother with grey hair knitting. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank.",
     "OBJ_family_02": "Square 1024x1024 image: a grandfather with a cane and a hat. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank.",
+    "OBJ_family_03": "Square 1024x1024 image: a teenage brother with headphones. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank.",
     "OBJ_family_04": "Square 1024x1024 image: a young sister with a ponytail. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank.",
     "OBJ_family_05": "Square 1024x1024 image: a baby in a blanket. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank.",
     "OBJ_family_06": "Square 1024x1024 image: an aunt with a bright scarf. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank.",
@@ -52506,6 +53066,7 @@
     "OBJ_fruit_08": "Square 1024x1024 image: a date branch with dates. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank.",
     "OBJ_fruit_09": "Square 1024x1024 image: half a melon with seeds. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank.",
     "OBJ_fruit_10": "Square 1024x1024 image: a pair of cherries. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank.",
+    "OBJ_rooms_01": "Square 1024x1024 image: a sofa with two cushions. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank.",
     "OBJ_vegetables_01": "Square 1024x1024 image: a cucumber. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank.",
     "OBJ_vegetables_02": "Square 1024x1024 image: a tomato on the vine. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank.",
     "OBJ_vegetables_03": "Square 1024x1024 image: an onion. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank.",

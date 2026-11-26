@@ -16033,6 +16033,176 @@
       "status": "approved",
       "at": "2026-11-26T23:05:39.769Z",
       "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "FINALE_set_09": {
+      "status": "approved",
+      "at": "2026-11-26T23:49:37.940Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "J-0661": {
+      "status": "approved",
+      "at": "2026-11-26T23:49:37.940Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "J-0686": {
+      "status": "approved",
+      "at": "2026-11-26T23:49:37.940Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "J-0695": {
+      "status": "approved",
+      "at": "2026-11-26T23:49:37.940Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "J-0696": {
+      "status": "approved",
+      "at": "2026-11-26T23:49:37.940Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "J-0699": {
+      "status": "approved",
+      "at": "2026-11-26T23:49:37.940Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "J-0710": {
+      "status": "approved",
+      "at": "2026-11-26T23:49:37.940Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "J-0713": {
+      "status": "approved",
+      "at": "2026-11-26T23:49:37.940Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "J-0714": {
+      "status": "approved",
+      "at": "2026-11-26T23:49:37.940Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "J-0715": {
+      "status": "approved",
+      "at": "2026-11-26T23:49:37.940Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "J-0716": {
+      "status": "approved",
+      "at": "2026-11-26T23:49:37.940Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "J-0717": {
+      "status": "approved",
+      "at": "2026-11-26T23:49:37.940Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive",
+      "forcedDespite": [
+        "contains_text"
+      ]
+    },
+    "J-0718": {
+      "status": "approved",
+      "at": "2026-11-26T23:49:37.940Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "J-0719": {
+      "status": "approved",
+      "at": "2026-11-26T23:49:37.940Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "J-0720": {
+      "status": "approved",
+      "at": "2026-11-26T23:49:37.940Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "J-0721": {
+      "status": "approved",
+      "at": "2026-11-26T23:49:37.940Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "J-0722": {
+      "status": "approved",
+      "at": "2026-11-26T23:49:37.940Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive",
+      "forcedDespite": [
+        "contains_text"
+      ]
+    },
+    "J-0723": {
+      "status": "approved",
+      "at": "2026-11-26T23:49:37.940Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "J-0724": {
+      "status": "approved",
+      "at": "2026-11-26T23:49:37.940Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "J-0725": {
+      "status": "approved",
+      "at": "2026-11-26T23:49:37.940Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive",
+      "forcedDespite": [
+        "contains_text"
+      ]
+    },
+    "J-0726": {
+      "status": "approved",
+      "at": "2026-11-26T23:49:37.940Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive",
+      "forcedDespite": [
+        "contains_text"
+      ]
+    },
+    "J-0727": {
+      "status": "approved",
+      "at": "2026-11-26T23:49:37.940Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "J-0728": {
+      "status": "approved",
+      "at": "2026-11-26T23:49:37.940Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "J-0729": {
+      "status": "approved",
+      "at": "2026-11-26T23:49:37.940Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "J-0772": {
+      "status": "approved",
+      "at": "2026-11-26T23:49:37.940Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "J-0775": {
+      "status": "approved",
+      "at": "2026-11-26T23:49:37.940Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "J-0777": {
+      "status": "approved",
+      "at": "2026-11-26T23:49:37.940Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "J-0778": {
+      "status": "approved",
+      "at": "2026-11-26T23:49:37.940Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive",
+      "forcedDespite": [
+        "contains_text"
+      ]
+    },
+    "OBJ_body_09": {
+      "status": "approved",
+      "at": "2026-11-26T23:49:37.940Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "OBJ_family_03": {
+      "status": "approved",
+      "at": "2026-11-26T23:49:37.940Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "OBJ_rooms_01": {
+      "status": "approved",
+      "at": "2026-11-26T23:49:37.940Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
     }
   }
 }

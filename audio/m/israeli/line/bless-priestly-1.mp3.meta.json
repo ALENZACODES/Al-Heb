@@ -1,8 +1,8 @@
 {
  "status": "tts",
  "source": "tts:google",
- "engine": "google",
- "voiceId": "he-IL-Chirp3-HD-Charon",
+ "engine": "stitched-from-word-clips",
+ "voiceId": null,
  "tradition": "israeli",
  "inputText": "יְבָרֶכְךָ אֲדֹנָי וְיִשְׁמְרֶךָ׃",
  "inputSha256": "de1631a3125be7fd2343dfc6e97b36f0d2ea176f1fbda5c62e96943c2845054c",
@@ -16,9 +16,5 @@
   "audio/m/israeli/word/adon-olam-1-w69.mp3",
   "audio/m/israeli/word/bless-priestly-1-w3.mp3"
  ],
- "copiedFrom": "audio/m/israeli/prayer/bless-priestly-1.mp3",
- "spokenText": "יברכך אדני וישמרך",
- "renderedAt": "2026-11-26T07:19:09.000Z",
- "speakingRate": 1.0,
- "checkedBy": "four-listener ASR check (docs/audio/multi4), machine check only"
+ "copiedFrom": "audio/m/israeli/prayer/bless-priestly-1.mp3"
 }

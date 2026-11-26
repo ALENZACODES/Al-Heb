@@ -94,6 +94,7 @@ def main():
     ap.add_argument('--takes-root', required=True)
     ap.add_argument('--out', default=os.path.join(ROOT, 'docs', 'audio', 'multi4', 'REPLACEMENTS.md'))
     ap.add_argument('--phon', nargs='*', default=[], help='phon4 hearings (originals and takes): adds the phonetic gate')
+    ap.add_argument('--extra', nargs='*', default=[], help='extra checks (mms-align, w2v-he, google)')
     ap.add_argument('--apply', action='store_true')
     a = ap.parse_args()
     q = {o['file']: o for o in json.load(open(a.queue, encoding='utf-8'))}
@@ -111,6 +112,20 @@ def main():
     for g in ('f', 'm'):
         ps = [N.pace(os.path.join(ROOT, k), v['want']) for k, v in q.items() if v['kind'] == 'sentence' and k.split('/')[1] == g and k not in flagged and not N.is_torah(k)]
         ref[g] = N.line_reference([x for x in ps if x])
+    import round_report as RR
+    WR = collections.defaultdict(dict)                    # word hearings by path and model (clips and takes)
+    for r in [x for v in H.values() for x in v] + [x for v in T.values() for hs in v.values() for x in hs]:
+        WR[r['file']][r['model']] = r
+    PR = collections.defaultdict(dict)                    # phonetic hearings, rescored
+    XR = collections.defaultdict(dict)                    # extra checks
+    for fn in a.extra:
+        for l in open(fn, encoding='utf-8'):
+            r = json.loads(l); XR[r['file']][r['model']] = r
+
+    def unconfirmed(path, o):
+        if not WR.get(path) or not PR.get(path):
+            return None
+        return sum(not v['ok'] for v in RR.verdicts(o, WR[path], PR[path], XR.get(path, {})))
     PH = collections.defaultdict(dict)
     for fn in a.phon:
         for l in open(fn, encoding='utf-8'):
@@ -119,6 +134,7 @@ def main():
             if orig in q and r.get('ipa') is not None:
                 r = phon4.rescore(r, q[orig]['want'])          # corrected expected sounds, Israeli R
             PH[r['file']][r['model']] = {w['word']: w['match'] for w in r['words']}
+            PR[r['file']][r['model']] = r
 
     def phon_mean(path):
         """mean share of sounds heard over the phonetic checks (single words), or None"""
@@ -170,10 +186,17 @@ def main():
                 if good and mt is not None and mo is not None and mt <= mo + (0.1 if orig_ok else 0):
                     good = False; notes.append(f'{tid}: phonetic checks hear it no better than the clip ({mt:.2f} vs {mo:.2f})')
             else:
-                good = key[:2] < key0[:2] and len(s['b3']) <= len(s0['b3']) and len(s['b2']) <= len(s0['b2']) + len(s0['b3'])
-                if not good:
-                    notes.append(f"{tid}: word checks no better ({len(s['b3'])}+{len(s['b2'])} vs {len(s0['b3'])}+{len(s0['b2'])} misheard by 3+/2)")
-            if good and PH:
+                # a line: the same rule as the accuracy figure (round_report.verdicts), over every check that heard it.
+                # The take must leave fewer unconfirmed words than the clip.
+                ut, uo = unconfirmed('takes/' + f[:-4] + '/' + tid + '.mp3', o), unconfirmed(f, o)
+                if ut is None:
+                    good = False; notes.append(f'{tid}: not heard by every kind of check yet')
+                elif uo is not None and ut >= uo:
+                    good = False; notes.append(f'{tid}: {ut} unconfirmed words vs {uo} in the clip')
+                else:
+                    good = True; key = (ut,) + key[1:]
+                    s = dict(s, unconfirmed=f'{ut} (clip {uo})')
+            if good and PH and o['kind'] == 'word':
                 po, pt_ = phon_ok(f), phon_ok('takes/' + f[:-4] + '/' + tid + '.mp3')
                 if pt_ is None:
                     good = False; notes.append(f'{tid}: no phonetic hearing yet')

@@ -2,19 +2,19 @@
  "status": "tts",
  "source": "tts:google",
  "engine": "google",
- "voiceId": "he-IL-Chirp3-HD-Kore",
+ "voiceId": "he-IL-Chirp3-HD-Aoede",
  "tradition": "israeli",
  "inputText": "בְּכָל־יוֹם אֲבָרֲכֶךָּ וַאֲהַלְלָה שִׁמְךָ לְעוֹלָם וָעֶד׃",
  "inputSha256": "c441cc0c7dded29e17b99f6fefe3a2350cbfa0ab5fb08b09115e3d4fa05c4833",
  "ingestedAt": "2026-11-12T02:12:41.473Z",
  "licence": "customer-owned",
  "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
- "renderedAt": "2026-11-26T03:24:47.000Z",
+ "renderedAt": "2026-11-12T02:12:41.473Z",
  "redistributionCleared": false,
- "spokenText": "בכל יום אברכך ואהללה שמך לעולם ועד",
+ "spokenText": "בְּכָל יוֹם אֲבָרֲכֶךָּ וַאֲהַלְלָה שִׁמְךָ לְעוֹלָם וָעֶד",
  "normalized": true,
  "inputTextKind": "hebrew",
- "speakingRate": 1.0,
+ "speakingRate": 0.9,
  "review": {
   "phonemeWeak": [],
   "wordIssues": [
@@ -32,7 +32,5 @@
   "voiceId": "he-IL-Wavenet-A",
   "engine": "google-tts standard",
   "renderedAt": null
- },
- "checkedBy": "four-listener ASR check (docs/audio/multi4), machine check only",
- "tempo": 0.993
+ }
 }

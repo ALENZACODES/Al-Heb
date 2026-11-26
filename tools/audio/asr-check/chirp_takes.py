@@ -118,6 +118,8 @@ def main():
                                       '(s<i>, s<i>-90, s<i>-a other voice, s<i>-car inside the carrier phrase)')
     ap.add_argument('--respell-lines', help='JSON {clip: [problem words]}: the clip with those words respelled for the voice '
                                             '(w-rs WaveNet pointed, c-rspl-80 Chirp unpointed at 0.8, c-rs Chirp for single words)')
+    ap.add_argument('--words5', help='round5-words.json: single problem words of stitched lines, in the WaveNet voice the '
+                                     'lines are stitched from (w as written, w-rs respelled, w-rs-car in a carrier phrase)')
     ap.add_argument('--project', default=subprocess.run(['gcloud', 'config', 'get-value', 'project'], capture_output=True, text=True).stdout.strip())
     a = ap.parse_args()
     probs = json.load(open(a.problems, encoding='utf-8')) if a.problems else {}
@@ -126,6 +128,26 @@ def main():
     want = {o['file']: re.sub(r'\s*\(cut from:.*\)\s*$', '', o['want']) for o in json.load(open(a.queue, encoding='utf-8'))}
     files = [l.strip() for l in open(a.list, encoding='utf-8') if l.startswith('audio/')]
     tts = TTS(a.project)
+    if a.words5:
+        items = json.load(open(a.words5, encoding='utf-8'))['items']
+        for n, (key, it) in enumerate(sorted(items.items()), 1):
+            wavenet = VOICES[it['g']][1]
+            w = speakable(it['word']); rs = respell(it['word'])
+            d = os.path.join(a.out, 'w5', it['g'], it['slug'])
+            os.makedirs(d, exist_ok=True)
+            json.dump(it, open(os.path.join(d, 'want.json'), 'w', encoding='utf-8'), ensure_ascii=False)
+            plan = [('w', w, 1.0), ('w-car', 'הַמִּלָּה, ' + w + '.', 1.0)]
+            if rs != it['word']:
+                plan += [('w-rs', rs, 1.0), ('w-rs-car', 'הַמִּלָּה, ' + rs + '.', 1.0)]
+            for tid, text, rate in plan:
+                dst = os.path.join(d, tid + '.mp3')
+                if not os.path.exists(dst):
+                    try:
+                        open(dst, 'wb').write(tts.synth(text, wavenet, rate))
+                    except Exception as e:
+                        print(f'  {key} {tid}: {e}', flush=True)
+            print(f'[{n}/{len(items)}] {key}', flush=True)
+        return
     print(f'project {a.project}: {len(files)} clips', flush=True)
     for n, f in enumerate(files, 1):
         g = f.split('/')[1]

@@ -15957,6 +15957,82 @@
       "status": "rejected",
       "at": "2026-11-26T22:19:03.395Z",
       "note": "Ari is drawn as a young boy. Redo with adult Ari (character sheet) drawing a heart shape in the air with a finger."
+    },
+    "HEAD_one_07": {
+      "status": "approved",
+      "at": "2026-11-26T23:05:39.769Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive",
+      "forcedDespite": [
+        "contains_text"
+      ]
+    },
+    "HEAD_one_10": {
+      "status": "approved",
+      "at": "2026-11-26T23:05:39.769Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "J-0679": {
+      "status": "approved",
+      "at": "2026-11-26T23:05:39.769Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "J-0683": {
+      "status": "approved",
+      "at": "2026-11-26T23:05:39.769Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "J-0684": {
+      "status": "approved",
+      "at": "2026-11-26T23:05:39.769Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "J-0691": {
+      "status": "approved",
+      "at": "2026-11-26T23:05:39.769Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "J-0698": {
+      "status": "approved",
+      "at": "2026-11-26T23:05:39.769Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "J-0703": {
+      "status": "approved",
+      "at": "2026-11-26T23:05:39.769Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "J-0704": {
+      "status": "approved",
+      "at": "2026-11-26T23:05:39.769Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive",
+      "forcedDespite": [
+        "contains_text"
+      ]
+    },
+    "OBJ_body_03": {
+      "status": "approved",
+      "at": "2026-11-26T23:05:39.769Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "OBJ_body_05": {
+      "status": "approved",
+      "at": "2026-11-26T23:05:39.769Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "OBJ_body_08": {
+      "status": "approved",
+      "at": "2026-11-26T23:05:39.769Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "OBJ_body_10": {
+      "status": "approved",
+      "at": "2026-11-26T23:05:39.769Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "OBJ_family_06": {
+      "status": "approved",
+      "at": "2026-11-26T23:05:39.769Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
     }
   }
 }

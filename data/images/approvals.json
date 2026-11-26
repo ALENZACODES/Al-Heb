@@ -35,11 +35,6 @@
       "at": "2026-11-06T12:18:27.982Z",
       "note": "Owner approval for reviewer site"
     },
-    "CHAR_ari_sheet": {
-      "status": "approved",
-      "at": "2026-11-06T12:18:27.982Z",
-      "note": "Owner approval for reviewer site"
-    },
     "CHAR_ari_speak": {
       "status": "approved",
       "at": "2026-11-06T12:18:27.982Z",
@@ -61,11 +56,6 @@
       "note": "Owner approval for reviewer site"
     },
     "CHAR_noa_neutral": {
-      "status": "approved",
-      "at": "2026-11-06T12:18:27.982Z",
-      "note": "Owner approval for reviewer site"
-    },
-    "CHAR_noa_sheet": {
       "status": "approved",
       "at": "2026-11-06T12:18:27.982Z",
       "note": "Owner approval for reviewer site"
@@ -1216,11 +1206,6 @@
       "note": "Owner approval for reviewer site"
     },
     "TEST_consistency_1": {
-      "status": "approved",
-      "at": "2026-11-06T12:18:27.982Z",
-      "note": "Owner approval for reviewer site"
-    },
-    "TEST_consistency_2": {
       "status": "approved",
       "at": "2026-11-06T12:18:27.982Z",
       "note": "Owner approval for reviewer site"
@@ -4124,30 +4109,6 @@
       "status": "approved",
       "at": "2026-11-06T12:18:27.982Z",
       "note": "Owner approval for reviewer site"
-    },
-    "BG_cafe": {
-      "status": "approved",
-      "at": "2026-11-06T12:21:14.615Z",
-      "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
-      "forcedDespite": [
-        "contains_text"
-      ]
-    },
-    "BG_jerusalem": {
-      "status": "approved",
-      "at": "2026-11-06T12:21:14.615Z",
-      "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
-      "forcedDespite": [
-        "contains_text"
-      ]
-    },
-    "CHAR_ari_telaviv": {
-      "status": "approved",
-      "at": "2026-11-06T12:21:14.615Z",
-      "note": "Eye-checked one by one: no readable text, letters or numerals; detector flagged grids/lines/textures",
-      "forcedDespite": [
-        "contains_text"
-      ]
     },
     "L01_alef_print_s1": {
       "status": "approved",
@@ -7142,6 +7103,523 @@
       "forcedDespite": [
         "contains_text"
       ]
+    },
+    "VOC_holidays_01": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)"
+    },
+    "VOC_holidays_02": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)"
+    },
+    "VOC_holidays_03": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)",
+      "forcedDespite": [
+        "contains_text"
+      ]
+    },
+    "VOC_holidays_04": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)",
+      "forcedDespite": [
+        "contains_text"
+      ]
+    },
+    "VOC_holidays_05": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)",
+      "forcedDespite": [
+        "contains_text"
+      ]
+    },
+    "VOC_holidays_06": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)"
+    },
+    "VOC_holidays_07": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)"
+    },
+    "VOC_holidays_08": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)",
+      "forcedDespite": [
+        "contains_text"
+      ]
+    },
+    "VOC_holidays_09": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)"
+    },
+    "VOC_prayer_actions_02": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)"
+    },
+    "VOC_prayer_actions_03": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)"
+    },
+    "VOC_shabbat_01": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)"
+    },
+    "VOC_shabbat_02": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)"
+    },
+    "VOC_shabbat_03": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)"
+    },
+    "VOC_shabbat_04": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)"
+    },
+    "VOC_shabbat_05": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)"
+    },
+    "VOC_shabbat_06": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)"
+    },
+    "VOC_shabbat_07": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)"
+    },
+    "VOC_shabbat_08": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)"
+    },
+    "VOC_shabbat_09": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)"
+    },
+    "VOC_synagogue_03": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)"
+    },
+    "VOC_synagogue_04": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)"
+    },
+    "VOC_synagogue_05": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)"
+    },
+    "VOC_synagogue_07": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)"
+    },
+    "VOC_synagogue_08": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)"
+    },
+    "VOC_synagogue_09": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)"
+    },
+    "VOC_synagogue_10": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)"
+    },
+    "PRAY_track_01": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)"
+    },
+    "NUM_tens_01": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)"
+    },
+    "HERO_night_08": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)",
+      "forcedDespite": [
+        "contains_text"
+      ]
+    },
+    "HERO_night_10": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)",
+      "forcedDespite": [
+        "contains_text"
+      ]
+    },
+    "HERO_psalms1_03": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)"
+    },
+    "HERO_psalms1_04": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)"
+    },
+    "HERO_psalms1_05": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)"
+    },
+    "HERO_psalms1_10": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)"
+    },
+    "HERO_psalms2_04": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)"
+    },
+    "HERO_psalms2_05": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)",
+      "forcedDespite": [
+        "contains_text"
+      ]
+    },
+    "HERO_psalms2_07": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)"
+    },
+    "PLACE_galilee_03": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)"
+    },
+    "PLACE_galilee_04": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)"
+    },
+    "PLACE_galilee_05": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)"
+    },
+    "PLACE_haifa_02": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)"
+    },
+    "PLACE_haifa_03": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)",
+      "forcedDespite": [
+        "contains_text"
+      ]
+    },
+    "PLACE_haifa_05": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)"
+    },
+    "PLACE_haifa_06": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)"
+    },
+    "PLACE_haifa_07": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)"
+    },
+    "PLACE_haifa_08": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)"
+    },
+    "PLACE_haifa_09": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)",
+      "forcedDespite": [
+        "contains_text"
+      ]
+    },
+    "PLACE_jerusalem_02": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)"
+    },
+    "PLACE_jerusalem_04": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)",
+      "forcedDespite": [
+        "contains_text"
+      ]
+    },
+    "PLACE_jerusalem_05": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)",
+      "forcedDespite": [
+        "contains_text"
+      ]
+    },
+    "PLACE_jerusalem_06": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)",
+      "forcedDespite": [
+        "contains_text"
+      ]
+    },
+    "PLACE_jerusalem_09": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)"
+    },
+    "PLACE_telaviv_05": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)"
+    },
+    "PLACE_telaviv_08": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)"
+    },
+    "I-01-img1": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)",
+      "forcedDespite": [
+        "contains_text"
+      ]
+    },
+    "I-01-img2": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)"
+    },
+    "I-02-img1": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)"
+    },
+    "I-02-img2": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)",
+      "forcedDespite": [
+        "contains_text"
+      ]
+    },
+    "I-03-img1": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)",
+      "forcedDespite": [
+        "contains_text"
+      ]
+    },
+    "I-03-img2": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)"
+    },
+    "I-04-img1": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)",
+      "forcedDespite": [
+        "contains_text"
+      ]
+    },
+    "I-04-img2": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)"
+    },
+    "I-05-img1": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)",
+      "forcedDespite": [
+        "contains_text"
+      ]
+    },
+    "I-05-img2": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)"
+    },
+    "I-06-img1": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)",
+      "forcedDespite": [
+        "contains_text"
+      ]
+    },
+    "I-06-img2": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)"
+    },
+    "I-07-img1": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)"
+    },
+    "I-07-img2": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)"
+    },
+    "I-08-img1": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)",
+      "forcedDespite": [
+        "contains_text"
+      ]
+    },
+    "I-08-img2": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)",
+      "forcedDespite": [
+        "contains_text"
+      ]
+    },
+    "I-09-img1": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)",
+      "forcedDespite": [
+        "contains_text"
+      ]
+    },
+    "I-09-img2": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)"
+    },
+    "I-10-img2": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)"
+    },
+    "I-11-img1": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)"
+    },
+    "I-11-img2": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)"
+    },
+    "I-12-img1": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)"
+    },
+    "SCN_shabbat_04": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)",
+      "forcedDespite": [
+        "contains_text"
+      ]
+    },
+    "SCN_torah_05": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)"
+    },
+    "SCN_torah_07": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)"
+    },
+    "BG_cafe": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)",
+      "forcedDespite": [
+        "contains_text"
+      ]
+    },
+    "BG_jerusalem": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)"
+    },
+    "CHAR_ari_sheet": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)"
+    },
+    "CHAR_ari_telaviv": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)"
+    },
+    "CHAR_noa_sheet": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)"
+    },
+    "TEST_consistency_2": {
+      "status": "approved",
+      "at": "2026-11-26T16:58:23.841Z",
+      "note": "Owner-requested review: picture checked by eye against its prompt; no visible text; any OCR text flag was a false positive (patterns, stone, fabric)",
+      "forcedDespite": [
+        "contains_text"
+      ]
+    },
+    "VOC_synagogue_06": {
+      "status": "rejected",
+      "at": "2026-11-26T16:58:24.058Z",
+      "note": "Wrong subject: shows the biblical Ark of the Covenant with winged cherubim under a canopy, not a synagogue Torah ark (a cabinet behind a parochet curtain). Redo."
+    },
+    "I-10-img1": {
+      "status": "rejected",
+      "at": "2026-11-26T16:58:24.253Z",
+      "note": "Wrong setting: a robed, long-haired figure preaching outdoors to a crowd in ancient dress (reads as a New Testament scene), not a person at the front of a synagogue congregation. Redo."
+    },
+    "I-12-img2": {
+      "status": "rejected",
+      "at": "2026-11-26T16:58:24.443Z",
+      "note": "Off brief: two whole men in ancient robes instead of a close-up of two hands exchanging coins and a paper bag of fruit; period costume does not fit the modern market lesson. Redo."
     }
   }
 }

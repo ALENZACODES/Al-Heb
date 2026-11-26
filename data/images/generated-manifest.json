@@ -2,7 +2,7 @@
   "version": 1,
   "note": "APPROVED generated images only (see docs/images/RIGHTS.md). Files live in assets/img/gen/. Built by tools/images/ingest.mjs; do not edit by hand.",
   "dir": "gen",
-  "count": 1253,
+  "count": 1333,
   "images": {
     "BADGE_01": {
       "w": 512,
@@ -77,38 +77,38 @@
       ]
     },
     "BG_cafe": {
-      "w": 1659,
-      "h": 948,
+      "w": 1536,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
           "file": "BG_cafe.800.webp",
           "w": 800,
-          "h": 457
+          "h": 533
         },
         {
-          "edge": 1600,
-          "file": "BG_cafe.1600.webp",
-          "w": 1600,
-          "h": 914
+          "edge": 1536,
+          "file": "BG_cafe.1536.webp",
+          "w": 1536,
+          "h": 1024
         }
       ]
     },
     "BG_jerusalem": {
-      "w": 1659,
-      "h": 948,
+      "w": 1536,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
           "file": "BG_jerusalem.800.webp",
           "w": 800,
-          "h": 457
+          "h": 533
         },
         {
-          "edge": 1600,
-          "file": "BG_jerusalem.1600.webp",
-          "w": 1600,
-          "h": 914
+          "edge": 1536,
+          "file": "BG_jerusalem.1536.webp",
+          "w": 1536,
+          "h": 1024
         }
       ]
     },
@@ -239,20 +239,20 @@
       ]
     },
     "CHAR_ari_sheet": {
-      "w": 1254,
-      "h": 1254,
+      "w": 1536,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
           "file": "CHAR_ari_sheet.800.webp",
           "w": 800,
-          "h": 800
+          "h": 533
         },
         {
-          "edge": 1254,
-          "file": "CHAR_ari_sheet.1254.webp",
-          "w": 1254,
-          "h": 1254
+          "edge": 1536,
+          "file": "CHAR_ari_sheet.1536.webp",
+          "w": 1536,
+          "h": 1024
         }
       ]
     },
@@ -293,8 +293,8 @@
       ]
     },
     "CHAR_ari_telaviv": {
-      "w": 1254,
-      "h": 1254,
+      "w": 1024,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
@@ -303,10 +303,10 @@
           "h": 800
         },
         {
-          "edge": 1254,
-          "file": "CHAR_ari_telaviv.1254.webp",
-          "w": 1254,
-          "h": 1254
+          "edge": 1024,
+          "file": "CHAR_ari_telaviv.1024.webp",
+          "w": 1024,
+          "h": 1024
         }
       ]
     },
@@ -365,20 +365,20 @@
       ]
     },
     "CHAR_noa_sheet": {
-      "w": 1254,
-      "h": 1254,
+      "w": 1536,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
           "file": "CHAR_noa_sheet.800.webp",
           "w": 800,
-          "h": 800
+          "h": 533
         },
         {
-          "edge": 1254,
-          "file": "CHAR_noa_sheet.1254.webp",
-          "w": 1254,
-          "h": 1254
+          "edge": 1536,
+          "file": "CHAR_noa_sheet.1536.webp",
+          "w": 1536,
+          "h": 1024
         }
       ]
     },
@@ -3730,6 +3730,24 @@
         }
       ]
     },
+    "HERO_night_08": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "HERO_night_08.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "HERO_night_08.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
     "HERO_night_09": {
       "w": 512,
       "h": 293,
@@ -3739,6 +3757,24 @@
           "file": "HERO_night_09.512.webp",
           "w": 512,
           "h": 293
+        }
+      ]
+    },
+    "HERO_night_10": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "HERO_night_10.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "HERO_night_10.1536.webp",
+          "w": 1536,
+          "h": 1024
         }
       ]
     },
@@ -3763,6 +3799,60 @@
           "file": "HERO_psalms1_02.512.webp",
           "w": 512,
           "h": 293
+        }
+      ]
+    },
+    "HERO_psalms1_03": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "HERO_psalms1_03.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "HERO_psalms1_03.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "HERO_psalms1_04": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "HERO_psalms1_04.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "HERO_psalms1_04.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "HERO_psalms1_05": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "HERO_psalms1_05.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "HERO_psalms1_05.1536.webp",
+          "w": 1536,
+          "h": 1024
         }
       ]
     },
@@ -3814,6 +3904,24 @@
         }
       ]
     },
+    "HERO_psalms1_10": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "HERO_psalms1_10.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "HERO_psalms1_10.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
     "HERO_psalms2_01": {
       "w": 512,
       "h": 292,
@@ -3847,6 +3955,60 @@
           "file": "HERO_psalms2_03.512.webp",
           "w": 512,
           "h": 293
+        }
+      ]
+    },
+    "HERO_psalms2_04": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "HERO_psalms2_04.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "HERO_psalms2_04.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "HERO_psalms2_05": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "HERO_psalms2_05.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "HERO_psalms2_05.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "HERO_psalms2_07": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "HERO_psalms2_07.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "HERO_psalms2_07.1536.webp",
+          "w": 1536,
+          "h": 1024
         }
       ]
     },
@@ -3979,6 +4141,402 @@
           "file": "HERO_week_08.512.webp",
           "w": 512,
           "h": 293
+        }
+      ]
+    },
+    "I-01-img1": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "I-01-img1.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "I-01-img1.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "I-01-img2": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "I-01-img2.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "I-01-img2.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "I-02-img1": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "I-02-img1.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "I-02-img1.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "I-02-img2": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "I-02-img2.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "I-02-img2.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "I-03-img1": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "I-03-img1.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "I-03-img1.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "I-03-img2": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "I-03-img2.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "I-03-img2.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "I-04-img1": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "I-04-img1.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "I-04-img1.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "I-04-img2": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "I-04-img2.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "I-04-img2.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "I-05-img1": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "I-05-img1.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "I-05-img1.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "I-05-img2": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "I-05-img2.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "I-05-img2.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "I-06-img1": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "I-06-img1.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "I-06-img1.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "I-06-img2": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "I-06-img2.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "I-06-img2.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "I-07-img1": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "I-07-img1.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "I-07-img1.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "I-07-img2": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "I-07-img2.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "I-07-img2.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "I-08-img1": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "I-08-img1.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "I-08-img1.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "I-08-img2": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "I-08-img2.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "I-08-img2.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "I-09-img1": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "I-09-img1.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "I-09-img1.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "I-09-img2": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "I-09-img2.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "I-09-img2.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "I-10-img2": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "I-10-img2.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "I-10-img2.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "I-11-img1": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "I-11-img1.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "I-11-img1.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "I-11-img2": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "I-11-img2.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "I-11-img2.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "I-12-img1": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "I-12-img1.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "I-12-img1.1536.webp",
+          "w": 1536,
+          "h": 1024
         }
       ]
     },
@@ -12880,6 +13438,24 @@
         }
       ]
     },
+    "NUM_tens_01": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "NUM_tens_01.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "NUM_tens_01.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
     "NUM_tens_02": {
       "w": 1254,
       "h": 1254,
@@ -13822,6 +14398,60 @@
         }
       ]
     },
+    "PLACE_galilee_03": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "PLACE_galilee_03.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "PLACE_galilee_03.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "PLACE_galilee_04": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "PLACE_galilee_04.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "PLACE_galilee_04.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "PLACE_galilee_05": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "PLACE_galilee_05.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "PLACE_galilee_05.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
     "PLACE_galilee_06": {
       "w": 512,
       "h": 293,
@@ -13858,6 +14488,42 @@
         }
       ]
     },
+    "PLACE_haifa_02": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "PLACE_haifa_02.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "PLACE_haifa_02.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "PLACE_haifa_03": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "PLACE_haifa_03.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "PLACE_haifa_03.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
     "PLACE_haifa_04": {
       "w": 512,
       "h": 293,
@@ -13867,6 +14533,96 @@
           "file": "PLACE_haifa_04.512.webp",
           "w": 512,
           "h": 293
+        }
+      ]
+    },
+    "PLACE_haifa_05": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "PLACE_haifa_05.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "PLACE_haifa_05.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "PLACE_haifa_06": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "PLACE_haifa_06.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "PLACE_haifa_06.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "PLACE_haifa_07": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "PLACE_haifa_07.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "PLACE_haifa_07.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "PLACE_haifa_08": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "PLACE_haifa_08.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "PLACE_haifa_08.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "PLACE_haifa_09": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "PLACE_haifa_09.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "PLACE_haifa_09.1536.webp",
+          "w": 1536,
+          "h": 1024
         }
       ]
     },
@@ -13894,6 +14650,24 @@
         }
       ]
     },
+    "PLACE_jerusalem_02": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "PLACE_jerusalem_02.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "PLACE_jerusalem_02.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
     "PLACE_jerusalem_03": {
       "w": 512,
       "h": 293,
@@ -13903,6 +14677,60 @@
           "file": "PLACE_jerusalem_03.512.webp",
           "w": 512,
           "h": 293
+        }
+      ]
+    },
+    "PLACE_jerusalem_04": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "PLACE_jerusalem_04.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "PLACE_jerusalem_04.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "PLACE_jerusalem_05": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "PLACE_jerusalem_05.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "PLACE_jerusalem_05.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "PLACE_jerusalem_06": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "PLACE_jerusalem_06.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "PLACE_jerusalem_06.1536.webp",
+          "w": 1536,
+          "h": 1024
         }
       ]
     },
@@ -13927,6 +14755,24 @@
           "file": "PLACE_jerusalem_08.512.webp",
           "w": 512,
           "h": 293
+        }
+      ]
+    },
+    "PLACE_jerusalem_09": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "PLACE_jerusalem_09.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "PLACE_jerusalem_09.1536.webp",
+          "w": 1536,
+          "h": 1024
         }
       ]
     },
@@ -14182,6 +15028,24 @@
         }
       ]
     },
+    "PLACE_telaviv_05": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "PLACE_telaviv_05.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "PLACE_telaviv_05.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
     "PLACE_telaviv_06": {
       "w": 512,
       "h": 293,
@@ -14203,6 +15067,24 @@
           "file": "PLACE_telaviv_07.512.webp",
           "w": 512,
           "h": 293
+        }
+      ]
+    },
+    "PLACE_telaviv_08": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "PLACE_telaviv_08.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "PLACE_telaviv_08.1536.webp",
+          "w": 1536,
+          "h": 1024
         }
       ]
     },
@@ -14263,6 +15145,78 @@
           "file": "PLACE_tzfat_09.512.webp",
           "w": 512,
           "h": 293
+        }
+      ]
+    },
+    "PRAY_track_01": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "PRAY_track_01.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "PRAY_track_01.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "SCN_shabbat_04": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "SCN_shabbat_04.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "SCN_shabbat_04.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "SCN_torah_05": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "SCN_torah_05.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "SCN_torah_05.1536.webp",
+          "w": 1536,
+          "h": 1024
+        }
+      ]
+    },
+    "SCN_torah_07": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "SCN_torah_07.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "SCN_torah_07.1536.webp",
+          "w": 1536,
+          "h": 1024
         }
       ]
     },
@@ -16259,20 +17213,20 @@
       ]
     },
     "TEST_consistency_2": {
-      "w": 1254,
-      "h": 1254,
+      "w": 1536,
+      "h": 1024,
       "files": [
         {
           "edge": 800,
           "file": "TEST_consistency_2.800.webp",
           "w": 800,
-          "h": 800
+          "h": 533
         },
         {
-          "edge": 1254,
-          "file": "TEST_consistency_2.1254.webp",
-          "w": 1254,
-          "h": 1254
+          "edge": 1536,
+          "file": "TEST_consistency_2.1536.webp",
+          "w": 1536,
+          "h": 1024
         }
       ]
     },
@@ -20686,6 +21640,168 @@
         }
       ]
     },
+    "VOC_holidays_01": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "VOC_holidays_01.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "VOC_holidays_01.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "VOC_holidays_02": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "VOC_holidays_02.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "VOC_holidays_02.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "VOC_holidays_03": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "VOC_holidays_03.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "VOC_holidays_03.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "VOC_holidays_04": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "VOC_holidays_04.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "VOC_holidays_04.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "VOC_holidays_05": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "VOC_holidays_05.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "VOC_holidays_05.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "VOC_holidays_06": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "VOC_holidays_06.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "VOC_holidays_06.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "VOC_holidays_07": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "VOC_holidays_07.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "VOC_holidays_07.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "VOC_holidays_08": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "VOC_holidays_08.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "VOC_holidays_08.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "VOC_holidays_09": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "VOC_holidays_09.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "VOC_holidays_09.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
     "VOC_home_01": {
       "w": 1254,
       "h": 1254,
@@ -21226,6 +22342,204 @@
         }
       ]
     },
+    "VOC_prayer_actions_02": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "VOC_prayer_actions_02.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "VOC_prayer_actions_02.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "VOC_prayer_actions_03": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "VOC_prayer_actions_03.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "VOC_prayer_actions_03.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "VOC_shabbat_01": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "VOC_shabbat_01.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "VOC_shabbat_01.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "VOC_shabbat_02": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "VOC_shabbat_02.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "VOC_shabbat_02.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "VOC_shabbat_03": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "VOC_shabbat_03.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "VOC_shabbat_03.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "VOC_shabbat_04": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "VOC_shabbat_04.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "VOC_shabbat_04.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "VOC_shabbat_05": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "VOC_shabbat_05.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "VOC_shabbat_05.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "VOC_shabbat_06": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "VOC_shabbat_06.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "VOC_shabbat_06.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "VOC_shabbat_07": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "VOC_shabbat_07.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "VOC_shabbat_07.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "VOC_shabbat_08": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "VOC_shabbat_08.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "VOC_shabbat_08.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "VOC_shabbat_09": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "VOC_shabbat_09.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "VOC_shabbat_09.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
     "VOC_shabbat_10": {
       "w": 512,
       "h": 512,
@@ -21271,6 +22585,132 @@
           "file": "VOC_synagogue_02.1254.webp",
           "w": 1254,
           "h": 1254
+        }
+      ]
+    },
+    "VOC_synagogue_03": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "VOC_synagogue_03.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "VOC_synagogue_03.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "VOC_synagogue_04": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "VOC_synagogue_04.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "VOC_synagogue_04.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "VOC_synagogue_05": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "VOC_synagogue_05.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "VOC_synagogue_05.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "VOC_synagogue_07": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "VOC_synagogue_07.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "VOC_synagogue_07.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "VOC_synagogue_08": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "VOC_synagogue_08.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "VOC_synagogue_08.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "VOC_synagogue_09": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "VOC_synagogue_09.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "VOC_synagogue_09.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "VOC_synagogue_10": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "VOC_synagogue_10.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "VOC_synagogue_10.1024.webp",
+          "w": 1024,
+          "h": 1024
         }
       ]
     },
@@ -23527,6 +24967,10 @@
     "PLACE_tzfat_08": "A forest of pines on a ridge (Tzfat & the north).",
     "PLACE_tzfat_09": "A Druze village on a green hill with a market square (no signs) (Tzfat & the north).",
     "PLACE_tzfat_10": "Snow dusting the far northern peak (Hermon) over green valleys (Tzfat & the north).",
+    "PRAY_track_01": "Square scene: a hand covering eyes (Shema).",
+    "SCN_shabbat_04": "Wide 1792x1024 scene: Ari raising the kiddush cup with the family standing around the table. Any other people are simple small figures with plain friendly faces. Match character sheet(s) exactly..",
+    "SCN_torah_05": "Wide 1792x1024 scene: Noa standing at the bimah for an aliyah, one hand touching the scroll edge, tallit on her shoulders. Any other people are simple small figures with plain friendly faces. Match.",
+    "SCN_torah_07": "Wide 1792x1024 scene: Ari and Noa in the pews, a small child between them on tiptoe to see the scroll. Any other people are simple small figures with plain friendly faces. Match character sheet(s).",
     "SHARE_bg_01": "Confetti shapes over the café background (Share-card backgrounds).",
     "SHARE_bg_02": "Gold stars over the synagogue interior (Share-card backgrounds).",
     "SHARE_bg_03": "Pomegranate seeds scattering over cream like confetti (Share-card backgrounds).",
@@ -24005,6 +25449,15 @@
     "VOC_greetings_08": "One centred image: a goodbye wave (lehitraot). No people unless the item is an action.",
     "VOC_greetings_09": "One centred image: a yawn at night (layla tov). No people unless the item is an action.",
     "VOC_greetings_10": "One centred image: morning stretch at a window (boker tov). No people unless the item is an action.",
+    "VOC_holidays_01": "One centred image: apples and honey (Rosh Hashanah). No people unless the item is an action.",
+    "VOC_holidays_02": "One centred image: a shofar on a white cloth (Yom Kippur). No people unless the item is an action.",
+    "VOC_holidays_03": "One centred image: a sukkah with a lulav and etrog (Sukkot). No people unless the item is an action.",
+    "VOC_holidays_04": "One centred image: a nine-branch menorah (Hanukkah). No people unless the item is an action.",
+    "VOC_holidays_05": "One centred image: a seder plate (Passover). No people unless the item is an action.",
+    "VOC_holidays_06": "One centred image: a scroll and a grogger (Purim). No people unless the item is an action.",
+    "VOC_holidays_07": "One centred image: a tree sapling (Tu BiShvat). No people unless the item is an action.",
+    "VOC_holidays_08": "One centred image: a basket of first fruits (Shavuot). No people unless the item is an action.",
+    "VOC_holidays_09": "One centred image: an Israeli flag (Yom HaAtzmaut). No people unless the item is an action.",
     "VOC_home_01": "One centred image: a house. No people unless the item is an action.",
     "VOC_home_02": "One centred image: a door. No people unless the item is an action.",
     "VOC_home_03": "One centred image: a key. No people unless the item is an action.",
@@ -24035,9 +25488,28 @@
     "VOC_numbers_08": "One centred image: eight falafel balls. No people unless the item is an action.",
     "VOC_numbers_09": "One centred image: nine stars. No people unless the item is an action.",
     "VOC_numbers_10": "One centred image: ten fingers held up. No people unless the item is an action.",
+    "VOC_prayer_actions_02": "One centred image: bowing slightly. No people unless the item is an action.",
+    "VOC_prayer_actions_03": "One centred image: covering the eyes with one hand (Shema). No people unless the item is an action.",
+    "VOC_shabbat_01": "One centred image: two candlesticks lit. No people unless the item is an action.",
+    "VOC_shabbat_02": "One centred image: a kiddush cup. No people unless the item is an action.",
+    "VOC_shabbat_03": "One centred image: a challah under its cover. No people unless the item is an action.",
+    "VOC_shabbat_04": "One centred image: a salt dish. No people unless the item is an action.",
+    "VOC_shabbat_05": "One centred image: a white tablecloth. No people unless the item is an action.",
+    "VOC_shabbat_06": "One centred image: a bouquet. No people unless the item is an action.",
+    "VOC_shabbat_07": "One centred image: a wine bottle. No people unless the item is an action.",
+    "VOC_shabbat_08": "One centred image: a challah knife. No people unless the item is an action.",
+    "VOC_shabbat_09": "One centred image: two hands over candles. No people unless the item is an action.",
     "VOC_shabbat_10": "One centred image: a family around the table (small, from above). No people unless the item is an action.",
     "VOC_synagogue_01": "One centred image: a siddur (closed, blank cover). No people unless the item is an action.",
     "VOC_synagogue_02": "One centred image: a Torah scroll. No people unless the item is an action.",
+    "VOC_synagogue_03": "One centred image: a tallit folded. No people unless the item is an action.",
+    "VOC_synagogue_04": "One centred image: a kippah. No people unless the item is an action.",
+    "VOC_synagogue_05": "One centred image: a Torah pointer (yad). No people unless the item is an action.",
+    "VOC_synagogue_06": "One centred image: the ark with its curtain. No people unless the item is an action.",
+    "VOC_synagogue_07": "One centred image: a shofar. No people unless the item is an action.",
+    "VOC_synagogue_08": "One centred image: a bimah. No people unless the item is an action.",
+    "VOC_synagogue_09": "One centred image: a mezuzah. No people unless the item is an action.",
+    "VOC_synagogue_10": "One centred image: a pair of tefillin. No people unless the item is an action.",
     "VOC_transport_01": "One centred image: an airplane. No people unless the item is an action.",
     "VOC_transport_02": "One centred image: a suitcase. No people unless the item is an action.",
     "VOC_transport_03": "One centred image: a passport (blank cover). No people unless the item is an action.",

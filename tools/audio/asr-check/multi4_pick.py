@@ -15,9 +15,10 @@ sys.path.insert(0, HERE)
 import multi4_merge as M   # rescoring (also patches check_lib.score)
 import scan_lines as S
 import chirp_takes as C
+import natural as N
 
 ROOT = os.path.abspath(os.path.join(HERE, '..', '..', '..'))
-ORDER = ['c-pt', 'c-pl', 'c-pt-90', 'c-pl-90', 'w-pt']
+ORDER = ['c-pt', 'c-pt-ph', 'c-pl', 'c-pl-ph', 'c-pt-90', 'c-pl-90', 'w-pt', 'w-pt-ph']
 NAMES = ['ivrit-turbo', 'whisper-v3', 'mms-1b', 'seamless-v2']
 
 
@@ -65,6 +66,10 @@ def main():
             r = json.loads(l)
             m = re.match(r'takes/(.+)/([^/]+)\.mp3$', r['file'])
             T[m.group(1) + '.mp3'][m.group(2)].append(r)
+    ref = {}
+    for g in ('f', 'm'):
+        ps = [N.pace(os.path.join(ROOT, k), v['want']) for k, v in q.items() if v['kind'] == 'sentence' and k.split('/')[1] == g and k not in flagged and not N.is_torah(k)]
+        ref[g] = N.line_reference([x for x in ps if x])
     rows, now = [], datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%dT%H:%M:%S.000Z')
     for f in flagged:
         o = q[f]
@@ -77,12 +82,11 @@ def main():
                 notes.append(f'{tid}: not heard by all four'); continue
             key, s = stats(o['kind'], o['want'], hs)
             src = os.path.join(a.takes_root, 'takes', f[:-4], tid + '.mp3')
-            if torah:
-                if tid.endswith('-90'):
-                    notes.append(f'{tid}: slowed, not used for Torah'); continue
-                r = dur(src) / d0 if d0 else 1
-                if not 0.85 <= r <= 1.15:
-                    notes.append(f'{tid}: pace off ({r:.2f}x the clip length)'); continue
+            if torah and tid.endswith('-90'):
+                notes.append(f'{tid}: slowed, not used for Torah'); continue
+            ok_nat, why, _, _, _ = N.judge(o['kind'], f, o['want'], src, ref.get(f.split('/')[1]))
+            if not ok_nat:
+                notes.append(f'{tid}: {why}'); continue
             if o['kind'] == 'word':
                 good = s['ok'] >= 3 and s['ok'] > s0['ok']
             else:

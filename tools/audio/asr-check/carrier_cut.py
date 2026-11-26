@@ -31,7 +31,7 @@ def cut(a):
 
 
 def main(root):
-    for p in glob.glob(os.path.join(root, '**', 'c-car*.mp3'), recursive=True):
+    for p in [q for q in glob.glob(os.path.join(root, '**', '*.mp3'), recursive=True) if os.path.basename(q).startswith('c-car') or q.endswith('-car.mp3')]:
         if p.endswith('-cut.mp3'):
             continue
         w = cut(decode(p))

@@ -1,14 +1,14 @@
 {
  "status": "tts",
  "source": "tts:google",
- "engine": "google",
+ "engine": "stitched-from-word-clips",
  "voiceId": "he-IL-Chirp3-HD-Aoede",
  "tradition": "israeli",
  "inputText": "בְּכָל־יוֹם אֲבָרֲכֶךָּ וַאֲהַלְלָה שִׁמְךָ לְעוֹלָם וָעֶד׃",
  "inputSha256": "c441cc0c7dded29e17b99f6fefe3a2350cbfa0ab5fb08b09115e3d4fa05c4833",
  "ingestedAt": "2026-11-12T02:12:41.473Z",
  "licence": "customer-owned",
- "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "note": "Joined from its word clips (round 5): 0 unconfirmed words by every check against 3 in the whole-sentence recording.",
  "renderedAt": "2026-11-12T02:12:41.473Z",
  "redistributionCleared": false,
  "spokenText": "בְּכָל יוֹם אֲבָרֲכֶךָּ וַאֲהַלְלָה שִׁמְךָ לְעוֹלָם וָעֶד",
@@ -32,5 +32,14 @@
   "voiceId": "he-IL-Wavenet-A",
   "engine": "google-tts standard",
   "renderedAt": null
- }
+ },
+ "stitchedFromText": "בְּכָל־יוֹם אֲבָרֲכֶךָּ וַאֲהַלְלָה שִׁמְךָ לְעוֹלָם וָעֶד׃",
+ "stitchedFrom": [
+  "audio/f/israeli/word/ashrei-145-1-3-w10.mp3",
+  "audio/f/israeli/word/ashrei-145-1-3-w11.mp3",
+  "audio/f/israeli/word/ashrei-145-1-3-w12.mp3",
+  "audio-takes/f/w6020b83d41-p.mp3",
+  "audio/f/israeli/word/ashrei-145-1-3-w14.mp3",
+  "audio/f/israeli/word/ashrei-145-1-3-w15.mp3"
+ ]
 }

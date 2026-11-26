@@ -1,9 +1,10 @@
 """Does a take sound natural next to its neighbours? Pace and pauses, measured the same way as the Torah pace work
 (tools/torah/audio/ipa/pace.py: syllables per second of speech, pauses left out).
 
-  Torah verse   pace within 15% of the verse clip it replaces (all set to 4.6 syl/s by pace.py), then brought to that pace (atempo, pitch kept) and written
+  Torah verse   pace within reach of the verse clip it replaces (speed factor 0.7-1.4) (all set to 4.6 syl/s by pace.py), then brought to that pace (atempo, pitch kept) and written
                 like the other verse clips: 24 kHz, 32 kbps, 0.15 s before and 0.45 s after.
-  other lines   pace within 25% of a natural reading pace (the Torah verse pace, 4.14 as measured here); no pause longer than
+  other lines   pace within 25% of a natural reading pace (the Torah verse pace, 4.14 as measured here), or else stretched to
+                that pace (atempo, pitch kept, speed factor 0.7-1.4); no pause longer than
                 0.9 s inside the line (a take joined from several requests has its joins shortened to 0.3 s first).
   single words  no pace rule; a 0.9-speed take is only used when no normal-speed take passes.
 """
@@ -21,6 +22,8 @@ TORAH_PACE, TORAH_BAND, LINE_BAND, MAX_GAP = 4.6, 0.15, 0.25, 0.9
 # so they are not the reference.
 NATURAL = 4.14
 LEAD, TAIL = 0.15, 0.45
+# a take that reads too fast or too slow is brought to the natural pace with atempo (pitch kept), within these speed factors
+STRETCH_MIN, STRETCH_MAX = 0.7, 1.4
 _syl_cache = {}
 
 
@@ -104,15 +107,16 @@ def write_mp3(a, dest, torah, factor=1.0):
     src = os.path.join(tmp, 'in.wav')
     with wave.open(src, 'wb') as w:
         w.setnchannels(1); w.setsampwidth(2); w.setframerate(SR); w.writeframes((np.clip(a, -1, 1) * 32767).astype('<i2').tobytes())
+    # every clip: cut the silence the voice left around the speech, then the same short lead and tail
+    loud, win = frames(a)
+    idx = np.flatnonzero(loud)
+    a0, a1 = (idx[0] * win, (idx[-1] + 1) * win) if len(idx) else (0, len(a))
+    filt = f'atrim=start_sample={max(0, a0 - int(0.03 * SR))}:end_sample={min(len(a), a1 + int(0.05 * SR))},asetpts=N/SR/TB,'
+    filt += (f'atempo={factor:.4f},' if abs(factor - 1) > 0.005 else '') + f'adelay={int(LEAD * 1000)},apad=pad_dur={TAIL}'
     if torah:
-        loud, win = frames(a)
-        idx = np.flatnonzero(loud)
-        a0, a1 = (idx[0] * win, (idx[-1] + 1) * win) if len(idx) else (0, len(a))
-        filt = f'atrim=start_sample={max(0, a0 - int(0.03 * SR))}:end_sample={min(len(a), a1 + int(0.05 * SR))},asetpts=N/SR/TB,'
-        filt += (f'atempo={factor:.4f},' if abs(factor - 1) > 0.005 else '') + f'adelay={int(LEAD * 1000)},apad=pad_dur={TAIL}'
         args = ['-af', filt, '-ar', str(SR), '-b:a', '32k']
     else:
-        args = ['-af', 'loudnorm=I=-16:TP=-1.5:LRA=11', '-ar', '44100', '-b:a', '96k']
+        args = ['-af', filt + ',loudnorm=I=-16:TP=-1.5:LRA=11', '-ar', '44100', '-b:a', '96k']
     subprocess.run(['ffmpeg', '-nostdin', '-y', '-v', 'error', '-i', src, '-map_metadata', '-1', '-ac', '1', *args,
                     '-codec:a', 'libmp3lame', dest], check=True)
 
@@ -131,15 +135,21 @@ def judge(kind, clip, text, take_path, ref_pace=None):
         a = tighten(a)
     s, gaps = speech_and_gaps(a)
     p = syllables(text) / s if s else 0.0
-    if gaps and max(gaps) > MAX_GAP:
-        return False, f'pause of {max(gaps):.1f} s inside the line', p, a, 1.0
+    if gaps and max(gaps) > MAX_GAP:              # a long pause inside the line: shorten it rather than drop the take
+        a = tighten(a, longest=MAX_GAP, to=0.5)
+        s, gaps = speech_and_gaps(a)
+        p = syllables(text) / s if s else 0.0
     if is_torah(clip):
         # the verse clips were all set to one pace (4.6 syl/s by pace.py); match the clip's own pace, so the take
         # reads at the same speed as every other verse (same text, so the syllable count cancels out)
         p0 = pace(os.path.join(ROOT, clip), text)
-        if not p0 or abs(p / p0 - 1) > TORAH_BAND:
-            return False, f'pace {p / p0:.2f}x the Torah pace', p, a, 1.0
+        if not p0 or not (1 / STRETCH_MAX <= p / p0 <= 1 / STRETCH_MIN):
+            return False, f'pace {p / p0:.2f}x the Torah pace (too far to stretch)', p, a, 1.0
         return True, f'pace {p / p0:.2f}x -> 1.00x the Torah pace', p, a, p0 / p
-    if ref_pace and abs(p / ref_pace - 1) > LINE_BAND:
-        return False, f'pace {p:.1f} syl/s (natural is {ref_pace:.1f} +-25%)', p, a, 1.0
-    return True, f'pace {p:.1f} syl/s', p, a, 1.0
+    ref_pace = ref_pace or NATURAL
+    if abs(p / ref_pace - 1) <= LINE_BAND:
+        return True, f'pace {p:.1f} syl/s', p, a, 1.0
+    factor = ref_pace / p                    # atempo speed factor that brings the take to the natural pace
+    if not STRETCH_MIN <= factor <= STRETCH_MAX:
+        return False, f'pace {p:.1f} syl/s (natural is {ref_pace:.1f}; too far to stretch)', p, a, 1.0
+    return True, f'pace {p:.1f} -> {ref_pace:.1f} syl/s (stretched, pitch kept)', p, a, factor

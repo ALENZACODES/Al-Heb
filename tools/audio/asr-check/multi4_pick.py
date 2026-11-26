@@ -16,6 +16,7 @@ import multi4_merge as M   # rescoring (also patches check_lib.score)
 import scan_lines as S
 import chirp_takes as C
 import natural as N
+import phon4
 
 ROOT = os.path.abspath(os.path.join(HERE, '..', '..', '..'))
 ORDER = ['c-pt', 'c-pt-ph', 'c-pl', 'c-pl-ph', 'c-pt-90', 'c-pl-90', 'w-pt', 'w-pt-ph']
@@ -45,6 +46,45 @@ def dur(path):
                                 capture_output=True, text=True).stdout or 0)
 
 
+
+RESPELL = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'round4-respell.json')
+PROBLEMS = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'round3-problems.json')
+RESPELL_LINES = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'round5-respell-lines.json')
+
+
+def take_source(f, g, tid, want):
+    """(voice, text sent to the voice) for a take id, as chirp_takes.py made it."""
+    chirp, wavenet = C.VOICES[g]
+    pt, pl = C.speakable(want), C.plain(want)
+    km = C.ktiv_male(pt)
+    base = re.sub(r'-(90|80|ph|cut)$', '', re.sub(r'-cut$', '', tid))
+    base = re.sub(r'-(90|80|ph)$', '', base)
+    if '-rs' in tid:                                              # round 5: problem words respelled for the voice
+        bad = {re.sub(r'[\u0591-\u05C7]', '', w) for w in json.load(open(RESPELL_LINES, encoding='utf-8')).get(f, [])}
+        rs = ' '.join(C.respell(w) if re.sub(r'[\u0591-\u05C7]', '', w) in bad else w for w in pt.split())
+        if tid.startswith('w-'):
+            return wavenet, rs
+        if 'rspl' in tid:
+            return chirp, C.plain(rs)
+        return chirp, ('הַמִּלָּה, ' + rs + '.' if 'car' in tid else rs)
+    if re.match(r's\d', tid):                                   # round 4: the word respelled
+        sp = json.load(open(RESPELL, encoding='utf-8'))[f][int(tid[1])]
+        voice = C.ALT[g][0] if base.endswith('-a') else chirp
+        return voice, ('הַמִּלָּה, ' + sp + '.' if 'car' in tid else sp)
+    if re.match(r'a\d', tid):
+        return C.ALT[g][int(tid[1])], (km if base.endswith('-km') else pt)
+    voice = wavenet if tid.startswith('w-') else chirp
+    if base == 'c-sel':
+        bad = {re.sub(r'[\u0591-\u05C7]', '', w) for w in json.load(open(PROBLEMS, encoding='utf-8')).get(f, [])}
+        return voice, ' '.join(C.ktiv_male(w) if re.sub(r'[\u0591-\u05C7]', '', w) in bad else w for w in pt.split())
+    if base in ('c-car', 'c-carkm'):
+        return voice, 'הַמִּלָּה, ' + (km if base == 'c-carkm' else pt) + '.'
+    if base == 'c-km':
+        return voice, km
+    if base == 'c-kmpl':
+        return voice, C.plain(km)
+    return voice, (pl if base.endswith('-pl') else pt)
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--clips', default=os.path.join(ROOT, 'docs', 'audio', 'multi4', 'multi4-hearings.jsonl'))
@@ -54,6 +94,7 @@ def main():
     ap.add_argument('--takes-root', required=True)
     ap.add_argument('--out', default=os.path.join(ROOT, 'docs', 'audio', 'multi4', 'REPLACEMENTS.md'))
     ap.add_argument('--phon', nargs='*', default=[], help='phon4 hearings (originals and takes): adds the phonetic gate')
+    ap.add_argument('--extra', nargs='*', default=[], help='extra checks (mms-align, w2v-he, google)')
     ap.add_argument('--apply', action='store_true')
     a = ap.parse_args()
     q = {o['file']: o for o in json.load(open(a.queue, encoding='utf-8'))}
@@ -71,10 +112,37 @@ def main():
     for g in ('f', 'm'):
         ps = [N.pace(os.path.join(ROOT, k), v['want']) for k, v in q.items() if v['kind'] == 'sentence' and k.split('/')[1] == g and k not in flagged and not N.is_torah(k)]
         ref[g] = N.line_reference([x for x in ps if x])
+    import round_report as RR
+    WR = collections.defaultdict(dict)                    # word hearings by path and model (clips and takes)
+    for r in [x for v in H.values() for x in v] + [x for v in T.values() for hs in v.values() for x in hs]:
+        WR[r['file']][r['model']] = r
+    PR = collections.defaultdict(dict)                    # phonetic hearings, rescored
+    XR = collections.defaultdict(dict)                    # extra checks
+    for fn in a.extra:
+        for l in open(fn, encoding='utf-8'):
+            r = json.loads(l); XR[r['file']][r['model']] = r
+
+    def unconfirmed(path, o):
+        if not WR.get(path) or not PR.get(path):
+            return None
+        return sum(not v['ok'] for v in RR.verdicts(o, WR[path], PR[path], XR.get(path, {})))
     PH = collections.defaultdict(dict)
     for fn in a.phon:
         for l in open(fn, encoding='utf-8'):
-            r = json.loads(l); PH[r['file']][r['model']] = {w['word']: w['match'] for w in r['words']}
+            r = json.loads(l)
+            orig = re.sub(r'^takes/(.+)/[^/]+\.mp3$', r'\1.mp3', r['file'])
+            if orig in q and r.get('ipa') is not None:
+                r = phon4.rescore(r, q[orig]['want'])          # corrected expected sounds, Israeli R
+            PH[r['file']][r['model']] = {w['word']: w['match'] for w in r['words']}
+            PR[r['file']][r['model']] = r
+
+    def phon_mean(path):
+        """mean share of sounds heard over the phonetic checks (single words), or None"""
+        d = PH.get(path)
+        if not d:
+            return None
+        vals = [v for ws in d.values() for v in ws.values()]
+        return sum(vals) / len(vals) if vals else None
 
     def phon_ok(path):
         """{word: number of phonetic checks hearing >=75% of its sounds}, or None without data"""
@@ -105,9 +173,30 @@ def main():
                 notes.append(f'{tid}: {why}'); continue
             if o['kind'] == 'word':
                 good = s['ok'] >= 3 and s['ok'] > s0['ok']
+                pt4 = phon_ok('takes/' + f[:-4] + '/' + tid + '.mp3') if PH else None
+                po4 = phon_ok(f) if PH else None
+                # said alone, a word the word checks cannot place: all four phonetic checks hearing it is enough,
+                # if they did not all hear the clip it replaces
+                if not good and pt4 and pt4[1] >= 4 and all(v == pt4[1] for v in pt4[0].values()):
+                    good = True
+                # a single word only replaces the clip when the phonetic checks hear it better on average
+                # (a one-sound slip still passes 75% on a short word: 'banu' for 'vanu')
+                mt, mo = (phon_mean('takes/' + f[:-4] + '/' + tid + '.mp3'), phon_mean(f)) if PH else (None, None)
+                orig_ok = po4 and po4[1] >= 4 and all(v == po4[1] for v in po4[0].values())
+                if good and mt is not None and mo is not None and mt <= mo + (0.1 if orig_ok else 0):
+                    good = False; notes.append(f'{tid}: phonetic checks hear it no better than the clip ({mt:.2f} vs {mo:.2f})')
             else:
-                good = key[:2] < key0[:2] and len(s['b3']) <= len(s0['b3']) and len(s['b2']) <= len(s0['b2']) + len(s0['b3'])
-            if good and PH:
+                # a line: the same rule as the accuracy figure (round_report.verdicts), over every check that heard it.
+                # The take must leave fewer unconfirmed words than the clip.
+                ut, uo = unconfirmed('takes/' + f[:-4] + '/' + tid + '.mp3', o), unconfirmed(f, o)
+                if ut is None:
+                    good = False; notes.append(f'{tid}: not heard by every kind of check yet')
+                elif uo is not None and ut >= uo:
+                    good = False; notes.append(f'{tid}: {ut} unconfirmed words vs {uo} in the clip')
+                else:
+                    good = True; key = (ut,) + key[1:]
+                    s = dict(s, unconfirmed=f'{ut} (clip {uo})')
+            if good and PH and o['kind'] == 'word':
                 po, pt_ = phon_ok(f), phon_ok('takes/' + f[:-4] + '/' + tid + '.mp3')
                 if pt_ is None:
                     good = False; notes.append(f'{tid}: no phonetic hearing yet')
@@ -115,6 +204,7 @@ def main():
                     cnt, n = pt_
                     need = min(3, n)
                     probs = set(s0.get('b3', []) + s0.get('b2', [])) if o['kind'] == 'sentence' else set(cnt)
+                    probs = {w for w in probs if not w.startswith('(')}     # '(nothing)': an extra word heard, not a word of the text
                     weak = [w for w in probs if cnt.get(w, 0) < need]
                     tot_t = sum(v >= need for v in cnt.values())
                     tot_o = sum(v >= min(3, po[1]) for v in po[0].values()) if po else 0
@@ -137,14 +227,15 @@ def main():
                 meta = json.load(open(mp, encoding='utf-8')) if os.path.exists(mp) else {}
                 g = f.split('/')[1]
                 chirp, wavenet = C.VOICES[g]
-                voice = wavenet if tid.startswith('w-') else chirp if tid.startswith('c-') else C.ALT[g][int(tid[1])]
-                text = {'c-km': C.ktiv_male(C.speakable(M.clean(o['want']))), 'c-kmpl': C.plain(C.ktiv_male(C.speakable(M.clean(o['want']))))}.get(tid) or (C.plain(M.clean(o['want'])) if '-pl' in tid else C.ktiv_male(C.speakable(M.clean(o['want']))) if tid.endswith('-km') else C.speakable(M.clean(o['want'])))
+                voice, text = take_source(f, g, tid, M.clean(o['want']))
                 meta.update(status='tts', source='tts:google', engine='google', voiceId=voice,
                             tradition='israeli', inputText=M.clean(o['want']), spokenText=text, renderedAt=now,
-                            speakingRate=0.9 if tid.endswith('-90') else 1.0,
+                            speakingRate=0.8 if '-80' in tid else 0.9 if '-90' in tid else 1.0,
+                            **({'tempo': round(factor, 3)} if abs(factor - 1) > 0.005 else {}),
                             checkedBy='four-listener ASR check (docs/audio/multi4), machine check only')
                 json.dump(meta, open(mp, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
         rows.append(row)
+    json.dump(rows, open(a.out + '.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1, default=str)
 
     def fmt(kind, s):
         ph = f" ({s['phon']})" if s.get('phon') else ''

@@ -1,12 +1,16 @@
 {
  "status": "tts",
- "source": "paid-cloud",
- "engine": "google-cloud-tts",
- "voiceId": "he-IL-Wavenet-B",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Chirp3-HD-Charon",
  "tradition": "israeli",
- "inputText": "גְדֻלָּתוֹ (cut from: הַמִּלָּה … )",
+ "inputText": "גְדֻלָּתוֹ",
  "ingestedAt": null,
  "licence": "customer-owned",
  "note": "Re-recorded 2026-11-16 after the full hearing flagged the clip (docs/audio/gpu-flagged-2026-11-16.json): read from גְדֻלָּתוֹ (cut from: הַמִּלָּה … ) at rate 0.9, heard right twice (גדולתו / גדולתו) by tools/audio/asr-check/fix_list.py.",
- "inputTextKind": "hebrew"
+ "inputTextKind": "hebrew",
+ "spokenText": "גדלתו",
+ "renderedAt": "2026-11-26T03:24:47.000Z",
+ "speakingRate": 1.0,
+ "checkedBy": "four-listener ASR check (docs/audio/multi4), machine check only"
 }

@@ -1,0 +1,8 @@
+audio/f/israeli/word/kiddush-shabbat-eve-w11.mp3
+audio/f/israeli/word/lecha-hashem-w9.mp3
+audio/m/israeli/word/lecha-hashem-w9.mp3
+audio/f/israeli/dictionary/dict-va4b7d8ca.mp3
+audio/m/israeli/dictionary/dict-va4b7d8ca.mp3
+audio/m/israeli/word/h69a35691.mp3
+audio/m/israeli/dictionary/dict-v17d329a2.mp3
+audio/m/israeli/dictionary/dict-ve8865de4.mp3

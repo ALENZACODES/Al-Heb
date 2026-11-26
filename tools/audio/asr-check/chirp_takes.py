@@ -90,9 +90,12 @@ def main():
     ap.add_argument('--out', required=True)
     ap.add_argument('--takes', default='c-pt,c-pt-90,c-pl,c-pl-90,w-pt')
     ap.add_argument('--problems', help='JSON {clip: [problem words]}: lines get those words in full spelling only (c-sel)')
+    ap.add_argument('--respell', help='JSON {clip: [spellings]}: a single word Chirp misreads, written the way it should sound '
+                                      '(s<i>, s<i>-90, s<i>-a other voice, s<i>-car inside the carrier phrase)')
     ap.add_argument('--project', default=subprocess.run(['gcloud', 'config', 'get-value', 'project'], capture_output=True, text=True).stdout.strip())
     a = ap.parse_args()
     probs = json.load(open(a.problems, encoding='utf-8')) if a.problems else {}
+    resp = json.load(open(a.respell, encoding='utf-8')) if a.respell else {}
     want = {o['file']: re.sub(r'\s*\(cut from:.*\)\s*$', '', o['want']) for o in json.load(open(a.queue, encoding='utf-8'))}
     files = [l.strip() for l in open(a.list, encoding='utf-8') if l.startswith('audio/')]
     tts = TTS(a.project)
@@ -119,8 +122,13 @@ def main():
             plan += [('c-sel', sel, chirp, 1.0), ('c-sel-80', sel, chirp, 0.8)]
         if len(pt.split()) <= 2:   # single words only: other Chirp voices of the same sex
             plan += [(f'a{i}-pt', pt, v, 1.0) for i, v in enumerate(ALT[g])] + [(f'a{i}-km', km, v, 1.0) for i, v in enumerate(ALT[g])]
+        if f in resp:              # respelled: only these takes for this clip
+            plan = []
+            for i, sp in enumerate(resp[f]):
+                plan += [(f's{i}', sp, chirp, 1.0), (f's{i}-90', sp, chirp, 0.9), (f's{i}-a', sp, ALT[g][0], 1.0),
+                         (f's{i}-car', 'הַמִּלָּה, ' + sp + '.', chirp, 1.0)]
         for tid, text, voice, rate in plan:
-            if tid not in a.takes.split(','):
+            if tid not in a.takes.split(',') and not (f in resp and tid.startswith('s')):
                 continue
             dst = os.path.join(d, tid + '.mp3')
             if os.path.exists(dst):

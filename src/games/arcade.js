@@ -97,7 +97,7 @@ export async function createArcade(root, ctx, spec) {
   const hudBest = h('span', { class: 'arc-hud-item muted' });
   const hudLives = h('span', { class: 'arc-hud-item' });
   const hudTime = h('span', { class: 'arc-hud-item', role: 'timer', 'aria-live': 'off' });
-  const hud = h('div', { class: 'arc-hud' }, hudScore, hudBest, hudLives, hudTime);
+  const hud = h('div', { class: 'arc-hud' }, hudScore, ' · ', hudBest, ' · ', hudLives, ' ', hudTime); // separators: copied or read as text the HUD said "Score 13No best yet" (25 Nov audit)
   const status = h('p', { class: 'arc-status', role: 'status', 'aria-live': 'polite' }, 'Loading…');
   const board = h('div', { class: 'arc-board', id: `arc-${spec.id}-board` });
   const controls = h('div', { class: 'arc-controls' });
@@ -136,9 +136,9 @@ export async function createArcade(root, ctx, spec) {
       return h('button', {
         type: 'button', class: 'arc-level' + (l === level ? ' is-current' : ''), 'aria-pressed': l === level, disabled: locked || undefined,
         onclick: () => { if (!locked) { level = l; renderLevels(); restart(); } },
-      }, h('span', { class: 'arc-level-n' }, locked ? h('span', { 'aria-hidden': 'true' }, '🔒') : String(l)), ' ', h('span', { class: 'arc-level-name' }, spec.levels[l - 1]?.name || ''),
+      }, h('span', { class: 'arc-level-n' }, locked ? h('span', { 'aria-hidden': 'true' }, '🔒') : `Level ${l}`), h('span', { class: 'visually-hidden' }, ', '), h('span', { class: 'arc-level-name' }, spec.levels[l - 1]?.name || ''),
         // the spoken name is the words on the button plus this hidden line (no aria-label, so the two can never disagree)
-        h('span', { class: 'visually-hidden' }, `, level ${l}${locked ? ', locked' : `, ${lv?.stars || 0} of 3 stars`}`), h('span', { class: 'arc-level-stars', 'aria-hidden': 'true' }, stars));
+        h('span', { class: 'visually-hidden' }, `${locked ? `, level ${l}, locked` : `, ${lv?.stars || 0} of 3 stars`}`), h('span', { class: 'arc-level-stars', 'aria-hidden': 'true' }, stars));
     }));
     const best = record.levels?.[level]?.best || 0;
     hudBest.textContent = best ? `Best L${level}: ${best}` : 'No best yet';

@@ -9,7 +9,7 @@ export const STORE_KEY = 'games.finalfive.v1';
 const spec = {
   id: 'finalfive', title: 'Final Five', titleHe: 'אוֹתִיּוֹת סוֹפִיּוֹת',
   blurb: 'Five letters put on a different coat at the end of a word. A word appears with its last letter missing: choose the right shape.',
-  howTo: ['Read the word with the gap. Its meaning is written under it.', 'Choose the letter that ends it. At the end of a word kaf, mem, nun, pe and tsadi use their final forms.', 'Later levels ask the reverse (final form to regular) and ask you to spot a word spelled with the wrong shape.', 'Twelve words per round.'],
+  howTo: ['Read the word with the gap. Its meaning is written under it.', 'Choose the letter that ends it. At the end of a word kaf, mem, nun, pe and tsadi use their final forms.', 'Later levels ask the reverse (final form to regular) and ask you to spot a word spelled with the wrong shape.', 'Each level sets how many words (10 to 15); the counter shows where you are.'],
   levels: [
     { name: 'Which ending?', mode: 'end', count: 10, options: 2 },
     { name: 'Three choices', mode: 'end', count: 12, options: 3 },
@@ -20,6 +20,9 @@ const spec = {
   par: (l, cfg) => cfg.count * 10,
   seconds: (l, cfg) => 100,
 };
+
+/** "Final Pe" once: the letter data already names a final "Final Pe" (25 Nov audit heard "Final Final Pe"). */
+export const finalName = (name) => (/^final\b/i.test(name) ? name : `Final ${name}`.trim());
 
 function setup(A) {
   const cfg = A.cfg, rnd = A.rnd;
@@ -45,7 +48,7 @@ function setup(A) {
       const wrong = pickSeeded([base, ...finals.filter((f) => f !== last)], cfg.options - 1, rnd);
       row.replaceChildren(choiceRow(pickSeeded([last, ...wrong], cfg.options, rnd), (o) => o, (o) => {
         const ok = o === last;
-        if (ok) { A.addScore(10); A.sfx('success'); A.announce(`${w.he}: ${w.en}. Final ${A.letters.find((x) => x.he === last)?.name || ''}.`); A.sayWord(w); next(); }
+        if (ok) { A.addScore(10); A.sfx('success'); A.announce(`${w.he}: ${w.en}. ${finalName(A.letters.find((x) => x.he === last)?.name || '')}.`); A.sayWord(w); next(); }
         else { A.addScore(-3); A.sfx('miss'); A.miss(); A.announce(o === base ? 'That is the regular shape; at the end of a word it changes.' : 'Not that ending.'); }
         return ok;
       }));

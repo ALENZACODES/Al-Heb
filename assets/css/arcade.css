@@ -7,7 +7,7 @@
   --arc-wall: #2b2b2b; --arc-wall: color-mix(in srgb, var(--accent, #2a6) 62%, var(--card, #2b2b2b));
   --arc-body: #2a6; --arc-body: color-mix(in srgb, var(--accent, #2a6) 55%, var(--card, #fff)); }
 .arc-eyebrow { font-size: .78rem; letter-spacing: .08em; opacity: .75; }
-.arc-env { display: block; width: 100%; max-height: 180px; object-fit: cover; border-radius: 12px; margin: .5rem 0; }
+.arc-env { display: block; width: 100%; height: auto; aspect-ratio: 8 / 3; object-fit: contain; border-radius: 12px; margin: .5rem 0; } /* the backdrops are 1600x600: shown whole, not cropped to 180px (25 Nov audit: heads and figures sliced) */
 .arc-blurb { margin: .25rem 0 .5rem; }
 .arc-howto { margin: .25rem 0 .75rem; }
 .arc-howto ol { margin: .25rem 0 0 1.2rem; }

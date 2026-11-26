@@ -8,7 +8,7 @@ export const STORE_KEY = 'games.soundsnap.v1';
 const spec = {
   id: 'soundsnap', title: 'Sound Snap', titleHe: 'שְׁמַע וְלַחֵץ',
   blurb: 'A letter is called by name. Letters pop up in the holes; tap the one you heard before it sinks back. Each level calls faster and adds look-alikes.',
-  howTo: ['Read (and, where a recording exists, hear) the letter name at the top.', 'Letters appear in the holes for a moment. Tap the one that matches.', 'Tapping a wrong letter costs a point; letting the right one sink costs a life (from your first tap on).', 'Fifteen correct taps finish the level.'],
+  howTo: ['Read (and, where a recording exists, hear) the letter name at the top.', 'Letters appear in the holes for a moment. Tap the one that matches.', 'Tapping a wrong letter costs a point; letting the right one sink costs a life (from your first tap on).', 'Enough correct taps finish the level: 12 on level 1, more on each level after.'],
   levels: [
     { name: '6 letters, slow', holes: 6, letters: 6, show: 3500, goal: 12 },
     { name: '9 letters', holes: 9, letters: 9, show: 3000, goal: 14 },
@@ -47,7 +47,10 @@ function setup(A) {
     if (!free.length) return;
     const i = free[randInt(rnd, free.length)];
     const wantTarget = ![...up.values()].some((u) => u.letter.id === called.id) && rnd() < 0.5;
-    let letter = wantTarget ? called : pool[randInt(rnd, pool.length)];
+    // One target at a time: a filler is never the called letter, or the same letter showed in two holes at once (25 Nov audit).
+    const others = pool.filter((x) => x.id !== called.id);
+    let letter = wantTarget || !others.length ? called : others[randInt(rnd, others.length)];
+    if (letter.id === called.id && [...up.values()].some((u) => u.letter.id === called.id)) return;
     if (cfg.confuse && !wantTarget && called.confusableWith.length && rnd() < 0.5) letter = A.letters.find((x) => x.id === called.confusableWith[randInt(rnd, called.confusableWith.length)]) || letter;
     up.set(i, { letter, until: tick + Math.max(2, Math.round(cfg.show / 350)) });
   };

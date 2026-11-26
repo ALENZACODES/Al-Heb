@@ -13,7 +13,7 @@ const GROUPS = [
 const spec = {
   id: 'lookalikes', title: 'Look-Alike Sorter', titleHe: 'דּוֹמִים',
   blurb: 'Bet or kaf? Dalet or resh? He, chet or tav? One letter at a time, sort it into the right bin. These are the pairs every beginner mixes up, so this is the game to replay.',
-  howTo: ['A letter appears large in the middle.', 'Tap the bin with its name (or press 1, 2, 3).', 'Right sorts score; a wrong bin shows you the difference and costs a point.', 'Twenty letters per round; the stopwatch keeps you honest.'],
+  howTo: ['A letter appears large in the middle.', 'Tap the bin with its name (or press 1, 2, 3).', 'Right sorts score; a wrong bin shows you the difference and costs a point.', 'Each level sets how many letters (16 to 26); the counter shows where you are, and the stopwatch keeps you honest.'],
   levels: [
     { name: 'Bet, kaf · dalet, resh', groups: [0, 1], count: 16 },
     { name: 'He, chet, tav · vav, zayin', groups: [2, 3], count: 18 },

@@ -53,6 +53,7 @@ def main():
     ap.add_argument('--takes', nargs='+', required=True)
     ap.add_argument('--takes-root', required=True)
     ap.add_argument('--out', default=os.path.join(ROOT, 'docs', 'audio', 'multi4', 'REPLACEMENTS.md'))
+    ap.add_argument('--phon', nargs='*', default=[], help='phon4 hearings (originals and takes): adds the phonetic gate')
     ap.add_argument('--apply', action='store_true')
     a = ap.parse_args()
     q = {o['file']: o for o in json.load(open(a.queue, encoding='utf-8'))}
@@ -70,6 +71,21 @@ def main():
     for g in ('f', 'm'):
         ps = [N.pace(os.path.join(ROOT, k), v['want']) for k, v in q.items() if v['kind'] == 'sentence' and k.split('/')[1] == g and k not in flagged and not N.is_torah(k)]
         ref[g] = N.line_reference([x for x in ps if x])
+    PH = collections.defaultdict(dict)
+    for fn in a.phon:
+        for l in open(fn, encoding='utf-8'):
+            r = json.loads(l); PH[r['file']][r['model']] = {w['word']: w['match'] for w in r['words']}
+
+    def phon_ok(path):
+        """{word: number of phonetic checks hearing >=75% of its sounds}, or None without data"""
+        d = PH.get(path)
+        if not d:
+            return None
+        out = collections.Counter()
+        for m, ws in d.items():
+            for w, v in ws.items():
+                out[w] += v >= 0.75
+        return out, len(d)
     rows, now = [], datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%dT%H:%M:%S.000Z')
     for f in flagged:
         o = q[f]
@@ -84,31 +100,46 @@ def main():
             src = os.path.join(a.takes_root, 'takes', f[:-4], tid + '.mp3')
             if torah and tid.endswith('-90'):
                 notes.append(f'{tid}: slowed, not used for Torah'); continue
-            ok_nat, why, _, _, _ = N.judge(o['kind'], f, o['want'], src, ref.get(f.split('/')[1]))
+            ok_nat, why, _, prep, factor = N.judge(o['kind'], f, o['want'], src, ref.get(f.split('/')[1]))
             if not ok_nat:
                 notes.append(f'{tid}: {why}'); continue
             if o['kind'] == 'word':
                 good = s['ok'] >= 3 and s['ok'] > s0['ok']
             else:
                 good = key[:2] < key0[:2] and len(s['b3']) <= len(s0['b3']) and len(s['b2']) <= len(s0['b2']) + len(s0['b3'])
+            if good and PH:
+                po, pt_ = phon_ok(f), phon_ok('takes/' + f[:-4] + '/' + tid + '.mp3')
+                if pt_ is None:
+                    good = False; notes.append(f'{tid}: no phonetic hearing yet')
+                else:
+                    cnt, n = pt_
+                    need = min(3, n)
+                    probs = set(s0.get('b3', []) + s0.get('b2', [])) if o['kind'] == 'sentence' else set(cnt)
+                    weak = [w for w in probs if cnt.get(w, 0) < need]
+                    tot_t = sum(v >= need for v in cnt.values())
+                    tot_o = sum(v >= min(3, po[1]) for v in po[0].values()) if po else 0
+                    if weak or tot_t < tot_o:
+                        good = False
+                        notes.append(f'{tid}: phonetic checks: ' + (('weak ' + ' '.join(sorted(weak))) if weak else f'{tot_t} words heard vs {tot_o} in the clip'))
+                    else:
+                        s = dict(s, phon=f'{tot_t}/{len(cnt)} words by >={need} of {n} phonetic checks')
             if good:
-                cands.append((key, ORDER.index(tid), tid, s, src))
+                cands.append((key, ORDER.index(tid) if tid in ORDER else 99, tid, s, src, prep, factor))
         cands.sort()
         row = {'file': f, 'kind': o['kind'], 'before': s0, 'notes': notes}
         if cands:
-            key, _, tid, s, src = cands[0]
+            key, _, tid, s, src, prep, factor = cands[0]
             row.update(take=tid, after=s)
             if a.apply:
                 dst = os.path.join(ROOT, f)
-                C_ENC = ['-af', 'loudnorm=I=-16:TP=-1.5:LRA=11', '-ar', '44100', '-b:a', '96k']
-                subprocess.run(['ffmpeg', '-nostdin', '-y', '-v', 'error', '-i', src, '-map_metadata', '-1', '-ac', '1', *C_ENC,
-                                '-codec:a', 'libmp3lame', dst], check=True)
+                N.write_mp3(prep, dst, torah, factor)   # Torah: verse format at the verse pace; others: lesson format
                 mp = dst + '.meta.json'
                 meta = json.load(open(mp, encoding='utf-8')) if os.path.exists(mp) else {}
                 g = f.split('/')[1]
                 chirp, wavenet = C.VOICES[g]
-                text = C.plain(M.clean(o['want'])) if '-pl' in tid else C.speakable(M.clean(o['want']))
-                meta.update(status='tts', source='tts:google', engine='google', voiceId=wavenet if tid == 'w-pt' else chirp,
+                voice = wavenet if tid.startswith('w-') else chirp if tid.startswith('c-') else C.ALT[g][int(tid[1])]
+                text = {'c-km': C.ktiv_male(C.speakable(M.clean(o['want']))), 'c-kmpl': C.plain(C.ktiv_male(C.speakable(M.clean(o['want']))))}.get(tid) or (C.plain(M.clean(o['want'])) if '-pl' in tid else C.ktiv_male(C.speakable(M.clean(o['want']))) if tid.endswith('-km') else C.speakable(M.clean(o['want'])))
+                meta.update(status='tts', source='tts:google', engine='google', voiceId=voice,
                             tradition='israeli', inputText=M.clean(o['want']), spokenText=text, renderedAt=now,
                             speakingRate=0.9 if tid.endswith('-90') else 1.0,
                             checkedBy='four-listener ASR check (docs/audio/multi4), machine check only')
@@ -116,7 +147,8 @@ def main():
         rows.append(row)
 
     def fmt(kind, s):
-        return f"{s['ok']}/4 heard right" if kind == 'word' else (
+        ph = f" ({s['phon']})" if s.get('phon') else ''
+        return (f"{s['ok']}/4 heard right" + ph) if kind == 'word' else ph + (
             ('3+ mishear: ' + ' '.join(s['b3']) if s['b3'] else 'none 3+') + ('; 2 mishear: ' + ' '.join(s['b2']) if s['b2'] else ''))
     rep = [r for r in rows if 'take' in r]
     L = ['# Re-recorded clips (four-listener check)', '',

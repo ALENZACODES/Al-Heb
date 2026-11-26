@@ -1,0 +1,3824 @@
+[
+{
+"file": "takes/w5/m/w5-8c4910a69f/w-car-cut.mp3",
+"kind": "word",
+"want": "צַדִּיקַיָּא",
+"key": "m|צַדִּיקַיָּא",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/m/w5-8c4910a69f/w.mp3",
+"kind": "word",
+"want": "צַדִּיקַיָּא",
+"key": "m|צַדִּיקַיָּא",
+"take": "w"
+},
+{
+"file": "audio/m/israeli/word/brich-shmei-w38.mp3",
+"kind": "word",
+"want": "צַדִּיקַיָּא",
+"key": "m|צַדִּיקַיָּא",
+"take": "current"
+},
+{
+"file": "takes/w5/m/w5-a624f5a86d/w-car-cut.mp3",
+"kind": "word",
+"want": "כָּל",
+"key": "m|כָּל",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/m/w5-a624f5a86d/w-rs-car-cut.mp3",
+"kind": "word",
+"want": "כָּל",
+"key": "m|כָּל",
+"take": "w-rs-car-cut"
+},
+{
+"file": "takes/w5/m/w5-a624f5a86d/w-rs.mp3",
+"kind": "word",
+"want": "כָּל",
+"key": "m|כָּל",
+"take": "w-rs"
+},
+{
+"file": "takes/w5/m/w5-a624f5a86d/w.mp3",
+"kind": "word",
+"want": "כָּל",
+"key": "m|כָּל",
+"take": "w"
+},
+{
+"file": "audio-takes/m/w562a0efd96-s.mp3",
+"kind": "word",
+"want": "כָּל",
+"key": "m|כָּל",
+"take": "current"
+},
+{
+"file": "takes/w5/m/w5-0779427734/w-car-cut.mp3",
+"kind": "word",
+"want": "בַּר",
+"key": "m|בַּר",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/m/w5-0779427734/w.mp3",
+"kind": "word",
+"want": "בַּר",
+"key": "m|בַּר",
+"take": "w"
+},
+{
+"file": "takes/w5/m/w5-a8e139c3cb/w-car-cut.mp3",
+"kind": "word",
+"want": "אֱלָהָא",
+"key": "m|אֱלָהָא",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/m/w5-a8e139c3cb/w.mp3",
+"kind": "word",
+"want": "אֱלָהָא",
+"key": "m|אֱלָהָא",
+"take": "w"
+},
+{
+"file": "audio-takes/m/w99f7415481-p.mp3",
+"kind": "word",
+"want": "אֱלָהָא",
+"key": "m|אֱלָהָא",
+"take": "current"
+},
+{
+"file": "takes/w5/m/w5-aea1d46622/w-car-cut.mp3",
+"kind": "word",
+"want": "וּנְבִיאוֹהִי",
+"key": "m|וּנְבִיאוֹהִי",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/m/w5-aea1d46622/w-rs-car-cut.mp3",
+"kind": "word",
+"want": "וּנְבִיאוֹהִי",
+"key": "m|וּנְבִיאוֹהִי",
+"take": "w-rs-car-cut"
+},
+{
+"file": "takes/w5/m/w5-aea1d46622/w-rs.mp3",
+"kind": "word",
+"want": "וּנְבִיאוֹהִי",
+"key": "m|וּנְבִיאוֹהִי",
+"take": "w-rs"
+},
+{
+"file": "takes/w5/m/w5-aea1d46622/w.mp3",
+"kind": "word",
+"want": "וּנְבִיאוֹהִי",
+"key": "m|וּנְבִיאוֹהִי",
+"take": "w"
+},
+{
+"file": "audio/m/israeli/word/brich-shmei-w89.mp3",
+"kind": "word",
+"want": "וּנְבִיאוֹהִי",
+"key": "m|וּנְבִיאוֹהִי",
+"take": "current"
+},
+{
+"file": "takes/w5/m/w5-621d67ae99/w-car-cut.mp3",
+"kind": "word",
+"want": "לְמֶעְבַּד",
+"key": "m|לְמֶעְבַּד",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/m/w5-621d67ae99/w.mp3",
+"kind": "word",
+"want": "לְמֶעְבַּד",
+"key": "m|לְמֶעְבַּד",
+"take": "w"
+},
+{
+"file": "audio/m/israeli/word/brich-shmei-w92.mp3",
+"kind": "word",
+"want": "לְמֶעְבַּד",
+"key": "m|לְמֶעְבַּד",
+"take": "current"
+},
+{
+"file": "takes/w5/m/w5-b6f9b02844/w-car-cut.mp3",
+"kind": "word",
+"want": "דְּלִבָּאי",
+"key": "m|דְּלִבָּאי",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/m/w5-b6f9b02844/w.mp3",
+"kind": "word",
+"want": "דְּלִבָּאי",
+"key": "m|דְּלִבָּאי",
+"take": "w"
+},
+{
+"file": "audio/m/israeli/word/brich-shmei-w112.mp3",
+"kind": "word",
+"want": "דְּלִבָּאי",
+"key": "m|דְּלִבָּאי",
+"take": "current"
+},
+{
+"file": "takes/w5/m/w5-97b68ac662/w-car-cut.mp3",
+"kind": "word",
+"want": "דְכָל",
+"key": "m|דְכָל",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/m/w5-97b68ac662/w-rs-car-cut.mp3",
+"kind": "word",
+"want": "דְכָל",
+"key": "m|דְכָל",
+"take": "w-rs-car-cut"
+},
+{
+"file": "takes/w5/m/w5-97b68ac662/w-rs.mp3",
+"kind": "word",
+"want": "דְכָל",
+"key": "m|דְכָל",
+"take": "w-rs"
+},
+{
+"file": "takes/w5/m/w5-97b68ac662/w.mp3",
+"kind": "word",
+"want": "דְכָל",
+"key": "m|דְכָל",
+"take": "w"
+},
+{
+"file": "audio-takes/m/w82983fb156-p.mp3",
+"kind": "word",
+"want": "דְכָל",
+"key": "m|דְכָל",
+"take": "current"
+},
+{
+"file": "takes/w5/m/w5-401b5ab3dc/w-car-cut.mp3",
+"kind": "word",
+"want": "וּלְחַיִּין",
+"key": "m|וּלְחַיִּין",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/m/w5-401b5ab3dc/w.mp3",
+"kind": "word",
+"want": "וּלְחַיִּין",
+"key": "m|וּלְחַיִּין",
+"take": "w"
+},
+{
+"file": "audio/m/israeli/word/brich-shmei-w117.mp3",
+"kind": "word",
+"want": "וּלְחַיִּין",
+"key": "m|וּלְחַיִּין",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-e022a463ae/w-car-cut.mp3",
+"kind": "word",
+"want": "בְרָא",
+"key": "f|בְרָא",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-e022a463ae/w-rs-car-cut.mp3",
+"kind": "word",
+"want": "בְרָא",
+"key": "f|בְרָא",
+"take": "w-rs-car-cut"
+},
+{
+"file": "takes/w5/f/w5-e022a463ae/w-rs.mp3",
+"kind": "word",
+"want": "בְרָא",
+"key": "f|בְרָא",
+"take": "w-rs"
+},
+{
+"file": "takes/w5/f/w5-e022a463ae/w.mp3",
+"kind": "word",
+"want": "בְרָא",
+"key": "f|בְרָא",
+"take": "w"
+},
+{
+"file": "takes/w5/f/w5-d06d936281/w-car-cut.mp3",
+"kind": "word",
+"want": "כִרְעוּתֵהּ",
+"key": "f|כִרְעוּתֵהּ",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-d06d936281/w-rs-car-cut.mp3",
+"kind": "word",
+"want": "כִרְעוּתֵהּ",
+"key": "f|כִרְעוּתֵהּ",
+"take": "w-rs-car-cut"
+},
+{
+"file": "takes/w5/f/w5-d06d936281/w-rs.mp3",
+"kind": "word",
+"want": "כִרְעוּתֵהּ",
+"key": "f|כִרְעוּתֵהּ",
+"take": "w-rs"
+},
+{
+"file": "takes/w5/f/w5-d06d936281/w.mp3",
+"kind": "word",
+"want": "כִרְעוּתֵהּ",
+"key": "f|כִרְעוּתֵהּ",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/kaddish-1-w8.mp3",
+"kind": "word",
+"want": "כִרְעוּתֵהּ",
+"key": "f|כִרְעוּתֵהּ",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-aaa6a407f3/w-car-cut.mp3",
+"kind": "word",
+"want": "וּבְיוֹמֵיכוֹן",
+"key": "f|וּבְיוֹמֵיכוֹן",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-aaa6a407f3/w-rs-car-cut.mp3",
+"kind": "word",
+"want": "וּבְיוֹמֵיכוֹן",
+"key": "f|וּבְיוֹמֵיכוֹן",
+"take": "w-rs-car-cut"
+},
+{
+"file": "takes/w5/f/w5-aaa6a407f3/w-rs.mp3",
+"kind": "word",
+"want": "וּבְיוֹמֵיכוֹן",
+"key": "f|וּבְיוֹמֵיכוֹן",
+"take": "w-rs"
+},
+{
+"file": "takes/w5/f/w5-aaa6a407f3/w.mp3",
+"kind": "word",
+"want": "וּבְיוֹמֵיכוֹן",
+"key": "f|וּבְיוֹמֵיכוֹן",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/kaddish-1-w12.mp3",
+"kind": "word",
+"want": "וּבְיוֹמֵיכוֹן",
+"key": "f|וּבְיוֹמֵיכוֹן",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-1c9e4941c9/w-car-cut.mp3",
+"kind": "word",
+"want": "וּבְחַיֵּי",
+"key": "f|וּבְחַיֵּי",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-1c9e4941c9/w-rs-car-cut.mp3",
+"kind": "word",
+"want": "וּבְחַיֵּי",
+"key": "f|וּבְחַיֵּי",
+"take": "w-rs-car-cut"
+},
+{
+"file": "takes/w5/f/w5-1c9e4941c9/w-rs.mp3",
+"kind": "word",
+"want": "וּבְחַיֵּי",
+"key": "f|וּבְחַיֵּי",
+"take": "w-rs"
+},
+{
+"file": "takes/w5/f/w5-1c9e4941c9/w.mp3",
+"kind": "word",
+"want": "וּבְחַיֵּי",
+"key": "f|וּבְחַיֵּי",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/kaddish-1-w13.mp3",
+"kind": "word",
+"want": "וּבְחַיֵּי",
+"key": "f|וּבְחַיֵּי",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-e04cd4f64d/w-car-cut.mp3",
+"kind": "word",
+"want": "דְכָל",
+"key": "f|דְכָל",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-e04cd4f64d/w-rs-car-cut.mp3",
+"kind": "word",
+"want": "דְכָל",
+"key": "f|דְכָל",
+"take": "w-rs-car-cut"
+},
+{
+"file": "takes/w5/f/w5-e04cd4f64d/w-rs.mp3",
+"kind": "word",
+"want": "דְכָל",
+"key": "f|דְכָל",
+"take": "w-rs"
+},
+{
+"file": "takes/w5/f/w5-e04cd4f64d/w.mp3",
+"kind": "word",
+"want": "דְכָל",
+"key": "f|דְכָל",
+"take": "w"
+},
+{
+"file": "takes/w5/f/w5-02c1c44d00/w-car-cut.mp3",
+"kind": "word",
+"want": "וְאִמְרוּ",
+"key": "f|וְאִמְרוּ",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-02c1c44d00/w.mp3",
+"kind": "word",
+"want": "וְאִמְרוּ",
+"key": "f|וְאִמְרוּ",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/kaddish-1-w19.mp3",
+"kind": "word",
+"want": "וְאִמְרוּ",
+"key": "f|וְאִמְרוּ",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-49e589cf80/w-car-cut.mp3",
+"kind": "word",
+"want": "יְהֵא",
+"key": "f|יְהֵא",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-49e589cf80/w.mp3",
+"kind": "word",
+"want": "יְהֵא",
+"key": "f|יְהֵא",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/brich-shmei-w104.mp3",
+"kind": "word",
+"want": "יְהֵא",
+"key": "f|יְהֵא",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-584dedeb74/w-car-cut.mp3",
+"kind": "word",
+"want": "וְיִשְׁתַּבַּח",
+"key": "f|וְיִשְׁתַּבַּח",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-584dedeb74/w.mp3",
+"kind": "word",
+"want": "וְיִשְׁתַּבַּח",
+"key": "f|וְיִשְׁתַּבַּח",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/kaddish-1-w29.mp3",
+"kind": "word",
+"want": "וְיִשְׁתַּבַּח",
+"key": "f|וְיִשְׁתַּבַּח",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-37184fb5a2/w-car-cut.mp3",
+"kind": "word",
+"want": "וְיִתְרוֹמַם",
+"key": "f|וְיִתְרוֹמַם",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-37184fb5a2/w.mp3",
+"kind": "word",
+"want": "וְיִתְרוֹמַם",
+"key": "f|וְיִתְרוֹמַם",
+"take": "w"
+},
+{
+"file": "audio-takes/f/wb8d3a8d4f3-p.mp3",
+"kind": "word",
+"want": "וְיִתְרוֹמַם",
+"key": "f|וְיִתְרוֹמַם",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-4a4f646f5d/w-car-cut.mp3",
+"kind": "word",
+"want": "וְיִתְהַדָּר",
+"key": "f|וְיִתְהַדָּר",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-4a4f646f5d/w.mp3",
+"kind": "word",
+"want": "וְיִתְהַדָּר",
+"key": "f|וְיִתְהַדָּר",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/kaddish-1-w33.mp3",
+"kind": "word",
+"want": "וְיִתְהַדָּר",
+"key": "f|וְיִתְהַדָּר",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-ab4dc3c298/w-car-cut.mp3",
+"kind": "word",
+"want": "הוּא",
+"key": "f|הוּא",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-ab4dc3c298/w.mp3",
+"kind": "word",
+"want": "הוּא",
+"key": "f|הוּא",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/aleinu-1-w39.mp3",
+"kind": "word",
+"want": "הוּא",
+"key": "f|הוּא",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-0ff7cf5933/w-car-cut.mp3",
+"kind": "word",
+"want": "כָּל",
+"key": "f|כָּל",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-0ff7cf5933/w-rs-car-cut.mp3",
+"kind": "word",
+"want": "כָּל",
+"key": "f|כָּל",
+"take": "w-rs-car-cut"
+},
+{
+"file": "takes/w5/f/w5-0ff7cf5933/w-rs.mp3",
+"kind": "word",
+"want": "כָּל",
+"key": "f|כָּל",
+"take": "w-rs"
+},
+{
+"file": "takes/w5/f/w5-0ff7cf5933/w.mp3",
+"kind": "word",
+"want": "כָּל",
+"key": "f|כָּל",
+"take": "w"
+},
+{
+"file": "audio-takes/f/w562a0efd96-p.mp3",
+"kind": "word",
+"want": "כָּל",
+"key": "f|כָּל",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-61a65faaa4/w-car-cut.mp3",
+"kind": "word",
+"want": "לְבָבְךָ",
+"key": "f|לְבָבְךָ",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-61a65faaa4/w-rs-car-cut.mp3",
+"kind": "word",
+"want": "לְבָבְךָ",
+"key": "f|לְבָבְךָ",
+"take": "w-rs-car-cut"
+},
+{
+"file": "takes/w5/f/w5-61a65faaa4/w-rs.mp3",
+"kind": "word",
+"want": "לְבָבְךָ",
+"key": "f|לְבָבְךָ",
+"take": "w-rs"
+},
+{
+"file": "takes/w5/f/w5-61a65faaa4/w.mp3",
+"kind": "word",
+"want": "לְבָבְךָ",
+"key": "f|לְבָבְךָ",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/i-01-w12.mp3",
+"kind": "word",
+"want": "לְבָבְךָ",
+"key": "f|לְבָבְךָ",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-2aba72fc76/w-car-cut.mp3",
+"kind": "word",
+"want": "מְצַוְּךָ",
+"key": "f|מְצַוְּךָ",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-2aba72fc76/w-rs-car-cut.mp3",
+"kind": "word",
+"want": "מְצַוְּךָ",
+"key": "f|מְצַוְּךָ",
+"take": "w-rs-car-cut"
+},
+{
+"file": "takes/w5/f/w5-2aba72fc76/w-rs.mp3",
+"kind": "word",
+"want": "מְצַוְּךָ",
+"key": "f|מְצַוְּךָ",
+"take": "w-rs"
+},
+{
+"file": "takes/w5/f/w5-2aba72fc76/w.mp3",
+"kind": "word",
+"want": "מְצַוְּךָ",
+"key": "f|מְצַוְּךָ",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/shema-vahavta-w19.mp3",
+"kind": "word",
+"want": "מְצַוְּךָ",
+"key": "f|מְצַוְּךָ",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-32610a840b/w-car-cut.mp3",
+"kind": "word",
+"want": "בַדֶּרֶךְ",
+"key": "f|בַדֶּרֶךְ",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-32610a840b/w-rs-car-cut.mp3",
+"kind": "word",
+"want": "בַדֶּרֶךְ",
+"key": "f|בַדֶּרֶךְ",
+"take": "w-rs-car-cut"
+},
+{
+"file": "takes/w5/f/w5-32610a840b/w-rs.mp3",
+"kind": "word",
+"want": "בַדֶּרֶךְ",
+"key": "f|בַדֶּרֶךְ",
+"take": "w-rs"
+},
+{
+"file": "takes/w5/f/w5-32610a840b/w.mp3",
+"kind": "word",
+"want": "בַדֶּרֶךְ",
+"key": "f|בַדֶּרֶךְ",
+"take": "w"
+},
+{
+"file": "audio-takes/f/w922dfe8fa7-u.mp3",
+"kind": "word",
+"want": "בַדֶּרֶךְ",
+"key": "f|בַדֶּרֶךְ",
+"take": "current"
+},
+{
+"file": "takes/w5/m/w5-c8cde70df8/w-car-cut.mp3",
+"kind": "word",
+"want": "מְצַוְּךָ",
+"key": "m|מְצַוְּךָ",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/m/w5-c8cde70df8/w-rs-car-cut.mp3",
+"kind": "word",
+"want": "מְצַוְּךָ",
+"key": "m|מְצַוְּךָ",
+"take": "w-rs-car-cut"
+},
+{
+"file": "takes/w5/m/w5-c8cde70df8/w-rs.mp3",
+"kind": "word",
+"want": "מְצַוְּךָ",
+"key": "m|מְצַוְּךָ",
+"take": "w-rs"
+},
+{
+"file": "takes/w5/m/w5-c8cde70df8/w.mp3",
+"kind": "word",
+"want": "מְצַוְּךָ",
+"key": "m|מְצַוְּךָ",
+"take": "w"
+},
+{
+"file": "audio/m/israeli/word/shema-vahavta-w19.mp3",
+"kind": "word",
+"want": "מְצַוְּךָ",
+"key": "m|מְצַוְּךָ",
+"take": "current"
+},
+{
+"file": "takes/w5/m/w5-3bfcb60269/w-car-cut.mp3",
+"kind": "word",
+"want": "בַדֶּרֶךְ",
+"key": "m|בַדֶּרֶךְ",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/m/w5-3bfcb60269/w-rs-car-cut.mp3",
+"kind": "word",
+"want": "בַדֶּרֶךְ",
+"key": "m|בַדֶּרֶךְ",
+"take": "w-rs-car-cut"
+},
+{
+"file": "takes/w5/m/w5-3bfcb60269/w-rs.mp3",
+"kind": "word",
+"want": "בַדֶּרֶךְ",
+"key": "m|בַדֶּרֶךְ",
+"take": "w-rs"
+},
+{
+"file": "takes/w5/m/w5-3bfcb60269/w.mp3",
+"kind": "word",
+"want": "בַדֶּרֶךְ",
+"key": "m|בַדֶּרֶךְ",
+"take": "w"
+},
+{
+"file": "audio/m/israeli/word/shema-vahavta-w29.mp3",
+"kind": "word",
+"want": "בַדֶּרֶךְ",
+"key": "m|בַדֶּרֶךְ",
+"take": "current"
+},
+{
+"file": "takes/w5/m/w5-afd25f73b8/w-car-cut.mp3",
+"kind": "word",
+"want": "וּבְשָׁכְבְּךָ",
+"key": "m|וּבְשָׁכְבְּךָ",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/m/w5-afd25f73b8/w-rs-car-cut.mp3",
+"kind": "word",
+"want": "וּבְשָׁכְבְּךָ",
+"key": "m|וּבְשָׁכְבְּךָ",
+"take": "w-rs-car-cut"
+},
+{
+"file": "takes/w5/m/w5-afd25f73b8/w-rs.mp3",
+"kind": "word",
+"want": "וּבְשָׁכְבְּךָ",
+"key": "m|וּבְשָׁכְבְּךָ",
+"take": "w-rs"
+},
+{
+"file": "takes/w5/m/w5-afd25f73b8/w.mp3",
+"kind": "word",
+"want": "וּבְשָׁכְבְּךָ",
+"key": "m|וּבְשָׁכְבְּךָ",
+"take": "w"
+},
+{
+"file": "audio/m/israeli/word/shema-vahavta-w30.mp3",
+"kind": "word",
+"want": "וּבְשָׁכְבְּךָ",
+"key": "m|וּבְשָׁכְבְּךָ",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-8877988f5e/w-car-cut.mp3",
+"kind": "word",
+"want": "חַי",
+"key": "f|חַי",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-8877988f5e/w.mp3",
+"kind": "word",
+"want": "חַי",
+"key": "f|חַי",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/h2d58afb3.mp3",
+"kind": "word",
+"want": "חַי",
+"key": "f|חַי",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-0aaac85827/w-car-cut.mp3",
+"kind": "word",
+"want": "עֵת",
+"key": "f|עֵת",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-0aaac85827/w.mp3",
+"kind": "word",
+"want": "עֵת",
+"key": "f|עֵת",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/hd08812d6.mp3",
+"kind": "word",
+"want": "עֵת",
+"key": "f|עֵת",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-8c920bf2f2/w-car-cut.mp3",
+"kind": "word",
+"want": "אֵין",
+"key": "f|אֵין",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-8c920bf2f2/w.mp3",
+"kind": "word",
+"want": "אֵין",
+"key": "f|אֵין",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/aleinu-1-w76.mp3",
+"kind": "word",
+"want": "אֵין",
+"key": "f|אֵין",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-97813f1c00/w-car-cut.mp3",
+"kind": "word",
+"want": "הַגּוּף",
+"key": "f|הַגּוּף",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-97813f1c00/w.mp3",
+"kind": "word",
+"want": "הַגּוּף",
+"key": "f|הַגּוּף",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/yigdal-w22.mp3",
+"kind": "word",
+"want": "הַגּוּף",
+"key": "f|הַגּוּף",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-43deaa4953/w-car-cut.mp3",
+"kind": "word",
+"want": "דָּבָר",
+"key": "f|דָּבָר",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-43deaa4953/w-rs-car-cut.mp3",
+"kind": "word",
+"want": "דָּבָר",
+"key": "f|דָּבָר",
+"take": "w-rs-car-cut"
+},
+{
+"file": "takes/w5/f/w5-43deaa4953/w-rs.mp3",
+"kind": "word",
+"want": "דָּבָר",
+"key": "f|דָּבָר",
+"take": "w-rs"
+},
+{
+"file": "takes/w5/f/w5-43deaa4953/w.mp3",
+"kind": "word",
+"want": "דָּבָר",
+"key": "f|דָּבָר",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/hd4a691d3.mp3",
+"kind": "word",
+"want": "דָּבָר",
+"key": "f|דָּבָר",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-f9166920ca/w-car-cut.mp3",
+"kind": "word",
+"want": "אֶת",
+"key": "f|אֶת",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-f9166920ca/w.mp3",
+"kind": "word",
+"want": "אֶת",
+"key": "f|אֶת",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/birkat-hamazon-1-w8.mp3",
+"kind": "word",
+"want": "אֶת",
+"key": "f|אֶת",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-a6b49a1897/w-car-cut.mp3",
+"kind": "word",
+"want": "יַד",
+"key": "f|יַד",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-a6b49a1897/w.mp3",
+"kind": "word",
+"want": "יַד",
+"key": "f|יַד",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/yigdal-w65.mp3",
+"kind": "word",
+"want": "יַד",
+"key": "f|יַד",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-cc07dee25a/w-car-cut.mp3",
+"kind": "word",
+"want": "קֵץ",
+"key": "f|קֵץ",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-cc07dee25a/w.mp3",
+"kind": "word",
+"want": "קֵץ",
+"key": "f|קֵץ",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/h0849ff56.mp3",
+"kind": "word",
+"want": "קֵץ",
+"key": "f|קֵץ",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-d81e6eb50a/w-car-cut.mp3",
+"kind": "word",
+"want": "בָּרוּךְ",
+"key": "f|בָּרוּךְ",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-d81e6eb50a/w.mp3",
+"kind": "word",
+"want": "בָּרוּךְ",
+"key": "f|בָּרוּךְ",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/aleinu-1-w38.mp3",
+"kind": "word",
+"want": "בָּרוּךְ",
+"key": "f|בָּרוּךְ",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-7620b48b27/w-car-cut.mp3",
+"kind": "word",
+"want": "וּפֻרְקַן",
+"key": "f|וּפֻרְקַן",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-7620b48b27/w.mp3",
+"kind": "word",
+"want": "וּפֻרְקַן",
+"key": "f|וּפֻרְקַן",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/brich-shmei-w14.mp3",
+"kind": "word",
+"want": "וּפֻרְקַן",
+"key": "f|וּפֻרְקַן",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-624f095fea/w-car-cut.mp3",
+"kind": "word",
+"want": "חַיִּין",
+"key": "f|חַיִּין",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-624f095fea/w.mp3",
+"kind": "word",
+"want": "חַיִּין",
+"key": "f|חַיִּין",
+"take": "w"
+},
+{
+"file": "takes/w5/f/w5-7730f3ef8a/w-car-cut.mp3",
+"kind": "word",
+"want": "בְּטִיבוּ",
+"key": "f|בְּטִיבוּ",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-7730f3ef8a/w-rs-car-cut.mp3",
+"kind": "word",
+"want": "בְּטִיבוּ",
+"key": "f|בְּטִיבוּ",
+"take": "w-rs-car-cut"
+},
+{
+"file": "takes/w5/f/w5-7730f3ef8a/w-rs.mp3",
+"kind": "word",
+"want": "בְּטִיבוּ",
+"key": "f|בְּטִיבוּ",
+"take": "w-rs"
+},
+{
+"file": "takes/w5/f/w5-7730f3ef8a/w.mp3",
+"kind": "word",
+"want": "בְּטִיבוּ",
+"key": "f|בְּטִיבוּ",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/brich-shmei-w33.mp3",
+"kind": "word",
+"want": "בְּטִיבוּ",
+"key": "f|בְּטִיבוּ",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-233645dea8/w-car-cut.mp3",
+"kind": "word",
+"want": "צַדִּיקַיָּא",
+"key": "f|צַדִּיקַיָּא",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-233645dea8/w.mp3",
+"kind": "word",
+"want": "צַדִּיקַיָּא",
+"key": "f|צַדִּיקַיָּא",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/brich-shmei-w38.mp3",
+"kind": "word",
+"want": "צַדִּיקַיָּא",
+"key": "f|צַדִּיקַיָּא",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-df483392dd/w-car-cut.mp3",
+"kind": "word",
+"want": "דְּהוּא",
+"key": "f|דְּהוּא",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-df483392dd/w.mp3",
+"kind": "word",
+"want": "דְּהוּא",
+"key": "f|דְּהוּא",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/brich-shmei-w84.mp3",
+"kind": "word",
+"want": "דְּהוּא",
+"key": "f|דְּהוּא",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-803aae9769/w-car-cut.mp3",
+"kind": "word",
+"want": "וּנְבִיאוֹהִי",
+"key": "f|וּנְבִיאוֹהִי",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-803aae9769/w-rs-car-cut.mp3",
+"kind": "word",
+"want": "וּנְבִיאוֹהִי",
+"key": "f|וּנְבִיאוֹהִי",
+"take": "w-rs-car-cut"
+},
+{
+"file": "takes/w5/f/w5-803aae9769/w-rs.mp3",
+"kind": "word",
+"want": "וּנְבִיאוֹהִי",
+"key": "f|וּנְבִיאוֹהִי",
+"take": "w-rs"
+},
+{
+"file": "takes/w5/f/w5-803aae9769/w.mp3",
+"kind": "word",
+"want": "וּנְבִיאוֹהִי",
+"key": "f|וּנְבִיאוֹהִי",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/brich-shmei-w89.mp3",
+"kind": "word",
+"want": "וּנְבִיאוֹהִי",
+"key": "f|וּנְבִיאוֹהִי",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-f11dcf1f02/w-car-cut.mp3",
+"kind": "word",
+"want": "וּמַסְגֵּא",
+"key": "f|וּמַסְגֵּא",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-f11dcf1f02/w.mp3",
+"kind": "word",
+"want": "וּמַסְגֵּא",
+"key": "f|וּמַסְגֵּא",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/brich-shmei-w91.mp3",
+"kind": "word",
+"want": "וּמַסְגֵּא",
+"key": "f|וּמַסְגֵּא",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-12199a23de/w-car-cut.mp3",
+"kind": "word",
+"want": "לְמֶעְבַּד",
+"key": "f|לְמֶעְבַּד",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-12199a23de/w.mp3",
+"kind": "word",
+"want": "לְמֶעְבַּד",
+"key": "f|לְמֶעְבַּד",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/brich-shmei-w92.mp3",
+"kind": "word",
+"want": "לְמֶעְבַּד",
+"key": "f|לְמֶעְבַּד",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-f393d79e1c/w-car-cut.mp3",
+"kind": "word",
+"want": "טָבְוָן",
+"key": "f|טָבְוָן",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-f393d79e1c/w-rs-car-cut.mp3",
+"kind": "word",
+"want": "טָבְוָן",
+"key": "f|טָבְוָן",
+"take": "w-rs-car-cut"
+},
+{
+"file": "takes/w5/f/w5-f393d79e1c/w-rs.mp3",
+"kind": "word",
+"want": "טָבְוָן",
+"key": "f|טָבְוָן",
+"take": "w-rs"
+},
+{
+"file": "takes/w5/f/w5-f393d79e1c/w.mp3",
+"kind": "word",
+"want": "טָבְוָן",
+"key": "f|טָבְוָן",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/brich-shmei-w93.mp3",
+"kind": "word",
+"want": "טָבְוָן",
+"key": "f|טָבְוָן",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-219ee81fcf/w-car-cut.mp3",
+"kind": "word",
+"want": "לִבָּאי",
+"key": "f|לִבָּאי",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-219ee81fcf/w.mp3",
+"kind": "word",
+"want": "לִבָּאי",
+"key": "f|לִבָּאי",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/brich-shmei-w108.mp3",
+"kind": "word",
+"want": "לִבָּאי",
+"key": "f|לִבָּאי",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-df21d4606f/w-car-cut.mp3",
+"kind": "word",
+"want": "וּלְחַיִּין",
+"key": "f|וּלְחַיִּין",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-df21d4606f/w.mp3",
+"kind": "word",
+"want": "וּלְחַיִּין",
+"key": "f|וּלְחַיִּין",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/brich-shmei-w117.mp3",
+"kind": "word",
+"want": "וּלְחַיִּין",
+"key": "f|וּלְחַיִּין",
+"take": "current"
+},
+{
+"file": "takes/w5/m/w5-915c22f401/w-car-cut.mp3",
+"kind": "word",
+"want": "בְרָא",
+"key": "m|בְרָא",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/m/w5-915c22f401/w-rs-car-cut.mp3",
+"kind": "word",
+"want": "בְרָא",
+"key": "m|בְרָא",
+"take": "w-rs-car-cut"
+},
+{
+"file": "takes/w5/m/w5-915c22f401/w-rs.mp3",
+"kind": "word",
+"want": "בְרָא",
+"key": "m|בְרָא",
+"take": "w-rs"
+},
+{
+"file": "takes/w5/m/w5-915c22f401/w.mp3",
+"kind": "word",
+"want": "בְרָא",
+"key": "m|בְרָא",
+"take": "w"
+},
+{
+"file": "takes/w5/m/w5-82a903e72a/w-car-cut.mp3",
+"kind": "word",
+"want": "כִרְעוּתֵהּ",
+"key": "m|כִרְעוּתֵהּ",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/m/w5-82a903e72a/w-rs-car-cut.mp3",
+"kind": "word",
+"want": "כִרְעוּתֵהּ",
+"key": "m|כִרְעוּתֵהּ",
+"take": "w-rs-car-cut"
+},
+{
+"file": "takes/w5/m/w5-82a903e72a/w-rs.mp3",
+"kind": "word",
+"want": "כִרְעוּתֵהּ",
+"key": "m|כִרְעוּתֵהּ",
+"take": "w-rs"
+},
+{
+"file": "takes/w5/m/w5-82a903e72a/w.mp3",
+"kind": "word",
+"want": "כִרְעוּתֵהּ",
+"key": "m|כִרְעוּתֵהּ",
+"take": "w"
+},
+{
+"file": "audio/m/israeli/word/kaddish-1-w8.mp3",
+"kind": "word",
+"want": "כִרְעוּתֵהּ",
+"key": "m|כִרְעוּתֵהּ",
+"take": "current"
+},
+{
+"file": "takes/w5/m/w5-07c744464d/w-car-cut.mp3",
+"kind": "word",
+"want": "וּבְיוֹמֵיכוֹן",
+"key": "m|וּבְיוֹמֵיכוֹן",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/m/w5-07c744464d/w-rs-car-cut.mp3",
+"kind": "word",
+"want": "וּבְיוֹמֵיכוֹן",
+"key": "m|וּבְיוֹמֵיכוֹן",
+"take": "w-rs-car-cut"
+},
+{
+"file": "takes/w5/m/w5-07c744464d/w-rs.mp3",
+"kind": "word",
+"want": "וּבְיוֹמֵיכוֹן",
+"key": "m|וּבְיוֹמֵיכוֹן",
+"take": "w-rs"
+},
+{
+"file": "takes/w5/m/w5-07c744464d/w.mp3",
+"kind": "word",
+"want": "וּבְיוֹמֵיכוֹן",
+"key": "m|וּבְיוֹמֵיכוֹן",
+"take": "w"
+},
+{
+"file": "takes/w5/m/w5-9602772027/w-car-cut.mp3",
+"kind": "word",
+"want": "וְיִשְׁתַּבַּח",
+"key": "m|וְיִשְׁתַּבַּח",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/m/w5-9602772027/w.mp3",
+"kind": "word",
+"want": "וְיִשְׁתַּבַּח",
+"key": "m|וְיִשְׁתַּבַּח",
+"take": "w"
+},
+{
+"file": "audio/m/israeli/word/kaddish-1-w29.mp3",
+"kind": "word",
+"want": "וְיִשְׁתַּבַּח",
+"key": "m|וְיִשְׁתַּבַּח",
+"take": "current"
+},
+{
+"file": "takes/w5/m/w5-8cb6f703c7/w-car-cut.mp3",
+"kind": "word",
+"want": "וְיִתְרוֹמַם",
+"key": "m|וְיִתְרוֹמַם",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/m/w5-8cb6f703c7/w.mp3",
+"kind": "word",
+"want": "וְיִתְרוֹמַם",
+"key": "m|וְיִתְרוֹמַם",
+"take": "w"
+},
+{
+"file": "audio/m/israeli/word/kaddish-1-w31.mp3",
+"kind": "word",
+"want": "וְיִתְרוֹמַם",
+"key": "m|וְיִתְרוֹמַם",
+"take": "current"
+},
+{
+"file": "takes/w5/m/w5-27065e1b41/w-car-cut.mp3",
+"kind": "word",
+"want": "וְיִתְנַשֵּׂא",
+"key": "m|וְיִתְנַשֵּׂא",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/m/w5-27065e1b41/w.mp3",
+"kind": "word",
+"want": "וְיִתְנַשֵּׂא",
+"key": "m|וְיִתְנַשֵּׂא",
+"take": "w"
+},
+{
+"file": "audio/m/israeli/word/kaddish-1-w32.mp3",
+"kind": "word",
+"want": "וְיִתְנַשֵּׂא",
+"key": "m|וְיִתְנַשֵּׂא",
+"take": "current"
+},
+{
+"file": "takes/w5/m/w5-e1bf286cff/w-car-cut.mp3",
+"kind": "word",
+"want": "וְיִתְהַדָּר",
+"key": "m|וְיִתְהַדָּר",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/m/w5-e1bf286cff/w.mp3",
+"kind": "word",
+"want": "וְיִתְהַדָּר",
+"key": "m|וְיִתְהַדָּר",
+"take": "w"
+},
+{
+"file": "audio/m/israeli/word/kaddish-1-w33.mp3",
+"kind": "word",
+"want": "וְיִתְהַדָּר",
+"key": "m|וְיִתְהַדָּר",
+"take": "current"
+},
+{
+"file": "takes/w5/m/w5-d567f42175/w-car-cut.mp3",
+"kind": "word",
+"want": "וְיִתְעַלֶּה",
+"key": "m|וְיִתְעַלֶּה",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/m/w5-d567f42175/w.mp3",
+"kind": "word",
+"want": "וְיִתְעַלֶּה",
+"key": "m|וְיִתְעַלֶּה",
+"take": "w"
+},
+{
+"file": "audio/m/israeli/word/kaddish-1-w34.mp3",
+"kind": "word",
+"want": "וְיִתְעַלֶּה",
+"key": "m|וְיִתְעַלֶּה",
+"take": "current"
+},
+{
+"file": "takes/w5/m/w5-d5c7fba87e/w-car-cut.mp3",
+"kind": "word",
+"want": "וְיִתְהַלָּל",
+"key": "m|וְיִתְהַלָּל",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/m/w5-d5c7fba87e/w.mp3",
+"kind": "word",
+"want": "וְיִתְהַלָּל",
+"key": "m|וְיִתְהַלָּל",
+"take": "w"
+},
+{
+"file": "audio/m/israeli/word/kaddish-1-w35.mp3",
+"kind": "word",
+"want": "וְיִתְהַלָּל",
+"key": "m|וְיִתְהַלָּל",
+"take": "current"
+},
+{
+"file": "takes/w5/m/w5-9fa1009f9a/w-car-cut.mp3",
+"kind": "word",
+"want": "בִּמְרוֹמָיו",
+"key": "m|בִּמְרוֹמָיו",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/m/w5-9fa1009f9a/w.mp3",
+"kind": "word",
+"want": "בִּמְרוֹמָיו",
+"key": "m|בִּמְרוֹמָיו",
+"take": "w"
+},
+{
+"file": "audio/m/israeli/word/kaddish-1-w60.mp3",
+"kind": "word",
+"want": "בִּמְרוֹמָיו",
+"key": "m|בִּמְרוֹמָיו",
+"take": "current"
+},
+{
+"file": "takes/w5/m/w5-d16643124c/w-car-cut.mp3",
+"kind": "word",
+"want": "בְּבֵיתֶךָ",
+"key": "m|בְּבֵיתֶךָ",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/m/w5-d16643124c/w-rs-car-cut.mp3",
+"kind": "word",
+"want": "בְּבֵיתֶךָ",
+"key": "m|בְּבֵיתֶךָ",
+"take": "w-rs-car-cut"
+},
+{
+"file": "takes/w5/m/w5-d16643124c/w-rs.mp3",
+"kind": "word",
+"want": "בְּבֵיתֶךָ",
+"key": "m|בְּבֵיתֶךָ",
+"take": "w-rs"
+},
+{
+"file": "takes/w5/m/w5-d16643124c/w.mp3",
+"kind": "word",
+"want": "בְּבֵיתֶךָ",
+"key": "m|בְּבֵיתֶךָ",
+"take": "w"
+},
+{
+"file": "audio/m/israeli/word/shema-vahavta-w27.mp3",
+"kind": "word",
+"want": "בְּבֵיתֶךָ",
+"key": "m|בְּבֵיתֶךָ",
+"take": "current"
+},
+{
+"file": "takes/w5/m/w5-da39c8dba7/w-car-cut.mp3",
+"kind": "word",
+"want": "אֲדֹנָי",
+"key": "m|אֲדֹנָי",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/m/w5-da39c8dba7/w.mp3",
+"kind": "word",
+"want": "אֲדֹנָי",
+"key": "m|אֲדֹנָי",
+"take": "w"
+},
+{
+"file": "audio/m/israeli/word/adon-olam-1-w69.mp3",
+"kind": "word",
+"want": "אֲדֹנָי",
+"key": "m|אֲדֹנָי",
+"take": "current"
+},
+{
+"file": "takes/w5/m/w5-b25128f2b8/w-car-cut.mp3",
+"kind": "word",
+"want": "מַיִם",
+"key": "m|מַיִם",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/m/w5-b25128f2b8/w.mp3",
+"kind": "word",
+"want": "מַיִם",
+"key": "m|מַיִם",
+"take": "w"
+},
+{
+"file": "audio/m/israeli/word/anchor-mem.mp3",
+"kind": "word",
+"want": "מַיִם",
+"key": "m|מַיִם",
+"take": "current"
+},
+{
+"file": "takes/w5/m/w5-01fd2b9db6/w-car-cut.mp3",
+"kind": "word",
+"want": "אֵין",
+"key": "m|אֵין",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/m/w5-01fd2b9db6/w.mp3",
+"kind": "word",
+"want": "אֵין",
+"key": "m|אֵין",
+"take": "w"
+},
+{
+"file": "audio/m/israeli/word/aleinu-1-w76.mp3",
+"kind": "word",
+"want": "אֵין",
+"key": "m|אֵין",
+"take": "current"
+},
+{
+"file": "takes/w5/m/w5-110b5bd28b/w-car-cut.mp3",
+"kind": "word",
+"want": "קֵץ",
+"key": "m|קֵץ",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/m/w5-110b5bd28b/w.mp3",
+"kind": "word",
+"want": "קֵץ",
+"key": "m|קֵץ",
+"take": "w"
+},
+{
+"file": "audio/m/israeli/word/h0849ff56.mp3",
+"kind": "word",
+"want": "קֵץ",
+"key": "m|קֵץ",
+"take": "current"
+},
+{
+"file": "takes/w5/m/w5-9068136192/w-car-cut.mp3",
+"kind": "word",
+"want": "בְרֵאשִׁית",
+"key": "m|בְרֵאשִׁית",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/m/w5-9068136192/w-rs-car-cut.mp3",
+"kind": "word",
+"want": "בְרֵאשִׁית",
+"key": "m|בְרֵאשִׁית",
+"take": "w-rs-car-cut"
+},
+{
+"file": "takes/w5/m/w5-9068136192/w-rs.mp3",
+"kind": "word",
+"want": "בְרֵאשִׁית",
+"key": "m|בְרֵאשִׁית",
+"take": "w-rs"
+},
+{
+"file": "takes/w5/m/w5-9068136192/w.mp3",
+"kind": "word",
+"want": "בְרֵאשִׁית",
+"key": "m|בְרֵאשִׁית",
+"take": "w"
+},
+{
+"file": "audio/m/israeli/word/kiddush-shabbat-eve-w19.mp3",
+"kind": "word",
+"want": "בְרֵאשִׁית",
+"key": "m|בְרֵאשִׁית",
+"take": "current"
+},
+{
+"file": "takes/w5/m/w5-82d0b065c2/w-car-cut.mp3",
+"kind": "word",
+"want": "לִיצִיאַת",
+"key": "m|לִיצִיאַת",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/m/w5-82d0b065c2/w.mp3",
+"kind": "word",
+"want": "לִיצִיאַת",
+"key": "m|לִיצִיאַת",
+"take": "w"
+},
+{
+"file": "audio/m/israeli/word/kiddush-shabbat-eve-w27.mp3",
+"kind": "word",
+"want": "לִיצִיאַת",
+"key": "m|לִיצִיאַת",
+"take": "current"
+},
+{
+"file": "takes/w5/m/w5-1bf583a71b/w-car-cut.mp3",
+"kind": "word",
+"want": "בָחַרְתָּ",
+"key": "m|בָחַרְתָּ",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/m/w5-1bf583a71b/w-rs-car-cut.mp3",
+"kind": "word",
+"want": "בָחַרְתָּ",
+"key": "m|בָחַרְתָּ",
+"take": "w-rs-car-cut"
+},
+{
+"file": "takes/w5/m/w5-1bf583a71b/w-rs.mp3",
+"kind": "word",
+"want": "בָחַרְתָּ",
+"key": "m|בָחַרְתָּ",
+"take": "w-rs"
+},
+{
+"file": "takes/w5/m/w5-1bf583a71b/w.mp3",
+"kind": "word",
+"want": "בָחַרְתָּ",
+"key": "m|בָחַרְתָּ",
+"take": "w"
+},
+{
+"file": "audio/m/israeli/word/kiddush-shabbat-eve-w31.mp3",
+"kind": "word",
+"want": "בָחַרְתָּ",
+"key": "m|בָחַרְתָּ",
+"take": "current"
+},
+{
+"file": "takes/w5/m/w5-84171c840d/w-car-cut.mp3",
+"kind": "word",
+"want": "קָדְשְׁךָ",
+"key": "m|קָדְשְׁךָ",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/m/w5-84171c840d/w.mp3",
+"kind": "word",
+"want": "קָדְשְׁךָ",
+"key": "m|קָדְשְׁךָ",
+"take": "w"
+},
+{
+"file": "audio/m/israeli/word/haftarah-after-w91.mp3",
+"kind": "word",
+"want": "קָדְשְׁךָ",
+"key": "m|קָדְשְׁךָ",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-3d699392e1/w-car-cut.mp3",
+"kind": "word",
+"want": "וּבְשָׁכְבְּךָ",
+"key": "f|וּבְשָׁכְבְּךָ",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-3d699392e1/w-rs-car-cut.mp3",
+"kind": "word",
+"want": "וּבְשָׁכְבְּךָ",
+"key": "f|וּבְשָׁכְבְּךָ",
+"take": "w-rs-car-cut"
+},
+{
+"file": "takes/w5/f/w5-3d699392e1/w-rs.mp3",
+"kind": "word",
+"want": "וּבְשָׁכְבְּךָ",
+"key": "f|וּבְשָׁכְבְּךָ",
+"take": "w-rs"
+},
+{
+"file": "takes/w5/f/w5-3d699392e1/w.mp3",
+"kind": "word",
+"want": "וּבְשָׁכְבְּךָ",
+"key": "f|וּבְשָׁכְבְּךָ",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/shema-vahavta-w30.mp3",
+"kind": "word",
+"want": "וּבְשָׁכְבְּךָ",
+"key": "f|וּבְשָׁכְבְּךָ",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-1cef050dd4/w-car-cut.mp3",
+"kind": "word",
+"want": "כִּי",
+"key": "f|כִּי",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-1cef050dd4/w.mp3",
+"kind": "word",
+"want": "כִּי",
+"key": "f|כִּי",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/aleinu-1-w68.mp3",
+"kind": "word",
+"want": "כִּי",
+"key": "f|כִּי",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-3765a27140/w-car-cut.mp3",
+"kind": "word",
+"want": "יָהּ",
+"key": "f|יָהּ",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-3765a27140/w.mp3",
+"kind": "word",
+"want": "יָהּ",
+"key": "f|יָהּ",
+"take": "w"
+},
+{
+"file": "audio-takes/f/w78a4c4dcbc-p.mp3",
+"kind": "word",
+"want": "יָהּ",
+"key": "f|יָהּ",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-19af066bfd/w-car-cut.mp3",
+"kind": "word",
+"want": "אֲדֹנָי",
+"key": "f|אֲדֹנָי",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-19af066bfd/w.mp3",
+"kind": "word",
+"want": "אֲדֹנָי",
+"key": "f|אֲדֹנָי",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/adon-olam-1-w69.mp3",
+"kind": "word",
+"want": "אֲדֹנָי",
+"key": "f|אֲדֹנָי",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-4a114afa7e/w-car-cut.mp3",
+"kind": "word",
+"want": "מַיִם",
+"key": "f|מַיִם",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-4a114afa7e/w.mp3",
+"kind": "word",
+"want": "מַיִם",
+"key": "f|מַיִם",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/anchor-mem.mp3",
+"kind": "word",
+"want": "מַיִם",
+"key": "f|מַיִם",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-fcb82c8d24/w-car-cut.mp3",
+"kind": "word",
+"want": "בְּשָׂשׁוֹן",
+"key": "f|בְּשָׂשׁוֹן",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-fcb82c8d24/w.mp3",
+"kind": "word",
+"want": "בְּשָׂשׁוֹן",
+"key": "f|בְּשָׂשׁוֹן",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/havdalah-opening-w17.mp3",
+"kind": "word",
+"want": "בְּשָׂשׁוֹן",
+"key": "f|בְּשָׂשׁוֹן",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-821cef5923/w-car-cut.mp3",
+"kind": "word",
+"want": "בִרְכָתֶךָ",
+"key": "f|בִרְכָתֶךָ",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-821cef5923/w-rs-car-cut.mp3",
+"kind": "word",
+"want": "בִרְכָתֶךָ",
+"key": "f|בִרְכָתֶךָ",
+"take": "w-rs-car-cut"
+},
+{
+"file": "takes/w5/f/w5-821cef5923/w-rs.mp3",
+"kind": "word",
+"want": "בִרְכָתֶךָ",
+"key": "f|בִרְכָתֶךָ",
+"take": "w-rs"
+},
+{
+"file": "takes/w5/f/w5-821cef5923/w.mp3",
+"kind": "word",
+"want": "בִרְכָתֶךָ",
+"key": "f|בִרְכָתֶךָ",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/havdalah-opening-w24.mp3",
+"kind": "word",
+"want": "בִרְכָתֶךָ",
+"key": "f|בִרְכָתֶךָ",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-c528cced68/w-car-cut.mp3",
+"kind": "word",
+"want": "בָּךְ",
+"key": "f|בָּךְ",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-c528cced68/w.mp3",
+"kind": "word",
+"want": "בָּךְ",
+"key": "f|בָּךְ",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/havdalah-opening-w39.mp3",
+"kind": "word",
+"want": "בָּךְ",
+"key": "f|בָּךְ",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-f82786b7cb/w-car-cut.mp3",
+"kind": "word",
+"want": "הוֹשִׁיעָה",
+"key": "f|הוֹשִׁיעָה",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-f82786b7cb/w.mp3",
+"kind": "word",
+"want": "הוֹשִׁיעָה",
+"key": "f|הוֹשִׁיעָה",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/amidah-elohai-netzor-w45.mp3",
+"kind": "word",
+"want": "הוֹשִׁיעָה",
+"key": "f|הוֹשִׁיעָה",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-0ac2916888/w-car-cut.mp3",
+"kind": "word",
+"want": "יְמִינֶךָ",
+"key": "f|יְמִינֶךָ",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-0ac2916888/w.mp3",
+"kind": "word",
+"want": "יְמִינֶךָ",
+"key": "f|יְמִינֶךָ",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/amidah-elohai-netzor-w35.mp3",
+"kind": "word",
+"want": "יְמִינֶךָ",
+"key": "f|יְמִינֶךָ",
+"take": "current"
+},
+{
+"file": "takes/w5/m/w5-ad88fa3460/w-car-cut.mp3",
+"kind": "word",
+"want": "עֲצָתָם",
+"key": "m|עֲצָתָם",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/m/w5-ad88fa3460/w.mp3",
+"kind": "word",
+"want": "עֲצָתָם",
+"key": "m|עֲצָתָם",
+"take": "w"
+},
+{
+"file": "audio/m/israeli/word/amidah-elohai-netzor-w27.mp3",
+"kind": "word",
+"want": "עֲצָתָם",
+"key": "m|עֲצָתָם",
+"take": "current"
+},
+{
+"file": "takes/w5/m/w5-b96e6704e4/w-car-cut.mp3",
+"kind": "word",
+"want": "צוּר",
+"key": "m|צוּר",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/m/w5-b96e6704e4/w.mp3",
+"kind": "word",
+"want": "צוּר",
+"key": "m|צוּר",
+"take": "w"
+},
+{
+"file": "audio/m/israeli/word/haftarah-after-w7.mp3",
+"kind": "word",
+"want": "צוּר",
+"key": "m|צוּר",
+"take": "current"
+},
+{
+"file": "takes/w5/m/w5-da0ece9f2c/w-car-cut.mp3",
+"kind": "word",
+"want": "הָאֹמֵר",
+"key": "m|הָאֹמֵר",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/m/w5-da0ece9f2c/w.mp3",
+"kind": "word",
+"want": "הָאֹמֵר",
+"key": "m|הָאֹמֵר",
+"take": "w"
+},
+{
+"file": "audio/m/israeli/word/haftarah-after-w13.mp3",
+"kind": "word",
+"want": "הָאֹמֵר",
+"key": "m|הָאֹמֵר",
+"take": "current"
+},
+{
+"file": "takes/w5/m/w5-74791bc834/w-car-cut.mp3",
+"kind": "word",
+"want": "בֵּית",
+"key": "m|בֵּית",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/m/w5-74791bc834/w.mp3",
+"kind": "word",
+"want": "בֵּית",
+"key": "m|בֵּית",
+"take": "w"
+},
+{
+"file": "audio/m/israeli/word/haftarah-after-w51.mp3",
+"kind": "word",
+"want": "בֵּית",
+"key": "m|בֵּית",
+"take": "current"
+},
+{
+"file": "takes/w5/m/w5-4bbc1811e5/w-car-cut.mp3",
+"kind": "word",
+"want": "בְיָמֵינוּ",
+"key": "m|בְיָמֵינוּ",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/m/w5-4bbc1811e5/w-rs-car-cut.mp3",
+"kind": "word",
+"want": "בְיָמֵינוּ",
+"key": "m|בְיָמֵינוּ",
+"take": "w-rs-car-cut"
+},
+{
+"file": "takes/w5/m/w5-4bbc1811e5/w-rs.mp3",
+"kind": "word",
+"want": "בְיָמֵינוּ",
+"key": "m|בְיָמֵינוּ",
+"take": "w-rs"
+},
+{
+"file": "takes/w5/m/w5-4bbc1811e5/w.mp3",
+"kind": "word",
+"want": "בְיָמֵינוּ",
+"key": "m|בְיָמֵינוּ",
+"take": "w"
+},
+{
+"file": "audio/m/israeli/word/haftarah-after-w57.mp3",
+"kind": "word",
+"want": "בְיָמֵינוּ",
+"key": "m|בְיָמֵינוּ",
+"take": "current"
+},
+{
+"file": "takes/w5/m/w5-61b8313b24/w-car-cut.mp3",
+"kind": "word",
+"want": "לָךְ",
+"key": "m|לָךְ",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/m/w5-61b8313b24/w.mp3",
+"kind": "word",
+"want": "לָךְ",
+"key": "m|לָךְ",
+"take": "w"
+},
+{
+"file": "audio/m/israeli/word/haftarah-after-w128.mp3",
+"kind": "word",
+"want": "לָךְ",
+"key": "m|לָךְ",
+"take": "current"
+},
+{
+"file": "takes/w5/m/w5-e8b091b4ba/w-car-cut.mp3",
+"kind": "word",
+"want": "חַי",
+"key": "m|חַי",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/m/w5-e8b091b4ba/w.mp3",
+"kind": "word",
+"want": "חַי",
+"key": "m|חַי",
+"take": "w"
+},
+{
+"file": "audio/m/israeli/word/h2d58afb3.mp3",
+"kind": "word",
+"want": "חַי",
+"key": "m|חַי",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-cdf31507c9/w-car-cut.mp3",
+"kind": "word",
+"want": "חֵן",
+"key": "f|חֵן",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-cdf31507c9/w.mp3",
+"kind": "word",
+"want": "חֵן",
+"key": "f|חֵן",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/hea4f6fcc.mp3",
+"kind": "word",
+"want": "חֵן",
+"key": "f|חֵן",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-736f75cdf3/w-car-cut.mp3",
+"kind": "word",
+"want": "בְּאוֹר",
+"key": "f|בְּאוֹר",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-736f75cdf3/w.mp3",
+"kind": "word",
+"want": "בְּאוֹר",
+"key": "f|בְּאוֹר",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/sim-shalom-w16.mp3",
+"kind": "word",
+"want": "בְּאוֹר",
+"key": "f|בְּאוֹר",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-c8e22b57ad/w-car-cut.mp3",
+"kind": "word",
+"want": "בְאוֹר",
+"key": "f|בְאוֹר",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-c8e22b57ad/w-rs-car-cut.mp3",
+"kind": "word",
+"want": "בְאוֹר",
+"key": "f|בְאוֹר",
+"take": "w-rs-car-cut"
+},
+{
+"file": "takes/w5/f/w5-c8e22b57ad/w-rs.mp3",
+"kind": "word",
+"want": "בְאוֹר",
+"key": "f|בְאוֹר",
+"take": "w-rs"
+},
+{
+"file": "takes/w5/f/w5-c8e22b57ad/w.mp3",
+"kind": "word",
+"want": "בְאוֹר",
+"key": "f|בְאוֹר",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/sim-shalom-w19.mp3",
+"kind": "word",
+"want": "בְאוֹר",
+"key": "f|בְאוֹר",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-41fbac725e/w-car-cut.mp3",
+"kind": "word",
+"want": "לְשַׁבֵּחַ",
+"key": "f|לְשַׁבֵּחַ",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-41fbac725e/w.mp3",
+"kind": "word",
+"want": "לְשַׁבֵּחַ",
+"key": "f|לְשַׁבֵּחַ",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/aleinu-1-w2.mp3",
+"kind": "word",
+"want": "לְשַׁבֵּחַ",
+"key": "f|לְשַׁבֵּחַ",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-ae343d5d3e/w-car-cut.mp3",
+"kind": "word",
+"want": "לְיוֹצֵר",
+"key": "f|לְיוֹצֵר",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-ae343d5d3e/w.mp3",
+"kind": "word",
+"want": "לְיוֹצֵר",
+"key": "f|לְיוֹצֵר",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/aleinu-1-w7.mp3",
+"kind": "word",
+"want": "לְיוֹצֵר",
+"key": "f|לְיוֹצֵר",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-2328563ae8/w-car-cut.mp3",
+"kind": "word",
+"want": "שָׂמָנוּ",
+"key": "f|שָׂמָנוּ",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-2328563ae8/w.mp3",
+"kind": "word",
+"want": "שָׂמָנוּ",
+"key": "f|שָׂמָנוּ",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/aleinu-1-w14.mp3",
+"kind": "word",
+"want": "שָׂמָנוּ",
+"key": "f|שָׂמָנוּ",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-996230cc65/w-car-cut.mp3",
+"kind": "word",
+"want": "הָאָרֶץ",
+"key": "f|הָאָרֶץ",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-996230cc65/w.mp3",
+"kind": "word",
+"want": "הָאָרֶץ",
+"key": "f|הָאָרֶץ",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/hamotzi-w10.mp3",
+"kind": "word",
+"want": "הָאָרֶץ",
+"key": "f|הָאָרֶץ",
+"take": "current"
+},
+{
+"file": "takes/w5/m/w5-76918a193a/w-car-cut.mp3",
+"kind": "word",
+"want": "וְיִתְפָּאַר",
+"key": "m|וְיִתְפָּאַר",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/m/w5-76918a193a/w.mp3",
+"kind": "word",
+"want": "וְיִתְפָּאַר",
+"key": "m|וְיִתְפָּאַר",
+"take": "w"
+},
+{
+"file": "audio/m/israeli/word/kaddish-1-w30.mp3",
+"kind": "word",
+"want": "וְיִתְפָּאַר",
+"key": "m|וְיִתְפָּאַר",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-7cfb518f18/w-car-cut.mp3",
+"kind": "word",
+"want": "בְּמִצְוֹתָיו",
+"key": "f|בְּמִצְוֹתָיו",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-7cfb518f18/w.mp3",
+"kind": "word",
+"want": "בְּמִצְוֹתָיו",
+"key": "f|בְּמִצְוֹתָיו",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/candle-shabbat-w9.mp3",
+"kind": "word",
+"want": "בְּמִצְוֹתָיו",
+"key": "f|בְּמִצְוֹתָיו",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-6e1b31e980/w-car-cut.mp3",
+"kind": "word",
+"want": "לִיצִיאַת",
+"key": "f|לִיצִיאַת",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-6e1b31e980/w.mp3",
+"kind": "word",
+"want": "לִיצִיאַת",
+"key": "f|לִיצִיאַת",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/kiddush-shabbat-eve-w27.mp3",
+"kind": "word",
+"want": "לִיצִיאַת",
+"key": "f|לִיצִיאַת",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-3514cb0b50/w-car-cut.mp3",
+"kind": "word",
+"want": "בָחַרְתָּ",
+"key": "f|בָחַרְתָּ",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-3514cb0b50/w-rs-car-cut.mp3",
+"kind": "word",
+"want": "בָחַרְתָּ",
+"key": "f|בָחַרְתָּ",
+"take": "w-rs-car-cut"
+},
+{
+"file": "takes/w5/f/w5-3514cb0b50/w-rs.mp3",
+"kind": "word",
+"want": "בָחַרְתָּ",
+"key": "f|בָחַרְתָּ",
+"take": "w-rs"
+},
+{
+"file": "takes/w5/f/w5-3514cb0b50/w.mp3",
+"kind": "word",
+"want": "בָחַרְתָּ",
+"key": "f|בָחַרְתָּ",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/kiddush-shabbat-eve-w31.mp3",
+"kind": "word",
+"want": "בָחַרְתָּ",
+"key": "f|בָחַרְתָּ",
+"take": "current"
+},
+{
+"file": "takes/w5/m/w5-e44f2e049f/w-car-cut.mp3",
+"kind": "word",
+"want": "בְּאוֹר",
+"key": "m|בְּאוֹר",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/m/w5-e44f2e049f/w.mp3",
+"kind": "word",
+"want": "בְּאוֹר",
+"key": "m|בְּאוֹר",
+"take": "w"
+},
+{
+"file": "audio/m/israeli/word/sim-shalom-w16.mp3",
+"kind": "word",
+"want": "בְּאוֹר",
+"key": "m|בְּאוֹר",
+"take": "current"
+},
+{
+"file": "takes/w5/m/w5-fdf701ff71/w-car-cut.mp3",
+"kind": "word",
+"want": "בְאוֹר",
+"key": "m|בְאוֹר",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/m/w5-fdf701ff71/w-rs-car-cut.mp3",
+"kind": "word",
+"want": "בְאוֹר",
+"key": "m|בְאוֹר",
+"take": "w-rs-car-cut"
+},
+{
+"file": "takes/w5/m/w5-fdf701ff71/w-rs.mp3",
+"kind": "word",
+"want": "בְאוֹר",
+"key": "m|בְאוֹר",
+"take": "w-rs"
+},
+{
+"file": "takes/w5/m/w5-fdf701ff71/w.mp3",
+"kind": "word",
+"want": "בְאוֹר",
+"key": "m|בְאוֹר",
+"take": "w"
+},
+{
+"file": "audio/m/israeli/word/sim-shalom-w19.mp3",
+"kind": "word",
+"want": "בְאוֹר",
+"key": "m|בְאוֹר",
+"take": "current"
+},
+{
+"file": "takes/w5/m/w5-f60a65e2a2/w-car-cut.mp3",
+"kind": "word",
+"want": "וְיִשְׁמְרֶךָ",
+"key": "m|וְיִשְׁמְרֶךָ",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/m/w5-f60a65e2a2/w.mp3",
+"kind": "word",
+"want": "וְיִשְׁמְרֶךָ",
+"key": "m|וְיִשְׁמְרֶךָ",
+"take": "w"
+},
+{
+"file": "audio/m/israeli/word/bless-priestly-1-w3.mp3",
+"kind": "word",
+"want": "וְיִשְׁמְרֶךָ",
+"key": "m|וְיִשְׁמְרֶךָ",
+"take": "current"
+},
+{
+"file": "takes/w5/m/w5-13c760b8ca/w-car-cut.mp3",
+"kind": "word",
+"want": "יְבָרֶכְךָ",
+"key": "m|יְבָרֶכְךָ",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/m/w5-13c760b8ca/w-rs-car-cut.mp3",
+"kind": "word",
+"want": "יְבָרֶכְךָ",
+"key": "m|יְבָרֶכְךָ",
+"take": "w-rs-car-cut"
+},
+{
+"file": "takes/w5/m/w5-13c760b8ca/w-rs.mp3",
+"kind": "word",
+"want": "יְבָרֶכְךָ",
+"key": "m|יְבָרֶכְךָ",
+"take": "w-rs"
+},
+{
+"file": "takes/w5/m/w5-13c760b8ca/w.mp3",
+"kind": "word",
+"want": "יְבָרֶכְךָ",
+"key": "m|יְבָרֶכְךָ",
+"take": "w"
+},
+{
+"file": "audio/m/israeli/word/bless-priestly-1-w1.mp3",
+"kind": "word",
+"want": "יְבָרֶכְךָ",
+"key": "m|יְבָרֶכְךָ",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-3f3d9b221a/w-car-cut.mp3",
+"kind": "word",
+"want": "הָיִינוּ",
+"key": "f|הָיִינוּ",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-3f3d9b221a/w.mp3",
+"kind": "word",
+"want": "הָיִינוּ",
+"key": "f|הָיִינוּ",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/shir-hamaalot-w26.mp3",
+"kind": "word",
+"want": "הָיִינוּ",
+"key": "f|הָיִינוּ",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-22fe3de82c/w-car-cut.mp3",
+"kind": "word",
+"want": "אָז",
+"key": "f|אָז",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-22fe3de82c/w.mp3",
+"kind": "word",
+"want": "אָז",
+"key": "f|אָז",
+"take": "w"
+},
+{
+"file": "audio-takes/f/w7bd5849fe2-p.mp3",
+"kind": "word",
+"want": "אָז",
+"key": "f|אָז",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-7a043d4719/w-car-cut.mp3",
+"kind": "word",
+"want": "שְׂחוֹק",
+"key": "f|שְׂחוֹק",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-7a043d4719/w.mp3",
+"kind": "word",
+"want": "שְׂחוֹק",
+"key": "f|שְׂחוֹק",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/shir-hamaalot-w11.mp3",
+"kind": "word",
+"want": "שְׂחוֹק",
+"key": "f|שְׂחוֹק",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-761e27c624/w-car-cut.mp3",
+"kind": "word",
+"want": "בַגּוֹיִם",
+"key": "f|בַגּוֹיִם",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-761e27c624/w-rs-car-cut.mp3",
+"kind": "word",
+"want": "בַגּוֹיִם",
+"key": "f|בַגּוֹיִם",
+"take": "w-rs-car-cut"
+},
+{
+"file": "takes/w5/f/w5-761e27c624/w-rs.mp3",
+"kind": "word",
+"want": "בַגּוֹיִם",
+"key": "f|בַגּוֹיִם",
+"take": "w-rs"
+},
+{
+"file": "takes/w5/f/w5-761e27c624/w.mp3",
+"kind": "word",
+"want": "בַגּוֹיִם",
+"key": "f|בַגּוֹיִם",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/shir-hamaalot-w17.mp3",
+"kind": "word",
+"want": "בַגּוֹיִם",
+"key": "f|בַגּוֹיִם",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-ea661a97cb/w-car-cut.mp3",
+"kind": "word",
+"want": "הַזֹּרְעִים",
+"key": "f|הַזֹּרְעִים",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-ea661a97cb/w.mp3",
+"kind": "word",
+"want": "הַזֹּרְעִים",
+"key": "f|הַזֹּרְעִים",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/shir-hamaalot-w33.mp3",
+"kind": "word",
+"want": "הַזֹּרְעִים",
+"key": "f|הַזֹּרְעִים",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-db67dfc111/w-car-cut.mp3",
+"kind": "word",
+"want": "הַזָּרַע",
+"key": "f|הַזָּרַע",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-db67dfc111/w.mp3",
+"kind": "word",
+"want": "הַזָּרַע",
+"key": "f|הַזָּרַע",
+"take": "w"
+},
+{
+"file": "takes/w5/f/w5-9de18eb980/w-car-cut.mp3",
+"kind": "word",
+"want": "בְרִנָּה",
+"key": "f|בְרִנָּה",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-9de18eb980/w-rs-car-cut.mp3",
+"kind": "word",
+"want": "בְרִנָּה",
+"key": "f|בְרִנָּה",
+"take": "w-rs-car-cut"
+},
+{
+"file": "takes/w5/f/w5-9de18eb980/w-rs.mp3",
+"kind": "word",
+"want": "בְרִנָּה",
+"key": "f|בְרִנָּה",
+"take": "w-rs"
+},
+{
+"file": "takes/w5/f/w5-9de18eb980/w.mp3",
+"kind": "word",
+"want": "בְרִנָּה",
+"key": "f|בְרִנָּה",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/shir-hamaalot-w43.mp3",
+"kind": "word",
+"want": "בְרִנָּה",
+"key": "f|בְרִנָּה",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-61246a5bae/w-car-cut.mp3",
+"kind": "word",
+"want": "אֱלֹהֵינוּ",
+"key": "f|אֱלֹהֵינוּ",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-61246a5bae/w.mp3",
+"kind": "word",
+"want": "אֱלֹהֵינוּ",
+"key": "f|אֱלֹהֵינוּ",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/aleinu-1-w54.mp3",
+"kind": "word",
+"want": "אֱלֹהֵינוּ",
+"key": "f|אֱלֹהֵינוּ",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-096719f38d/w-car-cut.mp3",
+"kind": "word",
+"want": "צוּר",
+"key": "f|צוּר",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-096719f38d/w.mp3",
+"kind": "word",
+"want": "צוּר",
+"key": "f|צוּר",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/haftarah-after-w7.mp3",
+"kind": "word",
+"want": "צוּר",
+"key": "f|צוּר",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-ba7a9f4d30/w-car-cut.mp3",
+"kind": "word",
+"want": "הִיא",
+"key": "f|הִיא",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-ba7a9f4d30/w.mp3",
+"kind": "word",
+"want": "הִיא",
+"key": "f|הִיא",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/brich-shmei-w62.mp3",
+"kind": "word",
+"want": "הִיא",
+"key": "f|הִיא",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-e5f93e0285/w-car-cut.mp3",
+"kind": "word",
+"want": "בְיָמֵינוּ",
+"key": "f|בְיָמֵינוּ",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-e5f93e0285/w-rs-car-cut.mp3",
+"kind": "word",
+"want": "בְיָמֵינוּ",
+"key": "f|בְיָמֵינוּ",
+"take": "w-rs-car-cut"
+},
+{
+"file": "takes/w5/f/w5-e5f93e0285/w-rs.mp3",
+"kind": "word",
+"want": "בְיָמֵינוּ",
+"key": "f|בְיָמֵינוּ",
+"take": "w-rs"
+},
+{
+"file": "takes/w5/f/w5-e5f93e0285/w.mp3",
+"kind": "word",
+"want": "בְיָמֵינוּ",
+"key": "f|בְיָמֵינוּ",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/haftarah-after-w57.mp3",
+"kind": "word",
+"want": "בְיָמֵינוּ",
+"key": "f|בְיָמֵינוּ",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-bdb045d8c1/w-car-cut.mp3",
+"kind": "word",
+"want": "שַׂמְּחֵנוּ",
+"key": "f|שַׂמְּחֵנוּ",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-bdb045d8c1/w.mp3",
+"kind": "word",
+"want": "שַׂמְּחֵנוּ",
+"key": "f|שַׂמְּחֵנוּ",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/haftarah-after-w64.mp3",
+"kind": "word",
+"want": "שַׂמְּחֵנוּ",
+"key": "f|שַׂמְּחֵנוּ",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-e5664fe1c3/w-car-cut.mp3",
+"kind": "word",
+"want": "זָר",
+"key": "f|זָר",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-e5664fe1c3/w.mp3",
+"kind": "word",
+"want": "זָר",
+"key": "f|זָר",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/h3b09d299.mp3",
+"kind": "word",
+"want": "זָר",
+"key": "f|זָר",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-4be6a47bfb/w-car-cut.mp3",
+"kind": "word",
+"want": "יִנְחֲלוּ",
+"key": "f|יִנְחֲלוּ",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-4be6a47bfb/w.mp3",
+"kind": "word",
+"want": "יִנְחֲלוּ",
+"key": "f|יִנְחֲלוּ",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/haftarah-after-w84.mp3",
+"kind": "word",
+"want": "יִנְחֲלוּ",
+"key": "f|יִנְחֲלוּ",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-714e216a98/w-car-cut.mp3",
+"kind": "word",
+"want": "הַתּוֹרָה",
+"key": "f|הַתּוֹרָה",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-714e216a98/w.mp3",
+"kind": "word",
+"want": "הַתּוֹרָה",
+"key": "f|הַתּוֹרָה",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/haftarah-after-w105.mp3",
+"kind": "word",
+"want": "הַתּוֹרָה",
+"key": "f|הַתּוֹרָה",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-6e627aae32/w-car-cut.mp3",
+"kind": "word",
+"want": "בֵּית",
+"key": "f|בֵּית",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-6e627aae32/w.mp3",
+"kind": "word",
+"want": "בֵּית",
+"key": "f|בֵּית",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/haftarah-after-w51.mp3",
+"kind": "word",
+"want": "בֵּית",
+"key": "f|בֵּית",
+"take": "current"
+},
+{
+"file": "takes/w5/m/w5-8002994382/w-car-cut.mp3",
+"kind": "word",
+"want": "הַשַׁבָּת",
+"key": "m|הַשַׁבָּת",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/m/w5-8002994382/w.mp3",
+"kind": "word",
+"want": "הַשַׁבָּת",
+"key": "m|הַשַׁבָּת",
+"take": "w"
+},
+{
+"file": "audio/m/israeli/word/kiddush-zachor-w3.mp3",
+"kind": "word",
+"want": "הַשַׁבָּת",
+"key": "m|הַשַׁבָּת",
+"take": "current"
+},
+{
+"file": "takes/w5/m/w5-e697fafbf1/w-car-cut.mp3",
+"kind": "word",
+"want": "וַיָּנַח",
+"key": "m|וַיָּנַח",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/m/w5-e697fafbf1/w.mp3",
+"kind": "word",
+"want": "וַיָּנַח",
+"key": "m|וַיָּנַח",
+"take": "w"
+},
+{
+"file": "audio-takes/m/w82fb117bad-m.mp3",
+"kind": "word",
+"want": "וַיָּנַח",
+"key": "m|וַיָּנַח",
+"take": "current"
+},
+{
+"file": "takes/w5/m/w5-62ed911703/w-car-cut.mp3",
+"kind": "word",
+"want": "וַיְקַדְּשֵׁהוּ",
+"key": "m|וַיְקַדְּשֵׁהוּ",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/m/w5-62ed911703/w.mp3",
+"kind": "word",
+"want": "וַיְקַדְּשֵׁהוּ",
+"key": "m|וַיְקַדְּשֵׁהוּ",
+"take": "w"
+},
+{
+"file": "audio/m/israeli/word/i-35-w11.mp3",
+"kind": "word",
+"want": "וַיְקַדְּשֵׁהוּ",
+"key": "m|וַיְקַדְּשֵׁהוּ",
+"take": "current"
+},
+{
+"file": "takes/w5/m/w5-9a5fc9bf8b/w-car-cut.mp3",
+"kind": "word",
+"want": "אֶת",
+"key": "m|אֶת",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/m/w5-9a5fc9bf8b/w.mp3",
+"kind": "word",
+"want": "אֶת",
+"key": "m|אֶת",
+"take": "w"
+},
+{
+"file": "audio-takes/m/wf0d6430aeb-p.mp3",
+"kind": "word",
+"want": "אֶת",
+"key": "m|אֶת",
+"take": "current"
+},
+{
+"file": "takes/w5/m/w5-5752f274f3/w-car-cut.mp3",
+"kind": "word",
+"want": "הָיִינוּ",
+"key": "m|הָיִינוּ",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/m/w5-5752f274f3/w.mp3",
+"kind": "word",
+"want": "הָיִינוּ",
+"key": "m|הָיִינוּ",
+"take": "w"
+},
+{
+"file": "audio/m/israeli/word/shir-hamaalot-w26.mp3",
+"kind": "word",
+"want": "הָיִינוּ",
+"key": "m|הָיִינוּ",
+"take": "current"
+},
+{
+"file": "takes/w5/m/w5-1d2711ef82/w-car-cut.mp3",
+"kind": "word",
+"want": "שְׂחוֹק",
+"key": "m|שְׂחוֹק",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/m/w5-1d2711ef82/w.mp3",
+"kind": "word",
+"want": "שְׂחוֹק",
+"key": "m|שְׂחוֹק",
+"take": "w"
+},
+{
+"file": "audio/m/israeli/word/shir-hamaalot-w11.mp3",
+"kind": "word",
+"want": "שְׂחוֹק",
+"key": "m|שְׂחוֹק",
+"take": "current"
+},
+{
+"file": "takes/w5/m/w5-d638156ee2/w-car-cut.mp3",
+"kind": "word",
+"want": "בַגּוֹיִם",
+"key": "m|בַגּוֹיִם",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/m/w5-d638156ee2/w-rs-car-cut.mp3",
+"kind": "word",
+"want": "בַגּוֹיִם",
+"key": "m|בַגּוֹיִם",
+"take": "w-rs-car-cut"
+},
+{
+"file": "takes/w5/m/w5-d638156ee2/w-rs.mp3",
+"kind": "word",
+"want": "בַגּוֹיִם",
+"key": "m|בַגּוֹיִם",
+"take": "w-rs"
+},
+{
+"file": "takes/w5/m/w5-d638156ee2/w.mp3",
+"kind": "word",
+"want": "בַגּוֹיִם",
+"key": "m|בַגּוֹיִם",
+"take": "w"
+},
+{
+"file": "audio-takes/m/w5c521c3cba-p.mp3",
+"kind": "word",
+"want": "בַגּוֹיִם",
+"key": "m|בַגּוֹיִם",
+"take": "current"
+},
+{
+"file": "takes/w5/m/w5-e857940082/w-car-cut.mp3",
+"kind": "word",
+"want": "הַזֹּרְעִים",
+"key": "m|הַזֹּרְעִים",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/m/w5-e857940082/w.mp3",
+"kind": "word",
+"want": "הַזֹּרְעִים",
+"key": "m|הַזֹּרְעִים",
+"take": "w"
+},
+{
+"file": "audio/m/israeli/word/shir-hamaalot-w33.mp3",
+"kind": "word",
+"want": "הַזֹּרְעִים",
+"key": "m|הַזֹּרְעִים",
+"take": "current"
+},
+{
+"file": "takes/w5/m/w5-1ea1271316/w-car-cut.mp3",
+"kind": "word",
+"want": "הַזָּרַע",
+"key": "m|הַזָּרַע",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/m/w5-1ea1271316/w.mp3",
+"kind": "word",
+"want": "הַזָּרַע",
+"key": "m|הַזָּרַע",
+"take": "w"
+},
+{
+"file": "takes/w5/m/w5-51260276e4/w-car-cut.mp3",
+"kind": "word",
+"want": "בְרִנָּה",
+"key": "m|בְרִנָּה",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/m/w5-51260276e4/w-rs-car-cut.mp3",
+"kind": "word",
+"want": "בְרִנָּה",
+"key": "m|בְרִנָּה",
+"take": "w-rs-car-cut"
+},
+{
+"file": "takes/w5/m/w5-51260276e4/w-rs.mp3",
+"kind": "word",
+"want": "בְרִנָּה",
+"key": "m|בְרִנָּה",
+"take": "w-rs"
+},
+{
+"file": "takes/w5/m/w5-51260276e4/w.mp3",
+"kind": "word",
+"want": "בְרִנָּה",
+"key": "m|בְרִנָּה",
+"take": "w"
+},
+{
+"file": "audio/m/israeli/word/shir-hamaalot-w43.mp3",
+"kind": "word",
+"want": "בְרִנָּה",
+"key": "m|בְרִנָּה",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-062dcecab3/w-car-cut.mp3",
+"kind": "word",
+"want": "כֹל",
+"key": "f|כֹל",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-062dcecab3/w-rs-car-cut.mp3",
+"kind": "word",
+"want": "כֹל",
+"key": "f|כֹל",
+"take": "w-rs-car-cut"
+},
+{
+"file": "takes/w5/f/w5-062dcecab3/w-rs.mp3",
+"kind": "word",
+"want": "כֹל",
+"key": "f|כֹל",
+"take": "w-rs"
+},
+{
+"file": "takes/w5/f/w5-062dcecab3/w.mp3",
+"kind": "word",
+"want": "כֹל",
+"key": "f|כֹל",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/lecha-hashem-w9.mp3",
+"kind": "word",
+"want": "כֹל",
+"key": "f|כֹל",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-2156b200a3/w-car-cut.mp3",
+"kind": "word",
+"want": "וֵאלֹהֵי",
+"key": "f|וֵאלֹהֵי",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-2156b200a3/w.mp3",
+"kind": "word",
+"want": "וֵאלֹהֵי",
+"key": "f|וֵאלֹהֵי",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/avot-1-w11.mp3",
+"kind": "word",
+"want": "וֵאלֹהֵי",
+"key": "f|וֵאלֹהֵי",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-fed0d5b7b2/w-car-cut.mp3",
+"kind": "word",
+"want": "יִצְחָק",
+"key": "f|יִצְחָק",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-fed0d5b7b2/w.mp3",
+"kind": "word",
+"want": "יִצְחָק",
+"key": "f|יִצְחָק",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/avot-1-w10.mp3",
+"kind": "word",
+"want": "יִצְחָק",
+"key": "f|יִצְחָק",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-da75a667de/w-car-cut.mp3",
+"kind": "word",
+"want": "הַגִּבּוֹר",
+"key": "f|הַגִּבּוֹר",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-da75a667de/w.mp3",
+"kind": "word",
+"want": "הַגִּבּוֹר",
+"key": "f|הַגִּבּוֹר",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/avot-1-w15.mp3",
+"kind": "word",
+"want": "הַגִּבּוֹר",
+"key": "f|הַגִּבּוֹר",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-8004c6aec1/w-car-cut.mp3",
+"kind": "word",
+"want": "אֱלֹהֵי",
+"key": "f|אֱלֹהֵי",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-8004c6aec1/w.mp3",
+"kind": "word",
+"want": "אֱלֹהֵי",
+"key": "f|אֱלֹהֵי",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/avot-1-w7.mp3",
+"kind": "word",
+"want": "אֱלֹהֵי",
+"key": "f|אֱלֹהֵי",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-a88594f479/w-car-cut.mp3",
+"kind": "word",
+"want": "בְּאַהֲבָה",
+"key": "f|בְּאַהֲבָה",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-a88594f479/w-rs-car-cut.mp3",
+"kind": "word",
+"want": "בְּאַהֲבָה",
+"key": "f|בְּאַהֲבָה",
+"take": "w-rs-car-cut"
+},
+{
+"file": "takes/w5/f/w5-a88594f479/w-rs.mp3",
+"kind": "word",
+"want": "בְּאַהֲבָה",
+"key": "f|בְּאַהֲבָה",
+"take": "w-rs"
+},
+{
+"file": "takes/w5/f/w5-a88594f479/w.mp3",
+"kind": "word",
+"want": "בְּאַהֲבָה",
+"key": "f|בְּאַהֲבָה",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/avot-1-w33.mp3",
+"kind": "word",
+"want": "בְּאַהֲבָה",
+"key": "f|בְּאַהֲבָה",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-ea4cc27309/w-car-cut.mp3",
+"kind": "word",
+"want": "מָלַךְ",
+"key": "f|מָלַךְ",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-ea4cc27309/w.mp3",
+"kind": "word",
+"want": "מָלַךְ",
+"key": "f|מָלַךְ",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/adon-olam-1-w4.mp3",
+"kind": "word",
+"want": "מָלַךְ",
+"key": "f|מָלַךְ",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-d54ace7bc3/w-car-cut.mp3",
+"kind": "word",
+"want": "וְאָעִירָה",
+"key": "f|וְאָעִירָה",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-d54ace7bc3/w.mp3",
+"kind": "word",
+"want": "וְאָעִירָה",
+"key": "f|וְאָעִירָה",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/adon-olam-1-w65.mp3",
+"kind": "word",
+"want": "וְאָעִירָה",
+"key": "f|וְאָעִירָה",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-f2ebca2fe2/w-car-cut.mp3",
+"kind": "word",
+"want": "גְּוִיָּתִי",
+"key": "f|גְּוִיָּתִי",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-f2ebca2fe2/w.mp3",
+"kind": "word",
+"want": "גְּוִיָּתִי",
+"key": "f|גְּוִיָּתִי",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/adon-olam-1-w68.mp3",
+"kind": "word",
+"want": "גְּוִיָּתִי",
+"key": "f|גְּוִיָּתִי",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-0436a70dd7/w-car-cut.mp3",
+"kind": "word",
+"want": "בְנֵי",
+"key": "f|בְנֵי",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-0436a70dd7/w-rs-car-cut.mp3",
+"kind": "word",
+"want": "בְנֵי",
+"key": "f|בְנֵי",
+"take": "w-rs-car-cut"
+},
+{
+"file": "takes/w5/f/w5-0436a70dd7/w-rs.mp3",
+"kind": "word",
+"want": "בְנֵי",
+"key": "f|בְנֵי",
+"take": "w-rs"
+},
+{
+"file": "takes/w5/f/w5-0436a70dd7/w.mp3",
+"kind": "word",
+"want": "בְנֵי",
+"key": "f|בְנֵי",
+"take": "w"
+},
+{
+"file": "takes/w5/f/w5-9a47785b3d/w-car-cut.mp3",
+"kind": "word",
+"want": "הִוא",
+"key": "f|הִוא",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-9a47785b3d/w.mp3",
+"kind": "word",
+"want": "הִוא",
+"key": "f|הִוא",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/kiddush-veshamru-w14.mp3",
+"kind": "word",
+"want": "הִוא",
+"key": "f|הִוא",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-61c4f807a7/w-car-cut.mp3",
+"kind": "word",
+"want": "יָמִים",
+"key": "f|יָמִים",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-61c4f807a7/w.mp3",
+"kind": "word",
+"want": "יָמִים",
+"key": "f|יָמִים",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/etz-chaim-w15.mp3",
+"kind": "word",
+"want": "יָמִים",
+"key": "f|יָמִים",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-823346e622/w-car-cut.mp3",
+"kind": "word",
+"want": "הַשָּׁמַיִם",
+"key": "f|הַשָּׁמַיִם",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-823346e622/w.mp3",
+"kind": "word",
+"want": "הַשָּׁמַיִם",
+"key": "f|הַשָּׁמַיִם",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/kiddush-gen-2-1-3-w2.mp3",
+"kind": "word",
+"want": "הַשָּׁמַיִם",
+"key": "f|הַשָּׁמַיִם",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-5539fc5a8c/w-car-cut.mp3",
+"kind": "word",
+"want": "וַיִּנָּפַשׁ",
+"key": "f|וַיִּנָּפַשׁ",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-5539fc5a8c/w.mp3",
+"kind": "word",
+"want": "וַיִּנָּפַשׁ",
+"key": "f|וַיִּנָּפַשׁ",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/kiddush-veshamru-w25.mp3",
+"kind": "word",
+"want": "וַיִּנָּפַשׁ",
+"key": "f|וַיִּנָּפַשׁ",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-736a2798e2/w-car-cut.mp3",
+"kind": "word",
+"want": "בִּנְסֹעַ",
+"key": "f|בִּנְסֹעַ",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-736a2798e2/w.mp3",
+"kind": "word",
+"want": "בִּנְסֹעַ",
+"key": "f|בִּנְסֹעַ",
+"take": "w"
+},
+{
+"file": "audio-takes/f/wfe3f04e813-p.mp3",
+"kind": "word",
+"want": "בִּנְסֹעַ",
+"key": "f|בִּנְסֹעַ",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-0dd7e208c7/w-car-cut.mp3",
+"kind": "word",
+"want": "וְיָפֻצוּ",
+"key": "f|וְיָפֻצוּ",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-0dd7e208c7/w.mp3",
+"kind": "word",
+"want": "וְיָפֻצוּ",
+"key": "f|וְיָפֻצוּ",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/vayehi-binsoa-w8.mp3",
+"kind": "word",
+"want": "וְיָפֻצוּ",
+"key": "f|וְיָפֻצוּ",
+"take": "current"
+},
+{
+"file": "takes/w5/m/w5-f6f621c6ca/w-car-cut.mp3",
+"kind": "word",
+"want": "לִבְנֵי",
+"key": "m|לִבְנֵי",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/m/w5-f6f621c6ca/w-rs-car-cut.mp3",
+"kind": "word",
+"want": "לִבְנֵי",
+"key": "m|לִבְנֵי",
+"take": "w-rs-car-cut"
+},
+{
+"file": "takes/w5/m/w5-f6f621c6ca/w-rs.mp3",
+"kind": "word",
+"want": "לִבְנֵי",
+"key": "m|לִבְנֵי",
+"take": "w-rs"
+},
+{
+"file": "takes/w5/m/w5-f6f621c6ca/w.mp3",
+"kind": "word",
+"want": "לִבְנֵי",
+"key": "m|לִבְנֵי",
+"take": "w"
+},
+{
+"file": "audio/m/israeli/word/avot-1-w29.mp3",
+"kind": "word",
+"want": "לִבְנֵי",
+"key": "m|לִבְנֵי",
+"take": "current"
+},
+{
+"file": "takes/w5/m/w5-c5a11032cd/w-car-cut.mp3",
+"kind": "word",
+"want": "לְיוֹצֵר",
+"key": "m|לְיוֹצֵר",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/m/w5-c5a11032cd/w.mp3",
+"kind": "word",
+"want": "לְיוֹצֵר",
+"key": "m|לְיוֹצֵר",
+"take": "w"
+},
+{
+"file": "audio/m/israeli/word/aleinu-1-w7.mp3",
+"kind": "word",
+"want": "לְיוֹצֵר",
+"key": "m|לְיוֹצֵר",
+"take": "current"
+},
+{
+"file": "takes/w5/m/w5-1cec9f0fbc/w-car-cut.mp3",
+"kind": "word",
+"want": "בְּרֵאשִׁית",
+"key": "m|בְּרֵאשִׁית",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/m/w5-1cec9f0fbc/w.mp3",
+"kind": "word",
+"want": "בְּרֵאשִׁית",
+"key": "m|בְּרֵאשִׁית",
+"take": "w"
+},
+{
+"file": "audio/m/israeli/word/aleinu-1-w8.mp3",
+"kind": "word",
+"want": "בְּרֵאשִׁית",
+"key": "m|בְּרֵאשִׁית",
+"take": "current"
+},
+{
+"file": "takes/w5/m/w5-4e144ec716/w-car-cut.mp3",
+"kind": "word",
+"want": "הָאֲרָצוֹת",
+"key": "m|הָאֲרָצוֹת",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/m/w5-4e144ec716/w.mp3",
+"kind": "word",
+"want": "הָאֲרָצוֹת",
+"key": "m|הָאֲרָצוֹת",
+"take": "w"
+},
+{
+"file": "audio/m/israeli/word/aleinu-1-w12.mp3",
+"kind": "word",
+"want": "הָאֲרָצוֹת",
+"key": "m|הָאֲרָצוֹת",
+"take": "current"
+},
+{
+"file": "takes/w5/m/w5-50e5f862ef/w-car-cut.mp3",
+"kind": "word",
+"want": "שָׁמַיִם",
+"key": "m|שָׁמַיִם",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/m/w5-50e5f862ef/w.mp3",
+"kind": "word",
+"want": "שָׁמַיִם",
+"key": "m|שָׁמַיִם",
+"take": "w"
+},
+{
+"file": "audio/m/israeli/word/aleinu-1-w42.mp3",
+"kind": "word",
+"want": "שָׁמַיִם",
+"key": "m|שָׁמַיִם",
+"take": "current"
+},
+{
+"file": "takes/w5/m/w5-8adaafa374/w-car-cut.mp3",
+"kind": "word",
+"want": "עֻזּוֹ",
+"key": "m|עֻזּוֹ",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/m/w5-8adaafa374/w.mp3",
+"kind": "word",
+"want": "עֻזּוֹ",
+"key": "m|עֻזּוֹ",
+"take": "w"
+},
+{
+"file": "audio/m/israeli/word/aleinu-1-w50.mp3",
+"kind": "word",
+"want": "עֻזּוֹ",
+"key": "m|עֻזּוֹ",
+"take": "current"
+},
+{
+"file": "takes/w5/m/w5-ff128df261/w-car-cut.mp3",
+"kind": "word",
+"want": "כֹל",
+"key": "m|כֹל",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/m/w5-ff128df261/w-rs-car-cut.mp3",
+"kind": "word",
+"want": "כֹל",
+"key": "m|כֹל",
+"take": "w-rs-car-cut"
+},
+{
+"file": "takes/w5/m/w5-ff128df261/w-rs.mp3",
+"kind": "word",
+"want": "כֹל",
+"key": "m|כֹל",
+"take": "w-rs"
+},
+{
+"file": "takes/w5/m/w5-ff128df261/w.mp3",
+"kind": "word",
+"want": "כֹל",
+"key": "m|כֹל",
+"take": "w"
+},
+{
+"file": "audio/m/israeli/word/lecha-hashem-w9.mp3",
+"kind": "word",
+"want": "כֹל",
+"key": "m|כֹל",
+"take": "current"
+},
+{
+"file": "takes/w5/m/w5-d908dce225/w-car-cut.mp3",
+"kind": "word",
+"want": "בַּשָּׁמַיִם",
+"key": "m|בַּשָּׁמַיִם",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/m/w5-d908dce225/w.mp3",
+"kind": "word",
+"want": "בַּשָּׁמַיִם",
+"key": "m|בַּשָּׁמַיִם",
+"take": "w"
+},
+{
+"file": "audio/m/israeli/word/aleinu-1-w47.mp3",
+"kind": "word",
+"want": "בַּשָּׁמַיִם",
+"key": "m|בַּשָּׁמַיִם",
+"take": "current"
+},
+{
+"file": "takes/w5/m/w5-76c7488233/w-car-cut.mp3",
+"kind": "word",
+"want": "לַהֲדֹם",
+"key": "m|לַהֲדֹם",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/m/w5-76c7488233/w.mp3",
+"kind": "word",
+"want": "לַהֲדֹם",
+"key": "m|לַהֲדֹם",
+"take": "w"
+},
+{
+"file": "audio-takes/m/w18d146c050-s.mp3",
+"kind": "word",
+"want": "לַהֲדֹם",
+"key": "m|לַהֲדֹם",
+"take": "current"
+},
+{
+"file": "takes/w5/m/w5-531dc986ad/w-car-cut.mp3",
+"kind": "word",
+"want": "יְמֵי",
+"key": "m|יְמֵי",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/m/w5-531dc986ad/w.mp3",
+"kind": "word",
+"want": "יְמֵי",
+"key": "m|יְמֵי",
+"take": "w"
+},
+{
+"file": "audio/m/israeli/word/hanerot-halalu-w18.mp3",
+"kind": "word",
+"want": "יְמֵי",
+"key": "m|יְמֵי",
+"take": "current"
+},
+{
+"file": "takes/w5/m/w5-1fd9862246/w-car-cut.mp3",
+"kind": "word",
+"want": "בְנֵי",
+"key": "m|בְנֵי",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/m/w5-1fd9862246/w-rs-car-cut.mp3",
+"kind": "word",
+"want": "בְנֵי",
+"key": "m|בְנֵי",
+"take": "w-rs-car-cut"
+},
+{
+"file": "takes/w5/m/w5-1fd9862246/w-rs.mp3",
+"kind": "word",
+"want": "בְנֵי",
+"key": "m|בְנֵי",
+"take": "w-rs"
+},
+{
+"file": "takes/w5/m/w5-1fd9862246/w.mp3",
+"kind": "word",
+"want": "בְנֵי",
+"key": "m|בְנֵי",
+"take": "w"
+},
+{
+"file": "takes/w5/m/w5-cf8f6cf2e6/w-car-cut.mp3",
+"kind": "word",
+"want": "הִוא",
+"key": "m|הִוא",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/m/w5-cf8f6cf2e6/w.mp3",
+"kind": "word",
+"want": "הִוא",
+"key": "m|הִוא",
+"take": "w"
+},
+{
+"file": "audio-takes/m/w06af0eebce-p.mp3",
+"kind": "word",
+"want": "הִוא",
+"key": "m|הִוא",
+"take": "current"
+},
+{
+"file": "takes/w5/m/w5-bdd37d5f97/w-car-cut.mp3",
+"kind": "word",
+"want": "הַשָּׁמַיִם",
+"key": "m|הַשָּׁמַיִם",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/m/w5-bdd37d5f97/w.mp3",
+"kind": "word",
+"want": "הַשָּׁמַיִם",
+"key": "m|הַשָּׁמַיִם",
+"take": "w"
+},
+{
+"file": "audio/m/israeli/word/kiddush-gen-2-1-3-w2.mp3",
+"kind": "word",
+"want": "הַשָּׁמַיִם",
+"key": "m|הַשָּׁמַיִם",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-a3a0f19f04/w-car-cut.mp3",
+"kind": "word",
+"want": "וְגֵרְךָ",
+"key": "f|וְגֵרְךָ",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-a3a0f19f04/w.mp3",
+"kind": "word",
+"want": "וְגֵרְךָ",
+"key": "f|וְגֵרְךָ",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/kiddush-zachor-w22.mp3",
+"kind": "word",
+"want": "וְגֵרְךָ",
+"key": "f|וְגֵרְךָ",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-b0e1de314e/w-car-cut.mp3",
+"kind": "word",
+"want": "הַיָּם",
+"key": "f|הַיָּם",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-b0e1de314e/w.mp3",
+"kind": "word",
+"want": "הַיָּם",
+"key": "f|הַיָּם",
+"take": "w"
+},
+{
+"file": "takes/w5/f/w5-dab7dc36b5/w-car-cut.mp3",
+"kind": "word",
+"want": "וַיָּנַח",
+"key": "f|וַיָּנַח",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-dab7dc36b5/w.mp3",
+"kind": "word",
+"want": "וַיָּנַח",
+"key": "f|וַיָּנַח",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/kiddush-zachor-w33.mp3",
+"kind": "word",
+"want": "וַיָּנַח",
+"key": "f|וַיָּנַח",
+"take": "current"
+},
+{
+"file": "takes/w5/f/w5-65ebf7d55b/w-car-cut.mp3",
+"kind": "word",
+"want": "וַיְקַדְּשֵׁהוּ",
+"key": "f|וַיְקַדְּשֵׁהוּ",
+"take": "w-car-cut"
+},
+{
+"file": "takes/w5/f/w5-65ebf7d55b/w.mp3",
+"kind": "word",
+"want": "וַיְקַדְּשֵׁהוּ",
+"key": "f|וַיְקַדְּשֵׁהוּ",
+"take": "w"
+},
+{
+"file": "audio/f/israeli/word/i-35-w11.mp3",
+"kind": "word",
+"want": "וַיְקַדְּשֵׁהוּ",
+"key": "f|וַיְקַדְּשֵׁהוּ",
+"take": "current"
+}
+]

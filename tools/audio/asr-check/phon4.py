@@ -154,7 +154,8 @@ def review2(text, heard_ipa):
     English-trained phoneme models write as g or a gh sound) counted as r."""
     import difflib
     ws, exp = expected2(text)
-    r_as = lambda s: s.replace('g', 'r')
+    # Israeli R heard as g; the y-glide after a vowel written as a vowel by English-trained models (adonai / adonaj)
+    r_as = lambda s: re.sub(r'(?<=[aeiou])j', 'i', s.replace('g', 'r'))
     got = r_as(fold2(heard_ipa).replace(' ', ''))
     target = r_as(''.join(exp))
     sm = difflib.SequenceMatcher(a=target, b=got, autojunk=False)
@@ -166,6 +167,10 @@ def review2(text, heard_ipa):
     for w, e in zip(ws, exp):
         seg = hit[pos:pos + len(e)]; pos += len(e)
         out.append({'word': w, 'should': latin(e), 'match': round(sum(seg) / max(1, len(seg)), 2)})
+    if len(out) == 1:      # a single word: extra sounds count against it too ('shisuit' is not 'sheuit')
+        out[0]['match'] = round(min(out[0]['match'], sm.ratio()), 2)
+        if sm.ratio() < 0.8:                       # more than a fifth of what was heard is not in the word
+            out[0]['match'] = min(out[0]['match'], 0.74)
     return round(sm.ratio(), 3), out
 
 

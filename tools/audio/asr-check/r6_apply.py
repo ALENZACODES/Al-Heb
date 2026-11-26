@@ -19,7 +19,7 @@ import multi4_merge as M
 import stitch_lines as ST
 import chirp_takes as CT
 
-FAM = {'W': ('w', 'w-car-cut', 'w-rs'), 'C': ('c', 'c-car-cut', 'c-rs')}
+FAM = {'W': ('w', 'w-car-cut', 'w-rs', 'wp', 'wp-car-cut'), 'C': ('c', 'c-car-cut', 'c-rs', 'cp', 'cp-car-cut')}
 
 
 def load(a, want):
@@ -48,6 +48,8 @@ def main():
     a = ap.parse_args()
     d = json.load(open(os.path.join(HERE, 'round6-words.json'), encoding='utf-8'))
     q = json.load(open(os.path.join(HERE, 'round6w-queue.json'), encoding='utf-8'))
+    if os.path.exists(os.path.join(HERE, 'round6p-queue.json')):
+        q += json.load(open(os.path.join(HERE, 'round6p-queue.json'), encoding='utf-8'))
     want = {o['file']: o['want'] for o in q}
     S, W = load(a, want)
 

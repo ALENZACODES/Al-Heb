@@ -18,7 +18,7 @@ NIQQUD = re.compile(r'[֑-ׇ]')
 
 
 def speakable(h):
-    s = re.sub(r'[֑-ֽֿ֯׀׃-׆]', '', str(h).replace('־', ' '))
+    s = re.sub(r'[֑-ֽֿ֯׀׃-׆]', '', str(h).replace('־', ' '))   # cantillation + meteg only; vowels stay
     return re.sub(r'\s+', ' ', s).strip(' .:')
 
 
@@ -142,8 +142,11 @@ def main():
             d = os.path.join(a.out, 'w6', it['g'], it['slug'])
             os.makedirs(d, exist_ok=True)
             json.dump(it, open(os.path.join(d, 'want.json'), 'w', encoding='utf-8'), ensure_ascii=False)
-            plan = [('w', w, wavenet), ('w-car', 'הַמִּלָּה, ' + w + '.', wavenet),
-                    ('c', w, chirp), ('c-car', 'הַמִּלָּה, ' + w + '.', chirp)]
+            pl = plain(it['word'])          # w/c were recorded unpointed (speakable used to strip the vowels): kept as such
+            plan = [('w', pl, wavenet), ('w-car', 'הַמִּלָּה, ' + pl + '.', wavenet),
+                    ('c', pl, chirp), ('c-car', 'הַמִּלָּה, ' + pl + '.', chirp),
+                    ('wp', w, wavenet), ('wp-car', 'הַמִּלָּה, ' + w + '.', wavenet),
+                    ('cp', w, chirp), ('cp-car', 'הַמִּלָּה, ' + w + '.', chirp)]
             if rs != it['word']:
                 plan += [('w-rs', rs, wavenet), ('c-rs', rs, chirp)]
             jobs += [(key, os.path.join(d, tid + '.mp3'), text, v) for tid, text, v in plan]

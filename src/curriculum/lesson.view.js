@@ -86,7 +86,7 @@ export function mountLesson(root, ctx, lessonId) {
             el("div", { class: "muted" }, saySound(c.consonants?.get(id), congregation, { fallbackEn: L?.sound?.en || "" })),
             hookNode(el, hookLine(c.chain, congregation, { letterId: id }))),
           el("div", { class: "alef-item-actions" }, playButton(ctx, "letter", id, `Listen to ${L?.name || id}`, note),
-            el("a", { class: "alef-link", href: `#/letters/${id}`, "aria-label": `Trace ${L?.name || id}` }, "Trace")));
+            el("a", { class: "alef-link", href: `#/letters/${id}?from=lesson&lesson=${encodeURIComponent(lessonId)}`, "aria-label": `Trace ${L?.name || id}` }, "Trace")));
       }))));
     // Written "how it is said" for every letter and vowel of the lesson (no audio needed); filled in once the pronunciation notes load.
     if (teach && (lesson.letters.length || lesson.vowels.length)) {

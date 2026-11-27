@@ -1,0 +1,16 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google-cloud-tts",
+ "tradition": "israeli",
+ "voiceId": "he-IL-Wavenet-A",
+ "inputText": "יֵשֵׁב",
+ "take": "wp",
+ "spokenText": "יֵשֵׁב",
+ "checks": {
+  "phonetic_heard_of_4": 4,
+  "phonetic_mean": 0.95,
+  "w2v_he": true
+ },
+ "checkedBy": "four phonetic checks (renikud, lv60, xlsr53, ipa1000) + Hebrew wav2vec2; round 6"
+}

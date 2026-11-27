@@ -9,6 +9,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(os.path.join(HERE, '..', '..', '..'))
 sys.path.insert(0, HERE)
 import round_report as RR, phon4
+PRE5 = '13a8b13e4^'   # the commit before round 5
 
 
 def load(fns, q, rescore=False):
@@ -40,12 +41,15 @@ def main():
     new = [load(a.new_words, q), load(a.new_phon, q, True), load(a.new_extra, q)]
     models = [m for m in RR.PHON]
     tot = conf_old = conf_best = 0
-    rows, revert, use_r7 = [], [], []
+    rows, revert, use_r7, pre5 = [], [], [], []
     for f, o in q.items():
-        src = old
-        if 'cur5:' + f in new[1]:
-            src = [{f: new[i].get('cur5:' + f, {})} for i in range(3)]
-        vo = RR.verdicts(o, src[0].get(f, {}), src[1].get(f, {}), src[2].get(f, {}), models)
+        vo = RR.verdicts(o, old[0].get(f, {}), old[1].get(f, {}), old[2].get(f, {}), models)
+        if 'cur5:' + f in new[1]:          # round 5 changed this line: measured as it is now too; keep the better of the two
+            v5 = RR.verdicts(o, new[0].get('cur5:' + f, {}), new[1].get('cur5:' + f, {}), new[2].get('cur5:' + f, {}), models)
+            if sum(not v['ok'] for v in v5) <= sum(not v['ok'] for v in vo):
+                vo = v5
+            else:
+                pre5.append(f)
         uo = sum(not v['ok'] for v in vo)
         best = vo
         if f in new[1]:
@@ -83,6 +87,10 @@ def main():
         print(len(use_r7), 'round 7 clips put in')
     if a.revert and revert:
         subprocess.run(['git', '-C', ROOT, 'checkout', 'HEAD', '--'] + [p for f in revert for p in (f, f + '.meta.json')], check=True)
+        back = [f for f in revert if f in pre5]   # round 5 made these worse: the version before it
+        if back:
+            subprocess.run(['git', '-C', ROOT, 'checkout', PRE5, '--'] + [p for f in back for p in (f, f + '.meta.json')], check=True)
+        print(len(back), 'lines back to their version before round 5')
 
 
 if __name__ == '__main__':

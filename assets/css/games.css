@@ -276,3 +276,20 @@ button.catcher-star { pointer-events: auto; background: transparent; border: 0; 
 .catcher-star .catcher-mark { display: grid; place-items: center; width: 64px; height: 64px; border-radius: 50%; font-size: 2.4rem; line-height: 1.1; padding-bottom: .35rem; color: #1a1305;
   background: radial-gradient(circle at 35% 30%, #fff3c4, #e8c97a 70%); box-shadow: 0 0 14px rgba(232,201,122,.75); text-shadow: none; }
 .game-choice.is-tried { opacity: .45; text-decoration: line-through; }
+
+/* In-play artwork (assets/img/play, filed 27 Nov 2026): painted pieces and playfield backgrounds in place of emoji and flat colour.
+   Every letter, mark and word is still drawn live by the game on the piece's blank panel. */
+button.arc-lane.play-flap-sky { background: url("../img/play/BGP_gates.webp") center / cover no-repeat !important; border-radius: 14px; overflow: hidden; }
+.play-flap-sky .arc-cell { background: rgba(255,250,235,.92); color: #1a1305; border: 2px solid #b98f2c; border-radius: 12px; }
+.play-rimon-fly { background: url("../img/play/SPR_rimon_fly_a.webp") center / contain no-repeat; }
+.play-rimon-fly.is-down { background-image: url("../img/play/SPR_rimon_fly_b.webp"); } /* wings beat once per flap the player makes: no looping animation */
+.catcher-sky { background: url("../img/play/BGP_sky_night.webp") center / cover no-repeat; border-radius: 14px; }
+.catcher-basket { background: url("../img/play/SPR_basket.webp") center bottom / contain no-repeat; }
+.catcher-star .catcher-mark { width: 84px; height: 84px; border-radius: 0; box-shadow: none; padding: 0 0 .1rem .9rem; font-size: 2.1rem;
+  background: url("../img/play/SPR_star_carrier.webp") center / contain no-repeat; }
+.game-laser-field { background: url("../img/play/BGP_stone_floor.webp") center / cover no-repeat; }
+button.game-laser-mirror.btn, button.game-laser-mirror.btn:disabled { width: 64px; height: 78px; border: 0 !important; background: url("../img/play/SPR_mirror.webp") center / contain no-repeat !important; color: #1a1305 !important; box-shadow: none; opacity: 1 !important; }
+button.game-laser-mirror.btn .he { color: #1a1305; }
+.game-laser-mirror.is-hit { filter: drop-shadow(0 0 8px #ff5a4d); }
+.game-laser-lamp { width: 64px; height: 64px; right: 0; font-size: 0; background: url("../img/play/SPR_lamp.webp") center / contain no-repeat; }
+.game-laser-beam { stroke: #e2362b; } .game-laser-glow { stroke: rgba(226,54,43,.3); }

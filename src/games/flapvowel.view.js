@@ -28,8 +28,8 @@ function setup(A) {
   const H = 340, W = 600, DX = 7.5; // a wide field; DX keeps the time to reach a gate what it was on the old 320 strip
   let y = H / 2, vy = 0, gateX = W, passed = 0, target = null, order = [];
   const call = A.h('p', { class: 'arc-prompt' });
-  const sky = A.h('button', { type: 'button', class: 'arc-lane', 'aria-label': 'Flap', style: `height:${H}px;width:100%;max-width:${W}px;display:block;margin:0 auto;padding:0`, onclick: () => flap() });
-  const bird = A.h('div', { class: 'arc-faller', style: 'left:12px;right:auto;width:44px;top:0', 'aria-hidden': 'true' }, A.cast('rimon-fly', '', 'arc-sprite-inline'), '🔴');
+  const sky = A.h('button', { type: 'button', class: 'arc-lane play-flap-sky', 'aria-label': 'Flap', style: `height:${H}px;width:100%;max-width:${W}px;display:block;margin:0 auto;padding:0`, onclick: () => flap() });
+  const bird = A.h('div', { class: 'arc-faller play-rimon-fly', style: 'left:12px;right:auto;width:56px;height:56px;top:0', 'aria-hidden': 'true' }); // painted Rimon, two wing frames (assets/img/play)
   const gate = A.h('div', { style: 'position:absolute;top:0;bottom:0;width:min(96px,24%)', 'aria-hidden': 'true' });
   sky.append(bird, gate);
   A.board.replaceChildren(call, sky);
@@ -43,7 +43,8 @@ function setup(A) {
     gate.replaceChildren(...order.map((m) => A.h('div', { class: 'arc-cell', style: `width:100%;height:${H / cfg.lanes - 4}px;margin:2px 0;font-size:${cfg.lanes > 4 ? 2.3 : 2.9}rem;line-height:1`, lang: 'he', dir: 'rtl' }, c.he + m.mark)));
     call.textContent = `Fly through "${target.tr}" (${c.name} with ${v.name}). Gate ${passed + 1} of ${cfg.gates}.`;
   };
-  const flap = () => { vy = -7.5; if (A.quiet) step(6); };
+  let wing = null;
+  const flap = () => { vy = -7.5; bird.classList?.add('is-down'); clearTimeout(wing); wing = setTimeout(() => bird.classList?.remove('is-down'), 160); if (A.quiet) step(6); };
   const draw = () => { bird.style.top = `${Math.round(y)}px`; gate.style.left = `${(gateX / W) * 100}%`; };
   const step = (times = 1) => {
     for (let i = 0; i < times; i++) {

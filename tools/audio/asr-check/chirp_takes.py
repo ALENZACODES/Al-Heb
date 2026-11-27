@@ -14,6 +14,8 @@ import argparse, base64, json, os, re, subprocess, sys, time, urllib.error, urll
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 VOICES = {'m': ('he-IL-Chirp3-HD-Charon', 'he-IL-Wavenet-B'), 'f': ('he-IL-Chirp3-HD-Kore', 'he-IL-Wavenet-A')}
+# second Chirp voice per gender (the Torah blessing torah-bless-2 already uses these)
+CHIRP_ALT = {'m': 'he-IL-Chirp3-HD-Orus', 'f': 'he-IL-Chirp3-HD-Aoede'}
 NIQQUD = re.compile(r'[֑-ׇ]')
 
 
@@ -123,6 +125,7 @@ def main():
     ap.add_argument('--words5', help='round5-words.json: single problem words of stitched lines, in the WaveNet voice the '
                                      'lines are stitched from (w as written, w-rs respelled, w-rs-car in a carrier phrase)')
     ap.add_argument('--lines8', help='round8-lines.json: whole non-Torah lines, pointed, WaveNet + Chirp, as written + respelled')
+    ap.add_argument('--lines9', help='round9-lines.json: Torah-service lines (haftarah blessings), Chirp only, two voices')
     ap.add_argument('--words6', help='round6-words.json: every word of the non-Torah lines (w/w-car/w-rs WaveNet, c/c-car/c-rs Chirp)')
     ap.add_argument('--project', default=subprocess.run(['gcloud', 'config', 'get-value', 'project'], capture_output=True, text=True).stdout.strip())
     a = ap.parse_args()
@@ -132,20 +135,26 @@ def main():
     want = {o['file']: re.sub(r'\s*\(cut from:.*\)\s*$', '', o['want']) for o in json.load(open(a.queue, encoding='utf-8'))}
     files = [l.strip() for l in open(a.list, encoding='utf-8') if l.startswith('audio/')]
     tts = TTS(a.project)
-    if a.lines8:
+    if a.lines8 or a.lines9:
         # round 8: every non-Torah line read whole, pointed (the vowel points were stripped in every earlier whole-line
-        # take), as written and respelled, WaveNet and Chirp
+        # take), as written and respelled, WaveNet and Chirp.
+        # round 9: the Torah service (haftarah blessings): Chirp only, never WaveNet (it sounds bad there), one
+        # continuous reading per line, in two Chirp voices, as written and respelled
         from concurrent.futures import ThreadPoolExecutor
         jobs = []
-        for it in json.load(open(a.lines8, encoding='utf-8')):
+        for it in json.load(open(a.lines8 or a.lines9, encoding='utf-8')):
             chirp, wavenet = VOICES[it['g']]
             pt = speakable(it['text'])
             rs = ' '.join(respell(w) for w in pt.split())
-            d = os.path.join(a.out, 'l8', it['file'][:-4])
+            d = os.path.join(a.out, 'l9' if a.lines9 else 'l8', it['file'][:-4])
             os.makedirs(d, exist_ok=True)
             json.dump(it, open(os.path.join(d, 'want.json'), 'w', encoding='utf-8'), ensure_ascii=False)
-            jobs += [(it['file'], os.path.join(d, t + '.mp3'), x, v) for t, x, v in
-                     [('w8', pt, wavenet), ('c8', pt, chirp), ('w8-rs', rs, wavenet), ('c8-rs', rs, chirp)]]
+            if a.lines9:
+                alt = CHIRP_ALT[it['g']]
+                takes = [('c9', pt, chirp), ('c9-rs', rs, chirp), ('c9b', pt, alt), ('c9b-rs', rs, alt)]
+            else:
+                takes = [('w8', pt, wavenet), ('c8', pt, chirp), ('w8-rs', rs, wavenet), ('c8-rs', rs, chirp)]
+            jobs += [(it['file'], os.path.join(d, t + '.mp3'), x, v) for t, x, v in takes]
         jobs = [j for j in jobs if not os.path.exists(j[1]) or os.path.getsize(j[1]) < 1000]
         print(f'{len(jobs)} line takes to record', flush=True)
 

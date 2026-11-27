@@ -18,7 +18,7 @@ NIQQUD = re.compile(r'[֑-ׇ]')
 
 
 def speakable(h):
-    s = re.sub(r'[֑-ֽֿ֯׀׃-׆]', '', str(h).replace('־', ' '))
+    s = re.sub(r'[֑-ֽֿ֯׀׃-׆]', '', str(h).replace('־', ' '))   # cantillation + meteg only; vowels stay
     return re.sub(r'\s+', ' ', s).strip(' .:')
 
 
@@ -122,6 +122,7 @@ def main():
                                             '(w-rs WaveNet pointed, c-rspl-80 Chirp unpointed at 0.8, c-rs Chirp for single words)')
     ap.add_argument('--words5', help='round5-words.json: single problem words of stitched lines, in the WaveNet voice the '
                                      'lines are stitched from (w as written, w-rs respelled, w-rs-car in a carrier phrase)')
+    ap.add_argument('--lines8', help='round8-lines.json: whole non-Torah lines, pointed, WaveNet + Chirp, as written + respelled')
     ap.add_argument('--words6', help='round6-words.json: every word of the non-Torah lines (w/w-car/w-rs WaveNet, c/c-car/c-rs Chirp)')
     ap.add_argument('--project', default=subprocess.run(['gcloud', 'config', 'get-value', 'project'], capture_output=True, text=True).stdout.strip())
     a = ap.parse_args()
@@ -131,6 +132,38 @@ def main():
     want = {o['file']: re.sub(r'\s*\(cut from:.*\)\s*$', '', o['want']) for o in json.load(open(a.queue, encoding='utf-8'))}
     files = [l.strip() for l in open(a.list, encoding='utf-8') if l.startswith('audio/')]
     tts = TTS(a.project)
+    if a.lines8:
+        # round 8: every non-Torah line read whole, pointed (the vowel points were stripped in every earlier whole-line
+        # take), as written and respelled, WaveNet and Chirp
+        from concurrent.futures import ThreadPoolExecutor
+        jobs = []
+        for it in json.load(open(a.lines8, encoding='utf-8')):
+            chirp, wavenet = VOICES[it['g']]
+            pt = speakable(it['text'])
+            rs = ' '.join(respell(w) for w in pt.split())
+            d = os.path.join(a.out, 'l8', it['file'][:-4])
+            os.makedirs(d, exist_ok=True)
+            json.dump(it, open(os.path.join(d, 'want.json'), 'w', encoding='utf-8'), ensure_ascii=False)
+            jobs += [(it['file'], os.path.join(d, t + '.mp3'), x, v) for t, x, v in
+                     [('w8', pt, wavenet), ('c8', pt, chirp), ('w8-rs', rs, wavenet), ('c8-rs', rs, chirp)]]
+        jobs = [j for j in jobs if not os.path.exists(j[1]) or os.path.getsize(j[1]) < 1000]
+        print(f'{len(jobs)} line takes to record', flush=True)
+
+        def one(j):
+            f, dst, text, voice = j
+            for attempt in range(6):
+                try:
+                    data = b''.join(tts.synth(p, voice) for p in pieces(text))
+                    open(dst, 'wb').write(data); break
+                except Exception as e:
+                    if attempt == 5:
+                        print(f'  {f} {os.path.basename(dst)}: {e}', flush=True); break
+                    time.sleep(10 * (attempt + 1))
+        tts.token()
+        with ThreadPoolExecutor(6) as ex:
+            list(ex.map(one, jobs))
+        print('done', flush=True)
+        return
     if a.words6:
         # round 6: every word of the non-Torah lines, in both voice families, as written and respelled
         from concurrent.futures import ThreadPoolExecutor
@@ -142,8 +175,11 @@ def main():
             d = os.path.join(a.out, 'w6', it['g'], it['slug'])
             os.makedirs(d, exist_ok=True)
             json.dump(it, open(os.path.join(d, 'want.json'), 'w', encoding='utf-8'), ensure_ascii=False)
-            plan = [('w', w, wavenet), ('w-car', 'הַמִּלָּה, ' + w + '.', wavenet),
-                    ('c', w, chirp), ('c-car', 'הַמִּלָּה, ' + w + '.', chirp)]
+            pl = plain(it['word'])          # w/c were recorded unpointed (speakable used to strip the vowels): kept as such
+            plan = [('w', pl, wavenet), ('w-car', 'הַמִּלָּה, ' + pl + '.', wavenet),
+                    ('c', pl, chirp), ('c-car', 'הַמִּלָּה, ' + pl + '.', chirp),
+                    ('wp', w, wavenet), ('wp-car', 'הַמִּלָּה, ' + w + '.', wavenet),
+                    ('cp', w, chirp), ('cp-car', 'הַמִּלָּה, ' + w + '.', chirp)]
             if rs != it['word']:
                 plan += [('w-rs', rs, wavenet), ('c-rs', rs, chirp)]
             jobs += [(key, os.path.join(d, tid + '.mp3'), text, v) for tid, text, v in plan]

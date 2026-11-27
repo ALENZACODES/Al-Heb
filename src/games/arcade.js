@@ -85,6 +85,7 @@ export async function createArcade(root, ctx, spec) {
   const mode = roundMode(ctx, spec.id); // ?daily=1 opens on the daily board; ?tournament=1 plays the open tournament run at level 1
   if (mode.level) level = mode.level;
   let daily = mode.daily, rnd = Math.random, roundSetup = null, alive = true;
+  let maxLives = 0;
   let score = 0, misses = 0, slips = 0, lives = 0, startedAt = 0, timeLeft = 0, timerId = 0, loopId = 0, loops = [];
   // readyAt: nothing moves and the clock does not run until the get-ready countdown ends. paused: same, on demand.
   let readyAt = 0, paused = false, countdownIds = [];
@@ -223,7 +224,13 @@ export async function createArcade(root, ctx, spec) {
     cast: castArt,
     announce(text) { status.textContent = text; },
     addScore(n) { if (n > 0) { reactRimon('bounce'); boardReact('cheer'); } score = Math.max(0, score + n); hudScore.textContent = `Score ${score}`; },
-    setLives(n) { lives = n; hudLives.textContent = n > 0 ? '♥'.repeat(Math.min(n, 5)) + (n > 5 ? `+${n - 5}` : '') : ''; },
+    setLives(n) {
+      lives = n; maxLives = Math.max(maxLives, Math.min(n, 5));
+      // painted hearts (assets/img/play): full ones carry the same heart character as before, lost ones are empty outlines
+      const full = Math.max(0, Math.min(n, 5)), lost = n > 0 ? Math.max(0, maxLives - full) : 0;
+      hudLives.replaceChildren(...Array.from({ length: full }, () => h('span', { class: 'play-heart' }, '♥')),
+        ...Array.from({ length: lost }, () => h('span', { class: 'play-heart is-empty', 'aria-hidden': 'true' })), ...(n > 5 ? [`+${n - 5}`] : []));
+    },
     /** M-03: a wrong answer or guess that does not fail the item (no life lost). It still rules out the Perfect badge. */
     slip() { slips += 1; boardReact('oops'); },
     miss() { reactRimon('sad'); boardReact('oops'); misses += 1; if (lives > 0) { A.setLives(lives - 1); if (lives === 0) { A.finish({ reason: 'lives' }); return true; } } return false; },
@@ -307,7 +314,7 @@ export async function createArcade(root, ctx, spec) {
       A.sayLine(stars >= 2 ? 3 : 4);
       const why = reason === 'time' ? 'Time is up.' : reason === 'lives' ? 'Out of lives.' : won ? 'Round complete!' : 'Round over.';
       const next = nextGame(spec.id);
-      results.replaceChildren(h('section', { class: 'card game-results arc-results-card', 'aria-labelledby': 'game-results-h' },
+      results.replaceChildren(h('section', { class: 'card game-results arc-results-card', 'data-stars': String(stars), 'aria-labelledby': 'game-results-h' },
         h('h2', { id: 'game-results-h' }, `${why} Level ${level}: ${score} points`),
         h('p', { class: 'game-stars', 'aria-label': `${stars} of 3 stars` }, '★'.repeat(stars) + '☆'.repeat(3 - stars)),
         h('p', {}, bestLine(score, previousBest)),
@@ -343,7 +350,7 @@ export async function createArcade(root, ctx, spec) {
     if (!alive) return;
     clearLoops();
     results.replaceChildren();
-    score = 0; misses = 0; slips = 0; lives = 0; paused = false;
+    score = 0; misses = 0; slips = 0; lives = 0; paused = false; maxLives = 0;
     pauseBtn.hidden = false; pauseBtn.textContent = 'Pause'; pauseBtn.setAttribute('aria-pressed', 'false'); board.classList.remove('is-paused');
     // Calm mode with no clock has nothing to get ready for; every other round counts in.
     const lead = untimed && quiet ? 0 : COUNTDOWN_S;

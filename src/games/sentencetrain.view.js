@@ -31,7 +31,7 @@ async function loadExtra(ctx) {
 
 /** The engine: cast/train-engine.png (docs/images/paste/k-03.txt) when it exists, else the 🚂 it replaces. */
 const engine = () => {
-  const img = document.createElement('img'); img.className = 'arc-train-art'; img.alt = ''; img.setAttribute('aria-hidden', 'true'); img.src = 'assets/games/arcade/cast/train-engine.png';
+  const img = document.createElement('img'); img.className = 'arc-train-art'; img.alt = ''; img.setAttribute('aria-hidden', 'true'); img.src = 'assets/img/play/SPR_train_engine.webp';
   img.addEventListener('error', () => { const s = document.createElement('span'); s.setAttribute('aria-hidden', 'true'); s.textContent = '🚂'; img.replaceWith(s); }, { once: true });
   return img;
 };

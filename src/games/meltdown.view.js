@@ -41,7 +41,7 @@ function setup(A) {
   const drawIce = () => {
     const step = Math.min(STAGES.length - 1, Math.round((wrong / cfg.melt) * (STAGES.length - 1)));
     const stage = Math.min(5, 1 + Math.round((wrong / cfg.melt) * 4));
-    if (iceArt) { const img = A.h('img', { class: 'arc-ice-art', alt: '', src: `assets/games/arcade/cast/icepop-${stage}.png` }); img.addEventListener('error', () => { iceArt = false; ice.textContent = STAGES[step]; }, { once: true }); ice.replaceChildren(img); }
+    if (iceArt) { const img = A.h('img', { class: 'arc-ice-art', alt: '', src: `assets/img/play/SPR_icepop_${wrong === 0 ? 0 : stage}.webp` }); img.addEventListener('error', () => { iceArt = false; ice.textContent = STAGES[step]; }, { once: true }); ice.replaceChildren(img); }
     else ice.textContent = STAGES[step]; melt.textContent = `${cfg.melt - wrong} wrong guess${cfg.melt - wrong === 1 ? '' : 'es'} left before the pop melts.`; };
   const next = () => {
     if (k >= queue.length) { A.finish({ won: true }); return; }

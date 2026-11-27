@@ -1,0 +1,16 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google-cloud-tts",
+ "tradition": "israeli",
+ "voiceId": "he-IL-Wavenet-B",
+ "inputText": "אָז",
+ "take": "wp",
+ "spokenText": "אָז",
+ "checks": {
+  "phonetic_heard_of_4": 4,
+  "phonetic_mean": 1.0,
+  "w2v_he": true
+ },
+ "checkedBy": "four phonetic checks + Hebrew wav2vec2; round 6"
+}

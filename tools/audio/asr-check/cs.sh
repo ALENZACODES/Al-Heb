@@ -2,7 +2,7 @@
 # Cloud Shell entry point for the Chirp re-records:  bash <(curl -sL <raw url of this file>) test|all
 set -e
 B=claude/multi4-check-2026-11-25
-P=$(gcloud config get-value project 2>/dev/null); P=${P:-gen-lang-client-0474790324}; gcloud config set project "$P" >/dev/null 2>&1 || true
+P=$(gcloud config get-value project 2>/dev/null); P=${P:-gen-lang-client-0474790324}; gcloud config set project "$P" >/dev/null 2>&1 || true; export CLOUDSDK_CORE_PROJECT="$P"
 cd ~ && rm -rf Al-Heb
 git clone -q --depth 1 --filter=blob:none --sparse -b $B https://github.com/ALENZACODES/Al-Heb.git
 cd Al-Heb && git sparse-checkout set tools/audio/asr-check && git log -1 --format='%h %s'

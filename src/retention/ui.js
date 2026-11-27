@@ -66,7 +66,7 @@ export function goalRingNode(R) {
       h('div', { class: 'ret-goal-row' }, ring,
         h('div', {}, h('h2', { id: 'ret-goal-h' }, 'Daily XP Goal'),
           h('p', { class: 'ret-goal-text', 'data-xp': p.xp, 'data-goal': p.goal }, p.text),
-          R.streakShown() ? h('p', { class: 'muted' }, streakLine(st)) : null)),
+          R.streakShown() ? h('p', { class: 'muted' }, streakLine(st, Math.max(0, p.goal - p.xp))) : null)),
       R.streakShown() ? stripNode(R) : null,
       h('div', { class: 'row ret-goal-actions' }, quick,
         st.repair ? h('a', { class: 'btn secondary', href: '#/shop' }, `Bring back your ${streakText(st.repair.prev)} (free)`) : null,

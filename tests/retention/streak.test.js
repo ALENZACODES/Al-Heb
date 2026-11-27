@@ -173,6 +173,10 @@ test('streak card: every state has its line; Friday night and Yom Tov are rest, 
   assert.deepEqual(line(streakRec({ last: '2026-11-09' }), '2026-11-10T19:00'), ['at-risk', 'Keep your 10-day streak: one 3-minute lesson does it.']);
   assert.deepEqual(line(streakRec({ last: '2026-11-10', count: 1, best: 1 }), '2026-11-10T19:00'), ['done', 'Day 1 done. See you tomorrow!']);
   assert.deepEqual(line(streakRec({ last: '2026-11-10' }), '2026-11-10T19:00'), ['done', '10 days in a row. See you tomorrow!']);
+  // beside an unfinished XP goal the line never tells the learner to stop for the day
+  assert.equal(streakLine({ state: 'done', count: 1 }, 5), "Day 1 counts for your streak. 5 XP to go for today's goal.");
+  assert.equal(streakLine({ state: 'done', count: 4 }, 12), "4 days in a row. 12 XP to go for today's goal.");
+  assert.equal(streakLine({ state: 'done', count: 4 }, 0), '4 days in a row. See you tomorrow!');
   assert.deepEqual(line(streakRec({ last: '2026-11-05' }), '2026-11-10T09:00'), ['broken', "Fresh start. Your best is 10 days. Let's build again."]);
   assert.deepEqual(line({}, '2026-11-10T09:00'), ['new', 'Finish one quick lesson to start a streak.']);
   for (const s of ['rest', 'done', 'freeze-used', 'at-risk', 'open', 'broken', 'new']) assert.doesNotMatch(streakLine({ state: s, count: 3, best: 5, held: 1 }), /undefined|NaN/);

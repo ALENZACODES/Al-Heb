@@ -53,13 +53,13 @@ export function gameState(rec, entry) {
   return { played, mastered: played && (allLevels || earnedAll || single), best, last: e.last == null ? null : nat(e.last), plays, stars };
 }
 
-/** "Best 120 · Last 80", "Best 40", or "" when the game has never been played. */
+/** "Best 120 · Last 80", "Best 40", "No finished round yet" (played but never finished), or "" when the game has never been played. */
 export function scoreLine(st) {
   if (!st || !st.played) return '';
   const parts = [];
   if (st.best > 0) parts.push(`Best ${st.best}`);
   if (st.last != null) parts.push(`Last ${st.last}`);
-  if (!parts.length) parts.push('Played');
+  if (!parts.length) parts.push('No finished round yet'); // the card already says "Played": the same word twice read as a glitch
   return parts.join(' · ');
 }
 

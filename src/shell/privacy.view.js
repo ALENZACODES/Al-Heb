@@ -313,6 +313,7 @@ export const STORE_KEYS = [
   ['install.v1', 'Install prompt state', 'src/shell/install.js'],
   ['alef.audioBannerSeen.v1', 'Whether you dismissed the audio notice (saved under this exact name, without the "alef:" prefix)', 'src/shell/audio-access.js'],
   ['alef.storage-notice.v1', 'Storage notice state and whether you dismissed it (saved under this exact name, without the "alef:" prefix)', 'src/shell/install-notice.js'],
+  ['alef.update.later', 'That you pressed Later on the "new version is ready" banner, so it stays hidden for this visit (kept in this tab only and cleared when the tab closes; saved under this exact name)', 'src/shell/update.js'],
   ['alef.scroll.v1', 'Scroll position per screen, so Back returns you to the same place. Unlike every other row it is kept in sessionStorage, not localStorage: it is tied to this browser tab and is gone when the tab closes. Each entry is named by the screen address, so a term typed on the Search screen can appear in an entry name (exact name, without the "alef:" prefix)', 'src/shell/scroll-restore.js'],
   ['awards.v1', 'Awards on this device: practice-game activity, the name typed for a certificate sample, and any objective assessment evidence stored later. Lesson completion is not copied here. There is no account.', 'src/awards/record.js'],
   ['books.v1', 'Little-books reading place: the last page you reached in each book, when you first reached its last page, and when you finished it (its one story question answered)', 'src/books/book.view.js'],

@@ -465,6 +465,7 @@ button.is-playing [data-glyph] { display: inline-block; min-width: 1em; text-ali
 .alef-now-playing { position: fixed; z-index: 55; inset-inline: 0; margin-inline: auto; inline-size: max-content; max-inline-size: calc(100vw - 2rem); inset-block-end: calc(5.2rem + env(safe-area-inset-bottom)); padding: .45rem .9rem; border-radius: 999px; background: #16301c; color: #fbf3d9; border: 1px solid #d4a647; font-size: .92rem; box-shadow: 0 4px 14px rgba(0,0,0,.25); pointer-events: none; }
 .alef-now-playing[data-phase="failed"] { background: #5a1414; border-color: #f0b4b4; }
 .alef-now-playing[hidden] { display: none; }
+.alef-now-playing { pointer-events: none; } /* a status line: it never blocks the button under it */
 @media (prefers-reduced-motion: no-preference) { [data-play-state="playing"]::after { animation: skel-pulse .8s ease-in-out infinite alternate; } }
 /* Loading skeleton (U-24): shown by the shell while a view module loads, so a
    slow connection never leaves a blank page. Quiet grey bars, no motion for

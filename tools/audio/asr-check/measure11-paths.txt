@@ -1,0 +1,5 @@
+tools/audio/asr-check/
+takes/m11raw/audio/f/israeli/line/haftarah-after-l1/c9b.mp3
+takes/m11raw/audio/f/israeli/line/haftarah-after-l3/c9b.mp3
+takes/m11raw/audio/f/israeli/prayer/haftarah-after/c9b.mp3
+takes/m11raw/audio/m/israeli/prayer/haftarah-after/c9-rs.mp3

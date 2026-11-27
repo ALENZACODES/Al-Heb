@@ -64,13 +64,16 @@ def main():
         o = q.get(f)
         if not o or f not in new[1]:
             continue
-        mh = json.loads(subprocess.run(['git', '-C', ROOT, 'show', 'HEAD:' + f + '.meta.json'], capture_output=True, text=True).stdout or '{}')
-        if mh.get('engine') != 'stitched-from-word-clips' or m6.get('voiceFamily', 'WaveNet') != 'WaveNet' or 'Chirp' in mh.get('voiceId', ''):
+        mh = json.load(open(os.path.join(ROOT, f + '.meta.json'), encoding='utf-8'))   # the version kept after round 6
+        if 'Round 6' in mh.get('note', ''):
             continue
-        src = old
+        if mh.get('engine') != 'stitched-from-word-clips' or m6.get('voiceFamily', 'WaveNet') != 'WaveNet' or 'Chirp' in (mh.get('voiceId') or ''):
+            continue
+        vo = RR.verdicts(o, old[0].get(f, {}), old[1].get(f, {}), old[2].get(f, {}), RR.PHON)
         if 'cur5:' + f in new[1]:
-            src = [{f: new[i].get('cur5:' + f, {})} for i in range(3)]
-        vo = RR.verdicts(o, src[0].get(f, {}), src[1].get(f, {}), src[2].get(f, {}), RR.PHON)
+            v5 = RR.verdicts(o, new[0].get('cur5:' + f, {}), new[1].get('cur5:' + f, {}), new[2].get('cur5:' + f, {}), RR.PHON)
+            if sum(not v['ok'] for v in v5) <= sum(not v['ok'] for v in vo):
+                vo = v5
         vn = RR.verdicts(o, new[0].get(f, {}), new[1].get(f, {}), new[2].get(f, {}), RR.PHON)
         text = mh['stitchedFromText']
         if text != m6['stitchedFromText'] or len(mh['stitchedFrom']) != len(m6['stitchedFrom']):

@@ -2,7 +2,7 @@
   "version": 1,
   "note": "APPROVED generated images only (see docs/images/RIGHTS.md). Files live in assets/img/gen/. Built by tools/images/ingest.mjs; do not edit by hand.",
   "dir": "gen",
-  "count": 3343,
+  "count": 3344,
   "images": {
     "AWD_badge_01": {
       "w": 1024,
@@ -6889,6 +6889,24 @@
           "file": "HEAD_two_03.512.webp",
           "w": 512,
           "h": 293
+        }
+      ]
+    },
+    "HEAD_two_05": {
+      "w": 1536,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "HEAD_two_05.800.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "edge": 1536,
+          "file": "HEAD_two_05.1536.webp",
+          "w": 1536,
+          "h": 1024
         }
       ]
     },

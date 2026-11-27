@@ -86,8 +86,9 @@ export async function mount(root, ctx) {
     if (!r) return null;
     return h('section', { class: 'card', 'aria-labelledby': 'pp-ring-h', 'data-ring': `${st.order}:${r.pct}` },
       h('h2', { id: 'pp-ring-h' }, `${r.title}: Your Service Ring`),
-      h('p', { class: 'pp-ring' }, `${r.pct}%`),
-      h('progress', { max: '100', value: String(r.pct), 'aria-label': `${r.title}: service ring, ${r.pct}%` }),
+      // the first marks show: a whole percent is many lines, and "0%" after a first line hid the first win (27 Nov 2026 review)
+      h('p', { class: 'pp-ring' }, r.pct === 0 && r.lines.have + r.words.have + r.prayers.have > 0 ? 'Started: under 1%' : `${r.pct}%`),
+      h('progress', { max: '100', value: String(r.pct === 0 && r.lines.have + r.words.have + r.prayers.have > 0 ? 1 : r.pct), 'aria-label': `${r.title}: service ring, ${r.pct}%` }),
       h('ul', {},
         h('li', { 'data-part': 'lines' }, `Lines read: ${r.lines.have} of ${r.lines.of}`),
         h('li', { 'data-part': 'words' }, `Words known: ${r.words.have} of ${r.words.of}`),

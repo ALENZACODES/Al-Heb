@@ -112,12 +112,14 @@ export function mount(root, ctx) {
   }
 
   function spawn(now) {
-    const mark = MARKS[Math.floor(Math.random() * MARKS.length)];
-    const image = imgOf(R, mark.img.kind, mark.img.id, mark.img.opts);
+    // The mark asked for is always on its way: when none is in the sky the next one is the target (the target was once
+    // absent from the sky altogether, 27 Nov 2026 review).
+    const wanted = target && !stars.some((st) => st.mark.id === target.id);
+    const mark = wanted ? target : MARKS[Math.floor(Math.random() * MARKS.length)];
     const star = { el: null, mark, x: 6 + Math.random() * 88, y: reducedMotion ? 30 : -8, speed: reducedMotion ? 0 : 12 + Math.random() * 6 };
     if (reducedMotion) star.x = 8 + (stars.length % 5) * 18;
     const el = h('button', { type: 'button', class: 'catcher-star', 'aria-label': `Catch ${mark.name}`, onclick: () => resolveStar(star) },
-      image ? h('img', { class: 'game-catcher-mark-img', src: image.src, alt: '', width: 60, height: 60, 'data-img-id': image.id }) : heSpan(mark.glyph));
+      heSpan(letter.glyph + mark.point, 'he catcher-mark')); // the mark itself, large: a 60-pixel copy of its picture card hid the very thing being taught
     star.el = el;
     sky.append(el);
     stars.push(star); // %/s

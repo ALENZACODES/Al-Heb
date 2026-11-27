@@ -17,6 +17,8 @@ def load(fns, q, rescore=False):
         for l in open(fn, encoding='utf-8'):
             r = json.loads(l)
             f = re.sub(r'^takes/m6/', '', r['file'])
+            if r['file'].startswith('takes/r7/'):
+                f = 'r7:' + r['file'][len('takes/r7/'):]
             if r['file'].startswith('takes/m6cur/'):
                 f = 'cur5:' + r['file'][len('takes/m6cur/'):]
             g = f.split(':', 1)[-1]
@@ -38,7 +40,7 @@ def main():
     new = [load(a.new_words, q), load(a.new_phon, q, True), load(a.new_extra, q)]
     models = [m for m in RR.PHON]
     tot = conf_old = conf_best = 0
-    rows, revert = [], []
+    rows, revert, use_r7 = [], [], []
     for f, o in q.items():
         src = old
         if 'cur5:' + f in new[1]:
@@ -55,6 +57,13 @@ def main():
                 best = vn
             else:
                 revert.append(f)
+        if 'r7:' + f in new[1]:           # older round 7 word clip
+            vr = RR.verdicts(o, new[0].get('r7:' + f, {}), new[1].get('r7:' + f, {}), new[2].get('r7:' + f, {}), models)
+            ur = sum(not v['ok'] for v in vr)
+            ub = sum(not v['ok'] for v in best)
+            rows.append((f + ' (round 7 clip)', len(vr), ub, ur, 'round 7 clip used' if ur < ub else 'not better'))
+            if ur < ub:
+                best = vr; use_r7.append(f)
         tot += len(vo); conf_old += len(vo) - uo; conf_best += sum(v['ok'] for v in best)
     L = ['# Round 6: rebuilt lines measured', '',
          f'All words of the {len(q)} checked clips: confirmed before **{conf_old}/{tot} ({conf_old / tot:.2%})**, '
@@ -64,6 +73,14 @@ def main():
     open(a.out, 'w', encoding='utf-8').write('\n'.join(L) + '\n')
     print(f'before {conf_old}/{tot} = {conf_old / tot:.2%}; after {conf_best}/{tot} = {conf_best / tot:.2%}; '
           f'{len(rows) - len(revert)} lines rebuilt, {len(revert)} put back')
+    if a.revert:
+        r7 = {c['orig']: c['branch'] for c in json.load(open(os.path.join(HERE, 'round7-candidates.json')))}
+        for f in use_r7:
+            for p in (f, f + '.meta.json'):
+                data = subprocess.run(['git', '-C', ROOT, 'show', f'origin/{r7[f]}:{p}'], capture_output=True).stdout
+                if data:
+                    open(os.path.join(ROOT, p), 'wb').write(data)
+        print(len(use_r7), 'round 7 clips put in')
     if a.revert and revert:
         subprocess.run(['git', '-C', ROOT, 'checkout', 'HEAD', '--'] + [p for f in revert for p in (f, f + '.meta.json')], check=True)
 

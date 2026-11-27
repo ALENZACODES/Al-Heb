@@ -1,0 +1,50 @@
+[
+{
+"orig": "audio/m/israeli/word/h69a35691.mp3",
+"file": "takes/r7/audio/m/israeli/word/h69a35691.mp3",
+"branch": "john/word-fix-r7-0",
+"in_measured_set": true
+},
+{
+"orig": "audio/m/israeli/word/i-08-w4.mp3",
+"file": "takes/r7/audio/m/israeli/word/i-08-w4.mp3",
+"branch": "john/word-fix-r7-1",
+"in_measured_set": true
+},
+{
+"orig": "audio/m/israeli/word/yigdal-w42.mp3",
+"file": "takes/r7/audio/m/israeli/word/yigdal-w42.mp3",
+"branch": "john/word-fix-r7-1",
+"in_measured_set": true
+},
+{
+"orig": "audio/m/israeli/word/aleinu-1-w6.mp3",
+"file": "takes/r7/audio/m/israeli/word/aleinu-1-w6.mp3",
+"branch": "john/word-fix-r7-2",
+"in_measured_set": true
+},
+{
+"orig": "audio/m/israeli/dictionary/dict-v323d1bb3.mp3",
+"file": "takes/r7/audio/m/israeli/dictionary/dict-v323d1bb3.mp3",
+"branch": "john/word-fix-r7-3",
+"in_measured_set": true
+},
+{
+"orig": "audio/f/israeli/word/h60b16793.mp3",
+"file": "takes/r7/audio/f/israeli/word/h60b16793.mp3",
+"branch": "john/word-fix-r7-5",
+"in_measured_set": true
+},
+{
+"orig": "audio/f/israeli/word/r16-w1.mp3",
+"file": "takes/r7/audio/f/israeli/word/r16-w1.mp3",
+"branch": "john/word-fix-r7-5",
+"in_measured_set": false
+},
+{
+"orig": "audio/m/israeli/dictionary/dict-v11122fe7.mp3",
+"file": "takes/r7/audio/m/israeli/dictionary/dict-v11122fe7.mp3",
+"branch": "john/word-fix-r7-5",
+"in_measured_set": true
+}
+]

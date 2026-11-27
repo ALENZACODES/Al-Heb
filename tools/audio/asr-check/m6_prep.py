@@ -29,6 +29,15 @@ def main(out_root):
                                                                     capture_output=True, check=True).stdout)
         o = dict(base[f]); o.update({'file': dst, 'orig': f, 'take': 'cur5'})
         q.append(o)
+    # word clips from the older word-fix round 7 (john/word-fix-r7-*) that never reached this branch: candidates too
+    r7 = os.path.join(HERE, 'round7-candidates.json')
+    for c in (json.load(open(r7)) if os.path.exists(r7) else []):
+        if c['orig'] in base:
+            src = os.path.join('/home/claude/work/r7', c['file'])
+            os.makedirs(os.path.join(out_root, os.path.dirname(c['file'])), exist_ok=True)
+            shutil.copy(src, os.path.join(out_root, c['file']))
+            o = dict(base[c['orig']]); o.update({'file': c['file'], 'orig': c['orig'], 'take': 'r7', 'branch': c['branch']})
+            q.append(o)
     json.dump(q, open(os.path.join(HERE, 'measure6-queue.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=0)
     open(os.path.join(HERE, 'measure6-paths.txt'), 'w').write('tools/audio/asr-check/\n' + ''.join(o['file'] + '\n' for o in q))
     tpl = json.load(open(os.path.join(HERE, 'kaggle_stitch_s0.ipynb'), encoding='utf-8'))

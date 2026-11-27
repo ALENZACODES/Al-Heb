@@ -18325,6 +18325,14 @@
       "status": "approved",
       "at": "2026-11-27T02:19:18.172Z",
       "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "HEAD_two_05": {
+      "status": "approved",
+      "at": "2026-11-27T06:29:29.645Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive",
+      "forcedDespite": [
+        "contains_text"
+      ]
     }
   }
 }

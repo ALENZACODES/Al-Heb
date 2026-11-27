@@ -198477,6 +198477,74 @@
    },
    "flags": [],
    "humanApproved": true
+  },
+  "HEAD_two_05": {
+   "id": "HEAD_two_05",
+   "file": "HEAD_two_05.png",
+   "command": 247,
+   "set": "Book chapter headers II",
+   "block": "R",
+   "prompt": "Command 247 (Book chapter headers II): Ten more banners: a bridge of translation between two shores; a workshop of writing — pens and blank pages as carpentry; a lighthouse of listening — sound arcs from a tower; a train of travel phrases crossing a plain; a kitchen of grammar — ingredients becoming a meal; a orchard of blessings — fruit trees in rows; a night sky of psalms — stars over a shepherd; a museum of holidays — doors in a row, each with a seasonal object; a harbour of arrival — boats coming in at dawn; a final banner — all the earlier motifs tiny along one horizon at sunrise. Files HEAD_two_01 … _10. Image 5 of 10: a kitchen of grammar — ingredients becoming a meal. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "36c799106867810148458b10a14d92d2abf5f19d291724d29387d386acdefd04",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-27T06:29:27.334Z",
+   "sourceFile": "HEAD_two_05.png",
+   "sourceFileDate": "2026-11-27T06:29:03.363Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "5487c26e39fc65f6b7d54056a8f453a2eb99c9ab0f830ccb0325dc5ecd438ea8",
+   "originalFormat": "PNG",
+   "originalBytes": 1625911,
+   "originalFile": "HEAD_two_05.png",
+   "width": 1536,
+   "height": 1024,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "substituted",
+   "aspectNote": "manifest asks 1792x1024; got 1536x1024 (native landscape aspect). Not cropped or stretched.",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "HEAD_two_05.800.webp",
+     "width": 800,
+     "height": 533,
+     "bytes": 60880
+    },
+    {
+     "edge": 1536,
+     "file": "HEAD_two_05.1536.webp",
+     "width": 1536,
+     "height": 1024,
+     "bytes": 131034
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 1,
+    "blobs": [
+     {
+      "t": "amiss:",
+      "conf": 43.7,
+      "lang": "eng"
+     }
+    ],
+    "possibleLetters": []
+   },
+   "flags": [
+    "aspect_substituted",
+    "contains_text"
+   ],
+   "humanApproved": true
   }
  }
 }

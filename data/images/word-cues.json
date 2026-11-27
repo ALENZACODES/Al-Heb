@@ -686,7 +686,8 @@
     "v737f7196"
    ],
    "asset": "VOC_market_07",
-   "why": "The braided loaf is challah. It is not mapped to bread, and the cafe theme is not mapped to every food word."
+   "why": "The braided loaf is challah. It is not mapped to bread, and the cafe theme is not mapped to every food word.",
+   "own": "J-0813"
   },
   {
    "wordId": "p7f7d7b8f",
@@ -702,7 +703,8 @@
     "v4d9a0889"
    ],
    "asset": "VOC_cafe_02",
-   "why": "The coffee cup is full of coffee, so it is not the word cup."
+   "why": "The coffee cup is full of coffee, so it is not the word cup.",
+   "own": "J-0915"
   },
   {
    "wordId": "pf8630913",
@@ -715,7 +717,8 @@
     "ve3e3337b"
    ],
    "asset": "VOC_cafe_05",
-   "why": "The eggs are inside shakshuka, so the picture is not the word egg."
+   "why": "The eggs are inside shakshuka, so the picture is not the word egg.",
+   "own": "J-0922"
   },
   {
    "wordId": "h60b16793",
@@ -723,7 +726,8 @@
     "vdd2835c3"
    ],
    "asset": "VOC_body_07",
-   "why": "The open smile is the word smile, not the word mouth."
+   "why": "The open smile is the word smile, not the word mouth.",
+   "own": "J-0892"
   },
   {
    "wordId": "h6afe7619",
@@ -754,7 +758,8 @@
   {
    "wordId": "ve7006170",
    "asset": "VOC_numbers_01",
-   "why": "One lemon depicts a lemon. It is not the number one, and the other number slots are counted foods, not numerals."
+   "why": "One lemon depicts a lemon. It is not the number one, and the other number slots are counted foods, not numerals.",
+   "own": "J-0555"
   },
   {
    "wordId": "h89e110bd",
@@ -770,7 +775,8 @@
     "v7412cb0f"
    ],
    "asset": "VOC_colours_01",
-   "why": "The red paint blot is flower-shaped, so it is not a clean cue for red."
+   "why": "The red paint blot is flower-shaped, so it is not a clean cue for red.",
+   "own": "J-0926"
   },
   {
    "wordId": "hf2a00590",

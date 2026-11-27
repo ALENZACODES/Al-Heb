@@ -18,7 +18,7 @@ export function acceptStroke(letter, chosen, step) {
 }
 export function mount(root, ctx) {
   const leaveSfx = sfx.enter(ctx);
-  let alive = true, deck = [], images = null, round = 0, step = 0;
+  let alive = true, deck = [], images = null, round = 0, step = 0, order = null, tried = new Set();
   let session = createSession({ store: ctx?.store, storeKey: STORE_KEY, par: 6 });
   const status = h('p', { class: 'game-status', role: 'status', 'aria-live': 'polite' }, 'Loading authentic letter strokes…');
   const board = h('div', { class: 'game-board' });
@@ -31,7 +31,7 @@ export function mount(root, ctx) {
     if (round >= 8) {
       status.textContent = 'Arch complete.';
       board.replaceChildren(resultsCard(h, heSpan, session, { title: 'Arch complete', onAgain: () => {
-        round = 0; step = 0; session = createSession({ store: ctx?.store, storeKey: STORE_KEY, par: 6 }); paint();
+        round = 0; step = 0; order = null; session = createSession({ store: ctx?.store, storeKey: STORE_KEY, par: 6 }); paint();
       } }));
       return;
     }
@@ -57,7 +57,11 @@ export function mount(root, ctx) {
       diagram.append(path);
     }
     // Shape-only options: never expose index/step order on the choice buttons.
-    const choices = shuffled(letter.strokes).map((stroke) => {
+    // The options keep their places for the whole letter and a stroke already tried is marked: they used to be reshuffled
+    // after every miss, so a learner pressing each option in turn could be told "incorrect" for all of them (27 Nov 2026 review).
+    if (!order || order.key !== round) { order = { key: round, list: shuffled(letter.strokes) }; tried = new Set(); }
+    const left = order.list.filter((st) => letter.strokes.findIndex((x) => x.id === st.id) >= step);
+    const choices = left.map((stroke) => {
       const miniature = document.createElementNS(svgNS, 'svg');
       miniature.setAttribute('viewBox', '0 0 1000 1000');
       miniature.setAttribute('class', 'game-arch-option-svg');
@@ -69,13 +73,13 @@ export function mount(root, ctx) {
       shape.setAttribute('stroke-width', '85');
       shape.setAttribute('stroke-linecap', 'round');
       miniature.append(shape);
-      return h('button', { type: 'button', class: 'btn secondary game-choice',
-        'aria-label': 'Try this stroke shape', onclick: () => {
+      return h('button', { type: 'button', class: 'btn secondary game-choice' + (tried.has(stroke.id) ? ' is-tried' : ''), disabled: tried.has(stroke.id),
+        'aria-label': tried.has(stroke.id) ? 'Stroke shape already tried' : 'Try this stroke shape', onclick: () => {
           if (!alive) return;
           const ok = acceptStroke(letter, stroke.id, step);
           session.answer(ok); sfx.play(ok ? 'success' : 'miss');
-          if (ok) { step++; if (step === letter.strokes.length) { step = 0; round++; } paint(); }
-          else paint('Incorrect stroke: the arch cannot lock.');
+          if (ok) { tried = new Set(); step++; if (step === letter.strokes.length) { step = 0; round++; } paint(); }
+          else { tried.add(stroke.id); paint('Not that stroke yet: it comes later in ' + letter.name + '. Try another.'); }
         } }, miniature);
     });
     placeBoard(board, castEnvNode(h, images, 'archbuilder', GAME_ENV.arch), reference, diagram, h('p', {}, 'Stroke ' + (step + 1) + ' of ' + letter.strokes.length),

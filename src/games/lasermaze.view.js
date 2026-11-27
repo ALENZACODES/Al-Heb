@@ -27,9 +27,16 @@ export function buildMazeDeck(index) {
     hebrewLetters(r[he]).length <= 5 &&
     new Set(hebrewLetters(r[he])).size === hebrewLetters(r[he]).length).map(r => ({ id: r[id], he: r[he], en: r[en] }));
 }
+const FIELD_W = 600, FIELD_H = 300, COLS = 5, ROWS = 3;
+/** Places for n mirrors on the field: n distinct cells of the grid. */
+export function mazeLayout(n, rnd = Math.random) {
+  const cells = []; for (let row = 0; row < ROWS; row++) for (let col = 0; col < COLS; col++) cells.push({ col, row });
+  for (let i = cells.length - 1; i > 0; i--) { const j = Math.floor(rnd() * (i + 1)); [cells[i], cells[j]] = [cells[j], cells[i]]; }
+  return cells.slice(0, Math.max(0, Math.min(n, cells.length)));
+}
 export function mount(root, ctx) {
   const leaveSfx = sfx.enter(ctx);
-  let alive = true, deck = [], images = null, round = 0, selected = [], used = [];
+  let alive = true, deck = [], images = null, round = 0, selected = [], used = [], layout = null;
   let session = createSession({ store: ctx?.store, storeKey: STORE_KEY, par: 6 });
   const status = h('p', { class: 'game-status', role: 'status', 'aria-live': 'polite' }, 'Loading Hebrew beam targets…');
   const board = h('div', { class: 'game-board' });
@@ -51,19 +58,38 @@ export function mount(root, ctx) {
     const target = h('div', { class: 'game-laser-target' }, heSpan(item.he, 'he game-he'), h('p', {}, item.en));
     if (image) target.append(h('img', { class: 'game-card-img', src: image.src, alt: image.alt,
       width: image.width, height: image.height, 'data-img-id': image.id }));
-    const buttons = shuffled(letters.map((letter, i) => ({ letter, i }))).map(choice =>
-      h('button', { type: 'button', class: 'btn secondary game-choice', disabled: used.includes(choice.i),
+    // The maze: every letter is a mirror at a fixed place on the field for the whole word (it used to be a reshuffled row of
+    // buttons with no maze and no beam, 27 Nov 2026 review). The beam leaves the lamp on the right, and bends at each mirror
+    // chosen in reading order; the last mirror sends it to the gate on the left.
+    if (!layout || layout.round !== round) layout = { round, cells: mazeLayout(letters.length) };
+    const at = (k) => ({ x: (layout.cells[k].col + 0.5) * (FIELD_W / COLS), y: (layout.cells[k].row + 0.5) * (FIELD_H / ROWS) });
+    const svgNS = 'http://www.w3.org/2000/svg';
+    const svg = document.createElementNS(svgNS, 'svg');
+    svg.setAttribute('viewBox', '0 0 ' + FIELD_W + ' ' + FIELD_H); svg.setAttribute('class', 'game-laser-svg'); svg.setAttribute('aria-hidden', 'true');
+    const pts = [{ x: FIELD_W - 8, y: FIELD_H / 2 }, ...used.map(at)];
+    for (const [cls, width] of [['game-laser-glow', 14], ['game-laser-beam', 5]]) {
+      const line = document.createElementNS(svgNS, 'polyline');
+      line.setAttribute('points', pts.map((q) => q.x + ',' + q.y).join(' '));
+      line.setAttribute('fill', 'none'); line.setAttribute('stroke-width', String(width)); line.setAttribute('stroke-linecap', 'round'); line.setAttribute('stroke-linejoin', 'round');
+      line.setAttribute('class', cls); svg.append(line);
+    }
+    const mirrors = letters.map((letter, i) => {
+      const q = at(i), hit = used.includes(i);
+      return h('button', { type: 'button', class: 'btn secondary game-choice game-laser-mirror' + (hit ? ' is-hit' : ''), disabled: hit,
+        style: 'left:' + (q.x / FIELD_W) * 100 + '%;top:' + (q.y / FIELD_H) * 100 + '%', 'aria-label': hit ? 'Mirror ' + letter + ', lit' : 'Mirror ' + letter,
         onclick: () => {
-          if (!alive || used.includes(choice.i)) return;
-          const ok = correctBeamStep(item.he, choice.i, selected.length);
+          if (!alive || used.includes(i)) return;
+          const ok = correctBeamStep(item.he, i, selected.length);
           session.answer(ok); sfx.play(ok ? 'success' : 'miss');
-          if (!ok) { paint('Wrong mirror: RTL path rejected.'); return; }
-          selected.push(choice.letter); used.push(choice.i);
+          if (!ok) { paint('Not that mirror yet. Hebrew reads right to left: follow the word from its first letter.'); return; }
+          selected.push(letter); used.push(i);
           if (selected.length === letters.length) { round++; selected = []; used = []; }
           paint();
-        } }, heSpan(choice.letter, 'he game-he-sm')));
-    placeBoard(board, castEnvNode(h, images, 'lasermaze', GAME_ENV.laser), target, h('p', {}, 'Path ' + selected.length + ' of ' + letters.length),
-      h('div', { class: 'game-choices game-rtl-grid', dir: 'rtl' }, ...buttons));
+        } }, heSpan(letter, 'he game-he-sm'));
+    });
+    const field = h('div', { class: 'game-laser-field', role: 'group', 'aria-label': 'Maze of mirrors. Choose the mirrors in reading order.' },
+      svg, h('span', { class: 'game-laser-lamp', 'aria-hidden': 'true' }, '◀'), h('span', { class: 'game-laser-gate', 'aria-hidden': 'true' }, '◎'), ...mirrors);
+    placeBoard(board, castEnvNode(h, images, 'lasermaze', GAME_ENV.laser), target, h('p', {}, 'Beam through ' + selected.length + ' of ' + letters.length + ' mirrors'), field);
   }
   Promise.all([loadJson('data/vocab/index.json'), loadGameImages(ctx)]).then(([data, R]) => {
     if (!alive || !article.isConnected) return;

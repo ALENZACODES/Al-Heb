@@ -102,6 +102,7 @@ export function mount(root, ctx) {
         const box = header.parentNode;
         if (box && typeof box.insertBefore === 'function' && header.nextSibling !== todayHost) box.insertBefore(todayHost, showcase);
         const first = showcase.querySelector?.('.show-btn[href="#/firstday"]'); if (first) { first.hidden = true; first.setAttribute('hidden', ''); }
+        const startHere = showcase.querySelector?.('.show-start-here'); if (startHere) { startHere.hidden = true; startHere.setAttribute('hidden', ''); }
       }
       todayHost.replaceChildren(renderToday(today, t, (m) => { goalNow = m; try { store.set(DAILY_GOAL_KEY, m); } catch { /* best effort */ } const wasOpen = todayHost.querySelector('#today-goal-box')?.open === true; draw(); const box = todayHost.querySelector('#today-goal-box'); if (box && wasOpen) box.open = true; /* the redraw makes a new, closed <details>; a hidden button cannot take focus */ const b = todayHost.querySelector(`[data-goal="${m}"]`); b?.focus?.(); goalStatus.textContent = `Daily goal: ${m} minutes.`; }, { calm: calmOn(ctx), showStreak: streakVisible(ctx) }));
     };

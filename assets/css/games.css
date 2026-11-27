@@ -263,3 +263,16 @@ button.catcher-star { pointer-events: auto; background: transparent; border: 0; 
 .tug-hear { min-width: 44px; min-height: 44px; vertical-align: middle; }
 /* Folded phones: Rimon is small so the opening words keep their width. */
 @media (max-width: 340px) { .wf-hub-mascot { width: 52px; height: 52px; margin: 0 0 .25rem .5rem; } }
+
+/* 27 Nov 2026 review: the maze and its beam; readable vowel marks; tried strokes */
+.game-laser-field { position: relative; aspect-ratio: 2 / 1; width: 100%; max-width: 640px; margin: .5rem auto; border-radius: 14px; border: 1px solid #b98f2c;
+  background: radial-gradient(circle at 80% 50%, #1b2a44 0, #0b1320 70%); overflow: hidden; }
+.game-laser-svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.game-laser-beam { stroke: #ff5a4d; } .game-laser-glow { stroke: rgba(255,90,77,.28); }
+.game-laser-mirror { position: absolute; translate: -50% -50%; min-width: 52px; min-height: 52px; padding: .2rem .5rem; margin: 0; }
+.game-laser-mirror.is-hit { border-color: #ff5a4d; box-shadow: 0 0 14px rgba(255,90,77,.7); opacity: 1; }
+.game-laser-lamp, .game-laser-gate { position: absolute; top: 50%; translate: 0 -50%; font-size: 1.5rem; color: #ff5a4d; }
+.game-laser-lamp { right: 4px; } .game-laser-gate { left: 6px; color: #e8c97a; }
+.catcher-star .catcher-mark { display: grid; place-items: center; width: 64px; height: 64px; border-radius: 50%; font-size: 2.4rem; line-height: 1.1; padding-bottom: .35rem; color: #1a1305;
+  background: radial-gradient(circle at 35% 30%, #fff3c4, #e8c97a 70%); box-shadow: 0 0 14px rgba(232,201,122,.75); text-shadow: none; }
+.game-choice.is-tried { opacity: .45; text-decoration: line-through; }

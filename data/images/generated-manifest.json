@@ -2,7 +2,7 @@
   "version": 1,
   "note": "APPROVED generated images only (see docs/images/RIGHTS.md). Files live in assets/img/gen/. Built by tools/images/ingest.mjs; do not edit by hand.",
   "dir": "gen",
-  "count": 3332,
+  "count": 3343,
   "images": {
     "AWD_badge_01": {
       "w": 1024,
@@ -28222,6 +28222,24 @@
         }
       ]
     },
+    "J-0893": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "J-0893.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "J-0893.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
     "J-0894": {
       "w": 1024,
       "h": 1024,
@@ -41044,6 +41062,24 @@
         }
       ]
     },
+    "OBJ_city_08": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "OBJ_city_08.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "OBJ_city_08.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
     "OBJ_city_09": {
       "w": 1024,
       "h": 1024,
@@ -41993,6 +42029,168 @@
         {
           "edge": 1024,
           "file": "OBJ_garden_01.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "OBJ_garden_02": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "OBJ_garden_02.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "OBJ_garden_02.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "OBJ_garden_03": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "OBJ_garden_03.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "OBJ_garden_03.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "OBJ_garden_04": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "OBJ_garden_04.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "OBJ_garden_04.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "OBJ_garden_05": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "OBJ_garden_05.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "OBJ_garden_05.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "OBJ_garden_06": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "OBJ_garden_06.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "OBJ_garden_06.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "OBJ_garden_07": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "OBJ_garden_07.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "OBJ_garden_07.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "OBJ_garden_08": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "OBJ_garden_08.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "OBJ_garden_08.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "OBJ_garden_09": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "OBJ_garden_09.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "OBJ_garden_09.1024.webp",
+          "w": 1024,
+          "h": 1024
+        }
+      ]
+    },
+    "OBJ_garden_10": {
+      "w": 1024,
+      "h": 1024,
+      "files": [
+        {
+          "edge": 800,
+          "file": "OBJ_garden_10.800.webp",
+          "w": 800,
+          "h": 800
+        },
+        {
+          "edge": 1024,
+          "file": "OBJ_garden_10.1024.webp",
           "w": 1024,
           "h": 1024
         }
@@ -60988,6 +61186,7 @@
     "OBJ_city_05": "Square 1024x1024 image: a town square fountain. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank.",
     "OBJ_city_06": "Square 1024x1024 image: a shopping mall front. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank.",
     "OBJ_city_07": "Square 1024x1024 image: a bank building. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank.",
+    "OBJ_city_08": "Square 1024x1024 image: a street post box. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank.",
     "OBJ_city_09": "Square 1024x1024 image: a library with tall windows. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank.",
     "OBJ_city_10": "Square 1024x1024 image: a stadium. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank.",
     "OBJ_clothing_01": "Square 1024x1024 image: a T-shirt. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank.",
@@ -61041,6 +61240,15 @@
     "OBJ_fruit_09": "Square 1024x1024 image: half a melon with seeds. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank.",
     "OBJ_fruit_10": "Square 1024x1024 image: a pair of cherries. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank.",
     "OBJ_garden_01": "Square 1024x1024 image: a watering can. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank.",
+    "OBJ_garden_02": "Square 1024x1024 image: a garden spade. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank.",
+    "OBJ_garden_03": "Square 1024x1024 image: a wheelbarrow. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank.",
+    "OBJ_garden_04": "Square 1024x1024 image: a flower pot with a seedling. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank.",
+    "OBJ_garden_05": "Square 1024x1024 image: a tall sunflower. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank.",
+    "OBJ_garden_06": "Square 1024x1024 image: a beehive with a bee. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank.",
+    "OBJ_garden_07": "Square 1024x1024 image: a ladder leaning on a tree. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank.",
+    "OBJ_garden_08": "Square 1024x1024 image: a garden hose coiled. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank.",
+    "OBJ_garden_09": "Square 1024x1024 image: an olive tree. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank.",
+    "OBJ_garden_10": "Square 1024x1024 image: a swing hanging from a branch. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank.",
     "OBJ_kitchen_01": "Square 1024x1024 image: a fork. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank.",
     "OBJ_kitchen_02": "Square 1024x1024 image: a knife. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank.",
     "OBJ_kitchen_03": "Square 1024x1024 image: a spoon. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank.",

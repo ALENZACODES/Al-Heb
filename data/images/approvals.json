@@ -17033,11 +17033,6 @@
       "at": "2026-11-27T01:06:22.577Z",
       "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
     },
-    "J-0898": {
-      "status": "approved",
-      "at": "2026-11-27T01:06:22.577Z",
-      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
-    },
     "J-0899": {
       "status": "approved",
       "at": "2026-11-27T01:06:22.577Z",
@@ -18267,6 +18262,69 @@
       "status": "rejected",
       "at": "2026-11-27T01:06:23.907Z",
       "note": "A framed portrait of a recognisable real rabbi hangs on the wall; the brief allows no real people. Redo with the wall portrait removed or replaced by a window or bookcase."
+    },
+    "J-0898": {
+      "status": "approved",
+      "at": "2026-11-27T02:19:18.172Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "J-0893": {
+      "status": "approved",
+      "at": "2026-11-27T02:19:18.172Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive",
+      "forcedDespite": [
+        "contains_text"
+      ]
+    },
+    "OBJ_city_08": {
+      "status": "approved",
+      "at": "2026-11-27T02:19:18.172Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "OBJ_garden_02": {
+      "status": "approved",
+      "at": "2026-11-27T02:19:18.172Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "OBJ_garden_03": {
+      "status": "approved",
+      "at": "2026-11-27T02:19:18.172Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "OBJ_garden_04": {
+      "status": "approved",
+      "at": "2026-11-27T02:19:18.172Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "OBJ_garden_05": {
+      "status": "approved",
+      "at": "2026-11-27T02:19:18.172Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "OBJ_garden_06": {
+      "status": "approved",
+      "at": "2026-11-27T02:19:18.172Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "OBJ_garden_07": {
+      "status": "approved",
+      "at": "2026-11-27T02:19:18.172Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "OBJ_garden_08": {
+      "status": "approved",
+      "at": "2026-11-27T02:19:18.172Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "OBJ_garden_09": {
+      "status": "approved",
+      "at": "2026-11-27T02:19:18.172Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
+    },
+    "OBJ_garden_10": {
+      "status": "approved",
+      "at": "2026-11-27T02:19:18.172Z",
+      "note": "Owner-requested review: checked by eye against its prompt; no visible text; any OCR text flag was a false positive"
     }
   }
 }

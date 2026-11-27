@@ -186977,13 +186977,13 @@
    "promptSha256": "9ab497efe18403b302013609dfe365864752b27cf7e599f070dc9d5b81efd30c",
    "tool": "image generator (manual run, files uploaded by the author)",
    "model": null,
-   "ingestedAt": "2026-11-27T01:01:25.126Z",
+   "ingestedAt": "2026-11-27T02:19:16.486Z",
    "sourceFile": "J-0898.png",
-   "sourceFileDate": "2026-11-27T01:01:24.519Z",
+   "sourceFileDate": "2026-11-27T02:19:16.440Z",
    "matchedBy": "exact-name",
-   "originalSha256": "2f39de7a038a06c778486bff456cde2613238c4b84006b663e32ef9881064163",
+   "originalSha256": "4a75164f45777c01391781d284a7990d64f2652a4ee3e73de203e4a72eb38a94",
    "originalFormat": "PNG",
-   "originalBytes": 1168035,
+   "originalBytes": 1095786,
    "originalFile": "J-0898.png",
    "width": 1024,
    "height": 1024,
@@ -187002,14 +187002,14 @@
      "file": "J-0898.800.webp",
      "width": 800,
      "height": 800,
-     "bytes": 35578
+     "bytes": 39792
     },
     {
      "edge": 1024,
      "file": "J-0898.1024.webp",
      "width": 1024,
      "height": 1024,
-     "bytes": 46070
+     "bytes": 51908
     }
    ],
    "ocr": {
@@ -197830,6 +197830,652 @@
    "flags": [
     "aspect_substituted"
    ],
+   "humanApproved": true
+  },
+  "J-0893": {
+   "id": "J-0893",
+   "file": "J-0893.png",
+   "command": 370,
+   "set": "j_srs",
+   "block": "J",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. A single wall, drawn as one clear, instantly recognisable object centred on the plain background, nothing else competing. Square 1:1. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank. No real people, no individual faces; sacred books and scrolls stay blank.",
+   "promptSha256": "435294f7cb0225ac54679c7a490734c78aba81786c4b0502afec7b58f48b71ff",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-27T02:19:02.451Z",
+   "sourceFile": "J-0893.png",
+   "sourceFileDate": "2026-11-27T02:18:56.648Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "255906634b76a5dd20ded653841203223e16dc270e6adea0e058a8ec888b9707",
+   "originalFormat": "PNG",
+   "originalBytes": 1253719,
+   "originalFile": "J-0893.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "J-0893.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 41918
+    },
+    {
+     "edge": 1024,
+     "file": "J-0893.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 52814
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 1,
+    "blobs": [
+     {
+      "t": "רור]",
+      "conf": 62.3,
+      "lang": "heb"
+     }
+    ],
+    "possibleLetters": []
+   },
+   "flags": [
+    "contains_text"
+   ],
+   "humanApproved": true
+  },
+  "OBJ_city_08": {
+   "id": "OBJ_city_08",
+   "file": "OBJ_city_08.png",
+   "command": 137,
+   "set": "next_obj_city",
+   "block": "H",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. Square 1024x1024 image: a street post box. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank. No text, letters or numerals anywhere in the image.",
+   "promptSha256": "4700bb07429249fa61798b6fb41c951c02ed3a4815d50b879391d15e397e2b8b",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-27T02:19:02.451Z",
+   "sourceFile": "OBJ_city_08.png",
+   "sourceFileDate": "2026-11-27T02:18:54.304Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "388387cfa09ed07e087bdb04810ae6f3bd082a3aaa73563287c5f916f150b91f",
+   "originalFormat": "PNG",
+   "originalBytes": 215448,
+   "originalFile": "OBJ_city_08.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "OBJ_city_08.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 50750
+    },
+    {
+     "edge": 1024,
+     "file": "OBJ_city_08.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 69508
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "OBJ_garden_02": {
+   "id": "OBJ_garden_02",
+   "file": "OBJ_garden_02.png",
+   "command": 147,
+   "set": "next_obj_garden",
+   "block": "H",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. Square 1024x1024 image: a garden spade. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank. No text, letters or numerals anywhere in the image.",
+   "promptSha256": "53e5eb0414da3a1ad6718df111ee798dae22c74c61517cae137630340d7f32dc",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-27T02:19:02.451Z",
+   "sourceFile": "OBJ_garden_02.png",
+   "sourceFileDate": "2026-11-27T02:18:54.332Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "c5fd62ccaf672edff8e52b28509b9327fc30a017c241a22882fae0e7b24cc4a9",
+   "originalFormat": "PNG",
+   "originalBytes": 323307,
+   "originalFile": "OBJ_garden_02.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "OBJ_garden_02.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 20428
+    },
+    {
+     "edge": 1024,
+     "file": "OBJ_garden_02.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 26738
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "OBJ_garden_03": {
+   "id": "OBJ_garden_03",
+   "file": "OBJ_garden_03.png",
+   "command": 147,
+   "set": "next_obj_garden",
+   "block": "H",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. Square 1024x1024 image: a wheelbarrow. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank. No text, letters or numerals anywhere in the image.",
+   "promptSha256": "7d56f86f82cd3990e8e9e41c9654d17f2bccebcee1dc20f320205ce29493875b",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-27T02:19:02.451Z",
+   "sourceFile": "OBJ_garden_03.png",
+   "sourceFileDate": "2026-11-27T02:18:54.318Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "32a33a2e957e72a0f2978b4ced2df7dcac2a88afc1307329430be17cf47483fe",
+   "originalFormat": "PNG",
+   "originalBytes": 327173,
+   "originalFile": "OBJ_garden_03.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "OBJ_garden_03.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 35028
+    },
+    {
+     "edge": 1024,
+     "file": "OBJ_garden_03.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 47944
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "OBJ_garden_04": {
+   "id": "OBJ_garden_04",
+   "file": "OBJ_garden_04.png",
+   "command": 147,
+   "set": "next_obj_garden",
+   "block": "H",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. Square 1024x1024 image: a flower pot with a seedling. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank. No text, letters or numerals anywhere in the image.",
+   "promptSha256": "2340a9f4b9af1561756efbfff2a5ddf20de803145f56cbe28b79d39209ab088e",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-27T02:19:02.451Z",
+   "sourceFile": "OBJ_garden_04.png",
+   "sourceFileDate": "2026-11-27T02:18:54.379Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "a5f2874420a3cd06bca3d6e3ca91a14538dcf42193d097485623a661f199ea82",
+   "originalFormat": "PNG",
+   "originalBytes": 360834,
+   "originalFile": "OBJ_garden_04.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "OBJ_garden_04.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 23624
+    },
+    {
+     "edge": 1024,
+     "file": "OBJ_garden_04.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 31266
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "OBJ_garden_05": {
+   "id": "OBJ_garden_05",
+   "file": "OBJ_garden_05.png",
+   "command": 147,
+   "set": "next_obj_garden",
+   "block": "H",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. Square 1024x1024 image: a tall sunflower. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank. No text, letters or numerals anywhere in the image.",
+   "promptSha256": "1fbf4a06b871649204d1e32fcb972145cc849345d0c8259b0c0017ffaf911e5b",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-27T02:19:02.451Z",
+   "sourceFile": "OBJ_garden_05.png",
+   "sourceFileDate": "2026-11-27T02:18:54.408Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "2efb1ca98e0f4f21bc590f0367c6171a9003543347ef3112cb2cd2e8d5c0ed21",
+   "originalFormat": "PNG",
+   "originalBytes": 415305,
+   "originalFile": "OBJ_garden_05.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "OBJ_garden_05.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 44884
+    },
+    {
+     "edge": 1024,
+     "file": "OBJ_garden_05.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 59474
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "OBJ_garden_06": {
+   "id": "OBJ_garden_06",
+   "file": "OBJ_garden_06.png",
+   "command": 147,
+   "set": "next_obj_garden",
+   "block": "H",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. Square 1024x1024 image: a beehive with a bee. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank. No text, letters or numerals anywhere in the image.",
+   "promptSha256": "54d442d6cbc9fb6a14348b395e105d5fb74b80ac118f3d4e13ca5362276dd1cc",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-27T02:19:02.451Z",
+   "sourceFile": "OBJ_garden_06.png",
+   "sourceFileDate": "2026-11-27T02:18:54.347Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "f0ad0fa58bdc5499fcd859777ca93ff2f9986fe71a45a3c58a206a8944ebd505",
+   "originalFormat": "PNG",
+   "originalBytes": 438127,
+   "originalFile": "OBJ_garden_06.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "OBJ_garden_06.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 60344
+    },
+    {
+     "edge": 1024,
+     "file": "OBJ_garden_06.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 78226
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "OBJ_garden_07": {
+   "id": "OBJ_garden_07",
+   "file": "OBJ_garden_07.png",
+   "command": 147,
+   "set": "next_obj_garden",
+   "block": "H",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. Square 1024x1024 image: a ladder leaning on a tree. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank. No text, letters or numerals anywhere in the image.",
+   "promptSha256": "0a7d2b7d8cc58f1c52488794d4aa32b9e97580b2fa0730076841e295dcdf8c35",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-27T02:19:02.451Z",
+   "sourceFile": "OBJ_garden_07.png",
+   "sourceFileDate": "2026-11-27T02:18:54.393Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "57fbf35f7ce401a1a689f4d4d01a3cb79402e9dc9959c8eeea7e4ba5d8ebefcb",
+   "originalFormat": "PNG",
+   "originalBytes": 342124,
+   "originalFile": "OBJ_garden_07.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "OBJ_garden_07.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 57144
+    },
+    {
+     "edge": 1024,
+     "file": "OBJ_garden_07.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 74572
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "OBJ_garden_08": {
+   "id": "OBJ_garden_08",
+   "file": "OBJ_garden_08.png",
+   "command": 147,
+   "set": "next_obj_garden",
+   "block": "H",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. Square 1024x1024 image: a garden hose coiled. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank. No text, letters or numerals anywhere in the image.",
+   "promptSha256": "6ed1540e4893645b291a5bd66135312b244ccf15de51465826d87ac1af8e53ca",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-27T02:19:02.451Z",
+   "sourceFile": "OBJ_garden_08.png",
+   "sourceFileDate": "2026-11-27T02:18:55.612Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "910ba3e6600ced0612013842cb554b702109d4fe945df3ea9b957cc726ee80a9",
+   "originalFormat": "PNG",
+   "originalBytes": 342840,
+   "originalFile": "OBJ_garden_08.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "OBJ_garden_08.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 44016
+    },
+    {
+     "edge": 1024,
+     "file": "OBJ_garden_08.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 56006
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "OBJ_garden_09": {
+   "id": "OBJ_garden_09",
+   "file": "OBJ_garden_09.png",
+   "command": 147,
+   "set": "next_obj_garden",
+   "block": "H",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. Square 1024x1024 image: an olive tree. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank. No text, letters or numerals anywhere in the image.",
+   "promptSha256": "69e6406464c51db4692ed06fa5f42d664d0e2db69973f6c8932ee9faefc218d7",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-27T02:19:02.451Z",
+   "sourceFile": "OBJ_garden_09.png",
+   "sourceFileDate": "2026-11-27T02:18:54.366Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "424a5da8f3d3160f3a681f8741537138dc2c3f2b3046344ec3b7337d60d53f48",
+   "originalFormat": "PNG",
+   "originalBytes": 411406,
+   "originalFile": "OBJ_garden_09.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "OBJ_garden_09.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 80380
+    },
+    {
+     "edge": 1024,
+     "file": "OBJ_garden_09.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 104222
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
+   "humanApproved": true
+  },
+  "OBJ_garden_10": {
+   "id": "OBJ_garden_10",
+   "file": "OBJ_garden_10.png",
+   "command": 147,
+   "set": "next_obj_garden",
+   "block": "H",
+   "prompt": "STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left. Square 1024x1024 image: a swing hanging from a branch. Any sign, screen, page, book, label, scroll or parchment in the picture stays completely blank. No text, letters or numerals anywhere in the image.",
+   "promptSha256": "2d3115b4ab37d4d1c0616c7ec8eab33e2c1982998ea1c3b3763bf5ca983a6603",
+   "tool": "image generator (manual run, files uploaded by the author)",
+   "model": null,
+   "ingestedAt": "2026-11-27T02:19:02.451Z",
+   "sourceFile": "OBJ_garden_10.png",
+   "sourceFileDate": "2026-11-27T02:18:55.886Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "b6b6d0c2ba2f59433e3d86449f16784ce74a2bec85d0be460ef883ed15f69cd2",
+   "originalFormat": "PNG",
+   "originalBytes": 325894,
+   "originalFile": "OBJ_garden_10.png",
+   "width": 1024,
+   "height": 1024,
+   "expected": {
+    "w": 1024,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": false,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "OBJ_garden_10.800.webp",
+     "width": 800,
+     "height": 800,
+     "bytes": 62074
+    },
+    {
+     "edge": 1024,
+     "file": "OBJ_garden_10.1024.webp",
+     "width": 1024,
+     "height": 1024,
+     "bytes": 81110
+    }
+   ],
+   "ocr": {
+    "ran": true,
+    "langs": [
+     "heb",
+     "eng"
+    ],
+    "blobCount": 0,
+    "blobs": [],
+    "possibleLetters": []
+   },
+   "flags": [],
    "humanApproved": true
   }
  }

@@ -370,6 +370,11 @@ async function boot() {
   }, { waitMs: 8000, minMs: 8000 })).catch(() => {});
   // Day-start stamp (Early Bird / Night Owl evidence): first opening of the day, before any study can happen.
   try { stampDayStart(store, Date.now()); } catch { /* stamp is an addition */ }
+  // One write path for "a game was played" (src/games/playtrack.js): Progress, the Games Library and Awards all read it.
+  import('./games/playtrack.js').then((m) => {
+    let ids = null;
+    m.installPlayTracker({ store, isGame: (id) => (ids ||= import('./games/library.catalog.js').then((c) => new Set(c.allGames().map((g) => g.id)))).then((set) => set.has(id)) });
+  }).catch(() => {});
   // The skip link's #main href would be read by the hash router as the route "/main"; focus <main> directly instead.
   document.querySelector('.skip-link')?.addEventListener('click', (e) => { e.preventDefault(); document.getElementById('main')?.focus(); });
   applyTheme(); applyScript(); applyComfortNow(); applyMotor(document.documentElement, settings.all()); wireChrome();

@@ -165,8 +165,13 @@ export function mountUpdateBanner(handle, opt = {}) {
   const clrT2 = opt.clearInterval ?? ((h) => globalThis.clearInterval(h));
   const stopPoll = () => { if (poll != null) { clrT2(poll); poll = null; } };
   const tryApply = () => { if (!pending) return; if (isBusy()) return; pending = false; stopPoll(); handle.apply({ beforeReload: opt.beforeReload }); };
+  // "Later" lasts for the whole visit, across reloads of the tab (sessionStorage): the banner came back on nearly every page
+  // after Later (27 Nov 2026 review) because every state report redrew it. The waiting version is used at the next start.
+  const LATER_KEY = "alef.update.later";
+  const ss = () => { try { return doc.defaultView?.sessionStorage ?? null; } catch { return null; } };
+  try { if (ss()?.getItem(LATER_KEY) === "1") declined = true; } catch { /* no session storage */ }
   const render = (s) => {
-    if (s === "idle") { bar.hidden = true; return; }
+    if (s === "idle" || (declined && s !== "stalled" && !pending)) { bar.hidden = true; return; }
     msg.textContent = s === "stalled" ? "The update could not be applied from here. Close all Aleph tabs and open it again." : "A new version of Aleph is ready. Reload to use it; your progress is already saved.";
     reload.hidden = s === "stalled"; bar.hidden = false;
   };
@@ -175,7 +180,7 @@ export function mountUpdateBanner(handle, opt = {}) {
     pending = true; msg.textContent = "You are in the middle of an exercise, so Aleph will reload when you finish it. Your progress is already saved.";
     if (poll == null) poll = setT2(tryApply, 2000);
   });
-  later.addEventListener("click", () => { pending = false; declined = true; stopPoll(); bar.hidden = true; }); // Later also holds the quiet page-change update; the next start applies it
+  later.addEventListener("click", () => { pending = false; declined = true; try { ss()?.setItem(LATER_KEY, "1"); } catch { /* this visit only */ } stopPoll(); bar.hidden = true; }); // Later also holds the quiet page-change update; the next start applies it
   const off0 = handle.onChange(render);
   // Quiet update at a page change (25 Nov 2026 audit: the banner followed the learner into every section until a reload). Leaving a
   // page already drops whatever it held in memory, and progress is in localStorage, so a waiting update is applied right there,

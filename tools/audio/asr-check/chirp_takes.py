@@ -66,11 +66,11 @@ class TTS:
             self.t = time.time()
         return self.tok
 
-    def synth(self, text, voice, rate=1.0):
+    def synth(self, text, voice, rate=1.0, ssml=False):
         audio = {'audioEncoding': 'MP3', 'sampleRateHertz': 24000}
         if rate != 1.0:
             audio['speakingRate'] = rate
-        body = json.dumps({'input': {'text': text}, 'voice': {'languageCode': 'he-IL', 'name': voice}, 'audioConfig': audio}).encode()
+        body = json.dumps({'input': {'ssml' if ssml else 'text': text}, 'voice': {'languageCode': 'he-IL', 'name': voice}, 'audioConfig': audio}).encode()
         for attempt in range(4):
             req = urllib.request.Request('https://texttospeech.googleapis.com/v1/text:synthesize', data=body, method='POST',
                                          headers={'Content-Type': 'application/json', 'Authorization': 'Bearer ' + self.token(),
@@ -125,6 +125,7 @@ def main():
     ap.add_argument('--words5', help='round5-words.json: single problem words of stitched lines, in the WaveNet voice the '
                                      'lines are stitched from (w as written, w-rs respelled, w-rs-car in a carrier phrase)')
     ap.add_argument('--lines8', help='round8-lines.json: whole non-Torah lines, pointed, WaveNet + Chirp, as written + respelled')
+    ap.add_argument('--ssml10', help='round10-ssml.json: test lines with every word (or only the weak words) given as exact sounds, SSML <phoneme>')
     ap.add_argument('--lines9', help='round9-lines.json: Torah-service lines (haftarah blessings), Chirp only, two voices')
     ap.add_argument('--words6', help='round6-words.json: every word of the non-Torah lines (w/w-car/w-rs WaveNet, c/c-car/c-rs Chirp)')
     ap.add_argument('--project', default=subprocess.run(['gcloud', 'config', 'get-value', 'project'], capture_output=True, text=True).stdout.strip())
@@ -135,6 +136,31 @@ def main():
     want = {o['file']: re.sub(r'\s*\(cut from:.*\)\s*$', '', o['want']) for o in json.load(open(a.queue, encoding='utf-8'))}
     files = [l.strip() for l in open(a.list, encoding='utf-8') if l.startswith('audio/')]
     tts = TTS(a.project)
+    if a.ssml10:
+        # round 10 test: does the voice follow exact sounds? Each word as <phoneme alphabet="ipa" ph="...">word</phoneme>.
+        # c10/w10: every word; c10k/w10k: only the words the checks could not confirm (the rest as pointed text)
+        from xml.sax.saxutils import escape, quoteattr
+        ok = bad = 0
+        for it in json.load(open(a.ssml10, encoding='utf-8')):
+            chirp, wavenet = VOICES[it['g']]
+            d = os.path.join(a.out, 'l10', it['file'][:-4]); os.makedirs(d, exist_ok=True)
+            weak = {NIQQUD.sub('', w) for w in it['weak']}
+            def ssml(only_weak):
+                parts = []
+                for w, ph in zip(it['words'], it['ipa']):
+                    sw = speakable(w)
+                    if only_weak and NIQQUD.sub('', w) not in weak:
+                        parts.append(escape(sw))
+                    else:
+                        parts.append(f'<phoneme alphabet="ipa" ph={quoteattr(ph)}>{escape(sw)}</phoneme>')
+                return '<speak>' + ' '.join(parts) + '</speak>'
+            for tid, voice, only in [('c10', chirp, False), ('c10k', chirp, True), ('w10', wavenet, False), ('w10k', wavenet, True)]:
+                try:
+                    open(os.path.join(d, tid + '.mp3'), 'wb').write(tts.synth(ssml(only), voice, ssml=True)); ok += 1
+                except Exception as e:
+                    bad += 1; print(f"  {it['file']} {tid}: {str(e)[:200]}", flush=True)
+        print(f'ssml test: {ok} recorded, {bad} refused', flush=True)
+        return
     if a.lines8 or a.lines9:
         # round 8: every non-Torah line read whole, pointed (the vowel points were stripped in every earlier whole-line
         # take), as written and respelled, WaveNet and Chirp.

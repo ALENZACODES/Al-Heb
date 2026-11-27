@@ -544,3 +544,10 @@ details.draft-flag { background: none; border: 0; padding: 0; font-weight: inher
   .companions .comp-pic { width: 2.2rem; height: 2.2rem; }
   main h1 { margin-block: .4rem; }
 }
+
+/* 27 Nov 2026 review: Help is one tap from every page (the bar keeps its five places, so Help sits in the header) */
+.site-header .hdr-help { margin-inline-start: .9rem; padding: .3rem .7rem; min-height: 32px; display: inline-flex; align-items: center; border: 1px solid rgba(232,201,122,.6);
+  border-radius: 999px; color: #e8c97a; font-size: .9rem; font-weight: 600; text-decoration: none; white-space: nowrap; }
+.site-header .hdr-help:hover, .site-header .hdr-help:focus-visible { background: rgba(232,201,122,.14); color: #ffe9a8; }
+.fd-gate { margin: 0; color: #ffe9a8; min-height: 1.2em; }
+.fd-why-picked, .fd-why-right { margin: .25rem 0 0; }

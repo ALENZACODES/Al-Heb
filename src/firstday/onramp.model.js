@@ -42,7 +42,8 @@ export function stepQuestions(step, lessonQuestions = []) {
   const max = Math.min(MAX_CHECK, Number.isInteger(c.max) ? c.max : MAX_CHECK);
   if (c.from === 'pick') {
     const options = (c.options || []).map((o) => ({ text: o.he, he: true }));
-    return [{ id: `onramp-q-${step.id}`, kind: 'pick', prompt: c.prompt, options, answerIndex: Math.max(0, (c.options || []).findIndex((o) => o.right)), why: '' }].slice(0, max);
+    return [{ id: `onramp-q-${step.id}`, kind: 'pick', prompt: c.prompt, options, answerIndex: Math.max(0, (c.options || []).findIndex((o) => o.right)), why: typeof c.why === 'string' ? c.why : '',
+      optionWhy: (c.options || []).map((o) => (!o.right && typeof o.why === 'string' ? o.why : '')) }].slice(0, max);
   }
   return lessonQuestions.filter((q) => q.cardId === c.cardId).slice(0, max);
 }

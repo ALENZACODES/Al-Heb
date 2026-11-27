@@ -13,7 +13,7 @@ import { recordActivity } from '../curriculum/progress.js';
 import { currentStreak } from '../curriculum/state.js';
 import { loadFirst10, loadLadder, loadOnramp } from './loader.js';
 import { DRAFT_NOTICE, PROGRESS_KEY, advance, markRead, wordById, buildCheck, gradeCheck, audioEntries, playHook, totalMinutes } from './model.js';
-import { migrateProgress, winStep, recordAnswer, stepQuestions, stepIndex, onrampDone, totalMinutes as onrampMinutes } from './onramp.model.js';
+import { migrateProgress, isWon, winStep, recordAnswer, stepQuestions, stepIndex, onrampDone, totalMinutes as onrampMinutes } from './onramp.model.js';
 import { loadMemoryChain, entryFor, buildMemoryCard } from '../letters/memorycard.js';
 import { vowelSound, respell, congregationOf, audioNote, saySound, playLine, audioSupport, LABELS } from '../pronunciation/forTradition.js';
 import { isAudioFree } from '../shell/audiofree.js';
@@ -69,7 +69,11 @@ export function mount(root, ctx) {
   const focusLost = () => { const a = document.activeElement; return !a || a === document.body || !body.contains(a) || a.disabled; };
   const refocus = (sel) => { try { if (focusLost()) body.querySelector(sel)?.focus({ preventScroll: true }); } catch { /* ignore */ } };
   const hearNote = () => (isAudioFree(ctx) || tradition === 'israeli' ? el('span', { hidden: '' }) : el('p', { class: 'muted small fd-audio-note' }, audioNote(tradition)));
-  const listen = (hook, label = 'Hear it') => isAudioFree(ctx) ? el('span', { hidden: '' }) : el('button', { class: 'btn', type: 'button', onclick: async () => {
+  // Steps whose Hear it or Trace it was used in this visit: Continue on a learn screen waits for one of them (27 Nov 2026 review:
+  // the step that teaches the sound could be skipped without hearing it). Sound-free mode has no Hear it, so nothing waits there.
+  const tried = new Set(); let onTried = () => {};
+  const listen = (hook, label = 'Hear it') => isAudioFree(ctx) ? el('span', { hidden: '' }) : el('button', { class: 'btn', type: 'button', 'data-hear': '1', onclick: async () => {
+    onTried();
     const r = await playHook(ctx?.audio, hook);
     say(playLine(r, tradition, 'it')); // one shared, tradition-aware sentence (never presents the Israeli device voice as the learner's style)
   } }, label);
@@ -132,7 +136,8 @@ export function mount(root, ctx) {
       nodes.push(buddy);
     } catch { /* test DOMs and missing document: the letter still renders without the drawing */ }
     const tools = el('div', { class: 'fd-foot-tools' }, listen(hook));
-    if (s.kind === 'letter') tools.append(el('a', { class: 'btn secondary', href: `#/letters/${s.letter}`, id: 'fd-trace' }, 'Trace it'));
+    // Trace it opens the letter page with a way straight back to this step (27 Nov 2026 review: the only way back was the browser's Back).
+    if (s.kind === 'letter') tools.append(el('a', { class: 'btn secondary', href: `#/letters/${s.letter}?from=firstday`, id: 'fd-trace', onclick: () => { tried.add(s.id); } }, 'Trace it'));
     // Instruction, Hear it and Trace it all live in the footer so Continue cannot cover them.
     // memory hooks and explanations stay behind "Why?"
     const why = [];
@@ -144,7 +149,10 @@ export function mount(root, ctx) {
     if (s.kind === 'letter' && ctx?.hasRoute?.('learn') !== false) why.push(el('p', { class: 'fd-spot' }, 'Optional: ', el('a', { class: 'btn secondary', href: `#/learn?spotit=${s.letter}` }, `Spot It: ${L?.name || s.letter}`)));
     if (why.length) nodes.push(el('details', { class: 'fd-why' }, el('summary', {}, 'Why?'), ...why));
     body.replaceChildren(...nodes);
-    footSet(el('p', { class: 'fd-action fd-foot-action' }, s.action), tools, el('button', { class: 'btn fd-cta', type: 'button', id: 'fd-continue', onclick: () => { if (!qs.length) { win(s); return; } stage = 'q'; answered = { qi: 0 }; sel = null; verdict = null; say(''); renderStep(); focusFirst(); } }, qs.length ? 'Continue' : 'Next'));
+    const needsTry = !isAudioFree(ctx) && !tried.has(s.id) && !isWon(progress, s.id);
+    const gateNote = el('p', { class: 'fd-gate small', id: 'fd-gate', role: 'status' }, needsTry ? (s.kind === 'letter' ? 'Press Hear it or Trace it first, then Continue.' : 'Press Hear it first, then Continue.') : '');
+    onTried = () => { tried.add(s.id); const c = foot.querySelector('#fd-continue'); if (c) { c.disabled = false; c.removeAttribute?.('disabled'); c.removeAttribute?.('aria-disabled'); } gateNote.textContent = ''; };
+    footSet(el('p', { class: 'fd-action fd-foot-action' }, s.action), tools, gateNote, el('button', { class: 'btn fd-cta', type: 'button', id: 'fd-continue', ...(needsTry ? { disabled: '', 'aria-disabled': 'true', 'aria-describedby': 'fd-gate' } : {}), onclick: () => { if (!qs.length) { win(s); return; } stage = 'q'; answered = { qi: 0 }; sel = null; verdict = null; say(''); renderStep(); focusFirst(); } }, qs.length ? 'Continue' : 'Next'));
   }
 
   function renderQuestion(s, i, stepLabel, qs, qi) {
@@ -183,6 +191,10 @@ export function mount(root, ctx) {
         el('p', { class: 'fd-sheet-title' }, el('span', { class: 'fd-sheet-ico', 'aria-hidden': 'true' }, verdict.ok ? '✓' : '✕'), ' ', verdict.ok ? verdict.praise : 'Not quite'),
         verdict.ok ? (combo >= 3 ? el('p', { class: 'fd-combo' }, `${combo} in a row!`) : null)
           : el('p', {}, 'Correct answer: ', right.he ? heText(right.text, 'alef-he') : el('strong', {}, right.text), el('span', { class: 'fd-kind' }, ' — that is how everyone learns.')),
+        // The same standard as the lesson's own quick check (27 Nov 2026 review): on a miss, what was picked and what it is; on
+        // every answer, the reason the right one is right. Both lines come from the question's data, never invented here.
+        !verdict.ok && q.optionWhy?.[verdict.k] ? el('p', { class: 'fd-why-picked', 'data-why-picked': '1' }, q.optionWhy[verdict.k]) : null,
+        q.why ? el('p', { class: 'fd-why-right', 'data-why-right': '1' }, q.why) : null,
         last ? el('p', { class: 'fd-win' }, el('strong', {}, s.win)) : null),
       last ? el('button', { class: 'btn fd-cta', type: 'button', id: 'fd-next', onclick: go }, verdict.ok ? 'Continue' : 'Got it')
         : el('button', { class: 'btn fd-cta', type: 'button', id: 'fd-next-q', onclick: go }, verdict.ok ? 'Continue' : 'Got it'));
@@ -196,7 +208,7 @@ export function mount(root, ctx) {
       combo = ok ? combo + 1 : 0;
       verdict = { ok, k: sel, praise: PRAISE[(qi + i) % PRAISE.length] };
       chime(ok);
-      say(ok ? `${verdict.praise}${last ? ' ' + s.win : ''}` : `Not quite: it is ${right.text}. That is how everyone learns, and nothing is lost.`);
+      say(ok ? `${verdict.praise}${q.why ? ' ' + q.why : ''}${last ? ' ' + s.win : ''}` : `Not quite: it is ${right.text}. ${q.optionWhy?.[sel] || ''} ${q.why || ''} That is how everyone learns, and nothing is lost.`.replace(/\s+/g, ' '));
       renderStep();
     }
   }

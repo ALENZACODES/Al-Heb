@@ -131,6 +131,15 @@ export function mount(root, ctx = {}) {
   }
   const wrap = h('div', { class: 'alef-trace' });
   wrap.appendChild(h('style', { text: CSS }));
+  // Opened from a lesson or from the first 10 minutes: one tap leads back to the same place (27 Nov 2026 review: the only way
+  // back was the browser's Back button). It goes back in history, so the page returns at the scroll position it was left at.
+  { const from = ctx.query && ctx.query.from, lessonId = ctx.query && typeof ctx.query.lesson === 'string' ? ctx.query.lesson : '';
+    if (from === 'firstday' || from === 'lesson') {
+      const href = from === 'firstday' ? '#/firstday' : (lessonId ? '#/learn?lesson=' + encodeURIComponent(lessonId) : '#/learn');
+      const back = h('a', { class: 'btn secondary alef-trace-back', href, 'data-back-to': from }, from === 'firstday' ? '\u2190 Back to your first 10 minutes' : '\u2190 Back to the lesson');
+      back.addEventListener && back.addEventListener('click', (e) => { try { if (globalThis.history && globalThis.history.length > 1) { e.preventDefault(); globalThis.history.back(); } } catch (err) { /* the link's own address is the fallback */ } });
+      const row = h('p', {}); row.style.margin = '0 0 .6rem'; row.appendChild(back); wrap.appendChild(row);
+    } }
   const body = h('div', {});
   body.style.minBlockSize = 'calc(100svh - 9.5rem)';
   wrap.appendChild(body);

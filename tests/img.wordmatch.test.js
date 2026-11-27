@@ -86,7 +86,8 @@ test('every cue matches its vocabulary entry, one picture per word, and rejected
     for (const id of [row.wordId, ...(row.also || [])]) {
       const hit = R.resolve('word', id);
       assert.notEqual(hit?.id, row.asset, `${id} must not use ${row.asset}`);
-      if (!book.cues[id]) assert.equal(hit, null, id);
+      // A row may name the word's own reviewed Block J picture (own); anything else must stay unmapped.
+      if (!book.cues[id]) assert.ok(hit == null || (id === row.wordId && hit.id === row.own), `${id} -> ${hit?.id}`);
     }
   }
   for (const gap of book.gaps) assert.equal([...byAsset.keys()].includes(gap.asset), false, gap.asset);
@@ -116,9 +117,11 @@ test('pinball and prefix blast use the new backgrounds and the six noun cues sta
   assert.equal(world.id, 'GAME_prefix_world');
   assert.equal(earth.id, 'GAME_prefix_earth');
   assert.notEqual(world.id, earth.id);
-  assert.equal(king.id, 'GAME_prefix_king');
+  // Once the word's own Block J picture is approved it wins over the game cue (as for every cue); until then the throne cue stands in.
+  const kingOwn = plain.resolve('word', 'h58d8d8fe');
+  if (kingOwn && kingOwn.id !== 'GAME_prefix_king') assert.equal(king.id, kingOwn.id);
+  else { assert.equal(king.id, 'GAME_prefix_king'); assert.match(king.alt, /throne/i); }
   assert.equal(HE.test(king.alt), false);
-  assert.match(king.alt, /throne/i);
   assert.equal(R.resolve('word', 'h86027352').id, 'VOC_colours_09');
   for (const path of ['/pinball', '/prefixblast', '/memorypalace', '/vowelcatcher', '/tugowar']) {
     const route = ROUTES.find(r => r.pattern === path);

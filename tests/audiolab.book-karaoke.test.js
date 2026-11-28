@@ -23,7 +23,7 @@ test('the book says how many pages have audio in the learner\'s voice', async ()
   await mount(root, ctx());
   const line = root.querySelector('.book-audio-ready');
   assert.ok(line);
-  assert.equal(line.textContent, 'Noa: 2 of 3 pages have audio. 1 has audio coming.');
+  assert.equal(line.textContent, 'Noa: 2 of 3 pages have synthetic audio. 1 has audio coming.');
 });
 
 test('read along: words light up from estimated timings (labelled), and the page turns by itself at the end of the clip', async () => {

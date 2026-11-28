@@ -32,3 +32,14 @@ test('Home names one place to start and shows Prayer Practice and the Dictionary
   assert.deepEqual(hrefs, ['#/prayer-practice', '#/vocab']);
   for (const hash of hrefs) assert.ok(matchRoute(hash)?.route, hash);
 });
+
+test('a prayer marked "Follow It" on the Fluency Ladder counts as followed in the service ring', async () => {
+  const { serviceRing, serviceTotals } = await import('../src/lib/counts.js');
+  const orders = JSON.parse((await import('node:fs')).readFileSync(new URL('../data/service/orders.json', import.meta.url), 'utf8')).orders;
+  const [oid, o] = Object.entries(orders).find(([id]) => serviceTotals(id));
+  const first = o.items[0].id;
+  const before = serviceRing(oid, { ladder: {} }, null, {}, o.items.map((x) => x.id));
+  const after = serviceRing(oid, { ladder: { [first]: { hear: '2026-11-27', follow: '2026-11-27' } } }, null, {}, o.items.map((x) => x.id));
+  assert.equal(before.prayers.have, 0);
+  assert.equal(after.prayers.have, 1);
+});

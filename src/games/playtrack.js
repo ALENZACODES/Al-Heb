@@ -8,15 +8,20 @@
 // those still need a finished round. Never throws.
 import { SCORES_KEY } from './scores.js';
 
-export const MIN_ACTIONS = 4;      // clicks or key presses inside the game
+export const MIN_ACTIONS = 4;      // taps, drags or key presses inside the game
 export const MIN_MS = 12000;       // time on the game page
 const nat = (v) => (Number.isFinite(Number(v)) && Number(v) > 0 ? Math.floor(Number(v)) : 0);
 const obj = (v) => (v && typeof v === 'object' && !Array.isArray(v) ? v : {});
 
-/** Did this visit count as a play that still needs recording? Pure. */
+const playsIn = (pair) => { const [rec, led] = Array.isArray(pair) ? pair : [null, null]; return Math.max(nat(obj(rec).plays), nat(obj(rec).rounds), nat(obj(led).plays)); };
+/**
+ * Did this visit count as a play that still needs recording? Pure.
+ * Only a new PLAY saved by the game counts as the game recording itself: several games save settings, the chosen level or
+ * the daily seed as soon as they open, which used to make this watcher stand down and leave the play unrecorded (review 3).
+ */
 export function shouldRecord({ actions, ms, before, after }) {
   if (nat(actions) < MIN_ACTIONS || nat(ms) < MIN_MS) return false;
-  return JSON.stringify(before ?? null) === JSON.stringify(after ?? null); // the game saved its own record: nothing to add
+  return playsIn(after) <= playsIn(before);
 }
 
 /** The two records after one unfinished play. Pure. */
@@ -40,17 +45,20 @@ export function installPlayTracker({ store, isGame, win = globalThis.window, doc
   const close = () => {
     const v = visit; visit = null;
     if (!v || !shouldRecord({ actions: v.actions, ms: now() - v.at, before: v.before, after: snap(v.id) })) return;
-    Promise.resolve().then(() => isGame(v.id)).then((yes) => {
+    const write = (yes) => {
       if (!yes) return;
       const out = notePartialPlay(store.get(`games.${v.id}.v1`), store.get(SCORES_KEY), v.id, now());
       store.set(`games.${v.id}.v1`, out.rec); store.set(SCORES_KEY, out.ledger);
-    }).catch(() => { /* recording a play is best effort */ });
+    };
+    // Written at once when the answer is already known: a reload or a closed tab leaves no time for a promise (review 3).
+    try { const yes = isGame(v.id); if (typeof yes === 'boolean') { write(yes); return; } Promise.resolve(yes).then(write).catch(() => {}); } catch { /* best effort */ }
   };
   const act = (e) => {
     if (!visit || !e?.target?.closest?.('#main')) return;
     if (++visit.actions === MIN_ACTIONS) { try { Promise.resolve(isGame(visit.id)).catch(() => {}); } catch { /* warm-up only */ } } // load the catalogue before the learner leaves
   };
-  doc.addEventListener('click', act, true);
+  // pointer releases, not clicks: Vowel Catcher and the drag games are played by dragging, which makes no click (review 3)
+  doc.addEventListener('pointerup', act, true);
   doc.addEventListener('keydown', act, true);
   win.addEventListener('hashchange', () => { close(); open(); });
   win.addEventListener('pagehide', close);

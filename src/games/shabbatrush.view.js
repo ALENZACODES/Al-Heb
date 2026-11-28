@@ -1,4 +1,4 @@
-// Game 8 — real Friday sunset countdown, recorded category cues, and timed collections.
+// Game 8 — real Friday sunset countdown, written and spoken category cues, and timed collections.
 import { h, heSpan } from '../shell/ui.js';
 import { createSession, shuffled, loadGameImages, imgOf, hasRecordedClip, playRecordedClip, resultsCard, envNode, GAME_ENV, roundStatus, placeBoard } from './engine.js';
 import { castEnvNode } from './cast-env.js';
@@ -7,8 +7,8 @@ import { loadJson } from '../grammar/loader.js';
 import { fridayOnOrAfter, sunset } from '../curriculum/calendar.js';
 export const STORE_KEY='games.shabbatrush.v1';
 const CATEGORIES=Object.freeze([
-  { id:'food-drink',he:'אֹכֶל',clipId:'hf2a00590' },
-  { id:'home-things',he:'בַּיִת',clipId:'h9c8ddecf' },
+  { id:'food-drink',he:'אֹכֶל',en:'food and drink',clipId:'hf2a00590' },
+  { id:'home-things',he:'בַּיִת',en:'things at home',clipId:'h9c8ddecf' },
 ]);
 export function nextShabbatSunset(now,location) {
   if(!(now instanceof Date) || !location || !Number.isFinite(location.lat) || !Number.isFinite(location.lon))return null;
@@ -52,15 +52,16 @@ export function mount(root,ctx) {
     const correct=shuffled(deck.filter(w=>w.topic===cue.id))[0];
     const wrong=shuffled(deck.filter(w=>w.topic!==cue.id)).slice(0,2);
     if(!correct||wrong.length<2){status.textContent='Missing collectible categories.';return;}
-    roundStatus(status,feedback,`Collection ${round+1} of 8: play the recorded category.`);
-    let heard=false;
+    roundStatus(status,feedback,`Collection ${round+1} of 8: collect a word from the category shown.`);
+    // The category is written as well as spoken (review 3: audio only, so unplayable muted or deaf).
+    let heard=true;
     const cards=shuffled([correct,...wrong]).map(item=>{
       const picture=imgOf(R,'word',item.id);
       const button=h('button',{type:'button',class:'btn secondary game-rush-collectible',disabled:true,onclick:()=>{
         if(!heard || deadline.getTime()<=Date.now())return;
         const ok=correctCollect(cue,item);session.answer(ok); sfx.play(ok ? 'success' : 'miss');
         if(ok){round++;paint();}
-        else paint('Not in the announced category.');
+        else paint(`Not in the category: this round wants ${cue.en} (${cue.he}).`);
       }},heSpan(item.he,'he game-he-sm'));
       if(picture)button.append(h('img',{class:'game-card-img',src:picture.src,alt:picture.alt,
         width:picture.width,height:picture.height,'data-img-id':picture.id}));
@@ -69,10 +70,11 @@ export function mount(root,ctx) {
     const hear=h('button',{type:'button',class:'btn',onclick:async()=>{
       const success=await playRecordedClip(ctx,'word',cue.clipId);
       if(!alive)return;
-      heard=success;if(success){cards.forEach(c=>{c.disabled=false;});status.textContent='Collect only matching words.';}
-      else status.textContent='Category recording unavailable; collection disabled.';
-    }},'Hear Hebrew category');
-    placeBoard(board,castEnvNode(h, R, 'shabbatrush', GAME_ENV.shabbat),hear,h('div',{class:'game-rush-lane'},...cards));
+      if(!success) status.textContent='The category clip did not play. The category is written above the words.';
+    }},'Hear the category (synthetic voice)');
+    const label=h('p',{class:'game-rush-category'},'Category: ',heSpan(cue.he,'he game-he-sm'),` (${cue.en})`);
+    cards.forEach(c=>{c.disabled=false;});
+    placeBoard(board,castEnvNode(h, R, 'shabbatrush', GAME_ENV.shabbat),label,hear,h('div',{class:'game-rush-lane'},...cards));
   }
   Promise.all([loadJson('data/vocab/index.json'),loadJson('data/calendar/locations.json'),loadGameImages(ctx)]).then(([index,places,images])=>{
     if(!alive||!article.isConnected)return;R=images;deck=buildRushItems(index);

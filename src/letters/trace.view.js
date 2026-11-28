@@ -406,20 +406,25 @@ export function mount(root, ctx = {}) {
     body.lastChild.appendChild(he(tl.nameHe));
     const fb = h('div', { class: 'feedback', role: 'status', 'aria-live': 'polite' }, q.answered ? q.answered : '');
     const opts = h('div', { class: 'opts', dir: 'rtl' });
+    // The score updates on every tap and Next is always there (review 3: the score stayed 0 / 0 and there was no way on).
+    const scoreP = h('p', {}, t('trace.score', 'Score: ') + q.score.ok + ' / ' + q.score.n);
+    const showScore = () => { scoreP.textContent = t('trace.score', 'Score: ') + q.score.ok + ' / ' + q.score.n; };
     for (const id of ids.slice().sort(() => Math.random() - 0.5)) {
       const l = letterById(id);
       // the question names the target, so naming each option would hand over the answer: a screen reader gets each option's SHAPE in words (its name when there is no shape text)
       opts.appendChild(h('button', { lang: 'he', 'aria-label': shapeLabel(l, state.mnemonics && state.mnemonics[l.id]) || l.name, onclick: () => {
+        if (btn.classList.contains('is-good') || btn.getAttribute('aria-disabled') === 'true') return; // one count per option
         q.score.n++;
         // Right and wrong are both shown on the button and in words, and "Right" stays above the next question (25 Nov 2026 audit:
         // a right answer only nudged the score).
-        if (id === q.target) { q.score.ok++; btn.classList.add('is-good'); btn.textContent = '✓ ' + l.he; fb.textContent = '✓ ' + t('trace.good', 'Good!') + ' ' + l.name; state.drillQ = { target: null, score: q.score, answered: '✓ ' + t('trace.right', 'Right: that was ') + l.name + '.' }; setTimeout(() => { if (!unmounted && state.tab === 'drill') render(); }, 900); }
-        else { btn.classList.add('is-bad'); btn.setAttribute('aria-disabled', 'true'); const w = warningAfterWrongTap(q.target, id, state.interference, state.confusables); fb.textContent = '✗ ' + t('trace.notThat', 'That is ') + l.name + '.' + (w ? ' ' + w.hint : ''); } // look-alike hint only after a wrong tap
+        if (id === q.target) { q.score.ok++; showScore(); btn.classList.add('is-good'); btn.textContent = '✓ ' + l.he; fb.textContent = '✓ ' + t('trace.good', 'Good!') + ' ' + l.name; state.drillQ = { target: null, score: q.score, answered: '✓ ' + t('trace.right', 'Right: that was ') + l.name + '.' }; setTimeout(() => { if (!unmounted && state.tab === 'drill') render(); }, 900); }
+        else { showScore(); btn.classList.add('is-bad'); btn.setAttribute('aria-disabled', 'true'); const w = warningAfterWrongTap(q.target, id, state.interference, state.confusables); fb.textContent = '✗ ' + t('trace.notThat', 'That is ') + l.name + '.' + (w ? ' ' + w.hint : ''); } // look-alike hint only after a wrong tap
       } }, l.he));
       const btn = opts.lastChild;
     }
     body.appendChild(opts); body.appendChild(fb);
-    body.appendChild(h('p', {}, t('trace.score', 'Score: ') + q.score.ok + ' / ' + q.score.n));
+    body.appendChild(scoreP);
+    body.appendChild(h('p', {}, h('button', { type: 'button', class: 'btn secondary', 'data-drill-next': '1', onclick: () => { state.drillQ = { target: null, score: q.score, answered: null }; render(); } }, t('trace.next', 'Next question'))));
   }
 
   // ------------------------------------------------------------ typing tab

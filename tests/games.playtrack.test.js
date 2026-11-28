@@ -7,6 +7,8 @@ test('a short or idle visit is not a play; a game that saved its own record is n
   assert.equal(shouldRecord({ actions: MIN_ACTIONS - 1, ms: MIN_MS * 2, before: null, after: null }), false);
   assert.equal(shouldRecord({ actions: MIN_ACTIONS, ms: MIN_MS - 1, before: null, after: null }), false);
   assert.equal(shouldRecord({ actions: MIN_ACTIONS, ms: MIN_MS, before: [null, null], after: [{ plays: 1 }, null] }), false);
+  // a game that saved only its settings or level on opening has not recorded a play: the watcher still writes one
+  assert.equal(shouldRecord({ actions: MIN_ACTIONS, ms: MIN_MS, before: [null, null], after: [{ unlocked: 1, daily: {} }, null] }), true);
   assert.equal(shouldRecord({ actions: MIN_ACTIONS, ms: MIN_MS, before: [null, null], after: [null, null] }), true);
 });
 
@@ -25,7 +27,7 @@ test('the watcher records one play on leaving a played game, and nothing for oth
   const ls = {}; const on = (bag) => (name, fn) => { (bag[name] ||= []).push(fn); };
   const win = { location: { hash: '#/tugowar' }, addEventListener: on(ls) }; const dls = {}; const doc = { addEventListener: on(dls) };
   let t = 0; installPlayTracker({ store, isGame: (id) => id === 'tugowar', win, doc, now: () => t });
-  const tap = () => dls.click[0]({ target: { closest: () => ({}) } });
+  const tap = () => dls.pointerup[0]({ target: { closest: () => ({}) } });
   for (let i = 0; i < MIN_ACTIONS; i++) tap();
   t = MIN_MS + 1; win.location.hash = '#/settings'; ls.hashchange[0]();
   await new Promise((r) => setTimeout(r, 0));

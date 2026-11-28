@@ -25,7 +25,9 @@ const spec = {
 function setup(A) {
   const cfg = A.cfg, rnd = A.rnd, n = cfg.size;
   const cards = allSyllables();
-  let snake = [[Math.floor(n / 2), Math.floor(n / 2)]], dir = 'left', pending = 'left';
+  // The snake waits for the first press; it used to set off by itself and reach a wall before the learner had looked.
+  const centre = [Math.floor(n / 2), Math.floor(n / 2)];
+  let snake = [centre], dir = null, pending = null;
   let word = [], idx = 0, wordsDone = 0, food = new Map();
   const prompt = A.h('p', { class: 'arc-prompt' });
   const { el, cells } = makeGrid(n, n, { label: 'Snake board', cellClass: 'arc-snake-cell' });
@@ -48,11 +50,17 @@ function setup(A) {
     snake.forEach(([r, c], i) => { cells[r][c].classList.add(i === 0 ? 'is-head' : 'is-snake'); if (i > 0 && word[i - 1] && i - 1 < idx) cells[r][c].textContent = word[i - 1].he; });
   };
   const step = () => {
+    if (!pending) return;
     dir = pending;
     const [hr, hc] = snake[0];
     const [dr, dc] = { up: [-1, 0], down: [1, 0], left: [0, 1], right: [0, -1] }[dir]; // board is rtl: visual left is +c
     const r = hr + dr, c = hc + dc;
-    if (r < 0 || c < 0 || r >= n || c >= n || snake.some(([a, b]) => a === r && b === c)) { A.sfx('error'); A.slip(); A.announce('The snake hit something. Run over.'); draw(); A.finish({ reason: 'lives' }); return; }
+    // A wall or the tail costs one life and the snake starts again from the middle (it used to end the run with lives left).
+    if (r < 0 || c < 0 || r >= n || c >= n || snake.some(([a, b]) => a === r && b === c)) {
+      A.sfx('error'); snake = [centre]; dir = null; pending = null;
+      if (A.miss()) { draw(); return; }
+      A.announce('The snake hit something and lost a life. Press a direction to go again.'); draw(); return;
+    }
     const f = food.get(`${r},${c}`);
     snake.unshift([r, c]);
     if (f) {
@@ -63,11 +71,12 @@ function setup(A) {
     draw();
   };
   const opposite = { up: 'down', down: 'up', left: 'right', right: 'left' };
-  A.dpad((d) => { if (opposite[d] !== dir || snake.length === 1) pending = d; if (A.quiet) step(); });
+  A.dpad((d) => { if (!dir || opposite[d] !== dir || snake.length === 1) pending = d; if (A.quiet) step(); });
   A.setLives(3);
   newWord(); draw();
   if (!A.quiet) A.loop(step, cfg.speed);
   else A.announce('Calm mode: the snake moves one square per press.');
+  if (!A.quiet) A.announce('Press a direction to start the snake.');
 }
 
 export const mount = mountArcade(spec, setup);

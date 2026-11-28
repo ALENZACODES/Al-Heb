@@ -100,6 +100,7 @@ export async function saveOutcome(store, r, now = Date.now()) {
   const cards = applyRating(before, id, r.rating, now);
   await sset(store, PROGRESS_KEY, progress);
   if (cards !== before) await sset(store, CARDS_KEY, cards);
+  if (cards !== before && before[id]) { try { globalThis.document?.dispatchEvent?.(new CustomEvent('alef:review-rated', { detail: { rating: r.rating } })); } catch { /* optional listeners */ } } // a review of an existing card counts for the quest
   return { progress, card: cards[id] || null, createdOrReviewed: cards !== before };
 }
 

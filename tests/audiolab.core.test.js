@@ -52,8 +52,8 @@ test('A7: readiness counts what the player would really play, and the line says 
   const audio = createAudio({ settings: { voice: 'f', congregation: 'israeli' }, manifest, AudioCtor: class {}, speech: null, UtteranceCtor: null, held: ['audio/f/israeli/line/d.mp3'] });
   const r = C.readiness(audio, ['a', 'b', 'c', 'd'].map((id) => ({ kind: 'line', id })));
   assert.deepEqual(r, { total: 4, clip: 2, device: 0, held: 1, coming: 1, checking: 0 });
-  assert.equal(C.readinessLine(r, 'lines'), '2 of 4 lines have audio. 1 is held for review. 1 has audio coming.');
-  assert.equal(C.readinessLine({ total: 3, clip: 3, device: 0, held: 0, coming: 0, checking: 0 }, 'words'), '3 of 3 words have audio.');
+  assert.equal(C.readinessLine(r, 'lines'), '2 of 4 lines have synthetic audio. 1 is held for review. 1 has audio coming.');
+  assert.equal(C.readinessLine({ total: 3, clip: 3, device: 0, held: 0, coming: 0, checking: 0 }, 'words'), '3 of 3 words have synthetic audio.');
   assert.equal(C.readinessLine({ total: 3, clip: 0, device: 0, held: 0, coming: 0, checking: 3 }, 'words'), 'Checking which words have audio…');
   assert.equal(C.readinessLine({ total: 0 }), '');
   const pages = [{ audio: { f: 'x.mp3' } }, { audioHeld: true, audio: { f: 'y.mp3' } }, {}];

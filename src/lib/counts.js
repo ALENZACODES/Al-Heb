@@ -295,7 +295,10 @@ export function serviceRing(orderId, practice, companion, cards, itemIds = []) {
   const p = obj(practice), cap = (n, max) => Math.min(max, n);
   const lines = cap(Object.keys(obj(obj(p.lines)[orderId])).length, t.lines);
   const words = cap(Object.keys(obj(obj(p.words)[orderId])).length, t.words);
-  const done = new Set([...Object.keys(obj(obj(companion).practised)), ...Object.keys(obj(cards)).filter((k) => k.startsWith('line:')).map((k) => k.slice(5))]);
+  // "Follow It" marked on Prayer Practice's own Fluency Ladder counts too: a prayer taken through all four steps there used to
+  // leave this at 0 (review 3), because only the Companion's mark and line cards were read.
+  const viaLadder = Object.entries(obj(p.ladder)).filter(([, m]) => obj(m).follow).map(([id]) => id);
+  const done = new Set([...Object.keys(obj(obj(companion).practised)), ...Object.keys(obj(cards)).filter((k) => k.startsWith('line:')).map((k) => k.slice(5)), ...viaLadder]);
   const prayers = cap([...new Set(Array.isArray(itemIds) ? itemIds : [])].filter((id) => done.has(id)).length, t.prayers);
   const share = (a, b) => (b ? a / b : 0);
   const pct = Math.floor(((share(lines, t.lines) + share(words, t.words) + share(prayers, t.prayers)) / 3) * 100);

@@ -15,6 +15,7 @@ elif [ "$1" = stt ]; then
   command -v ffmpeg >/dev/null || { sudo apt-get -qq update >/dev/null 2>&1; sudo apt-get -qq install -y ffmpeg >/dev/null 2>&1; }
   python3 tools/audio/asr-check/google_stt.py --root . --queue tools/audio/asr-check/${2:-extra-queue.json} --out ~/stt-hearings.jsonl
   cloudshell download ~/stt-hearings.jsonl || true; echo CS-DONE; exit 0
+elif [ "$1" = p ]; then L=tools/audio/asr-check/round5-list.txt; O=~/aleph-pilot; X="--takes none --pilot tools/audio/asr-check/chirp-pilot.json"
 elif [ "${1:0:1}" = a ]; then L=tools/audio/asr-check/round5-list.txt; O=~/aleph-all-${1:1}; X="--takes none --all tools/audio/asr-check/chirp-all.json --shard ${1:1} --shards 4"
 elif [ "$1" = t ]; then L=tools/audio/asr-check/round5-list.txt; O=~/aleph-takes-r10; X="--takes none --ssml10 tools/audio/asr-check/round10-ssml.json"
 elif [ "$1" = r9 ]; then L=tools/audio/asr-check/round5-list.txt; O=~/aleph-takes-r9; X="--takes none --lines9 tools/audio/asr-check/round9-lines.json"

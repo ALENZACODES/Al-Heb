@@ -15,6 +15,7 @@ import argparse, base64, json, os, re, subprocess, sys, time, urllib.error, urll
 HERE = os.path.dirname(os.path.abspath(__file__))
 VOICES = {'m': ('he-IL-Chirp3-HD-Charon', 'he-IL-Wavenet-B'), 'f': ('he-IL-Chirp3-HD-Kore', 'he-IL-Wavenet-A')}
 # second Chirp voice per gender (the Torah blessing torah-bless-2 already uses these)
+PILOT = {'m': ['Charon', 'Orus', 'Fenrir', 'Puck'], 'f': ['Kore', 'Aoede', 'Leda', 'Zephyr']}
 CHIRP_ALT = {'m': 'he-IL-Chirp3-HD-Orus', 'f': 'he-IL-Chirp3-HD-Aoede'}
 NIQQUD = re.compile(r'[֑-ׇ]')
 
@@ -126,6 +127,7 @@ def main():
                                      'lines are stitched from (w as written, w-rs respelled, w-rs-car in a carrier phrase)')
     ap.add_argument('--lines8', help='round8-lines.json: whole non-Torah lines, pointed, WaveNet + Chirp, as written + respelled')
     ap.add_argument('--ssml10', help='round10-ssml.json: test lines with every word (or only the weak words) given as exact sounds, SSML <phoneme>')
+    ap.add_argument('--pilot', help='chirp-pilot.json: a sample of clips in four Chirp voices per gender, to choose the voice')
     ap.add_argument('--all', help='chirp-all.json: every clip not yet in Chirp, re-recorded in the Chirp voice of its gender (resumable)')
     ap.add_argument('--shard', type=int, default=0); ap.add_argument('--shards', type=int, default=1)
     ap.add_argument('--lines9', help='round9-lines.json: Torah-service lines (haftarah blessings), Chirp only, two voices')
@@ -138,6 +140,31 @@ def main():
     want = {o['file']: re.sub(r'\s*\(cut from:.*\)\s*$', '', o['want']) for o in json.load(open(a.queue, encoding='utf-8'))}
     files = [l.strip() for l in open(a.list, encoding='utf-8') if l.startswith('audio/')]
     tts = TTS(a.project)
+    if a.pilot:
+        from concurrent.futures import ThreadPoolExecutor
+        jobs = []
+        for it in json.load(open(a.pilot, encoding='utf-8')):
+            for v in PILOT[it['g']]:
+                dst = os.path.join(a.out, 'pilot', it['file'][:-4], v + '.mp3')
+                if not os.path.exists(dst) or os.path.getsize(dst) < 1000:
+                    jobs.append((dst, speakable(it['text']), 'he-IL-Chirp3-HD-' + v))
+        print(f'{len(jobs)} pilot takes to record', flush=True)
+
+        def one(j):
+            dst, text, voice = j
+            os.makedirs(os.path.dirname(dst), exist_ok=True)
+            for attempt in range(5):
+                try:
+                    open(dst, 'wb').write(b''.join(tts.synth(p, voice) for p in pieces(text))); break
+                except Exception as e:
+                    if attempt == 4:
+                        print(f'  {dst}: {str(e)[:160]}', flush=True); break
+                    time.sleep(8 * (attempt + 1))
+        tts.token()
+        with ThreadPoolExecutor(6) as ex:
+            list(ex.map(one, jobs))
+        print('done', flush=True)
+        return
     if a.all:
         # everything in Chirp: one take per clip, pointed text, Charon (m) / Kore (f); long texts in pieces
         from concurrent.futures import ThreadPoolExecutor

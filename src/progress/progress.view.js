@@ -92,7 +92,7 @@ export async function mount(root, ctx) {
     const streakLine = st.count > 0
       ? `${plural(st.count, 'day', 'days')} in a row${st.restToday ? ' (resting today)' : st.activeToday ? ', including today' : ''}. Best so far: ${st.best}.`
       : st.restToday ? 'Resting today. Your streak is waiting for you.' : plain('progressNoStreak');
-    const goalLine = g.lessonsToday > 0 ? `Today's review goal is met: you finished ${plural(g.lessonsToday, 'lesson', 'lessons')}.`
+    const goalLine = g.lessonsToday > 0 ? `Today's review goal is met: you finished ${plural(g.lessonsToday, 'new lesson', 'new lessons')} today (a lesson you repeat is not counted twice).`
       : g.cards >= g.target ? `Today's review goal is met: ${plural(g.cards, 'card', 'cards')} reviewed.`
       : `${g.cards} of ${g.target} cards today. Any amount counts.`;
     const sel = h('select', { id: 'pg-goal', onchange: (e) => { try { setGoalTarget(store, Number(e.target.value)); status.textContent = `Review goal set to ${e.target.value} cards.`; renderToday('pg-goal'); } catch { status.textContent = 'Could not save the goal.'; } } },

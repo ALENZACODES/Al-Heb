@@ -9,13 +9,21 @@ export const READER_SLOW_RATE = clipPlaybackRate('slow');
 export const READER_NORMAL_RATE = 1;
 
 let slowThisSession = false;
+let slowRate = READER_SLOW_RATE; // 0.7x from the Slower button; the playback bar can pick 0.8x or 0.6x
 /** Whether the reader is in slow mode for this session. */
 export const readerSlow = () => slowThisSession;
 /** Set slow mode for this session; returns the new value. */
-export function setReaderSlow(on) { slowThisSession = !!on; return slowThisSession; }
+export function setReaderSlow(on) { slowThisSession = !!on; slowRate = READER_SLOW_RATE; return slowThisSession; }
 
 /** The rate for a choice. */
-export const rateFor = (slow) => (slow ? READER_SLOW_RATE : READER_NORMAL_RATE);
+export const rateFor = (slow) => (slow ? slowRate : READER_NORMAL_RATE);
+/** The playback bar changed the speed of the page's clip: keep that choice for the next pages too. Returns whether the reader is now slow. */
+export function noteReaderRate(rate) {
+  const r = Number(rate);
+  if (!(r > 0)) return slowThisSession;
+  if (r < 0.999) { slowThisSession = true; slowRate = r; } else slowThisSession = false;
+  return slowThisSession;
+}
 
 /**
  * Apply the choice to a media element (before play). Sets playbackRate and defaultPlaybackRate, and asks the browser to keep

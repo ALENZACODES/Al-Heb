@@ -23,6 +23,8 @@ const pointedNorm = (s) => String(s || '').replace(CANT, '').normalize('NFC');
 const STOP = new Set('a an the to of be in on at for and or by as is it its one ones some used with from that this not no do does make made get gets thing someone something (n) n v'.split(' '));
 /** Gloss words worth finding in a line's English, cut to a stem: "coffee" -> "coff", "half" -> "half". Parenthesised notes are skipped. */
 export const glossStems = (gloss) => [...new Set(String(gloss || '').replace(/\([^)]*\)/g, ' ').toLowerCase().split(/[^a-z]+/).filter((w) => w.length >= 3 && !STOP.has(w)).map((w) => w.slice(0, w.length >= 6 ? 5 : 4)))];
+/** Everyday English a book uses for a word whose dictionary gloss is its literal sense (the books greet with shalom; the gloss is "peace"). */
+export const ALSO_SAID = { 'שָׁלוֹם': 'hello goodbye shalom' };
 const englishWords = (en) => String(en || '').toLowerCase().split(/[^a-z]+/).filter(Boolean);
 /** Same points after the first letter cluster (the prefix), ignoring a dagesh the prefix adds to the first letter (הַמֶּלֶךְ). */
 const sameAfterPrefix = (tok, word) => { const strip = (x) => x.replace(/^[\u05D0-\u05EA][\u0591-\u05C7]*/, ''); const nod = (x) => x.replace(/\u05BC/, ''); return nod(strip(tok)) === nod(word); };
@@ -52,7 +54,7 @@ export function buildExamples(root = ROOT) {
     const fn = (e.tags || []).includes('function') || e.pos === 'particle' || e.pos === 'preposition' || e.pos === 'pronoun' || e.pos === 'conjunction';
     // A line counts only when its word carries exactly the same points as the dictionary word (so שָׂבַע never takes שֶׁבַע), and,
     // for a content word, when the line's own English says the meaning (so עוֹנָה "season" never takes "the mirror doesn't answer").
-    const said = (l) => fn || glossStems(e.gloss).some((g) => englishWords(l.en).some((w) => w.startsWith(g)));
+    const said = (l) => fn || glossStems(`${e.gloss} ${ALSO_SAID[pointedNorm(e.pointed)] || ''}`).some((g) => englishWords(l.en).some((w) => w.startsWith(g)));
     const hits = new Set();
     for (const sp of spellings) {
       if (!sp.pointed) continue;

@@ -26,6 +26,7 @@
  "v1a69356b": [{"he":"יֵשׁ מִכְתָּב.","en":"There is a letter.","book":"book9","title":"Yes, No, Maybe","page":2},{"he":"יֵשׁ מִכְתָּב בַּתֵּבָה.","en":"There is a letter in the mailbox.","book":"book40","title":"The Letter","page":1}],
  "v1a7f8a15": [{"he":"לַיְלָה.","en":"Night.","book":"book15","title":"Who Is Calling?","page":1},{"he":"בַּלַּיְלָה.","en":"At night.","book":"book26","title":"My Neighbour","page":5}],
  "v1aac119c": [{"he":"הַבּוֹס אוֹמֵר: \"חָתוּל יָפֶה.\"","en":"The boss says: \"Nice cat.\"","book":"book14","title":"The Cat Works From Home","page":10},{"he":"\"כֵּן,\" אוֹמֵר הַבּוֹס. \"וְיוֹם שִׁישִׁי חֹפֶשׁ.\"","en":"\"Yes,\" says the boss. \"And Friday is off.\"","book":"book57","title":"Sunday","page":6}],
+ "v1c1c9b93": [{"he":"שָׁלוֹם, שַׁבָּת.","en":"Hello, Shabbat.","book":"book16","title":"Shabbat Table","page":12},{"he":"\"שָׁלוֹם, דָּוִד.\"","en":"\"Hello, David.\"","book":"book33","title":"The New Phone","page":8}],
  "v1c76136c": [{"he":"עֶרֶב טוֹב.","en":"A good evening.","book":"book21","title":"Red Wine, White Wine","page":12},{"he":"קָפֶה טוֹב.","en":"Good coffee.","book":"book6","title":"Coffee First","page":10}],
  "v1db249f5": [{"he":"אֶפְשָׁר בְּכַרְטִיס?","en":"Can I pay by card?","dialogue":"d-cafe","title":"At the cafe"},{"he":"אֲנִי לוֹקַחַת אֶת זֶה. בְּכַרְטִיס, בְּבַקָּשָׁה.","en":"I'll take it. By card, please.","dialogue":"d-shop","title":"Trying on a shirt"}],
  "v1de1488b": [{"he":"הִיא אָחוֹת.","en":"She is a nurse.","book":"book34","title":"Night Shift","page":3}],

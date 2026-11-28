@@ -77,7 +77,7 @@ function setup(A) {
     for (const t of tiles) {
       if (t.gone) { t.el?.remove(); continue; }
       if (!t.el) {
-        t.el = A.h('button', { type: 'button', class: 'arc-choice tg-tile-btn', style: `position:absolute;inline-size:${W - 0.25}rem;block-size:${H - 0.25}rem;padding:0;font-size:${t.text.length > 4 ? '.85' : '1.5'}rem;inset-inline-start:${t.c * W + t.layer * 0.3}rem;inset-block-start:${t.r * H - t.layer * 0.3 + 0.3}rem;z-index:${t.layer + 1}` },
+        t.el = A.h('button', { type: 'button', class: 'arc-choice tg-tile-btn', style: `position:absolute;inline-size:${W - 0.25}rem;block-size:${H - 0.25}rem;padding:0;min-inline-size:0;min-block-size:0;font-size:${t.he ? '1.6' : t.text.length > 5 ? '.72' : '.82'}rem;inset-inline-start:${t.c * W + t.layer * 0.3}rem;inset-block-start:${t.r * H - t.layer * 0.3 + 0.3}rem;z-index:${t.layer + 1}` },
           A.h('span', t.he ? { lang: 'he', dir: 'rtl' } : {}, t.text));
         t.el.addEventListener('click', () => pick(t));
         stage.append(t.el);

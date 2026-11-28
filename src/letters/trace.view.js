@@ -392,8 +392,13 @@ export function mount(root, ctx = {}) {
   // ------------------------------------------------------------ look-alike drill
   function renderDrill() {
     const sets = ((state.confusables && state.confusables.sets) || []).filter(s => s.letters.length > 1);
+    // 28 Nov 2026 review: the drill ignored the page's letter (the Shin page asked for Bet and Kaf). It now opens on the set that
+    // holds this letter and asks for this letter first; a letter with no look-alike in the list says so.
+    const mine = sets.find(s => s.letters.includes(state.letterId));
+    if (sets.length && state.drillFor !== state.letterId) { state.drillFor = state.letterId; if (mine) { state.drillSet = mine.id; state.drillQ = { target: state.letterId, answered: null, score: (state.drillQ && state.drillQ.score) || { ok: 0, n: 0 } }; } }
     if (!state.drillSet || !sets.find(s => s.id === state.drillSet)) state.drillSet = sets[0] && sets[0].id;
     const set = sets.find(s => s.id === state.drillSet);
+    if (set && !mine) { const cur = letterById(state.letterId); if (cur) body.appendChild(h('p', { class: 'muted', 'data-drill-nomine': '1' }, cur.name + ' has no look-alike in the app\u2019s list, so this drill shows the other look-alike sets.')); }
     if (!set) { body.appendChild(h('p', {}, t('trace.noSets', 'Look-alike sets are not available right now.'))); return; }
     body.appendChild(h('div', { class: 'row', role: 'group', 'aria-label': t('trace.sets', 'Look-alike sets') },
       ...sets.map(s => h('button', { dir: 'rtl', lang: 'he', 'aria-pressed': s.id === set.id, onclick: () => { state.drillSet = s.id; state.drillQ = null; render(); } },

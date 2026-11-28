@@ -14,7 +14,7 @@ export function weekModel(raw, now = Date.now(), extraRest, ret) {
   return days.map((d, i) => {
     const today = i === days.length - 1;
     const state = d.state === 'freeze' || d.state === 'travel' || d.state === 'rest' ? 'frozen' : d.state;
-    const said = state === 'done' ? 'studied'
+    const said = state === 'done' ? (d.studiedOnRest ? 'studied, on a rest day (it still counted)' : 'studied')
       : d.state === 'freeze' ? 'covered by a streak freeze' : d.state === 'travel' ? 'a travel day'
       : state === 'frozen' ? (d.restKind === 'shabbat' ? 'Shabbat, a rest day' : d.restKind === 'yomtov' ? 'a festival, a rest day' : 'a rest day')
       : today ? 'today, not counted yet' : 'no study';

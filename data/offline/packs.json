@@ -99,7 +99,7 @@
     ],
     [
      "data/pronunciation/consonants.json",
-     36860,
+     36873,
      1
     ],
     [
@@ -254,7 +254,7 @@
     ],
     [
      "src/curriculum/learn.view.js",
-     17961,
+     18124,
      1
     ],
     [
@@ -339,7 +339,7 @@
     ],
     [
      "src/curriculum/streak.js",
-     10968,
+     11181,
      1
     ],
     [
@@ -354,7 +354,7 @@
     ],
     [
      "src/home/today.js",
-     15703,
+     16174,
      1
     ],
     [
@@ -394,7 +394,7 @@
     ],
     [
      "src/lib/counts.js",
-     24341,
+     24474,
      1
     ],
     [
@@ -716,7 +716,7 @@
     ],
     [
      "src/corpus/read.view.js",
-     38921,
+     38968,
      1
     ],
     [
@@ -741,7 +741,7 @@
     ],
     [
      "src/curriculum/streak.js",
-     10968,
+     11181,
      1
     ],
     [
@@ -756,7 +756,7 @@
     ],
     [
      "src/lib/counts.js",
-     24341,
+     24474,
      1
     ],
     [
@@ -938,7 +938,7 @@
     ],
     [
      "data/pronunciation/consonants.json",
-     36860,
+     36873,
      1
     ],
     [
@@ -1088,7 +1088,7 @@
     ],
     [
      "src/curriculum/streak.js",
-     10968,
+     11181,
      1
     ],
     [
@@ -1128,7 +1128,7 @@
     ],
     [
      "src/lib/counts.js",
-     24341,
+     24474,
      1
     ],
     [

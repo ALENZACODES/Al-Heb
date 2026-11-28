@@ -26,7 +26,7 @@ export function createShelfPlayer({ makeAudio = (url) => new globalThis.Audio(ur
     error = '';
     emit();
   }
-  function play(item) {
+  function play(item, retry = false) {
     if (!item?.file) {
       currentId = item?.id ?? null;
       phase = 'error';
@@ -37,7 +37,9 @@ export function createShelfPlayer({ makeAudio = (url) => new globalThis.Audio(ur
     stop();
     currentId = item.id;
     let audio;
-    try { audio = makeAudio(base + playableFile(item.file)); } catch {
+    // A retry asks the server directly (a query the offline cache has never stored): a song that played once and then failed
+    // on replay (Yachad, review 4) points at a broken cached copy, not a missing file.
+    try { audio = makeAudio(base + playableFile(item.file) + (retry ? `?fresh=${Date.now()}` : '')); } catch {
       phase = 'error';
       error = 'This browser could not open the recording.';
       emit();
@@ -56,6 +58,7 @@ export function createShelfPlayer({ makeAudio = (url) => new globalThis.Audio(ur
     const still = () => currentId === item.id && node === audio;
     audio.addEventListener?.('error', () => {
       if (!still()) return;
+      if (!retry) { play(item, true); return; }
       phase = 'missing';
       error = 'This recording did not load. The file is missing or the server refused it.';
       emit();

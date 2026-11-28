@@ -9,7 +9,7 @@
 import { SCORES_KEY } from './scores.js';
 
 export const MIN_ACTIONS = 4;      // taps, drags or key presses inside the game
-export const MIN_MS = 12000;       // time on the game page
+export const MIN_MS = 8000;        // time on the game page
 const nat = (v) => (Number.isFinite(Number(v)) && Number(v) > 0 ? Math.floor(Number(v)) : 0);
 const obj = (v) => (v && typeof v === 'object' && !Array.isArray(v) ? v : {});
 
@@ -54,7 +54,11 @@ export function installPlayTracker({ store, isGame, win = globalThis.window, doc
     try { const yes = isGame(v.id); if (typeof yes === 'boolean') { write(yes); return; } Promise.resolve(yes).then(write).catch(() => {}); } catch { /* best effort */ }
   };
   const act = (e) => {
-    if (!visit || !e?.target?.closest?.('#main')) return;
+    if (!visit) return;
+    // A key press counts wherever focus is (it lands on the page body while a game has the keys: Pinball's flippers,
+    // the dreidel's spin, Vowel Catcher's arrows went uncounted, review 4), except typing in a field outside the game.
+    const t = e?.target, inMain = !!t?.closest?.('#main');
+    if (e?.type === 'keydown' ? (!inMain && /^(INPUT|TEXTAREA|SELECT)$/.test(t?.tagName || '')) : !inMain) return;
     if (++visit.actions === MIN_ACTIONS) { try { Promise.resolve(isGame(visit.id)).catch(() => {}); } catch { /* warm-up only */ } } // load the catalogue before the learner leaves
   };
   // pointer releases, not clicks: Vowel Catcher and the drag games are played by dragging, which makes no click (review 3)

@@ -15,6 +15,7 @@ export const BAND = Object.freeze({
   sense: 2,
   hebrew: 3,
   translit: 4,
+  soundsLike: 4.5, // another common spelling of the same transliteration: after the exact spellings, before letter matches
   prefix: 5,
   substring: 6,
 });
@@ -24,6 +25,15 @@ export const SHORT_LATIN = 4;
 export const SHORT_HEBREW = 3;
 
 const HEBREW_LETTERS = /[א-ת]/;
+
+/**
+ * A transliteration's sound outline, so common spellings of one word compare equal: sh and ch (as in French), kh and ch, tz and
+ * ts are each one sound; a run of vowels is one vowel; a doubled consonant is one; a final h after a vowel is silent.
+ */
+export function soundKey(s) {
+  return fold(s).replace(/[^a-z ]/g, '').replace(/sh|ch|kh|x/g, 'S').replace(/tz|ts/g, 'C').replace(/([aeiou])h\b/g, '$1')
+    .replace(/[aeiouy]+/g, 'V').replace(/([a-zSC])\1+/g, '$1');
+}
 
 /** Case, points, punctuation and extra whitespace folded away. Not a regular expression. */
 export function fold(s) {
@@ -70,6 +80,9 @@ export function matchBand(entry, query, translit = '') {
       if (!senses.includes(q)) keep(BAND.prefix);
     }
     if (tl && (tl === q || (!q.includes(' ') && tl.split(' ').includes(q)))) keep(BAND.translit);
+    // The same word spelled another common way (shalom, sholom, shalum, chalom) is still an exact transliteration match:
+    // the dictionary stores one tradition's spelling, and "shalom" found nothing when it held "sholom" (review 4).
+    if (tl && q.length >= 3 && (soundKey(tl) === soundKey(q) || (!q.includes(' ') && tl.split(' ').some((w) => soundKey(w) === soundKey(q))))) keep(BAND.soundsLike);
     if (tl && q.length >= 3 && (tl.startsWith(q) || tl.split(' ').some((w) => w.startsWith(q)))) keep(BAND.prefix);
     if (q.length >= 2 && gloss.includes(q)) keep(BAND.substring);
     if (tl && q.length >= 3 && tl.includes(q)) keep(BAND.substring);

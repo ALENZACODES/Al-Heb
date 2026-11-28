@@ -137,7 +137,7 @@ export function audioSupport(tradition, { browserVoiceAnyway = false, audioFree 
   const t = normalize(tradition); const L = LABELS[t];
   const base = { tradition: t, recorded: recorded > 0 };
   if (audioFree) return { ...base, deviceVoice: false, supported: 'off', line: 'Sound is off: you chose to learn without audio. Every step can be done by reading.' };
-  if (recorded > 0) return { ...base, deviceVoice: t === 'israeli', supported: 'recorded', line: `Some items have recorded audio. Anything else is read by your device voice, which is Israeli Hebrew${t === 'israeli' ? '' : `, not ${L}`}.` };
+  if (recorded > 0) return { ...base, deviceVoice: t === 'israeli', supported: 'recorded', line: `Some items have audio clips (synthetic voices). Anything else is read by your device voice, which is Israeli Hebrew${t === 'israeli' ? '' : `, not ${L}`}.` };
   if (t === 'israeli') return { ...base, deviceVoice: true, supported: 'device', line: 'Ari and Noa read every word aloud in Israeli Hebrew.' };
   if (t === 'sephardi') return { ...base, deviceVoice: true, supported: 'device', line: 'When a Sephardi clip is in the audio bank, you hear that file. If there is none, you hear the Israeli clip, and the Sephardi reading is shown in English letters.' };
   if (browserVoiceAnyway) return { ...base, deviceVoice: true, supported: 'device-mismatch', line: `No ${L} audio yet. The device voice is on: it speaks Israeli Hebrew, so it will not sound ${L}.` };

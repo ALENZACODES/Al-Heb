@@ -10,7 +10,7 @@ import { describePreview, storageNotice, wipeAllData, confirmMatches, CONFIRM_WO
 export const GOAL_SAY = {
   read: 'Home and Learn now put the synagogue reading lessons first: letters, vowels, prayers and Torah.',
   israel: 'Home and Learn now put the everyday Israel lessons first: speaking, getting around, shops and cafés.',
-  both: 'Home and Learn now offer both tracks side by side: synagogue reading and everyday Israel.',
+  both: 'Your next lessons can now come from both tracks: synagogue reading and everyday Israel.',
 };
 export function mount(root, ctx) {
   const { settings, store, t } = ctx;

@@ -88,13 +88,18 @@ test('atlas quiz: look-alike warning appears only AFTER a wrong tap on a real lo
   } finally { Math.random = orig; }
 });
 
-test('buildTiles: slash IPA is kept for Israeli and dropped (not invented) where the tradition record does not start with the same symbol', () => {
+test('buildTiles: a tile shows the Israeli slash IPA, or the reading style\'s own stored symbol where it differs (never an invented one)', () => {
   const cons = rd('../pronunciation/consonants.json');
   const ipaOf = (tradition, id) => buildTiles(data.letters, data.mnemonics, { consonants: cons, tradition }).find(t => t.id === id).ipa;
   assert.equal(ipaOf('israeli', 'resh'), 'ʁ'); assert.equal(ipaOf('israeli', 'chet'), 'χ');
-  for (const t of ['sephardi', 'ashkenazi']) for (const id of ['resh', 'ayin']) assert.equal(ipaOf(t, id), '', t + ' ' + id);
-  assert.equal(ipaOf('sephardi', 'chet'), ''); assert.equal(ipaOf('ashkenazi', 'tav'), ''); assert.equal(ipaOf('sephardi', 'tav'), 't');
-  assert.equal(ipaOf('ashkenazi', 'nun'), 'n'); assert.equal(ipaOf('ashkenazi', 'khaf'), '');
+  // 28 Nov 2026 review: five tiles read "see card" outside the Israeli setting although consonants.json holds each style's symbol.
+  assert.equal(ipaOf('sephardi', 'resh'), 'r'); assert.equal(ipaOf('ashkenazi', 'resh'), 'r ~ ʁ');
+  assert.equal(ipaOf('sephardi', 'ayin'), 'ʕ'); assert.equal(ipaOf('ashkenazi', 'ayin'), 'silent');
+  assert.equal(ipaOf('sephardi', 'chet'), 'ħ'); assert.equal(ipaOf('ashkenazi', 'chet'), 'x');
+  assert.equal(ipaOf('ashkenazi', 'tav'), 's ~ t'); assert.equal(ipaOf('sephardi', 'tav'), 't');
+  assert.equal(ipaOf('ashkenazi', 'nun'), 'n'); assert.equal(ipaOf('ashkenazi', 'khaf'), 'x');
+  // every tile has a value in every style: nothing is left as "see card"
+  for (const t of ['israeli', 'sephardi', 'ashkenazi']) for (const tile of buildTiles(data.letters, data.mnemonics, { consonants: cons, tradition: t })) assert.ok(tile.ipa, t + ' ' + tile.id);
 });
 
 test('atlas view: where the memory chain has an entry the old mnemonics story and word are hidden; variants show the parent card and a note; no chain keeps the old text', async () => {

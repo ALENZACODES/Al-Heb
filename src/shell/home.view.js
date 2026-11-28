@@ -76,7 +76,11 @@ export function mount(root, ctx) {
     if (!alive || !cur?.lessons?.length || !act?.loadState) return;
     const st = await act.loadState(ctx);
     const get = async (k) => { try { const v = await store.get(k); return v ?? null; } catch { return null; } };
-    const [firstday, onboarding, placement, dailyGoal, speak, typing, compare] = await Promise.all([get(FIRSTDAY_PROGRESS_KEY), get(ONBOARDING_KEY), get(PLACEMENT_KEY), get(DAILY_GOAL_KEY), get(PRACTICE_KEYS.speak), get(PRACTICE_KEYS.typing), get(PRACTICE_KEYS.compare)]);
+    const [firstday, onboarding, placement, dailyGoal, speak, typing, compare, vocabCards, sayItCards] = await Promise.all([get(FIRSTDAY_PROGRESS_KEY), get(ONBOARDING_KEY), get(PLACEMENT_KEY), get(DAILY_GOAL_KEY), get(PRACTICE_KEYS.speak), get(PRACTICE_KEYS.typing), get(PRACTICE_KEYS.compare), get('srs.vocab'), get('israel.cards')]);
+    const otherDue = () => { const now = Date.now(), w = reviewsDue(vocabCards, now), s = reviewsDue(sayItCards, now), out = [];
+      if (w && ctx.hasRoute?.('vocab')) out.push({ href: '#/vocab', text: `${w} dictionary ${w === 1 ? 'word' : 'words'}` });
+      if (s && ctx.hasRoute?.('israel')) out.push({ href: '#/israel', text: `${s} Say it ${s === 1 ? 'item' : 'items'}` });
+      return out; };
     if (!alive) return;
     let goalNow = dailyGoal;
     const draw = () => {
@@ -104,7 +108,7 @@ export function mount(root, ctx) {
         const first = showcase.querySelector?.('.show-btn[href="#/firstday"]'); if (first) { first.hidden = true; first.setAttribute('hidden', ''); }
         const startHere = showcase.querySelector?.('.show-start-here'); if (startHere) { startHere.hidden = true; startHere.setAttribute('hidden', ''); }
       }
-      todayHost.replaceChildren(renderToday(today, t, (m) => { goalNow = m; try { store.set(DAILY_GOAL_KEY, m); } catch { /* best effort */ } const wasOpen = todayHost.querySelector('#today-goal-box')?.open === true; draw(); const box = todayHost.querySelector('#today-goal-box'); if (box && wasOpen) box.open = true; /* the redraw makes a new, closed <details>; a hidden button cannot take focus */ const b = todayHost.querySelector(`[data-goal="${m}"]`); b?.focus?.(); goalStatus.textContent = `Daily goal: ${m} minutes.`; }, { calm: calmOn(ctx), showStreak: streakVisible(ctx) }));
+      todayHost.replaceChildren(renderToday(today, t, (m) => { goalNow = m; try { store.set(DAILY_GOAL_KEY, m); } catch { /* best effort */ } const wasOpen = todayHost.querySelector('#today-goal-box')?.open === true; draw(); const box = todayHost.querySelector('#today-goal-box'); if (box && wasOpen) box.open = true; /* the redraw makes a new, closed <details>; a hidden button cannot take focus */ const b = todayHost.querySelector(`[data-goal="${m}"]`); b?.focus?.(); goalStatus.textContent = `Daily goal: ${m} minutes.`; }, { calm: calmOn(ctx), showStreak: streakVisible(ctx), otherDue: otherDue() }));
     };
     draw();
     // backup reminder: only once there is real progress to lose, never claiming a backup happened by itself

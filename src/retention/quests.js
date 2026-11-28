@@ -202,7 +202,7 @@ export function expeditionView(rec, now = Date.now(), opt = {}) {
   let need;
   if (exp.paid) need = `Journey complete. +${EXPEDITION.gems} gems.`;
   else if (!todayStop) need = 'This journey has ended. A new one starts today.';
-  else if (todayStop.state === 'rest') need = 'A rest day. This stop is on the map; it is not a gap.';
+  else if (todayStop.state === 'rest') need = 'A rest day. This stop is on the map; it is not a gap. Study today still counts for your streak and XP; it is not one of this journey\'s study days.';
   else if (todayStop.state === 'done') need = "Today's stop is done.";
   else if (def.need.any) need = 'Today: finish a lesson or review 5 old cards.';
   else need = 'Today: finish a lesson.';

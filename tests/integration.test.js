@@ -82,7 +82,7 @@ test('store: export/import roundtrip, validation, newer schema rejected', () => 
   assert.equal(b.importData({ app: 'alef', data: {} }).ok, false);
 });
 test('i18n: t() interpolates and falls back to key', () => {
-  assert.equal(t('home.due.count', { n: 3 }), '3 cards due');
+  assert.equal(t('home.due.count', { n: 3 }), '3 lesson cards due');
   const warn = console.warn; console.warn = () => {}; assert.equal(t('home.no.such'), 'home.no.such'); console.warn = warn;
 });
 test('manifest.webmanifest is valid and icons exist', () => {

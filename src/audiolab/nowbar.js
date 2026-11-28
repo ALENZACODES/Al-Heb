@@ -18,6 +18,18 @@ const CSS = `
 .alef-nowbar .nb-prog{display:flex;gap:.5rem;align-items:center}
 .alef-nowbar progress{flex:1;block-size:.5rem;accent-color:#d4a647}
 .alef-nowbar .nb-time{font-variant-numeric:tabular-nums;font-size:.85rem}
+/* 28 Nov 2026: the bar was three rows (127px) and sat on the Previous / Next buttons. Two rows now: what + pause + stop, then speed + progress. */
+.alef-nowbar{grid-template-columns:auto minmax(0,1fr);align-items:center;gap:.25rem .5rem;padding:.35rem .55rem}
+.alef-nowbar .nb-top{grid-column:1 / -1;flex-wrap:nowrap}
+.alef-nowbar .nb-speed{grid-column:1;grid-row:2;display:flex;gap:.2rem}
+.alef-nowbar .nb-prog{grid-column:2;grid-row:2;min-inline-size:0}
+.alef-nowbar .nb-prog[hidden]{display:none}
+.alef-nowbar .nb-speed button{padding:0 .35rem;font-size:.85rem}
+/* Wide screens have an empty margin beside the reading column: the bar lives there, off the page content. */
+@media (min-width:1240px){body:not([data-route="home"]) .alef-nowbar{inset-inline:.75rem auto;margin-inline:0;inset-block-end:.75rem;inline-size:min(15.5rem,calc((100vw - 46rem) / 2 - 1.5rem));grid-template-columns:minmax(0,1fr)}
+ body:not([data-route="home"]) .alef-nowbar .nb-speed,body:not([data-route="home"]) .alef-nowbar .nb-prog{grid-column:1;grid-row:auto}
+ body:not([data-route="home"]).alef-nowbar-on main{padding-block-end:0}}
+@media (min-width:721px) and (max-width:1239.98px){.alef-nowbar{inset-block-end:.75rem}}
 body.alef-nowbar-on main{padding-block-end:calc(10rem + env(safe-area-inset-bottom))}html:has(body.alef-nowbar-on){scroll-padding-block-end:calc(10rem + env(safe-area-inset-bottom))}
 body.alef-nowbar-on .alef-now-playing{position:fixed!important;inline-size:1px!important;block-size:1px!important;overflow:hidden!important;clip-path:inset(50%)!important;padding:0!important;border:0!important}
 @media (prefers-reduced-motion:reduce){.alef-nowbar{transition:none}}
@@ -61,7 +73,12 @@ export function installNowBar({ audio, settings, doc = globalThis.document, win 
 
   /** @type {{type:'shell'|'dom', token?:number, el?:any, what:string, phase:string} | null} */
   let cur = null, timer = 0, hideTimer = 0;
-  const rateNow = () => { try { return settings?.get?.('clipRate') || 'normal'; } catch { return 'normal'; } };
+  // For a page's own <audio> (the little books) the pressed speed is the rate that element is really playing at, so the bar and the
+  // page's Slower button can never disagree (28 Nov 2026 review: Slower set 0.7x while the bar still showed 1x).
+  const rateNow = () => {
+    if (cur?.type === 'dom') { try { const r = Number(cur.el.playbackRate) || 1; let best = RATE_CHOICES[0]; for (const c of RATE_CHOICES) if (Math.abs(rateOf(c.value) - r) < Math.abs(rateOf(best.value) - r)) best = c; return best.value; } catch { /* fall through */ } }
+    try { return settings?.get?.('clipRate') || 'normal'; } catch { return 'normal'; }
+  };
   const syncSpeed = () => { for (const b of speed.querySelectorAll('button')) b.setAttribute('aria-pressed', String(b.getAttribute('data-rate') === rateNow())); };
   const mediaNow = () => {
     if (!cur) return null;
@@ -83,8 +100,20 @@ export function installNowBar({ audio, settings, doc = globalThis.document, win 
   }
   function show(next) {
     clearTimeout(hideTimer);
+    const wasHidden = bar.hidden;
     cur = next; bar.hidden = false; doc.body.classList.add('alef-nowbar-on'); syncSpeed(); draw();
+    if (wasHidden) clearOf();
     if (!timer) timer = win.setInterval ? win.setInterval(draw, tickMs) : setInterval(draw, tickMs);
+  }
+  /** When the bar appears over the button just pressed (or the row under it, such as Previous / Next), scroll the page so both sit above the bar. */
+  function clearOf() {
+    try {
+      const a = doc.activeElement; if (!a || a === doc.body || bar.contains(a) || !a.getBoundingClientRect) return;
+      const br = bar.getBoundingClientRect(), ar = a.getBoundingClientRect();
+      if (!br.height || ar.right < br.left || ar.left > br.right) return;       // the bar is beside the content, not over it
+      const over = ar.bottom + 76 - br.top;                                       // the pressed control plus one row of controls under it
+      if (over > 0 && ar.top - over > 60 && win.scrollBy) win.scrollBy({ top: over, behavior: 'auto' });
+    } catch { /* layout-free DOMs */ }
   }
   function hide() {
     cur = null; bar.hidden = true; doc.body.classList.remove('alef-nowbar-on');
@@ -108,8 +137,8 @@ export function installNowBar({ audio, settings, doc = globalThis.document, win 
     hide();
   });
   function pickRate(v) {
-    try { settings?.set?.({ clipRate: v }); } catch { /* storage blocked */ }
     const m = mediaNow();
+    if (cur?.type !== 'dom') { try { settings?.set?.({ clipRate: v }); } catch { /* storage blocked */ } }
     if (cur?.type === 'shell') { try { audio?.setClipRate?.(v); } catch { /* ignore */ } }
     else if (m?.kind === 'file') { try { m.media.playbackRate = rateOf(v); m.media.preservesPitch = true; } catch { /* ignore */ } }
     syncSpeed(); draw();
@@ -132,6 +161,7 @@ export function installNowBar({ audio, settings, doc = globalThis.document, win 
     if (cur?.type === 'dom' && cur.el === t) { cur.phase = 'playing'; draw(); return; }
     show({ type: 'dom', el: t, what: t.getAttribute?.('aria-label') || t.dataset?.label || '', phase: 'playing' });
   }, true);
+  doc.addEventListener('ratechange', (e) => { if (cur?.type === 'dom' && cur.el === e.target) syncSpeed(); }, true);
   for (const type of ['pause', 'ended', 'error', 'emptied']) {
     doc.addEventListener(type, (e) => {
       const t = e.target; if (!cur || cur.type !== 'dom' || cur.el !== t) return;

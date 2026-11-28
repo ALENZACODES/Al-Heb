@@ -76,6 +76,9 @@ export function mount(root, ctx) {
     onTried();
     const r = await playHook(ctx?.audio, hook);
     say(playLine(r, tradition, 'it')); // one shared, tradition-aware sentence (never presents the Israeli device voice as the learner's style)
+    // 28 Nov 2026 review: a sound that failed still opened Continue with no word about it. The learner is never trapped, but the gate says plainly
+    // that nothing was heard and where the sound is written out.
+    if (!r || r.source === 'none' || r.played === false || r.ok === false) { try { const g = globalThis.document?.getElementById?.('fd-gate'); if (g) g.textContent = 'No sound played on this device, so you have not heard this one yet. The card says how it sounds in English letters; you can Continue, and try Hear it again later.'; } catch { /* minimal DOMs */ } }
   } }, label);
   const wantPreview = () => ctx?.query?.part === 'preview';
 

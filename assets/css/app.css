@@ -519,11 +519,15 @@ details.draft-flag { background: none; border: 0; padding: 0; font-weight: inher
   line-height: 1.05;
 }
 .alef-continue-say {
-  font-size: 0.85rem;
-  line-height: 1.3;
-  max-inline-size: 14rem;
+  font-size: 0.95rem;
+  line-height: 1.35;
+  max-inline-size: 34rem;
 }
-.alef-plan-link { font-size: .8rem; line-height: 1.3; max-inline-size: 16rem; }
+.alef-plan-link { font-size: .9rem; line-height: 1.35; max-inline-size: 40rem; }
+/* Wide screens: the Lessons title was sized for a phone and filled a third of a desktop window. */
+@media (min-width: 900px) {
+  #main > #view-title.alef-learn-hero, .alef-learn > h1#view-title.alef-learn-hero { font-size: 4rem; line-height: 1.05; letter-spacing: -0.02em; }
+}
 .alef-first-glyph { display: block; font-family: var(--font-he); font-size: 6rem; line-height: 1.1; min-block-size: 10rem; inline-size: 100%; }
 .letter-meta { font-size: .8rem; line-height: 1.25; max-inline-size: 12rem; }
 .alef-medal,.alef-coin{display:block;flex:none;border-radius:50%;margin:0 auto .4rem;box-shadow:0 2px 6px #0b1a1240}

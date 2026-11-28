@@ -43,7 +43,7 @@ function setup(A) {
     if (cfg.confuse && LOOKALIKE[missing] && !decoys.includes(LOOKALIKE[missing])) decoys[0] = LOOKALIKE[missing];
     pickSeeded([missing, ...decoys], cfg.bubbles, rnd).forEach((ch, i) => {
       const el = A.h('button', { type: 'button', class: 'arc-choice', lang: 'he', dir: 'rtl', style: `position:absolute;border-radius:50%;width:56px;height:56px;left:${Math.round((i + 0.5) * (100 / cfg.bubbles))}%;transform:translateX(-50%);top:${H}px;font-size:1.5rem`, 'aria-label': `Bubble with ${ch}`, onclick: () => pop(ch, el) }, ch);
-      const y0 = A.quiet ? H / 2 - 28 : H + randInt(rnd, 60); el.style.top = `${y0}px`; tank.append(el); bubbles.push({ ch, el, y: y0 });
+      const y0 = A.quiet ? H / 2 - 28 : Math.max(10, H - 150) + randInt(rnd, 40); el.style.top = `${y0}px`; tank.append(el); bubbles.push({ ch, el, y: y0 });
     });
   };
   const pop = (ch, el) => {

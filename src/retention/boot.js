@@ -110,7 +110,7 @@ export function retention(ctx, g = globalThis) {
     const saved2 = load(store, t);
     const lg = leagueOn(saved2, { calm: calm() }) && saved2.league.joined ? leagueView(saved2, t) : null;
     return { month: q.month, unlocked: unlockedBy(saved2, lessonsBefore, saved2.lessonsFinished), league: lg && !lg.closed ? { rank: lg.you.rank, tier: lg.tier.en, toPromote: lg.toPromote } : null,
-      quests: q.done, chest: q.chest, xp: pay.xp, parts: pay.parts, gems: pay.gems + st.gems + q.gems, goalCrossed: pay.goalCrossed, first: pay.first, todayBefore, todayAfter: todayXp(saved, t), goal: saved.goal,
+      quests: q.done, chest: q.chest, xp: pay.xp, parts: pay.parts, gems: pay.gems + st.gems + q.gems, gemParts: { lesson: pay.gems, streak: st.gems, quests: q.gems }, goalCrossed: pay.goalCrossed, first: pay.first, todayBefore, todayAfter: todayXp(saved, t), goal: saved.goal,
       streak: { count: st.count, grew: st.grew, milestone: st.milestone }, heartsEmpty: heartsOn(saved, { calm: calm() }) && heartCount(saved, t) <= 0, calm: calm() };
   }
   /** The 3-minute lesson (?quick=1): after four parts in one sitting the day counts and XP is paid; the lesson's place is already saved. */

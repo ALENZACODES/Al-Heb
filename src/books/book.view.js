@@ -4,7 +4,7 @@
    read-along voice. Voice clips live in the audio tree (kind "book"); a
    page whose clips are not recorded yet says so instead of failing. */
 import { h, heSpan } from "../shell/ui.js";
-import { readerSlow, setReaderSlow, applyReaderRate, speedLine } from "./reader.speed.js";
+import { readerSlow, setReaderSlow, applyReaderRate, speedLine, noteReaderRate } from "./reader.speed.js";
 import { resolveBookId, shelfNumber, nextOnShelf } from "./order.js";
 import { storyCheck } from "./check.js";
 import { isAudioFree } from "../shell/audiofree.js";
@@ -159,6 +159,11 @@ export async function mount(root, ctx) {
     const at = timings ? wordAt(timings, audioEl.currentTime) : -1;
     wordSpans.forEach((x, i) => x.setAttribute("data-on", i === at ? "1" : "0"));
   };
+  // One speed, two controls: the playback bar's 0.8x / 0.7x / 0.6x changes this clip's rate, and Slower shows it (and keeps it for the next page).
+  audioEl.addEventListener("ratechange", () => {
+    const on = noteReaderRate(audioEl.playbackRate);
+    try { const b = globalThis.document?.querySelector?.(".book-slower"); if (b) { b.setAttribute("aria-pressed", String(on)); b.textContent = on ? `Slower: ${Math.round(audioEl.playbackRate * 10) / 10}×` : "Slower"; } } catch { /* minimal DOMs */ }
+  });
   audioEl.addEventListener("timeupdate", lightWord);
   audioEl.addEventListener("loadedmetadata", () => { timings = null; });
   // One shared state line for the book's voice (M-04): playing, finished, or why there is no sound.

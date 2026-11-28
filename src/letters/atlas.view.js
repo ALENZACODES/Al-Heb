@@ -26,9 +26,19 @@ const firstSymbol = (rec, t) => { const m = /\[([^\]]+)\]/.exec((rec && rec.ipa 
 /** The tile's slash IPA is the Israeli value from letters.json. Outside the Israeli setting it is kept only where the tradition's stored IPA starts with the same symbol; otherwise it is dropped (no invented value). */
 function tileIpa(ipa, rec, tradition) {
   if (!rec || !tradition || tradition === 'israeli') return ipa;
+  const text = (rec.ipa && rec.ipa[tradition]) || '';
   const mine = firstSymbol(rec, tradition);
-  return mine && mine === firstSymbol(rec, 'israeli') ? ipa : '';
+  if (/^\s*∅/.test(text)) return 'silent'; // "∅ (silent); relic [ŋ] in ...": the letter is silent, the bracket is a footnote
+  if (mine && mine === firstSymbol(rec, 'israeli')) return ipa;
+  // The reading style's own stored symbol (consonants.json), so the tile is never blank where the record has a value.
+  const two = /\[([^\]]+)\] without dagesh, \[([^\]]+)\] with dagesh/.exec(text);
+  if (two) return `${two[1]} ~ ${two[2]}`;
+  const either = /^\[([^\]]+)\] \w+ or \[([^\]]+)\]/.exec(text); // "[r] alveolar or [ʁ] uvular, by regional dialect"
+  if (either) return `${either[1]} ~ ${either[2]}`;
+  return mine || '';
 }
+/** "/x/" for a symbol; the word alone for a silent letter. */
+const ipaText = (x) => (x === 'silent' ? 'silent' : '/' + x + '/');
 
 /**
  * Build the 31 atlas tiles (pure, tested). Variants follow their parent.
@@ -193,7 +203,7 @@ export function mount(root, ctx = {}) {
     if (q) {
       const tg = tileById(q.target);
       const box = h('div', { class: 'panel' },
-        h('strong', {}, t('atlas.find', 'Find: ') + tg.name + '  '), h('span', { class: 'muted' }, tg.ipa ? '/' + tg.ipa + '/' : ''),
+        h('strong', {}, t('atlas.find', 'Find: ') + tg.name + '  '), h('span', { class: 'muted' }, tg.ipa ? ipaText(tg.ipa) : ''),
         h('div', { class: 'row' }, letterAudio(tg.nameAudioId, t('atlas.hearName', 'Hear it'))),
         q.right ? h('p', {}, t('atlas.good', 'Good! ') + tg.name, ' ', h('button', { 'data-act': 'next', onclick: () => { startQuiz(); render(); } }, t('atlas.next', 'Next'))) : null,
         q.wrong && !q.right ? h('p', { role: 'alert' }, t('atlas.notThat', 'That is ') + tileById(q.wrong).name + '.') : null,
@@ -210,7 +220,7 @@ export function mount(root, ctx = {}) {
       list.appendChild(h('li', {}, h('button', {
         class: cls, 'data-tile': tile.id, 'aria-pressed': !q && state.selected === tile.id, 'aria-label': q ? tile.glyph + ' ' + tile.name : null,
         onclick: () => onTile(tile)
-      }, h('span', { class: 'g', dir: 'rtl', lang: 'he' }, tile.glyph), h('span', { class: 'n' }, q ? '' : tile.name), h('span', { class: 's', title: !q && !tile.ipa ? tile.soundEn || null : null }, q ? '' : tile.ipa ? '/' + tile.ipa + '/' : 'see card'))));
+      }, h('span', { class: 'g', dir: 'rtl', lang: 'he' }, tile.glyph), h('span', { class: 'n' }, q ? '' : tile.name), h('span', { class: 's', title: !q && !tile.ipa ? tile.soundEn || null : null }, q ? '' : tile.ipa ? ipaText(tile.ipa) : 'see card'))));
     }
     body.appendChild(list);
     // A tile with no symbol is a choice, not a gap (25 Nov 2026 audit read Chet, Khaf, Ayin, Resh and Final Kaf as missing): the stored
@@ -228,7 +238,7 @@ export function mount(root, ctx = {}) {
         letterMeet(h, ctx, sel.id, { width: 600, class: 'at-meet' }),
         h('div', { class: 'row' },
           h('span', { class: 'big', dir: 'rtl', lang: 'he' }, sel.glyph),
-          h('div', {}, h('strong', {}, sel.name), h('br'), h('span', {}, (sel.ipa ? '/' + sel.ipa + '/  ' : '') + (m.soundAnchor || sel.soundEn || '')),
+          h('div', {}, h('strong', {}, sel.name), h('br'), h('span', {}, (sel.ipa ? ipaText(sel.ipa) + '  ' : '') + (m.soundAnchor || sel.soundEn || '')),
             sel.soundEn && sel.soundEnIsraeli && sel.soundEn !== sel.soundEnIsraeli ? h('span', { class: 'muted', text: ' In your setting: ' + sel.soundEn }) : null)),
         h('div', { class: 'row' },
           letterAudio(sel.soundAudioId, t('atlas.hearSound', 'Hear the sound')),

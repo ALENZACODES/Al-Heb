@@ -52,7 +52,8 @@ export function weeklySummary(s, now) {
   const pastDone = done.filter((x) => x.date !== today).length;
   const seconds = pastDone * GOAL_SECONDS + (proj.todaySeconds || 0);
   const frozen = strip.filter((x) => x.state === 'frozen');
-  const rest = { shabbat: frozen.filter((x) => x.restKind === 'shabbat').length, yomtov: frozen.filter((x) => x.restKind === 'yomtov').length, declared: frozen.filter((x) => !x.restKind).length, total: frozen.length };
+  const rest = { shabbat: frozen.filter((x) => x.restKind === 'shabbat').length, yomtov: frozen.filter((x) => x.restKind === 'yomtov').length, declared: frozen.filter((x) => !x.restKind).length, total: frozen.length,
+    studied: strip.filter((x) => x.studiedOnRest).length };
 
   const inWeek = (t) => { const a = daysAgo(t, today); return a !== null && a < 7; };
   const reviewed = { length: reviewCardsThisWeek(s.cards, s.vocab, now) }; // src/lib/counts.js: the number the Daily page shows too
@@ -75,7 +76,7 @@ export function weeklySummary(s, now) {
 /** One plain sentence per fact, the wording the screen uses. */
 export function weeklySentences(w) {
   const n = (k, one, many) => `${k} ${k === 1 ? one : many}`;
-  const rest = w.rest.total ? `${n(w.rest.total, 'rest day', 'rest days')} honored (${[w.rest.shabbat && `${w.rest.shabbat} Shabbat`, w.rest.yomtov && `${w.rest.yomtov} Yom Tov`, w.rest.declared && `${w.rest.declared} you declared`].filter(Boolean).join(', ')})` : 'no rest days in this week';
+  const rest = w.rest.total ? `${n(w.rest.total, 'rest day', 'rest days')} honored (${[w.rest.shabbat && `${w.rest.shabbat} Shabbat`, w.rest.yomtov && `${w.rest.yomtov} Yom Tov`, w.rest.declared && `${w.rest.declared} you declared`].filter(Boolean).join(', ')})` : w.rest.studied ? `${n(w.rest.studied, 'rest day', 'rest days')} this week, and you studied anyway: it counted` : 'no rest days in this week';
   return {
     minutes: `At least ${n(w.minutesAtLeast, 'minute', 'minutes')} engaged`,
     days: `${w.engagedDays} of 7 days reached the daily goal`,

@@ -101,7 +101,8 @@ export function weekDays(streakRaw, ret, now = Date.now(), extraRest) {
       else if (d.date === today && isRestDay(d.date, mode)) state = 'rest';
     }
     const what = { done: 'done', freeze: 'covered by a streak freeze', travel: 'travel day', rest: 'rest day', today: 'today, not done yet', open: 'no lesson' }[state];
-    return { date: d.date, weekday: d.weekday, state, restKind: d.restKind || null, label: `${WEEKDAY[d.weekday]}: ${what}` };
+    return { date: d.date, weekday: d.weekday, state, restKind: d.restKind || null, studiedOnRest: d.studiedOnRest || null,
+      label: `${WEEKDAY[d.weekday]}: ${what}${state === 'done' && d.studiedOnRest ? ' (a rest day: your study still counted)' : ''}` };
   });
 }
 

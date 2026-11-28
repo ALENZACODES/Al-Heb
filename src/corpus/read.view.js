@@ -62,7 +62,7 @@ const CSS = `
 .crp-lg{font-size:1.6em;line-height:1}
 .crp-lgnote{font-size:.9rem;margin:.25rem 0}
 .crp-tr{font-size:.95rem;color:var(--muted,#5a6656);direction:ltr}
-.crp-gl{font-size:.85rem;color:var(--muted,#5a6656);direction:ltr;max-inline-size:9rem}
+.crp-gl{font-size:.85rem;color:var(--muted,#5a6656);direction:ltr;max-inline-size:9rem}p.crp-gl{max-inline-size:40rem;font-size:.9rem}
 .crp-en{margin-block:.2rem 1rem;font-style:italic;direction:ltr}
 .crp-en-big{font-size:1.3rem;line-height:1.5;font-style:normal}
 .crp-letters{display:flex;gap:.4rem;flex-wrap:wrap;margin-block:.5rem}

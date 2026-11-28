@@ -54,11 +54,11 @@ test('render: every href is a real route, one primary button with text, due/stre
   const m = T.buildToday(base({ completedIds: ['r01'], dueCount: 6, streak: { count: 2, activeToday: false } }));
   const R = T.renderToday(m, t);
   for (const h of hrefs(R)) if (h !== '#/festivals') assert.ok(matchRoute(h).route, h); // /festivals: route not in router.js yet (main adds it); hasRoute hides the link until then
-  assert.match(R.textContent, /6 cards due/); assert.match(R.textContent, /2 days\. Please keep your streak going\. You're doing awesome! Study for 5 minutes today to add a day/);
+  assert.match(R.textContent, /6 lesson cards due/); assert.match(R.textContent, /2 days\. Please keep your streak going\. You're doing awesome! Study for 5 minutes today to add a day/);
   const primary = R.queryAll('a.btn'); assert.equal(primary.length, 1); assert.match(primary[0].textContent, /^Continue: /);
   assert.equal(R.attrs['aria-labelledby'], 'h-today'); assert.equal(R.queryAll('h2').length, 1);
-  const one = T.renderToday(T.buildToday(base({ completedIds: ['r01'], dueCount: 1 })), t); assert.match(one.textContent, /1 card due/);
-  const fresh = T.renderToday(T.buildToday(base()), t); assert.match(fresh.textContent, /No reviews due/); assert.equal(fresh.querySelector('#today-streak'), null, 'brand-new learner: no streak line');
+  const one = T.renderToday(T.buildToday(base({ completedIds: ['r01'], dueCount: 1 })), t); assert.match(one.textContent, /1 lesson card due/);
+  const fresh = T.renderToday(T.buildToday(base()), t); assert.match(fresh.textContent, /No lesson reviews due/); assert.equal(fresh.querySelector('#today-streak'), null, 'brand-new learner: no streak line');
   assert.equal(fresh.queryAll('a.btn')[0].attrs.href, '#/firstday');
 });
 
@@ -123,7 +123,7 @@ test('home view: with progress it shows due count, streak and the next lesson', 
   mount(root, ctx); await waitFor(() => root.querySelector('#today-continue'));
   const c = root.querySelector('#today-continue'); assert.equal(c.attrs.href, '#/learn?lesson=r02');
   assert.match(root.querySelector('#today-streak').textContent, /2 days/);
-  assert.match(root.querySelector('#today-due').textContent, /No reviews due/);
+  assert.match(root.querySelector('#today-due').textContent, /No lesson reviews due/);
 });
 test('first-run Today card never points at a locked placed lesson (r13 case) and says the plain lesson id only when open', () => {
   const locked = lessons.find((l) => l.track === 'read' && l.prerequisites.length && l.id !== 'r01');

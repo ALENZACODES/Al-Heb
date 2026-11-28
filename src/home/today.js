@@ -143,6 +143,10 @@ export function renderToday(today, t, onGoal, opts = {}) {
     why ? h('p', { class: 'today-why' }, why) : null,
     today.primary ? h('p', { class: 'today-main' }, h('a', { class: 'btn', id: 'today-continue', href: today.primary.href, style: 'display:block;text-align:center;font-size:1.15rem;padding:0.9rem 1rem;font-weight:700' }, today.primary.label)) : null,
     h('p', { id: 'today-due', class: 'muted' }, today.due.count === 0 ? dueText : (today.primary?.kind === 'review' ? dueText : '')),
+    // The other review decks, named, so one number is never read as all of them (review 4: Home's count "never moved" while
+    // Dictionary and Say it cards were being reviewed: they are separate decks, and Home showed only lesson cards).
+    Array.isArray(opts.otherDue) && opts.otherDue.length ? h('p', { id: 'today-due-other', class: 'muted' }, 'Also due: ',
+      ...opts.otherDue.flatMap((d, i) => [i ? ', ' : '', h('a', { href: d.href }, d.text)]), '.') : null,
     !calm && (sec.length || moreLinks.length) ? h('p', { id: 'today-more', class: 'today-secondary' }, ...[...sec, ...moreLinks.map((m) => h('a', { href: m.href }, m.label))].flatMap((n, i) => [i ? ' \u00b7 ' : '', n])) : null,
     // the streak line stays hidden until there is something to say: a streak of 2 or more days (or a paused one that reached 2)
     showStreak && !today.welcomeBack && (today.streak.count >= 2 || today.streak.best >= 2 || (today.streak.count === 1 && !today.streak.activeToday && !today.streak.restToday)) ? h('p', { id: 'today-streak', role: 'status', 'aria-live': 'polite' }, h('span', { class: 'muted' }, t('home.streak') + ': '), ...streakText) : null,

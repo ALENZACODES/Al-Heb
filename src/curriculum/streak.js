@@ -173,7 +173,9 @@ export function weekStrip(raw, now, extraRest) {
     const d = addDaysISO(today, -i);
     const done = rec.doneDates.includes(d) || (rec.v === undefined && rec.last && dayNum(d) <= dayNum(rec.last) && dayNum(d) > dayNum(rec.last) - rec.count && d <= today);
     const frozen = !done && isFrozen(rec, d, extra);
-    out.push({ date: d, weekday: weekday(parseISO(d)), state: done ? "done" : frozen ? "frozen" : d === today ? "today" : "open", restKind: frozen ? restKind(d, rec.mode) : null });
+    out.push({ date: d, weekday: weekday(parseISO(d)), state: done ? "done" : frozen ? "frozen" : d === today ? "today" : "open", restKind: frozen ? restKind(d, rec.mode) : null,
+      // a rest day the learner studied on anyway: it counts as studied, and screens can still say it was a rest day
+      studiedOnRest: done && isRestDay(d, rec.mode) ? (restKind(d, rec.mode) || 'rest') : null });
   }
   return out;
 }

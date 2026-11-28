@@ -64,7 +64,7 @@
 {"id":"pe-plain","letter":"pe","he":"פ","name":"Fe","sound":{"israeli":"f","sephardi":"f","ashkenazi":"f"},"clip":"fe-sound"},
 {"id":"tsadi","letter":"tsadi","he":"צ","name":"Tsadi","sound":{"israeli":"ts","sephardi":"ts","ashkenazi":"ts"},"clip":"tsadi-sound"},
 {"id":"qof","letter":"qof","he":"ק","name":"Qof","sound":{"israeli":"k","sephardi":"k","ashkenazi":"k"},"clip":"qof-sound"},
-{"id":"resh","letter":"resh","he":"ר","name":"Resh","sound":{"israeli":"ʁ","sephardi":"resh","ashkenazi":"resh"},"clip":"resh-sound"},
+{"id":"resh","letter":"resh","he":"ר","name":"Resh","sound":{"israeli":"ʁ","sephardi":"r","ashkenazi":"r"},"clip":"resh-sound"},
 {"id":"shin-shin","letter":"shin","he":"שׁ","name":"Shin","sound":{"israeli":"ʃ","sephardi":"ʃ","ashkenazi":"ʃ"},"clip":"shin-sound"},
 {"id":"shin-sin","letter":"shin","he":"שׂ","name":"Sin","sound":{"israeli":"s","sephardi":"s","ashkenazi":"s"},"clip":"sin-sound"},
 {"id":"tav-dagesh","letter":"tav","he":"תּ","name":"Tav","sound":{"israeli":"t","sephardi":"t","ashkenazi":"t"},"clip":"tav-sound"},

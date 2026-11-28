@@ -143,7 +143,7 @@ export function questsNode(R) {
     if (next === sig) return; sig = next;
     wrap.hidden = !v.on;
     setKids(wrap, h('h2', { id: 'ret-quests-h' }, "Today's Quests"),
-      v.rest ? h('p', {}, 'A rest day. No quests today.')
+      v.rest ? h('p', {}, 'A rest day: no quests, and your streak is safe. Anything you study today still counts for your streak, XP and progress.')
         : h('ul', { class: 'ret-quest-list' }, ...v.items.map((q) => h('li', { class: q.done ? 'is-done' : '' },
           h('span', { class: 'ret-quest-mark', 'aria-hidden': 'true' }, q.done ? '\u2713' : ''), h('span', { class: 'ret-quest-text' }, q.text),
           h('span', { class: 'ret-quest-count', 'data-p': q.p, 'data-n': q.n }, q.done ? 'Done, +5 gems' : `${q.p} of ${q.n}`)))),
@@ -337,7 +337,11 @@ export function showReward(R, out, g = globalThis) {
     for (const q of out.quests || []) lines.push(`Quest done: ${q}`);
     if (out.chest) lines.push('All three quests done!');
     if (out.month) lines.push(`${out.month} complete!`);
-    if (out.gems) lines.push(`+${gemsText(out.gems)}`);
+    // Where the gems came from, so two perfect lessons paying differently explains itself (review 4: +2 one time, +12 the next).
+    if (out.gems) {
+      const gp = out.gemParts || {}, why = [gp.lesson ? `${gp.lesson} for the lesson and daily goal` : '', gp.streak ? `${gp.streak} for your streak` : '', gp.quests ? `${gp.quests} for quests and journeys` : ''].filter(Boolean);
+      lines.push(`+${gemsText(out.gems)}${why.length ? `: ${why.join(', ')}` : ''}`);
+    }
     if (out.league) lines.push(`Practice league: number ${out.league.rank} of 30 in ${out.league.tier}.${out.league.toPromote ? ` ${out.league.toPromote} XP to the move-up line.` : ' You are above the move-up line.'}`);
     const sentence = `Lesson finished. ${out.xp} XP.${out.goalCrossed ? ' Daily goal reached.' : ''}${out.streak.grew ? ` ${out.streak.count}-day streak.` : ''}${out.gems ? ` ${gemsText(out.gems)} earned.` : ''}`;
     const panel = h('section', { class: 'ret-reward alef-retention', 'aria-label': 'Your reward' },

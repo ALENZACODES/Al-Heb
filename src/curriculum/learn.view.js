@@ -136,9 +136,9 @@ function mountMap(root, ctx) {
             // the button says so — the lesson itself is completed by its
             // quick check, after looking through it.
             // Keyboard and screen readers: the same two presses on a real button (the first says what opens the lesson, the second unlocks it).
-            state === "locked" ? (() => { let armed = false; const b = el("button", { type: "button", class: "alef-btn alef-btn-secondary alef-unlock", "aria-label": `Locked: ${l.title}. Press twice to unlock.`,
-              onclick: (e) => { if (armed) { unlock(); return; } armed = true; showNote(e?.currentTarget?.closest?.("li") || e?.currentTarget?.parent); b.replaceChildren("Press again to unlock"); } }, "Locked"); return b; })() : null,
-            state === "locked" ? el("p", { class: "alef-locked-note", hidden: "", role: "note" }, (() => { const need = l.prerequisites.filter((p) => !done.has(p)).map((p) => `“${lessons.find((x) => x.id === p)?.title || p}”`); return (need.length ? `Opens after you finish ${need.join(" and ")}.` : "Opens after the lesson before it.") + " Or double tap it to open it now."; })()) : null,
+            state === "locked" ? (() => { let armed = false; const b = el("button", { type: "button", class: "alef-btn alef-btn-secondary alef-unlock", "aria-label": `Comes later in the order: ${l.title}. Press twice to open it early.`,
+              onclick: (e) => { if (armed) { unlock(); return; } armed = true; showNote(e?.currentTarget?.closest?.("li") || e?.currentTarget?.parent); b.replaceChildren("Press again to open it early"); } }, "Later in the order"); return b; })() : null,
+            state === "locked" ? el("p", { class: "alef-locked-note", hidden: "", role: "note" }, (() => { const need = l.prerequisites.filter((p) => !done.has(p)).map((p) => `“${lessons.find((x) => x.id === p)?.title || p}”`); return (need.length ? `The course order puts this after ${need.join(" and ")}.` : "The course order puts this after the lesson before it.") + " The order is a guide, not a lock: press again to open it now."; })()) : null,
             // C-01: "Test out" is a real short test (the lesson's quick check, same pass mark), not a free checkmark.
             state === "available" ? el("button", { type: "button", class: "alef-btn alef-btn-secondary alef-testout", "aria-label": `${tr(ctx, "learn.markDone", "Test out")}: take a short test to skip ${l.title}. Pass it and the lesson counts as done.`,
               onclick: () => ctx?.route?.(`/learn?lesson=${l.id}&testout=1`) }, tr(ctx, "learn.markDone", "Test out")) : null);
@@ -172,7 +172,7 @@ function mountMap(root, ctx) {
       el("div", { class: "alef-continue-body" },
         el("p", { class: "alef-continue-say" }, el("strong", {}, "Rimon: "), say),
         next ? el("p", { class: "alef-continue-next" }, el("span", { class: "muted" }, "Next: "), el("strong", {}, next.title)) : null,
-        el("div", { class: "alef-continue-bar", role: "progressbar", "aria-valuemin": "0", "aria-valuemax": String(total), "aria-valuenow": String(doneCount), "aria-label": "Lessons done in this track" },
+        el("div", { class: "alef-continue-bar", role: "progressbar", "aria-valuemin": "0", "aria-valuemax": String(total), "aria-valuenow": String(doneCount), "aria-valuetext": `${doneCount} of ${total} lessons done`, "aria-label": "Lessons done in this track" },
           el("span", { style: `inline-size:${pct}%` })),
         next ? el("button", { type: "button", class: "alef-continue-go", onclick: () => ctx?.route?.(`/learn?lesson=${next.id}`) }, doneCount === 0 ? "Start your first lesson" : "Continue") : null));
   }

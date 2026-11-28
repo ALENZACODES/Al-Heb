@@ -1,0 +1,4482 @@
+[
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-v82e55dc0/Kore.mp3",
+"orig": "audio/f/israeli/dictionary/dict-v82e55dc0.mp3",
+"take": "Kore",
+"want": "הִתְאַמֵּן",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-v82e55dc0/Aoede.mp3",
+"orig": "audio/f/israeli/dictionary/dict-v82e55dc0.mp3",
+"take": "Aoede",
+"want": "הִתְאַמֵּן",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-v82e55dc0/Leda.mp3",
+"orig": "audio/f/israeli/dictionary/dict-v82e55dc0.mp3",
+"take": "Leda",
+"want": "הִתְאַמֵּן",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-v82e55dc0/Zephyr.mp3",
+"orig": "audio/f/israeli/dictionary/dict-v82e55dc0.mp3",
+"take": "Zephyr",
+"want": "הִתְאַמֵּן",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-vfcc8089e/Kore.mp3",
+"orig": "audio/f/israeli/dictionary/dict-vfcc8089e.mp3",
+"take": "Kore",
+"want": "הִשְׁתַּגֵּעַ",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-vfcc8089e/Aoede.mp3",
+"orig": "audio/f/israeli/dictionary/dict-vfcc8089e.mp3",
+"take": "Aoede",
+"want": "הִשְׁתַּגֵּעַ",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-vfcc8089e/Leda.mp3",
+"orig": "audio/f/israeli/dictionary/dict-vfcc8089e.mp3",
+"take": "Leda",
+"want": "הִשְׁתַּגֵּעַ",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-vfcc8089e/Zephyr.mp3",
+"orig": "audio/f/israeli/dictionary/dict-vfcc8089e.mp3",
+"take": "Zephyr",
+"want": "הִשְׁתַּגֵּעַ",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-va3aa6653/Kore.mp3",
+"orig": "audio/f/israeli/dictionary/dict-va3aa6653.mp3",
+"take": "Kore",
+"want": "נִגְרַם",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-va3aa6653/Aoede.mp3",
+"orig": "audio/f/israeli/dictionary/dict-va3aa6653.mp3",
+"take": "Aoede",
+"want": "נִגְרַם",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-va3aa6653/Leda.mp3",
+"orig": "audio/f/israeli/dictionary/dict-va3aa6653.mp3",
+"take": "Leda",
+"want": "נִגְרַם",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-va3aa6653/Zephyr.mp3",
+"orig": "audio/f/israeli/dictionary/dict-va3aa6653.mp3",
+"take": "Zephyr",
+"want": "נִגְרַם",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-vf95b134a/Kore.mp3",
+"orig": "audio/f/israeli/dictionary/dict-vf95b134a.mp3",
+"take": "Kore",
+"want": "הֻצַּע",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-vf95b134a/Aoede.mp3",
+"orig": "audio/f/israeli/dictionary/dict-vf95b134a.mp3",
+"take": "Aoede",
+"want": "הֻצַּע",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-vf95b134a/Leda.mp3",
+"orig": "audio/f/israeli/dictionary/dict-vf95b134a.mp3",
+"take": "Leda",
+"want": "הֻצַּע",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-vf95b134a/Zephyr.mp3",
+"orig": "audio/f/israeli/dictionary/dict-vf95b134a.mp3",
+"take": "Zephyr",
+"want": "הֻצַּע",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-ve3f46a3d/Kore.mp3",
+"orig": "audio/f/israeli/dictionary/dict-ve3f46a3d.mp3",
+"take": "Kore",
+"want": "בּוֹדֵד",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-ve3f46a3d/Aoede.mp3",
+"orig": "audio/f/israeli/dictionary/dict-ve3f46a3d.mp3",
+"take": "Aoede",
+"want": "בּוֹדֵד",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-ve3f46a3d/Leda.mp3",
+"orig": "audio/f/israeli/dictionary/dict-ve3f46a3d.mp3",
+"take": "Leda",
+"want": "בּוֹדֵד",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-ve3f46a3d/Zephyr.mp3",
+"orig": "audio/f/israeli/dictionary/dict-ve3f46a3d.mp3",
+"take": "Zephyr",
+"want": "בּוֹדֵד",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-v87190921/Kore.mp3",
+"orig": "audio/f/israeli/dictionary/dict-v87190921.mp3",
+"take": "Kore",
+"want": "רֵעַ",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-v87190921/Aoede.mp3",
+"orig": "audio/f/israeli/dictionary/dict-v87190921.mp3",
+"take": "Aoede",
+"want": "רֵעַ",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-v87190921/Leda.mp3",
+"orig": "audio/f/israeli/dictionary/dict-v87190921.mp3",
+"take": "Leda",
+"want": "רֵעַ",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-v87190921/Zephyr.mp3",
+"orig": "audio/f/israeli/dictionary/dict-v87190921.mp3",
+"take": "Zephyr",
+"want": "רֵעַ",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-v82b6a61b/Kore.mp3",
+"orig": "audio/f/israeli/dictionary/dict-v82b6a61b.mp3",
+"take": "Kore",
+"want": "נַחַת",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-v82b6a61b/Aoede.mp3",
+"orig": "audio/f/israeli/dictionary/dict-v82b6a61b.mp3",
+"take": "Aoede",
+"want": "נַחַת",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-v82b6a61b/Leda.mp3",
+"orig": "audio/f/israeli/dictionary/dict-v82b6a61b.mp3",
+"take": "Leda",
+"want": "נַחַת",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-v82b6a61b/Zephyr.mp3",
+"orig": "audio/f/israeli/dictionary/dict-v82b6a61b.mp3",
+"take": "Zephyr",
+"want": "נַחַת",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-v9419a5ba/Kore.mp3",
+"orig": "audio/f/israeli/dictionary/dict-v9419a5ba.mp3",
+"take": "Kore",
+"want": "הוּשַׁב",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-v9419a5ba/Aoede.mp3",
+"orig": "audio/f/israeli/dictionary/dict-v9419a5ba.mp3",
+"take": "Aoede",
+"want": "הוּשַׁב",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-v9419a5ba/Leda.mp3",
+"orig": "audio/f/israeli/dictionary/dict-v9419a5ba.mp3",
+"take": "Leda",
+"want": "הוּשַׁב",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-v9419a5ba/Zephyr.mp3",
+"orig": "audio/f/israeli/dictionary/dict-v9419a5ba.mp3",
+"take": "Zephyr",
+"want": "הוּשַׁב",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-vf913aeb1/Kore.mp3",
+"orig": "audio/f/israeli/dictionary/dict-vf913aeb1.mp3",
+"take": "Kore",
+"want": "הִשִּׂיא",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-vf913aeb1/Aoede.mp3",
+"orig": "audio/f/israeli/dictionary/dict-vf913aeb1.mp3",
+"take": "Aoede",
+"want": "הִשִּׂיא",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-vf913aeb1/Leda.mp3",
+"orig": "audio/f/israeli/dictionary/dict-vf913aeb1.mp3",
+"take": "Leda",
+"want": "הִשִּׂיא",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-vf913aeb1/Zephyr.mp3",
+"orig": "audio/f/israeli/dictionary/dict-vf913aeb1.mp3",
+"take": "Zephyr",
+"want": "הִשִּׂיא",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-vaa5610dc/Kore.mp3",
+"orig": "audio/f/israeli/dictionary/dict-vaa5610dc.mp3",
+"take": "Kore",
+"want": "קָשׁוּחַ",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-vaa5610dc/Aoede.mp3",
+"orig": "audio/f/israeli/dictionary/dict-vaa5610dc.mp3",
+"take": "Aoede",
+"want": "קָשׁוּחַ",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-vaa5610dc/Leda.mp3",
+"orig": "audio/f/israeli/dictionary/dict-vaa5610dc.mp3",
+"take": "Leda",
+"want": "קָשׁוּחַ",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-vaa5610dc/Zephyr.mp3",
+"orig": "audio/f/israeli/dictionary/dict-vaa5610dc.mp3",
+"take": "Zephyr",
+"want": "קָשׁוּחַ",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-v3619f34c/Kore.mp3",
+"orig": "audio/f/israeli/dictionary/dict-v3619f34c.mp3",
+"take": "Kore",
+"want": "תִּשְׁעִים",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-v3619f34c/Aoede.mp3",
+"orig": "audio/f/israeli/dictionary/dict-v3619f34c.mp3",
+"take": "Aoede",
+"want": "תִּשְׁעִים",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-v3619f34c/Leda.mp3",
+"orig": "audio/f/israeli/dictionary/dict-v3619f34c.mp3",
+"take": "Leda",
+"want": "תִּשְׁעִים",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-v3619f34c/Zephyr.mp3",
+"orig": "audio/f/israeli/dictionary/dict-v3619f34c.mp3",
+"take": "Zephyr",
+"want": "תִּשְׁעִים",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-v348ab953/Kore.mp3",
+"orig": "audio/f/israeli/dictionary/dict-v348ab953.mp3",
+"take": "Kore",
+"want": "חִסָּכוֹן",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-v348ab953/Aoede.mp3",
+"orig": "audio/f/israeli/dictionary/dict-v348ab953.mp3",
+"take": "Aoede",
+"want": "חִסָּכוֹן",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-v348ab953/Leda.mp3",
+"orig": "audio/f/israeli/dictionary/dict-v348ab953.mp3",
+"take": "Leda",
+"want": "חִסָּכוֹן",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-v348ab953/Zephyr.mp3",
+"orig": "audio/f/israeli/dictionary/dict-v348ab953.mp3",
+"take": "Zephyr",
+"want": "חִסָּכוֹן",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-ve9a4a8b2/Kore.mp3",
+"orig": "audio/f/israeli/dictionary/dict-ve9a4a8b2.mp3",
+"take": "Kore",
+"want": "מַתֶּכֶת",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-ve9a4a8b2/Aoede.mp3",
+"orig": "audio/f/israeli/dictionary/dict-ve9a4a8b2.mp3",
+"take": "Aoede",
+"want": "מַתֶּכֶת",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-ve9a4a8b2/Leda.mp3",
+"orig": "audio/f/israeli/dictionary/dict-ve9a4a8b2.mp3",
+"take": "Leda",
+"want": "מַתֶּכֶת",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-ve9a4a8b2/Zephyr.mp3",
+"orig": "audio/f/israeli/dictionary/dict-ve9a4a8b2.mp3",
+"take": "Zephyr",
+"want": "מַתֶּכֶת",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-v952ee831/Kore.mp3",
+"orig": "audio/f/israeli/dictionary/dict-v952ee831.mp3",
+"take": "Kore",
+"want": "אֻבְחַן",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-v952ee831/Aoede.mp3",
+"orig": "audio/f/israeli/dictionary/dict-v952ee831.mp3",
+"take": "Aoede",
+"want": "אֻבְחַן",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-v952ee831/Leda.mp3",
+"orig": "audio/f/israeli/dictionary/dict-v952ee831.mp3",
+"take": "Leda",
+"want": "אֻבְחַן",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-v952ee831/Zephyr.mp3",
+"orig": "audio/f/israeli/dictionary/dict-v952ee831.mp3",
+"take": "Zephyr",
+"want": "אֻבְחַן",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-v89d364c4/Kore.mp3",
+"orig": "audio/f/israeli/dictionary/dict-v89d364c4.mp3",
+"take": "Kore",
+"want": "רְפָאִים",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-v89d364c4/Aoede.mp3",
+"orig": "audio/f/israeli/dictionary/dict-v89d364c4.mp3",
+"take": "Aoede",
+"want": "רְפָאִים",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-v89d364c4/Leda.mp3",
+"orig": "audio/f/israeli/dictionary/dict-v89d364c4.mp3",
+"take": "Leda",
+"want": "רְפָאִים",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-v89d364c4/Zephyr.mp3",
+"orig": "audio/f/israeli/dictionary/dict-v89d364c4.mp3",
+"take": "Zephyr",
+"want": "רְפָאִים",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-vb64da690/Kore.mp3",
+"orig": "audio/f/israeli/dictionary/dict-vb64da690.mp3",
+"take": "Kore",
+"want": "תַּפְרִיט",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-vb64da690/Aoede.mp3",
+"orig": "audio/f/israeli/dictionary/dict-vb64da690.mp3",
+"take": "Aoede",
+"want": "תַּפְרִיט",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-vb64da690/Leda.mp3",
+"orig": "audio/f/israeli/dictionary/dict-vb64da690.mp3",
+"take": "Leda",
+"want": "תַּפְרִיט",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-vb64da690/Zephyr.mp3",
+"orig": "audio/f/israeli/dictionary/dict-vb64da690.mp3",
+"take": "Zephyr",
+"want": "תַּפְרִיט",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-vb1f16bd9/Kore.mp3",
+"orig": "audio/f/israeli/dictionary/dict-vb1f16bd9.mp3",
+"take": "Kore",
+"want": "טִגֵּן",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-vb1f16bd9/Aoede.mp3",
+"orig": "audio/f/israeli/dictionary/dict-vb1f16bd9.mp3",
+"take": "Aoede",
+"want": "טִגֵּן",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-vb1f16bd9/Leda.mp3",
+"orig": "audio/f/israeli/dictionary/dict-vb1f16bd9.mp3",
+"take": "Leda",
+"want": "טִגֵּן",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-vb1f16bd9/Zephyr.mp3",
+"orig": "audio/f/israeli/dictionary/dict-vb1f16bd9.mp3",
+"take": "Zephyr",
+"want": "טִגֵּן",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-ve770384d/Kore.mp3",
+"orig": "audio/f/israeli/dictionary/dict-ve770384d.mp3",
+"take": "Kore",
+"want": "דּוּכִיפַת",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-ve770384d/Aoede.mp3",
+"orig": "audio/f/israeli/dictionary/dict-ve770384d.mp3",
+"take": "Aoede",
+"want": "דּוּכִיפַת",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-ve770384d/Leda.mp3",
+"orig": "audio/f/israeli/dictionary/dict-ve770384d.mp3",
+"take": "Leda",
+"want": "דּוּכִיפַת",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-ve770384d/Zephyr.mp3",
+"orig": "audio/f/israeli/dictionary/dict-ve770384d.mp3",
+"take": "Zephyr",
+"want": "דּוּכִיפַת",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-v353cc18a/Kore.mp3",
+"orig": "audio/f/israeli/dictionary/dict-v353cc18a.mp3",
+"take": "Kore",
+"want": "עַרְעָר",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-v353cc18a/Aoede.mp3",
+"orig": "audio/f/israeli/dictionary/dict-v353cc18a.mp3",
+"take": "Aoede",
+"want": "עַרְעָר",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-v353cc18a/Leda.mp3",
+"orig": "audio/f/israeli/dictionary/dict-v353cc18a.mp3",
+"take": "Leda",
+"want": "עַרְעָר",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-v353cc18a/Zephyr.mp3",
+"orig": "audio/f/israeli/dictionary/dict-v353cc18a.mp3",
+"take": "Zephyr",
+"want": "עַרְעָר",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-v1988b12c/Kore.mp3",
+"orig": "audio/f/israeli/dictionary/dict-v1988b12c.mp3",
+"take": "Kore",
+"want": "גָּדָה",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-v1988b12c/Aoede.mp3",
+"orig": "audio/f/israeli/dictionary/dict-v1988b12c.mp3",
+"take": "Aoede",
+"want": "גָּדָה",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-v1988b12c/Leda.mp3",
+"orig": "audio/f/israeli/dictionary/dict-v1988b12c.mp3",
+"take": "Leda",
+"want": "גָּדָה",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-v1988b12c/Zephyr.mp3",
+"orig": "audio/f/israeli/dictionary/dict-v1988b12c.mp3",
+"take": "Zephyr",
+"want": "גָּדָה",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-v81268fe5/Kore.mp3",
+"orig": "audio/f/israeli/dictionary/dict-v81268fe5.mp3",
+"take": "Kore",
+"want": "אֲסִירָה",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-v81268fe5/Aoede.mp3",
+"orig": "audio/f/israeli/dictionary/dict-v81268fe5.mp3",
+"take": "Aoede",
+"want": "אֲסִירָה",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-v81268fe5/Leda.mp3",
+"orig": "audio/f/israeli/dictionary/dict-v81268fe5.mp3",
+"take": "Leda",
+"want": "אֲסִירָה",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-v81268fe5/Zephyr.mp3",
+"orig": "audio/f/israeli/dictionary/dict-v81268fe5.mp3",
+"take": "Zephyr",
+"want": "אֲסִירָה",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-v592b2a49/Kore.mp3",
+"orig": "audio/f/israeli/dictionary/dict-v592b2a49.mp3",
+"take": "Kore",
+"want": "מָסׇרְתִּי",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-v592b2a49/Aoede.mp3",
+"orig": "audio/f/israeli/dictionary/dict-v592b2a49.mp3",
+"take": "Aoede",
+"want": "מָסׇרְתִּי",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-v592b2a49/Leda.mp3",
+"orig": "audio/f/israeli/dictionary/dict-v592b2a49.mp3",
+"take": "Leda",
+"want": "מָסׇרְתִּי",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-v592b2a49/Zephyr.mp3",
+"orig": "audio/f/israeli/dictionary/dict-v592b2a49.mp3",
+"take": "Zephyr",
+"want": "מָסׇרְתִּי",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-v27c64c86/Kore.mp3",
+"orig": "audio/f/israeli/dictionary/dict-v27c64c86.mp3",
+"take": "Kore",
+"want": "חֲזִיר",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-v27c64c86/Aoede.mp3",
+"orig": "audio/f/israeli/dictionary/dict-v27c64c86.mp3",
+"take": "Aoede",
+"want": "חֲזִיר",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-v27c64c86/Leda.mp3",
+"orig": "audio/f/israeli/dictionary/dict-v27c64c86.mp3",
+"take": "Leda",
+"want": "חֲזִיר",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-v27c64c86/Zephyr.mp3",
+"orig": "audio/f/israeli/dictionary/dict-v27c64c86.mp3",
+"take": "Zephyr",
+"want": "חֲזִיר",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-v1889bac2/Kore.mp3",
+"orig": "audio/f/israeli/dictionary/dict-v1889bac2.mp3",
+"take": "Kore",
+"want": "לֶקַח",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-v1889bac2/Aoede.mp3",
+"orig": "audio/f/israeli/dictionary/dict-v1889bac2.mp3",
+"take": "Aoede",
+"want": "לֶקַח",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-v1889bac2/Leda.mp3",
+"orig": "audio/f/israeli/dictionary/dict-v1889bac2.mp3",
+"take": "Leda",
+"want": "לֶקַח",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-v1889bac2/Zephyr.mp3",
+"orig": "audio/f/israeli/dictionary/dict-v1889bac2.mp3",
+"take": "Zephyr",
+"want": "לֶקַח",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-v9e3ba777/Kore.mp3",
+"orig": "audio/f/israeli/dictionary/dict-v9e3ba777.mp3",
+"take": "Kore",
+"want": "נִגֵּן",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-v9e3ba777/Aoede.mp3",
+"orig": "audio/f/israeli/dictionary/dict-v9e3ba777.mp3",
+"take": "Aoede",
+"want": "נִגֵּן",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-v9e3ba777/Leda.mp3",
+"orig": "audio/f/israeli/dictionary/dict-v9e3ba777.mp3",
+"take": "Leda",
+"want": "נִגֵּן",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-v9e3ba777/Zephyr.mp3",
+"orig": "audio/f/israeli/dictionary/dict-v9e3ba777.mp3",
+"take": "Zephyr",
+"want": "נִגֵּן",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-veb877f9c/Kore.mp3",
+"orig": "audio/f/israeli/dictionary/dict-veb877f9c.mp3",
+"take": "Kore",
+"want": "פָּג.",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-veb877f9c/Aoede.mp3",
+"orig": "audio/f/israeli/dictionary/dict-veb877f9c.mp3",
+"take": "Aoede",
+"want": "פָּג.",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-veb877f9c/Leda.mp3",
+"orig": "audio/f/israeli/dictionary/dict-veb877f9c.mp3",
+"take": "Leda",
+"want": "פָּג.",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-veb877f9c/Zephyr.mp3",
+"orig": "audio/f/israeli/dictionary/dict-veb877f9c.mp3",
+"take": "Zephyr",
+"want": "פָּג.",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-vc9f581b0/Kore.mp3",
+"orig": "audio/f/israeli/dictionary/dict-vc9f581b0.mp3",
+"take": "Kore",
+"want": "צְרִיף",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-vc9f581b0/Aoede.mp3",
+"orig": "audio/f/israeli/dictionary/dict-vc9f581b0.mp3",
+"take": "Aoede",
+"want": "צְרִיף",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-vc9f581b0/Leda.mp3",
+"orig": "audio/f/israeli/dictionary/dict-vc9f581b0.mp3",
+"take": "Leda",
+"want": "צְרִיף",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-vc9f581b0/Zephyr.mp3",
+"orig": "audio/f/israeli/dictionary/dict-vc9f581b0.mp3",
+"take": "Zephyr",
+"want": "צְרִיף",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-vb7e94b96/Kore.mp3",
+"orig": "audio/f/israeli/dictionary/dict-vb7e94b96.mp3",
+"take": "Kore",
+"want": "רָחַם",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-vb7e94b96/Aoede.mp3",
+"orig": "audio/f/israeli/dictionary/dict-vb7e94b96.mp3",
+"take": "Aoede",
+"want": "רָחַם",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-vb7e94b96/Leda.mp3",
+"orig": "audio/f/israeli/dictionary/dict-vb7e94b96.mp3",
+"take": "Leda",
+"want": "רָחַם",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-vb7e94b96/Zephyr.mp3",
+"orig": "audio/f/israeli/dictionary/dict-vb7e94b96.mp3",
+"take": "Zephyr",
+"want": "רָחַם",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-v0aa04388/Kore.mp3",
+"orig": "audio/f/israeli/dictionary/dict-v0aa04388.mp3",
+"take": "Kore",
+"want": "עשֶׁק",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-v0aa04388/Aoede.mp3",
+"orig": "audio/f/israeli/dictionary/dict-v0aa04388.mp3",
+"take": "Aoede",
+"want": "עשֶׁק",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-v0aa04388/Leda.mp3",
+"orig": "audio/f/israeli/dictionary/dict-v0aa04388.mp3",
+"take": "Leda",
+"want": "עשֶׁק",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-v0aa04388/Zephyr.mp3",
+"orig": "audio/f/israeli/dictionary/dict-v0aa04388.mp3",
+"take": "Zephyr",
+"want": "עשֶׁק",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-vad0340a1/Kore.mp3",
+"orig": "audio/f/israeli/dictionary/dict-vad0340a1.mp3",
+"take": "Kore",
+"want": "עָרוּם",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-vad0340a1/Aoede.mp3",
+"orig": "audio/f/israeli/dictionary/dict-vad0340a1.mp3",
+"take": "Aoede",
+"want": "עָרוּם",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-vad0340a1/Leda.mp3",
+"orig": "audio/f/israeli/dictionary/dict-vad0340a1.mp3",
+"take": "Leda",
+"want": "עָרוּם",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/dictionary/dict-vad0340a1/Zephyr.mp3",
+"orig": "audio/f/israeli/dictionary/dict-vad0340a1.mp3",
+"take": "Zephyr",
+"want": "עָרוּם",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/f/israeli/letter/nun-final/Kore.mp3",
+"orig": "audio/f/israeli/letter/nun-final.mp3",
+"take": "Kore",
+"want": "נוּן סוֹפִית",
+"kind": "letter"
+},
+{
+"file": "takes/pilot/audio/f/israeli/letter/nun-final/Aoede.mp3",
+"orig": "audio/f/israeli/letter/nun-final.mp3",
+"take": "Aoede",
+"want": "נוּן סוֹפִית",
+"kind": "letter"
+},
+{
+"file": "takes/pilot/audio/f/israeli/letter/nun-final/Leda.mp3",
+"orig": "audio/f/israeli/letter/nun-final.mp3",
+"take": "Leda",
+"want": "נוּן סוֹפִית",
+"kind": "letter"
+},
+{
+"file": "takes/pilot/audio/f/israeli/letter/nun-final/Zephyr.mp3",
+"orig": "audio/f/israeli/letter/nun-final.mp3",
+"take": "Zephyr",
+"want": "נוּן סוֹפִית",
+"kind": "letter"
+},
+{
+"file": "takes/pilot/audio/f/israeli/letter/pe-final/Kore.mp3",
+"orig": "audio/f/israeli/letter/pe-final.mp3",
+"take": "Kore",
+"want": "פֵּא, סוֹפִית",
+"kind": "letter"
+},
+{
+"file": "takes/pilot/audio/f/israeli/letter/pe-final/Aoede.mp3",
+"orig": "audio/f/israeli/letter/pe-final.mp3",
+"take": "Aoede",
+"want": "פֵּא, סוֹפִית",
+"kind": "letter"
+},
+{
+"file": "takes/pilot/audio/f/israeli/letter/pe-final/Leda.mp3",
+"orig": "audio/f/israeli/letter/pe-final.mp3",
+"take": "Leda",
+"want": "פֵּא, סוֹפִית",
+"kind": "letter"
+},
+{
+"file": "takes/pilot/audio/f/israeli/letter/pe-final/Zephyr.mp3",
+"orig": "audio/f/israeli/letter/pe-final.mp3",
+"take": "Zephyr",
+"want": "פֵּא, סוֹפִית",
+"kind": "letter"
+},
+{
+"file": "takes/pilot/audio/f/israeli/letter/tet-sound/Kore.mp3",
+"orig": "audio/f/israeli/letter/tet-sound.mp3",
+"take": "Kore",
+"want": "טַ",
+"kind": "letter"
+},
+{
+"file": "takes/pilot/audio/f/israeli/letter/tet-sound/Aoede.mp3",
+"orig": "audio/f/israeli/letter/tet-sound.mp3",
+"take": "Aoede",
+"want": "טַ",
+"kind": "letter"
+},
+{
+"file": "takes/pilot/audio/f/israeli/letter/tet-sound/Leda.mp3",
+"orig": "audio/f/israeli/letter/tet-sound.mp3",
+"take": "Leda",
+"want": "טַ",
+"kind": "letter"
+},
+{
+"file": "takes/pilot/audio/f/israeli/letter/tet-sound/Zephyr.mp3",
+"orig": "audio/f/israeli/letter/tet-sound.mp3",
+"take": "Zephyr",
+"want": "טַ",
+"kind": "letter"
+},
+{
+"file": "takes/pilot/audio/f/israeli/line/vahavta-1/Kore.mp3",
+"orig": "audio/f/israeli/line/vahavta-1.mp3",
+"take": "Kore",
+"want": "וְאָהַבְתָּ אֵת אֲדֹנָי אֱלֹהֶיךָ בְּכָל־לְבָבְךָ וּבְכָל־נַפְשְׁךָ וּבְכָל־מְאֹדֶךָ׃",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/f/israeli/line/vahavta-1/Aoede.mp3",
+"orig": "audio/f/israeli/line/vahavta-1.mp3",
+"take": "Aoede",
+"want": "וְאָהַבְתָּ אֵת אֲדֹנָי אֱלֹהֶיךָ בְּכָל־לְבָבְךָ וּבְכָל־נַפְשְׁךָ וּבְכָל־מְאֹדֶךָ׃",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/f/israeli/line/vahavta-1/Leda.mp3",
+"orig": "audio/f/israeli/line/vahavta-1.mp3",
+"take": "Leda",
+"want": "וְאָהַבְתָּ אֵת אֲדֹנָי אֱלֹהֶיךָ בְּכָל־לְבָבְךָ וּבְכָל־נַפְשְׁךָ וּבְכָל־מְאֹדֶךָ׃",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/f/israeli/line/vahavta-1/Zephyr.mp3",
+"orig": "audio/f/israeli/line/vahavta-1.mp3",
+"take": "Zephyr",
+"want": "וְאָהַבְתָּ אֵת אֲדֹנָי אֱלֹהֶיךָ בְּכָל־לְבָבְךָ וּבְכָל־נַפְשְׁךָ וּבְכָל־מְאֹדֶךָ׃",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/f/israeli/line/yigdal-l2/Kore.mp3",
+"orig": "audio/f/israeli/line/yigdal-l2.mp3",
+"take": "Kore",
+"want": "אֶחָד וְאֵין יָחִיד כְּיִחוּדוֹ נֶעְלָם וְגַם אֵין סוֹף לְאַחְדּוּתוֹ׃",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/f/israeli/line/yigdal-l2/Aoede.mp3",
+"orig": "audio/f/israeli/line/yigdal-l2.mp3",
+"take": "Aoede",
+"want": "אֶחָד וְאֵין יָחִיד כְּיִחוּדוֹ נֶעְלָם וְגַם אֵין סוֹף לְאַחְדּוּתוֹ׃",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/f/israeli/line/yigdal-l2/Leda.mp3",
+"orig": "audio/f/israeli/line/yigdal-l2.mp3",
+"take": "Leda",
+"want": "אֶחָד וְאֵין יָחִיד כְּיִחוּדוֹ נֶעְלָם וְגַם אֵין סוֹף לְאַחְדּוּתוֹ׃",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/f/israeli/line/yigdal-l2/Zephyr.mp3",
+"orig": "audio/f/israeli/line/yigdal-l2.mp3",
+"take": "Zephyr",
+"want": "אֶחָד וְאֵין יָחִיד כְּיִחוּדוֹ נֶעְלָם וְגַם אֵין סוֹף לְאַחְדּוּתוֹ׃",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/f/israeli/line/d-shop-l3/Kore.mp3",
+"orig": "audio/f/israeli/line/d-shop-l3.mp3",
+"take": "Kore",
+"want": "מֵאָה וַעֲשָׂרָה שְׁקָלִים.",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/f/israeli/line/d-shop-l3/Aoede.mp3",
+"orig": "audio/f/israeli/line/d-shop-l3.mp3",
+"take": "Aoede",
+"want": "מֵאָה וַעֲשָׂרָה שְׁקָלִים.",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/f/israeli/line/d-shop-l3/Leda.mp3",
+"orig": "audio/f/israeli/line/d-shop-l3.mp3",
+"take": "Leda",
+"want": "מֵאָה וַעֲשָׂרָה שְׁקָלִים.",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/f/israeli/line/d-shop-l3/Zephyr.mp3",
+"orig": "audio/f/israeli/line/d-shop-l3.mp3",
+"take": "Zephyr",
+"want": "מֵאָה וַעֲשָׂרָה שְׁקָלִים.",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/f/israeli/line/vahavta-full-l2/Kore.mp3",
+"orig": "audio/f/israeli/line/vahavta-full-l2.mp3",
+"take": "Kore",
+"want": "וְהָיוּ הַדְּבָרִים הָאֵלֶּה אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם עַל־לְבָבֶךָ׃",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/f/israeli/line/vahavta-full-l2/Aoede.mp3",
+"orig": "audio/f/israeli/line/vahavta-full-l2.mp3",
+"take": "Aoede",
+"want": "וְהָיוּ הַדְּבָרִים הָאֵלֶּה אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם עַל־לְבָבֶךָ׃",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/f/israeli/line/vahavta-full-l2/Leda.mp3",
+"orig": "audio/f/israeli/line/vahavta-full-l2.mp3",
+"take": "Leda",
+"want": "וְהָיוּ הַדְּבָרִים הָאֵלֶּה אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם עַל־לְבָבֶךָ׃",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/f/israeli/line/vahavta-full-l2/Zephyr.mp3",
+"orig": "audio/f/israeli/line/vahavta-full-l2.mp3",
+"take": "Zephyr",
+"want": "וְהָיוּ הַדְּבָרִים הָאֵלֶּה אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם עַל־לְבָבֶךָ׃",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/f/israeli/line/adon-olam-1-l7/Kore.mp3",
+"orig": "audio/f/israeli/line/adon-olam-1-l7.mp3",
+"take": "Kore",
+"want": "וְהוּא אֵלִי וְחַי גוֹאֲלִי וְצוּר חֶבְלִי בְּעֵת צָרָה׃",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/f/israeli/line/adon-olam-1-l7/Aoede.mp3",
+"orig": "audio/f/israeli/line/adon-olam-1-l7.mp3",
+"take": "Aoede",
+"want": "וְהוּא אֵלִי וְחַי גוֹאֲלִי וְצוּר חֶבְלִי בְּעֵת צָרָה׃",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/f/israeli/line/adon-olam-1-l7/Leda.mp3",
+"orig": "audio/f/israeli/line/adon-olam-1-l7.mp3",
+"take": "Leda",
+"want": "וְהוּא אֵלִי וְחַי גוֹאֲלִי וְצוּר חֶבְלִי בְּעֵת צָרָה׃",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/f/israeli/line/adon-olam-1-l7/Zephyr.mp3",
+"orig": "audio/f/israeli/line/adon-olam-1-l7.mp3",
+"take": "Zephyr",
+"want": "וְהוּא אֵלִי וְחַי גוֹאֲלִי וְצוּר חֶבְלִי בְּעֵת צָרָה׃",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/f/israeli/line/small-talk-01-f/Kore.mp3",
+"orig": "audio/f/israeli/line/small-talk-01-f.mp3",
+"take": "Kore",
+"want": "מַה שְּׁמֵךְ?",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/f/israeli/line/small-talk-01-f/Aoede.mp3",
+"orig": "audio/f/israeli/line/small-talk-01-f.mp3",
+"take": "Aoede",
+"want": "מַה שְּׁמֵךְ?",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/f/israeli/line/small-talk-01-f/Leda.mp3",
+"orig": "audio/f/israeli/line/small-talk-01-f.mp3",
+"take": "Leda",
+"want": "מַה שְּׁמֵךְ?",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/f/israeli/line/small-talk-01-f/Zephyr.mp3",
+"orig": "audio/f/israeli/line/small-talk-01-f.mp3",
+"take": "Zephyr",
+"want": "מַה שְּׁמֵךְ?",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/f/israeli/line/cafe-06/Kore.mp3",
+"orig": "audio/f/israeli/line/cafe-06.mp3",
+"take": "Kore",
+"want": "קָפֶה שָׁחוֹר",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/f/israeli/line/cafe-06/Aoede.mp3",
+"orig": "audio/f/israeli/line/cafe-06.mp3",
+"take": "Aoede",
+"want": "קָפֶה שָׁחוֹר",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/f/israeli/line/cafe-06/Leda.mp3",
+"orig": "audio/f/israeli/line/cafe-06.mp3",
+"take": "Leda",
+"want": "קָפֶה שָׁחוֹר",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/f/israeli/line/cafe-06/Zephyr.mp3",
+"orig": "audio/f/israeli/line/cafe-06.mp3",
+"take": "Zephyr",
+"want": "קָפֶה שָׁחוֹר",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/f/israeli/line/cafe-03-m/Kore.mp3",
+"orig": "audio/f/israeli/line/cafe-03-m.mp3",
+"take": "Kore",
+"want": "אֲנִי רוֹצֶה קָפֶה",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/f/israeli/line/cafe-03-m/Aoede.mp3",
+"orig": "audio/f/israeli/line/cafe-03-m.mp3",
+"take": "Aoede",
+"want": "אֲנִי רוֹצֶה קָפֶה",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/f/israeli/line/cafe-03-m/Leda.mp3",
+"orig": "audio/f/israeli/line/cafe-03-m.mp3",
+"take": "Leda",
+"want": "אֲנִי רוֹצֶה קָפֶה",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/f/israeli/line/cafe-03-m/Zephyr.mp3",
+"orig": "audio/f/israeli/line/cafe-03-m.mp3",
+"take": "Zephyr",
+"want": "אֲנִי רוֹצֶה קָפֶה",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/f/israeli/line/ashrei-145-16/Kore.mp3",
+"orig": "audio/f/israeli/line/ashrei-145-16.mp3",
+"take": "Kore",
+"want": "פּוֹתֵחַ אֶת־יָדֶךָ וּמַשְׂבִּיעַ לְכָל־חַי רָצוֹן׃",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/f/israeli/line/ashrei-145-16/Aoede.mp3",
+"orig": "audio/f/israeli/line/ashrei-145-16.mp3",
+"take": "Aoede",
+"want": "פּוֹתֵחַ אֶת־יָדֶךָ וּמַשְׂבִּיעַ לְכָל־חַי רָצוֹן׃",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/f/israeli/line/ashrei-145-16/Leda.mp3",
+"orig": "audio/f/israeli/line/ashrei-145-16.mp3",
+"take": "Leda",
+"want": "פּוֹתֵחַ אֶת־יָדֶךָ וּמַשְׂבִּיעַ לְכָל־חַי רָצוֹן׃",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/f/israeli/line/ashrei-145-16/Zephyr.mp3",
+"orig": "audio/f/israeli/line/ashrei-145-16.mp3",
+"take": "Zephyr",
+"want": "פּוֹתֵחַ אֶת־יָדֶךָ וּמַשְׂבִּיעַ לְכָל־חַי רָצוֹן׃",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/f/israeli/line/d-taxi-l4/Kore.mp3",
+"orig": "audio/f/israeli/line/d-taxi-l4.mp3",
+"take": "Kore",
+"want": "כֵּן, בְּלִי בְּעָיָה.",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/f/israeli/line/d-taxi-l4/Aoede.mp3",
+"orig": "audio/f/israeli/line/d-taxi-l4.mp3",
+"take": "Aoede",
+"want": "כֵּן, בְּלִי בְּעָיָה.",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/f/israeli/line/d-taxi-l4/Leda.mp3",
+"orig": "audio/f/israeli/line/d-taxi-l4.mp3",
+"take": "Leda",
+"want": "כֵּן, בְּלִי בְּעָיָה.",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/f/israeli/line/d-taxi-l4/Zephyr.mp3",
+"orig": "audio/f/israeli/line/d-taxi-l4.mp3",
+"take": "Zephyr",
+"want": "כֵּן, בְּלִי בְּעָיָה.",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/f/israeli/line/etz-chaim/Kore.mp3",
+"orig": "audio/f/israeli/line/etz-chaim.mp3",
+"take": "Kore",
+"want": "עֵץ חַיִּים הִיא לַמַּחֲזִיקִים בָּהּ וְתוֹמְכֶיהָ מְאֻשָּׁר׃ דְּרָכֶיהָ דַרְכֵי נֹעַם וְכָל נְתִיבוֹתֶיהָ שָׁלוֹם׃ אֹרֶךְ יָמִים בִּימִינָהּ בִּשְׂמֹאלָהּ עֹשֶׁר וְכָבוֹד׃ אֲדֹנָי חָפֵץ לְמַעַן צִדְקוֹ יַגְדִּיל תּוֹרָה וְיַאְדִּיר׃",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/f/israeli/line/etz-chaim/Aoede.mp3",
+"orig": "audio/f/israeli/line/etz-chaim.mp3",
+"take": "Aoede",
+"want": "עֵץ חַיִּים הִיא לַמַּחֲזִיקִים בָּהּ וְתוֹמְכֶיהָ מְאֻשָּׁר׃ דְּרָכֶיהָ דַרְכֵי נֹעַם וְכָל נְתִיבוֹתֶיהָ שָׁלוֹם׃ אֹרֶךְ יָמִים בִּימִינָהּ בִּשְׂמֹאלָהּ עֹשֶׁר וְכָבוֹד׃ אֲדֹנָי חָפֵץ לְמַעַן צִדְקוֹ יַגְדִּיל תּוֹרָה וְיַאְדִּיר׃",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/f/israeli/line/etz-chaim/Leda.mp3",
+"orig": "audio/f/israeli/line/etz-chaim.mp3",
+"take": "Leda",
+"want": "עֵץ חַיִּים הִיא לַמַּחֲזִיקִים בָּהּ וְתוֹמְכֶיהָ מְאֻשָּׁר׃ דְּרָכֶיהָ דַרְכֵי נֹעַם וְכָל נְתִיבוֹתֶיהָ שָׁלוֹם׃ אֹרֶךְ יָמִים בִּימִינָהּ בִּשְׂמֹאלָהּ עֹשֶׁר וְכָבוֹד׃ אֲדֹנָי חָפֵץ לְמַעַן צִדְקוֹ יַגְדִּיל תּוֹרָה וְיַאְדִּיר׃",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/f/israeli/line/etz-chaim/Zephyr.mp3",
+"orig": "audio/f/israeli/line/etz-chaim.mp3",
+"take": "Zephyr",
+"want": "עֵץ חַיִּים הִיא לַמַּחֲזִיקִים בָּהּ וְתוֹמְכֶיהָ מְאֻשָּׁר׃ דְּרָכֶיהָ דַרְכֵי נֹעַם וְכָל נְתִיבוֹתֶיהָ שָׁלוֹם׃ אֹרֶךְ יָמִים בִּימִינָהּ בִּשְׂמֹאלָהּ עֹשֶׁר וְכָבוֹד׃ אֲדֹנָי חָפֵץ לְמַעַן צִדְקוֹ יַגְדִּיל תּוֹרָה וְיַאְדִּיר׃",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/f/israeli/line/taxi-12/Kore.mp3",
+"orig": "audio/f/israeli/line/taxi-12.mp3",
+"take": "Kore",
+"want": "מָתַי הָרַכֶּבֶת הַבָּאָה?",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/f/israeli/line/taxi-12/Aoede.mp3",
+"orig": "audio/f/israeli/line/taxi-12.mp3",
+"take": "Aoede",
+"want": "מָתַי הָרַכֶּבֶת הַבָּאָה?",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/f/israeli/line/taxi-12/Leda.mp3",
+"orig": "audio/f/israeli/line/taxi-12.mp3",
+"take": "Leda",
+"want": "מָתַי הָרַכֶּבֶת הַבָּאָה?",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/f/israeli/line/taxi-12/Zephyr.mp3",
+"orig": "audio/f/israeli/line/taxi-12.mp3",
+"take": "Zephyr",
+"want": "מָתַי הָרַכֶּבֶת הַבָּאָה?",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/f/israeli/syllable/alef-o/Kore.mp3",
+"orig": "audio/f/israeli/syllable/alef-o.mp3",
+"take": "Kore",
+"want": "אֹ",
+"kind": "syllable"
+},
+{
+"file": "takes/pilot/audio/f/israeli/syllable/alef-o/Aoede.mp3",
+"orig": "audio/f/israeli/syllable/alef-o.mp3",
+"take": "Aoede",
+"want": "אֹ",
+"kind": "syllable"
+},
+{
+"file": "takes/pilot/audio/f/israeli/syllable/alef-o/Leda.mp3",
+"orig": "audio/f/israeli/syllable/alef-o.mp3",
+"take": "Leda",
+"want": "אֹ",
+"kind": "syllable"
+},
+{
+"file": "takes/pilot/audio/f/israeli/syllable/alef-o/Zephyr.mp3",
+"orig": "audio/f/israeli/syllable/alef-o.mp3",
+"take": "Zephyr",
+"want": "אֹ",
+"kind": "syllable"
+},
+{
+"file": "takes/pilot/audio/f/israeli/syllable/zayin-e/Kore.mp3",
+"orig": "audio/f/israeli/syllable/zayin-e.mp3",
+"take": "Kore",
+"want": "זֶ",
+"kind": "syllable"
+},
+{
+"file": "takes/pilot/audio/f/israeli/syllable/zayin-e/Aoede.mp3",
+"orig": "audio/f/israeli/syllable/zayin-e.mp3",
+"take": "Aoede",
+"want": "זֶ",
+"kind": "syllable"
+},
+{
+"file": "takes/pilot/audio/f/israeli/syllable/zayin-e/Leda.mp3",
+"orig": "audio/f/israeli/syllable/zayin-e.mp3",
+"take": "Leda",
+"want": "זֶ",
+"kind": "syllable"
+},
+{
+"file": "takes/pilot/audio/f/israeli/syllable/zayin-e/Zephyr.mp3",
+"orig": "audio/f/israeli/syllable/zayin-e.mp3",
+"take": "Zephyr",
+"want": "זֶ",
+"kind": "syllable"
+},
+{
+"file": "takes/pilot/audio/f/israeli/syllable/qof-o/Kore.mp3",
+"orig": "audio/f/israeli/syllable/qof-o.mp3",
+"take": "Kore",
+"want": "קֹ",
+"kind": "syllable"
+},
+{
+"file": "takes/pilot/audio/f/israeli/syllable/qof-o/Aoede.mp3",
+"orig": "audio/f/israeli/syllable/qof-o.mp3",
+"take": "Aoede",
+"want": "קֹ",
+"kind": "syllable"
+},
+{
+"file": "takes/pilot/audio/f/israeli/syllable/qof-o/Leda.mp3",
+"orig": "audio/f/israeli/syllable/qof-o.mp3",
+"take": "Leda",
+"want": "קֹ",
+"kind": "syllable"
+},
+{
+"file": "takes/pilot/audio/f/israeli/syllable/qof-o/Zephyr.mp3",
+"orig": "audio/f/israeli/syllable/qof-o.mp3",
+"take": "Zephyr",
+"want": "קֹ",
+"kind": "syllable"
+},
+{
+"file": "takes/pilot/audio/f/israeli/syllable/lamed-u/Kore.mp3",
+"orig": "audio/f/israeli/syllable/lamed-u.mp3",
+"take": "Kore",
+"want": "לֻ",
+"kind": "syllable"
+},
+{
+"file": "takes/pilot/audio/f/israeli/syllable/lamed-u/Aoede.mp3",
+"orig": "audio/f/israeli/syllable/lamed-u.mp3",
+"take": "Aoede",
+"want": "לֻ",
+"kind": "syllable"
+},
+{
+"file": "takes/pilot/audio/f/israeli/syllable/lamed-u/Leda.mp3",
+"orig": "audio/f/israeli/syllable/lamed-u.mp3",
+"take": "Leda",
+"want": "לֻ",
+"kind": "syllable"
+},
+{
+"file": "takes/pilot/audio/f/israeli/syllable/lamed-u/Zephyr.mp3",
+"orig": "audio/f/israeli/syllable/lamed-u.mp3",
+"take": "Zephyr",
+"want": "לֻ",
+"kind": "syllable"
+},
+{
+"file": "takes/pilot/audio/f/israeli/syllable/qof-a/Kore.mp3",
+"orig": "audio/f/israeli/syllable/qof-a.mp3",
+"take": "Kore",
+"want": "קַ",
+"kind": "syllable"
+},
+{
+"file": "takes/pilot/audio/f/israeli/syllable/qof-a/Aoede.mp3",
+"orig": "audio/f/israeli/syllable/qof-a.mp3",
+"take": "Aoede",
+"want": "קַ",
+"kind": "syllable"
+},
+{
+"file": "takes/pilot/audio/f/israeli/syllable/qof-a/Leda.mp3",
+"orig": "audio/f/israeli/syllable/qof-a.mp3",
+"take": "Leda",
+"want": "קַ",
+"kind": "syllable"
+},
+{
+"file": "takes/pilot/audio/f/israeli/syllable/qof-a/Zephyr.mp3",
+"orig": "audio/f/israeli/syllable/qof-a.mp3",
+"take": "Zephyr",
+"want": "קַ",
+"kind": "syllable"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/haftarah-after-w21/Kore.mp3",
+"orig": "audio/f/israeli/word/haftarah-after-w21.mp3",
+"take": "Kore",
+"want": "אַתָּה",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/haftarah-after-w21/Aoede.mp3",
+"orig": "audio/f/israeli/word/haftarah-after-w21.mp3",
+"take": "Aoede",
+"want": "אַתָּה",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/haftarah-after-w21/Leda.mp3",
+"orig": "audio/f/israeli/word/haftarah-after-w21.mp3",
+"take": "Leda",
+"want": "אַתָּה",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/haftarah-after-w21/Zephyr.mp3",
+"orig": "audio/f/israeli/word/haftarah-after-w21.mp3",
+"take": "Zephyr",
+"want": "אַתָּה",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/tug-rich_poor_f-2/Kore.mp3",
+"orig": "audio/f/israeli/word/tug-rich_poor_f-2.mp3",
+"take": "Kore",
+"want": "עֲנִיָּה",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/tug-rich_poor_f-2/Aoede.mp3",
+"orig": "audio/f/israeli/word/tug-rich_poor_f-2.mp3",
+"take": "Aoede",
+"want": "עֲנִיָּה",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/tug-rich_poor_f-2/Leda.mp3",
+"orig": "audio/f/israeli/word/tug-rich_poor_f-2.mp3",
+"take": "Leda",
+"want": "עֲנִיָּה",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/tug-rich_poor_f-2/Zephyr.mp3",
+"orig": "audio/f/israeli/word/tug-rich_poor_f-2.mp3",
+"take": "Zephyr",
+"want": "עֲנִיָּה",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/havdalah-spices-w5/Kore.mp3",
+"orig": "audio/f/israeli/word/havdalah-spices-w5.mp3",
+"take": "Kore",
+"want": "מֶלֶךְ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/havdalah-spices-w5/Aoede.mp3",
+"orig": "audio/f/israeli/word/havdalah-spices-w5.mp3",
+"take": "Aoede",
+"want": "מֶלֶךְ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/havdalah-spices-w5/Leda.mp3",
+"orig": "audio/f/israeli/word/havdalah-spices-w5.mp3",
+"take": "Leda",
+"want": "מֶלֶךְ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/havdalah-spices-w5/Zephyr.mp3",
+"orig": "audio/f/israeli/word/havdalah-spices-w5.mp3",
+"take": "Zephyr",
+"want": "מֶלֶךְ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/i-07-w6/Kore.mp3",
+"orig": "audio/f/israeli/word/i-07-w6.mp3",
+"take": "Kore",
+"want": "מִן הַמֵּצַר קָרָאתִי יָּהּ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/i-07-w6/Aoede.mp3",
+"orig": "audio/f/israeli/word/i-07-w6.mp3",
+"take": "Aoede",
+"want": "מִן הַמֵּצַר קָרָאתִי יָּהּ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/i-07-w6/Leda.mp3",
+"orig": "audio/f/israeli/word/i-07-w6.mp3",
+"take": "Leda",
+"want": "מִן הַמֵּצַר קָרָאתִי יָּהּ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/i-07-w6/Zephyr.mp3",
+"orig": "audio/f/israeli/word/i-07-w6.mp3",
+"take": "Zephyr",
+"want": "מִן הַמֵּצַר קָרָאתִי יָּהּ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/tug-happy_sad-2/Kore.mp3",
+"orig": "audio/f/israeli/word/tug-happy_sad-2.mp3",
+"take": "Kore",
+"want": "עָצוּב",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/tug-happy_sad-2/Aoede.mp3",
+"orig": "audio/f/israeli/word/tug-happy_sad-2.mp3",
+"take": "Aoede",
+"want": "עָצוּב",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/tug-happy_sad-2/Leda.mp3",
+"orig": "audio/f/israeli/word/tug-happy_sad-2.mp3",
+"take": "Leda",
+"want": "עָצוּב",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/tug-happy_sad-2/Zephyr.mp3",
+"orig": "audio/f/israeli/word/tug-happy_sad-2.mp3",
+"take": "Zephyr",
+"want": "עָצוּב",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/adon-olam-1-w43/Kore.mp3",
+"orig": "audio/f/israeli/word/adon-olam-1-w43.mp3",
+"take": "Kore",
+"want": "וְהַמִּשְׂרָה׃",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/adon-olam-1-w43/Aoede.mp3",
+"orig": "audio/f/israeli/word/adon-olam-1-w43.mp3",
+"take": "Aoede",
+"want": "וְהַמִּשְׂרָה׃",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/adon-olam-1-w43/Leda.mp3",
+"orig": "audio/f/israeli/word/adon-olam-1-w43.mp3",
+"take": "Leda",
+"want": "וְהַמִּשְׂרָה׃",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/adon-olam-1-w43/Zephyr.mp3",
+"orig": "audio/f/israeli/word/adon-olam-1-w43.mp3",
+"take": "Zephyr",
+"want": "וְהַמִּשְׂרָה׃",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/h0a3f1a37/Kore.mp3",
+"orig": "audio/f/israeli/word/h0a3f1a37.mp3",
+"take": "Kore",
+"want": "שְׁטוּת",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/h0a3f1a37/Aoede.mp3",
+"orig": "audio/f/israeli/word/h0a3f1a37.mp3",
+"take": "Aoede",
+"want": "שְׁטוּת",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/h0a3f1a37/Leda.mp3",
+"orig": "audio/f/israeli/word/h0a3f1a37.mp3",
+"take": "Leda",
+"want": "שְׁטוּת",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/h0a3f1a37/Zephyr.mp3",
+"orig": "audio/f/israeli/word/h0a3f1a37.mp3",
+"take": "Zephyr",
+"want": "שְׁטוּת",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/shema-vahavta-w25/Kore.mp3",
+"orig": "audio/f/israeli/word/shema-vahavta-w25.mp3",
+"take": "Kore",
+"want": "בָּם",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/shema-vahavta-w25/Aoede.mp3",
+"orig": "audio/f/israeli/word/shema-vahavta-w25.mp3",
+"take": "Aoede",
+"want": "בָּם",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/shema-vahavta-w25/Leda.mp3",
+"orig": "audio/f/israeli/word/shema-vahavta-w25.mp3",
+"take": "Leda",
+"want": "בָּם",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/shema-vahavta-w25/Zephyr.mp3",
+"orig": "audio/f/israeli/word/shema-vahavta-w25.mp3",
+"take": "Zephyr",
+"want": "בָּם",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/hf5f3eb91/Kore.mp3",
+"orig": "audio/f/israeli/word/hf5f3eb91.mp3",
+"take": "Kore",
+"want": "זָז",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/hf5f3eb91/Aoede.mp3",
+"orig": "audio/f/israeli/word/hf5f3eb91.mp3",
+"take": "Aoede",
+"want": "זָז",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/hf5f3eb91/Leda.mp3",
+"orig": "audio/f/israeli/word/hf5f3eb91.mp3",
+"take": "Leda",
+"want": "זָז",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/hf5f3eb91/Zephyr.mp3",
+"orig": "audio/f/israeli/word/hf5f3eb91.mp3",
+"take": "Zephyr",
+"want": "זָז",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/kiddush-zachor-w4/Kore.mp3",
+"orig": "audio/f/israeli/word/kiddush-zachor-w4.mp3",
+"take": "Kore",
+"want": "לְקַדְּשׁוֹ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/kiddush-zachor-w4/Aoede.mp3",
+"orig": "audio/f/israeli/word/kiddush-zachor-w4.mp3",
+"take": "Aoede",
+"want": "לְקַדְּשׁוֹ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/kiddush-zachor-w4/Leda.mp3",
+"orig": "audio/f/israeli/word/kiddush-zachor-w4.mp3",
+"take": "Leda",
+"want": "לְקַדְּשׁוֹ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/kiddush-zachor-w4/Zephyr.mp3",
+"orig": "audio/f/israeli/word/kiddush-zachor-w4.mp3",
+"take": "Zephyr",
+"want": "לְקַדְּשׁוֹ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/w6-4a5503c952/Kore.mp3",
+"orig": "audio/f/israeli/word/w6-4a5503c952.mp3",
+"take": "Kore",
+"want": "אֱלֹהֵינוּ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/w6-4a5503c952/Aoede.mp3",
+"orig": "audio/f/israeli/word/w6-4a5503c952.mp3",
+"take": "Aoede",
+"want": "אֱלֹהֵינוּ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/w6-4a5503c952/Leda.mp3",
+"orig": "audio/f/israeli/word/w6-4a5503c952.mp3",
+"take": "Leda",
+"want": "אֱלֹהֵינוּ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/w6-4a5503c952/Zephyr.mp3",
+"orig": "audio/f/israeli/word/w6-4a5503c952.mp3",
+"take": "Zephyr",
+"want": "אֱלֹהֵינוּ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/h07a5230b/Kore.mp3",
+"orig": "audio/f/israeli/word/h07a5230b.mp3",
+"take": "Kore",
+"want": "פָּגַשׁ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/h07a5230b/Aoede.mp3",
+"orig": "audio/f/israeli/word/h07a5230b.mp3",
+"take": "Aoede",
+"want": "פָּגַשׁ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/h07a5230b/Leda.mp3",
+"orig": "audio/f/israeli/word/h07a5230b.mp3",
+"take": "Leda",
+"want": "פָּגַשׁ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/h07a5230b/Zephyr.mp3",
+"orig": "audio/f/israeli/word/h07a5230b.mp3",
+"take": "Zephyr",
+"want": "פָּגַשׁ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/hcf419072/Kore.mp3",
+"orig": "audio/f/israeli/word/hcf419072.mp3",
+"take": "Kore",
+"want": "אַרְגָּז",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/hcf419072/Aoede.mp3",
+"orig": "audio/f/israeli/word/hcf419072.mp3",
+"take": "Aoede",
+"want": "אַרְגָּז",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/hcf419072/Leda.mp3",
+"orig": "audio/f/israeli/word/hcf419072.mp3",
+"take": "Leda",
+"want": "אַרְגָּז",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/hcf419072/Zephyr.mp3",
+"orig": "audio/f/israeli/word/hcf419072.mp3",
+"take": "Zephyr",
+"want": "אַרְגָּז",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/i-19-w9/Kore.mp3",
+"orig": "audio/f/israeli/word/i-19-w9.mp3",
+"take": "Kore",
+"want": "מָתַי לָבוֹא?",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/i-19-w9/Aoede.mp3",
+"orig": "audio/f/israeli/word/i-19-w9.mp3",
+"take": "Aoede",
+"want": "מָתַי לָבוֹא?",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/i-19-w9/Leda.mp3",
+"orig": "audio/f/israeli/word/i-19-w9.mp3",
+"take": "Leda",
+"want": "מָתַי לָבוֹא?",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/i-19-w9/Zephyr.mp3",
+"orig": "audio/f/israeli/word/i-19-w9.mp3",
+"take": "Zephyr",
+"want": "מָתַי לָבוֹא?",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/havdalah-opening-w38/Kore.mp3",
+"orig": "audio/f/israeli/word/havdalah-opening-w38.mp3",
+"take": "Kore",
+"want": "בֹּטֵחַ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/havdalah-opening-w38/Aoede.mp3",
+"orig": "audio/f/israeli/word/havdalah-opening-w38.mp3",
+"take": "Aoede",
+"want": "בֹּטֵחַ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/havdalah-opening-w38/Leda.mp3",
+"orig": "audio/f/israeli/word/havdalah-opening-w38.mp3",
+"take": "Leda",
+"want": "בֹּטֵחַ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/havdalah-opening-w38/Zephyr.mp3",
+"orig": "audio/f/israeli/word/havdalah-opening-w38.mp3",
+"take": "Zephyr",
+"want": "בֹּטֵחַ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/tug-much_little-1/Kore.mp3",
+"orig": "audio/f/israeli/word/tug-much_little-1.mp3",
+"take": "Kore",
+"want": "הַרְבֵּה",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/tug-much_little-1/Aoede.mp3",
+"orig": "audio/f/israeli/word/tug-much_little-1.mp3",
+"take": "Aoede",
+"want": "הַרְבֵּה",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/tug-much_little-1/Leda.mp3",
+"orig": "audio/f/israeli/word/tug-much_little-1.mp3",
+"take": "Leda",
+"want": "הַרְבֵּה",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/tug-much_little-1/Zephyr.mp3",
+"orig": "audio/f/israeli/word/tug-much_little-1.mp3",
+"take": "Zephyr",
+"want": "הַרְבֵּה",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/i-03-w9/Kore.mp3",
+"orig": "audio/f/israeli/word/i-03-w9.mp3",
+"take": "Kore",
+"want": "הֲשִׁיבֵנוּ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/i-03-w9/Aoede.mp3",
+"orig": "audio/f/israeli/word/i-03-w9.mp3",
+"take": "Aoede",
+"want": "הֲשִׁיבֵנוּ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/i-03-w9/Leda.mp3",
+"orig": "audio/f/israeli/word/i-03-w9.mp3",
+"take": "Leda",
+"want": "הֲשִׁיבֵנוּ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/i-03-w9/Zephyr.mp3",
+"orig": "audio/f/israeli/word/i-03-w9.mp3",
+"take": "Zephyr",
+"want": "הֲשִׁיבֵנוּ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/anchor-resh/Kore.mp3",
+"orig": "audio/f/israeli/word/anchor-resh.mp3",
+"take": "Kore",
+"want": "רֹאשׁ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/anchor-resh/Aoede.mp3",
+"orig": "audio/f/israeli/word/anchor-resh.mp3",
+"take": "Aoede",
+"want": "רֹאשׁ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/anchor-resh/Leda.mp3",
+"orig": "audio/f/israeli/word/anchor-resh.mp3",
+"take": "Leda",
+"want": "רֹאשׁ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/anchor-resh/Zephyr.mp3",
+"orig": "audio/f/israeli/word/anchor-resh.mp3",
+"take": "Zephyr",
+"want": "רֹאשׁ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/fillers-07/Kore.mp3",
+"orig": "audio/f/israeli/word/fillers-07.mp3",
+"take": "Kore",
+"want": "מַמָּשׁ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/fillers-07/Aoede.mp3",
+"orig": "audio/f/israeli/word/fillers-07.mp3",
+"take": "Aoede",
+"want": "מַמָּשׁ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/fillers-07/Leda.mp3",
+"orig": "audio/f/israeli/word/fillers-07.mp3",
+"take": "Leda",
+"want": "מַמָּשׁ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/fillers-07/Zephyr.mp3",
+"orig": "audio/f/israeli/word/fillers-07.mp3",
+"take": "Zephyr",
+"want": "מַמָּשׁ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/w6-f7ff35095b/Kore.mp3",
+"orig": "audio/f/israeli/word/w6-f7ff35095b.mp3",
+"take": "Kore",
+"want": "כְּבוֹדוֹ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/w6-f7ff35095b/Aoede.mp3",
+"orig": "audio/f/israeli/word/w6-f7ff35095b.mp3",
+"take": "Aoede",
+"want": "כְּבוֹדוֹ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/w6-f7ff35095b/Leda.mp3",
+"orig": "audio/f/israeli/word/w6-f7ff35095b.mp3",
+"take": "Leda",
+"want": "כְּבוֹדוֹ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/w6-f7ff35095b/Zephyr.mp3",
+"orig": "audio/f/israeli/word/w6-f7ff35095b.mp3",
+"take": "Zephyr",
+"want": "כְּבוֹדוֹ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/h2d4006ef/Kore.mp3",
+"orig": "audio/f/israeli/word/h2d4006ef.mp3",
+"take": "Kore",
+"want": "צַיָּד",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/h2d4006ef/Aoede.mp3",
+"orig": "audio/f/israeli/word/h2d4006ef.mp3",
+"take": "Aoede",
+"want": "צַיָּד",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/h2d4006ef/Leda.mp3",
+"orig": "audio/f/israeli/word/h2d4006ef.mp3",
+"take": "Leda",
+"want": "צַיָּד",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/h2d4006ef/Zephyr.mp3",
+"orig": "audio/f/israeli/word/h2d4006ef.mp3",
+"take": "Zephyr",
+"want": "צַיָּד",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/kiddush-veshamru-w23/Kore.mp3",
+"orig": "audio/f/israeli/word/kiddush-veshamru-w23.mp3",
+"take": "Kore",
+"want": "הַשְּׁבִיעִי",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/kiddush-veshamru-w23/Aoede.mp3",
+"orig": "audio/f/israeli/word/kiddush-veshamru-w23.mp3",
+"take": "Aoede",
+"want": "הַשְּׁבִיעִי",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/kiddush-veshamru-w23/Leda.mp3",
+"orig": "audio/f/israeli/word/kiddush-veshamru-w23.mp3",
+"take": "Leda",
+"want": "הַשְּׁבִיעִי",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/kiddush-veshamru-w23/Zephyr.mp3",
+"orig": "audio/f/israeli/word/kiddush-veshamru-w23.mp3",
+"take": "Zephyr",
+"want": "הַשְּׁבִיעִי",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/h2d2dc4db/Kore.mp3",
+"orig": "audio/f/israeli/word/h2d2dc4db.mp3",
+"take": "Kore",
+"want": "קֻפְסָה",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/h2d2dc4db/Aoede.mp3",
+"orig": "audio/f/israeli/word/h2d2dc4db.mp3",
+"take": "Aoede",
+"want": "קֻפְסָה",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/h2d2dc4db/Leda.mp3",
+"orig": "audio/f/israeli/word/h2d2dc4db.mp3",
+"take": "Leda",
+"want": "קֻפְסָה",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/h2d2dc4db/Zephyr.mp3",
+"orig": "audio/f/israeli/word/h2d2dc4db.mp3",
+"take": "Zephyr",
+"want": "קֻפְסָה",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/i-05-w2/Kore.mp3",
+"orig": "audio/f/israeli/word/i-05-w2.mp3",
+"take": "Kore",
+"want": "יַיִן",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/i-05-w2/Aoede.mp3",
+"orig": "audio/f/israeli/word/i-05-w2.mp3",
+"take": "Aoede",
+"want": "יַיִן",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/i-05-w2/Leda.mp3",
+"orig": "audio/f/israeli/word/i-05-w2.mp3",
+"take": "Leda",
+"want": "יַיִן",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/i-05-w2/Zephyr.mp3",
+"orig": "audio/f/israeli/word/i-05-w2.mp3",
+"take": "Zephyr",
+"want": "יַיִן",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/kaddish-1-w9/Kore.mp3",
+"orig": "audio/f/israeli/word/kaddish-1-w9.mp3",
+"take": "Kore",
+"want": "וְיַמְלִיךְ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/kaddish-1-w9/Aoede.mp3",
+"orig": "audio/f/israeli/word/kaddish-1-w9.mp3",
+"take": "Aoede",
+"want": "וְיַמְלִיךְ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/kaddish-1-w9/Leda.mp3",
+"orig": "audio/f/israeli/word/kaddish-1-w9.mp3",
+"take": "Leda",
+"want": "וְיַמְלִיךְ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/kaddish-1-w9/Zephyr.mp3",
+"orig": "audio/f/israeli/word/kaddish-1-w9.mp3",
+"take": "Zephyr",
+"want": "וְיַמְלִיךְ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/etz-chaim-w12/Kore.mp3",
+"orig": "audio/f/israeli/word/etz-chaim-w12.mp3",
+"take": "Kore",
+"want": "נְתִיבוֹתֶיהָ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/etz-chaim-w12/Aoede.mp3",
+"orig": "audio/f/israeli/word/etz-chaim-w12.mp3",
+"take": "Aoede",
+"want": "נְתִיבוֹתֶיהָ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/etz-chaim-w12/Leda.mp3",
+"orig": "audio/f/israeli/word/etz-chaim-w12.mp3",
+"take": "Leda",
+"want": "נְתִיבוֹתֶיהָ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/etz-chaim-w12/Zephyr.mp3",
+"orig": "audio/f/israeli/word/etz-chaim-w12.mp3",
+"take": "Zephyr",
+"want": "נְתִיבוֹתֶיהָ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/aleinu-1-w63/Kore.mp3",
+"orig": "audio/f/israeli/word/aleinu-1-w63.mp3",
+"take": "Kore",
+"want": "בַּתּוֹרָה",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/aleinu-1-w63/Aoede.mp3",
+"orig": "audio/f/israeli/word/aleinu-1-w63.mp3",
+"take": "Aoede",
+"want": "בַּתּוֹרָה",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/aleinu-1-w63/Leda.mp3",
+"orig": "audio/f/israeli/word/aleinu-1-w63.mp3",
+"take": "Leda",
+"want": "בַּתּוֹרָה",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/aleinu-1-w63/Zephyr.mp3",
+"orig": "audio/f/israeli/word/aleinu-1-w63.mp3",
+"take": "Zephyr",
+"want": "בַּתּוֹרָה",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/adon-olam-1-w13/Kore.mp3",
+"orig": "audio/f/israeli/word/adon-olam-1-w13.mp3",
+"take": "Kore",
+"want": "אֲזַי",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/adon-olam-1-w13/Aoede.mp3",
+"orig": "audio/f/israeli/word/adon-olam-1-w13.mp3",
+"take": "Aoede",
+"want": "אֲזַי",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/adon-olam-1-w13/Leda.mp3",
+"orig": "audio/f/israeli/word/adon-olam-1-w13.mp3",
+"take": "Leda",
+"want": "אֲזַי",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/adon-olam-1-w13/Zephyr.mp3",
+"orig": "audio/f/israeli/word/adon-olam-1-w13.mp3",
+"take": "Zephyr",
+"want": "אֲזַי",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/hanerot-halalu-w16/Kore.mp3",
+"orig": "audio/f/israeli/word/hanerot-halalu-w16.mp3",
+"take": "Kore",
+"want": "הַקְּדוֹשִׁים",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/hanerot-halalu-w16/Aoede.mp3",
+"orig": "audio/f/israeli/word/hanerot-halalu-w16.mp3",
+"take": "Aoede",
+"want": "הַקְּדוֹשִׁים",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/hanerot-halalu-w16/Leda.mp3",
+"orig": "audio/f/israeli/word/hanerot-halalu-w16.mp3",
+"take": "Leda",
+"want": "הַקְּדוֹשִׁים",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/hanerot-halalu-w16/Zephyr.mp3",
+"orig": "audio/f/israeli/word/hanerot-halalu-w16.mp3",
+"take": "Zephyr",
+"want": "הַקְּדוֹשִׁים",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/hagomel-w15/Kore.mp3",
+"orig": "audio/f/israeli/word/hagomel-w15.mp3",
+"take": "Kore",
+"want": "טוֹב",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/hagomel-w15/Aoede.mp3",
+"orig": "audio/f/israeli/word/hagomel-w15.mp3",
+"take": "Aoede",
+"want": "טוֹב",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/hagomel-w15/Leda.mp3",
+"orig": "audio/f/israeli/word/hagomel-w15.mp3",
+"take": "Leda",
+"want": "טוֹב",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/f/israeli/word/hagomel-w15/Zephyr.mp3",
+"orig": "audio/f/israeli/word/hagomel-w15.mp3",
+"take": "Zephyr",
+"want": "טוֹב",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v0e8fe011/Charon.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v0e8fe011.mp3",
+"take": "Charon",
+"want": "מְשִׁסָּה",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v0e8fe011/Orus.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v0e8fe011.mp3",
+"take": "Orus",
+"want": "מְשִׁסָּה",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v0e8fe011/Fenrir.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v0e8fe011.mp3",
+"take": "Fenrir",
+"want": "מְשִׁסָּה",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v0e8fe011/Puck.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v0e8fe011.mp3",
+"take": "Puck",
+"want": "מְשִׁסָּה",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v88b3f9c8/Charon.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v88b3f9c8.mp3",
+"take": "Charon",
+"want": "פְּקֻדָּה",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v88b3f9c8/Orus.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v88b3f9c8.mp3",
+"take": "Orus",
+"want": "פְּקֻדָּה",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v88b3f9c8/Fenrir.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v88b3f9c8.mp3",
+"take": "Fenrir",
+"want": "פְּקֻדָּה",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v88b3f9c8/Puck.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v88b3f9c8.mp3",
+"take": "Puck",
+"want": "פְּקֻדָּה",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v6d83acd2/Charon.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v6d83acd2.mp3",
+"take": "Charon",
+"want": "אֻמַּץ",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v6d83acd2/Orus.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v6d83acd2.mp3",
+"take": "Orus",
+"want": "אֻמַּץ",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v6d83acd2/Fenrir.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v6d83acd2.mp3",
+"take": "Fenrir",
+"want": "אֻמַּץ",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v6d83acd2/Puck.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v6d83acd2.mp3",
+"take": "Puck",
+"want": "אֻמַּץ",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-vcf4fce4b/Charon.mp3",
+"orig": "audio/m/israeli/dictionary/dict-vcf4fce4b.mp3",
+"take": "Charon",
+"want": "רֹאשָׁן",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-vcf4fce4b/Orus.mp3",
+"orig": "audio/m/israeli/dictionary/dict-vcf4fce4b.mp3",
+"take": "Orus",
+"want": "רֹאשָׁן",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-vcf4fce4b/Fenrir.mp3",
+"orig": "audio/m/israeli/dictionary/dict-vcf4fce4b.mp3",
+"take": "Fenrir",
+"want": "רֹאשָׁן",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-vcf4fce4b/Puck.mp3",
+"orig": "audio/m/israeli/dictionary/dict-vcf4fce4b.mp3",
+"take": "Puck",
+"want": "רֹאשָׁן",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v734504e3/Charon.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v734504e3.mp3",
+"take": "Charon",
+"want": "כָּרִיךְ",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v734504e3/Orus.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v734504e3.mp3",
+"take": "Orus",
+"want": "כָּרִיךְ",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v734504e3/Fenrir.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v734504e3.mp3",
+"take": "Fenrir",
+"want": "כָּרִיךְ",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v734504e3/Puck.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v734504e3.mp3",
+"take": "Puck",
+"want": "כָּרִיךְ",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v79a97463/Charon.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v79a97463.mp3",
+"take": "Charon",
+"want": "הִנְהִיג",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v79a97463/Orus.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v79a97463.mp3",
+"take": "Orus",
+"want": "הִנְהִיג",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v79a97463/Fenrir.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v79a97463.mp3",
+"take": "Fenrir",
+"want": "הִנְהִיג",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v79a97463/Puck.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v79a97463.mp3",
+"take": "Puck",
+"want": "הִנְהִיג",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v143e058c/Charon.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v143e058c.mp3",
+"take": "Charon",
+"want": "דַּיָּן",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v143e058c/Orus.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v143e058c.mp3",
+"take": "Orus",
+"want": "דַּיָּן",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v143e058c/Fenrir.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v143e058c.mp3",
+"take": "Fenrir",
+"want": "דַּיָּן",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v143e058c/Puck.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v143e058c.mp3",
+"take": "Puck",
+"want": "דַּיָּן",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-va5a8d52a/Charon.mp3",
+"orig": "audio/m/israeli/dictionary/dict-va5a8d52a.mp3",
+"take": "Charon",
+"want": "זְרִיקָה",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-va5a8d52a/Orus.mp3",
+"orig": "audio/m/israeli/dictionary/dict-va5a8d52a.mp3",
+"take": "Orus",
+"want": "זְרִיקָה",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-va5a8d52a/Fenrir.mp3",
+"orig": "audio/m/israeli/dictionary/dict-va5a8d52a.mp3",
+"take": "Fenrir",
+"want": "זְרִיקָה",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-va5a8d52a/Puck.mp3",
+"orig": "audio/m/israeli/dictionary/dict-va5a8d52a.mp3",
+"take": "Puck",
+"want": "זְרִיקָה",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-vb6ae839e/Charon.mp3",
+"orig": "audio/m/israeli/dictionary/dict-vb6ae839e.mp3",
+"take": "Charon",
+"want": "מִינִי",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-vb6ae839e/Orus.mp3",
+"orig": "audio/m/israeli/dictionary/dict-vb6ae839e.mp3",
+"take": "Orus",
+"want": "מִינִי",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-vb6ae839e/Fenrir.mp3",
+"orig": "audio/m/israeli/dictionary/dict-vb6ae839e.mp3",
+"take": "Fenrir",
+"want": "מִינִי",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-vb6ae839e/Puck.mp3",
+"orig": "audio/m/israeli/dictionary/dict-vb6ae839e.mp3",
+"take": "Puck",
+"want": "מִינִי",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v3a1290c1/Charon.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v3a1290c1.mp3",
+"take": "Charon",
+"want": "הִסְתַּגֵּל",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v3a1290c1/Orus.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v3a1290c1.mp3",
+"take": "Orus",
+"want": "הִסְתַּגֵּל",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v3a1290c1/Fenrir.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v3a1290c1.mp3",
+"take": "Fenrir",
+"want": "הִסְתַּגֵּל",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v3a1290c1/Puck.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v3a1290c1.mp3",
+"take": "Puck",
+"want": "הִסְתַּגֵּל",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-ve3a95a8c/Charon.mp3",
+"orig": "audio/m/israeli/dictionary/dict-ve3a95a8c.mp3",
+"take": "Charon",
+"want": "עַלְמָה",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-ve3a95a8c/Orus.mp3",
+"orig": "audio/m/israeli/dictionary/dict-ve3a95a8c.mp3",
+"take": "Orus",
+"want": "עַלְמָה",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-ve3a95a8c/Fenrir.mp3",
+"orig": "audio/m/israeli/dictionary/dict-ve3a95a8c.mp3",
+"take": "Fenrir",
+"want": "עַלְמָה",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-ve3a95a8c/Puck.mp3",
+"orig": "audio/m/israeli/dictionary/dict-ve3a95a8c.mp3",
+"take": "Puck",
+"want": "עַלְמָה",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-vc4a5d7c1/Charon.mp3",
+"orig": "audio/m/israeli/dictionary/dict-vc4a5d7c1.mp3",
+"take": "Charon",
+"want": "שִׁוֵּק",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-vc4a5d7c1/Orus.mp3",
+"orig": "audio/m/israeli/dictionary/dict-vc4a5d7c1.mp3",
+"take": "Orus",
+"want": "שִׁוֵּק",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-vc4a5d7c1/Fenrir.mp3",
+"orig": "audio/m/israeli/dictionary/dict-vc4a5d7c1.mp3",
+"take": "Fenrir",
+"want": "שִׁוֵּק",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-vc4a5d7c1/Puck.mp3",
+"orig": "audio/m/israeli/dictionary/dict-vc4a5d7c1.mp3",
+"take": "Puck",
+"want": "שִׁוֵּק",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v4eff1b74/Charon.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v4eff1b74.mp3",
+"take": "Charon",
+"want": "חִסּוּן",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v4eff1b74/Orus.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v4eff1b74.mp3",
+"take": "Orus",
+"want": "חִסּוּן",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v4eff1b74/Fenrir.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v4eff1b74.mp3",
+"take": "Fenrir",
+"want": "חִסּוּן",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v4eff1b74/Puck.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v4eff1b74.mp3",
+"take": "Puck",
+"want": "חִסּוּן",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v6238dbc8/Charon.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v6238dbc8.mp3",
+"take": "Charon",
+"want": "עִתּוֹן",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v6238dbc8/Orus.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v6238dbc8.mp3",
+"take": "Orus",
+"want": "עִתּוֹן",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v6238dbc8/Fenrir.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v6238dbc8.mp3",
+"take": "Fenrir",
+"want": "עִתּוֹן",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v6238dbc8/Puck.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v6238dbc8.mp3",
+"take": "Puck",
+"want": "עִתּוֹן",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v17e8190f/Charon.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v17e8190f.mp3",
+"take": "Charon",
+"want": "מֶרְכָּזִיָּה",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v17e8190f/Orus.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v17e8190f.mp3",
+"take": "Orus",
+"want": "מֶרְכָּזִיָּה",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v17e8190f/Fenrir.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v17e8190f.mp3",
+"take": "Fenrir",
+"want": "מֶרְכָּזִיָּה",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v17e8190f/Puck.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v17e8190f.mp3",
+"take": "Puck",
+"want": "מֶרְכָּזִיָּה",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v5bd1b90b/Charon.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v5bd1b90b.mp3",
+"take": "Charon",
+"want": "דָּת",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v5bd1b90b/Orus.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v5bd1b90b.mp3",
+"take": "Orus",
+"want": "דָּת",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v5bd1b90b/Fenrir.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v5bd1b90b.mp3",
+"take": "Fenrir",
+"want": "דָּת",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v5bd1b90b/Puck.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v5bd1b90b.mp3",
+"take": "Puck",
+"want": "דָּת",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v614bb3d4/Charon.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v614bb3d4.mp3",
+"take": "Charon",
+"want": "פִּינְגְּוִין",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v614bb3d4/Orus.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v614bb3d4.mp3",
+"take": "Orus",
+"want": "פִּינְגְּוִין",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v614bb3d4/Fenrir.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v614bb3d4.mp3",
+"take": "Fenrir",
+"want": "פִּינְגְּוִין",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v614bb3d4/Puck.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v614bb3d4.mp3",
+"take": "Puck",
+"want": "פִּינְגְּוִין",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v04538c16/Charon.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v04538c16.mp3",
+"take": "Charon",
+"want": "צָרֶבֶת",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v04538c16/Orus.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v04538c16.mp3",
+"take": "Orus",
+"want": "צָרֶבֶת",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v04538c16/Fenrir.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v04538c16.mp3",
+"take": "Fenrir",
+"want": "צָרֶבֶת",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v04538c16/Puck.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v04538c16.mp3",
+"take": "Puck",
+"want": "צָרֶבֶת",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v76e88ba2/Charon.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v76e88ba2.mp3",
+"take": "Charon",
+"want": "הִלּוּךְ",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v76e88ba2/Orus.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v76e88ba2.mp3",
+"take": "Orus",
+"want": "הִלּוּךְ",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v76e88ba2/Fenrir.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v76e88ba2.mp3",
+"take": "Fenrir",
+"want": "הִלּוּךְ",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v76e88ba2/Puck.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v76e88ba2.mp3",
+"take": "Puck",
+"want": "הִלּוּךְ",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-vddce8671/Charon.mp3",
+"orig": "audio/m/israeli/dictionary/dict-vddce8671.mp3",
+"take": "Charon",
+"want": "הִצְמִיד",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-vddce8671/Orus.mp3",
+"orig": "audio/m/israeli/dictionary/dict-vddce8671.mp3",
+"take": "Orus",
+"want": "הִצְמִיד",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-vddce8671/Fenrir.mp3",
+"orig": "audio/m/israeli/dictionary/dict-vddce8671.mp3",
+"take": "Fenrir",
+"want": "הִצְמִיד",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-vddce8671/Puck.mp3",
+"orig": "audio/m/israeli/dictionary/dict-vddce8671.mp3",
+"take": "Puck",
+"want": "הִצְמִיד",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v2037fe72/Charon.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v2037fe72.mp3",
+"take": "Charon",
+"want": "טֻגַּן",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v2037fe72/Orus.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v2037fe72.mp3",
+"take": "Orus",
+"want": "טֻגַּן",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v2037fe72/Fenrir.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v2037fe72.mp3",
+"take": "Fenrir",
+"want": "טֻגַּן",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v2037fe72/Puck.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v2037fe72.mp3",
+"take": "Puck",
+"want": "טֻגַּן",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v25c707a0/Charon.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v25c707a0.mp3",
+"take": "Charon",
+"want": "זִוֵּג",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v25c707a0/Orus.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v25c707a0.mp3",
+"take": "Orus",
+"want": "זִוֵּג",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v25c707a0/Fenrir.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v25c707a0.mp3",
+"take": "Fenrir",
+"want": "זִוֵּג",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v25c707a0/Puck.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v25c707a0.mp3",
+"take": "Puck",
+"want": "זִוֵּג",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v489940ed/Charon.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v489940ed.mp3",
+"take": "Charon",
+"want": "נָאצִי",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v489940ed/Orus.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v489940ed.mp3",
+"take": "Orus",
+"want": "נָאצִי",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v489940ed/Fenrir.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v489940ed.mp3",
+"take": "Fenrir",
+"want": "נָאצִי",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v489940ed/Puck.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v489940ed.mp3",
+"take": "Puck",
+"want": "נָאצִי",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-vce9cda48/Charon.mp3",
+"orig": "audio/m/israeli/dictionary/dict-vce9cda48.mp3",
+"take": "Charon",
+"want": "קַסְדָּה",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-vce9cda48/Orus.mp3",
+"orig": "audio/m/israeli/dictionary/dict-vce9cda48.mp3",
+"take": "Orus",
+"want": "קַסְדָּה",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-vce9cda48/Fenrir.mp3",
+"orig": "audio/m/israeli/dictionary/dict-vce9cda48.mp3",
+"take": "Fenrir",
+"want": "קַסְדָּה",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-vce9cda48/Puck.mp3",
+"orig": "audio/m/israeli/dictionary/dict-vce9cda48.mp3",
+"take": "Puck",
+"want": "קַסְדָּה",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v1b7c227f/Charon.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v1b7c227f.mp3",
+"take": "Charon",
+"want": "קְרוּם",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v1b7c227f/Orus.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v1b7c227f.mp3",
+"take": "Orus",
+"want": "קְרוּם",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v1b7c227f/Fenrir.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v1b7c227f.mp3",
+"take": "Fenrir",
+"want": "קְרוּם",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v1b7c227f/Puck.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v1b7c227f.mp3",
+"take": "Puck",
+"want": "קְרוּם",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v035d7af6/Charon.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v035d7af6.mp3",
+"take": "Charon",
+"want": "שָׁנִי",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v035d7af6/Orus.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v035d7af6.mp3",
+"take": "Orus",
+"want": "שָׁנִי",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v035d7af6/Fenrir.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v035d7af6.mp3",
+"take": "Fenrir",
+"want": "שָׁנִי",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v035d7af6/Puck.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v035d7af6.mp3",
+"take": "Puck",
+"want": "שָׁנִי",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v111525d3/Charon.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v111525d3.mp3",
+"take": "Charon",
+"want": "מַסְקָנָה",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v111525d3/Orus.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v111525d3.mp3",
+"take": "Orus",
+"want": "מַסְקָנָה",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v111525d3/Fenrir.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v111525d3.mp3",
+"take": "Fenrir",
+"want": "מַסְקָנָה",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v111525d3/Puck.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v111525d3.mp3",
+"take": "Puck",
+"want": "מַסְקָנָה",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v8775cc2c/Charon.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v8775cc2c.mp3",
+"take": "Charon",
+"want": "רֹמַח",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v8775cc2c/Orus.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v8775cc2c.mp3",
+"take": "Orus",
+"want": "רֹמַח",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v8775cc2c/Fenrir.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v8775cc2c.mp3",
+"take": "Fenrir",
+"want": "רֹמַח",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v8775cc2c/Puck.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v8775cc2c.mp3",
+"take": "Puck",
+"want": "רֹמַח",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-ve8a19334/Charon.mp3",
+"orig": "audio/m/israeli/dictionary/dict-ve8a19334.mp3",
+"take": "Charon",
+"want": "בַּר",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-ve8a19334/Orus.mp3",
+"orig": "audio/m/israeli/dictionary/dict-ve8a19334.mp3",
+"take": "Orus",
+"want": "בַּר",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-ve8a19334/Fenrir.mp3",
+"orig": "audio/m/israeli/dictionary/dict-ve8a19334.mp3",
+"take": "Fenrir",
+"want": "בַּר",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-ve8a19334/Puck.mp3",
+"orig": "audio/m/israeli/dictionary/dict-ve8a19334.mp3",
+"take": "Puck",
+"want": "בַּר",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v8e7bfd6d/Charon.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v8e7bfd6d.mp3",
+"take": "Charon",
+"want": "תְּנוּחָה",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v8e7bfd6d/Orus.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v8e7bfd6d.mp3",
+"take": "Orus",
+"want": "תְּנוּחָה",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v8e7bfd6d/Fenrir.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v8e7bfd6d.mp3",
+"take": "Fenrir",
+"want": "תְּנוּחָה",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/dictionary/dict-v8e7bfd6d/Puck.mp3",
+"orig": "audio/m/israeli/dictionary/dict-v8e7bfd6d.mp3",
+"take": "Puck",
+"want": "תְּנוּחָה",
+"kind": "dictionary"
+},
+{
+"file": "takes/pilot/audio/m/israeli/letter/gimel-sound/Charon.mp3",
+"orig": "audio/m/israeli/letter/gimel-sound.mp3",
+"take": "Charon",
+"want": "ג",
+"kind": "letter"
+},
+{
+"file": "takes/pilot/audio/m/israeli/letter/gimel-sound/Orus.mp3",
+"orig": "audio/m/israeli/letter/gimel-sound.mp3",
+"take": "Orus",
+"want": "ג",
+"kind": "letter"
+},
+{
+"file": "takes/pilot/audio/m/israeli/letter/gimel-sound/Fenrir.mp3",
+"orig": "audio/m/israeli/letter/gimel-sound.mp3",
+"take": "Fenrir",
+"want": "ג",
+"kind": "letter"
+},
+{
+"file": "takes/pilot/audio/m/israeli/letter/gimel-sound/Puck.mp3",
+"orig": "audio/m/israeli/letter/gimel-sound.mp3",
+"take": "Puck",
+"want": "ג",
+"kind": "letter"
+},
+{
+"file": "takes/pilot/audio/m/israeli/letter/tsadi-final/Charon.mp3",
+"orig": "audio/m/israeli/letter/tsadi-final.mp3",
+"take": "Charon",
+"want": "צָדִי סוֹפִית",
+"kind": "letter"
+},
+{
+"file": "takes/pilot/audio/m/israeli/letter/tsadi-final/Orus.mp3",
+"orig": "audio/m/israeli/letter/tsadi-final.mp3",
+"take": "Orus",
+"want": "צָדִי סוֹפִית",
+"kind": "letter"
+},
+{
+"file": "takes/pilot/audio/m/israeli/letter/tsadi-final/Fenrir.mp3",
+"orig": "audio/m/israeli/letter/tsadi-final.mp3",
+"take": "Fenrir",
+"want": "צָדִי סוֹפִית",
+"kind": "letter"
+},
+{
+"file": "takes/pilot/audio/m/israeli/letter/tsadi-final/Puck.mp3",
+"orig": "audio/m/israeli/letter/tsadi-final.mp3",
+"take": "Puck",
+"want": "צָדִי סוֹפִית",
+"kind": "letter"
+},
+{
+"file": "takes/pilot/audio/m/israeli/letter/samekh/Charon.mp3",
+"orig": "audio/m/israeli/letter/samekh.mp3",
+"take": "Charon",
+"want": "סָמֶך",
+"kind": "letter"
+},
+{
+"file": "takes/pilot/audio/m/israeli/letter/samekh/Orus.mp3",
+"orig": "audio/m/israeli/letter/samekh.mp3",
+"take": "Orus",
+"want": "סָמֶך",
+"kind": "letter"
+},
+{
+"file": "takes/pilot/audio/m/israeli/letter/samekh/Fenrir.mp3",
+"orig": "audio/m/israeli/letter/samekh.mp3",
+"take": "Fenrir",
+"want": "סָמֶך",
+"kind": "letter"
+},
+{
+"file": "takes/pilot/audio/m/israeli/letter/samekh/Puck.mp3",
+"orig": "audio/m/israeli/letter/samekh.mp3",
+"take": "Puck",
+"want": "סָמֶך",
+"kind": "letter"
+},
+{
+"file": "takes/pilot/audio/m/israeli/line/d-taxi-l4/Charon.mp3",
+"orig": "audio/m/israeli/line/d-taxi-l4.mp3",
+"take": "Charon",
+"want": "כֵּן, בְּלִי בְּעָיָה.",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/m/israeli/line/d-taxi-l4/Orus.mp3",
+"orig": "audio/m/israeli/line/d-taxi-l4.mp3",
+"take": "Orus",
+"want": "כֵּן, בְּלִי בְּעָיָה.",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/m/israeli/line/d-taxi-l4/Fenrir.mp3",
+"orig": "audio/m/israeli/line/d-taxi-l4.mp3",
+"take": "Fenrir",
+"want": "כֵּן, בְּלִי בְּעָיָה.",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/m/israeli/line/d-taxi-l4/Puck.mp3",
+"orig": "audio/m/israeli/line/d-taxi-l4.mp3",
+"take": "Puck",
+"want": "כֵּן, בְּלִי בְּעָיָה.",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/m/israeli/line/politeness-05/Charon.mp3",
+"orig": "audio/m/israeli/line/politeness-05.mp3",
+"take": "Charon",
+"want": "אֵין בַּעַד מָה",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/m/israeli/line/politeness-05/Orus.mp3",
+"orig": "audio/m/israeli/line/politeness-05.mp3",
+"take": "Orus",
+"want": "אֵין בַּעַד מָה",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/m/israeli/line/politeness-05/Fenrir.mp3",
+"orig": "audio/m/israeli/line/politeness-05.mp3",
+"take": "Fenrir",
+"want": "אֵין בַּעַד מָה",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/m/israeli/line/politeness-05/Puck.mp3",
+"orig": "audio/m/israeli/line/politeness-05.mp3",
+"take": "Puck",
+"want": "אֵין בַּעַד מָה",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/m/israeli/line/shop-09/Charon.mp3",
+"orig": "audio/m/israeli/line/shop-09.mp3",
+"take": "Charon",
+"want": "אֶפְשָׁר לִמְדֹּד?",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/m/israeli/line/shop-09/Orus.mp3",
+"orig": "audio/m/israeli/line/shop-09.mp3",
+"take": "Orus",
+"want": "אֶפְשָׁר לִמְדֹּד?",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/m/israeli/line/shop-09/Fenrir.mp3",
+"orig": "audio/m/israeli/line/shop-09.mp3",
+"take": "Fenrir",
+"want": "אֶפְשָׁר לִמְדֹּד?",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/m/israeli/line/shop-09/Puck.mp3",
+"orig": "audio/m/israeli/line/shop-09.mp3",
+"take": "Puck",
+"want": "אֶפְשָׁר לִמְדֹּד?",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/m/israeli/line/d-taxi-l5/Charon.mp3",
+"orig": "audio/m/israeli/line/d-taxi-l5.mp3",
+"take": "Charon",
+"want": "כַּמָּה זְמַן?",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/m/israeli/line/d-taxi-l5/Orus.mp3",
+"orig": "audio/m/israeli/line/d-taxi-l5.mp3",
+"take": "Orus",
+"want": "כַּמָּה זְמַן?",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/m/israeli/line/d-taxi-l5/Fenrir.mp3",
+"orig": "audio/m/israeli/line/d-taxi-l5.mp3",
+"take": "Fenrir",
+"want": "כַּמָּה זְמַן?",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/m/israeli/line/d-taxi-l5/Puck.mp3",
+"orig": "audio/m/israeli/line/d-taxi-l5.mp3",
+"take": "Puck",
+"want": "כַּמָּה זְמַן?",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/m/israeli/line/d-hotel-l7/Charon.mp3",
+"orig": "audio/m/israeli/line/d-hotel-l7.mp3",
+"take": "Charon",
+"want": "הַחֶדֶר בַּקּוֹמָה הַשְּׁנִיָּה. הִנֵּה הַמַּפְתֵּחַ.",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/m/israeli/line/d-hotel-l7/Orus.mp3",
+"orig": "audio/m/israeli/line/d-hotel-l7.mp3",
+"take": "Orus",
+"want": "הַחֶדֶר בַּקּוֹמָה הַשְּׁנִיָּה. הִנֵּה הַמַּפְתֵּחַ.",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/m/israeli/line/d-hotel-l7/Fenrir.mp3",
+"orig": "audio/m/israeli/line/d-hotel-l7.mp3",
+"take": "Fenrir",
+"want": "הַחֶדֶר בַּקּוֹמָה הַשְּׁנִיָּה. הִנֵּה הַמַּפְתֵּחַ.",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/m/israeli/line/d-hotel-l7/Puck.mp3",
+"orig": "audio/m/israeli/line/d-hotel-l7.mp3",
+"take": "Puck",
+"want": "הַחֶדֶר בַּקּוֹמָה הַשְּׁנִיָּה. הִנֵּה הַמַּפְתֵּחַ.",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/m/israeli/line/lecha-dodi-1-l2/Charon.mp3",
+"orig": "audio/m/israeli/line/lecha-dodi-1-l2.mp3",
+"take": "Charon",
+"want": "שָׁמוֹר וְזָכוֹר בְּדִבּוּר אֶחָד הִשְׁמִיעָנוּ אֵל הַמְיוּחָד אֲדֹנָי אֶחָד וּשְׁמוֹ אֶחָד לְשֵׁם וּלְתִפְאֶרֶת וְלִתְהִלָּה׃",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/m/israeli/line/lecha-dodi-1-l2/Orus.mp3",
+"orig": "audio/m/israeli/line/lecha-dodi-1-l2.mp3",
+"take": "Orus",
+"want": "שָׁמוֹר וְזָכוֹר בְּדִבּוּר אֶחָד הִשְׁמִיעָנוּ אֵל הַמְיוּחָד אֲדֹנָי אֶחָד וּשְׁמוֹ אֶחָד לְשֵׁם וּלְתִפְאֶרֶת וְלִתְהִלָּה׃",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/m/israeli/line/lecha-dodi-1-l2/Fenrir.mp3",
+"orig": "audio/m/israeli/line/lecha-dodi-1-l2.mp3",
+"take": "Fenrir",
+"want": "שָׁמוֹר וְזָכוֹר בְּדִבּוּר אֶחָד הִשְׁמִיעָנוּ אֵל הַמְיוּחָד אֲדֹנָי אֶחָד וּשְׁמוֹ אֶחָד לְשֵׁם וּלְתִפְאֶרֶת וְלִתְהִלָּה׃",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/m/israeli/line/lecha-dodi-1-l2/Puck.mp3",
+"orig": "audio/m/israeli/line/lecha-dodi-1-l2.mp3",
+"take": "Puck",
+"want": "שָׁמוֹר וְזָכוֹר בְּדִבּוּר אֶחָד הִשְׁמִיעָנוּ אֵל הַמְיוּחָד אֲדֹנָי אֶחָד וּשְׁמוֹ אֶחָד לְשֵׁם וּלְתִפְאֶרֶת וְלִתְהִלָּה׃",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/m/israeli/line/yigdal-l11/Charon.mp3",
+"orig": "audio/m/israeli/line/yigdal-l11.mp3",
+"take": "Charon",
+"want": "גּוֹמֵל לְאִישׁ חֶסֶד כְּמִפְעָלוֹ נוֹתֵן לְרָשָׁע רָע כְּרִשְׁעָתוֹ׃",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/m/israeli/line/yigdal-l11/Orus.mp3",
+"orig": "audio/m/israeli/line/yigdal-l11.mp3",
+"take": "Orus",
+"want": "גּוֹמֵל לְאִישׁ חֶסֶד כְּמִפְעָלוֹ נוֹתֵן לְרָשָׁע רָע כְּרִשְׁעָתוֹ׃",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/m/israeli/line/yigdal-l11/Fenrir.mp3",
+"orig": "audio/m/israeli/line/yigdal-l11.mp3",
+"take": "Fenrir",
+"want": "גּוֹמֵל לְאִישׁ חֶסֶד כְּמִפְעָלוֹ נוֹתֵן לְרָשָׁע רָע כְּרִשְׁעָתוֹ׃",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/m/israeli/line/yigdal-l11/Puck.mp3",
+"orig": "audio/m/israeli/line/yigdal-l11.mp3",
+"take": "Puck",
+"want": "גּוֹמֵל לְאִישׁ חֶסֶד כְּמִפְעָלוֹ נוֹתֵן לְרָשָׁע רָע כְּרִשְׁעָתוֹ׃",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/m/israeli/line/kaddish-1-l7/Charon.mp3",
+"orig": "audio/m/israeli/line/kaddish-1-l7.mp3",
+"take": "Charon",
+"want": "עוֹשֶׂה שָׁלוֹם בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן׃",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/m/israeli/line/kaddish-1-l7/Orus.mp3",
+"orig": "audio/m/israeli/line/kaddish-1-l7.mp3",
+"take": "Orus",
+"want": "עוֹשֶׂה שָׁלוֹם בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן׃",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/m/israeli/line/kaddish-1-l7/Fenrir.mp3",
+"orig": "audio/m/israeli/line/kaddish-1-l7.mp3",
+"take": "Fenrir",
+"want": "עוֹשֶׂה שָׁלוֹם בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן׃",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/m/israeli/line/kaddish-1-l7/Puck.mp3",
+"orig": "audio/m/israeli/line/kaddish-1-l7.mp3",
+"take": "Puck",
+"want": "עוֹשֶׂה שָׁלוֹם בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן׃",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/m/israeli/line/d-directions-l5/Charon.mp3",
+"orig": "audio/m/israeli/line/d-directions-l5.mp3",
+"take": "Charon",
+"want": "תּוֹדָה רַבָּה!",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/m/israeli/line/d-directions-l5/Orus.mp3",
+"orig": "audio/m/israeli/line/d-directions-l5.mp3",
+"take": "Orus",
+"want": "תּוֹדָה רַבָּה!",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/m/israeli/line/d-directions-l5/Fenrir.mp3",
+"orig": "audio/m/israeli/line/d-directions-l5.mp3",
+"take": "Fenrir",
+"want": "תּוֹדָה רַבָּה!",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/m/israeli/line/d-directions-l5/Puck.mp3",
+"orig": "audio/m/israeli/line/d-directions-l5.mp3",
+"take": "Puck",
+"want": "תּוֹדָה רַבָּה!",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/m/israeli/line/kiddush-gen-2-1-3-l1/Charon.mp3",
+"orig": "audio/m/israeli/line/kiddush-gen-2-1-3-l1.mp3",
+"take": "Charon",
+"want": "וַיְכֻלּוּ הַשָּׁמַיִם וְהָאָרֶץ וְכָל־צְבָאָם׃",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/m/israeli/line/kiddush-gen-2-1-3-l1/Orus.mp3",
+"orig": "audio/m/israeli/line/kiddush-gen-2-1-3-l1.mp3",
+"take": "Orus",
+"want": "וַיְכֻלּוּ הַשָּׁמַיִם וְהָאָרֶץ וְכָל־צְבָאָם׃",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/m/israeli/line/kiddush-gen-2-1-3-l1/Fenrir.mp3",
+"orig": "audio/m/israeli/line/kiddush-gen-2-1-3-l1.mp3",
+"take": "Fenrir",
+"want": "וַיְכֻלּוּ הַשָּׁמַיִם וְהָאָרֶץ וְכָל־צְבָאָם׃",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/m/israeli/line/kiddush-gen-2-1-3-l1/Puck.mp3",
+"orig": "audio/m/israeli/line/kiddush-gen-2-1-3-l1.mp3",
+"take": "Puck",
+"want": "וַיְכֻלּוּ הַשָּׁמַיִם וְהָאָרֶץ וְכָל־צְבָאָם׃",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/m/israeli/line/lecha-hashem/Charon.mp3",
+"orig": "audio/m/israeli/line/lecha-hashem.mp3",
+"take": "Charon",
+"want": "לְךָ אֲדֹנָי הַגְּדֻלָּה וְהַגְּבוּרָה וְהַתִּפְאֶרֶת וְהַנֵּצַח וְהַהוֹד כִּי כֹל בַּשָּׁמַיִם וּבָאָרֶץ׃ לְךָ אֲדֹנָי הַמַּמְלָכָה וְהַמִּתְנַשֵּׂא לְכֹל לְרֹאשׁ׃ רוֹמְמוּ אֲדֹנָי אֱלֹהֵינוּ וְהִשְׁתַּחֲווּ לַהֲדֹם רַגְלָיו קָדוֹשׁ הוּא׃ רוֹמְמוּ אֲדֹנָי אֱלֹהֵינוּ וְהִשְׁתַּחֲווּ לְהַר קָדְשׁוֹ כִּי קָדוֹשׁ אֲדֹנָי אֱלֹהֵינוּ׃",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/m/israeli/line/lecha-hashem/Orus.mp3",
+"orig": "audio/m/israeli/line/lecha-hashem.mp3",
+"take": "Orus",
+"want": "לְךָ אֲדֹנָי הַגְּדֻלָּה וְהַגְּבוּרָה וְהַתִּפְאֶרֶת וְהַנֵּצַח וְהַהוֹד כִּי כֹל בַּשָּׁמַיִם וּבָאָרֶץ׃ לְךָ אֲדֹנָי הַמַּמְלָכָה וְהַמִּתְנַשֵּׂא לְכֹל לְרֹאשׁ׃ רוֹמְמוּ אֲדֹנָי אֱלֹהֵינוּ וְהִשְׁתַּחֲווּ לַהֲדֹם רַגְלָיו קָדוֹשׁ הוּא׃ רוֹמְמוּ אֲדֹנָי אֱלֹהֵינוּ וְהִשְׁתַּחֲווּ לְהַר קָדְשׁוֹ כִּי קָדוֹשׁ אֲדֹנָי אֱלֹהֵינוּ׃",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/m/israeli/line/lecha-hashem/Fenrir.mp3",
+"orig": "audio/m/israeli/line/lecha-hashem.mp3",
+"take": "Fenrir",
+"want": "לְךָ אֲדֹנָי הַגְּדֻלָּה וְהַגְּבוּרָה וְהַתִּפְאֶרֶת וְהַנֵּצַח וְהַהוֹד כִּי כֹל בַּשָּׁמַיִם וּבָאָרֶץ׃ לְךָ אֲדֹנָי הַמַּמְלָכָה וְהַמִּתְנַשֵּׂא לְכֹל לְרֹאשׁ׃ רוֹמְמוּ אֲדֹנָי אֱלֹהֵינוּ וְהִשְׁתַּחֲווּ לַהֲדֹם רַגְלָיו קָדוֹשׁ הוּא׃ רוֹמְמוּ אֲדֹנָי אֱלֹהֵינוּ וְהִשְׁתַּחֲווּ לְהַר קָדְשׁוֹ כִּי קָדוֹשׁ אֲדֹנָי אֱלֹהֵינוּ׃",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/m/israeli/line/lecha-hashem/Puck.mp3",
+"orig": "audio/m/israeli/line/lecha-hashem.mp3",
+"take": "Puck",
+"want": "לְךָ אֲדֹנָי הַגְּדֻלָּה וְהַגְּבוּרָה וְהַתִּפְאֶרֶת וְהַנֵּצַח וְהַהוֹד כִּי כֹל בַּשָּׁמַיִם וּבָאָרֶץ׃ לְךָ אֲדֹנָי הַמַּמְלָכָה וְהַמִּתְנַשֵּׂא לְכֹל לְרֹאשׁ׃ רוֹמְמוּ אֲדֹנָי אֱלֹהֵינוּ וְהִשְׁתַּחֲווּ לַהֲדֹם רַגְלָיו קָדוֹשׁ הוּא׃ רוֹמְמוּ אֲדֹנָי אֱלֹהֵינוּ וְהִשְׁתַּחֲווּ לְהַר קָדְשׁוֹ כִּי קָדוֹשׁ אֲדֹנָי אֱלֹהֵינוּ׃",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/m/israeli/line/directions-09-f/Charon.mp3",
+"orig": "audio/m/israeli/line/directions-09-f.mp3",
+"take": "Charon",
+"want": "פְּנִי שְׂמֹאלָה",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/m/israeli/line/directions-09-f/Orus.mp3",
+"orig": "audio/m/israeli/line/directions-09-f.mp3",
+"take": "Orus",
+"want": "פְּנִי שְׂמֹאלָה",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/m/israeli/line/directions-09-f/Fenrir.mp3",
+"orig": "audio/m/israeli/line/directions-09-f.mp3",
+"take": "Fenrir",
+"want": "פְּנִי שְׂמֹאלָה",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/m/israeli/line/directions-09-f/Puck.mp3",
+"orig": "audio/m/israeli/line/directions-09-f.mp3",
+"take": "Puck",
+"want": "פְּנִי שְׂמֹאלָה",
+"kind": "line"
+},
+{
+"file": "takes/pilot/audio/m/israeli/syllable/alef-a/Charon.mp3",
+"orig": "audio/m/israeli/syllable/alef-a.mp3",
+"take": "Charon",
+"want": "אַ",
+"kind": "syllable"
+},
+{
+"file": "takes/pilot/audio/m/israeli/syllable/alef-a/Orus.mp3",
+"orig": "audio/m/israeli/syllable/alef-a.mp3",
+"take": "Orus",
+"want": "אַ",
+"kind": "syllable"
+},
+{
+"file": "takes/pilot/audio/m/israeli/syllable/alef-a/Fenrir.mp3",
+"orig": "audio/m/israeli/syllable/alef-a.mp3",
+"take": "Fenrir",
+"want": "אַ",
+"kind": "syllable"
+},
+{
+"file": "takes/pilot/audio/m/israeli/syllable/alef-a/Puck.mp3",
+"orig": "audio/m/israeli/syllable/alef-a.mp3",
+"take": "Puck",
+"want": "אַ",
+"kind": "syllable"
+},
+{
+"file": "takes/pilot/audio/m/israeli/syllable/lamed-o/Charon.mp3",
+"orig": "audio/m/israeli/syllable/lamed-o.mp3",
+"take": "Charon",
+"want": "לֹ",
+"kind": "syllable"
+},
+{
+"file": "takes/pilot/audio/m/israeli/syllable/lamed-o/Orus.mp3",
+"orig": "audio/m/israeli/syllable/lamed-o.mp3",
+"take": "Orus",
+"want": "לֹ",
+"kind": "syllable"
+},
+{
+"file": "takes/pilot/audio/m/israeli/syllable/lamed-o/Fenrir.mp3",
+"orig": "audio/m/israeli/syllable/lamed-o.mp3",
+"take": "Fenrir",
+"want": "לֹ",
+"kind": "syllable"
+},
+{
+"file": "takes/pilot/audio/m/israeli/syllable/lamed-o/Puck.mp3",
+"orig": "audio/m/israeli/syllable/lamed-o.mp3",
+"take": "Puck",
+"want": "לֹ",
+"kind": "syllable"
+},
+{
+"file": "takes/pilot/audio/m/israeli/syllable/tet-u/Charon.mp3",
+"orig": "audio/m/israeli/syllable/tet-u.mp3",
+"take": "Charon",
+"want": "טֻ",
+"kind": "syllable"
+},
+{
+"file": "takes/pilot/audio/m/israeli/syllable/tet-u/Orus.mp3",
+"orig": "audio/m/israeli/syllable/tet-u.mp3",
+"take": "Orus",
+"want": "טֻ",
+"kind": "syllable"
+},
+{
+"file": "takes/pilot/audio/m/israeli/syllable/tet-u/Fenrir.mp3",
+"orig": "audio/m/israeli/syllable/tet-u.mp3",
+"take": "Fenrir",
+"want": "טֻ",
+"kind": "syllable"
+},
+{
+"file": "takes/pilot/audio/m/israeli/syllable/tet-u/Puck.mp3",
+"orig": "audio/m/israeli/syllable/tet-u.mp3",
+"take": "Puck",
+"want": "טֻ",
+"kind": "syllable"
+},
+{
+"file": "takes/pilot/audio/m/israeli/syllable/mem-o/Charon.mp3",
+"orig": "audio/m/israeli/syllable/mem-o.mp3",
+"take": "Charon",
+"want": "מֹ",
+"kind": "syllable"
+},
+{
+"file": "takes/pilot/audio/m/israeli/syllable/mem-o/Orus.mp3",
+"orig": "audio/m/israeli/syllable/mem-o.mp3",
+"take": "Orus",
+"want": "מֹ",
+"kind": "syllable"
+},
+{
+"file": "takes/pilot/audio/m/israeli/syllable/mem-o/Fenrir.mp3",
+"orig": "audio/m/israeli/syllable/mem-o.mp3",
+"take": "Fenrir",
+"want": "מֹ",
+"kind": "syllable"
+},
+{
+"file": "takes/pilot/audio/m/israeli/syllable/mem-o/Puck.mp3",
+"orig": "audio/m/israeli/syllable/mem-o.mp3",
+"take": "Puck",
+"want": "מֹ",
+"kind": "syllable"
+},
+{
+"file": "takes/pilot/audio/m/israeli/syllable/alef-o/Charon.mp3",
+"orig": "audio/m/israeli/syllable/alef-o.mp3",
+"take": "Charon",
+"want": "אֹ",
+"kind": "syllable"
+},
+{
+"file": "takes/pilot/audio/m/israeli/syllable/alef-o/Orus.mp3",
+"orig": "audio/m/israeli/syllable/alef-o.mp3",
+"take": "Orus",
+"want": "אֹ",
+"kind": "syllable"
+},
+{
+"file": "takes/pilot/audio/m/israeli/syllable/alef-o/Fenrir.mp3",
+"orig": "audio/m/israeli/syllable/alef-o.mp3",
+"take": "Fenrir",
+"want": "אֹ",
+"kind": "syllable"
+},
+{
+"file": "takes/pilot/audio/m/israeli/syllable/alef-o/Puck.mp3",
+"orig": "audio/m/israeli/syllable/alef-o.mp3",
+"take": "Puck",
+"want": "אֹ",
+"kind": "syllable"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/hanerot-halalu-w2/Charon.mp3",
+"orig": "audio/m/israeli/word/hanerot-halalu-w2.mp3",
+"take": "Charon",
+"want": "הַלָּלוּ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/hanerot-halalu-w2/Orus.mp3",
+"orig": "audio/m/israeli/word/hanerot-halalu-w2.mp3",
+"take": "Orus",
+"want": "הַלָּלוּ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/hanerot-halalu-w2/Fenrir.mp3",
+"orig": "audio/m/israeli/word/hanerot-halalu-w2.mp3",
+"take": "Fenrir",
+"want": "הַלָּלוּ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/hanerot-halalu-w2/Puck.mp3",
+"orig": "audio/m/israeli/word/hanerot-halalu-w2.mp3",
+"take": "Puck",
+"want": "הַלָּלוּ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/haftarah-after-w115/Charon.mp3",
+"orig": "audio/m/israeli/word/haftarah-after-w115.mp3",
+"take": "Charon",
+"want": "לָּנוּ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/haftarah-after-w115/Orus.mp3",
+"orig": "audio/m/israeli/word/haftarah-after-w115.mp3",
+"take": "Orus",
+"want": "לָּנוּ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/haftarah-after-w115/Fenrir.mp3",
+"orig": "audio/m/israeli/word/haftarah-after-w115.mp3",
+"take": "Fenrir",
+"want": "לָּנוּ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/haftarah-after-w115/Puck.mp3",
+"orig": "audio/m/israeli/word/haftarah-after-w115.mp3",
+"take": "Puck",
+"want": "לָּנוּ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/kiddush-veshamru-w20/Charon.mp3",
+"orig": "audio/m/israeli/word/kiddush-veshamru-w20.mp3",
+"take": "Charon",
+"want": "אֶת־הַשָּׁמַיִם",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/kiddush-veshamru-w20/Orus.mp3",
+"orig": "audio/m/israeli/word/kiddush-veshamru-w20.mp3",
+"take": "Orus",
+"want": "אֶת־הַשָּׁמַיִם",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/kiddush-veshamru-w20/Fenrir.mp3",
+"orig": "audio/m/israeli/word/kiddush-veshamru-w20.mp3",
+"take": "Fenrir",
+"want": "אֶת־הַשָּׁמַיִם",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/kiddush-veshamru-w20/Puck.mp3",
+"orig": "audio/m/israeli/word/kiddush-veshamru-w20.mp3",
+"take": "Puck",
+"want": "אֶת־הַשָּׁמַיִם",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/h21e009ad/Charon.mp3",
+"orig": "audio/m/israeli/word/h21e009ad.mp3",
+"take": "Charon",
+"want": "אַף",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/h21e009ad/Orus.mp3",
+"orig": "audio/m/israeli/word/h21e009ad.mp3",
+"take": "Orus",
+"want": "אַף",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/h21e009ad/Fenrir.mp3",
+"orig": "audio/m/israeli/word/h21e009ad.mp3",
+"take": "Fenrir",
+"want": "אַף",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/h21e009ad/Puck.mp3",
+"orig": "audio/m/israeli/word/h21e009ad.mp3",
+"take": "Puck",
+"want": "אַף",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/birkat-hamazon-1-w12/Charon.mp3",
+"orig": "audio/m/israeli/word/birkat-hamazon-1-w12.mp3",
+"take": "Charon",
+"want": "בְּחֵן",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/birkat-hamazon-1-w12/Orus.mp3",
+"orig": "audio/m/israeli/word/birkat-hamazon-1-w12.mp3",
+"take": "Orus",
+"want": "בְּחֵן",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/birkat-hamazon-1-w12/Fenrir.mp3",
+"orig": "audio/m/israeli/word/birkat-hamazon-1-w12.mp3",
+"take": "Fenrir",
+"want": "בְּחֵן",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/birkat-hamazon-1-w12/Puck.mp3",
+"orig": "audio/m/israeli/word/birkat-hamazon-1-w12.mp3",
+"take": "Puck",
+"want": "בְּחֵן",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/h6a579e02/Charon.mp3",
+"orig": "audio/m/israeli/word/h6a579e02.mp3",
+"take": "Charon",
+"want": "טָח",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/h6a579e02/Orus.mp3",
+"orig": "audio/m/israeli/word/h6a579e02.mp3",
+"take": "Orus",
+"want": "טָח",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/h6a579e02/Fenrir.mp3",
+"orig": "audio/m/israeli/word/h6a579e02.mp3",
+"take": "Fenrir",
+"want": "טָח",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/h6a579e02/Puck.mp3",
+"orig": "audio/m/israeli/word/h6a579e02.mp3",
+"take": "Puck",
+"want": "טָח",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/hanerot-halalu-w4/Charon.mp3",
+"orig": "audio/m/israeli/word/hanerot-halalu-w4.mp3",
+"take": "Charon",
+"want": "מַדְלִיקִין",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/hanerot-halalu-w4/Orus.mp3",
+"orig": "audio/m/israeli/word/hanerot-halalu-w4.mp3",
+"take": "Orus",
+"want": "מַדְלִיקִין",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/hanerot-halalu-w4/Fenrir.mp3",
+"orig": "audio/m/israeli/word/hanerot-halalu-w4.mp3",
+"take": "Fenrir",
+"want": "מַדְלִיקִין",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/hanerot-halalu-w4/Puck.mp3",
+"orig": "audio/m/israeli/word/hanerot-halalu-w4.mp3",
+"take": "Puck",
+"want": "מַדְלִיקִין",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/r40-w1/Charon.mp3",
+"orig": "audio/m/israeli/word/r40-w1.mp3",
+"take": "Charon",
+"want": "מַה",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/r40-w1/Orus.mp3",
+"orig": "audio/m/israeli/word/r40-w1.mp3",
+"take": "Orus",
+"want": "מַה",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/r40-w1/Fenrir.mp3",
+"orig": "audio/m/israeli/word/r40-w1.mp3",
+"take": "Fenrir",
+"want": "מַה",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/r40-w1/Puck.mp3",
+"orig": "audio/m/israeli/word/r40-w1.mp3",
+"take": "Puck",
+"want": "מַה",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/hdcd31646/Charon.mp3",
+"orig": "audio/m/israeli/word/hdcd31646.mp3",
+"take": "Charon",
+"want": "אוּלַי",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/hdcd31646/Orus.mp3",
+"orig": "audio/m/israeli/word/hdcd31646.mp3",
+"take": "Orus",
+"want": "אוּלַי",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/hdcd31646/Fenrir.mp3",
+"orig": "audio/m/israeli/word/hdcd31646.mp3",
+"take": "Fenrir",
+"want": "אוּלַי",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/hdcd31646/Puck.mp3",
+"orig": "audio/m/israeli/word/hdcd31646.mp3",
+"take": "Puck",
+"want": "אוּלַי",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/adonai-oz-w8/Charon.mp3",
+"orig": "audio/m/israeli/word/adonai-oz-w8.mp3",
+"take": "Charon",
+"want": "בַשָּׁלוֹם׃",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/adonai-oz-w8/Orus.mp3",
+"orig": "audio/m/israeli/word/adonai-oz-w8.mp3",
+"take": "Orus",
+"want": "בַשָּׁלוֹם׃",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/adonai-oz-w8/Fenrir.mp3",
+"orig": "audio/m/israeli/word/adonai-oz-w8.mp3",
+"take": "Fenrir",
+"want": "בַשָּׁלוֹם׃",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/adonai-oz-w8/Puck.mp3",
+"orig": "audio/m/israeli/word/adonai-oz-w8.mp3",
+"take": "Puck",
+"want": "בַשָּׁלוֹם׃",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/i-32-w10/Charon.mp3",
+"orig": "audio/m/israeli/word/i-32-w10.mp3",
+"take": "Charon",
+"want": "יְשׁוּעָתִי",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/i-32-w10/Orus.mp3",
+"orig": "audio/m/israeli/word/i-32-w10.mp3",
+"take": "Orus",
+"want": "יְשׁוּעָתִי",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/i-32-w10/Fenrir.mp3",
+"orig": "audio/m/israeli/word/i-32-w10.mp3",
+"take": "Fenrir",
+"want": "יְשׁוּעָתִי",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/i-32-w10/Puck.mp3",
+"orig": "audio/m/israeli/word/i-32-w10.mp3",
+"take": "Puck",
+"want": "יְשׁוּעָתִי",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/i-12-w2/Charon.mp3",
+"orig": "audio/m/israeli/word/i-12-w2.mp3",
+"take": "Charon",
+"want": "כַּמָּה זֶה עוֹלֶה?",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/i-12-w2/Orus.mp3",
+"orig": "audio/m/israeli/word/i-12-w2.mp3",
+"take": "Orus",
+"want": "כַּמָּה זֶה עוֹלֶה?",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/i-12-w2/Fenrir.mp3",
+"orig": "audio/m/israeli/word/i-12-w2.mp3",
+"take": "Fenrir",
+"want": "כַּמָּה זֶה עוֹלֶה?",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/i-12-w2/Puck.mp3",
+"orig": "audio/m/israeli/word/i-12-w2.mp3",
+"take": "Puck",
+"want": "כַּמָּה זֶה עוֹלֶה?",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/kiddush-gen-2-1-3-w29/Charon.mp3",
+"orig": "audio/m/israeli/word/kiddush-gen-2-1-3-w29.mp3",
+"take": "Charon",
+"want": "אֱלֹהִים",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/kiddush-gen-2-1-3-w29/Orus.mp3",
+"orig": "audio/m/israeli/word/kiddush-gen-2-1-3-w29.mp3",
+"take": "Orus",
+"want": "אֱלֹהִים",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/kiddush-gen-2-1-3-w29/Fenrir.mp3",
+"orig": "audio/m/israeli/word/kiddush-gen-2-1-3-w29.mp3",
+"take": "Fenrir",
+"want": "אֱלֹהִים",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/kiddush-gen-2-1-3-w29/Puck.mp3",
+"orig": "audio/m/israeli/word/kiddush-gen-2-1-3-w29.mp3",
+"take": "Puck",
+"want": "אֱלֹהִים",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/gp-06-f/Charon.mp3",
+"orig": "audio/m/israeli/word/gp-06-f.mp3",
+"take": "Charon",
+"want": "אֲנִי מְבִינָה",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/gp-06-f/Orus.mp3",
+"orig": "audio/m/israeli/word/gp-06-f.mp3",
+"take": "Orus",
+"want": "אֲנִי מְבִינָה",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/gp-06-f/Fenrir.mp3",
+"orig": "audio/m/israeli/word/gp-06-f.mp3",
+"take": "Fenrir",
+"want": "אֲנִי מְבִינָה",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/gp-06-f/Puck.mp3",
+"orig": "audio/m/israeli/word/gp-06-f.mp3",
+"take": "Puck",
+"want": "אֲנִי מְבִינָה",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/gp-09-m/Charon.mp3",
+"orig": "audio/m/israeli/word/gp-09-m.mp3",
+"take": "Charon",
+"want": "אֲנִי מוּכָן",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/gp-09-m/Orus.mp3",
+"orig": "audio/m/israeli/word/gp-09-m.mp3",
+"take": "Orus",
+"want": "אֲנִי מוּכָן",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/gp-09-m/Fenrir.mp3",
+"orig": "audio/m/israeli/word/gp-09-m.mp3",
+"take": "Fenrir",
+"want": "אֲנִי מוּכָן",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/gp-09-m/Puck.mp3",
+"orig": "audio/m/israeli/word/gp-09-m.mp3",
+"take": "Puck",
+"want": "אֲנִי מוּכָן",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/h12c1eeaf/Charon.mp3",
+"orig": "audio/m/israeli/word/h12c1eeaf.mp3",
+"take": "Charon",
+"want": "אַדִּיר",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/h12c1eeaf/Orus.mp3",
+"orig": "audio/m/israeli/word/h12c1eeaf.mp3",
+"take": "Orus",
+"want": "אַדִּיר",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/h12c1eeaf/Fenrir.mp3",
+"orig": "audio/m/israeli/word/h12c1eeaf.mp3",
+"take": "Fenrir",
+"want": "אַדִּיר",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/h12c1eeaf/Puck.mp3",
+"orig": "audio/m/israeli/word/h12c1eeaf.mp3",
+"take": "Puck",
+"want": "אַדִּיר",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/hamotzi-w4/Charon.mp3",
+"orig": "audio/m/israeli/word/hamotzi-w4.mp3",
+"take": "Charon",
+"want": "אֱלֹהֵינוּ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/hamotzi-w4/Orus.mp3",
+"orig": "audio/m/israeli/word/hamotzi-w4.mp3",
+"take": "Orus",
+"want": "אֱלֹהֵינוּ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/hamotzi-w4/Fenrir.mp3",
+"orig": "audio/m/israeli/word/hamotzi-w4.mp3",
+"take": "Fenrir",
+"want": "אֱלֹהֵינוּ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/hamotzi-w4/Puck.mp3",
+"orig": "audio/m/israeli/word/hamotzi-w4.mp3",
+"take": "Puck",
+"want": "אֱלֹהֵינוּ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/hc3a83879/Charon.mp3",
+"orig": "audio/m/israeli/word/hc3a83879.mp3",
+"take": "Charon",
+"want": "אֵבֶר",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/hc3a83879/Orus.mp3",
+"orig": "audio/m/israeli/word/hc3a83879.mp3",
+"take": "Orus",
+"want": "אֵבֶר",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/hc3a83879/Fenrir.mp3",
+"orig": "audio/m/israeli/word/hc3a83879.mp3",
+"take": "Fenrir",
+"want": "אֵבֶר",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/hc3a83879/Puck.mp3",
+"orig": "audio/m/israeli/word/hc3a83879.mp3",
+"take": "Puck",
+"want": "אֵבֶר",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/aleinu-1-w53/Charon.mp3",
+"orig": "audio/m/israeli/word/aleinu-1-w53.mp3",
+"take": "Charon",
+"want": "הוּא",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/aleinu-1-w53/Orus.mp3",
+"orig": "audio/m/israeli/word/aleinu-1-w53.mp3",
+"take": "Orus",
+"want": "הוּא",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/aleinu-1-w53/Fenrir.mp3",
+"orig": "audio/m/israeli/word/aleinu-1-w53.mp3",
+"take": "Fenrir",
+"want": "הוּא",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/aleinu-1-w53/Puck.mp3",
+"orig": "audio/m/israeli/word/aleinu-1-w53.mp3",
+"take": "Puck",
+"want": "הוּא",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/il18-w2/Charon.mp3",
+"orig": "audio/m/israeli/word/il18-w2.mp3",
+"take": "Charon",
+"want": "אֶפְשָׁר לְדַבֵּר לְאַט",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/il18-w2/Orus.mp3",
+"orig": "audio/m/israeli/word/il18-w2.mp3",
+"take": "Orus",
+"want": "אֶפְשָׁר לְדַבֵּר לְאַט",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/il18-w2/Fenrir.mp3",
+"orig": "audio/m/israeli/word/il18-w2.mp3",
+"take": "Fenrir",
+"want": "אֶפְשָׁר לְדַבֵּר לְאַט",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/il18-w2/Puck.mp3",
+"orig": "audio/m/israeli/word/il18-w2.mp3",
+"take": "Puck",
+"want": "אֶפְשָׁר לְדַבֵּר לְאַט",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/il22-w5/Charon.mp3",
+"orig": "audio/m/israeli/word/il22-w5.mp3",
+"take": "Charon",
+"want": "הוֹדָעָה",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/il22-w5/Orus.mp3",
+"orig": "audio/m/israeli/word/il22-w5.mp3",
+"take": "Orus",
+"want": "הוֹדָעָה",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/il22-w5/Fenrir.mp3",
+"orig": "audio/m/israeli/word/il22-w5.mp3",
+"take": "Fenrir",
+"want": "הוֹדָעָה",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/il22-w5/Puck.mp3",
+"orig": "audio/m/israeli/word/il22-w5.mp3",
+"take": "Puck",
+"want": "הוֹדָעָה",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/shema-vahavta-w38/Charon.mp3",
+"orig": "audio/m/israeli/word/shema-vahavta-w38.mp3",
+"take": "Charon",
+"want": "עֵינֶיךָ׃",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/shema-vahavta-w38/Orus.mp3",
+"orig": "audio/m/israeli/word/shema-vahavta-w38.mp3",
+"take": "Orus",
+"want": "עֵינֶיךָ׃",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/shema-vahavta-w38/Fenrir.mp3",
+"orig": "audio/m/israeli/word/shema-vahavta-w38.mp3",
+"take": "Fenrir",
+"want": "עֵינֶיךָ׃",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/shema-vahavta-w38/Puck.mp3",
+"orig": "audio/m/israeli/word/shema-vahavta-w38.mp3",
+"take": "Puck",
+"want": "עֵינֶיךָ׃",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/h4cedaa9e/Charon.mp3",
+"orig": "audio/m/israeli/word/h4cedaa9e.mp3",
+"take": "Charon",
+"want": "סָבִיב",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/h4cedaa9e/Orus.mp3",
+"orig": "audio/m/israeli/word/h4cedaa9e.mp3",
+"take": "Orus",
+"want": "סָבִיב",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/h4cedaa9e/Fenrir.mp3",
+"orig": "audio/m/israeli/word/h4cedaa9e.mp3",
+"take": "Fenrir",
+"want": "סָבִיב",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/h4cedaa9e/Puck.mp3",
+"orig": "audio/m/israeli/word/h4cedaa9e.mp3",
+"take": "Puck",
+"want": "סָבִיב",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/tug-courage_fear-1/Charon.mp3",
+"orig": "audio/m/israeli/word/tug-courage_fear-1.mp3",
+"take": "Charon",
+"want": "אֹמֶץ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/tug-courage_fear-1/Orus.mp3",
+"orig": "audio/m/israeli/word/tug-courage_fear-1.mp3",
+"take": "Orus",
+"want": "אֹמֶץ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/tug-courage_fear-1/Fenrir.mp3",
+"orig": "audio/m/israeli/word/tug-courage_fear-1.mp3",
+"take": "Fenrir",
+"want": "אֹמֶץ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/tug-courage_fear-1/Puck.mp3",
+"orig": "audio/m/israeli/word/tug-courage_fear-1.mp3",
+"take": "Puck",
+"want": "אֹמֶץ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/h5b39e0f1/Charon.mp3",
+"orig": "audio/m/israeli/word/h5b39e0f1.mp3",
+"take": "Charon",
+"want": "יָצָא",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/h5b39e0f1/Orus.mp3",
+"orig": "audio/m/israeli/word/h5b39e0f1.mp3",
+"take": "Orus",
+"want": "יָצָא",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/h5b39e0f1/Fenrir.mp3",
+"orig": "audio/m/israeli/word/h5b39e0f1.mp3",
+"take": "Fenrir",
+"want": "יָצָא",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/h5b39e0f1/Puck.mp3",
+"orig": "audio/m/israeli/word/h5b39e0f1.mp3",
+"take": "Puck",
+"want": "יָצָא",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/kiddush-gen-2-1-3-w28/Charon.mp3",
+"orig": "audio/m/israeli/word/kiddush-gen-2-1-3-w28.mp3",
+"take": "Charon",
+"want": "אֲשֶׁר־בָּרָא",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/kiddush-gen-2-1-3-w28/Orus.mp3",
+"orig": "audio/m/israeli/word/kiddush-gen-2-1-3-w28.mp3",
+"take": "Orus",
+"want": "אֲשֶׁר־בָּרָא",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/kiddush-gen-2-1-3-w28/Fenrir.mp3",
+"orig": "audio/m/israeli/word/kiddush-gen-2-1-3-w28.mp3",
+"take": "Fenrir",
+"want": "אֲשֶׁר־בָּרָא",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/kiddush-gen-2-1-3-w28/Puck.mp3",
+"orig": "audio/m/israeli/word/kiddush-gen-2-1-3-w28.mp3",
+"take": "Puck",
+"want": "אֲשֶׁר־בָּרָא",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/hab527ee7/Charon.mp3",
+"orig": "audio/m/israeli/word/hab527ee7.mp3",
+"take": "Charon",
+"want": "יֶתֶר",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/hab527ee7/Orus.mp3",
+"orig": "audio/m/israeli/word/hab527ee7.mp3",
+"take": "Orus",
+"want": "יֶתֶר",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/hab527ee7/Fenrir.mp3",
+"orig": "audio/m/israeli/word/hab527ee7.mp3",
+"take": "Fenrir",
+"want": "יֶתֶר",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/hab527ee7/Puck.mp3",
+"orig": "audio/m/israeli/word/hab527ee7.mp3",
+"take": "Puck",
+"want": "יֶתֶר",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/h779cc60c/Charon.mp3",
+"orig": "audio/m/israeli/word/h779cc60c.mp3",
+"take": "Charon",
+"want": "מַטֶּה",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/h779cc60c/Orus.mp3",
+"orig": "audio/m/israeli/word/h779cc60c.mp3",
+"take": "Orus",
+"want": "מַטֶּה",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/h779cc60c/Fenrir.mp3",
+"orig": "audio/m/israeli/word/h779cc60c.mp3",
+"take": "Fenrir",
+"want": "מַטֶּה",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/h779cc60c/Puck.mp3",
+"orig": "audio/m/israeli/word/h779cc60c.mp3",
+"take": "Puck",
+"want": "מַטֶּה",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/i-20-w6/Charon.mp3",
+"orig": "audio/m/israeli/word/i-20-w6.mp3",
+"take": "Charon",
+"want": "בִּטּוּחַ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/i-20-w6/Orus.mp3",
+"orig": "audio/m/israeli/word/i-20-w6.mp3",
+"take": "Orus",
+"want": "בִּטּוּחַ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/i-20-w6/Fenrir.mp3",
+"orig": "audio/m/israeli/word/i-20-w6.mp3",
+"take": "Fenrir",
+"want": "בִּטּוּחַ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/i-20-w6/Puck.mp3",
+"orig": "audio/m/israeli/word/i-20-w6.mp3",
+"take": "Puck",
+"want": "בִּטּוּחַ",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/havdalah-opening-w54/Charon.mp3",
+"orig": "audio/m/israeli/word/havdalah-opening-w54.mp3",
+"take": "Charon",
+"want": "לָנוּ׃",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/havdalah-opening-w54/Orus.mp3",
+"orig": "audio/m/israeli/word/havdalah-opening-w54.mp3",
+"take": "Orus",
+"want": "לָנוּ׃",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/havdalah-opening-w54/Fenrir.mp3",
+"orig": "audio/m/israeli/word/havdalah-opening-w54.mp3",
+"take": "Fenrir",
+"want": "לָנוּ׃",
+"kind": "word"
+},
+{
+"file": "takes/pilot/audio/m/israeli/word/havdalah-opening-w54/Puck.mp3",
+"orig": "audio/m/israeli/word/havdalah-opening-w54.mp3",
+"take": "Puck",
+"want": "לָנוּ׃",
+"kind": "word"
+}
+]

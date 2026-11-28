@@ -1,0 +1,1652 @@
+{
+ "items": {
+  "m|צַדִּיקַיָּא": {
+   "g": "m",
+   "word": "צַדִּיקַיָּא",
+   "current": "audio/m/israeli/word/brich-shmei-w38.mp3",
+   "slug": "w5-8c4910a69f"
+  },
+  "m|כָּל": {
+   "g": "m",
+   "word": "כָּל",
+   "current": "audio-takes/m/w562a0efd96-s.mp3",
+   "slug": "w5-a624f5a86d"
+  },
+  "m|בַּר": {
+   "g": "m",
+   "word": "בַּר",
+   "current": null,
+   "slug": "w5-0779427734"
+  },
+  "m|אֱלָהָא": {
+   "g": "m",
+   "word": "אֱלָהָא",
+   "current": "audio-takes/m/w99f7415481-p.mp3",
+   "slug": "w5-a8e139c3cb"
+  },
+  "m|וּנְבִיאוֹהִי": {
+   "g": "m",
+   "word": "וּנְבִיאוֹהִי",
+   "current": "audio/m/israeli/word/brich-shmei-w89.mp3",
+   "slug": "w5-aea1d46622"
+  },
+  "m|לְמֶעְבַּד": {
+   "g": "m",
+   "word": "לְמֶעְבַּד",
+   "current": "audio/m/israeli/word/brich-shmei-w92.mp3",
+   "slug": "w5-621d67ae99"
+  },
+  "m|דְּלִבָּאי": {
+   "g": "m",
+   "word": "דְּלִבָּאי",
+   "current": "audio/m/israeli/word/brich-shmei-w112.mp3",
+   "slug": "w5-b6f9b02844"
+  },
+  "m|דְכָל": {
+   "g": "m",
+   "word": "דְכָל",
+   "current": "audio-takes/m/w82983fb156-p.mp3",
+   "slug": "w5-97b68ac662"
+  },
+  "m|וּלְחַיִּין": {
+   "g": "m",
+   "word": "וּלְחַיִּין",
+   "current": "audio/m/israeli/word/brich-shmei-w117.mp3",
+   "slug": "w5-401b5ab3dc"
+  },
+  "f|בְרָא": {
+   "g": "f",
+   "word": "בְרָא",
+   "current": null,
+   "slug": "w5-e022a463ae"
+  },
+  "f|כִרְעוּתֵהּ": {
+   "g": "f",
+   "word": "כִרְעוּתֵהּ",
+   "current": "audio/f/israeli/word/kaddish-1-w8.mp3",
+   "slug": "w5-d06d936281"
+  },
+  "f|וּבְיוֹמֵיכוֹן": {
+   "g": "f",
+   "word": "וּבְיוֹמֵיכוֹן",
+   "current": "audio/f/israeli/word/kaddish-1-w12.mp3",
+   "slug": "w5-aaa6a407f3"
+  },
+  "f|וּבְחַיֵּי": {
+   "g": "f",
+   "word": "וּבְחַיֵּי",
+   "current": "audio/f/israeli/word/kaddish-1-w13.mp3",
+   "slug": "w5-1c9e4941c9"
+  },
+  "f|דְכָל": {
+   "g": "f",
+   "word": "דְכָל",
+   "current": null,
+   "slug": "w5-e04cd4f64d"
+  },
+  "f|וְאִמְרוּ": {
+   "g": "f",
+   "word": "וְאִמְרוּ",
+   "current": "audio/f/israeli/word/kaddish-1-w19.mp3",
+   "slug": "w5-02c1c44d00"
+  },
+  "f|יְהֵא": {
+   "g": "f",
+   "word": "יְהֵא",
+   "current": "audio/f/israeli/word/brich-shmei-w104.mp3",
+   "slug": "w5-49e589cf80"
+  },
+  "f|וְיִשְׁתַּבַּח": {
+   "g": "f",
+   "word": "וְיִשְׁתַּבַּח",
+   "current": "audio/f/israeli/word/kaddish-1-w29.mp3",
+   "slug": "w5-584dedeb74"
+  },
+  "f|וְיִתְרוֹמַם": {
+   "g": "f",
+   "word": "וְיִתְרוֹמַם",
+   "current": "audio-takes/f/wb8d3a8d4f3-p.mp3",
+   "slug": "w5-37184fb5a2"
+  },
+  "f|וְיִתְהַדָּר": {
+   "g": "f",
+   "word": "וְיִתְהַדָּר",
+   "current": "audio/f/israeli/word/kaddish-1-w33.mp3",
+   "slug": "w5-4a4f646f5d"
+  },
+  "f|הוּא": {
+   "g": "f",
+   "word": "הוּא",
+   "current": "audio/f/israeli/word/aleinu-1-w39.mp3",
+   "slug": "w5-ab4dc3c298"
+  },
+  "f|כָּל": {
+   "g": "f",
+   "word": "כָּל",
+   "current": "audio-takes/f/w562a0efd96-p.mp3",
+   "slug": "w5-0ff7cf5933"
+  },
+  "f|לְבָבְךָ": {
+   "g": "f",
+   "word": "לְבָבְךָ",
+   "current": "audio/f/israeli/word/i-01-w12.mp3",
+   "slug": "w5-61a65faaa4"
+  },
+  "f|מְצַוְּךָ": {
+   "g": "f",
+   "word": "מְצַוְּךָ",
+   "current": "audio/f/israeli/word/shema-vahavta-w19.mp3",
+   "slug": "w5-2aba72fc76"
+  },
+  "f|בַדֶּרֶךְ": {
+   "g": "f",
+   "word": "בַדֶּרֶךְ",
+   "current": "audio-takes/f/w922dfe8fa7-u.mp3",
+   "slug": "w5-32610a840b"
+  },
+  "m|מְצַוְּךָ": {
+   "g": "m",
+   "word": "מְצַוְּךָ",
+   "current": "audio/m/israeli/word/shema-vahavta-w19.mp3",
+   "slug": "w5-c8cde70df8"
+  },
+  "m|בַדֶּרֶךְ": {
+   "g": "m",
+   "word": "בַדֶּרֶךְ",
+   "current": "audio/m/israeli/word/shema-vahavta-w29.mp3",
+   "slug": "w5-3bfcb60269"
+  },
+  "m|וּבְשָׁכְבְּךָ": {
+   "g": "m",
+   "word": "וּבְשָׁכְבְּךָ",
+   "current": "audio/m/israeli/word/shema-vahavta-w30.mp3",
+   "slug": "w5-afd25f73b8"
+  },
+  "f|חַי": {
+   "g": "f",
+   "word": "חַי",
+   "current": "audio/f/israeli/word/h2d58afb3.mp3",
+   "slug": "w5-8877988f5e"
+  },
+  "f|עֵת": {
+   "g": "f",
+   "word": "עֵת",
+   "current": "audio/f/israeli/word/hd08812d6.mp3",
+   "slug": "w5-0aaac85827"
+  },
+  "f|אֵין": {
+   "g": "f",
+   "word": "אֵין",
+   "current": "audio/f/israeli/word/aleinu-1-w76.mp3",
+   "slug": "w5-8c920bf2f2"
+  },
+  "f|הַגּוּף": {
+   "g": "f",
+   "word": "הַגּוּף",
+   "current": "audio/f/israeli/word/yigdal-w22.mp3",
+   "slug": "w5-97813f1c00"
+  },
+  "f|דָּבָר": {
+   "g": "f",
+   "word": "דָּבָר",
+   "current": "audio/f/israeli/word/hd4a691d3.mp3",
+   "slug": "w5-43deaa4953"
+  },
+  "f|אֶת": {
+   "g": "f",
+   "word": "אֶת",
+   "current": "audio/f/israeli/word/birkat-hamazon-1-w8.mp3",
+   "slug": "w5-f9166920ca"
+  },
+  "f|יַד": {
+   "g": "f",
+   "word": "יַד",
+   "current": "audio/f/israeli/word/yigdal-w65.mp3",
+   "slug": "w5-a6b49a1897"
+  },
+  "f|קֵץ": {
+   "g": "f",
+   "word": "קֵץ",
+   "current": "audio/f/israeli/word/h0849ff56.mp3",
+   "slug": "w5-cc07dee25a"
+  },
+  "f|בָּרוּךְ": {
+   "g": "f",
+   "word": "בָּרוּךְ",
+   "current": "audio/f/israeli/word/aleinu-1-w38.mp3",
+   "slug": "w5-d81e6eb50a"
+  },
+  "f|וּפֻרְקַן": {
+   "g": "f",
+   "word": "וּפֻרְקַן",
+   "current": "audio/f/israeli/word/brich-shmei-w14.mp3",
+   "slug": "w5-7620b48b27"
+  },
+  "f|חַיִּין": {
+   "g": "f",
+   "word": "חַיִּין",
+   "current": null,
+   "slug": "w5-624f095fea"
+  },
+  "f|בְּטִיבוּ": {
+   "g": "f",
+   "word": "בְּטִיבוּ",
+   "current": "audio/f/israeli/word/brich-shmei-w33.mp3",
+   "slug": "w5-7730f3ef8a"
+  },
+  "f|צַדִּיקַיָּא": {
+   "g": "f",
+   "word": "צַדִּיקַיָּא",
+   "current": "audio/f/israeli/word/brich-shmei-w38.mp3",
+   "slug": "w5-233645dea8"
+  },
+  "f|דְּהוּא": {
+   "g": "f",
+   "word": "דְּהוּא",
+   "current": "audio/f/israeli/word/brich-shmei-w84.mp3",
+   "slug": "w5-df483392dd"
+  },
+  "f|וּנְבִיאוֹהִי": {
+   "g": "f",
+   "word": "וּנְבִיאוֹהִי",
+   "current": "audio/f/israeli/word/brich-shmei-w89.mp3",
+   "slug": "w5-803aae9769"
+  },
+  "f|וּמַסְגֵּא": {
+   "g": "f",
+   "word": "וּמַסְגֵּא",
+   "current": "audio/f/israeli/word/brich-shmei-w91.mp3",
+   "slug": "w5-f11dcf1f02"
+  },
+  "f|לְמֶעְבַּד": {
+   "g": "f",
+   "word": "לְמֶעְבַּד",
+   "current": "audio/f/israeli/word/brich-shmei-w92.mp3",
+   "slug": "w5-12199a23de"
+  },
+  "f|טָבְוָן": {
+   "g": "f",
+   "word": "טָבְוָן",
+   "current": "audio/f/israeli/word/brich-shmei-w93.mp3",
+   "slug": "w5-f393d79e1c"
+  },
+  "f|לִבָּאי": {
+   "g": "f",
+   "word": "לִבָּאי",
+   "current": "audio/f/israeli/word/brich-shmei-w108.mp3",
+   "slug": "w5-219ee81fcf"
+  },
+  "f|וּלְחַיִּין": {
+   "g": "f",
+   "word": "וּלְחַיִּין",
+   "current": "audio/f/israeli/word/brich-shmei-w117.mp3",
+   "slug": "w5-df21d4606f"
+  },
+  "m|בְרָא": {
+   "g": "m",
+   "word": "בְרָא",
+   "current": null,
+   "slug": "w5-915c22f401"
+  },
+  "m|כִרְעוּתֵהּ": {
+   "g": "m",
+   "word": "כִרְעוּתֵהּ",
+   "current": "audio/m/israeli/word/kaddish-1-w8.mp3",
+   "slug": "w5-82a903e72a"
+  },
+  "m|וּבְיוֹמֵיכוֹן": {
+   "g": "m",
+   "word": "וּבְיוֹמֵיכוֹן",
+   "current": null,
+   "slug": "w5-07c744464d"
+  },
+  "m|וְיִשְׁתַּבַּח": {
+   "g": "m",
+   "word": "וְיִשְׁתַּבַּח",
+   "current": "audio/m/israeli/word/kaddish-1-w29.mp3",
+   "slug": "w5-9602772027"
+  },
+  "m|וְיִתְרוֹמַם": {
+   "g": "m",
+   "word": "וְיִתְרוֹמַם",
+   "current": "audio/m/israeli/word/kaddish-1-w31.mp3",
+   "slug": "w5-8cb6f703c7"
+  },
+  "m|וְיִתְנַשֵּׂא": {
+   "g": "m",
+   "word": "וְיִתְנַשֵּׂא",
+   "current": "audio/m/israeli/word/kaddish-1-w32.mp3",
+   "slug": "w5-27065e1b41"
+  },
+  "m|וְיִתְהַדָּר": {
+   "g": "m",
+   "word": "וְיִתְהַדָּר",
+   "current": "audio/m/israeli/word/kaddish-1-w33.mp3",
+   "slug": "w5-e1bf286cff"
+  },
+  "m|וְיִתְעַלֶּה": {
+   "g": "m",
+   "word": "וְיִתְעַלֶּה",
+   "current": "audio/m/israeli/word/kaddish-1-w34.mp3",
+   "slug": "w5-d567f42175"
+  },
+  "m|וְיִתְהַלָּל": {
+   "g": "m",
+   "word": "וְיִתְהַלָּל",
+   "current": "audio/m/israeli/word/kaddish-1-w35.mp3",
+   "slug": "w5-d5c7fba87e"
+  },
+  "m|בִּמְרוֹמָיו": {
+   "g": "m",
+   "word": "בִּמְרוֹמָיו",
+   "current": "audio/m/israeli/word/kaddish-1-w60.mp3",
+   "slug": "w5-9fa1009f9a"
+  },
+  "m|בְּבֵיתֶךָ": {
+   "g": "m",
+   "word": "בְּבֵיתֶךָ",
+   "current": "audio/m/israeli/word/shema-vahavta-w27.mp3",
+   "slug": "w5-d16643124c"
+  },
+  "m|אֲדֹנָי": {
+   "g": "m",
+   "word": "אֲדֹנָי",
+   "current": "audio/m/israeli/word/adon-olam-1-w69.mp3",
+   "slug": "w5-da39c8dba7"
+  },
+  "m|מַיִם": {
+   "g": "m",
+   "word": "מַיִם",
+   "current": "audio/m/israeli/word/anchor-mem.mp3",
+   "slug": "w5-b25128f2b8"
+  },
+  "m|אֵין": {
+   "g": "m",
+   "word": "אֵין",
+   "current": "audio/m/israeli/word/aleinu-1-w76.mp3",
+   "slug": "w5-01fd2b9db6"
+  },
+  "m|קֵץ": {
+   "g": "m",
+   "word": "קֵץ",
+   "current": "audio/m/israeli/word/h0849ff56.mp3",
+   "slug": "w5-110b5bd28b"
+  },
+  "m|בְרֵאשִׁית": {
+   "g": "m",
+   "word": "בְרֵאשִׁית",
+   "current": "audio/m/israeli/word/kiddush-shabbat-eve-w19.mp3",
+   "slug": "w5-9068136192"
+  },
+  "m|לִיצִיאַת": {
+   "g": "m",
+   "word": "לִיצִיאַת",
+   "current": "audio/m/israeli/word/kiddush-shabbat-eve-w27.mp3",
+   "slug": "w5-82d0b065c2"
+  },
+  "m|בָחַרְתָּ": {
+   "g": "m",
+   "word": "בָחַרְתָּ",
+   "current": "audio/m/israeli/word/kiddush-shabbat-eve-w31.mp3",
+   "slug": "w5-1bf583a71b"
+  },
+  "m|קָדְשְׁךָ": {
+   "g": "m",
+   "word": "קָדְשְׁךָ",
+   "current": "audio/m/israeli/word/haftarah-after-w91.mp3",
+   "slug": "w5-84171c840d"
+  },
+  "f|וּבְשָׁכְבְּךָ": {
+   "g": "f",
+   "word": "וּבְשָׁכְבְּךָ",
+   "current": "audio/f/israeli/word/shema-vahavta-w30.mp3",
+   "slug": "w5-3d699392e1"
+  },
+  "f|כִּי": {
+   "g": "f",
+   "word": "כִּי",
+   "current": "audio/f/israeli/word/aleinu-1-w68.mp3",
+   "slug": "w5-1cef050dd4"
+  },
+  "f|יָהּ": {
+   "g": "f",
+   "word": "יָהּ",
+   "current": "audio-takes/f/w78a4c4dcbc-p.mp3",
+   "slug": "w5-3765a27140"
+  },
+  "f|אֲדֹנָי": {
+   "g": "f",
+   "word": "אֲדֹנָי",
+   "current": "audio/f/israeli/word/adon-olam-1-w69.mp3",
+   "slug": "w5-19af066bfd"
+  },
+  "f|מַיִם": {
+   "g": "f",
+   "word": "מַיִם",
+   "current": "audio/f/israeli/word/anchor-mem.mp3",
+   "slug": "w5-4a114afa7e"
+  },
+  "f|בְּשָׂשׁוֹן": {
+   "g": "f",
+   "word": "בְּשָׂשׁוֹן",
+   "current": "audio/f/israeli/word/havdalah-opening-w17.mp3",
+   "slug": "w5-fcb82c8d24"
+  },
+  "f|בִרְכָתֶךָ": {
+   "g": "f",
+   "word": "בִרְכָתֶךָ",
+   "current": "audio/f/israeli/word/havdalah-opening-w24.mp3",
+   "slug": "w5-821cef5923"
+  },
+  "f|בָּךְ": {
+   "g": "f",
+   "word": "בָּךְ",
+   "current": "audio/f/israeli/word/havdalah-opening-w39.mp3",
+   "slug": "w5-c528cced68"
+  },
+  "f|הוֹשִׁיעָה": {
+   "g": "f",
+   "word": "הוֹשִׁיעָה",
+   "current": "audio/f/israeli/word/amidah-elohai-netzor-w45.mp3",
+   "slug": "w5-f82786b7cb"
+  },
+  "f|יְמִינֶךָ": {
+   "g": "f",
+   "word": "יְמִינֶךָ",
+   "current": "audio/f/israeli/word/amidah-elohai-netzor-w35.mp3",
+   "slug": "w5-0ac2916888"
+  },
+  "m|עֲצָתָם": {
+   "g": "m",
+   "word": "עֲצָתָם",
+   "current": "audio/m/israeli/word/amidah-elohai-netzor-w27.mp3",
+   "slug": "w5-ad88fa3460"
+  },
+  "m|צוּר": {
+   "g": "m",
+   "word": "צוּר",
+   "current": "audio/m/israeli/word/haftarah-after-w7.mp3",
+   "slug": "w5-b96e6704e4"
+  },
+  "m|הָאֹמֵר": {
+   "g": "m",
+   "word": "הָאֹמֵר",
+   "current": "audio/m/israeli/word/haftarah-after-w13.mp3",
+   "slug": "w5-da0ece9f2c"
+  },
+  "m|בֵּית": {
+   "g": "m",
+   "word": "בֵּית",
+   "current": "audio/m/israeli/word/haftarah-after-w51.mp3",
+   "slug": "w5-74791bc834"
+  },
+  "m|בְיָמֵינוּ": {
+   "g": "m",
+   "word": "בְיָמֵינוּ",
+   "current": "audio/m/israeli/word/haftarah-after-w57.mp3",
+   "slug": "w5-4bbc1811e5"
+  },
+  "m|לָךְ": {
+   "g": "m",
+   "word": "לָךְ",
+   "current": "audio/m/israeli/word/haftarah-after-w128.mp3",
+   "slug": "w5-61b8313b24"
+  },
+  "m|חַי": {
+   "g": "m",
+   "word": "חַי",
+   "current": "audio/m/israeli/word/h2d58afb3.mp3",
+   "slug": "w5-e8b091b4ba"
+  },
+  "f|חֵן": {
+   "g": "f",
+   "word": "חֵן",
+   "current": "audio/f/israeli/word/hea4f6fcc.mp3",
+   "slug": "w5-cdf31507c9"
+  },
+  "f|בְּאוֹר": {
+   "g": "f",
+   "word": "בְּאוֹר",
+   "current": "audio/f/israeli/word/sim-shalom-w16.mp3",
+   "slug": "w5-736f75cdf3"
+  },
+  "f|בְאוֹר": {
+   "g": "f",
+   "word": "בְאוֹר",
+   "current": "audio/f/israeli/word/sim-shalom-w19.mp3",
+   "slug": "w5-c8e22b57ad"
+  },
+  "f|לְשַׁבֵּחַ": {
+   "g": "f",
+   "word": "לְשַׁבֵּחַ",
+   "current": "audio/f/israeli/word/aleinu-1-w2.mp3",
+   "slug": "w5-41fbac725e"
+  },
+  "f|לְיוֹצֵר": {
+   "g": "f",
+   "word": "לְיוֹצֵר",
+   "current": "audio/f/israeli/word/aleinu-1-w7.mp3",
+   "slug": "w5-ae343d5d3e"
+  },
+  "f|שָׂמָנוּ": {
+   "g": "f",
+   "word": "שָׂמָנוּ",
+   "current": "audio/f/israeli/word/aleinu-1-w14.mp3",
+   "slug": "w5-2328563ae8"
+  },
+  "f|הָאָרֶץ": {
+   "g": "f",
+   "word": "הָאָרֶץ",
+   "current": "audio/f/israeli/word/hamotzi-w10.mp3",
+   "slug": "w5-996230cc65"
+  },
+  "m|וְיִתְפָּאַר": {
+   "g": "m",
+   "word": "וְיִתְפָּאַר",
+   "current": "audio/m/israeli/word/kaddish-1-w30.mp3",
+   "slug": "w5-76918a193a"
+  },
+  "f|בְּמִצְוֹתָיו": {
+   "g": "f",
+   "word": "בְּמִצְוֹתָיו",
+   "current": "audio/f/israeli/word/candle-shabbat-w9.mp3",
+   "slug": "w5-7cfb518f18"
+  },
+  "f|לִיצִיאַת": {
+   "g": "f",
+   "word": "לִיצִיאַת",
+   "current": "audio/f/israeli/word/kiddush-shabbat-eve-w27.mp3",
+   "slug": "w5-6e1b31e980"
+  },
+  "f|בָחַרְתָּ": {
+   "g": "f",
+   "word": "בָחַרְתָּ",
+   "current": "audio/f/israeli/word/kiddush-shabbat-eve-w31.mp3",
+   "slug": "w5-3514cb0b50"
+  },
+  "m|בְּאוֹר": {
+   "g": "m",
+   "word": "בְּאוֹר",
+   "current": "audio/m/israeli/word/sim-shalom-w16.mp3",
+   "slug": "w5-e44f2e049f"
+  },
+  "m|בְאוֹר": {
+   "g": "m",
+   "word": "בְאוֹר",
+   "current": "audio/m/israeli/word/sim-shalom-w19.mp3",
+   "slug": "w5-fdf701ff71"
+  },
+  "m|וְיִשְׁמְרֶךָ": {
+   "g": "m",
+   "word": "וְיִשְׁמְרֶךָ",
+   "current": "audio/m/israeli/word/bless-priestly-1-w3.mp3",
+   "slug": "w5-f60a65e2a2"
+  },
+  "m|יְבָרֶכְךָ": {
+   "g": "m",
+   "word": "יְבָרֶכְךָ",
+   "current": "audio/m/israeli/word/bless-priestly-1-w1.mp3",
+   "slug": "w5-13c760b8ca"
+  },
+  "f|הָיִינוּ": {
+   "g": "f",
+   "word": "הָיִינוּ",
+   "current": "audio/f/israeli/word/shir-hamaalot-w26.mp3",
+   "slug": "w5-3f3d9b221a"
+  },
+  "f|אָז": {
+   "g": "f",
+   "word": "אָז",
+   "current": "audio-takes/f/w7bd5849fe2-p.mp3",
+   "slug": "w5-22fe3de82c"
+  },
+  "f|שְׂחוֹק": {
+   "g": "f",
+   "word": "שְׂחוֹק",
+   "current": "audio/f/israeli/word/shir-hamaalot-w11.mp3",
+   "slug": "w5-7a043d4719"
+  },
+  "f|בַגּוֹיִם": {
+   "g": "f",
+   "word": "בַגּוֹיִם",
+   "current": "audio/f/israeli/word/shir-hamaalot-w17.mp3",
+   "slug": "w5-761e27c624"
+  },
+  "f|הַזֹּרְעִים": {
+   "g": "f",
+   "word": "הַזֹּרְעִים",
+   "current": "audio/f/israeli/word/shir-hamaalot-w33.mp3",
+   "slug": "w5-ea661a97cb"
+  },
+  "f|הַזָּרַע": {
+   "g": "f",
+   "word": "הַזָּרַע",
+   "current": null,
+   "slug": "w5-db67dfc111"
+  },
+  "f|בְרִנָּה": {
+   "g": "f",
+   "word": "בְרִנָּה",
+   "current": "audio/f/israeli/word/shir-hamaalot-w43.mp3",
+   "slug": "w5-9de18eb980"
+  },
+  "f|אֱלֹהֵינוּ": {
+   "g": "f",
+   "word": "אֱלֹהֵינוּ",
+   "current": "audio/f/israeli/word/aleinu-1-w54.mp3",
+   "slug": "w5-61246a5bae"
+  },
+  "f|צוּר": {
+   "g": "f",
+   "word": "צוּר",
+   "current": "audio/f/israeli/word/haftarah-after-w7.mp3",
+   "slug": "w5-096719f38d"
+  },
+  "f|הִיא": {
+   "g": "f",
+   "word": "הִיא",
+   "current": "audio/f/israeli/word/brich-shmei-w62.mp3",
+   "slug": "w5-ba7a9f4d30"
+  },
+  "f|בְיָמֵינוּ": {
+   "g": "f",
+   "word": "בְיָמֵינוּ",
+   "current": "audio/f/israeli/word/haftarah-after-w57.mp3",
+   "slug": "w5-e5f93e0285"
+  },
+  "f|שַׂמְּחֵנוּ": {
+   "g": "f",
+   "word": "שַׂמְּחֵנוּ",
+   "current": "audio/f/israeli/word/haftarah-after-w64.mp3",
+   "slug": "w5-bdb045d8c1"
+  },
+  "f|זָר": {
+   "g": "f",
+   "word": "זָר",
+   "current": "audio/f/israeli/word/h3b09d299.mp3",
+   "slug": "w5-e5664fe1c3"
+  },
+  "f|יִנְחֲלוּ": {
+   "g": "f",
+   "word": "יִנְחֲלוּ",
+   "current": "audio/f/israeli/word/haftarah-after-w84.mp3",
+   "slug": "w5-4be6a47bfb"
+  },
+  "f|הַתּוֹרָה": {
+   "g": "f",
+   "word": "הַתּוֹרָה",
+   "current": "audio/f/israeli/word/haftarah-after-w105.mp3",
+   "slug": "w5-714e216a98"
+  },
+  "f|בֵּית": {
+   "g": "f",
+   "word": "בֵּית",
+   "current": "audio/f/israeli/word/haftarah-after-w51.mp3",
+   "slug": "w5-6e627aae32"
+  },
+  "m|הַשַׁבָּת": {
+   "g": "m",
+   "word": "הַשַׁבָּת",
+   "current": "audio/m/israeli/word/kiddush-zachor-w3.mp3",
+   "slug": "w5-8002994382"
+  },
+  "m|וַיָּנַח": {
+   "g": "m",
+   "word": "וַיָּנַח",
+   "current": "audio-takes/m/w82fb117bad-m.mp3",
+   "slug": "w5-e697fafbf1"
+  },
+  "m|וַיְקַדְּשֵׁהוּ": {
+   "g": "m",
+   "word": "וַיְקַדְּשֵׁהוּ",
+   "current": "audio/m/israeli/word/i-35-w11.mp3",
+   "slug": "w5-62ed911703"
+  },
+  "m|אֶת": {
+   "g": "m",
+   "word": "אֶת",
+   "current": "audio-takes/m/wf0d6430aeb-p.mp3",
+   "slug": "w5-9a5fc9bf8b"
+  },
+  "m|הָיִינוּ": {
+   "g": "m",
+   "word": "הָיִינוּ",
+   "current": "audio/m/israeli/word/shir-hamaalot-w26.mp3",
+   "slug": "w5-5752f274f3"
+  },
+  "m|שְׂחוֹק": {
+   "g": "m",
+   "word": "שְׂחוֹק",
+   "current": "audio/m/israeli/word/shir-hamaalot-w11.mp3",
+   "slug": "w5-1d2711ef82"
+  },
+  "m|בַגּוֹיִם": {
+   "g": "m",
+   "word": "בַגּוֹיִם",
+   "current": "audio-takes/m/w5c521c3cba-p.mp3",
+   "slug": "w5-d638156ee2"
+  },
+  "m|הַזֹּרְעִים": {
+   "g": "m",
+   "word": "הַזֹּרְעִים",
+   "current": "audio/m/israeli/word/shir-hamaalot-w33.mp3",
+   "slug": "w5-e857940082"
+  },
+  "m|הַזָּרַע": {
+   "g": "m",
+   "word": "הַזָּרַע",
+   "current": null,
+   "slug": "w5-1ea1271316"
+  },
+  "m|בְרִנָּה": {
+   "g": "m",
+   "word": "בְרִנָּה",
+   "current": "audio/m/israeli/word/shir-hamaalot-w43.mp3",
+   "slug": "w5-51260276e4"
+  },
+  "f|כֹל": {
+   "g": "f",
+   "word": "כֹל",
+   "current": "audio/f/israeli/word/lecha-hashem-w9.mp3",
+   "slug": "w5-062dcecab3"
+  },
+  "f|וֵאלֹהֵי": {
+   "g": "f",
+   "word": "וֵאלֹהֵי",
+   "current": "audio/f/israeli/word/avot-1-w11.mp3",
+   "slug": "w5-2156b200a3"
+  },
+  "f|יִצְחָק": {
+   "g": "f",
+   "word": "יִצְחָק",
+   "current": "audio/f/israeli/word/avot-1-w10.mp3",
+   "slug": "w5-fed0d5b7b2"
+  },
+  "f|הַגִּבּוֹר": {
+   "g": "f",
+   "word": "הַגִּבּוֹר",
+   "current": "audio/f/israeli/word/avot-1-w15.mp3",
+   "slug": "w5-da75a667de"
+  },
+  "f|אֱלֹהֵי": {
+   "g": "f",
+   "word": "אֱלֹהֵי",
+   "current": "audio/f/israeli/word/avot-1-w7.mp3",
+   "slug": "w5-8004c6aec1"
+  },
+  "f|בְּאַהֲבָה": {
+   "g": "f",
+   "word": "בְּאַהֲבָה",
+   "current": "audio/f/israeli/word/avot-1-w33.mp3",
+   "slug": "w5-a88594f479"
+  },
+  "f|מָלַךְ": {
+   "g": "f",
+   "word": "מָלַךְ",
+   "current": "audio/f/israeli/word/adon-olam-1-w4.mp3",
+   "slug": "w5-ea4cc27309"
+  },
+  "f|וְאָעִירָה": {
+   "g": "f",
+   "word": "וְאָעִירָה",
+   "current": "audio/f/israeli/word/adon-olam-1-w65.mp3",
+   "slug": "w5-d54ace7bc3"
+  },
+  "f|גְּוִיָּתִי": {
+   "g": "f",
+   "word": "גְּוִיָּתִי",
+   "current": "audio/f/israeli/word/adon-olam-1-w68.mp3",
+   "slug": "w5-f2ebca2fe2"
+  },
+  "f|בְנֵי": {
+   "g": "f",
+   "word": "בְנֵי",
+   "current": null,
+   "slug": "w5-0436a70dd7"
+  },
+  "f|הִוא": {
+   "g": "f",
+   "word": "הִוא",
+   "current": "audio/f/israeli/word/kiddush-veshamru-w14.mp3",
+   "slug": "w5-9a47785b3d"
+  },
+  "f|יָמִים": {
+   "g": "f",
+   "word": "יָמִים",
+   "current": "audio/f/israeli/word/etz-chaim-w15.mp3",
+   "slug": "w5-61c4f807a7"
+  },
+  "f|הַשָּׁמַיִם": {
+   "g": "f",
+   "word": "הַשָּׁמַיִם",
+   "current": "audio/f/israeli/word/kiddush-gen-2-1-3-w2.mp3",
+   "slug": "w5-823346e622"
+  },
+  "f|וַיִּנָּפַשׁ": {
+   "g": "f",
+   "word": "וַיִּנָּפַשׁ",
+   "current": "audio/f/israeli/word/kiddush-veshamru-w25.mp3",
+   "slug": "w5-5539fc5a8c"
+  },
+  "f|בִּנְסֹעַ": {
+   "g": "f",
+   "word": "בִּנְסֹעַ",
+   "current": "audio-takes/f/wfe3f04e813-p.mp3",
+   "slug": "w5-736a2798e2"
+  },
+  "f|וְיָפֻצוּ": {
+   "g": "f",
+   "word": "וְיָפֻצוּ",
+   "current": "audio/f/israeli/word/vayehi-binsoa-w8.mp3",
+   "slug": "w5-0dd7e208c7"
+  },
+  "m|לִבְנֵי": {
+   "g": "m",
+   "word": "לִבְנֵי",
+   "current": "audio/m/israeli/word/avot-1-w29.mp3",
+   "slug": "w5-f6f621c6ca"
+  },
+  "m|לְיוֹצֵר": {
+   "g": "m",
+   "word": "לְיוֹצֵר",
+   "current": "audio/m/israeli/word/aleinu-1-w7.mp3",
+   "slug": "w5-c5a11032cd"
+  },
+  "m|בְּרֵאשִׁית": {
+   "g": "m",
+   "word": "בְּרֵאשִׁית",
+   "current": "audio/m/israeli/word/aleinu-1-w8.mp3",
+   "slug": "w5-1cec9f0fbc"
+  },
+  "m|הָאֲרָצוֹת": {
+   "g": "m",
+   "word": "הָאֲרָצוֹת",
+   "current": "audio/m/israeli/word/aleinu-1-w12.mp3",
+   "slug": "w5-4e144ec716"
+  },
+  "m|שָׁמַיִם": {
+   "g": "m",
+   "word": "שָׁמַיִם",
+   "current": "audio/m/israeli/word/aleinu-1-w42.mp3",
+   "slug": "w5-50e5f862ef"
+  },
+  "m|עֻזּוֹ": {
+   "g": "m",
+   "word": "עֻזּוֹ",
+   "current": "audio/m/israeli/word/aleinu-1-w50.mp3",
+   "slug": "w5-8adaafa374"
+  },
+  "m|כֹל": {
+   "g": "m",
+   "word": "כֹל",
+   "current": "audio/m/israeli/word/lecha-hashem-w9.mp3",
+   "slug": "w5-ff128df261"
+  },
+  "m|בַּשָּׁמַיִם": {
+   "g": "m",
+   "word": "בַּשָּׁמַיִם",
+   "current": "audio/m/israeli/word/aleinu-1-w47.mp3",
+   "slug": "w5-d908dce225"
+  },
+  "m|לַהֲדֹם": {
+   "g": "m",
+   "word": "לַהֲדֹם",
+   "current": "audio-takes/m/w18d146c050-s.mp3",
+   "slug": "w5-76c7488233"
+  },
+  "m|יְמֵי": {
+   "g": "m",
+   "word": "יְמֵי",
+   "current": "audio/m/israeli/word/hanerot-halalu-w18.mp3",
+   "slug": "w5-531dc986ad"
+  },
+  "m|בְנֵי": {
+   "g": "m",
+   "word": "בְנֵי",
+   "current": null,
+   "slug": "w5-1fd9862246"
+  },
+  "m|הִוא": {
+   "g": "m",
+   "word": "הִוא",
+   "current": "audio-takes/m/w06af0eebce-p.mp3",
+   "slug": "w5-cf8f6cf2e6"
+  },
+  "m|הַשָּׁמַיִם": {
+   "g": "m",
+   "word": "הַשָּׁמַיִם",
+   "current": "audio/m/israeli/word/kiddush-gen-2-1-3-w2.mp3",
+   "slug": "w5-bdd37d5f97"
+  },
+  "f|וְגֵרְךָ": {
+   "g": "f",
+   "word": "וְגֵרְךָ",
+   "current": "audio/f/israeli/word/kiddush-zachor-w22.mp3",
+   "slug": "w5-a3a0f19f04"
+  },
+  "f|הַיָּם": {
+   "g": "f",
+   "word": "הַיָּם",
+   "current": null,
+   "slug": "w5-b0e1de314e"
+  },
+  "f|וַיָּנַח": {
+   "g": "f",
+   "word": "וַיָּנַח",
+   "current": "audio/f/israeli/word/kiddush-zachor-w33.mp3",
+   "slug": "w5-dab7dc36b5"
+  },
+  "f|וַיְקַדְּשֵׁהוּ": {
+   "g": "f",
+   "word": "וַיְקַדְּשֵׁהוּ",
+   "current": "audio/f/israeli/word/i-35-w11.mp3",
+   "slug": "w5-65ebf7d55b"
+  }
+ },
+ "lines": {
+  "m|צַדִּיקַיָּא": [
+   "audio/m/israeli/line/brich-shmei.mp3",
+   "audio/m/israeli/prayer/brich-shmei.mp3"
+  ],
+  "m|כָּל": [
+   "audio/m/israeli/line/brich-shmei.mp3",
+   "audio/m/israeli/prayer/brich-shmei.mp3",
+   "audio/m/israeli/prayer/kaddish-1.mp3",
+   "audio/m/israeli/prayer/kaddish-1.mp3",
+   "audio/m/israeli/prayer/kaddish-1.mp3",
+   "audio/m/israeli/prayer/haftarah-after.mp3",
+   "audio/m/israeli/prayer/haftarah-after.mp3",
+   "audio/m/israeli/line/sim-shalom-l1.mp3",
+   "audio/m/israeli/prayer/sim-shalom.mp3",
+   "audio/m/israeli/prayer/kiddush-zachor.mp3",
+   "audio/m/israeli/prayer/kiddush-zachor.mp3"
+  ],
+  "m|בַּר": [
+   "audio/m/israeli/line/brich-shmei.mp3",
+   "audio/m/israeli/prayer/brich-shmei.mp3"
+  ],
+  "m|אֱלָהָא": [
+   "audio/m/israeli/line/brich-shmei.mp3",
+   "audio/m/israeli/prayer/brich-shmei.mp3"
+  ],
+  "m|וּנְבִיאוֹהִי": [
+   "audio/m/israeli/line/brich-shmei.mp3",
+   "audio/m/israeli/prayer/brich-shmei.mp3"
+  ],
+  "m|לְמֶעְבַּד": [
+   "audio/m/israeli/line/brich-shmei.mp3",
+   "audio/m/israeli/prayer/brich-shmei.mp3"
+  ],
+  "m|דְּלִבָּאי": [
+   "audio/m/israeli/line/brich-shmei.mp3",
+   "audio/m/israeli/prayer/brich-shmei.mp3"
+  ],
+  "m|דְכָל": [
+   "audio/m/israeli/line/brich-shmei.mp3",
+   "audio/m/israeli/prayer/brich-shmei.mp3",
+   "audio/m/israeli/prayer/kaddish-1.mp3",
+   "audio/m/israeli/line/kaddish-1-l2.mp3"
+  ],
+  "m|וּלְחַיִּין": [
+   "audio/m/israeli/line/brich-shmei.mp3",
+   "audio/m/israeli/prayer/brich-shmei.mp3"
+  ],
+  "f|בְרָא": [
+   "audio/f/israeli/prayer/kaddish-1.mp3"
+  ],
+  "f|כִרְעוּתֵהּ": [
+   "audio/f/israeli/prayer/kaddish-1.mp3"
+  ],
+  "f|וּבְיוֹמֵיכוֹן": [
+   "audio/f/israeli/prayer/kaddish-1.mp3"
+  ],
+  "f|וּבְחַיֵּי": [
+   "audio/f/israeli/prayer/kaddish-1.mp3"
+  ],
+  "f|דְכָל": [
+   "audio/f/israeli/prayer/kaddish-1.mp3",
+   "audio/f/israeli/line/brich-shmei.mp3",
+   "audio/f/israeli/prayer/brich-shmei.mp3"
+  ],
+  "f|וְאִמְרוּ": [
+   "audio/f/israeli/prayer/kaddish-1.mp3",
+   "audio/f/israeli/prayer/kaddish-1.mp3",
+   "audio/f/israeli/prayer/kaddish-1.mp3",
+   "audio/f/israeli/prayer/kaddish-1.mp3"
+  ],
+  "f|יְהֵא": [
+   "audio/f/israeli/prayer/kaddish-1.mp3",
+   "audio/f/israeli/prayer/kaddish-1.mp3",
+   "audio/f/israeli/line/brich-shmei.mp3",
+   "audio/f/israeli/line/brich-shmei.mp3",
+   "audio/f/israeli/line/brich-shmei.mp3",
+   "audio/f/israeli/prayer/brich-shmei.mp3",
+   "audio/f/israeli/prayer/brich-shmei.mp3",
+   "audio/f/israeli/prayer/brich-shmei.mp3"
+  ],
+  "f|וְיִשְׁתַּבַּח": [
+   "audio/f/israeli/prayer/kaddish-1.mp3",
+   "audio/f/israeli/prayer/yigdal.mp3"
+  ],
+  "f|וְיִתְרוֹמַם": [
+   "audio/f/israeli/prayer/kaddish-1.mp3"
+  ],
+  "f|וְיִתְהַדָּר": [
+   "audio/f/israeli/prayer/kaddish-1.mp3"
+  ],
+  "f|הוּא": [
+   "audio/f/israeli/prayer/kaddish-1.mp3",
+   "audio/f/israeli/prayer/kaddish-1.mp3",
+   "audio/f/israeli/line/brich-shmei.mp3",
+   "audio/f/israeli/line/brich-shmei.mp3",
+   "audio/f/israeli/line/brich-shmei.mp3",
+   "audio/f/israeli/line/brich-shmei.mp3",
+   "audio/f/israeli/prayer/brich-shmei.mp3",
+   "audio/f/israeli/prayer/brich-shmei.mp3",
+   "audio/f/israeli/prayer/brich-shmei.mp3",
+   "audio/f/israeli/prayer/brich-shmei.mp3",
+   "audio/f/israeli/prayer/haftarah-after.mp3",
+   "audio/f/israeli/prayer/lecha-hashem.mp3",
+   "audio/f/israeli/line/haftarah-after-l1.mp3"
+  ],
+  "f|כָּל": [
+   "audio/f/israeli/prayer/kaddish-1.mp3",
+   "audio/f/israeli/prayer/kaddish-1.mp3",
+   "audio/f/israeli/prayer/kaddish-1.mp3",
+   "audio/f/israeli/line/brich-shmei.mp3",
+   "audio/f/israeli/prayer/brich-shmei.mp3",
+   "audio/f/israeli/line/sim-shalom-l1.mp3",
+   "audio/f/israeli/prayer/sim-shalom.mp3",
+   "audio/f/israeli/prayer/haftarah-after.mp3",
+   "audio/f/israeli/prayer/haftarah-after.mp3",
+   "audio/f/israeli/prayer/adon-olam-1.mp3",
+   "audio/f/israeli/line/haftarah-after-l1.mp3",
+   "audio/f/israeli/prayer/kiddush-zachor.mp3",
+   "audio/f/israeli/prayer/kiddush-zachor.mp3"
+  ],
+  "f|לְבָבְךָ": [
+   "audio/f/israeli/prayer/vahavta-full.mp3",
+   "audio/f/israeli/prayer/shema-vahavta.mp3"
+  ],
+  "f|מְצַוְּךָ": [
+   "audio/f/israeli/prayer/vahavta-full.mp3",
+   "audio/f/israeli/prayer/shema-vahavta.mp3",
+   "audio/f/israeli/prayer/vahavta-2.mp3"
+  ],
+  "f|בַדֶּרֶךְ": [
+   "audio/f/israeli/prayer/vahavta-full.mp3",
+   "audio/f/israeli/prayer/vahavta-2.mp3"
+  ],
+  "m|מְצַוְּךָ": [
+   "audio/m/israeli/prayer/vahavta-full.mp3",
+   "audio/m/israeli/prayer/shema-vahavta.mp3",
+   "audio/m/israeli/prayer/vahavta-2.mp3",
+   "audio/m/israeli/line/shema-vahavta-l3.mp3",
+   "audio/m/israeli/line/vahavta-2-l1.mp3"
+  ],
+  "m|בַדֶּרֶךְ": [
+   "audio/m/israeli/prayer/vahavta-full.mp3",
+   "audio/m/israeli/prayer/shema-vahavta.mp3",
+   "audio/m/israeli/prayer/vahavta-2.mp3"
+  ],
+  "m|וּבְשָׁכְבְּךָ": [
+   "audio/m/israeli/prayer/vahavta-full.mp3"
+  ],
+  "f|חַי": [
+   "audio/f/israeli/prayer/yigdal.mp3",
+   "audio/f/israeli/prayer/haftarah-after.mp3"
+  ],
+  "f|עֵת": [
+   "audio/f/israeli/prayer/yigdal.mp3"
+  ],
+  "f|אֵין": [
+   "audio/f/israeli/prayer/yigdal.mp3",
+   "audio/f/israeli/prayer/yigdal.mp3",
+   "audio/f/israeli/line/aleinu-1.mp3",
+   "audio/f/israeli/prayer/aleinu-1.mp3"
+  ],
+  "f|הַגּוּף": [
+   "audio/f/israeli/prayer/yigdal.mp3"
+  ],
+  "f|דָּבָר": [
+   "audio/f/israeli/prayer/yigdal.mp3",
+   "audio/f/israeli/prayer/yigdal.mp3"
+  ],
+  "f|אֶת": [
+   "audio/f/israeli/prayer/yigdal.mp3"
+  ],
+  "f|יַד": [
+   "audio/f/israeli/prayer/yigdal.mp3"
+  ],
+  "f|קֵץ": [
+   "audio/f/israeli/prayer/yigdal.mp3"
+  ],
+  "f|בָּרוּךְ": [
+   "audio/f/israeli/prayer/yigdal.mp3",
+   "audio/f/israeli/line/haftarah-after-l3.mp3"
+  ],
+  "f|וּפֻרְקַן": [
+   "audio/f/israeli/line/brich-shmei.mp3",
+   "audio/f/israeli/prayer/brich-shmei.mp3"
+  ],
+  "f|חַיִּין": [
+   "audio/f/israeli/line/brich-shmei.mp3",
+   "audio/f/israeli/prayer/brich-shmei.mp3"
+  ],
+  "f|בְּטִיבוּ": [
+   "audio/f/israeli/line/brich-shmei.mp3",
+   "audio/f/israeli/prayer/brich-shmei.mp3"
+  ],
+  "f|צַדִּיקַיָּא": [
+   "audio/f/israeli/line/brich-shmei.mp3",
+   "audio/f/israeli/prayer/brich-shmei.mp3"
+  ],
+  "f|דְּהוּא": [
+   "audio/f/israeli/line/brich-shmei.mp3",
+   "audio/f/israeli/prayer/brich-shmei.mp3"
+  ],
+  "f|וּנְבִיאוֹהִי": [
+   "audio/f/israeli/line/brich-shmei.mp3",
+   "audio/f/israeli/prayer/brich-shmei.mp3"
+  ],
+  "f|וּמַסְגֵּא": [
+   "audio/f/israeli/line/brich-shmei.mp3",
+   "audio/f/israeli/prayer/brich-shmei.mp3"
+  ],
+  "f|לְמֶעְבַּד": [
+   "audio/f/israeli/line/brich-shmei.mp3",
+   "audio/f/israeli/prayer/brich-shmei.mp3"
+  ],
+  "f|טָבְוָן": [
+   "audio/f/israeli/line/brich-shmei.mp3",
+   "audio/f/israeli/prayer/brich-shmei.mp3"
+  ],
+  "f|לִבָּאי": [
+   "audio/f/israeli/line/brich-shmei.mp3",
+   "audio/f/israeli/prayer/brich-shmei.mp3"
+  ],
+  "f|וּלְחַיִּין": [
+   "audio/f/israeli/line/brich-shmei.mp3",
+   "audio/f/israeli/prayer/brich-shmei.mp3"
+  ],
+  "m|בְרָא": [
+   "audio/m/israeli/prayer/kaddish-1.mp3",
+   "audio/m/israeli/line/kaddish-1-l2.mp3"
+  ],
+  "m|כִרְעוּתֵהּ": [
+   "audio/m/israeli/prayer/kaddish-1.mp3",
+   "audio/m/israeli/line/kaddish-1-l2.mp3"
+  ],
+  "m|וּבְיוֹמֵיכוֹן": [
+   "audio/m/israeli/prayer/kaddish-1.mp3",
+   "audio/m/israeli/line/kaddish-1-l2.mp3"
+  ],
+  "m|וְיִשְׁתַּבַּח": [
+   "audio/m/israeli/prayer/kaddish-1.mp3",
+   "audio/m/israeli/line/kaddish-1-l4.mp3"
+  ],
+  "m|וְיִתְרוֹמַם": [
+   "audio/m/israeli/prayer/kaddish-1.mp3",
+   "audio/m/israeli/line/kaddish-1-l4.mp3"
+  ],
+  "m|וְיִתְנַשֵּׂא": [
+   "audio/m/israeli/prayer/kaddish-1.mp3",
+   "audio/m/israeli/line/kaddish-1-l4.mp3"
+  ],
+  "m|וְיִתְהַדָּר": [
+   "audio/m/israeli/prayer/kaddish-1.mp3",
+   "audio/m/israeli/line/kaddish-1-l4.mp3"
+  ],
+  "m|וְיִתְעַלֶּה": [
+   "audio/m/israeli/prayer/kaddish-1.mp3",
+   "audio/m/israeli/line/kaddish-1-l4.mp3"
+  ],
+  "m|וְיִתְהַלָּל": [
+   "audio/m/israeli/prayer/kaddish-1.mp3",
+   "audio/m/israeli/line/kaddish-1-l4.mp3"
+  ],
+  "m|בִּמְרוֹמָיו": [
+   "audio/m/israeli/prayer/kaddish-1.mp3"
+  ],
+  "m|בְּבֵיתֶךָ": [
+   "audio/m/israeli/prayer/shema-vahavta.mp3"
+  ],
+  "m|אֲדֹנָי": [
+   "audio/m/israeli/line/havdalah-opening.mp3",
+   "audio/m/israeli/line/havdalah-opening.mp3",
+   "audio/m/israeli/line/havdalah-opening.mp3",
+   "audio/m/israeli/line/havdalah-opening.mp3",
+   "audio/m/israeli/line/havdalah-opening.mp3",
+   "audio/m/israeli/prayer/havdalah-opening.mp3",
+   "audio/m/israeli/prayer/havdalah-opening.mp3",
+   "audio/m/israeli/prayer/havdalah-opening.mp3",
+   "audio/m/israeli/prayer/havdalah-opening.mp3",
+   "audio/m/israeli/prayer/havdalah-opening.mp3",
+   "audio/m/israeli/prayer/haftarah-after.mp3",
+   "audio/m/israeli/prayer/haftarah-after.mp3",
+   "audio/m/israeli/prayer/haftarah-after.mp3",
+   "audio/m/israeli/prayer/haftarah-after.mp3",
+   "audio/m/israeli/prayer/haftarah-after.mp3",
+   "audio/m/israeli/prayer/haftarah-after.mp3",
+   "audio/m/israeli/prayer/haftarah-after.mp3",
+   "audio/m/israeli/prayer/haftarah-after.mp3",
+   "audio/m/israeli/prayer/haftarah-after.mp3",
+   "audio/m/israeli/line/bless-priestly-1.mp3",
+   "audio/m/israeli/prayer/kiddush-zachor.mp3",
+   "audio/m/israeli/prayer/kiddush-zachor.mp3"
+  ],
+  "m|מַיִם": [
+   "audio/m/israeli/line/havdalah-opening.mp3",
+   "audio/m/israeli/prayer/havdalah-opening.mp3"
+  ],
+  "m|אֵין": [
+   "audio/m/israeli/prayer/yigdal.mp3",
+   "audio/m/israeli/prayer/yigdal.mp3",
+   "audio/m/israeli/line/aleinu-1.mp3",
+   "audio/m/israeli/prayer/aleinu-1.mp3"
+  ],
+  "m|קֵץ": [
+   "audio/m/israeli/prayer/yigdal.mp3"
+  ],
+  "m|בְרֵאשִׁית": [
+   "audio/m/israeli/line/kiddush-shabbat-eve.mp3",
+   "audio/m/israeli/prayer/kiddush-shabbat-eve.mp3"
+  ],
+  "m|לִיצִיאַת": [
+   "audio/m/israeli/line/kiddush-shabbat-eve.mp3",
+   "audio/m/israeli/prayer/kiddush-shabbat-eve.mp3"
+  ],
+  "m|בָחַרְתָּ": [
+   "audio/m/israeli/line/kiddush-shabbat-eve.mp3",
+   "audio/m/israeli/prayer/kiddush-shabbat-eve.mp3"
+  ],
+  "m|קָדְשְׁךָ": [
+   "audio/m/israeli/line/kiddush-shabbat-eve.mp3",
+   "audio/m/israeli/prayer/kiddush-shabbat-eve.mp3"
+  ],
+  "f|וּבְשָׁכְבְּךָ": [
+   "audio/f/israeli/prayer/shema-vahavta.mp3"
+  ],
+  "f|כִּי": [
+   "audio/f/israeli/line/havdalah-opening.mp3",
+   "audio/f/israeli/prayer/havdalah-opening.mp3",
+   "audio/f/israeli/line/sim-shalom-l1.mp3",
+   "audio/f/israeli/line/aleinu-1.mp3",
+   "audio/f/israeli/prayer/aleinu-1.mp3",
+   "audio/f/israeli/prayer/sim-shalom.mp3",
+   "audio/f/israeli/line/kiddush-shabbat-eve.mp3",
+   "audio/f/israeli/line/kiddush-shabbat-eve.mp3",
+   "audio/f/israeli/prayer/kiddush-shabbat-eve.mp3",
+   "audio/f/israeli/prayer/kiddush-shabbat-eve.mp3",
+   "audio/f/israeli/prayer/haftarah-after.mp3",
+   "audio/f/israeli/prayer/haftarah-after.mp3",
+   "audio/f/israeli/prayer/haftarah-after.mp3",
+   "audio/f/israeli/line/haftarah-after-l3.mp3",
+   "audio/f/israeli/prayer/lecha-hashem.mp3",
+   "audio/f/israeli/prayer/lecha-hashem.mp3",
+   "audio/f/israeli/line/vayehi-binsoa.mp3",
+   "audio/f/israeli/prayer/vayehi-binsoa.mp3",
+   "audio/f/israeli/line/haftarah-after-l1.mp3",
+   "audio/f/israeli/prayer/kiddush-zachor.mp3"
+  ],
+  "f|יָהּ": [
+   "audio/f/israeli/line/havdalah-opening.mp3",
+   "audio/f/israeli/prayer/havdalah-opening.mp3",
+   "audio/f/israeli/line/yehalelu-l2.mp3",
+   "audio/f/israeli/line/kedushah-yimloch.mp3",
+   "audio/f/israeli/prayer/kedushah-yimloch.mp3"
+  ],
+  "f|אֲדֹנָי": [
+   "audio/f/israeli/line/havdalah-opening.mp3",
+   "audio/f/israeli/line/havdalah-opening.mp3",
+   "audio/f/israeli/line/havdalah-opening.mp3",
+   "audio/f/israeli/line/havdalah-opening.mp3",
+   "audio/f/israeli/line/havdalah-opening.mp3",
+   "audio/f/israeli/prayer/havdalah-opening.mp3",
+   "audio/f/israeli/prayer/havdalah-opening.mp3",
+   "audio/f/israeli/prayer/havdalah-opening.mp3",
+   "audio/f/israeli/prayer/havdalah-opening.mp3",
+   "audio/f/israeli/prayer/havdalah-opening.mp3",
+   "audio/f/israeli/prayer/haftarah-after.mp3",
+   "audio/f/israeli/prayer/haftarah-after.mp3",
+   "audio/f/israeli/prayer/haftarah-after.mp3",
+   "audio/f/israeli/prayer/haftarah-after.mp3",
+   "audio/f/israeli/prayer/haftarah-after.mp3",
+   "audio/f/israeli/prayer/haftarah-after.mp3",
+   "audio/f/israeli/prayer/haftarah-after.mp3",
+   "audio/f/israeli/prayer/haftarah-after.mp3",
+   "audio/f/israeli/prayer/haftarah-after.mp3",
+   "audio/f/israeli/line/haftarah-after-l3.mp3",
+   "audio/f/israeli/line/haftarah-after-l3.mp3",
+   "audio/f/israeli/prayer/lecha-hashem.mp3",
+   "audio/f/israeli/prayer/lecha-hashem.mp3",
+   "audio/f/israeli/prayer/lecha-hashem.mp3",
+   "audio/f/israeli/prayer/lecha-hashem.mp3",
+   "audio/f/israeli/prayer/lecha-hashem.mp3",
+   "audio/f/israeli/prayer/avot-1.mp3",
+   "audio/f/israeli/prayer/kiddush-veshamru.mp3",
+   "audio/f/israeli/line/haftarah-after-l1.mp3",
+   "audio/f/israeli/line/haftarah-after-l1.mp3",
+   "audio/f/israeli/line/haftarah-after-l1.mp3",
+   "audio/f/israeli/line/kiddush-veshamru-l2.mp3",
+   "audio/f/israeli/prayer/kiddush-zachor.mp3",
+   "audio/f/israeli/prayer/kiddush-zachor.mp3"
+  ],
+  "f|מַיִם": [
+   "audio/f/israeli/line/havdalah-opening.mp3",
+   "audio/f/israeli/prayer/havdalah-opening.mp3"
+  ],
+  "f|בְּשָׂשׁוֹן": [
+   "audio/f/israeli/line/havdalah-opening.mp3",
+   "audio/f/israeli/prayer/havdalah-opening.mp3"
+  ],
+  "f|בִרְכָתֶךָ": [
+   "audio/f/israeli/line/havdalah-opening.mp3",
+   "audio/f/israeli/prayer/havdalah-opening.mp3"
+  ],
+  "f|בָּךְ": [
+   "audio/f/israeli/line/havdalah-opening.mp3",
+   "audio/f/israeli/prayer/havdalah-opening.mp3"
+  ],
+  "f|הוֹשִׁיעָה": [
+   "audio/f/israeli/line/havdalah-opening.mp3",
+   "audio/f/israeli/prayer/havdalah-opening.mp3"
+  ],
+  "f|יְמִינֶךָ": [
+   "audio/f/israeli/prayer/amidah-elohai-netzor.mp3"
+  ],
+  "m|עֲצָתָם": [
+   "audio/m/israeli/line/amidah-elohai-netzor.mp3",
+   "audio/m/israeli/prayer/amidah-elohai-netzor.mp3"
+  ],
+  "m|צוּר": [
+   "audio/m/israeli/prayer/haftarah-after.mp3"
+  ],
+  "m|הָאֹמֵר": [
+   "audio/m/israeli/prayer/haftarah-after.mp3"
+  ],
+  "m|בֵּית": [
+   "audio/m/israeli/prayer/haftarah-after.mp3",
+   "audio/m/israeli/prayer/haftarah-after.mp3"
+  ],
+  "m|בְיָמֵינוּ": [
+   "audio/m/israeli/prayer/haftarah-after.mp3"
+  ],
+  "m|לָךְ": [
+   "audio/m/israeli/prayer/haftarah-after.mp3"
+  ],
+  "m|חַי": [
+   "audio/m/israeli/prayer/haftarah-after.mp3"
+  ],
+  "f|חֵן": [
+   "audio/f/israeli/line/sim-shalom-l1.mp3",
+   "audio/f/israeli/prayer/sim-shalom.mp3"
+  ],
+  "f|בְּאוֹר": [
+   "audio/f/israeli/line/sim-shalom-l1.mp3",
+   "audio/f/israeli/prayer/sim-shalom.mp3"
+  ],
+  "f|בְאוֹר": [
+   "audio/f/israeli/line/sim-shalom-l1.mp3",
+   "audio/f/israeli/prayer/sim-shalom.mp3"
+  ],
+  "f|לְשַׁבֵּחַ": [
+   "audio/f/israeli/line/aleinu-1.mp3",
+   "audio/f/israeli/prayer/aleinu-1.mp3"
+  ],
+  "f|לְיוֹצֵר": [
+   "audio/f/israeli/line/aleinu-1.mp3",
+   "audio/f/israeli/prayer/aleinu-1.mp3"
+  ],
+  "f|שָׂמָנוּ": [
+   "audio/f/israeli/line/aleinu-1.mp3",
+   "audio/f/israeli/prayer/aleinu-1.mp3"
+  ],
+  "f|הָאָרֶץ": [
+   "audio/f/israeli/line/aleinu-1.mp3",
+   "audio/f/israeli/prayer/aleinu-1.mp3",
+   "audio/f/israeli/prayer/kiddush-veshamru.mp3",
+   "audio/f/israeli/line/kiddush-veshamru-l2.mp3",
+   "audio/f/israeli/prayer/kiddush-zachor.mp3"
+  ],
+  "m|וְיִתְפָּאַר": [
+   "audio/m/israeli/line/kaddish-1-l4.mp3"
+  ],
+  "f|בְּמִצְוֹתָיו": [
+   "audio/f/israeli/line/kiddush-shabbat-eve.mp3",
+   "audio/f/israeli/prayer/kiddush-shabbat-eve.mp3"
+  ],
+  "f|לִיצִיאַת": [
+   "audio/f/israeli/line/kiddush-shabbat-eve.mp3",
+   "audio/f/israeli/prayer/kiddush-shabbat-eve.mp3"
+  ],
+  "f|בָחַרְתָּ": [
+   "audio/f/israeli/line/kiddush-shabbat-eve.mp3",
+   "audio/f/israeli/prayer/kiddush-shabbat-eve.mp3"
+  ],
+  "m|בְּאוֹר": [
+   "audio/m/israeli/line/sim-shalom-l1.mp3",
+   "audio/m/israeli/prayer/sim-shalom.mp3"
+  ],
+  "m|בְאוֹר": [
+   "audio/m/israeli/line/sim-shalom-l1.mp3",
+   "audio/m/israeli/prayer/sim-shalom.mp3"
+  ],
+  "m|וְיִשְׁמְרֶךָ": [
+   "audio/m/israeli/line/bless-priestly-1.mp3",
+   "audio/m/israeli/line/torah-numbers-6-24.mp3"
+  ],
+  "m|יְבָרֶכְךָ": [
+   "audio/m/israeli/line/torah-numbers-6-24.mp3",
+   "audio/m/israeli/prayer/bless-priestly-1.mp3"
+  ],
+  "f|הָיִינוּ": [
+   "audio/f/israeli/prayer/shir-hamaalot.mp3",
+   "audio/f/israeli/prayer/shir-hamaalot.mp3"
+  ],
+  "f|אָז": [
+   "audio/f/israeli/prayer/shir-hamaalot.mp3",
+   "audio/f/israeli/prayer/shir-hamaalot.mp3"
+  ],
+  "f|שְׂחוֹק": [
+   "audio/f/israeli/prayer/shir-hamaalot.mp3"
+  ],
+  "f|בַגּוֹיִם": [
+   "audio/f/israeli/prayer/shir-hamaalot.mp3"
+  ],
+  "f|הַזֹּרְעִים": [
+   "audio/f/israeli/prayer/shir-hamaalot.mp3"
+  ],
+  "f|הַזָּרַע": [
+   "audio/f/israeli/prayer/shir-hamaalot.mp3"
+  ],
+  "f|בְרִנָּה": [
+   "audio/f/israeli/prayer/shir-hamaalot.mp3"
+  ],
+  "f|אֱלֹהֵינוּ": [
+   "audio/f/israeli/prayer/haftarah-after.mp3",
+   "audio/f/israeli/prayer/haftarah-after.mp3",
+   "audio/f/israeli/prayer/haftarah-after.mp3",
+   "audio/f/israeli/prayer/haftarah-after.mp3",
+   "audio/f/israeli/prayer/haftarah-after.mp3"
+  ],
+  "f|צוּר": [
+   "audio/f/israeli/prayer/haftarah-after.mp3",
+   "audio/f/israeli/line/haftarah-after-l1.mp3"
+  ],
+  "f|הִיא": [
+   "audio/f/israeli/prayer/haftarah-after.mp3"
+  ],
+  "f|בְיָמֵינוּ": [
+   "audio/f/israeli/prayer/haftarah-after.mp3"
+  ],
+  "f|שַׂמְּחֵנוּ": [
+   "audio/f/israeli/prayer/haftarah-after.mp3",
+   "audio/f/israeli/line/haftarah-after-l3.mp3"
+  ],
+  "f|זָר": [
+   "audio/f/israeli/prayer/haftarah-after.mp3",
+   "audio/f/israeli/line/haftarah-after-l3.mp3"
+  ],
+  "f|יִנְחֲלוּ": [
+   "audio/f/israeli/prayer/haftarah-after.mp3"
+  ],
+  "f|הַתּוֹרָה": [
+   "audio/f/israeli/prayer/haftarah-after.mp3"
+  ],
+  "f|בֵּית": [
+   "audio/f/israeli/line/haftarah-after-l3.mp3"
+  ],
+  "m|הַשַׁבָּת": [
+   "audio/m/israeli/prayer/kiddush-zachor.mp3",
+   "audio/m/israeli/prayer/kiddush-zachor.mp3"
+  ],
+  "m|וַיָּנַח": [
+   "audio/m/israeli/prayer/kiddush-zachor.mp3"
+  ],
+  "m|וַיְקַדְּשֵׁהוּ": [
+   "audio/m/israeli/prayer/kiddush-zachor.mp3"
+  ],
+  "m|אֶת": [
+   "audio/m/israeli/prayer/shir-hamaalot.mp3",
+   "audio/m/israeli/prayer/shir-hamaalot.mp3"
+  ],
+  "m|הָיִינוּ": [
+   "audio/m/israeli/prayer/shir-hamaalot.mp3",
+   "audio/m/israeli/prayer/shir-hamaalot.mp3"
+  ],
+  "m|שְׂחוֹק": [
+   "audio/m/israeli/prayer/shir-hamaalot.mp3"
+  ],
+  "m|בַגּוֹיִם": [
+   "audio/m/israeli/prayer/shir-hamaalot.mp3"
+  ],
+  "m|הַזֹּרְעִים": [
+   "audio/m/israeli/prayer/shir-hamaalot.mp3"
+  ],
+  "m|הַזָּרַע": [
+   "audio/m/israeli/prayer/shir-hamaalot.mp3"
+  ],
+  "m|בְרִנָּה": [
+   "audio/m/israeli/prayer/shir-hamaalot.mp3"
+  ],
+  "f|כֹל": [
+   "audio/f/israeli/line/lecha-hashem.mp3",
+   "audio/f/israeli/prayer/lecha-hashem.mp3"
+  ],
+  "f|וֵאלֹהֵי": [
+   "audio/f/israeli/line/avot-1.mp3",
+   "audio/f/israeli/line/avot-1.mp3"
+  ],
+  "f|יִצְחָק": [
+   "audio/f/israeli/line/avot-1.mp3",
+   "audio/f/israeli/prayer/avot-1.mp3"
+  ],
+  "f|הַגִּבּוֹר": [
+   "audio/f/israeli/line/avot-1.mp3"
+  ],
+  "f|אֱלֹהֵי": [
+   "audio/f/israeli/prayer/avot-1.mp3",
+   "audio/f/israeli/prayer/avot-1.mp3"
+  ],
+  "f|בְּאַהֲבָה": [
+   "audio/f/israeli/prayer/avot-1.mp3"
+  ],
+  "f|מָלַךְ": [
+   "audio/f/israeli/prayer/adon-olam-1.mp3"
+  ],
+  "f|וְאָעִירָה": [
+   "audio/f/israeli/prayer/adon-olam-1.mp3"
+  ],
+  "f|גְּוִיָּתִי": [
+   "audio/f/israeli/prayer/adon-olam-1.mp3"
+  ],
+  "f|בְנֵי": [
+   "audio/f/israeli/prayer/kiddush-veshamru.mp3"
+  ],
+  "f|הִוא": [
+   "audio/f/israeli/prayer/kiddush-veshamru.mp3",
+   "audio/f/israeli/line/kiddush-veshamru-l2.mp3"
+  ],
+  "f|יָמִים": [
+   "audio/f/israeli/prayer/kiddush-veshamru.mp3"
+  ],
+  "f|הַשָּׁמַיִם": [
+   "audio/f/israeli/prayer/kiddush-veshamru.mp3",
+   "audio/f/israeli/line/kiddush-veshamru-l2.mp3",
+   "audio/f/israeli/prayer/kiddush-zachor.mp3"
+  ],
+  "f|וַיִּנָּפַשׁ": [
+   "audio/f/israeli/prayer/kiddush-veshamru.mp3"
+  ],
+  "f|בִּנְסֹעַ": [
+   "audio/f/israeli/line/vayehi-binsoa.mp3",
+   "audio/f/israeli/prayer/vayehi-binsoa.mp3"
+  ],
+  "f|וְיָפֻצוּ": [
+   "audio/f/israeli/line/vayehi-binsoa.mp3"
+  ],
+  "m|לִבְנֵי": [
+   "audio/m/israeli/prayer/yehalelu.mp3"
+  ],
+  "m|לְיוֹצֵר": [
+   "audio/m/israeli/line/aleinu-1.mp3",
+   "audio/m/israeli/prayer/aleinu-1.mp3"
+  ],
+  "m|בְּרֵאשִׁית": [
+   "audio/m/israeli/line/aleinu-1.mp3",
+   "audio/m/israeli/prayer/aleinu-1.mp3"
+  ],
+  "m|הָאֲרָצוֹת": [
+   "audio/m/israeli/line/aleinu-1.mp3",
+   "audio/m/israeli/prayer/aleinu-1.mp3"
+  ],
+  "m|שָׁמַיִם": [
+   "audio/m/israeli/line/aleinu-1.mp3",
+   "audio/m/israeli/prayer/aleinu-1.mp3"
+  ],
+  "m|עֻזּוֹ": [
+   "audio/m/israeli/line/aleinu-1.mp3",
+   "audio/m/israeli/prayer/aleinu-1.mp3"
+  ],
+  "m|כֹל": [
+   "audio/m/israeli/line/lecha-hashem.mp3",
+   "audio/m/israeli/prayer/lecha-hashem.mp3"
+  ],
+  "m|בַּשָּׁמַיִם": [
+   "audio/m/israeli/line/lecha-hashem.mp3",
+   "audio/m/israeli/prayer/lecha-hashem.mp3"
+  ],
+  "m|לַהֲדֹם": [
+   "audio/m/israeli/line/lecha-hashem.mp3",
+   "audio/m/israeli/prayer/lecha-hashem.mp3"
+  ],
+  "m|יְמֵי": [
+   "audio/m/israeli/line/hanerot-halalu.mp3",
+   "audio/m/israeli/prayer/hanerot-halalu.mp3"
+  ],
+  "m|בְנֵי": [
+   "audio/m/israeli/prayer/kiddush-veshamru.mp3"
+  ],
+  "m|הִוא": [
+   "audio/m/israeli/prayer/kiddush-veshamru.mp3",
+   "audio/m/israeli/line/kiddush-veshamru-l2.mp3"
+  ],
+  "m|הַשָּׁמַיִם": [
+   "audio/m/israeli/prayer/kiddush-veshamru.mp3",
+   "audio/m/israeli/line/kiddush-veshamru-l2.mp3"
+  ],
+  "f|וְגֵרְךָ": [
+   "audio/f/israeli/prayer/kiddush-zachor.mp3"
+  ],
+  "f|הַיָּם": [
+   "audio/f/israeli/prayer/kiddush-zachor.mp3"
+  ],
+  "f|וַיָּנַח": [
+   "audio/f/israeli/prayer/kiddush-zachor.mp3"
+  ],
+  "f|וַיְקַדְּשֵׁהוּ": [
+   "audio/f/israeli/prayer/kiddush-zachor.mp3"
+  ]
+ }
+}

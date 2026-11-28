@@ -1,0 +1,259 @@
+"""Pick a re-recorded take for each flagged clip from the four-listener hearings, and put it in place.
+
+A take replaces the clip only when the four listeners do better on it than on the clip:
+  word      the take is heard right by at least 3 of 4 listeners (and by more than the clip was);
+  sentence  fewer words misheard by 3+ listeners than in the clip (then fewer by 2+); never more of either.
+Torah lines (torah-*) must also be read at normal pace: only 1.0-speed takes, and within 15% of the clip's length.
+Among takes that qualify, the best by the listeners wins; on a tie, Chirp with vowel points first, WaveNet last.
+
+  python multi4_pick.py --clips docs/audio/multi4/multi4-hearings.jsonl --takes t1.jsonl t2.jsonl ... \
+      --takes-root /path/with/takes [--apply]
+"""
+import argparse, collections, datetime, json, os, re, subprocess, sys
+HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, HERE)
+import multi4_merge as M   # rescoring (also patches check_lib.score)
+import scan_lines as S
+import chirp_takes as C
+import natural as N
+import phon4
+
+ROOT = os.path.abspath(os.path.join(HERE, '..', '..', '..'))
+ORDER = ['c-pt', 'c-pt-ph', 'c-pl', 'c-pl-ph', 'c-pt-90', 'c-pl-90', 'w-pt', 'w-pt-ph']
+NAMES = ['ivrit-turbo', 'whisper-v3', 'mms-1b', 'seamless-v2']
+
+
+def stats(kind, want, hearings):
+    """(rank key, summary) for one recording heard by the four listeners; lower key is better."""
+    if kind == 'word':
+        sc = [M.score(want, h['heard']) for h in hearings]
+        sc = [1.0 if s == 'digits' else (s or 0.0) for s in sc]
+        n_ok = sum(s >= M.L.PASS for s in sc)
+        return (-n_ok, -sum(sc) / max(1, len(sc))), {'ok': n_ok}
+    c, accs = collections.Counter(), []
+    for h in hearings:
+        acc, issues, _ = S.compare(M.clean(want), h['heard'])
+        accs.append(acc)
+        for w in {i['say'] for i in issues}:
+            c[w] += 1
+    b3 = sorted(w for w, n in c.items() if n >= 3)
+    b2 = sorted(w for w, n in c.items() if n == 2)
+    return (len(b3), len(b2), -sum(accs) / max(1, len(accs))), {'b3': b3, 'b2': b2}
+
+
+def dur(path):
+    return float(subprocess.run(['ffprobe', '-v', '0', '-show_entries', 'format=duration', '-of', 'csv=p=0', path],
+                                capture_output=True, text=True).stdout or 0)
+
+
+
+RESPELL = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'round4-respell.json')
+PROBLEMS = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'round3-problems.json')
+RESPELL_LINES = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'round5-respell-lines.json')
+
+
+def take_source(f, g, tid, want):
+    """(voice, text sent to the voice) for a take id, as chirp_takes.py made it."""
+    chirp, wavenet = C.VOICES[g]
+    pt, pl = C.speakable(want), C.plain(want)
+    km = C.ktiv_male(pt)
+    base = re.sub(r'-(90|80|ph|cut)$', '', re.sub(r'-cut$', '', tid))
+    base = re.sub(r'-(90|80|ph)$', '', base)
+    if '-rs' in tid:                                              # round 5: problem words respelled for the voice
+        bad = {re.sub(r'[\u0591-\u05C7]', '', w) for w in json.load(open(RESPELL_LINES, encoding='utf-8')).get(f, [])}
+        rs = ' '.join(C.respell(w) if re.sub(r'[\u0591-\u05C7]', '', w) in bad else w for w in pt.split())
+        if tid.startswith('w-'):
+            return wavenet, rs
+        if 'rspl' in tid:
+            return chirp, C.plain(rs)
+        return chirp, ('הַמִּלָּה, ' + rs + '.' if 'car' in tid else rs)
+    if re.match(r's\d', tid):                                   # round 4: the word respelled
+        sp = json.load(open(RESPELL, encoding='utf-8'))[f][int(tid[1])]
+        voice = C.ALT[g][0] if base.endswith('-a') else chirp
+        return voice, ('הַמִּלָּה, ' + sp + '.' if 'car' in tid else sp)
+    if re.match(r'a\d', tid):
+        return C.ALT[g][int(tid[1])], (km if base.endswith('-km') else pt)
+    voice = wavenet if tid.startswith('w-') else chirp
+    if base == 'c-sel':
+        bad = {re.sub(r'[\u0591-\u05C7]', '', w) for w in json.load(open(PROBLEMS, encoding='utf-8')).get(f, [])}
+        return voice, ' '.join(C.ktiv_male(w) if re.sub(r'[\u0591-\u05C7]', '', w) in bad else w for w in pt.split())
+    if base in ('c-car', 'c-carkm'):
+        return voice, 'הַמִּלָּה, ' + (km if base == 'c-carkm' else pt) + '.'
+    if base == 'c-km':
+        return voice, km
+    if base == 'c-kmpl':
+        return voice, C.plain(km)
+    return voice, (pl if base.endswith('-pl') else pt)
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument('--clips', default=os.path.join(ROOT, 'docs', 'audio', 'multi4', 'multi4-hearings.jsonl'))
+    ap.add_argument('--flagged', default=os.path.join(ROOT, 'docs', 'audio', 'multi4', 'multi4-rerecord.txt'))
+    ap.add_argument('--queue', default=os.path.join(HERE, 'multi4-queue.json'))
+    ap.add_argument('--takes', nargs='+', required=True)
+    ap.add_argument('--takes-root', required=True)
+    ap.add_argument('--out', default=os.path.join(ROOT, 'docs', 'audio', 'multi4', 'REPLACEMENTS.md'))
+    ap.add_argument('--phon', nargs='*', default=[], help='phon4 hearings (originals and takes): adds the phonetic gate')
+    ap.add_argument('--extra', nargs='*', default=[], help='extra checks (mms-align, w2v-he, google)')
+    ap.add_argument('--apply', action='store_true')
+    a = ap.parse_args()
+    q = {o['file']: o for o in json.load(open(a.queue, encoding='utf-8'))}
+    flagged = [l.strip() for l in open(a.flagged, encoding='utf-8') if l.startswith('audio/')]
+    H = collections.defaultdict(list)
+    for l in open(a.clips, encoding='utf-8'):
+        r = json.loads(l); H[r['file']].append(r)
+    T = collections.defaultdict(lambda: collections.defaultdict(list))
+    for fn in a.takes:
+        for l in open(fn, encoding='utf-8'):
+            r = json.loads(l)
+            m = re.match(r'takes/(.+)/([^/]+)\.mp3$', r['file'])
+            T[m.group(1) + '.mp3'][m.group(2)].append(r)
+    ref = {}
+    for g in ('f', 'm'):
+        ps = [N.pace(os.path.join(ROOT, k), v['want']) for k, v in q.items() if v['kind'] == 'sentence' and k.split('/')[1] == g and k not in flagged and not N.is_torah(k)]
+        ref[g] = N.line_reference([x for x in ps if x])
+    import round_report as RR
+    WR = collections.defaultdict(dict)                    # word hearings by path and model (clips and takes)
+    for r in [x for v in H.values() for x in v] + [x for v in T.values() for hs in v.values() for x in hs]:
+        WR[r['file']][r['model']] = r
+    PR = collections.defaultdict(dict)                    # phonetic hearings, rescored
+    XR = collections.defaultdict(dict)                    # extra checks
+    for fn in a.extra:
+        for l in open(fn, encoding='utf-8'):
+            r = json.loads(l); XR[r['file']][r['model']] = r
+
+    def unconfirmed(path, o):
+        if not WR.get(path) or not PR.get(path):
+            return None
+        return sum(not v['ok'] for v in RR.verdicts(o, WR[path], PR[path], XR.get(path, {})))
+    PH = collections.defaultdict(dict)
+    for fn in a.phon:
+        for l in open(fn, encoding='utf-8'):
+            r = json.loads(l)
+            orig = re.sub(r'^takes/(.+)/[^/]+\.mp3$', r'\1.mp3', r['file'])
+            if orig in q and r.get('ipa') is not None:
+                r = phon4.rescore(r, q[orig]['want'])          # corrected expected sounds, Israeli R
+            PH[r['file']][r['model']] = {w['word']: w['match'] for w in r['words']}
+            PR[r['file']][r['model']] = r
+
+    def phon_mean(path):
+        """mean share of sounds heard over the phonetic checks (single words), or None"""
+        d = PH.get(path)
+        if not d:
+            return None
+        vals = [v for ws in d.values() for v in ws.values()]
+        return sum(vals) / len(vals) if vals else None
+
+    def phon_ok(path):
+        """{word: number of phonetic checks hearing >=75% of its sounds}, or None without data"""
+        d = PH.get(path)
+        if not d:
+            return None
+        out = collections.Counter()
+        for m, ws in d.items():
+            for w, v in ws.items():
+                out[w] += v >= 0.75
+        return out, len(d)
+    rows, now = [], datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%dT%H:%M:%S.000Z')
+    for f in flagged:
+        o = q[f]
+        key0, s0 = stats(o['kind'], o['want'], H[f])
+        torah = '/torah-' in f or os.path.basename(f).startswith('torah-')
+        d0 = dur(os.path.join(ROOT, f)) if torah else 0
+        cands, notes = [], []
+        for tid, hs in T[f].items():
+            if len({h['model'] for h in hs}) < 4:
+                notes.append(f'{tid}: not heard by all four'); continue
+            key, s = stats(o['kind'], o['want'], hs)
+            src = os.path.join(a.takes_root, 'takes', f[:-4], tid + '.mp3')
+            if torah and tid.endswith('-90'):
+                notes.append(f'{tid}: slowed, not used for Torah'); continue
+            ok_nat, why, _, prep, factor = N.judge(o['kind'], f, o['want'], src, ref.get(f.split('/')[1]))
+            if not ok_nat:
+                notes.append(f'{tid}: {why}'); continue
+            if o['kind'] == 'word':
+                good = s['ok'] >= 3 and s['ok'] > s0['ok']
+                pt4 = phon_ok('takes/' + f[:-4] + '/' + tid + '.mp3') if PH else None
+                po4 = phon_ok(f) if PH else None
+                # said alone, a word the word checks cannot place: all four phonetic checks hearing it is enough,
+                # if they did not all hear the clip it replaces
+                if not good and pt4 and pt4[1] >= 4 and all(v == pt4[1] for v in pt4[0].values()):
+                    good = True
+                # a single word only replaces the clip when the phonetic checks hear it better on average
+                # (a one-sound slip still passes 75% on a short word: 'banu' for 'vanu')
+                mt, mo = (phon_mean('takes/' + f[:-4] + '/' + tid + '.mp3'), phon_mean(f)) if PH else (None, None)
+                orig_ok = po4 and po4[1] >= 4 and all(v == po4[1] for v in po4[0].values())
+                if good and mt is not None and mo is not None and mt <= mo + (0.1 if orig_ok else 0):
+                    good = False; notes.append(f'{tid}: phonetic checks hear it no better than the clip ({mt:.2f} vs {mo:.2f})')
+            else:
+                # a line: the same rule as the accuracy figure (round_report.verdicts), over every check that heard it.
+                # The take must leave fewer unconfirmed words than the clip.
+                ut, uo = unconfirmed('takes/' + f[:-4] + '/' + tid + '.mp3', o), unconfirmed(f, o)
+                if ut is None:
+                    good = False; notes.append(f'{tid}: not heard by every kind of check yet')
+                elif uo is not None and ut >= uo:
+                    good = False; notes.append(f'{tid}: {ut} unconfirmed words vs {uo} in the clip')
+                else:
+                    good = True; key = (ut,) + key[1:]
+                    s = dict(s, unconfirmed=f'{ut} (clip {uo})')
+            if good and PH and o['kind'] == 'word':
+                po, pt_ = phon_ok(f), phon_ok('takes/' + f[:-4] + '/' + tid + '.mp3')
+                if pt_ is None:
+                    good = False; notes.append(f'{tid}: no phonetic hearing yet')
+                else:
+                    cnt, n = pt_
+                    need = min(3, n)
+                    probs = set(s0.get('b3', []) + s0.get('b2', [])) if o['kind'] == 'sentence' else set(cnt)
+                    probs = {w for w in probs if not w.startswith('(')}     # '(nothing)': an extra word heard, not a word of the text
+                    weak = [w for w in probs if cnt.get(w, 0) < need]
+                    tot_t = sum(v >= need for v in cnt.values())
+                    tot_o = sum(v >= min(3, po[1]) for v in po[0].values()) if po else 0
+                    if weak or tot_t < tot_o:
+                        good = False
+                        notes.append(f'{tid}: phonetic checks: ' + (('weak ' + ' '.join(sorted(weak))) if weak else f'{tot_t} words heard vs {tot_o} in the clip'))
+                    else:
+                        s = dict(s, phon=f'{tot_t}/{len(cnt)} words by >={need} of {n} phonetic checks')
+            if good:
+                cands.append((key, ORDER.index(tid) if tid in ORDER else 99, tid, s, src, prep, factor))
+        cands.sort()
+        row = {'file': f, 'kind': o['kind'], 'before': s0, 'notes': notes}
+        if cands:
+            key, _, tid, s, src, prep, factor = cands[0]
+            row.update(take=tid, after=s)
+            if a.apply:
+                dst = os.path.join(ROOT, f)
+                N.write_mp3(prep, dst, torah, factor)   # Torah: verse format at the verse pace; others: lesson format
+                mp = dst + '.meta.json'
+                meta = json.load(open(mp, encoding='utf-8')) if os.path.exists(mp) else {}
+                g = f.split('/')[1]
+                chirp, wavenet = C.VOICES[g]
+                voice, text = take_source(f, g, tid, M.clean(o['want']))
+                meta.update(status='tts', source='tts:google', engine='google', voiceId=voice,
+                            tradition='israeli', inputText=M.clean(o['want']), spokenText=text, renderedAt=now,
+                            speakingRate=0.8 if '-80' in tid else 0.9 if '-90' in tid else 1.0,
+                            **({'tempo': round(factor, 3)} if abs(factor - 1) > 0.005 else {}),
+                            checkedBy='four-listener ASR check (docs/audio/multi4), machine check only')
+                json.dump(meta, open(mp, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+        rows.append(row)
+    json.dump(rows, open(a.out + '.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1, default=str)
+
+    def fmt(kind, s):
+        ph = f" ({s['phon']})" if s.get('phon') else ''
+        return (f"{s['ok']}/4 heard right" + ph) if kind == 'word' else ph + (
+            ('3+ mishear: ' + ' '.join(s['b3']) if s['b3'] else 'none 3+') + ('; 2 mishear: ' + ' '.join(s['b2']) if s['b2'] else ''))
+    rep = [r for r in rows if 'take' in r]
+    L = ['# Re-recorded clips (four-listener check)', '',
+         f'Flagged for re-record: **{len(rows)}**. Replaced with a take the four listeners heard better: **{len(rep)}**. '
+         f'Left as they were (no take did better): **{len(rows) - len(rep)}**.', '',
+         'Takes: Chirp 3 HD (Kore female, Charon male) with and without vowel points, 0.9 speed for single words, and WaveNet as a fallback. '
+         'Torah lines only at normal speed and within 15% of the original length. A machine check, not a teacher\'s approval.', '',
+         '| clip | take | before | after |', '|---|---|---|---|']
+    for r in rows:
+        L.append(f"| `{r['file']}` | {r.get('take', 'kept')} | {fmt(r['kind'], r['before'])} | "
+                 f"{fmt(r['kind'], r['after']) if 'after' in r else '; '.join(r['notes'][:3]) or 'no take did better'} |")
+    open(a.out, 'w', encoding='utf-8').write('\n'.join(L) + '\n')
+    print('\n'.join(L[:4]))
+
+
+if __name__ == '__main__':
+    main()

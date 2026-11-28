@@ -1,0 +1,11 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google-cloud-tts",
+ "tradition": "israeli",
+ "voiceId": "he-IL-Wavenet-A",
+ "inputText": "בָחַרְתָּ",
+ "take": "w-rs",
+ "spokenText": "וָחַרְתָּ",
+ "checkedBy": "four phonetic checks (renikud, lv60, xlsr53, ipa1000) + Hebrew wav2vec2; round 5"
+}

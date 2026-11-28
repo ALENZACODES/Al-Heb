@@ -1,14 +1,14 @@
 {
  "status": "tts",
  "source": "tts:google",
- "engine": "google",
- "voiceId": "he-IL-Chirp3-HD-Charon",
+ "engine": "stitched-from-word-clips",
+ "voiceId": "he-IL-Wavenet-B",
  "tradition": "israeli",
  "inputText": "יְהֵא שְׁלָמָא רַבָּא מִן־שְׁמַיָּא וְחַיִּים עָלֵינוּ וְעַל־כָּל־יִשְׂרָאֵל וְאִמְרוּ אָמֵן׃",
  "inputSha256": "0dd28e93e9d70ca96497a9c12bb3812e6f8d8acb9e68c78f3f1be0d8b7ddba35",
  "ingestedAt": "2026-11-12T02:31:28.423Z",
  "licence": "customer-owned",
- "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "note": "Round 6: joined from single-word clips of one voice, each heard alone by four phonetic checks.",
  "renderedAt": "2026-11-12T02:31:28.423Z",
  "redistributionCleared": false,
  "spokenText": "יְהֵא, שְׁלָמָא, רַבָּא, מִן, שְׁמַיָּא, וְחַיִּים, עָלֵינוּ, וְעַל, כָּל, יִשְׂרָאֵל, וְאִמְרוּ, אָמֵן.",
@@ -31,5 +31,18 @@
   "voiceId": "he-IL-Wavenet-B",
   "engine": "stitched-from-word-clips",
   "renderedAt": null
- }
+ },
+ "stitchedFromText": "יְהֵא שְׁלָמָא רַבָּא מִן־שְׁמַיָּא וְחַיִּים עָלֵינוּ וְעַל־כָּל־יִשְׂרָאֵל וְאִמְרוּ אָמֵן׃",
+ "stitchedFrom": [
+  "audio/m/israeli/word/brich-shmei-w104.mp3",
+  "tools/audio/stitch-src/m/w6-181e9aa45c.mp3",
+  "audio/m/israeli/word/kaddish-1-w23.mp3",
+  "tools/audio/stitch-src/m/w6-f209c99c17.mp3",
+  "tools/audio/stitch-src/m/w6-8a4e1d610f.mp3",
+  "tools/audio/stitch-src/m/w6-483368a43d.mp3",
+  "tools/audio/stitch-src/m/w6-778659c669.mp3",
+  "audio/m/israeli/word/kaddish-1-w19.mp3",
+  "tools/audio/stitch-src/m/w6-7becdefb07.mp3"
+ ],
+ "voiceFamily": "WaveNet"
 }

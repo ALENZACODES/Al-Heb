@@ -1,0 +1,9 @@
+tools/audio/asr-check/
+takes/audio/f/israeli/line/ashrei-145-1-3-l2/stitch.mp3
+takes/audio/f/israeli/prayer/ashrei-145-1-3/stitch.mp3
+takes/audio/f/israeli/prayer/torah-bless-1/stitch.mp3
+takes/audio/f/israeli/line/kaddish-1-l2/stitch.mp3
+takes/audio/f/israeli/line/amidah-elohai-netzor/stitch.mp3
+takes/audio/m/israeli/line/yigdal-l7/stitch.mp3
+takes/audio/m/israeli/line/vahavta-full-l2/stitch.mp3
+takes/audio/m/israeli/line/kaddish-1-l6/stitch.mp3

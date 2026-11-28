@@ -372,8 +372,9 @@ async function boot() {
   try { stampDayStart(store, Date.now()); } catch { /* stamp is an addition */ }
   // One write path for "a game was played" (src/games/playtrack.js): Progress, the Games Library and Awards all read it.
   import('./games/playtrack.js').then((m) => {
-    let ids = null;
-    m.installPlayTracker({ store, isGame: (id) => (ids ||= import('./games/library.catalog.js').then((c) => new Set(c.allGames().map((g) => g.id)))).then((set) => set.has(id)) });
+    // The catalogue loads now, so the answer is ready (and the write synchronous) when a game is left or the tab closes.
+    let set = null; const ids = import('./games/library.catalog.js').then((c) => (set = new Set(c.allGames().map((g) => g.id)))).catch(() => null);
+    m.installPlayTracker({ store, isGame: (id) => (set ? set.has(id) : ids.then((s) => !!s?.has(id))) });
   }).catch(() => {});
   // The skip link's #main href would be read by the hash router as the route "/main"; focus <main> directly instead.
   document.querySelector('.skip-link')?.addEventListener('click', (e) => { e.preventDefault(); document.getElementById('main')?.focus(); });

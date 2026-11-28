@@ -293,3 +293,5 @@ button.game-laser-mirror.btn .he { color: #1a1305; }
 .game-laser-mirror.is-hit { filter: drop-shadow(0 0 8px #ff5a4d); }
 .game-laser-lamp { width: 64px; height: 64px; right: 0; font-size: 0; background: url("../img/play/SPR_lamp.webp") center / contain no-repeat; }
 .game-laser-beam { stroke: #e2362b; } .game-laser-glow { stroke: rgba(226,54,43,.3); }
+
+.game-catcher-score { margin: .2rem 0; font-weight: 700; color: #ffe9a8; }

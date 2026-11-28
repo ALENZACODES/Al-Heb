@@ -104,6 +104,9 @@ export async function rateCard(ctx, cardId, rating, now = Date.now()) {
   await ctx.store.set(CARDS_KEY, { ...st.cards, [cardId]: next });
   await storeSet(ctx, STREAK_KEY, recordActivity(st.rawStreak, now));
   if (cardId.startsWith("word:")) await updateScaffold(ctx, cardId, rating, next, now);
+  // Every saved rating tells hearts, XP and the daily review quest, wherever it was made: only the Review page used to, so the quest
+  // stayed at 0/5 while Progress counted the same reviews (review 3).
+  try { globalThis.document?.dispatchEvent?.(new CustomEvent("alef:review-rated", { detail: { rating } })); } catch { /* optional listeners */ }
   return next;
 }
 

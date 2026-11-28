@@ -18,7 +18,7 @@ export function mount(root, ctx) {
     , sec('sound', 'Why can I not hear some words?',
       h('p', {}, 'Three things can happen when you tap Listen:'),
       h('ul', {},
-        li(h('strong', {}, 'A clip plays. '), 'Most prayers, letters and common words have a clip in Ari’s or Noa’s voice.'),
+        li(h('strong', {}, 'A clip plays. '), 'Most prayers, letters and common words have a clip in Ari’s or Noa’s voice. Both are synthetic (computer-made) voices, not human recordings.'),
         li(h('strong', {}, 'Another voice is offered. '), 'If a word has no clip in your chosen voice or style, the button offers the other voice’s own clip, labelled with whose voice it is. Nothing is ever swapped silently.'),
         li(h('strong', {}, 'The device voice reads it. '), 'Where no clip exists, your device’s own Hebrew voice reads the word in Israeli pronunciation.')),
       h('p', {}, 'If a button says “No audio yet”, the written spelling under the Hebrew shows how to say it. In ', h('a', { href: '#/settings' }, 'Settings'), ' you choose the voice (Noa, the woman’s voice, or Ari, the man’s) and the pronunciation style; pages follow those choices.'))

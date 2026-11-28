@@ -191,7 +191,7 @@ export function resultsCard(h, heSpan, session, { title, onAgain, homeHref = '#/
   const rec = session.saveBest();
   reactRimon(stars >= 2 ? 'highfive' : stars ? 'laugh' : 'sad');
   try { globalThis.document?.dispatchEvent?.(new CustomEvent('alef:game-finished', { detail: { stars } })); } catch { /* optional: XP listens for this (src/retention/) */ }
-  return h('section', { class: 'card game-results', 'aria-labelledby': 'game-results-h' },
+  return h('section', { class: 'card game-results', 'data-stars': String(stars), 'aria-labelledby': 'game-results-h' },
     h('h2', { id: 'game-results-h' }, title),
     h('p', { class: 'game-stars', 'aria-label': `${stars} of 3 stars` }, '★'.repeat(stars) + '☆'.repeat(3 - stars)),
     h('p', {}, `Score ${session.score} · ${session.correct} of ${session.rounds} right · best streak ${session.bestStreak}`),

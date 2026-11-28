@@ -43,3 +43,11 @@ test('a prayer marked "Follow It" on the Fluency Ladder counts as followed in th
   assert.equal(before.prayers.have, 0);
   assert.equal(after.prayers.have, 1);
 });
+
+test('dictionary search: shalom, sholom, chalom and shalum all find the same word', async () => {
+  const { matchBand, BAND, soundKey } = await import('../src/vocab/rank.js');
+  const entry = { gloss: 'peace; hello; goodbye', translit: 'sholom', he: 'שלום' };
+  for (const q of ['sholom']) assert.equal(matchBand(entry, q, 'sholom'), BAND.translit);
+  for (const q of ['shalom', 'chalom', 'shalum']) assert.equal(matchBand(entry, q, 'sholom'), BAND.soundsLike, q);
+  assert.notEqual(soundKey('shalom'), soundKey('shlom'));
+});

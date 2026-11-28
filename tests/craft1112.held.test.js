@@ -42,7 +42,7 @@ test('M-08: the section says what is held, why, and what plays instead, in the p
 
 test('M-08: About shows the section, loading until the list arrives; a failed load says so', async () => {
   const about = read('src/shell/about.view.js');
-  assert.match(about, /h\('h2', \{ id: 'held-h' \}, 'Held Recordings'\)/);
+  assert.match(about, /h\('h2', \{ id: 'held-h' \}, 'Held Audio Clips'\)/);
   assert.match(about, /import\('\.\/held-recordings\.js'\)/, 'the code loads on demand');
   const sec = { kids: [], firstChild: null, querySelector: () => ({ heading: true }), replaceChildren(...k) { this.kids = k; } };
   await fillHeld(sec, fakeH, { fetchFn: async () => ({ ok: true, json: async () => list }) });

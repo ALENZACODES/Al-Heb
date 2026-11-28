@@ -82,7 +82,7 @@ export function mount(root,ctx) {
     deadline=nextShabbatSunset(new Date(),location);
     if(!deadline){status.textContent='Sunset calculation unavailable.';return;}
     if(!CATEGORIES.every(c=>hasRecordedClip(ctx,'word',c.clipId))){
-      status.textContent='Recorded Hebrew category call-outs unavailable. No guessing rounds.';
+      status.textContent='Hebrew category clips unavailable. No guessing rounds.';
       placeBoard(board, castEnvNode(h, R, 'shabbatrush', GAME_ENV.shabbat));
       return;
     }

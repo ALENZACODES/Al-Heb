@@ -112,6 +112,8 @@ export function mount(root, ctx) {
       heSpan(letter.glyph + target.point, 'he game-he-sm'), '.');
     // The syllable has no clip id. Do not speak the bare letter and call it the vowel.
     showScore();
+    // A new target is on its way at once, not after the sky turns over (review 4: the target was often missing from the sky).
+    if (!stars.some((st) => st.mark.id === target.id)) spawnAt = 0;
     void speak(ctx, letter.glyph + target.point, { onStatus: (m) => { if (alive) speechNote.textContent = m; } });
   }
 

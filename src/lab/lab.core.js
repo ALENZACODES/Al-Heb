@@ -43,7 +43,7 @@ export const STUDIO_GAMES = Object.freeze([
   { id: 'vowelrain', title: 'Vowel Storm', titleHe: 'סַעֲרַת נִקּוּד', skill: 'speed', pack: 'studio', seconds: STUDIO_SECONDS, blurb: 'Syllables tumble through a 3D sky. Tap every one that carries the target vowel sound.' },
   { id: 'tileturn', title: 'Tile Turn', titleHe: 'סִבּוּב אוֹת', skill: 'flexibility', pack: 'studio', seconds: STUDIO_SECONDS, blurb: 'A letter tile is turned in space. Tap the letter it really is.' },
   { id: 'pathword', title: 'Path Word', titleHe: 'נְתִיב מִלָּה', skill: 'problem', pack: 'studio', seconds: STUDIO_SECONDS, blurb: 'Trace a path through neighbouring tiles to spell a real Hebrew word.' },
-  { id: 'echo', title: 'Echo Hunt', titleHe: 'צַיַּד הֵד', skill: 'attention', pack: 'studio', seconds: STUDIO_SECONDS, listening: true, blurb: 'Listen to a recorded Hebrew word and tap the one you heard. With sound off, read its sound instead.' },
+  { id: 'echo', title: 'Echo Hunt', titleHe: 'צַיַּד הֵד', skill: 'attention', pack: 'studio', seconds: STUDIO_SECONDS, listening: true, blurb: 'Listen to a Hebrew word clip and tap the one you heard. With sound off, read its sound instead.' },
 ]);
 
 /** Six games for the Hebrew a beginner needs in synagogue and in Israel (added 2026-11-10), 45 seconds each. */

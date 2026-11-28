@@ -9,7 +9,7 @@ export const STORE_KEY = 'games.bingoletters.v1';
 const spec = {
   id: 'bingoletters', title: 'Letter Bingo', titleHe: 'בִּינְגוֹ',
   blurb: 'Ari calls, you mark. Letters by name at first; then syllables; then whole words where you mark the letter they start with. Three in a row is bingo.',
-  howTo: ['A call appears at the top (and plays where a recording exists).', 'Tap the matching square on your card.', 'A wrong square costs a point. A missed call is called again later.', 'Complete a row, a column or a diagonal to win the card.'],
+  howTo: ['A call appears at the top (and plays where a clip exists).', 'Tap the matching square on your card.', 'A wrong square costs a point. A missed call is called again later.', 'Complete a row, a column or a diagonal to win the card.'],
   levels: [
     { name: '3 x 3, letter names', size: 3, mode: 'name', calls: 14 },
     { name: '4 x 4, letter names', size: 4, mode: 'name', calls: 20 },

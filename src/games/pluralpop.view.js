@@ -60,7 +60,8 @@ function setup(A) {
     const options = cfg.mode === 'ending' ? pickSeeded([{ t: 'ים', ok: card.ending === 'im' }, { t: 'ות', ok: card.ending === 'ot' }], 2, rnd)
       : pickSeeded([{ t: card.plural, ok: true }, ...pickSeeded(wrongForms(card), cfg.options - 1, rnd).map((t) => ({ t, ok: false }))], cfg.options, rnd);
     options.forEach((o, i) => {
-      const y0 = A.quiet ? H / 2 - 30 : H + randInt(rnd, 80);
+      // They start inside the sky, just above its bottom edge: starting below it left the board empty for about ten seconds (review 4).
+      const y0 = A.quiet ? H / 2 - 30 : Math.max(10, H - 160) + randInt(rnd, 40);
       const el = A.h('button', { type: 'button', class: 'arc-choice', lang: 'he', dir: 'rtl', style: `position:absolute;border-radius:50% 50% 50% 50% / 60% 60% 40% 40%;min-width:72px;height:60px;left:${Math.round((i + 0.5) * (100 / options.length))}%;transform:translateX(-50%);top:${y0}px`, onclick: () => pop(o, el) }, o.t);
       sky.append(el); balloons.push({ o, el, y: y0 });
     });

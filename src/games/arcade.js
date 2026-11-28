@@ -91,6 +91,9 @@ export async function createArcade(root, ctx, spec) {
   let readyAt = 0, paused = false, countdownIds = [];
   const COUNTDOWN_S = 3;
   const keyHandlers = new Set();
+  // Handlers a round adds are dropped when the next round starts: they used to pile up, so after "One more go" the old round's
+  // handler redrew the old maze over the new one and Rimon looked frozen for every input (review 4).
+  let roundKeys = new Set(), inRound = false, boardTap = null;
 
   // Shell
   const titleEl = h('h1', { id: 'view-title', tabindex: '-1' }, spec.title + ' ', heSpan(spec.titleHe));
@@ -256,17 +259,25 @@ export async function createArcade(root, ctx, spec) {
     art: (name, alt = '', cls) => art(spec.id, name, alt, cls),
     letterTile,
     /** Keyboard: handler(key, event) for arrows (as 'up','down','left','right'), 'enter', 'space', or the raw key. */
-    keys(handler) { keyHandlers.add(handler); return () => keyHandlers.delete(handler); },
+    keys(handler) { keyHandlers.add(handler); if (inRound) roundKeys.add(handler); return () => keyHandlers.delete(handler); },
     /** Direction pad buttons plus tap zones on the board (release events only). */
     dpad(onDir) {
       const btn = (dir, label) => h('button', { type: 'button', class: `btn arc-dpad-${dir}`, 'aria-label': label, onclick: () => onDir(dir) }, { up: '▲', down: '▼', left: '◀', right: '▶' }[dir]);
       controls.replaceChildren(h('div', { class: 'arc-dpad', role: 'group', 'aria-label': 'Move' }, btn('up', 'Move up'), h('div', { class: 'arc-dpad-mid' }, btn('left', 'Move left'), btn('right', 'Move right')), btn('down', 'Move down')));
-      board.addEventListener('click', (e) => {
-        if (e.target !== board && e.target?.closest?.('button')) return;
-        const r = board.getBoundingClientRect(); if (!r.width) return;
-        const x = (e.clientX - r.left) / r.width - 0.5, y = (e.clientY - r.top) / r.height - 0.5;
+      if (boardTap) board.removeEventListener('click', boardTap);
+      boardTap = (e) => {
+        const cell = e.target?.closest?.('.arc-cell');
+        if (e.target !== board && !cell && e.target?.closest?.('button')) return;
+        // A tap on the maze moves toward the tapped square, measured from the player's own square when there is one
+        // (it used to be ignored on a square, and measured from the board's centre elsewhere).
+        const me = board.querySelector('.arc-cell.is-player, .arc-cell.is-head');
+        const r = (me || board).getBoundingClientRect(); if (!r.width) return;
+        const x = me ? e.clientX - (r.left + r.width / 2) : (e.clientX - r.left) / r.width - 0.5;
+        const y = me ? e.clientY - (r.top + r.height / 2) : (e.clientY - r.top) / r.height - 0.5;
+        if (me && Math.abs(x) < r.width / 2 && Math.abs(y) < r.height / 2) return; // a tap on the player itself
         onDir(Math.abs(x) > Math.abs(y) ? (x > 0 ? 'right' : 'left') : (y > 0 ? 'down' : 'up'));
-      });
+      };
+      board.addEventListener('click', boardTap);
       A.keys((k) => { if (['up', 'down', 'left', 'right'].includes(k)) onDir(k); });
     },
     /**
@@ -364,7 +375,10 @@ export async function createArcade(root, ctx, spec) {
     if (!untimed) timerId = setInterval(tickTimer, 1000);
     const levelLine = `Level ${level}: ${A.cfg?.name || ''}.${daily ? ' Daily challenge board.' : ''}`;
     status.textContent = levelLine;
+    for (const fn of roundKeys) keyHandlers.delete(fn); roundKeys = new Set();
+    inRound = true;
     try { roundSetup?.(A); } catch (e) { console.warn(spec.id, e); status.textContent = 'This round could not be set up. Try another level.'; }
+    inRound = false;
     if (lead) countdown(levelLine);
     A.sayLine(2);
   }

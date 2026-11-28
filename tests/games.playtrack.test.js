@@ -38,6 +38,21 @@ test('the watcher records one play on leaving a played game, and nothing for oth
   assert.equal(data.has('games.settings.v1'), false);
 });
 
+test('key presses count wherever focus is; typing in a field outside the game does not', async () => {
+  const data = new Map(); const store = { get: (k) => data.get(k), set: (k, v) => data.set(k, v) };
+  const ls = {}; const on = (bag) => (name, fn) => { (bag[name] ||= []).push(fn); };
+  const win = { location: { hash: '#/pinball' }, addEventListener: on(ls) }; const dls = {}; const doc = { addEventListener: on(dls) };
+  let t = 0; installPlayTracker({ store, isGame: (id) => id === 'pinball', win, doc, now: () => t });
+  const body = { tagName: 'BODY', closest: () => null }, field = { tagName: 'INPUT', closest: () => null };
+  for (let i = 0; i < MIN_ACTIONS; i++) dls.keydown[0]({ type: 'keydown', target: field });
+  t = MIN_MS + 1; win.location.hash = '#/home'; ls.hashchange[0]();
+  assert.equal(data.has('games.pinball.v1'), false);
+  win.location.hash = '#/pinball'; ls.hashchange[0]();
+  for (let i = 0; i < MIN_ACTIONS; i++) dls.keydown[0]({ type: 'keydown', target: body });
+  t += MIN_MS + 1; win.location.hash = '#/home'; ls.hashchange[0]();
+  assert.equal(data.get('games.pinball.v1').plays, 1);
+});
+
 test('only a sound button gets the Playing line; a game answer button that makes a sound stays quiet', async () => {
   const { isSoundControl } = await import('../src/shell/play-state.js');
   const el = (text, aria = '', cls = '') => ({ textContent: text, className: cls, getAttribute: (k) => (k === 'aria-label' ? aria : null), closest: () => null });

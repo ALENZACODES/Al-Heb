@@ -158,7 +158,7 @@ export function speechFallbackMessage(result) {
   if (reason === 'play-rejected' || reason === 'network' || reason === 'play-threw' || reason === 'no-audio-support') {
     return 'The recording could not be reached. Nothing was spoken in another language. The words stay on screen.';
   }
-  return 'No recorded Hebrew clip for this line. The words stay on screen.';
+  return 'No Hebrew clip for this line. The words stay on screen.';
 }
 
 /**

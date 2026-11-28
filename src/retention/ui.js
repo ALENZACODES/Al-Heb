@@ -327,6 +327,9 @@ export function showReward(R, out, g = globalThis) {
     // the same number on one screen (C-03), so only the XP chip moves.
     const total = h('strong', { class: 'ret-total' }, String(out.todayAfter));
     const lines = [];
+    // The sum is shown, so the total can be checked on the card itself (review 4: "+17" took 15 to 35 with nothing to say why).
+    const before = Number(out.todayBefore) || 0, other = Number(out.todayAfter) - before - (Number(out.xp) || 0);
+    lines.push(`Today: ${before} before this lesson + ${out.xp} from it${other > 0 ? ` + ${other} from other practice since` : ''} = ${out.todayAfter} XP`);
     if (out.parts.accuracy) lines.push(`Sharp lesson bonus: +${out.parts.accuracy} XP`);
     if (out.parts.combo) lines.push(`Combo bonus: +${out.parts.combo} XP`);
     if (out.goalCrossed) lines.push('Daily goal reached!');

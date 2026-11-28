@@ -8,7 +8,7 @@ export const STORE_KEY = 'games.soundsnap.v1';
 const spec = {
   id: 'soundsnap', title: 'Sound Snap', titleHe: 'שְׁמַע וְלַחֵץ',
   blurb: 'A letter is called by name. Letters pop up in the holes; tap the one you heard before it sinks back. Each level calls faster and adds look-alikes.',
-  howTo: ['Read (and, where a recording exists, hear) the letter name at the top.', 'Letters appear in the holes for a moment. Tap the one that matches.', 'Tapping a wrong letter costs a point; letting the right one sink costs a life (from your first tap on).', 'Enough correct taps finish the level: 12 on level 1, more on each level after.'],
+  howTo: ['Read (and, where a clip exists, hear) the letter name at the top.', 'Letters appear in the holes for a moment. Tap the one that matches.', 'Tapping a wrong letter costs a point; letting the right one sink costs a life (from your first tap on).', 'Enough correct taps finish the level: 12 on level 1, more on each level after.'],
   levels: [
     { name: '6 letters, slow', holes: 6, letters: 6, show: 3500, goal: 12 },
     { name: '9 letters', holes: 9, letters: 9, show: 3000, goal: 14 },

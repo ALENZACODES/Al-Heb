@@ -26,7 +26,7 @@ export function mount(root,ctx) {
   const leaveSfx = sfx.enter(ctx);
   let alive = true, groups = [], R = null, round = 0;
   let session = createSession({ store:ctx?.store,storeKey:STORE_KEY,par:6 });
-  const status = h('p',{class:'game-status',role:'status','aria-live':'polite'},'Loading recorded sonar targets…');
+  const status = h('p',{class:'game-status',role:'status','aria-live':'polite'},'Loading sonar targets…');
   const board = h('div',{class:'game-board'});
   const article = h('article',{class:'card game-card game-submarinesonar'},h('h1',{id:'view-title'},'Sonar Vowels'),
     h('p',{},'Hear the word spoken aloud, then steer through its exact pointed spelling.'), status,board);
@@ -36,7 +36,7 @@ export function mount(root,ctx) {
     if(round>=8){
       roundStatus(status,'','Sonar course complete.');
       board.replaceChildren(resultsCard(h,heSpan,session,{title:'Sonar course complete',onAgain:()=>{round=0;session=createSession({store:ctx?.store,storeKey:STORE_KEY,par:6});void paint();}}));return;}
-    roundStatus(status,feedback,`Contact ${round+1} of 8: play the recorded word.`);
+    roundStatus(status,feedback,`Contact ${round+1} of 8: play the word.`);
     const group=groups[round%groups.length],target=group[round%group.length],choices=shuffled(group).slice(0,4);
     let heard = false;
     if(!choices.includes(target))choices[0]=target;
@@ -65,7 +65,7 @@ export function mount(root,ctx) {
     groups=shuffled(buildSonarDeck(data).filter(g=>g.some(w=>hasRecordedClip(ctx,'word',w.id))))
       .map(g=>g.filter(w=>hasRecordedClip(ctx,'word',w.id))).filter(g=>g.length>=2);
     if(!groups.length){
-      status.textContent='No exact pair of recorded pointed spellings. Sonar rounds are disabled.';
+      status.textContent='No exact pair of pointed spellings with clips. Sonar rounds are disabled.';
       placeBoard(board, castEnvNode(h, R, 'submarinesonar', GAME_ENV.sonar));
       return;
     }

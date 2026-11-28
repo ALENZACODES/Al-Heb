@@ -52,7 +52,7 @@ function changesSection(ctx) {
 
 /** M-08: Held Recordings; code and list load on demand (held-recordings.js). */
 function heldSection(ctx) {
-  const sec = h('section', { class: 'card', id: 'held', 'aria-labelledby': 'held-h' }, h('h2', { id: 'held-h' }, 'Held Recordings'),
+  const sec = h('section', { class: 'card', id: 'held', 'aria-labelledby': 'held-h' }, h('h2', { id: 'held-h' }, 'Held Audio Clips'),
     h('p', { class: 'muted', role: 'status' }, 'Loading the list of held recordings…'));
   import('./held-recordings.js').then((m) => m.fillHeld(sec, h, { fetchFn: ctx.readinessFetch || globalThis.fetch }))
     .catch(() => sec.replaceChildren(sec.firstChild, h('p', { role: 'status' }, 'The list of held recordings did not load. Open About again while online to see it.')));

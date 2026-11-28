@@ -8,7 +8,7 @@ export const STORE_KEY = 'games.letterchomp.v1';
 const spec = {
   id: 'letterchomp', title: 'Letter Chomp', titleHe: 'אוֹכֵל אוֹתִיּוֹת',
   blurb: 'Rimon the pomegranate is loose in a maze of letters. Eat every copy of the letter shown at the top; its look-alikes are poison. Erasers roam the corridors.',
-  howTo: ['Move with the arrow keys, W A S D, the pad below, or by tapping the side of the maze you want to go.', 'Eat only the target letter. A look-alike costs points and a life.', 'When the erasers touch you, you lose a life. Three lives per round.', 'Clear every target letter to finish the level.'],
+  howTo: ['Move one square per press with the arrow keys, W A S D or the pad below (hold to keep going), or tap the maze on the side you want to go.', 'Eat only the target letter. A look-alike costs points and a life.', 'When the erasers touch you, you lose a life. Three lives per round.', 'Clear every target letter to finish the level.'],
   levels: [
     { name: 'Aleph to He', size: 9, targets: 5, decoys: 3, erasers: 1, speed: 1000, eraserEvery: 3, chase: 0.45, letters: ['alef', 'bet', 'gimel', 'dalet', 'he'] },
     { name: 'Vav to Yod', size: 9, targets: 6, decoys: 4, erasers: 1, speed: 880, eraserEvery: 2, chase: 0.55, letters: ['vav', 'zayin', 'chet', 'tet', 'yod'] },
@@ -76,7 +76,8 @@ function setup(A) {
   };
   const step = () => {
     tick++;
-    if (Date.now() - lastManual > cfg.speed / 2) move(dir); // a press already moved Rimon this beat
+    // Rimon moves one square per press (holding a key repeats it): he used to keep sliding to the next wall and eat every
+    // letter on the way, poison look-alikes included (review 4). Only calm mode steps on the press itself, below.
     if (grace > 0) { grace--; draw(); return; }
     if (tick % (cfg.eraserEvery || 1)) { draw(); return; }
     for (const e of erasers) {
@@ -96,8 +97,7 @@ function setup(A) {
     draw();
   };
   A.dpad((d) => {
-    dir = d;
-    if (A.quiet) { step(); return; }
+    if (A.quiet) { dir = d; move(d); dir = null; step(); return; }
     lastManual = Date.now(); move(d); draw();
   });
   draw();

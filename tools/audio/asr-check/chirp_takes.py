@@ -126,6 +126,8 @@ def main():
                                      'lines are stitched from (w as written, w-rs respelled, w-rs-car in a carrier phrase)')
     ap.add_argument('--lines8', help='round8-lines.json: whole non-Torah lines, pointed, WaveNet + Chirp, as written + respelled')
     ap.add_argument('--ssml10', help='round10-ssml.json: test lines with every word (or only the weak words) given as exact sounds, SSML <phoneme>')
+    ap.add_argument('--all', help='chirp-all.json: every clip not yet in Chirp, re-recorded in the Chirp voice of its gender (resumable)')
+    ap.add_argument('--shard', type=int, default=0); ap.add_argument('--shards', type=int, default=1)
     ap.add_argument('--lines9', help='round9-lines.json: Torah-service lines (haftarah blessings), Chirp only, two voices')
     ap.add_argument('--words6', help='round6-words.json: every word of the non-Torah lines (w/w-car/w-rs WaveNet, c/c-car/c-rs Chirp)')
     ap.add_argument('--project', default=subprocess.run(['gcloud', 'config', 'get-value', 'project'], capture_output=True, text=True).stdout.strip())
@@ -136,6 +138,37 @@ def main():
     want = {o['file']: re.sub(r'\s*\(cut from:.*\)\s*$', '', o['want']) for o in json.load(open(a.queue, encoding='utf-8'))}
     files = [l.strip() for l in open(a.list, encoding='utf-8') if l.startswith('audio/')]
     tts = TTS(a.project)
+    if a.all:
+        # everything in Chirp: one take per clip, pointed text, Charon (m) / Kore (f); long texts in pieces
+        from concurrent.futures import ThreadPoolExecutor
+        items = json.load(open(a.all, encoding='utf-8'))[a.shard::a.shards]
+        jobs = []
+        for it in items:
+            dst = os.path.join(a.out, 'all', it['file'])
+            if not os.path.exists(dst) or os.path.getsize(dst) < 1000:
+                jobs.append((it['file'], dst, speakable(it['text']), VOICES[it['g']][0]))
+        print(f'{len(jobs)} of {len(items)} clips to record', flush=True)
+        done = [0]
+
+        def one(j):
+            f, dst, text, voice = j
+            os.makedirs(os.path.dirname(dst), exist_ok=True)
+            for attempt in range(6):
+                try:
+                    data = b''.join(tts.synth(p, voice) for p in pieces(text))
+                    open(dst, 'wb').write(data); break
+                except Exception as e:
+                    if attempt == 5:
+                        print(f'  {f}: {str(e)[:160]}', flush=True); break
+                    time.sleep(10 * (attempt + 1))
+            done[0] += 1
+            if done[0] % 250 == 0:
+                print(f'  {done[0]}/{len(jobs)}', flush=True)
+        tts.token()
+        with ThreadPoolExecutor(6) as ex:
+            list(ex.map(one, jobs))
+        print('done', flush=True)
+        return
     if a.ssml10:
         # round 10 test: does the voice follow exact sounds? Each word as <phoneme alphabet="ipa" ph="...">word</phoneme>.
         # c10/w10: every word; c10k/w10k: only the words the checks could not confirm (the rest as pointed text)

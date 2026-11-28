@@ -12,9 +12,9 @@
  "inputTextKind": "hebrew",
  "stitchedFromText": "אֲנִי רוֹצָה קָפֶה",
  "stitchedFrom": [
-  "audio/f/israeli/word/w6-56e6195373.mp3",
-  "audio/f/israeli/word/w6-5da869cd8a.mp3",
-  "audio/f/israeli/word/w6-210ea7fcd0.mp3"
+  "tools/audio/stitch-src/f/w6-56e6195373.mp3",
+  "tools/audio/stitch-src/f/w6-5da869cd8a.mp3",
+  "tools/audio/stitch-src/f/w6-210ea7fcd0.mp3"
  ],
  "voiceFamily": "WaveNet"
 }

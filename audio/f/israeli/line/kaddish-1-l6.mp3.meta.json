@@ -36,13 +36,13 @@
  "stitchedFromText": "יְהֵא שְׁלָמָא רַבָּא מִן־שְׁמַיָּא וְחַיִּים עָלֵינוּ וְעַל־כָּל־יִשְׂרָאֵל וְאִמְרוּ אָמֵן׃",
  "stitchedFrom": [
   "audio/f/israeli/word/brich-shmei-w104.mp3",
-  "audio/f/israeli/word/w6-9ed49cab19.mp3",
+  "tools/audio/stitch-src/f/w6-9ed49cab19.mp3",
   "audio/f/israeli/word/kaddish-1-w23.mp3",
-  "audio/f/israeli/word/w6-0a874c91dc.mp3",
+  "tools/audio/stitch-src/f/w6-0a874c91dc.mp3",
   "audio/f/israeli/word/kaddish-1-w53.mp3",
-  "audio/f/israeli/word/w6-b3042b6b10.mp3",
+  "tools/audio/stitch-src/f/w6-b3042b6b10.mp3",
   "audio/f/israeli/word/kaddish-1-w55.mp3",
-  "audio/f/israeli/word/w6-ce9fed3332.mp3",
+  "tools/audio/stitch-src/f/w6-ce9fed3332.mp3",
   "audio/f/israeli/word/haftarah-after-w143.mp3"
  ],
  "voiceFamily": "WaveNet"

@@ -16,14 +16,14 @@
  "checkedBy": "four-listener ASR check (docs/audio/multi4), machine check only",
  "stitchedFromText": "לֹא קָם בְּיִשְׂרָאֵל כְּמֹשֶׁה עוֹד נָבִיא וּמַבִּיט אֶת־תְּמוּנָתוֹ׃",
  "stitchedFrom": [
-  "audio/f/israeli/word/w6-194247a640.mp3",
-  "audio/f/israeli/word/w6-d1d3ccbaee.mp3",
-  "audio/f/israeli/word/w6-5e2d807d0c.mp3",
-  "audio/f/israeli/word/w6-3ef4f77f2f.mp3",
+  "tools/audio/stitch-src/f/w6-194247a640.mp3",
+  "tools/audio/stitch-src/f/w6-d1d3ccbaee.mp3",
+  "tools/audio/stitch-src/f/w6-5e2d807d0c.mp3",
+  "tools/audio/stitch-src/f/w6-3ef4f77f2f.mp3",
   "audio/f/israeli/word/aleinu-1-w56.mp3",
   "audio/f/israeli/word/h8b8a2576.mp3",
-  "audio/f/israeli/word/w6-e63cd4c9a8.mp3",
-  "audio/f/israeli/word/w6-131706d766.mp3"
+  "tools/audio/stitch-src/f/w6-e63cd4c9a8.mp3",
+  "tools/audio/stitch-src/f/w6-131706d766.mp3"
  ],
  "voiceFamily": "WaveNet"
 }

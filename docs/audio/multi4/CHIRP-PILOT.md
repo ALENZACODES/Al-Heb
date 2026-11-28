@@ -14,4 +14,16 @@ Accuracy: share of words the Hebrew-trained sound check hears (>= 3/4 of the sou
 | Aoede (f) | 78.0% | 63.7% | 3.74 |
 | Zephyr (f) | 76.1% | 62.5% | 3.76 |
 
-Not yet known: how the same 160 clips score as they are now (WaveNet), and how reliable the check is on one-word clips.
+## Baseline: the same 160 clips as they are now (WaveNet)
+
+| Voice | Words heard right | Single words | Dictionary | Lines | Clips with every word right | Predicted listener score |
+|---|---|---|---|---|---|---|
+| WaveNet-B (m, in use) | 97.6% | 97% | 100% | 98% | 76/80 | 3.52 |
+| Charon (m, best Chirp) | 80.0% | 76% | 73% | 85% | 55/80 | 3.65 |
+| WaveNet-A (f, in use) | 96.2% | 100% | 97% | 95% | 76/80 | 3.69 |
+| Leda (f, best Chirp) | 79.9% | 76% | 73% | 85% | 55/80 | 3.76 |
+
+Even taking the best of four Chirp voices per clip, 63 of 80 clips per gender come out fully right, against 76 of 80 for WaveNet.
+The check is not harsher on one-word clips: WaveNet single words score 97-100% on it.
+Chirp sounds slightly more natural by the predicted score (about +0.1) and is far less accurate (about -17 points).
+The full Chirp re-record (17,843 clips) was not started.

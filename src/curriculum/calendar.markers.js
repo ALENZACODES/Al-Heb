@@ -119,7 +119,10 @@ const sessionWrite = (k, v) => { try { const o = sessionRead(); o[k] = v; global
  */
 /** Calendar art files that are in the repo. Add a name here (e.g. "header", "markers/candles") when its PNG is committed;
  *  until then nothing is requested, so a fresh visit makes no 404 requests. */
-export const ART_PRESENT = new Set([]);
+export const ART_PRESENT = new Set([
+  "header", // 26 Nov 2026: the full set from docs/images/CALENDAR-ART.md, reviewed and written by tools/images/ingest_queue.mjs
+  ...Object.values(ART_NAME).map((n) => `markers/${n}`),
+]);
 export function artAvailable(name, base = ART_BASE) {
   const key = `${base}/${name}`;
   const short = key.slice(ART_BASE.length + 1);

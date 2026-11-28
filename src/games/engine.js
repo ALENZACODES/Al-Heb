@@ -158,7 +158,7 @@ export function speechFallbackMessage(result) {
   if (reason === 'play-rejected' || reason === 'network' || reason === 'play-threw' || reason === 'no-audio-support') {
     return 'The recording could not be reached. Nothing was spoken in another language. The words stay on screen.';
   }
-  return 'No recorded Hebrew clip for this line. The words stay on screen.';
+  return 'No Hebrew clip for this line. The words stay on screen.';
 }
 
 /**
@@ -191,14 +191,38 @@ export function resultsCard(h, heSpan, session, { title, onAgain, homeHref = '#/
   const rec = session.saveBest();
   reactRimon(stars >= 2 ? 'highfive' : stars ? 'laugh' : 'sad');
   try { globalThis.document?.dispatchEvent?.(new CustomEvent('alef:game-finished', { detail: { stars } })); } catch { /* optional: XP listens for this (src/retention/) */ }
-  return h('section', { class: 'card game-results', 'aria-labelledby': 'game-results-h' },
+  return h('section', { class: 'card game-results', 'data-stars': String(stars), 'aria-labelledby': 'game-results-h' },
     h('h2', { id: 'game-results-h' }, title),
     h('p', { class: 'game-stars', 'aria-label': `${stars} of 3 stars` }, '★'.repeat(stars) + '☆'.repeat(3 - stars)),
     h('p', {}, `Score ${session.score} · ${session.correct} of ${session.rounds} right · best streak ${session.bestStreak}`),
     rec ? h('p', { class: 'muted' }, `Your best on this device: ${rec.best} (played ${rec.plays} time${rec.plays === 1 ? '' : 's'})`) : null,
     h('div', { class: 'row' },
       h('button', { type: 'button', class: 'btn', onclick: onAgain }, 'Play again'),
+      nextStepLink(h),
+      h('a', { class: 'btn secondary', href: '#/games' }, 'All games'),
       h('a', { class: 'btn secondary', href: homeHref }, 'Back to Learn')));
+}
+
+/** The game after this one in the Games Library, same level first. Pure. */
+export function nextInCatalog(games, id) {
+  const list = Array.isArray(games) ? games : [], i = list.findIndex((g) => g.id === id);
+  if (i < 0) return null;
+  const me = list[i], rest = [...list.slice(i + 1), ...list.slice(0, i)];
+  return rest.find((g) => g.level === me.level && g.section === me.section) || rest.find((g) => g.level === me.level) || rest[0] || null;
+}
+// Every finished game offers a next one (27 Nov 2026 review: a finished game was a dead end). The link starts hidden and is
+// filled in once the catalogue has loaded; with no catalogue it stays hidden and "All games" is the next step.
+function nextStepLink(h) {
+  const link = h('a', { class: 'btn secondary', href: '#/games', hidden: true });
+  try {
+    const id = String(globalThis.location?.hash || '').replace(/^#\/?/, '').split(/[/?]/)[0];
+    if (id) import('./library.catalog.js').then((m) => {
+      const next = nextInCatalog(m.allGames(), id);
+      if (!next) return;
+      link.setAttribute('href', `#/${next.id}`); link.textContent = `Next: ${next.title}`; link.hidden = false; link.removeAttribute?.('hidden');
+    }).catch(() => { /* the link stays hidden */ });
+  } catch { /* no location: the link stays hidden */ }
+  return link;
 }
 
 // Listening rounds use one contract: kind `word`, the active voice (m or f; voices are not swapped),

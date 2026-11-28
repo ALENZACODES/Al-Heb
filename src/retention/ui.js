@@ -66,7 +66,7 @@ export function goalRingNode(R) {
       h('div', { class: 'ret-goal-row' }, ring,
         h('div', {}, h('h2', { id: 'ret-goal-h' }, 'Daily XP Goal'),
           h('p', { class: 'ret-goal-text', 'data-xp': p.xp, 'data-goal': p.goal }, p.text),
-          R.streakShown() ? h('p', { class: 'muted' }, streakLine(st)) : null)),
+          R.streakShown() ? h('p', { class: 'muted' }, streakLine(st, Math.max(0, p.goal - p.xp))) : null)),
       R.streakShown() ? stripNode(R) : null,
       h('div', { class: 'row ret-goal-actions' }, quick,
         st.repair ? h('a', { class: 'btn secondary', href: '#/shop' }, `Bring back your ${streakText(st.repair.prev)} (free)`) : null,
@@ -327,6 +327,9 @@ export function showReward(R, out, g = globalThis) {
     // the same number on one screen (C-03), so only the XP chip moves.
     const total = h('strong', { class: 'ret-total' }, String(out.todayAfter));
     const lines = [];
+    // The sum is shown, so the total can be checked on the card itself (review 4: "+17" took 15 to 35 with nothing to say why).
+    const before = Number(out.todayBefore) || 0, other = Number(out.todayAfter) - before - (Number(out.xp) || 0);
+    lines.push(`Today: ${before} before this lesson + ${out.xp} from it${other > 0 ? ` + ${other} from other practice since` : ''} = ${out.todayAfter} XP`);
     if (out.parts.accuracy) lines.push(`Sharp lesson bonus: +${out.parts.accuracy} XP`);
     if (out.parts.combo) lines.push(`Combo bonus: +${out.parts.combo} XP`);
     if (out.goalCrossed) lines.push('Daily goal reached!');

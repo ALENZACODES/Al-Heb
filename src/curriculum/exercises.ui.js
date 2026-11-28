@@ -53,9 +53,9 @@ export function summaryNode(d) {
       el("div", {}, el("dt", {}, "Time"), el("dd", { "data-stat": "time" }, fmtDuration(d.ms))),
       d.goodLabels.length ? el("div", {}, el("dt", {}, "Answered right"), el("dd", { "data-stat": "good" }, d.goodLabels.join(", "))) : null),
     el("p", {}, closingLine(st.accuracy, st.missed.length)),
-    d.missedLabels.length ? el("div", {}, el("p", {}, "To review:"), el("ul", { "data-list": "review" }, ...d.missedLabels.map((t) => el("li", {}, t)))) : el("p", {}, "Nothing to review."),
+    d.missedLabels.length ? el("div", {}, el("p", {}, "To review:"), el("ul", { "data-list": "review" }, ...d.missedLabels.map((t) => el("li", {}, t)))) : el("p", {}, "Nothing missed."),
     d.skippedN ? el("p", { class: "muted", "data-skipped": String(d.skippedN) }, plain("skippedNote", { n: d.skippedN })) : null,
-    el("p", { class: "muted" }, d.cardsUpdated ? `${d.cardsUpdated} review card${d.cardsUpdated === 1 ? "" : "s"} updated.` : "No review cards needed updating."),
+    el("p", { class: "muted" }, d.cardsUpdated ? `${d.cardsUpdated} card${d.cardsUpdated === 1 ? "" : "s"} scheduled for your next review.` : "No cards needed scheduling."),
     remindSlot,
     el("div", { class: "row alef-summary-actions" }, next, d.dueCount === 0 ? null : el("a", { class: next ? "btn secondary" : "btn", href: "#/learn?review=1" }, "Review now"), ...(d.extraLinks || [])));
 }

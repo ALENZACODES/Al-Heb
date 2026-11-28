@@ -6,6 +6,12 @@ import { requestPersistence, storageStatus } from './backup.js';
 import { REMINDER_KEY, afterExport, completedCount } from './backup-reminder.js';
 import { describePreview, storageNotice, wipeAllData, confirmMatches, CONFIRM_WORD, backupFileName } from './settings.data.js';
 
+// What the goal changes: it picks which lesson track Home and Learn offer first (src/home/nextlesson.js tracksFor).
+export const GOAL_SAY = {
+  read: 'Home and Learn now put the synagogue reading lessons first: letters, vowels, prayers and Torah.',
+  israel: 'Home and Learn now put the everyday Israel lessons first: speaking, getting around, shops and cafés.',
+  both: 'Your next lessons can now come from both tracks: synagogue reading and everyday Israel.',
+};
 export function mount(root, ctx) {
   const { settings, store, t } = ctx;
   // Every change says it saved, in the one status line: a silent save reads
@@ -18,6 +24,7 @@ export function mount(root, ctx) {
     else if (key === 'congregation') status.textContent = `Saved ✓ ${STYLE_SAY[value] || value} style, where clips exist.`;
     else if (key === 'veilOptOut') status.textContent = value ? 'Saved ✓ The opening prayer will not show again. You can turn it back on here any time.' : 'Saved ✓ The opening prayer will show again when you open Aleph.';
     else if (key === 'gender') status.textContent = 'Saved ✓ Hebrew forms will use your choice.';
+    else if (key === 'goal') { status.textContent = `Saved ✓ ${GOAL_SAY[value] || ''}`; const gh = root.querySelector?.('#s-goal-help'); if (gh) gh.textContent = GOAL_SAY[value] || ''; }
     else status.textContent = 'Saved ✓';
   };
   const radioGroup = (key, legendKey) => {
@@ -160,6 +167,10 @@ export function mount(root, ctx) {
     h('p', { class: 'muted', id: 's-pron-help' }, 'Pronunciation style is the way Hebrew sounds are said. It changes the sounds you hear and read. Pick the one your synagogue or teacher uses.'),
     radioGroup('congregation', 'settings.congregation'),
     radioGroup('goal', 'settings.goal'),
+    // what the choice changes, in one sentence, like the pronunciation choice above (27 Nov 2026 review: "Saved" said nothing)
+    h('p', { class: 'muted', id: 's-goal-help' }, GOAL_SAY[settings.get('goal')] || ''),
+    // starting over was three levels down, inside a closed group, and the review could not find it
+    h('p', { class: 'small' }, h('a', { href: '#/settings', id: 's-startover-link', onclick: (e) => { e.preventDefault?.(); const g = root.querySelector?.('#s-g-data'); if (g) { g.open = true; g.setAttribute?.('open', ''); g.scrollIntoView?.({ block: 'start' }); root.querySelector?.('#s-wipe-word')?.focus?.(); } } }, 'Start over: delete all saved progress on this device'), ' (asks you to confirm first).'),
     // Progressive disclosure: only the three basic choices are open. Each group below opens on its own, so no screen shows a long list at once.
     group('calm', 'Calm and quiet', 'Less movement, no sounds, no timers, one thing at a time', calmRows()),
     group('read', 'Reading comfort', 'Text size, spacing and font', readRows()),

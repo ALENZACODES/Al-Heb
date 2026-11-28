@@ -29,6 +29,13 @@ async function loadExtra(ctx) {
   return res.json();
 }
 
+/** The engine: cast/train-engine.png (docs/images/paste/k-03.txt) when it exists, else the 🚂 it replaces. */
+const engine = () => {
+  const img = document.createElement('img'); img.className = 'arc-train-art'; img.alt = ''; img.setAttribute('aria-hidden', 'true'); img.src = 'assets/img/play/SPR_train_engine.webp';
+  img.addEventListener('error', () => { const s = document.createElement('span'); s.setAttribute('aria-hidden', 'true'); s.textContent = '🚂'; img.replaceWith(s); }, { once: true });
+  return img;
+};
+
 function setup(A) {
   const cfg = A.cfg, rnd = A.rnd;
   const host = A.h('div', { class: 'arc-host' }, A.cast('noa-conductor', 'Noa the conductor'), A.h('p', { class: 'arc-prompt' }));
@@ -44,7 +51,7 @@ function setup(A) {
     next();
   }).catch(() => A.announce('The sentence list did not load.'));
   const draw = () => {
-    train.replaceChildren(A.h('span', { 'aria-hidden': 'true' }, '🚂'), ...coupled.map((w, i) => A.h('button', { type: 'button', class: 'arc-choice', lang: 'he', dir: 'rtl', 'aria-label': `coupled: ${w}, tap to uncouple`, onclick: () => { loose.push(w); coupled.splice(i, 1); draw(); } }, w)));
+    train.replaceChildren(engine(), ...coupled.map((w, i) => A.h('button', { type: 'button', class: 'arc-choice', lang: 'he', dir: 'rtl', 'aria-label': `coupled: ${w}, tap to uncouple`, onclick: () => { loose.push(w); coupled.splice(i, 1); draw(); } }, w)));
     yard.replaceChildren(...loose.map((w, i) => A.h('button', { type: 'button', class: 'arc-choice', lang: 'he', dir: 'rtl', onclick: () => couple(i) }, w)));
   };
   const next = () => {

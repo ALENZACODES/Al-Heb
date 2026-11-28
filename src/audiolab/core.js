@@ -63,7 +63,8 @@ export function readiness(audio, items, o = {}) {
 export function readinessLine(r, noun = 'items') {
   if (!r || !r.total) return '';
   if (r.checking) return `Checking which ${noun} have audio…`;
-  const parts = [`${r.clip} of ${r.total} ${noun} have audio.`];
+  // "synthetic": every clip is a computer voice, and a page also saying "recorded voices are not yet available" read as a contradiction (review 3)
+  const parts = [`${r.clip} of ${r.total} ${noun} have synthetic audio.`];
   if (r.held) parts.push(`${r.held} ${r.held === 1 ? 'is' : 'are'} held for review.`);
   if (r.device) parts.push(`${r.device} can be read by this device's Hebrew voice (not a clip).`);
   if (r.coming) parts.push(`${r.coming} ${r.coming === 1 ? 'has' : 'have'} audio coming.`);

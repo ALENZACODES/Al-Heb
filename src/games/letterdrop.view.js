@@ -8,7 +8,7 @@ export const STORE_KEY = 'games.letterdrop.v1';
 const spec = {
   id: 'letterdrop', title: 'Letter Drop', titleHe: 'אוֹתִיּוֹת יוֹרְדוֹת',
   blurb: 'Letters rain down the lanes. Ari calls the letter; you run Noa\'s basket under it and let the rest fall. The lanes multiply and the rain gets faster.',
-  howTo: ['Move the basket left and right (keys, pad or tap a lane).', 'Catch the letter named at the top. Catching another letter costs a life.', 'Each catch picks a new letter to find.', 'Twelve catches finish the level.'],
+  howTo: ['Move the basket left and right (keys, pad or tap a lane).', 'Catch the letter named at the top. Catching another letter costs a life.', 'Each catch picks a new letter to find.', 'Catch enough to finish the level: 10 on level 1, more on each level after.'],
   levels: [
     { name: '3 lanes', lanes: 3, speed: 140, goal: 10, pool: 6 },
     { name: '3 lanes, faster', lanes: 3, speed: 120, goal: 12, pool: 9 },
@@ -38,7 +38,7 @@ function setup(A) {
   }
   A.board.replaceChildren(prompt, lanesEl);
   A.setLives(3);
-  const drawBasket = () => baskets.forEach((b, i) => { if (i === basket) b.replaceChildren(A.cast('noa-basket', 'Noa with the basket', 'arc-sprite-inline'), '🧺'); else b.replaceChildren(); });
+  const drawBasket = () => baskets.forEach((b, i) => { laneEls[i].classList.toggle('is-basket', i === basket); if (i === basket) b.replaceChildren(A.cast('noa-basket', 'Noa with the basket', 'arc-sprite-inline'), '🧺'); else b.replaceChildren(); });
   const newTarget = () => { target = pool[randInt(rnd, pool.length)]; prompt.replaceChildren(`Catch: ${target.name} `, A.heSpan(target.he)); A.sayLetter(target); };
   const spawn = () => {
     const lane = randInt(rnd, cfg.lanes);

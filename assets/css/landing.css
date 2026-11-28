@@ -99,3 +99,16 @@ body:has(.showcase) .card.onboarding::before { display: none; }
 .show-again { margin-top: .6rem; }
 .show-try-more { margin: .8rem 0 0; }
 @media (prefers-reduced-motion: reduce) { .show-slot.filled { animation: none; } .show-letter-btn { transition: none; } }
+
+/* 27 Nov 2026 review: one front door, and the two flagships on Home */
+.show-start-here { margin: 0 0 .35rem; font-weight: 700; color: #ffe9a8; letter-spacing: .01em; }
+.show-start-here[hidden] { display: none; }
+.show-flagships { margin: 1.2rem 0 0; }
+.show-flagship-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .8rem; margin: 0; padding: 0; list-style: none; }
+.show-flagship { display: flex; align-items: center; gap: .9rem; min-height: 96px; padding: .9rem 1rem; border-radius: 16px; text-decoration: none;
+  border: 1px solid rgba(217,164,65,.8); background: linear-gradient(135deg, rgba(18,42,23,.92), rgba(33,58,36,.92)); color: #f4ecd6; }
+.show-flagship:hover, .show-flagship:focus-visible { border-color: #ffe9a8; background: linear-gradient(135deg, rgba(24,54,30,.96), rgba(40,70,44,.96)); }
+.show-flagship-copy { display: grid; gap: .2rem; min-width: 0; }
+.show-flagship-title { font-weight: 700; font-size: 1.1rem; color: #ffe9a8; }
+.show-flagship-hook { font-size: .92rem; color: #dcd3b8; }
+@media (max-width: 640px) { .show-flagship-grid { grid-template-columns: 1fr; } }

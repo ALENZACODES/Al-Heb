@@ -101,7 +101,7 @@ test('flow: one screen per step, one letter first, the check opens Next, five wi
   assert.match(h2(root), /Shin/);
   assert.equal(root.queryAll('.alef-huge').length, 1, 'exactly one big Hebrew glyph on the screen');
   assert.equal(root.queryAll('.alef-huge')[0].textContent, content.letters.get('shin').he);
-  assert.ok(root.queryAll('a').some((a) => a.attrs.href === '#/letters/shin'), 'Trace it link');
+  assert.ok(root.queryAll('a').some((a) => a.attrs.href === '#/letters/shin?from=firstday'), 'Trace it link');
   assert.ok(root.queryAll('details').some((d) => /Why\?/.test(d.textContent)), 'memory hook is behind Why?');
   assert.ok(root.queryAll('details').some((d) => /Spot It/.test(d.textContent)), 'Spot It is optional, inside Why?');
   assert.ok(!/Bet|Lamed|Vav/.test(root.queryAll('h2')[0].textContent));
@@ -115,6 +115,7 @@ test('flow: one screen per step, one letter first, the check opens Next, five wi
     const stepQs = O.stepQuestions(onramp.steps[step - 1], flowQs); let qi = 0;
     await waitFor(() => new RegExp(`Step ${step} of 5`).test(root.textContent));
     await waitFor(() => byId('fd-continue'), { timeout: 4000, message: 'learn screen Continue' });
+    { const hear = root.queryAll('button').find((x) => x.getAttribute('data-hear') === '1'); if (hear && byId('fd-continue').disabled) { assert.match(root.textContent, /first, then Continue/); await hear.click(); await tick(20); } } // Continue waits for Hear it
     await byId('fd-continue').click(); await tick(40);
     for (let guard = 0; guard < 4; guard++) {
       if (byId('fd-continue') && new RegExp(`Step ${step + 1} of 5`).test(root.textContent)) break;

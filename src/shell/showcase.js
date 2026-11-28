@@ -6,7 +6,7 @@ import { uiEnglish, MORNING_TITLE } from './names.js';
 import { h, heSpan, destIcon } from './ui.js';
 import { astralTreeNode } from './astral-tree.js';
 import { builderNode } from '../home/builder.js';
-import { BOOKS, BOOK_PICTURED_PAGES, FIRST_WORDS, fmt, dictionaryTitle } from '../lib/counts.js';
+import { BOOKS, BOOK_PICTURED_PAGES, FIRST_WORDS, GAMES_ALL, fmt, dictionaryTitle } from '../lib/counts.js';
 
 export const TILES = [
   ['firstday', '#/firstday', 'Your First 10 Minutes', 'עֲשָׂרָה', 'Build your first word, letter by letter'],
@@ -42,10 +42,30 @@ const PORTALS = [
   ['calendar', '#/calendar', 'See the Hebrew calendar', 'Shabbat times, festivals and the weekly portion', 'scroll'],
 ];
 
+// The two things only Aleph does were reachable only through the Preview list in the More menu (27 Nov 2026 review). They
+// now have their own doorways on Home. Both pages keep their own "not yet checked by a Hebrew teacher" labels: this makes
+// them easy to find, it does not promote them to the reviewed set (docs/v0/SCOPE.md).
+export const FLAGSHIPS = [
+  ['prayer-practice', '#/prayer-practice', 'Prayer Practice', 'תְּפִלָּה', 'Your first service, line by line, in your own tradition, until you can follow it in synagogue.'],
+  ['vocab', '#/vocab', dictionaryTitle(), 'מִלּוֹן', 'Look up any word: its meaning, its root, and how often the Torah uses it.'],
+];
+function flagshipsNode(has, ctx) {
+  const rows = FLAGSHIPS.filter(([name]) => has(name));
+  if (!rows.length) return null;
+  return h('section', { class: 'show-flagships', 'aria-labelledby': 'show-flagships-title' },
+    h('p', { id: 'show-flagships-title', class: 'show-section-title' }, 'Only in Aleph'),
+    h('ul', { class: 'show-flagship-grid' }, ...rows.map(([name, href, title, he, hook]) =>
+      h('li', {}, h('a', { class: 'show-flagship', href },
+        destIcon(name === 'prayer-practice' ? 'read' : name, 56),
+        h('span', { class: 'show-flagship-copy' },
+          h('span', { class: 'show-flagship-title' }, uiEnglish(ctx, title), ' ', heSpan(he)),
+          h('span', { class: 'show-flagship-hook' }, hook)))))));
+}
+
 function portalsNode(has) {
   return h('section', { class: 'show-portals', 'aria-labelledby': 'show-portals-title' },
-    h('p', { id: 'show-portals-title', class: 'show-section-title' }, 'Choose your first doorway'),
-    h('p', { class: 'show-portals-intro' }, 'Begin anywhere. Every doorway is open, and you can always return.'),
+    h('p', { id: 'show-portals-title', class: 'show-section-title' }, 'Or choose another doorway'),
+    h('p', { class: 'show-portals-intro' }, 'Every doorway is open, and you can always return.'),
     h('ul', { class: 'show-portal-grid' }, ...PORTALS.filter(([name]) => has(name)).map(([, href, title, summary, scene]) =>
       h('li', {},
         h('a', { class: 'show-portal show-portal--' + scene, href },
@@ -68,6 +88,9 @@ export function showcaseNode(ctx) {
     h('p', { class: 'show-kicker' }, 'The Tree of Life'),
     h('p', { class: 'show-title' }, 'Learn to read ', heSpan('עִבְרִית'), ' — Hebrew'),
     h('p', { class: 'show-sub' }, 'Prayers, Torah and everyday Israel. A few minutes a day, in your own tradition\u2019s voice.'),
+    // One front door (27 Nov 2026 review: three competing starts). A first visit is told where to begin; the other two
+    // buttons stay, as side doors. home.view.js hides the first button and this line once the first 10 minutes are done.
+    h('p', { class: 'show-start-here' }, 'New to Hebrew? Start here:'),
     h('p', { class: 'show-cta' },
       h('a', { class: 'btn show-btn', href: '#/firstday' }, 'Start your first 10 minutes'),
       ' ',
@@ -79,8 +102,9 @@ export function showcaseNode(ctx) {
       astralTreeNode(),
       heroText),
     portalsNode(has),
+    flagshipsNode(has, ctx),
     builderNode(ctx),
-    h('p', { class: 'show-stats' }, `Games across 9 levels · ${fmt(FIRST_WORDS)} first words · ${fmt(BOOKS)} story books · 3 Hebrew traditions`), // src/lib/counts.js
+    h('p', { class: 'show-stats' }, `${GAMES_ALL.total ? fmt(GAMES_ALL.total) + ' games' : 'Games across 9 levels'} · ${fmt(FIRST_WORDS)} first words · ${fmt(BOOKS)} story books · 3 Hebrew traditions`), // src/lib/counts.js
     h('details', { class: 'show-all-destinations' }, // closed: the full list is one tap away, so the page opens small (depth revealed, not dumped)
       h('summary', {}, 'Explore all Aleph destinations'),
       h('ul', { class: 'show-grid' }, ...tiles)));

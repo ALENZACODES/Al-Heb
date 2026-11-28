@@ -37,6 +37,10 @@ One line per route; the backtick name is the route `name` in `ROUTES` (the test 
 - `speakhub` (/speak-home) - a short Speak door with links to Say it, Talk, Listen, Songs and pronunciation styles (added 2026-11-10 so the Speak tab has a v0 page).
 - `practical` (/practical) - Practical places course (promoted 2026-11-10 so learners can find it; every line is copied from existing lessons or the phrasebook, and native review is still required).
 - `curriculum` (/curriculum) - the whole course in one order: every lesson and every Practical page in five stages (added 2026-11-11 at the owner's request; the page is built from the lesson and Practical data and adds no Hebrew)
+- `games` (/games) - the games page: the 30-game arcade, Hanukkah games and the rest, each game still marked Preview (promoted 2026-11-25 at the owner's order after the live audit found games missing from the main menu; no native speaker has reviewed the game Hebrew yet).
+- `sounds` (/sounds) - the sounds reference: vowel marks, letters, how each is said, the traditions compared (promoted 2026-11-25 at the owner's order; the audit called it the best reference page and found it buried in Preview; not yet reviewed by a native speaker).
+- `vowelboard` (/vowelboard) - the vowel board: five families, eleven signs, study, sort and quick rounds (promoted 2026-11-25 at the owner's order with Sounds; its signs have no recordings yet and the page says so; not yet reviewed by a native speaker).
+- `wordfinder` (/wordfinder) - Hebrew Word Finder level 1: first words to hear, see and find (promoted 2026-11-25 at the owner's order with Sounds; not yet reviewed by a native speaker).
 - `help` (/help) - the beginner's help page: plain-word answers about starting, sound, progress and what is not finished yet (added 2026-11-07, usability review U-10: the app had no help page at all; the deep explainer stays at /how).
 
 Why these: they are the shortest path a new learner takes (welcome, first day, lessons, letters, review, progress), plus the pages a

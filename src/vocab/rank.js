@@ -15,6 +15,7 @@ export const BAND = Object.freeze({
   sense: 2,
   hebrew: 3,
   translit: 4,
+  soundsLike: 4.5, // another common spelling of the same transliteration: after the exact spellings, before letter matches
   prefix: 5,
   substring: 6,
 });
@@ -24,6 +25,15 @@ export const SHORT_LATIN = 4;
 export const SHORT_HEBREW = 3;
 
 const HEBREW_LETTERS = /[א-ת]/;
+
+/**
+ * A transliteration's sound outline, so common spellings of one word compare equal: sh and ch (as in French), kh and ch, tz and
+ * ts are each one sound; a run of vowels is one vowel; a doubled consonant is one; a final h after a vowel is silent.
+ */
+export function soundKey(s) {
+  return fold(s).replace(/[^a-z ]/g, '').replace(/sh|ch|kh|x/g, 'S').replace(/tz|ts/g, 'C').replace(/([aeiou])h\b/g, '$1')
+    .replace(/[aeiouy]+/g, 'V').replace(/([a-zSC])\1+/g, '$1');
+}
 
 /** Case, points, punctuation and extra whitespace folded away. Not a regular expression. */
 export function fold(s) {
@@ -70,6 +80,9 @@ export function matchBand(entry, query, translit = '') {
       if (!senses.includes(q)) keep(BAND.prefix);
     }
     if (tl && (tl === q || (!q.includes(' ') && tl.split(' ').includes(q)))) keep(BAND.translit);
+    // The same word spelled another common way (shalom, sholom, shalum, chalom) is still an exact transliteration match:
+    // the dictionary stores one tradition's spelling, and "shalom" found nothing when it held "sholom" (review 4).
+    if (tl && q.length >= 3 && (soundKey(tl) === soundKey(q) || (!q.includes(' ') && tl.split(' ').some((w) => soundKey(w) === soundKey(q))))) keep(BAND.soundsLike);
     if (tl && q.length >= 3 && (tl.startsWith(q) || tl.split(' ').some((w) => w.startsWith(q)))) keep(BAND.prefix);
     if (q.length >= 2 && gloss.includes(q)) keep(BAND.substring);
     if (tl && q.length >= 3 && tl.includes(q)) keep(BAND.substring);
@@ -113,4 +126,44 @@ export function keepBand(band, query, broad) {
   if (band == null || band <= EXACT_MAX) return true;
   if (broad) return true;
   return !isShortQuery(query);
+}
+
+/** Edit distance (insert, delete, change, swap of two neighbours), stopping early past `max`. */
+export function editDistance(a, b, max = 2) {
+  if (a === b) return 0;
+  if (Math.abs(a.length - b.length) > max) return max + 1;
+  let prev2 = null, prev = Array.from({ length: b.length + 1 }, (_, j) => j);
+  for (let i = 1; i <= a.length; i++) {
+    const cur = [i]; let low = i;
+    for (let j = 1; j <= b.length; j++) {
+      let v = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+      if (prev2 && i > 1 && j > 1 && a[i - 1] === b[j - 2] && a[i - 2] === b[j - 1]) v = Math.min(v, prev2[j - 2] + 1);
+      cur.push(v); if (v < low) low = v;
+    }
+    if (low > max) return max + 1;
+    prev2 = prev; prev = cur;
+  }
+  return prev[b.length];
+}
+
+/**
+ * "Did you mean": close spellings when a search finds nothing (25 Nov 2026 audit: "shlom" gave "No words match" with no help).
+ * Compares the folded query with each entry's transliteration, its gloss senses and its unpointed Hebrew; one slip allowed for
+ * short queries, two from seven letters. Returns up to `max` distinct suggestions {text, kind}, closest first, then most frequent.
+ * @param {any[]} entries @param {string} query @param {(e:any)=>string} [translitOf] @param {number} [max]
+ */
+export function suggestSpellings(entries, query, translitOf = () => '', max = 5) {
+  const q = fold(query);
+  if (q.length < 3) return [];
+  const he = HEBREW_LETTERS.test(q), limit = q.length >= 7 ? 2 : 1;
+  const best = new Map();
+  const note = (text, kind, d, rank) => { if (!text || text === q || d > limit) return; const was = best.get(text); if (!was || d < was.d || (d === was.d && rank < was.rank)) best.set(text, { text, kind, d, rank }); };
+  (entries || []).forEach((e, i) => {
+    const rank = Number(e?.rank ?? e?.freq ?? i) || i;
+    if (he) { const w = fold(e?.lemma || e?.he || ''); if (w && !w.includes(' ')) note(w, 'hebrew', editDistance(q, w, limit), rank); return; }
+    const tl = fold(translitOf(e) || e?.translit || '');
+    if (tl) note(tl, 'transliteration', editDistance(q, tl, limit), rank);
+    for (const part of partsOf(e?.gloss ?? e?.en ?? '')) if (!part.includes(' ') || part.length <= q.length + 2) note(part, 'English', editDistance(q, part, limit), rank);
+  });
+  return [...best.values()].sort((a, b) => a.d - b.d || a.rank - b.rank).slice(0, max).map(({ text, kind }) => ({ text, kind }));
 }

@@ -29,8 +29,8 @@
     "ashkenazi": "[ɔ]"
    },
    "english": {
-    "israeli": "a as in father (short, no glide)",
-    "sephardi": "a as in father",
+    "israeli": "a as in father (short, no glide); the same sound as patach, told apart by shape: kamatz is a small T under the letter",
+    "sephardi": "a as in father; the same sound as patach, told apart by shape: kamatz is a small T under the letter",
     "ashkenazi": "aw as in saw (Barukh -> Bawrukh)",
     "american_synagogue": "ah as in father; older or Orthodox speakers say aw as in saw"
    },
@@ -124,9 +124,9 @@
     "ashkenazi": "[a]"
    },
    "english": {
-    "israeli": "a as in father",
-    "sephardi": "a as in father",
-    "ashkenazi": "a as in father",
+    "israeli": "a as in father; the same sound as kamatz, told apart by shape: patach is a flat line under the letter",
+    "sephardi": "a as in father; the same sound as kamatz, told apart by shape: patach is a flat line under the letter",
+    "ashkenazi": "a as in father (unlike kamatz, which Ashkenazi readers say as aw)",
     "american_synagogue": "ah as in father"
    },
    "example": {
@@ -764,8 +764,8 @@
    "israeliQuality": "mark",
    "ipa": {
     "israeli": "hardens bet/kaf/pe to [b][k][p]; gemination absent",
-    "sephardi": "hardens bet/kaf/pe to [b][k][p]; (gemination not covered by the sources fetched)",
-    "ashkenazi": "hardens bet/kaf/pe to [b][k][p]; (gemination not covered by the sources fetched)"
+    "sephardi": "hardens bet/kaf/pe to [b][k][p]",
+    "ashkenazi": "hardens bet/kaf/pe to [b][k][p]"
    },
    "english": {
     "israeli": "no sound of its own; makes b, k, p instead of v, kh, f",

@@ -75,6 +75,8 @@ export function mountLadder(root, ctx, q = {}) {
       cards.forEach((b) => { b.disabled = true; if (b.getAttribute("data-option") === item.id) b.className += " alef-correct"; else if (b.getAttribute("data-option") === id) b.className += " alef-wrong"; });
       const msg = r.correct ? "Right." : (silent ? "Not quite: it was the other card." : "Not quite: the sound was the other card.");
       const ev = r.event === "advance" ? ` Level up to ${r.level}.` : r.event === "drop" ? ` Two misses in a row: back to level ${r.level}.` : r.event === "cleared" ? " You cleared the ladder." : "";
+      // The count moves with the answer (review 4: a right answer left "0 of 3 in a row" until the next card was drawn).
+      { const st = session.state(), line = wrap.querySelector?.(".alef-levelstatus"); if (line) line.textContent = `Level ${st.level} of ${ladder.levels.length}. ${st.streak} of ${STREAK_UP} in a row.`; }
       fb.replaceChildren(el("p", {}, msg + ev), glyphWithHighlight(item),
         el("button", { type: "button", class: "btn alef-next", onclick: () => (r.finished ? finish() : draw()) }, r.finished ? "See results" : "Next"));
       fb.querySelector?.(".alef-next")?.focus?.();

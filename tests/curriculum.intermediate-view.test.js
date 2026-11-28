@@ -50,7 +50,7 @@ async function next(root) {
   const before = section(root)?.attrs["data-ex"] + "|" + byId_(root, "alef-int-ex")?.text;
   await byId_(root, "alef-int-next").click();
   await waitFor(() => /Lesson finished|Not passed yet/.test(root.text) || (section(root) && section(root).attrs["data-ex"] + "|" + byId_(root, "alef-int-ex")?.text !== before));
-  await waitFor(() => !/Lesson finished|Not passed yet/.test(root.text) || /marked as known|right on the first try/.test(root.text) && /review card|No review cards/.test(root.text));
+  await waitFor(() => !/Lesson finished|Not passed yet/.test(root.text) || /marked as known|right on the first try/.test(root.text) && /review card|No review cards|scheduled for your next review|No cards needed scheduling/.test(root.text));
 }
 
 /** Answer the exercise currently shown. `right` false picks a wrong answer where there is one. */

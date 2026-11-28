@@ -12,7 +12,7 @@ export function mount(root, ctx) {
       audioTruthNode(h, { id: 'about-audio-truth', fetchFn: ctx.readinessFetch }), // counts read from data/audio/summary.json
       // Course totals and the audio catalogue from src/lib/counts.js (counted from the served data at build time), and the build stamp.
       h('p', { id: 'about-counts' }, `The course: ${LESSONS.all} ${SCOPE.all} (${LESSONS.reading} reading, ${LESSONS.israel} Israel), ${fmt(BOOKS)} story books and a ${fmt(DICTIONARY.words)}-word learner dictionary (${fmt(DICTIONARY.sourceEntries)} entries in the data). ${aboutAudioSentence(AUDIO_CATALOGUE)}`),
-      h('p', { id: 'about-build', 'data-version': BUILD.version, 'data-built': BUILD.builtAt }, buildStamp()),
+      aboutBuild(),
       h('p', {}, 'Made by John Khan. Aleph is \u00a9 2026 John Khan. All rights reserved.'),
       h('p', { class: 'muted small' }, 'For checking the files: ', h('a', { href: '#/about/data' }, 'Data health'), '.')),
     readinessNode(h, { open: true, fetchFn: ctx.readinessFetch }),
@@ -25,6 +25,23 @@ export function mount(root, ctx) {
   return () => {};
 }
 
+/**
+ * The build stamp plus the deploy's own id. The date only moves on a release build, so two deploys could both say
+ * "built 2026-11-12" (review 3: "every future audit has to guess"). The id is the precache version, which changes with
+ * every change to the served files, so each deploy names itself.
+ */
+function aboutBuild() {
+  const id = h('span', { id: 'about-build-id' });
+  const p = h('p', { id: 'about-build', 'data-version': BUILD.version, 'data-built': BUILD.builtAt }, buildStamp(), ' ', id);
+  try {
+    globalThis.fetch?.('precache-manifest.js', { cache: 'no-cache' }).then((r) => (r.ok ? r.text() : '')).then((t) => {
+      const m = /ALEF_VERSION\s*=\s*"([a-f0-9]{6,})"/.exec(t || '');
+      if (m) { id.textContent = `Deploy ${m[1].slice(0, 8)}.`; p.setAttribute('data-deploy', m[1]); }
+    }).catch(() => { /* the date alone stays */ });
+  } catch { /* no fetch: the date alone stays */ }
+  return p;
+}
+
 /** I10: the newest changes, code and list loaded on demand (src/platform/whatsnew.js). */
 function changesSection(ctx) {
   const sec = h('section', { class: 'card', id: 'changes', 'aria-labelledby': 'changes-h' }, h('h2', { id: 'changes-h' }, 'What Changed Recently'));
@@ -35,7 +52,7 @@ function changesSection(ctx) {
 
 /** M-08: Held Recordings; code and list load on demand (held-recordings.js). */
 function heldSection(ctx) {
-  const sec = h('section', { class: 'card', id: 'held', 'aria-labelledby': 'held-h' }, h('h2', { id: 'held-h' }, 'Held Recordings'),
+  const sec = h('section', { class: 'card', id: 'held', 'aria-labelledby': 'held-h' }, h('h2', { id: 'held-h' }, 'Held Audio Clips'),
     h('p', { class: 'muted', role: 'status' }, 'Loading the list of held recordings…'));
   import('./held-recordings.js').then((m) => m.fillHeld(sec, h, { fetchFn: ctx.readinessFetch || globalThis.fetch }))
     .catch(() => sec.replaceChildren(sec.firstChild, h('p', { role: 'status' }, 'The list of held recordings did not load. Open About again while online to see it.')));

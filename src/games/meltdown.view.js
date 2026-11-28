@@ -1,7 +1,7 @@
 // Meltdown: a word-guessing game. Noa holds an ice pop on a hot Tel Aviv day. Guess the letters of the
 // hidden word; every wrong letter melts the pop one step. Save it before it drips away.
 import { mountArcade, randInt } from './arcade.js';
-import { bareLetters, wordsOfLength, ALPHABET, pickSeeded } from './arcade.model.js';
+import { bareLetters, wordsOfLength, ALPHABET, pickSeeded, baseLetter } from './arcade.model.js';
 
 export const STORE_KEY = 'games.meltdown.v1';
 
@@ -10,7 +10,7 @@ const STAGES = ['🍧', '🍧', '🍨', '🍨', '💧', '💧', '🫗'];
 const spec = {
   id: 'meltdown', title: 'Meltdown', titleHe: 'הַקַּרְטִיב נָמֵס',
   blurb: 'Noa has an ice pop and it is hot. A Hebrew word hides behind the dashes; guess its letters. Each wrong letter melts the pop a step. The meaning is your clue.',
-  howTo: ['Read the meaning (and the sound, on easy levels).', 'Tap a letter on the keyboard. Right letters fill the dashes, right to left.', 'Wrong letters melt the ice pop. Six wrong and it is a puddle.', 'Five words per round. Letters you already tried go grey.'],
+  howTo: ['Read the meaning (and the sound, on easy levels).', 'Tap a letter on the keyboard. Right letters fill the dashes, right to left. A final form (ך ם ן ף ץ) is on its regular key: מ also fills ם.', 'Wrong letters melt the ice pop. Six wrong and it is a puddle.', 'Five words per round. Letters you already tried go grey.'],
   levels: [
     { name: 'Short words, with sound', min: 2, max: 3, words: 5, hint: true, melt: 6 },
     { name: '3 to 4 letters, with sound', min: 3, max: 4, words: 5, hint: true, melt: 6 },
@@ -35,8 +35,14 @@ function setup(A) {
   const melt = A.h('p', { class: 'muted arc-prompt', role: 'status' });
   const keys = A.h('div', { class: 'arc-keyboard', role: 'group', 'aria-label': 'Letters' });
   A.board.replaceChildren(host, clue, dashes, melt, keys);
-  const drawWord = () => dashes.replaceChildren(...letters.map((ch) => A.h('span', {}, found.has(ch) ? ch : ' ')));
-  const drawIce = () => { ice.textContent = STAGES[Math.min(STAGES.length - 1, Math.round((wrong / cfg.melt) * (STAGES.length - 1)))]; melt.textContent = `${cfg.melt - wrong} wrong guess${cfg.melt - wrong === 1 ? '' : 'es'} left before the pop melts.`; };
+  const drawWord = () => dashes.replaceChildren(...letters.map((ch) => A.h('span', {}, found.has(baseLetter(ch)) ? ch : ' ')));
+  // The pop melts in five drawn stages (cast/icepop-1..5.png, docs/images/paste/k-04.txt); the emoji stand in until they exist.
+  let iceArt = true;
+  const drawIce = () => {
+    const step = Math.min(STAGES.length - 1, Math.round((wrong / cfg.melt) * (STAGES.length - 1)));
+    const stage = Math.min(5, 1 + Math.round((wrong / cfg.melt) * 4));
+    if (iceArt) { const img = A.h('img', { class: 'arc-ice-art', alt: '', src: `assets/img/play/SPR_icepop_${wrong === 0 ? 0 : stage}.webp` }); img.addEventListener('error', () => { iceArt = false; ice.textContent = STAGES[step]; }, { once: true }); ice.replaceChildren(img); }
+    else ice.textContent = STAGES[step]; melt.textContent = `${cfg.melt - wrong} wrong guess${cfg.melt - wrong === 1 ? '' : 'es'} left before the pop melts.`; };
   const next = () => {
     if (k >= queue.length) { A.finish({ won: true }); return; }
     word = queue[k++]; letters = [...bareLetters(word.he)]; found = new Set(); wrong = 0;
@@ -49,15 +55,15 @@ function setup(A) {
   const guess = (ch, btn) => {
     if (btn.disabled) return;
     btn.disabled = true;
-    if (letters.includes(ch)) {
+    if (letters.some((l) => baseLetter(l) === ch)) {
       found.add(ch); btn.classList.add('is-good'); A.sfx('tick'); drawWord();
-      if (letters.every((l) => found.has(l))) { const pts = 10 + (cfg.melt - wrong) * 3; A.addScore(pts); A.sfx('success'); A.announce(`${word.he}, ${word.en}. Saved with ${cfg.melt - wrong} to spare.`); A.sayWord(word); next(); }
+      if (letters.every((l) => found.has(baseLetter(l)))) { const pts = 10 + (cfg.melt - wrong) * 3; A.addScore(pts); A.sfx('success'); A.announce(`${word.he}, ${word.en}. Saved with ${cfg.melt - wrong} to spare.`); A.sayWord(word); next(); }
     } else {
       wrong++; btn.classList.add('is-bad'); A.sfx('miss'); A.miss(); drawIce();
-      if (wrong >= cfg.melt) { A.announce(`Melted. The word was ${word.he}, ${word.en}.`); A.addScore(-5); for (const l of letters) found.add(l); drawWord(); setTimeout(next, A.quiet ? 0 : 900); }
+      if (wrong >= cfg.melt) { A.announce(`Melted. The word was ${word.he}, ${word.en}.`); A.addScore(-5); for (const l of letters) found.add(baseLetter(l)); drawWord(); setTimeout(next, A.quiet ? 0 : 900); }
     }
   };
-  A.keys((k2, e) => { if (/^[א-ת]$/.test(e.key)) { const b = [...keys.querySelectorAll('button')].find((x) => x.textContent === e.key); if (b) { b.click(); return true; } } return false; });
+  A.keys((k2, e) => { if (/^[א-ת]$/.test(e.key)) { const want = baseLetter(e.key); const b = [...keys.querySelectorAll('button')].find((x) => x.textContent === want); if (b) { b.click(); return true; } } return false; }); // a physical final key (ם) presses its regular key (מ)
   A.setLives(0);
   next();
 }

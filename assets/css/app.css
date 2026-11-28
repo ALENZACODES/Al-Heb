@@ -465,6 +465,7 @@ button.is-playing [data-glyph] { display: inline-block; min-width: 1em; text-ali
 .alef-now-playing { position: fixed; z-index: 55; inset-inline: 0; margin-inline: auto; inline-size: max-content; max-inline-size: calc(100vw - 2rem); inset-block-end: calc(5.2rem + env(safe-area-inset-bottom)); padding: .45rem .9rem; border-radius: 999px; background: #16301c; color: #fbf3d9; border: 1px solid #d4a647; font-size: .92rem; box-shadow: 0 4px 14px rgba(0,0,0,.25); pointer-events: none; }
 .alef-now-playing[data-phase="failed"] { background: #5a1414; border-color: #f0b4b4; }
 .alef-now-playing[hidden] { display: none; }
+.alef-now-playing { pointer-events: none; } /* a status line: it never blocks the button under it */
 @media (prefers-reduced-motion: no-preference) { [data-play-state="playing"]::after { animation: skel-pulse .8s ease-in-out infinite alternate; } }
 /* Loading skeleton (U-24): shown by the shell while a view module loads, so a
    slow connection never leaves a blank page. Quiet grey bars, no motion for
@@ -543,3 +544,10 @@ details.draft-flag { background: none; border: 0; padding: 0; font-weight: inher
   .companions .comp-pic { width: 2.2rem; height: 2.2rem; }
   main h1 { margin-block: .4rem; }
 }
+
+/* 27 Nov 2026 review: Help is one tap from every page (the bar keeps its five places, so Help sits in the header) */
+.site-header .hdr-help { margin-inline-start: .9rem; padding: .3rem .7rem; min-height: 32px; display: inline-flex; align-items: center; border: 1px solid rgba(232,201,122,.6);
+  border-radius: 999px; color: #e8c97a; font-size: .9rem; font-weight: 600; text-decoration: none; white-space: nowrap; }
+.site-header .hdr-help:hover, .site-header .hdr-help:focus-visible { background: rgba(232,201,122,.14); color: #ffe9a8; }
+.fd-gate { margin: 0; color: #ffe9a8; min-height: 1.2em; }
+.fd-why-picked, .fd-why-right { margin: .25rem 0 0; }

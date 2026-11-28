@@ -50,7 +50,7 @@ export function mount(root,ctx){
   const status=h('p',{class:'game-status',role:'status','aria-live':'polite'},'Checking actual minimal-pair recordings…');
   const board=h('div',{class:'game-board'});
   const article=h('article',{class:'card game-card game-echochamber'},h('h1',{id:'view-title'},'Acoustic Echo Chamber'),
-    h('p',{},'Hear two real words differing in one consonant; choose the exact recorded word.'),status,board);
+    h('p',{},'Hear two real words differing in one consonant; choose the exact word you heard.'),status,board);
   root.replaceChildren(article);
   // The echo-canyon backdrop made for this game (approved art, decorative only —
   // never a word cue). A missing picture leaves the page as it was.
@@ -64,7 +64,7 @@ export function mount(root,ctx){
     if(round>=Math.min(8,deck.length)){
       roundStatus(status,'','Echo training complete.');
       board.replaceChildren(resultsCard(h,heSpan,session,{title:'Echo training complete',onAgain:()=>{round=0;session=createSession({store:ctx?.store,storeKey:STORE_KEY,par:5});paint();}}));return;}
-    roundStatus(status,feedback,`Contrast ${round+1} of ${Math.min(8,deck.length)}: play the recorded word.`);
+    roundStatus(status,feedback,`Contrast ${round+1} of ${Math.min(8,deck.length)}: play the word.`);
     const pair=deck[round%deck.length],target=round%2?pair.first:pair.second;
     let played=false;
     const pics=pair.letters.map(id=>{
@@ -90,7 +90,7 @@ export function mount(root,ctx){
     const tradition=ctx?.settings?.get?.('congregation')||'israeli';
     deck=shuffled(buildEchoDeck(data,tradition).filter(p=>
       [p.first,p.second].every(w=>hasRecordedClip(ctx,'word',w.id,{tradition}))));
-    if(!deck.length){status.textContent='No audible, true minimal pair recorded for the selected tradition. No replacement accent or guessed rounds.';return;}
+    if(!deck.length){status.textContent='No audible, true minimal pair with clips for the selected tradition. No replacement accent or guessed rounds.';return;}
     paint();
   }).catch(()=>{if(alive)status.textContent='Minimal-pair data unavailable.';});
   return ()=>{alive=false; leaveSfx();ctx?.audio?.stop?.();};

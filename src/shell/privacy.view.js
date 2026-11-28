@@ -35,6 +35,9 @@ export const STORE_KEYS = [
   ['listen.shelf.v1', 'Listening shelf progress, read by Awards', 'src/awards/observe.js'],
   ['home.builder.v1', 'Built word ids, timestamps and points', 'src/home/builder-model.js'],
   ['games.homebuilder.v1', 'Home word builder game results', 'src/home/builder-model.js'],
+  ['books.readAlong', 'Whether read along (pages turn by themselves while a book is read aloud) is on, for every book', 'src/books/book.view.js'],
+  ['workbook.prefs', 'Your last workbook choices (belt, reading style, paper, chapters, books), so the Workbook page opens where you left it', 'src/shell/workbook.view.js'],
+  ['alef.staleReload', 'Session only, never backed up: the page that just reloaded to finish an update, so it cannot reload twice in a row', 'src/shell/update.js'],
   ['rimon.dismissed', 'Whether you hid Rimon; included in your backup', 'src/shell/rimon.js'],
   ['rimon.seen.v1', 'Rimon: which one-time moments have already been shown (first answer, streak milestones, daily greetings) and the day you last visited, so nothing repeats', 'src/shell/rimon-stage.js'],
 
@@ -310,6 +313,7 @@ export const STORE_KEYS = [
   ['install.v1', 'Install prompt state', 'src/shell/install.js'],
   ['alef.audioBannerSeen.v1', 'Whether you dismissed the audio notice (saved under this exact name, without the "alef:" prefix)', 'src/shell/audio-access.js'],
   ['alef.storage-notice.v1', 'Storage notice state and whether you dismissed it (saved under this exact name, without the "alef:" prefix)', 'src/shell/install-notice.js'],
+  ['alef.update.later', 'That you pressed Later on the "new version is ready" banner, so it stays hidden for this visit (kept in this tab only and cleared when the tab closes; saved under this exact name)', 'src/shell/update.js'],
   ['alef.scroll.v1', 'Scroll position per screen, so Back returns you to the same place. Unlike every other row it is kept in sessionStorage, not localStorage: it is tied to this browser tab and is gone when the tab closes. Each entry is named by the screen address, so a term typed on the Search screen can appear in an entry name (exact name, without the "alef:" prefix)', 'src/shell/scroll-restore.js'],
   ['awards.v1', 'Awards on this device: practice-game activity, the name typed for a certificate sample, and any objective assessment evidence stored later. Lesson completion is not copied here. There is no account.', 'src/awards/record.js'],
   ['books.v1', 'Little-books reading place: the last page you reached in each book, when you first reached its last page, and when you finished it (its one story question answered)', 'src/books/book.view.js'],

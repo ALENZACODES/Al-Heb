@@ -11,6 +11,7 @@ import { isAudioFree } from '../shell/audiofree.js';
 import { quietNow } from '../shell/comfort.js';
 import { uiEnglish } from '../shell/names.js';
 import { playRecordedClip, hasRecordedClip } from './engine.js';
+import { recordScore } from './scores.js';
 import { ARCADE_KEY, LEVELS, BADGES, applyResult, applyArcade, emptyRecord, seededRandom, seedFrom, dayKey, bestLine, starsFor, mistakesLine } from './arcade.model.js';
 import { ARCADE_GAMES, HANUKKAH_GAMES } from './arcade.catalog.js';
 import { roundMode, afterRound, tournamentRandom } from './round-extras.js';
@@ -84,11 +85,15 @@ export async function createArcade(root, ctx, spec) {
   const mode = roundMode(ctx, spec.id); // ?daily=1 opens on the daily board; ?tournament=1 plays the open tournament run at level 1
   if (mode.level) level = mode.level;
   let daily = mode.daily, rnd = Math.random, roundSetup = null, alive = true;
+  let maxLives = 0;
   let score = 0, misses = 0, slips = 0, lives = 0, startedAt = 0, timeLeft = 0, timerId = 0, loopId = 0, loops = [];
   // readyAt: nothing moves and the clock does not run until the get-ready countdown ends. paused: same, on demand.
   let readyAt = 0, paused = false, countdownIds = [];
   const COUNTDOWN_S = 3;
   const keyHandlers = new Set();
+  // Handlers a round adds are dropped when the next round starts: they used to pile up, so after "One more go" the old round's
+  // handler redrew the old maze over the new one and Rimon looked frozen for every input (review 4).
+  let roundKeys = new Set(), inRound = false, boardTap = null;
 
   // Shell
   const titleEl = h('h1', { id: 'view-title', tabindex: '-1' }, spec.title + ' ', heSpan(spec.titleHe));
@@ -97,7 +102,23 @@ export async function createArcade(root, ctx, spec) {
   const hudBest = h('span', { class: 'arc-hud-item muted' });
   const hudLives = h('span', { class: 'arc-hud-item' });
   const hudTime = h('span', { class: 'arc-hud-item', role: 'timer', 'aria-live': 'off' });
-  const hud = h('div', { class: 'arc-hud' }, hudScore, hudBest, hudLives, hudTime);
+  // Rimon on the board reacts to right and wrong answers (25 Nov 2026 critique, item 8). Art: cast/rimon-cheer.png and
+  // cast/rimon-oops.png (docs/images/paste/k-01.txt); until they exist the shipped rimon-face.png stands in, bouncing or shaking.
+  const reactImg = h('img', { class: 'arc-react', alt: '', 'aria-hidden': 'true', hidden: '', decoding: 'async' });
+  let reactTimer = null;
+  const boardReact = (kind) => {
+    if (quiet) return;
+    try { // decoration only: never let it stop a game
+      const want = `${ART_BASE}/cast/${kind === 'cheer' ? 'rimon-cheer' : 'rimon-oops'}.png`;
+      reactImg.onerror = () => { reactImg.onerror = () => { reactImg.hidden = true; }; reactImg.setAttribute('src', `${ART_BASE}/cast/rimon-face.png`); };
+      if (reactImg.dataset?.kind !== kind) reactImg.setAttribute('src', want);
+      if (reactImg.dataset) reactImg.dataset.kind = kind;
+      reactImg.setAttribute('data-kind', kind); reactImg.hidden = false;
+      reactImg.classList?.remove('is-on'); void reactImg.offsetWidth; reactImg.classList?.add('is-on');
+      clearTimeout(reactTimer); reactTimer = setTimeout(() => { reactImg.hidden = true; }, 1100);
+    } catch { /* no picture */ }
+  };
+  const hud = h('div', { class: 'arc-hud' }, hudScore, ' · ', hudBest, ' · ', hudLives, ' ', hudTime, reactImg); // separators: copied or read as text the HUD said "Score 13No best yet" (25 Nov audit)
   const status = h('p', { class: 'arc-status', role: 'status', 'aria-live': 'polite' }, 'Loading…');
   const board = h('div', { class: 'arc-board', id: `arc-${spec.id}-board` });
   const controls = h('div', { class: 'arc-controls' });
@@ -136,9 +157,9 @@ export async function createArcade(root, ctx, spec) {
       return h('button', {
         type: 'button', class: 'arc-level' + (l === level ? ' is-current' : ''), 'aria-pressed': l === level, disabled: locked || undefined,
         onclick: () => { if (!locked) { level = l; renderLevels(); restart(); } },
-      }, h('span', { class: 'arc-level-n' }, locked ? h('span', { 'aria-hidden': 'true' }, '🔒') : String(l)), ' ', h('span', { class: 'arc-level-name' }, spec.levels[l - 1]?.name || ''),
+      }, h('span', { class: 'arc-level-n' }, locked ? h('span', { 'aria-hidden': 'true' }, '🔒') : `Level ${l}`), h('span', { class: 'visually-hidden' }, ', '), h('span', { class: 'arc-level-name' }, spec.levels[l - 1]?.name || ''),
         // the spoken name is the words on the button plus this hidden line (no aria-label, so the two can never disagree)
-        h('span', { class: 'visually-hidden' }, `, level ${l}${locked ? ', locked' : `, ${lv?.stars || 0} of 3 stars`}`), h('span', { class: 'arc-level-stars', 'aria-hidden': 'true' }, stars));
+        h('span', { class: 'visually-hidden' }, `${locked ? `, level ${l}, locked` : `, ${lv?.stars || 0} of 3 stars`}`), h('span', { class: 'arc-level-stars', 'aria-hidden': 'true' }, stars));
     }));
     const best = record.levels?.[level]?.best || 0;
     hudBest.textContent = best ? `Best L${level}: ${best}` : 'No best yet';
@@ -146,7 +167,7 @@ export async function createArcade(root, ctx, spec) {
   function renderStreak() {
     const a = get(ARCADE_KEY);
     if (!showStreak || !a?.streak) { streakEl.textContent = ''; return; }
-    streakEl.textContent = `Arcade streak: ${count(a.streak, 'day')} in a row · ${count(a.totalBadges || 0, 'badge')} across all games.`;
+    streakEl.textContent = `Arcade streak: ${count(a.streak, 'day')} in a row · ${count(a.totalBadges || 0, 'game badge')} across all games (Awards lists them too).`;
   }
   function toggleDaily() {
     daily = !daily;
@@ -205,11 +226,17 @@ export async function createArcade(root, ctx, spec) {
     get paused() { return paused; },
     cast: castArt,
     announce(text) { status.textContent = text; },
-    addScore(n) { if(n > 0) reactRimon('bounce'); score = Math.max(0, score + n); hudScore.textContent = `Score ${score}`; },
-    setLives(n) { lives = n; hudLives.textContent = n > 0 ? '♥'.repeat(Math.min(n, 5)) + (n > 5 ? `+${n - 5}` : '') : ''; },
+    addScore(n) { if (n > 0) { reactRimon('bounce'); boardReact('cheer'); } score = Math.max(0, score + n); hudScore.textContent = `Score ${score}`; },
+    setLives(n) {
+      lives = n; maxLives = Math.max(maxLives, Math.min(n, 5));
+      // painted hearts (assets/img/play): full ones carry the same heart character as before, lost ones are empty outlines
+      const full = Math.max(0, Math.min(n, 5)), lost = n > 0 ? Math.max(0, maxLives - full) : 0;
+      hudLives.replaceChildren(...Array.from({ length: full }, () => h('span', { class: 'play-heart' }, '♥')),
+        ...Array.from({ length: lost }, () => h('span', { class: 'play-heart is-empty', 'aria-hidden': 'true' })), ...(n > 5 ? [`+${n - 5}`] : []));
+    },
     /** M-03: a wrong answer or guess that does not fail the item (no life lost). It still rules out the Perfect badge. */
-    slip() { slips += 1; },
-    miss() { reactRimon('sad'); misses += 1; if (lives > 0) { A.setLives(lives - 1); if (lives === 0) { A.finish({ reason: 'lives' }); return true; } } return false; },
+    slip() { slips += 1; boardReact('oops'); },
+    miss() { reactRimon('sad'); boardReact('oops'); misses += 1; if (lives > 0) { A.setLives(lives - 1); if (lives === 0) { A.finish({ reason: 'lives' }); return true; } } return false; },
     sfx(name) { try { if (!quiet) sfx.play(name); } catch { /* sound is optional */ } },
     /** Recorded Hebrew word clip when present (never a non-Hebrew voice); the text always stays on screen. */
     async sayWord(word) {
@@ -232,17 +259,25 @@ export async function createArcade(root, ctx, spec) {
     art: (name, alt = '', cls) => art(spec.id, name, alt, cls),
     letterTile,
     /** Keyboard: handler(key, event) for arrows (as 'up','down','left','right'), 'enter', 'space', or the raw key. */
-    keys(handler) { keyHandlers.add(handler); return () => keyHandlers.delete(handler); },
+    keys(handler) { keyHandlers.add(handler); if (inRound) roundKeys.add(handler); return () => keyHandlers.delete(handler); },
     /** Direction pad buttons plus tap zones on the board (release events only). */
     dpad(onDir) {
       const btn = (dir, label) => h('button', { type: 'button', class: `btn arc-dpad-${dir}`, 'aria-label': label, onclick: () => onDir(dir) }, { up: '▲', down: '▼', left: '◀', right: '▶' }[dir]);
       controls.replaceChildren(h('div', { class: 'arc-dpad', role: 'group', 'aria-label': 'Move' }, btn('up', 'Move up'), h('div', { class: 'arc-dpad-mid' }, btn('left', 'Move left'), btn('right', 'Move right')), btn('down', 'Move down')));
-      board.addEventListener('click', (e) => {
-        if (e.target !== board && e.target?.closest?.('button')) return;
-        const r = board.getBoundingClientRect(); if (!r.width) return;
-        const x = (e.clientX - r.left) / r.width - 0.5, y = (e.clientY - r.top) / r.height - 0.5;
+      if (boardTap) board.removeEventListener('click', boardTap);
+      boardTap = (e) => {
+        const cell = e.target?.closest?.('.arc-cell');
+        if (e.target !== board && !cell && e.target?.closest?.('button')) return;
+        // A tap on the maze moves toward the tapped square, measured from the player's own square when there is one
+        // (it used to be ignored on a square, and measured from the board's centre elsewhere).
+        const me = board.querySelector('.arc-cell.is-player, .arc-cell.is-head');
+        const r = (me || board).getBoundingClientRect(); if (!r.width) return;
+        const x = me ? e.clientX - (r.left + r.width / 2) : (e.clientX - r.left) / r.width - 0.5;
+        const y = me ? e.clientY - (r.top + r.height / 2) : (e.clientY - r.top) / r.height - 0.5;
+        if (me && Math.abs(x) < r.width / 2 && Math.abs(y) < r.height / 2) return; // a tap on the player itself
         onDir(Math.abs(x) > Math.abs(y) ? (x > 0 ? 'right' : 'left') : (y > 0 ? 'down' : 'up'));
-      });
+      };
+      board.addEventListener('click', boardTap);
       A.keys((k) => { if (['up', 'down', 'left', 'right'].includes(k)) onDir(k); });
     },
     /**
@@ -278,6 +313,7 @@ export async function createArcade(root, ctx, spec) {
       const previousBest = record.best;
       const out = applyResult(record, { level, score, par, misses, slips, timeMs, daily, day: dayKey() });
       record = out.record; set(storeKey, record);
+      recordScore(ctx?.store, spec.id, score, out.stars); // last score and played state for the library and the games page (src/games/scores.js)
       const arc = applyArcade(get(ARCADE_KEY), { gameId: spec.id, day: dayKey(), badgesEarned: out.newBadges.length });
       const streakNew = arc.streakBadges.filter((b) => !record.earned.includes(b));
       for (const b of streakNew) record.earned.push(b);
@@ -289,7 +325,7 @@ export async function createArcade(root, ctx, spec) {
       A.sayLine(stars >= 2 ? 3 : 4);
       const why = reason === 'time' ? 'Time is up.' : reason === 'lives' ? 'Out of lives.' : won ? 'Round complete!' : 'Round over.';
       const next = nextGame(spec.id);
-      results.replaceChildren(h('section', { class: 'card game-results arc-results-card', 'aria-labelledby': 'game-results-h' },
+      results.replaceChildren(h('section', { class: 'card game-results arc-results-card', 'data-stars': String(stars), 'aria-labelledby': 'game-results-h' },
         h('h2', { id: 'game-results-h' }, `${why} Level ${level}: ${score} points`),
         h('p', { class: 'game-stars', 'aria-label': `${stars} of 3 stars` }, '★'.repeat(stars) + '☆'.repeat(3 - stars)),
         h('p', {}, bestLine(score, previousBest)),
@@ -309,6 +345,11 @@ export async function createArcade(root, ctx, spec) {
       try { results.querySelector('h2')?.focus?.(); } catch { /* no focus in small DOM */ }
     },
     destroy() {
+      // Leaving in the middle of a round the learner actually played still counts as a play (25 Nov 2026 audit: the Library said
+      // "Not played yet" for 27 of 30 games that had been played). No stars or badges: those need a finished round.
+      if (startedAt && Date.now() >= readyAt && (score !== 0 || misses || slips)) {
+        try { record = { ...record, plays: (record.plays || 0) + 1 }; set(storeKey, record); recordScore(ctx?.store, spec.id, Math.max(0, score), 0); } catch { /* saving a partial play is best effort */ }
+      }
       alive = false; startedAt = 0; clearLoops();
       window.removeEventListener('keydown', onKey);
       try { ctx?.audio?.stop?.(); } catch { /* already gone */ }
@@ -320,7 +361,7 @@ export async function createArcade(root, ctx, spec) {
     if (!alive) return;
     clearLoops();
     results.replaceChildren();
-    score = 0; misses = 0; slips = 0; lives = 0; paused = false;
+    score = 0; misses = 0; slips = 0; lives = 0; paused = false; maxLives = 0;
     pauseBtn.hidden = false; pauseBtn.textContent = 'Pause'; pauseBtn.setAttribute('aria-pressed', 'false'); board.classList.remove('is-paused');
     // Calm mode with no clock has nothing to get ready for; every other round counts in.
     const lead = untimed && quiet ? 0 : COUNTDOWN_S;
@@ -334,7 +375,10 @@ export async function createArcade(root, ctx, spec) {
     if (!untimed) timerId = setInterval(tickTimer, 1000);
     const levelLine = `Level ${level}: ${A.cfg?.name || ''}.${daily ? ' Daily challenge board.' : ''}`;
     status.textContent = levelLine;
+    for (const fn of roundKeys) keyHandlers.delete(fn); roundKeys = new Set();
+    inRound = true;
     try { roundSetup?.(A); } catch (e) { console.warn(spec.id, e); status.textContent = 'This round could not be set up. Try another level.'; }
+    inRound = false;
     if (lead) countdown(levelLine);
     A.sayLine(2);
   }

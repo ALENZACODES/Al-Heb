@@ -9,6 +9,7 @@
 // are never reported.
 const QUIET_SRC = /(^|\/)audio\/(music|sfx)\/|\/stings\/|\/israeli\/games\//; // music, UI sounds, and game voice lines (silent when absent by design)
 const CONTROL = 'button, [role="button"], a.btn, .btn';
+const STUCK_PLAYING_MS = 20000, STUCK_LOADING_MS = 12000; // the line never outlives these, even if the sound's end is never reported
 const CLICK_WINDOW_MS = 2500; // a sound that starts this long after a tap on a control belongs to that control
 
 /** Pure: the status line for a phase. @param {'loading'|'playing'|'finished'|'failed'|'stopped'} phase @param {string} [what] @param {string} [why] */
@@ -36,6 +37,15 @@ export function controlName(el) {
   return out.length > 60 ? `${out.slice(0, 57)}…` : out;
 }
 
+/** Pure: is this control a sound button (Listen, Play, Hear, a speaker icon), as opposed to a button that merely makes a sound? */
+export function isSoundControl(el) {
+  if (!el) return false;
+  const label = `${el.getAttribute?.('aria-label') || ''} ${el.textContent || ''}`;
+  if (/[▶►⏵♪🔊🔈🔉]/u.test(label) || /\b(listen|play|hear|replay|sound|say it|read aloud|slow|pronounc\w*|audio)\b/i.test(label)) return true;
+  const cls = String(el.className?.baseVal ?? el.className ?? '');
+  return /(^|[\s_-])(listen|audio|speak|sound|play)([\s_-]|$)/i.test(cls) || !!el.closest?.('[data-play-line]');
+}
+
 /**
  * Install once. @param {{audio?: any, doc?: Document, win?: any, hideAfterMs?: number}} o
  * @returns {{begin:(o?:{what?:string, control?:Element})=>number, end:(id:number, phase:string, why?:string)=>void, line:HTMLElement}|null}
@@ -55,8 +65,12 @@ export function installPlayState({ audio, doc = globalThis.document, win = globa
   const show = (text, phase) => {
     clearTimeout(hideTimer);
     line.textContent = text; line.dataset.phase = phase; line.hidden = false;
-    if (phase !== 'playing' && phase !== 'loading') hideTimer = setTimeout(() => { line.hidden = true; }, phase === 'failed' ? hideAfterMs * 2 : hideAfterMs);
+    // "Playing" and "Loading" also expire: a sound whose end never arrives (a device voice that drops its end event, a page
+    // change mid-clip) once left "Playing: Listen (Noa)" over the text of three pages until a reload (27 Nov 2026 review).
+    hideTimer = setTimeout(() => { line.hidden = true; }, phase === 'playing' ? STUCK_PLAYING_MS : phase === 'loading' ? STUCK_LOADING_MS : phase === 'failed' ? hideAfterMs * 2 : hideAfterMs);
   };
+  // Leaving the page ends the line: whatever was playing belonged to the page that is gone.
+  win.addEventListener?.('hashchange', () => { clearTimeout(hideTimer); line.hidden = true; if (active?.control) mark(active.control, 'stopped'); active = null; });
   const mark = (c, phase) => {
     if (!c || !c.dataset) return;
     c.classList.toggle('is-playing', phase === 'playing' || phase === 'loading');
@@ -68,7 +82,10 @@ export function installPlayState({ audio, doc = globalThis.document, win = globa
     const c = control || (Date.now() - lastAt < CLICK_WINDOW_MS ? lastControl : null);
     if (active && active.control && active.control !== c) mark(active.control, 'stopped');
     // a sound nobody tapped for (a game reading the next word by itself) marks nothing and only speaks up if it fails
-    active = { id: ++seq, control: c, what: what || controlName(c), auto: !c };
+    // Only a control that is itself a sound button gets the "Playing: ..." line. A game's answer or move button that also makes
+    // a sound (TRUE, NOT, "Move left", a typed letter) used to put its own label in the line, over the playfield (27 Nov 2026
+    // review); such a tap now stays quiet and the line only speaks up if the sound fails.
+    active = { id: ++seq, control: c, what: what || controlName(c), auto: !c || !isSoundControl(c) };
     mark(c, 'loading'); if (!active.auto) show(playLine('loading', active.what), 'loading');
     return active.id;
   }

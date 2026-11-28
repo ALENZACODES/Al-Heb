@@ -102,22 +102,32 @@ export function mount(root, ctx) {
   const envHost = h('div', { class: 'game-env-host' });
   const board = h('div', { class: 'game-board' }, sky);
 
+  // The score is always on screen (review 3: no visible score).
+  const scoreEl = h('p', { class: 'game-catcher-score' });
+  const showScore = () => { scoreEl.textContent = `Score ${session.score} · ${session.correct} caught · target ${Math.max(1, targetsDone)} of ${TARGETS_PER_GAME}`; };
   function newTarget() {
     target = MARKS[Math.floor(Math.random() * MARKS.length)];
     targetsDone++;
     announce.replaceChildren(`Target ${targetsDone} of ${TARGETS_PER_GAME}: catch ${target.name} for `,
       heSpan(letter.glyph + target.point, 'he game-he-sm'), '.');
     // The syllable has no clip id. Do not speak the bare letter and call it the vowel.
+    showScore();
+    // A new target is on its way at once, not after the sky turns over (review 4: the target was often missing from the sky).
+    if (!stars.some((st) => st.mark.id === target.id)) spawnAt = 0;
     void speak(ctx, letter.glyph + target.point, { onStatus: (m) => { if (alive) speechNote.textContent = m; } });
   }
 
   function spawn(now) {
-    const mark = MARKS[Math.floor(Math.random() * MARKS.length)];
-    const image = imgOf(R, mark.img.kind, mark.img.id, mark.img.opts);
+    // The mark asked for is always on its way: when none is in the sky the next one is the target (the target was once
+    // absent from the sky altogether, 27 Nov 2026 review).
+    const wanted = target && !stars.some((st) => st.mark.id === target.id);
+    // and no mark is in the sky twice at once (review 3: one slot repeated a mark each round)
+    const fresh = MARKS.filter((m) => !stars.some((st) => st.mark.id === m.id));
+    const mark = wanted ? target : (fresh.length ? fresh : MARKS)[Math.floor(Math.random() * (fresh.length || MARKS.length))];
     const star = { el: null, mark, x: 6 + Math.random() * 88, y: reducedMotion ? 30 : -8, speed: reducedMotion ? 0 : 12 + Math.random() * 6 };
     if (reducedMotion) star.x = 8 + (stars.length % 5) * 18;
     const el = h('button', { type: 'button', class: 'catcher-star', 'aria-label': `Catch ${mark.name}`, onclick: () => resolveStar(star) },
-      image ? h('img', { class: 'game-catcher-mark-img', src: image.src, alt: '', width: 60, height: 60, 'data-img-id': image.id }) : heSpan(mark.glyph));
+      heSpan(letter.glyph + mark.point, 'he catcher-mark')); // the mark itself, large: a 60-pixel copy of its picture card hid the very thing being taught
     star.el = el;
     sky.append(el);
     stars.push(star); // %/s
@@ -136,6 +146,7 @@ export function mount(root, ctx) {
       : `That was ${s.mark.name}. Catch ${target.name}.`,
       ...(ok ? [`. Yes! ${session.correct} caught · Score ${session.score}`] : []));
     s.el.remove(); stars = stars.filter((x) => x !== s);
+    showScore();
     if (ok) { if (targetsDone >= TARGETS_PER_GAME) return finish(); newTarget(); }
   }
 
@@ -215,7 +226,7 @@ export function mount(root, ctx) {
         h('li', {}, 'Slide the basket under the vowel mark that makes that sound: drag, tap the sky, or use the ← → keys.'),
         h('li', {}, 'Catch it to score. Let the other marks fall past.'),
         h('li', {}, 'Press Start when you are ready. Pause any time.')),
-      h('div', { class: 'row' }, pauseBtn, place), hud, announce, speechNote, envHost, board);
+      h('div', { class: 'row' }, pauseBtn, place), hud, scoreEl, announce, speechNote, envHost, board);
   root.replaceChildren(article);
   Promise.all([loadDeck(ctx), loadGameImages(ctx)]).then(([deck, images]) => {
     if (!alive || !article.isConnected) return;

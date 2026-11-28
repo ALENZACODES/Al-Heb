@@ -1,0 +1,61 @@
+{
+  "about": "Block K: game playfields, Rimon reactions and workbook covers (25 Nov 2026 critique, item 8 and the workbooks). Paste files: docs/images/paste/K-MASTER.txt then k-01.txt to k-05.txt. Ingest: python3 tools/images/ingest_blockk.py <folder of downloaded PNGs>.",
+  "commands": [
+    { "file": "k-01", "title": "Rimon reactions for the games", "items": [
+      { "name": "K-rimon-cheer.png", "aspect": "1:1", "transparent": true, "dest": "assets/games/arcade/cast/rimon-cheer.png", "size": [256, 256],
+        "prompt": "MASCOT Rimon alone, full body, jumping for joy with both tiny arms raised high, eyes happily closed in upturned arcs, big open smile, both feet off the ground, three small gold sparkle shapes (simple four-point stars) around him. Transparent background, no ground shadow, no scenery. Centred, filling about 80% of the frame." },
+      { "name": "K-rimon-oops.png", "aspect": "1:1", "transparent": true, "dest": "assets/games/arcade/cast/rimon-oops.png", "size": [256, 256],
+        "prompt": "MASCOT Rimon alone, full body, a gentle 'oops' moment: both tiny hands pressed to his cheeks, eyes wide, small worried mouth, one small blue sweat drop beside his head, leaning back slightly. Friendly, not sad or scared. Transparent background, no ground shadow, no scenery. Centred, filling about 80% of the frame." }
+    ]},
+    { "file": "k-02", "title": "Board surfaces for the maze, snake, well and sky games", "items": [
+      { "name": "K-board-wall.png", "aspect": "1:1", "transparent": false, "dest": "assets/games/arcade/board/wall.png", "size": [256, 256], "tile": true,
+        "prompt": "A SEAMLESS TILEABLE square texture seen straight from above: a neatly trimmed olive-green garden hedge (#6B7F3A with darker and lighter leaf clusters), filling the whole square edge to edge with no border, no frame and no single object. The left edge must continue into the right edge and the top into the bottom. Flat vector style, thick rounded leaf shapes. No sky, no ground, no shadows falling outside the hedge." },
+      { "name": "K-board-path.png", "aspect": "1:1", "transparent": false, "dest": "assets/games/arcade/board/path.png", "size": [256, 256], "tile": true,
+        "prompt": "A SEAMLESS TILEABLE square texture seen straight from above: a very light sandy garden path (paper cream #F6F1E7 with a few slightly darker sand specks and two or three tiny pebbles), very low contrast so dark letters drawn on top stay easy to read. Fills the whole square edge to edge, no border, no objects, no shadows. The left edge must continue into the right edge and the top into the bottom." },
+      { "name": "K-board-grass.png", "aspect": "1:1", "transparent": false, "dest": "assets/games/arcade/board/grass.png", "size": [256, 256], "tile": true,
+        "prompt": "A SEAMLESS TILEABLE square texture seen straight from above: a soft, light lawn (pale olive green, a few small darker grass tufts), very low contrast so letters drawn on top stay easy to read. Fills the whole square edge to edge, no border, no flowers, no objects. The left edge must continue into the right edge and the top into the bottom." },
+      { "name": "K-board-well.png", "aspect": "2:3", "transparent": false, "dest": "assets/games/arcade/board/well.png", "size": [768, 1152],
+        "prompt": "Portrait backdrop: looking straight into an old stone well from the front, as if the front wall were cut away. Warm limestone blocks (Jerusalem stone) form a thick border down the left and right sides and along the bottom; a small rope and wooden bucket hang at the top left. The whole middle (about 70% of the width and height) is a plain, very light, even cream (#F6F1E7) with no stones, no water and no details, because letters fall through it. No people." },
+      { "name": "K-board-sky.png", "aspect": "2:3", "transparent": false, "dest": "assets/games/arcade/board/sky.png", "size": [768, 1152],
+        "prompt": "Portrait backdrop: a calm pale sky (very light blue fading to cream), two or three small simple clouds near the top corners, and a low row of olive trees and a stone terrace wall along the very bottom 15%. The middle is plain and light, with no birds or objects, because letters fall through it. No people, no sun with a face." }
+    ]},
+    { "file": "k-03", "title": "Snake and train", "items": [
+      { "name": "K-snake-head.png", "aspect": "1:1", "transparent": true, "dest": "assets/games/arcade/board/snake-head.png", "size": [256, 256],
+        "prompt": "A cute round caterpillar HEAD seen from straight above, facing right: a pomegranate-red circle (#B0373B) with two big friendly dot eyes near the right side, two short olive-green antennae, thick charcoal outline. Head only, no body. Transparent background, centred, filling about 85% of the frame." },
+      { "name": "K-snake-body.png", "aspect": "1:1", "transparent": true, "dest": "assets/games/arcade/board/snake-body.png", "size": [256, 256],
+        "prompt": "One BODY SEGMENT of the same cute caterpillar, seen from straight above: a plain round pomegranate-red circle (#B0373B) with a slightly lighter centre spot and a thick charcoal outline. No face, no legs. Transparent background, centred, filling about 85% of the frame." },
+      { "name": "K-train-engine.png", "aspect": "3:2", "transparent": true, "dest": "assets/games/arcade/cast/train-engine.png", "size": [384, 256],
+        "prompt": "A small friendly toy-style steam engine seen from the side, FACING LEFT (the chimney and front are on the left, the cab on the right), deep sea blue body (#1F3A5F) with warm gold trim (#D9A441) and pomegranate-red wheels, a puff of white smoke above the chimney. No driver, no rails, no ground, no numbers, no name plate text. Transparent background, centred." }
+    ]},
+    { "file": "k-04", "title": "Meltdown ice pop, five stages", "items": [
+      { "name": "K-icepop-1.png", "aspect": "1:1", "transparent": true, "dest": "assets/games/arcade/cast/icepop-1.png", "size": [256, 256],
+        "prompt": "STAGE 1 of 5 of the SAME ice pop: a whole, perfectly frozen two-colour ice pop (top half pomegranate red, bottom half warm gold) on a plain wooden stick, upright, crisp edges, a tiny white shine mark. Transparent background, centred, filling about 75% of the height." },
+      { "name": "K-icepop-2.png", "aspect": "1:1", "transparent": true, "dest": "assets/games/arcade/cast/icepop-2.png", "size": [256, 256],
+        "prompt": "STAGE 2 of 5 of the SAME ice pop as stage 1, same size and position: the top corners just starting to soften and round, one small drip running down one side. Transparent background." },
+      { "name": "K-icepop-3.png", "aspect": "1:1", "transparent": true, "dest": "assets/games/arcade/cast/icepop-3.png", "size": [256, 256],
+        "prompt": "STAGE 3 of 5 of the SAME ice pop, same stick and position: about a third has melted away, the top is lumpy and rounded, two or three drips run down and a small red-and-gold puddle forms under the stick. Transparent background." },
+      { "name": "K-icepop-4.png", "aspect": "1:1", "transparent": true, "dest": "assets/games/arcade/cast/icepop-4.png", "size": [256, 256],
+        "prompt": "STAGE 4 of 5 of the SAME ice pop, same stick and position: only a small slumped lump of ice is left near the bottom of the stick, most of the stick is bare, a wider puddle below. Transparent background." },
+      { "name": "K-icepop-5.png", "aspect": "1:1", "transparent": true, "dest": "assets/games/arcade/cast/icepop-5.png", "size": [256, 256],
+        "prompt": "STAGE 5 of 5: the SAME bare wooden stick lying flat in a round red-and-gold puddle, no ice left. Transparent background, centred." }
+    ]},
+    { "file": "k-05", "title": "Workbook covers, one per belt", "items": [
+      { "name": "K-cover-white.png", "aspect": "2:3", "transparent": false, "dest": "assets/workbook/covers/white.png", "size": [768, 1152],
+        "prompt": "Portrait workbook cover picture: MASCOT Rimon standing proudly in the centre wearing a plain WHITE martial-arts belt tied around his middle, holding a big pencil like a staff, an open blank notebook at his feet. Paper-cream background with a few simple pomegranate leaves in the corners. No text, no letters, no numbers on the notebook or anywhere." },
+      { "name": "K-cover-yellow.png", "aspect": "2:3", "transparent": false, "dest": "assets/workbook/covers/yellow.png", "size": [768, 1152],
+        "prompt": "The same composition and style as the white-belt cover, but Rimon wears a YELLOW belt and is writing in the blank notebook with the pencil. No text anywhere." },
+      { "name": "K-cover-orange.png", "aspect": "2:3", "transparent": false, "dest": "assets/workbook/covers/orange.png", "size": [768, 1152],
+        "prompt": "The same composition and style, Rimon wears an ORANGE belt and holds up a blank flash card with a big smile. No text anywhere." },
+      { "name": "K-cover-green.png", "aspect": "2:3", "transparent": false, "dest": "assets/workbook/covers/green.png", "size": [768, 1152],
+        "prompt": "The same composition and style, Rimon wears a GREEN belt and sits cross-legged reading a small closed book with a plain cover. No text anywhere." },
+      { "name": "K-cover-blue.png", "aspect": "2:3", "transparent": false, "dest": "assets/workbook/covers/blue.png", "size": [768, 1152],
+        "prompt": "The same composition and style, Rimon wears a deep sea BLUE belt and stands beside a small stack of three plain books, one hand on top. No text anywhere." },
+      { "name": "K-cover-brown.png", "aspect": "2:3", "transparent": false, "dest": "assets/workbook/covers/brown.png", "size": [768, 1152],
+        "prompt": "The same composition and style, Rimon wears a BROWN belt and holds a closed prayer-book-shaped plain book against his chest, eyes calm. No text or symbols on the book." },
+      { "name": "K-cover-intermediate.png", "aspect": "2:3", "transparent": false, "dest": "assets/workbook/covers/intermediate.png", "size": [768, 1152],
+        "prompt": "The same composition and style, Rimon wears a BLACK belt with a single gold stripe and gives a proud thumbs-up beside a tall stack of plain books. No text anywhere." },
+      { "name": "K-cover-israel.png", "aspect": "2:3", "transparent": false, "dest": "assets/workbook/covers/israel.png", "size": [768, 1152],
+        "prompt": "The same style: Rimon with a small backpack waving hello in front of BG_telaviv (white modernist buildings and palms, no signs), an open blank notebook under his other arm. No text anywhere." }
+    ]}
+  ]
+}

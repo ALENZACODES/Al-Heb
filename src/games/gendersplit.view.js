@@ -9,7 +9,7 @@ const EXTRA_URL = new URL('../../data/games/arcade-extra.json', import.meta.url)
 const spec = {
   id: 'gendersplit', title: 'Gender Split', titleHe: 'זָכָר אוֹ נְקֵבָה',
   blurb: 'Every Hebrew noun is he or she. Sort each word to Ari (masculine, זָכָר) or Noa (feminine, נְקֵבָה). Words ending in ה or ת are usually feminine, but the exceptions are where the points are.',
-  howTo: ['A noun appears with its meaning.', 'Tap Ari (masculine) or Noa (feminine), or press ← for Ari and → for Noa.', 'The ending hint shows on the first two levels; later you decide from memory.', 'Twenty nouns per round; a streak multiplies points.'],
+  howTo: ['A noun appears with its meaning.', 'Tap Ari (masculine) or Noa (feminine), or press ← for Ari and → for Noa.', 'The ending hint shows on the first two levels; later you decide from memory.', 'Each level sets how many nouns (16 to 26); a streak multiplies points.'],
   levels: [
     { name: 'Common nouns, hints on', count: 16, hint: true, perCard: 8 },
     { name: 'More nouns, hints on', count: 20, hint: true, perCard: 7 },

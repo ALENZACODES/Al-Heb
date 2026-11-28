@@ -53,7 +53,7 @@ export const ROUTES = [
   { name: 'book', pattern: '/book/:id', module: '../books/book.view.js', title: 'Read a book', owner: 'books', paramQuery: { id: 'book' } },
   { name: 'readhub', pattern: '/read-home', module: './read-hub.view.js', tier: 'v0', nav: 'nav.read', title: 'Read', owner: 'books' },
   { name: 'speakhub', pattern: '/speak-home', module: './speak-hub.view.js', tier: 'v0', nav: 'nav.speak', title: 'Speak', owner: 'speak' },
-  { name: 'games', pattern: '/games', module: '../games/games.view.js', title: 'Games', tier: 'preview', owner: 'games', quick: 'nav.games' },
+  { name: 'games', pattern: '/games', module: '../games/games.view.js', title: 'Games', tier: 'v0', owner: 'games', quick: 'nav.games' },
   { name: 'library', pattern: '/library', module: '../library/library.view.js', title: 'Library', tier: 'v0', owner: 'library', quick: 'nav.route.library' },
   { name: 'libraryarticle', pattern: '/library/:id', module: '../library/library.view.js', title: 'Library', tier: 'v0', owner: 'library', paramQuery: { id: 'article' } },
   { name: 'lab', pattern: '/lab', module: '../lab/lab.view.js', title: 'Brain Lab', tier: 'v0', owner: 'lab', quick: 'nav.route.lab' },
@@ -129,7 +129,7 @@ export const ROUTES = [
   ...G4_ROUTES.map(([id, title]) => ({ name: 'g4-' + id, pattern: '/g4-' + id, module: `../games/g4-${id}.view.js`, title, tier: 'preview', owner: 'games' })), // lane 4 (g4): Everyday Israel games
   // g5 (lane 5) games
   ...'simanim:Sweet Year Table|harvest:Seven Species|grogger:Grogger|fireworks:Independence Fireworks|table:Shabbat Table|greet:Holiday Greetings|shofar:Shofar Echo|kippur:Quiet Words|gifts:Mishloach Manot|plate:Seder Plate|questions:The Four Questions|omer:Count to Shavuot|sukkah:Sukkah Builder|species:Four Species|steps:Seder Steps|stars:Sundown to Stars|bless:Blessing Match|mend:Siddur Mend|readings:Holiday Readings|scroll:Roll the Scroll'.split('|').map((x) => { const [n, title] = x.split(':'); return { name: 'g5-' + n, pattern: '/g5-' + n, module: `../games/g5-${n}.view.js`, title, tier: 'preview', owner: 'games' }; }),
-  { name: 'wordfinder', pattern: '/wordfinder', module: '../games/wordfinder.view.js', title: 'Hebrew Word Finder: Level 1', tier: 'preview', owner: 'games' },
+  { name: 'wordfinder', pattern: '/wordfinder', module: '../games/wordfinder.view.js', title: 'Hebrew Word Finder: Level 1', tier: 'v0', owner: 'games' },
   { name: 'tugowar', pattern: '/tugowar', module: '../games/tugowar.view.js', title: 'Antonym Tug-of-War', tier: 'preview', owner: 'games' },
   { name: 'vowelcatcher', pattern: '/vowelcatcher', module: '../games/vowelcatcher.view.js', title: 'Vowel Catcher', tier: 'preview', owner: 'games' },
   { name: 'pinball', pattern: '/pinball', module: '../games/pinball.view.js', title: 'Hebrew Pinball', tier: 'preview', owner: 'games' },
@@ -215,7 +215,7 @@ export const ROUTES = [
   { name: 'gender',   pattern: '/gender',        module: '../curriculum/learn.view.js', title: 'Gender pairs',     owner: 'lane1', group: 'learn', quick: 'nav.gender',   query: { gender: 'pairs' }, needs: 'curriculum/gender.view.js' },
   { name: 'roles',    pattern: '/gender/roles',  module: '../curriculum/learn.view.js', title: 'Say it as me',     owner: 'lane1', group: 'learn', quick: 'nav.roles',    query: { gender: 'roles' }, needs: 'curriculum/gender.view.js' },
   { name: 'scaffold', pattern: '/scaffold',      module: '../curriculum/learn.view.js', title: 'Read without Latin', owner: 'lane1', group: 'learn', quick: 'nav.scaffold', query: { scaffold: '1' }, needs: 'curriculum/scaffold.view.js' },
-  { name: 'sounds',   pattern: '/sounds',         module: '../pronunciation/sounds.view.js',     nav: 'nav.sounds',   title: 'Sounds', owner: 'lane3' },
+  { name: 'sounds',   pattern: '/sounds',         module: '../pronunciation/sounds.view.js',     nav: 'nav.sounds',   title: 'Sounds', owner: 'lane3', tier: 'v0' },
   { name: 'read',     pattern: '/read',           module: '../corpus/read.view.js',              nav: 'nav.read',     title: 'Read', owner: 'lane5' },
   { name: 'text',     pattern: '/read/:textId',   module: '../corpus/read.view.js',              title: 'Read', owner: 'lane5' },
   { name: 'scan',     pattern: '/scan',           module: '../photo/scan.view.js',               nav: 'nav.scan',     title: 'Scan', owner: 'lane6' },
@@ -232,7 +232,7 @@ export const ROUTES = [
   { name: 'workbook', pattern: '/workbook',        module: './workbook.view.js',                  nav: 'nav.workbook', title: 'Workbook', owner: 'lane8' },
   { name: 'light', pattern: '/light', module: '../light/light.view.js', title: 'Star of David light', owner: 'light', optional: true, quick: 'nav.light' },
   { name: 'soundgap', pattern: '/soundgap',       module: '../pronunciation/soundgap.view.js',   title: 'Sound gap', owner: 'lane3', optional: true, quick: 'nav.soundgap' },
-  { name: 'vowelboard',   pattern: '/vowelboard',    module: '../pronunciation/vowelboard.view.js',    title: 'Vowel board', owner: 'lane3', optional: true, quick: 'nav.vowelboard' },
+  { name: 'vowelboard',   pattern: '/vowelboard',    module: '../pronunciation/vowelboard.view.js',    title: 'Vowel board', owner: 'lane3', optional: true, quick: 'nav.vowelboard', tier: 'v0' },
   { name: 'niqquddial',   pattern: '/niqquddial',    module: '../pronunciation/niqquddial.view.js',    title: 'Vowel-point dial', owner: 'lane3', optional: true, quick: 'nav.niqquddial' },
   { name: 'dottile',      pattern: '/dottile',       module: '../pronunciation/dottile.view.js',       title: 'Dot tiles', owner: 'lane3', optional: true, quick: 'nav.dottile' },
   { name: 'syllablechips',pattern: '/syllablechips', module: '../pronunciation/syllablechips.view.js', title: 'Syllable chips', owner: 'lane3', optional: true, quick: 'nav.syllablechips' },
@@ -295,6 +295,7 @@ export function parseHash(hash) {
 /** @param {string} hash @returns {{route:RouteDef|null, params:Record<string,string>, path:string, query:Record<string,string>}} */
 export function canonicalPath(path) {
   if (path === '/brainlab' || path.startsWith('/brainlab/')) return '/lab' + path.slice('/brainlab'.length);
+  if (path === '/arcade' || path === '/arcade/') return '/games'; // the arcade is a section of the games page (25 Nov 2026 audit: #/arcade was "Page not found")
   return path;
 }
 

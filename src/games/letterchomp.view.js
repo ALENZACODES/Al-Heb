@@ -8,10 +8,10 @@ export const STORE_KEY = 'games.letterchomp.v1';
 const spec = {
   id: 'letterchomp', title: 'Letter Chomp', titleHe: 'אוֹכֵל אוֹתִיּוֹת',
   blurb: 'Rimon the pomegranate is loose in a maze of letters. Eat every copy of the letter shown at the top; its look-alikes are poison. Erasers roam the corridors.',
-  howTo: ['Move with the arrow keys, W A S D, the pad below, or by tapping the side of the maze you want to go.', 'Eat only the target letter. A look-alike costs points and a life.', 'When the erasers touch you, you lose a life. Three lives per round.', 'Clear every target letter to finish the level.'],
+  howTo: ['Move one square per press with the arrow keys, W A S D or the pad below (hold to keep going), or tap the maze on the side you want to go.', 'Eat only the target letter. A look-alike costs points and a life.', 'When the erasers touch you, you lose a life. Three lives per round.', 'Clear every target letter to finish the level.'],
   levels: [
-    { name: 'Aleph to He', size: 9, targets: 5, decoys: 3, erasers: 1, speed: 1000, letters: ['alef', 'bet', 'gimel', 'dalet', 'he'] },
-    { name: 'Vav to Yod', size: 9, targets: 6, decoys: 4, erasers: 1, speed: 880, letters: ['vav', 'zayin', 'chet', 'tet', 'yod'] },
+    { name: 'Aleph to He', size: 9, targets: 5, decoys: 3, erasers: 1, speed: 1000, eraserEvery: 3, chase: 0.45, letters: ['alef', 'bet', 'gimel', 'dalet', 'he'] },
+    { name: 'Vav to Yod', size: 9, targets: 6, decoys: 4, erasers: 1, speed: 880, eraserEvery: 2, chase: 0.55, letters: ['vav', 'zayin', 'chet', 'tet', 'yod'] },
     { name: 'Kaf to Ayin', size: 11, targets: 7, decoys: 5, erasers: 2, speed: 780, letters: ['kaf', 'lamed', 'mem', 'nun', 'samekh', 'ayin'] },
     { name: 'Pe to Tav', size: 11, targets: 8, decoys: 6, erasers: 2, speed: 680, letters: ['pe', 'tsadi', 'qof', 'resh', 'shin', 'tav'] },
     { name: 'Finals too', size: 13, targets: 9, decoys: 7, erasers: 3, speed: 600, letters: null },
@@ -32,12 +32,17 @@ function setup(A) {
   const n = maze.length;
   const open = [];
   for (let r = 0; r < n; r++) for (let c = 0; c < n; c++) if (!maze[r][c] && !(r === 1 && c === 1)) open.push([r, c]);
-  const spots = pickSeeded(open, cfg.targets + cfg.decoys + cfg.erasers, rnd);
+  // Erasers start in the far half of the maze: one used to spawn beside Rimon and took all three lives before the learner
+  // could move (27 Nov 2026 review). Letters may be anywhere.
+  const far = open.filter(([r, c]) => Math.abs(r - 1) + Math.abs(c - 1) >= n - 1);
+  const eraserSpots = pickSeeded(far.length >= cfg.erasers ? far : open, cfg.erasers, rnd);
+  const taken = new Set(eraserSpots.map(([r, c]) => `${r},${c}`));
+  const spots = [...pickSeeded(open.filter(([r, c]) => !taken.has(`${r},${c}`)), cfg.targets + cfg.decoys, rnd), ...eraserSpots];
   const items = new Map();
   spots.slice(0, cfg.targets).forEach(([r, c]) => items.set(`${r},${c}`, { kind: 'target', letter: target }));
   spots.slice(cfg.targets, cfg.targets + cfg.decoys).forEach(([r, c]) => items.set(`${r},${c}`, { kind: 'decoy', letter: decoys[randInt(rnd, decoys.length)] }));
-  const erasers = spots.slice(cfg.targets + cfg.decoys).map(([r, c]) => ({ r, c }));
-  let player = { r: 1, c: 1 }, remaining = cfg.targets, dir = null;
+  const erasers = spots.slice(cfg.targets + cfg.decoys).map(([r, c]) => ({ r, c, home: [r, c] }));
+  let player = { r: 1, c: 1 }, remaining = cfg.targets, dir = null, tick = 0, grace = 0, lastManual = 0;
   A.setLives(3);
   const { el, cells } = makeGrid(n, n, { label: 'Maze' });
   const head = A.h('p', { class: 'arc-prompt' }, 'Eat every ', A.heSpan(target.he, 'he arc-glyph'), ` (${target.name}). Poison: look-alikes.`);
@@ -56,7 +61,7 @@ function setup(A) {
   };
   const move = (d) => {
     if (!d) return;
-    const [dr, dc] = { up: [-1, 0], down: [1, 0], left: [0, -1], right: [0, 1] }[d];
+    const [dr, dc] = { up: [-1, 0], down: [1, 0], left: [0, 1], right: [0, -1] }[d]; // the board is right to left: visual left is +c
     const rr = player.r + dr, cc = player.c + dc;
     if (rr < 0 || cc < 0 || rr >= n || cc >= n || maze[rr][cc]) { dir = null; return; }
     player = { r: rr, c: cc };
@@ -70,19 +75,31 @@ function setup(A) {
     if (remaining === 0) { draw(); A.finish({ won: true }); return; }
   };
   const step = () => {
-    move(dir);
+    tick++;
+    // Rimon moves one square per press (holding a key repeats it): he used to keep sliding to the next wall and eat every
+    // letter on the way, poison look-alikes included (review 4). Only calm mode steps on the press itself, below.
+    if (grace > 0) { grace--; draw(); return; }
+    if (tick % (cfg.eraserEvery || 1)) { draw(); return; }
     for (const e of erasers) {
-      const nxt = rnd() < 0.7 ? nextStepToward(maze, [e.r, e.c], [player.r, player.c]) : null;
+      const nxt = rnd() < (cfg.chase ?? 0.7) ? nextStepToward(maze, [e.r, e.c], [player.r, player.c]) : null;
       if (nxt) { e.r = nxt[0]; e.c = nxt[1]; }
       else {
         const opts = [[0, 1], [0, -1], [1, 0], [-1, 0]].map(([a, b]) => [e.r + a, e.c + b]).filter(([a, b]) => a >= 0 && b >= 0 && a < n && b < n && !maze[a][b]);
         if (opts.length) { const [a, b] = opts[randInt(rnd, opts.length)]; e.r = a; e.c = b; }
       }
-      if (e.r === player.r && e.c === player.c) { A.sfx('error'); A.announce('An eraser caught Rimon.'); player = { r: 1, c: 1 }; if (A.miss()) { draw(); return; } }
+      if (e.r === player.r && e.c === player.c) {
+        A.sfx('error'); A.announce('An eraser caught Rimon. Back to the start.');
+        player = { r: 1, c: 1 }; dir = null; grace = 2; for (const x of erasers) { x.r = x.home[0]; x.c = x.home[1]; }
+        if (A.miss()) { draw(); return; }
+        break;
+      }
     }
     draw();
   };
-  A.dpad((d) => { dir = d; if (A.quiet) { step(); } });
+  A.dpad((d) => {
+    if (A.quiet) { dir = d; move(d); dir = null; step(); return; }
+    lastManual = Date.now(); move(d); draw();
+  });
   draw();
   if (!A.quiet) A.loop(step, cfg.speed);
   else A.announce('Calm mode: the maze moves one step per tap or key press.');

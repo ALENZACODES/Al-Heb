@@ -98,3 +98,19 @@ test('boot-apply never touches an update that installs mid-session', async () =>
   assert.deepEqual(f.posted, []); assert.equal(f.reloads(), 0); // banner path only, as designed
   h.stop();
 });
+
+test('quiet update: a waiting worker is applied at the next page change when idle; busy pages, Later and the opt-out hold it', async () => {
+  const f = fakeSW(); f.reg.waiting = f.waiting;
+  const h = watchForUpdates(f.g, { checkEveryMs: 0 }); await tick();
+  const d = fakeDoc(); let busy = true;
+  mountUpdateBanner(h, { document: d.doc, isBusy: () => busy });
+  d.fireHash(); assert.deepEqual(f.posted, []); // busy: held
+  busy = false; d.fireHash(); await tick();
+  assert.deepEqual(f.posted, [{ type: 'SKIP_WAITING' }]);
+  const f2 = fakeSW(); f2.reg.waiting = f2.waiting; const h2 = watchForUpdates(f2.g, { checkEveryMs: 0 }); await tick();
+  const d2 = fakeDoc(); mountUpdateBanner(h2, { document: d2.doc, isBusy: () => false });
+  d2.bar().kids[2].click(); d2.fireHash(); assert.deepEqual(f2.posted, []); // Later holds it
+  const f3 = fakeSW(); f3.reg.waiting = f3.waiting; const h3 = watchForUpdates(f3.g, { checkEveryMs: 0 }); await tick();
+  const d3 = fakeDoc(); mountUpdateBanner(h3, { document: d3.doc, isBusy: () => false, applyOnNavigate: false });
+  d3.fireHash(); assert.deepEqual(f3.posted, []);
+});

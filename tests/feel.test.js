@@ -187,7 +187,7 @@ test("quick check player: bar, per-answer feedback with the right answer and why
   assert.ok(fin, "finished"); assert.equal(fin.stats.answered, qs.length); assert.deepEqual(fin.stats.missed, [q1.id]);
   assert.equal(fin.stats.retried, 1); assert.equal(fin.stats.retriedRight, 1); assert.ok(fin.ms >= 1000);
   const sum = new Node_("div"); sum.append(UI.summaryNode({ stats: fin.stats, ms: fin.ms, countText: "x", goodLabels: ["a"], missedLabels: ["b"], skippedN: 0, cardsUpdated: 2, nextHref: "#/learn?lesson=r02" }));
-  assert.match(sum.text, /Accuracy/); assert.match(sum.text, /Time/); assert.match(sum.text, /To review:/); assert.match(sum.text, /2 review cards updated/);
+  assert.match(sum.text, /Accuracy/); assert.match(sum.text, /Time/); assert.match(sum.text, /To review:/); assert.match(sum.text, /2 cards scheduled for your next review/);
   assert.equal(sum.find((n) => n.tag === "a")[0].attrs.href, "#/learn?lesson=r02", "next is the first/primary action");
   off();
 });

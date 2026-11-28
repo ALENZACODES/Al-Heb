@@ -32,7 +32,7 @@
       "win": "Win 3 of 5: your first vowel mark.",
       "why": "vowel",
       "source": "data/pronunciation/niqqud.json (kamatz.shape = base letter bet with the sign); the sound line comes from the same record in your tradition",
-      "check": { "max": 1, "from": "pick", "prompt": "Which one has the vowel mark under it?", "options": [{ "he": "בָ", "right": true }, { "he": "ב" }], "sources": "niqqud.json kamatz.shape; letters.json bet.he" }
+      "check": { "max": 1, "from": "pick", "prompt": "Which one has the vowel mark under it?", "options": [{ "he": "בָ", "right": true }, { "he": "ב", "why": "You picked the letter alone: Bet with nothing under it." }], "why": "The small mark under the letter is the vowel. A letter with nothing under it has no vowel mark.", "sources": "niqqud.json kamatz.shape; letters.json bet.he" }
     },
     {
       "id": "sha", "kind": "syllable", "minutes": 2, "he": "שָׁ", "parts": ["shin", "kamatz"],
@@ -41,7 +41,7 @@
       "win": "Win 4 of 5: you practised a syllable.",
       "why": "syllable",
       "source": "data/pronunciation/derived/_syllables-001.json (first syllable of שָׁנָה and שָׁמַע)",
-      "check": { "max": 1, "from": "pick", "prompt": "Which one is Shin with its vowel mark?", "options": [{ "he": "שָׁ", "right": true }, { "he": "בָ" }], "sources": "derived syllables; niqqud.json kamatz.shape" }
+      "check": { "max": 1, "from": "pick", "prompt": "Which one is Shin with its vowel mark?", "options": [{ "he": "שָׁ", "right": true }, { "he": "בָ", "why": "You picked Bet with the vowel mark under it. Bet is the letter open on the left." }], "why": "Shin is the letter with three arms. Here it has the vowel mark under it.", "sources": "derived syllables; niqqud.json kamatz.shape" }
     },
     {
       "id": "shav", "kind": "word", "minutes": 2, "he": "שָׁב", "en": "he returned", "lessonWord": 1,

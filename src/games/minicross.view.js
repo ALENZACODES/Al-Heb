@@ -1,7 +1,7 @@
 // Mini Crossword: a small grid built from the word bank. English clues, Hebrew answers, typed with the
 // on-screen keyboard. Across runs right to left; down runs top to bottom.
 import { mountArcade } from './arcade.js';
-import { buildCrossword, wordsOfLength, pickSeeded, ALPHABET, FINAL_TO_BASE } from './arcade.model.js';
+import { buildCrossword, wordsOfLength, pickSeeded, ALPHABET, sameKey } from './arcade.model.js';
 
 export const STORE_KEY = 'games.minicross.v1';
 
@@ -49,7 +49,7 @@ function setup(A) {
     const cur = ac[Math.min(cursor, ac.length - 1)]; cellEls.get(key(...cur)).classList.add('is-target');
     clues.replaceChildren(...['across', 'down'].map((dir) => A.h('div', {}, A.h('strong', {}, dir === 'across' ? 'Across (right to left)' : 'Down'), A.h('ul', { style: 'margin:.2rem 0 .5rem 1rem' }, ...cw.entries.filter((e) => e.dir === dir).map((e) => A.h('li', {}, A.h('button', { type: 'button', class: 'arc-choice', style: 'font-size:.95rem;min-height:40px' + (e === active ? ';outline:2px solid var(--accent,#2a6)' : '') + (isSolved(e) ? ';opacity:.6;text-decoration:line-through' : ''), onclick: () => { active = e; cursor = 0; draw(); if (cfg.hint) A.sayWord(e.word); } }, `${e.en || e.word.en} (${e.len})${cfg.hint ? ` · "${e.word.translit}"` : ''}`)))))));
   };
-  const isSolved = (e) => cellsOf(e).every(([r, c], i) => { const want = cw.cells.get(key(r, c)); const have = typed.get(key(r, c)); return have && (have === want || FINAL_TO_BASE[have] === want || FINAL_TO_BASE[want] === have); });
+  const isSolved = (e) => cellsOf(e).every(([r, c], i) => { const want = cw.cells.get(key(r, c)); const have = typed.get(key(r, c)); return have && sameKey(have, want); });
   const selectAt = (r, c) => { const here = cw.entries.filter((e) => cellsOf(e).some(([a, b]) => a === r && b === c)); if (!here.length) return; active = here.includes(active) && here.length > 1 ? here[(here.indexOf(active) + 1) % here.length] : here[0]; cursor = cellsOf(active).findIndex(([a, b]) => a === r && b === c); draw(); };
   let solvedCount = 0;
   const type = (ch) => {
@@ -61,7 +61,7 @@ function setup(A) {
     draw();
     if (solvedCount === cw.entries.length) { A.addScore(20); A.finish({ won: true }); }
   };
-  const check = () => { let wrong = 0; for (const [k, el] of cellEls) { if (!cw.cells.has(k) || !typed.has(k)) continue; const want = cw.cells.get(k), have = typed.get(k); if (!(have === want || FINAL_TO_BASE[have] === want || FINAL_TO_BASE[want] === have)) { el.classList.add('is-bad'); wrong++; } } A.addScore(-2); A.miss(); A.announce(wrong ? `${wrong} wrong letter${wrong === 1 ? '' : 's'} marked.` : 'Everything typed so far is right.'); };
+  const check = () => { let wrong = 0; for (const [k, el] of cellEls) { if (!cw.cells.has(k) || !typed.has(k)) continue; const want = cw.cells.get(k), have = typed.get(k); if (!sameKey(have, want)) { el.classList.add('is-bad'); wrong++; } } A.addScore(-2); A.miss(); A.announce(wrong ? `${wrong} wrong letter${wrong === 1 ? '' : 's'} marked.` : 'Everything typed so far is right.'); };
   A.keys((k2, e) => { if (/^[א-ת]$/.test(e.key)) { type(e.key); return true; } if (e.key === 'Backspace') { type(null); return true; } return false; });
   A.setLives(0);
   draw();

@@ -16,6 +16,19 @@ export function h(tag, attrs = {}, ...kids) {
 /** Hebrew text span: always lang=he dir=rtl. @param {string} text @param {string} [cls] */
 export function heSpan(text, cls = 'he') { return h('span', { lang: 'he', dir: 'rtl', class: cls }, text); }
 
+/**
+ * True when a screen failed because its code came from two different builds: a module loaded from a newer deploy asks the older,
+ * cached copy of another module for something it does not have yet (25 Nov 2026 audit: Dictionary and Games crashed with
+ * "isPlayableOwnClip not exported"). Updating to one build fixes it, so the caller updates instead of showing a code error.
+ * @param {unknown} err an Error or its message
+ */
+export function isStaleBuildError(err) {
+  const m = String((err && typeof err === 'object' && 'message' in err ? err.message : err) || '');
+  const name = err && typeof err === 'object' && 'name' in err ? String(err.name) : '';
+  return /does not provide an export named|not exported|is not exported by|Importing a module script failed|Failed to fetch dynamically imported module|error loading dynamically imported module|Unable to resolve specifier/i.test(m)
+    || (name === 'SyntaxError' && /export|import/i.test(m));
+}
+
 /** Card shown when a lane module is missing or throws. */
 export function unavailableCard(root, { title, t, module, error, kind = 'unavailable' }) {
   const k = kind === 'error' || kind === 'offline' ? kind : 'unavailable'; // 'offline': the screen's files are not on this device yet

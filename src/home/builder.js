@@ -60,7 +60,9 @@ export function builderNode(ctx = {}) {
   const voiceSelect = h('select', { 'aria-label': 'Builder voice', onchange: () => { voice=voiceSelect.value; stop(); ctx.settings?.set({voice}); } },
     h('option',{value:'m'},'Ari'),h('option',{value:'f'},'Noa'));
   voiceSelect.value = voice;
-  const traditionSelect = h('select', { 'aria-label': 'Phonetic style', onchange: () => { tradition=traditionSelect.value; ctx.settings?.set({congregation:tradition}); drawTarget(); } },
+  // The builder's own style only: it used to change the app-wide pronunciation setting without saying so, which is how a
+  // tradition chosen in Settings could "revert" (review 4). Settings, Sounds and the first-run questions change that setting.
+  const traditionSelect = h('select', { 'aria-label': 'Phonetic style for this builder (Settings keeps your pronunciation)', onchange: () => { tradition=traditionSelect.value; drawTarget(); } },
     ...['israeli','sephardi','ashkenazi'].map(t=>h('option',{value:t},t[0].toUpperCase()+t.slice(1))));
   traditionSelect.value = tradition;
   const tally = h('p',{class:'builder-tally'});

@@ -28,7 +28,7 @@ export function mount(root,ctx) {
   const status=h('p',{class:'game-status',role:'status','aria-live':'polite'},'Loading real rhyme recordings…');
   const board=h('div',{class:'game-board'});
   const article=h('article',{class:'card game-card game-rhymelab'},h('h1',{id:'view-title'},'Rhyme Lab'),
-    h('p',{},'Hear a recorded word and find the real transliteration-ending match.'),status,board);
+    h('p',{},'Hear a word (synthetic voice) and find the real transliteration-ending match.'),status,board);
   root.replaceChildren(article);
   // The music-lab backdrop made for this game (approved art, decorative only —
   // never a word cue). A missing picture leaves the page as it was.
@@ -42,7 +42,7 @@ export function mount(root,ctx) {
     if(round>=8){
       roundStatus(status,'','Rhyme experiment complete.');
       board.replaceChildren(resultsCard(h,heSpan,session,{title:'Rhyme experiment complete',onAgain:()=>{round=0;session=createSession({store:ctx?.store,storeKey:STORE_KEY,par:6});paint();}}));return;}
-    roundStatus(status,feedback,`Pair ${round+1} of 8: play the recorded word.`);
+    roundStatus(status,feedback,`Pair ${round+1} of 8: play the word.`);
     const word=deck[round%deck.length];
     const match=shuffled(deck.filter(x=>rhymes(x,word)))[0];
     const misses=shuffled(deck.filter(x=>x.id!==word.id && x.key!==word.key)).slice(0,2);
@@ -70,7 +70,7 @@ export function mount(root,ctx) {
   Promise.all([loadJson('data/vocab/index.json'),loadGameImages(ctx)]).then(([index,R])=>{
     if(!alive||!article.isConnected)return;images=R;
     deck=shuffled(buildRhymeDeck(index).filter(w=>hasRecordedClip(ctx,'word',w.id)));
-    if(deck.length<6){status.textContent='Not enough recorded word-rhyme pairs; listening rounds disabled.';return;}
+    if(deck.length<6){status.textContent='Not enough word-rhyme pairs with clips; listening rounds disabled.';return;}
     paint();
   }).catch(()=>{if(alive)status.textContent='Rhyme data unavailable.';});
   return ()=>{alive=false; leaveSfx();ctx?.audio?.stop?.();};

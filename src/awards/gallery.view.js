@@ -338,6 +338,9 @@ export async function mount(root, ctx) {
     h('p', { class: 'aw-note' }, EVIDENCE_SUMMARY),
     // One labelled count (M-01): badges here, not the path milestones Progress counts.
     h('p', { id: 'award-count', 'data-earned': String(rows.filter((r) => r.state === 'earned').length) }, `${count(rows.filter((r) => r.state === 'earned').length, 'badge')} earned. Counted: ${SCOPE.badges}.`),
+    // Game badges live in the arcade's own record; say how many, here too, so the two counters never look like they disagree
+    // (25 Nov 2026 audit: arcade badges, Awards and the Games Library each showed a different count).
+    (() => { let n = 0; try { n = Number(ctx?.store?.get?.('games.arcade.v1')?.totalBadges) || 0; } catch { n = 0; } return h('p', { id: 'award-game-badges', 'data-game-badges': String(n) }, `Plus ${count(n, 'game badge')} from the arcade games (perfect rounds, fast rounds and streaks), counted on the `, h('a', { href: '#/games' }, 'Games page'), '. Played and mastered games are counted on the ', h('a', { href: '#/game-library' }, 'Games Library'), ' and on ', h('a', { href: '#/progress' }, 'Progress'), ', from the same record.'); })(),
     status,
     mysterySection,
     h('section', { 'aria-labelledby': 'award-h-badges' },
@@ -403,6 +406,10 @@ export async function mount(root, ctx) {
       h('p', { 'data-badge': 'beginner-completion', 'data-state': 'locked' }, completionText(rubric ? settled.decision : { satisfied: 0, required: 0 }))),
     h('section', { 'aria-labelledby': 'award-h-cert' },
       h('h2', { id: 'award-h-cert' }, 'Sample certificate'),
+      // The real record comes first (25 Nov 2026 critique: the page read as a construction site): lessons passed and belts, printable
+      // and checkable from a link. The design sample below stays, folded away, with every limit it states.
+      h('p', { id: 'award-cert-real' }, h('a', { class: 'btn', href: '#/certificate' }, 'Your certificate: lessons and belts completed'), ' ', h('span', { class: 'muted' }, 'Print it, or copy a link anyone can open to check it.')),
+      h('details', { id: 'award-cert-sample' }, h('summary', {}, 'The certificate design we are working on (a sample, not issued)'),
       // lane 4 (12 Nov): the record of passed lessons is its own page, with its own limits stated there
       h('p', { id: 'award-lesson-record' }, 'This sample is a design only. For a printable list of the lessons you passed, with each first-try score and date, see ', h('a', { href: '#/certificate' }, 'Certificate of Lessons Completed'), '. It is self-issued from your own records, not reviewed.'),
       h('p', {}, 'Type your name to see your certificate.'),
@@ -416,13 +423,14 @@ export async function mount(root, ctx) {
       certHost,
       h('details', { id: 'award-sample-notes', class: 'aw-noprint' },
         h('summary', {}, 'Record, storage, and what this sample is not'),
-        h('ul', {}, ...SAMPLE_PAGE_NOTES.map((line) => h('li', {}, line))))),
+        h('ul', {}, ...SAMPLE_PAGE_NOTES.map((line) => h('li', {}, line)))))),
+    h('details', { id: 'award-why', class: 'aw-noprint' }, h('summary', {}, 'For the curious: why lesson marks are not used for the certificate yet'),
     h('section', { 'aria-labelledby': 'award-h-why' },
       h('h2', { id: 'award-h-why' }, 'Why lesson marks are not used'),
       checklist,
       h('details', {},
         h('summary', {}, 'Where those marks are written'),
-        h('ul', {}, ...TRUST_LIMITS.map((row) => h('li', {}, h('p', {}, row.limit), h('p', {}, `${row.path} (${row.symbol})`)))))),
+        h('ul', {}, ...TRUST_LIMITS.map((row) => h('li', {}, h('p', {}, row.limit), h('p', {}, `${row.path} (${row.symbol})`))))))),
   );
 
   fillBadgeArt(page, ctx, h, () => alive).catch(() => { /* the vector fallback stays */ });

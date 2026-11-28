@@ -32,7 +32,8 @@ test('LAB_FILES is exactly what Brain Lab needs that the first install leaves ou
   assert.deepEqual([...LAB_FILES].sort(), needed);
   const bytes = LAB_FILES.reduce((n, f) => n + fs.statSync(path.join(ROOT, f)).size, 0);
   // 450 KB until 2026-11-10; the six synagogue-and-Israel games (with the Letter Pattern recordings list) and the 3D Studio code bring it to about 500 KB.
-  assert.ok(bytes < 540 * 1024, `about ${Math.round(bytes / 1024)} KB fetched once per build`);
+  // 2026-11-27: the shared results card gained its next-game hand-off (src/games/engine.js), about 1 KB.
+  assert.ok(bytes < 544 * 1024, `about ${Math.round(bytes / 1024)} KB fetched once per build`);
 });
 
 function fakes({ cached = [], controller = true, onLine = true, saveData = false, failing = [] } = {}) {

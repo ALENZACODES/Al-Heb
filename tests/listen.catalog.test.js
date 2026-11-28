@@ -102,6 +102,9 @@ test('shelf player plays, pauses, reports a missing file, and cleans up', async 
   const lost = createShelfPlayer({ makeAudio: missing.make });
   lost.play(item);
   missing.made[0].fire('error');
+  // the first failure retries once straight from the server (a fresh address); the second is reported as missing
+  assert.equal(missing.made.length, 2); assert.match(missing.made[1].src || missing.made[1].url || '', /fresh=/);
+  missing.made[1].fire('error');
   assert.equal(lost.snapshot().phase, 'missing');
   lost.stop();
   assert.equal(lost.snapshot().phase, 'idle');

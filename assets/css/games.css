@@ -263,3 +263,35 @@ button.catcher-star { pointer-events: auto; background: transparent; border: 0; 
 .tug-hear { min-width: 44px; min-height: 44px; vertical-align: middle; }
 /* Folded phones: Rimon is small so the opening words keep their width. */
 @media (max-width: 340px) { .wf-hub-mascot { width: 52px; height: 52px; margin: 0 0 .25rem .5rem; } }
+
+/* 27 Nov 2026 review: the maze and its beam; readable vowel marks; tried strokes */
+.game-laser-field { position: relative; aspect-ratio: 2 / 1; width: 100%; max-width: 640px; margin: .5rem auto; border-radius: 14px; border: 1px solid #b98f2c;
+  background: radial-gradient(circle at 80% 50%, #1b2a44 0, #0b1320 70%); overflow: hidden; }
+.game-laser-svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.game-laser-beam { stroke: #ff5a4d; } .game-laser-glow { stroke: rgba(255,90,77,.28); }
+.game-laser-mirror { position: absolute; translate: -50% -50%; min-width: 52px; min-height: 52px; padding: .2rem .5rem; margin: 0; }
+.game-laser-mirror.is-hit { border-color: #ff5a4d; box-shadow: 0 0 14px rgba(255,90,77,.7); opacity: 1; }
+.game-laser-lamp, .game-laser-gate { position: absolute; top: 50%; translate: 0 -50%; font-size: 1.5rem; color: #ff5a4d; }
+.game-laser-lamp { right: 4px; } .game-laser-gate { left: 6px; color: #e8c97a; }
+.catcher-star .catcher-mark { display: grid; place-items: center; width: 64px; height: 64px; border-radius: 50%; font-size: 2.4rem; line-height: 1.1; padding-bottom: .35rem; color: #1a1305;
+  background: radial-gradient(circle at 35% 30%, #fff3c4, #e8c97a 70%); box-shadow: 0 0 14px rgba(232,201,122,.75); text-shadow: none; }
+.game-choice.is-tried { opacity: .45; text-decoration: line-through; }
+
+/* In-play artwork (assets/img/play, filed 27 Nov 2026): painted pieces and playfield backgrounds in place of emoji and flat colour.
+   Every letter, mark and word is still drawn live by the game on the piece's blank panel. */
+button.arc-lane.play-flap-sky { background: url("../img/play/BGP_gates.webp") center / cover no-repeat !important; border-radius: 14px; overflow: hidden; }
+.play-flap-sky .arc-cell { background: rgba(255,250,235,.92); color: #1a1305; border: 2px solid #b98f2c; border-radius: 12px; }
+.play-rimon-fly { background: url("../img/play/SPR_rimon_fly_a.webp") center / contain no-repeat; }
+.play-rimon-fly.is-down { background-image: url("../img/play/SPR_rimon_fly_b.webp"); } /* wings beat once per flap the player makes: no looping animation */
+.catcher-sky { background: url("../img/play/BGP_sky_night.webp") center / cover no-repeat; border-radius: 14px; }
+.catcher-basket { background: url("../img/play/SPR_basket.webp") center bottom / contain no-repeat; }
+.catcher-star .catcher-mark { width: 104px; height: 104px; border-radius: 0; box-shadow: none; padding: 0 0 .1rem 1.1rem; font-size: 2.9rem; font-weight: 700; color: #1a1305; line-height: 1.25;
+  background: url("../img/play/SPR_star_carrier.webp") center / contain no-repeat; }
+.game-laser-field { background: url("../img/play/BGP_stone_floor.webp") center / cover no-repeat; }
+button.game-laser-mirror.btn, button.game-laser-mirror.btn:disabled { width: 64px; height: 78px; border: 0 !important; background: url("../img/play/SPR_mirror.webp") center / contain no-repeat !important; color: #1a1305 !important; box-shadow: none; opacity: 1 !important; }
+button.game-laser-mirror.btn .he { color: #1a1305; }
+.game-laser-mirror.is-hit { filter: drop-shadow(0 0 8px #ff5a4d); }
+.game-laser-lamp { width: 64px; height: 64px; right: 0; font-size: 0; background: url("../img/play/SPR_lamp.webp") center / contain no-repeat; }
+.game-laser-beam { stroke: #e2362b; } .game-laser-glow { stroke: rgba(226,54,43,.3); }
+
+.game-catcher-score { display: inline-block; margin: .2rem 0; padding: .2rem .7rem; border-radius: 999px; font-weight: 700; background: #123a1f; color: #ffe9a8; }

@@ -142,6 +142,7 @@ test("not on a counted route -> no accrual; counted-route patterns", () => {
   assert.equal(d.eng.seconds(), 0);
   assert.ok(isCountedRoute("#/learn?review=1") && isCountedRoute("#/read/shema") && isCountedRoute("#/ladder"));
   assert.ok(isCountedRoute("#/firstday") && isCountedRoute("#/firstday?part=preview") && isCountedRoute("#/placement"), "the first lesson and the placement check count toward the day");
+  assert.ok(!isCountedRoute("#/learn") && isCountedRoute("#/learn?lesson=r01"), "the bare lesson list is a menu; an open lesson counts");
   assert.ok(!isCountedRoute("#/") && !isCountedRoute("#/settings") && !isCountedRoute("#/progress") && !isCountedRoute("#/morning") && !isCountedRoute("#/calendar"));
 });
 test("seconds persist every 10 s, on hide, and survive a reload the same day", () => {

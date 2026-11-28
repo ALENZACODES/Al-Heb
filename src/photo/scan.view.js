@@ -107,7 +107,7 @@ export function mount(root, ctx = {}) {
   let lastTranslit = null; let lastLetterInfo = null; let lastRegistry = null;
   const hearWord = (card, note) => {
     const a = card.audio;
-    if (a.id && ctx.audio?.has?.('word', a.id)) { ctx.audio.play('word', a.id); note.textContent = 'Playing the recorded word.'; return; }
+    if (a.id && ctx.audio?.has?.('word', a.id)) { ctx.audio.play('word', a.id); note.textContent = 'Playing the word clip (synthetic voice).'; return; }
     note.textContent = speak(a.text)
       ? `No recording for this word${a.id ? ` (${a.id})` : ''}. Playing the browser voice instead: modern Israeli pronunciation only, not a recorded voice.`
       : 'No audio available for this word.';

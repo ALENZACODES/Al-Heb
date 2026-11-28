@@ -9,7 +9,7 @@ const EXTRA_URL = new URL('../../data/games/arcade-extra.json', import.meta.url)
 const spec = {
   id: 'pluralpop', title: 'Plural Pop', titleHe: 'רַבִּים',
   blurb: 'One book, many books: סֵפֶר, סְפָרִים. A singular noun appears and balloons rise with possible plurals. Pop the right one. ים for most masculine, ות for most feminine, and a few famous rebels.',
-  howTo: ['Read the singular noun and its meaning.', 'Balloons rise carrying plural forms. Tap the right one.', 'Wrong balloons pop with a hint; letting the right one float away costs a life.', 'Fifteen nouns per round; level 4 adds the irregular plurals.'],
+  howTo: ['Read the singular noun and its meaning.', 'Balloons rise carrying plural forms. Tap the right one.', 'Wrong balloons pop with a hint; letting the right one float away costs a life.', 'Each level sets how many nouns (12 to 18) and gives you two minutes; the counter and the clock show where you are. Level 4 adds the irregular plurals.'],
   levels: [
     { name: 'Ending only: ים or ות', count: 12, mode: 'ending', speed: 95 },
     { name: 'Pick the full plural, 2 balloons', count: 14, mode: 'full', options: 2, speed: 85 },
@@ -60,7 +60,8 @@ function setup(A) {
     const options = cfg.mode === 'ending' ? pickSeeded([{ t: 'ים', ok: card.ending === 'im' }, { t: 'ות', ok: card.ending === 'ot' }], 2, rnd)
       : pickSeeded([{ t: card.plural, ok: true }, ...pickSeeded(wrongForms(card), cfg.options - 1, rnd).map((t) => ({ t, ok: false }))], cfg.options, rnd);
     options.forEach((o, i) => {
-      const y0 = A.quiet ? H / 2 - 30 : H + randInt(rnd, 80);
+      // They start inside the sky, just above its bottom edge: starting below it left the board empty for about ten seconds (review 4).
+      const y0 = A.quiet ? H / 2 - 30 : Math.max(10, H - 160) + randInt(rnd, 40);
       const el = A.h('button', { type: 'button', class: 'arc-choice', lang: 'he', dir: 'rtl', style: `position:absolute;border-radius:50% 50% 50% 50% / 60% 60% 40% 40%;min-width:72px;height:60px;left:${Math.round((i + 0.5) * (100 / options.length))}%;transform:translateX(-50%);top:${y0}px`, onclick: () => pop(o, el) }, o.t);
       sky.append(el); balloons.push({ o, el, y: y0 });
     });

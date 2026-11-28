@@ -41,7 +41,7 @@ test('Line Tools: the divine name shows as ה׳, words step one by one, no sylla
   assert.ok(!text.includes('יְהוָה'), 'the name is never spelled out');
   assert.ok(text.includes('ה׳'));
   assert.match(text, /No syllable split exists for this line yet/);
-  assert.match(text, /2 of 3 words have audio\. 1 has audio coming\./);
+  assert.match(text, /2 of 3 words have synthetic audio\. 1 has audio coming\./);
   const cmp = root.querySelectorAll('.al-cmp-play');
   assert.equal(cmp.length, 3);
   const states = root.querySelector('.al-cmp-list').querySelectorAll('li').map((li) => li.getAttribute('data-state'));

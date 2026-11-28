@@ -27,6 +27,8 @@ main h2 { font-size: var(--fs-lg); font-weight: var(--fw-bold); line-height: var
 
 /* ---------- 3. Header: brand on the left, streak and daily goal on the right ---------- */
 .site-header { justify-content: space-between; gap: var(--s-3); position: sticky; inset-block-start: 0; z-index: 40; }
+/* Anything scrolled into view (follow mode in the service, a focused heading) lands below the sticky header, not under it (25 Nov 2026 audit). */
+html { scroll-padding-block-start: 4.5rem; }
 .statbar { display: flex; align-items: center; gap: var(--s-2); }
 .statbar[hidden] { display: none; }
 .stat-chip {

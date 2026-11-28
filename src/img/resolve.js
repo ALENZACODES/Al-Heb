@@ -62,7 +62,9 @@ export function createImageResolver(opts) {
 
   const candidates = (kind, id, o) => {
     if (kind === 'id') { const e = byId.get(String(id)); return e ? [e] : []; }
-    const nid = kind === 'word' ? String(id) : norm(id);
+    let nid = kind === 'word' ? String(id) : norm(id);
+    // A dictionary-list id (v…) with no picture of its own borrows the picture of the same word under its older id (h…): index.x.
+    if (kind === 'word' && !index.w?.[nid] && !index.g?.[`word:${nid}`] && index.x?.[nid]) nid = index.x[nid];
     const out = [];
     for (const k of keysFor(kind, nid, o)) {
       if (kind === 'word' && index.w?.[nid]) out.push(expandRow(index.w[nid], index.p, index.a, ''));
@@ -135,7 +137,7 @@ export function createImageResolver(opts) {
  * With nothing approved and that setting off, every resolve() is null whatever the index says, so the fetch is skipped.
  * Any failure yields a resolver that returns null for everything (views then render no image).
  */
-export async function loadImageResolver(fetchJson, { settings, base = 'assets/img', indexUrl = 'data/img/index.json', approvalsUrl = 'data/images/approvals.json', cuesUrl = 'data/images/word-cues.json' } = {}) {
+export async function loadImageResolver(fetchJson, { settings, base = 'assets/img', indexUrl = 'data/img/index.json', aliasesUrl = 'data/img/word-aliases.json', approvalsUrl = 'data/images/approvals.json', cuesUrl = 'data/images/word-cues.json' } = {}) {
   const approvals = await Promise.resolve().then(() => fetchJson(approvalsUrl)).catch(() => ({}));
   const showAll = () => settings?.get?.('showUnapprovedImages') === true;
   const R = createImageResolver({ approvals, base, showUnapproved: showAll });
@@ -143,7 +145,8 @@ export async function loadImageResolver(fetchJson, { settings, base = 'assets/im
   const ensureIndex = () => (loading ||= Promise.all([
     Promise.resolve().then(() => fetchJson(indexUrl)),
     Promise.resolve().then(() => fetchJson(cuesUrl)).catch(() => ({})),
-  ]).then(([ix, cues]) => { if (ix) R.setIndex(ix); if (cues) R.setWordCues(cues); }).catch(() => { loading = null; }));
+    Promise.resolve().then(() => fetchJson(aliasesUrl)).catch(() => null), // dictionary-list ids -> picture ids; optional
+  ]).then(([ix, cues, al]) => { if (ix) R.setIndex(al?.x ? { ...ix, x: al.x } : ix); if (cues) R.setWordCues(cues); }).catch(() => { loading = null; }));
   const anyApproved = Object.values(approvals?.approvals ?? approvals ?? {}).some((a) => a && a.status === 'approved');
   if (anyApproved || showAll()) await ensureIndex();
   try { settings?.subscribe?.((all, changed) => { if (Array.isArray(changed) && changed.includes('showUnapprovedImages') && showAll()) ensureIndex(); }); } catch { /* no live settings */ }

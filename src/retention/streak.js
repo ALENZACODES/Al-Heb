@@ -166,9 +166,14 @@ export function streakStatus(streakRaw, ret, now = Date.now()) {
   else if (p.count > 0) state = new Date(now).getHours() * 60 + new Date(now).getMinutes() >= STREAK.atRiskFromMinute ? 'at-risk' : 'open';
   return { ...base, state };
 }
-/** Plain-language line for a status. */
-export function streakLine(st) {
+/**
+ * Plain-language line for a status. xpLeft: XP still missing from today's XP goal, when the line sits beside that goal (Home).
+ * A day that counts for the streak is not the end of the day while the XP goal is open, so the line never says "See you
+ * tomorrow" beside an unfinished goal (27 Nov 2026 review: the card told a learner who had just earned XP to stop).
+ */
+export function streakLine(st, xpLeft = 0) {
   const n = st.count;
+  if (st.state === 'done' && xpLeft > 0) return `${n <= 1 ? 'Day 1 counts for your streak' : `${n} days in a row`}. ${xpLeft} XP to go for today's goal.`;
   switch (st.state) {
     case 'rest': return st.restKind === 'shabbat' ? 'Shabbat Shalom. Your streak rests today too.' : st.restKind === 'yomtov' ? 'Chag sameach. Your streak rests today too.' : 'A rest day. Your streak rests today too.';
     case 'done': return n <= 1 ? 'Day 1 done. See you tomorrow!' : `${n} days in a row. See you tomorrow!`;

@@ -70,7 +70,7 @@ test('Every existing game has a suggested skill level 1–9 without reclassifyin
   const route = matchRoute('#/wordfinder').route;
   assert.equal(route?.title, 'Hebrew Word Finder: Level 1');
   assert.equal(route?.module, '../games/wordfinder.view.js');
-  assert.equal(route?.tier, 'preview');
+  assert.equal(route?.tier, 'v0'); // promoted 2026-11-25 at the owner's order (docs/v0/SCOPE.md)
 });
 
 test('Day-0 view loads a lesson, asks a three-card find question, and saves only a found word', async () => {

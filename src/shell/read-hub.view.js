@@ -3,13 +3,14 @@
 import { h, destIcon } from './ui.js';
 
 const LINKS = [
+  ['#/prayer-practice', 'Prayer Practice'], // first: a whole service, line by line (27 Nov 2026 review: it was hidden in Preview)
   ['#/read', 'Read texts'],
   ['#/books', 'Little books'],
   ['#/library', 'Library'],
   ['#/torahreader', 'Torah reader'],
   ['#/shabbat', 'Shabbat Companion'], // lane 5
-  ['#/prayer-practice', 'Prayer Practice'], // siddur-speaking lane
   ['#/service', 'Follow the service'],
+  ['#/vocab', 'Dictionary'],
   ['#/scan', 'Scan'],
   ['#/camera', 'Camera'],
 ];

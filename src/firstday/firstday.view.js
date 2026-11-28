@@ -13,7 +13,7 @@ import { recordActivity } from '../curriculum/progress.js';
 import { currentStreak } from '../curriculum/state.js';
 import { loadFirst10, loadLadder, loadOnramp } from './loader.js';
 import { DRAFT_NOTICE, PROGRESS_KEY, advance, markRead, wordById, buildCheck, gradeCheck, audioEntries, playHook, totalMinutes } from './model.js';
-import { migrateProgress, winStep, recordAnswer, stepQuestions, stepIndex, onrampDone, totalMinutes as onrampMinutes } from './onramp.model.js';
+import { migrateProgress, isWon, winStep, recordAnswer, stepQuestions, stepIndex, onrampDone, totalMinutes as onrampMinutes } from './onramp.model.js';
 import { loadMemoryChain, entryFor, buildMemoryCard } from '../letters/memorycard.js';
 import { vowelSound, respell, congregationOf, audioNote, saySound, playLine, audioSupport, LABELS } from '../pronunciation/forTradition.js';
 import { isAudioFree } from '../shell/audiofree.js';
@@ -56,7 +56,7 @@ export function mount(root, ctx) {
   const bodyEl = globalThis.document?.body; try { bodyEl?.classList?.add('fd-player'); } catch { /* minimal DOMs */ }
   let alive = true, data = null, onramp = null, content = null, lessonQs = [], lesson = null, nextLesson = null;
   let chain, memCard = null; // chain: undefined while loading (never blocks the step), null when unavailable, else the file
-  let progress = migrateProgress(null), check = null, picked = null, answered = null;
+  let progress = migrateProgress(null), check = null, picked = null, answered = null, resumeShown = false;
   // U-03: a finished on-ramp can be practised again. Practice runs on a
   // throwaway copy of the progress: nothing is saved, the recorded first
   // completion (its answers, cards and streak) is never touched.
@@ -69,7 +69,11 @@ export function mount(root, ctx) {
   const focusLost = () => { const a = document.activeElement; return !a || a === document.body || !body.contains(a) || a.disabled; };
   const refocus = (sel) => { try { if (focusLost()) body.querySelector(sel)?.focus({ preventScroll: true }); } catch { /* ignore */ } };
   const hearNote = () => (isAudioFree(ctx) || tradition === 'israeli' ? el('span', { hidden: '' }) : el('p', { class: 'muted small fd-audio-note' }, audioNote(tradition)));
-  const listen = (hook, label = 'Hear it') => isAudioFree(ctx) ? el('span', { hidden: '' }) : el('button', { class: 'btn', type: 'button', onclick: async () => {
+  // Steps whose Hear it or Trace it was used in this visit: Continue on a learn screen waits for one of them (27 Nov 2026 review:
+  // the step that teaches the sound could be skipped without hearing it). Sound-free mode has no Hear it, so nothing waits there.
+  const tried = new Set(); let onTried = () => {};
+  const listen = (hook, label = 'Hear it') => isAudioFree(ctx) ? el('span', { hidden: '' }) : el('button', { class: 'btn', type: 'button', 'data-hear': '1', onclick: async () => {
+    onTried();
     const r = await playHook(ctx?.audio, hook);
     say(playLine(r, tradition, 'it')); // one shared, tradition-aware sentence (never presents the Israeli device voice as the learner's style)
   } }, label);
@@ -112,7 +116,11 @@ export function mount(root, ctx) {
     const me = s.kind === 'letter' ? entryFor(chain, s.letter) : null; // memory card: the big letter turns into its picture; the chain follows
     if (me) memCard = buildMemoryCard({ entry: me, glyph: he, tradition, audio: ctx?.audio, compact: true, hideSoundLine: true });
     setMeter(unitsBefore(i), stepLabel);
-    const nodes = [el('p', { class: 'fd-steplabel' }, `${stepLabel} · about ${s.minutes} min`), kicker(KIND_LABEL[s.kind] || 'Learn'), el('h2', { class: 'fd-q', 'data-case': 'keep' }, s.title),
+    // Resuming past step 1 says so and offers step 1 (25 Nov 2026 audit: "Start with one letter" opened on Step 3 of 5 with no word why).
+    const resumeNote = i > 0 && !resumeShown ? el('p', { class: 'fd-resume muted small', role: 'note', 'data-resume': '1' }, `Picking up where you left off: steps 1 to ${i} are done. `,
+      el('button', { class: 'btn secondary', type: 'button', id: 'fd-from-start', onclick: () => { practice = true; progress = migrateProgress(null); answered = null; stage = 'learn'; verdict = null; sel = null; say('Starting again from step 1. What you finished before stays finished.'); renderStep(); focus(); } }, 'Go back to step 1')) : null;
+    resumeShown = true;
+    const nodes = [resumeNote, el('p', { class: 'fd-steplabel' }, `${stepLabel} · about ${s.minutes} min`), kicker(KIND_LABEL[s.kind] || 'Learn'), el('h2', { class: 'fd-q', 'data-case': 'keep' }, s.title),
       memCard && (he || me?.hebrew) ? el('p', { class: 'fd-hero-glyph', 'data-hero-glyph': '1' }, heText(he || me.hebrew, 'alef-he')) : null, // the new letter, large, before its picture (the chain entry carries it when course content is still loading)
       memCard ? memCard.el : el('p', { class: 'fd-card alef-card', 'data-glyph-slot': '1' }, heText(he, 'alef-he alef-huge fd-big'))].filter(Boolean);
     if (s.kind === 'letter' && chain === null) nodes.push(el('p', { class: 'mc-fallback muted small', role: 'status', 'data-memory-fallback': '1' }, 'The picture and word hint did not load. Check your connection, then open the letter again.'));
@@ -128,7 +136,8 @@ export function mount(root, ctx) {
       nodes.push(buddy);
     } catch { /* test DOMs and missing document: the letter still renders without the drawing */ }
     const tools = el('div', { class: 'fd-foot-tools' }, listen(hook));
-    if (s.kind === 'letter') tools.append(el('a', { class: 'btn secondary', href: `#/letters/${s.letter}`, id: 'fd-trace' }, 'Trace it'));
+    // Trace it opens the letter page with a way straight back to this step (27 Nov 2026 review: the only way back was the browser's Back).
+    if (s.kind === 'letter') tools.append(el('a', { class: 'btn secondary', href: `#/letters/${s.letter}?from=firstday`, id: 'fd-trace', onclick: () => { tried.add(s.id); } }, 'Trace it'));
     // Instruction, Hear it and Trace it all live in the footer so Continue cannot cover them.
     // memory hooks and explanations stay behind "Why?"
     const why = [];
@@ -140,7 +149,10 @@ export function mount(root, ctx) {
     if (s.kind === 'letter' && ctx?.hasRoute?.('learn') !== false) why.push(el('p', { class: 'fd-spot' }, 'Optional: ', el('a', { class: 'btn secondary', href: `#/learn?spotit=${s.letter}` }, `Spot It: ${L?.name || s.letter}`)));
     if (why.length) nodes.push(el('details', { class: 'fd-why' }, el('summary', {}, 'Why?'), ...why));
     body.replaceChildren(...nodes);
-    footSet(el('p', { class: 'fd-action fd-foot-action' }, s.action), tools, el('button', { class: 'btn fd-cta', type: 'button', id: 'fd-continue', onclick: () => { if (!qs.length) { win(s); return; } stage = 'q'; answered = { qi: 0 }; sel = null; verdict = null; say(''); renderStep(); focusFirst(); } }, qs.length ? 'Continue' : 'Next'));
+    const needsTry = !isAudioFree(ctx) && !tried.has(s.id) && !isWon(progress, s.id);
+    const gateNote = el('p', { class: 'fd-gate small', id: 'fd-gate', role: 'status' }, needsTry ? (s.kind === 'letter' ? 'Press Hear it or Trace it first, then Continue.' : 'Press Hear it first, then Continue.') : '');
+    onTried = () => { tried.add(s.id); const c = foot.querySelector('#fd-continue'); if (c) { c.disabled = false; c.removeAttribute?.('disabled'); c.removeAttribute?.('aria-disabled'); } gateNote.textContent = ''; };
+    footSet(el('p', { class: 'fd-action fd-foot-action' }, s.action), tools, gateNote, el('button', { class: 'btn fd-cta', type: 'button', id: 'fd-continue', ...(needsTry ? { disabled: '', 'aria-disabled': 'true', 'aria-describedby': 'fd-gate' } : {}), onclick: () => { if (!qs.length) { win(s); return; } stage = 'q'; answered = { qi: 0 }; sel = null; verdict = null; say(''); renderStep(); focusFirst(); } }, qs.length ? 'Continue' : 'Next'));
   }
 
   function renderQuestion(s, i, stepLabel, qs, qi) {
@@ -179,6 +191,10 @@ export function mount(root, ctx) {
         el('p', { class: 'fd-sheet-title' }, el('span', { class: 'fd-sheet-ico', 'aria-hidden': 'true' }, verdict.ok ? '✓' : '✕'), ' ', verdict.ok ? verdict.praise : 'Not quite'),
         verdict.ok ? (combo >= 3 ? el('p', { class: 'fd-combo' }, `${combo} in a row!`) : null)
           : el('p', {}, 'Correct answer: ', right.he ? heText(right.text, 'alef-he') : el('strong', {}, right.text), el('span', { class: 'fd-kind' }, ' — that is how everyone learns.')),
+        // The same standard as the lesson's own quick check (27 Nov 2026 review): on a miss, what was picked and what it is; on
+        // every answer, the reason the right one is right. Both lines come from the question's data, never invented here.
+        !verdict.ok && q.optionWhy?.[verdict.k] ? el('p', { class: 'fd-why-picked', 'data-why-picked': '1' }, q.optionWhy[verdict.k]) : null,
+        q.why ? el('p', { class: 'fd-why-right', 'data-why-right': '1' }, q.why) : null,
         last ? el('p', { class: 'fd-win' }, el('strong', {}, s.win)) : null),
       last ? el('button', { class: 'btn fd-cta', type: 'button', id: 'fd-next', onclick: go }, verdict.ok ? 'Continue' : 'Got it')
         : el('button', { class: 'btn fd-cta', type: 'button', id: 'fd-next-q', onclick: go }, verdict.ok ? 'Continue' : 'Got it'));
@@ -192,7 +208,7 @@ export function mount(root, ctx) {
       combo = ok ? combo + 1 : 0;
       verdict = { ok, k: sel, praise: PRAISE[(qi + i) % PRAISE.length] };
       chime(ok);
-      say(ok ? `${verdict.praise}${last ? ' ' + s.win : ''}` : `Not quite: it is ${right.text}. That is how everyone learns, and nothing is lost.`);
+      say(ok ? `${verdict.praise}${q.why ? ' ' + q.why : ''}${last ? ' ' + s.win : ''}` : `Not quite: it is ${right.text}. ${q.optionWhy?.[sel] || ''} ${q.why || ''} That is how everyone learns, and nothing is lost.`.replace(/\s+/g, ' '));
       renderStep();
     }
   }
@@ -267,7 +283,7 @@ export function mount(root, ctx) {
     const acc = vals.length ? Math.round((vals.filter(Boolean).length / vals.length) * 100) : null;
     const mins = Math.max(1, Math.round((Date.now() - startedAt) / 60000));
     setMeter(units(), 'Lesson complete');
-    const stat = (big, small) => el('li', { class: 'fd-stat' }, el('span', { class: 'fd-stat-big' }, big), el('span', { class: 'fd-stat-small' }, small));
+    const stat = (big, small) => el('li', { class: 'fd-stat' }, el('span', { class: 'fd-stat-big' }, big), ' ', el('span', { class: 'fd-stat-small' }, small));
     body.replaceChildren(
       el('div', { class: 'fd-done' },
         cheer ? el('div', { class: 'fd-cheer' }, cheer.el) : el('div', { class: 'fd-medal', 'aria-hidden': 'true' }, el('span', {}, '✓')),

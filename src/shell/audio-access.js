@@ -179,7 +179,7 @@ export function audioButton(h, ctx, o) {
 /** Pure: text for the full notice (the one-line banner links to it; it is also the link's title). */
 export function bannerText(summary, voice) {
   const rec = (summary && (summary.recorded || 0)) || 0;
-  if (rec > 0) return 'Some words have recorded audio. Anything else is read by your device voice.';
+  if (rec > 0) return 'Some words have audio clips (synthetic voices). Anything else is read by your device voice.';
   const dev = voice === 'yes' ? 'Your device has a Hebrew voice, so Aleph can read words aloud with it in Israeli pronunciation.'
     : voice === 'unknown' ? 'Aleph will try your device\'s Hebrew voice if it has one. It reads in Israeli pronunciation.'
     : 'Your device has no Hebrew voice, so there is no sound here. Read the English-letter spelling shown with each word instead.';

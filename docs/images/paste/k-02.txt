@@ -1,0 +1,33 @@
+Aleph IMAGE RUN - BLOCK K COMMAND 2: Board surfaces for the maze, snake, well and sky games
+
+No attachments are needed; everything is described in words below.
+
+STYLE GUIDE v1 (applies to EVERY image below):
+STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left.
+
+CHARACTERS (keep identical across images):
+CHARACTER SHEET A 'Ari': a friendly Israeli man around 35, short dark curly hair, trimmed beard, warm brown skin tone, navy T-shirt, simple silver chain; expression open and encouraging; no kippah by default.
+CHARACTER SHEET B 'Noa': a friendly Israeli woman around 32, shoulder-length wavy dark hair, olive skin, terracotta blouse, small gold hoop earrings; expression warm and confident.
+MASCOT 'Rimon': a small round pomegranate-red sprite with a gold crown-shaped calyx on top, two olive-green leaf ears, big friendly dot eyes, tiny arms and feet, thick charcoal outline; expressive but never any writing.
+
+BACKGROUND SCENES (when a prompt mentions BG_...): BG_telaviv = a blank Tel Aviv seaside street scene (white modernist buildings, palms, no signs).
+
+TRANSPARENCY: items marked TRANSPARENT must be a PNG with a fully transparent background (no cream fill, no white box, no ground shadow). Items marked TILE must repeat seamlessly in both directions.
+
+TASK: generate 5 separate images in STYLE GUIDE v1, in this order. Each item gives the exact filename (label the image with it in your reply, never inside the image), the size hint and the full prompt.
+
+1. FILENAME: K-board-wall.png | SIZE: use 1:1 | TILE
+   PROMPT: A SEAMLESS TILEABLE square texture seen straight from above: a neatly trimmed olive-green garden hedge (#6B7F3A with darker and lighter leaf clusters), filling the whole square edge to edge with no border, no frame and no single object. The left edge must continue into the right edge and the top into the bottom. Flat vector style, thick rounded leaf shapes. No sky, no ground, no shadows falling outside the hedge. No text, letters or numerals anywhere in the image.
+2. FILENAME: K-board-path.png | SIZE: use 1:1 | TILE
+   PROMPT: A SEAMLESS TILEABLE square texture seen straight from above: a very light sandy garden path (paper cream #F6F1E7 with a few slightly darker sand specks and two or three tiny pebbles), very low contrast so dark letters drawn on top stay easy to read. Fills the whole square edge to edge, no border, no objects, no shadows. The left edge must continue into the right edge and the top into the bottom. No text, letters or numerals anywhere in the image.
+3. FILENAME: K-board-grass.png | SIZE: use 1:1 | TILE
+   PROMPT: A SEAMLESS TILEABLE square texture seen straight from above: a soft, light lawn (pale olive green, a few small darker grass tufts), very low contrast so letters drawn on top stay easy to read. Fills the whole square edge to edge, no border, no flowers, no objects. The left edge must continue into the right edge and the top into the bottom. No text, letters or numerals anywhere in the image.
+4. FILENAME: K-board-well.png | SIZE: use 2:3 (portrait)
+   PROMPT: Portrait backdrop: looking straight into an old stone well from the front, as if the front wall were cut away. Warm limestone blocks (Jerusalem stone) form a thick border down the left and right sides and along the bottom; a small rope and wooden bucket hang at the top left. The whole middle (about 70% of the width and height) is a plain, very light, even cream (#F6F1E7) with no stones, no water and no details, because letters fall through it. No people. No text, letters or numerals anywhere in the image.
+5. FILENAME: K-board-sky.png | SIZE: use 2:3 (portrait)
+   PROMPT: Portrait backdrop: a calm pale sky (very light blue fading to cream), two or three small simple clouds near the top corners, and a low row of olive trees and a stone terrace wall along the very bottom 15%. The middle is plain and light, with no birds or objects, because letters fall through it. No people, no sun with a face. No text, letters or numerals anywhere in the image.
+
+RULES (again):
+- NEVER put any text in any image: no Hebrew, no nikkud, no Latin letters, no numerals, no logos.
+- Generate exactly 5 separate images, one per numbered item, each as its own image (never a collage or grid). Do not skip or merge items.
+- When done, list the filenames you made and wait for "next".

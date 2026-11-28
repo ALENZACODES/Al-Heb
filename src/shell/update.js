@@ -1,5 +1,6 @@
 // @ts-check
-// Update UX: notice that a new service worker is installed and offer "Reload", never reloading by itself mid-session.
+// Update UX: notice that a new service worker is installed and offer "Reload"; never reloads in the middle of a page. A waiting update
+// is applied by itself only at a moment when nothing can be lost: at boot (below) and when the learner moves to another page (onHash).
 // One exception, boot-apply: a worker that is ALREADY waiting when the app starts is applied at once
 // (startUpdateBanner opts in), because at startup nothing is in progress yet — that is what makes the
 // "close Aleph and open it again" remedy actually deliver the update (owner report, Nov 7 2026: on the
@@ -109,18 +110,20 @@ export function watchForUpdates(g = globalThis, opt = {}) {
  * The learner is on "Page not found" for an address this build does not have. A newer build may have it, so: if an update is waiting,
  * or a newer worker already controls the page ("activated"), apply it now; otherwise ask the server once and apply if one turns up
  * within `waitMs`. Nothing is in progress on a "Page not found" screen, so this does not wait for Reload. Returns a cancel function.
+ * `onTimeout` (optional) runs when no update arrived in time (the stale-build recovery in src/app.js reloads from there).
  * @param {ReturnType<typeof watchForUpdates>} handle
  * @param {{onUpdating?:()=>void, waitMs?:number, setTimeout?:Function, clearTimeout?:Function}} [o]
  */
-export function updateForMissingPage(handle, { onUpdating = () => {}, waitMs = 8000, setTimeout: st = (f, ms) => globalThis.setTimeout(f, ms), clearTimeout: ct = (h) => globalThis.clearTimeout(h) } = {}) {
-  if (!handle?.supported) return () => {};
+export function updateForMissingPage(handle, { onUpdating = () => {}, onTimeout = null, waitMs = 8000, setTimeout: st = (f, ms) => globalThis.setTimeout(f, ms), clearTimeout: ct = (h) => globalThis.clearTimeout(h) } = {}) {
+  if (!handle?.supported) { if (onTimeout) { try { onTimeout(); } catch { /* best effort */ } } return () => {}; }
   let done = false, off = () => {}, timer = null;
   const stop = () => { done = true; off(); if (timer != null) ct(timer); };
   const go = () => { if (done) return; stop(); try { onUpdating(); } catch { /* the label is optional */ } handle.apply(); };
   const ready = (s) => s === "waiting" || s === "activated";
   if (ready(handle.state())) { go(); return stop; }
   off = handle.onChange((s) => { if (ready(s)) go(); });
-  timer = st(stop, waitMs);
+  // No update within waitMs: stop listening; a caller that asked for it (a stale-build crash) gets one last chance to recover.
+  timer = st(() => { const was = done; stop(); if (!was && onTimeout) { try { onTimeout(); } catch { /* best effort */ } } }, waitMs);
   Promise.resolve().then(() => handle.check()).catch(() => {});
   return stop;
 }
@@ -157,13 +160,18 @@ export function mountUpdateBanner(handle, opt = {}) {
   const later = doc.createElement("button"); later.setAttribute("type", "button"); later.setAttribute("id", "alef-update-later"); later.className = "btn secondary"; later.textContent = "Later";
   bar.append(msg, reload, later);
   const isBusy = opt.isBusy ?? (() => isBusyDefault(doc));
-  let pending = false, poll = null;
+  let pending = false, poll = null, declined = false;
   const setT2 = opt.setInterval ?? ((f, ms) => globalThis.setInterval(f, ms));
   const clrT2 = opt.clearInterval ?? ((h) => globalThis.clearInterval(h));
   const stopPoll = () => { if (poll != null) { clrT2(poll); poll = null; } };
   const tryApply = () => { if (!pending) return; if (isBusy()) return; pending = false; stopPoll(); handle.apply({ beforeReload: opt.beforeReload }); };
+  // "Later" lasts for the whole visit, across reloads of the tab (sessionStorage): the banner came back on nearly every page
+  // after Later (27 Nov 2026 review) because every state report redrew it. The waiting version is used at the next start.
+  const LATER_KEY = "alef.update.later";
+  const ss = () => { try { return doc.defaultView?.sessionStorage ?? null; } catch { return null; } };
+  try { if (ss()?.getItem(LATER_KEY) === "1") declined = true; } catch { /* no session storage */ }
   const render = (s) => {
-    if (s === "idle") { bar.hidden = true; return; }
+    if (s === "idle" || (declined && s !== "stalled" && !pending)) { bar.hidden = true; return; }
     msg.textContent = s === "stalled" ? "The update could not be applied from here. Close all Aleph tabs and open it again." : "A new version of Aleph is ready. Reload to use it; your progress is already saved.";
     reload.hidden = s === "stalled"; bar.hidden = false;
   };
@@ -172,9 +180,15 @@ export function mountUpdateBanner(handle, opt = {}) {
     pending = true; msg.textContent = "You are in the middle of an exercise, so Aleph will reload when you finish it. Your progress is already saved.";
     if (poll == null) poll = setT2(tryApply, 2000);
   });
-  later.addEventListener("click", () => { pending = false; stopPoll(); bar.hidden = true; });
+  later.addEventListener("click", () => { pending = false; declined = true; try { ss()?.setItem(LATER_KEY, "1"); } catch { /* this visit only */ } stopPoll(); bar.hidden = true; }); // Later also holds the quiet page-change update; the next start applies it
   const off0 = handle.onChange(render);
-  const onHash = () => { tryApply(); };
+  // Quiet update at a page change (25 Nov 2026 audit: the banner followed the learner into every section until a reload). Leaving a
+  // page already drops whatever it held in memory, and progress is in localStorage, so a waiting update is applied right there,
+  // unless the new page is busy or the learner pressed Later. opt.applyOnNavigate === false keeps the old banner-only behaviour.
+  const onHash = () => {
+    if (pending) { tryApply(); return; }
+    if (opt.applyOnNavigate !== false && !declined && handle.state() === "waiting" && !isBusy()) handle.apply({ beforeReload: opt.beforeReload });
+  };
   try { doc.defaultView?.addEventListener?.("hashchange", onHash); } catch { /* ignore */ }
   const off = () => { off0(); stopPoll(); try { doc.defaultView?.removeEventListener?.("hashchange", onHash); } catch { /* ignore */ } };
   (doc.body || doc.documentElement)?.append(bar);
@@ -208,4 +222,18 @@ export function startUpdateBanner(opt = {}) {
     const handle = watchForUpdates(globalThis, { applyWaitingAtBoot: true, ...opt }); const rmB = mountUpdateBanner(handle, opt);
     return { handle, remove() { rmB(); rmN(); } };
   } catch { return { handle: null, remove() {} }; }
+}
+
+/**
+ * Loop guard for the stale-build recovery in src/app.js: true the first time an address asks to reload within a minute, false
+ * after that, so a screen that still fails after the update shows its card instead of reloading again. Session storage only
+ * (gone when the tab closes); without it the guard still allows exactly one try per page load.
+ */
+export const STALE_RELOAD_KEY = 'alef.staleReload';
+let staleMemo = null;
+export function staleReloadAllowed(path, now = Date.now(), ss = (() => { try { return globalThis.sessionStorage || null; } catch { return null; } })()) {
+  let last = staleMemo; try { last = JSON.parse(ss?.getItem(STALE_RELOAD_KEY) || 'null') || staleMemo; } catch { /* keep the memo */ }
+  if (last && last.path === path && now - last.at < 60000) return false;
+  staleMemo = { path, at: now }; try { ss?.setItem(STALE_RELOAD_KEY, JSON.stringify(staleMemo)); } catch { /* memo only */ }
+  return true;
 }

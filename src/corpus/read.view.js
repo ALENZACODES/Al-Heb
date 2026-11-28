@@ -116,7 +116,8 @@ export function clusters(word) {
 
 
 /** Read the congregation setting from either settings shape. */
-function congregationOf(settings) {
+function congregationOf(settings, override) {
+  if (override) return override;
   return (settings && (settings.congregation ?? (typeof settings.get === 'function' ? settings.get('congregation') : undefined))) || 'sephardi';
 }
 
@@ -194,7 +195,7 @@ export async function mount(root, ctx = /** @type {any} */ ({})) {
 
   function transliterateWord(word) {
     if (!translitFn) return null;
-    const trad = congregationOf(ctx.settings);
+    const trad = congregationOf(ctx.settings, state.tradOverride);
     try { return translitFn(word, { scheme: 'siddur', tradition: trad }); } catch { return null; }
   }
 
@@ -207,13 +208,18 @@ export async function mount(root, ctx = /** @type {any} */ ({})) {
     if (!ctx.params?.textId && state.passageId === passages[0].id) renderOccasions(host);
     const allHe = p.records.map((r) => r.he).join('\n');
     const inv = letterInventory(allHe);
-    const trad = congregationOf(ctx.settings);
+    const trad = congregationOf(ctx.settings, state.tradOverride);
 
     const picker = el('select', { id: 'crp-pick', 'aria-label': 'Choose a text', onchange: (e) => { state.passageId = e.target.value; state.letters.clear(); render(); } },
       ...passages.map((x) => el('option', { value: x.id, selected: x.id === p.id ? '' : null }, `${x.title} (${x.ref})`)));
     const bar = el('div', { class: 'crp-bar' },
       el('label', { for: 'crp-pick' }, 'Text'), picker,
-      el('label', {}, el('input', { type: 'checkbox', checked: state.translit ? '' : null, onchange: (e) => { state.translit = e.target.checked; render(); } }), `Transliteration (${trad})`),
+      el('label', {}, el('input', { type: 'checkbox', checked: state.translit ? '' : null, onchange: (e) => { state.translit = e.target.checked; render(); } }), 'Transliteration'),
+      // Reading style right here (25 Nov 2026 critique: the prayers offered one tradition). It is the app-wide setting, so the change
+      // follows the learner to every page; the settings subscription above redraws this one.
+      el('label', { for: 'crp-trad' }, 'Reading style'),
+      el('select', { id: 'crp-trad', onchange: (e) => { const v = e.target.value; let ok = false; try { ok = typeof ctx.settings?.set === 'function' && (ctx.settings.set({ congregation: v }) || []).length === 0; } catch { ok = false; } if (!ok) { state.tradOverride = v; render(); } } },
+        ...[['sephardi', 'Sephardi'], ['ashkenazi', 'Ashkenazi'], ['israeli', 'Israeli']].map(([v, t]) => el('option', { value: v, selected: v === trad ? '' : null }, t))),
       el('label', {}, el('input', { type: 'checkbox', checked: state.english ? '' : null, onchange: (e) => { state.english = e.target.checked; render(); } }), 'English'),
       el('button', { type: 'button', class: 'crp-play', onclick: () => playAll(p) }, 'Play all'));
     // Secondary controls (text picker, show/hide switches, Play all, letter highlights) sit in a closed details so the text is on the first screen of a phone.
@@ -235,6 +241,11 @@ export async function mount(root, ctx = /** @type {any} */ ({})) {
       host.append(enBox, status);
       return;
     }
+    // Say which reading style the transliteration follows, and that the audio does not follow it yet (critique item 10: label the gap
+    // on the prayer page itself, not only in Settings).
+    const STYLE = { sephardi: 'Sephardi', ashkenazi: 'Ashkenazi', israeli: 'Israeli' };
+    host.append(el('p', { class: 'crp-trad-note small muted', role: 'note' }, `Transliteration: ${STYLE[trad] || trad} reading (change it under "Change text, show or hide"). `,
+      trad === 'israeli' ? 'The audio is Israeli pronunciation too.' : `The audio is Israeli pronunciation for now; ${STYLE[trad] || trad} recordings are being made.`));
     host.append(ctl);
     ctl.append(bar);
 
@@ -338,6 +349,8 @@ export async function mount(root, ctx = /** @type {any} */ ({})) {
     return p.records.flatMap((rec) => { const ls = rec.he.split('\n'); return ls.map((l, i) => ({ kind: 'line', id: ls.length === 1 ? rec.id : `${rec.id}-l${i + 1}`, he: l, text: speechText(l), label: ls.length > 1 ? `${rec.ref} line ${i + 1}` : rec.ref })); });
   }
   async function playAll(p) {
+    // Say what is playing now (25 Nov 2026 audit: after Play all on Maoz Tzur the status still read "Played Siddur: HaMotzi").
+    say(`Playing all lines of ${p.title}.`);
     // Play all with a progress list the learner can tap into (src/audiolab/ui.js, on demand); the plain loop below if it cannot load.
     try { const m = await import('../audiolab/ui.js'); const qh = wrap.querySelector('#crp-queue'); if (qh) { seq++; const q = m.mountQueue(ctx, lineItems(p), { title: 'Play All Lines', noun: 'lines' }); qh.replaceChildren(q.node); q.playFrom(0); return; } } catch { /* offline before first use */ }
     const mine = ++seq;
@@ -459,7 +472,7 @@ export async function mount(root, ctx = /** @type {any} */ ({})) {
       const he = f ? f.he : p.he; const tr = f ? f.translit : p.translit;
       const card = el('div', { class: 'crp-card' },
         heEl('div', he, 'crp-he'),
-        el('div', { class: 'meta' }, el('div', {}, el('strong', {}, p.en), el('span', { class: 'crp-badge' }, p.register), p.register === 'slang' ? el('span', { class: 'crp-badge' }, 'native review needed') : null),
+        el('div', { class: 'meta' }, el('div', {}, el('strong', {}, p.en), el('span', { class: 'crp-badge' }, p.register), ' ', p.register === 'slang' ? el('span', { class: 'crp-badge' }, 'native review needed') : null),
           state.translit ? el('div', { class: 'crp-tr' }, tr) : null,
           p.notes ? el('div', { class: 'crp-gl' }, p.notes) : null),
         audioButton(el, ctx, { kind: /\s/.test(he) ? 'line' : 'word', id: p.gendered ? `${p.id}-${state.gender}` : p.id, text: speechText(he), class: 'crp-play', label: 'Play', name: p.en }));

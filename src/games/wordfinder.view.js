@@ -36,7 +36,7 @@ export function mount(root, ctx) {
     h('div', { class: 'wf-eyebrow' }, listen ? 'LISTENING · BY EAR' : 'LEVEL 1 OF 9 · START FROM ZERO'),
     h('h1', { id: 'view-title', tabindex: '-1' }, listen ? 'Word Finder: Listening ' : 'Hebrew Word Finder ', heSpan('מִלָּה')),
     h('div', { class: 'wf-artifact', 'aria-hidden': 'true' }),
-    h('p', { class: 'wf-intro' }, listen ? 'Hear a word, then find it among the Hebrew words. No English and no sounds-like help until you find it. Only words with a recorded clip are used.' : 'Never heard Hebrew before? You belong here. Listen, look at the letters, then find the same word. You do not need to read yet.'),
+    h('p', { class: 'wf-intro' }, listen ? 'Hear a word, then find it among the Hebrew words. No English and no sounds-like help until you find it. Only words with a clip are used.' : 'Never heard Hebrew before? You belong here. Listen, look at the letters, then find the same word. You do not need to read yet.'),
     listen ? null : h('p', { class: 'muted' }, h('a', { href: '#/wordfinder-listen' }, 'Play by ear: Word Finder Listening →')),
     h('p', { class: 'muted' }, 'Hebrew reads right to left ←. The dots help with sounds. Every word has an English meaning.'),
     progress, status, sound, stage, more,

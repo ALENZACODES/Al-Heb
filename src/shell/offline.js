@@ -54,7 +54,8 @@ export function optionalGroups(tradition = "sephardi") {
  */
 export const ON_DEMAND_GROUPS = Object.freeze([
   { id: "od-practice", label: "Vowel-point, root, gender, known-word and record-and-compare practice data", test: /^(data\/(nikkudfade|roots|gender|knownwords)\/|src\/(recordcompare|roots|nikkudfade|genderdrill|knownwords|fsrs)\/[a-z]+\.view\.js$|src\/roots\/(model|binyanim|links)\.js$)/, approxMB: 1.3 }, // lane 3 (12 Nov): + binyanim.js, links.js, dict-links.json
-  { id: "od-vocab", label: "Vocabulary data and theme packs", test: /^data\/vocab\//, approxMB: 5.9 },
+  { id: "od-picture-index", label: "Picture index (which picture goes with which word, letter and lesson)", test: /^data\/img\/index\.json$/, approxMB: 0.26 },
+  { id: "od-vocab", label: "Vocabulary data and theme packs", test: /^(data\/vocab\/|data\/img\/word-aliases\.json$)/, approxMB: 5.9 }, // the aliases let the dictionary find its word pictures
   { id: "od-listen-tools", label: "Playback bar, Listening Practice, play-all lists and audio packs", test: /^src\/audiolab\//, approxMB: 0.1 }, // audio lane
   { id: "od-audio-index", label: "Audio clip list (core)", test: /^data\/audio\//, approxMB: 2.6 },
   { id: "od-pronunciation", label: "Sounds and pronunciation data", test: /^data\/pronunciation\//, approxMB: 0.8 },
@@ -103,6 +104,8 @@ export const ON_DEMAND_GROUPS = Object.freeze([
   // lane 6 (12 Nov round 2): Reading Without Vowels, the placement check page, trope families and per-aliyah practice (route code)
   { id: "od-bridge-trope-placement", label: "Reading without vowels, the placement check, trope families and aliyah practice (route code)", test: /^src\/(bridge\/|placement\/(placement\.view|model|loader)\.js$|trope\/(families|practice\.view)\.js$)/, approxMB: 0.07 },
   // lane platform (12 Nov): its pages and models (scheduler state and fit, what's new, my data, mastery, cram, my week, shortcuts) and the change list
+  // printable workbooks per belt (25 Nov 2026 critique): the Workbook page and the code that builds the pages from the lessons
+  { id: "od-workbook", label: "Printable workbooks (the Workbook page and its page builder)", test: /^(src\/workbook\/|src\/shell\/workbook\.view\.js$)/, approxMB: 0.04 },
   { id: "od-platform", label: "Review scheduler details, What's New, My Data, Mastery Map, Cram, My Week and Keyboard Shortcuts (route code and the change list)", test: /^(src\/platform\/|data\/platform\/|src\/fsrs\/fsrs6\.js$)/, approxMB: 0.06 },
   { id: "od-grammar", label: "Grammar notes (route code) and a speaking-check model", test: /^src\/(grammar\/|speak\/dss\.model\.js$)/, approxMB: 0.05 },
   // reading lane (12 Nov): Reading Tools (#/readlab), its code and its two word lookups (family letters and patterns; stress)
